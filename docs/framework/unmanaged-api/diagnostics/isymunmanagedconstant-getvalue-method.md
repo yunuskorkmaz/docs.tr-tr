@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 75cc16f44ddf29b161c758718b697cc2aaba8e08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204672"
 ---
-# <a name="isymunmanagedconstantgetvalue-method"></a><span data-ttu-id="3ae52-102">ISymUnmanagedConstant::GetValue Metodu</span><span class="sxs-lookup"><span data-stu-id="3ae52-102">ISymUnmanagedConstant::GetValue Method</span></span>
-<span data-ttu-id="3ae52-103">Sabit değerini alır.</span><span class="sxs-lookup"><span data-stu-id="3ae52-103">Gets the value of the constant.</span></span>  
+# <a name="isymunmanagedconstantgetvalue-method"></a><span data-ttu-id="dbee8-102">ISymUnmanagedConstant::GetValue Metodu</span><span class="sxs-lookup"><span data-stu-id="dbee8-102">ISymUnmanagedConstant::GetValue Method</span></span>
+<span data-ttu-id="dbee8-103">Sabit değerini alır.</span><span class="sxs-lookup"><span data-stu-id="dbee8-103">Gets the value of the constant.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3ae52-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3ae52-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dbee8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="dbee8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetValue(  
@@ -35,18 +35,18 @@ HRESULT GetValue(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3ae52-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3ae52-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dbee8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="dbee8-105">Parameters</span></span>  
  `pValue`  
- <span data-ttu-id="3ae52-106">[out] Bir işaretçi bir değişkene bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="3ae52-106">[out] A pointer to a variable that receives the value.</span></span>  
+ <span data-ttu-id="dbee8-106">[out] Bir işaretçi bir değişkene bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="dbee8-106">[out] A pointer to a variable that receives the value.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3ae52-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="3ae52-107">Return Value</span></span>  
- <span data-ttu-id="3ae52-108">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="3ae52-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="dbee8-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="dbee8-107">Return Value</span></span>  
+ <span data-ttu-id="dbee8-108">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="dbee8-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3ae52-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3ae52-109">Requirements</span></span>  
- <span data-ttu-id="3ae52-110">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="3ae52-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dbee8-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="dbee8-109">Requirements</span></span>  
+ <span data-ttu-id="dbee8-110">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="dbee8-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3ae52-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3ae52-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dbee8-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dbee8-111">See also</span></span>
 
-- [<span data-ttu-id="3ae52-112">ISymUnmanagedConstant Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3ae52-112">ISymUnmanagedConstant Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
-- [<span data-ttu-id="3ae52-113">GetName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3ae52-113">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
-- [<span data-ttu-id="3ae52-114">GetSignature Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3ae52-114">GetSignature Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)
+- [<span data-ttu-id="dbee8-112">ISymUnmanagedConstant Arabirimi</span><span class="sxs-lookup"><span data-stu-id="dbee8-112">ISymUnmanagedConstant Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
+- [<span data-ttu-id="dbee8-113">GetName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="dbee8-113">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
+- [<span data-ttu-id="dbee8-114">GetSignature Yöntemi</span><span class="sxs-lookup"><span data-stu-id="dbee8-114">GetSignature Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)

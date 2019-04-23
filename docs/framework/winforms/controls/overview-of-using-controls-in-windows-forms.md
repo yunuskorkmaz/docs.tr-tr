@@ -10,23 +10,23 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
 ms.openlocfilehash: 247ec4fc11f33587e77c49244b239a574c8f3cfc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207363"
 ---
-# <a name="overview-of-using-controls-in-windows-forms"></a><span data-ttu-id="942c9-102">Windows Forms'ta Denetimlerin Kullanımına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="942c9-102">Overview of Using Controls in Windows Forms</span></span>
-<span data-ttu-id="942c9-103">Bu konu, bir Windows Forms uygulaması temel öğelerini açıklar ve denetimlerini kullanır ve bir Windows Forms uygulamasında olayları işleyen basit bir örnektir.</span><span class="sxs-lookup"><span data-stu-id="942c9-103">This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.</span></span>  
+# <a name="overview-of-using-controls-in-windows-forms"></a><span data-ttu-id="b9f4e-102">Windows Forms'ta Denetimlerin Kullanımına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b9f4e-102">Overview of Using Controls in Windows Forms</span></span>
+<span data-ttu-id="b9f4e-103">Bu konu, bir Windows Forms uygulaması temel öğelerini açıklar ve denetimlerini kullanır ve bir Windows Forms uygulamasında olayları işleyen basit bir örnektir.</span><span class="sxs-lookup"><span data-stu-id="b9f4e-103">This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.</span></span>  
   
-## <a name="simple-windows-forms-applications"></a><span data-ttu-id="942c9-104">Basit bir Windows Forms uygulamaları</span><span class="sxs-lookup"><span data-stu-id="942c9-104">Simple Windows Forms Applications</span></span>  
- <span data-ttu-id="942c9-105">En az bir Windows Forms uygulaması aşağıdaki öğelerden oluşur:</span><span class="sxs-lookup"><span data-stu-id="942c9-105">At a minimum, a Windows Forms application consists of the following elements:</span></span>  
+## <a name="simple-windows-forms-applications"></a><span data-ttu-id="b9f4e-104">Basit bir Windows Forms uygulamaları</span><span class="sxs-lookup"><span data-stu-id="b9f4e-104">Simple Windows Forms Applications</span></span>  
+ <span data-ttu-id="b9f4e-105">En az bir Windows Forms uygulaması aşağıdaki öğelerden oluşur:</span><span class="sxs-lookup"><span data-stu-id="b9f4e-105">At a minimum, a Windows Forms application consists of the following elements:</span></span>  
   
--   <span data-ttu-id="942c9-106">Öğesinden türetilen bir veya daha fazla sınıf <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="942c9-106">One or more classes that derive from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span></span>  
+-   <span data-ttu-id="b9f4e-106">Öğesinden türetilen bir veya daha fazla sınıf <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b9f4e-106">One or more classes that derive from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span></span>  
   
--   <span data-ttu-id="942c9-107">A `Main` çağıran yöntem `static` (`shared` Visual Basic'te) <xref:System.Windows.Forms.Application.Run%2A> yöntemi ve geçişleri bir <xref:System.Windows.Forms.Form> ona örneği.</span><span class="sxs-lookup"><span data-stu-id="942c9-107">A `Main` method that invokes the `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> method and passes a <xref:System.Windows.Forms.Form> instance to it.</span></span> <span data-ttu-id="942c9-108"><xref:System.Windows.Forms.Application.Run%2A> Yöntemi uygulama işletim sisteminden iletileri işler.</span><span class="sxs-lookup"><span data-stu-id="942c9-108">The <xref:System.Windows.Forms.Application.Run%2A> method processes messages from the operating system to the application.</span></span>  
+-   <span data-ttu-id="b9f4e-107">A `Main` çağıran yöntem `static` (`shared` Visual Basic'te) <xref:System.Windows.Forms.Application.Run%2A> yöntemi ve geçişleri bir <xref:System.Windows.Forms.Form> ona örneği.</span><span class="sxs-lookup"><span data-stu-id="b9f4e-107">A `Main` method that invokes the `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> method and passes a <xref:System.Windows.Forms.Form> instance to it.</span></span> <span data-ttu-id="b9f4e-108"><xref:System.Windows.Forms.Application.Run%2A> Yöntemi uygulama işletim sisteminden iletileri işler.</span><span class="sxs-lookup"><span data-stu-id="b9f4e-108">The <xref:System.Windows.Forms.Application.Run%2A> method processes messages from the operating system to the application.</span></span>  
   
- <span data-ttu-id="942c9-109">Aşağıdaki kod örneği, bir Windows Forms uygulaması temel öğelerini gösterir.</span><span class="sxs-lookup"><span data-stu-id="942c9-109">The following code example shows the essential elements of a Windows Forms application.</span></span>  
+ <span data-ttu-id="b9f4e-109">Aşağıdaki kod örneği, bir Windows Forms uygulaması temel öğelerini gösterir.</span><span class="sxs-lookup"><span data-stu-id="b9f4e-109">The following code example shows the essential elements of a Windows Forms application.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -74,8 +74,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="using-controls-in-a-windows-forms-application"></a><span data-ttu-id="942c9-110">Bir Windows Forms uygulamasında denetimlerini kullanma</span><span class="sxs-lookup"><span data-stu-id="942c9-110">Using Controls in a Windows Forms Application</span></span>  
- <span data-ttu-id="942c9-111">Aşağıdaki kod örneği, Windows Forms uygulamaları nasıl denetimlerini kullanın ve olayları işlemek gösteren basit bir uygulamayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="942c9-111">The following code example shows a simple application that illustrates how Windows Forms applications use controls and handle events.</span></span> <span data-ttu-id="942c9-112">Formdaki üç düğme örnek oluşur; Her düğme tıklandığında arka plan rengini değiştirir.</span><span class="sxs-lookup"><span data-stu-id="942c9-112">The example consists of three buttons on a form; each button changes the background color when clicked.</span></span>  
+## <a name="using-controls-in-a-windows-forms-application"></a><span data-ttu-id="b9f4e-110">Bir Windows Forms uygulamasında denetimlerini kullanma</span><span class="sxs-lookup"><span data-stu-id="b9f4e-110">Using Controls in a Windows Forms Application</span></span>  
+ <span data-ttu-id="b9f4e-111">Aşağıdaki kod örneği, Windows Forms uygulamaları nasıl denetimlerini kullanın ve olayları işlemek gösteren basit bir uygulamayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="b9f4e-111">The following code example shows a simple application that illustrates how Windows Forms applications use controls and handle events.</span></span> <span data-ttu-id="b9f4e-112">Formdaki üç düğme örnek oluşur; Her düğme tıklandığında arka plan rengini değiştirir.</span><span class="sxs-lookup"><span data-stu-id="b9f4e-112">The example consists of three buttons on a form; each button changes the background color when clicked.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -223,7 +223,7 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="942c9-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="942c9-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b9f4e-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b9f4e-113">See also</span></span>
 
-- [<span data-ttu-id="942c9-114">.NET Framework ile Özel Windows Forms Denetimleri Geliştirme</span><span class="sxs-lookup"><span data-stu-id="942c9-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
-- [<span data-ttu-id="942c9-115">Windows Forms Denetimi Geliştirmenin Esasları</span><span class="sxs-lookup"><span data-stu-id="942c9-115">Windows Forms Control Development Basics</span></span>](windows-forms-control-development-basics.md)
+- [<span data-ttu-id="b9f4e-114">.NET Framework ile Özel Windows Forms Denetimleri Geliştirme</span><span class="sxs-lookup"><span data-stu-id="b9f4e-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
+- [<span data-ttu-id="b9f4e-115">Windows Forms Denetimi Geliştirmenin Esasları</span><span class="sxs-lookup"><span data-stu-id="b9f4e-115">Windows Forms Control Development Basics</span></span>](windows-forms-control-development-basics.md)
