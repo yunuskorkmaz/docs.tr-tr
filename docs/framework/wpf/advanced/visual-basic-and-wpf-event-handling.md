@@ -6,10 +6,10 @@ helpviewer_keywords:
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
 ms.openlocfilehash: c6e1863850ebf04408c7ffc7b784e9ca3ca12cf5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078030"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic ve WPF Olay İşleme
@@ -45,6 +45,6 @@ Microsoft Visual Basic .NET dil için özellikle, dile özgü kullanabileceğini
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.UIElement.AddHandler%2A>
-- [Gönderilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi](marking-routed-events-as-handled-and-class-handling.md)
-- [Gönderilmiş Olaylara Genel Bakış](routed-events-overview.md)
+- [Yönlendirilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi](marking-routed-events-as-handled-and-class-handling.md)
+- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
 - [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)

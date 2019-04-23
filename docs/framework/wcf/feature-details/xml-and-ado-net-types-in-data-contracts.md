@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
 ms.openlocfilehash: 1053a543a23ed36a5c06c45044c8fdbe25a60538
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073968"
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>Veri Sözleşmelerinde XML ve ADO.NET Türleri
@@ -206,5 +206,5 @@ Windows Communication Foundation (WCF) veri sözleşme modeli XML doğrudan tems
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.Serialization.IXmlSerializable>
-- [Veri Sözleşmelerini Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Veri Anlaşması Seri Hale Getirici Tarafından Desteklenen Türler](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

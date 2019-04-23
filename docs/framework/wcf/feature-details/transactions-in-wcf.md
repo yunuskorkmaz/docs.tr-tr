@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Windows Communication Foundation, using transactions
 ms.assetid: 1e8d04dd-b7cf-41e7-8560-54b4381beb0f
 ms.openlocfilehash: 367abc45b9383a77ba2917030316bda17b4be98c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074124"
 ---
 # <a name="transactions-in-wcf"></a>WCF 'de İşlemler
@@ -35,4 +35,4 @@ Windows Communication Foundation (WCF) işlem özelliği, bir veri işlemi eşza
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenilir Oturumlar Genel Bakış](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
+- [Güvenilir Oturumlara Genel Bakış](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)

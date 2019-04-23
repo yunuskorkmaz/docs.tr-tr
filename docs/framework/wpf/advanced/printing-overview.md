@@ -16,10 +16,10 @@ helpviewer_keywords:
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
 ms.openlocfilehash: 2aeafa7065b587497fb6f3b23605c21dca291cd1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075866"
 ---
 # <a name="printing-overview"></a>Yazdırmaya Genel Bakış

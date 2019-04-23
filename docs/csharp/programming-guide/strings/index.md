@@ -7,10 +7,10 @@ helpviewer_keywords:
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920694"
 ---
 # <a name="strings-c-programming-guide"></a>Dizeler (C# Programlama Kılavuzu)
@@ -133,7 +133,7 @@ string s = String.Empty;
 |[Nasıl yapılır: Birden çok dizeyi birleştirme](../../how-to/concatenate-multiple-strings.md)|Bir alana birden çok dizeyi birleştirme için çeşitli yollar gösterir.|
 |[Nasıl yapılır: String.Split kullanarak dizeleri ayrıştırma](../../how-to/parse-strings-using-split.md)|Nasıl kullanılacağını örneklendiren kod örnekleri içeren `String.Split` dizelerini ayrıştırmak için yöntemi.|  
 |[Nasıl yapılır: Dizeleri arama](../../how-to/search-strings.md)|Dizelerde arama belirli bir metin veya düzenleri için kullanmayı açıklar.|  
-|[Nasıl yapılır: Bir Dizenin Sayısal bir Değeri Temsil Edip Etmediğini Belirleme](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Güvenli bir şekilde geçerli bir sayısal değer olup olmadığını görmek için bir dizeyi ayrıştırma işlemi gösterilmektedir.|  
+|[Nasıl yapılır: Bir dizenin sayısal bir değeri temsil edip etmediğini belirleme](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Güvenli bir şekilde geçerli bir sayısal değer olup olmadığını görmek için bir dizeyi ayrıştırma işlemi gösterilmektedir.|  
 |[Dize ilişkilendirme](../../language-reference/tokens/interpolated.md)|Biçim dizelerine bir sözdizimindeki sağlayan dize ilişkilendirme özelliğini açıklar.|
 |[Temel Dize İşlemleri](../../../../docs/standard/base-types/basic-string-operations.md)|Kullanan konulara bağlantılar sağlar <xref:System.String?displayProperty=nameWithType> ve <xref:System.Text.StringBuilder?displayProperty=nameWithType> temel dize işlemleri gerçekleştirmek için yöntemleri.|  
 |[Dizeleri Ayrıştırma](../../../standard/base-types/parsing-strings.md)|Temel türler .NET dize temsillerini türleri ve karşılık gelen örneklerine dönüştürüleceğini açıklar.|  

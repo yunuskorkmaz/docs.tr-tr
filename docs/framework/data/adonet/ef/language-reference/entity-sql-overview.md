@@ -3,10 +3,10 @@ title: Entity SQL’e Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
 ms.openlocfilehash: 100d616462cd76e1dde8fc855787ec3118842fc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073476"
 ---
 # <a name="entity-sql-overview"></a>Entity SQL’e Genel Bakış
@@ -41,7 +41,7 @@ ms.locfileid: "59073476"
   
  [Desteklenmeyen İfadeler](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md)  
   
- [Sabit değerler](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md)  
+ [Değişmez Değerler](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md)  
   
  [Null Değişmez Değerler ve Tür Çıkarımı](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)  
   
@@ -65,4 +65,4 @@ ms.locfileid: "59073476"
 
 - [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Entity SQL Dili](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
-- [CSDL, SSDL ve MSL belirtimleri](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)
+- [CSDL, SSDL ve MSL Belirtimleri](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

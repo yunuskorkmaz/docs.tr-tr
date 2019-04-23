@@ -7,10 +7,10 @@ helpviewer_keywords:
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
 ms.openlocfilehash: 5ea30c2e9593f289c91a47cc082becf47dedc450
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072791"
 ---
 # <a name="federation-and-issued-tokens"></a>Federasyon ve Verilen Belirteçler
@@ -23,25 +23,25 @@ Windows Communication Foundation (WCF) ile WS-Federation ve WS-Trust belirtimler
  [Federasyon ve Güven](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
  Ne zaman oluşturma hizmetleri veya istemcilerin Federasyon dikkat etmeniz tasarım konuları listeler.  
   
- [Nasıl yapılır: Federe İstemci Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Nasıl yapılır: Federe istemci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  WCF ile federe istemci oluşturma hakkındaki temel bilgileri açıklar.  
   
- [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  Bir Federasyon Hizmeti oluşturma adımlarını açıklar.  
   
- [Nasıl yapılır: WSFederationHttpBinding Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [Nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
  İstemcileri yapılandırma açıklar ve hizmetleri kullanan `WSFederationHttpBinding`.  
   
- [Nasıl yapılır: Güvenlik Belirteci Hizmeti Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
+ [Nasıl yapılır: Bir güvenlik belirteci hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
  Güvenlik belirteci hizmeti oluşturma adımlarını açıklar.  
   
  [Güvenlik Onaylama İşlemi İşaretleme Dili (SAML) Belirteçleri ve Talepleri](../../../../docs/framework/wcf/feature-details/saml-tokens-and-claims.md)  
  Genişletilebilir olan güvenlik onaylama işaretleme dili (SAML) belirteçleri ve zengin oluşturmanızı talep türleri etkinleştirme açıklanmaktadır.  
   
- [Nasıl yapılır: Yerel Yayımlayan Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [Nasıl yapılır: Yerel yayımlayan yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  Yerel bir veren güvenlik belirteçlerinin nasıl oluşturulacağını açıklar.  
   
- [Nasıl yapılır: WSFederationHttpBinding Gücenli Oturumlarını Devre Dışı Bırakma](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Nasıl yapılır: WSFederationHttpBinding güvenli oturumlarını devre dışı bırak](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  Güvenli oturumlar devre dışı bırakmanız açıklar bir `WSFederationHttpBinding`. Her istemci için bir oturum gerektiren bir Web grubu oluştururken güvenli oturumlarını devre dışı bırakılması gereklidir.  
   
 ## <a name="reference"></a>Başvuru  

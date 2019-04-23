@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pkulikov
 ms.author: ronpet
 ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920902"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - dize ilişkilendirme (C# Başvurusu)
@@ -99,4 +99,4 @@ Dize ilişkilendirme için yeni başlıyorsanız bkz [dize ilişkilendirme, C# ]
 - [Dizeler](../../programming-guide/strings/index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Özel Karakterleri](index.md)
-- [C# Başvurusu](../index.md)
+- [C# başvurusu](../index.md)

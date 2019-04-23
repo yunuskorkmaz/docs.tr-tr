@@ -3,10 +3,10 @@ title: Dosya adında belirtilen dosya geçerli bir XML dosyası değil.
 ms.date: 07/20/2015
 ms.assetid: c4c30bf3-e0ad-4bc8-89e0-2c3e49e9793b
 ms.openlocfilehash: 89499b07e767bd0b3a777db4e5155f64a4357f0c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58921279"
 ---
 # <a name="file-specified-in-filename-is-not-a-valid-xml-file"></a>Dosya adında belirtilen dosya geçerli bir XML dosyası değil.
@@ -27,4 +27,4 @@ Girdiğiniz dosya adı geçerli bir XML dosyası değil. İzin verilen yapısı 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xml>
-- [Nasıl yapılır: Dosya Yollarını Ayrıştırma](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [Nasıl yapılır: Dosya yollarını ayrıştırma](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

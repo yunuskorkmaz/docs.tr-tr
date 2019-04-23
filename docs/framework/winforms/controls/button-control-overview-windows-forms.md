@@ -8,10 +8,10 @@ helpviewer_keywords:
 - buttons [Windows Forms], about buttons
 ms.assetid: 255b291b-51a9-4a92-a1a4-2400cd82443f
 ms.openlocfilehash: 1ded871fdfab83407d8022ca0c4ce6b2c8a6c67c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076555"
 ---
 # <a name="button-control-overview-windows-forms"></a>Düğme Denetimine Genel Bakış (Windows Forms)
@@ -24,8 +24,8 @@ Windows Forms <xref:System.Windows.Forms.Button> denetim bir eylemi gerçekleşt
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.Button>
-- [Nasıl yapılır: Windows Forms Düğme Tıklamalarına Yanıt Verme](how-to-respond-to-windows-forms-button-clicks.md)
-- [Windows Forms Düğme Denetimi Seçmenin Yolları](ways-to-select-a-windows-forms-button-control.md)
-- [Nasıl yapılır: Tasarımcı Kullanarak Kabul Düğmesi olarak bir Windows Forms Düğmesi Atama](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
-- [Nasıl yapılır: Tasarımcı Kullanarak İptal Düğmesi olarak bir Windows Forms Düğmesi Atama](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
+- [Nasıl yapılır: Windows Forms düğme tıklamalarına yanıt verme](how-to-respond-to-windows-forms-button-clicks.md)
+- [Windows Forms Düğme Kontrolü Seçme Yolları](ways-to-select-a-windows-forms-button-control.md)
+- [Nasıl yapılır: Tasarımcı kullanarak kabul düğmesi olarak bir Windows Formları düğmesi atama](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
+- [Nasıl yapılır: Tasarımcı kullanarak iptal düğmesi olarak bir Windows Formları düğmesi atama](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
 - [Düğme Kontrolü](button-control-windows-forms.md)

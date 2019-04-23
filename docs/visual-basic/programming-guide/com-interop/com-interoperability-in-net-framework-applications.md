@@ -7,10 +7,10 @@ helpviewer_keywords:
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
 ms.openlocfilehash: 6e8b4eba40cc1872cb289ca120679bb951f2652a
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920811"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework Uygulamalarında COM Birlikte Çalışabilirliği (Visual Basic)
@@ -28,5 +28,5 @@ Bu sayfadaki bağlantılar, COM ve .NET Framework nesneleri arasındaki etkileş
 | [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md) | Visual Basic'te COM nesneleri, ActiveX denetimleri, Win32 DLL'leri, yönetilen nesneleri ve COM nesneleri devralma dahil olmak üzere, COM birlikte çalışabilirlik kapsayan konulara bağlantılar sağlar. |
 | [Yönetilmeyen Kod ile Birlikte Çalışma](../../../framework/interop/index.md) | Kısaca, yönetilen ve yönetilmeyen kod arasındaki etkileşimi sorunlardan bazılarını açıklar ve daha fazla araştırma için bağlantılar sağlar. |
 | [COM Sarmalayıcıları](../../../framework/interop/com-wrappers.md) | COM yöntemleri çağırmak yönetilen koda izin ver, çalışma zamanı aranabilir sarmalayıcılarını ve COM istemcilerinin .NET nesnesi yöntemlerini çağırmaya izin COM aranabilir sarmalayıcılarını ele alır. |
-| [Gelişmiş COM Birlikte Çalışabilirlik](../../../framework/interop/index.md) | COM birlikte çalışabilirlik sarmalayıcılar, özel durumlar, devralma, iş parçacığı oluşturma, olayları, dönüştürme ve hazırlama göre kapsayan konulara bağlantılar sağlar. |
+| [Gelişmiş COM birlikte çalışabilirliği](../../../framework/interop/index.md) | COM birlikte çalışabilirlik sarmalayıcılar, özel durumlar, devralma, iş parçacığı oluşturma, olayları, dönüştürme ve hazırlama göre kapsayan konulara bağlantılar sağlar. |
 | [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | Aracın, bir ortak dil çalışma zamanı derlemesi içindeki eşdeğer tanımlara bir COM tür kitaplığı içinde bulunan tür tanımlarını dönüştürme için kullanabileceğiniz anlatılmaktadır. |

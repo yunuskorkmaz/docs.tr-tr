@@ -3,10 +3,10 @@ title: LINQ to SQL Sorguları
 ms.date: 03/30/2017
 ms.assetid: f4897aaa-7f44-4c20-a471-b948c2971aae
 ms.openlocfilehash: 49106502dc58eef36ea0c910c627c9cf397f419e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076191"
 ---
 # <a name="linq-to-sql-queries"></a>LINQ to SQL Sorguları
@@ -33,7 +33,7 @@ Tanımladığınız [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ Sorgularına Giriş (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)
+- [LINQ sorguları (C#) giriş](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)
 - [Temel LINQ Sorgu İşlemleri](~/docs/csharp/programming-guide/concepts/linq/basic-linq-query-operations.md)
 - [LINQ Sorgu İşlemlerinde Tür İlişkileri](~/docs/csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)
 - [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

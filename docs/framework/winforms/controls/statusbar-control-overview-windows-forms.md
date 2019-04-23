@@ -8,10 +8,10 @@ helpviewer_keywords:
 - status bars
 ms.assetid: b7b9852c-633d-4416-bb2e-94852b989c6c
 ms.openlocfilehash: 5fdefa7d7e7c7ef543f677be7beb61dfee54e077
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077322"
 ---
 # <a name="statusbar-control-overview-windows-forms"></a>StatusBar Denetimine Genel Bakış (Windows Forms)
@@ -29,4 +29,4 @@ ms.locfileid: "59077322"
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Nasıl yapılır: Windows Forms StatusBar Denetiminde Hangi Panele Tıklandığını Belirleme](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Nasıl yapılır: Windows Forms StatusBar denetiminde hangi panele tıklandığını belirleme](determine-which-panel-wf-statusbar-control-was-clicked.md)

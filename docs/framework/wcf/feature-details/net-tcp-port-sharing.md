@@ -6,10 +6,10 @@ helpviewer_keywords:
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
 ms.openlocfilehash: b04266b15f786e3a5a93ac1e9fff1754c397ccd4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073701"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP Bağlantı Noktası Paylaşımı
@@ -52,5 +52,5 @@ Windows Communication Foundation (WCF), yüksek performanslı iletişim için ye
 
 - [Net.TCP Bağlantı Noktası Hizmetini Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
 - [Barındırma](../../../../docs/framework/wcf/feature-details/hosting.md)
-- [Nasıl yapılır: Bağlantı Noktası Paylaşımı Kullanarak Bir WCF Hizmetini Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)
-- [Nasıl yapılır: Net.TCP Bağlantı Noktası Payalaşım Hizmetini Etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+- [Nasıl yapılır: Bağlantı noktası paylaşımı kullanarak bir WCF hizmetini yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)
+- [Nasıl yapılır: Net.TCP bağlantı noktası hizmetini etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

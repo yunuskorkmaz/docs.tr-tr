@@ -3,16 +3,16 @@ title: ODBC Veri Türü Eşlemeleri
 ms.date: 03/30/2017
 ms.assetid: 43c35d32-831d-480f-a150-78f7e869d17f
 ms.openlocfilehash: 8165ab933352394e29cbe93a9e8ba64267f8ae60
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074072"
 ---
 # <a name="odbc-data-type-mappings"></a>ODBC Veri Türü Eşlemeleri
 Aşağıdaki tabloda gösterilen gösterilmektedir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türü ODBC için .NET Framework Veri Sağlayıcısı'ndan veri türleri için (<xref:System.Data.Odbc>). Türü belirlenmiş erişimci yöntemlerini <xref:System.Data.Odbc.OdbcDataReader> da listelenir.  
   
-|ODBC türü|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]  türü|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türü belirlenmiş erişimcisi|  
+|ODBC türü|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Türü|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türü belirlenmiş erişimcisi|  
 |---------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |SQL_BIGINT|Int64|GetInt64()|  
 |SQL_BINARY|Byte[]|GetBytes()|  

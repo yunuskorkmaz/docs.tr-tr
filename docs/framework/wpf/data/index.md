@@ -9,10 +9,10 @@ helpviewer_keywords:
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
 ms.openlocfilehash: ee45771a289804395387f9d6d49b667da1a76024
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077738"
 ---
 # <a name="data"></a>Veri
@@ -40,5 +40,5 @@ ms.locfileid: "59077738"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: İlk WPF masaüstü uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [İzlenecek yol: Bir WPF uygulamasında uygulama verilerini önbelleğe alma](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

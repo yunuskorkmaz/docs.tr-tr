@@ -7,10 +7,10 @@ helpviewer_keywords:
 - performance tuning [Windows Forms], data grids
 ms.assetid: 6ccbff28-a0ff-41e4-b601-61b31b61851d
 ms.openlocfilehash: 79f74db4ebd095156207a6218f59c0e9ae423085
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076600"
 ---
 # <a name="performance-tuning-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Performans Ayarlaması
@@ -23,7 +23,7 @@ Büyük miktarlarda verilerin çalışırken `DataGridView` dikkatle kullanmadı
  [Windows Forms DataGridView Denetiminde Sanal Mod](virtual-mode-in-the-windows-forms-datagridview-control.md)  
  Standart veri bağlama mekanizması değiştirmek veya desteklemek için sanal mod kullanmayı açıklar.  
   
- [İzlenecek yol: Windows Forms DataGridView Denetiminde Sanal Modu Uygulama](implementing-virtual-mode-wf-datagridview-control.md)  
+ [İzlenecek yol: Windows Forms DataGridView denetiminde sanal modu uygulama](implementing-virtual-mode-wf-datagridview-control.md)  
  Birkaç sanal modu olayları için işleyiciler uygulanacağını açıklar. Ayrıca, satır düzeyi geri alma ve kullanıcı düzenlemeleri için değişiklikleri uygulamak nasıl gösterir.  
   
  [Windows Forms DataGridView Denetiminde Zamanında Veri Yükleme ile Sanal Modu Uygulama](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  

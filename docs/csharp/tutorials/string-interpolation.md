@@ -4,10 +4,10 @@ description: Dize ilişkilendirme ile C# dilinde bir sonuç dizesi olarak biçim
 author: pkulikov
 ms.date: 05/09/2018
 ms.openlocfilehash: 5a66ba9215579a459b543a24ece338ffbbfd9aea
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920720"
 ---
 # <a name="string-interpolation-in-c"></a>C'de dize ilişkilendirme\#

@@ -1,12 +1,12 @@
 ---
-title: <transport> , <peerTransport>
+title: <transport> / <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
 ms.openlocfilehash: 9b6f548515afbba5068659bd5c6f7f2b33f80cda
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076009"
 ---
 # <a name="transport-of-peertransport"></a>\<Aktarım >, \<peerTransport >
@@ -62,7 +62,7 @@ Bu bağlama ile yapılandırılan eşleri tarafından gönderilen güvenli ileti
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Taşıma Güvenliği](../../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Aktarım Güvenliği](../../../../../docs/framework/wcf/feature-details/transport-security.md)
 - [Taşımalar](../../../../../docs/framework/wcf/feature-details/transports.md)
 - [Taşıma Seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)

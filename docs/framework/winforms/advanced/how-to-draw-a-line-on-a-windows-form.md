@@ -13,10 +13,10 @@ helpviewer_keywords:
 - drawing lines
 ms.assetid: 55c1dbeb-75d0-430c-9814-a24b8971ad8c
 ms.openlocfilehash: aab04b9236175cedd154b817db5a6f6450503105
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074456"
 ---
 # <a name="how-to-draw-a-line-on-a-windows-form"></a>Nasıl yapılır: Windows Formunda Çizgi Çizme
@@ -27,7 +27,7 @@ Bu örnek, bir form üzerinde bir çizgi çizer. Genellikle, bir form üzerinde 
  [!code-vb[System.Drawing.UsingAPen#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs>`e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
+ Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Her zaman çağırmalıdır <xref:System.IDisposable.Dispose%2A> gibi sistem kaynaklarının kullanan herhangi bir nesne üzerinde <xref:System.Drawing.Pen> nesneleri.  
@@ -38,4 +38,4 @@ Bu örnek, bir form üzerinde bir çizgi çizer. Genellikle, bir form üzerinde 
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - [Grafik Programlamaya Başlarken](getting-started-with-graphics-programming.md)
 - [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](using-a-pen-to-draw-lines-and-shapes.md)
-- [Windows Formlarında Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
+- [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)

@@ -8,10 +8,10 @@ ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 01427e8f90cebca5297e21d54d29c08cf1eab75c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075944"
 ---
 # <a name="security-transparent-code"></a>Güvenliği Saydam Kod
@@ -25,11 +25,11 @@ ms.locfileid: "59075944"
   
  Bu konuda, saydamlık modeli daha ayrıntılı açıklanmaktadır. Aşağıdaki bölümleri içerir:  
   
--   [Saydamlık Modelinin Amacı](#purpose)  
+-   [Saydamlık modelinin amacı](#purpose)  
   
--   [Saydamlık Düzeyini Belirtme](#level)  
+-   [Saydamlık düzeyini belirtme](#level)  
   
--   [Saydamlığı Zorlama](#enforcement)  
+-   [Saydamlığı zorlama](#enforcement)  
   
 <a name="purpose"></a>   
 ## <a name="purpose-of-the-transparency-model"></a>Saydamlık Modelinin Amacı  
@@ -109,4 +109,4 @@ ms.locfileid: "59075944"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Güvenliği saydam kod, düzey 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
-- [Güvenliği Saydam Kod, 2. Düzey](../../../docs/framework/misc/security-transparent-code-level-2.md)
+- [Güvenliği saydam kod, Düzey 2](../../../docs/framework/misc/security-transparent-code-level-2.md)

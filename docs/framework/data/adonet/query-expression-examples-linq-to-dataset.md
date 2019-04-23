@@ -3,10 +3,10 @@ title: Sorgu ifadesi örnekleri (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: f743fbc7-faff-45e5-af1e-61577d87f0cc
 ms.openlocfilehash: f15e397c711bd01d5770e59c4f2c8227ee2ac7ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074293"
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>Sorgu ifadesi örnekleri (LINQ to DataSet)
@@ -36,6 +36,6 @@ Bu bölümde LINQ standart sorgu işleçlerini kullanan veri kümesi programlama
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yöntem Tabanlı Sorgu Örnekleri](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)
+- [Metot Tabanlı Sorgu Örnekleri](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)
 - [DataSet’e Özgü İşleç Örnekleri](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)
 - [LINQ to DataSet Örnekleri](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

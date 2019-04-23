@@ -9,10 +9,10 @@ helpviewer_keywords:
 - folders [Windows Forms], enabling browsing in applications
 ms.assetid: 796b622c-3ba9-4356-93bb-e217fc52f2c7
 ms.openlocfilehash: aae18167b29c71ad692cc6ba447457cd079374b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074137"
 ---
 # <a name="folderbrowserdialog-component-overview-windows-forms"></a>FolderBrowserDialog Bileşenine Genel Bakış (Windows Forms)
@@ -28,5 +28,5 @@ Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> klasörleri seçme
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [Nasıl yapılır: Windows Forms FolderBrowserDialog Bileşeni ile Klasörleri Seçme](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
+- [Nasıl yapılır: Windows Forms FolderBrowserDialog bileşeni ile klasörleri seçin](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
 - [FolderBrowserDialog Bileşeni](folderbrowserdialog-component-windows-forms.md)

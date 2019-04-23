@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
 ms.openlocfilehash: d17d2ad3fd99c6d563c21ddd646396ccb1c1ca48
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58921318"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Boş Değer Atanabilen Değer Türleri (Visual Basic)
@@ -109,12 +109,12 @@ Boş değer atanabilir türler kullanmak için en önemli yerlerden biri bir ver
 
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
-- [Boş Değer Atanabilir Türleri Kullanma](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Boş Değer Atanabilir Tipleri Kullanma](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Veri Türleri](index.md)
 - [Değer Türleri ve Başvuru Türleri](value-types-and-reference-types.md)
-- [Veri Türleri Sorunlarını Giderme](troubleshooting-data-types.md)
-- [TableAdapters'ı kullanarak veri kümelerini doldurma](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)
+- [Veri Türü Sorunlarını Giderme](troubleshooting-data-types.md)
+- [TableAdapter'ları kullanarak veri kümelerini doldurma](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)
 - [If İşleci](../../../language-reference/operators/if-operator.md)
-- [Yerel Tür Arabirimi](../variables/local-type-inference.md)
+- [Yerel Çıkarım](../variables/local-type-inference.md)
 - [Is İşleci](../../../language-reference/operators/is-operator.md)
 - [IsNot İşleci](../../../language-reference/operators/isnot-operator.md)

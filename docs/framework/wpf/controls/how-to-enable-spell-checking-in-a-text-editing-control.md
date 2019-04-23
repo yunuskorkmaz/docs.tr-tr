@@ -12,10 +12,10 @@ helpviewer_keywords:
 - checking spelling [WPF]
 ms.assetid: 6f953d2b-67e8-4012-84ce-53c0e958da47
 ms.openlocfilehash: 7381bafc349506d89058581e9ed62a4348a72865
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076854"
 ---
 # <a name="how-to-enable-spell-checking-in-a-text-editing-control"></a>Nasıl yapılır: Metin Düzenleme Denetiminde Yazım Denetimini Etkinleştirme
@@ -30,5 +30,5 @@ Aşağıdaki örnek gerçek zamanlı yazım denetimini etkinleştirme gösterilm
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Açılır Menü ile Yazım Denetimi Kullanma](how-to-use-spell-checking-with-a-context-menu.md)
-- [TextBox Genel Bakışı](textbox-overview.md)
-- [RichTextBox Genel Bakışı](richtextbox-overview.md)
+- [TextBox Genel Bakış](textbox-overview.md)
+- [RichTextBox Genel Bakış](richtextbox-overview.md)

@@ -3,10 +3,10 @@ title: Zkratka
 description: Byref ve byref-like türleri hakkında F#, alt düzey programlama için kullanılır.
 ms.date: 09/02/2018
 ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055371"
 ---
 # <a name="byrefs"></a>Zkratka
@@ -112,17 +112,17 @@ C# destekler `in ref` ve `out ref` yanı sıra anahtar sözcükleri `ref` dönd�
 
 |C# yapısı|F#algılar|
 |------------|---------|
-|`ref` dönüş değeri|`outref<'T>`|
-|`ref readonly` dönüş değeri|`inref<'T>`|
-|`in ref` parametre|`inref<'T>`|
-|`out ref` parametre|`outref<'T>`|
+|`ref` Dönüş değeri|`outref<'T>`|
+|`ref readonly` Dönüş değeri|`inref<'T>`|
+|`in ref` Parametre|`inref<'T>`|
+|`out ref` Parametre|`outref<'T>`|
 
 Aşağıdaki tabloda neler gösterilmektedir F# gösterir:
 
 |F#yapısı|Yayılan yapısı|
 |------------|-----------------|
 |`inref<'T>` Bağımsız değişken|`[In]` bağımsız değişken özniteliği|
-|`inref<'T>` return|`modreq` öznitelik değeri|
+|`inref<'T>` döndürülecek|`modreq` öznitelik değeri|
 |`inref<'T>` soyut yuvası veya uygulama|`modreq` bağımsız değişken veya dönüş|
 |`outref<'T>` Bağımsız değişken|`[Out]` bağımsız değişken özniteliği|
 

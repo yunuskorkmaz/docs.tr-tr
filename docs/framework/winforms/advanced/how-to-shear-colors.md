@@ -9,10 +9,10 @@ helpviewer_keywords:
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
 ms.openlocfilehash: bf645cf88c4905cd5cf47c2a6c7af088fa428c8a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076256"
 ---
 # <a name="how-to-shear-colors"></a>Nasıl yapılır: Renkleri Bükme
@@ -38,11 +38,11 @@ Yamultma artırır veya bir renk bileşeni için başka bir renk bileşeni orant
  [!code-vb[System.Drawing.Misc3#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs>`e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Değiştirin `ColorBars.bmp` bir görüntü adı ve yolu sisteminize göre geçerli.  
+ Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Değiştirin `ColorBars.bmp` bir görüntü adı ve yolu sisteminize göre geçerli.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Windows Formlarında Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
-- [Resimleri Yeniden Renklendirme](recoloring-images.md)
+- [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
+- [Görüntüleri Yeniden Renklendirme](recoloring-images.md)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
 ms.openlocfilehash: 223b86310d90c877df15a99c90a0a72ea780734a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076269"
 ---
 # <a name="claims-and-tokens"></a>Beyanlar ve Belirteçler
@@ -70,4 +70,4 @@ Bu konu, Windows Communication Foundation (WCF) desteklediği varsayılan belirt
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.Rights>
 - <xref:System.IdentityModel.Claims.ClaimTypes>
-- [Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

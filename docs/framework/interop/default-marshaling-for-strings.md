@@ -11,10 +11,10 @@ ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 47543056eaa538b008db3332dda776c0f300108d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078479"
 ---
 # <a name="default-marshaling-for-strings"></a>Dizeler için Varsayılan Hazırlama
@@ -265,7 +265,7 @@ public class Window {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Varsayılan Sıralama Davranışı](default-marshaling-behavior.md)
+- [Varsayılan Hazırlama Davranışı](default-marshaling-behavior.md)
 - [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](blittable-and-non-blittable-types.md)
-- [Yönlü Öznitelikler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
+- [Yönlü öznitelikler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Kopyalama ve Sabitleme](copying-and-pinning.md)

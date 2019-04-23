@@ -8,10 +8,10 @@ ms.assetid: d186276f-6afb-4dfd-bf3c-4251edc2c299
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fa36399320a8c396a222619172264a32f3eb3505
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072733"
 ---
 # <a name="etw-events-in-the-net-framework"></a>.NET Framework'te ETW Olayları
@@ -23,7 +23,7 @@ Olay izleme için Windows (ETW), Windows işletim sistemleri tarafından sağlan
  [Görev Paralel Kitaplığı ve PLINQ'da ETW Olayları](../../../docs/framework/performance/etw-events-in-task-parallel-library-and-plinq.md)  
  Paralel uygulamada kod profil açıklar.  
   
- [Ortak Dil Çalışma Zamanında ETW Olayları](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)  
+ [Ortak Dil Çalışma Zamanı Modülünde ETW Olayları](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)  
  CLR ETW olaylarını ortak dil çalışma zamanı tarafından sağlanan profil oluşturma ve hata ayıklama desteği nasıl ek açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
