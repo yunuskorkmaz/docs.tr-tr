@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5f62fa23d30a93f863cb2be0fa060bd2eba8dca1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141745"
 ---
-# <a name="icordebugmdagetname-method"></a><span data-ttu-id="bc18e-102">ICorDebugMDA::GetName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="bc18e-102">ICorDebugMDA::GetName Method</span></span>
-<span data-ttu-id="bc18e-103">Tarafından temsil edilen yönetilen hata ayıklama Yardımcısı (MDA) adını içeren bir dize alır [Icordebugmda](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span><span class="sxs-lookup"><span data-stu-id="bc18e-103">Gets a string containing the name of the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span></span>  
+# <a name="icordebugmdagetname-method"></a><span data-ttu-id="5e121-102">ICorDebugMDA::GetName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5e121-102">ICorDebugMDA::GetName Method</span></span>
+<span data-ttu-id="5e121-103">Tarafından temsil edilen yönetilen hata ayıklama Yardımcısı (MDA) adını içeren bir dize alır [Icordebugmda](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span><span class="sxs-lookup"><span data-stu-id="5e121-103">Gets a string containing the name of the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bc18e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="bc18e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5e121-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5e121-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName (  
@@ -38,29 +38,29 @@ HRESULT GetName (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bc18e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="bc18e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5e121-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5e121-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="bc18e-106">[in] Boyutu `szName` dizisi.</span><span class="sxs-lookup"><span data-stu-id="bc18e-106">[in] The size of the `szName` array.</span></span>  
+ <span data-ttu-id="5e121-106">[in] Boyutu `szName` dizisi.</span><span class="sxs-lookup"><span data-stu-id="5e121-106">[in] The size of the `szName` array.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="bc18e-107">[out] Bir işaretçi adı uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="bc18e-107">[out] A pointer to the length of the name.</span></span>  
+ <span data-ttu-id="5e121-107">[out] Bir işaretçi adı uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="5e121-107">[out] A pointer to the length of the name.</span></span>  
   
  `szName`  
- <span data-ttu-id="bc18e-108">[out] Dizi adı depolanacağı.</span><span class="sxs-lookup"><span data-stu-id="bc18e-108">[out] An array in which to store the name.</span></span>  
+ <span data-ttu-id="5e121-108">[out] Dizi adı depolanacağı.</span><span class="sxs-lookup"><span data-stu-id="5e121-108">[out] An array in which to store the name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bc18e-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="bc18e-109">Remarks</span></span>  
- <span data-ttu-id="bc18e-110">MDA adlarının benzersiz değerler.</span><span class="sxs-lookup"><span data-stu-id="bc18e-110">MDA names are unique values.</span></span> <span data-ttu-id="bc18e-111">`GetName` XML akışı alma ve ad şemasını temel alan akıştan ayıklanıyor bir uygun performans alternatif bir yöntemdir.</span><span class="sxs-lookup"><span data-stu-id="bc18e-111">The `GetName` method is a convenient performance alternative to getting the XML stream and extracting the name from the stream based on the schema.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5e121-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5e121-109">Remarks</span></span>  
+ <span data-ttu-id="5e121-110">MDA adlarının benzersiz değerler.</span><span class="sxs-lookup"><span data-stu-id="5e121-110">MDA names are unique values.</span></span> <span data-ttu-id="5e121-111">`GetName` XML akışı alma ve ad şemasını temel alan akıştan ayıklanıyor bir uygun performans alternatif bir yöntemdir.</span><span class="sxs-lookup"><span data-stu-id="5e121-111">The `GetName` method is a convenient performance alternative to getting the XML stream and extracting the name from the stream based on the schema.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bc18e-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="bc18e-112">Requirements</span></span>  
- <span data-ttu-id="bc18e-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bc18e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5e121-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5e121-112">Requirements</span></span>  
+ <span data-ttu-id="5e121-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5e121-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bc18e-114">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bc18e-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5e121-114">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5e121-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="bc18e-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bc18e-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5e121-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5e121-115">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="bc18e-116">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="bc18e-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="5e121-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5e121-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bc18e-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bc18e-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5e121-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5e121-117">See also</span></span>
 
-- [<span data-ttu-id="bc18e-118">ICorDebugMDA Arabirimi</span><span class="sxs-lookup"><span data-stu-id="bc18e-118">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
-- [<span data-ttu-id="bc18e-119">Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama</span><span class="sxs-lookup"><span data-stu-id="bc18e-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="5e121-118">ICorDebugMDA Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5e121-118">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [<span data-ttu-id="5e121-119">Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama</span><span class="sxs-lookup"><span data-stu-id="5e121-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

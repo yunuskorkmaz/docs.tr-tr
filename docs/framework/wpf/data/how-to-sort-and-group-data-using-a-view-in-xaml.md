@@ -12,35 +12,35 @@ helpviewer_keywords:
 - views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
 ms.openlocfilehash: ca4439b574264ebebfda745f0765f750099bc95f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144527"
 ---
-# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a><span data-ttu-id="44b8a-102">Nasıl yapılır: XAML İçerisinde bir Görüntü Kullanarak Verileri Sıralama ve Gruplama</span><span class="sxs-lookup"><span data-stu-id="44b8a-102">How to: Sort and Group Data Using a View in XAML</span></span>
-<span data-ttu-id="44b8a-103">Bu örnek, bir veri toplama bir görünümün nasıl oluşturulacağını gösterir. [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="44b8a-103">This example shows how to create a view of a data collection in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="44b8a-104">Görünümler işlevleri gruplandırma, sıralama, filtreleme ve geçerli öğenin kavram izin verir.</span><span class="sxs-lookup"><span data-stu-id="44b8a-104">Views allow for the functionalities of grouping, sorting, filtering, and the notion of a current item.</span></span>  
+# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a><span data-ttu-id="81e6c-102">Nasıl yapılır: XAML İçerisinde bir Görüntü Kullanarak Verileri Sıralama ve Gruplama</span><span class="sxs-lookup"><span data-stu-id="81e6c-102">How to: Sort and Group Data Using a View in XAML</span></span>
+<span data-ttu-id="81e6c-103">Bu örnek, bir veri toplama bir görünümün nasıl oluşturulacağını gösterir. [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="81e6c-103">This example shows how to create a view of a data collection in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="81e6c-104">Görünümler işlevleri gruplandırma, sıralama, filtreleme ve geçerli öğenin kavram izin verir.</span><span class="sxs-lookup"><span data-stu-id="81e6c-104">Views allow for the functionalities of grouping, sorting, filtering, and the notion of a current item.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="44b8a-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="44b8a-105">Example</span></span>  
- <span data-ttu-id="44b8a-106">Aşağıdaki örnekte adlı statik kaynak *yerleştirir* koleksiyonu olarak tanımlanır *yerde* nesneleri, her *yerde* nesne bir şehir adı toplamda ve durumu.</span><span class="sxs-lookup"><span data-stu-id="44b8a-106">In the following example, the static resource named *places* is defined as a collection of *Place* objects, in which each *Place* object is consisted of a city name and the state.</span></span> <span data-ttu-id="44b8a-107">Önek *src* ad alanına eşlenen burada veri kaynağı *yerler* tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="44b8a-107">The prefix *src* is mapped to the namespace where the data source *Places* is defined.</span></span> <span data-ttu-id="44b8a-108">Önek *scm* eşlendiği `"clr-namespace:System.ComponentModel;assembly=WindowsBase"` ve *dat* eşlendiği `"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`.</span><span class="sxs-lookup"><span data-stu-id="44b8a-108">The prefix *scm* maps to `"clr-namespace:System.ComponentModel;assembly=WindowsBase"` and *dat* maps to `"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`.</span></span>  
+## <a name="example"></a><span data-ttu-id="81e6c-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="81e6c-105">Example</span></span>  
+ <span data-ttu-id="81e6c-106">Aşağıdaki örnekte adlı statik kaynak *yerleştirir* koleksiyonu olarak tanımlanır *yerde* nesneleri, her *yerde* nesne bir şehir adı toplamda ve durumu.</span><span class="sxs-lookup"><span data-stu-id="81e6c-106">In the following example, the static resource named *places* is defined as a collection of *Place* objects, in which each *Place* object is consisted of a city name and the state.</span></span> <span data-ttu-id="81e6c-107">Önek *src* ad alanına eşlenen burada veri kaynağı *yerler* tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="81e6c-107">The prefix *src* is mapped to the namespace where the data source *Places* is defined.</span></span> <span data-ttu-id="81e6c-108">Önek *scm* eşlendiği `"clr-namespace:System.ComponentModel;assembly=WindowsBase"` ve *dat* eşlendiği `"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`.</span><span class="sxs-lookup"><span data-stu-id="81e6c-108">The prefix *scm* maps to `"clr-namespace:System.ComponentModel;assembly=WindowsBase"` and *dat* maps to `"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`.</span></span>  
   
- <span data-ttu-id="44b8a-109">Aşağıdaki örnek Şehir adına göre sıralanır ve durumlarına göre gruplandırılan veri koleksiyonunu bir görünümünü oluşturur.</span><span class="sxs-lookup"><span data-stu-id="44b8a-109">The following example creates a view of the data collection that is sorted by the city name and grouped by the state.</span></span>  
+ <span data-ttu-id="81e6c-109">Aşağıdaki örnek Şehir adına göre sıralanır ve durumlarına göre gruplandırılan veri koleksiyonunu bir görünümünü oluşturur.</span><span class="sxs-lookup"><span data-stu-id="81e6c-109">The following example creates a view of the data collection that is sorted by the city name and grouped by the state.</span></span>  
   
  [!code-xaml[CollectionViewSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#1)]  
   
- <span data-ttu-id="44b8a-110">Görünüm, ardından aşağıdaki örnekteki gibi bir bağlama kaynağı olabilir:</span><span class="sxs-lookup"><span data-stu-id="44b8a-110">The view can then be a binding source, as in the following example:</span></span>  
+ <span data-ttu-id="81e6c-110">Görünüm, ardından aşağıdaki örnekteki gibi bir bağlama kaynağı olabilir:</span><span class="sxs-lookup"><span data-stu-id="81e6c-110">The view can then be a binding source, as in the following example:</span></span>  
   
  [!code-xaml[CollectionViewSource#2](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#2)]  
   
- <span data-ttu-id="44b8a-111">Tanımlanan XML veri bağlama için bir <xref:System.Windows.Data.XmlDataProvider> kaynak ile XML adın önüne bir @ sembolü.</span><span class="sxs-lookup"><span data-stu-id="44b8a-111">For bindings to XML data defined in an <xref:System.Windows.Data.XmlDataProvider> resource, precede the XML name with an @ symbol.</span></span>  
+ <span data-ttu-id="81e6c-111">Tanımlanan XML veri bağlama için bir <xref:System.Windows.Data.XmlDataProvider> kaynak ile XML adın önüne bir @ sembolü.</span><span class="sxs-lookup"><span data-stu-id="81e6c-111">For bindings to XML data defined in an <xref:System.Windows.Data.XmlDataProvider> resource, precede the XML name with an @ symbol.</span></span>  
   
  [!code-xaml[CollectionViewSource#XDPChunk](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#xdpchunk)]  
   
  [!code-xaml[CollectionViewSource#Attribute](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#attribute)]  
   
-## <a name="see-also"></a><span data-ttu-id="44b8a-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="44b8a-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81e6c-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="81e6c-112">See also</span></span>
 
 - <xref:System.Windows.Data.CollectionViewSource>
-- [<span data-ttu-id="44b8a-113">Veri Koleksiyonunun Varsayılan Görünümünü Alma</span><span class="sxs-lookup"><span data-stu-id="44b8a-113">Get the Default View of a Data Collection</span></span>](how-to-get-the-default-view-of-a-data-collection.md)
-- [<span data-ttu-id="44b8a-114">Veri Bağlamaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="44b8a-114">Data Binding Overview</span></span>](data-binding-overview.md)
-- [<span data-ttu-id="44b8a-115">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="44b8a-115">How-to Topics</span></span>](data-binding-how-to-topics.md)
+- [<span data-ttu-id="81e6c-113">Veri Koleksiyonunun Varsayılan Görünümünü Alma</span><span class="sxs-lookup"><span data-stu-id="81e6c-113">Get the Default View of a Data Collection</span></span>](how-to-get-the-default-view-of-a-data-collection.md)
+- [<span data-ttu-id="81e6c-114">Veri Bağlamaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="81e6c-114">Data Binding Overview</span></span>](data-binding-overview.md)
+- [<span data-ttu-id="81e6c-115">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="81e6c-115">How-to Topics</span></span>](data-binding-how-to-topics.md)

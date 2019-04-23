@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b5015dc42497d269cdc2de944f14454558be6c07
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142993"
 ---
-# <a name="imetadataimportcountenum-method"></a><span data-ttu-id="0a187-102">IMetaDataImport::CountEnum Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0a187-102">IMetaDataImport::CountEnum Method</span></span>
-<span data-ttu-id="0a187-103">Belirtilen numaralandırıcı tarafından alınan listedeki öğe sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="0a187-103">Gets the number of elements in the enumeration that was retrieved by the specified enumerator.</span></span>  
+# <a name="imetadataimportcountenum-method"></a><span data-ttu-id="f6c22-102">IMetaDataImport::CountEnum Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f6c22-102">IMetaDataImport::CountEnum Method</span></span>
+<span data-ttu-id="f6c22-103">Belirtilen numaralandırıcı tarafından alınan listedeki öğe sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="f6c22-103">Gets the number of elements in the enumeration that was retrieved by the specified enumerator.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0a187-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0a187-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f6c22-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f6c22-104">Syntax</span></span>  
   
 ```  
 HRESULT CountEnum (  
@@ -36,26 +36,26 @@ HRESULT CountEnum (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0a187-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0a187-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f6c22-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f6c22-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="0a187-106">[in] Numaralandırıcı için tanıtıcı.</span><span class="sxs-lookup"><span data-stu-id="0a187-106">[in] The handle for the enumerator.</span></span>  
+ <span data-ttu-id="f6c22-106">[in] Numaralandırıcı için tanıtıcı.</span><span class="sxs-lookup"><span data-stu-id="f6c22-106">[in] The handle for the enumerator.</span></span>  
   
  `pulCount`  
- <span data-ttu-id="0a187-107">[out] Numaralandırılan öğe sayısı.</span><span class="sxs-lookup"><span data-stu-id="0a187-107">[out] The number of elements enumerated.</span></span>  
+ <span data-ttu-id="f6c22-107">[out] Numaralandırılan öğe sayısı.</span><span class="sxs-lookup"><span data-stu-id="f6c22-107">[out] The number of elements enumerated.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0a187-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0a187-108">Remarks</span></span>  
- <span data-ttu-id="0a187-109">Tarafından belirtilen işleç `hEnum` önceki bir sürümden elde edilen `Enum` *adı* arayın (örneğin, [Imetadataımport::enumtypedefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span><span class="sxs-lookup"><span data-stu-id="0a187-109">The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f6c22-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f6c22-108">Remarks</span></span>  
+ <span data-ttu-id="f6c22-109">Tarafından belirtilen işleç `hEnum` önceki bir sürümden elde edilen `Enum` *adı* arayın (örneğin, [Imetadataımport::enumtypedefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span><span class="sxs-lookup"><span data-stu-id="f6c22-109">The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0a187-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0a187-110">Requirements</span></span>  
- <span data-ttu-id="0a187-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0a187-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f6c22-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f6c22-110">Requirements</span></span>  
+ <span data-ttu-id="f6c22-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f6c22-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0a187-112">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="0a187-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f6c22-112">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="f6c22-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="0a187-113">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="0a187-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f6c22-113">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="f6c22-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="0a187-114">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="0a187-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="f6c22-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f6c22-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a187-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0a187-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f6c22-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f6c22-115">See also</span></span>
 
-- [<span data-ttu-id="0a187-116">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0a187-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="0a187-117">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0a187-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="f6c22-116">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f6c22-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="f6c22-117">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f6c22-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
