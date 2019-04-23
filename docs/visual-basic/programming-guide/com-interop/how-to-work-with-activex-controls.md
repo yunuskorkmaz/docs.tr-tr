@@ -6,34 +6,34 @@ helpviewer_keywords:
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
 ms.openlocfilehash: 5950779e1f0d1e76b933b83135a8bf516161aced
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295087"
 ---
-# <a name="how-to-work-with-activex-controls-visual-basic"></a><span data-ttu-id="def22-102">Nasıl yapılır: ActiveX denetimleri (Visual Basic) ile çalışma</span><span class="sxs-lookup"><span data-stu-id="def22-102">How to: Work with ActiveX Controls (Visual Basic)</span></span>
-<span data-ttu-id="def22-103">ActiveX denetimleri COM bileşenlerini veya bir Web sayfası veya başkasının programlanmış paketlenmiş işlevleri yeniden kullanmak için başka bir uygulama ekleyin nesneler var.</span><span class="sxs-lookup"><span data-stu-id="def22-103">ActiveX controls are COM components or objects you can insert into a Web page or other application to reuse packaged functionality someone else has programmed.</span></span> <span data-ttu-id="def22-104">Visual Basic 6.0 ve önceki sürümleri için geliştirilen ActiveX denetimlerini özellik eklemek için kullanabileceğiniz **araç kutusu** Visual Studio'nun.</span><span class="sxs-lookup"><span data-stu-id="def22-104">You can use ActiveX controls developed for Visual Basic 6.0 and earlier versions to add features to the **Toolbox** of Visual Studio.</span></span>  
+# <a name="how-to-work-with-activex-controls-visual-basic"></a><span data-ttu-id="2df94-102">Nasıl yapılır: ActiveX denetimleri (Visual Basic) ile çalışma</span><span class="sxs-lookup"><span data-stu-id="2df94-102">How to: Work with ActiveX Controls (Visual Basic)</span></span>
+<span data-ttu-id="2df94-103">ActiveX denetimleri COM bileşenlerini veya bir Web sayfası veya başkasının programlanmış paketlenmiş işlevleri yeniden kullanmak için başka bir uygulama ekleyin nesneler var.</span><span class="sxs-lookup"><span data-stu-id="2df94-103">ActiveX controls are COM components or objects you can insert into a Web page or other application to reuse packaged functionality someone else has programmed.</span></span> <span data-ttu-id="2df94-104">Visual Basic 6.0 ve önceki sürümleri için geliştirilen ActiveX denetimlerini özellik eklemek için kullanabileceğiniz **araç kutusu** Visual Studio'nun.</span><span class="sxs-lookup"><span data-stu-id="2df94-104">You can use ActiveX controls developed for Visual Basic 6.0 and earlier versions to add features to the **Toolbox** of Visual Studio.</span></span>  
   
-### <a name="to-add-activex-controls-to-the-toolbox"></a><span data-ttu-id="def22-105">Araç kutusuna ActiveX denetimleri ekleme</span><span class="sxs-lookup"><span data-stu-id="def22-105">To add ActiveX controls to the toolbox</span></span>  
+### <a name="to-add-activex-controls-to-the-toolbox"></a><span data-ttu-id="2df94-105">Araç kutusuna ActiveX denetimleri ekleme</span><span class="sxs-lookup"><span data-stu-id="2df94-105">To add ActiveX controls to the toolbox</span></span>  
   
-1. <span data-ttu-id="def22-106">Üzerinde **Araçları** menüsünü tıklatın **araç kutusu öğelerini Seç**.</span><span class="sxs-lookup"><span data-stu-id="def22-106">On the **Tools** menu, click **Choose Toolbox Items**.</span></span>  
+1. <span data-ttu-id="2df94-106">Üzerinde **Araçları** menüsünü tıklatın **araç kutusu öğelerini Seç**.</span><span class="sxs-lookup"><span data-stu-id="2df94-106">On the **Tools** menu, click **Choose Toolbox Items**.</span></span>  
   
-     <span data-ttu-id="def22-107">**Araç seçin** iletişim kutusu görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="def22-107">The **Choose Toolbox** dialog box appears.</span></span>  
+     <span data-ttu-id="2df94-107">**Araç seçin** iletişim kutusu görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="2df94-107">The **Choose Toolbox** dialog box appears.</span></span>  
   
-2. <span data-ttu-id="def22-108">Tıklayın **COM bileşenlerini** sekmesi.</span><span class="sxs-lookup"><span data-stu-id="def22-108">Click the **COM Components** tab.</span></span>  
+2. <span data-ttu-id="2df94-108">Tıklayın **COM bileşenlerini** sekmesi.</span><span class="sxs-lookup"><span data-stu-id="2df94-108">Click the **COM Components** tab.</span></span>  
   
-3. <span data-ttu-id="def22-109">ActiveX denetimini kullanın ve ardından istediğiniz yanındaki onay kutusunu işaretleyin **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="def22-109">Select the check box next to the ActiveX control you want to use, and then click **OK**.</span></span>  
+3. <span data-ttu-id="2df94-109">ActiveX denetimini kullanın ve ardından istediğiniz yanındaki onay kutusunu işaretleyin **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="2df94-109">Select the check box next to the ActiveX control you want to use, and then click **OK**.</span></span>  
   
-     <span data-ttu-id="def22-110">Diğer araçlar ile yeni denetimin görünür **araç kutusu**.</span><span class="sxs-lookup"><span data-stu-id="def22-110">The new control appears with the other tools in the **Toolbox**.</span></span>  
+     <span data-ttu-id="2df94-110">Diğer araçlar ile yeni denetimin görünür **araç kutusu**.</span><span class="sxs-lookup"><span data-stu-id="2df94-110">The new control appears with the other tools in the **Toolbox**.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="def22-111">El ile birlikte çalışma derlemesi için ActiveX denetimleri oluşturmak için Aximp yardımcı programını kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="def22-111">You can use the Aximp utility to manually create an interop assembly for ActiveX controls.</span></span> <span data-ttu-id="def22-112">Daha fazla bilgi için [Aximp.exe (Windows Forms ActiveX denetim içeri Aktarıcı)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).</span><span class="sxs-lookup"><span data-stu-id="def22-112">For more information, see [Aximp.exe (Windows Forms ActiveX Control Importer)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).</span></span>  
+    >  <span data-ttu-id="2df94-111">El ile birlikte çalışma derlemesi için ActiveX denetimleri oluşturmak için Aximp yardımcı programını kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2df94-111">You can use the Aximp utility to manually create an interop assembly for ActiveX controls.</span></span> <span data-ttu-id="2df94-112">Daha fazla bilgi için [Aximp.exe (Windows Forms ActiveX denetim içeri Aktarıcı)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).</span><span class="sxs-lookup"><span data-stu-id="2df94-112">For more information, see [Aximp.exe (Windows Forms ActiveX Control Importer)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="def22-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="def22-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2df94-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2df94-113">See also</span></span>
 
-- [<span data-ttu-id="def22-114">COM Birlikte Çalışma</span><span class="sxs-lookup"><span data-stu-id="def22-114">COM Interop</span></span>](../../../visual-basic/programming-guide/com-interop/index.md)
-- [<span data-ttu-id="def22-115">Nasıl yapılır: Windows Forms’a ActiveX Denetimleri Ekleme</span><span class="sxs-lookup"><span data-stu-id="def22-115">How to: Add ActiveX Controls to Windows Forms</span></span>](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
-- [<span data-ttu-id="def22-116">Aximp.exe (Windows Forms ActiveX Denetim İçeri Aktarıcı)</span><span class="sxs-lookup"><span data-stu-id="def22-116">Aximp.exe (Windows Forms ActiveX Control Importer)</span></span>](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
-- [<span data-ttu-id="def22-117">Bir Windows Formunda bir ActiveX Denetimi Barındırmayla İlgili Konular</span><span class="sxs-lookup"><span data-stu-id="def22-117">Considerations When Hosting an ActiveX Control on a Windows Form</span></span>](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)
-- [<span data-ttu-id="def22-118">Birlikte Çalışabilirlik İle İlgili Sorun Giderme</span><span class="sxs-lookup"><span data-stu-id="def22-118">Troubleshooting Interoperability</span></span>](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+- [<span data-ttu-id="2df94-114">COM Birlikte Çalışma</span><span class="sxs-lookup"><span data-stu-id="2df94-114">COM Interop</span></span>](../../../visual-basic/programming-guide/com-interop/index.md)
+- [<span data-ttu-id="2df94-115">Nasıl yapılır: Windows Forms'a ActiveX denetimleri ekleme</span><span class="sxs-lookup"><span data-stu-id="2df94-115">How to: Add ActiveX Controls to Windows Forms</span></span>](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
+- [<span data-ttu-id="2df94-116">Aximp.exe (Windows Forms ActiveX Denetim İçeri Aktarıcı)</span><span class="sxs-lookup"><span data-stu-id="2df94-116">Aximp.exe (Windows Forms ActiveX Control Importer)</span></span>](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
+- [<span data-ttu-id="2df94-117">Bir Windows Formunda bir ActiveX Denetimi Barındırmayla İlgili Konular</span><span class="sxs-lookup"><span data-stu-id="2df94-117">Considerations When Hosting an ActiveX Control on a Windows Form</span></span>](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)
+- [<span data-ttu-id="2df94-118">Birlikte Çalışabilirlik İle İlgili Sorun Giderme</span><span class="sxs-lookup"><span data-stu-id="2df94-118">Troubleshooting Interoperability</span></span>](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

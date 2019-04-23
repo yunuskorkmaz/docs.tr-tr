@@ -3,45 +3,45 @@ title: ANYELEMENT (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 475a9ad6-8c8d-4f49-9970-af273e5360f1
 ms.openlocfilehash: ff79417008b7807fbf206d4bcb65b4e5ea1cc576
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296140"
 ---
-# <a name="anyelement-entity-sql"></a><span data-ttu-id="7d477-102">ANYELEMENT (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="7d477-102">ANYELEMENT (Entity SQL)</span></span>
-<span data-ttu-id="7d477-103">Birden çok değerli bir koleksiyondan bir öğe ayıklar.</span><span class="sxs-lookup"><span data-stu-id="7d477-103">Extracts an element from a multivalued collection.</span></span>  
+# <a name="anyelement-entity-sql"></a><span data-ttu-id="e06da-102">ANYELEMENT (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="e06da-102">ANYELEMENT (Entity SQL)</span></span>
+<span data-ttu-id="e06da-103">Birden çok değerli bir koleksiyondan bir öğe ayıklar.</span><span class="sxs-lookup"><span data-stu-id="e06da-103">Extracts an element from a multivalued collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7d477-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7d477-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e06da-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e06da-104">Syntax</span></span>  
   
 ```  
 ANYELEMENT ( expression )  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="7d477-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="7d477-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="e06da-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="e06da-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="7d477-106">Öğeden ayıklamak için bir koleksiyon döndürür herhangi bir geçerli ifade.</span><span class="sxs-lookup"><span data-stu-id="7d477-106">Any valid query expression that returns a collection to extract an element from.</span></span>  
+ <span data-ttu-id="e06da-106">Öğeden ayıklamak için bir koleksiyon döndürür herhangi bir geçerli ifade.</span><span class="sxs-lookup"><span data-stu-id="e06da-106">Any valid query expression that returns a collection to extract an element from.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7d477-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="7d477-107">Return Value</span></span>  
- <span data-ttu-id="7d477-108">Tek bir öğe koleksiyonu veya koleksiyon birden fazla varsa, rastgele bir öğe; koleksiyon boş ise döndürür `null`.</span><span class="sxs-lookup"><span data-stu-id="7d477-108">A single element in the collection or an arbitrary element if the collection has more than one; if the collection is empty, returns `null`.</span></span> <span data-ttu-id="7d477-109">Varsa `collection` türü koleksiyonudur `Collection<T>`, ardından `ANYELEMENT(collection)` verir türünün bir örneği geçerli bir ifade `T`.</span><span class="sxs-lookup"><span data-stu-id="7d477-109">If `collection` is a collection of type `Collection<T>`, then `ANYELEMENT(collection)` is a valid expression that yields an instance of type `T`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e06da-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="e06da-107">Return Value</span></span>  
+ <span data-ttu-id="e06da-108">Tek bir öğe koleksiyonu veya koleksiyon birden fazla varsa, rastgele bir öğe; koleksiyon boş ise döndürür `null`.</span><span class="sxs-lookup"><span data-stu-id="e06da-108">A single element in the collection or an arbitrary element if the collection has more than one; if the collection is empty, returns `null`.</span></span> <span data-ttu-id="e06da-109">Varsa `collection` türü koleksiyonudur `Collection<T>`, ardından `ANYELEMENT(collection)` verir türünün bir örneği geçerli bir ifade `T`.</span><span class="sxs-lookup"><span data-stu-id="e06da-109">If `collection` is a collection of type `Collection<T>`, then `ANYELEMENT(collection)` is a valid expression that yields an instance of type `T`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7d477-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7d477-110">Remarks</span></span>  
- <span data-ttu-id="7d477-111">ANYELEMENT rastgele bir öğe birden çok değerli bir koleksiyondan ayıklar.</span><span class="sxs-lookup"><span data-stu-id="7d477-111">ANYELEMENT extracts an arbitrary element from a multivalued collection.</span></span> <span data-ttu-id="7d477-112">Örneğin, aşağıdaki örnekte bir singleton öğesi kümesinden ayıklamaya çalışır `Customers`.</span><span class="sxs-lookup"><span data-stu-id="7d477-112">For example, the following example attempts to extract a singleton element from the set `Customers`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e06da-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e06da-110">Remarks</span></span>  
+ <span data-ttu-id="e06da-111">ANYELEMENT rastgele bir öğe birden çok değerli bir koleksiyondan ayıklar.</span><span class="sxs-lookup"><span data-stu-id="e06da-111">ANYELEMENT extracts an arbitrary element from a multivalued collection.</span></span> <span data-ttu-id="e06da-112">Örneğin, aşağıdaki örnekte bir singleton öğesi kümesinden ayıklamaya çalışır `Customers`.</span><span class="sxs-lookup"><span data-stu-id="e06da-112">For example, the following example attempts to extract a singleton element from the set `Customers`.</span></span>  
   
 ```  
 ANYELEMENT(Customers)  
 ```  
   
-## <a name="example"></a><span data-ttu-id="7d477-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="7d477-113">Example</span></span>  
- <span data-ttu-id="7d477-114">Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu birden çok değerli bir koleksiyondan bir öğe ayıklanacak ANYELEMENT işleci kullanır.</span><span class="sxs-lookup"><span data-stu-id="7d477-114">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the ANYELEMENT operator to extract an element from a multivalued collection.</span></span> <span data-ttu-id="7d477-115">Sorgu, AdventureWorks satış modelini temel alıyor.</span><span class="sxs-lookup"><span data-stu-id="7d477-115">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="7d477-116">Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:</span><span class="sxs-lookup"><span data-stu-id="7d477-116">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="e06da-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="e06da-113">Example</span></span>  
+ <span data-ttu-id="e06da-114">Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu birden çok değerli bir koleksiyondan bir öğe ayıklanacak ANYELEMENT işleci kullanır.</span><span class="sxs-lookup"><span data-stu-id="e06da-114">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the ANYELEMENT operator to extract an element from a multivalued collection.</span></span> <span data-ttu-id="e06da-115">Sorgu, AdventureWorks satış modelini temel alıyor.</span><span class="sxs-lookup"><span data-stu-id="e06da-115">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="e06da-116">Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:</span><span class="sxs-lookup"><span data-stu-id="e06da-116">To compile and run this query, follow these steps:</span></span>  
   
-1. <span data-ttu-id="7d477-117">Verilen yordamı izleyin [nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="7d477-117">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1. <span data-ttu-id="e06da-117">Verilen yordamı izleyin [nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="e06da-117">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2. <span data-ttu-id="7d477-118">Aşağıdaki sorguda bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:</span><span class="sxs-lookup"><span data-stu-id="7d477-118">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2. <span data-ttu-id="e06da-118">Aşağıdaki sorguda bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:</span><span class="sxs-lookup"><span data-stu-id="e06da-118">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#ANYELEMENT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#anyelement)]  
   
-## <a name="see-also"></a><span data-ttu-id="7d477-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7d477-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e06da-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e06da-119">See also</span></span>
 
-- [<span data-ttu-id="7d477-120">Entity SQL Başvurusu</span><span class="sxs-lookup"><span data-stu-id="7d477-120">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [<span data-ttu-id="7d477-121">Null Değer Atanabilir Yapılandırılmış Türler</span><span class="sxs-lookup"><span data-stu-id="7d477-121">Nullable Structured Types</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+- [<span data-ttu-id="e06da-120">Entity SQL Başvurusu</span><span class="sxs-lookup"><span data-stu-id="e06da-120">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [<span data-ttu-id="e06da-121">Null Değer Atanabilir Yapılandırılmış Türler</span><span class="sxs-lookup"><span data-stu-id="e06da-121">Nullable Structured Types</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
