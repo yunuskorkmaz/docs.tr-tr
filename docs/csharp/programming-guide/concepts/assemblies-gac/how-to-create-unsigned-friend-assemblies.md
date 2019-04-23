@@ -3,10 +3,10 @@ title: 'Nasıl yapılır: İmzasız arkadaş derlemeleri oluşturma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
 ms.openlocfilehash: 6bc2d807b3d1cf6c82a9ba6303139b9758581f35
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318240"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>Nasıl yapılır: İmzasız arkadaş derlemeleri oluşturma (C#)
@@ -93,7 +93,7 @@ Bu örnek, işaretsiz derlemeleri ile arkadaş derlemeleri kullanmayı gösterir
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [.NET derlemeleri](../../../../standard/assembly/index.md)
+- [.NET’te bütünleştirilmiş kodlar](../../../../standard/assembly/index.md)
 - [Arkadaş Bütünleştirilmiş Kodları](../../../../standard/assembly/friend-assemblies.md)
 - [Nasıl yapılır: İmzalı arkadaş derlemeleri oluşturma (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
 - [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)

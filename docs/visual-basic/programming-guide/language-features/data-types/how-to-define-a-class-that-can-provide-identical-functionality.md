@@ -27,10 +27,10 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
 ms.openlocfilehash: 9121041f936c091cda0e2af41b4f5be8d826d582
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318460"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Nasıl yapılır: (Visual Basic) farklı veri türlerinde aynı işlevselliği sağlayabilen bir sınıf tanımlama
@@ -77,9 +77,9 @@ Bir sınıf tanımlayabilir, farklı veri türlerinde aynı işlevselliği sağl
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Visual Basic'de Genel Türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic'de genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler](../../../../standard/language-independence-and-language-independent-components.md)
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [,](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [Tür Listesi](../../../../visual-basic/language-reference/statements/type-list.md)
-- [Nasıl yapılır: Genel bir sınıf kullanma](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [Nesne Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Nasıl yapılır: Genel Bir Sınıf Kullanma](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)
