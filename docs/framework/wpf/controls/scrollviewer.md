@@ -10,25 +10,25 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
 ms.openlocfilehash: 5e8b1b30fc50318882ca7a7f5ed2a4827d5446c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128667"
 ---
-# <a name="scrollviewer"></a><span data-ttu-id="75ffc-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="75ffc-102">ScrollViewer</span></span>
-<span data-ttu-id="75ffc-103"><xref:System.Windows.Controls.ScrollViewer> Denetimi gibi içerik kaydırılan yatay veya dikey olarak kaydırılabilir bir bölgesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="75ffc-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
+# <a name="scrollviewer"></a><span data-ttu-id="e770a-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="e770a-102">ScrollViewer</span></span>
+<span data-ttu-id="e770a-103"><xref:System.Windows.Controls.ScrollViewer> Denetimi gibi içerik kaydırılan yatay veya dikey olarak kaydırılabilir bir bölgesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="e770a-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="75ffc-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="75ffc-104">In This Section</span></span>  
- [<span data-ttu-id="75ffc-105">ScrollViewer Genel Bakışı</span><span class="sxs-lookup"><span data-stu-id="75ffc-105">ScrollViewer Overview</span></span>](scrollviewer-overview.md)  
- [<span data-ttu-id="75ffc-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="75ffc-106">How-to Topics</span></span>](scrollviewer-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e770a-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="e770a-104">In This Section</span></span>  
+ [<span data-ttu-id="e770a-105">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="e770a-105">ScrollViewer Overview</span></span>](scrollviewer-overview.md)  
+ [<span data-ttu-id="e770a-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="e770a-106">How-to Topics</span></span>](scrollviewer-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="75ffc-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="75ffc-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e770a-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="e770a-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="75ffc-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="75ffc-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e770a-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e770a-108">See also</span></span>
 
-- [<span data-ttu-id="75ffc-109">Panellere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="75ffc-109">Panels Overview</span></span>](panels-overview.md)
-- [<span data-ttu-id="75ffc-110">Düzen</span><span class="sxs-lookup"><span data-stu-id="75ffc-110">Layout</span></span>](../advanced/layout.md)
+- [<span data-ttu-id="e770a-109">Panellere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="e770a-109">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="e770a-110">Düzen</span><span class="sxs-lookup"><span data-stu-id="e770a-110">Layout</span></span>](../advanced/layout.md)

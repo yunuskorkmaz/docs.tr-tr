@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b9ffd9ab9ddb95945744ecf210d0ae1d9d9812ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125833"
 ---
-# <a name="imetadatatablesgetnumtables-method"></a><span data-ttu-id="3a450-102">IMetaDataTables::GetNumTables Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3a450-102">IMetaDataTables::GetNumTables Method</span></span>
-<span data-ttu-id="3a450-103">Tablo sayısı geçerli kapsamda alır `IMetaDataTables` örneği.</span><span class="sxs-lookup"><span data-stu-id="3a450-103">Gets the number of tables in the scope of the current `IMetaDataTables` instance.</span></span>  
+# <a name="imetadatatablesgetnumtables-method"></a><span data-ttu-id="c5d96-102">IMetaDataTables::GetNumTables Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c5d96-102">IMetaDataTables::GetNumTables Method</span></span>
+<span data-ttu-id="c5d96-103">Tablo sayısı geçerli kapsamda alır `IMetaDataTables` örneği.</span><span class="sxs-lookup"><span data-stu-id="c5d96-103">Gets the number of tables in the scope of the current `IMetaDataTables` instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3a450-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3a450-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c5d96-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c5d96-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNumTables (  
@@ -35,20 +35,20 @@ HRESULT GetNumTables (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3a450-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3a450-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c5d96-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c5d96-105">Parameters</span></span>  
  `pcTables`  
- <span data-ttu-id="3a450-106">[out] Geçerli örnek kapsamdaki tablo sayısı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="3a450-106">[out] A pointer to the number of tables in the current instance scope.</span></span>  
+ <span data-ttu-id="c5d96-106">[out] Geçerli örnek kapsamdaki tablo sayısı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="c5d96-106">[out] A pointer to the number of tables in the current instance scope.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3a450-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3a450-107">Requirements</span></span>  
- <span data-ttu-id="3a450-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3a450-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c5d96-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c5d96-107">Requirements</span></span>  
+ <span data-ttu-id="c5d96-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c5d96-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3a450-109">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="3a450-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c5d96-109">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="c5d96-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3a450-110">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="3a450-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c5d96-110">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="c5d96-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="3a450-111">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="3a450-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="c5d96-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c5d96-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3a450-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3a450-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c5d96-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c5d96-112">See also</span></span>
 
-- [<span data-ttu-id="3a450-113">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3a450-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="3a450-114">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3a450-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="c5d96-113">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c5d96-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="c5d96-114">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c5d96-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
