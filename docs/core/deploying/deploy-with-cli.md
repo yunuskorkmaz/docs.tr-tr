@@ -9,10 +9,10 @@ dev_langs:
 - vb
 ms.custom: seodec18
 ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306072"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Yayımlama .NET Core CLI ile uygulamaları
@@ -128,8 +128,7 @@ Bir FDE yayımlama bir uygulama, otomatik olarak yapar İleri en son .NET Core g
 
 Gerekir (.NET Core hariç geçerli platform hedeflediğinizde 3.x) ile aşağıdaki anahtarları kullanarak `dotnet publish` bir FDE yayımlamak için komutu:
 
-- `-r <RID>`
-  Bu anahtar, hedef platform belirtmek için bir tanımlayıcı (RID) kullanır. Çalışma zamanı tanımlayıcılarının bir listesi için bkz. [çalışma zamanı tanımlayıcı (RID) katalog](../rid-catalog.md).
+- `-r <RID>` Bu anahtar, hedef platform belirtmek için bir tanımlayıcı (RID) kullanır. Çalışma zamanı tanımlayıcılarının bir listesi için bkz. [çalışma zamanı tanımlayıcı (RID) katalog](../rid-catalog.md).
 
 - `--self-contained false` Bu anahtar, yürütülebilir bir FDE olarak oluşturmak için .NET Core SDK'sı söyler.
 
@@ -148,8 +147,7 @@ Bir SCD yayımlama, en son kullanılabilir .NET Core güvenlik düzeltme eki sar
 
 Aşağıdaki anahtarlar ile kullanmalısınız `dotnet publish` bir SCD yayımlamak için komutu:
 
-- `-r <RID>`
-  Bu anahtar, hedef platform belirtmek için bir tanımlayıcı (RID) kullanır. Çalışma zamanı tanımlayıcılarının bir listesi için bkz. [çalışma zamanı tanımlayıcı (RID) katalog](../rid-catalog.md).
+- `-r <RID>` Bu anahtar, hedef platform belirtmek için bir tanımlayıcı (RID) kullanır. Çalışma zamanı tanımlayıcılarının bir listesi için bkz. [çalışma zamanı tanımlayıcı (RID) katalog](../rid-catalog.md).
 
 - `--self-contained true` Bu anahtar, yürütülebilir bir SCD olarak oluşturmak için .NET Core SDK'sı söyler.
 

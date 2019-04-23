@@ -14,10 +14,10 @@ ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 60173739842835a705a72da4e7ab442cacfc08d2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306553"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme
@@ -75,10 +75,10 @@ CMyClass::MethodThatThrows
 |**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
 |**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR_E_EXCEPTION**|**Özel Durum**|  
+|**COR_E_EXCEPTION**|**özel durum**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
 |**COR_E_FIELDACCESS**|**FieldAccessException**|  
-|**COR_E_FILENOTFOUND veya ERROR_FILE_NOT_FOUND**|**Derleme işlemi FileNotFoundException**|  
+|**COR_E_FILENOTFOUND veya ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
 |**COR_E_FORMAT**|**FormatException**|  
 |**COR_E_INDEXOUTOFRANGE**|**IndexOutOfRangeException**|  
 |**COR_E_INVALIDCAST veya e_noınterface**|**InvalidCastException**|  
@@ -132,17 +132,17 @@ CMyClass::MethodThatThrows
   
 |Özel alan|COM bilgisi kaynağı|  
 |---------------------|------------------------------------|  
-|**ErrorCode**|Çağrıdan HRESULT döndürdü.|  
+|**hata kodu**|Çağrıdan HRESULT döndürdü.|  
 |**HelpLink**|Varsa **IErrorInfo -> HelpContext** olan sıfır değilse, dize birleştirerek biçimlendirilmiş **IErrorInfo GetHelpFile ->** ve "#" ve **IErrorInfo -> GetHelpContext**. Aksi takdirde dize öğesinden döndürülen **IErrorInfo -> GetHelpFile**.|  
 |**InnerException**|Her zaman null başvuru (**hiçbir şey** Visual Basic'te).|  
 |**İleti**|Döndürülen dize **IErrorInfo -> GetDescription**.|  
 |**Kaynak**|Döndürülen dize **IErrorInfo -> GetSource**.|  
-|**Yığın izleme**|Yığın izleme.|  
+|**StackTrace**|Yığın izleme.|  
 |**TARGETSITE**|Başarısız olan döndürülen yöntemin adını HRESULT.|  
   
  Gibi özel alanları **ileti**, **kaynak**, ve **StackTrace** kullanılamaz **StackOverflowException**.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Gelişmiş COM Birlikte Çalışabilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [Gelişmiş COM birlikte çalışabilirliği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Özel Durumlar](../../standard/exceptions/index.md)

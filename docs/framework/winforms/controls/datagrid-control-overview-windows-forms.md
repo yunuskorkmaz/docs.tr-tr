@@ -21,10 +21,10 @@ helpviewer_keywords:
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
 ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304746"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid Denetimine Genel Bakış (Windows Forms)
@@ -57,13 +57,13 @@ ms.locfileid: "59304746"
   
  Geçerli veri kaynakları için <xref:System.Windows.Forms.DataGrid> içerir:  
   
--   <xref:System.Data.DataTable> sınıf  
+-   <xref:System.Data.DataTable> Sınıfı  
   
--   <xref:System.Data.DataView> sınıf  
+-   <xref:System.Data.DataView> Sınıfı  
   
--   <xref:System.Data.DataSet> sınıf  
+-   <xref:System.Data.DataSet> Sınıfı  
   
--   <xref:System.Data.DataViewManager> sınıf  
+-   <xref:System.Data.DataViewManager> Sınıfı  
   
  Kaynak veri kümesi ise veri kümesi biçiminde bir nesne veya forma bir XML Web hizmeti tarafından geçirilen nesne olabilir. Yazılmış veya yazılmamış veri kümelerine bağlayabilirsiniz.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "59304746"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DataGrid Denetimi](datagrid-control-windows-forms.md)
-- [Nasıl yapılır: Windows Forms DataGrid Denetimini Veri Kaynağına Bağlama](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
-- [Nasıl yapılır: Windows Forms DataGrid Denetimine Tablo ve Sütun Ekleme](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [Nasıl yapılır: Windows Forms DataGrid Denetiminde Sütunları Silme veya Gizleme](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
-- [Nasıl yapılır: Windows Forms DataGrid Denetimini Biçimlendirme](how-to-format-the-windows-forms-datagrid-control.md)
+- [Nasıl yapılır: Windows Forms DataGrid denetimini veri kaynağına bağlama](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Nasıl yapılır: Windows Forms DataGrid denetimine tablolar ve sütunlar ekleme](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Nasıl yapılır: Silme veya Windows Forms DataGrid denetiminde sütunları gizleme](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Nasıl yapılır: Windows Forms DataGrid denetimini biçimlendirme](how-to-format-the-windows-forms-datagrid-control.md)

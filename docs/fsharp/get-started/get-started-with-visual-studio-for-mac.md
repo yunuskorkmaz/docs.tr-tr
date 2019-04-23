@@ -3,10 +3,10 @@ title: Kullanmaya başlama F# Mac için Visual Studio
 description: Nasıl kullanacağınızı öğrenin F# Mac için Visual Studio ile
 ms.date: 07/03/2018
 ms.openlocfilehash: a6997f139d7e6c5fdf77878442db0b0b75b3d727
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331877"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Kullanmaya başlama F# Mac için Visual Studio
@@ -116,7 +116,7 @@ Henüz yapmadıysanız, kullanıma [Turu F# ](../tour.md), bazı çekirdek özel
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual F#](../index.md)
-- [F# turu](../tour.md)
+- [F# Turu](../tour.md)
 - [F#Dil Başvurusu](../language-reference/index.md)
 - [Tür çıkarımı](../language-reference/type-inference.md)
 - [Simge ve işleç başvurusu](../language-reference/symbol-and-operator-reference/index.md)

@@ -5,10 +5,10 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
 ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330824"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET örnekler ve öğreticiler
@@ -45,19 +45,19 @@ Bkz: [ASP.NET Core öğreticilerini](/aspnet/core/tutorials/). ASP.NET Core belg
 
 Bu örnek sözdizimi ve oluşturma ve kullanma özelliklerini gösterir C# yineleyiciler. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/csharp/iterators) dotnet/samples deposuna github'da mevcuttur.
 
-**[Dizin Oluşturucular](../csharp/indexers.md)**
+**[Dizin oluşturucular](../csharp/indexers.md)**
 
 Bu örneği için özellikleri ve söz dizimini gösterir C# dizin oluşturucular. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/csharp/indexers) dotnet/samples deposuna github'da mevcuttur.
 
-**[Temsilciler ve Olaylar](../csharp/delegates-events.md)**
+**[Temsilciler ve olaylar](../csharp/delegates-events.md)**
 
 Bu örneği için özellikleri ve söz dizimini gösterir C# Temsilciler ve olaylar. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) dotnet/samples deposuna github'da mevcuttur. A [ikinci örnek](https://github.com/dotnet/samples/tree/master/csharp/events) olaylarına odaklanmış da aynı depoda olan.
 
-**[İfade Ağaçları](../csharp/expression-trees.md)**
+**[İfade ağaçları](../csharp/expression-trees.md)**
 
 Bu örnek ifade ağaçları kullanma tarafından çözülen sorunlar çoğunu gösterir. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) dotnet/samples deposuna github'da mevcuttur.
 
-**LINQ Örnekleri**
+**LINQ örnekleri**
 
 Bu bir dizi örnek, dil tümleşik sorgu (LINQ) özelliklerin çoğunu gösterir. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/core/linq/csharp) dotnet/samples deposuna github'da mevcuttur.
 
@@ -67,7 +67,7 @@ Bu bir dizi örnek, dil tümleşik sorgu (LINQ) özelliklerin çoğunu gösterir
 
 ### <a name="tutorials"></a>Öğreticiler
 
-**[Konsol Uygulaması](../csharp/tutorials/console-teleprompter.md)**
+**[Konsol uygulaması](../csharp/tutorials/console-teleprompter.md)**
 
 Bu öğreticide, konsol g/ç, bir konsol uygulaması yapısını ve görev tabanlı zaman uyumsuz programlama modeli ile ilgili temel bilgileri gösterilmektedir. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) dotnet/samples deposuna github'da mevcuttur.
 
