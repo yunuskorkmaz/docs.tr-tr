@@ -10,10 +10,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selecting cells
 ms.assetid: 82cffcad-8b30-4897-bddb-c3a79d751b83
 ms.openlocfilehash: 1836fbc1887082ca685c49bef2bc42bdb167578f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105865"
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimi ile Seçim ve Pano Kullanımı
@@ -23,13 +23,13 @@ ms.locfileid: "59105865"
  [Windows Forms DataGridView Denetimindeki Seçim Modları](selection-modes-in-the-windows-forms-datagridview-control.md)  
  Kullanıcı ve programlı seçiminde denetim seçeneklerini açıklar.  
   
- [Nasıl yapılır: Windows Forms DataGridView Denetiminin Seçim Modunu Ayarlama](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView denetiminin seçim modunu ayarlama](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
  Bir kullanıcı bir hücreye tıkladığında denetim tek satır seçimi için yapılandırılması açıklanmaktadır.  
   
- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Seçili Hücre, Satır ve Sütunları Alma](selected-cells-rows-and-columns-datagridview.md)  
+ [Nasıl yapılır: Windows Forms DataGridView denetiminde seçili hücre, satır ve sütunları alma](selected-cells-rows-and-columns-datagridview.md)  
  Seçili hücre, satır ve sütun koleksiyonlarla çalışma açıklar.  
   
- [Nasıl yapılır: Kullanıcıların Windows Forms DataGridView Denetiminden Panoya Birden Fazla Hücre Kopyalamasına Olanak Tanıma](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
+ [Nasıl yapılır: Kullanıcıların Windows Forms DataGridView denetiminden panoya birden fazla hücre kopyalamasına olanak](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
  Denetimdeki Pano desteğini nasıl etkinleştireceğinizi açıklar.  
   
 ## <a name="reference"></a>Başvuru  

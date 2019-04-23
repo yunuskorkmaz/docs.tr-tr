@@ -20,10 +20,10 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
 ms.openlocfilehash: 56b97170884ef31004b06b0eb50a8d79ad1d041c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102836"
 ---
 # <a name="xaml-overview-wpf"></a>XAML genel bakış (WPF)
@@ -329,7 +329,7 @@ Bu konu XAML dilinin özelliklerini açıklar ve yazmak için XAML nasıl kullan
 
 - [Ayrıntılı XAML Sözdizimi](xaml-syntax-in-detail.md)
 - [WPF için XAML ve Özel Sınıflar](xaml-and-custom-classes-for-wpf.md)
-- [XAML Ad Alanı (x:) Dil Özellikleri](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML Namespace (x:) Dil özellikleri](../../xaml-services/xaml-namespace-x-language-features.md)
 - [WPF XAML Uzantıları](wpf-xaml-extensions.md)
 - [Temel Öğelere Genel Bakış](base-elements-overview.md)
 - [WPF İçinde Ağaçlar](trees-in-wpf.md)

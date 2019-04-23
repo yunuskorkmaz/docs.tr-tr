@@ -9,10 +9,10 @@ helpviewer_keywords:
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
 ms.openlocfilehash: a0400ce32dc6dab2585a8d5e76ff8d416fae24c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101373"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF Grafik İşlemeye Genel Bakış
@@ -255,5 +255,5 @@ Grafikler ve farklı DPI ayarlarıyla metin
 - [2B Grafikleri ve Görüntüleme](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Görsel Katmanda Tıklama Testi](hit-testing-in-the-visual-layer.md)
 - [DrawingVisual Nesnelerini Kullanma](using-drawingvisual-objects.md)
-- [Öğretici: Win32 Uygulamasında Görsel Nesneler Barındırma](tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [Öğretici: Win32 uygulamasında görsel nesneler barındırma](tutorial-hosting-visual-objects-in-a-win32-application.md)
 - [WPF Uygulama Performansını İyileştirme](../advanced/optimizing-wpf-application-performance.md)

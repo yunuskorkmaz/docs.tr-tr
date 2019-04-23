@@ -1,12 +1,12 @@
 ---
-title: <defaultCertificate> Öğe
+title: <defaultCertificate> Öğesi
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
 ms.openlocfilehash: c94531d10b7c0ef5ca0ee1f2d5683d0a259a2537
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100606"
 ---
 # <a name="defaultcertificate-element"></a>\<defaultCertificate > öğesi

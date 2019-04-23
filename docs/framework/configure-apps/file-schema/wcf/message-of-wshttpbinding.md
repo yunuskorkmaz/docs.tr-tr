@@ -1,12 +1,12 @@
 ---
-title: <message> , <wsHttpBinding>
+title: <message> / <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 621abbde-590b-454d-90ac-68dc3c69c720
 ms.openlocfilehash: 4d9b46b6c148f9280f6504b9bccdf644ab451c00
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102680"
 ---
 # <a name="message-of-wshttpbinding"></a>\<İleti >, \<wsHttpBinding >
@@ -68,14 +68,14 @@ ms.locfileid: "59102680"
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok.|Bu, anonim istemcilerle etkileşime geçmek bir hizmet sağlar. Hizmet tarafında, bu hizmeti herhangi bir istemci kimlik bilgilerini gerektirmeyeceğini belirtir. İstemcide, istemcinin bir istemci kimlik bilgileri sağlamaz gösterir.|  
+|None|Bu, anonim istemcilerle etkileşime geçmek bir hizmet sağlar. Hizmet tarafında, bu hizmeti herhangi bir istemci kimlik bilgilerini gerektirmeyeceğini belirtir. İstemcide, istemcinin bir istemci kimlik bilgileri sağlamaz gösterir.|  
 |Sertifika|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir sertifika. İleti güvenlik modunu kullanılıyorsa ve `negotiateServiceCredential` özniteliği `false`, istemcinin hizmet sertifikası ile sağlanması gerekir.|  
 |IssuedToken|Genellikle bir güvenlik belirteci hizmeti tarafından verilen bir özel simgeyi belirtir.|  
 |UserName|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir kullanıcı adı kimlik bilgisi. WCF parola özeti gönderme veya parola ve ileti güvenliği için bu anahtarları kullanarak anahtarlar türetme desteklemez. Bu nedenle, WCF aktarma UserName kimlik bilgileri kullanırken, güvenli olduğundan emin zorlar. Bu kimlik bilgisi modu birlikte çalışabilen bir exchange ya da temel bir birlikte çalışabilen olmayan anlaşma sonuçlanır `negotiateServiceCredential` özniteliği.|  
 |Windows|SOAP değişimleri, Windows kimlik bilgisi kimliği doğrulanmış bağlamı altında olmasını sağlar. Varsa `negotiateServiceCredential` özniteliği `true`, bu bir SSPI anlaşması veya Kerberos (birlikte çalışabilen standart) ya da gerçekleştirir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- None  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
 ms.openlocfilehash: d9afa49525f03c06f94b1b7b704fb3d9caa9e19d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101822"
 ---
 # <a name="serialization-and-deserialization"></a>Seri Hale Getirme ve Seri Durumdan Çıkarma
@@ -266,4 +266,4 @@ Windows Communication Foundation (WCF) içeren yeni bir serileştirme motoruna <
 - <xref:System.Runtime.Serialization.NetDataContractSerializer>
 - <xref:System.Runtime.Serialization.XmlObjectSerializer>
 - [İkili Serileştirme](../../../../docs/standard/serialization/binary-serialization.md)
-- [Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Veri Anlaşması Seri Hale Getirici Tarafından Desteklenen Türler](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

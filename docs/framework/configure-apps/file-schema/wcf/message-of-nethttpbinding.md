@@ -1,12 +1,12 @@
 ---
-title: <message> , <netHttpBinding>
+title: <message> / <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
 ms.openlocfilehash: 5bc953b4a1fad90aec5db507469368e7b21bb7e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105462"
 ---
 # <a name="message-of-nethttpbinding"></a>\<İleti >, \<netHttpBinding >
@@ -44,7 +44,7 @@ ms.locfileid: "59105462"
 |Sertifika|Bir sertifika kullanarak sunucuya istemcinin kimliğinin doğrulanmasını gerektirir. İstemci kimlik bilgisi bu durumda kullanarak belirtilmesi gerekir <`clientCredentials`> ve <`clientCertificate`>. Ayrıca, ileti güvenlik modunu kullanırken, istemcinin hizmet sertifikası ile sağlanması gerekir. Hizmet kimlik bilgisi bu durumda kullanarak belirtilmesi gerekiyor <xref:System.ServiceModel.Description.ClientCredentials> sınıfı veya `ClientCredentials` davranış öğesi ve hizmeti belirterek sertifika kullanarak \<serviceCertificate > serviceCredentials öğesidir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ None  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

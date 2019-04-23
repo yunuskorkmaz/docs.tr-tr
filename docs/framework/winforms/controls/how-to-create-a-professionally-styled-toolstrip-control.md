@@ -11,10 +11,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: c208b2f6-8105-474b-9075-d582e1792870
 ms.openlocfilehash: 6da6e113867efed79dfcd02f3b89ee1f9ae13c4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104600"
 ---
 # <a name="how-to-create-a-professionally-styled-toolstrip-control"></a>Nasıl yapılır: Profesyonel Stilde ToolStrip Denetimi Oluşturma
@@ -43,4 +43,4 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> kendi sın�
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
 - [ToolStrip Denetimi](toolstrip-control-windows-forms.md)
-- [Nasıl yapılır: Bir Forma Standart Menü Öğeleri Sağlama](how-to-provide-standard-menu-items-to-a-form.md)
+- [Nasıl yapılır: Bir forma standart menü öğeleri sağlama](how-to-provide-standard-menu-items-to-a-form.md)

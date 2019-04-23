@@ -3,10 +3,10 @@ title: Oracle Veri Türü Eşlemeleri
 ms.date: 03/30/2017
 ms.assetid: ec34ae21-bbbb-4adb-b672-83865e2a8451
 ms.openlocfilehash: c1fb3a6838e6a1b242255d4035c10ab0ec07d536
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104578"
 ---
 # <a name="oracle-data-type-mappings"></a>Oracle Veri Türü Eşlemeleri
@@ -14,27 +14,27 @@ Aşağıdaki tabloda, Oracle veri türleri ve eşleşmeleri listeler <xref:Syste
   
 |Oracle veri türü|.NET framework veri türü tarafından OracleDataReader.GetValue döndürdü|OracleDataReader.GetOracleValue tarafından döndürülen OracleClient veri türü|Açıklamalar|  
 |----------------------|--------------------------------------------------------------------|------------------------------------------------------------------------|-------------|  
-|**BDOSYA**|**Byte[]**|<xref:System.Data.OracleClient.OracleBFile>||  
-|**BLOB**|**Byte[]**|<xref:System.Data.OracleClient.OracleLob>||  
+|**BDOSYA**|**Bayt]**|<xref:System.Data.OracleClient.OracleBFile>||  
+|**BLOB**|**Bayt]**|<xref:System.Data.OracleClient.OracleLob>||  
 |**CHAR**|**Dize**|<xref:System.Data.OracleClient.OracleString>||  
 |**CLOB**|**Dize**|<xref:System.Data.OracleClient.OracleLob>||  
-|**DATE**|**DateTime**|<xref:System.Data.OracleClient.OracleDateTime>||  
+|**TARİH**|**Tarih/saat**|<xref:System.Data.OracleClient.OracleDateTime>||  
 |**KAYAN NOKTA**|**Ondalık**|<xref:System.Data.OracleClient.OracleNumber>|Bu veri türü için bir diğer ad, **numarası** veri türü ve böylece <xref:System.Data.OracleClient.OracleDataReader> döndürür bir **System.Decimal** veya <xref:System.Data.OracleClient.OracleNumber> yerine bir kayan nokta değeri. .NET Framework veri türü kullanan bir taşma neden olabilir.|  
-|**INTEGER**|**Ondalık**|<xref:System.Data.OracleClient.OracleNumber>|Bu veri türü için bir diğer ad, **NUMBER(38)** veri türü ve böylece <xref:System.Data.OracleClient.OracleDataReader> döndürür bir **System.Decimal** veya <xref:System.Data.OracleClient.OracleNumber> yerine bir tamsayı değeri. .NET Framework veri türü kullanan bir taşma neden olabilir.|  
+|**TAMSAYI**|**Ondalık**|<xref:System.Data.OracleClient.OracleNumber>|Bu veri türü için bir diğer ad, **NUMBER(38)** veri türü ve böylece <xref:System.Data.OracleClient.OracleDataReader> döndürür bir **System.Decimal** veya <xref:System.Data.OracleClient.OracleNumber> yerine bir tamsayı değeri. .NET Framework veri türü kullanan bir taşma neden olabilir.|  
 |**YIL AY ARALIĞI**|**Int32**|<xref:System.Data.OracleClient.OracleMonthSpan>||  
 |**İKİNCİ GÜN ARALIĞI**|**TimeSpan**|<xref:System.Data.OracleClient.OracleTimeSpan>||  
 |**UZUN**|**Dize**|<xref:System.Data.OracleClient.OracleString>||  
-|**LONG RAW**|**Byte[]**|<xref:System.Data.OracleClient.OracleBinary>||  
+|**UZUN HAM**|**Bayt]**|<xref:System.Data.OracleClient.OracleBinary>||  
 |**NCHAR**|**Dize**|<xref:System.Data.OracleClient.OracleString>||  
 |**NCLOB**|**Dize**|<xref:System.Data.OracleClient.OracleLob>||  
 |**SAYI**|**Ondalık**|<xref:System.Data.OracleClient.OracleNumber>|.NET Framework veri türü kullanan bir taşma neden olabilir.|  
 |**NVARCHAR2**|**Dize**|<xref:System.Data.OracleClient.OracleString>||  
-|**HAM**|**Byte[]**|<xref:System.Data.OracleClient.OracleBinary>||  
+|**HAM**|**Bayt]**|<xref:System.Data.OracleClient.OracleBinary>||  
 |**REF CURSOR**|||Oracle **REF CURSOR** veri türü tarafından desteklenmiyor <xref:System.Data.OracleClient.OracleDataReader> nesne.|  
 |**SATIR KİMLİĞİ**|**Dize**|<xref:System.Data.OracleClient.OracleString>||  
-|**ZAMAN DAMGASI**|**DateTime**|<xref:System.Data.OracleClient.OracleDateTime>||  
-|**YEREL SAAT DİLİMİ İLE ZAMAN DAMGASI**|**DateTime**|<xref:System.Data.OracleClient.OracleDateTime>||  
-|**SAAT DİLİMİ İLE ZAMAN DAMGASI**|**DateTime**|<xref:System.Data.OracleClient.OracleDateTime>||  
+|**ZAMAN DAMGASI**|**Tarih/saat**|<xref:System.Data.OracleClient.OracleDateTime>||  
+|**YEREL SAAT DİLİMİ İLE ZAMAN DAMGASI**|**Tarih/saat**|<xref:System.Data.OracleClient.OracleDateTime>||  
+|**SAAT DİLİMİ İLE ZAMAN DAMGASI**|**Tarih/saat**|<xref:System.Data.OracleClient.OracleDateTime>||  
 |**İŞARETSİZ TAMSAYI**|**Sayı**|<xref:System.Data.OracleClient.OracleNumber>|Bu veri türü için bir diğer ad, **NUMBER(38)** veri türü ve böylece <xref:System.Data.OracleClient.OracleDataReader> döndürür bir **System.Decimal** veya <xref:System.Data.OracleClient.OracleNumber> yerine bir işaretsiz tamsayı değeri. .NET Framework veri türü kullanan bir taşma neden olabilir.|  
 |**VARCHAR2**|**Dize**|<xref:System.Data.OracleClient.OracleString>||  
   
@@ -45,14 +45,14 @@ Aşağıdaki tabloda, Oracle veri türleri ve eşleşmeleri listeler <xref:Syste
 |**BDOSYA**||**BDosya**|Oracle, bağlama yalnızca sağlayan bir **BDOSYA** olarak bir **BDOSYA** parametresi. Olmayan bir bağlama denerseniz, Oracle için .NET veri sağlayıcısı otomatik olarak sizin için bir tane oluşturmak değil**BDOSYA** gibi değerini **byte []** veya <xref:System.Data.OracleClient.OracleBinary>.|  
 |**BLOB**||**Blob**|Oracle, bağlama yalnızca sağlayan bir **BLOB** olarak bir **BLOB** parametresi. Olmayan bir bağlama denerseniz, Oracle için .NET veri sağlayıcısı otomatik olarak sizin için bir tane oluşturmak değil**BLOB** gibi değerini **byte []** veya <xref:System.Data.OracleClient.OracleBinary>.|  
 |**CHAR**|**AnsiStringFixedLength**|**Char**||  
-|**CLOB**||**Clob**|Oracle, bağlama yalnızca sağlayan bir **CLOB** olarak bir **CLOB** parametresi. Olmayan bir bağlama denerseniz, Oracle için .NET veri sağlayıcısı otomatik olarak sizin için bir tane oluşturmak değil**CLOB** gibi değerini **System.String** veya <xref:System.Data.OracleClient.OracleString>.|  
-|**DATE**|**DateTime**|**DateTime**||  
+|**CLOB**||**CLOB**|Oracle, bağlama yalnızca sağlayan bir **CLOB** olarak bir **CLOB** parametresi. Olmayan bir bağlama denerseniz, Oracle için .NET veri sağlayıcısı otomatik olarak sizin için bir tane oluşturmak değil**CLOB** gibi değerini **System.String** veya <xref:System.Data.OracleClient.OracleString>.|  
+|**TARİH**|**Tarih/saat**|**Tarih/saat**||  
 |**KAYAN NOKTA**|**, Double, Decimal tek**|**Kayan, çift, numara**|<xref:System.Data.OracleClient.OracleParameter.Size%2A> belirler **System.Data.DBType** ve <xref:System.Data.OracleClient.OracleType>.|  
-|**INTEGER**|**SByte, Int16, Int32, Int64, ondalık**|**SByte, Int16, Int32, numara**|<xref:System.Data.OracleClient.OracleParameter.Size%2A> belirler **System.Data.DBType** ve <xref:System.Data.OracleClient.OracleType>.|  
+|**TAMSAYI**|**SByte, Int16, Int32, Int64, ondalık**|**SByte, Int16, Int32, numara**|<xref:System.Data.OracleClient.OracleParameter.Size%2A> belirler **System.Data.DBType** ve <xref:System.Data.OracleClient.OracleType>.|  
 |**YIL AY ARALIĞI**|**Int32**|**IntervalYearToMonth**|<xref:System.Data.OracleClient.OracleType> Yalnızca kullanılabilir olduğunda, her iki Oracle 9i istemci ve sunucu yazılımı kullanıyor.|  
 |**İKİNCİ GÜN ARALIĞI**|**Nesne**|**IntervalDayToSecond**|<xref:System.Data.OracleClient.OracleType> Yalnızca kullanılabilir olduğunda, her iki Oracle 9i istemci ve sunucu yazılımı kullanıyor.|  
 |**UZUN**|**AnsiString**|**LongVarChar**||  
-|**LONG RAW**|**İkili**|**LongRaw**||  
+|**UZUN HAM**|**İkili**|**LongRaw**||  
 |**NCHAR**|**StringFixedLength**|**nChar**||  
 |**NCLOB**||**NClob**|Oracle, bağlama yalnızca sağlayan bir **NCLOB** olarak bir **NCLOB** parametresi. Olmayan bir bağlama denerseniz, Oracle için .NET veri sağlayıcısı otomatik olarak sizin için bir tane oluşturmak değil**NCLOB** gibi değerini **System.String** veya <xref:System.Data.OracleClient.OracleString>.|  
 |**SAYI**|**VarNumeric**|**Sayı**||  
@@ -60,9 +60,9 @@ Aşağıdaki tabloda, Oracle veri türleri ve eşleşmeleri listeler <xref:Syste
 |**HAM**|**İkili**|**Ham**||  
 |**REF CURSOR**||**İmleç**|Daha fazla bilgi için [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md).|  
 |**SATIR KİMLİĞİ**|**AnsiString**|**Satır kimliği**||  
-|**ZAMAN DAMGASI**|**DateTime**|**Zaman damgası**|<xref:System.Data.OracleClient.OracleType> Yalnızca kullanılabilir olduğunda, her iki Oracle 9i istemci ve sunucu yazılımı kullanıyor.|  
-|**YEREL SAAT DİLİMİ İLE ZAMAN DAMGASI**|**DateTime**|**TimestampLocal**|<xref:System.Data.OracleClient.OracleType> Yalnızca kullanılabilir olduğunda, her iki Oracle 9i istemci ve sunucu yazılımı kullanıyor.|  
-|**SAAT DİLİMİ İLE ZAMAN DAMGASI**|**DateTime**|**TimestampWithTz**|<xref:System.Data.OracleClient.OracleType> Yalnızca kullanılabilir olduğunda, her iki Oracle 9i istemci ve sunucu yazılımı kullanıyor.|  
+|**ZAMAN DAMGASI**|**Tarih/saat**|**Zaman damgası**|<xref:System.Data.OracleClient.OracleType> Yalnızca kullanılabilir olduğunda, her iki Oracle 9i istemci ve sunucu yazılımı kullanıyor.|  
+|**YEREL SAAT DİLİMİ İLE ZAMAN DAMGASI**|**Tarih/saat**|**TimestampLocal**|<xref:System.Data.OracleClient.OracleType> Yalnızca kullanılabilir olduğunda, her iki Oracle 9i istemci ve sunucu yazılımı kullanıyor.|  
+|**SAAT DİLİMİ İLE ZAMAN DAMGASI**|**Tarih/saat**|**TimestampWithTz**|<xref:System.Data.OracleClient.OracleType> Yalnızca kullanılabilir olduğunda, her iki Oracle 9i istemci ve sunucu yazılımı kullanıyor.|  
 |**İŞARETSİZ TAMSAYI**|**Byte, Uınt16, Uınt32, Uınt64, ondalık**|**Byte, Uınt16, UInt32, numara**|<xref:System.Data.OracleClient.OracleParameter.Size%2A> belirler **System.Data.DBType** ve <xref:System.Data.OracleClient.OracleType>.|  
 |**VARCHAR2**|**AnsiString**|**VarChar**||  
   

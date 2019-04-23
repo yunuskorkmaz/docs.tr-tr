@@ -6,10 +6,10 @@ helpviewer_keywords:
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
 ms.openlocfilehash: fd5829d2dbb1853bf65f1f6e402b918137bd59e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099995"
 ---
 # <a name="elevation-of-privilege"></a>Ayrıcalık Yükseltme
@@ -84,8 +84,8 @@ ms.locfileid: "59099995"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenlik Değerlendirmeleri](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Bilgileri Açıklama](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Bilgilerin Açığa Çıkması](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [Hizmet Reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [Yeniden Yürütme Saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
 - [İzinsiz Değişiklik](../../../../docs/framework/wcf/feature-details/tampering.md)

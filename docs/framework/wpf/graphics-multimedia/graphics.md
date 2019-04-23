@@ -8,17 +8,17 @@ helpviewer_keywords:
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
 ms.openlocfilehash: c59d19c925d99ac8f5dd07da84295ee002c956de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102355"
 ---
 # <a name="graphics"></a>Grafikler
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Entegre multimedya, vektör grafikleri, animasyon ve ilgi çekici kullanıcı arabirimleri ve içerik oluşturmak geliştiriciler için kolaylaştıran, içerik oluşturma desteği sunar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bit Eşlem Efektleri](bitmap-effects.md)  
+ [Bit Eşlem Etkileri](bitmap-effects.md)  
  [Fırçalar](brushes.md)  
  [Çizimler](drawings.md)  
  [Geometriler](geometries.md)  

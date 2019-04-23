@@ -8,10 +8,10 @@ helpviewer_keywords:
 - examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
 ms.openlocfilehash: 20ec03e6b84110f7ea00c134dc18b23f233c5f58
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103447"
 ---
 # <a name="double-buffered-graphics"></a>İki Kez Arabelleğe Alınan Grafikler
@@ -37,7 +37,7 @@ Titreşim yaygın grafik programlamada bir sorundur. Birden çok karmaşık boya
 - <xref:System.Drawing.BufferedGraphics>
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphicsManager>
-- [Nasıl yapılır: Arabelleğe Alınan Grafikleri Elle İşleme](how-to-manually-render-buffered-graphics.md)
-- [Nasıl yapılır: Formlar ve Denetimler için İki Kez Arabelleğe Alma ile Grafik Titreşimini Azaltma](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
-- [Nasıl yapılır: Arabelleğe Alınan Grafikleri Elle Yönetme](how-to-manually-manage-buffered-graphics.md)
-- [Windows Formlarında Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
+- [Nasıl yapılır: Arabelleğe alınan grafikleri elle işleme](how-to-manually-render-buffered-graphics.md)
+- [Nasıl yapılır: Formlar ve denetimler için çift arabelleğe alma ile grafik titreşimini azaltma](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
+- [Nasıl yapılır: Arabelleğe alınan grafikleri elle yönetme](how-to-manually-manage-buffered-graphics.md)
+- [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)

@@ -10,10 +10,10 @@ ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105748"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW Anahtar Sözcükleri ve Düzeyler
@@ -126,4 +126,4 @@ ms.locfileid: "59105748"
 
 - [CLR ETW Sağlayıcılar](../../../docs/framework/performance/clr-etw-providers.md)
 - [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)
-- [Ortak Dil Çalışma Zamanında ETW Olayları](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [Ortak Dil Çalışma Zamanı Modülünde ETW Olayları](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

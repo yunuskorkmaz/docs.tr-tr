@@ -23,10 +23,10 @@ helpviewer_keywords:
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
 ms.openlocfilehash: a98528a4bae1a22352096958cfec2350b21ddf8e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103421"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows Hizmet Uygulamalarına Giriş
@@ -84,9 +84,9 @@ Eski adıyla NT Hizmetleri olarak bilinen Microsoft Windows Hizmetleri kendi Win
 
 - [Windows Hizmeti Uygulamaları](../../../docs/framework/windows-services/index.md)
 - [Hizmet Uygulaması Programlama Mimarisi](../../../docs/framework/windows-services/service-application-programming-architecture.md)
-- [Nasıl yapılır: Windows Hizmetleri Oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [Nasıl yapılır: Hizmetleri Yükleme ve Kaldırma](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
-- [Nasıl yapılır: Hizmetleri Başlatma](../../../docs/framework/windows-services/how-to-start-services.md)
-- [Nasıl yapılır: Windows Hizmet Uygulamalarında Hata Ayıklama](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
+- [Nasıl yapılır: Windows Hizmetleri oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Nasıl yapılır: Hizmetleri Yükleme ve kaldırma](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [Nasıl yapılır: Başlangıç Hizmetleri](../../../docs/framework/windows-services/how-to-start-services.md)
+- [Nasıl yapılır: Windows hizmet uygulamalarında hata ayıklama](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
 - [İzlenecek yol: Bileşen tasarımcısında Windows hizmeti uygulaması oluşturma](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
-- [Nasıl yapılır: Hizmet Uygulamasına Yükleyiciler Ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Nasıl yapılır: Hizmet uygulamasına yükleyiciler ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

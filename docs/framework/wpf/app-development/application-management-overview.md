@@ -8,10 +8,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100086"
 ---
 # <a name="application-management-overview"></a>Uygulama Yönetimine Genel Bakış
@@ -105,7 +105,7 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>Geçerli uygulamanın başlama  
- Çünkü işlevselliğini <xref:System.Windows.Application> sınıfı bir uygulama arasında paylaşılan, yalnızca bir örneği olabilir <xref:System.Windows.Application> başına sınıfı <xref:System.AppDomain>. Bunu uygulamak <xref:System.Windows.Application> sınıfı bir singleton sınıfı uygulanır (bkz [uygulama Singleton olarak C# ](https://go.microsoft.com/fwlink/?LinkId=100567)), tek bir örneğini oluşturur ve sunar ile erişimi paylaşılan `static`<xref:System.Windows.Application.Current%2A> özelliği.  
+ Çünkü işlevselliğini <xref:System.Windows.Application> sınıfı bir uygulama arasında paylaşılan, yalnızca bir örneği olabilir <xref:System.Windows.Application> başına sınıfı <xref:System.AppDomain>. Bunu zorlamak için <xref:System.Windows.Application> sınıfı bir singleton sınıfı uygulanır (bkz [C# uygulama tekil](https://go.microsoft.com/fwlink/?LinkId=100567)), tek bir örneğini oluşturur ve sunar ile erişimi paylaşılan `static` <xref:System.Windows.Application.Current%2A> özellik.  
   
  Aşağıdaki kod, bir başvuru almak gösterilmektedir <xref:System.Windows.Application> geçerli nesne <xref:System.AppDomain>.  
   

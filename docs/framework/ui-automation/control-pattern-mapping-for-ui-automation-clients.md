@@ -6,10 +6,10 @@ helpviewer_keywords:
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
 ms.openlocfilehash: 829df66f49d5df5f5c8cf8d2b6cfa74f0a2172dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101139"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI Otomasyon İstemcileri İçin Denetim Düzeni Eşleştirmesi
@@ -34,7 +34,7 @@ ms.locfileid: "59101139"
   
 |Denetim türü|Desteklenir|Koşullu destek|Desteklenmez|  
 |------------------|---------------|-------------------------|-------------------|  
-|Düğme|Yok.|Çağırma, Değiştir, Genişlet ve Daralt|Yok.|  
+|Düğme|None|Çağırma, Değiştir, Genişlet ve Daralt|None|  
 |Takvim|Kılavuz, tablo|Seçim, kaydırma|Değer|  
 |Onay kutusu|İki Durumlu Düğme|Yok.|Yok.|  
 |Birleşik Giriş Kutusu|Genişlet ve Daralt|Seçim, değer|Kaydırma|  
@@ -42,34 +42,34 @@ ms.locfileid: "59101139"
 |Veri Öğesi|Seçim Öğesi|Daraltma, kılavuz öğesi, kaydırma öğesi, tablo, geçiş, değer'ı genişletin.|None|  
 |Belge|Metin|Kaydırma, değer|Yok.|  
 |Düzenle|Yok.|Aralık değeri, bir metin değeri|Yok.|  
-|Grup|Yok.|Genişlet ve Daralt|Yok.|  
-|Üstbilgi|None|Dönüştürme|Yok.|  
+|Grup|Yok.|Genişlet ve Daralt|None|  
+|Üstbilgi|Yok.|Dönüştürme|Yok.|  
 |Üstbilgi Öğesi|Yok.|Dönüştürme, çağırma|Yok.|  
 |Köprü|Çağır|Değer|Yok.|  
 |Görüntü|Yok.|Kılavuz öğesi, Tablo öğesi|Seçim öğesi çağırma|  
 |List|Yok.|Kılavuz, birden çok görünüm Kaydır, seçimi|Tablo|  
-|Liste öğesi|Seçim Öğesi|Genişlet ve Daralt, kılavuz öğesi çağırmak, kaydırma öğesi, Değiştir, değer|Yok.|  
-|Menü|Yok.|Yok.|None|  
+|Liste öğesi|Seçim Öğesi|Genişlet ve Daralt, kılavuz öğesi çağırmak, kaydırma öğesi, Değiştir, değer|None|  
+|Menü|Yok.|Yok.|Yok.|  
 |Menü Çubuğu|Yok.|Dönüştürme Daralt, Dock'ı genişletin|None|  
-|Menü Öğesi|Yok.|Genişlet ve Daralt, seçim öğesi geçiş çağırma|None|  
+|Menü Öğesi|None|Genişlet ve Daralt, seçim öğesi geçiş çağırma|None|  
 |Bölme|Yok.|Dock. Kaydırma, dönüştürme|Pencere|  
 |İlerleme Çubuğu|Yok.|Aralık değeri|Yok.|  
-|Radyo Düğmesi|Seçim Öğesi|Yok.|İki Durumlu Düğme|  
+|Radyo Düğmesi|Seçim Öğesi|None|İki Durumlu Düğme|  
 |Kaydırma Çubuğu|Yok.|Aralık Değeri|Kaydırma|  
-|Ayırıcı|Yok.|Yok.|None|  
-|Kaydırıcı|None|Aralık değeri, seçim, değeri|Yok.|  
-|Değer Değiştirici|None|Aralık değeri, seçim, değeri|None|  
+|Ayırıcı|Yok.|Yok.|Yok.|  
+|Kaydırıcı|Yok.|Aralık değeri, seçim, değeri|Yok.|  
+|Değer Değiştirici|Yok.|Aralık değeri, seçim, değeri|Yok.|  
 |Bölünmüş Düğme|Çağırma, Genişlet ve Daralt|Yok.|Yok.|  
 |Durum Çubuğu|Yok.|Kılavuz|Yok.|  
 |Tab|Seçim|Kaydırma|None|  
-|Sekme Öğesi|Seçim Öğesi|None|Çağır|  
-|Tablo|Kılavuz, kılavuz öğesi, tablo, Tablo öğesi|None|Yok.|  
+|Sekme Öğesi|Seçim Öğesi|Yok.|Çağır|  
+|Tablo|Kılavuz, kılavuz öğesi, tablo, Tablo öğesi|Yok.|None|  
 |Metin|Yok.|Kılavuz öğesi, Tablo öğesi metni|Değer|  
-|Parmak|Dönüştürme|None|Yok.|  
+|Parmak|Dönüştürme|Yok.|Yok.|  
 |Başlık Çubuğu|Yok.|Yok.|None|  
-|Araç çubuğu|Yok.|Yerleştirme, genişletme daraltma, dönüştürme|Yok.|  
+|Araç çubuğu|Yok.|Yerleştirme, genişletme daraltma, dönüştürme|None|  
 |Araç İpucu|None|Pencere metni|Yok.|  
-|Ağaç|None|Kaydır, seçimi|Yok.|  
+|Ağaç|Yok.|Kaydır, seçimi|Yok.|  
 |Ağaç Öğesi|Genişlet ve Daralt|Kaydırma öğesi seçim öğesi, geçiş çağırma|Yok.|  
 |Pencere|Dönüştürme, penceresi|Dock|Yok.|  
   

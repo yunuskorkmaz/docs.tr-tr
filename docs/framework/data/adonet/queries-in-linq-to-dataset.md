@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
 ms.openlocfilehash: f4458639aa2c78e7c78bdae66fa2b20d5546743c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102550"
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet Sorguları
@@ -63,5 +63,5 @@ Bir sorgu, verileri bir veri kaynağından alır bir ifadedir. Sorgular genellik
 
 - [Programlama Kılavuzu](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
 - [DataSet’leri Sorgulama](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
-- [C#'de LINQ'e Başlarken](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [Visual Basic'te LINQ'e Başlarken](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C#'de LINQ Kullanmaya Başlama](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Visual Basic'te lınq'e Başlarken](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

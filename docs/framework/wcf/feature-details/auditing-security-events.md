@@ -5,10 +5,10 @@ helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101307"
 ---
 # <a name="auditing-security-events"></a>Güvenlik Etkinliklerini Denetleme
@@ -88,7 +88,7 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar (başarı, b
 |Sistem|Uygulama günlüğü|Güvenlik günlüğü|  
 |------------|---------------------|------------------|  
 |[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] veya üzeri|Desteklenir|Desteklenmez|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] and [!INCLUDE[wv](../../../../includes/wv-md.md)]|Desteklenir|İş parçacığı bağlamı sahip olması gerekir `SeAuditPrivilege`|  
+|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] ve [!INCLUDE[wv](../../../../includes/wv-md.md)]|Desteklenir|İş parçacığı bağlamı sahip olması gerekir `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Diğer faktörler  
  Ek olarak işletim sistemi, aşağıdaki tabloda günlük etkinleştirme denetleyen diğer ayarlar açıklanmaktadır.  
@@ -102,9 +102,9 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar (başarı, b
 
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>
-- [Güvenlik Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Temel WCF Programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Nasıl yapılır: Güvenlik Olaylarını Denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
-- [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
+- [Nasıl yapılır: Güvenlik olaylarını denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
 - [\<davranışlar >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
 - [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

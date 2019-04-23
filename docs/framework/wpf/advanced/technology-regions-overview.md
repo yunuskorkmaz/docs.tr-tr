@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
 ms.openlocfilehash: 911ba1474677f26a773ff63e958ba0ceedbefd0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100983"
 ---
 # <a name="technology-regions-overview"></a>Teknoloji Bölgelerine Genel Bakış
@@ -63,5 +63,5 @@ WPF, Win32 veya DirectX gibi bir uygulamada birden fazla sunu teknolojileri kull
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [WPF ve Win32 Birlikte Çalışması](wpf-and-win32-interoperation.md)
-- [İzlenecek yol: WPF Saatini Win32 içinde Barındırma](walkthrough-hosting-a-wpf-clock-in-win32.md)
+- [İzlenecek yol: Win32'de WPF saati barındırma](walkthrough-hosting-a-wpf-clock-in-win32.md)
 - [WPF'de Win32 İçeriği Barındırma](hosting-win32-content-in-wpf.md)

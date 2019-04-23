@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
 ms.openlocfilehash: f70246d4a4d158815ee9662036eca8edeb891d85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104207"
 ---
 # <a name="listbox-control-overview-windows-forms"></a>ListBox Denetimine Genel Bakış (Windows Forms)
@@ -25,10 +25,10 @@ Bir Windows Forms <xref:System.Windows.Forms.ListBox> denetimi, kullanıcı bir 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.ListBox>
-- [Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminde Öğe Ekleme ve Kaldırma](add-and-remove-items-from-a-wf-combobox.md)
-- [Nasıl yapılır: Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminin İçeriğini Sıralama](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [Nasıl yapılır: Windows Forms ComboBox veya ListBox Denetimini Verilere Bağlama](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
+- [Nasıl yapılır: Ekleme ve kaldırma öğeleri bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi](add-and-remove-items-from-a-wf-combobox.md)
+- [Nasıl yapılır: Sıralama içeriği bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Nasıl yapılır: Bir Windows Forms ComboBox veya ListBox denetimini verilere bağlama](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
 - [ComboBox Denetimine Genel Bakış](combobox-control-overview-windows-forms.md)
 - [CheckedListBox Denetimine Genel Bakış](checkedlistbox-control-overview-windows-forms.md)
 - [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](windows-forms-controls-used-to-list-options.md)
-- [Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetimi için Arama Tablosu Oluşturma](create-a-lookup-table-for-a-wf-combobox-listbox.md)
+- [Nasıl yapılır: ComboBox, ListBox veya CheckedListBox denetiminde bir Windows Forms için arama tablosu oluşturma](create-a-lookup-table-for-a-wf-combobox-listbox.md)

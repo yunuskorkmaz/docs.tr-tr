@@ -11,10 +11,10 @@ helpviewer_keywords:
 - brushes [Windows Forms], using semi-transparent
 ms.assetid: a4f6f6b8-3bc8-440a-84af-d62ef0f8ff40
 ms.openlocfilehash: a302b8bf978afcead5768fadeb6336c1ece986ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100942"
 ---
 # <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>Nasıl yapılır: Donuk ve Yarı Saydam Fırçalarla Çizme
@@ -33,11 +33,11 @@ Bir şekil doldururken geçmesi gereken bir <xref:System.Drawing.Brush> dolgu y�
  ![Çizim donuk ve yarı saydam fırçalarla çıktısını gösterir.](./media/how-to-draw-with-opaque-and-semitransparent-brushes/compositingquality-ellipse-semitransparent.png)  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs>`e`, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
+ Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Formlarında Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
+- [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
 - [Çizgi ve Dolgularda Alfa Karışım Kullanma](alpha-blending-lines-and-fills.md)
-- [Nasıl yapılır: Denetiminize Saydam Arka Plan Verme](../controls/how-to-give-your-control-a-transparent-background.md)
-- [Nasıl yapılır: Donuk ve Yarı Saydam Çizgiler Çizme](how-to-draw-opaque-and-semitransparent-lines.md)
+- [Nasıl yapılır: Denetiminize saydam arka plan verme](../controls/how-to-give-your-control-a-transparent-background.md)
+- [Nasıl yapılır: Donuk ve yarı saydam çizgiler çizme](how-to-draw-opaque-and-semitransparent-lines.md)

@@ -5,10 +5,10 @@ ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c92d71c9862dfbdace4de2e30cf48ace7becfd0b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105863"
 ---
 # <a name="reflection-and-net-native"></a>Yansıma ve .NET Yerel
@@ -27,7 +27,7 @@ ms.locfileid: "59105863"
   
  Aşağıdaki konular, kavramsal sağlayın ve başvuru yansıma ve Serileştirme uygulamalarınızı desteklemek için ihtiyacınız olan belgeleri:  
   
--   [Yansıma kullanan API'ler](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
+-   [Yansıma Kullanan API'ler](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
   
 -   [Yansıma API'si Başvurusu](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
   
@@ -35,5 +35,5 @@ ms.locfileid: "59105863"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Yerel ile Uygulama Derleme](../../../docs/framework/net-native/index.md)
-- [.NET Yerel ve Derleme](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [.NET Native ile Uygulama Derleme](../../../docs/framework/net-native/index.md)
+- [.NET Native ve Derleme](../../../docs/framework/net-native/net-native-and-compilation.md)

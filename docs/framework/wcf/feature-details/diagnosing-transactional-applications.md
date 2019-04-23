@@ -3,10 +3,10 @@ title: İşlemsel Uygulamaları Tanılama
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
 ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101718"
 ---
 # <a name="diagnosing-transactional-applications"></a>İşlemsel Uygulamaları Tanılama
@@ -95,7 +95,7 @@ Bu konuda, bir işlem uygulama sorunlarını gidermek için Windows Communicatio
   
      WS-AtomicTransaction izlemeyi kullanarak etkinleştirilebilir [WS-AtomicTransaction yapılandırma yardımcı programı (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Bu izleme, işlemler ve katılımcıları içinde bir sistem durumu hakkında Öngörüler sağlar. Ayrıca iç hizmet modeli izlemeyi etkinleştirmek için ayarlayabileceğiniz `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` kayıt defteri anahtarı geçerli değerini <xref:System.Diagnostics.SourceLevels> sabit listesi. İleti günlüğe kaydetme diğer WCF uygulamaları aynı şekilde etkinleştirebilirsiniz.  
   
--   `System.Transactions` izleme  
+-   `System.Transactions` İzleme  
   
      OleTransactions protokolünü kullanırken, protokol iletileri izlenemez. İzleme desteği <xref:System.Transactions> altyapı sağlar (OleTransactions kullanır) kullanıcılar hareketlerle gerçekleşen olayları görüntülemek izin verir. İzlemeyi etkinleştirmek için bir <xref:System.Transactions> uygulama, aşağıdaki kodda dahil `App.config` yapılandırma dosyası.  
   

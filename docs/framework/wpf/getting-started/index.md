@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
 ms.openlocfilehash: 26cb4fabedb7a4e17f3ee56e95c310e6483d59e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099696"
 ---
 # <a name="getting-started-wpf"></a>Başlarken (WPF)
@@ -20,9 +20,9 @@ Windows Presentation Foundation (WPF) masaüstü istemci uygulamalar oluşturan 
   
 |||  
 |-|-|  
-|Hemen istediğiniz...|[İzlenecek yol: İlk WPF masaüstü uygulamam](walkthrough-my-first-wpf-desktop-application.md)|  
-|Uygulama kullanıcı Arabirimi nasıl tasarlayacağınızı?|[Visual Studio'da XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)|  
-|.NET yeni misiniz?|[.NET Framework'e Genel Bakış](../../get-started/overview.md)<br /><br /> [.NET Framework Uygulama Temelleri](../../../standard/application-essentials.md)<br /><br /> [Visual C# ve Visual Basic'e Başlarken](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)|  
+|Hemen istediğiniz...|[İzlenecek yol: İlk WPF Masaüstü Uygulamam](walkthrough-my-first-wpf-desktop-application.md)|  
+|Uygulama kullanıcı Arabirimi nasıl tasarlayacağınızı?|[Visual Studio'da XAML Tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)|  
+|.NET yeni misiniz?|[.NET Framework'ün genel bakış](../../get-started/overview.md)<br /><br /> [.NET framework uygulama temelleri](../../../standard/application-essentials.md)<br /><br /> [Visual C# ve Visual Basic'e Başlarken](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)|  
 |WPF hakkında daha fazla bilgi...|[Visual Studio’da WPF’ye Giriş](introduction-to-wpf-in-vs.md)<br /><br /> [XAML'ye Genel Bakış (WPF)](../advanced/xaml-overview-wpf.md)<br /><br /> [Denetimler](../controls/index.md)<br /><br /> [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)|  
 |Windows Forms Geliştirici misiniz?|[Windows Forms Denetimleri ve Eşdeğer WPF Denetimleri](../advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [WPF ve Windows Forms Birlikte Çalışması](../advanced/wpf-and-windows-forms-interoperation.md)|  
   

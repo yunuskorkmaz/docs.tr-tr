@@ -10,10 +10,10 @@ helpviewer_keywords:
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
 ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100307"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Nasıl yapılır: UI Olan Eklenti Oluşturma
@@ -87,7 +87,7 @@ Bu örnek, bir Windows Presentation Foundation (WPF tek başına uygulama taraf�
   
  Eklentinin kullanıcı Arabirimi ile etkileşim işlemek için kod eklentinin uygulama etki alanında çalışır. Bu etkileşimlerin şunları içerir:  
   
--   İşleme <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.  
+-   İşleme <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.  
   
 -   Gösteren <xref:System.Windows.MessageBox>.  
   
