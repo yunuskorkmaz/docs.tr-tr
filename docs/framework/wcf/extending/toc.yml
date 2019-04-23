@@ -1,153 +1,146 @@
-items:
 - name: WCF'yi Genişletme
   href: index.md
   items:
-  - name: ServiceHost Hizmet Modeli Katmanını Genişletme
-    href: extending-servicehost-and-the-service-model-layer.md
-    items:
-    - name: İstemcileri Genişletme
-      href: extending-clients.md
+    - name: ServiceHost Hizmet Modeli Katmanını Genişletme
+      href: extending-servicehost-and-the-service-model-layer.md
       items:
-      - name: 'Nasıl yapılır: İstemcide İletileri Denetleme veya Değiştirme'
-        href: how-to-inspect-or-modify-messages-on-the-client.md
-      - name: 'Nasıl yapılır: Parametreleri İnceleme veya Değiştirme'
-        href: how-to-inspect-or-modify-parameters.md
-    - name: Dağıtıcıları Genişletme
-      href: extending-dispatchers.md
+        - name: İstemcileri Genişletme
+          href: extending-clients.md
+          items:
+            - name: 'Nasıl yapılır: İstemcide İletileri Denetleme veya Değiştirme'
+              href: how-to-inspect-or-modify-messages-on-the-client.md
+            - name: 'Nasıl yapılır: Parametreleri İnceleme veya Değiştirme'
+              href: how-to-inspect-or-modify-parameters.md
+        - name: Dağıtıcıları Genişletme
+          href: extending-dispatchers.md
+          items:
+            - name: 'Nasıl yapılır: Hizmette İletileri Denetleme ve Değiştirme'
+              href: how-to-inspect-and-modify-messages-on-the-service.md
+            - name: 'Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme'
+              href: how-to-lock-down-endpoints-in-the-enterprise.md
+        - name: Genişletilebilen Nesneler
+          href: extensible-objects.md
+        - name: Çalışma Zamanını Davranışlarla Yapılandırma ve Genişletme
+          href: configuring-and-extending-the-runtime-with-behaviors.md
+        - name: ServiceHostFactory Kullanarak Barındırmayı Genişletme
+          href: extending-hosting-using-servicehostfactory.md
+    - name: Bağlamaları Genişletme
+      href: extending-bindings.md
       items:
-      - name: 'Nasıl yapılır: Hizmette İletileri Denetleme ve Değiştirme'
-        href: how-to-inspect-and-modify-messages-on-the-service.md
-      - name: 'Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme'
-        href: how-to-lock-down-endpoints-in-the-enterprise.md
-    - name: Genişletilebilen Nesneler
-      href: extensible-objects.md
-    - name: Çalışma Zamanını Davranışlarla Yapılandırma ve Genişletme
-      href: configuring-and-extending-the-runtime-with-behaviors.md
-    - name: ServiceHostFactory Kullanarak Barındırmayı Genişletme
-      href: extending-hosting-using-servicehostfactory.md
-  - name: Bağlamaları Genişletme
-    href: extending-bindings.md
-    items:
-    - name: Bağlamalar ve Bağlama Öğeleri
-      href: bindings-and-binding-elements.md
-    - name: Özel Bağlamalar
-      href: custom-bindings.md
+        - name: Bağlamalar ve Bağlama Öğeleri
+          href: bindings-and-binding-elements.md
+        - name: Özel Bağlamalar
+          href: custom-bindings.md
+          items:
+            - name: 'Nasıl yapılır: Sistem Tarafından Sağlanan Bir Bağlamayı Özelleştirme'
+              href: how-to-customize-a-system-provided-binding.md
+        - name: Kullanıcı Tanımlı Bağlamalar Oluşturma
+          href: creating-user-defined-bindings.md
+    - name: Kanal Katmanını Genişletme
+      href: extending-the-channel-layer.md
       items:
-      - name: 'Nasıl yapılır: Sistem Tarafından Sağlanan Bir Bağlamayı Özelleştirme'
-        href: how-to-customize-a-system-provided-binding.md
-    - name: Kullanıcı Tanımlı Bağlamalar Oluşturma
-      href: creating-user-defined-bindings.md
-  - name: Kanal Katmanını Genişletme
-    href: extending-the-channel-layer.md
-    items:
-    - name: Kanal Modeli Genel Bakış
-      href: channel-model-overview.md
+        - name: Kanal Modeli Genel Bakış
+          href: channel-model-overview.md
+          items:
+            - name: İstemci Kanal Düzeyi Programlama
+              href: client-channel-level-programming.md
+            - name: Hizmet Kanal Düzeyi Programlama
+              href: service-channel-level-programming.md
+            - name: Durum Değişikliklerini Anlama
+              href: understanding-state-changes.md
+            - name: Bir İleti Değişim Deseni seçin
+              href: choosing-a-message-exchange-pattern.md
+            - name: Özel Durum ve Hataları İşleme
+              href: handling-exceptions-and-faults.md
+        - name: Geliştirme Kanalları
+          href: developing-channels.md
+          items:
+            - name: 'Hizmet: Kanal Dinleyicileri ve Kanallar'
+              href: service-channel-listeners-and-channels.md
+            - name: 'İstemci: Kanal Fabrikaları ve Kanallar'
+              href: client-channel-factories-and-channels.md
+            - name: BindingElement Oluşturma
+              href: creating-a-bindingelement.md
+            - name: Yapılandırma ve Meta Veri Desteği
+              href: configuration-and-metadata-support.md
+        - name: Özel Kodlayıcılar
+          href: custom-encoders.md
+        - name: Özel Akış Yükseltmeleri
+          href: custom-stream-upgrades.md
+    - name: Güvenliği Genişletme
+      href: extending-security.md
       items:
-      - name: İstemci Kanal Düzeyi Programlama
-        href: client-channel-level-programming.md
-      - name: Hizmet Kanal Düzeyi Programlama
-        href: service-channel-level-programming.md
-      - name: Durum Değişikliklerini Anlama
-        href: understanding-state-changes.md
-      - name: Bir İleti Değişim Deseni seçin
-        href: choosing-a-message-exchange-pattern.md
-      - name: Özel Durum ve Hataları İşleme
-        href: handling-exceptions-and-faults.md
-    - name: Geliştirme Kanalları
-      href: developing-channels.md
+        - name: Özel Bir Şifreleme Algoritması Belirtme
+          href: specifying-a-custom-crypto-algorithm.md
+        - name: Özel Kimlik Bilgileri ve Kimlik Bilgileri Doğrulaması
+          href: custom-credential-and-credential-validation.md
+          items:
+            - name: 'İzlenecek yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma'
+              href: walkthrough-creating-custom-client-and-service-credentials.md
+            - name: 'Nasıl yapılır: Özel Bir Sertifika Doğrulayıcı Kullanan Bir Hizmet Oluşturma'
+              href: how-to-create-a-service-that-employs-a-custom-certificate-validator.md
+            - name: 'Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma'
+              href: how-to-create-a-custom-security-token-provider.md
+            - name: 'Nasıl yapılır: Özel Güvenlik Belirteci Kimlik Doğrulayıcı Oluşturma'
+              href: how-to-create-a-custom-security-token-authenticator.md
+        - name: Özel Belirteçler
+          href: custom-tokens.md
+          items:
+            - name: 'Nasıl yapılır: Özel Belirteç Oluşturma'
+              href: how-to-create-a-custom-token.md
+        - name: Özel Yetkilendirme
+          href: custom-authorization.md
+          items:
+            - name: 'Nasıl yapılır: Özel Yetkilendirme İlkesi Oluşturma'
+              href: how-to-create-a-custom-authorization-policy.md
+            - name: 'Nasıl yapılır: Bir Hizmet için Özel Yetkilendirme Yöneticisi Oluşturma'
+              href: how-to-create-a-custom-authorization-manager-for-a-service.md
+            - name: 'Nasıl yapılır: Özel Talep Oluşturma'
+              href: how-to-create-a-custom-claim.md
+            - name: 'Nasıl yapılır: Talepleri Karşılaştırma'
+              href: how-to-compare-claims.md
+            - name: 'Nasıl yapılır: Özel Sorumlu Kimliği Oluşturma'
+              href: how-to-create-a-custom-principal-identity.md
+        - name: Bir Hizmetin Kimliğini Kimlik Doğrulama için Geçersiz Kılma
+          href: overriding-the-identity-of-a-service-for-authentication.md
+        - name: 'Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı Oluşturma'
+          href: how-to-create-a-custom-client-identity-verifier.md
+        - name: 'Nasıl yapılır: İmzalama ve Şifreleme için Ayrı X.509 Sertifikaları Kullanma'
+          href: how-to-use-separate-x-509-certificates-for-signing-and-encryption.md
+        - name: 'Nasıl yapılır: Bir X.509 Sertifikasının Şifreleme Sağlayıcısını Değiştirme'
+          href: change-cryptographic-provider-x509-certificate-private-key.md
+    - name: Meta Veri Sistemini Genişletme
+      href: extending-the-metadata-system.md
       items:
-      - name: 'Hizmet: Kanal Dinleyicileri ve Kanallar'
-        href: service-channel-listeners-and-channels.md
-      - name: 'İstemci: Kanal Fabrikaları ve Kanallar'
-        href: client-channel-factories-and-channels.md
-      - name: BindingElement Oluşturma
-        href: creating-a-bindingelement.md
-      - name: Yapılandırma ve Meta Veri Desteği
-        href: configuration-and-metadata-support.md
-    - name: Özel Kodlayıcılar
-      href: custom-encoders.md
-    - name: Özel Akış Yükseltmeleri
-      href: custom-stream-upgrades.md
-  - name: Güvenliği Genişletme
-    href: extending-security.md
-    items:
-    - name: Özel Bir Şifreleme Algoritması Belirtme
-      href: specifying-a-custom-crypto-algorithm.md
-    - name: Özel Kimlik Bilgileri ve Kimlik Bilgileri Doğrulaması
-      href: custom-credential-and-credential-validation.md
+        - name: WCF Uzantısı için Özel Meta Verileri Dışarı Aktarma
+          href: exporting-custom-metadata-for-a-wcf-extension.md
+          items:
+            - name: 'Nasıl yapılır: Özel WSDL Dışarı Aktarma'
+              href: how-to-export-custom-wsdl.md
+            - name: 'Nasıl yapılır: Özel İlke Onaylamalarını Dışarı Aktarma'
+              href: how-to-export-custom-policy-assertions.md
+        - name: WCF Uzantısı için Özel Meta Verileri İçe Aktarma
+          href: importing-custom-metadata-for-a-wcf-extension.md
+          items:
+            - name: 'Nasıl yapılır: Özel WSDL İçeri Aktarma'
+              href: how-to-import-custom-wsdl.md
+            - name: 'Nasıl yapılır: Özel İlke Onaylamalarını İçeri Aktarma'
+              href: how-to-import-custom-policy-assertions.md
+            - name: 'Nasıl yapılır: ServiceContractGenerator için Uzantı Yazma'
+              href: how-to-write-an-extension-for-the-servicecontractgenerator.md
+        - name: Özel Bağlama Üzerinden Meta Veri Yayımlama ve Alma
+          href: publishing-and-retrieving-metadata-over-a-custom-binding.md
+          items:
+            - name: WS-MetadataExchange Bağlamaları
+              href: ws-metadataexchange-bindings.md
+            - name: 'Nasıl yapılır: Özel Bir WS-Metadata Değişimi Bağlaması Yapılandırma'
+              href: how-to-configure-a-custom-ws-metadata-exchange-binding.md
+            - name: 'Nasıl yapılır: MEX Olmayan Bağlama Üzerinden Meta Verileri Alma'
+              href: how-to-retrieve-metadata-over-a-non-mex-binding.md
+    - name: Kodlayıcılar ve Seri Hale Getiricileri Genişletme
+      href: extending-encoders-and-serializers.md
       items:
-      - name: 'İzlenecek yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma'
-        href: walkthrough-creating-custom-client-and-service-credentials.md
-      - name: 'Nasıl yapılır: Özel Bir Sertifika Doğrulayıcı Kullanan Bir Hizmet Oluşturma'
-        href: how-to-create-a-service-that-employs-a-custom-certificate-validator.md
-      - name: 'Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma'
-        href: how-to-create-a-custom-security-token-provider.md
-      - name: 'Nasıl yapılır: Özel Güvenlik Belirteci Kimlik Doğrulayıcı Oluşturma'
-        href: how-to-create-a-custom-security-token-authenticator.md
-    - name: Özel Belirteçler
-      href: custom-tokens.md
-      items:
-      - name: 'Nasıl yapılır: Özel Belirteç Oluşturma'
-        href: how-to-create-a-custom-token.md
-    - name: Özel Yetkilendirme
-      href: custom-authorization.md
-      items:
-      - name: 'Nasıl yapılır: Özel Yetkilendirme İlkesi Oluşturma'
-        href: how-to-create-a-custom-authorization-policy.md
-      - name: 'Nasıl yapılır: Bir Hizmet için Özel Yetkilendirme Yöneticisi Oluşturma'
-        href: how-to-create-a-custom-authorization-manager-for-a-service.md
-      - name: 'Nasıl yapılır: Özel Talep Oluşturma'
-        href: how-to-create-a-custom-claim.md
-      - name: 'Nasıl yapılır: Talepleri Karşılaştırma'
-        href: how-to-compare-claims.md
-      - name: 'Nasıl yapılır: Özel Sorumlu Kimliği Oluşturma'
-        href: how-to-create-a-custom-principal-identity.md
-    - name: Bir Hizmetin Kimliğini Kimlik Doğrulama için Geçersiz Kılma
-      href: overriding-the-identity-of-a-service-for-authentication.md
-    - name: 'Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı Oluşturma'
-      href: how-to-create-a-custom-client-identity-verifier.md
-    - name: 'Nasıl yapılır: İmzalama ve Şifreleme için Ayrı X.509 Sertifikaları Kullanma'
-      href: how-to-use-separate-x-509-certificates-for-signing-and-encryption.md
-    - name: 'Nasıl yapılır: Bir X.509 Sertifikasının Şifreleme Sağlayıcısını Değiştirme'
-      href: change-cryptographic-provider-x509-certificate-private-key.md
-  - name: Meta Veri Sistemini Genişletme
-    href: extending-the-metadata-system.md
-    items:
-    - name: WCF Uzantısı için Özel Meta Verileri Dışarı Aktarma
-      href: exporting-custom-metadata-for-a-wcf-extension.md
-      items:
-      - name: 'Nasıl yapılır: Özel WSDL Dışarı Aktarma'
-        href: how-to-export-custom-wsdl.md
-      - name: 'Nasıl yapılır: Özel İlke Onaylamalarını Dışarı Aktarma'
-        href: how-to-export-custom-policy-assertions.md
-    - name: WCF Uzantısı için Özel Meta Verileri İçe Aktarma
-      href: importing-custom-metadata-for-a-wcf-extension.md
-      items:
-      - name: 'Nasıl yapılır: Özel WSDL İçeri Aktarma'
-        href: how-to-import-custom-wsdl.md
-      - name: 'Nasıl yapılır: Özel İlke Onaylamalarını İçeri Aktarma'
-        href: how-to-import-custom-policy-assertions.md
-      - name: 'Nasıl yapılır: ServiceContractGenerator için Uzantı Yazma'
-        href: how-to-write-an-extension-for-the-servicecontractgenerator.md
-    - name: Özel Bağlama Üzerinden Meta Veri Yayımlama ve Alma
-      href: publishing-and-retrieving-metadata-over-a-custom-binding.md
-      items:
-      - name: WS-MetadataExchange Bağlamaları
-        href: ws-metadataexchange-bindings.md
-      - name: 'Nasıl yapılır: Özel Bir WS-Metadata Değişimi Bağlaması Yapılandırma'
-        href: how-to-configure-a-custom-ws-metadata-exchange-binding.md
-      - name: 'Nasıl yapılır: MEX Olmayan Bağlama Üzerinden Meta Verileri Alma'
-        href: how-to-retrieve-metadata-over-a-non-mex-binding.md
-  - name: Kodlayıcılar ve Seri Hale Getiricileri Genişletme
-    href: extending-encoders-and-serializers.md
-    items:
-    - name: Veri Sözleşmesi Yedekleri
-      href: data-contract-surrogates.md
-    - name: Custom Message Formatters
-      href: custom-message-formatters.md
-ms.openlocfilehash: 0d1efdeca48a3bf64f26a69635707398737420fd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471839"
+        - name: Veri Sözleşmesi Yedekleri
+          href: data-contract-surrogates.md
+        - name: Custom Message Formatters
+          href: custom-message-formatters.md

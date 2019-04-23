@@ -1,336 +1,329 @@
-items:
-- name: C# Anahtar Sözcükleri
+- name: 'C# Anahtar Sözcükleri'
   href: index.md
   items:
-  - name: Türler
-    href: types.md
-    items:
-    - name: Değer Türleri
-      href: value-types.md
+    - name: Türler
+      href: types.md
       items:
-      - name: bool
-        href: bool.md
-      - name: byte
-        href: byte.md
-      - name: char
-        href: char.md
-      - name: decimal
-        href: decimal.md
-      - name: çift
-        href: double.md
-      - name: enum
-        href: enum.md
-      - name: float
-        href: float.md
-      - name: int
-        href: int.md
-      - name: long
-        href: long.md
-      - name: sbyte
-        href: sbyte.md
-      - name: short
-        href: short.md
-      - name: 'struct '
-        href: struct.md
-      - name: uint
-        href: uint.md
-      - name: ulong
-        href: ulong.md
-      - name: ushort
-        href: ushort.md
-    - name: Başvuru Türleri
-      href: reference-types.md
+        - name: Değer Türleri
+          href: value-types.md
+          items:
+            - name: bool
+              href: bool.md
+            - name: byte
+              href: byte.md
+            - name: char
+              href: char.md
+            - name: decimal
+              href: decimal.md
+            - name: çift
+              href: double.md
+            - name: enum
+              href: enum.md
+            - name: float
+              href: float.md
+            - name: int
+              href: int.md
+            - name: long
+              href: long.md
+            - name: sbyte
+              href: sbyte.md
+            - name: short
+              href: short.md
+            - name: 'struct '
+              href: struct.md
+            - name: uint
+              href: uint.md
+            - name: ulong
+              href: ulong.md
+            - name: ushort
+              href: ushort.md
+        - name: Başvuru Türleri
+          href: reference-types.md
+          items:
+            - name: sınıf
+              href: class.md
+            - name: temsilci
+              href: delegate.md
+            - name: dinamik
+              href: dynamic.md
+            - name: arabirim
+              href: interface.md
+            - name: nesne
+              href: object.md
+            - name: dize
+              href: string.md
+        - name: void
+          href: void.md
+        - name: var
+          href: var.md
+        - name: Türler için başvuru tabloları
+          href: reference-tables-for-types.md
+          items:
+            - name: Yerleşik türler tablosu
+              href: built-in-types-table.md
+            - name: Tam sayı türleri tablosu
+              href: integral-types-table.md
+            - name: Kayan nokta türleri tablosu
+              href: floating-point-types-table.md
+            - name: Değer türleri tablosu
+              href: value-types-table.md
+            - name: Varsayılan değerler tablosu
+              href: default-values-table.md
+            - name: Örtük sayısal dönüştürme tablosu
+              href: implicit-numeric-conversions-table.md
+            - name: Açık sayısal dönüştürme tablosu
+              href: explicit-numeric-conversions-table.md
+            - name: Sayısal sonuçlar tablosunu biçimlendirme
+              href: formatting-numeric-results-table.md
+    - name: Değiştiriciler
+      href: modifiers.md
       items:
-      - name: sınıf
-        href: class.md
-      - name: temsilci
-        href: delegate.md
-      - name: dinamik
-        href: dynamic.md
-      - name: arabirim
-        href: interface.md
-      - name: nesne
-        href: object.md
-      - name: dize
-        href: string.md
-    - name: void
-      href: void.md
-    - name: var
-      href: var.md
-    - name: Türler için başvuru tabloları
-      href: reference-tables-for-types.md
+        - name: Erişim Değiştiricileri
+          href: access-modifiers.md
+          items:
+            - name: Erişilebilirlik Düzeyleri
+              href: accessibility-levels.md
+            - name: Erişilebilirlik Etki Alanı
+              href: accessibility-domain.md
+            - name: Erişilebilirlik Düzeylerinin Kullanılmasındaki Kısıtlamalar
+              href: restrictions-on-using-accessibility-levels.md
+            - name: internal
+              href: internal.md
+            - name: private
+              href: private.md
+            - name: protected
+              href: protected.md
+            - name: public
+              href: public.md
+            - name: protected internal
+              href: protected-internal.md
+            - name: private protected
+              href: private-protected.md
+        - name: abstract
+          href: abstract.md
+        - name: async
+          href: async.md
+        - name: const
+          href: const.md
+        - name: olay
+          href: event.md
+        - name: extern
+          href: extern.md
+        - name: in (Genel Değiştirici)
+          href: in-generic-modifier.md
+        - name: out (Genel Değiştirici)
+          href: out-generic-modifier.md
+        - name: override
+          href: override.md
+        - name: readonly
+          href: readonly.md
+        - name: korumalı
+          href: sealed.md
+        - name: static
+          href: static.md
+        - name: unsafe
+          href: unsafe.md
+        - name: virtual
+          href: virtual.md
+        - name: volatile
+          href: volatile.md
+    - name: Deyim Anahtar Sözcükleri
+      href: statement-keywords.md
       items:
-      - name: Yerleşik türler tablosu
-        href: built-in-types-table.md
-      - name: Tam sayı türleri tablosu
-        href: integral-types-table.md
-      - name: Kayan nokta türleri tablosu
-        href: floating-point-types-table.md
-      - name: Değer türleri tablosu
-        href: value-types-table.md
-      - name: Varsayılan değerler tablosu
-        href: default-values-table.md
-      - name: Örtük sayısal dönüştürme tablosu
-        href: implicit-numeric-conversions-table.md
-      - name: Açık sayısal dönüştürme tablosu
-        href: explicit-numeric-conversions-table.md
-      - name: Sayısal sonuçlar tablosunu biçimlendirme
-        href: formatting-numeric-results-table.md
-  - name: Değiştiriciler
-    href: modifiers.md
-    items:
-    - name: Erişim Değiştiricileri
-      href: access-modifiers.md
+        - name: Seçim Deyimleri
+          href: selection-statements.md
+          items:
+            - name: if-else
+              href: if-else.md
+            - name: anahtarı
+              href: switch.md
+        - name: Yineleme Deyimleri
+          href: iteration-statements.md
+          items:
+            - name: do
+              href: do.md
+            - name: for
+              href: for.md
+            - name: 'foreach, in'
+              href: foreach-in.md
+            - name: while
+              href: while.md
+        - name: Atlama Deyimleri
+          href: jump-statements.md
+          items:
+            - name: break
+              href: break.md
+            - name: continue
+              href: continue.md
+            - name: goto
+              href: goto.md
+            - name: return
+              href: return.md
+        - name: Özel Durum İşleme Deyimleri
+          href: exception-handling-statements.md
+          items:
+            - name: throw
+              href: throw.md
+            - name: try-catch
+              href: try-catch.md
+            - name: try-finally
+              href: try-finally.md
+            - name: try-catch-finally
+              href: try-catch-finally.md
+        - name: İşaretli ve İşaretsiz
+          href: checked-and-unchecked.md
+          items:
+            - name: checked
+              href: checked.md
+            - name: unchecked
+              href: unchecked.md
+        - name: fixed Deyimi
+          href: fixed-statement.md
+        - name: lock Deyimi
+          href: lock-statement.md
+    - name: Yöntem Parametreleri
+      href: method-parameters.md
       items:
-      - name: Erişilebilirlik Düzeyleri
-        href: accessibility-levels.md
-      - name: Erişilebilirlik Etki Alanı
-        href: accessibility-domain.md
-      - name: Erişilebilirlik Düzeylerinin Kullanılmasındaki Kısıtlamalar
-        href: restrictions-on-using-accessibility-levels.md
-      - name: internal
-        href: internal.md
-      - name: private
-        href: private.md
-      - name: protected
-        href: protected.md
-      - name: public
-        href: public.md
-      - name: protected internal
-        href: protected-internal.md
-      - name: private protected
-        href: private-protected.md
-    - name: abstract
-      href: abstract.md
-    - name: async
-      href: async.md
-    - name: const
-      href: const.md
-    - name: olay
-      href: event.md
-    - name: extern
-      href: extern.md
-    - name: in (Genel Değiştirici)
-      href: in-generic-modifier.md
-    - name: out (Genel Değiştirici)
-      href: out-generic-modifier.md
-    - name: override
-      href: override.md
-    - name: readonly
-      href: readonly.md
-    - name: korumalı
-      href: sealed.md
-    - name: static
-      href: static.md
-    - name: unsafe
-      href: unsafe.md
-    - name: virtual
-      href: virtual.md
-    - name: volatile
-      href: volatile.md
-  - name: Deyim Anahtar Sözcükleri
-    href: statement-keywords.md
-    items:
-    - name: Seçim Deyimleri
-      href: selection-statements.md
+        - name: params
+          href: params.md
+        - name: in (Parametre Değiştirici)
+          href: in-parameter-modifier.md
+        - name: ref
+          href: ref.md
+        - name: out (Parametre Değiştirici)
+          href: out-parameter-modifier.md
+    - name: Ad Alanı Anahtar Sözcükleri
+      href: namespace-keywords.md
       items:
-      - name: if-else
-        href: if-else.md
-      - name: anahtarı
-        href: switch.md
-    - name: Yineleme Deyimleri
-      href: iteration-statements.md
+        - name: ad alanı
+          href: namespace.md
+        - name: kullanma
+          href: using.md
+          items:
+            - name: using Yönergesi
+              href: using-directive.md
+            - name: using static Yönergesi
+              href: using-static.md
+            - name: using Deyimi
+              href: using-statement.md
+        - name: extern diğer adı
+          href: extern-alias.md
+    - name: İşleç Anahtar Sözcükleri
+      href: operator-keywords.md
       items:
-      - name: do
-        href: do.md
-      - name: for
-        href: for.md
-      - name: foreach, in
-        href: foreach-in.md
-      - name: while
-        href: while.md
-    - name: Atlama Deyimleri
-      href: jump-statements.md
+        - name: as
+          href: as.md
+        - name: bekleme
+          href: await.md
+        - name: is
+          href: is.md
+        - name: new
+          href: new.md
+          items:
+            - name: new İşleci
+              href: new-operator.md
+            - name: new Değiştiricisi
+              href: new-modifier.md
+            - name: new Kısıtlaması
+              href: new-constraint.md
+        - name: sizeof
+          href: sizeof.md
+        - name: typeof
+          href: typeof.md
+        - name: 'true'
+          href: true.md
+          items:
+            - name: true İşleci
+              href: true-false-operators.md
+            - name: true Değişmez Değeri
+              href: true-literal.md
+        - name: 'false'
+          href: false.md
+          items:
+            - name: false İşleci
+              href: true-false-operators.md
+            - name: false Değişmez Değeri
+              href: false-literal.md
+        - name: stackalloc
+          href: stackalloc.md
+        - name: nameof
+          href: nameof.md
+    - name: Dönüşüm Anahtar Sözcükleri
+      href: conversion-keywords.md
       items:
-      - name: break
-        href: break.md
-      - name: continue
-        href: continue.md
-      - name: goto
-        href: goto.md
-      - name: return
-        href: return.md
-    - name: Özel Durum İşleme Deyimleri
-      href: exception-handling-statements.md
+        - name: explicit
+          href: explicit.md
+        - name: implicit
+          href: implicit.md
+        - name: operator
+          href: operator.md
+    - name: Erişim Anahtar Sözcükleri
+      href: access-keywords.md
       items:
-      - name: throw
-        href: throw.md
-      - name: try-catch
-        href: try-catch.md
-      - name: try-finally
-        href: try-finally.md
-      - name: try-catch-finally
-        href: try-catch-finally.md
-    - name: İşaretli ve İşaretsiz
-      href: checked-and-unchecked.md
+        - name: taban
+          href: base.md
+        - name: this
+          href: this.md
+    - name: Değişmez Değer Anahtar Sözcükleri
+      href: literal-keywords.md
       items:
-      - name: checked
-        href: checked.md
-      - name: unchecked
-        href: unchecked.md
-    - name: fixed Deyimi
-      href: fixed-statement.md
-    - name: lock Deyimi
-      href: lock-statement.md
-  - name: Yöntem Parametreleri
-    href: method-parameters.md
-    items:
-    - name: params
-      href: params.md
-    - name: in (Parametre Değiştirici)
-      href: in-parameter-modifier.md
-    - name: ref
-      href: ref.md
-    - name: out (Parametre Değiştirici)
-      href: out-parameter-modifier.md
-  - name: Ad Alanı Anahtar Sözcükleri
-    href: namespace-keywords.md
-    items:
-    - name: ad alanı
-      href: namespace.md
-    - name: kullanma
-      href: using.md
+        - name: 'null'
+          href: null.md
+        - name: default
+          href: default.md
+    - name: Bağlamsal Anahtar Sözcükler
+      href: contextual-keywords.md
       items:
-      - name: using Yönergesi
-        href: using-directive.md
-      - name: using static Yönergesi
-        href: using-static.md
-      - name: using Deyimi
-        href: using-statement.md
-    - name: extern diğer adı
-      href: extern-alias.md
-  - name: İşleç Anahtar Sözcükleri
-    href: operator-keywords.md
-    items:
-    - name: as
-      href: as.md
-    - name: bekleme
-      href: await.md
-    - name: is
-      href: is.md
-    - name: new
-      href: new.md
+        - name: add
+          href: add.md
+        - name: get
+          href: get.md
+        - name: global
+          href: global.md
+        - name: partial (Tür)
+          href: partial-type.md
+        - name: partial (Yöntem)
+          href: partial-method.md
+        - name: remove
+          href: remove.md
+        - name: set
+          href: set.md
+        - name: when (filtre koşulu)
+          href: when.md
+        - name: where (genel tür kısıtlaması)
+          href: where-generic-type-constraint.md
+        - name: value
+          href: value.md
+        - name: yield
+          href: yield.md
+    - name: Sorgu Anahtar Sözcükleri
+      href: query-keywords.md
       items:
-      - name: new İşleci
-        href: new-operator.md
-      - name: new Değiştiricisi
-        href: new-modifier.md
-      - name: new Kısıtlaması
-        href: new-constraint.md
-    - name: sizeof
-      href: sizeof.md
-    - name: typeof
-      href: typeof.md
-    - name: "true"
-      href: true.md
-      items:
-      - name: true İşleci
-        href: true-false-operators.md
-      - name: true Değişmez Değeri
-        href: true-literal.md
-    - name: "false"
-      href: false.md
-      items:
-      - name: false İşleci
-        href: true-false-operators.md
-      - name: false Değişmez Değeri
-        href: false-literal.md
-    - name: stackalloc
-      href: stackalloc.md
-    - name: nameof
-      href: nameof.md
-  - name: Dönüşüm Anahtar Sözcükleri
-    href: conversion-keywords.md
-    items:
-    - name: explicit
-      href: explicit.md
-    - name: implicit
-      href: implicit.md
-    - name: operator
-      href: operator.md
-  - name: Erişim Anahtar Sözcükleri
-    href: access-keywords.md
-    items:
-    - name: taban
-      href: base.md
-    - name: this
-      href: this.md
-  - name: Değişmez Değer Anahtar Sözcükleri
-    href: literal-keywords.md
-    items:
-    - name: "null"
-      href: null.md
-    - name: default
-      href: default.md
-  - name: Bağlamsal Anahtar Sözcükler
-    href: contextual-keywords.md
-    items:
-    - name: add
-      href: add.md
-    - name: get
-      href: get.md
-    - name: global
-      href: global.md
-    - name: partial (Tür)
-      href: partial-type.md
-    - name: partial (Yöntem)
-      href: partial-method.md
-    - name: remove
-      href: remove.md
-    - name: set
-      href: set.md
-    - name: when (filtre koşulu)
-      href: when.md
-    - name: where (genel tür kısıtlaması)
-      href: where-generic-type-constraint.md
-    - name: value
-      href: value.md
-    - name: yield
-      href: yield.md
-  - name: Sorgu Anahtar Sözcükleri
-    href: query-keywords.md
-    items:
-    - name: from yan tümcesi
-      href: from-clause.md
-    - name: where tümcesi
-      href: where-clause.md
-    - name: select tümcesi
-      href: select-clause.md
-    - name: group tümcesi
-      href: group-clause.md
-    - name: into
-      href: into.md
-    - name: orderby tümcesi
-      href: orderby-clause.md
-    - name: join tümcesi
-      href: join-clause.md
-    - name: let tümcesi
-      href: let-clause.md
-    - name: ascending
-      href: ascending.md
-    - name: descending
-      href: descending.md
-    - name: on
-      href: on.md
-    - name: eşittir
-      href: equals.md
-    - name: by
-      href: by.md
-    - name: içinde
-      href: in.md
-ms.openlocfilehash: a87c28c8c586d1169a98f3f71361d34eb8680d99
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471751"
+        - name: from yan tümcesi
+          href: from-clause.md
+        - name: where tümcesi
+          href: where-clause.md
+        - name: select tümcesi
+          href: select-clause.md
+        - name: group tümcesi
+          href: group-clause.md
+        - name: into
+          href: into.md
+        - name: orderby tümcesi
+          href: orderby-clause.md
+        - name: join tümcesi
+          href: join-clause.md
+        - name: let tümcesi
+          href: let-clause.md
+        - name: ascending
+          href: ascending.md
+        - name: descending
+          href: descending.md
+        - name: 'on'
+          href: on.md
+        - name: eşittir
+          href: equals.md
+        - name: by
+          href: by.md
+        - name: içinde
+          href: in.md

@@ -1,40 +1,33 @@
-items:
 - name: Visual Basic Dil Belirtimi
   href: index.md
   items:
-  - name: Giriş
-    href: ../../../../_vblang/spec/introduction.md
-  - name: Sözcük Dilbilgisi
-    href: ../../../../_vblang/spec/lexical-grammar.md
-  - name: Ön işleme Yönergeleri
-    href: ../../../../_vblang/spec/preprocessing-directives.md
-  - name: Genel Kavramlar
-    href: ../../../../_vblang/spec/general-concepts.md
-  - name: Öznitelikler
-    href: ../../../../_vblang/spec/attributes.md
-  - name: Kaynak Dosyalar ve Ad Alanları
-    href: ../../../../_vblang/spec/source-files-and-namespaces.md
-  - name: Türler
-    href: ../../../../_vblang/spec/types.md
-  - name: Dönüşümler
-    href: ../../../../_vblang/spec/conversions.md
-  - name: Tür Üyeleri
-    href: ../../../../_vblang/spec/type-members.md
-  - name: Deyimler
-    href: ../../../../_vblang/spec/statements.md
-  - name: İfadeler
-    href: ../../../../_vblang/spec/expressions.md
-  - name: Belge Açıklamaları
-    href: ../../../../_vblang/spec/documentation-comments.md
-  - name: Dilbilgisi
-    items:
-    - name: vb.html
-      href: https://ljw1004.github.io/vbspec/vb.html
-    - name: vb.g4 - ANTLR biçimi
-      href: https://ljw1004.github.io/vbspec/vb.g4?raw=true
-ms.openlocfilehash: 03281728455fee8303e6e1c4750779a0695130de
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471699"
+    - name: Giriş
+      href: ../../../../_vblang/spec/introduction.md
+    - name: Sözcük Dilbilgisi
+      href: ../../../../_vblang/spec/lexical-grammar.md
+    - name: Ön işleme Yönergeleri
+      href: ../../../../_vblang/spec/preprocessing-directives.md
+    - name: Genel Kavramlar
+      href: ../../../../_vblang/spec/general-concepts.md
+    - name: Öznitelikler
+      href: ../../../../_vblang/spec/attributes.md
+    - name: Kaynak Dosyalar ve Ad Alanları
+      href: ../../../../_vblang/spec/source-files-and-namespaces.md
+    - name: Türler
+      href: ../../../../_vblang/spec/types.md
+    - name: Dönüşümler
+      href: ../../../../_vblang/spec/conversions.md
+    - name: Tür Üyeleri
+      href: ../../../../_vblang/spec/type-members.md
+    - name: Deyimler
+      href: ../../../../_vblang/spec/statements.md
+    - name: İfadeler
+      href: ../../../../_vblang/spec/expressions.md
+    - name: Belge Açıklamaları
+      href: ../../../../_vblang/spec/documentation-comments.md
+    - name: Dilbilgisi
+      items:
+        - name: vb.html
+          href: 'https://ljw1004.github.io/vbspec/vb.html'
+        - name: vb.g4 - ANTLR biçimi
+          href: 'https://ljw1004.github.io/vbspec/vb.g4?raw=true'

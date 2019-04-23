@@ -1,152 +1,145 @@
-items:
 - name: Fusion
   href: index.md
   items:
-  - name: Fusion Arabirimleri
-    href: fusion-interfaces.md
-    items:
-    - name: IAppIdAuthority Arabirimi
-      href: iappidauthority-interface.md
-    - name: IAssemblyCache Arabirimi
-      href: iassemblycache-interface.md
+    - name: Fusion Arabirimleri
+      href: fusion-interfaces.md
       items:
-      - name: CreateAssemblyCacheItem Metodu
-        href: iassemblycache-createassemblycacheitem-method.md
-      - name: CreateAssemblyScavenger Metodu
-        href: iassemblycache-createassemblyscavenger-method.md
-      - name: InstallAssembly Metodu
-        href: iassemblycache-installassembly-method.md
-      - name: QueryAssemblyInfo Metodu
-        href: iassemblycache-queryassemblyinfo-method.md
-      - name: UninstallAssembly Metodu
-        href: iassemblycache-uninstallassembly-method.md
-    - name: IAssemblyCacheItem Arabirimi
-      href: iassemblycacheitem-interface.md
+        - name: IAppIdAuthority Arabirimi
+          href: iappidauthority-interface.md
+        - name: IAssemblyCache Arabirimi
+          href: iassemblycache-interface.md
+          items:
+            - name: CreateAssemblyCacheItem Metodu
+              href: iassemblycache-createassemblycacheitem-method.md
+            - name: CreateAssemblyScavenger Metodu
+              href: iassemblycache-createassemblyscavenger-method.md
+            - name: InstallAssembly Metodu
+              href: iassemblycache-installassembly-method.md
+            - name: QueryAssemblyInfo Metodu
+              href: iassemblycache-queryassemblyinfo-method.md
+            - name: UninstallAssembly Metodu
+              href: iassemblycache-uninstallassembly-method.md
+        - name: IAssemblyCacheItem Arabirimi
+          href: iassemblycacheitem-interface.md
+          items:
+            - name: AbortItem Metodu
+              href: iassemblycacheitem-abortitem-method.md
+            - name: Commit Yöntemi
+              href: iassemblycacheitem-commit-method.md
+            - name: CreateStream Metodu
+              href: iassemblycacheitem-createstream-method.md
+        - name: IAssemblyEnum Arabirimi
+          href: iassemblyenum-interface.md
+          items:
+            - name: Clone Yöntemi
+              href: iassemblyenum-clone-method.md
+            - name: GetNextAssembly Metodu
+              href: iassemblyenum-getnextassembly-method.md
+            - name: Reset Yöntemi
+              href: iassemblyenum-reset-method.md
+        - name: IAssemblyName Arabirimi
+          href: iassemblyname-interface.md
+          items:
+            - name: Clone Yöntemi
+              href: iassemblyname-clone-method.md
+            - name: Finalize Metodu
+              href: iassemblyname-finalize-method.md
+            - name: GetDisplayName Metodu
+              href: iassemblyname-getdisplayname-method.md
+            - name: GetName Yöntemi
+              href: iassemblyname-getname-method.md
+            - name: GetProperty Metodu
+              href: iassemblyname-getproperty-method.md
+            - name: GetVersion Yöntemi
+              href: iassemblyname-getversion-method.md
+            - name: IsEqual Yöntemi
+              href: iassemblyname-isequal-method.md
+            - name: SetProperty Yöntemi
+              href: iassemblyname-setproperty-method.md
+        - name: IDefinitionAppId Arabirimi
+          href: idefinitionappid-interface.md
+        - name: IDefinitionIdentity Arabirimi
+          href: idefinitionidentity-interface.md
+        - name: IEnumDefinitionIdentity Arabirimi
+          href: ienumdefinitionidentity-interface.md
+        - name: IEnumIDENTITY_ATTRIBUTE Arabirimi
+          href: ienumidentity-attribute-interface.md
+        - name: IEnumReferenceIdentity Arabirimi
+          href: ienumreferenceidentity-interface.md
+        - name: IIdentityAuthority Arabirimi
+          href: iidentityauthority-interface.md
+        - name: IInstallReferenceEnum Arabirimi
+          href: iinstallreferenceenum-interface.md
+          items:
+            - name: GetNextInstallReferenceItem Yöntemi
+              href: iinstallreferenceenum-getnextinstallreferenceitem-method.md
+        - name: IInstallReferenceItem Arabirimi
+          href: iinstallreferenceitem-interface.md
+          items:
+            - name: GetReference Yöntemi
+              href: iinstallreferenceitem-getreference-method.md
+        - name: IReferenceAppId Arabirimi
+          href: ireferenceappid-interface.md
+        - name: IReferenceIdentity Arabirimi
+          href: ireferenceidentity-interface.md
+    - name: Fusion Genel Statik İşlevleri
+      href: fusion-global-static-functions.md
       items:
-      - name: AbortItem Metodu
-        href: iassemblycacheitem-abortitem-method.md
-      - name: Commit Yöntemi
-        href: iassemblycacheitem-commit-method.md
-      - name: CreateStream Metodu
-        href: iassemblycacheitem-createstream-method.md
-    - name: IAssemblyEnum Arabirimi
-      href: iassemblyenum-interface.md
+        - name: ClearDownloadCache İşlevi
+          href: cleardownloadcache-function.md
+        - name: CompareAssemblyIdentity İşlevi
+          href: compareassemblyidentity-function.md
+        - name: CreateApplicationContext İşlevi
+          href: createapplicationcontext-function.md
+        - name: CreateAssemblyCache İşlevi
+          href: createassemblycache-function.md
+        - name: CreateAssemblyEnum İşlevi
+          href: createassemblyenum-function.md
+        - name: CreateAssemblyNameObject İşlevi
+          href: createassemblynameobject-function.md
+        - name: CreateHistoryReader İşlevi
+          href: createhistoryreader-function.md
+        - name: CreateInstallReferenceEnum İşlevi
+          href: createinstallreferenceenum-function.md
+        - name: GetAppIdAuthority İşlevi
+          href: getappidauthority-function.md
+        - name: GetAssemblyIdentityFromFile İşlevi
+          href: getassemblyidentityfromfile-function.md
+        - name: GetCachePath İşlevi
+          href: getcachepath-function.md
+        - name: GetHistoryFileDirectory İşlevi
+          href: gethistoryfiledirectory-function.md
+        - name: GetIdentityAuthority İşlevi
+          href: getidentityauthority-function.md
+        - name: IsFrameworkAssembly İşlevi
+          href: isframeworkassembly-function.md
+        - name: NukeDownloadedCache İşlevi
+          href: nukedownloadedcache-function.md
+        - name: PreBindAssemblyEx İşlevi
+          href: prebindassemblyex-function.md
+    - name: Fusion Numaralandırmaları
+      href: fusion-enumerations.md
       items:
-      - name: Clone Yöntemi
-        href: iassemblyenum-clone-method.md
-      - name: GetNextAssembly Metodu
-        href: iassemblyenum-getnextassembly-method.md
-      - name: Reset Yöntemi
-        href: iassemblyenum-reset-method.md
-    - name: IAssemblyName Arabirimi
-      href: iassemblyname-interface.md
+        - name: ASM_CACHE_FLAGS Numaralandırması
+          href: asm-cache-flags-enumeration.md
+        - name: ASM_CMP_FLAGS Numaralandırması
+          href: asm-cmp-flags-enumeration.md
+        - name: ASM_DISPLAY_FLAGS Numaralandırması
+          href: asm-display-flags-enumeration.md
+        - name: ASM_NAME Numaralandırması
+          href: asm-name-enumeration.md
+        - name: AssemblyComparisonResult Numaralandırması
+          href: assemblycomparisonresult-enumeration.md
+        - name: CREATE_ASM_NAME_OBJ_FLAGS Numaralandırması
+          href: create-asm-name-obj-flags-enumeration.md
+    - name: Fusion Yapıları
+      href: fusion-structures.md
       items:
-      - name: Clone Yöntemi
-        href: iassemblyname-clone-method.md
-      - name: Finalize Metodu
-        href: iassemblyname-finalize-method.md
-      - name: GetDisplayName Metodu
-        href: iassemblyname-getdisplayname-method.md
-      - name: GetName Yöntemi
-        href: iassemblyname-getname-method.md
-      - name: GetProperty Metodu
-        href: iassemblyname-getproperty-method.md
-      - name: GetVersion Yöntemi
-        href: iassemblyname-getversion-method.md
-      - name: IsEqual Yöntemi
-        href: iassemblyname-isequal-method.md
-      - name: SetProperty Yöntemi
-        href: iassemblyname-setproperty-method.md
-    - name: IDefinitionAppId Arabirimi
-      href: idefinitionappid-interface.md
-    - name: IDefinitionIdentity Arabirimi
-      href: idefinitionidentity-interface.md
-    - name: IEnumDefinitionIdentity Arabirimi
-      href: ienumdefinitionidentity-interface.md
-    - name: IEnumIDENTITY_ATTRIBUTE Arabirimi
-      href: ienumidentity-attribute-interface.md
-    - name: IEnumReferenceIdentity Arabirimi
-      href: ienumreferenceidentity-interface.md
-    - name: IIdentityAuthority Arabirimi
-      href: iidentityauthority-interface.md
-    - name: IInstallReferenceEnum Arabirimi
-      href: iinstallreferenceenum-interface.md
-      items:
-      - name: GetNextInstallReferenceItem Yöntemi
-        href: iinstallreferenceenum-getnextinstallreferenceitem-method.md
-    - name: IInstallReferenceItem Arabirimi
-      href: iinstallreferenceitem-interface.md
-      items:
-      - name: GetReference Yöntemi
-        href: iinstallreferenceitem-getreference-method.md
-    - name: IReferenceAppId Arabirimi
-      href: ireferenceappid-interface.md
-    - name: IReferenceIdentity Arabirimi
-      href: ireferenceidentity-interface.md
-  - name: Fusion Genel Statik İşlevleri
-    href: fusion-global-static-functions.md
-    items:
-    - name: ClearDownloadCache İşlevi
-      href: cleardownloadcache-function.md
-    - name: CompareAssemblyIdentity İşlevi
-      href: compareassemblyidentity-function.md
-    - name: CreateApplicationContext İşlevi
-      href: createapplicationcontext-function.md
-    - name: CreateAssemblyCache İşlevi
-      href: createassemblycache-function.md
-    - name: CreateAssemblyEnum İşlevi
-      href: createassemblyenum-function.md
-    - name: CreateAssemblyNameObject İşlevi
-      href: createassemblynameobject-function.md
-    - name: CreateHistoryReader İşlevi
-      href: createhistoryreader-function.md
-    - name: CreateInstallReferenceEnum İşlevi
-      href: createinstallreferenceenum-function.md
-    - name: GetAppIdAuthority İşlevi
-      href: getappidauthority-function.md
-    - name: GetAssemblyIdentityFromFile İşlevi
-      href: getassemblyidentityfromfile-function.md
-    - name: GetCachePath İşlevi
-      href: getcachepath-function.md
-    - name: GetHistoryFileDirectory İşlevi
-      href: gethistoryfiledirectory-function.md
-    - name: GetIdentityAuthority İşlevi
-      href: getidentityauthority-function.md
-    - name: IsFrameworkAssembly İşlevi
-      href: isframeworkassembly-function.md
-    - name: NukeDownloadedCache İşlevi
-      href: nukedownloadedcache-function.md
-    - name: PreBindAssemblyEx İşlevi
-      href: prebindassemblyex-function.md
-  - name: Fusion Numaralandırmaları
-    href: fusion-enumerations.md
-    items:
-    - name: ASM_CACHE_FLAGS Numaralandırması
-      href: asm-cache-flags-enumeration.md
-    - name: ASM_CMP_FLAGS Numaralandırması
-      href: asm-cmp-flags-enumeration.md
-    - name: ASM_DISPLAY_FLAGS Numaralandırması
-      href: asm-display-flags-enumeration.md
-    - name: ASM_NAME Numaralandırması
-      href: asm-name-enumeration.md
-    - name: AssemblyComparisonResult Numaralandırması
-      href: assemblycomparisonresult-enumeration.md
-    - name: CREATE_ASM_NAME_OBJ_FLAGS Numaralandırması
-      href: create-asm-name-obj-flags-enumeration.md
-  - name: Fusion Yapıları
-    href: fusion-structures.md
-    items:
-    - name: ASSEMBLY_INFO Yapısı
-      href: assembly-info-structure.md
-    - name: FUSION_INSTALL_REFERENCE Yapısı
-      href: fusion-install-reference-structure.md
-    - name: IDENTITY_ATTRIBUTE Yapısı
-      href: identity-attribute-structure.md
-    - name: IDENTITY_ATTRIBUTE_BLOB Yapısı
-      href: identity-attribute-blob-structure.md
-ms.openlocfilehash: 1f0a82977e7a39315ab8c4d328be76dd5804ae71
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471684"
+        - name: ASSEMBLY_INFO Yapısı
+          href: assembly-info-structure.md
+        - name: FUSION_INSTALL_REFERENCE Yapısı
+          href: fusion-install-reference-structure.md
+        - name: IDENTITY_ATTRIBUTE Yapısı
+          href: identity-attribute-structure.md
+        - name: IDENTITY_ATTRIBUTE_BLOB Yapısı
+          href: identity-attribute-blob-structure.md

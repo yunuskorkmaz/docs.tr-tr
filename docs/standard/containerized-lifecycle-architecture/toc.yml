@@ -1,70 +1,63 @@
-items:
 - name: Microsoft Platformu ve Araçları ile Kapsayıcı Docker Uygulaması Yaşam Döngüsü
   href: index.md
   items:
-  - name: Docker nedir?
-    href: what-is-docker.md
-  - name: Docker terimleri
-    href: docker-terminology.md
-  - name: Docker kapsayıcıları, görüntüleri ve kayıt defterleri
-    href: docker-containers-images-and-registries.md
-  - name: Kapsayıcıları temel alan modern uygulamalara giden yol
-    href: road-to-modern-applications-based-on-containers.md
-  - name: Docker uygulama yaşam döngüsüne giriş
-    href: Docker-application-lifecycle/index.md
-    items:
-    - name: DevOps işbirliğinin temeli olarak kapsayıcılar
-      href: Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md
-  - name: Kapsayıcı uygulamaları için Microsoft platformu ve araçlarına giriş
-    href: Microsoft-platform-tools-containerized-apps/index.md
-  - name: Docker ve Microsoft Azure kullanarak kapsayıcı uygulamaları tasarlama ve geliştirme
-    href: design-develop-containerized-apps/index.md
-    items:
-    - name: Docker uygulamaları tasarlama
-      href: design-develop-containerized-apps/design-docker-applications.md
-    - name: Ortak kapsayıcı tasarım ilkeleri
-      href: design-develop-containerized-apps/common-container-design-principles.md
-    - name: Tek yapılı uygulamalar
-      href: design-develop-containerized-apps/monolithic-applications.md
-    - name: Docker uygulamalarında durum ve veriler
-      href: design-develop-containerized-apps/state-and-data-in-docker-applications.md
-    - name: Hizmet Odaklı Uygulamalar
-      href: design-develop-containerized-apps/soa-applications.md
-    - name: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
-      href: design-develop-containerized-apps/orchestrate-high-scalability-availability.md
-    - name: Azure Kubernetes Service’e (AKS) Dağıtma
-      href: design-develop-containerized-apps/deploy-azure-kubernetes-service.md
-    - name: Docker uygulamaları için geliştirme ortamı
-      href: design-develop-containerized-apps/docker-apps-development-environment.md
-    - name: Docker uygulamaları için iç döngü geliştirme iş akışı
-      href: design-develop-containerized-apps/docker-apps-inner-loop-workflow.md
-    - name: Docker için Visual Studio Araçları
-      href: design-develop-containerized-apps/visual-studio-tools-for-docker.md
-    - name: Windows Kapsayıcıları ayarlamak için bir DockerFile içinde Windows PowerShell komutları kullanma (Docker standardına göre)
-      href: design-develop-containerized-apps/set-up-windows-containers-with-powershell.md
-    - name: Linux kapsayıcısı olarak AKS/Kubernetes düzenleyicisine dağıtılan ASP.NET Core 2.0 uygulamaları derleme
-      href: design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md
-  - name: Microsoft araçları ile Docker uygulaması DevOps iş akışı
-    href: docker-devops-workflow/index.md
-    items:
-    - name: Bir Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
-      href: docker-devops-workflow/docker-application-outer-loop-devops-workflow.md
-    - name: Azure DevOps Services içinde Kapsayıcılar üzerindeki bir .NET Core 2.0 uygulaması için CI/CD işlem hatları oluşturma ve bir Kubernetes kümesine dağıtma
-      href: docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md
-  - name: Docker üretim ortamlarını çalıştırma, yönetme ve izleme
-    href: run-manage-monitor-docker-environments/index.md
-    items:
-    - name: Üretim ortamlarında oluşturulan ve mikro hizmet tabanlı uygulamaları çalıştırma
-      href: run-manage-monitor-docker-environments/run-microservices-based-applications-in-production.md
-    - name: Üretim Docker ortamlarını yönetme
-      href: run-manage-monitor-docker-environments/manage-production-docker-environments.md
-    - name: Kapsayıcı uygulama hizmetlerini izleme
-      href: run-manage-monitor-docker-environments/monitor-containerized-application-services.md
-  - name: Anahtar paketleri
-    href: key-takeaways/index.md
-ms.openlocfilehash: 8aa4e07d422ddf01e9dee971ee6071486dd0e1ff
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471715"
+    - name: Docker nedir?
+      href: what-is-docker.md
+    - name: Docker terimleri
+      href: docker-terminology.md
+    - name: 'Docker kapsayıcıları, görüntüleri ve kayıt defterleri'
+      href: docker-containers-images-and-registries.md
+    - name: Kapsayıcıları temel alan modern uygulamalara giden yol
+      href: road-to-modern-applications-based-on-containers.md
+    - name: Docker uygulama yaşam döngüsüne giriş
+      href: Docker-application-lifecycle/index.md
+      items:
+        - name: DevOps işbirliğinin temeli olarak kapsayıcılar
+          href: Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md
+    - name: Kapsayıcı uygulamaları için Microsoft platformu ve araçlarına giriş
+      href: Microsoft-platform-tools-containerized-apps/index.md
+    - name: Docker ve Microsoft Azure kullanarak kapsayıcı uygulamaları tasarlama ve geliştirme
+      href: design-develop-containerized-apps/index.md
+      items:
+        - name: Docker uygulamaları tasarlama
+          href: design-develop-containerized-apps/design-docker-applications.md
+        - name: Ortak kapsayıcı tasarım ilkeleri
+          href: design-develop-containerized-apps/common-container-design-principles.md
+        - name: Tek yapılı uygulamalar
+          href: design-develop-containerized-apps/monolithic-applications.md
+        - name: Docker uygulamalarında durum ve veriler
+          href: design-develop-containerized-apps/state-and-data-in-docker-applications.md
+        - name: Hizmet Odaklı Uygulamalar
+          href: design-develop-containerized-apps/soa-applications.md
+        - name: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
+          href: design-develop-containerized-apps/orchestrate-high-scalability-availability.md
+        - name: Azure Kubernetes Service’e (AKS) Dağıtma
+          href: design-develop-containerized-apps/deploy-azure-kubernetes-service.md
+        - name: Docker uygulamaları için geliştirme ortamı
+          href: design-develop-containerized-apps/docker-apps-development-environment.md
+        - name: Docker uygulamaları için iç döngü geliştirme iş akışı
+          href: design-develop-containerized-apps/docker-apps-inner-loop-workflow.md
+        - name: Docker için Visual Studio Araçları
+          href: design-develop-containerized-apps/visual-studio-tools-for-docker.md
+        - name: Windows Kapsayıcıları ayarlamak için bir DockerFile içinde Windows PowerShell komutları kullanma (Docker standardına göre)
+          href: design-develop-containerized-apps/set-up-windows-containers-with-powershell.md
+        - name: Linux kapsayıcısı olarak AKS/Kubernetes düzenleyicisine dağıtılan ASP.NET Core 2.0 uygulamaları derleme
+          href: design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md
+    - name: Microsoft araçları ile Docker uygulaması DevOps iş akışı
+      href: docker-devops-workflow/index.md
+      items:
+        - name: Bir Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
+          href: docker-devops-workflow/docker-application-outer-loop-devops-workflow.md
+        - name: Azure DevOps Services içinde Kapsayıcılar üzerindeki bir .NET Core 2.0 uygulaması için CI/CD işlem hatları oluşturma ve bir Kubernetes kümesine dağıtma
+          href: docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md
+    - name: 'Docker üretim ortamlarını çalıştırma, yönetme ve izleme'
+      href: run-manage-monitor-docker-environments/index.md
+      items:
+        - name: Üretim ortamlarında oluşturulan ve mikro hizmet tabanlı uygulamaları çalıştırma
+          href: run-manage-monitor-docker-environments/run-microservices-based-applications-in-production.md
+        - name: Üretim Docker ortamlarını yönetme
+          href: run-manage-monitor-docker-environments/manage-production-docker-environments.md
+        - name: Kapsayıcı uygulama hizmetlerini izleme
+          href: run-manage-monitor-docker-environments/monitor-containerized-application-services.md
+    - name: Anahtar paketleri
+      href: key-takeaways/index.md

@@ -1,37 +1,30 @@
-items:
 - name: Async ve await ile Zaman Uyumsuz Programlama
   href: index.md
   items:
-  - name: Zaman uyumsuz görev programlama modeli
-    href: task-asynchronous-programming-model.md
-  - name: "İzlenecek yol: Async ve await kullanarak Web'e erişme"
-    href: walkthrough-accessing-the-web-by-using-async-and-await.md
-  - name: 'Nasıl yapılır: Task.WhenAll Kullanarak zaman uyumsuz izlenecek yolu genişletme'
-    href: how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-  - name: 'Nasıl yapılır: Async ve await Kullanarak Birden Çok Web İsteğini Paralel Hale Getirme'
-    href: how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
-  - name: Zaman Uyumsuz Dönüş Türleri
-    href: async-return-types.md
-  - name: Zaman Uyumsuz Programlarda Denetim Akışı
-    href: control-flow-in-async-programs.md
-  - name: Zaman Uyumsuz Uygulamanızda Hassas Ayar Yapma
-    href: fine-tuning-your-async-application.md
-    items:
-    - name: Zaman Uyumsuz bir Görevi veya Görev Listesini İptal Etme
-      href: cancel-an-async-task-or-a-list-of-tasks.md
-    - name: Zaman Uyumsuz Görevleri Belirli Bir Süre Sonunda İptal Etme
-      href: cancel-async-tasks-after-a-period-of-time.md
-    - name: Bir Görev Tamamlandıktan Sonra Geri Kalan Zaman Uyumsuz Görevleri İptal Etme
-      href: cancel-remaining-async-tasks-after-one-is-complete.md
-    - name: Birden Çok Zaman Uyumsuz Görev Başlatma ve Görevleri Tamamlandıkça İşleme
-      href: start-multiple-async-tasks-and-process-them-as-they-complete.md
-  - name: Zaman Uyumsuz Uygulamalarda Yeniden Girişi İşleme
-    href: handling-reentrancy-in-async-apps.md
-  - name: Dosya Erişimi için Zaman Uyumsuz Kullanma
-    href: using-async-for-file-access.md
-ms.openlocfilehash: 72bac78b384a76eb7f9b6e4ed83c299129014223
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471838"
+    - name: Zaman uyumsuz görev programlama modeli
+      href: task-asynchronous-programming-model.md
+    - name: 'İzlenecek yol: Async ve await kullanarak Web''e erişme'
+      href: walkthrough-accessing-the-web-by-using-async-and-await.md
+    - name: 'Nasıl yapılır: Task.WhenAll Kullanarak zaman uyumsuz izlenecek yolu genişletme'
+      href: how-to-extend-the-async-walkthrough-by-using-task-whenall.md
+    - name: 'Nasıl yapılır: Async ve await Kullanarak Birden Çok Web İsteğini Paralel Hale Getirme'
+      href: how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
+    - name: Zaman Uyumsuz Dönüş Türleri
+      href: async-return-types.md
+    - name: Zaman Uyumsuz Programlarda Denetim Akışı
+      href: control-flow-in-async-programs.md
+    - name: Zaman Uyumsuz Uygulamanızda Hassas Ayar Yapma
+      href: fine-tuning-your-async-application.md
+      items:
+        - name: Zaman Uyumsuz bir Görevi veya Görev Listesini İptal Etme
+          href: cancel-an-async-task-or-a-list-of-tasks.md
+        - name: Zaman Uyumsuz Görevleri Belirli Bir Süre Sonunda İptal Etme
+          href: cancel-async-tasks-after-a-period-of-time.md
+        - name: Bir Görev Tamamlandıktan Sonra Geri Kalan Zaman Uyumsuz Görevleri İptal Etme
+          href: cancel-remaining-async-tasks-after-one-is-complete.md
+        - name: Birden Çok Zaman Uyumsuz Görev Başlatma ve Görevleri Tamamlandıkça İşleme
+          href: start-multiple-async-tasks-and-process-them-as-they-complete.md
+    - name: Zaman Uyumsuz Uygulamalarda Yeniden Girişi İşleme
+      href: handling-reentrancy-in-async-apps.md
+    - name: Dosya Erişimi için Zaman Uyumsuz Kullanma
+      href: using-async-for-file-access.md

@@ -1,45 +1,38 @@
-items:
 - name: İşlem Gerçekleştirme
   href: index.md
   items:
-  - name: İşlem Temelleri
-    href: transaction-fundamentals.md
-  - name: System.Transactions Tarafından Sağlanan Özellikler
-    href: features-provided-by-system-transactions.md
-    items:
-    - name: İşlem Uygulaması Yazma
-      href: writing-a-transactional-application.md
+    - name: İşlem Temelleri
+      href: transaction-fundamentals.md
+    - name: System.Transactions Tarafından Sağlanan Özellikler
+      href: features-provided-by-system-transactions.md
       items:
-      - name: İşlem Kapsamı Kullanarak Örtük İşlem Uygulama
-        href: implementing-an-implicit-transaction-using-transaction-scope.md
-      - name: CommittableTransaction Kullanarak Belirtik İşlem Uygulama
-        href: implementing-an-explicit-transaction-using-committabletransaction.md
-      - name: DependentTransaction ile Eşzamanlılığı Yönetme
-        href: managing-concurrency-with-dependenttransaction.md
-      - name: Kurumsal Hizmetler ve COM+ İşlemleri ile Birlikte Çalışabilirlik
-        href: interoperability-with-enterprise-services-and-com-transactions.md
-      - name: İşlem Yönetimi Yükseltme
-        href: transaction-management-escalation.md
-      - name: Tanılama İzlemeleri
-        href: diagnostic-traces.md
-      - name: ASP.NET’te System.Transactions kullanma
-        href: using-system-transactions-in-aspnet.md
-    - name: Kaynak Yöneticisi uygulama
-      href: implementing-a-resource-manager.md
-      items:
-      - name: Bir İşlemde Kaynakları Katılımcı Olarak Kaydetme
-        href: enlisting-resources-as-participants-in-a-transaction.md
-      - name: Tek Aşamalı ve Çok Aşamalı İşlem Gerçekleştirme
-        href: committing-a-transaction-in-single-phase-and-multi-phase.md
-      - name: Kurtarma Gerçekleştirme
-        href: performing-recovery.md
-      - name: Kaynaklara Erişimde Güvenlik Güven Düzeyleri
-        href: security-trust-levels-in-accessing-resources.md
-      - name: Tek Aşamalı İşleme ve Yükseltilebilir Tek Aşamalı Bildirim kullanarak en iyi duruma getirme
-        href: optimization-spc-and-promotable-spn.md
-ms.openlocfilehash: 9ebce82b22c684bc2cee3892cb53803eef725dee
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471740"
+        - name: İşlem Uygulaması Yazma
+          href: writing-a-transactional-application.md
+          items:
+            - name: İşlem Kapsamı Kullanarak Örtük İşlem Uygulama
+              href: implementing-an-implicit-transaction-using-transaction-scope.md
+            - name: CommittableTransaction Kullanarak Belirtik İşlem Uygulama
+              href: implementing-an-explicit-transaction-using-committabletransaction.md
+            - name: DependentTransaction ile Eşzamanlılığı Yönetme
+              href: managing-concurrency-with-dependenttransaction.md
+            - name: Kurumsal Hizmetler ve COM+ İşlemleri ile Birlikte Çalışabilirlik
+              href: interoperability-with-enterprise-services-and-com-transactions.md
+            - name: İşlem Yönetimi Yükseltme
+              href: transaction-management-escalation.md
+            - name: Tanılama İzlemeleri
+              href: diagnostic-traces.md
+            - name: ASP.NET’te System.Transactions kullanma
+              href: using-system-transactions-in-aspnet.md
+        - name: Kaynak Yöneticisi uygulama
+          href: implementing-a-resource-manager.md
+          items:
+            - name: Bir İşlemde Kaynakları Katılımcı Olarak Kaydetme
+              href: enlisting-resources-as-participants-in-a-transaction.md
+            - name: Tek Aşamalı ve Çok Aşamalı İşlem Gerçekleştirme
+              href: committing-a-transaction-in-single-phase-and-multi-phase.md
+            - name: Kurtarma Gerçekleştirme
+              href: performing-recovery.md
+            - name: Kaynaklara Erişimde Güvenlik Güven Düzeyleri
+              href: security-trust-levels-in-accessing-resources.md
+            - name: Tek Aşamalı İşleme ve Yükseltilebilir Tek Aşamalı Bildirim kullanarak en iyi duruma getirme
+              href: optimization-spc-and-promotable-spn.md

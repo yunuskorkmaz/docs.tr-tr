@@ -1,28 +1,21 @@
-items:
 - name: Özel Durumlar
   href: index.md
   items:
-  - name: Özel Durumu Sınıfı ve Özellikleri
-    href: exception-class-and-properties.md
-  - name: 'Nasıl yapılır: Özel Durumları Yakalamak için Try-Catch Bloğu Kullanma'
-    href: how-to-use-the-try-catch-block-to-catch-exceptions.md
-  - name: 'Nasıl yapılır: Bir Catch Bloğunda Belirli Özel Durumları Kullanma'
-    href: how-to-use-specific-exceptions-in-a-catch-block.md
-  - name: 'Nasıl yapılır: Açıkça Özel Durumlar Oluşturma'
-    href: how-to-explicitly-throw-exceptions.md
-  - name: 'Nasıl yapılır: Kullanıcı Tanımlı Özel Durumlar Oluşturma'
-    href: how-to-create-user-defined-exceptions.md
-  - name: Kullanıcı Tarafından Filtrelenmiş Özel Durum İşleyicilerini Kullanma
-    href: using-user-filtered-exception-handlers.md
-  - name: 'Nasıl yapılır: Finally Blokları Kullanma'
-    href: how-to-use-finally-blocks.md
-  - name: COM Birlikte Çalışması Özel Durumlarını İşleme
-    href: handling-com-interop-exceptions.md
-  - name: Özel Durumlar için En İyi Yöntemler
-    href: best-practices-for-exceptions.md
-ms.openlocfilehash: 30a6abc9671ff2728792e74345be12fff7cfefbc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471919"
+    - name: Özel Durumu Sınıfı ve Özellikleri
+      href: exception-class-and-properties.md
+    - name: 'Nasıl yapılır: Özel Durumları Yakalamak için Try-Catch Bloğu Kullanma'
+      href: how-to-use-the-try-catch-block-to-catch-exceptions.md
+    - name: 'Nasıl yapılır: Bir Catch Bloğunda Belirli Özel Durumları Kullanma'
+      href: how-to-use-specific-exceptions-in-a-catch-block.md
+    - name: 'Nasıl yapılır: Açıkça Özel Durumlar Oluşturma'
+      href: how-to-explicitly-throw-exceptions.md
+    - name: 'Nasıl yapılır: Kullanıcı Tanımlı Özel Durumlar Oluşturma'
+      href: how-to-create-user-defined-exceptions.md
+    - name: Kullanıcı Tarafından Filtrelenmiş Özel Durum İşleyicilerini Kullanma
+      href: using-user-filtered-exception-handlers.md
+    - name: 'Nasıl yapılır: Finally Blokları Kullanma'
+      href: how-to-use-finally-blocks.md
+    - name: COM Birlikte Çalışması Özel Durumlarını İşleme
+      href: handling-com-interop-exceptions.md
+    - name: Özel Durumlar için En İyi Yöntemler
+      href: best-practices-for-exceptions.md

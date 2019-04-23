@@ -1,604 +1,597 @@
-items:
 - name: Gelişmiş
   href: index.md
   items:
-  - name: WPF Mimarisi
-    href: wpf-architecture.md
-  - name: WPF'de XAML
-    href: xaml-in-wpf.md
-    items:
-    - name: XAML'ye Genel Bakış (WPF)
-      href: xaml-overview-wpf.md
-    - name: Ayrıntılı XAML Sözdizimi
-      href: xaml-syntax-in-detail.md
-    - name: Arka Plan Kod ve WPF İçindeki XAML
-      href: code-behind-and-xaml-in-wpf.md
-    - name: WPF için XAML ve Özel Sınıflar
-      href: xaml-and-custom-classes-for-wpf.md
-    - name: Biçimlendirme Uzantıları ve WPF XAML
-      href: markup-extensions-and-wpf-xaml.md
-    - name: WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi
-      href: xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md
-    - name: WPF XAML Ad Kapsamları
-      href: wpf-xaml-namescopes.md
-    - name: Satır İçi Stil ve Şablonları
-      href: inline-styles-and-templates.md
-    - name: TypeConverters ve XAML
-      href: typeconverters-and-xaml.md
-    - name: WPF XAML Uzantıları
-      href: wpf-xaml-extensions.md
+    - name: WPF Mimarisi
+      href: wpf-architecture.md
+    - name: WPF'de XAML
+      href: xaml-in-wpf.md
       items:
-      - name: Biçimlendirme Uzantısı Bağlama
-        href: binding-markup-extension.md
-      - name: ColorConvertedBitmap Biçimlendirme Uzantısı
-        href: colorconvertedbitmap-markup-extension.md
-      - name: ComponentResourceKey Biçimlendirme Uzantısı
-        href: componentresourcekey-markup-extension.md
-      - name: DateTime XAML Sözdizimi
-        href: datetime-xaml-syntax.md
-      - name: DynamicResource Biçimlendirme Uzantısı
-        href: dynamicresource-markup-extension.md
-      - name: RelativeSource MarkupExtension
-        href: relativesource-markupextension.md
-      - name: StaticResource Biçimlendirme Uzantısı
-        href: staticresource-markup-extension.md
-      - name: TemplateBinding Biçimlendirme Uzantısı
-        href: templatebinding-markup-extension.md
-      - name: ThemeDictionary Biçimlendirme Uzantısı
-        href: themedictionary-markup-extension.md
-      - name: PropertyPath XAML Sözdizimi
-        href: propertypath-xaml-syntax.md
-      - name: PresentationOptions:Freeze Özniteliği
-        href: presentationoptions-freeze-attribute.md
-    - name: İşaretleme Uyumluluğu (mc:) Dil Özellikleri
-      href: markup-compatibility-mc-language-features.md
-      items:
-      - name: mc:Ignorable Özniteliği
-        href: mc-ignorable-attribute.md
-      - name: mc:ProcessContent Özniteliği
-        href: mc-processcontent-attribute.md
-  - name: Temel Öğeler
-    href: base-elements.md
-    items:
-    - name: Temel Öğelere Genel Bakış
-      href: base-elements-overview.md
-    - name: Freezable Nesnelerine Genel Bakış
-      href: freezable-objects-overview.md
-    - name: Hizalama, Kenar Boşlukları ve Doldurmaya Genel Bakış
-      href: alignment-margins-and-padding-overview.md
-    - name: Nasıl Yapılır Konuları
-      href: base-elements-how-to-topics.md
-      items:
-      - name: Saydam veya Yarı Saydam UIElement Oluşturma
-        href: how-to-make-a-uielement-transparent-or-semi-transparent.md
-      - name: FrameworkElement Boyutuna Animasyon Ekleme
-        href: how-to-animate-the-size-of-a-frameworkelement.md
-      - name: Freezable'ın Dondurulmuş Olup Olmadığını Belirleme
-        href: how-to-determine-whether-a-freezable-is-frozen.md
-      - name: Yüklü Bir Olayı İşleme
-        href: how-to-handle-a-loaded-event.md
-      - name: Öğeler ve Denetimlerin Kenar Boşluklarını Ayarlama
-        href: how-to-set-margins-of-elements-and-controls.md
-      - name: Freezable'ı Salt Okunur Yapma
-        href: how-to-make-a-freezable-read-only.md
-      - name: Salt Okunur Freezable'ın Yazılabilir Kopyasını Edinme
-        href: how-to-obtain-a-writable-copy-of-a-read-only-freezable.md
-      - name: UIElement'i Yatay veya Dikey Olarak Çevirme
-        href: how-to-flip-a-uielement-horizontally-or-vertically.md
-      - name: ThicknessConverter Nesnesi Kullanma
-        href: how-to-use-a-thicknessconverter-object.md
-      - name: ContextMenuOpening Olayını İşleme
-        href: how-to-handle-the-contextmenuopening-event.md
-  - name: Öğe Ağacı ve Serileştirme
-    href: element-tree-and-serialization.md
-    items:
-    - name: WPF İçinde Ağaçlar
-      href: trees-in-wpf.md
-    - name: XamlWriter.Save'in Serileştirme Sınırlamaları
-      href: serialization-limitations-of-xamlwriter-save.md
-    - name: Nesne Ağacında Olmayan Nesne Öğelerini Başlatma
-      href: initialization-for-object-elements-not-in-an-object-tree.md
-    - name: Nasıl Yapılır Konuları
-      href: element-tree-and-serialization-how-to-topics.md
-      items:
-      - name: Öğeyi Adına Göre Bulma
-        href: how-to-find-an-element-by-its-name.md
-      - name: Mantıksal Ağacı Geçersiz Kılma
-        href: how-to-override-the-logical-tree.md
-  - name: Özellikler
-    href: properties-wpf.md
-    items:
-    - name: Bağımlılık Özelliklerine Genel Bakış
-      href: dependency-properties-overview.md
-    - name: Ekli Özelliklere Genel Bakış
-      href: attached-properties-overview.md
-    - name: Özel Bağımlılık Özellikleri
-      href: custom-dependency-properties.md
-    - name: Bağımlılık Özelliği Meta Verisi
-      href: dependency-property-metadata.md
-    - name: Bağımlılık Özelliği Geri Aramaları ve Doğrulama
-      href: dependency-property-callbacks-and-validation.md
-    - name: Çerçeve Özelliği Meta Verileri
-      href: framework-property-metadata.md
-    - name: Bağımlılık Özelliği Değer Önceliği
-      href: dependency-property-value-precedence.md
-    - name: Salt Okunur Bağımlılık Özellikleri
-      href: read-only-dependency-properties.md
-    - name: Özellik Değeri Kalıtımı
-      href: property-value-inheritance.md
-    - name: Bağımlılık Özelliği Güvenliği
-      href: dependency-property-security.md
-    - name: DependencyObjects için Güvenli Oluşturucu Desenleri
-      href: safe-constructor-patterns-for-dependencyobjects.md
-    - name: Koleksiyon Türü Bağımlılık Özellikleri
-      href: collection-type-dependency-properties.md
-    - name: XAML Yükleme ve Bağımlılık Özellikleri
-      href: xaml-loading-and-dependency-properties.md
-    - name: Nasıl Yapılır Konuları
-      href: properties-how-to-topics.md
-      items:
-      - name: Bağımlılık Özelliği Uygulama
-        href: how-to-implement-a-dependency-property.md
-      - name: Bağımlılık Özelliği için Sahip Türü Ekleme
-        href: how-to-add-an-owner-type-for-a-dependency-property.md
-      - name: Ekli Özelliği Kaydetme
-        href: how-to-register-an-attached-property.md
-      - name: Bağımlılık Özelliği için Meta Verileri Geçersiz Kılma
-        href: how-to-override-metadata-for-a-dependency-property.md
-  - name: Olaylar
-    href: events-wpf.md
-    items:
-    - name: Gönderilmiş Olaylara Genel Bakış
-      href: routed-events-overview.md
-    - name: Ekli Olaylara Genel Bakış
-      href: attached-events-overview.md
-    - name: Nesne Yaşam Süresi Olayları
-      href: object-lifetime-events.md
-    - name: Gönderilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi
-      href: marking-routed-events-as-handled-and-class-handling.md
-    - name: Önizleme Olayları
-      href: preview-events.md
-    - name: Özellik Değiştirme Olayları
-      href: property-change-events.md
-    - name: Visual Basic ve WPF Olay İşleme
-      href: visual-basic-and-wpf-event-handling.md
-    - name: Zayıf Olay Desenleri
-      href: weak-event-patterns.md
-    - name: Nasıl Yapılır Konuları
-      href: events-how-to-topics.md
-      items:
-      - name: Kod Kullanarak bir Olay İşleyicisi Ekleme
-        href: how-to-add-an-event-handler-using-code.md
-      - name: Yönlendirilmiş Olayı İşleme
-        href: how-to-handle-a-routed-event.md
-      - name: Özel Yönlendirilmiş Olay Oluşturma
-        href: how-to-create-a-custom-routed-event.md
-      - name: Olay İşleyicisinde Kaynak Öğesi Bulma
-        href: how-to-find-the-source-element-in-an-event-handler.md
-      - name: Yönlendirilmiş Olay için Sınıf İşleme Ekleme
-        href: how-to-add-class-handling-for-a-routed-event.md
-  - name: Giriş
-    href: input-wpf.md
-    items:
-    - name: Girişe Genel Bakış
-      href: input-overview.md
-    - name: Komut Vermeye Genel Bakış
-      href: commanding-overview.md
-    - name: Odağa Genel Bakış
-      href: focus-overview.md
-    - name: Denetimlerde Odak için Stil Oluşturma ve FocusVisualStyle
-      href: styling-for-focus-in-controls-and-focusvisualstyle.md
-    - name: 'İzlenecek yol: İlk Dokunmatik Uygulamanızı Oluşturma'
-      href: walkthrough-creating-your-first-touch-application.md
-    - name: Nasıl Yapılır Konuları
-      href: input-and-commands-how-to-topics.md
-      items:
-      - name: Komutu Etkinleştirme
-        href: how-to-enable-a-command.md
-      - name: İmleç Türünü Değiştirme
-        href: how-to-change-the-cursor-type.md
-      - name: Odak Olaylarını Kullanarak Öğenin Rengini Değiştirme
-        href: how-to-change-the-color-of-an-element-using-focus-events.md
-      - name: Denetime FocusVisualStyle Uygulama
-        href: how-to-apply-a-focusvisualstyle-to-a-control.md
-      - name: Enter Tuşuna Basıldığında Algılama
-        href: how-to-detect-when-the-enter-key-pressed.md
-      - name: Olayları Kullanarak Geçiş Efekti Oluşturma
-        href: how-to-create-a-rollover-effect-using-events.md
-      - name: Fare İşaretçisini İzleyen Bir Nesne Oluşturma
-        href: how-to-make-an-object-follow-the-mouse-pointer.md
-      - name: RoutedCommand Oluşturma
-        href: how-to-create-a-routedcommand.md
-      - name: ICommandSource Uygulama
-        href: how-to-implement-icommandsource.md
-      - name: Komut Desteği Olmadan Denetime Komut Bağlama
-        href: how-to-hook-up-a-command-to-a-control-with-no-command-support.md
-      - name: Komut Destekli Denetime Komut Bağlama
-        href: how-to-hook-up-a-command-to-a-control-with-command-support.md
-    - name: Dijital Mürekkep
-      href: digital-ink.md
-      items:
-      - name: "'a Genel Bakış"
-        href: digital-ink-overviews.md
-        items:
-        - name: Mürekkep ile Çalışmaya Başlama
-          href: getting-started-with-ink.md
-        - name: Mürekkep Toplama
-          href: collecting-ink.md
-        - name: El Yazısı Tanıma
-          href: handwriting-recognition.md
-        - name: Mürekkep Depolama
-          href: storing-ink.md
-        - name: "Mürekkep Nesnesi Modeli: Windows Forms ve WPF'ye Karşı COM"
-          href: the-ink-object-model-windows-forms-and-com-versus-wpf.md
-        - name: Gelişmiş Mürekkep İşleme
-          href: advanced-ink-handling.md
+        - name: XAML'ye Genel Bakış (WPF)
+          href: xaml-overview-wpf.md
+        - name: Ayrıntılı XAML Sözdizimi
+          href: xaml-syntax-in-detail.md
+        - name: Arka Plan Kod ve WPF İçindeki XAML
+          href: code-behind-and-xaml-in-wpf.md
+        - name: WPF için XAML ve Özel Sınıflar
+          href: xaml-and-custom-classes-for-wpf.md
+        - name: Biçimlendirme Uzantıları ve WPF XAML
+          href: markup-extensions-and-wpf-xaml.md
+        - name: WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi
+          href: xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md
+        - name: WPF XAML Ad Kapsamları
+          href: wpf-xaml-namescopes.md
+        - name: Satır İçi Stil ve Şablonları
+          href: inline-styles-and-templates.md
+        - name: TypeConverters ve XAML
+          href: typeconverters-and-xaml.md
+        - name: WPF XAML Uzantıları
+          href: wpf-xaml-extensions.md
           items:
-          - name: Özel İşleme Mürekkebi
-            href: custom-rendering-ink.md
-          - name: Ekran Kaleminden Gelen Girişi Önleme
-            href: intercepting-input-from-the-stylus.md
-          - name: Mürekkep Giriş Denetimi Oluşturma
-            href: creating-an-ink-input-control.md
-          - name: Mürekkep İş Parçacığı Modeli
-            href: the-ink-threading-model.md
-      - name: Nasıl Yapılır Konuları
-        href: digital-ink-how-to-topics.md
-        items:
-        - name: Özel Denetimden Mürekkep Seçme
-          href: how-to-select-ink-from-a-custom-control.md
-        - name: Mürekkep Verisine Özel Veri Ekleme
-          href: how-to-add-custom-data-to-ink-data.md
-        - name: Özel Denetim Üzerinde Mürekkep Silme
-          href: how-to-erase-ink-on-a-custom-control.md
-        - name: Uygulama Hareketlerini Tanıma
-          href: how-to-recognize-application-gestures.md
-        - name: Sürükle ve Bırak Mürekkebi
-          href: how-to-drag-and-drop-ink.md
-        - name: InkCanvas'a Veri Bağlama
-          href: how-to-data-bind-to-an-inkcanvas.md
-        - name: Çözümleme İpuçları ile Mürekkep Çözümleme
-          href: how-to-analyze-ink-with-analysis-hints.md
-        - name: Mürekkep Döndürme
-          href: how-to-rotate-ink.md
-        - name: WPF Uygulamaları için RealTimeStylus'u Devre Dışı Bırakma
-          href: disable-the-realtimestylus-for-wpf-applications.md
-  - name: Sürükleme ve Bırakma
-    href: drag-and-drop.md
-    items:
-    - name: Sürükleme ve Bırakmaya Genel Bakış
-      href: drag-and-drop-overview.md
-    - name: Veri ve Veri Nesneleri
-      href: data-and-data-objects.md
-    - name: 'İzlenecek yol: Kullanıcı Denetiminde Sürükleme ve Bırakmayı Etkinleştirme'
-      href: walkthrough-enabling-drag-and-drop-on-a-user-control.md
-    - name: Nasıl Yapılır Konuları
-      href: drag-and-drop-how-to-topics.md
+            - name: Biçimlendirme Uzantısı Bağlama
+              href: binding-markup-extension.md
+            - name: ColorConvertedBitmap Biçimlendirme Uzantısı
+              href: colorconvertedbitmap-markup-extension.md
+            - name: ComponentResourceKey Biçimlendirme Uzantısı
+              href: componentresourcekey-markup-extension.md
+            - name: DateTime XAML Sözdizimi
+              href: datetime-xaml-syntax.md
+            - name: DynamicResource Biçimlendirme Uzantısı
+              href: dynamicresource-markup-extension.md
+            - name: RelativeSource MarkupExtension
+              href: relativesource-markupextension.md
+            - name: StaticResource Biçimlendirme Uzantısı
+              href: staticresource-markup-extension.md
+            - name: TemplateBinding Biçimlendirme Uzantısı
+              href: templatebinding-markup-extension.md
+            - name: ThemeDictionary Biçimlendirme Uzantısı
+              href: themedictionary-markup-extension.md
+            - name: PropertyPath XAML Sözdizimi
+              href: propertypath-xaml-syntax.md
+            - name: 'PresentationOptions:Freeze Özniteliği'
+              href: presentationoptions-freeze-attribute.md
+        - name: 'İşaretleme Uyumluluğu (mc:) Dil Özellikleri'
+          href: markup-compatibility-mc-language-features.md
+          items:
+            - name: 'mc:Ignorable Özniteliği'
+              href: mc-ignorable-attribute.md
+            - name: 'mc:ProcessContent Özniteliği'
+              href: mc-processcontent-attribute.md
+    - name: Temel Öğeler
+      href: base-elements.md
       items:
-      - name: RichTextBox Denetimine Bırakılan bir Dosyayı Açma
-        href: how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md
-      - name: Veri Nesnesi Oluşturma
-        href: how-to-create-a-data-object.md
-      - name: Veri Nesnesinde Veri Biçiminin Olup Olmadığını Belirleme
-        href: how-to-determine-if-a-data-format-is-present-in-a-data-object.md
-      - name: Bir Veri Nesnesi İçinde Veri Biçimlerini Listeleme
-        href: how-to-list-the-data-formats-in-a-data-object.md
-      - name: Belirli Veri Biçiminde Veri Alma
-        href: how-to-retrieve-data-in-a-particular-data-format.md
-      - name: Veri Nesnesinde Birden Çok Veri Biçimini Depolama
-        href: how-to-store-multiple-data-formats-in-a-data-object.md
-  - name: Kaynaklar
-    href: resources-wpf.md
-    items:
-    - name: XAML Kaynakları
-      href: xaml-resources.md
-      items:
-      - name: Kaynaklar ve Kod
-        href: resources-and-code.md
-      - name: Birleştirilmiş Kaynak Sözlükleri
-        href: merged-resource-dictionaries.md
-      - name: Nasıl Yapılır Konuları
-        href: resources-how-to-topics.md
-        items:
-        - name: Kaynağı Tanımlama ve Kaynağa Başvurma
-          href: how-to-define-and-reference-a-resource.md
-        - name: Uygulama Kaynaklarını Kullanma
-          href: how-to-use-application-resources.md
-        - name: SystemFonts Kullanma
-          href: how-to-use-systemfonts.md
-        - name: Sistem Yazı Tipleri Tuşlarını Kullanma
-          href: how-to-use-system-fonts-keys.md
-        - name: SystemParameters Kullanma
-          href: how-to-use-systemparameters.md
-        - name: Sistem Parametreleri Tuşlarını Kullanma
-          href: how-to-use-system-parameters-keys.md
-  - name: Belgeler
-    href: documents.md
-    items:
-    - name: WPF'deki Belgeler
-      href: documents-in-wpf.md
-    - name: Belge Serileştirme ve Depolama
-      href: document-serialization-and-storage.md
-    - name: Ek Açıklamalar
-      href: annotations.md
-      items:
-      - name: Ek açıklamalara Genel Bakış
-        href: annotations-overview.md
-      - name: Ek Açıklamalar Şeması
-        href: annotations-schema.md
-    - name: Akış İçeriği
-      href: flow-content.md
-      items:
-      - name: Akış Belgesine Genel Bakış
-        href: flow-document-overview.md
-      - name: TextElement İçerik Modeline Genel Bakış
-        href: textelement-content-model-overview.md
-      - name: Tabloya Genel Bakış
-        href: table-overview.md
-      - name: Nasıl Yapılır Konuları
-        href: flow-content-elements-how-to-topics.md
-        items:
-        - name: Paragraflar Arasındaki Aralığı Ayarlama
-          href: how-to-adjust-spacing-between-paragraphs.md
-        - name: Program Aracılığıyla Tablo Oluşturma
-          href: how-to-build-a-table-programmatically.md
-        - name: İçeriğin FlowDirection'ını Program Aracılığıyla Değiştirme
-          href: how-to-change-the-flowdirection-of-content-programmatically.md
-        - name: TextWrapping Özelliğini Program Aracılığıyla Değiştirme
-          href: how-to-change-the-textwrapping-property-programmatically.md
-        - name: XAML ile Tablo Tanımlama
-          href: how-to-define-a-table-with-xaml.md
-        - name: Metnin Tipografisini Değiştirme
-          href: how-to-alter-the-typography-of-text.md
-        - name: Metin Kırpmayı Etkinleştirme
-          href: how-to-enable-text-trimming.md
-        - name: Metne Program Aracılığıyla Öğe Ekleme
-          href: how-to-insert-an-element-into-text-programmatically.md
-        - name: Akış İçeriği Öğelerini Blokların Özelliği ile Düzenleme
-          href: how-to-manipulate-flow-content-elements-through-the-blocks-property.md
-        - name: Akış İçeriği Öğelerini Satır İçlerinin Özelliği ile Düzenleme
-          href: how-to-manipulate-flow-content-elements-through-the-inlines-property.md
-        - name: FlowDocument'ı Blokların Özelliği ile Düzenleme
-          href: how-to-manipulate-a-flowdocument-through-the-blocks-property.md
-        - name: Sütunlar Özelliği Aracılığıyla bir Tablonun Sütunlarını Düzenleme
-          href: how-to-manipulate-table-columns-through-the-columns-property.md
-        - name: RowGroups Özelliği Aracılığıyla bir Tablonun Satır Gruplarını Düzenleme
-          href: how-to-manipulate-table-row-groups-through-the-rowgroups-property.md
-        - name: Akış İçeriği Öğelerini Kullanma
-          href: how-to-use-flow-content-elements.md
-        - name: FlowDocument Sütun Ayırıcı Öznitelikleri Kullanma
-          href: how-to-use-flowdocument-column-separating-attributes.md
-    - name: Tipografi
-      href: typography.md
-      items:
-      - name: WPF'de Tipografi
-        href: typography-in-wpf.md
-      - name: ClearType Genel Bakışı
-        href: cleartype-overview.md
-      - name: ClearType Kayıt Defteri Ayarları
-        href: cleartype-registry-settings.md
-      - name: Biçimlendirilmiş Metin Çizme
-        href: drawing-formatted-text.md
-      - name: Gelişmiş Metin Biçimlendirme
-        href: advanced-text-formatting.md
-      - name: Yazı Tipleri
-        href: fonts-wpf.md
-        items:
-        - name: OpenType Yazı Tipi Özellikleri
-          href: opentype-font-features.md
-        - name: Uygulamalarla Yazı Tiplerini Paketleme
-          href: packaging-fonts-with-applications.md
-        - name: Örnek OpenType Yazı Tipi Paketi
-          href: sample-opentype-font-pack.md
+        - name: Temel Öğelere Genel Bakış
+          href: base-elements-overview.md
+        - name: Freezable Nesnelerine Genel Bakış
+          href: freezable-objects-overview.md
+        - name: 'Hizalama, Kenar Boşlukları ve Doldurmaya Genel Bakış'
+          href: alignment-margins-and-padding-overview.md
         - name: Nasıl Yapılır Konuları
-          href: fonts-how-to-topics.md
+          href: base-elements-how-to-topics.md
           items:
-          - name: Sistem Yazı Tiplerini Numaralandırma
-            href: how-to-enumerate-system-fonts.md
-          - name: FontSizeConverter Sınıfını Kullanma
-            href: how-to-use-the-fontsizeconverter-class.md
-      - name: Karakterler
-        href: glyphs.md
-        items:
-        - name: GlyphRun Nesnesi ve Karakter Öğesine Giriş
-          href: introduction-to-the-glyphrun-object-and-glyphs-element.md
-        - name: 'Nasıl yapılır: Karakterleri Kullanarak Metin Çizme'
-          href: draw-text-using-glyphs.md
-      - name: Nasıl Yapılır Konuları
-        href: typography-how-to-topics.md
-        items:
-        - name: Metin Süslemesi Oluşturma
-          href: how-to-create-a-text-decoration.md
-        - name: Köprünün Altı Çizili Olup Olmadığını Belirtme
-          href: how-to-specify-whether-a-hyperlink-is-underlined.md
-        - name: Metne Dönüşüm Uygulama
-          href: how-to-apply-transforms-to-text.md
-        - name: Metne Animasyon Uygulama
-          href: how-to-apply-animations-to-text.md
-        - name: Gölgeli Metin Oluşturma
-          href: how-to-create-text-with-a-shadow.md
-        - name: Anahatları Belirlenmiş Metin Oluşturma
-          href: how-to-create-outlined-text.md
-        - name: Denetimin Arka Planına Metin Çizme
-          href: how-to-draw-text-to-a-control-background.md
-        - name: Görsele Metin Çizme
-          href: how-to-draw-text-to-a-visual.md
-        - name: XAML'de Özel Karakterler Kullanma
-          href: how-to-use-special-characters-in-xaml.md
-    - name: Yazdırma ve Yazdırma Sistemi Yönetimi
-      href: printing-and-print-system-management.md
+            - name: Saydam veya Yarı Saydam UIElement Oluşturma
+              href: how-to-make-a-uielement-transparent-or-semi-transparent.md
+            - name: FrameworkElement Boyutuna Animasyon Ekleme
+              href: how-to-animate-the-size-of-a-frameworkelement.md
+            - name: Freezable'ın Dondurulmuş Olup Olmadığını Belirleme
+              href: how-to-determine-whether-a-freezable-is-frozen.md
+            - name: Yüklü Bir Olayı İşleme
+              href: how-to-handle-a-loaded-event.md
+            - name: Öğeler ve Denetimlerin Kenar Boşluklarını Ayarlama
+              href: how-to-set-margins-of-elements-and-controls.md
+            - name: Freezable'ı Salt Okunur Yapma
+              href: how-to-make-a-freezable-read-only.md
+            - name: Salt Okunur Freezable'ın Yazılabilir Kopyasını Edinme
+              href: how-to-obtain-a-writable-copy-of-a-read-only-freezable.md
+            - name: UIElement'i Yatay veya Dikey Olarak Çevirme
+              href: how-to-flip-a-uielement-horizontally-or-vertically.md
+            - name: ThicknessConverter Nesnesi Kullanma
+              href: how-to-use-a-thicknessconverter-object.md
+            - name: ContextMenuOpening Olayını İşleme
+              href: how-to-handle-the-contextmenuopening-event.md
+    - name: Öğe Ağacı ve Serileştirme
+      href: element-tree-and-serialization.md
       items:
-      - name: Yazdırmaya Genel Bakış
-        href: printing-overview.md
-      - name: Nasıl Yapılır Konuları
-        href: printing-how-to-topics.md
-        items:
-        - name: Yazdır İletişim Kutusu Çağırma
-          href: how-to-invoke-a-print-dialog.md
-        - name: Yazıcı Kopyalama
-          href: how-to-clone-a-printer.md
-        - name: Sorunlu Yazdırma İşini Tanımlama
-          href: how-to-diagnose-problematic-print-job.md
-        - name: Günün Bu Saatinde Yazdırmanın Yapılıp Yapılmayacağını Keşfetme
-          href: how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md
-        - name: Yazdırma Kuyruklarının Alt Kümesini Numaralandırma
-          href: how-to-enumerate-a-subset-of-print-queues.md
-        - name: Yazdırma Sistemi Nesnesi Özelliklerini Yansıma Olmadan Alma
-          href: how-to-get-print-system-object-properties-without-reflection.md
-        - name: Program Aracılığıyla XPS Dosyalarını Yazdırma
-          href: how-to-programmatically-print-xps-files.md
-        - name: Uzaktan Yazıcıların Durumunu Araştırma
-          href: how-to-remotely-survey-the-status-of-printers.md
-        - name: PrintTickets'i Doğrulama ve Birleştirme
-          href: how-to-validate-and-merge-printtickets.md
-  - name: Genelleştirme ve Yerelleştirme
-    href: globalization-and-localization.md
-    items:
-    - name: WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış
-      href: wpf-globalization-and-localization-overview.md
-    - name: WPF için Genelleştirme
-      href: globalization-for-wpf.md
-    - name: Otomatik Düzen Kullanımına Genel Bakış
-      href: use-automatic-layout-overview.md
-    - name: Yerelleştirme Öznitelikleri ve Yorumlar
-      href: localization-attributes-and-comments.md
-    - name: WPF Genel Bakışında Çift Yönlü Özellikler
-      href: bidirectional-features-in-wpf-overview.md
-    - name: Nasıl Yapılır Konuları
-      href: globalization-and-localization-how-to-topics.md
+        - name: WPF İçinde Ağaçlar
+          href: trees-in-wpf.md
+        - name: XamlWriter.Save'in Serileştirme Sınırlamaları
+          href: serialization-limitations-of-xamlwriter-save.md
+        - name: Nesne Ağacında Olmayan Nesne Öğelerini Başlatma
+          href: initialization-for-object-elements-not-in-an-object-tree.md
+        - name: Nasıl Yapılır Konuları
+          href: element-tree-and-serialization-how-to-topics.md
+          items:
+            - name: Öğeyi Adına Göre Bulma
+              href: how-to-find-an-element-by-its-name.md
+            - name: Mantıksal Ağacı Geçersiz Kılma
+              href: how-to-override-the-logical-tree.md
+    - name: Özellikler
+      href: properties-wpf.md
       items:
-      - name: Bir Uygulamayı Yerelleştirme
-        href: how-to-localize-an-application.md
-      - name: Düğme Oluşturmak için Otomatik Düzeni Kullanma
-        href: how-to-use-automatic-layout-to-create-a-button.md
-      - name: Otomatik Düzen için Kılavuz Kullanma
-        href: how-to-use-a-grid-for-automatic-layout.md
-      - name: Yerelleştirilebilir Dize Kaynaklarını Yönetmek için ResourceDictionary Kullanma
-        href: how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md
-      - name: Yerelleştirilebilir Uygulamalarda Kaynak Kullanımı
-        href: how-to-use-resources-in-localizable-applications.md
-  - name: Düzen
-    href: layout.md
-  - name: Geçiş ve Birlikte Çalışabilirlik
-    href: migration-and-interoperability.md
-    items:
-    - name: WPF ve Windows Forms Birlikte Çalışması
-      href: wpf-and-windows-forms-interoperation.md
+        - name: Bağımlılık Özelliklerine Genel Bakış
+          href: dependency-properties-overview.md
+        - name: Ekli Özelliklere Genel Bakış
+          href: attached-properties-overview.md
+        - name: Özel Bağımlılık Özellikleri
+          href: custom-dependency-properties.md
+        - name: Bağımlılık Özelliği Meta Verisi
+          href: dependency-property-metadata.md
+        - name: Bağımlılık Özelliği Geri Aramaları ve Doğrulama
+          href: dependency-property-callbacks-and-validation.md
+        - name: Çerçeve Özelliği Meta Verileri
+          href: framework-property-metadata.md
+        - name: Bağımlılık Özelliği Değer Önceliği
+          href: dependency-property-value-precedence.md
+        - name: Salt Okunur Bağımlılık Özellikleri
+          href: read-only-dependency-properties.md
+        - name: Özellik Değeri Kalıtımı
+          href: property-value-inheritance.md
+        - name: Bağımlılık Özelliği Güvenliği
+          href: dependency-property-security.md
+        - name: DependencyObjects için Güvenli Oluşturucu Desenleri
+          href: safe-constructor-patterns-for-dependencyobjects.md
+        - name: Koleksiyon Türü Bağımlılık Özellikleri
+          href: collection-type-dependency-properties.md
+        - name: XAML Yükleme ve Bağımlılık Özellikleri
+          href: xaml-loading-and-dependency-properties.md
+        - name: Nasıl Yapılır Konuları
+          href: properties-how-to-topics.md
+          items:
+            - name: Bağımlılık Özelliği Uygulama
+              href: how-to-implement-a-dependency-property.md
+            - name: Bağımlılık Özelliği için Sahip Türü Ekleme
+              href: how-to-add-an-owner-type-for-a-dependency-property.md
+            - name: Ekli Özelliği Kaydetme
+              href: how-to-register-an-attached-property.md
+            - name: Bağımlılık Özelliği için Meta Verileri Geçersiz Kılma
+              href: how-to-override-metadata-for-a-dependency-property.md
+    - name: Olaylar
+      href: events-wpf.md
       items:
-      - name: Windows Forms ve WPF Birlikte Çalışabilirlik Giriş Mimarisi
-        href: windows-forms-and-wpf-interoperability-input-architecture.md
-      - name: WindowsFormsHost Öğesi için Düzen Konusunda Dikkat Edilmesi Gereken Noktalar
-        href: layout-considerations-for-the-windowsformshost-element.md
-      - name: Windows Forms Denetimleri ve Eşdeğer WPF Denetimleri
-        href: windows-forms-controls-and-equivalent-wpf-controls.md
-      - name: Windows Forms ve WPF Özelliğini Eşleme
-        href: windows-forms-and-wpf-property-mapping.md
-      - name: Karma Uygulama Sorunlarını Giderme
-        href: troubleshooting-hybrid-applications.md
-      - name: 'İzlenecek yol: WPF içinde Windows Forms Denetimi Barındırma'
-        href: walkthrough-hosting-a-windows-forms-control-in-wpf.md
-      - name: 'İzlenecek yol: XAML Kullanarak WPF İçerisinde bir Windows Forms Denetimi Barındırma'
-        href: walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md
-      - name: "İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma"
-        href: walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md
-      - name: "İzlenecek yol: WPF'de ActiveX Denetimi Barındırma"
-        href: walkthrough-hosting-an-activex-control-in-wpf.md
-      - name: 'Nasıl yapılır: Karma Uygulamada Görsel Stilleri Etkinleştirme'
-        href: how-to-enable-visual-styles-in-a-hybrid-application.md
-      - name: 'İzlenecek yol: WPF’de Windows Forms Denetimlerini Düzenleme'
-        href: walkthrough-arranging-windows-forms-controls-in-wpf.md
-      - name: 'İzlenecek yol: Karma Uygulamalarda Veriye Bağlama'
-        href: walkthrough-binding-to-data-in-hybrid-applications.md
-      - name: 'İzlenecek yol: 3B WPF Bileşik Denetimini Windows Forms İçinde Barındırma'
-        href: walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md
-      - name: 'İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma'
-        href: walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md
-      - name: 'İzlenecek yol: ElementHost Denetimini Kullanarak Özellikleri Eşleme'
-        href: walkthrough-mapping-properties-using-the-elementhost-control.md
-      - name: 'İzlenecek yol: WindowsFormsHost Öğesi Kullanarak Özellikleri Eşleme'
-        href: walkthrough-mapping-properties-using-the-windowsformshost-element.md
-      - name: 'İzlenecek yol: Karma Uygulamayı Yerelleştirme'
-        href: walkthrough-localizing-a-hybrid-application.md
-    - name: WPF ve Win32 Birlikte Çalışması
-      href: wpf-and-win32-interoperation.md
+        - name: Gönderilmiş Olaylara Genel Bakış
+          href: routed-events-overview.md
+        - name: Ekli Olaylara Genel Bakış
+          href: attached-events-overview.md
+        - name: Nesne Yaşam Süresi Olayları
+          href: object-lifetime-events.md
+        - name: Gönderilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi
+          href: marking-routed-events-as-handled-and-class-handling.md
+        - name: Önizleme Olayları
+          href: preview-events.md
+        - name: Özellik Değiştirme Olayları
+          href: property-change-events.md
+        - name: Visual Basic ve WPF Olay İşleme
+          href: visual-basic-and-wpf-event-handling.md
+        - name: Zayıf Olay Desenleri
+          href: weak-event-patterns.md
+        - name: Nasıl Yapılır Konuları
+          href: events-how-to-topics.md
+          items:
+            - name: Kod Kullanarak bir Olay İşleyicisi Ekleme
+              href: how-to-add-an-event-handler-using-code.md
+            - name: Yönlendirilmiş Olayı İşleme
+              href: how-to-handle-a-routed-event.md
+            - name: Özel Yönlendirilmiş Olay Oluşturma
+              href: how-to-create-a-custom-routed-event.md
+            - name: Olay İşleyicisinde Kaynak Öğesi Bulma
+              href: how-to-find-the-source-element-in-an-event-handler.md
+            - name: Yönlendirilmiş Olay için Sınıf İşleme Ekleme
+              href: how-to-add-class-handling-for-a-routed-event.md
+    - name: Giriş
+      href: input-wpf.md
       items:
-      - name: Teknoloji Bölgelerine Genel Bakış
-        href: technology-regions-overview.md
-      - name: Win32 ve WPF Arasında İleti Döngüleri Paylaşma
-        href: sharing-message-loops-between-win32-and-wpf.md
-      - name: WPF'de Win32 İçeriği Barındırma
-        href: hosting-win32-content-in-wpf.md
-      - name: 'İzlenecek yol: WPF içinde Win32 Denetimini Barındırma'
-        href: walkthrough-hosting-a-win32-control-in-wpf.md
-      - name: 'İzlenecek yol: WPF İçeriğini Win32 içinde Barındırma'
-        href: walkthrough-hosting-wpf-content-in-win32.md
-      - name: 'İzlenecek yol: WPF Saatini Win32 içinde Barındırma'
-        href: walkthrough-hosting-a-wpf-clock-in-win32.md
-    - name: WPF ve Direct3D9 Birlikte Çalışması
-      href: wpf-and-direct3d9-interoperation.md
+        - name: Girişe Genel Bakış
+          href: input-overview.md
+        - name: Komut Vermeye Genel Bakış
+          href: commanding-overview.md
+        - name: Odağa Genel Bakış
+          href: focus-overview.md
+        - name: Denetimlerde Odak için Stil Oluşturma ve FocusVisualStyle
+          href: styling-for-focus-in-controls-and-focusvisualstyle.md
+        - name: 'İzlenecek yol: İlk Dokunmatik Uygulamanızı Oluşturma'
+          href: walkthrough-creating-your-first-touch-application.md
+        - name: Nasıl Yapılır Konuları
+          href: input-and-commands-how-to-topics.md
+          items:
+            - name: Komutu Etkinleştirme
+              href: how-to-enable-a-command.md
+            - name: İmleç Türünü Değiştirme
+              href: how-to-change-the-cursor-type.md
+            - name: Odak Olaylarını Kullanarak Öğenin Rengini Değiştirme
+              href: how-to-change-the-color-of-an-element-using-focus-events.md
+            - name: Denetime FocusVisualStyle Uygulama
+              href: how-to-apply-a-focusvisualstyle-to-a-control.md
+            - name: Enter Tuşuna Basıldığında Algılama
+              href: how-to-detect-when-the-enter-key-pressed.md
+            - name: Olayları Kullanarak Geçiş Efekti Oluşturma
+              href: how-to-create-a-rollover-effect-using-events.md
+            - name: Fare İşaretçisini İzleyen Bir Nesne Oluşturma
+              href: how-to-make-an-object-follow-the-mouse-pointer.md
+            - name: RoutedCommand Oluşturma
+              href: how-to-create-a-routedcommand.md
+            - name: ICommandSource Uygulama
+              href: how-to-implement-icommandsource.md
+            - name: Komut Desteği Olmadan Denetime Komut Bağlama
+              href: how-to-hook-up-a-command-to-a-control-with-no-command-support.md
+            - name: Komut Destekli Denetime Komut Bağlama
+              href: how-to-hook-up-a-command-to-a-control-with-command-support.md
+        - name: Dijital Mürekkep
+          href: digital-ink.md
+          items:
+            - name: '''a Genel Bakış'
+              href: digital-ink-overviews.md
+              items:
+                - name: Mürekkep ile Çalışmaya Başlama
+                  href: getting-started-with-ink.md
+                - name: Mürekkep Toplama
+                  href: collecting-ink.md
+                - name: El Yazısı Tanıma
+                  href: handwriting-recognition.md
+                - name: Mürekkep Depolama
+                  href: storing-ink.md
+                - name: 'Mürekkep Nesnesi Modeli: Windows Forms ve WPF''ye Karşı COM'
+                  href: the-ink-object-model-windows-forms-and-com-versus-wpf.md
+                - name: Gelişmiş Mürekkep İşleme
+                  href: advanced-ink-handling.md
+                  items:
+                    - name: Özel İşleme Mürekkebi
+                      href: custom-rendering-ink.md
+                    - name: Ekran Kaleminden Gelen Girişi Önleme
+                      href: intercepting-input-from-the-stylus.md
+                    - name: Mürekkep Giriş Denetimi Oluşturma
+                      href: creating-an-ink-input-control.md
+                    - name: Mürekkep İş Parçacığı Modeli
+                      href: the-ink-threading-model.md
+            - name: Nasıl Yapılır Konuları
+              href: digital-ink-how-to-topics.md
+              items:
+                - name: Özel Denetimden Mürekkep Seçme
+                  href: how-to-select-ink-from-a-custom-control.md
+                - name: Mürekkep Verisine Özel Veri Ekleme
+                  href: how-to-add-custom-data-to-ink-data.md
+                - name: Özel Denetim Üzerinde Mürekkep Silme
+                  href: how-to-erase-ink-on-a-custom-control.md
+                - name: Uygulama Hareketlerini Tanıma
+                  href: how-to-recognize-application-gestures.md
+                - name: Sürükle ve Bırak Mürekkebi
+                  href: how-to-drag-and-drop-ink.md
+                - name: InkCanvas'a Veri Bağlama
+                  href: how-to-data-bind-to-an-inkcanvas.md
+                - name: Çözümleme İpuçları ile Mürekkep Çözümleme
+                  href: how-to-analyze-ink-with-analysis-hints.md
+                - name: Mürekkep Döndürme
+                  href: how-to-rotate-ink.md
+                - name: WPF Uygulamaları için RealTimeStylus'u Devre Dışı Bırakma
+                  href: disable-the-realtimestylus-for-wpf-applications.md
+    - name: Sürükleme ve Bırakma
+      href: drag-and-drop.md
       items:
-      - name: Direct3D9 ve WPF Birlikte Çalışabilirliği için Performans ile İlgili Önemli Noktalar
-        href: performance-considerations-for-direct3d9-and-wpf-interoperability.md
-      - name: "İzlenecek yol: WPF'de Barındırmak için Direct3D9 İçeriği Oluşturma"
-        href: walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md
-      - name: 'İzlenecek yol: Direct3D9 İçeriğini WPF’de Barındırma'
-        href: walkthrough-hosting-direct3d9-content-in-wpf.md
-  - name: Performans
-    href: performance.md
-    items:
-    - name: Grafik İşleme Katmanları
-      href: graphics-rendering-tiers.md
-    - name: WPF Uygulama Performansını İyileştirme
-      href: optimizing-wpf-application-performance.md
+        - name: Sürükleme ve Bırakmaya Genel Bakış
+          href: drag-and-drop-overview.md
+        - name: Veri ve Veri Nesneleri
+          href: data-and-data-objects.md
+        - name: 'İzlenecek yol: Kullanıcı Denetiminde Sürükleme ve Bırakmayı Etkinleştirme'
+          href: walkthrough-enabling-drag-and-drop-on-a-user-control.md
+        - name: Nasıl Yapılır Konuları
+          href: drag-and-drop-how-to-topics.md
+          items:
+            - name: RichTextBox Denetimine Bırakılan bir Dosyayı Açma
+              href: how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md
+            - name: Veri Nesnesi Oluşturma
+              href: how-to-create-a-data-object.md
+            - name: Veri Nesnesinde Veri Biçiminin Olup Olmadığını Belirleme
+              href: how-to-determine-if-a-data-format-is-present-in-a-data-object.md
+            - name: Bir Veri Nesnesi İçinde Veri Biçimlerini Listeleme
+              href: how-to-list-the-data-formats-in-a-data-object.md
+            - name: Belirli Veri Biçiminde Veri Alma
+              href: how-to-retrieve-data-in-a-particular-data-format.md
+            - name: Veri Nesnesinde Birden Çok Veri Biçimini Depolama
+              href: how-to-store-multiple-data-formats-in-a-data-object.md
+    - name: Kaynaklar
+      href: resources-wpf.md
       items:
-      - name: Uygulama Performansını Planlama
-        href: planning-for-application-performance.md
-      - name: Donanımdan Yararlanma
-        href: optimizing-performance-taking-advantage-of-hardware.md
-      - name: Düzen ve Tasarım
-        href: optimizing-performance-layout-and-design.md
-      - name: 2B Grafikleri ve Görüntüleme
-        href: optimizing-performance-2d-graphics-and-imaging.md
-      - name: Nesne Davranışı
-        href: optimizing-performance-object-behavior.md
-      - name: Uygulama Kaynakları
-        href: optimizing-performance-application-resources.md
-      - name: Metin
-        href: optimizing-performance-text.md
-      - name: Veri Bağlama
-        href: optimizing-performance-data-binding.md
-      - name: Denetimler
-        href: optimizing-performance-controls.md
-      - name: Diğer Performans Önerileri
-        href: optimizing-performance-other-recommendations.md
-      - name: Uygulama Başlangıç Zamanı
-        href: application-startup-time.md
-    - name: 'İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma'
-      href: walkthrough-caching-application-data-in-a-wpf-application.md
-  - name: İş Parçacığı Modeli
-    href: threading-model.md
-  - name: WPF Yönetilmeyen API Başvurusu
-    href: wpf-unmanaged-api-reference.md
-    items:
-    - name: Activate İşlevi
-      href: activate-function-wpf-unmanaged-api-reference.md
-    - name: CreateIDispatchSTAForwarder İşlevi
-      href: createidispatchstaforwarder-function-wpf-unmanaged-api-reference.md
-    - name: Deactivate İşlevi
-      href: deactivate-function-wpf-unmanaged-api-reference.md
-    - name: ForwardTranslateAccelerator İşlevi
-      href: forwardtranslateaccelerator-function-wpf-unmanaged-api-reference.md
-    - name: LoadFromHistory İşlevi
-      href: loadfromhistory-function-wpf-unmanaged-api-reference.md
-    - name: ProcessUnhandledException İşlevi
-      href: processunhandledexception-function-wpf-unmanaged-api-reference.md
-    - name: SaveToHistory İşlevi
-      href: savetohistory-function-wpf-unmanaged-api-reference.md
-    - name: SetFakeActiveWindow İşlevi
-      href: setfakeactivewindow-function-wpf-unmanaged-api-reference.md
-ms.openlocfilehash: b1ad7b19f672583fb74f1cea90cbc78b198076ef
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471878"
+        - name: XAML Kaynakları
+          href: xaml-resources.md
+          items:
+            - name: Kaynaklar ve Kod
+              href: resources-and-code.md
+            - name: Birleştirilmiş Kaynak Sözlükleri
+              href: merged-resource-dictionaries.md
+            - name: Nasıl Yapılır Konuları
+              href: resources-how-to-topics.md
+              items:
+                - name: Kaynağı Tanımlama ve Kaynağa Başvurma
+                  href: how-to-define-and-reference-a-resource.md
+                - name: Uygulama Kaynaklarını Kullanma
+                  href: how-to-use-application-resources.md
+                - name: SystemFonts Kullanma
+                  href: how-to-use-systemfonts.md
+                - name: Sistem Yazı Tipleri Tuşlarını Kullanma
+                  href: how-to-use-system-fonts-keys.md
+                - name: SystemParameters Kullanma
+                  href: how-to-use-systemparameters.md
+                - name: Sistem Parametreleri Tuşlarını Kullanma
+                  href: how-to-use-system-parameters-keys.md
+    - name: Belgeler
+      href: documents.md
+      items:
+        - name: WPF'deki Belgeler
+          href: documents-in-wpf.md
+        - name: Belge Serileştirme ve Depolama
+          href: document-serialization-and-storage.md
+        - name: Ek Açıklamalar
+          href: annotations.md
+          items:
+            - name: Ek açıklamalara Genel Bakış
+              href: annotations-overview.md
+            - name: Ek Açıklamalar Şeması
+              href: annotations-schema.md
+        - name: Akış İçeriği
+          href: flow-content.md
+          items:
+            - name: Akış Belgesine Genel Bakış
+              href: flow-document-overview.md
+            - name: TextElement İçerik Modeline Genel Bakış
+              href: textelement-content-model-overview.md
+            - name: Tabloya Genel Bakış
+              href: table-overview.md
+            - name: Nasıl Yapılır Konuları
+              href: flow-content-elements-how-to-topics.md
+              items:
+                - name: Paragraflar Arasındaki Aralığı Ayarlama
+                  href: how-to-adjust-spacing-between-paragraphs.md
+                - name: Program Aracılığıyla Tablo Oluşturma
+                  href: how-to-build-a-table-programmatically.md
+                - name: İçeriğin FlowDirection'ını Program Aracılığıyla Değiştirme
+                  href: how-to-change-the-flowdirection-of-content-programmatically.md
+                - name: TextWrapping Özelliğini Program Aracılığıyla Değiştirme
+                  href: how-to-change-the-textwrapping-property-programmatically.md
+                - name: XAML ile Tablo Tanımlama
+                  href: how-to-define-a-table-with-xaml.md
+                - name: Metnin Tipografisini Değiştirme
+                  href: how-to-alter-the-typography-of-text.md
+                - name: Metin Kırpmayı Etkinleştirme
+                  href: how-to-enable-text-trimming.md
+                - name: Metne Program Aracılığıyla Öğe Ekleme
+                  href: how-to-insert-an-element-into-text-programmatically.md
+                - name: Akış İçeriği Öğelerini Blokların Özelliği ile Düzenleme
+                  href: how-to-manipulate-flow-content-elements-through-the-blocks-property.md
+                - name: Akış İçeriği Öğelerini Satır İçlerinin Özelliği ile Düzenleme
+                  href: how-to-manipulate-flow-content-elements-through-the-inlines-property.md
+                - name: FlowDocument'ı Blokların Özelliği ile Düzenleme
+                  href: how-to-manipulate-a-flowdocument-through-the-blocks-property.md
+                - name: Sütunlar Özelliği Aracılığıyla bir Tablonun Sütunlarını Düzenleme
+                  href: how-to-manipulate-table-columns-through-the-columns-property.md
+                - name: RowGroups Özelliği Aracılığıyla bir Tablonun Satır Gruplarını Düzenleme
+                  href: how-to-manipulate-table-row-groups-through-the-rowgroups-property.md
+                - name: Akış İçeriği Öğelerini Kullanma
+                  href: how-to-use-flow-content-elements.md
+                - name: FlowDocument Sütun Ayırıcı Öznitelikleri Kullanma
+                  href: how-to-use-flowdocument-column-separating-attributes.md
+        - name: Tipografi
+          href: typography.md
+          items:
+            - name: WPF'de Tipografi
+              href: typography-in-wpf.md
+            - name: ClearType Genel Bakışı
+              href: cleartype-overview.md
+            - name: ClearType Kayıt Defteri Ayarları
+              href: cleartype-registry-settings.md
+            - name: Biçimlendirilmiş Metin Çizme
+              href: drawing-formatted-text.md
+            - name: Gelişmiş Metin Biçimlendirme
+              href: advanced-text-formatting.md
+            - name: Yazı Tipleri
+              href: fonts-wpf.md
+              items:
+                - name: OpenType Yazı Tipi Özellikleri
+                  href: opentype-font-features.md
+                - name: Uygulamalarla Yazı Tiplerini Paketleme
+                  href: packaging-fonts-with-applications.md
+                - name: Örnek OpenType Yazı Tipi Paketi
+                  href: sample-opentype-font-pack.md
+                - name: Nasıl Yapılır Konuları
+                  href: fonts-how-to-topics.md
+                  items:
+                    - name: Sistem Yazı Tiplerini Numaralandırma
+                      href: how-to-enumerate-system-fonts.md
+                    - name: FontSizeConverter Sınıfını Kullanma
+                      href: how-to-use-the-fontsizeconverter-class.md
+            - name: Karakterler
+              href: glyphs.md
+              items:
+                - name: GlyphRun Nesnesi ve Karakter Öğesine Giriş
+                  href: introduction-to-the-glyphrun-object-and-glyphs-element.md
+                - name: 'Nasıl yapılır: Karakterleri Kullanarak Metin Çizme'
+                  href: draw-text-using-glyphs.md
+            - name: Nasıl Yapılır Konuları
+              href: typography-how-to-topics.md
+              items:
+                - name: Metin Süslemesi Oluşturma
+                  href: how-to-create-a-text-decoration.md
+                - name: Köprünün Altı Çizili Olup Olmadığını Belirtme
+                  href: how-to-specify-whether-a-hyperlink-is-underlined.md
+                - name: Metne Dönüşüm Uygulama
+                  href: how-to-apply-transforms-to-text.md
+                - name: Metne Animasyon Uygulama
+                  href: how-to-apply-animations-to-text.md
+                - name: Gölgeli Metin Oluşturma
+                  href: how-to-create-text-with-a-shadow.md
+                - name: Anahatları Belirlenmiş Metin Oluşturma
+                  href: how-to-create-outlined-text.md
+                - name: Denetimin Arka Planına Metin Çizme
+                  href: how-to-draw-text-to-a-control-background.md
+                - name: Görsele Metin Çizme
+                  href: how-to-draw-text-to-a-visual.md
+                - name: XAML'de Özel Karakterler Kullanma
+                  href: how-to-use-special-characters-in-xaml.md
+        - name: Yazdırma ve Yazdırma Sistemi Yönetimi
+          href: printing-and-print-system-management.md
+          items:
+            - name: Yazdırmaya Genel Bakış
+              href: printing-overview.md
+            - name: Nasıl Yapılır Konuları
+              href: printing-how-to-topics.md
+              items:
+                - name: Yazdır İletişim Kutusu Çağırma
+                  href: how-to-invoke-a-print-dialog.md
+                - name: Yazıcı Kopyalama
+                  href: how-to-clone-a-printer.md
+                - name: Sorunlu Yazdırma İşini Tanımlama
+                  href: how-to-diagnose-problematic-print-job.md
+                - name: Günün Bu Saatinde Yazdırmanın Yapılıp Yapılmayacağını Keşfetme
+                  href: how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md
+                - name: Yazdırma Kuyruklarının Alt Kümesini Numaralandırma
+                  href: how-to-enumerate-a-subset-of-print-queues.md
+                - name: Yazdırma Sistemi Nesnesi Özelliklerini Yansıma Olmadan Alma
+                  href: how-to-get-print-system-object-properties-without-reflection.md
+                - name: Program Aracılığıyla XPS Dosyalarını Yazdırma
+                  href: how-to-programmatically-print-xps-files.md
+                - name: Uzaktan Yazıcıların Durumunu Araştırma
+                  href: how-to-remotely-survey-the-status-of-printers.md
+                - name: PrintTickets'i Doğrulama ve Birleştirme
+                  href: how-to-validate-and-merge-printtickets.md
+    - name: Genelleştirme ve Yerelleştirme
+      href: globalization-and-localization.md
+      items:
+        - name: WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış
+          href: wpf-globalization-and-localization-overview.md
+        - name: WPF için Genelleştirme
+          href: globalization-for-wpf.md
+        - name: Otomatik Düzen Kullanımına Genel Bakış
+          href: use-automatic-layout-overview.md
+        - name: Yerelleştirme Öznitelikleri ve Yorumlar
+          href: localization-attributes-and-comments.md
+        - name: WPF Genel Bakışında Çift Yönlü Özellikler
+          href: bidirectional-features-in-wpf-overview.md
+        - name: Nasıl Yapılır Konuları
+          href: globalization-and-localization-how-to-topics.md
+          items:
+            - name: Bir Uygulamayı Yerelleştirme
+              href: how-to-localize-an-application.md
+            - name: Düğme Oluşturmak için Otomatik Düzeni Kullanma
+              href: how-to-use-automatic-layout-to-create-a-button.md
+            - name: Otomatik Düzen için Kılavuz Kullanma
+              href: how-to-use-a-grid-for-automatic-layout.md
+            - name: Yerelleştirilebilir Dize Kaynaklarını Yönetmek için ResourceDictionary Kullanma
+              href: how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md
+            - name: Yerelleştirilebilir Uygulamalarda Kaynak Kullanımı
+              href: how-to-use-resources-in-localizable-applications.md
+    - name: Düzen
+      href: layout.md
+    - name: Geçiş ve Birlikte Çalışabilirlik
+      href: migration-and-interoperability.md
+      items:
+        - name: WPF ve Windows Forms Birlikte Çalışması
+          href: wpf-and-windows-forms-interoperation.md
+          items:
+            - name: Windows Forms ve WPF Birlikte Çalışabilirlik Giriş Mimarisi
+              href: windows-forms-and-wpf-interoperability-input-architecture.md
+            - name: WindowsFormsHost Öğesi için Düzen Konusunda Dikkat Edilmesi Gereken Noktalar
+              href: layout-considerations-for-the-windowsformshost-element.md
+            - name: Windows Forms Denetimleri ve Eşdeğer WPF Denetimleri
+              href: windows-forms-controls-and-equivalent-wpf-controls.md
+            - name: Windows Forms ve WPF Özelliğini Eşleme
+              href: windows-forms-and-wpf-property-mapping.md
+            - name: Karma Uygulama Sorunlarını Giderme
+              href: troubleshooting-hybrid-applications.md
+            - name: 'İzlenecek yol: WPF içinde Windows Forms Denetimi Barındırma'
+              href: walkthrough-hosting-a-windows-forms-control-in-wpf.md
+            - name: 'İzlenecek yol: XAML Kullanarak WPF İçerisinde bir Windows Forms Denetimi Barındırma'
+              href: walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md
+            - name: 'İzlenecek yol: WPF''de Windows Forms Bileşik Denetimini Barındırma'
+              href: walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md
+            - name: 'İzlenecek yol: WPF''de ActiveX Denetimi Barındırma'
+              href: walkthrough-hosting-an-activex-control-in-wpf.md
+            - name: 'Nasıl yapılır: Karma Uygulamada Görsel Stilleri Etkinleştirme'
+              href: how-to-enable-visual-styles-in-a-hybrid-application.md
+            - name: 'İzlenecek yol: WPF’de Windows Forms Denetimlerini Düzenleme'
+              href: walkthrough-arranging-windows-forms-controls-in-wpf.md
+            - name: 'İzlenecek yol: Karma Uygulamalarda Veriye Bağlama'
+              href: walkthrough-binding-to-data-in-hybrid-applications.md
+            - name: 'İzlenecek yol: 3B WPF Bileşik Denetimini Windows Forms İçinde Barındırma'
+              href: walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md
+            - name: 'İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma'
+              href: walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md
+            - name: 'İzlenecek yol: ElementHost Denetimini Kullanarak Özellikleri Eşleme'
+              href: walkthrough-mapping-properties-using-the-elementhost-control.md
+            - name: 'İzlenecek yol: WindowsFormsHost Öğesi Kullanarak Özellikleri Eşleme'
+              href: walkthrough-mapping-properties-using-the-windowsformshost-element.md
+            - name: 'İzlenecek yol: Karma Uygulamayı Yerelleştirme'
+              href: walkthrough-localizing-a-hybrid-application.md
+        - name: WPF ve Win32 Birlikte Çalışması
+          href: wpf-and-win32-interoperation.md
+          items:
+            - name: Teknoloji Bölgelerine Genel Bakış
+              href: technology-regions-overview.md
+            - name: Win32 ve WPF Arasında İleti Döngüleri Paylaşma
+              href: sharing-message-loops-between-win32-and-wpf.md
+            - name: WPF'de Win32 İçeriği Barındırma
+              href: hosting-win32-content-in-wpf.md
+            - name: 'İzlenecek yol: WPF içinde Win32 Denetimini Barındırma'
+              href: walkthrough-hosting-a-win32-control-in-wpf.md
+            - name: 'İzlenecek yol: WPF İçeriğini Win32 içinde Barındırma'
+              href: walkthrough-hosting-wpf-content-in-win32.md
+            - name: 'İzlenecek yol: WPF Saatini Win32 içinde Barındırma'
+              href: walkthrough-hosting-a-wpf-clock-in-win32.md
+        - name: WPF ve Direct3D9 Birlikte Çalışması
+          href: wpf-and-direct3d9-interoperation.md
+          items:
+            - name: Direct3D9 ve WPF Birlikte Çalışabilirliği için Performans ile İlgili Önemli Noktalar
+              href: performance-considerations-for-direct3d9-and-wpf-interoperability.md
+            - name: 'İzlenecek yol: WPF''de Barındırmak için Direct3D9 İçeriği Oluşturma'
+              href: walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md
+            - name: 'İzlenecek yol: Direct3D9 İçeriğini WPF’de Barındırma'
+              href: walkthrough-hosting-direct3d9-content-in-wpf.md
+    - name: Performans
+      href: performance.md
+      items:
+        - name: Grafik İşleme Katmanları
+          href: graphics-rendering-tiers.md
+        - name: WPF Uygulama Performansını İyileştirme
+          href: optimizing-wpf-application-performance.md
+          items:
+            - name: Uygulama Performansını Planlama
+              href: planning-for-application-performance.md
+            - name: Donanımdan Yararlanma
+              href: optimizing-performance-taking-advantage-of-hardware.md
+            - name: Düzen ve Tasarım
+              href: optimizing-performance-layout-and-design.md
+            - name: 2B Grafikleri ve Görüntüleme
+              href: optimizing-performance-2d-graphics-and-imaging.md
+            - name: Nesne Davranışı
+              href: optimizing-performance-object-behavior.md
+            - name: Uygulama Kaynakları
+              href: optimizing-performance-application-resources.md
+            - name: Metin
+              href: optimizing-performance-text.md
+            - name: Veri Bağlama
+              href: optimizing-performance-data-binding.md
+            - name: Denetimler
+              href: optimizing-performance-controls.md
+            - name: Diğer Performans Önerileri
+              href: optimizing-performance-other-recommendations.md
+            - name: Uygulama Başlangıç Zamanı
+              href: application-startup-time.md
+        - name: 'İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma'
+          href: walkthrough-caching-application-data-in-a-wpf-application.md
+    - name: İş Parçacığı Modeli
+      href: threading-model.md
+    - name: WPF Yönetilmeyen API Başvurusu
+      href: wpf-unmanaged-api-reference.md
+      items:
+        - name: Activate İşlevi
+          href: activate-function-wpf-unmanaged-api-reference.md
+        - name: CreateIDispatchSTAForwarder İşlevi
+          href: createidispatchstaforwarder-function-wpf-unmanaged-api-reference.md
+        - name: Deactivate İşlevi
+          href: deactivate-function-wpf-unmanaged-api-reference.md
+        - name: ForwardTranslateAccelerator İşlevi
+          href: forwardtranslateaccelerator-function-wpf-unmanaged-api-reference.md
+        - name: LoadFromHistory İşlevi
+          href: loadfromhistory-function-wpf-unmanaged-api-reference.md
+        - name: ProcessUnhandledException İşlevi
+          href: processunhandledexception-function-wpf-unmanaged-api-reference.md
+        - name: SaveToHistory İşlevi
+          href: savetohistory-function-wpf-unmanaged-api-reference.md
+        - name: SetFakeActiveWindow İşlevi
+          href: setfakeactivewindow-function-wpf-unmanaged-api-reference.md

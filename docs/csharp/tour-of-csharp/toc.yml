@@ -1,32 +1,25 @@
-items:
-- name: C# Turu
+- name: 'C# Turu'
   href: index.md
   items:
-  - name: Program Yapısı
-    href: program-structure.md
-  - name: Türler ve Değişkenler
-    href: types-and-variables.md
-  - name: İfadeler
-    href: expressions.md
-  - name: Deyimler
-    href: statements.md
-  - name: Sınıflar ve nesneler
-    href: classes-and-objects.md
-  - name: Yapılar
-    href: structs.md
-  - name: Diziler
-    href: arrays.md
-  - name: Arabirimler
-    href: interfaces.md
-  - name: Numaralandırmalar
-    href: enums.md
-  - name: Temsilciler
-    href: delegates.md
-  - name: Öznitelikler
-    href: attributes.md
-ms.openlocfilehash: 9f1265c48bea8f76bd352eb95605187b1385cae5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471692"
+    - name: Program Yapısı
+      href: program-structure.md
+    - name: Türler ve Değişkenler
+      href: types-and-variables.md
+    - name: İfadeler
+      href: expressions.md
+    - name: Deyimler
+      href: statements.md
+    - name: Sınıflar ve nesneler
+      href: classes-and-objects.md
+    - name: Yapılar
+      href: structs.md
+    - name: Diziler
+      href: arrays.md
+    - name: Arabirimler
+      href: interfaces.md
+    - name: Numaralandırmalar
+      href: enums.md
+    - name: Temsilciler
+      href: delegates.md
+    - name: Öznitelikler
+      href: attributes.md

@@ -1,32 +1,25 @@
-items:
 - name: Uygulamaları Yapılandırma
   href: index.md
   items:
-  - name: 'Nasıl yapılır: DEVPATH Kullanarak Derlemelerin Konumunu Bulma'
-    href: how-to-locate-assemblies-by-using-devpath.md
-  - name: Derleme Sürümlerini Yönlendirme
-    href: redirect-assembly-versions.md
-    items:
-    - name: 'Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma'
-      href: how-to-enable-and-disable-automatic-binding-redirection.md
-    - name: Derleme Bağlama Yönlendirmesi Güvenlik İzni
-      href: assembly-binding-redirection-security-permission.md
-  - name: Derlemenin Konumunu Belirtme
-    href: specify-assembly-location.md
-  - name: Şifreleme Sınıflarını Yapılandırma
-    href: configure-cryptography-classes.md
-    items:
-    - name: Algoritma Adlarını Şifreleme Sınıflarıyla Eşleştirme
-      href: map-algorithm-names-to-cryptography-classes.md
-    - name: Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleştirme
-      href: map-object-identifiers-to-cryptography-algorithms.md
-  - name: 'Nasıl yapılır: Yayımcı İlkesi Oluşturma'
-    href: how-to-create-a-publisher-policy.md
-  - name: Yapılandırma dosyası şeması
-    href: file-schema/index.md
-ms.openlocfilehash: 17fd8cdff154ae7e61609a6b819b14ad8fb4805b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471704"
+    - name: 'Nasıl yapılır: DEVPATH Kullanarak Derlemelerin Konumunu Bulma'
+      href: how-to-locate-assemblies-by-using-devpath.md
+    - name: Derleme Sürümlerini Yönlendirme
+      href: redirect-assembly-versions.md
+      items:
+        - name: 'Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma'
+          href: how-to-enable-and-disable-automatic-binding-redirection.md
+        - name: Derleme Bağlama Yönlendirmesi Güvenlik İzni
+          href: assembly-binding-redirection-security-permission.md
+    - name: Derlemenin Konumunu Belirtme
+      href: specify-assembly-location.md
+    - name: Şifreleme Sınıflarını Yapılandırma
+      href: configure-cryptography-classes.md
+      items:
+        - name: Algoritma Adlarını Şifreleme Sınıflarıyla Eşleştirme
+          href: map-algorithm-names-to-cryptography-classes.md
+        - name: Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleştirme
+          href: map-object-identifiers-to-cryptography-algorithms.md
+    - name: 'Nasıl yapılır: Yayımcı İlkesi Oluşturma'
+      href: how-to-create-a-publisher-policy.md
+    - name: Yapılandırma dosyası şeması
+      href: file-schema/index.md

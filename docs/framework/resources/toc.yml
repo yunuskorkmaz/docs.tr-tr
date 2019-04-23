@@ -1,21 +1,14 @@
-items:
 - name: .NET uygulamalarındaki kaynaklar
   href: index.md
   items:
-  - name: Kaynak dosyası oluşturma
-    href: creating-resource-files-for-desktop-apps.md
-    items:
-    - name: Program aracılığıyla .resx dosyalarıyla çalışma
-      href: working-with-resx-files-programmatically.md
-  - name: Uydu derlemeleri oluşturma
-    href: creating-satellite-assemblies-for-desktop-apps.md
-  - name: Kaynakları paketleme ve dağıtma
-    href: packaging-and-deploying-resources-in-desktop-apps.md
-  - name: Kaynakları alma
-    href: retrieving-resources-in-desktop-apps.md
-ms.openlocfilehash: b927e35892ced172b528008abe74a26524ffaaa7
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471978"
+    - name: Kaynak dosyası oluşturma
+      href: creating-resource-files-for-desktop-apps.md
+      items:
+        - name: Program aracılığıyla .resx dosyalarıyla çalışma
+          href: working-with-resx-files-programmatically.md
+    - name: Uydu derlemeleri oluşturma
+      href: creating-satellite-assemblies-for-desktop-apps.md
+    - name: Kaynakları paketleme ve dağıtma
+      href: packaging-and-deploying-resources-in-desktop-apps.md
+    - name: Kaynakları alma
+      href: retrieving-resources-in-desktop-apps.md

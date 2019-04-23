@@ -1,510 +1,503 @@
-items:
 - name: Denetimler
   href: index.md
   items:
-  - name: Kategoriye Göre Denetimler
-    href: controls-by-category.md
-  - name: WPF İçerik Modeli
-    href: wpf-content-model.md
-  - name: Denetim Kitaplığı
-    href: control-library.md
-    items:
-    - name: Kenarlık
-      href: border.md
+    - name: Kategoriye Göre Denetimler
+      href: controls-by-category.md
+    - name: WPF İçerik Modeli
+      href: wpf-content-model.md
+    - name: Denetim Kitaplığı
+      href: control-library.md
       items:
-      - name: BorderThickness Değerine Animasyon Ekleme
-        href: how-to-animate-a-borderthickness-value.md
-    - name: BulletDecorator
-      href: bulletdecorator.md
-    - name: Düğme
-      href: button.md
+        - name: Kenarlık
+          href: border.md
+          items:
+            - name: BorderThickness Değerine Animasyon Ekleme
+              href: how-to-animate-a-borderthickness-value.md
+        - name: BulletDecorator
+          href: bulletdecorator.md
+        - name: Düğme
+          href: button.md
+          items:
+            - name: Görüntüsü Bulunan bir Düğme Oluşturma
+              href: how-to-create-a-button-that-has-an-image.md
+        - name: Takvim
+          href: calendar.md
+        - name: Tuval
+          href: canvas.md
+          items:
+            - name: Nasıl Yapılır Konuları
+              href: canvas-how-to-topics.md
+              items:
+                - name: Tuval İçeriği Çevresinde Kenarlığı Kaydırma
+                  href: how-to-wrap-a-border-around-the-content-of-a-canvas.md
+                - name: Tuval Konumlandırma Özelliklerini Alma veya Ayarlama
+                  href: how-to-get-or-set-canvas-positioning-properties.md
+                - name: Tuval Oluşturma ve Kullanma
+                  href: how-to-create-and-use-a-canvas.md
+                - name: Alt Öğeleri Konumlandırmak için Tuvalin Ekli Özelliklerini Kullanma
+                  href: how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md
+                - name: Parmak Kullanarak Tuvali Yeniden Boyutlandırma
+                  href: how-to-resize-a-canvas-by-using-a-thumb.md
+        - name: CheckBox
+          href: checkbox.md
+        - name: ComboBox
+          href: combobox.md
+        - name: ContextMenu
+          href: contextmenu.md
+          items:
+            - name: ContextMenu Genel Bakışı
+              href: contextmenu-overview.md
+        - name: DataGrid
+          href: datagrid.md
+          items:
+            - name: DataGrid Denetiminde Varsayılan Klavye ve Fare Davranışı
+              href: default-keyboard-and-mouse-behavior-in-the-datagrid-control.md
+            - name: 'Nasıl yapılır: DataGrid Denetimine Satır Ayrıntıları Ekleme'
+              href: how-to-add-row-details-to-a-datagrid-control.md
+            - name: 'Nasıl yapılır: DataGrid Denetiminde Verileri Gruplandırma, Sıralama ve Filtreleme'
+              href: how-to-group-sort-and-filter-data-in-the-datagrid-control.md
+            - name: 'Nasıl yapılır: DataGrid Denetimi ile Doğrulama Uygulama'
+              href: how-to-implement-validation-with-the-datagrid-control.md
+            - name: 'İzlenecek yol: DataGrid Denetimindeki SQL Server Veritabanından Veri Görüntüleme'
+              href: walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md
+            - name: DataGrid Denetimindeki Boyutlandırma Seçenekleri
+              href: sizing-options-in-the-datagrid-control.md
+        - name: DatePicker
+          href: datepicker.md
+        - name: DockPanel
+          href: dockpanel.md
+          items:
+            - name: Nasıl Yapılır Konuları
+              href: dockpanel-how-to-topics.md
+              items:
+                - name: Yerleştirme Değerini Alma veya Ayarlama
+                  href: how-to-get-or-set-a-dock-value.md
+                - name: DockPanel Oluşturma
+                  href: how-to-create-a-dockpanel.md
+                - name: DockPanel Öğesini Kullanarak Boşluğu Bölümleme
+                  href: how-to-partition-space-by-using-the-dockpanel-element.md
+        - name: DocumentViewer
+          href: documentviewer.md
+        - name: Genişletici
+          href: expander.md
+          items:
+            - name: Genişleticiye Genel Bakış
+              href: expander-overview.md
+            - name: Nasıl Yapılır Konuları
+              href: expander-how-to-topics.md
+              items:
+                - name: ScrollViewer ile bir Genişletici Oluşturma
+                  href: how-to-create-an-expander-with-a-scrollviewer.md
+        - name: FlowDocumentPageViewer
+          href: flowdocumentpageviewer.md
+        - name: FlowDocumentReader
+          href: flowdocumentreader.md
+        - name: FlowDocumentScrollViewer
+          href: flowdocumentscrollviewer.md
+        - name: Çerçeve
+          href: frame.md
+        - name: Kılavuz
+          href: grid.md
+          items:
+            - name: Nasıl Yapılır Konuları
+              href: grid-how-to-topics.md
+              items:
+                - name: Kılavuz Kullanarak Standart UI İletişim Kutusu Oluşturma
+                  href: how-to-build-a-standard-ui-dialog-box-by-using-grid.md
+                - name: Karmaşık Kılavuz Oluşturma
+                  href: how-to-create-a-complex-grid.md
+                - name: Kılavuz Öğesi Oluşturma
+                  href: how-to-create-a-grid-element.md
+                - name: GridLengthConverter Nesnesi Oluşturma ve Kullanma
+                  href: how-to-create-and-use-a-gridlengthconverter-object.md
+                - name: ColumnDefinitionsCollections ve RowDefinitionsCollections Kullanarak Sütunları ve Satırları İşleme
+                  href: manipulate-columns-and-rows-by-using-columndefinitionscollections.md
+                - name: Bir Kılavuzun Alt Öğelerini Konumlandırma
+                  href: how-to-position-the-child-elements-of-a-grid.md
+                - name: Kılavuzlar Arasında Boyutlandırma Özelliklerini Paylaşma
+                  href: how-to-share-sizing-properties-between-grids.md
+        - name: GridSplitter
+          href: gridsplitter.md
+          items:
+            - name: Nasıl Yapılır Konuları
+              href: gridsplitter-how-to-topics.md
+              items:
+                - name: GridSplitter ile Satırları Yeniden Boyutlandırma
+                  href: how-to-resize-rows-with-a-gridsplitter.md
+                - name: GridSplitter ile Sütunları Yeniden Boyutlandırma
+                  href: how-to-resize-columns-with-a-gridsplitter.md
+                - name: Bir GridSplitter'ın Görünür Olduğundan Emin Olma
+                  href: how-to-make-sure-that-a-gridsplitter-is-visible.md
+        - name: GroupBox
+          href: groupbox.md
+          items:
+            - name: GroupBox Şablonu Tanımlama
+              href: how-to-define-a-groupbox-template.md
+        - name: Görüntü
+          href: image.md
+          items:
+            - name: Nasıl Yapılır Konuları
+              href: image-how-to-topics.md
+              items:
+                - name: Görüntü Öğesi Kullanma
+                  href: how-to-use-the-image-element.md
+                - name: Görüntüyü Gri Tona Dönüştürme
+                  href: how-to-convert-an-image-to-greyscale.md
+                - name: Görüntü Kırpma
+                  href: how-to-crop-an-image.md
+                - name: Görüntü Döndürme
+                  href: how-to-rotate-an-image.md
+        - name: Etiketle
+          href: label.md
+          items:
+            - name: Erişim Anahtarı ve Metin Kaydırması İçeren bir Denetim Oluşturma
+              href: how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md
+        - name: ListBox
+          href: listbox.md
+          items:
+            - name: Nasıl Yapılır Konuları
+              href: listbox-how-to-topics.md
+              items:
+                - name: Veriye ListBox Bağlama
+                  href: how-to-bind-a-listbox-to-data.md
+                - name: ListBoxItem Alma
+                  href: how-to-get-a-listboxitem.md
+                - name: ListBox'ın Kayma Performansını Artırma
+                  href: how-to-improve-the-scrolling-performance-of-a-listbox.md
+        - name: ListView
+          href: listview.md
+          items:
+            - name: '''a Genel Bakış'
+              href: listview-overviews.md
+              items:
+                - name: ListView Genel Bakışı
+                  href: listview-overview.md
+                - name: GridView Genel Bakışı
+                  href: gridview-overview.md
+                - name: GridView Sütun Üstbilgi Stil ve Şablonlarına Genel Bakış
+                  href: gridview-column-header-styles-and-templates-overview.md
+            - name: Nasıl Yapılır Konuları
+              href: listview-how-to-topics.md
+              items:
+                - name: Üst Bilgiye Tıklandığında GridView Sütununu Sıralama
+                  href: how-to-sort-a-gridview-column-when-a-header-is-clicked.md
+                - name: ListView için Özel Görünüm Modu Oluşturma
+                  href: how-to-create-a-custom-view-mode-for-a-listview.md
+                - name: GridView Kullanan ListView'da Stil Oluşturmak için Şablonları Kullanma
+                  href: how-to-use-templates-to-style-a-listview-that-uses-gridview.md
+                - name: Sürüklenen GridView Sütun Başlığı için Stil Oluşturma
+                  href: how-to-create-a-style-for-a-dragged-gridview-column-header.md
+                - name: GridView Kullanarak ListView İçeriklerini Görüntüleme
+                  href: how-to-display-listview-contents-by-using-a-gridview.md
+                - name: ListView İçindeki Seçili Öğelere Stil Eklemek için Tetikleyicileri Kullanma
+                  href: how-to-use-triggers-to-style-selected-items-in-a-listview.md
+                - name: CheckBox ile ListViewItems Oluşturma
+                  href: how-to-create-listviewitems-with-a-checkbox.md
+                - name: GridViewRowPresenter Kullanarak Veri Görüntüleme
+                  href: how-to-display-data-by-using-gridviewrowpresenter.md
+                - name: GridView Uygulayan ListView İçinde Öğeleri Gruplandırma
+                  href: how-to-group-items-in-a-listview-that-implements-a-gridview.md
+                - name: GridView Uygulayan ListView İçinde bir Satıra Stil Ekleme
+                  href: how-to-style-a-row-in-a-listview-that-implements-a-gridview.md
+                - name: ListView İçerisindeki Bir Sütunun Yatay Hizalamasını Değiştirme
+                  href: how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md
+                - name: ListView'daki Her Öğe için MouseDoubleClick Olayını İşleme
+                  href: how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md
+        - name: Menü
+          href: menu.md
+          items:
+            - name: Menüye Genel Bakış
+              href: menu-overview.md
+        - name: Panel
+          href: panel.md
+          items:
+            - name: Panellere Genel Bakış
+              href: panels-overview.md
+            - name: Nasıl Yapılır Konuları
+              href: panel-how-to-topics.md
+              items:
+                - name: Özel Panel Öğesi Oluşturma
+                  href: how-to-create-a-custom-panel-element.md
+                - name: Panel OnRender Yöntemini Geçersiz Kılma
+                  href: how-to-override-the-panel-onrender-method.md
+                - name: Öğenin Yükseklik Özelliklerini Ayarlama
+                  href: how-to-set-the-height-properties-of-an-element.md
+                - name: Öğenin Genişlik Özelliklerini Ayarlama
+                  href: how-to-set-the-width-properties-of-an-element.md
+        - name: PasswordBox
+          href: passwordbox.md
+        - name: Açılan Pencere
+          href: popup.md
+          items:
+            - name: Açılır Pencereye Genel Bakış
+              href: popup-overview.md
+            - name: Açılan Pencere Yerleştirme Davranışı
+              href: popup-placement-behavior.md
+            - name: Nasıl Yapılır Konuları
+              href: popup-how-to-topics.md
+              items:
+                - name: Açılan Pencereye Animasyon Ekleme
+                  href: how-to-animate-a-popup.md
+                - name: Özel Açılan Pencere Konumu Belirtme
+                  href: how-to-specify-a-custom-popup-position.md
+        - name: ProgressBar
+          href: progressbar.md
+        - name: PrintDialog
+          href: printdialog.md
+        - name: RadioButton
+          href: radiobutton.md
+        - name: RepeatButton
+          href: repeatbutton.md
+        - name: RichTextBox
+          href: richtextbox.md
+          items:
+            - name: RichTextBox Genel Bakışı
+              href: richtextbox-overview.md
+            - name: Nasıl Yapılır Konuları
+              href: richtextbox-how-to-topics.md
+              items:
+                - name: RichTextBox'dan Metin İçeriği Ayıklama
+                  href: how-to-extract-the-text-content-from-a-richtextbox.md
+                - name: RichTextBox İçinde Program Aracılığıyla Seçimi Değiştirme
+                  href: change-selection-in-a-richtextbox-programmatically.md
+                - name: 'RichTextBox İçeriğini Kaydetme, Yükleme ve Yazdırma'
+                  href: how-to-save-load-and-print-richtextbox-content.md
+                - name: RichTextBox İçinde Özel Açılır Menü Konumlandırma
+                  href: how-to-position-a-custom-context-menu-in-a-richtextbox.md
+        - name: ScrollBar
+          href: scrollbar.md
+          items:
+            - name: ScrollBar Üzerinde Parmak Boyutunu Özelleştirme
+              href: how-to-customize-the-thumb-size-on-a-scrollbar.md
+        - name: ScrollViewer
+          href: scrollviewer.md
+          items:
+            - name: ScrollViewer Genel Bakışı
+              href: scrollviewer-overview.md
+            - name: Nasıl Yapılır Konuları
+              href: scrollviewer-how-to-topics.md
+              items:
+                - name: ScrollChanged Olayını İşleme
+                  href: how-to-handle-the-scrollchanged-event.md
+                - name: IScrollInfo Arabirimini Kullanarak İçerik Kaydırma
+                  href: how-to-scroll-content-by-using-the-iscrollinfo-interface.md
+                - name: ScrollViewer'ın İçerik Kaydırma Yöntemlerini Kullanma
+                  href: how-to-use-the-content-scrolling-methods-of-scrollviewer.md
+        - name: Ayırıcı
+          href: separator.md
+        - name: Kaydırıcı
+          href: slider.md
+          items:
+            - name: Kaydırıcı Üzerinde İşaretleri Özelleştirme
+              href: how-to-customize-the-ticks-on-a-slider.md
+        - name: StackPanel
+          href: stackpanel.md
+          items:
+            - name: Nasıl Yapılır Konuları
+              href: stackpanel-how-to-topics.md
+              items:
+                - name: StackPanel ve DockPanel Arasında Seçim Yapma
+                  href: how-to-choose-between-stackpanel-and-dockpanel.md
+                - name: StackPanel Oluşturma
+                  href: how-to-create-a-stackpanel.md
+                - name: StackPanel İçinde Yatay veya Dikey Olarak İçerik Hizalama
+                  href: how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md
+        - name: StatusBar
+          href: statusbar.md
+        - name: TabControl
+          href: tabcontrol.md
+        - name: TextBlock
+          href: textblock.md
+          items:
+            - name: TextBlock Genel Bakışı
+              href: textblock-overview.md
+        - name: TextBox
+          href: textbox.md
+          items:
+            - name: TextBox Genel Bakışı
+              href: textbox-overview.md
+            - name: Nasıl Yapılır Konuları
+              href: textbox-how-to-topics.md
+              items:
+                - name: Çok Satırlı TextBox Denetimi Oluşturma
+                  href: how-to-create-a-multiline-textbox-control.md
+                - name: TextBox İçindeki Metin Değiştirildiğinde Algılama
+                  href: how-to-detect-when-text-in-a-textbox-has-changed.md
+                - name: Sekme Karakterlerini TextBox Denetimi İçinde Etkinleştirme
+                  href: how-to-enable-tab-characters-in-a-textbox-control.md
+                - name: TextBox'tan Satır Koleksiyonu Alma
+                  href: how-to-get-a-collection-of-lines-from-a-textbox.md
+                - name: TextBox Denetimini Salt Okunur Yapma
+                  href: how-to-make-a-textbox-control-read-only.md
+                - name: TextBox Denetiminde İmleci Metnin Başlangıcında veya Sonunda Konumlandırma
+                  href: position-the-cursor-at-the-beginning-or-end-of-text.md
+                - name: Metin Seçimi Alma
+                  href: how-to-retrieve-a-text-selection.md
+                - name: TextBox Denetiminde Odak Ayarlama
+                  href: how-to-set-focus-in-a-textbox-control.md
+                - name: TextBox Denetiminin Metin İçeriğini Ayarlama
+                  href: how-to-set-the-text-content-of-a-textbox-control.md
+                - name: Metin Düzenleme Denetiminde Yazım Denetimini Etkinleştirme
+                  href: how-to-enable-spell-checking-in-a-text-editing-control.md
+                - name: TextBox ile Özel Bağlam Menüsü Kullanma
+                  href: how-to-use-a-custom-context-menu-with-a-textbox.md
+                - name: Açılır Menü ile Yazım Denetimi Kullanma
+                  href: how-to-use-spell-checking-with-a-context-menu.md
+                - name: TextBox'a Filigran Ekleme
+                  href: how-to-add-a-watermark-to-a-textbox.md
+        - name: ToolBar
+          href: toolbar.md
+          items:
+            - name: ToolBar Genel Bakışı
+              href: toolbar-overview.md
+            - name: Araç Çubuğundaki Stil Denetimleri
+              href: how-to-style-controls-on-a-toolbar.md
+        - name: ToolTip
+          href: tooltip.md
+          items:
+            - name: ToolTip Genel Bakışı
+              href: tooltip-overview.md
+            - name: Nasıl Yapılır Konuları
+              href: tooltip-how-to-topics.md
+              items:
+                - name: Araç İpucu Konumlandırma
+                  href: how-to-position-a-tooltip.md
+                - name: BetweenShowDelay Özelliğini Kullanma
+                  href: how-to-use-the-betweenshowdelay-property.md
+        - name: TreeView
+          href: treeview.md
+          items:
+            - name: TreeView Genel Bakışı
+              href: treeview-overview.md
+            - name: Nasıl Yapılır Konuları
+              href: treeview-how-to-topics.md
+              items:
+                - name: Basit veya Karmaşık TreeViews Oluşturma
+                  href: how-to-create-simple-or-complex-treeviews.md
+                - name: 'SelectedValue, SelectedValuePath ve SelectedItem Kullanma'
+                  href: how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md
+                - name: Belirlenemeyen Derinliğe Sahip Veriyi TreeView'a Bağlama
+                  href: how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md
+                - name: TreeView'un Performansını Artırma
+                  href: how-to-improve-the-performance-of-a-treeview.md
+                - name: TreeView İçinde TreeViewItem Bulma
+                  href: how-to-find-a-treeviewitem-in-a-treeview.md
+        - name: WrapPanel
+          href: wrappanel.md
+        - name: Viewbox
+          href: viewbox.md
+          items:
+            - name: Viewbox İçeriğine Uzatma Özellikleri Uygulama
+              href: how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md
+    - name: Stilleri ve Şablonları
+      href: styles-and-templates.md
       items:
-      - name: Görüntüsü Bulunan bir Düğme Oluşturma
-        href: how-to-create-a-button-that-has-an-image.md
-    - name: Takvim
-      href: calendar.md
-    - name: Tuval
-      href: canvas.md
+        - name: Stil ve Şablon Oluşturma
+          href: styling-and-templating.md
+        - name: ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme
+          href: customizing-the-appearance-of-an-existing-control.md
+        - name: 'Nasıl yapılır: ControlTemplate ile Oluşturulan Öğeleri Bulma'
+          href: how-to-find-controltemplate-generated-elements.md
+    - name: Denetim Özelleştirme
+      href: control-customization.md
       items:
-      - name: Nasıl Yapılır Konuları
-        href: canvas-how-to-topics.md
-        items:
-        - name: Tuval İçeriği Çevresinde Kenarlığı Kaydırma
-          href: how-to-wrap-a-border-around-the-content-of-a-canvas.md
-        - name: Tuval Konumlandırma Özelliklerini Alma veya Ayarlama
-          href: how-to-get-or-set-canvas-positioning-properties.md
-        - name: Tuval Oluşturma ve Kullanma
-          href: how-to-create-and-use-a-canvas.md
-        - name: Alt Öğeleri Konumlandırmak için Tuvalin Ekli Özelliklerini Kullanma
-          href: how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md
-        - name: Parmak Kullanarak Tuvali Yeniden Boyutlandırma
-          href: how-to-resize-a-canvas-by-using-a-thumb.md
-    - name: CheckBox
-      href: checkbox.md
-    - name: ComboBox
-      href: combobox.md
-    - name: ContextMenu
-      href: contextmenu.md
-      items:
-      - name: ContextMenu Genel Bakışı
-        href: contextmenu-overview.md
-    - name: DataGrid
-      href: datagrid.md
-      items:
-      - name: DataGrid Denetiminde Varsayılan Klavye ve Fare Davranışı
-        href: default-keyboard-and-mouse-behavior-in-the-datagrid-control.md
-      - name: 'Nasıl yapılır: DataGrid Denetimine Satır Ayrıntıları Ekleme'
-        href: how-to-add-row-details-to-a-datagrid-control.md
-      - name: 'Nasıl yapılır: DataGrid Denetiminde Verileri Gruplandırma, Sıralama ve Filtreleme'
-        href: how-to-group-sort-and-filter-data-in-the-datagrid-control.md
-      - name: 'Nasıl yapılır: DataGrid Denetimi ile Doğrulama Uygulama'
-        href: how-to-implement-validation-with-the-datagrid-control.md
-      - name: 'İzlenecek yol: DataGrid Denetimindeki SQL Server Veritabanından Veri Görüntüleme'
-        href: walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md
-      - name: DataGrid Denetimindeki Boyutlandırma Seçenekleri
-        href: sizing-options-in-the-datagrid-control.md
-    - name: DatePicker
-      href: datepicker.md
-    - name: DockPanel
-      href: dockpanel.md
-      items:
-      - name: Nasıl Yapılır Konuları
-        href: dockpanel-how-to-topics.md
-        items:
-        - name: Yerleştirme Değerini Alma veya Ayarlama
-          href: how-to-get-or-set-a-dock-value.md
-        - name: DockPanel Oluşturma
-          href: how-to-create-a-dockpanel.md
-        - name: DockPanel Öğesini Kullanarak Boşluğu Bölümleme
-          href: how-to-partition-space-by-using-the-dockpanel-element.md
-    - name: DocumentViewer
-      href: documentviewer.md
-    - name: Genişletici
-      href: expander.md
-      items:
-      - name: Genişleticiye Genel Bakış
-        href: expander-overview.md
-      - name: Nasıl Yapılır Konuları
-        href: expander-how-to-topics.md
-        items:
-        - name: ScrollViewer ile bir Genişletici Oluşturma
-          href: how-to-create-an-expander-with-a-scrollviewer.md
-    - name: FlowDocumentPageViewer
-      href: flowdocumentpageviewer.md
-    - name: FlowDocumentReader
-      href: flowdocumentreader.md
-    - name: FlowDocumentScrollViewer
-      href: flowdocumentscrollviewer.md
-    - name: Çerçeve
-      href: frame.md
-    - name: Kılavuz
-      href: grid.md
-      items:
-      - name: Nasıl Yapılır Konuları
-        href: grid-how-to-topics.md
-        items:
-        - name: Kılavuz Kullanarak Standart UI İletişim Kutusu Oluşturma
-          href: how-to-build-a-standard-ui-dialog-box-by-using-grid.md
-        - name: Karmaşık Kılavuz Oluşturma
-          href: how-to-create-a-complex-grid.md
-        - name: Kılavuz Öğesi Oluşturma
-          href: how-to-create-a-grid-element.md
-        - name: GridLengthConverter Nesnesi Oluşturma ve Kullanma
-          href: how-to-create-and-use-a-gridlengthconverter-object.md
-        - name: ColumnDefinitionsCollections ve RowDefinitionsCollections Kullanarak Sütunları ve Satırları İşleme
-          href: manipulate-columns-and-rows-by-using-columndefinitionscollections.md
-        - name: Bir Kılavuzun Alt Öğelerini Konumlandırma
-          href: how-to-position-the-child-elements-of-a-grid.md
-        - name: Kılavuzlar Arasında Boyutlandırma Özelliklerini Paylaşma
-          href: how-to-share-sizing-properties-between-grids.md
-    - name: GridSplitter
-      href: gridsplitter.md
-      items:
-      - name: Nasıl Yapılır Konuları
-        href: gridsplitter-how-to-topics.md
-        items:
-        - name: GridSplitter ile Satırları Yeniden Boyutlandırma
-          href: how-to-resize-rows-with-a-gridsplitter.md
-        - name: GridSplitter ile Sütunları Yeniden Boyutlandırma
-          href: how-to-resize-columns-with-a-gridsplitter.md
-        - name: Bir GridSplitter'ın Görünür Olduğundan Emin Olma
-          href: how-to-make-sure-that-a-gridsplitter-is-visible.md
-    - name: GroupBox
-      href: groupbox.md
-      items:
-      - name: GroupBox Şablonu Tanımlama
-        href: how-to-define-a-groupbox-template.md
-    - name: Görüntü
-      href: image.md
-      items:
-      - name: Nasıl Yapılır Konuları
-        href: image-how-to-topics.md
-        items:
-        - name: Görüntü Öğesi Kullanma
-          href: how-to-use-the-image-element.md
-        - name: Görüntüyü Gri Tona Dönüştürme
-          href: how-to-convert-an-image-to-greyscale.md
-        - name: Görüntü Kırpma
-          href: how-to-crop-an-image.md
-        - name: Görüntü Döndürme
-          href: how-to-rotate-an-image.md
-    - name: Etiketle
-      href: label.md
-      items:
-      - name: Erişim Anahtarı ve Metin Kaydırması İçeren bir Denetim Oluşturma
-        href: how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md
-    - name: ListBox
-      href: listbox.md
-      items:
-      - name: Nasıl Yapılır Konuları
-        href: listbox-how-to-topics.md
-        items:
-        - name: Veriye ListBox Bağlama
-          href: how-to-bind-a-listbox-to-data.md
-        - name: ListBoxItem Alma
-          href: how-to-get-a-listboxitem.md
-        - name: ListBox'ın Kayma Performansını Artırma
-          href: how-to-improve-the-scrolling-performance-of-a-listbox.md
-    - name: ListView
-      href: listview.md
-      items:
-      - name: "'a Genel Bakış"
-        href: listview-overviews.md
-        items:
-        - name: ListView Genel Bakışı
-          href: listview-overview.md
-        - name: GridView Genel Bakışı
-          href: gridview-overview.md
-        - name: GridView Sütun Üstbilgi Stil ve Şablonlarına Genel Bakış
-          href: gridview-column-header-styles-and-templates-overview.md
-      - name: Nasıl Yapılır Konuları
-        href: listview-how-to-topics.md
-        items:
-        - name: Üst Bilgiye Tıklandığında GridView Sütununu Sıralama
-          href: how-to-sort-a-gridview-column-when-a-header-is-clicked.md
-        - name: ListView için Özel Görünüm Modu Oluşturma
-          href: how-to-create-a-custom-view-mode-for-a-listview.md
-        - name: GridView Kullanan ListView'da Stil Oluşturmak için Şablonları Kullanma
-          href: how-to-use-templates-to-style-a-listview-that-uses-gridview.md
-        - name: Sürüklenen GridView Sütun Başlığı için Stil Oluşturma
-          href: how-to-create-a-style-for-a-dragged-gridview-column-header.md
-        - name: GridView Kullanarak ListView İçeriklerini Görüntüleme
-          href: how-to-display-listview-contents-by-using-a-gridview.md
-        - name: ListView İçindeki Seçili Öğelere Stil Eklemek için Tetikleyicileri Kullanma
-          href: how-to-use-triggers-to-style-selected-items-in-a-listview.md
-        - name: CheckBox ile ListViewItems Oluşturma
-          href: how-to-create-listviewitems-with-a-checkbox.md
-        - name: GridViewRowPresenter Kullanarak Veri Görüntüleme
-          href: how-to-display-data-by-using-gridviewrowpresenter.md
-        - name: GridView Uygulayan ListView İçinde Öğeleri Gruplandırma
-          href: how-to-group-items-in-a-listview-that-implements-a-gridview.md
-        - name: GridView Uygulayan ListView İçinde bir Satıra Stil Ekleme
-          href: how-to-style-a-row-in-a-listview-that-implements-a-gridview.md
-        - name: ListView İçerisindeki Bir Sütunun Yatay Hizalamasını Değiştirme
-          href: how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md
-        - name: ListView'daki Her Öğe için MouseDoubleClick Olayını İşleme
-          href: how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md
-    - name: Menü
-      href: menu.md
-      items:
-      - name: Menüye Genel Bakış
-        href: menu-overview.md
-    - name: Panel
-      href: panel.md
-      items:
-      - name: Panellere Genel Bakış
-        href: panels-overview.md
-      - name: Nasıl Yapılır Konuları
-        href: panel-how-to-topics.md
-        items:
-        - name: Özel Panel Öğesi Oluşturma
-          href: how-to-create-a-custom-panel-element.md
-        - name: Panel OnRender Yöntemini Geçersiz Kılma
-          href: how-to-override-the-panel-onrender-method.md
-        - name: Öğenin Yükseklik Özelliklerini Ayarlama
-          href: how-to-set-the-height-properties-of-an-element.md
-        - name: Öğenin Genişlik Özelliklerini Ayarlama
-          href: how-to-set-the-width-properties-of-an-element.md
-    - name: PasswordBox
-      href: passwordbox.md
-    - name: Açılan Pencere
-      href: popup.md
-      items:
-      - name: Açılır Pencereye Genel Bakış
-        href: popup-overview.md
-      - name: Açılan Pencere Yerleştirme Davranışı
-        href: popup-placement-behavior.md
-      - name: Nasıl Yapılır Konuları
-        href: popup-how-to-topics.md
-        items:
-        - name: Açılan Pencereye Animasyon Ekleme
-          href: how-to-animate-a-popup.md
-        - name: Özel Açılan Pencere Konumu Belirtme
-          href: how-to-specify-a-custom-popup-position.md
-    - name: ProgressBar
-      href: progressbar.md
-    - name: PrintDialog
-      href: printdialog.md
-    - name: RadioButton
-      href: radiobutton.md
-    - name: RepeatButton
-      href: repeatbutton.md
-    - name: RichTextBox
-      href: richtextbox.md
-      items:
-      - name: RichTextBox Genel Bakışı
-        href: richtextbox-overview.md
-      - name: Nasıl Yapılır Konuları
-        href: richtextbox-how-to-topics.md
-        items:
-        - name: RichTextBox'dan Metin İçeriği Ayıklama
-          href: how-to-extract-the-text-content-from-a-richtextbox.md
-        - name: RichTextBox İçinde Program Aracılığıyla Seçimi Değiştirme
-          href: change-selection-in-a-richtextbox-programmatically.md
-        - name: RichTextBox İçeriğini Kaydetme, Yükleme ve Yazdırma
-          href: how-to-save-load-and-print-richtextbox-content.md
-        - name: RichTextBox İçinde Özel Açılır Menü Konumlandırma
-          href: how-to-position-a-custom-context-menu-in-a-richtextbox.md
-    - name: ScrollBar
-      href: scrollbar.md
-      items:
-      - name: ScrollBar Üzerinde Parmak Boyutunu Özelleştirme
-        href: how-to-customize-the-thumb-size-on-a-scrollbar.md
-    - name: ScrollViewer
-      href: scrollviewer.md
-      items:
-      - name: ScrollViewer Genel Bakışı
-        href: scrollviewer-overview.md
-      - name: Nasıl Yapılır Konuları
-        href: scrollviewer-how-to-topics.md
-        items:
-        - name: ScrollChanged Olayını İşleme
-          href: how-to-handle-the-scrollchanged-event.md
-        - name: IScrollInfo Arabirimini Kullanarak İçerik Kaydırma
-          href: how-to-scroll-content-by-using-the-iscrollinfo-interface.md
-        - name: ScrollViewer'ın İçerik Kaydırma Yöntemlerini Kullanma
-          href: how-to-use-the-content-scrolling-methods-of-scrollviewer.md
-    - name: Ayırıcı
-      href: separator.md
-    - name: Kaydırıcı
-      href: slider.md
-      items:
-      - name: Kaydırıcı Üzerinde İşaretleri Özelleştirme
-        href: how-to-customize-the-ticks-on-a-slider.md
-    - name: StackPanel
-      href: stackpanel.md
-      items:
-      - name: Nasıl Yapılır Konuları
-        href: stackpanel-how-to-topics.md
-        items:
-        - name: StackPanel ve DockPanel Arasında Seçim Yapma
-          href: how-to-choose-between-stackpanel-and-dockpanel.md
-        - name: StackPanel Oluşturma
-          href: how-to-create-a-stackpanel.md
-        - name: StackPanel İçinde Yatay veya Dikey Olarak İçerik Hizalama
-          href: how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md
-    - name: StatusBar
-      href: statusbar.md
-    - name: TabControl
-      href: tabcontrol.md
-    - name: TextBlock
-      href: textblock.md
-      items:
-      - name: TextBlock Genel Bakışı
-        href: textblock-overview.md
-    - name: TextBox
-      href: textbox.md
-      items:
-      - name: TextBox Genel Bakışı
-        href: textbox-overview.md
-      - name: Nasıl Yapılır Konuları
-        href: textbox-how-to-topics.md
-        items:
-        - name: Çok Satırlı TextBox Denetimi Oluşturma
-          href: how-to-create-a-multiline-textbox-control.md
-        - name: TextBox İçindeki Metin Değiştirildiğinde Algılama
-          href: how-to-detect-when-text-in-a-textbox-has-changed.md
-        - name: Sekme Karakterlerini TextBox Denetimi İçinde Etkinleştirme
-          href: how-to-enable-tab-characters-in-a-textbox-control.md
-        - name: TextBox'tan Satır Koleksiyonu Alma
-          href: how-to-get-a-collection-of-lines-from-a-textbox.md
-        - name: TextBox Denetimini Salt Okunur Yapma
-          href: how-to-make-a-textbox-control-read-only.md
-        - name: TextBox Denetiminde İmleci Metnin Başlangıcında veya Sonunda Konumlandırma
-          href: position-the-cursor-at-the-beginning-or-end-of-text.md
-        - name: Metin Seçimi Alma
-          href: how-to-retrieve-a-text-selection.md
-        - name: TextBox Denetiminde Odak Ayarlama
-          href: how-to-set-focus-in-a-textbox-control.md
-        - name: TextBox Denetiminin Metin İçeriğini Ayarlama
-          href: how-to-set-the-text-content-of-a-textbox-control.md
-        - name: Metin Düzenleme Denetiminde Yazım Denetimini Etkinleştirme
-          href: how-to-enable-spell-checking-in-a-text-editing-control.md
-        - name: TextBox ile Özel Bağlam Menüsü Kullanma
-          href: how-to-use-a-custom-context-menu-with-a-textbox.md
-        - name: Açılır Menü ile Yazım Denetimi Kullanma
-          href: how-to-use-spell-checking-with-a-context-menu.md
-        - name: TextBox'a Filigran Ekleme
-          href: how-to-add-a-watermark-to-a-textbox.md
-    - name: ToolBar
-      href: toolbar.md
-      items:
-      - name: ToolBar Genel Bakışı
-        href: toolbar-overview.md
-      - name: Araç Çubuğundaki Stil Denetimleri
-        href: how-to-style-controls-on-a-toolbar.md
-    - name: ToolTip
-      href: tooltip.md
-      items:
-      - name: ToolTip Genel Bakışı
-        href: tooltip-overview.md
-      - name: Nasıl Yapılır Konuları
-        href: tooltip-how-to-topics.md
-        items:
-        - name: Araç İpucu Konumlandırma
-          href: how-to-position-a-tooltip.md
-        - name: BetweenShowDelay Özelliğini Kullanma
-          href: how-to-use-the-betweenshowdelay-property.md
-    - name: TreeView
-      href: treeview.md
-      items:
-      - name: TreeView Genel Bakışı
-        href: treeview-overview.md
-      - name: Nasıl Yapılır Konuları
-        href: treeview-how-to-topics.md
-        items:
-        - name: Basit veya Karmaşık TreeViews Oluşturma
-          href: how-to-create-simple-or-complex-treeviews.md
-        - name: SelectedValue, SelectedValuePath ve SelectedItem Kullanma
-          href: how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md
-        - name: Belirlenemeyen Derinliğe Sahip Veriyi TreeView'a Bağlama
-          href: how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md
-        - name: TreeView'un Performansını Artırma
-          href: how-to-improve-the-performance-of-a-treeview.md
-        - name: TreeView İçinde TreeViewItem Bulma
-          href: how-to-find-a-treeviewitem-in-a-treeview.md
-    - name: WrapPanel
-      href: wrappanel.md
-    - name: Viewbox
-      href: viewbox.md
-      items:
-      - name: Viewbox İçeriğine Uzatma Özellikleri Uygulama
-        href: how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md
-  - name: Stilleri ve Şablonları
-    href: styles-and-templates.md
-    items:
-    - name: Stil ve Şablon Oluşturma
-      href: styling-and-templating.md
-    - name: ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme
-      href: customizing-the-appearance-of-an-existing-control.md
-    - name: 'Nasıl yapılır: ControlTemplate ile Oluşturulan Öğeleri Bulma'
-      href: how-to-find-controltemplate-generated-elements.md
-  - name: Denetim Özelleştirme
-    href: control-customization.md
-    items:
-    - name: Denetim Yazımına Genel Bakış
-      href: control-authoring-overview.md
-    - name: Özelleştirilebilir Görünümü olan Denetim Oluşturma
-      href: creating-a-control-that-has-a-customizable-appearance.md
-    - name: Stillenebilir Denetimleri Tasarlama Yönergeleri
-      href: guidelines-for-designing-stylable-controls.md
-    - name: Donatıcılar
-      href: adorners.md
-      items:
-      - name: Donatıcılara Genel Bakış
-        href: adorners-overview.md
-      - name: Nasıl Yapılır Konuları
-        href: adorners-how-to-topics.md
-        items:
-        - name: Donatıcı Uygulama
-          href: how-to-implement-an-adorner.md
-        - name: Öğeye bir Donatıcı Bağlama
-          href: how-to-bind-an-adorner-to-an-element.md
-        - name: Panelin Alt Öğelerini Donatma
-          href: how-to-adorn-the-children-of-a-panel.md
-        - name: Öğeden Donatıcıyı Kaldırma
-          href: how-to-remove-an-adorner-from-an-element.md
-        - name: Öğeden Tüm Donatıcıları Kaldırma
-          href: how-to-remove-all-adorners-from-an-element.md
-    - name: Denetim Stilleri ve Şablonları
-      href: control-styles-and-templates.md
-      items:
-      - name: Düğme Stilleri ve Şablonları
-        href: button-styles-and-templates.md
-      - name: Takvim Stilleri ve Şablonları
-        href: calendar-styles-and-templates.md
-      - name: CheckBox Stilleri ve Şablonları
-        href: checkbox-styles-and-templates.md
-      - name: ComboBox Stilleri ve Şablonları
-        href: combobox-styles-and-templates.md
-      - name: ContextMenu Stilleri ve Şablonları
-        href: contextmenu-styles-and-templates.md
-      - name: DataGrid Stilleri ve Şablonları
-        href: datagrid-styles-and-templates.md
-      - name: DatePicker Stilleri ve Şablonları
-        href: datepicker-styles-and-templates.md
-      - name: DocumentViewer Stilleri ve Şablonları
-        href: documentviewer-styles-and-templates.md
-      - name: Genişletici Stilleri ve Şablonları
-        href: expander-styles-and-templates.md
-      - name: Çerçeve Stilleri ve Şablonları
-        href: frame-styles-and-templates.md
-      - name: GroupBox Stilleri ve Şablonları
-        href: groupbox-styles-and-templates.md
-      - name: Etiket Stilleri ve Şablonları
-        href: label-styles-and-templates.md
-      - name: ListBox Stilleri ve Şablonları
-        href: listbox-styles-and-templates.md
-      - name: ListView Stilleri ve Şablonları
-        href: listview-styles-and-templates.md
-      - name: Menü Stilleri ve Şablonları
-        href: menu-styles-and-templates.md
-      - name: NavigationWindow Stilleri ve Şablonları
-        href: navigationwindow-styles-and-templates.md
-      - name: PasswordBox Stilleri ve Şablonları
-        href: passwordbox-styles-and-templates.md
-      - name: ProgressBar Stilleri ve Şablonları
-        href: progressbar-styles-and-templates.md
-      - name: RadioButton Stilleri ve Şablonları
-        href: radiobutton-styles-and-templates.md
-      - name: RepeatButton Stilleri ve Şablonları
-        href: repeatbutton-styles-and-templates.md
-      - name: ScrollBar Stilleri ve Şablonları
-        href: scrollbar-styles-and-templates.md
-      - name: ScrollViewer Stilleri ve Şablonları
-        href: scrollviewer-styles-and-templates.md
-      - name: Kaydırıcı Stilleri ve Şablonları
-        href: slider-styles-and-templates.md
-      - name: StatusBar Stilleri ve Şablonları
-        href: statusbar-styles-and-templates.md
-      - name: TabControl Stilleri ve Şablonları
-        href: tabcontrol-styles-and-templates.md
-      - name: TextBox Stilleri ve Şablonları
-        href: textbox-styles-and-templates.md
-      - name: Parmak Stilleri ve Şablonları
-        href: thumb-styles-and-templates.md
-      - name: ToggleButton Stilleri ve Şablonları
-        href: togglebutton-styles-and-templates.md
-      - name: ToolBar Stilleri ve Şablonları
-        href: toolbar-styles-and-templates.md
-      - name: ToolTip Stilleri ve Şablonları
-        href: tooltip-styles-and-templates.md
-      - name: TreeView Stilleri ve Şablonları
-        href: treeview-styles-and-templates.md
-      - name: Pencere Stilleri ve Şablonları
-        href: window-styles-and-templates.md
-    - name: WPF Özel Denetiminin UI Otomasyonu
-      href: ui-automation-of-a-wpf-custom-control.md
-    - name: 'İzlenecek yollar: Özel Animasyonlu Düğme Oluşturma'
-      href: walkthroughs-create-a-custom-animated-button.md
-      items:
-      - name: Microsoft Expression Blend Kullanarak Düğme Oluşturma
-        href: walkthrough-create-a-button-by-using-microsoft-expression-blend.md
-      - name: XAML Kullanarak bir Düğme Oluşturma
-        href: walkthrough-create-a-button-by-using-xaml.md
-ms.openlocfilehash: e1f4c9978b5a1d640c721cb7b6584b556c622264
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471807"
+        - name: Denetim Yazımına Genel Bakış
+          href: control-authoring-overview.md
+        - name: Özelleştirilebilir Görünümü olan Denetim Oluşturma
+          href: creating-a-control-that-has-a-customizable-appearance.md
+        - name: Stillenebilir Denetimleri Tasarlama Yönergeleri
+          href: guidelines-for-designing-stylable-controls.md
+        - name: Donatıcılar
+          href: adorners.md
+          items:
+            - name: Donatıcılara Genel Bakış
+              href: adorners-overview.md
+            - name: Nasıl Yapılır Konuları
+              href: adorners-how-to-topics.md
+              items:
+                - name: Donatıcı Uygulama
+                  href: how-to-implement-an-adorner.md
+                - name: Öğeye bir Donatıcı Bağlama
+                  href: how-to-bind-an-adorner-to-an-element.md
+                - name: Panelin Alt Öğelerini Donatma
+                  href: how-to-adorn-the-children-of-a-panel.md
+                - name: Öğeden Donatıcıyı Kaldırma
+                  href: how-to-remove-an-adorner-from-an-element.md
+                - name: Öğeden Tüm Donatıcıları Kaldırma
+                  href: how-to-remove-all-adorners-from-an-element.md
+        - name: Denetim Stilleri ve Şablonları
+          href: control-styles-and-templates.md
+          items:
+            - name: Düğme Stilleri ve Şablonları
+              href: button-styles-and-templates.md
+            - name: Takvim Stilleri ve Şablonları
+              href: calendar-styles-and-templates.md
+            - name: CheckBox Stilleri ve Şablonları
+              href: checkbox-styles-and-templates.md
+            - name: ComboBox Stilleri ve Şablonları
+              href: combobox-styles-and-templates.md
+            - name: ContextMenu Stilleri ve Şablonları
+              href: contextmenu-styles-and-templates.md
+            - name: DataGrid Stilleri ve Şablonları
+              href: datagrid-styles-and-templates.md
+            - name: DatePicker Stilleri ve Şablonları
+              href: datepicker-styles-and-templates.md
+            - name: DocumentViewer Stilleri ve Şablonları
+              href: documentviewer-styles-and-templates.md
+            - name: Genişletici Stilleri ve Şablonları
+              href: expander-styles-and-templates.md
+            - name: Çerçeve Stilleri ve Şablonları
+              href: frame-styles-and-templates.md
+            - name: GroupBox Stilleri ve Şablonları
+              href: groupbox-styles-and-templates.md
+            - name: Etiket Stilleri ve Şablonları
+              href: label-styles-and-templates.md
+            - name: ListBox Stilleri ve Şablonları
+              href: listbox-styles-and-templates.md
+            - name: ListView Stilleri ve Şablonları
+              href: listview-styles-and-templates.md
+            - name: Menü Stilleri ve Şablonları
+              href: menu-styles-and-templates.md
+            - name: NavigationWindow Stilleri ve Şablonları
+              href: navigationwindow-styles-and-templates.md
+            - name: PasswordBox Stilleri ve Şablonları
+              href: passwordbox-styles-and-templates.md
+            - name: ProgressBar Stilleri ve Şablonları
+              href: progressbar-styles-and-templates.md
+            - name: RadioButton Stilleri ve Şablonları
+              href: radiobutton-styles-and-templates.md
+            - name: RepeatButton Stilleri ve Şablonları
+              href: repeatbutton-styles-and-templates.md
+            - name: ScrollBar Stilleri ve Şablonları
+              href: scrollbar-styles-and-templates.md
+            - name: ScrollViewer Stilleri ve Şablonları
+              href: scrollviewer-styles-and-templates.md
+            - name: Kaydırıcı Stilleri ve Şablonları
+              href: slider-styles-and-templates.md
+            - name: StatusBar Stilleri ve Şablonları
+              href: statusbar-styles-and-templates.md
+            - name: TabControl Stilleri ve Şablonları
+              href: tabcontrol-styles-and-templates.md
+            - name: TextBox Stilleri ve Şablonları
+              href: textbox-styles-and-templates.md
+            - name: Parmak Stilleri ve Şablonları
+              href: thumb-styles-and-templates.md
+            - name: ToggleButton Stilleri ve Şablonları
+              href: togglebutton-styles-and-templates.md
+            - name: ToolBar Stilleri ve Şablonları
+              href: toolbar-styles-and-templates.md
+            - name: ToolTip Stilleri ve Şablonları
+              href: tooltip-styles-and-templates.md
+            - name: TreeView Stilleri ve Şablonları
+              href: treeview-styles-and-templates.md
+            - name: Pencere Stilleri ve Şablonları
+              href: window-styles-and-templates.md
+        - name: WPF Özel Denetiminin UI Otomasyonu
+          href: ui-automation-of-a-wpf-custom-control.md
+        - name: 'İzlenecek yollar: Özel Animasyonlu Düğme Oluşturma'
+          href: walkthroughs-create-a-custom-animated-button.md
+          items:
+            - name: Microsoft Expression Blend Kullanarak Düğme Oluşturma
+              href: walkthrough-create-a-button-by-using-microsoft-expression-blend.md
+            - name: XAML Kullanarak bir Düğme Oluşturma
+              href: walkthrough-create-a-button-by-using-xaml.md

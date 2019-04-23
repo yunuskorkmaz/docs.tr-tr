@@ -1,22 +1,15 @@
-items:
 - name: Birlikte Çalışabilirlik
   href: index.md
   items:
-  - name: Birlikte Çalışabilirliğe Genel Bakış
-    href: interoperability-overview.md
-  - name: 'Nasıl yapılır: Visual C# Özelliklerini Kullanarak Office Birlikte Çalışma Nesnelerine Erişim'
-    href: how-to-access-office-onterop-objects.md
-  - name: 'Nasıl yapılır: COM Birlikte Çalışma Programlamada Dizin Oluşturulmuş Özellikleri Kullanma'
-    href: how-to-use-indexed-properties-in-com-interop-rogramming.md
-  - name: 'Nasıl yapılır: Wave Dosyasını Oynatmak için Platform Çağırma Kullanma'
-    href: how-to-use-platform-invoke-to-play-a-wave-file.md
-  - name: 'İzlenecek yol: Office Programlama (C# ve Visual Basic)'
-    href: walkthrough-office-programming.md
-  - name: Örnek COM Sınıfı
-    href: example-com-class.md
-ms.openlocfilehash: 73e8696b89fa8ce212bc517f884f0ac615de09fc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471755"
+    - name: Birlikte Çalışabilirliğe Genel Bakış
+      href: interoperability-overview.md
+    - name: 'Nasıl yapılır: Visual C# Özelliklerini Kullanarak Office Birlikte Çalışma Nesnelerine Erişim'
+      href: how-to-access-office-onterop-objects.md
+    - name: 'Nasıl yapılır: COM Birlikte Çalışma Programlamada Dizin Oluşturulmuş Özellikleri Kullanma'
+      href: how-to-use-indexed-properties-in-com-interop-rogramming.md
+    - name: 'Nasıl yapılır: Wave Dosyasını Oynatmak için Platform Çağırma Kullanma'
+      href: how-to-use-platform-invoke-to-play-a-wave-file.md
+    - name: 'İzlenecek yol: Office Programlama (C# ve Visual Basic)'
+      href: walkthrough-office-programming.md
+    - name: Örnek COM Sınıfı
+      href: example-com-class.md

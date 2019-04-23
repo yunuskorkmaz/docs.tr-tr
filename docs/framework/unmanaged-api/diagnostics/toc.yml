@@ -1,406 +1,399 @@
-items:
 - name: Tanılama Simge Deposu
   href: index.md
   items:
-  - name: Tanılama Sembol Deposu Arabirimleri
-    href: diagnostics-symbol-store-interfaces.md
-    items:
-    - name: IBindingDisplay Arabirimi
-      href: ibindingdisplay-interface.md
+    - name: Tanılama Sembol Deposu Arabirimleri
+      href: diagnostics-symbol-store-interfaces.md
       items:
-      - name: GetCurrentDisplay Yöntemi
-        href: ibindingdisplay-getcurrentdisplay-method.md
-      - name: InitializeForProcess Yöntemi
-        href: ibindingdisplay-initializeforprocess-method.md
-    - name: IDebugAutoAttach Arabirimi
-      href: idebugautoattach-interface.md
+        - name: IBindingDisplay Arabirimi
+          href: ibindingdisplay-interface.md
+          items:
+            - name: GetCurrentDisplay Yöntemi
+              href: ibindingdisplay-getcurrentdisplay-method.md
+            - name: InitializeForProcess Yöntemi
+              href: ibindingdisplay-initializeforprocess-method.md
+        - name: IDebugAutoAttach Arabirimi
+          href: idebugautoattach-interface.md
+          items:
+            - name: AutoAttach Yöntemi
+              href: idebugautoattach-autoattach-method.md
+        - name: INotifyConnection2 Arabirimi
+          href: inotifyconnection2-interface.md
+          items:
+            - name: RegisterNotifySource Yöntemi
+              href: inotifyconnection2-registernotifysource-method.md
+            - name: UnregisterNotifySource Yöntemi
+              href: inotifyconnection2-unregisternotifysource-method.md
+        - name: INotifySink2 Arabirimi
+          href: inotifysink2-interface.md
+          items:
+            - name: OnSyncCallEnter Yöntemi
+              href: inotifysink2-onsynccallenter-method.md
+            - name: OnSyncCallExit Yöntemi
+              href: inotifysink2-onsynccallexit-method.md
+            - name: OnSyncCallOut Yöntemi
+              href: inotifysink2-onsynccallout-method.md
+            - name: OnSyncCallReturn Yöntemi
+              href: inotifysink2-onsynccallreturn-method.md
+        - name: INotifySource2 Arabirimi
+          href: inotifysource2-interface.md
+          items:
+            - name: SetNotifyFilter Yöntemi
+              href: inotifysource2-setnotifyfilter-method.md
+        - name: ISymENCUnmanagedMethod Arabirimi
+          href: isymencunmanagedmethod-interface.md
+          items:
+            - name: GetDocumentsForMethod Yöntemi
+              href: isymencunmanagedmethod-getdocumentsformethod-method.md
+            - name: GetDocumentsForMethodCount Yöntemi
+              href: isymencunmanagedmethod-getdocumentsformethodcount-method.md
+            - name: GetFileNameFromOffset Yöntemi
+              href: isymencunmanagedmethod-getfilenamefromoffset-method.md
+            - name: GetLineFromOffset Yöntemi
+              href: isymencunmanagedmethod-getlinefromoffset-method.md
+            - name: GetSourceExtentInDocument Yöntemi
+              href: isymencunmanagedmethod-getsourceextentindocument-method.md
+        - name: ISymUnmanagedAsyncMethod Arabirimi
+          href: isymunmanagedasyncmethod-interface.md
+          items:
+            - name: GetAsyncStepInfo Yöntemi
+              href: isymunmanagedasyncmethod-getasyncstepinfo-method.md
+            - name: GetAsyncStepInfoCount Yöntemi
+              href: isymunmanagedasyncmethod-getasyncstepinfocount-method.md
+            - name: GetCatchHandlerILOffset Yöntemi
+              href: isymunmanagedasyncmethod-getcatchhandleriloffset-method.md
+            - name: GetKickoffMethod Yöntemi
+              href: isymunmanagedasyncmethod-getkickoffmethod-method.md
+            - name: HasCatchHandlerILOffset Yöntemi
+              href: isymunmanagedasyncmethod-hascatchhandleriloffset-method.md
+            - name: IsAsyncMethod Yöntemi
+              href: isymunmanagedasyncmethod-isasyncmethod-method.md
+        - name: ISymUnmanagedAsyncMethodPropertiesWriter Arabirimi
+          href: isymunmanagedasyncmethodpropertieswriter-interface.md
+          items:
+            - name: DefineAsyncStepInfo Yöntemi
+              href: isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md
+            - name: DefineCatchHandlerILOffset Yöntemi
+              href: isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md
+            - name: DefineKickoffMethod Yöntemi
+              href: isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md
+        - name: ISymUnmanagedBinder Arabirimi
+          href: isymunmanagedbinder-interface.md
+          items:
+            - name: GetReaderForFile Yöntemi
+              href: isymunmanagedbinder-getreaderforfile-method.md
+            - name: GetReaderFromStream Yöntemi
+              href: isymunmanagedbinder-getreaderfromstream-method.md
+        - name: ISymUnmanagedBinder2 Arabirimi
+          href: isymunmanagedbinder2-interface.md
+          items:
+            - name: GetReaderForFile2 Yöntemi
+              href: isymunmanagedbinder2-getreaderforfile2-method.md
+        - name: ISymUnmanagedBinder3 Arabirimi
+          href: isymunmanagedbinder3-interface.md
+          items:
+            - name: GetReaderFromCallback Yöntemi
+              href: isymunmanagedbinder3-getreaderfromcallback-method.md
+        - name: ISymUnmanagedConstant Arabirimi
+          href: isymunmanagedconstant-interface.md
+          items:
+            - name: GetName Yöntemi
+              href: isymunmanagedconstant-getname-method.md
+            - name: GetSignature Yöntemi
+              href: isymunmanagedconstant-getsignature-method.md
+            - name: GetValue Yöntemi
+              href: isymunmanagedconstant-getvalue-method.md
+        - name: ISymUnmanagedDispose Arabirimi
+          href: isymunmanageddispose-interface.md
+          items:
+            - name: Destroy Yöntemi
+              href: isymunmanageddispose-destroy-method.md
+        - name: ISymUnmanagedDocument Arabirimi
+          href: isymunmanageddocument-interface.md
+          items:
+            - name: FindClosestLine Yöntemi
+              href: isymunmanageddocument-findclosestline-method.md
+            - name: GetCheckSum Yöntemi
+              href: isymunmanageddocument-getchecksum-method.md
+            - name: GetCheckSumAlgorithmId Yöntemi
+              href: isymunmanageddocument-getchecksumalgorithmid-method.md
+            - name: GetDocumentType Yöntemi
+              href: isymunmanageddocument-getdocumenttype-method.md
+            - name: GetLanguage Yöntemi
+              href: isymunmanageddocument-getlanguage-method.md
+            - name: GetLanguageVendor Yöntemi
+              href: isymunmanageddocument-getlanguagevendor-method.md
+            - name: GetSourceLength Yöntemi
+              href: isymunmanageddocument-getsourcelength-method.md
+            - name: GetSourceRange Yöntemi
+              href: isymunmanageddocument-getsourcerange-method.md
+            - name: GetURL Yöntemi
+              href: isymunmanageddocument-geturl-method.md
+            - name: HasEmbeddedSource Yöntemi
+              href: isymunmanageddocument-hasembeddedsource-method.md
+        - name: ISymUnmanagedDocumentWriter Arabirimi
+          href: isymunmanageddocumentwriter-interface.md
+          items:
+            - name: SetCheckSum Yöntemi
+              href: isymunmanageddocumentwriter-setchecksum-method.md
+            - name: SetSource Yöntemi
+              href: isymunmanageddocumentwriter-setsource-method.md
+        - name: ISymUnmanagedENCUpdate Arabirimi
+          href: isymunmanagedencupdate-interface.md
+          items:
+            - name: GetLocalVariableCount Yöntemi
+              href: isymunmanagedencupdate-getlocalvariablecount-method.md
+            - name: GetLocalVariables Yöntemi
+              href: isymunmanagedencupdate-getlocalvariables-method.md
+            - name: InitializeForEnc Yöntemi
+              href: isymunmanagedencupdate-initializeforenc-method.md
+            - name: UpdateMethodLines Yöntemi
+              href: isymunmanagedencupdate-updatemethodlines-method.md
+            - name: UpdateSymbolStore2 Yöntemi
+              href: isymunmanagedencupdate-updatesymbolstore2-method.md
+        - name: ISymUnmanagedMethod Arabirimi
+          href: isymunmanagedmethod-interface.md
+          items:
+            - name: GetNamespace Yöntemi
+              href: isymunmanagedmethod-getnamespace-method.md
+            - name: GetOffset Yöntemi
+              href: isymunmanagedmethod-getoffset-method.md
+            - name: GetParameters Yöntemi
+              href: isymunmanagedmethod-getparameters-method.md
+            - name: GetRanges Yöntemi
+              href: isymunmanagedmethod-getranges-method.md
+            - name: GetRootScope Yöntemi
+              href: isymunmanagedmethod-getrootscope-method.md
+            - name: GetScopeFromOffset Yöntemi
+              href: isymunmanagedmethod-getscopefromoffset-method.md
+            - name: GetSequencePointCount Yöntemi
+              href: isymunmanagedmethod-getsequencepointcount-method.md
+            - name: GetSequencePoints Yöntemi
+              href: isymunmanagedmethod-getsequencepoints-method.md
+            - name: GetSourceStartEnd Yöntemi
+              href: isymunmanagedmethod-getsourcestartend-method.md
+            - name: GetToken Yöntemi
+              href: isymunmanagedmethod-gettoken-method.md
+        - name: ISymUnmanagedNamespace Arabirimi
+          href: isymunmanagednamespace-interface.md
+          items:
+            - name: GetName Yöntemi
+              href: isymunmanagednamespace-getname-method.md
+            - name: GetNamespaces Yöntemi
+              href: isymunmanagednamespace-getnamespaces-method.md
+            - name: GetVariables Yöntemi
+              href: isymunmanagednamespace-getvariables-method.md
+        - name: ISymUnmanagedReader Arabirimi
+          href: isymunmanagedreader-interface.md
+          items:
+            - name: GetDocument Yöntemi
+              href: isymunmanagedreader-getdocument-method.md
+            - name: GetDocuments Yöntemi
+              href: isymunmanagedreader-getdocuments-method.md
+            - name: GetDocumentVersion Yöntemi
+              href: isymunmanagedreader-getdocumentversion-method.md
+            - name: GetGlobalVariables Yöntemi
+              href: isymunmanagedreader-getglobalvariables-method.md
+            - name: GetMethod Yöntemi
+              href: isymunmanagedreader-getmethod-method.md
+            - name: GetMethodByVersion Yöntemi
+              href: isymunmanagedreader-getmethodbyversion-method.md
+            - name: GetMethodFromDocumentPosition Yöntemi
+              href: isymunmanagedreader-getmethodfromdocumentposition-method.md
+            - name: GetMethodsFromDocumentPosition Yöntemi
+              href: isymunmanagedreader-getmethodsfromdocumentposition-method.md
+            - name: GetMethodVersion Yöntemi
+              href: isymunmanagedreader-getmethodversion-method.md
+            - name: GetNamespaces Yöntemi
+              href: isymunmanagedreader-getnamespaces-method.md
+            - name: GetSymAttribute Yöntemi
+              href: isymunmanagedreader-getsymattribute-method.md
+            - name: GetSymbolStoreFileName Yöntemi
+              href: isymunmanagedreader-getsymbolstorefilename-method.md
+            - name: GetUserEntryPoint Yöntemi
+              href: isymunmanagedreader-getuserentrypoint-method.md
+            - name: GetVariables Yöntemi
+              href: isymunmanagedreader-getvariables-method.md
+            - name: Initialize Yöntemi
+              href: isymunmanagedreader-initialize-method.md
+            - name: ReplaceSymbolStore Yöntemi
+              href: isymunmanagedreader-replacesymbolstore-method.md
+            - name: UpdateSymbolStore Yöntemi
+              href: isymunmanagedreader-updatesymbolstore-method.md
+        - name: ISymUnmanagedReader2 Arabirimi
+          href: isymunmanagedreader2-interface.md
+          items:
+            - name: GetMethodByVersionPreRemap Yöntemi
+              href: isymunmanagedreader2-getmethodbyversionpreremap-method.md
+            - name: GetMethodsInDocument Yöntemi
+              href: isymunmanagedreader2-getmethodsindocument-method.md
+            - name: GetSymAttributePreRemap Yöntemi
+              href: isymunmanagedreader2-getsymattributepreremap-method.md
+        - name: ISymUnmanagedReaderSymbolSearchInfo Arabirimi
+          href: isymunmanagedreadersymbolsearchinfo-interface.md
+          items:
+            - name: GetSymbolSearchInfoCount Yöntemi
+              href: isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md
+            - name: GetSymbolSearchInfo Yöntemi
+              href: isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md
+        - name: ISymUnmanagedScope Arabirimi
+          href: isymunmanagedscope-interface.md
+          items:
+            - name: GetChildren Yöntemi
+              href: isymunmanagedscope-getchildren-method.md
+            - name: GetEndOffset Yöntemi
+              href: isymunmanagedscope-getendoffset-method.md
+            - name: GetLocalCount Yöntemi
+              href: isymunmanagedscope-getlocalcount-method.md
+            - name: GetLocals Yöntemi
+              href: isymunmanagedscope-getlocals-method.md
+            - name: GetMethod Yöntemi
+              href: isymunmanagedscope-getmethod-method.md
+            - name: GetNamespaces Yöntemi
+              href: isymunmanagedscope-getnamespaces-method.md
+            - name: GetParent Yöntemi
+              href: isymunmanagedscope-getparent-method.md
+            - name: GetStartOffset Yöntemi
+              href: isymunmanagedscope-getstartoffset-method.md
+        - name: ISymUnmanagedScope2 Arabirimi
+          href: isymunmanagedscope2-interface.md
+          items:
+            - name: GetConstantCount Yöntemi
+              href: isymunmanagedscope2-getconstantcount-method.md
+            - name: GetConstants Yöntemi
+              href: isymunmanagedscope2-getconstants-method.md
+        - name: ISymUnmanagedSourceServerModule Arabirimi
+          href: isymunmanagedsourceservermodule-interface.md
+          items:
+            - name: GetSourceServerData Yöntemi
+              href: isymunmanagedsourceservermodule-getsourceserverdata-method.md
+        - name: ISymUnmanagedSymbolSearchInfo Arabirimi
+          href: isymunmanagedsymbolsearchinfo-interface.md
+          items:
+            - name: GetHRESULT Yöntemi
+              href: isymunmanagedsymbolsearchinfo-gethresult-method.md
+            - name: GetSearchPath Yöntemi
+              href: isymunmanagedsymbolsearchinfo-getsearchpath-method.md
+            - name: GetSearchPathLength Yöntemi
+              href: isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md
+        - name: ISymUnmanagedVariable Arabirimi
+          href: isymunmanagedvariable-interface.md
+          items:
+            - name: GetAddressField1 Yöntemi
+              href: isymunmanagedvariable-getaddressfield1-method.md
+            - name: GetAddressField2 Yöntemi
+              href: isymunmanagedvariable-getaddressfield2-method.md
+            - name: GetAddressField3 Yöntemi
+              href: isymunmanagedvariable-getaddressfield3-method.md
+            - name: GetAddressKind Yöntemi
+              href: isymunmanagedvariable-getaddresskind-method.md
+            - name: GetAttributes Yöntemi
+              href: isymunmanagedvariable-getattributes-method.md
+            - name: GetEndOffset Yöntemi
+              href: isymunmanagedvariable-getendoffset-method.md
+            - name: GetName Yöntemi
+              href: isymunmanagedvariable-getname-method.md
+            - name: GetSignature Yöntemi
+              href: isymunmanagedvariable-getsignature-method.md
+            - name: GetStartOffset Yöntemi
+              href: isymunmanagedvariable-getstartoffset-method.md
+        - name: ISymUnmanagedWriter Arabirimi
+          href: isymunmanagedwriter-interface.md
+          items:
+            - name: Abort Yöntemi
+              href: isymunmanagedwriter-abort-method.md
+            - name: Close Yöntemi
+              href: isymunmanagedwriter-close-method.md
+            - name: CloseMethod Yöntemi
+              href: isymunmanagedwriter-closemethod-method.md
+            - name: CloseNamespace Yöntemi
+              href: isymunmanagedwriter-closenamespace-method.md
+            - name: CloseScope Yöntemi
+              href: isymunmanagedwriter-closescope-method.md
+            - name: DefineConstant Yöntemi
+              href: isymunmanagedwriter-defineconstant-method.md
+            - name: DefineDocument Yöntemi
+              href: isymunmanagedwriter-definedocument-method.md
+            - name: DefineField Yöntemi
+              href: isymunmanagedwriter-definefield-method.md
+            - name: DefineGlobalVariable Yöntemi
+              href: isymunmanagedwriter-defineglobalvariable-method.md
+            - name: DefineLocalVariable Yöntemi
+              href: isymunmanagedwriter-definelocalvariable-method.md
+            - name: DefineParameter Yöntemi
+              href: isymunmanagedwriter-defineparameter-method.md
+            - name: DefineSequencePoints Yöntemi
+              href: isymunmanagedwriter-definesequencepoints-method.md
+            - name: GetDebugInfo Yöntemi
+              href: isymunmanagedwriter-getdebuginfo-method.md
+            - name: Initialize Yöntemi
+              href: isymunmanagedwriter-initialize-method.md
+            - name: Initialize2 Yöntemi
+              href: isymunmanagedwriter-initialize2-method.md
+            - name: OpenMethod Yöntemi
+              href: isymunmanagedwriter-openmethod-method.md
+            - name: OpenNamespace Yöntemi
+              href: isymunmanagedwriter-opennamespace-method.md
+            - name: OpenScope Yöntemi
+              href: isymunmanagedwriter-openscope-method.md
+            - name: RemapToken Yöntemi
+              href: isymunmanagedwriter-remaptoken-method.md
+            - name: SetMethodSourceRange Yöntemi
+              href: isymunmanagedwriter-setmethodsourcerange-method.md
+            - name: SetScopeRange Yöntemi
+              href: isymunmanagedwriter-setscoperange-method.md
+            - name: SetSymAttribute Yöntemi
+              href: isymunmanagedwriter-setsymattribute-method.md
+            - name: SetUserEntryPoint Yöntemi
+              href: isymunmanagedwriter-setuserentrypoint-method.md
+            - name: UsingNamespace Yöntemi
+              href: isymunmanagedwriter-usingnamespace-method.md
+        - name: ISymUnmanagedWriter2 Arabirimi
+          href: isymunmanagedwriter2-interface.md
+          items:
+            - name: DefineConstant2 Yöntemi
+              href: isymunmanagedwriter2-defineconstant2-method.md
+            - name: DefineGlobalVariable2 Yöntemi
+              href: isymunmanagedwriter2-defineglobalvariable2-method.md
+            - name: DefineLocalVariable2 Yöntemi
+              href: isymunmanagedwriter2-definelocalvariable2-method.md
+        - name: ISymUnmanagedWriter3 Arabirimi
+          href: isymunmanagedwriter3-interface.md
+          items:
+            - name: Commit Yöntemi
+              href: isymunmanagedwriter3-commit-method.md
+            - name: OpenMethod2 Yöntemi
+              href: isymunmanagedwriter3-openmethod2-method.md
+        - name: ISymUnmanagedWriter4 Arabirimi
+          href: isymunmanagedwriter4-interface.md
+          items:
+            - name: GetDebugInfoWithPadding Yöntemi
+              href: isymunmanagedwriter4-getdebuginfowithpadding-method.md
+        - name: ISymUnmanagedWriter5 Arabirimi
+          href: isymunmanagedwriter5-interface.md
+          items:
+            - name: CloseMapTokensToSourceSpans Yöntemi
+              href: isymunmanagedwriter5-closemaptokenstosourcespans-method.md
+            - name: MapTokenToSourceSpan Yöntemi
+              href: isymunmanagedwriter5-maptokentosourcespan-method.md
+            - name: OpenMapTokensToSourceSpans Yöntemi
+              href: isymunmanagedwriter5-openmaptokenstosourcespans-method.md
+    - name: Tanılama Sembol Deposu Numaralandırmaları
+      href: diagnostics-symbol-store-enumerations.md
       items:
-      - name: AutoAttach Yöntemi
-        href: idebugautoattach-autoattach-method.md
-    - name: INotifyConnection2 Arabirimi
-      href: inotifyconnection2-interface.md
+        - name: CorSymAddrKind Numaralandırması
+          href: corsymaddrkind-enumeration.md
+        - name: CorSymSearchPolicyAttributes Numaralandırması
+          href: corsymsearchpolicyattributes-enumeration.md
+        - name: CorSymVarFlag Numaralandırması
+          href: corsymvarflag-enumeration.md
+        - name: NOTIFY_FILTER Numaralandırması
+          href: notify-filter-enumeration.md
+    - name: Tanılama Sembol Deposu Yapıları
+      href: diagnostics-symbol-store-structures.md
       items:
-      - name: RegisterNotifySource Yöntemi
-        href: inotifyconnection2-registernotifysource-method.md
-      - name: UnregisterNotifySource Yöntemi
-        href: inotifyconnection2-unregisternotifysource-method.md
-    - name: INotifySink2 Arabirimi
-      href: inotifysink2-interface.md
-      items:
-      - name: OnSyncCallEnter Yöntemi
-        href: inotifysink2-onsynccallenter-method.md
-      - name: OnSyncCallExit Yöntemi
-        href: inotifysink2-onsynccallexit-method.md
-      - name: OnSyncCallOut Yöntemi
-        href: inotifysink2-onsynccallout-method.md
-      - name: OnSyncCallReturn Yöntemi
-        href: inotifysink2-onsynccallreturn-method.md
-    - name: INotifySource2 Arabirimi
-      href: inotifysource2-interface.md
-      items:
-      - name: SetNotifyFilter Yöntemi
-        href: inotifysource2-setnotifyfilter-method.md
-    - name: ISymENCUnmanagedMethod Arabirimi
-      href: isymencunmanagedmethod-interface.md
-      items:
-      - name: GetDocumentsForMethod Yöntemi
-        href: isymencunmanagedmethod-getdocumentsformethod-method.md
-      - name: GetDocumentsForMethodCount Yöntemi
-        href: isymencunmanagedmethod-getdocumentsformethodcount-method.md
-      - name: GetFileNameFromOffset Yöntemi
-        href: isymencunmanagedmethod-getfilenamefromoffset-method.md
-      - name: GetLineFromOffset Yöntemi
-        href: isymencunmanagedmethod-getlinefromoffset-method.md
-      - name: GetSourceExtentInDocument Yöntemi
-        href: isymencunmanagedmethod-getsourceextentindocument-method.md
-    - name: ISymUnmanagedAsyncMethod Arabirimi
-      href: isymunmanagedasyncmethod-interface.md
-      items:
-      - name: GetAsyncStepInfo Yöntemi
-        href: isymunmanagedasyncmethod-getasyncstepinfo-method.md
-      - name: GetAsyncStepInfoCount Yöntemi
-        href: isymunmanagedasyncmethod-getasyncstepinfocount-method.md
-      - name: GetCatchHandlerILOffset Yöntemi
-        href: isymunmanagedasyncmethod-getcatchhandleriloffset-method.md
-      - name: GetKickoffMethod Yöntemi
-        href: isymunmanagedasyncmethod-getkickoffmethod-method.md
-      - name: HasCatchHandlerILOffset Yöntemi
-        href: isymunmanagedasyncmethod-hascatchhandleriloffset-method.md
-      - name: IsAsyncMethod Yöntemi
-        href: isymunmanagedasyncmethod-isasyncmethod-method.md
-    - name: ISymUnmanagedAsyncMethodPropertiesWriter Arabirimi
-      href: isymunmanagedasyncmethodpropertieswriter-interface.md
-      items:
-      - name: DefineAsyncStepInfo Yöntemi
-        href: isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md
-      - name: DefineCatchHandlerILOffset Yöntemi
-        href: isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md
-      - name: DefineKickoffMethod Yöntemi
-        href: isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md
-    - name: ISymUnmanagedBinder Arabirimi
-      href: isymunmanagedbinder-interface.md
-      items:
-      - name: GetReaderForFile Yöntemi
-        href: isymunmanagedbinder-getreaderforfile-method.md
-      - name: GetReaderFromStream Yöntemi
-        href: isymunmanagedbinder-getreaderfromstream-method.md
-    - name: ISymUnmanagedBinder2 Arabirimi
-      href: isymunmanagedbinder2-interface.md
-      items:
-      - name: GetReaderForFile2 Yöntemi
-        href: isymunmanagedbinder2-getreaderforfile2-method.md
-    - name: ISymUnmanagedBinder3 Arabirimi
-      href: isymunmanagedbinder3-interface.md
-      items:
-      - name: GetReaderFromCallback Yöntemi
-        href: isymunmanagedbinder3-getreaderfromcallback-method.md
-    - name: ISymUnmanagedConstant Arabirimi
-      href: isymunmanagedconstant-interface.md
-      items:
-      - name: GetName Yöntemi
-        href: isymunmanagedconstant-getname-method.md
-      - name: GetSignature Yöntemi
-        href: isymunmanagedconstant-getsignature-method.md
-      - name: GetValue Yöntemi
-        href: isymunmanagedconstant-getvalue-method.md
-    - name: ISymUnmanagedDispose Arabirimi
-      href: isymunmanageddispose-interface.md
-      items:
-      - name: Destroy Yöntemi
-        href: isymunmanageddispose-destroy-method.md
-    - name: ISymUnmanagedDocument Arabirimi
-      href: isymunmanageddocument-interface.md
-      items:
-      - name: FindClosestLine Yöntemi
-        href: isymunmanageddocument-findclosestline-method.md
-      - name: GetCheckSum Yöntemi
-        href: isymunmanageddocument-getchecksum-method.md
-      - name: GetCheckSumAlgorithmId Yöntemi
-        href: isymunmanageddocument-getchecksumalgorithmid-method.md
-      - name: GetDocumentType Yöntemi
-        href: isymunmanageddocument-getdocumenttype-method.md
-      - name: GetLanguage Yöntemi
-        href: isymunmanageddocument-getlanguage-method.md
-      - name: GetLanguageVendor Yöntemi
-        href: isymunmanageddocument-getlanguagevendor-method.md
-      - name: GetSourceLength Yöntemi
-        href: isymunmanageddocument-getsourcelength-method.md
-      - name: GetSourceRange Yöntemi
-        href: isymunmanageddocument-getsourcerange-method.md
-      - name: GetURL Yöntemi
-        href: isymunmanageddocument-geturl-method.md
-      - name: HasEmbeddedSource Yöntemi
-        href: isymunmanageddocument-hasembeddedsource-method.md
-    - name: ISymUnmanagedDocumentWriter Arabirimi
-      href: isymunmanageddocumentwriter-interface.md
-      items:
-      - name: SetCheckSum Yöntemi
-        href: isymunmanageddocumentwriter-setchecksum-method.md
-      - name: SetSource Yöntemi
-        href: isymunmanageddocumentwriter-setsource-method.md
-    - name: ISymUnmanagedENCUpdate Arabirimi
-      href: isymunmanagedencupdate-interface.md
-      items:
-      - name: GetLocalVariableCount Yöntemi
-        href: isymunmanagedencupdate-getlocalvariablecount-method.md
-      - name: GetLocalVariables Yöntemi
-        href: isymunmanagedencupdate-getlocalvariables-method.md
-      - name: InitializeForEnc Yöntemi
-        href: isymunmanagedencupdate-initializeforenc-method.md
-      - name: UpdateMethodLines Yöntemi
-        href: isymunmanagedencupdate-updatemethodlines-method.md
-      - name: UpdateSymbolStore2 Yöntemi
-        href: isymunmanagedencupdate-updatesymbolstore2-method.md
-    - name: ISymUnmanagedMethod Arabirimi
-      href: isymunmanagedmethod-interface.md
-      items:
-      - name: GetNamespace Yöntemi
-        href: isymunmanagedmethod-getnamespace-method.md
-      - name: GetOffset Yöntemi
-        href: isymunmanagedmethod-getoffset-method.md
-      - name: GetParameters Yöntemi
-        href: isymunmanagedmethod-getparameters-method.md
-      - name: GetRanges Yöntemi
-        href: isymunmanagedmethod-getranges-method.md
-      - name: GetRootScope Yöntemi
-        href: isymunmanagedmethod-getrootscope-method.md
-      - name: GetScopeFromOffset Yöntemi
-        href: isymunmanagedmethod-getscopefromoffset-method.md
-      - name: GetSequencePointCount Yöntemi
-        href: isymunmanagedmethod-getsequencepointcount-method.md
-      - name: GetSequencePoints Yöntemi
-        href: isymunmanagedmethod-getsequencepoints-method.md
-      - name: GetSourceStartEnd Yöntemi
-        href: isymunmanagedmethod-getsourcestartend-method.md
-      - name: GetToken Yöntemi
-        href: isymunmanagedmethod-gettoken-method.md
-    - name: ISymUnmanagedNamespace Arabirimi
-      href: isymunmanagednamespace-interface.md
-      items:
-      - name: GetName Yöntemi
-        href: isymunmanagednamespace-getname-method.md
-      - name: GetNamespaces Yöntemi
-        href: isymunmanagednamespace-getnamespaces-method.md
-      - name: GetVariables Yöntemi
-        href: isymunmanagednamespace-getvariables-method.md
-    - name: ISymUnmanagedReader Arabirimi
-      href: isymunmanagedreader-interface.md
-      items:
-      - name: GetDocument Yöntemi
-        href: isymunmanagedreader-getdocument-method.md
-      - name: GetDocuments Yöntemi
-        href: isymunmanagedreader-getdocuments-method.md
-      - name: GetDocumentVersion Yöntemi
-        href: isymunmanagedreader-getdocumentversion-method.md
-      - name: GetGlobalVariables Yöntemi
-        href: isymunmanagedreader-getglobalvariables-method.md
-      - name: GetMethod Yöntemi
-        href: isymunmanagedreader-getmethod-method.md
-      - name: GetMethodByVersion Yöntemi
-        href: isymunmanagedreader-getmethodbyversion-method.md
-      - name: GetMethodFromDocumentPosition Yöntemi
-        href: isymunmanagedreader-getmethodfromdocumentposition-method.md
-      - name: GetMethodsFromDocumentPosition Yöntemi
-        href: isymunmanagedreader-getmethodsfromdocumentposition-method.md
-      - name: GetMethodVersion Yöntemi
-        href: isymunmanagedreader-getmethodversion-method.md
-      - name: GetNamespaces Yöntemi
-        href: isymunmanagedreader-getnamespaces-method.md
-      - name: GetSymAttribute Yöntemi
-        href: isymunmanagedreader-getsymattribute-method.md
-      - name: GetSymbolStoreFileName Yöntemi
-        href: isymunmanagedreader-getsymbolstorefilename-method.md
-      - name: GetUserEntryPoint Yöntemi
-        href: isymunmanagedreader-getuserentrypoint-method.md
-      - name: GetVariables Yöntemi
-        href: isymunmanagedreader-getvariables-method.md
-      - name: Initialize Yöntemi
-        href: isymunmanagedreader-initialize-method.md
-      - name: ReplaceSymbolStore Yöntemi
-        href: isymunmanagedreader-replacesymbolstore-method.md
-      - name: UpdateSymbolStore Yöntemi
-        href: isymunmanagedreader-updatesymbolstore-method.md
-    - name: ISymUnmanagedReader2 Arabirimi
-      href: isymunmanagedreader2-interface.md
-      items:
-      - name: GetMethodByVersionPreRemap Yöntemi
-        href: isymunmanagedreader2-getmethodbyversionpreremap-method.md
-      - name: GetMethodsInDocument Yöntemi
-        href: isymunmanagedreader2-getmethodsindocument-method.md
-      - name: GetSymAttributePreRemap Yöntemi
-        href: isymunmanagedreader2-getsymattributepreremap-method.md
-    - name: ISymUnmanagedReaderSymbolSearchInfo Arabirimi
-      href: isymunmanagedreadersymbolsearchinfo-interface.md
-      items:
-      - name: GetSymbolSearchInfoCount Yöntemi
-        href: isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md
-      - name: GetSymbolSearchInfo Yöntemi
-        href: isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md
-    - name: ISymUnmanagedScope Arabirimi
-      href: isymunmanagedscope-interface.md
-      items:
-      - name: GetChildren Yöntemi
-        href: isymunmanagedscope-getchildren-method.md
-      - name: GetEndOffset Yöntemi
-        href: isymunmanagedscope-getendoffset-method.md
-      - name: GetLocalCount Yöntemi
-        href: isymunmanagedscope-getlocalcount-method.md
-      - name: GetLocals Yöntemi
-        href: isymunmanagedscope-getlocals-method.md
-      - name: GetMethod Yöntemi
-        href: isymunmanagedscope-getmethod-method.md
-      - name: GetNamespaces Yöntemi
-        href: isymunmanagedscope-getnamespaces-method.md
-      - name: GetParent Yöntemi
-        href: isymunmanagedscope-getparent-method.md
-      - name: GetStartOffset Yöntemi
-        href: isymunmanagedscope-getstartoffset-method.md
-    - name: ISymUnmanagedScope2 Arabirimi
-      href: isymunmanagedscope2-interface.md
-      items:
-      - name: GetConstantCount Yöntemi
-        href: isymunmanagedscope2-getconstantcount-method.md
-      - name: GetConstants Yöntemi
-        href: isymunmanagedscope2-getconstants-method.md
-    - name: ISymUnmanagedSourceServerModule Arabirimi
-      href: isymunmanagedsourceservermodule-interface.md
-      items:
-      - name: GetSourceServerData Yöntemi
-        href: isymunmanagedsourceservermodule-getsourceserverdata-method.md
-    - name: ISymUnmanagedSymbolSearchInfo Arabirimi
-      href: isymunmanagedsymbolsearchinfo-interface.md
-      items:
-      - name: GetHRESULT Yöntemi
-        href: isymunmanagedsymbolsearchinfo-gethresult-method.md
-      - name: GetSearchPath Yöntemi
-        href: isymunmanagedsymbolsearchinfo-getsearchpath-method.md
-      - name: GetSearchPathLength Yöntemi
-        href: isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md
-    - name: ISymUnmanagedVariable Arabirimi
-      href: isymunmanagedvariable-interface.md
-      items:
-      - name: GetAddressField1 Yöntemi
-        href: isymunmanagedvariable-getaddressfield1-method.md
-      - name: GetAddressField2 Yöntemi
-        href: isymunmanagedvariable-getaddressfield2-method.md
-      - name: GetAddressField3 Yöntemi
-        href: isymunmanagedvariable-getaddressfield3-method.md
-      - name: GetAddressKind Yöntemi
-        href: isymunmanagedvariable-getaddresskind-method.md
-      - name: GetAttributes Yöntemi
-        href: isymunmanagedvariable-getattributes-method.md
-      - name: GetEndOffset Yöntemi
-        href: isymunmanagedvariable-getendoffset-method.md
-      - name: GetName Yöntemi
-        href: isymunmanagedvariable-getname-method.md
-      - name: GetSignature Yöntemi
-        href: isymunmanagedvariable-getsignature-method.md
-      - name: GetStartOffset Yöntemi
-        href: isymunmanagedvariable-getstartoffset-method.md
-    - name: ISymUnmanagedWriter Arabirimi
-      href: isymunmanagedwriter-interface.md
-      items:
-      - name: Abort Yöntemi
-        href: isymunmanagedwriter-abort-method.md
-      - name: Close Yöntemi
-        href: isymunmanagedwriter-close-method.md
-      - name: CloseMethod Yöntemi
-        href: isymunmanagedwriter-closemethod-method.md
-      - name: CloseNamespace Yöntemi
-        href: isymunmanagedwriter-closenamespace-method.md
-      - name: CloseScope Yöntemi
-        href: isymunmanagedwriter-closescope-method.md
-      - name: DefineConstant Yöntemi
-        href: isymunmanagedwriter-defineconstant-method.md
-      - name: DefineDocument Yöntemi
-        href: isymunmanagedwriter-definedocument-method.md
-      - name: DefineField Yöntemi
-        href: isymunmanagedwriter-definefield-method.md
-      - name: DefineGlobalVariable Yöntemi
-        href: isymunmanagedwriter-defineglobalvariable-method.md
-      - name: DefineLocalVariable Yöntemi
-        href: isymunmanagedwriter-definelocalvariable-method.md
-      - name: DefineParameter Yöntemi
-        href: isymunmanagedwriter-defineparameter-method.md
-      - name: DefineSequencePoints Yöntemi
-        href: isymunmanagedwriter-definesequencepoints-method.md
-      - name: GetDebugInfo Yöntemi
-        href: isymunmanagedwriter-getdebuginfo-method.md
-      - name: Initialize Yöntemi
-        href: isymunmanagedwriter-initialize-method.md
-      - name: Initialize2 Yöntemi
-        href: isymunmanagedwriter-initialize2-method.md
-      - name: OpenMethod Yöntemi
-        href: isymunmanagedwriter-openmethod-method.md
-      - name: OpenNamespace Yöntemi
-        href: isymunmanagedwriter-opennamespace-method.md
-      - name: OpenScope Yöntemi
-        href: isymunmanagedwriter-openscope-method.md
-      - name: RemapToken Yöntemi
-        href: isymunmanagedwriter-remaptoken-method.md
-      - name: SetMethodSourceRange Yöntemi
-        href: isymunmanagedwriter-setmethodsourcerange-method.md
-      - name: SetScopeRange Yöntemi
-        href: isymunmanagedwriter-setscoperange-method.md
-      - name: SetSymAttribute Yöntemi
-        href: isymunmanagedwriter-setsymattribute-method.md
-      - name: SetUserEntryPoint Yöntemi
-        href: isymunmanagedwriter-setuserentrypoint-method.md
-      - name: UsingNamespace Yöntemi
-        href: isymunmanagedwriter-usingnamespace-method.md
-    - name: ISymUnmanagedWriter2 Arabirimi
-      href: isymunmanagedwriter2-interface.md
-      items:
-      - name: DefineConstant2 Yöntemi
-        href: isymunmanagedwriter2-defineconstant2-method.md
-      - name: DefineGlobalVariable2 Yöntemi
-        href: isymunmanagedwriter2-defineglobalvariable2-method.md
-      - name: DefineLocalVariable2 Yöntemi
-        href: isymunmanagedwriter2-definelocalvariable2-method.md
-    - name: ISymUnmanagedWriter3 Arabirimi
-      href: isymunmanagedwriter3-interface.md
-      items:
-      - name: Commit Yöntemi
-        href: isymunmanagedwriter3-commit-method.md
-      - name: OpenMethod2 Yöntemi
-        href: isymunmanagedwriter3-openmethod2-method.md
-    - name: ISymUnmanagedWriter4 Arabirimi
-      href: isymunmanagedwriter4-interface.md
-      items:
-      - name: GetDebugInfoWithPadding Yöntemi
-        href: isymunmanagedwriter4-getdebuginfowithpadding-method.md
-    - name: ISymUnmanagedWriter5 Arabirimi
-      href: isymunmanagedwriter5-interface.md
-      items:
-      - name: CloseMapTokensToSourceSpans Yöntemi
-        href: isymunmanagedwriter5-closemaptokenstosourcespans-method.md
-      - name: MapTokenToSourceSpan Yöntemi
-        href: isymunmanagedwriter5-maptokentosourcespan-method.md
-      - name: OpenMapTokensToSourceSpans Yöntemi
-        href: isymunmanagedwriter5-openmaptokenstosourcespans-method.md
-  - name: Tanılama Sembol Deposu Numaralandırmaları
-    href: diagnostics-symbol-store-enumerations.md
-    items:
-    - name: CorSymAddrKind Numaralandırması
-      href: corsymaddrkind-enumeration.md
-    - name: CorSymSearchPolicyAttributes Numaralandırması
-      href: corsymsearchpolicyattributes-enumeration.md
-    - name: CorSymVarFlag Numaralandırması
-      href: corsymvarflag-enumeration.md
-    - name: NOTIFY_FILTER Numaralandırması
-      href: notify-filter-enumeration.md
-  - name: Tanılama Sembol Deposu Yapıları
-    href: diagnostics-symbol-store-structures.md
-    items:
-    - name: CALL_ID Yapısı
-      href: call-id-structure.md
-    - name: SYMLINEDELTA Yapısı
-      href: symlinedelta-structure.md
-    - name: USER_THREAD Yapısı
-      href: user-thread-structure.md
-ms.openlocfilehash: e9bec23db08e17d11aa5cabadb8967bcc8b32b77
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471690"
+        - name: CALL_ID Yapısı
+          href: call-id-structure.md
+        - name: SYMLINEDELTA Yapısı
+          href: symlinedelta-structure.md
+        - name: USER_THREAD Yapısı
+          href: user-thread-structure.md

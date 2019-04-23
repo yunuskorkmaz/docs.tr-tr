@@ -1,30 +1,23 @@
-items:
 - name: Giriş
   href: index.md
   items:
-  - name: Modern web uygulamalarının özellikleri
-    href: modern-web-applications-characteristics.md
-  - name: Geleneksel web uygulamaları ile tek sayfa uygulamaları arasında seçim yapma
-    href: choose-between-traditional-web-and-single-page-apps.md
-  - name: Mimari ilkeleri
-    href: architectural-principles.md
-  - name: Ortak web uygulaması mimarileri
-    href: common-web-application-architectures.md
-  - name: Ortak istemci tarafı web teknolojileri
-    href: common-client-side-web-technologies.md
-  - name: ASP.NET Core MVC Uygulamaları Geliştirme
-    href: develop-asp-net-core-mvc-apps.md
-  - name: ASP.NET Core’da verilerle çalışma
-    href: work-with-data-in-asp-net-core-apps.md
-  - name: ASP.NET Core MVC Uygulamalarını Test Etme
-    href: test-asp-net-core-mvc-apps.md
-  - name: Azure için geliştirme işlemi
-    href: development-process-for-azure.md
-  - name: ASP.NET web uygulamaları için Azure barındırma önerileri
-    href: azure-hosting-recommendations-for-asp-net-web-apps.md
-ms.openlocfilehash: 65f168d07788f62a7f1bb7a189b728fce0386247
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471760"
+    - name: Modern web uygulamalarının özellikleri
+      href: modern-web-applications-characteristics.md
+    - name: Geleneksel web uygulamaları ile tek sayfa uygulamaları arasında seçim yapma
+      href: choose-between-traditional-web-and-single-page-apps.md
+    - name: Mimari ilkeleri
+      href: architectural-principles.md
+    - name: Ortak web uygulaması mimarileri
+      href: common-web-application-architectures.md
+    - name: Ortak istemci tarafı web teknolojileri
+      href: common-client-side-web-technologies.md
+    - name: ASP.NET Core MVC Uygulamaları Geliştirme
+      href: develop-asp-net-core-mvc-apps.md
+    - name: ASP.NET Core’da verilerle çalışma
+      href: work-with-data-in-asp-net-core-apps.md
+    - name: ASP.NET Core MVC Uygulamalarını Test Etme
+      href: test-asp-net-core-mvc-apps.md
+    - name: Azure için geliştirme işlemi
+      href: development-process-for-azure.md
+    - name: ASP.NET web uygulamaları için Azure barındırma önerileri
+      href: azure-hosting-recommendations-for-asp-net-web-apps.md

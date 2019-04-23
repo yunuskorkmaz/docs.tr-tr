@@ -1,30 +1,23 @@
-items:
 - name: Visual Basic'de LINQ
   href: index.md
   items:
-  - name: LINQ'e Giriş
-    href: introduction-to-linq.md
-  - name: 'Nasıl yapılır: LINQ Kullanarak Veritabanını Sorgulama'
-    href: how-to-query-a-database-by-using-linq.md
-  - name: 'Nasıl yapılır: Bir Saklı Yordamı LINQ Kullanarak Çağırma'
-    href: how-to-call-a-stored-procedure-by-using-linq.md
-  - name: 'Nasıl yapılır: LINQ Kullanarak Veritabanındaki Verileri Değiştirme'
-    href: how-to-modify-data-in-a-database-by-using-linq.md
-  - name: 'Nasıl yapılır: Birleştirmeleri Kullanarak Verileri LINQ İle Birleştirme'
-    href: how-to-combine-data-with-linq-by-using-joins.md
-  - name: 'Nasıl yapılır: Sorgu Sonuçlarını LINQ Kullanarak Sıralama'
-    href: how-to-sort-query-results-by-using-linq.md
-  - name: 'Nasıl yapılır: Sorgu Sonuçlarını LINQ Kullanarak Filtreleme'
-    href: how-to-filter-query-results-by-using-linq.md
-  - name: 'Nasıl yapılır: LINQ Kullanarak Verileri Sayma, Toplama veya Ortalamasını Alma'
-    href: how-to-count-sum-or-average-data-by-using-linq.md
-  - name: 'Nasıl yapılır: LINQ Kullanarak Bir Sorgu Sonucunda En Düşük ve En Fazla Değeri Bulma'
-    href: how-to-find-the-minimum-or-maximum-value-in-a-query-result.md
-  - name: 'Nasıl yapılır: Bir LINQ Sorgu Sonucunu Belirli Bir Tür Olarak Döndürme'
-    href: how-to-return-a-linq-query-result-as-a-specific-type.md
-ms.openlocfilehash: 0d56e6e5c147b71bbd4aa35bab93751b15e63a8d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58472062"
+    - name: LINQ'e Giriş
+      href: introduction-to-linq.md
+    - name: 'Nasıl yapılır: LINQ Kullanarak Veritabanını Sorgulama'
+      href: how-to-query-a-database-by-using-linq.md
+    - name: 'Nasıl yapılır: Bir Saklı Yordamı LINQ Kullanarak Çağırma'
+      href: how-to-call-a-stored-procedure-by-using-linq.md
+    - name: 'Nasıl yapılır: LINQ Kullanarak Veritabanındaki Verileri Değiştirme'
+      href: how-to-modify-data-in-a-database-by-using-linq.md
+    - name: 'Nasıl yapılır: Birleştirmeleri Kullanarak Verileri LINQ İle Birleştirme'
+      href: how-to-combine-data-with-linq-by-using-joins.md
+    - name: 'Nasıl yapılır: Sorgu Sonuçlarını LINQ Kullanarak Sıralama'
+      href: how-to-sort-query-results-by-using-linq.md
+    - name: 'Nasıl yapılır: Sorgu Sonuçlarını LINQ Kullanarak Filtreleme'
+      href: how-to-filter-query-results-by-using-linq.md
+    - name: 'Nasıl yapılır: LINQ Kullanarak Verileri Sayma, Toplama veya Ortalamasını Alma'
+      href: how-to-count-sum-or-average-data-by-using-linq.md
+    - name: 'Nasıl yapılır: LINQ Kullanarak Bir Sorgu Sonucunda En Düşük ve En Fazla Değeri Bulma'
+      href: how-to-find-the-minimum-or-maximum-value-in-a-query-result.md
+    - name: 'Nasıl yapılır: Bir LINQ Sorgu Sonucunu Belirli Bir Tür Olarak Döndürme'
+      href: how-to-return-a-linq-query-result-as-a-specific-type.md

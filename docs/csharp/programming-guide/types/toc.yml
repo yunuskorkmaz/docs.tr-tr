@@ -1,25 +1,18 @@
-items:
 - name: Türler
   href: index.md
   items:
-  - name: Tür Değiştirme ve Tür Dönüştürmeler
-    href: casting-and-type-conversions.md
-  - name: Kutulama ve Kutudan Çıkarma
-    href: boxing-and-unboxing.md
-  - name: Tür dinamiği kullanma
-    href: using-type-dynamic.md
-    items:
-    - name: 'İzlenecek yol: Dinamik Nesneler Oluşturma ve Kullanma (C# and Visual Basic)'
-      href: walkthrough-creating-and-using-dynamic-objects.md
-  - name: "Nasıl yapılır: byte Dizisini int'e Dönüştürme"
-    href: how-to-convert-a-byte-array-to-an-int.md
-  - name: 'Nasıl yapılır: Bir Dizeyi Sayıya Dönüştürme'
-    href: how-to-convert-a-string-to-a-number.md
-  - name: 'Nasıl yapılır: Onaltılık Dizeler ve Sayısal Türler Arasında Dönüştürme'
-    href: how-to-convert-between-hexadecimal-strings-and-numeric-types.md
-ms.openlocfilehash: ec544bd0f41d24e9775277ac1968787de9391dd5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471636"
+    - name: Tür Değiştirme ve Tür Dönüştürmeler
+      href: casting-and-type-conversions.md
+    - name: Kutulama ve Kutudan Çıkarma
+      href: boxing-and-unboxing.md
+    - name: Tür dinamiği kullanma
+      href: using-type-dynamic.md
+      items:
+        - name: 'İzlenecek yol: Dinamik Nesneler Oluşturma ve Kullanma (C# and Visual Basic)'
+          href: walkthrough-creating-and-using-dynamic-objects.md
+    - name: 'Nasıl yapılır: byte Dizisini int''e Dönüştürme'
+      href: how-to-convert-a-byte-array-to-an-int.md
+    - name: 'Nasıl yapılır: Bir Dizeyi Sayıya Dönüştürme'
+      href: how-to-convert-a-string-to-a-number.md
+    - name: 'Nasıl yapılır: Onaltılık Dizeler ve Sayısal Türler Arasında Dönüştürme'
+      href: how-to-convert-between-hexadecimal-strings-and-numeric-types.md
