@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 9e8fdb54bddc32c08adbe114e2d46e2508585bc1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234267"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60118924"
 ---
 ### <a name="wcf-services-that-use-nettcp-with-ssl-security-and-md5-certificate-authentication"></a>SSL güvenlik ve MD5 sertifika kimlik doğrulaması ile NETTCP kullanan WCF hizmetleri
 
