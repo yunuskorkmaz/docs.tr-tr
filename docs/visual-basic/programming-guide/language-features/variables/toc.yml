@@ -1,51 +1,44 @@
-items:
 - name: Visual Basic'de Değişkenler
   href: index.md
   items:
-  - name: Değişken Bildirimi
-    href: variable-declaration.md
-    items:
-    - name: 'Nasıl yapılır: Yeni Değişken Oluşturma'
-      href: how-to-create-a-new-variable.md
-    - name: 'Nasıl yapılır: Değeri Değişmeyen Bir Değişken Oluşturma'
-      href: how-to-create-a-variable-that-does-not-change-in-value.md
-    - name: 'Nasıl yapılır: Bir Değişkende Veri Ekleme Çıkarma'
-      href: how-to-move-data-into-and-out-of-a-variable.md
-  - name: Nesne Değişkenleri
-    href: object-variables.md
-    items:
-    - name: 'Nasıl yapılır: Uzun Bir Nitelenmiş Yola Sahip Nesneye Erişimi Hızlandırma'
-      href: how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md
-  - name: Nesne Değişken Bildirimi
-    href: object-variable-declaration.md
-    items:
-    - name: 'Nasıl yapılır: Bir Nesnenin Üyelerine Erişme'
-      href: how-to-access-members-of-an-object.md
-    - name: Nesne Değişkeni Ataması
-      href: object-variable-assignment.md
+    - name: Değişken Bildirimi
+      href: variable-declaration.md
       items:
-      - name: "Nasıl yapılır: Visual Basic'te Nesne Değişkeni Bildirme ve Nesne Atama"
-        href: how-to-declare-an-object-variable-and-assign-an-object-to-it.md
-      - name: 'Nasıl yapılır: Nesne Değişkeninin Herhangi Bir Örneğe Başvurmamasını Sağlama'
-        href: how-to-make-an-object-variable-not-refer-to-any-instance.md
-    - name: Nesne Değişkeni Değerleri
-      href: object-variable-values.md
+        - name: 'Nasıl yapılır: Yeni Değişken Oluşturma'
+          href: how-to-create-a-new-variable.md
+        - name: 'Nasıl yapılır: Değeri Değişmeyen Bir Değişken Oluşturma'
+          href: how-to-create-a-variable-that-does-not-change-in-value.md
+        - name: 'Nasıl yapılır: Bir Değişkende Veri Ekleme Çıkarma'
+          href: how-to-move-data-into-and-out-of-a-variable.md
+    - name: Nesne Değişkenleri
+      href: object-variables.md
       items:
-      - name: 'Nasıl yapılır: Bir Nesnenin Geçerli Örneğine Başvurma'
-        href: how-to-refer-to-the-current-instance-of-an-object.md
-      - name: 'Nasıl yapılır: Bir Nesne Değişkeninin Hangi Türe Başvurduğunu Belirleme'
-        href: how-to-determine-what-type-an-object-variable-refers-to.md
-      - name: 'Nasıl yapılır: İki Nesnenin İlgili Olup Olmadığını Belirleme'
-        href: how-to-determine-whether-two-objects-are-related.md
-      - name: 'Nasıl yapılır: İki Nesnenin Aynı Olup Olmadığını Belirleme'
-        href: how-to-determine-whether-two-objects-are-identical.md
-  - name: Yerel Tür Arabirimi
-    href: local-type-inference.md
-  - name: Değişkenlerle İlgili Sorun Giderme
-    href: troubleshooting-variables.md
-ms.openlocfilehash: b62af96e958cd45db593e3334075b432814b51d5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471883"
+        - name: 'Nasıl yapılır: Uzun Bir Nitelenmiş Yola Sahip Nesneye Erişimi Hızlandırma'
+          href: how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md
+    - name: Nesne Değişken Bildirimi
+      href: object-variable-declaration.md
+      items:
+        - name: 'Nasıl yapılır: Bir Nesnenin Üyelerine Erişme'
+          href: how-to-access-members-of-an-object.md
+        - name: Nesne Değişkeni Ataması
+          href: object-variable-assignment.md
+          items:
+            - name: 'Nasıl yapılır: Visual Basic''te Nesne Değişkeni Bildirme ve Nesne Atama'
+              href: how-to-declare-an-object-variable-and-assign-an-object-to-it.md
+            - name: 'Nasıl yapılır: Nesne Değişkeninin Herhangi Bir Örneğe Başvurmamasını Sağlama'
+              href: how-to-make-an-object-variable-not-refer-to-any-instance.md
+        - name: Nesne Değişkeni Değerleri
+          href: object-variable-values.md
+          items:
+            - name: 'Nasıl yapılır: Bir Nesnenin Geçerli Örneğine Başvurma'
+              href: how-to-refer-to-the-current-instance-of-an-object.md
+            - name: 'Nasıl yapılır: Bir Nesne Değişkeninin Hangi Türe Başvurduğunu Belirleme'
+              href: how-to-determine-what-type-an-object-variable-refers-to.md
+            - name: 'Nasıl yapılır: İki Nesnenin İlgili Olup Olmadığını Belirleme'
+              href: how-to-determine-whether-two-objects-are-related.md
+            - name: 'Nasıl yapılır: İki Nesnenin Aynı Olup Olmadığını Belirleme'
+              href: how-to-determine-whether-two-objects-are-identical.md
+    - name: Yerel Tür Arabirimi
+      href: local-type-inference.md
+    - name: Değişkenlerle İlgili Sorun Giderme
+      href: troubleshooting-variables.md

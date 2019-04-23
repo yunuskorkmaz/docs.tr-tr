@@ -1,42 +1,35 @@
-items:
 - name: Sunucusuz uygulamalar e-kitabı
   href: index.md
   items:
-  - name: Mimari yaklaşımları
-    href: architecture-approaches.md
-    items:
-    - name: Mimari dağıtım yaklaşımları
-      href: architecture-deployment-approaches.md
-  - name: Sunucusuz mimari
-    href: serverless-architecture.md
-    items:
-    - name: Sunucusuz mimaride dikkat edilmesi gerekenler
-      href: serverless-architecture-considerations.md
-    - name: Sunucusuz tasarım örnekleri
-      href: serverless-design-examples.md
-  - name: Azure sunucusuz platformu
-    href: azure-serverless-platform.md
-    items:
-    - name: Azure İşlevleri
-      href: azure-functions.md
-    - name: Application Insights
-      href: application-insights.md
-    - name: Azure Logic Apps
-      href: logic-apps.md
-    - name: Azure Event Grid
-      href: event-grid.md
-  - name: Dayanıklı Azure işlevleri
-    href: durable-azure-functions.md
-    items:
-    - name: Düzenleme Desenleri
-      href: orchestration-patterns.md
-  - name: Sunucusuz iş senaryoları ve kullanım örnekleri
-    href: serverless-business-scenarios.md
-  - name: Sonuç
-    href: serverless-conclusion.md
-ms.openlocfilehash: d8d15dc77dd19b6e32319a98be21ddfa43073202
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471903"
+    - name: Mimari yaklaşımları
+      href: architecture-approaches.md
+      items:
+        - name: Mimari dağıtım yaklaşımları
+          href: architecture-deployment-approaches.md
+    - name: Sunucusuz mimari
+      href: serverless-architecture.md
+      items:
+        - name: Sunucusuz mimaride dikkat edilmesi gerekenler
+          href: serverless-architecture-considerations.md
+        - name: Sunucusuz tasarım örnekleri
+          href: serverless-design-examples.md
+    - name: Azure sunucusuz platformu
+      href: azure-serverless-platform.md
+      items:
+        - name: Azure İşlevleri
+          href: azure-functions.md
+        - name: Application Insights
+          href: application-insights.md
+        - name: Azure Logic Apps
+          href: logic-apps.md
+        - name: Azure Event Grid
+          href: event-grid.md
+    - name: Dayanıklı Azure işlevleri
+      href: durable-azure-functions.md
+      items:
+        - name: Düzenleme Desenleri
+          href: orchestration-patterns.md
+    - name: Sunucusuz iş senaryoları ve kullanım örnekleri
+      href: serverless-business-scenarios.md
+    - name: Sonuç
+      href: serverless-conclusion.md

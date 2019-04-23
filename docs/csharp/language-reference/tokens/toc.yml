@@ -1,14 +1,7 @@
-items:
-- name: C# Özel Karakterleri
+- name: 'C# Özel Karakterleri'
   href: index.md
   items:
-  - name: $ -- dize ilişkilendirme
-    href: interpolated.md
-  - name: '@-- tam tanımlayıcı'
-    href: verbatim.md
-ms.openlocfilehash: 91b592922f9944e7ccea94babb9f1810fd22a158
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471859"
+    - name: $ -- dize ilişkilendirme
+      href: interpolated.md
+    - name: '@-- tam tanımlayıcı'
+      href: verbatim.md

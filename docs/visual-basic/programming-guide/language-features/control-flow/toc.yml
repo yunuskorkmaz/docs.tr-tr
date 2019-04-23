@@ -1,24 +1,17 @@
-items:
 - name: Denetim Akışı
   href: index.md
   items:
-  - name: Karar Yapıları
-    href: decision-structures.md
-  - name: Döngü Yapıları
-    href: loop-structures.md
-    items:
-    - name: "İzlenecek yol: Visual Basic'de IEnumerable(Of T) Uygulama"
-      href: walkthrough-implementing-ienumerable-of-t.md
-  - name: Diğer Denetim Yapıları
-    href: other-control-structures.md
-    items:
-    - name: 'Nasıl yapılır: Bir Sistem Kaynağını Atma'
-      href: how-to-dispose-of-a-system-resource.md
-  - name: İç İçe Geçmiş Denetim Yapıları
-    href: nested-control-structures.md
-ms.openlocfilehash: 8f6ec473d9d635ca93013aa23f21dee916fba1ba
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471790"
+    - name: Karar Yapıları
+      href: decision-structures.md
+    - name: Döngü Yapıları
+      href: loop-structures.md
+      items:
+        - name: 'İzlenecek yol: Visual Basic''de IEnumerable(Of T) Uygulama'
+          href: walkthrough-implementing-ienumerable-of-t.md
+    - name: Diğer Denetim Yapıları
+      href: other-control-structures.md
+      items:
+        - name: 'Nasıl yapılır: Bir Sistem Kaynağını Atma'
+          href: how-to-dispose-of-a-system-resource.md
+    - name: İç İçe Geçmiş Denetim Yapıları
+      href: nested-control-structures.md

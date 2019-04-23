@@ -1,39 +1,32 @@
-items:
 - name: Güvenli Olmayan Kod ve İşaretçiler
   href: index.md
   items:
-  - name: Sabit Boyutlu Arabellekler
-    href: fixed-size-buffers.md
-  - name: İşaretçi türleri
-    href: pointer-types.md
-    items:
-    - name: İşaretçi Dönüştürmeler
-      href: pointer-conversions.md
-    - name: İşaretçi İfadeleri
-      href: pointer-expressions.md
+    - name: Sabit Boyutlu Arabellekler
+      href: fixed-size-buffers.md
+    - name: İşaretçi türleri
+      href: pointer-types.md
       items:
-      - name: 'Nasıl yapılır: İşaretçi Değişkeninin Değerini Edinme'
-        href: how-to-obtain-the-value-of-a-pointer-variable.md
-      - name: 'Nasıl yapılır: Değişkenin Adresini Edinme'
-        href: how-to-obtain-the-address-of-a-variable.md
-      - name: 'Nasıl yapılır: İşaretçiyle bir Üyeye Erişme'
-        href: how-to-access-a-member-with-a-pointer.md
-      - name: 'Nasıl yapılır: İşaretçiyle bir Dizi Öğesine Erişme'
-        href: how-to-access-an-array-element-with-a-pointer.md
-      - name: İşaretçileri İşleme
-        href: manipulating-pointers.md
-        items:
-        - name: 'Nasıl yapılır: İşaretçileri Artırma ve Azaltma'
-          href: how-to-increment-and-decrement-pointers.md
-        - name: İşaretçilerde Aritmetik İşlemler
-          href: arithmetic-operations-on-pointers.md
-        - name: İşaretçi Karşılaştırması
-          href: pointer-comparison.md
-    - name: 'Nasıl yapılır: Bayt Dizisine Kopyalamak için İşaretçiler Kullanma'
-      href: how-to-use-pointers-to-copy-an-array-of-bytes.md
-ms.openlocfilehash: 094fa68222bcb4d92ab19a57373789a8234d2606
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471770"
+        - name: İşaretçi Dönüştürmeler
+          href: pointer-conversions.md
+        - name: İşaretçi İfadeleri
+          href: pointer-expressions.md
+          items:
+            - name: 'Nasıl yapılır: İşaretçi Değişkeninin Değerini Edinme'
+              href: how-to-obtain-the-value-of-a-pointer-variable.md
+            - name: 'Nasıl yapılır: Değişkenin Adresini Edinme'
+              href: how-to-obtain-the-address-of-a-variable.md
+            - name: 'Nasıl yapılır: İşaretçiyle bir Üyeye Erişme'
+              href: how-to-access-a-member-with-a-pointer.md
+            - name: 'Nasıl yapılır: İşaretçiyle bir Dizi Öğesine Erişme'
+              href: how-to-access-an-array-element-with-a-pointer.md
+            - name: İşaretçileri İşleme
+              href: manipulating-pointers.md
+              items:
+                - name: 'Nasıl yapılır: İşaretçileri Artırma ve Azaltma'
+                  href: how-to-increment-and-decrement-pointers.md
+                - name: İşaretçilerde Aritmetik İşlemler
+                  href: arithmetic-operations-on-pointers.md
+                - name: İşaretçi Karşılaştırması
+                  href: pointer-comparison.md
+        - name: 'Nasıl yapılır: Bayt Dizisine Kopyalamak için İşaretçiler Kullanma'
+          href: how-to-use-pointers-to-copy-an-array-of-bytes.md

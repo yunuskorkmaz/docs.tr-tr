@@ -1,939 +1,932 @@
-items:
 - name: WCF Özellik Ayrıntıları
   href: index.md
   items:
-  - name: İş Akışı Hizmetleri
-    href: workflow-services.md
-    items:
-    - name: İş Akışı Hizmetlerine Genel Bakış
-      href: workflow-services-overview.md
-    - name: Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma
-      href: creating-a-long-running-workflow-service.md
-    - name: Mesajlaşma Etkinlikleri
-      href: messaging-activities.md
-    - name: 'Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma'
-      href: how-to-create-a-workflow-service-with-messaging-activities.md
-    - name: İş Akışında Sözleşmeleri Kullanma
-      href: using-contracts-in-workflow.md
-    - name: İş Akışı Hizmetlerini Barındırma Genel Bakış
-      href: hosting-workflow-services-overview.md
+    - name: İş Akışı Hizmetleri
+      href: workflow-services.md
       items:
-      - name: İş Akışı Hizmetlerini Barındırma
-        href: hosting-workflow-services.md
-      - name: İş Akışı Hizmeti Ana Bilgisayar Dahili Bileşenleri
-        href: workflow-service-host-internals.md
-      - name: İş Akışı Hizmeti Ana Bilgisayar Genişletilebilirliği
-        href: workflow-service-host-extensibility.md
-      - name: İş Akışı Denetim Uç Noktası
-        href: workflow-control-endpoint.md
-      - name: 'Nasıl yapılır: Windows Server App Fabric ile İş Akışı Hizmeti Barındırma'
-        href: how-to-host-a-workflow-service-with-windows-server-app-fabric.md
-      - name: WorkflowServiceHost Yapılandırma
-        href: configuring-workflowservicehost.md
-        items:
-        - name: 'Nasıl yapılır: WorkflowServiceHost ile Kalıcılığı Yapılandırma'
-          href: how-to-configure-persistence-with-workflowservicehost.md
-        - name: 'Nasıl yapılır: WorkflowServiceHost ile İzlemeyi Yapılandırma'
-          href: how-to-configure-tracking-with-workflowservicehost.md
-        - name: 'Nasıl yapılır: WorkflowServiceHost ile Boşta Davranışı Yapılandırma'
-          href: how-to-configure-idle-behavior-with-workflowservicehost.md
-        - name: 'Nasıl yapılır: WorkflowServiceHost ile İş Akışı Tarafından İşlenmeyen Özel Durum Davranışını Yapılandırma'
-          href: config-workflow-unhandled-exception-workflowservicehost.md
-    - name: Bağıntı
-      href: correlation.md
+        - name: İş Akışı Hizmetlerine Genel Bakış
+          href: workflow-services-overview.md
+        - name: Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma
+          href: creating-a-long-running-workflow-service.md
+        - name: Mesajlaşma Etkinlikleri
+          href: messaging-activities.md
+        - name: 'Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma'
+          href: how-to-create-a-workflow-service-with-messaging-activities.md
+        - name: İş Akışında Sözleşmeleri Kullanma
+          href: using-contracts-in-workflow.md
+        - name: İş Akışı Hizmetlerini Barındırma Genel Bakış
+          href: hosting-workflow-services-overview.md
+          items:
+            - name: İş Akışı Hizmetlerini Barındırma
+              href: hosting-workflow-services.md
+            - name: İş Akışı Hizmeti Ana Bilgisayar Dahili Bileşenleri
+              href: workflow-service-host-internals.md
+            - name: İş Akışı Hizmeti Ana Bilgisayar Genişletilebilirliği
+              href: workflow-service-host-extensibility.md
+            - name: İş Akışı Denetim Uç Noktası
+              href: workflow-control-endpoint.md
+            - name: 'Nasıl yapılır: Windows Server App Fabric ile İş Akışı Hizmeti Barındırma'
+              href: how-to-host-a-workflow-service-with-windows-server-app-fabric.md
+            - name: WorkflowServiceHost Yapılandırma
+              href: configuring-workflowservicehost.md
+              items:
+                - name: 'Nasıl yapılır: WorkflowServiceHost ile Kalıcılığı Yapılandırma'
+                  href: how-to-configure-persistence-with-workflowservicehost.md
+                - name: 'Nasıl yapılır: WorkflowServiceHost ile İzlemeyi Yapılandırma'
+                  href: how-to-configure-tracking-with-workflowservicehost.md
+                - name: 'Nasıl yapılır: WorkflowServiceHost ile Boşta Davranışı Yapılandırma'
+                  href: how-to-configure-idle-behavior-with-workflowservicehost.md
+                - name: 'Nasıl yapılır: WorkflowServiceHost ile İş Akışı Tarafından İşlenmeyen Özel Durum Davranışını Yapılandırma'
+                  href: config-workflow-unhandled-exception-workflowservicehost.md
+        - name: Bağıntı
+          href: correlation.md
+          items:
+            - name: Bağıntı Genel Bakış
+              href: correlation-overview.md
+            - name: Dayanıklı Çift Yönlü
+              href: durable-duplex-correlation.md
+            - name: İstek-Yanıt
+              href: request-reply-correlation.md
+            - name: Bağıntı Sorunlarını Giderme
+              href: troubleshooting-correlation.md
+        - name: Bir İş Akışı Hizmetinde Seri Hale Getirmeyi Yapılandırma
+          href: configuring-serialization-in-a-workflow-service.md
+        - name: 'Nasıl yapılır: Bir İş Akışı Uygulamasından Bir Hizmete Erişme'
+          href: how-to-access-a-service-from-a-workflow-application.md
+        - name: Düzen Dışı İleti İşleme
+          href: out-of-order-message-processing.md
+        - name: İş Akışı Hizmetlerine İşlemlerin Giriş ve Çıkış Akışını Gerçekleştirme
+          href: flowing-transactions-into-and-out-of-workflow-services.md
+        - name: Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme
+          href: changing-the-cache-sharing-levels-for-send-activities.md
+        - name: Bir İş Akışı Çözümüne Hizmet Başvurusu Ekleme
+          href: adding-a-service-reference-in-a-workflow-solution.md
+        - name: WorkflowServiceHost Yan Yana Sürüm Oluşturma
+          href: side-by-side-versioning-in-workflowservicehost.md
+    - name: 'Uç Noktalar: Adresler, Bağlamalar ve Sözleşmeler'
+      href: endpoints-addresses-bindings-and-contracts.md
       items:
-      - name: Bağıntı Genel Bakış
-        href: correlation-overview.md
-      - name: Dayanıklı Çift Yönlü
-        href: durable-duplex-correlation.md
-      - name: İstek-Yanıt
-        href: request-reply-correlation.md
-      - name: Bağıntı Sorunlarını Giderme
-        href: troubleshooting-correlation.md
-    - name: Bir İş Akışı Hizmetinde Seri Hale Getirmeyi Yapılandırma
-      href: configuring-serialization-in-a-workflow-service.md
-    - name: 'Nasıl yapılır: Bir İş Akışı Uygulamasından Bir Hizmete Erişme'
-      href: how-to-access-a-service-from-a-workflow-application.md
-    - name: Düzen Dışı İleti İşleme
-      href: out-of-order-message-processing.md
-    - name: İş Akışı Hizmetlerine İşlemlerin Giriş ve Çıkış Akışını Gerçekleştirme
-      href: flowing-transactions-into-and-out-of-workflow-services.md
-    - name: Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme
-      href: changing-the-cache-sharing-levels-for-send-activities.md
-    - name: Bir İş Akışı Çözümüne Hizmet Başvurusu Ekleme
-      href: adding-a-service-reference-in-a-workflow-solution.md
-    - name: WorkflowServiceHost Yan Yana Sürüm Oluşturma
-      href: side-by-side-versioning-in-workflowservicehost.md
-  - name: 'Uç Noktalar: Adresler, Bağlamalar ve Sözleşmeler'
-    href: endpoints-addresses-bindings-and-contracts.md
-    items:
-    - name: Adresler
-      href: endpoint-addresses.md
-    - name: Bağlamalar
-      href: bindings.md
+        - name: Adresler
+          href: endpoint-addresses.md
+        - name: Bağlamalar
+          href: bindings.md
+          items:
+            - name: Sistem Tarafından Sağlanan Bağlamaları Yapılandırma
+              href: configuring-system-provided-bindings.md
+            - name: Bağlamada Zaman Aşımı Değerlerini Yapılandırma
+              href: configuring-timeout-values-on-a-binding.md
+            - name: UDP Taşıma Kullanarak Çok Noktaya Yayın Yapan Uygulamalar Oluşturma
+              href: creating-multicasting-applications-using-the-udp-transport.md
+        - name: Sözleşmeler
+          href: contracts.md
+          items:
+            - name: ServiceModel Öznitelikleri ve ServiceDescription Başvurusu
+              href: servicemodel-attributes-and-servicedescription-reference.md
+            - name: İstek-Yanıt Hizmetleri
+              href: request-reply-services.md
+            - name: 'Nasıl yapılır: İstek-Yanıt Sözleşmesi Oluşturma'
+              href: how-to-create-a-request-reply-contract.md
+            - name: Tek Yönlü Hizmetler
+              href: one-way-services.md
+            - name: 'Nasıl yapılır: Tek Yönlü Sözleşme Oluşturma'
+              href: how-to-create-a-one-way-contract.md
+            - name: Çift Yönlü Hizmetler
+              href: duplex-services.md
+            - name: 'Nasıl yapılır: Çift Yönlü Sözleşme Oluşturma'
+              href: how-to-create-a-duplex-contract.md
+            - name: 'Nasıl yapılır: Anlaşma Sınıfı ile Hizmet Oluşturma'
+              href: how-to-create-a-wcf-contract-with-a-class.md
+            - name: 'Nasıl yapılır: Sözleşme Arabirimi ile Hizmet Oluşturma'
+              href: how-to-create-a-service-with-a-contract-interface.md
+            - name: WCF Hizmet Performansını Denetlemek için ServiceThrottlingBehavior Kullanma
+              href: using-servicethrottlingbehavior-to-control-wcf-service-performance.md
+        - name: 'Nasıl yapılır: Yapılandırma İçinde Hizmet Uç Noktası Oluşturma'
+          href: how-to-create-a-service-endpoint-in-configuration.md
+        - name: 'Nasıl yapılır: Kod İçinde Hizmet Uç Noktası Oluşturma'
+          href: how-to-create-a-service-endpoint-in-code.md
+        - name: 'Nasıl yapılır: Derlenmiş Hizmet Kodunu Doğrulamak için Svcutil.exe Kullanma'
+          href: how-to-use-svcutil-exe-to-validate-compiled-service-code.md
+        - name: Standart Uç Noktaları
+          href: standard-endpoints.md
+    - name: Veri Aktarma ve Seri Hale Getirme
+      href: data-transfer-and-serialization.md
       items:
-      - name: Sistem Tarafından Sağlanan Bağlamaları Yapılandırma
-        href: configuring-system-provided-bindings.md
-      - name: Bağlamada Zaman Aşımı Değerlerini Yapılandırma
-        href: configuring-timeout-values-on-a-binding.md
-      - name: UDP Taşıma Kullanarak Çok Noktaya Yayın Yapan Uygulamalar Oluşturma
-        href: creating-multicasting-applications-using-the-udp-transport.md
-    - name: Sözleşmeler
-      href: contracts.md
+        - name: Hizmet Sözleşmelerinde Veri Aktarımını Belirtme
+          href: specifying-data-transfer-in-service-contracts.md
+        - name: Veri Sözleşmelerini Kullanma
+          href: using-data-contracts.md
+          items:
+            - name: 'Nasıl yapılır: Bir Sınıf veya Yapı için Temel Bir Veri Sözleşmesi Oluşturma'
+              href: how-to-create-a-basic-data-contract-for-a-class-or-structure.md
+            - name: Seri Hale Getirilebilir Türler
+              href: serializable-types.md
+            - name: Veri Sözleşmesi Adları
+              href: data-contract-names.md
+            - name: Veri Sözleşmesi Eşitliği
+              href: data-contract-equivalence.md
+            - name: Veri Üye Sırası
+              href: data-member-order.md
+            - name: Veri Sözleşmesi Bilinen Türler
+              href: data-contract-known-types.md
+            - name: İleri Uyumlu Veri Sözleşmeleri
+              href: forward-compatible-data-contracts.md
+            - name: Veri Sözleşmesi Sürümü Oluşturma
+              href: data-contract-versioning.md
+            - name: Sürüm Toleranslı Seri Hale Getirme Geri Çağrıları
+              href: version-tolerant-serialization-callbacks.md
+            - name: Veri Üyesi Varsayılan Değerler
+              href: data-member-default-values.md
+            - name: Birlikte Çalışabilir Nesne Başvuruları
+              href: interoperable-object-references.md
+            - name: Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler
+              href: types-supported-by-the-data-contract-serializer.md
+              items:
+                - name: Veri Sözleşmelerinde Koleksiyon Türleri
+                  href: collection-types-in-data-contracts.md
+                - name: Veri Sözleşmelerinde XML ve ADO.NET Türleri
+                  href: xml-and-ado-net-types-in-data-contracts.md
+                - name: Veri Sözleşmelerinde Numaralandırma Türleri
+                  href: enumeration-types-in-data-contracts.md
+        - name: Veri Sözleşmesi Seri Hale Getirici
+          href: data-contract-serializer.md
+          items:
+            - name: Seri Hale Getirme ve Seri Durumdan Çıkarma
+              href: serialization-and-deserialization.md
+            - name: Şema İçeri ve Dışarı Aktarma
+              href: schema-import-and-export.md
+              items:
+                - name: Sınıf Oluşturmak için Şemayı İçe Aktarma
+                  href: importing-schema-to-generate-classes.md
+                - name: Sınıflardan Şemaları Dışa Aktarma
+                  href: exporting-schemas-from-classes.md
+                - name: SerializationBinder ile Seri Hale Getirme ve Seri Halden Çıkarmayı Denetleme
+                  href: controlling-serialization-and-deserialization-with-serializationbinder.md
+            - name: Veri Sözleşmesi Çözücü Kullanma
+              href: using-a-data-contract-resolver.md
+        - name: XmlSerializer Sınıfını Kullanma
+          href: using-the-xmlserializer-class.md
+          items:
+            - name: 'Nasıl yapılır: XmlSerializer Kullanarak WCF İstemci Uygulamalarının Başlangıç Zamanlarını İyileştirme'
+              href: startup-time-of-wcf-client-applications-using-the-xmlserializer.md
+        - name: İleti Sözleşmeleri Kullanılıyor
+          href: using-message-contracts.md
+        - name: İmzalanmış ve/veya şifrelenmiş özel bir başlık oluşturma
+          href: creating-a-custom-header-that-is-signed-and-or-encrypted.md
+        - name: İleti Sınıfını Kullanma
+          href: using-the-message-class.md
+        - name: Filtreleme
+          href: filtering.md
+        - name: Büyük Veriler ve Akış Yapma
+          href: large-data-and-streaming.md
+          items:
+            - name: 'Nasıl yapılır: Akışı Etkinleştirme'
+              href: how-to-enable-streaming.md
+        - name: Veriler için Güvenlik Konuları
+          href: security-considerations-for-data.md
+        - name: Veri Aktarımı Mimarisi Genel Bakış
+          href: data-transfer-architectural-overview.md
+    - name: 'Oturumlar, Örnek Oluşturma ve Eşzamanlılık'
+      href: sessions-instancing-and-concurrency.md
       items:
-      - name: ServiceModel Öznitelikleri ve ServiceDescription Başvurusu
-        href: servicemodel-attributes-and-servicedescription-reference.md
-      - name: İstek-Yanıt Hizmetleri
-        href: request-reply-services.md
-      - name: 'Nasıl yapılır: İstek-Yanıt Sözleşmesi Oluşturma'
-        href: how-to-create-a-request-reply-contract.md
-      - name: Tek Yönlü Hizmetler
-        href: one-way-services.md
-      - name: 'Nasıl yapılır: Tek Yönlü Sözleşme Oluşturma'
-        href: how-to-create-a-one-way-contract.md
-      - name: Çift Yönlü Hizmetler
-        href: duplex-services.md
-      - name: 'Nasıl yapılır: Çift Yönlü Sözleşme Oluşturma'
-        href: how-to-create-a-duplex-contract.md
-      - name: 'Nasıl yapılır: Anlaşma Sınıfı ile Hizmet Oluşturma'
-        href: how-to-create-a-wcf-contract-with-a-class.md
-      - name: 'Nasıl yapılır: Sözleşme Arabirimi ile Hizmet Oluşturma'
-        href: how-to-create-a-service-with-a-contract-interface.md
-      - name: WCF Hizmet Performansını Denetlemek için ServiceThrottlingBehavior Kullanma
-        href: using-servicethrottlingbehavior-to-control-wcf-service-performance.md
-    - name: 'Nasıl yapılır: Yapılandırma İçinde Hizmet Uç Noktası Oluşturma'
-      href: how-to-create-a-service-endpoint-in-configuration.md
-    - name: 'Nasıl yapılır: Kod İçinde Hizmet Uç Noktası Oluşturma'
-      href: how-to-create-a-service-endpoint-in-code.md
-    - name: 'Nasıl yapılır: Derlenmiş Hizmet Kodunu Doğrulamak için Svcutil.exe Kullanma'
-      href: how-to-use-svcutil-exe-to-validate-compiled-service-code.md
-    - name: Standart Uç Noktaları
-      href: standard-endpoints.md
-  - name: Veri Aktarma ve Seri Hale Getirme
-    href: data-transfer-and-serialization.md
-    items:
-    - name: Hizmet Sözleşmelerinde Veri Aktarımını Belirtme
-      href: specifying-data-transfer-in-service-contracts.md
-    - name: Veri Sözleşmelerini Kullanma
-      href: using-data-contracts.md
+        - name: 'Nasıl yapılır: Oturum Gerektiren Bir Hizmet Oluşturma'
+          href: how-to-create-a-service-that-requires-sessions.md
+        - name: 'Nasıl yapılır: Hizmet Örneği Oluşturmayı Denetleme'
+          href: how-to-control-service-instancing.md
+        - name: Tek Bir Eşzamanlılık Modunda İletilerin Sıralı İşlenmesi
+          href: ordered-processing-of-messages-in-single-concurrency-mode.md
+    - name: Taşımalar
+      href: transports.md
       items:
-      - name: 'Nasıl yapılır: Bir Sınıf veya Yapı için Temel Bir Veri Sözleşmesi Oluşturma'
-        href: how-to-create-a-basic-data-contract-for-a-class-or-structure.md
-      - name: Seri Hale Getirilebilir Türler
-        href: serializable-types.md
-      - name: Veri Sözleşmesi Adları
-        href: data-contract-names.md
-      - name: Veri Sözleşmesi Eşitliği
-        href: data-contract-equivalence.md
-      - name: Veri Üye Sırası
-        href: data-member-order.md
-      - name: Veri Sözleşmesi Bilinen Türler
-        href: data-contract-known-types.md
-      - name: İleri Uyumlu Veri Sözleşmeleri
-        href: forward-compatible-data-contracts.md
-      - name: Veri Sözleşmesi Sürümü Oluşturma
-        href: data-contract-versioning.md
-      - name: Sürüm Toleranslı Seri Hale Getirme Geri Çağrıları
-        href: version-tolerant-serialization-callbacks.md
-      - name: Veri Üyesi Varsayılan Değerler
-        href: data-member-default-values.md
-      - name: Birlikte Çalışabilir Nesne Başvuruları
-        href: interoperable-object-references.md
-      - name: Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler
-        href: types-supported-by-the-data-contract-serializer.md
-        items:
-        - name: Veri Sözleşmelerinde Koleksiyon Türleri
-          href: collection-types-in-data-contracts.md
-        - name: Veri Sözleşmelerinde XML ve ADO.NET Türleri
-          href: xml-and-ado-net-types-in-data-contracts.md
-        - name: Veri Sözleşmelerinde Numaralandırma Türleri
-          href: enumeration-types-in-data-contracts.md
-    - name: Veri Sözleşmesi Seri Hale Getirici
-      href: data-contract-serializer.md
+        - name: Taşıma Seçme
+          href: choosing-a-transport.md
+        - name: İleti Kodlayıcı Seçme
+          href: choosing-a-message-encoder.md
+        - name: İleti Aktarma Akışı
+          href: streaming-message-transfer.md
+        - name: HTTP ve HTTPS Yapılandırma
+          href: configuring-http-and-https.md
+        - name: 'Nasıl yapılır: WCF URL Ayırmayı Kısıtlı Ayırma ile Değiştirme'
+          href: how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md
+        - name: Taşıma Kotaları
+          href: transport-quotas.md
+        - name: NAT ve Güvenlik Duvarlarıyla Çalışma
+          href: working-with-nats-and-firewalls.md
+        - name: Net.TCP Bağlantı Noktası Paylaşımı
+          href: net-tcp-port-sharing.md
+          items:
+            - name: 'Nasıl yapılır: Net.TCP Bağlantı Noktası Payalaşım Hizmetini Etkinleştirme'
+              href: how-to-enable-the-net-tcp-port-sharing-service.md
+            - name: 'Nasıl yapılır: Bağlantı Noktası Paylaşımı Kullanarak Bir WCF Hizmetini Yapılandırma'
+              href: how-to-configure-a-wcf-service-to-use-port-sharing.md
+            - name: Net.TCP Bağlantı Noktası Hizmetini Yapılandırma
+              href: configuring-the-net-tcp-port-sharing-service.md
+        - name: ByteStream Kodlayıcı ile İkili Nesneler Kodlama
+          href: encoding-binary-objects-with-bytestream-encoder.md
+    - name: Kuyruklar ve Güvenilir Oturumlar
+      href: queues-and-reliable-sessions.md
       items:
-      - name: Seri Hale Getirme ve Seri Durumdan Çıkarma
-        href: serialization-and-deserialization.md
-      - name: Şema İçeri ve Dışarı Aktarma
-        href: schema-import-and-export.md
-        items:
-        - name: Sınıf Oluşturmak için Şemayı İçe Aktarma
-          href: importing-schema-to-generate-classes.md
-        - name: Sınıflardan Şemaları Dışa Aktarma
-          href: exporting-schemas-from-classes.md
-        - name: SerializationBinder ile Seri Hale Getirme ve Seri Halden Çıkarmayı Denetleme
-          href: controlling-serialization-and-deserialization-with-serializationbinder.md
-      - name: Veri Sözleşmesi Çözücü Kullanma
-        href: using-a-data-contract-resolver.md
-    - name: XmlSerializer Sınıfını Kullanma
-      href: using-the-xmlserializer-class.md
+        - name: Güvenilir oturumlar
+          href: reliable-sessions.md
+          items:
+            - name: Güvenilir Oturumlar Genel Bakış
+              href: reliable-sessions-overview.md
+            - name: 'Nasıl yapılır: Güvenilir Bir Oturumda İleti Alma ve Gönderme'
+              href: how-to-exchange-messages-within-a-reliable-session.md
+            - name: 'Nasıl yapılır: Güvenli Oturumlarla İletileri Güvenli Hale Getirme'
+              href: how-to-secure-messages-within-reliable-sessions.md
+            - name: 'Nasıl yapılır: HTTPS ile Özel Bir Güvenilir Oturum Bağlama Oluşturma'
+              href: how-to-create-a-custom-reliable-session-binding-with-https.md
+            - name: Güvenli Oturumlar için En İyi Uygulamalar
+              href: best-practices-for-reliable-sessions.md
+        - name: WCF'de Kuyruklar
+          href: queues-in-wcf.md
+          items:
+            - name: Kuyruklar Genel Bakış
+              href: queues-overview.md
+            - name: WCF'de Kuyruğa Alma
+              href: queuing-in-wcf.md
+              items:
+                - name: Hizmet Uç Noktaları ve Kuyruk İşleme
+                  href: service-endpoints-and-queue-addressing.md
+                - name: Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma
+                  href: web-hosting-a-queued-application.md
+            - name: 'Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma'
+              href: how-to-exchange-queued-messages-with-wcf-endpoints.md
+            - name: 'Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme'
+              href: how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md
+            - name: Oturumda Kuyruğa Alınmış İletileri Gruplandırma
+              href: grouping-queued-messages-in-a-session.md
+            - name: Bir İşlemde Toplu İleti İşleme
+              href: batching-messages-in-a-transaction.md
+            - name: İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma
+              href: using-dead-letter-queues-to-handle-message-transfer-failures.md
+            - name: Zehirli İleti İşleme
+              href: poison-message-handling.md
+            - name: 'Windows Vista, Windows Server 2003 ve Windows XP''de Kuyruğa Alma Özelliği Arasındaki Farklar'
+              href: diff-in-queue-in-vista-server-2003-windows-xp.md
+            - name: Taşıma Güveliği Kullanarak İletileri Güvenli Hale Getirme
+              href: securing-messages-using-transport-security.md
+            - name: İleti Güveliği Kullanarak İletileri Güvenli Hale Getirme
+              href: securing-messages-using-message-security.md
+            - name: Kuyruğa Alınan İletilerde Sorun Giderme
+              href: troubleshooting-queued-messaging.md
+            - name: Kuyruğa Alınan İletişim için En İyi Uygulamalar
+              href: best-practices-for-queued-communication.md
+    - name: İşlemler
+      href: transactions-in-wcf.md
       items:
-      - name: 'Nasıl yapılır: XmlSerializer Kullanarak WCF İstemci Uygulamalarının Başlangıç Zamanlarını İyileştirme'
-        href: startup-time-of-wcf-client-applications-using-the-xmlserializer.md
-    - name: İleti Sözleşmeleri Kullanılıyor
-      href: using-message-contracts.md
-    - name: İmzalanmış ve/veya şifrelenmiş özel bir başlık oluşturma
-      href: creating-a-custom-header-that-is-signed-and-or-encrypted.md
-    - name: İleti Sınıfını Kullanma
-      href: using-the-message-class.md
-    - name: Filtreleme
-      href: filtering.md
-    - name: Büyük Veriler ve Akış Yapma
-      href: large-data-and-streaming.md
+        - name: Windows Communication Foundation İşlemleri Genel Bakış
+          href: transactions-overview.md
+        - name: İşlem Modelleri
+          href: transaction-models.md
+        - name: System.ServiceModel İşlemsel Desteği
+          href: transactional-support-in-system-servicemodel.md
+          items:
+            - name: ServiceModel İşlem Öznitelikleri
+              href: servicemodel-transaction-attributes.md
+            - name: ServiceModel İşlem Yapılandırması
+              href: servicemodel-transaction-configuration.md
+            - name: İşlem Akışını Etkinleştirme
+              href: enabling-transaction-flow.md
+            - name: 'Nasıl yapılır: İşlemsel Hizmet Oluşturma'
+              href: how-to-create-a-transactional-service.md
+            - name: İşlemsel Uygulamaları Tanılama
+              href: diagnosing-transactional-applications.md
+            - name: COM+ ve ServiceModel İşlemlerini Karşılaştırma
+              href: comparing-transactions-in-com-and-servicemodel.md
+            - name: Kurumsal Hizmetler İşlemsel Bileşenlerini Tümleştirme
+              href: integrating-enterprise-services-transactional-components.md
+        - name: WS-AtomicTransaction Kullanma
+          href: using-ws-atomictransaction.md
+          items:
+            - name: WS-Atomic İşlem Desteğini Yapılandırma
+              href: configuring-ws-atomic-transaction-support.md
+    - name: Güvenlik
+      href: security.md
       items:
-      - name: 'Nasıl yapılır: Akışı Etkinleştirme'
-        href: how-to-enable-streaming.md
-    - name: Veriler için Güvenlik Konuları
-      href: security-considerations-for-data.md
-    - name: Veri Aktarımı Mimarisi Genel Bakış
-      href: data-transfer-architectural-overview.md
-  - name: Oturumlar, Örnek Oluşturma ve Eşzamanlılık
-    href: sessions-instancing-and-concurrency.md
-    items:
-    - name: 'Nasıl yapılır: Oturum Gerektiren Bir Hizmet Oluşturma'
-      href: how-to-create-a-service-that-requires-sessions.md
-    - name: 'Nasıl yapılır: Hizmet Örneği Oluşturmayı Denetleme'
-      href: how-to-control-service-instancing.md
-    - name: Tek Bir Eşzamanlılık Modunda İletilerin Sıralı İşlenmesi
-      href: ordered-processing-of-messages-in-single-concurrency-mode.md
-  - name: Taşımalar
-    href: transports.md
-    items:
-    - name: Taşıma Seçme
-      href: choosing-a-transport.md
-    - name: İleti Kodlayıcı Seçme
-      href: choosing-a-message-encoder.md
-    - name: İleti Aktarma Akışı
-      href: streaming-message-transfer.md
-    - name: HTTP ve HTTPS Yapılandırma
-      href: configuring-http-and-https.md
-    - name: 'Nasıl yapılır: WCF URL Ayırmayı Kısıtlı Ayırma ile Değiştirme'
-      href: how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md
-    - name: Taşıma Kotaları
-      href: transport-quotas.md
-    - name: NAT ve Güvenlik Duvarlarıyla Çalışma
-      href: working-with-nats-and-firewalls.md
-    - name: Net.TCP Bağlantı Noktası Paylaşımı
-      href: net-tcp-port-sharing.md
+        - name: Güvenlik Genel Bakış
+          href: security-overview.md
+        - name: Güvenlik Kavramları
+          href: security-concepts.md
+          items:
+            - name: WCF'de Kullanılan Güvenlik Kavramları
+              href: security-concepts-used-in-wcf.md
+            - name: Dağıtılan Uygulama Güvenliği
+              href: distributed-application-security.md
+            - name: Güvenlik Terimleri
+              href: wcf-security-terminology.md
+        - name: Ortak Güvenlik Senaryoları
+          href: common-security-scenarios.md
+          items:
+            - name: İnternet Güvenli Olmayan Hizmet ve İstemci
+              href: internet-unsecured-client-and-service.md
+            - name: Intranet Güvenli Olmayan Hizmet ve İstemci
+              href: intranet-unsecured-client-and-service.md
+            - name: Anonim İstemci ile Aktarım Güvenliği
+              href: transport-security-with-an-anonymous-client.md
+            - name: Temel Kimlik Doğrulama ile Taşıma Güvenliği
+              href: transport-security-with-basic-authentication.md
+            - name: Windows Kimlik Doğrulama ile Taşıma Güvenliği
+              href: transport-security-with-windows-authentication.md
+            - name: Sertifika Kimlik Doğrulama ile Taşıma Güvenliği
+              href: transport-security-with-certificate-authentication.md
+            - name: Anonim İstemci ile İleti Güvenliği
+              href: message-security-with-an-anonymous-client.md
+            - name: Kullaıcı Adı İstemcisi ile İleti Güvenliği
+              href: message-security-with-a-user-name-client.md
+            - name: Sertifika İstemcisi ile İleti Güvenliği
+              href: message-security-with-a-certificate-client.md
+            - name: Windows İstemcisi ile İleti Güvenliği
+              href: message-security-with-a-windows-client.md
+            - name: Windows İstemcisi ile Kimlik Bilgileri Görüşmesi Olmadan İleti Güvenliği
+              href: message-security-with-a-windows-client-without-credential-negotiation.md
+            - name: Karşılıklı Sertifikalar ile İleti Güvenliği
+              href: message-security-with-mutual-certificates.md
+            - name: Verilen Belirteçlerle İleti Güvenliği
+              href: message-security-with-issued-tokens.md
+            - name: Güvenilir Alt Sistem
+              href: trusted-subsystem.md
+        - name: Güvenlik Davranışları
+          href: security-behaviors-in-wcf.md
+        - name: Bağlamalar ve Güvenlik
+          href: bindings-and-security.md
+          items:
+            - name: Özel Bağlamalarla Güvenlik Özellikleri
+              href: security-capabilities-with-custom-bindings.md
+              items:
+                - name: SecurityBindingElement Kimlik Doğrulama Modları
+                  href: securitybindingelement-authentication-modes.md
+                - name: 'Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma'
+                  href: how-to-create-a-custom-binding-using-the-securitybindingelement.md
+                - name: 'Nasıl yapılır: Belirtilen Bir Kimlik Doğrulama Modu için SecurityBindingElement Oluşturma'
+                  href: how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md
+                - name: 'Nasıl yapılır: WSFederationHttpBinding Gücenli Oturumlarını Devre Dışı Bırakma'
+                  href: how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md
+                - name: 'Nasıl yapılır: İleti Yeniden Yürütme Algılamayı Etkinleştirme'
+                  href: how-to-enable-message-replay-detection.md
+                - name: 'Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma'
+                  href: how-to-create-a-supporting-credential.md
+                - name: 'Nasıl yapılır: İmza Onayı Ayarlama'
+                  href: how-to-set-up-a-signature-confirmation.md
+                - name: 'Nasıl yapılır: Maksimum Saat Eğriltme Ayarlama'
+                  href: how-to-set-a-max-clock-skew.md
+                - name: 'Nasıl yapılır: Dijital İmzaların Şifrelenmesini Devre Dışı Bırakma'
+                  href: how-to-disable-encryption-of-digital-signatures.md
+        - name: Hizmet ve İstemcileri Güvenli Hale Getirme
+          href: securing-services-and-clients.md
+          items:
+            - name: WCF Güvenliğini Programlama
+              href: programming-wcf-security.md
+              items:
+                - name: Kimlik Bilgisi Türü Seçme
+                  href: selecting-a-credential-type.md
+                - name: 'Nasıl yapılır: Kullanıcı Adı ve Parolayla Kimlik Doğrulama'
+                  href: how-to-authenticate-with-a-user-name-and-password.md
+            - name: Taşıma Güvenliği
+              href: transport-security.md
+              items:
+                - name: Taşıma Güvenliği Genel Bakış
+                  href: transport-security-overview.md
+                - name: HTTP Taşıma Güvenliği
+                  href: http-transport-security.md
+                - name: HTTP Kimlik Doğrulamasını Anlama
+                  href: understanding-http-authentication.md
+                - name: Taşıma Güvenliği ile Kimliğe Bürünme Kullanma
+                  href: using-impersonation-with-transport-security.md
+                - name: 'Nasıl yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma'
+                  href: how-to-configure-a-port-with-an-ssl-certificate.md
+                - name: 'Nasıl yapılır: IIS Tarafından Barındırılan Bir WCF Hizmetini SSL ile Yapılandırma'
+                  href: how-to-configure-an-iis-hosted-wcf-service-with-ssl.md
+            - name: İleti Güvenliği
+              href: message-security-in-wcf.md
+              items:
+                - name: 'Nasıl yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme'
+                  href: how-to-secure-a-service-with-an-x-509-certificate.md
+                - name: 'Nasıl yapılır: Taşıma Güveniği ve İleti Kimlik Bilgilerini Kullanma'
+                  href: how-to-use-transport-security-and-message-credentials.md
+                - name: Bir WCF Hizmeti Bir Web Grubunda Barındırıldığında Yeniden Yürütme Saldırılarını Önleme
+                  href: preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm.md
+            - name: Güvenli Oturumlar
+              href: secure-sessions.md
+              items:
+                - name: Güvenli İletişimler ve Güvenli Oturumlar
+                  href: secure-conversations-and-secure-sessions.md
+                - name: 'Nasıl yapılır: Güvenli Oturum Oluşturma'
+                  href: how-to-create-a-secure-session.md
+                - name: 'Nasıl yapılır: Güvenli Bir Oturum için Güvenlik Bağlamı Belirteci Oluşturma'
+                  href: how-to-create-a-security-context-token-for-a-secure-session.md
+                - name: Güvenli Oturumlar için Güvenlikli İlgili Önemli Noktalar
+                  href: security-considerations-for-secure-sessions.md
+            - name: Sertifikalarla Çalışma
+              href: working-with-certificates.md
+              items:
+                - name: 'Nasıl yapılır: Sertifika Edinme'
+                  href: how-to-obtain-a-certificate-wcf.md
+                - name: 'Nasıl yapılır: MMC Ek Bileşeni ile Sertifikaları Görüntüleme'
+                  href: how-to-view-certificates-with-the-mmc-snap-in.md
+                - name: 'Nasıl yapılır: Bir Sertifikanın Parmak İzini Alma'
+                  href: how-to-retrieve-the-thumbprint-of-a-certificate.md
+                - name: 'Nasıl yapılır: X.509 Sertifikalarını WCF için Erişilebilir Hale Getirme'
+                  href: how-to-make-x-509-certificates-accessible-to-wcf.md
+                - name: 'Nasıl yapılır: Geliştirme Sırasında Kullanmak için Geçici Sertifikalar Oluşturma'
+                  href: how-to-create-temporary-certificates-for-use-during-development.md
+                - name: 'Nasıl yapılır: İmzaları Doğrulamak için Kullanılan Sertifika Yetkilendirme Sertifika Zincirini Belirtme'
+                  href: specify-the-certificate-authority-chain-verify-signatures-wcf.md
+                - name: 'HTTPS, TCP üzerinden SSL ve SOAP Güvenliği Arasındaki Sertifika Doğrulama Farkları'
+                  href: cert-val-diff-https-ssl-over-tcp-and-soap.md
+                - name: Internet Explorer ve WCF Tarafından Yapılan Sertifika Doğrulama Arasındaki Farklar
+                  href: diff-service-certificate-validation-ie-and-wcf.md
+                - name: 'Nasıl yapılır: X.509 Sertifikalarına Tutarlı Olarak Başvuru Yapma'
+                  href: how-to-consistently-reference-x-509-certificates.md
+        - name: Kimlik doğrulaması
+          href: authentication-in-wcf.md
+          items:
+            - name: 'Nasıl yapılır: ASP.NET Üyelik Sağlayıcısını Kullanma'
+              href: how-to-use-the-aspnet-membership-provider.md
+            - name: 'Nasıl yapılır: Özel Bir Kullanıcı Adı ve Parola Doğrulayıcı Kullanma'
+              href: how-to-use-a-custom-user-name-and-password-validator.md
+            - name: 'Nasıl yapılır: Aynı Türde Birden Fazla Belirteç Kullanma'
+              href: how-to-use-multiple-security-tokens-of-the-same-type.md
+            - name: Kimlik Doğrulama ile Hizmet Kimliği
+              href: service-identity-and-authentication.md
+            - name: Güvenlik Görüşmeleri ve Zaman Aşımları
+              href: security-negotiation-and-timeouts.md
+            - name: Windows Kimlik Doğrulama Hatalarını Ayıklama
+              href: debugging-windows-authentication-errors.md
+            - name: WCF ile Birden Fazla Kimlik Doğrulama Şeması Kullanma
+              href: using-multiple-authentication-schemes-with-wcf.md
+        - name: Yetkilendirme
+          href: authorization-in-wcf.md
+          items:
+            - name: Erişim Denetimi Mekanizmaları
+              href: access-control-mechanisms.md
+            - name: 'Nasıl yapılır: ASP.NET Rol Sağlayıcısını Bir Hizmetle Kullanma'
+              href: how-to-use-the-aspnet-role-provider-with-a-service.md
+            - name: 'Nasıl yapılır: ASP.NET Yetkilendirme Yöneticisi Rol Sağlayıcısını Bir Hizmetle Kullanma'
+              href: how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md
+            - name: Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme
+              href: managing-claims-and-authorization-with-the-identity-model.md
+              items:
+                - name: Beyanlar ve Belirteçler
+                  href: claims-and-tokens.md
+                - name: Beyanlar ve Kaynaklara Erişimi Reddetme
+                  href: claims-and-denying-access-to-resources.md
+                - name: Beyan Oluşturma ve Kaynak Değerleri
+                  href: claim-creation-and-resource-values.md
+            - name: Temsilcilik ve Kimliğe Bürünme
+              href: delegation-and-impersonation-with-wcf.md
+        - name: Federasyon ve Verilen Belirteçler
+          href: federation-and-issued-tokens.md
+          items:
+            - name: Federasyon
+              href: federation.md
+            - name: Federasyon ve Güven
+              href: federation-and-trust.md
+            - name: 'Nasıl yapılır: Federe İstemci Oluşturma'
+              href: how-to-create-a-federated-client.md
+            - name: 'Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma'
+              href: how-to-configure-credentials-on-a-federation-service.md
+            - name: 'Nasıl yapılır: WSFederationHttpBinding Oluşturma'
+              href: how-to-create-a-wsfederationhttpbinding.md
+            - name: 'Nasıl yapılır: Güvenlik Belirteci Hizmeti Oluşturma'
+              href: how-to-create-a-security-token-service.md
+            - name: Güvenlik Onaylama İşlemi İşaretleme Dili (SAML) Belirteçleri ve Talepleri
+              href: saml-tokens-and-claims.md
+            - name: 'Nasıl yapılır: Yerel Yayımlayan Yapılandırma'
+              href: how-to-configure-a-local-issuer.md
+            - name: 'Nasıl yapılır: Çift Yönlü Federe Bağlama Oluşturma'
+              href: how-to-create-a-duplex-federated-binding.md
+        - name: Denetim
+          href: auditing-security-events.md
+          items:
+            - name: 'Nasıl yapılır: Güvenlik Olaylarını Denetleme'
+              href: how-to-audit-wcf-security-events.md
+        - name: Güvenlik Kılavuzu ve En İyi Uygulamalar
+          href: security-guidance-and-best-practices.md
+          items:
+            - name: Güvenlik için En İyi Uygulamalar
+              href: best-practices-for-security-in-wcf.md
+            - name: Güvenlik Değerlendirmeleri
+              href: security-considerations-in-wcf.md
+              items:
+                - name: Bilgileri Açıklama
+                  href: information-disclosure.md
+                - name: Ayrıcalık Yükseltme
+                  href: elevation-of-privilege.md
+                - name: Hizmet Reddi
+                  href: denial-of-service.md
+                - name: İzinsiz Değişiklik
+                  href: tampering.md
+                - name: Yeniden Yürütme Saldırıları
+                  href: replay-attacks.md
+                - name: Desteklenmeyen Senaryolar
+                  href: unsupported-scenarios.md
+            - name: Başarım Değerlendirmeleri
+              href: performance-considerations.md
+              items:
+                - name: ClaimSet için Beyan Bulma
+                  href: finding-claims-in-a-claimset.md
+                - name: Dijital İmzaların Şifrelenmesi
+                  href: encryption-of-digital-signatures.md
+        - name: Kimlik Doğrulama için Genişletilmiş Koruma Genel Bakış
+          href: extended-protection-for-authentication-overview.md
+          items:
+            - name: Genişletilmiş Koruma Kimlik Doğrulama için Beni Oku Örnek
+              href: readme-for-extended-protection-authentication-sample.md
+    - name: Eşler Arası Ağ
+      href: peer-to-peer-networking.md
       items:
-      - name: 'Nasıl yapılır: Net.TCP Bağlantı Noktası Payalaşım Hizmetini Etkinleştirme'
-        href: how-to-enable-the-net-tcp-port-sharing-service.md
-      - name: 'Nasıl yapılır: Bağlantı Noktası Paylaşımı Kullanarak Bir WCF Hizmetini Yapılandırma'
-        href: how-to-configure-a-wcf-service-to-use-port-sharing.md
-      - name: Net.TCP Bağlantı Noktası Hizmetini Yapılandırma
-        href: configuring-the-net-tcp-port-sharing-service.md
-    - name: ByteStream Kodlayıcı ile İkili Nesneler Kodlama
-      href: encoding-binary-objects-with-bytestream-encoder.md
-  - name: Kuyruklar ve Güvenilir Oturumlar
-    href: queues-and-reliable-sessions.md
-    items:
-    - name: Güvenilir oturumlar
-      href: reliable-sessions.md
+        - name: Eş Kanal Senaryoları
+          href: peer-channel-scenarios.md
+        - name: Eş Kanal Kavramları
+          href: peer-channel-concepts.md
+          items:
+            - name: Eş Kafesleri
+              href: peer-meshes.md
+            - name: Eş Düğümleri
+              href: peer-nodes.md
+            - name: Eş Kanalı Güvenliği
+              href: peer-channel-security.md
+            - name: Eş Çözücüler
+              href: peer-resolvers.md
+              items:
+                - name: 'CustomPeerResolverService İçinde: İstemci Kayıtları'
+                  href: inside-the-custompeerresolverservice-client-registrations.md
+        - name: Eş Kanal Uygulaması Oluşturma
+          href: building-a-peer-channel-application.md
+          items:
+            - name: Bir NetTcpBinding Uygulamasını Eş Kanalı Uygulamasına Dönüştürme
+              href: converting-a-nettcpbinding-application-to-a-peer-channel-application.md
+            - name: İleti Dağıtımını Sınırlandırma
+              href: limiting-message-distribution.md
+            - name: Çevrimiçi ve Çevrimdışı Durum Ekleme
+              href: adding-online-and-offline-status.md
+            - name: Eş Kanalı Uygulamalarını Güvenli Hale Getirme
+              href: securing-peer-channel-applications.md
+    - name: Meta Veriler
+      href: metadata.md
       items:
-      - name: Güvenilir Oturumlar Genel Bakış
-        href: reliable-sessions-overview.md
-      - name: 'Nasıl yapılır: Güvenilir Bir Oturumda İleti Alma ve Gönderme'
-        href: how-to-exchange-messages-within-a-reliable-session.md
-      - name: 'Nasıl yapılır: Güvenli Oturumlarla İletileri Güvenli Hale Getirme'
-        href: how-to-secure-messages-within-reliable-sessions.md
-      - name: 'Nasıl yapılır: HTTPS ile Özel Bir Güvenilir Oturum Bağlama Oluşturma'
-        href: how-to-create-a-custom-reliable-session-binding-with-https.md
-      - name: Güvenli Oturumlar için En İyi Uygulamalar
-        href: best-practices-for-reliable-sessions.md
-    - name: WCF'de Kuyruklar
-      href: queues-in-wcf.md
+        - name: Meta Veri Mimarisi Genel Bakış
+          href: metadata-architecture-overview.md
+        - name: Meta Veri Biçimleri
+          href: metadata-formats.md
+        - name: Meta Verileri Dışarı ve İçeri Aktarma
+          href: exporting-and-importing-metadata.md
+          items:
+            - name: 'Nasıl yapılır: Hizmet Uç Noktalarına Meta Verileri İçe Aktarma'
+              href: how-to-import-metadata-into-service-endpoints.md
+            - name: 'Nasıl yapılır: Hizmet Uç Noktalarından Meta Verileri Dışa Aktarma'
+              href: how-to-export-metadata-from-service-endpoints.md
+            - name: ServiceDescription ve WSDL Başvurusu
+              href: servicedescription-and-wsdl-reference.md
+            - name: 'Nasıl yapılır: Meta Verileri Derlenmiş Hizmet Kodundan Dışarı Aktarmak için Svcutil.exe Kullanma'
+              href: how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md
+        - name: Meta Verileri Yayımlama
+          href: publishing-metadata.md
+          items:
+            - name: 'Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama'
+              href: how-to-publish-metadata-for-a-service-using-a-configuration-file.md
+            - name: 'Nasıl yapılır: Kod Kullanarak Bir Hizmet için Meta Verileri Yayımlama'
+              href: how-to-publish-metadata-for-a-service-using-code.md
+        - name: Meta Verileri Alma
+          href: retrieving-metadata.md
+          items:
+            - name: 'Nasıl yapılır: Meta Veri Belgelerini İndirmek için Svcutil.exe Kullanma'
+              href: how-to-use-svcutil-exe-to-download-metadata-documents.md
+            - name: 'Nasıl yapılır: Bağlama Meta Verilerini Dinamik Olarak Almak için MetadataResolver Kullanma'
+              href: how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md
+            - name: 'Nasıl yapılır: Meta Verileri Almak için MetadataExchangeClient Kullanma'
+              href: how-to-use-metadataexchangeclient-to-retrieve-metadata.md
+        - name: Meta Verileri Kullanma
+          href: using-metadata.md
+          items:
+            - name: Oluşturulmuş İstemci Kodlarını Anlama
+              href: understanding-generated-client-code.md
+            - name: 'Nasıl yapılır: Meta Verileri Alma ve Uyumlu Bir Hizmet Ekleme'
+              href: how-to-retrieve-metadata-and-implement-a-compliant-service.md
+            - name: Hizmet Meta Verilerinden WCF İstemcisi Oluşturma
+              href: generating-a-wcf-client-from-service-metadata.md
+        - name: Meta Veriler Hakkında Güvenlik Konuları
+          href: security-considerations-with-metadata.md
+          items:
+            - name: 'Nasıl yapılır: Meta Veri Uç Noktalarını Güvenli Hale Getirme'
+              href: how-to-secure-metadata-endpoints.md
+            - name: 'Nasıl yapılır: Yetkilendirirken Meta Veri İsteklerine İzin Verme'
+              href: how-to-allow-metadata-requests-while-authorizing.md
+    - name: İstemciler
+      href: clients.md
       items:
-      - name: Kuyruklar Genel Bakış
-        href: queues-overview.md
-      - name: WCF'de Kuyruğa Alma
-        href: queuing-in-wcf.md
-        items:
-        - name: Hizmet Uç Noktaları ve Kuyruk İşleme
-          href: service-endpoints-and-queue-addressing.md
-        - name: Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma
-          href: web-hosting-a-queued-application.md
-      - name: 'Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma'
-        href: how-to-exchange-queued-messages-with-wcf-endpoints.md
-      - name: 'Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme'
-        href: how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md
-      - name: Oturumda Kuyruğa Alınmış İletileri Gruplandırma
-        href: grouping-queued-messages-in-a-session.md
-      - name: Bir İşlemde Toplu İleti İşleme
-        href: batching-messages-in-a-transaction.md
-      - name: İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma
-        href: using-dead-letter-queues-to-handle-message-transfer-failures.md
-      - name: Zehirli İleti İşleme
-        href: poison-message-handling.md
-      - name: Windows Vista, Windows Server 2003 ve Windows XP'de Kuyruğa Alma Özelliği Arasındaki Farklar
-        href: diff-in-queue-in-vista-server-2003-windows-xp.md
-      - name: Taşıma Güveliği Kullanarak İletileri Güvenli Hale Getirme
-        href: securing-messages-using-transport-security.md
-      - name: İleti Güveliği Kullanarak İletileri Güvenli Hale Getirme
-        href: securing-messages-using-message-security.md
-      - name: Kuyruğa Alınan İletilerde Sorun Giderme
-        href: troubleshooting-queued-messaging.md
-      - name: Kuyruğa Alınan İletişim için En İyi Uygulamalar
-        href: best-practices-for-queued-communication.md
-  - name: İşlemler
-    href: transactions-in-wcf.md
-    items:
-    - name: Windows Communication Foundation İşlemleri Genel Bakış
-      href: transactions-overview.md
-    - name: İşlem Modelleri
-      href: transaction-models.md
-    - name: System.ServiceModel İşlemsel Desteği
-      href: transactional-support-in-system-servicemodel.md
+        - name: WCF İstemci Mimarisi
+          href: client-architecture.md
+        - name: WCF İstemcisi Kullanarak Hizmetlere Erişme
+          href: accessing-services-using-a-client.md
+          items:
+            - name: 'Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle Hizmetlere Erişme'
+              href: how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md
+            - name: 'Nasıl yapılır: Çift Yönlü Sözleşme ile Hizmetlere Erişme'
+              href: how-to-access-services-with-a-duplex-contract.md
+            - name: 'Nasıl yapılır: WSE 3.0 Hizmetine Erişme'
+              href: how-to-access-a-wse-3-0-service-with-a-wcf-client.md
+            - name: 'Nasıl yapılır: ChannelFactory Kullanma'
+              href: how-to-use-the-channelfactory.md
+            - name: Kanal Fabrikası ve Önbelleğe Alma
+              href: channel-factory-and-caching.md
+            - name: 'Nasıl yapılır: Hizmet İşlemlerini Zaman Uyumsuz Olarak Çağırma'
+              href: how-to-call-wcf-service-operations-asynchronously.md
+            - name: Orta Katman İstemci Uygulamaları
+              href: middle-tier-client-applications.md
+            - name: 'Nasıl yapılır: Kanal Fabrikası Kullanarak İşlemlere Zaman Uyumsuz Olarak Çağrı Yapma'
+              href: how-to-call-operations-asynchronously-using-a-channel-factory.md
+            - name: WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
+              href: accessing-wcf-services-with-a-windows-store-client-app.md
+            - name: 'Nasıl yapılır: Kanal Fabrikası Oluşturma ve Bunu Kanal Oluşturmak ve Yönetmek için Kullanma'
+              href: how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md
+        - name: WCF İstemci Yapılandırması
+          href: client-configuration.md
+    - name: Barındırma
+      href: hosting.md
       items:
-      - name: ServiceModel İşlem Öznitelikleri
-        href: servicemodel-transaction-attributes.md
-      - name: ServiceModel İşlem Yapılandırması
-        href: servicemodel-transaction-configuration.md
-      - name: İşlem Akışını Etkinleştirme
-        href: enabling-transaction-flow.md
-      - name: 'Nasıl yapılır: İşlemsel Hizmet Oluşturma'
-        href: how-to-create-a-transactional-service.md
-      - name: İşlemsel Uygulamaları Tanılama
-        href: diagnosing-transactional-applications.md
-      - name: COM+ ve ServiceModel İşlemlerini Karşılaştırma
-        href: comparing-transactions-in-com-and-servicemodel.md
-      - name: Kurumsal Hizmetler İşlemsel Bileşenlerini Tümleştirme
-        href: integrating-enterprise-services-transactional-components.md
-    - name: WS-AtomicTransaction Kullanma
-      href: using-ws-atomictransaction.md
+        - name: Internet Information Services'te Barındırma
+          href: hosting-in-internet-information-services.md
+          items:
+            - name: Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
+              href: deploying-an-internet-information-services-hosted-wcf-service.md
+            - name: WCF Hizmetleri ve ASP.NET
+              href: wcf-services-and-aspnet.md
+            - name: Internet Information Services Barındırma En İyi Uygulamaları
+              href: internet-information-services-hosting-best-practices.md
+            - name: 'Nasıl yapılır: IIS''de WCF Hizmeti Barındırma'
+              href: how-to-host-a-wcf-service-in-iis.md
+            - name: Windows Communication Foundation için Internet Information Services 7.0'ı Yapılandırma
+              href: configuring-iis-for-wcf.md
+        - name: Windows İşlem Etkinleştirme Hizmetinde Barındırma
+          href: hosting-in-windows-process-activation-service.md
+          items:
+            - name: WAS Etkinleştirme Mimarisi
+              href: was-activation-architecture.md
+            - name: WAS'ı WCF ile Kullanmak için Yapılandırma
+              href: configuring-the-wpa--service-for-use-with-wcf.md
+            - name: 'Nasıl yapılır: WCF Etkinleştirme Bileşenlerini Yükleme ve Yapılandırma'
+              href: how-to-install-and-configure-wcf-activation-components.md
+            - name: 'Nasıl yapılır: WAS''de WCF Hizmeti Barındırma'
+              href: how-to-host-a-wcf-service-in-was.md
+        - name: Windows Hizmet Uygulamasında Barındırma
+          href: hosting-in-a-windows-service-application.md
+          items:
+            - name: 'Nasıl yapılır: Yönetilen Bir Windows Hizmetinde Bir WCF Hizmeti Barındırma'
+              href: how-to-host-a-wcf-service-in-a-managed-windows-service.md
+        - name: Yönetilen Bir Uygulamada Barındırma
+          href: hosting-in-a-managed-application.md
+        - name: IIS ve WAS'ta Yapılandırma Temelli Etkinleştirme
+          href: configuration-based-activation-in-iis-and-was.md
+        - name: Birden Fazla IIS Site Bağlamasını Destekleme
+          href: supporting-multiple-iis-site-bindings.md
+        - name: System.Web.Routing Tümleştirmesi
+          href: system-web-routing-integration.md
+    - name: Kısmi Güven
+      href: partial-trust.md
       items:
-      - name: WS-Atomic İşlem Desteğini Yapılandırma
-        href: configuring-ws-atomic-transaction-support.md
-  - name: Güvenlik
-    href: security.md
-    items:
-    - name: Güvenlik Genel Bakış
-      href: security-overview.md
-    - name: Güvenlik Kavramları
-      href: security-concepts.md
+        - name: Desteklenen Dağıtım Senaryoları
+          href: supported-deployment-scenarios.md
+        - name: Kısmi Güven Özelliği Uyumluluğu
+          href: partial-trust-feature-compatibility.md
+        - name: Kısmi Güven En İyi Uygulamaları
+          href: partial-trust-best-practices.md
+    - name: Birlikte Çalışabilirlik ve Tümleştirme
+      href: interoperability-and-integration.md
       items:
-      - name: WCF'de Kullanılan Güvenlik Kavramları
-        href: security-concepts-used-in-wcf.md
-      - name: Dağıtılan Uygulama Güvenliği
-        href: distributed-application-security.md
-      - name: Güvenlik Terimleri
-        href: wcf-security-terminology.md
-    - name: Ortak Güvenlik Senaryoları
-      href: common-security-scenarios.md
+        - name: Web Hizmetleri Protokolleri Birlikte Çalışabilirlik Kılavuzu
+          href: web-services-protocols-interoperability-guide.md
+          items:
+            - name: Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri
+              href: web-services-protocols-supported-by-system-provided-interoperability-bindings.md
+            - name: Mesajlaşma Protokolleri
+              href: messaging-protocols.md
+            - name: Veri Sözleşmesi Şema Başvurusu
+              href: data-contract-schema-reference.md
+            - name: WSDL ve İlke
+              href: wsdl-and-policy.md
+            - name: Güvenlik Protokolleri sürüm 1.0
+              href: security-protocols-version-1-0.md
+            - name: Güvenlik Protokolleri
+              href: security-protocols.md
+            - name: Güvenilir Mesajlaşma Protokolü sürüm 1.0
+              href: reliable-messaging-protocol-version-1-0.md
+            - name: Güvenilir Mesajlaşma Protokolü sürüm 1.1
+              href: reliable-messaging-protocol-version-1-1.md
+            - name: İşlem Protokolleri sürüm 1.0
+              href: transaction-protocols-version-1-0.md
+            - name: İşlem Protokolleri
+              href: transaction-protocols.md
+            - name: Bağlam Değişimi Protokolü
+              href: context-exchange-protocol.md
+            - name: Federe Senaryolarda Güven Protokollerini Karıştırma
+              href: mixing-trust-protocols-in-federated-scenarios.md
+        - name: COM Uygulamaları ile Tümleştirme
+          href: integrating-with-com-plus-applications.md
+          items:
+            - name: COM+ Uygulamaları ile Tümleştirme Genel Bakış
+              href: integrating-with-com-plus-applications-overview.md
+            - name: 'Nasıl yapılır: COM+ Hizmet Modeli Yapılandırma Aracı''nı Kullanma'
+              href: how-to-use-the-com-service-model-configuration-tool.md
+            - name: 'Nasıl yapılır: COM+ Hizmet Ayarlarını Yapılandırma'
+              href: how-to-configure-com-service-settings.md
+            - name: 'Nasıl yapılır: COM+ Tümleştirme Uygulaması Dağıtma'
+              href: how-to-deploy-a-com-integration-application.md
+        - name: COM Uygulamaları ile Tümleştirme
+          href: integrating-with-com-applications.md
+          items:
+            - name: COM Uygulamaları ile Tümleştirme Genel Bakış
+              href: integrating-with-com-applications-overview.md
+            - name: 'Nasıl yapılır: Hizmet Bilinen Adını Kaydetme ve Yapılandırma'
+              href: how-to-register-and-configure-a-service-moniker.md
+            - name: 'Nasıl yapılır: Windows Communication Foundation Hizmeti Bilinen Adını Kaydolmadan Kullanma'
+              href: use-the-wcf-service-moniker-without-registration.md
+            - name: 'Nasıl yapılır: WSDL Sözleşmeleriyle Hizmet Bilinen Adı Kullanma'
+              href: how-to-use-a-service-moniker-with-wsdl-contracts.md
+            - name: 'Nasıl yapılır: Meta Veri Değişimi Sözleşmeleriyle Hizmet Bilinen Adı Kullanma'
+              href: how-to-use-a-service-moniker-with-metadata-exchange-contracts.md
+            - name: 'Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme'
+              href: how-to-specify-channel-security-credentials.md
+        - name: .NET Uzaktan İletişim Uygulamalarını WCF'ye Taşıma
+          href: migrating-net-remoting-applications-to-wcf.md
+        - name: Web Services Enhancements 3.0 ile Birlikte Çalışabilme
+          href: interoperability-with-web-services-enhancements-3-0.md
+          items:
+            - name: 'Nasıl yapılır: WCF Hizmetlerini WSE 3.0 İstemcileriyle Birlikte Çalışmak için Yapılandırma'
+              href: how-to-configure-wcf-services-to-interoperate-with-wse-3-0-clients.md
+            - name: 'Nasıl yapılır: WCF İstemcisini WSE3.0 Hizmetleriyle Çalışacak Şekilde Yapılandırma'
+              href: how-to-configure-a-wcf-client-to-interoperate-with-wse3-0-services.md
+        - name: WSE 3.0 Web Hizmetlerini WCF'ye Taşıma
+          href: migrating-wse-3-0-web-services-to-wcf.md
+        - name: ASP.NET Web Hizmetleri ile Birlikte Çalışabilirlik
+          href: interop-with-aspnet-web-services.md
+          items:
+            - name: 'Nasıl yapılır: WCF Hizmetini ASP.NET Web Hizmeti İstemcileriyle Birlikte Çalışmak için Yapılandırma'
+              href: config-wcf-service-with-aspnet-web-service.md
+        - name: ASP.NET Web Hizmetlerini WCF'ye Taşıma
+          href: migrating-aspnet-web-services-to-wcf.md
+          items:
+            - name: ASP.NET Web Hizmetlerini Amaç ve Kullanılan Standartları Temel Alarak WCF ile Karşılaştırma
+              href: comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md
+            - name: ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma
+              href: comparing-aspnet-web-services-to-wcf-based-on-development.md
+            - name: 'Windows Communication Foundation''ı Benimsemeyi Bekleme: Gelecekteki Tümleştirmeyi Kolaylaştırma'
+              href: anticipating-adopting-the-wcf-easing-future-integration.md
+            - name: 'Windows Communication Foundation''ı Benimsemeyi Bekleme: Gelecekteki Geçişi Kolaylaştırma'
+              href: anticipating-adopting-wcf-migration.md
+            - name: Windows Communication Foundation'ı Benimseme
+              href: adopting-wcf.md
+        - name: POX Uygulamaları ile Birlikte Çalışabilirlik
+          href: interoperability-with-pox-applications.md
+    - name: WCF Web HTTP Programlama Modeli
+      href: wcf-web-http-programming-model.md
       items:
-      - name: İnternet Güvenli Olmayan Hizmet ve İstemci
-        href: internet-unsecured-client-and-service.md
-      - name: Intranet Güvenli Olmayan Hizmet ve İstemci
-        href: intranet-unsecured-client-and-service.md
-      - name: Anonim İstemci ile Aktarım Güvenliği
-        href: transport-security-with-an-anonymous-client.md
-      - name: Temel Kimlik Doğrulama ile Taşıma Güvenliği
-        href: transport-security-with-basic-authentication.md
-      - name: Windows Kimlik Doğrulama ile Taşıma Güvenliği
-        href: transport-security-with-windows-authentication.md
-      - name: Sertifika Kimlik Doğrulama ile Taşıma Güvenliği
-        href: transport-security-with-certificate-authentication.md
-      - name: Anonim İstemci ile İleti Güvenliği
-        href: message-security-with-an-anonymous-client.md
-      - name: Kullaıcı Adı İstemcisi ile İleti Güvenliği
-        href: message-security-with-a-user-name-client.md
-      - name: Sertifika İstemcisi ile İleti Güvenliği
-        href: message-security-with-a-certificate-client.md
-      - name: Windows İstemcisi ile İleti Güvenliği
-        href: message-security-with-a-windows-client.md
-      - name: Windows İstemcisi ile Kimlik Bilgileri Görüşmesi Olmadan İleti Güvenliği
-        href: message-security-with-a-windows-client-without-credential-negotiation.md
-      - name: Karşılıklı Sertifikalar ile İleti Güvenliği
-        href: message-security-with-mutual-certificates.md
-      - name: Verilen Belirteçlerle İleti Güvenliği
-        href: message-security-with-issued-tokens.md
-      - name: Güvenilir Alt Sistem
-        href: trusted-subsystem.md
-    - name: Güvenlik Davranışları
-      href: security-behaviors-in-wcf.md
-    - name: Bağlamalar ve Güvenlik
-      href: bindings-and-security.md
+        - name: WCF Web HTTP Programlama Modeli Genel Bakış
+          href: wcf-web-http-programming-model-overview.md
+        - name: WCF Web HTTP Programlama Nesnesi Modeli
+          href: wcf-web-http-programming-object-model.md
+        - name: 'Nasıl yapılır: Temel Bir WCF Web HTTP Hizmeti Oluşturma'
+          href: how-to-create-a-basic-wcf-web-http-service.md
+        - name: 'Nasıl yapılır: Bir Sözleşmeyi SOAP ve Web İstemcilerine Sunma'
+          href: how-to-expose-a-contract-to-soap-and-web-clients.md
+        - name: UriTemplate ve UriTemplateTable
+          href: uritemplate-and-uritemplatetable.md
+        - name: 'Nasıl yapılır: WCF Web HTTP Programlama Modeli Kullanarak Rastgele Veriler Döndüren Bir Hizmet Oluşturma'
+          href: service-returns-arbitrary-data-using-the-wcf-web.md
+        - name: 'Nasıl yapılır: WCF REST Programlama Modeli Kullanarak Rastgele Verileri Kabul Eden Bir Hizmet Oluşturma'
+          href: create-a-service-arbitrary-data-using-wcf.md
+        - name: WCF Web HTTP Hizmetleri için Önbelleğe Alma Desteği
+          href: caching-support-for-wcf-web-http-services.md
+        - name: WCF Web HTTP Hizmeti Yardım Sayfası
+          href: wcf-web-http-service-help-page.md
+        - name: WCF Web HTTP Biçimlendirme
+          href: wcf-web-http-formatting.md
+        - name: WCF Web HTTP Hata İşleme
+          href: wcf-web-http-error-handling.md
+        - name: JSONP Kullanma
+          href: using-jsonp.md
+        - name: Bir WCF hizmetinden REST tarzı bir hizmete çağrı yapma
+          href: calling-a-rest-style-service-from-a-wcf-service.md
+    - name: WCF Dağıtımı
+      href: wcf-syndication.md
       items:
-      - name: Özel Bağlamalarla Güvenlik Özellikleri
-        href: security-capabilities-with-custom-bindings.md
-        items:
-        - name: SecurityBindingElement Kimlik Doğrulama Modları
-          href: securitybindingelement-authentication-modes.md
-        - name: 'Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma'
-          href: how-to-create-a-custom-binding-using-the-securitybindingelement.md
-        - name: 'Nasıl yapılır: Belirtilen Bir Kimlik Doğrulama Modu için SecurityBindingElement Oluşturma'
-          href: how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md
-        - name: 'Nasıl yapılır: WSFederationHttpBinding Gücenli Oturumlarını Devre Dışı Bırakma'
-          href: how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md
-        - name: 'Nasıl yapılır: İleti Yeniden Yürütme Algılamayı Etkinleştirme'
-          href: how-to-enable-message-replay-detection.md
-        - name: 'Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma'
-          href: how-to-create-a-supporting-credential.md
-        - name: 'Nasıl yapılır: İmza Onayı Ayarlama'
-          href: how-to-set-up-a-signature-confirmation.md
-        - name: 'Nasıl yapılır: Maksimum Saat Eğriltme Ayarlama'
-          href: how-to-set-a-max-clock-skew.md
-        - name: 'Nasıl yapılır: Dijital İmzaların Şifrelenmesini Devre Dışı Bırakma'
-          href: how-to-disable-encryption-of-digital-signatures.md
-    - name: Hizmet ve İstemcileri Güvenli Hale Getirme
-      href: securing-services-and-clients.md
+        - name: WCF Dağıtımı Genel Bakış
+          href: wcf-syndication-overview.md
+        - name: Dağıtım Mimarisi
+          href: architecture-of-syndication.md
+        - name: WCF Dağıtım Nesnesi Modeli Atom ve RSS Eşlemelerini Nasıl Yapar?
+          href: how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md
+        - name: 'Nasıl yapılır: Temel Bir RSS Akışı Oluşturma'
+          href: how-to-create-a-basic-rss-feed.md
+        - name: 'Nasıl yapılır: Temel Bir Atom Akışı Oluşturma'
+          href: how-to-create-a-basic-atom-feed.md
+        - name: 'Nasıl yapılır: Bir Akışı Hem Atom Hem de RSS Olarak Kullanıma Sunma'
+          href: how-to-expose-a-feed-as-both-atom-and-rss.md
+        - name: Dağıtım Genişletilebilirliği
+          href: syndication-extensibility.md
+    - name: AJAX Tümleştirme ve JSON Desteği
+      href: ajax-integration-and-json-support.md
       items:
-      - name: WCF Güvenliğini Programlama
-        href: programming-wcf-security.md
-        items:
-        - name: Kimlik Bilgisi Türü Seçme
-          href: selecting-a-credential-type.md
-        - name: 'Nasıl yapılır: Kullanıcı Adı ve Parolayla Kimlik Doğrulama'
-          href: how-to-authenticate-with-a-user-name-and-password.md
-      - name: Taşıma Güvenliği
-        href: transport-security.md
-        items:
-        - name: Taşıma Güvenliği Genel Bakış
-          href: transport-security-overview.md
-        - name: HTTP Taşıma Güvenliği
-          href: http-transport-security.md
-        - name: HTTP Kimlik Doğrulamasını Anlama
-          href: understanding-http-authentication.md
-        - name: Taşıma Güvenliği ile Kimliğe Bürünme Kullanma
-          href: using-impersonation-with-transport-security.md
-        - name: 'Nasıl yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma'
-          href: how-to-configure-a-port-with-an-ssl-certificate.md
-        - name: 'Nasıl yapılır: IIS Tarafından Barındırılan Bir WCF Hizmetini SSL ile Yapılandırma'
-          href: how-to-configure-an-iis-hosted-wcf-service-with-ssl.md
-      - name: İleti Güvenliği
-        href: message-security-in-wcf.md
-        items:
-        - name: 'Nasıl yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme'
-          href: how-to-secure-a-service-with-an-x-509-certificate.md
-        - name: 'Nasıl yapılır: Taşıma Güveniği ve İleti Kimlik Bilgilerini Kullanma'
-          href: how-to-use-transport-security-and-message-credentials.md
-        - name: Bir WCF Hizmeti Bir Web Grubunda Barındırıldığında Yeniden Yürütme Saldırılarını Önleme
-          href: preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm.md
-      - name: Güvenli Oturumlar
-        href: secure-sessions.md
-        items:
-        - name: Güvenli İletişimler ve Güvenli Oturumlar
-          href: secure-conversations-and-secure-sessions.md
-        - name: 'Nasıl yapılır: Güvenli Oturum Oluşturma'
-          href: how-to-create-a-secure-session.md
-        - name: 'Nasıl yapılır: Güvenli Bir Oturum için Güvenlik Bağlamı Belirteci Oluşturma'
-          href: how-to-create-a-security-context-token-for-a-secure-session.md
-        - name: Güvenli Oturumlar için Güvenlikli İlgili Önemli Noktalar
-          href: security-considerations-for-secure-sessions.md
-      - name: Sertifikalarla Çalışma
-        href: working-with-certificates.md
-        items:
-        - name: 'Nasıl yapılır: Sertifika Edinme'
-          href: how-to-obtain-a-certificate-wcf.md
-        - name: 'Nasıl yapılır: MMC Ek Bileşeni ile Sertifikaları Görüntüleme'
-          href: how-to-view-certificates-with-the-mmc-snap-in.md
-        - name: 'Nasıl yapılır: Bir Sertifikanın Parmak İzini Alma'
-          href: how-to-retrieve-the-thumbprint-of-a-certificate.md
-        - name: 'Nasıl yapılır: X.509 Sertifikalarını WCF için Erişilebilir Hale Getirme'
-          href: how-to-make-x-509-certificates-accessible-to-wcf.md
-        - name: 'Nasıl yapılır: Geliştirme Sırasında Kullanmak için Geçici Sertifikalar Oluşturma'
-          href: how-to-create-temporary-certificates-for-use-during-development.md
-        - name: 'Nasıl yapılır: İmzaları Doğrulamak için Kullanılan Sertifika Yetkilendirme Sertifika Zincirini Belirtme'
-          href: specify-the-certificate-authority-chain-verify-signatures-wcf.md
-        - name: HTTPS, TCP üzerinden SSL ve SOAP Güvenliği Arasındaki Sertifika Doğrulama Farkları
-          href: cert-val-diff-https-ssl-over-tcp-and-soap.md
-        - name: Internet Explorer ve WCF Tarafından Yapılan Sertifika Doğrulama Arasındaki Farklar
-          href: diff-service-certificate-validation-ie-and-wcf.md
-        - name: 'Nasıl yapılır: X.509 Sertifikalarına Tutarlı Olarak Başvuru Yapma'
-          href: how-to-consistently-reference-x-509-certificates.md
-    - name: Kimlik doğrulaması
-      href: authentication-in-wcf.md
+        - name: ASP.NET AJAX için WCF Hizmetleri Oluşturma
+          href: creating-wcf-services-for-aspnet-ajax.md
+          items:
+            - name: 'Nasıl yapılır: AJAX Etkin Bir WCF Hizmeti Oluşturma ve Erişme'
+              href: create-an-ajax-wcf-asp-net-client.md
+            - name: 'Nasıl yapılır: Yapılandırma Kullanmadan ASP.NET AJAX Uç Noktası Ekleme'
+              href: how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md
+            - name: 'Nasıl yapılır: ASP.NET AJAX Uç Noktası Eklemek için Yapılandırma Kullanma'
+              href: how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md
+            - name: 'Nasıl yapılır: ASP.NET AJAX Uç Noktaları için HTTP POST ve HTTP GET İstekleri Arasında Seçim Yapma'
+              href: http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md
+        - name: ASP.NET Olmadan WCF AJAX Hizmetleri Oluşturma
+          href: creating-wcf-ajax-services-without-aspnet.md
+        - name: JSON ve Diğer Veri Aktarma Biçimleri için Destek
+          href: support-for-json-and-other-data-transfer-formats.md
+          items:
+            - name: Bağımsız JSON Seri Hale Getirme
+              href: stand-alone-json-serialization.md
+            - name: 'Nasıl yapılır: JSON Verilerini Seri Hale Getrime ve Seri Halden Çıkarma'
+              href: how-to-serialize-and-deserialize-json-data.md
+            - name: JSON ve XML Arasında Eşleme
+              href: mapping-between-json-and-xml.md
+            - name: İleti Düzeyi Programlama ile JSON Seri Hale Getirme
+              href: serializing-in-json-with-message-level-programming.md
+        - name: 'Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF''ye Taşıma'
+          href: how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md
+    - name: WCF Keşfetme
+      href: wcf-discovery.md
       items:
-      - name: 'Nasıl yapılır: ASP.NET Üyelik Sağlayıcısını Kullanma'
-        href: how-to-use-the-aspnet-membership-provider.md
-      - name: 'Nasıl yapılır: Özel Bir Kullanıcı Adı ve Parola Doğrulayıcı Kullanma'
-        href: how-to-use-a-custom-user-name-and-password-validator.md
-      - name: 'Nasıl yapılır: Aynı Türde Birden Fazla Belirteç Kullanma'
-        href: how-to-use-multiple-security-tokens-of-the-same-type.md
-      - name: Kimlik Doğrulama ile Hizmet Kimliği
-        href: service-identity-and-authentication.md
-      - name: Güvenlik Görüşmeleri ve Zaman Aşımları
-        href: security-negotiation-and-timeouts.md
-      - name: Windows Kimlik Doğrulama Hatalarını Ayıklama
-        href: debugging-windows-authentication-errors.md
-      - name: WCF ile Birden Fazla Kimlik Doğrulama Şeması Kullanma
-        href: using-multiple-authentication-schemes-with-wcf.md
-    - name: Yetkilendirme
-      href: authorization-in-wcf.md
+        - name: WCF Keşif Genel Bakış
+          href: wcf-discovery-overview.md
+        - name: WCF Keşif Nesnesi Modeli
+          href: wcf-discovery-object-model.md
+        - name: Keşif Bulma ve FindCriteria
+          href: discovery-find-and-findcriteria.md
+        - name: 'Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme'
+          href: how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md
+        - name: Keşif Proxy'si Ekleme
+          href: implementing-a-discovery-proxy.md
+          items:
+            - name: 'Nasıl yapılır: Keşif Proxy''si Uygulama'
+              href: how-to-implement-a-discovery-proxy.md
+            - name: 'Nasıl yapılır: Keşif Proxy''sine Kayıtlı Bir Bulunabilir Hizmet Ekleme'
+              href: discoverable-service-that-registers-with-the-discovery-proxy.md
+            - name: 'Nasıl yapılır: Hizmet Bulmak için Keşif Proxy''si Kullanan Bir İstemci Uygulaması Kullanma'
+              href: client-app-discovery-proxy-to-find-a-service.md
+            - name: 'Nasıl yapılır: Keşif Proxy''sini Test Etme'
+              href: how-to-test-the-discovery-proxy.md
+            - name: 'Nasıl yapılır: Bir Araştırma İsteğinin Keşif sürümünü Belirleme'
+              href: how-to-determine-the-discovery-version-of-a-probe-request.md
+        - name: Keşif Sürümü Oluşturma
+          href: discovery-versioning.md
+        - name: Yapılandırma Dosyasındaki Bir Keşfi Yapılandırma
+          href: configuring-discovery-in-a-configuration-file.md
+        - name: Keşif İstemcisi Kanalını Kullanma
+          href: using-the-discovery-client-channel.md
+        - name: Keşif İstemci Kanalıyla Özel Bağlama Kullanma
+          href: using-a-custom-binding-with-the-discovery-client-channel.md
+        - name: Keşif Duyuruları ve Duyuru İstemcisi
+          href: discovery-announcements-and-announcement-client.md
+        - name: DiscoveryClient ve DynamicEndpoint
+          href: discoveryclient-and-dynamicendpoint.md
+    - name: Yönlendirme
+      href: routing.md
       items:
-      - name: Erişim Denetimi Mekanizmaları
-        href: access-control-mechanisms.md
-      - name: 'Nasıl yapılır: ASP.NET Rol Sağlayıcısını Bir Hizmetle Kullanma'
-        href: how-to-use-the-aspnet-role-provider-with-a-service.md
-      - name: 'Nasıl yapılır: ASP.NET Yetkilendirme Yöneticisi Rol Sağlayıcısını Bir Hizmetle Kullanma'
-        href: how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md
-      - name: Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme
-        href: managing-claims-and-authorization-with-the-identity-model.md
-        items:
-        - name: Beyanlar ve Belirteçler
-          href: claims-and-tokens.md
-        - name: Beyanlar ve Kaynaklara Erişimi Reddetme
-          href: claims-and-denying-access-to-resources.md
-        - name: Beyan Oluşturma ve Kaynak Değerleri
-          href: claim-creation-and-resource-values.md
-      - name: Temsilcilik ve Kimliğe Bürünme
-        href: delegation-and-impersonation-with-wcf.md
-    - name: Federasyon ve Verilen Belirteçler
-      href: federation-and-issued-tokens.md
+        - name: Yönlendirme Tanıtımı
+          href: routing-introduction.md
+        - name: Yönlendirme Hizmeti
+          href: routing-service.md
+        - name: Sözleşmeleri Yönlendirme
+          href: routing-contracts.md
+        - name: İleti Filtreleri
+          href: message-filters.md
+          items:
+            - name: Filtre Seçme
+              href: choosing-a-filter.md
+            - name: Özel Filtreler
+              href: custom-filters.md
+            - name: 'Nasıl yapılır: Filtreleri Kullanma'
+              href: how-to-use-filters.md
+        - name: Yönlendirme Senaryoları
+          href: routing-scenarios.md
+          items:
+            - name: 'Nasıl yapılır: Hizmet Sürümü Oluşturma'
+              href: how-to-service-versioning.md
+            - name: 'Nasıl yapılır: Hizmet Verilerini Bölümlendirme'
+              href: how-to-service-data-partitioning.md
+            - name: 'Nasıl yapılır: Dinamik Güncelleştirme'
+              href: how-to-dynamic-update.md
+            - name: 'Nasıl yapılır: Hata İşleme'
+              href: how-to-error-handling.md
+    - name: WCF ve Uluslararası Hale Getirilmiş Etki Alanı Adları
+      href: wcf-and-internationalized-domain-names.md
+    - name: WCF ve WebSockets
+      href: wcf-and-websockets.md
       items:
-      - name: Federasyon
-        href: federation.md
-      - name: Federasyon ve Güven
-        href: federation-and-trust.md
-      - name: 'Nasıl yapılır: Federe İstemci Oluşturma'
-        href: how-to-create-a-federated-client.md
-      - name: 'Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma'
-        href: how-to-configure-credentials-on-a-federation-service.md
-      - name: 'Nasıl yapılır: WSFederationHttpBinding Oluşturma'
-        href: how-to-create-a-wsfederationhttpbinding.md
-      - name: 'Nasıl yapılır: Güvenlik Belirteci Hizmeti Oluşturma'
-        href: how-to-create-a-security-token-service.md
-      - name: Güvenlik Onaylama İşlemi İşaretleme Dili (SAML) Belirteçleri ve Talepleri
-        href: saml-tokens-and-claims.md
-      - name: 'Nasıl yapılır: Yerel Yayımlayan Yapılandırma'
-        href: how-to-configure-a-local-issuer.md
-      - name: 'Nasıl yapılır: Çift Yönlü Federe Bağlama Oluşturma'
-        href: how-to-create-a-duplex-federated-binding.md
-    - name: Denetim
-      href: auditing-security-events.md
-      items:
-      - name: 'Nasıl yapılır: Güvenlik Olaylarını Denetleme'
-        href: how-to-audit-wcf-security-events.md
-    - name: Güvenlik Kılavuzu ve En İyi Uygulamalar
-      href: security-guidance-and-best-practices.md
-      items:
-      - name: Güvenlik için En İyi Uygulamalar
-        href: best-practices-for-security-in-wcf.md
-      - name: Güvenlik Değerlendirmeleri
-        href: security-considerations-in-wcf.md
-        items:
-        - name: Bilgileri Açıklama
-          href: information-disclosure.md
-        - name: Ayrıcalık Yükseltme
-          href: elevation-of-privilege.md
-        - name: Hizmet Reddi
-          href: denial-of-service.md
-        - name: İzinsiz Değişiklik
-          href: tampering.md
-        - name: Yeniden Yürütme Saldırıları
-          href: replay-attacks.md
-        - name: Desteklenmeyen Senaryolar
-          href: unsupported-scenarios.md
-      - name: Başarım Değerlendirmeleri
-        href: performance-considerations.md
-        items:
-        - name: ClaimSet için Beyan Bulma
-          href: finding-claims-in-a-claimset.md
-        - name: Dijital İmzaların Şifrelenmesi
-          href: encryption-of-digital-signatures.md
-    - name: Kimlik Doğrulama için Genişletilmiş Koruma Genel Bakış
-      href: extended-protection-for-authentication-overview.md
-      items:
-      - name: Genişletilmiş Koruma Kimlik Doğrulama için Beni Oku Örnek
-        href: readme-for-extended-protection-authentication-sample.md
-  - name: Eşler Arası Ağ
-    href: peer-to-peer-networking.md
-    items:
-    - name: Eş Kanal Senaryoları
-      href: peer-channel-scenarios.md
-    - name: Eş Kanal Kavramları
-      href: peer-channel-concepts.md
-      items:
-      - name: Eş Kafesleri
-        href: peer-meshes.md
-      - name: Eş Düğümleri
-        href: peer-nodes.md
-      - name: Eş Kanalı Güvenliği
-        href: peer-channel-security.md
-      - name: Eş Çözücüler
-        href: peer-resolvers.md
-        items:
-        - name: 'CustomPeerResolverService İçinde: İstemci Kayıtları'
-          href: inside-the-custompeerresolverservice-client-registrations.md
-    - name: Eş Kanal Uygulaması Oluşturma
-      href: building-a-peer-channel-application.md
-      items:
-      - name: Bir NetTcpBinding Uygulamasını Eş Kanalı Uygulamasına Dönüştürme
-        href: converting-a-nettcpbinding-application-to-a-peer-channel-application.md
-      - name: İleti Dağıtımını Sınırlandırma
-        href: limiting-message-distribution.md
-      - name: Çevrimiçi ve Çevrimdışı Durum Ekleme
-        href: adding-online-and-offline-status.md
-      - name: Eş Kanalı Uygulamalarını Güvenli Hale Getirme
-        href: securing-peer-channel-applications.md
-  - name: Meta Veriler
-    href: metadata.md
-    items:
-    - name: Meta Veri Mimarisi Genel Bakış
-      href: metadata-architecture-overview.md
-    - name: Meta Veri Biçimleri
-      href: metadata-formats.md
-    - name: Meta Verileri Dışarı ve İçeri Aktarma
-      href: exporting-and-importing-metadata.md
-      items:
-      - name: 'Nasıl yapılır: Hizmet Uç Noktalarına Meta Verileri İçe Aktarma'
-        href: how-to-import-metadata-into-service-endpoints.md
-      - name: 'Nasıl yapılır: Hizmet Uç Noktalarından Meta Verileri Dışa Aktarma'
-        href: how-to-export-metadata-from-service-endpoints.md
-      - name: ServiceDescription ve WSDL Başvurusu
-        href: servicedescription-and-wsdl-reference.md
-      - name: 'Nasıl yapılır: Meta Verileri Derlenmiş Hizmet Kodundan Dışarı Aktarmak için Svcutil.exe Kullanma'
-        href: how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md
-    - name: Meta Verileri Yayımlama
-      href: publishing-metadata.md
-      items:
-      - name: 'Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama'
-        href: how-to-publish-metadata-for-a-service-using-a-configuration-file.md
-      - name: 'Nasıl yapılır: Kod Kullanarak Bir Hizmet için Meta Verileri Yayımlama'
-        href: how-to-publish-metadata-for-a-service-using-code.md
-    - name: Meta Verileri Alma
-      href: retrieving-metadata.md
-      items:
-      - name: 'Nasıl yapılır: Meta Veri Belgelerini İndirmek için Svcutil.exe Kullanma'
-        href: how-to-use-svcutil-exe-to-download-metadata-documents.md
-      - name: 'Nasıl yapılır: Bağlama Meta Verilerini Dinamik Olarak Almak için MetadataResolver Kullanma'
-        href: how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md
-      - name: 'Nasıl yapılır: Meta Verileri Almak için MetadataExchangeClient Kullanma'
-        href: how-to-use-metadataexchangeclient-to-retrieve-metadata.md
-    - name: Meta Verileri Kullanma
-      href: using-metadata.md
-      items:
-      - name: Oluşturulmuş İstemci Kodlarını Anlama
-        href: understanding-generated-client-code.md
-      - name: 'Nasıl yapılır: Meta Verileri Alma ve Uyumlu Bir Hizmet Ekleme'
-        href: how-to-retrieve-metadata-and-implement-a-compliant-service.md
-      - name: Hizmet Meta Verilerinden WCF İstemcisi Oluşturma
-        href: generating-a-wcf-client-from-service-metadata.md
-    - name: Meta Veriler Hakkında Güvenlik Konuları
-      href: security-considerations-with-metadata.md
-      items:
-      - name: 'Nasıl yapılır: Meta Veri Uç Noktalarını Güvenli Hale Getirme'
-        href: how-to-secure-metadata-endpoints.md
-      - name: 'Nasıl yapılır: Yetkilendirirken Meta Veri İsteklerine İzin Verme'
-        href: how-to-allow-metadata-requests-while-authorizing.md
-  - name: İstemciler
-    href: clients.md
-    items:
-    - name: WCF İstemci Mimarisi
-      href: client-architecture.md
-    - name: WCF İstemcisi Kullanarak Hizmetlere Erişme
-      href: accessing-services-using-a-client.md
-      items:
-      - name: 'Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle Hizmetlere Erişme'
-        href: how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md
-      - name: 'Nasıl yapılır: Çift Yönlü Sözleşme ile Hizmetlere Erişme'
-        href: how-to-access-services-with-a-duplex-contract.md
-      - name: 'Nasıl yapılır: WSE 3.0 Hizmetine Erişme'
-        href: how-to-access-a-wse-3-0-service-with-a-wcf-client.md
-      - name: 'Nasıl yapılır: ChannelFactory Kullanma'
-        href: how-to-use-the-channelfactory.md
-      - name: Kanal Fabrikası ve Önbelleğe Alma
-        href: channel-factory-and-caching.md
-      - name: 'Nasıl yapılır: Hizmet İşlemlerini Zaman Uyumsuz Olarak Çağırma'
-        href: how-to-call-wcf-service-operations-asynchronously.md
-      - name: Orta Katman İstemci Uygulamaları
-        href: middle-tier-client-applications.md
-      - name: 'Nasıl yapılır: Kanal Fabrikası Kullanarak İşlemlere Zaman Uyumsuz Olarak Çağrı Yapma'
-        href: how-to-call-operations-asynchronously-using-a-channel-factory.md
-      - name: WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
-        href: accessing-wcf-services-with-a-windows-store-client-app.md
-      - name: 'Nasıl yapılır: Kanal Fabrikası Oluşturma ve Bunu Kanal Oluşturmak ve Yönetmek için Kullanma'
-        href: how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md
-    - name: WCF İstemci Yapılandırması
-      href: client-configuration.md
-  - name: Barındırma
-    href: hosting.md
-    items:
-    - name: Internet Information Services'te Barındırma
-      href: hosting-in-internet-information-services.md
-      items:
-      - name: Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
-        href: deploying-an-internet-information-services-hosted-wcf-service.md
-      - name: WCF Hizmetleri ve ASP.NET
-        href: wcf-services-and-aspnet.md
-      - name: Internet Information Services Barındırma En İyi Uygulamaları
-        href: internet-information-services-hosting-best-practices.md
-      - name: "Nasıl yapılır: IIS'de WCF Hizmeti Barındırma"
-        href: how-to-host-a-wcf-service-in-iis.md
-      - name: Windows Communication Foundation için Internet Information Services 7.0'ı Yapılandırma
-        href: configuring-iis-for-wcf.md
-    - name: Windows İşlem Etkinleştirme Hizmetinde Barındırma
-      href: hosting-in-windows-process-activation-service.md
-      items:
-      - name: WAS Etkinleştirme Mimarisi
-        href: was-activation-architecture.md
-      - name: WAS'ı WCF ile Kullanmak için Yapılandırma
-        href: configuring-the-wpa--service-for-use-with-wcf.md
-      - name: 'Nasıl yapılır: WCF Etkinleştirme Bileşenlerini Yükleme ve Yapılandırma'
-        href: how-to-install-and-configure-wcf-activation-components.md
-      - name: "Nasıl yapılır: WAS'de WCF Hizmeti Barındırma"
-        href: how-to-host-a-wcf-service-in-was.md
-    - name: Windows Hizmet Uygulamasında Barındırma
-      href: hosting-in-a-windows-service-application.md
-      items:
-      - name: 'Nasıl yapılır: Yönetilen Bir Windows Hizmetinde Bir WCF Hizmeti Barındırma'
-        href: how-to-host-a-wcf-service-in-a-managed-windows-service.md
-    - name: Yönetilen Bir Uygulamada Barındırma
-      href: hosting-in-a-managed-application.md
-    - name: IIS ve WAS'ta Yapılandırma Temelli Etkinleştirme
-      href: configuration-based-activation-in-iis-and-was.md
-    - name: Birden Fazla IIS Site Bağlamasını Destekleme
-      href: supporting-multiple-iis-site-bindings.md
-    - name: System.Web.Routing Tümleştirmesi
-      href: system-web-routing-integration.md
-  - name: Kısmi Güven
-    href: partial-trust.md
-    items:
-    - name: Desteklenen Dağıtım Senaryoları
-      href: supported-deployment-scenarios.md
-    - name: Kısmi Güven Özelliği Uyumluluğu
-      href: partial-trust-feature-compatibility.md
-    - name: Kısmi Güven En İyi Uygulamaları
-      href: partial-trust-best-practices.md
-  - name: Birlikte Çalışabilirlik ve Tümleştirme
-    href: interoperability-and-integration.md
-    items:
-    - name: Web Hizmetleri Protokolleri Birlikte Çalışabilirlik Kılavuzu
-      href: web-services-protocols-interoperability-guide.md
-      items:
-      - name: Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri
-        href: web-services-protocols-supported-by-system-provided-interoperability-bindings.md
-      - name: Mesajlaşma Protokolleri
-        href: messaging-protocols.md
-      - name: Veri Sözleşmesi Şema Başvurusu
-        href: data-contract-schema-reference.md
-      - name: WSDL ve İlke
-        href: wsdl-and-policy.md
-      - name: Güvenlik Protokolleri sürüm 1.0
-        href: security-protocols-version-1-0.md
-      - name: Güvenlik Protokolleri
-        href: security-protocols.md
-      - name: Güvenilir Mesajlaşma Protokolü sürüm 1.0
-        href: reliable-messaging-protocol-version-1-0.md
-      - name: Güvenilir Mesajlaşma Protokolü sürüm 1.1
-        href: reliable-messaging-protocol-version-1-1.md
-      - name: İşlem Protokolleri sürüm 1.0
-        href: transaction-protocols-version-1-0.md
-      - name: İşlem Protokolleri
-        href: transaction-protocols.md
-      - name: Bağlam Değişimi Protokolü
-        href: context-exchange-protocol.md
-      - name: Federe Senaryolarda Güven Protokollerini Karıştırma
-        href: mixing-trust-protocols-in-federated-scenarios.md
-    - name: COM Uygulamaları ile Tümleştirme
-      href: integrating-with-com-plus-applications.md
-      items:
-      - name: COM+ Uygulamaları ile Tümleştirme Genel Bakış
-        href: integrating-with-com-plus-applications-overview.md
-      - name: "Nasıl yapılır: COM+ Hizmet Modeli Yapılandırma Aracı'nı Kullanma"
-        href: how-to-use-the-com-service-model-configuration-tool.md
-      - name: 'Nasıl yapılır: COM+ Hizmet Ayarlarını Yapılandırma'
-        href: how-to-configure-com-service-settings.md
-      - name: 'Nasıl yapılır: COM+ Tümleştirme Uygulaması Dağıtma'
-        href: how-to-deploy-a-com-integration-application.md
-    - name: COM Uygulamaları ile Tümleştirme
-      href: integrating-with-com-applications.md
-      items:
-      - name: COM Uygulamaları ile Tümleştirme Genel Bakış
-        href: integrating-with-com-applications-overview.md
-      - name: 'Nasıl yapılır: Hizmet Bilinen Adını Kaydetme ve Yapılandırma'
-        href: how-to-register-and-configure-a-service-moniker.md
-      - name: 'Nasıl yapılır: Windows Communication Foundation Hizmeti Bilinen Adını Kaydolmadan Kullanma'
-        href: use-the-wcf-service-moniker-without-registration.md
-      - name: 'Nasıl yapılır: WSDL Sözleşmeleriyle Hizmet Bilinen Adı Kullanma'
-        href: how-to-use-a-service-moniker-with-wsdl-contracts.md
-      - name: 'Nasıl yapılır: Meta Veri Değişimi Sözleşmeleriyle Hizmet Bilinen Adı Kullanma'
-        href: how-to-use-a-service-moniker-with-metadata-exchange-contracts.md
-      - name: 'Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme'
-        href: how-to-specify-channel-security-credentials.md
-    - name: .NET Uzaktan İletişim Uygulamalarını WCF'ye Taşıma
-      href: migrating-net-remoting-applications-to-wcf.md
-    - name: Web Services Enhancements 3.0 ile Birlikte Çalışabilme
-      href: interoperability-with-web-services-enhancements-3-0.md
-      items:
-      - name: 'Nasıl yapılır: WCF Hizmetlerini WSE 3.0 İstemcileriyle Birlikte Çalışmak için Yapılandırma'
-        href: how-to-configure-wcf-services-to-interoperate-with-wse-3-0-clients.md
-      - name: 'Nasıl yapılır: WCF İstemcisini WSE3.0 Hizmetleriyle Çalışacak Şekilde Yapılandırma'
-        href: how-to-configure-a-wcf-client-to-interoperate-with-wse3-0-services.md
-    - name: WSE 3.0 Web Hizmetlerini WCF'ye Taşıma
-      href: migrating-wse-3-0-web-services-to-wcf.md
-    - name: ASP.NET Web Hizmetleri ile Birlikte Çalışabilirlik
-      href: interop-with-aspnet-web-services.md
-      items:
-      - name: 'Nasıl yapılır: WCF Hizmetini ASP.NET Web Hizmeti İstemcileriyle Birlikte Çalışmak için Yapılandırma'
-        href: config-wcf-service-with-aspnet-web-service.md
-    - name: ASP.NET Web Hizmetlerini WCF'ye Taşıma
-      href: migrating-aspnet-web-services-to-wcf.md
-      items:
-      - name: ASP.NET Web Hizmetlerini Amaç ve Kullanılan Standartları Temel Alarak WCF ile Karşılaştırma
-        href: comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md
-      - name: ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma
-        href: comparing-aspnet-web-services-to-wcf-based-on-development.md
-      - name: "Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Tümleştirmeyi Kolaylaştırma"
-        href: anticipating-adopting-the-wcf-easing-future-integration.md
-      - name: "Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Geçişi Kolaylaştırma"
-        href: anticipating-adopting-wcf-migration.md
-      - name: Windows Communication Foundation'ı Benimseme
-        href: adopting-wcf.md
-    - name: POX Uygulamaları ile Birlikte Çalışabilirlik
-      href: interoperability-with-pox-applications.md
-  - name: WCF Web HTTP Programlama Modeli
-    href: wcf-web-http-programming-model.md
-    items:
-    - name: WCF Web HTTP Programlama Modeli Genel Bakış
-      href: wcf-web-http-programming-model-overview.md
-    - name: WCF Web HTTP Programlama Nesnesi Modeli
-      href: wcf-web-http-programming-object-model.md
-    - name: 'Nasıl yapılır: Temel Bir WCF Web HTTP Hizmeti Oluşturma'
-      href: how-to-create-a-basic-wcf-web-http-service.md
-    - name: 'Nasıl yapılır: Bir Sözleşmeyi SOAP ve Web İstemcilerine Sunma'
-      href: how-to-expose-a-contract-to-soap-and-web-clients.md
-    - name: UriTemplate ve UriTemplateTable
-      href: uritemplate-and-uritemplatetable.md
-    - name: 'Nasıl yapılır: WCF Web HTTP Programlama Modeli Kullanarak Rastgele Veriler Döndüren Bir Hizmet Oluşturma'
-      href: service-returns-arbitrary-data-using-the-wcf-web.md
-    - name: 'Nasıl yapılır: WCF REST Programlama Modeli Kullanarak Rastgele Verileri Kabul Eden Bir Hizmet Oluşturma'
-      href: create-a-service-arbitrary-data-using-wcf.md
-    - name: WCF Web HTTP Hizmetleri için Önbelleğe Alma Desteği
-      href: caching-support-for-wcf-web-http-services.md
-    - name: WCF Web HTTP Hizmeti Yardım Sayfası
-      href: wcf-web-http-service-help-page.md
-    - name: WCF Web HTTP Biçimlendirme
-      href: wcf-web-http-formatting.md
-    - name: WCF Web HTTP Hata İşleme
-      href: wcf-web-http-error-handling.md
-    - name: JSONP Kullanma
-      href: using-jsonp.md
-    - name: Bir WCF hizmetinden REST tarzı bir hizmete çağrı yapma
-      href: calling-a-rest-style-service-from-a-wcf-service.md
-  - name: WCF Dağıtımı
-    href: wcf-syndication.md
-    items:
-    - name: WCF Dağıtımı Genel Bakış
-      href: wcf-syndication-overview.md
-    - name: Dağıtım Mimarisi
-      href: architecture-of-syndication.md
-    - name: WCF Dağıtım Nesnesi Modeli Atom ve RSS Eşlemelerini Nasıl Yapar?
-      href: how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md
-    - name: 'Nasıl yapılır: Temel Bir RSS Akışı Oluşturma'
-      href: how-to-create-a-basic-rss-feed.md
-    - name: 'Nasıl yapılır: Temel Bir Atom Akışı Oluşturma'
-      href: how-to-create-a-basic-atom-feed.md
-    - name: 'Nasıl yapılır: Bir Akışı Hem Atom Hem de RSS Olarak Kullanıma Sunma'
-      href: how-to-expose-a-feed-as-both-atom-and-rss.md
-    - name: Dağıtım Genişletilebilirliği
-      href: syndication-extensibility.md
-  - name: AJAX Tümleştirme ve JSON Desteği
-    href: ajax-integration-and-json-support.md
-    items:
-    - name: ASP.NET AJAX için WCF Hizmetleri Oluşturma
-      href: creating-wcf-services-for-aspnet-ajax.md
-      items:
-      - name: 'Nasıl yapılır: AJAX Etkin Bir WCF Hizmeti Oluşturma ve Erişme'
-        href: create-an-ajax-wcf-asp-net-client.md
-      - name: 'Nasıl yapılır: Yapılandırma Kullanmadan ASP.NET AJAX Uç Noktası Ekleme'
-        href: how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md
-      - name: 'Nasıl yapılır: ASP.NET AJAX Uç Noktası Eklemek için Yapılandırma Kullanma'
-        href: how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md
-      - name: 'Nasıl yapılır: ASP.NET AJAX Uç Noktaları için HTTP POST ve HTTP GET İstekleri Arasında Seçim Yapma'
-        href: http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md
-    - name: ASP.NET Olmadan WCF AJAX Hizmetleri Oluşturma
-      href: creating-wcf-ajax-services-without-aspnet.md
-    - name: JSON ve Diğer Veri Aktarma Biçimleri için Destek
-      href: support-for-json-and-other-data-transfer-formats.md
-      items:
-      - name: Bağımsız JSON Seri Hale Getirme
-        href: stand-alone-json-serialization.md
-      - name: 'Nasıl yapılır: JSON Verilerini Seri Hale Getrime ve Seri Halden Çıkarma'
-        href: how-to-serialize-and-deserialize-json-data.md
-      - name: JSON ve XML Arasında Eşleme
-        href: mapping-between-json-and-xml.md
-      - name: İleti Düzeyi Programlama ile JSON Seri Hale Getirme
-        href: serializing-in-json-with-message-level-programming.md
-    - name: "Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma"
-      href: how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md
-  - name: WCF Keşfetme
-    href: wcf-discovery.md
-    items:
-    - name: WCF Keşif Genel Bakış
-      href: wcf-discovery-overview.md
-    - name: WCF Keşif Nesnesi Modeli
-      href: wcf-discovery-object-model.md
-    - name: Keşif Bulma ve FindCriteria
-      href: discovery-find-and-findcriteria.md
-    - name: 'Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme'
-      href: how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md
-    - name: Keşif Proxy'si Ekleme
-      href: implementing-a-discovery-proxy.md
-      items:
-      - name: "Nasıl yapılır: Keşif Proxy'si Uygulama"
-        href: how-to-implement-a-discovery-proxy.md
-      - name: "Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme"
-        href: discoverable-service-that-registers-with-the-discovery-proxy.md
-      - name: "Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma"
-        href: client-app-discovery-proxy-to-find-a-service.md
-      - name: "Nasıl yapılır: Keşif Proxy'sini Test Etme"
-        href: how-to-test-the-discovery-proxy.md
-      - name: 'Nasıl yapılır: Bir Araştırma İsteğinin Keşif sürümünü Belirleme'
-        href: how-to-determine-the-discovery-version-of-a-probe-request.md
-    - name: Keşif Sürümü Oluşturma
-      href: discovery-versioning.md
-    - name: Yapılandırma Dosyasındaki Bir Keşfi Yapılandırma
-      href: configuring-discovery-in-a-configuration-file.md
-    - name: Keşif İstemcisi Kanalını Kullanma
-      href: using-the-discovery-client-channel.md
-    - name: Keşif İstemci Kanalıyla Özel Bağlama Kullanma
-      href: using-a-custom-binding-with-the-discovery-client-channel.md
-    - name: Keşif Duyuruları ve Duyuru İstemcisi
-      href: discovery-announcements-and-announcement-client.md
-    - name: DiscoveryClient ve DynamicEndpoint
-      href: discoveryclient-and-dynamicendpoint.md
-  - name: Yönlendirme
-    href: routing.md
-    items:
-    - name: Yönlendirme Tanıtımı
-      href: routing-introduction.md
-    - name: Yönlendirme Hizmeti
-      href: routing-service.md
-    - name: Sözleşmeleri Yönlendirme
-      href: routing-contracts.md
-    - name: İleti Filtreleri
-      href: message-filters.md
-      items:
-      - name: Filtre Seçme
-        href: choosing-a-filter.md
-      - name: Özel Filtreler
-        href: custom-filters.md
-      - name: 'Nasıl yapılır: Filtreleri Kullanma'
-        href: how-to-use-filters.md
-    - name: Yönlendirme Senaryoları
-      href: routing-scenarios.md
-      items:
-      - name: 'Nasıl yapılır: Hizmet Sürümü Oluşturma'
-        href: how-to-service-versioning.md
-      - name: 'Nasıl yapılır: Hizmet Verilerini Bölümlendirme'
-        href: how-to-service-data-partitioning.md
-      - name: 'Nasıl yapılır: Dinamik Güncelleştirme'
-        href: how-to-dynamic-update.md
-      - name: 'Nasıl yapılır: Hata İşleme'
-        href: how-to-error-handling.md
-  - name: WCF ve Uluslararası Hale Getirilmiş Etki Alanı Adları
-    href: wcf-and-internationalized-domain-names.md
-  - name: WCF ve WebSockets
-    href: wcf-and-websockets.md
-    items:
-    - name: NetHttpBinding Kullanma
-      href: using-the-nethttpbinding.md
-    - name: 'Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma'
-      href: how-to-create-a-wcf-service-that-communicates-over-websockets.md
-  - name: Hata işleme
-    href: error-handling.md
-ms.openlocfilehash: e3e5ea2aa8b0462cfad8dd7094ccf7d669611ae1
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471806"
+        - name: NetHttpBinding Kullanma
+          href: using-the-nethttpbinding.md
+        - name: 'Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma'
+          href: how-to-create-a-wcf-service-that-communicates-over-websockets.md
+    - name: Hata işleme
+      href: error-handling.md

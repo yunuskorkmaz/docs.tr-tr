@@ -1,25 +1,18 @@
-items:
 - name: Olaylar
   href: index.md
   items:
-  - name: 'Nasıl yapılır: Olaylar Oluşturma ve Kullanma'
-    href: how-to-raise-and-consume-events.md
-  - name: 'Nasıl yapılır: Olay Özelliklerini Kullanarak Birden Çok Olayı İşleme'
-    href: how-to-handle-multiple-events-using-event-properties.md
-  - name: 'Nasıl yapılır: Bir Windows Formları Uygulamasında Olayları Kullanma'
-    href: how-to-consume-events-in-a-web-forms-application.md
-  - name: Gözlemci Tasarım Deseni
-    href: observer-design-pattern.md
-    items:
-    - name: Gözlemci Tasarım Deseni En İyi Yöntemleri
-      href: observer-design-pattern-best-practices.md
-    - name: 'Nasıl yapılır: Sağlayıcı Uygulama'
-      href: how-to-implement-a-provider.md
-    - name: 'Nasıl yapılır: Gözlemci Uygulama'
-      href: how-to-implement-an-observer.md
-ms.openlocfilehash: 683b3ce9ecf53166bed8101c2ebcd0d4a43024b9
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471613"
+    - name: 'Nasıl yapılır: Olaylar Oluşturma ve Kullanma'
+      href: how-to-raise-and-consume-events.md
+    - name: 'Nasıl yapılır: Olay Özelliklerini Kullanarak Birden Çok Olayı İşleme'
+      href: how-to-handle-multiple-events-using-event-properties.md
+    - name: 'Nasıl yapılır: Bir Windows Formları Uygulamasında Olayları Kullanma'
+      href: how-to-consume-events-in-a-web-forms-application.md
+    - name: Gözlemci Tasarım Deseni
+      href: observer-design-pattern.md
+      items:
+        - name: Gözlemci Tasarım Deseni En İyi Yöntemleri
+          href: observer-design-pattern-best-practices.md
+        - name: 'Nasıl yapılır: Sağlayıcı Uygulama'
+          href: how-to-implement-a-provider.md
+        - name: 'Nasıl yapılır: Gözlemci Uygulama'
+          href: how-to-implement-an-observer.md

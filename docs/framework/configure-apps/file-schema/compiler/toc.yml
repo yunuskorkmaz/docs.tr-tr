@@ -1,21 +1,14 @@
-items:
 - name: Derleyici ve Dil Sağlayıcısı Ayarları Şeması
   href: index.md
   items:
-  - name: <system.codedom> Öğesi
-    href: system-codedom-element.md
-    items:
-    - name: <compilers> Öğesi
-      href: compilers-element.md
+    - name: <system.codedom> Öğesi
+      href: system-codedom-element.md
       items:
-      - name: <compiler> Öğesi
-        href: compiler-element.md
-        items:
-        - name: <providerOption> Öğesi
-          href: provideroption-element.md
-ms.openlocfilehash: 9d49c036cf0bb5279ff014c962c31a8d0ae04ff2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58472115"
+        - name: <compilers> Öğesi
+          href: compilers-element.md
+          items:
+            - name: <compiler> Öğesi
+              href: compiler-element.md
+              items:
+                - name: <providerOption> Öğesi
+                  href: provideroption-element.md

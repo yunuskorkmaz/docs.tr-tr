@@ -1,24 +1,17 @@
-items:
 - name: Özel Durumlar ve Özel Durum İşleme
   href: index.md
   items:
-  - name: Özel Durumları Kullanma
-    href: using-exceptions.md
-  - name: Özel Durum İşleme
-    href: exception-handling.md
-  - name: Özel Durumlar Oluşturma ve Atma
-    href: creating-and-throwing-exceptions.md
-  - name: Derleyicinin Ürettiği Özel Durumlar
-    href: compiler-generated-exceptions.md
-  - name: 'Nasıl yapılır: try/catch Kullanarak Özel Durum İşleme'
-    href: how-to-handle-an-exception-using-try-catch.md
-  - name: 'Nasıl yapılır: Finally Kullanarak Temizleme Kodu Yürütme'
-    href: how-to-execute-cleanup-code-using-finally.md
-  - name: 'Nasıl yapılır: CLS Olmayan Özel Durum Değerlendirme'
-    href: how-to-catch-a-non-cls-exception.md
-ms.openlocfilehash: 391605df4d623451a4a1c830a48322c7a14eef7c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471624"
+    - name: Özel Durumları Kullanma
+      href: using-exceptions.md
+    - name: Özel Durum İşleme
+      href: exception-handling.md
+    - name: Özel Durumlar Oluşturma ve Atma
+      href: creating-and-throwing-exceptions.md
+    - name: Derleyicinin Ürettiği Özel Durumlar
+      href: compiler-generated-exceptions.md
+    - name: 'Nasıl yapılır: try/catch Kullanarak Özel Durum İşleme'
+      href: how-to-handle-an-exception-using-try-catch.md
+    - name: 'Nasıl yapılır: Finally Kullanarak Temizleme Kodu Yürütme'
+      href: how-to-execute-cleanup-code-using-finally.md
+    - name: 'Nasıl yapılır: CLS Olmayan Özel Durum Değerlendirme'
+      href: how-to-catch-a-non-cls-exception.md

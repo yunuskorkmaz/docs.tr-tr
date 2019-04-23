@@ -1,4 +1,3 @@
-items:
 - name: ADO.NET Entity Framework
   href: index.md
 - name: Entity Framework’e Genel Bakış
@@ -6,21 +5,21 @@ items:
 - name: Modelleme ve Eşleme
   href: modeling-and-mapping.md
   items:
-  - name: EDM Oluşturucu (EdmGen.exe)
-    href: edm-generator-edmgen-exe.md
-    items:
-    - name: 'Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyaları Oluşturma'
-      href: how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md
-    - name: 'Nasıl yapılır: EdmGen.exe kullanarak Nesne Katmanı Kodu Oluşturma'
-      href: how-to-use-edmgen-exe-to-generate-object-layer-code.md
-    - name: 'Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyalarını Doğrulama'
-      href: how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md
-  - name: 'Nasıl yapılır: Bağlantı Dizesi Tanımlama'
-    href: how-to-define-the-connection-string.md
-  - name: 'Nasıl yapılır: Model ve Eşleme Dosyalarını Gömülü Kaynak Yapma'
-    href: how-to-make-model-and-mapping-files-embedded-resources.md
-  - name: Veri Tanımlama Dili ile Çalışma
-    href: working-with-data-definition-language.md
+    - name: EDM Oluşturucu (EdmGen.exe)
+      href: edm-generator-edmgen-exe.md
+      items:
+        - name: 'Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyaları Oluşturma'
+          href: how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md
+        - name: 'Nasıl yapılır: EdmGen.exe kullanarak Nesne Katmanı Kodu Oluşturma'
+          href: how-to-use-edmgen-exe-to-generate-object-layer-code.md
+        - name: 'Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyalarını Doğrulama'
+          href: how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md
+    - name: 'Nasıl yapılır: Bağlantı Dizesi Tanımlama'
+      href: how-to-define-the-connection-string.md
+    - name: 'Nasıl yapılır: Model ve Eşleme Dosyalarını Gömülü Kaynak Yapma'
+      href: how-to-make-model-and-mapping-files-embedded-resources.md
+    - name: Veri Tanımlama Dili ile Çalışma
+      href: working-with-data-definition-language.md
 - name: Kavramsal bir Modeli Sorgulama
   href: querying-a-conceptual-model.md
 - name: Nesnelerle Çalışma
@@ -28,88 +27,88 @@ items:
 - name: Veri Sağlayıcılarıyla Çalışma
   href: working-with-data-providers.md
   items:
-  - name: Bağlantı Dizeleri
-    href: connection-strings.md
-  - name: Entity Framework Veri Sağlayıcıları
-    href: data-providers.md
-    items:
-    - name: Entity Framework için EntityClient Sağlayıcısı
-      href: entityclient-provider-for-the-entity-framework.md
+    - name: Bağlantı Dizeleri
+      href: connection-strings.md
+    - name: Entity Framework Veri Sağlayıcıları
+      href: data-providers.md
       items:
-      - name: 'Nasıl yapılır: Bir EntityConnection Bağlantı Dizesi Oluşturma'
-        href: how-to-build-an-entityconnection-connection-string.md
-      - name: 'Nasıl yapılır: PrimitiveType Sonuçları Döndüren Bir Sorgu Yürütme'
-        href: how-to-execute-a-query-that-returns-primitivetype-results.md
-      - name: 'Nasıl yapılır: StructuralType Sonuçları Döndüren Bir Sorgu Yürütme'
-        href: how-to-execute-a-query-that-returns-structuraltype-results.md
-      - name: 'Nasıl yapılır: RefType Sonuçları Döndüren Bir Sorgu Yürütme'
-        href: how-to-execute-a-query-that-returns-reftype-results.md
-      - name: 'Nasıl yapılır: Karmaşık Türler Döndüren Bir Sorgu Yürütme'
-        href: how-to-execute-a-query-that-returns-complex-types.md
-      - name: 'Nasıl yapılır: İç İçe Geçmiş Koleksiyonlar Döndüren Bir Sorgu Yürütme'
-        href: how-to-execute-a-query-that-returns-nested-collections.md
-      - name: 'Nasıl yapılır: EntityCommand Kullanarak Parametreli Entity SQL Sorgusu Yürütme'
-        href: how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md
-      - name: 'Nasıl yapılır: EntityCommand Kullanarak Parametreli Saklı Yordam Yürütme'
-        href: how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md
-      - name: 'Nasıl yapılır: Çok Biçimli Sorgu Yürütme'
-        href: how-to-execute-a-polymorphic-query.md
-      - name: 'Nasıl yapılır: Nasıl yapılır: Navigate İşleci ile İlişkilerde Gezinme'
-        href: how-to-navigate-relationships-with-the-navigate-operator.md
-    - name: Entity Framework için SqlClient
-      href: sqlclient-for-the-entity-framework.md
+        - name: Entity Framework için EntityClient Sağlayıcısı
+          href: entityclient-provider-for-the-entity-framework.md
+          items:
+            - name: 'Nasıl yapılır: Bir EntityConnection Bağlantı Dizesi Oluşturma'
+              href: how-to-build-an-entityconnection-connection-string.md
+            - name: 'Nasıl yapılır: PrimitiveType Sonuçları Döndüren Bir Sorgu Yürütme'
+              href: how-to-execute-a-query-that-returns-primitivetype-results.md
+            - name: 'Nasıl yapılır: StructuralType Sonuçları Döndüren Bir Sorgu Yürütme'
+              href: how-to-execute-a-query-that-returns-structuraltype-results.md
+            - name: 'Nasıl yapılır: RefType Sonuçları Döndüren Bir Sorgu Yürütme'
+              href: how-to-execute-a-query-that-returns-reftype-results.md
+            - name: 'Nasıl yapılır: Karmaşık Türler Döndüren Bir Sorgu Yürütme'
+              href: how-to-execute-a-query-that-returns-complex-types.md
+            - name: 'Nasıl yapılır: İç İçe Geçmiş Koleksiyonlar Döndüren Bir Sorgu Yürütme'
+              href: how-to-execute-a-query-that-returns-nested-collections.md
+            - name: 'Nasıl yapılır: EntityCommand Kullanarak Parametreli Entity SQL Sorgusu Yürütme'
+              href: how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md
+            - name: 'Nasıl yapılır: EntityCommand Kullanarak Parametreli Saklı Yordam Yürütme'
+              href: how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md
+            - name: 'Nasıl yapılır: Çok Biçimli Sorgu Yürütme'
+              href: how-to-execute-a-polymorphic-query.md
+            - name: 'Nasıl yapılır: Nasıl yapılır: Navigate İşleci ile İlişkilerde Gezinme'
+              href: how-to-navigate-relationships-with-the-navigate-operator.md
+        - name: Entity Framework için SqlClient
+          href: sqlclient-for-the-entity-framework.md
+          items:
+            - name: Entity Framework için SqlClient İşlevleri
+              href: sqlclient-for-ef-functions.md
+              items:
+                - name: SQL Server İşlevleri ile Kurallı Kavramsal Model Eşlemesi
+                  href: conceptual-model-canonical-to-sql-server-functions-mapping.md
+                - name: Toplama İşlevleri
+                  href: aggregate-functions-sqlclient-for-entity-framework.md
+                - name: Tarih ve Saat İşlevleri
+                  href: date-and-time-functions.md
+                - name: Matematik İşlevleri
+                  href: mathematical-functions.md
+                - name: Dize İşlevleri
+                  href: string-functions.md
+                - name: Sistem İşlevleri
+                  href: system-functions.md
+            - name: Entity FrameworkTypes için SqlClient
+              href: sqlclient-for-ef-types.md
+            - name: Entity Framework için SqlClient’ta Bilinen Sorunlar
+              href: known-issues-in-sqlclient-for-entity-framework.md
+    - name: Entity Framework Veri Sağlayıcısı Yazma
+      href: writing-an-ef-data-provider.md
       items:
-      - name: Entity Framework için SqlClient İşlevleri
-        href: sqlclient-for-ef-functions.md
-        items:
-        - name: SQL Server İşlevleri ile Kurallı Kavramsal Model Eşlemesi
-          href: conceptual-model-canonical-to-sql-server-functions-mapping.md
-        - name: Toplama İşlevleri
-          href: aggregate-functions-sqlclient-for-entity-framework.md
-        - name: Tarih ve Saat İşlevleri
-          href: date-and-time-functions.md
-        - name: Matematik İşlevleri
-          href: mathematical-functions.md
-        - name: Dize İşlevleri
-          href: string-functions.md
-        - name: Sistem İşlevleri
-          href: system-functions.md
-      - name: Entity FrameworkTypes için SqlClient
-        href: sqlclient-for-ef-types.md
-      - name: Entity Framework için SqlClient’ta Bilinen Sorunlar
-        href: known-issues-in-sqlclient-for-entity-framework.md
-  - name: Entity Framework Veri Sağlayıcısı Yazma
-    href: writing-an-ef-data-provider.md
-    items:
-    - name: SQL Üretimi
-      href: sql-generation.md
-      items:
-      - name: Komut Ağaçlarının Şekli
-        href: the-shape-of-the-command-trees.md
-      - name: Komut Ağaçlarından SQL Oluşturma - En İyi Yöntemler
-        href: generating-sql-from-command-trees-best-practices.md
-      - name: Örnek Sağlayıcısında SQL Oluşturma
-        href: sql-generation-in-the-sample-provider.md
-        items:
-        - name: Mimari ve Tasarım
-          href: architecture-and-design.md
-        - name: 'İzlenecek yol: SQL Üretimi'
-          href: walkthrough-sql-generation.md
-    - name: Değişiklik SQL Oluşturma
-      href: modification-sql-generation.md
-    - name: Sağlayıcı Bildirimi Belirtimi
-      href: provider-manifest-specification.md
+        - name: SQL Üretimi
+          href: sql-generation.md
+          items:
+            - name: Komut Ağaçlarının Şekli
+              href: the-shape-of-the-command-trees.md
+            - name: Komut Ağaçlarından SQL Oluşturma - En İyi Yöntemler
+              href: generating-sql-from-command-trees-best-practices.md
+            - name: Örnek Sağlayıcısında SQL Oluşturma
+              href: sql-generation-in-the-sample-provider.md
+              items:
+                - name: Mimari ve Tasarım
+                  href: architecture-and-design.md
+                - name: 'İzlenecek yol: SQL Üretimi'
+                  href: walkthrough-sql-generation.md
+        - name: Değişiklik SQL Oluşturma
+          href: modification-sql-generation.md
+        - name: Sağlayıcı Bildirimi Belirtimi
+          href: provider-manifest-specification.md
 - name: Geliştirme ve Dağıtım Konuları
   href: development-and-deployment-considerations.md
   items:
-  - name: Güvenlik Değerlendirmeleri
-    href: security-considerations.md
-  - name: Başarım Değerlendirmeleri
-    href: performance-considerations.md
-  - name: Geçiş Konuları
-    href: migration-considerations.md
-  - name: Dağıtım Hakkında Önemli Noktalar
-    href: deployment-considerations.md
+    - name: Güvenlik Değerlendirmeleri
+      href: security-considerations.md
+    - name: Başarım Değerlendirmeleri
+      href: performance-considerations.md
+    - name: Geçiş Konuları
+      href: migration-considerations.md
+    - name: Dağıtım Hakkında Önemli Noktalar
+      href: deployment-considerations.md
 - name: Entity Framework Kaynakları
   href: resources.md
 - name: Entity Framework Terimleri
@@ -118,9 +117,3 @@ items:
   href: getting-started.md
 - name: Dil Başvurusu
   href: language-reference/index.md
-ms.openlocfilehash: 7b6de341e548ca64690cf9a17281fcbb30f160cf
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471963"

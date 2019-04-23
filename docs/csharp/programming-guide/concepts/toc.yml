@@ -1,34 +1,27 @@
-items:
 - name: Programlama Kavramları
   href: index.md
   items:
-  - name: Derlemeler ve Genel Derleme Önbelleği
-    href: assemblies-gac/
-  - name: Async ve await ile Zaman Uyumsuz Programlama
-    href: async/
-  - name: Öznitelikler
-    href: attributes/
-  - name: Arayan Bilgileri
-    href: caller-information.md
-  - name: Koleksiyonlar
-    href: collections.md
-  - name: Kovaryans ve Kontravaryans
-    href: covariance-contravariance/
-  - name: İfade Ağaçları
-    href: expression-trees/
-  - name: Yineleyiciler
-    href: iterators.md
-  - name: Dil ile Tümleşik Sorgu (LINQ)
-    href: linq/
-  - name: Nesne Odaklı Programlama
-    href: object-oriented-programming.md
-  - name: Yansıma
-    href: reflection.md
-  - name: Serileştirme (C# )
-    href: serialization/
-ms.openlocfilehash: 43357f3e4d438d96ba5778100585453792ed29c6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471990"
+    - name: Derlemeler ve Genel Derleme Önbelleği
+      href: assemblies-gac/
+    - name: Async ve await ile Zaman Uyumsuz Programlama
+      href: async/
+    - name: Öznitelikler
+      href: attributes/
+    - name: Arayan Bilgileri
+      href: caller-information.md
+    - name: Koleksiyonlar
+      href: collections.md
+    - name: Kovaryans ve Kontravaryans
+      href: covariance-contravariance/
+    - name: İfade Ağaçları
+      href: expression-trees/
+    - name: Yineleyiciler
+      href: iterators.md
+    - name: Dil ile Tümleşik Sorgu (LINQ)
+      href: linq/
+    - name: Nesne Odaklı Programlama
+      href: object-oriented-programming.md
+    - name: Yansıma
+      href: reflection.md
+    - name: 'Serileştirme (C# )'
+      href: serialization/

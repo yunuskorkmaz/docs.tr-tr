@@ -1,16 +1,9 @@
-items:
 - name: Erken ve Geç Bağlama
   href: index.md
   items:
-  - name: Nesne Türünü Belirleme
-    href: determining-object-type.md
-  - name: Bir Dize Adı Kullanarak Bir Özelliği veya Yöntemi Çağırma
-    href: calling-a-property-or-method-using-a-string-name.md
-  - name: Dinamik Nesnelerle Çalışma
-    href: working-with-dynamic-objects.md
-ms.openlocfilehash: edd2a6e97163ceb4dce728639a6651482e58ab6d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471622"
+    - name: Nesne Türünü Belirleme
+      href: determining-object-type.md
+    - name: Bir Dize Adı Kullanarak Bir Özelliği veya Yöntemi Çağırma
+      href: calling-a-property-or-method-using-a-string-name.md
+    - name: Dinamik Nesnelerle Çalışma
+      href: working-with-dynamic-objects.md

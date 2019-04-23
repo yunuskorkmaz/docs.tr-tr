@@ -1,154 +1,147 @@
-items:
 - name: SQL Server ve ADO.NET
   href: index.md
 - name: SQL Server Güvenliği
   href: sql-server-security.md
   items:
-  - name: SQL Server Güvenliğine Genel Bakış
-    href: overview-of-sql-server-security.md
-    items:
-    - name: SQL Server’da Kimlik Doğrulaması
-      href: authentication-in-sql-server.md
-    - name: SQL Server’da Sunucu ve Veritabanı Rolleri
-      href: server-and-database-roles-in-sql-server.md
-    - name: SQL Server'da Sahiplik ve Kullanıcı Şeması Ayrımı
-      href: ownership-and-user-schema-separation-in-sql-server.md
-    - name: SQL Server’da Yetkilendirme ve İzinler
-      href: authorization-and-permissions-in-sql-server.md
-    - name: SQL Server’da Veri Şifreleme
-      href: data-encryption-in-sql-server.md
-    - name: SQL Server’da CLR Tümleştirme Güvenliği
-      href: clr-integration-security-in-sql-server.md
-  - name: SQL Server'da Uygulama Güvenliği Senaryoları
-    href: application-security-scenarios-in-sql-server.md
-    items:
-    - name: SQL Server'da Saklı Yordam İzinlerini Yönetme
-      href: managing-permissions-with-stored-procedures-in-sql-server.md
-    - name: SQL Server’da Secure Dynamic SQL Yazma
-      href: writing-secure-dynamic-sql-in-sql-server.md
-    - name: SQL Server'da Saklı Yordam İmzalama
-      href: signing-stored-procedures-in-sql-server.md
-    - name: SQL Server'da Kimliğe Bürünme İzinlerini Özelleştirme
-      href: customizing-permissions-with-impersonation-in-sql-server.md
-    - name: SQL Server’da Satır Düzeyinde İzinler Verme
-      href: granting-row-level-permissions-in-sql-server.md
-    - name: SQL Server’da Uygulama Rolleri Oluşturma
-      href: creating-application-roles-in-sql-server.md
-    - name: SQL Server'da Veritabanları Arası Erişimi Etkinleştirme
-      href: enabling-cross-database-access-in-sql-server.md
-  - name: SQL Server Express Güvenliği
-    href: sql-server-express-security.md
+    - name: SQL Server Güvenliğine Genel Bakış
+      href: overview-of-sql-server-security.md
+      items:
+        - name: SQL Server’da Kimlik Doğrulaması
+          href: authentication-in-sql-server.md
+        - name: SQL Server’da Sunucu ve Veritabanı Rolleri
+          href: server-and-database-roles-in-sql-server.md
+        - name: SQL Server'da Sahiplik ve Kullanıcı Şeması Ayrımı
+          href: ownership-and-user-schema-separation-in-sql-server.md
+        - name: SQL Server’da Yetkilendirme ve İzinler
+          href: authorization-and-permissions-in-sql-server.md
+        - name: SQL Server’da Veri Şifreleme
+          href: data-encryption-in-sql-server.md
+        - name: SQL Server’da CLR Tümleştirme Güvenliği
+          href: clr-integration-security-in-sql-server.md
+    - name: SQL Server'da Uygulama Güvenliği Senaryoları
+      href: application-security-scenarios-in-sql-server.md
+      items:
+        - name: SQL Server'da Saklı Yordam İzinlerini Yönetme
+          href: managing-permissions-with-stored-procedures-in-sql-server.md
+        - name: SQL Server’da Secure Dynamic SQL Yazma
+          href: writing-secure-dynamic-sql-in-sql-server.md
+        - name: SQL Server'da Saklı Yordam İmzalama
+          href: signing-stored-procedures-in-sql-server.md
+        - name: SQL Server'da Kimliğe Bürünme İzinlerini Özelleştirme
+          href: customizing-permissions-with-impersonation-in-sql-server.md
+        - name: SQL Server’da Satır Düzeyinde İzinler Verme
+          href: granting-row-level-permissions-in-sql-server.md
+        - name: SQL Server’da Uygulama Rolleri Oluşturma
+          href: creating-application-roles-in-sql-server.md
+        - name: SQL Server'da Veritabanları Arası Erişimi Etkinleştirme
+          href: enabling-cross-database-access-in-sql-server.md
+    - name: SQL Server Express Güvenliği
+      href: sql-server-express-security.md
 - name: SQL Server Veri Türleri ve ADO.NET
   href: sql-server-data-types.md
   items:
-  - name: SqlTypes ve DataSet
-    href: sqltypes-and-the-dataset.md
-  - name: Null Değerleri İşleme
-    href: handling-null-values.md
-  - name: GUID ve uniqueidentifier Değerlerini Karşılaştırma
-    href: comparing-guid-and-uniqueidentifier-values.md
-  - name: Tarih ve Saat Verileri
-    href: date-and-time-data.md
-  - name: Büyük UDT’ler
-    href: large-udts.md
-  - name: SQL Server'da XML Verileri
-    href: xml-data-in-sql-server.md
-    items:
-    - name: SQL XML Sütun Değerleri
-      href: sql-xml-column-values.md
-    - name: Parametre Olarak XML Değerleri Belirtme
-      href: specifying-xml-values-as-parameters.md
+    - name: SqlTypes ve DataSet
+      href: sqltypes-and-the-dataset.md
+    - name: Null Değerleri İşleme
+      href: handling-null-values.md
+    - name: GUID ve uniqueidentifier Değerlerini Karşılaştırma
+      href: comparing-guid-and-uniqueidentifier-values.md
+    - name: Tarih ve Saat Verileri
+      href: date-and-time-data.md
+    - name: Büyük UDT’ler
+      href: large-udts.md
+    - name: SQL Server'da XML Verileri
+      href: xml-data-in-sql-server.md
+      items:
+        - name: SQL XML Sütun Değerleri
+          href: sql-xml-column-values.md
+        - name: Parametre Olarak XML Değerleri Belirtme
+          href: specifying-xml-values-as-parameters.md
 - name: SQL Server İkili ve Büyük Değerli Veriler
   href: sql-server-binary-and-large-value-data.md
   items:
-  - name: ADO.NET İçinde Büyük Değerli (Maks) Verileri Değiştirme
-    href: modifying-large-value-max-data.md
-  - name: FILESTREAM Verileri
-    href: filestream-data.md
-  - name: Dosyadan Görüntü Ekleme
-    href: inserting-an-image-from-a-file.md
+    - name: ADO.NET İçinde Büyük Değerli (Maks) Verileri Değiştirme
+      href: modifying-large-value-max-data.md
+    - name: FILESTREAM Verileri
+      href: filestream-data.md
+    - name: Dosyadan Görüntü Ekleme
+      href: inserting-an-image-from-a-file.md
 - name: ADO.NET’te SQL Server Veri İşlemleri
   href: sql-server-data-operations.md
   items:
-  - name: SQL Server’da Toplu Kopyalama İşlemleri
-    href: bulk-copy-operations-in-sql-server.md
-    items:
-    - name: Toplu Kopyalama Örnek Kurulumu
-      href: bulk-copy-example-setup.md
-    - name: Tekil Toplu Kopyalama İşlemleri
-      href: single-bulk-copy-operations.md
-    - name: Çoklu Toplu Kopyalama İşlemleri
-      href: multiple-bulk-copy-operations.md
-    - name: İşlem ve Toplu Kopyalama İşlemleri
-      href: transaction-and-bulk-copy-operations.md
-  - name: Birden Çok Etkin Sonuç Kümesi (MARS)
-    href: multiple-active-result-sets-mars.md
-    items:
-    - name: Birden Çok Etkin Sonuç Kümesini Etkinleştirme
-      href: enabling-multiple-active-result-sets.md
-    - name: Verileri Düzenleme
-      href: manipulating-data.md
-  - name: Zaman Uyumsuz İşlemler
-    href: asynchronous-operations.md
-    items:
-    - name: Geri Çağırma Kullanan Windows Uygulamaları
-      href: windows-applications-using-callbacks.md
-    - name: Bekleme Tanıtıcıları Kullanan ASP.NET Uygulamaları
-      href: aspnet-apps-using-wait-handles.md
-    - name: Konsol Uygulamalarında Yoklama
-      href: polling-in-console-applications.md
-  - name: Tablo Değerli Parametreler
-    href: table-valued-parameters.md
+    - name: SQL Server’da Toplu Kopyalama İşlemleri
+      href: bulk-copy-operations-in-sql-server.md
+      items:
+        - name: Toplu Kopyalama Örnek Kurulumu
+          href: bulk-copy-example-setup.md
+        - name: Tekil Toplu Kopyalama İşlemleri
+          href: single-bulk-copy-operations.md
+        - name: Çoklu Toplu Kopyalama İşlemleri
+          href: multiple-bulk-copy-operations.md
+        - name: İşlem ve Toplu Kopyalama İşlemleri
+          href: transaction-and-bulk-copy-operations.md
+    - name: Birden Çok Etkin Sonuç Kümesi (MARS)
+      href: multiple-active-result-sets-mars.md
+      items:
+        - name: Birden Çok Etkin Sonuç Kümesini Etkinleştirme
+          href: enabling-multiple-active-result-sets.md
+        - name: Verileri Düzenleme
+          href: manipulating-data.md
+    - name: Zaman Uyumsuz İşlemler
+      href: asynchronous-operations.md
+      items:
+        - name: Geri Çağırma Kullanan Windows Uygulamaları
+          href: windows-applications-using-callbacks.md
+        - name: Bekleme Tanıtıcıları Kullanan ASP.NET Uygulamaları
+          href: aspnet-apps-using-wait-handles.md
+        - name: Konsol Uygulamalarında Yoklama
+          href: polling-in-console-applications.md
+    - name: Tablo Değerli Parametreler
+      href: table-valued-parameters.md
 - name: SQL Server Özellikleri ve ADO.NET
   href: sql-server-features-and-adonet.md
   items:
-  - name: SQL Server (ADO.NET) Numaralandırma Örnekleri
-    href: enumerating-instances-of-sql-server.md
-  - name: SQL Server için Sağlayıcı İstatistikleri
-    href: provider-statistics-for-sql-server.md
-  - name: SQL Server Express Kullanıcı Örnekleri
-    href: sql-server-express-user-instances.md
-  - name: SQL Server’da Veritabanı Yansıtması
-    href: database-mirroring-in-sql-server.md
-  - name: SQL Server Ortak Dil Çalışma Zamanı Modülü Tümleştirmesi
-    href: sql-server-common-language-runtime-integration.md
-    items:
-    - name: SQL Server CLR Tümleştirmesine Giriş
-      href: introduction-to-sql-server-clr-integration.md
-    - name: Kullanıcı Tanımlı CLR İşlevleri
-      href: clr-user-defined-functions.md
-    - name: Kullanıcı Tanımlı CLR Türleri
-      href: clr-user-defined-types.md
-    - name: CLR Saklı Yordamları
-      href: clr-stored-procedures.md
-    - name: CLR Tetikleyicileri
-      href: clr-triggers.md
-    - name: Bağlam Bağlantısı
-      href: the-context-connection.md
-    - name: SQL Server İşlem İçine Özgü ADO.NET Davranışı
-      href: sql-server-in-process-specific-behavior-of-adonet.md
-  - name: SQL Server'da Sorgu Bildirimleri
-    href: query-notifications-in-sql-server.md
-    items:
-    - name: Sorgu Bildirimlerini Etkinleştirme
-      href: enabling-query-notifications.md
-    - name: Bir ASP.NET Uygulamasında SqlDependency
-      href: sqldependency-in-an-aspnet-app.md
-    - name: SqlDependency ile Değişiklikleri Algılama
-      href: detecting-changes-with-sqldependency.md
-    - name: Bir SqlNotificationRequest ile SqlCommand Yürütme
-      href: sqlcommand-execution-with-a-sqlnotificationrequest.md
-  - name: SQL Server'da Anlık Görüntü Yalıtımı
-    href: snapshot-isolation-in-sql-server.md
-  - name: Yüksek Kullanılabilirlik, Olağanüstü Durum Kurtarma için SqlClient Desteği
-    href: sqlclient-support-for-high-availability-disaster-recovery.md
-  - name: Yerel Veritabanı için SqlClient Desteği
-    href: sqlclient-support-for-localdb.md
+    - name: SQL Server (ADO.NET) Numaralandırma Örnekleri
+      href: enumerating-instances-of-sql-server.md
+    - name: SQL Server için Sağlayıcı İstatistikleri
+      href: provider-statistics-for-sql-server.md
+    - name: SQL Server Express Kullanıcı Örnekleri
+      href: sql-server-express-user-instances.md
+    - name: SQL Server’da Veritabanı Yansıtması
+      href: database-mirroring-in-sql-server.md
+    - name: SQL Server Ortak Dil Çalışma Zamanı Modülü Tümleştirmesi
+      href: sql-server-common-language-runtime-integration.md
+      items:
+        - name: SQL Server CLR Tümleştirmesine Giriş
+          href: introduction-to-sql-server-clr-integration.md
+        - name: Kullanıcı Tanımlı CLR İşlevleri
+          href: clr-user-defined-functions.md
+        - name: Kullanıcı Tanımlı CLR Türleri
+          href: clr-user-defined-types.md
+        - name: CLR Saklı Yordamları
+          href: clr-stored-procedures.md
+        - name: CLR Tetikleyicileri
+          href: clr-triggers.md
+        - name: Bağlam Bağlantısı
+          href: the-context-connection.md
+        - name: SQL Server İşlem İçine Özgü ADO.NET Davranışı
+          href: sql-server-in-process-specific-behavior-of-adonet.md
+    - name: SQL Server'da Sorgu Bildirimleri
+      href: query-notifications-in-sql-server.md
+      items:
+        - name: Sorgu Bildirimlerini Etkinleştirme
+          href: enabling-query-notifications.md
+        - name: Bir ASP.NET Uygulamasında SqlDependency
+          href: sqldependency-in-an-aspnet-app.md
+        - name: SqlDependency ile Değişiklikleri Algılama
+          href: detecting-changes-with-sqldependency.md
+        - name: Bir SqlNotificationRequest ile SqlCommand Yürütme
+          href: sqlcommand-execution-with-a-sqlnotificationrequest.md
+    - name: SQL Server'da Anlık Görüntü Yalıtımı
+      href: snapshot-isolation-in-sql-server.md
+    - name: 'Yüksek Kullanılabilirlik, Olağanüstü Durum Kurtarma için SqlClient Desteği'
+      href: sqlclient-support-for-high-availability-disaster-recovery.md
+    - name: Yerel Veritabanı için SqlClient Desteği
+      href: sqlclient-support-for-localdb.md
 - name: LINQ - SQL
   href: linq/
-ms.openlocfilehash: ab9104f2a2d626748988c89bc78cbf0668c51512
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58472070"

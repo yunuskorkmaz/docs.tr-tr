@@ -1,96 +1,89 @@
-items:
 - name: Serileştirme
   href: index.md
   items:
-  - name: Serileştirme ile İlgili Nasıl Yapılır Konuları
-    href: serialization-how-to-topics.md
-  - name: İkili Serileştirme
-    href: binary-serialization.md
-    items:
-    - name: Serileştirme Kavramları
-      href: serialization-concepts.md
-    - name: Temel Serileştirme
-      href: basic-serialization.md
-    - name: Seçmeli Serileştirme
-      href: selective-serialization.md
-    - name: Özel Serileştirme
-      href: custom-serialization.md
-    - name: Serileştirme İşlemi Adımları
-      href: steps-in-the-serialization-process.md
-    - name: Sürüme Dayanıklı Serileştirme
-      href: version-tolerant-serialization.md
-    - name: Serileştirme Yönergeleri
-      href: serialization-guidelines.md
-    - name: 'Nasıl yapılır: Öbek Halinde Serileştirilmiş Veriler'
-      href: how-to-chunk-serialized-data.md
-    - name: 'Nasıl yapılır: .NET Standard nesnesinin serileştirilebilir olup olmadığını belirleme'
-      href: how-to-determine-if-netstandard-object-is-serializable.md
-  - name: XML ve SOAP Serileştirme
-    href: xml-and-soap-serialization.md
-    items:
-    - name: 'Nasıl yapılır: Türetilen Sınıfların Serileştirmesini Denetleme'
-      href: how-to-control-serialization-of-derived-classes.md
-    - name: XML Serileştirmeye Giriş
-      href: introducing-xml-serialization.md
-    - name: 'Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma'
-      href: how-to-deserialize-an-object.md
-    - name: XML Serileştirme Örnekleri
-      href: examples-of-xml-serialization.md
-    - name: XML Şema Tanımı Aracı ve XML Serileştirme
-      href: the-xml-schema-definition-tool-and-xml-serialization.md
-    - name: 'Nasıl yapılır: Sınıflar ve XML Şeması Belgeleri Oluşturmak için XML Şema Tanımı Aracını Kullanma'
-      href: xml-schema-def-tool-gen.md
-    - name: Öznitelikleri Kullanarak XML Serileştirmeyi Denetleme
-      href: controlling-xml-serialization-using-attributes.md
-    - name: XML Serileştirmeyi Denetleyen Öznitelikler
-      href: attributes-that-control-xml-serialization.md
-    - name: 'Nasıl yapılır: XML Akışı için Alternatif Öğe Adı Belirtme'
-      href: how-to-specify-an-alternate-element-name-for-an-xml-stream.md
-    - name: 'Nasıl yapılır: Nesne Serileştirme'
-      href: how-to-serialize-an-object.md
-    - name: 'Nasıl yapılır: XML Öğesini ve XML Öznitelik Adlarını Niteleme'
-      href: how-to-qualify-xml-element-and-xml-attribute-names.md
-    - name: XML Web Hizmetleri ile XML Serileştirme
-      href: xml-serialization-with-xml-web-services.md
-    - name: 'Nasıl yapılır: SOAP Kodlu XML Akışı Olarak Nesneyi Serileştirme'
-      href: how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
-    - name: 'Nasıl yapılır: Kodlanmış SOAP XML Serileştirmesini Geçersiz Kılma'
-      href: how-to-override-encoded-soap-xml-serialization.md
-    - name: Kodlanmış SOAP Serileştirmesini Denetleyen Öznitelikler
-      href: attributes-that-control-encoded-soap-serialization.md
-    - name: <system.xml.serialization> Öğesi
-      href: system-xml-serialization-element.md
-    - name: <dateTimeSerialization> Öğesi
-      href: datetimeserialization-element.md
-    - name: <schemaImporterExtensions> Öğesi
-      href: schemaimporterextensions-element.md
-    - name: <schemaImporterExtensions> için <add> öğesi
-      href: add-element-for-schemaimporterextensions.md
-    - name: <xmlSerializer> Öğesi
-      href: xmlserializer-element.md
-  - name: Serileştirme Araçları
-    href: serialization-tools.md
-    items:
-    - name: XML Serileştiricisi Oluşturma Aracı (Sgen.exe)
-      href: xml-serializer-generator-tool-sgen-exe.md
-    - name: XML şema tanımı Aracı (XSD.exe'nin)
-      href: xml-schema-definition-tool-xsd-exe.md
-  - name: Serileştirme Örnekleri
-    href: serialization-samples.md
-    items:
-    - name: Temel Serileştirme Teknolojisi Örneği
-      href: basic-serialization-technology-sample.md
-    - name: XmlSerializer ile Özel Serileştirme Düzeni
-      href: custom-serialization-order-with-xmlserializer.md
-    - name: SchemaImporterExtension Teknoloji Örneği
-      href: schemaimporterextension-technology-sample.md
-    - name: Sürüme Dayanıklı Serileştirme Teknolojisi Örneği
-      href: version-tolerant-serialization-technology-sample.md
-    - name: Web Hizmetleri Genel Serileştirme Teknolojisi Örneği
-      href: web-services-generics-serialization-technology-sample.md
-ms.openlocfilehash: ab9134268559fadb0e5f586773d5963535d4b12a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471603"
+    - name: Serileştirme ile İlgili Nasıl Yapılır Konuları
+      href: serialization-how-to-topics.md
+    - name: İkili Serileştirme
+      href: binary-serialization.md
+      items:
+        - name: Serileştirme Kavramları
+          href: serialization-concepts.md
+        - name: Temel Serileştirme
+          href: basic-serialization.md
+        - name: Seçmeli Serileştirme
+          href: selective-serialization.md
+        - name: Özel Serileştirme
+          href: custom-serialization.md
+        - name: Serileştirme İşlemi Adımları
+          href: steps-in-the-serialization-process.md
+        - name: Sürüme Dayanıklı Serileştirme
+          href: version-tolerant-serialization.md
+        - name: Serileştirme Yönergeleri
+          href: serialization-guidelines.md
+        - name: 'Nasıl yapılır: Öbek Halinde Serileştirilmiş Veriler'
+          href: how-to-chunk-serialized-data.md
+        - name: 'Nasıl yapılır: .NET Standard nesnesinin serileştirilebilir olup olmadığını belirleme'
+          href: how-to-determine-if-netstandard-object-is-serializable.md
+    - name: XML ve SOAP Serileştirme
+      href: xml-and-soap-serialization.md
+      items:
+        - name: 'Nasıl yapılır: Türetilen Sınıfların Serileştirmesini Denetleme'
+          href: how-to-control-serialization-of-derived-classes.md
+        - name: XML Serileştirmeye Giriş
+          href: introducing-xml-serialization.md
+        - name: 'Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma'
+          href: how-to-deserialize-an-object.md
+        - name: XML Serileştirme Örnekleri
+          href: examples-of-xml-serialization.md
+        - name: XML Şema Tanımı Aracı ve XML Serileştirme
+          href: the-xml-schema-definition-tool-and-xml-serialization.md
+        - name: 'Nasıl yapılır: Sınıflar ve XML Şeması Belgeleri Oluşturmak için XML Şema Tanımı Aracını Kullanma'
+          href: xml-schema-def-tool-gen.md
+        - name: Öznitelikleri Kullanarak XML Serileştirmeyi Denetleme
+          href: controlling-xml-serialization-using-attributes.md
+        - name: XML Serileştirmeyi Denetleyen Öznitelikler
+          href: attributes-that-control-xml-serialization.md
+        - name: 'Nasıl yapılır: XML Akışı için Alternatif Öğe Adı Belirtme'
+          href: how-to-specify-an-alternate-element-name-for-an-xml-stream.md
+        - name: 'Nasıl yapılır: Nesne Serileştirme'
+          href: how-to-serialize-an-object.md
+        - name: 'Nasıl yapılır: XML Öğesini ve XML Öznitelik Adlarını Niteleme'
+          href: how-to-qualify-xml-element-and-xml-attribute-names.md
+        - name: XML Web Hizmetleri ile XML Serileştirme
+          href: xml-serialization-with-xml-web-services.md
+        - name: 'Nasıl yapılır: SOAP Kodlu XML Akışı Olarak Nesneyi Serileştirme'
+          href: how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
+        - name: 'Nasıl yapılır: Kodlanmış SOAP XML Serileştirmesini Geçersiz Kılma'
+          href: how-to-override-encoded-soap-xml-serialization.md
+        - name: Kodlanmış SOAP Serileştirmesini Denetleyen Öznitelikler
+          href: attributes-that-control-encoded-soap-serialization.md
+        - name: <system.xml.serialization> Öğesi
+          href: system-xml-serialization-element.md
+        - name: <dateTimeSerialization> Öğesi
+          href: datetimeserialization-element.md
+        - name: <schemaImporterExtensions> Öğesi
+          href: schemaimporterextensions-element.md
+        - name: <schemaImporterExtensions> için <add> öğesi
+          href: add-element-for-schemaimporterextensions.md
+        - name: <xmlSerializer> Öğesi
+          href: xmlserializer-element.md
+    - name: Serileştirme Araçları
+      href: serialization-tools.md
+      items:
+        - name: XML Serileştiricisi Oluşturma Aracı (Sgen.exe)
+          href: xml-serializer-generator-tool-sgen-exe.md
+        - name: XML şema tanımı Aracı (XSD.exe'nin)
+          href: xml-schema-definition-tool-xsd-exe.md
+    - name: Serileştirme Örnekleri
+      href: serialization-samples.md
+      items:
+        - name: Temel Serileştirme Teknolojisi Örneği
+          href: basic-serialization-technology-sample.md
+        - name: XmlSerializer ile Özel Serileştirme Düzeni
+          href: custom-serialization-order-with-xmlserializer.md
+        - name: SchemaImporterExtension Teknoloji Örneği
+          href: schemaimporterextension-technology-sample.md
+        - name: Sürüme Dayanıklı Serileştirme Teknolojisi Örneği
+          href: version-tolerant-serialization-technology-sample.md
+        - name: Web Hizmetleri Genel Serileştirme Teknolojisi Örneği
+          href: web-services-generics-serialization-technology-sample.md

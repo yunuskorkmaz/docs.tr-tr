@@ -1,22 +1,15 @@
-items:
 - name: Çoklu Platformlar için Geliştirme
   href: index.md
   items:
-  - name: Taşınabilir Sınıf Kitaplığı
-    href: cross-platform-development-with-the-portable-class-library.md
-  - name: MVVM ile Taşınabilir Sınıf Kitaplığı Kullanma
-    href: using-portable-class-library-with-model-view-view-model.md
-  - name: Birden Çok Platformu Hedefleyen Kitaplıklar için Uygulama Kaynakları
-    href: app-resources-for-libraries-that-target-multiple-platforms.md
-  - name: Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği
-    href: support-for-windows-store-apps-and-windows-runtime.md
-  - name: URI'yı Windows Çalışma Zamanı'na Geçirme
-    href: passing-a-uri-to-the-windows-runtime.md
-  - name: WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) Yöntemi
-    href: windowsruntimestreamextensions-asrandomaccessstream-method.md
-ms.openlocfilehash: 92ecd411bf13b7906d5faaaf459f9b786f3aba0a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471814"
+    - name: Taşınabilir Sınıf Kitaplığı
+      href: cross-platform-development-with-the-portable-class-library.md
+    - name: MVVM ile Taşınabilir Sınıf Kitaplığı Kullanma
+      href: using-portable-class-library-with-model-view-view-model.md
+    - name: Birden Çok Platformu Hedefleyen Kitaplıklar için Uygulama Kaynakları
+      href: app-resources-for-libraries-that-target-multiple-platforms.md
+    - name: Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği
+      href: support-for-windows-store-apps-and-windows-runtime.md
+    - name: URI'yı Windows Çalışma Zamanı'na Geçirme
+      href: passing-a-uri-to-the-windows-runtime.md
+    - name: WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) Yöntemi
+      href: windowsruntimestreamextensions-asrandomaccessstream-method.md

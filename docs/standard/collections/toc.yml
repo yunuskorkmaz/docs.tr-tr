@@ -1,24 +1,17 @@
-items:
 - name: Koleksiyonlar ve Veri Yapıları
   href: index.md
   items:
-  - name: Koleksiyon Sınıfı Seçme
-    href: selecting-a-collection-class.md
-  - name: Çok Kullanılan Koleksiyon Türleri
-    href: commonly-used-collection-types.md
-  - name: Genel Koleksiyonları Ne Zaman Kullanılacağı
-    href: when-to-use-generic-collections.md
-  - name: Koleksiyonlardaki Karşılaştırmalar ve Sıralamalar
-    href: comparisons-and-sorts-within-collections.md
-  - name: Sıralanmış Koleksiyon Türleri
-    href: sorted-collection-types.md
-  - name: Karma Tablo ve Sözlük Koleksiyon Türleri
-    href: hashtable-and-dictionary-collection-types.md
-  - name: İş Parçacığı Koleksiyonları
-    href: thread-safe/
-ms.openlocfilehash: c9d534277d71f3cb3f18ac90809698a3e63e5145
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471951"
+    - name: Koleksiyon Sınıfı Seçme
+      href: selecting-a-collection-class.md
+    - name: Çok Kullanılan Koleksiyon Türleri
+      href: commonly-used-collection-types.md
+    - name: Genel Koleksiyonları Ne Zaman Kullanılacağı
+      href: when-to-use-generic-collections.md
+    - name: Koleksiyonlardaki Karşılaştırmalar ve Sıralamalar
+      href: comparisons-and-sorts-within-collections.md
+    - name: Sıralanmış Koleksiyon Türleri
+      href: sorted-collection-types.md
+    - name: Karma Tablo ve Sözlük Koleksiyon Türleri
+      href: hashtable-and-dictionary-collection-types.md
+    - name: İş Parçacığı Koleksiyonları
+      href: thread-safe/

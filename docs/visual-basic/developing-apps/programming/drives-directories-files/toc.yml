@@ -1,87 +1,80 @@
-items:
-- name: Sürücüleri, Dizinleri ve Dosyaları İşleme
+- name: 'Sürücüleri, Dizinleri ve Dosyaları İşleme'
   href: processing.md
   items:
-  - name: Visual Basic ile Dosya Erişimi
-    href: file-access.md
-    items:
-    - name: Dosyalardan Okuma
-      href: reading-from-files.md
+    - name: Visual Basic ile Dosya Erişimi
+      href: file-access.md
       items:
-      - name: 'Nasıl yapılır: Metin Dosyalarını Okuma'
-        href: how-to-read-from-text-files.md
-      - name: 'Nasıl yapılır: Virgülle Ayrılmış Metin Dosyalarından Okuma'
-        href: how-to-read-from-comma-delimited-text-files.md
-      - name: 'Nasıl yapılır: Sabit Genişlikli Metin Dosyalarından Okuma'
-        href: how-to-read-from-fixed-width-text-files.md
-      - name: 'Nasıl yapılır: Birden Çok Biçimli Metin Dosyalarından Okuma'
-        href: how-to-read-from-text-files-with-multiple-formats.md
-      - name: 'Nasıl yapılır: İkili Dosyalardan Okuma'
-        href: how-to-read-from-binary-files.md
-      - name: 'Nasıl yapılır: StreamReader Olan Dosyalardan Metin Okuma'
-        href: how-to-read-text-from-files-with-a-streamreader.md
-    - name: Dosyalara Yazma
-      href: writing-to-files.md
+        - name: Dosyalardan Okuma
+          href: reading-from-files.md
+          items:
+            - name: 'Nasıl yapılır: Metin Dosyalarını Okuma'
+              href: how-to-read-from-text-files.md
+            - name: 'Nasıl yapılır: Virgülle Ayrılmış Metin Dosyalarından Okuma'
+              href: how-to-read-from-comma-delimited-text-files.md
+            - name: 'Nasıl yapılır: Sabit Genişlikli Metin Dosyalarından Okuma'
+              href: how-to-read-from-fixed-width-text-files.md
+            - name: 'Nasıl yapılır: Birden Çok Biçimli Metin Dosyalarından Okuma'
+              href: how-to-read-from-text-files-with-multiple-formats.md
+            - name: 'Nasıl yapılır: İkili Dosyalardan Okuma'
+              href: how-to-read-from-binary-files.md
+            - name: 'Nasıl yapılır: StreamReader Olan Dosyalardan Metin Okuma'
+              href: how-to-read-text-from-files-with-a-streamreader.md
+        - name: Dosyalara Yazma
+          href: writing-to-files.md
+          items:
+            - name: 'Nasıl yapılır: Dosyalara Metin Yazma'
+              href: how-to-write-text-to-files.md
+            - name: 'Nasıl yapılır: Metin Dosyalarına Ekleme'
+              href: how-to-append-to-text-files.md
+            - name: 'Nasıl yapılır: İkili Dosyalara Yazma'
+              href: how-to-write-to-binary-files.md
+            - name: 'Nasıl yapılır: Belgelerim Dizinindeki Dosyalara Metin Yazma'
+              href: how-to-write-text-to-files-in-the-my-documents-directory.md
+            - name: 'Nasıl yapılır: StreamWriter ile Dosyalara Metin Yazma'
+              href: how-to-write-text-to-files-with-a-streamwriter.md
+        - name: 'Dosya ve Dizin Oluşturma, Silme ve Taşıma'
+          href: creating-deleting-and-moving-files-and-directories.md
+          items:
+            - name: 'Nasıl yapılır: Belirli Düzendeki Dosyaları Dizine Kopyalama'
+              href: how-to-copy-files-with-a-specific-pattern-to-a-directory.md
+            - name: 'Nasıl yapılır: Aynı Dizinde Dosya Kopyası Oluşturma'
+              href: how-to-create-a-copy-of-a-file-in-the-same-directory.md
+            - name: 'Nasıl yapılır: Farklı Dizinde Dosya Kopyası Oluşturma'
+              href: how-to-create-a-copy-of-a-file-in-a-different-directory.md
+            - name: 'Nasıl yapılır: Dosya Oluşturma'
+              href: how-to-create-a-file.md
+            - name: 'Nasıl yapılır: Dosya Silme'
+              href: how-to-delete-a-file.md
+            - name: 'Nasıl yapılır: Belirli bir Düzendeki Dosyaları Bulma'
+              href: how-to-find-files-with-a-specific-pattern.md
+            - name: 'Nasıl yapılır: Dosya Taşıma'
+              href: how-to-move-a-file.md
+            - name: 'Nasıl yapılır: Dosyayı Yeniden Adlandırma'
+              href: how-to-rename-a-file.md
+            - name: 'Nasıl yapılır: Bir Dizini Diğerine Kopyalama'
+              href: how-to-copy-a-directory-to-another-directory.md
+            - name: 'Nasıl yapılır: Dizin Oluşturma'
+              href: how-to-create-a-directory.md
+            - name: 'Nasıl yapılır: Belirli bir Desendeki Alt Dizinleri Bulma'
+              href: how-to-find-subdirectories-with-a-specific-pattern.md
+            - name: 'Nasıl yapılır: Dizindeki Dosya Koleksiyonunu Alma'
+              href: how-to-get-the-collection-of-files-in-a-directory.md
+            - name: 'Nasıl yapılır: Belgelerim Dizini İçeriğini Alma'
+              href: how-to-retrieve-the-contents-of-the-my-documents-directory.md
+            - name: 'Nasıl yapılır: Dosya Yollarını Ayrıştırma'
+              href: how-to-parse-file-paths.md
+        - name: TextFieldParser Nesnesiyle Metin Dosyalarını Ayrıştırma
+          href: parsing-text-files-with-the-textfieldparser-object.md
+        - name: Dosya Kodlamaları
+          href: file-encodings.md
+        - name: 'Sorun Giderme: Metin Dosyalarını Okuma ve Yazma'
+          href: troubleshooting-reading-from-and-writing-to-text-files.md
+    - name: Dosya Sistemi ve .NET Framework Dosyası G/Ç ile ilgili Temel Bilgiler
+      href: basics-of-net-framework-file-io-and-the-file-system.md
       items:
-      - name: 'Nasıl yapılır: Dosyalara Metin Yazma'
-        href: how-to-write-text-to-files.md
-      - name: 'Nasıl yapılır: Metin Dosyalarına Ekleme'
-        href: how-to-append-to-text-files.md
-      - name: 'Nasıl yapılır: İkili Dosyalara Yazma'
-        href: how-to-write-to-binary-files.md
-      - name: 'Nasıl yapılır: Belgelerim Dizinindeki Dosyalara Metin Yazma'
-        href: how-to-write-text-to-files-in-the-my-documents-directory.md
-      - name: 'Nasıl yapılır: StreamWriter ile Dosyalara Metin Yazma'
-        href: how-to-write-text-to-files-with-a-streamwriter.md
-    - name: Dosya ve Dizin Oluşturma, Silme ve Taşıma
-      href: creating-deleting-and-moving-files-and-directories.md
-      items:
-      - name: 'Nasıl yapılır: Belirli Düzendeki Dosyaları Dizine Kopyalama'
-        href: how-to-copy-files-with-a-specific-pattern-to-a-directory.md
-      - name: 'Nasıl yapılır: Aynı Dizinde Dosya Kopyası Oluşturma'
-        href: how-to-create-a-copy-of-a-file-in-the-same-directory.md
-      - name: 'Nasıl yapılır: Farklı Dizinde Dosya Kopyası Oluşturma'
-        href: how-to-create-a-copy-of-a-file-in-a-different-directory.md
-      - name: 'Nasıl yapılır: Dosya Oluşturma'
-        href: how-to-create-a-file.md
-      - name: 'Nasıl yapılır: Dosya Silme'
-        href: how-to-delete-a-file.md
-      - name: 'Nasıl yapılır: Belirli bir Düzendeki Dosyaları Bulma'
-        href: how-to-find-files-with-a-specific-pattern.md
-      - name: 'Nasıl yapılır: Dosya Taşıma'
-        href: how-to-move-a-file.md
-      - name: 'Nasıl yapılır: Dosyayı Yeniden Adlandırma'
-        href: how-to-rename-a-file.md
-      - name: 'Nasıl yapılır: Bir Dizini Diğerine Kopyalama'
-        href: how-to-copy-a-directory-to-another-directory.md
-      - name: 'Nasıl yapılır: Dizin Oluşturma'
-        href: how-to-create-a-directory.md
-      - name: 'Nasıl yapılır: Belirli bir Desendeki Alt Dizinleri Bulma'
-        href: how-to-find-subdirectories-with-a-specific-pattern.md
-      - name: 'Nasıl yapılır: Dizindeki Dosya Koleksiyonunu Alma'
-        href: how-to-get-the-collection-of-files-in-a-directory.md
-      - name: 'Nasıl yapılır: Belgelerim Dizini İçeriğini Alma'
-        href: how-to-retrieve-the-contents-of-the-my-documents-directory.md
-      - name: 'Nasıl yapılır: Dosya Yollarını Ayrıştırma'
-        href: how-to-parse-file-paths.md
-    - name: TextFieldParser Nesnesiyle Metin Dosyalarını Ayrıştırma
-      href: parsing-text-files-with-the-textfieldparser-object.md
-    - name: Dosya Kodlamaları
-      href: file-encodings.md
-    - name: 'Sorun Giderme: Metin Dosyalarını Okuma ve Yazma'
-      href: troubleshooting-reading-from-and-writing-to-text-files.md
-  - name: Dosya Sistemi ve .NET Framework Dosyası G/Ç ile ilgili Temel Bilgiler
-    href: basics-of-net-framework-file-io-and-the-file-system.md
-    items:
-    - name: Dosya Sistemi ve .NET Framework Dosyası G/Ç'de Kullanılan Sınıflar
-      href: classes-used-in-net-framework-file-io-and-the-file-system.md
-  - name: 'İzlenecek yol: .NET Framework Yöntemlerini Kullanarak Dosyaları Düzenleme'
-    href: walkthrough-manipulating-files-by-using-net-framework-methods.md
-  - name: 'İzlenecek yol: Dosyaları ve Dizinleri Düzenleme'
-    href: walkthrough-manipulating-files-and-directories.md
-ms.openlocfilehash: 04d5b3252fa087fcbba7d29662e7ad1e3fb24d2e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471962"
+        - name: Dosya Sistemi ve .NET Framework Dosyası G/Ç'de Kullanılan Sınıflar
+          href: classes-used-in-net-framework-file-io-and-the-file-system.md
+    - name: 'İzlenecek yol: .NET Framework Yöntemlerini Kullanarak Dosyaları Düzenleme'
+      href: walkthrough-manipulating-files-by-using-net-framework-methods.md
+    - name: 'İzlenecek yol: Dosyaları ve Dizinleri Düzenleme'
+      href: walkthrough-manipulating-files-and-directories.md

@@ -1,71 +1,64 @@
-items:
 - name: Performans
   href: index.md
   items:
-  - name: Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma
-    href: writing-large-responsive-apps.md
-  - name: .NET Framework Uygulamalarında Önbelleğe Alma
-    href: caching-in-net-framework-applications.md
-  - name: Yavaş Başlatma
-    href: lazy-initialization.md
-    items:
-    - name: 'Nasıl yapılır: Nesnelerin Yavaş Başlatılmasını Gerçekleştirme'
-      href: how-to-perform-lazy-initialization-of-objects.md
-  - name: .NET Framework'te ETW Olayları
-    href: etw-events.md
-    items:
-    - name: Görev Paralel Kitaplığı ve PLINQ'da ETW Olayları
-      href: etw-events-in-task-parallel-library-and-plinq.md
-    - name: Ortak Dil Çalışma Zamanında ETW Olayları
-      href: etw-events-in-the-common-language-runtime.md
+    - name: 'Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma'
+      href: writing-large-responsive-apps.md
+    - name: .NET Framework Uygulamalarında Önbelleğe Alma
+      href: caching-in-net-framework-applications.md
+    - name: Yavaş Başlatma
+      href: lazy-initialization.md
       items:
-      - name: .NET Framework Günlük Kaydını Denetleme
-        href: controlling-logging.md
-      - name: CLR ETW Sağlayıcılar
-        href: clr-etw-providers.md
-      - name: CLR ETW Anahtar Sözcükleri ve Düzeyler
-        href: clr-etw-keywords-and-levels.md
-      - name: CLR ETW Olayları
-        href: clr-etw-events.md
-        items:
-        - name: Çalışma Zamanı Bilgileri Olayları
-          href: runtime-information-etw-events.md
-        - name: Özel Durum Thrown_V1 Olayı
-          href: exception-thrown-v1-etw-event.md
-        - name: Çekişme Olayları
-          href: contention-etw-events.md
-        - name: İş Parçacığı Havuzu Olayları
-          href: thread-pool-etw-events.md
-        - name: Yükleyici Olayları
-          href: loader-etw-events.md
-        - name: Yöntem Olayları
-          href: method-etw-events.md
-        - name: Atık Toplama Olayları
-          href: garbage-collection-etw-events.md
-        - name: Olayları Tam Zamanında İzleme
-          href: jit-tracing-etw-events.md
-        - name: Birlikte Çalışma Olayları
-          href: interop-etw-events.md
-        - name: ARM Olayları
-          href: application-domain-resource-monitoring-arm-etw-events.md
-        - name: Güvenlik Olayları
-          href: security-etw-events.md
-        - name: Yığın Olayı
-          href: stack-etw-event.md
-  - name: Güvenilirlik
-    href: reliability.md
-    items:
-    - name: SQL Server Programlama ve Ana Bilgisayar Koruması Öznitelikleri
-      href: sql-server-programming-and-host-protection-attributes.md
-    - name: Güvenilirlik En İyi Yöntemleri
-      href: reliability-best-practices.md
-    - name: Kısıtlı Yürütme Bölgeleri
-      href: constrained-execution-regions.md
-  - name: Performans İpuçları
-    href: performance-tips.md
-ms.openlocfilehash: 9030bc17ebfe2cda3b6b1ebb15196a24ac992715
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471858"
+        - name: 'Nasıl yapılır: Nesnelerin Yavaş Başlatılmasını Gerçekleştirme'
+          href: how-to-perform-lazy-initialization-of-objects.md
+    - name: .NET Framework'te ETW Olayları
+      href: etw-events.md
+      items:
+        - name: Görev Paralel Kitaplığı ve PLINQ'da ETW Olayları
+          href: etw-events-in-task-parallel-library-and-plinq.md
+        - name: Ortak Dil Çalışma Zamanında ETW Olayları
+          href: etw-events-in-the-common-language-runtime.md
+          items:
+            - name: .NET Framework Günlük Kaydını Denetleme
+              href: controlling-logging.md
+            - name: CLR ETW Sağlayıcılar
+              href: clr-etw-providers.md
+            - name: CLR ETW Anahtar Sözcükleri ve Düzeyler
+              href: clr-etw-keywords-and-levels.md
+            - name: CLR ETW Olayları
+              href: clr-etw-events.md
+              items:
+                - name: Çalışma Zamanı Bilgileri Olayları
+                  href: runtime-information-etw-events.md
+                - name: Özel Durum Thrown_V1 Olayı
+                  href: exception-thrown-v1-etw-event.md
+                - name: Çekişme Olayları
+                  href: contention-etw-events.md
+                - name: İş Parçacığı Havuzu Olayları
+                  href: thread-pool-etw-events.md
+                - name: Yükleyici Olayları
+                  href: loader-etw-events.md
+                - name: Yöntem Olayları
+                  href: method-etw-events.md
+                - name: Atık Toplama Olayları
+                  href: garbage-collection-etw-events.md
+                - name: Olayları Tam Zamanında İzleme
+                  href: jit-tracing-etw-events.md
+                - name: Birlikte Çalışma Olayları
+                  href: interop-etw-events.md
+                - name: ARM Olayları
+                  href: application-domain-resource-monitoring-arm-etw-events.md
+                - name: Güvenlik Olayları
+                  href: security-etw-events.md
+                - name: Yığın Olayı
+                  href: stack-etw-event.md
+    - name: Güvenilirlik
+      href: reliability.md
+      items:
+        - name: SQL Server Programlama ve Ana Bilgisayar Koruması Öznitelikleri
+          href: sql-server-programming-and-host-protection-attributes.md
+        - name: Güvenilirlik En İyi Yöntemleri
+          href: reliability-best-practices.md
+        - name: Kısıtlı Yürütme Bölgeleri
+          href: constrained-execution-regions.md
+    - name: Performans İpuçları
+      href: performance-tips.md

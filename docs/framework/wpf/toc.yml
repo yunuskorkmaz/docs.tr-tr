@@ -1,35 +1,28 @@
-items:
 - name: Windows Presentation Foundation
   href: index.md
   items:
-  - name: Başlarken
-    href: getting-started/
-  - name: Uygulama Geliştirme
-    href: app-development/
-  - name: Gelişmiş
-    href: advanced/
-  - name: Denetimler
-    href: controls/
-  - name: Veri
-    href: data/
-  - name: Grafikler ve Multimedya
-    href: graphics-multimedia/
-  - name: Güvenlik
-    href: security-wpf.md
-    items:
-    - name: WPF Kısmi Güven Güvenliği
-      href: wpf-partial-trust-security.md
-    - name: WPF Güvenlik Stratejisi - Platform Güvenliği
-      href: wpf-security-strategy-platform-security.md
-    - name: WPF Güvenlik Stratejisi - Güvenlik Mühendisliği
-      href: wpf-security-strategy-security-engineering.md
-  - name: WPF Örnekleri
-    href: wpf-samples.md
-  - name: Sınıf Kitaplığı
-    href: class-library-wpf.md
-ms.openlocfilehash: 1e228336e8538f045cbcd2574850a9cf7fac4f21
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471775"
+    - name: Başlarken
+      href: getting-started/
+    - name: Uygulama Geliştirme
+      href: app-development/
+    - name: Gelişmiş
+      href: advanced/
+    - name: Denetimler
+      href: controls/
+    - name: Veri
+      href: data/
+    - name: Grafikler ve Multimedya
+      href: graphics-multimedia/
+    - name: Güvenlik
+      href: security-wpf.md
+      items:
+        - name: WPF Kısmi Güven Güvenliği
+          href: wpf-partial-trust-security.md
+        - name: WPF Güvenlik Stratejisi - Platform Güvenliği
+          href: wpf-security-strategy-platform-security.md
+        - name: WPF Güvenlik Stratejisi - Güvenlik Mühendisliği
+          href: wpf-security-strategy-security-engineering.md
+    - name: WPF Örnekleri
+      href: wpf-samples.md
+    - name: Sınıf Kitaplığı
+      href: class-library-wpf.md

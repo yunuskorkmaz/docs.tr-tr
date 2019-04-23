@@ -1,20 +1,13 @@
-items:
 - name: Başlarken
   href: index.md
   items:
-  - name: Visual Studio’da WPF’ye Giriş
-    href: introduction-to-wpf-in-vs.md
-  - name: WPF Sürüm 4.5'te Yenilikler
-    href: whats-new.md
-  - name: 'İzlenecek yol: İlk WPF masaüstü uygulamam'
-    href: walkthrough-my-first-wpf-desktop-application.md
-  - name: WPF İzlenecek Yollar
-    href: wpf-walkthroughs.md
-  - name: WPF Topluluğu Geri Bildirimi
-    href: community-feedback.md
-ms.openlocfilehash: bebf111d94212c0a337602a7921f7ec5e639eed6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58472038"
+    - name: Visual Studio’da WPF’ye Giriş
+      href: introduction-to-wpf-in-vs.md
+    - name: WPF Sürüm 4.5'te Yenilikler
+      href: whats-new.md
+    - name: 'İzlenecek yol: İlk WPF masaüstü uygulamam'
+      href: walkthrough-my-first-wpf-desktop-application.md
+    - name: WPF İzlenecek Yollar
+      href: wpf-walkthroughs.md
+    - name: WPF Topluluğu Geri Bildirimi
+      href: community-feedback.md

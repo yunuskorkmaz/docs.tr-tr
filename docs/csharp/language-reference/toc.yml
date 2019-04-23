@@ -1,138 +1,131 @@
-items:
 - name: Dil başvurusu
   href: index.md
   items:
-  - name: Dil sürümünü yapılandırma
-    href: configure-language-version.md
-  - name: C# anahtar sözcükleri
-    href: keywords/index.md
-  - name: C# işleçleri
-    href: operators/index.md
-  - name: C# özel karakterleri
-    href: tokens/index.md
-  - name: C# ön işlemci yönergeleri
-    href: preprocessor-directives/index.md
-  - name: C# derleyici seçenekleri
-    href: compiler-options/index.md
-  - name: C# derleyici hataları
-    href: compiler-messages/index.md
-  - name: C# 6.0 taslak belirtimi
-    items:
-    - name: Giriş
-      href: ../../../_csharplang/spec/introduction.md
-    - name: Sözcük yapısı
-      href: ../../../_csharplang/spec/lexical-structure.md
-    - name: Temel kavramlar
-      href: ../../../_csharplang/spec/basic-concepts.md
-    - name: Türler
-      href: ../../../_csharplang/spec/types.md
-    - name: Değişkenler
-      href: ../../../_csharplang/spec/variables.md
-    - name: Dönüşümler
-      href: ../../../_csharplang/spec/conversions.md
-    - name: İfadeler
-      href: ../../../_csharplang/spec/expressions.md
-    - name: Deyimler
-      href: ../../../_csharplang/spec/statements.md
-    - name: Ad Alanları
-      href: ../../../_csharplang/spec/namespaces.md
-    - name: Sınıflar
-      href: ../../../_csharplang/spec/classes.md
-    - name: Yapılar
-      href: ../../../_csharplang/spec/structs.md
-    - name: Diziler
-      href: ../../../_csharplang/spec/arrays.md
-    - name: Arabirimler
-      href: ../../../_csharplang/spec/interfaces.md
-    - name: Numaralandırmalar
-      href: ../../../_csharplang/spec/enums.md
-    - name: Temsilciler
-      href: ../../../_csharplang/spec/delegates.md
-    - name: Özel Durumlar
-      href: ../../../_csharplang/spec/exceptions.md
-    - name: Öznitelikler
-      href: ../../../_csharplang/spec/attributes.md
-    - name: Güvenli olmayan kod
-      href: ../../../_csharplang/spec/unsafe-code.md
-    - name: Belge açıklamaları
-      href: ../../../_csharplang/spec/documentation-comments.md
-  - name: C# 7.0 dil teklifleri
-    items:
-    - name: Desen eşleştirme
-      href: ../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
-    - name: Yerel işlevler
-      href: ../../../_csharplang/proposals/csharp-7.0/local-functions.md
-    - name: Out değişken bildirimleri
-      href: ../../../_csharplang/proposals/csharp-7.0/out-var.md
-    - name: Throw ifadeleri
-      href: ../../../_csharplang/proposals/csharp-7.0/throw-expression.md
-    - name: İkili değişmez değerler
-      href: ../../../_csharplang/proposals/csharp-7.0/binary-literals.md
-    - name: Basamak ayıraçları
-      href: ../../../_csharplang/proposals/csharp-7.0/digit-separators.md
-  - name: C# 7.1 dil teklifleri
-    items:
-    - name: Zaman uyumsuz ana yöntem
-      href: ../../../_csharplang/proposals/csharp-7.1/async-main.md
-    - name: Varsayılan ifadeler
-      href: ../../../_csharplang/proposals/csharp-7.1/target-typed-default.md
-    - name: Çıkarsama tanımlama grubu adları
-      href: ../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
-    - name: Genel türler ile desen eşleştirme
-      href: ../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
-  - name: C# 7.2 dil teklifleri
-    items:
-    - name: Salt okunur başvurular
-      href: ../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
-    - name: Başvuru benzeri türler ile derleme zamanı güvenliği
-      href: ../../../_csharplang/proposals/csharp-7.2/span-safety.md
-    - name: Girintili olmayan adlandırılmış bağımsız değişkenler
-      href: ../../../_csharplang/proposals/csharp-7.2/non-trailing-named-arguments.md
-    - name: Private protected
-      href: ../../../_csharplang/proposals/csharp-7.2/private-protected.md
-    - name: Koşullu başvuru
-      href: ../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
-    - name: İlk basamak ayıracı
-      href: ../../../_csharplang/proposals/csharp-7.2/leading-separator.md
-  - name: C# 7.3 dil teklifleri
-    items:
-    - name: Yönetilmeyen genel tür kısıtlamaları
-      href: ../../../_csharplang/proposals/csharp-7.3/blittable.md
-    - name: '`fixed` alanlarının dizini oluşturulurken taşınabilen/taşınamayan bağlam fark etmeksizin sabitleme gerekmemeli'
-      href: ../../../_csharplang/proposals/csharp-7.3/indexing-movable-fixed-fields.md
-    - name: Desen tabanlı `fixed` deyimi
-      href: ../../../_csharplang/proposals/csharp-7.3/pattern-based-fixed.md
-    - name: Başvuruyu yerel olarak yeniden atama
-      href: ../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md
-    - name: Stackalloc dizi başlatıcılar
-      href: ../../../_csharplang/proposals/csharp-7.3/stackalloc-array-initializers.md
-    - name: Otomatik uygulanan özelliğin alan hedeflemeli öznitelikleri
-      href: ../../../_csharplang/proposals/csharp-7.3/auto-prop-field-attrs.md
-    - name: Başlatıcılarda ifade değişkenleri
-      href: ../../../_csharplang/proposals/csharp-7.3/expression-variables-in-initializers.md
-    - name: Tanımlama grubu eşitliği (==) ve eşitsizliği (!=)
-      href: ../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
-    - name: Geliştirilmiş aşırı yükleme adayları
-      href: ../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
-  - name: C# 8.0 dil teklifleri
-    items:
-    - name: Boş başvuru türü - teklif
-      href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
-    - name: Boş olabilecek başvuru türü - belirtim
-      href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
-    - name: Özyinelemeli desen eşleştirme
-      href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
-    - name: zaman uyumsuz akışlar
-      href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md
-    - name: Aralıklar
-      href: ../../../_csharplang/proposals/csharp-8.0/ranges.md
-    - name: Desen tabanlı kullanma ve bildirimleri kullanma
-      href: ../../../_csharplang/proposals/csharp-8.0/using.md
-    - name: null birleşim ataması
-      href: ../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
-ms.openlocfilehash: a2c2b2377b093b542f9d45ae688de121db1c1959
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471870"
+    - name: Dil sürümünü yapılandırma
+      href: configure-language-version.md
+    - name: 'C# anahtar sözcükleri'
+      href: keywords/index.md
+    - name: 'C# işleçleri'
+      href: operators/index.md
+    - name: 'C# özel karakterleri'
+      href: tokens/index.md
+    - name: 'C# ön işlemci yönergeleri'
+      href: preprocessor-directives/index.md
+    - name: 'C# derleyici seçenekleri'
+      href: compiler-options/index.md
+    - name: 'C# derleyici hataları'
+      href: compiler-messages/index.md
+    - name: 'C# 6.0 taslak belirtimi'
+      items:
+        - name: Giriş
+          href: ../../../_csharplang/spec/introduction.md
+        - name: Sözcük yapısı
+          href: ../../../_csharplang/spec/lexical-structure.md
+        - name: Temel kavramlar
+          href: ../../../_csharplang/spec/basic-concepts.md
+        - name: Türler
+          href: ../../../_csharplang/spec/types.md
+        - name: Değişkenler
+          href: ../../../_csharplang/spec/variables.md
+        - name: Dönüşümler
+          href: ../../../_csharplang/spec/conversions.md
+        - name: İfadeler
+          href: ../../../_csharplang/spec/expressions.md
+        - name: Deyimler
+          href: ../../../_csharplang/spec/statements.md
+        - name: Ad Alanları
+          href: ../../../_csharplang/spec/namespaces.md
+        - name: Sınıflar
+          href: ../../../_csharplang/spec/classes.md
+        - name: Yapılar
+          href: ../../../_csharplang/spec/structs.md
+        - name: Diziler
+          href: ../../../_csharplang/spec/arrays.md
+        - name: Arabirimler
+          href: ../../../_csharplang/spec/interfaces.md
+        - name: Numaralandırmalar
+          href: ../../../_csharplang/spec/enums.md
+        - name: Temsilciler
+          href: ../../../_csharplang/spec/delegates.md
+        - name: Özel Durumlar
+          href: ../../../_csharplang/spec/exceptions.md
+        - name: Öznitelikler
+          href: ../../../_csharplang/spec/attributes.md
+        - name: Güvenli olmayan kod
+          href: ../../../_csharplang/spec/unsafe-code.md
+        - name: Belge açıklamaları
+          href: ../../../_csharplang/spec/documentation-comments.md
+    - name: 'C# 7.0 dil teklifleri'
+      items:
+        - name: Desen eşleştirme
+          href: ../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
+        - name: Yerel işlevler
+          href: ../../../_csharplang/proposals/csharp-7.0/local-functions.md
+        - name: Out değişken bildirimleri
+          href: ../../../_csharplang/proposals/csharp-7.0/out-var.md
+        - name: Throw ifadeleri
+          href: ../../../_csharplang/proposals/csharp-7.0/throw-expression.md
+        - name: İkili değişmez değerler
+          href: ../../../_csharplang/proposals/csharp-7.0/binary-literals.md
+        - name: Basamak ayıraçları
+          href: ../../../_csharplang/proposals/csharp-7.0/digit-separators.md
+    - name: 'C# 7.1 dil teklifleri'
+      items:
+        - name: Zaman uyumsuz ana yöntem
+          href: ../../../_csharplang/proposals/csharp-7.1/async-main.md
+        - name: Varsayılan ifadeler
+          href: ../../../_csharplang/proposals/csharp-7.1/target-typed-default.md
+        - name: Çıkarsama tanımlama grubu adları
+          href: ../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
+        - name: Genel türler ile desen eşleştirme
+          href: ../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
+    - name: 'C# 7.2 dil teklifleri'
+      items:
+        - name: Salt okunur başvurular
+          href: ../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
+        - name: Başvuru benzeri türler ile derleme zamanı güvenliği
+          href: ../../../_csharplang/proposals/csharp-7.2/span-safety.md
+        - name: Girintili olmayan adlandırılmış bağımsız değişkenler
+          href: ../../../_csharplang/proposals/csharp-7.2/non-trailing-named-arguments.md
+        - name: Private protected
+          href: ../../../_csharplang/proposals/csharp-7.2/private-protected.md
+        - name: Koşullu başvuru
+          href: ../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
+        - name: İlk basamak ayıracı
+          href: ../../../_csharplang/proposals/csharp-7.2/leading-separator.md
+    - name: 'C# 7.3 dil teklifleri'
+      items:
+        - name: Yönetilmeyen genel tür kısıtlamaları
+          href: ../../../_csharplang/proposals/csharp-7.3/blittable.md
+        - name: '`fixed` alanlarının dizini oluşturulurken taşınabilen/taşınamayan bağlam fark etmeksizin sabitleme gerekmemeli'
+          href: ../../../_csharplang/proposals/csharp-7.3/indexing-movable-fixed-fields.md
+        - name: Desen tabanlı `fixed` deyimi
+          href: ../../../_csharplang/proposals/csharp-7.3/pattern-based-fixed.md
+        - name: Başvuruyu yerel olarak yeniden atama
+          href: ../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md
+        - name: Stackalloc dizi başlatıcılar
+          href: ../../../_csharplang/proposals/csharp-7.3/stackalloc-array-initializers.md
+        - name: Otomatik uygulanan özelliğin alan hedeflemeli öznitelikleri
+          href: ../../../_csharplang/proposals/csharp-7.3/auto-prop-field-attrs.md
+        - name: Başlatıcılarda ifade değişkenleri
+          href: ../../../_csharplang/proposals/csharp-7.3/expression-variables-in-initializers.md
+        - name: Tanımlama grubu eşitliği (==) ve eşitsizliği (!=)
+          href: ../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
+        - name: Geliştirilmiş aşırı yükleme adayları
+          href: ../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
+    - name: 'C# 8.0 dil teklifleri'
+      items:
+        - name: Boş başvuru türü - teklif
+          href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
+        - name: Boş olabilecek başvuru türü - belirtim
+          href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
+        - name: Özyinelemeli desen eşleştirme
+          href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
+        - name: zaman uyumsuz akışlar
+          href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md
+        - name: Aralıklar
+          href: ../../../_csharplang/proposals/csharp-8.0/ranges.md
+        - name: Desen tabanlı kullanma ve bildirimleri kullanma
+          href: ../../../_csharplang/proposals/csharp-8.0/using.md
+        - name: null birleşim ataması
+          href: ../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md

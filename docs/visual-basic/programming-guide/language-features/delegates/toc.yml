@@ -1,16 +1,9 @@
-items:
 - name: Temsilciler
   href: index.md
   items:
-  - name: 'Nasıl yapılır: Temsilci Yöntemi Çağırma'
-    href: how-to-invoke-a-delegate-method.md
-  - name: "Nasıl yapılır: Visual Basic'de Başka Bir Yordama Yordam Geçirme"
-    href: how-to-pass-procedures-to-another-procedure.md
-  - name: Gevşek Temsilci Dönüştürme
-    href: relaxed-delegate-conversion.md
-ms.openlocfilehash: 245db8051550fbdaa16338a8f184c0b900b20139
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471648"
+    - name: 'Nasıl yapılır: Temsilci Yöntemi Çağırma'
+      href: how-to-invoke-a-delegate-method.md
+    - name: 'Nasıl yapılır: Visual Basic''de Başka Bir Yordama Yordam Geçirme'
+      href: how-to-pass-procedures-to-another-procedure.md
+    - name: Gevşek Temsilci Dönüştürme
+      href: relaxed-delegate-conversion.md

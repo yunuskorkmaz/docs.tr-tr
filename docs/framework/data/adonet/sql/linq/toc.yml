@@ -1,344 +1,337 @@
-items:
 - name: LINQ - SQL
   href: index.md
   items:
-  - name: Başlarken
-    href: getting-started.md
-    items:
-    - name: LINQ to SQL ile Yapabilecekleriniz
-      href: what-you-can-do-with-linq-to-sql.md
-    - name: LINQ to SQL Kullanmaya İlişkin Tipik Adımlar
-      href: typical-steps-for-using-linq-to-sql.md
-    - name: Örnek Veritabanları ve Araçlar İndirme
-      href: downloading-sample-databases.md
-    - name: İzlenecek Yollarla Öğrenme
-      href: learning-by-walkthroughs.md
+    - name: Başlarken
+      href: getting-started.md
       items:
-      - name: 'İzlenecek yol: Basit Nesne Modeli ve Sorgu (Visual Basic)'
-        href: walkthrough-simple-object-model-and-query-visual-basic.md
-      - name: 'İzlenecek yol: İlişkilerde Sorgulama (Visual Basic)'
-        href: walkthrough-querying-across-relationships-visual-basic.md
-      - name: 'İzlenecek yol: Verileri Düzenleme (Visual Basic)'
-        href: walkthrough-manipulating-data-visual-basic.md
-      - name: 'İzlenecek yol: Yalnızca Saklı Yordamlar Kullanma (Visual Basic)'
-        href: walkthrough-using-only-stored-procedures-visual-basic.md
-      - name: 'İzlenecek yol: Basit Nesne Modeli ve Sorgu (C#)'
-        href: walkthrough-simple-object-model-and-query-csharp.md
-      - name: 'İzlenecek yol: İlişkilerde Sorgulama (C#)'
-        href: walkthrough-querying-across-relationships-csharp.md
-      - name: 'İzlenecek yol: Verileri Düzenleme (C#)'
-        href: walkthrough-manipulating-data-csharp.md
-      - name: 'İzlenecek yol: Yalnızca Saklı Yordamları Kullanma (C#)'
-        href: walkthrough-using-only-stored-procedures-csharp.md
-  - name: Programlama Kılavuzu
-    href: programming-guide.md
-    items:
-    - name: Nesne Modeli Oluşturma
-      href: creating-the-object-model.md
-      items:
-      - name: 'Nasıl yapılır: Visual Basic veya C# içinde Nesne Modeli Oluşturma'
-        href: how-to-generate-the-object-model-in-visual-basic-or-csharp.md
-      - name: 'Nasıl yapılır: Nesne Modelini Dış Dosya Olarak Oluşturma'
-        href: how-to-generate-the-object-model-as-an-external-file.md
-      - name: 'Nasıl yapılır: DBML Dosyasını Değiştirerek Özelleştirilmiş Kod Oluşturma'
-        href: how-to-generate-customized-code-by-modifying-a-dbml-file.md
-      - name: 'Nasıl yapılır: DBML ve Dış Eşleme Dosyalarını Doğrulama'
-        href: how-to-validate-dbml-and-external-mapping-files.md
-      - name: 'Nasıl yapılır: Varlıkları Serileştirilebilir Hale Getirme'
-        href: how-to-make-entities-serializable.md
-      - name: 'Nasıl yapılır: Kod Düzenleyicisini Kullanarak Varlık Sınıflarını Özelleştirme'
-        href: how-to-customize-entity-classes-by-using-the-code-editor.md
-        items:
-        - name: 'Nasıl yapılır: Veritabanı Adları Belirtme'
-          href: how-to-specify-database-names.md
-        - name: 'Nasıl yapılır: Tabloları Sınıf Olarak Temsil Etme'
-          href: how-to-represent-tables-as-classes.md
-        - name: 'Nasıl yapılır: Sütunları Sınıf Üyesi Olarak Temsil Etme'
-          href: how-to-represent-columns-as-class-members.md
-        - name: 'Nasıl yapılır: Birincil Anahtarları Temsil Etme'
-          href: how-to-represent-primary-keys.md
-        - name: 'Nasıl yapılır: Veritabanı İlişkilerini Eşleme'
-          href: how-to-map-database-relationships.md
-        - name: 'Nasıl yapılır: Sütunları Veritabanında Oluşturulmuş Olarak Temsil Etme'
-          href: how-to-represent-columns-as-database-generated.md
-        - name: 'Nasıl yapılır: Sütunları Zaman Damgası veya Sürüm Sütunları Olarak Temsil Etme'
-          href: how-to-represent-columns-as-timestamp-or-version-columns.md
-        - name: 'Nasıl yapılır: Veritabanı Veri Türleri Belirtme'
-          href: how-to-specify-database-data-types.md
-        - name: 'Nasıl yapılır: Hesaplanan Sütunları Temsil Etme'
-          href: how-to-represent-computed-columns.md
-        - name: 'Nasıl yapılır: Özel Depolama Alanları Belirtme'
-          href: how-to-specify-private-storage-fields.md
-        - name: 'Nasıl yapılır: Sütunları Null Değerlere İzin Verecek Şekilde Temsil Etme'
-          href: how-to-represent-columns-as-allowing-null-values.md
-        - name: 'Nasıl yapılır: Devralma Hiyerarşilerini Eşleme'
-          href: how-to-map-inheritance-hierarchies.md
-        - name: 'Nasıl yapılır: Eşzamanlılık Çakışması Denetimini Belirtme'
-          href: how-to-specify-concurrency-conflict-checking.md
-    - name: Veritabanı ile İletişim Kurma
-      href: communicating-with-the-database.md
-      items:
-      - name: 'Nasıl yapılır: Veritabanına Bağlanma'
-        href: how-to-connect-to-a-database.md
-      - name: 'Nasıl yapılır: Doğrudan SQL Komutları Yürütme'
-        href: how-to-directly-execute-sql-commands.md
-      - name: 'Nasıl yapılır: ADO.NET Komutu ile DataContext Arasında Bağlantıyı Yeniden Kullanma'
-        href: how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md
-    - name: Veritabanını Sorgulama
-      href: querying-the-database.md
-      items:
-      - name: 'Nasıl yapılır: Bilgi Sorgulama'
-        href: how-to-query-for-information.md
-      - name: 'Nasıl yapılır: Bilgileri Salt Okunur Olarak Alma'
-        href: how-to-retrieve-information-as-read-only.md
-      - name: 'Nasıl yapılır: Ne Kadar İlgili Verilerin Alındığını Denetleme'
-        href: how-to-control-how-much-related-data-is-retrieved.md
-      - name: 'Nasıl yapılır: İlgili Verileri Filtreleme'
-        href: how-to-filter-related-data.md
-      - name: 'Nasıl yapılır: Geciktirilmiş Yüklemeyi Kapatma'
-        href: how-to-turn-off-deferred-loading.md
-      - name: 'Nasıl yapılır: Doğrudan SQL Sorguları Yürütme'
-        href: how-to-directly-execute-sql-queries.md
-      - name: 'Nasıl yapılır: Sorguları Depolama ve Yeniden Kullanma'
-        href: how-to-store-and-reuse-queries.md
-      - name: 'Nasıl yapılır: Sorgularda Bileşik Anahtarlar İşleme'
-        href: how-to-handle-composite-keys-in-queries.md
-      - name: 'Nasıl yapılır: Tek Seferde Birçok Nesne Alma'
-        href: how-to-retrieve-many-objects-at-once.md
-      - name: 'Nasıl yapılır: DataContext Düzeyinde Filtreleme'
-        href: how-to-filter-at-the-datacontext-level.md
-      - name: Sorgu Örnekleri
-        href: query-examples.md
-        items:
-        - name: Toplu Sorgular
-          href: aggregate-queries.md
+        - name: LINQ to SQL ile Yapabilecekleriniz
+          href: what-you-can-do-with-linq-to-sql.md
+        - name: LINQ to SQL Kullanmaya İlişkin Tipik Adımlar
+          href: typical-steps-for-using-linq-to-sql.md
+        - name: Örnek Veritabanları ve Araçlar İndirme
+          href: downloading-sample-databases.md
+        - name: İzlenecek Yollarla Öğrenme
+          href: learning-by-walkthroughs.md
           items:
-          - name: Sayısal Diziden Ortalama Değer Döndürme
-            href: return-the-average-value-from-a-numeric-sequence.md
-          - name: Dizideki Öğe Sayısını Sayma
-            href: count-the-number-of-elements-in-a-sequence.md
-          - name: Sayısal Dizideki En Büyük Değeri Bulma
-            href: find-the-maximum-value-in-a-numeric-sequence.md
-          - name: Sayısal Dizideki En Küçük Değeri Bulma
-            href: find-the-minimum-value-in-a-numeric-sequence.md
-          - name: Sayısal Dizideki Değerlerin Toplamını Hesaplama
-            href: compute-the-sum-of-values-in-a-numeric-sequence.md
-        - name: Dizideki İlk Öğeyi Döndürme
-          href: return-the-first-element-in-a-sequence.md
-        - name: Dizideki Öğeleri Döndürme veya Atlama
-          href: return-or-skip-elements-in-a-sequence.md
-        - name: Dizideki Öğeleri Sıralama
-          href: sort-elements-in-a-sequence.md
-        - name: Dizideki Öğeleri Gruplama
-          href: group-elements-in-a-sequence.md
-        - name: Dizideki Yinelenen Öğeleri Kaldırma
-          href: eliminate-duplicate-elements-from-a-sequence.md
-        - name: Dizideki Öğelerin Herhangi Birinin veya Tümünün Bir Koşulu Karşılayıp Karşılamadığını Belirleme
-          href: determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition.md
-        - name: İki Diziyi Birleştirme
-          href: concatenate-two-sequences.md
-        - name: İki Dizi Arasındaki Küme Farkını Döndürme
-          href: return-the-set-difference-between-two-sequences.md
-        - name: İki Dizinin Küme Kesişimini Döndürme
-          href: return-the-set-intersection-of-two-sequences.md
-        - name: İki Dizinin Küme Birleşimini Döndürme
-          href: return-the-set-union-of-two-sequences.md
-        - name: Diziyi (Sequence) Diziye (Array) Dönüştürme
-          href: convert-a-sequence-to-an-array.md
-        - name: Diziyi Genel Listeye Dönüştürme
-          href: convert-a-sequence-to-a-generic-list.md
-        - name: Türü Genel IEnumerable Öğesine Dönüştürme
-          href: convert-a-type-to-a-generic-ienumerable.md
-        - name: Birleşimler ve Çapraz Ürün Sorguları Düzenleme
-          href: formulate-joins-and-cross-product-queries.md
-        - name: Projeksiyonlar Düzenleme
-          href: formulate-projections.md
-    - name: Veri Değişiklikleri Yapma ve Gönderme
-      href: making-and-submitting-data-changes.md
+            - name: 'İzlenecek yol: Basit Nesne Modeli ve Sorgu (Visual Basic)'
+              href: walkthrough-simple-object-model-and-query-visual-basic.md
+            - name: 'İzlenecek yol: İlişkilerde Sorgulama (Visual Basic)'
+              href: walkthrough-querying-across-relationships-visual-basic.md
+            - name: 'İzlenecek yol: Verileri Düzenleme (Visual Basic)'
+              href: walkthrough-manipulating-data-visual-basic.md
+            - name: 'İzlenecek yol: Yalnızca Saklı Yordamlar Kullanma (Visual Basic)'
+              href: walkthrough-using-only-stored-procedures-visual-basic.md
+            - name: 'İzlenecek yol: Basit Nesne Modeli ve Sorgu (C#)'
+              href: walkthrough-simple-object-model-and-query-csharp.md
+            - name: 'İzlenecek yol: İlişkilerde Sorgulama (C#)'
+              href: walkthrough-querying-across-relationships-csharp.md
+            - name: 'İzlenecek yol: Verileri Düzenleme (C#)'
+              href: walkthrough-manipulating-data-csharp.md
+            - name: 'İzlenecek yol: Yalnızca Saklı Yordamları Kullanma (C#)'
+              href: walkthrough-using-only-stored-procedures-csharp.md
+    - name: Programlama Kılavuzu
+      href: programming-guide.md
       items:
-      - name: 'Nasıl yapılır: Veritabanına Satır Ekleme'
-        href: how-to-insert-rows-into-the-database.md
-      - name: 'Nasıl yapılır: Veritabanında Satırları Güncelleştirme'
-        href: how-to-update-rows-in-the-database.md
-      - name: 'Nasıl yapılır: Veritabanından Satır Silme'
-        href: how-to-delete-rows-from-the-database.md
-      - name: 'Nasıl yapılır: Veritabanına Değişiklikleri Gönderme'
-        href: how-to-submit-changes-to-the-database.md
-      - name: 'Nasıl yapılır: İşlemleri Kullanarak Veri Gönderimlerini Ayraç İçine Alma'
-        href: how-to-bracket-data-submissions-by-using-transactions.md
-      - name: 'Nasıl yapılır: Dinamik Olarak Veritabanı Oluşturma'
-        href: how-to-dynamically-create-a-database.md
-      - name: 'Nasıl yapılır: Değişiklik Çakışmalarını Yönetme'
-        href: how-to-manage-change-conflicts.md
-        items:
-        - name: 'Nasıl yapılır: Çakışan Gönderimleri Algılama ve Çözümleme'
-          href: how-to-detect-and-resolve-conflicting-submissions.md
-        - name: 'Nasıl yapılır: Eşzamanlılık Özel Durumları Oluştuğunda Belirtme'
-          href: how-to-specify-when-concurrency-exceptions-are-thrown.md
-        - name: 'Nasıl yapılır: Hangi Üyelerin Eşzamanlılık Çakışmaları için Test Edildiğini Belirtme'
-          href: how-to-specify-which-members-are-tested-for-concurrency-conflicts.md
-        - name: 'Nasıl yapılır: Varlık Çakışma Bilgilerini Alma'
-          href: how-to-retrieve-entity-conflict-information.md
-        - name: 'Nasıl yapılır: Üye Çakışma Bilgilerini Alma'
-          href: how-to-retrieve-member-conflict-information.md
-        - name: 'Nasıl yapılır: Veritabanı Değerlerini Tutarak Çakışmaları Çözümleme'
-          href: how-to-resolve-conflicts-by-retaining-database-values.md
-        - name: 'Nasıl yapılır: Veritabanı Değerlerinin Üzerine Yazarak Çakışmaları Çözümleme'
-          href: how-to-resolve-conflicts-by-overwriting-database-values.md
-        - name: 'Nasıl yapılır: Veritabanı Değerleri ile Birleştirerek Çakışmaları Çözümleme'
-          href: how-to-resolve-conflicts-by-merging-with-database-values.md
-    - name: Hata Ayıklama Desteği
-      href: debugging-support.md
+        - name: Nesne Modeli Oluşturma
+          href: creating-the-object-model.md
+          items:
+            - name: 'Nasıl yapılır: Visual Basic veya C# içinde Nesne Modeli Oluşturma'
+              href: how-to-generate-the-object-model-in-visual-basic-or-csharp.md
+            - name: 'Nasıl yapılır: Nesne Modelini Dış Dosya Olarak Oluşturma'
+              href: how-to-generate-the-object-model-as-an-external-file.md
+            - name: 'Nasıl yapılır: DBML Dosyasını Değiştirerek Özelleştirilmiş Kod Oluşturma'
+              href: how-to-generate-customized-code-by-modifying-a-dbml-file.md
+            - name: 'Nasıl yapılır: DBML ve Dış Eşleme Dosyalarını Doğrulama'
+              href: how-to-validate-dbml-and-external-mapping-files.md
+            - name: 'Nasıl yapılır: Varlıkları Serileştirilebilir Hale Getirme'
+              href: how-to-make-entities-serializable.md
+            - name: 'Nasıl yapılır: Kod Düzenleyicisini Kullanarak Varlık Sınıflarını Özelleştirme'
+              href: how-to-customize-entity-classes-by-using-the-code-editor.md
+              items:
+                - name: 'Nasıl yapılır: Veritabanı Adları Belirtme'
+                  href: how-to-specify-database-names.md
+                - name: 'Nasıl yapılır: Tabloları Sınıf Olarak Temsil Etme'
+                  href: how-to-represent-tables-as-classes.md
+                - name: 'Nasıl yapılır: Sütunları Sınıf Üyesi Olarak Temsil Etme'
+                  href: how-to-represent-columns-as-class-members.md
+                - name: 'Nasıl yapılır: Birincil Anahtarları Temsil Etme'
+                  href: how-to-represent-primary-keys.md
+                - name: 'Nasıl yapılır: Veritabanı İlişkilerini Eşleme'
+                  href: how-to-map-database-relationships.md
+                - name: 'Nasıl yapılır: Sütunları Veritabanında Oluşturulmuş Olarak Temsil Etme'
+                  href: how-to-represent-columns-as-database-generated.md
+                - name: 'Nasıl yapılır: Sütunları Zaman Damgası veya Sürüm Sütunları Olarak Temsil Etme'
+                  href: how-to-represent-columns-as-timestamp-or-version-columns.md
+                - name: 'Nasıl yapılır: Veritabanı Veri Türleri Belirtme'
+                  href: how-to-specify-database-data-types.md
+                - name: 'Nasıl yapılır: Hesaplanan Sütunları Temsil Etme'
+                  href: how-to-represent-computed-columns.md
+                - name: 'Nasıl yapılır: Özel Depolama Alanları Belirtme'
+                  href: how-to-specify-private-storage-fields.md
+                - name: 'Nasıl yapılır: Sütunları Null Değerlere İzin Verecek Şekilde Temsil Etme'
+                  href: how-to-represent-columns-as-allowing-null-values.md
+                - name: 'Nasıl yapılır: Devralma Hiyerarşilerini Eşleme'
+                  href: how-to-map-inheritance-hierarchies.md
+                - name: 'Nasıl yapılır: Eşzamanlılık Çakışması Denetimini Belirtme'
+                  href: how-to-specify-concurrency-conflict-checking.md
+        - name: Veritabanı ile İletişim Kurma
+          href: communicating-with-the-database.md
+          items:
+            - name: 'Nasıl yapılır: Veritabanına Bağlanma'
+              href: how-to-connect-to-a-database.md
+            - name: 'Nasıl yapılır: Doğrudan SQL Komutları Yürütme'
+              href: how-to-directly-execute-sql-commands.md
+            - name: 'Nasıl yapılır: ADO.NET Komutu ile DataContext Arasında Bağlantıyı Yeniden Kullanma'
+              href: how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md
+        - name: Veritabanını Sorgulama
+          href: querying-the-database.md
+          items:
+            - name: 'Nasıl yapılır: Bilgi Sorgulama'
+              href: how-to-query-for-information.md
+            - name: 'Nasıl yapılır: Bilgileri Salt Okunur Olarak Alma'
+              href: how-to-retrieve-information-as-read-only.md
+            - name: 'Nasıl yapılır: Ne Kadar İlgili Verilerin Alındığını Denetleme'
+              href: how-to-control-how-much-related-data-is-retrieved.md
+            - name: 'Nasıl yapılır: İlgili Verileri Filtreleme'
+              href: how-to-filter-related-data.md
+            - name: 'Nasıl yapılır: Geciktirilmiş Yüklemeyi Kapatma'
+              href: how-to-turn-off-deferred-loading.md
+            - name: 'Nasıl yapılır: Doğrudan SQL Sorguları Yürütme'
+              href: how-to-directly-execute-sql-queries.md
+            - name: 'Nasıl yapılır: Sorguları Depolama ve Yeniden Kullanma'
+              href: how-to-store-and-reuse-queries.md
+            - name: 'Nasıl yapılır: Sorgularda Bileşik Anahtarlar İşleme'
+              href: how-to-handle-composite-keys-in-queries.md
+            - name: 'Nasıl yapılır: Tek Seferde Birçok Nesne Alma'
+              href: how-to-retrieve-many-objects-at-once.md
+            - name: 'Nasıl yapılır: DataContext Düzeyinde Filtreleme'
+              href: how-to-filter-at-the-datacontext-level.md
+            - name: Sorgu Örnekleri
+              href: query-examples.md
+              items:
+                - name: Toplu Sorgular
+                  href: aggregate-queries.md
+                  items:
+                    - name: Sayısal Diziden Ortalama Değer Döndürme
+                      href: return-the-average-value-from-a-numeric-sequence.md
+                    - name: Dizideki Öğe Sayısını Sayma
+                      href: count-the-number-of-elements-in-a-sequence.md
+                    - name: Sayısal Dizideki En Büyük Değeri Bulma
+                      href: find-the-maximum-value-in-a-numeric-sequence.md
+                    - name: Sayısal Dizideki En Küçük Değeri Bulma
+                      href: find-the-minimum-value-in-a-numeric-sequence.md
+                    - name: Sayısal Dizideki Değerlerin Toplamını Hesaplama
+                      href: compute-the-sum-of-values-in-a-numeric-sequence.md
+                - name: Dizideki İlk Öğeyi Döndürme
+                  href: return-the-first-element-in-a-sequence.md
+                - name: Dizideki Öğeleri Döndürme veya Atlama
+                  href: return-or-skip-elements-in-a-sequence.md
+                - name: Dizideki Öğeleri Sıralama
+                  href: sort-elements-in-a-sequence.md
+                - name: Dizideki Öğeleri Gruplama
+                  href: group-elements-in-a-sequence.md
+                - name: Dizideki Yinelenen Öğeleri Kaldırma
+                  href: eliminate-duplicate-elements-from-a-sequence.md
+                - name: Dizideki Öğelerin Herhangi Birinin veya Tümünün Bir Koşulu Karşılayıp Karşılamadığını Belirleme
+                  href: determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition.md
+                - name: İki Diziyi Birleştirme
+                  href: concatenate-two-sequences.md
+                - name: İki Dizi Arasındaki Küme Farkını Döndürme
+                  href: return-the-set-difference-between-two-sequences.md
+                - name: İki Dizinin Küme Kesişimini Döndürme
+                  href: return-the-set-intersection-of-two-sequences.md
+                - name: İki Dizinin Küme Birleşimini Döndürme
+                  href: return-the-set-union-of-two-sequences.md
+                - name: Diziyi (Sequence) Diziye (Array) Dönüştürme
+                  href: convert-a-sequence-to-an-array.md
+                - name: Diziyi Genel Listeye Dönüştürme
+                  href: convert-a-sequence-to-a-generic-list.md
+                - name: Türü Genel IEnumerable Öğesine Dönüştürme
+                  href: convert-a-type-to-a-generic-ienumerable.md
+                - name: Birleşimler ve Çapraz Ürün Sorguları Düzenleme
+                  href: formulate-joins-and-cross-product-queries.md
+                - name: Projeksiyonlar Düzenleme
+                  href: formulate-projections.md
+        - name: Veri Değişiklikleri Yapma ve Gönderme
+          href: making-and-submitting-data-changes.md
+          items:
+            - name: 'Nasıl yapılır: Veritabanına Satır Ekleme'
+              href: how-to-insert-rows-into-the-database.md
+            - name: 'Nasıl yapılır: Veritabanında Satırları Güncelleştirme'
+              href: how-to-update-rows-in-the-database.md
+            - name: 'Nasıl yapılır: Veritabanından Satır Silme'
+              href: how-to-delete-rows-from-the-database.md
+            - name: 'Nasıl yapılır: Veritabanına Değişiklikleri Gönderme'
+              href: how-to-submit-changes-to-the-database.md
+            - name: 'Nasıl yapılır: İşlemleri Kullanarak Veri Gönderimlerini Ayraç İçine Alma'
+              href: how-to-bracket-data-submissions-by-using-transactions.md
+            - name: 'Nasıl yapılır: Dinamik Olarak Veritabanı Oluşturma'
+              href: how-to-dynamically-create-a-database.md
+            - name: 'Nasıl yapılır: Değişiklik Çakışmalarını Yönetme'
+              href: how-to-manage-change-conflicts.md
+              items:
+                - name: 'Nasıl yapılır: Çakışan Gönderimleri Algılama ve Çözümleme'
+                  href: how-to-detect-and-resolve-conflicting-submissions.md
+                - name: 'Nasıl yapılır: Eşzamanlılık Özel Durumları Oluştuğunda Belirtme'
+                  href: how-to-specify-when-concurrency-exceptions-are-thrown.md
+                - name: 'Nasıl yapılır: Hangi Üyelerin Eşzamanlılık Çakışmaları için Test Edildiğini Belirtme'
+                  href: how-to-specify-which-members-are-tested-for-concurrency-conflicts.md
+                - name: 'Nasıl yapılır: Varlık Çakışma Bilgilerini Alma'
+                  href: how-to-retrieve-entity-conflict-information.md
+                - name: 'Nasıl yapılır: Üye Çakışma Bilgilerini Alma'
+                  href: how-to-retrieve-member-conflict-information.md
+                - name: 'Nasıl yapılır: Veritabanı Değerlerini Tutarak Çakışmaları Çözümleme'
+                  href: how-to-resolve-conflicts-by-retaining-database-values.md
+                - name: 'Nasıl yapılır: Veritabanı Değerlerinin Üzerine Yazarak Çakışmaları Çözümleme'
+                  href: how-to-resolve-conflicts-by-overwriting-database-values.md
+                - name: 'Nasıl yapılır: Veritabanı Değerleri ile Birleştirerek Çakışmaları Çözümleme'
+                  href: how-to-resolve-conflicts-by-merging-with-database-values.md
+        - name: Hata Ayıklama Desteği
+          href: debugging-support.md
+          items:
+            - name: 'Nasıl yapılır: Oluşturulan SQL’i Görüntüleme'
+              href: how-to-display-generated-sql.md
+            - name: 'Nasıl yapılır: Değişiklik Kümesini Görüntüleme'
+              href: how-to-display-a-changeset.md
+            - name: 'Nasıl yapılır: LINQ to SQL Komutlarını Görüntüleme'
+              href: how-to-display-linq-to-sql-commands.md
+            - name: Sorun giderme
+              href: troubleshooting.md
+        - name: Arka Plan Bilgileri
+          href: background-information.md
+          items:
+            - name: ADO.NET ve LINQ to SQL
+              href: ado-net-and-linq-to-sql.md
+            - name: LINQ to SQL Kaynak Kodunu Analiz Etme
+              href: analyzing-linq-to-sql-source-code.md
+            - name: 'Insert, Update ve Delete İşlemlerini Özelleştirme'
+              href: customizing-insert-update-and-delete-operations.md
+              items:
+                - name: 'İşlemleri Özelleştirme: Genel Bakış'
+                  href: customizing-operations-overview.md
+                - name: 'Insert, Update ve Delete İşlemleri'
+                  href: insert-update-and-delete-operations.md
+                - name: Geliştiricinin Varsayılan Davranışı Geçersiz Kılma Sorumlulukları
+                  href: responsibilities-of-the-developer-in-overriding-default-behavior.md
+                - name: Kısmi Yöntemler Kullanarak İş Mantığı Ekleme
+                  href: adding-business-logic-by-using-partial-methods.md
+            - name: Veri Bağlama
+              href: data-binding.md
+            - name: Devralma Desteği
+              href: inheritance-support.md
+            - name: Yerel Yöntem Çağrıları
+              href: local-method-calls.md
+            - name: LINQ to SQL ile N Katmanı ve Uzak Uygulamalar
+              href: n-tier-and-remote-applications-with-linq-to-sql.md
+              items:
+                - name: ASP.NET ile LINQ to SQL N Katmanı
+                  href: linq-to-sql-n-tier-with-aspnet.md
+                - name: Web Hizmetleri ile LINQ to SQL N Katmanı
+                  href: linq-to-sql-n-tier-with-web-services.md
+                - name: N Katmanı İş Mantığını Uygulama
+                  href: implementing-business-logic-linq-to-sql.md
+                - name: N Katmanı Uygulamalarında Veri Alma ve CUD İşlemleri (LINQ to SQL)
+                  href: data-retrieval-and-cud-operations-in-n-tier-applications.md
+            - name: Nesne Kimliği
+              href: object-identity.md
+            - name: LINQ to SQL Nesne Modeli
+              href: the-linq-to-sql-object-model.md
+            - name: Nesne Durumları ve Değişiklik İzleme
+              href: object-states-and-change-tracking.md
+            - name: 'İyimser Eşzamanlılık: Genel Bakış'
+              href: optimistic-concurrency-overview.md
+            - name: Sorgu Kavramları
+              href: query-concepts.md
+              items:
+                - name: LINQ to SQL Sorguları
+                  href: linq-to-sql-queries.md
+                - name: İlişkilerde Sorgulama
+                  href: querying-across-relationships.md
+                - name: Uzak ve Yerel Yürütme Karşılaştırması
+                  href: remote-vs-local-execution.md
+                - name: Ertelenmiş ve Hemen Yükleme Karşılaştırması
+                  href: deferred-versus-immediate-loading.md
+            - name: Kimlik Önbelleğinden Nesne Alma
+              href: retrieving-objects-from-the-identity-cache.md
+            - name: LINQ to SQL’de Güvenlik
+              href: security-in-linq-to-sql.md
+            - name: Serileştirme
+              href: serialization.md
+            - name: Saklı Yordamlar
+              href: stored-procedures.md
+              items:
+                - name: 'Nasıl yapılır: Satır Kümeleri Döndürme'
+                  href: how-to-return-rowsets.md
+                - name: 'Nasıl yapılır: Parametre Alan Saklı Yordamlar Kullanma'
+                  href: how-to-use-stored-procedures-that-take-parameters.md
+                - name: 'Nasıl yapılır: Birden Çok Sonuç Şekli İçin Eşlenmiş Saklı Yordamlar Kullanma'
+                  href: how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md
+                - name: 'Nasıl yapılır: Sıralı Sonuç Şekilleri İçin Eşlenmiş Saklı Yordamlar Kullanma'
+                  href: how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md
+                - name: Saklı Yordamları Kullanarak İşlemleri Özelleştirme
+                  href: customizing-operations-by-using-stored-procedures.md
+                - name: Saklı Yordamları Özel Olarak Kullanarak İşlemleri Özelleştirme
+                  href: customizing-operations-by-using-stored-procedures-exclusively.md
+            - name: İşlem Desteği
+              href: transaction-support.md
+            - name: SQL-CLR Tür Uyumsuzlukları
+              href: sql-clr-type-mismatches.md
+            - name: SQL-CLR Özel Tür Eşlemeleri
+              href: sql-clr-custom-type-mappings.md
+            - name: Kullanıcı Tanımlı İşlevler
+              href: user-defined-functions.md
+              items:
+                - name: 'Nasıl yapılır: Skaler Değerli Kullanıcı Tanımlı İşlevler Kullanma'
+                  href: how-to-use-scalar-valued-user-defined-functions.md
+                - name: 'Nasıl yapılır: Tablo Değerli Kullanıcı Tanımlı İşlevler Kullanma'
+                  href: how-to-use-table-valued-user-defined-functions.md
+                - name: 'Nasıl yapılır: Kullanıcı Tanımlı Satır İçi İşlevleri Çağırma'
+                  href: how-to-call-user-defined-functions-inline.md
+    - name: Başvuru
+      href: reference.md
       items:
-      - name: 'Nasıl yapılır: Oluşturulan SQL’i Görüntüleme'
-        href: how-to-display-generated-sql.md
-      - name: 'Nasıl yapılır: Değişiklik Kümesini Görüntüleme'
-        href: how-to-display-a-changeset.md
-      - name: 'Nasıl yapılır: LINQ to SQL Komutlarını Görüntüleme'
-        href: how-to-display-linq-to-sql-commands.md
-      - name: Sorun giderme
-        href: troubleshooting.md
-    - name: Arka Plan Bilgileri
-      href: background-information.md
-      items:
-      - name: ADO.NET ve LINQ to SQL
-        href: ado-net-and-linq-to-sql.md
-      - name: LINQ to SQL Kaynak Kodunu Analiz Etme
-        href: analyzing-linq-to-sql-source-code.md
-      - name: Insert, Update ve Delete İşlemlerini Özelleştirme
-        href: customizing-insert-update-and-delete-operations.md
-        items:
-        - name: 'İşlemleri Özelleştirme: Genel Bakış'
-          href: customizing-operations-overview.md
-        - name: Insert, Update ve Delete İşlemleri
-          href: insert-update-and-delete-operations.md
-        - name: Geliştiricinin Varsayılan Davranışı Geçersiz Kılma Sorumlulukları
-          href: responsibilities-of-the-developer-in-overriding-default-behavior.md
-        - name: Kısmi Yöntemler Kullanarak İş Mantığı Ekleme
-          href: adding-business-logic-by-using-partial-methods.md
-      - name: Veri Bağlama
-        href: data-binding.md
-      - name: Devralma Desteği
-        href: inheritance-support.md
-      - name: Yerel Yöntem Çağrıları
-        href: local-method-calls.md
-      - name: LINQ to SQL ile N Katmanı ve Uzak Uygulamalar
-        href: n-tier-and-remote-applications-with-linq-to-sql.md
-        items:
-        - name: ASP.NET ile LINQ to SQL N Katmanı
-          href: linq-to-sql-n-tier-with-aspnet.md
-        - name: Web Hizmetleri ile LINQ to SQL N Katmanı
-          href: linq-to-sql-n-tier-with-web-services.md
-        - name: N Katmanı İş Mantığını Uygulama
-          href: implementing-business-logic-linq-to-sql.md
-        - name: N Katmanı Uygulamalarında Veri Alma ve CUD İşlemleri (LINQ to SQL)
-          href: data-retrieval-and-cud-operations-in-n-tier-applications.md
-      - name: Nesne Kimliği
-        href: object-identity.md
-      - name: LINQ to SQL Nesne Modeli
-        href: the-linq-to-sql-object-model.md
-      - name: Nesne Durumları ve Değişiklik İzleme
-        href: object-states-and-change-tracking.md
-      - name: 'İyimser Eşzamanlılık: Genel Bakış'
-        href: optimistic-concurrency-overview.md
-      - name: Sorgu Kavramları
-        href: query-concepts.md
-        items:
-        - name: LINQ to SQL Sorguları
-          href: linq-to-sql-queries.md
-        - name: İlişkilerde Sorgulama
-          href: querying-across-relationships.md
-        - name: Uzak ve Yerel Yürütme Karşılaştırması
-          href: remote-vs-local-execution.md
-        - name: Ertelenmiş ve Hemen Yükleme Karşılaştırması
-          href: deferred-versus-immediate-loading.md
-      - name: Kimlik Önbelleğinden Nesne Alma
-        href: retrieving-objects-from-the-identity-cache.md
-      - name: LINQ to SQL’de Güvenlik
-        href: security-in-linq-to-sql.md
-      - name: Serileştirme
-        href: serialization.md
-      - name: Saklı Yordamlar
-        href: stored-procedures.md
-        items:
-        - name: 'Nasıl yapılır: Satır Kümeleri Döndürme'
-          href: how-to-return-rowsets.md
-        - name: 'Nasıl yapılır: Parametre Alan Saklı Yordamlar Kullanma'
-          href: how-to-use-stored-procedures-that-take-parameters.md
-        - name: 'Nasıl yapılır: Birden Çok Sonuç Şekli İçin Eşlenmiş Saklı Yordamlar Kullanma'
-          href: how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md
-        - name: 'Nasıl yapılır: Sıralı Sonuç Şekilleri İçin Eşlenmiş Saklı Yordamlar Kullanma'
-          href: how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md
-        - name: Saklı Yordamları Kullanarak İşlemleri Özelleştirme
-          href: customizing-operations-by-using-stored-procedures.md
-        - name: Saklı Yordamları Özel Olarak Kullanarak İşlemleri Özelleştirme
-          href: customizing-operations-by-using-stored-procedures-exclusively.md
-      - name: İşlem Desteği
-        href: transaction-support.md
-      - name: SQL-CLR Tür Uyumsuzlukları
-        href: sql-clr-type-mismatches.md
-      - name: SQL-CLR Özel Tür Eşlemeleri
-        href: sql-clr-custom-type-mappings.md
-      - name: Kullanıcı Tanımlı İşlevler
-        href: user-defined-functions.md
-        items:
-        - name: 'Nasıl yapılır: Skaler Değerli Kullanıcı Tanımlı İşlevler Kullanma'
-          href: how-to-use-scalar-valued-user-defined-functions.md
-        - name: 'Nasıl yapılır: Tablo Değerli Kullanıcı Tanımlı İşlevler Kullanma'
-          href: how-to-use-table-valued-user-defined-functions.md
-        - name: 'Nasıl yapılır: Kullanıcı Tanımlı Satır İçi İşlevleri Çağırma'
-          href: how-to-call-user-defined-functions-inline.md
-  - name: Başvuru
-    href: reference.md
-    items:
-    - name: Veri Türleri ve İşlevleri
-      href: data-types-and-functions.md
-      items:
-      - name: SQL-CLR Tür Eşlemesi
-        href: sql-clr-type-mapping.md
-      - name: Temel Veri Türleri
-        href: basic-data-types.md
-      - name: Boole Veri Türleri
-        href: boolean-data-types.md
-      - name: Null Semantikler
-        href: null-semantics.md
-      - name: Sayısal ve Karşılaştırma İşleçleri
-        href: numeric-and-comparison-operators.md
-      - name: Dizi İşleçleri
-        href: sequence-operators.md
-      - name: System.Convert Yöntemleri
-        href: system-convert-methods.md
-      - name: System.DateTime Yöntemleri
-        href: system-datetime-methods.md
-      - name: System.Math Yöntemleri
-        href: system-math-methods.md
-      - name: System.Object Yöntemleri
-        href: system-object-methods.md
-      - name: System.String Yöntemleri
-        href: system-string-methods.md
-      - name: System.TimeSpan Yöntemleri
-        href: system-timespan-methods.md
-      - name: Desteklenmeyen İşlev
-        href: unsupported-functionality.md
-      - name: System.DateTimeOffset Yöntemleri
-        href: system-datetimeoffset-methods.md
-    - name: Öznitelik Tabanlı Eşleme
-      href: attribute-based-mapping.md
-    - name: LINQ to SQL’de Kod Oluşturma
-      href: code-generation-in-linq-to-sql.md
-    - name: Dış Eşleme
-      href: external-mapping.md
-    - name: Sıkça Sorulan Sorular
-      href: frequently-asked-questions.md
-    - name: SQL Server Compact ve LINQ to SQL
-      href: sql-server-compact-and-linq-to-sql.md
-    - name: Standart Sorgu İşleci Çevirisi
-      href: standard-query-operator-translation.md
-  - name: Örnekler
-    href: samples.md
-ms.openlocfilehash: 754a552a01d40f6dc020536ef090b2bcbb3f90c2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471995"
+        - name: Veri Türleri ve İşlevleri
+          href: data-types-and-functions.md
+          items:
+            - name: SQL-CLR Tür Eşlemesi
+              href: sql-clr-type-mapping.md
+            - name: Temel Veri Türleri
+              href: basic-data-types.md
+            - name: Boole Veri Türleri
+              href: boolean-data-types.md
+            - name: Null Semantikler
+              href: null-semantics.md
+            - name: Sayısal ve Karşılaştırma İşleçleri
+              href: numeric-and-comparison-operators.md
+            - name: Dizi İşleçleri
+              href: sequence-operators.md
+            - name: System.Convert Yöntemleri
+              href: system-convert-methods.md
+            - name: System.DateTime Yöntemleri
+              href: system-datetime-methods.md
+            - name: System.Math Yöntemleri
+              href: system-math-methods.md
+            - name: System.Object Yöntemleri
+              href: system-object-methods.md
+            - name: System.String Yöntemleri
+              href: system-string-methods.md
+            - name: System.TimeSpan Yöntemleri
+              href: system-timespan-methods.md
+            - name: Desteklenmeyen İşlev
+              href: unsupported-functionality.md
+            - name: System.DateTimeOffset Yöntemleri
+              href: system-datetimeoffset-methods.md
+        - name: Öznitelik Tabanlı Eşleme
+          href: attribute-based-mapping.md
+        - name: LINQ to SQL’de Kod Oluşturma
+          href: code-generation-in-linq-to-sql.md
+        - name: Dış Eşleme
+          href: external-mapping.md
+        - name: Sıkça Sorulan Sorular
+          href: frequently-asked-questions.md
+        - name: SQL Server Compact ve LINQ to SQL
+          href: sql-server-compact-and-linq-to-sql.md
+        - name: Standart Sorgu İşleci Çevirisi
+          href: standard-query-operator-translation.md
+    - name: Örnekler
+      href: samples.md

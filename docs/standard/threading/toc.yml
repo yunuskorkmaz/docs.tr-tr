@@ -1,87 +1,80 @@
-items:
 - name: İş Parçacığı Oluşturma
   href: index.md
   items:
-  - name: Yönetilen İş Parçacığı Oluşturma Temelleri
-    href: managed-threading-basics.md
-    items:
-    - name: İş Parçacıkları ve İş Parçacığı Oluşturma
-      href: threads-and-threading.md
-    - name: Yönetilen İş Parçacıklarında Özel Durumlar
-      href: exceptions-in-managed-threads.md
-    - name: Çoklu İş Parçacığı Kullanımı için Veri Eşitleme
-      href: synchronizing-data-for-multithreading.md
-    - name: Ön Plan ve Arka Plan İş Parçacıklarını Seçme
-      href: foreground-and-background-threads.md
-    - name: Windows'da Yönetilen ve Yönetilmeyen İş Parçacığı Oluşturma
-      href: managed-and-unmanaged-threading-in-windows.md
-    - name: Thread.Suspend Çöp Toplama ve Güvenli Noktalar
-      href: thread-suspend-garbage-collection-and-safe-points.md
-    - name: 'İş Parçacığında Yerel Depolama: İş Parçacığı Göreli Statik Alanları ve Veri Yuvaları'
-      href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
-  - name: İş parçacıkları ve iş parçacığı oluşturmayı kullanma
-    href: using-threads-and-threading.md
-    items:
-    - name: Başlatma zamanında iş parçacığı oluşturma ve veri geçirme
-      href: creating-threads-and-passing-data-at-start-time.md
-    - name: İş parçacıklarını duraklatma ve kesintiye uğratma
-      href: pausing-and-resuming-threads.md
-    - name: İş parçacıklarını yok etme
-      href: destroying-threads.md
-    - name: İş parçacıklarını zamanlama
-      href: scheduling-threads.md
-    - name: Yönetilen İş Parçacıklarında İptal
-      href: cancellation-in-managed-threads.md
+    - name: Yönetilen İş Parçacığı Oluşturma Temelleri
+      href: managed-threading-basics.md
       items:
-      - name: İş parçacıklarını işbirliği ile iptal etme
-        href: canceling-threads-cooperatively.md
-      - name: 'Nasıl yapılır: Yoklama ile İptal İsteklerini Dinleme'
-        href: how-to-listen-for-cancellation-requests-by-polling.md
-      - name: 'Nasıl yapılır: İptal İstekleri için Geri Çağırmaları Kaydetme'
-        href: how-to-register-callbacks-for-cancellation-requests.md
-      - name: 'Nasıl yapılır: Bekleme Tanıtıcıları İçeren İptal İsteklerini Dinleme'
-        href: how-to-listen-for-cancellation-requests-that-have-wait-handles.md
-      - name: 'Nasıl yapılır: Birden Çok İptal İsteğini Dinleme'
-        href: how-to-listen-for-multiple-cancellation-requests.md
-  - name: Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri
-    href: managed-threading-best-practices.md
-  - name: İş parçacığı nesneleri ve özellikleri
-    href: threading-objects-and-features.md
-    items:
-    - name: Yönetilen iş parçacığı havuzu
-      href: the-managed-thread-pool.md
-    - name: Süreölçerler
-      href: timers.md
-    - name: Eşitleme temellerine genel bakış
-      href: overview-of-synchronization-primitives.md
-    - name: EventWaitHandle
-      href: eventwaithandle.md
-    - name: CountdownEvent
-      href: countdownevent.md
-    - name: Zaman Uyumu Sağlayıcılar
-      href: mutexes.md
-    - name: Semafor ve SemaphoreSlim
-      href: semaphore-and-semaphoreslim.md
-    - name: Engel
-      href: barrier.md
+        - name: İş Parçacıkları ve İş Parçacığı Oluşturma
+          href: threads-and-threading.md
+        - name: Yönetilen İş Parçacıklarında Özel Durumlar
+          href: exceptions-in-managed-threads.md
+        - name: Çoklu İş Parçacığı Kullanımı için Veri Eşitleme
+          href: synchronizing-data-for-multithreading.md
+        - name: Ön Plan ve Arka Plan İş Parçacıklarını Seçme
+          href: foreground-and-background-threads.md
+        - name: Windows'da Yönetilen ve Yönetilmeyen İş Parçacığı Oluşturma
+          href: managed-and-unmanaged-threading-in-windows.md
+        - name: Thread.Suspend Çöp Toplama ve Güvenli Noktalar
+          href: thread-suspend-garbage-collection-and-safe-points.md
+        - name: 'İş Parçacığında Yerel Depolama: İş Parçacığı Göreli Statik Alanları ve Veri Yuvaları'
+          href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
+    - name: İş parçacıkları ve iş parçacığı oluşturmayı kullanma
+      href: using-threads-and-threading.md
       items:
-      - name: 'Nasıl yapılır: Eş zamanlı görevleri bir engelle eşitleme'
-        href: how-to-synchronize-concurrent-operations-with-a-barrier.md
-    - name: SpinLock
-      href: spinlock.md
+        - name: Başlatma zamanında iş parçacığı oluşturma ve veri geçirme
+          href: creating-threads-and-passing-data-at-start-time.md
+        - name: İş parçacıklarını duraklatma ve kesintiye uğratma
+          href: pausing-and-resuming-threads.md
+        - name: İş parçacıklarını yok etme
+          href: destroying-threads.md
+        - name: İş parçacıklarını zamanlama
+          href: scheduling-threads.md
+        - name: Yönetilen İş Parçacıklarında İptal
+          href: cancellation-in-managed-threads.md
+          items:
+            - name: İş parçacıklarını işbirliği ile iptal etme
+              href: canceling-threads-cooperatively.md
+            - name: 'Nasıl yapılır: Yoklama ile İptal İsteklerini Dinleme'
+              href: how-to-listen-for-cancellation-requests-by-polling.md
+            - name: 'Nasıl yapılır: İptal İstekleri için Geri Çağırmaları Kaydetme'
+              href: how-to-register-callbacks-for-cancellation-requests.md
+            - name: 'Nasıl yapılır: Bekleme Tanıtıcıları İçeren İptal İsteklerini Dinleme'
+              href: how-to-listen-for-cancellation-requests-that-have-wait-handles.md
+            - name: 'Nasıl yapılır: Birden Çok İptal İsteğini Dinleme'
+              href: how-to-listen-for-multiple-cancellation-requests.md
+    - name: Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri
+      href: managed-threading-best-practices.md
+    - name: İş parçacığı nesneleri ve özellikleri
+      href: threading-objects-and-features.md
       items:
-      - name: 'Nasıl yapılır: Düşük düzeyli eşitleme için SpinLock kullanma'
-        href: how-to-use-spinlock-for-low-level-synchronization.md
-      - name: "Nasıl yapılır: SpinLock'ta iş parçacığı izleme modunu etkinleştirme"
-        href: how-to-enable-thread-tracking-mode-in-spinlock.md
-    - name: SpinWait
-      href: spinwait.md
-      items:
-      - name: 'Nasıl yapılır: İki aşamalı bir bekleme işlemini uygulamak için SpinWait kullanma'
-        href: how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md
-ms.openlocfilehash: c015db2bc66897ca487e29e36d93e7d84a0897f1
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471634"
+        - name: Yönetilen iş parçacığı havuzu
+          href: the-managed-thread-pool.md
+        - name: Süreölçerler
+          href: timers.md
+        - name: Eşitleme temellerine genel bakış
+          href: overview-of-synchronization-primitives.md
+        - name: EventWaitHandle
+          href: eventwaithandle.md
+        - name: CountdownEvent
+          href: countdownevent.md
+        - name: Zaman Uyumu Sağlayıcılar
+          href: mutexes.md
+        - name: Semafor ve SemaphoreSlim
+          href: semaphore-and-semaphoreslim.md
+        - name: Engel
+          href: barrier.md
+          items:
+            - name: 'Nasıl yapılır: Eş zamanlı görevleri bir engelle eşitleme'
+              href: how-to-synchronize-concurrent-operations-with-a-barrier.md
+        - name: SpinLock
+          href: spinlock.md
+          items:
+            - name: 'Nasıl yapılır: Düşük düzeyli eşitleme için SpinLock kullanma'
+              href: how-to-use-spinlock-for-low-level-synchronization.md
+            - name: 'Nasıl yapılır: SpinLock''ta iş parçacığı izleme modunu etkinleştirme'
+              href: how-to-enable-thread-tracking-mode-in-spinlock.md
+        - name: SpinWait
+          href: spinwait.md
+          items:
+            - name: 'Nasıl yapılır: İki aşamalı bir bekleme işlemini uygulamak için SpinWait kullanma'
+              href: how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md

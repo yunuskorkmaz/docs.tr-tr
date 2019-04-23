@@ -1,52 +1,45 @@
-items:
-- name: C# Programlama Kılavuzu
+- name: 'C# Programlama Kılavuzu'
   href: index.md
   items:
-  - name: C# Programı İçinde
-    href: inside-a-program/
-  - name: Ana() ve komut satırı bağımsız değişkenleri
-    href: main-and-command-args/
-  - name: Programlama Kavramları
-    href: concepts/
-  - name: Deyimler, İfadeler ve İşleçler
-    href: statements-expressions-operators/
-  - name: Türler
-    href: types/
-  - name: Sınıflar ve Yapılar
-    href: classes-and-structs/
-  - name: Arabirimler
-    href: interfaces/
-  - name: Numaralandırma Türleri
-    href: enumeration-types.md
-  - name: Temsilciler
-    href: delegates/index.md
-  - name: Diziler
-    href: arrays/
-  - name: Dizeler
-    href: strings/
-  - name: Dizin Oluşturucular
-    href: indexers/
-  - name: Olaylar
-    href: events/
-  - name: Genel Türler
-    href: generics/
-  - name: Ad Alanları
-    href: namespaces/
-  - name: Boş Değer Atanabilir Tipler
-    href: nullable-types/
-  - name: Güvenli Olmayan Kod ve İşaretçiler
-    href: unsafe-code-pointers/
-  - name: XML Belgeleri Yorumları
-    href: xmldoc/
-  - name: Özel Durumlar ve Özel Durum İşleme
-    href: exceptions/
-  - name: Dosya Sistemi ve Kayıt Defteri
-    href: file-system/
-  - name: Birlikte Çalışabilirlik
-    href: interop/
-ms.openlocfilehash: 735c939dd903ff7e713fc9870afeda99786f8e77
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58472119"
+    - name: 'C# Programı İçinde'
+      href: inside-a-program/
+    - name: Ana() ve komut satırı bağımsız değişkenleri
+      href: main-and-command-args/
+    - name: Programlama Kavramları
+      href: concepts/
+    - name: 'Deyimler, İfadeler ve İşleçler'
+      href: statements-expressions-operators/
+    - name: Türler
+      href: types/
+    - name: Sınıflar ve Yapılar
+      href: classes-and-structs/
+    - name: Arabirimler
+      href: interfaces/
+    - name: Numaralandırma Türleri
+      href: enumeration-types.md
+    - name: Temsilciler
+      href: delegates/index.md
+    - name: Diziler
+      href: arrays/
+    - name: Dizeler
+      href: strings/
+    - name: Dizin Oluşturucular
+      href: indexers/
+    - name: Olaylar
+      href: events/
+    - name: Genel Türler
+      href: generics/
+    - name: Ad Alanları
+      href: namespaces/
+    - name: Boş Değer Atanabilir Tipler
+      href: nullable-types/
+    - name: Güvenli Olmayan Kod ve İşaretçiler
+      href: unsafe-code-pointers/
+    - name: XML Belgeleri Yorumları
+      href: xmldoc/
+    - name: Özel Durumlar ve Özel Durum İşleme
+      href: exceptions/
+    - name: Dosya Sistemi ve Kayıt Defteri
+      href: file-system/
+    - name: Birlikte Çalışabilirlik
+      href: interop/

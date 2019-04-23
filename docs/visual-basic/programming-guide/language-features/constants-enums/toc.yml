@@ -1,36 +1,29 @@
-items:
 - name: Sabitler ve Numaralandırmalar
   href: index.md
   items:
-  - name: Sabitlere Genel Bakış
-    href: constants-overview.md
-    items:
-    - name: 'Nasıl yapılır: Bir Sabit Bildirme'
-      href: how-to-declare-a-constant.md
-    - name: Kullanıcı Tanımlı Sabitler
-      href: user-defined-constants.md
-    - name: Sabit ve Değişmez Değerli Veri Türleri
-      href: constant-and-literal-data-types.md
-    - name: 'Nasıl yapılır: İlgili Sabit Değerleri Birlikte Gruplandırma'
-      href: how-to-group-related-constant-values-together.md
-  - name: Sabit Listelerine Genel Bakış
-    href: enumerations-overview.md
-    items:
-    - name: 'Nasıl yapılır: Bir Sabit Listesi Bildirme'
-      href: how-to-declare-enumerations.md
-    - name: 'Nasıl yapılır: Bir Sabit Listesi Üyesine Başvurma'
-      href: how-to-refer-to-an-enumeration-member.md
-    - name: Sabit Listeleri ve Ad Niteliği
-      href: enumerations-and-name-qualification.md
-    - name: 'Nasıl yapılır: Sabit Listesi Yoluyla Yineleme'
-      href: how-to-iterate-through-an-enumeration.md
-    - name: 'Nasıl yapılır: Bir Sabit Listesi Değeriyle İlişkili Dizeyi Belirleme'
-      href: how-to-determine-the-string-associated-with-an-enumeration-value.md
-    - name: Bir Numaralandırmanın Ne Zaman Kullanılacağı
-      href: when-to-use-an-enumeration.md
-ms.openlocfilehash: d04784aa644ef5d37a7b3d416f8a15f2e5113f98
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471991"
+    - name: Sabitlere Genel Bakış
+      href: constants-overview.md
+      items:
+        - name: 'Nasıl yapılır: Bir Sabit Bildirme'
+          href: how-to-declare-a-constant.md
+        - name: Kullanıcı Tanımlı Sabitler
+          href: user-defined-constants.md
+        - name: Sabit ve Değişmez Değerli Veri Türleri
+          href: constant-and-literal-data-types.md
+        - name: 'Nasıl yapılır: İlgili Sabit Değerleri Birlikte Gruplandırma'
+          href: how-to-group-related-constant-values-together.md
+    - name: Sabit Listelerine Genel Bakış
+      href: enumerations-overview.md
+      items:
+        - name: 'Nasıl yapılır: Bir Sabit Listesi Bildirme'
+          href: how-to-declare-enumerations.md
+        - name: 'Nasıl yapılır: Bir Sabit Listesi Üyesine Başvurma'
+          href: how-to-refer-to-an-enumeration-member.md
+        - name: Sabit Listeleri ve Ad Niteliği
+          href: enumerations-and-name-qualification.md
+        - name: 'Nasıl yapılır: Sabit Listesi Yoluyla Yineleme'
+          href: how-to-iterate-through-an-enumeration.md
+        - name: 'Nasıl yapılır: Bir Sabit Listesi Değeriyle İlişkili Dizeyi Belirleme'
+          href: how-to-determine-the-string-associated-with-an-enumeration-value.md
+        - name: Bir Numaralandırmanın Ne Zaman Kullanılacağı
+          href: when-to-use-an-enumeration.md
