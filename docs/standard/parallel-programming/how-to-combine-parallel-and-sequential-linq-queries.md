@@ -11,27 +11,27 @@ ms.assetid: 1167cfe6-c8aa-4096-94ba-c66c3a4edf4c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fd67d5f0cb5af33dc2b79f86148557a0dca6ec4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45998935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638937"
 ---
-# <a name="how-to-combine-parallel-and-sequential-linq-queries"></a><span data-ttu-id="45ccb-102">Nasıl yapılır: Paralel ve Sıralı LINQ Sorgularını Birleştirme</span><span class="sxs-lookup"><span data-stu-id="45ccb-102">How to: Combine Parallel and Sequential LINQ Queries</span></span>
-<span data-ttu-id="45ccb-103">Bu örnek nasıl kullanılacağını gösterir <xref:System.Linq.ParallelEnumerable.AsSequential%2A> sorgudaki izleyen tüm işleçler sırayla işlemek için PLINQ istemek için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="45ccb-103">This example shows how to use the <xref:System.Linq.ParallelEnumerable.AsSequential%2A> method to instruct PLINQ to process all subsequent operators in the query sequentially.</span></span> <span data-ttu-id="45ccb-104">Bazen sıralı işleme paralel genelde daha yavaş olsa da, doğru sonuçlar üretmek için gerekli olabilir.</span><span class="sxs-lookup"><span data-stu-id="45ccb-104">Although sequential processing is generally slower than parallel, sometimes it is necessary to produce correct results.</span></span>  
+# <a name="how-to-combine-parallel-and-sequential-linq-queries"></a><span data-ttu-id="1f2d1-102">Nasıl yapılır: Paralel ve Sıralı LINQ Sorgularını Birleştirme</span><span class="sxs-lookup"><span data-stu-id="1f2d1-102">How to: Combine Parallel and Sequential LINQ Queries</span></span>
+<span data-ttu-id="1f2d1-103">Bu örnek nasıl kullanılacağını gösterir <xref:System.Linq.ParallelEnumerable.AsSequential%2A> sorgudaki izleyen tüm işleçler sırayla işlemek için PLINQ istemek için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="1f2d1-103">This example shows how to use the <xref:System.Linq.ParallelEnumerable.AsSequential%2A> method to instruct PLINQ to process all subsequent operators in the query sequentially.</span></span> <span data-ttu-id="1f2d1-104">Bazen sıralı işleme paralel genelde daha yavaş olsa da, doğru sonuçlar üretmek için gerekli olabilir.</span><span class="sxs-lookup"><span data-stu-id="1f2d1-104">Although sequential processing is generally slower than parallel, sometimes it is necessary to produce correct results.</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="45ccb-105">Bu örnek, kullanımını göstermek için tasarlanmıştır ve nesneleri sorgu için eşdeğer sıralı LINQ daha hızlı çalışmayabilir.</span><span class="sxs-lookup"><span data-stu-id="45ccb-105">This example is intended to demonstrate usage, and might not run faster than the equivalent sequential LINQ to Objects query.</span></span> <span data-ttu-id="45ccb-106">Hızlandırmayı hakkında daha fazla bilgi için bkz: [plınq'te hızlandırmayı anlama](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span><span class="sxs-lookup"><span data-stu-id="45ccb-106">For more information about speedup, see [Understanding Speedup in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span></span>  
+>  <span data-ttu-id="1f2d1-105">Bu örnek, kullanımını göstermek için tasarlanmıştır ve nesneleri sorgu için eşdeğer sıralı LINQ daha hızlı çalışmayabilir.</span><span class="sxs-lookup"><span data-stu-id="1f2d1-105">This example is intended to demonstrate usage, and might not run faster than the equivalent sequential LINQ to Objects query.</span></span> <span data-ttu-id="1f2d1-106">Hızlandırmayı hakkında daha fazla bilgi için bkz: [plınq'te hızlandırmayı anlama](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span><span class="sxs-lookup"><span data-stu-id="1f2d1-106">For more information about speedup, see [Understanding Speedup in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="45ccb-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="45ccb-107">Example</span></span>  
- <span data-ttu-id="45ccb-108">Aşağıdaki örnek bir senaryo gösterilmektedir <xref:System.Linq.ParallelEnumerable.AsSequential%2A> özelliği için gerekli olan bir önceki sorgu yan tümcesi içinde oluşturulmuş sıralamasını koruması.</span><span class="sxs-lookup"><span data-stu-id="45ccb-108">The following example shows one scenario in which <xref:System.Linq.ParallelEnumerable.AsSequential%2A> is required, namely to preserve the ordering that was established in a previous clause of the query.</span></span>  
+## <a name="example"></a><span data-ttu-id="1f2d1-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="1f2d1-107">Example</span></span>  
+ <span data-ttu-id="1f2d1-108">Aşağıdaki örnek bir senaryo gösterilmektedir <xref:System.Linq.ParallelEnumerable.AsSequential%2A> özelliği için gerekli olan bir önceki sorgu yan tümcesi içinde oluşturulmuş sıralamasını koruması.</span><span class="sxs-lookup"><span data-stu-id="1f2d1-108">The following example shows one scenario in which <xref:System.Linq.ParallelEnumerable.AsSequential%2A> is required, namely to preserve the ordering that was established in a previous clause of the query.</span></span>  
   
  [!code-csharp[PLINQ#24](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#24)]
  [!code-vb[PLINQ#24](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#24)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="45ccb-109">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="45ccb-109">Compiling the Code</span></span>  
- <span data-ttu-id="45ccb-110">Derleme ve bu kodu çalıştırmak için içine yapıştırın [PLINQ veri örneği](../../../docs/standard/parallel-programming/plinq-data-sample.md) yöntemini çağıracak bir satır ekleyin, proje `Main`, F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="45ccb-110">To compile and run this code, paste it into the [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) project, add a line to call the method from `Main`, and press F5.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="1f2d1-109">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="1f2d1-109">Compiling the Code</span></span>  
+ <span data-ttu-id="1f2d1-110">Derleme ve bu kodu çalıştırmak için içine yapıştırın [PLINQ veri örneği](../../../docs/standard/parallel-programming/plinq-data-sample.md) yöntemini çağıracak bir satır ekleyin, proje `Main`, F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="1f2d1-110">To compile and run this code, paste it into the [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) project, add a line to call the method from `Main`, and press F5.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="45ccb-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="45ccb-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1f2d1-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1f2d1-111">See also</span></span>
 
-- [<span data-ttu-id="45ccb-112">Paralel LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="45ccb-112">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [<span data-ttu-id="1f2d1-112">Paralel LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="1f2d1-112">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
