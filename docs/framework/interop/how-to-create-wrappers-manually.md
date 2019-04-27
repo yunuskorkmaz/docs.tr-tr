@@ -7,11 +7,11 @@ ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f834eb52476e9b04ed6aaf294deed88213961045
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643250"
 ---
 # <a name="how-to-create-wrappers-manually"></a>Nasıl yapılır: Sarmalayıcıları Elle Oluşturma
 El ile yönetilen kaynak kodda COM türlerini bildirmek karar verirseniz, başlatmak için en iyi varolan arabirim tanımlama dili (IDL) dosya veya tür kitaplığı ile yerdir. IDL dosyası yok veya bir tür kitaplığı dosyası oluşturulamıyor, yönetilen bildirimleri oluşturarak COM türlerini benzetimi yapabilir ve elde edilen derlemeyi bir tür kitaplığına dışarı aktarma.  

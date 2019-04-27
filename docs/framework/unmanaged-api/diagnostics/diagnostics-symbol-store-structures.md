@@ -10,24 +10,24 @@ ms.assetid: 0d423791-d40d-45c6-a82b-1a165768d737
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2e7bd0fabcd4838990ae8704de4f83e9677dbc08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599292"
 ---
 # <a name="diagnostics-symbol-store-structures"></a>Tanılama Sembol Deposu Yapıları
-Bu konuda tanılama sembol deposu API kullanan yönetilmeyen yapılar açıklanmaktadır.  
+Bu konu, API tanılama sembol deposu kullandığı yönetilmeyen yapıları açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [CALL_ID Yapısı](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)  
- Hata ayıklayıcı çağrıldığından işlevi hakkında bilgi sağlar.  
+ Bir hata ayıklayıcı çağrılan bir işlev hakkında bilgi sağlar.  
   
  [SYMLINEDELTA Yapısı](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)  
- Sembol işleyicisine sonucunda düzenlemeleri taşındı yöntemleri hakkında bilgi sağlar.  
+ Sembol işleyici sonucunda düzenlemeleri taşınan yöntemleri hakkında bilgi sağlar.  
   
  [USER_THREAD Yapısı](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)  
- Hata ayıklayıcı bir iş parçacığı hakkında bilgi sağlar.  
+ Bir hata ayıklayıcı bir iş parçacığı hakkında bilgi sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  

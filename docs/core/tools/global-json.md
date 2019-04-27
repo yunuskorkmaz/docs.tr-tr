@@ -4,11 +4,11 @@ description: .NET Core SDK'sı sürümü, .NET Core CLI komutlarını çalışt�
 ms.date: 12/03/2018
 ms.custom: updateeachrelease, seodec18
 ms.openlocfilehash: e0f929a049812cac6f62e5218629c9b0add83de8
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61647973"
 ---
 # <a name="globaljson-overview"></a>Global.JSON genel bakış
 
