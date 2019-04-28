@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e32af790c755f65b5435455c326d011656da19ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61597381"
 ---
-# <a name="icorprofilercallbackassemblyloadfinished-method"></a><span data-ttu-id="0f935-102">ICorProfilerCallback::AssemblyLoadFinished Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0f935-102">ICorProfilerCallback::AssemblyLoadFinished Method</span></span>
-<span data-ttu-id="0f935-103">Profil Oluşturucu bir bütünleştirilmiş kod yükleme işleminin tamamlandığını bildirir.</span><span class="sxs-lookup"><span data-stu-id="0f935-103">Notifies the profiler that an assembly has finished loading.</span></span>  
+# <a name="icorprofilercallbackassemblyloadfinished-method"></a><span data-ttu-id="6da6e-102">ICorProfilerCallback::AssemblyLoadFinished Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6da6e-102">ICorProfilerCallback::AssemblyLoadFinished Method</span></span>
+<span data-ttu-id="6da6e-103">Profil Oluşturucu bir bütünleştirilmiş kod yükleme işleminin tamamlandığını bildirir.</span><span class="sxs-lookup"><span data-stu-id="6da6e-103">Notifies the profiler that an assembly has finished loading.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0f935-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0f935-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6da6e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6da6e-104">Syntax</span></span>  
   
 ```  
 HRESULT AssemblyLoadFinished(  
@@ -35,27 +35,27 @@ HRESULT AssemblyLoadFinished(
     [in] HRESULT    hrStatus);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0f935-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0f935-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6da6e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6da6e-105">Parameters</span></span>  
  `assemblyId`  
- <span data-ttu-id="0f935-106">[in] Yüklenen derleme tanımlar.</span><span class="sxs-lookup"><span data-stu-id="0f935-106">[in] Identifies the assembly that was loaded.</span></span>  
+ <span data-ttu-id="6da6e-106">[in] Yüklenen derleme tanımlar.</span><span class="sxs-lookup"><span data-stu-id="6da6e-106">[in] Identifies the assembly that was loaded.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="0f935-107">[in] Derleme yükleme başarıyla tamamlandı olup olmadığını gösteren bir HRESULT.</span><span class="sxs-lookup"><span data-stu-id="0f935-107">[in] An HRESULT that indicates whether the assembly finished loading successfully.</span></span>  
+ <span data-ttu-id="6da6e-107">[in] Derleme yükleme başarıyla tamamlandı olup olmadığını gösteren bir HRESULT.</span><span class="sxs-lookup"><span data-stu-id="6da6e-107">[in] An HRESULT that indicates whether the assembly finished loading successfully.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0f935-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0f935-108">Remarks</span></span>  
- <span data-ttu-id="0f935-109">Değerini `assemblyId` kadar bir bilgi isteği için geçerli değil `AssemblyLoadFinished` yöntemi çağrılır.</span><span class="sxs-lookup"><span data-stu-id="0f935-109">The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6da6e-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6da6e-108">Remarks</span></span>  
+ <span data-ttu-id="6da6e-109">Değerini `assemblyId` kadar bir bilgi isteği için geçerli değil `AssemblyLoadFinished` yöntemi çağrılır.</span><span class="sxs-lookup"><span data-stu-id="6da6e-109">The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.</span></span>  
   
- <span data-ttu-id="0f935-110">Derleme yükleme bazı bölümleri sonra devam edebilir `AssemblyLoadFinished` geri çağırma.</span><span class="sxs-lookup"><span data-stu-id="0f935-110">Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback.</span></span> <span data-ttu-id="0f935-111">Bir hata HRESULT içinde `hrStatus` hata gösterir.</span><span class="sxs-lookup"><span data-stu-id="0f935-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="0f935-112">Ancak, bir başarı HRESULT içinde `hrStatus` yalnızca ilk bölümü bütünleştirilmiş kod yükleme işleminin başarılı olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="0f935-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.</span></span>  
+ <span data-ttu-id="6da6e-110">Derleme yükleme bazı bölümleri sonra devam edebilir `AssemblyLoadFinished` geri çağırma.</span><span class="sxs-lookup"><span data-stu-id="6da6e-110">Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback.</span></span> <span data-ttu-id="6da6e-111">Bir hata HRESULT içinde `hrStatus` hata gösterir.</span><span class="sxs-lookup"><span data-stu-id="6da6e-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="6da6e-112">Ancak, bir başarı HRESULT içinde `hrStatus` yalnızca ilk bölümü bütünleştirilmiş kod yükleme işleminin başarılı olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="6da6e-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0f935-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0f935-113">Requirements</span></span>  
- <span data-ttu-id="0f935-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0f935-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6da6e-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6da6e-113">Requirements</span></span>  
+ <span data-ttu-id="6da6e-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6da6e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0f935-115">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0f935-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="6da6e-115">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6da6e-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="0f935-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0f935-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6da6e-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6da6e-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0f935-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0f935-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6da6e-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6da6e-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0f935-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0f935-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6da6e-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6da6e-118">See also</span></span>
 
-- [<span data-ttu-id="0f935-119">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0f935-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="6da6e-119">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6da6e-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

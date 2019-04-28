@@ -13,16 +13,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 858dfe9b15422680a261fef9e22d8c89d9d7fe45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609142"
 ---
-# <a name="cordebugcodeinvokepurpose-enumeration"></a><span data-ttu-id="55331-102">CorDebugCodeInvokePurpose Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="55331-102">CorDebugCodeInvokePurpose Enumeration</span></span>
-<span data-ttu-id="55331-103">Neden yönetilen kod dışa aktarılan bir işlevin çağrıları açıklar.</span><span class="sxs-lookup"><span data-stu-id="55331-103">Describes why an exported function calls managed code.</span></span>  
+# <a name="cordebugcodeinvokepurpose-enumeration"></a><span data-ttu-id="e97a9-102">CorDebugCodeInvokePurpose Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="e97a9-102">CorDebugCodeInvokePurpose Enumeration</span></span>
+<span data-ttu-id="e97a9-103">Neden yönetilen kod dışa aktarılan bir işlevin çağrıları açıklar.</span><span class="sxs-lookup"><span data-stu-id="e97a9-103">Describes why an exported function calls managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="55331-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="55331-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e97a9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e97a9-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugCodeInvokePurpose  
@@ -34,31 +34,31 @@ typedef enum CorDebugCodeInvokePurpose
 } CorDebugCodeInvokePurpose;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="55331-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="55331-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e97a9-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="e97a9-105">Members</span></span>  
   
-|<span data-ttu-id="55331-106">Üye</span><span class="sxs-lookup"><span data-stu-id="55331-106">Member</span></span>|<span data-ttu-id="55331-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="55331-107">Description</span></span>|  
+|<span data-ttu-id="e97a9-106">Üye</span><span class="sxs-lookup"><span data-stu-id="e97a9-106">Member</span></span>|<span data-ttu-id="e97a9-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e97a9-107">Description</span></span>|  
 |------------|-----------------|  
-|`CODE_INVOKE_PURPOSE_NONE`|<span data-ttu-id="55331-108">Yok veya bilinmeyen.</span><span class="sxs-lookup"><span data-stu-id="55331-108">None or unknown.</span></span>|  
-|`CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION`|<span data-ttu-id="55331-109">Yönetilen kod ters p-invoke gibi herhangi bir yönetilen giriş noktasını çalışır.</span><span class="sxs-lookup"><span data-stu-id="55331-109">The managed code will run any managed entry point, such as a reverse p-invoke.</span></span> <span data-ttu-id="55331-110">Daha ayrıntılı herhangi bir amaç, çalışma zamanı tarafından bilinmiyor.</span><span class="sxs-lookup"><span data-stu-id="55331-110">Any more detailed purpose is unknown by the runtime.</span></span>|  
-|`CODE_INVOKE_PURPOSE_CLASS_INIT`|<span data-ttu-id="55331-111">Yönetilen kod, bir statik Oluşturucu çalışır.</span><span class="sxs-lookup"><span data-stu-id="55331-111">The managed code will run a static constructor.</span></span>|  
-|`CODE_INVOKE_PURPOSE_INTERFACE_DISPATCH`|<span data-ttu-id="55331-112">Yönetilen kod çağrıldı bazı arabirim yöntemi için uygulama çalışır.</span><span class="sxs-lookup"><span data-stu-id="55331-112">The managed code will run the implementation for some interface method that was called.</span></span>|  
+|`CODE_INVOKE_PURPOSE_NONE`|<span data-ttu-id="e97a9-108">Yok veya bilinmeyen.</span><span class="sxs-lookup"><span data-stu-id="e97a9-108">None or unknown.</span></span>|  
+|`CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION`|<span data-ttu-id="e97a9-109">Yönetilen kod ters p-invoke gibi herhangi bir yönetilen giriş noktasını çalışır.</span><span class="sxs-lookup"><span data-stu-id="e97a9-109">The managed code will run any managed entry point, such as a reverse p-invoke.</span></span> <span data-ttu-id="e97a9-110">Daha ayrıntılı herhangi bir amaç, çalışma zamanı tarafından bilinmiyor.</span><span class="sxs-lookup"><span data-stu-id="e97a9-110">Any more detailed purpose is unknown by the runtime.</span></span>|  
+|`CODE_INVOKE_PURPOSE_CLASS_INIT`|<span data-ttu-id="e97a9-111">Yönetilen kod, bir statik Oluşturucu çalışır.</span><span class="sxs-lookup"><span data-stu-id="e97a9-111">The managed code will run a static constructor.</span></span>|  
+|`CODE_INVOKE_PURPOSE_INTERFACE_DISPATCH`|<span data-ttu-id="e97a9-112">Yönetilen kod çağrıldı bazı arabirim yöntemi için uygulama çalışır.</span><span class="sxs-lookup"><span data-stu-id="e97a9-112">The managed code will run the implementation for some interface method that was called.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="55331-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="55331-113">Remarks</span></span>  
- <span data-ttu-id="55331-114">Bu sabit listesi tarafından kullanılan [Icordebugprocess6::getexportstepınfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) yöntemi üzerinden Adımlama hakkında bilgi sağlamak için yönetilen kod.</span><span class="sxs-lookup"><span data-stu-id="55331-114">This enumeration is used by the [ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) method to provide information about stepping through managed code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e97a9-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e97a9-113">Remarks</span></span>  
+ <span data-ttu-id="e97a9-114">Bu sabit listesi tarafından kullanılan [Icordebugprocess6::getexportstepınfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) yöntemi üzerinden Adımlama hakkında bilgi sağlamak için yönetilen kod.</span><span class="sxs-lookup"><span data-stu-id="e97a9-114">This enumeration is used by the [ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) method to provide information about stepping through managed code.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="55331-115">Bu numaralandırma .NET hata ayıklama senaryoları yalnızca yerel olarak kullanıma yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="55331-115">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
+>  <span data-ttu-id="e97a9-115">Bu numaralandırma .NET hata ayıklama senaryoları yalnızca yerel olarak kullanıma yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="e97a9-115">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="55331-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="55331-116">Requirements</span></span>  
- <span data-ttu-id="55331-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="55331-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e97a9-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e97a9-116">Requirements</span></span>  
+ <span data-ttu-id="e97a9-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e97a9-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="55331-118">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="55331-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e97a9-118">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e97a9-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="55331-119">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="55331-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e97a9-119">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e97a9-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="55331-120">**.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="55331-120">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="e97a9-120">**.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e97a9-120">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="55331-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="55331-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e97a9-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e97a9-121">See also</span></span>
 
-- [<span data-ttu-id="55331-122">Hata Ayıklama Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="55331-122">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [<span data-ttu-id="55331-123">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="55331-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="e97a9-122">Hata Ayıklama Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="e97a9-122">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="e97a9-123">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="e97a9-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

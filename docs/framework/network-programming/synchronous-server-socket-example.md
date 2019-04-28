@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
 ms.openlocfilehash: 637301385562247ef9c3dee4d01da319c0cd4d37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641872"
 ---
-# <a name="synchronous-server-socket-example"></a><span data-ttu-id="381c6-102">Zaman Uyumlu Sunucu Yuvası Örneği</span><span class="sxs-lookup"><span data-stu-id="381c6-102">Synchronous Server Socket Example</span></span>
-<span data-ttu-id="381c6-103">Aşağıdaki örnek program istemcilerinden gelen bağlantı istekleri alan bir sunucu oluşturur.</span><span class="sxs-lookup"><span data-stu-id="381c6-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="381c6-104">Sunucu, istemci bir bağlantı beklerken sunucu uygulamasının yürütülmesini askıya alınmış şekilde zaman uyumlu bir yuva ile oluşturulmuştur.</span><span class="sxs-lookup"><span data-stu-id="381c6-104">The server is built with a synchronous socket, so execution of the server application is suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="381c6-105">Uygulama istemciden bir dize alır, dize konsolda görüntüler ve ardından istemcisine dize görüntülemektedir.</span><span class="sxs-lookup"><span data-stu-id="381c6-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="381c6-106">İstemciden gelen dize, dize içermelidir "\<EOF >" iletisinin son sinyal.</span><span class="sxs-lookup"><span data-stu-id="381c6-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
+# <a name="synchronous-server-socket-example"></a><span data-ttu-id="233c7-102">Zaman Uyumlu Sunucu Yuvası Örneği</span><span class="sxs-lookup"><span data-stu-id="233c7-102">Synchronous Server Socket Example</span></span>
+<span data-ttu-id="233c7-103">Aşağıdaki örnek program istemcilerinden gelen bağlantı istekleri alan bir sunucu oluşturur.</span><span class="sxs-lookup"><span data-stu-id="233c7-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="233c7-104">Sunucu, istemci bir bağlantı beklerken sunucu uygulamasının yürütülmesini askıya alınmış şekilde zaman uyumlu bir yuva ile oluşturulmuştur.</span><span class="sxs-lookup"><span data-stu-id="233c7-104">The server is built with a synchronous socket, so execution of the server application is suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="233c7-105">Uygulama istemciden bir dize alır, dize konsolda görüntüler ve ardından istemcisine dize görüntülemektedir.</span><span class="sxs-lookup"><span data-stu-id="233c7-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="233c7-106">İstemciden gelen dize, dize içermelidir "\<EOF >" iletisinin son sinyal.</span><span class="sxs-lookup"><span data-stu-id="233c7-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
   
 ```vb  
 Imports System  
@@ -155,8 +155,8 @@ public class SynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="381c6-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="381c6-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="233c7-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="233c7-107">See also</span></span>
 
-- [<span data-ttu-id="381c6-108">Zaman Uyumlu İstemci Yuvası Örneği</span><span class="sxs-lookup"><span data-stu-id="381c6-108">Synchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
-- [<span data-ttu-id="381c6-109">Zaman Uyumlu Sunucu Yuvası Kullanma</span><span class="sxs-lookup"><span data-stu-id="381c6-109">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [<span data-ttu-id="381c6-110">Yuva Kod Örnekleri</span><span class="sxs-lookup"><span data-stu-id="381c6-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+- [<span data-ttu-id="233c7-108">Zaman Uyumlu İstemci Yuvası Örneği</span><span class="sxs-lookup"><span data-stu-id="233c7-108">Synchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
+- [<span data-ttu-id="233c7-109">Zaman Uyumlu Sunucu Yuvası Kullanma</span><span class="sxs-lookup"><span data-stu-id="233c7-109">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
+- [<span data-ttu-id="233c7-110">Yuva Kod Örnekleri</span><span class="sxs-lookup"><span data-stu-id="233c7-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)

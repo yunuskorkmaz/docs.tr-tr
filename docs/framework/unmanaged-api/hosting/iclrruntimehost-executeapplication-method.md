@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8ce7e9ff4041abd1e89330bd3a565b755875d3b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638508"
 ---
-# <a name="iclrruntimehostexecuteapplication-method"></a><span data-ttu-id="347f0-102">ICLRRuntimeHost::ExecuteApplication Yöntemi</span><span class="sxs-lookup"><span data-stu-id="347f0-102">ICLRRuntimeHost::ExecuteApplication Method</span></span>
-<span data-ttu-id="347f0-103">ClickOnce dağıtım senaryolarında bildirim tabanlı yeni bir etki alanı etkinleştirilmesi için uygulamayı belirtmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="347f0-103">Used in manifest-based ClickOnce deployment scenarios to specify the application to be activated in a new domain.</span></span> <span data-ttu-id="347f0-104">Bu senaryolar hakkında daha fazla bilgi için bkz: [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment).</span><span class="sxs-lookup"><span data-stu-id="347f0-104">For more information about these scenarios, see [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).</span></span>  
+# <a name="iclrruntimehostexecuteapplication-method"></a><span data-ttu-id="407f3-102">ICLRRuntimeHost::ExecuteApplication Yöntemi</span><span class="sxs-lookup"><span data-stu-id="407f3-102">ICLRRuntimeHost::ExecuteApplication Method</span></span>
+<span data-ttu-id="407f3-103">ClickOnce dağıtım senaryolarında bildirim tabanlı yeni bir etki alanı etkinleştirilmesi için uygulamayı belirtmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="407f3-103">Used in manifest-based ClickOnce deployment scenarios to specify the application to be activated in a new domain.</span></span> <span data-ttu-id="407f3-104">Bu senaryolar hakkında daha fazla bilgi için bkz: [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment).</span><span class="sxs-lookup"><span data-stu-id="407f3-104">For more information about these scenarios, see [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="347f0-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="347f0-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="407f3-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="407f3-105">Syntax</span></span>  
   
 ```  
 HRESULT ExecuteApplication(  
@@ -40,58 +40,58 @@ HRESULT ExecuteApplication(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="347f0-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="347f0-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="407f3-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="407f3-106">Parameters</span></span>  
  `pwzAppFullName`  
- <span data-ttu-id="347f0-107">[in] İçin tanımlandığı gibi uygulamanın tam adını <xref:System.ApplicationIdentity>.</span><span class="sxs-lookup"><span data-stu-id="347f0-107">[in] The full name of the application, as defined for <xref:System.ApplicationIdentity>.</span></span>  
+ <span data-ttu-id="407f3-107">[in] İçin tanımlandığı gibi uygulamanın tam adını <xref:System.ApplicationIdentity>.</span><span class="sxs-lookup"><span data-stu-id="407f3-107">[in] The full name of the application, as defined for <xref:System.ApplicationIdentity>.</span></span>  
   
  `dwManifestPaths`  
- <span data-ttu-id="347f0-108">[in] Dize içindeki sayısı `ppwzManifestPaths` dizisi.</span><span class="sxs-lookup"><span data-stu-id="347f0-108">[in] The number of strings contained in the `ppwzManifestPaths` array.</span></span>  
+ <span data-ttu-id="407f3-108">[in] Dize içindeki sayısı `ppwzManifestPaths` dizisi.</span><span class="sxs-lookup"><span data-stu-id="407f3-108">[in] The number of strings contained in the `ppwzManifestPaths` array.</span></span>  
   
  `ppwzManifestPaths`  
- <span data-ttu-id="347f0-109">[in] İsteğe bağlı.</span><span class="sxs-lookup"><span data-stu-id="347f0-109">[in] Optional.</span></span> <span data-ttu-id="347f0-110">Uygulama için bildirim yolları içeren bir dize dizisi.</span><span class="sxs-lookup"><span data-stu-id="347f0-110">A string array that contains manifest paths for the application.</span></span>  
+ <span data-ttu-id="407f3-109">[in] İsteğe bağlı.</span><span class="sxs-lookup"><span data-stu-id="407f3-109">[in] Optional.</span></span> <span data-ttu-id="407f3-110">Uygulama için bildirim yolları içeren bir dize dizisi.</span><span class="sxs-lookup"><span data-stu-id="407f3-110">A string array that contains manifest paths for the application.</span></span>  
   
  `dwActivationData`  
- <span data-ttu-id="347f0-111">[in] Dize içindeki sayısı `ppwzActivationData` dizisi.</span><span class="sxs-lookup"><span data-stu-id="347f0-111">[in] The number of strings contained in the `ppwzActivationData` array.</span></span>  
+ <span data-ttu-id="407f3-111">[in] Dize içindeki sayısı `ppwzActivationData` dizisi.</span><span class="sxs-lookup"><span data-stu-id="407f3-111">[in] The number of strings contained in the `ppwzActivationData` array.</span></span>  
   
  `ppwzActivationData`  
- <span data-ttu-id="347f0-112">[in] İsteğe bağlı.</span><span class="sxs-lookup"><span data-stu-id="347f0-112">[in] Optional.</span></span> <span data-ttu-id="347f0-113">Web üzerinden dağıtılan uygulamalar için URL sorgu dizesi kısmı gibi uygulamanın etkinleştirme verileri içeren bir dize dizisi.</span><span class="sxs-lookup"><span data-stu-id="347f0-113">A string array that contains the application's activation data, such as the query string portion of the URL for applications deployed over the Web.</span></span>  
+ <span data-ttu-id="407f3-112">[in] İsteğe bağlı.</span><span class="sxs-lookup"><span data-stu-id="407f3-112">[in] Optional.</span></span> <span data-ttu-id="407f3-113">Web üzerinden dağıtılan uygulamalar için URL sorgu dizesi kısmı gibi uygulamanın etkinleştirme verileri içeren bir dize dizisi.</span><span class="sxs-lookup"><span data-stu-id="407f3-113">A string array that contains the application's activation data, such as the query string portion of the URL for applications deployed over the Web.</span></span>  
   
  `pReturnValue`  
- <span data-ttu-id="347f0-114">[out] Uygulamanın giriş noktasından döndürülen değer.</span><span class="sxs-lookup"><span data-stu-id="347f0-114">[out] The value returned from the entry point of the application.</span></span>  
+ <span data-ttu-id="407f3-114">[out] Uygulamanın giriş noktasından döndürülen değer.</span><span class="sxs-lookup"><span data-stu-id="407f3-114">[out] The value returned from the entry point of the application.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="347f0-115">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="347f0-115">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="407f3-115">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="407f3-115">Return Value</span></span>  
   
-|<span data-ttu-id="347f0-116">HRESULT</span><span class="sxs-lookup"><span data-stu-id="347f0-116">HRESULT</span></span>|<span data-ttu-id="347f0-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="347f0-117">Description</span></span>|  
+|<span data-ttu-id="407f3-116">HRESULT</span><span class="sxs-lookup"><span data-stu-id="407f3-116">HRESULT</span></span>|<span data-ttu-id="407f3-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="407f3-117">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="347f0-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="347f0-118">S_OK</span></span>|<span data-ttu-id="347f0-119">`ExecuteApplication` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="347f0-119">`ExecuteApplication` returned successfully.</span></span>|  
-|<span data-ttu-id="347f0-120">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="347f0-120">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="347f0-121">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="347f0-121">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="347f0-122">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="347f0-122">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="347f0-123">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="347f0-123">The call timed out.</span></span>|  
-|<span data-ttu-id="347f0-124">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="347f0-124">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="347f0-125">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="347f0-125">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="347f0-126">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="347f0-126">HOST_E_ABANDONED</span></span>|<span data-ttu-id="347f0-127">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="347f0-127">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="347f0-128">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="347f0-128">E_FAIL</span></span>|<span data-ttu-id="347f0-129">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="347f0-129">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="347f0-130">CLR, artık bir yöntem E_FAIL döndürürse, işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="347f0-130">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="347f0-131">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="347f0-131">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="407f3-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="407f3-118">S_OK</span></span>|<span data-ttu-id="407f3-119">`ExecuteApplication` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="407f3-119">`ExecuteApplication` returned successfully.</span></span>|  
+|<span data-ttu-id="407f3-120">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="407f3-120">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="407f3-121">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="407f3-121">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="407f3-122">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="407f3-122">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="407f3-123">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="407f3-123">The call timed out.</span></span>|  
+|<span data-ttu-id="407f3-124">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="407f3-124">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="407f3-125">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="407f3-125">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="407f3-126">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="407f3-126">HOST_E_ABANDONED</span></span>|<span data-ttu-id="407f3-127">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="407f3-127">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="407f3-128">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="407f3-128">E_FAIL</span></span>|<span data-ttu-id="407f3-129">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="407f3-129">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="407f3-130">CLR, artık bir yöntem E_FAIL döndürürse, işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="407f3-130">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="407f3-131">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="407f3-131">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="347f0-132">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="347f0-132">Remarks</span></span>  
- <span data-ttu-id="347f0-133">`ExecuteApplication` Yeni oluşturulan uygulama etki alanındaki ClickOnce uygulamaları etkinleştirmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="347f0-133">`ExecuteApplication` is used to activate ClickOnce applications in a newly created application domain.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="407f3-132">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="407f3-132">Remarks</span></span>  
+ <span data-ttu-id="407f3-133">`ExecuteApplication` Yeni oluşturulan uygulama etki alanındaki ClickOnce uygulamaları etkinleştirmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="407f3-133">`ExecuteApplication` is used to activate ClickOnce applications in a newly created application domain.</span></span>  
   
- <span data-ttu-id="347f0-134">`pReturnValue` Çıkış parametresi uygulama tarafından döndürülen değere ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="347f0-134">The `pReturnValue` output parameter is set to the value returned by the application.</span></span> <span data-ttu-id="347f0-135">Null değeri sağlarsanız `pReturnValue`, `ExecuteApplication` başarısız olmaz, ancak bir değer döndürmez.</span><span class="sxs-lookup"><span data-stu-id="347f0-135">If you supply a value of null for `pReturnValue`, `ExecuteApplication` does not fail, but it does not return a value.</span></span>  
+ <span data-ttu-id="407f3-134">`pReturnValue` Çıkış parametresi uygulama tarafından döndürülen değere ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="407f3-134">The `pReturnValue` output parameter is set to the value returned by the application.</span></span> <span data-ttu-id="407f3-135">Null değeri sağlarsanız `pReturnValue`, `ExecuteApplication` başarısız olmaz, ancak bir değer döndürmez.</span><span class="sxs-lookup"><span data-stu-id="407f3-135">If you supply a value of null for `pReturnValue`, `ExecuteApplication` does not fail, but it does not return a value.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="347f0-136">Çağırmayın [Start yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) yöntemi çağırmadan önce `ExecuteApplication` bildirim tabanlı bir uygulamayı etkinleştirmek için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="347f0-136">Do not call the [Start Method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) method before calling the `ExecuteApplication` method to activate a manifest-based application.</span></span> <span data-ttu-id="347f0-137">Varsa `Start` yöntemi önce çağrılır `ExecuteApplication` yöntem çağrısı başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="347f0-137">If the `Start` method is called first, the `ExecuteApplication` method call will fail.</span></span>  
+>  <span data-ttu-id="407f3-136">Çağırmayın [Start yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) yöntemi çağırmadan önce `ExecuteApplication` bildirim tabanlı bir uygulamayı etkinleştirmek için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="407f3-136">Do not call the [Start Method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) method before calling the `ExecuteApplication` method to activate a manifest-based application.</span></span> <span data-ttu-id="407f3-137">Varsa `Start` yöntemi önce çağrılır `ExecuteApplication` yöntem çağrısı başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="407f3-137">If the `Start` method is called first, the `ExecuteApplication` method call will fail.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="347f0-138">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="347f0-138">Requirements</span></span>  
- <span data-ttu-id="347f0-139">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="347f0-139">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="407f3-138">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="407f3-138">Requirements</span></span>  
+ <span data-ttu-id="407f3-139">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="407f3-139">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="347f0-140">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="347f0-140">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="407f3-140">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="407f3-140">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="347f0-141">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="347f0-141">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="407f3-141">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="407f3-141">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="347f0-142">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="347f0-142">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="407f3-142">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="407f3-142">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="347f0-143">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="347f0-143">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="407f3-143">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="407f3-143">See also</span></span>
 
 - <xref:System.ActivationContext>
 - <xref:System.AppDomainManager>
 - <xref:System.ApplicationIdentity>
-- [<span data-ttu-id="347f0-144">ICLRRuntimeHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="347f0-144">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
-- [<span data-ttu-id="347f0-145">SetAppDomainManager Yöntemi</span><span class="sxs-lookup"><span data-stu-id="347f0-145">SetAppDomainManager Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-setappdomainmanager-method.md)
-- [<span data-ttu-id="347f0-146">İzlenecek yol: Tasarımcıyı Kullanarak ClickOnce Dağıtım API'si ile İsteğe Bağlı Derlemeleri İndirme</span><span class="sxs-lookup"><span data-stu-id="347f0-146">Walkthrough: Downloading Assemblies on Demand with the ClickOnce Deployment API Using the Designer</span></span>](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
+- [<span data-ttu-id="407f3-144">ICLRRuntimeHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="407f3-144">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [<span data-ttu-id="407f3-145">SetAppDomainManager Yöntemi</span><span class="sxs-lookup"><span data-stu-id="407f3-145">SetAppDomainManager Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-setappdomainmanager-method.md)
+- [<span data-ttu-id="407f3-146">İzlenecek yol: Tasarımcıyı Kullanarak ClickOnce Dağıtım API'si ile İsteğe Bağlı Derlemeleri İndirme</span><span class="sxs-lookup"><span data-stu-id="407f3-146">Walkthrough: Downloading Assemblies on Demand with the ClickOnce Deployment API Using the Designer</span></span>](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)

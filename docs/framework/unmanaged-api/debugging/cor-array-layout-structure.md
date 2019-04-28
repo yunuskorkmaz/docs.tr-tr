@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a3a5a5bb26912c87cdf37ba0d8f0cee1cf1ffa97
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609574"
 ---
-# <a name="corarraylayout-structure"></a><span data-ttu-id="78f47-102">COR_ARRAY_LAYOUT Yapısı</span><span class="sxs-lookup"><span data-stu-id="78f47-102">COR_ARRAY_LAYOUT Structure</span></span>
-<span data-ttu-id="78f47-103">Bir dizi nesnesinin bellek düzeni hakkında bilgi sağlar.</span><span class="sxs-lookup"><span data-stu-id="78f47-103">Provides information about the layout of an array object in memory.</span></span>  
+# <a name="corarraylayout-structure"></a><span data-ttu-id="9dea9-102">COR_ARRAY_LAYOUT Yapısı</span><span class="sxs-lookup"><span data-stu-id="9dea9-102">COR_ARRAY_LAYOUT Structure</span></span>
+<span data-ttu-id="9dea9-103">Bir dizi nesnesinin bellek düzeni hakkında bilgi sağlar.</span><span class="sxs-lookup"><span data-stu-id="9dea9-103">Provides information about the layout of an array object in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="78f47-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="78f47-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9dea9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9dea9-104">Syntax</span></span>  
   
 ```  
 typedef struct COR_ARRAY_LAYOUT {  
@@ -41,34 +41,34 @@ typedef struct COR_ARRAY_LAYOUT {
 } COR_ARRAY_LAYOUT;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="78f47-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="78f47-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="9dea9-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="9dea9-105">Members</span></span>  
   
-|<span data-ttu-id="78f47-106">Üye</span><span class="sxs-lookup"><span data-stu-id="78f47-106">Member</span></span>|<span data-ttu-id="78f47-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="78f47-107">Description</span></span>|  
+|<span data-ttu-id="9dea9-106">Üye</span><span class="sxs-lookup"><span data-stu-id="9dea9-106">Member</span></span>|<span data-ttu-id="9dea9-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9dea9-107">Description</span></span>|  
 |------------|-----------------|  
-|`componentID`|<span data-ttu-id="78f47-108">Dizinin içerdiği nesnelerin türü tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="78f47-108">The identifier of the type of objects that the array contains.</span></span>|  
-|`componentType`|<span data-ttu-id="78f47-109">Bileşen bir çöp toplama başvuru, değer sınıfı veya basit bir tür olup olmadığını belirten bir CorElementType sabit listesi değeri.</span><span class="sxs-lookup"><span data-stu-id="78f47-109">A CorElementType enumeration value that indicates whether the component is a garbage collection reference, a value class, or a primitive.</span></span>|  
-|`firstElementOffset`|<span data-ttu-id="78f47-110">Dizideki ilk öğe için olan uzaklık.</span><span class="sxs-lookup"><span data-stu-id="78f47-110">The offset to the first element in the array.</span></span>|  
-|`elementSize`|<span data-ttu-id="78f47-111">Her öğe boyutu.</span><span class="sxs-lookup"><span data-stu-id="78f47-111">The size of each element.</span></span>|  
-|`countOffset`|<span data-ttu-id="78f47-112">Dizideki öğelerin sayısını uzaklık.</span><span class="sxs-lookup"><span data-stu-id="78f47-112">The offset to the number of elements in the array.</span></span>|  
-|`rankSize`|<span data-ttu-id="78f47-113">Boyut, bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="78f47-113">The size of the rank, in bytes.</span></span>|  
-|`numRanks`|<span data-ttu-id="78f47-114">Dizideki sıralamalara sahip sayısı.</span><span class="sxs-lookup"><span data-stu-id="78f47-114">The number of ranks in the array.</span></span>|  
-|`rankOffset`|<span data-ttu-id="78f47-115">Başlangıçtan sıralamalara sahip başlangıç uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="78f47-115">The offset at which the ranks start.</span></span>|  
+|`componentID`|<span data-ttu-id="9dea9-108">Dizinin içerdiği nesnelerin türü tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="9dea9-108">The identifier of the type of objects that the array contains.</span></span>|  
+|`componentType`|<span data-ttu-id="9dea9-109">Bileşen bir çöp toplama başvuru, değer sınıfı veya basit bir tür olup olmadığını belirten bir CorElementType sabit listesi değeri.</span><span class="sxs-lookup"><span data-stu-id="9dea9-109">A CorElementType enumeration value that indicates whether the component is a garbage collection reference, a value class, or a primitive.</span></span>|  
+|`firstElementOffset`|<span data-ttu-id="9dea9-110">Dizideki ilk öğe için olan uzaklık.</span><span class="sxs-lookup"><span data-stu-id="9dea9-110">The offset to the first element in the array.</span></span>|  
+|`elementSize`|<span data-ttu-id="9dea9-111">Her öğe boyutu.</span><span class="sxs-lookup"><span data-stu-id="9dea9-111">The size of each element.</span></span>|  
+|`countOffset`|<span data-ttu-id="9dea9-112">Dizideki öğelerin sayısını uzaklık.</span><span class="sxs-lookup"><span data-stu-id="9dea9-112">The offset to the number of elements in the array.</span></span>|  
+|`rankSize`|<span data-ttu-id="9dea9-113">Boyut, bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="9dea9-113">The size of the rank, in bytes.</span></span>|  
+|`numRanks`|<span data-ttu-id="9dea9-114">Dizideki sıralamalara sahip sayısı.</span><span class="sxs-lookup"><span data-stu-id="9dea9-114">The number of ranks in the array.</span></span>|  
+|`rankOffset`|<span data-ttu-id="9dea9-115">Başlangıçtan sıralamalara sahip başlangıç uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="9dea9-115">The offset at which the ranks start.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="78f47-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="78f47-116">Remarks</span></span>  
- <span data-ttu-id="78f47-117">`rankSize` Alanı, çok boyutlu bir dizi sırası boyutunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="78f47-117">The `rankSize` field specifies the size of a rank in a multi-dimensional array.</span></span> <span data-ttu-id="78f47-118">Tek boyutlu diziler için de doğrudur.</span><span class="sxs-lookup"><span data-stu-id="78f47-118">It is accurate for single-dimensional arrays as well.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9dea9-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9dea9-116">Remarks</span></span>  
+ <span data-ttu-id="9dea9-117">`rankSize` Alanı, çok boyutlu bir dizi sırası boyutunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="9dea9-117">The `rankSize` field specifies the size of a rank in a multi-dimensional array.</span></span> <span data-ttu-id="9dea9-118">Tek boyutlu diziler için de doğrudur.</span><span class="sxs-lookup"><span data-stu-id="9dea9-118">It is accurate for single-dimensional arrays as well.</span></span>  
   
- <span data-ttu-id="78f47-119">Değerini `numRanks` tek boyutlu bir dizi için 1'dir ve `N` çok boyutlu bir dizi için `N` boyutları.</span><span class="sxs-lookup"><span data-stu-id="78f47-119">The value of `numRanks` is 1 for a single-dimensional array and `N` for a multi-dimensional array of `N` dimensions.</span></span>  
+ <span data-ttu-id="9dea9-119">Değerini `numRanks` tek boyutlu bir dizi için 1'dir ve `N` çok boyutlu bir dizi için `N` boyutları.</span><span class="sxs-lookup"><span data-stu-id="9dea9-119">The value of `numRanks` is 1 for a single-dimensional array and `N` for a multi-dimensional array of `N` dimensions.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="78f47-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="78f47-120">Requirements</span></span>  
- <span data-ttu-id="78f47-121">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="78f47-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9dea9-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9dea9-120">Requirements</span></span>  
+ <span data-ttu-id="9dea9-121">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9dea9-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="78f47-122">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="78f47-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9dea9-122">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9dea9-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="78f47-123">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="78f47-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9dea9-123">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9dea9-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="78f47-124">**.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="78f47-124">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="9dea9-124">**.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9dea9-124">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="78f47-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="78f47-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9dea9-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9dea9-125">See also</span></span>
 
-- [<span data-ttu-id="78f47-126">Hata Ayıklama Yapıları</span><span class="sxs-lookup"><span data-stu-id="78f47-126">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="78f47-127">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="78f47-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="9dea9-126">Hata Ayıklama Yapıları</span><span class="sxs-lookup"><span data-stu-id="9dea9-126">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="9dea9-127">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="9dea9-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

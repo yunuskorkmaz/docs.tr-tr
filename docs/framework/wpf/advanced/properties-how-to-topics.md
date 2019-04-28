@@ -9,20 +9,20 @@ helpviewer_keywords:
 - dependency properties [WPF]
 ms.assetid: e16dd710-1530-4462-81a2-43719b973970
 ms.openlocfilehash: 78bf1dbe9c9c95a3ae1afe2515adbd8bc65a7d44
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628619"
 ---
-# <a name="properties-how-to-topics"></a><span data-ttu-id="8fc92-102">Özellikler ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="8fc92-102">Properties How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="8fc92-103">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="8fc92-103">In This Section</span></span>  
- [<span data-ttu-id="8fc92-104">Bağımlılık Özelliği Uygulama</span><span class="sxs-lookup"><span data-stu-id="8fc92-104">Implement a Dependency Property</span></span>](how-to-implement-a-dependency-property.md)  
- [<span data-ttu-id="8fc92-105">Bağımlılık Özelliği için Sahip Türü Ekleme</span><span class="sxs-lookup"><span data-stu-id="8fc92-105">Add an Owner Type for a Dependency Property</span></span>](how-to-add-an-owner-type-for-a-dependency-property.md)  
- [<span data-ttu-id="8fc92-106">Ekli Özelliği Kaydetme</span><span class="sxs-lookup"><span data-stu-id="8fc92-106">Register an Attached Property</span></span>](how-to-register-an-attached-property.md)  
- [<span data-ttu-id="8fc92-107">Bağımlılık Özelliği için Meta Verileri Geçersiz Kılma</span><span class="sxs-lookup"><span data-stu-id="8fc92-107">Override Metadata for a Dependency Property</span></span>](how-to-override-metadata-for-a-dependency-property.md)  
+# <a name="properties-how-to-topics"></a><span data-ttu-id="f1d4b-102">Özellikler ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="f1d4b-102">Properties How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="f1d4b-103">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="f1d4b-103">In This Section</span></span>  
+ [<span data-ttu-id="f1d4b-104">Bağımlılık Özelliği Uygulama</span><span class="sxs-lookup"><span data-stu-id="f1d4b-104">Implement a Dependency Property</span></span>](how-to-implement-a-dependency-property.md)  
+ [<span data-ttu-id="f1d4b-105">Bağımlılık Özelliği için Sahip Türü Ekleme</span><span class="sxs-lookup"><span data-stu-id="f1d4b-105">Add an Owner Type for a Dependency Property</span></span>](how-to-add-an-owner-type-for-a-dependency-property.md)  
+ [<span data-ttu-id="f1d4b-106">Ekli Özelliği Kaydetme</span><span class="sxs-lookup"><span data-stu-id="f1d4b-106">Register an Attached Property</span></span>](how-to-register-an-attached-property.md)  
+ [<span data-ttu-id="f1d4b-107">Bağımlılık Özelliği için Meta Verileri Geçersiz Kılma</span><span class="sxs-lookup"><span data-stu-id="f1d4b-107">Override Metadata for a Dependency Property</span></span>](how-to-override-metadata-for-a-dependency-property.md)  
   
-## <a name="reference"></a><span data-ttu-id="8fc92-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="8fc92-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f1d4b-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="f1d4b-108">Reference</span></span>  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  
@@ -31,5 +31,5 @@ ms.locfileid: "57368499"
   
  <xref:System.Windows.DependencyObject>  
   
-## <a name="related-sections"></a><span data-ttu-id="8fc92-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="8fc92-109">Related Sections</span></span>  
- [<span data-ttu-id="8fc92-110">Özellikler</span><span class="sxs-lookup"><span data-stu-id="8fc92-110">Properties</span></span>](properties-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="f1d4b-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="f1d4b-109">Related Sections</span></span>  
+ [<span data-ttu-id="f1d4b-110">Özellikler</span><span class="sxs-lookup"><span data-stu-id="f1d4b-110">Properties</span></span>](properties-wpf.md)

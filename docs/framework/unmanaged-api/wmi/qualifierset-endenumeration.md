@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: be2dfd6bb521dee14afd3728bdd9c446cb779e85
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598850"
 ---
-# <a name="qualifiersetendenumeration-function"></a><span data-ttu-id="898d2-103">QualifierSet_EndEnumeration işlevi</span><span class="sxs-lookup"><span data-stu-id="898d2-103">QualifierSet_EndEnumeration function</span></span>
-<span data-ttu-id="898d2-104">Bir çağrı ile başlamış numaralandırma sonlandırır [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="898d2-104">Terminates the enumeration begun with a call to the [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) function.</span></span>  
+# <a name="qualifiersetendenumeration-function"></a><span data-ttu-id="0b7da-103">QualifierSet_EndEnumeration işlevi</span><span class="sxs-lookup"><span data-stu-id="0b7da-103">QualifierSet_EndEnumeration function</span></span>
+<span data-ttu-id="0b7da-104">Bir çağrı ile başlamış numaralandırma sonlandırır [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="0b7da-104">Terminates the enumeration begun with a call to the [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) function.</span></span>  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="898d2-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="898d2-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0b7da-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0b7da-105">Syntax</span></span>  
   
 ```  
 HRESULT QualifierSet_EndEnumeration (
@@ -37,36 +37,36 @@ HRESULT QualifierSet_EndEnumeration (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="898d2-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="898d2-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="0b7da-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0b7da-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="898d2-107">[in] Bu parametre kullanılmaz.</span><span class="sxs-lookup"><span data-stu-id="898d2-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="0b7da-107">[in] Bu parametre kullanılmaz.</span><span class="sxs-lookup"><span data-stu-id="0b7da-107">[in] This parameter is unused.</span></span>
 
 `ptr`   
-<span data-ttu-id="898d2-108">[in] Bir işaretçi bir [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneği.</span><span class="sxs-lookup"><span data-stu-id="898d2-108">[in] A pointer to an [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.</span></span>
+<span data-ttu-id="0b7da-108">[in] Bir işaretçi bir [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneği.</span><span class="sxs-lookup"><span data-stu-id="0b7da-108">[in] A pointer to an [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="898d2-109">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="898d2-109">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="0b7da-109">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="0b7da-109">Return value</span></span>
 
-<span data-ttu-id="898d2-110">Bu işlev tarafından döndürülen aşağıdaki değer *WbemCli.h* üst bilgi dosyası veya tanımlayabilir, bir sabit olarak kodunuzda:</span><span class="sxs-lookup"><span data-stu-id="898d2-110">The following value returned by this function is defined in the *WbemCli.h* header file, or you can define it as a constant in your code:</span></span>
+<span data-ttu-id="0b7da-110">Bu işlev tarafından döndürülen aşağıdaki değer *WbemCli.h* üst bilgi dosyası veya tanımlayabilir, bir sabit olarak kodunuzda:</span><span class="sxs-lookup"><span data-stu-id="0b7da-110">The following value returned by this function is defined in the *WbemCli.h* header file, or you can define it as a constant in your code:</span></span>
 
-|<span data-ttu-id="898d2-111">Sabit</span><span class="sxs-lookup"><span data-stu-id="898d2-111">Constant</span></span>  |<span data-ttu-id="898d2-112">Değer</span><span class="sxs-lookup"><span data-stu-id="898d2-112">Value</span></span>  |<span data-ttu-id="898d2-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="898d2-113">Description</span></span>  |
+|<span data-ttu-id="0b7da-111">Sabit</span><span class="sxs-lookup"><span data-stu-id="0b7da-111">Constant</span></span>  |<span data-ttu-id="0b7da-112">Değer</span><span class="sxs-lookup"><span data-stu-id="0b7da-112">Value</span></span>  |<span data-ttu-id="0b7da-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0b7da-113">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="898d2-114">0</span><span class="sxs-lookup"><span data-stu-id="898d2-114">0</span></span> | <span data-ttu-id="898d2-115">İşlev çağrısı başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="898d2-115">The function call was successful.</span></span>  |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="0b7da-114">0</span><span class="sxs-lookup"><span data-stu-id="0b7da-114">0</span></span> | <span data-ttu-id="0b7da-115">İşlev çağrısı başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="0b7da-115">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="898d2-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="898d2-116">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="0b7da-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0b7da-116">Remarks</span></span>
 
-<span data-ttu-id="898d2-117">Bu işlev bir çağrı sarılır [IWbemQualifierSet::EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="898d2-117">This function wraps a call to the [IWbemQualifierSet::EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) method.</span></span>
+<span data-ttu-id="0b7da-117">Bu işlev bir çağrı sarılır [IWbemQualifierSet::EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="0b7da-117">This function wraps a call to the [IWbemQualifierSet::EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) method.</span></span>
 
-<span data-ttu-id="898d2-118">Bu çağrı önerilir, ancak gerekli değildir.</span><span class="sxs-lookup"><span data-stu-id="898d2-118">This call is recommended, but not required.</span></span> <span data-ttu-id="898d2-119">Numaralandırma ile ilişkili kaynakları hemen serbest bırakır.</span><span class="sxs-lookup"><span data-stu-id="898d2-119">It immediately releases resources associated with the enumeration.</span></span>
+<span data-ttu-id="0b7da-118">Bu çağrı önerilir, ancak gerekli değildir.</span><span class="sxs-lookup"><span data-stu-id="0b7da-118">This call is recommended, but not required.</span></span> <span data-ttu-id="0b7da-119">Numaralandırma ile ilişkili kaynakları hemen serbest bırakır.</span><span class="sxs-lookup"><span data-stu-id="0b7da-119">It immediately releases resources associated with the enumeration.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="898d2-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="898d2-120">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0b7da-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0b7da-120">Requirements</span></span>  
 
-<span data-ttu-id="898d2-121">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="898d2-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="0b7da-121">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0b7da-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
-<span data-ttu-id="898d2-122">**Üst bilgi:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="898d2-122">**Header:** WMINet_Utils.idl</span></span>  
+<span data-ttu-id="0b7da-122">**Üst bilgi:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="0b7da-122">**Header:** WMINet_Utils.idl</span></span>  
   
-<span data-ttu-id="898d2-123">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="898d2-123">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+<span data-ttu-id="0b7da-123">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="0b7da-123">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="898d2-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="898d2-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b7da-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0b7da-124">See also</span></span>
 
-- [<span data-ttu-id="898d2-125">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="898d2-125">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="0b7da-125">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="0b7da-125">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
