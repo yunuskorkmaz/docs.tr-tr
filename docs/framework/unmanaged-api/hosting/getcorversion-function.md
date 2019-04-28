@@ -18,18 +18,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f66e00c3334aecdf8c653f57e28d1b327c4170e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628008"
 ---
-# <a name="getcorversion-function"></a><span data-ttu-id="2e7b5-102">GetCORVersion İşlevi</span><span class="sxs-lookup"><span data-stu-id="2e7b5-102">GetCORVersion Function</span></span>
-<span data-ttu-id="2e7b5-103">Geçerli işlemde çalışan ortak dil çalışma zamanı (CLR) sürüm numarasını döndürür.</span><span class="sxs-lookup"><span data-stu-id="2e7b5-103">Returns the version number of the common language runtime (CLR) that is running in the current process.</span></span>  
+# <a name="getcorversion-function"></a><span data-ttu-id="13d66-102">GetCORVersion İşlevi</span><span class="sxs-lookup"><span data-stu-id="13d66-102">GetCORVersion Function</span></span>
+<span data-ttu-id="13d66-103">Geçerli işlemde çalışan ortak dil çalışma zamanı (CLR) sürüm numarasını döndürür.</span><span class="sxs-lookup"><span data-stu-id="13d66-103">Returns the version number of the common language runtime (CLR) that is running in the current process.</span></span>  
   
- <span data-ttu-id="2e7b5-104">Bu işlev içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2e7b5-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="13d66-104">Bu işlev içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="13d66-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2e7b5-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2e7b5-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="13d66-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="13d66-105">Syntax</span></span>  
   
 ```  
 HRESULT GetCORVersion (  
@@ -39,25 +39,25 @@ HRESULT GetCORVersion (
 );   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2e7b5-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2e7b5-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="13d66-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="13d66-106">Parameters</span></span>  
  `pbuffer`  
- <span data-ttu-id="2e7b5-107">CLR işleme şu anda yüklü olan çalışma zamanı sürümü belirten bir dize döndüren arabellek için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="2e7b5-107">A pointer to a buffer in which the CLR returns a string specifying the version of the runtime that is currently loaded into the process.</span></span> <span data-ttu-id="2e7b5-108">Geçirilen dizeler olarak döndürülen dizeyi aynı forma alan [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), örneğin, "v1.0.1216".</span><span class="sxs-lookup"><span data-stu-id="2e7b5-108">The returned string takes the same form as strings passed to [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), for example, "v1.0.1216".</span></span> <span data-ttu-id="2e7b5-109">Çalışma zamanı işleme henüz yüklenmemiş bir bilgisayarda yüklü olan çalışma zamanı en son sürümü için uygun dizin bilgileri işlevi döndürür.</span><span class="sxs-lookup"><span data-stu-id="2e7b5-109">If the runtime has not yet been loaded into the process, the function returns the appropriate directory information for the latest version of the runtime installed on the computer.</span></span>  
+ <span data-ttu-id="13d66-107">CLR işleme şu anda yüklü olan çalışma zamanı sürümü belirten bir dize döndüren arabellek için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="13d66-107">A pointer to a buffer in which the CLR returns a string specifying the version of the runtime that is currently loaded into the process.</span></span> <span data-ttu-id="13d66-108">Geçirilen dizeler olarak döndürülen dizeyi aynı forma alan [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), örneğin, "v1.0.1216".</span><span class="sxs-lookup"><span data-stu-id="13d66-108">The returned string takes the same form as strings passed to [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), for example, "v1.0.1216".</span></span> <span data-ttu-id="13d66-109">Çalışma zamanı işleme henüz yüklenmemiş bir bilgisayarda yüklü olan çalışma zamanı en son sürümü için uygun dizin bilgileri işlevi döndürür.</span><span class="sxs-lookup"><span data-stu-id="13d66-109">If the runtime has not yet been loaded into the process, the function returns the appropriate directory information for the latest version of the runtime installed on the computer.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="2e7b5-110">Karakter sayısı (`WCHAR`s), tutulan içinde `pbuffer`.</span><span class="sxs-lookup"><span data-stu-id="2e7b5-110">The number of characters (`WCHAR`s) that can be held in `pbuffer`.</span></span>  
+ <span data-ttu-id="13d66-110">Karakter sayısı (`WCHAR`s), tutulan içinde `pbuffer`.</span><span class="sxs-lookup"><span data-stu-id="13d66-110">The number of characters (`WCHAR`s) that can be held in `pbuffer`.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="2e7b5-111">Gerçekte döndürülen karakter sayısı için bir işaretçi `pbuffer`.</span><span class="sxs-lookup"><span data-stu-id="2e7b5-111">A pointer to the number of characters actually returned in `pbuffer`.</span></span> <span data-ttu-id="2e7b5-112">Varsa `pbuffer` null bir işaretçiyse, çalışma zamanı e_poınter döndürür.</span><span class="sxs-lookup"><span data-stu-id="2e7b5-112">If `pbuffer` is a null pointer, the runtime returns E_POINTER.</span></span> <span data-ttu-id="2e7b5-113">Karakter sayısı büyükse, ardından uzunluğunu `pbuffer` , çalışma zamanı ERROR_INSUFFICIENT_BUFFER döndürür.</span><span class="sxs-lookup"><span data-stu-id="2e7b5-113">If the number of characters is greater then the length of `pbuffer` , the runtime returns ERROR_INSUFFICIENT_BUFFER.</span></span>  
+ <span data-ttu-id="13d66-111">Gerçekte döndürülen karakter sayısı için bir işaretçi `pbuffer`.</span><span class="sxs-lookup"><span data-stu-id="13d66-111">A pointer to the number of characters actually returned in `pbuffer`.</span></span> <span data-ttu-id="13d66-112">Varsa `pbuffer` null bir işaretçiyse, çalışma zamanı e_poınter döndürür.</span><span class="sxs-lookup"><span data-stu-id="13d66-112">If `pbuffer` is a null pointer, the runtime returns E_POINTER.</span></span> <span data-ttu-id="13d66-113">Karakter sayısı büyükse, ardından uzunluğunu `pbuffer` , çalışma zamanı ERROR_INSUFFICIENT_BUFFER döndürür.</span><span class="sxs-lookup"><span data-stu-id="13d66-113">If the number of characters is greater then the length of `pbuffer` , the runtime returns ERROR_INSUFFICIENT_BUFFER.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2e7b5-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2e7b5-114">Requirements</span></span>  
- <span data-ttu-id="2e7b5-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2e7b5-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="13d66-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="13d66-114">Requirements</span></span>  
+ <span data-ttu-id="13d66-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="13d66-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2e7b5-116">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2e7b5-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="13d66-116">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="13d66-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="2e7b5-117">**Kitaplığı:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2e7b5-117">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="13d66-117">**Kitaplığı:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="13d66-117">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2e7b5-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2e7b5-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="13d66-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="13d66-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2e7b5-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2e7b5-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13d66-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="13d66-119">See also</span></span>
 
-- [<span data-ttu-id="2e7b5-120">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="2e7b5-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="13d66-120">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="13d66-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
