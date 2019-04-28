@@ -3,11 +3,11 @@ title: System.Uri ad 2.0 sürümündeki değişiklikler
 ms.date: 03/30/2017
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 ms.openlocfilehash: 987010b8367069e8089df3f809d23f258bb68f2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642769"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>System.Uri ad 2.0 sürümündeki değişiklikler
 

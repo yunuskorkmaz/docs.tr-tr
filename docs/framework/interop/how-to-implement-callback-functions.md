@@ -11,11 +11,11 @@ ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b0a033e6881f9c0c8741fda26211b0f565762de4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59331331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643094"
 ---
 # <a name="how-to-implement-callback-functions"></a>Nasıl yapılır: Geri Çağırma İşlevlerini Uygulama
 Aşağıdaki yordam ve örnek platformunu kullanarak yönetilen bir uygulamada nasıl çağırma göstermek, her pencere tanıtıcısı değeri yerel bilgisayarda yazdırabilir. Özellikle, yordam ve örnek kullanım **EnumWindows** işlev için windows ve yönetilen bir geri çağırma işlevi (pencere tanıtıcısı değerini yazdırmak için adlandırılmış geri çağırma işlemini) listesinde ilerleyin.  
@@ -131,5 +131,5 @@ int main()
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Geri Çağırma İşlevleri](../../../docs/framework/interop/callback-functions.md)
+- [Geri Arama İşlevleri](../../../docs/framework/interop/callback-functions.md)
 - [DLL İşlevini Çağırma](../../../docs/framework/interop/calling-a-dll-function.md)

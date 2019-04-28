@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: İçinde sabitleri tanımlamaC#'
+title: 'Nasıl yapılır: C# İçinde Sabitleri Tanımlama'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
 ms.openlocfilehash: a85e7728512922be38658c07314229c26b2461fd
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646455"
 ---
 # <a name="how-to-define-constants-in-c"></a>Nasıl yapılır: C sabitleri tanımlama\#
 Alanlar, değerleri kümesine derleme zamanı ve hiçbir zaman değiştirilebilir sabittir. Özel değerler için sayısal değişmez değerleri ("Sihirli sayı") yerine anlamlı adlar sağlamak için sabitleri kullanın.  

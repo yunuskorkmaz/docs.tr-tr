@@ -1,5 +1,5 @@
 ---
-title: Yuva kod örnekleri
+title: Yuva Kod Örnekleri
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application protocols, sockets
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - client sockets
 ms.assetid: f3fc7533-6956-42c6-bbc3-73e5a221027d
 ms.openlocfilehash: f709c2e0780b89e072c43e9acaf722e6851d4cbe
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641898"
 ---
-# <a name="socket-code-examples"></a>Yuva kod örnekleri
+# <a name="socket-code-examples"></a>Yuva Kod Örnekleri
 Aşağıdaki kod örneğinde nasıl kullanılacağını gösteren <xref:System.Net.Sockets.Socket> uzak ağ hizmetlerine bağlanmak için bir istemci ve uzak istemci bağlantılarını dinlemek için bir sunucu olarak sınıf.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  

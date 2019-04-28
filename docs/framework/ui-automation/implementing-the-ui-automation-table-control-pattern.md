@@ -7,11 +7,11 @@ helpviewer_keywords:
 - TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
 ms.openlocfilehash: dc1ddfaa13b83d06b1d3211e9d21bd82bfeabc3c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646051"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>UI Otomasyonu Tablo Denetim Düzenini Uygulama
 > [!NOTE]
@@ -25,16 +25,16 @@ ms.locfileid: "59144657"
 ## <a name="implementation-guidelines-and-conventions"></a>Uygulama yönergeleri ve kuralları  
  Tablo denetim düzeni uygularken aşağıdaki yönergeler ve kuralları dikkat edin:  
   
--   Tek tek hücreleri içeriği erişimi olan bir iki boyutlu bir mantıksal koordinat sistemini veya gerekli eşzamanlı uygulaması tarafından sağlanan dizi aracılığıyla <xref:System.Windows.Automation.Provider.IGridProvider>.  
+- Tek tek hücreleri içeriği erişimi olan bir iki boyutlu bir mantıksal koordinat sistemini veya gerekli eşzamanlı uygulaması tarafından sağlanan dizi aracılığıyla <xref:System.Windows.Automation.Provider.IGridProvider>.  
   
--   Bir sütun veya satır üst bilgisi bir tablo nesnesi içinde yer alabilir ya da bir tablo nesnesi ile ilişkili olan bir ayrı üstbilgi nesne.  
+- Bir sütun veya satır üst bilgisi bir tablo nesnesi içinde yer alabilir ya da bir tablo nesnesi ile ilişkili olan bir ayrı üstbilgi nesne.  
   
--   Sütun ve satır üst bilgileri, hem birincil üstbilgi, hem de destekleyen üst bilgileri içerebilir.  
+- Sütun ve satır üst bilgileri, hem birincil üstbilgi, hem de destekleyen üst bilgileri içerebilir.  
   
 > [!NOTE]
 >  Bu kavram, yetkisiz değiştirmeye karşı korumalı hale bir [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] burada bir kullanıcının belirlediği bir "Ad" sütununu elektronik tablo. Bu sütun, artık iki üstbilgi sahiptir — kullanıcı ve uygulama tarafından atanan söz konusu sütun için alfasayısal belirtimi tarafından tanımlanan "Ad" üst bilgisi.  
   
--   Bkz: [UI Otomasyonu Grid denetim desenini uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) için ilgili kılavuz işlevselliği.  
+- Bkz: [UI Otomasyonu Grid denetim desenini uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) için ilgili kılavuz işlevselliği.  
   
  ![Karmaşık üstbilgi öğeleri içeren tablo. ](../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 Karmaşık sütun üst bilgilerini içeren bir tablo örneği  
@@ -50,7 +50,7 @@ Belirsiz RowOrColumnMajor özelliğine sahip bir tablo örneği
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|Yöntem|None|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Yöntem|None|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Yöntem|Yok.|  
   
  Bu denetim düzeni, ilişkili olay vardır.  
   

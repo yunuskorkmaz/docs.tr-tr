@@ -3,11 +3,11 @@ title: Eş Adı Yayını ve Çözümleme
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
 ms.openlocfilehash: 330117e103f7729ecf6f18ff551f65f1ba0f35da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642106"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Eş Adı Yayını ve Çözümleme
 
@@ -15,9 +15,9 @@ ms.locfileid: "59769495"
 
  Yeni bir PNRP kimliği yayımlamak için bir eş aşağıdakileri gerçekleştirir:  
   
--   Önbellek Komşuları (PNRP kimlikleri önbellek düşük düzeyli kaydolduğundan eşleri) PNRP yayın iletilerini gönderir, önbelleklerini sağlamak için.  
+- Önbellek Komşuları (PNRP kimlikleri önbellek düşük düzeyli kaydolduğundan eşleri) PNRP yayın iletilerini gönderir, önbelleklerini sağlamak için.  
   
--   Komşuları olmayan bulutta rastgele düğümleri seçer ve bunları kendi P2P ID'nin PNRP ad çözümleme isteği gönderir Sonuçta elde edilen uç nokta belirleme işlemi bulutta rastgele düğümlerinin önbellekleri yayımlama eş PNRP kimliği sağlar.  
+- Komşuları olmayan bulutta rastgele düğümleri seçer ve bunları kendi P2P ID'nin PNRP ad çözümleme isteği gönderir Sonuçta elde edilen uç nokta belirleme işlemi bulutta rastgele düğümlerinin önbellekleri yayımlama eş PNRP kimliği sağlar.  
   
 Yalnızca diğer P2P kimlikler çözümleniyor, PNRP sürüm 2 düğümleri PNRP kimlikleri yayımlamayın. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6 Global\SearchOnly = 1 (REG_DWORD türü) kayıt defteri değeri eşleri yalnızca PNRP hiçbir zaman adı yayını için ad çözümlemesi için kullandığınız belirtir. Bu kayıt defteri değerini de Grup İlkesi aracılığıyla yapılandırılabilir.  
   
@@ -37,11 +37,11 @@ Yalnızca diğer P2P kimlikler çözümleniyor, PNRP sürüm 2 düğümleri PNRP
   
  PNRP ad çözümlemesi için ' % s'hedef PNRP kimlik eşleştiren bir giriş için kendi önbelleğindeki girişleri eş inceler Bulunursa, eş eşler arası PNRP istek ileti gönderir ve bir yanıt bekler. Eş PNRP istek ileti PNRP kimliği için bir giriş bulunmazsa, hedef PNRP kimliği en yakından eşleşen bir PNRP Kimliğine sahip girişe karşılık gelen eş bilgisayara gönderir. PNRP İstek iletisini alır düğümü kendi önbellek inceler ve şunları yapar:  
   
--   PNRP kimlik bulunmazsa, istenen uç noktası eş isteyen eşler arası doğrudan yanıt verir.  
+- PNRP kimlik bulunmazsa, istenen uç noktası eş isteyen eşler arası doğrudan yanıt verir.  
   
--   PNRP kimliği bulunamadı ve önbellekte bir PNRP kimliği hedef PNRP kimliği daha yakından ise, istenen eş isteyen eş IPv6 adresine PNRP kimlikli hedef PNRP kimliği daha yakından eşleşen giriş temsil eden eş içeren bir yanıt gönderir. Yanıtta IP adresini kullanarak, istekte bulunan düğüm yanıt veya önbelleğinde incelemek için IPv6 adresine başka bir PNRP istek iletisi gönderir.  
+- PNRP kimliği bulunamadı ve önbellekte bir PNRP kimliği hedef PNRP kimliği daha yakından ise, istenen eş isteyen eş IPv6 adresine PNRP kimlikli hedef PNRP kimliği daha yakından eşleşen giriş temsil eden eş içeren bir yanıt gönderir. Yanıtta IP adresini kullanarak, istekte bulunan düğüm yanıt veya önbelleğinde incelemek için IPv6 adresine başka bir PNRP istek iletisi gönderir.  
   
--   PNRP kimliği bulunamadı ve PNRP kimliği yok PNRP kimliği hedefine yakın kendi önbelleğinde yoksa, istenen eş isteyen eş bu koşulu belirten bir yanıt gönderir. İstekte bulunan eş sonraki en yakın PNRP kimliği ardından seçer.  
+- PNRP kimliği bulunamadı ve PNRP kimliği yok PNRP kimliği hedefine yakın kendi önbelleğinde yoksa, istenen eş isteyen eş bu koşulu belirten bir yanıt gönderir. İstekte bulunan eş sonraki en yakın PNRP kimliği ardından seçer.  
   
 Sonunda PNRP kimliği kayıtlı düğümü bulunurken isteyen eş ardışık yinelemelerde, bu işlem devam ediyor  
   

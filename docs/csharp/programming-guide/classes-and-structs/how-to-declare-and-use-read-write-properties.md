@@ -10,11 +10,11 @@ helpviewer_keywords:
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
 ms.openlocfilehash: b4dc9364e64f7ebfd495671b852b98d8f56c80b5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646468"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Nasıl yapılır: Okuma yazma özellikleri bildirme ve kullanma (C# Programlama Kılavuzu)
 Özellikler, ortak veri üyeleri olmadan bir nesnenin verilere korumasız, denetlenmeyen ve doğrulanmamış erişimle gelen riskleri kolaylık sağlar. Bu aracılığıyla gerçekleştirilir *erişimcileri*: atayın ve temel alınan veri üyesinden değerleri almak özel yöntemler. [Ayarlamak](../../../csharp/language-reference/keywords/set.md) erişimci veri üyeleri atanmasına olanak sağlar ve [alma](../../../csharp/language-reference/keywords/get.md) erişimci veri üyesi değerler alır.  

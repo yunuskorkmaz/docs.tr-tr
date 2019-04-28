@@ -1,25 +1,25 @@
 ---
-title: Örnek etkinleştirme
+title: Örnek Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
 ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641674"
 ---
-# <a name="instance-activation"></a>Örnek etkinleştirme
+# <a name="instance-activation"></a>Örnek Etkinleştirme
 SQL iş akışı örneği Store düzenli olarak çalıştırılabilir veya etkinleştirilebilir iş akışı örnekleri Kalıcılık veritabanında algılar ve uyanır bir iç görev çalıştırır. Bir çalıştırılabilir iş akışı örneği bulursa örneğin etkinleştirme özelliğine sahip olan iş akışı ana bilgisayarı bildirir. Örnek deposuna etkinleştirilebilir iş akışı örneği bulursa, sırayla iş akışı örneği çalıştıran bir iş akışı ana etkinleştiren genel bir ana bilgisayar bildirir. Bu konunun aşağıdaki bölümlerinde ayrıntılı örnek etkinleştirme işlemi açıklanmaktadır.  
   
 ## <a name="RunnableSection"></a> Algılama ve çalıştırılabilir iş akışı örnekleri etkinleştirme  
  SQL iş akışı örneği Store iş akışı örneği göz önünde bulundurur *çalıştırılabilir* örneği askıya alınma durumunda veya tamamlandı durumuna değilse ve aşağıdaki koşulları karşılayan:  
   
--   Örnek kilitli olup süresi doldu bekleyen bir zamanlayıcı içerir.  
+- Örnek kilitli olup süresi doldu bekleyen bir zamanlayıcı içerir.  
   
--   Örneğinin süresi dolmuş bir kilit üzerinde vardır.  
+- Örneğinin süresi dolmuş bir kilit üzerinde vardır.  
   
--   Örnek kilidi açılmış ve durumunun **Executing**.  
+- Örnek kilidi açılmış ve durumunun **Executing**.  
   
  SQL iş akışı örneği Store başlatır <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> çalıştırılabilir bir örneği bulduğunda. Bundan sonra SqlWorkflowInstanceStore durdurur kadar izleme <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand> mağaza kez çağrılır.  
   
@@ -39,5 +39,5 @@ SQL iş akışı örneği Store düzenli olarak çalıştırılabilir veya etkin
   
  WAS etkinleştirme için genel bir konağa bir dizi yeni konakları etkinleştirilebilmesi için uç nokta adresini türetmek için etkinleştirme parametresi gerektirir. WAS etkinleştirme için etkinleştirme site, uygulamanın site göreli yolunu ve hizmetinin uygulama göreli yolunu adını parametrelerdir. SQL iş akışı örneği Store yürütülmesi sırasında bu etkinleştirme parametreleri depolayan <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>.  
   
-## <a name="runnable-instances-detection-period"></a>Çalıştırılabilir örnekleri algılama dönemi  
+## <a name="runnable-instances-detection-period"></a>Çalıştırılabilir Örnekleri Algılama Dönemi  
  **Çalıştırılabilir örnekleri algılama dönemi** SQL iş akışı örneği Store özelliği SQL iş akışı örneği Store sonra çalıştırılabilir veya etkinleştirilebilir akışlarınızın algılamak için algılama görev çalıştırır süreyi belirtir Önceki saptama döngüsünden sonra Kalıcılık veritabanı örnekleri. Bkz: [çalıştırılabilir örnekleri algılama dönemi](runnable-instances-detection-period.md) bu özellik hakkında daha fazla bilgi.

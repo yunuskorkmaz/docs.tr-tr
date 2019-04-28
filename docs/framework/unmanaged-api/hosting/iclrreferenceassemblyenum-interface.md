@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 32f27d6c15a99282eee20d2563a4ca741238d846
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59187413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638521"
 ---
 # <a name="iclrreferenceassemblyenum-interface"></a>ICLRReferenceAssemblyEnum Arabirimi
 Bir dosya veya akışı oluşturmak veya kimliklerle anlamanıza gerek kalmadan iç ortak dil çalışma zamanı (CLR), derleme kimlik verilerini kullanarak tarafından başvurulan derlemeler kümesini işlemek için ana sağlayan yöntemler sağlar.  

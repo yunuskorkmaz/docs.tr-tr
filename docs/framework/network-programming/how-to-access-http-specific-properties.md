@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
 ms.openlocfilehash: 107e57ca947012f5e2f65835d684f5e6068b3681
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642743"
 ---
 # <a name="how-to-access-http-specific-properties"></a>Nasıl yapılır: HTTP’ye Özgü Özelliklere Erişim
 Bu örnek HTTP devre dışı bırakma gösterir **tutma** davranışı ve get protokol sürümü, Web sunucusu vm'sinden sayı.  
@@ -47,7 +47,7 @@ HttpWResp.Close();
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Başvurular **System.Net** ad alanı.  
+- Başvurular **System.Net** ad alanı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -11,18 +11,18 @@ ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ea62f7dc5c47f52f94567857427e7add929b8b1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643406"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Nasıl yapılır: Kayıtsız Etkinleştirme için .NET Framework Tabanlı COM Bileşenlerini Yapılandırma
 Kayıtsız etkinleştirme için .NET Framework tabanlı bileşenler, yalnızca COM bileşenleri için olandan biraz daha karmaşık. Kurulum, iki bildirimleri gerektirir:  
   
--   COM uygulamaları yönetilen bileşen tanımlamak için bir Win32 stili bildiriminin olması gerekir.  
+- COM uygulamaları yönetilen bileşen tanımlamak için bir Win32 stili bildiriminin olması gerekir.  
   
--   .NET framework tabanlı bileşenler, bileşen bildirimini etkinleştirme bilgi çalışma zamanında gereken olması gerekir.  
+- .NET framework tabanlı bileşenler, bileşen bildirimini etkinleştirme bilgi çalışma zamanında gereken olması gerekir.  
   
  Bu konu, bir uygulama bildirimi uygulamayla ilişkilendirilecek açıklar; Bileşen bildirimi, bir bileşeniyle ilişkilendirme; ' i tıklatın ve bileşeni bildirimini derlemede katıştırmak.  
   
