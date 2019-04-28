@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 76100116f2ca3a9b9a99477ca2352d5fa1335ab2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645688"
 ---
-# <a name="icordebugarrayvaluegetelementatposition-method"></a><span data-ttu-id="82b0c-102">ICorDebugArrayValue::GetElementAtPosition Metodu</span><span class="sxs-lookup"><span data-stu-id="82b0c-102">ICorDebugArrayValue::GetElementAtPosition Method</span></span>
-<span data-ttu-id="82b0c-103">Verilen konumunda dizinin sıfır tabanlı, tek boyutlu bir dizi olarak davranılması öğesini alır.</span><span class="sxs-lookup"><span data-stu-id="82b0c-103">Gets the element at the given position, treating the array as a zero-based, single-dimensional array.</span></span>  
+# <a name="icordebugarrayvaluegetelementatposition-method"></a><span data-ttu-id="68cbc-102">ICorDebugArrayValue::GetElementAtPosition Metodu</span><span class="sxs-lookup"><span data-stu-id="68cbc-102">ICorDebugArrayValue::GetElementAtPosition Method</span></span>
+<span data-ttu-id="68cbc-103">Verilen konumunda dizinin sıfır tabanlı, tek boyutlu bir dizi olarak davranılması öğesini alır.</span><span class="sxs-lookup"><span data-stu-id="68cbc-103">Gets the element at the given position, treating the array as a zero-based, single-dimensional array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="82b0c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="82b0c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="68cbc-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="68cbc-104">Syntax</span></span>  
   
 ```  
 HRESULT GetElementAtPosition (  
@@ -36,21 +36,21 @@ HRESULT GetElementAtPosition (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="82b0c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="82b0c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="68cbc-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="68cbc-105">Parameters</span></span>  
  `nPosition`  
- <span data-ttu-id="82b0c-106">[in] Alınacak öğenin konumu.</span><span class="sxs-lookup"><span data-stu-id="82b0c-106">[in] The position of the element to be retrieved.</span></span>  
+ <span data-ttu-id="68cbc-106">[in] Alınacak öğenin konumu.</span><span class="sxs-lookup"><span data-stu-id="68cbc-106">[in] The position of the element to be retrieved.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="82b0c-107">[out] Öğenin değerini temsil eden bir Icordebugvalue nesnenin adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="82b0c-107">[out] A pointer to the address of an ICorDebugValue object that represents the value of the element.</span></span>  
+ <span data-ttu-id="68cbc-107">[out] Öğenin değerini temsil eden bir Icordebugvalue nesnenin adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="68cbc-107">[out] A pointer to the address of an ICorDebugValue object that represents the value of the element.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="82b0c-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="82b0c-108">Remarks</span></span>  
- <span data-ttu-id="82b0c-109">Çok boyutlu bir dizi düzenini C++ stili dizi düzeni izler.</span><span class="sxs-lookup"><span data-stu-id="82b0c-109">The layout of a multi-dimension array follows the C++ style of array layout.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="68cbc-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="68cbc-108">Remarks</span></span>  
+ <span data-ttu-id="68cbc-109">Çok boyutlu bir dizi düzenini C++ stili dizi düzeni izler.</span><span class="sxs-lookup"><span data-stu-id="68cbc-109">The layout of a multi-dimension array follows the C++ style of array layout.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="82b0c-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="82b0c-110">Requirements</span></span>  
- <span data-ttu-id="82b0c-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="82b0c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="68cbc-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="68cbc-110">Requirements</span></span>  
+ <span data-ttu-id="68cbc-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="68cbc-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="82b0c-112">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="82b0c-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="68cbc-112">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="68cbc-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="82b0c-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="82b0c-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="68cbc-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="68cbc-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="82b0c-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="82b0c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="68cbc-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="68cbc-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0f763151f4e450c48eb9304936541243af06bdca
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645610"
 ---
-# <a name="icordebugassemblyenumeratemodules-method"></a><span data-ttu-id="484a9-102">ICorDebugAssembly::EnumerateModules Yöntemi</span><span class="sxs-lookup"><span data-stu-id="484a9-102">ICorDebugAssembly::EnumerateModules Method</span></span>
-<span data-ttu-id="484a9-103">Bulunan modüller için bir numaralandırıcı alır `ICorDebugAssembly`.</span><span class="sxs-lookup"><span data-stu-id="484a9-103">Gets an enumerator for the modules contained in the `ICorDebugAssembly`.</span></span>  
+# <a name="icordebugassemblyenumeratemodules-method"></a><span data-ttu-id="d2c1c-102">ICorDebugAssembly::EnumerateModules Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d2c1c-102">ICorDebugAssembly::EnumerateModules Method</span></span>
+<span data-ttu-id="d2c1c-103">Bulunan modüller için bir numaralandırıcı alır `ICorDebugAssembly`.</span><span class="sxs-lookup"><span data-stu-id="d2c1c-103">Gets an enumerator for the modules contained in the `ICorDebugAssembly`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="484a9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="484a9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d2c1c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d2c1c-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateModules (  
@@ -35,15 +35,15 @@ HRESULT EnumerateModules (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="484a9-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="484a9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d2c1c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d2c1c-105">Parameters</span></span>  
  `ppModules`  
- <span data-ttu-id="484a9-106">[out] Numaralandırıcı Icordebugmoduleenum arabirimi adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="484a9-106">[out] A pointer to the address of the ICorDebugModuleEnum interface that is the enumerator.</span></span>  
+ <span data-ttu-id="d2c1c-106">[out] Numaralandırıcı Icordebugmoduleenum arabirimi adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="d2c1c-106">[out] A pointer to the address of the ICorDebugModuleEnum interface that is the enumerator.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="484a9-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="484a9-107">Requirements</span></span>  
- <span data-ttu-id="484a9-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="484a9-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d2c1c-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d2c1c-107">Requirements</span></span>  
+ <span data-ttu-id="d2c1c-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d2c1c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="484a9-109">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="484a9-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d2c1c-109">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d2c1c-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="484a9-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="484a9-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d2c1c-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d2c1c-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="484a9-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="484a9-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="d2c1c-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d2c1c-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
