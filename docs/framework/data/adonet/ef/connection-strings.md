@@ -3,11 +3,11 @@ title: Bağlantı dizeleri ADO.NET varlık çerçevesi
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
 ms.openlocfilehash: 55097e4977111c56cb06c590e305e31ed681fd31
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606792"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Bağlantı dizeleri ADO.NET varlık çerçevesi
 
@@ -17,7 +17,7 @@ Bağlantı dizesi model ve eşleme meta veri erişirken EntityClient sağlayıc�
 
 [Varlık veri modeli Araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)) uygulamanın yapılandırma dosyasında depolanan bir bağlantı dizesi oluşturur. <xref:System.Data.Objects.ObjectContext> Bu bağlantı bilgisini nesne sorgularını oluşturulurken otomatik olarak alır. <xref:System.Data.EntityClient.EntityConnection> Tarafından kullanılan bir <xref:System.Data.Objects.ObjectContext> örneği erişilebilir <xref:System.Data.Objects.ObjectContext.Connection%2A> özelliği. Daha fazla bilgi için [bağlantılarını yönetme ve işlemleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).
 
-## <a name="connection-string-syntax"></a>Bağlantı dizesi söz dizimi
+## <a name="connection-string-syntax"></a>Bağlantı Dizesi Söz Dizimi
 
 Bağlantı dizeleri için genel sözdizimi hakkında daha fazla bilgi edinmek için [bağlantı dizesi söz dizimi | ADO.NET bağlantı dizelerini](../connection-strings.md#connection-string-syntax).
 

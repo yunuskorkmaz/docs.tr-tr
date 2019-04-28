@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Parallel.For veya ForEach döngüsünü iptal etme'
+title: 'Nasıl yapılır: Bir Parallel.For veya ForEach Döngüsünü İptal Etme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,13 +12,13 @@ ms.assetid: 9d19b591-ea95-4418-8ea7-b6266af9905b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7cdb6e059fb1c7001bbe4da60e2936b1ad40cc1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638898"
 ---
-# <a name="how-to-cancel-a-parallelfor-or-foreach-loop"></a>Nasıl yapılır: Bir Parallel.For veya ForEach döngüsünü iptal etme
+# <a name="how-to-cancel-a-parallelfor-or-foreach-loop"></a>Nasıl yapılır: Bir Parallel.For veya ForEach Döngüsünü İptal Etme
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> Ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> yöntemleri iptal belirteçlerini kullanımıyla iptal etmeyi destekler. Genel olarak, iptal etme hakkında daha fazla bilgi için bkz [iptal](../../../docs/standard/threading/cancellation-in-managed-threads.md). Paralel bir döngüde sağladığınız <xref:System.Threading.CancellationToken> yöntemine <xref:System.Threading.Tasks.ParallelOptions> parametresi ve ardından paralel çağrıyı bir try-catch bloğu içinde alın.  
   
 ## <a name="example"></a>Örnek  

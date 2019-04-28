@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
 ms.openlocfilehash: 829df66f49d5df5f5c8cf8d2b6cfa74f0a2172dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609899"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI Otomasyon İstemcileri İçin Denetim Düzeni Eşleştirmesi
 > [!NOTE]
@@ -20,11 +20,11 @@ ms.locfileid: "59101139"
   
  Aşağıdaki tabloda, Denetim düzenleri aşağıdaki kategorilere göre düzenler:  
   
--   Desteklenen. Denetim, bu denetim düzenini desteklemelidir.  
+- Desteklenen. Denetim, bu denetim düzenini desteklemelidir.  
   
--   Koşullu desteği. Denetim, denetimin durumunun bağlı olarak bu denetim düzeni destekleyebilir.  
+- Koşullu desteği. Denetim, denetimin durumunun bağlı olarak bu denetim düzeni destekleyebilir.  
   
--   Desteklenmez. Denetim, bu denetim düzeni desteklemiyor; özel denetimler, bu denetim düzeni destekleyebilir.  
+- Desteklenmez. Denetim, bu denetim düzeni desteklemiyor; özel denetimler, bu denetim düzeni destekleyebilir.  
   
 > [!NOTE]
 >  Bazı denetimler, denetimi işlevlerini bağlı olarak birkaç denetim desenleri için koşullu destek vardır. Örneğin, menü öğesi denetimi için koşullu destek sahip <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>, veya <xref:System.Windows.Automation.SelectionItemPattern> menü denetimi, işlev bağlı olarak, Denetim düzeni.  
@@ -34,43 +34,43 @@ ms.locfileid: "59101139"
   
 |Denetim türü|Desteklenir|Koşullu destek|Desteklenmez|  
 |------------------|---------------|-------------------------|-------------------|  
-|Düğme|None|Çağırma, Değiştir, Genişlet ve Daralt|None|  
+|Düğme|Yok.|Çağırma, Değiştir, Genişlet ve Daralt|Yok.|  
 |Takvim|Kılavuz, tablo|Seçim, kaydırma|Değer|  
-|Onay kutusu|İki Durumlu Düğme|Yok.|Yok.|  
+|Onay kutusu|İki Durumlu Düğme|Yok.|None|  
 |Birleşik Giriş Kutusu|Genişlet ve Daralt|Seçim, değer|Kaydırma|  
-|Veri Kılavuzu|Kılavuz|Kaydır, seçimi, tablo|None|  
-|Veri Öğesi|Seçim Öğesi|Daraltma, kılavuz öğesi, kaydırma öğesi, tablo, geçiş, değer'ı genişletin.|None|  
+|Veri Kılavuzu|Kılavuz|Kaydır, seçimi, tablo|Yok.|  
+|Veri Öğesi|Seçim Öğesi|Daraltma, kılavuz öğesi, kaydırma öğesi, tablo, geçiş, değer'ı genişletin.|Yok.|  
 |Belge|Metin|Kaydırma, değer|Yok.|  
 |Düzenle|Yok.|Aralık değeri, bir metin değeri|Yok.|  
-|Grup|Yok.|Genişlet ve Daralt|None|  
+|Grup|Yok.|Genişlet ve Daralt|Yok.|  
 |Üstbilgi|Yok.|Dönüştürme|Yok.|  
-|Üstbilgi Öğesi|Yok.|Dönüştürme, çağırma|Yok.|  
+|Üstbilgi Öğesi|None|Dönüştürme, çağırma|Yok.|  
 |Köprü|Çağır|Değer|Yok.|  
 |Görüntü|Yok.|Kılavuz öğesi, Tablo öğesi|Seçim öğesi çağırma|  
 |List|Yok.|Kılavuz, birden çok görünüm Kaydır, seçimi|Tablo|  
-|Liste öğesi|Seçim Öğesi|Genişlet ve Daralt, kılavuz öğesi çağırmak, kaydırma öğesi, Değiştir, değer|None|  
-|Menü|Yok.|Yok.|Yok.|  
-|Menü Çubuğu|Yok.|Dönüştürme Daralt, Dock'ı genişletin|None|  
-|Menü Öğesi|None|Genişlet ve Daralt, seçim öğesi geçiş çağırma|None|  
-|Bölme|Yok.|Dock. Kaydırma, dönüştürme|Pencere|  
-|İlerleme Çubuğu|Yok.|Aralık değeri|Yok.|  
-|Radyo Düğmesi|Seçim Öğesi|None|İki Durumlu Düğme|  
+|Liste öğesi|Seçim Öğesi|Genişlet ve Daralt, kılavuz öğesi çağırmak, kaydırma öğesi, Değiştir, değer|Yok.|  
+|Menü|None|Yok.|None|  
+|Menü Çubuğu|None|Dönüştürme Daralt, Dock'ı genişletin|Yok.|  
+|Menü Öğesi|None|Genişlet ve Daralt, seçim öğesi geçiş çağırma|Yok.|  
+|Bölme|None|Dock. Kaydırma, dönüştürme|Pencere|  
+|İlerleme Çubuğu|Yok.|Aralık değeri|None|  
+|Radyo Düğmesi|Seçim Öğesi|Yok.|İki Durumlu Düğme|  
 |Kaydırma Çubuğu|Yok.|Aralık Değeri|Kaydırma|  
 |Ayırıcı|Yok.|Yok.|Yok.|  
-|Kaydırıcı|Yok.|Aralık değeri, seçim, değeri|Yok.|  
-|Değer Değiştirici|Yok.|Aralık değeri, seçim, değeri|Yok.|  
-|Bölünmüş Düğme|Çağırma, Genişlet ve Daralt|Yok.|Yok.|  
-|Durum Çubuğu|Yok.|Kılavuz|Yok.|  
-|Tab|Seçim|Kaydırma|None|  
+|Kaydırıcı|None|Aralık değeri, seçim, değeri|Yok.|  
+|Değer Değiştirici|None|Aralık değeri, seçim, değeri|Yok.|  
+|Bölünmüş Düğme|Çağırma, Genişlet ve Daralt|None|None|  
+|Durum Çubuğu|None|Kılavuz|None|  
+|Tab|Seçim|Kaydırma|Yok.|  
 |Sekme Öğesi|Seçim Öğesi|Yok.|Çağır|  
-|Tablo|Kılavuz, kılavuz öğesi, tablo, Tablo öğesi|Yok.|None|  
-|Metin|Yok.|Kılavuz öğesi, Tablo öğesi metni|Değer|  
+|Tablo|Kılavuz, kılavuz öğesi, tablo, Tablo öğesi|Yok.|Yok.|  
+|Metin|None|Kılavuz öğesi, Tablo öğesi metni|Değer|  
 |Parmak|Dönüştürme|Yok.|Yok.|  
-|Başlık Çubuğu|Yok.|Yok.|None|  
-|Araç çubuğu|Yok.|Yerleştirme, genişletme daraltma, dönüştürme|None|  
+|Başlık Çubuğu|None|Yok.|Yok.|  
+|Araç çubuğu|None|Yerleştirme, genişletme daraltma, dönüştürme|None|  
 |Araç İpucu|None|Pencere metni|Yok.|  
 |Ağaç|Yok.|Kaydır, seçimi|Yok.|  
-|Ağaç Öğesi|Genişlet ve Daralt|Kaydırma öğesi seçim öğesi, geçiş çağırma|Yok.|  
+|Ağaç Öğesi|Genişlet ve Daralt|Kaydırma öğesi seçim öğesi, geçiş çağırma|None|  
 |Pencere|Dönüştürme, penceresi|Dock|Yok.|  
   
 > [!NOTE]

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
 ms.openlocfilehash: 9c10c334ae2a10df1f75384ce042781b6f1bd43a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614420"
 ---
 # <a name="query-expression-syntax-examples-projection"></a>Sorgu İfadesi Söz Dizimi Örnekleri: Projeksiyon
 Bu konudaki örnekler nasıl kullanılacağını gösteren `Select` yöntemi ve `From … From …` sorgu anahtar sözcükleri [AdventureWorks satışları modeli](https://archive.codeplex.com/?p=msftdbprodsamples) sorgu ifadesi söz dizimini kullanarak. `From … From …` eşdeğerdir sorgu tabanlı, `SelectMany` yöntemi. Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  

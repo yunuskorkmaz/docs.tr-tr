@@ -3,11 +3,11 @@ title: 3310 - DispatchFailed
 ms.date: 03/30/2017
 ms.assetid: 6b8d7d9f-c6d9-4275-9121-a47519094124
 ms.openlocfilehash: 608706b679c2232fb4231836fd83520f2f0ef027
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61595770"
 ---
 # <a name="3310---dispatchfailed"></a>3310 - DispatchFailed
 ## <a name="properties"></a>Özellikler  
@@ -15,12 +15,12 @@ ms.locfileid: "33457954"
 |||  
 |-|-|  
 |Kimlik|3310|  
-|Anahtar Sözcükler|ServiceModel|  
+|anahtar sözcükler|ServiceModel|  
 |Düzey|Hata|  
 |Kanal|Microsoft Windows uygulama sunucusu-uygulamalar/analitik|  
   
 ## <a name="description"></a>Açıklama  
- Gönderme başarısız olduğunda bu olay yayınlanır.  
+ Dağıtım başarısız olduğunda bu olay yayılır.  
   
 ## <a name="message"></a>İleti  
  '%1' işlemi hatalarla gönderildi.  

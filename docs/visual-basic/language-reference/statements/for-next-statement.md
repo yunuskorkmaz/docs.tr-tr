@@ -24,11 +24,11 @@ helpviewer_keywords:
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
 ms.openlocfilehash: 5d47d57b75005d5c13dbf8633981dfb2d57d3e90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638070"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next Deyimi (Visual Basic)
 Belirtilen sayıda deyim grubunu yineler.  
@@ -98,11 +98,11 @@ Next [ counter ]
   
  `Exit For` Bazı koşullar değerlendirdikten sonra genellikle kullanılır (örneğin, bir `If`... `Then`... `Else` yapısı). Kullanmak istediğiniz `Exit For` aşağıdaki koşulları için:  
   
--   Yineleme devam gereksiz veya imkansız olabilir. Bu durum, hatalı bir değer veya bir sonlandırma isteği oluşturabilirsiniz.  
+- Yineleme devam gereksiz veya imkansız olabilir. Bu durum, hatalı bir değer veya bir sonlandırma isteği oluşturabilirsiniz.  
   
--   A `Try`... `Catch`... `Finally` deyimi bir özel durumu yakalar. Kullanabileceğinize `Exit For` sonunda `Finally` blok.  
+- A `Try`... `Catch`... `Finally` deyimi bir özel durumu yakalar. Kullanabileceğinize `Exit For` sonunda `Finally` blok.  
   
--   Büyük veya hatta sonsuz birkaç kez çalıştırabileceğiniz bir döngü sonsuz bir döngü var. Bir koşul algılama, kullanabileceğiniz `Exit For` döngüden çıkma. Daha fazla bilgi için [yapın... Döngü deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+- Büyük veya hatta sonsuz birkaç kez çalıştırabileceğiniz bir döngü sonsuz bir döngü var. Bir koşul algılama, kullanabileceğiniz `Exit For` döngüden çıkma. Daha fazla bilgi için [yapın... Döngü deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
 ## <a name="technical-implementation"></a>Teknik Uygulama  
  Olduğunda bir `For`... `Next` döngü başlatır, Visual Basic değerlendirir `start`, `end`, ve `step`. Visual Basic, yalnızca bu zaman ve atar ardından bu değerleri değerlendirir `start` için `counter`. Önce deyim bloğu çalışır, Visual Basic karşılaştırır `counter` için `end`. Varsa `counter` zaten değerinden daha büyük `end` değeri (veya daha küçük `step` negatif ise), `For` döngüsü sona erdiğinde ve denetim izleyen deyime geçer `Next` deyimi. Aksi takdirde, deyim bloğunu çalıştırır.  
@@ -137,13 +137,13 @@ Next [ counter ]
   
  Veri türü `counter` türü aşağıdaki türlerden biri olmalıdır yinelemenin belirler:  
   
--   A `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, veya `Double`.  
+- A `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, veya `Double`.  
   
--   Kullanarak bildirdiğiniz bir numaralandırma bir [Enum deyimi](../../../visual-basic/language-reference/statements/enum-statement.md).  
+- Kullanarak bildirdiğiniz bir numaralandırma bir [Enum deyimi](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
--   Bir `Object`.  
+- Bir `Object`.  
   
--   Bir tür `T` aşağıdaki işleçleri olan burada `B` kullanılabilir bir tür bir `Boolean` ifade.  
+- Bir tür `T` aşağıdaki işleçleri olan burada `B` kullanılabilir bir tür bir `Boolean` ifade.  
   
      `Public Shared Operator >= (op1 As T, op2 As T) As B`  
   

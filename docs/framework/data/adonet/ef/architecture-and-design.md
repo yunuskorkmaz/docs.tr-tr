@@ -3,20 +3,20 @@ title: Mimari ve Tasarım
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606856"
 ---
 # <a name="architecture-and-design"></a>Mimari ve Tasarım
 SQL üretimi modülünde [örnek sağlayıcısı](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) komut ağacı temsil eden ifade ağacında bir ziyaretçi olarak uygulanır. Oluşturma, tek bir geçişinde ifade ağacı gerçekleştirilir.  
   
  Ağaç düğümleri aşağıdan yukarı işlenir. İlk olarak, bir ara yapı üretilir: SqlSelectStatement veya SqlBuilder, her iki uygulama ISqlFragment. Ardından, dize SQL deyimi, yapısından oluşturulur. Ara yapı için iki nedeni vardır:  
   
--   Mantıksal olarak bir SQL SELECT deyimi sıralamaya doldurulur. FROM yan tümcesinde katılan düğümleri, WHERE, GROUP BY ve ORDER BY yan tümcesi içinde katılan düğümleri önce ziyaret.  
+- Mantıksal olarak bir SQL SELECT deyimi sıralamaya doldurulur. FROM yan tümcesinde katılan düğümleri, WHERE, GROUP BY ve ORDER BY yan tümcesi içinde katılan düğümleri önce ziyaret.  
   
--   Diğer adlar yeniden adlandırmak için yeniden adlandırma sırasında çarpışmalardan kaçınmak için kullanılan tüm diğer adlarını tanımlamanız gerekir. Yeniden adlandırma seçenekleri SqlBuilder erteleneceği sütunları yeniden adlandırma için aday niteliği temsil etmek için Sembol nesneleri kullanır.  
+- Diğer adlar yeniden adlandırmak için yeniden adlandırma sırasında çarpışmalardan kaçınmak için kullanılan tüm diğer adlarını tanımlamanız gerekir. Yeniden adlandırma seçenekleri SqlBuilder erteleneceği sütunları yeniden adlandırma için aday niteliği temsil etmek için Sembol nesneleri kullanır.  
   
  ![Diyagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
@@ -30,9 +30,9 @@ SQL üretimi modülünde [örnek sağlayıcısı](https://code.msdn.microsoft.co
 ### <a name="isqlfragment"></a>ISqlFragment  
  Bu bölüm iki amaca hizmet eder ISqlFragment arabirimi uygulayan sınıflar kapsamaktadır:  
   
--   Ziyaretçi yöntemleri için ortak bir dönüş türü.  
+- Ziyaretçi yöntemleri için ortak bir dönüş türü.  
   
--   Son SQL dizesi yazmak için bir yöntem sağlar.  
+- Son SQL dizesi yazmak için bir yöntem sağlar.  
   
 ```  
 internal interface ISqlFragment {  
@@ -194,11 +194,11 @@ private bool IsParentAJoin{get}
   
  Genellikle, SQL deyimi yan tümceleri burada birleştirmesi için dikkate düğümleri boş olmayan yan tümcelerinden sonra değerlendirilir, düğüm için geçerli deyim eklenemez. Bir filtre sonraki düğümü ise yalnızca aşağıdaki true ise örneğin, o düğümde geçerli SqlSelectStatement dahil edilebilir:  
   
--   Seçim listesi boş. Seçim listesi boş değilse seçim listesine filtre önceki bir düğüm tarafından oluşturulan ve koşul bu seçim listesi tarafından üretilen sütunlarına başvurabilir.  
+- Seçim listesi boş. Seçim listesi boş değilse seçim listesine filtre önceki bir düğüm tarafından oluşturulan ve koşul bu seçim listesi tarafından üretilen sütunlarına başvurabilir.  
   
--   GROUPBY boştur. Filtre ekleme, GROUPBY boş değilse, doğru değil gruplandırma önce filtreleme anlamına gelir.  
+- GROUPBY boştur. Filtre ekleme, GROUPBY boş değilse, doğru değil gruplandırma önce filtreleme anlamına gelir.  
   
--   TOP yan tümcesini boştur. Filtre ekleme, TOP yan tümcesini boş değilse, doğru olmayan üst gerçekleştirmeden önce filtreleme anlamına gelir.  
+- TOP yan tümcesini boştur. Filtre ekleme, TOP yan tümcesini boş değilse, doğru olmayan üst gerçekleştirmeden önce filtreleme anlamına gelir.  
   
  Bunlar her zaman mevcut bir SqlSelectStatement bir parçası olarak dahil edilir çünkü bu DbConstantExpression veya aritmetik ifadeler gibi ilişkisel olmayan düğümleri için geçerli değildir.  
   
@@ -236,35 +236,35 @@ private bool IsParentAJoin{get}
 ### <a name="relational-non-join-nodes"></a>İlişkisel (birleştirme olmayan) düğümler  
  Aşağıdaki ifade türleri birleştirme olmayan düğümleri destekler:  
   
--   DbDistinctExpression  
+- DbDistinctExpression  
   
--   DbFilterExpression  
+- DbFilterExpression  
   
--   DbGroupByExpression  
+- DbGroupByExpression  
   
--   DbLimitExpession  
+- DbLimitExpession  
   
--   DbProjectExpression  
+- DbProjectExpression  
   
--   DbSkipExpression  
+- DbSkipExpression  
   
--   DbSortExpression  
+- DbSortExpression  
   
  Bu düğümler ziyaret şu deseni izler:  
   
 1. İlişkisel giriş sayfasını ziyaret edin ve sonuçta elde edilen SqlSelectStatement alın. İlişkisel bir düğüme giriş aşağıdakilerden biri olabilir:  
   
-    -   Bir uzantı (örneğin, bir DbScanExpression) dahil olmak üzere bir ilişkisel düğümü. Bu tür bir düğüm ziyaret bir SqlSelectStatement döndürür.  
+    - Bir uzantı (örneğin, bir DbScanExpression) dahil olmak üzere bir ilişkisel düğümü. Bu tür bir düğüm ziyaret bir SqlSelectStatement döndürür.  
   
-    -   Küme işlemi ifadesi (UNION ALL, örneğin). Köşeli ayraç içinde sarmalanmış ve yeni SqlSelectStatement FROM yan tümcesinde put sonucu vardır.  
+    - Küme işlemi ifadesi (UNION ALL, örneğin). Köşeli ayraç içinde sarmalanmış ve yeni SqlSelectStatement FROM yan tümcesinde put sonucu vardır.  
   
 2. Geçerli düğüm giriş tarafından üretilen SqlSelectStatement eklenebilir olup olmadığını denetleyin. Bu gruplandırma ifadeleri bölümüne SQL Açıklamaalarını açıklar. Aksi halde  
   
-    -   Geçerli SqlSelectStatement nesne açılır.  
+    - Geçerli SqlSelectStatement nesne açılır.  
   
-    -   Yeni bir SqlSelectStatement nesnesi oluşturun ve yeni SqlSelectStatement nesnenin başlangıç popped SqlSelectStatement ekleyin.  
+    - Yeni bir SqlSelectStatement nesnesi oluşturun ve yeni SqlSelectStatement nesnenin başlangıç popped SqlSelectStatement ekleyin.  
   
-    -   Yeni nesne yığının en üstünde yerleştirin.  
+    - Yeni nesne yığının en üstünde yerleştirin.  
   
 3. Giriş ifadesini bağlama doğru sembole girdiden yönlendirin. Bu bilgiler SqlSelectStatement nesnesinde korunur.  
   
@@ -289,11 +289,11 @@ ORDER BY sk1, sk2, ...
 ### <a name="join-expressions"></a>İfadeleri katılın  
  Aşağıdaki birleştirme ifadeler değerlendirilir ve yaygın bir şekilde VisitJoinExpression yöntemi tarafından işlenir:  
   
--   DbApplyExpression  
+- DbApplyExpression  
   
--   DbJoinExpression  
+- DbJoinExpression  
   
--   DbCrossJoinExpression  
+- DbCrossJoinExpression  
   
  Ziyaret uygulamanız gereken adımlar şunlardır:  
   
@@ -305,15 +305,15 @@ ORDER BY sk1, sk2, ...
   
 2. POST işlemi ProcessJoinInputResult, sembol tablosuna bir JOIN ifadesinin bir alt ziyaret ve büyük olasılıkla alt tarafından üretilen SqlSelectStatement bittikten sonra bakımından sorumlu olduğu çağırarak giriş ziyaret sonucu. Alt sonuç aşağıdakilerden biri olabilir:  
   
-    -   Bir üst eklenecek farklı SqlSelectStatement. Böyle bir durumda, varsayılan sütunlar ekleyerek tamamlanmış olması gerekebilir. Bir birleştirme giriş ise, yeni bir birleştirme sembol oluşturmanız gerekir. Aksi takdirde, normal bir sembol oluşturun.  
+    - Bir üst eklenecek farklı SqlSelectStatement. Böyle bir durumda, varsayılan sütunlar ekleyerek tamamlanmış olması gerekebilir. Bir birleştirme giriş ise, yeni bir birleştirme sembol oluşturmanız gerekir. Aksi takdirde, normal bir sembol oluşturun.  
   
-    -   Uzantı, yalnızca üst girişleri listesine eklenmiş SqlSelectStatement kullanıcının (bir DbScanExpression, örneğin).  
+    - Uzantı, yalnızca üst girişleri listesine eklenmiş SqlSelectStatement kullanıcının (bir DbScanExpression, örneğin).  
   
-    -   İle kaydırılan çalışması, köşeli ayraçlar değil bir SqlSelectStatement.  
+    - İle kaydırılan çalışması, köşeli ayraçlar değil bir SqlSelectStatement.  
   
-    -   Üst ekleneceği aynı SqlSelectStatement. Böyle bir durumda FromExtents listesinde simgelerin tümünü temsil eden tek yeni bir JoinSymbol değiştirilmesi gerekir.  
+    - Üst ekleneceği aynı SqlSelectStatement. Böyle bir durumda FromExtents listesinde simgelerin tümünü temsil eden tek yeni bir JoinSymbol değiştirilmesi gerekir.  
   
-    -   İlk üç durumlarda AddFromSymbol, AS yan tümcesi ekleyin ve sembol tablosunu güncelleştirmek için çağrılır.  
+    - İlk üç durumlarda AddFromSymbol, AS yan tümcesi ekleyin ve sembol tablosunu güncelleştirmek için çağrılır.  
   
  Birleştirme koşulunun (varsa) üçüncü ziyaret.  
   
@@ -337,18 +337,18 @@ ORDER BY sk1, sk2, ...
   
  Örnek özelliği ilk kez ziyaret edilen ve bir sembol, bir JoinSymbol veya bir SymbolPair sonucudur. Bu üç durumların nasıl işleneceğini aşağıda verilmiştir:  
   
--   Bir JoinSymbol döndürülürse, kendi NameToExtent özelliği gerekli bir özellik için bir simge içerir. İç içe birleşim birleştirme sembol temsil ediyorsa, yeni bir simge çifti örnek diğer ad olarak kullanılan sembol izlemek için birleştirme sembol ve daha fazla çözümleme için gerçek özelliğini temsil eden bir simge ile döndürülür.  
+- Bir JoinSymbol döndürülürse, kendi NameToExtent özelliği gerekli bir özellik için bir simge içerir. İç içe birleşim birleştirme sembol temsil ediyorsa, yeni bir simge çifti örnek diğer ad olarak kullanılan sembol izlemek için birleştirme sembol ve daha fazla çözümleme için gerçek özelliğini temsil eden bir simge ile döndürülür.  
   
--   Bir SymbolPair döndürülür ve birleştirme sembol sütun parçası ise, bir birleştirme sembol yeniden döndürülür, ancak şimdi column özelliği geçerli bir özellik ifadesi tarafından temsil edilen özelliğin işaret edecek şekilde güncelleştirildi. Aksi takdirde bir SqlBuilder SymbolPair kaynak diğer adı ve sütun olarak geçerli bir özellik için simge olarak döndürülür.  
+- Bir SymbolPair döndürülür ve birleştirme sembol sütun parçası ise, bir birleştirme sembol yeniden döndürülür, ancak şimdi column özelliği geçerli bir özellik ifadesi tarafından temsil edilen özelliğin işaret edecek şekilde güncelleştirildi. Aksi takdirde bir SqlBuilder SymbolPair kaynak diğer adı ve sütun olarak geçerli bir özellik için simge olarak döndürülür.  
   
--   Bir sembol döndürülürse, ziyaret yöntemi bu örnek diğer ad olarak ve sütun adı olarak özellik adı ile bir SqlBuilder yöntemi döndürür.  
+- Bir sembol döndürülürse, ziyaret yöntemi bu örnek diğer ad olarak ve sütun adı olarak özellik adı ile bir SqlBuilder yöntemi döndürür.  
   
 ### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  DbProjectExpression projeksiyon özellik olarak kullanıldığında, Dbnewınstanceexpression öngörülen sütunları temsil etmek için bağımsız değişkenlerin virgülle ayrılmış bir liste oluşturur.  
   
  Dbnewınstanceexpression, koleksiyon dönüş türüne sahip ve yeni bir bağımsız değişken olarak sağlanan ifadeleri koleksiyonu tanımlar, aşağıdaki üç durumda ayrı olarak ele alınmıştır:  
   
--   Dbnewınstanceexpression DbElementExpression tek bağımsız değişken olarak varsa, aşağıdaki gibi çevrilir:  
+- Dbnewınstanceexpression DbElementExpression tek bağımsız değişken olarak varsa, aşağıdaki gibi çevrilir:  
   
     ```  
     NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X  

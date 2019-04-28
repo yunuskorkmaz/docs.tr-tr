@@ -3,11 +3,11 @@ title: İleti Kodlayıcı Seçme
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
 ms.openlocfilehash: 0c960505d6c8368396cddebe37c76c8d95550727
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608391"
 ---
 # <a name="choosing-a-message-encoder"></a>İleti Kodlayıcı Seçme
 Windows Communication Foundation (WCF) dahil edilen ileti kodlayıcılarda arasından seçim ölçütleri bu konuda ele alınmıştır: ikili ve metin iletisi iletim en iyi duruma getirme mekanizması (MTOM).  
@@ -21,11 +21,11 @@ Windows Communication Foundation (WCF) dahil edilen ileti kodlayıcılarda aras�
 ## <a name="system-provided-encoders"></a>Sistem tarafından sağlanan kodlayıcılar  
  WCF aşağıdaki üç sınıf tarafından temsil edilen üç ileti kodlayıcılar içerir:  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>, metin ileti Kodlayıcı hem düz XML kodlama ve SOAP kodlamasına destekler. Metin ileti Kodlayıcı düz XML kodlama modunu "düz eski XML" olarak adlandırılır (POX metin tabanlı SOAP kodlamadan diğerine ayırt etmek için). POX etkinleştirmek için <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> özelliğini <xref:System.ServiceModel.Channels.MessageVersion.None%2A>. Metin ileti Kodlayıcı olmayan WCF uç noktaları ile çalışmak için kullanın.  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>, metin ileti Kodlayıcı hem düz XML kodlama ve SOAP kodlamasına destekler. Metin ileti Kodlayıcı düz XML kodlama modunu "düz eski XML" olarak adlandırılır (POX metin tabanlı SOAP kodlamadan diğerine ayırt etmek için). POX etkinleştirmek için <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> özelliğini <xref:System.ServiceModel.Channels.MessageVersion.None%2A>. Metin ileti Kodlayıcı olmayan WCF uç noktaları ile çalışmak için kullanın.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, ikili ileti Kodlayıcısı, sıkıştırılmış bir ikili biçimini kullanır ve WCF için WCF iletişim için optimize edilmiştir ve bu nedenle birlikte çalışabilir değil. En yüksek performanslı Kodlayıcı WCF sağlar kodlayıcıların karşılaştırılması de budur.  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, ikili ileti Kodlayıcısı, sıkıştırılmış bir ikili biçimini kullanır ve WCF için WCF iletişim için optimize edilmiştir ve bu nedenle birlikte çalışabilir değil. En yüksek performanslı Kodlayıcı WCF sağlar kodlayıcıların karşılaştırılması de budur.  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, bağlama öğesi, karakter kodlamasını ve ileti sürüm oluşturmayı MTOM kodlama kullanarak iletileri için belirtir. MTOM WCF iletilerinde ikili veri aktarımı için verimli bir teknolojidir. MTOM Kodlayıcısı verimliliği ve birlikte çalışabilirlik arasında bir denge oluşturmaya çalışır. MTOM kodlama çoğu XML metin biçiminde aktarır, ancak büyük ikili veri blokları olarak ileterek iyileştirir-olan metin dönüştürme olmadan. WCF sağlar, kodlayıcılarda arasında verimliliği açısından MTOM (yavaş) raflarının metin ve ikili (hızlı) var.  
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, bağlama öğesi, karakter kodlamasını ve ileti sürüm oluşturmayı MTOM kodlama kullanarak iletileri için belirtir. MTOM WCF iletilerinde ikili veri aktarımı için verimli bir teknolojidir. MTOM Kodlayıcısı verimliliği ve birlikte çalışabilirlik arasında bir denge oluşturmaya çalışır. MTOM kodlama çoğu XML metin biçiminde aktarır, ancak büyük ikili veri blokları olarak ileterek iyileştirir-olan metin dönüştürme olmadan. WCF sağlar, kodlayıcılarda arasında verimliliği açısından MTOM (yavaş) raflarının metin ve ikili (hızlı) var.  
   
 ## <a name="how-to-choose-a-message-encoder"></a>İleti Kodlayıcı seçme  
  Aşağıdaki tabloda, bir ileti Kodlayıcı seçmek için kullanılan ortak faktörleri anlatılmaktadır. Uygulamanız için önemlidir ve ileti kodlayıcılarda en iyi çalışan seçin faktörlerin faktörlerle öncelik verin. Bu tabloda ve uygulamanızı gerekli tüm özel ileti kodlayıcılar listelenmeyen ek faktörleri dikkate aldığınızdan emin olun.  

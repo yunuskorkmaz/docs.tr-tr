@@ -8,11 +8,11 @@ ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f05f66af71b86ccaefe19c0ddce2bfe7572f1084
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627898"
 ---
 # <a name="net-framework-application-essentials"></a>.NET Framework Uygulama Temelleri
 .NET Framework belgelerinin bu bölümü, .NET Framework içindeki temel uygulama geliştirme görevleri hakkında bilgi sağlar.  
@@ -37,9 +37,9 @@ ms.locfileid: "33567581"
  .NET Framework tarafından sağlanan hata işlemeyi ve özel durumları işlemenin temellerini açıklar.  
   
  [Dosya ve Akış G/Ç'si](../../docs/standard/io/index.md)  
- Ne zaman uyumlu ve zaman uyumsuz dosya gerçekleştirebilir ve veri erişim akışı ve yalıtılmış depolama için kullanmayı açıklar.  
+ Eşzamanlı ve eşzamansız dosya gerçekleştirebilir ve veri akışı erişimini nasıl ve yalıtılmış depolamanın kullanmayı açıklar.  
   
- [Tarih, saat ve saat dilimleri](../../docs/standard/datetime/index.md)  
+ [Tarihler, saatler ve saat dilimleri](../../docs/standard/datetime/index.md)  
  Saat dilimiyle uyumlu uygulamalarda saat dilimleri ve saat dilimi dönüşümleri ile nasıl çalışıldığını açıklar.  
   
  [Uygulama Etki Alanları ve Derlemeler](../../docs/framework/app-domains/index.md)  

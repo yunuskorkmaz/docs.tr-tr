@@ -11,11 +11,11 @@ ms.assetid: 983b4213-bddd-4a44-9262-cbe59186df4c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 544ea0f89dfa518c2ef18bffe2609d72e6fdee70
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638768"
 ---
 # <a name="how-to-create-and-execute-a-simple-plinq-query"></a>Nasıl yapılır: Basit bir PLINQ Sorgusu Oluşturma ve Yürütme
 Aşağıdaki örnek, kullanarak basit bir paralel LINQ Sorgu oluşturma işlemi gösterilmektedir <xref:System.Linq.ParallelEnumerable.AsParallel%2A> kaynak sırası ve kullanarak sorgu yürütülürken genişletme yöntemini <xref:System.Linq.ParallelEnumerable.ForAll%2A> yöntemi.  
@@ -27,7 +27,7 @@ Aşağıdaki örnek, kullanarak basit bir paralel LINQ Sorgu oluşturma işlemi 
  [!code-csharp[PLINQ#11](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/create1.cs#11)]
  [!code-vb[PLINQ#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/create1.vb#11)]  
   
- Bu örnek, oluşturmak ve sonucu bir dizi sırası önemli değildir, herhangi bir paralel LINQ Sorgu yürütme için temel düzeni gösterir; Sıralanmamış sorgular genellikle sıralı sorgular hızlıdır. Sorgu, birden çok iş parçacığında zaman uyumsuz olarak yürütülür görevlere kaynak bölümler. İçinde her görev tamamlandığında sırası, yalnızca iş öğeleri bölümünde işlemek için aynı zamanda işletim sistemi her iş parçacığı nasıl zamanlamaları gibi dış etkenlerle ilişkilerini bağlıdır. Bu örnek, kullanımını göstermek için tasarlanmıştır ve nesneleri sorgu için eşdeğer sıralı LINQ daha hızlı çalışmayabilir. Hızlandırmayı hakkında daha fazla bilgi için bkz: [plınq'te hızlandırmayı anlama](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md). Sorguda öğelerin sıralamasını koruması hakkında daha fazla bilgi için bkz [nasıl yapılır: PLINQ sorgusunda denetimi sıralama](../../../docs/standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md).  
+ Bu örnek, oluşturmak ve sonucu bir dizi sırası önemli değildir, herhangi bir paralel LINQ Sorgu yürütme için temel düzeni gösterir; Sıralanmamış sorgular genellikle sıralı sorgular hızlıdır. Sorgu, birden çok iş parçacığında zaman uyumsuz olarak yürütülür görevlere kaynak bölümler. İçinde her görev tamamlandığında sırası, yalnızca iş öğeleri bölümünde işlemek için aynı zamanda işletim sistemi her iş parçacığı nasıl zamanlamaları gibi dış etkenlerle ilişkilerini bağlıdır. Bu örnek, kullanımını göstermek için tasarlanmıştır ve nesneleri sorgu için eşdeğer sıralı LINQ daha hızlı çalışmayabilir. Hızlandırmayı hakkında daha fazla bilgi için bkz: [plınq'te hızlandırmayı anlama](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md). Bir sorguda öğelerin sıralamasını koruması hakkında daha fazla bilgi için bkz: [nasıl yapılır: PLINQ sorgusunda sıralama denetimi](../../../docs/standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

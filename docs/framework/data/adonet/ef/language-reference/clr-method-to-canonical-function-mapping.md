@@ -1,15 +1,15 @@
 ---
-title: CLR yöntemini kurallı işlev ile eşleme
+title: CLR Yöntemini Kurallı İşlev ile Eşleme
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
 ms.openlocfilehash: 16d447e82959f5ade7210b36dcf9d06bed9c9b00
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605723"
 ---
-# <a name="clr-method-to-canonical-function-mapping"></a>CLR yöntemini kurallı işlev ile eşleme
+# <a name="clr-method-to-canonical-function-mapping"></a>CLR Yöntemini Kurallı İşlev ile Eşleme
 
 Entity Framework, dize işlemleri ve matematik işlevleri gibi birçok veritabanı sistemleri arasında ortak olan işlevselliği uygulamak kurallı işlevler sunmaktadır. Bu, geliştiricilerin veritabanı sistemleri geniş bir hedef sağlar. Sorgulama teknoloji ve LINQ to Entities, gibi bunlar kurallı çağrılır, işlevleri için kullanılan sağlayıcısı doğru karşılık gelen depolama işleviyle çevrilir. Bu veri kaynakları arasında tutarlı sorgu deneyimi sağlayan veri kaynaklarında yaygın bir biçimde ifade edilmesi işlev çağrılarını sağlar. Bit düzeyinde AND, OR değil ve bir sayısal tür işleneni olduğunda XOR işleçleri için kurallı işlevler ayrıca eşlendi. Boole işlenenleri, bit düzeyinde AND, OR, NOT, için ve işlem mantıksal AND, OR, XOR işleçler ve işlenenleri XOR işlemlerini. Daha fazla bilgi için [kurallı işlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).
 
@@ -67,10 +67,10 @@ LINQ senaryoları için Entity Framework sorguları kurallı işlevler aracılı
 |System.DateTime.UtcNow|CurrentUtcDateTime()||
 |Boole op_Equality (DateTime `d1`, DateTime `d2`)|= işleci||
 |Boole op_GreaterThan (DateTime `t1`, DateTime `t2`)|> işleci||
-|Boole op_GreaterThanOrEqual (DateTime `t1`, DateTime `t2`)|>= işleci||
+|Boole op_GreaterThanOrEqual (DateTime `t1`, DateTime `t2`)|> = işleci||
 |Boole op_Inequality (DateTime `t1`, DateTime `t2`)|!= operator||
 |Boole op_LessThan (DateTime `t1`, DateTime `t2`)|< işleci||
-|Boole op_LessThanOrEqual (DateTime `t1`, DateTime `t2`)|<= işleci||
+|Boole op_LessThanOrEqual (DateTime `t1`, DateTime `t2`)|< = işleci||
 |Microsoft.VisualBasic.DateAndTime.DatePart (_<br /><br /> ByVal `Interval` DateInterval, olarak \_<br /><br /> ByVal `DateValue` DateTime, olarak \_<br /><br /> İsteğe bağlı ByVal `FirstDayOfWeekValue` FirstDayOfWeek olarak VbSunday, = \_<br /><br /> İsteğe bağlı ByVal `FirstWeekOfYearValue` FirstWeekOfYear olarak VbFirstJan1 = \_<br /><br /> ) Tamsayı olarak||Daha fazla bilgi için DatePart işlevi bölümüne bakın.|
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||
 |Microsoft.VisualBasic.DateAndTime.Year (DateTime `TimeValue`)|Year()||

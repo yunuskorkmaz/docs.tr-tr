@@ -14,18 +14,18 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
 ms.openlocfilehash: 302eb1b88d4e43b4e2bd6395e27a3a6489320085
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640407"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Nasıl yapılır: Bir TreeView veya ListView Denetimine Özel Bilgi Ekleme (Windows Forms)
 Windows Forms'ta türetilmiş bir düğüm oluşturabilirsiniz <xref:System.Windows.Forms.TreeView> denetimi veya türetilmiş bir öğede bir <xref:System.Windows.Forms.ListView> denetimi. Türetme yanı sıra özel yöntemleri ve bunları işlemek için oluşturucuları, gerekli tüm alanlar eklemenize olanak sağlar. Bu özellik bir kullanımı, her ağaç düğümü veya liste öğesi için bir müşteri nesnesi eklemektir. Buradaki örnekler için olan bir <xref:System.Windows.Forms.TreeView> için denetimi, ancak aynı yaklaşımı kullanılabilir bir <xref:System.Windows.Forms.ListView> denetimi.  
   
 ### <a name="to-derive-a-tree-node"></a>Bir ağaç düğümü türetmek için  
   
--   Türetilmiş yeni bir düğüm sınıfı oluşturmak <xref:System.Windows.Forms.TreeNode> dosya yolunu kaydetmek için özel bir alan olan sınıf.  
+- Türetilmiş yeni bir düğüm sınıfı oluşturmak <xref:System.Windows.Forms.TreeNode> dosya yolunu kaydetmek için özel bir alan olan sınıf.  
   
     ```vb  
     Class myTreeNode  

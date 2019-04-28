@@ -3,11 +3,11 @@ title: <localServiceSettings> öğesi
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
 ms.openlocfilehash: e987d14edde3af6aca2ceb392976abe3b6460c9c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614576"
 ---
 # <a name="localservicesettings-element"></a>\<localServiceSettings > öğesi
 Bu bağlama için yerel bir hizmetin güvenlik ayarlarını belirtir.  
@@ -76,13 +76,13 @@ Bu bağlama için yerel bir hizmetin güvenlik ayarlarını belirtir.
   
  Aşağıdaki öznitelikleri `localServiceSecuritySettings` öğesi bir hizmet reddi (DOS) güvenlik saldırısı azaltılmasına yardımcı olabilir:  
   
--   `maxCachedCookies`: zaman sınırlı SecurityContextTokens, sunucu tarafından SPNEGO veya SSL anlaşması yaptıktan sonra önbelleğe alınan en fazla sayısını denetler.  
+- `maxCachedCookies`: zaman sınırlı SecurityContextTokens, sunucu tarafından SPNEGO veya SSL anlaşması yaptıktan sonra önbelleğe alınan en fazla sayısını denetler.  
   
--   `issuedCookieLifetime`: SPNEGO veya SSL anlaşması aşağıdaki sunucu tarafından verilen SecurityContextTokens ömrünü denetler. Sunucu SecurityContextTokens bu süre boyunca önbelleğe alır.  
+- `issuedCookieLifetime`: SPNEGO veya SSL anlaşması aşağıdaki sunucu tarafından verilen SecurityContextTokens ömrünü denetler. Sunucu SecurityContextTokens bu süre boyunca önbelleğe alır.  
   
--   `maxPendingSessions`: sunucuda ancak herhangi bir uygulama iletisi işlendi için oluşturulan güvenli konuşma en fazla sayısını denetler. Bu kota, hizmetine güvenli konuşma oluşturma, böylelikle her istemci için durumunu korumak üzere bir hizmetin neden, ancak hiçbir zaman kullanarak istemcilerin önler.  
+- `maxPendingSessions`: sunucuda ancak herhangi bir uygulama iletisi işlendi için oluşturulan güvenli konuşma en fazla sayısını denetler. Bu kota, hizmetine güvenli konuşma oluşturma, böylelikle her istemci için durumunu korumak üzere bir hizmetin neden, ancak hiçbir zaman kullanarak istemcilerin önler.  
   
--   `inactivityTimeout`: en uzun süreyi denetimleri hizmet güvenli konuşma etkin bir uygulama iletisi üzerindeki almadan tutar. Bu kota, hizmetine güvenli konuşma oluşturma, böylelikle her istemci için durumunu korumak üzere bir hizmetin neden, ancak hiçbir zaman kullanarak istemcilerin önler.  
+- `inactivityTimeout`: en uzun süreyi denetimleri hizmet güvenli konuşma etkin bir uygulama iletisi üzerindeki almadan tutar. Bu kota, hizmetine güvenli konuşma oluşturma, böylelikle her istemci için durumunu korumak üzere bir hizmetin neden, ancak hiçbir zaman kullanarak istemcilerin önler.  
   
  Bir güvenli konuşma oturumu unutmayın hem `inactivityTimeout` ve `receiveTimeout` öznitelikleri bağlama üzerinde oturum zaman aşımı süresini etkiler. İki daha kısa zaman aşımları olduğunda belirler.  
   

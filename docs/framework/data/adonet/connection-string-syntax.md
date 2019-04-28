@@ -3,11 +3,11 @@ title: Bağlantı Dizesi Söz Dizimi
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
 ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608027"
 ---
 # <a name="connection-string-syntax"></a>Bağlantı Dizesi Söz Dizimi
 Her .NET Framework veri sağlayıcısı sahip bir `Connection` devralınan nesne <xref:System.Data.Common.DbConnection> sağlayıcıya özgü yanı sıra <xref:System.Data.Common.DbConnection.ConnectionString%2A> özelliği. Belirli bir bağlantı dizesi söz dizimi tüm sağlayıcılar için belgelenen kendi `ConnectionString` özelliği. Aşağıdaki tablo, .NET Framework'e dahil edilen dört veri sağlayıcıları listeler.  
@@ -22,13 +22,13 @@ Her .NET Framework veri sağlayıcısı sahip bir `Connection` devralınan nesne
 ## <a name="connection-string-builders"></a>Bağlantı Dizesi Oluşturucular  
  ADO.NET 2.0, .NET Framework veri sağlayıcıları için aşağıdaki bağlantı dizesi oluşturucular kullanıma sunuldu.  
   
--   <xref:System.Data.SqlClient.SqlConnectionStringBuilder>  
+- <xref:System.Data.SqlClient.SqlConnectionStringBuilder>  
   
--   <xref:System.Data.OleDb.OleDbConnectionStringBuilder>  
+- <xref:System.Data.OleDb.OleDbConnectionStringBuilder>  
   
--   <xref:System.Data.Odbc.OdbcConnectionStringBuilder>  
+- <xref:System.Data.Odbc.OdbcConnectionStringBuilder>  
   
--   <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
+- <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
  Bağlantı dizesi Oluşturucular, kodunuzdaki bağlantı dizesi değerlerini el ile birleştirilecek zorunda kalmazsınız sözdizimsel açıdan geçerli bağlantı dizeleri çalışma zamanında oluşturmak olanak tanır. Daha fazla bilgi için [bağlantı dizesi oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md).  
 

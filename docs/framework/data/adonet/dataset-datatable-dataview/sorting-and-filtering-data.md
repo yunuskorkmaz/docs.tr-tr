@@ -6,24 +6,24 @@ dev_langs:
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
 ms.openlocfilehash: 8d8bd85f65adfde5f239e1e2dd79d65517b745a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607433"
 ---
 # <a name="sorting-and-filtering-data"></a>Verileri Sıralama ve Filtreleme
 <xref:System.Data.DataView> İçindeki verileri sıralama ve filtreleme çeşitli yollarını sağlar bir <xref:System.Data.DataTable>:  
   
--   Kullanabileceğiniz <xref:System.Data.DataView.Sort%2A> tek belirtmek için özelliği veya sıralama düzenlerine ve ASC (artan) ve (Azalan) DESC parametreleri içeren birden çok sütunu.  
+- Kullanabileceğiniz <xref:System.Data.DataView.Sort%2A> tek belirtmek için özelliği veya sıralama düzenlerine ve ASC (artan) ve (Azalan) DESC parametreleri içeren birden çok sütunu.  
   
--   Kullanabileceğiniz <xref:System.Data.DataView.ApplyDefaultSort%2A> özelliği otomatik olarak bir sıralama düzeni artan düzende oluşturmak için temel tablonun sütunlarının ve birincil anahtar sütunu üzerinde. <xref:System.Data.DataView.ApplyDefaultSort%2A> yalnızca geçerli **sıralama** özelliği null bir başvuru ya da boş bir dize ve tabloda bir birincil anahtar tanımlı olduğunda.  
+- Kullanabileceğiniz <xref:System.Data.DataView.ApplyDefaultSort%2A> özelliği otomatik olarak bir sıralama düzeni artan düzende oluşturmak için temel tablonun sütunlarının ve birincil anahtar sütunu üzerinde. <xref:System.Data.DataView.ApplyDefaultSort%2A> yalnızca geçerli **sıralama** özelliği null bir başvuru ya da boş bir dize ve tabloda bir birincil anahtar tanımlı olduğunda.  
   
--   Kullanabileceğiniz <xref:System.Data.DataView.RowFilter%2A> satır kümelerine belirtmek için özellik sütun değerlerine bağlı. İçin geçerli ifadeler hakkında daha fazla ayrıntı için **RowFilter** özelliğine başvuru bilgilerine bakın <xref:System.Data.DataColumn.Expression%2A> özelliği <xref:System.Data.DataColumn> sınıfı.  
+- Kullanabileceğiniz <xref:System.Data.DataView.RowFilter%2A> satır kümelerine belirtmek için özellik sütun değerlerine bağlı. İçin geçerli ifadeler hakkında daha fazla ayrıntı için **RowFilter** özelliğine başvuru bilgilerine bakın <xref:System.Data.DataColumn.Expression%2A> özelliği <xref:System.Data.DataColumn> sınıfı.  
   
      Verilerin bir alt kümesini, dinamik bir görünüm sağlayarak veriler üzerinde belirli bir sorgu sonuçlarını kullanma dönmek istiyorsanız <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> yöntemlerinin **DataView** en iyi performans elde etmek için değil ayarı **RowFilter** özelliği. Ayarı **RowFilter** özelliği yükü uygulamanıza ekleme ve performansı azaltarak veri dizini oluşturur. **RowFilter** özelliği en iyi şekilde kullanılır verilere bağlı uygulamada nereye bağlantılı denetim filtrelenmiş sonuçları görüntüler. **Bul** ve **FindRows** yöntemleri, yeniden oluşturulması için dizini gerek kalmadan geçerli dizini yararlanın. Hakkında daha fazla bilgi için **Bul** ve **FindRows** yöntemleri bkz [satırları bulma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md).  
   
--   Kullanabileceğiniz <xref:System.Data.DataView.RowStateFilter%2A> özelliği görüntülemek için hangi satır sürümleri belirtin. **DataView** örtük olarak bağlı olarak kullanıma sunmak için hangi satır sürümünü yönetir **RowState** temel alınan satır. Örneğin, varsa **RowStateFilter** ayarlanır **DataViewRowState.Deleted**, **DataView** sunan **özgün** satır sürümü tüm **silinmiş** olduğundan satırları hiçbir **geçerli** satır sürümü. Satır hangi satır sürümünü kullanarak açıklanmasını belirlemek **RowVersion** özelliği **DataRowView**.  
+- Kullanabileceğiniz <xref:System.Data.DataView.RowStateFilter%2A> özelliği görüntülemek için hangi satır sürümleri belirtin. **DataView** örtük olarak bağlı olarak kullanıma sunmak için hangi satır sürümünü yönetir **RowState** temel alınan satır. Örneğin, varsa **RowStateFilter** ayarlanır **DataViewRowState.Deleted**, **DataView** sunan **özgün** satır sürümü tüm **silinmiş** olduğundan satırları hiçbir **geçerli** satır sürümü. Satır hangi satır sürümünü kullanarak açıklanmasını belirlemek **RowVersion** özelliği **DataRowView**.  
   
      Aşağıdaki tabloda ilişkin seçenekler gösterilir **DataViewRowState**.  
   

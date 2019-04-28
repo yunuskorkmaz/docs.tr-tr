@@ -5,11 +5,11 @@ ms.date: 07/26/2017
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
 ms.openlocfilehash: bd92e39a7b53e2807aff687f6dfbf71be34a506d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628176"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -39,8 +39,8 @@ Analiz çalıştırdıktan sonra .NET taşınabilirlik raporunuzu görürsünüz
 
 Visual Studio kullanmak istemiyor musunuz? Komut isteminden taşınabilirlik Çözümleyicisi'ni de kullanabilirsiniz. Hemen indirin [API Portability Analyzer](https://www.microsoft.com/download/details.aspx?id=42678).
 
-*   Geçerli dizin analiz etmek için aşağıdaki komutu yazın: `\...\ApiPort.exe analyze -f .`
-*   Belirli bir .dll dosyaları listesini analiz etmek için aşağıdaki komutu yazın: `\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
+* Geçerli dizin analiz etmek için aşağıdaki komutu yazın: `\...\ApiPort.exe analyze -f .`
+* Belirli bir .dll dosyaları listesini analiz etmek için aşağıdaki komutu yazın: `\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
 
 .NET taşınabilirlik raporunuzu bir Excel dosyası olarak kaydedildi (*.xlsx*) geçerli dizininizde. **Ayrıntıları** Excel çalışma kitabı sekmesi daha fazla bilgi içerir.
 

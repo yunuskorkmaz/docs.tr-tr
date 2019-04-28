@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Çok biçimli sorgu yürütme'
+title: 'Nasıl yapılır: Çok Biçimli Sorgu Yürütme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2f05da1e-845b-4f14-83e4-c6353a850553
 ms.openlocfilehash: 08ae5722267ef781ed6bee59c7895269f63a75e5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606196"
 ---
-# <a name="how-to-execute-a-polymorphic-query"></a>Nasıl yapılır: Çok biçimli sorgu yürütme
+# <a name="how-to-execute-a-polymorphic-query"></a>Nasıl yapılır: Çok Biçimli Sorgu Yürütme
 
 Bu konuda, bir çok biçimli yürütülecek gösterilmektedir [!INCLUDE[esql](../../../../../includes/esql-md.md)] kullanarak sorgu [OFTYPE](../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md) işleci.
 

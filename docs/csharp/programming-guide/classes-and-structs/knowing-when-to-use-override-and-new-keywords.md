@@ -8,11 +8,11 @@ helpviewer_keywords:
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
 ms.openlocfilehash: b1d99b0c5241a99ba7f621faff7c39d20776b2ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646161"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme (C# Programlama Kılavuzu)
 C# ' ta türetilen bir sınıfta bir yöntem temel sınıfta bir yöntem adıyla aynı olabilir. Yöntemleri kullanarak etkileşimini belirtebilirsiniz [yeni](../../../csharp/language-reference/keywords/new.md) ve [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) anahtar sözcükleri. `override` Değiştiricisi *genişletir* temel sınıf yöntemini ve `new` değiştiricisi *gizler* bu. Fark, bu konudaki örneklerde gösterilmiştir.  
@@ -39,11 +39,11 @@ class DerivedClass : BaseClass
   
  İçinde `Main` yöntemi, değişkenleri `bc`, `dc`, ve `bcdc`.  
   
--   `bc` tür `BaseClass`, ve değeri türü `BaseClass`.  
+- `bc` tür `BaseClass`, ve değeri türü `BaseClass`.  
   
--   `dc` tür `DerivedClass`, ve değeri türü `DerivedClass`.  
+- `dc` tür `DerivedClass`, ve değeri türü `DerivedClass`.  
   
--   `bcdc` tür `BaseClass`, ve değeri türü `DerivedClass`. Değişken dikkat edilmesi gereken budur.  
+- `bcdc` tür `BaseClass`, ve değeri türü `DerivedClass`. Değişken dikkat edilmesi gereken budur.  
   
  Çünkü `bc` ve `bcdc` türüne sahip `BaseClass`, yalnızca doğrudan erişebilir `Method1`atama kullandığınız sürece. Değişken `dc` hem erişim `Method1` ve `Method2`. Bu ilişkiler aşağıdaki kodda gösterilmiştir.  
   

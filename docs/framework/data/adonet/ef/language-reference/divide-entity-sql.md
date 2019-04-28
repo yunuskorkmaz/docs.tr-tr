@@ -3,11 +3,11 @@ title: '- (Bölme) (Varlık SQL)'
 ms.date: 03/30/2017
 ms.assetid: ef48c368-f3ed-4275-8ada-4e9649781262
 ms.openlocfilehash: c3b477a63adf3c3d51f28449e94c2b716422296c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59330863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606068"
 ---
 # <a name="-divide-entity-sql"></a>/ (Bölme (varlık SQL))
 Bir sayıyı bir başkası tarafından böler.  

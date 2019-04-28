@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e6d8023c7ac6d917c9df40fb18316ddc12df5ec1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609428"
 ---
 # <a name="corilmap-structure"></a>COR_IL_MAP Yapısı
 Değişiklikleri, bir işlevin göreli uzaklığı belirtir.  
@@ -49,37 +49,37 @@ typedef struct _COR_IL_MAP {
   
  Düzgün çalışması için atlamak için aşağıdaki gereksinimlerin karşılanması:  
   
--   Harita, artan düzende sıralanmalıdır.  
+- Harita, artan düzende sıralanmalıdır.  
   
--   İzleme eklenmiş MSIL kodu edilip edilmemesi gerektiğini değil.  
+- İzleme eklenmiş MSIL kodu edilip edilmemesi gerektiğini değil.  
   
--   Özgün MSIL kodu kaldırılmamalıdır.  
+- Özgün MSIL kodu kaldırılmamalıdır.  
   
--   Eşleme girişleri program veritabanı (PDB) dosyasındaki dizi noktalarını eşlemek için içermelidir.  
+- Eşleme girişleri program veritabanı (PDB) dosyasındaki dizi noktalarını eşlemek için içermelidir.  
   
  Harita eksik girdiler enterpolasyon değil. Aşağıdaki örnek, bir harita ve sonuçları gösterir.  
   
  Eşleme:  
   
--   0 eski uzaklığı, 0 yeni uzaklık  
+- 0 eski uzaklığı, 0 yeni uzaklık  
   
--   5 eski uzaklığı, 10 yeni uzaklık  
+- 5 eski uzaklığı, 10 yeni uzaklık  
   
--   9 eski uzaklığı, 20 yeni uzaklık  
+- 9 eski uzaklığı, 20 yeni uzaklık  
   
  Sonuçları:  
   
--   0, 1, 2, 3 veya 4 eski uzaklığı 0'ın yeni bir uzaklık eşleştirilir.  
+- 0, 1, 2, 3 veya 4 eski uzaklığı 0'ın yeni bir uzaklık eşleştirilir.  
   
--   Eski bir uzaklık 5, 6, 7 veya 8, 10 yeni uzaklık eşleştirilir.  
+- Eski bir uzaklık 5, 6, 7 veya 8, 10 yeni uzaklık eşleştirilir.  
   
--   9 veya daha eski bir uzaklık yeni uzaklık 20 eşleştirilir.  
+- 9 veya daha eski bir uzaklık yeni uzaklık 20 eşleştirilir.  
   
--   Yeni bir uzaklığı 0, 1, 2, 3, 4, 5, 6, 7, 8 veya 9 eski uzaklığı 0 eşleştirilir.  
+- Yeni bir uzaklığı 0, 1, 2, 3, 4, 5, 6, 7, 8 veya 9 eski uzaklığı 0 eşleştirilir.  
   
--   Yeni bir uzaklık 10, 11, 12, 13, 14, 15, 16, 17, 18 veya 19 eski uzaklığı 5 eşleştirilir.  
+- Yeni bir uzaklık 10, 11, 12, 13, 14, 15, 16, 17, 18 veya 19 eski uzaklığı 5 eşleştirilir.  
   
--   20 veya üzeri bir yeni uzaklığı eski uzaklığı 9 eşleştirilir.  
+- 20 veya üzeri bir yeni uzaklığı eski uzaklığı 9 eşleştirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

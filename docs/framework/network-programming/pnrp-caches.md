@@ -6,8 +6,8 @@ ms.openlocfilehash: 9cd1901e716cab9f1b47825a5d3ecdb071a58440
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642015"
 ---
 # <a name="pnrp-caches"></a>PNRP Önbellekleri
 Eş Adı Çözümleme Protokolü (PNRP) önbellekler algorithmically seçili eş uç noktaları eş tutulan yerel koleksiyonlarıdır.  
@@ -15,9 +15,9 @@ Eş Adı Çözümleme Protokolü (PNRP) önbellekler algorithmically seçili eş
 ## <a name="pnrp-cache-initialization"></a>PNRP önbellek başlatma  
  Bir eşdüzey düğüm başlatıldığında PNRP önbellek ya da eş ad kaydı koleksiyonuna başlatmak için bir düğüm aşağıdaki yöntemleri kullanabilirsiniz:  
   
--   Düğüm kapatıldığı sırada mevcut kalıcı önbellek girişlerinin sabit disk depolama alanından yüklenir.  
+- Düğüm kapatıldığı sırada mevcut kalıcı önbellek girişlerinin sabit disk depolama alanından yüklenir.  
   
--   Bir uygulama P2P işbirliği altyapınızın kullanıyorsa, kişinin Yöneticisi'nde bu düğüm için işbirliği bilgileri kullanılabilir.  
+- Bir uygulama P2P işbirliği altyapınızın kullanıyorsa, kişinin Yöneticisi'nde bu düğüm için işbirliği bilgileri kullanılabilir.  
   
 ## <a name="scaling-peer-name-resolution-with-a-multi-level-cache"></a>Eş adı çözümleme çok düzeyli bir önbellek ile ölçeklendirme  
  PNRP önbellekleri boyutlarını küçük tutmak için her düzeyi bir giriş sayısı üst sınırı içeren, çok düzeyli bir önbellek eş düğümleri kullanın. Önbellekteki her düzeyi bir saniyenin onda daha küçük bir bölümünü PNRP kimlik numarası alanı temsil eder (2<sup>256</sup>). Önbellekteki en alt düzeyin bir yerel olarak kayıtlı PNRP kimliği ve sayısal olarak onu yakın olan diğer PNRP kimlikleri içeriyor. Yeni bir alt düzey önbelleği düzeyini, en fazla 20 girişleri ile doldurulmuş şekilde oluşturulur. Log10 bazında önbelleğinde düzeylerinin sayısı olan (PNRP kimlikleri bulutta toplam sayısı). Örneğin, bir genel bulut için 100 milyon PNRP kimlikleri vardır en fazla 8 (=log10(100,000,000)) düzeyleri önbellek ve benzer bir ad çözümlemesi sırasında PNRP kimliği çözmek için atlama sayısı. Bir rastgele PNRP kimliği için çözülebilir karşılık gelen CPA Eşle bulunana kadar PNRP istek iletilerini sonraki en yakın eşler arası iletme tarafından dağıtılmış karma tablo bu mekanizma sağlar.  

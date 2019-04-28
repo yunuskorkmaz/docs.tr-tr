@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3d339fbadc3260d20fac848ad7f1a9031c3443aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638807"
 ---
 # <a name="iclrpolicymanagersetdefaultaction-method"></a>ICLRPolicyManager::SetDefaultAction Yöntemi
 Ortak dil çalışma zamanı (CLR) belirtilen işlemi oluştuğunda gerçekleştirmesi gereken ilke eylemi belirtir.  

@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 7b9017c30deebf6762b60d70e2be0b68ab5e27fc
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 79154713e370029ff31591523525fb05422571d8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627885"
 ---
 # <a name="async-in-depth"></a>Zaman uyumsuz derinlemesine
 
@@ -82,7 +82,7 @@ Sistem API çağrısından sonra isteği artık çekirdek alanında ağ alt sist
 
 Örneğin, Windows işletim sistemi iş parçacığı ağ cihaz sürücüsü çağrıda ve ağ üzerinden bir kesme istek Paketi'ni (IRP) işlemi gerçekleştirmek için bu işlemi temsil eden ister.  Aygıt sürücüsü IRP alır, ağ çağrıda, IRP "bekliyor" olarak işaretler ve işletim sistemine geri döndürür.  İşletim sistemi iş parçacığı artık IRP "bekliyor" olduğunu bildiğinden, bu proje için yapmak için daha fazla bir iş içermiyorsa ve "geri bu diğer işlemleri gerçekleştirmesi için kullanılabilir, böylece döndürür".
 
-İstek yerine veri aygıt sürücüsü geri gelir, yeni veri kesme alınan CPU bildirir.  Bu kesme nasıl ele, işletim sistemi bağlı olarak farklılık gösterir ancak sistem birlikte çalışma çağrısı ulaşana kadar sonunda veriler işletim sistemi geçirilir (örneğin, Linux'ta bir kesme işleyicisi altındaki işletim sistemi veri iletmek için IRQ yarısını zamanlar  zaman uyumsuz olarak).  Not Bu *ayrıca* zaman uyumsuz olarak olur!  Sonucu bir sonraki kullanılabilir iş parçacığı bulabildiği kadar kuyruğa alınır zaman uyumsuz yöntemin ve "Tamamlanan görevin sonucu kaydırma".
+İstek yerine veri aygıt sürücüsü geri gelir, yeni veri kesme alınan CPU bildirir.  Bu kesme nasıl ele, işletim sistemi bağlı olarak farklılık gösterir ancak sistem birlikte çalışma çağrısı ulaşana kadar sonunda veriler işletim sistemi geçirilir (örneğin, Linux'ta bir kesme işleyicisi altındaki işletim sistemi veri iletmek için IRQ yarısını zamanlar  zaman uyumsuz olarak).  Not Bu *ayrıca* zaman uyumsuz olarak olur!  Sonucu bir sonraki kullanılabilir iş parçacığı zaman uyumsuz yöntemin ve "Tamamlanan görevin sonucu kaydırma" kadar kuyruğa alınır.
 
 Tüm bu işlem boyunca bir güvenebileceğinizdir olan **iş parçacığının görevi çalıştırmak için adanmış**.  İş bazı bağlam içinde yürütülen rağmen (diğer bir deyişle, işletim sistemi veri iletmek için bir aygıt sürücüsü ve kesme için yanıt yok), için adanmış iş parçacığı yok *bekleyen* geri dönmeniz istek verileri.  Bu, sistemin bazı g/ç çağrısı tamamlanması bekleniyor yerine iş çok daha büyük bir birime işlemesini sağlar.
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
 ms.openlocfilehash: dae044a9d7802e858f1f24dd4aa0f1de8f6cba7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607027"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>XML Verileri Olarak DataSet İçeriği Yazma
 ADO.NET içinde bir XML temsilini yazabileceğiniz bir <xref:System.Data.DataSet>, ile veya olmadan şeması. XML ile satır içi şema bilgileri ise XML Şeması Tanım Dili (XSD) kullanarak yazılır. Tablo tanımları şema içeriyor <xref:System.Data.DataSet> ilişki ve kısıtlama tanımları yanı sıra.  

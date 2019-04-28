@@ -6,8 +6,8 @@ ms.openlocfilehash: ad0566eaff08d27e8368f091388adda7376a37ef
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59978919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608650"
 ---
 # <a name="contract-first-tool"></a>Önce Anlaşma Aracı
 Hizmet sözleşmeleri, genellikle var olan hizmetlerden oluşturulan gerekir. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], veri sözleşme sınıfları oluşturulabilir otomatik olarak önce anlaşma aracı kullanarak mevcut hizmetlerden. Önce anlaşma aracı kullanmak için XML şema tanımı dosyası (XSD) yerel olarak indirilmelidir; aracın HTTP üzerinden uzak veri sözleşmeleri içeri aktarılamıyor.
@@ -69,31 +69,31 @@ Hizmet sözleşmeleri, genellikle var olan hizmetlerden oluşturulan gerekir. İ
 
  Gelişmiş ayarlar aşağıdaki anlaşmalarından alınan kod oluşturma için yapılandırılabilir. Ayarlar, yalnızca tüm proje dosyaları için yapılandırılabilir; ayarları tek tek dosyalar için şu anda yapılandırılamaz.
 
--   **Serializer mod**: Bu ayar, hangi seri hale getirici hizmet sözleşme dosyaları okumak için kullanılan belirler. Zaman **XML serileştiricisi** seçildiğinde **koleksiyon türleri** ve **yeniden türleri** seçenekleri devre dışı bırakıldı. Bu seçenekler yalnızca uygulamak **veri sözleşmesi serileştiricisi**.
+- **Serializer mod**: Bu ayar, hangi seri hale getirici hizmet sözleşme dosyaları okumak için kullanılan belirler. Zaman **XML serileştiricisi** seçildiğinde **koleksiyon türleri** ve **yeniden türleri** seçenekleri devre dışı bırakıldı. Bu seçenekler yalnızca uygulamak **veri sözleşmesi serileştiricisi**.
 
--   **Türleri yeniden kullan**: Bu ayar, türün yeniden kullanımı için hangi kitaplıkların kullanıldığı belirtir. Bu ayar yalnızca geçerlidir **Serializer mod** ayarlanır **veri sözleşmesi serileştiricisi**.
+- **Türleri yeniden kullan**: Bu ayar, türün yeniden kullanımı için hangi kitaplıkların kullanıldığı belirtir. Bu ayar yalnızca geçerlidir **Serializer mod** ayarlanır **veri sözleşmesi serileştiricisi**.
 
--   **Koleksiyon türü**: Bu ayar, koleksiyon veri türü için kullanılacak tam veya bütünleştirilmiş kodla nitelenen tür belirtir. Bu ayar yalnızca geçerlidir **Serializer mod** ayarlanır **veri sözleşmesi serileştiricisi**.
+- **Koleksiyon türü**: Bu ayar, koleksiyon veri türü için kullanılacak tam veya bütünleştirilmiş kodla nitelenen tür belirtir. Bu ayar yalnızca geçerlidir **Serializer mod** ayarlanır **veri sözleşmesi serileştiricisi**.
 
--   **Sözlük türü**: Bu ayar, sözlük veri türü için kullanılacak tam veya bütünleştirilmiş kodla nitelenen tür belirtir.
+- **Sözlük türü**: Bu ayar, sözlük veri türü için kullanılacak tam veya bütünleştirilmiş kodla nitelenen tür belirtir.
 
--   **EnableDataBinding**: Bu ayar uygulanmayacağını belirtir <xref:System.ComponentModel.INotifyPropertyChanged> veri bağlama uygulamak için tüm veri türlerinde arabirimi.
+- **EnableDataBinding**: Bu ayar uygulanmayacağını belirtir <xref:System.ComponentModel.INotifyPropertyChanged> veri bağlama uygulamak için tüm veri türlerinde arabirimi.
 
--   **Excludedtypes'a**: Bu ayar, başvurulan derlemelerden dışlanacak tam veya bütünleştirilmiş kodla nitelenen türlerin listesini belirtir. Bu ayar yalnızca geçerlidir **Serializer mod** ayarlanır **veri sözleşmesi serileştiricisi**.
+- **Excludedtypes'a**: Bu ayar, başvurulan derlemelerden dışlanacak tam veya bütünleştirilmiş kodla nitelenen türlerin listesini belirtir. Bu ayar yalnızca geçerlidir **Serializer mod** ayarlanır **veri sözleşmesi serileştiricisi**.
 
--   **GenerateInternalTypes**: Bu ayar iç olarak işaretlenmiş sınıfların oluşturulup oluşturulmayacağını belirtir. Bu ayar yalnızca geçerlidir **Serializer mod** ayarlanır **veri sözleşmesi serileştiricisi**.
+- **GenerateInternalTypes**: Bu ayar iç olarak işaretlenmiş sınıfların oluşturulup oluşturulmayacağını belirtir. Bu ayar yalnızca geçerlidir **Serializer mod** ayarlanır **veri sözleşmesi serileştiricisi**.
 
--   **GenerateSerializableTypes**: Bu ayar ile sınıfların oluşturulup oluşturulmayacağını belirtir <xref:System.SerializableAttribute> özniteliği. Bu ayar yalnızca geçerlidir **Serializer mod** ayarlanır **veri sözleşmesi serileştiricisi**.
+- **GenerateSerializableTypes**: Bu ayar ile sınıfların oluşturulup oluşturulmayacağını belirtir <xref:System.SerializableAttribute> özniteliği. Bu ayar yalnızca geçerlidir **Serializer mod** ayarlanır **veri sözleşmesi serileştiricisi**.
 
--   **ImportXMLTypes**: Bu ayar uygulamak için veri sözleşmesi serileştiricisi yapılandırılıp yapılandırılmayacağını belirtir <xref:System.SerializableAttribute> özniteliği sınıflarına <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği.  Bu ayar yalnızca geçerlidir **Serializer mod** ayarlanır **veri sözleşmesi serileştiricisi**.
+- **ImportXMLTypes**: Bu ayar uygulamak için veri sözleşmesi serileştiricisi yapılandırılıp yapılandırılmayacağını belirtir <xref:System.SerializableAttribute> özniteliği sınıflarına <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği.  Bu ayar yalnızca geçerlidir **Serializer mod** ayarlanır **veri sözleşmesi serileştiricisi**.
 
--   **SupportFx35TypedDataSets**: Bu ayar, .NET Framework 3.5 için oluşturulmuş, türü belirlenmiş veri kümeleri için ek işlevler sağlamasına olanak belirtir. Zaman **Serializer mod** ayarlanır **XML serileştiricisi**, <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> uzantısı bu değeri True olarak ayarlandığında XML şema içeri Aktarıcı için eklenir. Zaman **Serializer mod** ayarlanır **veri sözleşmesi serileştiricisi**, türü <xref:System.DateTimeOffset> bu değeri False olarak ayarlandığında başvurularından dahil edilmeyecek şekilde bir <xref:System.DateTimeOffset> her zaman oluşturulur eski çerçeve sürümleri için.
+- **SupportFx35TypedDataSets**: Bu ayar, .NET Framework 3.5 için oluşturulmuş, türü belirlenmiş veri kümeleri için ek işlevler sağlamasına olanak belirtir. Zaman **Serializer mod** ayarlanır **XML serileştiricisi**, <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> uzantısı bu değeri True olarak ayarlandığında XML şema içeri Aktarıcı için eklenir. Zaman **Serializer mod** ayarlanır **veri sözleşmesi serileştiricisi**, türü <xref:System.DateTimeOffset> bu değeri False olarak ayarlandığında başvurularından dahil edilmeyecek şekilde bir <xref:System.DateTimeOffset> her zaman oluşturulur eski çerçeve sürümleri için.
 
--   **InputXsdFiles**: Bu ayar, girdi dosyası listesini belirtir. Her dosya geçerli bir XML Şeması içermelidir.
+- **InputXsdFiles**: Bu ayar, girdi dosyası listesini belirtir. Her dosya geçerli bir XML Şeması içermelidir.
 
--   **Dil**: Bu ayar, oluşturulan sözleşme kodunun dilini belirtir. Ayarı tarafından tanınan <xref:System.CodeDom.Compiler.CodeDomProvider>.
+- **Dil**: Bu ayar, oluşturulan sözleşme kodunun dilini belirtir. Ayarı tarafından tanınan <xref:System.CodeDom.Compiler.CodeDomProvider>.
 
--   **NamespaceMappings**: Bu ayar, XSD hedef ad alanından eşlemeleri için CLR ad uzayını belirtir. Her eşleme, şu biçimi kullanmalıdır:
+- **NamespaceMappings**: Bu ayar, XSD hedef ad alanından eşlemeleri için CLR ad uzayını belirtir. Her eşleme, şu biçimi kullanmalıdır:
 
     ```xml
     "<Schema Namespace>, <CLR Namespace>"
@@ -105,7 +105,7 @@ Hizmet sözleşmeleri, genellikle var olan hizmetlerden oluşturulan gerekir. İ
     "*, <CLR Namespace>"
     ```
 
--   **OutputDirectory**: Bu ayar, kod dosyaları oluşturulacağı dizini belirtir.
+- **OutputDirectory**: Bu ayar, kod dosyaları oluşturulacağı dizini belirtir.
 
  Ayarları, proje oluşturulduğunda Hizmet anlaşması türleri hizmet sözleşmesi dosyaları oluşturmak için kullanılır.
 

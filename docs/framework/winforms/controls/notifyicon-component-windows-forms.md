@@ -12,11 +12,11 @@ helpviewer_keywords:
 - SysTray icons
 ms.assetid: 20312268-1d67-494a-8601-5c43b7f1b513
 ms.openlocfilehash: b1237a1280142cf65002ca307179b054a8fb7dd2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627817"
 ---
 # <a name="notifyicon-component-windows-forms"></a>NotifyIcon Bileşeni (Windows Forms)
 Windows Forms `NotifyIcon` bileşen arka planda çalışır ve aksi takdirde çıkarmayacaktır işlemler kullanıcı arabirimini kullanıyorsunuzdur için bu simgeleri görev çubuğuna durum bildirim alanında görüntüler. Görev çubuğu durum bildirim alanındaki simgeye tıklayarak erişilebilir bir virüs koruma programı örnek verilebilir.  

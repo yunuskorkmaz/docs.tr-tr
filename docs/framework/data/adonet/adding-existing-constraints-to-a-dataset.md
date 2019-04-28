@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
 ms.openlocfilehash: 18c391e97baa170b78dcfe0165fb38b6c6d739f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607290"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>DataSet’e Var Olan Kısıtlamaları Ekleme
 **Dolgu** yöntemi **DataAdapter** dolduran bir <xref:System.Data.DataSet> yalnızca tablo sütunları ve satırları bir veri kaynağından; ile ancak kısıtlamaları yaygın olarak ayarlanmış veri kaynağı tarafından **doldurun** yöntemi için bu şema bilgileri eklemez **veri kümesi** varsayılan olarak. Doldurmak için bir **veri kümesi** bir veri kaynağından varolan birincil anahtar kısıtlaması bilgilerle çağrısı yapabilirsiniz **FillSchema** yöntemi **DataAdapter**, veya ayarlama **MissingSchemaAction** özelliği **DataAdapter** için **AddWithKey** çağırmadan önce **dolgu**. Bu birincil anahtara sağlayacak kısıtlamalarını **veri kümesi** bu veri kaynağında yansıtır. Yabancı anahtar kısıtlaması bilgileri dahil değildir ve açıkça gösterildiği oluşturulmalıdır [DataTable kısıtlamaları](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  

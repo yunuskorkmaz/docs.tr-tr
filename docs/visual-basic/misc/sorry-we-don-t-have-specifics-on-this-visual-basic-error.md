@@ -3045,11 +3045,11 @@ f1_keywords:
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
 ms.openlocfilehash: 6a339fc91ce5e1b4ff3c5cbaacdae72f02fdf733
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58022972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61594782"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>Maalesef bu Visual Basic hatasıyla ilgili ayrıntı yok
 Özür dileriz, ancak Biz bu hata hakkındaki belirli bilgilere sahip değildir. Web'deki bilgileri bulmak hata sayısı ve ileti metni için arama yapabilirsiniz. Veya şu forumlardan birine kullanarak diğer geliştiriciler isteyebilirsiniz:  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
 ms.openlocfilehash: 245d2cc36abde76a8f8bd73bae5d7ede183d4d03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638037"
 ---
 # <a name="get-statement"></a>Get Deyimi
 Bildiren bir `Get` özellik yordamı bir özelliğin değerini almak için kullanılır.  
@@ -49,23 +49,23 @@ End Get
   
 ## <a name="rules"></a>Kurallar  
   
--   **Karışık erişim düzeyleri.** Okuma-yazma özelliği tanımlıyorsanız, isteğe bağlı olarak farklı erişim düzeyi için belirtebilirsiniz `Get` veya `Set` yordamı, ancak ikisine birden değil. Bunu yaparsanız, yordam erişim düzeyi özellik erişim düzeyinden daha kısıtlayıcı olmalıdır. Örneğin, özellik bildirilirse `Friend`, bildirebilirsiniz `Get` yordamı `Private`, ama `Public`.  
+- **Karışık erişim düzeyleri.** Okuma-yazma özelliği tanımlıyorsanız, isteğe bağlı olarak farklı erişim düzeyi için belirtebilirsiniz `Get` veya `Set` yordamı, ancak ikisine birden değil. Bunu yaparsanız, yordam erişim düzeyi özellik erişim düzeyinden daha kısıtlayıcı olmalıdır. Örneğin, özellik bildirilirse `Friend`, bildirebilirsiniz `Get` yordamı `Private`, ama `Public`.  
   
      Tanımlıyorsanız, bir `ReadOnly` özelliği `Get` yordamı tüm özelliği temsil eder. Farklı bir erişim düzeyini bildiremezsiniz `Get`, iki erişim düzeyi özelliği ayarlamanız gerekir.  
   
--   **Dönüş türü.** [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md) döndürdüğü değerin veri türü bildirebilirsiniz. `Get` Yordamı otomatik olarak döndürür veri türü. Herhangi bir veri türü veya bir sabit listesi, yapısı, sınıf veya arabirim adını belirtebilirsiniz.  
+- **Dönüş türü.** [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md) döndürdüğü değerin veri türü bildirebilirsiniz. `Get` Yordamı otomatik olarak döndürür veri türü. Herhangi bir veri türü veya bir sabit listesi, yapısı, sınıf veya arabirim adını belirtebilirsiniz.  
   
      Varsa `Property` deyimi belirtmiyor `returntype`, yordam döndürür `Object`.  
   
 ## <a name="behavior"></a>Davranış  
   
--   **Bir yordam döndürüyor.** Zaman `Get` yordamı çağıran koda döndürür, özellik değeri istenen deyimi içinde yürütme devam eder.  
+- **Bir yordam döndürüyor.** Zaman `Get` yordamı çağıran koda döndürür, özellik değeri istenen deyimi içinde yürütme devam eder.  
   
      `Get` özellik yordamları kullanarak bir değer döndürebilir [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md) ya da dönüş değeri, özellik adına atayarak. Daha fazla bilgi için bkz: "Value dönüş" [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md).  
   
      `Exit Property` Ve `Return` deyimleri neden hemen bir çıkış bir özellik yordamı. Herhangi bir sayıda `Exit Property` ve `Return` deyimleri yordamda herhangi bir yerinde görünebilir ve karıştırabilir miyim `Exit Property` ve `Return` deyimleri.  
   
--   **Dönüş değeri.** Bir değer döndürmek için bir `Get` yordam, özellik adı için değer atamak veya olmasını bir [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md). `Return` Deyimi aynı anda atar `Get` yordamı dönüş değeri ve yordamdan çıkar.  
+- **Dönüş değeri.** Bir değer döndürmek için bir `Get` yordam, özellik adı için değer atamak veya olmasını bir [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md). `Return` Deyimi aynı anda atar `Get` yordamı dönüş değeri ve yordamdan çıkar.  
   
      Kullanırsanız `Exit Property` özellik adı için bir değer atama olmadan `Get` yordamı özelliğin veri türü için varsayılan değeri döndürür. Daha fazla bilgi için bkz: "Value dönüş" [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md).  
   

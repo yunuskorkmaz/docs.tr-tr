@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
 ms.openlocfilehash: f4dfccad23bf5d15f5cbd0a33e76a136417e13ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607270"
 ---
 # <a name="navigating-datarelations"></a>DataRelations İçinde Gezinme
 Birincil işlevlerinden biri bir <xref:System.Data.DataRelation> bir gezinti izin vermesidir <xref:System.Data.DataTable> diğerine içinde bir <xref:System.Data.DataSet>. Bu sayede tüm almak ilgili <xref:System.Data.DataRow> birindeki nesnelerin **DataTable** tek bir verildiğinde **DataRow** ilgili gelen **DataTable**. Örneğin, kurduktan sonra bir **DataRelation** tablosu müşteriler ve Siparişler tablosunun arasında kullanarak bir müşterinin satır için tüm sipariş satırları alabilirsiniz **GetChildRows**.  

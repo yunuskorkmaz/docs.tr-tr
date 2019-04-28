@@ -3,11 +3,11 @@ title: Kurallı Tarih ve Saat İşlevleri
 ms.date: 03/30/2017
 ms.assetid: 9628b74f-1585-436a-b385-8b02ed0cdd63
 ms.openlocfilehash: 1e54fa3d763fa08d7bafd9b002f0458ec3a6293d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606016"
 ---
 # <a name="date-and-time-canonical-functions"></a>Kurallı Tarih ve Saat İşlevleri
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Tarih ve saat kurallı işlevler içerir.  

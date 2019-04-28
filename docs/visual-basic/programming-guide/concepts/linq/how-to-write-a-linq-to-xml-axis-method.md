@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: LINQ to XML eksen yöntemi (Visual Basic) yazma'
 ms.date: 07/20/2015
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
 ms.openlocfilehash: f10ee90076a71aa44f480639d3bc460ea59044ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614602"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Nasıl yapılır: LINQ to XML eksen yöntemi (Visual Basic) yazma
 XML ağacından koleksiyonları almak için kendi eksen yöntemler yazabilirsiniz. Bunu yapmak için en iyi yollarından biri öğe ve özniteliklerin koleksiyonunu döndüren bir uzantı metodu yazma sağlamaktır. Öğeler veya öznitelikleri, uygulamanızın gereksinimlerine göre belirli alt kümelerine döndürülecek genişletme yönteminizin yazabilirsiniz.  

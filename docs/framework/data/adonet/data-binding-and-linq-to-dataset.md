@@ -3,11 +3,11 @@ title: Veri Bağlama ve LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
 ms.openlocfilehash: b081a648023aa21eea3a20ec409600d3bcbe9878
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607407"
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>Veri Bağlama ve LINQ to DataSet
 *Veri bağlama* iş mantığı ve UI uygulama arasında bağlantı kuran işlemidir. Verilere bağlı öğeleri doğru ayarların bağlama varsa ve veri değeri değiştiğinde verileri uygun bildirimleri sağlar, değişiklikleri otomatik olarak yansıtır. <xref:System.Data.DataSet> Bir bellek içi tutarlı bir ilişkisel programlama modeli, içerdiği veri kaynağı ne olursa olsun sağlayan veri gösterimidir. ADO.NET 2.0 <xref:System.Data.DataView> depolanan verilerini sıralama ve filtreleme sayesinde bir <xref:System.Data.DataTable>. Bu işlevsellik, çoğunlukla veri bağlama uygulamalarda kullanılır. Kullanarak bir <xref:System.Data.DataView>sıralamalar farklı olan bir tabloda verilerini açığa çıkarabilir ve verileri satır durum ya da bir filtre ifadesi temelinde göre filtre uygulayabilirsiniz. Hakkında daha fazla bilgi için <xref:System.Data.DataView> nesne, bkz: [DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  

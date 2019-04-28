@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 503fae4b-014c-44df-a9c7-c76ec4ed4229
 ms.openlocfilehash: 7a885bd4ff0d3c35e26fd0f37e82a41abf713b6e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608671"
 ---
 # <a name="conceptual-overview"></a>Kavramsal Genel Bakış
-Bu konuda, ileti sistemi ve kullanımını destekleyen sınıflar Windows Communication Foundation (WCF) hakkında bilgiler özetlenmektedir.  
+Bu konu, ileti sistemi ve kullanımını destekleyen sınıfları Windows Communication Foundation (WCF) ilgili bilgileri özetler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Windows Communication Foundation nedir?](../../../docs/framework/wcf/whats-wcf.md)  
- WCF kısa genel bakış.  
+ WCF kısa bir özeti.  
   
  [Temel Windows Communication Foundation Kavramları](../../../docs/framework/wcf/fundamental-concepts.md)  
- WCF programlama modeli temel kavramlarını ana hattı.  
+ WCF programlama modelinin önemli kavramlar özetini.  
   
  [Windows Communication Foundation Mimarisi](../../../docs/framework/wcf/architecture.md)  
  WCF mimarisinin grafik gösterimi.  

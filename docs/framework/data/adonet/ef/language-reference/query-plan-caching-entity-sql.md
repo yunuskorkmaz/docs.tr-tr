@@ -3,11 +3,11 @@ title: Sorgu planını önbelleğe alma (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
 ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613670"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Sorgu planını önbelleğe alma (varlık SQL)
 Her bir sorgu yürütme girişimi yapıldığında, sorgu işlem hattındaki tam sorgu zaten derlenmiş ve kullanılabilir olup olmadığını görmek için sorgu planı önbelleği arar. Bu durumda, yeni bir tane oluşturmak yerine önbellekteki plan kullanır. Sorgu planı önbellekte bir eşleşme bulunmazsa, sorgu derlenmiş ve önbelleğe alınır. Bir sorgu tarafından tanımlanan kendi [!INCLUDE[esql](../../../../../../includes/esql-md.md)] metin ve parametre koleksiyonu (adlarını ve türlerini). Tüm metin karşılaştırmalar büyük/küçük harfe duyarlıdır.  
@@ -34,19 +34,19 @@ Her bir sorgu yürütme girişimi yapıldığında, sorgu işlem hattındaki tam
   
  Sorguların sorgu planı önbelleği tarafından düzgün şekilde eşlenmesi için aşağıdaki gereksinimlere uyması:  
   
--   Sorgu metni, sabit bir desen, tercihen bir sabit dize veya bir kaynak olmalıdır.  
+- Sorgu metni, sabit bir desen, tercihen bir sabit dize veya bir kaynak olmalıdır.  
   
--   <xref:System.Data.EntityClient.EntityParameter> veya <xref:System.Data.Objects.ObjectParameter> bir kullanıcı tarafından sağlanan değer geçirilen her yerde kullanılmalıdır.  
+- <xref:System.Data.EntityClient.EntityParameter> veya <xref:System.Data.Objects.ObjectParameter> bir kullanıcı tarafından sağlanan değer geçirilen her yerde kullanılmalıdır.  
   
  Sorgu planını önbelleğe yuvalarda gereksiz yere kullanmak aşağıdaki sorgu desenleri kaçınmanız gerekir:  
   
--   Metindeki büyük küçük harf yapılan değişiklikler.  
+- Metindeki büyük küçük harf yapılan değişiklikler.  
   
--   Boşluk yapılan değişiklikler.  
+- Boşluk yapılan değişiklikler.  
   
--   Değişmez değerler geçer.  
+- Değişmez değerler geçer.  
   
--   Metin açıklama içinde yapılan değişiklikler.  
+- Metin açıklama içinde yapılan değişiklikler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

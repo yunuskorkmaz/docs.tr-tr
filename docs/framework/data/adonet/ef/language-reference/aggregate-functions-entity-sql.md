@@ -3,18 +3,18 @@ title: Toplama işlevleri (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
 ms.openlocfilehash: 113c19078feeca24a0817e52f8eb0d04537b0684
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607225"
 ---
 # <a name="aggregate-functions-entity-sql"></a>Toplama işlevleri (varlık SQL)
 Toplama, bir skaler bir koleksiyona bir grup işleminin bir parçası olarak basit bir dil yapıdır. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] iki biçimde toplamlar gelir:  
   
--   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir ifadede herhangi bir yere kullanılabilir işlevler koleksiyonu. Bu toplama işlevleri projeksiyonlar ve hareket doğrulamaları koleksiyonlarda kullanarak içerir. Koleksiyon işlevlerdir toplamalar belirtme tercih edilen modu [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir ifadede herhangi bir yere kullanılabilir işlevler koleksiyonu. Bu toplama işlevleri projeksiyonlar ve hareket doğrulamaları koleksiyonlarda kullanarak içerir. Koleksiyon işlevlerdir toplamalar belirtme tercih edilen modu [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
--   GROUP BY yan tümcesine sahip sorgu ifadelerinde Grup toplar. Olarak [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], Grup toplamları DISTINCT ve tüm değiştiricilere birleşik giriş olarak kabul edin.  
+- GROUP BY yan tümcesine sahip sorgu ifadelerinde Grup toplar. Olarak [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], Grup toplamları DISTINCT ve tüm değiştiricilere birleşik giriş olarak kabul edin.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ifade bir toplama işlevi olarak yorumlamak ilk olarak çalışır ve deyim bir SELECT deyimi bağlamında, yorumlar, bir grup toplama.  
   

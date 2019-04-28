@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 653a4a97-1e4a-4b2d-8d24-7dbe1f2a5c84
 ms.openlocfilehash: b8f605eaa3a186ebb6bad7800d6576bd4d5a34b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637940"
 ---
 # <a name="query-expression-syntax-examples-ordering-linq-to-dataset"></a>Sorgu İfadesi Söz Dizimi Örnekleri: Sıralama (LINQ to DataSet)
 Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.Reverse%2A>, ve <xref:System.Linq.Enumerable.ThenByDescending%2A> sorgulamak için yöntemleri bir <xref:System.Data.DataSet> ve sorgu ifadesi söz dizimi kullanarak sonuçları sıralayabilir.  

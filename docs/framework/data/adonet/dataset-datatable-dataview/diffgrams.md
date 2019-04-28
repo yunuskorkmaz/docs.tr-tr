@@ -3,11 +3,11 @@ title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
 ms.openlocfilehash: 048c5331028bbe2bb232302637dbb12bcdd2adc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607819"
 ---
 # <a name="diffgrams"></a>DiffGrams
 Bir DiffGram veri öğelerinin geçerli ve orijinal sürümler tanımlayan bir XML biçimidir. <xref:System.Data.DataSet> Yüklemek ve içeriğini kalıcı hale getirmek ve ağ bağlantısı üzerinden aktarım için içeriği seri hale getirmek için biçimini kullanır. Olduğunda bir <xref:System.Data.DataSet> yazılmış bir DiffGram doğru içeriği, ancak şeması değil, yeniden oluşturmak için gerekli tüm bilgileri DiffGram doldurur <xref:System.Data.DataSet>, hem sütun değerleri dahil olmak üzere **özgün** ve **geçerli** satır sürümleri, satır hatası bilgileri ve satır sırası.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
 ms.openlocfilehash: 95bc9beed9965bad32118dfafa4a5aa76902ca10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607832"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>DataView nesnesi (LINQ to DataSet) oluşturma
 Oluşturmanın iki yolu vardır. bir <xref:System.Data.DataView> içinde [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bağlamı. Oluşturabileceğiniz bir <xref:System.Data.DataView> gelen bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] üzerinden sorgu bir <xref:System.Data.DataTable>, ya da bir türü belirtilmiş veya türsüz oluşturabilirsiniz <xref:System.Data.DataTable>. Her iki durumda da, oluşturduğunuz <xref:System.Data.DataView> birini kullanarak <xref:System.Data.DataTableExtensions.AsDataView%2A> genişletme yöntemleri; <xref:System.Data.DataView> atmamalıdır doğrudan değil [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bağlamı.  
@@ -31,19 +31,19 @@ Oluşturmanın iki yolu vardır. bir <xref:System.Data.DataView> içinde [!INCLU
   
  Aşağıdaki sorgu işleçleri oluşturmak için kullanılan bir sorgu desteklenen <xref:System.Data.DataView>:  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.Cast%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.Cast%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.OrderBy%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.OrderBy%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.OrderByDescending%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.OrderByDescending%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.ThenBy%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.ThenBy%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.ThenByDescending%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.ThenByDescending%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
   
  Dikkat edin bir <xref:System.Data.DataView> içinden oluşturulan bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A> yöntemi sorguda adında gereken son yöntemi olması gerekir. Bu oluşturan aşağıdaki örnekte gösterildiği bir <xref:System.Data.DataView> çevrimiçi siparişler toplam süre göre sıralanır:  
   

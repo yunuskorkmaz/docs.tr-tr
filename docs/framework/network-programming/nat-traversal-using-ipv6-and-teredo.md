@@ -3,11 +3,11 @@ title: IPv6 ve Teredo kullanarak NAT Geçişi
 ms.date: 03/30/2017
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
 ms.openlocfilehash: f617dc8912091576727b90da1e9efb9ebd5f9bda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642184"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>IPv6 ve Teredo kullanarak NAT Geçişi
 Geliştirmeler ağ adresi çevirisi (NAT) geçişi için destek sağlayan yapıldı. Bu değişiklikler, IPv6 ve Teredo ile kullanılmak üzere tasarlanmıştır ancak ayrıca diğer IP teknolojileri tünel için geçerlidir. Bu geliştirmeler sınıflarda etkileyen <xref:System.Net> ve ilgili ad alanları.  

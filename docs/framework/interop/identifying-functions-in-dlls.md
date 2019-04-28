@@ -14,18 +14,18 @@ ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0ca01234bf7adaca1337053bbc2bbba0731be3cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642964"
 ---
 # <a name="identifying-functions-in-dlls"></a>DLL'lerde İşlevleri Tanımlama
 Bir DLL işlevini kimliğini aşağıdaki öğelerden oluşur:  
   
--   İşlev adı veya sıra  
+- İşlev adı veya sıra  
   
--   Uygulama bulunabilir DLL dosyasının adı  
+- Uygulama bulunabilir DLL dosyasının adı  
   
  Örneğin, belirten **MessageBox** User32.dll işlevinde işlevi tanımlar (**MessageBox**) ve konumu (User32.dll, User32 veya user32). Microsoft Windows uygulama programlama arabirimi (Windows API) karakterleri ve dizeleri işleyen her işlevin iki sürümü içermelidir: 1-bayt karakter ANSI sürümü ve 2-bayt karakter Unicode sürümü. Belirtilmediğinde, karakter kümesini temsil ettiği <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> ANSI varsayılan alan. Bazı işlevler, ikiden fazla sürümleri olabilir.  
   

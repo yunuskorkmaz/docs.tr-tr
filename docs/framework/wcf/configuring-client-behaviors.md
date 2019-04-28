@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
 ms.openlocfilehash: 83fdc77bd17115f9952f2ca6c494ed0eb873cd9c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608781"
 ---
 # <a name="configuring-client-behaviors"></a>İstemci Davranışlarını Yapılandırma
 Windows Communication Foundation (WCF) iki şekilde davranışları yapılandırır: tarafından tanımlanan davranışı yapılandırmaları--başvuran `<behavior>` bölümü bir istemci uygulama yapılandırma dosyası – veya program aracılığıyla arama uygulama. Bu konuda, her iki yaklaşım açıklanmaktadır.  

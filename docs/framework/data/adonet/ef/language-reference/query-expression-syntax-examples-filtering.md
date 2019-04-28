@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c27cb89c-1c1d-4988-9f38-950eda3cb275
 ms.openlocfilehash: eb1680ba8ca2fab5511dc20c94ad997ef04974fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614992"
 ---
 # <a name="query-expression-syntax-examples-filtering"></a>Sorgu İfadesi Söz Dizimi Örnekleri: Filtreleme
 Bu konudaki örnekler nasıl kullanılacağını gösteren `Where` ve `Where…Contains` sorgulamak için yöntemleri [AdventureWorks satışları modeli](https://archive.codeplex.com/?p=msftdbprodsamples) sorgu ifadesi söz dizimini kullanarak. Not, burada...`Contains` bir parçası olarak kullanılan bir [sorgu derlenmiş](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  

@@ -18,20 +18,20 @@ ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4104ddba1942f9cb9bd860d53dc54968de5af891
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643000"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Tür Kitaplığını Derleme Olarak İçeri Aktarma
 COM tür tanımları, genellikle bir tür kitaplığı içinde yer alır. Buna karşılık, CLS uyumlu derleyiciler türü meta verileri bir derleme oluşturur. İki tür bilgi kaynakları oldukça farklıdır. Bu konu, bir tür kitaplığından meta verileri oluşturma teknikleri açıklar. Elde edilen derlemeyi birlikte çalışma derlemesi adı verilir ve içerdiği tür bilgilerini COM türlerini kullanmak .NET Framework uygulamaları etkinleştirir.  
   
  Bu tür bilgiler, uygulamanızın kullanılabilir hale getirmek için iki yolu vardır:  
   
--   Tasarım-zamanı-yalnızca birlikte çalışma derlemelerini kullanarak: İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], derleyicinin tür bilgilerini birlikte çalışma bütünleştirilmiş kod yürütülebilir dosyanın içine gömmek için bildirebilirsiniz. Derleyici, uygulamanızın kullandığı tür bilgilerini katıştırır. Uygulamanızla birlikte çalışma derlemesi dağıtmak gerekmez. Önerilen yöntem budur.  
+- Tasarım-zamanı-yalnızca birlikte çalışma derlemelerini kullanarak: İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], derleyicinin tür bilgilerini birlikte çalışma bütünleştirilmiş kod yürütülebilir dosyanın içine gömmek için bildirebilirsiniz. Derleyici, uygulamanızın kullandığı tür bilgilerini katıştırır. Uygulamanızla birlikte çalışma derlemesi dağıtmak gerekmez. Önerilen yöntem budur.  
   
--   Birlikte çalışma derlemelerini dağıtma: Standart bir birlikte çalışma derlemesine başvuru oluşturabilirsiniz. Bu durumda, birlikte çalışma derlemesi uygulamanızla dağıtılması gerekir. Bu tekniği kullanır ve özel bir COM bileşeni kullanmıyorsanız, her zaman, yönetilen kodda birleştirmek istiyorsanız COM bileşeninin yazarı tarafından yayımlanan birincil birlikte çalışma derlemesi (PIA) başvuru. Üretme ve birincil birlikte çalışma derlemeleri kullanma hakkında daha fazla bilgi için bkz. [birincil birlikte çalışma derlemelerini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
+- Birlikte çalışma derlemelerini dağıtma: Standart bir birlikte çalışma derlemesine başvuru oluşturabilirsiniz. Bu durumda, birlikte çalışma derlemesi uygulamanızla dağıtılması gerekir. Bu tekniği kullanır ve özel bir COM bileşeni kullanmıyorsanız, her zaman, yönetilen kodda birleştirmek istiyorsanız COM bileşeninin yazarı tarafından yayımlanan birincil birlikte çalışma derlemesi (PIA) başvuru. Üretme ve birincil birlikte çalışma derlemeleri kullanma hakkında daha fazla bilgi için bkz. [birincil birlikte çalışma derlemelerini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
  Tasarım-zamanı-yalnızca birlikte çalışma derlemelerini kullandığınızda, tür bilgilerini COM bileşeninin yazarı tarafından yayımlanan birincil birlikte çalışma derlemesine gömebilirsiniz. Ancak, birincil birlikte çalışma derlemesi uygulamanızla birlikte dağıtmak gerekmez.  
   
@@ -42,29 +42,29 @@ COM tür tanımları, genellikle bir tür kitaplığı içinde yer alır. Buna k
   
  COM türü hedef uyarlamasını içeren tür kitaplığını bulduktan sonra türü meta verileri içeren bir birlikte çalışma derlemesi oluşturmak için aşağıdaki seçenekleriniz vardır:  
   
--   Visual Studio  
+- Visual Studio  
   
      Visual Studio COM türleri bir tür kitaplığındaki bir derleme meta verileri otomatik olarak dönüştürür. Yönergeler için [nasıl yapılır: Tür kitaplıklarına başvurular ekleme](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
   
--   [Tür kitaplığı alma programı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+- [Tür kitaplığı alma programı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
      Tür kitaplığı içeri Aktarıcı meta verileri elde edilen birlikte çalışma dosyasındaki ayarlamak için komut satırı seçenekleri sağlar, türleri, varolan bir tür kitaplığından içeri aktarır ve birlikte çalışma derlemesi ve bir ad alanı oluşturur. Yönergeler için [nasıl yapılır: Tür kitaplıklarından birlikte çalışma derlemeleri oluşturma](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md).  
   
--   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> Sınıfı  
+- <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> Sınıfı  
   
      Bu sınıfı coclass'ları ve arabirimler tür kitaplığında bir derleme içindeki meta verileri dönüştürmek için yöntemler sağlar. Bu, Tlbimp.exe aynı meta veri çıkışı üretir. Ancak, Tlbimp.exe, aksine <xref:System.Runtime.InteropServices.TypeLibConverter> sınıfı bir bellek içi tür kitaplığı için meta verileri dönüştürebilir.  
   
--   Özel sarmalayıcılar  
+- Özel sarmalayıcılar  
   
      Bir tür kitaplığı yok veya yanlış olduğunda, bir seçenek sınıfı veya arabirim tanımı yinelenen yönetilen kaynak kodunda oluşturmaktır. Ardından kaynak kodunu bir derleme meta verileri oluşturmak için çalışma zamanını hedefleyen bir derleyici ile derleme.  
   
      COM türleri manuel olarak tanımlamak için aşağıdaki öğeler erişiminiz olmalıdır:  
   
-    -   Tanımlanan arabirimleri ve coclass'ları kesin açıklamaları.  
+    - Tanımlanan arabirimleri ve coclass'ları kesin açıklamaları.  
   
-    -   Bir derleyici gibi C# uygun .NET Framework sınıf tanımları oluşturabilen derleyici.  
+    - Bir derleyici gibi C# uygun .NET Framework sınıf tanımları oluşturabilen derleyici.  
   
-    -   Tür kitaplığını derlemeye dönüştürme kurallarını bilgi.  
+    - Tür kitaplığını derlemeye dönüştürme kurallarını bilgi.  
   
      Özel bir sarmalayıcı yazma Gelişmiş bir tekniktir. Özel bir sarmalayıcı oluşturmak hakkında ek bilgi için bkz. [standart sarmalayıcıları özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100)).  
   

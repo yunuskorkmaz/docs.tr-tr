@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
 ms.openlocfilehash: 07e1aee85e22f6dd5257cdd49e8af99b423cb17f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645889"
 ---
 # <a name="whats-new-in-windows-identity-foundation-45"></a>Windows Identity Foundation 4.5'teki Yenilikler
 Windows Identity Foundation'ın (WIF) ilk sürümü tek başına bir indirme olarak gönderildi ve .NET 3.5 SP1 zaman çerçevesinde kullanıma sunulduğundan WIF 3.5 olarak bilinmekteydi. .NET 4.5 sürümünden itibaren WIF, .NET çerçevesinin bir parçası olmuştur. WIF sınıflarının doğrudan çerçevede kullanılabilir olması beyana dayalı kimliğin taleplerin kullanılmasını kolaylaştırır NET'te çok daha ayrıntılı bir tümleştirme sağlar. WIF 3.5 için yazılmış uygulamalar için yeni modelin avantajlarından yararlanmak için değiştirilmesi gerekecektir; bilgi için [WIF 4.5 için bir Application Built Using WIF 3.5 geçirme yönergeleri](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  
@@ -23,29 +23,29 @@ Windows Identity Foundation'ın (WIF) ilk sürümü tek başına bir indirme ola
   
 ## <a name="changes-to-the-wif-45-visual-studio-experience"></a>WIF 4.5 Visual Studio Deneyimine Yönelik Değişiklikler  
   
--   **STS Başvurusu Ekle...** Visual Studio işlevselliği (cmdline yardımcı programı FedUtil) artık mevcut; Bunun yerine yeni Visual Studio uzantısı kullanabileceğiniz **kimlik ve erişim aracı Visual Studio 2012 için**. Bu size, varolan bir STS ile federasyon oluşturma veya çözümlerinizi test etmek için LocalSTS kullanma olanağı sağlar. Uzantıyı yükledikten sonra projenize sağ tıklayın ve aranacak **kimlik ve erişim** bağlam menüsünde.  
+- **STS Başvurusu Ekle...** Visual Studio işlevselliği (cmdline yardımcı programı FedUtil) artık mevcut; Bunun yerine yeni Visual Studio uzantısı kullanabileceğiniz **kimlik ve erişim aracı Visual Studio 2012 için**. Bu size, varolan bir STS ile federasyon oluşturma veya çözümlerinizi test etmek için LocalSTS kullanma olanağı sağlar. Uzantıyı yükledikten sonra projenize sağ tıklayın ve aranacak **kimlik ve erişim** bağlam menüsünde.  
   
--   Beyanlar varolan ASP.Net, web siteleri ve WCF proje şablonlarında doğrudan kullanılabileceğinden, ASP.NET ve STS şablonları artık sağlanmamaktadır.  
+- Beyanlar varolan ASP.Net, web siteleri ve WCF proje şablonlarında doğrudan kullanılabileceğinden, ASP.NET ve STS şablonları artık sağlanmamaktadır.  
   
--   Denetimlerde `Microsoft.IdentityModel.Web.Controls` ad alanı (`SignInControl`, `FederatedPassiveSignInControl`, ve `FederatedPassiveSignInStatus`) WIF 4. 5 ' taşınmaz.  
+- Denetimlerde `Microsoft.IdentityModel.Web.Controls` ad alanı (`SignInControl`, `FederatedPassiveSignInControl`, ve `FederatedPassiveSignInStatus`) WIF 4. 5 ' taşınmaz.  
   
 ## <a name="changes-to-the-wif-45-api"></a>WIF 4.5 API'sine Yönelik Değişiklikler  
   
--   Talep ilgili sınıflar bulunan genel olarak, <xref:System.Security.Claims?displayProperty=nameWithType> ad alanı; WCF ilgili sınıflar – - Hizmet sözleşmeleri, Kanallar, kanal fabrikaları ve WS-Güven senaryoları için--kullanılan hizmet konakları bulunduğunuz <xref:System.ServiceModel.Security?displayProperty=nameWithType>; ve tüm diğer WIF sınıfları çeşitli arasında yayılır [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004) ad alanları – bunlar, örneğin, WS - temsil eden sınıfları * ve SAML yapılarını belirteç işleyicileri ve ilgili sınıfları ve WS-Federasyon senaryolarında kullanılan sınıfları. Daha fazla bilgi için [Namespace eşleme WIF 3.5 ile WIF 4.5 arasında](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md) ve [WIF API Reference](../../../docs/framework/security/wif-api-reference.md).  
+- Talep ilgili sınıflar bulunan genel olarak, <xref:System.Security.Claims?displayProperty=nameWithType> ad alanı; WCF ilgili sınıflar – - Hizmet sözleşmeleri, Kanallar, kanal fabrikaları ve WS-Güven senaryoları için--kullanılan hizmet konakları bulunduğunuz <xref:System.ServiceModel.Security?displayProperty=nameWithType>; ve tüm diğer WIF sınıfları çeşitli arasında yayılır [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004) ad alanları – bunlar, örneğin, WS - temsil eden sınıfları * ve SAML yapılarını belirteç işleyicileri ve ilgili sınıfları ve WS-Federasyon senaryolarında kullanılan sınıfları. Daha fazla bilgi için [Namespace eşleme WIF 3.5 ile WIF 4.5 arasında](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md) ve [WIF API Reference](../../../docs/framework/security/wif-api-reference.md).  
   
--   Makine anahtarının, Web grubu senaryoları için oturum tanımlama bilgilerinde kullanımı sağlanmıştır. Daha fazla bilgi için [WIF ve Web grupları](../../../docs/framework/security/wif-and-web-farms.md).  
+- Makine anahtarının, Web grubu senaryoları için oturum tanımlama bilgilerinde kullanımı sağlanmıştır. Daha fazla bilgi için [WIF ve Web grupları](../../../docs/framework/security/wif-and-web-farms.md).  
   
--   Artık bildirimli olarak WIF altında yapılandırdığınız [ \<system.identityModel >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) ve [ \<System.IdentityModel.Services >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) öğeleri. WIF yapılandırması hakkında daha fazla bilgi için bkz. [WIF Configuration Reference](../../../docs/framework/security/wif-configuration-reference.md).  
+- Artık bildirimli olarak WIF altında yapılandırdığınız [ \<system.identityModel >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) ve [ \<System.IdentityModel.Services >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) öğeleri. WIF yapılandırması hakkında daha fazla bilgi için bkz. [WIF Configuration Reference](../../../docs/framework/security/wif-configuration-reference.md).  
   
 ## <a name="other-notable-net-changes-or-features-that-are-caused-by-the-integration-of-wif-into-net"></a>WFI'nin .NET tümleştirmesinin sağladığı diğer önemli .NET değişiklikleri veya özellikleri  
   
--   Beyan tabanlı kimlik doğrulaması (CBAC) yapma potansiyeli artık .NET çerçevesinde tümleşiktir. Yapılandırabileceğiniz bir <xref:System.Security.Claims.ClaimsAuthorizationManager> nesnesi ve ardından <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> ve <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> kodunuzda zorunlu ve beyana dayalı erişim denetimleri gerçekleştirmek için sınıflar. CBAC, geleneksel rol tabanlı erişim denetimlerine (RBAC) göre daha fazla esneklik ve ayrıntı düzeyi sağlar. Ayrıca yetkilendirme ilkesinin iş mantığından daha fazla ayrılmasını çünkü iş mantığı erişim denetimini belirli bir talep temel alabilir veya talepleri ve bu talepleri yetkilendirme ilkesi yapılandırılabilir bildirimli olarak altında sağlar[ \<claimsAuthorizationManager >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) öğesi.  
+- Beyan tabanlı kimlik doğrulaması (CBAC) yapma potansiyeli artık .NET çerçevesinde tümleşiktir. Yapılandırabileceğiniz bir <xref:System.Security.Claims.ClaimsAuthorizationManager> nesnesi ve ardından <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> ve <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> kodunuzda zorunlu ve beyana dayalı erişim denetimleri gerçekleştirmek için sınıflar. CBAC, geleneksel rol tabanlı erişim denetimlerine (RBAC) göre daha fazla esneklik ve ayrıntı düzeyi sağlar. Ayrıca yetkilendirme ilkesinin iş mantığından daha fazla ayrılmasını çünkü iş mantığı erişim denetimini belirli bir talep temel alabilir veya talepleri ve bu talepleri yetkilendirme ilkesi yapılandırılabilir bildirimli olarak altında sağlar[ \<claimsAuthorizationManager >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) öğesi.  
   
 ## <a name="wcf-changes-as-a-result-of-wif-integration"></a>WIF tümleştirmesinin doğurduğu WCF değişiklikleri:  
   
--   WCF beyana dayalı kimlik modelinin yerini WIF almıştır. Sınıflar Bunun anlamı <xref:System.IdentityModel.Claims?displayProperty=nameWithType>, <xref:System.IdentityModel.Policy?displayProperty=nameWithType>, ve <xref:System.IdentityModel.Selectors?displayProperty=nameWithType> ad alanları, WIF sınıflarını kullanmak lehine bırakılmalıdır.  
+- WCF beyana dayalı kimlik modelinin yerini WIF almıştır. Sınıflar Bunun anlamı <xref:System.IdentityModel.Claims?displayProperty=nameWithType>, <xref:System.IdentityModel.Policy?displayProperty=nameWithType>, ve <xref:System.IdentityModel.Selectors?displayProperty=nameWithType> ad alanları, WIF sınıflarını kullanmak lehine bırakılmalıdır.  
   
--   WIF artık etkin bir WCF Hizmeti belirterek `useIdentityConfiguration` özniteliği `<system.serviceModel>` / `<behaviors>` / `<serviceBehaviors>` / `<serviceCredentials>` öğesi aşağıdaki XML'de olduğu gibi:  
+- WIF artık etkin bir WCF Hizmeti belirterek `useIdentityConfiguration` özniteliği `<system.serviceModel>` / `<behaviors>` / `<serviceBehaviors>` / `<serviceCredentials>` öğesi aşağıdaki XML'de olduğu gibi:  
   
     ```xml  
     <serviceCredentials useIdentityConfiguration="true">  

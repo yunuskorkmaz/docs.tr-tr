@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Paralel Döngülerde özel durumları işleme'
+title: 'Nasıl yapılır: Paralel Döngülerde Özel Durumları İşleme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8ef883f37587948871b222ca03a4032bea2109bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638304"
 ---
-# <a name="how-to-handle-exceptions-in-parallel-loops"></a>Nasıl yapılır: Paralel Döngülerde özel durumları işleme
+# <a name="how-to-handle-exceptions-in-parallel-loops"></a>Nasıl yapılır: Paralel Döngülerde Özel Durumları İşleme
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> Ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> aşırı oluşturulabilecek özel durumları işlemek için özel bir mekanizma yoktur. Bu bakımdan, bunlar normal benzer `for` ve `foreach` döngüler (`For` ve `For Each` Visual Basic'te); işlenmeyen bir özel durum hemen sonlandırmak döngüye neden oluyor.  
   
  Paralel döngüler, hangi benzer özel durumları birden çok iş parçacığında aynı anda atılabilir harf ve bir iş parçacığı üzerinde oluşturulan bir özel durum başka bir özel durum neden olan durumu işlemek için kendi özel durum işleme mantığı eklerken iş parçacığı. Tüm özel durumları döngüden sarmalama tarafından her iki durumda işleyebilen bir <xref:System.AggregateException?displayProperty=nameWithType>. Aşağıdaki örnekte, olası bir yaklaşım gösterilmektedir.  

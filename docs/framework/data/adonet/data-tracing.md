@@ -1,15 +1,15 @@
 ---
-title: ADO.NET'te veri izleme
+title: ADO.NET’te Veri İzleme
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
 ms.openlocfilehash: 8f9388d084e9e598e43c0f871b21d05c053e77ce
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608014"
 ---
-# <a name="data-tracing-in-adonet"></a>ADO.NET'te veri izleme
+# <a name="data-tracing-in-adonet"></a>ADO.NET’te Veri İzleme
 
 ADO.NET .NET veri sağlayıcıları tarafından desteklenen SQL Server, Oracle, OLE DB ve ODBC yanı için ADO.NET yerleşik veri izleme işlevselliği özellikleri <xref:System.Data.DataSet>ve SQL Server ağ protokolleri.
 

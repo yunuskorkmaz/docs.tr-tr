@@ -3,11 +3,11 @@ title: XML Şema Kısıtlamaları ve İlişkileri
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
 ms.openlocfilehash: 990ae2eef8d9fbd28472494c989ae9ecca34251d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606989"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML Şema Kısıtlamaları ve İlişkileri
 Bir XML Şeması Tanım Dili (XSD) şemasında kısıtlamaları belirtebilirsiniz (benzersiz anahtar ve keyref kısıtlamaları) ve ilişkileri (kullanarak **msdata:Relationship** ek açıklama). Bu konu, kısıtlamaları ve bir XML şemasında belirtilen ilişkileri oluşturmak için nasıl yorumlanır açıklar <xref:System.Data.DataSet>.  

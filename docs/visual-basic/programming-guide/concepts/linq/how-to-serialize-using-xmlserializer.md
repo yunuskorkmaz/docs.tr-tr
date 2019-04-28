@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: XmlSerializer (Visual Basic) kullanarak seri hale geti
 ms.date: 07/20/2015
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
 ms.openlocfilehash: 1799ef4a0d0f20cddc4514c9dc901047c631b158
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614264"
 ---
 # <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>Nasıl yapılır: XmlSerializer (Visual Basic) kullanarak seri hale getirme
 Bu konuda serileştirir ve kullanarak çıkarır bir örnek gösterilmektedir <xref:System.Xml.Serialization.XmlSerializer>.  

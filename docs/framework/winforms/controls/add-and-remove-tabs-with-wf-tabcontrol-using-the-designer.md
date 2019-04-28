@@ -9,11 +9,11 @@ helpviewer_keywords:
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
 ms.openlocfilehash: 23fe9fa2b8405a6ebe66e8f0cee1d81d45f2395b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59219765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640380"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms TabControl ile Sekme Ekleme ve Kaldırma
 Yerleştirdiğinizde bir <xref:System.Windows.Forms.TabControl> denetim formunuzda, iki sekme varsayılan olarak içerir. Ekleyebilir veya tasarımcı kullanarak sekme kaldırın.  
@@ -25,7 +25,7 @@ Yerleştirdiğinizde bir <xref:System.Windows.Forms.TabControl> denetim formunuz
   
 ### <a name="to-add-or-remove-a-tab-using-the-designer"></a>Ekleme veya kaldırma Tasarımcı kullanarak sekme  
   
--   Denetimin akıllı etiketinde tıklayın **Sekme Ekle** veya **sekmesini Kaldır**  
+- Denetimin akıllı etiketinde tıklayın **Sekme Ekle** veya **sekmesini Kaldır**  
   
      -veya-  
   

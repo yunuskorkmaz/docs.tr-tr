@@ -12,11 +12,11 @@ helpviewer_keywords:
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
 ms.openlocfilehash: c6b3808a2d73070cc07b31eb0fca7ca9d6af8cdb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641963"
 ---
 # <a name="proxy-configuration"></a>Ara Sunucu Yapılandırma
 Bir proxy sunucu kaynakları için istemci isteklerini işler. Bir proxy önbelleğinden istenen kaynak döndürebilen veya kaynağının bulunduğu sunucu isteği iletir. Proxy, uzak sunucuya gönderilen istek sayısını azaltarak ağ performansını iyileştirebilir. Proxy'leri, kaynaklara erişimi kısıtlamak için de kullanılabilir.  
@@ -45,11 +45,11 @@ Bir proxy sunucu kaynakları için istemci isteklerini işler. Bir proxy önbell
   
  Çeşitli seçenekler, statik bir proxy nasıl çalıştığını denetler. Aşağıdakileri belirtebilirsiniz:  
   
--   Proxy adresi.  
+- Proxy adresi.  
   
--   Proxy yerel adresler için atlanmasına.  
+- Proxy yerel adresler için atlanmasına.  
   
--   Proxy için adresleri kümesini atlanmasına.  
+- Proxy için adresleri kümesini atlanmasına.  
   
  Aşağıdaki tabloda, statik bir ara sunucu yapılandırma seçenekleri gösterilmektedir.  
   

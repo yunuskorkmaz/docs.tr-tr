@@ -11,11 +11,11 @@ helpviewer_keywords:
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
 ms.openlocfilehash: a74acbbbcb5646a35de54a6000a0feae30f145a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638918"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Nasıl yapılır: Windows Form Üzerinde Bir Çalma Sesini Döngüye Alma
 Aşağıdaki kod örneği, sürekli bir ses çalar. Zaman kodunda `stopPlayingButton_Click` olay işleyicisi çalıştığında, herhangi bir sesi durdurur yürütülmekte. Ses çalma, hiçbir şey olmaz.  
@@ -27,9 +27,9 @@ Aşağıdaki kod örneği, sürekli bir ses çalar. Zaman kodunda `stopPlayingBu
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Sistem ve System.Windows.Forms öğelerini derlemelerine başvurular.  
+- Sistem ve System.Windows.Forms öğelerini derlemelerine başvurular.  
   
--   Dosya adı yerine `"c:\Windows\Media\chimes.wav"` ile geçerli bir dosya adı.  
+- Dosya adı yerine `"c:\Windows\Media\chimes.wav"` ile geçerli bir dosya adı.  
   
  Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
@@ -38,17 +38,17 @@ Aşağıdaki kod örneği, sürekli bir ses çalar. Zaman kodunda `stopPlayingBu
   
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
--   Yol adı yanlış biçimlendirilmiş. Örneğin, geçerli olmayan karakterler içeriyor veya yalnızca boşluk olan (<xref:System.ArgumentException> sınıfı).  
+- Yol adı yanlış biçimlendirilmiş. Örneğin, geçerli olmayan karakterler içeriyor veya yalnızca boşluk olan (<xref:System.ArgumentException> sınıfı).  
   
--   Salt okunur yoludur (<xref:System.IO.IOException> sınıfı).  
+- Salt okunur yoludur (<xref:System.IO.IOException> sınıfı).  
   
--   Yol adı `Nothing` (<xref:System.ArgumentNullException> sınıfı).  
+- Yol adı `Nothing` (<xref:System.ArgumentNullException> sınıfı).  
   
--   Yol adı çok uzun (<xref:System.IO.PathTooLongException> sınıfı).  
+- Yol adı çok uzun (<xref:System.IO.PathTooLongException> sınıfı).  
   
--   Yol geçersiz (<xref:System.IO.DirectoryNotFoundException> sınıfı).  
+- Yol geçersiz (<xref:System.IO.DirectoryNotFoundException> sınıfı).  
   
--   Yalnızca bir iki nokta üst üste yoludur ":" (<xref:System.NotSupportedException> sınıfı).  
+- Yalnızca bir iki nokta üst üste yoludur ":" (<xref:System.NotSupportedException> sınıfı).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, Form1.vb dosyası bir Visual Basic kaynak dosyası olmayabilir. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.  

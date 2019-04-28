@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: PLINQ sorgusunda özel durumları işleme'
+title: 'Nasıl yapılır: PLINQ Sorgusunda Özel Durumları İşleme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4b1a72a2b2443b419ea4f4b036664fb5f8932096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638336"
 ---
-# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Nasıl yapılır: PLINQ sorgusunda özel durumları işleme
+# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Nasıl yapılır: PLINQ Sorgusunda Özel Durumları İşleme
 Bu konudaki ilk örnek nasıl işleneceğini gösterir <xref:System.AggregateException?displayProperty=nameWithType> , durum konumundan bir PLINQ sorgusu yürütüldüğünde. İkinci örnek, try-catch bloklarını temsilciler içinde özel durumun olduğu için mümkün olduğunca yakın yerleştirin gösterilmektedir. Oluşur ve büyük olasılıkla sorgu yürütmeye devam et hemen sonra bu şekilde, siz bunları yakalayabilir. Ne zaman bir sorgu özel durum oluştuktan sonra bazı öğeleri işlemeye devam edebilir mümkündür özel durumları ayarlama geri katılan iş parçacığına Kabarcık halinde çıkmasına izin verilmez.  
   
  Bazı durumlarda PLINQ sıralı yürütme için geri döner ve özel bir durum oluştuğunda, özel durum doğrudan yayılır ve sarmalanmış değil bir <xref:System.AggregateException>. Ayrıca, <xref:System.Threading.ThreadAbortException>s her zaman yayılır doğrudan.  
@@ -43,7 +43,7 @@ Bu konudaki ilk örnek nasıl işleneceğini gösterir <xref:System.AggregateExc
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   Derleme ve bu örnekleri çalıştırmak için bunları PLINQ veri örneği örneği kopyalayın ve Main yöntemini çağırın.  
+- Derleme ve bu örnekleri çalıştırmak için bunları PLINQ veri örneği örneği kopyalayın ve Main yöntemini çağırın.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Programınızın durumunu bozmadığından emin, ne yapılacağını bilmediği sürece bir özel durum yakalamayın.  

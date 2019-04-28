@@ -12,11 +12,11 @@ ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643562"
 ---
 # <a name="default-marshaling-behavior"></a>Varsayılan Sıralama Davranışı
 Birlikte çalışma hazırlama kurallar arasında yönetilen ve yönetilmeyen bellek geçerken yöntem parametreleri ile ilişkili verileri nasıl davranacağını bu dikte çalışır. Yerleşik kurallar bir çağrılan geçirilen verileri değiştirebilir ve bu değişiklikleri çağırana döndürmesi ve performans iyileştirmelerini sağlayıp altında Sıralayıcı koşulda veri türü dönüşümleri olarak sıralama gibi etkinlikler denetler.  
@@ -58,9 +58,9 @@ BSTR MethodOne (BSTR b) {
   
  Örneğin, Sıralayıcı sınıfı sarmalayıcı yönetilen koda geçirildi arabirimi sarmalamak için kullanılması gerektiğini belirler. Arabirimi Sıralayıcı ilk geçirildiğinde, Sıralayıcı arabirimi bilinen bir nesneden kullanıma sunulacak olup olmadığını denetler. Bu denetim, iki durumda gerçekleşir:  
   
--   Bir arabirim için COM başka bir yerde geçirildi başka bir yönetilen nesne tarafından uygulanır. Sıralayıcı yönetilen nesneler tarafından kullanıma sunulan arabirimler kolayca tanımlayabilirsiniz ve arabirim uygulamasını sağlayan yönetilen bir nesne ile eşleşecek şekilde edebilir. Yönetilen Nesne sonra yöntemine geçirilir ve hiçbir sarmalayıcı gereklidir.  
+- Bir arabirim için COM başka bir yerde geçirildi başka bir yönetilen nesne tarafından uygulanır. Sıralayıcı yönetilen nesneler tarafından kullanıma sunulan arabirimler kolayca tanımlayabilirsiniz ve arabirim uygulamasını sağlayan yönetilen bir nesne ile eşleşecek şekilde edebilir. Yönetilen Nesne sonra yöntemine geçirilir ve hiçbir sarmalayıcı gereklidir.  
   
--   Zaten sarmalanmış bir nesne arabirimi uygular. Durumun bu olup olmadığını belirlemek için nesne için sıralayıcı sorgular, **IUnknown** arabirim ve döndürülen arabirim sarmalanır ve diğer nesnelerin arabirimlere karşılaştırır. Arabirimi, başka bir sarmalayıcı aynı olduğunda, nesneler aynı kimliğe sahip ve mevcut sarmalayıcı yöntemine geçirilir.  
+- Zaten sarmalanmış bir nesne arabirimi uygular. Durumun bu olup olmadığını belirlemek için nesne için sıralayıcı sorgular, **IUnknown** arabirim ve döndürülen arabirim sarmalanır ve diğer nesnelerin arabirimlere karşılaştırır. Arabirimi, başka bir sarmalayıcı aynı olduğunda, nesneler aynı kimliğe sahip ve mevcut sarmalayıcı yöntemine geçirilir.  
   
  Sıralayıcı, bilinen bir nesneden bir arabirim değil, şunları yapar:  
   
@@ -73,9 +73,9 @@ BSTR MethodOne (BSTR b) {
 ## <a name="default-marshaling-for-delegates"></a>Temsilciler için varsayılan sıralama  
  Yönetilen bir temsilci, bir COM arabirimi veya çağıran mekanizmasına dayalı bir işlev işaretçisi olarak sıralanır:  
   
--   İçin platform çağırma, varsayılan olarak bir temsilci bir yönetilmeyen işlev işaretçisi sıralanır.  
+- İçin platform çağırma, varsayılan olarak bir temsilci bir yönetilmeyen işlev işaretçisi sıralanır.  
   
--   COM birlikte çalışması için bir temsilci türü bir COM arabirimi sıralanır **_Delegate** varsayılan olarak. **_Delegate** arabirimi Mscorlib.tlb tür kitaplığında tanımlanan ve içeren <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> başvuran temsilci yöntemi çağırma olanak tanıyan yöntemi.  
+- COM birlikte çalışması için bir temsilci türü bir COM arabirimi sıralanır **_Delegate** varsayılan olarak. **_Delegate** arabirimi Mscorlib.tlb tür kitaplığında tanımlanan ve içeren <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> başvuran temsilci yöntemi çağırma olanak tanıyan yöntemi.  
   
  Aşağıdaki tabloda, yönetilen temsilci veri türü için sıralama seçeneklerini gösterir. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Özniteliği sağlayan çeşitli <xref:System.Runtime.InteropServices.UnmanagedType> sabit listesi değerleri sıralama temsil eder.  
   
@@ -166,23 +166,23 @@ internal class DelegateTest {
   
  Bu bölüm, aşağıdaki biçimlendirilen değer türlerinde bilgileri sağlar:  
   
--   [Değer türleri platformunda kullanılan çağırma](#value-types-used-in-platform-invoke)  
+- [Değer türleri platformunda kullanılan çağırma](#value-types-used-in-platform-invoke)  
   
--   [COM birlikte çalışma kullanılan değer türleri](#value-types-used-in-com-interop)  
+- [COM birlikte çalışma kullanılan değer türleri](#value-types-used-in-com-interop)  
   
  Biçimlendirilmiş türlerini açıklayan ek olarak, bu konu tanımlar [sistem değer türleri](#system-value-types) olağan dışı hazırlama davranışı vardır.  
   
  Biçimlendirilmiş bir tür üyelerini bellekte düzenini açıkça denetleyen bilgilerini içeren karmaşık bir türdür. Üye düzeni bilgilerini kullanarak sağlanan <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliği. Düzeni aşağıdakilerden biri olabilir <xref:System.Runtime.InteropServices.LayoutKind> sabit listesi değerleri:  
   
--   **LayoutKind.Automatic**  
+- **LayoutKind.Automatic**  
   
      Ortak dil çalışma zamanı verimliliği için türün üyeleri yeniden sıralamak ücretsiz olduğunu gösterir. Ancak, yönetilmeyen koda bir değer türü geçirildiğinde, üyeleri düzenini öngörülebilir olur. Böyle bir yapı otomatik olarak hazırlamak girişimi, bir özel durum neden olur.  
   
--   **LayoutKind.Sequential**  
+- **LayoutKind.Sequential**  
   
      Yönetilen tür tanımında göründükleri sırayla yönetilmeyen bellekte düzenlendiği için türün üyeleri olduğunu gösterir.  
   
--   **LayoutKind.Explicit**  
+- **LayoutKind.Explicit**  
   
      Üyeleri göre düzenlenmiştir gösterir <xref:System.Runtime.InteropServices.FieldOffsetAttribute> her alanı ile sağlanan.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
 ms.openlocfilehash: 2cc3c54563b261d49264314f7306193accbe4040
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596807"
 ---
 # <a name="instancing"></a>Örnek Oluşturma
 İstemci isteklerine yanıt olarak bir hizmet sınıfı örneğini nasıl oluşturulduğunu denetimleri örneklemesini davranış ayarına Instancing örnek gösterir. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), uygulayan `ICalculator` hizmet sözleşmesi. Bu örnek yeni bir sözleşme tanımlayan `ICalculatorInstance`, işlevinden devralan `ICalculator`. Belirtilen sözleşme `ICalculatorInstance` hizmet örneği durumunu incelemek için üç ek işlemler sağlar. Örneklemesini ayarı değiştirerek istemci çalıştırarak davranış değişikliği görebilirsiniz.  
@@ -22,11 +22,11 @@ ms.locfileid: "59311441"
   
  Aşağıdaki örneklemesini modları kullanılabilir:  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>: Her istemci isteği için yeni bir hizmet örneği oluşturulur.  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Her istemci isteği için yeni bir hizmet örneği oluşturulur.  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>: Yeni bir örneği, her yeni istemci oturumu için oluşturulan ve (oturum destekleyen bir bağlama gerektirir), oturumunun ömrü boyunca saklanır.  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Yeni bir örneği, her yeni istemci oturumu için oluşturulan ve (oturum destekleyen bir bağlama gerektirir), oturumunun ömrü boyunca saklanır.  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>: Tek bir hizmet sınıfı örneğini uygulama ömrü boyunca tüm istemci isteklerini işler.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: Tek bir hizmet sınıfı örneğini uygulama ömrü boyunca tüm istemci isteklerini işler.  
   
  Hizmet sınıfı ile örneklemesini davranışını belirten `[ServiceBehavior(InstanceContextMode=<setting>)]` özniteliği aşağıdaki kod örneğinde gösterildiği gibi. Satırları değiştirerek açıklamalı, her örneği modun davranışını görebilirsiniz. Örneklemesini modu değiştirdikten sonra hizmeti yeniden unutmayın. İstemcide belirtmek için hiçbir örnek oluşturma ile ilgili ayarları vardır.  
   

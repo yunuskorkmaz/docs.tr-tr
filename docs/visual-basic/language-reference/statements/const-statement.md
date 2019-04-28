@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
 ms.openlocfilehash: 089c2dca99373f379e1eff319cf8c41242e5f135
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638322"
 ---
 # <a name="const-statement-visual-basic"></a>Const Deyimi (Visual Basic)
 Bildirir ve bir veya daha fazla sabitlerini tanımlar.  
@@ -57,35 +57,35 @@ Const constantlist
   
 ## <a name="rules"></a>Kurallar  
   
--   **Bildirim bağlamı.** Bir sabit bildirilen her türlü yordam dışında Modül düzeyinde bir *üyeye sabitine*; yapısı, sınıfın bir üyesidir veya modül bildiren.  
+- **Bildirim bağlamı.** Bir sabit bildirilen her türlü yordam dışında Modül düzeyinde bir *üyeye sabitine*; yapısı, sınıfın bir üyesidir veya modül bildiren.  
   
      Yordam düzeyinde bildirilen bir sabit değeri bir *yerel sabit*; yordam veya onu bildiren blok için yereldir.  
   
--   **Öznitelikleri.** Öznitelikleri yalnızca üye sabitleri için değil, yerel sabit uygulayabilirsiniz. Bir özniteliği derleme meta bilgileri yerel sabitler gibi geçici depolama için anlamlı değil katkıda bulunur.  
+- **Öznitelikleri.** Öznitelikleri yalnızca üye sabitleri için değil, yerel sabit uygulayabilirsiniz. Bir özniteliği derleme meta bilgileri yerel sabitler gibi geçici depolama için anlamlı değil katkıda bulunur.  
   
--   **Değiştiriciler.** Varsayılan olarak, tüm sabittir `Shared`, `Static`, ve `ReadOnly`. Bu anahtar sözcüklerden biri bir sabiti bildirirken kullanamazsınız.  
+- **Değiştiriciler.** Varsayılan olarak, tüm sabittir `Shared`, `Static`, ve `ReadOnly`. Bu anahtar sözcüklerden biri bir sabiti bildirirken kullanamazsınız.  
   
      Yordam düzeyinde kullanamazsınız `Shadows` veya herhangi bir erişim değiştiricilerine yerel sabitleri bildirmek için.  
   
--   **Birden fazla sabit.** Aynı bildirim deyiminde birkaç sabitleri bildirebilirsiniz belirtme `constantname` her biri için bölüm. Birden fazla sabit virgülle ayrılır.  
+- **Birden fazla sabit.** Aynı bildirim deyiminde birkaç sabitleri bildirebilirsiniz belirtme `constantname` her biri için bölüm. Birden fazla sabit virgülle ayrılır.  
   
 ## <a name="data-type-rules"></a>Veri türü kuralları  
   
--   **Veri türleri.** `Const` İfadesi bir değişken veri türünü bildirebilirsiniz. Herhangi bir veri türü veya bir numaralandırma adını belirtebilirsiniz.  
+- **Veri türleri.** `Const` İfadesi bir değişken veri türünü bildirebilirsiniz. Herhangi bir veri türü veya bir numaralandırma adını belirtebilirsiniz.  
   
--   **Varsayılan türü.** Siz belirtmezseniz `datatype`, veri türü sabit alır `initializer`. Her ikisini de belirtirseniz `datatype` ve `initializer`, veri türü `initializer` dönüştürülebilmelidir `datatype`. Kullanılmazsa `datatype` ya da `initializer` varsa, veri türü için varsayılan değerleri `Object`.  
+- **Varsayılan türü.** Siz belirtmezseniz `datatype`, veri türü sabit alır `initializer`. Her ikisini de belirtirseniz `datatype` ve `initializer`, veri türü `initializer` dönüştürülebilmelidir `datatype`. Kullanılmazsa `datatype` ya da `initializer` varsa, veri türü için varsayılan değerleri `Object`.  
   
--   **Farklı türler.** Farklı veri türleri farklı sabitleri için ayrı bir kullanarak belirtebileceğiniz `As` bildirdiğiniz her bir değişken yan tümcesi. Ancak, ortak bir'ı kullanarak aynı türde olacak şekilde birkaç sabitleri bildiremezsiniz `As` yan tümcesi.  
+- **Farklı türler.** Farklı veri türleri farklı sabitleri için ayrı bir kullanarak belirtebileceğiniz `As` bildirdiğiniz her bir değişken yan tümcesi. Ancak, ortak bir'ı kullanarak aynı türde olacak şekilde birkaç sabitleri bildiremezsiniz `As` yan tümcesi.  
   
--   **Başlatma.** Her sabiti değerini başlatmalıdır `constantlist`. Kullandığınız `initializer` sabiti için atanmış bir ifade sağlamanız için. İfade değişmez değerleri, önceden tanımlanmış diğer sabitleri ve önceden tanımlanmış numaralandırma üyeleri herhangi bir birleşimi olabilir. Bu öğeleri birleştirin, aritmetik ve mantıksal işleçlerini kullanabilirsiniz.  
+- **Başlatma.** Her sabiti değerini başlatmalıdır `constantlist`. Kullandığınız `initializer` sabiti için atanmış bir ifade sağlamanız için. İfade değişmez değerleri, önceden tanımlanmış diğer sabitleri ve önceden tanımlanmış numaralandırma üyeleri herhangi bir birleşimi olabilir. Bu öğeleri birleştirin, aritmetik ve mantıksal işleçlerini kullanabilirsiniz.  
   
      Değişkenler veya işlevlerinde kullanılamaz `initializer`. Bununla birlikte, dönüşüm anahtar sözcükleri gibi kullanabileceğiniz `CByte` ve `CShort`. Ayrıca `AscW` bir sabit ile çağırırsanız `String` veya `Char` bağımsız değişkeni, derleme zamanında değerlendirilebilen olduğundan.  
   
 ## <a name="behavior"></a>Davranış  
   
--   **Kapsam.** Yerel sabitleri, yordam veya blok içinde yalnızca erişilebilir. Üye sabitleri herhangi bir yerde kendi sınıf, yapı veya modül içinde erişilebilir.  
+- **Kapsam.** Yerel sabitleri, yordam veya blok içinde yalnızca erişilebilir. Üye sabitleri herhangi bir yerde kendi sınıf, yapı veya modül içinde erişilebilir.  
   
--   **Nitelik.** Kod bir sınıf dışında yapısını veya modülünü üye sabitin adı bu sınıf, yapı veya modül adıyla nitelemeniz gerekir. Bir yordam veya blok Bu yordam veya blok içinde herhangi bir yerel sabit başvurulamaz dışındaki kod.  
+- **Nitelik.** Kod bir sınıf dışında yapısını veya modülünü üye sabitin adı bu sınıf, yapı veya modül adıyla nitelemeniz gerekir. Bir yordam veya blok Bu yordam veya blok içinde herhangi bir yerel sabit başvurulamaz dışındaki kod.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte `Const` sabitler değişmez değerler yerine kullanılmak için deyimi.  

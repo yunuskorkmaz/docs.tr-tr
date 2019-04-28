@@ -9,11 +9,11 @@ helpviewer_keywords:
 - UI Automation, retrieving properties of elements
 ms.assetid: 09576b1a-291f-435c-980e-dee32d899ae1
 ms.openlocfilehash: 93e0fba4288ba3231bfed45252bdaa78892d008c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59330772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61610055"
 ---
 # <a name="get-ui-automation-element-properties"></a>UI Otomasyon Öğesi Özelliklerini Alma
 > [!NOTE]
@@ -41,6 +41,6 @@ ms.locfileid: "59330772"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İstemciler İçin UI Otomasyon Özellikleri](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [UI Otomasyonda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
-- [UI Otomasyonda Önbelleğe Alma](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+- [İstemciler İçin UI Otomasyonu Özellikleri](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
+- [UI Otomasyonunda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI Otomasyonu İstemcilerinde Önbelleğe Alma](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)

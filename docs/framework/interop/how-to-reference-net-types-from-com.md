@@ -15,11 +15,11 @@ ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1e033ba4b3b98367452b355363058adc7f1a5887
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643029"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>Nasıl yapılır: COM'dan .NET Türlerine Başvurma
 Bakış açısıyla, istemci ve sunucu kodu, COM ve .NET Framework arasındaki farklar büyük ölçüde görünmez. Microsoft Visual Basic istemciler, bir .NET nesnesini sözdizimi, özelliklerini ve nesne yöntemleri ve tam olarak bunu herhangi bir COM nesnesi gibi alanlar nesne tarayıcısında görüntüleyebilirsiniz.  
@@ -28,7 +28,7 @@ Bakış açısıyla, istemci ve sunucu kodu, COM ve .NET Framework arasındaki f
   
 ### <a name="to-import-a-library"></a>Bir kitaplığı içeri aktarmak için  
   
--   Belirtin **raw_interfaces_only** seçeneğini **#import** yönergesi. Örneğin:  
+- Belirtin **raw_interfaces_only** seçeneğini **#import** yönergesi. Örneğin:  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
@@ -36,7 +36,7 @@ Bakış açısıyla, istemci ve sunucu kodu, COM ve .NET Framework arasındaki f
   
      -veya-  
   
--   #İmport yönergesi için Mscorlib.tlb içerir. Örneğin:  
+- #İmport yönergesi için Mscorlib.tlb içerir. Örneğin:  
   
     ```cpp  
     #import "mscorlib.tlb"  

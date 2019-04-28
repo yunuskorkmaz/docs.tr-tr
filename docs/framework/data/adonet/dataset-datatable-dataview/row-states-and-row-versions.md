@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
 ms.openlocfilehash: 83147c3f9d70434f5c8dd34e2e56f44f71adc53d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607884"
 ---
 # <a name="row-states-and-row-versions"></a>Satır Durumları ve Satır Sürümleri
 ADO.NET, tablolardaki satır durumları ve sürümlerini kullanarak satır yönetir. Bir satır durumu, bir satır durumunu gösterir; Satır sürümleri, geçerli ve özgün varsayılan değerleri dahil olmak üzere değişiklik gibi bir satır depolanan değerleri korur. Örneğin, bir satırda bir sütun için bir değişiklik yaptıktan sonra satır satır durumunu olur `Modified`, ve iki satır sürümleri: `Current`, geçerli satır değerleri içeren ve `Original`, sütun öncesinde satır değerleri içerir değiştirilmiş.  

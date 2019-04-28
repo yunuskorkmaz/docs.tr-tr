@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
 ms.openlocfilehash: 32ee58833b83e2a3356b6c1598abd207364e6ec1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609935"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>UI Otomasyon Yerleştirme Denetim Düzenini Uygulama
 > [!NOTE]
@@ -28,13 +28,13 @@ Visual Studio'dan örnek "Class View" penceresinde DockPosition.Right ve "Hata l
 ## <a name="implementation-guidelines-and-conventions"></a>Uygulama yönergeleri ve kuralları  
  Dock denetim düzeni uygularken aşağıdaki yönergeler ve kuralları dikkat edin:  
   
--   <xref:System.Windows.Automation.Provider.IDockProvider> yerleştirme kapsayıcının herhangi bir özelliği ya da yerleştirme kapsayıcıdaki geçerli denetim bitişik yerleştirilen denetimlerin herhangi bir özelliği kullanıma sunmuyor.  
+- <xref:System.Windows.Automation.Provider.IDockProvider> yerleştirme kapsayıcının herhangi bir özelliği ya da yerleştirme kapsayıcıdaki geçerli denetim bitişik yerleştirilen denetimlerin herhangi bir özelliği kullanıma sunmuyor.  
   
--   Denetimleri birbirine geçerli kendi z-düzeni tabanlı yerleştirilmiştir; en yüksek yerleştirme kapsayıcının belirtilen edge'den yerleştirilen, z düzenini yatırımlarından, daha da esnetmenize.  
+- Denetimleri birbirine geçerli kendi z-düzeni tabanlı yerleştirilmiştir; en yüksek yerleştirme kapsayıcının belirtilen edge'den yerleştirilen, z düzenini yatırımlarından, daha da esnetmenize.  
   
--   Yerleştirme kapsayıcı boyutlandırılırsa, kapsayıcı içindeki herhangi bir yerleşik denetim, bunlar ilk olarak yerleştirildi kenarına temizleme konumlandırılmasına. Yerleşik denetimler de yerleştirme davranışını göre kapsayıcıdaki herhangi bir alanı doldurmak için boyutlandırılır kendi <xref:System.Windows.Automation.DockPosition>. Örneğin, varsa <xref:System.Windows.Automation.DockPosition.Top> belirtilir ve denetimin sol tarafında tüm kullanılabilir alanı dolduracak şekilde genişletin. Varsa <xref:System.Windows.Automation.DockPosition.Fill> belirtilirse, denetimin dört tarafına tüm kullanılabilir alanı dolduracak şekilde genişletir.  
+- Yerleştirme kapsayıcı boyutlandırılırsa, kapsayıcı içindeki herhangi bir yerleşik denetim, bunlar ilk olarak yerleştirildi kenarına temizleme konumlandırılmasına. Yerleşik denetimler de yerleştirme davranışını göre kapsayıcıdaki herhangi bir alanı doldurmak için boyutlandırılır kendi <xref:System.Windows.Automation.DockPosition>. Örneğin, varsa <xref:System.Windows.Automation.DockPosition.Top> belirtilir ve denetimin sol tarafında tüm kullanılabilir alanı dolduracak şekilde genişletin. Varsa <xref:System.Windows.Automation.DockPosition.Fill> belirtilirse, denetimin dört tarafına tüm kullanılabilir alanı dolduracak şekilde genişletir.  
   
--   Bir çoklu monitör sisteminde sol veya sağ tarafında geçerli izleyici denetimleri yerleştirme. Bu mümkün değilse, en soldaki monitöre sol tarafındaki veya sağdaki ekranın sağ tarafındaki dock.  
+- Bir çoklu monitör sisteminde sol veya sağ tarafında geçerli izleyici denetimleri yerleştirme. Bu mümkün değilse, en soldaki monitöre sol tarafındaki veya sağdaki ekranın sağ tarafındaki dock.  
   
 <a name="Required_Members_for_IDockProvider"></a>   
 ## <a name="required-members-for-idockprovider"></a>Gerekli üyeleri IDockProvider için  
@@ -43,7 +43,7 @@ Visual Studio'dan örnek "Class View" penceresinde DockPosition.Right ve "Hata l
 |Gerekli üyeleri|Üye türü|Notlar|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Özellik|None|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Yöntem|None|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Yöntem|Yok.|  
   
  Bu denetim düzeni, ilişkili olay vardır.  
   

@@ -1,18 +1,18 @@
 ---
-title: DataSet içeriklerini birleştirme
+title: DataSet İçeriklerini Birleştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
 ms.openlocfilehash: 153c96860005046e4cc16d5a965bd569e3519b52
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607936"
 ---
-# <a name="merging-dataset-contents"></a>DataSet içeriklerini birleştirme
+# <a name="merging-dataset-contents"></a>DataSet İçeriklerini Birleştirme
 
 Kullanabileceğiniz <xref:System.Data.DataSet.Merge%2A> içeriğini birleştirmek için yöntemi bir <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, veya <xref:System.Data.DataRow> içine var olan bir dizi `DataSet`. Yeni verilerin nasıl çeşitli Etkenler ve seçeneklerini etkileyen varolan içine birleştirilir `DataSet`.
 

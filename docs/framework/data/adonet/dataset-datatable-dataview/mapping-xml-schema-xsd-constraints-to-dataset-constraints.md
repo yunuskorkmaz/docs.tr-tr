@@ -3,22 +3,22 @@ title: XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşle
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
 ms.openlocfilehash: a1690e99aeaeb7ed9c85fd28697ae22d34bb2018
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607909"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
 XML Şeması Tanım Dili (XSD) öğeleri ve öznitelikleri tanımlar belirtilmesi kısıtlamaları sağlar. Bir XML Şeması ilişkisel şemasında eşlerken bir <xref:System.Data.DataSet>, XML şema kısıtlamaları uygun ilişkisel tabloları ve sütunları kısıtlamalar eşleştirilmiş **veri kümesi**.  
   
  Bu bölümde, aşağıdaki XML şema kısıtlamaları eşleme ele alınmaktadır:  
   
--   Benzersizlik kısıtlamasını kullanarak belirtilen **benzersiz** öğesi.  
+- Benzersizlik kısıtlamasını kullanarak belirtilen **benzersiz** öğesi.  
   
--   Anahtar kısıtlamasını kullanarak belirtilen **anahtar** öğesi.  
+- Anahtar kısıtlamasını kullanarak belirtilen **anahtar** öğesi.  
   
--   Kullanarak belirtilen keyref kısıtlama **keyref** öğesi.  
+- Kullanarak belirtilen keyref kısıtlama **keyref** öğesi.  
   
  Bir öğe veya öznitelik bir kısıtlama kullanarak belirli kısıtlamalara belgenin herhangi bir örneğindeki öğe değerlerini belirtin. Örneğin, bir anahtar kısıtlaması bir **CustomerID** alt öğesi bir **müşteri** şema öğesi gösterir değerlerini **CustomerID** alt öğesi olmalıdır. herhangi bir belge örneğindeki benzersiz ve null değerlere izin verilmemektedir.  
   

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 83c72704ccb01baf68a3cacb6252367e07909fa8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638424"
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2 Arabirimi
 Ortak dil çalışma zamanı tarafından (CLR) profil oluşturucu abone olduğu olaylar meydana geldiğinde bir kod profil oluşturucu bildirmek için kullanılan yöntemleri sağlar. `ICorProfilerCallback2` Arabirimi uzantısıdır [Icorprofilercallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) arabirimi. Diğer bir deyişle, .NET Framework 2.0 sürümünde tanıtılan yeni geri çağırmaları sağlar.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
 ms.openlocfilehash: 0d899342383bdf9d262fc9a1ab5e00bbe43066e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638193"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>Bildirim Bağlamları ve Varsayılan Erişim Düzeyleri (Visual Basic)
 Bu konuda, hangi Visual Basic türleri, hangi bir tür içinde bildirilebilir ve hangi kullanıcıların erişim düzeylerini varsayılan belirtilmezse açıklanmaktadır.  
@@ -24,11 +24,11 @@ Bu konuda, hangi Visual Basic türleri, hangi bir tür içinde bildirilebilir ve
   
  Bildirim bağlamları düzeyleri şunlardır:  
   
--   *Namespace düzeyi* — bir kaynak dosya veya ad alanı içinde ancak bir sınıf, yapı, modül veya arabirimi içinde değil  
+- *Namespace düzeyi* — bir kaynak dosya veya ad alanı içinde ancak bir sınıf, yapı, modül veya arabirimi içinde değil  
   
--   *Modül düzeyi* — bir sınıf, yapı, modül veya arabirimi içinde ancak bir yordam veya blok içinde değil  
+- *Modül düzeyi* — bir sınıf, yapı, modül veya arabirimi içinde ancak bir yordam veya blok içinde değil  
   
--   *Yordam düzeyi* — bir yordam veya blok içinde (gibi `If` veya `For`)  
+- *Yordam düzeyi* — bir yordam veya blok içinde (gibi `If` veya `For`)  
   
  Aşağıdaki tabloda, bildirim bağlamları bağlı olarak çeşitli bildirilmiş programlama öğesine varsayılan erişim düzeyleri gösterilmektedir.  
   

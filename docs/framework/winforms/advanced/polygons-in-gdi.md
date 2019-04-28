@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GDI+, polygons
 ms.assetid: a72213d2-d69a-4c2b-a75c-be7b20390c13
 ms.openlocfilehash: 2b1e3d387e4d056d9187c54dcef560544206c370
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641313"
 ---
 # <a name="polygons-in-gdi"></a>GDI+'daki Çokgenler
 Bir çokgenin üç veya daha fazla düz kenarlar ile kapalı şekildir. Örneğin, üç kenarı sahip bir çokgenin bir üçgen olan dört tarafında sahip bir çokgenin dikdörtgen şeklinde ve beş yüz sahip bir çokgenin bir Beşgene olduğu. Aşağıdaki resimde, birkaç çokgenler gösterilmektedir.  

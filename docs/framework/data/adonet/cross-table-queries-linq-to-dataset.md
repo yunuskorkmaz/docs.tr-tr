@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6819a16f-8656-41af-a54d-dfec0cb66366
 ms.openlocfilehash: e22df1148fab9148c1ca46f27e8603f55f71b34b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607780"
 ---
 # <a name="cross-table-queries-linq-to-dataset"></a>Tablolar arası sorgular (LINQ to DataSet)
 Tek bir tabloyu sorgulamak ek tablolar arası sorgular içinde de gerçekleştirebilirsiniz [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Bu kullanılarak yapılır bir *birleştirme*. Bir veri kaynağı nesne kimliği başvurun ya da bir ürün gibi başka bir veri kaynağındaki ortak bir özniteliği paylaşan nesneleri ile ilişki join nedir Nesne yönelimli programlama, nesneleri arasındaki ilişkiler her bir nesnenin başka bir nesneye başvuran bir üyesine sahip olduğundan gitmek oldukça kolaydır. Dış veritabanı tablolarında ancak ilişkilerinde gezinme basit değildir. Veritabanı tabloları yerleşik ilişkileri içermez. Bu gibi durumlarda, her bir kaynaktan gelen öğelerle eşleme için birleştirme işlemi kullanılabilir. Örneğin, ürün bilgileri ve satış bilgilerini içeren iki tablo göz önünde bulundurulduğunda, satış bilgilerinin ve ürünleri için aynı satış siparişi eşleştirmek için bir birleştirme işlemi kullanabilirsiniz.  

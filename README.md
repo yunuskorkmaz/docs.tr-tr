@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 0c8a16936173b1e599d018d81432ca6b73c08e53
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607355"
+---
 # <a name="net-docs"></a>.NET belgeleri
 
 Bu depo, .NET için kavramsal belgelerde içerir. [.NET belgeleri site](https://docs.microsoft.com/dotnet) Bunun yanı sıra birden çok deposu oluşturulur:

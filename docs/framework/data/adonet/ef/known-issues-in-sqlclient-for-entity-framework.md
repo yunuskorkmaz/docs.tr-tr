@@ -3,11 +3,11 @@ title: Entity Framework için SqlClient’ta Bilinen Sorunlar
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
 ms.openlocfilehash: a3df5a42b40e1851875c35165301af082f5d3269
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607754"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Entity Framework için SqlClient’ta Bilinen Sorunlar
 Bu bölümde, .NET Framework veri sağlayıcısı için SQL Server (SqlClient) ilgili bilinen sorunlar açıklanmaktadır.  
@@ -25,15 +25,15 @@ Bu bölümde, .NET Framework veri sağlayıcısı için SQL Server (SqlClient) i
   
  Çıkış sorgu CROSS APPLY ve/veya OUTER APPLY işleci varlığını neden bazı tipik senaryolar şunlardır:  
   
--   Disk belleği ile ilişkili alt sorgu.  
+- Disk belleği ile ilişkili alt sorgu.  
   
--   Bir `AnyElement` bir bağıntılı alt sorguya üzerinden ya da gezinti tarafından üretilen bir koleksiyon üzerinden.  
+- Bir `AnyElement` bir bağıntılı alt sorguya üzerinden ya da gezinti tarafından üretilen bir koleksiyon üzerinden.  
   
--   LINQ öğe Seçici kabul yöntemleri gruplandırma kullanan sorgular.  
+- LINQ öğe Seçici kabul yöntemleri gruplandırma kullanan sorgular.  
   
--   İçinde bir CROSS APPLY veya OUTER APPLY açıkça belirtilen bir sorgu  
+- İçinde bir CROSS APPLY veya OUTER APPLY açıkça belirtilen bir sorgu  
   
--   Bir DEREF olan bir sorgu bir başvuru yapısı oluşturun.  
+- Bir DEREF olan bir sorgu bir başvuru yapısı oluşturun.  
   
 ## <a name="skip-operator"></a>SKIP işleci  
  Kullanıyorsanız [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)], anahtar olmayan sütun ORDER BY ile Atla kullanarak hatalı sonuçlar döndürebilir. Anahtar olmayan sütun yinelenen veri varsa birden çok belirtilen sayıda satırı atlanabilir. Bu nasıl Atla için çevrilir nedeniyle, [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]. Örneğin, aşağıdaki sorguda, beşten fazla satır varsa atlanabilir `E.NonKeyColumn` yinelenen değerlere sahip:  

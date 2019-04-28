@@ -3,11 +3,11 @@ title: Karşılaştırma semantiği (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
 ms.openlocfilehash: 6b4c4177ebd6c45e00a1ac7774e40a43e0c14a74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605977"
 ---
 # <a name="comparison-semantics-entity-sql"></a>Karşılaştırma semantiği (varlık SQL)
 Aşağıdakilerden herhangi birini gerçekleştiren [!INCLUDE[esql](../../../../../../includes/esql-md.md)] işleçleri karşılaştırma türü örnekleri içerir:  
@@ -15,53 +15,53 @@ Aşağıdakilerden herhangi birini gerçekleştiren [!INCLUDE[esql](../../../../
 ## <a name="explicit-comparison"></a>Açık karşılaştırma  
  Eşitlik işlemleri:  
   
--   =  
+- =  
   
--   !=  
+- !=  
   
  İşlem sırası:  
   
--   <  
+- <  
   
--   \<=  
+- \<=  
   
--   \>  
+- \>  
   
--   \>=  
+- \>=  
   
  Öğesinin işlemler:  
   
--   IS NULL  
+- IS NULL  
   
--   NULL DEĞİL  
+- NULL DEĞİL  
   
 ## <a name="explicit-distinction"></a>Açık ayrımı  
  Eşitlik fark:  
   
--   DISTINCT  
+- DISTINCT  
   
--   GROUP BY  
+- GROUP BY  
   
  Ayrım sıralama:  
   
--   SIRALAMA ÖLÇÜTÜ  
+- SIRALAMA ÖLÇÜTÜ  
   
 ## <a name="implicit-distinction"></a>Örtük ayrımı  
  İşlemler ve koşullarına (eşitlik) ayarlayın:  
   
--   UNION  
+- UNION  
   
--   INTERSECT  
+- INTERSECT  
   
--   EXCEPT  
+- EXCEPT  
   
--   SET  
+- SET  
   
--   OVERLAPS  
+- OVERLAPS  
   
  Öğe koşullarına (eşitlik):  
   
--   IN  
+- IN  
   
 ## <a name="supported-combinations"></a>Desteklenen kombinasyonlar  
  Karşılaştırma işleçleri türü her türdeki tüm desteklenen birleşimleri aşağıdaki tabloda gösterilmiştir:  

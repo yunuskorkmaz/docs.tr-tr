@@ -3,24 +3,24 @@ title: 'Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyaları Olu�
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
 ms.openlocfilehash: 915a9f3c53dba355480a3869602f963b195d53fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605996"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyaları Oluşturma
 Bu konuda EDM Oluşturucu (EdmGen.exe) aracı School veritabanını temel alan aşağıdaki dosyaları oluşturmak için nasıl kullanılacağını gösterir:  
   
--   Kavramsal model (.csdl dosyası).  
+- Kavramsal model (.csdl dosyası).  
   
--   Bir depolama model (.ssdl dosyası).  
+- Bir depolama model (.ssdl dosyası).  
   
--   Kavramsal ve depolama modelleri (.msl dosyası) arasında eşleme.  
+- Kavramsal ve depolama modelleri (.msl dosyası) arasında eşleme.  
   
--   Visual Basic veya C# içinde nesne katmanı kodu.  
+- Visual Basic veya C# içinde nesne katmanı kodu.  
   
--   Dosyaları görüntüleyin.  
+- Dosyaları görüntüleyin.  
   
  EdmGen.exe aracı /mode:FullGeneration yukarıda listelenen dosyaları oluşturmak için kullanır. EdmGen.exe komutlar hakkında daha fazla bilgi için bkz. [EDM Oluşturucu (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).  
   

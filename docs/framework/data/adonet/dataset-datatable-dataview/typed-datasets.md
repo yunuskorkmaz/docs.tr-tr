@@ -3,11 +3,11 @@ title: Türü Belirtilmiş DataSets
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
 ms.openlocfilehash: 92ed3f8fd392238785fd2d205668f14fe477f2b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607132"
 ---
 # <a name="typed-datasets"></a>Türü Belirtilmiş DataSets
 Zayıf yazılmış değişkenlerin yoluyla değerlere geç bağlanan erişime birlikte <xref:System.Data.DataSet> kesin türü belirtilmiş bir benzetme verilerine erişim sağlar. Tablolar ve parçası olan sütunlar **veri kümesi** değişkenleri kesin ve kullanımı kolay adları kullanılarak erişilebilir.  

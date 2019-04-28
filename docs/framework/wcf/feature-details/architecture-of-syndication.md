@@ -3,24 +3,24 @@ title: Dağıtım Mimarisi
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
 ms.openlocfilehash: 4083f7f7ef3fc986e9a7c430b8ed8cfe451c9d86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596368"
 ---
 # <a name="architecture-of-syndication"></a>Dağıtım Mimarisi
 Dağıtım API dağıtılmış içeriği, çeşitli biçimlerde hat açın yazılmasına izin veren bir biçim nötr programlama modeli sağlamak için tasarlanmıştır. Aşağıdaki sınıflar soyut bir veri modeli oluşur:  
   
--   <xref:System.ServiceModel.Syndication.SyndicationCategory>  
+- <xref:System.ServiceModel.Syndication.SyndicationCategory>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
+- <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationItem>  
+- <xref:System.ServiceModel.Syndication.SyndicationItem>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationLink>  
+- <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationPerson>  
+- <xref:System.ServiceModel.Syndication.SyndicationPerson>  
   
  Bazı adları farklı olmasına rağmen bu sınıfların Atom 1.0 belirtiminde tanımlanan yapıları yakından eşlenir.  
   
@@ -75,7 +75,7 @@ Dağıtım API dağıtılmış içeriği, çeşitli biçimlerde hat açın yazı
   
 ## <a name="extensibility"></a>Genişletilebilirlik  
   
--   Bir anahtar dağıtım protokolleri genişletilebilirlik özelliğidir. Hem Atom 1.0 hem de RSS 2.0 öznitelikler ve öğeler'de tanımlanmayan, dağıtım akışlarını eklemenize olanak tanır. Özel öznitelikler ve Uzantılar ile çalışmaya ilişkin iki yöntem WCF dağıtım programlama modeli sağlar: yeni bir sınıf ve geniş yazılmış erişim türetme. Daha fazla bilgi için [dağıtım genişletilebilirliği](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
+- Bir anahtar dağıtım protokolleri genişletilebilirlik özelliğidir. Hem Atom 1.0 hem de RSS 2.0 öznitelikler ve öğeler'de tanımlanmayan, dağıtım akışlarını eklemenize olanak tanır. Özel öznitelikler ve Uzantılar ile çalışmaya ilişkin iki yöntem WCF dağıtım programlama modeli sağlar: yeni bir sınıf ve geniş yazılmış erişim türetme. Daha fazla bilgi için [dağıtım genişletilebilirliği](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

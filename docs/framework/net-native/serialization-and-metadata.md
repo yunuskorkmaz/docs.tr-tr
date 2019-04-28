@@ -5,18 +5,18 @@ ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c82d32fe5b1e62a19ff5e2920c5943f1303b2d64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599484"
 ---
 # <a name="serialization-and-metadata"></a>Serileştirme ve Meta Veriler
 Uygulamanızı serileştirir ve nesneleri seri durumdan çıkarır, girişler için çalışma zamanı yönergeleri eklemeniz gerekebilir (. rd.xml) dosyasını gerekli meta verileri çalışma zamanında mevcut olduğundan emin olun. Seri hale getiricileri genişletme iki kategorisi vardır ve her çalışma zamanı yönergeleri dosyanızda farklı işleme gerektirir:  
   
--   Üçüncü taraf seri hale getiricileri genişletme yansıma tabanlı. Bu değişiklikler, çalışma zamanı yönergeleri dosyanıza gerektirir ve sonraki bölümde ele alınmıştır.  
+- Üçüncü taraf seri hale getiricileri genişletme yansıma tabanlı. Bu değişiklikler, çalışma zamanı yönergeleri dosyanıza gerektirir ve sonraki bölümde ele alınmıştır.  
   
--   Yansıma olmayan .NET Framework sınıf kitaplığında bulunan seri hale getiricileri genişletme temel. Bu değişiklikler, çalışma zamanı yönergeleri dosyanıza gerektirebilir ve ele alınmıştır [Microsoft seri hale getiricileri genişletme](#Microsoft) bölümü.  
+- Yansıma olmayan .NET Framework sınıf kitaplığında bulunan seri hale getiricileri genişletme temel. Bu değişiklikler, çalışma zamanı yönergeleri dosyanıza gerektirebilir ve ele alınmıştır [Microsoft seri hale getiricileri genişletme](#Microsoft) bölümü.  
   
 <a name="ThirdParty"></a>   
 ## <a name="third-party-serializers"></a>Üçüncü taraf seri hale getiricileri genişletme  

@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Birden çok kaynaktan veri okumak için Joinblock'u kullanma"
+title: "Nasıl yapılır: Birden Fazla Kaynaktan Okumak için JoinBlock'u Kullanma"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0031e352fea845ca4831b4df3a67c9cc6b67e876
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608492"
 ---
-# <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Nasıl yapılır: Birden çok kaynaktan veri okumak için Joinblock'u kullanma
+# <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Nasıl yapılır: Birden Fazla Kaynaktan Okumak için JoinBlock'u Kullanma
 Bu belgenin nasıl kullanıldığını açıklar <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> birden fazla kaynaktan veri kullanılabilir olduğunda bir işlemi gerçekleştirmek için sınıf. Ayrıca, birden çok birleştirme bloğunun bir veri kaynağını daha verimli bir şekilde paylaşmak etkinleştirmek için doyumsuz olmayan modda kullanmayı gösterir.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -41,7 +41,7 @@ Bu belgenin nasıl kullanıldığını açıklar <xref:System.Threading.Tasks.Da
   
  Visual Basic  
   
- **Vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.vb**  
+ **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.vb**  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Doyumsuz olmayan birleştirmeler kullanımını da uygulamanızdaki kilitlenme önlemenize yardımcı olabilir. Bir yazılım uygulamasındaki *kilitlenme* iki veya daha fazla işlem her bir kaynak basılı tutun ve karşılıklı olarak başka bir kaynağı serbest bırakmak başka bir işlemin tamamlanmasını beklemek oluşur. İki tanımlayan bir uygulama düşünün <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> nesneleri. Her iki nesne iki paylaşılan kaynak bloklardan verileri okuyamadı. Doyumsuz modda, bir birleştirme bloğu ilk kaynağından okur ve her ikisi birbirini blokları katılmak için ikinci birleştirme bloğu ikinci kaynağından okur uygulama kilitlenebilir diğer kaynağı serbest bırakmak bekleyin. Doyumsuz olmayan modda, yalnızca tüm veriler kullanılabilir olduğunda, kaynakları ve bu nedenle, kilitlenme riski okumalardan her birleştirme bloğu ortadan kalkar.  

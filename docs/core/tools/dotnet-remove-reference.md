@@ -3,11 +3,11 @@ title: DotNet Kaldır başvuru komutu
 description: Dotnet remove başvuru komutu, projeden projeye başvuruları kaldırmak için kullanışlı bir seçenek sağlar.
 ms.date: 05/29/2018
 ms.openlocfilehash: bfac4721743babcf48fd8e86a50c8df136e1bfce
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61648600"
 ---
 # <a name="dotnet-remove-reference"></a>DotNet başvuru Kaldır
 
@@ -17,7 +17,7 @@ ms.locfileid: "53170619"
 
 `dotnet remove reference` -Projeden projeye başvurular kaldırır.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
 `dotnet remove [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
 

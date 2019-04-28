@@ -15,10 +15,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ab192f086e3e86a879d3478f2bf0d7084ae411b0
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642860"
 ---
 # <a name="marshaling-strings"></a>Dizeleri Hazırlama
 Platform çağırma bunları (Unicode) .NET Framework biçiminden yönetilmeyen biçimine (ANSI) gerekirse dönüştürme kopyaları dizesi parametreleri. Yönetilen dizeler sabit olduğundan, platform çağırma işlevi döndüğünde bunları yönetilmeyen bellekten yönetilen bellek kopyalamaz.  

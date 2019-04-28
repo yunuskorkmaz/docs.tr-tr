@@ -8,11 +8,11 @@ ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 29f29da6f5a95181abfd4540b017561115d59284
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643016"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Nasıl yapılır: Birincil Birlikte Çalışma Derlemelerini Kaydetme
 
@@ -28,9 +28,9 @@ Sınıflar yalnızca COM birlikte çalışma tarafından sıralanabilir ve her z
 
  Visual Studio kullanmayı düşünmüyorsanız, birincil birlikte çalışma derlemelerini kaydetmek gerekli olmamasına karşın, kaydı iki avantaj sağlar:
 
--   Özgün tür kitaplığının kayıt defteri anahtarı altında kayıtlı birincil birlikte çalışma derlemesine açıkça işaretlenmiştir. Kayıt, bilgisayarınızda bir birincil birlikte çalışma derlemesi bulmak en iyi yoludur.
+- Özgün tür kitaplığının kayıt defteri anahtarı altında kayıtlı birincil birlikte çalışma derlemesine açıkça işaretlenmiştir. Kayıt, bilgisayarınızda bir birincil birlikte çalışma derlemesi bulmak en iyi yoludur.
 
--   Yanlışlıkla oluşturma ve bir süre sonra gelecekte, kaydı birincil birlikte çalışma derlemesi olan bir tür başvurmak için Visual Studio kullanıyorsanız, yeni bir birlikte çalışma derlemesi kullanarak önleyebilirsiniz.
+- Yanlışlıkla oluşturma ve bir süre sonra gelecekte, kaydı birincil birlikte çalışma derlemesi olan bir tür başvurmak için Visual Studio kullanıyorsanız, yeni bir birlikte çalışma derlemesi kullanarak önleyebilirsiniz.
 
 Kullanım [derleme Kayıt Aracı (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) birincil birlikte çalışma derlemesi kaydedilecek.
 

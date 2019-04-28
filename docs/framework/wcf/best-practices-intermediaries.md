@@ -3,11 +3,11 @@ title: 'En İyi Yöntemler: Aracılar'
 ms.date: 03/30/2017
 ms.assetid: 2d41b337-8132-4ac2-bea2-6e9ae2f00f8d
 ms.openlocfilehash: 0bd553486bfb89a0ec14c42a1bb7d2ed9c4c540d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59131735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608911"
 ---
 # <a name="best-practices-intermediaries"></a>En İyi Yöntemler: Aracılar
 Doğru hizmet tarafı kanalları aracı düzgün şekilde kapatıldığından emin olmak için aracılar çağrılırken arızları dikkatli olunması gerekir.  

@@ -1,15 +1,15 @@
 ---
-title: SQL komut ağaçlarından - en iyi uygulamalar oluşturma
+title: Komut Ağaçlarından SQL Oluşturma - En İyi Yöntemler
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
 ms.openlocfilehash: 6ac46b577f071bca6c79e23b8b77f9b267ac879b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606673"
 ---
-# <a name="generating-sql-from-command-trees---best-practices"></a>SQL komut ağaçlarından - en iyi uygulamalar oluşturma
+# <a name="generating-sql-from-command-trees---best-practices"></a>Komut Ağaçlarından SQL Oluşturma - En İyi Yöntemler
 
 Çıkış sorgu komut ağaçlarını yakından sorguları SQL ifade model. Ancak, SQL bir çıkış komut ağacından oluşturulurken bazı sık karşılaşılan zorluklar sağlayıcısı yazıcılar için vardır. Bu konuda, bu sorunları ele alınmıştır. Sonraki konu başlığında örnek sağlayıcısı bu sorunları gidermek üzere nasıl gösterir.
 

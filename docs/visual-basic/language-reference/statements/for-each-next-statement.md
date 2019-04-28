@@ -23,11 +23,11 @@ helpviewer_keywords:
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 ms.openlocfilehash: 5081f80ad0da738ebb950bcd649af7a593582356
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638083"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next Deyimi (Visual Basic)
 Bir koleksiyondaki her öğe için bir deyim grubunu yineler.  
@@ -92,11 +92,11 @@ Next [ element ]
   
  `Exit For` Bazı koşullar bir değerlendirmesinden sonra genellikle kullanılır, örneğin, bir `If`... `Then`... `Else` yapısı. Kullanmak istediğiniz `Exit For` aşağıdaki koşulları için:  
   
--   Yineleme devam gereksiz veya imkansız olabilir. Bunun nedeni hatalı bir değer veya bir sonlandırma isteği.  
+- Yineleme devam gereksiz veya imkansız olabilir. Bunun nedeni hatalı bir değer veya bir sonlandırma isteği.  
   
--   Bir özel durum yakalandı bir `Try`... `Catch`... `Finally`. Kullanabileceğinize `Exit For` sonunda `Finally` blok.  
+- Bir özel durum yakalandı bir `Try`... `Catch`... `Finally`. Kullanabileceğinize `Exit For` sonunda `Finally` blok.  
   
--   Büyük veya hatta sonsuz birkaç kez çalıştırabileceğiniz bir döngü sonsuz bir döngüye vardır. Bir koşul algılama, kullanabileceğiniz `Exit For` döngüden çıkma. Daha fazla bilgi için [yapın... Döngü deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+- Büyük veya hatta sonsuz birkaç kez çalıştırabileceğiniz bir döngü sonsuz bir döngüye vardır. Bir koşul algılama, kullanabileceğiniz `Exit For` döngüden çıkma. Daha fazla bilgi için [yapın... Döngü deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
 ## <a name="iterators"></a>Yineleyiciler  
  Kullandığınız bir *yineleyici* bir koleksiyon üzerinde özel yineleme yapmak için. Bir yineleyiciyi bir işlevi olabilir veya bir `Get` erişimcisi. Bunu kullanan bir `Yield` deyimini her öğesini birer birer koleksiyonunun bir döndürür.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
 ms.openlocfilehash: b25de14267bc31ad0ac5e3f51d4cd964b5a0535f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607342"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>(LINQ to DataSet) sorgudan DataTable oluşturma
 Veri bağlama yaygın olan <xref:System.Data.DataTable> nesne. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Yöntemi sorgunun sonuçlarını alır ve verileri kopyalayan bir <xref:System.Data.DataTable>, ardından kullanılabileceği için veri bağlama. Ne zaman veri işlemleri gerçekleştirdi, yeni <xref:System.Data.DataTable> kaynağa geri birleştirilmiş <xref:System.Data.DataTable>.  

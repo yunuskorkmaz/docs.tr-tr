@@ -1,21 +1,21 @@
 ---
-title: Eşleme kavramsal Model SQL Server'a kurallı işlevleri
+title: SQL Server İşlevleri ile Kurallı Kavramsal Model Eşlemesi
 ms.date: 03/30/2017
 ms.assetid: 1a2631bc-a426-4c0a-ba8d-26d9c80d39e2
 ms.openlocfilehash: 3dd655e7acf924fa1bf0c09f0da82826e69482d5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606825"
 ---
-# <a name="conceptual-model-canonical-to-sql-server-functions-mapping"></a>Eşleme kavramsal Model SQL Server'a kurallı işlevleri
-Bu konuda nasıl kavramsal model kurallı işlevleri açıklanmaktadır karşılık gelen SQL Server işlevleri eşlenir.  
+# <a name="conceptual-model-canonical-to-sql-server-functions-mapping"></a>SQL Server İşlevleri ile Kurallı Kavramsal Model Eşlemesi
+Bu konu açıklar nasıl kavramsal model kurallı işlevler karşılık gelen SQL Server işlevleri eşlenir.  
   
-## <a name="date-and-time-functions"></a>Tarih ve saat işlevleri  
- Aşağıdaki tabloda eşleme tarih ve saat işlevleri açıklanmaktadır:  
+## <a name="date-and-time-functions"></a>Tarih ve Saat İşlevleri  
+ Aşağıdaki tabloda eşleme date ve time işlevleri açıklanmaktadır:  
   
-|Kurallı işlevleri|SQL Server işlevleri|  
+|Kurallı İşlevler|SQL Server işlevleri|  
 |-------------------------|--------------------------|  
 |[AddDays(expression)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(day, number, date)`|  
 |[AddHours(expression)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(hour, number, date)`|  
@@ -26,11 +26,11 @@ Bu konuda nasıl kavramsal model kurallı işlevleri açıklanmaktadır karşıl
 |[AddNanoseconds(expression)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(nanosecond, number, date)`|  
 |[AddSeconds(expression)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(second, number, date)`|  
 |[AddYears(expression)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(year, number, date)`|  
-|[CreateDateTime (yıl, ay, gün, saat, dakika, saniye)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|SQL Server 2000 ve SQL Server 2005, bir `datetime` biçimlendirilmiş değeri, sunucuda oluşturulur. SQL Server 2008 ve sonraki sürümlerinde, bir `datetime2` değeri, sunucuda oluşturulur.|  
-|[CreateDateTimeOffset (yıl, ay, gün, saat, dakika, saniye, tzoffset)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|A `datetimeoffset` biçimlendirilmiş değeri, sunucuda oluşturulur.<br /><br /> SQL Server 2000 veya SQL Server 2005 desteklenmez.|  
-|[CreateTime (saat, dakika, saniye)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|A `time` biçimlendirilmiş değeri, sunucuda oluşturulur.<br /><br /> SQL Server 2000 veya SQL Server 2005 desteklenmez.|  
+|[CreateDateTime (yıl, ay, gün, saat, dakika, saniye)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|SQL Server 2000 ve SQL Server 2005, bir `datetime` biçimlendirilmiş değeri, sunucuda oluşturulur. SQL Server 2008 ve üzeri sürümler için bir `datetime2` değeri, sunucuda oluşturulur.|  
+|[CreateDateTimeOffset (yıl, ay, gün, saat, dakika, saniye, tzoffset)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|A `datetimeoffset` biçimlendirilmiş değeri, sunucuda oluşturulur.<br /><br /> SQL Server 2000 veya SQL Server 2005'de desteklenmez.|  
+|[CreateTime (saat, dakika, saniye)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|A `time` biçimlendirilmiş değeri, sunucuda oluşturulur.<br /><br /> SQL Server 2000 veya SQL Server 2005'de desteklenmez.|  
 |[CurrentDateTime()](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`SysDateTime()` SQL Server 2008'de.<br /><br /> `GetDate()` SQL Server 2000 ve SQL Server 2005'te.|  
-|[CurrentDateTimeOffset()](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`SysDateTimeOffset()` SQL Server 2008.<br /><br /> SQL Server 2000 veya SQL Server 2005 desteklenmez.|  
+|[CurrentDateTimeOffset()](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`SysDateTimeOffset()` SQL Server 2008.<br /><br /> SQL Server 2000 veya SQL Server 2005'de desteklenmez.|  
 |[CurrentUtcDateTime()](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`SysUtcDateTime()` SQL Server 2008'de. `GetUtcDate()` SQL Server 2000 ve SQL Server 2005'te.|  
 |[DayOfYear(expression)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(dayofyear, expression)`|  
 |[Day(Expression)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(day, expression)`|  
@@ -54,7 +54,7 @@ Bu konuda nasıl kavramsal model kurallı işlevleri açıklanmaktadır karşıl
 ## <a name="aggregate-functions"></a>Toplama İşlevleri  
  Aşağıdaki tabloda eşleme toplama işlevleri açıklanmaktadır:  
   
-|Kurallı işlevleri|SQL Server işlevleri|  
+|Kurallı İşlevler|SQL Server işlevleri|  
 |-------------------------|--------------------------|  
 |[AVG(Expression)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`AVG(expression)`|  
 |[BigCount(expression)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`BIGCOUNT(expression)`|  
@@ -70,43 +70,43 @@ Bu konuda nasıl kavramsal model kurallı işlevleri açıklanmaktadır karşıl
 ## <a name="math-functions"></a>Matematik işlevleri  
  Aşağıdaki tabloda eşleme matematik işlevleri açıklanmaktadır:  
   
-|Kurallı işlevleri|SQL Server işlevleri|  
+|Kurallı İşlevler|SQL Server işlevleri|  
 |-------------------------|--------------------------|  
 |[Abs(Value)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ABS(value)`|  
 |[Ceiling(Value)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`CEILING(value)`|  
 |[Floor(Value)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`FLOOR(value)`|  
 |[Power(Value)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`POWER(value, exponent)`|  
 |[Round(Value)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ROUND(value, digits, 0)`|  
-|[kesme](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ROUND(value , digits, 1)`|  
+|[Kes](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ROUND(value , digits, 1)`|  
   
 ## <a name="string-functions"></a>Dize İşlevleri  
  Aşağıdaki tabloda eşleme dize işlevleri açıklanmaktadır:  
   
-|Kurallı işlevleri|SQL Server işlevleri|  
+|Kurallı İşlevler|SQL Server işlevleri|  
 |-------------------------|--------------------------|  
 |[Contains(String, target)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string)`|  
-|[Concat (dize1, dize2)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|dize1 + dize2|  
-|[EndsWith (dize, hedef)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(REVERSE(target), REVERSE(string)) = 1`<br /><br /> **Not** `CHARINDEX` işlev döndürür `false` varsa `string` sabit uzunluk dize sütununda depolanır ve `target` bir sabit değer. Bu durumda, sonunda boşluk doldurma dahil olmak üzere tüm dizeyi aranır. Dizeye geçirmeden önce sabit uzunlukta bir dize veriler kırpma için olası geçici bir çözüm değildir `EndsWith` , aşağıdaki örnekte olduğu gibi işlev: `EndsWith(TRIM(string), target)`|  
+|[Birleştir (dize1, dize2)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|dize1 + dize2|  
+|[EndsWith (string, hedef)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(REVERSE(target), REVERSE(string)) = 1`<br /><br /> **Not** `CHARINDEX` işlevinin döndürdükleriyle `false` varsa `string` sabit uzunluk dize sütunu içinde depolanır ve `target` bir sabittir. Bu durumda, sondaki boşlukları herhangi doldurma dahil olmak üzere tüm dizeyi aranır. Sabit uzunluk dize verilerde dize geçirmeden önce kesmek için olası bir geçici çözüm olan `EndsWith` , aşağıdaki örnekte olduğu gibi işlev: `EndsWith(TRIM(string), target)`|  
 |[IndexOf (hedef, dize2)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string2)`|  
 |[Sol (dize1, uzunluk)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LEFT(string1, length)`|  
-|[Uzunluğu (dize)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LEN(string)`|  
+|[Uzunluk (dize)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LEN(string)`|  
 |[LTrim(string)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LTRIM(string)`|  
-|[Sağa (dize1, uzunluk)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`RIGHT (string1, length)`|  
+|[Sağ (dize1, uzunluk)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`RIGHT (string1, length)`|  
 |[Trim(String)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LTRIM(RTRIM(string))`|  
-|[Replace (dize1, dize2, string3)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`REPLACE(string1, string2, string3)`|  
-|[Ters (dize)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`REVERSE (string)`|  
+|[Değiştir (dize1 dize2, string3)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`REPLACE(string1, string2, string3)`|  
+|[Reverse (dize)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`REVERSE (string)`|  
 |[RTrim(string)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`RTRIM(string)`|  
-|[StartsWith (dize, hedef)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string)`|  
-|[Substring (dize, başlangıç, uzunluk)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`SUBSTRING(string, start, length)`|  
+|[StartsWith (string, hedef)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string)`|  
+|[Alt dize (string, başlangıç, uzunluk)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`SUBSTRING(string, start, length)`|  
 |[ToLower(string)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LOWER(string)`|  
 |[ToUpper(string)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`UPPER(string)`|  
   
 ## <a name="bitwise-functions"></a>Bit düzeyinde işlevleri  
- Aşağıdaki tabloda eşleme Bitsel işlevleri açıklanmaktadır:  
+ Aşağıdaki tabloda eşleme bit düzeyinde işlevleri açıklar:  
   
-|Kurallı işlevleri|SQL Server işlevleri|  
+|Kurallı İşlevler|SQL Server işlevleri|  
 |-------------------------|--------------------------|  
 |[BitWiseAnd (value1, value2)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|Değer1 & value2|  
-|[BitWiseNot (değer)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|~ değeri|  
+|[BitWiseNot (value)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|~ değeri|  
 |[BitWiseOr (value1, value2)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|Değer1 &#124; value2|  
 |[BitWiseXor (value1, value2)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|Değer1 ^ value2|

@@ -11,8 +11,8 @@ ms.openlocfilehash: e4b54026c71e18e4011661c5cad2ca95dfcb733e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608859"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Yapılandırma Düzenleme Aracı (SvcConfigEditor.exe)
 Yöneticiler ve geliştiriciler oluşturmak ve bir grafik kullanıcı arabirimi kullanarak WCF hizmetleri için yapılandırma ayarlarını değiştirmek Windows Communication Foundation (WCF) hizmet yapılandırma Düzenleyicisi'ni (SvcConfigEditor.exe) sağlar. Bu araç ile XML yapılandırma dosyaları doğrudan düzenlemek zorunda kalmadan WCF bağlamaları, davranışları, hizmetleri ve tanılama ayarlarını yönetebilirsiniz.  
@@ -50,11 +50,11 @@ Yöneticiler ve geliştiriciler oluşturmak ve bir grafik kullanıcı arabirimi 
   
  Hizmet yapılandırma Düzenleyicisi'nin kullanıcı arabirimi aşağıdaki alana ayrılır:  
   
--   Ağaç görünümü yapılandırma öğeleri, soldaki ağaç yapısında görüntüler bölme. Düğümlere sağ tıklayarak ağacında işlemleri gerçekleştirebilir.  
+- Ağaç görünümü yapılandırma öğeleri, soldaki ağaç yapısında görüntüler bölme. Düğümlere sağ tıklayarak ağacında işlemleri gerçekleştirebilir.  
   
--   Sol alt üzerinde pencerenin geçerli öğeleri için ortak görevleri görüntüleyen görev bölmesi  
+- Sol alt üzerinde pencerenin geçerli öğeleri için ortak görevleri görüntüleyen görev bölmesi  
   
--   Ayrıntı bölmesinde, sağ taraftaki ağaç görünümünde seçilen yapılandırma düğümünün ayrıntılı ayarlarını görüntüler.  
+- Ayrıntı bölmesinde, sağ taraftaki ağaç görünümünde seçilen yapılandırma düğümünün ayrıntılı ayarlarını görüntüler.  
   
 ### <a name="opening-a-configuration-file"></a>Bir yapılandırma dosyasını açma  
   
@@ -77,16 +77,16 @@ Yöneticiler ve geliştiriciler oluşturmak ve bir grafik kullanıcı arabirimi 
 #### <a name="creating-a-new-service-configuration"></a>Yeni bir hizmet yapılandırması oluşturma  
  Yeni bir hizmet yapılandırması aşağıdaki yollarla oluşturabilirsiniz:  
   
--   Sihirbaz kullanarak: Bağlantıya tıklayın **yeni bir hizmet oluşturun...** Görev bölmesi veya Özet sayfasında sihirbazını başlatmak için. Ayrıca, bu nedenle yapabilirsiniz **dosya** menü -> **Yeni Öğe Ekle**.  
+- Sihirbaz kullanarak: Bağlantıya tıklayın **yeni bir hizmet oluşturun...** Görev bölmesi veya Özet sayfasında sihirbazını başlatmak için. Ayrıca, bu nedenle yapabilirsiniz **dosya** menü -> **Yeni Öğe Ekle**.  
   
--   El ile oluşturun: Sağ tıklayabilirsiniz **Hizmetleri** düğümünü seçip **yeni hizmet**.  
+- El ile oluşturun: Sağ tıklayabilirsiniz **Hizmetleri** düğümünü seçip **yeni hizmet**.  
   
 #### <a name="creating-a-new-service-endpoint-configuration"></a>Yeni bir hizmet uç noktası yapılandırması oluşturma  
  Yeni bir hizmet uç noktası yapılandırması aşağıdaki yollarla oluşturabilirsiniz:  
   
--   Sihirbaz kullanarak oluşturduğunuz: bağlantıya tıklayın **yeni bir hizmet uç noktası oluşturma...** Görev bölmesi veya Özet sayfasında sihirbazını başlatmak için. Ayrıca, bu nedenle yapabilirsiniz **dosya** menü -> **Yeni Öğe Ekle**.  
+- Sihirbaz kullanarak oluşturduğunuz: bağlantıya tıklayın **yeni bir hizmet uç noktası oluşturma...** Görev bölmesi veya Özet sayfasında sihirbazını başlatmak için. Ayrıca, bu nedenle yapabilirsiniz **dosya** menü -> **Yeni Öğe Ekle**.  
   
--   El ile oluşturun: Hizmet oluşturulduktan sonra sağ tıklayabilirsiniz **uç noktaları** düğümü seçin "**yeni hizmet uç noktası**".  
+- El ile oluşturun: Hizmet oluşturulduktan sonra sağ tıklayabilirsiniz **uç noktaları** düğümü seçin "**yeni hizmet uç noktası**".  
   
 #### <a name="editing-a-service-configuration"></a>Hizmet yapılandırmasını düzenleme  
   
@@ -121,9 +121,9 @@ Yöneticiler ve geliştiriciler oluşturmak ve bir grafik kullanıcı arabirimi 
 #### <a name="creating-a-new-client-endpoint-configuration"></a>Yeni bir istemci uç nokta yapılandırması oluşturma  
  Yeni bir istemci uç nokta yapılandırması aşağıdaki yollarla oluşturabilirsiniz:  
   
--   Sihirbaz tarafından oluşturun: Bağlantıya tıklayın **yeni bir istemci oluştur...** üzerinde **görev bölmesi** penceresinin alt sol taraftaki veya **özeti sayfasında** sihirbazını başlatmak için. Ayrıca, bu nedenle yapabilirsiniz **dosya** menü -> **Yeni Öğe Ekle**. Sihirbaz, hizmeti yapılandırmasının istemci yapılandırmasını oluşturulduğu konumunu gösterecek şekilde ister. Daha sonra bağlanmak için hizmet uç noktası seçebilirsiniz.  
+- Sihirbaz tarafından oluşturun: Bağlantıya tıklayın **yeni bir istemci oluştur...** üzerinde **görev bölmesi** penceresinin alt sol taraftaki veya **özeti sayfasında** sihirbazını başlatmak için. Ayrıca, bu nedenle yapabilirsiniz **dosya** menü -> **Yeni Öğe Ekle**. Sihirbaz, hizmeti yapılandırmasının istemci yapılandırmasını oluşturulduğu konumunu gösterecek şekilde ister. Daha sonra bağlanmak için hizmet uç noktası seçebilirsiniz.  
   
--   El ile oluşturun: Sağ **uç noktaları** düğümünde **istemci**ve **yeni istemci uç noktası**.  
+- El ile oluşturun: Sağ **uç noktaları** düğümünde **istemci**ve **yeni istemci uç noktası**.  
   
 #### <a name="editing-a-client-endpoint-configuration"></a>İstemci uç noktası yapılandırmasını düzenleme  
   
@@ -141,27 +141,27 @@ Yöneticiler ve geliştiriciler oluşturmak ve bir grafik kullanıcı arabirimi 
 #### <a name="creating-a-new-standard-endpoint-configuration"></a>Yeni bir standart uç nokta yapılandırması oluşturma  
  Yeni bir standart uç nokta yapılandırması aşağıdaki yollarla oluşturabilirsiniz:  
   
--   Sağ **standart uç nokta** düğümünü seçip alt **yeni standart uç nokta yapılandırması...** İletişim kutusundaki bağlama türü seçin ve tıklayın **Tamam**.  
+- Sağ **standart uç nokta** düğümünü seçip alt **yeni standart uç nokta yapılandırması...** İletişim kutusundaki bağlama türü seçin ve tıklayın **Tamam**.  
   
--   Seçin **standart uç nokta** düğüm ve tıklatın **yeni standart uç nokta yapılandırması...** içinde **görev bölmesi** penceresinin alt sol taraftaki.  
+- Seçin **standart uç nokta** düğüm ve tıklatın **yeni standart uç nokta yapılandırması...** içinde **görev bölmesi** penceresinin alt sol taraftaki.  
   
  **Yeni standart uç nokta oluşturma** iletişim kutusu görüntüler ve tüm kayıtlı standart uç nokta türleri listeler.  
   
 #### <a name="viewing-and-editing-a-standard-endpoint-configuration"></a>Görüntüleme ve düzenleme bir standart uç nokta yapılandırması  
  Bir standart uç nokta yapılandırması, görüntüleme ve aşağıdaki yollarla düzenleme için açabilirsiniz:  
   
--   Genişletmek için tıklatın **standart uç nokta** düğüm ve ilgili uç noktası alt düğümünü tıklatın.  
+- Genişletmek için tıklatın **standart uç nokta** düğüm ve ilgili uç noktası alt düğümünü tıklatın.  
   
--   Tıklayın **standart uç nokta** düğüm ve ayrıntı bölmesi üzerinde ilgili uç noktaya tıklayın.  
+- Tıklayın **standart uç nokta** düğüm ve ayrıntı bölmesi üzerinde ilgili uç noktaya tıklayın.  
   
  Uç nokta için öznitelikleri düzenlemek için sağ bölmede gösterilir.  
   
 #### <a name="deleting-a-standard-endpoint-configuration"></a>Bir standart uç nokta yapılandırması siliniyor  
  Bir standart uç nokta yapılandırması aşağıdaki yollarla silebilirsiniz:  
   
--   Genişletmek için tıklatın **standart uç nokta** düğüm ve ilgili uç noktası alt düğümü sağ tıklatın. Bağlam komutunu **standart uç nokta yapılandırması silme** uç nokta silinemedi.  
+- Genişletmek için tıklatın **standart uç nokta** düğüm ve ilgili uç noktası alt düğümü sağ tıklatın. Bağlam komutunu **standart uç nokta yapılandırması silme** uç nokta silinemedi.  
   
--   Tıklayın **standart uç nokta** düğümü. İçinde **görev** bölmesinde tıklayın **standart uç nokta yapılandırması silme**.  
+- Tıklayın **standart uç nokta** düğümü. İçinde **görev** bölmesinde tıklayın **standart uç nokta yapılandırması silme**.  
   
  Standart uç noktası kullanılırsa, silmeye çalıştığınızda bir uyarı iletisi görüntülenir: **Standart uç noktası kullanılır. Lütfen şimdi silerseniz, tüm başvuruları yapılandırmada (örneğin, hizmet uç noktası veya istemci uç noktası) diğer bölümlerinde sildiğinizden emin olun. Aksi takdirde, yapılandırma geçersiz olur ve sonraki açılamaz. Standart uç noktayı silmek istediğinizden emin misiniz?"**  
   
@@ -175,11 +175,11 @@ Yöneticiler ve geliştiriciler oluşturmak ve bir grafik kullanıcı arabirimi 
 #### <a name="creating-a-new-binding-configuration"></a>Yeni bir bağlama yapılandırmasını oluşturma  
  Yeni bir bağlama yapılandırması aşağıdaki yollarla oluşturabilirsiniz.  
   
--   Sağ **bağlamaları** düğümünü seçip alt **yeni bağlama yapılandırma**... İletişim kutusundaki bağlama türü seçin ve tıklayın **Tamam**.  
+- Sağ **bağlamaları** düğümünü seçip alt **yeni bağlama yapılandırma**... İletişim kutusundaki bağlama türü seçin ve tıklayın **Tamam**.  
   
--   Seçin **bağlamaları** düğüm ve tıklatın **yeni bağlama yapılandırma**... içinde **görev bölmesi** penceresinin alt sol taraftaki.  
+- Seçin **bağlamaları** düğüm ve tıklatın **yeni bağlama yapılandırma**... içinde **görev bölmesi** penceresinin alt sol taraftaki.  
   
--   Hizmet veya istemcinin Özet sayfasında tıklatın **için Oluştur'u tıklatın** içinde **bağlama Yapılandırması** karşılık gelen uç noktası için bir bağlama yapılandırmasını oluşturmak için alan.  
+- Hizmet veya istemcinin Özet sayfasında tıklatın **için Oluştur'u tıklatın** içinde **bağlama Yapılandırması** karşılık gelen uç noktası için bir bağlama yapılandırmasını oluşturmak için alan.  
   
 #### <a name="adding-binding-element-extensions-to-a-custom-binding"></a>Özel bir bağlama öğesi uzantıları bağlaması ekleme  
   
@@ -278,9 +278,9 @@ Yöneticiler ve geliştiriciler oluşturmak ve bir grafik kullanıcı arabirimi 
 ##### <a name="creating-a-new-behavior-configuration"></a>Yeni bir davranış yapılandırmasını oluşturma  
  Yeni bir davranış yapılandırma iki şekilde oluşturabilirsiniz.  
   
--   Davranış düğümlerinden sağ tıklayıp "**yeni davranış yapılandırması...**  
+- Davranış düğümlerinden sağ tıklayıp "**yeni davranış yapılandırması...**  
   
--   Davranış düğümlerden birini seçin ve tıklayın **yeni davranış yapılandırmasını**... içinde **görev bölmesi** penceresinin alt sol taraftaki.  
+- Davranış düğümlerden birini seçin ve tıklayın **yeni davranış yapılandırmasını**... içinde **görev bölmesi** penceresinin alt sol taraftaki.  
   
 ##### <a name="adding-behavior-element-extensions-to-a-behavior"></a>Davranış öğesi uzantıları için bir davranış ekleme  
   
@@ -319,13 +319,13 @@ Yöneticiler ve geliştiriciler oluşturmak ve bir grafik kullanıcı arabirimi 
 #### <a name="extensions"></a>Uzantıları  
  Yeni bağlama uzantıları, bağlama öğesi uzantıları, standart uç nokta uzantıları ve davranış uzantıları, WCF yapılandırma kullanmak için kaydedilebilir. Uzantı adı/türü çiftleridir. Türün uyguladığı uzantı ise adı uzantısının adına sahip yapılandırmada tanımlar. Dört tür uzantılar vardır:  
   
--   Bağlama uzantıları tüm bağlama türünü tanımlayın. Örnek: `basicHttpBinding`.  
+- Bağlama uzantıları tüm bağlama türünü tanımlayın. Örnek: `basicHttpBinding`.  
   
--   Bağlama öğesi uzantıları bir bağlama öğesi tanımlar. Örnek: `textMessageEncoding`.  
+- Bağlama öğesi uzantıları bir bağlama öğesi tanımlar. Örnek: `textMessageEncoding`.  
   
--   Standart uç nokta uzantıları tüm standart uç nokta tanımlar. Örnek: `discoveryEndpoint`.  
+- Standart uç nokta uzantıları tüm standart uç nokta tanımlar. Örnek: `discoveryEndpoint`.  
   
--   Davranış öğesi uzantıları bir davranış öğesi tanımlayın. Örnek: `clientVia`.  
+- Davranış öğesi uzantıları bir davranış öğesi tanımlayın. Örnek: `clientVia`.  
   
  Yapılandırmada kayıtlı uzantıları diğer WCF bileşenleri aynı türde gibi kullanılabilir.  
   

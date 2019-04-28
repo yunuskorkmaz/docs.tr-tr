@@ -5,11 +5,11 @@ helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
 ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596784"
 ---
 # <a name="batching-messages-in-a-transaction"></a>Bir İşlemde Toplu İleti İşleme
 Sıraya alınan uygulamaları, doğruluk ve iletilerin güvenilir teslim emin olmak için işlem kullanır. İşlem, ancak pahalı işlemlerdir ve ileti aktarım hızı önemli ölçüde azaltabilir. İleti işleme hızı artırmak için bir yol, okuma ve tek bir işlemde birden çok iletiyi bir uygulamaya sahip olmaktır. Performans ve kurtarma dengedir: toplu ileti sayısı arttıkça, bu nedenle gerekli işlemler geri alınacak olursa kurtarma iş yapar. Toplu işlem ve oturumları ileti işleme arasındaki farka dikkat edin önemlidir. A *oturumu* tek bir uygulama tarafından işlenen ve tek bir birim olarak kabul edilen ilgili iletiler bir gruplandırmasıdır. Oturumları ilgili iletiler grubunu birlikte işlenmesi gereken genel olarak kullanılır. Buna örnek olarak çevrimiçi bir alışveriş Web sitesidir. *Toplu* ilgisi olmayan iletileri arttıkça aktarım hızı ileti şekilde, birden fazla işlemek için kullanılır. Oturumlar hakkında daha fazla bilgi için bkz. [gruplandırma kuyruğa alınan iletileri bir oturumda](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Toplu iletiler de tek bir uygulama tarafından işlenen ve tek bir birim olarak kabul edilen, ancak toplu işlem iletileri arasında hiçbir ilişkisi olabilir. Bir işlemde toplu ileti işleme uygulamanın nasıl çalıştığını değişmez bir optimizasyondur.  
@@ -20,13 +20,13 @@ Sıraya alınan uygulamaları, doğruluk ve iletilerin güvenilir teslim emin ol
 ## <a name="committing-a-transaction"></a>Bir işlemi yürütülüyor  
  Toplu işlem taahhüt aşağıdakilere bağlıdır:  
   
--   `MaxBatchSize`. Bir özelliği <xref:System.ServiceModel.Description.TransactedBatchingBehavior> davranışı. Bu özellik, bir toplu iş içine yerleştirilmesi iletileri maksimum sayısını belirler. Bu sayıya ulaşıldığında, toplu işlem taahhüt eder. Bu değeri kesin bir sınır değil, bu ileti sayısı almadan önce bir toplu iş yürütme mümkündür.  
+- `MaxBatchSize`. Bir özelliği <xref:System.ServiceModel.Description.TransactedBatchingBehavior> davranışı. Bu özellik, bir toplu iş içine yerleştirilmesi iletileri maksimum sayısını belirler. Bu sayıya ulaşıldığında, toplu işlem taahhüt eder. Bu değeri kesin bir sınır değil, bu ileti sayısı almadan önce bir toplu iş yürütme mümkündür.  
   
--   `Transaction Timeout`. İşlem zaman aşımı yüzde 80'i geçtikten sonra toplu işlem taahhüt eder ve yeni bir toplu iş oluşturulur. Yüzde 20, yani veya küçük bir hareketi tamamlamak verilen zaman olarak kalır, toplu işlem taahhüt eder.  
+- `Transaction Timeout`. İşlem zaman aşımı yüzde 80'i geçtikten sonra toplu işlem taahhüt eder ve yeni bir toplu iş oluşturulur. Yüzde 20, yani veya küçük bir hareketi tamamlamak verilen zaman olarak kalır, toplu işlem taahhüt eder.  
   
--   `TransactionScopeRequired`. Toplu iletiler, WCF, içeren bulursa işlerken `TransactionScopeRequired`  =  `false`, toplu işleme ve ilk iletinin alınması üzerine yeni bir batch açana `TransactionScopeRequired`  =  `true` ve `TransactionAutoComplete`  = `true`.  
+- `TransactionScopeRequired`. Toplu iletiler, WCF, içeren bulursa işlerken `TransactionScopeRequired`  =  `false`, toplu işleme ve ilk iletinin alınması üzerine yeni bir batch açana `TransactionScopeRequired`  =  `true` ve `TransactionAutoComplete`  = `true`.  
   
--   Daha fazla ileti kuyrukta kayıtlı sonra geçerli toplu kararlıdır bile `MaxBatchSize` değil ulaşıldı veya işlem zaman aşımı yüzde 80'i değil geçti.  
+- Daha fazla ileti kuyrukta kayıtlı sonra geçerli toplu kararlıdır bile `MaxBatchSize` değil ulaşıldı veya işlem zaman aşımı yüzde 80'i değil geçti.  
   
 ## <a name="leaving-batching-mode"></a>Toplu işleme modu çıkılıyor  
  Bir ileti bir toplu işlemin iptal etmek neden olursa, aşağıdaki adımlardan oluşur:  
