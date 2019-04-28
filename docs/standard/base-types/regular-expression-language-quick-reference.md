@@ -17,11 +17,11 @@ ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811514"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Normal İfade Dili - Hızlı Başvuru
  Normal bir ifade, normal ifade motorunun giriş metninde eşleştirmeyi denediği bir desendir. Bir desen, bir veya daha çok karakter sabitinden, işleçlerden veya yapılardan oluşur.  Kısa bir giriş için bkz. [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md).  
@@ -170,9 +170,9 @@ ms.locfileid: "58410530"
   
  Satır içi seçeneği iki şekilde belirtebilirsiniz:  
   
--   Kullanarak [muhtelif yapı](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, bir seçenek veya seçenek kümesinden önce bir eksi işareti (-) o seçenekleri kapattığı. Örneğin, `(?i-mn)` büyük küçük harf duyarsız eşleştirmeyi (`i`) açar, çok satırlı modunu (`m`) kapatır ve adsız Grup yakalamalarını (`n`) devre dışı. Seçenek, seçeneğin tanımlandığı noktadan itibaren normal ifade deseni için geçerlidir ve desenin sonuna kadar ya da bir başka yapının seçeneği tersine çevirdiği noktaya kadar etkilidir.  
+- Kullanarak [muhtelif yapı](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, bir seçenek veya seçenek kümesinden önce bir eksi işareti (-) o seçenekleri kapattığı. Örneğin, `(?i-mn)` büyük küçük harf duyarsız eşleştirmeyi (`i`) açar, çok satırlı modunu (`m`) kapatır ve adsız Grup yakalamalarını (`n`) devre dışı. Seçenek, seçeneğin tanımlandığı noktadan itibaren normal ifade deseni için geçerlidir ve desenin sonuna kadar ya da bir başka yapının seçeneği tersine çevirdiği noktaya kadar etkilidir.  
   
--   Kullanarak [yapıyı gruplandırma](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpression*`)`, yalnızca belirtilen grup için seçenekleri tanımlar.  
+- Kullanarak [yapıyı gruplandırma](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpression*`)`, yalnızca belirtilen grup için seçenekleri tanımlar.  
   
  .NET normal ifade motoru aşağıdaki satır içi seçeneklerini destekler.  
   
