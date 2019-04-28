@@ -12,11 +12,11 @@ helpviewer_keywords:
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
 ms.openlocfilehash: b812db3259cbd2313cdf172950f51ab34679b460
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642197"
 ---
 # <a name="making-asynchronous-requests"></a>Zaman Uyumsuz İstekler Yapma
 <xref:System.Net> Sınıfları, zaman uyumsuz Internet kaynaklarına erişim için .NET Framework'ün standart zaman uyumsuz programlama modeli kullanın. <xref:System.Net.WebRequest.BeginGetResponse%2A> Ve <xref:System.Net.WebRequest.EndGetResponse%2A> yöntemlerinin <xref:System.Net.WebRequest> başlangıç ve tüm zaman uyumsuz istekler için bir Internet kaynağına sınıfı.  
@@ -32,15 +32,15 @@ ms.locfileid: "59208572"
   
  **ClientGetAsync** sınıfı zaman uyumsuz isteği bir Internet kaynağına uygular ve sonuçta elde edilen yanıtı konsola yazar. Bunu, aşağıdaki listede açıklanan özellikler ve yöntemler içerir.  
   
--   `allDone` Özelliği içeren bir örneğini <xref:System.Threading.ManualResetEvent> isteğin tamamlandığını bildiren bir sınıf.  
+- `allDone` Özelliği içeren bir örneğini <xref:System.Threading.ManualResetEvent> isteğin tamamlandığını bildiren bir sınıf.  
   
--   `Main()` Yöntemi komut satırını okur ve istek için belirtilen Internet kaynağıyla başlar. Oluşturur **WebRequest** `wreq` ve **RequestState** `rs`, çağrıları **BeginGetResponse** isteği ve ardından aramaları işlemesi için `allDone.WaitOne()`yöntemi böylece geri çağırma işlemi tamamlanana kadar uygulamadan çıkın değil. Yanıt, Internet kaynaktan okuduktan sonra `Main()` konsolu ve uygulama sona erer için yazar.  
+- `Main()` Yöntemi komut satırını okur ve istek için belirtilen Internet kaynağıyla başlar. Oluşturur **WebRequest** `wreq` ve **RequestState** `rs`, çağrıları **BeginGetResponse** isteği ve ardından aramaları işlemesi için `allDone.WaitOne()`yöntemi böylece geri çağırma işlemi tamamlanana kadar uygulamadan çıkın değil. Yanıt, Internet kaynaktan okuduktan sonra `Main()` konsolu ve uygulama sona erer için yazar.  
   
--   `showusage()` Yöntemi konsolda bir örnek komut satırı yazar. Tarafından çağrılır `Main()` hiçbir URI komut satırında sağlanan zaman.  
+- `showusage()` Yöntemi konsolda bir örnek komut satırı yazar. Tarafından çağrılır `Main()` hiçbir URI komut satırında sağlanan zaman.  
   
--   `RespCallBack()` Yöntemini uygulayan Internet istek için zaman uyumsuz geri çağırma yöntemi. Oluşturur **WebResponse** Internet kaynağının yanıtı içeren örnek yanıt akışı alır ve ardından verileri akıştan zaman uyumsuz olarak okuma başlatır.  
+- `RespCallBack()` Yöntemini uygulayan Internet istek için zaman uyumsuz geri çağırma yöntemi. Oluşturur **WebResponse** Internet kaynağının yanıtı içeren örnek yanıt akışı alır ve ardından verileri akıştan zaman uyumsuz olarak okuma başlatır.  
   
--   `ReadCallBack()` Yöntemini uygulayan yanıt akışına okumak için zaman uyumsuz geri çağırma yöntemi. Internet kaynağına alınan veri aktarımları **ResponseData** özelliği **RequestState** örneği ve ardından başka bir zaman uyumsuz okuma yanıt akışı başka veri yok olana kadar başlatır döndürdü. Tüm verileri okuduktan sonra `ReadCallBack()` çağırır ve yanıt akışı kapatır `allDone.Set()` yanıtın tamamını mevcut olduğunu belirtmek için yöntemi **ResponseData**.  
+- `ReadCallBack()` Yöntemini uygulayan yanıt akışına okumak için zaman uyumsuz geri çağırma yöntemi. Internet kaynağına alınan veri aktarımları **ResponseData** özelliği **RequestState** örneği ve ardından başka bir zaman uyumsuz okuma yanıt akışı başka veri yok olana kadar başlatır döndürdü. Tüm verileri okuduktan sonra `ReadCallBack()` çağırır ve yanıt akışı kapatır `allDone.Set()` yanıtın tamamını mevcut olduğunu belirtmek için yöntemi **ResponseData**.  
   
     > [!NOTE]
     >  Tüm ağ akışlarına kapalı olduğundan önemlidir. Her istek ve yanıt akışı kapatmazsanız, uygulamanızın bağlantılar dışında sunucuya çalıştırın ve ek istekleri işleyemiyor.  

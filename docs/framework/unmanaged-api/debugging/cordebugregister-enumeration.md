@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fab5225225d4e4a4e07961b0f967cff2c1b07321
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599324"
 ---
 # <a name="cordebugregister-enumeration"></a>CorDebugRegister Numaralandırması
 Bir verilen işlemci mimarisi ile ilişkili olan kayıtları belirtir.  
@@ -194,9 +194,9 @@ typedef enum CorDebugRegister {
 ## <a name="remarks"></a>Açıklamalar  
  128 genel amaçlı veri kayıtları ve 128 kayan nokta veri kayıtları IA-64 işlemci, ancak yalnızca değerleri `REGISTER_IA64_R0` ve `REGISTER_IA64_F0` sağlanır. Diğer değerleri aşağıdaki gibi belirlenir:  
   
--   Kayıt numarası eklemek `REGISTER_IA64_R0` değerleri `REGISTER_IA64_R1` aracılığıyla `REGISTER_IA64_R127`, karşılık IA-64 işlemci #127 verilerini kasayla aracılığıyla #1 veri kaydı.  
+- Kayıt numarası eklemek `REGISTER_IA64_R0` değerleri `REGISTER_IA64_R1` aracılığıyla `REGISTER_IA64_R127`, karşılık IA-64 işlemci #127 verilerini kasayla aracılığıyla #1 veri kaydı.  
   
--   Kayıt numarası eklemek `REGISTER_IA64_F0` değerleri `REGISTER_IA64_F1` aracılığıyla `REGISTER_IA64_F127`, hangi karşılık #1 FP veri register-#127 IA-64 işlemci FP veri kaydı.  
+- Kayıt numarası eklemek `REGISTER_IA64_F0` değerleri `REGISTER_IA64_F1` aracılığıyla `REGISTER_IA64_F127`, hangi karşılık #1 FP veri register-#127 IA-64 işlemci FP veri kaydı.  
   
  Örneğin, #83 veri kaydı IA-64 işlemci üzerinde belirtmeniz gerekiyorsa, kullanın `REGISTER_IA64_R0` + 83.  
   

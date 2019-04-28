@@ -1,17 +1,17 @@
 ---
-title: Sonuçları
+title: Sonuçlar
 description: Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | Sonuçları
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.openlocfilehash: 62a9a38ccbe696c34ef799b574c0f5a95bc8f726
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628333"
 ---
-# <a name="conclusions"></a>Sonuçları
+# <a name="conclusions"></a>Sonuçlar
 
 - Kapsayıcı tabanlı çözümler, sonuçta maliyet tasarrufu avantajları sunar. Bunlar bir üretim ortamlarında bağımlılıkları olmaması nedeniyle uyuşmazlıkları kaldırdığı dağıtım sorunları için bir çözüm kapsayıcılardır. Bu sorunların kaldırarak bunu üretim geliştirme/Test ve DevOps işlemlerini önemli ölçüde artırır.
 

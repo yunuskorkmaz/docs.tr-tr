@@ -3,11 +3,11 @@ title: Eşler Arası İş Birliği
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
 ms.openlocfilehash: 91e9179fc426934e78a1e0223c9bffafe5efbef1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642041"
 ---
 # <a name="peer-to-peer-collaboration"></a>Eşler arası işbirliği
 
@@ -19,21 +19,21 @@ Eşler arası işbirliği altyapısı, kişilerin Windows Vista ve sonraki platf
 
  Tipik bir eşler arası işbirliği uygulaması, aşağıdaki adımlardan oluşur:  
   
--   Eş bir işbirliği oturumu barındırma isteyen bir eş kimliğini belirler.  
+- Eş bir işbirliği oturumu barındırma isteyen bir eş kimliğini belirler.  
   
--   Bir oturum barındırmak için bir istek, bu şekilde, gönderilir ve işbirliği etkinlik yönetmek konak eş kabul eder.  
+- Bir oturum barındırmak için bir istek, bu şekilde, gönderilir ve işbirliği etkinlik yönetmek konak eş kabul eder.  
   
--   Konak bir oturuma (istek sahibine dahil) alt ağda bulunan kişileri davet eder.  
+- Konak bir oturuma (istek sahibine dahil) alt ağda bulunan kişileri davet eder.  
   
--   İşbirliği yapmak istediğiniz tüm eşleri kişi yöneticilerinin konağa ekleyebilir.  
+- İşbirliği yapmak istediğiniz tüm eşleri kişi yöneticilerinin konağa ekleyebilir.  
   
--   Çoğu eşleri, kabul edilen veya reddedilen zamanında konak eş dön davet yanıt gönderir.  
+- Çoğu eşleri, kabul edilen veya reddedilen zamanında konak eş dön davet yanıt gönderir.  
   
--   Konak eşler arası işbirliği yapmak istediğiniz tüm eşleri abone olur.  
+- Konak eşler arası işbirliği yapmak istediğiniz tüm eşleri abone olur.  
   
--   Eşlerden ilk işbirliği etkinliklerini gerçekleştirirken, konak eş için kişi kendi Yöneticisi uzak eşlerden ekleyebilir. Ayrıca tüm davet yanıtlarını belirlemek için kim, kimin reddetti ve kimin değil yanıtlamasından kabul etti işler.  Bunu verilmemesi olanlar için davetiye iptal edin veya başka bir etkinliği gerçekleştirin.  
+- Eşlerden ilk işbirliği etkinliklerini gerçekleştirirken, konak eş için kişi kendi Yöneticisi uzak eşlerden ekleyebilir. Ayrıca tüm davet yanıtlarını belirlemek için kim, kimin reddetti ve kimin değil yanıtlamasından kabul etti işler.  Bunu verilmemesi olanlar için davetiye iptal edin veya başka bir etkinliği gerçekleştirin.  
   
--   Bu noktada, konak eş, davet edilen meslektaşlarınızla bir işbirliği oturumu başlatın veya ile işbirliği altyapınızın bir uygulamayı kaydetme.  P2p uygulamaları eşler arası işbirliği altyapısı kullanır ve <xref:System.Net.PeerToPeer.Collaboration> oyunlar, Bülten panosu, konferans ve diğer durum sunucusuz uygulamalar için iletişimleri için ad alanı.  
+- Bu noktada, konak eş, davet edilen meslektaşlarınızla bir işbirliği oturumu başlatın veya ile işbirliği altyapınızın bir uygulamayı kaydetme.  P2p uygulamaları eşler arası işbirliği altyapısı kullanır ve <xref:System.Net.PeerToPeer.Collaboration> oyunlar, Bülten panosu, konferans ve diğer durum sunucusuz uygulamalar için iletişimleri için ad alanı.  
   
 ## <a name="peer-to-peer-networking-security"></a>Eşler arası ağ güvenliği  
 

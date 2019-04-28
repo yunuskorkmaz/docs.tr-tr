@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: (Visual Basic) karmaşık filtreleme ile sorgu yazma'
 ms.date: 07/20/2015
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
 ms.openlocfilehash: ac58394619b83e2b862e87926f0b6a722fdc3c7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614850"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>Nasıl yapılır: (Visual Basic) karmaşık filtreleme ile sorgu yazma
 Bazen karmaşık filtrelerle XML sorgularında LINQ yazmak istersiniz. Örneğin, bir özel ad ve değer olan bir alt öğesi olan tüm öğeleri Bul gerekebilir. Bu konu, karmaşık filtreleme ile sorgu yazma örneği sağlar.  

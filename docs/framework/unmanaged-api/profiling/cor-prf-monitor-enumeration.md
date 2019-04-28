@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbb39eb768069a737f3f89c771bf02fd6bc0c3b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599058"
 ---
 # <a name="corprfmonitor-enumeration"></a>COR_PRF_MONITOR Numaralandırması
 Davranış, özellikleri veya olayları profil oluşturucu abone olmak isteyen belirtmek için kullanılan değerleri içerir.  
@@ -102,15 +102,15 @@ typedef enum {
 ## <a name="members"></a>Üyeler  
  Aşağıdaki bölümlerde liste `COR_PRF_MONITOR` numaralandırma üyelerini kategoriye göre. Kategorileri şunlardır:  
   
--   [Bayrak ayarlanmadı](#None)  
+- [Bayrak ayarlanmadı](#None)  
   
--   [Geri çağırma bayrakları](#Callback)  
+- [Geri çağırma bayrakları](#Callback)  
   
--   [Özellik etkinleştirme bayrakları](#Feature)  
+- [Özellik etkinleştirme bayrakları](#Feature)  
   
--   [Yapılandırma bayrakları](#Config)  
+- [Yapılandırma bayrakları](#Config)  
   
--   [Bileşik bayrakları](#Composite)  
+- [Bileşik bayrakları](#Composite)  
   
 <a name="None"></a>   
 ### <a name="no-flags-set"></a>Bayrak ayarlanmadı  

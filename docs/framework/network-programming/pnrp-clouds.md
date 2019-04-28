@@ -3,11 +3,11 @@ title: PNRP Bulutları
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
 ms.openlocfilehash: 943cad880885a624c0ed0798738665c8bcd7036f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641989"
 ---
 # <a name="pnrp-clouds"></a>PNRP Bulutları
 Bir PNRP "bulut" ağ üzerinden birbiriyle iletişim kurabilir düğümleri kümesini temsil eder. "Bulut" terimi, "eş kafes" ve "eşler arası grafik" ile eşanlamlıdır.  
@@ -18,9 +18,9 @@ Bir PNRP "bulut" ağ üzerinden birbiriyle iletişim kurabilir düğümleri küm
   
  "Bir kapsam bir gruplandırma birbirine bulamadı bilgisayarların olduğu üç bulut kapsamların" PNRP kullanır:  
   
--   Genel bulut, genel IPv6 adresi kapsamını ve genel adres karşılık gelen ve tüm IPv6 Internet üzerindeki tüm bilgisayarları gösterir. Yalnızca tek bir genel bulut yok.  
+- Genel bulut, genel IPv6 adresi kapsamını ve genel adres karşılık gelen ve tüm IPv6 Internet üzerindeki tüm bilgisayarları gösterir. Yalnızca tek bir genel bulut yok.  
   
--   Bağlantı-yerel bulut bağlantı-yerel adresleri ve bağlantı-yerel IPv6 adresi kapsamını karşılık gelir. Genellikle yerel olarak bağlı alt ağ ile aynı belirli bir bağlantı, bağlantı-yerel bulut içindir. Birden çok bağlantı-yerel bulut olabilir.  
+- Bağlantı-yerel bulut bağlantı-yerel adresleri ve bağlantı-yerel IPv6 adresi kapsamını karşılık gelir. Genellikle yerel olarak bağlı alt ağ ile aynı belirli bir bağlantı, bağlantı-yerel bulut içindir. Birden çok bağlantı-yerel bulut olabilir.  
   
  Siteye özel bulut, üçüncü bir bulut site IPv6 adresi kapsamını ve site-yerel adresleri karşılık gelir. Bu bulut, PNRP hala desteklenmektedir ancak kullanım dışıdır.  
   

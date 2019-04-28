@@ -7,22 +7,22 @@ helpviewer_keywords:
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
 ms.openlocfilehash: 98a535f68efc50c2ff7409d8eadf52f9e7549566
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646442"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Nasıl yapılır: Soyut özellikleri tanımlama (C# Programlama Kılavuzu)
 Aşağıdaki örnek nasıl tanımlanacağını gösterir [soyut](../../../csharp/language-reference/keywords/abstract.md) özellikleri. Bir soyut özellik bildiriminde özellik erişimcileri uygulaması sağlamaz--sınıf özelliklerini destekler, ancak türetilmiş sınıfları için erişimci uygulama bırakır bildirir. Aşağıdaki örnek, bir temel sınıftan devralınan soyut Özellikler uygulama gösterilmiştir.  
   
  Bu örnek, her biri ayrı ayrı derlenmiş üç dosyasından oluşur ve sonuçta elde edilen derlemesi sonraki derleme tarafından başvuruluyor:  
   
--   abstractshape.cs: `Shape` içeren bir soyut sınıf `Area` özelliği.  
+- abstractshape.cs: `Shape` içeren bir soyut sınıf `Area` özelliği.  
   
--   Shapes.cs: Alt sınıflarından birini `Shape` sınıfı.  
+- Shapes.cs: Alt sınıflarından birini `Shape` sınıfı.  
   
--   shapetest.cs: Bazı alanları görüntülemek için bir test programı `Shape`-türetilmiş nesneler.  
+- shapetest.cs: Bazı alanları görüntülemek için bir test programı `Shape`-türetilmiş nesneler.  
   
  Örneği derlemek için aşağıdaki komutu kullanın:  
   
@@ -35,13 +35,13 @@ Aşağıdaki örnek nasıl tanımlanacağını gösterir [soyut](../../../csharp
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
--   Modifiers özelliğini özellik bildiriminde kendisini yerleştirilir. Örneğin:  
+- Modifiers özelliğini özellik bildiriminde kendisini yerleştirilir. Örneğin:  
   
     ```csharp  
     public abstract double Area  
     ```  
   
--   Bir soyut özelliğini bildirirken (gibi `Area` Bu örnekte), yalnızca hangi özellik erişimcileri kullanılabilir gösterir ancak bunları kullanılmaz. Bu örnekte, yalnızca bir [alma](../../../csharp/language-reference/keywords/get.md) özelliği salt okunur şekilde erişimci kullanılabilir.  
+- Bir soyut özelliğini bildirirken (gibi `Area` Bu örnekte), yalnızca hangi özellik erişimcileri kullanılabilir gösterir ancak bunları kullanılmaz. Bu örnekte, yalnızca bir [alma](../../../csharp/language-reference/keywords/get.md) özelliği salt okunur şekilde erişimci kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod üç alt sınıflarını gösterir `Shape` ve bunların nasıl geçersiz `Area` kendi uygulamasını sağlamak üzere özelliği.  

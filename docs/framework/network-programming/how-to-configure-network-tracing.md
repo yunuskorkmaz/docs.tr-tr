@@ -12,11 +12,11 @@ helpviewer_keywords:
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
 ms.openlocfilehash: cc08faba7edede3dd527b7c05fe47f6408e18a04
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642704"
 ---
 # <a name="how-to-configure-network-tracing"></a>Nasıl yapılır: Ağ İzlemeyi Yapılandırma
 Uygulama veya bilgisayar yapılandırma dosyası, ağ izlemelerinin biçimini ve içeriğini belirleyen ayarları içerir. Bu yordamı gerçekleştirmeden önce izlemenin etkin olduğundan emin olun. İzlemeyi etkinleştirme hakkında daha fazla bilgi için bkz: [Enabling Network Tracing](../../../docs/framework/network-programming/enabling-network-tracing.md).  
@@ -27,7 +27,7 @@ Uygulama veya bilgisayar yapılandırma dosyası, ağ izlemelerinin biçimini ve
   
 ### <a name="to-configure-network-tracing"></a>Ağ izlemesini yapılandırmak için  
   
--   Aşağıdaki satırları uygun yapılandırma dosyasına ekleyin. Bu ayarların değerleri ve seçenekleri aşağıdaki tablolarda açıklanmıştır.  
+- Aşağıdaki satırları uygun yapılandırma dosyasına ekleyin. Bu ayarların değerleri ve seçenekleri aşağıdaki tablolarda açıklanmıştır.  
   
     ```xml  
     <configuration>  

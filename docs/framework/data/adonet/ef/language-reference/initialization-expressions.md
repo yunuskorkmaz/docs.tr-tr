@@ -6,22 +6,22 @@ dev_langs:
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
 ms.openlocfilehash: 6f6f27eaecd760e565eeb98a286252981d6df0bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61615031"
 ---
 # <a name="initialization-expressions"></a>Başlatma İfadeleri
 Bir ifade başlatma yeni bir nesne başlatır. En yeni dahil olmak üzere çoğu başlatma ifadeleri desteklenir C# 3.0 ve Visual Basic 9.0 başlatma ifadeleri. Aşağıdaki türleri başlatılır ve tarafından LINQ to Entities sorgusunda döndürülen:  
   
--   Sıfır veya daha fazla yazılan varlığın nesnelerin veya projeksiyon kavramsal modelde tanımlı karmaşık türler koleksiyonu.  
+- Sıfır veya daha fazla yazılan varlığın nesnelerin veya projeksiyon kavramsal modelde tanımlı karmaşık türler koleksiyonu.  
   
--   CLR türleri tarafından desteklenen [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
+- CLR türleri tarafından desteklenen [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
   
--   Satır içi koleksiyonları.  
+- Satır içi koleksiyonları.  
   
--   Anonim türler.  
+- Anonim türler.  
   
  Anonim tür başlatma, sorgu ifadesi söz dizimi aşağıdaki örnekte gösterilmiştir:  
   

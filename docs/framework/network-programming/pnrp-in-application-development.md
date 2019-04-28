@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
 ms.openlocfilehash: 4cd0d739e58cd252213e8d5c16d29cc612338df6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642002"
 ---
 # <a name="pnrp-in-application-development"></a>Uygulama Geliştirmede PNRP
 Windows Vista'da adı yayını ve çözümleme işlevleri bir Basitleştirilmiş PNRP uygulama programlama arabirimiyle (API) ağ uygulamalarına erişebilirsiniz.  

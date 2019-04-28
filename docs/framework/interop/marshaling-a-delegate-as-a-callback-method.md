@@ -12,11 +12,11 @@ ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4cc9d592bc2030cdd17e7f87d7c5ac458dc01106
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643081"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Geri Çağırma Yöntemi Olarak Bir Temsilci Hazırlama
 Bu örnek, temsilciler işlev işaretçileri bekleniyor yönetilmeyen bir işleve geçirilecek gösterilmiştir. Bir temsilci, bir yönteme başvuru içerebilir ve bir tür açısından güvenli bir işlev işaretçisine veya geri çağırma işlevi için eşdeğer bir gruba bir sınıftır.
@@ -26,13 +26,13 @@ Bu örnek, temsilciler işlev işaretçileri bekleniyor yönetilmeyen bir işlev
 
 Geri çağırma örneği, orijinal işlev bildirimleriyle gösterilen aşağıdaki yönetilmeyen işlevleri kullanır:
 
--   `TestCallBack` Pinvokelib.DLL'den dışarı.
+- `TestCallBack` Pinvokelib.DLL'den dışarı.
 
     ```cpp
     void TestCallBack(FPTR pf, int value);
     ```
 
--   `TestCallBack2` Pinvokelib.DLL'den dışarı.
+- `TestCallBack2` Pinvokelib.DLL'den dışarı.
 
     ```cpp
     void TestCallBack2(FPTR2 pf2, char* value);

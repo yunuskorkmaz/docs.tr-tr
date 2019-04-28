@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme durumunu Al'
+title: 'Nasıl yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -10,13 +10,13 @@ ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8c070f043d306cfc67cc2a05cb474d92c1d382ae
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646078"
 ---
-# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme durumunu Al
+# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Nasıl yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma
 
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Yeniden dağıtılabilir bir çalışma zamanıdır. .NET Framework'ün bu sürümü için uygulamalar geliştirirseniz, uygulamanızın kurulumunun bir önkoşulu olarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] kurulumunu dahil edebilirsiniz (bağlayabilirsiniz). Özelleştirilmiş veya birleşik kurulum deneyimi sunmak için sessizce başlatmak isteyebilirsiniz [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Kurulum ve uygulamanızın Kurulum ilerleme gösterirken, ilerleme durumunu izleyin. Sessiz izlemeyi etkinleştirmek için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] (izlenebilir) Kurulumu kurulumunuzu (İzleyici veya chainer) ile iletişim kurmak için bir bellek eşlemeli g/ç (olması) kesimini kullanarak bir protokol tanımlar. Bu protokolün ilerleme durumu bilgileri elde etmek için ayrıntılı sonuçlar elde edin, iletilere yanıt verir ve iptal etmek bir bağlayıcı için bir yol tanımlar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] kurulumu.
 
@@ -40,13 +40,13 @@ ms.locfileid: "57355642"
 
 - **Çıkış kodlarını**. Çağırmak için komutu aşağıdaki çıkış kodlarını [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeniden dağıtılabilir program kurulum başarılı veya başarısız olduğu gösterir:
 
-    - 0 - Kurulum başarıyla tamamlandı.
+  - 0 - Kurulum başarıyla tamamlandı.
 
-    - 3010 – Kurulum başarıyla tamamlandı; sistemin yeniden başlatılması gerekiyor.
+  - 3010 – Kurulum başarıyla tamamlandı; sistemin yeniden başlatılması gerekiyor.
 
-    - 1602 – kurulum iptal edildi.
+  - 1602 – kurulum iptal edildi.
 
-    - Tüm diğer kodları - Kurulum hatalarla karşılaştı; Ayrıntılar için % temp % içinde oluşturulan günlük dosyalarını inceleyin.
+  - Tüm diğer kodları - Kurulum hatalarla karşılaştı; Ayrıntılar için % temp % içinde oluşturulan günlük dosyalarını inceleyin.
 
 - **Kurulum İptal**. Kurulum kullanarak dilediğiniz zaman iptal edebilirsiniz `Abort` ayarlanacak yöntemi `m_downloadAbort` ve `m_ installAbort` olması bölümünde bayrakları.
 

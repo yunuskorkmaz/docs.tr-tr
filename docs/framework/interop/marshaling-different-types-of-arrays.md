@@ -11,11 +11,11 @@ ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cafb15f691daa8d0d0e6c1ebab3cb89f7c811612
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642858"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Farklı Dizi Türlerini Hazırlama
 Bir dizi aynı türden bir veya daha fazla öğe içeriyor, yönetilen kodda bir başvuru türüdür. Diziler başvuru türleri olsa da, olduğu gibi parametreleri yönetilmeyen bir işleve geçirilir. Bu davranış, In/Out parametreleri olan yönetilen nesnelere, yönetilen diziler geçirilen yolu ile tutarsız. Ek ayrıntılar için bkz. [kopyalama ve sabitleme](copying-and-pinning.md).  
@@ -34,53 +34,53 @@ Bir dizi aynı türden bir veya daha fazla öğe içeriyor, yönetilen kodda bir
 ## <a name="example"></a>Örnek  
  Bu örnek, dizileri aşağıdaki türleri nasıl gösterir:  
   
--   Değer tamsayı dizisi.  
+- Değer tamsayı dizisi.  
   
--   Yeniden boyutlandırılabilir başvuruya göre tamsayı dizisi.  
+- Yeniden boyutlandırılabilir başvuruya göre tamsayı dizisi.  
   
--   Tamsayı değerine göre çok boyutlu dizisi (matrix).  
+- Tamsayı değerine göre çok boyutlu dizisi (matrix).  
   
--   Değer bir dize dizisi.  
+- Değer bir dize dizisi.  
   
--   Yapıları ile tamsayı dizisi.  
+- Yapıları ile tamsayı dizisi.  
   
--   Yapıları dizeler dizisi.  
+- Yapıları dizeler dizisi.  
   
  Bir dizi başvuruya göre açıkça sıralanır sürece, varsayılan davranışı dizi bir giriş parametresi olarak sürekliliğe devreder. Uygulayarak bu davranışı değiştirebilirsiniz <xref:System.Runtime.InteropServices.InAttribute> ve <xref:System.Runtime.InteropServices.OutAttribute> açıkça öznitelikleri.  
   
  Diziler örneği, orijinal işlev bildirimleriyle gösterilen aşağıdaki yönetilmeyen işlevleri kullanır:  
   
--   **TestArrayOfInts** Pinvokelib.DLL'den dışarı.  
+- **TestArrayOfInts** Pinvokelib.DLL'den dışarı.  
   
     ```  
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
--   **TestRefArrayOfInts** Pinvokelib.DLL'den dışarı.  
+- **TestRefArrayOfInts** Pinvokelib.DLL'den dışarı.  
   
     ```  
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
--   **TestMatrixOfInts** Pinvokelib.DLL'den dışarı.  
+- **TestMatrixOfInts** Pinvokelib.DLL'den dışarı.  
   
     ```  
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
--   **TestArrayOfStrings** Pinvokelib.DLL'den dışarı.  
+- **TestArrayOfStrings** Pinvokelib.DLL'den dışarı.  
   
     ```  
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
--   **TestArrayOfStructs** Pinvokelib.DLL'den dışarı.  
+- **TestArrayOfStructs** Pinvokelib.DLL'den dışarı.  
   
     ```  
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
--   **TestArrayOfStructs2** Pinvokelib.DLL'den dışarı.  
+- **TestArrayOfStructs2** Pinvokelib.DLL'den dışarı.  
   
     ```  
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  

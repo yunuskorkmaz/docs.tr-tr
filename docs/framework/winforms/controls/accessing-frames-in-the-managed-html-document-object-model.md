@@ -10,22 +10,22 @@ helpviewer_keywords:
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
 ms.openlocfilehash: 9b2719ca000ab86b9ca40f9e78af46cbf598d16e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640542"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Yönetilen HTML Belgesi Nesne Modelindeki Çerçevelere Erişme
 Bazı HTML belgeleri tanesi oluşur *çerçeveler*, ya da kendi ayrı HTML belgeleri içerebileceği windows. Çerçeveleri kullanarak diğer çerçeveler sürekli içeriklerini değiştirme sırasında bir veya daha fazla parça sayfanın bir gezinti çubuğu gibi statik kalır HTML sayfaları oluşturmak kolaylaştırır.  
   
  HTML yazarlar çerçeveler iki yoldan biriyle oluşturabilirsiniz:  
   
--   Kullanarak `FRAMESET` ve `FRAME` sabit windows oluşturma etiketler.  
+- Kullanarak `FRAMESET` ve `FRAME` sabit windows oluşturma etiketler.  
   
  -veya-  
   
--   Kullanarak `IFRAME` etiketini, çalışma zamanında konumlandırılabilir kayan bir pencere oluşturur.  
+- Kullanarak `IFRAME` etiketini, çalışma zamanında konumlandırılabilir kayan bir pencere oluşturur.  
   
 1. Çerçeve HTML belgeleri içerdiğinden, bunlar belge nesne modeli (DOM) pencere öğeleri ve çerçeve öğeleri gösterilir.  
   

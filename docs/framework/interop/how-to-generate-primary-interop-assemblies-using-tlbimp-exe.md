@@ -9,28 +9,28 @@ ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a944cf87783c59c21bffc9c48a18237c9fe6cdec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643237"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Nasıl yapılır: Tlbimp.exe Kullanarak Birincil Birlikte Çalışma Derlemeleri Oluşturma
 Birincil birlikte çalışma derlemesi oluşturmak için iki yolunuz vardır:  
   
--   Kullanarak [tür kitaplığı alma programı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) tarafından sağlanan [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+- Kullanarak [tür kitaplığı alma programı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) tarafından sağlanan [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
   
      Birincil birlikte çalışma derlemeleri oluşturmak için en kolay yolu [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Tlbimp.exe aşağıdaki güvenlik önlemleri sağlar:  
   
-    -   Tüm iç içe geçmiş tür kitaplığı başvurularını için yeni birlikte çalışma derlemeleri oluşturmadan önce diğer kayıtlı birincil birlikte çalışma derlemelerini denetler.  
+    - Tüm iç içe geçmiş tür kitaplığı başvurularını için yeni birlikte çalışma derlemeleri oluşturmadan önce diğer kayıtlı birincil birlikte çalışma derlemelerini denetler.  
   
-    -   Kapsayıcı ya da birincil birlikte çalışma derlemesini bir katı ad vermek için dosya adı belirtmezseniz, birincil birlikte çalışma derlemesi yaymak başarısız olur.  
+    - Kapsayıcı ya da birincil birlikte çalışma derlemesini bir katı ad vermek için dosya adı belirtmezseniz, birincil birlikte çalışma derlemesi yaymak başarısız olur.  
   
-    -   Bağımlı derlemelerin başvurularını atlarsanız, birincil birlikte çalışma derlemesi yaymak başarısız olur.  
+    - Bağımlı derlemelerin başvurularını atlarsanız, birincil birlikte çalışma derlemesi yaymak başarısız olur.  
   
-    -   Birincil birlikte çalışma derlemelerini olmayan bağımlı derlemelerin başvurularını eklerseniz, birincil birlikte çalışma derlemesi yaymak başarısız olur.  
+    - Birincil birlikte çalışma derlemelerini olmayan bağımlı derlemelerin başvurularını eklerseniz, birincil birlikte çalışma derlemesi yaymak başarısız olur.  
   
--   Kaynak kodunda el ile oluşturma gibi ortak dil belirtimi (CLS) ile uyumlu bir dil kullanarak birincil birlikte çalışma derlemelerini C#. Bu yaklaşım, bir tür kitaplığı kullanılamadığında yararlıdır.  
+- Kaynak kodunda el ile oluşturma gibi ortak dil belirtimi (CLS) ile uyumlu bir dil kullanarak birincil birlikte çalışma derlemelerini C#. Bu yaklaşım, bir tür kitaplığı kullanılamadığında yararlıdır.  
   
  Derlemeyi tanımlayıcı bir adla imzalamak için bir şifreleme anahtarı çiftiniz olması gerekir. Ayrıntılar için bkz [bir anahtar çifti oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
   

@@ -1,55 +1,55 @@
 ---
 title: Yapı ifade ağaçları
-description: İfade ağaçları oluşturma teknikleri hakkında bilgi edinin.
+description: İfade ağaçları oluşturmaya yönelik teknikleri hakkında bilgi edinin.
 ms.date: 06/20/2016
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
 ms.openlocfilehash: 7751af17aafa8e2d1a14125da43352108b1c1f95
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646604"
 ---
 # <a name="building-expression-trees"></a>Yapı ifade ağaçları
 
-[Önceki--İfadeleri yorumlama](expression-trees-interpreting.md)
+[Önceki--İfade yorumlama](expression-trees-interpreting.md)
 
-Şu ana kadar gördüğünüz ifade ağaçları C# Derleyici tarafından oluşturuldu. Tüm yapmanız gerekiyordu edildi olarak türünde bir değişkenden atandığı bir lambda ifadesi oluşturma bir `Expression<Func<T>>` veya bazı benzer türü. Bir ifade ağacına oluşturmak için tek yolu değil. Birçok senaryoları için bellek çalışma zamanında bir ifadede yapı gerektiğini fark edebilirsiniz. 
+Görmüş kadarki tüm ifade ağaçları tarafından oluşturulan C# derleyici. Tüm yapmanız gerekiyordu edildi olarak yazılmış bir değişkene atanmış bir lambda ifadesi oluşturma bir `Expression<Func<T>>` veya benzer bir tür. İfade ağacı oluşturmak için tek yolu değil. Birçok senaryo için çalışma zamanında bellekte bir ifade oluşturmak gerektiğini fark edebilirsiniz. 
 
-İfade ağaçları oluşturma Bu ifade ağaçları değişmez gerçeğiyle karmaşık. Kök kadar bırakır ağacından oluşturmalısınız olan değişmez anlamına gelir. İfade ağaçları oluşturmak için kullanmanız API'leri olgunun yansıtacak: bir düğüm oluşturmak için kullandığınız yöntemleri bağımsız olarak tüm alt öğelerini alın. Şimdi teknikleri göstermek için birkaç örneklerle yol.
+Bu ifade ağaçları sabittir olgusu karmaşık ifade ağaçları oluşturma. Kök kadar leaves ağacından derlemelidir olan sabit anlamına gelir. İfade ağaçları oluşturmak için kullanacağınız API'leri bu olgu yansıtır: Bir düğüm oluşturmak için kullanacağınız yöntemleri, bağımsız tüm alt öğelerini alır. Teknikleri göstermek için bazı örnekler atalım.
 
-## <a name="creating-nodes"></a>Düğümlerini oluşturma
+## <a name="creating-nodes"></a>Düğümler oluşturma
 
-Görece basit başlayalım yeniden. Bu bölümleri t ile çalışmakta Toplama ifadesi kullanacağız:
+Görece basit başlayalım yeniden. Bu bölümleri miyim ile çalışmalar ek ifade kullanacağız:
 
 ```csharp
 Expression<Func<int>> sum = () => 1 + 2;
 ```
 
-Bu ifade ağacına oluşturmak için ve yaprak düğümlerin oluşturmalıdır.
-Kullanabilmek için ve yaprak düğümlerin, sabittir `Expression.Constant` yöntemi düğümleri oluşturmak için:
+Bu ifade ağacını oluşturmanın için yaprak düğümleri oluşturmalıdır.
+Kullanabileceğiniz sabitleri ve yaprak düğümlerin olduğundan `Expression.Constant` düğümleri oluşturma yöntemi:
 
 ```csharp
 var one = Expression.Constant(1, typeof(int));
 var two = Expression.Constant(2, typeof(int));
 ```
 
-Ardından, toplama ifadesi oluştur:
+Ardından, ek ifade oluşturacaksınız:
 
 ```csharp
 var addition = Expression.Add(one, two);
 ```
 
-Toplama ifadesi getirdikten sonra lambda ifadesi oluşturabilirsiniz:
+Ek ifade başladıktan sonra lambda ifadesi oluşturabilirsiniz:
 
 ```csharp
 var lambda = Expression.Lambda(addition);
 ```
 
-Bağımsız değişkenler içerdiğinden bu çok basit lambda ifadesi değil.
-Daha sonra bu bölümde, bağımsız değişkenler parametreleriyle eşleyin ve daha karmaşık ifadeleri oluşturmak nasıl görürsünüz.
+Bağımsız değişken içeren çok basit bir lambda ifadesi, olmasıdır.
+Daha sonra bu bölümde, parametreler için bağımsız değişken eşleme ve daha karmaşık ifadeleri oluşturmak nasıl göreceksiniz.
 
-Bu bir basit ifadeler için tek bir deyimde tüm çağrılar birleştirmek:
+Bu bir basit ifadeler için tek bir deyimde tüm çağırıyor Birleştir:
 
 ```csharp
 var lambda = Expression.Lambda(
@@ -62,23 +62,23 @@ var lambda = Expression.Lambda(
 
 ## <a name="building-a-tree"></a>Bir ağaç oluşturma
 
-Bir ifade ağacına bellekte oluşturmanın temel olmasıdır. Daha karmaşık ağaçları genellikle daha fazla düğüm türleri ve daha fazla düğüm ağacında anlamına gelir. Şimdi aracılığıyla bir örnek daha çalıştırın ve ifade ağaçları oluşturduğunuzda, genellikle oluşturacaksınız iki daha fazla düğüm türleri göster: bağımsız değişken düğümleri ve yöntem çağrısı düğümleri.
+Bellekte bir ifade ağacı oluşturma hakkındaki temel bilgileri olmasıdır. Daha karmaşık ağaçlar genellikle daha fazla düğüm türleri ve daha fazla düğüm ağaçta anlamına gelir. Şimdi aracılığıyla daha fazla örneği çalıştırmak ve ifade ağaçları oluşturduğunuzda, genellikle oluşturacağınız iki daha fazla düğüm türleri göster: bağımsız değişken düğümleri ve yöntem çağrısı düğümleri.
 
-Şimdi bu deyim oluşturmak için bir ifade ağacına oluşturun:
+Bu ifade oluşturmak için bir ifade ağacı oluşturalım:
 
 ```csharp
 Expression<Func<double, double, double>> distanceCalc =
     (x, y) => Math.Sqrt(x * x + y * y);
 ```
  
-Parametresi ifadelerine oluşturarak başlayacağız `x` ve `y`:
+Parametresi ifadelerine için oluşturarak başlayacağız `x` ve `y`:
 
 ```csharp
 var xParameter = Expression.Parameter(typeof(double), "x");
 var yParameter = Expression.Parameter(typeof(double), "y");
 ```
 
-Çarpma ve toplama ifadeleri oluşturma gördünüz deseni izler:
+Çarpma ve ayrıca ifadeleri oluşturma gördünüz deseni izler:
 
 ```csharp
 var xSquared = Expression.Multiply(xParameter, xParameter);
@@ -86,14 +86,14 @@ var ySquared = Expression.Multiply(yParameter, yParameter);
 var sum = Expression.Add(xSquared, ySquared);
 ```
 
-Ardından, bir yöntem çağrısı ifadesi çağrısı için oluşturmanız gerekir `Math.Sqrt`.
+Ardından, bir yöntem çağrısı ifadesi için yapılan çağrının oluşturmak için ihtiyacınız `Math.Sqrt`.
 
 ```csharp
 var sqrtMethod = typeof(Math).GetMethod("Sqrt", new[] { typeof(double) });
 var distance = Expression.Call(sqrtMethod, sum);
 ```
 
-Ve ardından son olarak, yöntem çağrısının bir lambda ifadesi yerleştirin ve bağımsız değişkenler lambda ifadesi tanımladığınızdan emin olun:
+Ve son olarak, yöntem çağrısının bir lambda ifadesine yerleştirin, lambda ifadesine bağımsız değişkenler tanımladığınızdan emin olun:
 
 ```csharp
 var distanceLambda = Expression.Lambda(
@@ -102,17 +102,17 @@ var distanceLambda = Expression.Lambda(
     yParameter);
 ```
 
-Daha karmaşık Bu örnekte, genellikle ifade ağaçları oluşturmanız gerekir birkaç daha fazla teknikleri bakın.
+Bu daha karmaşık bir örnekte, ifade ağacı oluşturmak için genellikle gereken birkaç daha fazla teknikleri bakın.
 
-İlk olarak, kullanmadan önce parametreleri veya yerel değişkenler temsil eden nesneler oluşturmanız gerekir. Bu nesneler oluşturduktan sonra ihtiyaç duyduğunuz her yerde bunları, ifade ağacına kullanabilirsiniz.
+İlk olarak, kullanmadan önce parametrelerin veya yerel değişkenleri temsil eden nesneleri oluşturmanız gerekir. Bu nesneler oluşturduktan sonra istediğiniz yerden onları, ifade ağacında kullanabilirsiniz.
 
-İkinci olarak, bir alt kümesini yansıma API'ları oluşturmak için kullanılacak ihtiyacınız bir `MethodInfo` o yöntemi erişimi için bir ifade ağacına oluşturabilmesi için nesne. Kendiniz .NET Core platformda kullanılabilir yansıma API'leri alt sınırı, gerekir. Yeniden, bu teknikler diğer ifade ağaçları uzatır.
+İkinci olarak, yansıma API kümesini oluşturmak için kullanılacak ihtiyacınız bir `MethodInfo` bu yönteme erişmek için bir ifade ağacı oluşturabilmesi nesne. Kendiniz bir .NET Core platformda kullanılabilir yansıma API'lerden alt sınırı, gerekir. Yeniden, bu teknikler diğer ifade ağaçlarına genişletilir.
 
-## <a name="building-code-in-depth"></a>Yapı kod derinliği:
+## <a name="building-code-in-depth"></a>Derinlemesine kod oluşturma
 
-Şunları yapabilirsiniz sınırlı değil bu API'leri kullanarak oluşturun. Ancak, daha fazla kod okumak için ve yönetmek için zordur, oluşturmak istediğiniz ifade ağacına karmaşık. 
+Şunları yapabilirsiniz sınırlı olmayan bu API'leri kullanarak oluşturun. Ancak, daha zordur yönetmek ve okuma için kodudur, oluşturmak istediğiniz bir ifade ağacı çok karmaşık. 
 
-Şimdi bu kodu eşdeğerdir bir ifade ağacına oluşturun:
+Bu kod eşdeğerdir bir ifade ağacı oluşturalım:
 
 ```csharp
 Func<int, int> factorialFunc = (n) =>
@@ -127,7 +127,7 @@ Func<int, int> factorialFunc = (n) =>
 };
 ```
 
-Yukarıdaki ı ifade ağacına, ancak yalnızca temsilci yapı değil dikkat edin. Kullanarak `Expression` sınıfı, deyimi Lambda'lar oluşturamaz. Aynı işlevselliği oluşturmak için gerekli kod aşağıdaki gibidir. Derleme için bir API değil gerçeğiyle karmaşık bir `while` döngü, bunun yerine koşullu test ve dışında döngüsünü kesmek için bir etiket hedef içeren bir döngü yapı vermeniz gerekir. 
+Yukarıda miyim ifade ağacı, ancak yalnızca temsilci derlenmedi, dikkat edin. Kullanarak `Expression` sınıfı, deyim lambdaları oluşturamıyor. Aynı işlevselliği oluşturmak için gereken kod aşağıdaki gibidir. Bir API oluşturmak için hiç olgusu karmaşık bir `while` döngü, bunun yerine bir koşul testi ve etiket hedefi döngüden içeren bir döngü oluşturmak için ihtiyacınız. 
 
 ```csharp
 var nArgument = Expression.Parameter(typeof(int), "n");
@@ -161,14 +161,14 @@ BlockExpression body = Expression.Block(
 );
 ```
 
-Daha karmaşık, ifade ağacına Faktöriyel işlevi için yapı için kodu oldukça biraz daha uzun ve etiketleri ve sonu deyimleri ve diğer öğeleri önlemek için görevler kodlama bizim her gün içinde isteriz ile riddled. 
+İfade ağacı Faktöriyel işlevi oluşturmak için kodu daha karmaşık, oldukça biraz daha uzun ve etiketleri kesme deyimleri ve diğer öğeleri önlemek için kodlama görevleri, her gün içinde istiyoruz riddled. 
 
-Bu bölümde, t her düğüm bu ifade ağacına ziyaret edin ve bu örnekte oluşturulan düğümleri hakkında bilgi yazmak için ziyaretçi kod güncelleştirdik. Yapabilecekleriniz [görüntülemek veya karşıdan örnek kod](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) dotnet/belgeler GitHub deposunda. Kendiniz oluşturmak ve örnekleri çalıştırmak denemeler yapın. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Bu bölüm için miyim ziyaretçi kod, her düğüm bu ifade ağacı ziyaret edin ve bu örnekte oluşturulan düğümleri hakkında bilgi yazmak için de güncelleştirdik. Yapabilecekleriniz [görüntülemek veya örnek kodu indirdikten](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) dotnet/docs GitHub deposunda bulabilirsiniz. Oluşturma ve örnekleri çalıştırmaya kendiniz denemeler yapın. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="examining-the-apis"></a>API'ler inceleniyor
+## <a name="examining-the-apis"></a>API'leri İnceleme
 
-İfade ağacına API'leri .NET Core gitmek daha zor bazıları, ancak sorun yoktur. Bunların amaçla yerine karmaşık bir iş değil: çalışma zamanında kod oluşturur kod yazma. Bunlar, mutlaka C# dilinde kullanılabilir tüm denetim yapıları destekleme ve API'ın yüzey alanını olabildiğince küçük makul tutma arasında bir denge sağlamak karmaşıktır. Bu Bakiye birçok denetim yapıları kendi C# yapılarını tarafından değil, ancak bu daha yüksek düzeyli yapıları derleyici oluşturur temel mantığını temsil eden yapılar tarafından temsil edilen anlamına gelir. 
+İfade ağacı API'leri de .NET Core giderek daha zor bazıları, ancak, bir sakınca yoktur. Bunların amacı yerine karmaşık bir iştir: çalışma zamanında kodu oluşturan kod yazma. Kullanılabilir tüm denetim yapıları destekleyen arasında bir denge sağlamak mutlaka karmaşık oldukları C# dil ve yüzey alanını olabildiğince küçük API'leri gibi makul tutma. Birçok denetim yapıları tarafından temsil edilen bu dengeyi anlamına gelir, C# oluşturur, ancak bu daha yüksek bir düzeyinden derleyici oluşturan temel mantığı göstermek yapıları tarafından oluşturur. 
 
-Ayrıca, şu anda vardır kullanarak doğrudan oluşturulamıyor C# ifadeleri `Expression` sınıfı yöntemlerinin. Genel olarak, bu yeni işleçler ve ifadeler C# 5 ve C# 6'da eklenmiş olacaktır. (Örneğin, `async` ifadeleri yerleşik olamaz ve yeni `?.` işleci doğrudan oluşturulamıyor.)
+Ayrıca, şu anda vardır C# kullanarak doğrudan oluşturulamıyor ifadeleri `Expression` sınıfı yöntemleri. Genel olarak, bunlar yeni işleçleri olacaktır ve ifadeleri eklenen içinde C# 5 ve C# 6. (Örneğin, `async` ifadeleri yerleşik olamaz ve yeni `?.` işleci doğrudan oluşturulamıyor.)
 
-[Sonraki--İfadeleri çevirme](expression-trees-translating.md)
+[Sonraki--İfade çevirme](expression-trees-translating.md)

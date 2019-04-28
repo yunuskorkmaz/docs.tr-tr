@@ -3,11 +3,11 @@ title: Bir WCF Hizmeti Bir Web Grubunda Barındırıldığında Yeniden Yürütm
 ms.date: 03/30/2017
 ms.assetid: 1c2ed695-7a31-4257-92bd-9e9731b886a5
 ms.openlocfilehash: e27a85d42268df107b26d3bd24af15a639bb1836
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641599"
 ---
 # <a name="preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm"></a>Bir WCF Hizmeti Bir Web Grubunda Barındırıldığında Yeniden Yürütme Saldırılarını Önleme
 Ne zaman WCF ileti güvenliğini engel yeniden yürütme saldırıları gelen ileti dışında bir geçici öğe oluşturma ve iç denetleyerek `InMemoryNonceCache` oluşturulan NONCE mevcut olup olmadığını görmek için. İse, ileti bir yeniden yürütme atılır. Ne zaman bir WCF Hizmeti barındırılan bir web grubunda beri `InMemoryNonceCache` paylaşılmayan web grubundaki düğümleri arasında yeniden yürütme saldırılarına karşı savunmasız hizmetidir.  Bu senaryo azaltmak için WCF 4.5 soyut sınıfından bir sınıf türetilerek, kendi paylaşılan NONCE önbellek uygulamak izin veren bir genişletilebilirlik noktası sağlar <xref:System.ServiceModel.Security.NonceCache>.  
