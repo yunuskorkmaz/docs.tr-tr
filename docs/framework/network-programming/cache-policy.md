@@ -11,11 +11,11 @@ helpviewer_keywords:
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
 ms.openlocfilehash: 33043652e11beb374843d43c9683ff4b7928eb3d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642834"
 ---
 # <a name="cache-policy"></a>Önbellek İlkesi
 Önbellek İlkesi, istenen kaynak önbelleğe alınmış bir kopyasını kullanarak bir istek memnun olup olmadığını belirlemek için kullanılan kuralları tanımlar. Uygulamalar için yenilik istemci önbellek gereksinimleri belirtin, ancak etkili önbellek ilkesini, istemci önbellek gereksinimleri, sunucunun içerik sona erme gereksinimleri ve sunucunun yeniden doğrulama gereksinimlerini göre belirlenir. En yeni içerik istemci uygulamaya döndürülür sağlamaya yardımcı olmak için en koruyucu önbellek İlkesi etkileşimi istemci önbellek İlkesi ve sunucu gereksinimleri her zaman sonuçlanır.  

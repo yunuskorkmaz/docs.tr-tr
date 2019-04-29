@@ -13,11 +13,11 @@ ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 399ad6649016e53d91d5d9d30ecc031ae8a97a4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643588"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>DLL İşlevleri için bir Sınıf Oluşturma
 Sık kullanılan bir DLL işlevinin yönetilen sınıfta sarmalama platform işlevi kapsülleyen etkili bir yaklaşımdır. Her durumda bunu yapmak için zorunlu olmasa da, sınıf sarmalayıcı DLL işlevlerini tanımlama kullanışlı çünkü sağlamak hantal ve hataya eğilimli olabilir. Visual Basic'te programlama yapıyorsanız veya C#, DLL işlevleri bir sınıf veya Visual Basic module'u içinde bildirmeniz gerekir.  
@@ -28,11 +28,11 @@ Sık kullanılan bir DLL işlevinin yönetilen sınıfta sarmalama platform işl
   
  Platform için yönetilen sınıf tasarlama çağırdığınızda, sınıflar ve DLL işlevleri arasındaki ilişkileri göz önünde bulundurun. Örneğin, şunları yapabilirsiniz:  
   
--   Varolan bir sınıf içinde DLL işlevleri bildirme.  
+- Varolan bir sınıf içinde DLL işlevleri bildirme.  
   
--   Yalıtılmış ve kolay bulmak işlevleri tutmak, her bir DLL işlevi için ayrı bir sınıf oluşturun.  
+- Yalıtılmış ve kolay bulmak işlevleri tutmak, her bir DLL işlevi için ayrı bir sınıf oluşturun.  
   
--   Bir dizi mantıksal gruplandırmaları form ve ek yükü azaltmak için ilgili DLL işlevleri için bir sınıf oluşturun.  
+- Bir dizi mantıksal gruplandırmaları form ve ek yükü azaltmak için ilgili DLL işlevleri için bir sınıf oluşturun.  
   
  Lütfen sınıfı ve metotlarını şekilde adlandırabilirsiniz. Nasıl oluşturulacağını gösteren örnekler için. NET tabanlı bildirimler platformuyla kullanılacak çağırmak için bkz: [Platform Çağırma ile veri hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
