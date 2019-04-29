@@ -8,26 +8,26 @@ helpviewer_keywords:
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
 ms.openlocfilehash: 19c1f754aaef66197b033a68bc215255511cd618
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646533"
 ---
 # <a name="finalizers-c-programming-guide"></a>Sonlandırıcılar (C# programlama Kılavuzu)
 Sonlandırıcılar (de denir **yok ediciler**) çöp toplayıcısı tarafından toplanmış bir sınıf örneği, tüm gerekli son temizleme gerçekleştirmek için kullanılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
--   Sonlandırıcılar yapılarda tanımlanamaz. Bunlar, yalnızca sınıf ile kullanılır.  
+- Sonlandırıcılar yapılarda tanımlanamaz. Bunlar, yalnızca sınıf ile kullanılır.  
   
--   Bir sınıf, bir sonlandırıcı yalnızca olabilir.  
+- Bir sınıf, bir sonlandırıcı yalnızca olabilir.  
   
--   Sonlandırıcılar devralınmış veya aşırı yüklenmiş.  
+- Sonlandırıcılar devralınmış veya aşırı yüklenmiş.  
   
--   Sonlandırıcılar çağrılamaz. Bunlar otomatik olarak çağrılır.  
+- Sonlandırıcılar çağrılamaz. Bunlar otomatik olarak çağrılır.  
   
--   Bir sonlandırıcı değiştiriciler alın veya parametreleri desteklemez.  
+- Bir sonlandırıcı değiştiriciler alın veya parametreleri desteklemez.  
   
  Örneğin, bir sonlandırıcı için bildirimi aşağıdaki gibidir `Car` sınıfı.
   
@@ -72,11 +72,11 @@ protected override void Finalize()
   
  Kaynakları temizleme hakkında daha fazla ayrıntı için aşağıdaki konulara bakın:  
   
--   [Yönetilmeyen Kaynakları Temizleme](../../../standard/garbage-collection/unmanaged.md)  
+- [Yönetilmeyen Kaynakları Temizleme](../../../standard/garbage-collection/unmanaged.md)  
   
--   [Dispose Yöntemi Uygulama](../../../standard/garbage-collection/implementing-dispose.md)  
+- [Dispose Yöntemi Uygulama](../../../standard/garbage-collection/implementing-dispose.md)  
   
--   [using Deyimi](../../../csharp/language-reference/keywords/using-statement.md)  
+- [using Deyimi](../../../csharp/language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir devralma zincirini olun üç sınıf oluşturur. Sınıf `First` temel sınıf `Second` türetilir `First`, ve `Third` türetilir `Second`. Üç sonlandırıcılar vardır. İçinde `Main`, en çok türetilen sınıfın bir örneği oluşturulur. Program çalıştığında sonlandırıcılar üç sınıfları için otomatik olarak ve sırasıyla en çok türetilen en az türetilen için gelen çağrılır, dikkat edin.  
