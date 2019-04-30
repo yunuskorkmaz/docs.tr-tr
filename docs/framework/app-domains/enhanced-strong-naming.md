@@ -8,11 +8,11 @@ ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cbda9c160b99bf5648c670a67d39b245f031645
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705668"
 ---
 # <a name="enhanced-strong-naming"></a>Güçlü Adlandırmayı İyileştirme
 Tanımlayıcı ad imzası derlemeleri tanımlamak için bir kimlik .NET Framework mekanizmasıdır. Buna genellikle bir oluşturucu (imzalayan) alıcıya (doğrulama) geçirilen verilerin bütünlüğünü doğrulamak için kullanılan ortak anahtar dijital imzası var. Bu imza, bir derleme için benzersiz bir kimlik kullanılır ve derlemeye yapılan başvuruların belirsiz olmamasını sağlar. Derleme oluşturma işleminin bir parçası imzalanır ve sonra yüklendiğinde doğrulanır.  
@@ -22,16 +22,16 @@ Tanımlayıcı ad imzası derlemeleri tanımlamak için bir kimlik .NET Framewor
 ## <a name="limitations-of-conventional-strong-names"></a>Geleneksel tanımlayıcı adlar kısıtlamaları  
  Önceki sürümlerde kullanılan tanımlayıcı adlandırma teknolojisinin [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] aşağıdaki eksiklikleri vardır:  
   
--   Anahtarlar sürekli saldırı altında olan ve gelişmiş teknikler ve donanım bir özel anahtarı bir ortak anahtar Infer kolaylaştırır. Saldırılara karşı korunmak için büyük anahtarlar gereklidir. .NET framework sürümlerini önce [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] herhangi boyutta anahtarla (varsayılan boyut 1024 bit olan) olanağı sağlar, ancak yeni anahtarla bir derlemeyi imzalamak, derlemenin daha eski kimliği başvuran tüm ikili dosyaları keser. Bu nedenle, uyumluluğu korumak istiyorsanız, bir imzalama anahtarı boyutunu yükseltmek son derece zordur.  
+- Anahtarlar sürekli saldırı altında olan ve gelişmiş teknikler ve donanım bir özel anahtarı bir ortak anahtar Infer kolaylaştırır. Saldırılara karşı korunmak için büyük anahtarlar gereklidir. .NET framework sürümlerini önce [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] herhangi boyutta anahtarla (varsayılan boyut 1024 bit olan) olanağı sağlar, ancak yeni anahtarla bir derlemeyi imzalamak, derlemenin daha eski kimliği başvuran tüm ikili dosyaları keser. Bu nedenle, uyumluluğu korumak istiyorsanız, bir imzalama anahtarı boyutunu yükseltmek son derece zordur.  
   
--   Tanımlayıcı ad imzası yalnızca SHA-1 algoritmasını destekler. SHA-1, güvenli karma uygulamalar için yetersiz olduğu yakın zamanda bulundu. Bu nedenle, daha güçlü bir algoritma (SHA-256 veya daha büyük) gereklidir. SHA-1 yalnızca FIPS uyumlu yazılım ve algoritmaları kullanmayı tercih edenler için sorunlara neden olabilir, FIPS uyumlu ayakta kaybedersiniz mümkündür.  
+- Tanımlayıcı ad imzası yalnızca SHA-1 algoritmasını destekler. SHA-1, güvenli karma uygulamalar için yetersiz olduğu yakın zamanda bulundu. Bu nedenle, daha güçlü bir algoritma (SHA-256 veya daha büyük) gereklidir. SHA-1 yalnızca FIPS uyumlu yazılım ve algoritmaları kullanmayı tercih edenler için sorunlara neden olabilir, FIPS uyumlu ayakta kaybedersiniz mümkündür.  
   
 ## <a name="advantages-of-enhanced-strong-names"></a>Gelişmiş tanımlayıcı adların avantajları  
  Önceden varolan tanımlayıcı adlarla uyumluluk ve tek bir kimlik diğerine eşdeğer olduğunu iddia edebilme yeteneğidir geliştirilmiş tanımlayıcı adların başlıca avantajları şunlardır:  
   
--   Önceden mevcut olan imzalı derlemelere sahip geliştiriciler eski kimliklere başvuran derlemeler ile uyumluluğu korurken kendi kimliklerini SHA-2 algoritmalarına geçirebilirsiniz.  
+- Önceden mevcut olan imzalı derlemelere sahip geliştiriciler eski kimliklere başvuran derlemeler ile uyumluluğu korurken kendi kimliklerini SHA-2 algoritmalarına geçirebilirsiniz.  
   
--   Yeni derlemeler oluşturan ve tanımlayıcı ad imzaları önceden mevcut olan ilgisi olmayan geliştiriciler daha güvenli SHA-2 algoritmalarını kullanabilir ve her zaman olduğu gibi derlemelerini imzalayabilirler.  
+- Yeni derlemeler oluşturan ve tanımlayıcı ad imzaları önceden mevcut olan ilgisi olmayan geliştiriciler daha güvenli SHA-2 algoritmalarını kullanabilir ve her zaman olduğu gibi derlemelerini imzalayabilirler.  
   
 ## <a name="using-enhanced-strong-names"></a>Geliştirilmiş katı adları kullanma  
  Tanımlayıcı ad anahtarı bir imza anahtarı ve bir kimlik anahtarından oluşur. Derleme imza anahtarıyla imzalanır ve kimlik anahtarı tarafından tanımlanır. Öncesinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], bu iki tuş aynıydı. İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]kimlik anahtarı önceki .NET Framework sürümlerinde olduğu gibi aynı kalır, ancak imza anahtarı daha güçlü bir karma algoritması ile geliştirilmiştir. Ayrıca, imza anahtarı kimlik anahtarı ile bir karşı imza oluşturmak için imzalanır.  

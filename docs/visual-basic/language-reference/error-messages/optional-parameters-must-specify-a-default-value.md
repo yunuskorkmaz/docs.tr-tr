@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
 ms.openlocfilehash: 01c0abb366e8605a9b153333e645fc3276b6bd16
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772599"
 ---
 # <a name="optional-parameters-must-specify-a-default-value"></a>İsteğe bağlı parametreler varsayılan bir değer belirtmelidir
 İsteğe bağlı parametreler tarafından çağıran bir yordam parametre sağlanmazsa, kullanılabilen varsayılan değerler sağlamanız gerekir.  
@@ -21,7 +21,7 @@ ms.locfileid: "58821731"
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   İsteğe bağlı parametrelerinin varsayılan değerleri; belirtin. Örneğin:  
+- İsteğe bağlı parametrelerinin varsayılan değerleri; belirtin. Örneğin:  
   
     ```  
     Sub Proc1(ByVal X As Integer,   

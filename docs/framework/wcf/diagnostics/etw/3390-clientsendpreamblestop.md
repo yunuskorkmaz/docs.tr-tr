@@ -3,11 +3,11 @@ title: 3390 - ClientSendPreambleStop
 ms.date: 03/30/2017
 ms.assetid: fbf6e4ed-8538-417e-b4d1-a30b45ee6b5d
 ms.openlocfilehash: ae0d6a630d8ab0e39ed85155e4d458132a96addc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33463810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753355"
 ---
 # <a name="3390---clientsendpreamblestop"></a>3390 - ClientSendPreambleStop
 ## <a name="properties"></a>Özellikler  
@@ -15,14 +15,14 @@ ms.locfileid: "33463810"
 |||  
 |-|-|  
 |Kimlik|3390|  
-|Anahtar Sözcükler|Kanal|  
+|anahtar sözcükler|Kanal|  
 |Düzey|Ayrıntılı|  
 |Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, girişin Dur gönderme istemcide yayınlanır.  
+ Bu olay giriş durdurma gönderme istemcide yayılır.  
   
 ## <a name="message"></a>İleti  
- İstemci gönderme girişin durdurun.  
+ İstemci gönderme giriş durdur.  
   
 ## <a name="details"></a>Ayrıntılar

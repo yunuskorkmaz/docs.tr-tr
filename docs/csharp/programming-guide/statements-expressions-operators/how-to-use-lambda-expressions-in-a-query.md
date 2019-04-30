@@ -6,11 +6,11 @@ helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
 ms.openlocfilehash: 18f8823327719a120888df580779125be5d07b2c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61710218"
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Nasıl yapılır: Bir sorguda lambda ifadeleri kullanma (C# Programlama Kılavuzu)
 Lambda ifadeleri doğrudan sorgu sözdizimini kullanmayın, ancak yöntem çağrılarında kullanın ve sorgu ifadeleri yöntem çağrılarını içerebilir. Aslında, bazı sorgu işlemlerinin yalnızca yöntem sözdizimi ifade edilebilir. Sorgu sözdizimi ve yöntem sözdizimi arasındaki fark hakkında daha fazla bilgi için bkz: [sorgu sözdizimi ve yöntem sözdizimi LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  

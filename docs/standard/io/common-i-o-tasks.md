@@ -8,11 +8,11 @@ ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ac2b0eafa64b809d2b40ac6471806dc9ab3c8c53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752327"
 ---
 # <a name="common-io-tasks"></a>Ortak G/Ç Görevleri
 <xref:System.IO> Ad alanı, dosyalar, dizinler, gerçekleştirilecek yazma ve okuma gibi çeşitli eylemleri için izin birkaç sınıfları sağlar ve akışları. Daha fazla bilgi için [dosya ve Stream g/ç](../../../docs/standard/io/index.md).  
@@ -22,7 +22,7 @@ ms.locfileid: "54609635"
 |Bunu yapmak için...|Bu konudaki örneğe bakın...|  
 |-------------------|--------------------------------------|  
 |Bir metin dosyası oluşturma|<xref:System.IO.File.CreateText%2A?displayProperty=nameWithType> Yöntemi<br /><br /> <xref:System.IO.FileInfo.CreateText%2A?displayProperty=nameWithType> Yöntemi<br /><br /> <xref:System.IO.File.Create%2A?displayProperty=nameWithType> Yöntemi<br /><br /> <xref:System.IO.FileInfo.Create%2A?displayProperty=nameWithType> Yöntemi|  
-|Bir metin dosyasına yazma|[Nasıl yapılır: Bir dosyaya metin yazma](../../../docs/standard/io/how-to-write-text-to-a-file.md)<br /><br /> [Nasıl yapılır: Metin dosyaları yazma (C + +/ CLI)](/cpp/dotnet/how-to-write-a-text-file-cpp-cli)|  
+|Bir metin dosyasına yazma|[Nasıl yapılır: Bir dosyaya metin yazma](../../../docs/standard/io/how-to-write-text-to-a-file.md)<br /><br /> [Nasıl yapılır: Metin dosyaları yazma (C++/CLI)](/cpp/dotnet/how-to-write-a-text-file-cpp-cli)|  
 |Bir metin dosyasından okuma|[Nasıl yapılır: Bir dosyadan metin okuma](../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
 |Bir dosyaya metin ekleme|[Nasıl yapılır: Açın ve bir günlük dosyasına Ekle](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)<br /><br /> <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType> Yöntemi<br /><br /> <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType> Yöntemi|  
 |Bir dosyayı yeniden adlandırma veya taşıma|<xref:System.IO.File.Move%2A?displayProperty=nameWithType> Yöntemi<br /><br /> <xref:System.IO.FileInfo.MoveTo%2A?displayProperty=nameWithType> Yöntemi|  

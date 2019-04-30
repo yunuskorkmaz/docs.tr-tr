@@ -1,5 +1,5 @@
 ---
-title: Windows sistemlerde dosya yolu biçimleri
+title: Windows sistemlerinde dosya yolu biçimleri
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,13 +12,13 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ecaae9e1af359ead1c15a9e431eac21e41040efe
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752301"
 ---
-# <a name="file-path-formats-on-windows-systems"></a>Windows sistemlerde dosya yolu biçimleri
+# <a name="file-path-formats-on-windows-systems"></a>Windows sistemlerinde dosya yolu biçimleri
 
 Çoğu içindeki türlerin üyelerini <xref:System.IO> ad alanı içeren bir `path` mutlak veya göreli bir yol için bir dosya sistemi kaynak belirtmenize olanak sağlar. parametre. Bu yolu geçirilerek [Windows dosya sistemi API'ları](/windows/desktop/fileio/file-systems). Bu konuda Windows sistemlerinde kullanabilirsiniz dosya yolları için biçimleri açıklanır.
 

@@ -1,5 +1,5 @@
 ---
-title: <legacyImpersonationPolicy> Öğe
+title: <legacyImpersonationPolicy> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#legacyImpersonationPolicy
@@ -11,11 +11,11 @@ ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c39ee551dde19d87a75403f3db7433d1ef829f3b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704641"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<Legacyımpersonationpolicy > öğesi
 Windows kimliği, geçerli iş parçacığı üzerindeki yürütme içeriği için akış ayarlarından bağımsız olarak zaman uyumsuz noktalar arasında geçmeyen belirtir.  

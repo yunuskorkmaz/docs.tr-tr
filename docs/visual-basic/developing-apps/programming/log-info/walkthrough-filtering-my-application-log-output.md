@@ -7,11 +7,11 @@ helpviewer_keywords:
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
 ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61712623"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>İzlenecek yol: (Visual Basic) My.Application.Log çıktısını filtreleme
 Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir `My.Application.Log` hangi bilgilerin gelen geçirilen denetlemek için nesne `Log` nesnesine dinleyicileri ve hangi bilgilerin dinleyicileri tarafından yazılır. Yapılandırma bilgileri uygulamanın yapılandırma dosyasında depolandığından uygulama oluşturduktan sonra bile günlüğe kaydetme davranışını değiştirebilirsiniz.  
@@ -77,11 +77,11 @@ Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir
   
      App.config dosyası yoksa:  
   
-    1.  Üzerinde **proje** menüsünde seçin **Yeni Öğe Ekle**.  
+    1. Üzerinde **proje** menüsünde seçin **Yeni Öğe Ekle**.  
   
-    2.  Gelen **Yeni Öğe Ekle** iletişim kutusunda **uygulama yapılandırma dosyası**.  
+    2. Gelen **Yeni Öğe Ekle** iletişim kutusunda **uygulama yapılandırma dosyası**.  
   
-    3.  **Ekle**'yi tıklatın.  
+    3. **Ekle**'yi tıklatın.  
   
 2. Bulun `<switches>` bulunduğu bölüme `<system.diagnostics>` üst düzey olan bölüm `<configuration>` bölümü.  
   
@@ -152,11 +152,11 @@ Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir
   
      App.config dosyası yoksa:  
   
-    1.  Üzerinde **proje** menüsünde seçin **Yeni Öğe Ekle**.  
+    1. Üzerinde **proje** menüsünde seçin **Yeni Öğe Ekle**.  
   
-    2.  Gelen **Yeni Öğe Ekle** iletişim kutusunda **uygulama yapılandırma dosyası**.  
+    2. Gelen **Yeni Öğe Ekle** iletişim kutusunda **uygulama yapılandırma dosyası**.  
   
-    3.  **Ekle**'yi tıklatın.  
+    3. **Ekle**'yi tıklatın.  
   
 2. App.config dosyasında sağ **Çözüm Gezgini**. Seçin **açık**.  
   

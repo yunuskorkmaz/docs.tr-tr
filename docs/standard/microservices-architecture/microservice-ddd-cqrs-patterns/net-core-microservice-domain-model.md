@@ -1,17 +1,17 @@
 ---
-title: .NET Core ile mikro hizmet etki alanı modeli uygulama
+title: .NET Core ile bir mikro hizmet etki alanı modeli uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | DDD odaklı bir etki alanı modeli uygulama ayrıntılarını alın.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
 ms.openlocfilehash: ec56a02e27f4218b3abc5839d1265815e188d2ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761006"
 ---
-# <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core ile mikro hizmet etki alanı modeli uygulama 
+# <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core ile mikro hizmet etki alanı modeli uygulama
 
 Önceki bölümde açıklanan temel tasarım ilkeleri ve etki alanı modeli tasarlamaya yönelik Desenler. .NET Core kullanarak etki alanı modeli uygulamak için kullanılabilecek yöntemler keşfedin artık (düz C\# kod) ve EF Core. Etki alanı modeliniz basitçe kodunuzu oluşan unutmayın. EF üzerinde yalnızca EF Core model gereksinimleri ancak değil gerçek bağımlılıkları olacaktır. Etki alanı modelinizdeki sabit bağımlılıkları veya EF Core veya diğer bir ORM olmamalıdır.
 
@@ -60,7 +60,7 @@ public class Order : Entity, IAggregateRoot
 
     private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
-  
+
     public Order(string userId, Address address, int cardTypeId, string cardNumber, string cardSecurityNumber,
             string cardHolderName, DateTime cardExpiration, int? buyerId = null, int? paymentMethodId = null)
     {
@@ -74,8 +74,8 @@ public class Order : Entity, IAggregateRoot
         // ...Additional code ...
     }
 
-    public void AddOrderItem(int productId, string productName, 
-                            decimal unitPrice, decimal discount, 
+    public void AddOrderItem(int productId, string productName,
+                            decimal unitPrice, decimal discount,
                             string pictureUrl, int units = 1)
     {
         //...
@@ -83,9 +83,9 @@ public class Order : Entity, IAggregateRoot
         // ...
 
         var orderItem = new OrderItem(productId, productName, unitPrice, discount, pictureUrl, units);
-        
+
         _orderItems.Add(orderItem);
-  
+
     }
     // ...
     // Additional methods with domain rules/logic related to the Order aggregate
@@ -117,7 +117,7 @@ DDD desenlerini, örneğin, aşağıdaki **gerektiğini *değil* aşağıdakiler
 OrderItem myNewOrderItem = new OrderItem(orderId, productId, productName,
     pictureUrl, unitPrice, discount, units);
 
-//... (WRONG) Accessing the OrderItems colletion directly from the application layer // or command handlers
+//... (WRONG) Accessing the OrderItems collection directly from the application layer // or command handlers
 myOrder.OrderItems.Add(myNewOrderItem);
 //...
 ```
@@ -177,6 +177,6 @@ Alanlarına sütunları eşlemek için özelliğiyle EF Core 1.1 veya daha sonra
 - **UDI Dahan. Etki alanı modellerini oluşturma tam olarak kapsüllenmiş** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
->[!div class="step-by-step"]
->[Önceki](microservice-domain-model.md)
->[İleri](seedwork-domain-model-base-classes-interfaces.md)
+> [!div class="step-by-step"]
+> [Önceki](microservice-domain-model.md)
+> [İleri](seedwork-domain-model-base-classes-interfaces.md)

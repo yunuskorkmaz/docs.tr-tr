@@ -19,20 +19,20 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: 6d9761d2e9904e865e7f6a17526327e1b04a1597
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698882"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Normal İfadelerdeki Değişim Yapıları
 <a name="top"></a> Değişim yapıları etkinleştirmek üzere bir normal ifade değiştirmek / veya veya koşullu eşleştirme. .NET üç değişim yapıları destekler:  
   
--   [İle desen eşleştirme&#124;](#Either_Or)  
+- [İle desen eşleştirme&#124;](#Either_Or)  
   
--   [Koşullu eşleşen (? () ifade) Evet&#124;yok)](#Conditional_Expr)  
+- [Koşullu eşleşen (? () ifade) Evet&#124;yok)](#Conditional_Expr)  
   
--   [Yakalanan geçerli bir gruba bağlı koşullu eşleştirme](#Conditional_Group)  
+- [Yakalanan geçerli bir gruba bağlı koşullu eşleştirme](#Conditional_Group)  
   
 <a name="Either_Or"></a>   
 ## <a name="pattern-matching-with-124"></a>İle desen eşleştirme&#124;  

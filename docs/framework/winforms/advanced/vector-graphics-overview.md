@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
 ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748453"
 ---
 # <a name="vector-graphics-overview"></a>Vektör Grafiklerine Genel Bakış
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çizgiler ve dikdörtgenler diğer şekiller üzerinde bir koordinat sistemi çizer. Koordinat sistemleri çeşitli arasından seçim yapabilirsiniz, ancak varsayılan koordinat sistemi kaynağını sağa ve aşağı işaret eden y ekseni işaret eden x ekseni ile sol üst köşedeki sahiptir. Piksel varsayılan koordinat sisteminde ölçü birimidir.  
@@ -32,19 +32,19 @@ ms.locfileid: "59087969"
   
  Zamanla, iki boyutlu bir resim oluşturmaya yönelik en yararlı olacak bazı temel yapı taşlarını kanıtlanmış. Tarafından desteklenen tüm bu yapı taşlarını, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], aşağıdaki listede verilir:  
   
--   satırları  
+- satırları  
   
--   Dikdörtgenler  
+- Dikdörtgenler  
   
--   Ellipses  
+- Ellipses  
   
--   Yay  
+- Yay  
   
--   Çokgenler  
+- Çokgenler  
   
--   Ana Eğriler  
+- Ana Eğriler  
   
--   Bezier eğrileri  
+- Bezier eğrileri  
   
 ## <a name="methods-for-drawing-with-a-graphics-object"></a>Çizim ile bir grafik nesnesinin yöntemleri  
  <xref:System.Drawing.Graphics> Sınıfını [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] önceki listede öğeleri çizmek için aşağıdaki yöntemleri sağlar: <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawRectangle%2A>, <xref:System.Drawing.Graphics.DrawEllipse%2A>, <xref:System.Drawing.Graphics.DrawPolygon%2A>, <xref:System.Drawing.Graphics.DrawArc%2A>, <xref:System.Drawing.Graphics.DrawCurve%2A> (için ana Eğriler), ve <xref:System.Drawing.Graphics.DrawBezier%2A>. Bu yöntemlerin her biri aşırı yüklendi; diğer bir deyişle, her bir yöntemin birkaç farklı parametre listelerini destekler. Örneğin, bir çeşitlemesi <xref:System.Drawing.Graphics.DrawLine%2A> yöntemi alır bir <xref:System.Drawing.Pen> nesne ve başka bir çeşitlemesi sırasında dört tamsayının <xref:System.Drawing.Graphics.DrawLine%2A> yöntemi alır bir <xref:System.Drawing.Pen> nesne ve iki <xref:System.Drawing.Point> nesneleri.  

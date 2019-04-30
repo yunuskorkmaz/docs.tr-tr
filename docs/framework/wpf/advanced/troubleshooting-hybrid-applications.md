@@ -10,11 +10,11 @@ helpviewer_keywords:
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
 ms.openlocfilehash: 707e77ac69878c1c7fb8e975c1f90ad657228d1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696436"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Karma Uygulama Sorunlarını Giderme
 <a name="introduction"></a> Bu konuda kullanan karma uygulamalar yazma olduğunda oluşabilecek bazı yaygın sorunlar listelenmiştir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] teknolojileri.  

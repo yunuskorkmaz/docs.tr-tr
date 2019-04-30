@@ -18,11 +18,11 @@ helpviewer_keywords:
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
 ms.openlocfilehash: 699737ffbe0b136af8862931fadacec26772b928
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757007"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic'de Değişken Bildirimi
 Adı ve Özellikler belirtmek için bir değişken bildirir. Değişkenler için bildirimi deyim [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md). Konumuna ve içeriği değişkenin özelliklerini belirler.  
@@ -42,15 +42,15 @@ Adı ve Özellikler belirtmek için bir değişken bildirir. Değişkenler için
 ## <a name="declaring-data-type"></a>Verisi türünü bildirme  
  [Olarak](../../../../visual-basic/language-reference/statements/as-clause.md) yan tümcesi bildirim deyiminde veri türü veya nesne türü bildirme değişkenin tanımlamanıza izin verir. Bir değişken için aşağıdaki türlerinden herhangi birini belirtebilirsiniz:  
   
--   Basit bir veri türü, gibi `Boolean`, `Long`, veya `Decimal`  
+- Basit bir veri türü, gibi `Boolean`, `Long`, veya `Decimal`  
   
--   Bir dizi ya da yapı gibi bir bileşik veri türü  
+- Bir dizi ya da yapı gibi bir bileşik veri türü  
   
--   Bir nesne türü veya uygulamanızdaki veya başka bir uygulamada tanımlanmış sınıf  
+- Bir nesne türü veya uygulamanızdaki veya başka bir uygulamada tanımlanmış sınıf  
   
--   A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] gibi sınıf <xref:System.Windows.Forms.Label> veya <xref:System.Windows.Forms.TextBox>  
+- A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] gibi sınıf <xref:System.Windows.Forms.Label> veya <xref:System.Windows.Forms.TextBox>  
   
--   Bir arabirim türü, gibi <xref:System.IComparable> veya <xref:System.IDisposable>  
+- Bir arabirim türü, gibi <xref:System.IComparable> veya <xref:System.IDisposable>  
   
  Veri türü yinelemek zorunda kalmadan birkaç bir ifade değişkenleri bildirebilirsiniz. Değişkenleri aşağıdaki deyimlerinde `i`, `j`, ve `k` türü olarak bildirilmiş `Integer`, `l` ve `m` olarak `Long`, ve `x` ve `y` olarak`Single`:  
   

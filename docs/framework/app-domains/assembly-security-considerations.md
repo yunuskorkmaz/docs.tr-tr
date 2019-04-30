@@ -18,26 +18,26 @@ ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e74d7a4a72b9595d6a280a16ad9bbc4118648404
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705707"
 ---
 # <a name="assembly-security-considerations"></a>Derleme Güvenliği Konuları
 <a name="top"></a> Bir derleme oluşturduğunuzda, derlemenin çalışması için gerekli izinler kümesi belirtebilirsiniz. Bir derlemeye belirli izinlerin verilip verilmediği kanıta göre belirlenir.  
   
  Kanıtın kullanıldığı iki farklı yol vardır:  
   
--   Giriş kanıtı yükleyici tarafından toplanan kanıtla birleştirilerek ilke çözümlemesi için kullanılacak olan son kanıt kümesini oluşturur. Bu semantiği kullanan yöntemlerden **Assembly.Load**, **Assembly.LoadFrom**, ve **Activator.CreateInstance**.  
+- Giriş kanıtı yükleyici tarafından toplanan kanıtla birleştirilerek ilke çözümlemesi için kullanılacak olan son kanıt kümesini oluşturur. Bu semantiği kullanan yöntemlerden **Assembly.Load**, **Assembly.LoadFrom**, ve **Activator.CreateInstance**.  
   
--   Giriş kanıtı, ilke çözümlemesi için kullanılan son kanıt kümesi olarak değiştirilmeden kullanılır. Bu semantiği kullanan yöntemlerden **Assembly.Load(byte[])** ve **AppDomain.DefineDynamicAssembly()**.  
+- Giriş kanıtı, ilke çözümlemesi için kullanılan son kanıt kümesi olarak değiştirilmeden kullanılır. Bu semantiği kullanan yöntemlerden **Assembly.Load(byte[])** ve **AppDomain.DefineDynamicAssembly()**.  
   
  Tarafından isteğe bağlı izinler verilebilir [Güvenlik İlkesi](../../../docs/framework/misc/code-access-security-basics.md) derlemenin çalışacağı bilgisayarda ayarlayın. Kodunuzun tüm olası güvenlik özel durumlarını işlemesini istiyorsanız, aşağıdakilerden birini yapabilirsiniz:  
   
--   Kodunuzun sahip olması gereken tüm izinler için bir izin isteği ekleyin ve izinler verilmezse gerçekleşecek yükleme zamanı hatasını önden işleyin.  
+- Kodunuzun sahip olması gereken tüm izinler için bir izin isteği ekleyin ve izinler verilmezse gerçekleşecek yükleme zamanı hatasını önden işleyin.  
   
--   Kodunuzun ihtiyacı olabilecek izinleri almak için bir izin isteği kullanmayın, ancak izinler verilmezse oluşacak güvenlik özel durumlarını işlemeye hazır olun.  
+- Kodunuzun ihtiyacı olabilecek izinleri almak için bir izin isteği kullanmayın, ancak izinler verilmezse oluşacak güvenlik özel durumlarını işlemeye hazır olun.  
   
     > [!NOTE]
     >  Güvenlik karmaşık bir alandır ve pek çok seçeneğiniz vardır. Daha fazla bilgi için [temel güvenlik kavramları](../../../docs/standard/security/key-security-concepts.md).  

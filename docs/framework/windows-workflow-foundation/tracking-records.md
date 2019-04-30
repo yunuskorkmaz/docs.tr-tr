@@ -3,11 +3,11 @@ title: İzleme Kayıtları
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
 ms.openlocfilehash: 46b52f6b774d1d692c0e7dec400d369428a9607e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699857"
 ---
 # <a name="tracking-records"></a>İzleme Kayıtları
 İş akışı çalışma zamanı, bir iş akışı örneği yürütülmesini izlemek için izleme kayıtları yaymak üzere işaretlendi.  
@@ -26,27 +26,27 @@ ms.locfileid: "59298363"
   
  Aşağıdaki türde <xref:System.Activities.Tracking.TrackingRecord> nesneleri iş akışı çalışma zamanı tarafından yayılan:  
   
--   **WorkflowInstanceRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> iş akışı örneği yaşam döngüsünü açıklar. Örneğin, iş akışı başlatır veya tamamlandığında ve iş akışı örneğinin durumunu içeren bir kayıt yayınlanır. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.WorkflowInstanceRecord>.  
+- **WorkflowInstanceRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> iş akışı örneği yaşam döngüsünü açıklar. Örneğin, iş akışı başlatır veya tamamlandığında ve iş akışı örneğinin durumunu içeren bir kayıt yayınlanır. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.WorkflowInstanceRecord>.  
   
--   **WorkflowInstanceAbortedRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> bir iş akışı örneği iptal ettiğinde yayılır. Kayıt iş akışı örneği durdurma nedeni içerir. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>.  
+- **WorkflowInstanceAbortedRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> bir iş akışı örneği iptal ettiğinde yayılır. Kayıt iş akışı örneği durdurma nedeni içerir. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>.  
   
--   **WorkflowInstanceUnhandledExceptionRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> bir özel durum iş akışı örneği içinde oluşur ve herhangi bir etkinliği tarafından işlenmiyor yayılır. Kayıt, özel durum ayrıntıları içerir. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>.  
+- **WorkflowInstanceUnhandledExceptionRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> bir özel durum iş akışı örneği içinde oluşur ve herhangi bir etkinliği tarafından işlenmiyor yayılır. Kayıt, özel durum ayrıntıları içerir. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>.  
   
--   **WorkflowInstanceSuspendedRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> her bir iş akışı örneği askıya alındığında yayılır. Kayıt iş akışı örneği askıya alınmasını nedeni içerir. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>.  
+- **WorkflowInstanceSuspendedRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> her bir iş akışı örneği askıya alındığında yayılır. Kayıt iş akışı örneği askıya alınmasını nedeni içerir. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>.  
   
--   **WorkflowInstanceTerminatedRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> her bir iş akışı örneği sonlandırıldı yayılır. Kayıt iş akışı örneği sonlandırılıyor nedeni içerir. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>.  
+- **WorkflowInstanceTerminatedRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> her bir iş akışı örneği sonlandırıldı yayılır. Kayıt iş akışı örneği sonlandırılıyor nedeni içerir. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>.  
   
--   **ActivityStateRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> bir iş akışı içinde bir etkinlik yürütüldüğünde yayılır. Bu kayıtlar, iş akışı örneği içinde etkinlik durumunu gösterir. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.ActivityStateRecord>.  
+- **ActivityStateRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> bir iş akışı içinde bir etkinlik yürütüldüğünde yayılır. Bu kayıtlar, iş akışı örneği içinde etkinlik durumunu gösterir. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.ActivityStateRecord>.  
   
--   **ActivityScheduledRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> bir etkinlik bir alt etkinlik zamanlarken yayılır. Bu kayıt (etkinlik zamanlama) üst etkinliği hem zamanlanmış bir alt etkinlik ayrıntılarını içerir. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.ActivityScheduledRecord>.  
+- **ActivityScheduledRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> bir etkinlik bir alt etkinlik zamanlarken yayılır. Bu kayıt (etkinlik zamanlama) üst etkinliği hem zamanlanmış bir alt etkinlik ayrıntılarını içerir. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.ActivityScheduledRecord>.  
   
--   **FaultPropagationRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> kaydında ele alınır kadar görünen her işleyici yayılır. İş akışı örneği içinde bir hata aldı yolunu belirtmek için kullanılır. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.FaultPropagationRecord>.  
+- **FaultPropagationRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> kaydında ele alınır kadar görünen her işleyici yayılır. İş akışı örneği içinde bir hata aldı yolunu belirtmek için kullanılır. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.FaultPropagationRecord>.  
   
--   **CancelRequestedRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> bir alt etkinlik iptal etmek bir etkinlik çalıştığında yayılır. Bu kayıt, üst etkinliği hem iptal ediliyor alt etkinlik ayrıntılarını içerir. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.CancelRequestedRecord>.  
+- **CancelRequestedRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> bir alt etkinlik iptal etmek bir etkinlik çalıştığında yayılır. Bu kayıt, üst etkinliği hem iptal ediliyor alt etkinlik ayrıntılarını içerir. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.CancelRequestedRecord>.  
   
--   **BookmarkResumptionRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> başarıyla sürdürüldü herhangi bir yer işareti izler. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.BookmarkResumptionRecord>.  
+- **BookmarkResumptionRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> başarıyla sürdürüldü herhangi bir yer işareti izler. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.BookmarkResumptionRecord>.  
   
--   **CustomTrackingRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> oluşturulur ve bir özel iş akışı etkinlikleri içinden bir iş akışı yazar tarafından yayılan. Özel kayıtları izleme kayıtları ile birlikte yayılan verilerle doldurulabilir. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.CustomTrackingRecord>.  
+- **CustomTrackingRecord** - bu <xref:System.Activities.Tracking.TrackingRecord> oluşturulur ve bir özel iş akışı etkinlikleri içinden bir iş akışı yazar tarafından yayılan. Özel kayıtları izleme kayıtları ile birlikte yayılan verilerle doldurulabilir. Bu kaydın ayrıntılarını şu yolda bulunabilir: <xref:System.Activities.Tracking.CustomTrackingRecord>.  
   
  Örneğin, olabilir basit <xref:System.Activities.Statements.Sequence> içeren etkinlik bir <xref:System.Activities.Statements.WriteLine> kayıtları aşağıdaki sırayla yayılan izleme işlemi:  
   

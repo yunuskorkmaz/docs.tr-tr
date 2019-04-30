@@ -11,11 +11,11 @@ ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752977"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Nasıl yapılır: Korumalı alanda kısmen güvenilen kodu çalıştırma
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -92,15 +92,15 @@ AppDomain.CreateDomain( string friendlyName,
   
      Ek bilgiler:  
   
-    -   Bu, yalnızca aşırı yüklemesini <xref:System.AppDomain.CreateDomain%2A> gereken yöntemini bir <xref:System.Security.PermissionSet> bir parametre ve bu nedenle sağlayan tek bir aşırı yükleme bir kısmi güven ortamında bir uygulama yüklemek gibi.  
+    - Bu, yalnızca aşırı yüklemesini <xref:System.AppDomain.CreateDomain%2A> gereken yöntemini bir <xref:System.Security.PermissionSet> bir parametre ve bu nedenle sağlayan tek bir aşırı yükleme bir kısmi güven ortamında bir uygulama yüklemek gibi.  
   
-    -   `evidence` Parametresi bir izin kümesi hesaplamak için kullanılan değil; kimlik doğrulaması için .NET Framework'ün diğer özellikler tarafından kullanılır.  
+    - `evidence` Parametresi bir izin kümesi hesaplamak için kullanılan değil; kimlik doğrulaması için .NET Framework'ün diğer özellikler tarafından kullanılır.  
   
-    -   Ayarı <xref:System.AppDomainSetup.ApplicationBase%2A> özelliği `info` için bu aşırı yükleme parametresi zorunludur.  
+    - Ayarı <xref:System.AppDomainSetup.ApplicationBase%2A> özelliği `info` için bu aşırı yükleme parametresi zorunludur.  
   
-    -   `fullTrustAssemblies` Parametresinin `params` oluşturmak gerekli değildir, yani anahtar sözcüğü bir <xref:System.Security.Policy.StrongName> dizi. 0, 1 veya daha fazla tanımlayıcı adlar parametre olarak geçirmeyi izin verilir.  
+    - `fullTrustAssemblies` Parametresinin `params` oluşturmak gerekli değildir, yani anahtar sözcüğü bir <xref:System.Security.Policy.StrongName> dizi. 0, 1 veya daha fazla tanımlayıcı adlar parametre olarak geçirmeyi izin verilir.  
   
-    -   Uygulama etki alanı oluşturmak için kod yer almaktadır:  
+    - Uygulama etki alanı oluşturmak için kod yer almaktadır:  
   
     ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
@@ -108,15 +108,15 @@ AppDomain.CreateDomain( string friendlyName,
   
 5. Kod içinde korumalı alana alma yüklemeye <xref:System.AppDomain> oluşturduğunuz. Bu iki şekilde gerçekleştirilebilir:  
   
-    -   Çağrı <xref:System.AppDomain.ExecuteAssembly%2A> derleme için yöntemi.  
+    - Çağrı <xref:System.AppDomain.ExecuteAssembly%2A> derleme için yöntemi.  
   
-    -   Kullanım <xref:System.Activator.CreateInstanceFrom%2A> sınıfından türetilen bir sınıfın bir örneğini oluşturmak için gereken yöntemini <xref:System.MarshalByRefObject> yeni <xref:System.AppDomain>.  
+    - Kullanım <xref:System.Activator.CreateInstanceFrom%2A> sınıfından türetilen bir sınıfın bir örneğini oluşturmak için gereken yöntemini <xref:System.MarshalByRefObject> yeni <xref:System.AppDomain>.  
   
      Yeni parametreleri geçirmek kolaylaştırır ikinci yöntem tercih, çünkü <xref:System.AppDomain> örneği. <xref:System.Activator.CreateInstanceFrom%2A> Yöntemi iki önemli özellikleri sağlar:  
   
-    -   Derlemenizi içermeyen bir konumu gösteren bir kod tabanına kullanabilirsiniz.  
+    - Derlemenizi içermeyen bir konumu gösteren bir kod tabanına kullanabilirsiniz.  
   
-    -   Oluşturma aşamasında yapabileceğiniz bir <xref:System.Security.CodeAccessPermission.Assert%2A> tam güven için (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), kritik bir sınıf örneği oluşturmanızı sağlar. (Derlemenizi hiçbir saydamlık işaretler sahip ve tamamen güvenilir olarak yüklenen her meydana gelir.) Bu nedenle, bu işlevle yalnızca güvendiğiniz kod oluşturmak dikkatli olmak zorunda ve yeni uygulama etki alanında yalnızca tam olarak güvenilen sınıfların örneklerini oluşturmanızı öneririz.  
+    - Oluşturma aşamasında yapabileceğiniz bir <xref:System.Security.CodeAccessPermission.Assert%2A> tam güven için (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), kritik bir sınıf örneği oluşturmanızı sağlar. (Derlemenizi hiçbir saydamlık işaretler sahip ve tamamen güvenilir olarak yüklenen her meydana gelir.) Bu nedenle, bu işlevle yalnızca güvendiğiniz kod oluşturmak dikkatli olmak zorunda ve yeni uygulama etki alanında yalnızca tam olarak güvenilen sınıfların örneklerini oluşturmanızı öneririz.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  

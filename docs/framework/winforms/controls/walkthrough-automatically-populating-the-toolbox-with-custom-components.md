@@ -7,33 +7,33 @@ helpviewer_keywords:
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
 ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759914"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma
 Bileşenlerinizi açık çözümde bir proje tarafından tanımlanan, bunlar otomatik olarak görünür **araç kutusu**, sizin tarafınızdan gerekli herhangi bir işlem ile. El ile de doldurabilirsiniz **araç kutusu** kullanarak kendi özel bileşenlerle [seçin araç kutusu öğeleri iletişim kutusu (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), ancak **araç kutusu** alır çözümünüzün içindeki öğelerin aşağıdaki özelliklere sahip çıkışları derleme:  
   
--   Implements <xref:System.ComponentModel.IComponent>;  
+- Implements <xref:System.ComponentModel.IComponent>;  
   
--   Olmayan <xref:System.ComponentModel.ToolboxItemAttribute> kümesine `false`;  
+- Olmayan <xref:System.ComponentModel.ToolboxItemAttribute> kümesine `false`;  
   
--   Olmayan <xref:System.ComponentModel.DesignTimeVisibleAttribute> kümesine `false`.  
+- Olmayan <xref:System.ComponentModel.DesignTimeVisibleAttribute> kümesine `false`.  
   
 > [!NOTE]
 >  **Araç kutusu** , çözümde bir proje tarafından oluşturulmamış öğeleri görüntülenmez için başvuru zincirleri izlemez.  
   
  Bu izlenecek yol, nasıl özel bir bileşeni otomatik olarak görünür gösterir **araç kutusu** bileşeni derlendikten sonra. Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
   
--   Bir Windows Forms projesi oluşturma.  
+- Bir Windows Forms projesi oluşturma.  
   
--   Bir özel bileşene oluşturuluyor.  
+- Bir özel bileşene oluşturuluyor.  
   
--   Özel bir bileşeninin örneği oluşturuluyor.  
+- Özel bir bileşeninin örneği oluşturuluyor.  
   
--   Kaldırma ve bir özel bileşene yeniden yükleniyor.  
+- Kaldırma ve bir özel bileşene yeniden yükleniyor.  
   
  İşlemi tamamladığınızda, göreceksiniz **araç kutusu** oluşturmuş olduğunuz bir bileşeni ile doldurulur.  
   

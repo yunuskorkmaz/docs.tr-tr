@@ -3,22 +3,22 @@ title: Veri türlerini dönüştürme (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
 ms.openlocfilehash: ea1f204ab59ecdd3e3e7e65d12c1be37e9b09f01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702392"
 ---
 # <a name="converting-data-types-c"></a>Veri türlerini dönüştürme (C#)
 Dönüştürme yöntemleri giriş nesnelerin türünü değiştirin.  
   
  LINQ sorguları dönüştürme işlemlerinde, çeşitli uygulamalar kullanışlıdır. Bazı örnekler aşağıda verilmiştir:  
   
--   <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> Yöntemi, standart sorgu işleci bir türün özel uygulanışı gizlemek için kullanılabilir.  
+- <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> Yöntemi, standart sorgu işleci bir türün özel uygulanışı gizlemek için kullanılabilir.  
   
--   <xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType> Yöntemi, LINQ sorgusu için koleksiyonları forceseek etkinleştirmek için kullanılabilir.  
+- <xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType> Yöntemi, LINQ sorgusu için koleksiyonları forceseek etkinleştirmek için kullanılabilir.  
   
--   <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>, Ve <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> yöntemleri ve sorgu numaralandırılana kadar bu erteleniyor yerine anlık sorgu yürütme zorlamak için kullanılabilir.  
+- <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>, Ve <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> yöntemleri ve sorgu numaralandırılana kadar bu erteleniyor yerine anlık sorgu yürütme zorlamak için kullanılabilir.  
   
 ## <a name="methods"></a>Yöntemler  
  Aşağıdaki tabloda veri türü dönüşümleri gerçekleştirmek standart sorgu işleci yöntemleri listeler.  
@@ -27,14 +27,14 @@ Dönüştürme yöntemleri giriş nesnelerin türünü değiştirin.
   
 |Yöntem adı|Açıklama|C# sorgu ifade sözdizimi|Daha fazla bilgi|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|AsEnumerable|Giriş olarak yazılan döndürür <xref:System.Collections.Generic.IEnumerable%601>.|Uygulanamaz.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|  
-|AsQueryable|(Genel) dönüştürür <xref:System.Collections.IEnumerable> (Genel) <xref:System.Linq.IQueryable>.|Uygulanamaz.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|  
+|AsEnumerable|Giriş olarak yazılan döndürür <xref:System.Collections.Generic.IEnumerable%601>.|Geçerli değildir.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|  
+|AsQueryable|(Genel) dönüştürür <xref:System.Collections.IEnumerable> (Genel) <xref:System.Linq.IQueryable>.|Geçerli değildir.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|  
 |Cast|Belirli bir koleksiyonun öğeleri çevirir.|Açıkça yazılmış bir aralık değişkeni kullanın. Örneğin:<br /><br /> `from string str in words`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=nameWithType>|  
-|OfType|Değerleri belirtilen bir türe yayınlanması için kendi yeteneği bağlı olarak filtreler.|Uygulanamaz.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
-|ToArray|Bir koleksiyonu bir diziye dönüştürür. Bu yöntem, sorgu yürütme zorlar.|Uygulanamaz.|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>|  
-|ToDictionary|Bu öğeleri eklemek koyar bir <xref:System.Collections.Generic.Dictionary%602> anahtar Seçici işleve göre. Bu yöntem, sorgu yürütme zorlar.|Uygulanamaz.|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>|  
-|ToList|Bir koleksiyona dönüştürür bir <xref:System.Collections.Generic.List%601>. Bu yöntem, sorgu yürütme zorlar.|Uygulanamaz.|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>|  
-|ToLookup|Bu öğeleri eklemek koyar bir <xref:System.Linq.Lookup%602> (bire çok bir sözlük) tabanlı bir anahtar Seçici işlevdir. Bu yöntem, sorgu yürütme zorlar.|Uygulanamaz.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
+|OfType|Değerleri belirtilen bir türe yayınlanması için kendi yeteneği bağlı olarak filtreler.|Geçerli değildir.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
+|ToArray|Bir koleksiyonu bir diziye dönüştürür. Bu yöntem, sorgu yürütme zorlar.|Geçerli değildir.|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>|  
+|ToDictionary|Bu öğeleri eklemek koyar bir <xref:System.Collections.Generic.Dictionary%602> anahtar Seçici işleve göre. Bu yöntem, sorgu yürütme zorlar.|Geçerli değildir.|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>|  
+|ToList|Bir koleksiyona dönüştürür bir <xref:System.Collections.Generic.List%601>. Bu yöntem, sorgu yürütme zorlar.|Geçerli değildir.|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>|  
+|ToLookup|Bu öğeleri eklemek koyar bir <xref:System.Linq.Lookup%602> (bire çok bir sözlük) tabanlı bir anahtar Seçici işlevdir. Bu yöntem, sorgu yürütme zorlar.|Geçerli değildir.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Sorgu ifade sözdizimi örneği  
  Aşağıdaki kod örneği bir açıkça yazılmış bir aralık değişkeni bir alt yalnızca alt türü üzerinde kullanılabilir olan bir üye erişmeden önce türüne için kullanır.  

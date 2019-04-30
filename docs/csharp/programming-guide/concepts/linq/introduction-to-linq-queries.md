@@ -8,11 +8,11 @@ helpviewer_keywords:
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
 ms.openlocfilehash: 4432270c8a1a9ad499f833bf8201ed3155bd7ce2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701765"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ Sorgularına Giriş (C#)
 A *sorgu* , verileri bir veri kaynağından alır bir ifadedir. Sorgular genellikle bir özel sorgu dilinde ifade edilir. Farklı diller zamanla çeşitli veri kaynakları, örneğin ilişkisel veritabanları için SQL ve XML için XQuery geliştirilmiştir. Bu nedenle, geliştiriciler, her veri kaynağı veya desteklemeleri gereken veri biçimi türü için yeni bir sorgu dili öğrenmek zorunda kalmışlardır. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Bu durum, çeşitli veri kaynakları ve biçimler arasında veri ile çalışma için tutarlı bir model sunarak basitleştirir. İçinde bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu, her zaman nesnelerle. XML belgelerinde, SQL veritabanları, veri sorgulamak ve dönüştürmek için aynı temel kodlama desenlerini kullanırsınız [!INCLUDE[vstecado](~/includes/vstecado-md.md)] veri kümeleri, .NET koleksiyonlarında ve başka bir biçimi olan bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcısı kullanılabilir.  
@@ -90,8 +90,8 @@ IQueryable<Customer> custQuery =
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#'de LINQ'e Başlarken](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [İzlenecek yol: Sorguları yazmaC#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
-- [LINQ Sorgu İfadeleri](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [LINQ Sorgu ifadeleri](../../../../csharp/programming-guide/linq-query-expressions/index.md)
 - [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)
-- [Sorgu Anahtar Sözcükleri (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
+- [Query Keywords (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)

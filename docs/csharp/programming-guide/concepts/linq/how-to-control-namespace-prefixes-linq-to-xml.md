@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Namespace ön eklerini denetleme (C#) (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
 ms.openlocfilehash: 4664be2661e54782598345886029835108934955
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702197"
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Nasıl yapılır: Namespace ön eklerini denetleme (C#) (LINQ to XML)
 Bu konuda bir XML ağacı serileştirilirken ad alanı öneklerini nasıl denetleyebileceğinizi açıklar.  

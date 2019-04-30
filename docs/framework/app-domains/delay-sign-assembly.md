@@ -15,11 +15,11 @@ ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fc955ca892a8a0e5d15710b76a6a1c798ad4ecf5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705733"
 ---
 # <a name="delay-signing-an-assembly"></a>Derleme İmzalamayı Geciktirme
 Bir kuruluş geliştiricileri her gün için erişimi yoktur yakından korumalı bir anahtar çifti olabilir. Genellikle ortak anahtarı mevcut ancak özel anahtarına erişime yalnızca birkaç kişilerle sınırlıdır. Derlemeleri tanımlayıcı adlarla geliştirirken, her derleme başvuruları tanımlayıcı adlı hedef derlemeye hedef derleme tanımlayıcı bir ad vermek için kullanılan ortak anahtar belirtecini içerir. Bu ortak anahtarı geliştirme sürecinde kullanılabilir olmasını gerektirir.  
@@ -32,9 +32,9 @@ Bir kuruluş geliştiricileri her gün için erişimi yoktur yakından korumalı
   
 2. Kaynak kodu derlemeyi iki özel öznitelikleri ile için ek açıklama <xref:System.Reflection>:  
   
-    -   <xref:System.Reflection.AssemblyKeyFileAttribute>, oluşturucusuna bir parametre olarak ortak anahtarı içeren dosyanın adını geçirir.  
+    - <xref:System.Reflection.AssemblyKeyFileAttribute>, oluşturucusuna bir parametre olarak ortak anahtarı içeren dosyanın adını geçirir.  
   
-    -   <xref:System.Reflection.AssemblyDelaySignAttribute>, söz konusu Gecikmeli imzalama gösteren geçirerek kullanılıyor **true** oluşturucusuna bir parametre olarak. Örneğin:  
+    - <xref:System.Reflection.AssemblyDelaySignAttribute>, söz konusu Gecikmeli imzalama gösteren geçirerek kullanılıyor **true** oluşturucusuna bir parametre olarak. Örneğin:  
   
          [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]
          [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]

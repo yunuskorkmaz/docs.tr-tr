@@ -8,11 +8,11 @@ ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 72e9e698e510153073515aa891f1ed3b4d7b9886
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705525"
 ---
 # <a name="strong-named-assemblies"></a>Tanımlayıcı Adlı Derlemeler
 Tanımlayıcı adlandırma bir derleme, derleme için benzersiz kimlik oluşturur ve birleştirme çakışmalarını engelleyebilir.  
@@ -32,13 +32,13 @@ Tanımlayıcı adlandırma bir derleme, derleme için benzersiz kimlik oluşturu
   
  Tanımlayıcı adlandırılmış derlemeler, aşağıdaki senaryolarda kullanışlıdır:  
   
--   Tanımlayıcı adlı derlemeler tarafından başvurulabilmesi bütünleştirilmiş kodlarınızı etkinleştirmek istediğiniz veya vermek istediğiniz `friend` diğer tanımlayıcı adlı derlemeler bütünleştirilmiş kodlarınızı erişim.  
+- Tanımlayıcı adlı derlemeler tarafından başvurulabilmesi bütünleştirilmiş kodlarınızı etkinleştirmek istediğiniz veya vermek istediğiniz `friend` diğer tanımlayıcı adlı derlemeler bütünleştirilmiş kodlarınızı erişim.  
   
--   Bir uygulamanın, aynı derlemenin farklı sürümlerine erişim gerekir. Bu, farklı sürümlerini yan yana çakışma olmadan aynı uygulama etki alanında yüklemek için bir derleme ihtiyacınız olduğu anlamına gelir. Farklı bir API Uzantıları basit aynı ada sahip derlemelerde varsa, örneğin, güçlü adlandırma benzersiz bir kimliğe her derlemenin sürüm için sağlar.  
+- Bir uygulamanın, aynı derlemenin farklı sürümlerine erişim gerekir. Bu, farklı sürümlerini yan yana çakışma olmadan aynı uygulama etki alanında yüklemek için bir derleme ihtiyacınız olduğu anlamına gelir. Farklı bir API Uzantıları basit aynı ada sahip derlemelerde varsa, örneğin, güçlü adlandırma benzersiz bir kimliğe her derlemenin sürüm için sağlar.  
   
--   Derleme etki alanı nötr olarak istediğiniz şekilde derlemenizi kullanarak uygulama performansını olumsuz istemezsiniz. Bir etki alanından bağımsız derleme genel derleme önbelleğine yüklenmelidir çünkü bu güçlü adlandırma gerektirir.  
+- Derleme etki alanı nötr olarak istediğiniz şekilde derlemenizi kullanarak uygulama performansını olumsuz istemezsiniz. Bir etki alanından bağımsız derleme genel derleme önbelleğine yüklenmelidir çünkü bu güçlü adlandırma gerektirir.  
   
--   Uygulamanız için yayımcı ilkesi uygulayarak bakım merkezileştirmek istiyorsanız, derleme başka bir deyişle, genel derleme önbelleğinde yüklü olmalıdır.  
+- Uygulamanız için yayımcı ilkesi uygulayarak bakım merkezileştirmek istiyorsanız, derleme başka bir deyişle, genel derleme önbelleğinde yüklü olmalıdır.  
   
  Bir açık kaynak geliştiricisi olan ve bir tanımlayıcı adlı bütünleştirilmiş kod kimliği avantajlarını istiyorsanız bir derlemeye kaynak denetim sisteminiz ile ilişkili özel anahtarı denetlemeyi düşünün.  
   

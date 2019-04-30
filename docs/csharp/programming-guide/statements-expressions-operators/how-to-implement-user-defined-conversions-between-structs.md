@@ -6,11 +6,11 @@ helpviewer_keywords:
 - user-defined conversions [C#]
 ms.assetid: 97839aef-8fbc-40d5-9769-6b569bc2710b
 ms.openlocfilehash: bc792562b4849d402e03328e50dedac030520011
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61710049"
 ---
 # <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a>Nasıl yapılır: Yapılar arasında kullanıcı tanımlı Dönüşümler Uygulama (C# Programlama Kılavuzu)
 Bu örnek iki yapıları tanımlar `RomanNumeral` ve `BinaryNumeral`ve bunlar arasında dönüştürmeler gösterir.  
@@ -20,13 +20,13 @@ Bu örnek iki yapıları tanımlar `RomanNumeral` ve `BinaryNumeral`ve bunlar ar
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
   
--   Önceki örnekte, deyim:  
+- Önceki örnekte, deyim:  
   
      [!code-csharp[csProgGuideStatements#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#14)]  
   
      bir dönüştürme gerçekleştiren bir `RomanNumeral` için bir `BinaryNumeral`. Doğrudan dönüşüm yok olduğundan `RomanNumeral` için `BinaryNumeral`, bir yayın dönüştürmek için kullanılan bir `RomanNumeral` için bir `int`ve dönüştürmek için başka bir tür dönüştürme bir `int` için bir `BinaryNumeral`.  
   
--   Ayrıca deyimi  
+- Ayrıca deyimi  
   
      [!code-csharp[csProgGuideStatements#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#15)]  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
 ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696369"
 ---
 # <a name="controls"></a>Denetimler
 <a name="introduction"></a>
@@ -33,11 +33,11 @@ ms.locfileid: "59154420"
 ## <a name="changing-the-appearance-of-a-control"></a>Denetiminin görünümünü değiştirme  
  Uygulamanızın Görünüm ve yapısını uyacak şekilde bir denetimin görünümünü değiştirmek için yaygındır. Bir denetimin görünümünü gerçekleştirmek istediğinize bağlı olarak aşağıdakilerden birini yaparak değiştirebilirsiniz:  
   
--   Denetimin bir özelliğine değiştirin.  
+- Denetimin bir özelliğine değiştirin.  
   
--   Oluşturma bir <xref:System.Windows.Style> denetimi.  
+- Oluşturma bir <xref:System.Windows.Style> denetimi.  
   
--   Yeni bir <xref:System.Windows.Controls.ControlTemplate> denetimi.  
+- Yeni bir <xref:System.Windows.Controls.ControlTemplate> denetimi.  
   
 ### <a name="changing-a-controls-property-value"></a>Bir denetimin özellik değerini değiştirme  
  Denetim, gibi görüntülenme şeklini değiştirmenize olanak tanıyan özellikler pek çok denetimi olan <xref:System.Windows.Controls.Control.Background%2A> , bir <xref:System.Windows.Controls.Button>. Hem değer özellikleri ayarlayabilirsiniz [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve kod. Aşağıdaki örnek kümeleri <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, ve <xref:System.Windows.Controls.Control.FontWeight%2A> özellikleri bir <xref:System.Windows.Controls.Button> içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -87,13 +87,13 @@ ms.locfileid: "59154420"
 ## <a name="rich-content-in-controls"></a>Zengin içerik denetimlerinde  
  Devralınan çoğu sınıf <xref:System.Windows.Controls.Control> sınıfı zengin içerik içerecek kapasiteye sahip. Örneğin, bir <xref:System.Windows.Controls.Label> bir dize gibi herhangi bir nesne içerebilir bir <xref:System.Windows.Controls.Image>, veya bir <xref:System.Windows.Controls.Panel>.  Aşağıdaki sınıflar çoğu denetimleri için temel sınıflar görür ve destek sağlamak için zengin içerik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
--   <xref:System.Windows.Controls.ContentControl>--Bu sınıftan devralınan sınıflar bazı örnekleri şunlardır <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, ve <xref:System.Windows.Controls.ToolTip>.  
+- <xref:System.Windows.Controls.ContentControl>--Bu sınıftan devralınan sınıflar bazı örnekleri şunlardır <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, ve <xref:System.Windows.Controls.ToolTip>.  
   
--   <xref:System.Windows.Controls.ItemsControl>--Bu sınıftan devralınan sınıflar bazı örnekleri şunlardır <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, ve <xref:System.Windows.Controls.Primitives.StatusBar>.  
+- <xref:System.Windows.Controls.ItemsControl>--Bu sınıftan devralınan sınıflar bazı örnekleri şunlardır <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, ve <xref:System.Windows.Controls.Primitives.StatusBar>.  
   
--   <xref:System.Windows.Controls.HeaderedContentControl>--Bu sınıftan devralınan sınıflar bazı örnekleri şunlardır <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.GroupBox>, ve <xref:System.Windows.Controls.Expander>.  
+- <xref:System.Windows.Controls.HeaderedContentControl>--Bu sınıftan devralınan sınıflar bazı örnekleri şunlardır <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.GroupBox>, ve <xref:System.Windows.Controls.Expander>.  
   
--   <xref:System.Windows.Controls.HeaderedItemsControl>--Bu sınıftan devralınan sınıflar bazı örnekleri şunlardır <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>, ve <xref:System.Windows.Controls.ToolBar>.  
+- <xref:System.Windows.Controls.HeaderedItemsControl>--Bu sınıftan devralınan sınıflar bazı örnekleri şunlardır <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>, ve <xref:System.Windows.Controls.ToolBar>.  
 
  Temel sınıflar hakkında daha fazla bilgi için bkz: [WPF içerik modeli](wpf-content-model.md).  
   

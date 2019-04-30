@@ -4,13 +4,13 @@ description: C# içinde LINQ kullanarak gruplandırılmış birleştirmeler ger�
 ms.date: 12/01/2016
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
 ms.openlocfilehash: dfb75b55336d8ca486d5f10b187e955d20cd06fd
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689144"
 ---
-# <a name="perform-grouped-joins"></a>Gruplandırılmış birleştirmeler gerçekleştirme
+# <a name="perform-grouped-joins"></a>Gruplanmış birleşimler gerçekleştirme
 
 Grup birleştirme hiyerarşik veri yapıları üretmek için kullanışlıdır. Bu, her öğeden ilk koleksiyonun ikinci koleksiyondan ilişkili öğeleri kümesi ile eşleşmesini.
 

@@ -3,11 +3,11 @@ title: (C#) XML işlevsel dönüşümü
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
 ms.openlocfilehash: 75ad909994d75387648dbfa72f827cf63b85739e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702567"
 ---
 # <a name="functional-transformation-of-xml-c"></a>(C#) XML işlevsel dönüşümü
 Bu konu, XML belgelerinin sınırlandırması saf işlevsel dönüşüm yaklaşımını ele alır ve yordam yaklaşımından ile karşılaştırır.  
@@ -15,11 +15,11 @@ Bu konu, XML belgelerinin sınırlandırması saf işlevsel dönüşüm yaklaş�
 ## <a name="modifying-an-xml-document"></a>Bir XML belgesi değiştirme  
  Bir XML programcı için en yaygın görevlerden biri XML bir şekilden diğerine dönüştürüyor. Bir XML belgesi şeklini aşağıdakileri içeren belge yapısı şöyledir:  
   
--   Belgeye göre ifade hiyerarşisi.  
+- Belgeye göre ifade hiyerarşisi.  
   
--   Öğe ve öznitelik adları.  
+- Öğe ve öznitelik adları.  
   
--   Öznitelikleri ve öğeleri veri türleri.  
+- Öznitelikleri ve öğeleri veri türleri.  
   
  Genel olarak, XML bir şekle dönüştürme en etkili, saf işlev dönüşümün yaklaşımdır. Bu yaklaşımda, birincil Programcı görev tüm XML belgesi (veya bir veya daha fazla kesinlikle tanımlanmış düğümleri) uygulanan bir dönüştürme oluşturmaktır. İşlevsel dönüşümü gerçekleşir tartışmaya kolay (programcı yaklaşım ile ilgili bilgi sahibi olduktan sonra) kodu için en Bakımı yapılabilir kodu üretir ve genellikle daha alternatif yaklaşımlar compact olur.  
   

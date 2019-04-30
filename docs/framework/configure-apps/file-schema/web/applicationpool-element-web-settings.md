@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
 ms.openlocfilehash: 16207c3f3c711d06b71cafb2b67c5d29f3f14e39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698583"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > öğesi (Web Ayarları)
 Bir ASP.NET uygulaması tümleşik modda çalıştırılan işlem genelinde yönetmesi için ASP.NET tarafından kullanılan yapılandırma ayarlarını belirten [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya sonraki bir sürümü.  
@@ -66,11 +66,11 @@ Bir ASP.NET uygulaması tümleşik modda çalıştırılan işlem genelinde yön
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, aşağıdaki koşullarda aspnet.config dosyasında ASP.NET işlem geneline yönelik davranışını yapılandırmak gösterilmektedir:  
   
--   Uygulama içinde barındırılan bir [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] uygulama havuzu.  
+- Uygulama içinde barındırılan bir [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] uygulama havuzu.  
   
--   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] Tümleşik modda çalışıyor.  
+- [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] Tümleşik modda çalışıyor.  
   
--   Uygulamayı kullanarak [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] veya sonraki bir sürümü.  
+- Uygulamayı kullanarak [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] veya sonraki bir sürümü.  
   
  Varsayılan değerleri örnekte değerlerdir.  
   

@@ -1,18 +1,18 @@
 ---
-title: XML verilerini işleme, bellek
+title: XML Verilerini Bellek İçinde İşleme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1bbb4d05-ead7-4bda-8ece-f86d35c57ad4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1a4587838180896b52bb79d447ed7ede3e22d1a
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770428"
 ---
-# <a name="processing-xml-data-in-memory"></a>XML verilerini işleme, bellek
+# <a name="processing-xml-data-in-memory"></a>XML Verilerini Bellek İçinde İşleme
 Microsoft .NET Framework XML verilerini işlemek için üç model içerir: <xref:System.Xml.XmlDocument> sınıfı <xref:System.Xml.XPath.XPathDocument> sınıfı ve [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) ve [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md).  
   
  <xref:System.Xml.XmlDocument> Sınıfı W3C belge nesne modeli (DOM) Düzey 1 çekirdek uygular ve çekirdek DOM Düzey 2 öneriler. DOM bir bellek içi (önbellek) olan bir XML belgesi gösterimini ağaç. İle <xref:System.Xml.XmlDocument> ve ilişkili sınıflarının, XML belgeleri oluşturmak, yüklemek ve verilere erişir, verileri değiştirme ve değişiklikleri kaydedilsin.  

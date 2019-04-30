@@ -11,11 +11,11 @@ helpviewer_keywords:
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
 ms.openlocfilehash: 21781db637c71abbbe9366bc95b6ee4c89ac2246
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61712636"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate Tümcesi (Visual Basic)
 Bir veya daha fazla toplama işlevleri, bir koleksiyon için geçerlidir.  
@@ -68,7 +68,7 @@ Koleksiyondaki tüm öğelerin ortalamasını hesaplar veya koleksiyondaki tüm 
 
  [!code-vb[VbSimpleQuerySamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#7)]
 
-### <a name="count"></a>Sayı
+### <a name="count"></a>Count
 
 Koleksiyondaki öğe sayısını sayar. İsteğe bağlı bir tedarik `Boolean` ifade yalnızca bir koşulu karşılayan koleksiyondaki öğe sayısı. Bir örnek verilmiştir:
 

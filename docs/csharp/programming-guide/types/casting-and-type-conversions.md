@@ -11,11 +11,11 @@ helpviewer_keywords:
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
 ms.openlocfilehash: 80ff658774c776545eb7d5158b4abd451f7fcf7d
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61709386"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Atama ve tür dönüştürmeleri (C# Programlama Kılavuzu)
 
@@ -28,13 +28,13 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
  Ancak, bazen bir değişken veya yöntem türünden parametreye başka bir değeri kopyalama gerekebilir. Örneğin, bir yöntem parametresi olarak yazıldığında geçirmek için gereken tamsayı değişkenini olabilir `double`. Veya bir sınıf değişkeni bir arabirim türü bir değişkene atayın gerekebilir. Bu tür işlemler adlı *tür dönüştürmeleri*. C# ' ta, aşağıdaki tür dönüştürmeleri gerçekleştirebilirsiniz:  
   
--   **Örtük dönüştürmeleri**: Hiçbir özel sözdizimi, dönüştürme tür bakımından güvenli olduğundan ve hiçbir veri kaybı olmayacağını gereklidir. Daha küçük Dönüştürmelere daha büyük bir tam sayı türleri için ve temel sınıf için türetilmiş sınıflardan dönüştürmeler verilebilir.  
+- **Örtük dönüştürmeleri**: Hiçbir özel sözdizimi, dönüştürme tür bakımından güvenli olduğundan ve hiçbir veri kaybı olmayacağını gereklidir. Daha küçük Dönüştürmelere daha büyük bir tam sayı türleri için ve temel sınıf için türetilmiş sınıflardan dönüştürmeler verilebilir.  
   
--   **Açık dönüştürmeler (yayınları)**: Açık dönüştürmeler bir atama işleci gerektirir. Atama, bilgi dönüştürme sırasında kaybedilen veya diğer nedenlerle dönüştürme başarılı olmayabilir gereklidir.  Daha az duyarlılık ya da daha küçük bir aralığı olan bir türü sayısal dönüştürme ve türetilmiş bir sınıf bir taban sınıfı örneğini dönüştürme Bunun tipik örneklerindendir.  
+- **Açık dönüştürmeler (yayınları)**: Açık dönüştürmeler bir atama işleci gerektirir. Atama, bilgi dönüştürme sırasında kaybedilen veya diğer nedenlerle dönüştürme başarılı olmayabilir gereklidir.  Daha az duyarlılık ya da daha küçük bir aralığı olan bir türü sayısal dönüştürme ve türetilmiş bir sınıf bir taban sınıfı örneğini dönüştürme Bunun tipik örneklerindendir.  
   
--   **Kullanıcı tanımlı dönüşümler**: Bir türetilmiş sınıf – temel sınıf ilişkisi olmayan özel türler arasında açık ve örtük dönüştürme etkinleştirmek için tanımlayabileceğiniz özel yöntemler kullanıcı tanımlı dönüştürmeler gerçekleştirilir. Daha fazla bilgi için [dönüştürme işleçleri](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md).  
+- **Kullanıcı tanımlı dönüşümler**: Bir türetilmiş sınıf – temel sınıf ilişkisi olmayan özel türler arasında açık ve örtük dönüştürme etkinleştirmek için tanımlayabileceğiniz özel yöntemler kullanıcı tanımlı dönüştürmeler gerçekleştirilir. Daha fazla bilgi için [dönüştürme işleçleri](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md).  
   
--   **Yardımcı sınıfları dönüştürmeler**: Tam sayılar gibi uyumlu olmayan türleri arasında dönüştürme yapma ve <xref:System.DateTime?displayProperty=nameWithType> nesneleri veya onaltılık dizeler ve bayt dizileri kullanabilirsiniz <xref:System.BitConverter?displayProperty=nameWithType> sınıfı <xref:System.Convert?displayProperty=nameWithType> sınıfı ve `Parse` gibi yerleşik sayısal yöntemlerinin türleri <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Daha fazla bilgi için [nasıl yapılır: Byte dizisini int'e dönüştürme](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [nasıl yapılır: Bir dizeyi sayıya dönüştürme](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md), ve [nasıl yapılır: Onaltılık dizeler ve sayısal türler arasında dönüştürme](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
+- **Yardımcı sınıfları dönüştürmeler**: Tam sayılar gibi uyumlu olmayan türleri arasında dönüştürme yapma ve <xref:System.DateTime?displayProperty=nameWithType> nesneleri veya onaltılık dizeler ve bayt dizileri kullanabilirsiniz <xref:System.BitConverter?displayProperty=nameWithType> sınıfı <xref:System.Convert?displayProperty=nameWithType> sınıfı ve `Parse` gibi yerleşik sayısal yöntemlerinin türleri <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Daha fazla bilgi için [nasıl yapılır: Byte dizisini int'e dönüştürme](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [nasıl yapılır: Bir dizeyi sayıya dönüştürme](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md), ve [nasıl yapılır: Onaltılık dizeler ve sayısal türler arasında dönüştürme](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
   
 ## <a name="implicit-conversions"></a>Örtük dönüşümler
 

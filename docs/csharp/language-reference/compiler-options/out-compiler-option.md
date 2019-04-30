@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
 ms.openlocfilehash: 459f83ee52d0ab6421fe7be4a597d8e5174b4fd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662640"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C# Derleyici Seçenekleri)
 **-Out** seçeneği, çıkış dosyasının adını belirtir.  
@@ -35,9 +35,9 @@ ms.locfileid: "59331305"
   
  Çıkış dosyasının adı belirtmezseniz:  
   
--   Bir .exe içeren kaynak kod dosyasının adı sürer **ana** yöntemi.  
+- Bir .exe içeren kaynak kod dosyasının adı sürer **ana** yöntemi.  
   
--   Bir .dll veya .netmodule adı ilk kaynak kod dosyasından alır.  
+- Bir .dll veya .netmodule adı ilk kaynak kod dosyasından alır.  
   
  Bir çıkış dosyası derlemek için kullanılan bir kaynak kodu dosyası aynı derlemede başka bir çıkış dosyası derleme için kullanılamaz.  
   

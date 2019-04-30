@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
 ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757618"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF Uygulaması Oluşturma (WPF)
 Windows Presentation Foundation (WPF) uygulamaları olarak derlenebilir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] yürütülebilir (.exe) kütüphaneler (.dll) veya her iki tür derlemeleri birleşimi. Bu konu nasıl oluşturulacağını tanıtır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar ve anahtar derleme işlemindeki adımları açıklar.  
@@ -21,11 +21,11 @@ Windows Presentation Foundation (WPF) uygulamaları olarak derlenebilir [!INCLUD
 ## <a name="building-a-wpf-application"></a>WPF Uygulaması Oluşturma  
  WPF uygulaması aşağıdaki yollarla derlenebilir:  
   
--   Komut satırı. Uygulama, yalnızca kod (hiçbir XAML) ve bir uygulama tanımı dosyası içermelidir. Daha fazla bilgi için [yapı komut satırı ile csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) veya [(Visual Basic) komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
+- Komut satırı. Uygulama, yalnızca kod (hiçbir XAML) ve bir uygulama tanımı dosyası içermelidir. Daha fazla bilgi için [yapı komut satırı ile csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) veya [(Visual Basic) komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
--   Microsoft Build Engine (MSBuild). Kod ve XAML dosyaları ek olarak, uygulamanın bir MSBuild proje dosyası içermesi gerekir. Daha fazla bilgi için "MSBuild" konusuna bakın.  
+- Microsoft Build Engine (MSBuild). Kod ve XAML dosyaları ek olarak, uygulamanın bir MSBuild proje dosyası içermesi gerekir. Daha fazla bilgi için "MSBuild" konusuna bakın.  
   
--   Visual Studio. Visual Studio WPF uygulamaları MSBuild ile derleme ve kullanıcı Arabirimi oluşturmak için bir görsel tasarımcı içeren bir tümleşik geliştirme ortamıdır. Daha fazla bilgi için [yazmak ve kodunuzu Visual Studio kullanarak yönetme](/visualstudio/ide/index-writing-code) ve [Visual Studio'da XAML tasarım](/visualstudio/designers/designing-xaml-in-visual-studio).  
+- Visual Studio. Visual Studio WPF uygulamaları MSBuild ile derleme ve kullanıcı Arabirimi oluşturmak için bir görsel tasarımcı içeren bir tümleşik geliştirme ortamıdır. Daha fazla bilgi için [yazmak ve kodunuzu Visual Studio kullanarak yönetme](/visualstudio/ide/index-writing-code) ve [Visual Studio'da XAML tasarım](/visualstudio/designers/designing-xaml-in-visual-studio).  
   
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>   
 ## <a name="wpf-build-pipeline"></a>WPF derleme işlem hattı  
@@ -37,13 +37,13 @@ Windows Presentation Foundation (WPF) uygulamaları olarak derlenebilir [!INCLUD
 ### <a name="pre-build-initializations"></a>Derleme öncesi başlatmalar  
  Yapılandırmadan önce [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] önemli araçlar ve kitaplıklar, aşağıdakiler dahil olmak üzere konumunu belirler:  
   
--   .NET Framework.  
+- .NET Framework.  
   
--   [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] Dizinleri.  
+- [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] Dizinleri.  
   
--   Konumunu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] başvuru derlemeleri.  
+- Konumunu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] başvuru derlemeleri.  
   
--   Arama yollarını derleme için özellik.  
+- Arama yollarını derleme için özellik.  
   
  İlk konum burada [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] aramaları derlemeler için olan başvuru derleme dizini (%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.0\\). Bu adım sırasında derleme işlemi ayrıca çeşitli özellikler ve öğesi grupları başlatır ve gerekli temizleme işini gerçekleştirir.  
   
@@ -129,41 +129,41 @@ End Sub
 ## <a name="incremental-build-support"></a>Artımlı derleme desteği  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Derleme sistemi, artımlı derlemeleri için destek sağlar. İşaretleme veya kod yapılan değişiklikler algılanıyor hakkında oldukça Akıllı ve yalnızca değişiklikten etkilenen yapıtları derler. Artımlı oluşturma mekanizması, aşağıdaki dosyaları kullanır:  
   
--   Bir (*AssemblyName*) geçerli derleme durumunu korumak üzere _MarkupCompiler.Cache dosyası.  
+- Bir (*AssemblyName*) geçerli derleme durumunu korumak üzere _MarkupCompiler.Cache dosyası.  
   
--   Bir (*AssemblyName*) önbellek _MarkupCompiler.lref dosyasına [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyaları yerel olarak tanımlanan türlere başvuru.  
+- Bir (*AssemblyName*) önbellek _MarkupCompiler.lref dosyasına [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyaları yerel olarak tanımlanan türlere başvuru.  
   
  Aşağıdaki Artımlı derleme yöneten kurallar kümesidir:  
   
--   Dosya, derleme sistemi değişikliği algılar en küçük birimdir. Bu nedenle, bir kod dosyası için derleme sisteminin bir türü değişirse veya kod eklediyseniz bildiremez. Aynı proje dosyaları için geçerlidir.  
+- Dosya, derleme sistemi değişikliği algılar en küçük birimdir. Bu nedenle, bir kod dosyası için derleme sisteminin bir türü değişirse veya kod eklediyseniz bildiremez. Aynı proje dosyaları için geçerlidir.  
   
--   Artımlı oluşturma mekanizması cognizant olmalıdır, bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfasının bir sınıf tanımlar veya diğer sınıfları kullanır.  
+- Artımlı oluşturma mekanizması cognizant olmalıdır, bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfasının bir sınıf tanımlar veya diğer sınıfları kullanır.  
   
--   Varsa `Reference` girişleri değiştirin, sonra tüm sayfaları yeniden derleyin.  
+- Varsa `Reference` girişleri değiştirin, sonra tüm sayfaları yeniden derleyin.  
   
--   Bir kod dosyası değişirse, yerel olarak tanımlanan tür başvurularını içeren tüm sayfaları yeniden derleyin.  
+- Bir kod dosyası değişirse, yerel olarak tanımlanan tür başvurularını içeren tüm sayfaları yeniden derleyin.  
   
--   Varsa bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosya değişiklikleri:  
+- Varsa bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosya değişiklikleri:  
   
-    -   Varsa [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olarak bildirilen `Page` projedeki: varsa [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] değil yerel olarak tanımlanan tür başvurularını varsa, yeniden derleyin [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] artı tüm [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yerel başvurular ile; sayfaları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yerel sahip tüm başvuruları yeniden derleyin [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yerel başvurular sayfaları.  
+    - Varsa [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olarak bildirilen `Page` projedeki: varsa [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] değil yerel olarak tanımlanan tür başvurularını varsa, yeniden derleyin [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] artı tüm [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yerel başvurular ile; sayfaları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yerel sahip tüm başvuruları yeniden derleyin [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yerel başvurular sayfaları.  
   
-    -   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Olarak bildirilen `ApplicationDefinition` projedeki: tümünü yeniden derle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfaları (neden: her [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] başvuru yapan bir <xref:System.Windows.Application> değişmiş olabilir bir tür).  
+    - [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Olarak bildirilen `ApplicationDefinition` projedeki: tümünü yeniden derle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfaları (neden: her [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] başvuru yapan bir <xref:System.Windows.Application> değişmiş olabilir bir tür).  
   
--   Proje dosyası yerine uygulama tanımı olarak bir kod dosyası bildiriyorsa bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyası:  
+- Proje dosyası yerine uygulama tanımı olarak bir kod dosyası bildiriyorsa bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyası:  
   
-    -   Kontrol `ApplicationClassName` proje dosyasındaki değeri değiştirildi (yeni bir uygulama türü mi?). Bu durumda, uygulamanın tamamını yeniden derleyin.  
+    - Kontrol `ApplicationClassName` proje dosyasındaki değeri değiştirildi (yeni bir uygulama türü mi?). Bu durumda, uygulamanın tamamını yeniden derleyin.  
   
-    -   Aksi takdirde, tümünü yeniden derle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yerel başvurular sayfaları.  
+    - Aksi takdirde, tümünü yeniden derle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yerel başvurular sayfaları.  
   
--   Bir proje dosyası değişirse: Yukarıdaki tüm kuralları uygulamak ve derlenmesi için gerekenler bakın. Tam çalışabilmeleri için aşağıdaki özellikleri tetikleyici değiştirir: `AssemblyName`, `IntermediateOutputPath`, `RootNamespace`, ve `HostInBrowser`.  
+- Bir proje dosyası değişirse: Yukarıdaki tüm kuralları uygulamak ve derlenmesi için gerekenler bakın. Tam çalışabilmeleri için aşağıdaki özellikleri tetikleyici değiştirir: `AssemblyName`, `IntermediateOutputPath`, `RootNamespace`, ve `HostInBrowser`.  
   
  Aşağıdaki yeniden derleyin senaryoları şunlardır:  
   
--   Uygulamanın tamamı yeniden derlenir.  
+- Uygulamanın tamamı yeniden derlenir.  
   
--   Yalnızca [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yerel olarak tanımlanan tür başvuruları dosyaları derlenir.  
+- Yalnızca [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yerel olarak tanımlanan tür başvuruları dosyaları derlenir.  
   
--   (Projede olmadıysa) hiçbir şey derlenir.  
+- (Projede olmadıysa) hiçbir şey derlenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

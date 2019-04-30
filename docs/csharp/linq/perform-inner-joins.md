@@ -4,13 +4,13 @@ description: C# içinde LINQ kullanarak iç birleştirmeler gerçekleştirme kon
 ms.date: 12/01/2016
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
 ms.openlocfilehash: a3e8e9bd97ec630797bc48a3302b27ed45d9103e
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61659845"
 ---
-# <a name="perform-inner-joins"></a>İç birleştirmeler gerçekleştirme
+# <a name="perform-inner-joins"></a>İç birleşimler gerçekleştirme
 
 İlişkisel veritabanı koşullarında bir *INNER JOIN* bir sonuç kümesi her hangi bir öğedeki ilk koleksiyonun ikinci koleksiyon eşleşen her öğe için bir kez görünür üretir. İlk koleksiyondaki bir öğe eşleşen bir öğe varsa, sonuç kümesinde görünmüyor. <xref:System.Linq.Enumerable.Join%2A> Tarafından çağrılan yöntem `join` yan tümcesinde C# ' ta, bir iç birleştirme uygular.
 

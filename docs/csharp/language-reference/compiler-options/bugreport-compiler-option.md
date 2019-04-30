@@ -9,11 +9,11 @@ helpviewer_keywords:
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
 ms.openlocfilehash: 63d64acc0d0a1ed90a722db75b467bd3ce5f260e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663017"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (C# Derleyici Seçenekleri)
 Hata ayıklama bilgileri daha sonra çözümlemek için bir dosya yerleştirilmesi gerektiğini belirtir.  
@@ -31,19 +31,19 @@ Hata ayıklama bilgileri daha sonra çözümlemek için bir dosya yerleştirilme
 ## <a name="remarks"></a>Açıklamalar  
  **- Bugreport** seçeneği belirtir, aşağıdaki bilgileri yerleştirilmelidir `file`:  
   
--   Derlemedeki tüm kaynak kodu dosyalarının bir kopyasını.  
+- Derlemedeki tüm kaynak kodu dosyalarının bir kopyasını.  
   
--   Derlemede kullanılan derleyici seçeneklerinin bir listesi.  
+- Derlemede kullanılan derleyici seçeneklerinin bir listesi.  
   
--   Derleyici, çalıştırma ve işletim sistemi sürüm bilgisi.  
+- Derleyici, çalıştırma ve işletim sistemi sürüm bilgisi.  
   
--   Başvurulan derlemeler ve modüller, SDK ve .NET Framework ile birlikte gelen derlemeleri hariç onaltılık basamak olarak kaydedilir.  
+- Başvurulan derlemeler ve modüller, SDK ve .NET Framework ile birlikte gelen derlemeleri hariç onaltılık basamak olarak kaydedilir.  
   
--   Derleyici çıkışı, varsa.  
+- Derleyici çıkışı, varsa.  
   
--   İçin istenir sorun açıklaması.  
+- İçin istenir sorun açıklaması.  
   
--   Sorun ne düşündüğünüzü açıklaması, hangi için istenir düzeltilmelidir.  
+- Sorun ne düşündüğünüzü açıklaması, hangi için istenir düzeltilmelidir.  
   
  Bu seçeneği ile kullandıysanız **- errorreport: istemi** veya **- errorreport: gönderme**, dosyasındaki bilgiler, Microsoft Corporation'a gönderilir.  
   

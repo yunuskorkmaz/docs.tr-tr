@@ -1,16 +1,16 @@
 ---
-title: Bellekte sorgunun sonuçlarını Store
+title: Bellekte sorgunun sonuçlarını depolama
 description: Sonuçları depolamayı öğrenin.
 ms.date: 11/30/2016
 ms.assetid: 5b863961-1750-4cf9-9607-acea5054d15a
 ms.openlocfilehash: 98a300b2c11eb037ed4ce34caea2673a4e0f8e6b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61688442"
 ---
-# <a name="store-the-results-of-a-query-in-memory"></a>Bellekte sorgunun sonuçlarını Store
+# <a name="store-the-results-of-a-query-in-memory"></a>Bellekte sorgunun sonuçlarını depolama
 
 Bir sorgu temel alabilir ve verileri düzenleme hakkında yönergeler kümesidir. Sorgular, gevşek, sonraki her öğe sonucu, istenen şekilde yürütülür. Kullanırken `foreach` sonuçlarını yinelemek için öğeler erişilen olarak döndürülür. Bir sorguyu değerlendirmeye ve çalıştırmadan sonuçlarını depolamak için bir `foreach` döngüsünde, yalnızca aşağıdaki yöntemlerden birini sorgu değişkeni üzerinde çağırın:
 

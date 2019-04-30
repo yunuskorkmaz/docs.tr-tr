@@ -3,11 +3,11 @@ title: OLE DB Şema Koleksiyonları
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
 ms.openlocfilehash: 6dc187b0a876d9e167a74f2381db156dde2764fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772001"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB Şema Koleksiyonları
 Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıları için şema koleksiyonu desteğini açıklar.  
@@ -15,17 +15,17 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Microsoft SQL Server'ı OLE DB sağlayıcısı  
  Microsoft SQL Server OLE DB sürücüsü aşağıdaki özel şema koleksiyonları ortak şema koleksiyonları yanı sıra destekler:  
   
--   Tabloları  
+- Tabloları  
   
--   Sütunlar  
+- Sütunlar  
   
--   Yordamlar  
+- Yordamlar  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   Katalog  
+- Katalog  
   
--   Dizinleri  
+- Dizinleri  
   
 ### <a name="tables"></a>Tabloları  
   
@@ -154,19 +154,19 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
 ## <a name="microsoft-oracle-ole-db-provider"></a>Microsoft Oracle OLE DB sağlayıcısı  
  Microsoft Oracle OLE DB sürücüsü aşağıdaki özel şema koleksiyonları ortak şema koleksiyonları yanı sıra destekler:  
   
--   Tabloları  
+- Tabloları  
   
--   Sütunlar  
+- Sütunlar  
   
--   Yordamlar  
+- Yordamlar  
   
--   ProcedureColumns  
+- ProcedureColumns  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   Görünümler  
+- Görünümler  
   
--   Dizinleri  
+- Dizinleri  
   
 ### <a name="tables"></a>Tabloları  
   
@@ -297,15 +297,15 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
 ## <a name="microsoft-jet-ole-db-provider"></a>Microsoft Jet OLE DB sağlayıcısı  
  Microsoft Jet OLE DB sürücüsü aşağıdaki özel şema koleksiyonları ortak şema koleksiyonları yanı sıra destekler:  
   
--   Tabloları  
+- Tabloları  
   
--   Sütunlar  
+- Sütunlar  
   
--   Yordamlar  
+- Yordamlar  
   
--   Görünümler  
+- Görünümler  
   
--   Dizinleri  
+- Dizinleri  
   
 ### <a name="tables"></a>Tabloları  
   

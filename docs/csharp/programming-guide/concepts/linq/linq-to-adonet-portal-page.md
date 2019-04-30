@@ -3,11 +3,11 @@ title: ADO.NET'e LINQ (Portal Sayfası)
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
 ms.openlocfilehash: 51bca1cae25cf20244b183946964a3de14a2d796
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57806182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701696"
 ---
 # <a name="linq-to-adonet-portal-page"></a>ADO.NET'e LINQ (Portal Sayfası)
 [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] içinde herhangi bir numaralandırma nesnesi üzerinde sorgulama sayesinde [!INCLUDE[vstecado](~/includes/vstecado-md.md)] kullanarak [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] programlama modeli.  
