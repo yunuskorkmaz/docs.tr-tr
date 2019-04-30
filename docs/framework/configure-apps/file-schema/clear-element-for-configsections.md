@@ -1,5 +1,5 @@
 ---
-title: <clear> için <configSections> öğesi
+title: <configSections> için <clear> öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/clear
@@ -10,51 +10,51 @@ ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: d824ae828dd025f3292990facaa5e423add9c282
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705356"
 ---
-# <a name="clear-element-for-configsections"></a><span data-ttu-id="f0477-102">\<Temizle > öğesi için \<configSections ></span><span class="sxs-lookup"><span data-stu-id="f0477-102">\<clear> element for \<configSections></span></span>
+# <a name="clear-element-for-configsections"></a><span data-ttu-id="b00f0-102">\<Temizle > öğesi için \<configSections ></span><span class="sxs-lookup"><span data-stu-id="b00f0-102">\<clear> element for \<configSections></span></span>
 
-<span data-ttu-id="f0477-103">Tüm önceden tanımlanmış bölümler ve bölüm grupları temizler.</span><span class="sxs-lookup"><span data-stu-id="f0477-103">Clears all previously defined sections and section groups.</span></span>
+<span data-ttu-id="b00f0-103">Tüm önceden tanımlanmış bölümler ve bölüm grupları temizler.</span><span class="sxs-lookup"><span data-stu-id="b00f0-103">Clears all previously defined sections and section groups.</span></span>
 
-<span data-ttu-id="f0477-104">[**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="f0477-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="f0477-105">&nbsp;&nbsp;[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="f0477-105">&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span></span>  
-<span data-ttu-id="f0477-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<Temizleme >**</span><span class="sxs-lookup"><span data-stu-id="f0477-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**</span></span>
+<span data-ttu-id="b00f0-104">[**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="b00f0-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="b00f0-105">&nbsp;&nbsp;[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="b00f0-105">&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span></span>  
+<span data-ttu-id="b00f0-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<Temizleme >**</span><span class="sxs-lookup"><span data-stu-id="b00f0-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="f0477-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f0477-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="b00f0-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b00f0-107">Syntax</span></span>
 
 ```xml
 <clear/>
 ```
 
-## <a name="attribute"></a><span data-ttu-id="f0477-108">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="f0477-108">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="b00f0-108">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="b00f0-108">Attribute</span></span>
 
-|           | <span data-ttu-id="f0477-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f0477-109">Description</span></span> |
+|           | <span data-ttu-id="b00f0-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b00f0-109">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="f0477-110">**Adı**</span><span class="sxs-lookup"><span data-stu-id="f0477-110">**name**</span></span>  | <span data-ttu-id="f0477-111">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="f0477-111">Required attribute.</span></span><br><br><span data-ttu-id="f0477-112">Bölüm veya kaldırmak için bölüm grubu adını belirtir.</span><span class="sxs-lookup"><span data-stu-id="f0477-112">Specifies the name of the section or section group to remove.</span></span> |
+| <span data-ttu-id="b00f0-110">**Adı**</span><span class="sxs-lookup"><span data-stu-id="b00f0-110">**name**</span></span>  | <span data-ttu-id="b00f0-111">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="b00f0-111">Required attribute.</span></span><br><br><span data-ttu-id="b00f0-112">Bölüm veya kaldırmak için bölüm grubu adını belirtir.</span><span class="sxs-lookup"><span data-stu-id="b00f0-112">Specifies the name of the section or section group to remove.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="f0477-113">Üst öğe</span><span class="sxs-lookup"><span data-stu-id="f0477-113">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="b00f0-113">Üst öğe</span><span class="sxs-lookup"><span data-stu-id="b00f0-113">Parent element</span></span>
 
-|     | <span data-ttu-id="f0477-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f0477-114">Description</span></span> |
+|     | <span data-ttu-id="b00f0-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b00f0-114">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="f0477-115">**\<configSections >** öğesi</span><span class="sxs-lookup"><span data-stu-id="f0477-115">**\<configSections>** Element</span></span>](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | <span data-ttu-id="f0477-116">Yapılandırma bölümü ve ad alanı bildirimi içerir.</span><span class="sxs-lookup"><span data-stu-id="f0477-116">Contains configuration section and namespace declarations.</span></span> |
+| [<span data-ttu-id="b00f0-115">**\<configSections >** öğesi</span><span class="sxs-lookup"><span data-stu-id="b00f0-115">**\<configSections>** Element</span></span>](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | <span data-ttu-id="b00f0-116">Yapılandırma bölümü ve ad alanı bildirimi içerir.</span><span class="sxs-lookup"><span data-stu-id="b00f0-116">Contains configuration section and namespace declarations.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="f0477-117">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="f0477-117">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="b00f0-117">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="b00f0-117">Child elements</span></span>
 
-<span data-ttu-id="f0477-118">Hiçbiri</span><span class="sxs-lookup"><span data-stu-id="f0477-118">None</span></span>
+<span data-ttu-id="b00f0-118">Yok.</span><span class="sxs-lookup"><span data-stu-id="b00f0-118">None</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="f0477-119">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f0477-119">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="b00f0-119">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b00f0-119">Remarks</span></span>
 
-<span data-ttu-id="f0477-120"> *\*\<Temizle >** uygulamanızdan geçerli yapılandırma dosyasında ya da daha yüksek bir düzeyde yapılandırma dosyası hiyerarşisinde daha önce tanımlanan öğeyi kaldırır tüm bölümler ve bölüm grupları.</span><span class="sxs-lookup"><span data-stu-id="f0477-120">The **\<clear>** element removes all sections and section groups from your application that were defined earlier in the current configuration file or at a higher level in the configuration file hierarchy.</span></span>
+<span data-ttu-id="b00f0-120"> *\*\<Temizle >** uygulamanızdan geçerli yapılandırma dosyasında ya da daha yüksek bir düzeyde yapılandırma dosyası hiyerarşisinde daha önce tanımlanan öğeyi kaldırır tüm bölümler ve bölüm grupları.</span><span class="sxs-lookup"><span data-stu-id="b00f0-120">The **\<clear>** element removes all sections and section groups from your application that were defined earlier in the current configuration file or at a higher level in the configuration file hierarchy.</span></span>
 
-## <a name="example"></a><span data-ttu-id="f0477-121">Örnek</span><span class="sxs-lookup"><span data-stu-id="f0477-121">Example</span></span>
+## <a name="example"></a><span data-ttu-id="b00f0-121">Örnek</span><span class="sxs-lookup"><span data-stu-id="b00f0-121">Example</span></span>
 
-<span data-ttu-id="f0477-122">Bu örnek nasıl kullanılacağını gösterir ve makine yapılandırma dosyası ve bir uygulama yapılandırma dosyasını tanımlar  **\<Temizle >** önceden tanımlanmış bir bölümü temizlemek için bir uygulama yapılandırma dosyasında öğesi makine yapılandırma dosyası.</span><span class="sxs-lookup"><span data-stu-id="f0477-122">This example defines a machine configuration file and an application configuration file and shows how to use the **\<clear>** element in an application configuration file to clear sections previously defined in the machine configuration file.</span></span>
+<span data-ttu-id="b00f0-122">Bu örnek nasıl kullanılacağını gösterir ve makine yapılandırma dosyası ve bir uygulama yapılandırma dosyasını tanımlar  **\<Temizle >** önceden tanımlanmış bir bölümü temizlemek için bir uygulama yapılandırma dosyasında öğesi makine yapılandırma dosyası.</span><span class="sxs-lookup"><span data-stu-id="b00f0-122">This example defines a machine configuration file and an application configuration file and shows how to use the **\<clear>** element in an application configuration file to clear sections previously defined in the machine configuration file.</span></span>
 
-<span data-ttu-id="f0477-123">Aşağıdaki makine yapılandırma dosyası kod iki bölüm bildirir  **\<sampleSection >** ve  **\<anotherSampleSection >**, önce uygulamayı okuyun, yapılandırma dosyası:</span><span class="sxs-lookup"><span data-stu-id="f0477-123">The following machine configuration file code declares two sections, **\<sampleSection>** and **\<anotherSampleSection>**, which are read before the application configuration file:</span></span>
+<span data-ttu-id="b00f0-123">Aşağıdaki makine yapılandırma dosyası kod iki bölüm bildirir  **\<sampleSection >** ve  **\<anotherSampleSection >**, önce uygulamayı okuyun, yapılandırma dosyası:</span><span class="sxs-lookup"><span data-stu-id="b00f0-123">The following machine configuration file code declares two sections, **\<sampleSection>** and **\<anotherSampleSection>**, which are read before the application configuration file:</span></span>
 
 ```xml
 <!-- Machine.config file -->
@@ -71,7 +71,7 @@ ms.locfileid: "55254787"
 </configuration>
 ```
 
-<span data-ttu-id="f0477-124">Aşağıdaki uygulama yapılandırma dosyası kod daha önce bildirilen tüm bölümleri temizler.</span><span class="sxs-lookup"><span data-stu-id="f0477-124">The following application configuration file code clears all previously declared sections.</span></span> <span data-ttu-id="f0477-125">Uygulamayı kullanabilir veya ayarları makine yapılandırma dosyasında bildirilen bölümleri birini alınamıyor.</span><span class="sxs-lookup"><span data-stu-id="f0477-125">The application cannot use or retrieve settings in either of the sections that were declared in the machine configuration file.</span></span> <span data-ttu-id="f0477-126">Ancak, ayarları kullanabilirsiniz  **\<anotherSection >** sonra geldiğinden  **\<Temizle >** öğesi.</span><span class="sxs-lookup"><span data-stu-id="f0477-126">However, it can use settings from **\<anotherSection>** because it comes after the **\<clear>** element.</span></span>
+<span data-ttu-id="b00f0-124">Aşağıdaki uygulama yapılandırma dosyası kod daha önce bildirilen tüm bölümleri temizler.</span><span class="sxs-lookup"><span data-stu-id="b00f0-124">The following application configuration file code clears all previously declared sections.</span></span> <span data-ttu-id="b00f0-125">Uygulamayı kullanabilir veya ayarları makine yapılandırma dosyasında bildirilen bölümleri birini alınamıyor.</span><span class="sxs-lookup"><span data-stu-id="b00f0-125">The application cannot use or retrieve settings in either of the sections that were declared in the machine configuration file.</span></span> <span data-ttu-id="b00f0-126">Ancak, ayarları kullanabilirsiniz  **\<anotherSection >** sonra geldiğinden  **\<Temizle >** öğesi.</span><span class="sxs-lookup"><span data-stu-id="b00f0-126">However, it can use settings from **\<anotherSection>** because it comes after the **\<clear>** element.</span></span>
 
 ```xml
 <!-- Application configuration file -->
@@ -87,10 +87,10 @@ ms.locfileid: "55254787"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="f0477-127">Yapılandırma dosyası</span><span class="sxs-lookup"><span data-stu-id="f0477-127">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="b00f0-127">Yapılandırma dosyası</span><span class="sxs-lookup"><span data-stu-id="b00f0-127">Configuration file</span></span>
 
-<span data-ttu-id="f0477-128">Bu öğe, uygulama yapılandırma dosyasında, makine yapılandırma dosyası kullanılabilir (*Machine.config*), ve *Web.config* uygulama dizin düzeyinde olmayan dosyalar.</span><span class="sxs-lookup"><span data-stu-id="f0477-128">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="b00f0-128">Bu öğe, uygulama yapılandırma dosyasında, makine yapılandırma dosyası kullanılabilir (*Machine.config*), ve *Web.config* uygulama dizin düzeyinde olmayan dosyalar.</span><span class="sxs-lookup"><span data-stu-id="b00f0-128">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f0477-129">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f0477-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b00f0-129">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b00f0-129">See also</span></span>
 
-- [<span data-ttu-id="f0477-130">.NET Framework yapılandırma dosyası şeması</span><span class="sxs-lookup"><span data-stu-id="f0477-130">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="b00f0-130">.NET Framework yapılandırma dosyası şeması</span><span class="sxs-lookup"><span data-stu-id="b00f0-130">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)

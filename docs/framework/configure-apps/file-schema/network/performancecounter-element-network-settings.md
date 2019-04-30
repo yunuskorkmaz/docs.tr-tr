@@ -9,21 +9,21 @@ helpviewer_keywords:
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
 ms.openlocfilehash: 30c5cd07c92a8fc3c340cab0ff9ae74e940c0c12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705247"
 ---
-# <a name="performancecounter-element-network-settings"></a><span data-ttu-id="fbbd2-102">\<performanceCounter > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="fbbd2-102">\<performanceCounter> Element (Network Settings)</span></span>
-<span data-ttu-id="fbbd2-103">Etkinleştirir veya ağ performans sayaçları devre dışı bırakır.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-103">Enables or disables networking performance counters.</span></span>  
+# <a name="performancecounter-element-network-settings"></a><span data-ttu-id="2c954-102">\<performanceCounter > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="2c954-102">\<performanceCounter> Element (Network Settings)</span></span>
+<span data-ttu-id="2c954-103">Etkinleştirir veya ağ performans sayaçları devre dışı bırakır.</span><span class="sxs-lookup"><span data-stu-id="2c954-103">Enables or disables networking performance counters.</span></span>  
   
- <span data-ttu-id="fbbd2-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="fbbd2-104">\<configuration></span></span>  
-<span data-ttu-id="fbbd2-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="fbbd2-105">\<system.net></span></span>  
-<span data-ttu-id="fbbd2-106">\<Ayarlar ></span><span class="sxs-lookup"><span data-stu-id="fbbd2-106">\<settings></span></span>  
-<span data-ttu-id="fbbd2-107">\<performanceCounters ></span><span class="sxs-lookup"><span data-stu-id="fbbd2-107">\<performanceCounters></span></span>  
+ <span data-ttu-id="2c954-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="2c954-104">\<configuration></span></span>  
+<span data-ttu-id="2c954-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="2c954-105">\<system.net></span></span>  
+<span data-ttu-id="2c954-106">\<Ayarlar ></span><span class="sxs-lookup"><span data-stu-id="2c954-106">\<settings></span></span>  
+<span data-ttu-id="2c954-107">\<performanceCounters ></span><span class="sxs-lookup"><span data-stu-id="2c954-107">\<performanceCounters></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fbbd2-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="fbbd2-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2c954-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2c954-108">Syntax</span></span>  
   
 ```xml  
 <performanceCounters  
@@ -31,35 +31,35 @@ ms.locfileid: "59210938"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="fbbd2-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="fbbd2-109">Attributes and Elements</span></span>  
- <span data-ttu-id="fbbd2-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2c954-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="2c954-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="2c954-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="2c954-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="fbbd2-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="fbbd2-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="2c954-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="2c954-111">Attributes</span></span>  
   
-|<span data-ttu-id="fbbd2-112">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="fbbd2-112">Attribute</span></span>|<span data-ttu-id="fbbd2-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="fbbd2-113">Description</span></span>|  
+|<span data-ttu-id="2c954-112">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="2c954-112">Attribute</span></span>|<span data-ttu-id="2c954-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="2c954-113">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="fbbd2-114">Ağ performans sayaçlarının etkin olup olmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-114">Specifies whether the networking performance counters are enabled.</span></span> <span data-ttu-id="fbbd2-115">Varsayılan değer `false` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-115">The default value is `false`.</span></span>|  
+|`enabled`|<span data-ttu-id="2c954-114">Ağ performans sayaçlarının etkin olup olmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="2c954-114">Specifies whether the networking performance counters are enabled.</span></span> <span data-ttu-id="2c954-115">Varsayılan değer `false` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="2c954-115">The default value is `false`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="fbbd2-116">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="fbbd2-116">Child Elements</span></span>  
- <span data-ttu-id="fbbd2-117">Yok.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="2c954-116">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="2c954-116">Child Elements</span></span>  
+ <span data-ttu-id="2c954-117">Yok.</span><span class="sxs-lookup"><span data-stu-id="2c954-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="fbbd2-118">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="fbbd2-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="2c954-118">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="2c954-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="fbbd2-119">Öğe</span><span class="sxs-lookup"><span data-stu-id="fbbd2-119">Element</span></span>|<span data-ttu-id="fbbd2-120">Açıklama</span><span class="sxs-lookup"><span data-stu-id="fbbd2-120">Description</span></span>|  
+|<span data-ttu-id="2c954-119">Öğe</span><span class="sxs-lookup"><span data-stu-id="2c954-119">Element</span></span>|<span data-ttu-id="2c954-120">Açıklama</span><span class="sxs-lookup"><span data-stu-id="2c954-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fbbd2-121">Ayarlar</span><span class="sxs-lookup"><span data-stu-id="fbbd2-121">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="fbbd2-122">Temel ağ seçeneklerini yapılandırır <xref:System.Net> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-122">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
+|[<span data-ttu-id="2c954-121">Ayarlar</span><span class="sxs-lookup"><span data-stu-id="2c954-121">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="2c954-122">Temel ağ seçeneklerini yapılandırır <xref:System.Net> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="2c954-122">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fbbd2-123">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="fbbd2-123">Remarks</span></span>  
- <span data-ttu-id="fbbd2-124">Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-124">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2c954-123">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2c954-123">Remarks</span></span>  
+ <span data-ttu-id="2c954-124">Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="2c954-124">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
- <span data-ttu-id="fbbd2-125">Ağ performans sayaçları yapılandırma dosyasında kullanılacak etkinleştirilmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-125">Networking performance counters need to be enabled in the configuration file to be used.</span></span> <span data-ttu-id="fbbd2-126">Tüm ağ performans sayaçları etkin veya yapılandırma dosyasında tek bir ayarı ile devre dışı.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-126">All networking performance counters are enabled or disabled with a single setting in the configuration file.</span></span> <span data-ttu-id="fbbd2-127">Ağ performans sayaçları tek etkin veya devre dışı.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-127">Individual networking performance counters cannot be enabled or disabled.</span></span> <span data-ttu-id="fbbd2-128">Belirli ağ performans sayaçları hakkında daha fazla bilgi için bkz. [ağ performans sayaçları](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking).</span><span class="sxs-lookup"><span data-stu-id="fbbd2-128">For more information on the specific networking performance counters, see [Networking Performance Counters](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking).</span></span>  
+ <span data-ttu-id="2c954-125">Ağ performans sayaçları yapılandırma dosyasında kullanılacak etkinleştirilmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="2c954-125">Networking performance counters need to be enabled in the configuration file to be used.</span></span> <span data-ttu-id="2c954-126">Tüm ağ performans sayaçları etkin veya yapılandırma dosyasında tek bir ayarı ile devre dışı.</span><span class="sxs-lookup"><span data-stu-id="2c954-126">All networking performance counters are enabled or disabled with a single setting in the configuration file.</span></span> <span data-ttu-id="2c954-127">Ağ performans sayaçları tek etkin veya devre dışı.</span><span class="sxs-lookup"><span data-stu-id="2c954-127">Individual networking performance counters cannot be enabled or disabled.</span></span> <span data-ttu-id="2c954-128">Belirli ağ performans sayaçları hakkında daha fazla bilgi için bkz. [ağ performans sayaçları](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking).</span><span class="sxs-lookup"><span data-stu-id="2c954-128">For more information on the specific networking performance counters, see [Networking Performance Counters](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking).</span></span>  
   
- <span data-ttu-id="fbbd2-129">Ağ performans sayaçları devre dışı bırakıldı varsayılan değerdir.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-129">The default value is that networking performance counters are disabled.</span></span>  
+ <span data-ttu-id="2c954-129">Ağ performans sayaçları devre dışı bırakıldı varsayılan değerdir.</span><span class="sxs-lookup"><span data-stu-id="2c954-129">The default value is that networking performance counters are disabled.</span></span>  
   
- <span data-ttu-id="fbbd2-130"><xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> Özelliği, geçerli değerini almak için kullanılabilir **etkin** ilgili yapılandırma dosyaları özniteliği.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-130">The <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> property can be used to get the current value of the **enabled** attribute from applicable configuration files.</span></span>  
+ <span data-ttu-id="2c954-130"><xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> Özelliği, geçerli değerini almak için kullanılabilir **etkin** ilgili yapılandırma dosyaları özniteliği.</span><span class="sxs-lookup"><span data-stu-id="2c954-130">The <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> property can be used to get the current value of the **enabled** attribute from applicable configuration files.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fbbd2-131">Örnek</span><span class="sxs-lookup"><span data-stu-id="fbbd2-131">Example</span></span>  
- <span data-ttu-id="fbbd2-132">Aşağıdaki örnek nasıl yapılandırılacağı gösterilmektedir <xref:System.Net> ve ilgili ağ performans sayaçları etkinleştirmek için ad alanları.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-132">The following example shows how to configure the <xref:System.Net> and related namespaces to enable networking performance counters.</span></span>  
+## <a name="example"></a><span data-ttu-id="2c954-131">Örnek</span><span class="sxs-lookup"><span data-stu-id="2c954-131">Example</span></span>  
+ <span data-ttu-id="2c954-132">Aşağıdaki örnek nasıl yapılandırılacağı gösterilmektedir <xref:System.Net> ve ilgili ağ performans sayaçları etkinleştirmek için ad alanları.</span><span class="sxs-lookup"><span data-stu-id="2c954-132">The following example shows how to configure the <xref:System.Net> and related namespaces to enable networking performance counters.</span></span>  
   
 ```xml  
 <configuration>  
@@ -73,9 +73,9 @@ ms.locfileid: "59210938"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fbbd2-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2c954-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2c954-133">See also</span></span>
 
 - <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="fbbd2-134">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="fbbd2-134">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [<span data-ttu-id="fbbd2-135">Ağ performans sayaçları</span><span class="sxs-lookup"><span data-stu-id="fbbd2-135">Networking Performance Counters</span></span>](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)
+- [<span data-ttu-id="2c954-134">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="2c954-134">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="2c954-135">Ağ performans sayaçları</span><span class="sxs-lookup"><span data-stu-id="2c954-135">Networking Performance Counters</span></span>](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)

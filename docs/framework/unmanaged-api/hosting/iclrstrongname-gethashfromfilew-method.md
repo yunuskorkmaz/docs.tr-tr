@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1547680800b188d5b5e0032e804c22cae0547ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771546"
 ---
-# <a name="iclrstrongnamegethashfromfilew-method"></a><span data-ttu-id="6b521-102">ICLRStrongName::GetHashFromFileW Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6b521-102">ICLRStrongName::GetHashFromFileW Method</span></span>
-<span data-ttu-id="6b521-103">Unicode dizesi tarafından belirtilen dosyanın içeriğini üzerinden bir karma oluşturur.</span><span class="sxs-lookup"><span data-stu-id="6b521-103">Generates a hash over the contents of the file specified by a Unicode string.</span></span>  
+# <a name="iclrstrongnamegethashfromfilew-method"></a><span data-ttu-id="3878e-102">ICLRStrongName::GetHashFromFileW Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3878e-102">ICLRStrongName::GetHashFromFileW Method</span></span>
+<span data-ttu-id="3878e-103">Unicode dizesi tarafından belirtilen dosyanın içeriğini üzerinden bir karma oluşturur.</span><span class="sxs-lookup"><span data-stu-id="3878e-103">Generates a hash over the contents of the file specified by a Unicode string.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6b521-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6b521-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3878e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3878e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromFileW (   
@@ -39,38 +39,38 @@ HRESULT GetHashFromFileW (
 );   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6b521-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6b521-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3878e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3878e-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="6b521-106">[in] Karma dosyayı Unicode adı.</span><span class="sxs-lookup"><span data-stu-id="6b521-106">[in] The Unicode name of the file to hash.</span></span>  
+ <span data-ttu-id="3878e-106">[in] Karma dosyayı Unicode adı.</span><span class="sxs-lookup"><span data-stu-id="3878e-106">[in] The Unicode name of the file to hash.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="6b521-107">[out içinde] Karma oluşturulurken kullanılacak algoritma.</span><span class="sxs-lookup"><span data-stu-id="6b521-107">[in, out] The algorithm to use when generating the hash.</span></span> <span data-ttu-id="6b521-108">Geçerli algoritmaları Win32 CryptoAPI tarafından tanımlanmış izinlerdir.</span><span class="sxs-lookup"><span data-stu-id="6b521-108">Valid algorithms are those defined by the Win32 CryptoAPI.</span></span> <span data-ttu-id="6b521-109">Varsa `piHashAlg` CALG_SHA 1 kullanılan varsayılan algoritma 0 olarak ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="6b521-109">If `piHashAlg` is set to 0, the default algorithm CALG_SHA-1 is used.</span></span>  
+ <span data-ttu-id="3878e-107">[out içinde] Karma oluşturulurken kullanılacak algoritma.</span><span class="sxs-lookup"><span data-stu-id="3878e-107">[in, out] The algorithm to use when generating the hash.</span></span> <span data-ttu-id="3878e-108">Geçerli algoritmaları Win32 CryptoAPI tarafından tanımlanmış izinlerdir.</span><span class="sxs-lookup"><span data-stu-id="3878e-108">Valid algorithms are those defined by the Win32 CryptoAPI.</span></span> <span data-ttu-id="3878e-109">Varsa `piHashAlg` CALG_SHA 1 kullanılan varsayılan algoritma 0 olarak ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="3878e-109">If `piHashAlg` is set to 0, the default algorithm CALG_SHA-1 is used.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="6b521-110">[out] Oluşturulan karma içeren bir bayt dizisi.</span><span class="sxs-lookup"><span data-stu-id="6b521-110">[out] A byte array containing the generated hash.</span></span>  
+ <span data-ttu-id="3878e-110">[out] Oluşturulan karma içeren bir bayt dizisi.</span><span class="sxs-lookup"><span data-stu-id="3878e-110">[out] A byte array containing the generated hash.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="6b521-111">[in] En büyük arabellek boyutunu tarafından işaret edilen `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="6b521-111">[in] The maximum size of the buffer pointed to by `pbHash`.</span></span>  
+ <span data-ttu-id="3878e-111">[in] En büyük arabellek boyutunu tarafından işaret edilen `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="3878e-111">[in] The maximum size of the buffer pointed to by `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="6b521-112">[out] Bayt cinsinden boyutu, `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="6b521-112">[out] The size, in bytes, of `pbHash`.</span></span>  
+ <span data-ttu-id="3878e-112">[out] Bayt cinsinden boyutu, `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="3878e-112">[out] The size, in bytes, of `pbHash`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6b521-113">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="6b521-113">Return Value</span></span>  
- <span data-ttu-id="6b521-114">`S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="6b521-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3878e-113">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="3878e-113">Return Value</span></span>  
+ <span data-ttu-id="3878e-114">`S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="3878e-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6b521-115">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6b521-115">Remarks</span></span>  
- <span data-ttu-id="6b521-116">Bu yöntem ile aynıdır [Iclrstrongname::gethashfromfile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) yöntemi, dosya adı, tek farkı belirtimi yerine ANSI Unicode.</span><span class="sxs-lookup"><span data-stu-id="6b521-116">This method is the same as the [ICLRStrongName::GetHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) method, except that the file name specification is Unicode instead of ANSI.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3878e-115">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="3878e-115">Remarks</span></span>  
+ <span data-ttu-id="3878e-116">Bu yöntem ile aynıdır [Iclrstrongname::gethashfromfile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) yöntemi, dosya adı, tek farkı belirtimi yerine ANSI Unicode.</span><span class="sxs-lookup"><span data-stu-id="3878e-116">This method is the same as the [ICLRStrongName::GetHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) method, except that the file name specification is Unicode instead of ANSI.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6b521-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6b521-117">Requirements</span></span>  
- <span data-ttu-id="6b521-118">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6b521-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3878e-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3878e-117">Requirements</span></span>  
+ <span data-ttu-id="3878e-118">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3878e-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6b521-119">**Üst bilgi:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="6b521-119">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="3878e-119">**Üst bilgi:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="3878e-119">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="6b521-120">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="6b521-120">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3878e-120">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="3878e-120">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="6b521-121">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6b521-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="3878e-121">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3878e-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6b521-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6b521-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3878e-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3878e-122">See also</span></span>
 
-- [<span data-ttu-id="6b521-123">GetHashFromFile Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6b521-123">GetHashFromFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)
-- [<span data-ttu-id="6b521-124">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6b521-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="3878e-123">GetHashFromFile Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3878e-123">GetHashFromFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)
+- [<span data-ttu-id="3878e-124">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3878e-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
