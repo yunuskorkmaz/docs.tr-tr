@@ -21,11 +21,11 @@ ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 78210f9f007060551130812fcb5a9cd5b4728adc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58890507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768387"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Nasıl yapılır: Dizelerin Geçerli E-Posta Biçiminde Olduğunu Doğrulama
 Aşağıdaki örnek, bir dize geçerli bir e-posta biçiminde olduğunu doğrulamak için normal bir ifade kullanır.  
@@ -91,9 +91,9 @@ vbc /t:library RegexUtilities.vb
   
  E-posta doğrulama normal ifade içeren RegexUtilities.dll adlı bir sınıf kitaplığı oluşturduğunuz varsayıldığında, bu örnekte, aşağıdaki yollardan biriyle derleyebilirsiniz:  
   
--   Görsel bir konsol uygulaması oluşturma ve projenize bir başvuru RegexUtilities.dll ekleyerek Studio'da.  
+- Görsel bir konsol uygulaması oluşturma ve projenize bir başvuru RegexUtilities.dll ekleyerek Studio'da.  
   
--   Kopyalama ve kaynak kodu bir metin dosyasına kopyalayıp yapıştırarak aşağıdakine benzer bir komut ile derleme komut satırından (kaynak kodu dosyasının adını Example.cs veya Example.vb olduğunu varsayarak:  
+- Kopyalama ve kaynak kodu bir metin dosyasına kopyalayıp yapıştırarak aşağıdakine benzer bir komut ile derleme komut satırından (kaynak kodu dosyasının adını Example.cs veya Example.vb olduğunu varsayarak:  
   
     ```csharp  
     csc Example.cs /r:RegexUtilities.dll  

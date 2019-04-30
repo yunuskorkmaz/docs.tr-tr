@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
 ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757085"
 ---
 # <a name="xaml-resources"></a>XAML Kaynakları
 Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir nesnedir. Fırçalar ve stilleri kaynakları örnekleridir. Bu genel bakışta, kaynakları kullanmayı açıklar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Ayrıca oluşturabilir ve kod kullanarak veya birbirinin yerine kod arasında kaynaklarına erişin ve [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Daha fazla bilgi için [kaynaklar ve kod](resources-and-code.md).  
@@ -44,28 +44,28 @@ Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir n
   
  Bir kaynağa başvuruda bulunduğunuzda bir statik kaynak başvurusu veya bir dinamik kaynak başvurusu kullanıp aşağıdaki maddeler etkileyebilir:  
   
--   Genel tasarım, uygulamanız için kaynakları oluşturmaya (uygulamada, sayfa başına de kaybedilir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], bir kaynak yalnızca derleme içinde).  
+- Genel tasarım, uygulamanız için kaynakları oluşturmaya (uygulamada, sayfa başına de kaybedilir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], bir kaynak yalnızca derleme içinde).  
   
--   Uygulama işlevselliği: uygulamanızın gereksinimleri bölümünde gerçek zamanlı kaynaklar güncelleştiriliyor?  
+- Uygulama işlevselliği: uygulamanızın gereksinimleri bölümünde gerçek zamanlı kaynaklar güncelleştiriliyor?  
   
--   İlgili arama davranışı kaynak başvuru türü.  
+- İlgili arama davranışı kaynak başvuru türü.  
   
--   Belirli bir özellik veya kaynak türü ve o türden yerel davranışı.  
+- Belirli bir özellik veya kaynak türü ve o türden yerel davranışı.  
   
 ### <a name="static-resources"></a>Statik kaynaklar  
  Statik kaynak iş aşağıdaki koşullarda en iyi başvuruyor:  
   
--   Uygulama tasarımının en tüm kaynaklar sayfasına veya uygulama düzeyinde kaynak sözlükleri yoğunlaşır. Statik kaynak başvuruları değil yeniden değerlendirimiş bir sayfayı yeniden yüklemeyi gibi çalışma zamanı davranışları göre ve bu nedenle olabilir, kaynak başına gerekli olmadığı durumlarda çok sayıda dinamik kaynak başvurularını kaçınmak için bazı performans avantajı ve uygulama tasarımı.  
+- Uygulama tasarımının en tüm kaynaklar sayfasına veya uygulama düzeyinde kaynak sözlükleri yoğunlaşır. Statik kaynak başvuruları değil yeniden değerlendirimiş bir sayfayı yeniden yüklemeyi gibi çalışma zamanı davranışları göre ve bu nedenle olabilir, kaynak başına gerekli olmadığı durumlarda çok sayıda dinamik kaynak başvurularını kaçınmak için bazı performans avantajı ve uygulama tasarımı.  
   
--   Açık olmadığından bir özelliğin değerini ayarladığınız bir <xref:System.Windows.DependencyObject> veya <xref:System.Windows.Freezable>.  
+- Açık olmadığından bir özelliğin değerini ayarladığınız bir <xref:System.Windows.DependencyObject> veya <xref:System.Windows.Freezable>.  
   
--   Bir DLL içine derlenmiş ve uygulamanın bir parçası paketlenmiş veya uygulamalar arasında paylaşılan bir kaynak sözlüğü oluşturuyorsunuz.  
+- Bir DLL içine derlenmiş ve uygulamanın bir parçası paketlenmiş veya uygulamalar arasında paylaşılan bir kaynak sözlüğü oluşturuyorsunuz.  
   
--   Özel denetim için bir tema oluşturma ve tema içinde kullanılan kaynakları tanımlarsınız. Bu durum için tipik olarak dinamik kaynak başvurusu arama davranışı istemiyorsanız, böylece öngörülebilir ve kendi başına bir tema için arama statik kaynak başvuru davranışı bunun yerine istersiniz. Dinamik kaynak ile başvuru, hatta bir temasının bir başvuru sol çalışma zamanına kadar değerlendirilmez ve temayı olduğunda uygulanan, bazı yerel öğe temanızı başvuru çalışılırken bir anahtarı yeniden tanımlayacak ve yerel öğenin önceki kalacak kaybedilebilir Tema için kendi arama. Bu durumda, temanızı beklenen şekilde davranmaz.  
+- Özel denetim için bir tema oluşturma ve tema içinde kullanılan kaynakları tanımlarsınız. Bu durum için tipik olarak dinamik kaynak başvurusu arama davranışı istemiyorsanız, böylece öngörülebilir ve kendi başına bir tema için arama statik kaynak başvuru davranışı bunun yerine istersiniz. Dinamik kaynak ile başvuru, hatta bir temasının bir başvuru sol çalışma zamanına kadar değerlendirilmez ve temayı olduğunda uygulanan, bazı yerel öğe temanızı başvuru çalışılırken bir anahtarı yeniden tanımlayacak ve yerel öğenin önceki kalacak kaybedilebilir Tema için kendi arama. Bu durumda, temanızı beklenen şekilde davranmaz.  
   
--   Çok sayıda bağımlılık özellikleri ayarlamak için kaynakları kullanıyorsanız. Bağımlılık özelliklerine sahip geçerli değerini önbelleğe alma özelliği sistem tarafından etkin olarak, yükleme zamanında değerlendirilebilen bir bağımlılık özelliği için bir değer belirtirseniz, bağımlılık özelliği için yeniden değerlendirimiş ifadelerinin denetlemek sahip değil ve döndürebilir Son etkin değeri. Bu teknik bir performans kazancı olabilir.  
+- Çok sayıda bağımlılık özellikleri ayarlamak için kaynakları kullanıyorsanız. Bağımlılık özelliklerine sahip geçerli değerini önbelleğe alma özelliği sistem tarafından etkin olarak, yükleme zamanında değerlendirilebilen bir bağımlılık özelliği için bir değer belirtirseniz, bağımlılık özelliği için yeniden değerlendirimiş ifadelerinin denetlemek sahip değil ve döndürebilir Son etkin değeri. Bu teknik bir performans kazancı olabilir.  
   
--   Temel alınan kaynak için tüm tüketicileri değiştirmek istediğinizde ya da ayrı yazılabilir örnekleri için her bir tüketici kullanarak korumak istediğiniz [x: Shared Attribute](../../xaml-services/x-shared-attribute.md).  
+- Temel alınan kaynak için tüm tüketicileri değiştirmek istediğinizde ya da ayrı yazılabilir örnekleri için her bir tüketici kullanarak korumak istediğiniz [x: Shared Attribute](../../xaml-services/x-shared-attribute.md).  
   
 #### <a name="static-resource-lookup-behavior"></a>Statik kaynak arama davranışı  
   
@@ -84,28 +84,28 @@ Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir n
 ### <a name="dynamic-resources"></a>Dinamik kaynak  
  Dinamik kaynak aşağıdaki koşullarda en iyi şekilde çalışır:  
   
--   Kaynak değeri çalışma zamanına kadar bilinmemesi koşullara bağlıdır. Bu, sistem veya başka kullanıcı tarafından ayarlanabilir olan kaynaklar içerir. Örneğin, tarafından kullanıma sunulan gibi sistem özelliklerine başvuran bir ayarlayıcı değerleri oluşturabilirsiniz <xref:System.Windows.SystemColors>, <xref:System.Windows.SystemFonts>, veya <xref:System.Windows.SystemParameters>. Sonuç olarak kullanıcı ve işletim sisteminin çalışma zamanı ortamından geldiğinden, bu değerler gerçek anlamda dinamiktir. Ayrıca, burada sayfa düzeyinde kaynak erişim değişikliği de yakalamalısınız değiştirebilirsiniz uygulama düzeyi Temalar da olabilir.  
+- Kaynak değeri çalışma zamanına kadar bilinmemesi koşullara bağlıdır. Bu, sistem veya başka kullanıcı tarafından ayarlanabilir olan kaynaklar içerir. Örneğin, tarafından kullanıma sunulan gibi sistem özelliklerine başvuran bir ayarlayıcı değerleri oluşturabilirsiniz <xref:System.Windows.SystemColors>, <xref:System.Windows.SystemFonts>, veya <xref:System.Windows.SystemParameters>. Sonuç olarak kullanıcı ve işletim sisteminin çalışma zamanı ortamından geldiğinden, bu değerler gerçek anlamda dinamiktir. Ayrıca, burada sayfa düzeyinde kaynak erişim değişikliği de yakalamalısınız değiştirebilirsiniz uygulama düzeyi Temalar da olabilir.  
   
--   Oluşturuyorsanız veya özel bir denetim için tema stilleri başvuruyor.  
+- Oluşturuyorsanız veya özel bir denetim için tema stilleri başvuruyor.  
   
--   İçeriğini ayarlamak istediğinize bir <xref:System.Windows.ResourceDictionary> uygulama ömrü boyunca.  
+- İçeriğini ayarlamak istediğinize bir <xref:System.Windows.ResourceDictionary> uygulama ömrü boyunca.  
   
--   Burada bir ileri başvuru gerekebilir bağımlılıklarını içeren bir karmaşık kaynak yapısı var. Statik kaynak başvurularını İleri başvurulara desteklemez ancak çalışma zamanına kadar değerlendirilecek kaynak gerekmediği için dinamik kaynak başvuruları bunları destekleyen ve İleri başvurulara bu nedenle ilgili bir kavram değildir.  
+- Burada bir ileri başvuru gerekebilir bağımlılıklarını içeren bir karmaşık kaynak yapısı var. Statik kaynak başvurularını İleri başvurulara desteklemez ancak çalışma zamanına kadar değerlendirilecek kaynak gerekmediği için dinamik kaynak başvuruları bunları destekleyen ve İleri başvurulara bu nedenle ilgili bir kavram değildir.  
   
--   Bir derleme veya çalışma kümesi perspektifinden özellikle büyük bir kaynağa başvuruyor ve kaynak sayfa yüklendiğinde hemen kullanılamayabilir. Statik kaynak başvuruları her zaman yük [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Sayfa yüklediğinde; aslında kullanılana kadar bir dinamik kaynak başvurusu ancak yüklemez.  
+- Bir derleme veya çalışma kümesi perspektifinden özellikle büyük bir kaynağa başvuruyor ve kaynak sayfa yüklendiğinde hemen kullanılamayabilir. Statik kaynak başvuruları her zaman yük [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Sayfa yüklediğinde; aslında kullanılana kadar bir dinamik kaynak başvurusu ancak yüklemez.  
   
--   Bir stil ayarlayıcı değerleri Temalar veya diğer kullanıcı ayarlarını etkileyen diğer değerlerden burada gelebilir oluşturuyorsunuz.  
+- Bir stil ayarlayıcı değerleri Temalar veya diğer kullanıcı ayarlarını etkileyen diğer değerlerden burada gelebilir oluşturuyorsunuz.  
   
--   Mantıksal ağaçta uygulama ömrü boyunca yeniden üst öğeleri kaynakları uygulamaya koyuyor. Kaynak arama kapsamı değişiklikleri ayrıca olası üst değiştirme, yeni kapsamına göre hesaplanması reparented öğesinin kaynak istiyorsanız, bir dinamik kaynak başvurusu her zaman kullanın.  
+- Mantıksal ağaçta uygulama ömrü boyunca yeniden üst öğeleri kaynakları uygulamaya koyuyor. Kaynak arama kapsamı değişiklikleri ayrıca olası üst değiştirme, yeni kapsamına göre hesaplanması reparented öğesinin kaynak istiyorsanız, bir dinamik kaynak başvurusu her zaman kullanın.  
   
 #### <a name="dynamic-resource-lookup-behavior"></a>Dinamik kaynak arama davranışı  
  Kaynak arama davranışı bir dinamik kaynak başvurusu çağırırsanız, kodunuzda arama davranışı parallels <xref:System.Windows.FrameworkElement.FindResource%2A> veya <xref:System.Windows.FrameworkElement.SetResourceReference%2A>.  
   
 1. İstenen anahtar özelliğini ayarlayan bir öğe tarafından tanımlanan kaynak sözlüğünün içinde arama işlemi olup olmadığını denetler.  
   
-    -   Öğe tanımlıyorsa bir <xref:System.Windows.FrameworkElement.Style%2A> özelliği <xref:System.Windows.Style.Resources%2A> sözlükte <xref:System.Windows.Style> denetlenir.  
+    - Öğe tanımlıyorsa bir <xref:System.Windows.FrameworkElement.Style%2A> özelliği <xref:System.Windows.Style.Resources%2A> sözlükte <xref:System.Windows.Style> denetlenir.  
   
-    -   Öğe tanımlıyorsa bir <xref:System.Windows.Controls.Control.Template%2A> özelliği <xref:System.Windows.FrameworkTemplate.Resources%2A> sözlükte <xref:System.Windows.FrameworkTemplate> denetlenir.  
+    - Öğe tanımlıyorsa bir <xref:System.Windows.Controls.Control.Template%2A> özelliği <xref:System.Windows.FrameworkTemplate.Resources%2A> sözlükte <xref:System.Windows.FrameworkTemplate> denetlenir.  
   
 2. Arama işlemi üst öğe ve kendi kaynak sözlüğü için mantıksal ağaç yukarı, ardından erişir. Kök öğe ulaşılana kadar bu devam eder.  
   
@@ -117,20 +117,20 @@ Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir n
   
  Özel durum davranışını (varsa) değişir:  
   
--   Bir kaynak tarafından istenmişse bir <xref:System.Windows.FrameworkElement.FindResource%2A> çağırın ve bulunamadı; bir özel durum oluşturulur.  
+- Bir kaynak tarafından istenmişse bir <xref:System.Windows.FrameworkElement.FindResource%2A> çağırın ve bulunamadı; bir özel durum oluşturulur.  
   
--   Bir kaynak tarafından istenmişse bir <xref:System.Windows.FrameworkElement.TryFindResource%2A> çağırın ve bulunamadı, hiçbir özel durum oluşturulur, ancak döndürülen değer `null`. Ayarlanan özelliğin kabul edilmez, `null`, daha derin bir özel durum tetiklenir hala mümkün ise (ayarlanan bireysel özelliğe bağlıdır).  
+- Bir kaynak tarafından istenmişse bir <xref:System.Windows.FrameworkElement.TryFindResource%2A> çağırın ve bulunamadı, hiçbir özel durum oluşturulur, ancak döndürülen değer `null`. Ayarlanan özelliğin kabul edilmez, `null`, daha derin bir özel durum tetiklenir hala mümkün ise (ayarlanan bireysel özelliğe bağlıdır).  
   
--   Bir kaynak olarak dinamik kaynak başvuru istenip istenmediğini [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ve, bulunamadı sonra genel özellik sistemde davranışı bağlıdır, ancak genel hiçbir özellik ayarlama işlemini kaynağın bulunduğu düzeyinde oluştu gibi davranıştır. Örneğin, arka planı ayarlamayı denerseniz, bir değerlendirilemeyen bir kaynağı kullanarak bir düğmeye öğenin sonuçları herhangi bir değer ayarlayın, ancak geçerli değerini özelliği sistem ve değer önceliği diğer katılımcılardan yine de gelebilir. Örneğin, arka plan değeri hala yerel olarak tanımlanan düğme stilini veya tema stili gelebilir. Tema stilleri tarafından tanımlanmayan özellikler için özellik meta verileri varsayılan değerden başarısız kaynak değerlendirmesinden sonra etkili değer gelebilir.  
+- Bir kaynak olarak dinamik kaynak başvuru istenip istenmediğini [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ve, bulunamadı sonra genel özellik sistemde davranışı bağlıdır, ancak genel hiçbir özellik ayarlama işlemini kaynağın bulunduğu düzeyinde oluştu gibi davranıştır. Örneğin, arka planı ayarlamayı denerseniz, bir değerlendirilemeyen bir kaynağı kullanarak bir düğmeye öğenin sonuçları herhangi bir değer ayarlayın, ancak geçerli değerini özelliği sistem ve değer önceliği diğer katılımcılardan yine de gelebilir. Örneğin, arka plan değeri hala yerel olarak tanımlanan düğme stilini veya tema stili gelebilir. Tema stilleri tarafından tanımlanmayan özellikler için özellik meta verileri varsayılan değerden başarısız kaynak değerlendirmesinden sonra etkili değer gelebilir.  
   
 #### <a name="restrictions"></a>Kısıtlamalar  
  Dinamik kaynak başvurularını önemli bazı kısıtlamalar vardır. Aşağıdakilerden en az biri true olması gerekir:  
   
--   Bir özellik olmalıdır ayarlanan özelliğin bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement>. Özelliği tarafından yedeklenmesi gereken bir <xref:System.Windows.DependencyProperty>.  
+- Bir özellik olmalıdır ayarlanan özelliğin bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement>. Özelliği tarafından yedeklenmesi gereken bir <xref:System.Windows.DependencyProperty>.  
   
--   Başvuru arasında bir değer için olan bir <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
+- Başvuru arasında bir değer için olan bir <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
   
--   Ayarlanan özelliğin üzerinde bir özelliği olmalıdır bir <xref:System.Windows.Freezable> değerlerinden birine sağlanan bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement> özelliği veya <xref:System.Windows.Setter> değeri.  
+- Ayarlanan özelliğin üzerinde bir özelliği olmalıdır bir <xref:System.Windows.Freezable> değerlerinden birine sağlanan bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement> özelliği veya <xref:System.Windows.Setter> değeri.  
   
  Ayarlanan özelliğin olması gerektiğinden bir <xref:System.Windows.DependencyProperty> veya <xref:System.Windows.Freezable> özelliği, çoğu özellik değişiklikleri yaymak için kullanıcı Arabirimi bir özellik değişiminin (değiştirilen dinamik kaynak değeri) özellik sistemi tarafından onaylanır. Çoğu denetimleri başka bir düzen denetimi, zorlayacak mantığı içerir bir <xref:System.Windows.DependencyProperty> değişiklikleri ve özellik düzeni etkileyebilir. Ancak, tüm özellikleri sahip bir [DynamicResource işaretleme uzantısı](dynamicresource-markup-extension.md) süreliğine kullanıcı arabiriminde güncelleştirme şekilde değeri sağlamak için değer olarak garanti edilir. Bu işlevselliği hala özelliğine bağlı olarak yanı sıra özelliği veya bile uygulamanızın mantıksal yapısı sahibi türüne bağlı olarak değişebilir.  
   

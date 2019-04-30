@@ -4,11 +4,11 @@ description: Son geliştirmeler C# dil performansını daha önce güvenli olmay
 ms.date: 10/23/2018
 ms.custom: mvc
 ms.openlocfilehash: d363e357d3749bb2014456c0064c4de7dd7f1acb
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706045"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Güvenli ve verimli yazma C# kod
 
@@ -193,7 +193,7 @@ Kullanılarak oluşturulan bellek ile çalışmaya benzer gereksinimlerine sahip
 
 Bir yapı olarak bildirme `readonly ref` avantajları ve kısıtlamaları birleştirir `ref struct` ve `readonly struct` bildirimleri. Tek yığın çerçevesi için salt okunur aralık tarafından kullanılan bellek sınırlıdır ve salt okunur aralık tarafından kullanılan bellek değiştirilemez.
 
-## <a name="conclusions"></a>Sonuçları
+## <a name="conclusions"></a>Sonuçlar
 
 Değer türleri kullanarak ayırma işlemlerinin sayısını en aza indirir:
 

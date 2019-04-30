@@ -17,11 +17,11 @@ ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b7ccee788a00e56da16d1e78597815553d3c6212
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765940"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Normal İfadelerdeki Miktar Niceleyiciler
 Bir karakter, Grup veya karakter sınıfı kaç tane giriş eşleşmenin bulunması mevcut olmalıdır, miktar belirleyiciler belirtin.  .NET tarafından desteklenen miktar belirleyiciler aşağıdaki tabloda listelenmektedir.  
@@ -228,11 +228,11 @@ Bir karakter, Grup veya karakter sınıfı kaç tane giriş eşleşmenin bulunma
 ## <a name="greedy-and-lazy-quantifiers"></a>Doyumsuz ve yavaş miktar belirleyiciler  
  Miktar belirleyiciler iki sürümü vardır:  
   
--   Doyumsuz bir sürümü.  
+- Doyumsuz bir sürümü.  
   
      Doyumsuz bir miktar belirleyiciyi, olası sayıda öğenin eşleştirmeyi dener.  
   
--   Doyumsuz olmayan (veya yavaş) sürümü.  
+- Doyumsuz olmayan (veya yavaş) sürümü.  
   
      Doyumsuz olmayan bir miktar belirleyiciyi, mümkün olduğunca bir öğe eşleştirmeyi dener. Basitçe ekleyerek bir yavaş belirleyici birlikte doyumsuz bir miktar belirleyiciyi kapatabilirsiniz bir `?`.  
   
