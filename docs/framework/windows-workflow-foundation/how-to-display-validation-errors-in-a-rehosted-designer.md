@@ -3,20 +3,20 @@ title: 'Nasıl yapılır: Yeniden Barındırılan Tasarımcıda Doğrulama Hatal
 ms.date: 03/30/2017
 ms.assetid: 5aa8fb53-8f75-433b-bc06-7c7d33583d5d
 ms.openlocfilehash: a3d993f55bf130039905f1a6512a7ae104512432
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761485"
 ---
-# <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a><span data-ttu-id="a0d68-102">Nasıl yapılır: Yeniden Barındırılan Tasarımcıda Doğrulama Hatalarını Gösterme</span><span class="sxs-lookup"><span data-stu-id="a0d68-102">How to: Display Validation Errors in a Rehosted Designer</span></span>
-<span data-ttu-id="a0d68-103">Bu konu, alma ve doğrulama hatalarını içinde yeniden barındırılan yayımlama açıklar [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a0d68-103">This topic describes how to retrieve and publish validation errors in a rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span></span> <span data-ttu-id="a0d68-104">Bu bize bir iş akışı yeniden barındırılan tasarımcıda geçerli olduğundan emin olmak için ilgili bir yordam sağlar.</span><span class="sxs-lookup"><span data-stu-id="a0d68-104">This provides us with a procedure to confirm that a workflow in a rehosted designer is valid.</span></span>  
+# <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a><span data-ttu-id="0ff0d-102">Nasıl yapılır: Yeniden Barındırılan Tasarımcıda Doğrulama Hatalarını Gösterme</span><span class="sxs-lookup"><span data-stu-id="0ff0d-102">How to: Display Validation Errors in a Rehosted Designer</span></span>
+<span data-ttu-id="0ff0d-103">Bu konu, alma ve doğrulama hatalarını içinde yeniden barındırılan yayımlama açıklar [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0ff0d-103">This topic describes how to retrieve and publish validation errors in a rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span></span> <span data-ttu-id="0ff0d-104">Bu bize bir iş akışı yeniden barındırılan tasarımcıda geçerli olduğundan emin olmak için ilgili bir yordam sağlar.</span><span class="sxs-lookup"><span data-stu-id="0ff0d-104">This provides us with a procedure to confirm that a workflow in a rehosted designer is valid.</span></span>  
   
- <span data-ttu-id="a0d68-105">Bu görevi, iki bölümden oluşur.</span><span class="sxs-lookup"><span data-stu-id="a0d68-105">This task has two parts.</span></span> <span data-ttu-id="a0d68-106">İlk uygulama sağlamaktır <xref:System.Activities.Presentation.Validation.IValidationErrorService>.</span><span class="sxs-lookup"><span data-stu-id="a0d68-106">The first is to provide an implementation <xref:System.Activities.Presentation.Validation.IValidationErrorService>.</span></span>  <span data-ttu-id="a0d68-107">Bu arabirimde uygulamak için kritik bir yöntem <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A> hangi geçecek, listesini <xref:System.Activities.Presentation.Validation.ValidationErrorInfo> için hata ayıklama günlüğünü hatalara ilişkin bilgileri içeren bir nesne.</span><span class="sxs-lookup"><span data-stu-id="a0d68-107">There is one critical method to implement on this interface, <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A> which will pass you a list of <xref:System.Activities.Presentation.Validation.ValidationErrorInfo> objects containing information about the errors to the debug log.</span></span>  <span data-ttu-id="a0d68-108">Arabirimi uyguladıktan sonra bu uygulama örneği için düzenleme bağlamı yayımlayarak hata bilgileri alabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a0d68-108">After implementing the interface, you retrieve the error information by publishing an instance of that implementation to the editing context.</span></span>  
+ <span data-ttu-id="0ff0d-105">Bu görevi, iki bölümden oluşur.</span><span class="sxs-lookup"><span data-stu-id="0ff0d-105">This task has two parts.</span></span> <span data-ttu-id="0ff0d-106">İlk uygulama sağlamaktır <xref:System.Activities.Presentation.Validation.IValidationErrorService>.</span><span class="sxs-lookup"><span data-stu-id="0ff0d-106">The first is to provide an implementation <xref:System.Activities.Presentation.Validation.IValidationErrorService>.</span></span>  <span data-ttu-id="0ff0d-107">Bu arabirimde uygulamak için kritik bir yöntem <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A> hangi geçecek, listesini <xref:System.Activities.Presentation.Validation.ValidationErrorInfo> için hata ayıklama günlüğünü hatalara ilişkin bilgileri içeren bir nesne.</span><span class="sxs-lookup"><span data-stu-id="0ff0d-107">There is one critical method to implement on this interface, <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A> which will pass you a list of <xref:System.Activities.Presentation.Validation.ValidationErrorInfo> objects containing information about the errors to the debug log.</span></span>  <span data-ttu-id="0ff0d-108">Arabirimi uyguladıktan sonra bu uygulama örneği için düzenleme bağlamı yayımlayarak hata bilgileri alabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0ff0d-108">After implementing the interface, you retrieve the error information by publishing an instance of that implementation to the editing context.</span></span>  
   
-### <a name="implement-the-ivalidationerrorservice-interface"></a><span data-ttu-id="a0d68-109">IValidationErrorService arabirimini uygulama</span><span class="sxs-lookup"><span data-stu-id="a0d68-109">Implement the IValidationErrorService Interface</span></span>  
+### <a name="implement-the-ivalidationerrorservice-interface"></a><span data-ttu-id="0ff0d-109">IValidationErrorService arabirimini uygulama</span><span class="sxs-lookup"><span data-stu-id="0ff0d-109">Implement the IValidationErrorService Interface</span></span>  
   
-1. <span data-ttu-id="a0d68-110">Doğrulama hataları için hata ayıklama günlüğünü dışarı yazılacak basit bir uygulama için bir kod örneği aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="a0d68-110">Here is a code sample for a simple implementation that will write out the validation errors to the debug log.</span></span>  
+1. <span data-ttu-id="0ff0d-110">Doğrulama hataları için hata ayıklama günlüğünü dışarı yazılacak basit bir uygulama için bir kod örneği aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="0ff0d-110">Here is a code sample for a simple implementation that will write out the validation errors to the debug log.</span></span>  
   
     ```  
     using System.Activities.Presentation.Validation;  
@@ -36,9 +36,9 @@ ms.locfileid: "59770912"
     }  
     ```  
   
-### <a name="publishing-to-the-editing-context"></a><span data-ttu-id="a0d68-111">Düzenleme bağlamı yayımlama</span><span class="sxs-lookup"><span data-stu-id="a0d68-111">Publishing to the Editing Context</span></span>  
+### <a name="publishing-to-the-editing-context"></a><span data-ttu-id="0ff0d-111">Düzenleme bağlamı yayımlama</span><span class="sxs-lookup"><span data-stu-id="0ff0d-111">Publishing to the Editing Context</span></span>  
   
-1. <span data-ttu-id="a0d68-112">Bu düzenleme bağlamı için yayımlama kod aşağıdaki gibidir.</span><span class="sxs-lookup"><span data-stu-id="a0d68-112">Here is the code that will publish this to the editing context.</span></span>  
+1. <span data-ttu-id="0ff0d-112">Bu düzenleme bağlamı için yayımlama kod aşağıdaki gibidir.</span><span class="sxs-lookup"><span data-stu-id="0ff0d-112">Here is the code that will publish this to the editing context.</span></span>  
   
     ```  
     wd.Context.Services.Publish<IValidationErrorService>(new DebugValidationErrorService());  

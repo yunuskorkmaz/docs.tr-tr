@@ -3,25 +3,25 @@ title: Bir genişletme yöntemi (C#) kullanarak yeniden düzenleme
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
 ms.openlocfilehash: 904dd558819a498bd8a3876759edaaa185be3b7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61712428"
 ---
-# <a name="refactoring-using-an-extension-method-c"></a><span data-ttu-id="df4c2-102">Bir genişletme yöntemi (C#) kullanarak yeniden düzenleme</span><span class="sxs-lookup"><span data-stu-id="df4c2-102">Refactoring Using an Extension Method (C#)</span></span>
-<span data-ttu-id="df4c2-103">Bu örnek önceki örneğe, yapılar [(C#) paragrafların metnini alma](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), yeniden düzenleme bir genişletme yöntemi uygulanan saf işlev kullanarak dizeleri birleşimi tarafından.</span><span class="sxs-lookup"><span data-stu-id="df4c2-103">This example builds on the previous example, [Retrieving the Text of the Paragraphs (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.</span></span>  
+# <a name="refactoring-using-an-extension-method-c"></a><span data-ttu-id="74665-102">Bir genişletme yöntemi (C#) kullanarak yeniden düzenleme</span><span class="sxs-lookup"><span data-stu-id="74665-102">Refactoring Using an Extension Method (C#)</span></span>
+<span data-ttu-id="74665-103">Bu örnek önceki örneğe, yapılar [(C#) paragrafların metnini alma](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), yeniden düzenleme bir genişletme yöntemi uygulanan saf işlev kullanarak dizeleri birleşimi tarafından.</span><span class="sxs-lookup"><span data-stu-id="74665-103">This example builds on the previous example, [Retrieving the Text of the Paragraphs (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.</span></span>  
   
- <span data-ttu-id="df4c2-104">Önceki örnekte kullanılan <xref:System.Linq.Enumerable.Aggregate%2A> birden çok dizeyi bir dizede birleştirmek için standart sorgu işleci.</span><span class="sxs-lookup"><span data-stu-id="df4c2-104">The previous example used the <xref:System.Linq.Enumerable.Aggregate%2A> standard query operator to concatenate multiple strings into one string.</span></span> <span data-ttu-id="df4c2-105">Ancak, elde edilen sorgu daha küçük ve daha basit olduğundan, bunu yapmak için bir uzantı metodu yazma daha uygundur.</span><span class="sxs-lookup"><span data-stu-id="df4c2-105">However, it is more convenient to write an extension method to do this, because the resulting query smaller and more simple.</span></span>  
+ <span data-ttu-id="74665-104">Önceki örnekte kullanılan <xref:System.Linq.Enumerable.Aggregate%2A> birden çok dizeyi bir dizede birleştirmek için standart sorgu işleci.</span><span class="sxs-lookup"><span data-stu-id="74665-104">The previous example used the <xref:System.Linq.Enumerable.Aggregate%2A> standard query operator to concatenate multiple strings into one string.</span></span> <span data-ttu-id="74665-105">Ancak, elde edilen sorgu daha küçük ve daha basit olduğundan, bunu yapmak için bir uzantı metodu yazma daha uygundur.</span><span class="sxs-lookup"><span data-stu-id="74665-105">However, it is more convenient to write an extension method to do this, because the resulting query smaller and more simple.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="df4c2-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="df4c2-106">Example</span></span>  
- <span data-ttu-id="df4c2-107">Bu örnekte paragraflar, her paragraf stilini ve her bir paragraf metni alınırken WordprocessingML belgesinin işler.</span><span class="sxs-lookup"><span data-stu-id="df4c2-107">This example processes a WordprocessingML document, retrieving the paragraphs, the style of each paragraph, and the text of each paragraph.</span></span> <span data-ttu-id="df4c2-108">Bu örnek, önceki örneklerde üzerinde Bu öğreticide oluşturur.</span><span class="sxs-lookup"><span data-stu-id="df4c2-108">This example builds on the previous examples in this tutorial.</span></span>  
+## <a name="example"></a><span data-ttu-id="74665-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="74665-106">Example</span></span>  
+ <span data-ttu-id="74665-107">Bu örnekte paragraflar, her paragraf stilini ve her bir paragraf metni alınırken WordprocessingML belgesinin işler.</span><span class="sxs-lookup"><span data-stu-id="74665-107">This example processes a WordprocessingML document, retrieving the paragraphs, the style of each paragraph, and the text of each paragraph.</span></span> <span data-ttu-id="74665-108">Bu örnek, önceki örneklerde üzerinde Bu öğreticide oluşturur.</span><span class="sxs-lookup"><span data-stu-id="74665-108">This example builds on the previous examples in this tutorial.</span></span>  
   
- <span data-ttu-id="df4c2-109">Örnek, birden çok aşırı yükleme içerir `StringConcatenate` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="df4c2-109">The example contains multiple overloads of the `StringConcatenate` method.</span></span>  
+ <span data-ttu-id="74665-109">Örnek, birden çok aşırı yükleme içerir `StringConcatenate` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="74665-109">The example contains multiple overloads of the `StringConcatenate` method.</span></span>  
   
- <span data-ttu-id="df4c2-110">Bu örnekte için kaynak belge oluşturma için yönergeler bulabilirsiniz [kaynak Office Open XML belgesi (C#) oluşturma](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="df4c2-110">You can find instructions for creating the source document for this example in [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="74665-110">Bu örnekte için kaynak belge oluşturma için yönergeler bulabilirsiniz [kaynak Office Open XML belgesi (C#) oluşturma](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="74665-110">You can find instructions for creating the source document for this example in [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="df4c2-111">Bu örnek WindowsBase derlemesinden sınıfları kullanır.</span><span class="sxs-lookup"><span data-stu-id="df4c2-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="df4c2-112">Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="df4c2-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="74665-111">Bu örnek WindowsBase derlemesinden sınıfları kullanır.</span><span class="sxs-lookup"><span data-stu-id="74665-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="74665-112">Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="74665-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -62,10 +62,10 @@ public static class LocalExtensions
 }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="df4c2-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="df4c2-113">Example</span></span>  
- <span data-ttu-id="df4c2-114">Dört aşırı yükleme `StringConcatenate` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="df4c2-114">There are four overloads of the `StringConcatenate` method.</span></span> <span data-ttu-id="df4c2-115">Aşırı yüklemelerden birine yalnızca dizeleri koleksiyonunu alır ve tek bir dize döndürür.</span><span class="sxs-lookup"><span data-stu-id="df4c2-115">One overload simply takes a collection of strings and returns a single string.</span></span> <span data-ttu-id="df4c2-116">Başka bir aşırı herhangi bir tür ve temsilci koleksiyonu bu projelerden koleksiyonun tek bir dize alabilir.</span><span class="sxs-lookup"><span data-stu-id="df4c2-116">Another overload can take a collection of any type, and a delegate that projects from a singleton of the collection to a string.</span></span> <span data-ttu-id="df4c2-117">Bir ayırıcı dizesinde belirtmenize olanak veren iki daha fazla aşırı yüklemesi vardır.</span><span class="sxs-lookup"><span data-stu-id="df4c2-117">There are two more overloads that allow you to specify a separator string.</span></span>  
+## <a name="example"></a><span data-ttu-id="74665-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="74665-113">Example</span></span>  
+ <span data-ttu-id="74665-114">Dört aşırı yükleme `StringConcatenate` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="74665-114">There are four overloads of the `StringConcatenate` method.</span></span> <span data-ttu-id="74665-115">Aşırı yüklemelerden birine yalnızca dizeleri koleksiyonunu alır ve tek bir dize döndürür.</span><span class="sxs-lookup"><span data-stu-id="74665-115">One overload simply takes a collection of strings and returns a single string.</span></span> <span data-ttu-id="74665-116">Başka bir aşırı herhangi bir tür ve temsilci koleksiyonu bu projelerden koleksiyonun tek bir dize alabilir.</span><span class="sxs-lookup"><span data-stu-id="74665-116">Another overload can take a collection of any type, and a delegate that projects from a singleton of the collection to a string.</span></span> <span data-ttu-id="74665-117">Bir ayırıcı dizesinde belirtmenize olanak veren iki daha fazla aşırı yüklemesi vardır.</span><span class="sxs-lookup"><span data-stu-id="74665-117">There are two more overloads that allow you to specify a separator string.</span></span>  
   
- <span data-ttu-id="df4c2-118">Aşağıdaki kod, tüm dört aşırı yüklemeler kullanır.</span><span class="sxs-lookup"><span data-stu-id="df4c2-118">The following code uses all four overloads.</span></span>  
+ <span data-ttu-id="74665-118">Aşağıdaki kod, tüm dört aşırı yüklemeler kullanır.</span><span class="sxs-lookup"><span data-stu-id="74665-118">The following code uses all four overloads.</span></span>  
   
 ```csharp  
 string[] numbers = { "one", "two", "three" };  
@@ -78,7 +78,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(i => i.ToString()));
 Console.WriteLine("{0}", intNumbers.StringConcatenate(i => i.ToString(), ":"));  
 ```  
   
- <span data-ttu-id="df4c2-119">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="df4c2-119">This example produces the following output:</span></span>  
+ <span data-ttu-id="74665-119">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="74665-119">This example produces the following output:</span></span>  
   
 ```  
 onetwothree  
@@ -87,8 +87,8 @@ one:two:three:
 1:2:3:  
 ```  
   
-## <a name="example"></a><span data-ttu-id="df4c2-120">Örnek</span><span class="sxs-lookup"><span data-stu-id="df4c2-120">Example</span></span>  
- <span data-ttu-id="df4c2-121">Şimdi, örneğin yeni bir genişletme yöntemi yararlanmak için değiştirilebilir:</span><span class="sxs-lookup"><span data-stu-id="df4c2-121">Now, the example can be modified to take advantage of the new extension method:</span></span>  
+## <a name="example"></a><span data-ttu-id="74665-120">Örnek</span><span class="sxs-lookup"><span data-stu-id="74665-120">Example</span></span>  
+ <span data-ttu-id="74665-121">Şimdi, örneğin yeni bir genişletme yöntemi yararlanmak için değiştirilebilir:</span><span class="sxs-lookup"><span data-stu-id="74665-121">Now, the example can be modified to take advantage of the new extension method:</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -219,7 +219,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="df4c2-122">Bu örnek aşağıdaki belgede açıklanan uygulandığında çıktıyı üretir [kaynak Office Open XML belgesi (C#) oluşturma](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="df4c2-122">This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="74665-122">Bu örnek aşağıdaki belgede açıklanan uygulandığında çıktıyı üretir [kaynak Office Open XML belgesi (C#) oluşturma](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="74665-122">This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -239,14 +239,14 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
- <span data-ttu-id="df4c2-123">Bu yeniden düzenleme, yeniden düzenleme saf işlev bir değişken olduğuna dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="df4c2-123">Note that this refactoring is a variant of refactoring into a pure function.</span></span> <span data-ttu-id="df4c2-124">Bir sonraki konu başlığında, daha ayrıntılı saf işlevler halinde hesaba katacak şekilde fikri başlatacaktır.</span><span class="sxs-lookup"><span data-stu-id="df4c2-124">The next topic will introduce the idea of factoring into pure functions in more detail.</span></span>  
+ <span data-ttu-id="74665-123">Bu yeniden düzenleme, yeniden düzenleme saf işlev bir değişken olduğuna dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="74665-123">Note that this refactoring is a variant of refactoring into a pure function.</span></span> <span data-ttu-id="74665-124">Bir sonraki konu başlığında, daha ayrıntılı saf işlevler halinde hesaba katacak şekilde fikri başlatacaktır.</span><span class="sxs-lookup"><span data-stu-id="74665-124">The next topic will introduce the idea of factoring into pure functions in more detail.</span></span>  
   
-## <a name="next-steps"></a><span data-ttu-id="df4c2-125">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="df4c2-125">Next Steps</span></span>  
- <span data-ttu-id="df4c2-126">Sonraki örnek, saf işlevler kullanarak başka bir yolla bu kodu yeniden düzenleyin gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="df4c2-126">The next example shows how to refactor this code in another way, by using pure functions:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="74665-125">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="74665-125">Next Steps</span></span>  
+ <span data-ttu-id="74665-126">Sonraki örnek, saf işlevler kullanarak başka bir yolla bu kodu yeniden düzenleyin gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="74665-126">The next example shows how to refactor this code in another way, by using pure functions:</span></span>  
   
--   [<span data-ttu-id="df4c2-127">(Visual Basic) saf işlev kullanarak yeniden düzenleme</span><span class="sxs-lookup"><span data-stu-id="df4c2-127">Refactoring Using a Pure Function (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [<span data-ttu-id="74665-127">(Visual Basic) saf işlev kullanarak yeniden düzenleme</span><span class="sxs-lookup"><span data-stu-id="74665-127">Refactoring Using a Pure Function (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
-## <a name="see-also"></a><span data-ttu-id="df4c2-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="df4c2-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="74665-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="74665-128">See also</span></span>
 
-- [<span data-ttu-id="df4c2-129">Öğretici: WordprocessingML belgesindeki içeriği düzenleme (C#)</span><span class="sxs-lookup"><span data-stu-id="df4c2-129">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [<span data-ttu-id="df4c2-130">Saf işlevler halinde (C#) yeniden düzenleme</span><span class="sxs-lookup"><span data-stu-id="df4c2-130">Refactoring Into Pure Functions (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [<span data-ttu-id="74665-129">Öğretici: WordprocessingML belgesindeki içeriği düzenleme (C#)</span><span class="sxs-lookup"><span data-stu-id="74665-129">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [<span data-ttu-id="74665-130">Saf işlevler halinde (C#) yeniden düzenleme</span><span class="sxs-lookup"><span data-stu-id="74665-130">Refactoring Into Pure Functions (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

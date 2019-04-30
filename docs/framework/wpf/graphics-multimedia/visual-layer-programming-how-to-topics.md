@@ -9,27 +9,27 @@ helpviewer_keywords:
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
 ms.openlocfilehash: f41f9cf2b6deb30f5f1960cfab6e898f7032901e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762091"
 ---
-# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="a2407-102">Görsel Katman Programlama ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="a2407-102">Visual Layer Programming How-to Topics</span></span>
-<span data-ttu-id="a2407-103">Bu bölümdeki konular, görsel katman için isabet testi ve alt düzey birleşimi kullanma işlemini gösterir.</span><span class="sxs-lookup"><span data-stu-id="a2407-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
+# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="5aefc-102">Görsel Katman Programlama ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="5aefc-102">Visual Layer Programming How-to Topics</span></span>
+<span data-ttu-id="5aefc-103">Bu bölümdeki konular, görsel katman için isabet testi ve alt düzey birleşimi kullanma işlemini gösterir.</span><span class="sxs-lookup"><span data-stu-id="5aefc-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a2407-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="a2407-104">In This Section</span></span>  
- [<span data-ttu-id="a2407-105">Görselin Sapmasını Alma</span><span class="sxs-lookup"><span data-stu-id="a2407-105">Get the Offset of a Visual</span></span>](how-to-get-the-offset-of-a-visual.md)  
- [<span data-ttu-id="a2407-106">Görselin Çizim İçeriğini Numaralandırma</span><span class="sxs-lookup"><span data-stu-id="a2407-106">Enumerate Drawing Content of a Visual</span></span>](how-to-enumerate-drawing-content-of-a-visual.md)  
- [<span data-ttu-id="a2407-107">Görselde Tıklama Testi Geometrisi</span><span class="sxs-lookup"><span data-stu-id="a2407-107">Hit Test Geometry in a Visual</span></span>](how-to-hit-test-geometry-in-a-visual.md)  
- [<span data-ttu-id="a2407-108">Geometriyi Parametre Olarak Kullanan Tıklama Testi</span><span class="sxs-lookup"><span data-stu-id="a2407-108">Hit Test Using Geometry as a Parameter</span></span>](how-to-hit-test-using-geometry-as-a-parameter.md)  
- [<span data-ttu-id="a2407-109">Win32 Konak Kapsayıcısı Kullanan Tıklama Testi</span><span class="sxs-lookup"><span data-stu-id="a2407-109">Hit Test Using a Win32 Host Container</span></span>](how-to-hit-test-using-a-win32-host-container.md)  
- [<span data-ttu-id="a2407-110">CompositionTarget Kullanarak Çerçeve Aralığı Başına İşleme</span><span class="sxs-lookup"><span data-stu-id="a2407-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5aefc-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="5aefc-104">In This Section</span></span>  
+ [<span data-ttu-id="5aefc-105">Görselin Sapmasını Alma</span><span class="sxs-lookup"><span data-stu-id="5aefc-105">Get the Offset of a Visual</span></span>](how-to-get-the-offset-of-a-visual.md)  
+ [<span data-ttu-id="5aefc-106">Görselin Çizim İçeriğini Numaralandırma</span><span class="sxs-lookup"><span data-stu-id="5aefc-106">Enumerate Drawing Content of a Visual</span></span>](how-to-enumerate-drawing-content-of-a-visual.md)  
+ [<span data-ttu-id="5aefc-107">Görselde Tıklama Testi Geometrisi</span><span class="sxs-lookup"><span data-stu-id="5aefc-107">Hit Test Geometry in a Visual</span></span>](how-to-hit-test-geometry-in-a-visual.md)  
+ [<span data-ttu-id="5aefc-108">Geometriyi Parametre Olarak Kullanan Tıklama Testi</span><span class="sxs-lookup"><span data-stu-id="5aefc-108">Hit Test Using Geometry as a Parameter</span></span>](how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [<span data-ttu-id="5aefc-109">Win32 Konak Kapsayıcısı Kullanan Tıklama Testi</span><span class="sxs-lookup"><span data-stu-id="5aefc-109">Hit Test Using a Win32 Host Container</span></span>](how-to-hit-test-using-a-win32-host-container.md)  
+ [<span data-ttu-id="5aefc-110">CompositionTarget Kullanarak Çerçeve Aralığı Başına İşleme</span><span class="sxs-lookup"><span data-stu-id="5aefc-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a><span data-ttu-id="a2407-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a2407-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5aefc-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5aefc-111">See also</span></span>
 
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [<span data-ttu-id="a2407-112">WPF Grafik İşlemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="a2407-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="a2407-113">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="a2407-113">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="5aefc-112">WPF Grafik İşlemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="5aefc-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="5aefc-113">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="5aefc-113">Graphics and Multimedia</span></span>](index.md)

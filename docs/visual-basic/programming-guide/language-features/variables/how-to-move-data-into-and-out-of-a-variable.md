@@ -6,51 +6,51 @@ helpviewer_keywords:
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
 ms.openlocfilehash: 30d1c0ab91724ac556e59b272782513ee8b8067b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756604"
 ---
-# <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a><span data-ttu-id="ad5b7-102">Nasıl yapılır: Veri taşıma içine ve dışına bir değişken (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ad5b7-102">How to: Move Data Into and Out of a Variable (Visual Basic)</span></span>
-<span data-ttu-id="ad5b7-103">Bir değer atama deyiminin sol tarafında değişken adını koyarak bir değişkende depolayın.</span><span class="sxs-lookup"><span data-stu-id="ad5b7-103">You store a value in a variable by putting the variable name on the left side of an assignment statement.</span></span>  
+# <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a><span data-ttu-id="be486-102">Nasıl yapılır: Veri taşıma içine ve dışına bir değişken (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="be486-102">How to: Move Data Into and Out of a Variable (Visual Basic)</span></span>
+<span data-ttu-id="be486-103">Bir değer atama deyiminin sol tarafında değişken adını koyarak bir değişkende depolayın.</span><span class="sxs-lookup"><span data-stu-id="be486-103">You store a value in a variable by putting the variable name on the left side of an assignment statement.</span></span>  
   
-## <a name="putting-data-in-a-variable"></a><span data-ttu-id="ad5b7-104">Bir değişkende veri yerleştirme</span><span class="sxs-lookup"><span data-stu-id="ad5b7-104">Putting Data in a Variable</span></span>  
+## <a name="putting-data-in-a-variable"></a><span data-ttu-id="be486-104">Bir değişkende veri yerleştirme</span><span class="sxs-lookup"><span data-stu-id="be486-104">Putting Data in a Variable</span></span>  
   
-#### <a name="to-store-a-value-in-a-variable"></a><span data-ttu-id="ad5b7-105">Değer bir değişkende depolamak için</span><span class="sxs-lookup"><span data-stu-id="ad5b7-105">To store a value in a variable</span></span>  
+#### <a name="to-store-a-value-in-a-variable"></a><span data-ttu-id="be486-105">Değer bir değişkende depolamak için</span><span class="sxs-lookup"><span data-stu-id="be486-105">To store a value in a variable</span></span>  
   
--   <span data-ttu-id="ad5b7-106">Değişken adı, atama deyiminin sol tarafında kullanın.</span><span class="sxs-lookup"><span data-stu-id="ad5b7-106">Use the variable name on the left side of an assignment statement.</span></span>  
+- <span data-ttu-id="be486-106">Değişken adı, atama deyiminin sol tarafında kullanın.</span><span class="sxs-lookup"><span data-stu-id="be486-106">Use the variable name on the left side of an assignment statement.</span></span>  
   
-     <span data-ttu-id="ad5b7-107">Aşağıdaki örnek, değişkenin değerini ayarlar `alpha`.</span><span class="sxs-lookup"><span data-stu-id="ad5b7-107">The following example sets the value of the variable `alpha`.</span></span>  
+     <span data-ttu-id="be486-107">Aşağıdaki örnek, değişkenin değerini ayarlar `alpha`.</span><span class="sxs-lookup"><span data-stu-id="be486-107">The following example sets the value of the variable `alpha`.</span></span>  
   
     ```  
     alpha = (beta * 6.27) / (gamma + 2.1)  
     ```  
   
-     <span data-ttu-id="ad5b7-108">Atama ifadesi sağ tarafında oluşturulan değeri değişkeninde depolanır.</span><span class="sxs-lookup"><span data-stu-id="ad5b7-108">The value generated on the right side of the assignment statement is stored in the variable.</span></span>  
+     <span data-ttu-id="be486-108">Atama ifadesi sağ tarafında oluşturulan değeri değişkeninde depolanır.</span><span class="sxs-lookup"><span data-stu-id="be486-108">The value generated on the right side of the assignment statement is stored in the variable.</span></span>  
   
-## <a name="getting-data-from-a-variable"></a><span data-ttu-id="ad5b7-109">Bir değişkenden gelen veri alma</span><span class="sxs-lookup"><span data-stu-id="ad5b7-109">Getting Data from a Variable</span></span>  
- <span data-ttu-id="ad5b7-110">Bir değişkenin değeri, değişken adı bir ifade dahil ederek alın.</span><span class="sxs-lookup"><span data-stu-id="ad5b7-110">You retrieve a variable's value by including the variable name in an expression.</span></span>  
+## <a name="getting-data-from-a-variable"></a><span data-ttu-id="be486-109">Bir değişkenden gelen veri alma</span><span class="sxs-lookup"><span data-stu-id="be486-109">Getting Data from a Variable</span></span>  
+ <span data-ttu-id="be486-110">Bir değişkenin değeri, değişken adı bir ifade dahil ederek alın.</span><span class="sxs-lookup"><span data-stu-id="be486-110">You retrieve a variable's value by including the variable name in an expression.</span></span>  
   
-#### <a name="to-retrieve-a-value-from-a-variable"></a><span data-ttu-id="ad5b7-111">Bir değişkenden gelen bir değer almak için</span><span class="sxs-lookup"><span data-stu-id="ad5b7-111">To retrieve a value from a variable</span></span>  
+#### <a name="to-retrieve-a-value-from-a-variable"></a><span data-ttu-id="be486-111">Bir değişkenden gelen bir değer almak için</span><span class="sxs-lookup"><span data-stu-id="be486-111">To retrieve a value from a variable</span></span>  
   
--   <span data-ttu-id="ad5b7-112">Değişken adı bir ifade kullanın.</span><span class="sxs-lookup"><span data-stu-id="ad5b7-112">Use the variable name in an expression.</span></span> <span data-ttu-id="ad5b7-113">Bir değişkeni kullanabilirsiniz herhangi bir sabit bir değer veya bir sabit değer dışında bir ifadede bir sabitin değeri tanımlar kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ad5b7-113">You can use a variable anywhere you can use a constant or a literal, except in an expression that defines the value of a constant.</span></span>  
+- <span data-ttu-id="be486-112">Değişken adı bir ifade kullanın.</span><span class="sxs-lookup"><span data-stu-id="be486-112">Use the variable name in an expression.</span></span> <span data-ttu-id="be486-113">Bir değişkeni kullanabilirsiniz herhangi bir sabit bir değer veya bir sabit değer dışında bir ifadede bir sabitin değeri tanımlar kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="be486-113">You can use a variable anywhere you can use a constant or a literal, except in an expression that defines the value of a constant.</span></span>  
   
-     <span data-ttu-id="ad5b7-114">-veya-</span><span class="sxs-lookup"><span data-stu-id="ad5b7-114">-or-</span></span>  
+     <span data-ttu-id="be486-114">-veya-</span><span class="sxs-lookup"><span data-stu-id="be486-114">-or-</span></span>  
   
--   <span data-ttu-id="ad5b7-115">Eşit aşağıdaki değişken adını kullanın (`=`) bir atama ifadesinde oturum açın.</span><span class="sxs-lookup"><span data-stu-id="ad5b7-115">Use the variable name following the equal (`=`) sign in an assignment statement.</span></span>  
+- <span data-ttu-id="be486-115">Eşit aşağıdaki değişken adını kullanın (`=`) bir atama ifadesinde oturum açın.</span><span class="sxs-lookup"><span data-stu-id="be486-115">Use the variable name following the equal (`=`) sign in an assignment statement.</span></span>  
   
-     <span data-ttu-id="ad5b7-116">Aşağıdaki örnek, değişkenin değerini okur `startValue` ve değişkeninin değeri kullanır `counter` bir ifadede.</span><span class="sxs-lookup"><span data-stu-id="ad5b7-116">The following example reads the value of the variable `startValue` and then uses the value of the variable `counter` in an expression.</span></span>  
+     <span data-ttu-id="be486-116">Aşağıdaki örnek, değişkenin değerini okur `startValue` ve değişkeninin değeri kullanır `counter` bir ifadede.</span><span class="sxs-lookup"><span data-stu-id="be486-116">The following example reads the value of the variable `startValue` and then uses the value of the variable `counter` in an expression.</span></span>  
   
     ```  
     counter = startValue  
     cellValue = (counter + 5) ^ 2  
     ```  
   
-     <span data-ttu-id="ad5b7-117">Değişkeninin değeri ifade yalnızca bir sabit olur ve ardından değişken veya özellik atama ifadesi sol tarafındaki depolanır katılır.</span><span class="sxs-lookup"><span data-stu-id="ad5b7-117">The value of the variable participates in the expression just as a constant would, and then it is stored in the variable or property on the left side of the assignment statement.</span></span>  
+     <span data-ttu-id="be486-117">Değişkeninin değeri ifade yalnızca bir sabit olur ve ardından değişken veya özellik atama ifadesi sol tarafındaki depolanır katılır.</span><span class="sxs-lookup"><span data-stu-id="be486-117">The value of the variable participates in the expression just as a constant would, and then it is stored in the variable or property on the left side of the assignment statement.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ad5b7-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ad5b7-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be486-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="be486-118">See also</span></span>
 
-- [<span data-ttu-id="ad5b7-119">Değişkenler</span><span class="sxs-lookup"><span data-stu-id="ad5b7-119">Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [<span data-ttu-id="ad5b7-120">Değişken Bildirimi</span><span class="sxs-lookup"><span data-stu-id="ad5b7-120">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [<span data-ttu-id="ad5b7-121">Nesne Değişkenleri</span><span class="sxs-lookup"><span data-stu-id="ad5b7-121">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [<span data-ttu-id="be486-119">Değişkenler</span><span class="sxs-lookup"><span data-stu-id="be486-119">Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [<span data-ttu-id="be486-120">Değişken Bildirimi</span><span class="sxs-lookup"><span data-stu-id="be486-120">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [<span data-ttu-id="be486-121">Nesne Değişkenleri</span><span class="sxs-lookup"><span data-stu-id="be486-121">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

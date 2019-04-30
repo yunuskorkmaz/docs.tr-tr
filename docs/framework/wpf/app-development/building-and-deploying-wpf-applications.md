@@ -9,32 +9,32 @@ helpviewer_keywords:
 - builds [WPF]
 ms.assetid: 5198df5e-dda0-4ddc-a275-e0a7a4693524
 ms.openlocfilehash: 0c3ddc042586df1164618d2a169df98934779b30
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756981"
 ---
-# <a name="building-and-deploying-wpf-applications"></a><span data-ttu-id="22130-102">WPF Uygulamaları Oluşturma ve Dağıtma</span><span class="sxs-lookup"><span data-stu-id="22130-102">Building and Deploying WPF Applications</span></span>
-<span data-ttu-id="22130-103">Derleme ve dağıtım modeli aşağıdakiler dahil olmak üzere derleme ve yerel olarak veya uzaktan, uygulamaları dağıtma yeteneği sağlar:</span><span class="sxs-lookup"><span data-stu-id="22130-103">The build and deployment model provides the capability to build and deploy applications locally and remotely, including the following:</span></span>  
+# <a name="building-and-deploying-wpf-applications"></a><span data-ttu-id="0649f-102">WPF Uygulamaları Oluşturma ve Dağıtma</span><span class="sxs-lookup"><span data-stu-id="0649f-102">Building and Deploying WPF Applications</span></span>
+<span data-ttu-id="0649f-103">Derleme ve dağıtım modeli aşağıdakiler dahil olmak üzere derleme ve yerel olarak veya uzaktan, uygulamaları dağıtma yeteneği sağlar:</span><span class="sxs-lookup"><span data-stu-id="0649f-103">The build and deployment model provides the capability to build and deploy applications locally and remotely, including the following:</span></span>  
   
--   <span data-ttu-id="22130-104">MSBuild: .NET Microsoft.Build.Tasks.Windows ad alanında bulunan bir sistem oluşturun.</span><span class="sxs-lookup"><span data-stu-id="22130-104">MSBuild: the .NET build system located in the Microsoft.Build.Tasks.Windows namespace.</span></span>  
+- <span data-ttu-id="0649f-104">MSBuild: .NET Microsoft.Build.Tasks.Windows ad alanında bulunan bir sistem oluşturun.</span><span class="sxs-lookup"><span data-stu-id="0649f-104">MSBuild: the .NET build system located in the Microsoft.Build.Tasks.Windows namespace.</span></span>  
   
--   <span data-ttu-id="22130-105">Kaynaklar: UI kaynakları ile çalışma.</span><span class="sxs-lookup"><span data-stu-id="22130-105">Resources: working with UI resources.</span></span>  
+- <span data-ttu-id="0649f-105">Kaynaklar: UI kaynakları ile çalışma.</span><span class="sxs-lookup"><span data-stu-id="0649f-105">Resources: working with UI resources.</span></span>  
   
--   <span data-ttu-id="22130-106">ClickOnce dağıtımı: .NET yayımlama ve dağıtım sistemi.</span><span class="sxs-lookup"><span data-stu-id="22130-106">ClickOnce Deployment: the .NET publishing and deployment system.</span></span>  
+- <span data-ttu-id="0649f-106">ClickOnce dağıtımı: .NET yayımlama ve dağıtım sistemi.</span><span class="sxs-lookup"><span data-stu-id="0649f-106">ClickOnce Deployment: the .NET publishing and deployment system.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="22130-107">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="22130-107">In This Section</span></span>  
- [<span data-ttu-id="22130-108">WPF Uygulaması Derleme</span><span class="sxs-lookup"><span data-stu-id="22130-108">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)  
- [<span data-ttu-id="22130-109">WPF Uygulaması Dağıtma</span><span class="sxs-lookup"><span data-stu-id="22130-109">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)  
- [<span data-ttu-id="22130-110">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="22130-110">How-to Topics</span></span>](build-and-deploy-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0649f-107">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="0649f-107">In This Section</span></span>  
+ [<span data-ttu-id="0649f-108">WPF Uygulaması Derleme</span><span class="sxs-lookup"><span data-stu-id="0649f-108">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="0649f-109">WPF Uygulaması Dağıtma</span><span class="sxs-lookup"><span data-stu-id="0649f-109">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="0649f-110">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="0649f-110">How-to Topics</span></span>](build-and-deploy-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="22130-111">Başvuru</span><span class="sxs-lookup"><span data-stu-id="22130-111">Reference</span></span>  
- <span data-ttu-id="22130-112">MSBuild</span><span class="sxs-lookup"><span data-stu-id="22130-112">MSBuild</span></span>  
+## <a name="reference"></a><span data-ttu-id="0649f-111">Başvuru</span><span class="sxs-lookup"><span data-stu-id="0649f-111">Reference</span></span>  
+ <span data-ttu-id="0649f-112">MSBuild</span><span class="sxs-lookup"><span data-stu-id="0649f-112">MSBuild</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="22130-113">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="22130-113">Related Sections</span></span>  
- [<span data-ttu-id="22130-114">Uygulama Yönetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="22130-114">Application Management Overview</span></span>](application-management-overview.md)  
-  [<span data-ttu-id="22130-115">WPF’de Windows</span><span class="sxs-lookup"><span data-stu-id="22130-115">Windows in WPF</span></span>](windows-in-wpf-applications.md)  
-  [<span data-ttu-id="22130-116">Gezintiye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="22130-116">Navigation Overview</span></span>](navigation-overview.md)  
-  [<span data-ttu-id="22130-117">WPF XAML Tarayıcı Uygulamalarına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="22130-117">WPF XAML Browser Applications Overview</span></span>](wpf-xaml-browser-applications-overview.md)  
-  [<span data-ttu-id="22130-118">Barındırma</span><span class="sxs-lookup"><span data-stu-id="22130-118">Hosting</span></span>](hosting-wpf-applications.md)
+## <a name="related-sections"></a><span data-ttu-id="0649f-113">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="0649f-113">Related Sections</span></span>  
+ [<span data-ttu-id="0649f-114">Uygulama Yönetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="0649f-114">Application Management Overview</span></span>](application-management-overview.md)  
+  [<span data-ttu-id="0649f-115">WPF’de Windows</span><span class="sxs-lookup"><span data-stu-id="0649f-115">Windows in WPF</span></span>](windows-in-wpf-applications.md)  
+  [<span data-ttu-id="0649f-116">Gezintiye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="0649f-116">Navigation Overview</span></span>](navigation-overview.md)  
+  [<span data-ttu-id="0649f-117">WPF XAML Tarayıcı Uygulamalarına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="0649f-117">WPF XAML Browser Applications Overview</span></span>](wpf-xaml-browser-applications-overview.md)  
+  [<span data-ttu-id="0649f-118">Barındırma</span><span class="sxs-lookup"><span data-stu-id="0649f-118">Hosting</span></span>](hosting-wpf-applications.md)

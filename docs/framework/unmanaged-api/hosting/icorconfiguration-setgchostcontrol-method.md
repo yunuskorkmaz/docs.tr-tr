@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 50a92058e8a394b95c690d19f1bafdddbed8246a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763249"
 ---
-# <a name="icorconfigurationsetgchostcontrol-method"></a><span data-ttu-id="0a470-102">ICorConfiguration::SetGCHostControl Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0a470-102">ICorConfiguration::SetGCHostControl Method</span></span>
-<span data-ttu-id="0a470-103">Sanal bellek sınırlarını değiştirmek için ana istemek için atık toplayıcı tarafından kullanılmak üzere geri arama arabirimini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="0a470-103">Sets the callback interface to be used by the garbage collector to request the host to change the limits of virtual memory.</span></span>  
+# <a name="icorconfigurationsetgchostcontrol-method"></a><span data-ttu-id="b572b-102">ICorConfiguration::SetGCHostControl Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b572b-102">ICorConfiguration::SetGCHostControl Method</span></span>
+<span data-ttu-id="b572b-103">Sanal bellek sınırlarını değiştirmek için ana istemek için atık toplayıcı tarafından kullanılmak üzere geri arama arabirimini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="b572b-103">Sets the callback interface to be used by the garbage collector to request the host to change the limits of virtual memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0a470-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0a470-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b572b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b572b-104">Syntax</span></span>  
   
 ```  
 HRESULT SetGCHostControl (  
@@ -35,19 +35,19 @@ HRESULT SetGCHostControl (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0a470-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0a470-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b572b-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b572b-105">Parameters</span></span>  
  `pGCHostControl`  
- <span data-ttu-id="0a470-106">[in] Bir işaretçi bir [Igchostcontrol](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md) sanal bellek sınırlarını değiştirmek için ana istemek çöp toplayıcı sağlayan nesne.</span><span class="sxs-lookup"><span data-stu-id="0a470-106">[in] A pointer to an [IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md) object that allows the garbage collector to request the host to change the limits of virtual memory.</span></span>  
+ <span data-ttu-id="b572b-106">[in] Bir işaretçi bir [Igchostcontrol](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md) sanal bellek sınırlarını değiştirmek için ana istemek çöp toplayıcı sağlayan nesne.</span><span class="sxs-lookup"><span data-stu-id="b572b-106">[in] A pointer to an [IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md) object that allows the garbage collector to request the host to change the limits of virtual memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0a470-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0a470-107">Requirements</span></span>  
- <span data-ttu-id="0a470-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0a470-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b572b-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b572b-107">Requirements</span></span>  
+ <span data-ttu-id="b572b-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b572b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0a470-109">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0a470-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b572b-109">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b572b-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0a470-110">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="0a470-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b572b-110">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="b572b-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0a470-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0a470-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b572b-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b572b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a470-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0a470-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b572b-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b572b-112">See also</span></span>
 
-- [<span data-ttu-id="0a470-113">ICorConfiguration Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0a470-113">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)
+- [<span data-ttu-id="b572b-113">ICorConfiguration Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b572b-113">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 73645265821d5854776e412f8eb0f33b36db00d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698180"
 ---
-# <a name="iclrdatatargetgetpointersize-method"></a><span data-ttu-id="6d1d6-102">ICLRDataTarget::GetPointerSize Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6d1d6-102">ICLRDataTarget::GetPointerSize Method</span></span>
-<span data-ttu-id="6d1d6-103">Hedef işlemin kullandığı işaretçi türünün bayt cinsinden boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="6d1d6-103">Gets the size, in bytes, of the pointer type that the target process uses.</span></span> <span data-ttu-id="6d1d6-104">Bu yöntem, ortak dil çalışma zamanı veri erişim Hizmetleri tarafından çağrılır.</span><span class="sxs-lookup"><span data-stu-id="6d1d6-104">This method is called by the common language runtime data access services.</span></span>  
+# <a name="iclrdatatargetgetpointersize-method"></a><span data-ttu-id="8acb3-102">ICLRDataTarget::GetPointerSize Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8acb3-102">ICLRDataTarget::GetPointerSize Method</span></span>
+<span data-ttu-id="8acb3-103">Hedef işlemin kullandığı işaretçi türünün bayt cinsinden boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="8acb3-103">Gets the size, in bytes, of the pointer type that the target process uses.</span></span> <span data-ttu-id="8acb3-104">Bu yöntem, ortak dil çalışma zamanı veri erişim Hizmetleri tarafından çağrılır.</span><span class="sxs-lookup"><span data-stu-id="8acb3-104">This method is called by the common language runtime data access services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6d1d6-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6d1d6-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8acb3-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8acb3-105">Syntax</span></span>  
   
 ```  
 HRESULT GetPointerSize (  
@@ -35,22 +35,22 @@ HRESULT GetPointerSize (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6d1d6-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6d1d6-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8acb3-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8acb3-106">Parameters</span></span>  
  `pointerSize`  
- <span data-ttu-id="6d1d6-107">[out] Hedef işlem üzerinde bir işaretçi bayt cinsinden boyutunu belirten bir tamsayı değeri için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="6d1d6-107">[out] A pointer to an integer value that specifies the size, in bytes, of a pointer on the target process.</span></span>  
+ <span data-ttu-id="8acb3-107">[out] Hedef işlem üzerinde bir işaretçi bayt cinsinden boyutunu belirten bir tamsayı değeri için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="8acb3-107">[out] A pointer to an integer value that specifies the size, in bytes, of a pointer on the target process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6d1d6-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6d1d6-108">Remarks</span></span>  
- <span data-ttu-id="6d1d6-109">Bu yöntem, hata ayıklama uygulamanın yazıcı tarafından uygulanır.</span><span class="sxs-lookup"><span data-stu-id="6d1d6-109">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8acb3-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8acb3-108">Remarks</span></span>  
+ <span data-ttu-id="8acb3-109">Bu yöntem, hata ayıklama uygulamanın yazıcı tarafından uygulanır.</span><span class="sxs-lookup"><span data-stu-id="8acb3-109">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6d1d6-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6d1d6-110">Requirements</span></span>  
- <span data-ttu-id="6d1d6-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6d1d6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8acb3-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8acb3-110">Requirements</span></span>  
+ <span data-ttu-id="8acb3-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8acb3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6d1d6-112">**Üst bilgi:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="6d1d6-112">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="8acb3-112">**Üst bilgi:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="8acb3-112">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="6d1d6-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6d1d6-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8acb3-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8acb3-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6d1d6-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6d1d6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8acb3-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8acb3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6d1d6-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6d1d6-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8acb3-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8acb3-115">See also</span></span>
 
-- [<span data-ttu-id="6d1d6-116">ICLRDataTarget Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6d1d6-116">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [<span data-ttu-id="8acb3-116">ICLRDataTarget Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8acb3-116">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

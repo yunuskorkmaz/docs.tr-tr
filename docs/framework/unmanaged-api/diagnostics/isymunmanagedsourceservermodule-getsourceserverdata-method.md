@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ea8052152b08732906c707648f361bba4d83a276
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761565"
 ---
-# <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a><span data-ttu-id="8994c-102">ISymUnmanagedSourceServerModule::GetSourceServerData Metodu</span><span class="sxs-lookup"><span data-stu-id="8994c-102">ISymUnmanagedSourceServerModule::GetSourceServerData Method</span></span>
-<span data-ttu-id="8994c-103">Kaynak sunucu verileri modülü için döndürür.</span><span class="sxs-lookup"><span data-stu-id="8994c-103">Returns the source server data for the module.</span></span> <span data-ttu-id="8994c-104">Çağıranın kullanarak ücretsiz kaynaklar gerekir `CoTaskMemFree`.</span><span class="sxs-lookup"><span data-stu-id="8994c-104">The caller must free resources by using `CoTaskMemFree`.</span></span>  
+# <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a><span data-ttu-id="46c28-102">ISymUnmanagedSourceServerModule::GetSourceServerData Metodu</span><span class="sxs-lookup"><span data-stu-id="46c28-102">ISymUnmanagedSourceServerModule::GetSourceServerData Method</span></span>
+<span data-ttu-id="46c28-103">Kaynak sunucu verileri modülü için döndürür.</span><span class="sxs-lookup"><span data-stu-id="46c28-103">Returns the source server data for the module.</span></span> <span data-ttu-id="46c28-104">Çağıranın kullanarak ücretsiz kaynaklar gerekir `CoTaskMemFree`.</span><span class="sxs-lookup"><span data-stu-id="46c28-104">The caller must free resources by using `CoTaskMemFree`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8994c-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8994c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="46c28-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="46c28-105">Syntax</span></span>  
   
 ```  
 HRESULT GetSourceServerData(  
@@ -35,19 +35,19 @@ HRESULT GetSourceServerData(
     [out, size_is (, *pDataByteCount)] BYTE** ppData);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8994c-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8994c-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="46c28-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="46c28-106">Parameters</span></span>  
  `pDataByteCount`  
- <span data-ttu-id="8994c-107">[out] Bir işaretçi bir `ULONG32` , kaynak sunucu verilerin bayt cinsinden boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="8994c-107">[out] A pointer to a `ULONG32` that receives the size, in bytes, of the source server data.</span></span>  
+ <span data-ttu-id="46c28-107">[out] Bir işaretçi bir `ULONG32` , kaynak sunucu verilerin bayt cinsinden boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="46c28-107">[out] A pointer to a `ULONG32` that receives the size, in bytes, of the source server data.</span></span>  
   
  `ppData`  
- <span data-ttu-id="8994c-108">[out] Döndürülen işaretçi `pDataByteCount` değeri.</span><span class="sxs-lookup"><span data-stu-id="8994c-108">[out] A pointer to the returned `pDataByteCount` value.</span></span>  
+ <span data-ttu-id="46c28-108">[out] Döndürülen işaretçi `pDataByteCount` değeri.</span><span class="sxs-lookup"><span data-stu-id="46c28-108">[out] A pointer to the returned `pDataByteCount` value.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8994c-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="8994c-109">Return Value</span></span>  
- <span data-ttu-id="8994c-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="8994c-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="46c28-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="46c28-109">Return Value</span></span>  
+ <span data-ttu-id="46c28-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="46c28-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8994c-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8994c-111">Requirements</span></span>  
- <span data-ttu-id="8994c-112">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="8994c-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="46c28-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="46c28-111">Requirements</span></span>  
+ <span data-ttu-id="46c28-112">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="46c28-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8994c-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8994c-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="46c28-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="46c28-113">See also</span></span>
 
-- [<span data-ttu-id="8994c-114">ISymUnmanagedSourceServerModule Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8994c-114">ISymUnmanagedSourceServerModule Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)
+- [<span data-ttu-id="46c28-114">ISymUnmanagedSourceServerModule Arabirimi</span><span class="sxs-lookup"><span data-stu-id="46c28-114">ISymUnmanagedSourceServerModule Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)

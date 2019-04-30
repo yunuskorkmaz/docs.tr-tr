@@ -3,21 +3,21 @@ title: <host>
 ms.date: 03/30/2017
 ms.assetid: be566d55-9d50-4b2e-985d-52a5cc26cbbb
 ms.openlocfilehash: 3d1f7774f61060880a5c3b0327bdd6c2cc4dd74e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746760"
 ---
-# <a name="host"></a><span data-ttu-id="47baa-101">\<konak ></span><span class="sxs-lookup"><span data-stu-id="47baa-101">\<host></span></span>
-<span data-ttu-id="47baa-102">Hizmet konak makinesi ayarlarını belirler.</span><span class="sxs-lookup"><span data-stu-id="47baa-102">Specifies settings for a service host.</span></span>  
+# <a name="host"></a><span data-ttu-id="7142e-101">\<konak ></span><span class="sxs-lookup"><span data-stu-id="7142e-101">\<host></span></span>
+<span data-ttu-id="7142e-102">Hizmet konak makinesi ayarlarını belirler.</span><span class="sxs-lookup"><span data-stu-id="7142e-102">Specifies settings for a service host.</span></span>  
   
- <span data-ttu-id="47baa-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="47baa-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="47baa-104">\<Hizmetleri ></span><span class="sxs-lookup"><span data-stu-id="47baa-104">\<services></span></span>  
-<span data-ttu-id="47baa-105">\<Hizmet ></span><span class="sxs-lookup"><span data-stu-id="47baa-105">\<service></span></span>  
-<span data-ttu-id="47baa-106">\<konak ></span><span class="sxs-lookup"><span data-stu-id="47baa-106">\<host></span></span>  
+ <span data-ttu-id="7142e-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="7142e-103">\<system.ServiceModel></span></span>  
+<span data-ttu-id="7142e-104">\<Hizmetleri ></span><span class="sxs-lookup"><span data-stu-id="7142e-104">\<services></span></span>  
+<span data-ttu-id="7142e-105">\<Hizmet ></span><span class="sxs-lookup"><span data-stu-id="7142e-105">\<service></span></span>  
+<span data-ttu-id="7142e-106">\<konak ></span><span class="sxs-lookup"><span data-stu-id="7142e-106">\<host></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="47baa-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="47baa-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7142e-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7142e-107">Syntax</span></span>  
   
 ```xml  
 <host>
@@ -29,30 +29,30 @@ ms.locfileid: "59103005"
 </host>
 ```  
   
-## <a name="type"></a><span data-ttu-id="47baa-108">Tür</span><span class="sxs-lookup"><span data-stu-id="47baa-108">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="7142e-108">Tür</span><span class="sxs-lookup"><span data-stu-id="7142e-108">Type</span></span>  
  `Type`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="47baa-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="47baa-109">Attributes and Elements</span></span>  
- <span data-ttu-id="47baa-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="47baa-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7142e-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="7142e-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="7142e-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="7142e-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="47baa-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="47baa-111">Attributes</span></span>  
- <span data-ttu-id="47baa-112">Yok.</span><span class="sxs-lookup"><span data-stu-id="47baa-112">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="7142e-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="7142e-111">Attributes</span></span>  
+ <span data-ttu-id="7142e-112">Yok.</span><span class="sxs-lookup"><span data-stu-id="7142e-112">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="47baa-113">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="47baa-113">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="7142e-113">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="7142e-113">Child Elements</span></span>  
   
-|<span data-ttu-id="47baa-114">Öğe</span><span class="sxs-lookup"><span data-stu-id="47baa-114">Element</span></span>|<span data-ttu-id="47baa-115">Açıklama</span><span class="sxs-lookup"><span data-stu-id="47baa-115">Description</span></span>|  
+|<span data-ttu-id="7142e-114">Öğe</span><span class="sxs-lookup"><span data-stu-id="7142e-114">Element</span></span>|<span data-ttu-id="7142e-115">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7142e-115">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="47baa-116">\<baseAddresses ></span><span class="sxs-lookup"><span data-stu-id="47baa-116">\<baseAddresses></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|<span data-ttu-id="47baa-117">Bir koleksiyonu `baseAddress` hizmet ana bilgisayarı tarafından kullanılan tabanı belirten öğeleri.</span><span class="sxs-lookup"><span data-stu-id="47baa-117">A collection of `baseAddress` elements that specifies the base addresses used by the service host.</span></span>|  
-|[<span data-ttu-id="47baa-118">\<zaman aşımı ></span><span class="sxs-lookup"><span data-stu-id="47baa-118">\<timeOuts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/timeouts.md)|<span data-ttu-id="47baa-119">Hizmet ana bilgisayarı açmak veya kapatmak izin verilen zaman aralığını belirten bir yapılandırma öğesi.</span><span class="sxs-lookup"><span data-stu-id="47baa-119">A configuration element that specifies the interval of time allowed for the service host to open or close.</span></span>|  
+|[<span data-ttu-id="7142e-116">\<baseAddresses ></span><span class="sxs-lookup"><span data-stu-id="7142e-116">\<baseAddresses></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|<span data-ttu-id="7142e-117">Bir koleksiyonu `baseAddress` hizmet ana bilgisayarı tarafından kullanılan tabanı belirten öğeleri.</span><span class="sxs-lookup"><span data-stu-id="7142e-117">A collection of `baseAddress` elements that specifies the base addresses used by the service host.</span></span>|  
+|[<span data-ttu-id="7142e-118">\<zaman aşımı ></span><span class="sxs-lookup"><span data-stu-id="7142e-118">\<timeOuts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/timeouts.md)|<span data-ttu-id="7142e-119">Hizmet ana bilgisayarı açmak veya kapatmak izin verilen zaman aralığını belirten bir yapılandırma öğesi.</span><span class="sxs-lookup"><span data-stu-id="7142e-119">A configuration element that specifies the interval of time allowed for the service host to open or close.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="47baa-120">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="47baa-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="7142e-120">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="7142e-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="47baa-121">Öğe</span><span class="sxs-lookup"><span data-stu-id="47baa-121">Element</span></span>|<span data-ttu-id="47baa-122">Açıklama</span><span class="sxs-lookup"><span data-stu-id="47baa-122">Description</span></span>|  
+|<span data-ttu-id="7142e-121">Öğe</span><span class="sxs-lookup"><span data-stu-id="7142e-121">Element</span></span>|<span data-ttu-id="7142e-122">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7142e-122">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="47baa-123">\<Hizmet ></span><span class="sxs-lookup"><span data-stu-id="47baa-123">\<service></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|<span data-ttu-id="47baa-124">Bir Windows Communication Foundation (WCF) hizmetinin ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="47baa-124">Specifies the settings for a Windows Communication Foundation (WCF) service.</span></span>|  
+|[<span data-ttu-id="7142e-123">\<Hizmet ></span><span class="sxs-lookup"><span data-stu-id="7142e-123">\<service></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|<span data-ttu-id="7142e-124">Bir Windows Communication Foundation (WCF) hizmetinin ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="7142e-124">Specifies the settings for a Windows Communication Foundation (WCF) service.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="47baa-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="47baa-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7142e-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7142e-125">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.HostElement>
 - <xref:System.ServiceModel.ServiceHost>
-- [<span data-ttu-id="47baa-126">Barındırma</span><span class="sxs-lookup"><span data-stu-id="47baa-126">Hosting</span></span>](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [<span data-ttu-id="7142e-126">Barındırma</span><span class="sxs-lookup"><span data-stu-id="7142e-126">Hosting</span></span>](../../../../../docs/framework/wcf/feature-details/hosting.md)

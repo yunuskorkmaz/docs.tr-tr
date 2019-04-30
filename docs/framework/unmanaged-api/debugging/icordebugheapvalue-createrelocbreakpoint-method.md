@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fac87410d4e9b23fd532582b9ce1500e2c08a301
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700450"
 ---
-# <a name="icordebugheapvaluecreaterelocbreakpoint-method"></a><span data-ttu-id="0f1f6-102">ICorDebugHeapValue::CreateRelocBreakpoint Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0f1f6-102">ICorDebugHeapValue::CreateRelocBreakpoint Method</span></span>
-<span data-ttu-id="0f1f6-103">Bu yöntem .NET Framework'ün geçerli sürümde uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="0f1f6-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugheapvaluecreaterelocbreakpoint-method"></a><span data-ttu-id="fc083-102">ICorDebugHeapValue::CreateRelocBreakpoint Yöntemi</span><span class="sxs-lookup"><span data-stu-id="fc083-102">ICorDebugHeapValue::CreateRelocBreakpoint Method</span></span>
+<span data-ttu-id="fc083-103">Bu yöntem .NET Framework'ün geçerli sürümde uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="fc083-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0f1f6-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0f1f6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fc083-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="fc083-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateRelocBreakpoint (  
@@ -35,9 +35,9 @@ HRESULT CreateRelocBreakpoint (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="0f1f6-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0f1f6-105">Requirements</span></span>  
- <span data-ttu-id="0f1f6-106">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0f1f6-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fc083-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="fc083-105">Requirements</span></span>  
+ <span data-ttu-id="fc083-106">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fc083-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0f1f6-107">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0f1f6-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="fc083-107">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fc083-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0f1f6-108">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0f1f6-108">**Library:** CorGuids.lib</span></span>
+ <span data-ttu-id="fc083-108">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fc083-108">**Library:** CorGuids.lib</span></span>

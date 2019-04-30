@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 88d563918709a6cf31d9c14a52bbd461ae004420
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698310"
 ---
-# <a name="iclrdatatargetgetthreadcontext-method"></a><span data-ttu-id="56605-102">ICLRDataTarget::GetThreadContext Metodu</span><span class="sxs-lookup"><span data-stu-id="56605-102">ICLRDataTarget::GetThreadContext Method</span></span>
-<span data-ttu-id="56605-103">Hedef işlemde verilen iş parçacığı için geçerli yürütme bağlamı alır.</span><span class="sxs-lookup"><span data-stu-id="56605-103">Gets the current execution context for the given thread in the target process.</span></span> <span data-ttu-id="56605-104">Bu yöntem, ortak dil çalışma zamanı veri erişim Hizmetleri tarafından çağrılır.</span><span class="sxs-lookup"><span data-stu-id="56605-104">This method is called by the common language runtime data access services.</span></span>  
+# <a name="iclrdatatargetgetthreadcontext-method"></a><span data-ttu-id="8301c-102">ICLRDataTarget::GetThreadContext Metodu</span><span class="sxs-lookup"><span data-stu-id="8301c-102">ICLRDataTarget::GetThreadContext Method</span></span>
+<span data-ttu-id="8301c-103">Hedef işlemde verilen iş parçacığı için geçerli yürütme bağlamı alır.</span><span class="sxs-lookup"><span data-stu-id="8301c-103">Gets the current execution context for the given thread in the target process.</span></span> <span data-ttu-id="8301c-104">Bu yöntem, ortak dil çalışma zamanı veri erişim Hizmetleri tarafından çağrılır.</span><span class="sxs-lookup"><span data-stu-id="8301c-104">This method is called by the common language runtime data access services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="56605-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="56605-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8301c-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8301c-105">Syntax</span></span>  
   
 ```  
 HRESULT GetThreadContext (  
@@ -39,33 +39,33 @@ HRESULT GetThreadContext (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="56605-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="56605-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8301c-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8301c-106">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="56605-107">[in] Bir iş parçacığı hedef işlem, işletim sistemi tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="56605-107">[in] The operating system identifier of a thread in the target process.</span></span>  
+ <span data-ttu-id="8301c-107">[in] Bir iş parçacığı hedef işlem, işletim sistemi tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="8301c-107">[in] The operating system identifier of a thread in the target process.</span></span>  
   
  `contextFlags`  
- <span data-ttu-id="56605-108">[in] Hangi parçalarının dönmek bağlamının belirten bayraklar.</span><span class="sxs-lookup"><span data-stu-id="56605-108">[in] Flags that specify which parts of the context to return.</span></span> <span data-ttu-id="56605-109">Uygulama bağlamı en az bu bölümlerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="56605-109">The implementation will return at least these parts of the context.</span></span>  
+ <span data-ttu-id="8301c-108">[in] Hangi parçalarının dönmek bağlamının belirten bayraklar.</span><span class="sxs-lookup"><span data-stu-id="8301c-108">[in] Flags that specify which parts of the context to return.</span></span> <span data-ttu-id="8301c-109">Uygulama bağlamı en az bu bölümlerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="8301c-109">The implementation will return at least these parts of the context.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="56605-110">[in] İçerik boyutu.</span><span class="sxs-lookup"><span data-stu-id="56605-110">[in] The size of the context.</span></span>  
+ <span data-ttu-id="8301c-110">[in] İçerik boyutu.</span><span class="sxs-lookup"><span data-stu-id="8301c-110">[in] The size of the context.</span></span>  
   
  `context`  
- <span data-ttu-id="56605-111">[out] Bağlam yerleştirileceği bir arabellek için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="56605-111">[out] Pointer to a buffer in which to place the context.</span></span>  
+ <span data-ttu-id="8301c-111">[out] Bağlam yerleştirileceği bir arabellek için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="8301c-111">[out] Pointer to a buffer in which to place the context.</span></span>  
   
- <span data-ttu-id="56605-112">Verileri `context` arabellek Win32 biçiminde olmalıdır `CONTEXT` yapısı.</span><span class="sxs-lookup"><span data-stu-id="56605-112">The data in the `context` buffer must be in the format of the Win32 `CONTEXT` structure.</span></span> <span data-ttu-id="56605-113">Bağlam nedenle işlemciye özel kayıt veri belirtir Win32 tanımını `CONTEXT` yapısı işlemci mimarisine bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="56605-113">The context specifies processor-specific register data, so the definition of the Win32 `CONTEXT` structure depends on the processor's architecture.</span></span> <span data-ttu-id="56605-114">Win32 tanımını WinNT.h üstbilgi dosyasına `CONTEXT` yapısı.</span><span class="sxs-lookup"><span data-stu-id="56605-114">Refer to the WinNT.h header file for the definition of the Win32 `CONTEXT` structure.</span></span>  
+ <span data-ttu-id="8301c-112">Verileri `context` arabellek Win32 biçiminde olmalıdır `CONTEXT` yapısı.</span><span class="sxs-lookup"><span data-stu-id="8301c-112">The data in the `context` buffer must be in the format of the Win32 `CONTEXT` structure.</span></span> <span data-ttu-id="8301c-113">Bağlam nedenle işlemciye özel kayıt veri belirtir Win32 tanımını `CONTEXT` yapısı işlemci mimarisine bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="8301c-113">The context specifies processor-specific register data, so the definition of the Win32 `CONTEXT` structure depends on the processor's architecture.</span></span> <span data-ttu-id="8301c-114">Win32 tanımını WinNT.h üstbilgi dosyasına `CONTEXT` yapısı.</span><span class="sxs-lookup"><span data-stu-id="8301c-114">Refer to the WinNT.h header file for the definition of the Win32 `CONTEXT` structure.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="56605-115">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="56605-115">Remarks</span></span>  
- <span data-ttu-id="56605-116">Bu yöntem, hata ayıklama uygulamanın yazıcı tarafından uygulanır.</span><span class="sxs-lookup"><span data-stu-id="56605-116">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8301c-115">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8301c-115">Remarks</span></span>  
+ <span data-ttu-id="8301c-116">Bu yöntem, hata ayıklama uygulamanın yazıcı tarafından uygulanır.</span><span class="sxs-lookup"><span data-stu-id="8301c-116">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="56605-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="56605-117">Requirements</span></span>  
- <span data-ttu-id="56605-118">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="56605-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8301c-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8301c-117">Requirements</span></span>  
+ <span data-ttu-id="8301c-118">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8301c-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="56605-119">**Üst bilgi:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="56605-119">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="8301c-119">**Üst bilgi:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="8301c-119">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="56605-120">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="56605-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8301c-120">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8301c-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="56605-121">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56605-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8301c-121">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8301c-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="56605-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="56605-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8301c-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8301c-122">See also</span></span>
 
-- [<span data-ttu-id="56605-123">ICLRDataTarget Arabirimi</span><span class="sxs-lookup"><span data-stu-id="56605-123">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [<span data-ttu-id="8301c-123">ICLRDataTarget Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8301c-123">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

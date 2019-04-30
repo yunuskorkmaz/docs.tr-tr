@@ -1,39 +1,28 @@
 ---
 title: 514 - WebHostRequestStop
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c5858bf6-3330-4f2a-9907-a99692fa8817
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eb4a030268671df471f6750cee97abd6ca270604
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5f29851cf1e3b7607eaafc411e7a221273bcb3d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762690"
 ---
-# <a name="514---webhostrequeststop"></a><span data-ttu-id="8d42e-102">514 - WebHostRequestStop</span><span class="sxs-lookup"><span data-stu-id="8d42e-102">514 - WebHostRequestStop</span></span>
-## <a name="properties"></a><span data-ttu-id="8d42e-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="8d42e-103">Properties</span></span>  
+# <a name="514---webhostrequeststop"></a><span data-ttu-id="f91a0-102">514 - WebHostRequestStop</span><span class="sxs-lookup"><span data-stu-id="f91a0-102">514 - WebHostRequestStop</span></span>
+## <a name="properties"></a><span data-ttu-id="f91a0-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="f91a0-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="8d42e-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="8d42e-104">ID</span></span>|<span data-ttu-id="8d42e-105">514</span><span class="sxs-lookup"><span data-stu-id="8d42e-105">514</span></span>|  
-|<span data-ttu-id="8d42e-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="8d42e-106">Keywords</span></span>|<span data-ttu-id="8d42e-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="8d42e-107">WebHost</span></span>|  
-|<span data-ttu-id="8d42e-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="8d42e-108">Level</span></span>|<span data-ttu-id="8d42e-109">Bilgiler</span><span class="sxs-lookup"><span data-stu-id="8d42e-109">Information</span></span>|  
-|<span data-ttu-id="8d42e-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="8d42e-110">Channel</span></span>|<span data-ttu-id="8d42e-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="8d42e-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="f91a0-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="f91a0-104">ID</span></span>|<span data-ttu-id="f91a0-105">514</span><span class="sxs-lookup"><span data-stu-id="f91a0-105">514</span></span>|  
+|<span data-ttu-id="f91a0-106">anahtar sözcükler</span><span class="sxs-lookup"><span data-stu-id="f91a0-106">Keywords</span></span>|<span data-ttu-id="f91a0-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="f91a0-107">WebHost</span></span>|  
+|<span data-ttu-id="f91a0-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="f91a0-108">Level</span></span>|<span data-ttu-id="f91a0-109">Bilgiler</span><span class="sxs-lookup"><span data-stu-id="f91a0-109">Information</span></span>|  
+|<span data-ttu-id="f91a0-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="f91a0-110">Channel</span></span>|<span data-ttu-id="f91a0-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="f91a0-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="8d42e-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8d42e-112">Description</span></span>  
- <span data-ttu-id="8d42e-113">Bu olay, WebHostRequest bittikten yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="8d42e-113">This event is emitted when WebHostRequest ended.</span></span>  
+## <a name="description"></a><span data-ttu-id="f91a0-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f91a0-112">Description</span></span>  
+ <span data-ttu-id="f91a0-113">Bu olay WebHostRequest sonlandırıldığında yayılır.</span><span class="sxs-lookup"><span data-stu-id="f91a0-113">This event is emitted when WebHostRequest ended.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="8d42e-114">İleti</span><span class="sxs-lookup"><span data-stu-id="8d42e-114">Message</span></span>  
- <span data-ttu-id="8d42e-115">WebHostRequest durdurun.</span><span class="sxs-lookup"><span data-stu-id="8d42e-115">WebHostRequest stop.</span></span>  
+## <a name="message"></a><span data-ttu-id="f91a0-114">İleti</span><span class="sxs-lookup"><span data-stu-id="f91a0-114">Message</span></span>  
+ <span data-ttu-id="f91a0-115">WebHostRequest durdur.</span><span class="sxs-lookup"><span data-stu-id="f91a0-115">WebHostRequest stop.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="8d42e-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="8d42e-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="f91a0-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="f91a0-116">Details</span></span>
