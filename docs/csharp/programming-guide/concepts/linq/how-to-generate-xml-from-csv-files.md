@@ -3,19 +3,19 @@ title: 'Nasıl yapılır: CSV dosyalarından XML oluşturma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
 ms.openlocfilehash: 769cc6c2ca8f4c05c46a0054eaccccfe3911a74c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702457"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="d8a1e-102">Nasıl yapılır: CSV dosyalarından XML oluşturma (C#)</span><span class="sxs-lookup"><span data-stu-id="d8a1e-102">How to: Generate XML from CSV Files (C#)</span></span>
-<span data-ttu-id="d8a1e-103">Bu örnek nasıl kullanılacağını gösterir [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir virgülle ayrılmış değer (CSV) dosyasından bir XML dosyası oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="d8a1e-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
+# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="0688e-102">Nasıl yapılır: CSV dosyalarından XML oluşturma (C#)</span><span class="sxs-lookup"><span data-stu-id="0688e-102">How to: Generate XML from CSV Files (C#)</span></span>
+<span data-ttu-id="0688e-103">Bu örnek nasıl kullanılacağını gösterir [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir virgülle ayrılmış değer (CSV) dosyasından bir XML dosyası oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="0688e-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d8a1e-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="d8a1e-104">Example</span></span>  
- <span data-ttu-id="d8a1e-105">Aşağıdaki kod gerçekleştiren bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dizelerden oluşan bir dizi üzerindeki sorgu.</span><span class="sxs-lookup"><span data-stu-id="d8a1e-105">The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.</span></span>  
+## <a name="example"></a><span data-ttu-id="0688e-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="0688e-104">Example</span></span>  
+ <span data-ttu-id="0688e-105">Aşağıdaki kod gerçekleştiren bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dizelerden oluşan bir dizi üzerindeki sorgu.</span><span class="sxs-lookup"><span data-stu-id="0688e-105">The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.</span></span>  
   
- <span data-ttu-id="d8a1e-106">Sorgu kullanan `let` her dize alanları bir diziye bölmek için yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="d8a1e-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
+ <span data-ttu-id="0688e-106">Sorgu kullanan `let` her dize alanları bir diziye bölmek için yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="0688e-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
   
 ```csharp  
 // Create the text file.  
@@ -48,7 +48,7 @@ XElement cust = new XElement("Root",
 Console.WriteLine(cust);  
 ```  
   
- <span data-ttu-id="d8a1e-107">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="d8a1e-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="0688e-107">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="0688e-107">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -107,6 +107,6 @@ Console.WriteLine(cust);
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d8a1e-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d8a1e-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0688e-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0688e-108">See also</span></span>
 
-- [<span data-ttu-id="d8a1e-109">Projeksiyonlar ve Dönüşümler (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="d8a1e-109">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="0688e-109">Projeksiyonlar ve Dönüşümler (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="0688e-109">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

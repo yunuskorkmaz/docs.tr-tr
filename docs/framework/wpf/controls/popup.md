@@ -10,25 +10,25 @@ helpviewer_keywords:
 - controls [WPF], Popup
 ms.assetid: 36a4320f-91ce-4f5f-9621-7934de3eff77
 ms.openlocfilehash: 3b43456de1b161763c6197956003c9e7f07135fc
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770615"
 ---
-# <a name="popup"></a><span data-ttu-id="358f4-102">Açılan Pencere</span><span class="sxs-lookup"><span data-stu-id="358f4-102">Popup</span></span>
-<span data-ttu-id="358f4-103"><xref:System.Windows.Controls.Primitives.Popup> Denetim içeriği geçerli bir uygulama penceresi üzerinde gezinen ayrı bir pencerede görüntüler.</span><span class="sxs-lookup"><span data-stu-id="358f4-103">The <xref:System.Windows.Controls.Primitives.Popup> control displays content in a separate window that floats over the current application window.</span></span>  
+# <a name="popup"></a><span data-ttu-id="2f8e4-102">Açılan Pencere</span><span class="sxs-lookup"><span data-stu-id="2f8e4-102">Popup</span></span>
+<span data-ttu-id="2f8e4-103"><xref:System.Windows.Controls.Primitives.Popup> Denetim içeriği geçerli bir uygulama penceresi üzerinde gezinen ayrı bir pencerede görüntüler.</span><span class="sxs-lookup"><span data-stu-id="2f8e4-103">The <xref:System.Windows.Controls.Primitives.Popup> control displays content in a separate window that floats over the current application window.</span></span>  
   
- <span data-ttu-id="358f4-104">Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.Primitives.Popup> ile konumlanan denetimi bir <xref:System.Windows.Controls.Button> diğer bir deyişle, üst:</span><span class="sxs-lookup"><span data-stu-id="358f4-104">The following illustration shows a <xref:System.Windows.Controls.Primitives.Popup> control that is positioned with respect to a <xref:System.Windows.Controls.Button> that is its parent:</span></span>  
+ <span data-ttu-id="2f8e4-104">Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.Primitives.Popup> ile konumlanan denetimi bir <xref:System.Windows.Controls.Button> diğer bir deyişle, üst:</span><span class="sxs-lookup"><span data-stu-id="2f8e4-104">The following illustration shows a <xref:System.Windows.Controls.Primitives.Popup> control that is positioned with respect to a <xref:System.Windows.Controls.Button> that is its parent:</span></span>  
   
  ![Açılan pencere çizim](./media/popup/popup-picture-button.jpg)  
   
-## <a name="in-this-section"></a><span data-ttu-id="358f4-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="358f4-106">In This Section</span></span>  
- [<span data-ttu-id="358f4-107">Açılan Pencereye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="358f4-107">Popup Overview</span></span>](popup-overview.md)  
- [<span data-ttu-id="358f4-108">Açılan Pencere Yerleştirme Davranışı</span><span class="sxs-lookup"><span data-stu-id="358f4-108">Popup Placement Behavior</span></span>](popup-placement-behavior.md)  
- [<span data-ttu-id="358f4-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="358f4-109">How-to Topics</span></span>](popup-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2f8e4-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="2f8e4-106">In This Section</span></span>  
+ [<span data-ttu-id="2f8e4-107">Açılan Pencereye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="2f8e4-107">Popup Overview</span></span>](popup-overview.md)  
+ [<span data-ttu-id="2f8e4-108">Açılan Pencere Yerleştirme Davranışı</span><span class="sxs-lookup"><span data-stu-id="2f8e4-108">Popup Placement Behavior</span></span>](popup-placement-behavior.md)  
+ [<span data-ttu-id="2f8e4-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="2f8e4-109">How-to Topics</span></span>](popup-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="358f4-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="358f4-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2f8e4-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="2f8e4-110">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="358f4-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="358f4-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="2f8e4-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="2f8e4-111">Related Sections</span></span>

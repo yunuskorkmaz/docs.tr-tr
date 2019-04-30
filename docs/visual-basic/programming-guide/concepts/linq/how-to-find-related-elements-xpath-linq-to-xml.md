@@ -3,25 +3,25 @@ title: 'Nasıl yapılır: (XPath-LINQ to XML) ilgili öğeleri bulma (Visual Bas
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
 ms.openlocfilehash: 58137a1bca93c0281424ba457569631a4b513a55
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780438"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="5120a-102">Nasıl yapılır: (XPath-LINQ to XML) ilgili öğeleri bulma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5120a-102">How to: Find Related Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="5120a-103">Bu konu, başka bir öğenin değeri tarafından başvurulan öznitelik seçerek bir öğenin nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="5120a-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="ff0ff-102">Nasıl yapılır: (XPath-LINQ to XML) ilgili öğeleri bulma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ff0ff-102">How to: Find Related Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="ff0ff-103">Bu konu, başka bir öğenin değeri tarafından başvurulan öznitelik seçerek bir öğenin nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="ff0ff-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  
   
- <span data-ttu-id="5120a-104">XPath ifadesidir:</span><span class="sxs-lookup"><span data-stu-id="5120a-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="ff0ff-104">XPath ifadesidir:</span><span class="sxs-lookup"><span data-stu-id="ff0ff-104">The XPath expression is:</span></span>  
   
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
-## <a name="example"></a><span data-ttu-id="5120a-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="5120a-105">Example</span></span>  
- <span data-ttu-id="5120a-106">Bu örnek 12 bulur `Order` öğesini ve sonra müşteri sipariş bulur.</span><span class="sxs-lookup"><span data-stu-id="5120a-106">This example finds the 12th `Order` element, and then finds the customer for that order.</span></span>  
+## <a name="example"></a><span data-ttu-id="ff0ff-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="ff0ff-105">Example</span></span>  
+ <span data-ttu-id="ff0ff-106">Bu örnek 12 bulur `Order` öğesini ve sonra müşteri sipariş bulur.</span><span class="sxs-lookup"><span data-stu-id="ff0ff-106">This example finds the 12th `Order` element, and then finds the customer for that order.</span></span>  
   
- <span data-ttu-id="5120a-107">. NET'te listeye dizin 'zero' bağlı olduğunu unutmayın.</span><span class="sxs-lookup"><span data-stu-id="5120a-107">Note that indexing into a list in .NET is 'zero' based.</span></span> <span data-ttu-id="5120a-108">Bir XPath kuralının koşulu düğümler koleksiyonuna dizin '' temel biridir.</span><span class="sxs-lookup"><span data-stu-id="5120a-108">Indexing into a collection of nodes in an XPath predicate is 'one' based.</span></span> <span data-ttu-id="5120a-109">Bu örnekte, bu fark yansıtır.</span><span class="sxs-lookup"><span data-stu-id="5120a-109">This example reflects this difference.</span></span>  
+ <span data-ttu-id="ff0ff-107">. NET'te listeye dizin 'zero' bağlı olduğunu unutmayın.</span><span class="sxs-lookup"><span data-stu-id="ff0ff-107">Note that indexing into a list in .NET is 'zero' based.</span></span> <span data-ttu-id="ff0ff-108">Bir XPath kuralının koşulu düğümler koleksiyonuna dizin '' temel biridir.</span><span class="sxs-lookup"><span data-stu-id="ff0ff-108">Indexing into a collection of nodes in an XPath predicate is 'one' based.</span></span> <span data-ttu-id="ff0ff-109">Bu örnekte, bu fark yansıtır.</span><span class="sxs-lookup"><span data-stu-id="ff0ff-109">This example reflects this difference.</span></span>  
   
- <span data-ttu-id="5120a-110">Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="5120a-110">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="ff0ff-110">Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="ff0ff-110">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim co As XDocument = XDocument.Load("CustomersOrders.xml")  
@@ -53,7 +53,7 @@ End If
 Console.WriteLine(customer1)  
 ```  
   
- <span data-ttu-id="5120a-111">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="5120a-111">This example produces the following output:</span></span>  
+ <span data-ttu-id="ff0ff-111">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="ff0ff-111">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -73,6 +73,6 @@ Results are identical
 </Customer>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5120a-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5120a-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ff0ff-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ff0ff-112">See also</span></span>
 
-- [<span data-ttu-id="5120a-113">LINQ to XML için XPath kullanıcıları (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5120a-113">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="ff0ff-113">LINQ to XML için XPath kullanıcıları (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ff0ff-113">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

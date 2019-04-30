@@ -16,54 +16,54 @@ helpviewer_keywords:
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
 ms.openlocfilehash: 46a57364e0c18cc4c9fe7884642cd0b718c20f31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776979"
 ---
-# <a name="how-to-apply-transforms-to-text"></a><span data-ttu-id="2f2ed-102">Nasıl yapılır: Metne Dönüşüm Uygulama</span><span class="sxs-lookup"><span data-stu-id="2f2ed-102">How to: Apply Transforms to Text</span></span>
-<span data-ttu-id="2f2ed-103">Dönüşümler uygulamanızda metin görünümünü değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2f2ed-103">Transforms can alter the display of text in your application.</span></span> <span data-ttu-id="2f2ed-104">Aşağıdaki örnekler işleme dönüşümleri farklı türde metin görünümünü kullanın. bir <xref:System.Windows.Controls.TextBlock> denetimi.</span><span class="sxs-lookup"><span data-stu-id="2f2ed-104">The following examples use different types of rendering transforms to affect the display of text in a <xref:System.Windows.Controls.TextBlock> control.</span></span>  
+# <a name="how-to-apply-transforms-to-text"></a><span data-ttu-id="64143-102">Nasıl yapılır: Metne Dönüşüm Uygulama</span><span class="sxs-lookup"><span data-stu-id="64143-102">How to: Apply Transforms to Text</span></span>
+<span data-ttu-id="64143-103">Dönüşümler uygulamanızda metin görünümünü değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="64143-103">Transforms can alter the display of text in your application.</span></span> <span data-ttu-id="64143-104">Aşağıdaki örnekler işleme dönüşümleri farklı türde metin görünümünü kullanın. bir <xref:System.Windows.Controls.TextBlock> denetimi.</span><span class="sxs-lookup"><span data-stu-id="64143-104">The following examples use different types of rendering transforms to affect the display of text in a <xref:System.Windows.Controls.TextBlock> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2f2ed-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="2f2ed-105">Example</span></span>  
- <span data-ttu-id="2f2ed-106">Aşağıdaki örnek, iki boyutlu x-y düzlemleriyle içinde belirtilen bir noktadan döndürülen metni gösterir.</span><span class="sxs-lookup"><span data-stu-id="2f2ed-106">The following example shows text rotated about a specified point in the two-dimensional x-y plane.</span></span>  
+## <a name="example"></a><span data-ttu-id="64143-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="64143-105">Example</span></span>  
+ <span data-ttu-id="64143-106">Aşağıdaki örnek, iki boyutlu x-y düzlemleriyle içinde belirtilen bir noktadan döndürülen metni gösterir.</span><span class="sxs-lookup"><span data-stu-id="64143-106">The following example shows text rotated about a specified point in the two-dimensional x-y plane.</span></span>  
   
  ![RotateTransform kullanılarak döndürülen metin](./media/how-to-apply-transforms-to-text/text-rotated-ninety-degrees.jpg)  
   
- <span data-ttu-id="2f2ed-108">Aşağıdaki kod örneğinde bir <xref:System.Windows.Media.RotateTransform> metni döndürmek için.</span><span class="sxs-lookup"><span data-stu-id="2f2ed-108">The following code example uses a <xref:System.Windows.Media.RotateTransform> to rotate text.</span></span> <span data-ttu-id="2f2ed-109">Bir <xref:System.Windows.Media.RotateTransform.Angle%2A> 90 değerini 90 derece saat yönünde öğeyi döndürür.</span><span class="sxs-lookup"><span data-stu-id="2f2ed-109">An <xref:System.Windows.Media.RotateTransform.Angle%2A> value of 90 rotates the element 90 degrees clockwise.</span></span>  
+ <span data-ttu-id="64143-108">Aşağıdaki kod örneğinde bir <xref:System.Windows.Media.RotateTransform> metni döndürmek için.</span><span class="sxs-lookup"><span data-stu-id="64143-108">The following code example uses a <xref:System.Windows.Media.RotateTransform> to rotate text.</span></span> <span data-ttu-id="64143-109">Bir <xref:System.Windows.Media.RotateTransform.Angle%2A> 90 değerini 90 derece saat yönünde öğeyi döndürür.</span><span class="sxs-lookup"><span data-stu-id="64143-109">An <xref:System.Windows.Media.RotateTransform.Angle%2A> value of 90 rotates the element 90 degrees clockwise.</span></span>  
   
  [!code-xaml[TextTransformSample#TextTransformSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample1)]  
   
- <span data-ttu-id="2f2ed-110">Aşağıdaki örnek, % 150 x ekseni boyunca ölçeği metnin ikinci satırı ve y ekseni boyunca % 150 ölçeklendirilmiş metin üçüncü satır gösterir.</span><span class="sxs-lookup"><span data-stu-id="2f2ed-110">The following example shows the second line of text scaled by 150% along the x-axis, and the third line of text scaled by 150% along the y-axis.</span></span>  
+ <span data-ttu-id="64143-110">Aşağıdaki örnek, % 150 x ekseni boyunca ölçeği metnin ikinci satırı ve y ekseni boyunca % 150 ölçeklendirilmiş metin üçüncü satır gösterir.</span><span class="sxs-lookup"><span data-stu-id="64143-110">The following example shows the second line of text scaled by 150% along the x-axis, and the third line of text scaled by 150% along the y-axis.</span></span>  
   
  ![ScaleTransform kullanılarak ölçeklendirilmiş metin](./media/how-to-apply-transforms-to-text/scaled-text-scaletransform.jpg) 
   
- <span data-ttu-id="2f2ed-112">Aşağıdaki kod örneğinde bir <xref:System.Windows.Media.ScaleTransform> özgün boyutuna ölçek metni için.</span><span class="sxs-lookup"><span data-stu-id="2f2ed-112">The following code example uses a <xref:System.Windows.Media.ScaleTransform> to scale text from its original size.</span></span>  
+ <span data-ttu-id="64143-112">Aşağıdaki kod örneğinde bir <xref:System.Windows.Media.ScaleTransform> özgün boyutuna ölçek metni için.</span><span class="sxs-lookup"><span data-stu-id="64143-112">The following code example uses a <xref:System.Windows.Media.ScaleTransform> to scale text from its original size.</span></span>  
   
  [!code-xaml[TextTransformSample#TextTransformSample2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample2)]  
   
 > [!NOTE]
->  <span data-ttu-id="2f2ed-113">Metin ölçeklendirme metnin yazı tipi boyutunu artırma ile aynı değil.</span><span class="sxs-lookup"><span data-stu-id="2f2ed-113">Scaling text is not the same as increasing the font size of text.</span></span> <span data-ttu-id="2f2ed-114">Yazı tipi boyutlarını birbirinden farklı boyutlarda en iyi çözüm sağlamak için hesaplanır.</span><span class="sxs-lookup"><span data-stu-id="2f2ed-114">Font sizes are calculated independently of each other in order to provide the best resolution at different sizes.</span></span> <span data-ttu-id="2f2ed-115">Ölçeklendirilmiş metin, diğer taraftan, özgün boyutunda metin oranlarını korur.</span><span class="sxs-lookup"><span data-stu-id="2f2ed-115">Scaled text, on the other hand, preserves the proportions of the original-sized text.</span></span>  
+>  <span data-ttu-id="64143-113">Metin ölçeklendirme metnin yazı tipi boyutunu artırma ile aynı değil.</span><span class="sxs-lookup"><span data-stu-id="64143-113">Scaling text is not the same as increasing the font size of text.</span></span> <span data-ttu-id="64143-114">Yazı tipi boyutlarını birbirinden farklı boyutlarda en iyi çözüm sağlamak için hesaplanır.</span><span class="sxs-lookup"><span data-stu-id="64143-114">Font sizes are calculated independently of each other in order to provide the best resolution at different sizes.</span></span> <span data-ttu-id="64143-115">Ölçeklendirilmiş metin, diğer taraftan, özgün boyutunda metin oranlarını korur.</span><span class="sxs-lookup"><span data-stu-id="64143-115">Scaled text, on the other hand, preserves the proportions of the original-sized text.</span></span>  
   
- <span data-ttu-id="2f2ed-116">Aşağıdaki örnek x ekseni boyunca Eğilmiş metin gösterir.</span><span class="sxs-lookup"><span data-stu-id="2f2ed-116">The following example shows text skewed along the x-axis.</span></span>  
+ <span data-ttu-id="64143-116">Aşağıdaki örnek x ekseni boyunca Eğilmiş metin gösterir.</span><span class="sxs-lookup"><span data-stu-id="64143-116">The following example shows text skewed along the x-axis.</span></span>  
   
  ![SkewTransform kullanılarak Eğilmiş metin](./media/how-to-apply-transforms-to-text/skewed-transformed-text.jpg)
    
- <span data-ttu-id="2f2ed-118">Aşağıdaki kod örneğinde bir <xref:System.Windows.Media.SkewTransform> metin eğriltmek için.</span><span class="sxs-lookup"><span data-stu-id="2f2ed-118">The following code example uses a <xref:System.Windows.Media.SkewTransform> to skew text.</span></span> <span data-ttu-id="2f2ed-119">Bir eğme yamultma olarak da bilinen bir koordinat bir Tekdüzen olmayan şekilde uzatır bir dönüşümdür.</span><span class="sxs-lookup"><span data-stu-id="2f2ed-119">A skew, also known as a shear, is a transformation that stretches the coordinate space in a non-uniform manner.</span></span> <span data-ttu-id="2f2ed-120">Bu örnekte, iki metin dengesiz-30 ° ve x koordinatını boyunca 30 ° dizelerdir.</span><span class="sxs-lookup"><span data-stu-id="2f2ed-120">In this example, the two text strings are skewed -30° and 30° along the x-coordinate.</span></span>  
+ <span data-ttu-id="64143-118">Aşağıdaki kod örneğinde bir <xref:System.Windows.Media.SkewTransform> metin eğriltmek için.</span><span class="sxs-lookup"><span data-stu-id="64143-118">The following code example uses a <xref:System.Windows.Media.SkewTransform> to skew text.</span></span> <span data-ttu-id="64143-119">Bir eğme yamultma olarak da bilinen bir koordinat bir Tekdüzen olmayan şekilde uzatır bir dönüşümdür.</span><span class="sxs-lookup"><span data-stu-id="64143-119">A skew, also known as a shear, is a transformation that stretches the coordinate space in a non-uniform manner.</span></span> <span data-ttu-id="64143-120">Bu örnekte, iki metin dengesiz-30 ° ve x koordinatını boyunca 30 ° dizelerdir.</span><span class="sxs-lookup"><span data-stu-id="64143-120">In this example, the two text strings are skewed -30° and 30° along the x-coordinate.</span></span>  
   
  [!code-xaml[TextTransformSample#TextTransformSample3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample3)]  
   
- <span data-ttu-id="2f2ed-121">Aşağıdaki örnek, çevrilmiş veya taşınmış, x ve y ekseni metni gösterir.</span><span class="sxs-lookup"><span data-stu-id="2f2ed-121">The following example shows text translated, or moved, along the x- and y-axis.</span></span>  
+ <span data-ttu-id="64143-121">Aşağıdaki örnek, çevrilmiş veya taşınmış, x ve y ekseni metni gösterir.</span><span class="sxs-lookup"><span data-stu-id="64143-121">The following example shows text translated, or moved, along the x- and y-axis.</span></span>  
   
  ![Metin TranslateTransform kullanan uzaklığı](./media/how-to-apply-transforms-to-text/transformed-text-x-y-axis.jpg)
   
- <span data-ttu-id="2f2ed-123">Aşağıdaki kod örneğinde bir <xref:System.Windows.Media.TranslateTransform> metin uzaklık.</span><span class="sxs-lookup"><span data-stu-id="2f2ed-123">The following code example uses a <xref:System.Windows.Media.TranslateTransform> to offset text.</span></span> <span data-ttu-id="2f2ed-124">Bu örnekte, bir gölge etkisi birincil metin aşağıdaki metni biraz uzaklık bir kopyasını oluşturur.</span><span class="sxs-lookup"><span data-stu-id="2f2ed-124">In this example, a slightly offset copy of text below the primary text creates a shadow effect.</span></span>  
+ <span data-ttu-id="64143-123">Aşağıdaki kod örneğinde bir <xref:System.Windows.Media.TranslateTransform> metin uzaklık.</span><span class="sxs-lookup"><span data-stu-id="64143-123">The following code example uses a <xref:System.Windows.Media.TranslateTransform> to offset text.</span></span> <span data-ttu-id="64143-124">Bu örnekte, bir gölge etkisi birincil metin aşağıdaki metni biraz uzaklık bir kopyasını oluşturur.</span><span class="sxs-lookup"><span data-stu-id="64143-124">In this example, a slightly offset copy of text below the primary text creates a shadow effect.</span></span>  
   
  [!code-xaml[TextTransformSample#TextTransformSample4](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample4)]  
   
 > [!NOTE]
->  <span data-ttu-id="2f2ed-125"><xref:System.Windows.Media.Effects.DropShadowBitmapEffect> Gölge efektleri sağlayan zengin bir özellikler kümesi sağlar.</span><span class="sxs-lookup"><span data-stu-id="2f2ed-125">The <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> provides a rich set of features for providing shadow effects.</span></span> <span data-ttu-id="2f2ed-126">Daha fazla bilgi için [gölgeli metin oluşturma](how-to-create-text-with-a-shadow.md).</span><span class="sxs-lookup"><span data-stu-id="2f2ed-126">For more information, see [Create Text with a Shadow](how-to-create-text-with-a-shadow.md).</span></span>  
+>  <span data-ttu-id="64143-125"><xref:System.Windows.Media.Effects.DropShadowBitmapEffect> Gölge efektleri sağlayan zengin bir özellikler kümesi sağlar.</span><span class="sxs-lookup"><span data-stu-id="64143-125">The <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> provides a rich set of features for providing shadow effects.</span></span> <span data-ttu-id="64143-126">Daha fazla bilgi için [gölgeli metin oluşturma](how-to-create-text-with-a-shadow.md).</span><span class="sxs-lookup"><span data-stu-id="64143-126">For more information, see [Create Text with a Shadow](how-to-create-text-with-a-shadow.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2f2ed-127">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2f2ed-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="64143-127">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="64143-127">See also</span></span>
 
-- [<span data-ttu-id="2f2ed-128">Metne Animasyon Uygulama</span><span class="sxs-lookup"><span data-stu-id="2f2ed-128">Apply Animations to Text</span></span>](how-to-apply-animations-to-text.md)
+- [<span data-ttu-id="64143-128">Metne Animasyon Uygulama</span><span class="sxs-lookup"><span data-stu-id="64143-128">Apply Animations to Text</span></span>](how-to-apply-animations-to-text.md)

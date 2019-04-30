@@ -8,17 +8,17 @@ helpviewer_keywords:
 - digital ink [WPF]
 ms.assetid: 5ddb23a6-7813-4058-b59d-29ff3341638c
 ms.openlocfilehash: 57473d0a22bc7441e4c32506f57f402bab963c2d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771078"
 ---
-# <a name="digital-ink-overviews"></a><span data-ttu-id="85bc0-102">Dijital Mürekkebe Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="85bc0-102">Digital Ink Overviews</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="85bc0-103">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="85bc0-103">In This Section</span></span>  
- [<span data-ttu-id="85bc0-104">Mürekkep ile Çalışmaya Başlama</span><span class="sxs-lookup"><span data-stu-id="85bc0-104">Getting Started with Ink</span></span>](getting-started-with-ink.md)  
-  [<span data-ttu-id="85bc0-105">Mürekkep Toplama</span><span class="sxs-lookup"><span data-stu-id="85bc0-105">Collecting Ink</span></span>](collecting-ink.md)  
-  [<span data-ttu-id="85bc0-106">El Yazısı Tanıma</span><span class="sxs-lookup"><span data-stu-id="85bc0-106">Handwriting Recognition</span></span>](handwriting-recognition.md)  
-  [<span data-ttu-id="85bc0-107">Mürekkep Depolama</span><span class="sxs-lookup"><span data-stu-id="85bc0-107">Storing Ink</span></span>](storing-ink.md)  
-  [<span data-ttu-id="85bc0-108">Mürekkep Nesnesi Modeli: Windows Forms ve WPF'ye karşı COM</span><span class="sxs-lookup"><span data-stu-id="85bc0-108">The Ink Object Model: Windows Forms and COM versus WPF</span></span>](the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
-  [<span data-ttu-id="85bc0-109">Gelişmiş Mürekkep İşleme</span><span class="sxs-lookup"><span data-stu-id="85bc0-109">Advanced Ink Handling</span></span>](advanced-ink-handling.md)
+# <a name="digital-ink-overviews"></a><span data-ttu-id="5cfe8-102">Dijital Mürekkebe Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="5cfe8-102">Digital Ink Overviews</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="5cfe8-103">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="5cfe8-103">In This Section</span></span>  
+ [<span data-ttu-id="5cfe8-104">Mürekkep ile Çalışmaya Başlama</span><span class="sxs-lookup"><span data-stu-id="5cfe8-104">Getting Started with Ink</span></span>](getting-started-with-ink.md)  
+  [<span data-ttu-id="5cfe8-105">Mürekkep Toplama</span><span class="sxs-lookup"><span data-stu-id="5cfe8-105">Collecting Ink</span></span>](collecting-ink.md)  
+  [<span data-ttu-id="5cfe8-106">El Yazısı Tanıma</span><span class="sxs-lookup"><span data-stu-id="5cfe8-106">Handwriting Recognition</span></span>](handwriting-recognition.md)  
+  [<span data-ttu-id="5cfe8-107">Mürekkep Depolama</span><span class="sxs-lookup"><span data-stu-id="5cfe8-107">Storing Ink</span></span>](storing-ink.md)  
+  [<span data-ttu-id="5cfe8-108">Mürekkep Nesnesi Modeli: Windows Forms ve WPF'ye karşı COM</span><span class="sxs-lookup"><span data-stu-id="5cfe8-108">The Ink Object Model: Windows Forms and COM versus WPF</span></span>](the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
+  [<span data-ttu-id="5cfe8-109">Gelişmiş Mürekkep İşleme</span><span class="sxs-lookup"><span data-stu-id="5cfe8-109">Advanced Ink Handling</span></span>](advanced-ink-handling.md)

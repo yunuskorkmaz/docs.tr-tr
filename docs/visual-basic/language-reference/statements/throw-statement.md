@@ -15,45 +15,45 @@ helpviewer_keywords:
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
 ms.openlocfilehash: 2494eac2f61f112f3ba6321ada7404f8cd618049
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766642"
 ---
-# <a name="throw-statement-visual-basic"></a><span data-ttu-id="eb5ae-102">Throw Deyimi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="eb5ae-102">Throw Statement (Visual Basic)</span></span>
-<span data-ttu-id="eb5ae-103">Bir yordam içinde özel durum oluşturur.</span><span class="sxs-lookup"><span data-stu-id="eb5ae-103">Throws an exception within a procedure.</span></span>  
+# <a name="throw-statement-visual-basic"></a><span data-ttu-id="02411-102">Throw Deyimi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="02411-102">Throw Statement (Visual Basic)</span></span>
+<span data-ttu-id="02411-103">Bir yordam içinde özel durum oluşturur.</span><span class="sxs-lookup"><span data-stu-id="02411-103">Throws an exception within a procedure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eb5ae-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="eb5ae-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="02411-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="02411-104">Syntax</span></span>  
   
 ```  
 Throw [ expression ]  
 ```  
   
-## <a name="part"></a><span data-ttu-id="eb5ae-105">Bölümü</span><span class="sxs-lookup"><span data-stu-id="eb5ae-105">Part</span></span>  
+## <a name="part"></a><span data-ttu-id="02411-105">Bölümü</span><span class="sxs-lookup"><span data-stu-id="02411-105">Part</span></span>  
  `expression`  
- <span data-ttu-id="eb5ae-106">Özel durum oluşturulmasına hakkında bilgi sağlar.</span><span class="sxs-lookup"><span data-stu-id="eb5ae-106">Provides information about the exception to be thrown.</span></span> <span data-ttu-id="eb5ae-107">Bulunan, isteğe bağlı bir `Catch` deyimi, aksi takdirde gereklidir.</span><span class="sxs-lookup"><span data-stu-id="eb5ae-107">Optional when residing in a `Catch` statement, otherwise required.</span></span>  
+ <span data-ttu-id="02411-106">Özel durum oluşturulmasına hakkında bilgi sağlar.</span><span class="sxs-lookup"><span data-stu-id="02411-106">Provides information about the exception to be thrown.</span></span> <span data-ttu-id="02411-107">Bulunan, isteğe bağlı bir `Catch` deyimi, aksi takdirde gereklidir.</span><span class="sxs-lookup"><span data-stu-id="02411-107">Optional when residing in a `Catch` statement, otherwise required.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="eb5ae-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="eb5ae-108">Remarks</span></span>  
- <span data-ttu-id="eb5ae-109">`Throw` Deyimi, yapılandırılmış özel durum işleme kodu ile işleyebilmeniz bir özel durum oluşturur (`Try`... `Catch`... `Finally`) ya da yapılandırılmamış özel durum işleme kodunu (`On Error GoTo`).</span><span class="sxs-lookup"><span data-stu-id="eb5ae-109">The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`).</span></span> <span data-ttu-id="eb5ae-110">Kullanabileceğiniz `Throw` uygun özel durum işleme kodu bulana kadar Visual Basic çağrı yığınında yukarı taşır. çünkü, kod içindeki hataları yakalamak için deyimi.</span><span class="sxs-lookup"><span data-stu-id="eb5ae-110">You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="02411-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="02411-108">Remarks</span></span>  
+ <span data-ttu-id="02411-109">`Throw` Deyimi, yapılandırılmış özel durum işleme kodu ile işleyebilmeniz bir özel durum oluşturur (`Try`... `Catch`... `Finally`) ya da yapılandırılmamış özel durum işleme kodunu (`On Error GoTo`).</span><span class="sxs-lookup"><span data-stu-id="02411-109">The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`).</span></span> <span data-ttu-id="02411-110">Kullanabileceğiniz `Throw` uygun özel durum işleme kodu bulana kadar Visual Basic çağrı yığınında yukarı taşır. çünkü, kod içindeki hataları yakalamak için deyimi.</span><span class="sxs-lookup"><span data-stu-id="02411-110">You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.</span></span>  
   
- <span data-ttu-id="eb5ae-111">A `Throw` herhangi bir ifade deyimi yalnızca kullanılabilir bir `Catch` deyimi, case deyiminde tarafından işlenmekte olan özel durum beklerseniz `Catch` deyimi.</span><span class="sxs-lookup"><span data-stu-id="eb5ae-111">A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.</span></span>  
+ <span data-ttu-id="02411-111">A `Throw` herhangi bir ifade deyimi yalnızca kullanılabilir bir `Catch` deyimi, case deyiminde tarafından işlenmekte olan özel durum beklerseniz `Catch` deyimi.</span><span class="sxs-lookup"><span data-stu-id="02411-111">A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.</span></span>  
   
- <span data-ttu-id="eb5ae-112">`Throw` Deyimi için çağrı yığınını sıfırlar `expression` özel durum.</span><span class="sxs-lookup"><span data-stu-id="eb5ae-112">The `Throw` statement resets the call stack for the `expression` exception.</span></span> <span data-ttu-id="eb5ae-113">Varsa `expression` sağlanmadı, çağrı yığını sol değiştirilmez.</span><span class="sxs-lookup"><span data-stu-id="eb5ae-113">If `expression` is not provided, the call stack is left unchanged.</span></span> <span data-ttu-id="eb5ae-114">Bir özel durum için çağrı yığınını erişebileceğiniz <xref:System.Exception.StackTrace%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="eb5ae-114">You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.</span></span>  
+ <span data-ttu-id="02411-112">`Throw` Deyimi için çağrı yığınını sıfırlar `expression` özel durum.</span><span class="sxs-lookup"><span data-stu-id="02411-112">The `Throw` statement resets the call stack for the `expression` exception.</span></span> <span data-ttu-id="02411-113">Varsa `expression` sağlanmadı, çağrı yığını sol değiştirilmez.</span><span class="sxs-lookup"><span data-stu-id="02411-113">If `expression` is not provided, the call stack is left unchanged.</span></span> <span data-ttu-id="02411-114">Bir özel durum için çağrı yığınını erişebileceğiniz <xref:System.Exception.StackTrace%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="02411-114">You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="eb5ae-115">Örnek</span><span class="sxs-lookup"><span data-stu-id="eb5ae-115">Example</span></span>  
- <span data-ttu-id="eb5ae-116">Aşağıdaki kod `Throw` deyimi bir özel durum:</span><span class="sxs-lookup"><span data-stu-id="eb5ae-116">The following code uses the `Throw` statement to throw an exception:</span></span>  
+## <a name="example"></a><span data-ttu-id="02411-115">Örnek</span><span class="sxs-lookup"><span data-stu-id="02411-115">Example</span></span>  
+ <span data-ttu-id="02411-116">Aşağıdaki kod `Throw` deyimi bir özel durum:</span><span class="sxs-lookup"><span data-stu-id="02411-116">The following code uses the `Throw` statement to throw an exception:</span></span>  
   
  [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]  
   
-## <a name="requirements"></a><span data-ttu-id="eb5ae-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="eb5ae-117">Requirements</span></span>  
- <span data-ttu-id="eb5ae-118">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="eb5ae-118">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
+## <a name="requirements"></a><span data-ttu-id="02411-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="02411-117">Requirements</span></span>  
+ <span data-ttu-id="02411-118">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="02411-118">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
   
- <span data-ttu-id="eb5ae-119">**Modül:** `Interaction`</span><span class="sxs-lookup"><span data-stu-id="eb5ae-119">**Module:** `Interaction`</span></span>  
+ <span data-ttu-id="02411-119">**Modül:** `Interaction`</span><span class="sxs-lookup"><span data-stu-id="02411-119">**Module:** `Interaction`</span></span>  
   
- <span data-ttu-id="eb5ae-120">**Derleme:** Visual Basic Çalışma Zamanı Kitaplığı (Microsoft.VisualBasic.dll içinde)</span><span class="sxs-lookup"><span data-stu-id="eb5ae-120">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="02411-120">**Derleme:** Visual Basic Çalışma Zamanı Kitaplığı (Microsoft.VisualBasic.dll içinde)</span><span class="sxs-lookup"><span data-stu-id="02411-120">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eb5ae-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="eb5ae-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="02411-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="02411-121">See also</span></span>
 
-- [<span data-ttu-id="eb5ae-122">Try...Catch...Finally Deyimi</span><span class="sxs-lookup"><span data-stu-id="eb5ae-122">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [<span data-ttu-id="eb5ae-123">On Error Deyimi</span><span class="sxs-lookup"><span data-stu-id="eb5ae-123">On Error Statement</span></span>](../../../visual-basic/language-reference/statements/on-error-statement.md)
+- [<span data-ttu-id="02411-122">Try...Catch...Finally Deyimi</span><span class="sxs-lookup"><span data-stu-id="02411-122">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [<span data-ttu-id="02411-123">On Error Deyimi</span><span class="sxs-lookup"><span data-stu-id="02411-123">On Error Statement</span></span>](../../../visual-basic/language-reference/statements/on-error-statement.md)

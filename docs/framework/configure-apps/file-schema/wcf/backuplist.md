@@ -3,21 +3,21 @@ title: <backupList>
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
 ms.openlocfilehash: b0a6c604b5741c1355c35fca510cd10544dab9f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704433"
 ---
-# <a name="backuplist"></a><span data-ttu-id="76756-101">\<backupList ></span><span class="sxs-lookup"><span data-stu-id="76756-101">\<backupList></span></span>
-<span data-ttu-id="76756-102">Bir birincil uç noktaya erişilemiyor durumunda kullanmak için yönlendirme hizmeti istediğiniz uç nokta kümesine numaralandırır yedek listesini tanımlamak için bir yapılandırma bölümünü temsil eder.</span><span class="sxs-lookup"><span data-stu-id="76756-102">Represents a configuration section for defining a backup list that enumerates a set of endpoints that you would like the Routing Service to use in case the primary endpoint can't be reached.</span></span> <span data-ttu-id="76756-103">Listedeki ilk uç kapalı ise, yönlendirme hizmeti otomatik olarak bir listesi için devredilmesini.</span><span class="sxs-lookup"><span data-stu-id="76756-103">If the first endpoint in the list is down, the Routing Service will automatically fail-over to the next one in the list.</span></span>  <span data-ttu-id="76756-104">Bu istemci uygulamanıza karmaşık desenlerle nasıl ele alınacağını ya da tüm hizmetlerinizin dağıtıldığı öğretmek zorunda kalmadan uygulamanıza güvenilirlik eklemeniz için hızlı bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="76756-104">This gives you a quick way to add reliability to your application without having to teach your client application how to handle complex patterns or where all of your services are deployed.</span></span>  
+# <a name="backuplist"></a><span data-ttu-id="48893-101">\<backupList ></span><span class="sxs-lookup"><span data-stu-id="48893-101">\<backupList></span></span>
+<span data-ttu-id="48893-102">Bir birincil uç noktaya erişilemiyor durumunda kullanmak için yönlendirme hizmeti istediğiniz uç nokta kümesine numaralandırır yedek listesini tanımlamak için bir yapılandırma bölümünü temsil eder.</span><span class="sxs-lookup"><span data-stu-id="48893-102">Represents a configuration section for defining a backup list that enumerates a set of endpoints that you would like the Routing Service to use in case the primary endpoint can't be reached.</span></span> <span data-ttu-id="48893-103">Listedeki ilk uç kapalı ise, yönlendirme hizmeti otomatik olarak bir listesi için devredilmesini.</span><span class="sxs-lookup"><span data-stu-id="48893-103">If the first endpoint in the list is down, the Routing Service will automatically fail-over to the next one in the list.</span></span>  <span data-ttu-id="48893-104">Bu istemci uygulamanıza karmaşık desenlerle nasıl ele alınacağını ya da tüm hizmetlerinizin dağıtıldığı öğretmek zorunda kalmadan uygulamanıza güvenilirlik eklemeniz için hızlı bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="48893-104">This gives you a quick way to add reliability to your application without having to teach your client application how to handle complex patterns or where all of your services are deployed.</span></span>  
   
- <span data-ttu-id="76756-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="76756-105">\<system.serviceModel></span></span>  
-<span data-ttu-id="76756-106">\<Yönlendirme ></span><span class="sxs-lookup"><span data-stu-id="76756-106">\<routing></span></span>  
-<span data-ttu-id="76756-107">\<backupLists ></span><span class="sxs-lookup"><span data-stu-id="76756-107">\<backupLists></span></span>  
-<span data-ttu-id="76756-108">\<backupList ></span><span class="sxs-lookup"><span data-stu-id="76756-108">\<backupList></span></span>  
+ <span data-ttu-id="48893-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="48893-105">\<system.serviceModel></span></span>  
+<span data-ttu-id="48893-106">\<Yönlendirme ></span><span class="sxs-lookup"><span data-stu-id="48893-106">\<routing></span></span>  
+<span data-ttu-id="48893-107">\<backupLists ></span><span class="sxs-lookup"><span data-stu-id="48893-107">\<backupLists></span></span>  
+<span data-ttu-id="48893-108">\<backupList ></span><span class="sxs-lookup"><span data-stu-id="48893-108">\<backupList></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="76756-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="76756-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="48893-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="48893-109">Syntax</span></span>  
   
 ```xml  
 <routing>
@@ -29,33 +29,33 @@ ms.locfileid: "59135739"
 </routing>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="76756-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="76756-110">Attributes and Elements</span></span>  
- <span data-ttu-id="76756-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="76756-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="48893-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="48893-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="48893-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="48893-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="76756-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="76756-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="48893-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="48893-112">Attributes</span></span>  
   
-|<span data-ttu-id="76756-113">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="76756-113">Attribute</span></span>|<span data-ttu-id="76756-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="76756-114">Description</span></span>|  
+|<span data-ttu-id="48893-113">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="48893-113">Attribute</span></span>|<span data-ttu-id="48893-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="48893-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="76756-115">name</span><span class="sxs-lookup"><span data-stu-id="76756-115">name</span></span>|<span data-ttu-id="76756-116">Bu uç nokta listesini tanımlamak için kullanılan adı belirten bir dize.</span><span class="sxs-lookup"><span data-stu-id="76756-116">A string that specifies the name used to identify this endpoint list.</span></span>|  
+|<span data-ttu-id="48893-115">name</span><span class="sxs-lookup"><span data-stu-id="48893-115">name</span></span>|<span data-ttu-id="48893-116">Bu uç nokta listesini tanımlamak için kullanılan adı belirten bir dize.</span><span class="sxs-lookup"><span data-stu-id="48893-116">A string that specifies the name used to identify this endpoint list.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="76756-117">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="76756-117">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="48893-117">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="48893-117">Child Elements</span></span>  
   
-|<span data-ttu-id="76756-118">Öğe</span><span class="sxs-lookup"><span data-stu-id="76756-118">Element</span></span>|<span data-ttu-id="76756-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="76756-119">Description</span></span>|  
+|<span data-ttu-id="48893-118">Öğe</span><span class="sxs-lookup"><span data-stu-id="48893-118">Element</span></span>|<span data-ttu-id="48893-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="48893-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="76756-120">\<Filtre ></span><span class="sxs-lookup"><span data-stu-id="76756-120">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md)||  
+|[<span data-ttu-id="48893-120">\<Filtre ></span><span class="sxs-lookup"><span data-stu-id="48893-120">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md)||  
   
-### <a name="parent-elements"></a><span data-ttu-id="76756-121">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="76756-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="48893-121">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="48893-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="76756-122">Öğe</span><span class="sxs-lookup"><span data-stu-id="76756-122">Element</span></span>|<span data-ttu-id="76756-123">Açıklama</span><span class="sxs-lookup"><span data-stu-id="76756-123">Description</span></span>|  
+|<span data-ttu-id="48893-122">Öğe</span><span class="sxs-lookup"><span data-stu-id="48893-122">Element</span></span>|<span data-ttu-id="48893-123">Açıklama</span><span class="sxs-lookup"><span data-stu-id="48893-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="76756-124">\<Yönlendirme ></span><span class="sxs-lookup"><span data-stu-id="76756-124">\<routing></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|<span data-ttu-id="76756-125">Yedekleme uç noktaları listesi.</span><span class="sxs-lookup"><span data-stu-id="76756-125">A list of backup endpoints.</span></span>|  
+|[<span data-ttu-id="48893-124">\<Yönlendirme ></span><span class="sxs-lookup"><span data-stu-id="48893-124">\<routing></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|<span data-ttu-id="48893-125">Yedekleme uç noktaları listesi.</span><span class="sxs-lookup"><span data-stu-id="48893-125">A list of backup endpoints.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="76756-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="76756-126">Remarks</span></span>  
- <span data-ttu-id="76756-127">Bu bölümde, bir ileti için bir iletişim özel durumu olması durumunda birincil uç noktasına gönderilirken aktarılmaz uç noktaları sıralı bir koleksiyonunu içerir.</span><span class="sxs-lookup"><span data-stu-id="76756-127">This section contains an ordered collection of endpoints that a message will be transmitted to in the event of a communications exception when sending to the primary endpoint.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="48893-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="48893-126">Remarks</span></span>  
+ <span data-ttu-id="48893-127">Bu bölümde, bir ileti için bir iletişim özel durumu olması durumunda birincil uç noktasına gönderilirken aktarılmaz uç noktaları sıralı bir koleksiyonunu içerir.</span><span class="sxs-lookup"><span data-stu-id="48893-127">This section contains an ordered collection of endpoints that a message will be transmitted to in the event of a communications exception when sending to the primary endpoint.</span></span>  
   
- <span data-ttu-id="76756-128">Birincil uç noktaya gönderme listelenen `endpointName` özniteliği [ \<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-entries.md) bir iletişim özel durumu ile başarısız oluyor, yönlendirme hizmeti ilk uç noktasına bu iletiyi göndermeyi deneyecek yapılandırma bölümü.</span><span class="sxs-lookup"><span data-stu-id="76756-128">If a send to the primary endpoint listed in the `endpointName` attribute of [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-entries.md) fails with a communications exception, the Routing Service will attempt to send the message to the first endpoint in this configuration section.</span></span> <span data-ttu-id="76756-129">Bu da bir iletişim özel durumu ile başarısız olursa, yönlendirme hizmeti iletişim özel durumu veya tüm uç noktaların dışındaki bir hata gönderme girişimi başarılı olana kadar döndürür, bu bölümde yer alan sonraki iletiye ileti göndermeye çalışır koleksiyonu bir hata döndürdü.</span><span class="sxs-lookup"><span data-stu-id="76756-129">If this also fails with a communications exception, the Routing Service will attempt to send the message to the next message contained in this section until the send attempt succeeds, returns a failure other than a communication exception, or all endpoints in the collection have returned a failure.</span></span>  
+ <span data-ttu-id="48893-128">Birincil uç noktaya gönderme listelenen `endpointName` özniteliği [ \<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-entries.md) bir iletişim özel durumu ile başarısız oluyor, yönlendirme hizmeti ilk uç noktasına bu iletiyi göndermeyi deneyecek yapılandırma bölümü.</span><span class="sxs-lookup"><span data-stu-id="48893-128">If a send to the primary endpoint listed in the `endpointName` attribute of [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-entries.md) fails with a communications exception, the Routing Service will attempt to send the message to the first endpoint in this configuration section.</span></span> <span data-ttu-id="48893-129">Bu da bir iletişim özel durumu ile başarısız olursa, yönlendirme hizmeti iletişim özel durumu veya tüm uç noktaların dışındaki bir hata gönderme girişimi başarılı olana kadar döndürür, bu bölümde yer alan sonraki iletiye ileti göndermeye çalışır koleksiyonu bir hata döndürdü.</span><span class="sxs-lookup"><span data-stu-id="48893-129">If this also fails with a communications exception, the Routing Service will attempt to send the message to the next message contained in this section until the send attempt succeeds, returns a failure other than a communication exception, or all endpoints in the collection have returned a failure.</span></span>  
   
- <span data-ttu-id="76756-130">Bir iletişim özel durumu "Hedef" adlı birincil uç noktaya gönderme döndürürse, aşağıdaki örnekte, "alternateServiceQueue" ileti göndermek hizmet dener.</span><span class="sxs-lookup"><span data-stu-id="76756-130">In the following example, if a send to the primary endpoint named "Destination" returns a communication exception, the service will attempt to send the message to the "alternateServiceQueue".</span></span> <span data-ttu-id="76756-131">Bu deneme bir iletişim özel durumu da döndürürse, yönlendirme hizmeti koleksiyonda sonraki uç nokta ileti göndermek dener.</span><span class="sxs-lookup"><span data-stu-id="76756-131">If this attempt also returns a communication exception, the Routing Service will attempt to send the message to the next endpoint in the collection.</span></span>  
+ <span data-ttu-id="48893-130">Bir iletişim özel durumu "Hedef" adlı birincil uç noktaya gönderme döndürürse, aşağıdaki örnekte, "alternateServiceQueue" ileti göndermek hizmet dener.</span><span class="sxs-lookup"><span data-stu-id="48893-130">In the following example, if a send to the primary endpoint named "Destination" returns a communication exception, the service will attempt to send the message to the "alternateServiceQueue".</span></span> <span data-ttu-id="48893-131">Bu deneme bir iletişim özel durumu da döndürürse, yönlendirme hizmeti koleksiyonda sonraki uç nokta ileti göndermek dener.</span><span class="sxs-lookup"><span data-stu-id="48893-131">If this attempt also returns a communication exception, the Routing Service will attempt to send the message to the next endpoint in the collection.</span></span>  
   
 ```xml  
 <filterTables>
@@ -73,6 +73,6 @@ ms.locfileid: "59135739"
 </backupLists>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="76756-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="76756-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="48893-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="48893-132">See also</span></span>
 
 - <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>

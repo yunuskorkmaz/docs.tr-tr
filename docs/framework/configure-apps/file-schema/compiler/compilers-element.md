@@ -10,20 +10,20 @@ helpviewer_keywords:
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
 ms.openlocfilehash: 744ef0d9bc58e6a0152dce53c40c24eb5283dc0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705343"
 ---
-# <a name="compilers-element"></a><span data-ttu-id="98f57-102">\<System.codeDom > öğesi</span><span class="sxs-lookup"><span data-stu-id="98f57-102">\<compilers> Element</span></span>
-<span data-ttu-id="98f57-103">Compiler configuration öğeleri için kapsayıcı; sıfır veya daha fazlasını içeren [ \<derleyici >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) öğeleri.</span><span class="sxs-lookup"><span data-stu-id="98f57-103">Container for compiler configuration elements; contains zero or more [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elements.</span></span>  
+# <a name="compilers-element"></a><span data-ttu-id="ebdd1-102">\<System.codeDom > öğesi</span><span class="sxs-lookup"><span data-stu-id="ebdd1-102">\<compilers> Element</span></span>
+<span data-ttu-id="ebdd1-103">Compiler configuration öğeleri için kapsayıcı; sıfır veya daha fazlasını içeren [ \<derleyici >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) öğeleri.</span><span class="sxs-lookup"><span data-stu-id="ebdd1-103">Container for compiler configuration elements; contains zero or more [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elements.</span></span>  
   
- <span data-ttu-id="98f57-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="98f57-104">\<configuration></span></span>  
-<span data-ttu-id="98f57-105">\<System.codeDom ></span><span class="sxs-lookup"><span data-stu-id="98f57-105">\<system.codedom></span></span>  
-<span data-ttu-id="98f57-106">\<System.codeDom > öğesi</span><span class="sxs-lookup"><span data-stu-id="98f57-106">\<compilers> Element</span></span>  
+ <span data-ttu-id="ebdd1-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="ebdd1-104">\<configuration></span></span>  
+<span data-ttu-id="ebdd1-105">\<System.codeDom ></span><span class="sxs-lookup"><span data-stu-id="ebdd1-105">\<system.codedom></span></span>  
+<span data-ttu-id="ebdd1-106">\<System.codeDom > öğesi</span><span class="sxs-lookup"><span data-stu-id="ebdd1-106">\<compilers> Element</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="98f57-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="98f57-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ebdd1-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ebdd1-107">Syntax</span></span>  
   
 ```xml  
 <compilers>  
@@ -31,35 +31,35 @@ ms.locfileid: "59130526"
 </compilers>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="98f57-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="98f57-108">Attributes and Elements</span></span>  
- <span data-ttu-id="98f57-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="98f57-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ebdd1-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="ebdd1-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="ebdd1-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="ebdd1-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="98f57-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="98f57-110">Attributes</span></span>  
- <span data-ttu-id="98f57-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="98f57-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="ebdd1-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="ebdd1-110">Attributes</span></span>  
+ <span data-ttu-id="ebdd1-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="ebdd1-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="98f57-112">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="98f57-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="ebdd1-112">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="ebdd1-112">Child Elements</span></span>  
   
-|<span data-ttu-id="98f57-113">Öğe</span><span class="sxs-lookup"><span data-stu-id="98f57-113">Element</span></span>|<span data-ttu-id="98f57-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="98f57-114">Description</span></span>|  
+|<span data-ttu-id="ebdd1-113">Öğe</span><span class="sxs-lookup"><span data-stu-id="ebdd1-113">Element</span></span>|<span data-ttu-id="ebdd1-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ebdd1-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="98f57-115">\<Derleyici > öğesi</span><span class="sxs-lookup"><span data-stu-id="98f57-115">\<compiler> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|<span data-ttu-id="98f57-116">Compiler configuration öznitelikleri için dil sağlayıcısı belirtir.</span><span class="sxs-lookup"><span data-stu-id="98f57-116">Specifies the compiler configuration attributes for a language provider.</span></span>|  
+|[<span data-ttu-id="ebdd1-115">\<Derleyici > öğesi</span><span class="sxs-lookup"><span data-stu-id="ebdd1-115">\<compiler> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|<span data-ttu-id="ebdd1-116">Compiler configuration öznitelikleri için dil sağlayıcısı belirtir.</span><span class="sxs-lookup"><span data-stu-id="ebdd1-116">Specifies the compiler configuration attributes for a language provider.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="98f57-117">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="98f57-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="ebdd1-117">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="ebdd1-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="98f57-118">Öğe</span><span class="sxs-lookup"><span data-stu-id="98f57-118">Element</span></span>|<span data-ttu-id="98f57-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="98f57-119">Description</span></span>|  
+|<span data-ttu-id="ebdd1-118">Öğe</span><span class="sxs-lookup"><span data-stu-id="ebdd1-118">Element</span></span>|<span data-ttu-id="ebdd1-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ebdd1-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="98f57-120">\<Yapılandırma > öğesi</span><span class="sxs-lookup"><span data-stu-id="98f57-120">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="98f57-121">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="98f57-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|[<span data-ttu-id="98f57-122">\<System.codeDom > öğesi</span><span class="sxs-lookup"><span data-stu-id="98f57-122">\<system.codedom> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|<span data-ttu-id="98f57-123">Kullanılabilir dil sağlayıcıları için derleyici yapılandırma ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="98f57-123">Specifies compiler configuration settings for available language providers.</span></span>|  
+|[<span data-ttu-id="ebdd1-120">\<Yapılandırma > öğesi</span><span class="sxs-lookup"><span data-stu-id="ebdd1-120">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="ebdd1-121">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="ebdd1-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|[<span data-ttu-id="ebdd1-122">\<System.codeDom > öğesi</span><span class="sxs-lookup"><span data-stu-id="ebdd1-122">\<system.codedom> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|<span data-ttu-id="ebdd1-123">Kullanılabilir dil sağlayıcıları için derleyici yapılandırma ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="ebdd1-123">Specifies compiler configuration settings for available language providers.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="98f57-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="98f57-124">Remarks</span></span>  
- <span data-ttu-id="98f57-125">[ \<Derleyiciler >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) öğesi bir bilgisayarda dil sağlayıcıları için derleyici yapılandırma ayarlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="98f57-125">The [\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) element contains the compiler configuration settings for language providers on a computer.</span></span> <span data-ttu-id="98f57-126">Her [ \<derleyici >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) öğesi için belirli bir dil sağlayıcısı compiler configuration öznitelikleri belirtir.</span><span class="sxs-lookup"><span data-stu-id="98f57-126">Each [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) element specifies the compiler configuration attributes for a specific language provider.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ebdd1-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ebdd1-124">Remarks</span></span>  
+ <span data-ttu-id="ebdd1-125">[ \<Derleyiciler >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) öğesi bir bilgisayarda dil sağlayıcıları için derleyici yapılandırma ayarlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="ebdd1-125">The [\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) element contains the compiler configuration settings for language providers on a computer.</span></span> <span data-ttu-id="ebdd1-126">Her [ \<derleyici >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) öğesi için belirli bir dil sağlayıcısı compiler configuration öznitelikleri belirtir.</span><span class="sxs-lookup"><span data-stu-id="ebdd1-126">Each [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) element specifies the compiler configuration attributes for a specific language provider.</span></span>  
   
- <span data-ttu-id="98f57-127">.NET Framework, makine yapılandırma dosyasındaki (Machine.config) ilk derleyici ve dil sağlayıcısı ayarları tanımlar.</span><span class="sxs-lookup"><span data-stu-id="98f57-127">The .NET Framework defines the initial compiler and language provider settings in the machine configuration file (Machine.config).</span></span> <span data-ttu-id="98f57-128">Geliştiriciler ve derleyici satıcıları ekleyebilirsiniz yapılandırma ayarları için yeni bir <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> uygulaması.</span><span class="sxs-lookup"><span data-stu-id="98f57-128">Developers and compiler vendors can add configuration settings for a new <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> implementation.</span></span> <span data-ttu-id="98f57-129">Kullanım <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> dil sağlayıcısı ve derleyici yapılandırma ayarlarını bir bilgisayardaki program aracılığıyla listeleme yöntemi.</span><span class="sxs-lookup"><span data-stu-id="98f57-129">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> method to programmatically enumerate language provider and compiler configuration settings on a computer.</span></span>  
+ <span data-ttu-id="ebdd1-127">.NET Framework, makine yapılandırma dosyasındaki (Machine.config) ilk derleyici ve dil sağlayıcısı ayarları tanımlar.</span><span class="sxs-lookup"><span data-stu-id="ebdd1-127">The .NET Framework defines the initial compiler and language provider settings in the machine configuration file (Machine.config).</span></span> <span data-ttu-id="ebdd1-128">Geliştiriciler ve derleyici satıcıları ekleyebilirsiniz yapılandırma ayarları için yeni bir <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> uygulaması.</span><span class="sxs-lookup"><span data-stu-id="ebdd1-128">Developers and compiler vendors can add configuration settings for a new <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> implementation.</span></span> <span data-ttu-id="ebdd1-129">Kullanım <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> dil sağlayıcısı ve derleyici yapılandırma ayarlarını bir bilgisayardaki program aracılığıyla listeleme yöntemi.</span><span class="sxs-lookup"><span data-stu-id="ebdd1-129">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> method to programmatically enumerate language provider and compiler configuration settings on a computer.</span></span>  
   
-## <a name="configuration-file"></a><span data-ttu-id="98f57-130">Yapılandırma Dosyası</span><span class="sxs-lookup"><span data-stu-id="98f57-130">Configuration File</span></span>  
- <span data-ttu-id="98f57-131">Bu öğe, makine yapılandırma dosyası ve uygulama yapılandırma dosyasında kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="98f57-131">This element can be used in the machine configuration file and the application configuration file.</span></span>  
+## <a name="configuration-file"></a><span data-ttu-id="ebdd1-130">Yapılandırma Dosyası</span><span class="sxs-lookup"><span data-stu-id="ebdd1-130">Configuration File</span></span>  
+ <span data-ttu-id="ebdd1-131">Bu öğe, makine yapılandırma dosyası ve uygulama yapılandırma dosyasında kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="ebdd1-131">This element can be used in the machine configuration file and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="98f57-132">Örnek</span><span class="sxs-lookup"><span data-stu-id="98f57-132">Example</span></span>  
- <span data-ttu-id="98f57-133">Aşağıdaki örnek, tipik bir derleyici yapılandırma öğesi gösterir.</span><span class="sxs-lookup"><span data-stu-id="98f57-133">The following example illustrates a typical compiler configuration element.</span></span>  
+## <a name="example"></a><span data-ttu-id="ebdd1-132">Örnek</span><span class="sxs-lookup"><span data-stu-id="ebdd1-132">Example</span></span>  
+ <span data-ttu-id="ebdd1-133">Aşağıdaki örnek, tipik bir derleyici yapılandırma öğesi gösterir.</span><span class="sxs-lookup"><span data-stu-id="ebdd1-133">The following example illustrates a typical compiler configuration element.</span></span>  
   
 ```xml  
 <configuration>  
@@ -77,10 +77,10 @@ ms.locfileid: "59130526"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="98f57-134">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="98f57-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ebdd1-134">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ebdd1-134">See also</span></span>
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [<span data-ttu-id="98f57-135">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="98f57-135">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="98f57-136">Derleyici ve Dil Sağlayıcısı Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="98f57-136">Compiler and Language Provider Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
-- [<span data-ttu-id="98f57-137">\<Derleyici > öğesi</span><span class="sxs-lookup"><span data-stu-id="98f57-137">\<compiler> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [<span data-ttu-id="ebdd1-135">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="ebdd1-135">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="ebdd1-136">Derleyici ve Dil Sağlayıcısı Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="ebdd1-136">Compiler and Language Provider Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
+- [<span data-ttu-id="ebdd1-137">\<Derleyici > öğesi</span><span class="sxs-lookup"><span data-stu-id="ebdd1-137">\<compiler> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

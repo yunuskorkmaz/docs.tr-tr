@@ -8,21 +8,21 @@ helpviewer_keywords:
 - controls [WPF], Popup
 ms.assetid: 9488a245-0168-4650-b9ab-d075a108cc8f
 ms.openlocfilehash: 80f0d8bb3f78e80868d5294b5893ef409fdf478c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770584"
 ---
-# <a name="popup-how-to-topics"></a><span data-ttu-id="c1147-102">Açılan Pencere ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="c1147-102">Popup How-to Topics</span></span>
-<span data-ttu-id="c1147-103">Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.Primitives.Popup> içeriği geçerli bir uygulama penceresi üzerinde gezinen ayrı bir pencerede görüntülemek için denetim.</span><span class="sxs-lookup"><span data-stu-id="c1147-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Primitives.Popup> control to display content in a separate window that floats over the current application window.</span></span>  
+# <a name="popup-how-to-topics"></a><span data-ttu-id="c916b-102">Açılan Pencere ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="c916b-102">Popup How-to Topics</span></span>
+<span data-ttu-id="c916b-103">Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.Primitives.Popup> içeriği geçerli bir uygulama penceresi üzerinde gezinen ayrı bir pencerede görüntülemek için denetim.</span><span class="sxs-lookup"><span data-stu-id="c916b-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Primitives.Popup> control to display content in a separate window that floats over the current application window.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c1147-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="c1147-104">In This Section</span></span>  
- [<span data-ttu-id="c1147-105">Açılan Pencereye Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="c1147-105">Animate a Popup</span></span>](how-to-animate-a-popup.md)  
- [<span data-ttu-id="c1147-106">Özel Açılan Pencere Konumu Belirtme</span><span class="sxs-lookup"><span data-stu-id="c1147-106">Specify a Custom Popup Position</span></span>](how-to-specify-a-custom-popup-position.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c916b-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="c916b-104">In This Section</span></span>  
+ [<span data-ttu-id="c916b-105">Açılan Pencereye Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="c916b-105">Animate a Popup</span></span>](how-to-animate-a-popup.md)  
+ [<span data-ttu-id="c916b-106">Özel Açılan Pencere Konumu Belirtme</span><span class="sxs-lookup"><span data-stu-id="c916b-106">Specify a Custom Popup Position</span></span>](how-to-specify-a-custom-popup-position.md)  
   
-## <a name="reference"></a><span data-ttu-id="c1147-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="c1147-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c916b-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="c916b-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="c1147-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="c1147-108">Related Sections</span></span>  
- [<span data-ttu-id="c1147-109">Açılan Pencereye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="c1147-109">Popup Overview</span></span>](popup-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="c916b-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="c916b-108">Related Sections</span></span>  
+ [<span data-ttu-id="c916b-109">Açılan Pencereye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="c916b-109">Popup Overview</span></span>](popup-overview.md)
