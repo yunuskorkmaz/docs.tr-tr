@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 668e570c315f5473f222905a061f05ac94afa81a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763574"
 ---
-# <a name="iclrtaskgetmemstats-method"></a><span data-ttu-id="422ce-102">ICLRTask::GetMemStats Yöntemi</span><span class="sxs-lookup"><span data-stu-id="422ce-102">ICLRTask::GetMemStats Method</span></span>
-<span data-ttu-id="422ce-103">Görevle ilgili istatistiksel bellek kullanım bilgilerini alır, geçerli [Iclrtask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) örneğini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="422ce-103">Gets statistical memory usage information related to the task that the current [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance represents.</span></span>  
+# <a name="iclrtaskgetmemstats-method"></a><span data-ttu-id="07287-102">ICLRTask::GetMemStats Yöntemi</span><span class="sxs-lookup"><span data-stu-id="07287-102">ICLRTask::GetMemStats Method</span></span>
+<span data-ttu-id="07287-103">Görevle ilgili istatistiksel bellek kullanım bilgilerini alır, geçerli [Iclrtask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) örneğini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="07287-103">Gets statistical memory usage information related to the task that the current [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance represents.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="422ce-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="422ce-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="07287-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="07287-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMemStats (  
@@ -35,33 +35,33 @@ HRESULT GetMemStats (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="422ce-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="422ce-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="07287-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="07287-105">Parameters</span></span>  
  `pMemUsage`  
- <span data-ttu-id="422ce-106">[out] Bir işaretçi bir [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) görevin ayrılan bayt sayısı dahil olmak üzere, bellek kullanımı hakkında ayrıntılar içeren örneği.</span><span class="sxs-lookup"><span data-stu-id="422ce-106">[out] A pointer to a [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) instance that contains details about the memory usage of the task, including the number of bytes allocated.</span></span>  
+ <span data-ttu-id="07287-106">[out] Bir işaretçi bir [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) görevin ayrılan bayt sayısı dahil olmak üzere, bellek kullanımı hakkında ayrıntılar içeren örneği.</span><span class="sxs-lookup"><span data-stu-id="07287-106">[out] A pointer to a [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) instance that contains details about the memory usage of the task, including the number of bytes allocated.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="422ce-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="422ce-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="07287-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="07287-107">Return Value</span></span>  
   
-|<span data-ttu-id="422ce-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="422ce-108">HRESULT</span></span>|<span data-ttu-id="422ce-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="422ce-109">Description</span></span>|  
+|<span data-ttu-id="07287-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="07287-108">HRESULT</span></span>|<span data-ttu-id="07287-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="07287-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="422ce-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="422ce-110">S_OK</span></span>|<span data-ttu-id="422ce-111">`GetMemStats` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="422ce-111">`GetMemStats` returned successfully.</span></span>|  
-|<span data-ttu-id="422ce-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="422ce-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="422ce-113">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="422ce-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="422ce-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="422ce-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="422ce-115">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="422ce-115">The call timed out.</span></span>|  
-|<span data-ttu-id="422ce-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="422ce-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="422ce-117">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="422ce-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="422ce-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="422ce-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="422ce-119">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="422ce-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="422ce-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="422ce-120">E_FAIL</span></span>|<span data-ttu-id="422ce-121">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="422ce-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="422ce-122">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="422ce-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="422ce-123">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="422ce-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="07287-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="07287-110">S_OK</span></span>|<span data-ttu-id="07287-111">`GetMemStats` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="07287-111">`GetMemStats` returned successfully.</span></span>|  
+|<span data-ttu-id="07287-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="07287-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="07287-113">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="07287-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="07287-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="07287-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="07287-115">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="07287-115">The call timed out.</span></span>|  
+|<span data-ttu-id="07287-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="07287-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="07287-117">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="07287-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="07287-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="07287-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="07287-119">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="07287-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="07287-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="07287-120">E_FAIL</span></span>|<span data-ttu-id="07287-121">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="07287-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="07287-122">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="07287-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="07287-123">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="07287-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="422ce-124">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="422ce-124">Requirements</span></span>  
- <span data-ttu-id="422ce-125">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="422ce-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="07287-124">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="07287-124">Requirements</span></span>  
+ <span data-ttu-id="07287-125">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="07287-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="422ce-126">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="422ce-126">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="07287-126">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="07287-126">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="422ce-127">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="422ce-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="07287-127">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="07287-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="422ce-128">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="422ce-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="07287-128">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="07287-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="422ce-129">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="422ce-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="07287-129">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="07287-129">See also</span></span>
 
-- [<span data-ttu-id="422ce-130">ICLRTask Arabirimi</span><span class="sxs-lookup"><span data-stu-id="422ce-130">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="422ce-131">ICLRTaskManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="422ce-131">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="422ce-132">IHostTask Arabirimi</span><span class="sxs-lookup"><span data-stu-id="422ce-132">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="422ce-133">IHostTaskManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="422ce-133">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="07287-130">ICLRTask Arabirimi</span><span class="sxs-lookup"><span data-stu-id="07287-130">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="07287-131">ICLRTaskManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="07287-131">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="07287-132">IHostTask Arabirimi</span><span class="sxs-lookup"><span data-stu-id="07287-132">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="07287-133">IHostTaskManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="07287-133">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

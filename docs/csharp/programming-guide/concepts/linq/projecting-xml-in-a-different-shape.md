@@ -3,23 +3,23 @@ title: Planlanması XML farklı bir şekil (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
 ms.openlocfilehash: 381d674c420128f75d27394c21a7b622b2d78402
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61681695"
 ---
-# <a name="projecting-xml-in-a-different-shape-c"></a><span data-ttu-id="15f53-102">Planlanması XML farklı bir şekil (C#)</span><span class="sxs-lookup"><span data-stu-id="15f53-102">Projecting XML in a Different Shape (C#)</span></span>
-<span data-ttu-id="15f53-103">Bu konuda, farklı bir şekil XML kaynak planlanması XML örneği gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="15f53-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
+# <a name="projecting-xml-in-a-different-shape-c"></a><span data-ttu-id="20618-102">Planlanması XML farklı bir şekil (C#)</span><span class="sxs-lookup"><span data-stu-id="20618-102">Projecting XML in a Different Shape (C#)</span></span>
+<span data-ttu-id="20618-103">Bu konuda, farklı bir şekil XML kaynak planlanması XML örneği gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="20618-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
   
- <span data-ttu-id="15f53-104">Zincirleme sorgular, bu örnekte olduğu gibi birçok tipik XML dönüşümleri oluşur.</span><span class="sxs-lookup"><span data-stu-id="15f53-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="15f53-105">Başlamak XML biçimi Ara sonuçlar anonim türler bir koleksiyon olarak proje veya adlandırılmış ve ardından son olarak proje sonuçları XML kaynak tamamen farklı bir şekil içinde XML halinde yeniden yaygındır.</span><span class="sxs-lookup"><span data-stu-id="15f53-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
+ <span data-ttu-id="20618-104">Zincirleme sorgular, bu örnekte olduğu gibi birçok tipik XML dönüşümleri oluşur.</span><span class="sxs-lookup"><span data-stu-id="20618-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="20618-105">Başlamak XML biçimi Ara sonuçlar anonim türler bir koleksiyon olarak proje veya adlandırılmış ve ardından son olarak proje sonuçları XML kaynak tamamen farklı bir şekil içinde XML halinde yeniden yaygındır.</span><span class="sxs-lookup"><span data-stu-id="20618-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="15f53-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="15f53-106">Example</span></span>  
- <span data-ttu-id="15f53-107">Bu örnekte, paragraf düğümleri WordprocessingML belge alınırken WordprocessingML belgesinin işler.</span><span class="sxs-lookup"><span data-stu-id="15f53-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="15f53-108">Ayrıca, stil ve her bir paragraf metni tanımlar.</span><span class="sxs-lookup"><span data-stu-id="15f53-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="15f53-109">Son olarak, örnek XML ile farklı bir şekil yansıtıyor.</span><span class="sxs-lookup"><span data-stu-id="15f53-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="15f53-110">Bu örnek, önceki örneklerde üzerinde Bu öğreticide oluşturur.</span><span class="sxs-lookup"><span data-stu-id="15f53-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="15f53-111">Yansıtma yapan yeni deyim aşağıdaki kod açıklamalarda çağrılır.</span><span class="sxs-lookup"><span data-stu-id="15f53-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
+## <a name="example"></a><span data-ttu-id="20618-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="20618-106">Example</span></span>  
+ <span data-ttu-id="20618-107">Bu örnekte, paragraf düğümleri WordprocessingML belge alınırken WordprocessingML belgesinin işler.</span><span class="sxs-lookup"><span data-stu-id="20618-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="20618-108">Ayrıca, stil ve her bir paragraf metni tanımlar.</span><span class="sxs-lookup"><span data-stu-id="20618-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="20618-109">Son olarak, örnek XML ile farklı bir şekil yansıtıyor.</span><span class="sxs-lookup"><span data-stu-id="20618-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="20618-110">Bu örnek, önceki örneklerde üzerinde Bu öğreticide oluşturur.</span><span class="sxs-lookup"><span data-stu-id="20618-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="20618-111">Yansıtma yapan yeni deyim aşağıdaki kod açıklamalarda çağrılır.</span><span class="sxs-lookup"><span data-stu-id="20618-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
   
- <span data-ttu-id="15f53-112">Bu örneğin kaynak belge oluşturma yönergeleri için bkz. [kaynak Office Open XML belgesi (C#) oluşturma](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="15f53-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="20618-112">Bu örneğin kaynak belge oluşturma yönergeleri için bkz. [kaynak Office Open XML belgesi (C#) oluşturma](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="20618-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="15f53-113">Bu örnek WindowsBase derlemesinden sınıfları kullanır.</span><span class="sxs-lookup"><span data-stu-id="15f53-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="15f53-114">Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="15f53-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="20618-113">Bu örnek WindowsBase derlemesinden sınıfları kullanır.</span><span class="sxs-lookup"><span data-stu-id="20618-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="20618-114">Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="20618-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -163,7 +163,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="15f53-115">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="15f53-115">This example produces the following output:</span></span>  
+ <span data-ttu-id="20618-115">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="20618-115">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -230,11 +230,11 @@ class Program
 </Root>  
 ```  
   
-## <a name="next-steps"></a><span data-ttu-id="15f53-116">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="15f53-116">Next Steps</span></span>  
- <span data-ttu-id="15f53-117">Sonraki örnekte, bir Word belgesinde tüm metni bulmak için sorgu:</span><span class="sxs-lookup"><span data-stu-id="15f53-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="20618-116">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="20618-116">Next Steps</span></span>  
+ <span data-ttu-id="20618-117">Sonraki örnekte, bir Word belgesinde tüm metni bulmak için sorgu:</span><span class="sxs-lookup"><span data-stu-id="20618-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
   
--   [<span data-ttu-id="15f53-118">(C#) Word belgelerinde metin bulma</span><span class="sxs-lookup"><span data-stu-id="15f53-118">Finding Text in Word Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [<span data-ttu-id="20618-118">(C#) Word belgelerinde metin bulma</span><span class="sxs-lookup"><span data-stu-id="20618-118">Finding Text in Word Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a><span data-ttu-id="15f53-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="15f53-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="20618-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="20618-119">See also</span></span>
 
-- [<span data-ttu-id="15f53-120">Öğretici: WordprocessingML belgesindeki içeriği düzenleme (C#)</span><span class="sxs-lookup"><span data-stu-id="15f53-120">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [<span data-ttu-id="20618-120">Öğretici: WordprocessingML belgesindeki içeriği düzenleme (C#)</span><span class="sxs-lookup"><span data-stu-id="20618-120">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

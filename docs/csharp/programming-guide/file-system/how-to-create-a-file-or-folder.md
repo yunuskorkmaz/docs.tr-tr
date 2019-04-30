@@ -9,23 +9,23 @@ helpviewer_keywords:
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
 ms.openlocfilehash: d94c3624b84b2fea6760ac8f36fc592928a55834
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680746"
 ---
-# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a><span data-ttu-id="ab701-102">Nasıl yapılır: Bir dosya veya klasör oluşturma (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="ab701-102">How to: Create a File or Folder (C# Programming Guide)</span></span>
-<span data-ttu-id="ab701-103">Programlı olarak bilgisayarınızda bir klasör oluşturun, bir alt klasör oluşturun alt klasöründe bir dosya oluşturun ve dosyaya veri yazmak.</span><span class="sxs-lookup"><span data-stu-id="ab701-103">You can programmatically create a folder on your computer, create a subfolder, create a file in the subfolder, and write data to the file.</span></span>  
+# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a><span data-ttu-id="8b68f-102">Nasıl yapılır: Bir dosya veya klasör oluşturma (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="8b68f-102">How to: Create a File or Folder (C# Programming Guide)</span></span>
+<span data-ttu-id="8b68f-103">Programlı olarak bilgisayarınızda bir klasör oluşturun, bir alt klasör oluşturun alt klasöründe bir dosya oluşturun ve dosyaya veri yazmak.</span><span class="sxs-lookup"><span data-stu-id="8b68f-103">You can programmatically create a folder on your computer, create a subfolder, create a file in the subfolder, and write data to the file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ab701-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="ab701-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="8b68f-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="8b68f-104">Example</span></span>  
  [!code-csharp[csFilesandFolders#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#10)]  
   
- <span data-ttu-id="ab701-105">Klasör zaten varsa, <xref:System.IO.Directory.CreateDirectory%2A> hiçbir şey ve hiçbir özel durum atılmaz.</span><span class="sxs-lookup"><span data-stu-id="ab701-105">If the folder already exists, <xref:System.IO.Directory.CreateDirectory%2A> does nothing, and no exception is thrown.</span></span> <span data-ttu-id="ab701-106">Ancak, <xref:System.IO.File.Create%2A?displayProperty=nameWithType> mevcut bir dosyayı yeni bir dosya ile değiştirir.</span><span class="sxs-lookup"><span data-stu-id="ab701-106">However, <xref:System.IO.File.Create%2A?displayProperty=nameWithType> replaces an existing file with a new file.</span></span> <span data-ttu-id="ab701-107">Örnekte bir `if` - `else` varolan bir dosyanın değiştirilmesini önlemek için deyimi.</span><span class="sxs-lookup"><span data-stu-id="ab701-107">The example uses an `if`-`else` statement to prevent an existing file from being replaced.</span></span>  
+ <span data-ttu-id="8b68f-105">Klasör zaten varsa, <xref:System.IO.Directory.CreateDirectory%2A> hiçbir şey ve hiçbir özel durum atılmaz.</span><span class="sxs-lookup"><span data-stu-id="8b68f-105">If the folder already exists, <xref:System.IO.Directory.CreateDirectory%2A> does nothing, and no exception is thrown.</span></span> <span data-ttu-id="8b68f-106">Ancak, <xref:System.IO.File.Create%2A?displayProperty=nameWithType> mevcut bir dosyayı yeni bir dosya ile değiştirir.</span><span class="sxs-lookup"><span data-stu-id="8b68f-106">However, <xref:System.IO.File.Create%2A?displayProperty=nameWithType> replaces an existing file with a new file.</span></span> <span data-ttu-id="8b68f-107">Örnekte bir `if` - `else` varolan bir dosyanın değiştirilmesini önlemek için deyimi.</span><span class="sxs-lookup"><span data-stu-id="8b68f-107">The example uses an `if`-`else` statement to prevent an existing file from being replaced.</span></span>  
   
- <span data-ttu-id="ab701-108">Örnekte aşağıdaki değişiklikleri yaparak, belirli bir ada sahip bir dosya zaten var olup üzerinde göre farklı sonuçlar belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ab701-108">By making the following changes in the example, you can specify different outcomes based on whether a file with a certain name already exists.</span></span> <span data-ttu-id="ab701-109">Böyle bir dosya yoksa, kod bir tane oluşturur.</span><span class="sxs-lookup"><span data-stu-id="ab701-109">If such a file doesn't exist, the code creates one.</span></span> <span data-ttu-id="ab701-110">Böyle bir dosya varsa, kod verileri bu dosyaya ekler.</span><span class="sxs-lookup"><span data-stu-id="ab701-110">If such a file exists, the code appends data to that file.</span></span>  
+ <span data-ttu-id="8b68f-108">Örnekte aşağıdaki değişiklikleri yaparak, belirli bir ada sahip bir dosya zaten var olup üzerinde göre farklı sonuçlar belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8b68f-108">By making the following changes in the example, you can specify different outcomes based on whether a file with a certain name already exists.</span></span> <span data-ttu-id="8b68f-109">Böyle bir dosya yoksa, kod bir tane oluşturur.</span><span class="sxs-lookup"><span data-stu-id="8b68f-109">If such a file doesn't exist, the code creates one.</span></span> <span data-ttu-id="8b68f-110">Böyle bir dosya varsa, kod verileri bu dosyaya ekler.</span><span class="sxs-lookup"><span data-stu-id="8b68f-110">If such a file exists, the code appends data to that file.</span></span>  
   
--   <span data-ttu-id="ab701-111">Rastgele olmayan dosya adı belirtin.</span><span class="sxs-lookup"><span data-stu-id="ab701-111">Specify a non-random file name.</span></span>  
+- <span data-ttu-id="8b68f-111">Rastgele olmayan dosya adı belirtin.</span><span class="sxs-lookup"><span data-stu-id="8b68f-111">Specify a non-random file name.</span></span>  
   
     ```csharp  
     // Comment out the following line.  
@@ -35,7 +35,7 @@ ms.locfileid: "56970720"
     string fileName = "MyNewFile.txt";  
     ```  
   
--   <span data-ttu-id="ab701-112">Değiştirin `if` - `else` deyimiyle `using` aşağıdaki kodda deyimi.</span><span class="sxs-lookup"><span data-stu-id="ab701-112">Replace the `if`-`else` statement with the `using` statement in the following code.</span></span>  
+- <span data-ttu-id="8b68f-112">Değiştirin `if` - `else` deyimiyle `using` aşağıdaki kodda deyimi.</span><span class="sxs-lookup"><span data-stu-id="8b68f-112">Replace the `if`-`else` statement with the `using` statement in the following code.</span></span>  
   
     ```csharp  
     using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))   
@@ -47,29 +47,29 @@ ms.locfileid: "56970720"
     }  
     ```  
   
- <span data-ttu-id="ab701-113">Örneği birkaç kere çalıştırın verileri doğrulamak için dosyayı her seferinde eklenir.</span><span class="sxs-lookup"><span data-stu-id="ab701-113">Run the example several times to verify that data is added to the file each time.</span></span>  
+ <span data-ttu-id="8b68f-113">Örneği birkaç kere çalıştırın verileri doğrulamak için dosyayı her seferinde eklenir.</span><span class="sxs-lookup"><span data-stu-id="8b68f-113">Run the example several times to verify that data is added to the file each time.</span></span>  
   
- <span data-ttu-id="ab701-114">Daha fazla bilgi için `FileMode` , bkz, deneyebileceğiniz değerleri <xref:System.IO.FileMode>.</span><span class="sxs-lookup"><span data-stu-id="ab701-114">For more `FileMode` values that you can try, see <xref:System.IO.FileMode>.</span></span>  
+ <span data-ttu-id="8b68f-114">Daha fazla bilgi için `FileMode` , bkz, deneyebileceğiniz değerleri <xref:System.IO.FileMode>.</span><span class="sxs-lookup"><span data-stu-id="8b68f-114">For more `FileMode` values that you can try, see <xref:System.IO.FileMode>.</span></span>  
   
- <span data-ttu-id="ab701-115">Aşağıdaki koşullar özel bir duruma neden olabilir:</span><span class="sxs-lookup"><span data-stu-id="ab701-115">The following conditions may cause an exception:</span></span>  
+ <span data-ttu-id="8b68f-115">Aşağıdaki koşullar özel bir duruma neden olabilir:</span><span class="sxs-lookup"><span data-stu-id="8b68f-115">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="ab701-116">Klasör adı yanlış biçimlendirilmiş.</span><span class="sxs-lookup"><span data-stu-id="ab701-116">The folder name is malformed.</span></span> <span data-ttu-id="ab701-117">Örneğin, geçersiz karakterler içeriyor veya yalnızca boşluk (<xref:System.ArgumentException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="ab701-117">For example, it contains illegal characters or is only white space (<xref:System.ArgumentException> class).</span></span> <span data-ttu-id="ab701-118">Kullanım <xref:System.IO.Path> geçerli yol adları oluşturmak için sınıf.</span><span class="sxs-lookup"><span data-stu-id="ab701-118">Use the <xref:System.IO.Path> class to create valid path names.</span></span>  
+- <span data-ttu-id="8b68f-116">Klasör adı yanlış biçimlendirilmiş.</span><span class="sxs-lookup"><span data-stu-id="8b68f-116">The folder name is malformed.</span></span> <span data-ttu-id="8b68f-117">Örneğin, geçersiz karakterler içeriyor veya yalnızca boşluk (<xref:System.ArgumentException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="8b68f-117">For example, it contains illegal characters or is only white space (<xref:System.ArgumentException> class).</span></span> <span data-ttu-id="8b68f-118">Kullanım <xref:System.IO.Path> geçerli yol adları oluşturmak için sınıf.</span><span class="sxs-lookup"><span data-stu-id="8b68f-118">Use the <xref:System.IO.Path> class to create valid path names.</span></span>  
   
--   <span data-ttu-id="ab701-119">Oluşturulacak klasörün üst klasörü salt okunurdur (<xref:System.IO.IOException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="ab701-119">The parent folder of the folder to be created is read-only (<xref:System.IO.IOException> class).</span></span>  
+- <span data-ttu-id="8b68f-119">Oluşturulacak klasörün üst klasörü salt okunurdur (<xref:System.IO.IOException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="8b68f-119">The parent folder of the folder to be created is read-only (<xref:System.IO.IOException> class).</span></span>  
   
--   <span data-ttu-id="ab701-120">Klasör adı `null` (<xref:System.ArgumentNullException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="ab701-120">The folder name is `null` (<xref:System.ArgumentNullException> class).</span></span>  
+- <span data-ttu-id="8b68f-120">Klasör adı `null` (<xref:System.ArgumentNullException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="8b68f-120">The folder name is `null` (<xref:System.ArgumentNullException> class).</span></span>  
   
--   <span data-ttu-id="ab701-121">Klasör adı çok uzun (<xref:System.IO.PathTooLongException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="ab701-121">The folder name is too long (<xref:System.IO.PathTooLongException> class).</span></span>  
+- <span data-ttu-id="8b68f-121">Klasör adı çok uzun (<xref:System.IO.PathTooLongException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="8b68f-121">The folder name is too long (<xref:System.IO.PathTooLongException> class).</span></span>  
   
--   <span data-ttu-id="ab701-122">Yalnızca bir iki nokta üst üste, klasör adı olan ":" (<xref:System.IO.PathTooLongException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="ab701-122">The folder name is only a colon, ":" (<xref:System.IO.PathTooLongException> class).</span></span>  
+- <span data-ttu-id="8b68f-122">Yalnızca bir iki nokta üst üste, klasör adı olan ":" (<xref:System.IO.PathTooLongException> sınıfı).</span><span class="sxs-lookup"><span data-stu-id="8b68f-122">The folder name is only a colon, ":" (<xref:System.IO.PathTooLongException> class).</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="ab701-123">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="ab701-123">.NET Framework Security</span></span>  
- <span data-ttu-id="ab701-124">Örneği <xref:System.Security.SecurityException> sınıfı kısmi güven durumlarda oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="ab701-124">An instance of the <xref:System.Security.SecurityException> class may be thrown in partial-trust situations.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="8b68f-123">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="8b68f-123">.NET Framework Security</span></span>  
+ <span data-ttu-id="8b68f-124">Örneği <xref:System.Security.SecurityException> sınıfı kısmi güven durumlarda oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="8b68f-124">An instance of the <xref:System.Security.SecurityException> class may be thrown in partial-trust situations.</span></span>  
   
- <span data-ttu-id="ab701-125">Klasör oluşturma izniniz yoksa, örnek bir örneğini atar <xref:System.UnauthorizedAccessException> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="ab701-125">If you don’t have permission to create the folder, the example throws an instance of the <xref:System.UnauthorizedAccessException> class.</span></span>  
+ <span data-ttu-id="8b68f-125">Klasör oluşturma izniniz yoksa, örnek bir örneğini atar <xref:System.UnauthorizedAccessException> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="8b68f-125">If you don’t have permission to create the folder, the example throws an instance of the <xref:System.UnauthorizedAccessException> class.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab701-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ab701-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8b68f-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8b68f-126">See also</span></span>
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [<span data-ttu-id="ab701-127">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="ab701-127">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="ab701-128">Dosya sistemi ve kayıt defteri (C# programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="ab701-128">File System and the Registry (C# Programming Guide)</span></span>](../../../csharp/programming-guide/file-system/index.md)
+- [<span data-ttu-id="8b68f-127">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="8b68f-127">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="8b68f-128">Dosya sistemi ve kayıt defteri (C# programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="8b68f-128">File System and the Registry (C# Programming Guide)</span></span>](../../../csharp/programming-guide/file-system/index.md)

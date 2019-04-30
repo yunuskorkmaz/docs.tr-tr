@@ -1,18 +1,18 @@
 ---
-title: 'Örnek XML dosyası: İçinde bir Namespace1 tipik satın alma siparişi'
+title: 'Örnek XML Dosyası: İçinde bir Namespace1 tipik satın alma siparişi'
 ms.date: 07/20/2015
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
 ms.openlocfilehash: 68ead71acee450b7b37e7c933bcb3987681a1311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680967"
 ---
-# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="128ce-102">Örnek XML dosyası: Bir Namespace, tipik satın alma siparişi</span><span class="sxs-lookup"><span data-stu-id="128ce-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
-<span data-ttu-id="128ce-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="128ce-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="128ce-104">Tipik satın alma siparişi dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="128ce-104">This file is a typical purchase order.</span></span> <span data-ttu-id="128ce-105">Bir ad alanında XML'dir.</span><span class="sxs-lookup"><span data-stu-id="128ce-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="f122a-102">Örnek XML Dosyası: Bir Ad Alanında Tipik Satın Alma Siparişi</span><span class="sxs-lookup"><span data-stu-id="f122a-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
+<span data-ttu-id="f122a-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="f122a-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="f122a-104">Tipik satın alma siparişi dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="f122a-104">This file is a typical purchase order.</span></span> <span data-ttu-id="f122a-105">Bir ad alanında XML'dir.</span><span class="sxs-lookup"><span data-stu-id="f122a-105">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="128ce-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="128ce-106">PurchaseOrderInNamespace.xml</span></span>  
+## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="f122a-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="f122a-106">PurchaseOrderInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -54,6 +54,6 @@ ms.locfileid: "54741567"
 </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="128ce-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="128ce-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f122a-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f122a-107">See also</span></span>
 
-- [<span data-ttu-id="128ce-108">Örnek XML Belgeleri (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="128ce-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="f122a-108">Örnek XML Belgeleri (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f122a-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

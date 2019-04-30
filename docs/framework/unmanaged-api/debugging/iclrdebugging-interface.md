@@ -17,35 +17,35 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c6edee34c8560c989040475fee4a35c6bd2ddb3e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697998"
 ---
-# <a name="iclrdebugging-interface"></a><span data-ttu-id="f1a92-102">ICLRDebugging Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f1a92-102">ICLRDebugging Interface</span></span>
-<span data-ttu-id="f1a92-103">Hata ayıklama amacıyla modülleri yükleme ve kaldırma işlemlerini yapan yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="f1a92-103">Provides methods that handle loading and unloading modules for debugging.</span></span>  
+# <a name="iclrdebugging-interface"></a><span data-ttu-id="39210-102">ICLRDebugging Arabirimi</span><span class="sxs-lookup"><span data-stu-id="39210-102">ICLRDebugging Interface</span></span>
+<span data-ttu-id="39210-103">Hata ayıklama amacıyla modülleri yükleme ve kaldırma işlemlerini yapan yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="39210-103">Provides methods that handle loading and unloading modules for debugging.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="f1a92-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="f1a92-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="39210-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="39210-104">Methods</span></span>  
   
-|<span data-ttu-id="f1a92-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="f1a92-105">Method</span></span>|<span data-ttu-id="f1a92-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f1a92-106">Description</span></span>|  
+|<span data-ttu-id="39210-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="39210-105">Method</span></span>|<span data-ttu-id="39210-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="39210-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="f1a92-107">OpenVirtualProcess Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f1a92-107">OpenVirtualProcess Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)|<span data-ttu-id="f1a92-108">Bir ortak dil çalışma zamanı (CLR) modülüne işleme yüklendiğinde karşılık gelen "ICorDebugProcess" arabirimini alır.</span><span class="sxs-lookup"><span data-stu-id="f1a92-108">Gets the "ICorDebugProcess" interface that corresponds to a common language runtime (CLR) module loaded in the process.</span></span>|  
-|[<span data-ttu-id="f1a92-109">CanUnloadNow Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f1a92-109">CanUnloadNow Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)|<span data-ttu-id="f1a92-110">Tarafından sağlanan bir kitaplığı olup olmadığını belirleyen bir [Iclrdebugginglibraryprovider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) arabirimi hala kullanımda olduğu veya kaldırılmış olabilir.</span><span class="sxs-lookup"><span data-stu-id="f1a92-110">Determines whether a library that was provided by an [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interface is still in use or can be unloaded.</span></span>|  
+|[<span data-ttu-id="39210-107">OpenVirtualProcess Yöntemi</span><span class="sxs-lookup"><span data-stu-id="39210-107">OpenVirtualProcess Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)|<span data-ttu-id="39210-108">Bir ortak dil çalışma zamanı (CLR) modülüne işleme yüklendiğinde karşılık gelen "ICorDebugProcess" arabirimini alır.</span><span class="sxs-lookup"><span data-stu-id="39210-108">Gets the "ICorDebugProcess" interface that corresponds to a common language runtime (CLR) module loaded in the process.</span></span>|  
+|[<span data-ttu-id="39210-109">CanUnloadNow Yöntemi</span><span class="sxs-lookup"><span data-stu-id="39210-109">CanUnloadNow Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)|<span data-ttu-id="39210-110">Tarafından sağlanan bir kitaplığı olup olmadığını belirleyen bir [Iclrdebugginglibraryprovider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) arabirimi hala kullanımda olduğu veya kaldırılmış olabilir.</span><span class="sxs-lookup"><span data-stu-id="39210-110">Determines whether a library that was provided by an [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interface is still in use or can be unloaded.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f1a92-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f1a92-111">Remarks</span></span>  
- <span data-ttu-id="f1a92-112">Bir örneği elde edebilirsiniz `ICLRDebugging` kullanarak arabirimi [Clrcreateınstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="f1a92-112">You can obtain an instance of the `ICLRDebugging` interface by using the [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="39210-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="39210-111">Remarks</span></span>  
+ <span data-ttu-id="39210-112">Bir örneği elde edebilirsiniz `ICLRDebugging` kullanarak arabirimi [Clrcreateınstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="39210-112">You can obtain an instance of the `ICLRDebugging` interface by using the [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f1a92-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f1a92-113">Requirements</span></span>  
- <span data-ttu-id="f1a92-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f1a92-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="39210-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="39210-113">Requirements</span></span>  
+ <span data-ttu-id="39210-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="39210-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f1a92-115">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f1a92-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="39210-115">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="39210-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f1a92-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f1a92-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="39210-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="39210-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f1a92-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f1a92-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="39210-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="39210-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f1a92-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f1a92-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="39210-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="39210-118">See also</span></span>
 
-- [<span data-ttu-id="f1a92-119">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="f1a92-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="f1a92-120">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="f1a92-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="39210-119">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="39210-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="39210-120">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="39210-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
