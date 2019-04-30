@@ -9,11 +9,11 @@ helpviewer_keywords:
 - folders [Windows Forms], enabling browsing in applications
 ms.assetid: 796b622c-3ba9-4356-93bb-e217fc52f2c7
 ms.openlocfilehash: aae18167b29c71ad692cc6ba447457cd079374b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651473"
 ---
 # <a name="folderbrowserdialog-component-overview-windows-forms"></a>FolderBrowserDialog Bileşenine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> klasörleri seçme ve Tarama için kullanılan kalıcı bir iletişim kutusu bir bileşendir. Yeni klasörler de oluşturulabilir içinden <xref:System.Windows.Forms.FolderBrowserDialog> bileşeni.  

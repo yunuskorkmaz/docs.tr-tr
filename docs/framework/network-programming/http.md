@@ -14,11 +14,11 @@ helpviewer_keywords:
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
 ms.openlocfilehash: abbb02b7bd22c4b301c5565037f55aa1019fc3ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642496"
 ---
 # <a name="http"></a>HTTP
 .NET Framework ile tüm Internet trafiği, çoğu yapar HTTP protokolü için kapsamlı destek sağlar. <xref:System.Net.HttpWebRequest> ve <xref:System.Net.HttpWebResponse> sınıfları. Bu sınıflar türetilen <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse>, varsayılan olarak döndürülen her statik yöntem <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> URI başlayan bir "http" veya "https" ile karşılaşır. Çoğu durumda **WebRequest** ve **WebResponse** sınıfları sağlar, tüm istek yapmak gerekli olduğu, ancak özellik olarak kullanıma HTTP'ye özgü özelliklere erişim gerekiyorsa, türü atayarak Bu sınıfa **HttpWebRequest** veya **HttpWebResponse**.  

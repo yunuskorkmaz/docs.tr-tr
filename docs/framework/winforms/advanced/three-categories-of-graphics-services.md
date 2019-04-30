@@ -9,20 +9,20 @@ helpviewer_keywords:
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
 ms.openlocfilehash: ccbd5e236b47d1d870c9b77cfa2b3880619cf3cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651525"
 ---
 # <a name="three-categories-of-graphics-services"></a>Üç Grafik Hizmeti Kategorisi
 Windows Forms'ta grafik teklifleri, aşağıdaki üç ana kategoriye ayrılır:  
   
--   İki boyutlu (2B) vektör grafikleri  
+- İki boyutlu (2B) vektör grafikleri  
   
--   Görüntüleme  
+- Görüntüleme  
   
--   Tipografi  
+- Tipografi  
   
 ## <a name="2-d-vector-graphics"></a>2B vektör grafikleri  
  İki boyutlu bir vektör grafik ilkelleri olan; çizgiler, eğriler ve şekiller gibi; Bu, koordinat sistemi noktalarında kümesi tarafından belirtilir. Örneğin, düz bir çizgi kendi iki uç tarafından belirtilir ve bir dikdörtgen konumu, sol üst köşesinin ve bir çift sayı genişlik ve yükseklik vererek vermiş bir noktası tarafından belirtilir. Basit bir yolu, düz satırlarla bağlı noktaları dizisi ile belirtilir. Bézier eğri dört denetim noktaları tarafından belirtilen karmaşık bir eğri ' dir.  

@@ -1,27 +1,27 @@
 ---
-title: Okuyucudan veri yükleme
+title: Okuyucudan Veri Yükleme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 55756092f086de47c4b2acb8f147ca3ab231abe1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650212"
 ---
-# <a name="load-data-from-a-reader"></a>Okuyucudan veri yükleme
+# <a name="load-data-from-a-reader"></a>Okuyucudan Veri Yükleme
 Bir XML belgesi kullanarak yüklü ise <xref:System.Xml.XmlDocument.Load%2A> yöntemi ve parametre olarak bir <xref:System.Xml.XmlReader>, diğer biçimlerinden veri yükleme davranışını karşılaştırıldığında ortaya çıkan davranış farkları vardır. Okuyucu, başlangıç durumunda ise <xref:System.Xml.XmlDocument.Load%2A> okuyucudan tüm içeriğini tüketir ve XML belge nesne modeli (DOM) tüm verileri okuyucu oluşturur.  
   
  Okuyucu belgedeki bir düğümde konumlandırılır ve okuyucu geçirilerek <xref:System.Xml.XmlDocument.Load%2A> yöntemi <xref:System.Xml.XmlDocument.Load%2A> geçerli düğüm ve tüm geçerli derinlik belleğe kapatır bitiş etiketi adede kadar eş değerleri okumaya çalışır. Denenen başarısını <xref:System.Xml.XmlDocument.Load%2A> yük çalışırken, okuyucu açık olan düğüme bağlıdır olarak <xref:System.Xml.XmlDocument.Load%2A> okuyucudan XML doğru biçimlendirilmemiş olduğunu doğrular. Doğru biçimlendirilmiş XML değilse <xref:System.Xml.XmlDocument.Load%2A> bir özel durum oluşturur. Örneğin, aşağıdaki düğümleri kümesini içeren iki kök düzeyinde öğe, doğru biçimlendirilmiş XML değil ve <xref:System.Xml.XmlDocument.Load%2A> bir özel durum oluşturur.  
   
--   Ardından bir EndElement düğümü tarafından izlenen bir öğe düğümü arkasından bir öğe düğümü, açıklama düğümü.  
+- Ardından bir EndElement düğümü tarafından izlenen bir öğe düğümü arkasından bir öğe düğümü, açıklama düğümü.  
   
  Herhangi bir kök düzeyinde öğe olduğundan aşağıdaki dizi düğümü eksik bir DOM oluşturur.  
   
--   Açıklama düğümü bir EndElement düğümü tarafından izlenen bir açıklama düğümü ardından instruction bir düğüm tarafından izlenen.  
+- Açıklama düğümü bir EndElement düğümü tarafından izlenen bir açıklama düğümü ardından instruction bir düğüm tarafından izlenen.  
   
  Verileri yüklendi ve bir özel durum oluşturmaz. Bu düğümler üst bir kök öğe ekleyin ve hata kaydedilebilir iyi biçimlendirilmiş bir XML dosyası oluşturmak.  
   

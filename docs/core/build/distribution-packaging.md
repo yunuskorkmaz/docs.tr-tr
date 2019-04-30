@@ -5,11 +5,11 @@ author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
 ms.openlocfilehash: be5767351ad1cdac15c73f718f67a0d120cf65b0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650875"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET core dağıtımı paketleme
 
@@ -75,7 +75,7 @@ Kalan sürümünün sürüm adı dahil edilmez. Bu işletim sistemi Paket Yönet
 
 Aşağıdaki tablolarda, önerilen paketler gösterilmektedir.
 
-| Ad                                    | Örnek                | Kullanım örneği: Yükle...           | İçerir           | Bağımlılıkları                                   | Sürüm            |
+| Ad                                    | Örnek                | Kullanım örneği: Yükle...           | İçerir           | Bağımlılıklar                                   | Sürüm            |
 |-----------------------------------------|------------------------|---------------------------------|--------------------|------------------------------------------------|--------------------|
 | dotnet-sdk-[major]                      | dotnet-sdk-2           | Çalışma zamanı ana için en son SDK'sı    |                    | DotNet - sdk-[major]. [latestminor]               | \<SDK sürümü >     |
 | DotNet - sdk-[major]. [minor]              | DotNet sdk 2.1         | Belirli bir çalışma zamanı için en son SDK'sı |                    | DotNet - sdk-[major]. [minor]. [en son SDK'sı feat] xx | \<SDK sürümü >     |
@@ -103,7 +103,7 @@ Bir paket bir düzeltme eki sürümü bozucu bir değişikliğe neden olduğunda
 
 Önerilen paketleri aşağıdaki tabloda gösterir ve **paketleri düzeltme eki**.
 
-| Ad                                           | Örnek                  | İçerir         | Bağımlılıkları                                              |
+| Ad                                           | Örnek                  | İçerir         | Bağımlılıklar                                              |
 |------------------------------------------------|--------------------------|------------------|-----------------------------------------------------------|
 | dotnet-sdk-[major]                             | dotnet-sdk-2             |                  | DotNet - sdk-[major]. [küçük en son sdk]                     |
 | DotNet - sdk-[major]. [minor]                     | DotNet sdk 2.1           |                  | DotNet - sdk-[major]. [minor]. [en son SDK'sı feat] xx            |

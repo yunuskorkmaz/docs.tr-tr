@@ -8,11 +8,11 @@ ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65f5e11a8fb40527387c14cdd8dec7f0bfc5c697
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643702"
 ---
 # <a name="callback-functions"></a>Geri Çağırma İşlevleri
 Kod, bir görevi tamamlamak, yönetilmeyen bir DLL işlevini yardımcı olan yönetilen bir uygulama içinde bir geri çağırma işlevidir. Bir geri arama işlev çağrıları, dolaylı olarak bir DLL işlevini aracılığıyla yönetilen bir uygulama geçirmek ve yönetilen bir uygulamasını yedekleyin. Bazı platformuyla adlı birçok DLL işlevleri çağırma düzgün çalışması için yönetilen kodda bir geri çağırma işlevini gerektirir.  

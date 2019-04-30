@@ -3,11 +3,11 @@ title: Genişletilmiş Koruma ile Tümleşik Windows Kimlik Doğrulaması
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
 ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642392"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Genişletilmiş Koruma ile Tümleşik Windows Kimlik Doğrulaması
 Geliştirmeler, tümleşik Windows kimlik doğrulaması tarafından işlenir etkileyen yapıldı <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, ve ilgili sınıflar <xref:System.Net> ve ilgili ad alanları. Güvenliği geliştirmek genişletilmiş koruma için destek eklendi.  
@@ -39,21 +39,21 @@ Geliştirmeler, tümleşik Windows kimlik doğrulaması tarafından işlenir etk
   
  Hizmet bağlantı bilgilerini belirli hizmet uç noktası kimlik doğrulaması için bir istemcinin hedefi göstergesidir. İstemciden sunucuya aşağıdaki özelliklerle bildiriliyor:  
   
--   SPN değeri sunucunun düz metin biçiminde istemci kimlik doğrulaması gerçekleştirmek için kullanılabilir olmalıdır.  
+- SPN değeri sunucunun düz metin biçiminde istemci kimlik doğrulaması gerçekleştirmek için kullanılabilir olmalıdır.  
   
--   SPN değeri büyük/küçük harf geneldir.  
+- SPN değeri büyük/küçük harf geneldir.  
   
--   Bir adam-de-ortadaki adam saldırısı eklemek, kaldırmak veya değerini değiştirmek gibi SPN Aktarımdaki şifreli olarak korunmalıdır.  
+- Bir adam-de-ortadaki adam saldırısı eklemek, kaldırmak veya değerini değiştirmek gibi SPN Aktarımdaki şifreli olarak korunmalıdır.  
   
  Bir CBT bağlamak için kullanılan dış güvenli kanal (TLS gibi) (bağlama) bir özelliğidir, iç, istemci kimliği doğrulanmış bir kanal üzerinden bir görüşme. CBT (Ayrıca IETF RFC 5056 tarafından tanımlanan) aşağıdaki özelliklere sahip olmanız gerekir:  
   
--   Dış bir kanal var, CBT değerini dış kanal ya da bağımsız olarak konuşma istemci ve sunucu tarafında tarafından gelen sunucu uç noktasını tanımlayan bir özelliği olmalıdır.  
+- Dış bir kanal var, CBT değerini dış kanal ya da bağımsız olarak konuşma istemci ve sunucu tarafında tarafından gelen sunucu uç noktasını tanımlayan bir özelliği olmalıdır.  
   
--   İstemci tarafından gönderilen CBT değeri, bir saldırganın etkileyebilir olmamalıdır.  
+- İstemci tarafından gönderilen CBT değeri, bir saldırganın etkileyebilir olmamalıdır.  
   
--   Garanti CBT değerin gizliliği hakkında yapılır. Bu ancak CBT taşıyan protokolü, şifreleme olarak kanal bağlama bilgileri yanı sıra hizmet bağlama değeri her zaman diğer ancak sunucu kimlik doğrulaması gerçekleştirme incelenebilir olduğunu anlamına gelmez.  
+- Garanti CBT değerin gizliliği hakkında yapılır. Bu ancak CBT taşıyan protokolü, şifreleme olarak kanal bağlama bilgileri yanı sıra hizmet bağlama değeri her zaman diğer ancak sunucu kimlik doğrulaması gerçekleştirme incelenebilir olduğunu anlamına gelmez.  
   
--   CBT şifreli olarak bütünlüğü, bir saldırganın eklemek, kaldırmak veya değerini değiştirmek gibi Aktarımdaki korumalı olmalıdır.  
+- CBT şifreli olarak bütünlüğü, bir saldırganın eklemek, kaldırmak veya değerini değiştirmek gibi Aktarımdaki korumalı olmalıdır.  
   
  Kanal bağlama SPN ve CBT tamperproof biçimde sunucusuna aktarılması istemci tarafından gerçekleştirilir. Sunucunun kanal bağlama bilgileri kendi ilkesine uygun olarak doğrular ve kendisi için bu hedef değerinin kendisine düşünüyor olmayan kimlik doğrulama girişimlerini reddeder. Bu şekilde iki kanalları şifreli olarak birlikte bağlı olur.  
   
@@ -72,37 +72,37 @@ Geliştirmeler, tümleşik Windows kimlik doğrulaması tarafından işlenir etk
   
  A <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> , aşağıdaki öğelere sahiptir:  
   
--   Bir <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A> işletim sistemi için genişletilmiş koruma ile tümleşik windows kimlik doğrulamasını destekleyip desteklemediğini belirten bir özellik.  
+- Bir <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A> işletim sistemi için genişletilmiş koruma ile tümleşik windows kimlik doğrulamasını destekleyip desteklemediğini belirten bir özellik.  
   
--   A <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> genişletilmiş koruma İlkesi zaman zorlanıp zorlanmayacağını belirten değer.  
+- A <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> genişletilmiş koruma İlkesi zaman zorlanıp zorlanmayacağını belirten değer.  
   
--   A <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> dağıtım senaryosuna belirten değer. Bu nasıl genişletilmiş koruma etkiler denetlenir.  
+- A <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> dağıtım senaryosuna belirten değer. Bu nasıl genişletilmiş koruma etkiler denetlenir.  
   
--   İsteğe bağlı <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection> istemci tarafından istenen kimlik doğrulaması hedefi olarak sağlanan SPN eşleştirilecek kullanılan özel SPN listesini içerir.  
+- İsteğe bağlı <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection> istemci tarafından istenen kimlik doğrulaması hedefi olarak sağlanan SPN eşleştirilecek kullanılan özel SPN listesini içerir.  
   
--   İsteğe bağlı <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> doğrulama için kullanılacak bir özel kanal bağlama içerir. Bu senaryo, ortak bir durumda değil  
+- İsteğe bağlı <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> doğrulama için kullanılacak bir özel kanal bağlama içerir. Bu senaryo, ortak bir durumda değil  
   
  <xref:System.Security.Authentication.ExtendedProtection.Configuration> Ad alanı, uygulamalar için genişletilmiş koruma kullanarak kimlik doğrulama yapılandırması için destek sağlar.  
   
  Mevcut genişletilmiş korumayı desteklemek için bir dizi özellik değişiklik yapıldı <xref:System.Net> ad alanı. Bu değişiklikler şunları içerir:  
   
--   Yeni bir <xref:System.Net.TransportContext> eklenen sınıfı <xref:System.Net> ad alanını taşıma bağlamını temsil eder.  
+- Yeni bir <xref:System.Net.TransportContext> eklenen sınıfı <xref:System.Net> ad alanını taşıma bağlamını temsil eder.  
   
--   Yeni <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> ve <xref:System.Net.HttpWebRequest.GetRequestStream%2A> yöntemleri aşırı <xref:System.Net.HttpWebRequest> alınırken izin sınıfı <xref:System.Net.TransportContext> istemci uygulamalar için genişletilmiş korumayı desteklemek için.  
+- Yeni <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> ve <xref:System.Net.HttpWebRequest.GetRequestStream%2A> yöntemleri aşırı <xref:System.Net.HttpWebRequest> alınırken izin sınıfı <xref:System.Net.TransportContext> istemci uygulamalar için genişletilmiş korumayı desteklemek için.  
   
--   Eklemeler <xref:System.Net.HttpListener> ve <xref:System.Net.HttpListenerRequest> sunucu uygulamaları desteklemek için sınıflar.  
+- Eklemeler <xref:System.Net.HttpListener> ve <xref:System.Net.HttpListenerRequest> sunucu uygulamaları desteklemek için sınıflar.  
   
  Mevcut SMTP istemci uygulamaları için genişletilmiş korumayı desteklemek için bir özellik değişiklik yapıldı <xref:System.Net.Mail> ad alanı:  
   
--   A <xref:System.Net.Mail.SmtpClient.TargetName%2A> özelliğinde <xref:System.Net.Mail.SmtpClient> SPN kullanarak kimlik doğrulaması için kullanılacak temsil eden sınıf genişletilmiş koruma için SMTP istemci uygulamaları.  
+- A <xref:System.Net.Mail.SmtpClient.TargetName%2A> özelliğinde <xref:System.Net.Mail.SmtpClient> SPN kullanarak kimlik doğrulaması için kullanılacak temsil eden sınıf genişletilmiş koruma için SMTP istemci uygulamaları.  
   
  Mevcut genişletilmiş korumayı desteklemek için bir dizi özellik değişiklik yapıldı <xref:System.Net.Security> ad alanı. Bu değişiklikler şunları içerir:  
   
--   Yeni <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> ve <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> yöntemleri aşırı <xref:System.Net.Security.NegotiateStream> istemci uygulamalar için genişletilmiş korumayı desteklemek için bir CBT geçirilmesine izin ver sınıfı.  
+- Yeni <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> ve <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> yöntemleri aşırı <xref:System.Net.Security.NegotiateStream> istemci uygulamalar için genişletilmiş korumayı desteklemek için bir CBT geçirilmesine izin ver sınıfı.  
   
--   Yeni <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> ve <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> yöntemleri aşırı <xref:System.Net.Security.NegotiateStream> geçirilmesine izin verildi sınıfı bir <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> sunucu uygulamaları için genişletilmiş korumayı desteklemek için.  
+- Yeni <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> ve <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> yöntemleri aşırı <xref:System.Net.Security.NegotiateStream> geçirilmesine izin verildi sınıfı bir <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> sunucu uygulamaları için genişletilmiş korumayı desteklemek için.  
   
--   Yeni bir <xref:System.Net.Security.SslStream.TransportContext%2A> özelliğinde <xref:System.Net.Security.SslStream> istemci ve sunucu uygulamaları için genişletilmiş korumayı desteklemek için sınıf.  
+- Yeni bir <xref:System.Net.Security.SslStream.TransportContext%2A> özelliğinde <xref:System.Net.Security.SslStream> istemci ve sunucu uygulamaları için genişletilmiş korumayı desteklemek için sınıf.  
   
  A <xref:System.Net.Configuration.SmtpNetworkElement> özelliği SMTP istemciler için genişletilmiş koruma yapılandırmasını desteklemek için eklenen <xref:System.Net.Security> ad alanı.  
   

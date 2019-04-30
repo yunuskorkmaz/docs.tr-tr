@@ -7,8 +7,8 @@ ms.openlocfilehash: 5c7b9b4cb9bc22a73b865c45e225ce5c382380b1
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61652045"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Güncelleştirilmiş .NET Core olay deseni
 
@@ -23,7 +23,21 @@ Program tamamen aynı çalışır.
 
 Ayrıca değişebilir `SearchDirectoryArgs` bir daha fazla değişiklik yaparsanız, bir yapı için:
 
-[!code-csharp[SearchDir](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Define search directory event")]
+```csharp
+internal struct SearchDirectoryArgs
+{
+    internal string CurrentSearchDirectory { get; }
+    internal int TotalDirs { get; }
+    internal int CompletedDirs { get; }
+
+    internal SearchDirectoryArgs(string dir, int totalDirs, int completedDirs) : this()
+    {
+        CurrentSearchDirectory = dir;
+        TotalDirs = totalDirs;
+        CompletedDirs = completedDirs;
+    }
+}
+```
 
 Ek değişiklik parametresiz bir oluşturucu tüm alanları başlatır Oluşturucusu girmeden önce çağırmaktır. Ayrıca, kurallarına olmadan C# özellikleri, atanmış önce erişildiği rapor.
 

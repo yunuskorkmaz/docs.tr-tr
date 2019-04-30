@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
 ms.openlocfilehash: 4f11f82b628ac020cbda70d65adf7813291c60a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645766"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>UI Otomasyonu Pencere Denetim Düzenini Uygulama
 > [!NOTE]
@@ -25,15 +25,15 @@ ms.locfileid: "59168044"
 ## <a name="implementation-guidelines-and-conventions"></a>Uygulama yönergeleri ve kuralları  
  Pencere denetim düzeni uygularken aşağıdaki yönergeler ve kuralları dikkat edin:  
   
--   Her iki pencere boyutunu değiştirmek ve UI Otomasyonu kullanarak konumu ekran özelliği desteklemek için bir denetim uygulamalıdır <xref:System.Windows.Automation.Provider.ITransformProvider> ek olarak <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+- Her iki pencere boyutunu değiştirmek ve UI Otomasyonu kullanarak konumu ekran özelliği desteklemek için bir denetim uygulamalıdır <xref:System.Windows.Automation.Provider.ITransformProvider> ek olarak <xref:System.Windows.Automation.Provider.IWindowProvider>.  
   
--   Başlık çubukları ve ekranı, taşınacak, Denetim değişirse etkinleştiren başlık çubuğu öğeleri içeren denetimler küçültülebilir ya da kapalı uygulamak için genellikle gereken <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+- Başlık çubukları ve ekranı, taşınacak, Denetim değişirse etkinleştiren başlık çubuğu öğeleri içeren denetimler küçültülebilir ya da kapalı uygulamak için genellikle gereken <xref:System.Windows.Automation.Provider.IWindowProvider>.  
   
--   Araç İpucu açılan pencereleri ve birleşik giriş kutusu veya menü açılan listeler gibi denetimler genellikle uygulamayın <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+- Araç İpucu açılan pencereleri ve birleşik giriş kutusu veya menü açılan listeler gibi denetimler genellikle uygulamayın <xref:System.Windows.Automation.Provider.IWindowProvider>.  
   
--   Balon Yardım windows penceresi benzeri Kapat düğmesi sağlayarak temel bir araç ipucu pencerelere ayrılır.  
+- Balon Yardım windows penceresi benzeri Kapat düğmesi sağlayarak temel bir araç ipucu pencerelere ayrılır.  
   
--   Tam ekran modunda desteklenmeyen IWindowProvider tarafından özelliğe özgü olduğu gibi bir uygulamaya ve tipik pencere davranışını değil.  
+- Tam ekran modunda desteklenmeyen IWindowProvider tarafından özelliğe özgü olduğu gibi bir uygulamaya ve tipik pencere davranışını değil.  
   
 <a name="Required_Members_for_IWindowProvider"></a>   
 ## <a name="required-members-for-iwindowprovider"></a>Gerekli üyeleri IWindowProvider için  
@@ -42,15 +42,15 @@ ms.locfileid: "59168044"
 |Gerekli üye|Üye türü|Notlar|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Özellik|Yok.|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Özellik|None|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Özellik|Yok.|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Özellik|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Yöntem|Yok.|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Yöntem|Yok.|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Yöntem|None|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Olay|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Yöntem|Yok.|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Olay|Yok.|  
 |<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Olay|Yok.|  
 |<xref:System.Windows.Automation.WindowInteractionState>|Olay|Olması garanti edilmez <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   

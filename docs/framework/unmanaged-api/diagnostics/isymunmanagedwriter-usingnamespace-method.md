@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d0739cc38d1f12967f0daef2d6828e04a256ade6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650680"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace Yöntemi
 Tam ad alanı adı verilen açık sözlü kapsamda kullanılmakta olduğunu belirtir. Ad alanı içinde açık olan kapsamlardan devralır tüm kapsamlar kullanılır. Geçerli kapsamdaki kapatma ad alanı kullanımını durdurur.  

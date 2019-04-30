@@ -4,11 +4,11 @@ description: C# veya Visual Basic, Visual Studio 2017 ile yazılmış bir Hello 
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
 ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61648209"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Hata ayıklama, C# veya Visual Studio 2017'yi kullanarak Visual Basic .NET Core Merhaba Dünya uygulaması
 

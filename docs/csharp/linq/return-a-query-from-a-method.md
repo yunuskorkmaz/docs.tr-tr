@@ -4,11 +4,11 @@ description: Sorgu döndürme yapma.
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
 ms.openlocfilehash: fe2192a3edb683d7284ffae3b66cb9f70e8854b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61659832"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>Nasıl yapılır: Yöntemden sorgu döndürme (C# Programlama Kılavuzu)
 Bu örnek ve dönüş değeri olarak bir yöntemden sorgu döndürme işlemini gösterir. bir `out` parametresi.  

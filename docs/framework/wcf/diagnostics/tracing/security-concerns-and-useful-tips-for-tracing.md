@@ -3,11 +3,11 @@ title: İzleme için Güvenlikle İlgili Noktalar ve Faydalı İpuçları
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 ms.openlocfilehash: 72d35230820e8466cd9c63a76b26c7a23bdfe024
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663719"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>İzleme için Güvenlikle İlgili Noktalar ve Faydalı İpuçları
 Bu konuda, WebHost kullanırken faydalı ipuçları yanı sıra açıklanmasını hassas bilgileri nasıl Koruyabileceğiniz açıklanmaktadır.  
@@ -22,11 +22,11 @@ Bu konuda, WebHost kullanırken faydalı ipuçları yanı sıra açıklanmasın�
   
  Aşağıdaki ipuçları bir izleme dosyası içeriğini istenmeden açıklanmasını önlemenize yardımcı olabilir:  
   
--   Günlük dosyaları tarafından erişim denetim listeleri (ACL) WebHost ve barındırma senaryolarında korunan emin olun.  
+- Günlük dosyaları tarafından erişim denetim listeleri (ACL) WebHost ve barındırma senaryolarında korunan emin olun.  
   
--   Bir Web isteği sunularak kolayca sunulamayan bir dosya uzantısı'nı seçin. Örneğin, .xml dosya uzantısı güvenli bir seçenek değil. Sunulabilecek uzantıların listesini görmek için IIS Yönetim kılavuzuna bakabilirsiniz.  
+- Bir Web isteği sunularak kolayca sunulamayan bir dosya uzantısı'nı seçin. Örneğin, .xml dosya uzantısı güvenli bir seçenek değil. Sunulabilecek uzantıların listesini görmek için IIS Yönetim kılavuzuna bakabilirsiniz.  
   
--   Bir Web tarayıcısı kullanılarak harici bir tarafça erişilmesini önlemek için WebHost vroot genel dizininin dışında olması gereken günlük dosyası konumu için mutlak bir yol belirtin.  
+- Bir Web tarayıcısı kullanılarak harici bir tarafça erişilmesini önlemek için WebHost vroot genel dizininin dışında olması gereken günlük dosyası konumu için mutlak bir yol belirtin.  
   
  Varsayılan olarak, anahtarları ve kullanıcı adı ve parola gibi kişisel bilgileri (PII) izlemeleri günlüğe kaydedilmez ve iletileri günlüğe. Bir makine yöneticisinin ancak kullanabilirsiniz `enableLoggingKnownPII` özniteliğini `machineSettings` makine üzerinde çalışan uygulamalar, bilinen kişisel bilgileri (PII) aşağıdaki gibi oturum izin vermek için Machine.config dosyasının öğesi:  
   

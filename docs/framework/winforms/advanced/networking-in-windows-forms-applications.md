@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, networking
 ms.assetid: babf8af3-8000-46e2-8c68-a42127efabba
 ms.openlocfilehash: 2432fbd0a2c769efb126e4b9c1dc19e35fbe4c31
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641508"
 ---
 # <a name="networking-in-windows-forms-applications"></a>Windows Forms Uygulamalarında Ağ İletişimi
 .NET Framework Web sayfalarını görüntüleme, Web içerik yükleme, Dosya Aktarım Protokolü (FTP) siteler ile etkileşim kurma ve uygulamanızda ağ işlevselliğini oluşturmanızı kolaylaştıran, Web hizmetlerini kullanma için sınıflar sağlar. Aşağıdaki kaynaklar, .NET Framework ve nasıl bunları Windows formlarına tümleştirebilir ağ teknolojileri anlamanıza yardımcı olur.  

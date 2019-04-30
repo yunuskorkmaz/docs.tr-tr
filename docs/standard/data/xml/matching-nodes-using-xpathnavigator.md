@@ -1,5 +1,5 @@
 ---
-title: XPathNavigator kullanarak düğümleri eşleştirme
+title: XPathNavigator Kullanarak Düğümleri Eşleştirme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: e6848c47-ee5d-401a-89a5-50b5eed40f30
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 525c8332d2884415ccf883dae03866776510f354
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650173"
 ---
-# <a name="matching-nodes-using-xpathnavigator"></a>XPathNavigator kullanarak düğümleri eşleştirme
+# <a name="matching-nodes-using-xpathnavigator"></a>XPathNavigator Kullanarak Düğümleri Eşleştirme
 <xref:System.Xml.XPath.XPathNavigator> Sağlar sınıfını <xref:System.Xml.XPath.XPathNavigator.Matches%2A> bir düğüm bir XPath ifadesi eşleşip eşleşmediğini belirlemek için yöntemi. <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Yöntemi bir XPath ifadesini girdi olarak alır ve döndürür bir <xref:System.Boolean> geçerli düğüm, belirli bir XPath ifadesi eşleşip eşleşmediğini gösterir veya derlenmiş verilen <xref:System.Xml.XPath.XPathExpression> nesne.  
   
 ## <a name="matching-nodes"></a>Eşleşen düğümleri  

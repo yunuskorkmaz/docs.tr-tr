@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
 ms.openlocfilehash: 9718febfe5aefba75decc133ad2113b64e4547de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662225"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (C# Derleyici Seçenekleri)
 Kullanım **-win32manifest** projenin taşınabilir yürütülebilir (PE) dosya gömülü olması için bir kullanıcı tanımlı uygulama soubor manifestu Win32 için seçeneği.  
@@ -38,9 +38,9 @@ Kullanım **-win32manifest** projenin taşınabilir yürütülebilir (PE) dosya 
   
  Bu koşullardan biri doğru ise, uygulama sanallaştırma tabi olacaktır:  
   
--   Kullandığınız **-nowin32manifest** seçeneğini sağlamaz daha yeni bir derleme adımı veya bir Windows kaynağı (.res) dosyasının bir parçası olarak bir bildirim kullanarak **-win32res** seçeneği.  
+- Kullandığınız **-nowin32manifest** seçeneğini sağlamaz daha yeni bir derleme adımı veya bir Windows kaynağı (.res) dosyasının bir parçası olarak bir bildirim kullanarak **-win32res** seçeneği.  
   
--   İstenen yürütme düzeyini belirtmeyen bir özel bildirim sağlar.  
+- İstenen yürütme düzeyini belirtmeyen bir özel bildirim sağlar.  
   
  Visual Studio varsayılan .manifest dosyasını oluşturur ve hata ayıklama ve yayın dizinleri yürütülebilir dosyanın yanında depolar. Herhangi bir metin düzenleyicisinde oluşturma ve sonra dosyayı projeye ekleyerek, özel bir bildirim ekleyebilirsiniz. Alternatif olarak, sağ **proje** simgesini **Çözüm Gezgini**, tıklayın **Yeni Öğe Ekle**ve ardından **uygulama bildirim dosyası**. Yeni veya var olan bildirim dosyası ekledikten sonra görüneceği **bildirim** açılan liste. Daha fazla bilgi için [uygulama sayfası, Proje Tasarımcısı (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp).  
   

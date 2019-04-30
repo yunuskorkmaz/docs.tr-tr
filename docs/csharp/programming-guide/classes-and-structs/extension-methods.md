@@ -8,11 +8,11 @@ helpviewer_keywords:
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 ms.openlocfilehash: 35ab91279c9ed8703f29d8cbb8df3d7d4bf2a6b8
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646520"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Uzantı Metotları (C# Programlama Kılavuzu)
 Uzantı yöntemleri, yeni türetilmiş bir tür oluşturmadan, yeniden derlemeden ya da özgün türü değiştirmeden yöntemler "eklemenizi" sağlar. Uzantı yöntemleri özel bir statik yöntem türüdür, ancak bunlar genişletilmiş türdeki örnek yöntemler ise çağrılır. Yazılmış istemci kodu için C#, F# ve Visual Basic bir genişletme yöntemi ve gerçekte bir tür içinde tanımlanan yöntemleri çağırma arasında görünür bir fark yoktur.  
@@ -73,9 +73,9 @@ using System.Linq;
   
  Verilen tür için uzantı yöntemleri uygularken aşağıdaki noktaları unutmayın:  
   
--   Türden tanımlı yöntemle aynı imzaya sahip değilse genişletme yöntemi asla çağrılmaz.  
+- Türden tanımlı yöntemle aynı imzaya sahip değilse genişletme yöntemi asla çağrılmaz.  
   
--   Uzantı yöntemleri ad alanı seviyesinde kapsama alınır. Örneğin, adlı tek bir ad alanında uzantı yöntemlerini içeren birden fazla statik sınıfınız varsa `Extensions`, bunların tümü kapsama göre kapsama dahil edilecektir `using Extensions;` yönergesi.  
+- Uzantı yöntemleri ad alanı seviyesinde kapsama alınır. Örneğin, adlı tek bir ad alanında uzantı yöntemlerini içeren birden fazla statik sınıfınız varsa `Extensions`, bunların tümü kapsama göre kapsama dahil edilecektir `using Extensions;` yönergesi.  
   
  Uygulanan bir sınıf kitaplığı için derleme sürüm numarasının artıyor olmasını önlemek için uzantı yöntemleri kullanmamanız gerekir. Kaynak koduna sahip olduğunuz kitaplığa önemli işlevsellik eklemek isterseniz, derleme sürüm oluşturma için standart .NET Framework yönergelerini izlemeniz gerekir. Daha fazla bilgi için [derleme sürümlendirme](../../../../docs/framework/app-domains/assembly-versioning.md).  
   

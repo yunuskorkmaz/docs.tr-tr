@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8f83d2ac9ca96145fa89b283fec42c71858097f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651629"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>ICorDebugGCReferenceEnum Arabirimi
 Çöp toplama işlemi yapılacak nesneler için bir numaralandırıcı sağlar.  
@@ -39,11 +39,11 @@ ms.locfileid: "59080838"
   
  [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) bu yöntem tarafından doldurulan koleksiyonundaki nesneleri temsil eden üç nesne türleri:  
   
--   Tüm yönetilen yığında nesneleri. Bu, ortak dil çalışma zamanı tarafından oluşturulan nesnelerin yanı sıra, yönetilen kod kullanarak canlı başvurular içerir.  
+- Tüm yönetilen yığında nesneleri. Bu, ortak dil çalışma zamanı tarafından oluşturulan nesnelerin yanı sıra, yönetilen kod kullanarak canlı başvurular içerir.  
   
--   Nesne işleyicisi tablosundan. Bu güçlü atıflar içerir (`HNDTYPE_STRONG` ve `HNDTYPE_REFCOUNT`) ve Modül içindeki statik değişkenler.  
+- Nesne işleyicisi tablosundan. Bu güçlü atıflar içerir (`HNDTYPE_STRONG` ve `HNDTYPE_REFCOUNT`) ve Modül içindeki statik değişkenler.  
   
--   Sonlandırma sırasından nesneleri. Sonlandırıcı çalıştırılana dek Sonlandırıcı kuyruğunda nesneleri kökleri.  
+- Sonlandırma sırasından nesneleri. Sonlandırıcı çalıştırılana dek Sonlandırıcı kuyruğunda nesneleri kökleri.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

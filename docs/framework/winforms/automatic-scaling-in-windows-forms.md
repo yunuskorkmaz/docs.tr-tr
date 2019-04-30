@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
 ms.openlocfilehash: d3981be7977b56af0b60f9796519b78dc9ac5db3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640514"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows Forms'ta otomatik ölçeklendirme
 
 Otomatik ölçeklendirme sağlar bir form ve diğer denetimler ile belirli bir ekran çözünürlüğü veya sistem yazı tipi, tek bir makinede farklı ekran çözünürlüğü veya sistem yazı tipi olan başka bir makinede uygun şekilde görüntülenmesi için tasarlanmıştır. Form, garantiler ve denetimlerini akıllıca yerel windows ve diğer uygulamaları hem kullanıcıların hem de diğer geliştiriciler makinelere tutarlı olması için yeniden boyutlandırılır. Destek [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] otomatik ölçeklendirme ve görsel stiller sağlar [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] bir tutarlı her kullanıcının makinede yerel Windows uygulamaları karşılaştırıldığında genel görünüme korumak için uygulamalar.
 
-Çoğunlukla, otomatik ölçeklendirme beklendiği gibi çalıştığını [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 ve sonraki sürümleri. Ancak, yazı tipi şeması değişikliklerine sorunlu olabilir. Bu sorunu gidermek nasıl bir örnek için bkz [nasıl yapılır: Windows Forms uygulamasında yazı tipi şeması değişikliklerine yanıt verme](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
+Çoğunlukla, otomatik ölçeklendirme beklendiği gibi çalıştığını [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 ve sonraki sürümleri. Ancak, yazı tipi şeması değişikliklerine sorunlu olabilir. Bu sorunu gidermek nasıl bir örnek için bkz [nasıl yapılır: Bir Windows Forms uygulamasında yazı tipi şeması değişikliklerine yanıt verme](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
 
 ## <a name="need-for-automatic-scaling"></a>Otomatik ölçeklendirmeye yönelik gereksinimi
 
@@ -105,4 +105,4 @@ Windows Forms, formlar ve bunların içeriğini otomatik olarak ölçeklendirmek
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>
 - [Denetimleri Görsel Stilde İşleme](./controls/rendering-controls-with-visual-styles.md)
-- [Nasıl yapılır: Otomatik Ölçeklendirmeyi Önleyerek Performansı Artırma](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)
+- [Nasıl yapılır: Otomatik ölçeklendirmeyi önleyerek performansı artırma](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)

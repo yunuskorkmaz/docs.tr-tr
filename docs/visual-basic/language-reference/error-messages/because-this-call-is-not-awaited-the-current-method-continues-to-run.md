@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
 ms.openlocfilehash: ba0838d562ac0ec0ea531161c437dec5ce66c3f5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59304239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650004"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin çalıştırılması devam eder
 Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin yürütülmesi devam eder. Çağrının sonucuna 'Await' işleci uygulamayı düşünün.  
@@ -29,7 +29,7 @@ Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin yürüt
   
 ### <a name="to-address-this-warning"></a>Bu uyarıyı gidermek için  
   
--   Zaman uyumsuz çağrının tamamlanmasını beklemek istemiyorsanız ve çağrılan yöntem özel durumların yükseltmek kalmaz, uyarı gizleme dikkate almanız gerekir. Bu durumda, görev sonucu çağrının bir değişkene atayarak uyarı gösterilmemesini sağlayabilirsiniz.  
+- Zaman uyumsuz çağrının tamamlanmasını beklemek istemiyorsanız ve çağrılan yöntem özel durumların yükseltmek kalmaz, uyarı gizleme dikkate almanız gerekir. Bu durumda, görev sonucu çağrının bir değişkene atayarak uyarı gösterilmemesini sağlayabilirsiniz.  
   
      Aşağıdaki örnek nasıl uyarı neden ve bunu engellemek nasıl çağrı await nasıl gösterir.  
   

@@ -1,17 +1,17 @@
 ---
-title: 'Nasıl Yapılır: Konağa ping yapma'
+title: 'Nasıl yapılır: Konağa Ping Yapma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
 ms.openlocfilehash: bca8fc1cb3a54be9c329dc02aa27057ad839b3d3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642574"
 ---
-# <a name="how-to-ping-a-host"></a>Nasıl Yapılır: Konağa ping yapma
+# <a name="how-to-ping-a-host"></a>Nasıl yapılır: Konağa Ping Yapma
 Bu örnek, uzak konağa ping yapma işlemi gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
@@ -123,4 +123,4 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Başvurular **System.Net** ad alanı.
+- Başvurular **System.Net** ad alanı.

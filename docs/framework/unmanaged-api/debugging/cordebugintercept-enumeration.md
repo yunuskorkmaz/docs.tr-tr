@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0791a59e0325668960dcfc98816920db55bcfb87
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651707"
 ---
 # <a name="cordebugintercept-enumeration"></a>CorDebugIntercept Numaralandırması
 (Bu, içine girdiğiniz olduğu gibi), geçirilebilir kod türlerini belirtir.  

@@ -1,17 +1,17 @@
 ---
-title: Windows 10, Windows 8.1 ve Windows 8 üzerinde .NET Framework 3.5 yükleme
+title: Windows 10, Windows 8.1 ve Windows 8’de .NET Framework 3.5 Yükleme
 description: Windows 10, Windows 8.1 ve Windows 8 üzerinde .NET Framework 3.5 yüklemeyi öğrenin.
 author: rlander
 ms.author: mairaw
 ms.date: 07/16/2018
 ms.openlocfilehash: 7b3b7ca5709008260ea284602a3ed8d2b288c410
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644206"
 ---
-# <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Windows 10, Windows 8.1 ve Windows 8 üzerinde .NET Framework 3.5 yükleme
+# <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Windows 10, Windows 8.1 ve Windows 8’de .NET Framework 3.5 Yükleme
 
 Windows 10, Windows 8.1 ve Windows 8 üzerinde bir uygulamayı çalıştırmak için .NET Framework 3.5 gerekir. Önceki Windows sürümleri için bu yönergeleri de kullanabilirsiniz.
 
@@ -39,7 +39,7 @@ Windows 10, Windows 8.1 ve Windows 8 üzerinde bir uygulamayı çalıştırmak i
 
 ## <a name="troubleshoot-the-installation-of-the-net-framework-35"></a>.NET Framework 3.5 yükleme sorunlarını giderme
 
-0x800f0906, 0x800f0907, 0x800f081f veya 0x800F0922 başvurun ve bu durumda, hata, yükleme sırasında karşılaşabileceğiniz [.NET Framework 3.5 yükleme hatası: 0x800f0906, 0x800f0907 veya 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09) bunları çözmek için sorun.
+0x800f0906, 0x800f0907, 0x800f081f veya 0x800F0922 başvurun ve bu durumda, hata, yükleme sırasında karşılaşabileceğiniz [.NET Framework 3.5 yükleme hatası: 0x800f0906, 0x800f0907 veya 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09) bu sorunların nasıl giderileceğini öğrenin.
 
 Yükleme sorununuzu hala çözümlenemiyor veya bir Internet bağlantınız yoksa, onu, Windows yükleme ortamını kullanarak yüklemeyi deneyebilirsiniz. Daha fazla bilgi için [Dağıtım Görüntüsü Bakımı ve Yönetimi (DISM) kullanarak .NET Framework 3.5 dağıtma](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism). Yükleme medyasını yoksa bkz [yükleme medyası oluşturmak için Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).
 
