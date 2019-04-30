@@ -6,47 +6,47 @@ helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
 ms.openlocfilehash: d87ea1ff18c4697a2c04f22cbf67720f21cbf459
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662159"
 ---
-# <a name="access-modifiers-c-reference"></a><span data-ttu-id="ead9d-102">Erişim Değiştiricileri (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="ead9d-102">Access Modifiers (C# Reference)</span></span>
-<span data-ttu-id="ead9d-103">Erişim değiştiricileri öğesinin bildirilen erişilebilirliği üyesi veya bir tür belirtmek için kullanılan anahtar sözcüklerdir.</span><span class="sxs-lookup"><span data-stu-id="ead9d-103">Access modifiers are keywords used to specify the declared accessibility of a member or a type.</span></span> <span data-ttu-id="ead9d-104">Bu bölümde, dört erişim değiştiricilerini tanıtır:</span><span class="sxs-lookup"><span data-stu-id="ead9d-104">This section introduces the four access modifiers:</span></span>  
+# <a name="access-modifiers-c-reference"></a><span data-ttu-id="48e22-102">Erişim Değiştiricileri (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="48e22-102">Access Modifiers (C# Reference)</span></span>
+<span data-ttu-id="48e22-103">Erişim değiştiricileri öğesinin bildirilen erişilebilirliği üyesi veya bir tür belirtmek için kullanılan anahtar sözcüklerdir.</span><span class="sxs-lookup"><span data-stu-id="48e22-103">Access modifiers are keywords used to specify the declared accessibility of a member or a type.</span></span> <span data-ttu-id="48e22-104">Bu bölümde, dört erişim değiştiricilerini tanıtır:</span><span class="sxs-lookup"><span data-stu-id="48e22-104">This section introduces the four access modifiers:</span></span>  
   
--   `public`
--   `protected`
--   `internal`
--   `private`
+- `public`
+- `protected`
+- `internal`
+- `private`
   
- <span data-ttu-id="ead9d-105">Erişim değiştiricilerini kullanarak aşağıdaki altı erişilebilirlik düzeyleri belirtilebilir:</span><span class="sxs-lookup"><span data-stu-id="ead9d-105">The following six accessibility levels can be specified using the access modifiers:</span></span>  
+ <span data-ttu-id="48e22-105">Erişim değiştiricilerini kullanarak aşağıdaki altı erişilebilirlik düzeyleri belirtilebilir:</span><span class="sxs-lookup"><span data-stu-id="48e22-105">The following six accessibility levels can be specified using the access modifiers:</span></span>  
   
-- <span data-ttu-id="ead9d-106">[`public`](public.md): Erişim sınırlı değildir.</span><span class="sxs-lookup"><span data-stu-id="ead9d-106">[`public`](public.md): Access is not restricted.</span></span>  
+- <span data-ttu-id="48e22-106">[`public`](public.md): Erişim sınırlı değildir.</span><span class="sxs-lookup"><span data-stu-id="48e22-106">[`public`](public.md): Access is not restricted.</span></span>  
   
-- <span data-ttu-id="ead9d-107">[`protected`](protected.md): Erişim içeren sınıfı veya içeren sınıfından türetilen türler sınırlıdır.</span><span class="sxs-lookup"><span data-stu-id="ead9d-107">[`protected`](protected.md): Access is limited to the containing class or types derived from the containing class.</span></span>  
+- <span data-ttu-id="48e22-107">[`protected`](protected.md): Erişim içeren sınıfı veya içeren sınıfından türetilen türler sınırlıdır.</span><span class="sxs-lookup"><span data-stu-id="48e22-107">[`protected`](protected.md): Access is limited to the containing class or types derived from the containing class.</span></span>  
   
-- <span data-ttu-id="ead9d-108">[`internal`](internal.md): Geçerli derleme için erişim sınırlıdır.</span><span class="sxs-lookup"><span data-stu-id="ead9d-108">[`internal`](internal.md): Access is limited to the current assembly.</span></span>  
+- <span data-ttu-id="48e22-108">[`internal`](internal.md): Geçerli derleme için erişim sınırlıdır.</span><span class="sxs-lookup"><span data-stu-id="48e22-108">[`internal`](internal.md): Access is limited to the current assembly.</span></span>  
   
-- <span data-ttu-id="ead9d-109">[`protected internal`](protected-internal.md): Geçerli derleme veya içeren sınıfından türetilen türler için erişim sınırlıdır.</span><span class="sxs-lookup"><span data-stu-id="ead9d-109">[`protected internal`](protected-internal.md): Access is limited to the current assembly or types derived from the containing class.</span></span>  
+- <span data-ttu-id="48e22-109">[`protected internal`](protected-internal.md): Geçerli derleme veya içeren sınıfından türetilen türler için erişim sınırlıdır.</span><span class="sxs-lookup"><span data-stu-id="48e22-109">[`protected internal`](protected-internal.md): Access is limited to the current assembly or types derived from the containing class.</span></span>  
   
-- <span data-ttu-id="ead9d-110">[`private`](private.md): Erişimi, kapsadığı tür için sınırlıdır.</span><span class="sxs-lookup"><span data-stu-id="ead9d-110">[`private`](private.md): Access is limited to the containing type.</span></span>  
+- <span data-ttu-id="48e22-110">[`private`](private.md): Erişimi, kapsadığı tür için sınırlıdır.</span><span class="sxs-lookup"><span data-stu-id="48e22-110">[`private`](private.md): Access is limited to the containing type.</span></span>  
 
-- <span data-ttu-id="ead9d-111">[`private protected`](private-protected.md): Erişim içeren sınıfı veya geçerli derlemedeki içeren sınıfından türetilen türler sınırlıdır.</span><span class="sxs-lookup"><span data-stu-id="ead9d-111">[`private protected`](private-protected.md): Access is limited to the containing class or types derived from the containing class within the current assembly.</span></span>  
+- <span data-ttu-id="48e22-111">[`private protected`](private-protected.md): Erişim içeren sınıfı veya geçerli derlemedeki içeren sınıfından türetilen türler sınırlıdır.</span><span class="sxs-lookup"><span data-stu-id="48e22-111">[`private protected`](private-protected.md): Access is limited to the containing class or types derived from the containing class within the current assembly.</span></span>  
   
- <span data-ttu-id="ead9d-112">Bu bölümde Ayrıca aşağıdakileri sağlar:</span><span class="sxs-lookup"><span data-stu-id="ead9d-112">This section also introduces the following:</span></span>  
+ <span data-ttu-id="48e22-112">Bu bölümde Ayrıca aşağıdakileri sağlar:</span><span class="sxs-lookup"><span data-stu-id="48e22-112">This section also introduces the following:</span></span>  
   
--   <span data-ttu-id="ead9d-113">[Erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md): Altı düzeyde erişilebilirlik bildirmek için dört erişim değiştiricilerini kullanarak.</span><span class="sxs-lookup"><span data-stu-id="ead9d-113">[Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md): Using the four access modifiers to declare six levels of accessibility.</span></span>  
+- <span data-ttu-id="48e22-113">[Erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md): Altı düzeyde erişilebilirlik bildirmek için dört erişim değiştiricilerini kullanarak.</span><span class="sxs-lookup"><span data-stu-id="48e22-113">[Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md): Using the four access modifiers to declare six levels of accessibility.</span></span>  
   
--   <span data-ttu-id="ead9d-114">[Erişilebilirlik etki alanı](../../../csharp/language-reference/keywords/accessibility-domain.md): Burada, program bölümlerde üyesi başvurulabilir belirtir.</span><span class="sxs-lookup"><span data-stu-id="ead9d-114">[Accessibility Domain](../../../csharp/language-reference/keywords/accessibility-domain.md): Specifies where, in the program sections, a member can be referenced.</span></span>  
+- <span data-ttu-id="48e22-114">[Erişilebilirlik etki alanı](../../../csharp/language-reference/keywords/accessibility-domain.md): Burada, program bölümlerde üyesi başvurulabilir belirtir.</span><span class="sxs-lookup"><span data-stu-id="48e22-114">[Accessibility Domain](../../../csharp/language-reference/keywords/accessibility-domain.md): Specifies where, in the program sections, a member can be referenced.</span></span>  
   
--   <span data-ttu-id="ead9d-115">[Erişilebilirlik düzeylerinin kullanılmasındaki kısıtlamalar](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): Erişilebilirlik düzeylerinin kullanılmasındaki kısıtlamalar özetini bildirilir.</span><span class="sxs-lookup"><span data-stu-id="ead9d-115">[Restrictions on Using Accessibility Levels](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): A summary of the restrictions on using declared accessibility levels.</span></span>  
+- <span data-ttu-id="48e22-115">[Erişilebilirlik düzeylerinin kullanılmasındaki kısıtlamalar](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): Erişilebilirlik düzeylerinin kullanılmasındaki kısıtlamalar özetini bildirilir.</span><span class="sxs-lookup"><span data-stu-id="48e22-115">[Restrictions on Using Accessibility Levels](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): A summary of the restrictions on using declared accessibility levels.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ead9d-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ead9d-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="48e22-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="48e22-116">See also</span></span>
 
-- [<span data-ttu-id="ead9d-117">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="ead9d-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)
-- [<span data-ttu-id="ead9d-118">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="ead9d-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="ead9d-119">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="ead9d-119">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
-- [<span data-ttu-id="ead9d-120">Erişim Değiştiricileri</span><span class="sxs-lookup"><span data-stu-id="ead9d-120">Access Modifiers</span></span>](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-- [<span data-ttu-id="ead9d-121">Erişim Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="ead9d-121">Access Keywords</span></span>](../../../csharp/language-reference/keywords/access-keywords.md)
-- [<span data-ttu-id="ead9d-122">Değiştiriciler</span><span class="sxs-lookup"><span data-stu-id="ead9d-122">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)
+- [<span data-ttu-id="48e22-117">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="48e22-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="48e22-118">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="48e22-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="48e22-119">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="48e22-119">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+- [<span data-ttu-id="48e22-120">Erişim Değiştiricileri</span><span class="sxs-lookup"><span data-stu-id="48e22-120">Access Modifiers</span></span>](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
+- [<span data-ttu-id="48e22-121">Erişim Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="48e22-121">Access Keywords</span></span>](../../../csharp/language-reference/keywords/access-keywords.md)
+- [<span data-ttu-id="48e22-122">Değiştiriciler</span><span class="sxs-lookup"><span data-stu-id="48e22-122">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)

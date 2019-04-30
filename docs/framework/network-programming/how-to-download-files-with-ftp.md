@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: FTP dosyaları indirme'
-description: Bu makalede, bir FTP sunucusundan dosya indirme konusunda bir örnek gösterilmektedir.
+title: 'Nasıl yapılır: FTP ile dosyaları indirme'
+description: Bu makalede, bir FTP sunucusundan bir dosyayı indirmek nasıl bir örneği gösterilmektedir.
 ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 892548b8-954a-4f6a-9bca-2ae620c3700f
 ms.openlocfilehash: 4e000aa149a9a02e6f12e9b184d9c43a065b673f
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642652"
 ---
-# <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="9fb45-103">Nasıl yapılır: FTP dosyaları indirme</span><span class="sxs-lookup"><span data-stu-id="9fb45-103">How to: Download files with FTP</span></span>
+# <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="d3086-103">Nasıl yapılır: FTP ile dosyaları indirme</span><span class="sxs-lookup"><span data-stu-id="d3086-103">How to: Download files with FTP</span></span>
 
-<span data-ttu-id="9fb45-104">Bu örnek, bir FTP sunucusundan dosya indirme gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="9fb45-104">This sample shows how to download a file from an FTP server.</span></span>
+<span data-ttu-id="d3086-104">Bu örnek, bir FTP sunucusundan dosya indirme işlemi gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="d3086-104">This sample shows how to download a file from an FTP server.</span></span>
 
-## <a name="example"></a><span data-ttu-id="9fb45-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="9fb45-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d3086-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="d3086-105">Example</span></span>
 
 ```csharp
 using System;

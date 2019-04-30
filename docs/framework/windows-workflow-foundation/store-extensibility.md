@@ -1,21 +1,21 @@
 ---
-title: Store genişletilebilirliği
+title: Depo Genişletilebilirliği
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
 ms.openlocfilehash: 46c1ea40925a5c79180171da9a705d7e6b7c8b89
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641612"
 ---
-# <a name="store-extensibility"></a><span data-ttu-id="55ed9-102">Store genişletilebilirliği</span><span class="sxs-lookup"><span data-stu-id="55ed9-102">Store Extensibility</span></span>
+# <a name="store-extensibility"></a><span data-ttu-id="c3bba-102">Depo Genişletilebilirliği</span><span class="sxs-lookup"><span data-stu-id="c3bba-102">Store Extensibility</span></span>
 
-<span data-ttu-id="55ed9-103"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> kullanılabilir, uygulamaya özgü özel özellikleri yükseltmek kullanıcılara sorgulamak için Kalıcılık veritabanı örnekleri.</span><span class="sxs-lookup"><span data-stu-id="55ed9-103"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> allows users to promote custom, application-specific properties that can be used to query for instances in the persistence database.</span></span> <span data-ttu-id="55ed9-104">Bir özellik yükseltme işlemi veritabanı'nda bir özel görünümde kullanılabilir olması değeri neden olur.</span><span class="sxs-lookup"><span data-stu-id="55ed9-104">The act of promoting a property causes the value to be available within a special view in the database.</span></span> <span data-ttu-id="55ed9-105">Bu yükseltilen özelliklerini (kullanıcı sorgularında kullanılan), Int64, Guid, dize ve DateTime gibi basit türler veya seri hale getirilmiş ikili tür (byte[]). olabilir.</span><span class="sxs-lookup"><span data-stu-id="55ed9-105">These promoted properties (properties that can be used in user queries) can be of simple types such as Int64, Guid, String, and DateTime or of a serialized binary type (byte[]).</span></span>
+<span data-ttu-id="c3bba-103"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> kullanılabilir, uygulamaya özgü özel özellikleri yükseltmek kullanıcılara sorgulamak için Kalıcılık veritabanı örnekleri.</span><span class="sxs-lookup"><span data-stu-id="c3bba-103"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> allows users to promote custom, application-specific properties that can be used to query for instances in the persistence database.</span></span> <span data-ttu-id="c3bba-104">Bir özellik yükseltme işlemi veritabanı'nda bir özel görünümde kullanılabilir olması değeri neden olur.</span><span class="sxs-lookup"><span data-stu-id="c3bba-104">The act of promoting a property causes the value to be available within a special view in the database.</span></span> <span data-ttu-id="c3bba-105">Bu yükseltilen özelliklerini (kullanıcı sorgularında kullanılan), Int64, Guid, dize ve DateTime gibi basit türler veya seri hale getirilmiş ikili tür (byte[]). olabilir.</span><span class="sxs-lookup"><span data-stu-id="c3bba-105">These promoted properties (properties that can be used in user queries) can be of simple types such as Int64, Guid, String, and DateTime or of a serialized binary type (byte[]).</span></span>
 
-<span data-ttu-id="55ed9-106"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Sınıfında <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A> sorgularında kullanılabilir bir özellik olarak bir özellik yükseltmek için kullanabileceğiniz yöntem.</span><span class="sxs-lookup"><span data-stu-id="55ed9-106">The <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> class has the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A> method that you can use to promote a property as a property that can be used in queries.</span></span> <span data-ttu-id="55ed9-107">Aşağıdaki örnek bir depo genişletilebilirliği uçtan uca örneğidir.</span><span class="sxs-lookup"><span data-stu-id="55ed9-107">The following example is an end-to-end example of store extensibility.</span></span>
+<span data-ttu-id="c3bba-106"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Sınıfında <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A> sorgularında kullanılabilir bir özellik olarak bir özellik yükseltmek için kullanabileceğiniz yöntem.</span><span class="sxs-lookup"><span data-stu-id="c3bba-106">The <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> class has the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A> method that you can use to promote a property as a property that can be used in queries.</span></span> <span data-ttu-id="c3bba-107">Aşağıdaki örnek bir depo genişletilebilirliği uçtan uca örneğidir.</span><span class="sxs-lookup"><span data-stu-id="c3bba-107">The following example is an end-to-end example of store extensibility.</span></span>
 
-1. <span data-ttu-id="55ed9-108">Bu örnek senaryoda, her biri için belge işleme özel etkinlikler kullanan iş akışları, bir belge (DP) uygulama işleme sahiptir.</span><span class="sxs-lookup"><span data-stu-id="55ed9-108">In this example scenario, a document processing (DP) application has workflows, each of which uses custom activities for document processing.</span></span> <span data-ttu-id="55ed9-109">Bu iş akışları, son kullanıcıya görünür yapılması gereken durumu değişkenler kümesine sahiptir.</span><span class="sxs-lookup"><span data-stu-id="55ed9-109">These workflows have a set of state variables that need to be made visible to the end user.</span></span> <span data-ttu-id="55ed9-110">Bunu başarmak için DP uygulama türünün bir örneği uzantısını sağlar <xref:System.Activities.Persistence.PersistenceParticipant>, durumu değişkenleri sağlamak için etkinlikleri tarafından kullanılır.</span><span class="sxs-lookup"><span data-stu-id="55ed9-110">To achieve this, the DP application provides an instance extension of type <xref:System.Activities.Persistence.PersistenceParticipant>, which is used by activities to supply the state variables.</span></span>
+1. <span data-ttu-id="c3bba-108">Bu örnek senaryoda, her biri için belge işleme özel etkinlikler kullanan iş akışları, bir belge (DP) uygulama işleme sahiptir.</span><span class="sxs-lookup"><span data-stu-id="c3bba-108">In this example scenario, a document processing (DP) application has workflows, each of which uses custom activities for document processing.</span></span> <span data-ttu-id="c3bba-109">Bu iş akışları, son kullanıcıya görünür yapılması gereken durumu değişkenler kümesine sahiptir.</span><span class="sxs-lookup"><span data-stu-id="c3bba-109">These workflows have a set of state variables that need to be made visible to the end user.</span></span> <span data-ttu-id="c3bba-110">Bunu başarmak için DP uygulama türünün bir örneği uzantısını sağlar <xref:System.Activities.Persistence.PersistenceParticipant>, durumu değişkenleri sağlamak için etkinlikleri tarafından kullanılır.</span><span class="sxs-lookup"><span data-stu-id="c3bba-110">To achieve this, the DP application provides an instance extension of type <xref:System.Activities.Persistence.PersistenceParticipant>, which is used by activities to supply the state variables.</span></span>
 
     ```csharp
     class DocumentStatusExtension : PersistenceParticipant
@@ -27,7 +27,7 @@ ms.locfileid: "57703295"
     }
     ```
 
-2. <span data-ttu-id="55ed9-111">Yeni uzantıyı daha sonra ana bilgisayara eklenir.</span><span class="sxs-lookup"><span data-stu-id="55ed9-111">The new extension is then added to the host.</span></span>
+2. <span data-ttu-id="c3bba-111">Yeni uzantıyı daha sonra ana bilgisayara eklenir.</span><span class="sxs-lookup"><span data-stu-id="c3bba-111">The new extension is then added to the host.</span></span>
 
     ```csharp
     static Activity workflow = CreateWorkflow();
@@ -36,9 +36,9 @@ ms.locfileid: "57703295"
     application.Extensions.Add(documentStatusExtension);
     ```
 
-     <span data-ttu-id="55ed9-112">Özel Kalıcılık Katılımcısı ekleme hakkında daha fazla ayrıntı için bkz. [Kalıcılık katılımcıları](persistence-participants.md) örnek.</span><span class="sxs-lookup"><span data-stu-id="55ed9-112">For more details about adding a custom persistence participant, see the [Persistence Participants](persistence-participants.md) sample.</span></span>
+     <span data-ttu-id="c3bba-112">Özel Kalıcılık Katılımcısı ekleme hakkında daha fazla ayrıntı için bkz. [Kalıcılık katılımcıları](persistence-participants.md) örnek.</span><span class="sxs-lookup"><span data-stu-id="c3bba-112">For more details about adding a custom persistence participant, see the [Persistence Participants](persistence-participants.md) sample.</span></span>
 
-3. <span data-ttu-id="55ed9-113">Özel etkinlikler DP uygulamada çeşitli durumu alanları doldurmak **yürütme** yöntemi.</span><span class="sxs-lookup"><span data-stu-id="55ed9-113">The custom activities in the DP application populate various status fields in the **Execute** method.</span></span>
+3. <span data-ttu-id="c3bba-113">Özel etkinlikler DP uygulamada çeşitli durumu alanları doldurmak **yürütme** yöntemi.</span><span class="sxs-lookup"><span data-stu-id="c3bba-113">The custom activities in the DP application populate various status fields in the **Execute** method.</span></span>
 
     ```csharp
     public override void Execute(CodeActivityContext context)
@@ -52,7 +52,7 @@ ms.locfileid: "57703295"
     }
     ```
 
-4. <span data-ttu-id="55ed9-114">Bir iş akışı örneği bir Kalıcılık noktasına ulaştığında **CollectValues** yöntemi **DocumentStatusExtension** Kalıcılık Katılımcısı, bu özellikleri Kalıcılık verilerini kaydeder koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="55ed9-114">When a workflow instance reaches a persistence point, the **CollectValues** method of the **DocumentStatusExtension** persistence participant saves these properties into the persistence data collection.</span></span>
+4. <span data-ttu-id="c3bba-114">Bir iş akışı örneği bir Kalıcılık noktasına ulaştığında **CollectValues** yöntemi **DocumentStatusExtension** Kalıcılık Katılımcısı, bu özellikleri Kalıcılık verilerini kaydeder koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="c3bba-114">When a workflow instance reaches a persistence point, the **CollectValues** method of the **DocumentStatusExtension** persistence participant saves these properties into the persistence data collection.</span></span>
 
     ```csharp
     class DocumentStatusExtension : PersistenceParticipant
@@ -74,9 +74,9 @@ ms.locfileid: "57703295"
     ```
 
     > [!NOTE]
-    > <span data-ttu-id="55ed9-115">Tüm bu özellikler geçirilen **SqlWorkflowInstanceStore** Kalıcılık framework tarafından **SaveWorkflowCommand.InstanceData** koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="55ed9-115">All these properties are passed to **SqlWorkflowInstanceStore** by the persistence framework through the **SaveWorkflowCommand.InstanceData** collection.</span></span>
+    > <span data-ttu-id="c3bba-115">Tüm bu özellikler geçirilen **SqlWorkflowInstanceStore** Kalıcılık framework tarafından **SaveWorkflowCommand.InstanceData** koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="c3bba-115">All these properties are passed to **SqlWorkflowInstanceStore** by the persistence framework through the **SaveWorkflowCommand.InstanceData** collection.</span></span>
 
-5. <span data-ttu-id="55ed9-116">DP uygulama SQL iş akışı örneği Store başlatır ve çağıran **Yükselt** bu verileri yükseltmek için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="55ed9-116">The DP application initializes the SQL Workflow Instance Store and invokes the **Promote** method to promote this data.</span></span>
+5. <span data-ttu-id="c3bba-116">DP uygulama SQL iş akışı örneği Store başlatır ve çağıran **Yükselt** bu verileri yükseltmek için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="c3bba-116">The DP application initializes the SQL Workflow Instance Store and invokes the **Promote** method to promote this data.</span></span>
 
     ```csharp
     SqlWorkflowInstanceStore store = new SqlWorkflowInstanceStore(connectionString);
@@ -92,9 +92,9 @@ ms.locfileid: "57703295"
     store.Promote("DocumentStatus", variantProperties, null);
     ```
 
-    <span data-ttu-id="55ed9-117">Bu promosyon bilgilere göre **SqlWorkflowInstanceStore** veri özellikleri, sütunlarında yerleştirir [InstancePromotedProperties](#InstancePromotedProperties) görünümü.</span><span class="sxs-lookup"><span data-stu-id="55ed9-117">Based on this promotion information, **SqlWorkflowInstanceStore** places the data properties in the columns of the [InstancePromotedProperties](#InstancePromotedProperties) view.</span></span>
+    <span data-ttu-id="c3bba-117">Bu promosyon bilgilere göre **SqlWorkflowInstanceStore** veri özellikleri, sütunlarında yerleştirir [InstancePromotedProperties](#InstancePromotedProperties) görünümü.</span><span class="sxs-lookup"><span data-stu-id="c3bba-117">Based on this promotion information, **SqlWorkflowInstanceStore** places the data properties in the columns of the [InstancePromotedProperties](#InstancePromotedProperties) view.</span></span>
 
-6. <span data-ttu-id="55ed9-118">Bir alt kümesini yükseltme tablodaki verileri sorgulamak için özelleştirilmiş bir görünümü yükseltme görünümü üzerinde DP uygulama ekler.</span><span class="sxs-lookup"><span data-stu-id="55ed9-118">To query a subset of the data from the promotion table, the DP application adds a customized view on top of the promotion view.</span></span>
+6. <span data-ttu-id="c3bba-118">Bir alt kümesini yükseltme tablodaki verileri sorgulamak için özelleştirilmiş bir görünümü yükseltme görünümü üzerinde DP uygulama ekler.</span><span class="sxs-lookup"><span data-stu-id="c3bba-118">To query a subset of the data from the promotion table, the DP application adds a customized view on top of the promotion view.</span></span>
 
     ```sql
     create view [dbo].[DocumentStatus] with schemabinding
@@ -109,11 +109,11 @@ ms.locfileid: "57703295"
     go
     ```
 
-## <a name="InstancePromotedProperties"></a> <span data-ttu-id="55ed9-119">[System.Activities.DurableInstancing.InstancePromotedProperties] görünümü</span><span class="sxs-lookup"><span data-stu-id="55ed9-119">[System.Activities.DurableInstancing.InstancePromotedProperties] view</span></span>
+## <a name="InstancePromotedProperties"></a> <span data-ttu-id="c3bba-119">[System.Activities.DurableInstancing.InstancePromotedProperties] görünümü</span><span class="sxs-lookup"><span data-stu-id="c3bba-119">[System.Activities.DurableInstancing.InstancePromotedProperties] view</span></span>
 
-|<span data-ttu-id="55ed9-120">Sütun adı</span><span class="sxs-lookup"><span data-stu-id="55ed9-120">Column Name</span></span>|<span data-ttu-id="55ed9-121">Sütun türü</span><span class="sxs-lookup"><span data-stu-id="55ed9-121">Column Type</span></span>|<span data-ttu-id="55ed9-122">Açıklama</span><span class="sxs-lookup"><span data-stu-id="55ed9-122">Description</span></span>|
+|<span data-ttu-id="c3bba-120">Sütun adı</span><span class="sxs-lookup"><span data-stu-id="c3bba-120">Column Name</span></span>|<span data-ttu-id="c3bba-121">Sütun türü</span><span class="sxs-lookup"><span data-stu-id="c3bba-121">Column Type</span></span>|<span data-ttu-id="c3bba-122">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c3bba-122">Description</span></span>|
 |-----------------|-----------------|-----------------|
-|<span data-ttu-id="55ed9-123">InstanceId</span><span class="sxs-lookup"><span data-stu-id="55ed9-123">InstanceId</span></span>|<span data-ttu-id="55ed9-124">GUID</span><span class="sxs-lookup"><span data-stu-id="55ed9-124">GUID</span></span>|<span data-ttu-id="55ed9-125">Bu promosyon ait iş akışı örneği.</span><span class="sxs-lookup"><span data-stu-id="55ed9-125">The workflow instance that this promotion belongs to.</span></span>|
-|<span data-ttu-id="55ed9-126">PromotionName</span><span class="sxs-lookup"><span data-stu-id="55ed9-126">PromotionName</span></span>|<span data-ttu-id="55ed9-127">Nvarchar(400)</span><span class="sxs-lookup"><span data-stu-id="55ed9-127">nvarchar(400)</span></span>|<span data-ttu-id="55ed9-128">Yükseltme adı.</span><span class="sxs-lookup"><span data-stu-id="55ed9-128">The name of the promotion itself.</span></span>|
-|<span data-ttu-id="55ed9-129">Value1, Value2, Value3,.., Value32</span><span class="sxs-lookup"><span data-stu-id="55ed9-129">Value1, Value2, Value3,..,Value32</span></span>|<span data-ttu-id="55ed9-130">sql_variant</span><span class="sxs-lookup"><span data-stu-id="55ed9-130">sql_variant</span></span>|<span data-ttu-id="55ed9-131">Yükseltilen özellik değeri.</span><span class="sxs-lookup"><span data-stu-id="55ed9-131">The value of the promoted property itself.</span></span> <span data-ttu-id="55ed9-132">İkili, blobları ve üzerinde 8000 bayt uzunluğunda dizeleri dışında çoğu SQL ilkel veri türleri sql_variant uygun olamaz.</span><span class="sxs-lookup"><span data-stu-id="55ed9-132">Most SQL primitive data types except binary blobs and strings over 8000 bytes in length can fit in sql_variant.</span></span>|
-|<span data-ttu-id="55ed9-133">Value33, Value34, Value35,..., Value64</span><span class="sxs-lookup"><span data-stu-id="55ed9-133">Value33, Value34, Value35, …, Value64</span></span>|<span data-ttu-id="55ed9-134">VARBINARY(max)</span><span class="sxs-lookup"><span data-stu-id="55ed9-134">varbinary(max)</span></span>|<span data-ttu-id="55ed9-135">Açıkça VARBINARY(max) bildirilen yükseltilen özellik değeri.</span><span class="sxs-lookup"><span data-stu-id="55ed9-135">The value of promoted properties that are explicitly declared as varbinary(max).</span></span>|
+|<span data-ttu-id="c3bba-123">InstanceId</span><span class="sxs-lookup"><span data-stu-id="c3bba-123">InstanceId</span></span>|<span data-ttu-id="c3bba-124">GUID</span><span class="sxs-lookup"><span data-stu-id="c3bba-124">GUID</span></span>|<span data-ttu-id="c3bba-125">Bu promosyon ait iş akışı örneği.</span><span class="sxs-lookup"><span data-stu-id="c3bba-125">The workflow instance that this promotion belongs to.</span></span>|
+|<span data-ttu-id="c3bba-126">PromotionName</span><span class="sxs-lookup"><span data-stu-id="c3bba-126">PromotionName</span></span>|<span data-ttu-id="c3bba-127">Nvarchar(400)</span><span class="sxs-lookup"><span data-stu-id="c3bba-127">nvarchar(400)</span></span>|<span data-ttu-id="c3bba-128">Yükseltme adı.</span><span class="sxs-lookup"><span data-stu-id="c3bba-128">The name of the promotion itself.</span></span>|
+|<span data-ttu-id="c3bba-129">Value1, Value2, Value3,.., Value32</span><span class="sxs-lookup"><span data-stu-id="c3bba-129">Value1, Value2, Value3,..,Value32</span></span>|<span data-ttu-id="c3bba-130">sql_variant</span><span class="sxs-lookup"><span data-stu-id="c3bba-130">sql_variant</span></span>|<span data-ttu-id="c3bba-131">Yükseltilen özellik değeri.</span><span class="sxs-lookup"><span data-stu-id="c3bba-131">The value of the promoted property itself.</span></span> <span data-ttu-id="c3bba-132">İkili, blobları ve üzerinde 8000 bayt uzunluğunda dizeleri dışında çoğu SQL ilkel veri türleri sql_variant uygun olamaz.</span><span class="sxs-lookup"><span data-stu-id="c3bba-132">Most SQL primitive data types except binary blobs and strings over 8000 bytes in length can fit in sql_variant.</span></span>|
+|<span data-ttu-id="c3bba-133">Value33, Value34, Value35,..., Value64</span><span class="sxs-lookup"><span data-stu-id="c3bba-133">Value33, Value34, Value35, …, Value64</span></span>|<span data-ttu-id="c3bba-134">VARBINARY(max)</span><span class="sxs-lookup"><span data-stu-id="c3bba-134">varbinary(max)</span></span>|<span data-ttu-id="c3bba-135">Açıkça VARBINARY(max) bildirilen yükseltilen özellik değeri.</span><span class="sxs-lookup"><span data-stu-id="c3bba-135">The value of promoted properties that are explicitly declared as varbinary(max).</span></span>|
