@@ -3,11 +3,11 @@ title: Denetim akışı zaman uyumsuz programlarda (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
 ms.openlocfilehash: 6a7b8f3f41b2096e3e7524d03217bdc123f26f10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702868"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Denetim akışı zaman uyumsuz programlarda (C#)
 
@@ -17,9 +17,9 @@ Genel olarak, zaman uyumsuz kodun yer aldığı yöntemleri işaretleyin [async 
 
 Aşağıdaki örnek, bir dize olarak belirtilen bir Web sitesinin içeriklerini karşıdan yüklemek ve dizenin uzunluğu görüntülemek için zaman uyumsuz yöntemler kullanır. Örneğin, aşağıdaki iki yöntemi içerir.
 
--   `startButton_Click`, hangi çağrıları `AccessTheWebAsync` ve sonucu görüntüler.
+- `startButton_Click`, hangi çağrıları `AccessTheWebAsync` ve sonucu görüntüler.
 
--   `AccessTheWebAsync`, bir dize olarak bir Web sitesinin içeriklerini karşıdan yükler ve dizenin uzunluğunu döndürür. `AccessTheWebAsync` zaman uyumsuz kullanan <xref:System.Net.Http.HttpClient> yöntemi <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>içeriğini indirmek için.
+- `AccessTheWebAsync`, bir dize olarak bir Web sitesinin içeriklerini karşıdan yükler ve dizenin uzunluğunu döndürür. `AccessTheWebAsync` zaman uyumsuz kullanan <xref:System.Net.Http.HttpClient> yöntemi <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>içeriğini indirmek için.
 
 Numaralı ekran satırları, programın nasıl çalıştığını anlamanıza yardımcı olmak ve işaretlenmiş her noktada ne olacağını açıklamak için program boyunca stratejik noktalarda görüntülenir. Görüntü satırları "Bir"ile "altı." olarak etiketlenmiştir Etiketler, programın bu kod satırlarını ulaştığında sırayı temsil eder.
 

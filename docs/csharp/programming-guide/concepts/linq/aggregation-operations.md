@@ -3,11 +3,11 @@ title: Toplama işlemleri (C#)
 ms.date: 07/20/2015
 ms.assetid: 6fc035e5-7639-48b8-bc7f-b093dd31b039
 ms.openlocfilehash: 151332964b4efd495acff5d8763dfab5f380ee6c
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668474"
 ---
 # <a name="aggregation-operations-c"></a>Toplama işlemleri (C#)
 Bir toplama işlemi, değerlerin bir koleksiyonunu tek bir değeri hesaplar. Örnek olarak bir toplama işlemi, bir aya ait günlük sıcaklık değerleri değerinde gelen günlük ortalama sıcaklık hesaplıyor.  
@@ -24,7 +24,7 @@ Bir toplama işlemi, değerlerin bir koleksiyonunu tek bir değeri hesaplar. Ör
 |-----------------|-----------------|---------------------------------|----------------------|  
 |Toplama|Değerleri bir koleksiyonun bir özel toplama işlemi gerçekleştirir.|Geçerli değildir.|<xref:System.Linq.Enumerable.Aggregate%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Aggregate%2A?displayProperty=nameWithType>|  
 |Ortalama|Değerler koleksiyonu ortalama değerini hesaplar.|Geçerli değildir.|<xref:System.Linq.Enumerable.Average%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Average%2A?displayProperty=nameWithType>|  
-|Sayı|Koşul işlevini karşılayan isteğe bağlı olarak yalnızca bu öğeleri bir koleksiyondaki öğeleri sayar.|Geçerli değildir.|<xref:System.Linq.Enumerable.Count%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Count%2A?displayProperty=nameWithType>|  
+|Count|Koşul işlevini karşılayan isteğe bağlı olarak yalnızca bu öğeleri bir koleksiyondaki öğeleri sayar.|Geçerli değildir.|<xref:System.Linq.Enumerable.Count%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Count%2A?displayProperty=nameWithType>|  
 |LongCount|Koşul işlevini karşılayan isteğe bağlı olarak yalnızca bu öğeleri büyük bir koleksiyondaki öğeleri sayar.|Geçerli değildir.|<xref:System.Linq.Enumerable.LongCount%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LongCount%2A?displayProperty=nameWithType>|  
 |Maks.|Bir koleksiyondaki maksimum değeri belirler.|Geçerli değildir.|<xref:System.Linq.Enumerable.Max%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Max%2A?displayProperty=nameWithType>|  
 |Min.|Bir koleksiyondaki minimum değeri belirleyen.|Geçerli değildir.|<xref:System.Linq.Enumerable.Min%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Min%2A?displayProperty=nameWithType>|  

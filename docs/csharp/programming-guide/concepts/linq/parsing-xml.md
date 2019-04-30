@@ -3,11 +3,11 @@ title: XML Ayrıştırma (C#)
 ms.date: 07/20/2015
 ms.assetid: 7ea83f83-a779-423a-9875-4ea4e51f97fc
 ms.openlocfilehash: f19e5a316621262bfe0f3fb56a13275336cf763f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61682215"
 ---
 # <a name="parsing-xml-c"></a>XML Ayrıştırma (C#)
 Bu bölümdeki konular, XML belgelerini ayrıştırmak kullanılan nasıl açıklanmaktadır.  

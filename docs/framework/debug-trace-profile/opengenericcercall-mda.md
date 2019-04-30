@@ -13,11 +13,11 @@ ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a9ea2e274bbcd17bcc129de46c753f091501d4c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753718"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 `openGenericCERCall` Yönetilen hata ayıklama Yardımcısı, genel tür değişkenleri kök yöntemi ile kısıtlı yürütme bölge (CER) grafik JIT derleme veya yerel görüntü oluşturma zamanına ve en az bir genel işlenmekte olduğunu uyarmak için etkinleştirildi türü değişkenler olan bir nesne başvuru türü.  

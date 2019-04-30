@@ -12,11 +12,11 @@ ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2d96de43d258e4a7ff925e0c5b1702727e67d737
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754524"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Nasıl yapılır: İz Kaynakları Oluşturma ve Başlatma
 <xref:System.Diagnostics.TraceSource> Sınıfı uygulamalar tarafından uygulamayla ilişkilendirilebilecek izlemeler üretmek için kullanılır. <xref:System.Diagnostics.TraceSource> kolayca izleme olayları, izleme verilerini ve sorunu bilgilendirme izlemeleri izin veren izleme yöntemleri sağlar. İşlevinin İzleme çıktısı <xref:System.Diagnostics.TraceSource> oluşturulabilir ve ile veya yapılandırma dosyalarının kullanımını olmadan başlatıldı. Bu konu, her iki seçenek için yönergeler sağlar. Ancak, çalışma zamanında iz kaynakları tarafından üretilen İzlerin yeniden yapılandırılmasını kolaylaştırmak amacıyla yapılandırma dosyalarını kullanmanızı öneririz.  
@@ -73,7 +73,7 @@ ms.locfileid: "59339443"
   
 ### <a name="to-initialize-trace-sources-listeners-and-filters-without-a-configuration-file"></a>İzleme kaynaklarına, dinleyicilere ve filtrelere bir yapılandırma dosyası olmadan başlatmak için  
   
--   Aşağıdaki kod örneği, bir yapılandırma dosyası kullanmadan bir izleme kaynağı boyunca izlemeyi etkinleştirmek için kullanın. Bu önerilen bir yöntem değildir, ancak hangi izlemeyi sağlamak için yapılandırma dosyalarına bağımlı olmak istemediğiniz durumlar olabilir.  
+- Aşağıdaki kod örneği, bir yapılandırma dosyası kullanmadan bir izleme kaynağı boyunca izlemeyi etkinleştirmek için kullanın. Bu önerilen bir yöntem değildir, ancak hangi izlemeyi sağlamak için yapılandırma dosyalarına bağımlı olmak istemediğiniz durumlar olabilir.  
   
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  

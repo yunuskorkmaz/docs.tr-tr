@@ -3,11 +3,11 @@ title: Güvenlik Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
 ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664161"
 ---
 # <a name="security-overview"></a>Güvenlik Genel Bakış
 Bir uygulamanın güvenliğini sağlama, devam eden bir işlem bulunmaktadır. Hiçbir zaman bir geliştirici gelecekteki saldırıları yeni teknolojileri tür zekadan yararlanabilmesini tahmin etmek mümkün olduğundan, uygulamanın tüm saldırılara karşı güvenli olduğu garanti edebilir bir noktası olacaktır. Buna karşılık, hiç kimse sahip olduğu bir sistemde henüz bulunan (veya yayımlanmış) güvenlik açıkları gelmez hiçbiri mevcut veya var olabilir. Yanı sıra proje tasarım aşaması sırasında güvenlik için planlama, uygulama ömrü boyunca güvenlik nasıl korunur planlamak gerekir.  
@@ -46,19 +46,19 @@ Bir uygulamanın güvenliğini sağlama, devam eden bir işlem bulunmaktadır. H
 ## <a name="code-access-security-cas"></a>Kod Erişimi Güvenliği (CAS)  
  Kod erişimi güvenliği (CAS) kod korumalı kaynaklara ve işlemlere sahip olan erişimini sınırlamaya yardımcı olan bir mekanizmadır. .NET Framework, CA'ları aşağıdaki işlevleri gerçekleştirir:  
   
--   İzinler ve çeşitli sistem kaynaklarına erişim hakkı temsil eden izin kümeleri tanımlar.  
+- İzinler ve çeşitli sistem kaynaklarına erişim hakkı temsil eden izin kümeleri tanımlar.  
   
--   İzin kümeleri grupları (kod gruplarını) kod ile ilişkilendirerek güvenlik ilkesini yapılandırmak yöneticilerin sağlar.  
+- İzin kümeleri grupları (kod gruplarını) kod ile ilişkilendirerek güvenlik ilkesini yapılandırmak yöneticilerin sağlar.  
   
--   Sahip olmak yararlı olabilecek izinleri yanı sıra gerektirir çalıştırmak için izinleri istemek kod sağlar ve kodu asla olmalıdır hangi izinleri belirtir.  
+- Sahip olmak yararlı olabilecek izinleri yanı sıra gerektirir çalıştırmak için izinleri istemek kod sağlar ve kodu asla olmalıdır hangi izinleri belirtir.  
   
--   Kod tarafından istenen izinleri ve güvenlik ilkesi tarafından izin verilen işlemler temel yüklendiğinde, her derleme için izinleri verir.  
+- Kod tarafından istenen izinleri ve güvenlik ilkesi tarafından izin verilen işlemler temel yüklendiğinde, her derleme için izinleri verir.  
   
--   İsteğe bağlı çağrıda bulunanların belirli izinlere sahip olduğunuzu kodu sağlar.  
+- İsteğe bağlı çağrıda bulunanların belirli izinlere sahip olduğunuzu kodu sağlar.  
   
--   Böylece korunan kod çağırmak yalnızca belirli bir kuruluş veya sitesinde arayanlara izin vererek çağıranlarını bir dijital imza sahip isteğe bağlı kod sağlar.  
+- Böylece korunan kod çağırmak yalnızca belirli bir kuruluş veya sitesinde arayanlara izin vererek çağıranlarını bir dijital imza sahip isteğe bağlı kod sağlar.  
   
--   Kod üzerindeki kısıtlamalar, verilen izinler, Arayanların olmalıdır izinlerle çağrı yığınında her arayanın karşılaştırarak, çalışma zamanında zorlar.  
+- Kod üzerindeki kısıtlamalar, verilen izinler, Arayanların olmalıdır izinlerle çağrı yığınında her arayanın karşılaştırarak, çalışma zamanında zorlar.  
   
  Saldırının başarılı olursa oluşabilecek zarar miktarını en aza indirmek için yalnızca kendi işlerinizi tamamlandı ve artık gerekli kaynaklara erişim veren kodunuz için bir güvenlik bağlamı'nı seçin.  
   
@@ -72,17 +72,17 @@ Bir uygulamanın güvenliğini sağlama, devam eden bir işlem bulunmaktadır. H
 ## <a name="database-security"></a>Veritabanı güvenliği  
  En düşük öncelik ilkesini veri kaynağınız için de geçerlidir. Veritabanı güvenliği için bazı genel yönergeleri içerir:  
   
--   Olası en düşük ayrıcalıkları olan hesapları oluşturun.  
+- Olası en düşük ayrıcalıkları olan hesapları oluşturun.  
   
--   Kullanıcılar yalnızca kod çalışma elde etmek için yönetim hesaplarına erişim izin vermez.  
+- Kullanıcılar yalnızca kod çalışma elde etmek için yönetim hesaplarına erişim izin vermez.  
   
--   İstemci uygulamaları için sunucu tarafı hata iletileri gitmez.  
+- İstemci uygulamaları için sunucu tarafı hata iletileri gitmez.  
   
--   Hem istemci hem de sunucu tüm girişleri doğrulayın.  
+- Hem istemci hem de sunucu tüm girişleri doğrulayın.  
   
--   Parametreli komutların kullanın ve dinamik SQL deyimleri kaçının.  
+- Parametreli komutların kullanın ve dinamik SQL deyimleri kaçının.  
   
--   Denetim ve günlük uyarı almanız için herhangi bir güvenlik ihlallerini kullanmakta olduğunuz veritabanı için güvenlik sağlar.  
+- Denetim ve günlük uyarı almanız için herhangi bir güvenlik ihlallerini kullanmakta olduğunuz veritabanı için güvenlik sağlar.  
   
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   

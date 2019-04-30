@@ -4,11 +4,11 @@ description: Modelleri özellik önemini ML.NET özellik önemi permütasyon ile
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
 ms.openlocfilehash: b0457bc07168579403e5a00383864c5612e1d17f
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755939"
 ---
 # <a name="determine-the-feature-importance-of-models-with-permutation-feature-importance-in-mlnet"></a>Modelleri özellik önemini ML.NET özellik önemi permütasyon ile belirleme
 

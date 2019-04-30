@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Bir dosyanın derleme olup olmadığını belirleme (C
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
 ms.openlocfilehash: e8026ab5fa44b7601e54b5e76ebf9eb434596a07
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702899"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Nasıl yapılır: Bir dosyanın derleme olup olmadığını belirleme (C#)
 Yönetilen ve bir derleme girişi meta verilerini içeren ve yalnızca, bir dosyanın derleme olup. Derlemeler ve meta veriler hakkında daha fazla bilgi için Ek Yardım konusuna [derleme bildirimi](../../../../../docs/framework/app-domains/assembly-manifest.md).  

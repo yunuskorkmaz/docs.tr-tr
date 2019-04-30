@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Nesne verilerini bir XML dosyasından okuma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
 ms.openlocfilehash: 33e4395c2be421385948d256a989d06ac215c9c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61711104"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Nasıl yapılır: Nesne verilerini bir XML dosyasından okuma (C#)
 Bu örnek daha önce bir XML dosyası kullanmayı yazılmış nesne verilerini okur <xref:System.Xml.Serialization.XmlSerializer> sınıfı.  
@@ -52,11 +52,11 @@ public void ReadXML()
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
--   Serileştirilmekte olan sınıfın ortak, parametresiz bir oluşturucusu yok.  
+- Serileştirilmekte olan sınıfın ortak, parametresiz bir oluşturucusu yok.  
   
--   Dosyasındaki verilerin veri seri durumdan sınıftan temsil etmiyor.  
+- Dosyasındaki verilerin veri seri durumdan sınıftan temsil etmiyor.  
   
--   Dosya yok (<xref:System.IO.IOException>).  
+- Dosya yok (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Her zaman girişleri doğrulayın ve hiçbir zaman güvenilmeyen bir kaynaktan gelen verileri seri durumdan. Yeniden oluşturulan nesne, seri durumdan kodun izinlere sahip bir yerel bilgisayarda çalıştırır. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.  

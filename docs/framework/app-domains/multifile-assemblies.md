@@ -13,11 +13,11 @@ ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bad63bbc8e221f306e5807f51fbbb8eb4761d0fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705486"
 ---
 # <a name="multifile-assemblies"></a>Birden Çok Dosya Derlemeleri
 
@@ -30,14 +30,14 @@ Visual C++ ile komut satırı derleyicilerini veya Visual Studio kullanan çok d
 
 Bir çoklu dosya derlemesi oluşturmak isteyebileceğiniz birkaç neden vardır:
 
--   Farklı dillerde yazılan modülleri birleştirmek için. Bir çoklu dosya derlemesi oluşturmak için en yaygın nedeni budur.
+- Farklı dillerde yazılan modülleri birleştirmek için. Bir çoklu dosya derlemesi oluşturmak için en yaygın nedeni budur.
 
--   Nadiren kullanılan türleri yalnızca gerektiğinde indirilen bir modülün yerleştirerek bir uygulamanın indirilmesini optimize için.
+- Nadiren kullanılan türleri yalnızca gerektiğinde indirilen bir modülün yerleştirerek bir uygulamanın indirilmesini optimize için.
 
     > [!NOTE]
     > Kullanılarak indirilen uygulamalar oluşturuyorsanız `<object>` etiketi Microsoft Internet Explorer kullanarak, çok dosyalı derlemeler oluşturmak önemlidir. Bu senaryoda, bir dosya yalnızca derleme bildirimi içeren kod modüllerinizi ayrı da oluşturun. Internet Explorer, derleme bildirimi ilk indirir ve ardından herhangi bir ek modüller veya gerekli derlemeleri yüklemek için çalışan iş parçacığı oluşturur. Internet Explorer, derleme bildirimini içeren dosya karşıdan yüklenirken kullanıcı girişine yanıt vermeyen olacaktır. Daha küçük derleme bildirimini içeren dosyayı, daha az zaman Internet Explorer yanıt vermeyen olacaktır.
 
--   Birden fazla geliştirici tarafından yazılan modülleri birleştirmek için. Her geliştirici her kod modülü bir derlemenin içine derleyebilirsiniz olsa da, bu tüm modüller, bir çoklu dosya derlemesi koyarsanız gösterilmez genel olarak açığa için bazı türleri zorlayabilirsiniz.
+- Birden fazla geliştirici tarafından yazılan modülleri birleştirmek için. Her geliştirici her kod modülü bir derlemenin içine derleyebilirsiniz olsa da, bu tüm modüller, bir çoklu dosya derlemesi koyarsanız gösterilmez genel olarak açığa için bazı türleri zorlayabilirsiniz.
 
 Derleme oluşturduktan sonra derleme bildirimini içeren dosyayı imzalayabilirsiniz (ve bu nedenle derleme), dosya (ve derleme) güçlü bir ad verin ve genel derleme önbelleğinde yerleştirin.
 

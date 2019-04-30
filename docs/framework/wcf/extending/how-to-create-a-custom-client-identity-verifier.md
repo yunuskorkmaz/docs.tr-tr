@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
 ms.openlocfilehash: d8529929870b14611c136221f1eefe3eb4ba3d42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767266"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı Oluşturma
 *Kimlik* Windows Communication Foundation (WCF) özelliği, beklenen hizmet kimliğini önceden belirtmek bir istemci sağlar. Bir sunucu kendisini istemciye doğruladığında kimliği beklenen kimliğini karşı denetlenir. (Kimlik ve nasıl çalıştığı bir açıklaması için bkz: [kimlik doğrulama ile hizmet kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  

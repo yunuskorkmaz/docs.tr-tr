@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
 ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696917"
 ---
 # <a name="security-wpf"></a>Güvenlik (WPF)
 <a name="introduction"></a> Güvenlik modeli, Windows Presentation Foundation (WPF) tek başına ve tarayıcıda tutulan uygulamalar geliştirirken dikkate almanız gerekir. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tek başına uygulamalar Kısıtlanmamış izinlere sahip yürütün ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** izin kümesi), Windows Installer (.msi), XCopy kullanarak dağıtılmış olup olmadığını veya [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Kısmi güven, ClickOnce ile tek başına WPF uygulamalarını dağıtmak desteklenmez. Ancak, tam güven uygulaması kısmi güven oluşturabilirsiniz <xref:System.AppDomain> .NET Framework eklenti modeli kullanarak. Daha fazla bilgi için [WPF eklentileri genel bakış](./app-development/wpf-add-ins-overview.md).  
@@ -31,17 +31,17 @@ ms.locfileid: "59313573"
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
--   [Güvenli gezinti](#SafeTopLevelNavigation)  
+- [Güvenli gezinti](#SafeTopLevelNavigation)  
   
--   [Web gözatma yazılım güvenlik ayarları](#InternetExplorerSecuritySettings)  
+- [Web gözatma yazılım güvenlik ayarları](#InternetExplorerSecuritySettings)  
   
--   [WebBrowser denetimi ve özellik denetimleri](#webbrowser_control_and_feature_controls)  
+- [WebBrowser denetimi ve özellik denetimleri](#webbrowser_control_and_feature_controls)  
   
--   [APTCA derlemelerini kısmen güvenilen istemci uygulamaları için devre dışı bırakma](#APTCA)  
+- [APTCA derlemelerini kısmen güvenilen istemci uygulamaları için devre dışı bırakma](#APTCA)  
   
--   [Gevşek XAML dosyaları için sandbox davranışı](#LooseContentSandboxing)  
+- [Gevşek XAML dosyaları için sandbox davranışı](#LooseContentSandboxing)  
   
--   [Güvenlik Yükselt WPF uygulamaları geliştirme kaynakları](#BestPractices)  
+- [Güvenlik Yükselt WPF uygulamaları geliştirme kaynakları](#BestPractices)  
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>Güvenli gezinti  
@@ -69,19 +69,19 @@ ms.locfileid: "59313573"
   
  İçerik bu tür dosyalar için ya da kullanıcı tarafından veya programlama yoluyla gezinilebilir:  
   
--   **Kullanıcı Gezinti**. Tıklayarak kullanıcı gittiğinde bir <xref:System.Windows.Documents.Hyperlink> öğesi.  
+- **Kullanıcı Gezinti**. Tıklayarak kullanıcı gittiğinde bir <xref:System.Windows.Documents.Hyperlink> öğesi.  
   
--   **Programlı Gezinti**. Uygulama ayarlayarak kullanıcının, örneğin, işe karıştırılmaksızın gider <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType> özelliği.  
+- **Programlı Gezinti**. Uygulama ayarlayarak kullanıcının, örneğin, işe karıştırılmaksızın gider <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType> özelliği.  
   
 <a name="Browser_Navigation_Security"></a>   
 ### <a name="browser-navigation-security"></a>Tarayıcı gezinti güvenliği  
  Tarayıcı gezintisi yalnızca aşağıdaki koşullarda güvenli olarak kabul edilir:  
   
--   **Kullanıcı Gezinti**. Tıklayarak kullanıcı gittiğinde bir <xref:System.Windows.Documents.Hyperlink> içinde ana öğesi <xref:System.Windows.Navigation.NavigationWindow>değil içinde iç içe bir <xref:System.Windows.Controls.Frame>.  
+- **Kullanıcı Gezinti**. Tıklayarak kullanıcı gittiğinde bir <xref:System.Windows.Documents.Hyperlink> içinde ana öğesi <xref:System.Windows.Navigation.NavigationWindow>değil içinde iç içe bir <xref:System.Windows.Controls.Frame>.  
   
--   **Bölge**. Geçtiğiniz için içeriği, Internet veya yerel intranet üzerindeki bulunur.  
+- **Bölge**. Geçtiğiniz için içeriği, Internet veya yerel intranet üzerindeki bulunur.  
   
--   **Protokol**. Kullanılan protokol geçerli **http**, **https**, **dosya**, veya **mailto**.  
+- **Protokol**. Kullanılan protokol geçerli **http**, **https**, **dosya**, veya **mailto**.  
   
  Varsa bir [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] Bu koşullar ile uyumlu olmayan bir şekilde içerik gitmek çalışır bir <xref:System.Security.SecurityException> oluşturulur.  
   
@@ -91,15 +91,15 @@ ms.locfileid: "59313573"
   
  [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] göre ya da yürütülecek izin işlevi olarak yapılandırabileceğiniz bir mekanizma sağlar [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)], aşağıdakiler dahil:  
   
--   .NET framework bağımlı bileşenler  
+- .NET framework bağımlı bileşenler  
   
--   ActiveX denetimleri ve eklentiler  
+- ActiveX denetimleri ve eklentiler  
   
--   İndirmeler  
+- İndirmeler  
   
--   Betik Oluşturma  
+- Betik Oluşturma  
   
--   Kullanıcı kimlik doğrulaması  
+- Kullanıcı kimlik doğrulaması  
   
  Bu şekilde güvenli hale getirilebilir işlevler koleksiyonu için bölge başına temelinde yapılandırılmış **Internet**, **Intranet**, **Güvenilen siteler**, ve  **Yasak siteler** bölgeleri. Aşağıdaki adımlar, güvenlik ayarlarının nasıl yapılandırılacağı açıklanmaktadır:  
   
@@ -122,9 +122,9 @@ ms.locfileid: "59313573"
   
  İle başlayarak [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], özellikle .NET Framework için aşağıdaki güvenlik ayarları dahil edilir:  
   
--   **XAML kaybetmiş**. Denetimleri olmadığını [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] gidin ve kaybedilir [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] dosyaları. (, Devre dışı bırakma, etkinleştirme ve seçenekleri isteyebilir).  
+- **XAML kaybetmiş**. Denetimleri olmadığını [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] gidin ve kaybedilir [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] dosyaları. (, Devre dışı bırakma, etkinleştirme ve seçenekleri isteyebilir).  
   
--   **XAML tarayıcı uygulamaları**. Denetimleri olmadığını [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] gidin ve çalıştırma [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. (, Devre dışı bırakma, etkinleştirme ve seçenekleri isteyebilir).  
+- **XAML tarayıcı uygulamaları**. Denetimleri olmadığını [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] gidin ve çalıştırma [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. (, Devre dışı bırakma, etkinleştirme ve seçenekleri isteyebilir).  
   
  Varsayılan olarak, bu ayarlar tüm için etkin olan **Internet**, **yerel intranet**, ve **Güvenilen siteler** bölgeleri ve için devre dışı **Kısıtlanmış siteler**  bölge.  
   
@@ -232,11 +232,11 @@ ms.locfileid: "59313573"
   
  Bu anahtar APTCA derlemesi için bir giriş oluşturur. Ayrıca, bir değer sağlar veya derlemeyi devre dışı bırakır. Bu anahtar oluşturmak gerekir. Değerin ayrıntıları aşağıda verilmiştir:  
   
--   Değer adı: **APTCA_FLAG**.  
+- Değer adı: **APTCA_FLAG**.  
   
--   Değer türü: **REG_DWORD**.  
+- Değer türü: **REG_DWORD**.  
   
--   Değer verisi: **1** devre dışı bırakmak için; **0** etkinleştirmek için.  
+- Değer verisi: **1** devre dışı bırakmak için; **0** etkinleştirmek için.  
   
  Bir derlemeyi kısmen güvenilen istemci uygulamaları için devre dışı bırakılması varsa, kayıt defteri anahtarı ve değeri oluşturan bir güncelleştirme yazabilirsiniz.  
   

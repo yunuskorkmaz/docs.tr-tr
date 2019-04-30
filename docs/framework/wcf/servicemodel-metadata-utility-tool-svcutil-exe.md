@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
 ms.openlocfilehash: 02b1b0f6215f7d26974a8e1e58fbefbb5d159cf7
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669696"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)
 
@@ -94,7 +94,7 @@ Bir hizmetin BasicHttpContextBinding uç noktası ile *Svcutil.exe* ile bir Basi
 |/excludeType:\<türü >|Başvurulan anlaşma türlerinin dışlanacak tam veya bütünleştirilmiş kodla nitelenen tür adı belirtir.<br /><br /> Bu anahtar ile birlikte kullanırken `/r` ayrı DLL'lerden XSD sınıfın tam adını başvurulur.<br /><br /> Kısa biçim: `/et`|
 |/importXmlTypes|Veri sözleşmesi serileştiricisi'veri anlaşması olmayan türleri IXmlSerializable türü olarak içeri aktarmak için yapılandırır.|
 |/ İç|İç olarak işaretlenmiş sınıflar oluşturur. Varsayılan: yalnızca Genel sınıflar oluşturun.<br /><br /> Kısa biçim: `/i`|
-|/Language:\<dil >|Kod oluşturma için kullanılacak programlama dilini belirtir. Machine.config dosyasında kayıtlı bir dil adı veya devralınan bir sınıf tam nitelikli adı sağlamanız gerekir <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Değerler: C#, cs, csharp, vb, visualbasic, c ++, cpp<br /><br /> Varsayılan: csharp<br /><br /> Kısa biçim: `/l`|
+|/Language:\<dil >|Kod oluşturma için kullanılacak programlama dilini belirtir. Machine.config dosyasında kayıtlı bir dil adı veya devralınan bir sınıf tam nitelikli adı sağlamanız gerekir <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Değerler: c#, cs, csharp, vb, visualbasic, c ++, cpp<br /><br /> Varsayılan: csharp<br /><br /> Kısa biçim: `/l`|
 |/mergeConfig|Varolan dosyanın üzerine yazmak yerine var olan bir dosya, oluşturulan yapılandırma birleştirir.|
 |/messageContract|İleti sözleşmesi türleri oluşturur.<br /><br /> Kısa biçim: `/mc`|
 |/ Namespace:\<string, string >|Bir eşleme bir WSDL veya XML Schema Targetnamespace'ten CLR ad alanını belirtir. Kullanarak '\*' targetNamespace söz konusu CLR ad alanına açık bir eşleme olmaksızın tüm Targetnamespace'ler eşlenir.<br /><br /> İleti sözleşmesi adı işlem adına sahip birbiriyle çakışır değil emin emin olmak için ya da tür başvurusu ile nitelemeniz `::`, veya adlarının benzersiz olduğundan emin olun.<br /><br /> Varsayılan: Veri anlaşmaları için şema belgesinin hedef ad alanından türetilir. Varsayılan ad alanı diğer oluşturulan tüm türleri için kullanılır.<br /><br /> Kısa biçim: `/n` **Not:**  XmlSerializer ile kullanılacak türlerini oluştururken, yalnızca tek bir ad alanı eşleme desteklenir. Oluşturulan tüm türleri ya da varsayılan ad alanı ya da tarafından belirtilen ad alanı olacaktır ' *'.|

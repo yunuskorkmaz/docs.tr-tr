@@ -1,15 +1,15 @@
 ---
-title: 'Örnek XML dosyası: Bir Namespace2 alanında müşteriler ve siparişler'
+title: 'Örnek XML Dosyası: Bir Namespace2 alanında müşteriler ve siparişler'
 ms.date: 07/20/2015
 ms.assetid: 2da1c474-f658-4dca-a457-c35ef5ba4aff
 ms.openlocfilehash: e25017481b91f8bf4dcbbc464391c939bc672057
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61681682"
 ---
-# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>Örnek XML dosyası: Bir Namespace alanında müşteriler ve siparişler
+# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>Örnek XML Dosyası: Bir Ad Alanında Müşteriler ve Siparişler
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Bu dosya, müşteriler ve siparişler içerir. Bir ad alanında XML'dir.  
   
 ## <a name="customersordersinnamespacexml"></a>CustomersOrdersInNamespace.xml  

@@ -3,11 +3,11 @@ title: (C#) WordprocessingML belgelerinin şekli
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
 ms.openlocfilehash: 4c034950006b7ce09ad03e4579cc298f0b2dd218
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61711547"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>(C#) WordprocessingML belgelerinin şekli
 Bu konu, WordprocessingML belgesinin XML şeklini tanıtır.  

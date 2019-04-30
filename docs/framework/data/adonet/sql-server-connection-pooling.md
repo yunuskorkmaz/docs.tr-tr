@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
 ms.openlocfilehash: 566a7905ac2eda17046595bcccc868e44f6a1e9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664118"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server Bağlantı Havuzu (ADO.NET)
 Veritabanı sunucusuna bağlanması, zaman birkaç adımdan oluşur. Bir yuva ya da bir adlandırılmış kanal gibi fiziksel bir kanal, sunucu ile ilk el sıkışma gerçekleşmelidir, oluşturulmalıdır bağlantı dizesi bilgilerini ayrıştırıldığında, bağlantı sunucu tarafından doğrulanması, denetimleri kaydetme için çalıştırılması gerekir Geçerli işlem ve benzeri.  

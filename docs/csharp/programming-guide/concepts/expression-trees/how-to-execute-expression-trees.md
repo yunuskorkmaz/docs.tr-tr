@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: İfade ağaçlarını yürütme (C#)'
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
 ms.openlocfilehash: bed37d8d96837062831f4a3017df8a3633446bf0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668932"
 ---
 # <a name="how-to-execute-expression-trees-c"></a>Nasıl yapılır: İfade ağaçlarını yürütme (C#)
 Bu konu nasıl bir ifade ağacı çalıştırılacağını gösterir. İfade ağacı yürütülürken bir değer döndürebilir veya sadece bir yöntemi gibi bir eylem gerçekleştirebilir.  
@@ -44,9 +44,9 @@ Console.WriteLine(result);
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   Zaten başvurulmayan System.Core.dll bir proje başvurusu ekleyin.  
+- Zaten başvurulmayan System.Core.dll bir proje başvurusu ekleyin.  
   
--   System.Linq.Expressions ad alanı içerir.  
+- System.Linq.Expressions ad alanı içerir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -3,11 +3,11 @@ title: LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 26c907b1-bc58-465f-bcdc-adbe89df6e55
 ms.openlocfilehash: a1ce0c70f3d3982e5f28d976e4ecd23eb05247c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61682358"
 ---
 # <a name="linq-to-xml-c"></a>LINQ to XML (C#)
 LINQ to XML .NET Language-Integrated sorgu (LINQ) Framework yararlanan bir bellek içi XML programlama arabirimi sağlar. LINQ to XML en son .NET Framework dil özelliklerini kullanır ve bir güncelleştirilmiş, yeniden tasarlanan belge nesne modeli (DOM) XML programlama arabirimi için karşılaştırılabilir.  

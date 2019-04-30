@@ -12,11 +12,11 @@ helpviewer_keywords:
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
 ms.openlocfilehash: d826fe0a64ad226db62e01259b0466f7f495f8e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757876"
 ---
 # <a name="listview-control-windows-forms"></a>ListView Denetimi (Windows Forms)
 Windows Forms `ListView` denetim simgeler ile öğeler bir listesini görüntüler. Bir liste görünümü sağ bölme Windows Explorer'ın gibi bir kullanıcı arabirimi oluşturmak için kullanabilirsiniz.  
@@ -58,15 +58,15 @@ Windows Forms `ListView` denetim simgeler ile öğeler bir listesini görüntül
  [Nasıl yapılır: Bir ListView denetimine arama yetenekleri ekleme](how-to-add-search-capabilities-to-a-listview-control.md)  
  Program aracılığıyla metin arama veya ekran koordinatları kullanarak bir öğeyi bulmak açıklar.  
   
--   [Nasıl yapılır: Tasarımcı kullanarak Windows Forms ListView denetimi döşeme görünümünü etkinleştirme](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
+- [Nasıl yapılır: Tasarımcı kullanarak Windows Forms ListView denetimi döşeme görünümünü etkinleştirme](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
   
--   [Nasıl yapılır: Tasarımcı kullanarak Windows Forms ListView denetimi ile öğe ekleyip](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
+- [Nasıl yapılır: Tasarımcı kullanarak Windows Forms ListView denetimi ile öğe ekleyip](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
   
--   [Nasıl yapılır: Windows Forms ListView Tasarımcısı'nı kullanarak denetimine sütun ekleme](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
+- [Nasıl yapılır: Windows Forms ListView Tasarımcısı'nı kullanarak denetimine sütun ekleme](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
   
--   [Nasıl yapılır: Tasarımcı kullanarak Windows Forms ListView denetimi içinde öğeleri gruplandırma](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
+- [Nasıl yapılır: Tasarımcı kullanarak Windows Forms ListView denetimi içinde öğeleri gruplandırma](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
   
--   [İzlenecek yol: ListView ve tasarımcı kullanarak TreeView denetimleri ile Gezgin stilinde bir arabirim oluşturma](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
+- [İzlenecek yol: ListView ve tasarımcı kullanarak TreeView denetimleri ile Gezgin stilinde bir arabirim oluşturma](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.ListView> Sınıfı  

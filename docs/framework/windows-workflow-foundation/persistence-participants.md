@@ -3,11 +3,11 @@ title: Kalıcılık Katılımcıları
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
 ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672659"
 ---
 # <a name="persistence-participants"></a>Kalıcılık Katılımcıları
 Kalıcılık Katılımcısı bir uygulama ana bilgisayarı tarafından tetiklenen bir Kalıcılık işlemi (kaydetme veya yük) katılabilir. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] İki soyut sınıf ile birlikte gelen **PersistenceParticipant** ve **PersistenceIOParticipant**, hangi Kalıcılık Katılımcısı oluşturma için kullanabilirsiniz. Kalıcılık Katılımcısı bu sınıflardan birine türetilen, ilgilenilen yöntemlerini uygular ve sonra sınıfa bir örneğini ekler <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> koleksiyonunda <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Uygulama konağı, bir iş akışı örneği kalıcı olduğunda bu tür iş akışı uzantılar için Ara ve uygun zamanlarda Kalıcılık katılımcıları uygun yöntemleri çağırmak olabilir.  
@@ -48,17 +48,17 @@ Kalıcılık Katılımcısı bir uygulama ana bilgisayarı tarafından tetiklene
   
  Bir iş akışı örneği yüklenirken kalıcı bir sağlayıcı bu örneği üzerinde bir kilit oluşturur. Bu örnek, bir çok düğümlü senaryosunda birden fazla konak tarafından yüklenen engeller. Kilitli bir iş akışı örneği yüklemeye çalışırsanız aşağıdaki gibi bir özel durum görürsünüz: Özel durum "System.ServiceModel.persistence.ınstancelockexception: İstenen işlemi tamamlayamadı çünkü kilitleme örneği için ' 00000000-0000-0000-0000-000000000000' alınmamış ". Aşağıdakilerden biri oluştuğunda, bu hataya neden olur:  
   
--   Bir çok düğümlü senaryosunda örneği başka bir ana bilgisayar tarafından yüklenir.  Bu tür çakışmaları çözmek için birkaç farklı yolu vardır: yeniden deneme ve kilit sahibi olan düğüme işleme iletmek veya çalışmalarını kaydetmeleri için başka bir konak neden olacak yük zorla.  
+- Bir çok düğümlü senaryosunda örneği başka bir ana bilgisayar tarafından yüklenir.  Bu tür çakışmaları çözmek için birkaç farklı yolu vardır: yeniden deneme ve kilit sahibi olan düğüme işleme iletmek veya çalışmalarını kaydetmeleri için başka bir konak neden olacak yük zorla.  
   
--   Tek düğümlü senaryo ve konak kilitlendi.  Ana bilgisayar başlatıldığında, kilit henüz süresi dolmadığından hala eski ana bilgisayar tarafından kilitli bir örnek yüklemek yeni ana bilgisayara yeniden (bir işlem geri dönüştürme veya yeni bir Kalıcılık sağlayıcı üreteci oluşturma) çalışır.  
+- Tek düğümlü senaryo ve konak kilitlendi.  Ana bilgisayar başlatıldığında, kilit henüz süresi dolmadığından hala eski ana bilgisayar tarafından kilitli bir örnek yüklemek yeni ana bilgisayara yeniden (bir işlem geri dönüştürme veya yeni bir Kalıcılık sağlayıcı üreteci oluşturma) çalışır.  
   
--   Tek düğümlü bir senaryo örneği, söz konusu noktada durduruldu ve farklı bir ana bilgisayar kimliği olan yeni bir Kalıcılık sağlayıcı örneği oluşturulur  
+- Tek düğümlü bir senaryo örneği, söz konusu noktada durduruldu ve farklı bir ana bilgisayar kimliği olan yeni bir Kalıcılık sağlayıcı örneği oluşturulur  
   
  Varsayılan değer olan 5 dakika kilit zaman aşımı değerine sahip, farklı bir zaman aşımı çağrılırken belirtebilirsiniz <xref:System.ServiceModel.Persistence.PersistenceProvider.Load%2A>.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
--   [Nasıl yapılır: Özel Kalıcılık Katılımcısı oluşturma](how-to-create-a-custom-persistence-participant.md)  
+- [Nasıl yapılır: Özel Kalıcılık Katılımcısı oluşturma](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

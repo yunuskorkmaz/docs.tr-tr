@@ -3,11 +3,11 @@ title: Zaman uyumsuz görevleri tamamlandıkça işleme
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
 ms.openlocfilehash: 335eb5dce74a7f0a2b8af550250105d460212b6a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702600"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Birden çok zaman uyumsuz görev başlatma ve bunlar (C#) tamamlandıkça işleme
 
@@ -51,27 +51,27 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
 
 Proje MainWindow.xaml.cs dosyasında aşağıdaki değişiklikleri `AccessTheWebAsync` yöntemi.
 
--   Uygulayarak sorguyu yürütün <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> yerine <xref:System.Linq.Enumerable.ToArray%2A>.
+- Uygulayarak sorguyu yürütün <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> yerine <xref:System.Linq.Enumerable.ToArray%2A>.
 
     ```csharp
     List<Task<int>> downloadTasks = downloadTasksQuery.ToList();
     ```
 
--   Ekleme bir `while` döngü koleksiyondaki her görev için aşağıdaki adımları gerçekleştirir:
+- Ekleme bir `while` döngü koleksiyondaki her görev için aşağıdaki adımları gerçekleştirir:
 
-    1.  Bir çağrı bekler `WhenAny` karşıdan yüklemesini tamamlamak için koleksiyondaki ilk görevi tanımlamak için.
+    1. Bir çağrı bekler `WhenAny` karşıdan yüklemesini tamamlamak için koleksiyondaki ilk görevi tanımlamak için.
 
         ```csharp
         Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);
         ```
 
-    2.  Bu görev koleksiyondan kaldırır.
+    2. Bu görev koleksiyondan kaldırır.
 
         ```csharp
         downloadTasks.Remove(firstFinishedTask);
         ```
 
-    3.  Bekler `firstFinishedTask`, bir çağrı tarafından döndürülen `ProcessURLAsync`. `firstFinishedTask` Değişken bir <xref:System.Threading.Tasks.Task%601> burada `TReturn` bir tamsayıdır. Görev zaten tamamlandıysa, ancak karşıdan yüklenen Web sitesi uzunluğunu aşağıdaki örnekte gösterildiği gibi almak için bekler.
+    3. Bekler `firstFinishedTask`, bir çağrı tarafından döndürülen `ProcessURLAsync`. `firstFinishedTask` Değişken bir <xref:System.Threading.Tasks.Task%601> burada `TReturn` bir tamsayıdır. Görev zaten tamamlandıysa, ancak karşıdan yüklenen Web sitesi uzunluğunu aşağıdaki örnekte gösterildiği gibi almak için bekler.
 
         ```csharp
         int length = await firstFinishedTask;

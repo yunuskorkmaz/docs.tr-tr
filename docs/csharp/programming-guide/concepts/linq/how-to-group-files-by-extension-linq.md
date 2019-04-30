@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Dosyaları (LINQ) uzantıya göre gruplama (C#)'
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
 ms.openlocfilehash: bad4df9009a40cede04438063b2d30916d0e68b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667905"
 ---
 # <a name="how-to-group-files-by-extension-linq-c"></a>Nasıl yapılır: Dosyaları (LINQ) uzantıya göre gruplama (C#)
 Bu örnek, LINQ Gelişmiş gruplandırma ve sıralama dosya veya klasörleri listelerde işlemleri gerçekleştirmek için nasıl kullanılabileceğini gösterir. Ayrıca bir konsol penceresinde çıktıyı kullanarak sayfa nasıl gösterir <xref:System.Linq.Enumerable.Skip%2A> ve <xref:System.Linq.Enumerable.Take%2A> yöntemleri.  

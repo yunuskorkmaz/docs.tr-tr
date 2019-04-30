@@ -3,11 +3,11 @@ title: LINQ ve yansıma (C#)
 ms.date: 07/20/2015
 ms.assetid: e4c4af30-d89e-4aa7-89b1-cb8c24acf881
 ms.openlocfilehash: 2c2addf53ad137e3de0a911ff03031c602faae96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701599"
 ---
 # <a name="linq-and-reflection-c"></a>LINQ ve yansıma (C#)
 .NET Framework sınıf kitaplığı yansıma API'leri, .NET derleme meta verilerde incelemek ve söz konusu derlemede bulunan türleri, tür üyeleri, parametreleri ve benzeri koleksiyonlarını oluşturmak için kullanılabilir. Bu koleksiyonlar genel desteklediğinden `IEnumerable` arabirimi, LINQ kullanarak sorgulanabilir.  

@@ -3,11 +3,11 @@ title: Nasıl yapılır makaleleri (C# Kılavuzu)
 description: Hızlı ipuçları ve kısa, odaklanmış kod örnekleri koleksiyonu
 ms.date: 12/20/2017
 ms.openlocfilehash: cc78b8ffffc4f40629f213921fab6145751a7c57
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672113"
 ---
 # <a name="how-to-c"></a>Nasıl yapılır (C#)
 

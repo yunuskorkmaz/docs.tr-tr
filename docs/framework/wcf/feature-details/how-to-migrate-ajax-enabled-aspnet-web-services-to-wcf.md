@@ -3,20 +3,20 @@ title: "Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'y
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
 ms.openlocfilehash: 6114fa90b10a5d0cacb60a7ad40f63fae776e174
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683528"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma
 Bu konu, temel bir ASP.NET AJAX hizmeti eşdeğer bir AJAX etkinleştirilmiş Windows Communication Foundation (WCF) hizmetine geçirme yordamları özetler. Bu, bir ASP.NET AJAX Hizmeti işlevsel olarak eşdeğer bir WCF sürümü oluşturma işlemini gösterir. İki hizmeti daha sonra bir yan yana kullanılabilir veya WCF hizmetini ASP.NET AJAX hizmeti değiştirmek için kullanılabilir.
 
  Mevcut bir ASP.NET AJAX geçiş hizmetine bir WCF AJAX hizmeti aşağıdaki faydaları sağlar:
 
--   AJAX hizmetinizi en az bir ek yapılandırma ile bir SOAP hizmet olarak kullanıma sunabilirsiniz.
+- AJAX hizmetinizi en az bir ek yapılandırma ile bir SOAP hizmet olarak kullanıma sunabilirsiniz.
 
--   WCF izleme gibi özelliklerinden yararlanmak ve benzeri.
+- WCF izleme gibi özelliklerinden yararlanmak ve benzeri.
 
  Aşağıdaki yordamlar, Visual Studio 2012 kullandığınızı varsayar.
 
@@ -179,9 +179,9 @@ namespace ASPHello
 
  ASMX Web Hizmetleri yükseltilmekte olan ve WCF hizmetleri için yan yana geçişi, iki tür istemci üzerinde aynı ad eşleme kaçının. Aynı tür kullanılırsa bu bir özel durum seri hale getiricileri genişletme içinde neden bir <xref:System.Web.Services.WebMethodAttribute> ve <xref:System.ServiceModel.ServiceContractAttribute>:
 
--   WCF Hizmeti önce eklediyseniz, özel durum ASMX Web hizmeti yönteminin çağrılması neden <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> proxy sırayla WCF stil tanımını öncelikli olduğundan.
+- WCF Hizmeti önce eklediyseniz, özel durum ASMX Web hizmeti yönteminin çağrılması neden <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> proxy sırayla WCF stil tanımını öncelikli olduğundan.
 
--   ASMX Web hizmeti önce eklediyseniz, WCF Hizmeti metodu çağrılırken özel durum neden <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> proxy sırayla Web hizmeti stil tanımını öncelikli olduğundan.
+- ASMX Web hizmeti önce eklediyseniz, WCF Hizmeti metodu çağrılırken özel durum neden <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> proxy sırayla Web hizmeti stil tanımını öncelikli olduğundan.
 
  Davranış önemli farklılıkları vardır <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ve ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>. Örneğin, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> bir sözlük ise anahtar/değer çiftleri dizisi olarak temsil eden ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> bir sözlük gerçek bir JSON nesnesi temsil eder. ASP.NET AJAX içinde gösterilen sözlüğe aşağıdaki nedenle.
 
@@ -193,9 +193,9 @@ d.Add("two", 2);
 
  Bu sözlük, aşağıdaki listede gösterildiği gibi JSON nesnesi temsil edilir:
 
--   [{"Key": "Bir", "Value": 1}, {"Key": "İki", "Value": 2}] olarak <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
+- [{"Key": "Bir", "Value": 1}, {"Key": "İki", "Value": 2}] olarak <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
 
--   {"bir": 1 "iki": 2} ASP.NET AJAX ile <xref:System.Web.Script.Serialization.JavaScriptSerializer>
+- {"bir": 1 "iki": 2} ASP.NET AJAX ile <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> , Anahtar türü dizesi olduğu sözlükleri işleyebilir anlamda daha güçlüdür ancak <xref:System.Web.Script.Serialization.JavaScriptSerializer> olamaz. Ancak, daha kolay JSON ikincisidir.
 

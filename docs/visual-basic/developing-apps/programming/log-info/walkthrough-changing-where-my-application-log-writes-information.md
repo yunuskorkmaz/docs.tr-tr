@@ -6,11 +6,11 @@ helpviewer_keywords:
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
 ms.openlocfilehash: 56fef77448f3523732e755f57e8cdabe6ad71379
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755304"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>İzlenecek yol: My.Application.Log (Visual Basic) bilgileri yazdığı yeri değiştirme
 Kullanabileceğiniz `My.Application.Log` ve `My.Log` gerçekleşen olaylar hakkında bilgileri, uygulamanızda oturum nesneleri. Bu izlenecek yol varsayılan ayarları geçersiz kılar ve neden gösterilmektedir `Log` diğer günlük dinleyicileri için yazılacak nesne.  
@@ -28,11 +28,11 @@ Kullanabileceğiniz `My.Application.Log` ve `My.Log` gerçekleşen olaylar hakk�
   
      App.config dosyası yoksa:  
   
-    1.  Üzerinde **proje** menüsünde seçin **Yeni Öğe Ekle**.  
+    1. Üzerinde **proje** menüsünde seçin **Yeni Öğe Ekle**.  
   
-    2.  Gelen **Yeni Öğe Ekle** iletişim kutusunda **uygulama yapılandırma dosyası**.  
+    2. Gelen **Yeni Öğe Ekle** iletişim kutusunda **uygulama yapılandırma dosyası**.  
   
-    3.  **Ekle**'yi tıklatın.  
+    3. **Ekle**'yi tıklatın.  
   
 2. Bulun `<listeners>` bölümündeki `<source>` ile bölümünde `name` "DefaultSource" özniteliğini `<sources>` bölümü. `<sources>` Bölümü olduğundan `<system.diagnostics>` bölümünde, üst düzey `<configuration>` bölümü.  
   
@@ -153,13 +153,13 @@ Kullanabileceğiniz `My.Application.Log` ve `My.Log` gerçekleşen olaylar hakk�
   
      Kullanabileceğiniz bazı türleri şunlardır:  
   
-    -   A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> dinleyici, bir dosyayı günlüğe yazar.  
+    - A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> dinleyici, bir dosyayı günlüğe yazar.  
   
-    -   A <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> bilgileri tarafından belirtilen bilgisayarın olay günlüğüne yazan dinleyici `initializeData` parametresi.  
+    - A <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> bilgileri tarafından belirtilen bilgisayarın olay günlüğüne yazan dinleyici `initializeData` parametresi.  
   
-    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> Ve <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> belirtilen dosyaya yazma dinleyici `initializeData` parametresi.  
+    - <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> Ve <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> belirtilen dosyaya yazma dinleyici `initializeData` parametresi.  
   
-    -   A <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> dinleyici, komut satırı konsola yazar.  
+    - A <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> dinleyici, komut satırı konsola yazar.  
   
      Burada günlük dinleyicileri diğer tür bilgilerini yazma hakkında daha fazla bilgi için bu türün belgelerine bakın.  
   

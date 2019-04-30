@@ -7,11 +7,11 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.openlocfilehash: b9c27e419d37b6c0730f214d3b2b9bbdf7e30d11
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672074"
 ---
 # <a name="how-to-search-strings"></a>Nasıl yapılır: dizeleri arama
 
@@ -43,7 +43,7 @@ Aşağıdaki kod örneği, "" veya bir tümcedeki çalışması yok sayılıyor 
 
 Arama metin arama deseni açıklar. Aşağıdaki tabloda, her öğe için arama deseni açıklar. (Aşağıdaki tabloda tek kullanan `\` , atlanan, olarak `\\` bir C# dizedeki).
 
-| deseni  | Açıklama     |
+| Düzeni  | Açıklama     |
 | -------- |-------------|
 | ,      | metinle eşleşen "" |
 | (EIR)?   | 0 veya 1 "EIR" oluşumunu eşleşmesi |
@@ -58,7 +58,7 @@ Arama metin arama deseni açıklar. Aşağıdaki tabloda, her öğe için arama 
 
 Aşağıdaki kod, bir dizideki her bir dizenin biçimi doğrulamak için normal ifadeler kullanır. Doğrulama, her bir dizenin üç rakamlar grupları çizgilerle ayrılmış bir telefon numarası biçiminin olmasını gerektirir, ilk iki grupları üç basamak içeren ve üçüncü Grup dört basamak içerir. Arama deseni normal ifadeyi kullanan `^\\d{3}-\\d{3}-\\d{4}$`. Daha fazla bilgi için [normal ifade dili - hızlı başvuru](../../standard/base-types/regular-expression-language-quick-reference.md).
 
-| deseni  | Açıklama                             |
+| Düzeni  | Açıklama                             |
 | -------- |-------------------------------------|
 | ^        | dizenin başlangıcıyla eşleşir |
 | \d{3}    | tam olarak 3 basamak karakter ile eşleşir  |

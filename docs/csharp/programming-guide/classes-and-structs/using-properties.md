@@ -8,11 +8,11 @@ helpviewer_keywords:
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
 ms.openlocfilehash: f10f9aa17adf9a03b9b8905245983bdd9d865e39
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703081"
 ---
 # <a name="using-properties-c-programming-guide"></a>Özellikleri Kullanma (C# Programlama Kılavuzu)
 Özellikler, alanlar ve yöntemler hem yönlerini birleştirin. Bir alan için bir özelliği bir nesnenin kullanıcıya görünen özelliğine erişmek, aynı sözdizimini gerektirir. Temsil eden bir veya iki kod blokları için uygulayan bir sınıfın özelliğidir bir [alma](../../../csharp/language-reference/keywords/get.md) erişimci veya [ayarlamak](../../../csharp/language-reference/keywords/set.md) erişimcisi. Kod bloğu için `get` erişimci özelliği okunduğunda yürütülür; kod engellemek için `set` erişimci özelliği yeni bir değer atandığında yürütülür. Bir özellik olmadan bir `set` erişimci salt okunur kabul edilir. Bir özellik olmadan bir `get` salt yazılır erişimci kabul edilir. Her iki erişimcisi olan okuma-yazma özelliğidir.  
@@ -85,11 +85,11 @@ ms.locfileid: "57200396"
   
  Önceki örnekte önemli noktalar şunlardır:  
   
--   Özellik `Name` türetilen sınıfta özelliğini gizler `Name` temel sınıf. Böyle bir durumda `new` değiştiricisi, türetilmiş sınıf içinde özellik bildirimi kullanılır:  
+- Özellik `Name` türetilen sınıfta özelliğini gizler `Name` temel sınıf. Böyle bir durumda `new` değiştiricisi, türetilmiş sınıf içinde özellik bildirimi kullanılır:  
   
      [!code-csharp[csProgGuideProperties#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#4)]  
   
--   Cast `(Employee)` temel sınıfta gizli özelliğine erişmek için kullanılır:  
+- Cast `(Employee)` temel sınıfta gizli özelliğine erişmek için kullanılır:  
   
      [!code-csharp[csProgGuideProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#5)]  
   

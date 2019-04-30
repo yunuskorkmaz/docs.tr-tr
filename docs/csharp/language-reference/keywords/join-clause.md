@@ -10,11 +10,11 @@ helpviewer_keywords:
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
 ms.openlocfilehash: c9052b4b0f1feac5aa56a7fe6745745f1afb5740
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61661324"
 ---
 # <a name="join-clause-c-reference"></a>join tümcesi (C# Başvurusu)
 
@@ -92,7 +92,7 @@ A `join` tarafından izlenmiyor yan tümcesi `into` erişimcisine bir <xref:Syst
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sorgu anahtar sözcükleri (LINQ)](query-keywords.md)
+- [Query Keywords (LINQ)](query-keywords.md)
 - [Dil ile Tümleşik Sorgu (LINQ)](../../linq/index.md)
 - [Birleştirme İşlemleri](../../programming-guide/concepts/linq/join-operations.md)
 - [group yan tümcesi](group-clause.md)

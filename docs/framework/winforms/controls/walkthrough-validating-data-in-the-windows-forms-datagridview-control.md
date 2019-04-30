@@ -13,11 +13,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
 ms.openlocfilehash: a4bf0850b28b7101ba76f1c1fedc6633eccb81a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759862"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>İzlenecek yol: Windows Forms DataGridView Denetimindeki Verileri Doğrulama
 Kullanıcılara veri girişi işlevi görüntülediğinizde, sık formunuza girilen verileri doğrulamak gerekir. <xref:System.Windows.Forms.DataGridView> Sınıfı veri deposuna veri gerçekleştirilmeden önce doğrulamayı gerçekleştirmek için kolay bir yol sağlar. Verileri işleyerek doğrulayabilirsiniz <xref:System.Windows.Forms.DataGridView.CellValidating> tarafından oluşan olayı <xref:System.Windows.Forms.DataGridView> geçerli hücreyi değiştiğinde.  
@@ -29,7 +29,7 @@ Kullanıcılara veri girişi işlevi görüntülediğinizde, sık formunuza giri
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yolu tamamlamak için şunlar gerekir:  
   
--   SQL Server Northwind örnek veritabanını bir sunucu erişim.  
+- SQL Server Northwind örnek veritabanını bir sunucu erişim.  
   
 ## <a name="creating-the-form"></a>Form Oluşturma  
   
@@ -71,22 +71,22 @@ Kullanıcılara veri girişi işlevi görüntülediğinizde, sık formunuza giri
   
 #### <a name="to-test-the-form"></a>Formu sınamak için  
   
--   Derleme ve uygulamayı çalıştırın.  
+- Derleme ve uygulamayı çalıştırın.  
   
      Göreceğiniz bir <xref:System.Windows.Forms.DataGridView> verilerle doldurulmuş `Customers` tablo. Bir hücreye çift tıkladığınızda `CompanyName` sütun değeri düzenleyebilirsiniz. Tüm karakterleri silme ve hücre çıkmak için SEKME tuşuna basın, <xref:System.Windows.Forms.DataGridView> çıkmasını engeller. Boş olmayan bir dize hücreye yazarken <xref:System.Windows.Forms.DataGridView> hücre çıkış denetimi sağlar.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Bu uygulamayı size temel bir anlayış <xref:System.Windows.Forms.DataGridView> denetimin özellikleri. Görünümünü ve davranışını özelleştirebilirsiniz <xref:System.Windows.Forms.DataGridView> çeşitli şekillerde denetimi:  
   
--   Kenarlık ve üstbilgi stilleri değiştirin. Daha fazla bilgi için [nasıl yapılır: Değiştirme kenarlık ve kılavuz çizgi stillerini Windows Forms DataGridView denetiminde](change-the-border-and-gridline-styles-in-the-datagrid.md).  
+- Kenarlık ve üstbilgi stilleri değiştirin. Daha fazla bilgi için [nasıl yapılır: Değiştirme kenarlık ve kılavuz çizgi stillerini Windows Forms DataGridView denetiminde](change-the-border-and-gridline-styles-in-the-datagrid.md).  
   
--   Etkinleştirmek veya kısıtlamak için kullanıcı girişi <xref:System.Windows.Forms.DataGridView> denetimi. Daha fazla bilgi için [nasıl yapılır: Önlemek satır eklemeyi ve silmeyi Windows Forms DataGridView denetiminde](prevent-row-addition-and-deletion-datagridview.md), ve [nasıl yapılır: Sütunları yapma salt okunur Windows Forms DataGridView denetiminde](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
+- Etkinleştirmek veya kısıtlamak için kullanıcı girişi <xref:System.Windows.Forms.DataGridView> denetimi. Daha fazla bilgi için [nasıl yapılır: Önlemek satır eklemeyi ve silmeyi Windows Forms DataGridView denetiminde](prevent-row-addition-and-deletion-datagridview.md), ve [nasıl yapılır: Sütunları yapma salt okunur Windows Forms DataGridView denetiminde](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
   
--   Kullanıcı girişi için veritabanı ile ilgili hataları kontrol edin. Daha fazla bilgi için [izlenecek yol: Windows veri girişi sırasında oluşan hataları ele alma Forms DataGridView denetiminde](handling-errors-that-occur-during-data-entry-in-the-datagrid.md).  
+- Kullanıcı girişi için veritabanı ile ilgili hataları kontrol edin. Daha fazla bilgi için [izlenecek yol: Windows veri girişi sırasında oluşan hataları ele alma Forms DataGridView denetiminde](handling-errors-that-occur-during-data-entry-in-the-datagrid.md).  
   
--   Çok büyük veri kümeleri ile sanal modu kullanarak işleyin. Daha fazla bilgi için [izlenecek yol: Sanal modu uygulama içinde Windows Forms DataGridView denetiminde](implementing-virtual-mode-wf-datagridview-control.md).  
+- Çok büyük veri kümeleri ile sanal modu kullanarak işleyin. Daha fazla bilgi için [izlenecek yol: Sanal modu uygulama içinde Windows Forms DataGridView denetiminde](implementing-virtual-mode-wf-datagridview-control.md).  
   
--   Hücrelerin görünüşünü özelleştirme. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGridView denetiminde hücrelerin görünüşünü özelleştirme](customize-the-appearance-of-cells-in-the-datagrid.md) ve [nasıl yapılır: Windows Forms DataGridView denetiminde yazı tipi ve renk stillerini ayarlama](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md).  
+- Hücrelerin görünüşünü özelleştirme. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGridView denetiminde hücrelerin görünüşünü özelleştirme](customize-the-appearance-of-cells-in-the-datagrid.md) ve [nasıl yapılır: Windows Forms DataGridView denetiminde yazı tipi ve renk stillerini ayarlama](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

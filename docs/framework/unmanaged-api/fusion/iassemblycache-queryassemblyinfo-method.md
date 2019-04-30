@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 81b647032b2e9474e3b4472552ed884cec92ffc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697530"
 ---
 # <a name="iassemblycachequeryassemblyinfo-method"></a>IAssemblyCache::QueryAssemblyInfo Yöntemi
 Belirtilen derleme hakkında istenen verileri alır.  
@@ -41,9 +41,9 @@ HRESULT QueryAssemblyInfo (
  `dwFlags`  
  [in] Fusion.idl içinde tanımlanan bayraklar. Aşağıdaki değerleri desteklenir:  
   
--   QUERYASMINFO_FLAG_VALIDATE (0X00000001)  
+- QUERYASMINFO_FLAG_VALIDATE (0X00000001)  
   
--   QUERYASMINFO_FLAG_GETSIZE (0X00000002)  
+- QUERYASMINFO_FLAG_GETSIZE (0X00000002)  
   
  `pszAssemblyName`  
  [in] Veriler alınır derlemenin adı.  

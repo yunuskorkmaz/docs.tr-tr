@@ -3,13 +3,13 @@ title: WordprocessingML belgesinin Styles3 ile
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
 ms.openlocfilehash: 1dc7f30bfdef66c31b5c262fd6d1a2c3f4365634
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61710920"
 ---
-# <a name="wordprocessingml-document-with-styles"></a>Stillerle WordprocessingML belgesi
+# <a name="wordprocessingml-document-with-styles"></a>Stillerle WordprocessingML Belgesi
 Daha karmaşık WordprocessingML belgelerinin stilleri ile biçimlendirilmiş paragrafları vardır.  
   
  WordprocessingML belgelerinin düzenini ilgili birkaç Not yararlı olur. WordprocessingML belgelerinin paketlerinde depolanır. Paketleriniz varsa birden fazla bölümü (bölümden paketleri bağlamında kullanıldığında açık bir anlamı; bir paket oluşturmak üzere birlikte sıkıştırılmış dosyalar esas olarak, bazı bölümleri). Bir belge stilleri ile biçimlendirilmiş paragrafları içeriyorsa, stil uygulanmış olan paragraf içeren bir belge bölümü olacaktır. Belgeye göre adlandırılır stilleri içeren bir stil bölümü olacaktır.  

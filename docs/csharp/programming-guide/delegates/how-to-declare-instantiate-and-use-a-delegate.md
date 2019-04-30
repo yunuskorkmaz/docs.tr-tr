@@ -6,11 +6,11 @@ helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
 ms.openlocfilehash: 7166c27a946fb76c9351647ac6465c151866a2ad
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61681214"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Nasıl yapılır: Bildirme, oluşturma ve bir temsilci kullanın (C# Programlama Kılavuzu)
 C# 1.0 ve daha sonra aşağıdaki örnekte gösterildiği gibi temsilciler bildirilebilir.  
@@ -42,7 +42,7 @@ C# 1.0 ve daha sonra aşağıdaki örnekte gösterildiği gibi temsilciler bildi
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
   
--   Bir temsilci bildirme.  
+- Bir temsilci bildirme.  
   
      Aşağıdaki deyim, yeni bir temsilci türü bildirir.  
   
@@ -50,7 +50,7 @@ C# 1.0 ve daha sonra aşağıdaki örnekte gösterildiği gibi temsilciler bildi
   
      Her bir temsilci türü sayısı ve bağımsız değişken türlerinin ve onu kapsülleyen yöntemleri dönüş değerinin türünü açıklar. Bağımsız değişken türleri ya da dönüş değeri yeni bir dizi gerektiğinde yeni bir temsilci türünün bildirilmesi gerekir.  
   
--   Bir temsilci örneği.  
+- Bir temsilci örneği.  
   
      Bir temsilci türü bildirildikten sonra bir temsilci nesnesinin oluşturulabilir ve belirli bir yöntem ile ilişkili. Önceki örnekte geçirerek bunu `PrintTitle` yönteme `ProcessPaperbackBooks` yöntem aşağıdaki örnekteki gibi:  
   
@@ -64,7 +64,7 @@ C# 1.0 ve daha sonra aşağıdaki örnekte gösterildiği gibi temsilciler bildi
   
      Yöntemi daha temsilci oluşturduktan sonra bile asla değişikliklerle ilişkili; temsilci nesneleri sabittir.  
   
--   Bir temsilci çağırma.  
+- Bir temsilci çağırma.  
   
      Bir temsilci nesne oluşturulduktan sonra temsilci nesne temsilci çağıran başka bir kod için genellikle geçirilir. Bir temsilci nesnesinin temsilciye geçirilecek parantez içine alınmış bağımsız değişkenleri ardından temsilci nesnesinin adı kullanılarak çağrılır. Bir temsilci çağrısının bir örneği verilmiştir:  
   

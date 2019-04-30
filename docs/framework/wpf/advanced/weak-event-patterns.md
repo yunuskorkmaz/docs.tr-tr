@@ -7,11 +7,11 @@ helpviewer_keywords:
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
 ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669371"
 ---
 # <a name="weak-event-patterns"></a>Zayıf Olay Desenleri
 Uygulamalar, olay kaynaklarına bağlı işleyicileri işleyicinin kaynağına bağlı dinleyici nesne ile koordinasyon halinde edilmeyeceği olduğunu mümkündür. Bu durum, bellek sızıntılarının neden olabilir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] belirli olaylar için adanmış yönetici sınıfı sağlayarak ve bu olayın dinleyicileri üzerinde arabirimi uygulama bu sorunu gidermek için kullanılabilecek bir tasarım desenini tanıtır. Bu tasarım deseni olarak bilinen *zayıf olay deseni*.  
@@ -40,13 +40,13 @@ Uygulamalar, olay kaynaklarına bağlı işleyicileri işleyicinin kaynağına b
 
  Zayıf olay deseni uygulamak nasıl aşağıdaki bölümlerde açıklanmaktadır.  Bu tartışma amacı doğrultusunda, olay abone olmak için aşağıdaki özelliklere sahiptir.  
   
--   Olay adı `SomeEvent`.  
+- Olay adı `SomeEvent`.  
   
--   Olay tarafından gerçekleştirilen `EventSource` sınıfı.  
+- Olay tarafından gerçekleştirilen `EventSource` sınıfı.  
   
--   Olay işleyicisinin türü vardır: `SomeEventEventHandler` (veya `EventHandler<SomeEventEventArgs>`).  
+- Olay işleyicisinin türü vardır: `SomeEventEventHandler` (veya `EventHandler<SomeEventEventArgs>`).  
   
--   Olay türünde bir parametre geçirir `SomeEventEventArgs` olay işleyicilerine.  
+- Olay türünde bir parametre geçirir `SomeEventEventArgs` olay işleyicilerine.  
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>Mevcut bir zayıf olay Manager sınıfını kullanma  
   

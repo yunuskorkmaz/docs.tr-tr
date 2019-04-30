@@ -13,11 +13,11 @@ ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 80c9fe6de0fca86497ffe84cd8dadf0eb8cef6c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705577"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>Bir Uygulama Etki Alanından Kurulum Bilgilerini Alma
 Her örnek bir uygulama etki alanının her iki özellikten oluşur ve <xref:System.AppDomainSetup> bilgileri. Kullanarak bir uygulama etki alanı kurulum bilgilerini alabilir <xref:System.AppDomain?displayProperty=nameWithType> sınıfı. Bu sınıf, bir uygulama etki alanı yapılandırma bilgilerini almak birkaç üyeleri sağlar.  

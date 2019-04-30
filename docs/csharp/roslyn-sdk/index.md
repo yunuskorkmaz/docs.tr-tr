@@ -1,14 +1,14 @@
 ---
-title: .NET derleyici Platformu SDK'sı (Roslyn API'leri)
+title: .NET Compiler Platform SDK’sı (Roslyn API’leri)
 description: .NET derleyici Platformu (Roslyn API'leri olarak da bilinir) SDK .NET kod, hataların, anlamak ve bu hataları düzeltmek için kullanmayı öğrenin.
 ms.date: 10/10/2017
 ms.custom: mvc
 ms.openlocfilehash: ea733d4c5c54c18e510a028f3a724f89490db9dd
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706552"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET derleyici Platformu SDK'sı
 

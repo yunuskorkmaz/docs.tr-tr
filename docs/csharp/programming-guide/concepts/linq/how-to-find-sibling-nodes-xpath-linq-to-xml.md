@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: (XPath-LINQ to XML) eşdüzey düğümleri bulma (C#)'
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
 ms.openlocfilehash: b71bf1123461e4b0c0db5024eac3330bcf666ecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668009"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Nasıl yapılır: (XPath-LINQ to XML) eşdüzey düğümleri bulma (C#)
 Belirli bir ada sahip tüm bir düğümün eşdüzey bulmak isteyebilirsiniz. Bağlam düğümünün belirli bir ada sahipse, sonuçta elde edilen koleksiyon bağlam düğümünün içerebilir.  

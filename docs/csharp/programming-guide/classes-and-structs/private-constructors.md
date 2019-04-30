@@ -8,10 +8,10 @@ helpviewer_keywords:
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
 ms.openlocfilehash: 0bd15b29f5e86b802eb48d96fde5be4b387261eb
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703354"
 ---
 # <a name="private-constructors-c-programming-guide"></a>Özel Oluşturucular (C# Programlama Kılavuzu)
 Bir özel örnek oluşturucusu bir özel oluşturucudur. Ayrıca, yalnızca statik üyeleri içeren sınıflar genel olarak kullanılır. Bir sınıf, bir veya daha fazla özel oluşturucular ve genel Oluşturucusu varsa, diğer sınıflar (iç içe geçmiş sınıflar dışında) bu sınıfın örnekleri oluşturulamaz. Örneğin:  

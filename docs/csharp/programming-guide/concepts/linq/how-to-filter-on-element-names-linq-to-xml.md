@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: (LINQ to XML) öğe adlarını filtreleme (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
 ms.openlocfilehash: 586c371fdd014eee6eb21563214d9e26a0e264fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668126"
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>Nasıl yapılır: (LINQ to XML) öğe adlarını filtreleme (C#)
 Çağırdığınızda döndüren yöntemler birini <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XElement>, öğeyi adına göre filtre uygulayabilirsiniz.  
@@ -35,19 +35,19 @@ ProductName:Baby Monitor
   
  Döndüren yöntemler <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XElement> koleksiyonları aynı deseni takip edin. Bunların imzalarını benzer <xref:System.Xml.Linq.XContainer.Elements%2A> ve <xref:System.Xml.Linq.XContainer.Descendants%2A>. Benzer yöntem imzaları olan yöntemlerinin tam listesi verilmiştir:  
   
--   <xref:System.Xml.Linq.XNode.Ancestors%2A>  
+- <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
--   <xref:System.Xml.Linq.XContainer.Descendants%2A>  
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
   
--   <xref:System.Xml.Linq.XContainer.Elements%2A>  
+- <xref:System.Xml.Linq.XContainer.Elements%2A>  
   
--   <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
+- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
   
--   <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>  
+- <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>  
   
--   <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>  
+- <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>  
   
--   <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
+- <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir. Daha fazla bilgi için [(C#) XML ad alanları ile çalışma](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  

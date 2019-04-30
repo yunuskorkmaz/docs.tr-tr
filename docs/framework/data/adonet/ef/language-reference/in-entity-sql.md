@@ -3,11 +3,11 @@ title: VARLIKTAKİ (SQL)
 ms.date: 03/30/2017
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
 ms.openlocfilehash: d88f79dbfcd27f0ca0d1e26815d7d2bbee731bcf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59331279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750702"
 ---
 # <a name="in-entity-sql"></a>VARLIKTAKİ (SQL)
 Değer bir koleksiyondaki herhangi bir değer ile eşleşip eşleşmediğini belirler.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - image decoders [Windows Forms], listing
 ms.assetid: 11417191-8c95-40ca-8024-779e61706fb6
 ms.openlocfilehash: c92b8010def2f77f859ee0bd9cdb1ed51dd15f27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723049"
 ---
 # <a name="how-to-list-installed-decoders"></a>Nasıl yapılır: Yüklenen Kod Çözücüleri Listeleme
 Uygulamanızın belirli resim dosyası biçimi erişip erişemeyeceğini belirlemek için görüntü kod çözücüleri bir bilgisayarda kullanılabilir listesinde isteyebilirsiniz. <xref:System.Drawing.Imaging.ImageCodecInfo> Sağlar sınıfını <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> statik yöntemler hangi görüntü kod çözücüleri kullanılabilir belirleyebilirsiniz. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> bir dizi döndürür <xref:System.Drawing.Imaging.ImageCodecInfo> nesneleri.  
@@ -27,9 +27,9 @@ Uygulamanızın belirli resim dosyası biçimi erişip erişemeyeceğini belirle
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Bir Windows Forms uygulaması.  
+- Bir Windows Forms uygulaması.  
   
--   A <xref:System.Windows.Forms.PaintEventArgs>, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
+- A <xref:System.Windows.Forms.PaintEventArgs>, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

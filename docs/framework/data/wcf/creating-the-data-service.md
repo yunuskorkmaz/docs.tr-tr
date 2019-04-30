@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
 ms.openlocfilehash: e8d82ff8958af12842366911b6633ea6b2e0efbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765875"
 ---
 # <a name="create-the-data-service"></a>Veri hizmetini oluşturma
 
@@ -52,11 +52,11 @@ Bu konu başlığında, WCF Veri Hizmetleri kullanıma sunmak için kullandığ�
 
 5. Aşağıdakilerden birini yaparak veri modeli veritabanına bağlanmak ve ardından **sonraki**:
 
-    -   Önceden yapılandırılmış bir veritabanı bağlantısı yoksa, tıklayın **yeni bağlantı** ve yeni bir bağlantı oluşturun. Daha fazla bilgi için [nasıl yapılır: SQL Server veritabanlarına bağlantı oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). Bu SQL Server örneği, Northwind örnek veritabanına ekli olması gerekir.
+    - Önceden yapılandırılmış bir veritabanı bağlantısı yoksa, tıklayın **yeni bağlantı** ve yeni bir bağlantı oluşturun. Daha fazla bilgi için [nasıl yapılır: SQL Server veritabanlarına bağlantı oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). Bu SQL Server örneği, Northwind örnek veritabanına ekli olması gerekir.
 
          \- veya -
 
-    -   Northwind veritabanına bağlanmak için zaten yapılandırılmış bir veritabanı bağlantısı varsa, bu bağlantı bağlantılar listesinden seçin.
+    - Northwind veritabanına bağlanmak için zaten yapılandırılmış bir veritabanı bağlantısı varsa, bu bağlantı bağlantılar listesinden seçin.
 
 6. Sihirbazın son sayfasında, veritabanında tüm tabloların onay kutularını işaretleyin ve görünümler ve saklı yordamlar için onay kutularını temizleyin.
 

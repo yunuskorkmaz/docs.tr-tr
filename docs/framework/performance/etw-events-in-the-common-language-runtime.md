@@ -9,11 +9,11 @@ ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1d059a5d4df402b309f628bf3e9393114c4cdeec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723205"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Ortak Dil Çalışma Zamanında ETW Olayları
 Ortak dil çalışma zamanı (CLR) yararlı olay izleme ile hata ayıklama ve profil oluşturma olayları, çok çeşitli Windows (ETW) tanılama bilgileri sağlar. CLR ETW olaylarını mevcut profil oluşturma ve hata ayıklama desteği ortak dil çalışma zamanı tarafından sağlanan genişletmek için Windows ETW izleme sistemi yararlanın.  

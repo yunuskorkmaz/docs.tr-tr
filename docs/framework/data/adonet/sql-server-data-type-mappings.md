@@ -3,11 +3,11 @@ title: SQL Server Veri Türü Eşlemeleri
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
 ms.openlocfilehash: f90f44666fa5843ccf9bd1cd9ccb5c20b812f494
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664096"
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server Veri Türü Eşlemeleri
 Farklı tür sistemlerde, SQL Server ve .NET Framework'ü temel alır. Örneğin, .NET Framework <xref:System.Decimal> yapıya sahip 28, en fazla ölçeğini ise SQL Server ondalık ve sayısal veri türleri 38, en fazla bir ölçeğe sahip. Verileri okurken ve yazarken, veri bütünlüğünün sürdürülmesi <xref:System.Data.SqlClient.SqlDataReader> kullanıma sunan SQL Server'a özel yazılan nesnelerin döndüren erişimci metotlarını <xref:System.Data.SqlTypes> .NET Framework döndüren erişimci metotlarını yanı sıra türleri. SQL Server türleri hem .NET Framework türleri de temsil edilir numaralandırmalardan <xref:System.Data.DbType> ve <xref:System.Data.SqlDbType> belirtirken kullanabileceğiniz sınıflarını <xref:System.Data.SqlClient.SqlParameter> veri türleri.  
@@ -45,7 +45,7 @@ Farklı tür sistemlerde, SQL Server ve .NET Framework'ü temel alır. Örneğin
 |zaman damgası|Byte[]|<xref:System.Data.SqlDbType.Timestamp>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlBinary%2A>|<xref:System.Data.DbType.Binary>|<xref:System.Data.SqlClient.SqlDataReader.GetBytes%2A>|  
 |tinyint|Byte|<xref:System.Data.SqlDbType.TinyInt>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlByte%2A>|<xref:System.Data.DbType.Byte>|<xref:System.Data.SqlClient.SqlDataReader.GetByte%2A>|  
 |uniqueidentifier|Guid|<xref:System.Data.SqlDbType.UniqueIdentifier>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlGuid%2A>|<xref:System.Data.DbType.Guid>|<xref:System.Data.SqlClient.SqlDataReader.GetGuid%2A>|  
-|varbinary|Byte[]|<xref:System.Data.SqlDbType.VarBinary>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlBinary%2A>|<xref:System.Data.DbType.Binary>|<xref:System.Data.SqlClient.SqlDataReader.GetBytes%2A>|  
+|Varbinary|Byte[]|<xref:System.Data.SqlDbType.VarBinary>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlBinary%2A>|<xref:System.Data.DbType.Binary>|<xref:System.Data.SqlClient.SqlDataReader.GetBytes%2A>|  
 |varchar|Dize<br /><br /> Char]|<xref:System.Data.SqlDbType.VarChar>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.AnsiString>, <xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
 |xml|Xml|<xref:System.Data.SqlDbType.Xml>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlXml%2A>|<xref:System.Data.DbType.Xml>|yok|  
   

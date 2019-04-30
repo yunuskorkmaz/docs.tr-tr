@@ -12,8 +12,8 @@ ms.openlocfilehash: 260c9e362281ba7996dc834ab47d7beb2755b636
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703497"
 ---
 # <a name="properties-c-programming-guide"></a>Özellikler (C# Programlama Kılavuzu)
 
@@ -60,15 +60,15 @@ Bir özellik hem de varsa bir `get` ve `set` erişimci gerekir hem de otomatik o
 
 ## <a name="related-sections"></a>İlgili bölümler  
   
--   [Özellikleri Kullanma](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Özellikleri Kullanma](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
   
--   [Arabirim Özellikleri](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [Arabirim Özellikleri](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   
--   [Özellikler ve Dizin Oluşturucular Arasında Karşılaştırma](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Özellikler ve Dizin Oluşturucular Arasında Karşılaştırma](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [Erişimci Erişilebilirliğini Kısıtlama](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Erişimci Erişilebilirliğini Kısıtlama](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
--   [Otomatik Uygulanan Özellikler](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [Otomatik Uygulanan Özellikler](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 

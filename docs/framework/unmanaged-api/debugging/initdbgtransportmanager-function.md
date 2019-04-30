@@ -19,14 +19,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 74cb2c7d1f79d23e1331cc7192ba2d6acfd9835c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761656"
 ---
 # <a name="initdbgtransportmanager-function"></a>InitDbgTransportManager İşlevi
-İşlem ve çalışma zamanı numaralandırması için uzaktan bir hedef bağlanmak için Aktarım Yöneticisi'ni başlatır.  
+İşlem ve çalışma zamanı numaralandırması için bir uzak hedef bağlanmak için Aktarım Yöneticisi'ni başlatır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,16 +39,16 @@ HRESULT InitDbgTransportManager ();
  Başarılı.  
   
  E_OUTOFMEMORY  
- İşlevi için bir aktarım Yöneticisi bellek ayıramadı.  
+ İşlev için bir aktarım Yöneticisi bellek ayıramadı.  
   
  E_FAIL (veya diğer E_ dönüş kodları)  
- Diğer hataları.  
+ Diğer hatalar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CoreClrRemoteDebuggingInterfaces.h  
+ **Üst bilgi:** CoreClrRemoteDebuggingInterfaces.h  
   
- **Kitaplığı:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86.dll  
   
  **.NET framework sürümleri:** 3.5 SP1

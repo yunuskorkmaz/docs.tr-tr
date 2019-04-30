@@ -9,11 +9,11 @@ helpviewer_keywords:
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
 ms.openlocfilehash: 510a8dd2721e9c709444c065a8df25b0e5526c08
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61678406"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Ad Alanlarını Kullanma (C# Programlama Kılavuzu)
 Ad alanlarında, C# programları iki yolla içinde yoğun olarak kullanılır. İlk olarak, .NET Framework sınıfları ad alanları, çok sayıda sınıfa düzenlemek için kullanın. İkincisi, kendi ad alanlarını bildirme denetimi sınıf ve metod kapsamını daha büyük programlama projelerinde adları yardımcı olabilir.  
@@ -52,13 +52,13 @@ Ad alanlarında, C# programları iki yolla içinde yoğun olarak kullanılır. �
   
  Önceki kod kesimi içinde:  
   
--   Ad alanı `N1` genel ad alanının bir üyesidir. Tam olarak nitelenmiş adını `N1`.  
+- Ad alanı `N1` genel ad alanının bir üyesidir. Tam olarak nitelenmiş adını `N1`.  
   
--   Ad alanı `N2` üyesi `N1`. Tam olarak nitelenmiş adını `N1.N2`.  
+- Ad alanı `N2` üyesi `N1`. Tam olarak nitelenmiş adını `N1.N2`.  
   
--   Sınıf `C1` üyesi `N1`. Tam olarak nitelenmiş adını `N1.C1`.  
+- Sınıf `C1` üyesi `N1`. Tam olarak nitelenmiş adını `N1.C1`.  
   
--   Sınıf adı `C2` iki kez bu kodda kullanılır. Ancak, tam nitelikli adları benzersizdir. İlk örneğinin `C2` içinde bildirilen `C1`; bu nedenle, tam ad: `N1.C1.C2`. İkinci bir örneğini `C2` bir ad alanı içinde bildirilen `N2`; bu nedenle, tam olarak nitelenmiş adını `N1.N2.C2`.  
+- Sınıf adı `C2` iki kez bu kodda kullanılır. Ancak, tam nitelikli adları benzersizdir. İlk örneğinin `C2` içinde bildirilen `C1`; bu nedenle, tam ad: `N1.C1.C2`. İkinci bir örneğini `C2` bir ad alanı içinde bildirilen `N2`; bu nedenle, tam olarak nitelenmiş adını `N1.N2.C2`.  
   
  Önceki kod kesimi kullanarak yeni bir sınıf üyesi ekleyebilirsiniz `C3`, ad alanına `N1.N2` gibi:  
   

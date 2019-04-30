@@ -6,18 +6,18 @@ helpviewer_keywords:
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
 ms.openlocfilehash: b86797018e1471590fd4c89848921e696afbc819
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672438"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te dosyayı yeniden adlandırma
 Kullanım `RenameFile` yöntemi `My.Computer.FileSystem` geçerli konumu, dosya adı ve yeni dosya adı sağlayarak bir dosyayı yeniden adlandırmak için nesne. Bu yöntem, bir dosyayı taşımak için kullanılamaz; kullanma `MoveFile` yöntemi taşımak ve dosyayı yeniden adlandırın.  
   
 ### <a name="to-rename-a-file"></a>Bir dosyayı yeniden adlandırmak için  
   
--   Kullanım `My.Computer.FileSystem.RenameFile` bir dosyayı yeniden adlandırmak için yöntemi. Bu örnek adlı dosyayı yeniden adlandırır `Test.txt` için `SecondTest.txt`.  
+- Kullanım `My.Computer.FileSystem.RenameFile` bir dosyayı yeniden adlandırmak için yöntemi. Bu örnek adlı dosyayı yeniden adlandırır `Test.txt` için `SecondTest.txt`.  
   
      [!code-vb[VbVbcnMyFileSystem#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#9)]  
   
@@ -26,25 +26,25 @@ Kullanım `RenameFile` yöntemi `My.Computer.FileSystem` geçerli konumu, dosya 
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
--   Yol aşağıdaki nedenlerden biri için geçerli değildir: sıfır uzunluklu bir dize olan, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya cihaz yoludur (ile başlayan \\ \\.\\) (<xref:System.ArgumentException>).  
+- Yol aşağıdaki nedenlerden biri için geçerli değildir: sıfır uzunluklu bir dize olan, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya cihaz yoludur (ile başlayan \\ \\.\\) (<xref:System.ArgumentException>).  
   
--   `newName` yol bilgisi içerir (<xref:System.ArgumentException>).  
+- `newName` yol bilgisi içerir (<xref:System.ArgumentException>).  
   
--   Çünkü bu yolu geçerli değil `Nothing` (<xref:System.ArgumentNullException>).  
+- Çünkü bu yolu geçerli değil `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `newName` olan `Nothing` ya da boş bir dize (<xref:System.ArgumentNullException>).  
+- `newName` olan `Nothing` ya da boş bir dize (<xref:System.ArgumentNullException>).  
   
--   Kaynak dosyası geçerli değil veya yok (<xref:System.IO.FileNotFoundException>).  
+- Kaynak dosyası geçerli değil veya yok (<xref:System.IO.FileNotFoundException>).  
   
--   Varolan bir dosya veya dizin belirtilen ada sahip olduğundan `newName` (<xref:System.IO.IOException>).  
+- Varolan bir dosya veya dizin belirtilen ada sahip olduğundan `newName` (<xref:System.IO.IOException>).  
   
--   Yolun sistem tarafından tanımlanan uzunluk üst sınırını aşıyor (<xref:System.IO.PathTooLongException>).  
+- Yolun sistem tarafından tanımlanan uzunluk üst sınırını aşıyor (<xref:System.IO.PathTooLongException>).  
   
--   Yolda bir dosya veya dizin adı iki nokta üst üste (:) içeriyor veya biçimi geçersiz (<xref:System.NotSupportedException>).  
+- Yolda bir dosya veya dizin adı iki nokta üst üste (:) içeriyor veya biçimi geçersiz (<xref:System.NotSupportedException>).  
   
--   Kullanıcı yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
+- Kullanıcı yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
   
--   Kullanıcı gerekli izne sahip değil (<xref:System.UnauthorizedAccessException>).  
+- Kullanıcı gerekli izne sahip değil (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

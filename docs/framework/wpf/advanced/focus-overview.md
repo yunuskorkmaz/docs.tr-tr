@@ -9,11 +9,11 @@ helpviewer_keywords:
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
 ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703432"
 ---
 # <a name="focus-overview"></a>Odağa Genel Bakış
 İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] odakla ilgili iki ana kavram vardır: klavye odağı ve mantıksal odak.  Klavye odağı klavye girişini alır öğeye başvuruyor ve odaklı bir odak kapsam içindeki öğeye mantıksal Odaklanıldığında başvurur.  Bu kavramlar, bu genel bakışta ayrıntılı ele alınmıştır.  Bu kavramlar farkını anlama, birden çok bölgede odak burada elde edilebilir sahip karmaşık uygulamalar oluşturmak için önemlidir.  

@@ -4,11 +4,11 @@ description: İlk C# programınızı oluşturma ve nesne yönelimli kavramları 
 ms.date: 10/11/2017
 ms.custom: mvc
 ms.openlocfilehash: 6b4c135b7adf96de3a234cde02485a1e84fc9fd3
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706383"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Nesne yönelimli programlama ile ilgili sınıfları ve nesneleri keşfedin
 

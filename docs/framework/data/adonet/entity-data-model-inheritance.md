@@ -3,11 +3,11 @@ title: 'Varlık Veri Modeli: Devralma'
 ms.date: 03/30/2017
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
 ms.openlocfilehash: 9f77f2ebb86ea050c124fbd1c6f2b30ed9e75a1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667213"
 ---
 # <a name="entity-data-model-inheritance"></a>Varlık Veri Modeli: Devralma
 Varlık veri modeli (EDM) için devralmayı destekler [varlık türleri](../../../../docs/framework/data/adonet/entity-type.md). EDM Devralmada nesne yönelimli programlama dillerinin sınıfların devralma benzer. Gibi dillerde nesne yönelimli sınıflarıyla kavramsal modelde bir varlık türü tanımlayabilirsiniz (bir *türetilmiş tür*) başka bir varlık türünden devralan ( *temel türü*). Ancak, nesne yönelimli programlama sınıflardan farklı olarak, kavramsal modelde türetilmiş tür her zaman tüm devralır [özellikleri](../../../../docs/framework/data/adonet/property.md) ve [Gezinti özellikleri](../../../../docs/framework/data/adonet/navigation-property.md) temel türü. Türetilmiş bir tür devralınan özellikler geçersiz kılınamaz.  

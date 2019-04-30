@@ -1,15 +1,15 @@
 ---
-title: 'Örnek XML dosyası: Test yapılandırması (LINQ to XML)'
+title: 'Örnek XML Dosyası: Test Yapılandırması (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 45bfb509-c1d4-4b4f-9690-1cb0c9816516
 ms.openlocfilehash: a001d7433bcf19e5bcecf7ba49cb233559906d87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61711765"
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a>Örnek XML dosyası: Test yapılandırması (LINQ to XML)
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a>Örnek XML Dosyası: Test Yapılandırması (LINQ to XML)
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Bu bir test yapılandırma dosyasıdır.  
   
 ## <a name="testconfigxml"></a>TestConfig.xml  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
 ms.openlocfilehash: 12fe89e3aa63e9d3d8c3f102fe5a01a5f2225375
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61661561"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Biçimlendirme sayısal sonuçlar tablosunu (C# Başvurusu)
 
@@ -26,8 +26,8 @@ Aşağıdaki tablo, sayısal sonuçlarını biçimlendirme için desteklenen bi�
 |E veya e|Üstel|`string s = $"{250000:E2}";`|2.50E + 005|  
 |F veya f|Sabit nokta|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3|  
 |G veya g|Genel|`string s = $"{2.5:G}";`|2,5|  
-|N veya n|Sayısal|`string s = $"{2500000:N}";`|2,500,000.00|  
-|P ya da p|Yüzde|`string s = $"{0.25:P}";`|%25.00|  
+|N veya n|Numeric|`string s = $"{2500000:N}";`|2,500,000.00|  
+|P ya da p|Yüzde|`string s = $"{0.25:P}";`|25.00%|  
 |R veya r|Gidiş|`string s = $"{2.5:R}";`|2,5|  
 |X ya da x|Onaltılık|`string s = $"{250:X}";`<br /><br /> `string s = $"{0xffff:X}";`|FA<br /><br /> FFFF|  
 

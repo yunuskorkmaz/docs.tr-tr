@@ -7,24 +7,24 @@ helpviewer_keywords:
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
 ms.openlocfilehash: e36dfe1117cc724f5388e3486a81310f2326ab7e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61710140"
 ---
 # <a name="example-com-class-c-programming-guide"></a>Örnek COM Sınıfı (C# Programlama Kılavuzu)
 Bir sınıfın, bir COM nesnesi olarak kullanıma bir örnek verilmiştir. Bu kod bir .cs dosyasına yerleştirilir ve projenize eklenir sonra ayarlayın **kaydetme COM birlikte çalışması için** özelliğini **True**. Daha fazla bilgi için [nasıl yapılır: COM birlikte çalışması için bir bileşeni kayıt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100)).
   
  COM Visual C# nesnelerini gösterme, bir sınıf arabirimi, gerekirse olayları arabirim ve sınıf bildirme gerektirir. Sınıf üyeleri için COM görünür olmasını şu kurallara uymalıdır:  
   
--   Sınıfı, ortak olmalıdır.  
+- Sınıfı, ortak olmalıdır.  
   
--   Özellikleri, yöntemleri ve olayların ortak olması gerekir.  
+- Özellikleri, yöntemleri ve olayların ortak olması gerekir.  
   
--   Özellikler ve yöntemler sınıf arabirimi bildirilmelidir.  
+- Özellikler ve yöntemler sınıf arabirimi bildirilmelidir.  
   
--   Olayları olay arabirimi bildirilmesi gerekir.  
+- Olayları olay arabirimi bildirilmesi gerekir.  
   
  Bu arabirimleri bildirilmemiş olan diğer genel sınıf üyeleri için COM görünür durumda değildir, ancak diğer .NET Framework nesneleri için görünür olur.  
   

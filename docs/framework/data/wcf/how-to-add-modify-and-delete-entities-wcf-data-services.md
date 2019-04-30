@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: a00f8933-b232-4445-95ba-adc634f055d8
 ms.openlocfilehash: 66f115bf3bf51b4b5612240c4e34eaf9e08bec0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765563"
 ---
 # <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Nasıl yapılır: Ekleme, değiştirme ve (WCF Veri Hizmetleri) varlıklarını silme
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplıkları, oluşturabilir, güncelleştirme ve nesnelerde eşdeğer eylemleri gerçekleştirerek varlık verilerini bir veri hizmeti silme <xref:System.Data.Services.Client.DataServiceContext>. Daha fazla bilgi için [veri hizmetini güncelleştirme](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  

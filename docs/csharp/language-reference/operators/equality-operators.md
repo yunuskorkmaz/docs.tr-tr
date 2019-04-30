@@ -13,11 +13,11 @@ helpviewer_keywords:
 - not equals operator [C#]
 - '!= operator [C#]'
 ms.openlocfilehash: 297285ccb9aba7eae1d70a7d28a62241646a023c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689391"
 ---
 # <a name="equality-operators-c-reference"></a>Eşitlik işleçleri (C# Başvurusu)
 
@@ -76,7 +76,7 @@ Daha fazla bilgi için [ilişkisel ve tür testi işleçleri](~/_csharplang/spec
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Başvurusu](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# İşleçleri](index.md)
 - <xref:System.IEquatable%601?displayProperty=nameWithType>

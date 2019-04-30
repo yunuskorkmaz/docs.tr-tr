@@ -1,5 +1,5 @@
 ---
-title: Özel durumlar için tasarım yönergeleri
+title: Özel Durumlar için Tasarım Yönergeleri
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
 author: KrzysztofCwalina
 ms.openlocfilehash: 60c3d25138c224f5eabf44d06b6c9a8373eb5f96
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669062"
 ---
-# <a name="design-guidelines-for-exceptions"></a>Özel durumlar için tasarım yönergeleri
+# <a name="design-guidelines-for-exceptions"></a>Özel Durumlar için Tasarım Yönergeleri
 Özel durum işleme dönüş değerine göre hata bildirimi üzerinden birçok avantaj sunar. İyi çerçevesi tasarımı, uygulama geliştiricisinin özel durumları avantajlarını daha iyi anlamanıza yardımcı olur. Bu bölümde, özel durumların avantajlar açıklanır ve verimli bir şekilde kullanmak için yönergeler sunar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  

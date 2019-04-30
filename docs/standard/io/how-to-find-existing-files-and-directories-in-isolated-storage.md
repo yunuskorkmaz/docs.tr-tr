@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yalıtılmış depolamada mevcut dosya ve dizinleri bulma'
+title: 'Nasıl yapılır: Yalıtılmış Depolamada Mevcut Dosya ve Dizinleri Bulma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -20,13 +20,13 @@ ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 277f7d562d5e345556a9047f6e4bf2b60eaef462
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751743"
 ---
-# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış depolamada mevcut dosya ve dizinleri bulma
+# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolamada Mevcut Dosya ve Dizinleri Bulma
 
 Yalıtılmış Depolama bir dizinde aramak için kullanın <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> yöntemi. Bu yöntem bir arama deseni temsil eden bir dize alır. Hem tek karakterli (?) hem de birden çok karakter kullanabilirsiniz (\*) joker karakterleri arama deseninde, ancak joker karakterler adının son bölümünde yer almalıdır. Örneğin, `directory1/*ect*` bir geçerli bir arama dizesi ancak `*ect*/directory2` değil.  
   

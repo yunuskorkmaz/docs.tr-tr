@@ -3,11 +3,11 @@ title: Sorgular (LINQ to XML)'statik olarak derlenmiş (C#)
 ms.date: 07/20/2015
 ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
 ms.openlocfilehash: 842f8c1c2fa07e1658992e94e5163222f38f80ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61681084"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>Sorgular (LINQ to XML)'statik olarak derlenmiş (C#)
 En önemli performans birini avantajlar LINQ, XML olarak <xref:System.Xml.XmlDocument>, XPath sorguları çalışma zamanında yorumlanacağını ancak LINQ to XML sorgularında statik olduğunu, derlenir. Bu özellik için LINQ to XML, yararlanmak için ek adımlar gerçekleştirmeniz gerekmez, ancak iki teknolojiyi arasında seçim yaparken, aradaki farkı kavramak yararlıdır yerleşik olarak bulunur. Bu konu, farkı açıklar.  
@@ -83,13 +83,13 @@ reader.Close();
   
  Ancak, <xref:System.Xml.XmlDocument> yaklaşımı genellikle gerçekleştirmez LINQ to XML, yanı sıra çünkü <xref:System.Xml.XmlNode.SelectNodes%2A> yöntemi aşağıdakileri yapmalıdır dahili olarak her çağrıldığında:  
   
--   Bu dizeyi belirteçlere bozucu bir XPath ifadesi içeriyor dizeyi ayrıştırır.  
+- Bu dizeyi belirteçlere bozucu bir XPath ifadesi içeriyor dizeyi ayrıştırır.  
   
--   Bu XPath ifadesi geçerli olduğundan emin olmak için belirteçlerini doğrular.  
+- Bu XPath ifadesi geçerli olduğundan emin olmak için belirteçlerini doğrular.  
   
--   Bu iç ifade ağacı ifadeye çevrilir.  
+- Bu iç ifade ağacı ifadeye çevrilir.  
   
--   Uygun şekilde ifade değerlendirmeye göre sonuç kümesi için düğümleri seçme düğümleri aracılığıyla yinelenir.  
+- Uygun şekilde ifade değerlendirmeye göre sonuç kümesi için düğümleri seçme düğümleri aracılığıyla yinelenir.  
   
  Önemli ölçüde daha fazla ilgili LINQ to XML sorgusu ile çalışmanın budur. Sorgu farklı türleri için belirli bir performans farkı değişir, ancak genel bir LINQ to XML sorguları daha az çalışma yapın ve bu nedenle, daha iyi kullanarak XPath ifadelerini değerlendirme gerçekleştirmek <xref:System.Xml.XmlDocument>.  
   

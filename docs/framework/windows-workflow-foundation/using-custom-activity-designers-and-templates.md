@@ -1,15 +1,15 @@
 ---
-title: Özel Etkinlik tasarımcıları ve şablonları kullanma
+title: Özel Etkinlik Tasarımcıları ve Şablonları Kullanma
 ms.date: 03/30/2017
 ms.assetid: 1aab82e7-7f89-4255-be46-526b09ceeb8b
 ms.openlocfilehash: eb00a2927c8521e68bc2c5fc73bc2aab55d7d868
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669595"
 ---
-# <a name="using-custom-activity-designers-and-templates"></a>Özel Etkinlik tasarımcıları ve şablonları kullanma
+# <a name="using-custom-activity-designers-and-templates"></a>Özel Etkinlik Tasarımcıları ve Şablonları Kullanma
 Bu bölüm, özel etkinlik tasarımcıları ve özel etkinlik şablonları oluşturmak nasıl eklendiğini açıklayan konulara içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  

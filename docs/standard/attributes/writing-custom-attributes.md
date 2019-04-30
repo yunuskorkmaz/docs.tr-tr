@@ -19,11 +19,11 @@ ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1d0a0659c99a49770d0d08460026363ecef06654
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698979"
 ---
 # <a name="writing-custom-attributes"></a>Özel Öznitelikler Yazma
 Kendi özel öznitelikler tasarlamak için çok sayıda yeni kavramları ana gerekmez. Nesne odaklı programlama ile ilgili bilgi sahibi olduğunuz ve sınıfları tasarlama ne yapılacağını bildiğiniz, ihtiyacınız olan bilgileri çoğunu zaten vardır. Özel öznitelikler sınıflardır doğrudan veya dolaylı olarak türetilen temelde geleneksel <xref:System.Attribute?displayProperty=nameWithType>. Yalnızca geleneksel sınıflar gibi özel öznitelikler, veri depolama ve alma yöntemler içerir.  

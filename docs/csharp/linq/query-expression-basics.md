@@ -4,11 +4,11 @@ description: Sorgu ifadeleri ilgili kavramlar tanıtılmaktadır.
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
 ms.openlocfilehash: 96ef75fe702e60eaa38acef77a73a5ea7f2076f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61688611"
 ---
 # <a name="query-expression-basics"></a>Sorgu ifadesi temelleri
 

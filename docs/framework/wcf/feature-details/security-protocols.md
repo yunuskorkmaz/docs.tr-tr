@@ -5,11 +5,11 @@ helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
 ms.openlocfilehash: 5adacbc0332d104d025ea1b888b580d34fee804e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749429"
 ---
 # <a name="security-protocols"></a>Güvenlik Protokolleri
 Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksinimlerini Mesajlaşma kapsayan Web Hizmetleri güvenlik mekanizmaları sağlar. Bu bölümde Windows Communication Foundation (WCF) ayrıntılarını açıklar (uygulanan <xref:System.ServiceModel.Channels.SecurityBindingElement>) güvenlik protokollerini aşağıdaki Web Hizmetleri için.  
@@ -18,7 +18,7 @@ Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksi
 |-|-|  
 |WSS: SOAP ileti güvenliği 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf|  
 |WSS: Kullanıcı adı belirteci profili 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
-|WSS: X509 profili 1.0 belirteç.|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf|  
+|WSS: Profil 1.0 X509 belirteç|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf|  
 |WSS: SAML 1.1 belirteç profili 1.0|http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf|  
 |WSS: SOAP ileti güvenliği 1.1|http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf|  
 |WSS kullanıcı adı belirteci Profil 1.1|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
@@ -34,11 +34,11 @@ Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksi
   
  WCF, sürüm 1, Web Hizmetleri güvenlik yapılandırması için temel olarak kullanılabilecek 17 kimlik doğrulama modları sağlar. Her modu gibi dağıtım gereksinimleri, ortak bir dizi için optimize edilmiştir:  
   
--   Hizmet ve istemci kimlik doğrulaması için kullanılan kimlik bilgileri.  
+- Hizmet ve istemci kimlik doğrulaması için kullanılan kimlik bilgileri.  
   
--   İleti veya aktarım güvenlik koruma mekanizması.  
+- İleti veya aktarım güvenlik koruma mekanizması.  
   
--   İleti exchange desenleri.  
+- İleti exchange desenleri.  
   
 |Kimlik doğrulama modu|İstemci kimlik doğrulaması|Sunucu kimlik doğrulaması|Mod|  
 |-------------------------|---------------------------|---------------------------|----------|  
@@ -55,10 +55,10 @@ Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksi
 |Kerberos|Windows|Windows|İleti|  
 |IssuedToken|Federasyon|Federasyon|İleti|  
 |SspiNegotiated|Windows SSPI anlaşması|Windows SSPI anlaşması|İleti|  
-|AnonymousForSslNegotiated|Yok.|X509, TLS Nego|İleti|  
-|UserNameForSslNegotiated|Kullanıcı adı/parola|X509, TLS Nego|İleti|  
-|MutualSslNegotiated|X509|X509, TLS Nego|İleti|  
-|IssuedTokenForSslNegotiated|Federasyon|X509, TLS Nego|İleti|  
+|AnonymousForSslNegotiated|Yok.|X509, TLS-Nego|İleti|  
+|UserNameForSslNegotiated|Kullanıcı adı/parola|X509, TLS-Nego|İleti|  
+|MutualSslNegotiated|X509|X509, TLS-Nego|İleti|  
+|IssuedTokenForSslNegotiated|Federasyon|X509, TLS-Nego|İleti|  
   
  Bu tür bir kimlik doğrulama modları kullanarak uç noktaları, WS-SecurityPolicy (WS-SP) kullanarak kendi güvenlik gereksinimleri ifade edebilir. Bu belge, güvenlik üstbilgi ve her kimlik doğrulama modu için altyapı iletileri yapısını açıklar ve ilkeleri ve iletileri örneklerini sağlar.  
   
@@ -103,7 +103,7 @@ Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksi
   
  Stratejinin: parolaları genel şifreleme işlemleri için kullanılacak zayıf olarak kabul edilir.  
   
-### <a name="12-x509-token"></a>x 509 belirteci 1.2  
+### <a name="12-x509-token"></a>1.2 X509 Token  
  WCF X509v3 sertifikalarını bir kimlik bilgisi türü olarak destekler ve aşağıdaki kısıtlamalarla X509TokenProfile1.0 ve X509TokenProfile1.1 izler:  
   
  X509v3 sertifika içerdiğinde BinarySecurityToken öğesindeki R1201 ValueType özniteliği değeri #X509v3 olması gerekir.  
@@ -118,7 +118,7 @@ Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksi
   
  R1204 varsa X509TokenProfile1.1, bir dış başvuru X509 güvenlik belirteci kullanmalıdır WS-güvenlik 1.1 tarafından sunulan parmak izi için kullanılıyor.  
   
- WCF X509IssuerSerial destekler. Ancak vardır X509IssuerSerial ile birlikte çalışabilirlik sorunlarını: WCF X509IssuerSerial iki değerlerini karşılaştırmak için bir dize kullanır. Bir konu adı bileşenleri yeniden sıralar ve bir WCF hizmeti için bir sertifika başvuru gönderir, bu nedenle, bulunamamış olabilir.  
+ WCF X509IssuerSerial destekler. Ancak X509IssuerSerial ile birlikte çalışabilirlik sorunları vardır: WCF X509IssuerSerial iki değerlerini karşılaştırmak için bir dize kullanır. Bir konu adı bileşenleri yeniden sıralar ve bir WCF hizmeti için bir sertifika başvuru gönderir, bu nedenle, bulunamamış olabilir.  
   
 ### <a name="13-kerberos-token"></a>1.3 Kerberos belirteci  
  WCF KerberosTokenProfile1.1 aşağıdaki kısıtlamaları olan Windows kimlik doğrulaması amacıyla destekler:  
@@ -159,7 +159,7 @@ Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksi
 |||  
 |-|-|  
 |Katı|Öğeleri "kullanılmadan önce bildirme" ilkesi numaralı düzeni kuralları bölüme 7.7.1 genel göre Güvenlik İlkesi'nde açıklanan güvenlik üst bilgi aşağıdaki eklenir.|  
-|Belirsiz|WSS için uygun olan herhangi bir sırada güvenlik üst öğeleri eklendi: SOAP ileti güvenliği.|  
+|Belirsiz|Öğeler için WSS uyan herhangi bir sırada güvenlik üstbilgisinde eklenir: SOAP ileti güvenliği.|  
 |LaxTimestampFirst|İlk öğe dışında güvenlik üstbilgisinde Lax bir wsse:Timestamp aynı olmalıdır|  
 |LaxTimestampLast|Belirsiz bir wsse:Timestamp güvenlik üst bilgisindeki son öğe olmalıdır dışında aynı|  
   
@@ -179,9 +179,9 @@ Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksi
   
  Zaman damgası: true  
   
- Güvenlik üst bilgisi düzeni: katı  
+ Güvenlik üst bilgisi düzeni: Katı  
   
- Algoritma paketini: Basic256  
+ Algoritma paketi: Basic256  
   
 #### <a name="311-usernameovertransport"></a>3.1.1 UsernameOverTransport  
  Bu kimlik doğrulama modu SOAP katmanında başlatıcıdan alıcının her zaman gönderilen imzalı destekleme belirteci olarak görüntülenen bir kullanıcı adı belirteci ile istemci kimliğini doğrular. Aktarım katmanında bir X.509 sertifikası kullanarak hizmet kimlik doğrulaması yapılır. Kullanılan bağlama aktarım bağlama ' dir.  
@@ -300,7 +300,7 @@ Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksi
 ```  
   
 ### <a name="32-using-x509-certificates-for-service-authentication"></a>3.2, hizmet kimlik doğrulaması için X.509 sertifikaları kullanma  
- Bu bölümde aşağıdaki kimlik doğrulama modları açıklanır: MutualCertificate WSS1.0, karşılıklı CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate ve IssuedTokenForCertificate.  
+ Bu bölümde aşağıdaki kimlik doğrulama modları açıklanmaktadır: MutualCertificate WSS1.0, karşılıklı CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate ve IssuedTokenForCertificate.  
   
 #### <a name="321-mutualcertificate-wss10"></a>3.2.1 MutualCertificate WSS1.0  
  Başlatıcı belirteciyle SOAP katmanında görünen bu kimlik doğrulama modu istemci kimlik doğrulaması kullanarak bir X.509 sertifikası. Hizmet, ayrıca bir X.509 sertifikası kullanılarak kimlik doğrulaması yapılır. SOAP üstbilgileri hem SOAP gövdesi imzalanmıştır. Simetrik anahtar oluşturulur ve alıcının aktarım sertifika ile şifrelenir.  
@@ -309,15 +309,15 @@ Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksi
   
  Başlatıcı belirteci: ekleme modu ayarlamak için .../IncludeToken/AlwaysToRecipient istemcinin X.509 sertifikası  
   
- Alıcı belirteci: Sunucu X.509 sertifikası kullanıcının, ekleme moduyla .../IncludeToken/Never ayarlanır  
+ Alıcı belirteci: Ekleme modu ile sunucu X.509 sertifikasının .../IncludeToken/Never ayarlanır  
   
  Belirteç koruma: False  
   
- Tüm üst bilgisi ve gövdesi imzalar: True  
+ Tüm üst bilgisi ve gövdesi imza: Doğru  
   
- Koruma sırasını: SignBeforeEncrypt  
+ Koruma sırası: SignBeforeEncrypt  
   
- Şifreleme imzası: True  
+ İmza şifrele: Doğru  
   
  İlke  
   
@@ -368,11 +368,11 @@ Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksi
   
  Belirteç koruma: False  
   
- Tüm üst bilgisi ve gövdesi imzalar: True  
+ Tüm üst bilgisi ve gövdesi imza: Doğru  
   
- Koruma sırasını: SignBeforeEncrypt  
+ Koruma sırası: SignBeforeEncrypt  
   
- Şifreleme imzası: True  
+ İmza şifrele: Doğru  
   
  İlke  
   
@@ -410,11 +410,11 @@ Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksi
  Koruma belirteci: Sunucunun X509 sertifikası ekleme modu için .../IncludeToken/Never ayarlanır  
 Belirteç koruma: False  
   
- Tüm üst bilgisi ve gövdesi imzalar: True  
+ Tüm üst bilgisi ve gövdesi imza: Doğru  
   
- Koruma sırasını: SignBeforeEncrypt  
+ Koruma sırası: SignBeforeEncrypt  
   
- Şifreleme imzası: True  
+ İmza şifrele: Doğru  
   
  Yukarıdaki kimlik doğrulama modları, yalnızca kullandıkları destek belirteçleri ile farklı. AnonymousForCertificate destekleyici tarafından istenen belirteçleri yok, MutualCertificate WSS 1.1 sahip istemcinin X509 sertifika bir destek belirteçleri onaylama olarak, UserNameForCertificate sahip bir kullanıcı adı belirteci imzalı destekleme belirteci olarak ve IssuedTokenForCertificate verilen belirtecin bir onaylama destekleme belirteci sahiptir.  
   
@@ -585,14 +585,14 @@ Belirteç koruma: False
 ## <a name="33-kerberos"></a>3.3 Kerberos  
  Bu kimlik doğrulama modu ile bir Kerberos anahtarı kullanarak hizmete istemcinin kimliğini doğrular. Bu aynı anahtar Ayrıca sunucu kimlik doğrulaması sağlar. Kullanılan bağlama, aşağıdaki özelliklere sahip bir simetrik bağlamadır;  
   
- Koruma belirteci: .../IncludeToken/Once için ekleme modu Kerberos anahtarı ayarlayın  
+ Koruma belirteci: Kerberos anahtarı ekleme modu .../IncludeToken/Once için ayarlanır.  
 Belirteç koruma: False  
   
- Tüm üst bilgisi ve gövdesi imzalar: True  
+ Tüm üst bilgisi ve gövdesi imza: Doğru  
   
- Koruma sırasını: SignBeforeEncrypt  
+ Koruma sırası: SignBeforeEncrypt  
   
- Şifreleme imzası: True  
+ İmza şifrele: Doğru  
   
  İlke  
   
@@ -635,14 +635,14 @@ Belirteç koruma: False
 #### <a name="34-issuedtoken"></a>3.4 IssuedToken  
  İstemci hizmete kimlik doğrulaması yapmaz, bu kimlik doğrulama modu ile bu nedenle, yerine istemci STS tarafından verilen bir belirteç sunar ve paylaşılan anahtar bilgi kanıtlar. İstemcisini, bu nedenle hizmet kimliği, bunun yerine STS şifreler paylaşılan anahtarı verilen belirtecin bir parçası olarak yalnızca hizmet anahtarının şifresini çözüm olacak şekilde. Aşağıdaki özelliklerle simetrik bağlama kullanılan bağlama gibidir;  
   
- Koruma belirteç: Belirteci veren, ekleme modu için .../IncludeToken/AlwaysToRecipient ayarlanır  
+ Koruma belirteci: Belirteç, ekleme modu için .../IncludeToken/AlwaysToRecipient ayarlanır  
 Belirteç koruma: False  
   
- Tüm üst bilgisi ve gövdesi imzalar: True  
+ Tüm üst bilgisi ve gövdesi imza: Doğru  
   
- Koruma sırasını: SignBeforeEncrypt  
+ Koruma sırası: SignBeforeEncrypt  
   
- Şifreleme imzası: True  
+ İmza şifrele: Doğru  
   
  İlke  
   
@@ -687,14 +687,14 @@ Belirteç koruma: False
   
  Kullanılan bağlama, aşağıdaki özelliklere sahip bir simetrik bağlamadır;  
   
- Koruma belirteci: SslContextToken, ekleme modu için .../IncludeToken/Never ayarlanır  
+ Koruma belirteci: SslContextToken, ekleme modu .../IncludeToken/Never için ayarlanır.  
 Belirteç koruma: False  
   
- Tüm üst bilgisi ve gövdesi imzalar: True  
+ Tüm üst bilgisi ve gövdesi imza: Doğru  
   
- Koruma sırasını: SignBeforeEncrypt  
+ Koruma sırası: SignBeforeEncrypt  
   
- Şifreleme imzası: True  
+ İmza şifrele: Doğru  
   
 #### <a name="351-policy-for-sslnegotiated-service-authentication"></a>3.5.1 SslNegotiated hizmeti kimlik doğrulama İlkesi  
  Bu bölümdeki tüm kimlik doğrulama modları için ilke benzerdir ve yalnızca özel imzalı desteklemenin veya kullanılan belirteçleri onaylama farklılık gösterir.  
@@ -866,14 +866,14 @@ Belirteç koruma: False
 ### <a name="36-sspinegotiated"></a>3.6 SspiNegotiated  
  Bu kimlik doğrulama modu ile istemci ve sunucu kimlik doğrulaması gerçekleştirmek üzere bir anlaşma protokolü kullanılır. Kerberos Mümkünse, kullanılan aksi NTLM. Kullanılan bağlama, aşağıdaki özelliklere sahip bir simetrik bağlamadır;  
   
- Koruma belirteci: SpnegoContextToken, ekleme modu için .../IncludeToken/AlwaysToRecipient ayarlanır  
+ Koruma belirteci: SpnegoContextToken, ekleme modu .../IncludeToken/AlwaysToRecipient için ayarlanır.  
 Belirteç koruma: False  
   
- Tüm üst bilgisi ve gövdesi imzalar: True  
+ Tüm üst bilgisi ve gövdesi imza: Doğru  
   
- Koruma sırasını: SignBeforeEncrypt  
+ Koruma sırası: SignBeforeEncrypt  
   
- Şifreleme imzası: True  
+ İmza şifrele: Doğru  
   
  İlke  
   

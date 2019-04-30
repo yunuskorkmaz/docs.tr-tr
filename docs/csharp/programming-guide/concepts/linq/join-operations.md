@@ -3,11 +3,11 @@ title: Birleştirme işlemleri (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
 ms.openlocfilehash: db42874becaf9760b7060d7f306cc20f950f143a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667564"
 ---
 # <a name="join-operations-c"></a>Birleştirme işlemleri (C#)
 A *birleştirme* iki veri kaynaklarının bir veri kaynağı nesneleri başka bir veri kaynağındaki ortak bir özniteliği paylaşan nesnelerle işbirliğidir.  

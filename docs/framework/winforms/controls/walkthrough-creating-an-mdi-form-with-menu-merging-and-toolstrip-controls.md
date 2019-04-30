@@ -15,26 +15,26 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
 ms.openlocfilehash: 62e137df53d06f5aedb2701b5727c25e52f35614
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759891"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>İzlenecek yol: Menü Birleştirme ve ToolStrip Denetimleri içeren MDI Formu Oluşturma
 <xref:System.Windows.Forms?displayProperty=nameWithType> Ad alanı birden çok belge arabirimi (MDI) uygulamaları destekler ve <xref:System.Windows.Forms.MenuStrip> denetimi, menü birleştirmeyi destekler. MDI formları aynı zamanda <xref:System.Windows.Forms.ToolStrip> kontrol eder.  
   
  Bu izlenecek yolda nasıl kullanılacağını gösterir <xref:System.Windows.Forms.ToolStripPanel> denetimleriyle MDI formu. Formu ile alt menülerini birleştirme menüsünü de destekler. Aşağıdaki görevler bu kılavuzda gösterilen:  
   
--   Bir Windows Forms projesi oluşturma.  
+- Bir Windows Forms projesi oluşturma.  
   
--   Formunuz için ana menü oluşturuluyor. Menü gerçek adıyla değişir.  
+- Formunuz için ana menü oluşturuluyor. Menü gerçek adıyla değişir.  
   
--   Ekleme <xref:System.Windows.Forms.ToolStripPanel> denetimini **araç kutusu**.  
+- Ekleme <xref:System.Windows.Forms.ToolStripPanel> denetimini **araç kutusu**.  
   
--   Bir alt form oluşturuluyor.  
+- Bir alt form oluşturuluyor.  
   
--   Düzenleme <xref:System.Windows.Forms.ToolStripPanel> z sırasına göre denetimler.  
+- Düzenleme <xref:System.Windows.Forms.ToolStripPanel> z sırasına göre denetimler.  
   
  İşlemi tamamladığınızda, menü birleştirme ve taşınabilir destekleyen MDI Formu olacaktır <xref:System.Windows.Forms.ToolStrip> kontrol eder.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "59319072"
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yolu tamamlamak için şunlar gerekir:  
   
--   Oluşturma ve Windows Forms application projesi Visual Studio'nun yüklü bilgisayarda çalıştırmak için yeterli izinleri yok.  
+- Oluşturma ve Windows Forms application projesi Visual Studio'nun yüklü bilgisayarda çalıştırmak için yeterli izinleri yok.  
   
 ## <a name="creating-the-project"></a>Projeyi Oluşturma  
  İlk adım projeyi oluşturmak ve formu ayarlamaktır.  
@@ -198,11 +198,11 @@ ms.locfileid: "59319072"
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Bu kılavuzda, MDI üst formu ile oluşturduğunuz <xref:System.Windows.Forms.ToolStrip> denetimleri ve menü birleştirme. Kullanabileceğiniz <xref:System.Windows.Forms.ToolStrip> birçok başka amaçlarla denetimlerin ailesi:  
   
--   Sahip, denetimler için kısayol menüleri oluşturma <xref:System.Windows.Forms.ContextMenuStrip>. Daha fazla bilgi için [ContextMenu bileşenine genel bakış](contextmenu-component-overview-windows-forms.md).  
+- Sahip, denetimler için kısayol menüleri oluşturma <xref:System.Windows.Forms.ContextMenuStrip>. Daha fazla bilgi için [ContextMenu bileşenine genel bakış](contextmenu-component-overview-windows-forms.md).  
   
--   Bir formu otomatik olarak doldurulan bir standart menü ile oluşturuldu. Daha fazla bilgi için [izlenecek yol: Bir forma standart menü öğeleri sağlama](walkthrough-providing-standard-menu-items-to-a-form.md).  
+- Bir formu otomatik olarak doldurulan bir standart menü ile oluşturuldu. Daha fazla bilgi için [izlenecek yol: Bir forma standart menü öğeleri sağlama](walkthrough-providing-standard-menu-items-to-a-form.md).  
   
--   Verin, <xref:System.Windows.Forms.ToolStrip> profesyonel bir görünümünü denetler. Daha fazla bilgi için [nasıl yapılır: Bir uygulama için ToolStrip oluşturucusunu ayarlama](how-to-set-the-toolstrip-renderer-for-an-application.md).  
+- Verin, <xref:System.Windows.Forms.ToolStrip> profesyonel bir görünümünü denetler. Daha fazla bilgi için [nasıl yapılır: Bir uygulama için ToolStrip oluşturucusunu ayarlama](how-to-set-the-toolstrip-renderer-for-an-application.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

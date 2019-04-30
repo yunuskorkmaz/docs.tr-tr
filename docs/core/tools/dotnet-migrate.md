@@ -3,11 +3,11 @@ title: DotNet komut geçirme
 description: Dotnet geçirme komutu, bir projeyi ve tüm bağımlılıklarını geçirir.
 ms.date: 05/25/2018
 ms.openlocfilehash: 73e0169e64be4b55e10127ecca0101885061767e
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665032"
 ---
 # <a name="dotnet-migrate"></a>DotNet geçirme
 
@@ -17,7 +17,7 @@ ms.locfileid: "53170749"
 
 `dotnet migrate` -Önizleme 2 .NET Core projesi bir .NET Core SDK'sı 1.0 projesine geçirir.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
 ```
 dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--report-file] [-s|--skip-project-references] [--skip-backup] [-t|--template-file] [-v|--sdk-package-version] [-x|--xproj-file]

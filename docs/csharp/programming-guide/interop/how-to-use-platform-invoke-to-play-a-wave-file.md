@@ -9,11 +9,11 @@ helpviewer_keywords:
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
 ms.openlocfilehash: 29c36bd0494879b66674cf3a3c404fdaf3908f59
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61679225"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Nasıl yapılır: Wave dosyasını oynatmak için Platform çağırma kullanma (C# Programlama Kılavuzu)
 Aşağıdaki C# kod örneği platform kullanılması gösterilmektedir Windows işletim sisteminde ses wave dosyasını oynatmak için hizmetlerini çağırma.  

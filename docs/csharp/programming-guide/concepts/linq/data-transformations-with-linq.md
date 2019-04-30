@@ -11,22 +11,22 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
 ms.openlocfilehash: 5928478518b0bc1eb498381567d52d5ddba4d8b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702444"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ ile Veri Dönüştürmeler (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] yalnızca veri alma hakkında değil. Veri dönüştürme için de güçlü bir araçtır. Kullanarak bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu, giriş ve yeni bir çıkış dizisi oluşturmak için birçok şekilde değiştirme gibi bir kaynak sırası kullanabilirsiniz. Öğeleri sıralama ve gruplandırma değiştirmeden dizisi kendisini değiştirebilirsiniz. Ancak belki de en güçlü özelliğidir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgulardır yeni türleri oluşturma olanağı. Bu, gerçekleştirilir [seçin](../../../../csharp/language-reference/keywords/select-clause.md) yan tümcesi. Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:  
   
--   Birden çok giriş dizilerini yeni bir türü olan bir tek bir çıkış sırasına birleştirin.  
+- Birden çok giriş dizilerini yeni bir türü olan bir tek bir çıkış sırasına birleştirin.  
   
--   Öğeleri kaynak sırasındaki her öğenin yalnızca bir veya birkaç özellikleri oluşur çıkış sıraları oluşturun.  
+- Öğeleri kaynak sırasındaki her öğenin yalnızca bir veya birkaç özellikleri oluşur çıkış sıraları oluşturun.  
   
--   Kaynak veriler üzerinde gerçekleştirilen işlemlerin sonuçlarını öğeleri oluşur çıkış sıraları oluşturun.  
+- Kaynak veriler üzerinde gerçekleştirilen işlemlerin sonuçlarını öğeleri oluşur çıkış sıraları oluşturun.  
   
--   Çıkış sıraları farklı bir biçimde oluşturun. Örneğin, verileri SQL satırları veya metin dosyalarından XML'e dönüştürebilirsiniz.  
+- Çıkış sıraları farklı bir biçimde oluşturun. Örneğin, verileri SQL satırları veya metin dosyalarından XML'e dönüştürebilirsiniz.  
   
  Bunlar yalnızca birkaç örnektir. Elbette, bu dönüştürmeleri, çeşitli yollarla aynı sorguda birleştirilebilir. Ayrıca, bir sorgu çıkış dizisi, yeni bir sorgu için giriş dizisi kullanılabilir.  
   

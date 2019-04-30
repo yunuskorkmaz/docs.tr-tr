@@ -1,18 +1,18 @@
 ---
-title: Dış kaynakları çözümleme
+title: Dış Kaynakları Çözümleme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef31d101769dca00f5cff545c72b3afbd59bc638
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703250"
 ---
-# <a name="resolving-external-resources"></a>Dış kaynakları çözümleme
+# <a name="resolving-external-resources"></a>Dış Kaynakları Çözümleme
 **XmlResolver** özelliği **XmlDocument** tarafından kullanılan **XmlDocument** XML verisindeki dış belge türü gibi satır içi olmayan kaynakları bulmak için sınıfı tanımları (DTD'ler), varlıkları ve şemalar. Bu öğeleri bir ağ veya yerel bir sürücüde bulunan olabilir ve bir Tekdüzen Kaynak Tanımlayıcısı (URI) tarafından tanımlanabilir. Böylece **XmlDocument** çözümlenecek **EntityReference** belgede mevcut olduğundan ve doğrulamak belgenin dış DTD'nin veya şema göre düğümleri.  
   
 ## <a name="fully-trusted-xmldocument"></a>XmlDocument tam güvenilir  

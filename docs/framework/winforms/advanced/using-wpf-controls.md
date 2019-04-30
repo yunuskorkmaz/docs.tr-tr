@@ -6,11 +6,11 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
 ms.openlocfilehash: 24b88e456628c5a0bdc3cded60b0e52a92057851
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747621"
 ---
 # <a name="using-wpf-controls"></a>WPF Denetimlerini Kullanma
 Windows Forms tabanlı uygulamalarınızı Windows Presentation Foundation (WPF) denetimleri kullanabilirsiniz. Bu iki farklı görünümü teknolojileri olsa da, bunlar düzgün çalışmak.  

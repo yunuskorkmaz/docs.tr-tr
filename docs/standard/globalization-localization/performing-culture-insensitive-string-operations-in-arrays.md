@@ -10,11 +10,11 @@ ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ba02333aaafbadc85e4d3c547659f4ce4d2740c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683014"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>Dizilerde Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme
 Overloads biri <xref:System.Array.Sort%2A?displayProperty=nameWithType> ve <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> yöntemleri gerçekleştirmek varsayılan kullanarak kültüre duyarlı sıralamaları <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliği. Bu yöntem tarafından döndürülen kültüre duyarlı sonuçlar sıralamalar farklılıkları nedeniyle kültüre göre değişebilir. Kültüre duyarlı davranışı ortadan kaldırmak için bu yöntemin kabul eden aşırı yüklemeler birini kullanın: bir `comparer` parametresi. `comparer` Parametresinin belirttiği <xref:System.Collections.IComparer> dizideki öğeleri karşılaştırırken kullanılacak uygulama. Parametresi, kullanan bir özel sabit karşılaştırıcısı sınıfı belirtin <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Sabit özel bir karşılaştırıcı sınıf örneği "SortedList sınıfı kullanarak" alt konu sağlanan [koleksiyonlarda kültüre duyarsız dize işlemlerini gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) konu.  

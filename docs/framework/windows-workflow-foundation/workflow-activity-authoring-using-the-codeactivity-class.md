@@ -3,11 +3,11 @@ title: CodeActivity sınıfını kullanarak iş akışı etkinliği yazma
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
 ms.openlocfilehash: 549acec8b8101312d48bd20e63a4a988b798ff38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669452"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>CodeActivity sınıfını kullanarak iş akışı etkinliği yazma
 Devralarak oluşturulan etkinlikleri <xref:System.Activities.CodeActivity> temel kesinlik temelli davranışını geçersiz kılarak uygulayabilirsiniz <xref:System.Activities.CodeActivity.Execute%2A> yöntemi.
@@ -15,11 +15,11 @@ Devralarak oluşturulan etkinlikleri <xref:System.Activities.CodeActivity> temel
 ## <a name="using-codeactivitycontext"></a>CodeActivityContext kullanma
  İş akışı çalışma zamanı özellikleri içinden erişilebilir <xref:System.Activities.CodeActivity.Execute%2A> üyeleri kullanarak yöntemi `context` türünde parametre <xref:System.Activities.CodeActivityContext>. Aracılığıyla kullanılabilen özellikleri <xref:System.Activities.CodeActivityContext> şunları içerir:
 
--   Alma ve değişkenleri ve bağımsız değişken değerlerini ayarlama.
+- Alma ve değişkenleri ve bağımsız değişken değerlerini ayarlama.
 
--   Özel İzleme özelliklerini kullanarak <xref:System.Activities.CodeActivityContext.Track%2A>.
+- Özel İzleme özelliklerini kullanarak <xref:System.Activities.CodeActivityContext.Track%2A>.
 
--   Kullanarak Etkinlik yürütme özelliklerine erişimi <xref:System.Activities.CodeActivityContext.GetProperty%2A>.
+- Kullanarak Etkinlik yürütme özelliklerine erişimi <xref:System.Activities.CodeActivityContext.GetProperty%2A>.
 
 #### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>CodeActivity devralan bir özel etkinlik oluşturmak için
 

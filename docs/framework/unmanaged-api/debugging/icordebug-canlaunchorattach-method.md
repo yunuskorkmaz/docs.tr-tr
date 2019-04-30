@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0cf0065f1ed12ad3a37819b0a15d734a2b51ff5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697783"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach Yöntemi
 Yeni bir işlem başlatılıyor veya belirtilen mevcut işleme iliştirdikten geçerli makine ve çalışma zamanı yapılandırma bağlamında mümkün olup olmadığını belirten bir HRESULT döndürür.  
@@ -46,13 +46,13 @@ HRESULT CanLaunchOrAttach (
 ## <a name="return-value"></a>Dönüş Değeri  
  Hata Ayıklama Hizmetleri yeni bir işlem başlatılıyor veya belirtilen işleme iliştirdikten belirlerseniz S_OK geçerli makine ve çalışma zamanı yapılandırma hakkında bilgi verilen mümkündür. HRESULT olası değerler şunlardır:  
   
--   S_OK  
+- S_OK  
   
--   CORDBG_E_DEBUGGING_NOT_POSSIBLE  
+- CORDBG_E_DEBUGGING_NOT_POSSIBLE  
   
--   CORDBG_E_KERNEL_DEBUGGER_PRESENT  
+- CORDBG_E_KERNEL_DEBUGGER_PRESENT  
   
--   CORDBG_E_KERNEL_DEBUGGER_ENABLED  
+- CORDBG_E_KERNEL_DEBUGGER_ENABLED  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu yöntem, yalnızca bilgilendirme amaçlıdır. Arabirimi, başlatılmasını durdurmaz ya da tarafından döndürülen değerinden bağımsız olarak bir işleme ekleme `CanLaunchOrAttach`.  

@@ -11,11 +11,11 @@ ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cce67b36330714a821012082457e0297395a09c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675068"
 ---
 # <a name="assembly-manifest"></a>Derleme Bildirimi
 Statik veya dinamik tüm derlemeler, derleme içindeki öğelerin birbirleriyle nasıl ilişkili olduğunu açıklayan bir veri koleksiyonu içerir. Derleme bildirimi, bu derleme metaverilerini içerir. Bir derleme bildirimi, derlemenin sürüm gereksinimlerini ve güvenlik kimliğini belirtmek, derlemenin kapsamını tanımlamak ve kaynaklara, sınıflara yapılan atıfları çözmek için gereken tüm metaverileri içerir. Derleme bildirimi, Microsoft ara dili (MSIL) koduyla bir PE dosyası halinde (bir .exe veya .dll) veya yalnızca derleme bildirimi bilgilerini içeren tek bir PE dosyasında tutulabilir.  
@@ -28,15 +28,15 @@ Statik veya dinamik tüm derlemeler, derleme içindeki öğelerin birbirleriyle 
   
  Her derlemenin bildirimi, aşağıdaki işlevleri gerçekleştirir:  
   
--   Derlemeyi oluşturan dosyaları listeler.  
+- Derlemeyi oluşturan dosyaları listeler.  
   
--   Derlemenin türlerine ve kaynaklarına yapılan atıfların, tanımlarını ve uygulamalarını içeren dosyalarla nasıl eşleştirildiğini yönetir.  
+- Derlemenin türlerine ve kaynaklarına yapılan atıfların, tanımlarını ve uygulamalarını içeren dosyalarla nasıl eşleştirildiğini yönetir.  
   
--   Derlemenin bağımlı olduğu diğer derlemeleri listeler.  
+- Derlemenin bağımlı olduğu diğer derlemeleri listeler.  
   
--   Derlemenin tüketicileri ve derlemenin uygulama ayrıntıları arasında bir yöneltme düzeyi sağlar.  
+- Derlemenin tüketicileri ve derlemenin uygulama ayrıntıları arasında bir yöneltme düzeyi sağlar.  
   
--   Derlemeyi kendini açıklayan hale getirir.  
+- Derlemeyi kendini açıklayan hale getirir.  
   
 ## <a name="assembly-manifest-contents"></a>Derleme Bildirimi İçerikleri  
  Aşağıdaki tabloda, derleme bildiriminde bulunan bilgiler gösterilmektedir. İlk dört öğe—derlemenin adı, sürüm numarası, kültür ve tanımlayıcı ad bilgisi— derlemenin kimliğini oluşturur.  

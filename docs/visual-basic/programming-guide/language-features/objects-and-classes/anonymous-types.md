@@ -9,11 +9,11 @@ helpviewer_keywords:
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
 ms.openlocfilehash: 3dc2083e5b4fd06250a1387c32f0eba28e879b30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758502"
 ---
 # <a name="anonymous-types-visual-basic"></a>Anonim Türleri (Visual Basic)
 Visual Basic nesne veri türü için bir sınıf tanımı yazmaya gerek kalmadan oluşturmanıza olanak sağlayan anonim türler destekler. Bunun yerine, derleyici bir sınıf sizin için oluşturur. Kullanılabilir adı yok, doğrudan devralan sınıf <xref:System.Object>ve nesneyi bildirirken belirttiğiniz özellikleri içeriyor. Veri türünün adı belirtilmediğinden bu şeklinde adlandırılan bir *anonim tür*.  
@@ -53,22 +53,22 @@ Visual Basic nesne veri türü için bir sınıf tanımı yazmaya gerek kalmadan
 ## <a name="key-properties"></a>Anahtar Özellikler  
  Anahtar özellikleri anahtar olmayan özelliklerinden birkaç temel farklar:  
   
--   Yalnızca anahtar özelliklerin değerlerini iki örneğinin eşit olup olmadığını belirlemek üzere karşılaştırılır.  
+- Yalnızca anahtar özelliklerin değerlerini iki örneğinin eşit olup olmadığını belirlemek üzere karşılaştırılır.  
   
--   Anahtar özelliklerin değerlerini salt okunurdur ve değiştirilemez.  
+- Anahtar özelliklerin değerlerini salt okunurdur ve değiştirilemez.  
   
--   Yalnızca anahtar özellik değerlerini anonim bir tür için karma derleyicinin ürettiği kodu algoritmasını dahil edilmiştir.  
+- Yalnızca anahtar özellik değerlerini anonim bir tür için karma derleyicinin ürettiği kodu algoritmasını dahil edilmiştir.  
   
 ### <a name="equality"></a>Eşitlik  
  Anonim türlerin örnekleri aynı anonim türdeki örneklerin yalnızca olmaları durumunda eşit olabilir. Aşağıdaki koşulları karşıladıkları, derleyici iki örneği aynı türde bir örnek değerlendirir:  
   
--   Aynı derlemede edildiklerine bağlıdır.  
+- Aynı derlemede edildiklerine bağlıdır.  
   
--   Özellikleri, aynı çıkarsanan türleri, aynı ada sahip ve aynı sırada bildirilir. Adı karşılaştırmalar büyük küçük harfe duyarlı değildir.  
+- Özellikleri, aynı çıkarsanan türleri, aynı ada sahip ve aynı sırada bildirilir. Adı karşılaştırmalar büyük küçük harfe duyarlı değildir.  
   
--   Her aynı özellikleri anahtar özellik olarak işaretlenir.  
+- Her aynı özellikleri anahtar özellik olarak işaretlenir.  
   
--   Her bildiriminde en az bir özellik anahtar bir özelliktir.  
+- Her bildiriminde en az bir özellik anahtar bir özelliktir.  
   
  Hiçbir anahtar özellikleri olan anonim bir tür örneği yalnızca kendisine eşittir.  
   
@@ -86,11 +86,11 @@ Visual Basic nesne veri türü için bir sınıf tanımı yazmaya gerek kalmadan
 ## <a name="anonymous-types-from-query-expressions"></a>Sorgu ifadeleri anonim türleri  
  Sorgu ifadeleri, her zaman anonim türler oluşturulmasını gerektirmez. Mümkün olduğunda, bunlar mevcut türü sütun verileri tutmak için kullanın. Bu durum, sorgu, veri kaynağından veya her kaydın yalnızca bir alan ya da tüm kayıtları döndürür. oluşur. Aşağıdaki kod örnekleri, `customers` nesneleri koleksiyonudur bir `Customer` sınıfı. Sınıf çok sayıda özelliğe sahiptir ve herhangi bir sırada sorgu sonucundaki birini veya birkaçını içerebilir. İlk iki örneklerde sorgular adlandırılmış türler öğelerini seçin. çünkü hiçbir anonim türler gereklidir:  
   
--   `custs1` dizelerden oluşan bir koleksiyon olduğundan içeren `cust.Name` bir dizedir.  
+- `custs1` dizelerden oluşan bir koleksiyon olduğundan içeren `cust.Name` bir dizedir.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#30)]  
   
--   `custs2` bir koleksiyonunu içerir `Customer` , çünkü nesnelerini her öğeye `customers` olduğu bir `Customer` nesne ve tüm öğeyi sorgu seçilmedi.  
+- `custs2` bir koleksiyonunu içerir `Customer` , çünkü nesnelerini her öğeye `customers` olduğu bir `Customer` nesne ve tüm öğeyi sorgu seçilmedi.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#31)]  
   

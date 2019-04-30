@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
 ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696229"
 ---
 # <a name="accessing-services-using-a-client"></a>İstemci Kullanarak Hizmetlere Erişme
 İstemci uygulamaları oluşturmak, yapılandırmak ve WCF istemci veya kanal nesneleri Hizmetleri ile iletişim kurmak için kullanmanız gerekir. [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md) konu nesneleri ve adımlarını temel istemci ve kanal nesneleri oluşturma ve bunları kullanarak genel bir bakış sağlar.  
@@ -20,13 +20,13 @@ ms.locfileid: "59314886"
 ## <a name="overview"></a>Genel Bakış  
  Bu konu, davranışı ve ilgili sorunları açıklar:  
   
--   Kanal ve oturum yaşam süresi yok.  
+- Kanal ve oturum yaşam süresi yok.  
   
--   Özel durum işleme.  
+- Özel durum işleme.  
   
--   Engelleme sorunları anlama.  
+- Engelleme sorunları anlama.  
   
--   Kanalları etkileşimli olarak başlatılıyor.  
+- Kanalları etkileşimli olarak başlatılıyor.  
   
 ### <a name="channel-and-session-lifetimes"></a>Kanal ve oturum süreleri  
  Windows Communication Foundation (WCF) uygulamaları Kanallar, veri birimi ve sessionful iki kategorisi içerir.  

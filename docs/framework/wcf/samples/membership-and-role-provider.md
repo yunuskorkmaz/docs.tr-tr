@@ -3,11 +3,11 @@ title: Üyelik ve Rol Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
 ms.openlocfilehash: b5cb743fb3533d2f3a8016c9357d6ead498a5878
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756123"
 ---
 # <a name="membership-and-role-provider"></a>Üyelik ve Rol Sağlayıcısı
 Üyelik ve rol sağlayıcısı örnek, bir hizmetin nasıl kullanabileceğinizi gösterir. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kimliğini doğrulama ve yetkilendirme istemciler için üyelik ve rol sağlayıcıları.  
@@ -19,15 +19,15 @@ ms.locfileid: "59768169"
   
  Örnek gösterir nasıl:  
   
--   Bir istemci, kullanıcı adı parola birleşimi kullanarak kimlik doğrulaması yapabilirsiniz.  
+- Bir istemci, kullanıcı adı parola birleşimi kullanarak kimlik doğrulaması yapabilirsiniz.  
   
--   Sunucu, istemci kimlik bilgileri karşı doğrulayabilir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] üyelik sağlayıcısı.  
+- Sunucu, istemci kimlik bilgileri karşı doğrulayabilir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] üyelik sağlayıcısı.  
   
--   Sunucu, sunucunun X.509 sertifikası kullanılarak doğrulanabilir.  
+- Sunucu, sunucunun X.509 sertifikası kullanılarak doğrulanabilir.  
   
--   Sunucunun kimliği doğrulanmış istemciyi bir role kullanarak eşleyebilirsiniz [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rol sağlayıcısı.  
+- Sunucunun kimliği doğrulanmış istemciyi bir role kullanarak eşleyebilirsiniz [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rol sağlayıcısı.  
   
--   Sunucu kullanabilir `PrincipalPermissionAttribute` erişimi denetlemek için hizmet tarafından sunulan belirli yöntem.  
+- Sunucu kullanabilir `PrincipalPermissionAttribute` erişimi denetlemek için hizmet tarafından sunulan belirli yöntem.  
   
  Üyelik ve rol sağlayıcıları, SQL Server tarafından desteklenen bir deposunu kullanmak üzere yapılandırılır. Bir bağlantı dizesi ve çeşitli seçenekleri hizmet yapılandırma dosyasında belirtilir. Üyelik sağlayıcısının adı verilen `SqlMembershipProvider` rol sağlayıcısı adı verilen sırada `SqlRoleProvider`.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "59768169"
   
 ### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için  
   
--   Örnek çalıştıran tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.  
+- Örnek çalıştıran tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.  
   
 > [!NOTE]
 >  Bu betik, bu örnek, bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Bilgisayarlar arasında sertifikaları kullanan bir Windows Communication Foundation (WCF) örnekleri çalıştırırsanız, CurrentUser - TrustedPeople deposu yüklü hizmet sertifikalarını Temizle emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
@@ -174,7 +174,7 @@ ms.locfileid: "59768169"
   
  Aşağıda, böylece uygun yapılandırmasında çalıştırılacak değiştirilebilir toplu iş dosyaları farklı bölümlerini kısa bir genel bakış sağlar.  
   
--   Sunucu sertifikası oluşturuluyor.  
+- Sunucu sertifikası oluşturuluyor.  
   
      Setup.bat toplu iş dosyasından aşağıdaki satırları kullanılacak sunucu sertifikası oluşturun. % Sunucu_adı % değişkeni, sunucu adını belirtir. Kendi sunucu adını belirtmek için bu değişkeni değiştirin. Bu toplu iş dosyası için localhost olarak varsayılır.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "59768169"
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
--   Sunucu sertifikasını istemcinin güvenilen sertifika depolama alanına yükleniyor.  
+- Sunucu sertifikasını istemcinin güvenilen sertifika depolama alanına yükleniyor.  
   
      İstemci güvenilir kişiler uygulamasına Setup.bat toplu dosya kopyalama sunucu sertifikasının aşağıdaki satırları depolayın. MakeCert.exe tarafından oluşturulan sertifikaları örtük olarak istemci sistemi tarafından güvenilir değildir çünkü bu adım gereklidir. Bir istemci güvenilen kök sertifikayı kök erişim izni verilmiş bir sertifika zaten varsa — örneğin, Microsoft tarafından verilen sertifika — sunucu sertifikasında istemci sertifika deposunun doldurulması, bu adım gerekli değildir.  
   

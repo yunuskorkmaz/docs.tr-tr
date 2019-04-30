@@ -11,26 +11,26 @@ helpviewer_keywords:
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
 ms.openlocfilehash: 1f457d6e2b0eb73da7a16dc93ea80a14ddb4b2c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746735"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Nasıl yapılır: İlerleme Durumunu Gösteren Windows Forms Denetimi Oluşturma
 Aşağıdaki kod örneğinde adlı özel bir denetimi gösterir `FlashTrackBar` kullanıcı düzeyi veya bir uygulamanın ilerleme durumunu göstermek için kullanılabilir. Gradyan ilerlemesini görsel olarak göstermek için kullanır.  
   
  `FlashTrackBar` Denetimi aşağıdaki kavramları göstermektedir:  
   
--   Özel özellikler tanımlama.  
+- Özel özellikler tanımlama.  
   
--   Özel olaylar tanımlama. (`FlashTrackBar` tanımlar `ValueChanged` olay.)  
+- Özel olaylar tanımlama. (`FlashTrackBar` tanımlar `ValueChanged` olay.)  
   
--   Geçersiz kılma <xref:System.Windows.Forms.Control.OnPaint%2A> denetimi çizmek için mantığını sağlamak için yöntemi.  
+- Geçersiz kılma <xref:System.Windows.Forms.Control.OnPaint%2A> denetimi çizmek için mantığını sağlamak için yöntemi.  
   
--   Alan kullanan denetimi çizmek için kullanılabilir bilgi işlem, <xref:System.Windows.Forms.Control.ClientRectangle%2A> özelliği. `FlashTrackBar` bunu yapar, `OptimizedInvalidate` yöntemi.  
+- Alan kullanan denetimi çizmek için kullanılabilir bilgi işlem, <xref:System.Windows.Forms.Control.ClientRectangle%2A> özelliği. `FlashTrackBar` bunu yapar, `OptimizedInvalidate` yöntemi.  
   
--   Windows Form Tasarımcısı'nda değiştirildiğinde serileştirme veya Kalıcılık bir özellik için uygulama. `FlashTrackBar` tanımlar `ShouldSerializeStartColor` ve `ShouldSerializeEndColor` serileştirmeye yönelik yöntemleri kendi `StartColor` ve `EndColor` özellikleri.  
+- Windows Form Tasarımcısı'nda değiştirildiğinde serileştirme veya Kalıcılık bir özellik için uygulama. `FlashTrackBar` tanımlar `ShouldSerializeStartColor` ve `ShouldSerializeEndColor` serileştirmeye yönelik yöntemleri kendi `StartColor` ve `EndColor` özellikleri.  
   
  Tarafından tanımlanan özel özellikler aşağıdaki tabloda gösterilmektedir `FlashTrackBar`.  
   
@@ -59,23 +59,23 @@ Aşağıdaki kod örneğinde adlı özel bir denetimi gösterir `FlashTrackBar` 
   
  Buna karşılık gelen işlemek için *EventName* olayları `FlashTrackBar` devraldığı aşağıdaki yöntemleri geçersiz kılan <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   
--   <xref:System.Windows.Forms.Control.OnPaint%2A>  
+- <xref:System.Windows.Forms.Control.OnPaint%2A>  
   
--   <xref:System.Windows.Forms.Control.OnMouseDown%2A>  
+- <xref:System.Windows.Forms.Control.OnMouseDown%2A>  
   
--   <xref:System.Windows.Forms.Control.OnMouseMove%2A>  
+- <xref:System.Windows.Forms.Control.OnMouseMove%2A>  
   
--   <xref:System.Windows.Forms.Control.OnMouseUp%2A>  
+- <xref:System.Windows.Forms.Control.OnMouseUp%2A>  
   
--   <xref:System.Windows.Forms.Control.OnResize%2A>  
+- <xref:System.Windows.Forms.Control.OnResize%2A>  
   
  Karşılık gelen özellik değişti olayları işlemek için `FlashTrackBar` devraldığı aşağıdaki yöntemleri geçersiz kılan <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   
--   <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
+- <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
   
--   <xref:System.Windows.Forms.Control.OnBackgroundImageChanged%2A>  
+- <xref:System.Windows.Forms.Control.OnBackgroundImageChanged%2A>  
   
--   <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
+- <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
   
 ## <a name="example"></a>Örnek  
  `FlashTrackBar` Denetimi tanımlayan iki kullanıcı Arabirimi tür düzenleyicileri `FlashTrackBarValueEditor` ve `FlashTrackBarDarkenByEditor`, aşağıdaki kod listelerinde gösterilir. `HostApp` Sınıfının kullandığı `FlashTrackBar` bir Windows formunda denetimi.  

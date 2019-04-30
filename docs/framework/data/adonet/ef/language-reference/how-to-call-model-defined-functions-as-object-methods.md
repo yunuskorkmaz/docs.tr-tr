@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
 ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774614"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Nasıl yapılır: Model Tanımlı İşlevleri Nesne Yöntemleri Olarak Çağırma
 Bu konu, bir yöntem olarak model tanımlı bir işlevi çağırmak açıklar bir <xref:System.Data.Objects.ObjectContext> nesne veya özel bir sınıf üzerinde bir statik yöntem olarak. A *model tanımlı işlev* kavramsal modelde tanımlı bir işlev değil. Bu konudaki yordamlar, bunları Entities sorgularında LINQ çağırmak yerine doğrudan bu işlevleri çağırmak nasıl açıklar. LINQ to Entities sorgularında çağırma model tanımlı işlevleri hakkında daha fazla bilgi için bkz: [nasıl yapılır: Sorgularda model tanımlı işlevler çağırma](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
@@ -25,9 +25,9 @@ Bu konu, bir yöntem olarak model tanımlı bir işlevi çağırmak açıklar bi
   
 2. Ortak dil çalışma zamanı (CLR) yöntemine ekleyin, <xref:System.Data.Objects.ObjectContext> aşağıdaki sınıfı:  
   
-    -   Kavramsal modelde tanımlı işlev eşlenir. Map yöntemi için uygulamanız gereken bir <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> yöntemi. Unutmayın <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> ve <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> öznitelik parametreleri: kavramsal modelin ad alanı adı ve işlev adı kavramsal modelde, sırasıyla. LINQ için ad çözümlemesi işlevi büyük/küçük harfe duyarlıdır.  
+    - Kavramsal modelde tanımlı işlev eşlenir. Map yöntemi için uygulamanız gereken bir <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> yöntemi. Unutmayın <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> ve <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> öznitelik parametreleri: kavramsal modelin ad alanı adı ve işlev adı kavramsal modelde, sırasıyla. LINQ için ad çözümlemesi işlevi büyük/küçük harfe duyarlıdır.  
   
-    -   Sonuçlarını döndürür <xref:System.Linq.IQueryProvider.Execute%2A> tarafından döndürülen yöntemi <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> özelliği.  
+    - Sonuçlarını döndürür <xref:System.Linq.IQueryProvider.Execute%2A> tarafından döndürülen yöntemi <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> özelliği.  
   
 3. Örneğindeki bir üyesi olarak yöntemi çağırın <xref:System.Data.Objects.ObjectContext> sınıfı.  
   
@@ -35,11 +35,11 @@ Bu konu, bir yöntem olarak model tanımlı bir işlevi çağırmak açıklar bi
   
 1. Bir sınıf, uygulamanız için şunları yapar için statik bir yöntem ekleyin:  
   
-    -   Kavramsal modelde tanımlı işlev eşlenir. Map yöntemi için uygulamanız gereken bir <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> yöntemi. Unutmayın <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> ve <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> öznitelik parametreleri: kavramsal modelin ad alanı adı ve işlev adı kavramsal modelde, sırasıyla.  
+    - Kavramsal modelde tanımlı işlev eşlenir. Map yöntemi için uygulamanız gereken bir <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> yöntemi. Unutmayın <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> ve <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> öznitelik parametreleri: kavramsal modelin ad alanı adı ve işlev adı kavramsal modelde, sırasıyla.  
   
-    -   Kabul eden bir <xref:System.Linq.IQueryable> bağımsız değişken.  
+    - Kabul eden bir <xref:System.Linq.IQueryable> bağımsız değişken.  
   
-    -   Sonuçlarını döndürür <xref:System.Linq.IQueryProvider.Execute%2A> tarafından döndürülen yöntemi <xref:System.Linq.IQueryable.Provider%2A> özelliği.  
+    - Sonuçlarını döndürür <xref:System.Linq.IQueryProvider.Execute%2A> tarafından döndürülen yöntemi <xref:System.Linq.IQueryable.Provider%2A> özelliği.  
   
 2. Yöntemi bir üye olarak statik bir yöntem üzerinde özel bir sınıf çağırın.  
   

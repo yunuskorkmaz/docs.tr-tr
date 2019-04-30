@@ -4,13 +4,13 @@ description: C# dil ile tümleşik sorgu (LINQ) sunar.
 ms.date: 11/30/2016
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
 ms.openlocfilehash: 18dafaf590697a3c9d669f346c956fd4df3378f0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61688832"
 ---
-# <a name="language-integrated-query-linq"></a>Dil ile tümleşik sorgu (LINQ)
+# <a name="language-integrated-query-linq"></a>Dil ile Tümleşik Sorgu (LINQ)
 
 Dil ile tümleşik sorgu (LINQ) tümleştirmesini sorgu özellikleri doğrudan C# dilinin temel teknoloji kümesi adıdır. Geleneksel olarak, veri sorguları zaman veya IntelliSense desteği olmadan tür denetimini en basit dizeler derleme olarak ifade edilir. Ayrıca, her veri kaynağı türü için bir farklı bir sorgu dili öğrenmek zorunda: SQL veritabanlarını, XML belgeleri, çeşitli Web Hizmetleri ve benzeri. LINQ ile olduğu gibi sınıflar, yöntemler, olaylar bir birinci sınıf dil yapısı sorgu.
 
@@ -44,9 +44,9 @@ LINQ hakkında daha fazla bilgi edinmek için bazı temel kavramları hakkında 
 
 - XML belgeleri: [LINQ to XML](../programming-guide/concepts/linq/linq-to-xml.md)
 
-- ADO.NET Entity Framework: [LINQ to entities](../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- ADO.NET varlık çerçevesi: [LINQ to entities](../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
 
-- Dosyaları, .NET koleksiyonlarında dizeleri vb.: [nesnelere LINQ](../programming-guide/concepts/linq/linq-to-objects.md)
+- .NET koleksiyonları, dosyaları, dizeleri ve bu şekilde devam eder: [Nesnelere LINQ](../programming-guide/concepts/linq/linq-to-objects.md)
 
 Bir derin LINQ genel olarak anlaşılması için bkz: [C# üzerinde LINQ](linq-in-csharp.md).
 

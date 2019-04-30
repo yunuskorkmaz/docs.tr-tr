@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
 ms.openlocfilehash: 51da86d6c0f565d1baa58452a661ccbaa321538c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765693"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Akış özelleştirme (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] veri bir akış olarak kullanıma sunmak için. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] için veri akışı hem Atom hem de JavaScript nesne gösterimi (JSON) biçimlerini destekler. Atom akışı, kullandığınızda [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] varlıklar ve ilişkiler, HTTP ileti gövdesine eklenebilir bir XML biçimine gibi verileri seri hale getirmek için standart bir yöntemini sağlar. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] varlıklarda bulunan verileri ve Atom öğeleri arasında varsayılan varlık özelliği eşlemeyi tanımlar. Daha fazla bilgi için [OData: Atom biçimi](https://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -83,12 +83,12 @@ ms.locfileid: "59517323"
 ## <a name="feed-customization-considerations"></a>Akış özelleştirme konuları  
  Özel akış eşlemeleri tanımlarken aşağıdakileri dikkate almanız gerekir.  
   
--   [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci işler eşlenmiş öğeleri bir akışta boş olarak bunlar yalnızca boşluk içerdiğinde. Bu nedenle, yalnızca boşluk içeren eşlenen öğeler aynı boşluk ile istemcide gerçekleştirilmiş değil. Bu istemcideki bölünemez boşluğu koruyacak şekilde değerini ayarlamalısınız `KeepInContext` için `true` akış eşleme öznitelik.  
+- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci işler eşlenmiş öğeleri bir akışta boş olarak bunlar yalnızca boşluk içerdiğinde. Bu nedenle, yalnızca boşluk içeren eşlenen öğeler aynı boşluk ile istemcide gerçekleştirilmiş değil. Bu istemcideki bölünemez boşluğu koruyacak şekilde değerini ayarlamalısınız `KeepInContext` için `true` akış eşleme öznitelik.  
   
 ## <a name="versioning-requirements"></a>Sürüm gereksinimleri  
  Akış özelleştirmeye sahip aşağıdaki [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Protokolü sürüm gereksinimleri:  
   
--   Akış özelleştirme gerektirir, hem istemci hem de veri hizmeti destek 2.0 sürümünü [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokol ve sonraki sürümler.  
+- Akış özelleştirme gerektirir, hem istemci hem de veri hizmeti destek 2.0 sürümünü [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokol ve sonraki sürümler.  
   
  Daha fazla bilgi için [veri hizmeti sürümü oluşturma](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   

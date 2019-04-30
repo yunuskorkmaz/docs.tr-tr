@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Nesne verilerini bir XML dosyasına yazma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
 ms.openlocfilehash: 064d7ed61921f3f700311a1b09ee77e0c9818d71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61710959"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>Nasıl yapılır: Nesne verilerini bir XML dosyasına yazma (C#)
 Bu örnek, bir XML dosyası kullanmayı öğesinden bir sınıf nesnesi Yazar <xref:System.Xml.Serialization.XmlSerializer> sınıfı.  
@@ -50,13 +50,13 @@ public class XMLWrite
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
--   Serileştirilmekte olan sınıfın ortak, parametresiz bir oluşturucusu yok.  
+- Serileştirilmekte olan sınıfın ortak, parametresiz bir oluşturucusu yok.  
   
--   Dosya var ve salt okunur (<xref:System.IO.IOException>).  
+- Dosya var ve salt okunur (<xref:System.IO.IOException>).  
   
--   Yol çok uzun (<xref:System.IO.PathTooLongException>).  
+- Yol çok uzun (<xref:System.IO.PathTooLongException>).  
   
--   Disk dolu (<xref:System.IO.IOException>).  
+- Disk dolu (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Bu örnek, bir dosya zaten mevcut değilse yeni bir dosya oluşturur. Bir uygulama bir dosya oluşturması gerekiyorsa, bu uygulamayı gerekli `Create` klasörü için erişim. Dosya zaten varsa, uygulamanın yalnızca ihtiyacı `Write` erişim, daha az ayrıcalıkla. Mümkün olan yerlerde, dosyayı dağıtım sırasında oluşturmak ve yalnızca vermek için daha güvenli olan `Read` tek bir dosyaya erişimi yerine `Create` erişim için bir klasör.  

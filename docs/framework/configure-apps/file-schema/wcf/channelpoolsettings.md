@@ -3,11 +3,11 @@ title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
 ms.openlocfilehash: ca1f680e2de67984dfcec49b3d262799000a2625
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673335"
 ---
 # <a name="channelpoolsettings"></a>\<channelPoolSettings >
 Özel bağlama için kanal havuzu ayarlarını belirtir.  
@@ -52,11 +52,11 @@ ms.locfileid: "59102589"
   
  `ChannelPoolSettings` üç kotaları belirtir:  
   
--   `idleTimeout` Kota, sunucu üzerinde uzun bir süre için kaynakları bağlamadan üzerinde kullanan hizmet reddi (DOS) saldırıları azaltmak için kullanılır. İstemcide, doğru değeri ayarı ile hizmetine güvenilirliğini artırabilirsiniz. Varsayılan değer, bir ölçülü uygun kaynakların ayrılması üzerinde temel alır. Bu, bir geliştirme ortamı ve küçük yükleme senaryoları için uygundur. Hizmet yöneticileri, bir yükleme kaynaklar yetersiz çalışıyorsa veya ek kaynakların kullanılabilirliğini rağmen bağlantı sayısı değeri gözden geçirmelidir.  
+- `idleTimeout` Kota, sunucu üzerinde uzun bir süre için kaynakları bağlamadan üzerinde kullanan hizmet reddi (DOS) saldırıları azaltmak için kullanılır. İstemcide, doğru değeri ayarı ile hizmetine güvenilirliğini artırabilirsiniz. Varsayılan değer, bir ölçülü uygun kaynakların ayrılması üzerinde temel alır. Bu, bir geliştirme ortamı ve küçük yükleme senaryoları için uygundur. Hizmet yöneticileri, bir yükleme kaynaklar yetersiz çalışıyorsa veya ek kaynakların kullanılabilirliğini rağmen bağlantı sayısı değeri gözden geçirmelidir.  
   
--   `leaseTimeout` Kotası için kullanılan yük Dengeleyiciler ile tümleştirme ve güvenilirliği için. Varsayılan değer, bir Klasik kaynakların ayrılması üzerinde temel alır. Bu, bir geliştirme ortamı ve küçük yükleme senaryoları için uygundur. Hizmet yöneticileri, bir yükleme kaynaklar yetersiz çalışıyorsa veya ek kaynakların kullanılabilirliğini rağmen bağlantı sayısı değeri gözden geçirmelidir.  
+- `leaseTimeout` Kotası için kullanılan yük Dengeleyiciler ile tümleştirme ve güvenilirliği için. Varsayılan değer, bir Klasik kaynakların ayrılması üzerinde temel alır. Bu, bir geliştirme ortamı ve küçük yükleme senaryoları için uygundur. Hizmet yöneticileri, bir yükleme kaynaklar yetersiz çalışıyorsa veya ek kaynakların kullanılabilirliğini rağmen bağlantı sayısı değeri gözden geçirmelidir.  
   
--   `maxOutboundChannelsPerEndpoint` Kota önbellek sınırlarını hem sunucu hem de istemci üzerinde ayarlar ve güvenilirliğini artırmak için kullanılır. Varsayılan değer, bir geliştirme ortamı ve küçük yükleme senaryoları için uygun olan ölçülü uygun kaynakların ayrılması dayanır. Hizmet yöneticileri, bir yükleme kaynaklar yetersiz çalışıyorsa veya ek kaynakların kullanılabilirliğini rağmen bağlantı sayısı değeri gözden geçirmelidir.  
+- `maxOutboundChannelsPerEndpoint` Kota önbellek sınırlarını hem sunucu hem de istemci üzerinde ayarlar ve güvenilirliğini artırmak için kullanılır. Varsayılan değer, bir geliştirme ortamı ve küçük yükleme senaryoları için uygun olan ölçülü uygun kaynakların ayrılması dayanır. Hizmet yöneticileri, bir yükleme kaynaklar yetersiz çalışıyorsa veya ek kaynakların kullanılabilirliğini rağmen bağlantı sayısı değeri gözden geçirmelidir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

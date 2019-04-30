@@ -3,11 +3,11 @@ title: <add> / <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
 ms.openlocfilehash: 85d09c920de2ca1ab4971551ff98ea58c4492f44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704498"
 ---
 # <a name="add-of-protocolmapping"></a>\<Ekle >, \<protocolMapping >
 Taşıma protokol şeması (örneğin, http, net.tcp, net.pipe, vb.) ve Windows Communication Foundation (WCF) bağlaması arasında varsayılan protokol eşleşmelerinin temsil eder. Varsayılan uç noktalar çalışma zamanında oluştururken, WCF yapılandırılmış eşlemelerin arar ve hangi belirli bir için kullanılacak bağlama adresine göre karar verir.  

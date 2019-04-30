@@ -9,24 +9,24 @@ helpviewer_keywords:
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
 ms.openlocfilehash: ed943948888110b76df9c9ce22b4e9b6f4bb679f
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61678549"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Nasıl yapılır: Onaltılık dizeler ve sayısal türler arasında dönüştürme (C# Programlama Kılavuzu)
 Bu örnekler, aşağıdaki görevlerin nasıl gerçekleştirileceğini gösterir:  
   
--   Her bir karakteri onaltılık değerini almak bir [dize](../../../csharp/language-reference/keywords/string.md).  
+- Her bir karakteri onaltılık değerini almak bir [dize](../../../csharp/language-reference/keywords/string.md).  
   
--   Elde [char](../../../csharp/language-reference/keywords/char.md) karşılık gelen her değeri bir onaltılık dize.  
+- Elde [char](../../../csharp/language-reference/keywords/char.md) karşılık gelen her değeri bir onaltılık dize.  
   
--   On altılı dönüştürme `string` için bir [int](../../../csharp/language-reference/keywords/int.md).  
+- On altılı dönüştürme `string` için bir [int](../../../csharp/language-reference/keywords/int.md).  
   
--   On altılı dönüştürme `string` için bir [float](../../../csharp/language-reference/keywords/float.md).  
+- On altılı dönüştürme `string` için bir [float](../../../csharp/language-reference/keywords/float.md).  
   
--   Dönüştürme bir [bayt](../../../csharp/language-reference/keywords/byte.md) dizi için bir onaltılık `string`.  
+- Dönüştürme bir [bayt](../../../csharp/language-reference/keywords/byte.md) dizi için bir onaltılık `string`.  
   
 ## <a name="example"></a>Örnek  
  Bu örnekte her bir karakteri onaltılık değerini çıkarır bir `string`. İlk ayrıştırır `string` karakter dizisi. Çağrı sonra <xref:System.Convert.ToInt32%28System.Char%29> üzerinde sayısal değerini almak için her bir karakter. Son olarak, onaltılı gösterimine olarak sayı biçimlendiren bir `string`.  

@@ -3,11 +3,11 @@ title: Standart sorgu işleçlerinin yöntemine göre sınıflandırılması yü
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
 ms.openlocfilehash: eaf0be4faee01e94b508b31bf878a537471750a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702379"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Standart sorgu işleçlerinin yöntemine göre sınıflandırılması yürütme (C#)
 Standart sorgu işleci yöntemleri nesneleri uygulamalarına LINQ iki ana yoldan biriyle yürütün: hemen veya ertelenmiş. Ertelenmiş yürütme kullanan sorgu işleçler ek olarak iki kategoriye ayrılabilir: akış ve akış dışı. Nasıl farklı sorgu işleçlerinin yürütme biliyorsanız, belirli bir sorgudan Al sonuçları anlamanıza yardımcı olabilir. Bu veri kaynağı değiştiğinde veya başka bir sorgu üzerinde bir sorgu oluşturuyorsanız özellikle doğrudur. Bu konuda, standart sorgu işleçlerinin yürütme kendi şekilde göre sınıflandırır.  

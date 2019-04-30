@@ -8,11 +8,11 @@ helpviewer_keywords:
 - '#warning directive [C#]'
 ms.assetid: e6fb496d-bb8b-4018-baf6-5b60a0c8902b
 ms.openlocfilehash: 55768a354b2841021607ed40b4ef87b9767edcad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61659962"
 ---
 # <a name="warning-c-reference"></a>#warning (C# Başvurusu)
 `#warning` oluşturmanıza olanak sağlar. bir [CS1030](../../misc/cs1030.md) kodunuzda belirli bir konumdan bir derleyici uyarısı düzeyi. Örneğin:  

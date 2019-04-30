@@ -4,13 +4,13 @@ description: C# içinde LINQ kullanarak sol dış birleştirmeler gerçekleştir
 ms.date: 12/01/2016
 ms.assetid: f542cee6-3169-4dcf-a631-3a6a79ccd473
 ms.openlocfilehash: cc08a1c8670623a10d1e0bf10221d02037a8d7bc
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61688585"
 ---
-# <a name="perform-left-outer-joins"></a>Sol dış birleştirmeler gerçekleştirme
+# <a name="perform-left-outer-joins"></a>Sol dış birleşimler gerçekleştirme
 
 Sol dış birleşim bir birleşim olduğunu, hangi ilk koleksiyonun her öğesine, bunu herhangi bir bağlantılı öğe ikinci koleksiyonda olup bağımsız olarak döndürülür. LINQ çağırarak bir sol dış birleşim gerçekleştirmek için kullanabileceğiniz <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> Grup birleştirme sonuçlarının yöntemi.
 

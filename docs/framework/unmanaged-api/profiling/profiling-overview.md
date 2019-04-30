@@ -30,11 +30,11 @@ ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757564"
 ---
 # <a name="profiling-overview"></a>Profil Oluşturmaya Genel Bakış
 <a name="top"></a> Bir profil oluşturucu başka bir uygulamanın yürütülmesini izleyen bir araçtır. Ortak dil çalışma zamanı (CLR) Profil Oluşturucu, ileti almak ve CLR Profil oluşturma API'ı kullanarak göndermek işlevlerini içeren bir dinamik bağlantı kitaplığı (DLL) ' dir. Profil Oluşturucu DLL çalışma zamanında CLR tarafından yüklenir.  
@@ -47,25 +47,25 @@ ms.locfileid: "58654100"
   
  Bu genel bakış aşağıdaki bölümlerden oluşur:  
   
--   [Profil oluşturma API'si](#profiling_api)  
+- [Profil oluşturma API'si](#profiling_api)  
   
--   [Desteklenen özellikler](#support)  
+- [Desteklenen özellikler](#support)  
   
--   [Bildirim iş parçacıkları](#notification_threads)  
+- [Bildirim iş parçacıkları](#notification_threads)  
   
--   [Güvenlik](#security)  
+- [Güvenlik](#security)  
   
--   [Yönetilen ve yönetilmeyen kod Profiler kodu birleştirme](#combining_managed_unmanaged)  
+- [Yönetilen ve yönetilmeyen kod Profiler kodu birleştirme](#combining_managed_unmanaged)  
   
--   [Yönetilmeyen kod profili oluşturma](#unmanaged)  
+- [Yönetilmeyen kod profili oluşturma](#unmanaged)  
   
--   [COM kullanma](#com)  
+- [COM kullanma](#com)  
   
--   [Çağrı yığınları](#call_stacks)  
+- [Çağrı yığınları](#call_stacks)  
   
--   [Geri çağrılar ve yığın derinliği](#callbacks)  
+- [Geri çağrılar ve yığın derinliği](#callbacks)  
   
--   [İlgili Konular](#related_topics)  
+- [İlgili Konular](#related_topics)  
   
 <a name="profiling_api"></a>   
 ## <a name="the-profiling-api"></a>Profil oluşturma API'si  
@@ -96,33 +96,33 @@ ms.locfileid: "58654100"
   
  Profil oluşturma API'si aşağıdaki eylemler ve CLR içerisinde gerçekleşen olayları hakkında bilgi alır:  
   
--   CLR başlatma ve kapatma olayları.  
+- CLR başlatma ve kapatma olayları.  
   
--   Uygulama etki alanı oluşturma ve kapatma olayları.  
+- Uygulama etki alanı oluşturma ve kapatma olayları.  
   
--   Derleme yükleme ve kaldırma olayları.  
+- Derleme yükleme ve kaldırma olayları.  
   
--   Modül yükleme ve kaldırma olayları.  
+- Modül yükleme ve kaldırma olayları.  
   
--   COM vtable oluşturma ve yok etme olayları.  
+- COM vtable oluşturma ve yok etme olayları.  
   
--   Just-in-time (JIT) derlemeyi ve kod atışlı olaylar.  
+- Just-in-time (JIT) derlemeyi ve kod atışlı olaylar.  
   
--   Yükleme ve kaldırma olayları sınıfı.  
+- Yükleme ve kaldırma olayları sınıfı.  
   
--   İş parçacığı oluşturma ve yok etme olayları'nı tıklatın.  
+- İş parçacığı oluşturma ve yok etme olayları'nı tıklatın.  
   
--   İşlev giriş ve çıkış olayları.  
+- İşlev giriş ve çıkış olayları.  
   
--   Özel durumlar.  
+- Özel durumlar.  
   
--   Yönetilen ve yönetilmeyen kod yürütülmesi arasında geçişler.  
+- Yönetilen ve yönetilmeyen kod yürütülmesi arasında geçişler.  
   
--   Farklı çalışma zamanı bağlamları arasında geçişler.  
+- Farklı çalışma zamanı bağlamları arasında geçişler.  
   
--   Çalışma zamanını askıya alma hakkında bilgi sağlar.  
+- Çalışma zamanını askıya alma hakkında bilgi sağlar.  
   
--   Çalışma zamanı bellek yığını ve çöp toplama etkinliği hakkında bilgiler.  
+- Çalışma zamanı bellek yığını ve çöp toplama etkinliği hakkında bilgiler.  
   
  Profil oluşturma API tüm (yönetilmeyen) COM uyumlu dil üzerinden çağrılabilir.  
   
@@ -130,22 +130,22 @@ ms.locfileid: "58654100"
   
  Profil oluşturma API hem örnekleme hem de örnekleme yapmayan profil oluşturucuları için yararlıdır. A *örnekleme profil oluşturucu* profili normal saat vuruşlarında, örneğin 5 mili saniye inceler. A *örnekleme olmayan profil oluşturucu* bir olayın zaman uyumlu olarak olayına neden olmadan iş parçacığı ile bilgilendirilir.  
   
-### <a name="unsupported-functionality"></a>Desteklenmeyen işlev  
+### <a name="unsupported-functionality"></a>Desteklenmeyen İşlev  
  Profil oluşturma API'si aşağıdaki işlevleri desteklemez:  
   
--   Geleneksel Win32 yöntemleri kullanılarak profili oluşturulması gereken yönetilmeyen kod. Ancak, CLR Profil Oluşturucu yönetilen ve yönetilmeyen kod arasındaki sınırları belirlemek için geçiş olaylarını içerir.  
+- Geleneksel Win32 yöntemleri kullanılarak profili oluşturulması gereken yönetilmeyen kod. Ancak, CLR Profil Oluşturucu yönetilen ve yönetilmeyen kod arasındaki sınırları belirlemek için geçiş olaylarını içerir.  
   
--   Kendi kendini değiştiren açı yönelimli programlama gibi amaçlarla kendi kodunu değiştiren uygulamalar.  
+- Kendi kendini değiştiren açı yönelimli programlama gibi amaçlarla kendi kodunu değiştiren uygulamalar.  
   
--   Profil oluşturma API'si bu bilgileri sağlamaz sağlamadığı için sınır denetimi. CLR sınırlarının tüm yönetilen kod denetimi desteği sağlar.  
+- Profil oluşturma API'si bu bilgileri sağlamaz sağlamadığı için sınır denetimi. CLR sınırlarının tüm yönetilen kod denetimi desteği sağlar.  
   
--   Aşağıdaki nedenlerden dolayı desteklenmeyen uzaktan profil oluşturma:  
+- Aşağıdaki nedenlerden dolayı desteklenmeyen uzaktan profil oluşturma:  
   
-    -   Uzaktan profil oluşturma, yürütme süresini uzatır. Profil oluşturma arabirimlerini kullandığınızda, böylece profil oluşturma sonuçlarının unduly etkilenmez, yürütme süresi en aza indirmeniz gerekir. Bu, yürütme performansını izlendiğinde özellikle doğrudur. Profil oluşturma arabirimleri bellek kullanımını izlemek veya yığın çerçeveleri, nesneleri vb. hakkında çalışma zamanı bilgileri almak için kullanıldığında, ancak uzak profil oluşturma bir kısıtlaması değil.  
+    - Uzaktan profil oluşturma, yürütme süresini uzatır. Profil oluşturma arabirimlerini kullandığınızda, böylece profil oluşturma sonuçlarının unduly etkilenmez, yürütme süresi en aza indirmeniz gerekir. Bu, yürütme performansını izlendiğinde özellikle doğrudur. Profil oluşturma arabirimleri bellek kullanımını izlemek veya yığın çerçeveleri, nesneleri vb. hakkında çalışma zamanı bilgileri almak için kullanıldığında, ancak uzak profil oluşturma bir kısıtlaması değil.  
   
-    -   CLR kod Profilcisi bir veya daha fazla geri çağrı arabirimini, profili oluşturulan uygulamanın üzerinde çalıştığı yerel bilgisayardaki çalışma zamanı ile kaydetmelisiniz. Bu, bir uzaktan kod profil oluşturucu oluşturma özelliğini sınırlar.  
+    - CLR kod Profilcisi bir veya daha fazla geri çağrı arabirimini, profili oluşturulan uygulamanın üzerinde çalıştığı yerel bilgisayardaki çalışma zamanı ile kaydetmelisiniz. Bu, bir uzaktan kod profil oluşturucu oluşturma özelliğini sınırlar.  
   
--   Yüksek kullanılabilirlik gereksinimleri olan üretim ortamlarında profil oluşturma. Profil oluşturma API'si, geliştirme zamanı tanılamalarını desteklemek üzere oluşturulmuştur. Üretim ortamlarını desteklemek için gereken ciddi testleri gerçekleştirmedi.  
+- Yüksek kullanılabilirlik gereksinimleri olan üretim ortamlarında profil oluşturma. Profil oluşturma API'si, geliştirme zamanı tanılamalarını desteklemek üzere oluşturulmuştur. Üretim ortamlarını desteklemek için gereken ciddi testleri gerçekleştirmedi.  
   
  [Başa dön](#top)  
   
@@ -185,9 +185,9 @@ ms.locfileid: "58654100"
 ## <a name="profiling-unmanaged-code"></a>Yönetilmeyen kod profili oluşturma  
  Profil oluşturma API'si ortak dil çalışma zamanı (CLR), yönetilmeyen kodun profilini çıkarmaya çok az destek sağlar. Aşağıdaki işlev sağlanır:  
   
--   Yığın zincirlerini numaralandırma. Bu özellik, yönetilen kod ve yönetimsiz kod arasındaki sınırları belirlemek bir kod profil oluşturucusu sağlar.  
+- Yığın zincirlerini numaralandırma. Bu özellik, yönetilen kod ve yönetimsiz kod arasındaki sınırları belirlemek bir kod profil oluşturucusu sağlar.  
   
--   Belirleme olup bir yığın zincirinin yönetilen koda veya yerel koda karşılık gelir.  
+- Belirleme olup bir yığın zincirinin yönetilen koda veya yerel koda karşılık gelir.  
   
  .NET Framework sürüm 1.0 ve 1.1, bu yöntemler API hata ayıklama CLR'nin işlemdeki alt kullanılabilir. Bunlar CorDebug.idl dosyasında tanımlanır.  
   

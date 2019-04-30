@@ -1,20 +1,20 @@
 ---
-title: İzleme olayları başvurusu
+title: İzleme Olayları Başvurusu
 ms.date: 03/30/2017
 ms.assetid: c1c1ee87-f80a-449b-acd0-50d81eef116e
 ms.openlocfilehash: 5b3bba83b3c6c7ab27c9470213b7675f7e107c7e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699883"
 ---
-# <a name="tracking-events-reference"></a>İzleme olayları başvurusu
+# <a name="tracking-events-reference"></a>İzleme Olayları Başvurusu
 Bir iş akışı yürütme sırasında [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] yaşam sürelerinin başlarında çeşitli aşamaları boyunca hareket ettikçe olayları izleme başlatır. Konak, bu olaylara abone olma ve iş akışının ilerleme durumu yaşam süresi boyunca güncel tutun. Oluşturulan izleme olayları, bu bölümde ele alınmıştır.  
   
 ## <a name="event-reference"></a>Etkinliği başvurusu  
   
-|Olay Kimliği|Olay düzeyi|Olay iletisi|Anahtar Sözcükler|  
+|Olay Kimliği|Olay düzeyi|Olay iletisi|anahtar sözcükler|  
 |--------------|-----------------|-------------------|--------------|  
 |[100 - WorkflowInstanceRecord](100-workflowinstancerecord.md)|Bilgiler|TrackRecord WorkflowInstanceRecord, örnek kimliği = %1, RecordNumber = = %2, EventTime = %3, ActivityDefinitionId = %4, durum = %5, ek açıklamalar = %6, ProfileName %7 =|Sorun giderme, ögesi, WFTracking EndToEndMonitoring,|  
 |[101 - WorkflowInstanceUnhandledExceptionRecord](101-workflowinstanceunhandledexceptionrecord.md)|Hata|TrackRecord WorkflowInstanceUnhandledExceptionRecord, InstanceId = %1, RecordNumber = = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName = %8, özel durum = %9, ek açıklamalar = % 10, ProfileName = % 11|Sorun giderme, ögesi, WFTracking EndToEndMonitoring,|  

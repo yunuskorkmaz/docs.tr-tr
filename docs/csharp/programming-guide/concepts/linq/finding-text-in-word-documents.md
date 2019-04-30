@@ -3,11 +3,11 @@ title: (C#) Word belgelerinde metin bulma
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
 ms.openlocfilehash: 59d224307808edefbbb7e7ffc848f40fbe2880ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702340"
 ---
 # <a name="finding-text-in-word-documents-c"></a>(C#) Word belgelerinde metin bulma
 Bu konu faydalı bir şey için önceki sorguları genişletir: bir dizenin tüm örnekleri belgede bulun.  
@@ -325,7 +325,7 @@ StyleName:Code ><
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Sonraki bölümde WordprocessingML belgelerinin hakkında daha fazla bilgi verilmektedir:  
   
--   [Ayrıntılar Office Open XML WordprocessingML belgelerinin (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+- [Ayrıntılar Office Open XML WordprocessingML belgelerinin (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -3,11 +3,11 @@ title: WebRequest Sorunlarını ve Özel Durumları Anlama
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
 ms.openlocfilehash: 3a6dc06ed7abdbb6a28f9d6c09eda079157493d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704225"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>WebRequest Sorunlarını ve Özel Durumları Anlama
 <xref:System.Net.WebRequest> türetilen sınıflar (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, ve <xref:System.Net.FileWebRequest>) olağan dışı bir koşul göstermek için özel durumlar. Bazı durumlarda bu sorunların çözümlenmesi belirgin değildir.  

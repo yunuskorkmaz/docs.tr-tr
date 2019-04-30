@@ -10,11 +10,11 @@ helpviewer_keywords:
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
 ms.openlocfilehash: 8df19e69ff3be06704878ea290a3f4a2997127eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703325"
 ---
 # <a name="freezable-objects-overview"></a>Freezable Nesnelerine Genel Bakış
 Bu konu, etkili bir şekilde kullanmak ve oluşturmak üzere açıklar <xref:System.Windows.Freezable> uygulama performansını iyileştirmeye yardımcı olabilecek özel özellikleri sağlayan nesne. Freezable nesneleri Fırçalar, kalemler, dönüştürmeleri, geometri ve animasyonları örneklerindendir.  
@@ -63,11 +63,11 @@ Bu konu, etkili bir şekilde kullanmak ve oluşturmak üzere açıklar <xref:Sys
   
  Bir Freezable **olamaz** aşağıdakilerden biri doğruysa, dondurulmuş:  
   
--   Animasyonlu veya veri ilişkili özellikleri.  
+- Animasyonlu veya veri ilişkili özellikleri.  
   
--   Dinamik bir kaynak tarafından ayarlanan özellikler var. (Bkz [XAML kaynakları](xaml-resources.md) dinamik kaynaklar hakkında daha fazla bilgi için.)  
+- Dinamik bir kaynak tarafından ayarlanan özellikler var. (Bkz [XAML kaynakları](xaml-resources.md) dinamik kaynaklar hakkında daha fazla bilgi için.)  
   
--   İçerdiği <xref:System.Windows.Freezable> nelze zmrazit alt nesneler.  
+- İçerdiği <xref:System.Windows.Freezable> nelze zmrazit alt nesneler.  
   
  Bu koşullar false ise ve değiştirmek istemediğiniz <xref:System.Windows.Freezable>, daha önce açıklanan performans avantajlarını elde etmek için dondurun.  
   
@@ -122,13 +122,13 @@ mc:Ignorable="PresentationOptions"
 ## <a name="creating-your-own-freezable-class"></a>Freezable sınıfınızı oluşturma  
  Türetilen bir sınıf <xref:System.Windows.Freezable> aşağıdaki özellikleri elde etti.  
   
--   Özel durumlar: salt okunur (donduruldu) ve yazılabilir bir durumda.  
+- Özel durumlar: salt okunur (donduruldu) ve yazılabilir bir durumda.  
   
--   İş parçacığı güvenliği: dondurulmuş <xref:System.Windows.Freezable> iş parçacıkları arasında paylaşılabilir.  
+- İş parçacığı güvenliği: dondurulmuş <xref:System.Windows.Freezable> iş parçacıkları arasında paylaşılabilir.  
   
--   Ayrıntılı değişiklik bildirimi: Diğer aksine <xref:System.Windows.DependencyObject>s, Freezable nesneleri sağlar değişiklik bildirimleri alt özellik değerleri değiştiğinde.  
+- Ayrıntılı değişiklik bildirimi: Diğer aksine <xref:System.Windows.DependencyObject>s, Freezable nesneleri sağlar değişiklik bildirimleri alt özellik değerleri değiştiğinde.  
   
--   Kolay kopyalama: Freezable sınıfı ayrıntılı kopyaları oluşturan çeşitli yöntemler zaten uygulamıştır.  
+- Kolay kopyalama: Freezable sınıfı ayrıntılı kopyaları oluşturan çeşitli yöntemler zaten uygulamıştır.  
   
  A <xref:System.Windows.Freezable> bir tür <xref:System.Windows.DependencyObject>ve bu nedenle bağımlılık özelliği sistem kullanır. Sınıf özelliklerinin bağımlılık özellikleri olması gerekmez, ancak bağımlılık özellikleri kullanmak zorunda yazma çünkü kod miktarını azaltır <xref:System.Windows.Freezable> sınıfı aklınızda bağımlılık özellikleriyle tasarlanmıştır. Bağımlılık özelliği sistemi hakkında daha fazla bilgi için bkz. [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md).  
   
@@ -136,23 +136,23 @@ mc:Ignorable="PresentationOptions"
   
  Bağımlılık özelliği olmayan veri üyeleri sınıfınız varsa, aşağıdaki yöntemleri geçersiz kılmanız gerekir:  
   
--   <xref:System.Windows.Freezable.CloneCore%2A>  
+- <xref:System.Windows.Freezable.CloneCore%2A>  
   
--   <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
+- <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
   
--   <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.FreezeCore%2A>  
+- <xref:System.Windows.Freezable.FreezeCore%2A>  
   
  Ayrıca erişme ve bağımlılık özellikleri olmayan veri üyelerine yazma için aşağıdaki kurallara uymanız gerekir:  
   
--   Tüm başındaki [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] bağımlılık özelliği olmayan veri üyeleri okuyan, çağrı <xref:System.Windows.Freezable.ReadPreamble%2A> yöntemi.  
+- Tüm başındaki [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] bağımlılık özelliği olmayan veri üyeleri okuyan, çağrı <xref:System.Windows.Freezable.ReadPreamble%2A> yöntemi.  
   
--   Bağımlılık özelliği olmayan veri üyeleri Yazar herhangi bir API'yi başlangıcında, çağrı <xref:System.Windows.Freezable.WritePreamble%2A> yöntemi. (Çağırdıktan sonra <xref:System.Windows.Freezable.WritePreamble%2A> içinde bir [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], ek bir çağrı yapmak gerekmez <xref:System.Windows.Freezable.ReadPreamble%2A> de bağımlılık özelliği olmayan veri üyelerini okuyorsanız.)  
+- Bağımlılık özelliği olmayan veri üyeleri Yazar herhangi bir API'yi başlangıcında, çağrı <xref:System.Windows.Freezable.WritePreamble%2A> yöntemi. (Çağırdıktan sonra <xref:System.Windows.Freezable.WritePreamble%2A> içinde bir [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], ek bir çağrı yapmak gerekmez <xref:System.Windows.Freezable.ReadPreamble%2A> de bağımlılık özelliği olmayan veri üyelerini okuyorsanız.)  
   
--   Çağrı <xref:System.Windows.Freezable.WritePostscript%2A> bağımlılık özelliği olmayan veri üyelerine yazma yöntemleri çıkmadan önce yöntemi.  
+- Çağrı <xref:System.Windows.Freezable.WritePostscript%2A> bağımlılık özelliği olmayan veri üyelerine yazma yöntemleri çıkmadan önce yöntemi.  
   
  Sınıfınıza olan bağımlılık özelliği veri üyeleri içerip içermediğini <xref:System.Windows.DependencyObject> nesnelerini ayrıca çağırmalısınız <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> yöntemi, kendi değerlerden birine üye ayarlamak bile her değiştirdiğinizde `null`.  
   

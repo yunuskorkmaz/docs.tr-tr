@@ -3,11 +3,11 @@ title: Bildirim temelli kod-kesinlik temelli kod hataları (LINQ to XML) karış
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
 ms.openlocfilehash: 5963e470acebfe259126ab8f2a17e131cb44f25b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61682397"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Bildirim temelli kod/kesinliği kod hataları karışımı (LINQ to XML) karışık (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir XML ağacı doğrudan değiştirmenize olanak tanıyan çeşitli yöntemler içerir. Öğeleri ekleyebilir, öğeleri silin, bir öğenin içeriğini değiştirme, öznitelikleri ekleme ve benzeri. Bu programlama arabirimi açıklanan [XML ağaçlarını değiştirme (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Bir eksen gibi yineleme, <xref:System.Xml.Linq.XContainer.Elements%2A>ve eksen yineleme gibi XML ağacı değiştirmekte olduğunuz, garip bazı hatalarla kalabilirsiniz.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
 ms.openlocfilehash: d9afa49525f03c06f94b1b7b704fb3d9caa9e19d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748011"
 ---
 # <a name="serialization-and-deserialization"></a>Seri Hale Getirme ve Seri Durumdan Çıkarma
 Windows Communication Foundation (WCF) içeren yeni bir serileştirme motoruna <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> Arasında çevirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri ve her iki yönde de XML. Bu konu, seri hale getirici nasıl çalıştığını açıklar.  
@@ -109,11 +109,11 @@ Windows Communication Foundation (WCF) içeren yeni bir serileştirme motoruna <
   
  Ancak, bu yaklaşım, istenmeyen aşağıdaki özelliklere sahiptir:  
   
--   Performans. Verilerin çoğaltılması verimli değildir.  
+- Performans. Verilerin çoğaltılması verimli değildir.  
   
--   Döngüsel başvuru. Çoğaltma tarafından seri hale getirme, nesneler kendileri için diğer nesneler arasında bile başvuruyorsa, sonsuz bir döngüde sonuçlanır. (Seri hale getirici oluşturur bir <xref:System.Runtime.Serialization.SerializationException> böyle bir durumda.)  
+- Döngüsel başvuru. Çoğaltma tarafından seri hale getirme, nesneler kendileri için diğer nesneler arasında bile başvuruyorsa, sonsuz bir döngüde sonuçlanır. (Seri hale getirici oluşturur bir <xref:System.Runtime.Serialization.SerializationException> böyle bir durumda.)  
   
--   Semantik. Bazen iki başvurunun aynı nesneye ve iki özdeş nesneler için olan olgu korumak önemlidir.  
+- Semantik. Bazen iki başvurunun aynı nesneye ve iki özdeş nesneler için olan olgu korumak önemlidir.  
   
  Bu nedenleri, bazı `DataContractSerializer` oluşturucu aşırı yüklemeleri sahip bir `preserveObjectReferences` parametre (varsayılandır `false`). Bu parametre ayarlandığında `true`, yalnızca WCF anlayan, nesne başvuruları kodlama özel bir yöntem kullanılır. Ayarlandığında `true`, XML kodu örneği şimdi aşağıdakine benzer.  
   
@@ -131,11 +131,11 @@ Windows Communication Foundation (WCF) içeren yeni bir serileştirme motoruna <
   
  Bu mod sınırlamaları anlamak önemlidir:  
   
--   XML `DataContractSerializer` ile üretir `preserveObjectReferences` kümesine `true` diğer teknolojilerle birlikte çalışabilen değildir ve yalnızca bir başkası tarafından erişilebilen `DataContractSerializer` örneği de `preserveObjectReferences` kümesine `true`.  
+- XML `DataContractSerializer` ile üretir `preserveObjectReferences` kümesine `true` diğer teknolojilerle birlikte çalışabilen değildir ve yalnızca bir başkası tarafından erişilebilen `DataContractSerializer` örneği de `preserveObjectReferences` kümesine `true`.  
   
--   Bu özellik için meta veri (şema) desteği yoktur. Üretilen şema yalnızca durum için geçerli olduğunda `preserveObjectReferences` ayarlanır `false`.  
+- Bu özellik için meta veri (şema) desteği yoktur. Üretilen şema yalnızca durum için geçerli olduğunda `preserveObjectReferences` ayarlanır `false`.  
   
--   Bu özellik serileştirme ve seri durumundan çıkarma işleminin daha yavaş çalışmasına neden olabilir. Verilerin çoğaltılması gerekmez. ancak, bu modda ek nesne karşılaştırma gerçekleştirilmesi gerekir.  
+- Bu özellik serileştirme ve seri durumundan çıkarma işleminin daha yavaş çalışmasına neden olabilir. Verilerin çoğaltılması gerekmez. ancak, bu modda ek nesne karşılaştırma gerçekleştirilmesi gerekir.  
   
 > [!CAUTION]
 >  Zaman `preserveObjectReferences` modu etkin olduğunda, ayarlamak özellikle önemlidir `maxItemsInObjectGraph` doğru kota değeri. Diziler, bu modda işlenir yöntemi nedeniyle yalnızca sınırlı yüksek bellek tüketimine küçük bir kötü amaçlı iletisini oluşturmak bir saldırganın kolaydır `maxItemsInObjectGraph` kota.  
@@ -230,29 +230,29 @@ Windows Communication Foundation (WCF) içeren yeni bir serileştirme motoruna <
   
  Ancak, bazı sorunlar oluşabilir:  
   
--   Güvenlik. Seri durumdan çıkarılmakta olan XML içinde bulunan herhangi bir tür yüklenir. Bu, kötü amaçlı türleri yüklenmesini zorlamak için yararlanılabilir. Kullanarak `NetDataContractSerializer` yalnızca veri yapılmalıdır güvenilmeyen bir *serileştirme Bağlayıcısı* kullanılır (kullanarak <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> özelliği veya Oluşturucu parametresi). Bağlayıcı yalnızca güvenli türler yüklenmesine izin verir. Türler bir bağlayıcı mekanizması aynıdır <xref:System.Runtime.Serialization> ad alanı kullanın.  
+- Güvenlik. Seri durumdan çıkarılmakta olan XML içinde bulunan herhangi bir tür yüklenir. Bu, kötü amaçlı türleri yüklenmesini zorlamak için yararlanılabilir. Kullanarak `NetDataContractSerializer` yalnızca veri yapılmalıdır güvenilmeyen bir *serileştirme Bağlayıcısı* kullanılır (kullanarak <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> özelliği veya Oluşturucu parametresi). Bağlayıcı yalnızca güvenli türler yüklenmesine izin verir. Türler bir bağlayıcı mekanizması aynıdır <xref:System.Runtime.Serialization> ad alanı kullanın.  
   
--   Sürüm oluşturma. Tam tür ve derleme adları XML'de ciddi bir şekilde kullanarak nasıl türleri tutulan olabileceğini kısıtlar. Aşağıdakiler değiştirilemez: ad, ad alanları, derleme adları ve derleme sürümlerini yazın. Ayarı <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> özellik ya da Oluşturucu parametresini <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> varsayılan değeri yerine <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> derleme sürüm değişikliklerini, ancak genel parametre türleri sağlar.  
+- Sürüm oluşturma. Tam tür ve derleme adları XML'de ciddi bir şekilde kullanarak nasıl türleri tutulan olabileceğini kısıtlar. Aşağıdakiler değiştirilemez: ad, ad alanları, derleme adları ve derleme sürümlerini yazın. Ayarı <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> özellik ya da Oluşturucu parametresini <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> varsayılan değeri yerine <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> derleme sürüm değişikliklerini, ancak genel parametre türleri sağlar.  
   
--   Birlikte çalışabilirlik. Çünkü [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tür ve derleme adları dahil edilir XML'de platformları dışında [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] elde edilen verilere erişemez.  
+- Birlikte çalışabilirlik. Çünkü [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tür ve derleme adları dahil edilir XML'de platformları dışında [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] elde edilen verilere erişemez.  
   
--   Performans. Tür ve derleme yazma önemli ölçüde artar elde edilen XML boyutu adları.  
+- Performans. Tür ve derleme yazma önemli ölçüde artar elde edilen XML boyutu adları.  
   
  Bu mekanizma, ikili veya SOAP serileştirme tarafından kullanılan benzer [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uzaktan iletişim (özellikle <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>).  
   
  Kullanarak `NetDataContractSerializer` kullanmaya benzer `DataContractSerializer`, aşağıdaki farklarla birlikte:  
   
--   Oluşturucu bir kök türü belirtmenizi gerektirmez. ' In aynı örneğine sahip herhangi bir türün serileştirip serileştiremeyeceğini `NetDataContractSerializer`.  
+- Oluşturucu bir kök türü belirtmenizi gerektirmez. ' In aynı örneğine sahip herhangi bir türün serileştirip serileştiremeyeceğini `NetDataContractSerializer`.  
   
--   Oluşturucular bilinen türlerinin bir listesini kabul etmez. Tür adları XML olarak serileştirilme şeklini, gereksiz bilinen türler mekanizmadır.  
+- Oluşturucular bilinen türlerinin bir listesini kabul etmez. Tür adları XML olarak serileştirilme şeklini, gereksiz bilinen türler mekanizmadır.  
   
--   Oluşturucular, bir veri anlaşması vekil kabul etmeyin. Bunun yerine, kabul bir <xref:System.Runtime.Serialization.ISurrogateSelector> adlı parametreyi `surrogateSelector` (eşlenir <xref:System.Runtime.Serialization.NetDataContractSerializer.SurrogateSelector%2A> özelliği). Eski vekil mekanizması budur.  
+- Oluşturucular, bir veri anlaşması vekil kabul etmeyin. Bunun yerine, kabul bir <xref:System.Runtime.Serialization.ISurrogateSelector> adlı parametreyi `surrogateSelector` (eşlenir <xref:System.Runtime.Serialization.NetDataContractSerializer.SurrogateSelector%2A> özelliği). Eski vekil mekanizması budur.  
   
--   Oluşturucular adlı bir parametreyi kabul `assemblyFormat` , <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> eşlenen <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> özelliği. Daha önce açıklandığı gibi bu seri hale getirici sürüm yeteneklerini geliştirmek için kullanılabilir. Bu aynı <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> ikili veya SOAP serileştirme mekanizması.  
+- Oluşturucular adlı bir parametreyi kabul `assemblyFormat` , <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> eşlenen <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> özelliği. Daha önce açıklandığı gibi bu seri hale getirici sürüm yeteneklerini geliştirmek için kullanılabilir. Bu aynı <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> ikili veya SOAP serileştirme mekanizması.  
   
--   Kabul oluşturucular bir <xref:System.Runtime.Serialization.StreamingContext> adlı parametreyi `context` eşlenen <xref:System.Runtime.Serialization.NetDataContractSerializer.Context%2A> özelliği. Serileştirilmekte olan tür olarak bilgi geçirmek için kullanabilirsiniz. Bu kullanım olarak aynıdır <xref:System.Runtime.Serialization.StreamingContext> diğer kullanılan mekanizma <xref:System.Runtime.Serialization> sınıfları.  
+- Kabul oluşturucular bir <xref:System.Runtime.Serialization.StreamingContext> adlı parametreyi `context` eşlenen <xref:System.Runtime.Serialization.NetDataContractSerializer.Context%2A> özelliği. Serileştirilmekte olan tür olarak bilgi geçirmek için kullanabilirsiniz. Bu kullanım olarak aynıdır <xref:System.Runtime.Serialization.StreamingContext> diğer kullanılan mekanizma <xref:System.Runtime.Serialization> sınıfları.  
   
--   <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> Ve <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> yöntemleri adlarıdır <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> ve <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> yöntemleri. Bunlar, ikili veya SOAP serileştirme ile daha tutarlı bir programlama modeli sağlamak için mevcut.  
+- <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> Ve <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> yöntemleri adlarıdır <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> ve <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> yöntemleri. Bunlar, ikili veya SOAP serileştirme ile daha tutarlı bir programlama modeli sağlamak için mevcut.  
   
  Bu özellikler hakkında daha fazla bilgi için bkz. [ikili serileştirme](../../../../docs/standard/serialization/binary-serialization.md).  
   

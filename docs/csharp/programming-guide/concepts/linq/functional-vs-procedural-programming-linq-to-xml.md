@@ -3,30 +3,30 @@ title: İşlevsel ve Yordam programlama karşılaştırması (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fc64e39c-a487-4882-9169-da4de97917d9
 ms.openlocfilehash: 0f45efabd0e2092325ac18c7fbf195c3338acf87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668256"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>İşlevsel ve Yordam programlama karşılaştırması (LINQ to XML) (C#)
 XML uygulama çeşitli türleri şunlardır:  
   
--   Bazı uygulamalar kaynak XML belgelerini alın ve kaynak belgeleri değerinden farklı bir şekil olan yeni XML belgeleri oluşturmak.  
+- Bazı uygulamalar kaynak XML belgelerini alın ve kaynak belgeleri değerinden farklı bir şekil olan yeni XML belgeleri oluşturmak.  
   
--   Bazı uygulamalar kaynak XML belgelerini alın ve sonuç belgeleri, HTML veya CSV metin dosyaları gibi tamamen farklı bir biçimde üretmek.  
+- Bazı uygulamalar kaynak XML belgelerini alın ve sonuç belgeleri, HTML veya CSV metin dosyaları gibi tamamen farklı bir biçimde üretmek.  
   
--   Bazı uygulamalar kaynak XML belgelerini alın ve kayıtları bir veritabanına Ekle.  
+- Bazı uygulamalar kaynak XML belgelerini alın ve kayıtları bir veritabanına Ekle.  
   
--   Bazı uygulamalar, bir veritabanı gibi başka bir kaynaktan veri almak ve XML belgeleri oluşturun.  
+- Bazı uygulamalar, bir veritabanı gibi başka bir kaynaktan veri almak ve XML belgeleri oluşturun.  
   
  Bu XML uygulama türleri tümünün değildir, ancak bir temsilci uygulamak için bir XML Programcı olan işlevselliği türleri kümesini şunlardır.  
   
  Tüm bu tür uygulamalar, bir geliştirici alabilir ve karşıt iki yaklaşım vardır:  
   
--   Bildirim temelli bir yaklaşım kullanarak işlevsel oluşturma.  
+- Bildirim temelli bir yaklaşım kullanarak işlevsel oluşturma.  
   
--   Yordam kodu kullanarak bellek içi XML ağacı değişikliği.  
+- Yordam kodu kullanarak bellek içi XML ağacı değişikliği.  
   
  LINQ to XML her iki yaklaşım destekler.  
   

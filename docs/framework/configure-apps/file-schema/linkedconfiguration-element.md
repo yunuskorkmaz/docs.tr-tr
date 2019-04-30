@@ -12,11 +12,11 @@ helpviewer_keywords:
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 ms.openlocfilehash: 909ee7cbb7cd31cf213f305b23237cb69e295882
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674655"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration > öğesi
 
@@ -46,14 +46,14 @@ Dahil edilecek bir yapılandırma dosyası belirtir.
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-Hiçbiri
+None
 
 ## <a name="remarks"></a>Açıklamalar
 
-**\<LinkedConfiguration >** öğesi bileşeni derlemeler için bakım basitleştirir. İyi bilinen bir konumda bulunan bir yapılandırma dosyası bir derleme bir veya daha fazla kullanmanız durumunda derleme kullanan uygulamaların yapılandırma dosyalarını kullanabilirler  **\<linkedConfiguration >** yapılandırma bilgilerini doğrudan dahil olmak üzere yerine derleme yapılandırma dosyası eklenecek öğe. Bileşen derlemesi değiştiğinde, ortak yapılandırma dosyasını güncelleştirme derleme kullanan tüm uygulamalar için güncelleştirilmiş yapılandırma bilgilerini sağlar.
+ **\<LinkedConfiguration >** öğesi bileşeni derlemeler için bakım basitleştirir. İyi bilinen bir konumda bulunan bir yapılandırma dosyası bir derleme bir veya daha fazla kullanmanız durumunda derleme kullanan uygulamaların yapılandırma dosyalarını kullanabilirler  **\<linkedConfiguration >** yapılandırma bilgilerini doğrudan dahil olmak üzere yerine derleme yapılandırma dosyası eklenecek öğe. Bileşen derlemesi değiştiğinde, ortak yapılandırma dosyasını güncelleştirme derleme kullanan tüm uygulamalar için güncelleştirilmiş yapılandırma bilgilerini sağlar.
 
 > [!NOTE]
-> **\<LinkedConfiguration >** öğesi Windows yan yana bildirimleri olan uygulamalar için desteklenmez.
+>  **\<LinkedConfiguration >** öğesi Windows yan yana bildirimleri olan uygulamalar için desteklenmez.
 
 Aşağıdaki kuralları bağlantılı yapılandırma dosyaları yöneten:
 
@@ -65,7 +65,7 @@ Aşağıdaki kuralları bağlantılı yapılandırma dosyaları yöneten:
 
 - Tüm bağlantılı yapılandırma dosyaları davranıştır benzer bir dosya oluşturmak üzere birleştirilir `#include` C/C++'ta yönergesi.
 
-- **\<LinkedConfiguration >** öğesi yalnızca uygulama yapılandırma dosyalarında izin verilir; içindeki sayılır *Machine.config*.
+-  **\<LinkedConfiguration >** öğesi yalnızca uygulama yapılandırma dosyalarında izin verilir; içindeki sayılır *Machine.config*.
 
 - Döngüsel başvuru algılandı ve sonlandırıldı. Diğer bir deyişle,  **\<linkedConfiguration >** yapılandırma dosyalarını bir dizi öğeleri formunda bir döngü, döngü algılandı ve durduruldu.
 

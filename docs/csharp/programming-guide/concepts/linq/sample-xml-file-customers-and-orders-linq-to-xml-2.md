@@ -1,15 +1,15 @@
 ---
-title: 'Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)'
+title: 'Örnek XML Dosyası: Müşteriler ve Siparişler (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: d6d1c9ea-be74-4e6d-bfdd-d4bcc2d301cf
 ms.openlocfilehash: 74e9ba00b61dbed532c0309043c9a9c944ea6932
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680694"
 ---
-# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)
+# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>Örnek XML Dosyası: Müşteriler ve Siparişler (LINQ to XML)
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Bu dosya, müşteriler ve siparişler içerir.  
   
  Konu [örnek XSD dosyası: Müşteriler ve siparişler](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md) bu belgeyi doğrulamak için kullanılan bir XSD içerir. Kullandığı `xs:key` ve `xs:keyref` , kurmak için XSD özelliklerinin `CustomerID` özniteliği `Customer` öğesi olan bir anahtar ve arasında ilişki kurmak için `CustomerID` her öğe `Order` öğesi ve `CustomerID` her öznitelik `Customer` öğesi.  

@@ -10,23 +10,23 @@ ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7124b6b234601e3afc27109ac318f47e3fe40c35
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675357"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>Uygulama Etki Alanları ve Derlemelerle Programlama
-Microsoft Internet Explorer, ASP.NET ve Windows Kabuk yük ortak dil çalışma zamanı bir işlemine gibi konakları Oluştur bir [uygulama etki alanı](../../../docs/framework/app-domains/application-domains.md) söz işlemek ve ardından yükleme ve o uygulama etki alanında kullanıcı kodu yürütme .NET Framework uygulama çalışırken. Çoğu durumda, uygulama etki alanları oluşturma ve bunların içine çalışma zamanı ana bilgisayarı bu görevleri gerçekleştirdiğinden derlemeleri yükleme hakkında endişelenmeniz gerekmez.  
+Microsoft Internet Explorer, ASP.NET ve Windows Kabuğu yük işleme, ortak dil çalışma zamanı gibi ana bilgisayarları oluşturma bir [uygulama etki alanı](../../../docs/framework/app-domains/application-domains.md) uygulamasındaki işlemek ve ardından yükleme ve bu uygulama etki alanında kullanıcı kodu yürütme bir .NET Framework uygulama çalışırken. Çoğu durumda, uygulama etki alanları oluşturma ve bunları çalışma zamanı ana bilgisayarı, bu görevleri gerçekleştirdiğinden derlemeleri yükleme hakkında endişelenmeniz gerekmez.  
   
- Ortak dil çalışma zamanı barındıracak bir uygulama araçlar veya programlama yoluyla kaldırmak istediğiniz kod oluşturma veya kaldırıldığında ve yeniden takılabilir bileşenler anında oluşturma oluşturuyorsanız, ancak siz kendi oluşturacağınız uygulama etki alanları. Bir çalışma zamanı ana oluşturmadığınızı olsa bile, bu bölümde uygulama etki alanları ve bu uygulama etki alanlarında yüklenen derlemeler ile çalışma konusunda önemli bilgileri sağlar.  
+ Araçlar veya programlama yoluyla kaldırmak istediğiniz kod oluşturma veya kaldırılmış ve yeniden takılabilir bileşenleri hızla oluşturma, ortak dil çalışma zamanı barındıracak bir uygulama oluşturuyorsanız, ancak kendi oluşturacağınız uygulama etki alanları. Bir çalışma zamanı ana bilgisayarı oluşturmadığınızı olsa bile, bu bölümde uygulama etki alanları ve bu uygulama etki alanlarında yüklenen derlemeler ile nasıl çalışılacağı hakkında önemli bilgileri sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Uygulama Etki Alanları ve Bütünleştirilmiş Kodlar için Nasıl Yapılır Konuları](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)  
- Uygulama etki alanları ve derlemeler ile programlama kavramsal belgelerinde bulunan tüm nasıl yapılır konuları için bağlantılar sağlar.  
+ Programlama uygulama etki alanları ve derlemeler için kavramsal belgelerde bulunan tüm nasıl yapılır konulara bağlantılar sağlar.  
   
  [Uygulama Etki Alanlarını Kullanma](../../../docs/framework/app-domains/use.md)  
- Oluşturma, yapılandırma ve uygulama etki alanları kullanılarak örnekler verilmektedir.  
+ Oluşturma, yapılandırma ve uygulama etki alanları kullanılarak örnekler sağlar.  
   
  [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  Derlemelerde nasıl öznitelik oluşturacağınızı, işaretleyeceğinizi ve ayarlayacağınızı açıklar.  

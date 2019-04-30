@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
 ms.openlocfilehash: a5a8d4d0d41efb7a255080994c8e18302d302447
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669244"
 ---
 # <a name="workflow-security"></a>İş Akışı Güvenliği
 Windows Workflow Foundation (WF), Microsoft SQL Server ve Windows Communication Foundation (WCF) gibi birçok farklı teknoloji ile tümleşiktir. Bu teknolojiler ile etkileşim güvenlik sorunları yanlış yapıldığında, iş akışınıza neden olabilir.
@@ -28,21 +28,21 @@ Windows Workflow Foundation (WF), Microsoft SQL Server ve Windows Communication 
 
 ## <a name="sql-server-security-concerns"></a>SQL Server güvenlik konuları
 
--   Çok sayıda alt etkinlikleri, konumları, yer işaretleri, konak uzantıları veya kapsamları kullanıldığında veya çok büyük yükleri yer işaretleriyle kullanıldığında, bellek tükendi veya Kalıcılık sırasında veritabanı boş alanı aşırı miktarda ayrılabilir. Bu, nesne düzeyinde ve veritabanı düzeyinde güvenlik kullanarak azaltılabilir.
+- Çok sayıda alt etkinlikleri, konumları, yer işaretleri, konak uzantıları veya kapsamları kullanıldığında veya çok büyük yükleri yer işaretleriyle kullanıldığında, bellek tükendi veya Kalıcılık sırasında veritabanı boş alanı aşırı miktarda ayrılabilir. Bu, nesne düzeyinde ve veritabanı düzeyinde güvenlik kullanarak azaltılabilir.
 
--   Kullanırken <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, örnek deposuna güvenli hale getirilmelidir. Daha fazla bilgi için [SQL Server en iyi uygulamaları](https://go.microsoft.com/fwlink/?LinkId=164972).
+- Kullanırken <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, örnek deposuna güvenli hale getirilmelidir. Daha fazla bilgi için [SQL Server en iyi uygulamaları](https://go.microsoft.com/fwlink/?LinkId=164972).
 
--   Örnek deposunda hassas verilerin şifrelenmesi. Daha fazla bilgi için [SQL güvenlik şifrelemesi](https://go.microsoft.com/fwlink/?LinkId=164976).
+- Örnek deposunda hassas verilerin şifrelenmesi. Daha fazla bilgi için [SQL güvenlik şifrelemesi](https://go.microsoft.com/fwlink/?LinkId=164976).
 
--   Yapılandırma dosyasında (Web.Config genellikle) güvenlidir ve bulunan oturum açma ve parola bilgisi olmadığından emin olmak için veritabanı bağlantı dizesi genellikle bir yapılandırma dosyasına dahil olduğundan, windows düzeyi güvenlik (ACL) kullanılmalıdır bağlantı dizesi. Windows kimlik doğrulaması web sunucusu ve veritabanı arasında yerine kullanılmalıdır.
+- Yapılandırma dosyasında (Web.Config genellikle) güvenlidir ve bulunan oturum açma ve parola bilgisi olmadığından emin olmak için veritabanı bağlantı dizesi genellikle bir yapılandırma dosyasına dahil olduğundan, windows düzeyi güvenlik (ACL) kullanılmalıdır bağlantı dizesi. Windows kimlik doğrulaması web sunucusu ve veritabanı arasında yerine kullanılmalıdır.
 
 ## <a name="considerations-for-workflowservicehost"></a>WorkflowServiceHost dikkate alınacak noktalar
 
--   İş akışlarında kullanılan bir Windows Communication Foundation (WCF) uç noktalarını güvenli hale getirilmelidir. Daha fazla bilgi için [WCF güvenliğine genel bakış](https://go.microsoft.com/fwlink/?LinkID=164975).
+- İş akışlarında kullanılan bir Windows Communication Foundation (WCF) uç noktalarını güvenli hale getirilmelidir. Daha fazla bilgi için [WCF güvenliğine genel bakış](https://go.microsoft.com/fwlink/?LinkID=164975).
 
--   Konak düzeyinde yetkilendirme kullanarak uygulanabilir <xref:System.ServiceModel.ServiceAuthorizationManager>. Bkz: [nasıl yapılır: Bir hizmet için özel Yetkilendirme Yöneticisi oluşturma](https://go.microsoft.com/fwlink/?LinkId=192228) Ayrıntılar için.
+- Konak düzeyinde yetkilendirme kullanarak uygulanabilir <xref:System.ServiceModel.ServiceAuthorizationManager>. Bkz: [nasıl yapılır: Bir hizmet için özel Yetkilendirme Yöneticisi oluşturma](https://go.microsoft.com/fwlink/?LinkId=192228) Ayrıntılar için.
 
--   Gelen iletinin ServiceSecurityContext ayrıca OperationContext erişimi tarafından iş akışı içinde kullanılabilir.
+- Gelen iletinin ServiceSecurityContext ayrıca OperationContext erişimi tarafından iş akışı içinde kullanılabilir.
 
 ## <a name="wf-security-pack-ctp"></a>WF güvenlik paketi CTP
  İlk topluluk teknoloji Önizleme (CTP) sürümü bir dizi etkinlikleri ve kendi uygulama temel Microsoft WF güvenlik paketi CTP 1. [Windows Workflow Foundation](index.md) içinde [.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF (4) ve [Windows Identity Foundation (WIF)](../security/index.md).  Microsoft WF güvenlik paketi CTP 1 etkinlikleri ve hangi kolayca iş akışı kullanarak güvenlikle ilgili çeşitli senaryoları etkinleştirmek nasıl çalışılacağını, tasarımcılar içerir dahil olmak üzere:

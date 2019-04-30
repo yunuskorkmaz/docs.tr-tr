@@ -15,11 +15,11 @@ helpviewer_keywords:
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
 ms.openlocfilehash: 920a93894cc126f85bc6b618efbe6e9cedea4881
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59332579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666436"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>Nasıl yapılır: Windows Forms DataGrid Denetimini Veri Kaynağına Bağlama
 > [!NOTE]
@@ -106,6 +106,6 @@ ms.locfileid: "59332579"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DataGrid Denetimine Genel Bakış](datagrid-control-overview-windows-forms.md)
-- [Nasıl yapılır: Windows Forms DataGrid Denetimine Tablo ve Sütun Ekleme](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Nasıl yapılır: Windows Forms DataGrid denetimine tablolar ve sütunlar ekleme](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [DataGrid Denetimi](datagrid-control-windows-forms.md)
 - [Windows Forms Veri Bağlama](../windows-forms-data-binding.md)

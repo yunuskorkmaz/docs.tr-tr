@@ -1,17 +1,17 @@
 ---
-title: Durum ve Docker uygulamalarında veri
+title: Docker uygulamalarında durum ve veriler
 description: Docker uygulamalarında durum ve veri yönetimi. Mikro hizmet örnekleri expendable ancak verileri nasıl ile mikro hizmetler bu durumu çözmek değil.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
 ms.openlocfilehash: 70c3cee8c5fd1e63f2ff869f49b1fb02ab8f59dd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689570"
 ---
-# <a name="state-and-data-in-docker-applications"></a>Durum ve Docker uygulamalarında veri
+# <a name="state-and-data-in-docker-applications"></a>Docker uygulamalarında durum ve veriler
 
 Çoğu durumda, bir kapsayıcı örneği bir işlem olarak düşünebilirsiniz. Bir işlemin durumunu sürekli olarak saklamak değil. Yerel depolama alanı için bir kapsayıcı yazabilirsiniz, ancak örneği çevresinde süresiz olarak olacağı varsayılarak bellek tek bir konumda kalıcı olduğu varsayılarak gibi olacaktır. Gibi işlemler, kapsayıcı görüntüleri birden çok örneğe sahip veya sonunda sonlandırılacak varsaymanız gerekir. Bir kapsayıcı Düzenleyicisi ile yönetildikleri varsa, bunlar bir düğüm veya VM diğerine taşınır, varsaymanız gerekir.
 

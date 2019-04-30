@@ -10,26 +10,26 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 ms.openlocfilehash: 306c042fe432f0c087ceb1b5ff6b5aec0fe0bbc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748258"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>İzlenecek yol: Windows Forms'da Tasarım Zamanında WPF İçeriğini Düzenleme
 Bu izlenecek yol sabitleme ve dayama çizgileri, gibi Windows Forms düzeni özellikleri Windows Presentation Foundation (WPF) denetimleri düzenlemek için nasıl kullanılacağını gösterir.
 
  Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:
 
--   Projeyi oluşturun.
+- Projeyi oluşturun.
 
--   WPF denetimi oluşturun.
+- WPF denetimi oluşturun.
 
--   Konak WPF denetimleri Düzen paneli içinde.
+- Konak WPF denetimleri Düzen paneli içinde.
 
--   WPF denetimleri hizalama dayama kullanın.
+- WPF denetimleri hizalama dayama kullanın.
 
--   Sabitleme ve WPF denetimleri yerleştirme.
+- Sabitleme ve WPF denetimleri yerleştirme.
 
 > [!NOTE]
 >  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -37,7 +37,7 @@ Bu izlenecek yol sabitleme ve dayama çizgileri, gibi Windows Forms düzeni öze
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:  
   
--   Visual Studio 2012.  
+- Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Projeyi Oluşturma  
  İlk adım Windows Forms projesi oluşturmaktır.  
@@ -47,7 +47,7 @@ Bu izlenecek yol sabitleme ve dayama çizgileri, gibi Windows Forms düzeni öze
   
 #### <a name="to-create-the-project"></a>Proje oluşturmak için  
   
--   Visual Basic veya Visual C# adlı yeni bir Windows Forms uygulaması projesi oluşturma `ArrangeElementHost`.  
+- Visual Basic veya Visual C# adlı yeni bir Windows Forms uygulaması projesi oluşturma `ArrangeElementHost`.  
   
 ## <a name="creating-the-wpf-control"></a>WPF denetimi oluşturma  
  Bir WPF denetiminde projeye ekledikten sonra form üzerinde düzenleyebilirsiniz.  

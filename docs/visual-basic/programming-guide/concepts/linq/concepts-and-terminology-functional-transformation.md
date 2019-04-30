@@ -3,11 +3,11 @@ title: Kavramlar ve terimler (işlevsel dönüşüm) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
 ms.openlocfilehash: c6308185b39651095482dca434ce25d717bd5e6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663485"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Kavramlar ve terimler (işlevsel dönüşüm) (Visual Basic)
 Bu konu, saf işlevsel dönüşümlere terimleri ve kavramları tanıtır. Veri dönüştürme işlevsel dönüşüm yaklaşım genellikle programa daha ifadesel ve daha kolay hata ayıklaması ve bakımı daha geleneksel, zorunlu programlama daha hızlı kod üretir.  
@@ -17,9 +17,9 @@ Bu konu, saf işlevsel dönüşümlere terimleri ve kavramları tanıtır. Veri 
 ## <a name="what-is-pure-functional-transformation"></a>Saf işlevsel dönüşüm nedir?  
  İçinde *saf işlevsel dönüşüm*, çağrılan işlevler bir dizi *saf işlevler*, yapılandırılmış verileri özgün biçimlerinde bir dizi başka bir biçime dönüştürmek nasıl tanımlayın. "Saf" sözcüğü işlevleri gösterir *birleştirilebilir*, olmalarını gerektirir:  
   
--   *Müstakil*, böylece bunlar kullanılabilir serbestçe sıralı ve entanglement veya programın geri kalanını ile bağımlılıkları olmadan düzenlenmeyecek. Saf dönüştürmeleri hakkında bilgi sahibi ya da kendi ortamlarında üzerinde etkisi vardır. Diğer bir deyişle, dönüşümünde işlevleri yok *yan etkileri*.  
+- *Müstakil*, böylece bunlar kullanılabilir serbestçe sıralı ve entanglement veya programın geri kalanını ile bağımlılıkları olmadan düzenlenmeyecek. Saf dönüştürmeleri hakkında bilgi sahibi ya da kendi ortamlarında üzerinde etkisi vardır. Diğer bir deyişle, dönüşümünde işlevleri yok *yan etkileri*.  
   
--   *Durum bilgisi olmayan*, böylece aynı işlev veya belirli işlevler kümesi aynı giriş yürütülen her zaman aynı çıktısında neden olur. Saf dönüşümleri önceki kullanımları bellek var.  
+- *Durum bilgisi olmayan*, böylece aynı işlev veya belirli işlevler kümesi aynı giriş yürütülen her zaman aynı çıktısında neden olur. Saf dönüşümleri önceki kullanımları bellek var.  
   
 > [!IMPORTANT]
 >  Bu öğreticinin geri kalanını içinde "saf işlev" terimi, genel anlamda programlama bir yaklaşım ve belirli bir dil özelliği belirtmek için kullanılır.  

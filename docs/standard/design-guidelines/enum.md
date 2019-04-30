@@ -1,5 +1,5 @@
 ---
-title: Sabit listesi tasarımı
+title: Sabit Listesi Tasarımı
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
 author: KrzysztofCwalina
 ms.openlocfilehash: c0645ba1179c4c6fd961b871b3061cd51174f427
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669101"
 ---
-# <a name="enum-design"></a>Sabit listesi tasarımı
+# <a name="enum-design"></a>Sabit Listesi Tasarımı
 Numaralandırmalar özel türde bir değer türü var. İki enum türü vardır: Basit sabit listeleri ve bayrak sabit listeleri.  
   
  Basit numaralandırmalar küçük kapalı seçenek kümeleri temsil eder. Yaygın olarak karşılaşılan örneklerden basit Enum renkleri kümesidir.  
@@ -48,17 +48,17 @@ Numaralandırmalar özel türde bir değer türü var. İki enum türü vardır:
   
  **✓ CONSIDER** kullanarak <xref:System.Int32> (varsayılan olarak çoğu programlama dilleri) enum temel alınan türü olarak aşağıdakilerin doğru değilse:  
   
--   Sabit listesi flags sabit listesi olduğu ve 32'den fazla bayraklarınız veya ileride daha fazlasına sahip olmayı beklediğiniz.  
+- Sabit listesi flags sabit listesi olduğu ve 32'den fazla bayraklarınız veya ileride daha fazlasına sahip olmayı beklediğiniz.  
   
--   Temel alınan türü farklı olması gereken <xref:System.Int32> boyutu farklı numaralandırmalar bekleniyor yönetilmeyen kod ile daha kolay birlikte çalışabilirlik.  
+- Temel alınan türü farklı olması gereken <xref:System.Int32> boyutu farklı numaralandırmalar bekleniyor yönetilmeyen kod ile daha kolay birlikte çalışabilirlik.  
   
--   Küçük temel alınan türü alan önemli ölçüde tasarruf sonuçlanır. Denetim akışı için bir bağımsız değişken olarak esas olarak kullanılmak üzere enum bekliyorsanız, boyutu küçük fark eder. Boyut tasarrufları önemli değilse:  
+- Küçük temel alınan türü alan önemli ölçüde tasarruf sonuçlanır. Denetim akışı için bir bağımsız değişken olarak esas olarak kullanılmak üzere enum bekliyorsanız, boyutu küçük fark eder. Boyut tasarrufları önemli değilse:  
   
-    -   Beklediğiniz alan çok sık örneklenmiş yapısı veya sınıf olarak kullanılacak sabit.  
+    - Beklediğiniz alan çok sık örneklenmiş yapısı veya sınıf olarak kullanılacak sabit.  
   
-    -   Büyük diziler veya koleksiyonları numaralandırma örnekleri oluşturmak için kullanıcıları beklediğiniz.  
+    - Büyük diziler veya koleksiyonları numaralandırma örnekleri oluşturmak için kullanıcıları beklediğiniz.  
   
-    -   Çok sayıda serileştirilecek enum örneklerini beklediğiniz.  
+    - Çok sayıda serileştirilecek enum örneklerini beklediğiniz.  
   
  Bellek içi kullanım için yönetilen nesneler her zaman olduğunu unutmayın `DWORD`-hizalı etkili bir şekilde birden fazla sıralanmış sabit veya bir örneğindeki toplam örnek boyutu her zaman olduğu için daha küçük bir enum ile paketini bir fark yaratmak için diğer küçük yapıları gerekir en fazla yuvarlanacak giderek bir `DWORD`.  
   

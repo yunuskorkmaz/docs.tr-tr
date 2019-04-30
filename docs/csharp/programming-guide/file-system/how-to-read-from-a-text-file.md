@@ -11,11 +11,11 @@ helpviewer_keywords:
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
 ms.openlocfilehash: 560453a81124a3ee52a2ffd794ddac026c7394a5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680187"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Nasıl yapılır: Bir metin dosyasından okuma (C# Programlama Kılavuzu)
 Bu örnek statik yöntemleri kullanarak bir metin dosyasının içeriğini okur <xref:System.IO.File.ReadAllText%2A> ve <xref:System.IO.File.ReadAllLines%2A> gelen <xref:System.IO.File?displayProperty=nameWithType> sınıfı.  
@@ -36,7 +36,7 @@ Bu örnek statik yöntemleri kullanarak bir metin dosyasının içeriğini okur 
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
--   Dosya yok veya belirtilen konumda yok. Yol ve dosya adının yazımını denetleyin.  
+- Dosya yok veya belirtilen konumda yok. Yol ve dosya adının yazımını denetleyin.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Dosyanın içeriğini belirlemek için bir dosya adına güvenmeyin. Örneğin, dosyayı `myFile.cs` bir C# kaynak dosyası olmayabilir.  

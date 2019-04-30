@@ -6,11 +6,11 @@ helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
 ms.openlocfilehash: b7018afa1272f4ae092863de6b7f9ef783001244
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61710933"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Nasıl yapılır: Komut satırı bağımsız değişkenlerini görüntüleme (C# Programlama Kılavuzu)
 Komut satırında yürütülebilir bir dosya için sağlanan bağımsız değişkenler için isteğe bağlı bir parametre üzerinden erişilebilir `Main`. Bağımsız değişken bir dize dizisi biçiminde sağlanır. Dizinin her öğesinin tek bağımsız değişken içeriyor. Bağımsız değişkenler arasındaki boşluk kaldırılır. Örneğin, kurgusal bir yürütülebilir komut satırı bu çağrıları göz önünde bulundurun:  

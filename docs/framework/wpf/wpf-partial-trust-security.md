@@ -16,11 +16,11 @@ helpviewer_keywords:
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
 ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696599"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF Kısmi Güven Güvenliği
 <a name="introduction"></a> Genel olarak, Internet uygulamaları kötü amaçlı hasarı önlemek için kritik sistem kaynaklarına doğrudan erişimini sınırlı olmalıdır. Varsayılan olarak, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] ve istemci tarafı komut dosyası dilleri önemli sistem kaynaklarına erişmek mümkün değildir. Windows Presentation Foundation (WPF) tarayıcıda tutulan uygulamalar tarayıcıdan başlatılabilir çünkü kısıtlamaları benzer bir kümesi için uygun olmalıdır. Bu kısıtlamalar uygulamak [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] hem de bağımlı [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] ve [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (bkz [WPF güvenlik stratejisi - Platform güvenliği](wpf-security-strategy-platform-security.md)). Varsayılan olarak, tarayıcıda tutulan uygulamalar Internet bölgesine istek [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] Internet, yerel intranet veya yerel bilgisayarda başlatılan fark etmeksizin izin kümesi. Şey tam izinler kümesini değerinden ile çalışan uygulamalar kısmi güven ile çalıştırılması söylenir.  
@@ -29,11 +29,11 @@ ms.locfileid: "59218387"
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
--   [WPF özellik kısmi güven desteği](#WPF_Feature_Partial_Trust_Support)  
+- [WPF özellik kısmi güven desteği](#WPF_Feature_Partial_Trust_Support)  
   
--   [Kısmi güven programlama](#Partial_Trust_Programming)  
+- [Kısmi güven programlama](#Partial_Trust_Programming)  
   
--   [İzinleri yönetme](#Managing_Permissions)  
+- [İzinleri yönetme](#Managing_Permissions)  
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>WPF özellik kısmi güven desteği  
@@ -52,19 +52,19 @@ ms.locfileid: "59218387"
   
  Bu tabloda yer almaktadır [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] yüksek bir düzeyde özellikleri. Daha ayrıntılı bilgi edinmek için [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] her üye tarafından gerekli olan izinleri belgeleri [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Ayrıca, aşağıdaki özellikleri kısmi güven yürütme, özel durumlar dahil olmak üzere ilgili bilgileri daha ayrıntılı.  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (bkz [XAML genel bakış (WPF)](./advanced/xaml-overview-wpf.md)).  
+- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (bkz [XAML genel bakış (WPF)](./advanced/xaml-overview-wpf.md)).  
   
--   Açılan pencereler (bkz <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
+- Açılan pencereler (bkz <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
   
--   Sürükleme ve bırakma (bkz [sürükle ve bırak genel bakış](./advanced/drag-and-drop-overview.md)).  
+- Sürükleme ve bırakma (bkz [sürükle ve bırak genel bakış](./advanced/drag-and-drop-overview.md)).  
   
--   Pano (bkz <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
+- Pano (bkz <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
   
--   Görüntüleme (bkz <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).  
+- Görüntüleme (bkz <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).  
   
--   Seri hale getirme (bkz <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>, <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
+- Seri hale getirme (bkz <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>, <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
   
--   Dosya iletişim kutusunu açın (bkz <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
+- Dosya iletişim kutusunu açın (bkz <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
   
  Aşağıdaki tabloda ana hatlarını [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bölge izin kümesi Internet sınırlarda çalıştırılmasının güvenli olmayan özellikleri.  
   
@@ -153,11 +153,11 @@ ms.locfileid: "59218387"
   
  İzinleri artırmanız gerekiyorsa, ClickOnce Uygulama bildirimi ve proje ayarları değiştirmeniz gerekir. Daha fazla bilgi için [WPF XAML tarayıcı uygulamalarına genel bakış](./app-development/wpf-xaml-browser-applications-overview.md). Aşağıdaki belgeler de yararlı olabilir.  
   
--   [Mage.exe (bildirim üretme ve düzenleme aracı)](../tools/mage-exe-manifest-generation-and-editing-tool.md).  
+- [Mage.exe (bildirim üretme ve düzenleme aracı)](../tools/mage-exe-manifest-generation-and-editing-tool.md).  
   
--   [MageUI.exe (bildirim üretme ve düzenleme aracı, grafik istemci)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
+- [MageUI.exe (bildirim üretme ve düzenleme aracı, grafik istemci)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
   
--   [ClickOnce uygulamalarının güvenliğini sağlama](/visualstudio/deployment/securing-clickonce-applications).  
+- [ClickOnce uygulamalarının güvenliğini sağlama](/visualstudio/deployment/securing-clickonce-applications).  
   
  Varsa, [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] tam güven gerektirir istenen izinleri artırmak için kullandığınız araçları kullanabilirsiniz. Ancak bir [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] yüklü ve yerel bilgisayardan, intranet veya güvenilen veya izin verilen siteler tarayıcının listelenen bir URL'den başlatılan yalnızca tam güven alırsınız. İntranet veya güvenilen sitesinden uygulama yüklü değilse, kullanıcı yükseltilmiş izinler göndermeyeceğinizi standart ClickOnce istemi alırsınız. Kullanıcı yüklemeyi iptal devam etmek seçebilirsiniz.  
   

@@ -5,10 +5,10 @@ ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
 ms.openlocfilehash: 6fcd30907880be9159b3cc2e3ab10659ddec248b
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706461"
 ---
 # <a name="structs"></a>Yapılar
 A *yapı* bir değer türüdür. Bir yapı oluşturulduğunda yapının atanmış olduğu değişken yapının gerçek verilerini tutar. Struct için yeni bir değişken atandığında kopyalanır. Bu nedenle yeni değişken ve özgün değişken aynı verilerin iki ayrı kopyasını içerir. Bir kopyaya yapılan değişiklikler diğer kopyayı etkilemez.
@@ -35,21 +35,21 @@ Kullandığınız [yapı](./language-reference/keywords/struct.md) kendi özel d
     
 Yapılar sınıfları daha sınırlı olmasına karşın yapılar sınıfları, aynı söz dizimini çoğunu paylaşır:  
   
--   Alanlar olarak bildirilmedikleri sürece bir yapının bildirimi içinde başlatılamaz `const` veya `static`.  
+- Alanlar olarak bildirilmedikleri sürece bir yapının bildirimi içinde başlatılamaz `const` veya `static`.  
   
--   Bir yapı, parametresiz bir oluşturucu (parametresiz bir oluşturucu) veya bir sonlandırıcı bildiremezsiniz.  
+- Bir yapı, parametresiz bir oluşturucu (parametresiz bir oluşturucu) veya bir sonlandırıcı bildiremezsiniz.  
   
--   Yapılar, atamaya bağlı kopyalanır. Bir yapı için yeni bir değişken atandığında, tüm verileri kopyalanır ve yeni bir kopyasını değişiklik özgün kopya verileri değiştirmez. Bu, sözlük < string, myStruct > gibi değer türlerinin koleksiyonları ile çalışırken unutmamak önemlidir.  
+- Yapılar, atamaya bağlı kopyalanır. Bir yapı için yeni bir değişken atandığında, tüm verileri kopyalanır ve yeni bir kopyasını değişiklik özgün kopya verileri değiştirmez. Bu, sözlük < string, myStruct > gibi değer türlerinin koleksiyonları ile çalışırken unutmamak önemlidir.  
   
--   Yapılar değer türüdür ve sınıflar, başvuru türleridir.  
+- Yapılar değer türüdür ve sınıflar, başvuru türleridir.  
   
--   Sınıflardan farklı olarak, yapılar kullanmadan oluşturulabilir bir `new` işleci.  
+- Sınıflardan farklı olarak, yapılar kullanmadan oluşturulabilir bir `new` işleci.  
   
--   Yapılar parametrelerine sahip oluşturucular bildirebilirsiniz.  
+- Yapılar parametrelerine sahip oluşturucular bildirebilirsiniz.  
   
--   Bir yapı, başka bir yapı veya sınıfından devralamaz ve temel bir sınıfı olamaz. Tüm yapıları doğrudan devralan <xref:System.ValueType>, işlevinden devralan <xref:System.Object>.  
+- Bir yapı, başka bir yapı veya sınıfından devralamaz ve temel bir sınıfı olamaz. Tüm yapıları doğrudan devralan <xref:System.ValueType>, işlevinden devralan <xref:System.Object>.  
   
--   Bir yapı, arabirim uygulayabilir.
+- Bir yapı, arabirim uygulayabilir.
 
 ## <a name="literal-values"></a>Değişmez değerler  
 C# dilinde değişmez değerler derleyiciden bir tür alır. Sayı sonuna bir harf ekleyerek sayısal değişmez değerin nasıl yazılacağını belirtebilirsiniz. Örneğin, 4.56 değerinin kaydırma olarak ele alınması gerektiğini belirtmek için bir "f" veya "F" sayı sonra Ekle: `4.56f`. Hiçbir harf eklenirse, derleyici çıkarımlar `double` değişmez değer türü. Hangi belirtilebilen türler harf sonekleri daha fazla bilgi için her bir türe ilişkin başvuru sayfalarına bakın [değer türleri](./language-reference/keywords/value-types.md).  

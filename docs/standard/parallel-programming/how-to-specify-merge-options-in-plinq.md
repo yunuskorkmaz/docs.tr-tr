@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: PLINQ'te birleştirme seçeneklerini belirtme"
+title: "Nasıl yapılır: PLINQ'te Birleştirme Seçeneklerini Belirtme"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ ms.assetid: 0f33b527-e91a-4550-a39a-e63e396fd831
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 87079337ae3cea81dbb4aab13ec2043b74498d9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672711"
 ---
-# <a name="how-to-specify-merge-options-in-plinq"></a>Nasıl yapılır: PLINQ'te birleştirme seçeneklerini belirtme
+# <a name="how-to-specify-merge-options-in-plinq"></a>Nasıl yapılır: PLINQ'te Birleştirme Seçeneklerini Belirtme
 Bu örnekte, izleyen tüm işleçler sırayla bir PLINQ sorgusu uygulanacağı birleştirme seçeneklerini belirtme gösterilmektedir. Birleştirme seçeneklerini açıkça ayarlamak zorunda değildir, ancak bunun yapılması, bu nedenle performansını artırabilir. Birleştirme seçenekleri hakkında daha fazla bilgi için bkz. [plınq'te birleştirme seçeneklerini](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
   
 > [!WARNING]

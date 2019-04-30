@@ -3,11 +3,11 @@ title: (Çağrılıyor XSLT) XmlReader'a serileştirme (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cc3ee03-ef4c-429b-a408-fedd10b728cd
 ms.openlocfilehash: 7faf86badad116d9e6ea920d9d745261c078c43c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680863"
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a>(Çağrılıyor XSLT) XmlReader'a serileştirme (C#)
 Kullanırken <xref:System.Xml?displayProperty=nameWithType> birlikte çalışabilirlik özelliklerini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], kullanabileceğiniz <xref:System.Xml.Linq.XNode.CreateReader%2A> oluşturmak için bir <xref:System.Xml.XmlReader>. Buradan okur Modülü <xref:System.Xml.XmlReader> XML ağacından düğümleri okur ve bunları uygun şekilde işler.  

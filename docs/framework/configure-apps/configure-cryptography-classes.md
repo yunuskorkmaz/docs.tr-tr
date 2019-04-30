@@ -10,11 +10,11 @@ helpviewer_keywords:
 - default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
 ms.openlocfilehash: ba11eed316e227ceae4cb5acecb2b081fa8868f2
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705538"
 ---
 # <a name="configuring-cryptography-classes"></a>Şifreleme Sınıflarını Yapılandırma
 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Varsayılan şifreleme algoritmaları ve .NET Framework ve uygun şekilde yazılmış uygulamalar kullanan algoritması uygulamalarını yapılandırmak bilgisayarda administrators sağlar.  Örneğin, kendi uygulama şifreleme algoritması olan Kuruluş bu uygulamayı içinde sevk uygulaması yerine varsayılan yapabilirsiniz [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]. Şifreleme kullanan yönetilen uygulamaları açıkça belirli bir uygulamaya bağlamak her zaman seçebilmenize rağmen bunlar şifreleme nesneleri şifreleme yapılandırma sistemini kullanarak oluşturmanız önerilir.  

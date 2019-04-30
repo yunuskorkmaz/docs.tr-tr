@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
 ms.openlocfilehash: 13bb50366d9c19751ef3387baf809ab69e27b5dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662633"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (C# Derleyici Seçenekleri)
 **- Nowarn** seçeneği derleyici, bir veya daha fazla uyarı görüntülenmesini bastır olanak sağlar. Birden çok uyarı numaralarını virgülle ayırın.  
@@ -35,11 +35,11 @@ ms.locfileid: "59324155"
   
  Aşağıdaki uyarılar tarafından gizlenen olamaz `-nowarn` seçeneği:  
   
--   Derleyici Uyarısı (düzey 1) CS2002  
+- Derleyici Uyarısı (düzey 1) CS2002  
   
--   Derleyici Uyarısı (düzey 1) CS2023  
+- Derleyici Uyarısı (düzey 1) CS2023  
   
--   Derleyici Uyarısı (düzey 1) CS2029  
+- Derleyici Uyarısı (düzey 1) CS2029  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   

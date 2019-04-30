@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703692"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation Bağlamaları Genel Bakış
 Bağlamaları bir Windows Communication Foundation (WCF) hizmet uç noktasını bağlamak için gerekli olan iletişim ayrıntılarını belirtmek için kullanılan nesneleridir. Her bir WCF Hizmeti uç noktası bağlama iyi belirtilen olmasını gerektirir. Bu konuda bağlarını tanımlamak, iletişim ayrıntılarını bağlama, hangi bağlamaları WCF'de dahil edilir ve bir bağlama için bir uç nokta nasıl belirtilebilir öğelerin türleri açıklanmaktadır.  
@@ -32,13 +32,13 @@ Bağlamaları bir Windows Communication Foundation (WCF) hizmet uç noktasını 
 ## <a name="system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamalar  
  Bağlama bilgileri karmaşık olabilir ve bazı ayarları başkalarıyla uyumlu olmayabilir. Bu nedenle, WCF, sistem tarafından sağlanan bağlamaları kümesini içerir. Bu bağlamalar, çoğu uygulama gereksinimlerini karşılamak üzere tasarlanmıştır. Aşağıdaki sınıflar, sistem tarafından sağlanan bağlamalar bazı örnekler temsil eder:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>: WS uyan bir HTTP protokolü Web hizmetlerine bağlanmak için uygun bağlama-ı temel profil belirtimi (örneğin, ASP.NET Web hizmeti tabanlı Hizmetleri).  
+- <xref:System.ServiceModel.BasicHttpBinding>: WS uyan bir HTTP protokolü Web hizmetlerine bağlanmak için uygun bağlama-ı temel profil belirtimi (örneğin, ASP.NET Web hizmeti tabanlı Hizmetleri).  
   
--   <xref:System.ServiceModel.WSHttpBinding>: WS - için uygun Uç noktalara bağlanmak için uygun bir birlikte çalışabilen bağlama * protokoller.  
+- <xref:System.ServiceModel.WSHttpBinding>: WS - için uygun Uç noktalara bağlanmak için uygun bir birlikte çalışabilen bağlama * protokoller.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: Kullanan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] diğer WCF uç noktaları aynı makineye bağlanmak için.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Kullanan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] diğer WCF uç noktaları aynı makineye bağlanmak için.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: Kullanan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] diğer WCF uç noktaları ile kuyruğa alınan iletinin bağlantılar oluşturmak için.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Kullanan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] diğer WCF uç noktaları ile kuyruğa alınan iletinin bağlantılar oluşturmak için.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: Bu bağlama HTTP bağlamaları daha yüksek performans sunar ve yerel ağ kullanım için idealdir.
   

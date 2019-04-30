@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
 ms.openlocfilehash: a60a03d0f88b6176dc22e850c8a84b605078c657
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61679888"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>C# Programının Genel Yapısı (C# Programlama Kılavuzu)
 C# programları, bir veya daha fazla dosyadan oluşabilir. Her dosya, sıfır veya daha fazla ad alanları içerebilir. Bir ad alanı, sınıflar, yapılar, arabirimler, sabit listeleri ve Temsilciler, diğer ad alanlarında yanı sıra gibi türlerini içerebilir. Tüm bu öğeleri içeren bir C# programın çatısı aşağıda verilmiştir.  
@@ -20,15 +20,15 @@ C# programları, bir veya daha fazla dosyadan oluşabilir. Her dosya, sıfır ve
 ## <a name="related-sections"></a>İlgili Bölümler  
  Daha fazla bilgi için:  
   
--   [Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)  
   
--   [Yapılar](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [Yapılar](../../../csharp/programming-guide/classes-and-structs/structs.md)  
   
--   [Ad Alanları](../../../csharp/programming-guide/namespaces/index.md)  
+- [Ad Alanları](../../../csharp/programming-guide/namespaces/index.md)  
   
--   [Arabirimler](../../../csharp/programming-guide/interfaces/index.md)  
+- [Arabirimler](../../../csharp/programming-guide/interfaces/index.md)  
   
--   [Temsilciler](../../../csharp/programming-guide/delegates/index.md)  
+- [Temsilciler](../../../csharp/programming-guide/delegates/index.md)  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 

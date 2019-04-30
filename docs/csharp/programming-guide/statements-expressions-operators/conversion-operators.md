@@ -9,11 +9,11 @@ helpviewer_keywords:
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
 ms.openlocfilehash: 539a554da2ea2f785a54bd7e5ff81d09b908c9e4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61678614"
 ---
 # <a name="conversion-operators-c-programming-guide"></a>Dönüşüm işleçleri (C# Programlama Kılavuzu)
 
@@ -25,27 +25,27 @@ C# programcıları, böylece sınıflar veya yapılar için ve/veya diğer sın�
 
  Dönüştürme işleçleri aşağıdaki özelliklere sahiptir:  
   
--   Olarak bildirilen dönüştürmeler `implicit` gerekli olduğunda otomatik olarak gerçekleşir.  
+- Olarak bildirilen dönüştürmeler `implicit` gerekli olduğunda otomatik olarak gerçekleşir.  
   
--   Olarak bildirilen dönüştürmeler `explicit` çağrılacak bir yayın gerektirir.  
+- Olarak bildirilen dönüştürmeler `explicit` çağrılacak bir yayın gerektirir.  
   
--   Tüm dönüştürmeler olarak bildirilmelidir `static`.  
+- Tüm dönüştürmeler olarak bildirilmelidir `static`.  
   
 ## <a name="related-sections"></a>İlgili bölümler
 
  Daha fazla bilgi için:  
   
--   [Dönüştürme İşleçleri Kullanma](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  
+- [Dönüştürme İşleçleri Kullanma](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  
   
--   [Tür Değiştirme ve Tür Dönüştürmeler](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+- [Tür Değiştirme ve Tür Dönüştürmeler](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
   
--   [Nasıl yapılır: Yapılar arasında kullanıcı tanımlı Dönüşümler Uygulama](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
+- [Nasıl yapılır: Yapılar arasında kullanıcı tanımlı Dönüşümler Uygulama](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
   
--   [explicit](../../../csharp/language-reference/keywords/explicit.md)  
+- [explicit](../../../csharp/language-reference/keywords/explicit.md)  
   
--   [implicit](../../../csharp/language-reference/keywords/implicit.md)  
+- [implicit](../../../csharp/language-reference/keywords/implicit.md)  
   
--   [static](../../../csharp/language-reference/keywords/static.md)  
+- [static](../../../csharp/language-reference/keywords/static.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

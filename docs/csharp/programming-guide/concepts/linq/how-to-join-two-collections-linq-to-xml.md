@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: (LINQ to XML) iki koleksiyonu birleştirme (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
 ms.openlocfilehash: fb158427afd59caea5eecdad29fa0a68686f6381
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667970"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-c"></a>Nasıl yapılır: (LINQ to XML) iki koleksiyonu birleştirme (C#)
 Bazen bir öğe veya öznitelik XML belgesindeki başka bir öğe veya öznitelik başvurabilir. Örneğin, [örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md) XML belgesi, müşterilerin listesini ve siparişlerinin listesi içerir. Her `Customer` öğesi içeren bir `CustomerID` özniteliği. Her `Order` öğesi içeren bir `CustomerID` öğesi. `CustomerID` Öğesi her sırada başvurduğu `CustomerID` öznitelik bir müşteri.  
@@ -29,7 +29,7 @@ Bazen bir öğe veya öznitelik XML belgesindeki başka bir öğe veya özniteli
   
  Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
- Bu örnek aşağıdaki XSD şeması kullanır: [Örnek XSD dosyası: Müşteriler ve siparişler](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md).  
+ Bu örnek aşağıdaki XSD şeması kullanır: [Örnek XSD Dosyası: Müşteriler ve siparişler](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md).  
   
  Bu şekilde katılma çok iyi gerçekleştirmez olduğunu unutmayın. Birleşimler, doğrusal bir arama yoluyla gerçekleştirilir. Karma tabloları veya performansa yardımcı olmak için dizinleri yoktur.  
   

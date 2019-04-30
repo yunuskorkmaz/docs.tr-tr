@@ -3,11 +3,11 @@ title: SQL Server’da Secure Dynamic SQL Yazma
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
 ms.openlocfilehash: 236fd925740d37c2cccabfcebfb7fcb46361489d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757722"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>SQL Server’da Secure Dynamic SQL Yazma
 SQL ekleme, kötü niyetli bir kullanıcının geçerli giriş yerine Transact-SQL deyimleriyle girer işlemidir. Girişi doğrulanması gereken olmadan doğrudan sunucuya iletilmezse ve uygulama yanlışlıkla eklenen kodu yürütür, saldırı zarar verebilecek veya verileri yok olasılığına sahiptir.  
@@ -21,34 +21,34 @@ SQL ekleme, kötü niyetli bir kullanıcının geçerli giriş yerine Transact-S
   
  Bazı faydalı yönergeleri aşağıda verilmiştir:  
   
--   Hiçbir zaman doğrudan kullanıcı girişi Transact-SQL deyimlerini oluşturmak; saklı yordamlar, kullanıcı girişini doğrulamak için kullanın.  
+- Hiçbir zaman doğrudan kullanıcı girişi Transact-SQL deyimlerini oluşturmak; saklı yordamlar, kullanıcı girişini doğrulamak için kullanın.  
   
--   Kullanıcı girişi türü, uzunluğu, biçimi ve aralığı test ederek doğrulayın. Sistem adlarını veya REPLACE() işlevi bir dizedeki herhangi bir karakter kaçış kaçış için Transact-SQL QUOTENAME() işlevini kullanın.  
+- Kullanıcı girişi türü, uzunluğu, biçimi ve aralığı test ederek doğrulayın. Sistem adlarını veya REPLACE() işlevi bir dizedeki herhangi bir karakter kaçış kaçış için Transact-SQL QUOTENAME() işlevini kullanın.  
   
--   Uygulamanızın her katmanında birden çok katman doğrulama uygulayın.  
+- Uygulamanızın her katmanında birden çok katman doğrulama uygulayın.  
   
--   Giriş boyutu ve veri türü test ve uygun sınırlarını zorlayın. Bu, bilinçli arabellek taşmalarını önleme yardımcı olabilir.  
+- Giriş boyutu ve veri türü test ve uygun sınırlarını zorlayın. Bu, bilinçli arabellek taşmalarını önleme yardımcı olabilir.  
   
--   Dize değişkenleri içeriğini test edin ve yalnızca beklenen değerleri kabul edin. İkili verileri, kaçış dizileri ve yorum karakterleri içeren girdileri reddeder.  
+- Dize değişkenleri içeriğini test edin ve yalnızca beklenen değerleri kabul edin. İkili verileri, kaçış dizileri ve yorum karakterleri içeren girdileri reddeder.  
   
--   XML belgelerle çalışırken girildiği gibi tüm veri şemasına karşı doğrulayın.  
+- XML belgelerle çalışırken girildiği gibi tüm veri şemasına karşı doğrulayın.  
   
--   Çok katmanlı ortamlar tüm verilerin güvenli bölgeye giriş önce doğrulanması gerekir.  
+- Çok katmanlı ortamlar tüm verilerin güvenli bölgeye giriş önce doğrulanması gerekir.  
   
--   Dosya adları oluşturulabilir alanları aşağıdaki dizeleri kabul: YEDEK, $, COM8, CON, yapılandırma yoluyla COM1 $, LPT8, NUL ve PRN, LPT1 saat.  
+- Dosya adları oluşturulabilir alanları aşağıdaki dizeleri kabul: YEDEK, $, COM8, CON, yapılandırma yoluyla COM1 $, LPT8, NUL ve PRN, LPT1 saat.  
   
--   Kullanım <xref:System.Data.SqlClient.SqlParameter> saklı yordamlar ve tür denetimi ve uzunluğu doğrulama sağlamak için komutları nesneleri.  
+- Kullanım <xref:System.Data.SqlClient.SqlParameter> saklı yordamlar ve tür denetimi ve uzunluğu doğrulama sağlamak için komutları nesneleri.  
   
--   Kullanım <xref:System.Text.RegularExpressions.Regex> geçersiz karakterler filtrelemek için istemci kodu ifadeler.  
+- Kullanım <xref:System.Text.RegularExpressions.Regex> geçersiz karakterler filtrelemek için istemci kodu ifadeler.  
   
 ## <a name="dynamic-sql-strategies"></a>Dinamik SQL stratejileri  
  Dinamik olarak yürütülen SQL deyimleri neden SQL Server'ın dinamik SQL tarafından erişilen nesneler karşı çağıranın izinlerini kontrol etmek sahiplik zinciri, yordam kodu sonlarını oluşturuldu.  
   
  SQL Server saklı yordamları ve kullanıcı tanımlı işlevleri, dinamik SQL yürütme kullanarak verilere kullanıcıların erişim için yöntemleri vardır.  
   
--   Kimliğe bürünme kullanma Transact-SQL EXECUTE AS yan tümcesi içinde açıklandığı [ile SQL Server'da kimliğe bürünme izinlerini özelleştirme](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Kimliğe bürünme kullanma Transact-SQL EXECUTE AS yan tümcesi içinde açıklandığı [ile SQL Server'da kimliğe bürünme izinlerini özelleştirme](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
   
--   Sertifikalar, saklı yordamlarda açıklandığı imzalama [SQL Server'da saklı yordam imzalama](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Sertifikalar, saklı yordamlarda açıklandığı imzalama [SQL Server'da saklı yordam imzalama](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
 ### <a name="execute-as"></a>EXECUTE AS  
  Arayanın izinleri, kullanıcı ile belirtilen EXECUTE AS yan tümcesi değiştirir olarak yürütme yan tümcesi. İç içe geçmiş saklı yordamları ve Tetikleyicileri Ara sunucu kullanıcı güvenlik bağlamı altında çalıştırmak. Bu, satır düzeyi güvenlik veya denetleme gerektiren uygulamalar bozabilir. Kullanıcının kimliğini döndüren bazı işlevler EXECUTE AS belirtilen kullanıcı döndürür yan tümcesi, özgün çağırana. Yürütme bağlamı yalnızca yürütme yordamın veya geri DÖNDÜRME deyimi verildiğinde sonra özgün çağırana döndürülür.  

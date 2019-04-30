@@ -13,11 +13,11 @@ ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754563"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme
 Uygulama geliştirme sırasında hata ayıklama sırasında Visual Studio çıktı penceresinde, izleme ve hata ayıklama çıkışını gidin. Ancak, dağıtılan bir uygulamada İzleme özelliklerini eklemek için Araçlı uygulamalarınızla derlemelisiniz **izleme** etkin derleyici yönergesi. Bu, uygulamanızın yayın sürümüne derlenecek izleme kodu sağlar. Değil etkinleştirirseniz **izleme** yönergesi, tüm izleme kodu derleme sırasında yok sayılır ve dağıtacağınız yürütülebilir kodu bulunmaz.  
@@ -28,11 +28,11 @@ Uygulama geliştirme sırasında hata ayıklama sırasında Visual Studio çıkt
   
  Uygulamanız çeşitli şekillerde için derleyici ayarlarını belirtebilirsiniz:  
   
--   Özellik sayfaları  
+- Özellik sayfaları  
   
--   Komut satırı  
+- Komut satırı  
   
--   **#CONST** (Visual Basic için) ve **#define** (için C#)  
+- **#CONST** (Visual Basic için) ve **#define** (için C#)  
   
 ### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>Özellik sayfaları iletişim kutusundan derleme ayarlarını değiştirmek için  
   
@@ -40,9 +40,9 @@ Uygulama geliştirme sırasında hata ayıklama sırasında Visual Studio çıkt
   
 2. Seçin **özellikleri** kısayol menüsünden.  
   
-    -   Visual Basic'te tıklayın **derleme** özellik sayfasının sol bölmede sekme'a tıklayın **Gelişmiş derleme seçenekleri** görüntülemek için düğmeyi **Gelişmiş derleyici ayarları**iletişim kutusu. Etkinleştirmek istediğiniz derleyici ayarları için onay kutularını seçin. Devre dışı bırakmak istediğiniz ayarların onay kutularını temizleyin.  
+    - Visual Basic'te tıklayın **derleme** özellik sayfasının sol bölmede sekme'a tıklayın **Gelişmiş derleme seçenekleri** görüntülemek için düğmeyi **Gelişmiş derleyici ayarları**iletişim kutusu. Etkinleştirmek istediğiniz derleyici ayarları için onay kutularını seçin. Devre dışı bırakmak istediğiniz ayarların onay kutularını temizleyin.  
   
-    -   İçinde C#, tıklayın **derleme** özellik sayfasının sol bölmede sekme ve etkinleştirmek istediğiniz derleyici ayarları için onay kutularını seçin. Devre dışı bırakmak istediğiniz ayarların onay kutularını temizleyin.  
+    - İçinde C#, tıklayın **derleme** özellik sayfasının sol bölmede sekme ve etkinleştirmek istediğiniz derleyici ayarları için onay kutularını seçin. Devre dışı bırakmak istediğiniz ayarların onay kutularını temizleyin.  
   
 ### <a name="to-compile-instrumented-code-using-the-command-line"></a>Komut satırını kullanarak işaretlenmiş kod derlemek için  
   

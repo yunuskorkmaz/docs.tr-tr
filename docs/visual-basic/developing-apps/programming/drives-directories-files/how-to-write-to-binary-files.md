@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binary files [Visual Basic], writing in Visual Basic
 ms.assetid: 59fae125-de5b-4c96-883c-209f4a55112c
 ms.openlocfilehash: e8aa1c96766fc1b63326415c879e9821dc1de7f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772560"
 ---
 # <a name="how-to-write-to-binary-files-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te ikili dosyalara yazma
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> Yöntemi veri bir ikili dosyaya yazar. Varsa `append` parametresi `True`, dosyaya veri ekler; Aksi takdirde dosyasındaki verilerin üzerine yazılır.  
@@ -20,26 +20,26 @@ ms.locfileid: "58833696"
   
 ### <a name="to-write-to-a-binary-file"></a>Bir ikili dosyaya yazmak için  
   
--   Kullanım `WriteAllBytes` dosya yolu ve adı ile yazılacak baytları sağlama yöntemi. Bu örnek veri dizisi ekler `CustomerData` adlı dosyaya `CollectedData.dat`.  
+- Kullanım `WriteAllBytes` dosya yolu ve adı ile yazılacak baytları sağlama yöntemi. Bu örnek veri dizisi ekler `CustomerData` adlı dosyaya `CollectedData.dat`.  
   
      [!code-vb[VbVbcnMyFileSystem#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#27)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir durum oluşturabilir:  
   
--   Yol aşağıdaki nedenlerden biri için geçerli değildir: sıfır uzunluklu bir dize; olan Bu, yalnızca boşluk içermektedir; veya geçersiz karakterler içeriyor. (<xref:System.ArgumentException>).  
+- Yol aşağıdaki nedenlerden biri için geçerli değildir: sıfır uzunluklu bir dize; olan Bu, yalnızca boşluk içermektedir; veya geçersiz karakterler içeriyor. (<xref:System.ArgumentException>).  
   
--   Çünkü bu yolu geçerli değil `Nothing` (<xref:System.ArgumentNullException>).  
+- Çünkü bu yolu geçerli değil `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `File` mevcut olmayan bir yola işaret (<xref:System.IO.FileNotFoundException> veya <xref:System.IO.DirectoryNotFoundException>).  
+- `File` mevcut olmayan bir yola işaret (<xref:System.IO.FileNotFoundException> veya <xref:System.IO.DirectoryNotFoundException>).  
   
--   Dosya başka bir işlem tarafından kullanılıyor veya bir g/ç hatası oluşuyor (<xref:System.IO.IOException>).  
+- Dosya başka bir işlem tarafından kullanılıyor veya bir g/ç hatası oluşuyor (<xref:System.IO.IOException>).  
   
--   Yolun sistem tarafından tanımlanan uzunluk üst sınırını aşıyor (<xref:System.IO.PathTooLongException>).  
+- Yolun sistem tarafından tanımlanan uzunluk üst sınırını aşıyor (<xref:System.IO.PathTooLongException>).  
   
--   Yolda bir dosya veya dizin adı iki nokta üst üste (:) içeriyor veya biçimi geçersiz (<xref:System.NotSupportedException>).  
+- Yolda bir dosya veya dizin adı iki nokta üst üste (:) içeriyor veya biçimi geçersiz (<xref:System.NotSupportedException>).  
   
--   Kullanıcı yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
+- Kullanıcı yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

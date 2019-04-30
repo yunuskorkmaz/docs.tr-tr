@@ -3,22 +3,22 @@ title: Veri kaynağı için LINQ Querying1 etkinleştirme
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
 ms.openlocfilehash: d3faeb15c5c8deedec3c3347c6317cac872224f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668425"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>LINQ Sorgusu için Veri Kaynağı Etkinleştirme
 Genişletmenin çeşitli yolları vardır [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgulanmasını herhangi bir veri kaynağı etkinleştirmek için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] deseni. Veri kaynağı örneğin bir veri yapısı, Web hizmeti, dosya sistemi veya veritabanı olabilir. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Kolaylaştırır istemcilerin bir veri kaynağı için sorgu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgulamanın etkin olduğu, sözdizimi ve sorgu düzeni değişmediği. Yöntemler [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Genişletilebilir bu veri kaynakları şunları içerir:  
   
--   Uygulama <xref:System.Collections.Generic.IEnumerable%601> etkinleştirmek için bu türden arabiriminde [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] nesneleri sorgulamasını için.  
+- Uygulama <xref:System.Collections.Generic.IEnumerable%601> etkinleştirmek için bu türden arabiriminde [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] nesneleri sorgulamasını için.  
   
--   Standart sorgu işleci yöntemleri gibi oluşturma <xref:System.Linq.Enumerable.Where%2A> ve <xref:System.Linq.Enumerable.Select%2A> özel etkinleştirmek için bir türü genişletmek [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgulamasını.  
+- Standart sorgu işleci yöntemleri gibi oluşturma <xref:System.Linq.Enumerable.Where%2A> ve <xref:System.Linq.Enumerable.Select%2A> özel etkinleştirmek için bir türü genişletmek [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgulamasını.  
   
--   Uygulayan veri kaynağınız için bir sağlayıcı oluşturma <xref:System.Linq.IQueryable%601> arabirimi. Bu arabirimi uygulayan sağlayıcı alır [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] özel bir şekilde, örneğin uzaktan yürütebilirsiniz ifade ağaçları biçiminde sorgular.  
+- Uygulayan veri kaynağınız için bir sağlayıcı oluşturma <xref:System.Linq.IQueryable%601> arabirimi. Bu arabirimi uygulayan sağlayıcı alır [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] özel bir şekilde, örneğin uzaktan yürütebilirsiniz ifade ağaçları biçiminde sorgular.  
   
--   Yararlanır, varolan bir veri kaynağınız için bir sağlayıcı oluşturma [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] teknoloji. Böyle bir sağlayıcı, yalnızca sorgulamayı etkinleştirmez, aynı zamanda kullanıcı tanımlı türlere yönelik işlemleri ve eşleştirmeyi de ekler, güncelleştirir ve siler.  
+- Yararlanır, varolan bir veri kaynağınız için bir sağlayıcı oluşturma [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] teknoloji. Böyle bir sağlayıcı, yalnızca sorgulamayı etkinleştirmez, aynı zamanda kullanıcı tanımlı türlere yönelik işlemleri ve eşleştirmeyi de ekler, güncelleştirir ve siler.  
   
  Bu konuda, bu seçenekler açıklanmaktadır.  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
 ms.openlocfilehash: dbc5c0b51024c7b88b8c6cd9a052addd74e6f7e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669438"
 ---
 # <a name="workflow-tracking-and-tracing"></a>İş Akışı Takip ve İzleme
 Windows iş akışı izleme bir [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] özelliği iş akışının yürütülmesini görünürlük sağlayacak şekilde tasarlanmıştır. Bu, bir iş akışı örneği yürütülmesini izlemek için izleme altyapısı sağlar. İzleme WF altyapısının şeffaf bir şekilde yürütme sırasında anahtar olayları yansıtan kayıtları yaymak için bir iş akışı Instruments. Bu işlev varsayılan olarak tüm kullanılabilir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı. Herhangi bir değişiklik için yapılması gereken bir [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] gerçekleşmesi izleme iş akışını. Bu, almak istediğiniz izleme veri miktarını karar adımlarından oluşur. Bir iş akışı örneği başlatıldığında veya izleme işleme tamamlandıktan kayıtları yayılan. İzleme, iş akışı değişkenleri ile ilişkili iş ilgili verileri de ayıklayabilirsiniz. İş akışı sistem işleme bir sırayı temsil ediyorsa, örneğin, sipariş kimliği ile birlikte ayıklanabileceği <xref:System.Activities.Tracking.TrackingRecord> nesne. Genel olarak, izleme WF etkinleştirme Tanılama veya İş analizi verilerini bir iş akışı yürütülmesini erişilecek kolaylaştırır.  
@@ -22,11 +22,11 @@ Windows iş akışı izleme bir [!INCLUDE[netfx_current_long](../../../includes/
   
  İzleme altyapısının birincil bileşenlerini programlama modelini anlamak için bu konuda ele alınmıştır:  
   
--   <xref:System.Activities.Tracking.TrackingRecord> İş akışı çalışma zamanını şuradan yayılan nesneleri. Daha fazla bilgi için [izleme kayıtları](tracking-records.md).  
+- <xref:System.Activities.Tracking.TrackingRecord> İş akışı çalışma zamanını şuradan yayılan nesneleri. Daha fazla bilgi için [izleme kayıtları](tracking-records.md).  
   
--   <xref:System.Activities.Tracking.TrackingParticipant> nesneleri abone <xref:System.Activities.Tracking.TrackingRecord> nesneleri. İzleme katılımcıları yükü işlemek için mantığı içeren <xref:System.Activities.Tracking.TrackingRecord> nesneleri (örneğin, bunlar bir dosyaya yazmak seçebilir). Daha fazla bilgi için [izleme katılımcıları](tracking-participants.md).  
+- <xref:System.Activities.Tracking.TrackingParticipant> nesneleri abone <xref:System.Activities.Tracking.TrackingRecord> nesneleri. İzleme katılımcıları yükü işlemek için mantığı içeren <xref:System.Activities.Tracking.TrackingRecord> nesneleri (örneğin, bunlar bir dosyaya yazmak seçebilir). Daha fazla bilgi için [izleme katılımcıları](tracking-participants.md).  
   
--   <xref:System.Activities.Tracking.TrackingProfile> nesneleri bir iş akışı örneğinden yayılan filtre izleme kayıtları. Daha fazla bilgi için [izleme profilleri](tracking-profiles.md).  
+- <xref:System.Activities.Tracking.TrackingProfile> nesneleri bir iş akışı örneğinden yayılan filtre izleme kayıtları. Daha fazla bilgi için [izleme profilleri](tracking-profiles.md).  
   
 ## <a name="workflow-tracking-infrastructure"></a>İş akışı izleme altyapısı  
  İş akışı izleme altyapısı bir Yayımla ve abone ol paradigma izler. İş akışı örneğinin uzantıları iş akışına olarak kayıtlı aboneleri kayıtları izleme kayıtları izleme listesinin yayımcısıdır. Abone bu uzantılar <xref:System.Activities.Tracking.TrackingRecord> nesneleri izleme katılımcıları çağrılır. İzleme katılımcıları erişim genişletilebilirlik noktaları olan <xref:System.Activities.Tracking.TrackingRecord> nesneleri ve bunları hangi şekilde Bunu yapmak için yazılır, işlem. Bir kayıt alt kümesi için abone olmak için bir katılımcı izin vermek için giden izleme kayıtları bir filtre uygulamayı izleme altyapısı sağlar. Bu filtreleme mekanizması aracılığıyla bir izleme gerçekleştirilir profili dosyası.  

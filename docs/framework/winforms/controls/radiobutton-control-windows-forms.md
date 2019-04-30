@@ -9,11 +9,11 @@ helpviewer_keywords:
 - RadioButton control [Windows Forms]
 ms.assetid: e895b2a5-9bcb-4486-b165-eaf4c3ea9644
 ms.openlocfilehash: cf2da32dd286e03b89cfa59e09d38eceb030f5ea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755408"
 ---
 # <a name="radiobutton-control-windows-forms"></a>RadioButton Denetimi (Windows Forms)
 Windows Forms `RadioButton` denetimleri kullanıcıya iki veya daha fazla birbirini dışlayan seçenekleri kümesi sunar. Radyo düğmeleri ve onay kutularını benzer şekilde çalışması için görünebilse de önemli bir fark yoktur: kullanıcı bir radyo düğmesini seçtiğinde, aynı gruptaki diğer radyo düğmeleri de seçilemez.  

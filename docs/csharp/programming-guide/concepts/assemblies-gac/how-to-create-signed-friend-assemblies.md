@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: İmzalı arkadaş derlemeleri oluşturma (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 ms.openlocfilehash: b80d22aa68a969a5468aa1395195058e47f300c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703276"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Nasıl yapılır: İmzalı arkadaş derlemeleri oluşturma (C#)
 Bu örnek, arkadaş derlemeleri tanımlayıcı adlara sahip derlemeler ile kullanma işlemini gösterir. İki derleme tanımlayıcı ada gerekir. Bu örnekte iki derleme, aynı anahtarları kullanmak olsa da, anahtarları farklı iki derlemeler için kullanabilirsiniz.  
@@ -18,15 +18,15 @@ Bu örnek, arkadaş derlemeleri tanımlayıcı adlara sahip derlemeler ile kulla
   
 2. Aşağıdaki komut dizisi, tanımlayıcı ad aracı ile bir keyfile oluşturur ve ortak anahtarını görüntülemek için kullanın. Daha fazla bilgi için [Sn.exe (tanımlayıcı ad aracı)](../../../../framework/tools/sn-exe-strong-name-tool.md).  
   
-    1.  Bu örnek için bir tanımlayıcı ad anahtar oluşturun ve FriendAssemblies.snk dosyasında depolar:  
+    1. Bu örnek için bir tanımlayıcı ad anahtar oluşturun ve FriendAssemblies.snk dosyasında depolar:  
   
          `sn -k FriendAssemblies.snk`  
   
-    2.  FriendAssemblies.snk ortak anahtarı ayıklar ve FriendAssemblies.publickey yerleştirin:  
+    2. FriendAssemblies.snk ortak anahtarı ayıklar ve FriendAssemblies.publickey yerleştirin:  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
-    3.  FriendAssemblies.publickey dosyasında depolanan ortak anahtarı görüntüler:  
+    3. FriendAssemblies.publickey dosyasında depolanan ortak anahtarı görüntüler:  
   
          `sn -tp FriendAssemblies.publickey`  
   

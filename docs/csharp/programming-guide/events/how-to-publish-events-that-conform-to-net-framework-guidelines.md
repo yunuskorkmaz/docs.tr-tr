@@ -6,11 +6,11 @@ helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
 ms.openlocfilehash: 3ea5f5fb3b94c3edfd129a08a57c4c584b1412aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61681422"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Nasıl yapılır: .NET Framework yönergeleriyle uyumlu olayları yayımlama (C# Programlama Kılavuzu)
 Aşağıdaki yordam standarda olayları ekleme göstermektedir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] sınıflar ve yapılar için desen. Tüm olaylar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] sınıf kitaplığı temel <xref:System.EventHandler> temsilci, olduğu gibi tanımlanır:  
@@ -51,19 +51,19 @@ public delegate void EventHandler(object sender, EventArgs e);
   
 3. Olay yayımlama sınıfınızda, aşağıdaki adımlardan birini kullanarak bildirin.  
   
-    1.  Özel bir EventArgs sınıf varsa, genel olmayan EventHandler temsilci olay türünüz olacaktır. Zaten içinde bildirildiği için temsilci bildirmenize gerek olmayan <xref:System> C# projesi oluşturduğunuzda, dahil edilen ad alanı. Yayımcı sınıfa aşağıdaki kodu ekleyin.  
+    1. Özel bir EventArgs sınıf varsa, genel olmayan EventHandler temsilci olay türünüz olacaktır. Zaten içinde bildirildiği için temsilci bildirmenize gerek olmayan <xref:System> C# projesi oluşturduğunuzda, dahil edilen ad alanı. Yayımcı sınıfa aşağıdaki kodu ekleyin.  
   
         ```csharp  
         public event EventHandler RaiseCustomEvent;  
         ```  
   
-    2.  Genel olmayan sürümünü kullanıyorsanız <xref:System.EventHandler> ve türetilen özel bir sınıf sahip <xref:System.EventArgs>, yayımlama, sınıf içinde olay bildirmek ve 2. adımda, bir temsilci türü olarak kullanın.  
+    2. Genel olmayan sürümünü kullanıyorsanız <xref:System.EventHandler> ve türetilen özel bir sınıf sahip <xref:System.EventArgs>, yayımlama, sınıf içinde olay bildirmek ve 2. adımda, bir temsilci türü olarak kullanın.  
   
         ```csharp  
         public event CustomEventHandler RaiseCustomEvent;  
         ```  
   
-    3.  Genel sürüm kullanıyorsanız, özel bir temsilci ihtiyacınız yoktur. Bunun yerine, yayımlama sınıfınızda, olay türü olarak belirttiğiniz `EventHandler<CustomEventArgs>`, açılı ayraçlar arasında kendi sınıfının adı değiştirme.  
+    3. Genel sürüm kullanıyorsanız, özel bir temsilci ihtiyacınız yoktur. Bunun yerine, yayımlama sınıfınızda, olay türü olarak belirttiğiniz `EventHandler<CustomEventArgs>`, açılı ayraçlar arasında kendi sınıfının adı değiştirme.  
   
         ```csharp  
         public event EventHandler<CustomEventArgs> RaiseCustomEvent;  

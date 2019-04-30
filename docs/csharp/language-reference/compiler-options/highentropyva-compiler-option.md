@@ -1,5 +1,5 @@
 ---
-title: -highentropyva (C# Derleyici Seçenekleri)
+title: -hıghentropyva (C# derleyici seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /highentropyva
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - highentropyva compiler option [C#]
 ms.assetid: eaf409b3-384e-49dd-9417-62453658f421
 ms.openlocfilehash: 2ff63ddc48a4f5c4287fe1badb092a1db93f68dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662861"
 ---
-# <a name="-highentropyva-c-compiler-options"></a>-highentropyva (C# Derleyici Seçenekleri)
-**- Hıghentropyva** derleyici seçeneği, belirli bir yürütülebilir dosya yüksek entropi adres alanı düzeni rastgele seçimini (ASLR) destekleyip desteklemediğini Windows Çekirdeği söyler.  
+# <a name="-highentropyva-c-compiler-options"></a>-hıghentropyva (C# derleyici seçenekleri)
+**- Hıghentropyva** derleyici seçeneği, belirli bir yürütülebilir dosya yüksek entropi adres alanı düzeni rastgele seçimini (ASLR) destekleyip desteklemediğini Windows çekirdek söyler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,9 +26,9 @@ ms.locfileid: "33216684"
   
 ## <a name="arguments"></a>Arguments  
  `+` &#124; `-`  
- Bu seçenek belirleyen bir 64-bit yürütülebilir dosya veya tarafından işaretlenen yürütülebilir [-platform: anycpu](../../../csharp/language-reference/compiler-options/platform-compiler-option.md) derleyici seçeneği yüksek entropi sanal adres alanı destekler. Seçeneği, varsayılan olarak devre dışıdır. Kullanım **- hıghentropyva +** veya **- hıghentropyva** etkinleştirmek için.  
+ Bu seçenek belirten bir 64-bit yürütülebilir veya olarak işaretlenmiş bir yürütülebilir dosya [-platform: anycpu](../../../csharp/language-reference/compiler-options/platform-compiler-option.md) derleyici seçeneği yüksek entropi sanal adres alanını destekler. Seçeneği, varsayılan olarak devre dışıdır. Kullanım **- hıghentropyva +** veya **- hıghentropyva** etkinleştirin.  
   
 ## <a name="remarks"></a>Açıklamalar  
- **- Hıghentropyva** seçeneği ASLR bir parçası olarak adres alanı düzeni bir işlemin rasgeleleştirilirken entropi yüksek derece kullanacak şekilde Windows çekirdek uyumlu sürümlerini sağlar. Dağınık yüksek derece kullanarak çok sayıda adresleri bellek bölgelere yığınları ve yığın gibi ayrılabilen anlamına gelir. Sonuç olarak, belirli bellek bölge konumunu tahmin edilmesi daha zordur.  
+ **- Hıghentropyva** seçeneği entropi daha yüksek derece ASLR bir parçası olarak bir işlemin adres alanı düzeni rasgeleleştirilirken yapılırken kullanılacak Windows çekirdek uyumlu sürümlerini sağlar. Daha yüksek derece entropi kullanarak bellek bölgelere yığınlarını ve Yığınlar gibi çok sayıda adresleri ayrılabilen anlamına gelir. Sonuç olarak, belirli bir bellek bölgesinin konumunu tahmin edilmesi daha zordur.  
   
- Zaman **- hıghentropyva** derleyici seçeneği belirtilmişse, hedef çalıştırılabilir ve bağımlı herhangi bir modül bir 64-bit işlem olarak çalıştırılırken 4 gigabayt (GB) büyük işaretçi değerleri kaldırabilir.
+ Zaman **- hıghentropyva** derleyici seçeneği belirtilmemişse, hedef çalıştırılabilir ve bağımlı tüm modülleri 64-bit işlem olarak çalıştırılırken, 4 gigabayt (GB) büyük bir işaretçi değerleri işleyebilir olması gerekir.

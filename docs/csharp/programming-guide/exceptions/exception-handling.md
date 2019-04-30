@@ -7,11 +7,11 @@ helpviewer_keywords:
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
 ms.openlocfilehash: 87a85511669e676f2943bf5f079b54e96b926490
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680564"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Özel Durum İşleme (C# Programlama Kılavuzu)
 A [deneyin](../../../csharp/language-reference/keywords/try-catch.md) blok, C# programcıları için bir özel durum tarafından etkilenebilecek bölümü kod tarafından kullanılır. İlişkili [catch](../../../csharp/language-reference/keywords/try-catch.md) blokları, oluşturulan özel durumları işlemek için kullanılır. A [son](../../../csharp/language-reference/keywords/try-finally.md) blok olup olmadığı bir özel durum bağımsız olarak çalışan kodu içeren `try` ayrılmış kaynakları serbest bırakmak gibi bloğu `try` blok. A `try` blok gerektiren bir veya daha fazla ilişkili `catch` blokları veya `finally` blok veya her ikisini de.  
@@ -33,13 +33,13 @@ A [deneyin](../../../csharp/language-reference/keywords/try-catch.md) blok, C# p
   
  Aşağıdaki koşullar doğru olduğunda özel durumları yakalamalısınız:  
   
--   Bir iyi, özel durum oluşturulur ve yeni bir dosya adı, catch geçilmesidir girmesinin istendiği gibi belirli bir kurtarma uygulayabilirsiniz neden anlama sahip bir <xref:System.IO.FileNotFoundException> nesne.  
+- Bir iyi, özel durum oluşturulur ve yeni bir dosya adı, catch geçilmesidir girmesinin istendiği gibi belirli bir kurtarma uygulayabilirsiniz neden anlama sahip bir <xref:System.IO.FileNotFoundException> nesne.  
   
--   Oluşturun ve yeni, daha belirli bir özel durum.  
+- Oluşturun ve yeni, daha belirli bir özel durum.  
   
      [!code-csharp[csProgGuideExceptions#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#9)]  
   
--   Kısmen için ek işleme iletmeden önce özel bir durumu işlemek istersiniz. Aşağıdaki örnekte, bir `catch` bloğu özel durumu yeniden atamadan önce bir hata günlüğü için bir giriş eklemek için kullanılır.  
+- Kısmen için ek işleme iletmeden önce özel bir durumu işlemek istersiniz. Aşağıdaki örnekte, bir `catch` bloğu özel durumu yeniden atamadan önce bir hata günlüğü için bir giriş eklemek için kullanılır.  
   
      [!code-csharp[csProgGuideExceptions#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#10)]  
   

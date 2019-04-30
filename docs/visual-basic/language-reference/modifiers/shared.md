@@ -12,11 +12,11 @@ helpviewer_keywords:
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
 ms.openlocfilehash: 12c81a9a0651088a348afeaff3b71935d289da53
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778748"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 Bir veya daha fazla bildirilmiş programlama öğesine bir sınıf veya yapı büyük ile değil, belirli bir sınıfın veya yapının örneği ile ilişkili olduğunu belirtir.  
@@ -30,25 +30,25 @@ Bir veya daha fazla bildirilmiş programlama öğesine bir sınıf veya yapı b�
   
 ## <a name="rules"></a>Kurallar  
   
--   **Bildirim bağlamı.** Kullanabileceğiniz `Shared` yalnızca Modül düzeyinde. Bildirim bağlamı başka bir deyişle bir `Shared` öğesi bir sınıf veya yapı olmalıdır ve bir kaynak dosyası, ad alanı ya da yordamın olamaz.  
+- **Bildirim bağlamı.** Kullanabileceğiniz `Shared` yalnızca Modül düzeyinde. Bildirim bağlamı başka bir deyişle bir `Shared` öğesi bir sınıf veya yapı olmalıdır ve bir kaynak dosyası, ad alanı ya da yordamın olamaz.  
   
--   **Birleşik değiştiriciler.** Belirtemezsiniz `Shared` ile birlikte [geçersiz kılmalar](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), veya [ Statik](../../../visual-basic/language-reference/modifiers/static.md) aynı bildirimde.  
+- **Birleşik değiştiriciler.** Belirtemezsiniz `Shared` ile birlikte [geçersiz kılmalar](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), veya [ Statik](../../../visual-basic/language-reference/modifiers/static.md) aynı bildirimde.  
   
--   **Erişme.** Sınıf veya yapı adı ile belirli bir örneği, sınıfın veya yapının değişken adı ile değil niteleme tarafından paylaşılan bir öğe erişin. Bile bir sınıf veya yapı paylaşılan üyelerine erişmek için bir örneğini oluşturmak gerekmez.  
+- **Erişme.** Sınıf veya yapı adı ile belirli bir örneği, sınıfın veya yapının değişken adı ile değil niteleme tarafından paylaşılan bir öğe erişin. Bile bir sınıf veya yapı paylaşılan üyelerine erişmek için bir örneğini oluşturmak gerekmez.  
   
      Aşağıdaki örnek, paylaşılan bir yordam çağrıları <xref:System.Double.IsNaN%2A> tarafından kullanıma sunulan <xref:System.Double> yapısı.  
   
      `If Double.IsNaN(result) Then MsgBox("Result is mathematically undefined.")`  
   
--   **Örtük paylaşma.** Kullanamazsınız `Shared` değiştiricisini bir [Const deyimi](../../../visual-basic/language-reference/statements/const-statement.md), ancak sabitleri örtük olarak paylaşılır. Benzer şekilde, bir üyesinin bir modül veya bir arabirim bildiremezsiniz `Shared`, ancak örtük olarak paylaşılır.  
+- **Örtük paylaşma.** Kullanamazsınız `Shared` değiştiricisini bir [Const deyimi](../../../visual-basic/language-reference/statements/const-statement.md), ancak sabitleri örtük olarak paylaşılır. Benzer şekilde, bir üyesinin bir modül veya bir arabirim bildiremezsiniz `Shared`, ancak örtük olarak paylaşılır.  
   
 ## <a name="behavior"></a>Davranış  
   
--   **Depolama alanı.** Yalnızca ne kadar ya da birkaç örnek ne olursa olsun, kendi sınıf veya yapı oluşturduktan sonra paylaşılan bir değişken veya olay bellekte depolanır. Benzer şekilde, paylaşılan bir yordam veya özellik yerel değişkenler yalnızca bir kümesini içerir.  
+- **Depolama alanı.** Yalnızca ne kadar ya da birkaç örnek ne olursa olsun, kendi sınıf veya yapı oluşturduktan sonra paylaşılan bir değişken veya olay bellekte depolanır. Benzer şekilde, paylaşılan bir yordam veya özellik yerel değişkenler yalnızca bir kümesini içerir.  
   
--   **Bir örnek değişkeni erişme.** Belirli bir alt sınıf veya yapının örneğini içeren bir değişken adını nitelendirme tarafından paylaşılan bir öğeye erişmeyi mümkündür. Bu genellikle beklendiği gibi çalışır, ancak derleyici bir uyarı iletisi oluşturuyor ve sınıf veya yapı adı yerine değişken üzerinden erişim sağlar.  
+- **Bir örnek değişkeni erişme.** Belirli bir alt sınıf veya yapının örneğini içeren bir değişken adını nitelendirme tarafından paylaşılan bir öğeye erişmeyi mümkündür. Bu genellikle beklendiği gibi çalışır, ancak derleyici bir uyarı iletisi oluşturuyor ve sınıf veya yapı adı yerine değişken üzerinden erişim sağlar.  
   
--   **Bir örnek ifade yoluyla erişme.** Paylaşılan öğe, bir sınıfın veya yapının örneğini döndüren bir ifade erişirseniz, derleyici ifadenin değerlendirilmesi yerine sınıf veya yapı adı aracılığıyla erişim sağlar. Bu, diğer eylemlerin yanı sıra örneği döndüren gerçekleştirmek için ifade hedeflediyseniz beklenmeyen sonuçlar üretir. Aşağıdaki örnek bunu göstermektedir.  
+- **Bir örnek ifade yoluyla erişme.** Paylaşılan öğe, bir sınıfın veya yapının örneğini döndüren bir ifade erişirseniz, derleyici ifadenin değerlendirilmesi yerine sınıf veya yapı adı aracılığıyla erişim sağlar. Bu, diğer eylemlerin yanı sıra örneği döndüren gerçekleştirmek için ifade hedeflediyseniz beklenmeyen sonuçlar üretir. Aşağıdaki örnek bunu göstermektedir.  
   
     ```vb
     Sub main()  

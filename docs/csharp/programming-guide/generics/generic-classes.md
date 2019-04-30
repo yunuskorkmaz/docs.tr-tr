@@ -7,11 +7,11 @@ helpviewer_keywords:
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
 ms.openlocfilehash: 5f898bf342c8596d9dd4cc0b03396aec4dcf545c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61710764"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Genel Sınıflar (C# Programlama Kılavuzu)
 Genel sınıflar, belirli veri türüne özgü olmayan işlemler kapsüller. En yaygın Genel sınıflar için bağlantılı liste, karma tabloları, yığınlar, kuyruklar, ağaçlar ve benzeri gibi koleksiyonlar ile kullanılır. Ekleme ve koleksiyondan öğeleri kaldırma gibi işlemler temel olarak aynı şekilde depolanmakta olan veri türünden bağımsız olarak gerçekleştirilir.  
@@ -20,19 +20,19 @@ Genel sınıflar, belirli veri türüne özgü olmayan işlemler kapsüller. En 
   
  Genellikle, varolan bir somut sınıf ile başlayan ve türlerini bir tür parametreleri ile Genelleştirme ve kullanılabilirlik en iyi dengeyi ulaşana kadar aynı anda değiştirme genel sınıflar oluşturun. Genel sınıflarınızı oluştururken önemli noktalar şunlardır:  
   
--   İçine genelleştirmek için hangi türlerin tür parametreleri.  
+- İçine genelleştirmek için hangi türlerin tür parametreleri.  
   
      Bir kural, parametreleştirebilirsiniz türlerinin, daha esnek ve yeniden kullanılabilir kodunuzu haline gelir. Ancak, çok fazla Genelleştirme diğer geliştiriciler için okuma veya anlamak zordur kod oluşturabilirsiniz.  
   
--   Hangi kısıtlamalar varsa için tür parametreleri uygulamak için (bkz [tür parametrelerindeki kısıtlamalar](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)).  
+- Hangi kısıtlamalar varsa için tür parametreleri uygulamak için (bkz [tür parametrelerindeki kısıtlamalar](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)).  
   
      Hala işlemesi gerekir türleri işlemenize olanak sağlayacak en yüksek kısıtlamalara olası uygulamak iyi bir kuraldır. Örneğin, genel, sınıf yalnızca başvuru türleri ile kullanıma yöneliktir biliyorsanız, sınıf kısıtlaması uygulayın. Değer türleri ile sınıfınıza istenmeyen kullanımını engeller ve kullanmanıza olanak tanıyacak `as` işlecinin `T`ve null değerleri için onay.  
   
--   Temel sınıflar ve alt sınıfların faktörü genel davranışını belirtir.  
+- Temel sınıflar ve alt sınıfların faktörü genel davranışını belirtir.  
   
      Genel sınıflar temel sınıf olarak hizmet verebilen çünkü aynı tasarım konuları burada geçerli gibi genel olmayan sınıflar. Bu konunun ilerleyen bölümlerinde genel temel sınıflardan devralan hakkında kurallar bakın.  
   
--   Bir veya daha fazla genel arabirimi uygulayan verilmeyeceğini belirtir.  
+- Bir veya daha fazla genel arabirimi uygulayan verilmeyeceğini belirtir.  
   
      Örneğin, bir genel türler tabanlı koleksiyon öğeleri oluşturmak için kullanılan bir sınıfı tasarlıyorsanız, arabirimi gibi uygulama gerekebilir <xref:System.IComparable%601> burada `T` sınıfınıza türüdür.  
   

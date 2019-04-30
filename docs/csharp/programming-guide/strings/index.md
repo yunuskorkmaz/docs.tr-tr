@@ -7,11 +7,11 @@ helpviewer_keywords:
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61678510"
 ---
 # <a name="strings-c-programming-guide"></a>Dizeler (C# Programlama Kılavuzu)
 Türünde bir nesne bir dizedir <xref:System.String> metin değeri olan. Metin sıralı salt okunur bir koleksiyonu dahili olarak depolanan <xref:System.Char> nesneleri. Bir C# dizenin sonuna kadar hiçbir null Sonlandırıcı karakter yoktur; Bu nedenle bir C# dize herhangi bir sayıda gömülü null karakterleri ('\0') içerebilir. <xref:System.String.Length%2A> Bir dize özelliğini sayısını temsil eden `Char` içerdiği, Unicode karakter sayısını nesneleri. Bir dizedeki tek Unicode kod noktaları erişmek için <xref:System.Globalization.StringInfo> nesne.  

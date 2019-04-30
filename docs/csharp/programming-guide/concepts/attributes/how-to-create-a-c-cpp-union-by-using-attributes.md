@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Öznitelikleri kullanarak C / C++ birleşimi oluşturm
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
 ms.openlocfilehash: a8b902536cd09ac732bf2144536605a66b5bbc56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703068"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Nasıl yapılır: Öznitelikleri kullanarak C/C++ birleşimi oluşturma (C#)
 Öznitelikleri kullanarak yapı birimleri bellekte nasıl düzenlenmiştir özelleştirebilirsiniz. Örneğin, olarak C/C++'ta bir birleşim kullanarak Bilineni oluşturabilirsiniz `StructLayout(LayoutKind.Explicit)` ve `FieldOffset` öznitelikleri.  

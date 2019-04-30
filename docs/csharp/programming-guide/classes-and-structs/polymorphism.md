@@ -7,18 +7,18 @@ helpviewer_keywords:
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
 ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703107"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Çok Biçimlilik (C# Programlama Kılavuzu)
 Çok biçimlilik genellikle kapsülleme ve devralma sonra nesne yönelimli programlama, üçüncü sütun olarak adlandırılır. Çok biçimlilik "çok biçimli" anlamına gelen Yunanca sözcüktür ve iki ayrı görünüşlere sahiptir:  
   
--   Çalışma zamanında, türetilmiş bir sınıfın nesnelerini yöntem parametreleri ve koleksiyonları veya diziler gibi yerlerde bir taban sınıfın nesneleri olarak değerlendirilecek. Bu durumda, bildirilen nesnenin türü artık çalışma zamanı türünü aynıdır.  
+- Çalışma zamanında, türetilmiş bir sınıfın nesnelerini yöntem parametreleri ve koleksiyonları veya diziler gibi yerlerde bir taban sınıfın nesneleri olarak değerlendirilecek. Bu durumda, bildirilen nesnenin türü artık çalışma zamanı türünü aynıdır.  
   
--   Taban sınıfları tanımlama ve uygulama [sanal](../../../csharp/language-reference/keywords/virtual.md) *yöntemleri*, ve türetilen sınıflar [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) bunları kendi tanım ve uygulamayı sağladıkları anlamına gelir. CLR istemci kodu yöntemi çağırdığında, çalışma zamanında, nesnenin çalışma zamanı türünü arar ve o sanal yöntemini geçersiz kılma çağırır. Bu nedenle, kaynak kodunuzda bir temel sınıf üzerinde bir yöntemi çağırabilir ve yürütülecek yöntemin türetilmiş sınıf sürümü neden.  
+- Taban sınıfları tanımlama ve uygulama [sanal](../../../csharp/language-reference/keywords/virtual.md) *yöntemleri*, ve türetilen sınıflar [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) bunları kendi tanım ve uygulamayı sağladıkları anlamına gelir. CLR istemci kodu yöntemi çağırdığında, çalışma zamanında, nesnenin çalışma zamanı türünü arar ve o sanal yöntemini geçersiz kılma çağırır. Bu nedenle, kaynak kodunuzda bir temel sınıf üzerinde bir yöntemi çağırabilir ve yürütülecek yöntemin türetilmiş sınıf sürümü neden.  
   
  Sanal yöntemleri ile ilgili nesnelerin gruplarını Tekdüzen bir şekilde çalışmanıza olanak sağlar. Örneğin, kullanıcının bir çizim yüzeyinde şekiller çeşitli oluşturmasını sağlayan bir çizim uygulama olduğunu varsayalım. Derleme zamanında hangi türde şekiller kullanıcı oluşturacak bilmezsiniz. Ancak, çeşitli türleri oluşturulan şekillerinin izlemek uygulamada var ve yanıt olarak kullanıcı fare işlemlerini güncelleştirmeniz gerekir. Çok biçimlilik, iki temel adımlar bu sorunu çözmek için kullanabilirsiniz:  
   
@@ -37,11 +37,11 @@ ms.locfileid: "59322088"
 ### <a name="virtual-members"></a>Sanal Üyeler  
  Türetilmiş bir sınıf bir taban sınıftan devraldığında tüm yöntemler, alanlar, özellikler ve olaylar temel sınıfın kazanır. Türetilmiş sınıf Tasarımcısı seçebilirsiniz verilip verilmeyeceğini  
   
--   sanal taban sınıfı üyeleri geçersiz kıl  
+- sanal taban sınıfı üyeleri geçersiz kıl  
   
--   en yakın temel sınıf yöntemini geçersiz kılma olmadan devral  
+- en yakın temel sınıf yöntemini geçersiz kılma olmadan devral  
   
--   Yeni sanal olmayan taban sınıf uygulamaları Gizle bu üyeler uygulamasını tanımlayın  
+- Yeni sanal olmayan taban sınıf uygulamaları Gizle bu üyeler uygulamasını tanımlayın  
   
  Yalnızca temel sınıf üyesi olarak bildirilirse, türetilmiş bir sınıf bir temel sınıf üyesi geçersiz kılabilirsiniz [sanal](../../../csharp/language-reference/keywords/virtual.md) veya [soyut](../../../csharp/language-reference/keywords/abstract.md). Türetilen üye kullanmalısınız [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) açıkça yöntemi sanal bir çağrıda katılmak düşünüldüğünü göstermek için anahtar sözcüğü. Aşağıdaki kod, bir örnek sağlar:  
   
@@ -89,11 +89,11 @@ ms.locfileid: "59322088"
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
--   [Geçersiz Kılma ve Yeni Anahtar Sözcüklerle Sürüm Oluşturma](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+- [Geçersiz Kılma ve Yeni Anahtar Sözcüklerle Sürüm Oluşturma](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   
--   [Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
+- [Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [Nasıl yapılır: ToString yöntemini geçersiz kılma](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+- [Nasıl yapılır: ToString yöntemini geçersiz kılma](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
 ms.openlocfilehash: 43fdb023f19aa988dfef3dcd68443d6f59808472
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746634"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Nasıl yapılır: Windows Forms TextBox Denetiminde Ekleme Noktasını Belirleme
 Bir Windows Forms olduğunda <xref:System.Windows.Forms.TextBox> denetim ilk odağı aldığında, varolan herhangi bir metni sola metin kutusu içinde varsayılan ekleme. Kullanıcı, klavye veya fare ile ekleme noktasını taşıyabilirsiniz. Metin kutusu kaybeder ve ardından odak kazandıktan, ekleme noktasını yerde kullanıcı son uygulanan olacaktır.  
@@ -59,7 +59,7 @@ Bir Windows Forms olduğunda <xref:System.Windows.Forms.TextBox> denetim ilk oda
   
 #### <a name="to-make-the-text-box-insertion-point-visible-by-default-on-a-new-form"></a>Metin kutusu ekleme noktasının varsayılan olarak yeni bir form üzerinde görünür yapmak için  
   
--   Ayarlama <xref:System.Windows.Forms.TextBox> denetimin <xref:System.Windows.Forms.Control.TabIndex%2A> özelliğini `0`.  
+- Ayarlama <xref:System.Windows.Forms.TextBox> denetimin <xref:System.Windows.Forms.Control.TabIndex%2A> özelliğini `0`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

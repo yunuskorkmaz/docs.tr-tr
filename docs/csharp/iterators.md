@@ -4,11 +4,11 @@ description: Yerleşik kullanmayı öğrenin C# yineleyiciler ve kendi özel yin
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
 ms.openlocfilehash: e816af698a39a4b44aefa92017efdbc9e3c8cc1d
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672048"
 ---
 # <a name="iterators"></a>Yineleyiciler
 

@@ -10,11 +10,11 @@ ms.assetid: ff8d48bc-f606-484f-9fe1-d0af264269fb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a9b8357be5b9f49569114cbc1c2942eea03696eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675331"
 ---
 # <a name="assembly-placement"></a>Derleme Yerleştirme
 Çoğu .NET Framework uygulaması için, uygulamayı oluşturan derlemeleri uygulama dizininde, uygulama dizininin bir alt dizininde veya genel derleme önbelleğinde (derleme paylaşılıyorsa) bulursunuz. Ortak dil çalışma zamanı kullanarak bir derleme için nerede arar kılabilirsiniz [ \<codeBase > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) bir yapılandırma dosyası. Derlemeyi kullanarak belirtilen konum tanımlayıcı bir ada sahip değilse [ \<codeBase > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) uygulama dizini veya bir alt dizine sınırlıdır. Derlemeyi tanımlayıcı bir ada sahipse [ \<codeBase > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) bilgisayarda veya bir ağ üzerinde herhangi bir konum belirtebilirsiniz.  

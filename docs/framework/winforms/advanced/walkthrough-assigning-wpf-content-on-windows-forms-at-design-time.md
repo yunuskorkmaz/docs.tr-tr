@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
 ms.openlocfilehash: b4efef869c96ddb4e58445e45ecad12b5658f9f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748896"
 ---
 # <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>İzlenecek yol: Windows Forms'da Tasarım Zamanında WPF İçeriği Atama
 Bu izlenecek yol, formu görüntülemek istediğiniz Windows Presentation Foundation (WPF) denetim türlerini seçmek nasıl gösterir. Projenize dahil tüm WPF denetim türlerini seçebilirsiniz.
 
  Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:
 
--   Projeyi oluşturun.
+- Projeyi oluşturun.
 
--   WPF denetim türlerini oluşturun.
+- WPF denetim türlerini oluşturun.
 
--   WPF denetimleri seçin.
+- WPF denetimleri seçin.
 
 > [!NOTE]
 >  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -32,7 +32,7 @@ Bu izlenecek yol, formu görüntülemek istediğiniz Windows Presentation Founda
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:  
   
--   Visual Studio 2012.  
+- Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Projeyi Oluşturma  
  İlk adım Windows Forms projesi oluşturmaktır.  
@@ -42,7 +42,7 @@ Bu izlenecek yol, formu görüntülemek istediğiniz Windows Presentation Founda
   
 #### <a name="to-create-the-project"></a>Proje oluşturmak için  
   
--   Visual Basic veya Visual C# adlı yeni bir Windows Forms uygulaması projesi oluşturma `SelectingWpfContent`.  
+- Visual Basic veya Visual C# adlı yeni bir Windows Forms uygulaması projesi oluşturma `SelectingWpfContent`.  
   
 ## <a name="creating-the-wpf-control-types"></a>WPF denetim türleri oluşturma  
  WPF denetim türleri projeye ekledikten sonra bunları farklı barındırabilirsiniz <xref:System.Windows.Forms.Integration.ElementHost> kontrol eder.  

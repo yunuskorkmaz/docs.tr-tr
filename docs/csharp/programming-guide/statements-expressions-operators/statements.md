@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
 ms.openlocfilehash: 232368d2b019b8c265bbb48bd197776f9e03a132
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61709295"
 ---
 # <a name="statements-c-programming-guide"></a>Deyimler (C# Programlama Kılavuzu)
 Bir programı alan eylemleri deyimlerinde ifade edilir. Ortak Eylemler değişkenleri bildirme, değerler atama, koleksiyonlar üzerinden döngü oluşturma ve bir ya da başka bir verili bir koşula bağlı kod bloğu için dallanma metotları çağırma içerir. Deyimleri bir programda yürütüldüğü sırada, denetim akışı veya, yürütmenin akışını çağrılır. Denetim akışı nasıl program çalışma zamanında aldığı giriş tepki verdiğini bağlı olarak bir program çalıştırıldığında her zaman değişiklik gösterebilir.  
@@ -83,11 +83,11 @@ Aşağıdaki örnekler, iki kullanım için boş bir deyimi göstermektedir:
   
 ## <a name="related-sections"></a>İlgili Bölümler  
   
--   [Deyim Anahtar Sözcükleri](../../../csharp/language-reference/keywords/statement-keywords.md)  
+- [Deyim Anahtar Sözcükleri](../../../csharp/language-reference/keywords/statement-keywords.md)  
   
--   [İfadeler](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
+- [İfadeler](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
   
--   [İşleçler](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [İşleçler](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
 ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672607"
 ---
 # <a name="how-to-read-image-metadata"></a>Nasıl yapılır: Görüntü Meta Verilerini Okuma
 Bazı görüntü dosyaları, görüntü özelliklerini belirlemek için okuyabilecekleri meta veriler içerir. Örneğin, dijital hello'nun marka ve model görüntü yakalamak için kullanılan kameranın belirlemek için okuyabilecekleri bir meta veri içerebilir. İle [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], var olan meta verileri okuyabilir ve görüntü dosyaları ayrıca yeni meta veriler yazabilirsiniz.  

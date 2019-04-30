@@ -9,11 +9,11 @@ helpviewer_keywords:
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
 ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674395"
 ---
 # <a name="socket-element-network-settings"></a>\<Yuva > öğesi (ağ ayarları)
 Yuva işlemleri tamamlama bağlantı noktalarını kullanıp kullanmadığını belirtir.  
@@ -64,9 +64,9 @@ Yuva işlemleri tamamlama bağlantı noktalarını kullanıp kullanmadığını 
   
  Bu `ipProtectionLevel` özniteliğini yalnızca ilk gelen trafiği etkiler:  
   
--   Bir TCP yuva gelen bağlantıları için dinlemek sunucu.  
+- Bir TCP yuva gelen bağlantıları için dinlemek sunucu.  
   
--   Bir paketin bir yuvada alma bir UDP uygulamasıdır.  
+- Bir paketin bir yuvada alma bir UDP uygulamasıdır.  
   
  Bu yapılandırma ayarının (her iki yönde trafik Kısıtlanmamış) önceden kurulmuş TCP bağlantıları etkilemez ve UDP paketlerini gönderen uygulama etkilemez.  
   

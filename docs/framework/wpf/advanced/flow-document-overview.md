@@ -10,11 +10,11 @@ helpviewer_keywords:
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
 ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703991"
 ---
 # <a name="flow-document-overview"></a>Akış Belgesine Genel Bakış
 Akış belgeleri görüntüleme ve okunabilirliği iyileştirmek için tasarlanmıştır. Önceden tanımlanmış bir düzene ayarlanıyor, yerine akış belgeleri dinamik olarak ayarlama ve çalışma zamanı değişkenleri isteğe bağlı kullanıcı tercihlerini pencere boyutunu ve cihaz çözünürlüğü gibi temel alarak kendi içerik yeniden akışı. Ayrıca, akış belgeleri sayfalandırma ve sütunlar gibi gelişmiş belge özellikleri sunar. Bu konu, akış belgeleri ve bunların nasıl oluşturulacağı hakkında genel bir bakış sağlar.  
@@ -42,13 +42,13 @@ Akış belgeleri görüntüleme ve okunabilirliği iyileştirmek için tasarlanm
   
  Vurgulanmış olarak Yukarıdaki çizimde, Flow belgelerine yerleşik birkaç özellik vardır:
   
--   Arama: Tüm belgeyi bir tam metin arama gerçekleştirmesine izin verir.  
+- Arama: Tüm belgeyi bir tam metin arama gerçekleştirmesine izin verir.  
   
--   Görüntüleme modu: Kullanıcı, bir tek sayfa (sayfa--bir zamanda) görüntüleme modu, bir iki-sayfası--a-mod ve sürekli bir kayan (sınırsız) görüntüleme modunda görüntüleme zamanda (kitap Okuma biçimi) dahil olmak üzere, tercih edilen görüntüleme modunda seçebilirsiniz.  Bu izleme modları hakkında daha fazla bilgi için bkz. <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  
+- Görüntüleme modu: Kullanıcı, bir tek sayfa (sayfa--bir zamanda) görüntüleme modu, bir iki-sayfası--a-mod ve sürekli bir kayan (sınırsız) görüntüleme modunda görüntüleme zamanda (kitap Okuma biçimi) dahil olmak üzere, tercih edilen görüntüleme modunda seçebilirsiniz.  Bu izleme modları hakkında daha fazla bilgi için bkz. <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  
   
--   Sayfa Gezinti denetimlerinin: Sayfa Gezinti denetimlerinin, belge görüntüleme modunda sayfaları kullanıyorsa, sonraki sayfaya (aşağı ok) veya önceki sayfa (yukarı ok), hem de geçerli sayfa numarası ve toplam sayfa sayısı için göstergeleri atlamak için bir düğme bulunur. Sayfalar arasında çevirme klavye oklarını kullanarak da gerçekleştirilebilir.  
+- Sayfa Gezinti denetimlerinin: Sayfa Gezinti denetimlerinin, belge görüntüleme modunda sayfaları kullanıyorsa, sonraki sayfaya (aşağı ok) veya önceki sayfa (yukarı ok), hem de geçerli sayfa numarası ve toplam sayfa sayısı için göstergeleri atlamak için bir düğme bulunur. Sayfalar arasında çevirme klavye oklarını kullanarak da gerçekleştirilebilir.  
   
--   Yakınlaştırma: Yakınlaştırma denetimleri, sırasıyla artırmak ya da artı veya eksi düğmelerini, yakınlaştırma düzeyi azaltmak kullanıcı sağlar. Yakınlaştırma denetimlerini yakınlaştırma düzeyini ayarlamak için bir kaydırıcı de içerir. Daha fazla bilgi için bkz. <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>.  
+- Yakınlaştırma: Yakınlaştırma denetimleri, sırasıyla artırmak ya da artı veya eksi düğmelerini, yakınlaştırma düzeyi azaltmak kullanıcı sağlar. Yakınlaştırma denetimlerini yakınlaştırma düzeyini ayarlamak için bir kaydırıcı de içerir. Daha fazla bilgi için bkz. <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>.  
   
  Bu özellikler, akış içeriğini barındırmak için kullanılan denetim göre değiştirilebilir. Farklı denetimler sonraki bölümde açıklanmıştır.  
   
@@ -75,9 +75,9 @@ Akış belgeleri görüntüleme ve okunabilirliği iyileştirmek için tasarlanm
 ## <a name="creating-flow-content"></a>Akış içeriği oluşturma  
  Akış içeriği, karmaşık, metin, resimler, tablolar da dahil olmak üzere çeşitli öğelerinin ve hatta olabilir <xref:System.Windows.UIElement> türetilmiş sınıflar gibi denetimleri. Karmaşık akış içeriği oluşturma işlemini anlamak için aşağıdaki noktaları önemlidir:  
   
--   **Flow ile ilgili sınıflar**: Akış içeriği içinde kullanılan her bir sınıfın belirli bir amacı vardır. Ayrıca, akış sınıfları arasındaki hiyerarşik ilişkiyi nasıl kullanıldığını anlamanıza yardımcı olur. Örneğin, türetilmiş sınıflar <xref:System.Windows.Documents.Block> türetilmiş sınıflar sırasında diğer nesneleri kapsamak üzere kullanılan sınıf <xref:System.Windows.Documents.Inline> görüntülenen nesneleri içerir.  
+- **Flow ile ilgili sınıflar**: Akış içeriği içinde kullanılan her bir sınıfın belirli bir amacı vardır. Ayrıca, akış sınıfları arasındaki hiyerarşik ilişkiyi nasıl kullanıldığını anlamanıza yardımcı olur. Örneğin, türetilmiş sınıflar <xref:System.Windows.Documents.Block> türetilmiş sınıflar sırasında diğer nesneleri kapsamak üzere kullanılan sınıf <xref:System.Windows.Documents.Inline> görüntülenen nesneleri içerir.  
   
--   **İçerik şeması**: Akış belgesi, iç içe öğelerin önemli miktarda gerektirebilir. İçerik şeması öğeleri arasındaki olası üst/alt ilişkilerini belirler.  
+- **İçerik şeması**: Akış belgesi, iç içe öğelerin önemli miktarda gerektirebilir. İçerik şeması öğeleri arasındaki olası üst/alt ilişkilerini belirler.  
   
  Aşağıdaki bölümlerde daha ayrıntılı bir şekilde bu alanların her biri üzerinden geçer.  
   
@@ -196,19 +196,19 @@ Akış belgeleri görüntüleme ve okunabilirliği iyileştirmek için tasarlanm
   
  **Şekil:**  
   
--   Yerleştirilebilir: Sayfa, içerik, sütun veya paragraf göre sabitlemek için yatay ve dikey bağlayıcılarını ayarlayabilirsiniz. Ayrıca kendi <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> ve <xref:System.Windows.Documents.Figure.VerticalOffset%2A> özellikler rastgele uzaklıkları belirtir.  
+- Yerleştirilebilir: Sayfa, içerik, sütun veya paragraf göre sabitlemek için yatay ve dikey bağlayıcılarını ayarlayabilirsiniz. Ayrıca kendi <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> ve <xref:System.Windows.Documents.Figure.VerticalOffset%2A> özellikler rastgele uzaklıkları belirtir.  
   
--   Birden fazla sütuna boyutlandırılıp boyutlandırılmayacağını: Ayarlayabileceğiniz <xref:System.Windows.Documents.Figure> yükseklik ve genişlik katlarıyla sayfası, içeriğin ya da sütun yükseklik veya genişlik. Sayfa ve içerik söz konusu olduğunda, çarpan 1'den büyük olmayan izin verildiğini unutmayın. Örneğin, genişliği ayarlayabilirsiniz bir <xref:System.Windows.Documents.Figure> "0,5 sayfası" veya "0,25 içerik" veya "2 sütun". Yükseklik ve genişlik piksel mutlak değerlerini ayarlayabilirsiniz.  
+- Birden fazla sütuna boyutlandırılıp boyutlandırılmayacağını: Ayarlayabileceğiniz <xref:System.Windows.Documents.Figure> yükseklik ve genişlik katlarıyla sayfası, içeriğin ya da sütun yükseklik veya genişlik. Sayfa ve içerik söz konusu olduğunda, çarpan 1'den büyük olmayan izin verildiğini unutmayın. Örneğin, genişliği ayarlayabilirsiniz bir <xref:System.Windows.Documents.Figure> "0,5 sayfası" veya "0,25 içerik" veya "2 sütun". Yükseklik ve genişlik piksel mutlak değerlerini ayarlayabilirsiniz.  
   
--   Sayfalandırma değil: İçerik içinde bir <xref:System.Windows.Documents.Figure> içine uymayan <xref:System.Windows.Documents.Figure>, hangi içeriği sığacak şekilde işlenir ve kalan içeriği kaybolur  
+- Sayfalandırma değil: İçerik içinde bir <xref:System.Windows.Documents.Figure> içine uymayan <xref:System.Windows.Documents.Figure>, hangi içeriği sığacak şekilde işlenir ve kalan içeriği kaybolur  
   
  **Floater:**  
   
--   Konumlandırılmış olabilir ve boşluk için kullanılabilir hale getirilebilir her yerde işlenir. Uzaklık ya da bağlantı ayarlanamıyor bir <xref:System.Windows.Documents.Floater>.  
+- Konumlandırılmış olabilir ve boşluk için kullanılabilir hale getirilebilir her yerde işlenir. Uzaklık ya da bağlantı ayarlanamıyor bir <xref:System.Windows.Documents.Floater>.  
   
--   Birden fazla sütuna boyutta olması: Varsayılan olarak, <xref:System.Windows.Documents.Floater> boyutlarda bir sütun. Bunun bir <xref:System.Windows.Documents.Floater.Width%2A> bu değer bir sütun genişliği yok sayıldı ve floater büyük olup olmadığını ancak bir mutlak piksel değere ayarlanabilir özelliği bir sütununda boyutu. Doğru piksel genişliği ayarlayarak bu saatten daha az bir sütuna boyutlandırabilirsiniz ancak boyutlandırma değil sütun göreli "0.5Column" için geçerli bir ifade değil. Bu nedenle <xref:System.Windows.Documents.Floater> genişliği. <xref:System.Windows.Documents.Floater> hiçbir height özelliği sahipse ve bu yükseklik ayarlanamaz, onun yükseklik içerik bağlıdır  
+- Birden fazla sütuna boyutta olması: Varsayılan olarak, <xref:System.Windows.Documents.Floater> boyutlarda bir sütun. Bunun bir <xref:System.Windows.Documents.Floater.Width%2A> bu değer bir sütun genişliği yok sayıldı ve floater büyük olup olmadığını ancak bir mutlak piksel değere ayarlanabilir özelliği bir sütununda boyutu. Doğru piksel genişliği ayarlayarak bu saatten daha az bir sütuna boyutlandırabilirsiniz ancak boyutlandırma değil sütun göreli "0.5Column" için geçerli bir ifade değil. Bu nedenle <xref:System.Windows.Documents.Floater> genişliği. <xref:System.Windows.Documents.Floater> hiçbir height özelliği sahipse ve bu yükseklik ayarlanamaz, onun yükseklik içerik bağlıdır  
   
--   <xref:System.Windows.Documents.Floater> paginates: İçeriğini, belirtilen uzaklığında 1'den fazla sütun yüksekliği geçerse, floater keser ve paginates sonraki sütun, sonraki sayfaya, vs.  
+- <xref:System.Windows.Documents.Floater> paginates: İçeriğini, belirtilen uzaklığında 1'den fazla sütun yüksekliği geçerse, floater keser ve paginates sonraki sütun, sonraki sayfaya, vs.  
   
  <xref:System.Windows.Documents.Figure> boyutunu denetlemek istediğiniz tek başına içerik yerleştirmek için iyi bir yerdir konumlandırma ve içerik belirtilen boyutu sığmasını eminiz. <xref:System.Windows.Documents.Floater> Akışlar için ana sayfa içeriği benzer, ancak ondan ayrılmış daha fazla ve ücretsiz akan içerik yerleştirmek için iyi bir yerdir.  
   

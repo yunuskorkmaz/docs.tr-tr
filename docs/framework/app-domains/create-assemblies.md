@@ -10,11 +10,11 @@ ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2713011d61b41dfa4d72a635c656c0c00cb42f8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675136"
 ---
 # <a name="creating-assemblies"></a>Derlemeler Oluşturma
 
@@ -24,23 +24,23 @@ Birkaç kod modülleri ve kaynak dosyalarını, bir çoklu dosya derlemesi oluş
 
 Derlemeler, aşağıdaki etkenlere bağlı olarak içine kod modülleri ve kaynakları gruplama birkaç seçeneğiniz vardır:
 
--   Sürüm oluşturma
+- Sürüm Oluşturma
 
      Grup modüller aynı sürüm bilgisini içermelidir.
 
--   Dağıtım
+- Dağıtım
 
      Grup kod modülleri ve modelinizin dağıtımı destekleyen kaynaklar.
 
--   Yeniden kullanma
+- Yeniden kullanma
 
      Bunlar mantıksal olarak birlikte bazı amaç için kullanılabiliyorsa modülleri gruplandırın. Örneğin, aynı derlemede türlerin ve sınıfların program bakımı için kullanılmayan oluşan bir derleme içine yerleştirilebilir. Ayrıca, birden çok uygulama ile paylaşmak için istediğinize türleri bir derlemeye gruplandırılmasını ve derlemeyi bir güçlü ad ile imzalanması gerekir.
 
--   Güvenlik
+- Güvenlik
 
      Aynı güvenlik izinleri gerektiren türler içeren Grup modüller.
 
--   Kapsam belirleme
+- Kapsam belirleme
 
      Görünürlüğü aynı derlemeye sınırlandırılmalıdır türleri içeren Grup modüllerinin.
 

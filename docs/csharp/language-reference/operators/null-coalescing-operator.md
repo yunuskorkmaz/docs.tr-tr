@@ -10,11 +10,11 @@ helpviewer_keywords:
 - conditional-AND operator (&&) [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
 ms.openlocfilehash: b96fe4790aac7ff5ff5394cbaaeaddc1e334e96c
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689339"
 ---
 # <a name="-operator-c-reference"></a>?? operator (C# Başvurusu)
 
@@ -40,6 +40,6 @@ Daha fazla bilgi için [null birleşim işleci](~/_csharplang/spec/expressions.m
 
 - [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C#işleçleri](index.md)
+- [C# işleçleri](index.md)
 - [Boş Değer Atanabilir Tipler](../../programming-guide/nullable-types/index.md)
 - [Hangi tam olarak 'Yükseltilmiş' anlamına mu?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

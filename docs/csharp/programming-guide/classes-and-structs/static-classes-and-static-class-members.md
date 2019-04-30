@@ -10,11 +10,11 @@ helpviewer_keywords:
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
 ms.openlocfilehash: bcf4cd9d4ac4e4de3174cb57d83c8cab7de86c21
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703120"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Statik Sınıflar ve Statik Sınıf Üyeleri (C# Programlama Kılavuzu)
 A [statik](../../../csharp/language-reference/keywords/static.md) sınıfı, temel bir statik olmayan sınıf ile aynı, ancak bir fark vardır: bir statik sınıfın örneği oluşturulamıyor. Diğer bir deyişle, kullanamazsınız [yeni](../../../csharp/language-reference/keywords/new.md) sınıf türünde bir değişken oluşturmak için anahtar sözcüğü. Hiçbir örnek değişken olduğundan, bir statik sınıf üyeleri sınıf adı'ı kullanarak erişir. Örneğin, bir statik sınıflar varsa adlı `UtilityClass` adlı genel statik bir yöntemi olan `MethodA`, aşağıdaki örnekte gösterildiği gibi yöntemi çağırın:  
@@ -44,13 +44,13 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  Aşağıdaki listede, bir statik sınıf'larının temel özellikleri sağlar:  
   
--   Yalnızca statik üyeleri içerir.  
+- Yalnızca statik üyeleri içerir.  
   
--   Örneği oluşturulamıyor.  
+- Örneği oluşturulamıyor.  
   
--   Korumalı.  
+- Korumalı.  
   
--   İçeremez [örnek oluşturucuları](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+- İçeremez [örnek oluşturucuları](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
   
  Statik bir sınıf oluşturma bu nedenle temel olarak, yalnızca statik üyeleri ve özel bir oluşturucu içeren bir sınıf oluşturma aynıdır. Özel bir oluşturucu, sınıfı oluşturulmasını engeller. Statik bir sınıfı kullanmanın avantajı, derleyici, hiçbir örnek üyeleri yanlışlıkla eklendiğinden emin olmak için kontrol edebilirsiniz olmasıdır. Derleyici, bu sınıfın örneklerinin oluşturulup garanti eder.  
   

@@ -11,11 +11,11 @@ author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
 ms.openlocfilehash: a48a145cd337a18c4ce63b281e1c82032d0532e7
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675370"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Ek sınıf kitaplıkları ve API'ler
 
@@ -25,7 +25,7 @@ Ayrıca, bazı kitaplıklar belirli platformlara veya .NET Framework uygulamalar
   
 ## <a name="oob-projects"></a>OOB projeleri
   
-| Proje | Açıklama |  
+| Project | Açıklama |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | İş parçacığı güvenli ve hiçbir zaman içeriklerini değiştirmek için kesin koleksiyonlar sağlar. |
 | <xref:System.Net.Http.WinHttpHandler> | Bir ileti işleyicisi sağlar <xref:System.Net.Http.HttpClient> Windows WinHTTP arabirimi esas alan. |
@@ -34,7 +34,7 @@ Ayrıca, bazı kitaplıklar belirli platformlara veya .NET Framework uygulamalar
 
 ## <a name="platform-specific-libraries"></a>Platforma özgü kitaplıklar
   
-| Proje | Açıklama |  
+| Project | Açıklama |  
 | ------- | ----------- |  
 | <xref:System.Text.CodePagesEncodingProvider> | Genişletir <xref:System.Text.EncodingProvider> kod sayfası kodlamaları hedefleyen Evrensel Windows platformu uygulamaları için kullanılabilir hale getirmek için sınıf. |  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
 ms.openlocfilehash: 548e374fbabee57e756d06e5cb56a59f8e97a47c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756279"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Veri Kaynaklarını DataAdapters ile Güncelleştirme
 `Update` Yöntemi <xref:System.Data.Common.DataAdapter> değişikliklerden çözümlemek için çağrılan bir <xref:System.Data.DataSet> veri kaynağına geri dönün. `Update` Yöntemi gibi `Fill` yöntemi örneği bağımsız değişken olarak alan bir `DataSet`ve isteğe bağlı <xref:System.Data.DataTable> nesne veya `DataTable` adı. `DataSet` Örneği `DataSet` yapılmış, değişiklikleri içeren ve `DataTable` değişiklikleri alınacak tabloyu tanımlar. Hayır ise `DataTable` belirtilirse, ilk `DataTable` içinde `DataSet` kullanılır.  
@@ -98,13 +98,13 @@ adapter.Update(table.Select(null, null, DataViewRowState.Added));
 ## <a name="use-a-dataadapter-to-retrieve-and-update-data"></a>DataAdapter almak ve verileri güncelleştirmek için kullanın  
  DataAdapter almak ve verileri güncelleştirmek için kullanabilirsiniz.  
   
--   Örnek DataAdapter.AcceptChangesDuringFill veritabanındaki verileri kopyalamak için kullanır. Özelliği false ayarlarsanız, tablonun doldururken AcceptChanges çağrılmaz ve yeni eklenen satırlar eklenen satırlar olarak kabul edilir. Bu nedenle, örnek veritabanına yeni satır eklemek için bu satırlara kullanır.  
+- Örnek DataAdapter.AcceptChangesDuringFill veritabanındaki verileri kopyalamak için kullanır. Özelliği false ayarlarsanız, tablonun doldururken AcceptChanges çağrılmaz ve yeni eklenen satırlar eklenen satırlar olarak kabul edilir. Bu nedenle, örnek veritabanına yeni satır eklemek için bu satırlara kullanır.  
   
--   Örnekleri DataAdapter.TableMappings DataTable ve kaynak tablosu arasındaki eşlemeyi tanımlamak için kullanır.  
+- Örnekleri DataAdapter.TableMappings DataTable ve kaynak tablosu arasındaki eşlemeyi tanımlamak için kullanır.  
   
--   Örnek DataAdapter.FillLoadOption bağdaştırıcısı DataTable nesnesinden dbdatareader öğesine dönüştürülemedi nasıl doldurduğunu belirlemek için kullanır. Bir DataTable oluşturduğunuzda, yalnızca veri veritabanından geçerli sürümü veya özgün sürümle LoadOption.Upsert veya LoadOption.PreserveChanges olarak ayarlayarak yazabilirsiniz.  
+- Örnek DataAdapter.FillLoadOption bağdaştırıcısı DataTable nesnesinden dbdatareader öğesine dönüştürülemedi nasıl doldurduğunu belirlemek için kullanır. Bir DataTable oluşturduğunuzda, yalnızca veri veritabanından geçerli sürümü veya özgün sürümle LoadOption.Upsert veya LoadOption.PreserveChanges olarak ayarlayarak yazabilirsiniz.  
   
--   Toplu işlemleri gerçekleştirmek için DbDataAdapter.UpdateBatchSize kullanarak örnek ayrıca tablo güncelleştirin.  
+- Toplu işlemleri gerçekleştirmek için DbDataAdapter.UpdateBatchSize kullanarak örnek ayrıca tablo güncelleştirin.  
   
  Derleme ve örneği çalıştırmadan önce örnek veritabanını oluşturmanız gerekir:  
   

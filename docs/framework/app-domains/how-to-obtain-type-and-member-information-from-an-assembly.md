@@ -12,11 +12,11 @@ ms.assetid: 348ae651-ccda-4f13-8eda-19e8337e9438
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f9d01715a9635b276ca87d94082bb4d3820084e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675435"
 ---
 # <a name="how-to-obtain-type-and-member-information-from-an-assembly"></a>Nasıl yapılır: Bir Derlemeden Tür ve Üye Bilgilerini Alma
 <xref:System.Reflection> Ad alanı, bir derlemeden bilgi almak için birçok yöntem içerir. Bu bölüm, aşağıdaki yöntemlerden birini gösterir. Ek bilgi için bkz: [yansıma genel bakış](../../../docs/framework/reflection-and-codedom/reflection.md).  
