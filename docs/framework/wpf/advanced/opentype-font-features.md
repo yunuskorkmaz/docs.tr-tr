@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: 86921b610b4b42cfc0393af2966b70870bc650f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773981"
 ---
 # <a name="opentype-font-features"></a>OpenType Yazı Tipi Özellikleri
 
@@ -26,15 +26,15 @@ Bu konu anahtar özelliklerinden bazılarını gösteren bir genel bakış sağl
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Yazı biçimi aşağıdaki Geliştirici sorunlarından ele alır:  
   
--   Daha geniş bir çoklu platform desteği.  
+- Daha geniş bir çoklu platform desteği.  
   
--   Uluslararası karakter kümesi için daha iyi destek.  
+- Uluslararası karakter kümesi için daha iyi destek.  
   
--   Yazı tipi verileri için daha iyi koruma.  
+- Yazı tipi verileri için daha iyi koruma.  
   
--   Yazı tipi dağıtım daha verimli hale getirmek için daha küçük dosya boyutu.  
+- Yazı tipi dağıtım daha verimli hale getirmek için daha küçük dosya boyutu.  
   
--   Gelişmiş tipografik denetim için geniş destek.  
+- Gelişmiş tipografik denetim için geniş destek.  
   
 > [!NOTE]
 >  Windows SDK'sını içeren bir dizi örnek [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] ile kullanabileceğiniz yazı tipleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Bu yazı tipleri, bu konunun geri kalanında gösterilen özelliklerin çoğunu sağlar. Daha fazla bilgi için [örnek OpenType yazı tipi paketi](sample-opentype-font-pack.md).  
@@ -44,11 +44,11 @@ Bu konu anahtar özelliklerinden bazılarını gösteren bir genel bakış sağl
 ### <a name="advanced-typographic-extensions"></a>Gelişmiş tipografik uzantıları  
  Gelişmiş tipografik tablolar ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Düzen tabloları) ile yazı tiplerinin genişletmek [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] veya CFF özetlenmektedir. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Düzen yazı tipleri, yüksek kaliteli uluslararası tipografi desteklemek için yazı tiplerini yeteneklerini genişletir ek bilgiler içermektedir. Çoğu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipleri kullanıma yalnızca bir alt toplam [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] özellikleri kullanılabilir. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipleri aşağıdaki özellikleri sağlar.  
   
--   Karakter bitişik, konumsal forms, diğerleri ve diğer yazı tipi değişimler destekleyen karakterleri arasında zengin eşleme.  
+- Karakter bitişik, konumsal forms, diğerleri ve diğer yazı tipi değişimler destekleyen karakterleri arasında zengin eşleme.  
   
--   İki boyutlu konumlandırma ve karakter eki için destek.  
+- İki boyutlu konumlandırma ve karakter eki için destek.  
   
--   Bir metin işleme uygulama davranışını uygun şekilde ayarlayabilmeniz için yazı tipinde bulunan açık betik ve dil bilgileri.  
+- Bir metin işleme uygulama davranışını uygun şekilde ayarlayabilmeniz için yazı tipinde bulunan açık betik ve dil bilgileri.  
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Düzen tabloları daha ayrıntılı olarak açıklanmıştır ["Yazı tipi dosyası tabloları"](https://www.microsoft.com/typography/otspec/otff.htm) bölümünü [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] belirtimi.  
   
@@ -120,13 +120,13 @@ Bu konu anahtar özelliklerinden bazılarını gösteren bir genel bakış sağl
 ## <a name="ligatures"></a>Bitişik  
  Bitişik daha okunabilir veya dikkat çekici metin oluşturmak için tek bir karakter ile oluşturulmuş iki veya daha fazla karakter var. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipleri bitişik dört türlerini destekler:  
   
--   **Standart Bitişik**. Okunabilirliği artırmak için tasarlanmıştır. Standart bitişik "fi", "fl" ve "ff" ekleyin.  
+- **Standart Bitişik**. Okunabilirliği artırmak için tasarlanmıştır. Standart bitişik "fi", "fl" ve "ff" ekleyin.  
   
--   **Bağlamsal bitişik**. Bağ olun karakter arasında daha iyi birleşme davranışı sağlayarak okunabilirliği artırmak için tasarlanmıştır.  
+- **Bağlamsal bitişik**. Bağ olun karakter arasında daha iyi birleşme davranışı sağlayarak okunabilirliği artırmak için tasarlanmıştır.  
   
--   **İsteğe bağlı bitişik**. Süslü ve Okunabilirlik için özel olarak tasarlanmış olacak şekilde tasarlanmıştır.  
+- **İsteğe bağlı bitişik**. Süslü ve Okunabilirlik için özel olarak tasarlanmış olacak şekilde tasarlanmıştır.  
   
--   **Geçmiş bitişik**. Geçmiş ve Okunabilirlik için özel olarak tasarlanmış olacak şekilde tasarlanmıştır.  
+- **Geçmiş bitişik**. Geçmiş ve Okunabilirlik için özel olarak tasarlanmış olacak şekilde tasarlanmıştır.  
   
  Aşağıdaki metni Pericles yazı tipi için standart bağ karakterlerinin görüntüler.  
   

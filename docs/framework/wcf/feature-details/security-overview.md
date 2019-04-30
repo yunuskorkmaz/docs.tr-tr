@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
 ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748544"
 ---
 # <a name="security-overview"></a>Güvenlik Genel Bakış
 Windows Communication Foundation (WCF) bir SOAP ileti tabanlı dağıtılmış programlama platformudur ve istemciler ve hizmetler arasında iletileri güvenli hale getirme verileri korumak için gereklidir. WCF güvenlik altyapınız hem SOAP iletilerini tanınan güvenlik standartlarını temel güvenli ileti değişimi için verimli ve birlikte çalışabilen bir platform sağlar.  
@@ -25,27 +25,27 @@ Windows Communication Foundation (WCF) bir SOAP ileti tabanlı dağıtılmış p
 ## <a name="windows-communication-foundation-security-benefits"></a>Windows Communication Foundation güvenlik avantajları  
  WCF SOAP iletileri göre dağıtılmış bir programlama platformudur. WCF kullanarak, hem hizmet hem de oluşturma ve diğer hizmetler ve istemcileri, sınırsız sayıda gelen iletileri işleme hizmeti istemcileri olarak uygulamalar bu işlev oluşturabilirsiniz. Böyle bir dağıtılmış uygulamada iletileri düğümden düğüme, Internet üzerinde bir güvenlik duvarı aracılığıyla ve çok sayıda SOAP aracıları üzerinden akabilir. Bu ileti güvenlik tehditlerini çeşitli tanıtır. Aşağıdaki örnekler, WCF güvenlik varlıklar arasında mesaj alışverişleri sırasında azaltmaya yardımcı olabilecek bazı yaygın tehditleri gösterir:  
   
--   Gözlem hassas bilgileri almak için ağ trafiği. Örneğin, bir çevrimiçi bankacılık senaryoda bir istemci para aktarımı bir hesaptan diğerine ister. Kötü niyetli bir kullanıcı iletisi durdurur ve, parola ve hesap numarası sahip daha sonra para aktarımını güvenliği aşılmış hesabından gerçekleştirir.  
+- Gözlem hassas bilgileri almak için ağ trafiği. Örneğin, bir çevrimiçi bankacılık senaryoda bir istemci para aktarımı bir hesaptan diğerine ister. Kötü niyetli bir kullanıcı iletisi durdurur ve, parola ve hesap numarası sahip daha sonra para aktarımını güvenliği aşılmış hesabından gerçekleştirir.  
   
--   Hizmetler olmadan istemcinin tanıma gibi davranan düzenleyen varlıklar. Bu senaryoda, kötü niyetli bir kullanıcı (sahte) çevrimiçi bir hizmet olarak çalışır ve hassas bilgileri almak için istemci iletileri durdurur. Ardından sahte çalınan veri güvenliği aşılmış hesaptan para aktarımı için kullanır. Bu saldırı da bilinen bir *avı kurbanı*.  
+- Hizmetler olmadan istemcinin tanıma gibi davranan düzenleyen varlıklar. Bu senaryoda, kötü niyetli bir kullanıcı (sahte) çevrimiçi bir hizmet olarak çalışır ve hassas bilgileri almak için istemci iletileri durdurur. Ardından sahte çalınan veri güvenliği aşılmış hesaptan para aktarımı için kullanır. Bu saldırı da bilinen bir *avı kurbanı*.  
   
--   Birçok özelliğe iletileri hedeflenen arayan değerinden farklı bir sonuç elde edilir. Örneğin, bir havale yapıldığı hesap numarası değiştirme için bir dolandırıcı hesabı gitmek fon sağlar.  
+- Birçok özelliğe iletileri hedeflenen arayan değerinden farklı bir sonuç elde edilir. Örneğin, bir havale yapıldığı hesap numarası değiştirme için bir dolandırıcı hesabı gitmek fon sağlar.  
   
--   Korsanın olumsuzlukları sıkıntı korsanın aynı satınalma siparişi yeniden yürütür. Örneğin, bir çevrimiçi kitaplığı siparişler yüzlerce alıp bunları sıralı olmayan bir müşteri için books gönderir.  
+- Korsanın olumsuzlukları sıkıntı korsanın aynı satınalma siparişi yeniden yürütür. Örneğin, bir çevrimiçi kitaplığı siparişler yüzlerce alıp bunları sıralı olmayan bir müşteri için books gönderir.  
   
--   Bir istemcinin kimliğini doğrulamak için bir hizmet yükleyememesine. Bu durumda, hizmet uygun kişi işlem gerçekleştirilen sağlanması olamaz.  
+- Bir istemcinin kimliğini doğrulamak için bir hizmet yükleyememesine. Bu durumda, hizmet uygun kişi işlem gerçekleştirilen sağlanması olamaz.  
   
  Özet olarak, aşağıdaki Güvenceleri aktarım güvenliği sağlar:  
   
--   Hizmet uç noktası (yanıtlayan) kimlik doğrulaması.  
+- Hizmet uç noktası (yanıtlayan) kimlik doğrulaması.  
   
--   İstemci (Başlatıcı) asıl kimlik doğrulaması.  
+- İstemci (Başlatıcı) asıl kimlik doğrulaması.  
   
--   İleti bütünlüğü.  
+- İleti bütünlüğü.  
   
--   İleti gizliliği.  
+- İleti gizliliği.  
   
--   Yeniden yürütme algılaması.  
+- Yeniden yürütme algılaması.  
   
 ### <a name="integration-with-existing-security-infrastructures"></a>Mevcut güvenlik altyapıları ile tümleştirme  
  Genellikle, Web hizmeti dağıtımları yerinde, örneğin, Güvenli Yuva Katmanı (SSL) veya Kerberos protokolü mevcut güvenlik çözümleri sahiptir. Bazı zaten dağıtılmış olan bir güvenlik altyapısı Active Directory kullanarak Windows etki alanı gibi yararlanın. Genellikle, değerlendirme ve yeni olanlara benimseme bu mevcut teknolojileri ile tümleştirme gereklidir.  
@@ -57,13 +57,13 @@ Windows Communication Foundation (WCF) bir SOAP ileti tabanlı dağıtılmış p
   
  Bu nedenle, burada aynı hizmet dış iş ortakları için de dahili kurumsal müşterilere veya Internet müşterilere açık olabileceği, dünyasında Web Hizmetleri bu mevcut güvenlik ile tümleştirme için olan altyapının sağlanması önemlidir kimlik doğrulaması modelleri. WCF güvenlik kimlik bilgisi türlerinin (kimlik doğrulaması modelleri) dahil olmak üzere çok çeşitli destekler:  
   
--   Arayan anonim.  
+- Arayan anonim.  
   
--   Kullanıcı adının istemci kimlik bilgileri.  
+- Kullanıcı adının istemci kimlik bilgileri.  
   
--   Sertifika istemci kimlik bilgileri.  
+- Sertifika istemci kimlik bilgileri.  
   
--   Windows (Kerberos protokolü ve NT LanMan [NTLM]).  
+- Windows (Kerberos protokolü ve NT LanMan [NTLM]).  
   
 ### <a name="standards-and-interoperability"></a>Standartlar ve birlikte çalışabilirlik  
  Var olan büyük dağıtımları ile bir dünyada, homojenlik ilkesinden nadir olarak rastlanıyor. Farklı satıcıların teklif teknolojileri ile çalışmak dağıtılmış bilgi işlem/iletişimleri platformları gerekir. Benzer şekilde, güvenlik de birlikte çalışabilir olmalıdır.  
@@ -81,9 +81,9 @@ Windows Communication Foundation (WCF) bir SOAP ileti tabanlı dağıtılmış p
 #### <a name="transport-and-message-security-modes"></a>Taşıma ve ileti güvenlik modu  
  WCF'de aktarım güvenliği uygulamak için kullanılan iki ana mekanizma: *aktarım* güvenlik modu ve *ileti* güvenlik modu.  
   
--   *Transport güvenlik modunu* HTTPS gibi bir aktarım düzeyi protokolü, aktarım güvenliği sağlamak için kullanır. Aktarım modu, yaygın olarak benimsenen, birçok platformda bulunur ve hesaplama açısından daha az karmaşık olan avantajına sahiptir. Bununla birlikte, yalnızca, noktadan noktaya gelen iletileri güvenli hale getirme dezavantajı vardır.  
+- *Transport güvenlik modunu* HTTPS gibi bir aktarım düzeyi protokolü, aktarım güvenliği sağlamak için kullanır. Aktarım modu, yaygın olarak benimsenen, birçok platformda bulunur ve hesaplama açısından daha az karmaşık olan avantajına sahiptir. Bununla birlikte, yalnızca, noktadan noktaya gelen iletileri güvenli hale getirme dezavantajı vardır.  
   
--   *İleti güvenlik modunu*, diğer yandan, WS-güvenlik kullanır (ve diğer özellikleri) aktarım güvenliği uygulamak için. İleti güvenliği SOAP iletileri doğrudan uygulanır ve uygulama verilerini birlikte SOAP Zarf içinde yer alan çünkü Aktarım Protokolü bağımsız, daha genişletilebilir ve kalmasını sağlama uçtan uca güvenlik olan avantajı vardır. (Noktadan noktaya karşı); SOAP iletilerini XML yapısı ile dağıtılacak olduğundan transport güvenlik modunu birkaç kez daha yavaş olan olumsuz var.  
+- *İleti güvenlik modunu*, diğer yandan, WS-güvenlik kullanır (ve diğer özellikleri) aktarım güvenliği uygulamak için. İleti güvenliği SOAP iletileri doğrudan uygulanır ve uygulama verilerini birlikte SOAP Zarf içinde yer alan çünkü Aktarım Protokolü bağımsız, daha genişletilebilir ve kalmasını sağlama uçtan uca güvenlik olan avantajı vardır. (Noktadan noktaya karşı); SOAP iletilerini XML yapısı ile dağıtılacak olduğundan transport güvenlik modunu birkaç kez daha yavaş olan olumsuz var.  
   
  Bu farklılıklar hakkında daha fazla bilgi için bkz. [Hizmetleri güvenli hale getirme ve istemciler](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
   

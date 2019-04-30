@@ -10,20 +10,20 @@ helpviewer_keywords:
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
 ms.openlocfilehash: 15cb111a68cedaec011e88fa4916c292786d16b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779047"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Nasıl yapılır: Alfa Karışım Kullanmayı Denetlemek için Birleştirme Modunu Kullanma
 Aşağıdaki özelliklere sahip çizerek bir bit eşlem oluşturmak istediğiniz zaman zamanlar olabilir:  
   
--   Renkleri 255'den küçük olan alfa değerleri var.  
+- Renkleri 255'den küçük olan alfa değerleri var.  
   
--   Bit eşlem oluşturma gibi birbiriyle karışık özelliği renkler alfa değildir.  
+- Bit eşlem oluşturma gibi birbiriyle karışık özelliği renkler alfa değildir.  
   
--   Tamamlanmış bir bit eşlem görüntülediğinizde, bit eşlemde görüntü cihazı üzerinde arka plan renkleri ile karışık alfa renklerdir.  
+- Tamamlanmış bir bit eşlem görüntülediğinizde, bit eşlemde görüntü cihazı üzerinde arka plan renkleri ile karışık alfa renklerdir.  
   
  Böyle bir bit eşlem oluşturmak için boş bir oluşturmak <xref:System.Drawing.Bitmap> nesnesi ve ardından oluşturmak bir <xref:System.Drawing.Graphics> nesne tabanlı, bit eşlem. Birleştirme modunu ayarlama <xref:System.Drawing.Graphics> nesnesini <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>.  
   

@@ -12,22 +12,22 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
 ms.openlocfilehash: 9366c7ebe2e5b347f4795b15e6f2c2d0f3835482
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747528"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>İzlenecek yol: Görsel Devralmayı Gösterme
 Görsel devralma temel form üzerinde denetimleri görmek için ve yeni denetimler eklemek için sağlar. Bu izlenecek yolda temel bir form oluşturun ve bir sınıf kitaplığı derleyin. Bu sınıf kitaplığı, başka bir projeye içeri aktarmak ve temel formundan devralan yeni bir form oluşturun. Bu kılavuz boyunca, öğreneceksiniz nasıl yapılır:  
   
--   Taban form içeren bir sınıf kitaplığı projesi oluşturun.  
+- Taban form içeren bir sınıf kitaplığı projesi oluşturun.  
   
--   Bir düğme türetilmiş sınıflar temel formun özelliklerini değiştirebilirsiniz ekleyin.  
+- Bir düğme türetilmiş sınıflar temel formun özelliklerini değiştirebilirsiniz ekleyin.  
   
--   Taban formun devralanlar tarafından değiştirilemez bir düğme ekleyin.  
+- Taban formun devralanlar tarafından değiştirilemez bir düğme ekleyin.  
   
--   Devralınan form içeren bir proje oluşturma `BaseForm`.  
+- Devralınan form içeren bir proje oluşturma `BaseForm`.  
   
  Sonuç olarak, bu izlenecek yol, devralınmış bir form üzerinde özel ve korumalı denetimler arasındaki farkı gösterilecektir.  
   
@@ -76,11 +76,11 @@ Görsel devralma temel form üzerinde denetimleri görmek için ve yeni denetiml
   
 3. Özellikler penceresinde düğmenin aşağıdaki özellikleri ayarlayın:  
   
-    -   Ayarlama **metin** özelliğini **Say Hello**.  
+    - Ayarlama **metin** özelliğini **Say Hello**.  
   
-    -   Ayarlama **(ad)** özelliğini **btnProtected**.  
+    - Ayarlama **(ad)** özelliğini **btnProtected**.  
   
-    -   Ayarlama **değiştiriciler** özelliğini **korumalı**. Bu devralınan formlar için mümkün kılar **Form1** özelliklerini değiştirmek için **btnProtected**.  
+    - Ayarlama **değiştiriciler** özelliğini **korumalı**. Bu devralınan formlar için mümkün kılar **Form1** özelliklerini değiştirmek için **btnProtected**.  
   
 4. Çift **Say Hello** için bir olay işleyicisi eklemek için Ekle düğmesine **tıklayın** olay.  
   
@@ -100,11 +100,11 @@ Görsel devralma temel form üzerinde denetimleri görmek için ve yeni denetiml
   
 2. İkinci bir düğme ekleyin ve özelliklerini aşağıdaki gibi ayarlayın:  
   
-    -   Ayarlama **metin** özelliğini **Say güle güle**.  
+    - Ayarlama **metin** özelliğini **Say güle güle**.  
   
-    -   Ayarlama **(ad)** özelliğini **btnPrivate**.  
+    - Ayarlama **(ad)** özelliğini **btnPrivate**.  
   
-    -   Ayarlama **değiştiriciler** özelliğini **özel**. Bu, devralınan formlar olanaksız kılar **Form1** özelliklerini değiştirmek için **btnPrivate**.  
+    - Ayarlama **değiştiriciler** özelliğini **özel**. Bu, devralınan formlar olanaksız kılar **Form1** özelliklerini değiştirmek için **btnPrivate**.  
   
 3. Çift **Say güle güle** için bir olay işleyicisi eklemek için Ekle düğmesine **tıklayın** olay. Aşağıdaki kod satırını olay yordamda yerleştirin:  
   
@@ -148,9 +148,9 @@ Görsel devralma temel form üzerinde denetimleri görmek için ve yeni denetiml
   
 8. Visual C# kullanıyorsanız:  
   
-    1.  İçinde **Çözüm Gezgini**, sağ **Form1** içinde **InheritanceTest** proje ve ardından **Sil**. Görüntülenen ileti kutusunda **Tamam** silme işlemini onaylamak için.  
+    1. İçinde **Çözüm Gezgini**, sağ **Form1** içinde **InheritanceTest** proje ve ardından **Sil**. Görüntülenen ileti kutusunda **Tamam** silme işlemini onaylamak için.  
   
-    2.  Program.cs dosyasını açın ve satırını `Application.Run(new Form1());` için `Application.Run(new Form2());`.  
+    2. Program.cs dosyasını açın ve satırını `Application.Run(new Form1());` için `Application.Run(new Form2());`.  
   
 9. İçinde **Çözüm Gezgini**, sağ **InheritanceTest** seçin ve proje **başlangıç projesi olarak ayarla**.  
   

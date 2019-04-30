@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
 ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776226"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Nasıl yapılır: Günün Bu Saatinde Yazdırmanın Yapılıp Yapılmayacağını Keşfetme
 Yazdırma sıralarını her zaman günde 24 saat kullanılabilir değil. Günün belirli zamanlarında kullanılamaz duruma getirmek için ayarlanabilir başlangıç ve bitiş zamanı özellikleri sahiptirler. Bu özellik, örneğin, belirli bir bölüm 17: 00 sonra özel kullanım için bir yazıcı ayırmak için kullanılabilir. Bu bölüm Kullan yazıcı diğer departmanlardan bakım farklı bir sıra yoktur. Sıra diğer bölümler için 17: 00 sonra kullanılamaz olarak ayarlanması, ayrıcalıklı bölümün sırası olarak ayarlanması sırada her kullanılabilir zaman.  
@@ -41,9 +41,9 @@ Yazdırma sıralarını her zaman günde 24 saat kullanılabilir değil. Günün
   
  **ReportQueueAndJobAvailability** yöntemi, kuyruk veya yazdırma işi şu anda kullanılabilir olup olmadığını kontrol ederek başlar. Bunlardan birini kullanılamıyorsa, ardından bakar sıranın kullanılamaz. Kullanılabilir durumda değilse, yöntem bu olgu ve ne zaman sıranın tekrar kullanılabilir hale gelecektir zaman bildirir. Ardından işin denetler ve kullanılabilir durumda değilse, sonraki açışınızda rapor yazdırabileceği sırasında yazdırabilirsiniz. Son olarak, yöntem, işin ne zaman yazdırabilir en erken zamanı raporlar. Sonraki iki kez budur.  
   
--   Yazdırma sırasını sonraki kullanılabilir olduğunda zaman.  
+- Yazdırma sırasını sonraki kullanılabilir olduğunda zaman.  
   
--   Yazdırma işi sonraki kullanılabilir olduğunda zaman.  
+- Yazdırma işi sonraki kullanılabilir olduğunda zaman.  
   
  Saatlerinde bildirirken <xref:System.DateTime.ToShortTimeString%2A> yöntemi olarak da adlandırılır çünkü bu yöntem, yıl, ay ve gün çıktısından bastırır. Belirli bir yıl, ay ve gün için yazdırma sırası ya da bir yazdırma işi kullanılabilirliğini kısıtlayamazsınız.  
   

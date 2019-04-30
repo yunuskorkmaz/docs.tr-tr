@@ -11,8 +11,8 @@ ms.openlocfilehash: 7cd761697a09205294727043efc6cf73816803ce
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761378"
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>MenuStrip Denetimine Genel Bakış (Windows Forms)
 Menüleri, ortak bir tema tarafından gruplandırılmış komutları tutarak kullanıcılarınıza işlevselliği kullanıma sunar.  
@@ -26,11 +26,11 @@ Menüleri, ortak bir tema tarafından gruplandırılmış komutları tutarak kul
 ## <a name="ways-to-use-the-menustrip-control"></a>MenuStrip denetimi kullanmanın yolları  
  Kullanım <xref:System.Windows.Forms.MenuStrip> denetimi:  
   
--   Özelleştirilmiş kolayca oluşturun, metin ve görüntü sıralama ve hizalama, sürükle ve bırak işlemleri, MDI, taşma ve menü komutları erişmenin alternatif modları gibi arabirimi ve düzen özelliklerini destekleyen yaygın olarak çalıştırılan menüleri gelişmiş kullanıcı.  
+- Özelleştirilmiş kolayca oluşturun, metin ve görüntü sıralama ve hizalama, sürükle ve bırak işlemleri, MDI, taşma ve menü komutları erişmenin alternatif modları gibi arabirimi ve düzen özelliklerini destekleyen yaygın olarak çalıştırılan menüleri gelişmiş kullanıcı.  
   
--   Tipik bir görünümünü ve davranışını işletim sistemini destekler.  
+- Tipik bir görünümünü ve davranışını işletim sistemini destekler.  
   
--   Diğer denetimlerin olaylarını işlemek aynı şekilde tüm kapsayıcılar ve içerilen öğelerin için tutarlı bir şekilde olayları işleyin.  
+- Diğer denetimlerin olaylarını işlemek aynı şekilde tüm kapsayıcılar ve içerilen öğelerin için tutarlı bir şekilde olayları işleyin.  
   
  Aşağıdaki tablo bazı özellikle önemli özellikleri gösterir <xref:System.Windows.Forms.MenuStrip> ve ilişkilendirilmiş sınıfları.  
   

@@ -3,11 +3,11 @@ title: Birinci sınıf İşlevler
 description: Birinci sınıf işlevler ve nasıl işlevsel programlama için önemli olan hakkında F#.
 ms.date: 10/29/2018
 ms.openlocfilehash: 505ad686614b53d779cb617fc04ac74c2a88b31b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772768"
 ---
 # <a name="first-class-functions"></a>Birinci sınıf İşlevler
 
@@ -194,4 +194,4 @@ Aşağıdaki kod bu konunun tüm örnekleri içerir.
 - [Demetler](../language-reference/tuples.md)
 - [İşlevler](../language-reference/functions/index.md)
 - [`let` Bağlamaları](../language-reference/functions/let-bindings.md)
-- [Lambda ifadeleri: `fun` Anahtar sözcüğü](../language-reference/functions/lambda-expressions-the-fun-keyword.md)
+- [Lambda Expressions: `fun` Anahtar Sözcüğü](../language-reference/functions/lambda-expressions-the-fun-keyword.md)

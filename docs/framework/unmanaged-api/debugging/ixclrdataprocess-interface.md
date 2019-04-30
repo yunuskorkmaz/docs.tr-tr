@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess arabirimi
+title: IXCLRDataProcess Arabirimi
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess Interface
@@ -16,13 +16,13 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: ff74a7acb5cc84c177f083c19402cd78977aeab5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775251"
 ---
-# <a name="ixclrdataprocess-interface"></a>IXCLRDataProcess arabirimi
+# <a name="ixclrdataprocess-interface"></a>IXCLRDataProcess Arabirimi
 
 Bir işlem hakkında bilgi sorgulamak için yöntemler sağlar.
 
@@ -47,8 +47,8 @@ Bu arabirim, çalışma zamanı içinde yer alan ve herhangi bir üst bilgiler v
 ## <a name="requirements"></a>Gereksinimler
 
 **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).   
-**Üst bilgi:** Hiçbiri  
-**Kitaplığı:** Hiçbiri  
+**Üst bilgi:** Yok.  
+**Kitaplığı:** Yok.  
 **.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
 ms.openlocfilehash: f95274861f58d1581e4c5439861ebf186b1b3489
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59332566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766961"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Nasıl yapılır: İmzalama ve Şifreleme için Ayrı X.509 Sertifikaları Kullanma
 Bu konuda, Windows Communication Foundation (WCF) ileti imzalama ve şifreleme hem istemci hem de hizmet için farklı sertifikalar kullanmak üzere yapılandırma gösterilmektedir.  
@@ -23,15 +23,15 @@ Bu konuda, Windows Communication Foundation (WCF) ileti imzalama ve şifreleme h
   
  Aşağıdaki diyagram, kullanılan ana sınıflarını göstermektedir, sınıfları (yukarıyı gösteren bir ok ile gösterilen) devralındığı ve dönüş türleri belirli yöntemleri ve özellikleri.  
   
--   `MyClientCredentials` özel bir uygulamasıdır <xref:System.ServiceModel.Description.ClientCredentials>.  
+- `MyClientCredentials` özel bir uygulamasıdır <xref:System.ServiceModel.Description.ClientCredentials>.  
   
-    -   Aşağıdaki diyagramda gösterilen tüm dönüş örneklerini özelliklerini <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>.  
+    - Aşağıdaki diyagramda gösterilen tüm dönüş örneklerini özelliklerini <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>.  
   
-    -   Kendi yöntemi <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> örneğini döndürür `MyClientCredentialsSecurityTokenManager`.  
+    - Kendi yöntemi <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> örneğini döndürür `MyClientCredentialsSecurityTokenManager`.  
   
--   `MyClientCredentialsSecurityTokenManager` özel bir uygulamasıdır <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
+- `MyClientCredentialsSecurityTokenManager` özel bir uygulamasıdır <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
   
-    -   Kendi yöntemi <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> örneğini döndürür <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>.  
+    - Kendi yöntemi <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> örneğini döndürür <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>.  
   
  ![İstemci kimlik bilgileri nasıl kullanıldığını gösteren grafik](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")  
   
@@ -96,4 +96,4 @@ Bu konuda, Windows Communication Foundation (WCF) ileti imzalama ve şifreleme h
 - <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
-- [İzlenecek yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [İzlenecek yol: Özel istemci ve hizmet kimlik bilgilerini oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)

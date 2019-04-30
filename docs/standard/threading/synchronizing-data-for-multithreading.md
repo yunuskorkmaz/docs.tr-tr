@@ -10,24 +10,24 @@ ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cb44fad991c8184686fcda90878bae2ec53260c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769154"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Çoklu İş Parçacığı Kullanımı için Veri Eşitleme
 Birden çok iş parçacığı özellikleri ve yöntemleri tek bir nesnenin çağrı yaptığınızda bu çağrıları eşitlenmiş önemlidir. Aksi takdirde bir iş parçacığı başka bir iş parçacığı yaptığı yarıda kesebilecek ve Nesne geçersiz bir durumda kalabilir. Böyle kesintilerden korunan üyeleri bir sınıf, iş parçacığı güvenli olarak adlandırılır.  
   
  Ortak dil altyapısı örneği ve statik üyeler erişimi eşitlemek için çeşitli stratejileri sağlar:  
   
--   Eşitlenmiş kod bölgeleri. Kullanabileceğiniz <xref:System.Threading.Monitor> kodunu engeller yalnızca eşitlemek için bu sınıfın sınıf ya da derleyici desteği gerekir, performansı artırma.  
+- Eşitlenmiş kod bölgeleri. Kullanabileceğiniz <xref:System.Threading.Monitor> kodunu engeller yalnızca eşitlemek için bu sınıfın sınıf ya da derleyici desteği gerekir, performansı artırma.  
   
--   El ile eşitleme. .NET Framework sınıf kitaplığı tarafından sağlanan eşitleme nesneleri kullanabilirsiniz. Bkz: [eşitleme temellerine genel bakış](../../../docs/standard/threading/overview-of-synchronization-primitives.md), hakkında ayrıntılı bilgi içeren <xref:System.Threading.Monitor> sınıfı.  
+- El ile eşitleme. .NET Framework sınıf kitaplığı tarafından sağlanan eşitleme nesneleri kullanabilirsiniz. Bkz: [eşitleme temellerine genel bakış](../../../docs/standard/threading/overview-of-synchronization-primitives.md), hakkında ayrıntılı bilgi içeren <xref:System.Threading.Monitor> sınıfı.  
   
--   Eşitleme bağlamı. Kullanabileceğiniz <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> için basit, Otomatik eşitlemeyi etkinleştirmek için <xref:System.ContextBoundObject> nesneleri.  
+- Eşitleme bağlamı. Kullanabileceğiniz <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> için basit, Otomatik eşitlemeyi etkinleştirmek için <xref:System.ContextBoundObject> nesneleri.  
   
--   Koleksiyon sınıfları <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanı. Bu sınıfların sağlayan yerleşik eşitlenmiş ekleme ve kaldırma işlemleri. Daha fazla bilgi için [iş parçacığı güvenli koleksiyonları](../../../docs/standard/collections/thread-safe/index.md).  
+- Koleksiyon sınıfları <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanı. Bu sınıfların sağlayan yerleşik eşitlenmiş ekleme ve kaldırma işlemleri. Daha fazla bilgi için [iş parçacığı güvenli koleksiyonları](../../../docs/standard/collections/thread-safe/index.md).  
   
  Ortak dil çalışma zamanı, sınıfları birkaç farklı şekilde gereksinimlerine bağlı olarak çeşitli eşitlenebilir kategorileri kalan bir iş parçacığı modeli sağlar. Aşağıdaki tabloda, hangi eşitleme desteği alanlar ve yöntemler ile belirtilen eşitleme kategori için sağlanan gösterilmektedir.  
   

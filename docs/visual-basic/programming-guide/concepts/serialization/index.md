@@ -3,11 +3,11 @@ title: Seri hale getirme (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 67379a76-5465-4af8-a781-0b0b25a62d9a
 ms.openlocfilehash: 947b38e8166ba05d871aafbaba5766aa9dab21f4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751115"
 ---
 # <a name="serialization-visual-basic"></a>Seri hale getirme (Visual Basic)
 Serileştirme bir nesneyi depolamak veya bellek, bir veritabanı veya dosya aktarmak için bayt akışı bir nesne dönüştürme işlemidir. Ana amacı, gerektiğinde yeniden oluşturmak için bir nesnenin durumu kaydetmektir. Seri durumundan çıkarma ters işlem çağrılır.  
@@ -34,7 +34,7 @@ Serileştirme bir nesneyi depolamak veya bellek, bir veritabanı veya dosya akta
 ## <a name="binary-and-xml-serialization"></a>İkili ve XML serileştirme  
  İkili veya XML serileştirme kullanılabilir. İkili serileştirme, salt okunur olanlar bile tüm üyeleri serileştirilmiş ve performans geliştirilir. XML serileştirme daha okunabilir bir kod yanı sıra, nesneyi paylaşmak ve birlikte çalışabilirlik amacıyla kullanım daha fazla esneklik sağlar.  
   
-### <a name="binary-serialization"></a>İkili seri hale getirme  
+### <a name="binary-serialization"></a>İkili Serileştirme  
  İkili kodlama ikili serileştirme depolama veya ağ yuva tabanlı akışları gibi kullanımlar için compact serileştirme üretmek için kullanır.  
   
 ### <a name="xml-serialization"></a>XML seri hale getirme  
@@ -45,12 +45,12 @@ Serileştirme bir nesneyi depolamak veya bellek, bir veritabanı veya dosya akta
 ## <a name="basic-and-custom-serialization"></a>Temel ve özel seri hale getirme  
  İki yolla temel ve özel serileştirme gerçekleştirilebilir. Temel serileştirme otomatik olarak nesneyi serileştirmek için .NET Framework'ü kullanır.  
   
-### <a name="basic-serialization"></a>Temel serileştirme  
+### <a name="basic-serialization"></a>Temel Serileştirme  
  Nesne sahip temel serileştirme sırasında tek gereksinim olmasıdır <xref:System.SerializableAttribute> özniteliği uygulandı. <xref:System.NonSerializedAttribute> Serileştirilmekte olan belirli alanları tutmak için kullanılabilir.  
   
  Temel serileştirme kullandığınızda, sürüm oluşturma nesnelerin, bu durumda, özel serileştirme tercih edilebilir sorunlara neden olabilir. Temel serileştirme serileştirme gerçekleştirmek için en kolay yoludur ancak kadar denetim işlemi üzerinde sağlamaz.  
   
-### <a name="custom-serialization"></a>Özel serileştirme  
+### <a name="custom-serialization"></a>Özel Serileştirme  
  Özel serileştirme, tam olarak hangi nesnelerin serileştirilmiş ve nasıl yapılacağıyla belirtebilirsiniz. Sınıf işaretlenmelidir <xref:System.SerializableAttribute> ve uygulama <xref:System.Runtime.Serialization.ISerializable> arabirimi.  
   
  Bir özel biçimde seri durumdan nesnenizin istiyorsanız özel bir oluşturucu kullanmanız gerekir.  

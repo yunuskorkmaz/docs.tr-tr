@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
 ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703536"
 ---
 # <a name="best-practices-data-contract-versioning"></a>En İyi Yöntemler: Veri Sözleşmesi Sürümü Oluşturma
 Bu konu, zaman içinde kolayca geliştirebilirsiniz veri sözleşmeleri oluşturmak için en iyi uygulamaları listeler. Veri sözleşmeleri hakkında daha fazla bilgi için bkz: konularındaki [kullanarak veri sözleşmeleri](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -39,9 +39,9 @@ Bu konu, zaman içinde kolayca geliştirebilirsiniz veri sözleşmeleri oluştur
   
  Bazen, uygulamanız tarafından gönderilen iletiler için katı şema uyumluluğu garanti gerekir ancak kesinlikle şema uyumlu olması için gelen iletiler güvenemezsiniz. Bu durumda, gelen ileti fazlalık veri içerebilir bir olma tehlikesi yoktur. Fazlalık değerler depolanabilir ve WCF tarafından döndürülen ve bu nedenle gönderilen iletileri şema geçersiz olur. Bu sorunu önlemek için gidiş dönüşü özellik kapatılmalıdır. Bunu yapmanın iki yolu vardır.  
   
--   Uygulamayın <xref:System.Runtime.Serialization.IExtensibleDataObject> tüm türleri arabirimi.  
+- Uygulamayın <xref:System.Runtime.Serialization.IExtensibleDataObject> tüm türleri arabirimi.  
   
--   Geçerli bir <xref:System.ServiceModel.ServiceBehaviorAttribute> öznitelik, hizmet sözleşmesi ile <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> özelliğini `true`.  
+- Geçerli bir <xref:System.ServiceModel.ServiceBehaviorAttribute> öznitelik, hizmet sözleşmesi ile <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> özelliğini `true`.  
   
  Gidiş dönüşü hakkında daha fazla bilgi için bkz: [İleri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
@@ -66,11 +66,11 @@ Bu konu, zaman içinde kolayca geliştirebilirsiniz veri sözleşmeleri oluştur
   
 8. Sonraki sürümlerde, yeni veri üyeleri eklenebilir. Bunlar, her zaman bu kuralları izlemelidir:  
   
-    1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> Özelliği her zaman sol varsayılan değerine `false`.  
+    1. <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> Özelliği her zaman sol varsayılan değerine `false`.  
   
-    2.  Varsayılan değeri, `null` veya üye için sıfır kabul edilemez, bir geri çağırma yöntemi kullanarak sağlanmalıdır <xref:System.Runtime.Serialization.OnDeserializingAttribute> üye gelen akışta mevcut değilse, makul bir varsayılan değer sağlamak için. Geri çağırma hakkında daha fazla bilgi için bkz: [sürüme dayanıklı serileştirme geri çağırmaları](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
+    2. Varsayılan değeri, `null` veya üye için sıfır kabul edilemez, bir geri çağırma yöntemi kullanarak sağlanmalıdır <xref:System.Runtime.Serialization.OnDeserializingAttribute> üye gelen akışta mevcut değilse, makul bir varsayılan değer sağlamak için. Geri çağırma hakkında daha fazla bilgi için bkz: [sürüme dayanıklı serileştirme geri çağırmaları](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
-    3.  <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> Özelliği, tüm yeni eklenen veri üyelerinin sonra var olan veri üyeleri göründüğünden emin olmak için kullanılmalıdır. Bu önerilen yöntem aşağıdaki gibidir: İlk veri sözleşmesi sürümü veri üyeleri hiçbiri olmalıdır, `Order` özellik kümesi. Tüm veri anlaşması 2 sürümünde eklenen veri üyelerinin olması gerekir, `Order` özelliği 2 olarak ayarlayın. Tüm veri anlaşması 3. sürümüne eklenen veri üyelerinin olması gerekir, `Order` 3 olarak ayarlayın ve benzeri. Birden fazla veri üyesi aynı ayarlamak için izin verilen `Order` sayı.  
+    3. <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> Özelliği, tüm yeni eklenen veri üyelerinin sonra var olan veri üyeleri göründüğünden emin olmak için kullanılmalıdır. Bu önerilen yöntem aşağıdaki gibidir: İlk veri sözleşmesi sürümü veri üyeleri hiçbiri olmalıdır, `Order` özellik kümesi. Tüm veri anlaşması 2 sürümünde eklenen veri üyelerinin olması gerekir, `Order` özelliği 2 olarak ayarlayın. Tüm veri anlaşması 3. sürümüne eklenen veri üyelerinin olması gerekir, `Order` 3 olarak ayarlayın ve benzeri. Birden fazla veri üyesi aynı ayarlamak için izin verilen `Order` sayı.  
   
 9. Veri üyeleri, sonraki sürümlerde kaldırmayın bile <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> özelliği, varsayılan özellik sol `false` önceki sürümlerinde.  
   
@@ -101,8 +101,8 @@ Bu konu, zaman içinde kolayca geliştirebilirsiniz veri sözleşmeleri oluştur
 - <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
 - <xref:System.Runtime.Serialization.OnDeserializingAttribute>
-- [Veri Sözleşmelerini Kullanma](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Veri Sözleşmesi Sürümü Oluşturma](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
-- [Veri Sözleşmesi Adları](../../../docs/framework/wcf/feature-details/data-contract-names.md)
-- [İleri Uyumlu Veri Sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+- [Veri Anlaşmalarını Kullanma](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Veri Anlaşması Sürümü Oluşturma](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Veri Anlaşması Adları](../../../docs/framework/wcf/feature-details/data-contract-names.md)
+- [İleri Uyumlu Veri Anlaşmaları](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
 - [Sürüm Toleranslı Seri Hale Getirme Geri Çağrıları](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

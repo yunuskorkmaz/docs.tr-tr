@@ -1,17 +1,17 @@
 ---
-title: WCF veri hizmetlerini tanımlama
+title: WCF Veri Hizmetlerini Tanımlama
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 05006ff3-02dc-410e-831e-54ec3e7e24ef
 ms.openlocfilehash: ac75f5fd91f68d9403dc7b42325bf8970f0c6794
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765654"
 ---
-# <a name="defining-wcf-data-services"></a>WCF veri hizmetlerini tanımlama
+# <a name="defining-wcf-data-services"></a>WCF Veri Hizmetlerini Tanımlama
 
 Bu bölümde verileri olarak kullanıma sunmak için WCF veri hizmetlerini oluşturup yapılandırın açıklar bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış. Bir veri hizmeti oluşturmak için gerekli temel adımlar hakkında daha fazla bilgi için bkz. [verilerinizi hizmet olarak kullanıma sunma](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md).
 

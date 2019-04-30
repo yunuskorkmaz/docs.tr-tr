@@ -3,11 +3,11 @@ title: İçindeki yenilikler C# 7.1
 description: İçinde yeni özelliklere genel bakış C# 7.1.
 ms.date: 04/09/2019
 ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675565"
 ---
 # <a name="whats-new-in-c-71"></a>İçindeki yenilikler C# 7.1
 

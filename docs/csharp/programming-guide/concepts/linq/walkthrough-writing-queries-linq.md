@@ -8,11 +8,11 @@ helpviewer_keywords:
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
 ms.openlocfilehash: 29c24d9920bff38beced8f5995ec328571e6b5d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680382"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>İzlenecek yol: C#'de Sorgu Yazma (LINQ)
 Bu yönerge, LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri gösterir.  
@@ -41,17 +41,17 @@ Bu yönerge, LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri 
 ## <a name="create-an-in-memory-data-source"></a>Bellek İçi Veri Kaynağı Oluşturma  
  Veri kaynağını sorgular için basit bir listesidir `Student` nesneleri. Her `Student` kaydına sahip bir ad, Soyadı ve test puanlarını sınıfında temsil eden tamsayı dizisi. Bu kod projenize kopyalayın. Aşağıdaki özelliklere dikkat edin:  
   
--   `Student` Sınıfı otomatik olarak uygulanan özellikler oluşur.  
+- `Student` Sınıfı otomatik olarak uygulanan özellikler oluşur.  
   
--   Listedeki her Öğrenci, bir nesne Başlatıcısı ile başlatılır.  
+- Listedeki her Öğrenci, bir nesne Başlatıcısı ile başlatılır.  
   
--   Liste koleksiyon Başlatıcısı ile başlatılır.  
+- Liste koleksiyon Başlatıcısı ile başlatılır.  
   
  Bu tüm veri yapısı başlatılamadı ve herhangi bir oluşturucu veya açık üye erişimi yapılan açık çağrıları olmadan örneği. Bu yeni özellikler hakkında daha fazla bilgi için bkz. [Implemented Properties](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) ve [nesne ve koleksiyon başlatıcıları](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   
 #### <a name="to-add-the-data-source"></a>Veri kaynağı eklemek için  
   
--   Ekleme `Student` sınıfı ve öğrenciler için başlatılmış listesini `Program` projenizdeki sınıfı.  
+- Ekleme `Student` sınıfı ve öğrenciler için başlatılmış listesini `Program` projenizdeki sınıfı.  
   
      [!code-csharp[CsLinqGettingStarted#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#11)]  
   
@@ -63,7 +63,7 @@ Bu yönerge, LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri 
   
 #### <a name="to-create-a-simple-query"></a>Basit bir sorgu oluşturmak için  
   
--   İçinde uygulamanın `Main` yöntemi yürütüldüğünde, tüm Öğrenciler ilk test üzerindeki, puanı 90'dan büyük bir listesini oluşturur ve basit bir sorgu oluşturun. Dikkat edin çünkü bütün `Student` nesne seçildiğinde, sorgu türü `IEnumerable<Student>`. Kod kullanarak dolaylı yazma da kullanabilirsiniz, ancak [var](../../../../csharp/language-reference/keywords/var.md) anahtar sözcüğü, açık yazım açıkça sonuçları göstermek için kullanılır. (Hakkında daha fazla bilgi için `var`, bkz: [örtük olarak yazılan yerel değişkenler](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).)  
+- İçinde uygulamanın `Main` yöntemi yürütüldüğünde, tüm Öğrenciler ilk test üzerindeki, puanı 90'dan büyük bir listesini oluşturur ve basit bir sorgu oluşturun. Dikkat edin çünkü bütün `Student` nesne seçildiğinde, sorgu türü `IEnumerable<Student>`. Kod kullanarak dolaylı yazma da kullanabilirsiniz, ancak [var](../../../../csharp/language-reference/keywords/var.md) anahtar sözcüğü, açık yazım açıkça sonuçları göstermek için kullanılır. (Hakkında daha fazla bilgi için `var`, bkz: [örtük olarak yazılan yerel değişkenler](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).)  
   
      Ayrıca sorgunun unutmayın aralık değişkeni `student`, her bir başvuru olarak hizmet veren `Student` kaynakta, her nesne için üye erişimi sağlama.  
   
@@ -75,9 +75,9 @@ Bu yönerge, LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri 
   
 1. Artık yazma `foreach` sorgu yürütmek neden olacak bir döngü. Kod hakkında aşağıdakileri unutmayın:  
   
-    -   Döndürülen dizinin her öğesinde, yineleme değişkeni aracılığıyla erişilir `foreach` döngü.  
+    - Döndürülen dizinin her öğesinde, yineleme değişkeni aracılığıyla erişilir `foreach` döngü.  
   
-    -   Bu değişken türü `Student`, ve sorgu değişkeninin türü uyumlu `IEnumerable<Student>`.  
+    - Bu değişken türü `Student`, ve sorgu değişkeninin türü uyumlu `IEnumerable<Student>`.  
   
 2. Bu kodu ekledikten sonra derleme ve sonuçlarını görmek için uygulamayı çalıştırma **konsol** penceresi.  
   

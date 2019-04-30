@@ -10,11 +10,11 @@ helpviewer_keywords:
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
 ms.openlocfilehash: 683804acf43065543fa5d4ffb1a5ecf7e5b4c49a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773170"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Performansı iyileştirme: Donanımdan Yararlanma
 Mimarisini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] iki işlenen ardışık düzen, donanım ve yazılım vardır. Bu konuda, uygulamalarınızın performans iyileştirmeleri hakkında kararlar almanıza yardımcı olmak için bu işleme ardışık düzenleri hakkında bilgi sağlar.  
@@ -34,23 +34,23 @@ Mimarisini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-wincl
   
  En çok katmanı işleme düzeyleri etkileyen grafik donanımının özellikleri şunlardır:  
   
--   **Video RAM** birleştirme grafik için kullanılan arabellek sayısı ve boyutu grafik donanımının video bellek miktarı belirler.  
+- **Video RAM** birleştirme grafik için kullanılan arabellek sayısı ve boyutu grafik donanımının video bellek miktarı belirler.  
   
--   **Piksel gölgelendirici** piksel gölgelendirici efektleri piksel başına temelinde hesaplar işlevi bir grafik olduğundan. Görüntülenen grafiklerin çözümleme bağlı olarak, her görüntü çerçevesi için işlenmesi gereken birkaç milyon piksel olabilir.  
+- **Piksel gölgelendirici** piksel gölgelendirici efektleri piksel başına temelinde hesaplar işlevi bir grafik olduğundan. Görüntülenen grafiklerin çözümleme bağlı olarak, her görüntü çerçevesi için işlenmesi gereken birkaç milyon piksel olabilir.  
   
--   **Köşe gölgelendirici** köşe gölgelendiricisi olan nesnenin köşe verileri matematiksel işlemler gerçekleştiren işlevi bir grafik.  
+- **Köşe gölgelendirici** köşe gölgelendiricisi olan nesnenin köşe verileri matematiksel işlemler gerçekleştiren işlevi bir grafik.  
   
--   **Çoklu doku desteği** bir 3B grafik nesnede karıştırma işlemi sırasında iki veya daha fazla farklı dokular uygulama özelliği başvurduğu çoklu doku desteği. Çoklu doku desteği derecesini grafik donanımının çoklu doku birimleri sayısına göre belirlenir.  
+- **Çoklu doku desteği** bir 3B grafik nesnede karıştırma işlemi sırasında iki veya daha fazla farklı dokular uygulama özelliği başvurduğu çoklu doku desteği. Çoklu doku desteği derecesini grafik donanımının çoklu doku birimleri sayısına göre belirlenir.  
   
  Piksel gölgelendirici, köşe gölgelendiricisi ve çoklu doku özellikleri belirli tanımlamak için kullanılan [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] , buna karşılık, farklı işleme katmanları tanımlamak için kullanılan sürüm düzeylerini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  İşleme yeteneğini grafik donanımının özelliklerini belirlemek bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Sistem üç işleme katmanları tanımlar:  
   
--   **Katman 0 işleme** donanım grafik ivmesi. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Sürüm düzeyi sürüm 7.0 azdır.  
+- **Katman 0 işleme** donanım grafik ivmesi. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Sürüm düzeyi sürüm 7.0 azdır.  
   
--   **Katman 1 işleme** kısmi grafik donanım hızlandırma. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Büyüktür veya eşittir sürüm 7.0 sürüm düzeyi ve **daha az** sürüm 9.0 daha.  
+- **Katman 1 işleme** kısmi grafik donanım hızlandırma. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Büyüktür veya eşittir sürüm 7.0 sürüm düzeyi ve **daha az** sürüm 9.0 daha.  
   
--   **Katman 2 işleme** grafik donanım hızlandırmayı çoğu grafik özellikleri kullanın. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Sürüm düzeyi 9.0 sürümüne eşit veya daha büyük.  
+- **Katman 2 işleme** grafik donanım hızlandırmayı çoğu grafik özellikleri kullanın. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Sürüm düzeyi 9.0 sürümüne eşit veya daha büyük.  
   
  Daha fazla bilgi için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işleme katmanları bkz [grafik işleme katmanları](graphics-rendering-tiers.md).  
   

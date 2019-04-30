@@ -12,11 +12,11 @@ helpviewer_keywords:
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
 ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768514"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Nasıl yapılır: Uzaktan Yazıcıların Durumunu Araştırma
 Orta ve büyük şirketler belirli bir zamanda en nedeniyle bir kağıt sıkıştı çalışma veya kağıt veya diğer bazı sorunlu durum dışında olan birden çok yazıcılar olabilir. Zengin, kullanıma sunulan yazıcı Özellikler [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] hızlı yazıcıların durumunu araştırma gerçekleştirmek için Microsoft .NET Framework'ü bir yol sağlar.  
@@ -39,9 +39,9 @@ Orta ve büyük şirketler belirli bir zamanda en nedeniyle bir kağıt sıkış
   
  Ardından örnekte <xref:System.Printing.PrintServer.GetPrintQueues%2A> tüm sunucuların bir koleksiyonunu oluşturmak üzere kuyruğa alır ve bu bloblarda döngü başlatır günceller. Bu iç döngü, iki yolla yazıcının durumu denetleme, karşılık gelen bir dallandırma yapısını içerir:  
   
--   Bayraklarını edinebilirsiniz <xref:System.Printing.PrintQueue.QueueStatus%2A> tür özelliği <xref:System.Printing.PrintQueueStatus>.  
+- Bayraklarını edinebilirsiniz <xref:System.Printing.PrintQueue.QueueStatus%2A> tür özelliği <xref:System.Printing.PrintQueueStatus>.  
   
--   Her bir ilgili özellik gibi edinebilirsiniz <xref:System.Printing.PrintQueue.IsOutOfPaper%2A>, ve <xref:System.Printing.PrintQueue.IsPaperJammed%2A>.  
+- Her bir ilgili özellik gibi edinebilirsiniz <xref:System.Printing.PrintQueue.IsOutOfPaper%2A>, ve <xref:System.Printing.PrintQueue.IsPaperJammed%2A>.  
   
  Bu örnekte, her iki yöntem gösterir, böylece kullanıcı daha önce hangi metodu kullanmak için istenir ve bayraklarını kullanmak istiyordu, "y" ile yanıt verdi <xref:System.Printing.PrintQueue.QueueStatus%2A> özelliği. İki yöntemden biriyle ayrıntıları için aşağıya bakın.  
   

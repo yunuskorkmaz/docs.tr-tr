@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
 ms.openlocfilehash: f55c9790b8300a1a3f26e031a17a0982638b562b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765524"
 ---
 # <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Nasıl yapılır: Veri bağlama davranışlarını (WCF Veri Hizmetleri) özelleştirme
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], çağıran özel mantığı sağlayabilirsiniz <xref:System.Data.Services.Client.DataServiceCollection%601> ne zaman bir nesne eklendiğinde veya bağlama koleksiyondan veya bir özellik değişiminin algılandığında kaldırıldı. Bu özel mantıksal olarak başvurulan yöntemleri olarak sağlanan <xref:System.Func%602> değerini döndüren bir temsilci `false` olduğunda varsayılan davranışı hala gerçekleştirilmelidir özel yöntem tamamlandığında ve `true` sonraki zaman işlenmesi Olay durdurulması gerekir.  

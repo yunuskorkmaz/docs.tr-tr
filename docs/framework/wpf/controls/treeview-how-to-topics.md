@@ -8,11 +8,11 @@ helpviewer_keywords:
 - TreeView control [WPF], how-to topics
 ms.assetid: b9e9790e-7bfd-45d1-8b7a-1e0d125182a8
 ms.openlocfilehash: fa7ef39083eb192c6ea675568b955fc78608ba88
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761318"
 ---
 # <a name="treeview-how-to-topics"></a>TreeView Nasıl Yapılır Konuları
 Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.TreeView> hiyerarşik bir yapıda bilgilerini görüntülemek için denetim.  

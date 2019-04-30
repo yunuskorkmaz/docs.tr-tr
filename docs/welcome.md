@@ -7,10 +7,10 @@ ms.date: 04/02/2019
 ms.custom: updateeachrelease
 ms.openlocfilehash: 4d4edc146efa12fc29c2c7e65727bf5a5b664eb8
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767587"
 ---
 # <a name="welcome-to-net"></a>.NET için Hoş Geldiniz
 

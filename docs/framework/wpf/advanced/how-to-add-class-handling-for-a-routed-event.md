@@ -10,11 +10,11 @@ helpviewer_keywords:
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
 ms.openlocfilehash: 7b897954cbdab461dc0305c6290e67c1af5282c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777045"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>Nasıl yapılır: Yönlendirilmiş Olay için Sınıf İşleme Ekleme
 Yönlendirilmiş olaylar, sınıf veya örnek işleyicileri verilen herhangi bir düğümde rotadaki tarafından işlenebilir. Sınıf işleyicileri önce çağrılır ve olayların örnek işlemesini gizlemenize veya temel sınıflar tarafından sahip olunan olayları Olay belirli davranışları tanıtmak için sınıf uygulamaları tarafından kullanılabilir. Bu örnekte, sınıf işleyicileri uygulamak için yakından ilgili iki teknik gösterilmektedir.  

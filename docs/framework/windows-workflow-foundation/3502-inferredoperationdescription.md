@@ -3,11 +3,11 @@ title: 3502 - InferredOperationDescription
 ms.date: 03/30/2017
 ms.assetid: 6aebb614-3c72-4537-ba11-3cc7200ef1f1
 ms.openlocfilehash: 752cd73066c3c15ecbb36c40c417ee84b3fcf184
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756097"
 ---
 # <a name="3502---inferredoperationdescription"></a>3502 - InferredOperationDescription
 ## <a name="properties"></a>Özellikler  
@@ -15,7 +15,7 @@ ms.locfileid: "33512011"
 |||  
 |-|-|  
 |Kimlik|3502|  
-|Anahtar Sözcükler|WFServices|  
+|anahtar sözcükler|WFServices|  
 |Düzey|Bilgiler|  
 |Kanal|Microsoft Windows uygulama sunucusu-uygulamalar/analitik|  
   
@@ -23,13 +23,13 @@ ms.locfileid: "33512011"
  Bir OperationDescription WorkflowService ortaya çıkan gösterir.  
   
 ## <a name="message"></a>İleti  
- OperationDescription ada sahip '%1' = '%2' WorkflowService sözleşmede çıkarımı yapılan. IsOneWay = %3.  
+ Adlı OperationDescription '%1' = '%2' WorkflowService sözleşmede ortaya çıkan. IsOneWay = %3.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|OperationName|xs: String|İşlemin adı.|  
-|ContractName|xs: String|Anlaşma adı.|  
-|IsOneWay|xs: String|TRUE veya false değerini Sözleşme tek yönlü olup olmadığını belirten.|  
-|AppDomain|xs: String|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|OperationName|xs:string|İşlemin adı.|  
+|ContractName|xs:string|Sözleşme adı.|  
+|IsOneWay|xs:string|TRUE veya false değerini tek yönlü sözleşme olup olmadığını belirten.|  
+|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|

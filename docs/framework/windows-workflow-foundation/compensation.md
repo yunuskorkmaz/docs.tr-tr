@@ -3,11 +3,11 @@ title: Dengeleme
 ms.date: 03/30/2017
 ms.assetid: 722e9766-48d7-456c-9496-d7c5c8f0fa76
 ms.openlocfilehash: af29ba61ff5bede9208f2ab706f5e0ce1ff12274
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774289"
 ---
 # <a name="compensation"></a>Dengeleme
 Windows Workflow Foundation (WF) Maaş tarafından daha önce tamamlanan iş geri alınamaz veya yapabilirsiniz (aşağıdaki uygulama tarafından tanımlanan mantık) dengelenebilecek mekanizması olduğunu bir sonraki hata oluştuğunda. Bu bölümde, iş akışlarında Dengeleme kullanmayı açıklar.  

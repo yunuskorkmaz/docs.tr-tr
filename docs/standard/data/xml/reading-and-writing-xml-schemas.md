@@ -1,5 +1,5 @@
 ---
-title: XML şemaları yazma ve okuma
+title: XML Şemaları Okuma ve Yazma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,16 +10,16 @@ ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f80157ddf394fdd058793830bfe3052b41ad1e40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698765"
 ---
-# <a name="reading-and-writing-xml-schemas"></a>XML şemaları yazma ve okuma
+# <a name="reading-and-writing-xml-schemas"></a>XML Şemaları Okuma ve Yazma
 Şema nesne modeli (SOM) API okuyup dosyaları veya diğer kaynakları XML Şeması Tanım Dili (XSD) şemaları yazma ve XML şemaları sınıfları kullanarak bellek içi derleme için kullanılabilir <xref:System.Xml.Schema?displayProperty=nameWithType> dünyada tanımlanan yapıları eşleyen ad alanı Wide Web Consortium (W3C) XML Şeması öneri.  
   
-## <a name="reading-and-writing-xml-schemas"></a>XML şemaları yazma ve okuma  
+## <a name="reading-and-writing-xml-schemas"></a>XML Şemaları Okuma ve Yazma  
  <xref:System.Xml.Schema.XmlSchema> Sağlar sınıfını <xref:System.Xml.Schema.XmlSchema.Read%2A> ve <xref:System.Xml.Schema.XmlSchema.Write%2A> okuma ve yazma XML şemaları için yöntemleri. <xref:System.Xml.Schema.XmlSchema.Read%2A> Yöntemi döndürür bir <xref:System.Xml.Schema.XmlSchema> XML şemasını temsil eden nesne ve isteğe bağlı alan <xref:System.Xml.Schema.ValidationEventHandler> şema doğrulama uyarıları ve bir XML Şeması okurken hatayla karşılaştı hataları işlemek için bir parametre olarak.  
   
  <xref:System.Xml.Schema.XmlSchema.Write%2A> Yöntemi yazar için XML şemaları <xref:System.IO.Stream>, <xref:System.IO.TextWriter> ve <xref:System.Xml.XmlWriter> nesneleri ve isteğe bağlı olarak alabilir <xref:System.Xml.XmlNamespaceManager> bir parametre olarak nesne. Bir <xref:System.Xml.XmlNamespaceManager> ad alanları XML şemasından karşılaştı işlemek için kullanılır. Hakkında daha fazla bilgi için <xref:System.Xml.XmlNamespaceManager> sınıfı [yönetme ad alanları XML belgesinde](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md).  

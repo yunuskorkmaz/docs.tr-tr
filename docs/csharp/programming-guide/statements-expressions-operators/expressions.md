@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
 ms.openlocfilehash: c8856dfd1c6c8e35399c20b630c0d44493e42b6a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61710023"
 ---
 # <a name="expressions-c-programming-guide"></a>İfadeler (C# Programlama Kılavuzu)
 Bir *ifade* bir veya daha fazla işlenenler ve tek bir değer, nesne, yöntemi veya ad alanı için değerlendirilen sıfır veya daha fazla işleçleri oluşan bir dizidir. İfadeler, değişmez değer, bir yöntem çağrısı, bir işleci ve işlenenleri, oluşabilir veya *basit adı*. Basit adları bir değişken, tür üyesi, yöntem parametresi, ad alanı veya tür adı olabilir.  
@@ -71,7 +71,7 @@ DoWork();
 C# destekler *ifade gövdeli üyeler*, yöntemleri, Oluşturucular, bir Sonlandırıcı, özellikler ve dizin oluşturucular için bir kısa ifade gövdesi tanımı kaynağı sağlar. Daha fazla bilgi için [ifade gövdeli üyeler](expression-bodied-members.md).
 
 ## <a name="remarks"></a>Açıklamalar  
- Bir ifade tarafından tanımlanan bir değişken, nesne özellik veya nesne dizinleyici erişimi olduğunda, o öğenin değerini ifade değeri olarak kullanılır. Bir ifade bir değer veya nesne gerekli olduğu #c dilinde herhangi bir ifade, sonuçta gereken türe değerlendirir sürece yerleştirilebilir.  
+ Bir ifade tarafından tanımlanan bir değişken, nesne özellik veya nesne dizinleyici erişimi olduğunda, o öğenin değerini ifade değeri olarak kullanılır. Bir ifade içinde her yerden yerleştirilebilir C# burada bir değer veya nesne gereklidir, ifade sonuçta gereken türe değerlendirir sürece.  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

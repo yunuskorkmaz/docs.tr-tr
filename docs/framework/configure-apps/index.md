@@ -25,11 +25,11 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775875"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Uygulamaları Yapılandırma
 .NET Framework, yapılandırma dosyaları geliştiricilerin ve yöneticilerin denetim verir ve esnekliğe göre uygulamaların çalıştırın. Yapılandırma dosyaları gerektikçe değiştirilebilen XML dosyalarıdır. Bir yönetici, bir uygulamanın hangi korunan kaynaklara erişebilir, bir uygulamanın derlemelerin hangi sürümlerini kullanır ve uzak uygulamaların ve nesnelerin bulunduğu yere kontrol edebilirsiniz. Geliştiriciler ayarları yapılandırma dosyalarına koyarak, bir ayar her değiştiğinde bir uygulamayı yeniden derleme gerekliliğini ortadan kaldırır. Bu bölümde nelerin yapılandırılabileceği ve neden bir uygulama yapılandırma yararlı olabileceği anlatılmaktadır.  
@@ -66,7 +66,7 @@ ms.locfileid: "59147114"
   
  Uygulama yapılandırma dosyasının adı ve konumu, uygulamanın konağına bağlıdır:  
   
--   Yürütülebilir Konaklı Uygulama  
+- Yürütülebilir Konaklı Uygulama  
   
      Bu uygulamaların iki yapılandırma dosyası vardır: geliştirme sırasında geliştirici tarafından değiştirilirken kaynak yapılandırma dosyası ve uygulama ile birlikte dağıtılan bir çıktı dosyası.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "59147114"
   
      Visual Studio, kaynak yapılandırma dosyasını, uygulama ile birlikte dağıtılan çıktı yapılandırma dosyasını oluşturmak için derlenmiş bütünleştirilmiş kodun yerleştirildiği dizine otomatik olarak kopyalar. Bazı durumlarda, Visual Studio çıktı yapılandırma dosyasını değiştirebilir; Daha fazla bilgi için [uygulama düzeyinde derleme sürümlerini yeniden yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) bölümünü [derleme sürümlerini yeniden yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md) makalesi.  
   
--   ASP.NET tarafından barındırılan uygulama  
+- ASP.NET tarafından barındırılan uygulama  
   
      ASP.NET yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [ASP.NET yapılandırma ayarlarını](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
   
--   Internet Explorer tarafından barındırılan uygulama  
+- Internet Explorer tarafından barındırılan uygulama  
   
      Internet Explorer'da barındırılan bir uygulamanın yapılandırma dosyası varsa, bu dosyanın konumu belirtilen bir `<link>` aşağıdaki söz dizimini etiketle:  
   
@@ -94,11 +94,11 @@ ms.locfileid: "59147114"
   
  Güvenlik yapılandırma dosyaları aşağıdaki konumlarda bulunur:  
   
--   Kuruluş ilkesi yapılandırma dosyası: %*çalışma zamanı yükleme yolu*%\Config\Enterprisesec.config  
+- Kuruluş ilkesi yapılandırma dosyası: %*çalışma zamanı yükleme yolu*%\Config\Enterprisesec.config  
   
--   Makine ilkesi yapılandırma dosyası: %*çalışma zamanı yükleme yolu*%\Config\Security.config  
+- Makine ilkesi yapılandırma dosyası: %*çalışma zamanı yükleme yolu*%\Config\Security.config  
   
--   Kullanıcı İlkesi yapılandırma dosyası: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
+- Kullanıcı İlkesi yapılandırma dosyası: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: DEVPATH kullanarak derlemelerin bulun](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
 ms.openlocfilehash: a3850875c8ca747f8709b55f8fe721d25be24304
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776694"
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>Nasıl yapılır: Özel Yönlendirilmiş Olay Oluşturma
 Olay yönlendirme desteklemek özel etkinliği için kaydetmeniz gerekir. bir <xref:System.Windows.RoutedEvent> kullanarak <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> yöntemi. Bu örnekte, özel gönderilmiş olay oluşturma hakkındaki temel bilgileri gösterilmektedir.  

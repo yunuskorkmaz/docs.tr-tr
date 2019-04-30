@@ -3,11 +3,11 @@ title: Entity SQL ile Transact-SQL Arasındaki Farklar
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
 ms.openlocfilehash: 75ce0b00962526b76ea9f4b9fdfb0d1e1e564cdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774757"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL ile Transact-SQL Arasındaki Farklar
 Bu konuda arasındaki farklar açıklanmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ve [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
@@ -20,15 +20,15 @@ Bu konuda arasındaki farklar açıklanmaktadır [!INCLUDE[esql](../../../../../
 ## <a name="support-for-collections"></a>Koleksiyonlar için destek  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Koleksiyonlar, birinci sınıf varlıklar olarak değerlendirir. Örneğin:  
   
--   Koleksiyon ifadeleri geçerli bir `from` yan tümcesi.  
+- Koleksiyon ifadeleri geçerli bir `from` yan tümcesi.  
   
--   `in` ve `exists` alt sorgular genelleştirilmiş koleksiyonlarınız izin vermek için.  
+- `in` ve `exists` alt sorgular genelleştirilmiş koleksiyonlarınız izin vermek için.  
   
      Alt sorgu koleksiyonu türüdür. `e1 in e2` ve `exists(e)` olan [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bu işlemleri gerçekleştirmek için oluşturur.  
   
--   Ayarlama işlemleri, gibi `union`, `intersect`, ve `except`, artık koleksiyonlarda çalışır.  
+- Ayarlama işlemleri, gibi `union`, `intersect`, ve `except`, artık koleksiyonlarda çalışır.  
   
--   Birleştirmeler koleksiyonlarda çalışır.  
+- Birleştirmeler koleksiyonlarda çalışır.  
   
 ## <a name="support-for-expressions"></a>İfadeler için destek  
  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] alt sorgular (tablolar) ve ifadeleri (satırları ve sütunları) sahiptir.  

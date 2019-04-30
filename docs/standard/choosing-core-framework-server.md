@@ -5,11 +5,11 @@ author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
 ms.openlocfilehash: 03d008230d263853e322bb582706e2dbd3a11eec
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772612"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim
 
@@ -40,7 +40,7 @@ Uygulama (web/hizmet) gereksinimlerinizi birden çok platformda (Windows, Linux 
 
 .NET core geliştirme iş istasyonunuzu daha önce sözü edilen işletim sistemlerini destekler. Visual Studio, Windows ve macOS için bir tümleşik geliştirme ortamı (IDE) sağlar. Ayrıca, macOS, Linux ve Windows üzerinde çalışan Visual Studio Code kullanabilirsiniz. Visual Studio Code hata ayıklama ve IntelliSense dahil olmak üzere .NET Core, destekler. Çoğu üçüncü taraf düzenleyiciler, Sublime Emacs ve gibi VI, .NET Core ile çalışır. Bu üçüncü taraf düzenleyicileri Düzenleyicisi IntelliSense Al kullanarak [Omnisharp](https://www.omnisharp.net/). Ayrıca herhangi bir kod düzenleyici önlemek ve doğrudan [.NET Core CLI Araçları](../core/tools/index.md), desteklenen tüm platformlar için kullanılabilir.
 
-### <a name="microservices-architecture"></a>Mikro hizmet mimarisi
+### <a name="microservices-architecture"></a>Mikro hizmetler mimarisi
 
 Bir mikro hizmet mimarisi, bir hizmet sınırında teknolojilerinin bir karışımını sağlar. Bu teknoloji karışımı diğer mikro hizmetler veya hizmetler ile çalışan yeni mikro hizmetler için .NET Core, aşamalı bir embrace sağlar. Örneğin, mikro hizmetler veya .NET Framework, Java, Ruby veya tek parçalı diğer teknolojiler ile geliştirilen Hizmetleri karıştırabilirsiniz.
 

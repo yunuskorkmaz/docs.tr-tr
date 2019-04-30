@@ -3,11 +3,11 @@ title: İstemci Yapılandırması
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
 ms.openlocfilehash: b9975c6caeedc94bf4a7773e71a95eb0d8c7aed2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781517"
 ---
 # <a name="client-configuration"></a>İstemci Yapılandırması
 Windows Communication Foundation (WCF) istemci yapılandırması, adresi, bağlama, davranış ve Sözleşme, istemci uç noktası için hizmet uç noktalarına bağlanmak için hangi istemcilerin kullanın, "ABC" özelliklerini belirtmek için kullanabilirsiniz. [ \<İstemci >](../../configure-apps/file-schema/wcf/client.md) öğeye sahip bir [ \<uç noktası >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) öğesi özniteliklerini genel uç noktasını yapılandırmak için kullanılır. Bu öznitelikler ele alınmıştır [yapılandırma uç noktaları](#configuring-endpoints) bölümü.  

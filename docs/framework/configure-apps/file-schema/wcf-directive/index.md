@@ -3,11 +3,11 @@ title: WCF Yönerge Söz Dizimi
 ms.date: 03/30/2017
 ms.assetid: e471b042-d5e3-491c-bc81-758655016a3a
 ms.openlocfilehash: 65c972067d5c2869a9dd130d285566db81dbc0d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704680"
 ---
 # <a name="wcf-directive-syntax"></a>WCF Yönerge Söz Dizimi
 Derleyiciler yönlendirmek için Windows Communication Foundation (WCF) yönergeleri .svc dosyalarında tarafından kullanılan ayarları belirtir. Her yönerge bu yönergesi için özel olan (değerleri ile eşleştirilmiş) bir veya daha fazla öznitelik içerebilir. WCF sahip yalnızca [ \@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) yönergesi.  

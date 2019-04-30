@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
 ms.openlocfilehash: 2815757bf9b00375f763673f18180bfbf51a165a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779229"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Nasıl yapılır: WCF Hizmeti işlemlerini zaman uyumsuz olarak çağırma
 Bu konu nasıl bir istemci bir hizmet işlemi zaman uyumsuz olarak erişebileceğiniz kapsar. Bu konuda hizmeti uygulayan `ICalculator` arabirimi. İstemci bu arabirimdeki işlemleri olay tabanlı zaman uyumsuz çağırma modelini kullanarak zaman uyumsuz olarak çağırabilirsiniz. (Olay tabanlı zaman uyumsuz çağırma modeli hakkında daha fazla bilgi için bkz. [birden çok iş parçacıklı programlama ile olay tabanlı zaman uyumsuz desen](https://go.microsoft.com/fwlink/?LinkId=248184)). Nasıl bir işlem zaman uyumsuz olarak bir hizmet olarak uygulayacağınızı gösteren bir örnek için bkz: [nasıl yapılır: Zaman uyumsuz bir hizmet işlemi uygulama](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Zaman uyumlu ve zaman uyumsuz işlemler hakkında daha fazla bilgi için bkz: [zaman uyumlu ve zaman uyumsuz işlemler](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
@@ -30,17 +30,17 @@ Bu konu nasıl bir istemci bir hizmet işlemi zaman uyumsuz olarak erişebilece�
   
      Bu, zaman uyumlu hem de standart temsilci tabanlı zaman uyumsuz işlemlerin yanı sıra, içeren bir WCF istemcisi sınıfı oluşturur:  
   
-    -   İki <`operationName` > `Async` işlemleri ile olay tabanlı zaman uyumsuz çağırma yaklaşımı kullanmak için. Örneğin:  
+    - İki <`operationName` > `Async` işlemleri ile olay tabanlı zaman uyumsuz çağırma yaklaşımı kullanmak için. Örneğin:  
   
          [!code-csharp[EventAsync#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#1)]
          [!code-vb[EventAsync#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#1)]  
   
-    -   Formun işlemi tamamlandı olayları <`operationName` > `Completed` ile olay tabanlı zaman uyumsuz çağırma yaklaşımı kullanmak için. Örneğin:  
+    - Formun işlemi tamamlandı olayları <`operationName` > `Completed` ile olay tabanlı zaman uyumsuz çağırma yaklaşımı kullanmak için. Örneğin:  
   
          [!code-csharp[EventAsync#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#2)]
          [!code-vb[EventAsync#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#2)]  
   
-    -   <xref:System.EventArgs?displayProperty=nameWithType> Her işlem için türleri (form <`operationName`>`CompletedEventArgs`) ile olay tabanlı zaman uyumsuz çağırma yaklaşımı kullanmak için. Örneğin:  
+    - <xref:System.EventArgs?displayProperty=nameWithType> Her işlem için türleri (form <`operationName`>`CompletedEventArgs`) ile olay tabanlı zaman uyumsuz çağırma yaklaşımı kullanmak için. Örneğin:  
   
          [!code-csharp[EventAsync#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#3)]
          [!code-vb[EventAsync#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#3)]  

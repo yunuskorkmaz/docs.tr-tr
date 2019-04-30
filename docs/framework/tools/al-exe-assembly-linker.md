@@ -10,11 +10,11 @@ ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 19cccc5bcec82b04a337aa0d3913fede0a435ae8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780061"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Derleme Bağlayıcı)
 
@@ -37,7 +37,7 @@ al sources options
 
 Bir veya daha fazlasını belirtebilirsiniz `sources`.
 
-| Kaynak | Açıklama |
+| Source | Açıklama |
 | ------ | ----------- |
 |`file`[,`target`]|İçeriğini kopyalar `file` (bir modül) tarafından belirtilen dosya adına `target`. Kopyalamak sonra *Al.exe* derler `target` bir bütünleştirilmiş.|
 |**/ embed [kaynak]:** `file`[,`name`[,`private`]]|Tarafından belirtilen kaynak katıştırır `file` ; derleme bildirimi içeren görüntüde *Al.exe* içeriğini kopyalar `file` taşınabilir yürütülebilir (PE) görüntüsü.<br /><br /> `name` Parametresi, kaynak için iç tanımlayıcı. Varsayılan olarak, kaynaklar derleme içinde geneldir (başka derlemeler tarafından görülür). Belirtme `private` kaynağın diğer derlemeler tarafından görülmemesini sağlar.<br /><br /> Varsa `file` , örneğin, tarafından oluşturulmuş bir .NET Framework kaynak dosyası [kaynak dosya oluşturucu (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) veya geliştirme ortamında, bunu üyeleriileerişilebilir<xref:System.Resources>. Daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager>. Diğer tüm kaynaklar için kullanmak `GetManifestResource`* yöntemlerini <xref:System.Reflection.Assembly> çalışma zamanında kaynağa erişmek için.<br /><br /> Yalnızca kaynak dosyaları geçirilen *Al.exe*, çıktı dosyası bir uydu kaynak derlemesidir.|
@@ -85,7 +85,7 @@ Tüm Visual Studio derleyicileri derlemeler üretir. Ancak, bir veya daha fazla 
 
 Önbelleğe derlemeler yüklemek için önbellekten derlemeleri kaldırmak veya önbelleğin içeriğini listelemek, kullanın [Genel Derleme Önbelleği Aracı (*Gacutil.exe*)](../../../docs/framework/tools/gacutil-exe-gac-tool.md).
 
-## <a name="errors-and-warnings"></a>Hatalar ve uyarılar
+## <a name="errors-and-warnings"></a>Hatalar ve Uyarılar
 
 Aşağıdaki tablo tarafından oluşturulan hataları listeler *Al.exe*.
 

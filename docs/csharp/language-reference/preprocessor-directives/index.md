@@ -1,5 +1,5 @@
 ---
-title: C# önişlemci yönergeleri
+title: C# ön işlemci yönergeleri
 ms.date: 07/20/2015
 f1_keywords:
 - cs.preprocessor
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
 ms.openlocfilehash: 54067777ed2e92eea263b17cce0d4cdf13ed731d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689326"
 ---
-# <a name="c-preprocessor-directives"></a>C# önişlemci yönergeleri
+# <a name="c-preprocessor-directives"></a>C# ön işlemci yönergeleri
 Bu bölüm, aşağıdaki C# önişlemci yönergeleri hakkında bilgi içerir:
 
 - [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)

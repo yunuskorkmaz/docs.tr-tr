@@ -1,15 +1,15 @@
 ---
-title: ODBC şema koleksiyonları
+title: ODBC Şema Koleksiyonları
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
 ms.openlocfilehash: ffe80120ceffbe29c0a117cf1194860c5782be8c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772053"
 ---
-# <a name="odbc-schema-collections"></a>ODBC şema koleksiyonları
+# <a name="odbc-schema-collections"></a>ODBC Şema Koleksiyonları
 
 Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri için şema koleksiyonu desteği açıklanmaktadır.
 

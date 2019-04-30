@@ -9,11 +9,11 @@ helpviewer_keywords:
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
 ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770883"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Nasıl yapılır: DataGrid Denetimi ile Doğrulama Uygulama
 <xref:System.Windows.Controls.DataGrid> Denetimi hücre ve satır düzeyinde doğrulama yapmanıza olanak sağlar. Bir kullanıcı bir değer güncelleştirdiğinde hücre düzeyinde doğrulama ile tek bir bağımlı veri nesnesinin özelliklerini doğrulayın. Bir kullanıcı bir satır için değişiklikleri onayladığında ile satır düzeyinde doğrulama, tüm veri nesnelerini doğrulayın. Ayrıca, doğrulama hataları için özelleştirilmiş görsel geri bildirim sağlamak veya varsayılan görsel geri bildirim kullanabilirsiniz, <xref:System.Windows.Controls.DataGrid> denetim sağlar.  
@@ -22,7 +22,7 @@ ms.locfileid: "59305965"
   
 ### <a name="to-validate-individual-cell-values"></a>Tek tek hücre değerlerini doğrulamak için  
   
--   Bir veya daha fazla doğrulama kurallarını içeren bir sütun kullanılan bağlama belirtin. Bu bölümünde anlatıldığı gibi basit denetimler, veri doğrulamaya benzer [Data Binding Overview](../data/data-binding-overview.md).  
+- Bir veya daha fazla doğrulama kurallarını içeren bir sütun kullanılan bağlama belirtin. Bu bölümünde anlatıldığı gibi basit denetimler, veri doğrulamaya benzer [Data Binding Overview](../data/data-binding-overview.md).  
   
      Aşağıdaki örnekte gösterildiği bir <xref:System.Windows.Controls.DataGrid> farklı bir iş nesnesi özelliklerine bağlı olarak dört sütun denetimi. Üç sütun belirtin <xref:System.Windows.Controls.ExceptionValidationRule> ayarlayarak <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> özelliğini `true`.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "59305965"
   
 ### <a name="to-customize-cell-validation-feedback"></a>Hücre doğrulama geri bildirim özelleştirmek için  
   
--   Sütun kümesi <xref:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle%2A> kullanıcının düzenleme denetiminde sütun için bir stil özelliğini uygun. Çalışma zamanında düzenleme denetimleri oluşturduğundan kullanamazsınız <xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType> ekli ile basit denetimler gibi özellik.  
+- Sütun kümesi <xref:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle%2A> kullanıcının düzenleme denetiminde sütun için bir stil özelliğini uygun. Çalışma zamanında düzenleme denetimleri oluşturduğundan kullanamazsınız <xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType> ekli ile basit denetimler gibi özellik.  
   
      Aşağıdaki örnek, önceki örnekte doğrulama kuralları ile üç sütun tarafından paylaşılan bir hata stili ekleyerek güncelleştirir. Bir kullanıcı geçersiz bir değer girdiğinde, stili hücre arka plan rengi değişir ve bir araç ipucu ekler. Bir doğrulama hatası olup olmadığını belirlemek için bir tetikleyici kullanımına dikkat edin. Şu anda hücreler için hiçbir özel hata şablonunu olduğundan, bu gereklidir.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "59305965"
   
 ### <a name="to-customize-row-validation-feedback"></a>Satır doğrulama geri bildirim özelleştirmek için  
   
--   Ayarlama <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType> özelliği. Bu özellik tek satır doğrulama geri bildirim özelleştirmenize olanak tanıyan <xref:System.Windows.Controls.DataGrid> kontrol eder. Ayarlanacak bir örtük satır stili kullanarak birden çok denetim etkileyebilir <xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType> özelliği.  
+- Ayarlama <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType> özelliği. Bu özellik tek satır doğrulama geri bildirim özelleştirmenize olanak tanıyan <xref:System.Windows.Controls.DataGrid> kontrol eder. Ayarlanacak bir örtük satır stili kullanarak birden çok denetim etkileyebilir <xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType> özelliği.  
   
      Aşağıdaki örnek, varsayılan satır doğrulama geri bildirim ile daha görünür bir gösterge değiştirir. Bir kullanıcı geçersiz bir değer girdiğinde, satır üst bilgisi içinde beyaz bir ünlem işareti bulunan kırmızı bir daire görünür. Bu, hem satır hem de hücre doğrulama hataları ortaya çıkar. Bir araç ipucunda ilişkili hata iletisi görüntülenir.  
   
@@ -73,17 +73,17 @@ ms.locfileid: "59305965"
   
  Doğrulama test etmek için aşağıdakileri deneyin:  
   
--   Kurs Kimlik sütununda tamsayı olmayan bir değer girin.  
+- Kurs Kimlik sütununda tamsayı olmayan bir değer girin.  
   
--   Son tarih sütununa, başlangıç tarihinden önceki bir tarihi girin.  
+- Son tarih sütununa, başlangıç tarihinden önceki bir tarihi girin.  
   
--   Kurs kimliği, başlangıç tarihi veya bitiş tarihi değeri silin.  
+- Kurs kimliği, başlangıç tarihi veya bitiş tarihi değeri silin.  
   
--   Geçersiz bir hücre değerini geri hücreye geri imleci yerleştirin ve ESC tuşuna basın.  
+- Geçersiz bir hücre değerini geri hücreye geri imleci yerleştirin ve ESC tuşuna basın.  
   
--   Geçerli bir hücre düzenleme modunda olduğunda satırın tamamını değişiklikleri geri almak için ESC tuşuna iki kez basın.  
+- Geçerli bir hücre düzenleme modunda olduğunda satırın tamamını değişiklikleri geri almak için ESC tuşuna iki kez basın.  
   
--   Bir doğrulama hatası oluştuğunda, ilişkili hata iletisini görmek için satır üst bilgisi göstergeyi fare işaretçinizi üzerine getirin.  
+- Bir doğrulama hatası oluştuğunda, ilişkili hata iletisini görmek için satır üst bilgisi göstergeyi fare işaretçinizi üzerine getirin.  
   
  [!code-csharp[DataGrid_Validation#FullCode](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#fullcode)]
  [!code-vb[DataGrid_Validation#FullCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#fullcode)]  

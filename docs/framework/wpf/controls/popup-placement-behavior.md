@@ -8,11 +8,11 @@ helpviewer_keywords:
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
 ms.openlocfilehash: 911c2064e34ed8d0a341ffd9a52f852eab677e0a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771402"
 ---
 # <a name="popup-placement-behavior"></a>Açılan Pencere Yerleştirme Davranışı
 A <xref:System.Windows.Controls.Primitives.Popup> denetimi, bir uygulamanın yükünü gezinen ayrı bir pencerede içeriğini görüntüler. Konumu belirleyebileceğiniz bir <xref:System.Windows.Controls.Primitives.Popup> göre bir denetim, fare ve kullanarak ekrandaki <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, ve <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> özellikleri.  Bu özellikler konumunu belirten esneklik sunmak için birlikte çalışır. <xref:System.Windows.Controls.Primitives.Popup>.  
@@ -36,13 +36,13 @@ A <xref:System.Windows.Controls.Primitives.Popup> denetimi, bir uygulamanın yü
 ## <a name="definitions-of-terms-the-anatomy-of-a-popup"></a>Terimlerin tanımları: Açılan pencere anatomisi  
  Aşağıdaki koşulları içinde anlamak yararlı nasıl <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, ve <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> özellikleri birbiriyle ilgilidir ve <xref:System.Windows.Controls.Primitives.Popup>:  
   
--   Hedef nesne  
+- Hedef nesne  
   
--   Hedef alan  
+- Hedef alan  
   
--   Hedef kaynak  
+- Hedef kaynak  
   
--   Açılan kutu hizalama noktası  
+- Açılan kutu hizalama noktası  
   
  Bu terimler için çeşitli yönlerini başvurmak için kullanışlı bir yol sağlar <xref:System.Windows.Controls.Primitives.Popup> ve ilişkili olduğu denetimi.  
   
@@ -135,11 +135,11 @@ A <xref:System.Windows.Controls.Primitives.Popup> denetimi, bir uygulamanın yü
 ## <a name="when-the-popup-encounters-the-edge-of-the-screen"></a>Açılan pencerenin kenarında karşılaştığında  
  Güvenlik nedenleriyle bir <xref:System.Windows.Controls.Primitives.Popup> ekranın kenarı tarafından gizlenemez. Aşağıdaki işlemlerden birini olur olduğunda <xref:System.Windows.Controls.Primitives.Popup> ekran kenarı karşılaşır:  
   
--   Açılan gizlememeniz ekranın kenarındaki kendisi yeniden hizalar <xref:System.Windows.Controls.Primitives.Popup>.  
+- Açılan gizlememeniz ekranın kenarındaki kendisi yeniden hizalar <xref:System.Windows.Controls.Primitives.Popup>.  
   
--   Açılan farklı açılan hizalama noktası kullanır.  
+- Açılan farklı açılan hizalama noktası kullanır.  
   
--   Açılan farklı bir hedef kaynak ve açılan hizalama noktası kullanır.  
+- Açılan farklı bir hedef kaynak ve açılan hizalama noktası kullanır.  
   
  Bu seçenekler daha sonra bu bölümde daha ayrıntılı açıklanmıştır.  
   

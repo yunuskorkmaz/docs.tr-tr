@@ -8,11 +8,11 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
 ms.openlocfilehash: a74716bcdf3c85c08d0ff3bf66407dce30ee91cc
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705447"
 ---
 # <a name="application-settings-schema"></a>Uygulama Ayarları Şeması
 
@@ -27,7 +27,7 @@ Uygulama ayarları, kullandığı yapılandırma dosyalarını bir parçası ola
 | **\<applicationSettings >** | Tüm içeren  **\<ayarı >** etiketler uygulamaya özgü.                         |
 | **\<kullanıcı ayarlarını >**        | Tüm içeren  **\<ayarı >** geçerli kullanıcıya özel etiketler.                        |
 | **\<ayarı >**             | Bir ayarı tanımlar. Ya da alt  **\<applicationSettings >** veya  **\<ayarlarını >**. |
-| **\<Değer >**               | Bir ayarın değerini tanımlar. Alt  **\<ayarı >**.                                   |
+| **\<value>**               | Bir ayarın değerini tanımlar. Alt  **\<ayarı >**.                                   |
 
 ## <a name="applicationsettings-element"></a>\<applicationSettings > öğesi
 

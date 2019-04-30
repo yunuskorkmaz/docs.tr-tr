@@ -3,11 +3,11 @@ title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
 ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771975"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
 Oracle için .NET Framework veri sağlayıcısı içerir <xref:System.Data.OracleClient.OracleBFile> Oracle ile çalışmak için kullanılan sınıfı <xref:System.Data.OracleClient.OracleType.BFile> veri türü.  
@@ -16,11 +16,11 @@ Oracle için .NET Framework veri sağlayıcısı içerir <xref:System.Data.Oracl
   
  Diğer özelliklerini bir **BDOSYA** ondan ayırt veri türü bir **LOB** olan BT'nin veri türü:  
   
--   Yapılandırılmamış verileri içerir.  
+- Yapılandırılmamış verileri içerir.  
   
--   Sunucu tarafı parçalama destekler.  
+- Sunucu tarafı parçalama destekler.  
   
--   Kopyalama semantiği kullanan başvuru. Örneğin, bir kopyalama işlemi gerçekleştirirseniz bir **BDOSYA**, yalnızca **BDOSYA** (aynı dosyaya bir başvuru) Bulucu kopyalanır. Dosyadaki dosya kopyalanmaz.  
+- Kopyalama semantiği kullanan başvuru. Örneğin, bir kopyalama işlemi gerçekleştirirseniz bir **BDOSYA**, yalnızca **BDOSYA** (aynı dosyaya bir başvuru) Bulucu kopyalanır. Dosyadaki dosya kopyalanmaz.  
   
  **BDOSYA** veri türü, boyutu büyük LOB'lar başvurmak için kullanılması gerekir ve bu nedenle, veritabanında depolamak pratik değildir. Daha fazla istemci ve sunucu iletişimi ek yük dahil kullanırken bir **BDOSYA** veri türü ile karşılaştırıldığında **LOB** veri türü. Erişmek için daha verimli bir **BDOSYA** yalnızca az miktarda veriniz almak gerekiyorsa. Tüm nesnesi elde etmeniz gerekiyorsa veritabanı yerleşik LOB'lar erişmek için daha verimlidir.  
   

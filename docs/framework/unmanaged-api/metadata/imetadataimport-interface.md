@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c6a65eae91bf3b44fc2b49588ead5ed178d7326f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777461"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport Arabirimi
 İçeri aktarma ve taşınabilir yürütülebilir (PE) dosya veya bir tür kitaplığı veya tek başına, çalışma zamanı meta verileri ikili gibi başka bir kaynağı var olan meta verileri işlemek için yöntemler sağlar.  
@@ -96,13 +96,13 @@ ms.locfileid: "59180407"
 ## <a name="remarks"></a>Açıklamalar  
  Tasarımını `IMetaDataImport` arabirimi öncelikle araçları tarafından kullanılmak üzere tasarlanmıştır ve tür bilgilerini (örneğin, geliştirme araçları) alma veya yönetme Hizmetleri bileşenleri (örneğin, çözüm/Etkinleştirme Hizmetleri) dağıtılabilir. Yöntemlere `IMetaDataImport` aşağıdaki görev kategorilere ayrılır:  
   
--   Meta veri kapsamı içindeki öğe koleksiyonları olan numaralandırma.  
+- Meta veri kapsamı içindeki öğe koleksiyonları olan numaralandırma.  
   
--   Belirli bir özellikler kümesi içeren bir öğe bulma.  
+- Belirli bir özellikler kümesi içeren bir öğe bulma.  
   
--   Belirtilen öğenin özellikleri alınıyor.  
+- Belirtilen öğenin özellikleri alınıyor.  
   
--   Get yöntemleri, meta veri öğesi özelliklerini tek değerli döndürmek için özel olarak tasarlanmıştır. Özelliği başka bir öğeye bir başvuru olduğunda, o öğe için bir belirteç döndürülür. Herhangi bir işaretçi giriş türü, belirli bir değer değil başlatması gerektiğini belirtmek için boş olabilir. Temelde koleksiyon nesnelerini (örneğin, bir sınıfın uyguladığı arabirimlerin koleksiyonunu) özellikleri elde etmek için numaralandırma yöntemlerini kullanın.  
+- Get yöntemleri, meta veri öğesi özelliklerini tek değerli döndürmek için özel olarak tasarlanmıştır. Özelliği başka bir öğeye bir başvuru olduğunda, o öğe için bir belirteç döndürülür. Herhangi bir işaretçi giriş türü, belirli bir değer değil başlatması gerektiğini belirtmek için boş olabilir. Temelde koleksiyon nesnelerini (örneğin, bir sınıfın uyguladığı arabirimlerin koleksiyonunu) özellikleri elde etmek için numaralandırma yöntemlerini kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

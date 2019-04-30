@@ -9,21 +9,21 @@ ms.assetid: 4e4ad69d-9343-4f6a-aed8-fe0335a3b979
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dd0bdee6127aca259ae5ca1fe1aa8ecc574662b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775225"
 ---
 # <a name="hosting-global-static-functions"></a>Barındırma Genel Statik İşlevleri
-Bu bölümde .NET API'leri barındırma çerçevesi tarafından kullanılan yönetilmeyen barındırma işlevleri açıklanmaktadır.  
+Bu bölümde, .NET Framework barındırma API'leri tarafından kullanılan yönetilmeyen barındırma işlevleri açıklanmıştır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [.NET Framework 4 Barındırma Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)  
- .NET Framework 4'te tanıtılan işlevleri açıklanmaktadır.  
+ .NET Framework 4'te tanıtılan işlevleri açıklar.  
   
  [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
- .NET Framework 1.1 ve de kullanım dışı 2.0 sürümünde sunulan işlevleri açıklanmaktadır [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ .NET Framework 1.1 ve kullanım dışı olan 2.0 içinde tanıtılan işlevleri açıklar [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Barındırma Coclassları](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  

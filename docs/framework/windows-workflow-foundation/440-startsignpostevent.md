@@ -3,11 +3,11 @@ title: 440 - StartSignpostEvent1
 ms.date: 03/30/2017
 ms.assetid: 27b551b5-ae76-49f8-bab8-6300009eb4c1
 ms.openlocfilehash: 4b2b6b0fa9df4725edd4929512eb1d7534d933b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33511354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774179"
 ---
 # <a name="440---startsignpostevent1"></a>440 - StartSignpostEvent1
 ## <a name="properties"></a>Özellikler  
@@ -15,19 +15,19 @@ ms.locfileid: "33511354"
 |||  
 |-|-|  
 |Kimlik|440|  
-|Anahtar Sözcükler|Sorun giderme|  
+|anahtar sözcükler|Sorun giderme|  
 |Düzey|Bilgiler|  
 |Kanal|Microsoft Windows uygulama sunucusu-uygulamalar/analitik|  
   
 ## <a name="description"></a>Açıklama  
- Etkinlik izleme içinde bir ileti bir etkinlik sınırı göndermek veya almak aşma başlatıldığını gösterir.  
+ Etkinlik izleme, bir etkinlik sınır içinde gönderdiğiniz veya aldığınız kesen bir ileti başlatıldığını gösterir.  
   
 ## <a name="message"></a>İleti  
- Etkinlik sınırı.  
+ Hranice aktivity  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|ExtendedData|`xs:string`|Etkinlik adı.|  
+|ExtendedData|`xs:string`|Etkinliğin adı.|  
 |AppDomain|`xs:string`|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|

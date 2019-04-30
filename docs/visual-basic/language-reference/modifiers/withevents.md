@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
 ms.openlocfilehash: 75d118ee2bd4918c3a936cb341864ddc5315726b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778644"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
 Bir veya daha fazla bildirilmiş üye değişkenleri, olayları tetikleyebilen bir sınıf örneğine başvurduğunu belirtir.  
@@ -28,7 +28,7 @@ Bir veya daha fazla bildirilmiş üye değişkenleri, olayları tetikleyebilen b
   
 ## <a name="rules"></a>Kurallar  
   
--   **Öğe türleri.** Bildirmeniz gerekir `WithEvents` kabul edebilir, böylece nesne değişkenleri olmasını değişkenleri sınıfı örneği. Ancak, bunları olarak bildiremezsiniz `Object`. Bunları, olayları tetikleyebilen belirli sınıf olarak bildirilmelidir.  
+- **Öğe türleri.** Bildirmeniz gerekir `WithEvents` kabul edebilir, böylece nesne değişkenleri olmasını değişkenleri sınıfı örneği. Ancak, bunları olarak bildiremezsiniz `Object`. Bunları, olayları tetikleyebilen belirli sınıf olarak bildirilmelidir.  
   
  `WithEvents` Bu bağlamda değiştirici kullanılabilir: [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
 ms.openlocfilehash: e7c7dd72c733036031fcf28d0dd2c1bc023d6552
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781504"
 ---
 # <a name="collection-types-in-data-contracts"></a>Veri Sözleşmelerinde Koleksiyon Türleri
 A *koleksiyon* , belirli bir türdeki öğelerin listesidir. İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], böyle listeleri diziler veya çeşitli diğer türleri kullanarak temsil edilebilen (genel liste, genel <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, veya <xref:System.Collections.ArrayList>). Örneğin, bir koleksiyon için belirli bir müşteri adresleri listesi tutabilir. Bu koleksiyonlara adlı *liste koleksiyonları*kendi gerçek türü ne olursa olsun.  
@@ -83,9 +83,9 @@ A *koleksiyon* , belirli bir türdeki öğelerin listesidir. İçinde [!INCLUDE[
 ### <a name="collection-data-contract-naming"></a>Koleksiyon veri anlaşması adlandırma  
  Koleksiyon türleri adlandırma kuralları bölümünde anlatıldığı gibi normal veri anlaşması türleri adlandırma benzerdir [veri sözleşmesi adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md), ancak bazı önemli farklar vardır:  
   
--   <xref:System.Runtime.Serialization.CollectionDataContractAttribute> Öznitelik adı yerine özelleştirmek için kullanılan <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği. <xref:System.Runtime.Serialization.CollectionDataContractAttribute> Da özniteliğine sahip `Name` ve `Namespace` özellikleri.  
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute> Öznitelik adı yerine özelleştirmek için kullanılan <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği. <xref:System.Runtime.Serialization.CollectionDataContractAttribute> Da özniteliğine sahip `Name` ve `Namespace` özellikleri.  
   
--   Zaman <xref:System.Runtime.Serialization.CollectionDataContractAttribute> öznitelik uygulanmadı, adları ve ad alanları koleksiyon içinde yer alan türlerinin varsayılan adını ve koleksiyon türleri için ad alanı bağlıdır. Bunlar, koleksiyon türünün ad alanını ve ad etkilenmez. Örneğin, aşağıdaki türleri bakın.  
+- Zaman <xref:System.Runtime.Serialization.CollectionDataContractAttribute> öznitelik uygulanmadı, adları ve ad alanları koleksiyon içinde yer alan türlerinin varsayılan adını ve koleksiyon türleri için ad alanı bağlıdır. Bunlar, koleksiyon türünün ad alanını ve ad etkilenmez. Örneğin, aşağıdaki türleri bakın.  
   
     ```csharp  
     public CustomerList1 : Collection<string> {}  
@@ -123,7 +123,7 @@ A *koleksiyon* , belirli bir türdeki öğelerin listesidir. İçinde [!INCLUDE[
   
  Bu artık özelleştirilmemiş türleri XML gösterimi denk olduğuna dikkat edin.  
   
--   Kullanabileceğiniz `Name` ve `Namespace` daha da özellikleri özelleştirmek adlandırma. Aşağıdaki sınıf konusuna bakın.  
+- Kullanabileceğiniz `Name` ve `Namespace` daha da özellikleri özelleştirmek adlandırma. Aşağıdaki sınıf konusuna bakın.  
   
      [!code-csharp[c_collection_types_in_data_contracts#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#3)]
      [!code-vb[c_collection_types_in_data_contracts#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#3)]  
@@ -278,9 +278,9 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  Bir türü birden fazla liste koleksiyon arabirim uygularsa aşağıdaki kısıtlamalar uygulanır:  
   
--   Türü genel uyguluyorsa <xref:System.Collections.Generic.IEnumerable%601> (veya türetilmiş arabirimleri) türü birden çok kez farklı türleri için geçerli bir başvuru yapılan koleksiyon türü olarak kabul edilmez ve göz ardı edilir. Bazı uygulamalar geçersiz veya açık genel türler kullanmak olsa bile bu geçerlidir. Örneğin, genel uygulayan bir tür <xref:System.Collections.Generic.IEnumerable%601> , `int` ve genel <xref:System.Collections.Generic.IEnumerable%601> T hiçbir zaman başvurulan bir koleksiyonu olarak kullanılacak `int` veya türünde bağımsız olarak başka herhangi bir tür bir `Add` kabul yöntemi `int` veya `Add` T ya da her ikisi de, bir parametreyi kabul eden yöntemi yazın.  
+- Türü genel uyguluyorsa <xref:System.Collections.Generic.IEnumerable%601> (veya türetilmiş arabirimleri) türü birden çok kez farklı türleri için geçerli bir başvuru yapılan koleksiyon türü olarak kabul edilmez ve göz ardı edilir. Bazı uygulamalar geçersiz veya açık genel türler kullanmak olsa bile bu geçerlidir. Örneğin, genel uygulayan bir tür <xref:System.Collections.Generic.IEnumerable%601> , `int` ve genel <xref:System.Collections.Generic.IEnumerable%601> T hiçbir zaman başvurulan bir koleksiyonu olarak kullanılacak `int` veya türünde bağımsız olarak başka herhangi bir tür bir `Add` kabul yöntemi `int` veya `Add` T ya da her ikisi de, bir parametreyi kabul eden yöntemi yazın.  
   
--   Türü bir genel koleksiyon arabirimi uyguluyorsa yanı <xref:System.Collections.IList>, kapalı genel tür genel koleksiyon arabirim olmadığı sürece türü hiçbir zaman bir başvuru yapılan koleksiyon türü olarak kullanılan <xref:System.Object>.  
+- Türü bir genel koleksiyon arabirimi uyguluyorsa yanı <xref:System.Collections.IList>, kapalı genel tür genel koleksiyon arabirim olmadığı sürece türü hiçbir zaman bir başvuru yapılan koleksiyon türü olarak kullanılan <xref:System.Object>.  
   
  Aşağıdaki tabloda yalnızca durumlarda sözlük koleksiyonlar için desteklenir.  
   
@@ -303,21 +303,21 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ### <a name="serializing-collections"></a>Seri hale getirilmesi  
  Toplama kuralları için serileştirme listesi verilmiştir:  
   
--   Koleksiyon türleri (koleksiyonlar, koleksiyonların sahip) birleştirme izin verilir. Basit diziler koleksiyonların koleksiyon olarak kabul edilir. Çok boyutlu diziler desteklenmez.  
+- Koleksiyon türleri (koleksiyonlar, koleksiyonların sahip) birleştirme izin verilir. Basit diziler koleksiyonların koleksiyon olarak kabul edilir. Çok boyutlu diziler desteklenmez.  
   
--   Bayt dizileri ve diziler <xref:System.Xml.XmlNode> değil koleksiyonları temel olarak kabul edilir özel dizi türleri. Her bayt için ayrı bir öğe yerine Base64 kodlamalı veri öbeğinin içeren tek bir XML öğesi sonuçlarında bayt dizisi seri hale getiriliyor. Hakkında daha fazla bilgi için bir dizi <xref:System.Xml.XmlNode> olduğu kabul edilir, bkz: [XML ve ADO.NET türleri veri anlaşmalarında](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Elbette, bu özel türleri kendilerini koleksiyonlarında katılabilir: bir dizi içeren her veri Base64 ile kodlanmış bir Öbek ile birden çok XML öğeleri sonuçlarında bayt dizisi.  
+- Bayt dizileri ve diziler <xref:System.Xml.XmlNode> değil koleksiyonları temel olarak kabul edilir özel dizi türleri. Her bayt için ayrı bir öğe yerine Base64 kodlamalı veri öbeğinin içeren tek bir XML öğesi sonuçlarında bayt dizisi seri hale getiriliyor. Hakkında daha fazla bilgi için bir dizi <xref:System.Xml.XmlNode> olduğu kabul edilir, bkz: [XML ve ADO.NET türleri veri anlaşmalarında](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Elbette, bu özel türleri kendilerini koleksiyonlarında katılabilir: bir dizi içeren her veri Base64 ile kodlanmış bir Öbek ile birden çok XML öğeleri sonuçlarında bayt dizisi.  
   
--   Varsa <xref:System.Runtime.Serialization.DataContractAttribute> öznitelik, bir koleksiyon türüne uygulanır, türü bir koleksiyon olarak değil, normal veri anlaşması türü olarak kabul edilir.  
+- Varsa <xref:System.Runtime.Serialization.DataContractAttribute> öznitelik, bir koleksiyon türüne uygulanır, türü bir koleksiyon olarak değil, normal veri anlaşması türü olarak kabul edilir.  
   
--   Bir koleksiyon türü uyguluyorsa <xref:System.Xml.Serialization.IXmlSerializable> arabirimi, aşağıdaki kurallar geçerlidir, belirli bir türe `myType:IList<string>, IXmlSerializable`:  
+- Bir koleksiyon türü uyguluyorsa <xref:System.Xml.Serialization.IXmlSerializable> arabirimi, aşağıdaki kurallar geçerlidir, belirli bir türe `myType:IList<string>, IXmlSerializable`:  
   
-    -   Bildirilen tür ise `IList<string>`, türü bir liste olarak serileştirilmiş.  
+    - Bildirilen tür ise `IList<string>`, türü bir liste olarak serileştirilmiş.  
   
-    -   Bildirilen tür ise `myType`, olarak serileştirilmiş `IXmlSerializable`.  
+    - Bildirilen tür ise `myType`, olarak serileştirilmiş `IXmlSerializable`.  
   
-    -   Bildirilen tür ise `IXmlSerializable`, olarak serileştirilmiş `IXmlSerializable`, ancak yalnızca `myType` bilinen türleri listesi.  
+    - Bildirilen tür ise `IXmlSerializable`, olarak serileştirilmiş `IXmlSerializable`, ancak yalnızca `myType` bilinen türleri listesi.  
   
--   Koleksiyonlar, serileştirilen ve aşağıdaki tabloda gösterilen yöntemleri kullanılarak seri durumdan.  
+- Koleksiyonlar, serileştirilen ve aşağıdaki tabloda gösterilen yöntemleri kullanılarak seri durumdan.  
   
 |Koleksiyon türü uygular|Yöntemleri seri hale getirme üzerinde çağrılır|Yöntemleri seri durumundan çıkarma üzerinde çağrılır|  
 |--------------------------------|-----------------------------------------|-------------------------------------------|  
@@ -331,22 +331,22 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  Yukarıdaki tabloda azalan öncelik koleksiyon arabirimleri listeler. Bir tür hem de uygular, örneğin, yani <xref:System.Collections.IList> ve genel <xref:System.Collections.Generic.IEnumerable%601>, koleksiyon serileştirilmiş ve ayarına göre seri durumdan <xref:System.Collections.IList> kuralları:  
   
--   Seri durumundan çıkarma sırasında tüm koleksiyonlar ilk türünün bir örneği mevcut bir koleksiyon türü hem seri hale getirme ve seri durumundan çıkarma sırasında bir koleksiyon olarak değerlendirilecek seri hale getirici için varsayılan oluşturucu çağırarak oluşturarak seri.  
+- Seri durumundan çıkarma sırasında tüm koleksiyonlar ilk türünün bir örneği mevcut bir koleksiyon türü hem seri hale getirme ve seri durumundan çıkarma sırasında bir koleksiyon olarak değerlendirilecek seri hale getirici için varsayılan oluşturucu çağırarak oluşturarak seri.  
   
--   Aynı genel koleksiyon arabirimi birden çok kez uygulanması durumunda (örneğin, bir tür iki genel uyguluyorsa <xref:System.Collections.Generic.ICollection%601> , `Integer` ve genel <xref:System.Collections.Generic.ICollection%601> , <xref:System.String>) ve daha yüksek önceliğe arabirim bulundu, koleksiyonu Geçerli bir koleksiyon kabul değil.  
+- Aynı genel koleksiyon arabirimi birden çok kez uygulanması durumunda (örneğin, bir tür iki genel uyguluyorsa <xref:System.Collections.Generic.ICollection%601> , `Integer` ve genel <xref:System.Collections.Generic.ICollection%601> , <xref:System.String>) ve daha yüksek önceliğe arabirim bulundu, koleksiyonu Geçerli bir koleksiyon kabul değil.  
   
--   Koleksiyon türleri olabilir <xref:System.SerializableAttribute> özniteliği uygulanmış ve uygulayabilirsiniz <xref:System.Runtime.Serialization.ISerializable> arabirimi. Bunların her ikisi de göz ardı edilir. Ancak, türü tam koleksiyon türü gereksinimlerini karşılamıyor, (örneğin, `Add` yöntemi eksik), türü bir koleksiyon türü olarak kabul edilmez ve bu nedenle <xref:System.SerializableAttribute> özniteliği ve <xref:System.Runtime.Serialization.ISerializable> arabirimi belirlemek üzere kullanılır türü seri hale getirilebilir.  
+- Koleksiyon türleri olabilir <xref:System.SerializableAttribute> özniteliği uygulanmış ve uygulayabilirsiniz <xref:System.Runtime.Serialization.ISerializable> arabirimi. Bunların her ikisi de göz ardı edilir. Ancak, türü tam koleksiyon türü gereksinimlerini karşılamıyor, (örneğin, `Add` yöntemi eksik), türü bir koleksiyon türü olarak kabul edilmez ve bu nedenle <xref:System.SerializableAttribute> özniteliği ve <xref:System.Runtime.Serialization.ISerializable> arabirimi belirlemek üzere kullanılır türü seri hale getirilebilir.  
   
--   Uygulama <xref:System.Runtime.Serialization.CollectionDataContractAttribute> özniteliğini kaldırır özelleştirmek için bir koleksiyona <xref:System.SerializableAttribute> önceki geri dönüş mekanizması. Bunun yerine, özelleştirilmiş bir koleksiyon değil karşılayan koleksiyon gereksinimleri çalışamazsa mu bir <xref:System.Runtime.Serialization.InvalidDataContractException> özel durumu oluşturulur. Özel durum dizesi genellikle neden verilen tür geçerli bir koleksiyon olarak kabul edilmez açıklayan bilgiler içerir (hiçbir `Add` yöntemi, hiçbir varsayılan oluşturucu vb.), genellikle uygulamak yararlı olacak şekilde <xref:System.Runtime.Serialization.CollectionDataContractAttribute> hata ayıklama amacıyla özniteliği.  
+- Uygulama <xref:System.Runtime.Serialization.CollectionDataContractAttribute> özniteliğini kaldırır özelleştirmek için bir koleksiyona <xref:System.SerializableAttribute> önceki geri dönüş mekanizması. Bunun yerine, özelleştirilmiş bir koleksiyon değil karşılayan koleksiyon gereksinimleri çalışamazsa mu bir <xref:System.Runtime.Serialization.InvalidDataContractException> özel durumu oluşturulur. Özel durum dizesi genellikle neden verilen tür geçerli bir koleksiyon olarak kabul edilmez açıklayan bilgiler içerir (hiçbir `Add` yöntemi, hiçbir varsayılan oluşturucu vb.), genellikle uygulamak yararlı olacak şekilde <xref:System.Runtime.Serialization.CollectionDataContractAttribute> hata ayıklama amacıyla özniteliği.  
   
 ### <a name="collection-naming"></a>Koleksiyon adlandırma  
  Koleksiyon adlandırma kurallarının bir listesi verilmiştir:  
   
--   İlkel türler, içeren liste koleksiyon veri sözleşmeleri yanı sıra, tüm sözlük koleksiyon veri anlaşmaları için varsayılan ad alanı `http://schemas.microsoft.com/2003/10/Serialization/Arrays` Namespace kullanarak geçersiz kılınmadığı sürece. Yerleşik XSD türleri için eşleme türleri olarak `char`, `Timespan`, ve `Guid` türler, ilkel bu amaç için değerlendirilir.  
+- İlkel türler, içeren liste koleksiyon veri sözleşmeleri yanı sıra, tüm sözlük koleksiyon veri anlaşmaları için varsayılan ad alanı `http://schemas.microsoft.com/2003/10/Serialization/Arrays` Namespace kullanarak geçersiz kılınmadığı sürece. Yerleşik XSD türleri için eşleme türleri olarak `char`, `Timespan`, ve `Guid` türler, ilkel bu amaç için değerlendirilir.  
   
--   Basit olmayan türler, Namespace kullanılarak kılınmadığı sürece içeren koleksiyon türleri için varsayılan ad alanı koleksiyonda yer alan türü veri anlaşması ad ile aynıdır.  
+- Basit olmayan türler, Namespace kullanılarak kılınmadığı sürece içeren koleksiyon türleri için varsayılan ad alanı koleksiyonda yer alan türü veri anlaşması ad ile aynıdır.  
   
--   Varsayılan liste koleksiyon veri sözleşmeleri, adını kullanarak geçersiz kılınmadığı sürece koleksiyonda yer alan türü veri anlaşması adına sahip "ArrayOf" birleştirilmiş dizeyi adıdır. Örneğin, genel liste, tamsayılar için veri anlaşması adına "ArrayOfint" dir. Veri anlaşması adına akılda tutulması `Object` "anyType" olduğundan, genel olmayan listelerin veri anlaşması adına ister <xref:System.Collections.ArrayList> "ArrayOfanyType" olduğu.  
+- Varsayılan liste koleksiyon veri sözleşmeleri, adını kullanarak geçersiz kılınmadığı sürece koleksiyonda yer alan türü veri anlaşması adına sahip "ArrayOf" birleştirilmiş dizeyi adıdır. Örneğin, genel liste, tamsayılar için veri anlaşması adına "ArrayOfint" dir. Veri anlaşması adına akılda tutulması `Object` "anyType" olduğundan, genel olmayan listelerin veri anlaşması adına ister <xref:System.Collections.ArrayList> "ArrayOfanyType" olduğu.  
   
  Sözlük koleksiyon verisi için varsayılan adı sözleşmeler, kullanarak geçersiz kılınmadığı sürece `Name`, "ArrayOfKeyValueOf" birleştirilmiş değer türü veri anlaşması adından önce gelen anahtar türü veri anlaşması adına sahip bir dize. Örneğin, veri anlaşması adına bir sözlük genel dize ve tamsayı olan "ArrayOfKeyValueOfstringint". Ayrıca, bir anahtar veya değer türleri ilkel türler emin değilseniz, bir ad alanı karma anahtar ve değer türlerinin veri anlaşması ad alanı adına eklenir. Ad alanı karmaları hakkında daha fazla bilgi için bkz: [veri sözleşmesi adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
@@ -357,13 +357,13 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ## <a name="collection-customization"></a>Koleksiyon özelleştirme  
  Aşağıdaki kullanır <xref:System.Runtime.Serialization.CollectionDataContractAttribute> özniteliği yasaklanmış olduğuna ve sonucunda bir <xref:System.Runtime.Serialization.InvalidDataContractException> özel durum:  
   
--   Uygulama <xref:System.Runtime.Serialization.DataContractAttribute> bir türün özniteliği <xref:System.Runtime.Serialization.CollectionDataContractAttribute> özniteliği uygulandı, veya türetilmiş türlerini birine.  
+- Uygulama <xref:System.Runtime.Serialization.DataContractAttribute> bir türün özniteliği <xref:System.Runtime.Serialization.CollectionDataContractAttribute> özniteliği uygulandı, veya türetilmiş türlerini birine.  
   
--   Uygulama <xref:System.Runtime.Serialization.CollectionDataContractAttribute> uygulayan bir tür özniteliği <xref:System.Xml.Serialization.IXmlSerializable> arabirimi.  
+- Uygulama <xref:System.Runtime.Serialization.CollectionDataContractAttribute> uygulayan bir tür özniteliği <xref:System.Xml.Serialization.IXmlSerializable> arabirimi.  
   
--   Uygulama <xref:System.Runtime.Serialization.CollectionDataContractAttribute> özniteliği için bir koleksiyon olmayan tür.  
+- Uygulama <xref:System.Runtime.Serialization.CollectionDataContractAttribute> özniteliği için bir koleksiyon olmayan tür.  
   
--   Ayarlama girişimi <xref:System.Runtime.Serialization.CollectionDataContractAttribute.KeyName%2A> veya <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ValueName%2A> üzerinde bir <xref:System.Runtime.Serialization.CollectionDataContractAttribute> özniteliği bir sözlük olmayan türe uygulandı.  
+- Ayarlama girişimi <xref:System.Runtime.Serialization.CollectionDataContractAttribute.KeyName%2A> veya <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ValueName%2A> üzerinde bir <xref:System.Runtime.Serialization.CollectionDataContractAttribute> özniteliği bir sözlük olmayan türe uygulandı.  
   
 ### <a name="polymorphism-rules"></a>Çok biçimlilik kuralları  
  Daha önceden belirtildiği, koleksiyonları kullanarak özelleştirme <xref:System.Runtime.Serialization.CollectionDataContractAttribute> özniteliği ile koleksiyon interchangeability engelleyebilir. İki özelleştirilmiş koleksiyon türleri yalnızca kendi adı, ad alanı, öğe adı, aynı zamanda anahtar ve değer adlarını (bunların sözlük koleksiyon olması halinde) eşleşiyorsa eşdeğer kabul edilebilir.  

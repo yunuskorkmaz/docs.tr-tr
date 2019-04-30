@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: WCF Web HTTP Programlama Modeli Kullanarak Rastgele Ve
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
 ms.openlocfilehash: 55fdc6824ab82bdf3b5913cd600815ed05bd909c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747855"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Nasıl yapılır: WCF Web HTTP Programlama Modeli Kullanarak Rastgele Veriler Döndüren Bir Hizmet Oluşturma
 Bazen geliştiriciler, veri hizmeti işleminden döndürülen nasıl tam denetimi olmalıdır. Bir hizmet işlemi WCF tarafından desteklenmeyen bir biçimde veri döndürmelidir olduğunda bu durum geçerlidir. Bu konuda, böyle bir hizmet oluşturmak için WCF WEB HTTP programlama modeli kullanarak anlatılmaktadır. Bu hizmet, bir akış döndüren tek bir işlem içerir.  
@@ -173,7 +173,7 @@ namespace RawImageService
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   Örnek kod başvurusu System.ServiceModel.dll ve System.ServiceModel.Web.dll derlenirken.  
+- Örnek kod başvurusu System.ServiceModel.dll ve System.ServiceModel.Web.dll derlenirken.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

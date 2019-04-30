@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
 ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776265"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Nasıl yapılır: Sorunlu Yazdırma İşini Tanımlama
 Ağ yöneticileri genellikle şikayetlerinin değil veya yavaş yazdırma, yazdırma işlerini ilgili olarak kullanıcılardan alan. Zengin, kullanıma sunulan yazdırma işi Özellikler [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] hızlı bir uzaktan tanılama yazdırma işi gerçekleştirmek için Microsoft .NET Framework'ü bir yol sağlar.  
@@ -25,13 +25,13 @@ Ağ yöneticileri genellikle şikayetlerinin değil veya yavaş yazdırma, yazd�
   
 1. Kullanıcı hakkında şikayetçi yazdırma işi tanımlayın. Kullanıcılar genellikle tam olarak bunu yapamaz. Yazıcı ve yazdırma sunucularının adlarını bilemeyebilirsiniz. Ayarında kullanılandan farklı bir terminoloji yazıcıya konumunu açıklayabilir kendi <xref:System.Printing.PrintQueue.Location%2A> özelliği. Buna göre bu kullanıcının listesi şu anda oluşturmak iyi bir fikir gönderilen olur. Varsa birden fazla kullanıcı ve yazdırma sistemi yönetici arasındaki iletişimi sorunları ortaya çıktığında iş saptamak için kullanılabilir. Alt adımlar aşağıdaki gibidir.  
   
-    1.  Tüm yazdırma sunucularının bir listesini alın.  
+    1. Tüm yazdırma sunucularının bir listesini alın.  
   
-    2.  Kendi yazdırma sorgulamak için sunucular üzerinden döngü.  
+    2. Kendi yazdırma sorgulamak için sunucular üzerinden döngü.  
   
-    3.  Sunucu döngüsünün her geçişinde işlerini sorgulamak için sunucunun tüm kuyruklar üzerinden döngü  
+    3. Sunucu döngüsünün her geçişinde işlerini sorgulamak için sunucunun tüm kuyruklar üzerinden döngü  
   
-    4.  Kuyruk döngünün her geçişinde döngü, işlerini ve şikayetçi kullanıcı tarafından gönderilen bu hakkında tanımlayıcı bilgileri toplayın.  
+    4. Kuyruk döngünün her geçişinde döngü, işlerini ve şikayetçi kullanıcı tarafından gönderilen bu hakkında tanımlayıcı bilgileri toplayın.  
   
 2. Sorunlu yazdırma işini tanımlandığı zaman hangi sorunu olabileceğini görmek için ilgili özelliklerini inceleyin. Örneğin, bir hata durumunda iş veya yazıcı sırası işi yazdırmadan önce çevrimdışı hizmet verme muydunuz?  
   
@@ -49,9 +49,9 @@ Ağ yöneticileri genellikle şikayetlerinin değil veya yavaş yazdırma, yazd�
   
  Bu noktada uygulama, karşılık gelen bir yazdırma işin durumunu denetleme için iki yol bir dallandırma yapısını içerir:  
   
--   Bayraklarını edinebilirsiniz <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> tür özelliği <xref:System.Printing.PrintJobStatus>.  
+- Bayraklarını edinebilirsiniz <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> tür özelliği <xref:System.Printing.PrintJobStatus>.  
   
--   Her bir ilgili özellik gibi edinebilirsiniz <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> ve <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>.  
+- Her bir ilgili özellik gibi edinebilirsiniz <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> ve <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>.  
   
  Bu örnekte, her iki yöntem gösterir, böylece kullanıcı daha önce hangi metodu kullanmak için istenir ve bayraklarını kullanmak istiyordu, "Y" ile yanıt verdi <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> özelliği. İki yöntemden biriyle ayrıntıları için aşağıya bakın. Son olarak, uygulama adında bir yöntem kullanır **ReportQueueAndJobAvailability** iş günün bu saatinde yazdırılabilir olup olmadığını bildirmek için. Bu yöntem içinde ele alınmıştır [keşfedin olup olmadığını bir yazdırma işi yapabilirsiniz olması yazdırılan sırasında bu günün saati](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md).  
   

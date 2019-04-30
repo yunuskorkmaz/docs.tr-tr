@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2db47f90e73922858013885e99e953ddcacbd450
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763522"
 ---
 # <a name="iclrtaskrudeabort-method"></a>ICLRTask::RudeAbort Yöntemi
 Ortak dil çalışma zamanı (CLR) geçerli tarafından temsil edilen bir görev iptal etmek için bildirir [Iclrtask arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) koşulsuz olarak ve hemen örneği.  

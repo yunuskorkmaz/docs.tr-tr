@@ -9,11 +9,11 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762403"
 ---
 # <a name="fromtoby-animations-overview"></a>Gelen/İçin/Göre Animasyonlarına Genel Bakış
 Bu konuda, gelen/için/göre animasyonlarına bağımlılık özelliklerine animasyon uygulamak için kullanmayı açıklar. From/To/By animasyonu iki değer arasındaki bir geçiş oluşturur.  
@@ -65,15 +65,15 @@ Bu konuda, gelen/için/göre animasyonlarına bağımlılık özelliklerine anim
 ## <a name="target-values"></a>Hedef değerleri  
  From/To/By animasyonu iki hedef değer arasında bir geçiş oluşturur. Başlangıç değerini belirtmek yaygındır (kullanarak ayarlamak <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliği) ve bitiş değeri (kullanarak ayarlamak <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliği). Ancak, yalnızca bir başlangıç değeri, bir hedef değer veya bir uzaklık değeri de belirtebilirsiniz. Bu gibi durumlarda animasyon eksik hedef değer animasyon uygulanan özelliğinden alır. Aşağıdaki listede, animasyon hedef değerleri belirlemek için farklı yollar açıklanmaktadır.  
   
--   **Başlangıç değeri**  
+- **Başlangıç değeri**  
   
      Kullanım <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliği açıkça bir animasyon başlangıç değerine belirtmek istediğinizde. Kullanabileceğiniz <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliğini tek başına veya birlikte <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> veya <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliği. Yalnızca belirtirseniz <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özellik, animasyon geçişler bu değeri temel değerine özelliğin.  
   
--   **Bitiş değeri**  
+- **Bitiş değeri**  
   
      Animasyonun bitiş değeri belirtmek için kullanın, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliği. Kullanırsanız <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliği kendisi tarafından animasyon alır başlangıç değerine animasyon uygulanan bir özellik veya aynı özelliğe uygulanan başka bir animasyon çıktısı. Kullanabileceğiniz <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliği ile birlikte <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> başlangıç ve bitiş değerlerinin animasyon için açıkça belirtmek için özellik.  
   
--   **Uzaklık değeri**  
+- **Uzaklık değeri**  
   
      <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> Özelliği, bir açık başlangıç veya bitiş değeri animasyonun yerine bir uzaklık belirtmenizi sağlar. <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> Animasyonun özellik belirtir tarafından ne kadar animasyon süresi boyunca bir değer değiştirir. Kullanabileceğiniz <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliğini tek başına veya birlikte <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliği. Yalnızca belirtirseniz <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özellik, animasyon özelliği için taban değerini veya başka bir animasyon çıktısı için uzaklık değeri ekler.  
   
@@ -134,9 +134,9 @@ Bu konuda, gelen/için/göre animasyonlarına bağımlılık özelliklerine anim
 ## <a name="other-animation-types"></a>Diğer animasyon türü  
  Gelen/için/göre animasyonlarına animasyon türü değildir, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sağlar: anahtar-çerçeve animasyonlara ve yol animasyonları da sağlar.  
   
--   Anahtar çerçeve animasyon hedef değerleri, açıklanan anahtar çerçeveler kullanarak herhangi bir sayıda canlandırır. Daha fazla bilgi için [anahtar-çerçeve animasyonlara genel bakış](key-frame-animations-overview.md).  
+- Anahtar çerçeve animasyon hedef değerleri, açıklanan anahtar çerçeveler kullanarak herhangi bir sayıda canlandırır. Daha fazla bilgi için [anahtar-çerçeve animasyonlara genel bakış](key-frame-animations-overview.md).  
   
--   Yol animasyonu çıkış değerlerini oluşturur bir <xref:System.Windows.Media.PathGeometry>. Daha fazla bilgi için [yol animasyonlarına genel bakış](path-animations-overview.md).  
+- Yol animasyonu çıkış değerlerini oluşturur bir <xref:System.Windows.Media.PathGeometry>. Daha fazla bilgi için [yol animasyonlarına genel bakış](path-animations-overview.md).  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ayrıca, kendi özel animasyon türleri oluşturmanıza olanak sağlar. Daha fazla bilgi için [özel animasyonlara genel bakış](custom-animations-overview.md).  
   

@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
 ms.openlocfilehash: 28f78161e14604c1f59872801855ccc918faec58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772495"
 ---
 # <a name="ordinal-is-not-valid"></a>Sıra sayısı geçerli değil
 Çağrınız bir dinamik bağlantı kitaplığı (DLL) belirtilen bir sayıyı bir yordam adı yerine kullanılacak kullanarak `#num` söz dizimi. Bu hata, aşağıdaki olası nedenleri vardır:  
   
--   Dönüştürülecek girişiminde `#num` başarısız bir sıra ifadesi.  
+- Dönüştürülecek girişiminde `#num` başarısız bir sıra ifadesi.  
   
--   `#num` Belirtilen herhangi bir işlev DLL'de belirtmiyor.  
+- `#num` Belirtilen herhangi bir işlev DLL'de belirtmiyor.  
   
--   Bir tür kitaplığı içinde geçersiz bir sıra numarası, iç kullanımından kaynaklanan geçersiz bir bildirim var.  
+- Bir tür kitaplığı içinde geçersiz bir sıra numarası, iç kullanımından kaynaklanan geçersiz bir bildirim var.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   

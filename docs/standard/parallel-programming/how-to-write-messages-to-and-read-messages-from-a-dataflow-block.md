@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Veri akışı bloğundan iletiler ve iletilerini okuma yazma'
+title: 'Nasıl yapılır: Veri Akışı Bloğuna İletiler Yazma ve Veri Akışı Bloğundan İletiler Okuma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,13 +12,13 @@ ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 638cd917bdb40fa5bbf1cb02857c71a0127d0e3f
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769178"
 ---
-# <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Nasıl yapılır: Veri akışı bloğundan iletiler ve iletilerini okuma yazma
+# <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Nasıl yapılır: Veri Akışı Bloğuna İletiler Yazma ve Veri Akışı Bloğundan İletiler Okuma
 Bu belge, TPL veri akışı kitaplığı nasıl yazılacağını ve veri akışı bloğundan iletiler okuma için kullanmayı açıklar. TPL veri akışı kitaplığı, ileti ve veri akışı bloğu okuma iletileri yazmak için zaman uyumlu ve zaman uyumsuz yöntemler sağlar. Bu belgeyi kullanan <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType> sınıfı. <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> Sınıfı iletileri arabelleğe alır ve her iki ileti kaynağı olarak ve bir ileti hedefi olarak davranır.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -60,7 +60,7 @@ Bu belge, TPL veri akışı kitaplığı nasıl yazılacağını ve veri akış�
   
  Visual Basic  
   
- **Vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.vb**  
+ **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.vb**  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Bu örnek, bir ileti bloğu doğrudan yazma ve okuma gösterilmektedir. Veri akışı bloklarının forma bağlanabilir *işlem hatları*, veri akışı bloklarının doğrusal dizeleri veya *ağları*, veri akışı bloklarının grafikleri. Bir ardışık düzen veya ağda, kaynaklar, veriler kullanılabilir oldukça zaman uyumsuz olarak hedeflere yayarlar. Temel veri akışı işlem hattı oluşturur bir örnek için bkz: [izlenecek yol: Veri akışı işlem hattı oluşturmaya](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md). Daha karmaşık bir veri akışı ağı oluşturan bir örnek için bkz [izlenecek yol: Veri akışı kullanarak bir Windows Forms uygulamalarındaki](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  

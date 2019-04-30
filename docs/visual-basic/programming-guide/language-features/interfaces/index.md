@@ -8,24 +8,24 @@ helpviewer_keywords:
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
 ms.openlocfilehash: 5f85eca1026d05d8dc3d862559ee48440edf2c4b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775940"
 ---
 # <a name="interfaces-visual-basic"></a>Arabirimler (Visual Basic)
 *Arabirimleri* özellikleri, yöntemleri ve sınıfları uygulayan olayları tanımlayın. Arabirim Özellikleri yakından ilgili özellikleri, yöntemleri ve olayları küçük gruplar olarak tanımlamanızı sağlar; Varolan kodu tehlikeye atmadan, arabirimler için geliştirilmiş uygulamalar geliştirebilirsiniz çünkü bu uyumluluk sorunları azaltır. Ek arabirimleri ve uygulamalar geliştirerek, herhangi bir zamanda yeni özellikler ekleyebilirsiniz.  
   
  Neden arabirimleri sınıf devralma yerine kullanmak isteyebileceğiniz birkaç neden vardır:  
   
--   Arabirimleri daha iyi, uygulamalarınızın birçok nesne türlerini belirli işlevleri sağlamak için büyük olasılıkla ilgisi olmayan gereken durumlar için uygundur.  
+- Arabirimleri daha iyi, uygulamalarınızın birçok nesne türlerini belirli işlevleri sağlamak için büyük olasılıkla ilgisi olmayan gereken durumlar için uygundur.  
   
--   Arabirimleri temel sınıfları daha esnek olduğu birden fazla arabirim uygulayabilir tek bir uygulamasını tanımlayabilirsiniz.  
+- Arabirimleri temel sınıfları daha esnek olduğu birden fazla arabirim uygulayabilir tek bir uygulamasını tanımlayabilirsiniz.  
   
--   Arabirimleri, uygulama temel sınıfından devralmak erişiminiz yok gibi durumlarda faydalıdır.  
+- Arabirimleri, uygulama temel sınıfından devralmak erişiminiz yok gibi durumlarda faydalıdır.  
   
--   Sınıf devralma kullanamadığınızda arabirimleri yararlı olur. Örneğin, yapılar sınıfı devralamaz ancak arabirimleri uygulayabilir.  
+- Sınıf devralma kullanamadığınızda arabirimleri yararlı olur. Örneğin, yapılar sınıfı devralamaz ancak arabirimleri uygulayabilir.  
   
 ## <a name="declaring-interfaces"></a>Arabirimleri bildirme  
  Arabirim tanımları içinde içine `Interface` ve `End Interface` deyimleri. Aşağıdaki `Interface` deyimi, isteğe bağlı ekleyebilirsiniz `Inherits` listeleyen bir veya daha fazla devralınan arabirimi deyimi. `Inherits` Deyimleri bildiriminde açıklamaları dışındaki diğer tüm ifadeler gelmelidir. Arabirim tanımı kalan ifadeler olmalıdır `Event`, `Sub`, `Function`, `Property`, `Interface`, `Class`, `Structure`, ve `Enum` deyimleri. Arabirimleri, herhangi bir uygulama kodu veya uygulama kodu ile ilişkilendirilmiş ifadeler içeremez `End Sub` veya `End Property`.  

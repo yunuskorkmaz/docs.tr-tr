@@ -3,11 +3,11 @@ title: Hesaplama İfadeleri
 description: Yazma hesaplamalar için uygun söz dizimini oluşturmayı F# olması sıralı ve birleşik kullanarak denetleyebilir, akışı yapılarını ve bağlamalar.
 ms.date: 03/15/2019
 ms.openlocfilehash: 3c2abb5c6204309fc8d5215a53ce8af46c01d218
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766070"
 ---
 # <a name="computation-expressions"></a>Hesaplama İfadeleri
 

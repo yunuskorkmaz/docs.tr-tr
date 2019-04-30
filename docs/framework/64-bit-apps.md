@@ -9,11 +9,11 @@ ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fc90bedeee2d04c28a3860713ca5952a4564d3bd
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675640"
 ---
 # <a name="64-bit-applications"></a>64 bitlik Uygulamalar
 Bir uygulamayı derlediğinizde, 64 bitlik bir Windows işletim sisteminde yerel uygulama olarak ya da WOW64 (Windows 64-bit üzerinde Windows-32-bit) altında çalışmasını belirtebilirsiniz. WOW64, 32 bitlik bir uygulamanın 64 bitlik bir sistemde çalışmasını sağlayan bir uyumluluk ortamıdır. WOW64, Windows işletim sisteminin tüm 64 bitlik sürümlerinde bulunur.  
@@ -30,26 +30,26 @@ Bir uygulamayı derlediğinizde, 64 bitlik bir Windows işletim sisteminde yerel
   
  Çoğu derleme, 32 bitlik CLR ve 64 bitlik CLR'de aynı şekilde çalışır. Ancak bazı programlar, eğer aşağıdakilerden bir veya daha fazlasını içeriyorlarsa CLR'ye bağlı olarak farklı şekilde davranabilir:  
   
--   Platforma göre boyutunu değiştiren üyeler içeren yapılar (örneğin, herhangi bir işaretçi türü).  
+- Platforma göre boyutunu değiştiren üyeler içeren yapılar (örneğin, herhangi bir işaretçi türü).  
   
--   Sabit boyutlar içeren işaretçi aritmetiği.  
+- Sabit boyutlar içeren işaretçi aritmetiği.  
   
--   Tanıtıcılar için `Int32` yerine `IntPtr` kullanan yanlış platform çağrıları veya COM bildirimleri.  
+- Tanıtıcılar için `Int32` yerine `IntPtr` kullanan yanlış platform çağrıları veya COM bildirimleri.  
   
--   `IntPtr` öğesini `Int32`'e yayınlayan kod.  
+- `IntPtr` öğesini `Int32`'e yayınlayan kod.  
   
  64 bit CLR'de çalıştırmak için bir 32 bit uygulama bağlantı noktası hakkında daha fazla bilgi için bkz. [geçirme 32 bitlik yönetilen kodu 64-bit](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973190(v=msdn.10)).  
   
 ## <a name="general-64-bit-programming-information"></a>Genel 64-Bit Programlama Bilgileri  
  64 bit programlama hakkında genel bilgi için, aşağıdaki belgelere bakın:  
   
--   Bir 64 bit Windows bilgisayarda CLR'nin 64 bitlik sürümü hakkında daha fazla bilgi için bkz. [.NET Framework Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=37079) MSDN Web sitesinde.  
+- Bir 64 bit Windows bilgisayarda CLR'nin 64 bitlik sürümü hakkında daha fazla bilgi için bkz. [.NET Framework Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=37079) MSDN Web sitesinde.  
   
--   İçinde [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] belgelerine bakın [64 bit Windows için Programlama Kılavuzu](https://go.microsoft.com/fwlink/p/?LinkId=253512).  
+- İçinde [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] belgelerine bakın [64 bit Windows için Programlama Kılavuzu](https://go.microsoft.com/fwlink/p/?LinkId=253512).  
   
--   CLR'nin 64-bit sürümü indirme hakkında daha fazla bilgi için bkz: [.NET Framework Geliştirici Merkezi indirmeleri](https://go.microsoft.com/fwlink/?LinkId=50953) MSDN Web sitesinde.  
+- CLR'nin 64-bit sürümü indirme hakkında daha fazla bilgi için bkz: [.NET Framework Geliştirici Merkezi indirmeleri](https://go.microsoft.com/fwlink/?LinkId=50953) MSDN Web sitesinde.  
   
--   64-bit uygulamalar oluşturmak için Visual Studio desteği hakkında daha fazla bilgi için bkz. [Visual Studio IDE 64 Bit desteği](/visualstudio/ide/visual-studio-ide-64-bit-support).  
+- 64-bit uygulamalar oluşturmak için Visual Studio desteği hakkında daha fazla bilgi için bkz. [Visual Studio IDE 64 Bit desteği](/visualstudio/ide/visual-studio-ide-64-bit-support).  
   
 ## <a name="compiler-support-for-creating-64-bit-applications"></a>64-Bit Uygulamalar Oluşturmak için Derleme Desteği  
  Varsayılan olarak, 32 bitlik veya 64 bitlik bir bilgisayarda uygulama oluşturmak için .NET Framework'ü kullandığınızda, uygulama 64 bitlik bir bilgisayarda yerel uygulama olarak (yani WOW64 altında olmadan) çalışır. Aşağıdaki tablo, yerel olarak, WOW64 altında veya her iki şekilde de çalışacak olan 64 bitlik uygulamalar oluşturmak için Visual Studio'nun nasıl kullanıldığını açıklayan belgeleri listeler.  

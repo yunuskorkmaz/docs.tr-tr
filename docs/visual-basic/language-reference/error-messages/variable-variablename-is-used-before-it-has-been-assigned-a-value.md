@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
 ms.openlocfilehash: 46551a917aeb794c8d35985076b67a315386f628
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766733"
 ---
 # <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>Değişken '\<variablename >' bir değer atanmadan önce kullanıldı
 Değişken '\<variablename >' bir değer atanmadan önce kullanılır. Çalışma zamanında null başvurusu özel durumu neden olabilir.  
@@ -27,9 +27,9 @@ Değişken '\<variablename >' bir değer atanmadan önce kullanılır. Çalışm
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Denetim akışı mantığınızı denetleyin ve denetim okuduğu herhangi bir deyimle geçirmeden önce değişkeni geçerli bir değere sahip olduğundan emin olun.  
+- Denetim akışı mantığınızı denetleyin ve denetim okuduğu herhangi bir deyimle geçirmeden önce değişkeni geçerli bir değere sahip olduğundan emin olun.  
   
--   Değişken geçerli bir değer her zaman sahip olacağı garanti edilir bir bildiriminin bir parçası olarak başlatmak için yoludur. "Başlatma" konusuna bakın [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md).  
+- Değişken geçerli bir değer her zaman sahip olacağı garanti edilir bir bildiriminin bir parçası olarak başlatmak için yoludur. "Başlatma" konusuna bakın [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

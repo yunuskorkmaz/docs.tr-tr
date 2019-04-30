@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
 ms.openlocfilehash: 370970c80221e371db5a97303ef2650d14300b14
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770571"
 ---
 # <a name="popup-overview"></a>Açılır Pencereye Genel Bakış
 <xref:System.Windows.Controls.Primitives.Popup> Denetimi geçerli uygulama penceresi göre belirlenen bir öğe veya Ekran koordinatı üzerinde gezinen ayrı bir pencerede içeriği görüntülemek için bir yol sağlar. Bu konu tanıtır <xref:System.Windows.Controls.Primitives.Popup> denetlemek ve kullanımı hakkında bilgi sağlar.  
@@ -34,13 +34,13 @@ ms.locfileid: "59102784"
 ## <a name="controls-that-implement-a-popup"></a>Açılan pencere uygulama denetimleri  
  Oluşturabileceğinizi <xref:System.Windows.Controls.Primitives.Popup> diğer denetimlere denetimleri. Aşağıdaki denetimler uygulamak <xref:System.Windows.Controls.Primitives.Popup> denetimi belirli kullanımlar için:  
   
--   <xref:System.Windows.Controls.ToolTip>. Bir öğe için bir araç ipucu oluşturmak istediğiniz kullanırsanız <xref:System.Windows.Controls.ToolTip> ve <xref:System.Windows.Controls.ToolTipService> sınıfları. Daha fazla bilgi için [ToolTip genel bakışı](tooltip-overview.md).  
+- <xref:System.Windows.Controls.ToolTip>. Bir öğe için bir araç ipucu oluşturmak istediğiniz kullanırsanız <xref:System.Windows.Controls.ToolTip> ve <xref:System.Windows.Controls.ToolTipService> sınıfları. Daha fazla bilgi için [ToolTip genel bakışı](tooltip-overview.md).  
   
--   <xref:System.Windows.Controls.ContextMenu>. Bir öğe için bir bağlam menüsü oluşturmak istediğiniz kullanırsanız <xref:System.Windows.Controls.ContextMenu> denetimi. Daha fazla bilgi için [ContextMenu genel bakış](contextmenu-overview.md).  
+- <xref:System.Windows.Controls.ContextMenu>. Bir öğe için bir bağlam menüsü oluşturmak istediğiniz kullanırsanız <xref:System.Windows.Controls.ContextMenu> denetimi. Daha fazla bilgi için [ContextMenu genel bakış](contextmenu-overview.md).  
   
--   <xref:System.Windows.Controls.ComboBox>. Gösterilen veya gizlenen, kullanım olabilir bir açılan liste kutusu olan bir seçim denetim oluşturmak istiyorsanız <xref:System.Windows.Controls.ComboBox> denetimi.  
+- <xref:System.Windows.Controls.ComboBox>. Gösterilen veya gizlenen, kullanım olabilir bir açılan liste kutusu olan bir seçim denetim oluşturmak istiyorsanız <xref:System.Windows.Controls.ComboBox> denetimi.  
   
--   <xref:System.Windows.Controls.Expander>. İçerik görüntüleyen daraltılabilir bir alana sahip bir üstbilgi görüntüleyen bir denetimi oluşturmak istiyorsanız, kullanın <xref:System.Windows.Controls.Expander> denetimi. Daha fazla bilgi için [genişleticiye genel bakış](expander-overview.md).  
+- <xref:System.Windows.Controls.Expander>. İçerik görüntüleyen daraltılabilir bir alana sahip bir üstbilgi görüntüleyen bir denetimi oluşturmak istiyorsanız, kullanın <xref:System.Windows.Controls.Expander> denetimi. Daha fazla bilgi için [genişleticiye genel bakış](expander-overview.md).  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>Açılan pencere davranışı ve görünümü  

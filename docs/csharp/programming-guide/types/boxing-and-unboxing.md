@@ -11,11 +11,11 @@ helpviewer_keywords:
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
 ms.openlocfilehash: da4aabbd0529ee239dacd2dff7c7825d41110b44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61709669"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Kutulama ve Kutudan Çıkarma (C# Programlama Kılavuzu)
 Kutulama dönüştürme işlemi olan bir [değer türü](../../../csharp/language-reference/keywords/value-types.md) türüne `object` ya da bu değer türü tarafından uygulanan herhangi bir arabirim türüne. CLR bir değer türünü kutu, değeri içinde bir System.Object nesnesiyle sarar ve Yönetilen öbekte depolar. Kutudan çıkarma, değer türünü nesneden çıkarır. Örtük kutulama; kutudan çıkarma açıktır. Kutulama ve kutudan çıkarma kavramı, C# birleştirilmiş görünümünü herhangi bir türde bir değer bir nesne işlenebilir tür sistemi vurgular.  
@@ -63,9 +63,9 @@ Kutulama dönüştürme işlemi olan bir [değer türü](../../../csharp/languag
 ## <a name="unboxing"></a>Kutudan çıkarma  
  Kutudan çıkarma bir dönüştürmedir türünden `object` için bir [değer türü](../../../csharp/language-reference/keywords/value-types.md) veya bir arabirim türünden arabirimi uygulayan bir değer türü. Bir kutudan çıkarma işlemi şunlardan oluşur:  
   
--   Verilen değer türünün kutulanmış bir değer olduğundan emin olmak için nesne örneğini denetleme.  
+- Verilen değer türünün kutulanmış bir değer olduğundan emin olmak için nesne örneğini denetleme.  
   
--   Değerin örnekten değer türü değişkenine kopyalanması.  
+- Değerin örnekten değer türü değişkenine kopyalanması.  
   
  Aşağıdaki deyimleri, kutulama ve kutudan çıkarma işlemlerini göstermektedir:  
   
@@ -108,9 +108,9 @@ int j = (int) o;
 ## <a name="related-sections"></a>İlgili Bölümler  
  Daha fazla bilgi için:  
   
--   [Başvuru Türleri](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Başvuru Türleri](../../../csharp/language-reference/keywords/reference-types.md)  
   
--   [Değer Türleri](../../../csharp/language-reference/keywords/value-types.md)  
+- [Değer Türleri](../../../csharp/language-reference/keywords/value-types.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

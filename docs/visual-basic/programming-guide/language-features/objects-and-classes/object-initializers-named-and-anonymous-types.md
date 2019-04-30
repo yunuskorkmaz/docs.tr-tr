@@ -11,11 +11,11 @@ helpviewer_keywords:
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
 ms.openlocfilehash: 6602a68555e37bf793ba41076ba8f484b4a0dbc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760759"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Nesne Başlatıcıları: Adlandırılmış ve anonim türler (Visual Basic)
 Nesne başlatıcıları, tek bir ifade kullanarak karmaşık bir nesnenin özelliklerini belirtmek etkinleştirin. Örnekleri adlandırılmış türler ve anonim türler oluşturmak için kullanılabilir.  
@@ -63,11 +63,11 @@ Nesne başlatıcıları, tek bir ifade kullanarak karmaşık bir nesnenin özell
   
 ### <a name="remarks-about-named-types"></a>Adlandırılmış türler hakkında açıklamalar  
   
--   Sınıf üyesi nesne Başlatıcı listesinde birden fazla kez başlatılamaz. Bildirimi `cust7` bir hataya neden olur.  
+- Sınıf üyesi nesne Başlatıcı listesinde birden fazla kez başlatılamaz. Bildirimi `cust7` bir hataya neden olur.  
   
      [!code-vb[VbVbalrObjectInit#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#9)]  
   
--   Üye, kendisiyle veya başka bir alanı başlatmak için kullanılabilir. Bunu, aşağıdaki bildirimi için olduğu gibi başlatılmadan önce üye erişiliyorsa `cust8`, varsayılan değer kullanılır. Nesne Başlatıcı kullanan bir bildirim işlendiğinde gerçekleşen ilk şey uygun Oluşturucu çağrılır olduğunu unutmayın. Bundan sonra tek tek alanları Başlatıcı listesinde başlatılır. Aşağıdaki örneklerde, varsayılan değer için `Name` atanmış `cust8`, başlatılmış bir değer atanır `cust9`.  
+- Üye, kendisiyle veya başka bir alanı başlatmak için kullanılabilir. Bunu, aşağıdaki bildirimi için olduğu gibi başlatılmadan önce üye erişiliyorsa `cust8`, varsayılan değer kullanılır. Nesne Başlatıcı kullanan bir bildirim işlendiğinde gerçekleşen ilk şey uygun Oluşturucu çağrılır olduğunu unutmayın. Bundan sonra tek tek alanları Başlatıcı listesinde başlatılır. Aşağıdaki örneklerde, varsayılan değer için `Name` atanmış `cust8`, başlatılmış bir değer atanır `cust9`.  
   
      [!code-vb[VbVbalrObjectInit#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#10)]  
   
@@ -75,17 +75,17 @@ Nesne başlatıcıları, tek bir ifade kullanarak karmaşık bir nesnenin özell
   
      [!code-vb[VbVbalrObjectInit#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#11)]  
   
--   Nesne başlatıcıları yuvalanabilir. Aşağıdaki örnekte, `AddressClass` iki özelliklere sahip bir sınıf olan `City` ve `State`ve `Customer` sınıfında bir `Address` örneğidir özelliği `AddressClass`.  
+- Nesne başlatıcıları yuvalanabilir. Aşağıdaki örnekte, `AddressClass` iki özelliklere sahip bir sınıf olan `City` ve `State`ve `Customer` sınıfında bir `Address` örneğidir özelliği `AddressClass`.  
   
      [!code-vb[VbVbalrObjectInit#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#12)]  
   
--   Başlatma listesi boş olamaz.  
+- Başlatma listesi boş olamaz.  
   
--   Başlatılmakta örneği nesne türünde olamaz.  
+- Başlatılmakta örneği nesne türünde olamaz.  
   
--   Paylaşılan üyeleri, salt okunur üyeler, sabitler veya yöntem çağrılarını başlatılmakta sınıf üyeleri olamaz.  
+- Paylaşılan üyeleri, salt okunur üyeler, sabitler veya yöntem çağrılarını başlatılmakta sınıf üyeleri olamaz.  
   
--   Sınıf üyeleri başlatılmakta dizine veya uygun. Aşağıdaki örnekler, derleyici hataları Yükselt:  
+- Sınıf üyeleri başlatılmakta dizine veya uygun. Aşağıdaki örnekler, derleyici hataları Yükselt:  
   
      `'' Not valid.`  
   
@@ -109,19 +109,19 @@ Nesne başlatıcıları, tek bir ifade kullanarak karmaşık bir nesnenin özell
   
 ### <a name="remarks-about-anonymous-types"></a>Anonim türler hakkında açıklamalar  
   
--   Genellikle, tüm veya çoğu bir anonim tür bildirimi özelliklerinde anahtar sözcüğü yazarak belirtilen anahtar özellikleri olacaktır `Key` önünde özellik adı.  
+- Genellikle, tüm veya çoğu bir anonim tür bildirimi özelliklerinde anahtar sözcüğü yazarak belirtilen anahtar özellikleri olacaktır `Key` önünde özellik adı.  
   
      [!code-vb[VbVbalrObjectInit#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#14)]  
   
      Anahtar özellikleri hakkında daha fazla bilgi için bkz. [anahtar](../../../../visual-basic/language-reference/modifiers/key.md).  
   
--   Anonim tür tanımlarını en az bir özellik bildirmelidir için türler, başlatıcı listeleri gibi adı.  
+- Anonim tür tanımlarını en az bir özellik bildirmelidir için türler, başlatıcı listeleri gibi adı.  
   
      [!code-vb[VbVbalrObjectInit#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#2)]  
   
--   Anonim bir türün bir örneği bildirildiğinde, derleyici eşleşen bir anonim tür tanımı oluşturur. Adları ve veri türleri özelliklerinin örneği bildirimden alınır ve tanımındaki derleyici tarafından yer alır. Özellikler yok adlı ve bunlar için adlandırılmış bir tür olduğu gibi önceden tanımlanmış. Türlerini algılanır. Veri türlerini özelliklerini kullanarak belirtemezsiniz bir `As` yan tümcesi.  
+- Anonim bir türün bir örneği bildirildiğinde, derleyici eşleşen bir anonim tür tanımı oluşturur. Adları ve veri türleri özelliklerinin örneği bildirimden alınır ve tanımındaki derleyici tarafından yer alır. Özellikler yok adlı ve bunlar için adlandırılmış bir tür olduğu gibi önceden tanımlanmış. Türlerini algılanır. Veri türlerini özelliklerini kullanarak belirtemezsiniz bir `As` yan tümcesi.  
   
--   Anonim türler de adlarını ve bunların özelliklerinin değerlerini diğer çeşitli yollarla oluşturabilirsiniz. Örneğin, bir anonim tür özelliği hem adı hem de bir değişken veya adı değerini ve başka bir nesnenin bir özelliğini değerini alabilir.  
+- Anonim türler de adlarını ve bunların özelliklerinin değerlerini diğer çeşitli yollarla oluşturabilirsiniz. Örneğin, bir anonim tür özelliği hem adı hem de bir değişken veya adı değerini ve başka bir nesnenin bir özelliğini değerini alabilir.  
   
      [!code-vb[VbVbalrObjectInit#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#15)]  
   

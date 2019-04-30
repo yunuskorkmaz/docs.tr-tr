@@ -3,11 +3,11 @@ title: C# 7.2 yenilikleri
 description: C# 7.2 yenilikleri genel bakış.
 ms.date: 08/16/2017
 ms.openlocfilehash: b8b2be68aac3cba92e0dbd74dfe4ee3cbbef0e88
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706097"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 yenilikleri
 
@@ -42,7 +42,7 @@ Tanıtılan 7.2 dil özellikleri, değer türleri ile başvuru semantiği kullan
 
 Tüm bunlar hakkında daha fazla değişiklikler okuyabilirsiniz [güvenli verimli kod yazma](../write-safe-efficient-code.md).
 
-## <a name="non-trailing-named-arguments"></a>Olmayan trailing-adlandırılmış bağımsız değişkenler
+## <a name="non-trailing-named-arguments"></a>Girintili olmayan adlandırılmış bağımsız değişkenler
 
 Yöntem çağrıları artık bu adlandırılmış bağımsız değişkenler doğru konumda olduğunda, önünde konumsal bağımsız değişkenler adlandırılmış bağımsız değişkenler kullanabilirsiniz. Daha fazla bilgi için [adlandırılmış ve isteğe bağlı bağımsız değişkenler](../programming-guide/classes-and-structs/named-and-optional-arguments.md).
 

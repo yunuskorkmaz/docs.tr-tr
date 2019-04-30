@@ -14,11 +14,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
 ms.openlocfilehash: 8192151aa7cd5eddd99d39adb485e460074fdb99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768595"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>İzlenecek yol: Tasarımcıyı Kullanarak ListView ve TreeView Denetimleri ile Gezgin Stilinde bir Arabirim Oluşturma
 Visual Studio'nun avantajlarından biri kısa bir süre, profesyonel görünümlü Windows Forms uygulamaları oluşturmak için olanağıdır. Sık karşılaşılan bir senaryodur ile bir kullanıcı arabirimi (UI) oluşturma <xref:System.Windows.Forms.ListView> ve <xref:System.Windows.Forms.TreeView> Windows işletim sistemlerinin Windows Explorer özelliğine benzer kontrol eder. Windows Gezgini, bir kullanıcının bilgisayarında dosyaları ve klasörleri hiyerarşik yapısını görüntüler.  
@@ -32,9 +32,9 @@ Visual Studio'nun avantajlarından biri kısa bir süre, profesyonel görünüml
   
 2. İçinde **yeni proje** iletişim kutusunda, aşağıdakileri yapın:  
   
-    1.  Kategorilerde seçin ya da **Visual Basic** veya **Visual C#**.  
+    1. Kategorilerde seçin ya da **Visual Basic** veya **Visual C#**.  
   
-    2.  Şablonlar listesinde seçin **Windows Forms uygulaması**.  
+    2. Şablonlar listesinde seçin **Windows Forms uygulaması**.  
   
 3. **Tamam**'ı tıklatın. Yeni bir Windows Forms projesi oluşturulur.  
   
@@ -44,19 +44,19 @@ Visual Studio'nun avantajlarından biri kısa bir süre, profesyonel görünüml
   
 6. Ekleme bir <xref:System.Windows.Forms.TreeView> adlı Denetim `treeview1` forma ve sol tarafında konumlandırın <xref:System.Windows.Forms.SplitContainer> denetimi. Özellikler penceresinde `treeView1` aşağıdakileri yapın:  
   
-    1.  Ayarlama <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>.  
+    1. Ayarlama <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-    2.  Ayarlama <xref:System.Windows.Forms.TreeView.ImageList%2A> özelliği `imagelist1.`  
+    2. Ayarlama <xref:System.Windows.Forms.TreeView.ImageList%2A> özelliği `imagelist1.`  
   
 7. Ekleme bir <xref:System.Windows.Forms.ListView> adlı Denetim `listView1` forma ve sağ tarafında konumlandırın <xref:System.Windows.Forms.SplitContainer> denetimi. Özellikler penceresinde `listview1` aşağıdakileri yapın:  
   
-    1.  Ayarlama <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>.  
+    1. Ayarlama <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-    2.  Ayarlama <xref:System.Windows.Forms.ListView.View%2A> özelliğini <xref:System.Windows.Forms.View.Details>.  
+    2. Ayarlama <xref:System.Windows.Forms.ListView.View%2A> özelliğini <xref:System.Windows.Forms.View.Details>.  
   
-    3.  Üç noktaya tıklayarak ColumnHeader Koleksiyonu Düzenleyicisi'ni açın (![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png "vbEllipsesButton")) içinde <xref:System.Windows.Forms.ListView.Columns%2A> özelliği **.** Üç sütun ekleme ve bunların <xref:System.Windows.Forms.ColumnHeader.Text%2A> özelliğini `Name`, `Type`, ve `Last Modified`sırasıyla. İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
+    3. Üç noktaya tıklayarak ColumnHeader Koleksiyonu Düzenleyicisi'ni açın (![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png "vbEllipsesButton")) içinde <xref:System.Windows.Forms.ListView.Columns%2A> özelliği **.** Üç sütun ekleme ve bunların <xref:System.Windows.Forms.ColumnHeader.Text%2A> özelliğini `Name`, `Type`, ve `Last Modified`sırasıyla. İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
   
-    4.  Ayarlama <xref:System.Windows.Forms.ListView.SmallImageList%2A> özelliği `imageList1.`  
+    4. Ayarlama <xref:System.Windows.Forms.ListView.SmallImageList%2A> özelliği `imageList1.`  
   
 8. Doldurmak için kodu Uygula <xref:System.Windows.Forms.TreeView> düğümleri ve alt düğümleri. Bu kodu ekleyin `Form1` sınıfı.  
   
@@ -87,18 +87,18 @@ Visual Studio'nun avantajlarından biri kısa bir süre, profesyonel görünüml
   
 #### <a name="to-test-the-form"></a>Formu sınamak için  
   
--   Uygulamayı çalıştırmak için F5'e basın.  
+- Uygulamayı çalıştırmak için F5'e basın.  
   
      Form içeren bir bölme görürsünüz bir <xref:System.Windows.Forms.TreeView> sol tarafta, proje dizinine görüntüleyen denetim ve <xref:System.Windows.Forms.ListView> işlecin sağ tarafındaki üç sütun ile denetimi. Çapraz geçiş yapabilirsiniz <xref:System.Windows.Forms.TreeView> dizin düğümleri seçerek ve <xref:System.Windows.Forms.ListView> seçili dizin içeriğiyle doldurulur.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Bu uygulama, örnek olarak kullanabileceğiniz bir yol sunar <xref:System.Windows.Forms.TreeView> ve <xref:System.Windows.Forms.ListView> birlikte denetler. Bu denetimler hakkında daha fazla bilgi için aşağıdaki konulara bakın:  
   
--   [Nasıl yapılır: Bir TreeView veya ListView denetimi (Windows Forms) özel bilgi ekleme](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+- [Nasıl yapılır: Bir TreeView veya ListView denetimi (Windows Forms) özel bilgi ekleme](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
--   [Nasıl yapılır: Bir ListView denetimine arama yetenekleri ekleme](how-to-add-search-capabilities-to-a-listview-control.md)  
+- [Nasıl yapılır: Bir ListView denetimine arama yetenekleri ekleme](how-to-add-search-capabilities-to-a-listview-control.md)  
   
--   [Nasıl yapılır: TreeView düğümüne ShortCut menüsü ekleme](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
+- [Nasıl yapılır: TreeView düğümüne ShortCut menüsü ekleme](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

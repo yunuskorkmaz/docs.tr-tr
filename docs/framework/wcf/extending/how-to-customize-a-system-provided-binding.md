@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
 ms.openlocfilehash: 0c5474a65bee7d3d290372e79f8423ea9986235f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767123"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>Nasıl yapılır: Sistem Tarafından Sağlanan Bir Bağlamayı Özelleştirme
 Windows Communication Foundation (WCF) bazı temel alınan bağlama öğeleri özelliklerini ancak özelliklerin tümü yapılandırmanıza olanak sağlayan birkaç sistem tarafından sağlanan bağlamalar içerir. Bu konuda, bir özel bağlamayı oluşturmak için bağlama öğelerinin özelliklerini ayarlamak gösterilmiştir.  

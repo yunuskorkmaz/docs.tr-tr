@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 ms.openlocfilehash: 0aa47fd277cfe47b3d8f08b41ffca9c547dcbfe9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778540"
 ---
 # <a name="function-expression-visual-basic"></a>İşlev İfadesi (Visual Basic)
 Parametreleri işlevi lambda ifadesi tanımlayan ve kodu bildirir.  
@@ -40,19 +40,19 @@ End Function
 ## <a name="lambda-expression-syntax"></a>Lambda İfadesi Sözdizimi  
  Bir lambda ifadesi söz dizimi, standart bir işlev benzer. Farklar aşağıdaki gibidir:  
   
--   Bir lambda ifadesi, bir adı yok.  
+- Bir lambda ifadesi, bir adı yok.  
   
--   Lambda ifadeleri içeremez değiştiriciler, gibi `Overloads` veya `Overrides`.  
+- Lambda ifadeleri içeremez değiştiriciler, gibi `Overloads` veya `Overrides`.  
   
--   Lambda ifadeleri kullanma bir `As` işlevin dönüş türünü belirlemek için yan tümcesi. Bunun yerine, tek satırlı lambda ifadesinin gövdesinin değerlendiren değer veya çok satırlı lambda ifadesinin dönüş değeri türüne algılanır. Örneğin, tek satırlı lambda ifadesinin gövdesinin ise `Where cust.City = "London"`, kendi dönüş türü `Boolean`.  
+- Lambda ifadeleri kullanma bir `As` işlevin dönüş türünü belirlemek için yan tümcesi. Bunun yerine, tek satırlı lambda ifadesinin gövdesinin değerlendiren değer veya çok satırlı lambda ifadesinin dönüş değeri türüne algılanır. Örneğin, tek satırlı lambda ifadesinin gövdesinin ise `Where cust.City = "London"`, kendi dönüş türü `Boolean`.  
   
--   Tek satırlı lambda ifadesinin gövdesinin deyim olmayan bir ifade olmalıdır. Gövdesi bir işlev yordam çağrısı, ancak bir alt yordam çağrısı değil oluşabilir.  
+- Tek satırlı lambda ifadesinin gövdesinin deyim olmayan bir ifade olmalıdır. Gövdesi bir işlev yordam çağrısı, ancak bir alt yordam çağrısı değil oluşabilir.  
   
--   Tüm parametre ya da veri türleri veya tüm anlaşılmalıdır belirtilmelidir.  
+- Tüm parametre ya da veri türleri veya tüm anlaşılmalıdır belirtilmelidir.  
   
--   İsteğe bağlı ve Paramarray parametrelerine izin verilmez.  
+- İsteğe bağlı ve Paramarray parametrelerine izin verilmez.  
   
--   Genel Parametreler izin verilmez.  
+- Genel Parametreler izin verilmez.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekler, basit bir lambda ifadeleri oluşturmanın iki yolunu gösterir. İlk kullandığı bir `Dim` işlevi için bir ad sağlamak için. İşlev çağrısı için parametre için bir değer gönderin.  

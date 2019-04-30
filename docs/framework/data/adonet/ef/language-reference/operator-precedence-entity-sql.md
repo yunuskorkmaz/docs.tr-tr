@@ -3,11 +3,11 @@ title: İşleç önceliği (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: e92e4ca5-2889-4266-9625-47f0eb01a948
 ms.openlocfilehash: 722ebe5f0ec530f8c7f86e9f9901451b060903f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760356"
 ---
 # <a name="operator-precedence-entity-sql"></a>İşleç önceliği (varlık SQL)
 Olduğunda bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu sahip birden çok işleç, İşleç önceliği işlemleri gerçekleştirilir sırasını belirler. Yürütme sırası, sorgu sonucu olarak önemli ölçüde etkileyebilir.  

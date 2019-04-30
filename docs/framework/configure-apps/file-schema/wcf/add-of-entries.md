@@ -3,11 +3,11 @@ title: <add> / <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
 ms.openlocfilehash: 1324803d7c0f127cfee9eadebff2672955780eda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673647"
 ---
 # <a name="add-of-entries"></a>\<Ekle >, \<girişleri >
 Bu önceden tanımlanmış bir istemci uç noktası için bir filtre eşlemeleri bir yönlendirme girişi temsil eder. Bu filtreyle eşleşen iletileri bu hedefe gönderilir.  

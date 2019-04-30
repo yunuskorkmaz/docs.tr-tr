@@ -10,11 +10,11 @@ helpviewer_keywords:
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 ms.openlocfilehash: 1f487e9d686ab82adb40cdc31aad68390fbdff3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775756"
 ---
 # <a name="use-the-automationid-property"></a>AutomationID Özelliğini Kullanma
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "59173101"
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>UI Otomasyonu ağaçta belirli bir öğeyi bulmak için benzersiz ve bulunabilirlik Automationıd kullanın  
   
--   Gibi bir araç kullanın [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] rapora <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> , bir [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ilgi öğesi. Bu değer kopyalanır ve sonraki otomatik testi için test betiği gibi bir istemci uygulamasına yapıştırıldı. Bu yaklaşım azaltır ve tanımlamak ve çalışma zamanında bir öğeyi bulmak için gereken kodu basitleştirir.  
+- Gibi bir araç kullanın [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] rapora <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> , bir [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ilgi öğesi. Bu değer kopyalanır ve sonraki otomatik testi için test betiği gibi bir istemci uygulamasına yapıştırıldı. Bu yaklaşım azaltır ve tanımlamak ve çalışma zamanında bir öğeyi bulmak için gereken kodu basitleştirir.  
   
 > [!CAUTION]
 >  Genel olarak, yalnızca doğrudan alt öğeleri almak denemelisiniz <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Alt öğeleri için arama, yüzlerce veya binlerce büyük olasılıkla bir yığın taşması ile elde edilen öğelerin bile aracılığıyla yineleme. Daha düşük bir düzeyde belirli bir öğeyi edinme çalışıyorsanız, uygulama penceresinin veya daha düşük bir düzeyde bir kapsayıcı aramanızı başlamanız gerekir.  
@@ -45,7 +45,7 @@ ms.locfileid: "59173101"
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Önceden tanımlanmış bir AutomationElement için döndürülecek kalıcı bir yol kullanın  
   
--   İstemci uygulamalarından sağlam kaydı ve kayıttan yürütme yardımcı programlar, basit bir test betikleri gibi bir dosya iletişim kutusu veya menü öğesini açın ve UI Otomasyonu ağaçta yok, şu anda, örneği oluşturulur değil öğelere erişim gerektirebilir. Yeniden oluşturma, veya "kayıttan", belirli bir dizi Automationıd denetim düzenleri ve olay dinleyicileri gibi UI Otomasyon özelliklerini kullanarak UI eylem bu öğeleri yalnızca oluşturulabilir.
+- İstemci uygulamalarından sağlam kaydı ve kayıttan yürütme yardımcı programlar, basit bir test betikleri gibi bir dosya iletişim kutusu veya menü öğesini açın ve UI Otomasyonu ağaçta yok, şu anda, örneği oluşturulur değil öğelere erişim gerektirebilir. Yeniden oluşturma, veya "kayıttan", belirli bir dizi Automationıd denetim düzenleri ve olay dinleyicileri gibi UI Otomasyon özelliklerini kullanarak UI eylem bu öğeleri yalnızca oluşturulabilir.
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  
@@ -54,7 +54,7 @@ ms.locfileid: "59173101"
   
 #### <a name="use-a-relative-path-to-return-to-a-previously-identified-automationelement"></a>Önceden tanımlanmış bir AutomationElement için döndürülecek göreli bir yol kullanın  
   
--   Automationıd yalnızca eş değerleri arasında benzersiz olması garanti olduğundan bazı durumlarda, UI Otomasyonu ağacında birden çok öğe aynı Automationıd özelliği değerlerine sahip olabilir. Bu durumlarda öğeleri benzersiz bir üst öğede göre tanımlanabilir ve gerekirse bir doya. Örneğin, bir geliştirici menü öğeleri ile sıralı Automationıd 's "Item1", "Item2" vb. gibi alt burada tanımlanan birden çok menü öğeleri ile her ile birden çok alt menü çubuğu sağlayabilir. Her bir menü öğesi sonra benzersiz üst Automationıd yanı sıra kendi Automationıd tarafından tanımlanabilir ve gerekirse kendi dizinleriyle.  
+- Automationıd yalnızca eş değerleri arasında benzersiz olması garanti olduğundan bazı durumlarda, UI Otomasyonu ağacında birden çok öğe aynı Automationıd özelliği değerlerine sahip olabilir. Bu durumlarda öğeleri benzersiz bir üst öğede göre tanımlanabilir ve gerekirse bir doya. Örneğin, bir geliştirici menü öğeleri ile sıralı Automationıd 's "Item1", "Item2" vb. gibi alt burada tanımlanan birden çok menü öğeleri ile her ile birden çok alt menü çubuğu sağlayabilir. Her bir menü öğesi sonra benzersiz üst Automationıd yanı sıra kendi Automationıd tarafından tanımlanabilir ve gerekirse kendi dizinleriyle.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,28 +14,28 @@ ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 931edf3610d083f6821ec87d3e05db855e88c6f9
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683398"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Genel Türlerde Kovaryans ve Kontravaryans
 <a name="top"></a> Kovaryans ve kontravaryans daha türetilmiş türde (ayrıntılı) veya orijinal olarak belirtilenden daha az türetilmiş bir tür (less yazımına özgü) kullanma olanağı için başvuran terimlerdir. Genel tür parametreleri, genel türleri atamakta ve kullanmakta daha fazla esneklik sağlamak için birlikte değişme ve değişken karşıtlığını destekler. Bir tür sisteminden söz ederken, birlikte değişme, değişken karşıtlığı ve değişmezlik terimlerinin tanımları aşağıdaki gibidir. Örneklerde adlı bir temel sınıf varsayılmaktadır `Base` ve adlı bir türetilmiş sınıf `Derived`.  
   
--   `Covariance`  
+- `Covariance`  
   
      Orijinal olarak belirtilenden daha fazla türetilmiş bir tür belirtmenize olanak sağlar.  
   
      Örneği atayabilirsiniz `IEnumerable<Derived>` (`IEnumerable(Of Derived)` Visual Basic'te) türünde bir değişkene `IEnumerable<Base>`.  
   
--   `Contravariance`  
+- `Contravariance`  
   
      Orijinal olarak belirtilenden daha genel (daha az türetilmiş) bir tür belirtmenize olanak tanır.  
   
      Örneği atayabilirsiniz `Action<Base>` (`Action(Of Base)` Visual Basic'te) türünde bir değişkene `Action<Derived>`.  
   
--   `Invariance`  
+- `Invariance`  
   
      Yalnızca orijinal olarak belirtilen türü kullanabileceğiniz anlamına gelir; bu nedenle, değişmez bir genel tür parametresi birlikte değişken veya değişken karşıtı değildir.  
   
@@ -59,25 +59,25 @@ ms.locfileid: "56836428"
   
  Kovaryans ve kontravaryans topluca denir *varyansı*. Birlikte değişken olarak işaretlenmemiş bir genel tür parametresi veya değişken karşıtı olarak adlandırılır *sabit*. Genel dil çalışma zamanında değişken ile ilgili gerçeklerin kısa bir özeti:  
   
--   İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], değişken türünde parametreler genel arabirimle ve genel temsilci türleriyle için Yasak.  
+- İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], değişken türünde parametreler genel arabirimle ve genel temsilci türleriyle için Yasak.  
   
--   Bir genel arabirim veya genel temsilci türünün hem birlikte değişen hem de değişken karşıtı parametreleri olabilir.  
+- Bir genel arabirim veya genel temsilci türünün hem birlikte değişen hem de değişken karşıtı parametreleri olabilir.  
   
--   Değişken yalnızca başvuru türleri için geçerlidir; değişken türünde bir parametre için bir değer türü belirtirseniz, bu tür parametresi, sonuç olarak oluşturulan tür için değişmezdir.  
+- Değişken yalnızca başvuru türleri için geçerlidir; değişken türünde bir parametre için bir değer türü belirtirseniz, bu tür parametresi, sonuç olarak oluşturulan tür için değişmezdir.  
   
--   Değişken, temsilci birleşimi için geçerli değildir. Diğer bir deyişle, türlerinde iki temsilci olduğunda verilen `Action<Derived>` ve `Action<Base>` (`Action(Of Derived)` ve `Action(Of Base)` Visual Basic'te), sonuç tür bakımından güvenli olacak olsa da, ikinci temsilciyi birinciyle birleştiremezsiniz. Farkı verir ikinci bir temsilci türünde bir değişkene atanması `Action<Derived>`, fakat temsilciler yalnızca türleri tam olarak eşleşirse.  
+- Değişken, temsilci birleşimi için geçerli değildir. Diğer bir deyişle, türlerinde iki temsilci olduğunda verilen `Action<Derived>` ve `Action<Base>` (`Action(Of Derived)` ve `Action(Of Base)` Visual Basic'te), sonuç tür bakımından güvenli olacak olsa da, ikinci temsilciyi birinciyle birleştiremezsiniz. Farkı verir ikinci bir temsilci türünde bir değişkene atanması `Action<Derived>`, fakat temsilciler yalnızca türleri tam olarak eşleşirse.  
   
  Aşağıdaki alt kısımlarda, değişkenle birlikte ve değişken karşıtı tür parametreleri ayrıntılı olarak açıklanmaktadır:  
   
--   [Birlikte değişen tür parametreleriyle genel arabirimler](#InterfaceCovariantTypeParameters)  
+- [Birlikte değişen tür parametreleriyle genel arabirimler](#InterfaceCovariantTypeParameters)  
   
--   [Değişken karşıtı genel tür parametrelerle genel arabirimler](#InterfaceCovariantTypeParameters)  
+- [Değişken karşıtı genel tür parametrelerle genel arabirimler](#InterfaceCovariantTypeParameters)  
   
--   [Değişken genel temsilcilerin tür parametreleri](#DelegateVariantTypeParameters)  
+- [Değişken genel temsilcilerin tür parametreleri](#DelegateVariantTypeParameters)  
   
--   [Değişken genel arabirimleri ve temsilcileri tanımlama](#DefiningVariantTypeParameters)  
+- [Değişken genel arabirimleri ve temsilcileri tanımlama](#DefiningVariantTypeParameters)  
   
--   [Değişken genel arabirim ve temsilci türlerinin listesi](#VariantList)  
+- [Değişken genel arabirim ve temsilci türlerinin listesi](#VariantList)  
   
 <a name="InterfaceCovariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>Birlikte Değişen Tür Parametreleriyle Genel Arabirimler  

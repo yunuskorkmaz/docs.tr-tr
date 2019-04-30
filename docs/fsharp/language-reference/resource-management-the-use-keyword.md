@@ -3,11 +3,11 @@ title: 'Kaynak Yönetimi: Use anahtar sözcüğü'
 description: Hakkında bilgi edinin F# anahtar sözcüğü 'use' ve yayın kaynakların ve başlatma denetleyebilirsiniz 'using' işlev.
 ms.date: 05/16/2016
 ms.openlocfilehash: 127877a3823faade9bc3c6aefea655c86cc348e7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770493"
 ---
 # <a name="resource-management-the-use-keyword"></a>Kaynak Yönetimi: Use anahtar sözcüğü
 
@@ -40,7 +40,7 @@ Aşağıdaki örneği kullanarak bir dosyayı otomatik olarak kapatmak gösteril
 
 `using` İşlevi aşağıdaki biçime sahiptir:
 
-`using` (*İfade1*) *işlevi veya lambda*
+`using` (*expression1*) *function-or-lambda*
 
 İçinde bir `using` ifade *İfade1* çıkarılması gerekir nesnesi oluşturur. Sonucu *İfade1* (çıkarılması gereken nesne) bir bağımsız değişken olur *değer*, *işlevi veya lambda*, tek bir bekliyor ya da bir işlev olan tarafından üretilen değerle eşleşen türünde bağımsız değişken kalan *İfade1*, veya bir lambda ifadesi bu türden bir bağımsız değişken bekliyor. Çalışma zamanı yürütme işlevin sonunda çağırır `Dispose` ve kaynakları serbest bırakan (değer değilse `null`, bu durumda Dispose çağrısı denenmedi).
 

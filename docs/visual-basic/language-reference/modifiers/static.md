@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
 ms.openlocfilehash: de4f67fc5b60de48383a8ca886cff02b03830318
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781192"
 ---
 # <a name="static-visual-basic"></a>Statik (Visual Basic)
 Bir veya daha fazla bildirilmiş yerel değişkenin içinde bildirildikleri yordam sonlandırmasından sonra en son değerlerini korur ve devam etmek için olduğunu belirtir.  
@@ -22,13 +22,13 @@ Bir veya daha fazla bildirilmiş yerel değişkenin içinde bildirildikleri yord
   
 ## <a name="rules"></a>Kurallar  
   
--   **Bildirim bağlamı.** Kullanabileceğiniz `Static` yalnızca yerel değişkenlerde. Bildirim bağlamı başka bir deyişle bir `Static` değişkeni bir yordam ya da bir yordamda bir blok olmalıdır ve kaynak dosyası, ad alanı, sınıf, yapı veya modül olamaz.  
+- **Bildirim bağlamı.** Kullanabileceğiniz `Static` yalnızca yerel değişkenlerde. Bildirim bağlamı başka bir deyişle bir `Static` değişkeni bir yordam ya da bir yordamda bir blok olmalıdır ve kaynak dosyası, ad alanı, sınıf, yapı veya modül olamaz.  
   
      Kullanamazsınız `Static` yapısı yordam içinde.  
   
--   Veri türlerini `Static` yerel değişkenler nelze odvodit. Daha fazla bilgi için [yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+- Veri türlerini `Static` yerel değişkenler nelze odvodit. Daha fazla bilgi için [yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
--   **Birleşik değiştiriciler.** Belirtemezsiniz `Static` ile birlikte `ReadOnly`, `Shadows`, veya `Shared` aynı bildirimde.  
+- **Birleşik değiştiriciler.** Belirtemezsiniz `Static` ile birlikte `ReadOnly`, `Shadows`, veya `Shared` aynı bildirimde.  
   
 ## <a name="behavior"></a>Davranış  
  İçinde statik bir değişken bildirdiğinizde bir `Shared` yordamı, yalnızca bir kopyasını statik değişken tüm uygulama için kullanılabilir. Çağrısı bir `Shared` yordamı kullanarak sınıf adı, sınıfın bir örneğine işaret eden bir değişken değil.  

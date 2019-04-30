@@ -3,30 +3,30 @@ title: Belirteç Kimlik Doğrulayıcı
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
 ms.openlocfilehash: 501f1801c1cb475a87c586f8bbc14146b9141047
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779177"
 ---
 # <a name="token-authenticator"></a>Belirteç Kimlik Doğrulayıcı
 Bu örnek nasıl özel bir belirteç kimlik doğrulayıcısı uygulanacağını gösterir. Belirteç kimlik doğrulayıcısı Windows Communication Foundation (WCF) ileti ile kullanılan belirteci doğrulamak için tutarlı ve kimlik doğrulama belirteciyle ilişkili doğrulama kullanılır.
 
  Özel belirteç Doğrulayıcı gibi çeşitli durumlarda kullanışlıdır:
 
--   Geçersiz bir belirteç ile ilişkili varsayılan kimlik doğrulama mekanizması istediğinizde.
+- Geçersiz bir belirteç ile ilişkili varsayılan kimlik doğrulama mekanizması istediğinizde.
 
--   Ne zaman özel bir simge oluşturuyorsunuz.
+- Ne zaman özel bir simge oluşturuyorsunuz.
 
  Bu örnek aşağıdaki gösterir:
 
--   Nasıl bir istemci bir kullanıcı adı/parola çifti kullanarak kimlik doğrulaması yapabilir.
+- Nasıl bir istemci bir kullanıcı adı/parola çifti kullanarak kimlik doğrulaması yapabilir.
 
--   Sunucu, özel bir belirteç kimlik doğrulayıcısı kullanarak istemci kimlik bilgileri nasıl doğrulayabilirsiniz.
+- Sunucu, özel bir belirteç kimlik doğrulayıcısı kullanarak istemci kimlik bilgileri nasıl doğrulayabilirsiniz.
 
--   Nasıl özel bir belirteç kimlik doğrulayıcısı oturum WCF hizmet kodunun bağlar.
+- Nasıl özel bir belirteç kimlik doğrulayıcısı oturum WCF hizmet kodunun bağlar.
 
--   Sunucu, sunucunun X.509 sertifikası kullanılarak doğrulanabilir nasıl.
+- Sunucu, sunucunun X.509 sertifikası kullanılarak doğrulanabilir nasıl.
 
  Ayrıca bu örnek nasıl çağıranının kimliğini özel belirteç kimlik doğrulama işleminden sonra WCF erişilebilir gösterir.
 
@@ -297,7 +297,7 @@ static void DisplayIdentityInformation()
 
  Aşağıda, böylece uygun yapılandırmasında çalıştırılacak değiştirilebilir toplu iş dosyaları farklı bölümlerini kısa bir genel bakış sağlar.
 
--   Sunucu sertifikası oluşturuluyor.
+- Sunucu sertifikası oluşturuluyor.
 
      Setup.bat toplu iş dosyasından aşağıdaki satırları kullanılacak sunucu sertifikası oluşturun. `%SERVER_NAME%` Değişkeni, sunucu adını belirtir. Kendi sunucu adını belirtmek için bu değişkeni değiştirin. Bu toplu iş dosyasında localhost varsayılandır.
 
@@ -311,7 +311,7 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Sunucu sertifikasını istemcinin güvenilen sertifika depolama alanına yükleniyor.
+- Sunucu sertifikasını istemcinin güvenilen sertifika depolama alanına yükleniyor.
 
      İstemci güvenilir kişiler uygulamasına Setup.bat toplu dosya kopyalama sunucu sertifikasının aşağıdaki satırları depolayın. MakeCert.exe tarafından oluşturulan sertifikaları örtük olarak istemci sistemi tarafından güvenilir değildir çünkü bu adım gereklidir. Bir istemci güvenilen kök sertifikayı kök erişim izni verilmiş bir sertifika zaten varsa — örneğin, Microsoft tarafından verilen sertifika — sunucu sertifikasında istemci sertifika deposunun doldurulması, bu adım gerekli değildir.
 

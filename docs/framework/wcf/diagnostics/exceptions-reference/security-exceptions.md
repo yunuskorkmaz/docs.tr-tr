@@ -3,11 +3,11 @@ title: Güvenlik Özel Durumları
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
 ms.openlocfilehash: c1eeca9111837b9833de54ecafbc981d1c2b6343
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780867"
 ---
 # <a name="security-exceptions"></a>Güvenlik Özel Durumları
 Bu konu, tüm güvenlik özel durumları listeler.  
@@ -29,8 +29,8 @@ Bu konu, tüm güvenlik özel durumları listeler.
 |CachedNegotiationStateQuotaReached|Belirtilen kapasitesini erişildiğinden anlaşma durumu önbellek hizmeti olamaz. İsteği yeniden deneyin.|  
 |CacheQuotaReached|Öğe eklenemez. Belirtilen en yüksek önbellek boyutu.|  
 |CannotDetermineSPNBasedOnAddress|İstemci, SspiNegotiation/Kerberos amacıyla belirtilen hedef adresini kimliğini hizmet asıl adı temel belirlenemiyor. Hedef adres varlığı, bir UPN varlığı olmalıdır (ayse gibi\\\alice) ya da SPN varlığı (konak/ebrunun-makinesi).|  
-|CannotFindCert|Belirtilen arama ölçütleri kullanılarak X.509 sertifikası bulunamıyor: StoreName, StoreLocation, FindType, FindValue.|  
-|CannotFindCertForTarget|Belirtilen arama ölçütleri kullanılarak X.509 sertifikası bulunamıyor: StoreName, StoreLocation, FindType, belirtilen hedef FindValue.|  
+|CannotFindCert|Belirtilen arama ölçütleri kullanılarak X.509 sertifikası bulunamıyor: StoreName, StoreLocation, FindType, FindValue'i tıklatın.|  
+|CannotFindCertForTarget|Belirtilen arama ölçütleri kullanılarak X.509 sertifikası bulunamıyor: FindValue belirtilen hedefi için StoreName, StoreLocation, FindType.|  
 |CannotFindCorrelationStateForApplyingSecurity|Yanıtlayıcı yanıt vermek için güvenlik uygulamak için bağıntı durumu bulunamıyor.|  
 |CannotFindNegotiationState|Belirtilen bağlamı anlaşması durumu bulunamıyor.|  
 |CannotFindSecuritySession|Belirtilen kimliğe sahip güvenlik oturumu bulunamıyor|  
@@ -55,8 +55,8 @@ Bu konu, tüm güvenlik özel durumları listeler.
 |ExportOfBindingWithAsymmetricAndTransportSecurityNotSupported|Güvenlik İlkesi dışarı aktarılamadı. Bağlama, hem AsymmetricSecurityBindingElement hem de güvenli aktarım bağlama öğesi içeriyor. Böyle bir bağlamanın dışarı desteklenmiyor.|  
 |ExportOfBindingWithSymmetricAndTransportSecurityNotSupported|Güvenlik İlkesi dışarı aktarılamadı. Bağlama, SymmetricSecurityBindingElement hem de güvenli aktarım bağlama öğesi içeriyor. Böyle bir bağlamanın dışarı desteklenmiyor.|  
 |ExportOfBindingWithTransportSecurityBindingElementAndNoTransportSecurityNotSupported|Güvenlik İlkesi dışarı aktarılamadı. Bağlama, bir TransportSecurityBindingElement ancak Itransporttokenassertionprovider uygulayan aktarım bağlama öğesi içeriyor. Böyle bir bağlamanın dışarı desteklenmiyor. Bağlamadaki aktarım bağlama öğesinin Itransporttokenassertionprovider arabirimini uygulayan emin olun.|  
-|FoundMultipleCerts|Belirtilen arama ölçütleri kullanılarak birden çok X.509 sertifikası bulundu: StoreName, StoreLocation, FindType, FindValue. Daha fazla belirli bir arama değeri sağlayın.|  
-|FoundMultipleCertsForTarget|Belirtilen arama ölçütleri kullanılarak birden çok X.509 sertifikası bulundu: StoreName, StoreLocation, FindType, belirtilen hedef FindValue. Daha fazla belirli bir arama değeri sağlayın.|  
+|FoundMultipleCerts|Belirtilen arama ölçütleri kullanılarak birden çok X.509 sertifikası bulundu: StoreName, StoreLocation, FindType, FindValue'i tıklatın. Daha fazla belirli bir arama değeri sağlayın.|  
+|FoundMultipleCertsForTarget|Belirtilen arama ölçütleri kullanılarak birden çok X.509 sertifikası bulundu: FindValue belirtilen hedefi için StoreName, StoreLocation, FindType. Daha fazla belirli bir arama değeri sağlayın.|  
 |HeaderDecryptionNotSupportedInWsSecurityJan2004|SecurityVersion.WSSecurityJan2004 üstbilgi şifre desteklemiyor. SecurityVersion.WsSecurityXXX2005 kullanın ve yukarıdaki veya tam iletiyi şifrelemek için Aktarım güvenliği kullanın.|  
 |IdentityCheckFailedForIncomingMessage|Kimlik denetimi gelen iletide başarısız oldu. Hedef uç nokta için beklenen kimliği belirtildi.|  
 |IdentityCheckFailedForOutgoingMessage|Kimlik denetimi giden iletide başarısız oldu. Hedef uç nokta için beklenen kimliği belirtildi.|  

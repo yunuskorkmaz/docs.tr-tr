@@ -3,11 +3,11 @@ title: 4208 - RetryingSqlCommandDueToSqlError
 ms.date: 03/30/2017
 ms.assetid: a8e6483a-a6e4-4bbf-82ec-cd8b6e711aad
 ms.openlocfilehash: a97336f12ccfe041b79328bcb48f4e7214a05b63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33511606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774302"
 ---
 # <a name="4208---retryingsqlcommandduetosqlerror"></a>4208 - RetryingSqlCommandDueToSqlError
 ## <a name="properties"></a>Özellikler  
@@ -15,19 +15,19 @@ ms.locfileid: "33511606"
 |||  
 |-|-|  
 |Kimlik|4208|  
-|Anahtar Sözcükler|WFInstanceStore|  
+|anahtar sözcükler|WFInstanceStore|  
 |Düzey|Bilgiler|  
 |Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
   
 ## <a name="description"></a>Açıklama  
- SQL sağlayıcısı bir SQL komutu bir SQL hatası nedeniyle yeniden deneniyor gösterir.  
+ SQL sağlayıcı bir SQL komutunu SQL hatası nedeniyle yeniden deneniyor gösterir.  
   
 ## <a name="message"></a>İleti  
- Bir SQL komutu SQL hata numarası %1 nedeniyle yeniden deneniyor.  
+ Bir SQL komutunu SQL hata numarası: %1'nedeniyle yeniden deneniyor.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|HataNumarası|xs: String|SQL hata numarası.|  
-|AppDomain|xs: String|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|ErrorNumber|xs:string|SQL hata numarası.|  
+|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|

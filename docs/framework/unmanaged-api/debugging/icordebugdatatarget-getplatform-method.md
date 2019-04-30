@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 309c31dacd801f1c46a2d37932124638bc157cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749052"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform Metodu
 İşlemci mimarisi ve hedef işlem üzerinde çalıştığı işletim sistemi dahil olmak üzere platform hakkında bilgi sağlar.  
@@ -44,9 +44,9 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
  Bu yöntem başarılı olması gerekir. Başarısız olursa, hedef platform kullanılamaz. Yöntemi, aşağıdaki nedenlerden dolayı başarısız olabilir:  
   
--   Hedef benzetilip benzetilmediğini platformu kullanılamıyor.  
+- Hedef benzetilip benzetilmediğini platformu kullanılamıyor.  
   
--   Gerçek donanım hedef platformda kullanılamaz.  
+- Gerçek donanım hedef platformda kullanılamaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

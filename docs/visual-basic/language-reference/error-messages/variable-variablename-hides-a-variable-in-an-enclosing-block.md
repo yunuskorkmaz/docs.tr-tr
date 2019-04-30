@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
 ms.openlocfilehash: 15c35cbb829bec782771b584ea25b111b81b5e1f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766897"
 ---
 # <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>Değişken '\<variablename >' kapsayan bir blok içinde bir değişken gizliyor
 İçine bir blokta bir değişkeni başka bir yerel değişken aynı ada sahip.  
@@ -21,7 +21,7 @@ ms.locfileid: "58827139"
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Böylece, aynı diğer herhangi bir yerel değişkenler değil kapalı bloktaki değişkeni yeniden adlandırın. Örneğin:  
+- Böylece, aynı diğer herhangi bir yerel değişkenler değil kapalı bloktaki değişkeni yeniden adlandırın. Örneğin:  
   
     ```  
     Dim a, b, x As Integer  
@@ -30,9 +30,9 @@ ms.locfileid: "58827139"
     End If  
     ```  
   
--   Bu hatanın yaygın bir nedeni kullanımıdır `Catch e As Exception` içinde bir olay işleyicisi. Bu durumda, ad `Catch` bloğu değişkeni `ex` yerine `e`.  
+- Bu hatanın yaygın bir nedeni kullanımıdır `Catch e As Exception` içinde bir olay işleyicisi. Bu durumda, ad `Catch` bloğu değişkeni `ex` yerine `e`.  
   
--   Bu hatanın başka bir ortak kaynak içinde bildirilen yerel değişken erişme denemesi, bir `Try` ayrı bir engelleme `Catch` blok. Bunu düzeltmek için değişken dışında bildirmek `Try...Catch...Finally` yapısı.  
+- Bu hatanın başka bir ortak kaynak içinde bildirilen yerel değişken erişme denemesi, bir `Try` ayrı bir engelleme `Catch` blok. Bunu düzeltmek için değişken dışında bildirmek `Try...Catch...Finally` yapısı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
 ms.openlocfilehash: 07c13d22235f1198188d26122c137db1d91e64e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755889"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>İzlenecek yol: Özel günlük dinleyicileri (Visual Basic) oluşturma
 Bu kılavuzda, özel günlük dinleyiciyi oluşturun ve çıkışına dinleyecek şekilde yapılandırma gösterilmiştir `My.Application.Log` nesne.  
@@ -20,7 +20,7 @@ Bu kılavuzda, özel günlük dinleyiciyi oluşturun ve çıkışına dinleyecek
   
 #### <a name="to-create-the-listener"></a>Dinleyici oluşturmak için  
   
--   Uygulamanızda adlı bir sınıf oluşturun `SimpleListener` öğesinden devralan <xref:System.Diagnostics.TraceListener>.  
+- Uygulamanızda adlı bir sınıf oluşturun `SimpleListener` öğesinden devralan <xref:System.Diagnostics.TraceListener>.  
   
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]  
   
@@ -64,7 +64,7 @@ Bu kılavuzda, özel günlük dinleyiciyi oluşturun ve çıkışına dinleyecek
   
 #### <a name="to-determine-the-strong-name-of-the-listener"></a>Dinleyici güçlü adını belirlemek için  
   
--   Aşağıdaki kod, kesin adlandırılmış tür adını belirlemek gösterilmektedir `SimpleListener`.  
+- Aşağıdaki kod, kesin adlandırılmış tür adını belirlemek gösterilmektedir `SimpleListener`.  
   
      [!code-vb[VbVbalrMyApplicationLog#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#17)]  
   
@@ -80,11 +80,11 @@ Bu kılavuzda, özel günlük dinleyiciyi oluşturun ve çıkışına dinleyecek
   
      Bir app.config dosyası varsa:  
   
-    1.  Üzerinde **proje** menüsünde seçin **Yeni Öğe Ekle**.  
+    1. Üzerinde **proje** menüsünde seçin **Yeni Öğe Ekle**.  
   
-    2.  Gelen **Yeni Öğe Ekle** iletişim kutusunda **uygulama yapılandırma dosyası**.  
+    2. Gelen **Yeni Öğe Ekle** iletişim kutusunda **uygulama yapılandırma dosyası**.  
   
-    3.  **Ekle**'yi tıklatın.  
+    3. **Ekle**'yi tıklatın.  
   
 2. Bulun `<listeners>` bölümünde `<source>` ile bölümünde `name` "DefaultSource bulunan", öznitelik `<sources>` bölümü. `<sources>` Bölümünde bulunan `<system.diagnostics>` bölümünde, üst düzey `<configuration>` bölümü.  
   

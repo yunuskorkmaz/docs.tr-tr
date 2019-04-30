@@ -12,11 +12,11 @@ helpviewer_keywords:
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
 ms.openlocfilehash: c314db90a1a0f89613e20897387bdec8ec534837
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778735"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 Bildirilmiş bir programlama öğesinin redeclares ve bir aynı adlı bir öğe veya taban sınıfında aşırı yüklenmiş bir öğe kümesini gizler belirtir.  
@@ -28,19 +28,19 @@ Bildirilmiş bir programlama öğesinin redeclares ve bir aynı adlı bir öğe 
   
 ## <a name="rules"></a>Kurallar  
   
--   **Bildirim bağlamı.** Kullanabileceğiniz `Shadows` yalnızca sınıf düzeyinde. Bildirim bağlamı başka bir deyişle bir `Shadows` öğesi bir sınıf olması gerekir ve bir kaynak dosyası, ad alanı, arabirim, modülü, yapı veya yordamı olamaz.  
+- **Bildirim bağlamı.** Kullanabileceğiniz `Shadows` yalnızca sınıf düzeyinde. Bildirim bağlamı başka bir deyişle bir `Shadows` öğesi bir sınıf olması gerekir ve bir kaynak dosyası, ad alanı, arabirim, modülü, yapı veya yordamı olamaz.  
   
      Bir tek bir bildirim deyiminde yalnızca bir gölgeleme öğesi bildirebilirsiniz.  
   
--   **Birleşik değiştiriciler.** Belirtemezsiniz `Shadows` ile birlikte `Overloads`, `Overrides`, veya `Static` aynı bildirimde.  
+- **Birleşik değiştiriciler.** Belirtemezsiniz `Shadows` ile birlikte `Overloads`, `Overrides`, veya `Static` aynı bildirimde.  
   
--   **Öğe türleri.** Bildirilen öğe herhangi bir türden başka bir tür ile gölge. Bir özellik ya da başka bir özellik ya da yordamın yordamla gölge, parametreler ve dönüş türü temel sınıfın özellik veya yordamı içindeki alanlarla eşleşmesi gerekmez.  
+- **Öğe türleri.** Bildirilen öğe herhangi bir türden başka bir tür ile gölge. Bir özellik ya da başka bir özellik ya da yordamın yordamla gölge, parametreler ve dönüş türü temel sınıfın özellik veya yordamı içindeki alanlarla eşleşmesi gerekmez.  
   
--   **Erişme.** Gölgeli öğe temel sınıfta bu gölgeleri türetilmiş sınıf içinde normalde gelen kullanılamıyor. Ancak, aşağıdaki maddeler geçerlidir.  
+- **Erişme.** Gölgeli öğe temel sınıfta bu gölgeleri türetilmiş sınıf içinde normalde gelen kullanılamıyor. Ancak, aşağıdaki maddeler geçerlidir.  
   
-    -   Gölgeleme öğesi kendisine başvuran koddan erişilebilir durumda değilse, başvuruyu gölgeli öğesine çözümlenir. Örneğin, bir `Private` öğesi bir temel sınıf öğesi, erişim iznine sahip olmayan kod gölgeliyor `Private` öğe temel sınıf öğe yerine erişir.  
+    - Gölgeleme öğesi kendisine başvuran koddan erişilebilir durumda değilse, başvuruyu gölgeli öğesine çözümlenir. Örneğin, bir `Private` öğesi bir temel sınıf öğesi, erişim iznine sahip olmayan kod gölgeliyor `Private` öğe temel sınıf öğe yerine erişir.  
   
-    -   Bir öğe gölge, gölgeli öğe türü temel sınıfı ile bildirilen bir nesne üzerinden erişmeye devam edebilirsiniz. Üzerinden de erişebilirsiniz `MyBase`.  
+    - Bir öğe gölge, gölgeli öğe türü temel sınıfı ile bildirilen bir nesne üzerinden erişmeye devam edebilirsiniz. Üzerinden de erişebilirsiniz `MyBase`.  
   
  `Shadows` Bu bağlamda değiştirici kullanılabilir:  
   

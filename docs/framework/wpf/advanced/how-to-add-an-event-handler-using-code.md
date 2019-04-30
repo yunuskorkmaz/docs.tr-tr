@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
 ms.openlocfilehash: 10f8e0899e61d5d54589c910bdcbcd92d8ee947c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777071"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Nasıl yapılır: Kod Kullanarak bir Olay İşleyicisi Ekleme
 Bu örnek kod kullanarak bir öğe için bir olay işleyicisi eklemek nasıl gösterir.  
@@ -25,9 +25,9 @@ Bu örnek kod kullanarak bir öğe için bir olay işleyicisi eklemek nasıl gö
   
  C# Örnekte `+=` bir olaya bir işleyici atamak için işleç. Bu işleyici atamak için kullanılan, aynı işlecidir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] olay işleme modeli. Microsoft Visual Basic, olay işleyicileri ekleme bir yol bu işleci desteklemez. Bunun yerine iki tekniklerden birini gerektirir:  
   
--   Kullanım <xref:System.Windows.UIElement.AddHandler%2A> yöntemi ile birlikte bir `AddressOf` olay işleyicisinin uygulaması başvurmak için işleci.  
+- Kullanım <xref:System.Windows.UIElement.AddHandler%2A> yöntemi ile birlikte bir `AddressOf` olay işleyicisinin uygulaması başvurmak için işleci.  
   
--   Kullanım `Handles` olay işleyici tanımının bir parçası olarak anahtar sözcüğü. Bu teknik burada gösterilmez; bkz: [Visual Basic ve WPF olay işleme](visual-basic-and-wpf-event-handling.md).  
+- Kullanım `Handles` olay işleyici tanımının bir parçası olarak anahtar sözcüğü. Bu teknik burada gösterilmez; bkz: [Visual Basic ve WPF olay işleme](visual-basic-and-wpf-event-handling.md).  
   
  [!code-xaml[RoutedEventAddRemoveHandler#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
   

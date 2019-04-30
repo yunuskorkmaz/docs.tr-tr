@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
 ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762910"
 ---
 # <a name="geometry-overview"></a>Geometriye Genel Bakış
 Bu genel bakışta nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> şekiller açıklamak için sınıflar. Bu konuda ayrıca arasındaki farkları karşılaştırır <xref:System.Windows.Media.Geometry> nesneleri ve <xref:System.Windows.Shapes.Shape> öğeleri.  
@@ -55,11 +55,11 @@ Bu genel bakışta nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_wincli
   
  Basit geometri sınıfları <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.RectangleGeometry>, ve <xref:System.Windows.Media.EllipseGeometry> ve çizgiler ve dikdörtgenler daireler gibi temel geometrik şekiller oluşturmak için kullanılır.  
   
--   A <xref:System.Windows.Media.LineGeometry> başlangıç noktası satır ve uç noktası belirterek tanımlanır.  
+- A <xref:System.Windows.Media.LineGeometry> başlangıç noktası satır ve uç noktası belirterek tanımlanır.  
   
--   A <xref:System.Windows.Media.RectangleGeometry> ile tanımlanmış bir <xref:System.Windows.Rect> yapısının göreli konumunu ve yüksekliğini ve genişliğini belirtir. Yuvarlatılmış Dikdörtgen ayarlayarak oluşturabileceğiniz <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> ve <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> özellikleri.  
+- A <xref:System.Windows.Media.RectangleGeometry> ile tanımlanmış bir <xref:System.Windows.Rect> yapısının göreli konumunu ve yüksekliğini ve genişliğini belirtir. Yuvarlatılmış Dikdörtgen ayarlayarak oluşturabileceğiniz <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> ve <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> özellikleri.  
   
--   Bir <xref:System.Windows.Media.EllipseGeometry> merkez noktası, bir x RADIUS ve y yarıçapı tarafından tanımlanır.  Aşağıdaki örnekler, kırpma ve işleme için basit geometri oluşturma işlemini gösterir.  
+- Bir <xref:System.Windows.Media.EllipseGeometry> merkez noktası, bir x RADIUS ve y yarıçapı tarafından tanımlanır.  Aşağıdaki örnekler, kırpma ve işleme için basit geometri oluşturma işlemini gösterir.  
   
  Bu aynı şekiller, hem de daha karmaşık şekiller kullanılarak oluşturulabilir bir <xref:System.Windows.Media.PathGeometry> veya geometri nesneleri birlikte, ancak bu sınıfların birleştirerek bu temel geometrik şekiller üretmek için basit bir yol sağlar.  
   
@@ -175,9 +175,9 @@ PathGeometry birden çok şekil ile
 ## <a name="composite-geometries"></a>Birleşik Geometri  
  Birleşik Geometri nesneleri kullanarak oluşturulabilir bir <xref:System.Windows.Media.GeometryGroup>, <xref:System.Windows.Media.CombinedGeometry>, ya da statik çağırarak <xref:System.Windows.Media.Geometry> yöntemi <xref:System.Windows.Media.Geometry.Combine%2A>.  
   
--   <xref:System.Windows.Media.CombinedGeometry> Nesne ve <xref:System.Windows.Media.Geometry.Combine%2A> yöntemi iki geometriler ile tanımlanan alanı birleştirmek için bir Boole işlemi gerçekleştirir. <xref:System.Windows.Media.Geometry> alanı olan nesneleri atılır. Yalnızca iki <xref:System.Windows.Media.Geometry> nesneleri (Bu iki geometri ayrıca Birleşik Geometri olabilse) birleştirilebilir.  
+- <xref:System.Windows.Media.CombinedGeometry> Nesne ve <xref:System.Windows.Media.Geometry.Combine%2A> yöntemi iki geometriler ile tanımlanan alanı birleştirmek için bir Boole işlemi gerçekleştirir. <xref:System.Windows.Media.Geometry> alanı olan nesneleri atılır. Yalnızca iki <xref:System.Windows.Media.Geometry> nesneleri (Bu iki geometri ayrıca Birleşik Geometri olabilse) birleştirilebilir.  
   
--   <xref:System.Windows.Media.GeometryGroup> Sınıfı oluşturur bir birleştirmeden <xref:System.Windows.Media.Geometry> birleştirmeden içerdiği nesneler. Herhangi bir sayıda <xref:System.Windows.Media.Geometry> nesneler eklenebilir bir <xref:System.Windows.Media.GeometryGroup>. Bir örnek için bkz. [bileşik şekil oluşturma](how-to-create-a-composite-shape.md).  
+- <xref:System.Windows.Media.GeometryGroup> Sınıfı oluşturur bir birleştirmeden <xref:System.Windows.Media.Geometry> birleştirmeden içerdiği nesneler. Herhangi bir sayıda <xref:System.Windows.Media.Geometry> nesneler eklenebilir bir <xref:System.Windows.Media.GeometryGroup>. Bir örnek için bkz. [bileşik şekil oluşturma](how-to-create-a-composite-shape.md).  
   
  Birleştirme işlemi gerçekleştirmeyin çünkü kullanarak <xref:System.Windows.Media.GeometryGroup> kullanmaya göre nesneler performans avantajı sağlar <xref:System.Windows.Media.CombinedGeometry> nesneleri veya <xref:System.Windows.Media.Geometry.Combine%2A> yöntemi.  
   
@@ -207,11 +207,11 @@ PathGeometry birden çok şekil ile
 ## <a name="other-geometry-features"></a>Diğer geometri özellikleri  
  <xref:System.Windows.Media.Geometry> Sınıfı aşağıdaki gibi kullanışlı yardımcı yöntemler sağlar:  
   
--   <xref:System.Windows.Media.Geometry.GetArea%2A> -Alanını alır <xref:System.Windows.Media.Geometry>.  
+- <xref:System.Windows.Media.Geometry.GetArea%2A> -Alanını alır <xref:System.Windows.Media.Geometry>.  
   
--   <xref:System.Windows.Media.Geometry.FillContains%2A> -Geometri başka içerip içermediğini belirler <xref:System.Windows.Media.Geometry>.  
+- <xref:System.Windows.Media.Geometry.FillContains%2A> -Geometri başka içerip içermediğini belirler <xref:System.Windows.Media.Geometry>.  
   
--   <xref:System.Windows.Media.Geometry.StrokeContains%2A> -Belirler olmadığını vuruşunun bir <xref:System.Windows.Media.Geometry> belirli bir noktaya içerir.  
+- <xref:System.Windows.Media.Geometry.StrokeContains%2A> -Belirler olmadığını vuruşunun bir <xref:System.Windows.Media.Geometry> belirli bir noktaya içerir.  
   
  Bkz: <xref:System.Windows.Media.Geometry> yöntemlerinin tam listesi için sınıf.  
   

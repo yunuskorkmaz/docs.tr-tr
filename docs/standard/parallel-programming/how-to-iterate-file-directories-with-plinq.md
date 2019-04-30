@@ -8,11 +8,11 @@ ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d48f6df1e0e7680d2706c73c33dc817e1feaf1d5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45689333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781205"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Nasıl yapılır: PLINQ ile Dosya Dizinlerini Yineleme
 Bu örnek dosya dizinleri işlemler paralel hale getirmek için iki basit yol gösterir. İlk sorgu kullanan <xref:System.IO.Directory.GetFiles%2A> dosya adlarında bir dizin ve tüm alt dizinler bir dizi doldurmak için yöntemi. Bu yöntem, tüm dizi doldurulur ve bu nedenle işlemin başında gecikme ortaya çıkarabilir kadar döndürmez. Dizi doldurulduktan sonra Bununla birlikte, PLINQ, paralel olarak çok hızlı bir şekilde işleyebilir.  
@@ -32,7 +32,7 @@ Bu örnek dosya dizinleri işlemler paralel hale getirmek için iki basit yol g�
   
  [!code-csharp[PLINQ#34](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqfileiteration.cs#34)]  
   
- Kullanırken <xref:System.IO.Directory.GetFiles%2A>, tüm dizinlerde ağacında yeterli izinlere sahip olduğunuzdan emin olun. Aksi halde bir özel durum ve hiçbir sonuç döndürmedi. Kullanırken <xref:System.IO.Directory.EnumerateDirectories%2A> bir PLINQ sorgusu yineleme devam etmenize olanak sağlayan düzgün bir şekilde g/ç özel durumları işlemek için sorunlu. Kodunuz g/ç veya yetkisiz erişimi özel durumlarını işlemelidir sonra açıklanan yaklaşımı düşünmelisiniz [nasıl yapılır: paralel sınıfla dosya dizinlerini yineleme](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md).  
+ Kullanırken <xref:System.IO.Directory.GetFiles%2A>, tüm dizinlerde ağacında yeterli izinlere sahip olduğunuzdan emin olun. Aksi halde bir özel durum ve hiçbir sonuç döndürmedi. Kullanırken <xref:System.IO.Directory.EnumerateDirectories%2A> bir PLINQ sorgusu yineleme devam etmenize olanak sağlayan düzgün bir şekilde g/ç özel durumları işlemek için sorunlu. Kodunuz g/ç veya yetkisiz erişimi özel durumlarını işlemelidir sonra açıklanan yaklaşımı düşünmelisiniz [nasıl yapılır: Paralel sınıfla dosya dizinlerini yineleme](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md).  
   
  G/ç gecikmesi sorunu yaşıyorsanız, örneğin bir ağ üzerinden dosya g/ç ile açıklanan zaman uyumsuz g/ç tekniklerden birini kullanmayı [TPL ve geleneksel .NET Framework Asynchronous Programming](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md) ve bu [blog gönderisi ](https://blogs.msdn.microsoft.com/pfxteam/2009/08/04/parallel-extensions-and-io/).  
   

@@ -15,17 +15,17 @@ helpviewer_keywords:
 - WPF [WPF]
 ms.assetid: f667bd15-2134-41e9-b4af-5ced6fafab5d
 ms.openlocfilehash: 35a936cbc34bf10219099090e1af8c145d7fb23d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764549"
 ---
 # <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
-Visual Studio'da Windows Presentation Foundation (WPF), satır iş kolu Windows Masaüstü uygulamaları oluşturmak için birleşik bir programlama modeli geliştiricilere sağlar.  
+Visual Studio'da Windows Presentation Foundation (WPF), satır iş kolu Windows Masaüstü uygulamaları oluşturmak için birleştirilmiş programlama modeli geliştiricilere sağlar.  
   
- [Windows Presentation Foundation ile Masaüstü uygulamaları oluşturma](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [Windows Presentation Foundation ile Masaüstü uygulamaları oluşturun](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
- [Visual Studio ve Visual Studio için Blend'de XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ [Visual Studio ve Visual Studio İçin Blend Uygulamalarında XAML Tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
  [Get Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

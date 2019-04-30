@@ -3,11 +3,11 @@ title: Özel akış denetimi etkinlikleri oluşturma
 ms.date: 03/30/2017
 ms.assetid: 27f409f6-2d1d-4cfb-9765-93eb2ad667d5
 ms.openlocfilehash: 2be47281335066def5c1d267cd709db5a8ff1187
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57847017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774068"
 ---
 # <a name="creating-custom-flow-control-activities"></a>Özel akış denetimi etkinlikleri oluşturma
 .NET Framework programlama yapıları soyutlamak için benzer şekilde işlev akış denetimi etkinlikleri çeşitli içerir (gibi <xref:System.Activities.Statements.Flowchart>) veya standart programlama deyimlerinin (gibi <xref:System.Activities.Statements.If>). Bu konu örnek projelerinden birini mimarisini açıklar [genel olmayan ForEach](./samples/non-generic-foreach.md).  
@@ -22,14 +22,14 @@ public sealed class ForEach : NativeActivity
   
  Özel bir sınıf, etkinlik tarafından kullanılan verileri depolamak ve etkinliğin alt etkinlikleri yürütmek için işlevselliği sağlamak için birçok üye gerektirir. Bu üyeleri Ekle:  
   
--   `valueEnumerator`: Genel olmayan <xref:System.Activities.Variable%601> türü <xref:System.Collections.IEnumerator> öğelerinin koleksiyon üzerinde yinelemek için kullanılır. Bu üye türünde <xref:System.Activities.Variable%601> etkinlik yerine bir bağımsız değişken ya da bu nesne bir etkinlik dışında bir kaynağa sahip gerekiyorsa, kullanılacak ortak özelliği, dahili olarak kullanıldığından.  
+- `valueEnumerator`: Genel olmayan <xref:System.Activities.Variable%601> türü <xref:System.Collections.IEnumerator> öğelerinin koleksiyon üzerinde yinelemek için kullanılır. Bu üye türünde <xref:System.Activities.Variable%601> etkinlik yerine bir bağımsız değişken ya da bu nesne bir etkinlik dışında bir kaynağa sahip gerekiyorsa, kullanılacak ortak özelliği, dahili olarak kullanıldığından.  
   
--   `OnChildComplete`: Genel <xref:System.Activities.CompletionCallback> özelliği, her alt yürütme tamamlandığında yürütür. Etkinlik için farklı örnekleri değerini değiştirmez olduğundan bu üye bir CLR özelliği olarak tanımlanır.  
+- `OnChildComplete`: Genel <xref:System.Activities.CompletionCallback> özelliği, her alt yürütme tamamlandığında yürütür. Etkinlik için farklı örnekleri değerini değiştirmez olduğundan bu üye bir CLR özelliği olarak tanımlanır.  
   
--   `Values`: Alt etkinlik yinelemeleri için kullanılan girişleri koleksiyonu. Bu üye türünde <xref:System.Activities.InArgument%601>, olduğundan veri kaynağı dışında bir etkinlik olduğu halde koleksiyonun içeriğini etkinliği yürütülmesi sırasında değiştirmek için beklenmiyor. Etkinliğin etkinlik (eklemek veya etkinlikleri, örneğin kaldırmak için) çağırılma yürütüldüğü sırada bu koleksiyonun içeriğini değiştirmek için işlevselliği gerekirse, bu üye olarak tanımlanmış bir <xref:System.Activities.ActivityAction>, daha sonra her zaman değerlendirilen değişiklikler etkinlik için kullanılabilir hale gelir, bu, erişildi.  
+- `Values`: Alt etkinlik yinelemeleri için kullanılan girişleri koleksiyonu. Bu üye türünde <xref:System.Activities.InArgument%601>, olduğundan veri kaynağı dışında bir etkinlik olduğu halde koleksiyonun içeriğini etkinliği yürütülmesi sırasında değiştirmek için beklenmiyor. Etkinliğin etkinlik (eklemek veya etkinlikleri, örneğin kaldırmak için) çağırılma yürütüldüğü sırada bu koleksiyonun içeriğini değiştirmek için işlevselliği gerekirse, bu üye olarak tanımlanmış bir <xref:System.Activities.ActivityAction>, daha sonra her zaman değerlendirilen değişiklikler etkinlik için kullanılabilir hale gelir, bu, erişildi.  
   
--   `Body`: Bu üye her öğe için çalıştırılacak etkinlik tanımlar `Values` koleksiyonu. Bu üye olarak tanımlanan bir <xref:System.Activities.ActivityAction> böylece her erişildiğinde değerlendirilir.  
+- `Body`: Bu üye her öğe için çalıştırılacak etkinlik tanımlar `Values` koleksiyonu. Bu üye olarak tanımlanan bir <xref:System.Activities.ActivityAction> böylece her erişildiğinde değerlendirilir.  
   
--   `Execute`: Bu yöntemde `InternalExecute`, `OnForEachComplete`, ve `GetStateAndExecute` zamanlayarak ve gövde üye tanımlanan alt etkinliğin tamamlama işleyicisine atamak için genel olmayan üyeleri.  
+- `Execute`: Bu yöntemde `InternalExecute`, `OnForEachComplete`, ve `GetStateAndExecute` zamanlayarak ve gövde üye tanımlanan alt etkinliğin tamamlama işleyicisine atamak için genel olmayan üyeleri.  
   
--   `CacheMetadata`: Bu üye, çalışma zamanı etkinliğini yürütmek gerekli bilgileri sağlar. Varsayılan olarak, bir etkinlik 's `CacheMetadata` yöntemi hakkında bilgilendirmek tüm genel üyeleri etkinliğin çalışma zamanı, ancak bu etkinlik için bazı işlevler özel üyeler kullandığından, bu çalışma zamanı farkında olabilir, böylece kendi varlığı çalışma zamanını bildirmesi gerekir. bunları. Bu durumda, `CacheMetadata` işlevi geçersiz kılınmıştır. böylece özel `valueEnumerator` üye erişilebilir. Böylece bunlar etkinliği yürütülürken geçirilebilir bu üye bir bağımsız değişken değerleri etkinlik için de oluşturur.
+- `CacheMetadata`: Bu üye, çalışma zamanı etkinliğini yürütmek gerekli bilgileri sağlar. Varsayılan olarak, bir etkinlik 's `CacheMetadata` yöntemi hakkında bilgilendirmek tüm genel üyeleri etkinliğin çalışma zamanı, ancak bu etkinlik için bazı işlevler özel üyeler kullandığından, bu çalışma zamanı farkında olabilir, böylece kendi varlığı çalışma zamanını bildirmesi gerekir. bunları. Bu durumda, `CacheMetadata` işlevi geçersiz kılınmıştır. böylece özel `valueEnumerator` üye erişilebilir. Böylece bunlar etkinliği yürütülürken geçirilebilir bu üye bir bağımsız değişken değerleri etkinlik için de oluşturur.

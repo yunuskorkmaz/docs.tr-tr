@@ -3,11 +3,11 @@ title: Saf işlev (C#) kullanarak yeniden düzenleme
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
 ms.openlocfilehash: 66aab1b92f1a017eae650b18bd13d52536e84a6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680759"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Saf işlev (C#) kullanarak yeniden düzenleme
 Aşağıdaki örnek, önceki örnekte, yeniden düzenler [bir genişletme yöntemi (C#) kullanarak yeniden düzenleme](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), saf işlev bu örnekte, bir paragraf metni, saf statik yönteme taşınır bulmak için kodu kullanmak için `ParagraphText`.  
@@ -177,7 +177,7 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>Sonraki Adımlar  
  Sonraki örnekte, farklı bir şekle XML proje gösterilmektedir:  
   
--   [Planlanması XML farklı bir şekil (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [Planlanması XML farklı bir şekil (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

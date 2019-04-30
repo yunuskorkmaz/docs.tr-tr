@@ -7,20 +7,20 @@ helpviewer_keywords:
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
 ms.openlocfilehash: 011bca07890e706b86f2a0b1dbf11acf77058548
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762494"
 ---
 # <a name="one-way-services"></a>Tek Yönlü Hizmetler
 İstek-yanıt deseni bir hizmet işlemi, varsayılan davranıştır. Hizmet işlemi kod olarak temsil edilir olsa bile bir istek-yanıt modelinde istemci yanıt iletisi için bekler. bir `void` yöntemi. Tek yönlü bir işlemle tek bir ileti iletilir. Alıcı bir yanıt iletisi göndermek ya da gönderen bir bekler.  
   
  Tek yönlü tasarım deseni kullanın:  
   
--   Ne zaman istemci işlemleri çağırmanız gerekir ve işlem düzeyinde işleminin sonucu etkilenmez.  
+- Ne zaman istemci işlemleri çağırmanız gerekir ve işlem düzeyinde işleminin sonucu etkilenmez.  
   
--   Kullanırken <xref:System.ServiceModel.NetMsmqBinding> veya <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> sınıfı. (Bu senaryo hakkında daha fazla bilgi için bkz. [wcf'de kuyruklar](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
+- Kullanırken <xref:System.ServiceModel.NetMsmqBinding> veya <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> sınıfı. (Bu senaryo hakkında daha fazla bilgi için bkz. [wcf'de kuyruklar](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
   
  Tek yönlü bir işlem olduğunda, hata bilgilerini istemciye geri taşımak için yanıt iletisi yok. Güvenilir oturumlar gibi temel alınan bağlama özelliklerini kullanarak hata durumları algılayabilir veya iki tek yönlü işlem kullanan bir çift yönlü hizmet sözleşmesi tasarlayarak — ve başka bir hizmet işlemi çağırmak için tek yönlü sözleşme istemciden hizmete tek yönlü sözleşme hizmet ve istemci arasında hizmet istemci uygulayan geri aramayı kullanarak istemciye geri hataları gönderebilmesi.  
   

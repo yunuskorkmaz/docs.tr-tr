@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
 ms.openlocfilehash: ff4e9eb18610b70c88e057d3d44020321bbb9f4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779281"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;zier GDI +'daki eğrileri
 Dört noktası tarafından belirtilen eğri Bézier eğri olduğu: iki uç noktaları (p1 ve p2) ve iki denetim noktaları (c1 ve c2). Eğriyi, başlar p1 ve p2 sona erer. Eğri denetim noktaları üzerinden geçmez, ancak denetim noktaları belirli yönde eğri çekmek ve bends eğrinin şeklini etkileyen mıknatıs davranır. Bézier eğri denetim noktalarını ve uç noktaları ile birlikte aşağıda gösterilmiştir.  

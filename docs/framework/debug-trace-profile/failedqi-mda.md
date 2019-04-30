@@ -11,11 +11,11 @@ ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0ac478644561d2aab13d10811987d8d02c8d7608
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754732"
 ---
 # <a name="failedqi-mda"></a>failedQI MDA
 `failedQI` Yönetilen hata ayıklama Yardımcısı (MDA), çalışma zamanı çağırdığında etkinleştirilirse `QueryInterface` üzerinde bir COM arabirimi işaretçisini bir çalışma zamanı çağrılabilir sarmalayıcı (RCW) adına ve `QueryInterface` çağrısı başarısız olur.  
@@ -25,11 +25,11 @@ ms.locfileid: "59217633"
   
 ## <a name="cause"></a>Sebep  
   
--   Çağrı yanlış bağlamında yapılır.  
+- Çağrı yanlış bağlamında yapılır.  
   
--   Kayıtlı proxy başarısız `QueryInterface` çağrı yanlış bağlamda yapıldığı çağırın.  
+- Kayıtlı proxy başarısız `QueryInterface` çağrı yanlış bağlamda yapıldığı çağırın.  
   
--   OLE ait bir ara sunucu bir hata HRESULT döndürdü.  
+- OLE ait bir ara sunucu bir hata HRESULT döndürdü.  
   
 ## <a name="resolution"></a>Çözüm  
  COM kuralları'nda MSDN belgelerine bakın.  

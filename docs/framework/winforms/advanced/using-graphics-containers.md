@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Windows Forms], graphics containers
 ms.assetid: 74632f91-cefa-4f51-ab7c-f9ac91942caf
 ms.openlocfilehash: cfad7254057a31ea8268784cd4b6849850f3e2aa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766161"
 ---
 # <a name="using-graphics-containers"></a>Grafik Kapsayıcıları Kullanma
 A <xref:System.Drawing.Graphics> nesne yöntemleri gibi sağlar <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, ve <xref:System.Drawing.Graphics.DrawString%2A> vektör görüntüleri, tarama görüntü ve metin gösterme. A <xref:System.Drawing.Graphics> nesne çizilir öğeleri yönünü ve kalite etkileyen çeşitli özellikleri de vardır. Örneğin, yumuşatma modu özelliği için çizgiler ve eğrilerle düzgünleştirme uygulanır ve konum ve döndürme çizilir öğelerinin dünya dönüştürme özelliğini etkiler olup olmadığını belirler.  

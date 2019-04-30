@@ -1,15 +1,15 @@
 ---
-title: Windows Workflow Foundation özellik ayrıntıları
+title: Windows Workflow Foundation Özellik Ayrıntıları
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
 ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773714"
 ---
-# <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation özellik ayrıntıları
+# <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation Özellik Ayrıntıları
 
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] Windows Workflow Foundation için bir dizi özellik ekler. Bu belge, bir dizi yeni özellik açıklar ve bunlar yararlı olabilecek senaryoları hakkında ayrıntılar sağlar.
 
@@ -43,9 +43,9 @@ A `BestPriceFinder` belirli bir rota için en iyi bilet fiyatı bulmak için bir
 
 - İçin örnek <xref:System.ServiceModel.WorkflowServiceHost> aşağıdaki bölümlerde bulunabilir:
 
-    - [Yürütme](./samples/execution.md)
+  - [Yürütme](./samples/execution.md)
 
-    - Uygulama: [Askıya Alınmış Örnek Yönetimi](./samples/suspended-instance-management.md)
+  - Uygulama: [Askıya Alınmış Örnek Yönetimi](./samples/suspended-instance-management.md)
 
 - [İş akışı hizmetlerini barındırma genel bakış](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -67,13 +67,13 @@ Bir bağıntı ikisinden biri:
 
 - Grup iletileri birlikte kullanılan bağıntı iletileri gruplandıran bir istek-yanıt bağıntısı örneğidir.
 
-    - Üzerinde bir <xref:System.ServiceModel.Activities.Receive> etkinliği tıklatın <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> özelliği ve ekleme bir <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> CorrelationHandle kullanarak Yukarıdaki ilk adımda oluşturduğunuz.
+  - Üzerinde bir <xref:System.ServiceModel.Activities.Receive> etkinliği tıklatın <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> özelliği ve ekleme bir <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> CorrelationHandle kullanarak Yukarıdaki ilk adımda oluşturduğunuz.
 
-    - Oluşturma bir <xref:System.ServiceModel.Activities.SendReply> sağ tıklayarak etkinlik <xref:System.ServiceModel.Activities.Receive> ve "SendReply oluşturma". Sonra iş akışınızı yapıştırın <xref:System.ServiceModel.Activities.Receive> etkinlik.
+  - Oluşturma bir <xref:System.ServiceModel.Activities.SendReply> sağ tıklayarak etkinlik <xref:System.ServiceModel.Activities.Receive> ve "SendReply oluşturma". Sonra iş akışınızı yapıştırın <xref:System.ServiceModel.Activities.Receive> etkinlik.
 
 - Bir hizmet örneği için bir veri parçasını eşleme örneği için belirli bir iş akışı örneği verileri (örneğin, bir sipariş kimliği) bir parçası eşleştiren içerik temelli bağıntı var.
 
-    - Mesajlaşma tüm etkinliklerde tıklayarak `CorrelationInitializers` özelliği ve ekleme bir <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> kullanarak <xref:System.ServiceModel.Activities.CorrelationHandle> yukarıda oluşturulan değişken. ' % S'iletisi (örneğin, orderId) açılan menüsünden istenen özelliği çift tıklayın. Ayarlama `CorrelatesWith` özelliğini <xref:System.ServiceModel.Activities.CorrelationHandle> yukarıda kullanılan değişkeni.
+  - Mesajlaşma tüm etkinliklerde tıklayarak `CorrelationInitializers` özelliği ve ekleme bir <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> kullanarak <xref:System.ServiceModel.Activities.CorrelationHandle> yukarıda oluşturulan değişken. ' % S'iletisi (örneğin, orderId) açılan menüsünden istenen özelliği çift tıklayın. Ayarlama `CorrelatesWith` özelliğini <xref:System.ServiceModel.Activities.CorrelationHandle> yukarıda kullanılan değişkeni.
 
 - [Bağıntı kavramsal belgeler](../wcf/feature-details/correlation.md)
 
@@ -131,9 +131,9 @@ WCF yapılandırma şeması karmaşıktır ve kullanıcıların çoğu ile özel
 
 - Örnekler:
 
-    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
+  - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
+  - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>Veri anlaşması çözümleyici senaryoları
 
@@ -151,25 +151,25 @@ Akış Çizelgesi, etki alanı sorunlarını görsel olarak göstermek için iyi
 
 - Akış özelliğini aşağıdaki sınıflar kullanır:
 
-    - <xref:System.Activities.Statements.Flowchart>
+  - <xref:System.Activities.Statements.Flowchart>
 
-    - <xref:System.Activities.Statements.FlowNode>
+  - <xref:System.Activities.Statements.FlowNode>
 
-    - <xref:System.Activities.Statements.FlowDecision>
+  - <xref:System.Activities.Statements.FlowDecision>
 
-    - <xref:System.Activities.Statements.FlowStep>
+  - <xref:System.Activities.Statements.FlowStep>
 
-    - <xref:System.Activities.Statements.FlowSwitch%601>
+  - <xref:System.Activities.Statements.FlowSwitch%601>
 
 - Örnekler:
 
-    - [TryCatch Kullanarak Akış Çizelgesi Etkinliğine Hata İşleme](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+  - [TryCatch Kullanarak Akış Çizelgesi Etkinliğine Hata İşleme](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [İşe Alma İşlemi](./samples/hiring-process.md)
+  - [İşe Alma İşlemi](./samples/hiring-process.md)
 
 - Tasarımcı belgeler:
 
-    - [Akış Çizelgesi Etkinlik Tasarımcıları](/visualstudio/workflow-designer/flowchart-activity-designers)
+  - [Akış Çizelgesi Etkinlik Tasarımcıları](/visualstudio/workflow-designer/flowchart-activity-designers)
 
 ### <a name="flowchart-scenarios"></a>Akış senaryoları
 
@@ -197,15 +197,15 @@ Yordam etkinlikleri programcıları kavramları kullanarak model Sıralı deneti
 
 - Örnekler:
 
-    - [İşe Alma İşlemi](./samples/hiring-process.md)
+  - [İşe Alma İşlemi](./samples/hiring-process.md)
 
-    - [Şirket Satın Alma İşlemi](./samples/corporate-purchase-process.md)
+  - [Şirket Satın Alma İşlemi](./samples/corporate-purchase-process.md)
 
 - Tasarımcı belgeler:
 
-    - [Parallel Etkinlik Tasarımcısı](/visualstudio/workflow-designer/parallel-activity-designer)
+  - [Parallel Etkinlik Tasarımcısı](/visualstudio/workflow-designer/parallel-activity-designer)
 
-    - [ParallelForEach\<T > etkinlik Tasarımcısı](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
+  - [ParallelForEach\<T > etkinlik Tasarımcısı](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
 
 ### <a name="procedural-activity-scenarios"></a>Yordam etkinliği senaryoları
 
@@ -347,7 +347,7 @@ Hizmetimi kullanılabilir olduğunda, bilinmeyen olduğundan bir geliştirici sa
 
 4. Kavramsal belgeler: [İş Akışı Takip ve İzleme](workflow-tracking-and-tracing.md)
 
-## <a name="sql-workflow-instance-store"></a>SQL iş akışı örneği Store
+## <a name="sql-workflow-instance-store"></a>SQL İş Akışı Örnek Deposu
 
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Bir SQL Server tabanlı bir örnek deposuna uygulamasıdır. Bir örnek deposuna yüklemek ve bu örneğe sürdürmek gereken tüm verileri ile birlikte çalışan bir örneğinin durumunu depolar. Hizmet ana bilgisayarı, örnek durumu iş akışını devam ediyorsa ve bu örneği için bir ileti geldiğinde veya bir gecikme etkinlik süresi dolduğunda, örnek durumu yüklemek için örnek deposuna bildirir kaydetmek için örnek deposuna bildirir.
 

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f83b9796bb692ce234a03c596387960bd879ebf3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763743"
 ---
 # <a name="icordebugstepper-interface"></a>ICorDebugStepper Arabirimi
 Bir hata ayıklayıcının gerçekleştirdiği kod yürütmedeki bir adımı temsil eder, bir komutun çıkarılması ve tamamlanması arasında bir tanımlayıcı görevi görür ve bir adımı iptal etmek için bir yol sağlar.  
@@ -42,11 +42,11 @@ Bir hata ayıklayıcının gerçekleştirdiği kod yürütmedeki bir adımı tem
 ## <a name="remarks"></a>Açıklamalar  
  `ICorDebugStepper` Arabirimi aşağıdaki amaçlara hizmet eder:  
   
--   Verilen bir adım komut ve bu komutun tamamlanması arasında bir tanımlayıcı işlevi görür.  
+- Verilen bir adım komut ve bu komutun tamamlanması arasında bir tanımlayıcı işlevi görür.  
   
--   Bunu gerçekleştirilebilecek tüm Adımlama kapsüllemek için merkezi bir arabirim sağlar.  
+- Bunu gerçekleştirilebilecek tüm Adımlama kapsüllemek için merkezi bir arabirim sağlar.  
   
--   Erken bir atlama işlemi iptal etmek için bir yol sunar.  
+- Erken bir atlama işlemi iptal etmek için bir yol sunar.  
   
  İş parçacığı başına birden fazla adımlayıcıdaki olabilir. Örneğin, bir işlevin üzerine erişilince bir kesme noktası isabet ve bu işlevin içindeki yeni bir atlama işlemi başlatmak kullanıcı isteyebilir. Bu durumu yönetmek nasıl belirlemek için hata ayıklayıcı kadar var. Hata ayıklayıcı özgün atlama işlemi iptal etmek veya iki işlem iç içe isteyebilirsiniz. `ICorDebugStepper` Arabirimi iki seçeneği destekler.  
   

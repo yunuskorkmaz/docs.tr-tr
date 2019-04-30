@@ -1,17 +1,17 @@
 ---
-title: Özel durumlar, işlemler ve Dengeleme
+title: Özel Durumlar, İşlemler ve Dengeleme
 ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], error handling
 ms.assetid: 694db4f9-7387-4b13-8f9f-b923b18c7490
 ms.openlocfilehash: c4d66e252561ad7b896ff8092e80013c51bd463c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774016"
 ---
-# <a name="exceptions-transactions-and-compensation"></a>Özel durumlar, işlemler ve Dengeleme
+# <a name="exceptions-transactions-and-compensation"></a>Özel Durumlar, İşlemler ve Dengeleme
 [!INCLUDE[wf1](../../../includes/wf1-md.md)] iş akışlarında çalışma zamanı hata koşullarını işleme için birkaç farklı mekanizmaları sağlar. İş akışları işlemek ve düzgün bir şekilde hata koşulları kurtarmak için bir özel durum işleyicileri, işlemler, iptal ve maaş birleşimini kullanabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  

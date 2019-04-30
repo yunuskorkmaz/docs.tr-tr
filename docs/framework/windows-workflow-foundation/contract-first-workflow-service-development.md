@@ -1,49 +1,49 @@
 ---
-title: Sözleşme ilk iş akışı hizmet geliştirme
+title: İlk İş Akışı Hizmet Geliştirme Anlaşmasını Yapma
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
 ms.openlocfilehash: c326f91bc8673180db755a91ab080bcf0ba72052
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774211"
 ---
-# <a name="contract-first-workflow-service-development"></a>Sözleşme ilk iş akışı hizmet geliştirme
+# <a name="contract-first-workflow-service-development"></a>İlk İş Akışı Hizmet Geliştirme Anlaşmasını Yapma
 İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF) özelliklerini daha iyi bir web hizmetleri ve iş akışları sözleşme öncelikli iş akışı geliştirme biçiminde arasında tümleştirme. Sözleşme öncelikli iş akışı geliştirme aracı, kod sözleşmede ilk tasarlamak sağlar. Araç ardından otomatik olarak bir etkinlik şablonu sözleşme işlemleri için araç kutusunda oluşturur. Bu konu nasıl etkinlikleri ve bir iş akışı hizmeti özelliklerinde harita hizmet sözleşme öznitelikleri için genel bir bakış sağlar. Bir sözleşme öncelikli iş akışı hizmeti oluşturma adım adım örnek için bkz. [nasıl yapılır: Mevcut bir hizmet anlaşmasını kullanan iş akışı hizmeti oluşturma](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 ## <a name="in-this-topic"></a>Bu konuda  
   
--   [Hizmet sözleşme öznitelikleri için iş akışı öznitelikleri eşleme](contract-first-workflow-service-development.md#MappingAttributes)  
+- [Hizmet sözleşme öznitelikleri için iş akışı öznitelikleri eşleme](contract-first-workflow-service-development.md#MappingAttributes)  
   
-    -   [Hizmet sözleşme öznitelikleri](contract-first-workflow-service-development.md#ServiceContract)  
+    - [Hizmet sözleşme öznitelikleri](contract-first-workflow-service-development.md#ServiceContract)  
   
-    -   [İşlem sözleşme öznitelikleri](contract-first-workflow-service-development.md#OperationContract)  
+    - [İşlem sözleşme öznitelikleri](contract-first-workflow-service-development.md#OperationContract)  
   
-    -   [İleti sözleşmesi öznitelikleri](contract-first-workflow-service-development.md#MessageContract)  
+    - [İleti sözleşmesi öznitelikleri](contract-first-workflow-service-development.md#MessageContract)  
   
-    -   [Veri sözleşme öznitelikleri](contract-first-workflow-service-development.md#DataContract)  
+    - [Veri sözleşme öznitelikleri](contract-first-workflow-service-development.md#DataContract)  
   
-    -   [Hata sözleşme öznitelikleri](contract-first-workflow-service-development.md#FaultContract)  
+    - [Hata sözleşme öznitelikleri](contract-first-workflow-service-development.md#FaultContract)  
   
--   [Ek destek ve uygulama bilgileri](contract-first-workflow-service-development.md#AdditionalSupport)  
+- [Ek destek ve uygulama bilgileri](contract-first-workflow-service-development.md#AdditionalSupport)  
   
-    -   [Desteklenmeyen hizmet sözleşme özellikleri](contract-first-workflow-service-development.md#UnsupportedFeatures)  
+    - [Desteklenmeyen hizmet sözleşme özellikleri](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
-    -   [Yapılandırılmış Mesajlaşma etkinlik oluşturma](contract-first-workflow-service-development.md#ActivityGeneration)  
+    - [Yapılandırılmış Mesajlaşma etkinlik oluşturma](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ## <a name="MappingAttributes"></a> Hizmet sözleşme öznitelikleri için iş akışı öznitelikleri eşleme  
  Aşağıdaki bölümlerde tablolarda farklı WCF belirtin öznitelikler ve özellikler ve mesajlaşma etkinlikleri ve sözleşme öncelikli iş akışı özellikleri için nasıl eşlendiğini.  
   
--   [Hizmet sözleşme öznitelikleri](contract-first-workflow-service-development.md#ServiceContract)  
+- [Hizmet sözleşme öznitelikleri](contract-first-workflow-service-development.md#ServiceContract)  
   
--   [İşlem sözleşme öznitelikleri](contract-first-workflow-service-development.md#OperationContract)  
+- [İşlem sözleşme öznitelikleri](contract-first-workflow-service-development.md#OperationContract)  
   
--   [İleti sözleşmesi öznitelikleri](contract-first-workflow-service-development.md#MessageContract)  
+- [İleti sözleşmesi öznitelikleri](contract-first-workflow-service-development.md#MessageContract)  
   
--   [Veri sözleşme öznitelikleri](contract-first-workflow-service-development.md#DataContract)  
+- [Veri sözleşme öznitelikleri](contract-first-workflow-service-development.md#DataContract)  
   
--   [Hata sözleşme öznitelikleri](contract-first-workflow-service-development.md#FaultContract)  
+- [Hata sözleşme öznitelikleri](contract-first-workflow-service-development.md#FaultContract)  
   
 ### <a name="ServiceContract"></a> Hizmet sözleşme öznitelikleri  
   
@@ -109,22 +109,22 @@ ms.locfileid: "57721794"
   
 ## <a name="AdditionalSupport"></a> Ek destek ve uygulama bilgileri  
   
--   [Desteklenmeyen hizmet sözleşme özellikleri](contract-first-workflow-service-development.md#UnsupportedFeatures)  
+- [Desteklenmeyen hizmet sözleşme özellikleri](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
--   [Yapılandırılmış Mesajlaşma etkinlik oluşturma](contract-first-workflow-service-development.md#ActivityGeneration)  
+- [Yapılandırılmış Mesajlaşma etkinlik oluşturma](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ### <a name="UnsupportedFeatures"></a> Desteklenmeyen hizmet sözleşme özellikleri  
   
--   Sözleşmelerinde TPL (görev paralel kitaplığı) görevlerin kullanımı desteklenmiyor.  
+- Sözleşmelerinde TPL (görev paralel kitaplığı) görevlerin kullanımı desteklenmiyor.  
   
--   Hizmet sözleşmelerinde devralma desteklenmiyor.  
+- Hizmet sözleşmelerinde devralma desteklenmiyor.  
   
 ### <a name="ActivityGeneration"></a> Yapılandırılmış Mesajlaşma etkinlik oluşturma  
  İki ortak statik yöntemler eklenir <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> oluşturulmasını desteklemek için etkinlikleri sözleşme öncelikli iş akışı hizmetlerini kullanırken İleti etkinlikleri önceden yapılandırılmış.  
   
--   <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Activities.SendReply.FromOperationDescription%2A?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Activities.SendReply.FromOperationDescription%2A?displayProperty=nameWithType>  
   
  Bu yöntemler tarafından oluşturulan bir etkinlik sözleşme doğrulamasını geçmesi ve bu nedenle bu yöntemler için doğrulama mantığını bir parçası olarak dahili olarak kullanılan <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply>. <xref:System.ServiceModel.Activities.Receive.OperationName%2A>, <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>, <xref:System.ServiceModel.Activities.Receive.Action%2A>, <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>, <xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A>, Ve <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> içeri aktarılan Sözleşmesi ile eşleşmesi için tüm önceden yapılandırılmış. İş Akışı Tasarımcısı'nda etkinlikler için içerik özellikleri sayfasında **ileti** veya **parametreleri** bölümleri Sözleşmesi ile eşleşmesi için önceden yapılandırılmış de.  
   

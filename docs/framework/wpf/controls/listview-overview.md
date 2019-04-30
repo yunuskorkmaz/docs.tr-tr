@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
 ms.openlocfilehash: 6d4a6c19dc0af8a2950754f32890ae9c3bcbad21
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769542"
 ---
 # <a name="listview-overview"></a>ListView Genel Bakışı
 <xref:System.Windows.Controls.ListView> Denetim bir veri öğeleri kümesi farklı düzenler veya görünümleri görüntülemek için altyapı sağlar. Örneğin, bir kullanıcı, bir tablodaki veri öğelerini görüntülemek ve sıralama sütunlarını isteyebilirsiniz.  
@@ -58,9 +58,9 @@ ms.locfileid: "59186504"
 ## <a name="styling-a-listview-that-implements-a-gridview"></a>GridView Uygulayan ListView bir stil uygulama  
  <xref:System.Windows.Controls.ListView> Denetimi içeren <xref:System.Windows.Controls.ListViewItem> görüntülenecek veri öğelerini temsil eden nesneleri. İçerik ve veri öğelerinin stilini tanımlamak için aşağıdaki özellikleri kullanabilirsiniz:  
   
--   Üzerinde <xref:System.Windows.Controls.ListView> denetlemek, kullanın <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>, ve <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> özellikleri.  
+- Üzerinde <xref:System.Windows.Controls.ListView> denetlemek, kullanın <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>, ve <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> özellikleri.  
   
--   Üzerinde <xref:System.Windows.Controls.ListViewItem> denetlemek, kullanın <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> ve <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> özellikleri.  
+- Üzerinde <xref:System.Windows.Controls.ListViewItem> denetlemek, kullanın <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> ve <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> özellikleri.  
   
  Hücrelerde arasında hizalama sorunları önlemek için bir <xref:System.Windows.Controls.GridView>, kullanmayın <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> özellikleri ayarlamak veya içindeki bir öğenin genişliğini etkiler içerik eklemek için bir <xref:System.Windows.Controls.ListView>. Ayarladığınızda gibi bir hizalama sorun ortaya çıkabilir <xref:System.Windows.FrameworkElement.Margin%2A> özelliğinde <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>. Özellikleri belirtin veya öğe genişliğini etkiler içeriği tanımlamak için bir <xref:System.Windows.Controls.GridView>, özelliklerini kullanmak <xref:System.Windows.Controls.GridView> sınıfı ve ilişkili sınıflarının gibi <xref:System.Windows.Controls.GridViewColumn>.  
   

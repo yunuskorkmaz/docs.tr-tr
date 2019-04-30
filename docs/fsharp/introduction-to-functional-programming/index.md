@@ -1,15 +1,15 @@
 ---
-title: F# İşlevsel Programlamaya Giriş
+title: 'F # İşlevsel Programlamaya Giriş'
 description: İşlevsel programlamaya temellerini öğrenin F#.
 ms.date: 10/29/2018
-ms.openlocfilehash: d4a9bb0cd826b41aca96e12e2bcb5aab80c18eb4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
-ms.translationtype: MT
+ms.openlocfilehash: 84022e58c0f17b9e9875402c653c31e494e940da
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "25863842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772794"
 ---
-# <a name="introduction-to-functional-programming-in-f"></a>F# İşlevsel Programlamaya Giriş #
+# <a name="introduction-to-functional-programming-in-f"></a>F işlevsel programlamaya giriş\#
 
 İşlevsel programlama, İşlevler ve sabit veri kullanımını vurgulamaktadır programlama stilidir. Türü belirlenmiş işlevsel programlama, işlevsel programlama statik türler ile gibi ile birleştirildiğinde F#. Genel olarak, aşağıdaki kavramları işlevsel programlamaya vurgulanır:
 
@@ -99,7 +99,7 @@ let addOneIfOdd input =
 
 ```fsharp
 let printString (str: string) =
-    printfn "String is: %s" s
+    printfn "String is: %s" str
 ```
 
 İmza şöyle görünür:
@@ -161,90 +161,15 @@ let addOneToValue x =
     x + 1
 ```
 
-Bu işlev üzerinde genel bir değerde benzemez olsa da, bu değeri Yazar `x` programın çıkışı için. Olmasa da Bunun yapılması doğal olarak yanlış bir şey, işlevin saf değil anlamına gelmez.
+Bu işlev üzerinde genel bir değerde benzemez olsa da, bu değeri Yazar `x` programın çıkışı için. Olmasa da Bunun yapılması doğal olarak yanlış bir şey, işlevin saf değil anlamına gelmez. Daha sonra bu işlevi çağırmak, programınızın başka bir parçası için programın çıkış arabelleği gibi dış bir şey bağlıysa bu bir programınızın parçası etkileyebilir.
 
-Kaldırma `printfn` deyimi finally yapar işlevin saf:
+Kaldırma `printfn` deyimi bir işlevin saf yapar:
 
 ```fsharp
 let addOneToValue x = x + 1
 ```
 
-Bu işlev bir kendiliğinden olmasa da _daha iyi_ daha önceki sürümüyle `printfn` deyimi, bunu garanti bu işlev yaptığı olduğundan, bir değer döndürür. Bunu çağıran bir kez işlev ya da 1 milyardan fazla kez aynı şeyi hala neden olur: yalnızca bir değer üretir. Bu tahmin edilebilirliğini işlevsel programlama, değerli aynıdır tüm saf işlev referentially saydam olduğu anlamına gelir.
-
-### <a name="referential-transparency"></a>Başvuru saydamlık
-
-Başvuru saydamlık, ifadeler ve İşlevler için kullanılan bir özelliktir. Bir ifade referentially saydam olacak şekilde, programın davranışını değiştirmeden elde edilen değeriyle değiştirilmesi mümkün olmalıdır. Tüm saf işlevler referentially saydamdır.
-
-Saf işlevler gibi ile başvuru saydamlık matematik açısından düşünmek yararlı olabilir. Matematik ifadesindeki `y = f(x)`, `f(x)` işlevin sonucu tarafından değiştirilebilir ve yine de eşit olacaktır `y`. Bu başvuru saydamlık fonksiyonel programlama için eşit oranda geçerlidir.
-
-Önceden tanımlanmış çağırmayı düşünün `addOneIfOdd` iki kez çalışması:
-
-```fsharp
-// Checks if 'x' is odd by using the mod operator
-let isOdd x = x % 2 <> 0
-
-let addOneIfOdd input =
-    let result =
-        if isOdd input then
-            input + 1
-        else
-            input
-
-    result
-
-let res1 = addOneIffOdd 1 // Produces 2
-let res2 = addOneIffOdd 2 // Produces 2
-```
-
-Biz bağımsız değişkenini değiştirerek işlev gövdesi ile her işlev çağrısının değiştirebilirsiniz `input` her değeri:
-
-```fsharp
-// Checks if 'x' is odd by using the mod operator
-let isOdd x = x % 2 <> 0
-
-let addOneIfOdd input =
-    let result =
-        if isOdd input then
-            input + 1
-        else
-            input
-
-    result
-
-let res1 =
-    let result =
-        if isOdd 1 then
-            1 + 1
-        else
-            1
-
-    result
-let res2 =
-    let result =
-        if isOdd 2 then
-            2 + 1
-        else
-            2
-
-    result
-```
-
-Her ikisi de `res1` ve `res2` gösteren işlev çağrıldı sanki aynı değere sahip `addOneIfOdd` referentially saydamdır!
-
-Ayrıca, bir işlev de referentially saydam olarak saf olmak zorunda değildir. Bir önceki tanımını dikkate `addOneTovalue`:
-
-```fsharp
-let addOneToValue x = 
-    printfn "x is %d" x
-    x + 1
-```
-
-Bu işlev için herhangi bir çağrı, gövdesinde tarafından değiştirilebilir ve her şeyi gerçekleşir:
-
-* Çıktı, eklenmeden önce değeri yazdırılır
-* Eklenmiş 1 değerine sahip
-
-Programlama yaparken F#, genellikle saflığa yerine hedefi olan başvuru saydamlık olur. Ancak, mümkün olduğunda, saf işlevler yazma yine de iyi bir uygulamadır.
+Bu işlev bir kendiliğinden olmasa da _daha iyi_ daha önceki sürümüyle `printfn` deyimi, bunu garanti bu işlev yaptığı olduğundan, bir değer döndürür. Bu işlev herhangi sayıda çağırarak aynı sonucu üretir: yalnızca bir değer üretir. Birçok işlev programcıları için çaba saflığa tarafından verilen öngörülebilirliğini şeydir.
 
 ### <a name="immutability"></a>Değiştirilemezlik
 

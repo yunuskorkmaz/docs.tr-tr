@@ -3,11 +3,11 @@ title: WCF Hizmetlerini Kodda Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
 ms.openlocfilehash: 8a1eeff76b02315143fb7b50ccc41aa18bb9eb0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779762"
 ---
 # <a name="configuring-wcf-services-in-code"></a>WCF Hizmetlerini Kodda Yapılandırma
 Windows Communication Foundation (WCF) hizmetlerini yapılandırma dosyalarının veya kod kullanarak yapılandırmak geliştiricilerin sağlar.  Yapılandırma dosyalarını, hizmet dağıtıldıktan sonra yapılandırılması gerektiğinde kullanışlıdır. Yapılandırma dosyalarını kullanarak, bir BT Uzmanı yalnızca yapılandırma dosyasını güncelleştirmeniz gerekir, hiçbir yeniden derleme gereklidir. Yapılandırma dosyaları, ancak karmaşık ve sürdürülmesi zor olabilir. Yapılandırma dosyalarında hata ayıklama desteği yoktur ve yapılandırma öğelerini yazma yapılandırma dosyalarını zor ve hata yapmaya açık olmasını sağlayan adlarına göre başvuru yapılır. WCF hizmetlerini kodda yapılandırma sağlar. Önceki sürümlerinde (4.0 ve daha önceki) WCF yapılandırma Hizmetleri kod kendinden senaryolarda kolaydı <xref:System.ServiceModel.ServiceHost> uç noktalar ve davranışlar ServiceHost.Open çağırmadan önce yapılandırmanıza izin sınıfı. Barındırılan web senaryolarda, ancak doğrudan için erişiminiz yoksa <xref:System.ServiceModel.ServiceHost> sınıfı. Barındırılan hizmet oluşturmak için gerekli bir web yapılandırmak için bir `System.ServiceModel.ServiceHostFactory` oluşturulan <xref:System.ServiceModel.Activation.ServiceHostFactory> ve tüm gerekli yapılandırma. .NET 4.5 ile başlayarak, her ikisi de yapılandırmak için daha kolay bir yolu şirket içinde barındırılan ve web hizmetleri kod barındırılan WCF sağlar.  

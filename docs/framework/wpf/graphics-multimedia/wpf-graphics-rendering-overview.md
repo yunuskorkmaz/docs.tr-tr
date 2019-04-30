@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
 ms.openlocfilehash: a0400ce32dc6dab2585a8d5e76ff8d416fae24c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765069"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF Grafik İşlemeye Genel Bakış
 Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görsel katman. Rolü üzerinde odaklanır <xref:System.Windows.Media.Visual> desteği işlemeye sınıfı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modeli.  
@@ -24,27 +24,27 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
   
  <xref:System.Windows.Media.Visual> Nesnedir çekirdek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olan birincil rolü, işleme desteği sağlamak için nesne. Kullanıcı arabirimi denetimleri, gibi <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.TextBox>, türetilen <xref:System.Windows.Media.Visual> sınıfı ve bunların işleme verileri kalıcı hale getirmeniz için kullanın. <xref:System.Windows.Media.Visual> Nesnesi için destek sağlar:  
   
--   Çıkış ekranı: Görselin çizim içeriğini kalıcı olarak işleme seri hale getirilmiş.  
+- Çıkış ekranı: Görselin çizim içeriğini kalıcı olarak işleme seri hale getirilmiş.  
   
--   Dönüştürme seçenekleri: Bir görselde dönüşümleri gerçekleştirme.  
+- Dönüştürme seçenekleri: Bir görselde dönüşümleri gerçekleştirme.  
   
--   Kırpma: Kırpma bölgesini desteği için bir görsel sağlama.  
+- Kırpma: Kırpma bölgesini desteği için bir görsel sağlama.  
   
--   Tıklama testi: Bir görsel sınırları içinde bir koordinat veya geometri bulunup bulunmadığını belirleyin.  
+- Tıklama testi: Bir görsel sınırları içinde bir koordinat veya geometri bulunup bulunmadığını belirleyin.  
   
--   Sınırlama kutusu hesaplama: Bir görsel sınırlayıcı dikdörtgenini belirleme.  
+- Sınırlama kutusu hesaplama: Bir görsel sınırlayıcı dikdörtgenini belirleme.  
   
  Ancak, <xref:System.Windows.Media.Visual> nesne olmayan işleme özellikleri için destek gibi içermez:  
   
--   Olay işleme  
+- Olay işleme  
   
--   Düzen  
+- Düzen  
   
--   Stiller  
+- Stiller  
   
--   Veri bağlama  
+- Veri bağlama  
   
--   Genelleştirme  
+- Genelleştirme  
   
  <xref:System.Windows.Media.Visual> alt sınıfların türetilmesi gerekir ortak soyut bir sınıf kullanıma sunulur. Aşağıda sunulan görsel nesneler hiyerarşisini gösterir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
@@ -127,13 +127,13 @@ DrawingGroup işlemlerin sırası
   
  Görsel nesneler ve vektör grafik yönerge listeleri hiyerarşi hakkında dikkat edilecek noktaları vardır:  
   
--   Hiyerarşide sıralama, işleme sırası çizim bilgileri temsil eder. Kök visual öğeden sağa, yukarıdan aşağıya sol alt öğeleri geçirilir. Bir öğenin görsel alt öğe varsa, bunlar önce öğenin eşdüzey geçirilir.  
+- Hiyerarşide sıralama, işleme sırası çizim bilgileri temsil eder. Kök visual öğeden sağa, yukarıdan aşağıya sol alt öğeleri geçirilir. Bir öğenin görsel alt öğe varsa, bunlar önce öğenin eşdüzey geçirilir.  
   
--   Yaprak olmayan düğüm öğeleri hiyerarşisinde gibi <xref:System.Windows.Controls.ContentPresenter>, alt öğeleri içerecek şekilde kullanılır — yönerge listeleri içermez.  
+- Yaprak olmayan düğüm öğeleri hiyerarşisinde gibi <xref:System.Windows.Controls.ContentPresenter>, alt öğeleri içerecek şekilde kullanılır — yönerge listeleri içermez.  
   
--   Bir görsel öğe hem bir vektör grafik yönerge listesi hem de visual alt öğeler içeriyorsa, üst görsel öğe yönerge listede herhangi bir görsel alt nesnelerin çizimler önce işlenir.  
+- Bir görsel öğe hem bir vektör grafik yönerge listesi hem de visual alt öğeler içeriyorsa, üst görsel öğe yönerge listede herhangi bir görsel alt nesnelerin çizimler önce işlenir.  
   
--   Vektör grafikleri yönerge listesi öğeleri soldan sağa doğru işlenir.  
+- Vektör grafikleri yönerge listesi öğeleri soldan sağa doğru işlenir.  
   
 <a name="visual_tree"></a>   
 ## <a name="visual-tree"></a>Görsel ağaç  

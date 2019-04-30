@@ -1,13 +1,13 @@
 ---
-title: C# (LINQ to XML) XML ağaçları oluşturma
+title: C# Dilinde XML Ağaçları Oluşturma (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
 ms.openlocfilehash: 3bac7b62d04c9690cdd08d1993b64db33c4e6ab8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702626"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>C# (LINQ to XML) XML ağaçları oluşturma
 Bu bölümde, C# dilinde XML ağaçları oluşturma hakkında bilgi sağlar.  
@@ -50,17 +50,17 @@ XElement contacts =
   
  `content` Parametre son derece esnektir. Tür geçerli bir alt nesneyi destekleyen bir <xref:System.Xml.Linq.XElement>. Bu parametreye geçirilen nesneleri farklı türleri için aşağıdaki kurallar geçerlidir:  
   
--   Bir dizeyi metin içeriği olarak eklenir.  
+- Bir dizeyi metin içeriği olarak eklenir.  
   
--   Bir <xref:System.Xml.Linq.XElement> bir alt öğesi eklenir.  
+- Bir <xref:System.Xml.Linq.XElement> bir alt öğesi eklenir.  
   
--   Bir <xref:System.Xml.Linq.XAttribute> öznitelik olarak eklenir.  
+- Bir <xref:System.Xml.Linq.XAttribute> öznitelik olarak eklenir.  
   
--   Bir <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment>, veya <xref:System.Xml.Linq.XText> alt içerik eklenir.  
+- Bir <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment>, veya <xref:System.Xml.Linq.XText> alt içerik eklenir.  
   
--   Bir <xref:System.Collections.IEnumerable> numaralandırılmış alan şeklinde ve bu kuralların sonuçları için özyinelemeli olarak uygulanır.  
+- Bir <xref:System.Collections.IEnumerable> numaralandırılmış alan şeklinde ve bu kuralların sonuçları için özyinelemeli olarak uygulanır.  
   
--   Başka herhangi bir tür için kendi `ToString` yöntemi çağrılır ve sonuç metin içeriği eklenir.  
+- Başka herhangi bir tür için kendi `ToString` yöntemi çağrılır ve sonuç metin içeriği eklenir.  
   
 ### <a name="creating-an-xelement-with-content"></a>Bir XElement ile içerik oluşturma  
  Oluşturabileceğiniz bir <xref:System.Xml.Linq.XElement> içeren tek bir yöntem çağrısı ile basit içerik. Bunu yapmak için ikinci parametre olarak, içeriği aşağıdaki gibi belirtin:  

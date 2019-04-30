@@ -12,11 +12,11 @@ ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b74321ecc5c945aab74ad8678b23eb4a66046d39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779905"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Derleme Bağlaması Günlük Görüntüleyici)
 Derleme Bağlama Kayıt Günlüğü Görüntüleyici derleme bağlamalar için ayrıntıları görüntüler. Bu bilgiler .NET Framework'ün çalışma zamanında niye bir derlemeyi bulamadığını tanılamanıza yardımcı olur. Bu hatalar genellikle derlemenin yanlış yere yayınlanması sonucudur, geçerli olmayan yerel bir resim veya kültürlerin uyuşmayan bir sürüm numarası. Genellikle bir derlemeyi bulmak için ortak dil çalışma zamanının başarısızlığı olarak görünür bir <xref:System.TypeLoadException> uygulamanızdaki.  
@@ -51,17 +51,17 @@ fuslogvw
   
      Araç seçili bağlama başarısızlığı hakkında aşağıdaki ayrıntıları görüntüler:  
   
-    -   "Dosya bulunamadı" veya "sürüm uyuşmazlığı" gibi belirli nedenler bağlamayı başarısız yapabilir.  
+    - "Dosya bulunamadı" veya "sürüm uyuşmazlığı" gibi belirli nedenler bağlamayı başarısız yapabilir.  
   
-    -   Eğer varsa, adını, uygulamanın kök dizinini (AppBase) ve özel arama yolunun bir açıklamasını içeren bağlama ilklendiren uygulama hakkında bilgi.  
+    - Eğer varsa, adını, uygulamanın kök dizinini (AppBase) ve özel arama yolunun bir açıklamasını içeren bağlama ilklendiren uygulama hakkında bilgi.  
   
-    -   Derlemenin kimliğine araç tarafından bakılıyor.  
+    - Derlemenin kimliğine araç tarafından bakılıyor.  
   
-    -   Herhangi bir uygulama, Yayıncı veya Yönetici sürüm ilkeleri açıklamaya uygulanır.  
+    - Herhangi bir uygulama, Yayıncı veya Yönetici sürüm ilkeleri açıklamaya uygulanır.  
   
-    -   Derleme bulunsa da bulunmasa [genel derleme önbelleği](../../../docs/framework/app-domains/gac.md).  
+    - Derleme bulunsa da bulunmasa [genel derleme önbelleği](../../../docs/framework/app-domains/gac.md).  
   
-    -   Tüm algılama URL'lerinin listesi.  
+    - Tüm algılama URL'lerinin listesi.  
   
  Aşağıdaki örnek günlük girdisi başarısız bir derleme bağlama hakkında ayrıntılı bilgi gösterir.  
   
@@ -105,26 +105,26 @@ LOG: All probing URLs attempted and failed.
   
 ### <a name="to-delete-all-entries-from-the-log"></a>Günlükten bütün girdileri silmek için  
   
--   Tıklayın **Tümünü Sil** düğmesi.  
+- Tıklayın **Tümünü Sil** düğmesi.  
   
 ### <a name="to-refresh-the-user-interface"></a>Kullanıcı arabirimini yenilemek için  
   
--   Tıklayın **Yenile** düğmesi. Görüntüleyici çalışırken yeni günlük girdilerini otomatik olarak algılamaz. Kullanmalısınız **Yenile** bunları görüntülemek için düğme.  
+- Tıklayın **Yenile** düğmesi. Görüntüleyici çalışırken yeni günlük girdilerini otomatik olarak algılamaz. Kullanmalısınız **Yenile** bunları görüntülemek için düğme.  
   
 ### <a name="to-change-the-log-settings"></a>Günlük ayarlarını değiştirmek için  
   
--   Tıklayın **ayarları** açmak için düğmeyi **günlük ayarları** iletişim.  
+- Tıklayın **ayarları** açmak için düğmeyi **günlük ayarları** iletişim.  
   
 ### <a name="to-view-the-about-dialog"></a>Hakkında iletişim kutusunu görüntülemek için  
   
--   Tıklayın **hakkında** düğmesi.  
+- Tıklayın **hakkında** düğmesi.  
   
 ## <a name="binding-logs-for-native-images"></a>Özgün Görüntüler için Bağlama Günlükleri  
  Varsayılan olarak, Fuslogvw.exe normal derleme bağlama isteklerini günlüğe kaydeder. Alternatif olarak, kullanılarak oluşturulan yerel görüntüler için derleme bağlamaları oturum [Ngen.exe (yerel Görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
   
 #### <a name="to-log-assembly-binds-for-native-images"></a>Özgün görüntüler için derleme bağlamalarını günlüğe kaydetmek için  
   
--   İçinde **günlük kategorileri** grubu, select **yerel görüntüleri** seçenek düğmesini.  
+- İçinde **günlük kategorileri** grubu, select **yerel görüntüleri** seçenek düğmesini.  
   
  Aşağıdaki günlük kaydı uygulama için özgün görüntü oluştuğunda varolmayan bir bağımlılıktan kaynaklı bir başarısızlığı gösterir. Eğer çalışma zamanındaki bağımlılık Ngen.exe çalışırken oluşan bağımlılıktan farklıysa, yerel bir görüntü bağlamaya izin vermez.  
   
@@ -185,23 +185,23 @@ Discarding native image.
   
 #### <a name="to-disable-logging"></a>Günlüğe kaydetmeyi devre dışı bırakmak için  
   
--   Seçin **oturum devre dışı** seçenek düğmesini.  Bu seçeneğin varsayılan olarak seçili geldiğini unutmayın.  
+- Seçin **oturum devre dışı** seçenek düğmesini.  Bu seçeneğin varsayılan olarak seçili geldiğini unutmayın.  
   
 #### <a name="to-log-assembly-binds-in-exceptions"></a>İstisnalar içinde derleme bağlamalarını günlüğe kaydetmek için  
   
--   Seçin **istisna metninde günlük kaydı** seçenek düğmesini. İstisna metninin içinde yalnızca füzyon günlük kaydı bilgileri kaydedilir. Tüm bilgileri görmek için diğer seçeneklerden birini kullanın.  
+- Seçin **istisna metninde günlük kaydı** seçenek düğmesini. İstisna metninin içinde yalnızca füzyon günlük kaydı bilgileri kaydedilir. Tüm bilgileri görmek için diğer seçeneklerden birini kullanın.  
   
      Etki alanı nötr olarak yüklenen derlemelerle ilgili önemli bir not bırakın.  
   
 #### <a name="to-log-assembly-bind-failures"></a>Derleme bağlama başarısızlıklarını günlüğe kaydetmek için  
   
--   Seçin **günlük bağlama başarısızlıklarını diske** seçenek düğmesini.  
+- Seçin **günlük bağlama başarısızlıklarını diske** seçenek düğmesini.  
   
      Etki alanı nötr olarak yüklenen derlemelerle ilgili önemli bir not bırakın.  
   
 #### <a name="to-log-all-assembly-binds"></a>Tüm derleme bağlamalarını günlüğe kaydetmek için  
   
--   Seçin **tüm bağlamaları diske oturum** seçenek düğmesini.  
+- Seçin **tüm bağlamaları diske oturum** seçenek düğmesini.  
   
      Etki alanı nötr olarak yüklenen derlemelerle ilgili önemli bir not bırakın.  
   

@@ -1,5 +1,5 @@
 ---
-title: CLR Profil oluşturucular ve Windows Store uygulamaları
+title: CLR Profil Oluşturucular ve Microsoft Store Uygulamaları
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,13 +15,13 @@ ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775108"
 ---
-# <a name="clr-profilers-and-windows-store-apps"></a>CLR Profil oluşturucular ve Windows Store uygulamaları
+# <a name="clr-profilers-and-windows-store-apps"></a>CLR Profil Oluşturucular ve Microsoft Store Uygulamaları
 
 Bu konuda, ne zaman analiz yazma tanılama araçları bir Windows Store uygulaması içinde çalışan yönetilen kod hakkında düşünmek gerekenler açıklanmaktadır. Ayrıca, Windows Store apps karşı çalıştırdığınızda çalışmaya devam etmek için mevcut geliştirme araçlarınızı değiştirmek için yönergeler sağlar. Bu bilgileri anlamak için ortak dil çalışma zamanı profil oluşturma API ile ilgili bilgi sahibi değilseniz, zaten bu API Windows Masaüstü uygulamaları ve karşı düzgün çalışır şimdi aracı değiştirme ilginizi çeken, bir Tanılama Aracı'nda kullandığınız en iyisidir Windows Store apps karşı düzgün çalışması için.
 

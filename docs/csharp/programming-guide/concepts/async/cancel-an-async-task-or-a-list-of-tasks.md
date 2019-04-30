@@ -3,11 +3,11 @@ title: Zaman uyumsuz bir görev veya görevleri (C#) listesini iptal etme
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
 ms.openlocfilehash: 01557bf80f40d4197d29ab05cfb4838f5d993a82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702756"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Zaman uyumsuz bir görev veya görevleri (C#) listesini iptal etme
 
@@ -70,14 +70,14 @@ Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uy
 
 3. Aşağıdaki değişiklikler olay işleyicisi yapma **Başlat** düğme `startButton_Click`.
 
-    -   Örneği `CancellationTokenSource`, `cts`.
+    - Örneği `CancellationTokenSource`, `cts`.
 
         ```csharp
         // ***Instantiate the CancellationTokenSource.
         cts = new CancellationTokenSource();
         ```
 
-    -   Çağrısında `AccessTheWebAsync`, belirtilen bir Web sitesinin içeriklerini karşıdan yükler, gönderme <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> özelliği `cts` bağımsız değişken olarak. `Token` Özelliği, iptal istenirse iletiyi yayar. Kullanıcı karşıdan yükleme işlemini iptal etmeyi seçerse ileti görüntüleyen bir catch bloğu ekleyin. Aşağıdaki kod değişiklikleri gösterir.
+    - Çağrısında `AccessTheWebAsync`, belirtilen bir Web sitesinin içeriklerini karşıdan yükler, gönderme <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> özelliği `cts` bağımsız değişken olarak. `Token` Özelliği, iptal istenirse iletiyi yayar. Kullanıcı karşıdan yükleme işlemini iptal etmeyi seçerse ileti görüntüleyen bir catch bloğu ekleyin. Aşağıdaki kod değişiklikleri gösterir.
 
         ```csharp
         try

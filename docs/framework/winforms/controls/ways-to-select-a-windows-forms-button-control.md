@@ -5,28 +5,28 @@ helpviewer_keywords:
 - Button control [Windows Forms], selecting
 ms.assetid: fe2fc058-5118-4f70-b264-6147d64a7a8d
 ms.openlocfilehash: f2881646a05d257044c6461f822a4c35a225f8c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759849"
 ---
 # <a name="ways-to-select-a-windows-forms-button-control"></a>Windows Forms Düğme Denetimi Seçmenin Yolları
 Aşağıdaki yollarla bir Windows Forms düğmesini seçilebilir:  
   
--   Fare düğmesini kullanın.  
+- Fare düğmesini kullanın.  
   
--   Düğmenin çağırma <xref:System.Windows.Forms.Control.Click> kodundaki olay.  
+- Düğmenin çağırma <xref:System.Windows.Forms.Control.Click> kodundaki olay.  
   
--   Sekme tuşuna basarak düğmeyi odağı Taşı ve ardından bir boşluk veya ENTER tuşuna basarak düğmesini seçin.  
+- Sekme tuşuna basarak düğmeyi odağı Taşı ve ardından bir boşluk veya ENTER tuşuna basarak düğmesini seçin.  
   
--   Erişim anahtarı (ALT + altı çizili harfi) düğmesine basın. Erişim anahtarları hakkında daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms denetimleri için erişim tuşları oluşturma](how-to-create-access-keys-for-windows-forms-controls.md).  
+- Erişim anahtarı (ALT + altı çizili harfi) düğmesine basın. Erişim anahtarları hakkında daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms denetimleri için erişim tuşları oluşturma](how-to-create-access-keys-for-windows-forms-controls.md).  
   
--   Düğmeyi formun "kabul" düğmesine, başka bir denetim odağa sahip olsa bile ENTER tuşuna basarak düğmesini seçer — diğer denetleyen başka bir düğme, çok satırlı metin kutusu veya enter tuşuna yakalar özel bir denetim varsa hariç.  
+- Düğmeyi formun "kabul" düğmesine, başka bir denetim odağa sahip olsa bile ENTER tuşuna basarak düğmesini seçer — diğer denetleyen başka bir düğme, çok satırlı metin kutusu veya enter tuşuna yakalar özel bir denetim varsa hariç.  
   
--   Düğmeyi formun "İptal" düğmesine, başka bir denetim odağa sahip olsa bile ESC tuşuna basarak düğmesini seçer.  
+- Düğmeyi formun "İptal" düğmesine, başka bir denetim odağa sahip olsa bile ESC tuşuna basarak düğmesini seçer.  
   
--   Çağrı <xref:System.Windows.Forms.Button.PerformClick%2A> düğmeyi programlı olarak seçmek için yöntemi.  
+- Çağrı <xref:System.Windows.Forms.Button.PerformClick%2A> düğmeyi programlı olarak seçmek için yöntemi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

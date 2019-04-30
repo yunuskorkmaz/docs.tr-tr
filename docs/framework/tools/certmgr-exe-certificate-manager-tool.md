@@ -16,11 +16,11 @@ ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 14dc09ff8ceaa5e754c2a8ee64846fbcac55e37f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779944"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Sertifika Yönetim Aracı)
 Sertifika Yöneticisi aracı (Certmgr.exe) sertifikaları, sertifika güven listelerini (CTL) ve sertifika iptal listelerini (CRL) yönetir.  
@@ -75,13 +75,13 @@ Sertifika Yöneticisi aracı (Certmgr.exe) sertifikaları, sertifika güven list
 ## <a name="remarks"></a>Açıklamalar  
  Certmgr.exe aşağıdaki temel işlevleri gerçekleştirir:  
   
--   Sertifikaları, CTL'leri ve CRL'leri konsolda görüntüler.  
+- Sertifikaları, CTL'leri ve CRL'leri konsolda görüntüler.  
   
--   Bir sertifika deposuna sertifikalar, CTL'ler ve CRL'ler ekler.  
+- Bir sertifika deposuna sertifikalar, CTL'ler ve CRL'ler ekler.  
   
--   Bir sertifika deposundan sertifikaları, CTL'leri ve CRL'leri siler.  
+- Bir sertifika deposundan sertifikaları, CTL'leri ve CRL'leri siler.  
   
--   Bir sertifika deposundan bir X.509 sertifikasını, CTL'yi veya CRL'yi dosyaya kaydeder.  
+- Bir sertifika deposundan bir X.509 sertifikasını, CTL'yi veya CRL'yi dosyaya kaydeder.  
   
  Certmgr.exe iki tür sertifika ile çalışır: **StoreFile** ve sistem deposu. Sertifika deposu türünü belirtmek gerekli değildir: Certmgr.exe depo türünü tanımlayarak uygun işlemleri gerçekleştirebilir.  
   

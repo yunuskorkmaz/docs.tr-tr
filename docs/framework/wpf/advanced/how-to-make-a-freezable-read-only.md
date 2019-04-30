@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
 ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771026"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>Nasıl yapılır: Freezable'ı Salt Okunur Yapma
 Bu örnek nasıl yapılacağını gösteren bir <xref:System.Windows.Freezable> salt okunur çağırarak kendi <xref:System.Windows.Freezable.Freeze%2A> yöntemi.  
   
  Freeze edilemez bir <xref:System.Windows.Freezable> aşağıdaki koşullardan herhangi biri doğru ise, nesne `true` nesneyle ilgili:  
   
--   Animasyonlu veya veri ilişkili özellikleri.  
+- Animasyonlu veya veri ilişkili özellikleri.  
   
--   Dinamik bir kaynak tarafından ayarlanan özellikler var. Dinamik kaynaklar hakkında daha fazla bilgi için bkz. [XAML kaynakları](xaml-resources.md).  
+- Dinamik bir kaynak tarafından ayarlanan özellikler var. Dinamik kaynaklar hakkında daha fazla bilgi için bkz. [XAML kaynakları](xaml-resources.md).  
   
--   İçerdiği <xref:System.Windows.Freezable> nelze zmrazit alt nesneler.  
+- İçerdiği <xref:System.Windows.Freezable> nelze zmrazit alt nesneler.  
   
  Bu koşullar varsa `false` için <xref:System.Windows.Freezable> nesne ve düşünmüyorsanız onu değiştirmek için performans avantajı için dondurmayı göz önünde bulundurun.  
   

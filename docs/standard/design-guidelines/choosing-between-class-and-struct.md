@@ -1,5 +1,5 @@
 ---
-title: Sınıf ile yapı arasında seçim yapma
+title: Sınıf ile Yapı Arasında Seçim Yapma
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: KrzysztofCwalina
 ms.openlocfilehash: a47e43b2387362500d46c8e531f16d004d823c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778787"
 ---
-# <a name="choosing-between-class-and-struct"></a>Sınıf ile yapı arasında seçim yapma
+# <a name="choosing-between-class-and-struct"></a>Sınıf ile Yapı Arasında Seçim Yapma
 Her framework Tasarımcısı yüz temel tasarım kararlarından biri mi (bir başvuru türü) bir sınıf veya yapı (bir değer türü) olarak bir tür tasarlamak biridir. Başvuru türleri ve değer türlerinin davranış farklılıkları iyi anlaşılmasını, bu seçim yaparken önemlidir.  
   
  İlk yığın başvuru türleri ve değer türleri biz başvuru türleri ise, değer türleri yığın üzerinde ayrılan veya içeren satır içi türleri ve ne zaman serbest ve atık toplanan yığında ayrılmış olmasıdır dikkate alacaktır fark geriye doğru alır veya ne zaman, içeren türlerine serbest bırakıldı. Bu nedenle, genel ayırma ve başvuru türleri deallocations ucuz ayırmaları ve değer türlerinin deallocations altındadır.  
@@ -39,13 +39,13 @@ Her framework Tasarımcısı yüz temel tasarım kararlarından biri mi (bir ba�
   
  **X AVOID** türü tüm aşağıdaki özelliklere sahip olmadığı sürece yapı tanımlama:  
   
--   Mantıksal olarak, ilkel türler için benzer tek bir değeri temsil eder (`int`, `double`vb..).  
+- Mantıksal olarak, ilkel türler için benzer tek bir değeri temsil eder (`int`, `double`vb..).  
   
--   Bir örnek boyutu altında 16 bayt var.  
+- Bir örnek boyutu altında 16 bayt var.  
   
--   Sabittir.  
+- Sabittir.  
   
--   Bu sık Kutulu gerekmez.  
+- Bu sık Kutulu gerekmez.  
   
  Diğer tüm durumlarda, türlerinizi sınıfları olarak tanımlamanız gerekir.  
   

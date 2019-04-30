@@ -14,11 +14,11 @@ helpviewer_keywords:
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
 ms.openlocfilehash: 9ac1d749d18a9d02ce28f8cf600495f345ec0e89
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61708047"
 ---
 # <a name="list-c-programming-guide"></a>\<Liste > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  

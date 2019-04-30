@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
 ms.openlocfilehash: 0d8428487c3c320a634914b99219e23befb70d55
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773028"
 ---
 # <a name="how-to-enable-streaming"></a>Nasıl yapılır: Akışı Etkinleştirme
 Windows Communication Foundation (WCF) iletilerini arabelleğe alınan ya da akış aktarımları kullanarak gönderebilirsiniz. Bir alıcı okumadan önce varsayılan arabelleğe alınan aktarım modunda bir ileti tamamen teslim edilmelidir. Aktarım modunu akışında alıcı tamamen teslim edilmeden önce iletiyi işlemeye başlayabilirsiniz. Akış modunda iletilen bilgiler uzun ve seri olarak işlenebilecek yararlı olur. Akış modunda de, ileti tamamen arabelleğe çok büyük olduğunda yararlıdır.  
@@ -21,9 +21,9 @@ Windows Communication Foundation (WCF) iletilerini arabelleğe alınan ya da ak�
   
 1. Veri akışı `OperationContract` için hizmeti iki gereksinimleri karşılaması gerekir:  
   
-    1.  Akışla verileri tutan parametresi, yöntemin tek parametre olmalıdır. Örneğin, giriş iletisine akışla birine ise, işlemi tam olarak bir girdi parametreniz olmalıdır. Benzer şekilde, çıktı iletisi akışını ise işlemi tam olarak bir çıkış parametresi ya da dönüş değeri olması gerekir.  
+    1. Akışla verileri tutan parametresi, yöntemin tek parametre olmalıdır. Örneğin, giriş iletisine akışla birine ise, işlemi tam olarak bir girdi parametreniz olmalıdır. Benzer şekilde, çıktı iletisi akışını ise işlemi tam olarak bir çıkış parametresi ya da dönüş değeri olması gerekir.  
   
-    2.  En az bir parametre ve dönüş değeri türlerini olmalıdır ya da <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, veya <xref:System.Xml.Serialization.IXmlSerializable>.  
+    2. En az bir parametre ve dönüş değeri türlerini olmalıdır ya da <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, veya <xref:System.Xml.Serialization.IXmlSerializable>.  
   
      Akış veri sözleşme örneği verilmiştir.  
   
@@ -34,28 +34,28 @@ Windows Communication Foundation (WCF) iletilerini arabelleğe alınan ya da ak�
   
 2. Akış bağlamadaki etkinleştirilmesi gerekir. Ayarladığınız bir `TransferMode` özelliği şu değerlerden birini alabilir:  
   
-    1.  `Buffered`,  
+    1. `Buffered`,  
   
-    2.  `Streamed`, her iki yönde de akış iletişimi sağlar.  
+    2. `Streamed`, her iki yönde de akış iletişimi sağlar.  
   
-    3.  `StreamedRequest`, yalnızca istek akışı etkinleştirir.  
+    3. `StreamedRequest`, yalnızca istek akışı etkinleştirir.  
   
-    4.  `StreamedResponse`, yalnızca yanıt akışı etkinleştirir.  
+    4. `StreamedResponse`, yalnızca yanıt akışı etkinleştirir.  
   
      `BasicHttpBinding` Sunan `TransferMode` aynı bağlama özelliğinin `NetTcpBinding` ve `NetNamedPipeBinding`. `TransferMode` Özelliği ayrıca aktarım bağlama öğede ayarlama ve kullanılan özel bir bağlama.  
   
      Aşağıdaki örnekler nasıl belirleyeceğinizi `TransferMode` kod ve yapılandırma dosyasını değiştirerek. Her ikisi de ayarlanmış örnekleri `maxReceivedMessageSize` yerleştirir iletileri izin verilen en büyük boyutu için üst sınır 64 MB özelliğini alır. Varsayılan `maxReceivedMessageSize` genellikle akış senaryoları için düşükse, 64 KB ' tır. Bu kota ayarı iletileri almak için uygulamanızı bekliyor en büyük boyutuna bağlı olarak uygun şekilde ayarlayın. Ayrıca `maxBufferSize` arabelleğe alınır ve uygun şekilde ayarlanmış maksimum boyutu denetler.  
   
-    1.  Ayar örneği aşağıdaki yapılandırma parçacığından gösterir `TransferMode` üzerinde akış özelliği `basicHttpBinding` ve özel bir HTTP bağlaması.  
+    1. Ayar örneği aşağıdaki yapılandırma parçacığından gösterir `TransferMode` üzerinde akış özelliği `basicHttpBinding` ve özel bir HTTP bağlaması.  
   
          [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]   
   
-    2.  Aşağıdaki kod parçacığı ayarını gösterir `TransferMode` üzerinde akış özelliği `basicHttpBinding` ve özel bir HTTP bağlaması.  
+    2. Aşağıdaki kod parçacığı ayarını gösterir `TransferMode` üzerinde akış özelliği `basicHttpBinding` ve özel bir HTTP bağlaması.  
   
          [!code-csharp[c_HowTo_EnableStreaming_code#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming_code/cs/c_howto_enablestreaming_code.cs#2)]
          [!code-vb[c_HowTo_EnableStreaming_code#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming_code/vb/c_howto_enablestreaming_code.vb#2)]  
   
-    3.  Aşağıdaki kod parçacığı ayarını gösterir `TransferMode` özel TCP bağlamada akış özelliği.  
+    3. Aşağıdaki kod parçacığı ayarını gösterir `TransferMode` özel TCP bağlamada akış özelliği.  
   
          [!code-csharp[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming_code/cs/c_howto_enablestreaming_code.cs#3)]
          [!code-vb[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming_code/vb/c_howto_enablestreaming_code.vb#3)]  

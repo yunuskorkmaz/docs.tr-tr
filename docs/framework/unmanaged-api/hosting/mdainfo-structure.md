@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3be6f2b9454ed2f74d2cc6792cd9aaa2c25215db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765212"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo Yapısı
 Hakkında ayrıntılar sağlar `Event_MDAFired` olayı yönetilen hata ayıklama Yardımcısı (MDA) oluşturulmasını tetikler.  
@@ -47,9 +47,9 @@ typedef struct _MDAInfo {
   
  Bir MDA oluşturulmasını tetikleyen bir olay harekete çalışma zamanı, aşağıdaki adımları gerçekleştirir:  
   
--   Konak kayıtlı değil, bir [Iactiononclrevent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) çağırarak örneği [Iclroneventmanager::registeractiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) haberdar için bir `Event_MDAFired` çalışma zamanı olayı geçer ile kendi Varsayılan, barındırılan olmayan davranış.  
+- Konak kayıtlı değil, bir [Iactiononclrevent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) çağırarak örneği [Iclroneventmanager::registeractiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) haberdar için bir `Event_MDAFired` çalışma zamanı olayı geçer ile kendi Varsayılan, barındırılan olmayan davranış.  
   
--   Bu olay işleyicisi ana bilgisayarı kaydedildiyse, çalışma zamanı hata ayıklayıcı işleme ekli olup olmadığını denetler. Bu durumda, çalışma zamanı hata ayıklayıcıya keser. Hata ayıklayıcının devam ettiğinde, ana bilgisayar çağırır. Hata ayıklayıcı bağlıysa, çalışma zamanı çağırır `IActionOnCLREvent::OnEvent` ve işaretçi bir `MDAInfo` örneği `data` parametresi.  
+- Bu olay işleyicisi ana bilgisayarı kaydedildiyse, çalışma zamanı hata ayıklayıcı işleme ekli olup olmadığını denetler. Bu durumda, çalışma zamanı hata ayıklayıcıya keser. Hata ayıklayıcının devam ettiğinde, ana bilgisayar çağırır. Hata ayıklayıcı bağlıysa, çalışma zamanı çağırır `IActionOnCLREvent::OnEvent` ve işaretçi bir `MDAInfo` örneği `data` parametresi.  
   
  Mda'leri etkinleştirme ve bir MDA etkinleştirildiğinde bildirim almak için konağı seçebilirsiniz. Bu konak varsayılan davranışı geçersiz kılabilir ve işlem durumu bozan gelen önlemek için olayı tetikleyen yönetilen iş parçacığını durdurmak için bir fırsat sağlar. Mda'leri kullanma hakkında daha fazla bilgi için bkz. [yönetilen hata ayıklama Yardımcıları ile hataları tanılama](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   

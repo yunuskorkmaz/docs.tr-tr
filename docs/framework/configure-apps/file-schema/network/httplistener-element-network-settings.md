@@ -3,11 +3,11 @@ title: <httpListener> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
 ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705083"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener > öğesi (ağ ayarları)
 Tarafından kullanılan parametreler özelleştirir <xref:System.Net.HttpListener> sınıfı.  
@@ -52,9 +52,9 @@ Tarafından kullanılan parametreler özelleştirir <xref:System.Net.HttpListene
   
  `http.sys` Hizmetini iki istek URI dizelerini gösterir:  
   
--   Ham URI'si  
+- Ham URI'si  
   
--   Dönüştürülen URI'si  
+- Dönüştürülen URI'si  
   
  Ham URI <xref:System.Uri?displayProperty=nameWithType> bir HTTP isteğinin istek satırında sağlanan:  
   
@@ -72,11 +72,11 @@ Tarafından kullanılan parametreler özelleştirir <xref:System.Net.HttpListene
   
  `http.sys` Hizmet birleştirir <xref:System.Uri.Host%2A?displayProperty=nameWithType> özellik değeri ve dönüştürülen bir URI oluşturmak için istek satırı dizesini. Ayrıca, `http.sys` ve <xref:System.Uri?displayProperty=nameWithType> sınıfı aynı zamanda şunları yapar:  
   
--   Geri Al çıkışları kodlanmış tüm yüzde değerleri.  
+- Geri Al çıkışları kodlanmış tüm yüzde değerleri.  
   
--   Yüzde olarak kodlanmış dönüştüren ASCII olmayan karakterler bir UTF-16 karakter temsili. UTF-8 ve ANSI/DBCS karakterlerin yanı sıra Unicode karakter (Unicode kodlama % uXXXX biçimini kullanarak) desteklendiğini unutmayın.  
+- Yüzde olarak kodlanmış dönüştüren ASCII olmayan karakterler bir UTF-16 karakter temsili. UTF-8 ve ANSI/DBCS karakterlerin yanı sıra Unicode karakter (Unicode kodlama % uXXXX biçimini kullanarak) desteklendiğini unutmayın.  
   
--   Yol sıkıştırma gibi diğer normalleştirme adımları yürütür.  
+- Yol sıkıştırma gibi diğer normalleştirme adımları yürütür.  
   
  İstek değerlerini yüzde olarak kodlanmış kullanılan kodlama hakkında bilgi içermiyor olduğundan, doğru yüzde olarak kodlanmış değerler ayrıştırarak kodlama belirlemek mümkün olmayabilir.  
   

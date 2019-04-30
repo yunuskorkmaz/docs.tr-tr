@@ -3,11 +3,11 @@ title: 3824 - RoutingServiceCompletingReceiveContext
 ms.date: 03/30/2017
 ms.assetid: b716f0a1-c2ce-4e7c-b2d6-405a488c6591
 ms.openlocfilehash: ad45a7b17016b1d5dba91a5d323b5a51bc98eaad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33465062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672763"
 ---
 # <a name="3824---routingservicecompletingreceivecontext"></a>3824 - RoutingServiceCompletingReceiveContext
 ## <a name="properties"></a>Özellikler  
@@ -15,14 +15,14 @@ ms.locfileid: "33465062"
 |||  
 |-|-|  
 |Kimlik|3824|  
-|Anahtar Sözcükler|RoutingServices|  
+|anahtar sözcükler|RoutingServices|  
 |Düzey|Ayrıntılı|  
 |Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
   
 ## <a name="description"></a>Açıklama  
- Yönlendirme hizmeti belirtilen kimliğe sahip bir ileti için ReceiveContext.Complete çağrılırken bu olay yayılan  
+ Bu olay, yönlendirme hizmeti için belirtilen kimliğe sahip bir ileti ReceiveContext.Complete çağrılırken yayıldığını  
   
 ## <a name="message"></a>İleti  
- Yönlendirme hizmeti ReceiveContext.Complete iletinin kimliği çağırma: '%1'.  
+ Yönlendirme hizmeti ReceiveContext.Complete Kimliğe sahip ileti için çağırma: '%1'.  
   
 ## <a name="details"></a>Ayrıntılar

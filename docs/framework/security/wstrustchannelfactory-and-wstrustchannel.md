@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 ms.openlocfilehash: ecc62292b2b064219127c369f43141a31ffe606d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780074"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory ve WSTrustChannel
 Windows Communication Foundation (WCF) bilginiz varsa, bir WCF istemcisi Federasyon uyumlu olduğunu bilirsiniz. Bir WCF istemcisi ile yapılandırarak bir <xref:System.ServiceModel.WSFederationHttpBinding> ya da benzer özel bağlama, bir hizmet için Federasyon kimlik doğrulamasını etkinleştirebilirsiniz.
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) bilginiz varsa, bir WCF istemcisi Federas
 
 - WIF kullanarak tek başına STS'den bir belirteç almak ve daha sonra bu belirteci ile kimlik doğrulaması bir WCF istemcisi etkinleştirin. Daha fazla bilgi için [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406) örnek.
 
- İlk senaryoda açıklayıcıdır: var olan WCF istemcileri WIF bağlı olan taraflar ve Sts'ler çalışmaya devam edecek. Bu konuda, kalan iki kullanıldığı senaryoları tartışır.
+ İlk senaryoda açıklayıcıdır: Var olan WCF istemcileri, WIF bağlı olan taraflar ve Sts'ler çalışmaya devam eder. Bu konuda, kalan iki kullanıldığı senaryoları tartışır.
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>Mevcut bir WCF istemcisi ActAs ile geliştirme / OnBehalfOf
 Tipik kimlik temsili senaryosu bir istemci sonra bir arka uç hizmetini çağıran bir orta katman hizmeti çağırır. Orta katman hizmet görür veya istemci adına, görevi görür.

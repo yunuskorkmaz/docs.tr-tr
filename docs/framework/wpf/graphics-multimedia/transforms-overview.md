@@ -13,11 +13,11 @@ helpviewer_keywords:
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
 ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762384"
 ---
 # <a name="transforms-overview"></a>Dönüşümlere Genel Bakış
 Bu konu nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> döndürme, ölçeklendirme, taşımak için sınıflar (çevirme) ve eğme <xref:System.Windows.FrameworkElement> nesneleri.  
@@ -101,9 +101,9 @@ Bir dikdörtgen öğesi noktası (0,0) 45 derece döndürülmüş
 ## <a name="transforming-a-frameworkelement"></a>FrameworkElement dönüştürme  
  Dönüştürmeler uygulamak için bir <xref:System.Windows.FrameworkElement>, oluşturun bir <xref:System.Windows.Media.Transform> ve iki özelliklerden biri için geçerli olan <xref:System.Windows.FrameworkElement> sınıfı sağlar:  
   
--   <xref:System.Windows.FrameworkElement.LayoutTransform%2A> Düzen geçişinden önce uygulanır dönüştürmesi. Dönüştürme uygulandıktan sonra dönüştürülen boyutunu ve konumunu öğesinin düzen sistemi işler.  
+- <xref:System.Windows.FrameworkElement.LayoutTransform%2A> Düzen geçişinden önce uygulanır dönüştürmesi. Dönüştürme uygulandıktan sonra dönüştürülen boyutunu ve konumunu öğesinin düzen sistemi işler.  
   
--   <xref:System.Windows.UIElement.RenderTransform%2A> Öğesinin görünümünü değiştirir ancak Düzen geçişi tamamlandıktan sonra uygulanır dönüştürmesi. Kullanarak <xref:System.Windows.UIElement.RenderTransform%2A> özelliği yerine <xref:System.Windows.FrameworkElement.LayoutTransform%2A> özelliği performans avantajlarını elde edebilirsiniz.  
+- <xref:System.Windows.UIElement.RenderTransform%2A> Öğesinin görünümünü değiştirir ancak Düzen geçişi tamamlandıktan sonra uygulanır dönüştürmesi. Kullanarak <xref:System.Windows.UIElement.RenderTransform%2A> özelliği yerine <xref:System.Windows.FrameworkElement.LayoutTransform%2A> özelliği performans avantajlarını elde edebilirsiniz.  
   
  Hangi özelliğin kullanmalısınız? Sağladığı performans avantajlarını nedeniyle <xref:System.Windows.UIElement.RenderTransform%2A> animasyonlu özellikle kullandığınızda, mümkün olduğunda özellik <xref:System.Windows.Media.Transform> nesneleri. Kullanım <xref:System.Windows.FrameworkElement.LayoutTransform%2A> ölçekleme, döndürme veya eğriltme sırasında özellik ve gerektiğinde dönüştürülmüş öğenin boyutunu için ayarlanacak öğenin üst. İle kullanıldığında, Not <xref:System.Windows.FrameworkElement.LayoutTransform%2A> özelliği <xref:System.Windows.Media.TranslateTransform> nesneleri görünür öğeler üzerinde hiçbir etkisi yoktur. Düzen sistemi, işleme bir parçası olarak özgün konumuna çevrilmiş öğeyi döndürür. olmasıdır.  
   

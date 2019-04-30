@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
 ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780828"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF Sorun Giderme Hızlı Başlangıç
 Bu konuda, birkaç müşteriler içine geliştirme WCF istemcileri ve Hizmetleri çalıştırdığınız bilinen sorunlar listelenmektedir. Çalıştırmakta olduğunuz sorun bu listede değilse, hizmetiniz için izleme yapılandırma öneririz. Bu işlem bir izleme dosyası oluşturur izleme dosyası Görüntüleyici ile birlikte görüntülemek ve bu özel durumları hakkında ayrıntılı bilgi almak hizmet içinde oluşabilecek. İzlemeyi yapılandırma hakkında daha fazla bilgi için bkz: [İzlemeyi Yapılandırma](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). İzleme dosyası Görüntüleyici hakkında daha fazla bilgi için bkz: [Hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -98,15 +98,15 @@ public class MyServiceHost : ServiceHost
 ## <a name="my-service-and-client-work-great-but-i-cant-get-them-to-work-when-the-client-is-on-another-computer-whats-happening"></a>Hizmetimi ve istemci harika, ancak istemci, başka bir bilgisayarda olduğunda bunları çalıştıramıyor musunuz? Ne oluyor?  
  Özel duruma bağlı bağlı olarak, çeşitli sorunları olabilir:  
   
--   İstemci uç nokta adresleri değil "localhost" ve ana bilgisayar adı değiştirmeniz gerekebilir.  
+- İstemci uç nokta adresleri değil "localhost" ve ana bilgisayar adı değiştirmeniz gerekebilir.  
   
--   Uygulama bağlantı noktasını açmanız gerekebilir. Ayrıntılar için bkz [güvenlik duvarı yönergeleri](../../../docs/framework/wcf/samples/firewall-instructions.md) gelen SDK örnekleri.  
+- Uygulama bağlantı noktasını açmanız gerekebilir. Ayrıntılar için bkz [güvenlik duvarı yönergeleri](../../../docs/framework/wcf/samples/firewall-instructions.md) gelen SDK örnekleri.  
   
--   Diğer olası sorunları için örnekleri konusuna [Windows Communication Foundation örneklerini çalıştırma](./samples/running-the-samples.md).  
+- Diğer olası sorunları için örnekleri konusuna [Windows Communication Foundation örneklerini çalıştırma](./samples/running-the-samples.md).  
   
--   İstemci, Windows kimlik bilgilerini kullanıyor ve özel durum bir <xref:System.ServiceModel.Security.SecurityNegotiationException>, Kerberos gibi yapılandırın.  
+- İstemci, Windows kimlik bilgilerini kullanıyor ve özel durum bir <xref:System.ServiceModel.Security.SecurityNegotiationException>, Kerberos gibi yapılandırın.  
   
-    1.  Kimlik, istemcinin App.config dosyasındaki endpoint öğesine ekleyin:  
+    1. Kimlik, istemcinin App.config dosyasındaki endpoint öğesine ekleyin:  
   
         ```xml
         <endpoint   
@@ -122,33 +122,33 @@ public class MyServiceHost : ServiceHost
         </endpoint>  
         ```  
   
-    2.  Şirket içinde barındırılan hizmeti sistem veya ağ hizmeti hesabı altında çalıştırın. Sistem hesabı altında bir komut penceresi oluşturmak için bu komutu çalıştırabilirsiniz:  
+    2. Şirket içinde barındırılan hizmeti sistem veya ağ hizmeti hesabı altında çalıştırın. Sistem hesabı altında bir komut penceresi oluşturmak için bu komutu çalıştırabilirsiniz:  
   
         ```console
         at 12:36 /interactive "cmd.exe"  
         ```  
   
-    3.  ' % S'hizmeti altında Internet Information Services (varsayılan olarak, hizmet asıl adı (SPN) hesabı kullanır, IIS), barındırma.  
+    3. ' % S'hizmeti altında Internet Information Services (varsayılan olarak, hizmet asıl adı (SPN) hesabı kullanır, IIS), barındırma.  
   
-    4.  Bir yeni SPN SetSPN kullanarak etki alanı ile kaydedin. Bunu yapmak için bir etki alanı yöneticisi olması gerektiğine dikkat edin.  
+    4. Bir yeni SPN SetSPN kullanarak etki alanı ile kaydedin. Bunu yapmak için bir etki alanı yöneticisi olması gerektiğine dikkat edin.  
   
  Kerberos protokolü hakkında daha fazla bilgi için bkz: [güvenlik kavramları wcf'de kullanılan](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) ve:  
   
--   [Windows Kimlik Doğrulama Hatalarını Ayıklama](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
+- [Windows Kimlik Doğrulama Hatalarını Ayıklama](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
--   [Kerberos hizmet asıl adları Http.sys kullanarak kaydetme](https://go.microsoft.com/fwlink/?LinkId=86943)  
+- [Kerberos hizmet asıl adları Http.sys kullanarak kaydetme](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
--   [Kerberos açıklaması](https://go.microsoft.com/fwlink/?LinkId=86946)  
+- [Kerberos açıklaması](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
 ## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Bir FaultException miyim throw zaman\<özel durum > türü bir özel durum olduğunda, her zaman istemci üzerindeki bir genel FaultException türü ve genel tür alıyorum. Ne oluyor?  
  Veri türüne dönüştürün ve hata sözleşmeniz ayrıntı türü olarak olduğunu bildirir, kendi özel hata oluşturma önemle tavsiye edilir. Neden olan sistem tarafından sağlanan özel durum türlerini kullanma:  
   
--   Hizmet odaklı uygulamalar güçlerini en büyük zorluklardan biri kaldıran bir türü bağımlılığı oluşturur.  
+- Hizmet odaklı uygulamalar güçlerini en büyük zorluklardan biri kaldıran bir türü bağımlılığı oluşturur.  
   
--   Standart bir biçimde seri hale getirme özel durum sırasında bağımlı olamaz. Bazı — gibi <xref:System.Security.SecurityException>— tüm serileştirilebilir olmayabilir.  
+- Standart bir biçimde seri hale getirme özel durum sırasında bağımlı olamaz. Bazı — gibi <xref:System.Security.SecurityException>— tüm serileştirilebilir olmayabilir.  
   
--   İç uygulama ayrıntıları istemcilerine kullanıma sunar. Daha fazla bilgi için [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+- İç uygulama ayrıntıları istemcilerine kullanıma sunar. Daha fazla bilgi için [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
  Bir uygulamada hata ayıklama yaparsanız, ancak özel durum bilgilerini seri hale getirmek ve kullanarak istemciye Döndür <xref:System.ServiceModel.Description.ServiceDebugBehavior> sınıfı.  
   

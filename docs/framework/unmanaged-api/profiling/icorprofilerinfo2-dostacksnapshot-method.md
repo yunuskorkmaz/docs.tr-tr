@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 12ef215253ca02048a5a3fc2c7c682823233929f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779827"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot Yöntemi
 Belirtilen iş parçacığı için yığın üzerinde yönetilen çerçeve size yol gösterir ve profil oluşturucu bir geri çağırma aracılığıyla bilgi gönderir.  
@@ -91,11 +91,11 @@ HRESULT DoStackSnapshot(
   
  Zaman uyumsuz yığın Yürüyüşü kolayca kilitlenmeleri neden veya bu yönergelere uymanızı sürece ihlalleri, erişim:  
   
--   Doğrudan iş parçacıkları askıya aldığınızda, yalnızca yönetilen kod çalıştırılmadı bir iş parçacığı başka bir iş parçacığını askıya alabilirsiniz unutmayın.  
+- Doğrudan iş parçacıkları askıya aldığınızda, yalnızca yönetilen kod çalıştırılmadı bir iş parçacığı başka bir iş parçacığını askıya alabilirsiniz unutmayın.  
   
--   Her zaman engellenmesi, [Icorprofilercallback::threaddestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) parçacığının yığın ilerlemesi tamamlanana kadar geri çağırma.  
+- Her zaman engellenmesi, [Icorprofilercallback::threaddestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) parçacığının yığın ilerlemesi tamamlanana kadar geri çağırma.  
   
--   Profil Oluşturucu bir çöp toplama tetikleyen bir CLR işleve çağrı sırasında kilit tutmayın. Diğer bir deyişle, sahip olan iş parçacığı bir atık toplama işlemini tetikleyen bir çağrı yaparsanız bir kilit tutmayın.  
+- Profil Oluşturucu bir çöp toplama tetikleyen bir CLR işleve çağrı sırasında kilit tutmayın. Diğer bir deyişle, sahip olan iş parçacığı bir atık toplama işlemini tetikleyen bir çağrı yaparsanız bir kilit tutmayın.  
   
  Olup olmadığını da kilitlenme riski çağırmanızı `DoStackSnapshot` , profil oluşturucu oluşturdu ve böylece ayrı hedef iş parçacığı yığınının inceleyebileceğiniz bir iş parçacığından. İlk kez oluşturduğunuz iş parçacığı girer belirli `ICorProfilerInfo*` yöntemleri (dahil olmak üzere `DoStackSnapshot`), CLR iş parçacığı başına, bu iş parçacığı üzerinde CLR özel başlatma gerçekleştirir. Profil Oluşturucu yığını yol çalıştığınız hedef diziyle askıya aldı ve bu hedef iş parçacığı bir kilide bu iş parçacığı başına başlatma gerçekleştirmek için gerekli sahip oluştuysa, karşılıklı bir kilitlenme ortaya çıkar. Bu kilitlenmeyi önlemek için bir ilk çağrı yapmak `DoStackSnapshot` yürütmek için Profil Oluşturucu tarafından oluşturulan iş parçacığından ayrı bir hedef iş parçacığı, ancak hedef iş parçacığı önce askıya değil. Bu ilk çağrı, iş parçacığı başına başlatma kilitlenme tamamlayabilirsiniz sağlar. Varsa `DoStackSnapshot` başarılı olur ve en az bir çerçeve raporları bu noktadan sonra herhangi bir hedef iş parçacığı ve çağrı askıya alma, Profil Oluşturucu tarafından oluşturulan iş parçacığı için güvenli olacaktır `DoStackSnapshot` bu hedef iş parçacığı yığınını görmek için.  
   

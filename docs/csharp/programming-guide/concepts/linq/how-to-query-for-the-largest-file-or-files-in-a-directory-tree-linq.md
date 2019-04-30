@@ -3,24 +3,24 @@ title: 'Nasıl yapılır: En büyük dosya veya dosyalar sorgu (LINQ) bir dizin 
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
 ms.openlocfilehash: 20453c754c792d4f5c59fde481e1fec56dcd0e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702288"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Nasıl yapılır: En büyük dosya veya dosyalar sorgu (LINQ) bir dizin ağacındaki (C#)
 Bu örnek dosyanın bayt cinsinden boyutu ile ilgili beş sorguları gösterir:  
   
--   Bayt cinsinden en büyük dosya boyutu almak nasıl.  
+- Bayt cinsinden en büyük dosya boyutu almak nasıl.  
   
--   En küçük dosyanın bayt cinsinden boyutunu almak nasıl.  
+- En küçük dosyanın bayt cinsinden boyutunu almak nasıl.  
   
--   Nasıl alınacağını <xref:System.IO.FileInfo> belirtilen kök klasörünün altında bir veya daha fazla klasörlerden nesne en büyük veya küçük dosyası.  
+- Nasıl alınacağını <xref:System.IO.FileInfo> belirtilen kök klasörünün altında bir veya daha fazla klasörlerden nesne en büyük veya küçük dosyası.  
   
--   10 en büyük dosyaları gibi bir dizi almak nasıl.  
+- 10 en büyük dosyaları gibi bir dizi almak nasıl.  
   
--   Nasıl yapılır sırası dosyaları, dosya boyutu bayt cinsinden göre gruplara belirtilen bir boyuttan daha az olan dosyalar yoksayılıyor.  
+- Nasıl yapılır sırası dosyaları, dosya boyutu bayt cinsinden göre gruplara belirtilen bir boyuttan daha az olan dosyalar yoksayılıyor.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, sorgulama ve bunların dosya boyutunu bayt cinsinden bağlı olarak, Grup dosyaları göster beş ayrı sorguları içerir. Bu örnekler diğer bazı özellikte sorgu temel kolayca değiştirebilirsiniz <xref:System.IO.FileInfo> nesne.  
