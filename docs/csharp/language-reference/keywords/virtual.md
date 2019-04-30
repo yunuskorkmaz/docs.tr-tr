@@ -9,15 +9,15 @@ helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
 ms.openlocfilehash: eede3359b195661ff89a387e9b226bc970c27942
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61660378"
 ---
-# <a name="virtual-c-reference"></a><span data-ttu-id="f77f4-102">virtual (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="f77f4-102">virtual (C# Reference)</span></span>
+# <a name="virtual-c-reference"></a><span data-ttu-id="eac92-102">virtual (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="eac92-102">virtual (C# Reference)</span></span>
 
-<span data-ttu-id="f77f4-103">`virtual` Anahtar sözcüğü, bir yöntemi, özelliği, dizin oluşturucu veya olay bildirimini değiştirmek ve türetilen bir sınıfta geçersiz kılınması için izin vermek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="f77f4-103">The `virtual` keyword is used to modify a method, property, indexer, or event declaration and allow for it to be overridden in a derived class.</span></span> <span data-ttu-id="f77f4-104">Örneğin, bu yöntem devraldığı herhangi bir sınıf tarafından geçersiz kılınabilir:</span><span class="sxs-lookup"><span data-stu-id="f77f4-104">For example, this method can be overridden by any class that inherits it:</span></span>
+<span data-ttu-id="eac92-103">`virtual` Anahtar sözcüğü, bir yöntemi, özelliği, dizin oluşturucu veya olay bildirimini değiştirmek ve türetilen bir sınıfta geçersiz kılınması için izin vermek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="eac92-103">The `virtual` keyword is used to modify a method, property, indexer, or event declaration and allow for it to be overridden in a derived class.</span></span> <span data-ttu-id="eac92-104">Örneğin, bu yöntem devraldığı herhangi bir sınıf tarafından geçersiz kılınabilir:</span><span class="sxs-lookup"><span data-stu-id="eac92-104">For example, this method can be overridden by any class that inherits it:</span></span>
 
 ```csharp
 public virtual double Area() 
@@ -26,49 +26,49 @@ public virtual double Area()
 }
 ```
 
-<span data-ttu-id="f77f4-105">Uygulamasını bir sanal üye tarafından değiştirilebilen bir [geçersiz kılan üye](override.md) türetilen bir sınıfta.</span><span class="sxs-lookup"><span data-stu-id="f77f4-105">The implementation of a virtual member can be changed by an [overriding member](override.md) in a derived class.</span></span> <span data-ttu-id="f77f4-106">Nasıl kullanılacağı hakkında daha fazla bilgi için `virtual` anahtar sözcüğü, bkz: [geçersiz kılma ve yeni anahtar sözcüklerle sürüm oluşturma](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) ve [bilerek, geçersiz kılma kullanın ve yeni anahtar sözcüklerle](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).</span><span class="sxs-lookup"><span data-stu-id="f77f4-106">For more information about how to use the `virtual` keyword, see [Versioning with the Override and New Keywords](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) and [Knowing When to Use Override and New Keywords](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).</span></span>
+<span data-ttu-id="eac92-105">Uygulamasını bir sanal üye tarafından değiştirilebilen bir [geçersiz kılan üye](override.md) türetilen bir sınıfta.</span><span class="sxs-lookup"><span data-stu-id="eac92-105">The implementation of a virtual member can be changed by an [overriding member](override.md) in a derived class.</span></span> <span data-ttu-id="eac92-106">Nasıl kullanılacağı hakkında daha fazla bilgi için `virtual` anahtar sözcüğü, bkz: [geçersiz kılma ve yeni anahtar sözcüklerle sürüm oluşturma](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) ve [bilerek, geçersiz kılma kullanın ve yeni anahtar sözcüklerle](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).</span><span class="sxs-lookup"><span data-stu-id="eac92-106">For more information about how to use the `virtual` keyword, see [Versioning with the Override and New Keywords](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) and [Knowing When to Use Override and New Keywords](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="f77f4-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f77f4-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="eac92-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="eac92-107">Remarks</span></span>
 
-<span data-ttu-id="f77f4-108">Sanal bir yöntem çağrıldığında, nesnenin çalışma zamanı türü için geçersiz kılan bir üye denetlenir.</span><span class="sxs-lookup"><span data-stu-id="f77f4-108">When a virtual method is invoked, the run-time type of the object is checked for an overriding member.</span></span> <span data-ttu-id="f77f4-109">Türetilmiş sınıf üyesi kıldıysa, özgün üyesi olabilir. en çok türetilen bir sınıfta geçersiz kılan üye çağrılır.</span><span class="sxs-lookup"><span data-stu-id="f77f4-109">The overriding member in the most derived class is called, which might be the original member, if no derived class has overridden the member.</span></span>
+<span data-ttu-id="eac92-108">Sanal bir yöntem çağrıldığında, nesnenin çalışma zamanı türü için geçersiz kılan bir üye denetlenir.</span><span class="sxs-lookup"><span data-stu-id="eac92-108">When a virtual method is invoked, the run-time type of the object is checked for an overriding member.</span></span> <span data-ttu-id="eac92-109">Türetilmiş sınıf üyesi kıldıysa, özgün üyesi olabilir. en çok türetilen bir sınıfta geçersiz kılan üye çağrılır.</span><span class="sxs-lookup"><span data-stu-id="eac92-109">The overriding member in the most derived class is called, which might be the original member, if no derived class has overridden the member.</span></span>
 
-<span data-ttu-id="f77f4-110">Varsayılan olarak, sanal olmayan yöntemlerdir.</span><span class="sxs-lookup"><span data-stu-id="f77f4-110">By default, methods are non-virtual.</span></span> <span data-ttu-id="f77f4-111">Sanal olmayan bir yöntemi geçersiz kılınamıyor.</span><span class="sxs-lookup"><span data-stu-id="f77f4-111">You cannot override a non-virtual method.</span></span>
+<span data-ttu-id="eac92-110">Varsayılan olarak, sanal olmayan yöntemlerdir.</span><span class="sxs-lookup"><span data-stu-id="eac92-110">By default, methods are non-virtual.</span></span> <span data-ttu-id="eac92-111">Sanal olmayan bir yöntemi geçersiz kılınamıyor.</span><span class="sxs-lookup"><span data-stu-id="eac92-111">You cannot override a non-virtual method.</span></span>
 
-<span data-ttu-id="f77f4-112">Kullanamazsınız `virtual` değiştiriciyle `static`, `abstract`, `private`, veya `override` değiştiriciler.</span><span class="sxs-lookup"><span data-stu-id="f77f4-112">You cannot use the `virtual` modifier with the `static`, `abstract`, `private`, or `override` modifiers.</span></span> <span data-ttu-id="f77f4-113">Aşağıdaki örnek, sanal bir özellik gösterilmiştir:</span><span class="sxs-lookup"><span data-stu-id="f77f4-113">The following example shows a virtual property:</span></span>
+<span data-ttu-id="eac92-112">Kullanamazsınız `virtual` değiştiriciyle `static`, `abstract`, `private`, veya `override` değiştiriciler.</span><span class="sxs-lookup"><span data-stu-id="eac92-112">You cannot use the `virtual` modifier with the `static`, `abstract`, `private`, or `override` modifiers.</span></span> <span data-ttu-id="eac92-113">Aşağıdaki örnek, sanal bir özellik gösterilmiştir:</span><span class="sxs-lookup"><span data-stu-id="eac92-113">The following example shows a virtual property:</span></span>
 
 [!code-csharp[csrefKeywordsModifiers#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#26)]
 
-<span data-ttu-id="f77f4-114">Sanal özellikler, bildirim ve çağırma söz dizimi farklılıkları dışında soyut yöntemler gibi davranır.</span><span class="sxs-lookup"><span data-stu-id="f77f4-114">Virtual properties behave like abstract methods, except for the differences in declaration and invocation syntax.</span></span>
+<span data-ttu-id="eac92-114">Sanal özellikler, bildirim ve çağırma söz dizimi farklılıkları dışında soyut yöntemler gibi davranır.</span><span class="sxs-lookup"><span data-stu-id="eac92-114">Virtual properties behave like abstract methods, except for the differences in declaration and invocation syntax.</span></span>
 
-- <span data-ttu-id="f77f4-115">Kullanılacak bir hata olduğunu `virtual` değiştirici statik bir özellik.</span><span class="sxs-lookup"><span data-stu-id="f77f4-115">It is an error to use the `virtual` modifier on a static property.</span></span>
+- <span data-ttu-id="eac92-115">Kullanılacak bir hata olduğunu `virtual` değiştirici statik bir özellik.</span><span class="sxs-lookup"><span data-stu-id="eac92-115">It is an error to use the `virtual` modifier on a static property.</span></span>
 
-- <span data-ttu-id="f77f4-116">Sanal bir devralınan özelliği kullanan bir özellik bildirimi dahil olmak üzere türetilen bir sınıfta kılınabilir `override` değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="f77f4-116">A virtual inherited property can be overridden in a derived class by including a property declaration that uses the `override` modifier.</span></span>
+- <span data-ttu-id="eac92-116">Sanal bir devralınan özelliği kullanan bir özellik bildirimi dahil olmak üzere türetilen bir sınıfta kılınabilir `override` değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="eac92-116">A virtual inherited property can be overridden in a derived class by including a property declaration that uses the `override` modifier.</span></span>
 
-## <a name="example"></a><span data-ttu-id="f77f4-117">Örnek</span><span class="sxs-lookup"><span data-stu-id="f77f4-117">Example</span></span>
+## <a name="example"></a><span data-ttu-id="eac92-117">Örnek</span><span class="sxs-lookup"><span data-stu-id="eac92-117">Example</span></span>
 
-<span data-ttu-id="f77f4-118">Bu örnekte, `Shape` sınıfı içeren iki koordinat `x`, `y`ve `Area()` sanal yöntem.</span><span class="sxs-lookup"><span data-stu-id="f77f4-118">In this example, the `Shape` class contains the two coordinates `x`, `y`, and the `Area()` virtual method.</span></span> <span data-ttu-id="f77f4-119">Farklı şekil sınıflar gibi `Circle`, `Cylinder`, ve `Sphere` devral `Shape` sınıfı ve yüzey her şekil için hesaplanır.</span><span class="sxs-lookup"><span data-stu-id="f77f4-119">Different shape classes such as `Circle`, `Cylinder`, and `Sphere` inherit the `Shape` class, and the surface area is calculated for each figure.</span></span> <span data-ttu-id="f77f4-120">Her bir türetilmiş sınıf kendi geçersiz kılma uygulaması olan `Area()`.</span><span class="sxs-lookup"><span data-stu-id="f77f4-120">Each derived class has its own override implementation of `Area()`.</span></span>
+<span data-ttu-id="eac92-118">Bu örnekte, `Shape` sınıfı içeren iki koordinat `x`, `y`ve `Area()` sanal yöntem.</span><span class="sxs-lookup"><span data-stu-id="eac92-118">In this example, the `Shape` class contains the two coordinates `x`, `y`, and the `Area()` virtual method.</span></span> <span data-ttu-id="eac92-119">Farklı şekil sınıflar gibi `Circle`, `Cylinder`, ve `Sphere` devral `Shape` sınıfı ve yüzey her şekil için hesaplanır.</span><span class="sxs-lookup"><span data-stu-id="eac92-119">Different shape classes such as `Circle`, `Cylinder`, and `Sphere` inherit the `Shape` class, and the surface area is calculated for each figure.</span></span> <span data-ttu-id="eac92-120">Her bir türetilmiş sınıf kendi geçersiz kılma uygulaması olan `Area()`.</span><span class="sxs-lookup"><span data-stu-id="eac92-120">Each derived class has its own override implementation of `Area()`.</span></span>
 
-<span data-ttu-id="f77f4-121">Dikkat devralınan sınıflar `Circle`, `Sphere`, ve `Cylinder` tüm taban sınıf başlatma oluşturucular aşağıdaki bildirimde gösterildiği gibi kullanın.</span><span class="sxs-lookup"><span data-stu-id="f77f4-121">Notice that the inherited classes `Circle`, `Sphere`, and `Cylinder` all use constructors that initialize the base class, as shown in the following declaration.</span></span>
+<span data-ttu-id="eac92-121">Dikkat devralınan sınıflar `Circle`, `Sphere`, ve `Cylinder` tüm taban sınıf başlatma oluşturucular aşağıdaki bildirimde gösterildiği gibi kullanın.</span><span class="sxs-lookup"><span data-stu-id="eac92-121">Notice that the inherited classes `Circle`, `Sphere`, and `Cylinder` all use constructors that initialize the base class, as shown in the following declaration.</span></span>
 
 ```csharp
 public Cylinder(double r, double h): base(r, h) {}
 ```
 
-<span data-ttu-id="f77f4-122">Aşağıdaki program hesaplar ve her bir şekil için uygun alan uygun uygulama çağırarak görüntüler `Area()` yöntemiyle ilişkili nesne göre yöntemi.</span><span class="sxs-lookup"><span data-stu-id="f77f4-122">The following program calculates and displays the appropriate area for each figure by invoking the appropriate implementation of the `Area()` method, according to the object that is associated with the method.</span></span>
+<span data-ttu-id="eac92-122">Aşağıdaki program hesaplar ve her bir şekil için uygun alan uygun uygulama çağırarak görüntüler `Area()` yöntemiyle ilişkili nesne göre yöntemi.</span><span class="sxs-lookup"><span data-stu-id="eac92-122">The following program calculates and displays the appropriate area for each figure by invoking the appropriate implementation of the `Area()` method, according to the object that is associated with the method.</span></span>
 
 [!code-csharp[csrefKeywordsModifiers#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#23)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="f77f4-123">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="f77f4-123">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="eac92-123">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="eac92-123">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="f77f4-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f77f4-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eac92-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="eac92-124">See also</span></span>
 
-- [<span data-ttu-id="f77f4-125">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="f77f4-125">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="f77f4-126">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="f77f4-126">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="f77f4-127">Değiştiriciler</span><span class="sxs-lookup"><span data-stu-id="f77f4-127">Modifiers</span></span>](modifiers.md)
-- [<span data-ttu-id="f77f4-128">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="f77f4-128">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="f77f4-129">Çok biçimlilik</span><span class="sxs-lookup"><span data-stu-id="f77f4-129">Polymorphism</span></span>](../../programming-guide/classes-and-structs/polymorphism.md)
-- [<span data-ttu-id="f77f4-130">abstract</span><span class="sxs-lookup"><span data-stu-id="f77f4-130">abstract</span></span>](abstract.md)
-- [<span data-ttu-id="f77f4-131">override</span><span class="sxs-lookup"><span data-stu-id="f77f4-131">override</span></span>](override.md)
-- [<span data-ttu-id="f77f4-132">new</span><span class="sxs-lookup"><span data-stu-id="f77f4-132">new</span></span>](new.md)
+- [<span data-ttu-id="eac92-125">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="eac92-125">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="eac92-126">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="eac92-126">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="eac92-127">Değiştiriciler</span><span class="sxs-lookup"><span data-stu-id="eac92-127">Modifiers</span></span>](modifiers.md)
+- [<span data-ttu-id="eac92-128">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="eac92-128">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="eac92-129">Çok biçimlilik</span><span class="sxs-lookup"><span data-stu-id="eac92-129">Polymorphism</span></span>](../../programming-guide/classes-and-structs/polymorphism.md)
+- [<span data-ttu-id="eac92-130">abstract</span><span class="sxs-lookup"><span data-stu-id="eac92-130">abstract</span></span>](abstract.md)
+- [<span data-ttu-id="eac92-131">override</span><span class="sxs-lookup"><span data-stu-id="eac92-131">override</span></span>](override.md)
+- [<span data-ttu-id="eac92-132">new</span><span class="sxs-lookup"><span data-stu-id="eac92-132">new</span></span>](new.md)
