@@ -3,11 +3,11 @@ title: System.Uri’de Uluslararası Kaynak Tanımlayıcı Desteği
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
 ms.openlocfilehash: 589c49859592cba55cb5110fe65fdc49e451f478
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642366"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>System.Uri’de Uluslararası Kaynak Tanımlayıcı Desteği
 <xref:System.Uri?displayProperty=nameWithType> Uluslararası kaynak tanımlayıcı (IRI) ve Uluslararası yapılan etki alanı adı (IDN) desteği sayesinde, sınıf genişletilmişse. Bu iyileştirmeler, .NET Framework 3.5, 3.0 SP1 ve 2.0 SP1'i kullanılabilir.  
@@ -15,11 +15,11 @@ ms.locfileid: "59769118"
 ## <a name="iri-and-idn-support"></a>IRI ve IDN desteği  
  Web adresleri, genellikle Tekdüzen Kaynak Tanımlayıcıları (çok kısıtlı bir karakter kümesi oluşan URI) kullanılarak ifade edilir:  
   
--   Büyük ve küçük ASCII harf İngilizce alfabetik.  
+- Büyük ve küçük ASCII harf İngilizce alfabetik.  
   
--   0'dan 9 basamak.  
+- 0'dan 9 basamak.  
   
--   Diğer ASCII simgeleri küçük bir sayı.  
+- Diğer ASCII simgeleri küçük bir sayı.  
   
  Belirtimleri için URI RFC 2396 ve RFC 3986'ya Internet Engineering Task Force (IETF) tarafından yayınlanan belgelenmiştir.  
   

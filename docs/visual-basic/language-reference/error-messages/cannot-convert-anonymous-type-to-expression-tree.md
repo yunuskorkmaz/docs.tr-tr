@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36548
 ms.assetid: 27de068f-080e-4160-86bf-1ec23fd1925a
 ms.openlocfilehash: a6ddbaa358709fe306f1529112d1f2bd0a715a91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649965"
 ---
 # <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>Anonim türün bir alanı başka bir alanı başlatmak için kullanıldığından; anonim tür, ifade ağacına dönüştürülemiyor.
 Anonim türün başka bir özelliğini başlatmak için anonim türün bir özellik kullanıldığında, derleyici dönüştürülmesi anonim bir ifade ağacı kabul etmiyor. Örneğin, aşağıdaki kodda, `Prop1` başlatma listesinde bildirilen ve ardından ilk değeri olarak kullanılan `Prop2`.  
@@ -35,7 +35,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   İlk değeri atamak `Prop1` yerel bir değişkene. Bu değişken hem de Ata `Prop1` ve `Prop2`aşağıdaki kodda gösterildiği gibi.  
+- İlk değeri atamak `Prop1` yerel bir değişkene. Bu değişken hem de Ata `Prop1` ve `Prop2`aşağıdaki kodda gösterildiği gibi.  
   
     ```  
     Sub Main()  

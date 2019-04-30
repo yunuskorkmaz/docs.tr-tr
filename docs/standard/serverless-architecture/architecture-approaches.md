@@ -5,11 +5,11 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 04ad383586f974bb2dccc4623a9a254f5668dab4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640210"
 ---
 # <a name="architecture-approaches"></a>Mimari yaklaşımları
 
@@ -77,7 +77,7 @@ Sunucusuz bir veya daha fazla katmanı uygulamak için kullanılabilir.
 
 Mikro hizmetler, diğer mimari yaklaşımları birbirini dışlayan olması gerekmez. Örneğin, N katmanlı bir mimari, mikro hizmetler için orta katman kullanabilir. Mikro hizmetler çeşitli yollarla, kapsayıcılar için IIS konaklardaki sanal dizinlerden uygulamak mümkündür. Mikro hizmet özelliklerini bunları sunucusuz uygulamalar için özellikle ideal hale getirir.
 
-![Mikro hizmet mimarisi](./media/microservices-architecture.png)
+![Mikro hizmetler mimarisi](./media/microservices-architecture.png)
 
 Mikro hizmet mimarileri profesyoneller şunlardır:
 

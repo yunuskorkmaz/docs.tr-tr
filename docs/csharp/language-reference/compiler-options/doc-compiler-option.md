@@ -13,11 +13,11 @@ helpviewer_keywords:
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
 ms.openlocfilehash: c46118a9b02df653844a0ca04f9e8f9952a957c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662913"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C# Derleyici Seçenekleri)
 **-Doc** seçenek belge yorumlarını bir XML dosyasında yerleştirmenize olanak tanır.  
@@ -35,9 +35,9 @@ ms.locfileid: "59333606"
 ## <a name="remarks"></a>Açıklamalar  
  Kaynak kodu dosyalarında aşağıdaki önünde belge açıklamaları işlenir ve XML dosyasına eklendi:  
   
--   Gibi kullanıcı tanımlı türler bir [sınıfı](../../../csharp/language-reference/keywords/class.md), [temsilci](../../../csharp/language-reference/keywords/delegate.md), veya [arabirimi](../../../csharp/language-reference/keywords/interface.md)  
+- Gibi kullanıcı tanımlı türler bir [sınıfı](../../../csharp/language-reference/keywords/class.md), [temsilci](../../../csharp/language-reference/keywords/delegate.md), veya [arabirimi](../../../csharp/language-reference/keywords/interface.md)  
   
--   Bir alan olarak tür üyeleri [olay](../../../csharp/language-reference/keywords/event.md), [özelliği](../../../csharp/programming-guide/classes-and-structs/using-properties.md), veya yöntemi  
+- Bir alan olarak tür üyeleri [olay](../../../csharp/language-reference/keywords/event.md), [özelliği](../../../csharp/programming-guide/classes-and-structs/using-properties.md), veya yöntemi  
   
  Ana içeren kaynak kodu dosyasının çıkış önce XML öğesine var.  
   

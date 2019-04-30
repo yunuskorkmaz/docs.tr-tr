@@ -16,11 +16,11 @@ ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650264"
 ---
 # <a name="composite-formatting"></a>Bileşik Biçimlendirme
 
@@ -126,11 +126,11 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
   
 3. Değer uyguluyorsa <xref:System.IFormattable> arabirimi, arabirimin <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> yöntemi çağrılır. Yönteme *formatString* değeri biçim öğesinde varsa veya `null` değilse. <xref:System.IFormatProvider> Bağımsız değişkeni aşağıdaki şekilde belirlenir:  
   
-    -   Bir bileşik biçimlendirme yöntemi ile bir null olmayan bir sayı değeri <xref:System.IFormatProvider> bağımsız değişken çağrılırsa, çalışma zamanı bir <xref:System.Globalization.NumberFormatInfo> nesnesinin kendi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yöntemi. Bağımsız değişkenin değerini ise tane sağlanamazsa, `null`, veya bileşik biçimlendirme yöntemi yoksa bir <xref:System.IFormatProvider> parametresi <xref:System.Globalization.NumberFormatInfo> nesnesi geçerli iş parçacığı kültürü kullanılır.  
+    - Bir bileşik biçimlendirme yöntemi ile bir null olmayan bir sayı değeri <xref:System.IFormatProvider> bağımsız değişken çağrılırsa, çalışma zamanı bir <xref:System.Globalization.NumberFormatInfo> nesnesinin kendi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yöntemi. Bağımsız değişkenin değerini ise tane sağlanamazsa, `null`, veya bileşik biçimlendirme yöntemi yoksa bir <xref:System.IFormatProvider> parametresi <xref:System.Globalization.NumberFormatInfo> nesnesi geçerli iş parçacığı kültürü kullanılır.  
   
-    -   Bir tarih ve saat değeri, bir bileşik biçimlendirme yöntemi ile null olmayan bir <xref:System.IFormatProvider> bağımsız değişken çağrılırsa, çalışma zamanı bir <xref:System.Globalization.DateTimeFormatInfo> nesnesinin kendi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yöntemi. Bağımsız değişkenin değerini ise tane sağlanamazsa, `null`, veya bileşik biçimlendirme yöntemi yoksa bir <xref:System.IFormatProvider> parametresi <xref:System.Globalization.DateTimeFormatInfo> nesnesi geçerli iş parçacığı kültürü kullanılır.  
+    - Bir tarih ve saat değeri, bir bileşik biçimlendirme yöntemi ile null olmayan bir <xref:System.IFormatProvider> bağımsız değişken çağrılırsa, çalışma zamanı bir <xref:System.Globalization.DateTimeFormatInfo> nesnesinin kendi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yöntemi. Bağımsız değişkenin değerini ise tane sağlanamazsa, `null`, veya bileşik biçimlendirme yöntemi yoksa bir <xref:System.IFormatProvider> parametresi <xref:System.Globalization.DateTimeFormatInfo> nesnesi geçerli iş parçacığı kültürü kullanılır.  
   
-    -   Diğer tür nesneler için bir bileşik biçimlendirme yöntemi ile aranan bir <xref:System.IFormatProvider> bağımsız değişken değeri doğrudan geçirilir <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> uygulaması. Aksi takdirde, `null` geçirilir <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> uygulaması.  
+    - Diğer tür nesneler için bir bileşik biçimlendirme yöntemi ile aranan bir <xref:System.IFormatProvider> bağımsız değişken değeri doğrudan geçirilir <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> uygulaması. Aksi takdirde, `null` geçirilir <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> uygulaması.  
   
 4. Türün parametresiz `ToString` yöntemini geçersiz kılan <xref:System.Object.ToString?displayProperty=nameWithType> veya temel sınıfının davranışını devralan, çağrılır. Bu durumda, belirtilen biçim dizesi tarafından *formatString* bileşen biçim öğesinde varsa, göz ardı edilir.  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - FileDialog class [Windows Forms]
 ms.assetid: 85a8fb62-c7d9-4a30-9b74-1cd10efe6ccb
 ms.openlocfilehash: e8c3a0abe00f1f209c138dff234cdcabf766d979
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651499"
 ---
 # <a name="filedialog-class"></a>FileDialog Sınıfı
 Windows Forms <xref:System.Windows.Forms.FileDialog> için genel temel sınıfı <xref:System.Windows.Forms.OpenFileDialog> ve <xref:System.Windows.Forms.SaveFileDialog> bileşenleri. Değişiklikler yapabilir <xref:System.Windows.Forms.FileDialog> görünümünü ve davranışını, uygulama üzerinde çalışan Windows sürümüne bağlı olarak, bu iletişim kutularından etkileyen sınıfı.  

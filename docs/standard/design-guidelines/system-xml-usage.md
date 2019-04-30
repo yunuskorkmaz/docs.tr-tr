@@ -1,17 +1,17 @@
 ---
-title: System.Xml kullanımı
+title: System.Xml Kullanımı
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 82302f0d-a621-4c6f-b57d-999bd61f21a6
 author: KrzysztofCwalina
 ms.openlocfilehash: fc94ac62d1f2413c5f51446a8f6d0a52d9151557
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650134"
 ---
-# <a name="systemxml-usage"></a>System.Xml kullanımı
+# <a name="systemxml-usage"></a>System.Xml Kullanımı
 Bu bölümde bulunan çeşitli türlerde kullanım bahsettiği <xref:System.Xml?displayProperty=nameWithType> XML verileri temsil etmek için kullanılan ad alanları.  
   
  **X DO NOT** kullanmak <xref:System.Xml.XmlNode> veya <xref:System.Xml.XmlDocument> XML verileri temsil etmek için. Örneklerini kullanarak favor <xref:System.Xml.XPath.IXPathNavigable>, <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, ya da alt türlerini <xref:System.Xml.Linq.XNode> yerine. `XmlNode` ve `XmlDocument` genel API'leri açığa çıkarmak için tasarlanmamıştır.  

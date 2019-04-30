@@ -7,11 +7,11 @@ ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644637"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework'te Yan Yana Yürütme
 Yan yana yürütme uygulamanın veya bileşenin birden çok sürümünü aynı bilgisayarda çalıştırma yeteneğidir. Bir bilgisayar üzerinde ortak dil çalışma zamanı sürümünün ve bir uygulamanın ve çalışma zamanının bir sürümünü kullanan bileşenin çeşitli sürümlerine aynı anda sahip olabilirsiniz.  
@@ -33,15 +33,15 @@ Yan yana yürütme uygulamanın veya bileşenin birden çok sürümünü aynı b
   
  Yan yana yürütme ve .NET Framework DLL çakışmalarını gidermek için aşağıdaki özellikleri sağlar:  
   
--   Tanımlayıcı adlandırılmış derlemeler.  
+- Tanımlayıcı adlandırılmış derlemeler.  
   
      Yan yana yürütme bir derlemenin belirli bir sürümüne tür bilgisi bağlamak için tanımlayıcı adlandırılmış derlemeler kullanır. Bu bir uygulama ya da bileşenin bir derlemenin geçersiz bir sürümüne bağlanmasını önler. Tanımlayıcı adlandırılmış derlemeler ayrıca bir bilgisayar üzerinde var olan bir dosyanın çeşitli sürümlerine ve uygulamalar tarafından kullanılmasına izin verir. Daha fazla bilgi için [Strong-Named derlemeleri](../../../docs/framework/app-domains/strong-named-assemblies.md).  
   
--   Sürüm uyumlu kod depolama.  
+- Sürüm uyumlu kod depolama.  
   
      .NET Framework genel derleme önbelleğinde sürüm ile uyumlu kod depolamayı sağlar. Genel birleştirme önbelleği .NET Framework yüklü olan tüm bilgisayarlar üzerinde sunulan mevcut bilgisayar düzeyindeki kod önbelleğidir. Sürüm bazlı derlemeleri, kültür ve yayımcı bilgilerini depolar ve bileşenlerin ve uygulamaların birden çok sürümünü destekler. Daha fazla bilgi için [genel derleme önbelleği](../../../docs/framework/app-domains/gac.md).  
   
--   Yalıtım.  
+- Yalıtım.  
   
      .NET Framework kullanarak yalıtım modunda çalışan uygulamalar ve bileşenler oluşturabilirsiniz. Yalıtım, yan yana yürütmenin temel bir bileşenidir. Bir bileşenin ya da uygulamanın kullandığınız çeşitli sürümleri arasında güvenli olan kaynak paylaşmayı ve kaynaklarla uyumlu olmayı sağlar. Yalıtım ayrıca sürüme özgü bir şekilde dosya depolamayı da içerir. Yalıtım hakkında daha fazla bilgi için bkz: [yan yana yürütme için bileşenleri oluşturma için yönergeler](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md).  
   
@@ -66,9 +66,9 @@ Yan yana yürütme uygulamanın veya bileşenin birden çok sürümünü aynı b
 ## <a name="determining-which-version-of-the-runtime-to-load"></a>Çalışma Zamanının Hangi Sürümünün Yükleneceğini Belirleme  
  Ortak dil çalışma zamanı, bir uygulama için çalışma zamanının hangi sürümünü belirlemek için aşağıdaki bilgileri kullanır:  
   
--   Kullanılabilir çalışma zamanı sürümleri.  
+- Kullanılabilir çalışma zamanı sürümleri.  
   
--   Bir uygulamanın desteklediği çalışma zamanı sürümleri.  
+- Bir uygulamanın desteklediği çalışma zamanı sürümleri.  
   
 ### <a name="supported-runtime-versions"></a>Desteklenen çalışma zamanı sürümleri  
  Çalışma zamanı, bir uygulamanın çalışma zamanının hangi sürümünün desteklediği belirlemek için uygulama yapılandırma dosyası ve taşınabilir yürütülebilir (PE) dosya üstbilgisi'ni kullanır. Herhangi bir uygulama yapılandırma dosyası varsa, çalışma zamanı bu sürüm varsa uygulamanın PE dosya üst bilgisinde belirtilen çalışma zamanı sürümü yükler.  

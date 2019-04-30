@@ -1,5 +1,5 @@
 ---
-title: XML verilerine nesne hiyerarşisi eşleme
+title: XML Verilerine Nesne Hiyerarşisi Eşleme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b1808121049c6344b72b1c9d99e19c46422dfa0c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650287"
 ---
-# <a name="mapping-the-object-hierarchy-to-xml-data"></a>XML verilerine nesne hiyerarşisi eşleme
+# <a name="mapping-the-object-hierarchy-to-xml-data"></a>XML Verilerine Nesne Hiyerarşisi Eşleme
 Bir XML belgesi bellekte olduğunda, kavramsal bir ağaç gösterimidir. Programlama için ağaç düğümleri erişmek için bir nesne hiyerarşisine sahip. Aşağıdaki örnek nasıl düğümleri XML içeriği haline gelir gösterir.  
   
  XML XML belge nesne modeli (DOM) içine okunduğu gibi parçaları düğümlere çevrilir ve bu düğümler, düğüm türü ve değerleri gibi kendileri hakkında ek meta veriler korur. Düğüm türü, nesne ve hangi işlemler gerçekleştirilebilir belirler ve hangi özellikleri ayarlamak veya alınır.  
@@ -193,7 +193,7 @@ public class Sample
 |\<! DOCTYPE öğeleri [\<! Varlık numarası "123" >] >|\<! DOCTYPE öğeleri [\<! Varlık numarası "123" >]|XmlNodeType.DocumentType|  
 |\<Öğeler >|\<Öğeler >|XmlNodeType.Element|  
 |\<Öğesi >|\<Öğesi >|XmlNodeType.Element|  
-|Bir varlık ile test edin: &number;|Bir varlık ile test: 123|XmlNodeType.Text|  
+|Bir varlık ile test edin: &number;|Bir varlık ile test edin: 123|XmlNodeType.Text|  
 |\</ Öğesi >|\</ Öğesi >|XmlNodeType.EndElement|  
 |\<Öğesi >|\<Öğesi >|XmNodeType.Element|  
 |bir alt öğesi ile test|bir alt öğesi ile test|XmlNodeType.Text|  
@@ -206,7 +206,7 @@ public class Sample
 |def|def|XmlNodeType.Text|  
 |\</ Öğesi >|\</ Öğesi >|XmlNodeType.EndElement|  
 |\<Öğesi >|\<Öğesi >|XmlNodeType.Element|  
-|Char varlığı ile test: &\#65;|Char varlığı ile test: A|XmlNodeType.Text|  
+|Char varlığı ile test: &\#65;|Bir karakter varlık ile test edin: BİR|XmlNodeType.Text|  
 |\</ Öğesi >|\</ Öğesi >|XmlNodeType.EndElement|  
 |\<!--Bu öğe. on dört karakter-->|\<--Bu öğe. on dört karakter-->|XmlNodeType.Comment|  
 |\<Öğesi >|\<Öğesi >|XmlNodeType.Element|  

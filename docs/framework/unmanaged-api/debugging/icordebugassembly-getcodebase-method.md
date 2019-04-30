@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAssembly::GetCodeBase Metodu
+title: ICorDebugAssembly::GetCodeBase Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAssembly.GetCodeBase
@@ -18,13 +18,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6236d6b5349a9c2a528a85559c0cbc02c8da381
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645493"
 ---
-# <a name="icordebugassemblygetcodebase-method"></a>ICorDebugAssembly::GetCodeBase Metodu
+# <a name="icordebugassemblygetcodebase-method"></a>ICorDebugAssembly::GetCodeBase Yöntemi
 Bu yöntem .NET Framework'ün geçerli sürümde uygulanmadı.  
   
 ## <a name="syntax"></a>Sözdizimi  

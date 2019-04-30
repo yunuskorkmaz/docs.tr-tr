@@ -4,13 +4,13 @@ description: C# LINQ join tümcesinin sonuçlarını sıralama öğrenin.
 ms.date: 12/01/2016
 ms.assetid: a7458901-1201-4c25-b8d9-c04ca52e0eb9
 ms.openlocfilehash: f60000b83bf378dd8740b7255d421dd4335614c4
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61659871"
 ---
-# <a name="order-the-results-of-a-join-clause"></a>Join tümcesinin sonuçlarını sıralama
+# <a name="order-the-results-of-a-join-clause"></a>Join yan tümcesinin sonuçlarını sıralama
 
 Bu örnek, bir birleştirme işleminin sonuçlarını sıralama gösterilmektedir. Sıralama alanına katılım işleminden gerçekleştirildiğini unutmayın. Hizmetini kullanıyor olsanız da bir `orderby` yan tümcesi bir veya daha fazla kaynak ile birleştirme öncesinde dizilerinin, genellikle bunu önermiyoruz. Bazı LINQ sağlayıcıları sıralama alanına katılım işleminden koruyabilir değil.
 

@@ -3,11 +3,11 @@ title: ModelItem Düzenleme Bağlamını Kullanma
 ms.date: 03/30/2017
 ms.assetid: 7f9f1ea5-0147-4079-8eca-be94f00d3aa1
 ms.openlocfilehash: a2628bbbf2f6684e5d484b05cd5a2ac622f3b664
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669504"
 ---
 # <a name="using-the-modelitem-editing-context"></a>ModelItem Düzenleme Bağlamını Kullanma
 <xref:System.Activities.Presentation.Model.ModelItem> İçerik düzenleme, tasarımcı ile iletişim kurmak için ana bilgisayar uygulaması kullanan nesnedir. <xref:System.Activities.Presentation.EditingContext> iki yöntem sunar <xref:System.Activities.Presentation.EditingContext.Items%2A> ve <xref:System.Activities.Presentation.EditingContext.Services%2A>, kullanılabilir  
@@ -99,48 +99,48 @@ protected override void OnModelItemChanged(object newItem)
   
  Öğeler:  
   
--   <xref:System.Activities.Presentation.Hosting.AssemblyContextControlItem>: İş akışı içinde denetimler (örneğin, ifade düzenleyicisini) için kullanılan yerel başvurulan derlemelerin listesini yönetir.  
+- <xref:System.Activities.Presentation.Hosting.AssemblyContextControlItem>: İş akışı içinde denetimler (örneğin, ifade düzenleyicisini) için kullanılan yerel başvurulan derlemelerin listesini yönetir.  
   
--   <xref:System.Activities.Presentation.Hosting.ReadOnlyState>: Tasarımcı, bir salt okunur durumda olup olmadığını gösterir.  
+- <xref:System.Activities.Presentation.Hosting.ReadOnlyState>: Tasarımcı, bir salt okunur durumda olup olmadığını gösterir.  
   
--   <xref:System.Activities.Presentation.View.Selection>: Şu anda seçili olan nesnelerinin koleksiyonunu tanımlar.  
+- <xref:System.Activities.Presentation.View.Selection>: Şu anda seçili olan nesnelerinin koleksiyonunu tanımlar.  
   
--   <xref:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem>:  
+- <xref:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem>:  
   
--   <xref:System.Activities.Presentation.WorkflowFileItem>: Geçerli düzenleme oturumunu temel alan bir dosya hakkında bilgi sağlar.  
+- <xref:System.Activities.Presentation.WorkflowFileItem>: Geçerli düzenleme oturumunu temel alan bir dosya hakkında bilgi sağlar.  
   
  Hizmetler:  
   
--   <xref:System.Activities.Presentation.Model.AttachedPropertiesService>: Geçerli örneğine eklenecek özellikleri sağlayan kullanarak <xref:System.Activities.Presentation.Model.AttachedPropertiesService.AddProperty%2A>.  
+- <xref:System.Activities.Presentation.Model.AttachedPropertiesService>: Geçerli örneğine eklenecek özellikleri sağlayan kullanarak <xref:System.Activities.Presentation.Model.AttachedPropertiesService.AddProperty%2A>.  
   
--   <xref:System.Activities.Presentation.View.DesignerView>: Tasarımcı tuvaline özelliklerine erişim sağlar.  
+- <xref:System.Activities.Presentation.View.DesignerView>: Tasarımcı tuvaline özelliklerine erişim sağlar.  
   
--   <xref:System.Activities.Presentation.IActivityToolboxService>: Güncelleştirilecek araç içeriğini sağlar.  
+- <xref:System.Activities.Presentation.IActivityToolboxService>: Güncelleştirilecek araç içeriğini sağlar.  
   
--   <xref:System.Activities.Presentation.Hosting.ICommandService>: Tasarımcı komutlarını (örneğin, bağlam menüsü) özel tarafından sağlanan hizmet uygulamaları ile tümleştirme için kullanılır.  
+- <xref:System.Activities.Presentation.Hosting.ICommandService>: Tasarımcı komutlarını (örneğin, bağlam menüsü) özel tarafından sağlanan hizmet uygulamaları ile tümleştirme için kullanılır.  
   
--   <xref:System.Activities.Presentation.Debug.IDesignerDebugView>: Tasarımcı hata ayıklayıcı için işlevsellik sağlar.  
+- <xref:System.Activities.Presentation.Debug.IDesignerDebugView>: Tasarımcı hata ayıklayıcı için işlevsellik sağlar.  
   
--   <xref:System.Activities.Presentation.View.IExpressionEditorService>: İfade Düzenleyicisi iletişim erişim sağlar.  
+- <xref:System.Activities.Presentation.View.IExpressionEditorService>: İfade Düzenleyicisi iletişim erişim sağlar.  
   
--   <xref:System.Activities.Presentation.IIntegratedHelpService>: Tasarımcı, tümleşik Yardım işlevleri sunar.  
+- <xref:System.Activities.Presentation.IIntegratedHelpService>: Tasarımcı, tümleşik Yardım işlevleri sunar.  
   
--   <xref:System.Activities.Presentation.Validation.IValidationErrorService>: Doğrulama hataları kullanarak erişim sağlayan <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A>.  
+- <xref:System.Activities.Presentation.Validation.IValidationErrorService>: Doğrulama hataları kullanarak erişim sağlayan <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A>.  
   
--   <xref:System.Activities.Presentation.IWorkflowDesignerStorageService>: Veri depolayıp almak için bir iç hizmet sağlar. Bu hizmet, .NET Framework tarafından dahili olarak kullanılır ve dış kullanılmak üzere tasarlanmamıştır.  
+- <xref:System.Activities.Presentation.IWorkflowDesignerStorageService>: Veri depolayıp almak için bir iç hizmet sağlar. Bu hizmet, .NET Framework tarafından dahili olarak kullanılır ve dış kullanılmak üzere tasarlanmamıştır.  
   
--   <xref:System.Activities.Presentation.IXamlLoadErrorService>: XAML yükleme koleksiyonu kullanarak bir hata için erişim sağlayan <xref:System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors%2A>.  
+- <xref:System.Activities.Presentation.IXamlLoadErrorService>: XAML yükleme koleksiyonu kullanarak bir hata için erişim sağlayan <xref:System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors%2A>.  
   
--   <xref:System.Activities.Presentation.Services.ModelService>: İş akışının düzenlenmekte olan modeli ile etkileşim için tasarımcı tarafından kullanılır.  
+- <xref:System.Activities.Presentation.Services.ModelService>: İş akışının düzenlenmekte olan modeli ile etkileşim için tasarımcı tarafından kullanılır.  
   
--   <xref:System.Activities.Presentation.Model.ModelTreeManager>: Model öğesi ağacı kullanarak kök erişim sağlayan <xref:System.Activities.Presentation.Model.ModelItem.Root%2A>.  
+- <xref:System.Activities.Presentation.Model.ModelTreeManager>: Model öğesi ağacı kullanarak kök erişim sağlayan <xref:System.Activities.Presentation.Model.ModelItem.Root%2A>.  
   
--   <xref:System.Activities.Presentation.UndoEngine>: Geri alma sağlar ve işlevsellik Yinele.  
+- <xref:System.Activities.Presentation.UndoEngine>: Geri alma sağlar ve işlevsellik Yinele.  
   
--   <xref:System.Activities.Presentation.Services.ViewService>: Görsel öğeler, temel alınan model öğelerine eşler.  
+- <xref:System.Activities.Presentation.Services.ViewService>: Görsel öğeler, temel alınan model öğelerine eşler.  
   
--   <xref:System.Activities.Presentation.View.ViewStateService>: Model öğeleri için durumları depolarını görüntüleyin.  
+- <xref:System.Activities.Presentation.View.ViewStateService>: Model öğeleri için durumları depolarını görüntüleyin.  
   
--   <xref:System.Activities.Presentation.View.VirtualizedContainerService>: Sanal bir kapsayıcı UI davranışını özelleştirmek için kullanılır.  
+- <xref:System.Activities.Presentation.View.VirtualizedContainerService>: Sanal bir kapsayıcı UI davranışını özelleştirmek için kullanılır.  
   
--   <xref:System.Activities.Presentation.Hosting.WindowHelperService>: Kaydolun ve olay bildirimleri için temsilcileri kaydını silmek için kullanılır. Bir pencere sahibi ayarlamak de sağlar.
+- <xref:System.Activities.Presentation.Hosting.WindowHelperService>: Kaydolun ve olay bildirimleri için temsilcileri kaydını silmek için kullanılır. Bir pencere sahibi ayarlamak de sağlar.

@@ -1,15 +1,15 @@
 ---
-title: 'Örnek XML dosyası: Bir Namespace2 içinde birden fazla satın alma siparişi'
+title: 'Örnek XML Dosyası: Bir Namespace2 içinde birden fazla satın alma siparişi'
 ms.date: 07/20/2015
 ms.assetid: 595024f2-374a-4615-acb5-64fa1600f377
 ms.openlocfilehash: 2d5985fbfae543a6123d523a2caf4ec9ffc99a13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680824"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Örnek XML dosyası: Bir Namespace, birden fazla satın alma siparişi
+# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Örnek XML Dosyası: Bir Ad Alanında Birden Fazla Satın Alma Siparişi
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Bu dosya, çeşitli satın alma siparişleri içerir. Bir ad alanında XML'dir.  
   
 ## <a name="purchaseordersinnamespacexml"></a>PurchaseOrdersInNamespace.xml  

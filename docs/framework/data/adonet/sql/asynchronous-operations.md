@@ -3,11 +3,11 @@ title: Zaman Uyumsuz İşlemler
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
 ms.openlocfilehash: 72c2cc33185cb7fba5b8c8ce8d3805a6bb76f8d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663979"
 ---
 # <a name="asynchronous-operations"></a>Zaman Uyumsuz İşlemler
 Komut yürütme gibi bazı veritabanı işlemleri tamamlamak için önemli zaman alabilir. Böyle bir durumda, tek iş parçacıklı uygulamalar diğer işlemleri engelleyin ve kendi işlemleri devam etmeden önce tamamlanması komutunun bitmesini bekleyin gerekir. Buna karşılık, bir arka plan iş parçacığı uzun süredir çalışan işlem atamak için ön plan iş parçacığı işlemi kalmasına izin verir. Bir Windows uygulamasında, örneğin, bir arka plan iş parçacığı için uzun süredir çalışan işlem için temsilci seçme işlemi yürütülürken yanıt verebilir durumda kalması kullanıcı arabirimi iş parçacığı sağlar.  

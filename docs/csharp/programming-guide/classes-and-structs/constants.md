@@ -7,11 +7,11 @@ helpviewer_keywords:
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
 ms.openlocfilehash: 722e913403276cad48cf35a2d1923f74270feada
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651876"
 ---
 # <a name="constants-c-programming-guide"></a>Sabitler (C# Programlama Kılavuzu)
 Program süresince değiştirmeyin ve derleme zamanında bilinen değişmez değerler sabittir. Sabitler ile bildirilmiş [const](../../../csharp/language-reference/keywords/const.md) değiştiricisi. Yalnızca C# yerleşik türleri (hariç <xref:System.Object?displayProperty=nameWithType>) olarak bildirilebilir `const`. Yerleşik türler bir listesi için bkz. [yerleşik türler tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md). Kullanıcı tanımlı türler, sınıflar, yapılar ve diziler de dahil olmak üzere olamaz `const`. Kullanım [salt okunur](../../../csharp/language-reference/keywords/readonly.md) değiştiricisi bir sınıf, yapı veya çalışma zamanı (örneğin, bir oluşturucu) ve bundan sonra bir kez başlatılan bir dizi oluşturmak için değiştirilemez.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
 ms.openlocfilehash: 11cfad81e40e76691db9f99efd1d60f5528600d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667060"
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema ve Şema Koleksiyonları
 **Bağlantı** her .NET Framework yönetilen sağlayıcıları uygulama sınıfları bir **GetSchema** şu anda bağlı, veritabanı şema bilgilerini almak için kullanılan yöntem ve öğesinden döndürülen şema bilgileri **GetSchema** yöntemi gelen biçiminde bir <xref:System.Data.DataTable>. **GetSchema** döndürmek için şema koleksiyonu belirtme ve döndürülen bilgi tutarını sınırlamak için isteğe bağlı parametreler sağlayan aşırı yüklenmiş yöntem yöntemidir.  

@@ -3,11 +3,11 @@ title: SQL Server’da Yetkilendirme ve İzinler
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
 ms.openlocfilehash: 398041d678ba3e4ae5a36dd7714fd2a9bfee1b40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663966"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server’da Yetkilendirme ve İzinler
 Veritabanı nesneleri oluşturma, açıkça kullanıcılar için erişilebilir hale getirmek için izinleri vermeniz gerekir. Tüm güvenli kılınabilir nesne izni deyimleri kullanarak sorumlu için verilen izinleri vardır.  
@@ -37,7 +37,7 @@ Veritabanı nesneleri oluşturma, açıkça kullanıcılar için erişilebilir h
 |İPTAL ETME|İzni iptal eder. Bu yeni nesnenin varsayılan durumudur. Bir kullanıcı ya da rol iptal izin hala diğer grupların veya rollerin asıl atandığı devralınabilir.|  
 |REDDET|Böylece, devralınamaz REDDET izni iptal eder. REDDETME önceliklidir tüm izinleri REDDET nesnesine sahip veya üye için geçerli değildir dışında `sysadmin`. Reddederse, nesnenin izinlerini `public` reddedilen tüm kullanıcılar ve roller nesne sahipleri dışında rolü ve `sysadmin` üyeleri.|  
   
--   Verme deyimi, bir Grup ya da veritabanı kullanıcıları tarafından devralınan rol izinleri atayabilirsiniz. Ancak, verme deyimi, tüm diğer iznini deyimlerinden öncelik kazanır. Bu nedenle, izin verilmeyen bir kullanıcı başka bir rolden devralamaz.  
+- Verme deyimi, bir Grup ya da veritabanı kullanıcıları tarafından devralınan rol izinleri atayabilirsiniz. Ancak, verme deyimi, tüm diğer iznini deyimlerinden öncelik kazanır. Bu nedenle, izin verilmeyen bir kullanıcı başka bir rolden devralamaz.  
   
 > [!NOTE]
 >  Üyeleri `sysadmin` sabit sunucu rolü ve nesne sahipleri izinler reddedildi olamaz.  

@@ -4,11 +4,11 @@ description: .NET Framework'teki temsilcileri ve bu 'temsilci' anahtar sözcüğ
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
 ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646715"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate ve `delegate` anahtar sözcüğü
 

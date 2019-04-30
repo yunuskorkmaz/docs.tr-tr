@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
 ms.openlocfilehash: 7d34a25fd614a209761714e1f4eff3042ca240c0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59331318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662406"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target: exe (C# Derleyici Seçenekleri)
 **-Target: exe** seçeneği derleyicinin, konsol uygulaması yürütülebilir (EXE) oluşturmasına neden olur.  

@@ -5,11 +5,11 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 5477b8c4531780fdebf194e4f798564e59cd2953
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640284"
 ---
 # <a name="architecture-deployment-approaches"></a>Mimari dağıtım yaklaşımları
 
@@ -136,11 +136,11 @@ Sunucusuz, çoğunlukla işlem bağlamında ele alınmıştır, ancak verileri d
 
 Seçenekler için Mimari, karma bir yaklaşım da dahil olmak üzere geniş bir yelpazedeki yoktur. Sunucusuz bir yaklaşım, yönetim ve maliyet denetimi ve taşınabilirlik çoğaltamaz uygulama özelliklerinin basitleştirir. Ancak, birçok sunucusuz platformları çözümü ayarlamanıza yardımcı olmak için yapılandırmayı kullanıma sunar. İyi bir programlama uygulamalarını da kodu daha taşınabilir ve sunucusuz platform kilit açma daha az yol açabilir. Aşağıdaki tabloda, yan yana mimari yaklaşım gösterilmektedir. Sunucusuz ölçek gereksinimlerini, çalışma zamanı yönetmek istediğiniz olup olmadığı ve ne kadar iyi iş yüklerinizi küçük bileşenlere bozabilir göre seçin. Sunucusuz ile olası zorlukları ve diğer sonraki bölümde karar noktaları hakkında bilgi edineceksiniz.
 
-|         |Iaas     |PaaS     |Kapsayıcı|Sunucusuz|
+|         |IaaS     |PaaS     |Kapsayıcı|Sunucusuz|
 |---------|---------|---------|---------|----------|
 |**Ölçek**|VM       |Örnek |Uygulama      |İşlev  |
 |**Özet**|Donanım|Platform|Konak işletim sistemi|Çalışma zamanı   |
-|**Birim** |VM       |Proje  |Görüntü    |Kod      |
+|**Birim** |VM       |Project  |Görüntü    |Kod      |
 |**Ömür**|Ay|Ay gün|Dakika-gün|Dakika milisaniye|
 |**Sorumluluk**|Uygulamalar, bağımlılıkları, çalışma zamanı ve işletim sistemi|Uygulamalar ve bağımlılıklar|Uygulamalar, bağımlılıklar ve çalışma zamanı|İşlev
 

@@ -9,32 +9,32 @@ helpviewer_keywords:
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
 ms.openlocfilehash: cfb22fea6d2be4c1cf78efbc63b2e2342bcac49c
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650095"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Visual Basic'te Dosyaları Okuma
 Bu bölümde, dosyaları okuma ile ilişkili olan görevlerin nasıl gerçekleştirileceği açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: metin dosyalarını okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
+ [Nasıl yapılır: Metin dosyalarını okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
  Bir metin dosyasından okuma işlemini gösterir.  
   
- [Nasıl Yapılır: Virgülle Ayrılmış Metin Dosyalarından Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
+ [Nasıl yapılır: Virgülle ayrılmış metin dosyalarından okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
  Sınırlandırılmış metin dosyasından okuma işlemini gösterir.  
   
- [Nasıl Yapılır: Sabit Genişlikli Metin Dosyalarından Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
+ [Nasıl yapılır: Sabit genişlikli metin dosyalarından okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
  Sabit genişlikte metin dosyasından okuma işlemini gösterir.  
   
- [Nasıl Yapılır: Birden Çok Biçimli Metin Dosyalarından Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+ [Nasıl yapılır: Birden çok biçimli metin dosyalarını okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
  Birden çok biçimli metin dosyasından okuma işlemini gösterir.  
   
- [Nasıl Yapılır: İkili Dosyalardan Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
+ [Nasıl yapılır: İkili dosyaları okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
  Bir ikili dosyadan okuma işlemini gösterir.  
   
- [Nasıl Yapılır: StreamReader Olan Dosyalardan Metin Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
+ [Nasıl yapılır: StreamReader olan dosyalardaki metni okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
  Nasıl kullanılacağını gösteren bir <xref:System.IO.StreamReader> bir dosyasından okunamıyor.  
   
 ## <a name="reference"></a>Başvuru  
@@ -63,5 +63,5 @@ Bu bölümde, dosyaları okuma ile ilişkili olan görevlerin nasıl gerçekleş
  [İzlenecek yol: Dosyaları ve dizinleri Visual Basic'te düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Nasıl kullanılacağını gösteren `My` özelliğiyle dosyalar ve dizinler.  
   
- [İzlenecek Yol: .NET Framework Yöntemlerini Kullanarak Dosyaları Düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ [İzlenecek yol: .NET Framework yöntemlerini kullanarak dosyaları düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  Nasıl kullanılacağını gösteren [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] dosyalar ve dizinler ile yöntemleri.

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - seeking Storyboards [WPF]
 ms.assetid: 887bb39a-0c2a-4ae8-956d-1d9f6f8ebbfc
 ms.openlocfilehash: a57272c17a5bc6f5baaa21fb77233fc5693d1914
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59131670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651226"
 ---
 # <a name="how-to-seek-a-storyboard"></a>Nasıl yapılır: Görsel Taslak Arama
 Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> yöntemi bir <xref:System.Windows.Media.Animation.Storyboard> herhangi bir konumda bir film şeridinde animasyon atlayabilirsiniz.  

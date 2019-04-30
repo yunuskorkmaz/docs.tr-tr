@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Gruplandırma kullanarak hiyerarşi oluşturma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
 ms.openlocfilehash: bd2e8ab9fb0ed1fee68cb51d2d032b202b14ba88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668139"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-c"></a>Nasıl yapılır: Gruplandırma kullanarak hiyerarşi oluşturma (C#)
 Bu örnek verileri gruplandırmak ve ardından XML gruplandırma işlemine göre nasıl gösterir.  

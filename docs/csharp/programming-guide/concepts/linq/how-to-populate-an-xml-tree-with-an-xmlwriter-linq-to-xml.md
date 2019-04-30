@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Bir XML ağacını XmlWriter (LINQ to XML) ile dolduru
 ms.date: 07/20/2015
 ms.assetid: cd5674d1-5c54-4efc-ba68-e23b2875295f
 ms.openlocfilehash: 32dd06dbd166847298716d1da840cb37f0172b43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667957"
 ---
 # <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>Nasıl yapılır: Bir XML ağacını XmlWriter (LINQ to XML) ile doldurun (C#)
 Bir XML ağacı doldurma yollarından biri kullanmaktır <xref:System.Xml.Linq.XContainer.CreateWriter%2A> oluşturmak için bir <xref:System.Xml.XmlWriter>ve ardından yazma <xref:System.Xml.XmlWriter>. XML ağacı yazılan tüm düğümleri doldurulur <xref:System.Xml.XmlWriter>.  

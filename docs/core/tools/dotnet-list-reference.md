@@ -3,11 +3,11 @@ title: DotNet Listele başvuru komutu
 description: Dotnet listesi başvuru komut listesi projeden projeye başvurular için uygun bir seçenek sağlar.
 ms.date: 12/03/2018
 ms.openlocfilehash: d22ea27f8e8f6b94d763e44a6d8644f814663797
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665058"
 ---
 # <a name="dotnet-list-reference"></a>DotNet listesi başvurusu
 
@@ -17,7 +17,7 @@ ms.locfileid: "53169839"
 
 `dotnet list reference` -Projeden projeye başvurular listelenmektedir.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
 `dotnet list [<PROJECT>] reference [-h|--help]`
 

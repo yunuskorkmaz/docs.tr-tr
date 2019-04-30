@@ -6,11 +6,11 @@ ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
 ms.openlocfilehash: 794aa91e11f8d7386d3fe98f692e245e8af95eaa
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61647248"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Bu öğreticileri keşfederek .NET Core ve .NET Core SDK Araçları edinin
 
@@ -30,11 +30,11 @@ Aşağıdaki öğreticilerde, .NET Core hakkında bilgi almak için kullanılabi
 ## <a name="building-applications-with-visual-studio-code"></a>Visual Studio Code ile uygulamaları oluşturma
 
 - [C# ve Visual Studio Code kullanmaya başlama](with-visual-studio-code.md)
-- [MacOS üzerinde .NET Core ile çalışmaya başlama](using-on-macos.md)
+- [MacOS üzerinde .NET Core kullanmaya başlama](using-on-macos.md)
 
 ## <a name="building-applications-with-visual-studio-for-mac"></a>Mac için Visual Studio ile uygulamalar oluşturma
 
-- [Mac için Visual Studio kullanarak macos'ta .NET Core ile çalışmaya başlama](using-on-mac-vs.md)
+- [Mac için Visual Studio kullanarak macOS üzerinde .NET Core kullanmaya başlama](using-on-mac-vs.md)
 - [Mac için Visual Studio kullanarak macOS’ta eksiksiz bir .NET Core çözümü derleme](using-on-mac-vs-full-solution.md)
 
 ## <a name="building-applications-with-the-net-core-cli-tools"></a>.NET Core CLI araçları ile uygulamaları oluşturma

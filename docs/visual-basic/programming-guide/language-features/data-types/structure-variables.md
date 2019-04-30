@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
 ms.openlocfilehash: 9a6e542e297a17f44d929235530ae6058cf13a36
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663394"
 ---
 # <a name="structure-variables-visual-basic"></a>Yapı Değişkenleri (Visual Basic)
 Bir yapı oluşturulduktan sonra bu türü olarak yordam ve Modül düzeyinde değişkenleri bildirebilirsiniz. Örneğin, bir bilgisayar sistemi ilgili bilgileri kaydeden bir yapısı oluşturabilirsiniz. Aşağıdaki örnekte bu gösterir.  

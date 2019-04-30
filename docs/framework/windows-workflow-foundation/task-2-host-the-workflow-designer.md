@@ -3,11 +3,11 @@ title: 'Görev 2: İş Akışı Tasarımcısını Barındırma'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
 ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641573"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Görev 2: İş Akışı Tasarımcısını Barındırma
 Bu konuda bir örneğini barındıran yordamı açıklanır [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] bir Windows Presentation Foundation (WPF) uygulamasındaki.  
@@ -42,7 +42,7 @@ Bu konuda bir örneğini barındıran yordamı açıklanır [!INCLUDE[wfd1](../.
   
 8. İçinde **Çözüm Gezgini**, MainWindow.xaml sağ tıklayıp **kodu görüntüle**. Aşağıdaki adımları izleyerek kodu değiştirin:  
   
-    1.  Aşağıdaki ad alanlarını ekleyin:  
+    1. Aşağıdaki ad alanlarını ekleyin:  
   
         ```csharp  
         using System.Activities;  
@@ -54,7 +54,7 @@ Bu konuda bir örneğini barındıran yordamı açıklanır [!INCLUDE[wfd1](../.
         using System.ComponentModel;  
         ```  
   
-    2.  Örneği tutmak için bir özel üye alanı bildirmek için <xref:System.Activities.Presentation.WorkflowDesigner>, aşağıdaki kodu ekleyin `MainWindow` sınıfı.  
+    2. Örneği tutmak için bir özel üye alanı bildirmek için <xref:System.Activities.Presentation.WorkflowDesigner>, aşağıdaki kodu ekleyin `MainWindow` sınıfı.  
   
         ```csharp  
         public partial class MainWindow : Window  
@@ -68,7 +68,7 @@ Bu konuda bir örneğini barındıran yordamı açıklanır [!INCLUDE[wfd1](../.
         }  
         ```  
   
-    3.  Aşağıdaki `AddDesigner` yönteme `MainWindow` sınıfı. Uygulama örneği oluşturur <xref:System.Activities.Presentation.WorkflowDesigner>, ekler bir <xref:System.Activities.Statements.Sequence> , etkinliğini ve grid1 Orta sütundaki yerleştirir **kılavuz**.  
+    3. Aşağıdaki `AddDesigner` yönteme `MainWindow` sınıfı. Uygulama örneği oluşturur <xref:System.Activities.Presentation.WorkflowDesigner>, ekler bir <xref:System.Activities.Statements.Sequence> , etkinliğini ve grid1 Orta sütundaki yerleştirir **kılavuz**.  
   
         ```csharp  
         private void AddDesigner()  
@@ -87,7 +87,7 @@ Bu konuda bir örneğini barındıran yordamı açıklanır [!INCLUDE[wfd1](../.
         }  
         ```  
   
-    4.  Tüm yerleşik etkinlikler için tasarımcı desteği eklemek için tasarımcı meta verisi kaydedin. Bu sayede özgün araç kutusundan etkinlikleri bırakmak <xref:System.Activities.Statements.Sequence> etkinliğinde [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Bunu yapmak için ekleme `RegisterMetadata` yönteme `MainWindow` sınıfı.  
+    4. Tüm yerleşik etkinlikler için tasarımcı desteği eklemek için tasarımcı meta verisi kaydedin. Bu sayede özgün araç kutusundan etkinlikleri bırakmak <xref:System.Activities.Statements.Sequence> etkinliğinde [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Bunu yapmak için ekleme `RegisterMetadata` yönteme `MainWindow` sınıfı.  
   
         ```csharp  
         private void RegisterMetadata()  
@@ -99,7 +99,7 @@ Bu konuda bir örneğini barındıran yordamı açıklanır [!INCLUDE[wfd1](../.
   
          Etkinlik tasarımcıları kaydetme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Özel Etkinlik Tasarımcısı oluşturma](how-to-create-a-custom-activity-designer.md).  
   
-    5.  İçinde `MainWindow` sınıfının oluşturucusu, tasarımcı desteği için meta verileri kaydetmek ve oluşturmak için daha önce bildirilen yöntemlere yapılan çağrılar ekleyin <xref:System.Activities.Presentation.WorkflowDesigner>.  
+    5. İçinde `MainWindow` sınıfının oluşturucusu, tasarımcı desteği için meta verileri kaydetmek ve oluşturmak için daha önce bildirilen yöntemlere yapılan çağrılar ekleyin <xref:System.Activities.Presentation.WorkflowDesigner>.  
   
         ```csharp  
         public MainWindow()  

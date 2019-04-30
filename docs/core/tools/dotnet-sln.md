@@ -3,11 +3,11 @@ title: DotNet sln komutu
 description: Dotnet sln komutu eklemek, kaldırmak ve bir çözüm dosyası projelerinde listelemek için uygun bir seçenek sağlar.
 ms.date: 06/13/2018
 ms.openlocfilehash: a88e22c68f639f2a42e59f9a271e431f04e24a2b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665006"
 ---
 # <a name="dotnet-sln"></a>DotNet sln
 
@@ -17,7 +17,7 @@ ms.locfileid: "53169150"
 
 `dotnet sln` -.NET Core çözüm dosyasını değiştirir.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
 ```
 dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
 ms.openlocfilehash: 2e1389392c6465ed56b2c71e53b2e3c1947acbe2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651109"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Nasıl yapılır: Görsel Taslakla Özelliğe Animasyon Ekledikten Sonra Ayarlama
 Bazı durumlarda, animasyon sonra bir özelliğin değerini değiştiremezsiniz görünebilir.  
@@ -30,11 +30,11 @@ Bazı durumlarda, animasyon sonra bir özelliğin değerini değiştiremezsiniz 
   
  Önceki kodun herhangi bir şey gibi görünmüyor: değer olan fırça sarı olarak kalır verdiği <xref:System.Windows.Media.Animation.ColorAnimation> fırça animasyonlu. Temel özellik değeri (Temel), aslında mavi olarak değiştirilir. Ancak, etkin veya geçerli bir değer sarı kalır çünkü <xref:System.Windows.Media.Animation.ColorAnimation> hala temel değerin geçersiz kılıyor. Temel değerin yeniden etkili değer olmasını istiyorsanız, animasyonu özelliği etkilemesini durdurmanız gerekir. Görsel taslak animasyonları ile bunun için üç yolu vardır:  
   
--   Animasyonun ayarlamak <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> özelliği <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+- Animasyonun ayarlamak <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> özelliği <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
   
--   Tüm film şeridini kaldırın.  
+- Tüm film şeridini kaldırın.  
   
--   Animasyon bireysel özellikten kaldırın.  
+- Animasyon bireysel özellikten kaldırın.  
   
 ## <a name="set-the-animations-fillbehavior-property-to-stop"></a>Animasyonun FillBehavior özelliği Durma noktasına ayarlayın  
  Ayarlayarak <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> için <xref:System.Windows.Media.Animation.FillBehavior.Stop>, etkin süresinin sonuna ulaştıktan sonra hedef özelliği etkileyen durdurmak için animasyon söyleyin.  

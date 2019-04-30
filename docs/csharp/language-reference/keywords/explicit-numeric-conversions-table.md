@@ -11,11 +11,11 @@ helpviewer_keywords:
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
 ms.openlocfilehash: 90691ae0d9de35831b7b3119493e4e9cd81720e6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61661730"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Açık sayısal dönüşümler tablosu (C# Başvurusu)
 

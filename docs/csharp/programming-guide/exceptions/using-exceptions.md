@@ -7,11 +7,11 @@ helpviewer_keywords:
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
 ms.openlocfilehash: 2edaf8c823f228ecb50a256961fe78980826d7f2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61681253"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Özel Durumlar Kullanma (C# Programlama Kılavuzu)
 C# ' ta program çalışma zamanında hatalarını program aracılığıyla özel durumlar adlı bir mekanizmayı kullanarak yayılır. Özel durumlar hatayla karşılaştığında kod tarafından oluşturulur ve hatayı düzeltmek kodu tarafından yakalanan. Özel durumlar, .NET Framework ortak dil çalışma zamanı (CLR) veya bir program kodunda atılabilir. Bir özel durum sonra kadar çağrı yığınına yayan bir `catch` özel durum bildirimi bulundu. Yakalanmayan Özel durumların bir iletişim kutusu görüntüler sistem tarafından sağlanan bir genel özel durum işleyicisi tarafından işlenir.  
@@ -38,11 +38,11 @@ C# ' ta program çalışma zamanında hatalarını program aracılığıyla öze
   
  Hiçbir uyumlu değilse `catch` bloğu bulundu çağrı yığınındaki bir özel durum oluştuktan sonra üç şeylerden biri gerçekleşir:  
   
--   Özel durum bir sonlandırıcı içinde ise, sonlandırıcı iptal edilir ve temel Sonlandırıcı varsa çağrılır.  
+- Özel durum bir sonlandırıcı içinde ise, sonlandırıcı iptal edilir ve temel Sonlandırıcı varsa çağrılır.  
   
--   Çağrı yığınını statik oluşturucu veya bir statik alan başlatıcısında içeriyorsa bir <xref:System.TypeInitializationException> atanmış olan özgün özel durum ile oluşan <xref:System.Exception.InnerException%2A> yeni özel durum özelliği.  
+- Çağrı yığınını statik oluşturucu veya bir statik alan başlatıcısında içeriyorsa bir <xref:System.TypeInitializationException> atanmış olan özgün özel durum ile oluşan <xref:System.Exception.InnerException%2A> yeni özel durum özelliği.  
   
--   İş parçacığının başlangıç ulaşılırsa, iş parçacığı sonlandırıldı.  
+- İş parçacığının başlangıç ulaşılırsa, iş parçacığı sonlandırıldı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,17 +1,17 @@
 ---
-title: 'Nasıl yapılır: arabirim ve protokol bilgilerini alma'
+title: 'Nasıl yapılır: Arabirim ve Protokol Bilgilerini Alma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
 ms.openlocfilehash: fec8fd294c0408bfb16df1c5cfa1f3a96c1f28ee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642613"
 ---
-# <a name="how-to-get-interface-and-protocol-information"></a>Nasıl yapılır: arabirim ve protokol bilgilerini alma
+# <a name="how-to-get-interface-and-protocol-information"></a>Nasıl yapılır: Arabirim ve Protokol Bilgilerini Alma
 Bu örnek, bir ağ arabiriminin TCP istatistikleri okumak gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
@@ -72,4 +72,4 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Başvurular **System.Net** ad alanı.
+- Başvurular **System.Net** ad alanı.

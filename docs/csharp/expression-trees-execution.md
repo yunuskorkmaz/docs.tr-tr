@@ -4,11 +4,11 @@ description: Yürütülebilir Ara dil (IL) talimatları dönüştürerek ifade a
 ms.date: 06/20/2016
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
 ms.openlocfilehash: f6dca5a3965924e8eb6e1c04fe7ffc3c78c7df93
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664564"
 ---
 # <a name="executing-expression-trees"></a>İfade ağaçlarını yürütme
 

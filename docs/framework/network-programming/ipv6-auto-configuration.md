@@ -3,11 +3,11 @@ title: IPv6 Otomatik Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
 ms.openlocfilehash: 4dc7a148364c9f96a0f6c68c8af71f7668e797b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642340"
 ---
 # <a name="ipv6-auto-configuration"></a>IPv6 Otomatik Yapılandırma
 IPv6 için önemli bir hedef düğüm Tak ve Kullan desteklemektir. Diğer bir deyişle, bir IPv6 ağa bir düğüm eklenir ve herhangi bir insan müdahalesi olmadan otomatik olarak yapılandırılmış olması mümkündür.  
@@ -15,9 +15,9 @@ IPv6 için önemli bir hedef düğüm Tak ve Kullan desteklemektir. Diğer bir d
 ## <a name="type-of-auto-configuration"></a>Otomatik yapılandırma türü  
  IPv6 otomatik yapılandırma aşağıdaki türlerini destekler:  
   
--   **Durum bilgisi olan otomatik yapılandırma**. Bir Dinamik Ana Bilgisayar Yapılandırma Protokolü için IPv6 gerektiğinden bu tür bir yapılandırma, belirli bir düzeyde kullanıcı müdahalesi gerektirir. (DHCPv6) sunucusu yükleme ve yönetim düğümleri. DHCPv6 sunucusu için yapılandırma bilgileri sağlayan düğümlerin listesini tutar. Sunucu ne kadar her adresi kullanımda olduğu ve ne zaman, yeniden atama için kullanılabilir olduğunu bilmesi için ayrıca durum bilgisini tutar.  
+- **Durum bilgisi olan otomatik yapılandırma**. Bir Dinamik Ana Bilgisayar Yapılandırma Protokolü için IPv6 gerektiğinden bu tür bir yapılandırma, belirli bir düzeyde kullanıcı müdahalesi gerektirir. (DHCPv6) sunucusu yükleme ve yönetim düğümleri. DHCPv6 sunucusu için yapılandırma bilgileri sağlayan düğümlerin listesini tutar. Sunucu ne kadar her adresi kullanımda olduğu ve ne zaman, yeniden atama için kullanılabilir olduğunu bilmesi için ayrıca durum bilgisini tutar.  
   
--   **Durum bilgisiz otomatik yapılandırma**. Bu tür bir yapılandırma küçük kuruluşlar ve kişiler için uygundur. Bu durumda, her konağın, adresinden alınan yönlendirici reklam içeriğini belirler. Adresin ağ kimliği bölümünü tanımlamak için IEEE EUI-64 standart'ı kullanarak, ana bilgisayar adresi bağlantısına benzersizliğini varsaymak şüphelenilebilir.  
+- **Durum bilgisiz otomatik yapılandırma**. Bu tür bir yapılandırma küçük kuruluşlar ve kişiler için uygundur. Bu durumda, her konağın, adresinden alınan yönlendirici reklam içeriğini belirler. Adresin ağ kimliği bölümünü tanımlamak için IEEE EUI-64 standart'ı kullanarak, ana bilgisayar adresi bağlantısına benzersizliğini varsaymak şüphelenilebilir.  
   
  Adres nasıl belirlendiğinden bağımsız olarak düğüm olası adresini yerel bağlantısını benzersiz olduğunu doğrulamanız gerekir. Bu, bir komşu isteği göndererek yapılır olası adresine bir ileti. Düğüm herhangi bir yanıt alırsa, adresi zaten kullanımda olduğunu ve başka bir adres belirlemeniz gerekir bilir.  
   

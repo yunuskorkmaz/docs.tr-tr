@@ -3,28 +3,28 @@ title: Sorgu Desteği
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
 ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641521"
 ---
 # <a name="support-for-queries"></a>Sorgu Desteği
 SQL iş akışı örneği Store iyi bilinen özellikler kümesi deposuna kaydeder. Kullanıcılar için sorgulayabilir örnekleri, bu özellikleri bağlı. Aşağıdaki liste, bazı iyi bilinen bu özellikleri içerir:  
   
--   **Site adı.** Hizmeti içeren Web sitesinin adı.  
+- **Site adı.** Hizmeti içeren Web sitesinin adı.  
   
--   **Uygulama göreli yolu.** Uygulamanın Web sitesini göreli yolu.  
+- **Uygulama göreli yolu.** Uygulamanın Web sitesini göreli yolu.  
   
--   **Hizmet göreli yolu.** Hizmet uygulaması göreli yolu.  
+- **Hizmet göreli yolu.** Hizmet uygulaması göreli yolu.  
   
--   **Hizmet adı.** Hizmetin adı.  
+- **Hizmet adı.** Hizmetin adı.  
   
--   **Hizmet Namespace.** Hizmetin kullandığı ad alanının adı.  
+- **Hizmet Namespace.** Hizmetin kullandığı ad alanının adı.  
   
--   **Geçerli makine.**  
+- **Geçerli makine.**  
   
--   **Son makine**. İş akışı hizmet örneği son kez çalıştırıldığı bir bilgisayar.  
+- **Son makine**. İş akışı hizmet örneği son kez çalıştırıldığı bir bilgisayar.  
   
 > [!NOTE]
 >  İş akışı hizmeti konağı kullanarak şirket içinde barındırılan senaryoları için yalnızca son dört özellikleri doldurulur. İş akışı uygulama senaryoları için yalnızca en son özellik doldurulur.  

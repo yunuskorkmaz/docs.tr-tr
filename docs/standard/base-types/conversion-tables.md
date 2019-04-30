@@ -15,11 +15,11 @@ ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f018ed182e6354bbc6e6873f0df1b35e023c9c17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650329"
 ---
 # <a name="type-conversion-tables-in-net"></a>.NET içinde tür dönüştürme tabloları
 Bir türde bir değer eşit veya daha fazla boyutunu başka bir türe dönüştürüldüğünde Genişletme dönüşümü gerçekleşir. Bir türde bir değer daha küçük bir boyut başka bir türün değerine dönüştürüldüğünde bir daraltma dönüşümü gerçekleşir. Bu başlıktaki tablolar, her iki tür dönüştürmeler tarafından sergilenen davranışları gösterir.  

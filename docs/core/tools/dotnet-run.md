@@ -3,11 +3,11 @@ title: dotnet komutu çalıştırın
 description: Dotnet komutu çalıştırın, kaynak koddan uygulamanızı çalıştırmak için uygun bir seçenek sağlar.
 ms.date: 05/29/2018
 ms.openlocfilehash: e96d5c99e7bcb394c6feffa18990f76a83f32276
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61648636"
 ---
 # <a name="dotnet-run"></a>dotnet çalıştırın
 

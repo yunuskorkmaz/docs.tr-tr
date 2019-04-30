@@ -3,11 +3,11 @@ title: DotNet-başvuru komut ekleme
 description: Dotnet ekleyin başvuru komut projeden projeye başvurular eklemek için uygun bir seçenek sağlar.
 ms.date: 12/04/2018
 ms.openlocfilehash: 8df9fa3c9469f74b27a9cb8120936f03532b016c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665266"
 ---
 # <a name="dotnet-add-reference"></a>DotNet-Başvuru Ekle
 
@@ -17,7 +17,7 @@ ms.locfileid: "53169777"
 
 `dotnet add reference` -Projeler (P2P) başvuruları ekler.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
 `dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
 

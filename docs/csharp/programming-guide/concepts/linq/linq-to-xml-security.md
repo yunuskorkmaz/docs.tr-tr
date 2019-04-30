@@ -3,11 +3,11 @@ title: LINQ to XML güvenliği (C#)
 ms.date: 07/20/2015
 ms.assetid: ef2c0dc9-ecf9-4c17-b24e-144184ab725f
 ms.openlocfilehash: e13a1db6a02ac2990624e93480e973284a0784e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664356"
 ---
 # <a name="linq-to-xml-security-c"></a>LINQ to XML güvenliği (C#)
 Bu konu LINQ to XML ile ilgili güvenlik sorunları açıklar. Ayrıca, güvenlik açığı azaltma için bazı yönergeler sağlar.  
@@ -26,25 +26,25 @@ Bu konu LINQ to XML ile ilgili güvenlik sorunları açıklar. Ayrıca, güvenli
   
  Daha az güvenli bir ortamda çalışıyorsanız, XML ile ilişkili güvenlik sorunlarını bir dizi ve vardır sınıflarda kullanımını <xref:System.Xml?displayProperty=nameWithType>, <xref:System.Xml.Schema?displayProperty=nameWithType>, <xref:System.Xml.XPath?displayProperty=nameWithType>, ve <xref:System.Xml.Xsl?displayProperty=nameWithType>. Bu sorunları içerir ancak bunlarla sınırlı değildir:  
   
--   XSD ve XPath XSLT dize tabanlı diller çok fazla zaman veya bellek kullanan işlemleri belirtebileceğiniz var. XSD, XPath veya XSLT dizeleri dizeleri kötü niyetli olmadığını doğrulamak için veya izlemek ve bu dizelerin değerlendirme aşırı sisteme önünü açacak olasılığını azaltmak için güvenilir olmayan kaynaklardan yararlanın uygulama programcılara sorumluluğudur kaynak tüketimi.  
+- XSD ve XPath XSLT dize tabanlı diller çok fazla zaman veya bellek kullanan işlemleri belirtebileceğiniz var. XSD, XPath veya XSLT dizeleri dizeleri kötü niyetli olmadığını doğrulamak için veya izlemek ve bu dizelerin değerlendirme aşırı sisteme önünü açacak olasılığını azaltmak için güvenilir olmayan kaynaklardan yararlanın uygulama programcılara sorumluluğudur kaynak tüketimi.  
   
--   XSD şemaları (satır içi şema dahil), hizmet reddi saldırılarını için kendiliğinden savunmasız; güvenilir olmayan kaynaklardan gelen şemaları kabul.  
+- XSD şemaları (satır içi şema dahil), hizmet reddi saldırılarını için kendiliğinden savunmasız; güvenilir olmayan kaynaklardan gelen şemaları kabul.  
   
--   XSD ve XSLT diğer dosyalara başvuruları ekleyebilirsiniz ve bölgeler arası ve etki alanları arası saldırılarında böyle başvurular neden olabilir.  
+- XSD ve XSLT diğer dosyalara başvuruları ekleyebilirsiniz ve bölgeler arası ve etki alanları arası saldırılarında böyle başvurular neden olabilir.  
   
--   Dış DTD varlıklarda bölgeler arası ve etki alanları arası saldırılarında neden olabilir.  
+- Dış DTD varlıklarda bölgeler arası ve etki alanları arası saldırılarında neden olabilir.  
   
--   DTD'ler reddi saldırılarına karşı savunmasızdır.  
+- DTD'ler reddi saldırılarına karşı savunmasızdır.  
   
--   Yayılan derin XML belgeleri sorunları hizmet reddi oluşturabilir; XML belgeleri derinliğini sınırlamak isteyebilirsiniz.  
+- Yayılan derin XML belgeleri sorunları hizmet reddi oluşturabilir; XML belgeleri derinliğini sınırlamak isteyebilirsiniz.  
   
--   Destekleyici bileşenleri gibi kabul <xref:System.Xml.NameTable>, <xref:System.Xml.XmlNamespaceManager>, ve <xref:System.Xml.XmlResolver> nesnelerden güvenilmeyen derlemeler.  
+- Destekleyici bileşenleri gibi kabul <xref:System.Xml.NameTable>, <xref:System.Xml.XmlNamespaceManager>, ve <xref:System.Xml.XmlResolver> nesnelerden güvenilmeyen derlemeler.  
   
--   Büyük Belge saldırıları azaltmak için öbekler halinde veri okuma.  
+- Büyük Belge saldırıları azaltmak için öbekler halinde veri okuma.  
   
--   Komut dosyası blokları XSLT stil sayfası içinde saldırıları sayısı üzerinden kullanıma sunabilirsiniz.  
+- Komut dosyası blokları XSLT stil sayfası içinde saldırıları sayısı üzerinden kullanıma sunabilirsiniz.  
   
--   Dikkatli bir şekilde dinamik XPath ifadeleri oluşturmadan önce doğrulayın.  
+- Dikkatli bir şekilde dinamik XPath ifadeleri oluşturmadan önce doğrulayın.  
   
 ## <a name="linq-to-xml-security-issues"></a>LINQ to XML güvenlik sorunları  
  Bu konuda güvenlik sorunları herhangi belirli bir sırada sunulmaz. Tüm sorunları önemli olduğunu ve uygun şekilde izlenmelidir.  

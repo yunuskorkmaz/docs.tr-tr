@@ -7,8 +7,8 @@ ms.openlocfilehash: 7702c626aa79c7b661638df5a5f0f90f821b32f9
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59981272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650394"
 ---
 # <a name="how-to-learn-how-to-load-data-from-file-and-real-time-sources-in-mlnet"></a>Nasıl yapılır: Dosya ve gerçek zamanlı ML.NET kaynaklarında veri yüklemek hakkında bilgi edinin
 

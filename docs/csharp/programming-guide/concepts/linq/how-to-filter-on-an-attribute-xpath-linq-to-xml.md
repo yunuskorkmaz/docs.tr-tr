@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Filtreleme (XPath-LINQ to XML) öznitelik (C#)'
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
 ms.openlocfilehash: 3b9f3d18bbfe773d782239d67e8f43bdf4ac52d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668113"
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Nasıl yapılır: Filtreleme (XPath-LINQ to XML) öznitelik (C#)
 Bu konu, belirtilen ada sahip ve belirtilen değere sahip bir öznitelik ile alt öğeleri almak nasıl gösterir.  

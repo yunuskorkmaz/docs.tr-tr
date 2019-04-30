@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
 ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669215"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF ve Direct3D9 Birlikte Çalışması
 Direct3D9 içeriği bir Windows Presentation Foundation (WPF) uygulamasında içerebilir. Bu konuda, verimli bir şekilde WPF ile birlikte çalışır, böylece Direct3D9 içeriği oluşturma işlemini açıklar.  
@@ -32,9 +32,9 @@ Direct3D9 içeriği bir Windows Presentation Foundation (WPF) uygulamasında iç
   
  Aşağıdaki yöntemlerden birini çağırarak bir cihaz oluşturun.  
   
--   `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
+- `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
   
--   `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
+- `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
   
  Windows Vista veya sonraki bir işletim sistemi, kullanın `Direct3DCreate9Ex` Windows görüntü sürücü modeli (WDDM) kullanacak şekilde yapılandırılmış bir görüntü ile yöntemi. Kullanım `Direct3DCreate9` herhangi bir platformda yöntemi.  
   
@@ -97,11 +97,11 @@ Direct3D9 içeriği bir Windows Presentation Foundation (WPF) uygulamasında iç
   
  Yeniden boyutlandırmayı işlemek için üç olası yaklaşım vardır.  
   
--   Düzen sisteme katılan ve boyutu değiştiğinde yeni bir yüzey oluşturur. Tüketebilir veya video belleği parçası olduğundan, çok fazla yüzeyler oluşturmayın.  
+- Düzen sisteme katılan ve boyutu değiştiğinde yeni bir yüzey oluşturur. Tüketebilir veya video belleği parçası olduğundan, çok fazla yüzeyler oluşturmayın.  
   
--   Yeni yüzey oluşturmak için sabit bir süre için yeniden boyutlandır olayını olana kadar bekleyin.  
+- Yeni yüzey oluşturmak için sabit bir süre için yeniden boyutlandır olayını olana kadar bekleyin.  
   
--   Oluşturma bir <xref:System.Windows.Threading.DispatcherTimer> kapsayıcı boyutları saniyede birkaç kez denetler.  
+- Oluşturma bir <xref:System.Windows.Threading.DispatcherTimer> kapsayıcı boyutları saniyede birkaç kez denetler.  
   
 ## <a name="multi-monitor-optimization"></a>Çoklu monitör en iyi duruma getirme  
  Önemli ölçüde indirimli performans işleme sistemi hareket ettiğinde sonuçlanabilir bir <xref:System.Windows.Interop.D3DImage> başka bir monitöre.  
@@ -132,11 +132,11 @@ Direct3D9 içeriği bir Windows Presentation Foundation (WPF) uygulamasında iç
 ## <a name="wpf-software-rendering"></a>WPF yazılımla işleme  
  WPF yazılım aşağıdaki durumlarda kullanıcı Arabirimi iş parçacığında zaman uyumlu olarak işler.  
   
--   Yazdırma  
+- Yazdırma  
   
--   <xref:System.Windows.Media.Effects.BitmapEffect>  
+- <xref:System.Windows.Media.Effects.BitmapEffect>  
   
--   <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
+- <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
   
  Bunlardan biri oluştuğunda, işleme sistemi çağırır <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> yazılıma donanım arabellek kopyalamak için yöntemi. Varsayılan Uygulama çağrıları `GetRenderTargetData` yüzeyinizi yöntemiyle. Bu çağrı Kilitle/Kilidini desenin dışında oluştuğu için başarısız olabilir. Bu durumda, `CopyBackBuffer` yöntemi döndürür `null` ve resim görüntülenir.  
   

@@ -1,40 +1,40 @@
 ---
-title: Kalıcı olmayan iş akışı örnekleri
+title: Kalıcı Olmayan İş Akışı Örnekleri
 ms.date: 03/30/2017
 ms.assetid: 5e01af77-6b14-4964-91a5-7dfd143449c0
 ms.openlocfilehash: 410451f0dfeb91111e77634245aa786c4afc5b04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644271"
 ---
-# <a name="non-persisted-workflow-instances"></a>Kalıcı olmayan iş akışı örnekleri
-Bir iş akışı yeni bir örneğini oluşturulduğunda durumundayken kalıcı <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, hizmet ana bilgisayarı örnek deposunda bu hizmet için bir giriş oluşturur. Sonuç olarak, ne zaman iş akışı örneği kalıcıdır ilk kez <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> geçerli örnek durum depolar. İş akışı Windows İşlem Etkinleştirme hizmeti barındırılıyorsa örneği ilk kez kalıcı veri hizmeti dağıtımı da örnek deposuna yazılır.  
+# <a name="non-persisted-workflow-instances"></a>Kalıcı Olmayan İş Akışı Örnekleri
+Bir iş akışının yeni bir örneği oluşturulduğunda, durumunda kalıcı <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, hizmet ana bilgisayarı örnek deposunda bu hizmet için bir giriş oluşturur. Sonuç olarak, ne zaman iş akışı örneği kalıcıdır ilk kez <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> geçerli örneğin durumunu depolar. İş akışı Windows İşlem Etkinleştirme hizmetinde barındırılıyorsa, bu ilk kez örneği kalıcıdır hizmet dağıtım verileri de örnek deposuna yazılır.  
   
- İş akışı örneği kalıcı olmayan sürece olan bir **kalıcı olmayan** durumu. Bu durumundayken, iş akışı örneği bir uygulama etki alanı geri dönüşümü, ana bilgisayar hatası veya bilgisayar hatasından sonra kurtarılamaz.  
+ İş akışı örneği kalıcı değil sürece olduğu bir **kalıcı olmayan** durumu. Bu durumdayken, iş akışı örneği bir uygulama etki alanı geri dönüşümü, ana bilgisayar hatası veya bilgisayar hatasından sonra kurtarılamaz.  
   
 ## <a name="the-non-persisted-state"></a>Kalıcı olmayan durumu  
- Aşağıdaki durumlarda kalıcı olmayan bir durumda değil kalıcı dayanıklı iş akışı örnekleri kalır:  
+ Kalıcı dayanıklı iş akışı örnekleri aşağıdaki durumlarda kalıcı olmayan bir durumda kalır:  
   
--   İş akışı örneği ilk kez kalıcı önce Hizmet Konağı çöküyor. İş akışı örneği örnek deposunda kalır ve kurtarılmamış. Bağlantılı bir ileti alınırsa, iş akışı örneği yeniden etkin hale gelir.  
+- İlk kez iş akışı örneği kalıcıdır önce hizmet ana bilgisayarı kilitleniyor. İş akışı örneği, örnek deposunda kalır ve kurtarılmamış. İlişkili bir ileti geldiğinde, iş akışı örneği tekrar etkin hale gelir.  
   
--   İlk kez kalıcı önce iş akışı örneği bir özel durum karşılaşır. Bağlı olarak <xref:System.Activities.UnhandledExceptionAction> döndürülen, aşağıdaki senaryolarda oluşur:  
+- İş akışı örneği bir özel durum karşılaştığında, önce ilk kez kalıcı hale getirilir. Yapılandırmanıza bağlı olarak <xref:System.Activities.UnhandledExceptionAction> döndürülen, aşağıdaki senaryolarda oluşur:  
   
-    -   <xref:System.Activities.UnhandledExceptionAction> ayarlanmış <xref:System.Activities.UnhandledExceptionAction.Abort>: bir özel durum oluştu, hizmet dağıtım bilgileri için örnek deposuna yazılır ve iş akışı örneği bellekten olduğunda. İş akışı örneği kalıcı olmayan bir durumda kalır ve yeniden yüklenemiyor.  
+    - <xref:System.Activities.UnhandledExceptionAction> ayarlanır <xref:System.Activities.UnhandledExceptionAction.Abort>: Bir özel durum oluştuğunda, hizmet dağıtım bilgileri için örnek deposuna yazılır ve bellekten iş akışı örneği kaldırılır. İş akışı örneği kalıcı olmayan bir durumda kalır ve yeniden yüklenemiyor.  
   
-    -   <xref:System.Activities.UnhandledExceptionAction> ayarlanmış <xref:System.Activities.UnhandledExceptionAction.Cancel> veya <xref:System.Activities.UnhandledExceptionAction.Terminate>: bir özel durum oluştu, hizmet dağıtım bilgileri için örnek deposuna yazılır ve etkinlik örnek durum kümesine <xref:System.Activities.ActivityInstanceState.Closed>.  
+    - <xref:System.Activities.UnhandledExceptionAction> ayarlanır <xref:System.Activities.UnhandledExceptionAction.Cancel> veya <xref:System.Activities.UnhandledExceptionAction.Terminate>: Özel bir durum oluştuğunda, hizmet dağıtım bilgileri, örnek deposuna yazılır ve etkinlik örneğinin durumunu ayarlamak <xref:System.Activities.ActivityInstanceState.Closed>.  
   
- Kalıcı olmayan bellekten iş akışı örnekleri karşılaşmadan riskini en aza indirmek için erken yaşam döngüsü iş akışını sürdürmek öneririz.  
+ Kaldırılan kalıcı olmayan iş akışı örnekleri karşılaşıldığında riskini en aza indirmek için erken yaşam döngüsü içinde iş akışını sürdürmek öneririz.  
   
-## <a name="detection-and-removal-of-non-persisted-instances"></a>Algılama ve temizleme kalıcı olmayan örnekleri  
- <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Hiç kalıcı olmayan iş akışı örneği örnek deposundan kaldırmaz. Kalıcı olmayan iş akışı örneği ilişkili tüm süresi dolan kilit sahiplerinin ayrıca kaldırmaz.  
+## <a name="detection-and-removal-of-non-persisted-instances"></a>Algılama ve kaldırma kalıcı olmayan örnekleri  
+ <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Herhangi kalıcı olmayan iş akışı örnekleri örnek deposundan kaldırmaz. Kalıcı olmayan iş akışı örneği ile ilişkili tüm süresi dolan kilit sahiplerinin ayrıca kaldırmaz.  
   
- Yönetici kalıcı olmayan örnekleri için örnek deposuna düzenli olarak denetler öneririz. Yöneticiler bu iş akışı bağıntılı iletileri almaz bilmeniz sürece bu örneklerde örneği Mağazası'ndan kaldırabilir. Örneğin, örnek veritabanında birkaç ay olmuştur ve iş akışı genellikle birkaç gün ömrü olduğunu biliniyorsa ise, onu bu çöken örneği başlatılmış olduğunu varsaymak güvenli olabilir.  
+ Yönetici kalıcı olmayan örnekleri için örnek deposuna düzenli aralıklarla denetleyen öneririz. Bu iş akışı bağıntılı iletilerin almaz alışık oldukları sürece Yöneticiler bu örnekleri örnek deposundan kaldırabilirsiniz. Örneğin, örnek veritabanında birkaç ay boyunca yapıldı ve iş akışı genellikle birkaç gün ömrü olduğunu bilinir, kilitlenen başlatılmış örneği olduğunu varsayın güvenli olurdu.  
   
- SQL iş akışı örneği Mağazası'nda kalıcı olmayan örneklerini bulmak için aşağıdaki SQL sorgularını kullanabilirsiniz:  
+ SQL iş akışı örneği Store içinde kalıcı olmayan örnekleri bulmak için aşağıdaki SQL sorgularını kullanabilirsiniz:  
   
--   Bu sorgu kalıcı ve (UTC saatiyle depolanır) kimliği ve oluşturulması zaman bunları döndüren tüm örneklerini bulur.  
+- Bu sorgu, kalıcı ve (UTC saatiyle depolanır) kimliği ve oluşturma zamanı için bunları döndüren tüm örneklerini bulur.  
   
     ```sql  
     select InstanceId, CreationTime   
@@ -42,7 +42,7 @@ Bir iş akışı yeni bir örneğini oluşturulduğunda durumundayken kalıcı <
         where IsInitialized = 0  
     ```  
   
--   Bu sorgu, değil devam ediyor ve yüklü değil ve (UTC saatiyle depolanır) kimliği ve oluşturulması zaman bunları döndürür tüm örneklerini bulur.  
+- Bu sorgu değil yerleştirildi ve yüklü değildir ve döndürür (UTC saatiyle depolanır) kimliği ve oluşturma zamanı bunları için tüm örneklerini bulur.  
   
     ```sql  
     select InstanceId, CreationTime   
@@ -51,7 +51,7 @@ Bir iş akışı yeni bir örneğini oluşturulduğunda durumundayken kalıcı <
             and CurrentMachine is NULL  
     ```  
   
--   Bu sorgu kalıcı ve döndüren kimliği, oluşturma zamanı (UTC saatiyle depolanır), askıya alınmış tüm örneklerini bulur askıya neden ve bunlar için özel durum adı.  
+- Bu sorgu kalıcı ve döndüren kimliği, oluşturma zamanı (UTC saatiyle depolanır), askıya alınmış tüm örneklerini bulur askıya alma nedeni ve bunlar için özel durum adı.  
   
     ```sql  
     select InstanceId, CreationTime, SuspensionReason, SuspensionExceptionName   
@@ -60,7 +60,7 @@ Bir iş akışı yeni bir örneğini oluşturulduğunda durumundayken kalıcı <
             and IsSuspended = 1  
     ```  
   
- Kalıcı olmayan örnekleri silerken dikkatli olun. Genel olarak, kalıcı olmayan örnekleri tarafından oluşturulan kaldırmak güvenli <xref:System.ServiceModel.Activities.WorkflowServiceHost> , askıya alınmış durumda veya yüklü değil. Bu belirli örnekleri onlardan silerek depolama alanından silinebilir `[System.Activities.DurableInstancing].[Instances]` doğru örneği kimlik değiştirerek aşağıdaki SQL komutunu kullanarak görünümü  
+ Kalıcı olmayan örnekleri silerken dikkatli olun. Genel olarak, kalıcı olmayan örnekleri tarafından oluşturulan kaldırmanın güvenli olduğunu <xref:System.ServiceModel.Activities.WorkflowServiceHost> askıya alınmış durumda veya yüklü değil. Bunları silerek, bu belirli örneklere Mağaza'dan silinebilir `[System.Activities.DurableInstancing].[Instances]` doğru örneği kimliğini değiştirerek aşağıdaki SQL komutunu kullanarak görünümü  
   
 ```sql  
 delete [System.Activities.DurableInstancing].[Instances]   
@@ -68,4 +68,4 @@ delete [System.Activities.DurableInstancing].[Instances]
 ```  
   
 > [!WARNING]
->  Bu yeni oluşturduğunuz ve henüz kalıcı örnekleri içerdiğinden kalıcı olmayan tüm örneklerini kaldırma önermiyoruz.
+>  Bu, az önce oluşturduğunuz ve henüz kalıcı örnekleri içerdiğinden tüm kalıcı olmayan örnekleri kaldırma önermiyoruz.

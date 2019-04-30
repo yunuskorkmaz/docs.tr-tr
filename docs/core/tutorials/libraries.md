@@ -5,11 +5,11 @@ author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
 ms.openlocfilehash: 9dd1d8477f8e34e79ff521463972e26a21ad1dfd
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61647339"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Platformlar arası araçlarla kitaplıkları ile geliştirme
 

@@ -3,11 +3,11 @@ title: İşlev ve eylem genel temsilcileri (C#) için varyans kullanma
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
 ms.openlocfilehash: f517eea07588bb01ef903c8311126eab872bd735
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668555"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>İşlev ve eylem genel temsilcileri (C#) için varyans kullanma
 Bu örnekler Kovaryans ve kontravaryans nasıl kazandırabileceğinizi `Func` ve `Action` yöntemleri kullanılmasını etkinleştirin ve kodunuzu daha fazla esneklik sağlamak için genel temsilciler.  

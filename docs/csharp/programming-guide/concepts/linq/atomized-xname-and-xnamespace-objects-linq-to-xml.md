@@ -3,11 +3,11 @@ title: Parçalara ayrılmış XName ve XNamespace nesneleri (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: a5b21433-b49d-415c-b00e-bcbfb0d267d7
 ms.openlocfilehash: ff5677e84d0a4401c9d3ce8c43e7743385cdd432
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668443"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a>Parçalara ayrılmış XName ve XNamespace nesneleri (LINQ to XML) (C#)
 <xref:System.Xml.Linq.XName> ve <xref:System.Xml.Linq.XNamespace> nesneler *parçalara ayrılmış*; diğer bir deyişle, bunlar, bunlar aynı tam ada içeriyorsa, aynı nesneye başvurur. Bu, sorgular için performans avantajlarının verir: Eşitlik için iki parçalara ayrılmış ad karşılaştırdığınızda, temel alınan Ara dil, yalnızca iki başvurunun aynı nesneye işaret olup olmadığını belirlemek vardır. Arka plandaki kod, zaman alıcı olabilir karşılaştırmalar, dize yok.  

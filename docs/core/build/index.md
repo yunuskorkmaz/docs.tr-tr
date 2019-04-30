@@ -4,8 +4,13 @@ description: .NET Core ve .NET Core CLI kaynak kodundan oluşturmayı öğrenin.
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
+ms.openlocfilehash: 523b537ba07afd1b6c56192c5e2589082fe5820f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650888"
 ---
-
 # <a name="build-net-core-from-source"></a>Kaynaktan .NET Core derleme
 
 .NET Core, kaynak koddan oluşturma imkanı birden çok yolla önemlidir: .NET Core numaralı bağlantı noktasına yeni platformlara kolaylaştırır, katkı sağlar ve düzeltmeleri ürüne ve .NET özel sürümlerini oluşturulmasını sağlar.

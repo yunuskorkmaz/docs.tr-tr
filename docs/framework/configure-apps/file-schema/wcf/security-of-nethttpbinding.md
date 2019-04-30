@@ -1,13 +1,13 @@
 ---
-title: <security> , <netHttpBinding>
+title: <security> / <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
 ms.openlocfilehash: f2750036aa4d3fbe41062ad041e50ff3a4be32b5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670578"
 ---
 # <a name="security-of-nethttpbinding"></a>\<Güvenlik >, \<netHttpBinding >
 
@@ -45,7 +45,7 @@ Güvenlik yeteneklerini tanımlar [ \<basicHttpBinding >](basichttpbinding.md).
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|Hiçbiri|-Sıradaki iletiler, aktarım sırasında sağlanmaz.|
+|Yok.|-Sıradaki iletiler, aktarım sırasında sağlanmaz.|
 |Taşıma|HTTPS aktarımı kullanarak güvenliği sağlanır. SOAP iletilerini HTTPS kullanılarak güvenli hale getirilir. Hizmet, hizmetin X.509 sertifikası kullanarak istemci kimlik doğrulaması yapılır. İstemci tarafından sağlanan ClientCredentialType kullanarak kimlik doğrulaması yapılır.|
 |İleti|SOAP ileti güveliği kullanarak güvenliği sağlanır. Varsayılan olarak, gövde imzalı ve şifrelenir. Bu bağlama için sistem sunucu sertifikası istemciyi bant dışından sağlanmasını gerektirir. Yalnızca geçerli `ClientCredentialType` Bu bağlama için `Certificate`.|
 |TransportWithMessageCredential|Bütünlüğü, gizliliği ve sunucu kimlik doğrulaması ile Aktarım güvenliği sağlanır. İstemci kimlik doğrulaması yoluyla SOAP ileti güvenliği sağlanır. Bu mod, kullanıcının kullanıcı adı/parola kullanarak kimlik doğrulaması ve ileti aktarım güvenliğini sağlamak için var olan bir HTTP dağıtım olduğunda geçerlidir.|

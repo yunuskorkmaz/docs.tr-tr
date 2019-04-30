@@ -3,11 +3,11 @@ title: DotNet Paketi komutu Kaldır
 description: Dotnet remove paket komutu bir proje için NuGet paket başvuruyu kaldırmak için kullanışlı bir seçenek sağlar.
 ms.date: 05/29/2018
 ms.openlocfilehash: 4cc8ac927b761547dc5e53be9abeba827bf1e1d9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664863"
 ---
 # <a name="dotnet-remove-package"></a>DotNet Kaldır paket
 
@@ -17,7 +17,7 @@ ms.locfileid: "53168734"
 
 `dotnet remove package` -Paket başvurusu proje dosyasından kaldırır.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
 `dotnet remove [<PROJECT>] package <PACKAGE_NAME> [-h|--help]`
 

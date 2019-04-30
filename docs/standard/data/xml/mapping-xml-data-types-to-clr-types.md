@@ -1,18 +1,18 @@
 ---
-title: XML veri türlerini CLR türleriyle eşleme
+title: XML Veri Türlerini CLR Türleriyle Eşleme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 48ec3a5b719b05112b257871f64a34f2bc21eeab
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650186"
 ---
-# <a name="mapping-xml-data-types-to-clr-types"></a>XML veri türlerini CLR türleriyle eşleme
+# <a name="mapping-xml-data-types-to-clr-types"></a>XML Veri Türlerini CLR Türleriyle Eşleme
 
 Aşağıdaki tablo, XML veri türleri ve ortak dil çalışma zamanı (CLR) türleri arasında Varsayılan eşleme açıklar.
 

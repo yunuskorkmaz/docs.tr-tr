@@ -3,11 +3,11 @@ title: "Nasıl yapılır: Metinden XML'e akış dönüşümleri gerçekleştirme
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
 ms.openlocfilehash: 906150483f7f76b4429ea390d083e9f18696ac9e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667879"
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Nasıl yapılır: Metinden XML'e akış dönüşümleri gerçekleştirme (C#)
 Bir metin dosyasını işlerken bir yaklaşım kullanarak bir defada bir satır metin dosyası akışı uzantı metodu yazma etmektir `yield return` oluşturun. Ardından, yavaş ertelenmiş biçimde metin dosyası işleyen bir LINQ sorgu yazabilirsiniz. Ardından kullanırsanız <xref:System.Xml.Linq.XStreamingElement> akış çıkışı için daha sonra bir dönüştürme metin dosyasından en az bir kaynak metin dosyasının boyutu ne olursa olsun, bellek miktarını kullanır XML oluşturabilirsiniz.  

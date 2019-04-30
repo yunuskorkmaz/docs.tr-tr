@@ -12,11 +12,11 @@ helpviewer_keywords:
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
 ms.openlocfilehash: 3712e04d4496d13178843564b5d0753f62e28fa0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61678109"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>Güvenli Olmayan Kod ve İşaretçiler (C# Programlama Kılavuzu)
 Tür güvenliği ve emniyeti korumak için C# işaretçi aritmetik, varsayılan olarak desteklemez. Kullanarak ancak [güvenli](../../../csharp/language-reference/keywords/unsafe.md) anahtar sözcüğü, işaretçileri kullanılabilecek güvenli olmayan bir bağlam tanımlayabilirsiniz. İşaretçiler hakkında daha fazla bilgi için Ek Yardım konusuna [işaretçi türleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).  
@@ -27,26 +27,26 @@ Tür güvenliği ve emniyeti korumak için C# işaretçi aritmetik, varsayılan 
 ## <a name="unsafe-code-overview"></a>Güvenli Olmayan Koda Genel Bakış  
  Güvenli olmayan kod, aşağıdaki özelliklere sahiptir:  
   
--   Yöntemleri, türleri ve kod blokları güvenli olarak tanımlanabilir.  
+- Yöntemleri, türleri ve kod blokları güvenli olarak tanımlanabilir.  
   
--   Bazı durumlarda, güvenli olmayan kod dizi sınırları denetimleri kaldırarak bir uygulamanın performansı artırabilir.  
+- Bazı durumlarda, güvenli olmayan kod dizi sınırları denetimleri kaldırarak bir uygulamanın performansı artırabilir.  
   
--   İşaretçileri gerektiren yerel işlevler çağırdığınızda, güvenli olmayan kod gereklidir.  
+- İşaretçileri gerektiren yerel işlevler çağırdığınızda, güvenli olmayan kod gereklidir.  
   
--   Güvenli olmayan kod kullanarak güvenlik ve sağlamlık risklerini de beraberinde getirir.  
+- Güvenli olmayan kod kullanarak güvenlik ve sağlamlık risklerini de beraberinde getirir.  
   
--   Güvenli olmayan kod derlemek C# için sırada, uygulama ile derlenmelidir [/ unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md).  
+- Güvenli olmayan kod derlemek C# için sırada, uygulama ile derlenmelidir [/ unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md).  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  Daha fazla bilgi için bkz.:  
   
--   [İşaretçi türleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+- [İşaretçi türleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
   
--   [Sabit Boyutlu Arabellekler](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)  
+- [Sabit Boyutlu Arabellekler](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)  
   
--   [Nasıl yapılır: Bir bayt dizisine kopyalamak için işaretçiler kullanma](../../../csharp/programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md)  
+- [Nasıl yapılır: Bir bayt dizisine kopyalamak için işaretçiler kullanma](../../../csharp/programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md)  
   
--   [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
 ms.openlocfilehash: 91f34de36e88724ccab21097bf54a4604f7eee37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665786"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Nasıl yapılır: Bir özelliği (Visual Basic) oluşturma
 Bir özellik tanımı arasında içine bir `Property` ifadesi ve bir `End Property` deyimi. Bu tanımı içinde tanımladığınız bir `Get` yordamı, bir `Set` yordamı veya her ikisi. Bu yordamlar özelliğin tüm kod arasındadır.  

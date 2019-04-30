@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: XmlSerializer kullanarak serileştirme (C#)'
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
 ms.openlocfilehash: 9d722735f9a83f0d65fbc10b6c868525e8393a7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667671"
 ---
 # <a name="how-to-serialize-using-xmlserializer-c"></a>Nasıl yapılır: XmlSerializer kullanarak serileştirme (C#)
 Bu konuda serileştirir ve kullanarak çıkarır bir örnek gösterilmektedir <xref:System.Xml.Serialization.XmlSerializer>.  

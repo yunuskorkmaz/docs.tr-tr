@@ -6,11 +6,11 @@ ms.author: wiwagn
 ms.date: 06/27/2018
 ms.custom: seodec18
 ms.openlocfilehash: 3e9a60221a5769d124bcc137d9401367a7713abb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646920"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Kullanılacak .NET Core sürümünü seçin
 

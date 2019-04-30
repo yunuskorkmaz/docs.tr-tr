@@ -15,11 +15,11 @@ ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bd6004bce42a3617c9b7de940336de0fb03c8cc9
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675123"
 ---
 # <a name="application-domains"></a>Uygulama etki alanları
 
@@ -41,18 +41,18 @@ ms.locfileid: "55674587"
   
  Uygulama etki alanları tarafından sağlanan yalıtım aşağıdaki faydaları sağlar:  
   
--   Bir uygulamadaki hatalar diğer uygulamaları etkilemez. Tür kullanımı uyumlu kod bellek hatalarına neden olmadığından uygulama etki alanları kullanan bir etki alanında çalışan kodun işlemdeki diğer uygulamaları etkilememesini sağlar.  
+- Bir uygulamadaki hatalar diğer uygulamaları etkilemez. Tür kullanımı uyumlu kod bellek hatalarına neden olmadığından uygulama etki alanları kullanan bir etki alanında çalışan kodun işlemdeki diğer uygulamaları etkilememesini sağlar.  
   
--   Tek tek uygulamalar, tüm işlemi durdurmadan durdurulabilir. Uygulama etki alanları kullanarak, tek bir uygulama içinde çalışan kodun kaldırılmasını sağlar.  
+- Tek tek uygulamalar, tüm işlemi durdurmadan durdurulabilir. Uygulama etki alanları kullanarak, tek bir uygulama içinde çalışan kodun kaldırılmasını sağlar.  
   
     > [!NOTE]
     >  Tek tek derlemeleri veya türleri kaldıramazsınız. Tam bir etki alanının yüklemesi kaldırılabilir.  
   
--   Bir uygulamada çalışan kod doğrudan koda veya kaynaklara başka bir uygulamaya ait olamaz. Ortak dil çalışma zamanı, farklı uygulama etki alanlarındaki nesneler arasında doğrudan çağrıları engelleyerek bu yalıtımı zorlar. Etki alanları arasında geçen nesneler kopyalanamaz veya proxy tarafından erişilebilir. Nesne kopyalanırsa, yapılan nesne çağrısı yerel. Diğer bir deyişle arayan ve başvurulan nesne aynı uygulama etki alanındadır. Nesne bir proxy sunucusu üzerinden erişiliyorsa, nesneye çağrı uzak çağrıdır. Bu durumda arayan ve başvurulan nesne farklı uygulama etki alanlarındadır. Etki alanları arası çağrıları, iki işlem arasında veya iki makine arasında çağrıları olarak aynı uzak çağrı altyapısını kullanır. Bu nedenle, başvurulan nesne için meta veriler, yöntem çağrısının JIT olarak derlenmiş doğru olmasını izin vermek için her iki uygulama etki alanları için kullanılabilir olmalıdır. Arama etki alanı için çağrılan nesne meta verilerine erişimi yoksa, derleme türünde bir özel durum ile başarısız olabilir <xref:System.IO.FileNotFoundException>. Daha fazla bilgi için [uzak nesneleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Etki alanları arasında nesnelerin nasıl erişilebileceğini belirleme mekanizması nesne tarafından belirlenir. Daha fazla bilgi için bkz. <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
+- Bir uygulamada çalışan kod doğrudan koda veya kaynaklara başka bir uygulamaya ait olamaz. Ortak dil çalışma zamanı, farklı uygulama etki alanlarındaki nesneler arasında doğrudan çağrıları engelleyerek bu yalıtımı zorlar. Etki alanları arasında geçen nesneler kopyalanamaz veya proxy tarafından erişilebilir. Nesne kopyalanırsa, yapılan nesne çağrısı yerel. Diğer bir deyişle arayan ve başvurulan nesne aynı uygulama etki alanındadır. Nesne bir proxy sunucusu üzerinden erişiliyorsa, nesneye çağrı uzak çağrıdır. Bu durumda arayan ve başvurulan nesne farklı uygulama etki alanlarındadır. Etki alanları arası çağrıları, iki işlem arasında veya iki makine arasında çağrıları olarak aynı uzak çağrı altyapısını kullanır. Bu nedenle, başvurulan nesne için meta veriler, yöntem çağrısının JIT olarak derlenmiş doğru olmasını izin vermek için her iki uygulama etki alanları için kullanılabilir olmalıdır. Arama etki alanı için çağrılan nesne meta verilerine erişimi yoksa, derleme türünde bir özel durum ile başarısız olabilir <xref:System.IO.FileNotFoundException>. Daha fazla bilgi için [uzak nesneleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Etki alanları arasında nesnelerin nasıl erişilebileceğini belirleme mekanizması nesne tarafından belirlenir. Daha fazla bilgi için bkz. <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
--   Kodun çalışma biçiminin kapsamı içinde çalıştığı uygulama tarafından. Diğer bir deyişle, uygulama etki alanı, uygulama sürümü ilkeleri, eriştiği uzak derleme ve etki alanına yüklenen derlemelerin bulunacağı hakkında bilgi konumu gibi yapılandırma ayarlarını sağlar.  
+- Kodun çalışma biçiminin kapsamı içinde çalıştığı uygulama tarafından. Diğer bir deyişle, uygulama etki alanı, uygulama sürümü ilkeleri, eriştiği uzak derleme ve etki alanına yüklenen derlemelerin bulunacağı hakkında bilgi konumu gibi yapılandırma ayarlarını sağlar.  
   
--   Koda verilen izinler, kodun çalıştığı uygulama etki alanı tarafından denetlenebilir.  
+- Koda verilen izinler, kodun çalıştığı uygulama etki alanı tarafından denetlenebilir.  
   
 ## <a name="application-domains-and-assemblies"></a>Uygulama Etki Alanları ve derlemeler
 
@@ -60,9 +60,9 @@ ms.locfileid: "55674587"
   
  Bir derlemenin yüklenme şekli, onun işlemdeki birden çok uygulama etki alanı ile paylaşılabilen anlık (JIT) derlenmiş kod olup olmadığını ve derlemenin işlemden kaldırılabilip kaldırılamayacağını belirler.  
   
--   Eğer bir derleme etki alanından bağımsız olarak yüklenirse, aynı güvenlik izni kümesine sahip olan tüm uygulama etki alanları aynı JIT olarak derlenmiş kodunu paylaşabilir ve bu da uygulamanın gerektirdiği belleği azaltır. Ancak, derleme işlemden asla kaldırılamaz.  
+- Eğer bir derleme etki alanından bağımsız olarak yüklenirse, aynı güvenlik izni kümesine sahip olan tüm uygulama etki alanları aynı JIT olarak derlenmiş kodunu paylaşabilir ve bu da uygulamanın gerektirdiği belleği azaltır. Ancak, derleme işlemden asla kaldırılamaz.  
   
--   Eğer bir derleme etki alanından bağımsız olarak yüklenmezse, yüklendiği tüm uygulama etki alanlarında JIT olarak derlenmelidir. Ancak derleme, yüklü olduğu tüm uygulama etki alanları kaldırılarak işlemden kaldırılabilir.  
+- Eğer bir derleme etki alanından bağımsız olarak yüklenmezse, yüklendiği tüm uygulama etki alanlarında JIT olarak derlenmelidir. Ancak derleme, yüklü olduğu tüm uygulama etki alanları kaldırılarak işlemden kaldırılabilir.  
   
  Çalışma zamanı konak ortamı, çalışma zamanını bir işleme yüklerken derlemeleri etki alanından bağımsız olarak yükleyip yüklemeyeceğini belirler. Yönetilen uygulamalar için, <xref:System.LoaderOptimizationAttribute> özniteliğini işlem için giriş noktası metoduna uygulayın ve ilişkili <xref:System.LoaderOptimization> sabit listesinden bir değer belirtin. Ortak dil çalışma zamanını barındıran yönetilmeyen uygulamaları belirtmek için uygun bayrağı çağırdığınızda [CorBindToRuntimeEx işlevi](../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) yöntemi.  
   
@@ -84,9 +84,9 @@ ms.locfileid: "55674587"
   
  Derlemeleri etki alanından bağımsız olarak yükleyip yüklemeyeceğinize karar verdiğinizde, bellek kullanımı ve diğer performans etmenleri arasında bir takas yapmanız gerekir.  
   
--   Etki alanından bağımsız derlemeler için statik verilere ve yöntemlere olan erişim, derlemeleri yalıtmak gerektiği için daha yavaştır. Statik alanlardaki nesnelere olan başvuruların etki alanı sınırlarını geçmesini engellemek için derlemeye erişen tüm uygulama etki alanlarının, statik verinin ayrı kopyalarına sahip olması gerekir. Sonuç olarak, çalışma zamanı bir çağıranı statik veri veya yöntemin uygun kopyasına yönlendirmek için ek mantık içerir. Bu ek mantık, çağrıyı yavaşlatır.  
+- Etki alanından bağımsız derlemeler için statik verilere ve yöntemlere olan erişim, derlemeleri yalıtmak gerektiği için daha yavaştır. Statik alanlardaki nesnelere olan başvuruların etki alanı sınırlarını geçmesini engellemek için derlemeye erişen tüm uygulama etki alanlarının, statik verinin ayrı kopyalarına sahip olması gerekir. Sonuç olarak, çalışma zamanı bir çağıranı statik veri veya yöntemin uygun kopyasına yönlendirmek için ek mantık içerir. Bu ek mantık, çağrıyı yavaşlatır.  
   
--   Derleme etki alanından bağımsız olarak yüklendiğinde, derlemenin tüm bağımlılıkları konumlandırılıp yüklenmelidir çünkü etki alanından bağımsız olarak yüklenemeyen bir bağımlılık, derlemenin etki alanından bağımsız olarak yüklenmesini engeller.  
+- Derleme etki alanından bağımsız olarak yüklendiğinde, derlemenin tüm bağımlılıkları konumlandırılıp yüklenmelidir çünkü etki alanından bağımsız olarak yüklenemeyen bir bağımlılık, derlemenin etki alanından bağımsız olarak yüklenmesini engeller.  
   
 ## <a name="application-domains-and-threads"></a>Uygulama etki alanları ve iş parçacıkları
 
@@ -100,9 +100,9 @@ ms.locfileid: "55674587"
 
  Tarafından temsil edilen kültürü bir <xref:System.Globalization.CultureInfo> nesne, iş parçacıkları ile ilişkilidir. Kullanarak şu anda yürütülen iş parçacığıyla ilişkilendirilmiş kültürü alabilirsiniz <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özelliğini alma veya ayarlama kullanarak o anda yürütülen iş parçacığıyla ilişkilendirilmiş kültürü <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliği. Bir iş parçacığıyla ilişkilendirilmiş kültürü kullanarak açıkça ayarlanmış <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliği devam iş parçacığı uygulama etki alanı sınırları geçtiğinde bu iş parçacığı ile ilişkilendirilecek. Aksi takdirde, herhangi bir zamanda iş parçacığıyla ilişkilendirilmiş kültürü değeri tarafından belirlenir <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> iş parçacığı yürütüyordur uygulama etki alanındaki özelliği:  
   
--   Özelliğinin değeri değilse `null`, özellik tarafından döndürülen iş parçacığı ile ilişkili kültürüdür (ve bu nedenle tarafından döndürülen <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> ve <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özellikleri).  
+- Özelliğinin değeri değilse `null`, özellik tarafından döndürülen iş parçacığı ile ilişkili kültürüdür (ve bu nedenle tarafından döndürülen <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> ve <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özellikleri).  
   
--   Özelliğinin değeri ise `null`, geçerli sistem kültürü iş parçacığı ile ilişkilidir.  
+- Özelliğinin değeri ise `null`, geçerli sistem kültürü iş parçacığı ile ilişkilidir.  
   
 ## <a name="programming-with-application-domains"></a>Uygulama etki alanlarıyla programlama
 
@@ -138,9 +138,9 @@ COMPLUS_LoaderOptimization = 1
   
  Derlemenin yüklenme şekli, onun just-in-time (JIT) derlenmiş kod olup olmadığını belirler işlemde birden çok uygulama etki alanı tarafından paylaşılabilir.  
   
--   Bir derleme yüklenen etki alanından bağımsız ise, aynı güvenlik verme kümesi paylaşan tüm uygulama etki alanları aynı JIT olarak derlenmiş kod paylaşabilirsiniz. Bu uygulamanın gerektirdiği belleği azaltır.  
+- Bir derleme yüklenen etki alanından bağımsız ise, aynı güvenlik verme kümesi paylaşan tüm uygulama etki alanları aynı JIT olarak derlenmiş kod paylaşabilirsiniz. Bu uygulamanın gerektirdiği belleği azaltır.  
   
--   Bir derleme yüklenen etki alanı nötr değilse, bu yüklenir yüklenmez ve Yükleyici uygulama etki alanları arasında iç kaynakları paylaşmamalıdır her uygulama etki alanı içinde JIT olarak derlenmiş olmalıdır.  
+- Bir derleme yüklenen etki alanı nötr değilse, bu yüklenir yüklenmez ve Yükleyici uygulama etki alanları arasında iç kaynakları paylaşmamalıdır her uygulama etki alanı içinde JIT olarak derlenmiş olmalıdır.  
   
  COMPLUS_LoaderOptimization ortam bayrağı 1 olarak ayarlandığında, etki alanından bağımsız şekilde SingleDomain bilinen tüm derlemeleri yüklemeye çalışma zamanında konak zorlar. SingleDomain, etki alanından bağımsız olarak, her zaman etki alanından bağımsız yüklenen Mscorlib dışındaki hiçbir derlemeyi yükler. Ana işlemde tek bir uygulamada çalışırken yaygın olarak kullanıldığı için bu ayar tek etki alanı adı verilir.  
   

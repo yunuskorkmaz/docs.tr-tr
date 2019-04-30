@@ -10,11 +10,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
 ms.openlocfilehash: ebfc82665bb18d96c83db8f29a6c206a9a71fd7f
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663368"
 ---
 # <a name="structures-visual-basic"></a>Yapılar (Visual Basic)
 A *yapısı* Visual Basic'in önceki sürümlerindeki tarafından desteklenen kullanıcı tanımlı tür (UDT) genelleştirilmiş olduğundan. Alanlara ek olarak, özellikleri, yöntemleri ve olayları yapıları kullanıma sunabilirsiniz. Bir yapının bir veya daha fazla arabirim uygulayabilir ve her alan için bireysel erişim düzeylerine bildirebilirsiniz.  
@@ -24,7 +24,7 @@ A *yapısı* Visual Basic'in önceki sürümlerindeki tarafından desteklenen ku
  Yapılar, birkaç ilgili bilgilere tutmak için tek bir değişken istediğinizde yararlıdır. Örneğin, bir çalışanın adı, dahili telefon numarası ve maaş bir arada tutmak isteyebilirsiniz. Çeşitli değişkenler için bu bilgileri kullanabilir veya yapı tanımlamak ve için tek çalışan değişken kullanın. Çok sayıda çalışan ve bu nedenle birçok örneği değişkenin olduğunda yapısı avantajlarından belirgin olur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Bir Yapıyı Bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [Nasıl yapılır: Yapıyı Bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
  Bir yapı ve öğelerini bildirmek gösterilmektedir.  
   
  [Yapı Değişkenleri](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
 ms.openlocfilehash: 915e34310b634311c922a6b2c89701e793fbb191
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61661224"
 ---
 # <a name="modifiers-c-reference"></a>Değiştiriciler (C# Başvurusu)
 Değiştiriciler, tür ve tür üyelerinin bildirimlerini değiştirmek için kullanılır. Bu bölüm C# değiştiricilerini tanıtır.  
@@ -26,7 +26,7 @@ Değiştiriciler, tür ve tür üyelerinin bildirimlerini değiştirmek için ku
 |[extern](../../../csharp/language-reference/keywords/extern.md)|Yöntemin dışarıdan uygulandığını belirtir.|  
 |[new](../../../csharp/language-reference/keywords/new.md)|Bir temel sınıftan devralınan üyeyi gizler açıkça gizler.|  
 |[override](../../../csharp/language-reference/keywords/override.md)|Temel bir sınıftan alınan sanal bir üyenin yeni bir uygulamasını sağlar.|  
-|[Kısmi](../../../csharp/language-reference/keywords/partial-type.md)|Aynı derleme içinde kısmi sınıflar, yapılar ve yöntemler tanımlar.|  
+|[kısmi](../../../csharp/language-reference/keywords/partial-type.md)|Aynı derleme içinde kısmi sınıflar, yapılar ve yöntemler tanımlar.|  
 |[readonly](../../../csharp/language-reference/keywords/readonly.md)|Bildirimin veya aynı sınıftaki bir oluşturucunun parçası olarak atanabilecek bir alan bildirir.|  
 |[sealed](../../../csharp/language-reference/keywords/sealed.md)|Bir sınıfın devralınamayacağını belirtir.|  
 |[static](../../../csharp/language-reference/keywords/static.md)|Belirli bir nesne yerine, türün kendisine ait olan bir üye bildirir.|  

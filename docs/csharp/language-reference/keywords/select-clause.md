@@ -10,11 +10,11 @@ helpviewer_keywords:
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
 ms.openlocfilehash: 7c61fb18c37ed65a62975a75506d4265c52f2a98
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61660677"
 ---
 # <a name="select-clause-c-reference"></a>select tümcesi (C# Başvurusu)
 
@@ -41,7 +41,7 @@ Derleme zamanında `select` yan tümcesi için bir yöntem çağrısına çevril
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
-- [Sorgu anahtar sözcükleri (LINQ)](query-keywords.md)
+- [Query Keywords (LINQ)](query-keywords.md)
 - [from yan tümcesi](from-clause.md)
 - [partial (yöntem) (C# Başvurusu)](partial-method.md)
 - [Anonim Tipler](../../programming-guide/classes-and-structs/anonymous-types.md)

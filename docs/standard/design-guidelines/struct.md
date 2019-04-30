@@ -1,5 +1,5 @@
 ---
-title: Yapı tasarımı
+title: Yapı Tasarımı
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: KrzysztofCwalina
 ms.openlocfilehash: cc5b8d7effda31b0236477b217bccf5cf2137f8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650147"
 ---
-# <a name="struct-design"></a>Yapı tasarımı
+# <a name="struct-design"></a>Yapı Tasarımı
 Genel amaçlı bir değer türü, genellikle kendi C# anahtar sözcüğü bir yapı da adlandırılır. Bu bölümde, genel yapı tasarımı için yönergeler sağlar.  
   
  **X DO NOT** yapısı için varsayılan bir oluşturucu sağlayın.  

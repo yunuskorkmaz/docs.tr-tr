@@ -9,11 +9,11 @@ helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
 ms.openlocfilehash: d87da29872582e9c0d47a6c999312ce88252a5cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662081"
 ---
 # <a name="bool-c-reference"></a>bool (C# Başvurusu)
 
@@ -52,10 +52,10 @@ Bu örnekte, bir karakter klavyeden girmeniz ve program, girdi karakteri bir har
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Başvurusu](../../../csharp/language-reference/index.md)
+- [C# başvurusu](../../../csharp/language-reference/index.md)
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
 - [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)
 - [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)
-- [Örtük Sayısal Dönüşümler Tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-- [Açık Sayısal Dönüşümler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Örtük Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [Açık Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

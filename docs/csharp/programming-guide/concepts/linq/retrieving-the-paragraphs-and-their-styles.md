@@ -3,11 +3,11 @@ title: Paragrafları ve stillerini (C#) alma
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
 ms.openlocfilehash: 693c61e9cbf9e2027864da8d1c26e0a1af66094d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680739"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>Paragrafları ve stillerini (C#) alma
 Bu örnekte biz WordprocessingML belgeden paragraf düğümleri alan bir sorgu yazın. Ayrıca, her bir paragraf stilini tanımlar.  

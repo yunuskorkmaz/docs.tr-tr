@@ -3,18 +3,18 @@ title: Özel İfade Düzenleyicisi Kullanma
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
 ms.openlocfilehash: 4bf885911719f2ec673cb515807f0879535aed7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669608"
 ---
 # <a name="using-a-custom-expression-editor"></a>Özel İfade Düzenleyicisi Kullanma
 Özel ifade düzenleyicisini düzenleme deneyimi daha zengin ya da daha basit bir ifade sağlamak üzere uygulanabilir. Özel ifade düzenleyicisini kullanma isteyebilirsiniz birçok senaryo vardır:  
   
--   IntelliSense ve diğer zengin düzenleme yeniden barındırılan iş akışı Tasarımcısı'nda özellikleri için destek sağlamak için. Varsayılan Visual Studio ifade Düzenleyicisi'ni yeniden barındırılan uygulamalarda kullanılamaz çünkü bu işlevselliği sağlanmalıdır.  
+- IntelliSense ve diğer zengin düzenleme yeniden barındırılan iş akışı Tasarımcısı'nda özellikleri için destek sağlamak için. Varsayılan Visual Studio ifade Düzenleyicisi'ni yeniden barındırılan uygulamalarda kullanılamaz çünkü bu işlevselliği sağlanmalıdır.  
   
--   Böylece, örneğin, Visual Basic öğrenin veya Visual Basic deyimleri ile uğraşmanız gerekmez, düzenleme deneyimi iş analisti kullanıcıları için ifade basitleştirmek için.  
+- Böylece, örneğin, Visual Basic öğrenin veya Visual Basic deyimleri ile uğraşmanız gerekmez, düzenleme deneyimi iş analisti kullanıcıları için ifade basitleştirmek için.  
   
  Özel ifade düzenleyicisini uygulamak için üç temel adımlar gerekir:  
   

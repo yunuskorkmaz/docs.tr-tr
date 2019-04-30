@@ -4,11 +4,11 @@ description: C# dilinde özel LINQ birleştirme işlemleri gerçekleştirmeyi ö
 ms.date: 12/01/2016
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
 ms.openlocfilehash: 7051007c67bd64cd11ede2f4d5352ce3d497255f
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61659858"
 ---
 # <a name="perform-custom-join-operations"></a>Özel birleştirme işlemleri gerçekleştirme
 

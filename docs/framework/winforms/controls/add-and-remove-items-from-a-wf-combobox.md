@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
 ms.openlocfilehash: bd6614c76c63a44a7367ac7c7113c4db260c9a02
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640449"
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminde Öğe Ekleme ve Kaldırma
 Öğeleri bir Windows Forms birleşik giriş kutusu liste kutusu eklenebilir veya çeşitli yollarla, liste kutusunda iade, çünkü bu denetimleri bir çeşitli veri kaynaklarına bağlanabilir. Ancak, bu konuda en basit yöntem gösterir ve hiçbir veri bağlama gerektirir. Görüntülenen öğelerin genellikle dizelerdir; Ancak, herhangi bir nesne kullanılabilir. Denetimde görüntülenen metnin nesne tarafından döndürülen değer olduğu `ToString` yöntemi.  

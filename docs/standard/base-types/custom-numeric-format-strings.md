@@ -18,17 +18,16 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0793f3688f1f6ca66d92c5a22e158aa85e5470ae
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
-ms.translationtype: MT
+ms.openlocfilehash: ee433c91a4fdc78c1b24d2aa232f61ab7d4cb5cf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58133343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650370"
 ---
 # <a name="custom-numeric-format-strings"></a>Özel sayısal biçim dizeleri
 
 Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha fazla özel sayısal tanımlayıcıdan oluşan özel bir sayısal biçim dizesi oluşturabilirsiniz. Bir özel sayısal biçim dizesi değil herhangi bir biçim dizesi olan bir [standart sayısal biçim dizesi](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
-  
 
  Özel sayısal biçim dizeleri, bazı aşırı yüklemeleri tarafından desteklenir `ToString` tüm sayısal türlerin yöntemi. Örneğin, bir sayısal biçim dizesi sağlayabilirsiniz <xref:System.Int32.ToString%28System.String%29> ve <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> yöntemlerinin <xref:System.Int32> türü. Özel sayısal biçim dizeleri de .NET tarafından desteklenen [bileşik biçimlendirme özelliği](../../../docs/standard/base-types/composite-formatting.md), yarafında kullanılır `Write` ve `WriteLine` yöntemlerinin <xref:System.Console> ve <xref:System.IO.StreamWriter> sınıfları, <xref:System.String.Format%2A?displayProperty=nameWithType>yöntemi ve <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> yöntemi. [Dize ilişkilendirme](../../csharp/language-reference/tokens/interpolated.md) özelliği özel sayısal biçim dizeleri de destekler.  
   
@@ -109,11 +108,11 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
 ## <a name="the--custom-specifier"></a>"," Özel Belirleyicisi  
  "," karakteri hem bir grup ayracı, hem de sayı ölçekleme tanımlayıcısı olarak kullanılır.  
   
--   Grup ayracı: İki basamak yer tutucu arasında bir veya daha fazla virgül belirtilirse (0 veya #), tamsayı basamaklarını bir sayının, çıktının tamsayı bölümündeki her sayı grubunun arasında bir grup ayracı karakteri eklenir.  
+- Grup ayracı: İki basamak yer tutucu arasında bir veya daha fazla virgül belirtilirse (0 veya #), tamsayı basamaklarını bir sayının, çıktının tamsayı bölümündeki her sayı grubunun arasında bir grup ayracı karakteri eklenir.  
   
      <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> Ve <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> özelliklerinden <xref:System.Globalization.NumberFormatInfo> nesne belirlemek her sayı grubunun boyutu ve sayı grubu ayracı kullanılan karakter. Örneğin, 1000 sayısını biçimlendirmek için "#,#" dizesi ve sabit kültür kullanılırsa, çıktı "1,000" olur.  
   
--   Sayı ölçekleme tanımlayıcısı: Açık veya örtülü ondalık noktasının solunda hemen bir veya daha fazla virgül belirtilirse, biçimlendirilen sayı her virgül için 1000'e bölünür. Örneğin, eğer 100 milyon sayısını biçimlendirmek için "0,," dizesi kullanılırsa, çıktı "100" olur.  
+- Sayı ölçekleme tanımlayıcısı: Açık veya örtülü ondalık noktasının solunda hemen bir veya daha fazla virgül belirtilirse, biçimlendirilen sayı her virgül için 1000'e bölünür. Örneğin, eğer 100 milyon sayısını biçimlendirmek için "0,," dizesi kullanılırsa, çıktı "100" olur.  
   
  Aynı biçim dizesinde grup ayracı ve sayı ölçekleme tanımlayıcılarını kullanabilirsiniz. Örneğin, eğer bir milyar sayısını biçimlendirmek için "#,0,," dizesi ve sabit kültür kullanılırsa, çıktı "1,000" olur.  
   

@@ -3,11 +3,11 @@ title: Değişkenler ve Bağımsız Değişkenler
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
 ms.openlocfilehash: 29ce5222435b68ed13cbc967e58e72a937625e8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669491"
 ---
 # <a name="variables-and-arguments"></a>Değişkenler ve Bağımsız Değişkenler
 Windows Workflow Foundation (WF) değişkenleri temsil eden veri depolama ve küme içi ve dışı bir etkinlik bağımsız değişkenleri veri akışını temsil eder. Bağımsız değişken kümesinin bir etkinlik içerir ve bunlar etkinlik imzasını yapın. Ayrıca, bir etkinlik bir geliştirici ekleyebilir veya değişkenleri bir iş akışı tasarım sırasında kaldırma değişkenler listesini sağlayabilirsiniz. Bağımsız değişken bir değer döndüren bir ifade kullanarak bağlanır.  

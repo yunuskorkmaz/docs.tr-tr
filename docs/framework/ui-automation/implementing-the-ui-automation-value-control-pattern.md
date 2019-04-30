@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
 ms.openlocfilehash: cccaf1afa55d786e43863e094a9745a0a1d00870
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645843"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>UI Otomasyonu Değer Denetim Düzenini Uygulama
 > [!NOTE]
@@ -25,23 +25,23 @@ ms.locfileid: "59174960"
 ## <a name="implementation-guidelines-and-conventions"></a>Uygulama yönergeleri ve kuralları  
  Değer denetim düzeni uygularken aşağıdaki yönergeler ve kuralları dikkat edin:  
   
--   Gibi denetimler <xref:System.Windows.Automation.ControlType.ListItem> ve <xref:System.Windows.Automation.ControlType.TreeItem> desteklemelidir <xref:System.Windows.Automation.ValuePattern> öğelerden herhangi birinin değeri düzenlenebilir ise bağımsız olarak geçerli düzenleme modu denetimi. Üst denetimin ayrıca desteklemelidir <xref:System.Windows.Automation.ValuePattern> ise alt öğeleri düzenlenebilir.  
+- Gibi denetimler <xref:System.Windows.Automation.ControlType.ListItem> ve <xref:System.Windows.Automation.ControlType.TreeItem> desteklemelidir <xref:System.Windows.Automation.ValuePattern> öğelerden herhangi birinin değeri düzenlenebilir ise bağımsız olarak geçerli düzenleme modu denetimi. Üst denetimin ayrıca desteklemelidir <xref:System.Windows.Automation.ValuePattern> ise alt öğeleri düzenlenebilir.  
   
  ![Düzenlenebilir bir liste öğesi. ](../../../docs/framework/ui-automation/media/uia-valuepattern-editable-listitem.PNG "UIA_ValuePattern_Editable_ListItem")  
 Düzenlenebilir bir liste öğesi örneği  
   
--   Tek satırlı düzenleme denetimleri uygulayarak içeriklerini programlı erişim desteği <xref:System.Windows.Automation.Provider.IValueProvider>. Ancak, çok satırlı düzenleme denetimleri uygulamayın <xref:System.Windows.Automation.Provider.IValueProvider>; bunun yerine uygulayarak, içeriklerinin erişim sağlar <xref:System.Windows.Automation.Provider.ITextProvider>.  
+- Tek satırlı düzenleme denetimleri uygulayarak içeriklerini programlı erişim desteği <xref:System.Windows.Automation.Provider.IValueProvider>. Ancak, çok satırlı düzenleme denetimleri uygulamayın <xref:System.Windows.Automation.Provider.IValueProvider>; bunun yerine uygulayarak, içeriklerinin erişim sağlar <xref:System.Windows.Automation.Provider.ITextProvider>.  
   
--   Çok satırlı düzenleme denetiminin metin içeriğini almak için Denetim uygulamalıdır <xref:System.Windows.Automation.Provider.ITextProvider>. Ancak, <xref:System.Windows.Automation.Provider.ITextProvider> bir denetimin değerini ayarlanmasını desteklemez.  
+- Çok satırlı düzenleme denetiminin metin içeriğini almak için Denetim uygulamalıdır <xref:System.Windows.Automation.Provider.ITextProvider>. Ancak, <xref:System.Windows.Automation.Provider.ITextProvider> bir denetimin değerini ayarlanmasını desteklemez.  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> bilgi veya alt dize değerleri biçimlendirme almayı desteklemiyor. Uygulama <xref:System.Windows.Automation.Provider.ITextProvider> bu senaryolarda.  
+- <xref:System.Windows.Automation.Provider.IValueProvider> bilgi veya alt dize değerleri biçimlendirme almayı desteklemiyor. Uygulama <xref:System.Windows.Automation.Provider.ITextProvider> bu senaryolarda.  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> gibi denetimleri tarafından uygulanan **Renk Seçici** Seçim denetiminden [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (aşağıda Resimli), bir renk değeri (örneğin, "Sarı") ile eşdeğer bir iç arasındakidizeeşlemeyidestekleyen[!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]yapısı.  
+- <xref:System.Windows.Automation.Provider.IValueProvider> gibi denetimleri tarafından uygulanan **Renk Seçici** Seçim denetiminden [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (aşağıda Resimli), bir renk değeri (örneğin, "Sarı") ile eşdeğer bir iç arasındakidizeeşlemeyidestekleyen[!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]yapısı.  
   
  ![Renk Seçici vurgulanan sarı ile. ](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Renk örneği dize eşleme örneği  
   
--   Bir denetim olmalıdır, <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> kümesine `true` ve kendi <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> kümesine `false` bir çağrısına izin vermeden önce <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>.  
+- Bir denetim olmalıdır, <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> kümesine `true` ve kendi <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> kümesine `false` bir çağrısına izin vermeden önce <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-ivalueprovider"></a>Gerekli üyeleri IValueProvider için  
@@ -49,8 +49,8 @@ Renk örneği dize eşleme örneği
   
 |Gerekli üyeleri|Üye türü|Notlar|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|Özellik|None|  
-|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Özellik|None|  
+|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Yöntem|Yok.|  
   
 <a name="Exceptions"></a>   

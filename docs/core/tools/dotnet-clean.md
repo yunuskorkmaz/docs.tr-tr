@@ -3,11 +3,11 @@ title: DotNet temizleme komutu
 description: Dotnet temiz komut geçerli dizinde temizler.
 ms.date: 12/04/2018
 ms.openlocfilehash: a25b7930794795e3dff5051a8ca1dd1b9c261dfd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665221"
 ---
 # <a name="dotnet-clean"></a>DotNet Temizle
 
@@ -17,7 +17,7 @@ ms.locfileid: "53169865"
 
 `dotnet clean` -Bir projenin çıkışı temizler.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
 ```
 dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]

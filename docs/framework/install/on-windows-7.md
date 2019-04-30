@@ -7,10 +7,10 @@ ms.author: mairaw
 ms.date: 04/18/2019
 ms.openlocfilehash: b0a79344fec675a88181f6dbdc802b94978b4f06
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643913"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Windows 7 SP1 ve Windows Server 2008 R2’de .NET Framework Yükleme
 

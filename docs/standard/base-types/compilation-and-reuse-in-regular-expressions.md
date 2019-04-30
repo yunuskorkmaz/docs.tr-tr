@@ -15,11 +15,11 @@ ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2166412269a84329d42f58c7e3423229be4327b8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650316"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>Normal İfadelerde Derleme ve Yeniden Kullanma
 Normal ifadelerin kapsamlı kullanımını nasıl ifadeler normal ifade altyapısı derler anlama ve nasıl normal ifadeler önbelleğe anlama olun uygulamaların performansını iyileştirebilir. Bu konuda, hem derleme hem de önbelleğe alma anlatılmaktadır.  
@@ -40,9 +40,9 @@ Ancak, oluşturulan MSIL kaldırılamıyor. Tüm uygulama etki alanını kaldır
   
  Uygulamanızın önceden derlenmiş normal ifadelerin aşağıdaki iki yoldan birini yararlanabilirsiniz:  
   
--   Statik bir yöntemi kullanarak <xref:System.Text.RegularExpressions.Regex> normal ifade tanımlamak için nesne. Başka bir statik yöntem çağrısında zaten tanımlanmış bir normal ifade deseni kullanıyorsanız, normal ifade altyapısı önbellekten alır. Aksi halde altyapısı normal ifadeyi derlemek ve önbelleğe ekleyin.  
+- Statik bir yöntemi kullanarak <xref:System.Text.RegularExpressions.Regex> normal ifade tanımlamak için nesne. Başka bir statik yöntem çağrısında zaten tanımlanmış bir normal ifade deseni kullanıyorsanız, normal ifade altyapısı önbellekten alır. Aksi halde altyapısı normal ifadeyi derlemek ve önbelleğe ekleyin.  
   
--   Mevcut bir yeniden tarafından <xref:System.Text.RegularExpressions.Regex> normal ifade desenine gerekli olduğu sürece nesne.  
+- Mevcut bir yeniden tarafından <xref:System.Text.RegularExpressions.Regex> normal ifade desenine gerekli olduğu sürece nesne.  
   
  Nesne örneklemesini ve normal ifade derleme, oluşturma ve hızlı bir şekilde çok sayıda yok etme yükü nedeniyle <xref:System.Text.RegularExpressions.Regex> nesneleri çok pahalı bir işlemdir. Çok sayıda farklı normal ifadeler kullanan uygulamalar için statik çağrıları kullanarak performans iyileştirebilirsiniz `Regex` yöntemleri ve büyük olasılıkla normal ifade önbellek boyutuna göre artırma.  
   

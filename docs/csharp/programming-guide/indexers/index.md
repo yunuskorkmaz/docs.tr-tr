@@ -9,11 +9,11 @@ helpviewer_keywords:
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
 ms.openlocfilehash: 5ab0a5e524979110c355391cf800cc82e6d6244f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680170"
 ---
 # <a name="indexers-c-programming-guide"></a>Dizin Oluşturucular (C# Programlama Kılavuzu)
 
@@ -40,29 +40,29 @@ C# 7.0, hem get ile başlayan ve set erişimcisi olabilir uygulanan bir ifade g�
   
 ## <a name="indexers-overview"></a>Dizin Oluşturuculara Genel Bakış  
   
--   Dizin oluşturucular nesneleri dizilere benzer şekilde dizinlenmesini sağlar.  
+- Dizin oluşturucular nesneleri dizilere benzer şekilde dizinlenmesini sağlar.  
   
--   A `get` erişimcisinin bir değer döndürür. A `set` erişimcisinin bir değer atar.  
+- A `get` erişimcisinin bir değer döndürür. A `set` erişimcisinin bir değer atar.  
   
--   [Bu](../../../csharp/language-reference/keywords/this.md) anahtar sözcüğü, dizin oluşturucuyu tanımlamak için kullanılır.  
+- [Bu](../../../csharp/language-reference/keywords/this.md) anahtar sözcüğü, dizin oluşturucuyu tanımlamak için kullanılır.  
   
--   [Değer](../../../csharp/language-reference/keywords/value.md) tarafından atanan değerin tanımlamak için kullanılan anahtar sözcüğü `set` dizin oluşturucu.  
+- [Değer](../../../csharp/language-reference/keywords/value.md) tarafından atanan değerin tanımlamak için kullanılan anahtar sözcüğü `set` dizin oluşturucu.  
   
--   Dizin oluşturucular bir tamsayı değeri tarafından dizine gerekmez; size özel arama mekanizması tanımlama bağlıdır.  
+- Dizin oluşturucular bir tamsayı değeri tarafından dizine gerekmez; size özel arama mekanizması tanımlama bağlıdır.  
   
--   Dizin oluşturucular aşırı yüklenebilir.  
+- Dizin oluşturucular aşırı yüklenebilir.  
   
--   Dizin oluşturucular birden fazla biçimsel parametre, örneğin, iki boyutlu bir dizi erişirken olabilir.  
+- Dizin oluşturucular birden fazla biçimsel parametre, örneğin, iki boyutlu bir dizi erişirken olabilir.  
   
 ## <a name="BKMK_RelatedSections"></a> İlgili bölümler  
   
--   [Dizin Oluşturucular Kullanma](../../../csharp/programming-guide/indexers/using-indexers.md)  
+- [Dizin Oluşturucular Kullanma](../../../csharp/programming-guide/indexers/using-indexers.md)  
   
--   [Arabirimlerdeki Dizin Oluşturucular](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+- [Arabirimlerdeki Dizin Oluşturucular](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
   
--   [Özellikler ve Dizin Oluşturucular Arasında Karşılaştırma](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Özellikler ve Dizin Oluşturucular Arasında Karşılaştırma](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [Erişimci Erişilebilirliğini Kısıtlama](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Erişimci Erişilebilirliğini Kısıtlama](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 

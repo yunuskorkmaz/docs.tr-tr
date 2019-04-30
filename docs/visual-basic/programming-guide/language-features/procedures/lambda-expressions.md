@@ -10,11 +10,11 @@ helpviewer_keywords:
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
 ms.openlocfilehash: c43739e098a91d54d300fa7074d1563da179c0e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665799"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda İfadeleri (Visual Basic)
 A *lambda ifadesi* bir işlevi veya alt yordam bir temsilci geçerli olduğu yerlerde kullanılabilmesi için bir ad olmadan. Lambda ifadeleri, işlev veya alt yordamlar olabilir ve tek satır veya çok satırlı olabilir. Bir lambda ifadesi olan geçerli kapsamını değer geçirebilirsiniz.  
@@ -43,27 +43,27 @@ A *lambda ifadesi* bir işlevi veya alt yordam bir temsilci geçerli olduğu yer
 ## <a name="lambda-expression-syntax"></a>Lambda İfadesi Sözdizimi  
  Bir lambda ifadesi sözdizimi standart işlevi veya alt yordam benzer. Farklar aşağıdaki gibidir:  
   
--   Bir lambda ifadesi, bir adı yok.  
+- Bir lambda ifadesi, bir adı yok.  
   
--   Lambda ifadeleri içeremez değiştiriciler, gibi `Overloads` veya `Overrides`.  
+- Lambda ifadeleri içeremez değiştiriciler, gibi `Overloads` veya `Overrides`.  
   
--   Tek satırlı lambda işlevleri kullanmayın bir `As` dönüş türü belirtmek için yan tümcesi. Bunun yerine, tür lambda ifadesinin gövdesinin değerlendiren değerinden algılanır. Örneğin, lambda ifadesinin gövdesinin ise `cust.City = "London"`, kendi dönüş türü `Boolean`.  
+- Tek satırlı lambda işlevleri kullanmayın bir `As` dönüş türü belirtmek için yan tümcesi. Bunun yerine, tür lambda ifadesinin gövdesinin değerlendiren değerinden algılanır. Örneğin, lambda ifadesinin gövdesinin ise `cust.City = "London"`, kendi dönüş türü `Boolean`.  
   
--   Çok satırlı lambda işlevleri'nde ya da dönüş türü kullanarak belirtebilirsiniz bir `As` yan tümcesi veya çıkarın `As` yan tümcesi böylece dönüş türü algılanır. Zaman `As` çok satırlı lambda işlevi için yan tümcesi atlanırsa, dönüş türü çıkarımı yapılan tüm baskın türü `Return` deyimleri çok satırlı lambda işlevi içinde. *Baskın tür* için diğer tüm türlerin genişleyebileceği benzersiz bir türüdür. Bu benzersiz tür belirlenemiyorsa, baskın tür, dizideki diğer tüm türler için daraltabilirsiniz benzersiz türüdür. Bu benzersiz türlerden hiçbiri belirlenemezse, baskın türdür `Object`. Bu durumda, `Option Strict` ayarlanır `On`, bir derleyici hatası oluşur.  
+- Çok satırlı lambda işlevleri'nde ya da dönüş türü kullanarak belirtebilirsiniz bir `As` yan tümcesi veya çıkarın `As` yan tümcesi böylece dönüş türü algılanır. Zaman `As` çok satırlı lambda işlevi için yan tümcesi atlanırsa, dönüş türü çıkarımı yapılan tüm baskın türü `Return` deyimleri çok satırlı lambda işlevi içinde. *Baskın tür* için diğer tüm türlerin genişleyebileceği benzersiz bir türüdür. Bu benzersiz tür belirlenemiyorsa, baskın tür, dizideki diğer tüm türler için daraltabilirsiniz benzersiz türüdür. Bu benzersiz türlerden hiçbiri belirlenemezse, baskın türdür `Object`. Bu durumda, `Option Strict` ayarlanır `On`, bir derleyici hatası oluşur.  
   
      Örneğin, sağlanan ifadeleri `Return` deyim türü değerleri içeren `Integer`, `Long`, ve `Double`, ortaya çıkan dizi türünde `Double`. Her ikisi de `Integer` ve `Long` genişletmek için `Double` ve yalnızca `Double`. Bu nedenle, `Double` baskın türdür. Daha fazla bilgi için [Widening ve daraltma dönüşümleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
--   Tek satırlı bir işlev gövdesini deyim olmayan bir değer döndüren bir ifade olmalıdır. Var olan hiçbir `Return` tek satırlı işlevleri için bildirimi. Tek satırlı işlevi tarafından döndürülen değer işlev gövdesi içindeki ifade bir değerdir.  
+- Tek satırlı bir işlev gövdesini deyim olmayan bir değer döndüren bir ifade olmalıdır. Var olan hiçbir `Return` tek satırlı işlevleri için bildirimi. Tek satırlı işlevi tarafından döndürülen değer işlev gövdesi içindeki ifade bir değerdir.  
   
--   Tek satır alt yordam gövdesi tek satır deyim olmalıdır.  
+- Tek satır alt yordam gövdesi tek satır deyim olmalıdır.  
   
--   Tek satırlı işlevleri ve alt yordamlar içermez bir `End Function` veya `End Sub` deyimi.  
+- Tek satırlı işlevleri ve alt yordamlar içermez bir `End Function` veya `End Sub` deyimi.  
   
--   Bir lambda ifadesi parametre veri türü kullanarak belirtebilirsiniz `As` anahtar sözcük veya parametresinin veri türü nelze odvodit. Tüm parametre ya da veri türleri veya tüm anlaşılmalıdır belirtilmelidir.  
+- Bir lambda ifadesi parametre veri türü kullanarak belirtebilirsiniz `As` anahtar sözcük veya parametresinin veri türü nelze odvodit. Tüm parametre ya da veri türleri veya tüm anlaşılmalıdır belirtilmelidir.  
   
--   `Optional` ve `Paramarray` parametreleri izin verilmez.  
+- `Optional` ve `Paramarray` parametreleri izin verilmez.  
   
--   Genel Parametreler izin verilmez.  
+- Genel Parametreler izin verilmez.  
   
 ## <a name="async-lambdas"></a>Zaman Uyumsuz Lambdalar  
  İçeren kullanarak zaman uyumsuz işleme içeren lambda ifadeleri ve deyimlerini kolayca oluşturabilirsiniz [zaman uyumsuz](../../../../visual-basic/language-reference/modifiers/async.md) ve [Await işleci](../../../../visual-basic/language-reference/operators/await-operator.md) anahtar sözcükleri. Örneğin, aşağıdaki Windows Forms örneği, çağıran ve bekleyen zaman uyumsuz bir yöntem, bir olay işleyici içerir `ExampleMethodAsync`.  
@@ -118,15 +118,15 @@ End Class
   
  Aşağıdaki örnek, çeşitli iç içe geçmiş lambda ifadesinin erişim haklarını gösterir. Ne zaman döndürülen lambda ifadesi yürütülmediyse `Main` olarak `aDel`, bu öğeleri erişir:  
   
--   İçinde tanımlandığı sınıfının bir alanı: `aField`  
+- İçinde tanımlandığı sınıfının bir alanı: `aField`  
   
--   İçinde tanımlandığı sınıfın bir özelliği: `aProp`  
+- İçinde tanımlandığı sınıfın bir özelliği: `aProp`  
   
--   Yönteminin bir parametresi `functionWithNestedLambda`, içinde tanımlandığı: `level1`  
+- Yönteminin bir parametresi `functionWithNestedLambda`, içinde tanımlandığı: `level1`  
   
--   Bir yerel değişken `functionWithNestedLambda`: `localVar`  
+- Bir yerel değişken `functionWithNestedLambda`: `localVar`  
   
--   Yer alan bir lambda ifadesi parametre: `level2`  
+- Yer alan bir lambda ifadesi parametre: `level2`  
   
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
   
@@ -143,11 +143,11 @@ End Class
   
 ## <a name="examples"></a>Örnekler  
   
--   Aşağıdaki örnek döndüren bir lambda ifadesi tanımlar `True` bağımsız değişkeni boş değer atanabilir bir atanan değer varsa ve `False` değerini ise `Nothing`.  
+- Aşağıdaki örnek döndüren bir lambda ifadesi tanımlar `True` bağımsız değişkeni boş değer atanabilir bir atanan değer varsa ve `False` değerini ise `Nothing`.  
   
      [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]  
   
--   Aşağıdaki örnek, bir dizi içinde son öğenin dizinini döndüren bir lambda ifadesi tanımlar.  
+- Aşağıdaki örnek, bir dizi içinde son öğenin dizinini döndüren bir lambda ifadesi tanımlar.  
   
      [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
   

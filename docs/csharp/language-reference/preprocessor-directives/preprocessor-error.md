@@ -8,11 +8,11 @@ helpviewer_keywords:
 - '#error directive [C#]'
 ms.assetid: f2a7f3af-4cf9-4111-b369-70204d24b26b
 ms.openlocfilehash: 3aa31ce7e189684bd60c238905df3bcbd1818ed6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61660027"
 ---
 # <a name="error-c-reference"></a>#error (C# Başvurusu)
 `#error` oluşturmanıza olanak sağlar. bir [CS1029](../compiler-messages/cs1029.md) kodunuzda belirli bir konumdan kullanıcı tanımlı hata. Örneğin:  

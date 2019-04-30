@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b9070a12-1094-44d6-bb87-a23b50bcb0af
 ms.openlocfilehash: 8b6b6c5b9d7157b1279f23770b1d223635252685
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651837"
 ---
 # <a name="querying-the-datarowview-collection-in-a-dataview"></a>DataView’da DataRowView Koleksiyonunu Sorgulama
 <xref:System.Data.DataView> Numaralandırılabilir bir topluluğu gösterir <xref:System.Data.DataRowView> nesneleri. <xref:System.Data.DataRowView> özelleştirilmiş bir görünümünü temsil eden bir <xref:System.Data.DataRow> ve, belirli bir sürümünü görüntüler <xref:System.Data.DataRow> denetiminde. Yalnızca bir sürümü bir <xref:System.Data.DataRow> gibi bir denetim aracılığıyla görüntülenebilir bir <xref:System.Windows.Forms.DataGridView>. Erişebildiğiniz <xref:System.Data.DataRow> tarafından sunulan <xref:System.Data.DataRowView> aracılığıyla <xref:System.Data.DataRowView.Row%2A> özelliği <xref:System.Data.DataRowView>. Görüntülediğinizde değerleri kullanarak bir <xref:System.Data.DataRowView>, <xref:System.Data.DataView.RowStateFilter%2A> özelliği temel alınan hangi satır sürümünü belirler <xref:System.Data.DataRow> sunulur. Farklı satır sürümlerini kullanarak erişme hakkında bilgi için bir <xref:System.Data.DataRow>, bkz: [satır durumları ve satır sürümleri](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md). Çünkü koleksiyonunu <xref:System.Data.DataRowView> nesneler tarafından kullanıma sunulan <xref:System.Data.DataView> olan numaralandırılabilir, kullanabilirsiniz [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] ele sorgulanamıyor.  

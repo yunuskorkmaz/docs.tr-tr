@@ -1,15 +1,15 @@
 ---
-title: Store genişletilebilirliği
+title: Depo Genişletilebilirliği
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
 ms.openlocfilehash: 46c1ea40925a5c79180171da9a705d7e6b7c8b89
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641612"
 ---
-# <a name="store-extensibility"></a>Store genişletilebilirliği
+# <a name="store-extensibility"></a>Depo Genişletilebilirliği
 
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> kullanılabilir, uygulamaya özgü özel özellikleri yükseltmek kullanıcılara sorgulamak için Kalıcılık veritabanı örnekleri. Bir özellik yükseltme işlemi veritabanı'nda bir özel görünümde kullanılabilir olması değeri neden olur. Bu yükseltilen özelliklerini (kullanıcı sorgularında kullanılan), Int64, Guid, dize ve DateTime gibi basit türler veya seri hale getirilmiş ikili tür (byte[]). olabilir.
 

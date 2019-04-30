@@ -6,11 +6,11 @@ helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
 ms.openlocfilehash: bce8901b4fec4386462ebaa85436b52aedc3f3bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61661899"
 ---
 # <a name="contextual-keywords-c-reference"></a>Bağlamsal Anahtar Sözcükler (C# Başvurusu)
 Kodda özel bir anlamı sağlamak için bağlamsal anahtar sözcüğü kullanılır, ancak C# ' de ayrılmış bir sözcük değil. Bu bölümde aşağıdaki bağlamsal anahtar sözcükler yapılmıştır:  
@@ -23,7 +23,7 @@ Kodda özel bir anlamı sağlamak için bağlamsal anahtar sözcüğü kullanıl
 |[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|İşlem, derleme zamanı tür denetimini atlamasına gerçekleşir sağlayan bir başvuru türünü tanımlar.|  
 |[get](../../../csharp/language-reference/keywords/get.md)|Bir özellik veya dizin oluşturucu için bir erişimci yöntemi tanımlar.|  
 |[global](../../../csharp/language-reference/keywords/global.md)|Aksi takdirde adlandırılmamış varsayılan genel ad alanını belirtir.|  
-|[Kısmi](../../../csharp/language-reference/keywords/partial-type.md)|Kısmi sınıflar, yapılar ve arabirimler aynı derleme biriminde boyunca tanımlar.|  
+|[kısmi](../../../csharp/language-reference/keywords/partial-type.md)|Kısmi sınıflar, yapılar ve arabirimler aynı derleme biriminde boyunca tanımlar.|  
 |[remove](../../../csharp/language-reference/keywords/remove.md)|İstemci kodu olay aboneliği kaldırma çağrılan bir özel olay erişimcisi tanımlar.|  
 |[set](../../../csharp/language-reference/keywords/set.md)|Bir özellik veya dizin oluşturucu için bir erişimci yöntemi tanımlar.|  
 |[value](../../../csharp/language-reference/keywords/value.md)|Set erişimcilerine ve eklemek veya olay işleyicilerini kaldırmak için kullanılır.|  

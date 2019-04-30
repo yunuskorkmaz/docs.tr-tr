@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
 ms.openlocfilehash: 01fb70a7b37d6c9c119fff16a9d680d4139421cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664135"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>(LINQ to DataSet) DataView ile sıralama
 Verileri belirli ölçütlere göre sıralayın ve ardından bir UI denetimine üzerinden bir istemciye verileri sunmak olanağı, veri bağlama, önemli bir yönüdür. <xref:System.Data.DataView> verileri sıralama ve sıralama ölçüte göre sıralanmış veri satırları döndürmek için birçok yol sağlar. Yetenekleri, sıralama, dize tabanlı ek olarak <xref:System.Data.DataView> ayrıca kullanmanızı sağlayan [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] sıralama ölçütü ifadeleri. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeler dize tabanlıdır sıralama daha çok daha karmaşık ve güçlü sıralama işlemleri için izin verin. Bu konu, her iki yaklaşım kullanarak sıralama açıklar <xref:System.Data.DataView>.  
@@ -65,9 +65,9 @@ Verileri belirli ölçütlere göre sıralayın ve ardından bir UI denetimine �
 ## <a name="clearing-the-sort"></a>Sıralama temizleme  
  Sıralama bilgileri bir <xref:System.Data.DataView> kullanarak ayarlandıktan sonra temizlenebilir <xref:System.Data.DataView.Sort%2A> özelliği. Sıralama bilgileri temizlemek için iki yolla <xref:System.Data.DataView>:  
   
--   Ayarlama <xref:System.Data.DataView.Sort%2A> özelliğini `null`.  
+- Ayarlama <xref:System.Data.DataView.Sort%2A> özelliğini `null`.  
   
--   Ayarlama <xref:System.Data.DataView.Sort%2A> boş bir dize özelliği.  
+- Ayarlama <xref:System.Data.DataView.Sort%2A> boş bir dize özelliği.  
   
 ### <a name="example"></a>Örnek  
  Aşağıdaki örnek, oluşturur bir <xref:System.Data.DataView> sorgudan ve sıralama ayarlayarak temizler <xref:System.Data.DataView.Sort%2A> boş bir dize özelliğini:  

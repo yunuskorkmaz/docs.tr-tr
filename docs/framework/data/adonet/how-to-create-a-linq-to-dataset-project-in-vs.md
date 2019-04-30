@@ -3,13 +3,13 @@ title: Bir LINQ to DataSet projesi Visual Studio'da oluşturma
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
 ms.openlocfilehash: 22763d3b9581d09d7bdda0c09480f8d36bb8e2ec
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667059"
 ---
-# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Nasıl Yapılır: Bir LINQ to DataSet projesi Visual Studio'da oluşturma
+# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Nasıl yapılır: Bir LINQ to DataSet projesi Visual Studio'da oluşturma
 
 Belirli bütünleştirilmiş kod başvuruları ve içeri aktarılan ad alanlarını (Visual Basic) LINQ projeleri farklı türde gerektirir veya [kullanarak](../../../csharp/language-reference/keywords/using-directive.md) yönergeleri (C#). LINQ için en düşük gereksinimi başvurusudur *System.Core.dll* ve `using` yönergesi <xref:System.Linq>.
 

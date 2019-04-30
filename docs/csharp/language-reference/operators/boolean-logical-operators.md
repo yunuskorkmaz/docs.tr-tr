@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: de621b26334bbc9679ba7e48a9d5a0cbaec67eab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 1a53f2862727318112eae8e9723cabb794fb4f37
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61660092"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Boolean mantıksal işleçleri (C# Başvurusu)
 
@@ -47,7 +47,7 @@ Aşağıdaki işleçleri ile mantıksal işlemleri [bool](../keywords/bool.md) i
 - İkili [ `&` (mantıksal ve)](#logical-and-operator-), [ `|` (mantıksal veya)](#logical-or-operator-), ve [ `^` (mantıksal XOR)](#logical-exclusive-or-operator-) işleçleri. Bu işleçler, her iki işlenen de her zaman değerlendirin.
 - İkili [ `&&` (koşullu mantıksal ve)](#conditional-logical-and-operator-) ve [ `||` (koşullu mantıksal veya)](#conditional-logical-or-operator-) işleçleri. Bu işleçler, yalnızca gerekli olduğunda ikinci işlenenin değerlendirin.
 
-İşlenen için [integral](../keywords/integral-types-table.md) türleri `&`, `|`, ve `^` işleçleri mantıksal bit düzeyinde işlemler gerçekleştirin.
+İşlenen için [integral](../keywords/integral-types-table.md) türleri `&`, `|`, ve `^` işleçleri mantıksal bit düzeyinde işlemler gerçekleştirin. Daha fazla bilgi için [işleçler bit düzeyinde and -shift](bitwise-and-shift-operators.md).
 
 ## <a name="logical-negation-operator-"></a>Mantıksal değilleme işleci!
 
@@ -67,7 +67,7 @@ Aşağıdaki örnekte, ikinci işleneni `&` işleci, birinci işlenenin değerin
 
 [Koşullu mantıksal AND işlecinin](#conditional-logical-and-operator-) `&&` ayrıca mantıksal ve işlenenleri, hesaplar, ancak değerlendirme sonucu ilk işlenen ikinci işlenende değerlendirmez `false`.
 
-İntegral türündeki işlenenler için `&` işleci hesaplar [mantıksal bit düzeyinde AND](and-operator.md#integer-logical-bitwise-and-operator) işlenenleri biri. Birli `&` işleci [address-of işleci](and-operator.md#unary-address-of-operator).
+İntegral türündeki işlenenler için `&` işleci hesaplar [mantıksal bit düzeyinde AND](bitwise-and-shift-operators.md#logical-and-operator-) işlenenleri biri. Birli `&` işleci [address-of işleci](and-operator.md#unary-address-of-operator).
 
 ## <a name="logical-exclusive-or-operator-"></a>Mantıksal Dışlayıcı veya işlecini ^
 
@@ -75,7 +75,7 @@ Aşağıdaki örnekte, ikinci işleneni `&` işleci, birinci işlenenin değerin
 
 [!code-csharp-interactive[logical exclusive OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Xor)]
 
-İntegral türündeki işlenenler için `^` işleci hesaplar [mantıksal bit düzeyinde dışlamalı OR](xor-operator.md) işlenenleri biri.
+İntegral türündeki işlenenler için `^` işleci hesaplar [mantıksal bit düzeyinde dışlamalı OR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) işlenenleri biri.
 
 ## <a name="logical-or-operator-"></a>Mantıksal OR işlecinin |
 
@@ -89,7 +89,7 @@ Aşağıdaki örnekte, ikinci işleneni `|` işleci, birinci işlenenin değerin
 
 [Koşullu mantıksal OR işlecinin](#conditional-logical-or-operator-) `||` ayrıca mantıksal OR işlenenleri, hesaplar, ancak değerlendirme sonucu ilk işlenen ikinci işlenende değerlendirmez `true`.
 
-İntegral türündeki işlenenler için `|` işleci hesaplar [mantıksal bit düzeyinde OR](or-operator.md) işlenenleri biri.
+İntegral türündeki işlenenler için `|` işleci hesaplar [mantıksal bit düzeyinde OR](bitwise-and-shift-operators.md#logical-or-operator-) işlenenleri biri.
 
 ## <a name="conditional-logical-and-operator-ampamp"></a>Koşullu mantıksal AND işleci &amp;&amp;
 
@@ -187,9 +187,11 @@ Daha fazla bilgi için aşağıdaki bölümlere bakın [ C# dil belirtimi](~/_cs
 - [Mantıksal değilleme işleci](~/_csharplang/spec/expressions.md#logical-negation-operator)
 - [Mantıksal işleçler](~/_csharplang/spec/expressions.md#logical-operators)
 - [Koşullu mantıksal işleçler](~/_csharplang/spec/expressions.md#conditional-logical-operators)
+- [Bileşik atama](~/_csharplang/spec/expressions.md#compound-assignment)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# İşleçleri](index.md)
+- [Bit düzeyinde ve kaydırma işleçleri](bitwise-and-shift-operators.md)

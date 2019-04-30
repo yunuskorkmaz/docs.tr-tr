@@ -14,11 +14,11 @@ helpviewer_keywords:
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
 ms.openlocfilehash: 7965dd2682591cc0840030dfbc9f28401e2a15b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662510"
 ---
 # <a name="-reference-c-compiler-options"></a>-başvurusu (C# Derleyici Seçenekleri)
 **-Başvuru** içeri aktarmak derleyici seçeneği neden [genel](../../../csharp/language-reference/keywords/public.md) tür bilgilerini belirtilen dosyada geçerli projeye bu nedenle belirtilen derleme dosyalarından meta verileri başvuru etkinleştirme.  
@@ -48,9 +48,9 @@ ms.locfileid: "54679441"
   
  (Derleme B) başka bir derlemeye başvuran bir derlemeye (a derlemesi) başvuruda bulunursanız, derleme B başvuru gerekir:  
   
--   Kullandığınız bir derlemeden bir tür bir tür tarafından devralındığında veya derleme B'deki bir arabirim uygular.  
+- Kullandığınız bir derlemeden bir tür bir tür tarafından devralındığında veya derleme B'deki bir arabirim uygular.  
   
--   Bir alan, özelliği, olay veya bir dönüş türü veya parametre türü derleme B'deki yöntemi çağırma  
+- Bir alan, özelliği, olay veya bir dönüş türü veya parametre türü derleme B'deki yöntemi çağırma  
   
  Kullanım [-lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md) için bir veya daha fazla, derleme başvuruları bulunduğu dizini belirtin. **-Lib** konu ayrıca derleyicinin derlemeler için arama dizinleri anlatılmaktadır.  
   

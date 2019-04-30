@@ -8,11 +8,11 @@ helpviewer_keywords:
 - '#region directive [C#]'
 ms.assetid: 672c87d1-9771-4f64-ab3f-0ad3d4ffb2b4
 ms.openlocfilehash: adaa58fc47da557a31270e99ff8a1dae3d0731bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61659988"
 ---
 # <a name="region-c-reference"></a>#region (C# Başvurusu)
 `#region` Genişlet veya daralt kullanarak bir kod bloğunu belirtmenizi sağlar [anahat oluşturma](/visualstudio/ide/outlining) özelliği, Visual Studio Kod Düzenleyicisi. Uzun kod dosyalarında Daralt veya, üzerinde çalıştığınız dosya yoluna odaklanabilmeniz için bir veya daha fazla bölgede gizlemek uygundur. Aşağıdaki örnek, bir bölge tanımlamasına gösterilmektedir:  

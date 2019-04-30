@@ -15,13 +15,13 @@ api_location:
 api_type:
 - Assembly
 ms.openlocfilehash: 4858d9f8878e5b56a0811edf92a2faa729775156
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675207"
 ---
-# <a name="sqlcharsstream-property"></a>SqlChars.Stream özelliği
+# <a name="sqlcharsstream-property"></a>SqlChars.Stream Özelliği
 
 Alır veya ayarlar karakter akışı. Bu özellik içeren derleme SQLAccess.dll bir arkadaş ilişkisi vardır. Bu, SQL Server tarafından kullanıma yöneliktir. Diğer veritabanları için veritabanı tarafından sağlanan barındırma mekanizmasına kullanın.
 

@@ -3,11 +3,11 @@ title: Entity Framework Veri Sağlayıcısı Yazma
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
 ms.openlocfilehash: 2aa27475c28bed521c636139b19454b0720960ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667304"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>Entity Framework Veri Sağlayıcısı Yazma
 Bu bölümde nasıl yazılacağını açıklar bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] SQL Server dışındaki bir veri kaynağını desteklemek için sağlayıcı. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] SQL Server'ı destekleyen bir sağlayıcı içerir.  
@@ -17,17 +17,17 @@ Bu bölümde nasıl yazılacağını açıklar bir [!INCLUDE[adonet_ef](../../..
   
  Entity Framework veri sağlayıcısı (ADO.NET veri sağlayıcı modeli kullanılarak oluşturulan), aşağıdaki işlevleri gerçekleştirir:  
   
--   Varlık veri modeli (EDM) ilkel tür sağlayıcısı türleri ile eşleştirir.  
+- Varlık veri modeli (EDM) ilkel tür sağlayıcısı türleri ile eşleştirir.  
   
--   Sağlayıcıya özgü işlevleri kullanıma sunar.  
+- Sağlayıcıya özgü işlevleri kullanıma sunar.  
   
--   Sağlayıcıya özgü komutlar için desteklemek belirli bir DbQueryCommandTree oluşturur [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sorgular.  
+- Sağlayıcıya özgü komutlar için desteklemek belirli bir DbQueryCommandTree oluşturur [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sorgular.  
   
--   Sağlayıcıya özgü güncelleştirme komutları aracılığıyla güncelleştirmeleri desteklemek belirli bir DbModificationCommandTree oluşturur [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+- Sağlayıcıya özgü güncelleştirme komutları aracılığıyla güncelleştirmeleri desteklemek belirli bir DbModificationCommandTree oluşturur [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
--   Kullanıma sunan bir veritabanını temel alan bir model oluşturulmasını desteklemek için depolama şema tanımı dosyaları eşleme.  
+- Kullanıma sunan bir veritabanını temel alan bir model oluşturulmasını desteklemek için depolama şema tanımı dosyaları eşleme.  
   
--   Metadata (tablolar ve görünümler, örneğin) bir kavramsal model üzerinden kullanıma sunar.  
+- Metadata (tablolar ve görünümler, örneğin) bir kavramsal model üzerinden kullanıma sunar.  
   
  ![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")  
   

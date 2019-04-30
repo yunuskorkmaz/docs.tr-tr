@@ -3,11 +3,11 @@ title: DotNet Paketi komutu
 description: Dotnet paketi komut, .NET Core projesi için NuGet paketlerini oluşturur.
 ms.date: 12/04/2018
 ms.openlocfilehash: 8faa99bf35d9802b16f951082b20644d45a939c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664850"
 ---
 # <a name="dotnet-pack"></a>DotNet paketi
 

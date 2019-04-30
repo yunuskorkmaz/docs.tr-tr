@@ -17,11 +17,11 @@ ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c8c9fe05049feff6e15c765212b72e35265fd844
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650378"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Özel tarih ve saat biçim dizeleri
 
@@ -348,11 +348,11 @@ Aşağıdaki örnek bir özel biçim dizesinde "HH" özel biçim belirticisini i
 
 "K" özel biçim belirticisi bir tarih ve saat değerinin saat dilimi bilgisini temsil eder. Bu biçim tanımlayıcısı kullanıldığında <xref:System.DateTime> değerleri, sonuç dizesi değeri tarafından tanımlanan <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özelliği:
 
--   Yerel saat dilimi için (bir <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özelliği değerinin <xref:System.DateTimeKind.Local?displayProperty=nameWithType>), bu belirtici "zzz" belirticisi ile aynıdır ve yerel Eşgüdümlü Evrensel Saat (UTC); içeren bir sonuç dizesi oluşturur Örneğin, "-07:00".
+- Yerel saat dilimi için (bir <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özelliği değerinin <xref:System.DateTimeKind.Local?displayProperty=nameWithType>), bu belirtici "zzz" belirticisi ile aynıdır ve yerel Eşgüdümlü Evrensel Saat (UTC); içeren bir sonuç dizesi oluşturur Örneğin, "-07:00".
 
--   UTC saati için (bir <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özelliği değerinin <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>), sonuç dizesi UTC tarihini belirtmek üzere "Z" karakterini içerir.
+- UTC saati için (bir <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özelliği değerinin <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>), sonuç dizesi UTC tarihini belirtmek üzere "Z" karakterini içerir.
 
--   Belirtilmeyen bir saat diliminde bir süre boyunca (bir saat olan <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özelliğini eşittir <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>), sonuç <xref:System.String.Empty?displayProperty=nameWithType>.
+- Belirtilmeyen bir saat diliminde bir süre boyunca (bir saat olan <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özelliğini eşittir <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>), sonuç <xref:System.String.Empty?displayProperty=nameWithType>.
 
 İçin <xref:System.DateTimeOffset> değerleri "K" biçim belirtici "zzz" biçim belirtici ile aynıdır ve içeren bir sonuç dizesi oluşturur <xref:System.DateTimeOffset> değerinin UTC ile olan uzaklığını.
 

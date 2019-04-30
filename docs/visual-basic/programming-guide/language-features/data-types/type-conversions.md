@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
 ms.openlocfilehash: 026b2a250abfac0782feb0946bc50a94f504f7ed
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663290"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Visual Basic'de Tür Dönüştürmeleri
 Değeri bir veri türünden başka bir türe değiştirme işleminin adlı *dönüştürme*. Dönüştürmeleri değerleri *genişletme* veya *daraltma*türleri dahil veri kapasiteleri bağlı olarak. Ayrıca bunlar *örtük* veya *açık*kaynak kodunda sözdizimi bağlı olarak.  
@@ -30,7 +30,7 @@ Değeri bir veri türünden başka bir türe değiştirme işleminin adlı *dön
  [Dizeler ve Diğer Türler Arasında Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  Dizeler ve sayısal arasında dönüştürme gösterilmektedir `Boolean`, veya tarih/saat değerleri.  
   
- [Nasıl yapılır: bir nesneyi Visual Basic'de başka bir türe dönüştürme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ [Nasıl yapılır: Bir nesneyi Visual Basic'de başka bir türe dönüştürme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
  Nasıl dönüştürüleceğini gösterir bir `Object` değişkenini herhangi bir veri türü.  
   
  [Dizi Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  

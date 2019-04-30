@@ -1,5 +1,5 @@
 ---
-title: XPathNavigator kullanarak XML verilerini Ekle
+title: XPathNavigator Kullanarak XML Verileri Ekleme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,13 +10,13 @@ ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 224e4f3db31e4818833eb8411f44f547538534fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650251"
 ---
-# <a name="insert-xml-data-using-xpathnavigator"></a>XPathNavigator kullanarak XML verilerini Ekle
+# <a name="insert-xml-data-using-xpathnavigator"></a>XPathNavigator Kullanarak XML Verileri Ekleme
 <xref:System.Xml.XPath.XPathNavigator> Sınıf bir XML belgesinde eşdüzey, alt öğe ve öznitelik düğümleri eklemek için kullanılan yöntemler kümesi sağlar. Bu yöntemleri kullanmak için <xref:System.Xml.XPath.XPathNavigator> nesne olmalıdır düzenlenemez, diğer bir deyişle, kendi <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> özelliği olmalıdır `true`.  
   
  <xref:System.Xml.XPath.XPathNavigator> bir XML belgesi düzenleyebilirsiniz nesneleri <xref:System.Xml.XmlDocument.CreateNavigator%2A> yöntemi <xref:System.Xml.XmlDocument> sınıfı. <xref:System.Xml.XPath.XPathNavigator> tarafından oluşturulan nesnelerin <xref:System.Xml.XPath.XPathDocument> sınıfı salt okunurdur ve tüm düzenleme yöntemlerini kullanmayı dener bir <xref:System.Xml.XPath.XPathNavigator> nesnesi tarafından oluşturulan bir <xref:System.Xml.XPath.XPathDocument> nesne sonuçlanıyor bir <xref:System.NotSupportedException>.  
@@ -29,13 +29,13 @@ ms.locfileid: "54517259"
 ### <a name="inserting-sibling-nodes"></a>Eşdüzey düğümler ekleme  
  <xref:System.Xml.XPath.XPathNavigator> Sınıfı eşdüzey düğümleri eklemek için aşağıdaki yöntemleri sağlar.  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
   
  Bu yöntemler eşdüzey düğümleri önceki ve sonraki düğümü Ekle bir <xref:System.Xml.XPath.XPathNavigator> nesne üzerinde konumlandırılmış şu anda.  
   
@@ -58,13 +58,13 @@ ms.locfileid: "54517259"
 ### <a name="inserting-child-nodes"></a>Alt düğümler ekleme  
  <xref:System.Xml.XPath.XPathNavigator> Sınıfı alt düğümler eklemek için aşağıdaki yöntemleri sağlar.  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
   
  Bu yöntemler ekleme ve sonuna ve düğümünün alt düğümleri listesini başına alt düğümler başına bir <xref:System.Xml.XPath.XPathNavigator> nesne üzerinde konumlandırılmış şu anda.  
   
@@ -87,9 +87,9 @@ ms.locfileid: "54517259"
 ### <a name="inserting-attribute-nodes"></a>Öznitelik düğümleri ekleme  
  <xref:System.Xml.XPath.XPathNavigator> Sınıfı, öznitelik düğümleri eklemek için aşağıdaki yöntemleri sağlar.  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
   
  Bu yöntemleri öznitelik düğümleri üzerinde öğe düğümü Ekle bir <xref:System.Xml.XPath.XPathNavigator> nesne üzerinde konumlandırılmış şu anda. <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A> Yöntemi öğesi düğümde bir öznitelik düğümü oluşturur bir <xref:System.Xml.XPath.XPathNavigator> nesne şu anda yerde konumlandırılır ad alanı öneki, yerel ad, ad alanı URI ve parametre olarak belirtilen değeri kullanarak. <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> Yöntemi döndürür bir <xref:System.Xml.XmlWriter> öznitelik düğümleri eklemek için kullanılan nesne.  
   
@@ -227,26 +227,26 @@ navigator.SetTypedValue(DateTime.Now);
   
  Olası ad çakışmalarını aşağıda verilmiştir.  
   
--   Bir ad alanı kapsamındaki içinde ise <xref:System.Xml.XmlReader> nerede önek için ad alanı URI eşlemesi içinde değil, nesnenin bağlam <xref:System.Xml.XPath.XPathNavigator> nesnenin bağlamı, yeni bir ad alanı bildirimi yeni eklenen düğümüne eklenir.  
+- Bir ad alanı kapsamındaki içinde ise <xref:System.Xml.XmlReader> nerede önek için ad alanı URI eşlemesi içinde değil, nesnenin bağlam <xref:System.Xml.XPath.XPathNavigator> nesnenin bağlamı, yeni bir ad alanı bildirimi yeni eklenen düğümüne eklenir.  
   
--   Kapsamdaki aynı ad URI ise, her ikisi içinde <xref:System.Xml.XmlReader> nesnenin bağlam ve <xref:System.Xml.XPath.XPathNavigator> nesnenin bağlamı, ancak her iki içerikte eşlenmiş farklı bir önek varsa, yeni bir ad alanı bildirimi, ön eki yeni eklenen düğümüne eklenir ve ad alanı URI alınan <xref:System.Xml.XmlReader> nesne.  
+- Kapsamdaki aynı ad URI ise, her ikisi içinde <xref:System.Xml.XmlReader> nesnenin bağlam ve <xref:System.Xml.XPath.XPathNavigator> nesnenin bağlamı, ancak her iki içerikte eşlenmiş farklı bir önek varsa, yeni bir ad alanı bildirimi, ön eki yeni eklenen düğümüne eklenir ve ad alanı URI alınan <xref:System.Xml.XmlReader> nesne.  
   
--   Kapsamdaki aynı ad alanı öneki ise öğesinde hem de <xref:System.Xml.XmlReader> nesnenin bağlam ve <xref:System.Xml.XPath.XPathNavigator> nesnenin bağlamı, ancak sahip farklı bir ad alanı URI eşlenmesi için her iki içerikte yeni bir ad alanı bildirimi yeni eklenen düğümüne eklenir, Bu ad alanı URI alınan önekiyle yeniden bildirir <xref:System.Xml.XmlReader> nesne.  
+- Kapsamdaki aynı ad alanı öneki ise öğesinde hem de <xref:System.Xml.XmlReader> nesnenin bağlam ve <xref:System.Xml.XPath.XPathNavigator> nesnenin bağlamı, ancak sahip farklı bir ad alanı URI eşlenmesi için her iki içerikte yeni bir ad alanı bildirimi yeni eklenen düğümüne eklenir, Bu ad alanı URI alınan önekiyle yeniden bildirir <xref:System.Xml.XmlReader> nesne.  
   
--   Varsa ön ek olarak, hem de ad alanı URI <xref:System.Xml.XmlReader> nesnenin bağlam ve <xref:System.Xml.XPath.XPathNavigator> nesnenin içeriği aynı olduğundan, hiçbir yeni ad alanı bildirimi yeni eklenen düğümüne eklenir.  
+- Varsa ön ek olarak, hem de ad alanı URI <xref:System.Xml.XmlReader> nesnenin bağlam ve <xref:System.Xml.XPath.XPathNavigator> nesnenin içeriği aynı olduğundan, hiçbir yeni ad alanı bildirimi yeni eklenen düğümüne eklenir.  
   
 > [!NOTE]
 >  Yukarıdaki açıklamada ile boş ad alanı bildirimi için de geçerlidir. `string` bir önek (örneğin, varsayılan ad alanı bildirimi) olarak.  
   
  Aşağıdaki yapılabilen `xml:lang` çakışıyor.  
   
--   Varsa bir `xml:lang` kapsam içinde öznitelik <xref:System.Xml.XmlReader> nesnenin bağlam de <xref:System.Xml.XPath.XPathNavigator> nesnenin bağlamı bir `xml:lang` değeri alınan öznitelik <xref:System.Xml.XmlReader> nesne yeni eklenen düğümüne eklenir.  
+- Varsa bir `xml:lang` kapsam içinde öznitelik <xref:System.Xml.XmlReader> nesnenin bağlam de <xref:System.Xml.XPath.XPathNavigator> nesnenin bağlamı bir `xml:lang` değeri alınan öznitelik <xref:System.Xml.XmlReader> nesne yeni eklenen düğümüne eklenir.  
   
--   Varsa bir `xml:lang` kapsamındaki her ikisi içinde öznitelik <xref:System.Xml.XmlReader> nesnenin bağlam ve <xref:System.Xml.XPath.XPathNavigator> nesnenin bağlamı, ancak her farklı bir değere sahip bir `xml:lang` değeri alınan öznitelik <xref:System.Xml.XmlReader> eklenir Yeni eklenen düğüm.  
+- Varsa bir `xml:lang` kapsamındaki her ikisi içinde öznitelik <xref:System.Xml.XmlReader> nesnenin bağlam ve <xref:System.Xml.XPath.XPathNavigator> nesnenin bağlamı, ancak her farklı bir değere sahip bir `xml:lang` değeri alınan öznitelik <xref:System.Xml.XmlReader> eklenir Yeni eklenen düğüm.  
   
--   Varsa bir `xml:lang` kapsamındaki her ikisi içinde öznitelik <xref:System.Xml.XmlReader> nesnenin bağlam ve <xref:System.Xml.XPath.XPathNavigator> nesnenin bağlamı, ancak her yeni aynı değere sahip `xml:lang` özniteliği, yeni eklenen düğümüne eklenir.  
+- Varsa bir `xml:lang` kapsamındaki her ikisi içinde öznitelik <xref:System.Xml.XmlReader> nesnenin bağlam ve <xref:System.Xml.XPath.XPathNavigator> nesnenin bağlamı, ancak her yeni aynı değere sahip `xml:lang` özniteliği, yeni eklenen düğümüne eklenir.  
   
--   Varsa bir `xml:lang` kapsam içinde öznitelik <xref:System.Xml.XPath.XPathNavigator> nesnenin bağlamı, ancak hiçbiri varolan <xref:System.Xml.XmlReader> nesnenin bağlamı, Hayır `xml:lang` özniteliği, yeni eklenen düğümüne eklenir.  
+- Varsa bir `xml:lang` kapsam içinde öznitelik <xref:System.Xml.XPath.XPathNavigator> nesnenin bağlamı, ancak hiçbiri varolan <xref:System.Xml.XmlReader> nesnenin bağlamı, Hayır `xml:lang` özniteliği, yeni eklenen düğümüne eklenir.  
   
 ## <a name="inserting-nodes-with-xmlwriter"></a>XmlWriter ile düğüm ekleme  
  "Düğümleri ve değerler ekleme" bölümünde açıklanan eşdüzey, alt öğe ve öznitelik düğümleri eklemek için kullanılan yöntemler aşırı yüklenmesi sebebiyledir. <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>, <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>, <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>, <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> Ve <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> yöntemlerinin <xref:System.Xml.XPath.XPathNavigator> sınıfı döndürülecek bir <xref:System.Xml.XmlWriter> düğümleri eklemek için kullanılan nesne.  
@@ -271,11 +271,11 @@ navigator.SetTypedValue(DateTime.Now);
   
  Birden çok kullanırken dikkate alınması gereken önemli notlar şunlardır <xref:System.Xml.XmlWriter> nesneleri.  
   
--   XML parçaları tarafından yazılan <xref:System.Xml.XmlWriter> nesneleri XML'e eklenen zaman belge <xref:System.Xml.XmlWriter.Close%2A> yöntemi her <xref:System.Xml.XmlWriter> nesne çağrılır. O noktaya kadar <xref:System.Xml.XmlWriter> nesnesi bağlantısı kesilmiş bir parça yazma. Bir işlem tarafından yazılan tüm parçaları bir XML belgesi üzerinde gerçekleştirilirse bir <xref:System.Xml.XmlWriter> önce nesne <xref:System.Xml.XmlWriter.Close%2A> çağrıldı, etkilenmez.  
+- XML parçaları tarafından yazılan <xref:System.Xml.XmlWriter> nesneleri XML'e eklenen zaman belge <xref:System.Xml.XmlWriter.Close%2A> yöntemi her <xref:System.Xml.XmlWriter> nesne çağrılır. O noktaya kadar <xref:System.Xml.XmlWriter> nesnesi bağlantısı kesilmiş bir parça yazma. Bir işlem tarafından yazılan tüm parçaları bir XML belgesi üzerinde gerçekleştirilirse bir <xref:System.Xml.XmlWriter> önce nesne <xref:System.Xml.XmlWriter.Close%2A> çağrıldı, etkilenmez.  
   
--   Açık ise <xref:System.Xml.XmlWriter> belirli bir XML alt ağaç ve bu alt ağaç nesnesi silindiğinde <xref:System.Xml.XmlWriter> nesne alt ağacı için yine de ekleyebilir. Alt ağacı, yalnızca silinen bir parçası haline gelir.  
+- Açık ise <xref:System.Xml.XmlWriter> belirli bir XML alt ağaç ve bu alt ağaç nesnesi silindiğinde <xref:System.Xml.XmlWriter> nesne alt ağacı için yine de ekleyebilir. Alt ağacı, yalnızca silinen bir parçası haline gelir.  
   
--   Birden çok <xref:System.Xml.XmlWriter> nesneleri, XML belgesi içindeki aynı noktada açıldığında, sırayı XML belgesinde eklenen <xref:System.Xml.XmlWriter> nesneleri kapatılır, bunlar açık sırasına göre değil.  
+- Birden çok <xref:System.Xml.XmlWriter> nesneleri, XML belgesi içindeki aynı noktada açıldığında, sırayı XML belgesinde eklenen <xref:System.Xml.XmlWriter> nesneleri kapatılır, bunlar açık sırasına göre değil.  
   
  Aşağıdaki örnek, oluşturur bir <xref:System.Xml.XmlDocument> nesne, oluşturur bir <xref:System.Xml.XPath.XPathNavigator> nesne ve kullandığı <xref:System.Xml.XmlWriter> tarafından döndürülen nesne <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> ilk kitap yapısını oluşturmak için gereken yöntemini `books.xml` dosya. Örnek olarak sonra kaydeder `book.xml` dosya.  
   

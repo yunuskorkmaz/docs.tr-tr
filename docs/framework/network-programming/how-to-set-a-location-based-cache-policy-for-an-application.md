@@ -12,11 +12,11 @@ helpviewer_keywords:
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
 ms.openlocfilehash: 06d458828c77f61e03d18f635ec00f6a7267bab8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642483"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Nasıl yapılır: Uygulama için Konum Temelli Önbellek İlkesi Ayarlama
 Konum temelli önbellek ilkeleri açıkça istenen kaynak konumunu temel alarak önbelleğe alma davranışını tanımlamak bir uygulama sağlar. Bu konuda önbellek ilkesini programlı olarak ayarlama gösterilir. Yapılandırma dosyalarını kullanarak bir uygulama için bir ilke ayarlama hakkında daha fazla bilgi için bkz. [ \<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
@@ -29,7 +29,7 @@ Konum temelli önbellek ilkeleri açıkça istenen kaynak konumunu temel alarak 
   
 ### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a>Bir önbellekten istenen kaynaklara götüren bir ilke ayarlamak için  
   
--   Bir önbellekten kullanılabilir durumdaysa istenen kaynakları alır ve aksi takdirde, önbelleği düzeyini ayarlayarak istekleri sunucuya gönderir, bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable>. Bir istek istemci ve uzak önbellekler dahil sunucusu arasındaki tüm önbelleği tarafından getirilmesi.  
+- Bir önbellekten kullanılabilir durumdaysa istenen kaynakları alır ve aksi takdirde, önbelleği düzeyini ayarlayarak istekleri sunucuya gönderir, bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable>. Bir istek istemci ve uzak önbellekler dahil sunucusu arasındaki tüm önbelleği tarafından getirilmesi.  
   
     ```csharp  
     public static void UseCacheIfAvailable()  
@@ -50,7 +50,7 @@ Konum temelli önbellek ilkeleri açıkça istenen kaynak konumunu temel alarak 
   
 ### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-resources"></a>Tüm önbelleği kaynakları sağlama dan engelleyen bir ilke ayarlamak için  
   
--   Önbelleği düzeyini ayarlayarak istenen kaynaklara sağladığı tüm önbelleği önleyen bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore>. Varsa ve bunlar da kaynak kaldırmalısınız uzak önbelleklere gösterir. Bu ilke düzeyi kaynak yerel önbellekten kaldırır.  
+- Önbelleği düzeyini ayarlayarak istenen kaynaklara sağladığı tüm önbelleği önleyen bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore>. Varsa ve bunlar da kaynak kaldırmalısınız uzak önbelleklere gösterir. Bu ilke düzeyi kaynak yerel önbellekten kaldırır.  
   
     ```csharp  
     public static void DoNotUseCache()  
@@ -71,7 +71,7 @@ Konum temelli önbellek ilkeleri açıkça istenen kaynak konumunu temel alarak 
   
 ### <a name="to-set-a-policy-that-returns-requested-resources-only-if-they-are-in-the-local-cache"></a>İstenen kaynaklara yalnızca yerel önbellek üzerinde olduklarında döndüren bir ilke ayarlamak için  
   
--   İstenen kaynaklara yalnızca yerel önbellek üzerinde önbelleği düzeyini ayarlayarak olmaları durumunda döndüren bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly>. İstenen kaynak önbellekte değilse bir <xref:System.Net.WebException> özel durumu oluşturulur.  
+- İstenen kaynaklara yalnızca yerel önbellek üzerinde önbelleği düzeyini ayarlayarak olmaları durumunda döndüren bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly>. İstenen kaynak önbellekte değilse bir <xref:System.Net.WebException> özel durumu oluşturulur.  
   
     ```csharp  
     public static void OnlyUseCache()  
@@ -92,7 +92,7 @@ Konum temelli önbellek ilkeleri açıkça istenen kaynak konumunu temel alarak 
   
 ### <a name="to-set-a-policy-that-prevents-the-local-cache-from-supplying-resources"></a>Yerel önbellek kaynakları sağlama dan engelleyen bir ilke ayarlamak için  
   
--   Yerel önbellek, önbellek düzeyini ayarlayarak istenen kaynaklara sağlama önleyen bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh>. İstenen kaynak Ara bir önbellekte ve başarıyla yeniden doğrulanır, istenen kaynak Ara önbellek sağlayabilirsiniz.  
+- Yerel önbellek, önbellek düzeyini ayarlayarak istenen kaynaklara sağlama önleyen bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh>. İstenen kaynak Ara bir önbellekte ve başarıyla yeniden doğrulanır, istenen kaynak Ara önbellek sağlayabilirsiniz.  
   
     ```csharp  
     public static void DoNotUseLocalCache()  
@@ -113,7 +113,7 @@ Konum temelli önbellek ilkeleri açıkça istenen kaynak konumunu temel alarak 
   
 ### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-requested-resources"></a>Kaynaklar istenen tüm önbelleği sağlayarak dan engelleyen bir ilke ayarlama  
   
--   Önbelleği düzeyini ayarlayarak istenen kaynaklara sağladığı tüm önbelleği önleyen bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.Reload>. Sunucu tarafından döndürülen kaynak önbellekte depolanabilir.  
+- Önbelleği düzeyini ayarlayarak istenen kaynaklara sağladığı tüm önbelleği önleyen bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.Reload>. Sunucu tarafından döndürülen kaynak önbellekte depolanabilir.  
   
     ```csharp  
     public static void SendToServer()  
@@ -134,7 +134,7 @@ Konum temelli önbellek ilkeleri açıkça istenen kaynak konumunu temel alarak 
   
 ### <a name="to-set-a-policy-that-allows-any-cache-to-supply-requested-resources-if-the-resource-on-the-server-is-not-newer-than-the-cached-copy"></a>Kaynak sunucuda önbelleğe alınmış kopyayı yeni değil, istenen kaynakları sağlamak tüm önbelleği izin veren bir ilke ayarlamak için  
   
--   Kaynak sunucuda önbelleği düzeyini ayarlayarak önbelleğe alınmış kopyayı yeni değil, istenen kaynakları sağlamak tüm önbelleği izin veren bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate>.  
+- Kaynak sunucuda önbelleği düzeyini ayarlayarak önbelleğe alınmış kopyayı yeni değil, istenen kaynakları sağlamak tüm önbelleği izin veren bir ilke oluşturmak <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate>.  
   
     ```csharp  
     public static void CheckServer()  

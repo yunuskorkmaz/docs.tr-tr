@@ -8,11 +8,11 @@ ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ca809c28e7d55d7b899809c2fd514c073dd73054
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644284"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Bir İş Parçacığı Koleksiyonunun Ne Zaman Kullanılacağı
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Desteklemek için özel olarak tasarlanan beş yeni koleksiyon türlerini tanıtır çok iş parçacıklı ekleme ve kaldırma işlemleri. İş parçacığı güvenliği sağlamak için bu yeni türleri çeşitli verimli kilitleme ve kilitsiz eşitleme mekanizmaları kullanın. Eşitleme için bir işlem yükü ekler. Ek yük miktarı kullanılan eşitleme türü ve gerçekleştirilen işlemleri türünü eşzamanlı koleksiyon erişmeye çalıştığınız iş parçacığı sayısı gibi diğer faktörlere bağlıdır.  
