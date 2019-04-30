@@ -8,26 +8,26 @@ helpviewer_keywords:
 - Freezable objects [WPF], determining if frozen
 ms.assetid: 92e58baa-ee12-4a9e-ac3a-ca458807a8b2
 ms.openlocfilehash: 6a63862d35f2c40289ea6445eb3dab8a2abe4a61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776239"
 ---
-# <a name="how-to-determine-whether-a-freezable-is-frozen"></a><span data-ttu-id="7d4bf-102">Nasıl yapılır: Freezable'ın Dondurulmuş Olup Olmadığını Belirleme</span><span class="sxs-lookup"><span data-stu-id="7d4bf-102">How to: Determine Whether a Freezable Is Frozen</span></span>
-<span data-ttu-id="7d4bf-103">Bu örnek nasıl belirleneceğini göstermektedir olup olmadığını bir <xref:System.Windows.Freezable> nesne donuktur.</span><span class="sxs-lookup"><span data-stu-id="7d4bf-103">This example shows how to determine whether a <xref:System.Windows.Freezable> object is frozen.</span></span> <span data-ttu-id="7d4bf-104">Dondurulmuş değiştirmeye çalışırsanız <xref:System.Windows.Freezable> nesnesi atar bir <xref:System.InvalidOperationException>.</span><span class="sxs-lookup"><span data-stu-id="7d4bf-104">If you try to modify a frozen <xref:System.Windows.Freezable> object, it throws an <xref:System.InvalidOperationException>.</span></span> <span data-ttu-id="7d4bf-105">Bu özel durum önlemek için <xref:System.Windows.Freezable.IsFrozen%2A> özelliği <xref:System.Windows.Freezable> dondurulmuş olup olmadığını belirlemek için nesne.</span><span class="sxs-lookup"><span data-stu-id="7d4bf-105">To avoid throwing this exception, use the <xref:System.Windows.Freezable.IsFrozen%2A> property of the <xref:System.Windows.Freezable> object to determine whether it is frozen.</span></span>  
+# <a name="how-to-determine-whether-a-freezable-is-frozen"></a><span data-ttu-id="8694b-102">Nasıl yapılır: Freezable'ın Dondurulmuş Olup Olmadığını Belirleme</span><span class="sxs-lookup"><span data-stu-id="8694b-102">How to: Determine Whether a Freezable Is Frozen</span></span>
+<span data-ttu-id="8694b-103">Bu örnek nasıl belirleneceğini göstermektedir olup olmadığını bir <xref:System.Windows.Freezable> nesne donuktur.</span><span class="sxs-lookup"><span data-stu-id="8694b-103">This example shows how to determine whether a <xref:System.Windows.Freezable> object is frozen.</span></span> <span data-ttu-id="8694b-104">Dondurulmuş değiştirmeye çalışırsanız <xref:System.Windows.Freezable> nesnesi atar bir <xref:System.InvalidOperationException>.</span><span class="sxs-lookup"><span data-stu-id="8694b-104">If you try to modify a frozen <xref:System.Windows.Freezable> object, it throws an <xref:System.InvalidOperationException>.</span></span> <span data-ttu-id="8694b-105">Bu özel durum önlemek için <xref:System.Windows.Freezable.IsFrozen%2A> özelliği <xref:System.Windows.Freezable> dondurulmuş olup olmadığını belirlemek için nesne.</span><span class="sxs-lookup"><span data-stu-id="8694b-105">To avoid throwing this exception, use the <xref:System.Windows.Freezable.IsFrozen%2A> property of the <xref:System.Windows.Freezable> object to determine whether it is frozen.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7d4bf-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="7d4bf-106">Example</span></span>  
- <span data-ttu-id="7d4bf-107">Aşağıdaki örnek donuyor bir <xref:System.Windows.Media.SolidColorBrush> ve kullanılarak test <xref:System.Windows.Freezable.IsFrozen%2A> dondurulmuş olup olmadığını belirlemek için özellik.</span><span class="sxs-lookup"><span data-stu-id="7d4bf-107">The following example freezes a <xref:System.Windows.Media.SolidColorBrush> and then tests it by using the <xref:System.Windows.Freezable.IsFrozen%2A> property to determine whether it is frozen.</span></span>  
+## <a name="example"></a><span data-ttu-id="8694b-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="8694b-106">Example</span></span>  
+ <span data-ttu-id="8694b-107">Aşağıdaki örnek donuyor bir <xref:System.Windows.Media.SolidColorBrush> ve kullanılarak test <xref:System.Windows.Freezable.IsFrozen%2A> dondurulmuş olup olmadığını belirlemek için özellik.</span><span class="sxs-lookup"><span data-stu-id="8694b-107">The following example freezes a <xref:System.Windows.Media.SolidColorBrush> and then tests it by using the <xref:System.Windows.Freezable.IsFrozen%2A> property to determine whether it is frozen.</span></span>  
   
  [!code-csharp[freezablesample_procedural#CheckIsFrozenExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#checkisfrozenexample)]
  [!code-vb[freezablesample_procedural#CheckIsFrozenExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#checkisfrozenexample)]  
   
- <span data-ttu-id="7d4bf-108">Hakkında daha fazla bilgi için <xref:System.Windows.Freezable> nesneleri bkz [Freezable nesnelerine genel bakış](freezable-objects-overview.md).</span><span class="sxs-lookup"><span data-stu-id="7d4bf-108">For more information about <xref:System.Windows.Freezable> objects, see the [Freezable Objects Overview](freezable-objects-overview.md).</span></span>  
+ <span data-ttu-id="8694b-108">Hakkında daha fazla bilgi için <xref:System.Windows.Freezable> nesneleri bkz [Freezable nesnelerine genel bakış](freezable-objects-overview.md).</span><span class="sxs-lookup"><span data-stu-id="8694b-108">For more information about <xref:System.Windows.Freezable> objects, see the [Freezable Objects Overview](freezable-objects-overview.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7d4bf-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7d4bf-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8694b-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8694b-109">See also</span></span>
 
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.IsFrozen%2A>
-- [<span data-ttu-id="7d4bf-110">Freezable Nesnelerine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7d4bf-110">Freezable Objects Overview</span></span>](freezable-objects-overview.md)
-- [<span data-ttu-id="7d4bf-111">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="7d4bf-111">How-to Topics</span></span>](base-elements-how-to-topics.md)
+- [<span data-ttu-id="8694b-110">Freezable Nesnelerine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="8694b-110">Freezable Objects Overview</span></span>](freezable-objects-overview.md)
+- [<span data-ttu-id="8694b-111">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="8694b-111">How-to Topics</span></span>](base-elements-how-to-topics.md)

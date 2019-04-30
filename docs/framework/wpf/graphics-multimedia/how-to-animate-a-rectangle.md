@@ -9,27 +9,27 @@ helpviewer_keywords:
 - rectangles [WPF], animating
 ms.assetid: 572ffb95-790d-4ace-adbf-b2ea8a90e75b
 ms.openlocfilehash: 7f7cf24f7883553329de3761ff0670e8e3a09463
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760915"
 ---
-# <a name="how-to-animate-a-rectangle"></a><span data-ttu-id="ded8e-102">Nasıl yapılır: Bir Dikdörtgene Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="ded8e-102">How to: Animate a Rectangle</span></span>
-<span data-ttu-id="ded8e-103">Bu örnekte, boyut ve konum bir dikdörtgenin değişikliklerine animasyon ekleme gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="ded8e-103">This example shows how to animate changes to the size and position of a rectangle.</span></span>  
+# <a name="how-to-animate-a-rectangle"></a><span data-ttu-id="a6521-102">Nasıl yapılır: Bir Dikdörtgene Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="a6521-102">How to: Animate a Rectangle</span></span>
+<span data-ttu-id="a6521-103">Bu örnekte, boyut ve konum bir dikdörtgenin değişikliklerine animasyon ekleme gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="a6521-103">This example shows how to animate changes to the size and position of a rectangle.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ded8e-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="ded8e-104">Example</span></span>  
- <span data-ttu-id="ded8e-105">Aşağıdaki örnek, bir örneğini kullanır. <xref:System.Windows.Media.Animation.RectAnimation> animasyon uygulamak için sınıfı <xref:System.Windows.Media.RectangleGeometry.Rect%2A> özelliği bir <xref:System.Windows.Media.RectangleGeometry>, boyutunu ve konumunu dikdörtgenin değişiklikleri canlandırır.</span><span class="sxs-lookup"><span data-stu-id="ded8e-105">The following example uses an instance of the <xref:System.Windows.Media.Animation.RectAnimation> class to animate the <xref:System.Windows.Media.RectangleGeometry.Rect%2A> property of a <xref:System.Windows.Media.RectangleGeometry>, which animates changes to the size and position of the rectangle.</span></span>  
+## <a name="example"></a><span data-ttu-id="a6521-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="a6521-104">Example</span></span>  
+ <span data-ttu-id="a6521-105">Aşağıdaki örnek, bir örneğini kullanır. <xref:System.Windows.Media.Animation.RectAnimation> animasyon uygulamak için sınıfı <xref:System.Windows.Media.RectangleGeometry.Rect%2A> özelliği bir <xref:System.Windows.Media.RectangleGeometry>, boyutunu ve konumunu dikdörtgenin değişiklikleri canlandırır.</span><span class="sxs-lookup"><span data-stu-id="a6521-105">The following example uses an instance of the <xref:System.Windows.Media.Animation.RectAnimation> class to animate the <xref:System.Windows.Media.RectangleGeometry.Rect%2A> property of a <xref:System.Windows.Media.RectangleGeometry>, which animates changes to the size and position of the rectangle.</span></span>  
   
  [!code-csharp[BasicAnimations_snip#RectAnimationWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snip/CSharp/RectAnimationExample.cs#rectanimationwholepage)]
  [!code-vb[BasicAnimations_snip#RectAnimationWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/RectAnimationExample.vb#rectanimationwholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="ded8e-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ded8e-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a6521-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a6521-106">See also</span></span>
 
 - <xref:System.Windows.Media.Animation.RectAnimation>
 - <xref:System.Windows.Media.RectangleGeometry.Rect%2A>
 - <xref:System.Windows.Media.RectangleGeometry>
-- [<span data-ttu-id="ded8e-107">Animasyona Genel bakış</span><span class="sxs-lookup"><span data-stu-id="ded8e-107">Animation Overview</span></span>](animation-overview.md)
-- [<span data-ttu-id="ded8e-108">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="ded8e-108">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="ded8e-109">Grafikler ile ilgili nasıl yapılır konuları</span><span class="sxs-lookup"><span data-stu-id="ded8e-109">Graphics How-to Topics</span></span>](graphics-how-to-topics.md)
-- [<span data-ttu-id="ded8e-110">Animasyon ve zamanlama ile ilgili nasıl yapılır konuları</span><span class="sxs-lookup"><span data-stu-id="ded8e-110">Animation and Timing How-to Topics</span></span>](animation-and-timing-how-to-topics.md)
+- [<span data-ttu-id="a6521-107">Animasyona Genel bakış</span><span class="sxs-lookup"><span data-stu-id="a6521-107">Animation Overview</span></span>](animation-overview.md)
+- [<span data-ttu-id="a6521-108">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="a6521-108">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="a6521-109">Grafikler ile ilgili nasıl yapılır konuları</span><span class="sxs-lookup"><span data-stu-id="a6521-109">Graphics How-to Topics</span></span>](graphics-how-to-topics.md)
+- [<span data-ttu-id="a6521-110">Animasyon ve zamanlama ile ilgili nasıl yapılır konuları</span><span class="sxs-lookup"><span data-stu-id="a6521-110">Animation and Timing How-to Topics</span></span>](animation-and-timing-how-to-topics.md)
