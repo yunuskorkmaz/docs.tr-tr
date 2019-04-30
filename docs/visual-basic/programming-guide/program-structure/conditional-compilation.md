@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
 ms.openlocfilehash: 828edf2e5491394f5ac802b5c9babfb3df359e59
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758463"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic'de Koşullu Derleme
 İçinde *koşullu derleme*, belirli bir programda kod bloklarının diğerleri göz ardı edilir ancak seçmeli olarak derlenir.  
@@ -29,11 +29,11 @@ ms.locfileid: "56967860"
 ## <a name="declaring-conditional-compilation-constants"></a>Koşullu derleme Sabitleri Bildirme  
  Koşullu derleme sabitleri üç yoldan biriyle ayarlayabilirsiniz:  
   
--   İçinde **Proje Tasarımcısı**  
+- İçinde **Proje Tasarımcısı**  
   
--   Komut satırı derleyicisini kullanarak komut satırında  
+- Komut satırı derleyicisini kullanarak komut satırında  
   
--   Kodunuzda  
+- Kodunuzda  
   
  Koşullu derleme sabitleri, özel bir kapsama sahip ve standart koddan erişilemez. Koşullu derleme sabiti kapsamı ayarlanmış şekilde bağlıdır. Aşağıdaki tabloda her yukarıda açıklanan üç yoldan birini kullanarak bildirilen sabitlerin kapsamı listeler.  
   

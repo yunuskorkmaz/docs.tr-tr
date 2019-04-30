@@ -9,11 +9,11 @@ helpviewer_keywords:
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
 ms.openlocfilehash: 75c16c27dc919ba365cbe3c28c61a1e46496b0ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768296"
 ---
 # <a name="-operator-visual-basic"></a>\<\< İşleci (Visual Basic)
 Bir bit desenine aritmetik sola kaydırma uygular.  
@@ -60,15 +60,15 @@ result = pattern << amount
   
  Önceki örneği sonuçları aşağıdaki gibidir:  
   
--   `result1` 192 (0000 0000 1100 0000) olur.  
+- `result1` 192 (0000 0000 1100 0000) olur.  
   
--   `result2` 3072 (0000 1100 0000 0000) olan.  
+- `result2` 3072 (0000 1100 0000 0000) olan.  
   
--   `result3` -32768 (1000 0000 0000 0000) olur.  
+- `result3` -32768 (1000 0000 0000 0000) olur.  
   
--   `result4` 384 (0000 0001 1000 0000) olur.  
+- `result4` 384 (0000 0001 1000 0000) olur.  
   
--   `result5` (sol ötelenen 15 basamak) 0'dır.  
+- `result5` (sol ötelenen 15 basamak) 0'dır.  
   
  Değiştirme miktarı için `result4` 17 ' hesaplanır ve hangi eşittir 1 15.  
   

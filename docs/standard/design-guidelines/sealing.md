@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: KrzysztofCwalina
 ms.openlocfilehash: c8aeb5ce3d93755f30bf68732592a08d7af54957
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762072"
 ---
 # <a name="sealing"></a>Mühürleme
 Nesne yönelimli çerçeveleri özelliklerinin geliştiriciler genişletmek ve framework Designer'ların beklenmedik şekilde özelleştirin biridir. Güç ve Genişletilebilir tasarım tehlike budur. Framework'ünüzün tasarlarken, bu nedenle olduğu için genişletilebilirlik, istendiğinde dikkatlice tasarlayın ve tehlikeli olduğunda genişletilebilirlik sınırlamak için çok önemlidir.  
@@ -27,13 +27,13 @@ Nesne yönelimli çerçeveleri özelliklerinin geliştiriciler genişletmek ve f
   
  Bir sınıf mühürleme için iyi nedenler şunlardır:  
   
--   Sınıfı statik bir sınıftır. Bkz: [statik sınıf tasarımı](../../../docs/standard/design-guidelines/static-class.md).  
+- Sınıfı statik bir sınıftır. Bkz: [statik sınıf tasarımı](../../../docs/standard/design-guidelines/static-class.md).  
   
--   Sınıfı, güvenlik açısından duyarlı gizli dizileri devralınan korunan üyeleri depolar.  
+- Sınıfı, güvenlik açısından duyarlı gizli dizileri devralınan korunan üyeleri depolar.  
   
--   Sınıf çok sayıda sanal üyelerini devralır ve ayrı ayrı mühürleme maliyeti korumasız sınıfı bırakmanın basıyor.  
+- Sınıf çok sayıda sanal üyelerini devralır ve ayrı ayrı mühürleme maliyeti korumasız sınıfı bırakmanın basıyor.  
   
--   Sınıf çok hızlı çalışma zamanı arama gerektiren bir özniteliktir. Korumalı öznitelikleri korumasız yapılandırılanlardan biraz daha yüksek performans düzeyine sahip. bkz: [öznitelikleri](../../../docs/standard/design-guidelines/attributes.md).  
+- Sınıf çok hızlı çalışma zamanı arama gerektiren bir özniteliktir. Korumalı öznitelikleri korumasız yapılandırılanlardan biraz daha yüksek performans düzeyine sahip. bkz: [öznitelikleri](../../../docs/standard/design-guidelines/attributes.md).  
   
  **X DO NOT** korumalı türlerde korunan veya sanal üyeleri bildirme.  
   

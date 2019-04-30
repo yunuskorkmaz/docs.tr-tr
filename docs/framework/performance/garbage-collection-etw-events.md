@@ -9,44 +9,44 @@ ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7f9bf0e309ec8c77d4b1d6afbf111e7eeae629ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61722945"
 ---
 # <a name="garbage-collection-etw-events"></a>Çöp Toplama ETW Olayları
 <a name="top"></a> Bu olaylar, çöp toplama hakkında bilgi toplayın. Bunlar Tanılama'da yardımcı olur ve hata ayıklama, çöp toplama kaç kez belirleme de dahil olmak üzere gerçekleştirildiyse, ne kadar bellek çöp toplama ve benzeri sırasında bırakılmış.  
   
  Bu kategori aşağıdaki olaylar oluşur:  
   
--   [GCStart_V1 olay](#gcstart_v1_event)  
+- [GCStart_V1 olay](#gcstart_v1_event)  
   
--   [GCEnd_V1 Event](#gcend_v1_event)  
+- [GCEnd_V1 Event](#gcend_v1_event)  
   
--   [GCHeapStats_V1 olay](#gcheapstats_v1_event)  
+- [GCHeapStats_V1 olay](#gcheapstats_v1_event)  
   
--   [GCCreateSegment_V1 Event](#gccreatesegment_v1_event)  
+- [GCCreateSegment_V1 Event](#gccreatesegment_v1_event)  
   
--   [GCFreeSegment_V1 Event](#gcfreesegment_v1_event)  
+- [GCFreeSegment_V1 Event](#gcfreesegment_v1_event)  
   
--   [GCRestartEEBegin_V1 olay](#gcrestarteebegin_v1_event)  
+- [GCRestartEEBegin_V1 olay](#gcrestarteebegin_v1_event)  
   
--   [GCRestartEEEnd_V1 olay](#gcrestarteeend_v1_event)  
+- [GCRestartEEEnd_V1 olay](#gcrestarteeend_v1_event)  
   
--   [GCSuspendEE_V1 Event](#gcsuspendee_v1_event)  
+- [GCSuspendEE_V1 Event](#gcsuspendee_v1_event)  
   
--   [GCSuspendEEEnd_V1 Event](#gcsuspendeeend_v1_event)  
+- [GCSuspendEEEnd_V1 Event](#gcsuspendeeend_v1_event)  
   
--   [GCAllocationTick_V2 olay](#gcallocationtick_v2_event)  
+- [GCAllocationTick_V2 olay](#gcallocationtick_v2_event)  
   
--   [GCFinalizersBegin_V1 Event](#gcfinalizersbegin_v1_event)  
+- [GCFinalizersBegin_V1 Event](#gcfinalizersbegin_v1_event)  
   
--   [GCFinalizersEnd_V1 olay](#gcfinalizersend_v1_event)  
+- [GCFinalizersEnd_V1 olay](#gcfinalizersend_v1_event)  
   
--   [GCCreateConcurrentThread_V1 olay](#gccreateconcurrentthread_v1_event)  
+- [GCCreateConcurrentThread_V1 olay](#gccreateconcurrentthread_v1_event)  
   
--   [GCTerminateConcurrentThread_V1 olay](#gcterminateconcurrentthread_v1_event)  
+- [GCTerminateConcurrentThread_V1 olay](#gcterminateconcurrentthread_v1_event)  
   
 <a name="gcstart_v1_event"></a>   
 ## <a name="gcstartv1-event"></a>GCStart_V1 olay  
@@ -66,7 +66,7 @@ ms.locfileid: "59149740"
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Sayı|Kazanma: UInt32|*n*th çöp toplama.|  
+|Count|Kazanma: UInt32|*n*th çöp toplama.|  
 |Derinliği|Kazanma: UInt32|Toplanmakta olan oluşturma.|  
 |Neden|Kazanma: UInt32|Çöp toplama işlemine neden tetiklendi:<br /><br /> 0x0 - küçük nesne yığını ayırması.<br /><br /> 0x1 - başlattı.<br /><br /> 0x2 - bellek yetersiz.<br /><br /> 0x3 - boş.<br /><br /> 0x4 - büyük nesne yığını ayırması.<br /><br /> 0x5 - yetersiz alan (küçük nesne yığını için).<br /><br /> 0x6 - yetersiz alan (büyük nesne yığını için).<br /><br /> 0x7 - başlattığı ancak engelleme olarak zorunlu değildir.|  
 |Tür|Kazanma: UInt32|0x0 - arka plan atık toplamanın dışında atık toplamayı engelleme oluştu.<br /><br /> 0x1 - arka plan çöp toplama.<br /><br /> 0x2 - arka plan çöp toplama sırasında atık toplamayı engelleme oluştu.|  
@@ -92,7 +92,7 @@ ms.locfileid: "59149740"
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Sayı|Kazanma: UInt32|*n*th çöp toplama.|  
+|Count|Kazanma: UInt32|*n*th çöp toplama.|  
 |Derinliği|Kazanma: UInt32|Toplanan oluşturma.|  
 |ClrInstanceID|Kazanma: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
   
@@ -238,7 +238,7 @@ ms.locfileid: "59149740"
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |Neden|Kazanma: UInt16|0x0 - diğer.<br /><br /> 0x1 - çöp toplama.<br /><br /> 0x2 - uygulama etki alanı kapatma.<br /><br /> 0x3 - kod pitching.<br /><br /> 0x4 - kapatma.<br /><br /> 0x5 - Hata Ayıklayıcısı'nı tıklatın.<br /><br /> 0x6 - çöp toplama için hazırlama.|  
-|Sayı|Kazanma: UInt32|GC sayısı zaman. Genellikle, bundan sonra bir sonraki GC başlangıç olayı görür ve biz GC dizini çöp toplama sırasında arttıkça sayımına bu sayı + 1 olur.|  
+|Count|Kazanma: UInt32|GC sayısı zaman. Genellikle, bundan sonra bir sonraki GC başlangıç olayı görür ve biz GC dizini çöp toplama sırasında arttıkça sayımına bu sayı + 1 olur.|  
 |ClrInstanceID|Kazanma: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
   
  [Başa dön](#top)  
@@ -325,7 +325,7 @@ ms.locfileid: "59149740"
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Sayı|Kazanma: UInt32|Çalıştırılan bir sonlandırıcı sayısı.|  
+|Count|Kazanma: UInt32|Çalıştırılan bir sonlandırıcı sayısı.|  
 |ClrInstanceID|Kazanma: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
   
  [Başa dön](#top)  

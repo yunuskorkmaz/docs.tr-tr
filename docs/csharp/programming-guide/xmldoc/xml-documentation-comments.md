@@ -13,11 +13,11 @@ helpviewer_keywords:
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
 ms.openlocfilehash: c40f8ee189733aa1ae58f8e46c3b7cce005ad9d7
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706721"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML Belgeleri Yorumları (C# Programlama Kılavuzu)
 Visual C#'de, kaynak kodda doğrudan açıklamaların başvurduğu kod bloğunun hemen öncesindeki özel açıklama alanlarına (üç eğik çizgiyle gösterilir) XML öğeleri ekleyerek, kodunuz için belge oluşturabilirsiniz, örneğin:  
@@ -38,18 +38,18 @@ public class MyClass {}
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
--   [Belge Açıklamaları için Önerilen Etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)  
+- [Belge Açıklamaları için Önerilen Etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)  
   
--   [XML Dosyasını İşleme](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)  
+- [XML Dosyasını İşleme](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)  
   
--   [Belge Etiketleri için Sınırlayıcılar](../../../csharp/programming-guide/xmldoc/delimiters-for-documentation-tags.md)  
+- [Belge Etiketleri için Sınırlayıcılar](../../../csharp/programming-guide/xmldoc/delimiters-for-documentation-tags.md)  
   
--   [Nasıl yapılır: XML belgeleri özelliklerini kullanma](../../../csharp/programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)  
+- [Nasıl yapılır: XML belgeleri özelliklerini kullanma](../../../csharp/programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  Daha fazla bilgi için bkz.:  
   
--   [/ doc (işlem belgeleri açıklamaları)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+- [/ doc (işlem belgeleri açıklamaları)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

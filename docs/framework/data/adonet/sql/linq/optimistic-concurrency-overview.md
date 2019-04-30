@@ -3,11 +3,11 @@ title: 'İyimser Eşzamanlılık: Genel Bakış'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
 ms.openlocfilehash: 8f3bd35cc1391339d99d5aa0a4021e29fa81756c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767500"
 ---
 # <a name="optimistic-concurrency-overview"></a>İyimser Eşzamanlılık: Genel Bakış
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] İyimser eşzamanlılık denetimini destekler. Aşağıdaki tabloda iyimser eşzamanlılık uygulamak terimleri açıklanmaktadır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] belgeleri:  
@@ -22,9 +22,9 @@ ms.locfileid: "59106554"
   
  İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli, bir *iyimser eşzamanlılık çakışması* aşağıdaki koşulların her ikisinin de doğru olduğunda oluşur:  
   
--   İstemci, veritabanına değişiklikleri gönderme dener.  
+- İstemci, veritabanına değişiklikleri gönderme dener.  
   
--   İstemcinin en son bunları okumak bu yana veritabanında bir veya daha fazla güncelleştirme denetimi değerler güncelleştirildi.  
+- İstemcinin en son bunları okumak bu yana veritabanında bir veya daha fazla güncelleştirme denetimi değerler güncelleştirildi.  
   
  Bu çakışma çözümlemesi çakışma nesnenin hangi üyelerin bulmak ve ardından bunu yapmak istediğinize karar içerir.  
   
@@ -49,44 +49,44 @@ ms.locfileid: "59106554"
 ## <a name="conflict-detection-and-resolution-checklist"></a>Çakışma algılama ve çözümleme denetim listesi  
  Algılayın ve herhangi bir düzeyde ayrıntı çakışmaları çözün. Bir uçta üç yoldan biriyle bütün çakışmaları çözün (bkz <xref:System.Data.Linq.RefreshMode>) sağlayabildiği olmadan. Diğer uçta her üye çakışma içinde çakışma oluştu her türü için belirli bir eylemi belirleyebilirsiniz.  
   
--   Belirtin veya düzeltmek <xref:System.Data.Linq.Mapping.UpdateCheck> , nesne modelinde seçenekleri.  
+- Belirtin veya düzeltmek <xref:System.Data.Linq.Mapping.UpdateCheck> , nesne modelinde seçenekleri.  
   
      Daha fazla bilgi için [nasıl yapılır: Hangi üyelerin eşzamanlılık çakışmaları için test edildiğini belirtme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).  
   
--   Try/catch bloğunda, çağrınız <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, hangi noktada özel durum oluşturulmasına istediğinizi belirtin.  
+- Try/catch bloğunda, çağrınız <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, hangi noktada özel durum oluşturulmasına istediğinizi belirtin.  
   
      Daha fazla bilgi için [nasıl yapılır: Zaman eşzamanlılık özel durum belirtin](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).  
   
--   Almak istediğiniz kadar çakışma ayrıntının belirleme ve kodu uygun şekilde, try/catch bloğu içinde içerir.  
+- Almak istediğiniz kadar çakışma ayrıntının belirleme ve kodu uygun şekilde, try/catch bloğu içinde içerir.  
   
      Daha fazla bilgi için [nasıl yapılır: Varlık çakışma bilgilerini alma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) ve [nasıl yapılır: Üye çakışma bilgilerini alma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).  
   
--   Dahil, `try` / `catch` nasıl bulduğunuz çeşitli çakışmaları çözümlemek istediğiniz kodu.  
+- Dahil, `try` / `catch` nasıl bulduğunuz çeşitli çakışmaları çözümlemek istediğiniz kodu.  
   
      Daha fazla bilgi için [nasıl yapılır: Veritabanı değerlerini tutarak çakışmaları](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [nasıl yapılır: Veritabanı değerlerinin üzerine yazarak çakışmaları](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md), ve [nasıl yapılır: Veritabanı değerleri ile birleştirerek çakışmaları](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).  
   
 ## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>LINQ to SQL türleri, çakışma bulma ve çözümleme desteği  
  Sınıfları ve özellikleri iyimser eşzamanlılık çakışmaları çözümleme desteklemek için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] şunları içerir:  
   
--   <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.MemberChangeConflict?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.MemberChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictException?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.ChangeConflictException?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

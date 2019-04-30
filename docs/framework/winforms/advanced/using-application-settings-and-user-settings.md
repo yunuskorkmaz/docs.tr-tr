@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
 ms.openlocfilehash: ea6994e653b3a06239634f5a0fddea84a07086e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777188"
 ---
 # <a name="using-application-settings-and-user-settings"></a>Uygulama Ayarları ve Kullanıcı Ayarlarını Kullanma
 .NET Framework 2.0 ile başlayarak, oluşturma ve uygulama yürütme oturumları arasında kalıcı değerleri erişim. Bu değerler olarak adlandırılan *ayarları*. Ayarları kullanıcı tercihlerini temsil edebilir veya değerli bilgileri uygulama kullanması gerekir. Örneğin, bir uygulamanın renk şeması için kullanıcı tercihlerini depolamak ayarları bir dizi oluşturabilirsiniz. Veya, uygulamanızın kullandığı bir veritabanını belirten bir bağlantı dizesi depolayabilir. Ayarlar, her iki uygulamanın kodu dışında ve tek tek kullanıcıların tercihleri depolamak profilleri oluşturmak için önemli olan bilgileri kalıcı hale sağlar.  

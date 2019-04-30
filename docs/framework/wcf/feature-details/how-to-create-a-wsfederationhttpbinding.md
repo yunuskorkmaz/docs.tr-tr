@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
 ms.openlocfilehash: 16b93126157ff129d5e0b815bc951873e7fa760d
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778358"
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Nasıl yapılır: WSFederationHttpBinding Oluşturma
 
@@ -91,7 +91,7 @@ Windows Communication Foundation (WCF) <xref:System.ServiceModel.WSFederationHtt
 
 12. Daha fazla bilgi için [kimlik doğrulama ile hizmet kimliği](service-identity-and-authentication.md).
 
-13. Hiçbir yerel yayımlayan belirtilirse istemcide gerekli; hizmette kullanılmaz. Oluşturma bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesinde bir güvenlik belirteci hizmeti ile iletişim kurmak için kullanılan bağlamalar bölümü. Bir bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: yapılandırmada hizmet bağlaması belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).
+13. Hiçbir yerel yayımlayan belirtilirse istemcide gerekli; hizmette kullanılmaz. Oluşturma bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesinde bir güvenlik belirteci hizmeti ile iletişim kurmak için kullanılan bağlamalar bölümü. Bir bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Yapılandırmada hizmet bağlaması belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).
 
 14. Ayarlayarak önceki adımda oluşturduğunuz bağlama belirtme `binding` ve `bindingConfiguration` özniteliklerini `<issuer>` öğesi.
 
@@ -110,4 +110,4 @@ Aşağıdaki kod örneği ayarlamak için kod gösterir bir `WSFederationHttpBin
 
 - [Federasyon](federation.md)
 - [Federasyon Örneği](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Nasıl yapılır: WSFederationHttpBinding Güvenli Oturumlarını Devre Dışı Bırakma](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Nasıl yapılır: WSFederationHttpBinding güvenli oturumlarını devre dışı bırak](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)

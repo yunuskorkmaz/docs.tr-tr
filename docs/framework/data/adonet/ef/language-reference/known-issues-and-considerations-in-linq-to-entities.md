@@ -6,28 +6,28 @@ dev_langs:
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
 ms.openlocfilehash: 3945d4fc92bea2c4212da0507618203603ae8aba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780553"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities Hakkında Bilinen Sorunlar ve Dikkat Edilmesi Gerekenler
 Bu bölümde ile ilgili bilinen sorunlar hakkında bilgi [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular.  
   
--   [LINQ sorguları, önbelleğe alınamaz](#LINQQueriesThatAreNotCached)  
+- [LINQ sorguları, önbelleğe alınamaz](#LINQQueriesThatAreNotCached)  
   
--   [Kayıp bilgileri sıralama](#OrderingInfoLost)  
+- [Kayıp bilgileri sıralama](#OrderingInfoLost)  
   
--   [İşaretsiz tamsayılar desteklenmiyor](#UnsignedIntsUnsupported)  
+- [İşaretsiz tamsayılar desteklenmiyor](#UnsignedIntsUnsupported)  
   
--   [Tür dönüştürme hataları](#TypeConversionErrors)  
+- [Tür dönüştürme hataları](#TypeConversionErrors)  
   
--   [Desteklenmeyen skaler olmayan değişkenleri başvurma](#RefNonScalarClosures)  
+- [Desteklenmeyen skaler olmayan değişkenleri başvurma](#RefNonScalarClosures)  
   
--   [SQL Server 2000 ile iç içe geçmiş sorgular başarısız olabilir](#NestedQueriesSQL2000)  
+- [SQL Server 2000 ile iç içe geçmiş sorgular başarısız olabilir](#NestedQueriesSQL2000)  
   
--   [Anonim bir tür için yansıtma](#ProjectToAnonymousType)  
+- [Anonim bir tür için yansıtma](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>LINQ sorguları, önbelleğe alınamaz  

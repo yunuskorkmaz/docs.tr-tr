@@ -14,11 +14,11 @@ ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8ba1ded1757d71a2b7839ae8b45489da53763b8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765953"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>NET sayısal dizeleri ayrıştırma
 İki statik ayrıştırma yöntemlerinin, tüm sayısal türlerin sahip `Parse` ve `TryParse`, bir sayının dize gösterimini bir sayısal türe dönüştürmek için kullanabilirsiniz. Bu yöntemler konusunda belgelenen biçim dizelerini kullanarak üretilmiş olan dizeleri ayrıştırma sağlayan [standart sayısal biçim dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md) ve [özel sayısal biçim dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md). Varsayılan olarak, `Parse` ve `TryParse` yöntemleri yalnızca tamsayı değerleri için tam sayı ondalık basamak içeren dizeleri başarıyla dönüştürebilirsiniz. Bunlar, entegral ve kesirli ondalık basamak grubu ayırıcıları ve kayan nokta değerleri ondalık ayırıcı içeren dizeleri başarıyla dönüştürebilirsiniz. `Parse` Yöntemi bir özel durum oluşturursa işlem başarısız olursa, oysa `TryParse` yöntemi döndürür `false`.  
@@ -28,9 +28,9 @@ ms.locfileid: "54603618"
   
  Bir biçim sağlayıcısı tarafından temsil edilen bir <xref:System.IFormatProvider> uygulaması. Bu arabirim bir tek üyeye sahip <xref:System.IFormatProvider.GetFormat%2A> yöntemi, tek bir parametre, bir <xref:System.Type> Biçimlendirilecek türünü temsil eden nesne. Bu yöntem, biçimlendirme bilgilerini sağlayan nesne döndürür. .NET destekleyen aşağıdaki iki <xref:System.IFormatProvider> sayısal dizeleri ayrıştırma için uygulamaları:  
   
--   A <xref:System.Globalization.CultureInfo> nesnesi <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> yöntemi döndürür bir <xref:System.Globalization.NumberFormatInfo> kültüre özgü biçimlendirme bilgileri sağlayan nesne.  
+- A <xref:System.Globalization.CultureInfo> nesnesi <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> yöntemi döndürür bir <xref:System.Globalization.NumberFormatInfo> kültüre özgü biçimlendirme bilgileri sağlayan nesne.  
   
--   A <xref:System.Globalization.NumberFormatInfo> nesnesi <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> yöntemi kendisini döndürür.  
+- A <xref:System.Globalization.NumberFormatInfo> nesnesi <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> yöntemi kendisini döndürür.  
   
  Aşağıdaki örnekte, dizideki her dizeyi dönüştürecek dener bir <xref:System.Double> değeri. İngilizce (ABD) kültürünün kuralları yansıtan bir biçim sağlayıcısı kullanarak dizeyi ayrıştırmak ilk önce çalışır. Bu işlem oluşturursa bir <xref:System.FormatException>, Fransızca (Fransa) kültürü kurallarını yansıtan bir biçim sağlayıcısı kullanarak dizeyi ayrıştırmak çalışır.  
   

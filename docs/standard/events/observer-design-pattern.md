@@ -15,11 +15,11 @@ ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b022c70f7ed1707e27de7cac6ce08c53ee0878d0
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770389"
 ---
 # <a name="observer-design-pattern"></a>Gözlemci Tasarım Deseni
 Gözlemci tasarım deseni ile kaydolun ve bir sağlayıcıdan bildirimleri almak abone sağlar. Anında iletme tabanlı bildirim gerektiren her senaryo için uygundur. Deseni tanımlayan bir *sağlayıcısı* (olarak da bilinen bir *konu* veya *observable*) ve sıfır, bir veya daha fazla *gözlemciler*. Gözlemciler sağlayıcıya Kaydol ve önceden tanımlı bir koşul olduğunda, olayı veya durumu değişikliği, sağlayıcı tüm gözlemciler kendi yöntemlerini çağıran bir tarafından otomatik olarak bildirir. oluşur. Bu yöntem çağrısında sağlayıcı gözlemciler için geçerli durum bilgilerini de sağlayabilirsiniz. .NET Framework'teki genel uygulayarak gözlemci tasarım deseni uygulanan <xref:System.IObservable%601?displayProperty=nameWithType> ve <xref:System.IObserver%601?displayProperty=nameWithType> arabirimleri. Genel tür parametresi bildirimi bilgi sağlayan türünü temsil eder.  
@@ -29,21 +29,21 @@ Gözlemci tasarım deseni ile kaydolun ve bir sağlayıcıdan bildirimleri almak
   
  Desenini uygulama aşağıdakileri sağlamanız gerekir:  
   
--   Bir sağlayıcı veya gözlemciler için bildirimler gönderir bir nesne olan konu. Bir sınıf veya yapı uygulayan bir sağlayıcıdır <xref:System.IObservable%601> arabirimi. Sağlayıcı, tek bir yöntem uygulamalıdır <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>, sağlayıcıdan bildirim almak istediğiniz gözlemciler tarafından çağrılır.  
+- Bir sağlayıcı veya gözlemciler için bildirimler gönderir bir nesne olan konu. Bir sınıf veya yapı uygulayan bir sağlayıcıdır <xref:System.IObservable%601> arabirimi. Sağlayıcı, tek bir yöntem uygulamalıdır <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>, sağlayıcıdan bildirim almak istediğiniz gözlemciler tarafından çağrılır.  
   
--   Bir sağlayıcıdan bildirimleri alan bir nesne olan bir gözlemci. Bir sınıf veya yapı uygulayan ise bir gözlemci <xref:System.IObserver%601> arabirimi. Gözlemci, her biri sağlayıcı tarafından çağrılır, üç yöntem uygulaması gerekir:  
+- Bir sağlayıcıdan bildirimleri alan bir nesne olan bir gözlemci. Bir sınıf veya yapı uygulayan ise bir gözlemci <xref:System.IObserver%601> arabirimi. Gözlemci, her biri sağlayıcı tarafından çağrılır, üç yöntem uygulaması gerekir:  
   
-    -   <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, gözlemci yeni veya geçerli bilgileri sağlar.  
+    - <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, gözlemci yeni veya geçerli bilgileri sağlar.  
   
-    -   <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>, bir hata oluştu gözlemci bildirir.  
+    - <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>, bir hata oluştu gözlemci bildirir.  
   
-    -   <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, sağlayıcı bildirimleri gönderme işleminin tamamlandığını gösterir.  
+    - <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, sağlayıcı bildirimleri gönderme işleminin tamamlandığını gösterir.  
   
--   Sağlayıcı gözlemciler izlemenize olanak tanıyan bir mekanizma. Genellikle sağlayıcısı gibi bir kapsayıcı nesnesini kullanan bir <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> başvuruları tutmak için nesne <xref:System.IObserver%601> bildirimlerine abone uygulamalar. Bu amaç için bir depolama kapsayıcısı kullanarak sınırsız sayıda gözlemciler sıfıra işlemek sağlayıcı sağlar. Gözlemciler bildirimleri aldıkları sırası tanımlı değildir; Sağlayıcı sırayı belirlemek için herhangi bir yöntem ücretsiz olarak kullanılabilir.  
+- Sağlayıcı gözlemciler izlemenize olanak tanıyan bir mekanizma. Genellikle sağlayıcısı gibi bir kapsayıcı nesnesini kullanan bir <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> başvuruları tutmak için nesne <xref:System.IObserver%601> bildirimlerine abone uygulamalar. Bu amaç için bir depolama kapsayıcısı kullanarak sınırsız sayıda gözlemciler sıfıra işlemek sağlayıcı sağlar. Gözlemciler bildirimleri aldıkları sırası tanımlı değildir; Sağlayıcı sırayı belirlemek için herhangi bir yöntem ücretsiz olarak kullanılabilir.  
   
--   Bir <xref:System.IDisposable> bildirim tamamlandığında gözlemciler kaldırmak sağlayıcı sağlayan uygulama. Gözlemciler bir başvuru alma <xref:System.IDisposable> uygulamasından <xref:System.IObservable%601.Subscribe%2A> ayrıca çağırabilmek yöntemi <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> sağlayıcısı bildirimleri gönderme bitmeden önce aboneliğinizi iptal etmek için yöntemi.  
+- Bir <xref:System.IDisposable> bildirim tamamlandığında gözlemciler kaldırmak sağlayıcı sağlayan uygulama. Gözlemciler bir başvuru alma <xref:System.IDisposable> uygulamasından <xref:System.IObservable%601.Subscribe%2A> ayrıca çağırabilmek yöntemi <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> sağlayıcısı bildirimleri gönderme bitmeden önce aboneliğinizi iptal etmek için yöntemi.  
   
--   Sağlayıcı için kendi gözlemciler gönderdiği veriler içeren bir nesne. Bu nesne türü genel tür parametresine karşılık geldiği <xref:System.IObservable%601> ve <xref:System.IObserver%601> arabirimleri. Bu nesne ile aynı olsa da <xref:System.IObservable%601> uygulama, ayrı bir tür olduğu en yaygın olarak.  
+- Sağlayıcı için kendi gözlemciler gönderdiği veriler içeren bir nesne. Bu nesne türü genel tür parametresine karşılık geldiği <xref:System.IObservable%601> ve <xref:System.IObserver%601> arabirimleri. Bu nesne ile aynı olsa da <xref:System.IObservable%601> uygulama, ayrı bir tür olduğu en yaygın olarak.  
   
 > [!NOTE]
 >  Gözlemci tasarım deseni uygulama yanı sıra, kullanılarak oluşturulan kitaplıkları keşfetmeye de ilginizi çekebilir <xref:System.IObservable%601> ve <xref:System.IObserver%601> arabirimleri. Örneğin, [.NET (Rx) için reaktif Uzantılar](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) uzantı yöntemleri ve zaman uyumsuz programlamayı desteklemek için LINQ standart dizisi işleçleri kümesinden oluşur.  
@@ -56,9 +56,9 @@ Gözlemci tasarım deseni ile kaydolun ve bir sağlayıcıdan bildirimleri almak
   
  A `BaggageHandler` sınıfı hakkında gelen uçuşlar ve bagaj talep görüntülendiği döngüler yer bilgi almak için sorumlu. Dahili olarak, iki koleksiyon tutar:  
   
--   `observers` -Bir koleksiyonu alacak olan istemcileri bilgiler güncelleştirilmiştir.  
+- `observers` -Bir koleksiyonu alacak olan istemcileri bilgiler güncelleştirilmiştir.  
   
--   `flights` -Uçuş ve otelden kendi atanan görüntülendiği döngüler yer bir koleksiyonu.  
+- `flights` -Uçuş ve otelden kendi atanan görüntülendiği döngüler yer bir koleksiyonu.  
   
  Her iki koleksiyon genel tarafından temsil edilen <xref:System.Collections.Generic.List%601> içinde örneklenen nesneleri `BaggageHandler` sınıf oluşturucusu. Kaynak kodu `BaggageHandler` sınıfı, aşağıdaki örnekte gösterilmiştir.  
   

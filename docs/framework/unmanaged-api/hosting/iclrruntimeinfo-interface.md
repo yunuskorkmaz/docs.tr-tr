@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 213fa9fda6b154d4548b4163cc7b5890bfcfb49c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771731"
 ---
 # <a name="iclrruntimeinfo-interface"></a>ICLRRuntimeInfo Arabirimi
 Bir belirli ortak dil çalışma zamanı Modülü (CLR), sürüm, dizin ve yükleme durumu dahil olmak üzere bilgi döndüren yöntemler sağlar. Bu arabirim çalışma zamanı başlatma olmadan özel çalışma zamanı işlevselliği de sağlar. Çalışma zamanı göreli içerir [LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) yöntemi, çalışma zamanı modülü özgü [GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) yöntemi ve çalışma zamanı tarafından sağlanan arabirimleri aracılığıyla [Getınterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)yöntemi.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
 ms.openlocfilehash: 818495cd2f7100f416280ce019321fed3f26aee8
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765747"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Veri Hizmeti sürümü oluşturma (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Veri Hizmetleri oluşturun, böylece istemciler URI'lerini kullanarak kaynakları, bir veri modelini temel olarak veri erişim sağlar. OData hizmet işlemleri tanımı da destekler. İlk dağıtım ve potansiyel olarak kendi ömürlerine sırasında birkaç kez sonra çeşitli iş gereksinimlerini, bilgi teknolojisi gereksinimlerini değiştirme gibi nedenlerle, değiştirilecek veya diğer sorunları gidermek için şu veri hizmetlerini gerekebilir. Mevcut bir veri hizmetine değişiklik yaptığınızda olup verilerinizi yeni bir sürümü tanımlamak dikkate almanız gereken hizmet ve istemci uygulamalarınız üzerindeki etkiyi en aza indirmek en iyi nasıl. Bu konu, ne zaman ve nasıl bir veri hizmeti, yeni bir sürümünü oluşturmak yönergeler sağlar. WCF Veri Hizmetleri bir exchange istemcileri ve farklı sürümlerini OData protokolünü destekleyen veri hizmetleri arasında nasıl işlediğini açıklar.
@@ -22,9 +22,9 @@ ms.locfileid: "56092923"
 ### <a name="data-model-changes-that-recommend-a-new-data-service-version"></a>Yeni bir veri hizmeti sürümü önerilir veri modeli değişikliklerini
  Veri hizmetinin yeni bir sürüm yayınlanıp yayınlanmayacağını dikkate alındığında, farklı türde değişiklikler istemci uygulamaları nasıl etkileyebileceğini anlamak önemlidir. Bir veri hizmeti, yeni bir sürümünü oluşturmak gerektirebilir veri hizmetine değişiklikler aşağıdaki iki kategoriye ayrılabilir:
 
--   Değişiklikleri için hizmet sözleşmesi — hizmet işlemleri, varlık kümelerini (akışları) erişilebilirliğini değişiklikler, sürüm değişikliklerini ve hizmet davranışlarını diğer değişiklikler için güncelleştirmeleri içerir.
+- Değişiklikleri için hizmet sözleşmesi — hizmet işlemleri, varlık kümelerini (akışları) erişilebilirliğini değişiklikler, sürüm değişikliklerini ve hizmet davranışlarını diğer değişiklikler için güncelleştirmeleri içerir.
 
--   Değişiklikler için veri anlaşması — hangi değişiklikleri veri modeline dahil etmek, biçimleri akışı veya özelleştirmeleri akış.
+- Değişiklikler için veri anlaşması — hangi değişiklikleri veri modeline dahil etmek, biçimleri akışı veya özelleştirmeleri akış.
 
  Aşağıdaki tablo, hangi türde değişiklikler için yeni bir veri hizmeti sürümü yayımlamalıyım ayrıntıları:
 
@@ -44,9 +44,9 @@ ms.locfileid: "56092923"
 ### <a name="how-to-version-a-data-service"></a>Bir veri hizmeti sürümü oluşturma
  Gerektiğinde, yeni bir veri hizmeti sürümü, güncelleştirilmiş hizmet sözleşmesi veya veri modeliyle hizmetinin yeni bir örneğini oluşturarak tanımlanır. Bu yeni hizmet, ardından önceki sürümden ayırır yeni bir URI endpoint kullanarak kullanıma sunulur. Örneğin:
 
--   Eski sürümü: `http://services.odata.org/Northwind/v1/Northwind.svc/`
+- Eski sürümü: `http://services.odata.org/Northwind/v1/Northwind.svc/`
 
--   Yeni sürüm: `http://services.odata.org/Northwind/v2/Northwind.svc/`
+- Yeni sürüm: `http://services.odata.org/Northwind/v2/Northwind.svc/`
 
  Bir veri hizmeti yükseltirken, istemciler yeni kök URI'nin kullanılacak ve yeni veri hizmeti meta verilere göre de güncelleştirilmesi gerekir. Mümkün olduğunda, henüz yeni sürümü kullanmak için yükseltilmemiş olan istemcileri desteklemek için veri hizmeti önceki sürümünü korumanız gerekir. Veri hizmetinin eski sürümleri artık gerekli olmadığında kaldırılabilir. Veri Hizmeti uç noktası URI'si bir dış yapılandırma dosyasında koruma dikkate almanız gerekir.
 

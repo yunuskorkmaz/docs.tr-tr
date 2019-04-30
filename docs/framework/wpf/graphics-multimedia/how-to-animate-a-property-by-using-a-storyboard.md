@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Storyboards [WPF], animation
 ms.assetid: f4a314e9-1da2-4367-85fc-1232487efa7a
 ms.openlocfilehash: f6064368b4f5e4fa8324b4039d734d4430cd9174
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761214"
 ---
 # <a name="how-to-animate-a-property-by-using-a-storyboard"></a>Nasıl yapılır: Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme
 Bu örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Media.Animation.Storyboard> özelliklerine animasyon uygulamak için. Kullanarak bir özelliğe animasyon ekleme için bir <xref:System.Windows.Media.Animation.Storyboard>, animasyon ve ayrıca oluşturmak istediğiniz her bir özellik için bir animasyon oluşturmak bir <xref:System.Windows.Media.Animation.Storyboard> animasyonları içermesi için.  

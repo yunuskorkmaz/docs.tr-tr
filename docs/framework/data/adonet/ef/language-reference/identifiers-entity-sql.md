@@ -3,11 +3,11 @@ title: Tanımlayıcılar (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
 ms.openlocfilehash: 702a9c69c37b572fde18dd57c44608678174fb15
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774666"
 ---
 # <a name="identifiers-entity-sql"></a>Tanımlayıcılar (varlık SQL)
 Tanımlayıcılar kullanılır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu ifadesi diğer adlar, değişken başvuruları, nesneleri, işlevleri ve benzeri özelliklerini göstermek için. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] iki tür tanımlayıcıları sağlar: Basit tanımlayıcıları ve tırnak işaretli tanımlayıcılar.  
@@ -20,15 +20,15 @@ Tanımlayıcılar kullanılır [!INCLUDE[esql](../../../../../../includes/esql-m
   
  Tırnak işaretli tanımlayıcı şu karakterleri içeremez:  
   
--   Yeni satır.  
+- Yeni satır.  
   
--   Satır başı döndürür.  
+- Satır başı döndürür.  
   
--   Sekmeler.  
+- Sekmeler.  
   
--   Geri Al.  
+- Geri Al.  
   
--   Ek köşeli ayraç (diğer bir deyişle,. köşeli parantez tanımlayıcıyı ayırmak köşeli ayraç içinde).  
+- Ek köşeli ayraç (diğer bir deyişle,. köşeli parantez tanımlayıcıyı ayırmak köşeli ayraç içinde).  
   
  Teklif tanımlayıcısı, Unicode karakterler içerebilir.  
   
@@ -53,13 +53,13 @@ Tanımlayıcılar kullanılır [!INCLUDE[esql](../../../../../../includes/esql-m
 ## <a name="aliasing-rules"></a>Diğer ad kuralları  
  Diğer adlar belirtme öneririz [!INCLUDE[esql](../../../../../../includes/esql-md.md)] , aşağıdakiler dahil olmak üzere gerektiğinde sorgular [!INCLUDE[esql](../../../../../../includes/esql-md.md)] oluşturur:  
   
--   Bir satır oluşturucusunda alanları.  
+- Bir satır oluşturucusunda alanları.  
   
--   Sorgu ifadesinin FROM yan tümcesi içindeki öğeler.  
+- Sorgu ifadesinin FROM yan tümcesi içindeki öğeler.  
   
--   Sorgu ifadesinin öğeleri SELECT yan tümcesinde.  
+- Sorgu ifadesinin öğeleri SELECT yan tümcesinde.  
   
--   Sorgu ifadesinin öğeleri GROUP BY yan tümcesinde.  
+- Sorgu ifadesinin öğeleri GROUP BY yan tümcesinde.  
   
 ### <a name="valid-aliases"></a>Geçerli diğer adlar  
  Geçerli diğer adlar [!INCLUDE[esql](../../../../../../includes/esql-md.md)] herhangi bir basit tanımlayıcı ya da tırnak işaretli tanımlayıcı.  
@@ -67,9 +67,9 @@ Tanımlayıcılar kullanılır [!INCLUDE[esql](../../../../../../includes/esql-m
 ### <a name="alias-generation"></a>Diğer ad oluşturma  
  Takma ad belirtilmişse bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu ifadesi [!INCLUDE[esql](../../../../../../includes/esql-md.md)] basit aşağıdaki kurallara göre bir diğer ad oluşturmak çalışır:  
   
--   Bu tanımlayıcı, sorgu ifadesi (diğer ad belirsiz olduğu) bir basit veya tırnak işaretli tanımlayıcı ise, diğer ad olarak kullanılır. Örneğin, `ROW(a, [b])` olur `ROW(a AS a, [b] AS [b])`.  
+- Bu tanımlayıcı, sorgu ifadesi (diğer ad belirsiz olduğu) bir basit veya tırnak işaretli tanımlayıcı ise, diğer ad olarak kullanılır. Örneğin, `ROW(a, [b])` olur `ROW(a AS a, [b] AS [b])`.  
   
--   Sorgu ifadesi daha karmaşık bir ifade, ancak bu sorgu ifadesinin son bileşeni basit bir tanımlayıcı tanımlayıcı diğer adı olarak kullanılır. Örneğin, `ROW(a.a1, b.[b1])` olur `ROW(a.a1 AS a1, b.[b1] AS [b1])`.  
+- Sorgu ifadesi daha karmaşık bir ifade, ancak bu sorgu ifadesinin son bileşeni basit bir tanımlayıcı tanımlayıcı diğer adı olarak kullanılır. Örneğin, `ROW(a.a1, b.[b1])` olur `ROW(a.a1 AS a1, b.[b1] AS [b1])`.  
   
  Daha sonra diğer ad kullanmak istiyorsanız, örtük yumuşatma kullanmamanızı öneririz. Diğer adları (örtük veya açık) çakışma veya olan aynı kapsam içinde yinelenen zaman bir derleme hatası olur. Açık veya örtülü bir diğer ad aynı ada sahip olsa bile örtük bir diğer ad, derleme geçer.  
   
@@ -107,11 +107,11 @@ SELECT 1 AS X, 2 AS X …
   
  Kapsamlar hakkında ek notlar şunlardır:  
   
--   Select listesi, yeni adları sırayla kapsama çıkarabilir. Projeksiyon ifadeleri sağ, sol taraftaki öngörülen adlarına başvurabilir.  
+- Select listesi, yeni adları sırayla kapsama çıkarabilir. Projeksiyon ifadeleri sağ, sol taraftaki öngörülen adlarına başvurabilir.  
   
--   ORDER BY yan tümcesi select listesinde belirtilen adlardır (takma adlardır) başvurabilir.  
+- ORDER BY yan tümcesi select listesinde belirtilen adlardır (takma adlardır) başvurabilir.  
   
--   Yan tümce seçme içinde değerlendirilme sırasını adları kapsamına sunulan sırasını belirler. FROM yan tümcesi, WHERE yan tümcesi, GROUP BY yan tümcesi, HAVING yan tümcesi, SELECT yan tümcesi ORDER BY yan tümcesi son ardından ve ilk olarak değerlendirilir.  
+- Yan tümce seçme içinde değerlendirilme sırasını adları kapsamına sunulan sırasını belirler. FROM yan tümcesi, WHERE yan tümcesi, GROUP BY yan tümcesi, HAVING yan tümcesi, SELECT yan tümcesi ORDER BY yan tümcesi son ardından ve ilk olarak değerlendirilir.  
   
 ### <a name="aggregate-handling"></a>Toplam işleme  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Toplamlar iki biçimini destekler: Koleksiyon tabanlı toplamlar ve grup tabanlı toplar. Koleksiyon tabanlı toplamaları olan tercih edilen yapısında [!INCLUDE[esql](../../../../../../includes/esql-md.md)], ve grup tabanlı toplamlar SQL Uyumluluk için desteklenir.  

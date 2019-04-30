@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773429"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Nasıl yapılır: Uzun Süre Çalışan İş Akışı Oluşturma ve Çalıştırma
 Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek ve boşta iş akışları bir veritabanına kaldırın çalışma zamanının becerisidir. Adımları [nasıl yapılır: İş akışı çalıştırma](how-to-run-a-workflow.md) bir konsol uygulaması kullanarak iş akışı barındırma ilişkin temel bilgileri gösterilmektedir. Örnekler, başlangıç iş akışları, iş akışı yaşam döngüsü işleyicileri ve sürdürme yer işaretleri gösterilen. İş akışı kalıcılığı etkili bir şekilde göstermek için daha karmaşık bir iş akışı ana bilgisayarı gereklidir başlatma ve birden çok iş akışı örnekleri sürdürme destekler. Öğreticide bu adım, bir Windows form konağı başlatılıyor ve sürdürme birden çok iş akışı örnekleri, iş akışı kalıcılığı destekler ve izleme gibi gelişmiş özellikler için temel sağlayan uygulama ve olan sürüm oluşturma işlemi gösterilmektedir sonraki öğretici adımlarda gösterilmiştir.  
@@ -23,25 +23,25 @@ Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek 
   
 ## <a name="in-this-topic"></a>Bu konuda  
   
--   [Kalıcılık veritabanı oluşturmak için](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
+- [Kalıcılık veritabanı oluşturmak için](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
--   [DurableInstancing derlemelere başvuru eklemek için](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+- [DurableInstancing derlemelere başvuru eklemek için](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
--   [İş akışı ana form oluşturma](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
+- [İş akışı ana form oluşturma](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [Formun yardımcı yöntemler ve özellikler eklemek için](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+- [Formun yardımcı yöntemler ve özellikler eklemek için](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [Örnek deposu, iş akışı yaşam döngüsü işleyicileri ve Uzantıları'nı yapılandırmak için](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+- [Örnek deposu, iş akışı yaşam döngüsü işleyicileri ve Uzantıları'nı yapılandırmak için](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [Başlangıç ve birden çok iş akışı türlerini sürdürme etkinleştirmek için](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+- [Başlangıç ve birden çok iş akışı türlerini sürdürme etkinleştirmek için](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [Yeni bir iş akışını başlatmak için](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+- [Yeni bir iş akışını başlatmak için](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
--   [Bir iş akışını sürdürmek için](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
+- [Bir iş akışını sürdürmek için](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
--   [Bir iş akışı sonlandırılmak üzere](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
+- [Bir iş akışı sonlandırılmak üzere](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [Derleme ve uygulamayı çalıştırmak için](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+- [Derleme ve uygulamayı çalıştırmak için](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
 ### <a name="BKMK_CreatePersistenceDatabase"></a> Kalıcılık veritabanı oluşturmak için  
   
@@ -54,9 +54,9 @@ Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek 
   
      Aşağıdaki iki dosyayı seçin ve tıklayın **açık**.  
   
-    -   SqlWorkflowInstanceStoreLogic.sql  
+    - SqlWorkflowInstanceStoreLogic.sql  
   
-    -   SqlWorkflowInstanceStoreSchema.sql  
+    - SqlWorkflowInstanceStoreSchema.sql  
   
 3. Seçin **SqlWorkflowInstanceStoreSchema.sql** gelen **penceresi** menüsü. Emin **WF45GettingStartedTutorial** seçili **kullanılabilir veritabanlarını** seçin ve açılır **yürütme** gelen **sorgu**menüsü.  
   

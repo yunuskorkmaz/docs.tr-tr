@@ -3,20 +3,20 @@ title: association set end
 ms.date: 03/30/2017
 ms.assetid: fe4bf1d3-047a-4a37-98c5-a66e70811346
 ms.openlocfilehash: 7b6c646592c1878ea30396d98b4976dc8fa0be12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769596"
 ---
 # <a name="association-set-end"></a>association set end
 Bir *ilişkilendirme ayarlanmış son* tanımlayan [varlık türü](../../../../docs/framework/data/adonet/entity-type.md) ve [varlık kümesi](../../../../docs/framework/data/adonet/entity-set.md) sonunda bir [ilişki kümesi](../../../../docs/framework/data/adonet/association-set.md). İlişki kümesi uçlarının bir ilişkilendirme kümesinin bir parçası tanımlanır; bir ilişki kümesi tam olarak iki ilişki kümesi uçlarının olması gerekir.  
   
  Bir ilişkilendirme kümesi son tanımı, şu bilgileri içerir:  
   
--   İlişkilendirmesine katılan varlık türlerinden birini ayarlayın. (Gerekli)  
+- İlişkilendirmesine katılan varlık türlerinden birini ayarlayın. (Gerekli)  
   
--   Varlık için varlık türü ilişkilendirme kümesine katılan kümesi. (Gerekli)  
+- Varlık için varlık türü ilişkilendirme kümesine katılan kümesi. (Gerekli)  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki diyagramda iki ilişkilendirmeleri kavramsal bir modelle gösterilmektedir: `WrittenBy` ve `PublishedBy`.  

@@ -3,11 +3,11 @@ title: İşlem Protokolleri sürüm 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
 ms.openlocfilehash: a1501bbd5364773359f9b62602ba4bb684f076ba
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764638"
 ---
 # <a name="transaction-protocols-version-10"></a>İşlem Protokolleri sürüm 1.0
 Windows Communication Foundation (WCF) sürüm 1 WS-Atomic işlem ve WS-koordinasyon protokolleri sürüm 1.0 uygular. Sürüm 1.1 hakkında daha fazla bilgi için bkz: [işlem protokolleri](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
@@ -45,13 +45,13 @@ Windows Communication Foundation (WCF) sürüm 1 WS-Atomic işlem ve WS-koordina
   
  Şekil ve tabloda dört güvenlik görüş iletilerden sınıflarını göstermektedir:  
   
--   Etkinleştirme iletileri (CreateCoordinationContext ve CreateCoordinationContextResponse).  
+- Etkinleştirme iletileri (CreateCoordinationContext ve CreateCoordinationContextResponse).  
   
--   Kayıt iletileri (kayıt ve RegisterResponse)  
+- Kayıt iletileri (kayıt ve RegisterResponse)  
   
--   Protokol iletileri (hazırlama, geri alma, işleme, iptal edildi ve benzeri).  
+- Protokol iletileri (hazırlama, geri alma, işleme, iptal edildi ve benzeri).  
   
--   Uygulama iletileri.  
+- Uygulama iletileri.  
   
  İlk üç ileti sınıflarını hareket yöneticisi iletileri kabul edilir ve bunların bağlama yapılandırması "Uygulama ileti değişimi" Bu konunun ilerleyen bölümlerinde açıklanmıştır. İletinin dördüncü sınıfını uygulamaya ileti ve "İleti örnekler" bölümünde bu konunun ilerleyen bölümlerinde açıklanmıştır. Bu bölümde, bu sınıfların her biri için WCF tarafından kullanılan protokolü bağlamalarını açıklanmaktadır.  
   
@@ -78,9 +78,9 @@ Windows Communication Foundation (WCF) sürüm 1 WS-Atomic işlem ve WS-koordina
 #### <a name="https-transport-configuration"></a>HTTPS aktarımı yapılandırması  
  X.509 sertifikaları, hareket yöneticisi kimliğini oluşturmak için kullanılır. İstemci/sunucu kimlik doğrulaması ve yetkilendirme istemci/sunucu uygulama ayrıntısı bırakılır:  
   
--   R1111: Kablo üzerinden sunulan X.509 sertifikaları, kaynak makinenin tam etki alanı adını (FQDN) eşleşen bir konu adı olmalıdır.  
+- R1111: Kablo üzerinden sunulan X.509 sertifikaları, kaynak makinenin tam etki alanı adını (FQDN) eşleşen bir konu adı olmalıdır.  
   
--   B1112: DNS başarılı olması için her gönderenin alıcı çifti arasında X.509 konu adı denetimleri için sistemdeki işlevsel olması gerekir.  
+- B1112: DNS başarılı olması için her gönderenin alıcı çifti arasında X.509 konu adı denetimleri için sistemdeki işlevsel olması gerekir.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>Etkinleştirme ve yapılandırma bağlama kaydı  
  WCF HTTPS üzerinden istek/yanıt bağıntısı ile çift yönlü bağlama gerektirir. (WS-Atomic işlem, Bölüm 8 bağıntı ve istek/yanıt iletisi exchange desenlerinin açıklamaları hakkında daha fazla bilgi için bkz.)  
@@ -103,9 +103,9 @@ Windows Communication Foundation (WCF) sürüm 1 WS-Atomic işlem ve WS-koordina
   
  WS-Atomic işlem belirtimi, Bölüm 8, bağıntı ve ileti exchange desenleri hakkında daha fazla ayrıntıları açıklanır.  
   
--   R1222: Alma bağlı bir `CreateCoordinationContext`, düzenleyici dağıtmalı bir `SecurityContextToken` ile ilişkili gizli `STx`. Bu belirteç içinde döndürülen bir `t:IssuedTokens` WS-Güven belirtimini takip başlığı.  
+- R1222: Alma bağlı bir `CreateCoordinationContext`, düzenleyici dağıtmalı bir `SecurityContextToken` ile ilişkili gizli `STx`. Bu belirteç içinde döndürülen bir `t:IssuedTokens` WS-Güven belirtimini takip başlığı.  
   
--   R1223: Etkinleştirme var olan bir düzenleme bağlamı içinde ortaya çıkarsa `t:IssuedTokens` üstbilgiyle `SecurityContextToken` var olan ilişkili bağlam gerekir akışını `CreateCoordinationContext` ileti.  
+- R1223: Etkinleştirme var olan bir düzenleme bağlamı içinde ortaya çıkarsa `t:IssuedTokens` üstbilgiyle `SecurityContextToken` var olan ilişkili bağlam gerekir akışını `CreateCoordinationContext` ileti.  
   
  Yeni bir `t:IssuedTokens` üstbilgi giden eklemek için oluşturulacak `wscoor:CreateCoordinationContextResponse` ileti.  
   
@@ -126,9 +126,9 @@ Windows Communication Foundation (WCF) sürüm 1 WS-Atomic işlem ve WS-koordina
 ## <a name="application-message-exchange"></a>Uygulama ileti değişimi  
  Uygulamaları bağlama aşağıdaki güvenlik gereksinimlerini karşıladığı sürece herhangi belirli bağlama-uygulamaya iletileri için kullanılacak ücretsizdir:  
   
--   R2001: Uygulama uygulama iletileri gerekir akış `t:IssuedTokens` başlığı ile birlikte `CoordinationContext` iletisinin üst bilgisindeki.  
+- R2001: Uygulama uygulama iletileri gerekir akış `t:IssuedTokens` başlığı ile birlikte `CoordinationContext` iletisinin üst bilgisindeki.  
   
--   R2002: Bütünlüğü ve gizliliği `t:IssuedToken` sağlanmalıdır.  
+- R2002: Bütünlüğü ve gizliliği `t:IssuedToken` sağlanmalıdır.  
   
  `CoordinationContext` Üst bilgiyi içeren `wscoor:Identifier`. While tanımını `xsd:AnyURI` mutlak ve göreli URI'ler kullanımına izin verir WCF yalnızca destekler `wscoor:Identifiers`, mutlak bir URI'leri olduğu.  
   

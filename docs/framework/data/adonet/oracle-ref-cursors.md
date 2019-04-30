@@ -3,11 +3,11 @@ title: Oracle REF CURSOR
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
 ms.openlocfilehash: b23b0f07d7755fed820481a3ad1fe831ae3f5224
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771866"
 ---
 # <a name="oracle-ref-cursors"></a>Oracle REF CURSOR
 Oracle, Oracle için .NET Framework veri sağlayıcısı sunuyor **REF CURSOR** veri türü. Oracle REF CURSOR ile çalışmak için veri sağlayıcısı'nı kullanarak, aşağıdaki davranışları düşünmelisiniz.  
@@ -15,19 +15,19 @@ Oracle, Oracle için .NET Framework veri sağlayıcısı sunuyor **REF CURSOR** 
 > [!NOTE]
 >  Bazı davranışları Microsoft OLE DB Sağlayıcısı'nın Oracle (MSDAORA) farklı.  
   
--   Performansla ilgili nedenlerle, Oracle için veri sağlayıcısı otomatik olarak bağlama **REF CURSOR** veri türleri, MSDAORA gibi bunları açıkça belirtmediğiniz sürece.  
+- Performansla ilgili nedenlerle, Oracle için veri sağlayıcısı otomatik olarak bağlama **REF CURSOR** veri türleri, MSDAORA gibi bunları açıkça belirtmediğiniz sürece.  
   
--   Veri sağlayıcısı REF CURSOR parametreleri belirtmek için kullanılan {sonuç} kaçış dahil olmak üzere tüm ODBC kaçış dizileri desteklemez.  
+- Veri sağlayıcısı REF CURSOR parametreleri belirtmek için kullanılan {sonuç} kaçış dahil olmak üzere tüm ODBC kaçış dizileri desteklemez.  
   
--   REF CURSOR döndüren bir saklı yordamı yürütmek için parametreleri tanımlayın <xref:System.Data.OracleClient.OracleParameterCollection> ile bir <xref:System.Data.OracleClient.OracleType> , **imleç** ve <xref:System.Data.OracleClient.OracleParameter.Direction%2A> , **çıkış**. Veri sağlayıcısı, yalnızca çıkış parametreleri REF CURSOR bağlamayı destekler. Sağlayıcı REF CURSOR giriş parametreleri desteklemez.  
+- REF CURSOR döndüren bir saklı yordamı yürütmek için parametreleri tanımlayın <xref:System.Data.OracleClient.OracleParameterCollection> ile bir <xref:System.Data.OracleClient.OracleType> , **imleç** ve <xref:System.Data.OracleClient.OracleParameter.Direction%2A> , **çıkış**. Veri sağlayıcısı, yalnızca çıkış parametreleri REF CURSOR bağlamayı destekler. Sağlayıcı REF CURSOR giriş parametreleri desteklemez.  
   
--   Alma bir <xref:System.Data.OracleClient.OracleDataReader> parametresinden değeri desteklenmiyor. Türünde değerleri olan <xref:System.DBNull> komut yürütmenin sonrasına.  
+- Alma bir <xref:System.Data.OracleClient.OracleDataReader> parametresinden değeri desteklenmiyor. Türünde değerleri olan <xref:System.DBNull> komut yürütmenin sonrasına.  
   
--   Yalnızca **CommandBehavior** REF CURSOR ile çalışan numaralandırma değeri (örneğin, çağrılırken <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>) olan **CloseConnection**; diğerleri yoksayılır.  
+- Yalnızca **CommandBehavior** REF CURSOR ile çalışan numaralandırma değeri (örneğin, çağrılırken <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>) olan **CloseConnection**; diğerleri yoksayılır.  
   
--   REF CURSOR içinde sırasını **OracleDataReader** parametrelerinde bazında bağlıdır **OracleParameterCollection**. <xref:System.Data.OracleClient.OracleParameter.ParameterName%2A> Özelliği yok sayılır.  
+- REF CURSOR içinde sırasını **OracleDataReader** parametrelerinde bazında bağlıdır **OracleParameterCollection**. <xref:System.Data.OracleClient.OracleParameter.ParameterName%2A> Özelliği yok sayılır.  
   
--   PL/SQL **tablo** veri türü desteklenmiyor. Ancak, REF CURSOR daha verimlidir. Kullanmanız gerekiyorsa bir **tablo** veri türü, OLE DB .NET veri sağlayıcısı MSDAORA ile kullanın.  
+- PL/SQL **tablo** veri türü desteklenmiyor. Ancak, REF CURSOR daha verimlidir. Kullanmanız gerekiyorsa bir **tablo** veri türü, OLE DB .NET veri sağlayıcısı MSDAORA ile kullanın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [REF CURSOR Örnekleri](../../../../docs/framework/data/adonet/ref-cursor-examples.md)  

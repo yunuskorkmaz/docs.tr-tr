@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
 ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757382"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Nasıl yapılır: Windows Forms BindingNavigator Denetimine Yükleme, Kaydetme ve İptal Düğmeleri Ekleme
 <xref:System.Windows.Forms.BindingNavigator> Denetimidir özel amaçlı <xref:System.Windows.Forms.ToolStrip> denetimi gezinme ve verilere bağlı denetimler formunuzdaki işlemek için tasarlanmıştır.  
@@ -40,15 +40,15 @@ ms.locfileid: "59304785"
   
 7. İçinde **öğeler Koleksiyonu Düzenleyicisi**, aşağıdaki adımları tamamlayın:  
   
-    1.  Ekle bir <xref:System.Windows.Forms.ToolStripSeparator> ve üç <xref:System.Windows.Forms.ToolStripButton> uygun türünü seçerek öğeleri <xref:System.Windows.Forms.ToolStripItem> tıklayıp **Ekle** düğmesi.  
+    1. Ekle bir <xref:System.Windows.Forms.ToolStripSeparator> ve üç <xref:System.Windows.Forms.ToolStripButton> uygun türünü seçerek öğeleri <xref:System.Windows.Forms.ToolStripItem> tıklayıp **Ekle** düğmesi.  
   
-    2.  Ayarlama <xref:System.Windows.Forms.ToolStripItem.Name%2A> düğmelere özelliği **LoadButton**, **saveButton yapın**, ve **CancelButton**sırasıyla.  
+    2. Ayarlama <xref:System.Windows.Forms.ToolStripItem.Name%2A> düğmelere özelliği **LoadButton**, **saveButton yapın**, ve **CancelButton**sırasıyla.  
   
-    3.  Ayarlama <xref:System.Windows.Forms.ToolStripItem.Text%2A> düğmelere özelliği **yük**, **Kaydet**, ve **iptal**.  
+    3. Ayarlama <xref:System.Windows.Forms.ToolStripItem.Text%2A> düğmelere özelliği **yük**, **Kaydet**, ve **iptal**.  
   
-    4.  Ayarlama <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> her düğme için özellik **metin**. Alternatif olarak, bu özelliği ayarlayın **görüntü** veya **ImageAndText**ve görüntülenen resmi ayarlama <xref:System.Windows.Forms.ToolStripItem.Image%2A> özelliği.  
+    4. Ayarlama <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> her düğme için özellik **metin**. Alternatif olarak, bu özelliği ayarlayın **görüntü** veya **ImageAndText**ve görüntülenen resmi ayarlama <xref:System.Windows.Forms.ToolStripItem.Image%2A> özelliği.  
   
-    5.  Tıklayın **Tamam** iletişim kutusunu kapatın. Düğmeleri eklenen <xref:System.Windows.Forms.ToolStrip>.  
+    5. Tıklayın **Tamam** iletişim kutusunu kapatın. Düğmeleri eklenen <xref:System.Windows.Forms.ToolStrip>.  
   
 8. Formun sağ tıklatın ve seçin **kodu görüntüle**.  
   

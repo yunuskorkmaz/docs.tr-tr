@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9114799b87d39333ff9da66429dc1ea99ec2131c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775706"
 ---
 # <a name="icordebughandlevaluedispose-method"></a>ICorDebugHandleValue::Dispose Yöntemi
-Arabirim işaretçisi açıkça bırakmadan bu Icordebughandlevalue nesnesi tarafından başvurulan tanıtıcı serbest bırakır.  
+Arabirim işaretçisini açıkça bırakmadan bu Icordebughandlevalue nesne tarafından başvurulan tanıtıcıyı serbest bırakır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,9 +34,9 @@ HRESULT Dispose ();
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

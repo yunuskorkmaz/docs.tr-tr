@@ -6,11 +6,11 @@ helpviewer_keywords:
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
 ms.openlocfilehash: b04266b15f786e3a5a93ac1e9fff1754c397ccd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762765"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP Bağlantı Noktası Paylaşımı
 Windows Communication Foundation (WCF), yüksek performanslı iletişim için yeni TCP tabanlı ağ protokolü (net.tcp://) sağlar. WCF da yeni bir sistem bileşeni olan birden çok kullanıcı süreçler arasında paylaşılacak net.tcp bağlantı noktası sağlayan Net.TCP bağlantı noktası paylaşma hizmeti tanıtılmaktadır.  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF), yüksek performanslı iletişim için ye
 ## <a name="port-sharing-architecture"></a>Bağlantı noktası paylaşımı mimarisi  
  Wcf'de bağlantı noktası paylaşımı mimari üç ana bileşene sahiptir:  
   
--   Bir çalışan işlemi: Paylaşılan bağlantı noktalarını kullanarak net.tcp:// iletişim kuran herhangi bir işlem.  
+- Bir çalışan işlemi: Paylaşılan bağlantı noktalarını kullanarak net.tcp:// iletişim kuran herhangi bir işlem.  
   
--   WCF TCP taşıma: Net.tcp:// Protokolü uygular.  
+- WCF TCP taşıma: Net.tcp:// Protokolü uygular.  
   
--   Net.TCP bağlantı noktası Paylaşımı hizmeti: Çok sayıda çalışan işlemine aynı TCP bağlantı noktasını paylaşmasına izin verir.  
+- Net.TCP bağlantı noktası Paylaşımı hizmeti: Çok sayıda çalışan işlemine aynı TCP bağlantı noktasını paylaşmasına izin verir.  
   
  Net.TCP bağlantı noktası paylaşma hizmeti üzerinden bağlanan çalışan işlemleri adına net.tcp:// bağlantılarını kabul eden bir kullanıcı modu Windows hizmetidir. Bir yuva bağlantısı geldiğinde, hizmet bağlantı noktası hedef adresini almak için gelen ileti akışı inceler. Bu adresini temel alan, hizmet bağlantı noktası, sonuçta işlediği uygulamaya veri akışını yönlendirebilirsiniz.  
   

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5865935af96260982d47b778d208f4235f6245e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775042"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply Yöntemi
 Uzaktan iletişim çağrısı sunucu tarafı kısmı tamamlandı ve istemci artık alma profil oluşturucu bildirir ve yanıt işlenecek.  
@@ -39,11 +39,11 @@ HRESULT RemotingClientReceivingReply(
  `pCookie`  
  [in] Sağlanan değer karşılık gelecek bir değerle [Icorprofilercallback::remotingserversendingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) Bu koşullar altında:  
   
--   Uzaktan iletişim GUID tanımlama bilgilerinin etkin olur.  
+- Uzaktan iletişim GUID tanımlama bilgilerinin etkin olur.  
   
--   Kanal ileti iletilirken başarılı olur.  
+- Kanal ileti iletilirken başarılı olur.  
   
--   GUID tanımlama bilgileri sunucu tarafı işlemini üzerinde etkindir.  
+- GUID tanımlama bilgileri sunucu tarafı işlemini üzerinde etkindir.  
   
  Bu, uzak hizmet çağrıları kolay eşlemeye izin verir.  
   

@@ -6,24 +6,24 @@ dev_langs:
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
 ms.openlocfilehash: 75a214ad1099bf48dcb2c2d3b36bf07dc0524f8d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763925"
 ---
 # <a name="working-with-data-definition-language"></a>Veri Tanımlama Dili ile Çalışma
 İle başlayarak [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] sürüm 4, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] veri tanımlama dili (DDL) destekler. Bu, oluşturmak veya bağlantı dizesi ve depolama (SSDL) model meta verilerini temel alan bir veritabanı örneğini silmek sağlar.  
   
  Aşağıdaki yöntemlerden <xref:System.Data.Objects.ObjectContext> aşağıdakileri gerçekleştirmek için bağlantı dizesini ve SSDL içeriği kullanın: oluşturun veya veritabanını silin, veritabanı var ve oluşturulan DDL betiğini görüntüle olup olmadığını denetleyin:  
   
--   <xref:System.Data.Objects.ObjectContext.CreateDatabase%2A>  
+- <xref:System.Data.Objects.ObjectContext.CreateDatabase%2A>  
   
--   <xref:System.Data.Objects.ObjectContext.DeleteDatabase%2A>  
+- <xref:System.Data.Objects.ObjectContext.DeleteDatabase%2A>  
   
--   <xref:System.Data.Objects.ObjectContext.DatabaseExists%2A>  
+- <xref:System.Data.Objects.ObjectContext.DatabaseExists%2A>  
   
--   <xref:System.Data.Objects.ObjectContext.CreateDatabaseScript%2A>  
+- <xref:System.Data.Objects.ObjectContext.CreateDatabaseScript%2A>  
   
 > [!NOTE]
 >  DDL komutları yürütmeden yeterli izinlere varsayar.  
@@ -40,13 +40,13 @@ ms.locfileid: "59769586"
   
 2. Mevcut bir model uygulamanıza ekleyin.  
   
-    1.  Adlı boş bir model ekleme `SchoolModel`. Boş bir model oluşturmak için bkz [nasıl yapılır: Yeni bir .edmx dosyası oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) konu.  
+    1. Adlı boş bir model ekleme `SchoolModel`. Boş bir model oluşturmak için bkz [nasıl yapılır: Yeni bir .edmx dosyası oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) konu.  
   
      SchoolModel.edmx dosyası projenize eklenir.  
   
-    1.  Kavramsal, depolama kopyalayın ve eşleme içeriği Okul modeli [Okul modeli](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) konu.  
+    1. Kavramsal, depolama kopyalayın ve eşleme içeriği Okul modeli [Okul modeli](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) konu.  
   
-    2.  SchoolModel.edmx dosyasını açın ve içeriği yapıştırın `edmx:Runtime` etiketler.  
+    2. SchoolModel.edmx dosyasını açın ve içeriği yapıştırın `edmx:Runtime` etiketler.  
   
 3. Aşağıdaki kodu ana işlevinize ekleyin. Kod, veritabanı sunucunuza DDL betik veritabanı oluşturur, yeni bir varlık için bir bağlam eklenmiştir ve değişiklikleri veritabanına kaydeder görünümleri bağlantı dizesini başlatır.  
   

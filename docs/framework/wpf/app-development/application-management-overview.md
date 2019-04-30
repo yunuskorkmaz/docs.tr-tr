@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757358"
 ---
 # <a name="application-management-overview"></a>Uygulama Yönetimine Genel Bakış
 Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan işlevselliği sahip eğilimindedir. Bu konuda işlevleri genel bakışını sağlar <xref:System.Windows.Application> oluşturma ve uygulamaları yönetmek için sınıf.  
@@ -20,17 +20,17 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
 ## <a name="the-application-class"></a>Uygulama sınıfı  
  WPF içinde ortak uygulama kapsamlı işlevsellik içinde kapsüllenir <xref:System.Windows.Application> sınıfı. <xref:System.Windows.Application> Sınıfı aşağıdaki işlevleri içerir:  
   
--   İzleme ve uygulama yaşam süresi ile etkileşim kurma.  
+- İzleme ve uygulama yaşam süresi ile etkileşim kurma.  
   
--   Alma ve işleme komut satırı parametreleri.  
+- Alma ve işleme komut satırı parametreleri.  
   
--   Yakalanamayan özel durumları algılama ve yanıtlama.  
+- Yakalanamayan özel durumları algılama ve yanıtlama.  
   
--   Uygulama kapsamı özelliklerini ve kaynaklarını paylaşma.  
+- Uygulama kapsamı özelliklerini ve kaynaklarını paylaşma.  
   
--   Tek başına uygulamalar Windows yönetme.  
+- Tek başına uygulamalar Windows yönetme.  
   
--   İzleme ve gezinti yönetme.  
+- İzleme ve gezinti yönetme.  
   
 <a name="The_Application_Class"></a>   
 ## <a name="how-to-perform-common-tasks-using-the-application-class"></a>Uygulama sınıfı kullanarak ortak görevleri gerçekleştirme  
@@ -71,7 +71,7 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
 - Biçimlendirme içinde `Application` öğesi içermelidir `x:Class` özniteliği. Ne zaman uygulama oluşturulduğuna göre varlığını `x:Class` işaretlemede dosyası oluşturmak MSBuild neden olur. bir `partial` türetilen sınıf <xref:System.Windows.Application> ve tarafından belirtilen ada sahip `x:Class` özniteliği. Bu XAML şema için bir XML ad alanı bildirimi eklenmesini gerektirir (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`).
   
--   Arka plan, kod sınıfı olmalıdır bir `partial` sınıfı tarafından belirtilen aynı ada sahip `x:Class` öznitelik, biçimlendirmede ve öğesinden türetilmelidir <xref:System.Windows.Application>. Bu arka plan kod dosyası ile ilişkili olmasını sağlar `partial` uygulama oluşturulduğunda işaretleme dosyasının için oluşturulan sınıf (bkz [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md)).  
+- Arka plan, kod sınıfı olmalıdır bir `partial` sınıfı tarafından belirtilen aynı ada sahip `x:Class` öznitelik, biçimlendirmede ve öğesinden türetilmelidir <xref:System.Windows.Application>. Bu arka plan kod dosyası ile ilişkili olmasını sağlar `partial` uygulama oluşturulduğunda işaretleme dosyasının için oluşturulan sınıf (bkz [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md)).  
   
 > [!NOTE]
 >  Yeni bir WPF uygulaması veya Visual Studio kullanarak WPF tarayıcı uygulaması projesi oluşturduğunuzda, uygulama tanımı varsayılan olarak dahil edilir ve biçimlendirme hem de arka plan kod kullanılarak tanımlanır.  
@@ -195,17 +195,17 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
 ### <a name="application-activation-and-deactivation"></a>Uygulama etkinleştirme ve devre dışı bırakma  
  Windows uygulamaları arasında geçiş yapmak kullanıcıların sağlar. En yaygın yolu, ALT + SEKME tuş bileşimini kullanmaktır. Görünür bir varsa uygulamanın yalnızca olarak değiştirilebilir <xref:System.Windows.Window> , bir kullanıcı seçebilirsiniz. Şu anda seçili <xref:System.Windows.Window> olduğu *etkin pencere* (olarak da bilinen *ön plan penceresi*) ve <xref:System.Windows.Window> , kullanıcı girişini alır. Uygulama etkin pencere ile *etkin uygulama* (veya *ön plan uygulama*). Bir uygulamayı uygulamanın aşağıdaki durumlarda olur:  
   
--   Başlatılır ve gösteren bir <xref:System.Windows.Window>.  
+- Başlatılır ve gösteren bir <xref:System.Windows.Window>.  
   
--   Bir kullanıcı başka bir uygulamadan seçerek anahtarları bir <xref:System.Windows.Window> uygulama.  
+- Bir kullanıcı başka bir uygulamadan seçerek anahtarları bir <xref:System.Windows.Window> uygulama.  
   
  Bir uygulama tarafından işleme etkin olduğunda algılayabilir <xref:System.Windows.Application.Activated?displayProperty=nameWithType> olay.  
   
  Benzer şekilde, bir uygulama aşağıdaki durumlarda etkin hale gelebilir:  
   
--   Bir kullanıcı başka bir uygulamaya geçerli olandan geçer.  
+- Bir kullanıcı başka bir uygulamaya geçerli olandan geçer.  
   
--   Ne zaman uygulama kapanır.  
+- Ne zaman uygulama kapanır.  
   
  Bir uygulama işleme tarafından devre dışı olunca algılayabilir <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> olay.  
   
@@ -225,13 +225,13 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
 ### <a name="application-shutdown"></a>Uygulama kapatma  
  Bilgisayarı, aşağıdaki nedenlerle ortaya çıkabilir, bir uygulamanın ömrü sona erer:  
   
--   Bir kullanıcı kapatır her <xref:System.Windows.Window>.  
+- Bir kullanıcı kapatır her <xref:System.Windows.Window>.  
   
--   Bir kullanıcının ana kapattığı <xref:System.Windows.Window>.  
+- Bir kullanıcının ana kapattığı <xref:System.Windows.Window>.  
   
--   Bir kullanıcı oturumu kapatmadan veya kapatılıyor Windows oturumu sona erer.  
+- Bir kullanıcı oturumu kapatmadan veya kapatılıyor Windows oturumu sona erer.  
   
--   Bir uygulamaya özel durumu karşılandığından.  
+- Bir uygulamaya özel durumu karşılandığından.  
   
  Uygulama kapatma yönetmenize yardımcı olmak için <xref:System.Windows.Application> sağlar <xref:System.Windows.Application.Shutdown%2A> yöntemi <xref:System.Windows.Application.ShutdownMode%2A> özelliği ve <xref:System.Windows.Application.SessionEnding> ve <xref:System.Windows.Application.Exit> olayları.  
   
@@ -241,11 +241,11 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
 #### <a name="shutdown-mode"></a>Kapatma  
  Çoğu uygulama, tüm windows kapatıldığı veya ana penceresi kapatıldığında aşağı kapatın. Bazı durumlarda, ancak diğer uygulamaya özgü koşulları ne zaman bir uygulama kapanırken belirleyebilirsiniz. Koşullar altında uygulamanızın kapatma ayarlayarak belirtebilirsiniz <xref:System.Windows.Application.ShutdownMode%2A> aşağıdakilerden biriyle <xref:System.Windows.ShutdownMode> sabit listesi değerleri:  
   
--   <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
+- <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
   
--   <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
+- <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
   
--   <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
+- <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
   
  Varsayılan değer olan <xref:System.Windows.Application.ShutdownMode%2A> olduğu <xref:System.Windows.ShutdownMode.OnLastWindowClose>, uygulamanın son penceresinde kullanıcı tarafından kapatıldığında, bir uygulama otomatik olarak kapanır anlamına gelir. Ana pencere kapatıldığında, uygulamanızın kapatılmalıdır, ayarlarsanız ancak WPF otomatik olarak yapar <xref:System.Windows.Application.ShutdownMode%2A> için <xref:System.Windows.ShutdownMode.OnMainWindowClose>. Bu, aşağıdaki örnekte gösterilir.  
   
@@ -259,13 +259,13 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
 #### <a name="session-ending"></a>Oturum sonlandırılıyor  
  Tarafından açıklanan kapatma koşulları <xref:System.Windows.Application.ShutdownMode%2A> özelliği uygulamaya özeldir. Bazı durumlarda, yine de bir uygulama sonucu olarak bir dış koşul kapatılabilir. Bir kullanıcı Windows oturumu şu eylemleri sona erdiğinde en yaygın dış durum meydana gelir:  
   
--   Oturum kapatma  
+- Oturum kapatma  
   
--   Kapatılıyor  
+- Kapatılıyor  
   
--   Yeniden başlatma  
+- Yeniden başlatma  
   
--   Hazırda bekleme  
+- Hazırda bekleme  
   
  Windows oturumu sona erdiğinde algılamak için işleyebilirsiniz <xref:System.Windows.Application.SessionEnding> aşağıdaki örnekte gösterildiği gibi olay.  
   
@@ -291,11 +291,11 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
  <xref:System.Windows.Application.Exit> tek başına uygulamalar ve XBAP'ler tarafından işlenebilir. XBAP'ler için <xref:System.Windows.Application.Exit> , aşağıdaki koşullarda ortaya çıkar:  
   
--   Sayfadan bir XBAP çıkıldığında.  
+- Sayfadan bir XBAP çıkıldığında.  
   
--   İçinde [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)], XBAP barındırma sekmesini kapalı olduğunda.  
+- İçinde [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)], XBAP barındırma sekmesini kapalı olduğunda.  
   
--   Tarayıcı kapatıldığında.  
+- Tarayıcı kapatıldığında.  
   
 #### <a name="exit-code"></a>Çıkış kodu  
  Uygulamalar genellikle bir kullanıcı isteğine yanıt olarak işletim sistemi tarafından başlatılabilir. Ancak, bir uygulama belirli bir görevi gerçekleştirmek için başka bir uygulama tarafından başlatılabilir. Başlatılan uygulamalar kapatıldığında başlatılırken uygulama altında başlatılan uygulama kapatma koşul bilmek isteyebilir. Bu durumda, Windows uygulamaların kapatma sırasında bir uygulama çıkış kodu iade izin verir. Varsayılan olarak, WPF uygulamaları bir çıkış kodu 0 değerini döndürür.  
@@ -325,11 +325,11 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
  Kullanıcı deneyimi açısından daha iyi bir uygulamanın bazı veya tüm aşağıdakileri yaparak bu varsayılan davranışı önlemek:  
   
--   Kullanıcı dostu bilgilerini görüntüleme.  
+- Kullanıcı dostu bilgilerini görüntüleme.  
   
--   Çalışan bir uygulama tutmak çalışılıyor.  
+- Çalışan bir uygulama tutmak çalışılıyor.  
   
--   Ayrıntılı, geliştirici dostu özel durum bilgilerini ve Windows olay günlüğüne kaydetme.  
+- Ayrıntılı, geliştirici dostu özel durum bilgilerini ve Windows olay günlüğüne kaydetme.  
   
  Bu destek uygulama bağlıdır işlenmeyen özel durumlar, korumakta üzerinde ne olduğu <xref:System.Windows.Application.DispatcherUnhandledException> olayı için oluşturulur.  
   

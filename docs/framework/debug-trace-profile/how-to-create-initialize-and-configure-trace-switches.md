@@ -14,11 +14,11 @@ ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754355"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Nasıl yapılır: İzleme Anahtarları Oluşturma ve Başlatma
 İzleme anahtarları etkinleştirmek, devre dışı bırakın ve İzleme çıkışı filtrelemek olanak sağlar.  
@@ -75,11 +75,11 @@ ms.locfileid: "59325715"
   
 2. Projenize bir yapılandırma dosyası (app.config veya Web.config), ardından gelen içermiyorsa **proje** menüsünde **Yeni Öğe Ekle**.  
   
-    -   **Visual Basic:** İçinde **Yeni Öğe Ekle** iletişim kutusunda **uygulama yapılandırma dosyası**.  
+    - **Visual Basic:** İçinde **Yeni Öğe Ekle** iletişim kutusunda **uygulama yapılandırma dosyası**.  
   
          Uygulama yapılandırma dosyası oluşturulur ve açılır. Bu, kök öğesi bir XML belgesi `<configuration>.`  
   
-    -   **Görsel C#:** İçinde **Yeni Öğe Ekle** iletişim kutusunda **XML dosyası**. Bu dosya adı **app.config**. XML Düzenleyicisi'nde XML bildiriminden sonra aşağıdaki XML ekleyin:  
+    - **Görsel C#:** İçinde **Yeni Öğe Ekle** iletişim kutusunda **XML dosyası**. Bu dosya adı **app.config**. XML Düzenleyicisi'nde XML bildiriminden sonra aşağıdaki XML ekleyin:  
   
         ```xml  
         <configuration>  

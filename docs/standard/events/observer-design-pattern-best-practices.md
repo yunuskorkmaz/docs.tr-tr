@@ -9,11 +9,11 @@ ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 839772fac51ab006d03875920360824a73b033e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770402"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Gözlemci Tasarım Deseni En İyi Yöntemleri
 Gözlemci tasarım deseni, .NET Framework'teki arabirimleri kümesi uygulanır. <xref:System.IObservable%601?displayProperty=nameWithType> Arabirimi temsil eder, aynı zamanda sağlamaktan sorumlu olan veri sağlayıcısı bir <xref:System.IDisposable> bildirim aboneliği gözlemciler sağlayan uygulama. <xref:System.IObserver%601?displayProperty=nameWithType> Arabiriminin gözlemcisi temsil eder. Bu konu, geliştiricilerin bu arabirimleri kullanarak gözlemci tasarım deseni uygularken izlemelidir en iyi uygulamaları açıklar.  
@@ -31,11 +31,11 @@ Gözlemci tasarım deseni, .NET Framework'teki arabirimleri kümesi uygulanır. 
   
  Sağlayıcı özel durumları işleme olduğunda bu en iyi uygulamaları izlemelisiniz ve çağırma <xref:System.IObserver%601.OnError%2A> yöntemi:  
   
--   Belirli gereksinimlere sahipse, sağlayıcı kendi özel durumlarını işlemelidir.  
+- Belirli gereksinimlere sahipse, sağlayıcı kendi özel durumlarını işlemelidir.  
   
--   Sağlayıcı beklemez veya gözlemciler herhangi belirli bir şekilde özel durumları işlemek gerektiren.  
+- Sağlayıcı beklemez veya gözlemciler herhangi belirli bir şekilde özel durumları işlemek gerektiren.  
   
--   Sağlayıcı çağırmalıdır <xref:System.IObserver%601.OnError%2A> güncelleştirmeleri sağlamak üzere güncelleyebileceği etkilediğinde bir özel durum işleme yöntemi. Bu tür özel durumların bilgi gözlemci geçirilebilir. Diğer durumlarda, bir özel durumun gözlemciler bildirmek için gerek yoktur.  
+- Sağlayıcı çağırmalıdır <xref:System.IObserver%601.OnError%2A> güncelleştirmeleri sağlamak üzere güncelleyebileceği etkilediğinde bir özel durum işleme yöntemi. Bu tür özel durumların bilgi gözlemci geçirilebilir. Diğer durumlarda, bir özel durumun gözlemciler bildirmek için gerek yoktur.  
   
  Bir kez sağlayıcısı çağrıları <xref:System.IObserver%601.OnError%2A> veya <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> yöntemi, daha fazla bildirim olmalıdır ve sağlayıcı kendi gözlemciler abonelikten çıkabilirsiniz. Ancak gözlemciler ayrıca kendilerini önce ve sonra aldıkları dahil olmak üzere istediğiniz zaman abonelikten çıkabilirsiniz bir <xref:System.IObserver%601.OnError%2A> veya <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> bildirim. Gözlemci tasarım deseni sağlayıcı veya gözlemci aboneliği için sorumlu olduğunu dikte etmez; Bu nedenle, bir olasılık yoktur hem iptal etme deneyebilir. Genellikle, gözlemciler aboneliğinizi kaldırdığınızda, abonelerin koleksiyondan kaldırılır. Tek iş parçacıklı bir uygulamada <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> uygulama bir nesne başvurusu geçerli olduğunu ve nesne Kaldırmaya çalışmadan önce aboneleri koleksiyonunun bir üyesi olduğundan emin olun. Çok iş parçacıklı bir uygulamada, bir iş parçacığı koleksiyon nesnesi gibi bir <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> nesne, kullanılmalıdır.  
   
@@ -44,9 +44,9 @@ Gözlemci tasarım deseni, .NET Framework'teki arabirimleri kümesi uygulanır. 
   
  Gözlemci yanıt vermek bu en iyi uygulamaları izlemelisiniz bir <xref:System.IObserver%601.OnError%2A> yöntem çağrısı bir sağlayıcısı:  
   
--   Gözlemci onun arabirim uygulamaları özel durumlar gibi oluşturmamalıdır <xref:System.IObserver%601.OnNext%2A> veya <xref:System.IObserver%601.OnError%2A>. Ancak, gözlemci özel durum oluşturmaz, bu özel durum işlenmemiş gitmek için beklemeniz gerekir.  
+- Gözlemci onun arabirim uygulamaları özel durumlar gibi oluşturmamalıdır <xref:System.IObserver%601.OnNext%2A> veya <xref:System.IObserver%601.OnError%2A>. Ancak, gözlemci özel durum oluşturmaz, bu özel durum işlenmemiş gitmek için beklemeniz gerekir.  
   
--   Throw isteyen bir gözlemci çağrı yığını korumak için bir <xref:System.Exception> geçildi nesne kendi <xref:System.IObserver%601.OnError%2A> yöntemi özel durum, özel durum atma önce kaydırma. Bir standart özel durum nesnesi, bu amaç için kullanılmalıdır.  
+- Throw isteyen bir gözlemci çağrı yığını korumak için bir <xref:System.Exception> geçildi nesne kendi <xref:System.IObserver%601.OnError%2A> yöntemi özel durum, özel durum atma önce kaydırma. Bir standart özel durum nesnesi, bu amaç için kullanılmalıdır.  
   
 ## <a name="additional-best-practices"></a>Diğer en iyi yöntemler  
  İçinde kaydını çalışılıyor <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> yöntemi null başvuru neden olabilir. Bu nedenle, bu yöntem kaçınmanızı öneririz.  

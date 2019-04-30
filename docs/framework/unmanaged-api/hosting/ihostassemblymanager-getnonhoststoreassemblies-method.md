@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ae9a8e9e26f05675611ac4c6acd8ecfe5704b0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760200"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>IHostAssemblyManager::GetNonHostStoreAssemblies Metodu
 Bir arabirim işaretçisi alır bir [Iclrassemblyreferencelist](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) ortak dil çalışma zamanı (CLR) yüklemek için bir konak bekliyor derlemelerin listesini temsil eder.  
@@ -54,13 +54,13 @@ HRESULT GetNonHostStoreAssemblies (
 ## <a name="remarks"></a>Açıklamalar  
  CLR başvuruları aşağıdaki kuralları kullanarak çözer:  
   
--   İlk olarak, derleme başvuruları tarafından döndürülen listesini Danışmanlığı hizmetleri `GetNonHostStoreAssemblies`.  
+- İlk olarak, derleme başvuruları tarafından döndürülen listesini Danışmanlığı hizmetleri `GetNonHostStoreAssemblies`.  
   
--   Derleme listesinde görünüyorsa, CLR normalde bağlar.  
+- Derleme listesinde görünüyorsa, CLR normalde bağlar.  
   
--   Derleme listesinde görünmez ve ana bilgisayar uygulaması ayarının [Ihostassemblystore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), CLR çağrıları [Ihostassemblystore::provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) sağlamak konak izin vermek için bağlamak için derleme.  
+- Derleme listesinde görünmez ve ana bilgisayar uygulaması ayarının [Ihostassemblystore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), CLR çağrıları [Ihostassemblystore::provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) sağlamak konak izin vermek için bağlamak için derleme.  
   
--   Aksi takdirde, CLR derlemeye bağlamak başarısız olur.  
+- Aksi takdirde, CLR derlemeye bağlamak başarısız olur.  
   
  Konak gruplarını `ppReferenceList` null olarak CLR ilk araştırmaları genel derleme önbelleği, çağıran `ProvideAssembly`ve ardından bir bütünleştirilmiş kod başvurusu çözümlemek için uygulama temel araştırmaları.  
   

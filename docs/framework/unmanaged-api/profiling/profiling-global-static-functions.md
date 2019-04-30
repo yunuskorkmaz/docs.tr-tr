@@ -9,66 +9,66 @@ ms.assetid: 08a13a57-dc49-488d-b937-31e3051fda97
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8bb5d93c91de857ebbee63009cad73fba7e1d284
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758255"
 ---
 # <a name="profiling-global-static-functions"></a>Profil Oluşturma Genel Statik İşlevleri
-Bu bölümde, profil oluşturma API'si kullanan yönetilmeyen API işlevleri açıklanmaktadır.  
+Bu bölümde, profil oluşturma API'SİNİN kullandığı yönetilmeyen API işlevleri açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
-## <a name="net-framework-version-1-profiling-functions"></a>.NET framework sürüm 1 profil işlevleri  
+## <a name="net-framework-version-1-profiling-functions"></a>.NET framework sürüm 1 profil oluşturma işlevleri  
  [FunctionEnter İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)  
- Profil Oluşturucu denetim bir işlevine geçirilen olduğunu bildirir. .NET Framework 2.0 kullanım dışı.  
+ Profil Oluşturucu, denetim bir işleve geçirilen olduğunu bildirir. .NET Framework 2.0 kullanım dışı.  
   
  [FunctionLeave İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)  
- Profil Oluşturucu çağırana hakkında bilgi döndürmek için bir işlevi olduğunu bildirir. .NET Framework 2.0 kullanım dışı.  
+ Profil Oluşturucu bir işlev hakkında çağırana döndürmesi olduğunu bildirir. .NET Framework 2.0 kullanım dışı.  
   
  [FunctionTailcall İşlevi](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md)  
- Profil Oluşturucu şu anda yürütülen işlevi başka bir işlevine bir kuyruk çağrısı gerçekleştirmek üzere olduğunu bildirir. .NET Framework 2.0 kullanım dışı.  
+ Profil Oluşturucu, yürütülmekte olan işlevin başka bir işleve bir kuyruk çağrısı gerçekleştirmek üzere olduğunu bildirir. .NET Framework 2.0 kullanım dışı.  
   
-## <a name="net-framework-version-2-profiling-functions"></a>.NET framework sürüm 2 profil işlevleri  
+## <a name="net-framework-version-2-profiling-functions"></a>.NET framework sürüm 2 profil oluşturma işlevleri  
  [FunctionIDMapper İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)  
- Profil oluşturucu işlevi verilen tanıtıcısı kullanılmak üzere bir alternatif kimlik eşlenmesine bildirir [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), ve [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) bu işlev için geri çağırmaları. Ayrıca, bu işlevin geri aramalar almak istediği olup olmadığını belirtmek profil oluşturucu sağlar  
+ Profil Oluşturucu bir işlev, verilen tanımlayıcıya için kullanılmak üzere diğer Kimliğe yeniden eşlenebileceğini bildirir [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), ve [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) söz konusu işlev için geri çağırmaları. Ayrıca profil oluşturucunun söz konusu işlev için geri çağırmaları almak isteyip istemediğini göstermesini sağlar  
   
  [FunctionEnter2 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- Profil Oluşturucu denetim bir işlevine geçirilen ve çerçeve ve işlev bağımsız değişkenleri yığını hakkında bilgi sağlayan bildirir. İçinde kullanım dışı [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+ Profil Oluşturucu bildirir: denetim bir işleve geçirilir ve çerçeve ve işlev bağımsız değişkenleri yığın hakkında bilgi sağlar. İçinde kullanım dışı [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
  [FunctionLeave2 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
- Profil oluşturucu işlevi çağırana hakkında bilgi döndürmek için ve yığın çerçevesi ve işlevi dönüş değeri hakkında bilgi sağlar bildirir. İçinde kullanım dışı [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+ Profil Oluşturucu bildirir: bir işlev hakkında çağırana döndürmesi için ve yığın çerçeve ve işlev dönüş değeri hakkında bilgi sağlar. İçinde kullanım dışı [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
  [FunctionTailcall2 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
- Profil Oluşturucu şu anda yürütülen işlevi başka bir işlevine bir kuyruk çağrısı gerçekleştirmek üzere ve yığın çerçevesi hakkında bilgi sağlar bildirir. İçinde kullanım dışı [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+ Profil Oluşturucu bildirir: yürütülmekte olan işlevin başka bir işleve bir kuyruk çağrısı gerçekleştirmek üzere olduğunu ve yığın çerçevesi hakkında bilgi sağlar. İçinde kullanım dışı [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
  [StackSnapshotCallback İşlevi](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)  
- Profil Oluşturucu bilgiler her yönetilen çerçeve ve her çalışma yönetilmeyen çerçeve yığında tarafından başlatılan bir yığın ilerlemesi sırasında verir [Icorprofilerınfo2::dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) yöntemi.  
+ Profil Oluşturucu yönetilen her çerçeve ve her bir çalıştırmanın yönetilmeyen çerçeveler hakkında tarafından başlatılan bir yığın ilerlemesi sırasında bilgileri yığında sağlar [Icorprofilerınfo2::dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) yöntemi.  
   
-## <a name="net-framework-version-4-profiling-functions"></a>.NET framework sürüm 4 profil işlevleri  
+## <a name="net-framework-version-4-profiling-functions"></a>.NET framework sürüm 4'ün profil oluşturma işlevleri  
  [FunctionIDMapper2 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionidmapper2-function.md)  
- Profil oluşturucu işlevi verilen tanıtıcısı kullanılmak üzere bir alternatif kimlik eşlenmesine bildirir [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md), ve [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md), veya[Functionenter3withınfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [Functionleave3withınfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), ve [Functiontailcall3withınfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) bu işlev için geri çağırmaları. Ayrıca, bu işlevin geri aramalar almak istediği olup olmadığını belirtmek profil oluşturucu sağlar.  
+ Profil Oluşturucu bir işlev, verilen tanımlayıcıya için kullanılmak üzere diğer Kimliğe yeniden eşlenebileceğini bildirir [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md), ve [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md), veya[Functionenter3withınfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [Functionleave3withınfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), ve [Functiontailcall3withınfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) söz konusu işlev için geri çağırmaları. Ayrıca, profil oluşturucunun söz konusu işlev için geri çağırmaları almak isteyip istemediğini göstermesini sağlar.  
   
- `FunctionIDMapper2` genişletir [Functionıdmapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) ile işlev bir `clientData` parametresi profil oluşturucular çalışma zamanları arasında belirsizliğini ortadan kaldırmak için kullanabilirsiniz.  
+ `FunctionIDMapper2` genişletir [Functionıdmapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) işleviyle bir `clientData` parametresini profil Oluşturucular, çalışma zamanları arasındaki belirsizliğini ortadan kaldırmak için kullanabilirsiniz.  
   
  [FunctionEnter3 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)  
- Profil Oluşturucu denetim bir işlevine geçirilen olduğunu bildirir.  
+ Profil Oluşturucu, denetim bir işleve geçirilen olduğunu bildirir.  
   
  [FunctionEnter3WithInfo İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)  
- Profil Oluşturucu denetim bir işlevine geçirilen olduğunu bildirir ve için geçirilen tanıtıcı sağlar [Icorprofilerınfo3::getfunctionenter3ınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) yığın çerçevesi ve işlev bağımsız değişkenleri alınamadı.  
+ Denetim bir işleve geçirilen profil oluşturucu bildirir ve geçirilebilir bir tanıtıcı sağlar [Icorprofilerınfo3::getfunctionenter3ınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) yığın çerçeve ve işlev bağımsız değişkenlerini almak için.  
   
  [FunctionLeave3 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)  
- Profil Oluşturucu denetim bir işlevinden döndürülen olduğunu bildirir.  
+ Profil Oluşturucu denetimi bir işlevden döndürülen uyarır.  
   
  [FunctionLeave3WithInfo İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)  
- Profil Oluşturucu denetim bir işlevinden döndürülen olduğunu bildirir ve için geçirilen tanıtıcı sağlar [Icorprofilerınfo3::getfunctionleave3ınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) yığın çerçevesi ve dönüş değeri alınamadı.  
+ Profil Oluşturucu denetimi bir işlevden döndürülen uyarır ve geçirilebilir bir tanıtıcı sağlar [Icorprofilerınfo3::getfunctionleave3ınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) yığın çerçevesi ve dönüş değeri alınamıyor.  
   
  [FunctionTailcall3 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)  
- Profil Oluşturucu şu anda yürütülen işlevi başka bir işlevine bir kuyruk çağrısı gerçekleştirmek üzere olduğunu bildirir.  
+ Profil Oluşturucu, yürütülmekte olan işlevin başka bir işleve bir kuyruk çağrısı gerçekleştirmek üzere olduğunu bildirir.  
   
  [FunctionTailcall3WithInfo İşlevi](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)  
- Başka bir işlevine bir kuyruk çağrısı gerçekleştirmek üzere şu anda yürütülen işlevidir profil oluşturucu bildirir ve için geçirilen tanıtıcı sağlar [Icorprofilerınfo3::getfunctiontailcall3ınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) yığın çerçevesi alınamadı.  
+ Yürütülmekte olan işlevin başka bir işleve bir kuyruk çağrısı gerçekleştirmek üzere olan profil oluşturucu bildirir ve geçirilebilir bir tanıtıcı sağlar [Icorprofilerınfo3::getfunctiontailcall3ınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) yığın çerçevesi alınamadı.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Profil Oluşturmaya Genel Bakış](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  

@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
 ms.openlocfilehash: da90c2e9d096d32c819590058f1e513224fd9242
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766844"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme
 Büyük kuruluşlar genellikle uygulamaları kuruluş güvenlik ilkelerine uygun olarak geliştirilen gerektirir. Aşağıdaki konuda geliştirme ve bilgisayarlarda yüklü tüm Windows Communication Foundation (WCF) istemci uygulamaları doğrulamak için kullanılan bir istemci uç noktası Doğrulayıcı yüklemek nasıl ele alınmaktadır.  
@@ -43,15 +43,15 @@ Büyük kuruluşlar genellikle uygulamaları kuruluş güvenlik ilkelerine uygun
   
 3. Kullanım <xref:System.Configuration?displayProperty=nameWithType> ad alanı türleri için:  
   
-    1.  Uzantısına ekleme [ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md) tam olarak nitelenmiş tür adını kullanarak bölüm ve öğe kilitleyin.  
+    1. Uzantısına ekleme [ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md) tam olarak nitelenmiş tür adını kullanarak bölüm ve öğe kilitleyin.  
   
          [!code-csharp[LockdownValidation#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#5)]  
   
-    2.  Davranış öğesine ekleyin `EndpointBehaviors` özelliği [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) bölüm ve öğe kilitleyin. (Doğrulayıcı hizmetini yüklemek için Doğrulayıcı olmalıdır bir <xref:System.ServiceModel.Description.IServiceBehavior> ve eklenen `ServiceBehaviors` özellik.) Aşağıdaki kod örneği uygun yapılandırmaya sonrasında adımları gösterir bir. ve b, tanımlayıcı adı olan tek özel durum.  
+    2. Davranış öğesine ekleyin `EndpointBehaviors` özelliği [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) bölüm ve öğe kilitleyin. (Doğrulayıcı hizmetini yüklemek için Doğrulayıcı olmalıdır bir <xref:System.ServiceModel.Description.IServiceBehavior> ve eklenen `ServiceBehaviors` özellik.) Aşağıdaki kod örneği uygun yapılandırmaya sonrasında adımları gösterir bir. ve b, tanımlayıcı adı olan tek özel durum.  
   
          [!code-csharp[LockdownValidation#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#6)]  
   
-    3.  Machine.config dosyasına kaydedin. Aşağıdaki kod örneği, adım 3'te tüm görevleri gerçekleştirir ancak değiştirilen machine.config dosyasının yerel bir kopyasını kaydeder.  
+    3. Machine.config dosyasına kaydedin. Aşağıdaki kod örneği, adım 3'te tüm görevleri gerçekleştirir ancak değiştirilen machine.config dosyasının yerel bir kopyasını kaydeder.  
   
          [!code-csharp[LockdownValidation#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#7)]  
   

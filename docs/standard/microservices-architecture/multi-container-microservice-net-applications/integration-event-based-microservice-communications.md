@@ -1,17 +1,17 @@
 ---
-title: Mikro hizmetler (tümleştirme olayları) arasında olay tabanlı iletişim uygulama
+title: Mikro hizmetler arasında olay tabanlı iletişim uygulama (tümleştirme olayları)
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Mikro hizmetler arasında olay tabanlı iletişim uygulamak için tümleştirme olayları anlayın.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
 ms.openlocfilehash: b451d896186ffb650e495c10786106c37ab16131
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773587"
 ---
-# <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Mikro hizmetler (tümleştirme olayları) arasında olay tabanlı iletişim uygulama
+# <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Mikro hizmetler arasında olay tabanlı iletişim uygulama (tümleştirme olayları)
 
 Olay tabanlı iletişim kullandığınızda, daha önce açıklandığı gibi bir mikro hizmet önemli bir sorun olduğunda bir iş varlığı güncelleştirdiği gibi durum gerçekleştiğinde bir olay yayımlar. Diğer mikro hizmetler, bu olaylara abone olun. Bir mikro hizmet, bir olayı aldığında, yayımlanmakta daha fazla olay için yol açabilecek kendi iş varlıklarını güncelleştirebilirsiniz. Son tutarlılık kavram ortaya budur. Bu yayımlama/abone olma sistem, genellikle bir olay veri yolu uygulaması kullanılarak gerçekleştirilir. Olay veri yoluna abone olma ve aboneliği olayları ve olayları yayımlamak için gereken API ile arabirim olarak tasarlanabilir. Bir ileti kuyruğu veya zaman uyumsuz iletişim ve bir yayımlama/abone olma modelini destekleyen bir service bus gibi tüm işlemler arası veya Mesajlaşma iletişimi göre bir veya daha fazla uygulamaları da olabilir.
 

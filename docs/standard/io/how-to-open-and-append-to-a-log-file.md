@@ -14,11 +14,11 @@ ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 921b13e057929d7d6b283b26014a4c1f195f39c9
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751728"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Nasıl yapılır: Açın ve bir günlük dosyasına Ekle
 <xref:System.IO.StreamWriter> ve <xref:System.IO.StreamReader> akışlardan karakterleri okuma ve yazma karakter. Aşağıdaki kod örneği açılır *log.txt* dosya girişi için veya mevcut değil ve günlük bilgilerini dosyanın sonuna ekler oluşturur. Örnek sonra dosyanın içeriğini görüntülemek için standart çıktı yazar. 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
 ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761383"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Nasıl yapılır: MaskedTextBox Denetimine Veri Bağlama
 Verilere bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> için başka bir Windows Forms denetimi gibi denetim. Bununla birlikte, verilerinizi veritabanında biçimi tanımınızı maskesi beklenen biçimde eşleşmiyorsa, verileri yeniden biçimlendirmek gerekir. Aşağıdaki yordam kullanılarak bunun nasıl yapılacağını göstermektedir <xref:System.Windows.Forms.Binding.Format> ve <xref:System.Windows.Forms.Binding.Parse> olayları <xref:System.Windows.Forms.Binding> ayrı bir telefon numarası görüntülemek ve tek düzenlenebilir bir alanı telefon uzantısı veritabanı alanları için sınıf.  
@@ -239,15 +239,15 @@ Verilere bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> için 
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   Bir görsel oluşturun C# veya Visual Basic projesi.  
+- Bir görsel oluşturun C# veya Visual Basic projesi.  
   
--   Ekleme <xref:System.Windows.Forms.TextBox> ve <xref:System.Windows.Forms.MaskedTextBox> önceki yordamda açıklandığı gibi formuna denetler.  
+- Ekleme <xref:System.Windows.Forms.TextBox> ve <xref:System.Windows.Forms.MaskedTextBox> önceki yordamda açıklandığı gibi formuna denetler.  
   
--   Projenin varsayılan formu için kaynak kod dosyasını açın.  
+- Projenin varsayılan formu için kaynak kod dosyasını açın.  
   
--   Bu dosya kaynak kodunda önceki "Kod" bölümünde listelenen kod ile değiştirin.  
+- Bu dosya kaynak kodunda önceki "Kod" bölümünde listelenen kod ile değiştirin.  
   
--   Uygulamayı derleyin.  
+- Uygulamayı derleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
 ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748271"
 ---
 # <a name="service-identity-and-authentication"></a>Kimlik Doğrulama ile Hizmet Kimliği
 Bir hizmetin *uç noktası kimlik* oluşturulan Web Hizmetleri Açıklama Dili (WSDL) hizmetinden bir değerdir. Herhangi bir istemciye yayılır. Bu değer, hizmet kimlik doğrulaması için kullanılır. İstemci bir uç nokta için bir iletişim başlatır ve hizmeti kendisi için istemci kimlik doğrulaması sonra istemci uç noktası kimlik değeri uç nokta kimlik doğrulama işlemi döndürdü gerçek değerle karşılaştırır. Eşleşiyorlarsa istemci beklenen hizmet uç noktası başvurduğunu sağlanmıştır. Bu olarak karşı koruma işlev *kimlik avı* bir istemcinin kötü amaçlı bir hizmeti tarafından barındırılan bir uç noktaya yönlendirilmesini engelleyerek.  
@@ -26,9 +26,9 @@ Bir hizmetin *uç noktası kimlik* oluşturulan Web Hizmetleri Açıklama Dili (
   
  Kimlik işleme aşağıdaki aşamalardan oluşur:  
   
--   Tasarım zamanında istemci geliştiricisinin hizmetin kimliğini (WSDL kullanıma sunulan) uç noktanın meta verilerden belirler.  
+- Tasarım zamanında istemci geliştiricisinin hizmetin kimliğini (WSDL kullanıma sunulan) uç noktanın meta verilerden belirler.  
   
--   Çalışma zamanında, istemci uygulama hizmetine herhangi bir ileti göndermeden önce hizmetin güvenlik kimlik bilgileri taleplerini denetler.  
+- Çalışma zamanında, istemci uygulama hizmetine herhangi bir ileti göndermeden önce hizmetin güvenlik kimlik bilgileri taleplerini denetler.  
   
  İstemcide işleme kimliği, istemci kimlik doğrulaması hizmetine benzer. İstemcinin kimlik doğrulamasından kadar güvenli bir hizmetin kod çalıştırılmaz. Benzer şekilde, istemci hangi önceden hizmet meta verilerinden bilinen üzerinde hizmet kimlik bilgilerini doğrulanmadıkça hizmete ileti tabanlı göndermez.  
   
@@ -78,21 +78,21 @@ Bir hizmetin *uç noktası kimlik* oluşturulan Web Hizmetleri Açıklama Dili (
   
  Kanal iletisi veya aktarım düzeyinde Güvenli Yuva Katmanı (SSL) X.509 sertifikalarıyla için kimlik doğrulamasını kullanarak kimlik doğrulaması için yapılandırılmışsa, aşağıdaki kimlik değerleri geçerlidir:  
   
--   DNS. WCF sağlar SSL el sıkışması sırasında sağlanan sertifikanın DNS içerdiğini veya `CommonName` (CN) öznitelik istemcisindeki DNS kimliği belirtilen değere eşittir. Sunucu sertifikasının geçerliliğini belirlemek için bu denetimler ayrıca yapıldığını unutmayın. Varsayılan olarak, WCF, sunucu sertifikasının güvenilen kök yetkilisi tarafından verildiğini doğrular.  
+- DNS. WCF sağlar SSL el sıkışması sırasında sağlanan sertifikanın DNS içerdiğini veya `CommonName` (CN) öznitelik istemcisindeki DNS kimliği belirtilen değere eşittir. Sunucu sertifikasının geçerliliğini belirlemek için bu denetimler ayrıca yapıldığını unutmayın. Varsayılan olarak, WCF, sunucu sertifikasının güvenilen kök yetkilisi tarafından verildiğini doğrular.  
   
--   Sertifika. SSL el sıkışması sırasında uzak uç nokta kimliğinde belirtilen tam sertifika değer sağlar, WCF sağlar.  
+- Sertifika. SSL el sıkışması sırasında uzak uç nokta kimliğinde belirtilen tam sertifika değer sağlar, WCF sağlar.  
   
--   Sertifika başvurusu. Sertifika ile aynıdır.  
+- Sertifika başvurusu. Sertifika ile aynıdır.  
   
--   RSA. SSL el sıkışması sırasında uzak uç nokta kimliğinde belirtilen RSA anahtarı tam sağlar, WCF sağlar.  
+- RSA. SSL el sıkışması sırasında uzak uç nokta kimliğinde belirtilen RSA anahtarı tam sağlar, WCF sağlar.  
   
  Hizmet, ileti veya aktarım düzeyi SSL kimlik doğrulaması için bir Windows kimlik bilgisi ile kullanarak kimliğini doğrular ve kimlik bilgisi belirleyici, aşağıdaki kimlik değerleri geçerlidir:  
   
--   DNS. DNS adı denetlenebilir böylece anlaşma, sunucunun hizmetin SPN'si geçirir. SPN biçimindedir `host/<dns name>`.  
+- DNS. DNS adı denetlenebilir böylece anlaşma, sunucunun hizmetin SPN'si geçirir. SPN biçimindedir `host/<dns name>`.  
   
--   SPN. SPN döndürülür, örneğin, bir açık hizmeti `host/myservice`.  
+- SPN. SPN döndürülür, örneğin, bir açık hizmeti `host/myservice`.  
   
--   UPN. Hizmet hesabının UPN'si. UPN formundadır `username` @ `domain`. Örneğin, bir kullanıcı hesabı hizmet çalışırken, olabilir `username@contoso.com`.  
+- UPN. Hizmet hesabının UPN'si. UPN formundadır `username` @ `domain`. Örneğin, bir kullanıcı hesabı hizmet çalışırken, olabilir `username@contoso.com`.  
   
  Kimliğini programlı olarak belirtme (kullanarak <xref:System.ServiceModel.EndpointAddress.Identity%2A> özelliği) isteğe bağlıdır. Hiçbir kimlik belirtilmedi ve Windows istemci kimlik bilgisi türüdür, varsayılan bir ana bilgisayar adı ön ekine sahip hizmet uç noktası adresi parçası için ayarlanan değer ile SPN'dir "konak /" değişmez. Hiçbir kimlik belirtilmedi ve istemci kimlik bilgisi türü bir sertifika varsa varsayılan değer `Certificate`. Bu, her iki ileti ve aktarım düzeyi güvenlik için geçerlidir.  
   

@@ -3,11 +3,11 @@ title: 'Öğretici: Sorguları birbirine zincirleme (C#)'
 ms.date: 07/20/2015
 ms.assetid: 44f54444-c4c5-4c23-9d19-986b957b8eda
 ms.openlocfilehash: 3beed32aa276f218a80267748e74707941957e53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61711999"
 ---
 # <a name="tutorial-chaining-queries-together-c"></a>Öğretici: Sorguları birbirine zincirleme (C#)
 Bu öğreticide, sorguları birbirine bağladığınızda işleme modeli gösterilmektedir. Sorguları birbirine zincirleme işlevsel dönüşümlere yazma önemli bir parçasıdır. Tam olarak nasıl zincirleme sorguları iş anlamak önemlidir.  

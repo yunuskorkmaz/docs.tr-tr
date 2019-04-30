@@ -24,11 +24,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
 ms.openlocfilehash: 5fe12d18c7f403c1a50ed548a260ba39e83280eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746772"
 ---
 # <a name="user-defined-data-type"></a>Kullanıcı Tanımlı Veri Türü
 Tanımladığınız bir biçimde verileri tutar. `Structure` Biçimini tanımlar.  
@@ -50,15 +50,15 @@ Tanımladığınız bir biçimde verileri tutar. `Structure` Biçimini tanımlar
   
 ## <a name="programming-tips"></a>Programlama İpuçları  
   
--   **Bellek tüketimi.** Tüm bileşik veri türleri gibi ile güvenli bir şekilde, üyelerinin nominal depolama ayırmalarını birlikte ekleyerek bir yapının toplam bellek tüketimini hesaplanamaz. Ayrıca, siparişin bellekteki depolama sırasının bildirim ile aynı olduğunu güvenli bir şekilde varsayamazsınız. Bir yapının depolama düzenini denetlemek için ihtiyacınız varsa, uygulayabilirsiniz <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliğini `Structure` deyimi.  
+- **Bellek tüketimi.** Tüm bileşik veri türleri gibi ile güvenli bir şekilde, üyelerinin nominal depolama ayırmalarını birlikte ekleyerek bir yapının toplam bellek tüketimini hesaplanamaz. Ayrıca, siparişin bellekteki depolama sırasının bildirim ile aynı olduğunu güvenli bir şekilde varsayamazsınız. Bir yapının depolama düzenini denetlemek için ihtiyacınız varsa, uygulayabilirsiniz <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliğini `Structure` deyimi.  
   
--   **Birlikte çalışabilirlik değerlendirmeleri.** Örneğin, .NET Framework için yazılmaz bileşenleriyle arabirim, otomasyon ve COM nesneleri, kullanıcı tanımlı türler diğer ortamlarda Visual Basic ile uyumlu olmadığını unutmayın türlerini yapılandırın.  
+- **Birlikte çalışabilirlik değerlendirmeleri.** Örneğin, .NET Framework için yazılmaz bileşenleriyle arabirim, otomasyon ve COM nesneleri, kullanıcı tanımlı türler diğer ortamlarda Visual Basic ile uyumlu olmadığını unutmayın türlerini yapılandırın.  
   
--   **Genişletme.** Otomatik dönüştürme için veya herhangi bir yapı veri türü yoktur. Dönüştürme işleçleri, yapısını kullanarak tanımlayabileceğiniz [Operator deyimi](../../../visual-basic/language-reference/statements/operator-statement.md), ve her dönüştürme işleci olmasını bildirebilirsiniz `Widening` veya `Narrowing`.  
+- **Genişletme.** Otomatik dönüştürme için veya herhangi bir yapı veri türü yoktur. Dönüştürme işleçleri, yapısını kullanarak tanımlayabileceğiniz [Operator deyimi](../../../visual-basic/language-reference/statements/operator-statement.md), ve her dönüştürme işleci olmasını bildirebilirsiniz `Widening` veya `Narrowing`.  
   
--   **Tür karakterleri.** Değişmez değer türü karakteri ya da tanımlayıcı türü karakteri yapısı veri türleri vardır.  
+- **Tür karakterleri.** Değişmez değer türü karakteri ya da tanımlayıcı türü karakteri yapısı veri türleri vardır.  
   
--   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü yoktur. Tüm yapıları .NET Framework sınıfından <xref:System.ValueType?displayProperty=nameWithType>, ancak tek tek hiçbir yapısına karşılık gelen <xref:System.ValueType?displayProperty=nameWithType>.  
+- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü yoktur. Tüm yapıları .NET Framework sınıfından <xref:System.ValueType?displayProperty=nameWithType>, ancak tek tek hiçbir yapısına karşılık gelen <xref:System.ValueType?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki paradigma, bir yapının bildirimi özetini gösterir.  

@@ -3,11 +3,11 @@ title: Oturumlar, Örnek Oluşturma ve Eşzamanlılık
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
 ms.openlocfilehash: 994b95bb8ebc14a9997e1e9510389fdf16098d12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748024"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Oturumlar, Örnek Oluşturma ve Eşzamanlılık
 A *oturumu* iki uç nokta arasında gönderilen tüm iletilerin bir ilişki olduğunu. *Örnek oluşturma* hizmeti kullanıcı tanımlı nesneler ve onların ilgili ömrünü denetlemek için başvuran <xref:System.ServiceModel.InstanceContext> nesneleri. *Eşzamanlılık* içinde çalışan iş parçacıklarının sayısını denetlemek için verilen bir terimdir bir <xref:System.ServiceModel.InstanceContext> aynı anda.  
@@ -19,21 +19,21 @@ A *oturumu* iki uç nokta arasında gönderilen tüm iletilerin bir ilişki oldu
   
  WCF oturumları aşağıdaki ana kavramsal özelliklere sahiptir:  
   
--   Bunlar açıkça başlatılan ve çağıran uygulama tarafından sonlandırıldı.  
+- Bunlar açıkça başlatılan ve çağıran uygulama tarafından sonlandırıldı.  
   
--   Mesajlar oturumu sırasında bunlar alındığı sırayla işlenir.  
+- Mesajlar oturumu sırasında bunlar alındığı sırayla işlenir.  
   
--   Oturumlarının iletiler grubunu bir sohbete ilişkilendirin. Bu bağıntı anlamı bir soyutlamadır. Örneğin, oturum tabanlı bir kanalı oturum tabanlı başka bir kanal iletileri ileti gövdesinde paylaşılan bir etiketi temel bağıntısını ancak bir paylaşılan ağ bağlantısının dayalı iletiler ilişkilendirilebilir. Oturumdan elde edilebilir özellikleri bağıntı niteliğine bağlı.  
+- Oturumlarının iletiler grubunu bir sohbete ilişkilendirin. Bu bağıntı anlamı bir soyutlamadır. Örneğin, oturum tabanlı bir kanalı oturum tabanlı başka bir kanal iletileri ileti gövdesinde paylaşılan bir etiketi temel bağıntısını ancak bir paylaşılan ağ bağlantısının dayalı iletiler ilişkilendirilebilir. Oturumdan elde edilebilir özellikleri bağıntı niteliğine bağlı.  
   
--   Bir WCF oturum ile ilişkili hiçbir genel veri deposu bulunmaktadır.  
+- Bir WCF oturum ile ilişkili hiçbir genel veri deposu bulunmaktadır.  
   
  Alışkın olduğunuz <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> sınıfını [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulamalar ve işlevselliği sağlar, bu tür bir oturum ve WCF oturumları arasında aşağıdaki değişiklikler fark edebilirsiniz:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturumlarının her zaman sunucu-başlatılır.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturumlarının her zaman sunucu-başlatılır.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturumlarının örtük olarak sırasız.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturumlarının örtük olarak sırasız.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturumları istekler genelinde bir genel veri depolama mekanizmasını sağlar.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturumları istekler genelinde bir genel veri depolama mekanizmasını sağlar.  
   
  Oturumları, istemci uygulamaları ve hizmet uygulamaları farklı şekillerde etkileşim kurun. İstemci uygulamaları oturumlarını başlatmak ve ardından almak ve oturumunda gönderilen iletileri işlemek. Hizmet uygulamaları oturumlarını ek davranış eklemek için bir genişletilebilirlik noktası olarak kullanabilirsiniz. Bu doğrudan birlikte çalışarak yapılır <xref:System.ServiceModel.InstanceContext> veya özel örnek içerik sağlayıcısı uygulaması.  
   
@@ -42,11 +42,11 @@ A *oturumu* iki uç nokta arasında gönderilen tüm iletilerin bir ilişki oldu
   
  Aşağıdaki örneklemesini modları kullanılabilir:  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>: Yeni bir <xref:System.ServiceModel.InstanceContext> (ve bu nedenle nesne hizmet) her istemci isteği için oluşturulur.  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Yeni bir <xref:System.ServiceModel.InstanceContext> (ve bu nedenle nesne hizmet) her istemci isteği için oluşturulur.  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>: Yeni bir <xref:System.ServiceModel.InstanceContext> (ve bu nedenle nesne hizmeti) için yeni her istemci oturumu oluşturulur ve bu oturuma (Bu gerektirir oturumları destekleyen bir bağlama) ömrü boyunca saklanır.  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Yeni bir <xref:System.ServiceModel.InstanceContext> (ve bu nedenle nesne hizmeti) için yeni her istemci oturumu oluşturulur ve bu oturuma (Bu gerektirir oturumları destekleyen bir bağlama) ömrü boyunca saklanır.  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>: Tek bir <xref:System.ServiceModel.InstanceContext> (ve bu nedenle nesne hizmet) uygulama ömrü boyunca tüm istemci isteklerini işler.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: Tek bir <xref:System.ServiceModel.InstanceContext> (ve bu nedenle nesne hizmet) uygulama ömrü boyunca tüm istemci isteklerini işler.  
   
  Aşağıdaki kod örneği varsayılan gösterir <xref:System.ServiceModel.InstanceContextMode> değeri <xref:System.ServiceModel.InstanceContextMode.PerSession> üzerinde bir hizmet sınıfı açıkça ayarlanıyor.  
   
@@ -75,11 +75,11 @@ public class CalculatorService : ICalculatorInstance
   
  Aşağıdaki üç eşzamanlılık modu kullanılabilir:  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Single>: Her örnek bağlamı, en fazla bir iş parçacığının aynı anda örnek bağlamı iletileri işleme izin verilmez. Örnek bağlamı özgün iş parçacığı çıkana kadar aynı örnek bağlamı kullanmak isteyen diğer iş parçacıklarını engellemeniz gerekir.  
+- <xref:System.ServiceModel.ConcurrencyMode.Single>: Her örnek bağlamı, en fazla bir iş parçacığının aynı anda örnek bağlamı iletileri işleme izin verilmez. Örnek bağlamı özgün iş parçacığı çıkana kadar aynı örnek bağlamı kullanmak isteyen diğer iş parçacıklarını engellemeniz gerekir.  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Multiple>: Her hizmet örneği birden çok iş parçacığı iletileri eşzamanlı olarak işleme sahip olabilir. Hizmet uygulaması bu eşzamanlılık modu kullanmak için iş parçacığı açısından güvenli olması gerekir.  
+- <xref:System.ServiceModel.ConcurrencyMode.Multiple>: Her hizmet örneği birden çok iş parçacığı iletileri eşzamanlı olarak işleme sahip olabilir. Hizmet uygulaması bu eşzamanlılık modu kullanmak için iş parçacığı açısından güvenli olması gerekir.  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Her hizmet örneği, tek bir ileti işler, ancak a işlem çağrıları kabul eder. WCF istemci nesnesi okunamayabilir bu hizmet yalnızca bu çağrıları kabul eder.  
+- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Her hizmet örneği, tek bir ileti işler, ancak a işlem çağrıları kabul eder. WCF istemci nesnesi okunamayabilir bu hizmet yalnızca bu çağrıları kabul eder.  
   
 > [!NOTE]
 >  Anlama ve güvenli bir şekilde birden fazla iş parçacığı kullanan kod geliştirme başarıyla yazmak zor olabilir. Kullanmadan önce <xref:System.ServiceModel.ConcurrencyMode.Multiple> veya <xref:System.ServiceModel.ConcurrencyMode.Reentrant> değerleri emin olmak için hizmetinizin bu modları için düzgün şekilde tasarlanmıştır. Daha fazla bilgi için bkz. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  

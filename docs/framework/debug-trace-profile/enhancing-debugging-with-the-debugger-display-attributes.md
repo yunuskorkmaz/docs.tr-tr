@@ -16,11 +16,11 @@ ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: aff2dd26db4abb892b2fc775052b6e833aa25267
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754706"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Hata Ayıklayıcı Görüntü Öznitelikleriyle Hata Ayıklamayı Geliştirme
 
@@ -45,11 +45,11 @@ Deyimde başvurulan özelliklerine uygulanan öznitelikleri işlenmez. C# derley
 ## <a name="using-the-debuggerbrowsableattribute"></a>DebuggerBrowsableAttribute kullanma
  Uygulama <xref:System.Diagnostics.DebuggerBrowsableAttribute> bir alan veya özellik hata ayıklayıcı penceresinde görüntülenecek alan veya özellik nasıl olduğunu belirtmek için. Bu öznitelik için oluşturucu birini alır <xref:System.Diagnostics.DebuggerBrowsableState> aşağıdaki durumlardan biriyle belirten numaralandırma değerlerinden:
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Never> Üye verileri penceresinde görüntülenmez gösterir.  Örneğin, bu değeri kullanarak <xref:System.Diagnostics.DebuggerBrowsableAttribute> üzerinde bir alan, alanın bu hiyerarşisinden kaldırır; türü örneği için (+) artı işaretine tıklayarak kapsayan türdeki genişlettiğinizde alan gösterilmez.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Never> Üye verileri penceresinde görüntülenmez gösterir.  Örneğin, bu değeri kullanarak <xref:System.Diagnostics.DebuggerBrowsableAttribute> üzerinde bir alan, alanın bu hiyerarşisinden kaldırır; türü örneği için (+) artı işaretine tıklayarak kapsayan türdeki genişlettiğinizde alan gösterilmez.
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> üye görüntülenmez ancak varsayılan olarak genişletilmiş değil gösterir.  Bu varsayılan davranıştır.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> üye görüntülenmez ancak varsayılan olarak genişletilmiş değil gösterir.  Bu varsayılan davranıştır.
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> üye gösterilmez, ancak bir dizi veya koleksiyon olması durumunda, bağlı nesneler görüntülenir gösterir.
+- <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> üye gösterilmez, ancak bir dizi veya koleksiyon olması durumunda, bağlı nesneler görüntülenir gösterir.
 
 > [!NOTE]
 >  <xref:System.Diagnostics.DebuggerBrowsableAttribute> Visual Basic'te .NET Framework sürüm 2.0 tarafından desteklenmez.

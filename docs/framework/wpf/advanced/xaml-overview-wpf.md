@@ -20,11 +20,11 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
 ms.openlocfilehash: 56b97170884ef31004b06b0eb50a8d79ad1d041c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757228"
 ---
 # <a name="xaml-overview-wpf"></a>XAML genel bakış (WPF)
 Bu konu XAML dilinin özelliklerini açıklar ve yazmak için XAML nasıl kullanabileceğinizi gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Bu konu özel olarak uygulandığı şekilde XAML tanımlayan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XAML kendisini olan daha büyük bir dil kavramını [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -115,11 +115,11 @@ Bu konu XAML dilinin özelliklerini açıklar ve yazmak için XAML nasıl kullan
 ### <a name="text-content"></a>Metin içeriği  
  XAML öğeleri az sayıda, doğrudan metin içeriklerini işleyebilir. Bunu etkinleştirmek için aşağıdaki durumlardan biri true olması gerekir:  
   
--   Sınıfı bir içerik özelliğinin bildirmeniz gerekir ve bu içerik özelliği bir dizeye atanabilir bir tür olması gerekir (türü olabilir <xref:System.Object>). Örneğin, herhangi <xref:System.Windows.Controls.ContentControl> kullanan <xref:System.Windows.Controls.ContentControl.Content%2A> içerik özelliği ve bunu türüdür <xref:System.Object>, ve bunu aşağıdaki kullanımı bir pratik üzerinde destekler <xref:System.Windows.Controls.ContentControl> gibi bir <xref:System.Windows.Controls.Button>: `<Button>Hello</Button>`.  
+- Sınıfı bir içerik özelliğinin bildirmeniz gerekir ve bu içerik özelliği bir dizeye atanabilir bir tür olması gerekir (türü olabilir <xref:System.Object>). Örneğin, herhangi <xref:System.Windows.Controls.ContentControl> kullanan <xref:System.Windows.Controls.ContentControl.Content%2A> içerik özelliği ve bunu türüdür <xref:System.Object>, ve bunu aşağıdaki kullanımı bir pratik üzerinde destekler <xref:System.Windows.Controls.ContentControl> gibi bir <xref:System.Windows.Controls.Button>: `<Button>Hello</Button>`.  
   
--   Türü bir tür dönüştürücüsü metin içeriği çalışması için bu tür dönüştürücüsü başlatma metin olarak kullanılır, bildirmeniz gerekir. Örneğin: `<Brush>Blue</Brush>` Bu uygulamada daha az karşılaşılan bir durumdur.  
+- Türü bir tür dönüştürücüsü metin içeriği çalışması için bu tür dönüştürücüsü başlatma metin olarak kullanılır, bildirmeniz gerekir. Örneğin: `<Brush>Blue</Brush>` Bu uygulamada daha az karşılaşılan bir durumdur.  
   
--   Bilinen bir XAML dil temel türü olmalıdır.  
+- Bilinen bir XAML dil temel türü olmalıdır.  
   
 ### <a name="content-properties-and-collection-syntax-combined"></a>Birleşik içerik özellikleri ve koleksiyon söz dizimi  
  Bu örneği göz önünde bulundurun:  
@@ -133,9 +133,9 @@ Bu konu XAML dilinin özelliklerini açıklar ve yazmak için XAML nasıl kullan
   
  Burada, her <xref:System.Windows.Controls.Button> bir alt öğesidir <xref:System.Windows.Controls.StackPanel>. İki farklı nedenlerden iki etiket atlar kolay ve sezgisel bir biçimlendirme budur.  
   
--   **Atlanmış StackPanel.Children özellik öğesi:** <xref:System.Windows.Controls.StackPanel> türetildiği <xref:System.Windows.Controls.Panel>. <xref:System.Windows.Controls.Panel> tanımlar <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> , XAML içerik özelliği.  
+- **Atlanmış StackPanel.Children özellik öğesi:** <xref:System.Windows.Controls.StackPanel> türetildiği <xref:System.Windows.Controls.Panel>. <xref:System.Windows.Controls.Panel> tanımlar <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> , XAML içerik özelliği.  
   
--   **Atlanmış UIElementCollection nesne öğesi:** <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> Özelliği türü alır <xref:System.Windows.Controls.UIElementCollection>, uygulayan <xref:System.Collections.IList>. Koleksiyonlar gibi işleme için XAML kurallarına göre koleksiyonunun öğesi etiketi atlanabilir <xref:System.Collections.IList>. (Bu durumda, <xref:System.Windows.Controls.UIElementCollection> çünkü varsayılan bir oluşturucu oluşturmaz ve İşte bu gerçekten oluşturulamaz <xref:System.Windows.Controls.UIElementCollection> nesne öğesi kullanıma açıklamalı gösterilmiştir).  
+- **Atlanmış UIElementCollection nesne öğesi:** <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> Özelliği türü alır <xref:System.Windows.Controls.UIElementCollection>, uygulayan <xref:System.Collections.IList>. Koleksiyonlar gibi işleme için XAML kurallarına göre koleksiyonunun öğesi etiketi atlanabilir <xref:System.Collections.IList>. (Bu durumda, <xref:System.Windows.Controls.UIElementCollection> çünkü varsayılan bir oluşturucu oluşturmaz ve İşte bu gerçekten oluşturulamaz <xref:System.Windows.Controls.UIElementCollection> nesne öğesi kullanıma açıklamalı gösterilmiştir).  
   
 ```xaml  
 <StackPanel>  
@@ -210,15 +210,15 @@ Bu konu XAML dilinin özelliklerini açıklar ve yazmak için XAML nasıl kullan
 ### <a name="the-x-prefix"></a>X: ön eki  
  Önceki örnekte kök öğesi, ön eki `x:` XAML ad alanı eşlemek için kullanılan [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)], XAML dili destekleyen özel XAML ad alanı olan oluşturur. Bu `x:` ön eki bu XAML ad alanı için proje şablonları, örnekler ve belge boyunca bu eşleme için kullanılan [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. XAML dili için XAML ad alanı, XAML içinde çok sık kullanacağınız çeşitli programlama yapıları içerir. En yaygın bir listesi verilmiştir `x:` kullanacağınız programlama yapıları öneki:  
   
--   [x: Key](../../xaml-services/x-key-directive.md): Her kaynak için benzersiz bir anahtar ayarlar bir <xref:System.Windows.ResourceDictionary> (veya diğer çerçeveler benzer sözlük kavramları). `x:Key` % 90'ını hesabı görür `x:` kullanımları bir tipik WPF uygulama biçimlendirme içinde görürsünüz.  
+- [x: Key](../../xaml-services/x-key-directive.md): Her kaynak için benzersiz bir anahtar ayarlar bir <xref:System.Windows.ResourceDictionary> (veya diğer çerçeveler benzer sözlük kavramları). `x:Key` % 90'ını hesabı görür `x:` kullanımları bir tipik WPF uygulama biçimlendirme içinde görürsünüz.  
   
--   [x: Class](../../xaml-services/x-class-directive.md): Belirtir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ad alanını ve sınıf adı için bir XAML sayfası için arka plan kod sağlayan sınıf. Arka plan kod WPF programlama modeli başına desteklemek için sınıf olması ve bu nedenle, neredeyse her zaman görmek `x:` kaynak olsa bile, eşlenmiş.  
+- [x: Class](../../xaml-services/x-class-directive.md): Belirtir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ad alanını ve sınıf adı için bir XAML sayfası için arka plan kod sağlayan sınıf. Arka plan kod WPF programlama modeli başına desteklemek için sınıf olması ve bu nedenle, neredeyse her zaman görmek `x:` kaynak olsa bile, eşlenmiş.  
   
--   [x: Name](../../xaml-services/x-name-directive.md): Bir nesne öğesi işlendikten sonra var olan bir örneği için bir çalışma zamanı nesne adı, çalışma zamanı kodu belirtir. Genel olarak, bir WPF tanımlı eşdeğer özelliği sık kullanacağınız [x: Name](../../xaml-services/x-name-directive.md). Gibi özellikleri özelliği yedekleyen bir CLR özel eşleme ve bu nedenle, sık sık çalışma zamanında kodu başlatılmış XAML adlandırılmış öğeleri bulmak için kullandığınız uygulama programlaması için daha kolay. En yaygın tür özelliği <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>. Yine de kullanabilir [x: Name](../../xaml-services/x-name-directive.md) olduğunda eşdeğer WPF çerçeve düzeyi <xref:System.Windows.FrameworkElement.Name%2A> özelliği, belirli bir türü desteklenmiyor. Bu, bazı animasyon senaryolarda oluşur.  
+- [x: Name](../../xaml-services/x-name-directive.md): Bir nesne öğesi işlendikten sonra var olan bir örneği için bir çalışma zamanı nesne adı, çalışma zamanı kodu belirtir. Genel olarak, bir WPF tanımlı eşdeğer özelliği sık kullanacağınız [x: Name](../../xaml-services/x-name-directive.md). Gibi özellikleri özelliği yedekleyen bir CLR özel eşleme ve bu nedenle, sık sık çalışma zamanında kodu başlatılmış XAML adlandırılmış öğeleri bulmak için kullandığınız uygulama programlaması için daha kolay. En yaygın tür özelliği <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>. Yine de kullanabilir [x: Name](../../xaml-services/x-name-directive.md) olduğunda eşdeğer WPF çerçeve düzeyi <xref:System.Windows.FrameworkElement.Name%2A> özelliği, belirli bir türü desteklenmiyor. Bu, bazı animasyon senaryolarda oluşur.  
   
--   [x: Static](../../xaml-services/x-static-markup-extension.md): Aksi takdirde bir XAML uyumlu özelliği değil statik bir değer döndüren bir başvuru sağlar.  
+- [x: Static](../../xaml-services/x-static-markup-extension.md): Aksi takdirde bir XAML uyumlu özelliği değil statik bir değer döndüren bir başvuru sağlar.  
   
--   [x: Type](../../xaml-services/x-type-markup-extension.md): Oluşturur bir <xref:System.Type> başvuru bir tür adına bağlı. Bu öznitelikler belirtmek için kullanılan <xref:System.Type>, gibi <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>, sık özelliği yerel dize olsa-için-<xref:System.Type> şekilde dönüştürme, [x: Type](../../xaml-services/x-type-markup-extension.md) biçimlendirme uzantısı kullanımı İsteğe bağlı.  
+- [x: Type](../../xaml-services/x-type-markup-extension.md): Oluşturur bir <xref:System.Type> başvuru bir tür adına bağlı. Bu öznitelikler belirtmek için kullanılan <xref:System.Type>, gibi <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>, sık özelliği yerel dize olsa-için-<xref:System.Type> şekilde dönüştürme, [x: Type](../../xaml-services/x-type-markup-extension.md) biçimlendirme uzantısı kullanımı İsteğe bağlı.  
   
  Vardır yapılardan programlama ek `x:` gibi ortak olmayan ön eki/XAML ad alanı. Ayrıntılar için bkz [XAML Namespace (x:) Dil özellikleri](../../xaml-services/xaml-namespace-x-language-features.md).  
   

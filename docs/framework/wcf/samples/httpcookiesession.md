@@ -3,24 +3,24 @@ title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
 ms.openlocfilehash: 801fc6baed623c920e5a20163782bc9d6551a6da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752743"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 Bu örnek, bir özel Protokolü kanalı HTTP tanımlama bilgileri oturum yönetimi için kullanılacak yapı gösterilmiştir. Bu kanal, Windows Communication Foundation (WCF) Hizmetleri ile ASMX istemciler veya WCF istemcileri ve ASMX hizmetleri arasında iletişimi sağlar.  
   
  Oturum tabanlı bir istemci bir Web yöntemine bir ASMX Web hizmetinde, çağırdığında [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] altyapısı şunları yapar:  
   
--   Benzersiz bir kimliği (oturum kimliği) oluşturur.  
+- Benzersiz bir kimliği (oturum kimliği) oluşturur.  
   
--   Oturum nesnesi oluşturur ve onu benzersiz kimliği ile ilişkilendirir  
+- Oturum nesnesi oluşturur ve onu benzersiz kimliği ile ilişkilendirir  
   
--   Set-Cookie HTTP yanıt üst bilgisi için benzersiz kimliği ekler ve istemciye gönderir.  
+- Set-Cookie HTTP yanıt üst bilgisi için benzersiz kimliği ekler ve istemciye gönderir.  
   
--   Bu kümeye gönderen oturum kimliği temel alarak sonraki çağrılar istemcide tanımlar.  
+- Bu kümeye gönderen oturum kimliği temel alarak sonraki çağrılar istemcide tanımlar.  
   
  İstemci bu oturum kimliği, sonraki istekleri sunucuya içerir. Sunucu, geçerli HTTP bağlamı için uygun bir oturum nesnesi yüklemek için istemci oturum kimliği kullanır.  
   
@@ -39,7 +39,7 @@ Bu örnek, bir özel Protokolü kanalı HTTP tanımlama bilgileri oturum yöneti
 ## <a name="service-channel"></a>Hizmet kanalı  
  Örnek, bir hizmet kanalı sağlar `HttpCookieReplySessionChannelListener` sınıfı. Bu sınıfın uyguladığı <xref:System.ServiceModel.Channels.IChannelListener> dönüştürür ve arabirimi <xref:System.ServiceModel.Channels.IReplyChannel> kanaldan için kanal yığınında daha düşük bir <xref:System.ServiceModel.Channels.IReplySessionChannel>. Bu işlem, aşağıdaki bölümlere ayrılabilir:  
   
--   Kanal dinleyicisi açıldığında, kendi iç dinleyici iç bir kanaldan kabul eder. Bir veri birimi dinleyici iç dinleyici olduğunu ve kabul edilen bir kanal ömrünü, dinleyici ömrünü ayrılmış olduğundan, biz iç dinleyici kapatın ve yalnızca iç kanala tutun  
+- Kanal dinleyicisi açıldığında, kendi iç dinleyici iç bir kanaldan kabul eder. Bir veri birimi dinleyici iç dinleyici olduğunu ve kabul edilen bir kanal ömrünü, dinleyici ömrünü ayrılmış olduğundan, biz iç dinleyici kapatın ve yalnızca iç kanala tutun  
   
     ```  
                 this.innerChannelListener.Open(timeoutHelper.RemainingTime());  
@@ -48,7 +48,7 @@ Bu örnek, bir özel Protokolü kanalı HTTP tanımlama bilgileri oturum yöneti
     this.innerChannelListener.Close(timeoutHelper.RemainingTime());  
     ```  
   
--   Açma işlemi tamamlandıktan sonra bir ileti döngüsü iç kanaldan iletileri alacak şekilde ayarladık.  
+- Açma işlemi tamamlandıktan sonra bir ileti döngüsü iç kanaldan iletileri alacak şekilde ayarladık.  
   
     ```  
     IAsyncResult result = BeginInnerReceiveRequest();  
@@ -63,7 +63,7 @@ Bu örnek, bir özel Protokolü kanalı HTTP tanımlama bilgileri oturum yöneti
     }  
     ```  
   
--   İleti geldiğinde, hizmet kanalı oturum tanımlayıcısı inceler ve devre dışı bırakmak için uygun bir oturum kanalı bağlantıları çoğaltır. Kanal dinleyicisi oturumu oturum kanalı örneklerine eşleştirir bir sözlük tutar.  
+- İleti geldiğinde, hizmet kanalı oturum tanımlayıcısı inceler ve devre dışı bırakmak için uygun bir oturum kanalı bağlantıları çoğaltır. Kanal dinleyicisi oturumu oturum kanalı örneklerine eşleştirir bir sözlük tutar.  
   
     ```  
     Dictionary<string, IReplySessionChannel> channelMapping;  

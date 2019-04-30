@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Me
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
 ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761461"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama
 Bu, bir Windows Communication Foundation (WCF) hizmet için meta verileri yayımlama gösteren iki nasıl yapılır konuları biridir. Hizmet yapılandırma dosyasını ve kod kullanarak meta verileri nasıl yayımlamalısınız belirtmenin iki yolu vardır. Bu konuda, bir yapılandırma dosyası kullanarak bir hizmet için meta verileri yayımlama gösterilmektedir.  
@@ -140,21 +140,21 @@ namespace Metadata.Samples
   
 7. Önceki adımda eklediğiniz meta veri uç noktaları için `binding` öznitelik aşağıdakilerden biri:  
   
-    -   `mexHttpBinding` için HTTP yayımlama.  
+    - `mexHttpBinding` için HTTP yayımlama.  
   
-    -   `mexHttpsBinding` HTTPS için yayımlama.  
+    - `mexHttpsBinding` HTTPS için yayımlama.  
   
-    -   `mexNamedPipeBinding` adlandırılmış kanal yayını.  
+    - `mexNamedPipeBinding` adlandırılmış kanal yayını.  
   
-    -   `mexTcpBinding` için TCP yayımlama.  
+    - `mexTcpBinding` için TCP yayımlama.  
   
 8. Bir önceki adımda eklediğiniz meta veri uç noktaları, adresi eşit olarak ayarlayın:  
   
-    -   Taban adresi meta veri bağlama ile aynı olduğunda konak uygulamanın temel adres yayın noktası olarak kullanmak için boş bir dize.  
+    - Taban adresi meta veri bağlama ile aynı olduğunda konak uygulamanın temel adres yayın noktası olarak kullanmak için boş bir dize.  
   
-    -   Konak uygulamanın temel adres varsa göreli bir adres.  
+    - Konak uygulamanın temel adres varsa göreli bir adres.  
   
-    -   Mutlak bir adres.  
+    - Mutlak bir adres.  
   
 9. Konsol uygulamasını derleyin ve çalıştırın.  
   

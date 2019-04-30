@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
 ms.openlocfilehash: 55d0fdcdbed4f994e50e83e5a25baf83c3ad79cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756760"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Visual Basic'de Değişkenlerle İlgili Sorun Giderme
 Bu sayfada Visual Basic'te değişkenler ile çalışırken oluşabilecek bazı yaygın sorunlar listelenir.  
@@ -18,9 +18,9 @@ Bu sayfada Visual Basic'te değişkenler ile çalışırken oluşabilecek bazı 
 ## <a name="unable-to-access-members-of-an-object"></a>Bir nesnenin üyelerine erişmek için  
  Kodunuzu bir özellik veya yöntem bir nesne üzerinde erişmeye çalışırsa, iki olası hata sonuçları vardır:  
   
--   Belirli bir tür olması ve ardından o türe göre tanımlanmamış bir üye başvurmak için nesne değişkenini bildirirseniz, derleyici bir hata iletisi oluşturabilir.  
+- Belirli bir tür olması ve ardından o türe göre tanımlanmamış bir üye başvurmak için nesne değişkenini bildirirseniz, derleyici bir hata iletisi oluşturabilir.  
   
--   Çalışma zamanı <xref:System.MemberAccessException> bir nesne değişkenine atanan nesne kodunuzu erişmeye üye kullanıma sunmuyor oluşur. Bir değişken, söz konusu olduğunda [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md), üyesi değilse bu durum da edinebilirsiniz `Public`. Geç bağlama yalnızca erişime olmasıdır `Public` üyeleri.  
+- Çalışma zamanı <xref:System.MemberAccessException> bir nesne değişkenine atanan nesne kodunuzu erişmeye üye kullanıma sunmuyor oluşur. Bir değişken, söz konusu olduğunda [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md), üyesi değilse bu durum da edinebilirsiniz `Public`. Geç bağlama yalnızca erişime olmasıdır `Public` üyeleri.  
   
  Zaman [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md) kümeleri tür denetimini `On`, yalnızca yöntemleri ve özellikleri ile kaydedilebilmeniz bu sınıfın bir nesne değişkenine erişebilir. Aşağıdaki örnek bunu göstermektedir.  
 

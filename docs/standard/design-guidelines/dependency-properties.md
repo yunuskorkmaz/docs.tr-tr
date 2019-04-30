@@ -1,17 +1,17 @@
 ---
-title: Bağımlılık özellikleri
+title: Bağımlılık Özellikleri
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
 author: KrzysztofCwalina
 ms.openlocfilehash: 52d7a69a3f52c67ebff3f3db1daf0790e995913a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778774"
 ---
-# <a name="dependency-properties"></a>Bağımlılık özellikleri
+# <a name="dependency-properties"></a>Bağımlılık Özellikleri
 Bağımlılık özelliği (DP) bir tür değişken (alan), örneğin depolamak yerine bir özellik deposu değerini depolayan bir normal bir özelliktir.  
   
  Bir ekli bağımlılık özelliği olarak "Özellikler" nesnelerini ve bunların kapsayıcılar arasındaki ilişkileri tanımlayan temsil eden statik alma ve ayarlama yöntemlerini modellenmiş bağımlılık özelliği türüdür (örneğin, konumunu bir `Button` nesnenin bir `Panel` kapsayıcı).  

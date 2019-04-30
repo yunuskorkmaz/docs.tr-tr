@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
 ms.openlocfilehash: a974df5d2305b88946981d0d258a8088b23d3fc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766616"
 ---
 # <a name="xml-comment-exception-must-have-a-cref-attribute"></a>XML açıklama özel durumunda 'cref' özniteliği olmalıdır
 \<Özel durum > etiketi yöntemi tarafından oluşturulan özel durumları belge için bir yol sağlar. Gerekli `cref` öznitelik belgeleri Oluşturucu tarafından denetlenir bir üyenin adını belirtir. Üye varsa, kurallı öğe adı belgeleri dosyasına çevrilir.  
@@ -21,7 +21,7 @@ ms.locfileid: "58813294"
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Ekleme `cref` özniteliğini aşağıdaki gibi özel durumu:  
+- Ekleme `cref` özniteliğini aşağıdaki gibi özel durumu:  
   
     ```  
     '''<exception cref="member">description</exception>  

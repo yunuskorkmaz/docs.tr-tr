@@ -1,16 +1,16 @@
 ---
-title: WIF oturum yönetimi
+title: WIF Oturum Yönetimi
 ms.date: 03/30/2017
 ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
 author: BrucePerlerMS
 ms.openlocfilehash: 980d0c6dca9b0b5fadf2d4a841e4c95a9acaff52
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780087"
 ---
-# <a name="wif-session-management"></a>WIF oturum yönetimi
+# <a name="wif-session-management"></a>WIF Oturum Yönetimi
 Bir istemci ilk bir bağlı olan taraf tarafından barındırılan korunan bir kaynağa erişmeyi denediğinde, istemci öncelikle kendisi için bağlı olan taraf tarafından güvenilen bir güvenlik belirteci hizmeti (STS) doğrulaması gerekir. STS istemciye daha sonra bir güvenlik belirteci verir. İstemci bu belirteci ardından korumalı kaynağa istemci erişim veren bir bağlı olan tarafa sunar. Ancak, özellikle, hatta aynı bilgisayarda veya bağlı olan taraf aynı etki alanında olabileceğinden sts'ye her istek için yeniden kimlik doğrulaması sağlamak için istemci istemezsiniz. Bunun yerine, bağlı olan taraf oturumu, istemci oturum güvenlik belirteci kendisini tüm istekler için bağlı olan tarafa sonra ilk istek kimliğini doğrulamak için kullanır ve istemci Windows Identity Foundation (WIF) sahiptir. Bağlı olan taraf istemcinin yeniden oluşturmak için bir tanımlama bilgisi içinde depolanır, bu oturum güvenlik belirteci kullanabilirsiniz <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>.  
   
  STS, hangi kimlik doğrulaması istemci sağlamalıdır tanımlar. Ancak, istemcinin birden çok kimlik bilgileri ile kendisini STS'ye kimlik doğrulaması yapabilir olabilir. Örneğin, bir Windows Live, bir kullanıcı adı ve parola, sertifika ve bir smartkey belirtecine sahip olabilir. Bu durumda, STS verir istemci istemci sunan kimlik bilgilerini birine karşılık gelen her bir kimliği ile birçok kimlik. İstemci erişim düzeyini karar verdiğinde bağlı olan tarafa bir veya daha fazla bu kimlikleri kullanabilirsiniz.  

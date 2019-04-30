@@ -3,11 +3,11 @@ title: 1445 - ReadPoolMiss
 ms.date: 03/30/2017
 ms.assetid: 6a8fa431-42a2-4a77-9a04-a269236e83ad
 ms.openlocfilehash: ee65e216ce6dcf9538820a92fd96b5c1b962af43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782063"
 ---
 # <a name="1445---readpoolmiss"></a>1445 - ReadPoolMiss
 ## <a name="properties"></a>Özellikler  
@@ -15,14 +15,14 @@ ms.locfileid: "33457629"
 |||  
 |-|-|  
 |Kimlik|1445|  
-|Anahtar Sözcükler|Kota|  
+|anahtar sözcükler|Kota|  
 |Düzey|Ayrıntılı|  
 |Kanal|Microsoft Windows uygulama sunucusu-uygulamalar/analitik|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay ile okuma havuzu isabetsizliği yayınlanır.  
+ Bu olay bir okuma havuzu isabetsizliği ile yayılır.  
   
 ## <a name="message"></a>İleti  
- '%1' yeni oluşturulan  
+ Yeni '%1' oluşturuldu  
   
 ## <a name="details"></a>Ayrıntılar

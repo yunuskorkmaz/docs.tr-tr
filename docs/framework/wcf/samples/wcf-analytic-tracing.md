@@ -3,11 +3,11 @@ title: WCF Analiz İzleme
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723361"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF Analiz İzleme
 Bu örnek ETW Windows Communication Foundation (WCF) Yazar analitik izlemeleri akışının içine kendi izleme olaylarını ekleme gösterir [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Analitik izlemeleri, yüksek performans cezası ödeme yapmadan hizmetlerinizi görünürlük elde etmek kolay hale getirmek için yöneliktir. Bu örnek nasıl kullanılacağını gösterir <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API WCF hizmetleri ile tümleştirme yazma olayları.  
@@ -22,11 +22,11 @@ Bu örnek ETW Windows Communication Foundation (WCF) Yazar analitik izlemeleri a
 ## <a name="self-hosting-vs-web-hosting"></a>Kendi kendine barındırma vs. Web barındırma  
  Web barındırılan hizmetler için WCF'ın analitik izlemeleri izlemeleri yayma hizmeti tanımlamak için kullanılan "HostReference" adlı bir alan sağlar. Bu modelde, Genişletilebilir kullanıcı izlemeleri katılabilir ve bu örnek, bunu yapmak için en iyi uygulamaları gösterir. Bir Web ana bilgisayarı biçimi başvuru kanal '&#124;' karakter gerçekten görünür ortaya çıkan dize, aşağıdakilerden herhangi biri olabilir:  
   
--   Uygulama kök dizininde değilse.  
+- Uygulama kök dizininde değilse.  
   
      \<SiteName>\<ApplicationVirtualPath>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
--   Uygulama kök dizininde ise.  
+- Uygulama kök dizininde ise.  
   
      \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
@@ -77,13 +77,13 @@ Bu örnek ETW Windows Communication Foundation (WCF) Yazar analitik izlemeleri a
   
 10. WCF Test İstemcisi'ı kullanarak hizmeti test edin.  
   
-    1.  WCF Test İstemcisi'nde çift **Add()** ICalculator hizmet düğümü altında.  
+    1. WCF Test İstemcisi'nde çift **Add()** ICalculator hizmet düğümü altında.  
   
          **Add()** yöntemi sağ bölmede iki parametre ile görünür.  
   
-    2.  İlk parametresi için 2 ve 3 ' İkinci parametre için yazın.  
+    2. İlk parametresi için 2 ve 3 ' İkinci parametre için yazın.  
   
-    3.  Tıklayın **Invoke** yöntemini çağırmak için.  
+    3. Tıklayın **Invoke** yöntemini çağırmak için.  
   
 11. Git **Olay Görüntüleyicisi'ni** zaten açık bir pencere. Gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama Sunucu uygulamaları**.  
   

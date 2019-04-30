@@ -12,28 +12,28 @@ helpviewer_keywords:
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
 ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773106"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Performansı iyileştirme: Diğer öneriler
 <a name="introduction"></a> Bu konu başlığı altında ek olarak konularındaki tarafından kapsanan performans önerileri sağlar [WPF uygulama performansını en iyi duruma getirme](optimizing-wpf-application-performance.md) bölümü.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
--   [Opaklık karşı öğeler üzerinde Fırçalar hakkında](#Opacity)  
+- [Opaklık karşı öğeler üzerinde Fırçalar hakkında](#Opacity)  
   
--   [Nesne gitme](#Navigation_Objects)  
+- [Nesne gitme](#Navigation_Objects)  
   
--   [İsabet sınaması 3B yüzeyler üzerinde](#Hit_Testing)  
+- [İsabet sınaması 3B yüzeyler üzerinde](#Hit_Testing)  
   
--   [CompositionTarget.işleme olayı](#CompositionTarget_Rendering_Event)  
+- [CompositionTarget.işleme olayı](#CompositionTarget_Rendering_Event)  
   
--   [ScrollBarVisibility kullanmaktan kaçının otomatik =](#Avoid_Using_ScrollBarVisibility)  
+- [ScrollBarVisibility kullanmaktan kaçının otomatik =](#Avoid_Using_ScrollBarVisibility)  
   
--   [Başlatma süresini azaltmak için yazı tipi önbellek hizmetini yapılandırma](#FontCache)  
+- [Başlatma süresini azaltmak için yazı tipi önbellek hizmetini yapılandırma](#FontCache)  
   
 <a name="Opacity"></a>   
 ## <a name="opacity-on-brushes-versus-opacity-on-elements"></a>Opaklık karşı öğeler üzerinde Fırçalar hakkında  

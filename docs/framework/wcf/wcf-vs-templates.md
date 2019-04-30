@@ -3,11 +3,11 @@ title: WCF Visual Studio Şablonları
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
 ms.openlocfilehash: b0cca0cd585a45b795db4d573659e0d19ecd78dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780672"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio Şablonları
 Windows Communication Foundation (WCF) Visual Studio önceden tanımlanmış proje ve öğe şablonlarını Visual Studio'da WCF hizmetleri ve kapsayıcı uygulamaları hızlıca oluşturmak için kullanabileceğiniz şablonlardır.  
@@ -20,11 +20,11 @@ Windows Communication Foundation (WCF) Visual Studio önceden tanımlanmış pro
   
  Kullanarak yeni bir proje oluşturduğunuzda **WCF Hizmeti** yeni proje şablonu, aşağıdaki üç dosyayı otomatik olarak içerir:  
   
--   Hizmet sözleşme dosyası (Iservice1.cs veya Iservice1.vb). Hizmet sözleşme dosyası uygulanan WCF Hizmeti özniteliklere sahip bir arayüzdür. Bu dosya, hizmetlerinizi tanımlama göstermek için basit bir hizmet tanımının sağlar ve parametre tabanlı işlemler ve basit veri sözleşme örneği içerir. Bu, bir WCF Hizmeti projesini oluşturduktan sonra Kod Düzenleyicisi'nde görüntülenen varsayılan dosyasıdır.  
+- Hizmet sözleşme dosyası (Iservice1.cs veya Iservice1.vb). Hizmet sözleşme dosyası uygulanan WCF Hizmeti özniteliklere sahip bir arayüzdür. Bu dosya, hizmetlerinizi tanımlama göstermek için basit bir hizmet tanımının sağlar ve parametre tabanlı işlemler ve basit veri sözleşme örneği içerir. Bu, bir WCF Hizmeti projesini oluşturduktan sonra Kod Düzenleyicisi'nde görüntülenen varsayılan dosyasıdır.  
   
--   Hizmet uygulama dosyasını (Service1.cs veya gt;service1.vb). Hizmet uygulama dosyasını hizmet sözleşme dosyasında tanımlanan sözleşme uygular.  
+- Hizmet uygulama dosyasını (Service1.cs veya gt;service1.vb). Hizmet uygulama dosyasını hizmet sözleşme dosyasında tanımlanan sözleşme uygular.  
   
--   Uygulama yapılandırma dosyasına (App.config). Yapılandırma dosyasını güvenli bir HTTP bağlaması ile temel bir WCF service model öğelerini sağlar. Ayrıca, hizmet için bir uç noktası içerir ve meta veri değişimi sağlar.  
+- Uygulama yapılandırma dosyasına (App.config). Yapılandırma dosyasını güvenli bir HTTP bağlaması ile temel bir WCF service model öğelerini sağlar. Ayrıca, hizmet için bir uç noktası içerir ve meta veri değişimi sağlar.  
   
 > [!NOTE]
 >  Visual Studio projesi için yapılandırma dosyası App.config dosyasını kullanarak çalıştırıldığında tanımak için yapılandırılmış [WCF hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), varsayılan yapılandırmayı olduğu. Bir yürütülebilir dosya hizmeti kitaplıkta barındırıyorsanız, DLL'ler için yapılandırma dosyalarını geçerli olmadığından yapılandırma kodu yürütülebilir yapılandırma dosyasına taşımak zorunda.  
@@ -34,13 +34,13 @@ Windows Communication Foundation (WCF) Visual Studio önceden tanımlanmış pro
   
  Kullanarak yeni bir proje oluşturduğunuzda **WCF Web uygulaması hizmeti** şablon, proje aşağıdaki dört dosyaları içerir:  
   
--   Hizmet ana bilgisayar dosyası (service1.svc'yi).  
+- Hizmet ana bilgisayar dosyası (service1.svc'yi).  
   
--   Hizmet sözleşme dosyası (Iservice1.cs veya Iservice1.vb).  
+- Hizmet sözleşme dosyası (Iservice1.cs veya Iservice1.vb).  
   
--   Hizmet uygulama dosyasını (gt;service1.svc.cs veya Service1.svc.vb).  
+- Hizmet uygulama dosyasını (gt;service1.svc.cs veya Service1.svc.vb).  
   
--   Web yapılandırma dosyası (Web.config).  
+- Web yapılandırma dosyası (Web.config).  
   
  Şablon, otomatik olarak (bir sanal dizin ile dağıtılması için) bir Web sitesi oluşturur ve bir hizmette barındırır.  
   

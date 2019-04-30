@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765277"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion İşlevi
 Ortak dil çalışma zamanı (CLR) hangi sürümünün işlem dahilinde CLR açıkça başlatılmadan önce kullanılacağını belirlemek için ana sağlar.  
@@ -72,15 +72,15 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
 3. Tarafından belirtilen işlevin `hostCallback` sonra sırasıyla aşağıdaki çağrıları yapar:  
   
-    -   Tarafından belirtilen işlevin `pBeginHostSetup` parametresi.  
+    - Tarafından belirtilen işlevin `pBeginHostSetup` parametresi.  
   
-    -   `CorBindToRuntimeEx` (veya başka bir çalışma zamanı başlatma işlevi).  
+    - `CorBindToRuntimeEx` (veya başka bir çalışma zamanı başlatma işlevi).  
   
-    -   [Iclrruntimehost::sethostcontrol](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
+    - [Iclrruntimehost::sethostcontrol](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
   
-    -   [Iclrruntimehost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
+    - [Iclrruntimehost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
   
-    -   Tarafından belirtilen işlevin `pEndHostSetup` parametresi.  
+    - Tarafından belirtilen işlevin `pEndHostSetup` parametresi.  
   
  Tüm çağrıların `pBeginHostSetup` için `pEndHostSetup` tek iş parçacığı veya aynı mantıksal yığınına sahip bir fiber gerçekleşmemelidir. Bu iş parçacığının iş parçacığı alacağı farklı `hostCallback` çağrılır.  
   

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 ms.openlocfilehash: 887a157494c2992c1ae5868229c442f31fafb276
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781309"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>İzlenecek yol: WPF İçeriği için Stil Oluşturma
 Bu izlenecek yol, bir Windows Form üzerinde barındırılan bir Windows Presentation Foundation (WPF) denetimine stil uygulamak nasıl gösterir.
 
  Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:
 
--   Projeyi oluşturun.
+- Projeyi oluşturun.
 
--   WPF denetim türü oluşturun.
+- WPF denetim türü oluşturun.
 
--   Bir stil WPF denetimi için geçerlidir.
+- Bir stil WPF denetimi için geçerlidir.
 
 > [!NOTE]
 >  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -30,7 +30,7 @@ Bu izlenecek yol, bir Windows Form üzerinde barındırılan bir Windows Present
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:  
   
--   Visual Studio 2012.  
+- Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Projeyi Oluşturma  
  İlk adım Windows Forms projesi oluşturmaktır.  
@@ -40,7 +40,7 @@ Bu izlenecek yol, bir Windows Form üzerinde barındırılan bir Windows Present
   
 #### <a name="to-create-the-project"></a>Proje oluşturmak için  
   
--   Visual Basic veya Visual C# adlı yeni bir Windows Forms uygulaması projesi oluşturma `StylingWpfContent`.  
+- Visual Basic veya Visual C# adlı yeni bir Windows Forms uygulaması projesi oluşturma `StylingWpfContent`.  
   
 ## <a name="creating-the-wpf-control-types"></a>WPF denetim türleri oluşturma  
  WPF denetim türü projeye ekledikten sonra içinde barındırabilirsiniz bir <xref:System.Windows.Forms.Integration.ElementHost> denetimi.  

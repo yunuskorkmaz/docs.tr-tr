@@ -13,11 +13,11 @@ helpviewer_keywords:
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
 ms.openlocfilehash: 6987263854b0d0372bc08bb7e4d6efb498e265f1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781010"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic'de LINQ'e Giriş
 Dil ile tümleşik sorgu (LINQ), Visual Basic sorgu özellikleri ekler ve her tür veri ile çalışırken, basit ve güçlü özellikler sağlar. Bir sorguyu işlenmek üzere bir veritabanına göndermek veya her arama yaptığınız veri türü için farklı sorgu sözdizimiyle çalışmak yerine LINQ sorguları Visual Basic dilinin bir parçası olarak tanıtır. Veri türünden bağımsız olarak birleştirilmiş sözdizimi kullanır.  
@@ -182,11 +182,11 @@ LINQ tarafından sağlanan numaralandırılabilir ve sorgulanabilir türleri üy
 ## <a name="visual-basic-features-that-support-linq"></a>LINQ'i destekleyen Visual Basic özellikleri  
  Visual Basic LINQ kullanımını kolaylaştırır ve LINQ sorguları gerçekleştirmek için yazmanız gereken kod miktarını azaltmak başka önemli özellikler içerir. Bunlar aşağıdakileri içerir:  
   
--   **Anonim türler**, yeni bir sorgu sonucuna göre türü oluşturun etkinleştirin.  
+- **Anonim türler**, yeni bir sorgu sonucuna göre türü oluşturun etkinleştirin.  
   
--   **Örtülü türdeki değişkenler**, bir tür belirterek erteleme etkinleştirmek ve Infer sorgu sonucuna göre türü olanak sağlar.  
+- **Örtülü türdeki değişkenler**, bir tür belirterek erteleme etkinleştirmek ve Infer sorgu sonucuna göre türü olanak sağlar.  
   
--   **Genişletme yöntemleri**, türün kendisini değiştirmeden, kendi yöntemlerinizle mevcut türü genişletmek etkinleştirin.  
+- **Genişletme yöntemleri**, türün kendisini değiştirmeden, kendi yöntemlerinizle mevcut türü genişletmek etkinleştirin.  
   
  Ayrıntılar için bkz [Visual Basic özellikleri, destek LINQ](../../concepts/linq/features-that-support-linq.md).  
   

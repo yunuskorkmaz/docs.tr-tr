@@ -10,11 +10,11 @@ helpviewer_keywords:
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
 ms.openlocfilehash: da1526afe48a0d4bda63274380dcf59ee30c480e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61710790"
 ---
 # <a name="how-to-write-to-a-text-file-c-programming-guide"></a>Nasıl yapılır: Bir metin dosyasına yazma (C# Programlama Kılavuzu)
 Bu örnekler bir metin dosyasına yazmanın çeşitli yollarını göstermektedir. İlk iki örnek statik yöntemler kullanın <xref:System.IO.File?displayProperty=nameWithType> her öğe herhangi yazmak için sınıf `IEnumerable<string>` ve bir metin dosyasına bir dize. Örnek 3, dosyaya yazmak gibi her satır ayrı ayrı işlemeniz gerektiğinde bir dosyaya metin ekleme gösterir. Örnek 1-3 dosyasındaki tüm varolan içeriğin üzerine, ancak örnek 4 varolan bir dosyaya nasıl metin ekleneceği gösterilmektedir.  
@@ -27,11 +27,11 @@ Bu örnekler bir metin dosyasına yazmanın çeşitli yollarını göstermektedi
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
--   Dosya mevcut ve salt okunur.  
+- Dosya mevcut ve salt okunur.  
   
--   Yol adı çok uzun olabilir.  
+- Yol adı çok uzun olabilir.  
   
--   Disk dolu olabilir.  
+- Disk dolu olabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -3,11 +3,11 @@ title: LINQ - Varlıklar
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
 ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760720"
 ---
 # <a name="linq-to-entities"></a>LINQ - Varlıklar
 LINQ to Entities, geliştiricilerin Visual Basic veya Visual C# kullanarak varlık çerçevesi kavramsal modeline karşı sorgular yazmaya olanak tanıyan dil ile tümleşik sorgu (LINQ) destekler. Entity Framework sorguları nesne bağlamı karşı yürütülen komut ağaç sorguları tarafından temsil edilir. LINQ to Entities ağaç sorgular, Entity Framework sorguları yürütür ve Entity Framework ve LINQ tarafından kullanılan nesneleri döndürür komut dil ile tümleşik sorgu (LINQ) sorguları dönüştürür. Oluşturma ve bir LINQ to Entities sorgusunda yürütme işlemi aşağıda verilmiştir:  
@@ -57,13 +57,13 @@ LINQ to Entities, geliştiricilerin Visual Basic veya Visual C# kullanarak varl�
   
  Sorgu sonuçları genellikle aşağıdakilerden biri döndürülür:  
   
--   Sıfır veya daha fazla yazılan varlığın nesnelerin veya projeksiyon kavramsal modelde tanımlı karmaşık türleri koleksiyonu.  
+- Sıfır veya daha fazla yazılan varlığın nesnelerin veya projeksiyon kavramsal modelde tanımlı karmaşık türleri koleksiyonu.  
   
--   Tarafından desteklenen CLR türleri [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
+- Tarafından desteklenen CLR türleri [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
   
--   Satır içi koleksiyonları.  
+- Satır içi koleksiyonları.  
   
--   Anonim türler.  
+- Anonim türler.  
   
  Daha fazla bilgi için [sorgu sonuçları](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md).  
   
