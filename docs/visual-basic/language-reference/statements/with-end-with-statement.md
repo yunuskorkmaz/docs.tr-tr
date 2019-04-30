@@ -16,11 +16,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
 ms.openlocfilehash: de2edc6b16689673c3be6703ff1a201febe73526
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698648"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With Deyimi (Visual Basic)
 Deyimlerin, nesne veya yapı üyelerine erişim sağlarken basitleştirilmiş bir sözdizimi kullanabilmesi için sürekli olarak tek bir nesneye veya yapıya başvuran bir dizi deyim yürütür.  Bir yapı kullanırken yalnızca üyelerinin değerlerini okuyabilir veya çağırma yöntemlerinin ve kullanılan bir yapının üyelerine değer atamak çalışırsanız hata alırsınız bir `With...End With` deyimi.  
@@ -48,9 +48,9 @@ End With
   
  Kodunuzu birden fazla deyimde aynı nesneye erişirse, aşağıdaki faydaları kullanarak elde `With` deyimi:  
   
--   Karmaşık ifadenin üyelerine birden çok kez başvuruda bulunmak için sonucu geçici bir değişkene atamanıza veya karmaşık ifadeyi birden çok kez değerlendirmenize gerek yoktur.  
+- Karmaşık ifadenin üyelerine birden çok kez başvuruda bulunmak için sonucu geçici bir değişkene atamanıza veya karmaşık ifadeyi birden çok kez değerlendirmenize gerek yoktur.  
   
--   Yinelenen niteleyici ifadeleri ortadan kaldırarak kodunuzu daha okunur hale getirirsiniz.  
+- Yinelenen niteleyici ifadeleri ortadan kaldırarak kodunuzu daha okunur hale getirirsiniz.  
   
  Veri türü `objectExpression` gibi herhangi bir sınıf veya yapı türü veya hatta bir Visual Basic basit türü olabilir `Integer`.  Varsa `objectExpression` sonuçları dışında herhangi bir nesne, yalnızca üyelerinin değerlerini okuyabilir veya çağırma yöntemlerinin ve kullanılan bir yapının üyelerine değer atamak çalışırsanız hata alırsınız bir `With...End With` deyimi.  Aynı hata, yapı döndüren ve hemen erişilen ve bir değer gibi işlev sonucunun bir üyesine atanmış bir yöntemi çağırdığınız alma budur `GetAPoint().x = 1`.  İki durumda da sorun şudur: Yapı yalnızca çağrı yığınında mevcuttur ve değiştirilmiş bir yapı üyesinin bu durumlarda, programdaki diğer herhangi bir kodun değişikliği gözlemleyebileceği şekilde bir konuma yazabilmesinin hiçbir yolu yoktur.  
   

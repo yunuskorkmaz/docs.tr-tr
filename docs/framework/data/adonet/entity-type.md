@@ -3,22 +3,22 @@ title: entity type
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
 ms.openlocfilehash: 026b0aef7cf2de8fe222721191afa459859701ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667187"
 ---
 # <a name="entity-type"></a>entity type
 *Varlık türü* varlık veri modeli (EDM) ile verilerin yapısını tanımlamak için temel yapı taşı. Kavramsal bir modeli içinde bir varlık türü müşteriler veya siparişler gibi üst düzey kavramlar yapısını temsil eder. Bir varlık türünün varlık türü örnekleri için bir şablondur. Her şablon, aşağıdaki bilgileri içerir:  
   
--   Benzersiz bir ad. (Gerekli)  
+- Benzersiz bir ad. (Gerekli)  
   
--   Bir [Varlık anahtarı](../../../../docs/framework/data/adonet/entity-key.md) bir veya daha fazla özellikleri tarafından tanımlanan. (Gerekli)  
+- Bir [Varlık anahtarı](../../../../docs/framework/data/adonet/entity-key.md) bir veya daha fazla özellikleri tarafından tanımlanan. (Gerekli)  
   
--   Veri biçiminde [özellikleri](../../../../docs/framework/data/adonet/property.md). (İsteğe bağlı.)  
+- Veri biçiminde [özellikleri](../../../../docs/framework/data/adonet/property.md). (İsteğe bağlı.)  
   
--   [Gezinti özellikleri](../../../../docs/framework/data/adonet/navigation-property.md) tanıyan bir gezinti için [son](../../../../docs/framework/data/adonet/association-end.md) , bir [ilişkilendirme](../../../../docs/framework/data/adonet/association-type.md) diğer ucuna. (İsteğe bağlı)  
+- [Gezinti özellikleri](../../../../docs/framework/data/adonet/navigation-property.md) tanıyan bir gezinti için [son](../../../../docs/framework/data/adonet/association-end.md) , bir [ilişkilendirme](../../../../docs/framework/data/adonet/association-type.md) diğer ucuna. (İsteğe bağlı)  
   
  Bir uygulamada (örneğin, belirli müşteri veya sipariş) belirli bir nesnesi bir varlık türünün bir örneği temsil eder. Bir varlık türünün her örneğinin benzersiz olmalıdır [Varlık anahtarı](../../../../docs/framework/data/adonet/entity-key.md) içinde bir [varlık kümesi](../../../../docs/framework/data/adonet/entity-set.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: XML veri türlerini dönüştürme
+title: XML Veri Türlerini Dönüştürme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 56b5b51848858b7f1240059ca30eb48474650b73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669127"
 ---
-# <a name="conversion-of-xml-data-types"></a>XML veri türlerini dönüştürme
+# <a name="conversion-of-xml-data-types"></a>XML Veri Türlerini Dönüştürme
 Yöntemlerin çoğunun bulunan bir **XmlConvert** sınıfı veri dizeler ve kesin tür belirtilmiş biçimleri arasında dönüştürmek için kullanılır. Yerel ayar bağımsız yöntemlerdir. Bu, tüm yerel ayarlar dönüştürme yaparken dikkate değil, anlamına gelir.  
   
 ## <a name="reading-string-as-types"></a>Okuma dize türleri olarak  

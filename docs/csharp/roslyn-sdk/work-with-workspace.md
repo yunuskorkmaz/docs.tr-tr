@@ -1,43 +1,43 @@
 ---
-title: .NET derleme Platform SDK çalışma modeli ile çalışmak
-description: Bu genel bakışta, sorgu ve çalışma ve projeler için kodunuzu değiştirmek için kullandığınız türünün bir anlayış sağlar.
+title: .NET derleyici Platformu SDK'sı çalışma modeli ile çalışma
+description: Bu genel bakışta çalışma alanını ve kodunuzu projelerde sorgulama ve düzenleme kullandığınız türünün bir anlayış sağlar.
 ms.date: 10/15/2017
 ms.custom: mvc
 ms.openlocfilehash: 7d450b31cbf2c83c79552d1ace3a1ae692bfdd88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706510"
 ---
 # <a name="work-with-a-workspace"></a>Bir çalışma alanı ile çalışma
 
-**Çalışma alanları** katman için kod analizi yapmak ve tüm çözümleri yeniden düzenleme başlangıç noktasıdır. Bu katman içinde çalışma API, bir çözümde proje ilgili tüm bilgileri tek nesne modeline düzenleme içinde kaynak metni, sözdizimi ağaçları, semantik modellerin gibi derleyici katman nesnesi modellerini doğrudan erişim sunan yardımcı olur ve dosyaları ayrıştırma gerek olmadan derlemeleri seçeneklerini yapılandırmak veya arası proje bağımlılıkları yönetin. 
+**Çalışma alanları** katman tüm çözümleri yeniden düzenleme ve kod analizi yapmak için başlangıç noktasıdır. Bu katman içinde çalışma API, bir çözüm içindeki projeleri hakkındaki tüm bilgileri tek nesne modeline, düzenleme kaynak metni, söz dizimi ağacı, anlam modelleri gibi derleyici katman nesnesi modellerini doğrudan erişim sunan yardımcı olur ve dosyaları ayrıştırma gerek olmadan derleme seçenekleri yapılandırın veya Projeler arası bağımlılıkları yönetin. 
 
-Bir IDE gibi ana bilgisayar ortamları, açık çözüme karşılık gelen bir çalışma alanı sağlar. Çözüm dosyası yükleyerek bu modeli bir IDE dışında kullanmak da mümkündür.
+Bir IDE gibi konak ortamlarından, açık olan çözüme karşılık gelen bir çalışma alanı sağlayın. Bu model bir IDE dışında bir çözüm dosyası yükleyerek kullanmak mümkündür.
 
 ## <a name="workspace"></a>Çalışma alanı
 
-Bir çalışma alanı bir active çözümünüzü koleksiyonu olarak projeleri, her bir koleksiyon belgelerin gösterimidir. Bir çalışma alanı genellikle bir kullanıcı türleri olarak sürekli değişen veya özellikler işleyen bir ana bilgisayar ortamı bağlıdır. 
+Çözümünüzün proje koleksiyonu, her bir belge koleksiyonu olarak etkin bir temsili bir çalışma alanıdır. Bir çalışma alanı, genellikle bir kullanıcı türleri olarak sürekli değişen veya özellikleri işleyen bir ana bilgisayar ortamına bağlıdır. 
 
-<xref:Microsoft.CodeAnalysis.Workspace> Çözümün geçerli modeline erişim sağlar. Konak ortamında değişiklik olduğunda, ilgili olaylar çalışma başlatılır ve <xref:Microsoft.CodeAnalysis.Workspace.CurrentSolution?displayProperty=nameWithType> özelliği güncelleştirilir. Örneğin, kullanıcı türleri kaynak belgeleri birine karşılık gelen bir metin düzenleyicisinde çalışma çözümünün Genel modeli değişti göstermek için bir olay ve hangi belgenin değiştirildiği kullandığında. Ardından, yeni modelin doğruluğunu çözümleme, anlamlı alanları vurgulama veya bir öneride bir kod değişikliği için bu değişiklikleri tepki gösterebilmesi. 
+<xref:Microsoft.CodeAnalysis.Workspace> Geçerli çözüm modeline erişim sağlar. Konak ortamında değişiklik olduğunda, ilgili olaylar, çalışma alanı tetikler ve <xref:Microsoft.CodeAnalysis.Workspace.CurrentSolution?displayProperty=nameWithType> özellik güncelleştirilir. Örneğin, kullanıcı türleri kaynak belgeleri birine karşılık gelen bir metin düzenleyicisinde çalışma çözümünün Genel modeli değiştiğini göstermek için bir olay ve hangi belge değiştirildiği kullandığında. Ardından, yeni modelin doğruluğunu çözümleme, alanlarını anlam vurgulama veya bir öneri bir kod değişikliği yapmadan bu değişiklikleri tepki verebilir. 
 
-Hiçbir konak ortamında olan bir uygulama içinde kullanılan veya ana bilgisayar ortamına bağlı olmayan tek başına çalışma alanları da oluşturabilirsiniz.
+Ayrıca, konak ortam bir uygulamada kullanılan veya ana bilgisayar ortamına bağlı olmayan tek başına çalışma alanları oluşturabilirsiniz.
 
 ## <a name="solutions-projects-documents"></a>Çözümler, projeler, belgeleri
 
-Bir tuşa her zaman bir çalışma alanı değişebilir rağmen yalıtım çözümde modelinin çalışabilirsiniz. 
+Bir çalışma alanında bir tuşa basıldığında her zaman değişebilir olsa da, yalıtım çözümde modelini çalışabilirsiniz. 
 
-Bir çözüm, projeler ve belgeleri değişmez bir modelidir. Bu model kilitleme veya çoğaltma paylaşılabilir anlamına gelir. Bir çözüm örneğinden edindikten sonra <xref:Microsoft.CodeAnalysis.Workspace.CurrentSolution?displayProperty=nameWithType> özelliği, bu örnek hiçbir zaman değişiklik gösterir. Ancak, gibi sözdizimi ağaçları ve derlemeleri, çözümleri var olan çözümler ve belirli değişiklikleri dayalı yeni kopyalarını oluşturarak değiştirebilirsiniz. Yaptığınız değişiklikleri yansıtacak şekilde çalışma alma çalışma alanına değiştirilen çözüm açıkça uygulamanız gerekir.
+Bir çözümü, projeleri ve belgeleri değişmez bir modeldir. Bu model çoğaltma kilitlenmesi veya paylaşılabilir anlamına gelir. Bir çözüm örneğinden edindikten sonra <xref:Microsoft.CodeAnalysis.Workspace.CurrentSolution?displayProperty=nameWithType> özelliği, bu örneği hiçbir zaman değiştirir. Ancak, gibi söz dizimi ağacı ve derlemeleri, ile çözümlerini mevcut çözümleri ve belirli değişiklikleri dayalı yeni örneklerini oluşturarak değiştirebilirsiniz. Yaptığınız değişiklikleri yansıtacak şekilde çalışma almak için açıkça değiştirilen çözümü çalışma alanına uygulamanız gerekir.
 
-Bir proje genel değişmez çözüm modeli, bir parçasıdır. Tüm kaynak kodu belgeleri, ayrıştırma ve derleme seçenekleri ve hem derleme ve proje proje başvuruları temsil eder. Bir projeden proje bağımlılıkları belirlemek ya da tüm kaynak dosyaları ayrıştırma gerek kalmadan karşılık gelen derleme erişebilir.
+Bir proje, genel sabit çözüm modelin bir parçasıdır. Tüm kaynak kod belgelerini, ayrıştırma ve derleme seçeneklerini ve hem derleme ve projeden projeye başvurular temsil eder. Bir projeden karşılık gelen derleme proje bağımlılıkları belirlemeniz veya tüm kaynak dosyalarını ayrıştırmak gerek kalmadan erişebilir.
 
-Bir belge ayrıca genel değişmez çözüm modeli parçasıdır. Belgeye metin dosyası, sözdizimi ağacı ve anlam modeli erişmek için tek bir kaynak dosyası temsil eder.
+Bir belge ayrıca genel sabit çözüm modelin bir parçasıdır. Bir belge metin dosyası, söz dizimi ağacı ve anlam modeli erişim bir tek bir kaynak dosyasını temsil eder.
 
-Aşağıdaki diyagramda çalışma konağa ilişkilendirilme şekli gösterimidir ortamı, Araçlar ve düzenlemeler nasıl yapılır.
+Aşağıdaki şemada çalışma konağa ilişkisini temsilidir ortamı, araçları ve düzenlemeleri nasıl yapılır.
 
-![Projeler ve kaynak dosyaları içeren bir çalışma alanının farklı öğeler arasındaki ilişkileri](media/work-with-workspace/workspace-obj-relations.png)
+![projeleri ve kaynak dosyaları içeren bir çalışma alanının farklı öğeler arasındaki ilişkileri](media/work-with-workspace/workspace-obj-relations.png)
 
 ## <a name="summary"></a>Özet
 
-Roslyn bir dizi derleyici API'leri ve çalışma alanları, kaynak kodu hakkında zengin bilgi sağlayan ve C# ve Visual Basic dili ile tam uygunluğunu sahip API'lerini kullanıma sunar.  .NET derleme Platform SDK'sı kod odaklı araçları ve uygulamaları oluşturmak için girişe engel önemli ölçüde azaltır. C# ve VB diller ve C# ve VB etki alanı belirli dillerde katıştırma meta programlama kodu oluşturma ve dönüştürme, etkileşimli kullanımı gibi alanlarda yenilik için birçok fırsatlar yaratır.  
+Roslyn derleyici API'leri ve çalışma alanları tam uygunlukta sahip olan ve kaynak kodunuz hakkında zengin bilgiler sağlayan API kümesi sunan C# ve Visual Basic dillerini.  .NET derleyici Platformu SDK'sı, kod odaklı bir araç ve uygulamalar oluşturmak için giriş engel önemli ölçüde azaltır. C# ve VB dil ve C# ve VB etki alanına özgü diller katıştırma meta programlama kod oluşturma ve dönüştürme, etkileşimli kullanmak gibi alanlarda yenilik için birçok fırsat oluşturur.  

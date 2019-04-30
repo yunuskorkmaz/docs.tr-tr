@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 35e780c330d0184d40bd99f34c3454f83075c1e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777786"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>IMetaDataImport::GetFieldMarshal Yöntemi
 Belirtilen alan metaveri belirteci tarafından temsil edilen alan yerel, yönetilmeyen tür için bir işaretçi alır.  

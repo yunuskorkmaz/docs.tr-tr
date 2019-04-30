@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 ms.openlocfilehash: 15ff9ad710b49caf35767acf498a8e55b238d84c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759927"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme
 Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek öncelik taşır. Windows Form Tasarımcısı, bunu gerçekleştirmek için çok sayıda düzen araçları sunar. En önemli biri <xref:System.Windows.Forms.Design.Behavior.SnapLine> özelliği.  
@@ -23,27 +23,27 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
   
  Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
   
--   Bir Windows Forms projesi oluşturma  
+- Bir Windows Forms projesi oluşturma  
   
--   Aralık ve dayama çizgileri kullanarak denetimleri hizalama  
+- Aralık ve dayama çizgileri kullanarak denetimleri hizalama  
   
--   Form ve kapsayıcı kenar boşlukları hizalama  
+- Form ve kapsayıcı kenar boşlukları hizalama  
   
--   Gruplandırılmış denetimleri hizalama  
+- Gruplandırılmış denetimleri hizalama  
   
--   Bir denetimi boyutuna anahat oluşturma tarafından yerleştirmek için dayama çizgileri kullanarak  
+- Bir denetimi boyutuna anahat oluşturma tarafından yerleştirmek için dayama çizgileri kullanarak  
   
--   Bir denetimi araç kutusundan sürüklendiğinde dayama çizgileri kullanarak  
+- Bir denetimi araç kutusundan sürüklendiğinde dayama çizgileri kullanarak  
   
--   Dayama çizgileri kullanarak denetimleri yeniden boyutlandırma  
+- Dayama çizgileri kullanarak denetimleri yeniden boyutlandırma  
   
--   Etiket denetimin metni hizalama  
+- Etiket denetimin metni hizalama  
   
--   Klavye ile gezinti dayama çizgileri kullanarak  
+- Klavye ile gezinti dayama çizgileri kullanarak  
   
--   Dayama çizgileri ve Düzen bölmeleri  
+- Dayama çizgileri ve Düzen bölmeleri  
   
--   Dayama çizgileri devre dışı bırakma  
+- Dayama çizgileri devre dışı bırakma  
   
  İşlemi tamamladığınızda, Düzen rolünün dayama çizgileri özelliği tarafından yürütülen bir anlayışa sahip olacaksınız.  
   
@@ -216,7 +216,7 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
   
 #### <a name="to-selectively-disable-snaplines"></a>Seçmeli olarak dayama çizgileri devre dışı bırakmak için  
   
--   ALT tuşuna basın ve bir denetimin form etrafında taşıma çalışırken.  
+- ALT tuşuna basın ve bir denetimin form etrafında taşıma çalışırken.  
   
      Hiçbir dayama çizgileri görünür ve denetim, tüm olası hizalama konumlara Yasla değil unutmayın.  
   
@@ -233,9 +233,9 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Dayama çizgileri, form üzerindeki denetimleri hizalama, sezgisel bir yol sunar. Daha fazla araştırma için öneriler şunlardır:  
   
--   İç içe geçirmeyi deneyin bir <xref:System.Windows.Forms.GroupBox> başka denetimine <xref:System.Windows.Forms.GroupBox> denetimi. Bir yerde bir <xref:System.Windows.Forms.Button> alt denetimine <xref:System.Windows.Forms.GroupBox> denetimi ve üst içinde başka bir <xref:System.Windows.Forms.GroupBox> denetimi. Taşıma <xref:System.Windows.Forms.Button> yaklaşık nasıl dayama çizgileri kapsayıcı sınırlarının çapraz görmek için kontrol eder.  
+- İç içe geçirmeyi deneyin bir <xref:System.Windows.Forms.GroupBox> başka denetimine <xref:System.Windows.Forms.GroupBox> denetimi. Bir yerde bir <xref:System.Windows.Forms.Button> alt denetimine <xref:System.Windows.Forms.GroupBox> denetimi ve üst içinde başka bir <xref:System.Windows.Forms.GroupBox> denetimi. Taşıma <xref:System.Windows.Forms.Button> yaklaşık nasıl dayama çizgileri kapsayıcı sınırlarının çapraz görmek için kontrol eder.  
   
--   Bir sütun oluşturma <xref:System.Windows.Forms.TextBox> denetimleri ve karşılık gelen sütunun <xref:System.Windows.Forms.Label> denetimleri. Değerini <xref:System.Windows.Forms.Label> denetimleri <xref:System.Windows.Forms.Control.AutoSize%2A> özelliğini `true`. Dayama çizgileri gidebilir <xref:System.Windows.Forms.Label> görüntülenen metin metinle hizalanacağı şekilde denetimleri <xref:System.Windows.Forms.TextBox> denetimleri.  
+- Bir sütun oluşturma <xref:System.Windows.Forms.TextBox> denetimleri ve karşılık gelen sütunun <xref:System.Windows.Forms.Label> denetimleri. Değerini <xref:System.Windows.Forms.Label> denetimleri <xref:System.Windows.Forms.Control.AutoSize%2A> özelliğini `true`. Dayama çizgileri gidebilir <xref:System.Windows.Forms.Label> görüntülenen metin metinle hizalanacağı şekilde denetimleri <xref:System.Windows.Forms.TextBox> denetimleri.  
   
  Kitap Windows kullanıcı arabirimi tasarımı hakkında daha fazla bilgi için bkz. *Microsoft Windows kullanıcı deneyimi, kullanıcı arabirimi geliştiricileri ve tasarımcıları için resmi yönergeleri* Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1).  
   

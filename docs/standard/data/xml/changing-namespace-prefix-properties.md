@@ -1,5 +1,5 @@
 ---
-title: Namespace ön ek özelliklerini değiştirme
+title: Ad Alanı Ön Ek Özelliklerini Değiştirme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4a6597a3a57cd68c4dd17c4fbae882590f373709
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669153"
 ---
-# <a name="changing-namespace-prefix-properties"></a>Namespace ön ek özelliklerini değiştirme
+# <a name="changing-namespace-prefix-properties"></a>Ad Alanı Ön Ek Özelliklerini Değiştirme
 **XmlNode** sınıfı belirli bir düğümle ilişkili ad alanı öneki değiştirmenize izin verir. Örneğin, aşağıdaki kod, değişmekte olan bir öğenin ön ek gösterir.  
   
 ```vb  

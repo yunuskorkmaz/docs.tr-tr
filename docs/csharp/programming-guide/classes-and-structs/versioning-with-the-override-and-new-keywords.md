@@ -7,28 +7,28 @@ helpviewer_keywords:
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
 ms.openlocfilehash: 39aae39a761414947c14f0a78aedcdbf89ddfbda
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702977"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Geçersiz Kılma ve Yeni Anahtar Sözcüklerle Sürüm Oluşturma (C# Programlama Kılavuzu)
 C# dili tasarlanmıştır böylece sürüm arasında [temel](../../../csharp/language-reference/keywords/base.md) ve türetilmiş sınıfları farklı kitaplıklarında evrim geçiren ve geriye dönük uyumluluk sağlamak. Örneğin, yani yeni üyesi temel sunulmasıyla [sınıfı](../../../csharp/language-reference/keywords/class.md) türetilmiş bir sınıf üyesi olarak aynı ada sahip tamamen C# tarafından desteklenir ve beklenmeyen davranışlara yol değil. Ayrıca, bir sınıf devralınan bir yöntemi geçersiz kılmak için bir yöntem amaçlanmamıştır veya yöntemi devralınan bir yöntemi benzer ada gizler yeni bir yöntem olup olmadığını açıkça belirtmelidir anlamına gelir.  
   
  C# ' ta türetilmiş sınıflar temel sınıf yöntemleri olarak aynı ada sahip yöntem içerebilir.  
   
--   Temel sınıf yöntemini tanımlanmalıdır [sanal](../../../csharp/language-reference/keywords/virtual.md).  
+- Temel sınıf yöntemini tanımlanmalıdır [sanal](../../../csharp/language-reference/keywords/virtual.md).  
   
--   Yöntem türetilmiş sınıftaki öncesinde, [yeni](../../../csharp/language-reference/keywords/new.md) veya [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) anahtar sözcükler, derleyici bir uyarı verir ve yöntem davranacağını gibi `new` anahtar sözcüğü.  
+- Yöntem türetilmiş sınıftaki öncesinde, [yeni](../../../csharp/language-reference/keywords/new.md) veya [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) anahtar sözcükler, derleyici bir uyarı verir ve yöntem davranacağını gibi `new` anahtar sözcüğü.  
   
--   Türetilmiş sınıftaki yöntemi ile öncesinde, `new` anahtar sözcüğü, yöntem temel sınıfta yöntemin bağımsız olan olarak tanımlanır.  
+- Türetilmiş sınıftaki yöntemi ile öncesinde, `new` anahtar sözcüğü, yöntem temel sınıfta yöntemin bağımsız olan olarak tanımlanır.  
   
--   Türetilmiş sınıftaki yöntemi ile öncesinde, `override` anahtar sözcüğü, türetilmiş sınıfın nesneleri bir temel sınıf yöntemi yerine bu yöntem çağıracaktır.  
+- Türetilmiş sınıftaki yöntemi ile öncesinde, `override` anahtar sözcüğü, türetilmiş sınıfın nesneleri bir temel sınıf yöntemi yerine bu yöntem çağıracaktır.  
   
--   Temel sınıf yöntemini öğesinden türetilmiş bir sınıf kullanılarak içinde çağrılabilir `base` anahtar sözcüğü.  
+- Temel sınıf yöntemini öğesinden türetilmiş bir sınıf kullanılarak içinde çağrılabilir `base` anahtar sözcüğü.  
   
--   `override`, `virtual`, Ve `new` anahtar sözcükler, ayrıca özellikler, dizin oluşturucular ve olaylar için uygulanabilir.  
+- `override`, `virtual`, Ve `new` anahtar sözcükler, ayrıca özellikler, dizin oluşturucular ve olaylar için uygulanabilir.  
   
  Varsayılan olarak, C# yöntemler sanal değildir. Bir yöntemi sanal olarak bildirilirse, yönteminden devralan herhangi bir sınıf kendi sürüm uygulayabilirsiniz. Sanal bir yöntem yapmak `virtual` değiştirici, temel sınıf yöntemi bildiriminde kullanılır. Türetilmiş sınıf ardından temel sanal yöntemi kullanarak kılabilirsiniz `override` anahtar sözcüğü veya gizleme kullanarak temel sınıf sanal yöntemi `new` anahtar sözcüğü. Kullanılmazsa `override` anahtar sözcüğü ya da `new` anahtar sözcüğü belirtildiğinde, derleyici bir uyarı verir ve yöntem temel sınıfta türetilmiş sınıf yöntemi gizler.  
   

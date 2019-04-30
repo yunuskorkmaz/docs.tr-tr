@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
 ms.openlocfilehash: 3f180fa115453be86fa5f99fbabb776eb7198623
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747946"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>WorkflowServiceHost Yan Yana Sürüm Oluşturma
 <xref:System.ServiceModel.Activities.WorkflowServiceHost> Yan yana sürüm oluşturma sunulan [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] birden çok sürümünü tek bir uç nokta bir iş akışı hizmeti barındırma olanağı sağlar. Yeni iş akışı hizmeti örnekleri çalışırken örneklerini kullanarak varolan tanımın tam yeni iş akışı tanımı kullanarak oluşturulmasını sağlayacak şekilde yapılandırılması bir iş akışı hizmeti sağlanan yan yana işlevselliği sağlar. Bu konuda, iş akışı hizmeti yan yana yürütme kullanarak genel bir bakış sağlar <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
@@ -27,21 +27,21 @@ ms.locfileid: "58465873"
 ### <a name="rules-for-hosting-multiple-versions-of-a-workflow-service"></a>Birden çok sürümünü bir iş akışı hizmeti barındırma kuralları  
  Bir kullanıcı için ek bir sürüm eklediğinde <xref:System.ServiceModel.Activities.WorkflowServiceHost>, bir iş akışı Hizmeti uç noktaları ve tanım aynı kümesiyle barındırılması karşılanması gereken birkaç durum vardır. Bu koşullar karşılamak ek sürümlerinin herhangi birinin başarısız olursa <xref:System.ServiceModel.Activities.WorkflowServiceHost> bir özel durum oluşturur, `Open` çağrılır. Ana bilgisayara ek bir sürüm olarak sağlanan her bir iş akışı tanımı (birincil sürüm konak oluşturucuya sunulan iş akışı hizmet tanımı olduğu) aşağıdaki gereksinimleri karşılaması gerekir. Ek iş akışı sürümü gerekir:  
   
--   Aynı <xref:System.ServiceModel.Activities.WorkflowService.Name%2A> iş akışı hizmetinin birincil sürümü olarak.  
+- Aynı <xref:System.ServiceModel.Activities.WorkflowService.Name%2A> iş akışı hizmetinin birincil sürümü olarak.  
   
--   Tüm olmamalıdır <xref:System.ServiceModel.Activities.Receive> veya <xref:System.ServiceModel.Activities.SendReply> etkinlikler, <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> birincil sürümü olmayan ve işlem anlaşması eşleşmesi gerekir.  
+- Tüm olmamalıdır <xref:System.ServiceModel.Activities.Receive> veya <xref:System.ServiceModel.Activities.SendReply> etkinlikler, <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> birincil sürümü olmayan ve işlem anlaşması eşleşmesi gerekir.  
   
--   Benzersiz bir sahip <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>. Bir ve yalnızca bir iş akışı tanımı olabilir bir `null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>.  
+- Benzersiz bir sahip <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>. Bir ve yalnızca bir iş akışı tanımı olabilir bir `null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>.  
   
  Bazı değişikliklere izin verilmez. Aşağıdaki öğeler, sürümler arasında farklı olabilir:  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> Birincil sürümünden farklı bir ad ve paket olabilir.  
+- <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> Birincil sürümünden farklı bir ad ve paket olabilir.  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> Değeri birincil sürümünden farklı olabilir.  
+- <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> Değeri birincil sürümünden farklı olabilir.  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.ConfigurationName%2A> Birincil sürümünden farklı olabilir.  
+- <xref:System.ServiceModel.Activities.WorkflowService.ConfigurationName%2A> Birincil sürümünden farklı olabilir.  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.ImplementedContracts%2A> Birincil sürümünden farklı olabilir.  
+- <xref:System.ServiceModel.Activities.WorkflowService.ImplementedContracts%2A> Birincil sürümünden farklı olabilir.  
   
 ### <a name="configuring-the-definitionidentity"></a>DefinitionIdentity yapılandırma  
  İş Akışı Tasarımcısı'nı kullanarak bir iş akışı hizmeti oluşturulduğunda <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> kullanılarak ayarlanan **özellikleri** penceresi. ' A tıklayın hizmetin Kök etkinlik iş akışı hizmeti seçin ve tasarımcıda dışında **Özellikler penceresi** gelen **görünümü** menüsü. Seçin **Workflowıdentity** yanında görüntülenen aşağı açılan listeden **DefinitionIdentity** özelliğini genişletin ve ardından istenen belirtin <xref:System.Activities.WorkflowIdentity> özellikleri. Aşağıdaki örnekte <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> yapılandırılmış <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow` ve <xref:System.Activities.WorkflowIdentity.Version%2A> , `1.0.0.0`. <xref:System.Activities.WorkflowIdentity.Package%2A> isteğe bağlıdır ve bu örnekte `null`.  

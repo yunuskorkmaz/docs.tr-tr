@@ -3,11 +3,11 @@ title: Zincirleme standart sorgu işleçleri (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
 ms.openlocfilehash: 71b364d76860b5daa21ea176947d9cfe9d49b308
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668451"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>Zincirleme standart sorgu işleçleri (C#)
 Bu, son konu başlığında [Öğreticisi: Sorguları birbirine zincirleme (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) öğretici.  

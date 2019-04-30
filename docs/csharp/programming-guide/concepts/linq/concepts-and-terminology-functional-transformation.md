@@ -3,11 +3,11 @@ title: Kavramlar ve terimler (işlevsel dönüşüm) (C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
 ms.openlocfilehash: 83c2f531f5747047c60ddbcedabc0747641d80c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668386"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Kavramlar ve terimler (işlevsel dönüşüm) (C#)
 Bu konu, saf işlevsel dönüşümlere terimleri ve kavramları tanıtır. Veri dönüştürme işlevsel dönüşüm yaklaşım genellikle programa daha ifadesel ve daha kolay hata ayıklaması ve bakımı daha geleneksel, zorunlu programlama daha hızlı kod üretir.  
@@ -17,9 +17,9 @@ Bu konu, saf işlevsel dönüşümlere terimleri ve kavramları tanıtır. Veri 
 ## <a name="what-is-pure-functional-transformation"></a>Saf işlevsel dönüşüm nedir?  
  İçinde *saf işlevsel dönüşüm*, çağrılan işlevler bir dizi *saf işlevler*, yapılandırılmış verileri özgün biçimlerinde bir dizi başka bir biçime dönüştürmek nasıl tanımlayın. "Saf" sözcüğü işlevleri gösterir *birleştirilebilir*, olmalarını gerektirir:  
   
--   *Müstakil*, böylece bunlar kullanılabilir serbestçe sıralı ve entanglement veya programın geri kalanını ile bağımlılıkları olmadan düzenlenmeyecek. Saf dönüştürmeleri hakkında bilgi sahibi ya da kendi ortamlarında üzerinde etkisi vardır. Diğer bir deyişle, dönüşümünde işlevleri yok *yan etkileri*.  
+- *Müstakil*, böylece bunlar kullanılabilir serbestçe sıralı ve entanglement veya programın geri kalanını ile bağımlılıkları olmadan düzenlenmeyecek. Saf dönüştürmeleri hakkında bilgi sahibi ya da kendi ortamlarında üzerinde etkisi vardır. Diğer bir deyişle, dönüşümünde işlevleri yok *yan etkileri*.  
   
--   *Durum bilgisi olmayan*, böylece aynı işlev veya belirli işlevler kümesi aynı giriş yürütülen her zaman aynı çıktısında neden olur. Saf dönüşümleri önceki kullanımları bellek var.  
+- *Durum bilgisi olmayan*, böylece aynı işlev veya belirli işlevler kümesi aynı giriş yürütülen her zaman aynı çıktısında neden olur. Saf dönüşümleri önceki kullanımları bellek var.  
   
 > [!IMPORTANT]
 >  Bu öğreticinin geri kalanını içinde "saf işlev" terimi, genel anlamda programlama bir yaklaşım ve belirli bir dil özelliği belirtmek için kullanılır.  
@@ -51,7 +51,7 @@ Bu konu, saf işlevsel dönüşümlere terimleri ve kavramları tanıtır. Veri 
   
  Hakkında daha fazla bilgi için bkz: [Lambda ifadeleri](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
- koleksiyon  
+  koleksiyonu  
  Veri, genellikle bir Tekdüzen türü yapılandırılmış bir dizi. LINQ ile uyumlu olacak şekilde bir koleksiyon uygulamalıdır <xref:System.Collections.IEnumerable> arabirimi veya <xref:System.Linq.IQueryable> arabirimi (veya genel karşılıkları <xref:System.Collections.Generic.IEnumerator%601> veya <xref:System.Linq.IQueryable%601>).  
   
  Tanımlama grubu (anonim türler)  

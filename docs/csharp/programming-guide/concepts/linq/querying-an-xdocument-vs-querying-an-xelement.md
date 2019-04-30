@@ -1,15 +1,15 @@
 ---
-title: XDocument sorgulama. (C#) XElement sorgulama karşılaştırması
+title: XDocument Sorgulama ve (C#) XElement sorgulama karşılaştırması
 ms.date: 07/20/2015
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
 ms.openlocfilehash: 125b0811296695a0909f804931e0caca81f63df6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680785"
 ---
-# <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>XDocument sorgulama. (C#) XElement sorgulama karşılaştırması
+# <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>XDocument Sorgulama ve (C#) XElement sorgulama karşılaştırması
 Bir belge aracılığıyla yüklediğinizde <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, sorguları aracılığıyla yüklediğinizde biraz farklı yazma olduğunu fark edeceksiniz <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>XDocument.Load ve XElement.Load karşılaştırması  

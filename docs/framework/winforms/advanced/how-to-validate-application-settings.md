@@ -10,11 +10,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
 ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778852"
 ---
 # <a name="how-to-validate-application-settings"></a>Nasıl yapılır: Uygulama Ayarlarını Doğrulama
 Bu konuda, kalıcı önce uygulama ayarlarını doğrulama gösterilmiştir.  
@@ -34,11 +34,11 @@ Bu konuda, kalıcı önce uygulama ayarlarını doğrulama gösterilmiştir.
   
  Geçersiz bir değer algıladığında bir olay işleyicisi genellikle aşağıdaki eylemlerden birini gerçekleştirir:  
   
--   Otomatik olarak varsayılan değer gibi doğru olduğu bilinen bir değer sağlar.  
+- Otomatik olarak varsayılan değer gibi doğru olduğu bilinen bir değer sağlar.  
   
--   Bilgi için sunucu kodu kullanıcısı yeniden sorgular.  
+- Bilgi için sunucu kodu kullanıcısı yeniden sorgular.  
   
--   Önce ilişkili eylemlerinin, gibi harekete geçirilen olayları <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> ve <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, kullandığı <xref:System.ComponentModel.CancelEventArgs> işlemi iptal etmek için bağımsız değişken.  
+- Önce ilişkili eylemlerinin, gibi harekete geçirilen olayları <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> ve <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, kullandığı <xref:System.ComponentModel.CancelEventArgs> işlemi iptal etmek için bağımsız değişken.  
   
  Olay işleme hakkında daha fazla bilgi için bkz. [olay işleyicilerine genel bakış](../event-handlers-overview-windows-forms.md).  
   
@@ -46,9 +46,9 @@ Bu konuda, kalıcı önce uygulama ayarlarını doğrulama gösterilmiştir.
   
 ### <a name="to-obtain-the-application-settings-object"></a>Uygulama Ayarları nesnesini almak için  
   
--   Uygulama Ayarları nesnesini (sarmalayıcı örnek) başvuru aşağıdaki madde işaretli öğelerden birini tamamlayarak alın:  
+- Uygulama Ayarları nesnesini (sarmalayıcı örnek) başvuru aşağıdaki madde işaretli öğelerden birini tamamlayarak alın:  
   
-    -   Visual Studio uygulama ayarları iletişim kutusunda kullanarak ayarlarınızı oluşturduysanız **Özellik Düzenleyici**, dil ifadesini aracılığıyla oluşturulan varsayılan ayarları nesnesi alabilirsiniz.  
+    - Visual Studio uygulama ayarları iletişim kutusunda kullanarak ayarlarınızı oluşturduysanız **Özellik Düzenleyici**, dil ifadesini aracılığıyla oluşturulan varsayılan ayarları nesnesi alabilirsiniz.  
   
         ```csharp  
         Configuration.Settings.Default   
@@ -60,11 +60,11 @@ Bu konuda, kalıcı önce uygulama ayarlarını doğrulama gösterilmiştir.
   
          -veya-  
   
-    -   Visual Basic Geliştirici ve uygulama ayarlarınızı, Proje Tasarımcısı'nı kullanarak oluşturduğunuz kullanarak ayarlarınızı alabilirsiniz [My.Settings nesnesi](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
+    - Visual Basic Geliştirici ve uygulama ayarlarınızı, Proje Tasarımcısı'nı kullanarak oluşturduğunuz kullanarak ayarlarınızı alabilirsiniz [My.Settings nesnesi](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
   
          -veya-  
   
-    -   Ayarlarınızı türeterek oluşturduysanız <xref:System.Configuration.ApplicationSettingsBase> doğrudan sınıfınıza el ile oluşturmak ihtiyacınız.  
+    - Ayarlarınızı türeterek oluşturduysanız <xref:System.Configuration.ApplicationSettingsBase> doğrudan sınıfınıza el ile oluşturmak ihtiyacınız.  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  

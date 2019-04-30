@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Bulma (XPath-LINQ to XML) kök öğe (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4fd824e0-4d39-429b-b092-f6a5c046ee6c
 ms.openlocfilehash: a74556e4b05bc3ae02998eeb6dd3190a3bade36a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668022"
 ---
 # <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>Nasıl yapılır: Bulma (XPath-LINQ to XML) kök öğe (C#)
 Bu konu XPath kök öğesiyle almak nasıl gösterir ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  

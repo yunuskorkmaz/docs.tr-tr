@@ -3,11 +3,11 @@ title: Kimlik Bilgisi Türü Seçme
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748817"
 ---
 # <a name="selecting-a-credential-type"></a>Kimlik Bilgisi Türü Seçme
 *Kimlik bilgileri* Windows Communication Foundation (WCF) kullanan bir talep kimliği veya özellikleri kurmak için verilerdir. Örneğin, bir passport bir devlet kurumu sorunlarını ülke veya bölgenizde Vatandaşlık kanıtlamak için bir kimlik bilgisi ' dir. WCF'de, kullanıcı adı belirteçleri ve X.509 sertifikaları gibi birçok forms kimlik bilgilerini alabilir. Bu konuda, kimlik bilgileri, WCF'de nasıl kullanılacağını ve nasıl seçileceğini, uygulamanız için doğru kimlik bilgisi anlatılmaktadır.  
@@ -85,9 +85,9 @@ ms.locfileid: "59167849"
 ## <a name="how-client-credentials-are-used-to-authenticate-a-client-to-the-service"></a>Bir hizmete istemcinin kimliğini doğrulamak için istemci kimlik bilgileri nasıl kullanılır  
  Bir hizmetle iletişim kurmak için gereken istemci kimlik bilgilerini kullanarak sağlanan <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> özelliği veya <xref:System.ServiceModel.ChannelFactory.Credentials%2A> özelliği. Güvenlik kanalı hizmete istemcinin kimliğini doğrulamak için bu bilgileri kullanır. Kimlik doğrulama, iki moddan birini gerçekleştirilir:  
   
--   Bir güvenlik bağlamı'kurmak için WCF istemci örneği kullanarak ilk ileti gönderilmeden önce istemci kimlik bilgileri bir kez kullanılır. Tüm uygulama iletileri ardından güvenlik bağlamı olarak güvenlidir.  
+- Bir güvenlik bağlamı'kurmak için WCF istemci örneği kullanarak ilk ileti gönderilmeden önce istemci kimlik bilgileri bir kez kullanılır. Tüm uygulama iletileri ardından güvenlik bağlamı olarak güvenlidir.  
   
--   İstemci kimlik bilgileri, hizmete gönderilen her bir uygulama iletisi kimliğini doğrulamak için kullanılır. Bu durumda, istemci ile hizmet arasında hiçbir bağlam kurulur.  
+- İstemci kimlik bilgileri, hizmete gönderilen her bir uygulama iletisi kimliğini doğrulamak için kullanılır. Bu durumda, istemci ile hizmet arasında hiçbir bağlam kurulur.  
   
 ### <a name="established-identities-cannot-be-changed"></a>Kurulan kimlikleri değiştirilemez  
  İlk yöntem kullanıldığında, belirlenen bağlamı için istemci kimliği ile kalıcı olarak ilişkilendirilir. Güvenlik bağlamı kurulduktan sonra diğer bir deyişle, istemciyle ilişkili kimliği değiştirilemez.  
@@ -108,7 +108,6 @@ ms.locfileid: "59167849"
 - <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
-- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
 - [Güvenlik Kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)

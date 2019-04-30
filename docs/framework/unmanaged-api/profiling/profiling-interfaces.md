@@ -9,84 +9,84 @@ ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 059fadc5607e76b871083682136fda542ae9bacf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758203"
 ---
 # <a name="profiling-interfaces"></a>Profil Oluşturma Arabirimleri
-Bu bölümde ortak dil çalışma zamanı tarafından (CLR) çalıştırılan bir program profil sağlayan yönetilmeyen arabirimler açıklanmaktadır.  
+Bu bölümde, ortak dil çalışma zamanı tarafından (CLR) yürütülen bir programın profilini olanak tanıyan yönetilmeyen arabirimler açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [ICLRProfiling Arabirimi](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-interface.md)  
- Sağlar [AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) çalışan bir işlemi eklemek bir profil oluşturucu etkinleştirir yöntemi.  
+ Sağlar [AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) yöntemi bir profil oluşturucunun bir çalışan işleme sağlar.  
   
  [ICorProfilerAssemblyReferenceProvider Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md)  
- Profil oluşturucu içinde ekleyeceksiniz derleme başvurularını CLR bildirmek profil oluşturucu etkinleştirir [Icorprofilercallback::moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) geri çağırma.  
+ CLR, profil oluşturucu ekler derleme başvuruları bildirmek profil oluşturucu sağlar [Icorprofilercallback::moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) geri çağırma.  
   
  [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- CLR tarafından profil oluşturucu abone olaylar meydana geldiğinde kod profil oluşturucu bildirmek için kullanılan yöntemleri sağlar.  
+ Profil Oluşturucu abone olduğu olaylar meydana geldiğinde bir kod profil oluşturucu bildirmek için CLR tarafından kullanılan yöntemleri sağlar.  
   
  [ICorProfilerCallback2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)  
- Genişletir `ICorProfilerCallback` .NET Framework 2.0 ve sonraki sürümlerinde desteklenen geri aramalar arabirimi.  
+ Genişletir `ICorProfilerCallback` arabirimi ile .NET Framework 2.0 ve sonraki sürümlerinde desteklenen geri çağırmalar.  
   
  [ICorProfilerCallback3 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)  
- CLR iletişim kurmak için kullandığı geri arama yöntemleri ekleme ve durum bilgilerini profil oluşturucu için ayırma sağlar.  
+ CLR iletişim kurmak için kullandığı geri çağırma yöntemleri ekleme ve ayırma profil oluşturucu için durum bilgilerini sağlar.  
   
  [ICorProfilerCallback4 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)  
- CLR Profil bilgilerini iletmek için kullandığı geri çağırma yöntemleri sağlar.  
+ CLR Profil Oluşturucu bilgiler iletmek için kullandığı geri çağırma yöntemleri sağlar.  
   
  [ICorProfilerCallback5 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)  
- Çöp toplama kökleri tarafından başvurulan nesne geçişli kapatma tanımlayan bir yöntem sağlar.  
+ Çöp toplama kökleri tarafından başvurulan nesneleri geçişli kapatılmasını tanımlayan bir yöntem sağlar.  
   
  [ICorProfilerCallback6 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-interface.md)  
- Bir derlemesi yüklenirken bir profil oluşturucu bildirmek için CLR kullanan bir geri arama yöntemi sağlar.  
+ Bir derleme yüklenen bir profil oluşturucu bildirmek için CLR kullanan bir geri arama yöntemi sağlar.  
   
  [ICorProfilerCallback7 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)  
- Profil Oluşturucu bir bellek içi modülü ile ilişkili simgesi akış güncelleştirilir bildirmek için ortak dil çalışma zamanı kullanan bir geri arama yöntemi sağlar.  
+ Profil Oluşturucu bir bellek içi modül ile ilişkili simge akışı güncelleştirilmiş olduğunu bildirmek için ortak dil çalışma zamanı kullanan bir geri arama yöntemi sağlar.  
 
-[ICorProfilerCallback8 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback8-interface.md)  
-Ortak dil çalışma zamanı dinamik yönteminin JIT derleme başlatıldı ve tamamlanmış olan profil oluşturucu bildirmek için kullandığı geri çağırma yöntemleri sağlar.
+[ICorProfilerCallback8 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback8-interface.md)  
+Dinamik bir yöntem JIT derlemesi başladı ve tamamlanmış olan profil oluşturucu bildirmek için ortak dil çalışma zamanı kullanan bir geri çağırma yöntemleri sağlar.
 
-[ICorProfilerCallback9 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback9-interface.md)  
-Toplanan ve daha sonra kaldırıldığında çöp dinamik yöntemidir profil oluşturucu bildirmek için ortak dil çalışma zamanı kullanan bir geri arama yöntemi sağlar.
+[ICorProfilerCallback9 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback9-interface.md)  
+Toplanan ve daha sonra kaldırıldığında çöp dinamik bir yöntem olan profil oluşturucu bildirmek için ortak dil çalışma zamanı kullanan bir geri arama yöntemi sağlar.
 
  [ICorProfilerFunctionControl Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)  
- Kod profil oluşturucu nasıl JIT Derleyici kodu belirli bir yöntemi yeniden derlenmesi sırasında oluşturulmasına denetlemek için CLR ile iletişim kurmasına izin yöntemleri sağlar.  
+ Bir kod profil oluşturucu nasıl JIT Derleyici kodu belirli bir yöntem yeniden derlemeden oluşturmasını denetlemek için CLR ile iletişim kurmasına izin vermek için yöntemler sağlar.  
   
  [ICorProfilerFunctionEnum Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  
- CLR işlevlerde koleksiyonu sırayla yinelemek için yöntemleri sağlar.  
+ Sıralı olarak CLR işlevler koleksiyonu üzerinden yineleme yapmak için yöntemler sağlar.  
   
  [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- Kod profil oluşturucuları olayı izlemeyi denetlemek ve bilgi istemek için CLR ile iletişim kurmak için kullandığı için yöntemleri sağlar.  
+ Olay İzleme Denetim ve bilgi istemek için CLR ile iletişim kurmak için kod profil Oluşturucuları tarafından kullanım için yöntemler sağlar.  
   
  [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)  
- Genişletir `ICorProfilerInfo` .NET Framework 2.0 ve sonraki sürümlerinde desteklenen yöntemleriyle arabirimi.  
+ Genişletir `ICorProfilerInfo` arabirim yöntemleriyle .NET Framework 2.0 ve sonraki sürümlerinde desteklenir.  
   
  [ICorProfilerInfo3 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- Genişletir `ICorProfilerInfo2` desteklenen yöntemleri arabirimiyle [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] ve sonraki sürümler.  
+ Genişletir `ICorProfilerInfo2` desteklenen yöntemleriyle arabirimi [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] ve sonraki sürümler.  
   
  [ICorProfilerInfo4 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
- Kod profil oluşturucuları olayı izlemeyi denetlemek ve bilgi istemek için CLR ile iletişim kurmak için kullandıkları yöntemleri sağlar.  
+ Olay İzleme denetlemek ve bilgi istemek için CLR ile iletişim kurmak için kod profil oluşturucuları kullanmak için yöntemler sağlar.  
   
  [ICorProfilerInfo5 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-interface.md)  
- Kod profil oluşturucuları olayı izlemeyi denetlemek için CLR ile iletişim kurmak için kullandığı için yöntemleri sağlar.  
+ Olay İzleme denetlemek için CLR ile iletişim kurmak için kod profil Oluşturucuları tarafından kullanım için yöntemler sağlar.  
   
  [ICorProfilerInfo6 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-interface.md)  
- Belirli bir NGen modüle ait olan ve belirli bir yöntemin gövdesine içermesinden tüm yöntemleri için bir numaralandırıcı sağlar.  
+ Belirli bir NGen modüle ait olan ve belirli bir yöntemin gövdesinde satır içine alınmış olan tüm yöntemleri için bir numaralandırıcı sağlar.  
   
  [ICorProfilerInfo7 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)  
- Yeni uygulamak için bir yöntem meta verileri bir modüle tanımlanmış ve bir bellek içi simgesi akışına erişim sağlayan sağlar.  
+ Yeni uygulamak için bir yöntem bir modül için meta verileri tanımlanmış ve bir bellek içi sembol akışına erişim sağlayan sağlar.  
   
  [ICorProfilerModuleEnum Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)  
- Uygulama veya profil oluşturucu tarafından yüklenen modülleri koleksiyonu sırayla yinelemek için yöntemleri sağlar.  
+ Sıralı olarak uygulama veya profil oluşturucu tarafından yüklenen modülleri koleksiyonu üzerinden yineleme yapmak için yöntemler sağlar.  
   
  [ICorProfilerObjectEnum Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)  
- Bir koleksiyon tarafından üretilen dondurulmuş nesnelerin sırayla yinelemek için yöntemler sağlar [Ngen.exe (yerel Görüntü Oluşturucu)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Tarafından oluşturulan donmuş nesneler koleksiyonunu sırayla yinelemek için yöntemler sağlar [Ngen.exe (yerel Görüntü Oluşturucu)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
   
  [ICorProfilerThreadEnum Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)  
- CLR iş parçacıkları koleksiyonu sırayla yinelemek için yöntemleri sağlar.  
+ CLR iş parçacıklarının koleksiyonunu sırayla yinelemek için yöntemler sağlar.  
   
  [IMethodMalloc Arabirimi](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)  
  Sağlar [ayırma](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md) yöntemi yeni bir Microsoft Ara dili (MSIL) işlev gövdesi için bellek ayrılamadı.  

@@ -11,11 +11,11 @@ ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 863335cf080dbccd76b38c7222b74637b99ae2f0
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751823"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>Nasıl yapılır: Dizinleri ve dosyaları numaralandırma
 Dizin ve dosyaların büyük koleksiyonlarla çalışıyorsanız numaralandırılabilir koleksiyonları diziler daha iyi performans sağlar. Dizinleri ve dosyaları numaralandırma için numaralandırılabilir bir dizin veya dosya adları topluluğu döndüren yöntemler kullanın veya kendi <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo>, veya <xref:System.IO.FileSystemInfo> nesneleri.  

@@ -7,25 +7,25 @@ helpviewer_keywords:
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
 ms.openlocfilehash: 96b7bfabef589464e99e808d19f0dee6cfb23536
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765667"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>Veri Hizmeti istemci Kitaplığı'nı (WCF Veri Hizmetleri) oluşturma
 Uygulayan bir veri hizmeti [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] tarafından kullanıma sunulan veri modeli açıklayan bir hizmeti meta veri belgesi döndürebilir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Daha fazla bilgi için [OData: Meta veri belgesi hizmet](https://go.microsoft.com/fwlink/?LinkId=186070). Kullanabileceğiniz **hizmet Başvurusu Ekle** iletişim için bir başvuru eklemek için Visual Studio'da bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-hizmet tabanlı. Tarafından döndürülen meta veriler için bir başvuru eklemek için bu aracı kullanırken bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] istemci projesinde akışı, aşağıdaki eylemleri gerçekleştirir:  
   
--   Hizmet meta verileri belgesi veri hizmetinden ister ve döndürülen meta verilere yorumlar.  
+- Hizmet meta verileri belgesi veri hizmetinden ister ve döndürülen meta verilere yorumlar.  
   
     > [!NOTE]
     >  Döndürülen meta verilere istemci projesinde bir .edmx dosyası olarak depolanır. Entity Framework tarafından kullanılan bir .edmx dosyası biçim aynı olmadığı için varlık veri modeli Tasarımcısı'nı kullanarak bu .edmx dosyası açılamıyor. Bu meta veri dosyası, herhangi bir metin düzenleyicisi veya XML düzenleyicisi kullanarak görüntüleyebilirsiniz. Daha fazla bilgi için [ \[MC EDMX\]: Varlık veri modeli için veri hizmetlerini paketleme biçimini](https://go.microsoft.com/fwlink/?LinkID=178833) belirtimi  
   
--   Hizmet bir temsili olarak devraldığı bir varlık kapsayıcı sınıfı oluşturur <xref:System.Data.Services.Client.DataServiceContext>. Bu oluşturulan varlık kapsayıcı sınıfı, varlık veri modeli araçları oluşturan varlık kapsayıcısı benzer. Daha fazla bilgi için [nesne hizmetlerine genel bakış (Entity Framework)](https://docs.microsoft.com/previous-versions/bb386871(v=vs.100)).  
+- Hizmet bir temsili olarak devraldığı bir varlık kapsayıcı sınıfı oluşturur <xref:System.Data.Services.Client.DataServiceContext>. Bu oluşturulan varlık kapsayıcı sınıfı, varlık veri modeli araçları oluşturan varlık kapsayıcısı benzer. Daha fazla bilgi için [nesne hizmetlerine genel bakış (Entity Framework)](https://docs.microsoft.com/previous-versions/bb386871(v=vs.100)).  
   
--   Veri sınıfları bulduğu veri modeli türleri için hizmet meta verileri içinde oluşturur.  
+- Veri sınıfları bulduğu veri modeli türleri için hizmet meta verileri içinde oluşturur.  
   
--   Bir başvuru ekler `System.Data.Services.Client` projeyi derlemeye.  
+- Bir başvuru ekler `System.Data.Services.Client` projeyi derlemeye.  
   
  Daha fazla bilgi için [nasıl yapılır: Bir veri hizmeti başvurusu ekleme](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).  
   

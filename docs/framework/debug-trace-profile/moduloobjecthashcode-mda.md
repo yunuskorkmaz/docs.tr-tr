@@ -13,11 +13,11 @@ ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d8f6975d117d9920d2199c3996246822d1fdb6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753821"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode MDA
 `moduloObjectHashcode` Yönetilen hata ayıklama Yardımcısı (MDA) davranışını değiştirir <xref:System.Object> sınıf gerçekleştirmek için bir işlem tarafından döndürülen ilişkin karma kodu modül <xref:System.Object.GetHashCode%2A> yöntemi. Bu MDA için'varsayılan mod neden olan 1 ' dir <xref:System.Object.GetHashCode%2A> 0 tüm nesneleri için döndürülecek.  
@@ -25,13 +25,13 @@ ms.locfileid: "59170787"
 ## <a name="symptoms"></a>Belirtiler  
  Ortak dil çalışma zamanı (CLR) yeni bir sürüme taşıdıktan sonra bir program artık düzgün şekilde çalışır:  
   
--   Program, yanlış nesneden alınırken bir <xref:System.Collections.Hashtable>.  
+- Program, yanlış nesneden alınırken bir <xref:System.Collections.Hashtable>.  
   
--   Sabit listesinden alınmış sırasını bir <xref:System.Collections.Hashtable> programın sonu değişmedi.  
+- Sabit listesinden alınmış sırasını bir <xref:System.Collections.Hashtable> programın sonu değişmedi.  
   
--   Artık eşit olacak şekilde kullanılan iki nesne eşit değildir.  
+- Artık eşit olacak şekilde kullanılan iki nesne eşit değildir.  
   
--   Eşit olmaması için kullanılan iki nesne eşit olur.  
+- Eşit olmaması için kullanılan iki nesne eşit olur.  
   
 ## <a name="cause"></a>Sebep  
  Programınızı yanlış nesneden alma bir <xref:System.Collections.Hashtable> çünkü yürütmesinin <xref:System.Object.Equals%2A> anahtarını sınıfındaki yöntemi <xref:System.Collections.Hashtable> çağrı sonuçlarını karşılaştırarak nesnelerin eşitliği testleri <xref:System.Object.GetHashCode%2A> yöntemi . Karma kodları, kendi ilgili alanlarını farklı değerlere sahip olsa bile iki nesnenin aynı karma koda sahip olabileceği için nesne eşitliği test etmek için kullanılmamalıdır. Bu karma kod çakışmaları ender olsa, uygulamada oluşur. Bu sahip olduğu etkiyi bir <xref:System.Collections.Hashtable> arama, eşit olacak şekilde eşit olmayan iki anahtar görünür ve yanlış nesne öğesinden döndürülen <xref:System.Collections.Hashtable>. Performans nedenleriyle yürütmesinin <xref:System.Object.GetHashCode%2A> sonraki sürümlerinde bir sürümünde gerçekleşmeyebilir çakışmaları oluşabilir için çalışma zamanı sürümleri arasında geçiş. Bu mda'nın karma kodları birbiriyle çakışır olduğunda, kod hataları olup olmadığını test etmek etkinleştirin. Etkin olduğunda, bu mda'nın neden <xref:System.Object.GetHashCode%2A> 0, döndürülecek yöntemi çakışmadan tüm karma kodları kaynaklanan. Yalnızca etkin bu MDA, programınızın olmalıdır, programınızı daha yavaş çalıştırır etkinleştirmektir.  

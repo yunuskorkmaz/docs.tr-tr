@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [WPF], animation
 ms.assetid: 767b9b6e-9cb7-482e-b6c2-fee7750c3995
 ms.openlocfilehash: 0f8174a2144435c9ad65904ee587355e8b38e935
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760928"
 ---
 # <a name="how-to-animate-an-ellipsegeometry"></a>Nasıl yapılır: EllipseGeometry'ye Animasyon Ekleme
 Bu örnek nasıl animasyon gösterir bir <xref:System.Windows.Media.Geometry> içinde bir <xref:System.Windows.Shapes.Path> öğesi. Aşağıdaki örnekte, bir <xref:System.Windows.Media.Animation.PointAnimation> animasyon uygulamak için kullanılan <xref:System.Windows.Media.EllipseGeometry.Center%2A> , bir <xref:System.Windows.Media.EllipseGeometry>.  

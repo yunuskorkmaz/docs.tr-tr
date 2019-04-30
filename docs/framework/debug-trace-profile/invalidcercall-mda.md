@@ -12,11 +12,11 @@ ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1a68aac2a92a0569e288da858e4a4e4695fd5eaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754435"
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall MDA
 `invalidCERCall` Yönetilen hata ayıklama Yardımcısı (MDA) hiçbir güvenilirlik sözleşme veya aşırı zayıf bir sözleşme olan bir yönteme bir çağrı kısıtlı yürütme bölge (CER) grafik içinde olduğunda etkinleştirilir. Zayıf bir sözleşme çağrısı, diğer bir deyişle, geçirilen örneği daha büyük bir kapsamın en kötü durum durumu bozulması olduğunu bildiren bir sözleşmedir <xref:System.AppDomain> veya işlem durumu bozuksa ya da sonuç her zaman hesaplanabilir belirleyici olmayan içinde bir CER çağrıldığında.  

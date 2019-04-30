@@ -8,11 +8,11 @@ ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86fc35ae20211bd32a21d60b7313074361aef671
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705694"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Nasıl yapılır: Tanımlayıcı Adlı Atlama Özelliğini Devre Dışı Bırakma
 İle .NET Framework sürüm 3.5 Service Pack 1 (SP1) başlayarak, tam güvene bir derleme yüklendiğinde tanımlayıcı ad imzaları doğrulanmaz <xref:System.AppDomain> gibi varsayılan nesne <xref:System.AppDomain> için `MyComputer` bölge. Bu atlama özelliğini tanımlayıcı ad adlandırılır. İçin tam güven ortamında, talepleri <xref:System.Security.Permissions.StrongNameIdentityPermission> imzalı için tam güven derlemeleri imzalarına bağımsız olarak her zaman başarılı. Tek kısıtlama, kendi bölgesine tam güvenilir olduğundan derleme tam güvenilir olması gerekliliğidir. Tanımlayıcı adı bir faktör Bu koşullar altında olmadığı için bunu doğrulanması için bir neden yoktur. Tanımlayıcı ad imzası doğrulama atlama önemli performans geliştirmeleri sunar.  
@@ -28,9 +28,9 @@ ms.locfileid: "59296179"
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>Tanımlayıcı ad atlama özelliği tüm uygulamalar için devre dışı bırakmak için  
   
--   32-bit bilgisayarlarda, sistem kayıt defterinde DWORD girişini adlı 0 değeri ile oluşturma `AllowStrongNameBypass` HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft altında\\. NETFramework anahtarı.  
+- 32-bit bilgisayarlarda, sistem kayıt defterinde DWORD girişini adlı 0 değeri ile oluşturma `AllowStrongNameBypass` HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft altında\\. NETFramework anahtarı.  
   
--   64-bit bilgisayarlarda, sistem kayıt defterinde DWORD girişini adlı 0 değeri ile oluşturma `AllowStrongNameBypass` HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft altında\\. NETFramework ve HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. NETFramework anahtarları.  
+- 64-bit bilgisayarlarda, sistem kayıt defterinde DWORD girişini adlı 0 değeri ile oluşturma `AllowStrongNameBypass` HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft altında\\. NETFramework ve HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. NETFramework anahtarları.  
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>Tanımlayıcı ad atlama özelliği tek bir uygulama için devre dışı bırakmak için  
   

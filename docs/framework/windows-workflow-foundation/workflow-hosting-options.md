@@ -1,15 +1,15 @@
 ---
-title: İş akışı barındırma seçenekleri
+title: İş Akışı Barındırma Seçenekleri
 ms.date: 03/30/2017
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
 ms.openlocfilehash: 2a03c7b5e15b76eabc714f44624f04d3385720d4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670225"
 ---
-# <a name="workflow-hosting-options"></a>İş akışı barındırma seçenekleri
+# <a name="workflow-hosting-options"></a>İş Akışı Barındırma Seçenekleri
 Bir konsol uygulamasında barındırılan iş akışı Windows Workflow Foundation (WF) örnekleri çoğu kullanın, ancak bu gerçek iş akışları için gerçekçi bir senaryo değildir. Gerçek iş uygulamalarını iş akışlarında barındırılacak kalıcı işlemleri bir Windows hizmeti yazılan geliştirici veya bir sunucu uygulaması gibi- [!INCLUDE[iisver](../../../includes/iisver-md.md)] veya AppFabric. Bu yaklaşımların arasındaki farklar aşağıdaki gibidir.  
   
 ## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>IIS Windows AppFabric ile iş akışları barındırma  

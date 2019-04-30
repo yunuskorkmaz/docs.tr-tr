@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dfbdbb389f9945ffeea649bcddd45bee8caf2496
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698323"
 ---
 # <a name="efnstacktrace-function"></a>_EFN_StackTrace İşlevi
 Yönetilen yığın izlemesi metin gösterimi ve bir dizi sağlar `CONTEXT` kaydeder, bir yönetilmeyen ve yönetilen kod arasında her geçiş için.  
@@ -65,17 +65,17 @@ HRESULT CALLBACK _EFN_StackTrace(
 ## <a name="remarks"></a>Açıklamalar  
  `_EFN_StackTrace` Yapısı WinDbg programlı arabiriminden çağrılabilir. Parametreler şu şekilde kullanılır:  
   
--   Varsa `wszTextOut` null ve `puiTextLength` olduğu null, işlev dize uzunluğunu döndürür `puiTextLength`.  
+- Varsa `wszTextOut` null ve `puiTextLength` olduğu null, işlev dize uzunluğunu döndürür `puiTextLength`.  
   
--   Varsa `wszTextOut` olan metin null, işlev depolar `wszTextOut` tarafından belirtilen konum kadar `puiTextLength`. Başarıyla arabellek yeterince uzun değildi, arabellek veya E_OUTOFMEMORY döndürür içinde yeterli yer olduğunu döndürür.  
+- Varsa `wszTextOut` olan metin null, işlev depolar `wszTextOut` tarafından belirtilen konum kadar `puiTextLength`. Başarıyla arabellek yeterince uzun değildi, arabellek veya E_OUTOFMEMORY döndürür içinde yeterli yer olduğunu döndürür.  
   
--   İşlev geçişi kısmı yoksayılır `pTransitionContexts` ve `puiTransitionContextCount` her ikisi de null olan. Bu durumda, yalnızca işlev adlarını metin çıktısı ile çağıranlar işlevi sağlar.  
+- İşlev geçişi kısmı yoksayılır `pTransitionContexts` ve `puiTransitionContextCount` her ikisi de null olan. Bu durumda, yalnızca işlev adlarını metin çıktısı ile çağıranlar işlevi sağlar.  
   
--   Varsa `pTransitionContexts` null ve `puiTransitionContextCount` olduğu null, işlev bağlam girişler gerekli sayısını döndürür `puiTransitionContextCount`.  
+- Varsa `pTransitionContexts` null ve `puiTransitionContextCount` olduğu null, işlev bağlam girişler gerekli sayısını döndürür `puiTransitionContextCount`.  
   
--   Varsa `pTransitionContexts` olduğu null, işlevi, yapıları uzunlukta bir dizi gibi davranır `puiTransitionContextCount`. Yapı boyutu tarafından verilen `uiSizeOfContext`, ve boyutunu olmalıdır [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) veya `CONTEXT` mimarisi.  
+- Varsa `pTransitionContexts` olduğu null, işlevi, yapıları uzunlukta bir dizi gibi davranır `puiTransitionContextCount`. Yapı boyutu tarafından verilen `uiSizeOfContext`, ve boyutunu olmalıdır [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) veya `CONTEXT` mimarisi.  
   
--   `wszTextOut` şu biçimde yazılır:  
+- `wszTextOut` şu biçimde yazılır:  
   
     ```  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
@@ -84,11 +84,11 @@ HRESULT CALLBACK _EFN_StackTrace(
     ..."  
     ```  
   
--   Onaltılık uzaklık 0x0 ise, hiçbir uzaklığı yazılır.  
+- Onaltılık uzaklık 0x0 ise, hiçbir uzaklığı yazılır.  
   
--   Varsa yönetilen kod yok iş parçacığı üzerinde şu anda bağlamında, işlev SOS_E_NOMANAGEDCODE döndürür.  
+- Varsa yönetilen kod yok iş parçacığı üzerinde şu anda bağlamında, işlev SOS_E_NOMANAGEDCODE döndürür.  
   
--   `Flags` Parametresi, 0 veya EBP ve ESP her önüne görmek için SOS_STACKTRACE_SHOWADDRESSES `module!functionname` satır. Varsayılan olarak, 0'dır.  
+- `Flags` Parametresi, 0 veya EBP ve ESP her önüne görmek için SOS_STACKTRACE_SHOWADDRESSES `module!functionname` satır. Varsayılan olarak, 0'dır.  
   
     ```  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
 ms.openlocfilehash: e71946ec06eb1b4c75f30084dfdb863d8e3b093e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759940"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF için XAML ve Özel Sınıflar
 XAML içinde uygulandığı şekilde [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] çerçevelerini destekleyen özel bir sınıf veya yapı, tüm tanımlama yeteneği [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] dil ve ardından erişim kullanarak XAML biçimlendirmesi. Bir karışımını kullanabilirsiniz [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-tanımlanan türleri ve aynı biçimlendirme dosyasında özel türlerinizi genellikle XAML ad alanı öneki özel türleri eşleyerek. Bu konuda, özel bir sınıf bir XAML öğesi olarak kullanılabilir olması için karşılaması gereken gereksinimleri anlatılmaktadır.  
@@ -20,19 +20,19 @@ XAML içinde uygulandığı şekilde [!INCLUDE[TLA#tla_clr](../../../../includes
 ## <a name="custom-classes-in-applications-or-assemblies"></a>Uygulamaların veya derlemelerin özel sınıflar  
  XAML içinde kullanılan özel sınıflar, iki farklı şekilde tanımlanabilir: arka plan kod veya birincil üreten diğer kod içinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulaması veya farklı bir sınıfta bir yürütülebilir dosya gibi ayrı bir derleme veya bir sınıf kitaplığı kullanılan DLL. Bu yaklaşımların her birinin belirli avantajları ve dezavantajları vardır.  
   
--   Bir sınıf kitaplığı oluşturma gibi özel sınıflar birçok farklı olası uygulamalar arasında paylaşılabilir avantajlarındandır. Ayrı bir kitaplık ayrıca uygulamalar gibi sürüm oluşturma sorunları denetimi kolaylaştırır ve burada bir kök öğe üzerinde bir XAML sayfası olarak hedeflenen sınıf kullanım, bir sınıf oluşturma basitleştirir.  
+- Bir sınıf kitaplığı oluşturma gibi özel sınıflar birçok farklı olası uygulamalar arasında paylaşılabilir avantajlarındandır. Ayrı bir kitaplık ayrıca uygulamalar gibi sürüm oluşturma sorunları denetimi kolaylaştırır ve burada bir kök öğe üzerinde bir XAML sayfası olarak hedeflenen sınıf kullanım, bir sınıf oluşturma basitleştirir.  
   
--   Özel sınıflar uygulamasında tanımlama avantajı, bu tekniği görece basit ve dağıtım ve ayrı derlemeler ana uygulamanın yürütülebilir ötesinde aldığımızda karşılaştığı sınama sorunlarını en aza indirir olmasıdır.  
+- Özel sınıflar uygulamasında tanımlama avantajı, bu tekniği görece basit ve dağıtım ve ayrı derlemeler ana uygulamanın yürütülebilir ötesinde aldığımızda karşılaştığı sınama sorunlarını en aza indirir olmasıdır.  
   
--   Aynı veya farklı bir derlemede tanımlanan olsun, özel sınıflar XML ad alanı ve CLR ad uzayı arasında XAML içinde öğeleri olarak kullanılabilmesi için eşlenmesi gerekir. Bkz: [XAML ad alanları ve WPF XAML için Namespace eşlemesi](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+- Aynı veya farklı bir derlemede tanımlanan olsun, özel sınıflar XML ad alanı ve CLR ad uzayı arasında XAML içinde öğeleri olarak kullanılabilmesi için eşlenmesi gerekir. Bkz: [XAML ad alanları ve WPF XAML için Namespace eşlemesi](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 <a name="Requirements_for_a_Custom_Class_as_a_XAML_Element"></a>   
 ## <a name="requirements-for-a-custom-class-as-a-xaml-element"></a>XAML öğesi olarak özel bir sınıf için gereksinimleri  
  Bir nesne öğesi olarak oluşturulacak oluşturabilmek adına sınıfınıza aşağıdaki gereksinimleri karşılaması gerekir:  
   
--   Özel sınıfınıza genel olmalıdır ve bir varsayılan (parametresiz) ortak oluşturucu destekler. (Aşağıdaki bölümde yapıları ile ilgili notlar için bkz.)  
+- Özel sınıfınıza genel olmalıdır ve bir varsayılan (parametresiz) ortak oluşturucu destekler. (Aşağıdaki bölümde yapıları ile ilgili notlar için bkz.)  
   
--   Özel sınıfınıza iç içe geçmiş bir sınıf olmalıdır. İç içe geçmiş sınıflar ve onların genel CLR kullanım söz dizimine "dot" uğratabilecek diğer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve/veya iliştirilmiş özellikler gibi XAML özellikleri.  
+- Özel sınıfınıza iç içe geçmiş bir sınıf olmalıdır. İç içe geçmiş sınıflar ve onların genel CLR kullanım söz dizimine "dot" uğratabilecek diğer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve/veya iliştirilmiş özellikler gibi XAML özellikleri.  
   
  Nesne öğesi sözdizimi etkinleştirmeye ek olarak, nesne tanımınızı ayrıca söz konusu nesne değer türü olarak ele herhangi bir genel özellikler için özellik öğesi sözdizimini sağlar. Nesne artık bir nesne öğesi olarak oluşturulabilir ve böyle bir özellik özellik öğe değerini doldurabilir olmasıdır.  
   
@@ -75,19 +75,19 @@ XAML içinde uygulandığı şekilde [!INCLUDE[TLA#tla_clr](../../../../includes
 ## <a name="writing-collection-properties"></a>Koleksiyon Özellikleri yazma  
  Bir koleksiyon türü alan özellikleri koleksiyona eklenen nesneler belirtmenize olanak tanıyan bir XAML söz dizimi var. Bu söz dizimi iki önemli özelliklere sahiptir.  
   
--   Koleksiyon nesnesi nesnesini nesne öğesi sözdiziminde belirtilmesi gerekmez. Bu koleksiyon türünün varolup olmadığını örtük olarak, her bir koleksiyon türü alan XAML içinde bir özellik belirtin.  
+- Koleksiyon nesnesi nesnesini nesne öğesi sözdiziminde belirtilmesi gerekmez. Bu koleksiyon türünün varolup olmadığını örtük olarak, her bir koleksiyon türü alan XAML içinde bir özellik belirtin.  
   
--   Koleksiyon özelliği biçimlendirme içinde alt öğeleri koleksiyon üyelerinin olacak işlenir. Normalde, bir koleksiyonun üyelerini kod erişimi listesi/sözlük yöntemleri gibi gerçekleştirilir `Add`, veya bir dizin oluşturucu. Ancak XAML söz dizimi, yöntemler veya dizin oluşturucular desteklemez (özel durum: XAML 2009 yöntemleri destekler, ancak XAML 2009 kullanarak olası WPF kullanımları kısıtlar; bkz: [XAML 2009 dil özellikleri](../../xaml-services/xaml-2009-language-features.md)). Koleksiyonlar açıkça öğe ağacındaki oluşturmaya yönelik yaygın bir gereksinim olan ve bu bildirim temelli XAML koleksiyonlarında doldurmak için bir yönteme gerekir. Bu nedenle, bir koleksiyon özelliği alt öğelerinin koleksiyonunu özellik türü değeri koleksiyona ekleyerek işlenir.  
+- Koleksiyon özelliği biçimlendirme içinde alt öğeleri koleksiyon üyelerinin olacak işlenir. Normalde, bir koleksiyonun üyelerini kod erişimi listesi/sözlük yöntemleri gibi gerçekleştirilir `Add`, veya bir dizin oluşturucu. Ancak XAML söz dizimi, yöntemler veya dizin oluşturucular desteklemez (özel durum: XAML 2009 yöntemleri destekler, ancak XAML 2009 kullanarak olası WPF kullanımları kısıtlar; bkz: [XAML 2009 dil özellikleri](../../xaml-services/xaml-2009-language-features.md)). Koleksiyonlar açıkça öğe ağacındaki oluşturmaya yönelik yaygın bir gereksinim olan ve bu bildirim temelli XAML koleksiyonlarında doldurmak için bir yönteme gerekir. Bu nedenle, bir koleksiyon özelliği alt öğelerinin koleksiyonunu özellik türü değeri koleksiyona ekleyerek işlenir.  
   
  .NET Framework XAML hizmetlerinde uygulama ve bu nedenle WPF XAML işlemcisi bir koleksiyon özelliği nelerden için aşağıdaki tanımını kullanır. Özelliğin özellik türü, aşağıdakilerden birini uygulamalıdır:  
   
--   Implements <xref:System.Collections.IList>.  
+- Implements <xref:System.Collections.IList>.  
   
--   Implements <xref:System.Collections.IDictionary> veya genel eş değeri (<xref:System.Collections.Generic.IDictionary%602>).  
+- Implements <xref:System.Collections.IDictionary> veya genel eş değeri (<xref:System.Collections.Generic.IDictionary%602>).  
   
--   Öğesinden türetilen <xref:System.Array> (XAML içindeki diziler hakkında daha fazla bilgi için bkz: [x: Array işaretleme uzantısı](../../xaml-services/x-array-markup-extension.md).)  
+- Öğesinden türetilen <xref:System.Array> (XAML içindeki diziler hakkında daha fazla bilgi için bkz: [x: Array işaretleme uzantısı](../../xaml-services/x-array-markup-extension.md).)  
   
--   Implements <xref:System.Windows.Markup.IAddChild> (bir arabirim tarafından tanımlanan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]).  
+- Implements <xref:System.Windows.Markup.IAddChild> (bir arabirim tarafından tanımlanan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]).  
   
  Her CLR içinde bu tür bir `Add` Nesne grafiğini oluştururken, temel toplulukta öğeleri eklemek XAML işlemcisi tarafından kullanılan yöntem.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
 ms.openlocfilehash: e1111077a407dc32475976b15ff71170978e3184
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765511"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Nasıl yapılır: Proje veri kaynağı (WCF Veri Hizmetleri) kullanarak verileri bağlama
 
@@ -31,19 +31,19 @@ Bir WCF Veri Hizmetleri istemci uygulamasında oluşturulan veri nesneleri temel
 
      Bu pencere için XAML dosyasında aşağıdaki nesne öğeleri oluşturur:
 
-    -   A <xref:System.Windows.Data.CollectionViewSource> adlı bir öğe `customersViewSource`. <xref:System.Windows.FrameworkElement.DataContext%2A> Özelliği üst düzey <xref:System.Windows.Controls.Grid> nesne öğesi ayarlandığından bu yeni <xref:System.Windows.Data.CollectionViewSource>.
+    - A <xref:System.Windows.Data.CollectionViewSource> adlı bir öğe `customersViewSource`. <xref:System.Windows.FrameworkElement.DataContext%2A> Özelliği üst düzey <xref:System.Windows.Controls.Grid> nesne öğesi ayarlandığından bu yeni <xref:System.Windows.Data.CollectionViewSource>.
 
-    -   Verilere bağlı <xref:System.Windows.Controls.ComboBox> adlı `CustomerID`.
+    - Verilere bağlı <xref:System.Windows.Controls.ComboBox> adlı `CustomerID`.
 
-    -   A <xref:System.Windows.Controls.Label>.
+    - A <xref:System.Windows.Controls.Label>.
 
 4. Sürükleme **siparişler** tasarımcıya gezinme özelliği.
 
      Bu pencere için XAML dosyasında aşağıdaki ek nesne öğeleri oluşturur:
 
-    -   İkinci <xref:System.Windows.Data.CollectionViewSource> adlı bir öğe `customersOrdersViewSource`, kaynağı `customerViewSource`.
+    - İkinci <xref:System.Windows.Data.CollectionViewSource> adlı bir öğe `customersOrdersViewSource`, kaynağı `customerViewSource`.
 
-    -   Verilere bağlı <xref:System.Windows.Controls.DataGrid> adlı Denetim `ordersDataGrid`.
+    - Verilere bağlı <xref:System.Windows.Controls.DataGrid> adlı Denetim `ordersDataGrid`.
 
 5. (İsteğe bağlı) Ek öğeleri sürükleyin **müşteriler** tasarımcıya düğümü.
 
@@ -82,13 +82,13 @@ Bir WCF Veri Hizmetleri istemci uygulamasında oluşturulan veri nesneleri temel
 
      Bu form aşağıdaki denetimleri oluşturur:
 
-    -   Örneği <xref:System.Windows.Forms.BindingSource> adlı `customersBindingSource`.
+    - Örneği <xref:System.Windows.Forms.BindingSource> adlı `customersBindingSource`.
 
-    -   Örneği <xref:System.Windows.Forms.BindingNavigator> adlı `customersBindingNavigator`. Gerekmeyen şekilde, bu denetim silebilirsiniz.
+    - Örneği <xref:System.Windows.Forms.BindingNavigator> adlı `customersBindingNavigator`. Gerekmeyen şekilde, bu denetim silebilirsiniz.
 
-    -   Verilere bağlı <xref:System.Windows.Forms.ComboBox> adlı `CustomerID`.
+    - Verilere bağlı <xref:System.Windows.Forms.ComboBox> adlı `CustomerID`.
 
-    -   A <xref:System.Windows.Forms.Label>.
+    - A <xref:System.Windows.Forms.Label>.
 
 3. Sürükleme **siparişler** forma gezinme özelliği.
 

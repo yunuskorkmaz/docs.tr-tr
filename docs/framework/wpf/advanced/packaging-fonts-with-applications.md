@@ -11,11 +11,11 @@ helpviewer_keywords:
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
 ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773246"
 ---
 # <a name="packaging-fonts-with-applications"></a>Uygulamalarla Yazı Tiplerini Paketleme
 Bu konuda paket yazı tipleri ile nasıl genel bir bakış sağlar, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama.  
@@ -158,17 +158,17 @@ Bu konuda paket yazı tipleri ile nasıl genel bir bakış sağlar, [!INCLUDE[TL
 ## <a name="limitations-on-font-usage"></a>Yazı tipi kullanımı sınırlamaları  
  Aşağıdaki listede, paketleme ve yazı tiplerinin kullanımı bazı sınırlamaları açıklanmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar:  
   
--   **Yazı tipi katıştırma izin bitleri:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları denetlemez veya izin bitlerini herhangi bir yazı tipi zorla. Bkz: [Introduction_to_Packing yazı tipleri](#introduction_to_packaging_fonts) bölümünde daha fazla bilgi için.  
+- **Yazı tipi katıştırma izin bitleri:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları denetlemez veya izin bitlerini herhangi bir yazı tipi zorla. Bkz: [Introduction_to_Packing yazı tipleri](#introduction_to_packaging_fonts) bölümünde daha fazla bilgi için.  
   
--   **Site kaynak yazı tipi:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaların http veya ftp yazı tipi başvuru izin vermiyor [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
+- **Site kaynak yazı tipi:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaların http veya ftp yazı tipi başvuru izin vermiyor [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
   
--   **Paketi kullanarak bir mutlak URI: gösterimi:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar oluşturmanızı verme bir <xref:System.Windows.Media.FontFamily> program aracılığıyla kullanarak nesne "paketi:" mutlak bir parçası olarak [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] bir yazı tipi başvuru. Örneğin, `"pack://application:,,,/resources/#Pericles Light"` geçersiz yazı tipi başvurudur.  
+- **Paketi kullanarak bir mutlak URI: gösterimi:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar oluşturmanızı verme bir <xref:System.Windows.Media.FontFamily> program aracılığıyla kullanarak nesne "paketi:" mutlak bir parçası olarak [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] bir yazı tipi başvuru. Örneğin, `"pack://application:,,,/resources/#Pericles Light"` geçersiz yazı tipi başvurudur.  
   
--   **Otomatik yazı tipi ekleme:** Tasarım sırasında uygulama kullanımını yazı tipleri aramak ve yazı tipleri uygulamanın kaynakları otomatik olarak ekleme desteği yoktur.  
+- **Otomatik yazı tipi ekleme:** Tasarım sırasında uygulama kullanımını yazı tipleri aramak ve yazı tipleri uygulamanın kaynakları otomatik olarak ekleme desteği yoktur.  
   
--   **Yazı tipi alt kümeleri:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları sabit olmayan belgeler için yazı tipi alt kümeleri oluşturmayı desteklemez.  
+- **Yazı tipi alt kümeleri:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları sabit olmayan belgeler için yazı tipi alt kümeleri oluşturmayı desteklemez.  
   
--   Durumlarda hatalı bir başvuru olduğunda, uygulama yeniden kullanılabilir bir yazı tipi kullanarak döner.  
+- Durumlarda hatalı bir başvuru olduğunda, uygulama yeniden kullanılabilir bir yazı tipi kullanarak döner.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,11 +9,11 @@ dev_langs:
 - vb
 ms.custom: seodec18
 ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663231"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Yayımlama .NET Core CLI ile uygulamaları
 

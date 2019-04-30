@@ -4,11 +4,11 @@ description: Geçiş, sorgulama ve söz dizimi ağacı walking giriş.
 ms.date: 02/05/2018
 ms.custom: mvc
 ms.openlocfilehash: e377fe10e094e958627c3503fc39b7e2d02b3d7a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706627"
 ---
 # <a name="get-started-with-syntax-analysis"></a>Söz dizimi Analizi ile çalışmaya başlama
 
@@ -58,7 +58,7 @@ Sözdizimi ağacı dört birincil yapı taşları şunlardır:
 
 Meraklısına Notlar belirteç ve düğümleri tamamen her şeyi Visual Basic veya C# kod parçasını temsil eden bir ağaç oluşturmak için hiyerarşik olarak oluşur. Bu yapı kullanarak görebilirsiniz **Syntax Visualizer** penceresi. Visual Studio'da **görünümü** > **diğer Windows** > **Syntax Visualizer**. Örneğin, önceki C# kaynak dosyası incelenirken kullanarak **Syntax Visualizer** gibi aşağıdaki şekilde görünüyor:
 
-**SyntaxNode**: mavi | **SyntaxToken**: yeşil | **SyntaxTrivia**: Red ![C# kod dosyası](media/walkthrough-csharp-syntax-figure1.png)
+**SyntaxNode**: Mavi | **SyntaxToken**: Yeşil | **SyntaxTrivia**: Kırmızı ![ C# kod dosyası](media/walkthrough-csharp-syntax-figure1.png)
 
 Bu ağaç yapısı giderek deyim, ifade, belirteci veya boşluk biti bir kod dosyasında bulabilirsiniz.
 

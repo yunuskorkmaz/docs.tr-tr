@@ -1,18 +1,18 @@
 ---
-title: XPath veri modelini kullanarak XML verilerini işleme
+title: XPath Veri Modelini Kullanarak XML Verilerini İşleme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 67fbacd24b888b9c45072bcb34031f38adc118e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703159"
 ---
-# <a name="process-xml-data-using-the-xpath-data-model"></a>XPath veri modelini kullanarak XML verilerini işleme
+# <a name="process-xml-data-using-the-xpath-data-model"></a>XPath Veri Modelini Kullanarak XML Verilerini İşleme
 <xref:System.Xml?displayProperty=nameWithType> Ad alanı XML belgeleri, parçalar, düğüm veya düğüm kümeleri bellek içi, programlı bir gösterimini sağlar kullanarak <xref:System.Xml.XmlDocument> veya <xref:System.Xml.XPath.XPathDocument> sınıfları.  
   
  <xref:System.Xml.XPath.XPathDocument> Sınıfı XPath veri modelini kullanarak bir XML belgesi hızlı, salt okunur, bellek içi bir gösterimini sağlar. <xref:System.Xml.XmlDocument> Sınıf uygulama W3C belge nesne modeli (DOM) Düzey 1 çekirdek ve çekirdek DOM düzeyi 2 olan bir XML belgesi düzenlenebilir bir bellek içi gösterimini sağlar. Her iki sınıfları uygulayan <xref:System.Xml.XPath.IXPathNavigable> arabirim ve dönüş bir <xref:System.Xml.XPath.XPathNavigator> seçin, değerlendirmek, gidin ve bazı durumlarda, temel alınan XML verileri düzenlemek için kullanılan nesne.  

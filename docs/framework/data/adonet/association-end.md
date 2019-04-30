@@ -3,27 +3,27 @@ title: association end
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
 ms.openlocfilehash: e549254533f8362ce3475fb3aa5dbaffb3e900e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769620"
 ---
 # <a name="association-end"></a>association end
 Bir *ilişkilendirme end* tanımlayan [varlık türü](../../../../docs/framework/data/adonet/entity-type.md) bir ucunda bir [ilişkilendirme](../../../../docs/framework/data/adonet/association-type.md) ve varlık sayısı bu ilişkilendirmeyi sonunda bulunabilir örnekleri yazın. İlişkilendirme ucu ilişkilendirme bir parçası olarak tanımlanır; bir ilişkiyi tam olarak iki ilişkilendirme ucu olması gerekir. [Gezinti özellikleri](../../../../docs/framework/data/adonet/navigation-property.md) gezinme bir ilişkilendirme end bölümünden diğerine sağlar.  
   
  Bir ilişkilendirme end tanımı, şu bilgileri içerir:  
   
--   İlişkilendirmesine katılan varlık türlerinden biri. (Gerekli)  
+- İlişkilendirmesine katılan varlık türlerinden biri. (Gerekli)  
   
     > [!NOTE]
     >  Belirli bir ilişkilendirme için her bir ilişkilendirme end için belirtilen varlık türü aynı olabilir. Bu, kendi kendine bir ilişkilendirme oluşturur.  
   
--   Bir [ilişkilendirme end çoğulluk](../../../../docs/framework/data/adonet/association-end-multiplicity.md) ilişkilendirme sonunda olabilir bir varlık türü örneklerinin sayısını belirtir. Bir ilişkilendirme end çoğulluk değeri (0..1) bir (1) sıfır veya bir ya da birden çok olabilir (\*).  
+- Bir [ilişkilendirme end çoğulluk](../../../../docs/framework/data/adonet/association-end-multiplicity.md) ilişkilendirme sonunda olabilir bir varlık türü örneklerinin sayısını belirtir. Bir ilişkilendirme end çoğulluk değeri (0..1) bir (1) sıfır veya bir ya da birden çok olabilir (\*).  
   
--   İlişki sonu için bir ad. (İsteğe bağlı)  
+- İlişki sonu için bir ad. (İsteğe bağlı)  
   
--   İlişkilendirme ucundaki gibi cascade delete üzerinde gerçekleştirilen işlemleri hakkında bilgiler. (İsteğe bağlı)  
+- İlişkilendirme ucundaki gibi cascade delete üzerinde gerçekleştirilen işlemleri hakkında bilgiler. (İsteğe bağlı)  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki diyagramda iki ilişkilendirmeleri kavramsal bir modelle gösterilmektedir: `PublishedBy` ve `WrittenBy`. İlişkilendirme sona için `PublishedBy` ilişkisi olan `Book` ve `Publisher` varlık türleri. Çokluğu `Publisher` sonudur bir (1) ve çeşitliliğini `Book` sonudur birçok (\*), bir yayımcı bir çok kitap yayımlar ve bir yayımcı tarafından yayımlanan bir kitap gösteren.  

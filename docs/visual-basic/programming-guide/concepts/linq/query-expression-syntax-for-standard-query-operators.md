@@ -3,11 +3,11 @@ title: Standart sorgu işleçleri (Visual Basic) için sorgu ifade sözdizimi
 ms.date: 07/20/2015
 ms.assetid: eb978d86-d3b5-497b-95ce-a054bea8f510
 ms.openlocfilehash: bdbca93d5898e363ccf62b13231163573e2ba972
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766538"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>Standart sorgu işleçleri (Visual Basic) için sorgu ifade sözdizimi
 Bazı daha sık kullanılan standart sorgu işleçlerinin bir parçası olarak çağrılacak etkinleştirir Visual Basic dil anahtar sözcüğü söz dizimine adanmış bir *sorgu ifadesi*. Sorgu ifadesi ifade değerinden bir sorgu, farklı, daha okunabilir bir form olan kendi *yöntemi tabanlı* eşdeğer. Sorgu ifadesi tümceleri sorgu yöntemlere yapılan çağrılar derleme zamanında çevrilir.  

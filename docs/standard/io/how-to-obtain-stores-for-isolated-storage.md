@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yalıtılmış depolama için depoları alma'
+title: 'Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,22 +16,22 @@ ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0968443af28e2d403b08a1af50846e7a1369db49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751754"
 ---
-# <a name="how-to-obtain-stores-for-isolated-storage"></a>Nasıl yapılır: Yalıtılmış depolama için depoları alma
+# <a name="how-to-obtain-stores-for-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma
 Bir yalıtılmış depolama bir veri bölmesi sanal dosya sisteminde kullanıma sunar. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Sınıfı bir dizi bir yalıtılmış depolama ile etkileşim kurmak için yöntem sağlar. Oluşturma ve depoları almak için <xref:System.IO.IsolatedStorage.IsolatedStorageFile> üç statik yöntemler sağlar:  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> Kullanıcı ve derlemeye göre yalıtılmış depolama döndürür.  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> Kullanıcı ve derlemeye göre yalıtılmış depolama döndürür.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> etki alanı ve derlemeye göre yalıtılır depolama döndürür.  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> etki alanı ve derlemeye göre yalıtılır depolama döndürür.  
   
      Her iki yöntem içinden çağrılır koda ait bir depolama alın.  
   
--   Statik yöntem <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> kapsam parametre birleşimi geçirerek belirtilen bir yalıtılmış depolama döndürür.  
+- Statik yöntem <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> kapsam parametre birleşimi geçirerek belirtilen bir yalıtılmış depolama döndürür.  
   
  Aşağıdaki kod, kullanıcı, derleme ve etki alanı tarafından izole edilmiş bir depo döndürür.  
   

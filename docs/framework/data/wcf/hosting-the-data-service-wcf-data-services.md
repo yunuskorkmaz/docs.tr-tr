@@ -9,32 +9,32 @@ helpviewer_keywords:
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
 ms.openlocfilehash: e738fa1feebdd91bdb84484340b31e599d7f5f76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765586"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Veri hizmetini (WCF Veri Hizmetleri) barındırma
 WCF veri hizmetlerini kullanarak, verileri olarak kullanıma sunan bir hizmet oluşturabilmeniz için bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış. Bu veri hizmeti öğesinden devralınan bir sınıf olarak tanımlanan <xref:System.Data.Services.DataService%601>. Bu sınıf, OData gerektirdiği yanıt iletilerini istek iletilerini işlemek ve güncelleştirmeleri veri kaynağına karşı gerçekleştirmek için gereken işlevleri sağlar. Ancak, bir veri hizmeti bağlamak ve bir ağ yuvayı için gelen HTTP istek dinleyemedi. Bu gerekli işlevselliği için veri hizmetini barındıran bir bileşende kullanır.
 
  Veri Hizmeti ana veri hizmeti adına aşağıdaki görevleri gerçekleştirir:
 
--   İsteklerini dinler ve bu istekleri veri hizmetine yönlendirir.
+- İsteklerini dinler ve bu istekleri veri hizmetine yönlendirir.
 
--   Her istek için veri Hizmeti'nin bir örneğini oluşturur.
+- Her istek için veri Hizmeti'nin bir örneğini oluşturur.
 
--   İstekleri veri hizmeti gelen isteği işleyemedi.
+- İstekleri veri hizmeti gelen isteği işleyemedi.
 
--   Veri hizmeti adına yanıtı gönderir.
+- Veri hizmeti adına yanıtı gönderir.
 
  Veri hizmetini barındıran basitleştirmek için WCF Veri Hizmetleri Windows Communication Foundation (WCF) ile tümleştirmek için tasarlanmıştır. Veri Hizmeti ana bilgisayar olarak hizmet veren bir varsayılan WCF uygulaması veri hizmetinin sağladığı bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama. Bu nedenle, aşağıdaki yollardan birinde bir veri hizmeti barındırabilirsiniz:
 
--   İçinde bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama.
+- İçinde bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama.
 
--   Yönetilen bir uygulamada, şirket içinde barındırılan WCF hizmetleri destekler.
+- Yönetilen bir uygulamada, şirket içinde barındırılan WCF hizmetleri destekler.
 
--   Bazı diğer özel veri hizmeti ana bilgisayar.
+- Bazı diğer özel veri hizmeti ana bilgisayar.
 
 ## <a name="hosting-a-data-service-in-an-aspnet-application"></a>Bir ASP.NET uygulamasında veri hizmeti barındırma
 
@@ -65,13 +65,13 @@ Kullanırken **Yeni Öğe Ekle** iletişim Aracı'nı bir ASP.NET uygulamasında
 ## <a name="defining-a-custom-data-service-host"></a>Bir özel veri hizmeti ana bilgisayarı tanımlama
  WCF konak uygulama çok kısıtlayıcı olduğu durumlarda, veri hizmeti için özel bir ana bilgisayar da tanımlayabilirsiniz. Uygulayan sınıfa <xref:System.Data.Services.IDataServiceHost> arabirimi kullanılabilir ağ ana bilgisayarı için bir veri hizmeti. Özel bir ana bilgisayar uygulamalıdır <xref:System.Data.Services.IDataServiceHost> arabirim ve veri hizmeti ana bilgisayarının aşağıdaki temel sorumluluklarını işleyebilir:
 
--   Veri hizmetinin Hizmet kök yoluyla sağlar.
+- Veri hizmetinin Hizmet kök yoluyla sağlar.
 
--   İşlem istek ve yanıt üst bilgileri uygun <xref:System.Data.Services.IDataServiceHost> üye uygulaması.
+- İşlem istek ve yanıt üst bilgileri uygun <xref:System.Data.Services.IDataServiceHost> üye uygulaması.
 
--   Veri Hizmeti tarafından oluşturulan özel durumları işler.
+- Veri Hizmeti tarafından oluşturulan özel durumları işler.
 
--   Sorgu dizesi parametreleri doğrulayın.
+- Sorgu dizesi parametreleri doğrulayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

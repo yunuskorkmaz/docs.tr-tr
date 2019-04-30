@@ -11,11 +11,11 @@ helpviewer_keywords:
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
 ms.openlocfilehash: a46942188fd417b46ba4feb44d436800e1362098
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764653"
 ---
 # <a name="wpf-xaml-namescopes"></a>WPF XAML Ad Kapsamları
 XAML ad kapsamları tanımlayan bir kavram, XAML içinde tanımlanan nesneler var. XAML namescope adlarında bir nesne ağacında nesnelerin XAML tanımlı adlarını ve örnek eşdeğerlerine arasındaki ilişkileri kurmak için kullanılabilir. Genellikle, XAML ad kapsamları içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yönetilen kod, bir XAML uygulaması için tek tek XAML sayfa yükleme kökleri olduğunda oluşturulur. XAML ad kapsamları programlama nesnesi tarafından tanımlanan <xref:System.Windows.Markup.INameScope> arabirim ve ayrıca pratik bir sınıf tarafından uygulanan <xref:System.Windows.NameScope>.  
@@ -76,13 +76,13 @@ XAML ad kapsamları tanımlayan bir kavram, XAML içinde tanımlanan nesneler va
 ### <a name="xaml-namescope-implementations"></a>XAML Namescope uygulamaları  
  Aşağıdaki sınıflar uygulama <xref:System.Windows.Markup.INameScope> doğrudan:  
   
--   <xref:System.Windows.NameScope>  
+- <xref:System.Windows.NameScope>  
   
--   <xref:System.Windows.Style>  
+- <xref:System.Windows.Style>  
   
--   <xref:System.Windows.ResourceDictionary>  
+- <xref:System.Windows.ResourceDictionary>  
   
--   <xref:System.Windows.FrameworkTemplate>  
+- <xref:System.Windows.FrameworkTemplate>  
   
  <xref:System.Windows.ResourceDictionary> XAML adı veya ad kapsamları kullanmaz; Sözlük uygulamasını olduğu için bunun yerine, anahtarları kullanır. Yalnızca neden <xref:System.Windows.ResourceDictionary> uygulayan <xref:System.Windows.Markup.INameScope> için doğru bir XAML namescope arasındaki ayrımı daha açıklayıcı özel durum kullanıcı kodunda oluşturabilir ve nasıl bir <xref:System.Windows.ResourceDictionary> anahtarları, işler ve ayrıca XAML ad kapsamları için uygulanmaz güvence altına almak için bir <xref:System.Windows.ResourceDictionary> üst öğeler tarafından.  
   
@@ -90,9 +90,9 @@ XAML ad kapsamları tanımlayan bir kavram, XAML içinde tanımlanan nesneler va
   
  Aşağıdaki sınıfları kullanarak kendi XAML namescope tanımladığınız <xref:System.Windows.NameScope?displayProperty=nameWithType> yardımcı sınıf ve XAML namescope uygulaması bağlanma <xref:System.Windows.NameScope.NameScope%2A?displayProperty=nameWithType> ekli özellik:  
   
--   <xref:System.Windows.FrameworkElement>  
+- <xref:System.Windows.FrameworkElement>  
   
--   <xref:System.Windows.FrameworkContentElement>  
+- <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

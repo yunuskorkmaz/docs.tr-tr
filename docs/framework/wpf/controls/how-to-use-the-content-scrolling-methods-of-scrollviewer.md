@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ScrollViewer control [WPF], scrolling methods
 ms.assetid: 4708cc65-6510-45f8-82e6-30b0d3e30045
 ms.openlocfilehash: e81c63de16d09de8435d5ec49a013bf8dc5927cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697311"
 ---
 # <a name="how-to-use-the-content-scrolling-methods-of-scrollviewer"></a>Nasıl yapılır: ScrollViewer'ın İçerik Kaydırma Yöntemlerini Kullanma
 Bu örnek, kaydırma yöntemlerini kullanma işlemini gösterir. <xref:System.Windows.Controls.ScrollViewer> öğesi. Artımlı içeriğini, çizgi veya sayfası, kaydırma bu yöntemler sağlayan bir <xref:System.Windows.Controls.ScrollViewer>.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
 ms.openlocfilehash: be3c74e8f8c69eb9f0a1d0dda4d6c90dfd7e567a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760746"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Nasıl yapılır: Özellik adları ve türleri (Visual Basic) anonim türde bildirimlerden çıkarma
 Anonim türler, doğrudan özellikleri veri türlerini belirtmek için bir mekanizma sağlar. Tüm özelliklerin türleri algılanır. Aşağıdaki örnekte, türlerini `Name` ve `Price` doğrudan bunları başlatmak için kullanılan değerlerden algılanır.  
@@ -24,11 +24,11 @@ Anonim türler, doğrudan özellikleri veri türlerini belirtmek için bir mekan
   
 #### <a name="anonymous-types-can-infer-property-names-and-types-from-the-following-sources"></a>Anonim türler, özellik adları ve türlerini aşağıdaki kaynaklardan çıkarabilir:  
   
--   Değişken adları. Anonim tür `anonProduct` iki özelliği vardır `productName` ve `productPrice`. Bu özgün değişkenlerin veri türlerini olacaktır `String` ve `Double`sırasıyla.  
+- Değişken adları. Anonim tür `anonProduct` iki özelliği vardır `productName` ve `productPrice`. Bu özgün değişkenlerin veri türlerini olacaktır `String` ve `Double`sırasıyla.  
   
      [!code-vb[VbVbalrAnonymousTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#11)]  
   
--   Özellik veya alan adlarından diğer nesne. Örneğin, bir `car` nesnesinin bir `CarClass` içeren tür `Name` ve `ID` özellikleri. Yeni bir anonim tür örneği oluşturmak için `car1`, ile `Name` ve `ID` değerlerle başlatılan özellikleri `car` nesnesi, aşağıdakileri yazın:  
+- Özellik veya alan adlarından diğer nesne. Örneğin, bir `car` nesnesinin bir `CarClass` içeren tür `Name` ve `ID` özellikleri. Yeni bir anonim tür örneği oluşturmak için `car1`, ile `Name` ve `ID` değerlerle başlatılan özellikleri `car` nesnesi, aşağıdakileri yazın:  
   
      [!code-vb[VbVbalrAnonymousTypes#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#34)]  
   
@@ -36,13 +36,13 @@ Anonim türler, doğrudan özellikleri veri türlerini belirtmek için bir mekan
   
      [!code-vb[VbVbalrAnonymousTypes#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#35)]  
   
--   XML üye adları.  
+- XML üye adları.  
   
      [!code-vb[VbVbalrAnonymousTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#12)]  
   
      Sonuç türü `anon` bir özelliğe sahip `Book`, türü <xref:System.Collections.IEnumerable>, (XElement).  
   
--   Hiçbir parametre gibi olan bir işlevden `SomeFunction` aşağıdaki örnekte.  
+- Hiçbir parametre gibi olan bir işlevden `SomeFunction` aşağıdaki örnekte.  
   
      `Dim sc As New SomeClass`  
   
@@ -56,7 +56,7 @@ Anonim türler, doğrudan özellikleri veri türlerini belirtmek için bir mekan
   
 #### <a name="name-inference-will-fail-in-many-circumstances-including-the-following"></a>Aşağıdakiler dahil olmak üzere çoğu durumda, adı anlam çıkarma başarısız olur:  
   
--   Çıkarım bir yöntemi, bir oluşturucu veya bağımsız değişken gerektirir parametreli bir özellik çağrısından türetilir. Önceki bildirimi `anon1` başarısız olur `someFunction` bir veya daha fazla bağımsız değişkenlere sahiptir.  
+- Çıkarım bir yöntemi, bir oluşturucu veya bağımsız değişken gerektirir parametreli bir özellik çağrısından türetilir. Önceki bildirimi `anon1` başarısız olur `someFunction` bir veya daha fazla bağımsız değişkenlere sahiptir.  
   
      `' Not valid.`  
   
@@ -68,7 +68,7 @@ Anonim türler, doğrudan özellikleri veri türlerini belirtmek için bir mekan
   
      `Dim anon4 = New With {Key .FunResult = sc.someFunction(someArg)}`  
   
--   Çıkarım karmaşık bir ifadeden türetilir.  
+- Çıkarım karmaşık bir ifadeden türetilir.  
   
     ```  
     Dim aString As String = "Act "  
@@ -80,7 +80,7 @@ Anonim türler, doğrudan özellikleri veri türlerini belirtmek için bir mekan
   
      [!code-vb[VbVbalrAnonymousTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#14)]  
   
--   Birden çok özellik için çıkarım aynı ada sahip iki veya daha fazla özellik oluşturur. Geri bildirimleri önceki örneklerde başvuran, her ikisi de listelenemiyor `product.Name` ve `car1.Name` aynı anonim tür özellikleri. Bunların her biri için çıkarsanan tanımlayıcı olacağından budur `Name`.  
+- Birden çok özellik için çıkarım aynı ada sahip iki veya daha fazla özellik oluşturur. Geri bildirimleri önceki örneklerde başvuran, her ikisi de listelenemiyor `product.Name` ve `car1.Name` aynı anonim tür özellikleri. Bunların her biri için çıkarsanan tanımlayıcı olacağından budur `Name`.  
   
      `' Not valid.`  
   
@@ -98,7 +98,7 @@ Anonim türler, doğrudan özellikleri veri türlerini belirtmek için bir mekan
   
      `' Dim anon7 = New With {Key product.Price, Key price}`  
   
--   Bir özelliğin değerini ve başlangıç türü henüz kurulmasa başka bir özellikte bağlıdır. Örneğin, `.IDName = .LastName` bir anonim tür bildiriminde geçerli değil sürece `.LastName` zaten başlatıldı.  
+- Bir özelliğin değerini ve başlangıç türü henüz kurulmasa başka bir özellikte bağlıdır. Örneğin, `.IDName = .LastName` bir anonim tür bildiriminde geçerli değil sürece `.LastName` zaten başlatıldı.  
   
      `' Not valid.`  
   
@@ -108,7 +108,7 @@ Anonim türler, doğrudan özellikleri veri türlerini belirtmek için bir mekan
   
      [!code-vb[VbVbalrAnonymousTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#15)]  
   
--   Anonim türün bir özellik adı bir üyesinin adıyla aynı olduğu <xref:System.Object>. Örneğin, aşağıdaki bildirimi nedeniyle başarısız `Equals` bir yöntemidir <xref:System.Object>.  
+- Anonim türün bir özellik adı bir üyesinin adıyla aynı olduğu <xref:System.Object>. Örneğin, aşağıdaki bildirimi nedeniyle başarısız `Equals` bir yöntemidir <xref:System.Object>.  
   
      `' Not valid.`  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
 ms.openlocfilehash: 8e6ddab16c59d7ce95d96b377e3f372f6ebe5278
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751611"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>Paylaşılan üyeye bir örnek üzerinden erişim; niteleyen ifade değerlendirilmeyecek
 Bir sınıfın veya yapının bir örnek değişkeni kullanılan erişmek için bir `Shared` değişken, özellik, yordam veya o sınıfta veya yapıda da tanımlı olay. Bu uyarı bir sınıf veya yapı, sabit veya sabit listesi, bir iç içe geçmiş sınıf veya yapı gibi örtük olarak paylaşılan bir üyesine erişmek için kullanılan bir örnek değişkeni de oluşabilir.  
@@ -29,7 +29,7 @@ Bir sınıfın veya yapının bir örnek değişkeni kullanılan erişmek için 
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Sınıf veya tanımlayan yapısını adını kullanın `Shared` , aşağıdaki örnekte gösterildiği gibi erişmek için üye.  
+- Sınıf veya tanımlayan yapısını adını kullanın `Shared` , aşağıdaki örnekte gösterildiği gibi erişmek için üye.  
   
 ```vb  
 Public Class testClass  

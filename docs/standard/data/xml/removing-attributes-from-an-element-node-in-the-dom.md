@@ -6,11 +6,11 @@ ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0e38ad777112e5e88fe40c530da6107d0de0e3ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698726"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>DOM’da Bir Öğe Düğümünden Öznitelikleri Kaldırma
 Öznitelikleri kaldırmak için birçok yolu vardır. Öznitelik koleksiyonundan kaldırabilirsiniz bir tekniktir. Bunu yapmak için aşağıdaki adımları gerçekleştirilir:  
@@ -19,19 +19,19 @@ ms.locfileid: "59336141"
   
 2. Öznitelik, öznitelik koleksiyonundan üç yöntemden birini kullanarak kaldırın:  
   
-    -   Kullanım <xref:System.Xml.XmlAttributeCollection.Remove%2A> belirli bir öznitelik kaldırmak için.  
+    - Kullanım <xref:System.Xml.XmlAttributeCollection.Remove%2A> belirli bir öznitelik kaldırmak için.  
   
-    -   Kullanım <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> tüm öznitelikler koleksiyondan Kaldır ve özniteliklere bir öğe bırakın.  
+    - Kullanım <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> tüm öznitelikler koleksiyondan Kaldır ve özniteliklere bir öğe bırakın.  
   
-    -   Kullanım <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> bir özniteliği öznitelik koleksiyonundan dizin numarası kullanarak kaldırmak için.  
+    - Kullanım <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> bir özniteliği öznitelik koleksiyonundan dizin numarası kullanarak kaldırmak için.  
   
  Aşağıdaki yöntemlerden öğe düğümünden öznitelikleri kaldırın.  
   
--   Kullanım <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> öznitelik koleksiyonundan kaldırılamadı.  
+- Kullanım <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> öznitelik koleksiyonundan kaldırılamadı.  
   
--   Kullanım <xref:System.Xml.XmlElement.RemoveAttribute%2A> tek bir öznitelik ada göre Koleksiyondan kaldırılacak.  
+- Kullanım <xref:System.Xml.XmlElement.RemoveAttribute%2A> tek bir öznitelik ada göre Koleksiyondan kaldırılacak.  
   
--   Kullanım <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> tek bir öznitelik koleksiyonundan dizin numarası ile kaldırmak için.  
+- Kullanım <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> tek bir öznitelik koleksiyonundan dizin numarası ile kaldırmak için.  
   
  Öğesi, öznitelik koleksiyonundan öznitelik alma ve doğrudan öznitelik düğümü kaldırmak için bir daha fazla seçenek var. Öznitelik öznitelik koleksiyonundan almak için bir ad kullanabilirsiniz `XmlAttribute attr = attrs["attr_name"];`, dizin `XmlAttribute attr = attrs[0];`, veya ad alanı adıyla tam olarak uygun `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`.  
   

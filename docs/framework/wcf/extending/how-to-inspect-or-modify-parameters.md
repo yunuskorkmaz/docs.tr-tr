@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
 ms.openlocfilehash: 2e294b7970a58fad9385802470a514e5a9240495
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766870"
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>Nasıl yapılır: Parametreleri İnceleme veya Değiştirme
 İnceleme veya gelen veya giden iletiler için bir Windows Communication Foundation (WCF) istemci nesnesi veya bir WCF hizmetini sunucuda tek bir işlem uygulayarak değiştirme <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> arabirimi ve istemci veya hizmet çalışma zamanına ekleme. Genellikle işlem davranışı, tek bir işlem için parametre denetçiler eklemek için kullanılır; diğer davranışlar çalışma zamanı büyük bir kapsamda kolay erişim sağlamak için kullanılabilir. Daha fazla bilgi için [genişletme istemciler](../../../../docs/framework/wcf/extending/extending-clients.md) ve [dağıtıcıları genişletme](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
@@ -26,11 +26,11 @@ ms.locfileid: "59303979"
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örnekleri, sırada göster:  
   
--   Bir parametre denetçisi uygulaması.  
+- Bir parametre denetçisi uygulaması.  
   
--   Parametre Inspector'ı kullanarak ekler davranışını uygulama bir <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>ve bir <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>.  
+- Parametre Inspector'ı kullanarak ekler davranışını uygulama bir <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>ve bir <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>.  
   
--   Yükleyen ve istemci üzerinde parametresi Inspector'ı eklemek için bir istemci uygulaması, uç nokta davranışı çalışır bir yapılandırma dosyası.  
+- Yükleyen ve istemci üzerinde parametresi Inspector'ı eklemek için bir istemci uygulaması, uç nokta davranışı çalışır bir yapılandırma dosyası.  
   
  [!code-csharp[Interceptors#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/interceptors.cs#4)]
  [!code-vb[Interceptors#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/interceptors.vb#4)]  

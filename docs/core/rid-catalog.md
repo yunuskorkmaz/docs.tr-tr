@@ -3,11 +3,11 @@ title: .NET core çalışma zamanı tanımlayıcı (RID) Kataloğu
 description: Çalışma zamanı tanımlayıcı (RID) ve RID'de .NET Core nasıl kullanıldığı hakkında bilgi edinin.
 ms.date: 02/22/2019
 ms.openlocfilehash: 0d03e39c755b43e145edf5efe48422cbae7abcab
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663082"
 ---
 # <a name="net-core-rid-catalog"></a>.NET core RID Kataloğu
 

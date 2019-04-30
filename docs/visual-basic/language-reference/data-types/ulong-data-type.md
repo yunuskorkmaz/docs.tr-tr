@@ -17,11 +17,11 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
 ms.openlocfilehash: 82a2badc1bb22a55f753c9075562db3a5ee0d234
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747087"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong veri türü (Visual Basic)
 
@@ -64,19 +64,19 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 
 ## <a name="programming-tips"></a>Programlama ipuçları
   
--   **Negatif sayılar.** Çünkü `ULong` işaretsiz bir türü, negatif bir sayıyı temsil edemez. Tek işlenenli eksi işareti kullanırsanız (`-`) yazmak için değerlendirilen bir ifade işlecinin `ULong`, Visual Basic ifade dönüştürür `Decimal` ilk.  
+- **Negatif sayılar.** Çünkü `ULong` işaretsiz bir türü, negatif bir sayıyı temsil edemez. Tek işlenenli eksi işareti kullanırsanız (`-`) yazmak için değerlendirilen bir ifade işlecinin `ULong`, Visual Basic ifade dönüştürür `Decimal` ilk.  
   
--   **CLS uyumluluğu.** `ULong` Veri türü değil parçası [ortak dil belirtimi](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), böylece onu kullanan bileşen CLS uyumlu kod kullanamıyor.  
+- **CLS uyumluluğu.** `ULong` Veri türü değil parçası [ortak dil belirtimi](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), böylece onu kullanan bileşen CLS uyumlu kod kullanamıyor.  
   
--   **Birlikte çalışabilirlik değerlendirmeleri.** Örnek otomasyon ve COM nesneleri için .NET Framework için yazılmaz bileşenleriyle arabirim, gibi türleri akılda tutulması `ulong` diğer ortamlarda farklı veri genişliği (32 bit) olabilir. Bir 32-bit bağımsız değişkeni böyle bir bileşene geçiriyorsanız, olarak bildirin `UInteger` yerine `ULong` Yönetilen Visual Basic kodunuzda.  
+- **Birlikte çalışabilirlik değerlendirmeleri.** Örnek otomasyon ve COM nesneleri için .NET Framework için yazılmaz bileşenleriyle arabirim, gibi türleri akılda tutulması `ulong` diğer ortamlarda farklı veri genişliği (32 bit) olabilir. Bir 32-bit bağımsız değişkeni böyle bir bileşene geçiriyorsanız, olarak bildirin `UInteger` yerine `ULong` Yönetilen Visual Basic kodunuzda.  
   
      Ayrıca, Windows 95, Windows 98, Windows ME veya Windows 2000 Otomasyon 64-bit tamsayıya desteklemez. Bir Visual Basic geçirilemez `ULong` bir Otomasyon bileşen bu platformlardaki bağımsız değişkeni.  
   
--   **Genişletme.** `ULong` Widens veri türü için `Decimal`, `Single`, ve `Double`. Yani dönüştürebilirsiniz `ULong` karşılaşmadan bu türlerden birine bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
+- **Genişletme.** `ULong` Widens veri türü için `Decimal`, `Single`, ve `Double`. Yani dönüştürebilirsiniz `ULong` karşılaşmadan bu türlerden birine bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
   
--   **Tür karakterleri.** Değişmez değer türü karakterleri ekleme `UL` sabit değerine zorlar `ULong` veri türü. `ULong` hiçbir tanımlayıcı türü karakteri var.
+- **Tür karakterleri.** Değişmez değer türü karakterleri ekleme `UL` sabit değerine zorlar `ULong` veri türü. `ULong` hiçbir tanımlayıcı türü karakteri var.
   
--   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.UInt64?displayProperty=nameWithType> yapısı.  
+- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.UInt64?displayProperty=nameWithType> yapısı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

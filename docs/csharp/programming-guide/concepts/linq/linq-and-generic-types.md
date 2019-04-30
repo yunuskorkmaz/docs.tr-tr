@@ -7,11 +7,11 @@ helpviewer_keywords:
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
 ms.openlocfilehash: cd0fae0c7d99491f21e5e1fb265e4aabafaa63c4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59332705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667616"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ ve Genel Türler (C#)
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Sorgu'nün 2.0 sürümünde tanıtılan genel türler dayanır [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Sorguları yazmaya başlamadan önce bir ayrıntılı bilgilere genel türler gerekmez. Ancak, iki temel kavramları anlamak isteyebilirsiniz:  
@@ -38,5 +38,5 @@ ms.locfileid: "59332705"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#'de LINQ'e Başlarken](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Genel Türler](../../../../csharp/programming-guide/generics/index.md)

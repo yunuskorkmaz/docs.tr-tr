@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Bir Namespace (XPath-LINQ to XML) içindeki öğeleri 
 ms.date: 07/20/2015
 ms.assetid: cae1c4ac-6cd5-46cf-9b1c-bd85bc9b7ea9
 ms.openlocfilehash: 8ba5fc03bbd831cfee0c4fd15e71708c4eafd212
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667989"
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a>Nasıl yapılır: Bir Namespace (XPath-LINQ to XML) içindeki öğeleri bulma (C#)
 XPath ifadeleri düğüm, belirli bir ad alanında bulabilirsiniz. XPath ifadeleri, ad alanı öneklerini ad alanları belirtmek için kullanın. Ad alanı öneklerini içeren bir XPath ifadesi ayrıştırılamadı XPath yöntemlere uygulayan bir nesne geçmelidir. <xref:System.Xml.IXmlNamespaceResolver>. Bu örnekte <xref:System.Xml.XmlNamespaceManager>.  

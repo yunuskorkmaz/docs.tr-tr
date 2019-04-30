@@ -3,11 +3,11 @@ title: <idn> Öğesi (Uri Ayarları)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 ms.openlocfilehash: 2d2729f9120d6b6fe673904ad2bf6d005ddf5469
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705122"
 ---
 # <a name="idn-element-uri-settings"></a>\<IDN > öğesi (Uri ayarları)
 Bir etki alanı adı için Uluslararası yapılan etki alanı adı (IDN) ayrıştırma uygulanıp uygulanmadığını belirtir.  
@@ -37,7 +37,7 @@ Bir etki alanı adı için Uluslararası yapılan etki alanı adı (IDN) ayrış
 |`enabled`|Bir etki alanı adı için Uluslararası yapılan etki alanı adı (IDN) ayrıştırma uygulanırsa Yok'tur varsayılan değeri belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- None  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -60,15 +60,15 @@ Bir etki alanı adı için Uluslararası yapılan etki alanı adı (IDN) ayrış
   
  IDN için kullanılan DNS sunucularını bağlı olarak üç olası değer vardır:  
   
--   Etkin IDN = All  
+- Etkin IDN = All  
   
      Bu değer herhangi bir Unicode etki alanı adı Punycode eşdeğerleri (IDN adları) dönüştürür.  
   
--   Etkin IDN AllExceptIntranet =  
+- Etkin IDN AllExceptIntranet =  
   
      Bu değer, tüm Unicode olmayan Yerel Intranet Punycode eşdeğerleri (IDN adı) kullanmak için etki alanı adlarına dönüştürür. Bu durumda yerel Intranet üzerindeki uluslararası adları işlemek için Intranet için kullanılan DNS sunucularını Unicode ad çözümlemesi desteklemelidir.  
   
--   Etkin IDN = yok  
+- Etkin IDN = yok  
   
      Bu değer, zayıf kod kullanmak için herhangi bir Unicode etki alanı adı dönüşmez. .NET Framework 2.0 davranışı ile tutarlı olan varsayılan değer budur.  
   

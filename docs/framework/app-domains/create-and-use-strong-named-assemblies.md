@@ -15,11 +15,11 @@ ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bdc9d6e954c75ccfeea15ec163bc81e7a3ab8ab7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705782"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Tanımlayıcı adlı derlemeler oluşturma ve kullanma
 
@@ -36,9 +36,9 @@ Bir derlemeyi katı bir adla imzalama ve daha sonra bu adla başvurduğu işlemi
 
 1. Aşağıdaki yöntemlerden birini kullanarak güçlü bir adla derlemesi oluşturulur:
 
-    -   Visual Studio gibi güçlü adlar oluşturma destekleyen bir geliştirme ortamı kullanarak.
+    - Visual Studio gibi güçlü adlar oluşturma destekleyen bir geliştirme ortamı kullanarak.
 
-    -   Kullanarak şifreleme anahtar çifti oluşturma [tanımlayıcı ad Aracı (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) ve bu anahtar çifti kullanarak derleme komut satırı derleyicisi atama veya [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Windows Yazılım Geliştirme Seti (SDK), Sn.exe hem Al.exe sağlar.
+    - Kullanarak şifreleme anahtar çifti oluşturma [tanımlayıcı ad Aracı (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) ve bu anahtar çifti kullanarak derleme komut satırı derleyicisi atama veya [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Windows Yazılım Geliştirme Seti (SDK), Sn.exe hem Al.exe sağlar.
 
 2. Geliştirme ortamı veya aracı geliştiricinin özel anahtara sahip derleme bildirimini içeren dosyayı karma imzalar. Bu dijital imza A derleme bildirimini içeren taşınabilir yürütülebilir (PE) dosyasında depolanır.
 
@@ -55,13 +55,13 @@ Bir derlemeyi katı bir adla imzalama ve daha sonra bu adla başvurduğu işlemi
 
 Atlama özelliği, güçlü bir adla imzalanır ve aşağıdaki özelliklere sahip herhangi bir derleme için geçerlidir:
 
--   Olmadan tam olarak güvenilen <xref:System.Security.Policy.StrongName> kanıt (örneğin, `MyComputer` kanıt bölge).
+- Olmadan tam olarak güvenilen <xref:System.Security.Policy.StrongName> kanıt (örneğin, `MyComputer` kanıt bölge).
 
--   Tam olarak güvenilen yüklenen <xref:System.AppDomain>.
+- Tam olarak güvenilen yüklenen <xref:System.AppDomain>.
 
--   Bir konumdan yüklenen <xref:System.AppDomainSetup.ApplicationBase%2A> , söz konusu özellik <xref:System.AppDomain>.
+- Bir konumdan yüklenen <xref:System.AppDomainSetup.ApplicationBase%2A> , söz konusu özellik <xref:System.AppDomain>.
 
--   Gecikmeli imzalanmış değil.
+- Gecikmeli imzalanmış değil.
 
 Bu özellik tek tek uygulamalar için veya bir bilgisayar için devre dışı bırakılabilir. Bkz: [nasıl yapılır: Tanımlayıcı adlı atlama özelliğini devre dışı](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).
 

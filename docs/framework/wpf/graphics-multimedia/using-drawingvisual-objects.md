@@ -9,11 +9,11 @@ helpviewer_keywords:
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
 ms.openlocfilehash: 01e10a4b0f0bf4959850caf3951ad4ea915edb4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762117"
 ---
 # <a name="using-drawingvisual-objects"></a>DrawingVisual Nesnelerini Kullanma
 Bu konu nasıl kullanılacağına ilişkin bir genel bakış sağlar <xref:System.Windows.Media.DrawingVisual> nesneler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görsel katman.  
@@ -51,9 +51,9 @@ Bu konu nasıl kullanılacağına ilişkin bir genel bakış sağlar <xref:Syste
   
  Aşağıdaki listede iki üyeleri geçersiz kılmanız gerekir açıklanmaktadır:  
   
--   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Belirtilen dizindeki bir alt alt öğelerinin koleksiyonunu döndürür.  
+- <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Belirtilen dizindeki bir alt alt öğelerinin koleksiyonunu döndürür.  
   
--   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Bu öğe içindeki görsel alt öğe sayısını alır.  
+- <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Bu öğe içindeki görsel alt öğe sayısını alır.  
   
  Aşağıdaki örnekte, iki için geçersiz kılmalar <xref:System.Windows.FrameworkElement> üyeleri uygulanır.  
   

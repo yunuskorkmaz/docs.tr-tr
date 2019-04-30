@@ -6,11 +6,11 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
 ms.openlocfilehash: 2e0352efdd5b709984338fe4484b120bddb7d545
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704303"
 ---
 # <a name="client"></a>\<İstemci >
 `client` Öğesi, bir istemcinin bağlanabileceği uç noktaların listesini tanımlar.  
@@ -35,7 +35,7 @@ ms.locfileid: "59164365"
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
- None  
+ Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   

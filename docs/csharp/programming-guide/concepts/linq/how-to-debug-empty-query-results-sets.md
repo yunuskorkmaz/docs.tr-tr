@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Boş sorgu sonucu kümelerinin hatalarını ayıklama 
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
 ms.openlocfilehash: d77a92acf54420b5add3bb9ae8b3f0b8c5448d18
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702093"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>Nasıl yapılır: Boş sorgu sonucu kümelerinin hatalarını ayıklama (C#)
 XML ağaçlarını sorgulama sırasında sık karşılaşılan sorunlar XML ağacı varsayılan ad alanı varsa, XML değil gibi davranarak bir ad alanında geliştirici bazen sorgu yazdığını biridir.  

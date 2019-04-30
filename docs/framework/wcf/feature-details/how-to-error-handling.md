@@ -6,8 +6,8 @@ ms.openlocfilehash: 3752e358230b76d8984fa8e6a2ded43ad0eb2c6c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772976"
 ---
 # <a name="how-to-error-handling"></a>Nasıl yapılır: Hata İşleme
 Bu konuda, hata işleme kullanan bir yönlendirme yapılandırması oluşturma için gerekli temel adımlar açıklanmaktadır. Bu örnekte, bir hedef uç noktasına iletileri yönlendirilir. Bir ağ veya iletişim ilgili bir hata nedeniyle bir ileti gönderilemezse (<xref:System.ServiceModel.CommunicationException>), ileti başka bir uç noktasına gönderilir.  

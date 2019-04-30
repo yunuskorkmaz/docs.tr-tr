@@ -11,11 +11,11 @@ helpviewer_keywords:
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
 ms.openlocfilehash: c15b4939306b79f843b22dc808d88bf3d20ed555
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703419"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Erişimci Erişilebilirliğini Kısıtlama (C# Programlama Kılavuzu)
 [Alma](../../../csharp/language-reference/keywords/get.md) ve [ayarlamak](../../../csharp/language-reference/keywords/set.md) bölümlerini özelliğin veya dizin oluşturucu çağrılır *erişimcileri*. Varsayılan olarak, özellik veya dizin oluşturucu ait oldukları aynı görünürlük veya erişim düzeyini bu erişimcilerine sahip. Daha fazla bilgi için [erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md). Ancak, bazen bu erişimcileri birine erişimi kısıtlamak yararlıdır. Genellikle, bu erişilebilirliğini kısıtlama içerir `set` tutma sırasında erişimci `get` erişimci genel olarak erişilebilir. Örneğin:  
@@ -27,13 +27,13 @@ ms.locfileid: "57203710"
 ## <a name="restrictions-on-access-modifiers-on-accessors"></a>Erişim değiştiricileri kısıtlamaları  
  Erişimci değiştiriciler özellikleri veya dizin oluşturucuları kullanarak bu koşullara tabi olan:  
   
--   Bir arabirim veya açık bir erişimci değiştiriciler kullanamazsınız [arabirimi](../../../csharp/language-reference/keywords/interface.md) üye uygulaması.  
+- Bir arabirim veya açık bir erişimci değiştiriciler kullanamazsınız [arabirimi](../../../csharp/language-reference/keywords/interface.md) üye uygulaması.  
   
--   Erişimci değiştiricileri yalnızca özellik veya dizin oluşturucusu hem de varsa kullanabilirsiniz `set` ve `get` erişimcileri. Bu durumda, değiştirici, yalnızca iki erişimci her biri izin verilir.  
+- Erişimci değiştiricileri yalnızca özellik veya dizin oluşturucusu hem de varsa kullanabilirsiniz `set` ve `get` erişimcileri. Bu durumda, değiştirici, yalnızca iki erişimci her biri izin verilir.  
   
--   Özellik veya dizin oluşturucusu varsa bir [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) değiştiricisi, erişimci değiştiricisi eşleşmelidir geçersiz kılınan erişimcisinin erişimcisi varsa.  
+- Özellik veya dizin oluşturucusu varsa bir [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) değiştiricisi, erişimci değiştiricisi eşleşmelidir geçersiz kılınan erişimcisinin erişimcisi varsa.  
   
--   Erişimci erişilebilirliği düzeyde erişilebilirlik düzeyi özelliği veya dizin oluşturucu kendisini daha kısıtlayıcı olmalıdır.  
+- Erişimci erişilebilirliği düzeyde erişilebilirlik düzeyi özelliği veya dizin oluşturucu kendisini daha kısıtlayıcı olmalıdır.  
   
 ## <a name="access-modifiers-on-overriding-accessors"></a>Erişimciler geçersiz kılma üzerinde erişim değiştiricileri  
  Bir özellik veya dizin oluşturucu geçersiz kıldığınızda, geçersiz kılınan erişimcileri geçersiz kılma koda erişilebilir olması gerekir. Ayrıca, hem özellik/dizin oluşturucu ve onun erişimcilerinin erişilebilirliği, karşılık gelen geçersiz kılınan özelliğin/dizin oluşturucu ve onun erişimcilerinin eşleşmesi gerekir. Örneğin:  

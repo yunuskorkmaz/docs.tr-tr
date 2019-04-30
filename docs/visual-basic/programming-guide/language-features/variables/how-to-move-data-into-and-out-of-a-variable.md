@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
 ms.openlocfilehash: 30d1c0ab91724ac556e59b272782513ee8b8067b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756604"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Nasıl yapılır: Veri taşıma içine ve dışına bir değişken (Visual Basic)
 Bir değer atama deyiminin sol tarafında değişken adını koyarak bir değişkende depolayın.  
@@ -19,7 +19,7 @@ Bir değer atama deyiminin sol tarafında değişken adını koyarak bir değiş
   
 #### <a name="to-store-a-value-in-a-variable"></a>Değer bir değişkende depolamak için  
   
--   Değişken adı, atama deyiminin sol tarafında kullanın.  
+- Değişken adı, atama deyiminin sol tarafında kullanın.  
   
      Aşağıdaki örnek, değişkenin değerini ayarlar `alpha`.  
   
@@ -34,11 +34,11 @@ Bir değer atama deyiminin sol tarafında değişken adını koyarak bir değiş
   
 #### <a name="to-retrieve-a-value-from-a-variable"></a>Bir değişkenden gelen bir değer almak için  
   
--   Değişken adı bir ifade kullanın. Bir değişkeni kullanabilirsiniz herhangi bir sabit bir değer veya bir sabit değer dışında bir ifadede bir sabitin değeri tanımlar kullanabilirsiniz.  
+- Değişken adı bir ifade kullanın. Bir değişkeni kullanabilirsiniz herhangi bir sabit bir değer veya bir sabit değer dışında bir ifadede bir sabitin değeri tanımlar kullanabilirsiniz.  
   
      -veya-  
   
--   Eşit aşağıdaki değişken adını kullanın (`=`) bir atama ifadesinde oturum açın.  
+- Eşit aşağıdaki değişken adını kullanın (`=`) bir atama ifadesinde oturum açın.  
   
      Aşağıdaki örnek, değişkenin değerini okur `startValue` ve değişkeninin değeri kullanır `counter` bir ifadede.  
   

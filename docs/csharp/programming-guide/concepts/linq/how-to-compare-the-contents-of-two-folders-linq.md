@@ -3,20 +3,20 @@ title: 'Nasıl yapılır: İki klasör (LINQ) içeriğini karşılaştırma (C#)
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
 ms.openlocfilehash: c6a44070e251a1521e7ea94c47a3c0c9360df1b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702145"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Nasıl yapılır: İki klasör (LINQ) içeriğini karşılaştırma (C#)
 Bu örnek, iki dosya listelerini karşılaştırmak için üç yol gösterir:  
   
--   İki liste dosyası olup olmadığını belirten bir Boole değeri sorgulayarak aynıdır.  
+- İki liste dosyası olup olmadığını belirten bir Boole değeri sorgulayarak aynıdır.  
   
--   Her iki klasördeki dosyaları almak kesişimi sorgulayarak.  
+- Her iki klasördeki dosyaları almak kesişimi sorgulayarak.  
   
--   Bir klasör ancak diğer dosyaları almak ayarlanmış farkı sorgulayarak.  
+- Bir klasör ancak diğer dosyaları almak ayarlanmış farkı sorgulayarak.  
   
     > [!NOTE]
     >  Burada gösterilen teknikler herhangi türünde nesne dizileri karşılaştırmak için uyarlanabilir.  

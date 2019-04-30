@@ -1,18 +1,18 @@
 ---
-title: XML tür desteği uygulama notları
+title: XML Tür Desteği Uygulama Notları
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 73f786c8f1080d0046889958e8b3bd3165870569
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778761"
 ---
-# <a name="xml-type-support-implementation-notes"></a>XML tür desteği uygulama notları
+# <a name="xml-type-support-implementation-notes"></a>XML Tür Desteği Uygulama Notları
 Bu konu, istediğiniz bazı uygulama ayrıntılarını açıklar.  
   
 ## <a name="list-mappings"></a>Liste eşlemeleri  
@@ -34,7 +34,7 @@ Bu konu, istediğiniz bazı uygulama ayrıntılarını açıklar.
   
  <xref:System.TimeSpan> Sınıfı kısmi sıralanması desteklemez. Bunun yerine, belirli sayıda gün boyunca 1 yıl ve 1 ay seçer; 365 gün ve 30 gün sırasıyla.  
   
- Daha fazla bilgi için `xs:duration` yazın, bkz: W3C [XML şema bölümü 2: veri türleri öneri](https://www.w3.org/TR/xmlschema-2/).
+ Daha fazla bilgi için `xs:duration` yazın, bkz: W3C [XML şema bölümü 2: Veri türleri öneri](https://www.w3.org/TR/xmlschema-2/).
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>System.DateTime xs: Time ve Gregoryen tarihi türleri  
  Olduğunda bir `xs:time` değeri eşlenmiş durumda bir <xref:System.DateTime> nesnesi <xref:System.DateTime.MinValue> tarih özelliklerini başlatmak için kullanılan alanı <xref:System.DateTime> nesne (gibi <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, ve <xref:System.DateTime.Day%2A>) en küçük olası <xref:System.DateTime> değeri.  

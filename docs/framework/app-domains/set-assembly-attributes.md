@@ -13,22 +13,22 @@ ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705460"
 ---
 # <a name="setting-assembly-attributes"></a>Derleme Özniteliklerini Ayarlama
 Derleme özniteliklerinin bir derlemeyle ilgili bilgi sağlayan değerlerdir. Öznitelik bilgileri aşağıdaki kümelere ayrılmıştır:  
   
--   Derleme kimliği öznitelikleri.  
+- Derleme kimliği öznitelikleri.  
   
--   Bilgilendirme özniteliklerini.  
+- Bilgilendirme özniteliklerini.  
   
--   Derleme bildirimi öznitelikleri.  
+- Derleme bildirimi öznitelikleri.  
   
--   Tanımlayıcı ad öznitelikleri.  
+- Tanımlayıcı ad öznitelikleri.  
   
 ## <a name="assembly-identity-attributes"></a>Derleme kimliği öznitelikleri  
  Tanımlayıcı bir ada (varsa) ile birlikte üç özniteliği bir derlemenin kimliğini belirlemek: ad, sürüm ve kültür. Bu öznitelikler, bütünleştirilmiş kodun tam adı oluşturur ve kodu derlemesinde başvururken kullanılır. Öznitelik, bir derlemenin sürüm ve kültür ayarlamak için kullanabilirsiniz. Derleyicinin veya [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) derleme oluşturulduğunda derleme bildirimini içeren dosyayı temel alan adı değeri ayarlar.  

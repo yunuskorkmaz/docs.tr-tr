@@ -14,13 +14,13 @@ ms.assetid: 4c5c0539-2e37-40b7-91ce-75af5aabd3f9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7231b43551e0b0ad0a9f32e1938106895d687818
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61688923"
 ---
-# <a name="c-special-characters"></a>C# özel karakterleri
+# <a name="c-special-characters"></a>C# Özel Karakterleri
 
 Özel karakterler, bunlar tanımlandıkları için program öğesi (bir sabit dizesi, tanımlayıcı veya bir öznitelik adı) değiştirme önceden tanımlanmış ve bağlamsal karakterleridir. C# şu özel karakterleri destekler: 
 

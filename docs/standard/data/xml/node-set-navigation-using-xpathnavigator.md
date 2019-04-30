@@ -1,18 +1,18 @@
 ---
-title: XPathNavigator kullanarak düğüm kümesinde gezinme
+title: XPathNavigator Kullanarak Düğüm Kümesinde Gezinme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1a954b41-7173-40bc-8544-d430f209b1e5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 58adf0251fdc7427f493e8bf9947c081bfccd2a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698830"
 ---
-# <a name="node-set-navigation-using-xpathnavigator"></a>XPathNavigator kullanarak düğüm kümesinde gezinme
+# <a name="node-set-navigation-using-xpathnavigator"></a>XPathNavigator Kullanarak Düğüm Kümesinde Gezinme
 Düğümler üzerinden gezinebileceğiniz bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> düğüm kümesi gezinme yöntemlerinden biri kullanılarak nesne <xref:System.Xml.XPath.XPathNavigator> sınıfı. Tüm düğümleri veya seçili bir dizi seçimi yöntemlerini biri tarafından döndürülen düğümü üzerinden gidebilirsiniz <xref:System.Xml.XPath.XPathNavigator> sınıfı.  
   
 ## <a name="element-node-set-navigation"></a>Öğe düğüm kümesinde gezinme  
@@ -36,21 +36,21 @@ Düğümler üzerinden gezinebileceğiniz bir <xref:System.Xml.XPath.XPathDocume
 ## <a name="comments-and-processing-instruction-node-navigation"></a>Açıklamalar ve işlem yönergesi düğümü Gezinti  
  Aşağıdaki <xref:System.Xml.XPath.XPathNavigator> sınıf yöntemleridir yorumları taşıma veya diğer düğümleri bir XML belgesindeki yönergeleri işlemek için geçerli.  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c742410da8e7dbce53b53978516ab94243455849
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763717"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>ICLRSyncManager::CreateRWLockOwnerIterator Yöntemi
 Ortak dil çalışma zamanı (CLR) Okuyucu-Yazıcı kilit Bekleyen görevler kümesini belirlemek için kullanılacak ana bilgisayar için bir yineleyici oluşturma isteği.  
@@ -58,9 +58,9 @@ HRESULT CreateRWLockOwnerIterator (
 ## <a name="remarks"></a>Açıklamalar  
  Ana bilgisayar genellikle arama `CreateRWLockOwnerIterator`, `DeleteRWLockOwnerIterator`, ve `GetRWLockOwnerNext` kilitlenme algılaması sırasında yöntemi. Konak, CLR Okuyucu-Yazıcı kilidi Canlı girişimi yaptığından Okuyucu-Yazıcı kilidi hala geçerli olduğunu sağlamaktan sorumludur. Çeşitli stratejileri kilit doğruluğundan emin olmak konak için kullanılabilir:  
   
--   Ana sürüm Okuyucu-Yazıcı kilidi çağrılarda engelleyebilirsiniz (örneğin, [Ihostsemaphore::releasesemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) sağlarken bu blok kilitlenmeye neden olmaz.  
+- Ana sürüm Okuyucu-Yazıcı kilidi çağrılarda engelleyebilirsiniz (örneğin, [Ihostsemaphore::releasesemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) sağlarken bu blok kilitlenmeye neden olmaz.  
   
--   Konak, bu blok kilitlenmeye neden olmadığından yeniden sağlama Okuyucu-Yazıcı kilidi ile ilişkili olay nesnesindeki beklemesini çıkış engelleyebilirsiniz.  
+- Konak, bu blok kilitlenmeye neden olmadığından yeniden sağlama Okuyucu-Yazıcı kilidi ile ilişkili olay nesnesindeki beklemesini çıkış engelleyebilirsiniz.  
   
 > [!NOTE]
 >  `CreateRWLockOwnerIterator` şu anda yürütülen yönetilmeyen kod parçacıklarında çağrılmalıdır.  

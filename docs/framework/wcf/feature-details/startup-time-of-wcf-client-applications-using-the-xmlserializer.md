@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: XmlSerializer Kullanarak WCF İstemci Uygulamalarını
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
 ms.openlocfilehash: b6f010cb5edc3111f05c78f5d27cf178bd501ef9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747634"
 ---
 # <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Nasıl yapılır: XmlSerializer Kullanarak WCF İstemci Uygulamalarının Başlangıç Zamanlarını İyileştirme
 Hizmetler ve seri hale getirilebilir kullanarak veri türlerini kullanan istemci uygulamalar <xref:System.Xml.Serialization.XmlSerializer> oluşturmak ve yavaş başlatma performansı düşürebilir çalışma zamanında bu veri türleri için serileştirme kodu derleyin.  
@@ -37,11 +37,11 @@ Hizmetler ve seri hale getirilebilir kullanarak veri türlerini kullanan istemci
   
 4. Aşağıdaki seçeneklerden birini kullanarak oluşturulan serileştirme kodu, uygulamanızın kullanılabilir hale getirmek:  
   
-    1.  Ada sahip ayrı bir derleme halinde oluşturulan serileştirme kodu derleme [*orijinal derleme*]. XmlSerializers.dll (örneğin, MyApp.XmlSerializers.dll). Uygulamanızı orijinal derleme olarak aynı anahtarla imzalanmalıdır derlemeyi yüklemek mümkün olması gerekir. Orijinal derlemeyi yeniden derlerseniz, serileştirme bütünleştirilmiş kodu oluşturmanız gerekir.  
+    1. Ada sahip ayrı bir derleme halinde oluşturulan serileştirme kodu derleme [*orijinal derleme*]. XmlSerializers.dll (örneğin, MyApp.XmlSerializers.dll). Uygulamanızı orijinal derleme olarak aynı anahtarla imzalanmalıdır derlemeyi yüklemek mümkün olması gerekir. Orijinal derlemeyi yeniden derlerseniz, serileştirme bütünleştirilmiş kodu oluşturmanız gerekir.  
   
-    2.  Oluşturulan serileştirme kodu ayrı bir derlemeye derlemek ve kullanmak <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> kullanır hizmet sözleşmesindeki <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Ayarlama <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> veya <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> derlenmiş serileştirme derlemeye işaret edecek şekilde özellikleri.  
+    2. Oluşturulan serileştirme kodu ayrı bir derlemeye derlemek ve kullanmak <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> kullanır hizmet sözleşmesindeki <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Ayarlama <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> veya <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> derlenmiş serileştirme derlemeye işaret edecek şekilde özellikleri.  
   
-    3.  Oluşturulan serileştirme kodu, uygulama derlemeye derlemek ve ekleme <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> kullanan hizmet sözleşmesi <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Ayarlı değil <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> veya <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> özellikleri. Varsayılan serileştirme bütünleştirilmiş kodu geçerli derleme varsayılır.  
+    3. Oluşturulan serileştirme kodu, uygulama derlemeye derlemek ve ekleme <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> kullanan hizmet sözleşmesi <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Ayarlı değil <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> veya <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> özellikleri. Varsayılan serileştirme bütünleştirilmiş kodu geçerli derleme varsayılır.  
   
 ### <a name="to-generate-xmlserializer-serialization-code-in-visual-studio"></a>Visual Studio'da XmlSerializer serileştirme kod oluşturmak için  
   

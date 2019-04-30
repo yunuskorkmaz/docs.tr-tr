@@ -6,11 +6,11 @@ helpviewer_keywords:
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
 ms.openlocfilehash: 9d3956c10467e80f370188138d6c50b39986ba76
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723010"
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip Denetimi (Windows Forms)
 Bu denetimi grupları uygulama komutları ve bunları kolayca erişilebilir hale getirir.  
@@ -55,19 +55,19 @@ Bu denetimi grupları uygulama komutları ve bunları kolayca erişilebilir hale
  [Nasıl yapılır: MDI uygulamaları için otomatik menü birleştirmeyi ayarlama](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
  Menü öğelerinin çalışma zamanında otomatik olarak birleştirilecek açıklar.  
   
--   [MenuStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
+- [MenuStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [Nasıl yapılır: Toolstripmenuıtems kopyalama](how-to-copy-toolstripmenuitems.md)  
+- [Nasıl yapılır: Toolstripmenuıtems kopyalama](how-to-copy-toolstripmenuitems.md)  
   
--   [Nasıl yapılır: Tasarımcıyı kullanarak Toolstripmenuıtems gizleme](how-to-hide-toolstripmenuitems-using-the-designer.md)  
+- [Nasıl yapılır: Tasarımcıyı kullanarak Toolstripmenuıtems gizleme](how-to-hide-toolstripmenuitems-using-the-designer.md)  
   
--   [Nasıl yapılır: Tasarımcıyı kullanarak toolstripmenuıtems öğelerini devre dışı bırak](how-to-disable-toolstripmenuitems-using-the-designer.md)  
+- [Nasıl yapılır: Tasarımcıyı kullanarak toolstripmenuıtems öğelerini devre dışı bırak](how-to-disable-toolstripmenuitems-using-the-designer.md)  
   
--   [Nasıl yapılır: Toolstripmenuıtems öğelerini taşıma](how-to-move-toolstripmenuitems.md)  
+- [Nasıl yapılır: Toolstripmenuıtems öğelerini taşıma](how-to-move-toolstripmenuitems.md)  
   
--   [İzlenecek yol: Bir forma standart menü öğeleri sağlama](walkthrough-providing-standard-menu-items-to-a-form.md)  
+- [İzlenecek yol: Bir forma standart menü öğeleri sağlama](walkthrough-providing-standard-menu-items-to-a-form.md)  
   
--   [MenuStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
+- [MenuStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.MenuStrip>  

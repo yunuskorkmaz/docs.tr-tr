@@ -1,20 +1,20 @@
 ---
-title: LINQ to XML ile. Diğer XML Technologies3
+title: LINQ to XML ile Diğer XML Technologies3
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
 ms.openlocfilehash: 8e2a6b11e450890373de449c0a55839460b97566
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61682410"
 ---
-# <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML ile. Diğer XML teknolojileri karşılaştırması
+# <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML ile Diğer XML Teknolojileri Karşılaştırması
 Bu konuda karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aşağıdaki XML teknolojiler: <xref:System.Xml.XmlReader>, XSLT ve MSXML XmlLite. Bu bilgiler, kullanılacak teknolojileri karar vermenize yardımcı olabilir.  
   
  Bir karşılaştırması [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belge nesne modeli (DOM) için bkz. [LINQ to XML ile. DOM (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md).  
   
-## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML ile. XmlReader  
+## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML ile XmlReader  
  <xref:System.Xml.XmlReader> bir hızlı, yalnızca iletme, önbelleğe alma ayrıştırıcısıdır.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] üst kısmındaki uygulanan <xref:System.Xml.XmlReader>, ve sıkı bir şekilde tümleştirilmiştir. Ancak, ayrıca kullanabileceğiniz <xref:System.Xml.XmlReader> seçemez.  
@@ -23,7 +23,7 @@ Bu konuda karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md
   
  Buna karşılık, birçok küçük XML belgeleri ayrıştıran bir sisteminizi oluşturuyorsanız ve her biri farklı ise, üretkenlik geliştirmeleri avantajlarından yararlanmak istersiniz, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sağlar.  
   
-## <a name="linq-to-xml-vs-xslt"></a>LINQ to XML ile. XSLT  
+## <a name="linq-to-xml-vs-xslt"></a>LINQ to XML ile XSLT  
  Her ikisi de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ve XSLT kapsamlı XML belge dönüştürme özelliklerini sağlar. XSLT kural tabanlı, bildirim temelli bir yaklaşımdır. XSLT Gelişmiş programcılar XSLT işlevsel programlama stilde, durum bilgisi olmayan bir yaklaşım vurgular yazın. Dönüştürmeleri, yan etkileri olmadan uygulanan saf işlevler kullanılarak yazılabilir. Bu kural tabanlı ya da işlevsel yaklaşım, çoğu geliştirici için yabancı ve zor ve zaman alıcı öğrenmek olabilir.  
   
  XSLT yüksek performanslı uygulamalar verir çok verimli bir sistem olabilir. Örneğin, bazı büyük Web şirketler, HTML, XML'den çeşitli veri depoları arasından çekilen oluşturabileceği bir yol olarak XSLT kullanın. Yönetilen XSLT altyapısı XSLT CLR kodu derler ve bazı senaryolarda yerel XSLT altyapısı daha da iyi gerçekleştirir.  
@@ -38,14 +38,14 @@ Bu konuda karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md
   
  XSLT XML ve program aracılığıyla yönetilebilir.  
   
-## <a name="linq-to-xml-vs-msxml"></a>LINQ to XML ile. MSXML  
+## <a name="linq-to-xml-vs-msxml"></a>LINQ to XML ile MSXML  
  MSXML Microsoft Windows ile içerdiği XML işlemek için COM tabanlı teknolojisidir. MSXML DOM XPath ve XSLT desteği ile yerel bir uygulama sağlar. Ayrıca, SAX2 olmayan önbelleğe alma, olay tabanlı ayrıştırıcının içerir.  
   
  MSXML de gerçekleştirir, çoğu senaryoda varsayılan olarak güvenlidir ve istemci tarafı XML AJAX stili uygulamalarda işleme gerçekleştirmek için Internet Explorer'da erişilebilir. MSXML COM, C++, JavaScript ve Visual Basic 6.0 gibi destekleyen tüm programlama dili kullanılabilir.  
   
  MSXML (CLR) ortak dil çalışma zamanı tabanlı yönetilen kodda kullanım için önerilmez.  
   
-## <a name="linq-to-xml-vs-xmllite"></a>LINQ to XML ile. XmlLite  
+## <a name="linq-to-xml-vs-xmllite"></a>LINQ to XML ile XmlLite  
  XmlLite bir olmayan önbelleğe alma, İleri yalnızca çekme ayrıştırıcı. Geliştiriciler, öncelikli olarak C++ ile XmlLite kullanın. Yönetilen kod ile XmlLite geliştiriciler için önerilmez.  
   
  Ana avantajı XmlLite, çoğu senaryoda güvenli bir basit, hızlı XML Ayrıştırıcı olmasıdır. Kendi tehdit yüzey son derece düşüktür. Güvenilmeyen belgelerini ayrıştırmak varsa ve hizmet reddi veya verilerin açığa gibi saldırılarına karşı korumak istediğiniz XmlLite iyi bir seçenek olabilir.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
 ms.openlocfilehash: 1866ba7a5419ea435a56daa63f94122d3b83473e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752756"
 ---
 # <a name="bitmap-effects-overview"></a>Bit Eşlem Efektlerine Genel Bakış
 Bit eşlem efektleri tasarımcılara ve Windows Presentation Foundation (WPF) içerik görsel efektler uygulamak için geliştirici çizilir. Örneğin, bit eşlem efektleri kolayca uygulamanıza izin bir <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> veya Bulanıklaştırma efektini görüntü ya da bir düğme.  
@@ -23,15 +23,15 @@ Bit eşlem efektleri tasarımcılara ve Windows Presentation Foundation (WPF) i�
   
  Bir özel durum olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], efektler ayarlanabilir özellikleri olarak canlı <xref:System.Windows.Media.Visual> gibi nesneleri bir <xref:System.Windows.Controls.Button> veya <xref:System.Windows.Controls.TextBox>. Piksel işleme uygulanan ve çalışma zamanında çizilir. Bu durumda, işleme, anında bir <xref:System.Windows.Media.Visual> otomatik olarak dönüştürülür, <xref:System.Windows.Media.Imaging.BitmapSource> eşdeğer ve giriş olarak beslenir <xref:System.Windows.Media.Effects.BitmapEffect>. Çıkış değiştirir <xref:System.Windows.Media.Visual> nesnenin varsayılan işleme davranışına. Bu nedenle, <xref:System.Windows.Media.Effects.BitmapEffect> nesneleri görsel efektler uygulandığında yazılımda yalnızca başka bir deyişle hiçbir donanım hızlandırma görsellerindeki işlemek için zorla.  
   
--   <xref:System.Windows.Media.Effects.BlurBitmapEffect> Odak çıkış görünen bir nesnenin benzetimini yapar.  
+- <xref:System.Windows.Media.Effects.BlurBitmapEffect> Odak çıkış görünen bir nesnenin benzetimini yapar.  
   
--   <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect> Renkli bir nesnenin çevresindeki oluşturur.  
+- <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect> Renkli bir nesnenin çevresindeki oluşturur.  
   
--   <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> nesnenin arkasında bir gölge oluşturur.  
+- <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> nesnenin arkasında bir gölge oluşturur.  
   
--   <xref:System.Windows.Media.Effects.BevelBitmapEffect> görüntüyü belirtilen eğri göre yüzeyine oluşturan eğimi oluşturur.  
+- <xref:System.Windows.Media.Effects.BevelBitmapEffect> görüntüyü belirtilen eğri göre yüzeyine oluşturan eğimi oluşturur.  
   
--   <xref:System.Windows.Media.Effects.EmbossBitmapEffect> çarpma eşlemesi oluşturur bir <xref:System.Windows.Media.Visual> doku ve derinlik izlenimi yapay bir ışık kaynağından vermek için.  
+- <xref:System.Windows.Media.Effects.EmbossBitmapEffect> çarpma eşlemesi oluşturur bir <xref:System.Windows.Media.Visual> doku ve derinlik izlenimi yapay bir ışık kaynağından vermek için.  
   
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bit eşlem efektleri yazılım modunda işlenir. Efekt uygulanan herhangi bir nesne de yazılımda işlenir. Performansı en iyi, bit eşlem kullanarak büyük görselleri ya da bir bit eşlem etkisi hareketlendirme özelliklerini etkiler düşer. Bu, bit eşlem efektleri hiç bu şekilde kullanmamanız gerekir, ancak dikkatli ve kullanıcılarınızın deneyimini beklediğiniz aldıklarından emin olmak için baştan sona test varsayalım değil içindir.  

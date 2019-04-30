@@ -3,11 +3,11 @@ title: LINQ to XML için XPath kullanıcıları (C#)
 ms.date: 07/20/2015
 ms.assetid: 91774511-1dca-4f06-ac0b-913746f104fe
 ms.openlocfilehash: 79894aa0f7ba6b64119de6fa8e82be369299e361
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667463"
 ---
 # <a name="linq-to-xml-for-xpath-users-c"></a>LINQ to XML için XPath kullanıcıları (C#)
 Bu konu başlıkları birkaç XPath ifadeleri gösterir ve bunların [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] eşdeğerleri.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
 ms.openlocfilehash: a9e519fb8b2ca021d66adb23659d83efc571afae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760434"
 ---
 # <a name="null-comparisons"></a>Null Karşılaştırmalar
 A `null` değerindeki veri kaynağı değeri bilinmeyen olduğunu gösterir. İçinde [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular, denetleyebilirsiniz null değerler, bu nedenle, bazı hesaplamalar veya karşılaştırmalar yalnızca geçerli veya null olmayan, içeren satırları üzerinde gerçekleştirilen veri. CLR null semantikler, ancak veri kaynağı bir null semantiğe farklı olabilir. Çoğu veritabanı, null karşılaştırmalar işlemek için mantığı üç değerli bir sürümünü kullanın. Diğer bir deyişle, bir null değeri karşılaştırmak için değerlendirilmiyor `true` veya `false`, olarak değerlendirilen `unknown`. ANSI null değerlere uygulaması genellikle budur ancak bu her zaman böyle değildir.  

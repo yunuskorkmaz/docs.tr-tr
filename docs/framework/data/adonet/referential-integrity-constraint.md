@@ -3,24 +3,24 @@ title: referential integrity constraint
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
 ms.openlocfilehash: a8ef035872317c6eaea0401164e7fa8c95f5f7ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665302"
 ---
 # <a name="referential-integrity-constraint"></a>referential integrity constraint
 A *başvuru bütünlüğü kısıtlaması* varlık veri modeli (EDM) ilişkisel bir veritabanındaki bir başvuru bütünlüğü kısıtlaması benzer. Bir veritabanı tablosundan bir sütuna (veya sütun) başka bir tablonun birincil anahtarı başvurabilirsiniz aynı şekilde bir [özelliği](../../../../docs/framework/data/adonet/property.md) (veya Özellikler), bir [varlık türü](../../../../docs/framework/data/adonet/entity-type.md) başvurabilirsiniz [Varlık anahtarı ](../../../../docs/framework/data/adonet/entity-key.md) başka bir varlık türü. Başvurulan varlık türü olarak adlandırılır *birincil ucu* kısıtlaması. Birincil ucu başvuran varlık türü olarak adlandırılan *bağımlı son* kısıtlaması.  
   
  Başvuru bütünlük kısıtlamasının bir parçası olarak tanımlanan bir [ilişkilendirme](../../../../docs/framework/data/adonet/association-type.md) iki varlık türleri arasında. Aşağıdaki bilgiler bir başvuru bütünlüğü kısıtlaması tanımını belirtir:  
   
--   Kısıtlamasının birincil ucu. (Varlık anahtarı bağımlı uç tarafından başvuruda bulunulan bir varlık türü.)  
+- Kısıtlamasının birincil ucu. (Varlık anahtarı bağımlı uç tarafından başvuruda bulunulan bir varlık türü.)  
   
--   Asıl son varlık anahtarı.  
+- Asıl son varlık anahtarı.  
   
--   Kısıtlamasının bağımlı bitiş olayı. (Bir özellik veya varlık anahtarı asıl bitiş başvurusu özellikleri içeren bir varlık türü.)  
+- Kısıtlamasının bağımlı bitiş olayı. (Bir özellik veya varlık anahtarı asıl bitiş başvurusu özellikleri içeren bir varlık türü.)  
   
--   Başvuruda bulunan özellik veya bağımlı bitiş özellikleri.  
+- Başvuruda bulunan özellik veya bağımlı bitiş özellikleri.  
   
  EDM başvuru bütünlüğü kısıtlamalarını amacı, geçerli bir ilişki her zaman var sağlamaktır. Daha fazla bilgi için [yabancı anahtar özelliği](../../../../docs/framework/data/adonet/foreign-key-property.md).  
   

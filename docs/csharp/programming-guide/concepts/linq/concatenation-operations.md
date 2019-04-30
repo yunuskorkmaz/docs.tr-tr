@@ -3,11 +3,11 @@ title: Birleştirme işlemleri (C#)
 ms.date: 07/20/2015
 ms.assetid: 890ee104-c590-457e-8a7f-b2b5da0fb417
 ms.openlocfilehash: 7b9ed736de44c92f927fd47105f72631b07af825
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702509"
 ---
 # <a name="concatenation-operations-c"></a>Birleştirme işlemleri (C#)
 Birleştirme, bir dizi sonuna ekleme işlemini ifade eder.  
@@ -22,7 +22,7 @@ Birleştirme, bir dizi sonuna ekleme işlemini ifade eder.
   
 |Yöntem adı|Açıklama|C# sorgu ifade sözdizimi|Daha fazla bilgi|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|concat|Bir dizi oluşturmak için iki diziyi sıralar.|Uygulanamaz.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
+|concat|Bir dizi oluşturmak için iki diziyi sıralar.|Geçerli değildir.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

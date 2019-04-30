@@ -3,11 +3,11 @@ title: Yansıma (C#)
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
 ms.openlocfilehash: 4dfd9391407fec4bd20ac4ae05162763e909d665
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61711115"
 ---
 # <a name="reflection-c"></a>Yansıma (C#)
 Yansıma nesneleri sağlar (tür <xref:System.Type>) derlemeler, modüller ve türler açıklanmaktadır. Yansıma, dinamik olarak bir türün bir örneğini oluşturmak, bağlama türü var olan bir nesneye veya türü mevcut bir nesneden elde ve kendi yöntemlerini çağırmak veya kendi alanlarına ve özelliklerine erişmek için kullanabilirsiniz. Kodunuzda öznitelikler kullanıyorsanız, yansıma erişim sağlar. Daha fazla bilgi için [öznitelikleri](../../../../docs/standard/attributes/index.md).  
@@ -43,26 +43,26 @@ System.Console.WriteLine(info);
 ## <a name="reflection-overview"></a>Yansıma genel bakış  
  Yansıma, aşağıdaki durumlarda kullanışlıdır:  
   
--   Programınızın meta veri öznitelikleri erişmeye olduğunda. Daha fazla bilgi için [öznitelikleri depolanan alınırken bilgi](../../../standard/attributes/retrieving-information-stored-in-attributes.md).  
+- Programınızın meta veri öznitelikleri erişmeye olduğunda. Daha fazla bilgi için [öznitelikleri depolanan alınırken bilgi](../../../standard/attributes/retrieving-information-stored-in-attributes.md).  
   
--   İnceleme ve derlemedeki türleri örnekleme için.  
+- İnceleme ve derlemedeki türleri örnekleme için.  
   
--   Çalışma zamanında yeni türler oluşturmak için. Sınıfları kullanın <xref:System.Reflection.Emit>.  
+- Çalışma zamanında yeni türler oluşturmak için. Sınıfları kullanın <xref:System.Reflection.Emit>.  
   
--   Çalışma zamanında oluşturulan türlerde yöntemleri erişme geç bağlama gerçekleştirmek için. Konusuna [dinamik olarak yükleme ve türleri kullanarak](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
+- Çalışma zamanında oluşturulan türlerde yöntemleri erişme geç bağlama gerçekleştirmek için. Konusuna [dinamik olarak yükleme ve türleri kullanarak](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  Daha fazla bilgi için:  
   
--   [Yansıma](../../../framework/reflection-and-codedom/reflection.md)  
+- [Yansıma](../../../framework/reflection-and-codedom/reflection.md)  
   
--   [Tür Bilgilerini Görüntüleme](../../../framework/reflection-and-codedom/viewing-type-information.md)  
+- [Tür Bilgilerini Görüntüleme](../../../framework/reflection-and-codedom/viewing-type-information.md)  
   
--   [Yansıma ve Genel Türler](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+- [Yansıma ve Genel Türler](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
   
--   <xref:System.Reflection.Emit>  
+- <xref:System.Reflection.Emit>  
   
--   [Özniteliklerde Depolanan Bilgileri Alma](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+- [Özniteliklerde Depolanan Bilgileri Alma](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

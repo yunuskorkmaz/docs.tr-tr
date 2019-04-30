@@ -14,11 +14,11 @@ ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 31f975b45ee854c73e6d502ece69bee24a7fcc3c
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683138"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>.NET uygulamaları Genelleştirme ve yerelleştirme
 
@@ -38,9 +38,9 @@ Bu adım özel kültürler veya bölgeler için bir uygulamanın özelleştirilm
 
 Aşağıdaki üç adımı izlemenin iki avantajı vardır:
 
--   Bu, ABD gibi tek bir kültürü desteklemek için tasarlanan bir uygulama yükseltmek zorunda kalmanızı İngilizce, ek kültürleri desteklemek üzere kullanılır.
+- Bu, ABD gibi tek bir kültürü desteklemek için tasarlanan bir uygulama yükseltmek zorunda kalmanızı İngilizce, ek kültürleri desteklemek üzere kullanılır.
 
--   Daha kararlı ve daha az hatası olan yerelleştirilmiş uygulamalar olarak sonuçlanır.
+- Daha kararlı ve daha az hatası olan yerelleştirilmiş uygulamalar olarak sonuçlanır.
 
 .NET, dünya çapında kullanılmaya hazır ve yerelleştirilmiş uygulamalar geliştirme için kapsamlı destek sağlar. Özellikle, birçok üyeleri .NET sınıf kitaplığı genelleştirmeye yardım eder geçerli kullanıcının kültür veya belirtilen bir kültürün kurallarını yansıtan değerlerini döndürerek yazın. Ayrıca, .NET, bir uygulamayı yerelleştirme işlemini kolaylaştıran uydu derlemelerini destekler.
 

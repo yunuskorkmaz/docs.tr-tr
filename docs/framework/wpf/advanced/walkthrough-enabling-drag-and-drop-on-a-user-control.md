@@ -9,11 +9,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
 ms.openlocfilehash: a628665ccfa0a423667344b1fe81f132d6691b12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778952"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>İzlenecek yol: Kullanıcı Denetiminde Sürükleme ve Bırakmayı Etkinleştirme
 
@@ -23,13 +23,13 @@ Bu kılavuzda, özel bir WPF oluşturacağınız <xref:System.Windows.Controls.U
 
 Bu izlenecek yol aşağıdaki görevleri gösterir:
 
--   Özel bir kullanıcı denetimi oluşturun.
+- Özel bir kullanıcı denetimi oluşturun.
 
--   Bir sürükleme kaynağı olması kullanıcı denetimi etkinleştirin.
+- Bir sürükleme kaynağı olması kullanıcı denetimi etkinleştirin.
 
--   Bir bırakma hedefi olarak kullanıcı denetimini etkinleştirin.
+- Bir bırakma hedefi olarak kullanıcı denetimini etkinleştirin.
 
--   Kullanıcı denetimi bırakılan veri almak bir panel etkinleştirin.
+- Kullanıcı denetimi bırakılan veri almak bir panel etkinleştirin.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -108,17 +108,17 @@ Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
 
      Bu <xref:System.Windows.UIElement.OnMouseMove%2A> geçersiz kılma aşağıdaki görevleri gerçekleştirir:
 
-    -   Fareyi hareket ederken, farenin sol düğmesine basıldığında olup olmadığını denetler.
+    - Fareyi hareket ederken, farenin sol düğmesine basıldığında olup olmadığını denetler.
 
-    -   Daire verileri paketleri bir <xref:System.Windows.DataObject>. Bu durumda, daire denetim, üç veri öğeleri paketleri; Dolgu rengini, yükseklik çift temsili ve kendisini bir kopyasını bir dize açıklaması.
+    - Daire verileri paketleri bir <xref:System.Windows.DataObject>. Bu durumda, daire denetim, üç veri öğeleri paketleri; Dolgu rengini, yükseklik çift temsili ve kendisini bir kopyasını bir dize açıklaması.
 
-    -   Statik çağırır <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> sürükle ve bırak işlemi başlatmak için yöntem. Şu üç parametreyi için geçirdiğiniz <xref:System.Windows.DragDrop.DoDragDrop%2A> yöntemi:
+    - Statik çağırır <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> sürükle ve bırak işlemi başlatmak için yöntem. Şu üç parametreyi için geçirdiğiniz <xref:System.Windows.DragDrop.DoDragDrop%2A> yöntemi:
 
-        -   `dragSource` – Bu denetimi bir başvuru.
+        - `dragSource` – Bu denetimi bir başvuru.
 
-        -   `data` – <xref:System.Windows.DataObject> Önceki kod içinde oluşturulur.
+        - `data` – <xref:System.Windows.DataObject> Önceki kod içinde oluşturulur.
 
-        -   `allowedEffects` – Olan izin verilen sürükle ve bırak işlemleri <xref:System.Windows.DragDropEffects.Copy> veya <xref:System.Windows.DragDropEffects.Move>.
+        - `allowedEffects` – Olan izin verilen sürükle ve bırak işlemleri <xref:System.Windows.DragDropEffects.Copy> veya <xref:System.Windows.DragDropEffects.Move>.
 
 3. Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
 
@@ -143,9 +143,9 @@ Varsayılan olarak, imleç bir Sürükle ve bırak işlemi sırasında veri bır
 
      Bu <xref:System.Windows.UIElement.OnGiveFeedback%2A> geçersiz kılma aşağıdaki görevleri gerçekleştirir:
 
-    -   Denetler <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> bırakma hedef ayarlanan değerlerle <xref:System.Windows.UIElement.DragOver> olay işleyicisi.
+    - Denetler <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> bırakma hedef ayarlanan değerlerle <xref:System.Windows.UIElement.DragOver> olay işleyicisi.
 
-    -   Temel özel bir imleç ayarlar <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> değeri. İmleç, verileri bırakmayı hangi etkisi hakkında kullanıcıya görsel geribildirim vermek için tasarlanmıştır.
+    - Temel özel bir imleç ayarlar <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> değeri. İmleç, verileri bırakmayı hangi etkisi hakkında kullanıcıya görsel geribildirim vermek için tasarlanmıştır.
 
 3. Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
 
@@ -181,15 +181,15 @@ Varsayılan olarak, imleç bir Sürükle ve bırak işlemi sırasında veri bır
 
      Bu <xref:System.Windows.UIElement.OnDrop%2A> geçersiz kılma aşağıdaki görevleri gerçekleştirir:
 
-    -   Kullanan <xref:System.Windows.DataObject.GetDataPresent%2A> sürüklenen verileri bir dize nesnesi içerip içermediğini denetlemek için yöntem.
+    - Kullanan <xref:System.Windows.DataObject.GetDataPresent%2A> sürüklenen verileri bir dize nesnesi içerip içermediğini denetlemek için yöntem.
 
-    -   Kullanan <xref:System.Windows.DataObject.GetData%2A> varsa, dize verilerini ayıklamak için yöntemi.
+    - Kullanan <xref:System.Windows.DataObject.GetData%2A> varsa, dize verilerini ayıklamak için yöntemi.
 
-    -   Kullanan bir <xref:System.Windows.Media.BrushConverter> dizeye dönüştürülecek denemek için bir <xref:System.Windows.Media.Brush>.
+    - Kullanan bir <xref:System.Windows.Media.BrushConverter> dizeye dönüştürülecek denemek için bir <xref:System.Windows.Media.Brush>.
 
-    -   Dönüştürme başarılı ise fırçaya uygulanır <xref:System.Windows.Shapes.Shape.Fill%2A> , <xref:System.Windows.Shapes.Ellipse> daire denetimin kullanıcı Arabirimi sağlar.
+    - Dönüştürme başarılı ise fırçaya uygulanır <xref:System.Windows.Shapes.Shape.Fill%2A> , <xref:System.Windows.Shapes.Ellipse> daire denetimin kullanıcı Arabirimi sağlar.
 
-    -   İşaretleri <xref:System.Windows.UIElement.Drop> işlenmiş olarak olay. Bırakma olayını daire kullanıcı denetimi, işlenen Bu etkinliğin diğer öğeleri öğrenmek için işlenmiş olarak işaretlemeniz gerekir.
+    - İşaretleri <xref:System.Windows.UIElement.Drop> işlenmiş olarak olay. Bırakma olayını daire kullanıcı denetimi, işlenen Bu etkinliğin diğer öğeleri öğrenmek için işlenmiş olarak işaretlemeniz gerekir.
 
 3. Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
 
@@ -222,11 +222,11 @@ Veri daire kullanıcı denetime sürüklendiğinde denetimin sürüklenen veri i
 
      Bu <xref:System.Windows.UIElement.OnDragOver%2A> geçersiz kılma aşağıdaki görevleri gerçekleştirir:
 
-    -   Kümeleri <xref:System.Windows.DragEventArgs.Effects%2A> özelliğini <xref:System.Windows.DragDropEffects.None>.
+    - Kümeleri <xref:System.Windows.DragEventArgs.Effects%2A> özelliğini <xref:System.Windows.DragDropEffects.None>.
 
-    -   Gerçekleştirilir aynı denetimleri gerçekleştirir <xref:System.Windows.UIElement.OnDrop%2A> daire kullanıcı denetimi sürüklenen verileri işleyebildiğinden olup olmadığını belirlemek için yöntemi.
+    - Gerçekleştirilir aynı denetimleri gerçekleştirir <xref:System.Windows.UIElement.OnDrop%2A> daire kullanıcı denetimi sürüklenen verileri işleyebildiğinden olup olmadığını belirlemek için yöntemi.
 
-    -   Kullanıcı denetimi verileri işleyebildiğinden, ayarlar <xref:System.Windows.DragEventArgs.Effects%2A> özelliğini <xref:System.Windows.DragDropEffects.Copy> veya <xref:System.Windows.DragDropEffects.Move>.
+    - Kullanıcı denetimi verileri işleyebildiğinden, ayarlar <xref:System.Windows.DragEventArgs.Effects%2A> özelliğini <xref:System.Windows.DragDropEffects.Copy> veya <xref:System.Windows.DragDropEffects.Move>.
 
 3. Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
 
@@ -252,11 +252,11 @@ Veri daire kullanıcı denetime sürüklendiğinde denetimin sürüklenen veri i
 
      Bu <xref:System.Windows.UIElement.OnDragEnter%2A> geçersiz kılma aşağıdaki görevleri gerçekleştirir:
 
-    -   Kaydeder <xref:System.Windows.Shapes.Shape.Fill%2A> özelliği <xref:System.Windows.Shapes.Ellipse> içinde `_previousFill` değişkeni.
+    - Kaydeder <xref:System.Windows.Shapes.Shape.Fill%2A> özelliği <xref:System.Windows.Shapes.Ellipse> içinde `_previousFill` değişkeni.
 
-    -   Gerçekleştirilir aynı denetimleri gerçekleştirir <xref:System.Windows.UIElement.OnDrop%2A> verileri için dönüştürülüp dönüştürülemeyeceğini belirlemek için yöntemi bir <xref:System.Windows.Media.Brush>.
+    - Gerçekleştirilir aynı denetimleri gerçekleştirir <xref:System.Windows.UIElement.OnDrop%2A> verileri için dönüştürülüp dönüştürülemeyeceğini belirlemek için yöntemi bir <xref:System.Windows.Media.Brush>.
 
-    -   Geçerli bir veri dönüştürülürse <xref:System.Windows.Media.Brush>, uygular <xref:System.Windows.Shapes.Shape.Fill%2A> , <xref:System.Windows.Shapes.Ellipse>.
+    - Geçerli bir veri dönüştürülürse <xref:System.Windows.Media.Brush>, uygular <xref:System.Windows.Shapes.Shape.Fill%2A> , <xref:System.Windows.Shapes.Ellipse>.
 
 4. Aşağıdaki <xref:System.Windows.UIElement.OnDragLeave%2A> sınıf için işleme sağlamak için geçersiz kılma <xref:System.Windows.UIElement.DragLeave> olay.
 
@@ -265,7 +265,7 @@ Veri daire kullanıcı denetime sürüklendiğinde denetimin sürüklenen veri i
 
      Bu <xref:System.Windows.UIElement.OnDragLeave%2A> geçersiz kılma aşağıdaki görevleri gerçekleştirir:
 
-    -   Geçerli <xref:System.Windows.Media.Brush> kaydedilmiş `_previousFill` değişkenini <xref:System.Windows.Shapes.Shape.Fill%2A> , <xref:System.Windows.Shapes.Ellipse> daire kullanıcı denetiminin kullanıcı Arabirimi sağlar.
+    - Geçerli <xref:System.Windows.Media.Brush> kaydedilmiş `_previousFill` değişkenini <xref:System.Windows.Shapes.Shape.Fill%2A> , <xref:System.Windows.Shapes.Ellipse> daire kullanıcı denetiminin kullanıcı Arabirimi sağlar.
 
 5. Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
 
@@ -296,11 +296,11 @@ Bu bölümde, sürüklenen daire veriler için bırakma hedefleri olarak davranm
 
      Bu <xref:System.Windows.UIElement.DragOver> olay işleyicisi aşağıdaki görevleri gerçekleştirir:
 
-    -   Sürüklenen veri içinde paketlendi "Nesne" veri içerip içermediğini denetler <xref:System.Windows.DataObject> daire kullanıcı denetimi tarafından ve çağrısına geçirilen <xref:System.Windows.DragDrop.DoDragDrop%2A>.
+    - Sürüklenen veri içinde paketlendi "Nesne" veri içerip içermediğini denetler <xref:System.Windows.DataObject> daire kullanıcı denetimi tarafından ve çağrısına geçirilen <xref:System.Windows.DragDrop.DoDragDrop%2A>.
 
-    -   "Nesne" veri yoksa, denetimleri olup **Ctrl** tuşuna basıldığında.
+    - "Nesne" veri yoksa, denetimleri olup **Ctrl** tuşuna basıldığında.
 
-    -   Varsa **Ctrl** tuşuna basıldığında, ayarlar <xref:System.Windows.DragEventArgs.Effects%2A> özelliğini <xref:System.Windows.DragDropEffects.Copy>. Aksi takdirde, ayarlama <xref:System.Windows.DragEventArgs.Effects%2A> özelliğini <xref:System.Windows.DragDropEffects.Move>.
+    - Varsa **Ctrl** tuşuna basıldığında, ayarlar <xref:System.Windows.DragEventArgs.Effects%2A> özelliğini <xref:System.Windows.DragDropEffects.Copy>. Aksi takdirde, ayarlama <xref:System.Windows.DragEventArgs.Effects%2A> özelliğini <xref:System.Windows.DragDropEffects.Move>.
 
 5. İçin aşağıdaki kodu ekleyin <xref:System.Windows.UIElement.Drop> olay işleyicisi.
 
@@ -309,15 +309,15 @@ Bu bölümde, sürüklenen daire veriler için bırakma hedefleri olarak davranm
 
      Bu <xref:System.Windows.UIElement.Drop> olay işleyicisi aşağıdaki görevleri gerçekleştirir:
 
-    -   Denetler olmadığını <xref:System.Windows.UIElement.Drop> olay zaten işlenir. Başka bir daire kesilirse, örneğin, yuvarlak tanıtıcıları <xref:System.Windows.UIElement.Drop> olay istemediğiniz ayrıca işlemek için daire içeren paneli.
+    - Denetler olmadığını <xref:System.Windows.UIElement.Drop> olay zaten işlenir. Başka bir daire kesilirse, örneğin, yuvarlak tanıtıcıları <xref:System.Windows.UIElement.Drop> olay istemediğiniz ayrıca işlemek için daire içeren paneli.
 
-    -   Varsa <xref:System.Windows.UIElement.Drop> olay işlenmez, denetimleri olup **Ctrl** tuşuna basıldığında.
+    - Varsa <xref:System.Windows.UIElement.Drop> olay işlenmez, denetimleri olup **Ctrl** tuşuna basıldığında.
 
-    -   Varsa **Ctrl** anahtar bilgisi basıldığında <xref:System.Windows.UIElement.Drop> olduğunda, dairenin kopyasını hale denetlemek ve ekleyin <xref:System.Windows.Controls.Panel.Children%2A> koleksiyonunu <xref:System.Windows.Controls.StackPanel>.
+    - Varsa **Ctrl** anahtar bilgisi basıldığında <xref:System.Windows.UIElement.Drop> olduğunda, dairenin kopyasını hale denetlemek ve ekleyin <xref:System.Windows.Controls.Panel.Children%2A> koleksiyonunu <xref:System.Windows.Controls.StackPanel>.
 
-    -   Varsa **Ctrl** değil tuşuna basıldığında, gelen daire taşır <xref:System.Windows.Controls.Panel.Children%2A> kendi üst paneline koleksiyonunu <xref:System.Windows.Controls.Panel.Children%2A> bırakılmış paneli koleksiyonu.
+    - Varsa **Ctrl** değil tuşuna basıldığında, gelen daire taşır <xref:System.Windows.Controls.Panel.Children%2A> kendi üst paneline koleksiyonunu <xref:System.Windows.Controls.Panel.Children%2A> bırakılmış paneli koleksiyonu.
 
-    -   Kümeleri <xref:System.Windows.DragEventArgs.Effects%2A> bildirmek için özellik <xref:System.Windows.DragDrop.DoDragDrop%2A> yöntemi olup olmadığını taşıma veya kopyalama işlemi gerçekleştirildi.
+    - Kümeleri <xref:System.Windows.DragEventArgs.Effects%2A> bildirmek için özellik <xref:System.Windows.DragDrop.DoDragDrop%2A> yöntemi olup olmadığını taşıma veya kopyalama işlemi gerçekleştirildi.
 
 6. Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
 

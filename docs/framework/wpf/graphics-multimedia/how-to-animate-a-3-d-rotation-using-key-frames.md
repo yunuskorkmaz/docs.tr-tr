@@ -7,11 +7,11 @@ helpviewer_keywords:
 - 3-D translations [WPF], animating [WPF], with key frames (Rotation3DAnimation)
 ms.assetid: 6f671b95-7f30-4836-9a4f-aeb7dc30121f
 ms.openlocfilehash: e72ec94f830f0f5001a77e7492aa1326a47b309d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762156"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-key-frames"></a>Nasıl yapılır: Anahtar çerçeveler kullanarak 3B döndürmeye animasyon ekleme
 Aşağıdaki örnekte, <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames> bir "sallanmasına içinde" kaynaklanan dönme ekseni canlandırır olurken bir 3B nesneyi döndürmek için kullanılır. Aşağıdaki anahtar çerçeve animasyon kullanır:  

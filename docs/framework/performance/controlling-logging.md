@@ -7,18 +7,18 @@ ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723673"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework Günlük Kaydını Denetleme
 Ortak dil çalışma zamanı (CLR) olaylarını izlemek için Windows olay izleme (ETW) kullanabilirsiniz. Aşağıdaki araçları kullanarak izlemeleri oluşturabilir ve görüntüleyebilirsiniz:  
   
--   [Logman](/windows-server/administration/windows-commands/logman) ve [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) komut satırı araçları, Windows işletim sistemiyle dahil edilir.  
+- [Logman](/windows-server/administration/windows-commands/logman) ve [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) komut satırı araçları, Windows işletim sistemiyle dahil edilir.  
   
--   [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) Araçları [Windows Performans Araç Seti](/windows-hardware/test/wpt/). Xperf hakkında daha fazla bilgi için bkz: [Windows Performans blogu](https://go.microsoft.com/fwlink/?LinkId=179509).  
+- [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) Araçları [Windows Performans Araç Seti](/windows-hardware/test/wpt/). Xperf hakkında daha fazla bilgi için bkz: [Windows Performans blogu](https://go.microsoft.com/fwlink/?LinkId=179509).  
   
  CLR olay bilgilerini yakalamak için, CLR sağlayıcısı bilgisayarınıza yüklenmelidir. Sağlayıcı'nın yüklü olduğunu doğrulamak için şunu yazın `logman query providers` komut isteminde. Sağlayıcı listesi görüntülenir. Bu liste, sağlayıcılar gibi CLR sağlayıcısı için bir girdi içermelidir.  
   
@@ -37,11 +37,11 @@ Provider                                 GUID
   
  Bir kullanıcının, günlüğü etkinleştirmek için üç şeyi belirtmesi gerekir:  
   
--   İletişim kurmak için sağlayıcı.  
+- İletişim kurmak için sağlayıcı.  
   
--   64 bitlik bir sayı, bir anahtar kümesini temsil eder. Her anahtar, açılabilen sağlayıcının olaylar kümesini temsil eder. Sayı, açmak için birleştirilmiş bir anahtar sözcük kümesini temsil eder.  
+- 64 bitlik bir sayı, bir anahtar kümesini temsil eder. Her anahtar, açılabilen sağlayıcının olaylar kümesini temsil eder. Sayı, açmak için birleştirilmiş bir anahtar sözcük kümesini temsil eder.  
   
--   Günlüğe kaydetmek için bir düzeyi (ayrıntılı) temsil eden bir küçük numara. Düzey 1, en az ayrıntılı ve düzey 5, en ayrıntılı düzeydir. Düzey 0, sağlayıcıya özgü olan anlamında bir varsayılandır.  
+- Günlüğe kaydetmek için bir düzeyi (ayrıntılı) temsil eden bir küçük numara. Düzey 1, en az ayrıntılı ve düzey 5, en ayrıntılı düzeydir. Düzey 0, sağlayıcıya özgü olan anlamında bir varsayılandır.  
   
 #### <a name="to-capture-clr-etw-events-using-logman"></a>Logman kullanarak CLR ETW olaylarını yakalamak için  
   
@@ -51,15 +51,15 @@ Provider                                 GUID
   
      burada:  
   
-    -   `-p` Parametresi GUID sağlayıcısı tanımlar.  
+    - `-p` Parametresi GUID sağlayıcısı tanımlar.  
   
-    -   `0x1CCBD` Görüntülenecek olayların kategorilerini belirler.  
+    - `0x1CCBD` Görüntülenecek olayların kategorilerini belirler.  
   
-    -   `0x5` (Bu durumda, ayrıntılı (5)) günlüğe kaydetme düzeyini ayarlar.  
+    - `0x5` (Bu durumda, ayrıntılı (5)) günlüğe kaydetme düzeyini ayarlar.  
   
-    -   `-ets` Parametresi, olay izleme oturumları için komutları göndermek için Logman'ı talimatı verir.  
+    - `-ets` Parametresi, olay izleme oturumları için komutları göndermek için Logman'ı talimatı verir.  
   
-    -   `-ct perf` Parametresi belirtir `QueryPerformanceCounter` işlevi, her olay için zaman damgasını oturum için kullanılacak.  
+    - `-ct perf` Parametresi belirtir `QueryPerformanceCounter` işlevi, her olay için zaman damgasını oturum için kullanılacak.  
   
 2. Olayları günlüğe kaydetmeyi durdurmak için şunu yazın:  
   
@@ -86,7 +86,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-tracerpt"></a>Tracerpt kullanarak CLR ETW olaylarını görüntülemek için  
   
--   Komut isteminde, şunları yazın:  
+- Komut isteminde, şunları yazın:  
   
      `tracerpt clrevents.etl`  
   
@@ -94,7 +94,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-xperf"></a>Xperf kullanarak CLR ETW olaylarını görüntülemek için  
   
--   Komut isteminde, şunları yazın:  
+- Komut isteminde, şunları yazın:  
   
      `xperf clrevents.etl`  
   
@@ -102,7 +102,7 @@ Provider                                 GUID
   
 #### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>.etl dosyasını, virgülle ayrılmış değerler dosyasına dönüştürmek için  
   
--   Komut isteminde, şunları yazın:  
+- Komut isteminde, şunları yazın:  
   
      `xperf -i clrevents.etl -f clrevents.csv`  
   

@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: KrzysztofCwalina
 ms.openlocfilehash: 7cf98b8ed1957352f357c7a9d580b4fd567a1634
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757501"
 ---
 # <a name="names-of-type-members"></a>Tür üyelerinin adları
 Üyeleri türlerine yapılan: yöntemler, özellikler, olaylar, Oluşturucular ve alanları. Aşağıdaki bölümlerde, tür üyeleri adlandırmak için yönergeler açıklanmaktadır.  

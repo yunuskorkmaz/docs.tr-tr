@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
 ms.openlocfilehash: fe53ea58dc98a4de793fe9dad1c3ceeac71622fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698661"
 ---
 # <a name="using-statement-visual-basic"></a>Using Deyimi (Visual Basic)
 Başlangıcı bildiren bir `Using` engelleyin ve isteğe bağlı olarak blok denetleyen sistem kaynaklarını alır.  
@@ -61,11 +61,11 @@ End Using
   
  A `Using` bloğu üç bölümü vardır: alım, kullanım ve silinecek.  
   
--   *Alım* bir değişken oluşturma ve sistem kaynağına başvurmak için başlatma anlamına gelir. `Using` Deyimi bir veya daha fazla kaynak elde veya tam olarak bir kaynak blok girmeden önce almak ve sağlamak için `Using` deyimi. Sağlarsanız, `resourceexpression`, kaynak denetimine geçirmeden önce almalıdır `Using` deyimi.  
+- *Alım* bir değişken oluşturma ve sistem kaynağına başvurmak için başlatma anlamına gelir. `Using` Deyimi bir veya daha fazla kaynak elde veya tam olarak bir kaynak blok girmeden önce almak ve sağlamak için `Using` deyimi. Sağlarsanız, `resourceexpression`, kaynak denetimine geçirmeden önce almalıdır `Using` deyimi.  
   
--   *Kullanım* kaynaklara erişirken ve bunları eylemleri gerçekleştirme anlamına gelir. Deyimleri arasında `Using` ve `End Using` kaynak kullanımını gösterir.  
+- *Kullanım* kaynaklara erişirken ve bunları eylemleri gerçekleştirme anlamına gelir. Deyimleri arasında `Using` ve `End Using` kaynak kullanımını gösterir.  
   
--   *Çıkarma* çağırma anlamına gelir <xref:System.IDisposable.Dispose%2A> nesneye yöntemi `resourcename`. Bu nesne kaynaklarını düzgün bir şekilde sonlandırmak sağlar. `End Using` Deyimi siler altında kaynakların `Using` bloğun denetimi.  
+- *Çıkarma* çağırma anlamına gelir <xref:System.IDisposable.Dispose%2A> nesneye yöntemi `resourcename`. Bu nesne kaynaklarını düzgün bir şekilde sonlandırmak sağlar. `End Using` Deyimi siler altında kaynakların `Using` bloğun denetimi.  
   
 ## <a name="behavior"></a>Davranış  
  A `Using` blok davranacağını gibi bir `Try`... `Finally` , yapım `Try` blok kaynakları kullanır ve `Finally` blok onları siler. Bu nedenle, `Using` blok blok çıkış ne olursa olsun, kaynakların elden garanti eder. Hatta işlenmeyen bir özel durum söz konusu olduğunda, bu doğrudur dışında bir <xref:System.StackOverflowException>.  

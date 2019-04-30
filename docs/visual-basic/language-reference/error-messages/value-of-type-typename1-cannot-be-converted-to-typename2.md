@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
 ms.openlocfilehash: 5f313a43bc3a2f983dabbd45477d120fdb80d063
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766811"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>Türünün değeri '\<typename1 >' olarak değiştirilemez '\<typename2 >'
 Türünün değeri '\<typename1 >' olarak değiştirilemez '\<typename2 >'. Derleme bir proje başvurusu olan bir dosya başvurusunun karışması tür uyuşmazlığı olabilir '\<assemblyname >'. Dosya başvurusu değiştirmeyi deneyin '\<DosyaYolu >' projesinde '\<projectname1 >' proje başvurusu ile '\<projectname2 >'.  
@@ -57,7 +57,7 @@ Türünün değeri '\<typename1 >' olarak değiştirilemez '\<typename2 >'. Derl
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Dosya başvurusu bir proje başvurusu olarak değiştirin.  
+- Dosya başvurusu bir proje başvurusu olarak değiştirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

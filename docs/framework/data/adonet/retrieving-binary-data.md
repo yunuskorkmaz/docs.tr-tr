@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
 ms.openlocfilehash: 068b84e8704b54e6aea148ec5fc5bf9f0c4cb958
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664291"
 ---
 # <a name="retrieving-binary-data"></a>İkili Verileri Alma
 Varsayılan olarak, **DataReader** satırın tamamını veri kullanılabilir hemen sonra gelen verileri bir satır olarak yükler. Tek bir satırda bulunan verileri gigabayt içerdiğinden ikili büyük nesne (BLOB) ancak farklı işlenmesi gerekir. **Command.ExecuteReader** has sürecek bir aşırı yükleme yöntemi bir <xref:System.Data.CommandBehavior> varsayılan davranışını değiştirmek için bağımsız değişken **DataReader**. Geçirebilirsiniz <xref:System.Data.CommandBehavior.SequentialAccess> için **ExecuteReader** varsayılan davranışını değiştirmek için yöntem **DataReader** böylece alınan veri satırı yükleme yerine, verileri sıralı olarak yüklenir. Bu, BLOB veya diğer büyük veri yapılarını yüklemek için idealdir. Bu davranış, veri kaynağında değişebilir unutmayın. Örneğin, bir BLOB Microsoft Access'ten döndüren alınan belleğe yerine sıralı olarak yüklenen tüm BLOB yükler.  

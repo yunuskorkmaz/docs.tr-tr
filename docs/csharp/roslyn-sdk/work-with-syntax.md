@@ -1,75 +1,75 @@
 ---
-title: .NET derleme Platform SDK sözdizimi modelini kullanın
-description: Bu genel bakışta anlamak ve sözdizimi düğümleri yönetmek için kullandığınız türleri bir anlayış sağlar.
+title: .NET derleyici Platformu SDK'sı söz dizimi modelini kullanın
+description: Bu genel bakışta anlamak ve söz dizimi düğümleri işlemek için kullandığınız türleri bir anlayış sağlar.
 ms.date: 10/15/2017
 ms.custom: mvc
 ms.openlocfilehash: a48d48168dffdb439c984f5b4209019514b3b970
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706604"
 ---
-# <a name="work-with-syntax"></a>Sözdizimi ile çalışma
+# <a name="work-with-syntax"></a>Söz dizimi ile çalışma
 
-**Sözdizimi ağacı** olan API'leri derleyici tarafından kullanıma sunulan bir temel veri yapısı. Bu ağaçları kaynak kod sözcük ve söz dizimi yapısını temsil eder. Bunlar, iki önemli amaca hizmet eder:
+**Söz dizimi ağacı** olan API'leri derleyici tarafından kullanıma sunulan bir temel veri yapısı. Bu ağaç, kaynak kodu sözcük ve söz dizimi yapısını temsil eder. Bunlar, iki önemli amaca hizmet eder:
 
-1. -Bir IDE gibi araçlar izin vermek için eklentiler, kod çözümleme araçları ve yapan yeniden düzenlemeler - görmek ve bir kullanıcının proje kaynak kodunda söz dizimi yapısını işlemek için.
-2. Araçları - yapan yeniden düzenlemeler ve oluşturmak için bir IDE - gibi etkinleştirmek için değiştirmek ve kaynak kodu kullanım doğrudan metin düzenlemeleri gerek kalmadan doğal bir şekilde yeniden düzenleyin. Oluşturma ve ağaçları düzenleme araçları kolayca oluşturabilir ve kaynak kodu yeniden düzenleyin.
+1. Gibi bir IDE araçları - izin vermek için eklentileri, Kod Analizi araçları ve yeniden düzenlemeler - bakın ve bir kullanıcının proje kaynak kodunda sözdizimi yapısını işlemek için.
+2. Araçları - yeniden düzenlemeler ve oluşturmak için bir IDE - gibi etkinleştirmek için değiştirme ve kaynak kodu, doğrudan metin düzenlemeleri kullanmak zorunda kalmadan doğal bir şekilde yeniden düzenleyin. Oluşturma ve ağaçları düzenleme araçları kolayca oluşturun ve kaynak kodu yeniden düzenleyin.
 
 ## <a name="syntax-trees"></a>Sözdizimi ağacı
 
-Sözdizimi ağacı yeniden düzenleme, IDE özellikleri ve kod oluşturma kod analizi, bağlama, derleme için kullanılan birincil yapısı var. Kaynak kodun hiçbir bölümü ilk tanımlanan ve pek çok iyi bilinen yapısal dil öğeleri birine kategorilere olmadan anladım. 
+Sözdizimi ağacı yeniden düzenleme, IDE özellikleri ve kod oluşturmayı bağlama, kod analizi, derleme için kullanılan birincil yapısı var. Kaynak kodun hiçbir kısmı ilk ve tanımlanmış birçok iyi bilinen yapısal dil öğelerini birine kategorilere olmadan anlaşılır. 
 
-Sözdizimi ağacı üç anahtar özniteliklere sahiptir. Sözdizimi ağacı tam bir güvenilirlik tüm kaynak bilgileri tutun ilk özniteliğidir. Başka bir deyişle, sözdizimi ağacı her bilgiye boşluk, açıklamalar ve önişlemci yönergeleri de dahil olmak üzere kaynak metni, her dilbilgisi yapısı, her sözcük belirteci ve şey arasındaki, bulunan içerir. Örneğin, tam olarak yazılmış şekilde kaynağında belirtilen her değişmez değeri gösterilir. Program Atlanan ya da eksik belirteçleri sözdizimi ağacında temsil eden eksik veya hatalı oluşturulmuş olduğunda sözdizimi ağaçları Ayrıca kaynak kod hatalarını temsil eder.  
+Sözdizimi ağacı üç anahtar özniteliklere sahiptir. Söz dizimi ağacı içinde tam uygunlukta tüm kaynak bilgileri tutmak ilk özniteliğidir. Başka bir deyişle, söz dizimi ağacı her bir parçası boşluk, açıklamalar ve ön işlemci yönergeleri dahil olmak üzere kaynak metni, her dilbilgisi yapısı, her sözcük temelli belirteç ve arasındaki, diğer her şey bulunan bilgiler içerir. Örneğin, tam olarak yazılmış şekilde kaynak bahsedilen her bir sabit değer gösterilir. Program sözdizimi ağacı belirteçleri Atlanan ya da eksik temsil eden tarafından eksik veya hatalı olduğunda söz dizimi ağacı ayrıca kaynak kodundaki hataları temsil eder.  
 
-Bu, söz dizimi ağaçları ikinci öznitelik sağlar. Ayrıştırıcının elde edilen bir sözdizimi ağacı gelen ayrıştırıldığında tam metin üretebilir. Tüm sözdizimi düğümden bu düğümden başlayan alt ağaç metin gösterimini alır mümkündür. Bu, söz dizimi ağaçları oluşturmak ve kaynak metnini düzenlemek için bir yol olarak kullanılabileceği anlamına gelir. Yeni bir ağaç değişiklikleri dışında varolan ağacına yapmadan eşdeğer metni oluşturulan uygulanır ve bir sözdizimi ağacı düzenleyerek sahip bir ağaç oluşturarak, metin etkili bir şekilde düzenlediniz. 
+Bu ikinci öznitelik söz dizimi ağaçları sağlar. Ayrıştırıcının alınan bir sözdizimi ağacına gelen ayrıştırıldığında küpte tam metin üretebilir. Herhangi bir söz dizimi düğümünden metin temsili o düğümde kökü alt ağacı mümkündür. Başka bir deyişle, söz dizimi ağacı bir şekilde oluşturun ve kaynak metni düzenlemek için kullanılabilir. Yeni bir ağaç değişiklikleri dışında varolan ağacına yapma eşdeğer metin oluşturulan itiraz ve düzenleyerek bir sözdizimi ağacına sahip bir ağaç oluşturarak, metin etkili bir şekilde düzenlediniz. 
 
-Üçüncü sözdizimi ağaçları değişmez ve iş parçacığı açısından güvenli olduğunu özniteliğidir.  Bu bir ağaç alındıktan sonra bu kodu geçerli durumunu anlık görüntüsüdür, hiçbir zaman anlamına gelir. Bu, aynı sözdizimi ağacı ile aynı anda farklı iş parçacıklarındaki kilitleme veya çoğaltma etkileşim kurmak birden çok kullanıcı sağlar. Çünkü ağaçları sabittir ve değişikliğe doğrudan ağacına yapılabilmesi için Fabrika yöntemleri oluşturmak ve ağaç ek anlık görüntüleri oluşturarak sözdizimi ağaçlarını değiştirme yardımcı olur. Yeni bir sürüm hızlı ve çok az ek bellek ile yeniden oluşturulması için temel alınan düğümleri yeniden şekilde ağaçları verimlidir.
+Üçüncü söz dizimi ağacı sabittir ve iş parçacığı açısından güvenli olmalarını özniteliğidir.  Bu bir ağaç alındıktan sonra bu kodun geçerli durumunun bir anlık görüntüdür, hiçbir zaman anlamına gelir. Bu, aynı söz dizimi ağacı ile aynı anda farklı iş parçacıklarında kilitlenmesi veya çoğaltma etkileşime geçmek birden fazla kullanıcı sağlar. Çünkü ağaçları sabittir ve bir ağaca doğrudan herhangi bir değişiklik yapılabilmesi için Fabrika yöntemleri oluşturun ve ek anlık görüntü ağacının oluşturarak söz dizimi ağaçlarını değiştirme yardımcı olur. Hızlı ve çok az ek bellek ile yeni bir sürüm oluşturulabilmesi için temel alınan düğümleri yeniden şekilde ağaçları verimlidir.
 
-Sözdizimi ağacı gerçek anlamda bir ağaç veri, burada terminal olmayan yapısal öğeler diğer öğeleri üst yapısıdır. Her söz dizimi ağaç düğümleri, belirteçleri ve trivia oluşur.  
+Sözdizimi ağacı terminal olmayan yapısal öğelerini diğer öğeleri nerede üst ağaç veri yapısı, tam anlamıyla olduğu. Her bir söz dizimi ağacı, düğümler, belirteçleri ve trivia yapılır.  
 
-## <a name="syntax-nodes"></a>Sözdizimi düğümler
+## <a name="syntax-nodes"></a>Söz dizimi düğümleri
 
-Sözdizimi düğümleri sözdizimi ağaçları birincil öğelerini biridir. Bu düğümler bildirimleri, deyimleri, yan tümceleri ve ifadeler gibi söz dizimi yapıları temsil eder. Sözdizimi düğümlerinin her kategori türetilmiş ayrı bir sınıf tarafından temsil edilen <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>. Düğüm sınıfları kümesi Genişletilebilir değil. 
+Söz dizimi düğümleri söz dizimi ağacı birincil öğelerinden biridir. Bu düğümler, bildirimleri, deyimler, yan tümceleri ve ifadeler gibi bir söz dizimi yapıları temsil eder. Söz dizimi düğümlerinin her kategori türetilen ayrı bir sınıf tarafından temsil edilen <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>. Düğüm sınıf kümesi Genişletilebilir değildir. 
 
-Tüm sözdizimi düğümleri her zaman diğer düğümler ve alt öğeleri olarak belirteçleri sahip oldukları anlamına gelir sözdizimi ağacındaki terminal olmayan düğümler var. Başka bir düğüm alt olarak, her düğümün üzerinden erişilen bir üst düğümün sahip <xref:Microsoft.CodeAnalysis.SyntaxNode.Parent?displayProperty=nameWithType> özelliği. Bir düğümün üst düğümleri ve ağaçları değişmez olduğundan, hiçbir zaman değiştirir. Ağaç kökü null üst öğe içermiyor.  
+Tüm söz dizimi terminal olmayan düğümleri her zaman diğer düğümleri ve alt öğeleri olarak belirteçleri olduğu anlamına gelir. söz dizimi ağacı içinde düğümlerdir. Başka bir düğümün alt, her düğüm üzerinden erişilebilen bir üst düğümün sahip <xref:Microsoft.CodeAnalysis.SyntaxNode.Parent?displayProperty=nameWithType> özelliği. Düğümler ve ağaçları sabit olduğundan, üst düğümünün hiçbir zaman değiştirir. Ağacının kökü null bir üst öğeye sahip.  
 
-Her düğümün sahip bir <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType> kaynak metni konumlarını temel sıralı bir düzende alt düğümleri listesini döndürür yöntemi. Bu liste belirteçleri içermiyor. Her düğümün alt gibi incelemek için yöntemler de sahip <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A>, veya <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A> -tüm düğümler, belirteçleri veya bu düğüm tarafından kökü alt ağaç var trivia listesini temsil eder.  
+Her düğüme sahip bir <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType> yöntemi kaynak metin konumlarına göre sıralı alt düğümlerin listesini döndürür. Bu liste, belirteç içermiyor. Her düğüm alt sınamak için yöntemlerini de sahip <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A>, veya <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A> -tüm düğümleri, belirteçleri veya o düğümün kökü alt ağaçta mevcut Meraklısına Notlar listesini temsil eder.  
 
-Ayrıca, her bir sözdizimi düğüm alt hepsi aynı alt kesin türü belirtilmiş özellikleri aracılığıyla kullanıma sunar. Örneğin, bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> düğümü sınıfına sahip üç ek özellikler için ikili işleçler belirli: <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken>, ve <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>. Türü <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left> ve <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> olan <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax>ve türünü <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> olan <xref:Microsoft.CodeAnalysis.SyntaxToken>.
+Ayrıca, her bir sözdizimi düğümü alt hepsi aynı alt kesin olarak belirlenmiş özellikler aracılığıyla kullanıma sunar. Örneğin, bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> düğümü sınıfı için ikili işleçler belirli üç ek özelliklere sahiptir: <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken>, ve <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>. Türünü <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left> ve <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> olduğu <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax>ve türünü <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> olduğu <xref:Microsoft.CodeAnalysis.SyntaxToken>.
 
-İsteğe bağlı alt bazı sözdizimi düğümünüz. Örneğin, bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax> isteğe sahip <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ElseClauseSyntax>. Alt mevcut değilse, özelliği null döndürür. 
+İsteğe bağlı alt öğeleri bazı sözdizimi düğümünüz. Örneğin, bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax> isteğe sahip <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ElseClauseSyntax>. Alt mevcut değilse özellik null döndürür. 
 
-## <a name="syntax-tokens"></a>Sözdizimi belirteçleri
+## <a name="syntax-tokens"></a>Söz dizimi belirteçleri
 
-Sözdizimi, kodunun en küçük söz dizimi parçaları temsil eden dil dilbilgisi Terminal belirteçleridir. Hiçbir zaman diğer düğümleri veya belirteçleri üst oldukları. Anahtar sözcükler, tanımlayıcılar, değişmez değerleri ve noktalama sözdizimi belirteçleri oluşur. 
+Söz dizimi, kod söz dizimi küçük parçaları temsil eden dil dilbilgisi terminaller belirteçleridir. Hiçbir zaman diğer düğümleri veya belirteçleri üst öğelerinin değildirler. Söz dizimi belirteçleri, anahtar sözcükler, tanımlayıcılar, değişmez değerler ve noktalama işaretleri oluşur. 
 
-Verimlilik amacıyla <xref:Microsoft.CodeAnalysis.SyntaxToken> türü olan bir CLR değer türü. Bu nedenle, sözdizimi düğümleri farklı olarak, her türlü belirteçleri bağlı olarak temsil edilen belirteç türü anlamları özellikleri karışımını içeren için yalnızca bir yapısı yoktur.
+Verimliliği amacıyla <xref:Microsoft.CodeAnalysis.SyntaxToken> türü, bir CLR değer türüdür. Bu nedenle, söz dizimi düğümleri, tüm tür belirteçleri karışımından oluşan temsil edilen bir belirteç türünü bağlı olarak anlam taşıyan özellikler için yalnızca bir yapı yoktur.
 
-Örneğin, bir tamsayı değişmez değer belirteci sayısal bir değeri temsil eder. Ek olarak ham kaynak metni belirteci yayılma değişmez değer belirteci sahip bir <xref:Microsoft.CodeAnalysis.SyntaxToken.Value> tam söyler özelliği Integer değeri kodunu çözdü. Bu özellik olarak yazılan <xref:System.Object> çünkü pek çok basit türlerden biri olabilir.
+Örneğin, bir tamsayı değişmez değer belirteci sayısal bir değeri temsil eder. Ham kaynak metin yanı sıra belirteci yayılma değişmez değer belirtece bir <xref:Microsoft.CodeAnalysis.SyntaxToken.Value> tam belirten özellik çözülmüş tamsayı değeri. Bu özellik olarak yazılan <xref:System.Object> çünkü çok basit türlerden biri olabilir.
 
-<xref:Microsoft.CodeAnalysis.SyntaxToken.ValueText> Özelliği bildirir, aynı bilgileri <xref:Microsoft.CodeAnalysis.SyntaxToken.Value> özellik; ancak bu özellik her zaman olarak yazılan <xref:System.String>. C# kaynak metni tanımlayıcıda Unicode kaçış karakterleri içerebilir, ancak kaçış sırası sözdizimi tanımlayıcı adı bir parçası olarak kabul edilmez. Belirtecin tarafından kapsanan ham metni kaçış sırası içeren ancak bunu <xref:Microsoft.CodeAnalysis.SyntaxToken.ValueText> özelliğini desteklemez. Bunun yerine, kaçış tarafından tanımlanan Unicode karakterler içerir. Örneğin, kaynak metin olarak yazılmış bir tanımlayıcı içeriyorsa `\u03C0`, sonra <xref:Microsoft.CodeAnalysis.SyntaxToken.ValueText> özelliği bu belirtece döndürecektir `π`.
+<xref:Microsoft.CodeAnalysis.SyntaxToken.ValueText> Özelliği bildirir, aynı bilgileri <xref:Microsoft.CodeAnalysis.SyntaxToken.Value> özelliği; ancak bu özellik her zaman olarak yazılan <xref:System.String>. Bir tanımlayıcı C# kaynak metin, Unicode kaçış karakterlerini içerebilir, ancak çıkış dizisi söz dizimi tanımlayıcı adı bir parçası olarak kabul edilmez. Belirteç tarafından kapsanan ham metni kaçış sırası içerse bunu <xref:Microsoft.CodeAnalysis.SyntaxToken.ValueText> özelliği yok. Bunun yerine, kaçış tarafından tanımlanan Unicode karakterler içerir. Örneğin, kaynak metin olarak yazılan tanımlayıcının içeriyorsa `\u03C0`, ardından <xref:Microsoft.CodeAnalysis.SyntaxToken.ValueText> özelliği için bu belirteci döndürür `π`.
 
-## <a name="syntax-trivia"></a>Sözdizimi trivia
+## <a name="syntax-trivia"></a>Söz dizimi Meraklısına Notlar
 
-Sözdizimi trivia kodu, boşluk, açıklamalar ve önişlemci yönergeleri gibi normal anlamak için büyük ölçüde anlamsız kaynak metni bölümlerini temsil eder. Sözdizimi belirteçleri gibi trivia değer türleridir. Tek <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> türü trivia her türlü açıklamak için kullanılır.
+Söz dizimi Meraklısına notlar gibi boşluk, açıklamalar ve ön işlemci yönergelerini kodun normal anlamak için büyük ölçüde Önemsiz kaynak metin parçalarını temsil eder. Söz dizimi belirteçleri gibi Meraklısına Notlar değer türleridir. Tek <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> türü Meraklısına Notlar tüm türleri tanımlamak için kullanılır.
 
-Trivia normal dili sözdizimi parçası olmayan ve her iki belirteç arasında herhangi bir yerde görünebilir çünkü bunlar sözdizimi ağacında bir düğümün bir alt öğesi olarak dahil edilmez. Yeniden düzenleme gibi ve kaynak metinle tam uygunluğunu korumak için bir özellik uygularken önemli olduklarından, henüz sözdizimi ağacının bir parçası kalırlar.
+Meraklısına Notlar normal dil sözdiziminin bir parçası değildir ve herhangi iki belirteç arasında herhangi bir yeri görünebilir çünkü bunlar sözdizimi ağacında bir düğümün alt düğümü dahil edilmez. Henüz, bunlar yeniden düzenleme gibi ve kaynak metni ile tam uygunluğu korumak için bir özellik uygularken önemli olduğundan, bunlar söz dizimi ağacı bir parçası olarak mevcut.
 
-Bir belirtecin inceleyerek trivia erişebilirsiniz <xref:Microsoft.CodeAnalysis.SyntaxToken.LeadingTrivia?displayProperty=nameWithType> veya <xref:Microsoft.CodeAnalysis.SyntaxToken.TrailingTrivia?displayProperty=nameWithType> koleksiyonları. Kaynak metni ayrıştırıldığında trivia dizilerini belirteçleri ile ilişkilendirilir. Genel olarak, bir belirteç herhangi trivia sonra aynı satıra kadar sonraki belirtece sahip olur. Tüm trivia o satırdan aşağıdaki belirteç ile ilişkilidir. Tüm ilk trivia kaynak dosyasında ilk belirteci alır ve son trivia dosyasında yapılan dizisini Sıfır Genişlik sahip değilse, dosya sonu belirteç sabitlenmiş.
+Meraklısına Notlar bir belirtecin inceleyerek erişebileceğiniz <xref:Microsoft.CodeAnalysis.SyntaxToken.LeadingTrivia?displayProperty=nameWithType> veya <xref:Microsoft.CodeAnalysis.SyntaxToken.TrailingTrivia?displayProperty=nameWithType> koleksiyonları. Kaynak metni ayrıştırıldığında Meraklısına Notlar dönüştürülmelerini belirteçleri ile ilişkilidir. Genel olarak, bir belirteç tüm Meraklısına Notlar sonra aynı satıra kadar sonraki belirtece sahip. Bu satırdan herhangi trivia aşağıdaki belirteciyle ilişkilendirilmiş olması gerekir. Kaynak dosyadaki ilk belirteçten tüm ilk trivia alır ve trivia dosyasındaki son dizi olan aksi Sıfır Genişlik dosya sonu belirteci sabitlenmiş.
 
-Sözdizimi düğümleri ve belirteçleri aksine, sözdizimi trivia üst öğeleri yok. Henüz ağacının bir parçası olan ve her bir tek belirteçle ilişkili olduğu için kullanarak ilişkili olduğu belirteci erişebilir <xref:Microsoft.CodeAnalysis.SyntaxTrivia.Token?displayProperty=nameWithType> özelliği.
+Söz dizimi düğümleri ve belirteçleri aksine, söz dizimi trivia üst öğeleri yok. Henüz her tek bir belirteçle ilişkilendirilir ve ağacın parçası olduğundan, belirteci kullanarak ilişkili olduğu erişebilir <xref:Microsoft.CodeAnalysis.SyntaxTrivia.Token?displayProperty=nameWithType> özelliği.
 
 ## <a name="spans"></a>Yayılma
 
-Her düğüm, belirteç veya trivia kaynak metni ve oluşur karakter sayısı içindeki konumuna bilir. Bir metin konumu bir sıfır tabanlı olduğundan ve 32 bit tamsayı olarak temsil edilir `char` dizini. A <xref:Microsoft.CodeAnalysis.Text.TextSpan> nesnesidir başlangıç konumu ve karakter sayısını, her ikisi de tamsayı olarak temsil. Varsa <xref:Microsoft.CodeAnalysis.Text.TextSpan> bir sıfır uzunlukta olan iki karakter arasında bir konuma başvuruyor.
+Her düğüm, belirteç veya trivia kaynak metni ve içerdiği karakter sayısını içindeki konumuna bilir. Bir metin konumu sıfır tabanlı bir 32 bit tamsayı olarak temsil edilen `char` dizini. A <xref:Microsoft.CodeAnalysis.Text.TextSpan> nesne başlangıç konumu ve karakter sayısı, her ikisi de tamsayı olarak temsil edilir. Varsa <xref:Microsoft.CodeAnalysis.Text.TextSpan> bir sıfır uzunluğuna sahip iki karakter arasına bir konuma başvuruyor.
 
-Her düğümü iki sahip <xref:Microsoft.CodeAnalysis.Text.TextSpan> özellikleri: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> ve <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
+Her düğümü iki içeren <xref:Microsoft.CodeAnalysis.Text.TextSpan> özellikleri: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> ve <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
 
-<xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> Düğümün alt ağaç ilk belirteç başından metin aralık son belirteç sonuna bir özelliktir. Bu aralık, başında veya sonunda trivia içermez.
+<xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> Düğümün alt ağacı ilk belirteci başlangıcı metin aralığı son belirteç sonuna bir özelliktir. Bu aralık, başında veya sonunda tüm Meraklısına Notlar içermez.
 
-<xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> Düğümün normal aralık yanı sıra, başında veya sonunda trivia aralık içeren metin aralık bir özelliktir.
+<xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> Düğümün normal yayılma yanı sıra, herhangi bir başında veya sonunda trivia aralık içeren metin aralığı bir özelliktir.
 
 Örneğin: 
 
@@ -81,20 +81,20 @@ Her düğümü iki sahip <xref:Microsoft.CodeAnalysis.Text.TextSpan> özellikler
       }
 ```
 
-Bloktaki deyimi düğüm tek dikey çubuk (|) tarafından gösterilen bir aralık sahiptir. Karakterler içeren `throw new Exception("Not right.");`. Tam aralık çift dikey çubuk (|) tarafından belirtilir. Aynı aralık olarak ve baştaki ve sondaki trivia ile ilişkili karakterler içerir.
+Deyimi düğümü bloktaki tek dikey çubuk (|) tarafından belirtilen bir yayılma vardır. Karakterleri içeren `throw new Exception("Not right.");`. Tam aralık çift dikey çubuk (|) tarafından belirtilir. Bu, aynı aralık olarak, baştaki ve sondaki Meraklısına Notlar ile ilişkili karakter içerir.
 
 ## <a name="kinds"></a>Tür
 
-Her düğüm, belirteç veya trivia sahip bir <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> türünde özellik <xref:System.Int32?displayProperty=nameWithType>, gösterilen söz dizimi öğesi tanımlar. Bu değer için dile özgü numaralandırması çevirebilirsiniz; tek bir C# veya VB, her dil sahip `SyntaxKind` numaralandırması (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> ve <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>sırasıyla) tüm olası düğümleri, belirteçleri ve trivia öğeleri dilbilgisi listeler. Bu dönüştürme erişerek otomatik olarak yapılabilir <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> veya <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> genişletme yöntemleri.
+Her düğüm, belirteç veya Meraklısına Notlar bir <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> türünün özelliği <xref:System.Int32?displayProperty=nameWithType>, temsil edilen söz dizimi öğe tanımlar. Bu değer bir dile özgü sabit listesine dönüştürülebilen; Her bir dilin C# veya VB, tek bir `SyntaxKind` numaralandırması (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> ve <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>sırasıyla), tüm olası düğümlerinin, belirteçleri ve Meraklısına Notlar öğeleri dilbilgisi içinde listelenir. Bu dönüştürme erişerek otomatik olarak yapılabilir <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> veya <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> genişletme yöntemleri.
 
-<xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> Özelliği için aynı düğüm sınıfı paylaşmak sözdizimi düğüm türü kolay Kesinleştirme izin verir. Belirteçleri ve trivia için bu özellik bir öğe türü diğerinden ayırt etmek için tek yoludur. 
+<xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> Özelliği için aynı düğümü sınıfı paylaşan sözdizimi düğümü türleri kolay Kesinleştirme sağlar. Belirteçler ve Meraklısına notlar için bu özellik öğesi bir tür diğerinden ayırt etmek için tek yoludur. 
 
-Örneğin, bir tek <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> sınıfına sahip <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken>, ve <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> alt öğeleri olarak. <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*> Özelliği ayırt olduğunu bir <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression>, veya <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> sözdizimi düğümün tür.
+Örneğin, bir tek <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> sınıfında <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken>, ve <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> alt öğeleri olarak. <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*> Özelliği olduğunu ayıran bir <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression>, veya <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> söz dizimi düğümünün türü.
 
 ## <a name="errors"></a>Hatalar
 
-Kaynak metni bile sözdizimi hataları içeriyorsa, kaynak ayrıştırılabilmelerini tam sözdizimi ağacı açıktır. Ayrıştırıcının dili tanımlanmış sözdizimine uymuyor kod karşılaştığında, iki teknikleri birini sözdizimi ağacı oluşturmak için kullanır.
+Kaynak metni söz dizimi hataları içerdiğinde, bile, hepsini kaynağına ayrıştırılabilmelerini sağlamak üzere bir tam söz dizimi ağacı kullanıma sunulur. Ayrıştırıcının dili tanımlanan sözdizimine uygun değil kod karşılaştığında, iki tekniklerden birini söz dizimi ağacı oluşturmak için kullanır.
 
-Ayrıştırıcı belirteci belirli bir tür bekliyor, ancak onu bulamazsa, ilk olarak, bu eksik belirteci belirteç bekleniyordu konumu sözdizimi ağacında yerleştirme. Eksik bir belirteç bekleniyordu gerçek belirteci temsil eder, ancak boş bir aralığın var ve kendi <xref:Microsoft.CodeAnalysis.SyntaxNode.IsMissing?displayProperty=nameWithType> özelliği döndürür `true`.
+İlk olarak, ayrıştırıcının belirli bir belirteç türünü bekliyor, ancak bunu bulamaz, belirteç bekleniyordu konumda söz dizimi ağacı içinde eksik bir belirteç ekleyebilirsiniz. Eksik bir belirteç bekleniyordu gerçek belirteci temsil eder, ancak boş bir yayılma vardır ve kendi <xref:Microsoft.CodeAnalysis.SyntaxNode.IsMissing?displayProperty=nameWithType> özelliği döndürür `true`.
 
-İkinci olarak, bir tane ayrıştırma burada devam edebilirsiniz bulana kadar ayrıştırıcı belirteçleri atlayabilirsiniz. Bu durumda, atlanan belirteçleri türü trivia düğümle olarak bağlı olan <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SkippedTokensTrivia>.
+İkinci olarak, bunu bir ayrıştırma burada devam edebilirsiniz bulana kadar ayrıştırıcının belirteçleri atlayabilirsiniz. Bu durumda, atlanan belirteçleri trivia düğüm türü ile olarak eklenen <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SkippedTokensTrivia>.

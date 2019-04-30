@@ -3,11 +3,11 @@ title: Saf işlevler halinde (C#) yeniden düzenleme
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
 ms.openlocfilehash: 3e856c1e32d4b0dc16291e1b913e9a5cc19717c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680447"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Saf işlevler halinde (C#) yeniden düzenleme
 
@@ -18,9 +18,9 @@ Saf işlevsel dönüşümlere önemli bir yönüdür saf işlevler kullanarak ko
   
  Bu bölümde daha önce belirtildiği gibi saf işlev iki yararlı özelliklere sahiptir:  
   
--   Bu, yan etkileri vardır. İşlevi, tüm değişkenler veya işlev dışında herhangi bir türde verileri değiştirmez.  
+- Bu, yan etkileri vardır. İşlevi, tüm değişkenler veya işlev dışında herhangi bir türde verileri değiştirmez.  
   
--   Tutarlı olur. Aynı giriş veri kümesi düşünüldüğünde, bu her zaman aynı çıkış değeri döndürür.  
+- Tutarlı olur. Aynı giriş veri kümesi düşünüldüğünde, bu her zaman aynı çıkış değeri döndürür.  
   
  Yollarından fonksiyonel programlama için geçiş, gereksiz yan etkileri ve dış bağımlılıkları ortadan kaldırmak için mevcut kodu yeniden düzenleyin sağlamaktır. Bu şekilde, varolan kod sürümlerini saf işlev oluşturabilirsiniz.  
   

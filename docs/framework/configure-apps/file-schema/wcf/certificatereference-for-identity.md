@@ -3,11 +3,11 @@ title: <certificateReference> için <identity>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
 ms.openlocfilehash: 3b7779ac00c2fca6300c12ac18ff2d5f6b868424
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704342"
 ---
 # <a name="certificatereference-for-identity"></a>\<certificateReference > için \<kimliği >
 X.509 Sertifika doğrulama ayarlarını belirtir. Bu kimlik ile bir uç noktayı bağlayan güvenli bir Windows Communication Foundation (WCF) istemci, sunucu tarafından sunulan istemlerin, bu kimliği oluşturmak için kullanılan kimlik talebi içerdiğini doğrular.  

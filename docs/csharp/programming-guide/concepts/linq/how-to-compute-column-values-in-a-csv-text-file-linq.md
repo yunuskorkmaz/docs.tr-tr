@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Sütun değerleri bir CSV metinde dosyasında (LINQ) i
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
 ms.openlocfilehash: 0a1b42bf941fa65f053be4931ddfbbbdf1223a48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668204"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Nasıl yapılır: Sütun değerleri bir CSV metinde dosyasında (LINQ) işlem (C#)
 Bu örnek bir .csv dosyası sütunlarda gibi toplam, ortalama, Min ve Max toplama hesaplamalar gerçekleştirmek nasıl gösterir. Burada gösterilen örnek ilkeleri diğer yapılandırılmış metin türü için uygulanabilir.  

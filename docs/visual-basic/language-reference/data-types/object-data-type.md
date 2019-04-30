@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
 ms.openlocfilehash: 616110145db2796e05509094b1c023daacd68f03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751682"
 ---
 # <a name="object-data-type"></a>Nesne Veri Türü
 Nesnelere atıfta adresleri tutar. Herhangi bir başvuru türü (dize, dizi, sınıf veya arabirim) atayabileceğiniz bir `Object` değişkeni. Bir `Object` değişkeni ayrıca herhangi bir değer türünün veri başvuru (sayısal, `Boolean`, `Char`, `Date`, yapı ya da numaralandırma).  
@@ -42,19 +42,19 @@ datTyp = Type.GetTypeCode(myObject.GetType())
   
 ## <a name="programming-tips"></a>Programlama İpuçları  
   
--   **Birlikte çalışabilirlik değerlendirmeleri.** Örnek otomasyon ve COM nesneleri için .NET Framework için yazılmaz bileşenleriyle arabirim, diğer ortamlarda işaretçi türleri, Visual Basic ile uyumlu olmadığını aklınızda bulundurun `Object` türü.  
+- **Birlikte çalışabilirlik değerlendirmeleri.** Örnek otomasyon ve COM nesneleri için .NET Framework için yazılmaz bileşenleriyle arabirim, diğer ortamlarda işaretçi türleri, Visual Basic ile uyumlu olmadığını aklınızda bulundurun `Object` türü.  
   
--   **Performans.** Bir değişken bildirmek ile `Object` türü olan herhangi bir nesneye bir başvuru içermesi için yeterince esnektir. Ancak, bir metot veya özellik bu tür bir değişken üzerinde çağırdığınızda, her zaman ücretler *geç bağlama* (çalışma zamanında). Zorlamak için *erken bağlama* (derleme zamanında) ve daha iyi performans, belirli bir sınıf adı ile bir değişken bildirmek veya belirli bir veri türüne.  
+- **Performans.** Bir değişken bildirmek ile `Object` türü olan herhangi bir nesneye bir başvuru içermesi için yeterince esnektir. Ancak, bir metot veya özellik bu tür bir değişken üzerinde çağırdığınızda, her zaman ücretler *geç bağlama* (çalışma zamanında). Zorlamak için *erken bağlama* (derleme zamanında) ve daha iyi performans, belirli bir sınıf adı ile bir değişken bildirmek veya belirli bir veri türüne.  
   
      Örneğin, belirli bir sınıf türü kullanmak bir nesne değişkeni bildirdiğinizde deneyin <xref:System.OperatingSystem>, genelleştirilmiş yerine `Object` türü. Kullanılabilir gibi en belirgin sınıfı de kullanmalısınız <xref:System.Windows.Forms.TextBox> yerine <xref:System.Windows.Forms.Control>, böylece özelliklerine ve yöntemlerine erişebilirsiniz. Genellikle kullanabileceğiniz **sınıfları** listesinde **Nesne Tarayıcısı** kullanılabilir sınıf adlarını bulmak için.  
   
--   **Genişletme.** Tüm veri türleri ve tüm başvuru türleri için genişletmek `Object` veri türü. Yani tüm türüne dönüştürebilir `Object` karşılaşmadan bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
+- **Genişletme.** Tüm veri türleri ve tüm başvuru türleri için genişletmek `Object` veri türü. Yani tüm türüne dönüştürebilir `Object` karşılaşmadan bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
   
      Ancak, değer türleri arasında dönüştürürseniz ve `Object`, Visual Basic adlı işlemler gerçekleştirdiğinde *kutulama* ve *kutudan çıkarma*, daha yavaş yürütme olun.  
   
--   **Tür karakterleri.** `Object` değişmez değer türü karakteri ya da tanımlayıcı türü karakteri var.  
+- **Tür karakterleri.** `Object` değişmez değer türü karakteri ya da tanımlayıcı türü karakteri var.  
   
--   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Object?displayProperty=nameWithType> sınıfı.  
+- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Object?displayProperty=nameWithType> sınıfı.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte bir `Object` işaret eden bir nesne örneğine değişkeni.  

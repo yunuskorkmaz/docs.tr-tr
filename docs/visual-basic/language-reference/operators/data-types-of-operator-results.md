@@ -10,11 +10,11 @@ helpviewer_keywords:
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
 ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778566"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>İşleç Sonuçlarının Veri Türleri (Visual Basic)
 Visual Basic işlenen veri türlerine göre bir işlem sonucu veri türünü belirler. Bazı durumlarda bu iki işlenenden ait olandan daha kapsamlı bir veri türü olabilir.  
@@ -22,21 +22,21 @@ Visual Basic işlenen veri türlerine göre bir işlem sonucu veri türünü bel
 ## <a name="data-type-ranges"></a>Veri Türü Aralıkları  
  Sırada küçük değerden büyük, ilgili veri türü aralıkları şu şekildedir:  
   
--   [Boole](../../../visual-basic/language-reference/data-types/boolean-data-type.md) — iki olası değerler  
+- [Boole](../../../visual-basic/language-reference/data-types/boolean-data-type.md) — iki olası değerler  
   
--   [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [bayt](../../../visual-basic/language-reference/data-types/byte-data-type.md) — 256 olası tamsayı değerler  
+- [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [bayt](../../../visual-basic/language-reference/data-types/byte-data-type.md) — 256 olası tamsayı değerler  
   
--   [Kısa](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) — 65.536 (6.5... E + 4) olası tamsayı değerler  
+- [Kısa](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) — 65.536 (6.5... E + 4) olası tamsayı değerler  
   
--   [Tamsayı](../../../visual-basic/language-reference/data-types/integer-data-type.md), [Uınteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) — 4,294,967,296 (4.2... E + 9) olası tamsayı değerler  
+- [Tamsayı](../../../visual-basic/language-reference/data-types/integer-data-type.md), [Uınteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) — 4,294,967,296 (4.2... E + 9) olası tamsayı değerler  
   
--   [Uzun](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) — 18,446,744,073,709,551,615 (1.8... E + 19) olası tamsayı değerler  
+- [Uzun](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) — 18,446,744,073,709,551,615 (1.8... E + 19) olası tamsayı değerler  
   
--   [Ondalık](../../../visual-basic/language-reference/data-types/decimal-data-type.md) —... 1.5 E + 29 olası tamsayı değerlerini en büyük aralık... 7,9 E + 28 (mutlak değer)  
+- [Ondalık](../../../visual-basic/language-reference/data-types/decimal-data-type.md) —... 1.5 E + 29 olası tamsayı değerlerini en büyük aralık... 7,9 E + 28 (mutlak değer)  
   
--   [Tek](../../../visual-basic/language-reference/data-types/single-data-type.md) — en büyük aralık 3.4... E + 38 (mutlak değer)  
+- [Tek](../../../visual-basic/language-reference/data-types/single-data-type.md) — en büyük aralık 3.4... E + 38 (mutlak değer)  
   
--   [Çift](../../../visual-basic/language-reference/data-types/double-data-type.md) — en büyük aralık 1.7... E + 308 (mutlak değer)  
+- [Çift](../../../visual-basic/language-reference/data-types/double-data-type.md) — en büyük aralık 1.7... E + 308 (mutlak değer)  
   
  Visual Basic veri türleri hakkında daha fazla bilgi için bkz. [veri türleri](../../../visual-basic/language-reference/data-types/index.md).  
   
@@ -68,11 +68,11 @@ Visual Basic işlenen veri türlerine göre bir işlem sonucu veri türünü bel
 ## <a name="integer-arithmetic"></a>Tamsayı aritmetik  
  Bir tamsayı işleminin sonucu veri türü işlenen veri türlerine bağlıdır. Genel olarak, Visual Basic, sonuç veri türünü belirlemek için aşağıdaki kuralları kullanır:  
   
--   İkili işleç her iki işleneni de aynı olup olmadığını veri türü, bu veri türü sonucu vardır. Bir özel durum `Boolean`, için zorlanan `Short`.  
+- İkili işleç her iki işleneni de aynı olup olmadığını veri türü, bu veri türü sonucu vardır. Bir özel durum `Boolean`, için zorlanan `Short`.  
   
--   İmzalı bir işlenen işaretsiz bir işlenen yer alıyorsa, sonucu ile işaretli bir türe büyük olarak en az bir aralık iki işlenenden var.  
+- İmzalı bir işlenen işaretsiz bir işlenen yer alıyorsa, sonucu ile işaretli bir türe büyük olarak en az bir aralık iki işlenenden var.  
   
--   Aksi halde, sonuç genellikle büyük iki işlenen veri türleri vardır.  
+- Aksi halde, sonuç genellikle büyük iki işlenen veri türleri vardır.  
   
  Sonuç veri türü ya da işlenen veri türü ile aynı olmayabileceğini unutmayın.  
   

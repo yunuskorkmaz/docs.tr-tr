@@ -1,18 +1,18 @@
 ---
-title: İşlevsel programlama ve Kesin programlama karşılaştırması (C#)
+title: İşlevsel Programlama ve Kesin programlama karşılaştırması (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
 ms.openlocfilehash: 42c80146a091bfdcff2bbf3ebe1f4ed9a9510e29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668249"
 ---
-# <a name="functional-programming-vs-imperative-programming-c"></a>İşlevsel programlama ve Kesin programlama karşılaştırması (C#)
+# <a name="functional-programming-vs-imperative-programming-c"></a>İşlevsel Programlama ve Kesin programlama karşılaştırması (C#)
 Bu konuda karşılaştırır ve işlevsel programlama daha geleneksel buyurgan (yordamsal) programlamaya ile karşılaştırır.  
   
-## <a name="functional-programming-vs-imperative-programming"></a>İşlevsel programlama ve Kesin programlama karşılaştırması  
+## <a name="functional-programming-vs-imperative-programming"></a>İşlevsel Programlama ve Kesin Programlama Karşılaştırması  
  *İşlevsel programlama* paradigma sorunu çözmek için saf işlevsel yaklaşım desteklemek için açıkça oluşturuldu. İşlevsel programlama, çeşit *bildirime dayalı programlama*. Buna karşılık, nesne odaklı programlama (OOP) dilleri gibi C#, Visual Basic, C++ ve Java dahil olmak üzere çoğu temel dil öncelikle desteklemek için tasarlanmış *kesinlik temelli* (yordamsal) programlamaya.  
   
  Kesinlik temelli bir yaklaşım ile bir geliştirici açıklayan kod ayrıntı kesin bilgisayar ve hedefe ulaşmak için gerçekleştirmeniz gereken adımlar yazar. Bu bazen olarak adlandırılır *algoritmik* programlama. Buna karşılık, işlevsel bir yaklaşım sorun yürütülecek işlevler bir dizi oluşturmayı kapsar. Her işlev girişi ve her hangi bir işlevi döndürür dikkatli bir şekilde tanımlarsınız. Aşağıdaki tabloda, bu iki yaklaşımı genel farklılıklardan bazıları açıklanmaktadır.  
@@ -35,11 +35,11 @@ Bu konuda karşılaştırır ve işlevsel programlama daha geleneksel buyurgan (
 ## <a name="advantages-of-pure-functions"></a>Saf işlevler avantajları  
  Saf işlevler olarak işlevsel dönüşümlere uygulamak için birincil saf işlevler birleştirilebilir nedeni: başka bir deyişle, bağımsızdır ve durum bilgisi olmayan. Bu özelliklere birtakım avantajlar, aşağıdakiler dahil olmak üzere getirin:  
   
--   Okunurluğu ve sürdürülebilirliği. Bu, her işlevin belirli bir görevi gerçekleştirmek için tasarlandığından bağımsız değişkenlerinden verilir. İşlevi, tüm dış durumuna bağımlı kalmayacak.  
+- Okunurluğu ve sürdürülebilirliği. Bu, her işlevin belirli bir görevi gerçekleştirmek için tasarlandığından bağımsız değişkenlerinden verilir. İşlevi, tüm dış durumuna bağımlı kalmayacak.  
   
--   Daha kolay reiterative geliştirme. Kod yeniden düzenlenmesi daha kolay olduğundan, değişiklikleri tasarlamak için genellikle uygulamak daha kolaydır. Örneğin, karmaşık bir dönüştürme yazın ve sonra biraz kod dönüşümünde birkaç kez yinelenir fark varsayalım. Saf bir yöntem aracılığıyla yeniden düzenlerseniz, yan etkileri hakkında endişelenmenize gerek kalmadan dilediğiniz zaman saf yönteminizi çağırabilir.  
+- Daha kolay reiterative geliştirme. Kod yeniden düzenlenmesi daha kolay olduğundan, değişiklikleri tasarlamak için genellikle uygulamak daha kolaydır. Örneğin, karmaşık bir dönüştürme yazın ve sonra biraz kod dönüşümünde birkaç kez yinelenir fark varsayalım. Saf bir yöntem aracılığıyla yeniden düzenlerseniz, yan etkileri hakkında endişelenmenize gerek kalmadan dilediğiniz zaman saf yönteminizi çağırabilir.  
   
--   Daha kolay test ve hata ayıklama. Saf işlevler daha kolay yalıtım modunda test edilebilir olduğundan, normal değerler, geçerli istisnai durumlara ve geçersiz istisnai durumlara saf işlev çağıran test kodu yazabilirsiniz.  
+- Daha kolay test ve hata ayıklama. Saf işlevler daha kolay yalıtım modunda test edilebilir olduğundan, normal değerler, geçerli istisnai durumlara ve geçersiz istisnai durumlara saf işlev çağıran test kodu yazabilirsiniz.  
   
 ## <a name="transitioning-for-oop-developers"></a>Geçiş OOP geliştiricileri için  
  Geleneksel nesne yönelimli programlama, (OOP) çoğu Geliştirici kesinliği/yordam stili programlamada bilirsiniz. Saf işlevsel stilde geliştirmeye geçiş yapmak için bunlar kendi düşünmek ve yaklaşımları geliştirme için bir geçiş yapmanız gerekir.  

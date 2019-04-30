@@ -3,11 +3,11 @@ title: "Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Ge�
 ms.date: 03/30/2017
 ms.assetid: f49664d9-e9e0-425c-a259-93f0a569d01b
 ms.openlocfilehash: 4492626c2cb0958f8aa79fa2b511d9aa9e90b16a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769518"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Geçişi Kolaylaştırma
 Yeni ASP.NET uygulamalarını wcf'ye TAŞIMA daha kolay gelecekteki geçişini sağlamak için yukarıdaki öneriler ve bunun yanı sıra aşağıdaki önerileri uygulayın.  
@@ -32,9 +32,9 @@ Yeni ASP.NET uygulamalarını wcf'ye TAŞIMA daha kolay gelecekteki geçişini s
 ## <a name="service-development"></a>Hizmet geliştirme  
  WCF hizmet sözleşmelerini uygulayarak tanımlamanıza izin verir <xref:System.ServiceModel.ServiceContractAttribute> arabirimleri veya sınıflar. Bunun yapılması, bu nedenle herhangi bir sayıda sınıfları teknolojiye uygulanabilir bir sözleşme tanımı oluşturur çünkü bir arabirim yerine bir sınıf özniteliği uygulamak için önerilir. ASP.NET 2.0 uygulama seçeneğini destekler <xref:System.Web.Services.WebService> öznitelik sınıflarının yanı sıra arabirimleri. Ancak, önceden belirtildiği gibi yoktur, ASP.NET 2. 0'da, bir hata Namespace parametresi <xref:System.Web.Services.WebService> özniteliği bu öznitelik, bir sınıf yerine bir arabirim uygulandığında hiçbir etkiye sahiptir. Varsayılan değer, bir hizmet ad alanı değiştirmek için genellikle tavsiye olduğundan `http://tempuri.org`, Namespace parametresini kullanarak <xref:System.Web.Services.WebService> öznitelik, bir çalışmaya devam ASP.NET Web hizmetlerini uygulayarak tanımlama <xref:System.ServiceModel.ServiceContractAttribute> arabirimleri veya Sınıf özniteliği.  
   
--   Bu arabirimleri tarafından tanımlanan yöntemler olabildiğince küçük kod sahip. Çalışmalarını diğer sınıflar için temsilci sağlayın. Yeni bir WCF Hizmeti türleri, bu sınıfların substantive işlerini de atayabilirsiniz.  
+- Bu arabirimleri tarafından tanımlanan yöntemler olabildiğince küçük kod sahip. Çalışmalarını diğer sınıflar için temsilci sağlayın. Yeni bir WCF Hizmeti türleri, bu sınıfların substantive işlerini de atayabilirsiniz.  
   
--   Kullanarak bir hizmet işlemleri için açık adlar sağlayan `MessageName` parametresinin <xref:System.Web.Services.WebMethodAttribute>.  
+- Kullanarak bir hizmet işlemleri için açık adlar sağlayan `MessageName` parametresinin <xref:System.Web.Services.WebMethodAttribute>.  
   
     ```csharp  
     [WebMethod(MessageName="ExplicitName")]  
@@ -43,9 +43,9 @@ Yeni ASP.NET uygulamalarını wcf'ye TAŞIMA daha kolay gelecekteki geçişini s
   
      ASP.NET'te işlemleri için varsayılan adlar WCF tarafından sağlanan varsayılan adları farklı olduğundan Bunun yapılması önemlidir. Açık bir ad sağlayarak, varsayılan değerleri bağlı olan kaçının.  
   
--   WCF polimorfik yöntemlerle uygulama işlemlerini desteklemediğinden, ASP.NET Web hizmeti işlemleri çok biçimli yöntemleriyle kullanılmaz.  
+- WCF polimorfik yöntemlerle uygulama işlemlerini desteklemediğinden, ASP.NET Web hizmeti işlemleri çok biçimli yöntemleriyle kullanılmaz.  
   
--   Kullanım <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> açık değerler tarafından hangi HTTP isteklerinin yöntemlere yönlendirilecek SOAPAction HTTP üst bilgilerini sağlamak için.  
+- Kullanım <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> açık değerler tarafından hangi HTTP isteklerinin yöntemlere yönlendirilecek SOAPAction HTTP üst bilgilerini sağlamak için.  
   
     ```csharp  
     [WebMethod]  
@@ -55,7 +55,7 @@ Yeni ASP.NET uygulamalarını wcf'ye TAŞIMA daha kolay gelecekteki geçişini s
   
      Bu yaklaşımı, varsayılan ASP.NET ve WCF aynı anda tarafından kullanılan SOAPAction değerleri kullanan gerek kalmadan aşmak.  
   
--   SOAP uzantıları kullanmaktan kaçının. SOAP uzantıları gerekiyorsa, bunlar kabul amacı zaten WCF tarafından sağlanan bir özellik olup olmadığını belirler. Ardından, aslında durumda, WCF hemen benimsemeye değil seçimi yeniden gözden geçir.  
+- SOAP uzantıları kullanmaktan kaçının. SOAP uzantıları gerekiyorsa, bunlar kabul amacı zaten WCF tarafından sağlanan bir özellik olup olmadığını belirler. Ardından, aslında durumda, WCF hemen benimsemeye değil seçimi yeniden gözden geçir.  
   
 ## <a name="state-management"></a>Durum Yönetimi  
  Hizmetleri'nde durumunu korumak üzere yapmamaya Yalnızca durum koruma uygulamasının ölçeklenebilirliğini aşmaya eğilimli yapar, ancak WCF ASP.NET mekanizmaları ASP.NET uyumluluk modunda desteklese de ASP.NET ve WCF durumu yönetim sistemleri çok farklı.  
@@ -118,11 +118,11 @@ throw new SoapException(
 ## <a name="security"></a>Güvenlik  
  Bazı güvenlik önerileri aşağıda verilmiştir.  
   
--   Önlemek ASP.NET 2.0 profilleri kullanarak olarak sınırlandıracak ASP.NET tümleştirme modu kullanımını hizmet WCF'ye geçirdiyseniz.  
+- Önlemek ASP.NET 2.0 profilleri kullanarak olarak sınırlandıracak ASP.NET tümleştirme modu kullanımını hizmet WCF'ye geçirdiyseniz.  
   
--   ASP.NET Web Hizmetleri Internet Information Services (IIS) kullanarak ACL'leri destekler, hizmetlere erişimi denetlemek için ACL'leri kullanmaktan kaçının, WCF desteklemez; çünkü ASP.NET Web hizmetlerini barındırmak için IIS üzerinde bağlıdır ve WCF gerekmeyen gerekmez IIS'de barındırılan.  
+- ASP.NET Web Hizmetleri Internet Information Services (IIS) kullanarak ACL'leri destekler, hizmetlere erişimi denetlemek için ACL'leri kullanmaktan kaçının, WCF desteklemez; çünkü ASP.NET Web hizmetlerini barındırmak için IIS üzerinde bağlıdır ve WCF gerekmeyen gerekmez IIS'de barındırılan.  
   
--   Bir hizmetin kaynaklara erişim yetkisi vermek için ASP.NET 2.0 rol sağlayıcıları kullanmayı düşünün.  
+- Bir hizmetin kaynaklara erişim yetkisi vermek için ASP.NET 2.0 rol sağlayıcıları kullanmayı düşünün.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

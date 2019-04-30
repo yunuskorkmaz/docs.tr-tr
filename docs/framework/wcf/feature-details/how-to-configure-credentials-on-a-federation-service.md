@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
 ms.openlocfilehash: 33df685b4d14130ae00d59012706b7637924c9be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699838"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma
 Windows Communication Foundation (WCF) Federasyon Hizmeti oluşturma ana aşağıdaki yordamlardan oluşur:  
@@ -63,11 +63,11 @@ Windows Communication Foundation (WCF) Federasyon Hizmeti oluşturma ana aşağ�
   
  Bir istemcinin kimliğini doğrulamak bir Federasyon Hizmeti için sırayla aşağıdakileri hakkında verilen belirtecin doğru olması gerekir:  
   
--   Dijital imza verilen belirtecin bir RSA güvenlik anahtarı tanımlayıcısı kullandığında <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> özelliği olmalıdır `true`.  
+- Dijital imza verilen belirtecin bir RSA güvenlik anahtarı tanımlayıcısı kullandığında <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> özelliği olmalıdır `true`.  
   
--   Tarafından döndürülen bir koleksiyonda, bir sertifika tarafından verilen belirtecinin imzası bir X.509 Verenin seri numarası, X.509 konu anahtarı tanımlayıcısı veya X.509 parmak izi güvenlik tanımlayıcısı kullandığında, verilen belirteç imzalanmalıdır <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> özelliği<xref:System.ServiceModel.Security.IssuedTokenServiceCredential>sınıfı.  
+- Tarafından döndürülen bir koleksiyonda, bir sertifika tarafından verilen belirtecinin imzası bir X.509 Verenin seri numarası, X.509 konu anahtarı tanımlayıcısı veya X.509 parmak izi güvenlik tanımlayıcısı kullandığında, verilen belirteç imzalanmalıdır <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> özelliği<xref:System.ServiceModel.Security.IssuedTokenServiceCredential>sınıfı.  
   
--   Verilen belirtecin bir X.509 sertifikası kullanılarak yeniden imzalandığında, başına değeri tarafından belirtilen semantiği sertifika doğrulamalıdır <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> olup sertifika bağlı olan tarafa gönderilen bağımsız olarak özelliği, bir <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> veya alınamadı gelen <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> özelliği. X.509 Sertifika doğrulama hakkında daha fazla bilgi için bkz: [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+- Verilen belirtecin bir X.509 sertifikası kullanılarak yeniden imzalandığında, başına değeri tarafından belirtilen semantiği sertifika doğrulamalıdır <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> olup sertifika bağlı olan tarafa gönderilen bağımsız olarak özelliği, bir <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> veya alınamadı gelen <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> özelliği. X.509 Sertifika doğrulama hakkında daha fazla bilgi için bkz: [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  Örneğin, ayarlamak <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> için <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> herhangi verilen belirteç imzalama sertifikası konusu kimlik doğrulamasının `TrustedPeople` sertifika deposu. Bu durumda ayarlama <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> ya da özellik <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> veya <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>. Dahil olmak üzere Diğer modları, seçtiğiniz <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>. Zaman `Custom` olduğu belirlenirse, bir örneğini atamanız gerekir <xref:System.IdentityModel.Selectors.X509CertificateValidator> sınıfının <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> özelliği. Özel Doğrulayıcı sağlayıcısı sertifikaları, beğeni herhangi bir ölçütü kullanarak doğrulayabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Özel bir sertifika Doğrulayıcı kullanan bir hizmet oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   

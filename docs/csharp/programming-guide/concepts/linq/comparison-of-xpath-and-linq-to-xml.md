@@ -1,18 +1,18 @@
 ---
-title: XPath ile LINQ to XML karşılaştırması
+title: XPath ile LINQ to XML Karşılaştırması
 ms.date: 07/20/2015
 dev_langs:
 - csharp
 - vb
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
 ms.openlocfilehash: afd8701c6a37fd981d9fc23b57904da80eabf86e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668399"
 ---
-# <a name="comparison-of-xpath-and-linq-to-xml"></a>XPath ile LINQ to XML karşılaştırması
+# <a name="comparison-of-xpath-and-linq-to-xml"></a>XPath ile LINQ to XML Karşılaştırması
 XPath ile LINQ to XML benzer bir işlevsellik sağlar. Her ikisi de öğelerinin bir koleksiyonunu, özniteliklerin bir koleksiyonu, düğümlerin koleksiyonunu veya bir öğe veya öznitelik değeri olarak böyle sonuçları döndüren bir XML ağacı sorgulamak için kullanılabilir. Ancak, aynı zamanda bazı farklar vardır.  
   
 ## <a name="differences-between-xpath-and-linq-to-xml"></a>XML için XPath ile LINQ arasındaki farklar  

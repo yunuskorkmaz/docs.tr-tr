@@ -3,11 +3,11 @@ title: Windows Communication Foundation'a İleti Kuyruğa Alma
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
 ms.openlocfilehash: c0674d23f1b4e611e8f3b51a6480a65e9b52d038
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756461"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Windows Communication Foundation'a İleti Kuyruğa Alma
 Bu örnek, bir Message Queuing (MSMQ) uygulamasını bir Windows Communication Foundation (WCF) hizmetine bir MSMQ iletisinin nasıl gönderebileceğiniz gösterilir. Hizmeti, sıraya alınan iletileri alma hizmeti gözlemleyin sağlamak için bir şirket içinde barındırılan bir konsol uygulamasıdır.  
@@ -118,15 +118,15 @@ Console.ReadLine();
 
 2. Hizmet ilk olarak çalıştırılırsa, sıranın mevcut olduğundan emin olun kontrol eder. Kuyruk yoksa, bir hizmeti oluşturacaksınız. İlk sırayı oluşturmak için hizmet çalıştırabileceğiniz veya bir MSMQ Kuyruk Yöneticisi ile oluşturabilirsiniz. Windows 2008'de bir kuyruk oluşturmak için aşağıdaki adımları izleyin.
 
-    1.  Visual Studio 2012'de Sunucu Yöneticisi'ni açın.
+    1. Visual Studio 2012'de Sunucu Yöneticisi'ni açın.
 
-    2.  Genişletin **özellikleri** sekmesi.
+    2. Genişletin **özellikleri** sekmesi.
 
-    3.  Sağ **özel ileti kuyrukları**seçip **yeni**, **özel sıra**.
+    3. Sağ **özel ileti kuyrukları**seçip **yeni**, **özel sıra**.
 
-    4.  Denetleme **işlem** kutusu.
+    4. Denetleme **işlem** kutusu.
 
-    5.  Girin `ServiceModelSamplesTransacted` yeni Kuyruğun adı.
+    5. Girin `ServiceModelSamplesTransacted` yeni Kuyruğun adı.
 
 3. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
 

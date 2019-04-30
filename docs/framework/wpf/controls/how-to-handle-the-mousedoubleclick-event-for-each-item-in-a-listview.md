@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ListView controls [WPF], MouseDoubleClick event
 ms.assetid: 81b39369-655a-4585-ac58-4640e5bb8fed
 ms.openlocfilehash: 443e5c620ef5bf240d3e317f0234aac0b29b456f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771000"
 ---
 # <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>Nasıl yapılır: ListView'daki Her Öğe için MouseDoubleClick Olayını İşleme
 Bir öğe için bir olayı işlemek için bir <xref:System.Windows.Controls.ListView>, her bir olay işleyicisi eklemek gereken <xref:System.Windows.Controls.ListViewItem>. Olduğunda bir <xref:System.Windows.Controls.ListView> bağlı açıkça oluşturmayın bir veri kaynağına bir <xref:System.Windows.Controls.ListViewItem>, ancak ekleyerek her öğe için olayını işleyebilirsiniz bir <xref:System.Windows.EventSetter> stili için bir <xref:System.Windows.Controls.ListViewItem>.  

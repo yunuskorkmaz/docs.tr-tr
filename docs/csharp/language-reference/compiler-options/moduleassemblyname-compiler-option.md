@@ -9,11 +9,11 @@ helpviewer_keywords:
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
 ms.openlocfilehash: 7d39840f3b12df621a0e8d5fae5725065c295e59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662679"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (C# derleyici seçeneği)
 Genel olmayan türler .netmodule erişebilmeniz için bir derleme belirtir.  
@@ -31,11 +31,11 @@ Genel olmayan türler .netmodule erişebilmeniz için bir derleme belirtir.
 ## <a name="remarks"></a>Açıklamalar  
  **-moduleassemblyname** .netmodule oluştururken ve aşağıdaki koşullar doğru olduğunda kullanılmalıdır:  
   
--   .netmodule var olan bir derlemede ortak olmayan türlere erişmesi gerekir.  
+- .netmodule var olan bir derlemede ortak olmayan türlere erişmesi gerekir.  
   
--   Bildiğiniz .netmodule derlenecek olan derlemenin adı.  
+- Bildiğiniz .netmodule derlenecek olan derlemenin adı.  
   
--   Mevcut bütünleştirilmiş kodu .netmodule derlenecek olan derlemeye arkadaş derleme erişim verildi.  
+- Mevcut bütünleştirilmiş kodu .netmodule derlenecek olan derlemeye arkadaş derleme erişim verildi.  
   
  .Netmodule derleme hakkında daha fazla bilgi için bkz. [-target: module (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Özel durum
+title: Özel Durum Oluşturma
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: KrzysztofCwalina
 ms.openlocfilehash: 74eee418a3c87b335cdf96557c4e17b95aff7b58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669075"
 ---
-# <a name="exception-throwing"></a>Özel durum
+# <a name="exception-throwing"></a>Özel Durum Oluşturma
 Bu bölümde açıklanan özel durum atma yönergeleri iyi bir anlamı yürütme hatası tanımı gerektirir. Üyesi ne olduğunu yapamayacağınız her yürütme hatası meydana gelir (ne üye adından da anlaşılacağı) yapmak için tasarlanmıştır. Örneğin, varsa `OpenFile` bir yürütme hatası değerlendirilebilecek, metodu çağırana bir açık dosya tanıtıcısı döndüremiyor.  
   
  Çoğu geliştirici, özel durumlar bölme gibi kullanım hataları için sıfır ya da null başvuru kullanabileceğinizden haline geldi. Framework, özel durumları, yürütme hataları dahil olmak üzere tüm hata koşulları için kullanılır.  

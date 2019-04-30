@@ -3,11 +3,11 @@ title: "İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)"
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
 ms.openlocfilehash: eac19135c2506fdd324a2f425c23548690189ed9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668659"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)
 
@@ -46,19 +46,19 @@ Uygulamaları kendiniz yapılandırmak istemiyorsanız, indirebileceğiniz [zama
 
 4. Vurgulama **TextBox** denetim hem de **özellikleri** penceresinde aşağıdaki değerleri ayarlayın:
 
-    -   Ayarlama **adı** özelliğini `resultsTextBox`.
+    - Ayarlama **adı** özelliğini `resultsTextBox`.
 
-    -   Ayarlama **yükseklik** 250 özelliği.
+    - Ayarlama **yükseklik** 250 özelliği.
 
-    -   Ayarlama **genişliği** 500 özelliği.
+    - Ayarlama **genişliği** 500 özelliği.
 
-    -   Üzerinde **metin** sekmesinde, Lucida konsol veya genel tek aralıklı gibi sabit genişlikli bir yazı tipi belirtin.
+    - Üzerinde **metin** sekmesinde, Lucida konsol veya genel tek aralıklı gibi sabit genişlikli bir yazı tipi belirtin.
 
 5. Vurgulama **düğmesi** denetim hem de **özellikleri** penceresinde aşağıdaki değerleri ayarlayın:
 
-    -   Ayarlama **adı** özelliğini `startButton`.
+    - Ayarlama **adı** özelliğini `startButton`.
 
-    -   Değiştirin **içerik** özelliğinden **düğmesi** için **Başlat**.
+    - Değiştirin **içerik** özelliğinden **düğmesi** için **Başlat**.
 
 6. Metin kutusu ve düğme hem görünmesini sağlayacak şekilde konumlandırın **MainWindow** penceresi.
 
@@ -108,13 +108,13 @@ Uygulamaları kendiniz yapılandırmak istemiyorsanız, indirebileceğiniz [zama
 
 3. Aşağıdaki dört yöntemi zaman uyumlu çözüm için kod içerir:
 
-    -   `SumPageSizes`, Web sayfasını URL'lerin bir listesini alır `SetUpURLList` ve `GetURLContents` ve `DisplayResults` her URL işlenecek.
+    - `SumPageSizes`, Web sayfasını URL'lerin bir listesini alır `SetUpURLList` ve `GetURLContents` ve `DisplayResults` her URL işlenecek.
 
-    -   `SetUpURLList`, yapar ve web adreslerinden oluşan bir liste döndürür.
+    - `SetUpURLList`, yapar ve web adreslerinden oluşan bir liste döndürür.
 
-    -   `GetURLContents`, her bir Web sitesinin içeriklerini karşıdan yükler ve içeriği bir bayt dizisi olarak döndürür.
+    - `GetURLContents`, her bir Web sitesinin içeriklerini karşıdan yükler ve içeriği bir bayt dizisi olarak döndürür.
 
-    -   `DisplayResults`, görüntüleyen bayt bayt dizisindeki her URL.
+    - `DisplayResults`, görüntüleyen bayt bayt dizisindeki her URL.
 
     Aşağıdaki dört yöntemi kopyalayın ve yapıştırın altında `startButton_Click` MainWindow.xaml.cs olay işleyicisinde:
 
@@ -258,9 +258,9 @@ Sayıları görüntülemek için birkaç saniye sürer dikkat edin. İstenen kay
 
 3. Eklediğiniz çünkü `await` işleci önceki adımda, bir derleyici hatası oluşur. İşleci ile işaretlenmiş yöntemler kullanılabilir [zaman uyumsuz](../../../../csharp/language-reference/keywords/async.md) değiştiricisi. Çağrısını için dönüştürme adımı yineleyin ancak hatasını görmezden Gel `CopyTo` çağrısıyla `CopyToAsync`.
 
-    -   İçin çağrılan yöntemin adını değiştirmek <xref:System.IO.Stream.CopyToAsync%2A>.
+    - İçin çağrılan yöntemin adını değiştirmek <xref:System.IO.Stream.CopyToAsync%2A>.
 
-    -   `CopyTo` Veya `CopyToAsync` yöntemi, bağımsız değişkeni için bayt kopyalar `content`ve anlamlı bir değer döndürmüyor. Zaman uyumlu sürümü, çağrı `CopyTo` bir değer döndürmüyor basit bir ifadedir. Zaman uyumsuz sürümü `CopyToAsync`, döndürür bir <xref:System.Threading.Tasks.Task>. Görev "Task(void)" gibi çalışır ve beklenmesini yöntemi sağlar. Uygulama `Await` veya `await` çağrısına `CopyToAsync`aşağıdaki kodda gösterildiği gibi.
+    - `CopyTo` Veya `CopyToAsync` yöntemi, bağımsız değişkeni için bayt kopyalar `content`ve anlamlı bir değer döndürmüyor. Zaman uyumlu sürümü, çağrı `CopyTo` bir değer döndürmüyor basit bir ifadedir. Zaman uyumsuz sürümü `CopyToAsync`, döndürür bir <xref:System.Threading.Tasks.Task>. Görev "Task(void)" gibi çalışır ve beklenmesini yöntemi sağlar. Uygulama `Await` veya `await` çağrısına `CopyToAsync`aşağıdaki kodda gösterildiği gibi.
 
         ```csharp
         await responseStream.CopyToAsync(content);
@@ -289,9 +289,9 @@ Sayıları görüntülemek için birkaç saniye sürer dikkat edin. İstenen kay
 
      Yöntemi `GetURLContents` bir dönüş ifadesi ve deyim bir bayt dizisi döndürür. Bu nedenle, zaman uyumsuz sürümü dönüş türünü görev(t), burada T bir bayt dizisi, ' dir. Yöntem imzasında aşağıdaki değişiklikleri yapın:
 
-    -   Geri dönüş için değiştirme `Task<byte[]>`.
+    - Geri dönüş için değiştirme `Task<byte[]>`.
 
-    -   Kural gereği, zaman uyumsuz yöntemler "Async," biten sahip. Bu nedenle metodu yeniden adlandırmak `GetURLContentsAsync`.
+    - Kural gereği, zaman uyumsuz yöntemler "Async," biten sahip. Bu nedenle metodu yeniden adlandırmak `GetURLContentsAsync`.
 
      Aşağıdaki kod, bu değişiklikleri gösterir.
 
@@ -305,9 +305,9 @@ Sayıları görüntülemek için birkaç saniye sürer dikkat edin. İstenen kay
 
 1. İçin önceki yordamdaki adımları yineleyin `SumPageSizes`. İlk olarak, araması olarak değiştirmelerine `GetURLContents` zaman uyumsuz bir çağrı için.
 
-    -   Yönteminden çağrılan yöntemin adını değiştirmek `GetURLContents` için `GetURLContentsAsync`, zaten yapmadıysanız.
+    - Yönteminden çağrılan yöntemin adını değiştirmek `GetURLContents` için `GetURLContentsAsync`, zaten yapmadıysanız.
 
-    -   Uygulama `await` görev, `GetURLContentsAsync` dizi değeri bayt almak için döndürür.
+    - Uygulama `await` görev, `GetURLContentsAsync` dizi değeri bayt almak için döndürür.
 
      Aşağıdaki kod, bu değişiklikleri gösterir.
 
@@ -326,11 +326,11 @@ Sayıları görüntülemek için birkaç saniye sürer dikkat edin. İstenen kay
 
 2. Yöntemin imzası ' aşağıdaki değişiklikleri yapın:
 
-    -   Yöntemi işaretlemek `async` değiştiricisi.
+    - Yöntemi işaretlemek `async` değiştiricisi.
 
-    -   "Async" yöntem adına ekleyin.
+    - "Async" yöntem adına ekleyin.
 
-    -   T, hiçbir görev dönüş değişken bu süresi yoktur çünkü `SumPageSizesAsync` t için bir değer döndürmüyor (Yöntemin sahip olmayan `return` deyimi.) Ancak, yöntem döndürmelidir bir `Task` olması beklenebilir. Bu nedenle, metodun dönüş türü değiştirme `void` için `Task`.
+    - T, hiçbir görev dönüş değişken bu süresi yoktur çünkü `SumPageSizesAsync` t için bir değer döndürmüyor (Yöntemin sahip olmayan `return` deyimi.) Ancak, yöntem döndürmelidir bir `Task` olması beklenebilir. Bu nedenle, metodun dönüş türü değiştirme `void` için `Task`.
 
     Aşağıdaki kod, bu değişiklikleri gösterir.
 
@@ -391,9 +391,9 @@ Sayıları görüntülemek için birkaç saniye sürer dikkat edin. İstenen kay
 
 2. Zaman uyumlu çözümün çıktıya benzer bir çıktı görünmelidir. Ancak, aşağıdaki farklar dikkat edin.
 
-    -   Sonuçları işleme tamamlandıktan sonra aynı zamanda, tüm oluşmaz. Örneğin, her iki programın bir satır içeren `startButton_Click` , metin kutusuna temizler. Seçerseniz çalıştırmaları arasında metin kutusunu temizlemek için hedefi olan **Başlat** bir sonuç kümesini göründükten sonra ikinci bir kez, düğme. Yalnızca sayıları ne zaman karşıdan yüklemeler tamamlandı ve diğer işlerini gerçekleştirmek kullanıcı Arabirimi iş parçacığı ücretsizdir ikinci kez görünmesi zaman uyumlu bir sürümde, metin kutusu işaretli değildir. Seçtiğiniz hemen sonra metin kutusuna zaman uyumsuz sürümünde temizler **Başlat** düğmesi.
+    - Sonuçları işleme tamamlandıktan sonra aynı zamanda, tüm oluşmaz. Örneğin, her iki programın bir satır içeren `startButton_Click` , metin kutusuna temizler. Seçerseniz çalıştırmaları arasında metin kutusunu temizlemek için hedefi olan **Başlat** bir sonuç kümesini göründükten sonra ikinci bir kez, düğme. Yalnızca sayıları ne zaman karşıdan yüklemeler tamamlandı ve diğer işlerini gerçekleştirmek kullanıcı Arabirimi iş parçacığı ücretsizdir ikinci kez görünmesi zaman uyumlu bir sürümde, metin kutusu işaretli değildir. Seçtiğiniz hemen sonra metin kutusuna zaman uyumsuz sürümünde temizler **Başlat** düğmesi.
 
-    -   En önemlisi de UI iş parçacığı yüklemeleri sırasında bloke değildir. Geçiş yapabilir veya web kaynakları indirilirken, penceresini yeniden boyutlandırdığınızda sayılan ve görüntülenir. Web sitelerinden birini ise yavaş veya yanıt vermiyor, işlem seçerek iptal edebilirsiniz **Kapat** düğmesine (sağ üst köşesinde kırmızı alanında x).
+    - En önemlisi de UI iş parçacığı yüklemeleri sırasında bloke değildir. Geçiş yapabilir veya web kaynakları indirilirken, penceresini yeniden boyutlandırdığınızda sayılan ve görüntülenir. Web sitelerinden birini ise yavaş veya yanıt vermiyor, işlem seçerek iptal edebilirsiniz **Kapat** düğmesine (sağ üst köşesinde kırmızı alanında x).
 
 ## <a name="replace-method-geturlcontentsasync-with-a-net-framework-method"></a>Bir .NET Framework yöntemi ile yöntem GetURLContentsAsync değiştirin
 

@@ -3,11 +3,11 @@ title: Null değişmez değerler ve tür çıkarımı (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
 ms.openlocfilehash: 22b548f2fc889b20f76a41001438f75c25f99c00
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760408"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>Null değişmez değerler ve tür çıkarımı (varlık SQL)
 Null değişmez değerler herhangi bir türü ile uyumlu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tür sistemi. Ancak, doğru bir şekilde çıkarılan bir null sabit değer türü için [!INCLUDE[esql](../../../../../../includes/esql-md.md)] üzerinde bir null sabit değer kullanıldığı bazı kısıtlamalar getirir.  
@@ -20,23 +20,23 @@ Null değişmez değerler herhangi bir türü ile uyumlu [!INCLUDE[esql](../../.
 ## <a name="free-floating-null-literals"></a>Takılı Null değişmez değerler  
  Takılı null değişmez değerler, aşağıdaki bağlamlarında kullanılabilir:  
   
--   Tür dönüştürme veya kabul ifade bir bağımsız değişken. Türü belirtilmiş bir null ifadesi oluşturmak için önerilen yöntem budur.  
+- Tür dönüştürme veya kabul ifade bir bağımsız değişken. Türü belirtilmiş bir null ifadesi oluşturmak için önerilen yöntem budur.  
   
--   Bağımsız değişken olarak bir yöntem veya işlev. Standart aşırı kuralları geçerlidir.  
+- Bağımsız değişken olarak bir yöntem veya işlev. Standart aşırı kuralları geçerlidir.  
   
--   Tek bir aritmetik ifade gibi bağımsız değişken olarak +, -, veya /. Null değişmez değerler diğer bağımsız değişkenleri olamaz, aksi takdirde tür çıkarımı mümkün değildir.  
+- Tek bir aritmetik ifade gibi bağımsız değişken olarak +, -, veya /. Null değişmez değerler diğer bağımsız değişkenleri olamaz, aksi takdirde tür çıkarımı mümkün değildir.  
   
--   Mantıksal bir ifadeyi bağımsız değişkenlerden biri olarak (AND, OR veya değil). Tüm bağımsız değişkenler'Boolean türünde bilinmektedir.  
+- Mantıksal bir ifadeyi bağımsız değişkenlerden biri olarak (AND, OR veya değil). Tüm bağımsız değişkenler'Boolean türünde bilinmektedir.  
   
--   Bağımsız değişken boş veya NULL değil bir ifade.  
+- Bağımsız değişken boş veya NULL değil bir ifade.  
   
--   Bir veya daha fazla bağımsız değişken gibi bir ifade. Tüm bağımsız değişkenler, dizeleri olmaları beklenir.  
+- Bir veya daha fazla bağımsız değişken gibi bir ifade. Tüm bağımsız değişkenler, dizeleri olmaları beklenir.  
   
--   Bir veya daha fazla bir adlandırılmış Tür oluşturucu bağımsız değişken.  
+- Bir veya daha fazla bir adlandırılmış Tür oluşturucu bağımsız değişken.  
   
--   Bir veya daha fazla multıset oluşturucu bağımsız değişken. Multıset Oluşturucu en az bir bağımsız değişkeni null bir sabit değer olmayan bir ifade olmalıdır.  
+- Bir veya daha fazla multıset oluşturucu bağımsız değişken. Multıset Oluşturucu en az bir bağımsız değişkeni null bir sabit değer olmayan bir ifade olmalıdır.  
   
--   Bir veya daha fazla sonra veya başka bir CASE ifadesi ifadelerinde. CASE ifadesi ifadelerinde yoksa daha sonra en az biri null bir sabit değer dışında bir ifade olmalıdır.  
+- Bir veya daha fazla sonra veya başka bir CASE ifadesi ifadelerinde. CASE ifadesi ifadelerinde yoksa daha sonra en az biri null bir sabit değer dışında bir ifade olmalıdır.  
   
  Diğer senaryolarda takılı null değişmez değerler kullanılamaz. Örneğin, bunlar bir satır oluşturucusunda bağımsız değişken olarak kullanılamaz.  
   

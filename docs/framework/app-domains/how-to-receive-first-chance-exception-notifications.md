@@ -11,11 +11,11 @@ ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6f70b4c67de892c3b66a0099dae9f618a99b3f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705642"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Nasıl yapılır: İlk Fırsat Özel Durum Bildirimleri Alma
 <xref:System.AppDomain.FirstChanceException> Olayı <xref:System.AppDomain> sınıfı bir özel durum bir bildirim almanızı sağlar, önce ortak dil çalışma zamanı için özel durum işleyicileri aramaya başladı.
@@ -100,7 +100,7 @@ ms.locfileid: "59770496"
 
 ## <a name="compiling-the-code"></a>Kod Derleniyor
 
--   Bu örnek, bir komut satırı uygulamasıdır. Derlemek ve Visual Studio'da bu kodu çalıştırmak için C# kodu ekleyin. `Console.ReadLine();` (Visual Basic'te `Console.ReadLine()`) sonunda `Main()`komut penceresi çıktısı okuyabilirsiniz önce kapatılmasını önlemek için.
+- Bu örnek, bir komut satırı uygulamasıdır. Derlemek ve Visual Studio'da bu kodu çalıştırmak için C# kodu ekleyin. `Console.ReadLine();` (Visual Basic'te `Console.ReadLine()`) sonunda `Main()`komut penceresi çıktısı okuyabilirsiniz önce kapatılmasını önlemek için.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

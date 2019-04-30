@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 ms.openlocfilehash: 99aa61d921217ab5638172a54697054e8421fd5c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768541"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms Uygulaması Temelleri (Visual Basic)
 Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel olarak çalışan Windows Forms uygulamaları oluşturmak için olanağıdır. Visual Studio, Windows formları kullanarak uygulama ve kullanıcı arabirimi oluşturmak için kullanabilirsiniz. Bir Windows Forms uygulaması sınıflardan geliştirilmiştir <xref:System.Windows.Forms> ad alanı.  
@@ -18,11 +18,11 @@ Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel o
 ## <a name="designing-windows-forms-applications"></a>Tasarlama Windows Forms uygulamaları  
  Visual Studio ile Windows Forms ve Windows hizmet uygulamaları oluşturabilirsiniz. Daha fazla bilgi için aşağıdaki konulara bakın:  
   
--   [Windows Forms'a Başlarken](../../../framework/winforms/getting-started-with-windows-forms.md). Oluşturma ve Windows Forms programı hakkında bilgi sağlar.  
+- [Windows Forms'a Başlarken](../../../framework/winforms/getting-started-with-windows-forms.md). Oluşturma ve Windows Forms programı hakkında bilgi sağlar.  
    
--   [Windows Forms denetimlerine](../../../framework/winforms/controls/index.md). Windows Forms denetimlerini gerçekleşen konuları koleksiyonu.  
+- [Windows Forms denetimlerine](../../../framework/winforms/controls/index.md). Windows Forms denetimlerini gerçekleşen konuları koleksiyonu.  
   
--   [Windows hizmet uygulamaları](../../../framework/windows-services/index.md). Windows Hizmetleri oluşturma işlemleri açıklanmaktadır konuları listeler.  
+- [Windows hizmet uygulamaları](../../../framework/windows-services/index.md). Windows Hizmetleri oluşturma işlemleri açıklanmaktadır konuları listeler.  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>Yapı zengin, etkileşimli kullanıcı arabirimleri  
  Windows Forms akıllı istemci bileşeni olan [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], dosya sistemine yazma ve okuma gibi ortak uygulama görevleri sağlayan yönetilen kitaplığı kümesi. Visual Studio gibi bir geliştirme ortamı kullanarak, bir ağ üzerinden uzak bilgisayarlarla iletişim bilgilerini görüntülemek ve kullanıcıların giriş istek Windows Forms uygulamaları oluşturabilirsiniz.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
 ms.openlocfilehash: 0f1b6cf27101c2a7f55757b72b56b2291198404d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767552"
 ---
 # <a name="object-identity"></a>Nesne Kimliği
 Çalışma zamanı nesneleri benzersiz kimlikler var. Aynı nesneye başvuran iki değişken aslında aynı nesne örneğine bakın. Bu olgu nedeniyle bir değişken bir yol ile yaptığınız değişiklikler diğer hemen görünür.  

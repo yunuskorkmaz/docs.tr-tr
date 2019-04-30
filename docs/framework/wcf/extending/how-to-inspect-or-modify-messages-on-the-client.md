@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: İstemcide İletileri Denetleme veya Değiştirme'
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
 ms.openlocfilehash: 67fa0e092e6494ff55d71e666b5137cfc9a3069e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766850"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Nasıl yapılır: İstemcide İletileri Denetleme veya Değiştirme
 İnceleme veya uygulayarak bir WCF istemcisi gelen veya giden iletileri değiştirme bir <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> ve istemci çalışma zamanına ekleme. Daha fazla bilgi için [genişletme istemciler](../../../../docs/framework/wcf/extending/extending-clients.md). Hizmette eşdeğer özellik <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Tam kod örneği için bkz. [ileti denetçileri](../../../../docs/framework/wcf/samples/message-inspectors.md) örnek.  
@@ -23,13 +23,13 @@ ms.locfileid: "59343304"
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örnekleri, sırada göster:  
   
--   Bir istemci denetçisi uygulaması.  
+- Bir istemci denetçisi uygulaması.  
   
--   Inspector ekleyen bir uç nokta davranışı.  
+- Inspector ekleyen bir uç nokta davranışı.  
   
--   A <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>-türetilmiş bir yapılandırma dosyasında davranışı eklemenizi sağlar sınıfını.  
+- A <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>-türetilmiş bir yapılandırma dosyasında davranışı eklemenizi sağlar sınıfını.  
   
--   İstemci çalışma zamanına istemci ileti denetçisi ekleyen bir uç nokta davranışı ekler bir yapılandırma dosyası.  
+- İstemci çalışma zamanına istemci ileti denetçisi ekleyen bir uç nokta davranışı ekler bir yapılandırma dosyası.  
   
 ```csharp  
 // Client message inspector  

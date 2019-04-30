@@ -3,11 +3,11 @@ title: Birden Fazla IIS Site Bağlamasını Destekleme
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
 ms.openlocfilehash: 5a8b06d86b505452f9ded808f727343b1453e592
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696112"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Birden Fazla IIS Site Bağlamasını Destekleme
 Internet Information Services (IIS) 7.0 altında Windows Communication Foundation (WCF) hizmet barındırma, aynı sitede aynı protokolünü kullanan birden çok taban adresi sağlamak isteyebilirsiniz. Bu, farklı bir URI'leri bir sayıya yanıt vermek aynı hizmet sağlar. Dinlediği bir hizmeti barındırmak istediğiniz gerektiğinde bu faydalıdır `http://www.contoso.com` ve `http://contoso.com`. Temel adres iç kullanıcılar için ve dış kullanıcılar için ayrı bir temel adres olan bir hizmet oluşturmak kullanışlıdır. Örneğin: `http://internal.contoso.com` ve `http://www.contoso.com`.  

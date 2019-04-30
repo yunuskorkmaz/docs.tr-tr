@@ -13,11 +13,11 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], creating
 ms.assetid: d198ef8e-f7c4-4b3f-a7f5-ce858cb90cec
 ms.openlocfilehash: 55c2294496800fb8692d3c8215c1c13f7dac9b01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746991"
 ---
 # <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a>Nasıl yapılır: ToolStripPanel Denetimleriyle MDI Formu Oluşturma
 Sahip birden çok belge arabirimi (MDI) formu oluşturabilirsiniz <xref:System.Windows.Forms.ToolStrip> dört dışlamada çerçeveleme denetimleri.  
@@ -35,7 +35,7 @@ Sahip birden çok belge arabirimi (MDI) formu oluşturabilirsiniz <xref:System.W
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular.  
+- System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular.  
   
  Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
