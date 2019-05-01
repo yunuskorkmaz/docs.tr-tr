@@ -8,23 +8,23 @@ helpviewer_keywords:
 - controls [WPF], GridSplitter
 ms.assetid: db0da67a-954f-42e6-bbf7-4e16b8cbb210
 ms.openlocfilehash: 800898a4b6fc655785c7db0d9463c34e5eeaa0b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054880"
 ---
-# <a name="gridsplitter-how-to-topics"></a><span data-ttu-id="25b6a-102">GridSplitter Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="25b6a-102">GridSplitter How-to Topics</span></span>
-<span data-ttu-id="25b6a-103">Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.GridSplitter> denetimi.</span><span class="sxs-lookup"><span data-stu-id="25b6a-103">The topics in this section describe how to use the <xref:System.Windows.Controls.GridSplitter> control.</span></span>  
+# <a name="gridsplitter-how-to-topics"></a><span data-ttu-id="22ee1-102">GridSplitter Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="22ee1-102">GridSplitter How-to Topics</span></span>
+<span data-ttu-id="22ee1-103">Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.GridSplitter> denetimi.</span><span class="sxs-lookup"><span data-stu-id="22ee1-103">The topics in this section describe how to use the <xref:System.Windows.Controls.GridSplitter> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="25b6a-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="25b6a-104">In This Section</span></span>  
- [<span data-ttu-id="25b6a-105">GridSplitter ile Satırları Yeniden Boyutlandırma</span><span class="sxs-lookup"><span data-stu-id="25b6a-105">Resize Rows with a GridSplitter</span></span>](how-to-resize-rows-with-a-gridsplitter.md)  
- [<span data-ttu-id="25b6a-106">GridSplitter ile Sütunları Yeniden Boyutlandırma</span><span class="sxs-lookup"><span data-stu-id="25b6a-106">Resize Columns with a GridSplitter</span></span>](how-to-resize-columns-with-a-gridsplitter.md)  
- [<span data-ttu-id="25b6a-107">Bir GridSplitter'ın Görünür Olduğundan Emin Olma</span><span class="sxs-lookup"><span data-stu-id="25b6a-107">Make Sure That a GridSplitter Is Visible</span></span>](how-to-make-sure-that-a-gridsplitter-is-visible.md)  
+## <a name="in-this-section"></a><span data-ttu-id="22ee1-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="22ee1-104">In This Section</span></span>  
+ [<span data-ttu-id="22ee1-105">GridSplitter ile Satırları Yeniden Boyutlandırma</span><span class="sxs-lookup"><span data-stu-id="22ee1-105">Resize Rows with a GridSplitter</span></span>](how-to-resize-rows-with-a-gridsplitter.md)  
+ [<span data-ttu-id="22ee1-106">GridSplitter ile Sütunları Yeniden Boyutlandırma</span><span class="sxs-lookup"><span data-stu-id="22ee1-106">Resize Columns with a GridSplitter</span></span>](how-to-resize-columns-with-a-gridsplitter.md)  
+ [<span data-ttu-id="22ee1-107">Bir GridSplitter'ın Görünür Olduğundan Emin Olma</span><span class="sxs-lookup"><span data-stu-id="22ee1-107">Make Sure That a GridSplitter Is Visible</span></span>](how-to-make-sure-that-a-gridsplitter-is-visible.md)  
   
-## <a name="reference"></a><span data-ttu-id="25b6a-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="25b6a-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="22ee1-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="22ee1-108">Reference</span></span>  
  <xref:System.Windows.Controls.GridSplitter>  
   
  <xref:System.Windows.Controls.Grid>  
   
-## <a name="related-sections"></a><span data-ttu-id="25b6a-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="25b6a-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="22ee1-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="22ee1-109">Related Sections</span></span>

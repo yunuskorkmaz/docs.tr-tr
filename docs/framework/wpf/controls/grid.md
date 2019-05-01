@@ -9,19 +9,19 @@ helpviewer_keywords:
 - Grid control [WPF]
 ms.assetid: cf2cc94c-bbc2-4e54-a601-605038ab63fe
 ms.openlocfilehash: c0be95d84aa1b4b8b05e623f9012664de1a401a6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054893"
 ---
-# <a name="grid"></a><span data-ttu-id="da5df-102">Kılavuz</span><span class="sxs-lookup"><span data-stu-id="da5df-102">Grid</span></span>
-<span data-ttu-id="da5df-103"><xref:System.Windows.Controls.Grid> Öğesi içeriği satırları ve sütunları tam olarak konumlandırmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="da5df-103">The <xref:System.Windows.Controls.Grid> element is used to precisely position content in rows and columns.</span></span>  
+# <a name="grid"></a><span data-ttu-id="022a7-102">Kılavuz</span><span class="sxs-lookup"><span data-stu-id="022a7-102">Grid</span></span>
+<span data-ttu-id="022a7-103"><xref:System.Windows.Controls.Grid> Öğesi içeriği satırları ve sütunları tam olarak konumlandırmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="022a7-103">The <xref:System.Windows.Controls.Grid> element is used to precisely position content in rows and columns.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="da5df-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="da5df-104">In This Section</span></span>  
- [<span data-ttu-id="da5df-105">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="da5df-105">How-to Topics</span></span>](grid-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="022a7-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="022a7-104">In This Section</span></span>  
+ [<span data-ttu-id="022a7-105">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="022a7-105">How-to Topics</span></span>](grid-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="da5df-106">Başvuru</span><span class="sxs-lookup"><span data-stu-id="da5df-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="022a7-106">Başvuru</span><span class="sxs-lookup"><span data-stu-id="022a7-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -36,9 +36,9 @@ ms.locfileid: "57352145"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="da5df-107">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="da5df-107">Related Sections</span></span>  
- [<span data-ttu-id="da5df-108">Düzen</span><span class="sxs-lookup"><span data-stu-id="da5df-108">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="022a7-107">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="022a7-107">Related Sections</span></span>  
+ [<span data-ttu-id="022a7-108">Düzen</span><span class="sxs-lookup"><span data-stu-id="022a7-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="da5df-109">İzlenecek yol: İlk WPF Masaüstü Uygulamam</span><span class="sxs-lookup"><span data-stu-id="da5df-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="022a7-109">İzlenecek yol: İlk WPF Masaüstü Uygulamam</span><span class="sxs-lookup"><span data-stu-id="022a7-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="da5df-110">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="da5df-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="022a7-110">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="022a7-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

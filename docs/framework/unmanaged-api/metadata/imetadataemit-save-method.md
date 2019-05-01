@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 49e45085b0fbca10e490f11ce588f68aa8237b46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62043062"
 ---
-# <a name="imetadataemitsave-method"></a><span data-ttu-id="23dda-102">IMetaDataEmit::Save Yöntemi</span><span class="sxs-lookup"><span data-stu-id="23dda-102">IMetaDataEmit::Save Method</span></span>
-<span data-ttu-id="23dda-103">Belirtilen adresteki bir dosyaya geçerli kapsamdaki tüm meta verileri kaydeder.</span><span class="sxs-lookup"><span data-stu-id="23dda-103">Saves all metadata in the current scope to the file at the specified address.</span></span>  
+# <a name="imetadataemitsave-method"></a><span data-ttu-id="15d6b-102">IMetaDataEmit::Save Yöntemi</span><span class="sxs-lookup"><span data-stu-id="15d6b-102">IMetaDataEmit::Save Method</span></span>
+<span data-ttu-id="15d6b-103">Belirtilen adresteki bir dosyaya geçerli kapsamdaki tüm meta verileri kaydeder.</span><span class="sxs-lookup"><span data-stu-id="15d6b-103">Saves all metadata in the current scope to the file at the specified address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="23dda-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="23dda-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="15d6b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="15d6b-104">Syntax</span></span>  
   
 ```  
 HRESULT Save (   
@@ -36,23 +36,23 @@ HRESULT Save (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="23dda-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="23dda-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="15d6b-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="15d6b-105">Parameters</span></span>  
  `wzFile`  
- <span data-ttu-id="23dda-106">[in] Kaydedilecek dosyanın adı.</span><span class="sxs-lookup"><span data-stu-id="23dda-106">[in] The name of the file to save to.</span></span> <span data-ttu-id="23dda-107">Bu değer null ise, bellek içi kopyayı son kullanılan konuma kaydedilir.</span><span class="sxs-lookup"><span data-stu-id="23dda-107">If this value is null, the in-memory copy will be saved to the last location that was used.</span></span>  
+ <span data-ttu-id="15d6b-106">[in] Kaydedilecek dosyanın adı.</span><span class="sxs-lookup"><span data-stu-id="15d6b-106">[in] The name of the file to save to.</span></span> <span data-ttu-id="15d6b-107">Bu değer null ise, bellek içi kopyayı son kullanılan konuma kaydedilir.</span><span class="sxs-lookup"><span data-stu-id="15d6b-107">If this value is null, the in-memory copy will be saved to the last location that was used.</span></span>  
   
  `dwSaveFlags`  
- <span data-ttu-id="23dda-108">[in] Ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="23dda-108">[in] Reserved.</span></span> <span data-ttu-id="23dda-109">Sıfır olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="23dda-109">Must be zero.</span></span>  
+ <span data-ttu-id="15d6b-108">[in] Ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="15d6b-108">[in] Reserved.</span></span> <span data-ttu-id="15d6b-109">Sıfır olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="15d6b-109">Must be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="23dda-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="23dda-110">Requirements</span></span>  
- <span data-ttu-id="23dda-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="23dda-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="15d6b-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="15d6b-110">Requirements</span></span>  
+ <span data-ttu-id="15d6b-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="15d6b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="23dda-112">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="23dda-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="15d6b-112">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="15d6b-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="23dda-113">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="23dda-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="15d6b-113">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="15d6b-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="23dda-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="23dda-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="15d6b-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15d6b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="23dda-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="23dda-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="15d6b-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="15d6b-115">See also</span></span>
 
-- [<span data-ttu-id="23dda-116">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="23dda-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="23dda-117">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="23dda-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="15d6b-116">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="15d6b-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="15d6b-117">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="15d6b-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

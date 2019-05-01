@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2138dd32cf39db7b7c8989ba5827178d1a1e46c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045571"
 ---
-# <a name="cormethodimpl-enumeration"></a><span data-ttu-id="987bf-102">CorMethodImpl Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="987bf-102">CorMethodImpl Enumeration</span></span>
-<span data-ttu-id="987bf-103">Yöntem uygulama özellikleri açıklayan değerlerini içerir.</span><span class="sxs-lookup"><span data-stu-id="987bf-103">Contains values that describe method implementation features.</span></span>  
+# <a name="cormethodimpl-enumeration"></a><span data-ttu-id="07450-102">CorMethodImpl Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="07450-102">CorMethodImpl Enumeration</span></span>
+<span data-ttu-id="07450-103">Yöntem uygulama özellikleri açıklayan değerlerini içerir.</span><span class="sxs-lookup"><span data-stu-id="07450-103">Contains values that describe method implementation features.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="987bf-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="987bf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="07450-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="07450-104">Syntax</span></span>  
   
 ```  
 typedef enum CorMethodImpl {  
@@ -54,34 +54,34 @@ typedef enum CorMethodImpl {
 } CorMethodImpl;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="987bf-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="987bf-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="07450-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="07450-105">Members</span></span>  
   
-|<span data-ttu-id="987bf-106">Üye</span><span class="sxs-lookup"><span data-stu-id="987bf-106">Member</span></span>|<span data-ttu-id="987bf-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="987bf-107">Description</span></span>|  
+|<span data-ttu-id="07450-106">Üye</span><span class="sxs-lookup"><span data-stu-id="07450-106">Member</span></span>|<span data-ttu-id="07450-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="07450-107">Description</span></span>|  
 |------------|-----------------|  
-|`miCodeTypeMask`|<span data-ttu-id="987bf-108">Kod türünü tanımlayan bayraklar.</span><span class="sxs-lookup"><span data-stu-id="987bf-108">Flags that describe code type.</span></span>|  
-|`miIL`|<span data-ttu-id="987bf-109">Yöntem uygulaması, Microsoft Ara dilini (MSIL) olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="987bf-109">Specifies that the method implementation is Microsoft intermediate language (MSIL).</span></span>|  
-|`miNative`|<span data-ttu-id="987bf-110">Yöntem uygulaması yerel olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="987bf-110">Specifies that the method implementation is native.</span></span>|  
-|`miOPTIL`|<span data-ttu-id="987bf-111">Yöntem uygulaması OPTIL olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="987bf-111">Specifies that the method implementation is OPTIL.</span></span>|  
-|`miRuntime`|<span data-ttu-id="987bf-112">Yöntem uygulaması ortak dil çalışma zamanı tarafından sağlandığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="987bf-112">Specifies that the method implementation is provided by the common language runtime.</span></span>|  
-|`miManagedMask`|<span data-ttu-id="987bf-113">Kod yönetilen veya yönetilmeyen olup olmadığını belirten bayrak.</span><span class="sxs-lookup"><span data-stu-id="987bf-113">Flags that indicate whether the code is managed or unmanaged.</span></span>|  
-|`miUnmanaged`|<span data-ttu-id="987bf-114">Yöntem uygulaması yönetilmeyen olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="987bf-114">Specifies that the method implementation is unmanaged.</span></span>|  
-|`miManaged`|<span data-ttu-id="987bf-115">Yöntem uygulaması yönetilir belirtir.</span><span class="sxs-lookup"><span data-stu-id="987bf-115">Specifies that the method implementation is managed.</span></span>|  
-|`miForwardRef`|<span data-ttu-id="987bf-116">Yöntemin tanımlandığı belirtir.</span><span class="sxs-lookup"><span data-stu-id="987bf-116">Specifies that the method is defined.</span></span> <span data-ttu-id="987bf-117">Bu bayrak öncelikle birleştirme senaryolarda kullanılır.</span><span class="sxs-lookup"><span data-stu-id="987bf-117">This flag is used primarily in merge scenarios.</span></span>|  
-|`miPreserveSig`|<span data-ttu-id="987bf-118">Yöntem imzası bir HRESULT dönüştürme için karıştırılmış belirtir.</span><span class="sxs-lookup"><span data-stu-id="987bf-118">Specifies that the method signature cannot be mangled for an HRESULT conversion.</span></span>|  
-|`miInternalCall`|<span data-ttu-id="987bf-119">İç kullanım için ortak dil çalışma zamanı tarafından ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="987bf-119">Reserved for internal use by the common language runtime.</span></span>|  
-|`miSynchronized`|<span data-ttu-id="987bf-120">Yöntemin gövdesinde tek hiper iş parçacıklı olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="987bf-120">Specifies that the method is single-threaded through its body.</span></span>|  
-|`miNoInlining`|<span data-ttu-id="987bf-121">Yöntem satır içine alınmış olamaz belirtir.</span><span class="sxs-lookup"><span data-stu-id="987bf-121">Specifies that the method cannot be inlined.</span></span>|  
-|`miAggressiveInlining`|<span data-ttu-id="987bf-122">Yöntem mümkünse satır içine alınmış olması gerektiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="987bf-122">Specifies that the method should be inlined if possible.</span></span>|  
-|`miNoOptimization`|<span data-ttu-id="987bf-123">Yöntem getirilmemiş belirtir.</span><span class="sxs-lookup"><span data-stu-id="987bf-123">Specifies that the method should not be optimized.</span></span>|  
-|`miMaxMethodImplVal`|<span data-ttu-id="987bf-124">Geçerli değeri en fazla bir `CorMethodImpl`.</span><span class="sxs-lookup"><span data-stu-id="987bf-124">The maximum valid value for a `CorMethodImpl`.</span></span>|  
+|`miCodeTypeMask`|<span data-ttu-id="07450-108">Kod türünü tanımlayan bayraklar.</span><span class="sxs-lookup"><span data-stu-id="07450-108">Flags that describe code type.</span></span>|  
+|`miIL`|<span data-ttu-id="07450-109">Yöntem uygulaması, Microsoft Ara dilini (MSIL) olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="07450-109">Specifies that the method implementation is Microsoft intermediate language (MSIL).</span></span>|  
+|`miNative`|<span data-ttu-id="07450-110">Yöntem uygulaması yerel olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="07450-110">Specifies that the method implementation is native.</span></span>|  
+|`miOPTIL`|<span data-ttu-id="07450-111">Yöntem uygulaması OPTIL olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="07450-111">Specifies that the method implementation is OPTIL.</span></span>|  
+|`miRuntime`|<span data-ttu-id="07450-112">Yöntem uygulaması ortak dil çalışma zamanı tarafından sağlandığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="07450-112">Specifies that the method implementation is provided by the common language runtime.</span></span>|  
+|`miManagedMask`|<span data-ttu-id="07450-113">Kod yönetilen veya yönetilmeyen olup olmadığını belirten bayrak.</span><span class="sxs-lookup"><span data-stu-id="07450-113">Flags that indicate whether the code is managed or unmanaged.</span></span>|  
+|`miUnmanaged`|<span data-ttu-id="07450-114">Yöntem uygulaması yönetilmeyen olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="07450-114">Specifies that the method implementation is unmanaged.</span></span>|  
+|`miManaged`|<span data-ttu-id="07450-115">Yöntem uygulaması yönetilir belirtir.</span><span class="sxs-lookup"><span data-stu-id="07450-115">Specifies that the method implementation is managed.</span></span>|  
+|`miForwardRef`|<span data-ttu-id="07450-116">Yöntemin tanımlandığı belirtir.</span><span class="sxs-lookup"><span data-stu-id="07450-116">Specifies that the method is defined.</span></span> <span data-ttu-id="07450-117">Bu bayrak öncelikle birleştirme senaryolarda kullanılır.</span><span class="sxs-lookup"><span data-stu-id="07450-117">This flag is used primarily in merge scenarios.</span></span>|  
+|`miPreserveSig`|<span data-ttu-id="07450-118">Yöntem imzası bir HRESULT dönüştürme için karıştırılmış belirtir.</span><span class="sxs-lookup"><span data-stu-id="07450-118">Specifies that the method signature cannot be mangled for an HRESULT conversion.</span></span>|  
+|`miInternalCall`|<span data-ttu-id="07450-119">İç kullanım için ortak dil çalışma zamanı tarafından ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="07450-119">Reserved for internal use by the common language runtime.</span></span>|  
+|`miSynchronized`|<span data-ttu-id="07450-120">Yöntemin gövdesinde tek hiper iş parçacıklı olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="07450-120">Specifies that the method is single-threaded through its body.</span></span>|  
+|`miNoInlining`|<span data-ttu-id="07450-121">Yöntem satır içine alınmış olamaz belirtir.</span><span class="sxs-lookup"><span data-stu-id="07450-121">Specifies that the method cannot be inlined.</span></span>|  
+|`miAggressiveInlining`|<span data-ttu-id="07450-122">Yöntem mümkünse satır içine alınmış olması gerektiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="07450-122">Specifies that the method should be inlined if possible.</span></span>|  
+|`miNoOptimization`|<span data-ttu-id="07450-123">Yöntem getirilmemiş belirtir.</span><span class="sxs-lookup"><span data-stu-id="07450-123">Specifies that the method should not be optimized.</span></span>|  
+|`miMaxMethodImplVal`|<span data-ttu-id="07450-124">Geçerli değeri en fazla bir `CorMethodImpl`.</span><span class="sxs-lookup"><span data-stu-id="07450-124">The maximum valid value for a `CorMethodImpl`.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="987bf-125">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="987bf-125">Requirements</span></span>  
- <span data-ttu-id="987bf-126">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="987bf-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="07450-125">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="07450-125">Requirements</span></span>  
+ <span data-ttu-id="07450-126">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="07450-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="987bf-127">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="987bf-127">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="07450-127">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="07450-127">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="987bf-128">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="987bf-128">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="07450-128">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="07450-128">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="987bf-129">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="987bf-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="07450-129">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="07450-129">See also</span></span>
 
-- [<span data-ttu-id="987bf-130">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="987bf-130">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="07450-130">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="07450-130">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
