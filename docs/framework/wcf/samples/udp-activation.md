@@ -3,42 +3,42 @@ title: UDP Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
 ms.openlocfilehash: 6e19e92872c9b9344db7e787f0cd77e0a315f1a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007675"
 ---
 # <a name="udp-activation"></a>UDP Etkinleştirme
 Bu örnek dayanır [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örnek. Bunu genişleten [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Windows İşlem Etkinleştirme Hizmeti (WAS) kullanarak işlem etkinleştirmeyi desteklemek için örnek.  
   
  Örnek üç ana parçalarını oluşur:  
   
--   Bir UDP protokolünü Etkinleştirici, etkinleştirilecek olan uygulamaları adına UDP iletiler alan bir tek başına işlemi.  
+- Bir UDP protokolünü Etkinleştirici, etkinleştirilecek olan uygulamaları adına UDP iletiler alan bir tek başına işlemi.  
   
--   İleti göndermek için özel UDP taşıma kullanan bir istemci.  
+- İleti göndermek için özel UDP taşıma kullanan bir istemci.  
   
--   UDP özel taşıma iletileri alır (WAS tarafından etkinleştirilen bir çalışan işleminin içinde barındırılan) bir hizmettir.  
+- UDP özel taşıma iletileri alır (WAS tarafından etkinleştirilen bir çalışan işleminin içinde barındırılan) bir hizmettir.  
   
 ## <a name="udp-protocol-activator"></a>UDP protokolünü etkinleştiricisi  
  UDP protokolünü Etkinleştirici WCF istemcisini ve WCF hizmeti arasında bir köprü ' dir. Bu aktarım katmanında UDP protokolünü aracılığıyla veri iletişimi sağlar. İki ana işlev içerir:  
   
--   Dinleyici Bağdaştırıcısı (gelen iletilere yanıt olarak işlemleri etkinleştirmeyi WAS ile iş Birliği yapar, LA), oldu.  
+- Dinleyici Bağdaştırıcısı (gelen iletilere yanıt olarak işlemleri etkinleştirmeyi WAS ile iş Birliği yapar, LA), oldu.  
   
--   UDP protokolünü UDP iletileri etkinleştirilecek olan uygulamaları adına kabul eden dinleyici.  
+- UDP protokolünü UDP iletileri etkinleştirilecek olan uygulamaları adına kabul eden dinleyici.  
   
  Etkinleştirici sunucunuz üzerinde bağımsız bir program olarak çalıştırılması gerekir. Normalde, WAS dinleyici bağdaştırıcıları (örneğin, NetTcpActivator ve NetPipeActivator) uzun süre çalışan Windows Hizmetleri uygulanır. Ancak, Basitlik ve Anlaşılırlık için bu örnek, Protokolü Etkinleştirici tek başına uygulama'e uygular.  
   
 ### <a name="was-listener-adapter"></a>Dinleyici Bağdaştırıcısı OLUŞTU  
  UDP için olan dinleyici bağdaştırıcısı uygulanan `UdpListenerAdapter` sınıfı. WAS uygulama etkinleştirme için UDP protokolünü gerçekleştirmek için etkileşimde modüldür. Bu, aşağıdaki Web barındırma API'ları çağırarak sağlanır:  
   
--   `WebhostRegisterProtocol`  
+- `WebhostRegisterProtocol`  
   
--   `WebhostUnregisterProtocol`  
+- `WebhostUnregisterProtocol`  
   
--   `WebhostOpenListenerChannelInstance`  
+- `WebhostOpenListenerChannelInstance`  
   
--   `WebhostCloseAllListenerChannelInstances`  
+- `WebhostCloseAllListenerChannelInstances`  
   
  Başlangıçta çağrıldıktan sonra `WebhostRegisterProtocol`, dinleyici bağdaştırıcısı geri çağırma alır `ApplicationCreated` WAS tüm uygulamalar için gelen applicationHost.config (windir%\system32\inetsrv içinde bulunur) kaydedildi. Bu örnekte biz yalnızca etkin uygulamalarla UDP protokolünü ("net.udp" olarak Protokolü kimliği ile) işleyin. Diğer uygulamalar gibi uygulamaları (örneğin, bir uygulamanın durumundan etkin, devre dışı) uygulamaya dinamik yapılandırma değişikliklerine yanıt verme durumunda bu farklı şekilde işleyebilir.  
   
@@ -83,17 +83,17 @@ Bu örnek dayanır [taşıma: UDP](../../../../docs/framework/wcf/samples/transp
   
 2. Windows Vista'da projeyi derleyin. Derlemeden sonra ayrıca derleme sonrası aşamasında aşağıdaki işlemleri gerçekleştirir:  
   
-    -   UDP bağlama "varsayılan Web sitesi" alanına yükler.  
+    - UDP bağlama "varsayılan Web sitesi" alanına yükler.  
   
-    -   Fiziksel yolu işaret edecek şekilde sanal uygulama "ServiceModelSamples" oluşturur: "% SystemDrive%\inetpub\wwwroot\servicemodelsamples".  
+    - Fiziksel yolu işaret edecek şekilde sanal uygulama "ServiceModelSamples" oluşturur: "% SystemDrive%\inetpub\wwwroot\servicemodelsamples".  
   
-    -   Ayrıca, bu sanal uygulama için "net.udp" protokol sağlar.  
+    - Ayrıca, bu sanal uygulama için "net.udp" protokol sağlar.  
   
 3. "WasNetActivator.exe" kullanıcı arabirimi uygulamasını başlatın. Tıklayın **Kurulum** sekmesinde, aşağıdaki onay kutularını işaretleyin ve ardından **yükleme** bunları yüklemek için:  
   
-    -   UDP Dinleyici Bağdaştırıcısı  
+    - UDP Dinleyici Bağdaştırıcısı  
   
-    -   UDP protokol işleyiciler  
+    - UDP protokol işleyiciler  
   
 4. Tıklayın **etkinleştirme** sekmesinde kullanıcı arabirimi uygulamasını "WasNetActivator.exe". Tıklayın **Başlat** dinleyici bağdaştırıcısını başlatma düğmesi. Programı çalıştırmak hazırsınız.  
   
@@ -103,21 +103,21 @@ Bu örnek dayanır [taşıma: UDP](../../../../docs/framework/wcf/samples/transp
 ## <a name="sample-usage"></a>Örnek kullanımı  
  Derleme oluşturulan dört farklı ikili dosyaları vardır:  
   
--   Client.exe: İstemci kodu. App.config Client.exe.config istemci yapılandırma dosyasına derlenir.  
+- Client.exe: İstemci kodu. App.config Client.exe.config istemci yapılandırma dosyasına derlenir.  
   
--   UDPActivation.dll: tüm önemli UDP uygulamaları içeren kitaplık.  
+- UDPActivation.dll: tüm önemli UDP uygulamaları içeren kitaplık.  
   
--   Service.dll: Hizmet kodu. Bu sanal uygulama ServiceModelSamples \bin dizinine kopyalanır. Web.config yapılandırma dosyasıdır ve Service.svc hizmet dosyasıdır. Derleme şu konuma kopyalanır: % SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
+- Service.dll: Hizmet kodu. Bu sanal uygulama ServiceModelSamples \bin dizinine kopyalanır. Web.config yapılandırma dosyasıdır ve Service.svc hizmet dosyasıdır. Derleme şu konuma kopyalanır: % SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
   
--   WasNetActivator: UDP Etkinleştirici program.  
+- WasNetActivator: UDP Etkinleştirici program.  
   
--   Tüm gerekli parçaları düzgün yüklendiğinden emin olun. Aşağıdaki adımlarda, örnek çalıştırmak gösterilmektedir:  
+- Tüm gerekli parçaları düzgün yüklendiğinden emin olun. Aşağıdaki adımlarda, örnek çalıştırmak gösterilmektedir:  
   
 1. Aşağıdaki Windows Hizmetleri başlatıldığından emin olun:  
   
-    -   Windows İşlem Etkinleştirme Hizmeti (WAS).  
+    - Windows İşlem Etkinleştirme Hizmeti (WAS).  
   
-    -   Internet Information Services (IIS): W3SVC.  
+    - Internet Information Services (IIS): W3SVC.  
   
 2. Daha sonra WasNetActivator.exe Etkinleştirici başlatın. Altında **etkinleştirme** sekmesi, tek protokol **UDP**, aşağı açılan listeden seçilir. Tıklayın **Başlat** düğmesi Etkinleştirici başlatılamadı.  
   

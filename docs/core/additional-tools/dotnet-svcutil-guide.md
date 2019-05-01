@@ -4,12 +4,12 @@ description: .NET Core ve ASP.NET Core projeleri için .NET Framework projeleri 
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: b5dfb84f19c3748daa303c828cbe881f1582eb76
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.openlocfilehash: 665958bf4b36154f05d9f35f235b45c62f07973c
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612829"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773952"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core için WCF dotnet svcutil aracı
 
@@ -53,55 +53,56 @@ Bir Windows, macOS veya Linux komut penceresinde aşağıdaki adımları gerçek
 
 1. Adlı bir dizin oluşturmak _HelloSvcutil_ projeniz için ve aşağıdaki örnekte olduğu gibi geçerli dizin yapın:
 
-```console
-mkdir HelloSvcutil
-cd HelloSvcutil
-```
+    ```console
+    mkdir HelloSvcutil
+    cd HelloSvcutil
+    ```
 
 2. Yeni bir C# directory kullanarak web projesi [ `dotnet new` ](../tools/dotnet-new.md) komutuyla şu şekilde:
 
-```console
-dotnet new web
-```
+    ```console
+    dotnet new web
+    ```
 
-3. Yükleme [ `dotnet-svcutil` NuGet paketini](https://nuget.org/packages/dotnet-svcutil) CLI aracı olarak:
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+3. Yükleme [ `dotnet-svcutil` NuGet paketini](https://nuget.org/packages/dotnet-svcutil) CLI aracı olarak:  <!-- markdownlint-disable MD023 -->
+    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-```console
-dotnet tool install --global dotnet-svcutil
-```
+        ```console
+        dotnet tool install --global dotnet-svcutil
+        ```
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
-Açık `HelloSvcutil.csproj` proje dosyası düzenleyicinizde, düzenleme `Project` öğesi ve ekleme [ `dotnet-svcutil` NuGet paketini](https://nuget.org/packages/dotnet-svcutil) CLI aracı başvuru olarak, aşağıdaki kodu kullanarak:
+    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    Açık `HelloSvcutil.csproj` proje dosyası düzenleyicinizde, düzenleme `Project` öğesi ve ekleme [ `dotnet-svcutil` NuGet paketini](https://nuget.org/packages/dotnet-svcutil) CLI aracı başvuru olarak, aşağıdaki kodu kullanarak:
 
-```xml
-<ItemGroup>
-  <DotNetCliToolReference Include="dotnet-svcutil" Version="1.0.*" />
-</ItemGroup>
-```
+    ```xml
+    <ItemGroup>
+      <DotNetCliToolReference Include="dotnet-svcutil" Version="1.0.*" />
+    </ItemGroup>
+    ```
 
-Daha sonra geri _dotnet svcutil_ kullanarak paket [ `dotnet restore` ](../tools/dotnet-restore.md) komutuyla şu şekilde:
+    Daha sonra geri _dotnet svcutil_ kullanarak paket [ `dotnet restore` ](../tools/dotnet-restore.md) komutuyla şu şekilde:
 
-```console
-dotnet restore
-```
+    ```console
+    dotnet restore
+    ```
 
----
+    ---
 
 4. Çalıştırma _dotnet svcutil_ gibi web hizmeti başvurusu dosyası oluşturmak için komutu:
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-```console
-dotnet-svcutil http://contoso.com/SayHello.svc
-```
+    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    ```console
+    dotnet-svcutil http://contoso.com/SayHello.svc
+    ```
 
-```console
-dotnet svcutil http://contoso.com/SayHello.svc
-```
+    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
----
+    ```console
+    dotnet svcutil http://contoso.com/SayHello.svc
+    ```
+
+    ---
 
 Oluşturulan dosyası olarak kaydedilen _HelloSvcutil/ServiceReference/Reference.cs_. _Dotnet svcutil_ aracı gerekli proxy kodu tarafından uygun WCF paketleri paket başvuruları projeye de ekler.
 
@@ -109,43 +110,43 @@ Oluşturulan dosyası olarak kaydedilen _HelloSvcutil/ServiceReference/Reference
 
 1. Kullanarak WCF paketleri geri [ `dotnet restore` ](../tools/dotnet-restore.md) komutuyla şu şekilde:
 
-```console
-dotnet restore
-```
+    ```console
+    dotnet restore
+    ```
 
 2. İstemci adı, sınıf ve kullanmak istediğiniz işlemi bulun. `Reference.cs` devralan bir sınıfın içereceği `System.ServiceModel.ClientBase`, hizmetteki işlemleri çağırmak için kullanılan yöntemleri. Bu örnekte, aramak istediğiniz _SayHello_ hizmetin _Hello_ işlemi. `ServiceReference.SayHelloClient` İstemci sınıf adıdır ve sahip bir yöntemi çağıran `HelloAsync` işlemi çağırmak için kullanılabilir.
 
 3. Açık `Startup.cs` Düzenleyicisi'nde dosya ve kullanarak bir ekleme üst hizmet başvurusu isim uzayı için:
 
-```csharp
-using ServiceReference;
-```
+    ```csharp
+    using ServiceReference;
+    ```
 
- 4. Düzen `Configure` web hizmetini çağırmak için yöntem. Devralınan sınıfının bir örneğini oluşturarak bunu `ClientBase` ve istemci nesneye yöntemi çağırma:
+4. Düzen `Configure` web hizmetini çağırmak için yöntem. Devralınan sınıfının bir örneğini oluşturarak bunu `ClientBase` ve istemci nesneye yöntemi çağırma:
 
-```csharp
-public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-{
-    if (env.IsDevelopment())
+    ```csharp
+    public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     {
-        app.UseDeveloperExceptionPage();
+        if (env.IsDevelopment())
+        {
+            app.UseDeveloperExceptionPage();
+        }
+
+        app.Run(async (context) =>
+        {
+            var client = new SayHelloClient();
+            var response = await client.HelloAsync();
+            await context.Response.WriteAsync(response);
+        });
     }
 
-    app.Run(async (context) =>
-    {
-        var client = new SayHelloClient();
-        var response = await client.HelloAsync();
-        await context.Response.WriteAsync(response);
-    });
-}
-
-```
+    ```
 
 5. Kullanarak uygulama çalıştırma [ `dotnet run` ](../tools/dotnet-run.md) komutuyla şu şekilde:
 
-```console
-dotnet run
-```
+    ```console
+    dotnet run
+    ```
 
 6. Konsolda listelenen URL'ye gidin (örneğin, `http://localhost:5000`) web tarayıcınızda.
 

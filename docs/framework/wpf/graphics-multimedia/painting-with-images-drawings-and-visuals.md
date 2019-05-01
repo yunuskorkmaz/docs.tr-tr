@@ -13,11 +13,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
 ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002293"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Görüntüler, Çizimler ve Görsellerle Boyama
 Bu konu nasıl kullanılacağını açıklar <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ve <xref:System.Windows.Media.VisualBrush> bir görüntü ile bir alanı boyama nesnelere bir <xref:System.Windows.Media.Drawing>, veya bir <xref:System.Windows.Media.Visual>.  
@@ -57,15 +57,15 @@ DrawingBrush tarafından boyanan nesneleri
   
  A <xref:System.Windows.Media.DrawingBrush> ile bir alanı boyar bir <xref:System.Windows.Media.Drawing> nesne. A <xref:System.Windows.Media.Drawing> nesne gibi bir şekil, bit eşlem, görüntü veya metin satırı görünür içeriği açıklar. Farklı türde çizimler içeriği farklı türleri açıklanmaktadır. Çizim nesneleri farklı türlerinin bir listesi verilmiştir.  
   
--   <xref:System.Windows.Media.GeometryDrawing> Bir şekil çizer.  
+- <xref:System.Windows.Media.GeometryDrawing> Bir şekil çizer.  
   
--   <xref:System.Windows.Media.ImageDrawing> Resim çizer.  
+- <xref:System.Windows.Media.ImageDrawing> Resim çizer.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> Metin çizer.  
+- <xref:System.Windows.Media.GlyphRunDrawing> Metin çizer.  
   
--   <xref:System.Windows.Media.VideoDrawing> – Bir ses veya video dosyası çalar.  
+- <xref:System.Windows.Media.VideoDrawing> – Bir ses veya video dosyası çalar.  
   
--   <xref:System.Windows.Media.DrawingGroup> Diğer çizimler çizer. Çizim grubu, tek bir bileşik çizim diğer çizimlerini birleştirmek için kullanın.  
+- <xref:System.Windows.Media.DrawingGroup> Diğer çizimler çizer. Çizim grubu, tek bir bileşik çizim diğer çizimlerini birleştirmek için kullanın.  
   
  Hakkında daha fazla bilgi için <xref:System.Windows.Media.Drawing> nesneleri bkz [çizim nesnelerine genel bakış](drawing-objects-overview.md).  
   
@@ -89,9 +89,9 @@ DrawingBrush tarafından boyanan nesneleri
   
  Belirtmek için iki yolla <xref:System.Windows.Media.VisualBrush.Visual%2A> içeriğini bir <xref:System.Windows.Media.VisualBrush>.  
   
--   Yeni bir <xref:System.Windows.Media.Visual> ve ayarlamak için kullanın <xref:System.Windows.Media.VisualBrush.Visual%2A> özelliği <xref:System.Windows.Media.VisualBrush>. Bir örnek için bkz [örneği: Görsel içeren bir nesne boyama](#examplevisualbrush1) aşağıdaki bölümü.  
+- Yeni bir <xref:System.Windows.Media.Visual> ve ayarlamak için kullanın <xref:System.Windows.Media.VisualBrush.Visual%2A> özelliği <xref:System.Windows.Media.VisualBrush>. Bir örnek için bkz [örneği: Görsel içeren bir nesne boyama](#examplevisualbrush1) aşağıdaki bölümü.  
   
--   Mevcut bir kullanın <xref:System.Windows.Media.Visual>, yinelenen bir hedef görüntüsü oluşturur <xref:System.Windows.Media.Visual>. Ardından <xref:System.Windows.Media.VisualBrush> yansıma ve büyütme gibi ilginç etkiler oluşturmak için. Bir örnek için bkz [örneği: Yansıma oluşturma](#examplevisualbrush2) bölümü.  
+- Mevcut bir kullanın <xref:System.Windows.Media.Visual>, yinelenen bir hedef görüntüsü oluşturur <xref:System.Windows.Media.Visual>. Ardından <xref:System.Windows.Media.VisualBrush> yansıma ve büyütme gibi ilginç etkiler oluşturmak için. Bir örnek için bkz [örneği: Yansıma oluşturma](#examplevisualbrush2) bölümü.  
   
  Yeni bir tanımladığınızda <xref:System.Windows.Media.VisualBrush.Visual%2A> için bir <xref:System.Windows.Media.VisualBrush> ve <xref:System.Windows.Media.Visual> olduğu bir <xref:System.Windows.UIElement> (bir panel veya denetim gibi) düzen sistemi üzerinde çalıştığı <xref:System.Windows.UIElement> ve onun alt öğeleri, <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> özelliği `true`. Ancak, kök <xref:System.Windows.UIElement> aslında sistemin geri kalanından ayrı tutulur: stilleri ve dış düzeni bu sınır permeate olamaz. Bu nedenle açıkça kök boyutu belirtmelidir <xref:System.Windows.UIElement>, yalnızca üst olduğundan <xref:System.Windows.Media.VisualBrush> ve bu nedenle kendi boyanan bölgesine otomatik olarak boyutu olamaz. Düzeni hakkında daha fazla bilgi için [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], bkz: [Düzen](../advanced/layout.md).  
   

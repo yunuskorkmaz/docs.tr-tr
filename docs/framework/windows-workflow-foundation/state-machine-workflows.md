@@ -3,11 +3,11 @@ title: Durum Makinesi İş Akışları
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
 ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004685"
 ---
 # <a name="state-machine-workflows"></a>Durum Makinesi İş Akışları
 Bir Durum makinesi programlar geliştirmek için iyi bilinen bir örnektir. <xref:System.Activities.Statements.StateMachine> Etkinliği ile birlikte <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, ve diğer etkinlikleri Durum makinesi iş akışı programlar oluşturmak için kullanılabilir. Bu konu, durum makine iş akışları oluşturmaya genel bir bakış sağlar.  
@@ -15,11 +15,11 @@ Bir Durum makinesi programlar geliştirmek için iyi bilinen bir örnektir. <xre
 ## <a name="state-machine-workflow-overview"></a>Durum makinesi iş akışı genel bakış  
  Durum makinesi iş akışları ile iş akışınızı olay denetimli bir şekilde modelleyebilir modelleme stil sağlayın. A <xref:System.Activities.Statements.StateMachine> etkinliğin durumları içeren ve durum makinesinin mantığı oluşturma ve olabilir, geçişleri bir etkinlik kullanıldığında her yerde kullanılabilir. Durum makinesi çalışma zamanı'nda birkaç sınıfı vardır:  
   
--   <xref:System.Activities.Statements.StateMachine>  
+- <xref:System.Activities.Statements.StateMachine>  
   
--   <xref:System.Activities.Statements.State>  
+- <xref:System.Activities.Statements.State>  
   
--   <xref:System.Activities.Statements.Transition>  
+- <xref:System.Activities.Statements.Transition>  
   
  Bir Durum makinesi iş akışı oluşturmak için durumları eklenir bir <xref:System.Activities.Statements.StateMachine> etkinlik ve geçişleri kullanılır durumlar arasında akışını denetleme. Aşağıdaki ekran görüntüsünde, gelen [başlangıç Öğreticisi](getting-started-tutorial.md) adım [nasıl yapılır: Bir Durum makinesi iş akışı oluşturma](how-to-create-a-state-machine-workflow.md), üç durumları ve geçişleri üç olan bir Durum makinesi iş akışı gösterilmektedir. **Hedef başlatmak** ilk durumudur ve iş akışındaki ilk duruma temsil eder. Bu satırın içinden baştaki tarafından belirlenen **Başlat** düğümü. Son durum iş akışında adlı **FinalState**ve iş akışı tamamlandığında noktasını temsil eder.  
   

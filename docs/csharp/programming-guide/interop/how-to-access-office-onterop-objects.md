@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
 ms.openlocfilehash: 382ecb17654377e8d37e1b3a572ed84442d76b1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61974837"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Nasıl yapılır: Visual kullanarak Office birlikte çalışma nesnelerine erişim C# özellikleri (C# Programlama Kılavuzu)
 Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahiptir. Adlandırılmış ve isteğe bağlı bağımsız değişkenler, yeni özellikler olarak adlandırılan yeni türü `dynamic`ve değer parametreleri değilmiş gibi COM yöntemleri parametrelere başvuru bağımsız değişkenleri geçirmek olanağı.  

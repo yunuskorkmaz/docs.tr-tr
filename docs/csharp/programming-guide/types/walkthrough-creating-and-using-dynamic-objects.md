@@ -10,11 +10,11 @@ helpviewer_keywords:
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
 ms.openlocfilehash: 71330714658729ed82ba111e9384e6cd9d5ae116
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61974811"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>İzlenecek yol: Dinamik Nesneler Oluşturma ve Kullanma (C# and Visual Basic)
 
@@ -28,9 +28,9 @@ Dinamik nesneler özellikler ve yöntemler gibi üyeleri çalışma zamanında y
   
  Bu izlenecek yolda aşağıdaki görevleri gerçekleştireceksiniz:  
   
--   Dinamik olarak bir metin dosyasının içeriğini bir nesnenin özellikleri olarak sunan özel bir nesne oluşturun.  
+- Dinamik olarak bir metin dosyasının içeriğini bir nesnenin özellikleri olarak sunan özel bir nesne oluşturun.  
   
--   Kullanan bir proje oluşturma bir `IronPython` kitaplığı.  
+- Kullanan bir proje oluşturma bir `IronPython` kitaplığı.  
   
 ## <a name="prerequisites"></a>Önkoşullar  
 

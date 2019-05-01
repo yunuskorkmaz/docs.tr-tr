@@ -2,12 +2,12 @@
 title: C# öğreticiler
 description: Bunlar keşfedin C# oluşturmayı öğrenmek için öğreticileri C# programları ve bilgi C# dil özellikleri.
 ms.date: 10/25/2018
-ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 72f159311397a0f4891709c16a4a6ecc937b5952
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214448"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773905"
 ---
 # <a name="c-tutorials"></a>C# öğreticiler
 
@@ -50,6 +50,7 @@ Hello World Ders aşağıdaki tanıtım öğreticilerine kendi yerel geliştirme
 * [Null başvuru türleri](nullable-reference-types.md): null başvuru için amacınız ifade etmek için boş değer atanabilir başvuru türleri nasıl yapılacağı açıklanır.
 * [Güncelleştirme Nullable kullanmak için bir proje başvuru türleri](upgrade-to-nullable-references.md): yapmak için var olan bir projeyi yükseltmesine teknikleri gösterir null başvuru türlerini kullanın.
 * [Desen eşleştirme kullanan veri yeteneklerini genişletmek](pattern-matching.md): desen eşleştirme türleri temel özelliklerine ötesine genişletmek için nasıl kullanılacağını gösterir.
+* [Çalışma dizini ve aralıkları kullanarak verileri sıralarıyla](ranges-indexes.md): Tek öğeleri veya sıralı veri kapsayıcısı aralıklarına erişmek için yeni uygun söz dizimini gösterir.
 
 ## <a name="general-tutorials"></a>Genel öğreticiler
 

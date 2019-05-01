@@ -3,11 +3,11 @@ title: Özel Hizmet Ana Bilgisayarı
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
 ms.openlocfilehash: d2eebd502fa02d01ac86cf88f336b72829a6116f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990671"
 ---
 # <a name="custom-service-host"></a>Özel Hizmet Ana Bilgisayarı
 Bu örnek bir özel türevi nasıl yapılacağı açıklanır <xref:System.ServiceModel.ServiceHost> hizmet çalışma zamanı davranışını değiştirmek için sınıf. Bu yaklaşım, hizmetleri, çok sayıda yaygın bir şekilde yapılandırmak için yeniden kullanılabilir bir alternatif sunar. Örnek ayrıca nasıl kullanılacağını gösterir <xref:System.ServiceModel.Activation.ServiceHostFactory> özel bir ServiceHost Internet Information Services (IIS) veya Windows İşlem Etkinleştirme Hizmeti (WAS) barındırma ortamında kullanmak için sınıf.  

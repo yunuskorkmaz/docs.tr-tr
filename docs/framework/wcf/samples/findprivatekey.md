@@ -1,34 +1,34 @@
 ---
-title: FindPrivateKey örnek - WCF
+title: FindPrivateKey örneği - WCF
 ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
 ms.openlocfilehash: 72e2f49ae7c39b4a0486ec053ff1164c2d833cbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990099"
 ---
 # <a name="findprivatekey-sample"></a>FindPrivateKey örnek
 
-Belirli bir X.509 sertifikası sertifika deposunda ilişkili özel anahtar dosyasının adını ve konumunu bulmak zor olabilir. FindPrivateKey.exe aracı bu işlemi kolaylaştırır.
+Sertifika deposundaki belirli bir X.509 sertifikasıyla ilişkili özel anahtar dosyasının adını ve konumunu bulmak zor olabilir. FindPrivateKey.exe aracı bu işlemi kolaylaştırır.
 
 > [!IMPORTANT]
-> FindPrivateKey kullanmak için derlenmiş önceki olması gereken bir örnektir. Bkz: [FindPrivateKey Projeyi derlemek için](#to-build-the-findprivatekey-project) bölüm FindPrivateKey aracını yapılandırma hakkında yönergeler için.
+> FindPrivateKey kullanmadan önce derlenmiş olması gereken bir örnektir. Bkz: [FindPrivateKey Projeyi derlemek için](#to-build-the-findprivatekey-project) bölüm derleme FindPrivateKey aracı hakkında yönergeler için.
 
-X.509 sertifikaları, bir yönetici veya makinede herhangi bir kullanıcı tarafından yüklenir. Ancak, sertifika başka bir hesap altında çalışan bir hizmete erişebilir. Örneğin, ağ hizmeti hesabı.
+X.509 sertifikalarına bir yönetici veya makinede bulunan herhangi bir kullanıcı tarafından yüklenir. Ancak, sertifika, farklı bir hesap altında çalışan bir hizmet tarafından erişilebilir. Örneğin, ağ hizmeti hesabı.
 
-Sertifika tarafından başlangıçta yüklenmediğinden bu hesap için özel anahtar dosyası erişimi olmayabilir. FindPrivateKey aracı bir verilen X.509 sertifikasının özel anahtar dosyasının konumunu sağlar. İzinleri eklemek veya bu dosyaya izinleri belirli X.509 sertifikalarının özel anahtar dosyasının konumunu öğrendikten sonra kaldırın.
+Bu hesap sertifikası tarafından başlangıçta yüklenmediğinden özel anahtar dosyasına erişimi olmayabilir. FindPrivateKey Aracı'nı bir verilen X.509 sertifikasının özel anahtar dosyasının konumunu sağlar. İzinleri eklemek veya belirli X.509 sertifikalarının özel anahtar dosyasının konumunu bilmek sonra bu dosyaya izinleri kaldırın.
 
-Güvenlik için sertifikaları kullanma örnekleri FindPrivateKey aracını *Setup.bat* dosya. Özel anahtar dosyası bulunamadı sonra gibi diğer araçları kullanarak *Cacls.exe* dosyanın uygun erişim haklarına ayarlanamadı.
+Güvenlik için sertifikaları kullanma örnekleri FindPrivateKey aracını *Setup.bat* dosya. Özel anahtar dosyası bulunamadı sonra gibi diğer araçları kullanın *Cacls.exe* dosyasını uygun erişim haklarını ayarlanacak.
 
-Windows Communication Foundation (WCF) hizmetini kendini barındıran bir yürütülebilir dosya gibi bir kullanıcı hesabı altında çalışan kullanıcı hesabı dosyaya salt okunur erişimi olduğundan emin olun. Bir WCF hizmeti Internet Information Services (IIS) altında çalışırken, altında çalışacağı varsayılan IIS 7 ve önceki sürümlerde ağ hizmet veya uygulama havuzu kimliği IIS 7.5 ve sonraki sürümlerde hesaplarıdır. Daha fazla bilgi için bkz: [uygulama havuzu kimlikleri](/iis/manage/configuring-security/application-pool-identities).
+Bir Windows Communication Foundation (WCF) hizmet şirket içinde barındırılan bir yürütülebilir dosya gibi bir kullanıcı hesabı altında çalışıyorsa, kullanıcı hesabının dosyaya salt okunur erişimi olduğundan emin olun. Bir WCF hizmeti Internet Information Services (IIS) altında çalışırken hizmetin altında çalıştığı varsayılan IIS 7 ve önceki sürümlerde ağ hizmeti veya IIS 7.5 ve üzeri sürümler üzerinde uygulama havuzu kimliği hesaplarıdır. Daha fazla bilgi için [uygulama havuzu kimlikleri](/iis/manage/configuring-security/application-pool-identities).
 
 ## <a name="examples"></a>Örnekler
 
-İşlem okuma ayrıcalığına sahip olmayan bir sertifika erişirken, aşağıdaki örneğe benzer bir özel durum iletisi bakın:
+İşlemi okuma ayrıcalığına sahip değil bir sertifika erişirken, aşağıdaki örneğe benzer bir özel durum iletisi görürsünüz:
 
 ```
 System.ArgumentException was unhandled
@@ -36,7 +36,7 @@ Message="The certificate 'CN=localhost' must have a private key that is capable 
 Source="System.ServiceModel"
 ```
 
-Bu durumda, özel anahtar dosyasını bulmak için FindPrivateKey aracını kullanın ve ardından erişim hakkı hizmetinin altında çalışan işlemi için ayarlayın. Örneğin, bu Cacls.exe aracıyla aşağıdaki örnekte gösterildiği gibi yapılabilir:
+Bu durumda, özel anahtar dosyasını bulmak için FindPrivateKey aracını kullanın ve ardından sağ hizmetinin altında çalışmakta olduğu işlem için erişim ayarlayın. Örneğin, bu için Cacls.exe aracının aşağıdaki örnekte gösterildiği gibi yapılabilir:
 
 ```
 cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys\8aeda5eb81555f14f8f9960745b5a40d_38f7de48-5ee9-452d-8a5a-92789d7110b1" /E /G "NETWORK SERVICE":R
@@ -44,25 +44,25 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
 #### <a name="to-build-the-findprivatekey-project"></a>FindPrivateKey projeyi oluşturmak için
 
-Proje indirmek için şurayı ziyaret edin [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](https://www.microsoft.com/download/details.aspx?id=21459).
+Projeyi indirmek için şurayı ziyaret edin [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://www.microsoft.com/download/details.aspx?id=21459).
 
-1. Açık [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] gidin *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* örnek yüklendiği dizin konumu altında bir klasör.
+1. Açık [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] gidin *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* klasörü altında örnek yüklediğiniz dizin konumu.
 
-2. Visual Studio'da dosyayı açmaya .sln dosyasını simgesini çift tıklatın.
+2. Visual Studio'da dosyayı açmak için bir .sln dosya simgesini çift tıklatın.
 
-3. İçinde **yapı** menüsünde, select **çözümü yeniden derle**.
+3. İçinde **derleme** menüsünde **çözümü yeniden derle**.
 
-4. Çözümü derleme dosyası oluşturur: FindPrivateKey.exe.
+4. Çözümü derledikten dosyası oluşturur: FindPrivateKey.exe.
 
 ## <a name="conventionscommand-line-entries"></a>Kuralları — komut satırı girişleri
 
- "[*seçeneği*]" bir isteğe bağlı parametreleri kümesini temsil eder.
+ "[*seçeneği*]" isteğe bağlı parametrelerinin temsil eder.
 
- "{*seçeneği*}" parametreleri zorunlu kümesini temsil eder.
+ "{*seçeneği*}" zorunlu bir parametre kümesini temsil eder.
 
- "*seçenek 1* &#124; *Seçenek2*" seçenekleri kümesi arasında bir seçim temsil eder.
+ "*option1* &#124; *option2*" represents a choice between sets of options.
 
- "\<*değeri*>" girilecek bir parametre değerini temsil eder.
+ "\<*değer*>" girilmesi bir parametre değeri temsil eder.
 
 ## <a name="usage"></a>Kullanım
 
@@ -80,23 +80,23 @@ Konum:
        -a            output absolute file name
 ```
 
-Hiçbir parametre komut isteminde belirtilirse, bu Yardım metni görüntülenir.
+Komut isteminde parametre belirtilirse, ardından bu Yardım metni görüntülenir.
 
 ## <a name="examples"></a>Örnekler
 
-Bu örnek sertifika filename konu adıyla bulur "CN = localhost", geçerli kullanıcının kişisel deposunda.
+Bu örnek dosya adının sertifikanın konu adını bulur "CN = localhost", geçerli kullanıcının kişisel depoda.
 
 ```
 FindPrivateKey My CurrentUser -n "CN=localhost"
 ```
 
-Bu örnek sertifika filename konu adıyla bulur "CN = localhost", Kişisel depolama geçerli kullanıcının ve çıkış tam dizin yolu.
+Bu örnek dosya adının sertifikanın konu adını bulur "CN = localhost", kişisel geçerli kullanıcının depolamak ve çıkış tam dizin yolu.
 
 ```
 FindPrivateKey My CurrentUser -n "CN=localhost" -a
 ```
 
-Bu örnek dosya adının sertifikanın parmak izi bulur "03 33 98 63 d0 47 e7 48 71 33 62 64 76 5c 4c 9d 42 1 d 6b 52", yerel bilgisayarın kişisel deposunda.
+Bu örnekte adla sertifikanın parmak izini bulur "03 33 98 63 d0 47 e7 48 71 33 62 64 76 5c 4c 9d 42 1 d 6b 52", yerel bilgisayarın kişisel deposuna.
 
 ```
 FindPrivateKey My LocalMachine -t "03 33 98 63 d0 47 e7 48 71 33 62 64 76 5c 4c 9d 42 1d 6b 52"

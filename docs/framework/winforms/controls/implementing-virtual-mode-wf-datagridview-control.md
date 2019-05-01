@@ -13,11 +13,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
 ms.openlocfilehash: 7f6bf1703a6536f4d22b3a2fbe412579c59d39dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973777"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>İzlenecek yol: Windows Forms DataGridView Denetiminde Sanal Modu Uygulama
 Çok büyük miktarda içindeki tablosal verileri görüntülemek istediğiniz zaman bir <xref:System.Windows.Forms.DataGridView> ayarlayabileceğiniz denetimi <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> özelliğini `true` ve açıkça denetimin etkileşim kendi veri deposu ile yönetin. Bu durumda denetimin performansını ayarlamanıza olanak tanır.  
@@ -112,16 +112,16 @@ ms.locfileid: "59344331"
   
 #### <a name="to-test-the-form"></a>Formu sınamak için  
   
--   Derleme ve uygulamayı çalıştırın.  
+- Derleme ve uygulamayı çalıştırın.  
   
      Göreceğiniz bir <xref:System.Windows.Forms.DataGridView> denetim üç müşteri kayıt ile doldurulur. Bir satırdaki birden çok hücre değerlerini değiştirme ve düzenleme modunda iki kez ve orijinal değerleri için tüm satırı dönmek için düzenleme modu dışında bir kez ESC tuşuna basın. Değiştirme eklediğinizde veya denetimindeki satırları silmek `Customer` veri deposundaki nesne değiştirilmiş, eklenen veya de silinir.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Bu uygulamanın sanal modu uygulama işlemek olayları temel bir anlayış verir <xref:System.Windows.Forms.DataGridView> denetimi. Çeşitli yollarla temel bu uygulamada şu iyileştirmeleri yapabilir:  
   
--   Bir dış veritabanından değerleri önbelleğe alan bir veri deposuna uygulayın. Önbelleğe alma ve istemci bilgisayarda küçük miktarda bellek tükettikten çalışırken görüntü için yalnızca içeren değerleri gereken şekilde atmak gerekir.  
+- Bir dış veritabanından değerleri önbelleğe alan bir veri deposuna uygulayın. Önbelleğe alma ve istemci bilgisayarda küçük miktarda bellek tükettikten çalışırken görüntü için yalnızca içeren değerleri gereken şekilde atmak gerekir.  
   
--   Performans gereksinimlerinize bağlı olarak veri deposunun hassas ayarlamalar yapabilirsiniz. Örneğin, istemci bilgisayarın bellek sınırlamaları yerine yavaş ağ bağlantıları için veritabanı sorguları sayısını en aza indirmek ve daha büyük bir önbellek boyutu ile telafi isteyebilirsiniz.  
+- Performans gereksinimlerinize bağlı olarak veri deposunun hassas ayarlamalar yapabilirsiniz. Örneğin, istemci bilgisayarın bellek sınırlamaları yerine yavaş ağ bağlantıları için veritabanı sorguları sayısını en aza indirmek ve daha büyük bir önbellek boyutu ile telafi isteyebilirsiniz.  
   
  Bir dış veritabanından değerleri önbelleğe alma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Windows tam zamanında veri yükleme ile sanal modu uygulama Forms DataGridView denetiminde](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
   

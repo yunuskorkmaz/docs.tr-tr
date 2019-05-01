@@ -3,22 +3,22 @@ title: "Nasıl yapılır: Keşif Proxy'si Uygulama"
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
 ms.openlocfilehash: b3e0b5cef01998c1e509586ba1fab3924eb7bc0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000915"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Nasıl yapılır: Keşif Proxy'si Uygulama
 Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Foundation (WCF) bulma özelliği hakkında daha fazla bilgi için bkz. [WCF keşif genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Keşif proxy'si genişleten bir sınıfı oluşturarak uygulanabilir <xref:System.ServiceModel.Discovery.DiscoveryProxy> soyut sınıf. Tanımlanan ve bu örnekte kullanılan diğer destek sınıfları vardır. `OnResolveAsyncResult`, `OnFindAsyncResult`, ve `AsyncResult`. Bu sınıfların uygulamak <xref:System.IAsyncResult> arabirimi. Hakkında daha fazla bilgi için <xref:System.IAsyncResult> bkz [System.IAsyncResult arabirimi](xref:System.IAsyncResult).
 
  Keşif proxy'si ekleme Bu konuda üç ana parçalara bölünmüştür:
 
--   Bir veri deposunda ve Özet genişleten bir sınıf tanımlama <xref:System.ServiceModel.Discovery.DiscoveryProxy> sınıfı.
+- Bir veri deposunda ve Özet genişleten bir sınıf tanımlama <xref:System.ServiceModel.Discovery.DiscoveryProxy> sınıfı.
 
--   Yardımcı uygulama `AsyncResult` sınıfı.
+- Yardımcı uygulama `AsyncResult` sınıfı.
 
--   Keşif proxy'si barındırın.
+- Keşif proxy'si barındırın.
 
 ### <a name="to-create-a-new-console-application-project"></a>Yeni bir konsol uygulaması projesi oluşturmak için
 
@@ -28,9 +28,9 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
 
 3. Aşağıdaki başvuruları projeye ekleyin
 
-    1.  System.ServiceModel.dll
+    1. System.ServiceModel.dll
 
-    2.  System.Servicemodel.Discovery.dll
+    2. System.Servicemodel.Discovery.dll
 
     > [!CAUTION]
     >  Sürüm 4.0 ya da bu derlemeleri daha büyük başvuru emin olun.

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
 ms.openlocfilehash: 95bfa3da5499c518dad0c235b539784fee2bb522
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61975981"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir sabit bildirme
 Kullandığınız `Const` deyimini bir sabit bildirme ve değerini ayarlayın. Bir sabit bildirme tarafından bir değer anlamlı bir ad atayın. Bir sabit bildirildiğinde, değiştiren veya yeni bir değer atanır.  
@@ -41,7 +41,7 @@ Kullandığınız `Const` deyimini bir sabit bildirme ve değerini ayarlayın. B
   
 ### <a name="to-declare-a-constant"></a>Bir sabit bildirme  
   
--   Bir erişim belirticisi içeren bir bildirimi yazma `Const` anahtar sözcüğü ve aşağıdaki örneklerde gösterildiği gibi bir ifade:  
+- Bir erişim belirticisi içeren bir bildirimi yazma `Const` anahtar sözcüğü ve aşağıdaki örneklerde gösterildiği gibi bir ifade:  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
@@ -51,7 +51,7 @@ Kullandığınız `Const` deyimini bir sabit bildirme ve değerini ayarlayın. B
   
 ### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>Açıkça belirtilen veri türü olan bir sabit bildirme  
   
--   İçeren bir bildirimi yazma `As` anahtar sözcüğü ve açık bir veri türü, aşağıdaki örneklerde olduğu gibi:  
+- İçeren bir bildirimi yazma `As` anahtar sözcüğü ve açık bir veri türü, aşağıdaki örneklerde olduğu gibi:  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
@@ -59,7 +59,7 @@ Kullandığınız `Const` deyimini bir sabit bildirme ve değerini ayarlayın. B
   
 ### <a name="to-declare-multiple-constants-on-a-single-line"></a>Birden çok sabitleri tek bir satıra bildirmek için  
   
--   Bir virgül ve aşağıdaki örnekte olduğu gibi bir boşluk ile bildirimleri ayırın:  
+- Bir virgül ve aşağıdaki örnekte olduğu gibi bir boşluk ile bildirimleri ayırın:  
   
     ```  
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  

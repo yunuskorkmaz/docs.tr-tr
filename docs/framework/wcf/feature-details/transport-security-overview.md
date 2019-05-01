@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
 ms.openlocfilehash: 04526e8aea09b412de4d3a94f17938b02ad6527b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990807"
 ---
 # <a name="transport-security-overview"></a>Taşıma Güvenliği Genel Bakış
 Aktarım güvenlik mekanizmaları Windows Communication Foundation (WCF) bağlaması ve kullanılan aktarım bağlıdır. Örneğin, kullanırken <xref:System.ServiceModel.WSHttpBinding> sınıfı taşıma HTTP ve taşıma güvenliğini sağlamak için birincil mekanizma Güvenli Yuva Katmanı (SSL) yaygın olarak HTTPS adlı HTTP üzerinden. Bu konu, WCF sistem tarafından sağlanan bağlamalar kullanılan ana Aktarım güvenlik mekanizmalarını açıklar.  

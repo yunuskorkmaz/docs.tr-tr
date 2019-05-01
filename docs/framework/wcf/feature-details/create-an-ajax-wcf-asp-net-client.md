@@ -2,14 +2,14 @@
 title: Visual Studio'da AJAX etkin bir WCF hizmeti ve bir ASP.NET istemcisi oluşturma
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 954ee0409f370c3fa28814a70d51334fd75f7b79
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.openlocfilehash: 06fa3a9d0151f3b4b865c421f9960854ef471377
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024616"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807883"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Nasıl yapılır: AJAX Etkin Bir WCF Hizmeti ve Hizmete Erişen Bir ASP.NET İstemcisi Oluşturma
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Nasıl yapılır: Hizmete erişen bir AJAX etkin WCF hizmeti ve bir ASP.NET istemcisi oluşturma
 
 Bu konuda bir AJAX etkinleştirilmiş Windows Communication Foundation (WCF) hizmeti ve hizmete erişen bir ASP.NET istemcisi oluşturmak için Visual Studio kullanmayı gösterir.
 
@@ -77,15 +77,15 @@ Bu konuda bir AJAX etkinleştirilmiş Windows Communication Foundation (WCF) hiz
 
 4. Geri **kaynak** görüntülemek için arasına aşağıdaki kodu ekleyin  **\<ScriptManager >** WCF Hizmeti yolunu belirtmek için etiketler:
 
-    ```html
+    ```xml
     <Services>
        <asp:ServiceReference Path="~/CostService.svc" />
     </Services>
     ```
 
-1. Javascript işlevi için kod ekleme `Calculate()`. Aşağıdaki kodda yerleştirin **baş** web formu bölümünü:
+5. Javascript işlevi için kod ekleme `Calculate()`. Aşağıdaki kodda yerleştirin **baş** web formu bölümünü:
 
-    ```javascript
+    ```html
     <script type="text/javascript">
 
         function Calculate() {
@@ -102,7 +102,7 @@ Bu konuda bir AJAX etkinleştirilmiş Windows Communication Foundation (WCF) hiz
 
    Bu kod üç sandwiches fiyatı hesaplamak için CostService yöntemini çağırır ve sonucu adı verilen yayılımda görüntüler **additionResult**.
 
-## <a name="run-the-program"></a>Programı çalıştırın
+## <a name="run-the-program"></a>Programı çalıştırma
 
 Emin olun *WebForm1.aspx* odaklı ve tuşuna **Başlat** web istemcisi için düğme. Düğme yeşil üçgenle sahip ve aşağıdaki gibi diyor. **IIS Express (Microsoft Edge)**. Ya da basabilirsiniz **F5**. Tıklayın **3 sandwiches fiyatı** beklenen çıktıyı "3,75" oluşturmak için düğme.
 

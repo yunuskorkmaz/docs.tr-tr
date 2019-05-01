@@ -3,20 +3,20 @@ title: WSFederation Kimlik Doğrulaması Modülüne Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: b13536acf71018eb21b6930d7542a9911add8261
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c64bbfc868268fea77d2d17317bfea43aa413b3f
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310258"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808262"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation Kimlik Doğrulaması Modülüne Genel Bakış
 Windows Identity Foundation (WIF), ASP.NET uygulamalarında WS-Federated kimlik doğrulama Modülü (WS-FAM) aracılığıyla şirket dışı kimlik doğrulaması için destek içerir. Bu konu nasıl Federasyon kimlik doğrulaması çalışır ve nasıl kullanılacağını anlamanıza yardımcı olur.  
   
 ### <a name="overview-of-federated-authentication"></a>Federe kimlik doğrulamasına genel bakış  
- Bir güvenlik belirteci hizmeti (iki etki alanı arasında bir güven ilişkisi olduğunda başka bir güven etki alanındaki bir STS'ye kimlik doğrulama bilgilerini sağlamak için STS) bir güven etki alanında Federasyon kimlik doğrulaması sağlar. Buna örnek olarak aşağıdaki çizimde gösterilmektedir.  
+ Bir güvenlik belirteci hizmeti (iki etki alanı arasında bir güven ilişkisi olduğunda başka bir güven etki alanındaki bir STS'ye kimlik doğrulama bilgilerini sağlamak için STS) bir güven etki alanında Federasyon kimlik doğrulaması sağlar. Buna örnek olarak aşağıdaki şekilde gösterilmiştir:  
   
- ![Federasyon kimlik doğrulama senaryosu](../../../docs/framework/security/media/federatedauthentication.gif "FederatedAuthentication")  
+ ![Federe kimlik doğrulama senaryosu gösteren diyagram.](./media/wsfederation-authentication-module-overview/federated-authentication.gif)  
   
 1. Fabrikam güven etki alanındaki bir istemci bir bağlı olan taraf (RP) uygulaması Contoso güven etki alanındaki bir istek gönderir.  
   
@@ -50,7 +50,7 @@ Windows Identity Foundation (WIF), ASP.NET uygulamalarında WS-Federated kimlik 
   
  Aşağıdaki diyagramda, pasif yeniden yönlendirme durumda bilgi genel akışı gösterilmektedir. İstek, STS'ye kimlik bilgileri olmadan oturum açma sayfası oluşturmak için aracılığıyla otomatik olarak yönlendirilir:  
   
- ![Oturum için zamanlama diyagramı&#45;pasif yeniden yönlendirme oturum](../../../docs/framework/security/media/signinusingpassiveredirect.gif "SignInUsingPassiveRedirect")  
+ ![Pasif yeniden yönlendirme ile oturum gösteren diyagram.](./media/wsfederation-authentication-module-overview/sign-in-using-passive-redirect.gif)  
   
  Aşağıdaki diyagramda, kullanıcı, STS'ye kimlik doğrulaması olduğunda ne olacağını üzerinde daha fazla ayrıntı gösterilmektedir ve kendi güvenlik belirteçlerini tarafından işlenen <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>:  
   
@@ -63,9 +63,9 @@ Windows Identity Foundation (WIF), ASP.NET uygulamalarında WS-Federated kimlik 
 ### <a name="events"></a>Olaylar  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule>ve kendi üst sınıfı <xref:System.IdentityModel.Services.HttpModuleBase>, bir HTTP isteğinin işlenmesi çeşitli aşamalarında olayları tetikleyebilir. Bu olayları işleyebilir `global.asax` dosyası, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulama.  
   
--   ASP.NET altyapısının modülün çağırır <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> yöntemi modülü başlatılamadı.  
+- ASP.NET altyapısının modülün çağırır <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> yöntemi modülü başlatılamadı.  
   
--   <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> ASP.NET altyapısının çağırdığında olayı oluşturulur <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> yöntemi ilk kez bir türetilen uygulamanın modüllerinin <xref:System.IdentityModel.Services.HttpModuleBase>. Bu yöntem statik erişir <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> özelliğe, ki bu yapılandırma Web.config dosyasından yüklenmesine neden olur. Bu olay, yalnızca bu özellik erişilen ilk kez ortaya çıkar. <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> Yapılandırmadan başlatılır nesnesi üzerinden erişilebilir <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> özellik bir olay işleyicisi. Bu olay için modüllerin uygulanmadan önce yapılandırmasını değiştirmek için kullanabilirsiniz. Bu olay işleyicisi uygulama_başlatma yöntemi ekleyebilirsiniz:  
+- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> ASP.NET altyapısının çağırdığında olayı oluşturulur <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> yöntemi ilk kez bir türetilen uygulamanın modüllerinin <xref:System.IdentityModel.Services.HttpModuleBase>. Bu yöntem statik erişir <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> özelliğe, ki bu yapılandırma Web.config dosyasından yüklenmesine neden olur. Bu olay, yalnızca bu özellik erişilen ilk kez ortaya çıkar. <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> Yapılandırmadan başlatılır nesnesi üzerinden erişilebilir <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> özellik bir olay işleyicisi. Bu olay için modüllerin uygulanmadan önce yapılandırmasını değiştirmek için kullanabilirsiniz. Bu olay işleyicisi uygulama_başlatma yöntemi ekleyebilirsiniz:  
   
     ```  
     void Application_Start(object sender, EventArgs e)  
@@ -76,19 +76,19 @@ Windows Identity Foundation (WIF), ASP.NET uygulamalarında WS-Federated kimlik 
   
      Her modülü geçersiz kılmalar <xref:System.IdentityModel.Services.HttpModuleBase.InitializeModule%2A?displayProperty=nameWithType> ve <xref:System.IdentityModel.Services.HttpModuleBase.InitializePropertiesFromConfiguration%2A?displayProperty=nameWithType> soyut yöntemler. Bu yöntemlerin ilki olan modül ilgi ASP.NET ardışık düzen olayları için işleyiciler ekler. Çoğu durumda modülün varsayılan uygulama yeterli olacaktır. Bu yöntemlerin ikincisi modülün özelliklerinden başlatır, <xref:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration%2A?displayProperty=nameWithType> özelliği. (Daha önce yüklenen yapılandırmasının bir kopyasını budur.) Öğesinden türetilen sınıflarda başlatma yapılandırmasından yeni özellikleri desteklemek istiyorsanız ikinci bu yöntemi geçersiz kılmanız gerekebilir <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> veya <xref:System.IdentityModel.Services.SessionAuthenticationModule>. Bu gibi durumlarda ek yapılandırma özelliklerini desteklemek için uygun yapılandırma nesnelerden türetilmesi gerekir; Örneğin, <xref:System.IdentityModel.Configuration.IdentityConfiguration>, <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration>, veya <xref:System.IdentityModel.Services.Configuration.FederationConfiguration>.  
   
--   WS-FAM başlatır <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived> olay STS tarafından verilen bir güvenlik belirteci durdurur.  
+- WS-FAM başlatır <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived> olay STS tarafından verilen bir güvenlik belirteci durdurur.  
   
--   WS-FAM başlatır <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenValidated> belirteci doğruladıktan sonra olay.  
+- WS-FAM başlatır <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenValidated> belirteci doğruladıktan sonra olay.  
   
--   <xref:System.IdentityModel.Services.SessionAuthenticationModule> Başlatır <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenCreated> olay kullanıcı için bir oturum güvenlik belirteci oluşturur.  
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule> Başlatır <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenCreated> olay kullanıcı için bir oturum güvenlik belirteci oluşturur.  
   
--   <xref:System.IdentityModel.Services.SessionAuthenticationModule> Başlatır <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenReceived> olay oturum güvenlik belirteci içeren bir tanımlama bilgisi ile sonraki istekleri durdurur.  
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule> Başlatır <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenReceived> olay oturum güvenlik belirteci içeren bir tanımlama bilgisi ile sonraki istekleri durdurur.  
   
--   WS-FAM kullanıcı yayınlayanla yönlendirir. önce bilmemektedir <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> olay. WS-Federasyon oturum açma isteği aracılığıyla kullanılabilir <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.SignInRequestMessage%2A> özelliği <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs> olayda geçirildi. Bu yayınlayanla göndermeden önce istek değiştirmek isteyebilirsiniz.  
+- WS-FAM kullanıcı yayınlayanla yönlendirir. önce bilmemektedir <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> olay. WS-Federasyon oturum açma isteği aracılığıyla kullanılabilir <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.SignInRequestMessage%2A> özelliği <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs> olayda geçirildi. Bu yayınlayanla göndermeden önce istek değiştirmek isteyebilirsiniz.  
   
--   WS-FAM başlatır <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignedIn> tanımlama bilgisi başarıyla yazılır ve kullanıcının oturum açtığı zaman olay.  
+- WS-FAM başlatır <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignedIn> tanımlama bilgisi başarıyla yazılır ve kullanıcının oturum açtığı zaman olay.  
   
--   WS-FAM başlatır <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> olay oturumu olarak oturumu başına bir kez kapatılıyor her kullanıcı için. Oturum istemci tarafında (örneğin, oturum tanımlama bilgisinin silerek) kapalıysa harekete Geçirilmemesi. SSO ortamında, IP-STS, çok imzalamak için her RP isteyebilir. Bu da bu olay ile oluşturacağı <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> kümesine `true`.  
+- WS-FAM başlatır <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> olay oturumu olarak oturumu başına bir kez kapatılıyor her kullanıcı için. Oturum istemci tarafında (örneğin, oturum tanımlama bilgisinin silerek) kapalıysa harekete Geçirilmemesi. SSO ortamında, IP-STS, çok imzalamak için her RP isteyebilir. Bu da bu olay ile oluşturacağı <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> kümesine `true`.  
   
 > [!NOTE]
 >  Kullanmamalısınız <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> özelliği tarafından gerçekleştirilen herhangi bir olay sırasında <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> veya <xref:System.IdentityModel.Services.SessionAuthenticationModule>. Bunun nedeni, <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> kimlik doğrulama işlemi sırasında tetiklenen olayları sırasında kimlik doğrulama işleminden sonra ayarlanır.  

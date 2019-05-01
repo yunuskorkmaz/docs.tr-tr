@@ -19,18 +19,18 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: 2643e6ec1edf9cd69d7530def1e2605e1af20de4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61950559"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Çıkışları
 Ters eğik çizgi (\\) normal bir ifadede aşağıdakilerden birini gösterir:  
   
--   Aşağıdaki bölümde yer alan tabloda gösterilen aynıdır, onu izleyen karakterin özel bir karakter kullanır. Örneğin, `\b` bir normal ifade eşleştirmesi bir sözcük sınırında başlayacağını belirtir bir tutturucudur `\t` bir sekme temsil eder ve `\x020` bir alanını temsil eder.  
+- Aşağıdaki bölümde yer alan tabloda gösterilen aynıdır, onu izleyen karakterin özel bir karakter kullanır. Örneğin, `\b` bir normal ifade eşleştirmesi bir sözcük sınırında başlayacağını belirtir bir tutturucudur `\t` bir sekme temsil eder ve `\x020` bir alanını temsil eder.  
   
--   Atlanmayan dil yapısı tam anlamıyla yorumlanması gerektiğini gibi yoksa yorumlanacağını bir karakter. Örneğin, bir küme ayracı (`{`) bir miktar belirleyiciyi, ancak eğik çizgi ve ayraç tarafından tanımını başlar (`\{`) gösterir ve normal ifade altyapısının küme ayracı eşleşmesi gerekir. Benzer şekilde, tek bir ters eğik çizgi kaçış dil yapısı, ancak iki ters eğik çizgi başlangıcını işaretleyen (`\\`) normal ifade altyapısı ters eğik çizgiyi eşleşmelidir gösterir.  
+- Atlanmayan dil yapısı tam anlamıyla yorumlanması gerektiğini gibi yoksa yorumlanacağını bir karakter. Örneğin, bir küme ayracı (`{`) bir miktar belirleyiciyi, ancak eğik çizgi ve ayraç tarafından tanımını başlar (`\{`) gösterir ve normal ifade altyapısının küme ayracı eşleşmesi gerekir. Benzer şekilde, tek bir ters eğik çizgi kaçış dil yapısı, ancak iki ters eğik çizgi başlangıcını işaretleyen (`\\`) normal ifade altyapısı ters eğik çizgiyi eşleşmelidir gösterir.  
   
 > [!NOTE]
 >  Karakter çıkışları, normal ifade desenleri ancak değiştirme desenleri tanınır.  

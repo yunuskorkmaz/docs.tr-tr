@@ -3,11 +3,11 @@ title: İleti Günlüğe Kaydetme ile İlgili Güvenlik Konuları
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998159"
 ---
 # <a name="security-concerns-for-message-logging"></a>İleti Günlüğe Kaydetme ile İlgili Güvenlik Konuları
 Bu konu, ileti günlüğe kaydetmeyi tarafından oluşturulan olayları yanı sıra ileti günlüklerini sunulan hassas verilerinizi nasıl koruyabilirsiniz açıklar.  
@@ -21,11 +21,11 @@ Bu konu, ileti günlüğe kaydetmeyi tarafından oluşturulan olayları yanı s�
   
  Aşağıdaki ipuçları bir günlük dosyasının içeriği istenmeden açıklanmasını önlemenize yardımcı olabilir:  
   
--   Günlük dosyaları tarafından erişim denetim listeleri (ACL) hem de Web ana bilgisayarı ve barındırma senaryoları korunan emin olun.  
+- Günlük dosyaları tarafından erişim denetim listeleri (ACL) hem de Web ana bilgisayarı ve barındırma senaryoları korunan emin olun.  
   
--   Bir Web isteği sunularak kolayca sunulamayan bir dosya uzantısı'nı seçin. Örneğin, .xml dosya uzantısı güvenli bir seçenek değil. Sunulabilecek uzantıların listesini görmek için Internet Information Services (IIS) yönetim kılavuzuna bakabilirsiniz.  
+- Bir Web isteği sunularak kolayca sunulamayan bir dosya uzantısı'nı seçin. Örneğin, .xml dosya uzantısı güvenli bir seçenek değil. Sunulabilecek uzantıların listesini görmek için Internet Information Services (IIS) yönetim kılavuzuna bakabilirsiniz.  
   
--   Bir Web tarayıcısı kullanılarak harici bir tarafça erişilmesini önlemek üzere Web ana bilgisayar vroot genel dizininin dışında olması gereken günlük dosyası konumu için mutlak bir yol belirtin.  
+- Bir Web tarayıcısı kullanılarak harici bir tarafça erişilmesini önlemek üzere Web ana bilgisayar vroot genel dizininin dışında olması gereken günlük dosyası konumu için mutlak bir yol belirtin.  
   
  Varsayılan olarak, anahtarları ve kullanıcı adı ve parola gibi kişisel bilgileri (PII) izlemeleri günlüğe kaydedilmez ve iletileri günlüğe. Bir makine yöneticisinin ancak kullanabilirsiniz `enableLoggingKnownPII` özniteliğini `machineSettings` Machine.config dosyasının makine üzerinde çalışan uygulamalar, bilinen kişisel olarak tanımlanabilen bilgileri (PII) için izin vermek için öğesi. Aşağıdaki yapılandırma, bunun nasıl yapılacağı gösterilmektedir:  
   
@@ -99,13 +99,13 @@ Bu konu, ileti günlüğe kaydetmeyi tarafından oluşturulan olayları yanı s�
 ## <a name="events-triggered-by-message-logging"></a>Günlüğe ileti kaydetme tarafından tetiklenen olayları  
  Günlüğe ileti kaydetme tarafından yayılan tüm olayları listeler.  
   
--   Oturum açma ileti: Bu olay, yapılandırma veya WMI üzerinden ileti günlüğe kaydetme etkinleştirildiğinde yayınlanır. "İleti günlüğü açıldı. olayın içeriktir Şifrelenmeden kablo, örneğin, İleti gövdeleri bile hassas bilgileri düz metin olarak kaydedilebilir."  
+- Oturum açma ileti: Bu olay, yapılandırma veya WMI üzerinden ileti günlüğe kaydetme etkinleştirildiğinde yayınlanır. "İleti günlüğü açıldı. olayın içeriktir Şifrelenmeden kablo, örneğin, İleti gövdeleri bile hassas bilgileri düz metin olarak kaydedilebilir."  
   
--   Oturum kapatma iletisi: Bu olay günlüğe ileti kaydetme WMI aracılığıyla devre dışı bırakıldığında yayılır. Olay içeriği "ileti günlüğe kaydetme devre dışı." olur.  
+- Oturum kapatma iletisi: Bu olay günlüğe ileti kaydetme WMI aracılığıyla devre dışı bırakıldığında yayılır. Olay içeriği "ileti günlüğe kaydetme devre dışı." olur.  
   
--   Bilinen PII oturum açın: Bu olay günlüğe kaydedilmesini bilinen PII etkinleştirildiğinde yayılır. Böyle olduğunda `enableLoggingKnownPii` özniteliğini `machineSettings` Machine.config dosyasının öğesinin ayarlanmış `true`ve `logKnownPii` özniteliği `source` App.config veya Web.config dosyasında öğe içinayarlanmış`true`.  
+- Bilinen PII oturum açın: Bu olay günlüğe kaydedilmesini bilinen PII etkinleştirildiğinde yayılır. Böyle olduğunda `enableLoggingKnownPii` özniteliğini `machineSettings` Machine.config dosyasının öğesinin ayarlanmış `true`ve `logKnownPii` özniteliği `source` App.config veya Web.config dosyasında öğe içinayarlanmış`true`.  
   
--   Bilinen PII izin günlük: Bu olay günlüğe kaydedilmesini bilinen PII izin verilmediğinde yayılır. Böyle olduğunda `logKnownPii` özniteliği `source` App.config veya Web.config dosyasında ayarlanır `true`, ancak `enableLoggingKnownPii` özniteliğini `machineSettings` Machine.config dosyasının öğesi içinayarlanmış`false`. Hiçbir özel durum oluşturulur.  
+- Bilinen PII izin günlük: Bu olay günlüğe kaydedilmesini bilinen PII izin verilmediğinde yayılır. Böyle olduğunda `logKnownPii` özniteliği `source` App.config veya Web.config dosyasında ayarlanır `true`, ancak `enableLoggingKnownPii` özniteliğini `machineSettings` Machine.config dosyasının öğesi içinayarlanmış`false`. Hiçbir özel durum oluşturulur.  
   
  Bu olaylar, Windows ile birlikte gelen Olay Görüntüleyicisi'ni Aracı'nda görüntülenebilir. Bunun hakkında daha fazla bilgi için bkz. [olay günlüğü](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   

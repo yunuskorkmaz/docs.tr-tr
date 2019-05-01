@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
 ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982598"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments Yönergesi
 Sınırlama geçişleri bir genel oluşturucuya genel tür bağımsız değişkenlerini yazın.  
@@ -62,13 +62,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>XAML 2006 ve WPF'de XAML genel kullanımları  
  XAML 2006 kullanım ve WPF uygulamaları için kullanılan XAML için aşağıdaki kısıtlamalar için mevcut `x:TypeArguments` ve genel XAML gelen genel tür kullanımları:  
   
--   Yalnızca bir XAML dosyasının kök öğesini bir genel türe başvuran genel bir XAML kullanımını destekler.  
+- Yalnızca bir XAML dosyasının kök öğesini bir genel türe başvuran genel bir XAML kullanımını destekler.  
   
--   Kök öğe en az bir tür bağımsız değişkeni ile genel tür eşlenmelidir. <xref:System.Windows.Navigation.PageFunction%601> bunun bir örneğidir. WPF XAML genel kullanım desteği için birincil senaryosu sayfasında işlevlerdir.  
+- Kök öğe en az bir tür bağımsız değişkeni ile genel tür eşlenmelidir. <xref:System.Windows.Navigation.PageFunction%601> bunun bir örneğidir. WPF XAML genel kullanım desteği için birincil senaryosu sayfasında işlevlerdir.  
   
--   Genel için kök öğesi XAML nesne öğesi de kullanarak bir parçalı sınıf bildirmeniz gerekir `x:Class`. Bir WPF tanımlama derleme eylemi bile bu geçerlidir.  
+- Genel için kök öğesi XAML nesne öğesi de kullanarak bir parçalı sınıf bildirmeniz gerekir `x:Class`. Bir WPF tanımlama derleme eylemi bile bu geçerlidir.  
   
--   `x:TypeArguments` iç içe geçmiş genel kısıtlamalara başvuramaz.  
+- `x:TypeArguments` iç içe geçmiş genel kısıtlamalara başvuramaz.  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 ya da WPF 3.0 veya 3.5 WPF XAML 2006 bağımlılık  
  .NET Framework XAML hizmetlerinde XAML 2006 ya da XAML 2009, WPF ile ilgili sınırlamalar genel XAML kullanım esnek. Yedekleme türü sistem ve nesne modelini desteklemek XAML biçimlendirmesi içinde herhangi bir konumda bir genel nesne öğesi örneği oluşturabilir.  

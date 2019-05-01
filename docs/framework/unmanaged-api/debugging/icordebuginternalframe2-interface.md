@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2cf75de6a71cfbe25cbde281f837060b88e93753
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988448"
 ---
 # <a name="icordebuginternalframe2-interface"></a>ICorDebugInternalFrame2 Arabirimi
 Yığın adresi ve Icordebugframe nesneleri ile ilgili olarak da dahil olmak üzere, iç çerçeveler hakkında bilgi sağlar.  

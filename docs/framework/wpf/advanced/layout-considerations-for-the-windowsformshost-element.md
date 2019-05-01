@@ -10,11 +10,11 @@ helpviewer_keywords:
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
 ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001318"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost Öğesi için Düzen Konusunda Dikkat Edilmesi Gereken Noktalar
 Bu konu açıklar nasıl <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi etkileşim [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen sistemi.  
@@ -38,13 +38,13 @@ Bu konu açıklar nasıl <xref:System.Windows.Forms.Integration.WindowsFormsHost
 ## <a name="layout-limitations"></a>Düzen sınırlamaları  
  Genel olarak, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri ölçeği ve mümkün ölçülere [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Bilinen sınırlamalar aşağıdaki listede açıklanmaktadır, <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi çalışır, barındırılan bir tümleştirme [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] içine denetim [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen sistemi.  
   
--   Bazı durumlarda, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri yeniden boyutlandırılamaz ya da yalnızca belirli boyutlara yeniden boyutlandırılabilir. Örneğin, bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> denetimi, denetimin yazı tipi boyutu tarafından tanımlanan yalnızca tek bir yüksekliği destekler. İçinde bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nerede öğeleri esnetme dikey olarak barındırılan dinamik düzen <xref:System.Windows.Forms.ComboBox> beklendiği gibi denetimi uzamaz.  
+- Bazı durumlarda, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri yeniden boyutlandırılamaz ya da yalnızca belirli boyutlara yeniden boyutlandırılabilir. Örneğin, bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> denetimi, denetimin yazı tipi boyutu tarafından tanımlanan yalnızca tek bir yüksekliği destekler. İçinde bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nerede öğeleri esnetme dikey olarak barındırılan dinamik düzen <xref:System.Windows.Forms.ComboBox> beklendiği gibi denetimi uzamaz.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri Döndürülmüş veya dengesiz. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Öğesi başlatır <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> eğme veya döndürme dönüşümü uygularsanız olay. İşlememek varsa <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> olay, bir <xref:System.InvalidOperationException> tetiklenir.  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri Döndürülmüş veya dengesiz. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Öğesi başlatır <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> eğme veya döndürme dönüşümü uygularsanız olay. İşlememek varsa <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> olay, bir <xref:System.InvalidOperationException> tetiklenir.  
   
--   Çoğu durumda [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimlerin orantılı ölçeklendirme desteklemez. Denetim genel boyutlarını ölçeklendirilmesine rağmen alt denetimler ve denetim bileşen öğeleri beklenen şekilde yeniden boyutlandırılabilir değil. Bu sınırlama her ne kadar iyi bağlıdır [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi, ölçeklendirmeyi destekler. Ayrıca, Ölçek genişletilemiyor [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 0 piksel boyutlu aşağı denetimleri.  
+- Çoğu durumda [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimlerin orantılı ölçeklendirme desteklemez. Denetim genel boyutlarını ölçeklendirilmesine rağmen alt denetimler ve denetim bileşen öğeleri beklenen şekilde yeniden boyutlandırılabilir değil. Bu sınırlama her ne kadar iyi bağlıdır [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi, ölçeklendirmeyi destekler. Ayrıca, Ölçek genişletilemiyor [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 0 piksel boyutlu aşağı denetimleri.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri form otomatik olarak kendisini ve yazı tipi boyutunu temel alan denetimlerini yeniden otomatik ölçeklendirmeyi destekler. İçinde bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yazı tipi boyutunu değiştirme, kullanıcı arabirimi olmayan yeniden boyutlandırma tüm düzeni tek tek öğeleri dinamik olarak yeniden boyutlandırılabilir ancak.  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri form otomatik olarak kendisini ve yazı tipi boyutunu temel alan denetimlerini yeniden otomatik ölçeklendirmeyi destekler. İçinde bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yazı tipi boyutunu değiştirme, kullanıcı arabirimi olmayan yeniden boyutlandırma tüm düzeni tek tek öğeleri dinamik olarak yeniden boyutlandırılabilir ancak.  
   
 ### <a name="z-order"></a>Z düzeni  
  İçinde bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanıcı arabirimi, çakışan davranışı denetlemek için öğelerin z düzenini değiştirebilirsiniz. Barındırılan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi üst kısmındaki her zaman çizilen için ayrı bir HWND çizilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğeleri.  
@@ -94,9 +94,9 @@ Bu konu açıklar nasıl <xref:System.Windows.Forms.Integration.WindowsFormsHost
   
  Varsa <xref:System.Windows.Forms.Control.Size%2A> özellik belirtilen sınırlama eşleşmiyor, barındırılan denetim sürekli boyutlandırma desteklemez. Örneğin, <xref:System.Windows.Forms.MonthCalendar> denetimi yalnızca ayrık boyutları sağlar. Bu denetim için izin verilen boyutları (ay sayısını temsil eden) tamsayılar, yükseklik ve genişlik için oluşur. Bu gibi durumlarda <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi aşağıdaki gibi davranır:  
   
--   Varsa <xref:System.Windows.Forms.Control.Size%2A> özelliği belirtilen sınırlama, daha büyük boyutu döndürür <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesini denetimden kırpar. Yükseklik ve genişlik denetimden herhangi bir yönde kırpılmış için ayrı ayrı işlenir.  
+- Varsa <xref:System.Windows.Forms.Control.Size%2A> özelliği belirtilen sınırlama, daha büyük boyutu döndürür <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesini denetimden kırpar. Yükseklik ve genişlik denetimden herhangi bir yönde kırpılmış için ayrı ayrı işlenir.  
   
--   Varsa <xref:System.Windows.Forms.Control.Size%2A> özelliği belirtilen sınırlama, daha küçük bir boyuttan döndürür <xref:System.Windows.Forms.Integration.WindowsFormsHost> bu boyut değerini kabul eder ve değeri döndürür [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen sistemi.  
+- Varsa <xref:System.Windows.Forms.Control.Size%2A> özelliği belirtilen sınırlama, daha küçük bir boyuttan döndürür <xref:System.Windows.Forms.Integration.WindowsFormsHost> bu boyut değerini kabul eder ve değeri döndürür [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen sistemi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

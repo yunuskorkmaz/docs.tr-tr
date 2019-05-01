@@ -3,22 +3,22 @@ title: Analitik İzlemeyi Dinamik Olarak Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
 ms.openlocfilehash: 219561b1acd2259daad4c984dcf0b15517166c3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999477"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Analitik İzlemeyi Dinamik Olarak Etkinleştirme
 Windows işletim sistemiyle birlikte sevk araçlarını kullanarak etkinleştirebilir veya dinamik olarak olay izleme için Windows (ETW) kullanarak izlemeyi devre dışı. Tüm [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] Windows Communication Foundation (WCF) Hizmetleri, çözümleme izleme uygulamanın Web.config dosyasında etkin ve devre dışı olmadan dinamik olarak değiştirme veya hizmeti yeniden başlatılıyor olabilir. Bu izleme olaylarının bozulmadan kalmasını yayan uygulama sağlar.  
   
  WCF izleme seçenekleri benzer şekilde yapılandırılabilir. Örneğin, önem derecesi düzeyden değiştirebilirsiniz **hata** için **bilgi** uygulama bozmadan olmadan. Bu yapılabilir aşağıdaki araçları kullanarak:  
   
--   **Logman** – yapılandırma, denetleme ve izleme verileri sorgulama için bir komut satırı aracı. Daha fazla bilgi için [Logman oluşturma izleme](https://go.microsoft.com/fwlink/?LinkId=165426) ve [Logman güncelleştirme izleme](https://go.microsoft.com/fwlink/?LinkId=165427).  
+- **Logman** – yapılandırma, denetleme ve izleme verileri sorgulama için bir komut satırı aracı. Daha fazla bilgi için [Logman oluşturma izleme](https://go.microsoft.com/fwlink/?LinkId=165426) ve [Logman güncelleştirme izleme](https://go.microsoft.com/fwlink/?LinkId=165427).  
   
--   **Görüntüleyicide** -izleme sonuçlarını görüntülemek için Windows grafik yönetim aracıdır. Daha fazla bilgi için [WCF hizmetleri ve olay izleme için Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) ve [Olay Görüntüleyicisi'ni](https://go.microsoft.com/fwlink/?LinkId=165428).  
+- **Görüntüleyicide** -izleme sonuçlarını görüntülemek için Windows grafik yönetim aracıdır. Daha fazla bilgi için [WCF hizmetleri ve olay izleme için Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) ve [Olay Görüntüleyicisi'ni](https://go.microsoft.com/fwlink/?LinkId=165428).  
   
--   **Perfmon** – performans sayaçları İzleyici izleme sayaçları ve izleme etkilerini kullanan bir Windows grafik yönetim aracıdır. Daha fazla bilgi için [bir veri toplayıcı kümesi el ile oluşturmanız](https://go.microsoft.com/fwlink/?LinkId=165429).  
+- **Perfmon** – performans sayaçları İzleyici izleme sayaçları ve izleme etkilerini kullanan bir Windows grafik yönetim aracıdır. Daha fazla bilgi için [bir veri toplayıcı kümesi el ile oluşturmanız](https://go.microsoft.com/fwlink/?LinkId=165429).  
   
 ### <a name="keywords"></a>anahtar sözcükler  
  Kullanırken <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> sınıfı, .NET Framework izleme iletilerini genellikle önem derecesini (örneğin, hata, uyarı ve bilgi) tarafından filtrelenir. ETW, önem derecesi düzeyi kavramını destekler, ancak anahtar sözcüklerini kullanarak yeni ve esnek filtre mekanizması sunar. İzleme olayları olay ne anlama geldiği hakkında ek bağlam sağlamak olanak tanıyan rastgele metin değerleri anahtar sözcüklerdir.  

@@ -4,12 +4,12 @@ description: Docker tabanlı uygulamalar geliştirmek için iş akışının ayr
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: f23a2352d86d5c77d2f05af2a2452fb3c944e049
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.openlocfilehash: 3d2a57c7dda722bcc39895b41c35a3a29ddd17e2
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613375"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809147"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -181,7 +181,7 @@ Büyük olasılıkla çok aşamalı bir Dockerfile içinde ayrıntılı olarak �
  5  FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
- 8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks … 
+ 8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks …
  9  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.Extensions.HealthChecks …
 10  COPY src/BuildingBlocks/EventBus/IntegrationEventLogEF/ …
 11  COPY src/BuildingBlocks/EventBus/EventBus/EventBus.csproj …
@@ -206,6 +206,7 @@ Büyük olasılıkla çok aşamalı bir Dockerfile içinde ayrıntılı olarak �
 
 Ve Ayrıntılar, satır satır şunlardır:
 
+<!-- markdownlint-disable MD029-->
 1. "Küçük" yalnızca çalışma zamanı temel görüntü ile bir aşama başlamak için bu çağrı **temel** başvuru.
 2. Oluşturma **/app** görüntünün dizin.
 3. Bağlantı noktasını kullanıma sunma **80**.
@@ -226,6 +227,7 @@ Ve Ayrıntılar, satır satır şunlardır:
 26. Geçerli dizini **/app**
 27. Kopyalama **/app** aşamadaki dizin **yayımlama** geçerli dizinde
 28. Kapsayıcı başlatıldığında çalıştırılacak komut tanımlayın.
+<!-- markdownlint-enable MD029-->
 
 Artık hizmetine söz konusu olduğunda, yaklaşık 22 dakika veya daha fazla Linux kapsayıcıları tam çözümde oluşturulacak anlamına gelir, tüm işlem performansını artırmak için bazı iyileştirmeler inceleyelim.
 
@@ -233,7 +235,7 @@ Oldukça basittir Docker'ın katmanı önbellek özelliğin avantajlarından yar
 
 Bunu odaklanalım **derleme** aşama, Satır 5-6 çoğunlukla aynı, ancak satırları 7-17 farklı tek her zaman yürütmek sahip oldukları için değiştirdiyseniz her hizmetinden hizmetine, ancak 7-16 dizesine satırlar için:
 
-```
+```Dockerfile
 COPY . .
 ```
 
@@ -245,7 +247,7 @@ Her hizmet için yalnızca aynı olacaktır sonra tüm çözüm kopyalanır ve d
 
 Sonraki önemli iyileştirme içerir `restore` hizmetine her bir hizmet için farklı olan komut satırında 17 yürütüldü. Bu satırı yalnızca değiştirirseniz:
 
-```console
+```Dockerfile
 RUN dotnet restore
 ```
 
@@ -253,13 +255,13 @@ Tüm çözüm için paketler geri yüklenebilir, ancak daha sonra tekrar bu yaln
 
 Ancak, `dotnet restore` tek proje veya çözüm dosyası klasöründe yoksa çalıştırmaları yalnızca, bu nedenle bunu elde etmenin biraz daha karmaşıktır ve çok fazla ayrıntılarına almadan bunu çözmenin bir yolu budur:
 
-1) Aşağıdaki satırları ekleyin **.dockerignore**:
+1. Aşağıdaki satırları ekleyin **.dockerignore**:
 
    - `*.sln`, ana klasörü ağacında, tüm çözüm dosyaları yoksaymak için
 
    - `!eShopOnContainers-ServicesAndWebApps.sln`, yalnızca bu çözüm dosyası eklenecek.
 
-2) Dahil `/ignoreprojectextensions:.dcproj` bağımsız değişkeni `dotnet restore`, bu nedenle de docker-compose proje yok sayar ve yalnızca hizmetine ServicesAndWebApps çözüm için paketler geri yükler.
+2. Dahil `/ignoreprojectextensions:.dcproj` bağımsız değişkeni `dotnet restore`, bu nedenle de docker-compose proje yok sayar ve yalnızca hizmetine ServicesAndWebApps çözüm için paketler geri yükler.
 
 Son iyileştirme için yalnızca böyle satırı 20 gereksizdir, satır olarak 23 Ayrıca uygulama oluşturur ve orada gider başka bir zaman komutu, esas olarak, sağ 20 satırın sonunda sunulur; böylece.
 
@@ -542,7 +544,7 @@ Ayrıca, yalnızca bir kez (Docker desteği ekleme projelerinize) 2. adım gerç
 - **Steve Lasker. Visual Studio 2017 ile .NET docker geliştirme** \
   <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
-## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Windows kapsayıcıları ayarlamak için bir Dockerfile içinde PowerShell komutlarını kullanarak 
+## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Windows kapsayıcıları ayarlamak için bir Dockerfile içinde PowerShell komutlarını kullanarak
 
 [Windows kapsayıcıları](https://docs.microsoft.com/virtualization/windowscontainers/about/index) mevcut Windows uygulamalarınızı Docker görüntüleri olarak dönüştürmek ve Docker ekosistemi sayesinde geri kalanı gibi aynı araçları ile dağıtmaya olanak sağlar. Windows kapsayıcıları kullanmak için aşağıdaki örnekte gösterildiği gibi bir Dockerfile içinde PowerShell komutlarını çalıştırın:
 

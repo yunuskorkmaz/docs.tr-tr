@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
 ms.openlocfilehash: eb0adb2e8140b20c8d52eced02f177b8c3560354
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938859"
 ---
 # <a name="xtype-markup-extension"></a>x:Type İşaretleme Uzantısı
 CLR'nin sağladığı <xref:System.Type> belirtilen bir XAML türü için temel alınan türü bir nesne.  
@@ -71,11 +71,11 @@ CLR'nin sağladığı <xref:System.Type> belirtilen bir XAML türü için temel 
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009, genel türleri ve özellik davranışını değiştiren için ek destek sağlar `x:TypeArguments` ve `x:Type` bu desteği sağlamak için.  
   
--   `x:TypeArguments` ve kök dışında öğelerde genel nesne örneklemesini için ilişkili nesne öğesi olabilir. Daha fazla bilgi için "XAML 2009" bölümüne bakın. [x: TypeArguments yönergesi](x-typearguments-directive.md).  
+- `x:TypeArguments` ve kök dışında öğelerde genel nesne örneklemesini için ilişkili nesne öğesi olabilir. Daha fazla bilgi için "XAML 2009" bölümüne bakın. [x: TypeArguments yönergesi](x-typearguments-directive.md).  
   
--   XAML 2009, genel bir türün kısıtlaması işaretlemede belirtmek için sözdizimi destekler. Bu, tarafından kullanılabilir `x:TypeArguments`tarafından `x:Type`, ya da iki özellik birlikte.  
+- XAML 2009, genel bir türün kısıtlaması işaretlemede belirtmek için sözdizimi destekler. Bu, tarafından kullanılabilir `x:TypeArguments`tarafından `x:Type`, ya da iki özellik birlikte.  
   
--   Yükleme türünü kullanan bazı framework özellikleri örtük tür dönüştürme davranışını bu özellik ayrıca ekler için XAML 2009 işlerken WPF XAML uygulama <xref:System.Type>.  
+- Yükleme türünü kullanan bazı framework özellikleri örtük tür dönüştürme davranışını bu özellik ayrıca ekler için XAML 2009 işlerken WPF XAML uygulama <xref:System.Type>.  
   
  WPF içinde ancak yalnızca gevşek XAML için (biçimlendirme yapılmayan XAML) XAML 2009 özelliklerini kullanabilirsiniz. WPF ve XAML, BAML formu için biçimlendirme derlenmiş XAML şu anda desteklemediğinden XAML 2009 anahtar sözcükleri ve özellikleri.  
   

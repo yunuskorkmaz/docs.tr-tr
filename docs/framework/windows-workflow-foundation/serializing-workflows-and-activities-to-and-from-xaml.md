@@ -1,15 +1,15 @@
 ---
-title: İş akışları ve etkinlikler XAML seri hale getirme
+title: XAML’de İş Akışı ve Etkinlikleri Serileştirme
 ms.date: 03/30/2017
 ms.assetid: 37685b32-24e3-4d72-88d8-45d5fcc49ec2
 ms.openlocfilehash: 70ee2e8e0c457e9db2853935ef95b86c7f903fc3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004646"
 ---
-# <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>İş akışları ve etkinlikler XAML seri hale getirme
+# <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>XAML’de İş Akışı ve Etkinlikleri Serileştirme
 Derlemede bulunan türleri içine derlenmiş yanı sıra, iş akışı tanımları ayrıca XAML için seri hale getirilebilir. Bu seri hale getirilmiş tanımlarını düzenlemek için yeniden yüklenmesi veya İnceleme için bir derleme sistemi derleme için geçirilen veya yüklendi ve çağrılır. Bu konu, iş akışı tanımları seri hale getirme ve XAML iş akışı tanımları ile çalışmaya genel bir bakış sağlar.  
   
 ## <a name="working-with-xaml-workflow-definitions"></a>XAML iş akışı tanımları ile çalışma  

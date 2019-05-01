@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
 ms.openlocfilehash: 11790e14ed1fde9a42e642400161cfb92bf33293
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011768"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows Forms'ta Kullanılacak Denetimler
 Denetimleri Windows formlarında kullanılan bileşenler ve alfabetik bir listesi verilmiştir. Bu bölümde yer alan Windows Forms denetimleri ek olarak, Windows Forms ActiveX ve özel denetimler ekleyebilirsiniz. İhtiyacınız olan denetimi burada listelenen bulamazsanız, kendi oluşturabilirsiniz. Ayrıntılar için bkz [tasarım zamanında Windows Forms denetimleri geliştirme](developing-windows-forms-controls-at-design-time.md). Denetim seçme hakkında daha fazla bilgi için bkz ihtiyacınız [işleve göre Windows Forms denetimleri](windows-forms-controls-by-function.md).  

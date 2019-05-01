@@ -3,22 +3,22 @@ title: Özel WSDL Yayımı
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
 ms.openlocfilehash: 2085c145a58ecaa4ad2dd8ffbd6933b92e735a6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990593"
 ---
 # <a name="custom-wsdl-publication"></a>Özel WSDL Yayımı
 Bu örnek gösterir nasıl yapılır:  
   
--   Uygulama bir <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> özel üzerinde <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> WSDL ek açıklama olarak öznitelik özelliklerini dışa aktarmak için özniteliği.  
+- Uygulama bir <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> özel üzerinde <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> WSDL ek açıklama olarak öznitelik özelliklerini dışa aktarmak için özniteliği.  
   
--   Uygulama <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> özel WSDL ek açıklamaları içeri aktarmak için.  
+- Uygulama <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> özel WSDL ek açıklamaları içeri aktarmak için.  
   
--   Uygulama <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> ve <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> özel üzerinde ve bir özel işlem davranışlarını sırasıyla, içeri aktarılan ek açıklamaları içeri aktarılan sözleşme ve işlem için CodeDom açıklamaları olarak yazmak için sözleşme.  
+- Uygulama <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> ve <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> özel üzerinde ve bir özel işlem davranışlarını sırasıyla, içeri aktarılan ek açıklamaları içeri aktarılan sözleşme ve işlem için CodeDom açıklamaları olarak yazmak için sözleşme.  
   
--   Kullanım <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> WSDL indirmek için bir <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> özel WSDL içeri Aktarıcı kullanarak WSDL içeri aktarmak için ve <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> olarak / / / WSDL ek açıklamalar ile Windows Communication Foundation (WCF) istemci kodu oluşturmak üzere ve ''' açıklamaları C# ve Visual Temel.  
+- Kullanım <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> WSDL indirmek için bir <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> özel WSDL içeri Aktarıcı kullanarak WSDL içeri aktarmak için ve <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> olarak / / / WSDL ek açıklamalar ile Windows Communication Foundation (WCF) istemci kodu oluşturmak üzere ve ''' açıklamaları C# ve Visual Temel.  
   
 > [!NOTE]
 >  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  

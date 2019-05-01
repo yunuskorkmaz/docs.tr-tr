@@ -14,11 +14,11 @@ helpviewer_keywords:
 - late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
 ms.openlocfilehash: 20eb96d0d9f81ec9dfa359edf63a60f72a45aa01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973231"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Erken ve Geç Bağlama (Visual Basic)
 Visual Basic Derleyicisi adlı bir işlem gerçekleştirir `binding` bir nesne bir nesne değişkenine atanan zaman. Bir nesnenin *erken bağlama* onu bir değişkene atandığında bildirilen belirli nesne türünde olması. Erken bağlama nesnelerine derleyicinin bellek ayırma ve uygulama yürütülmeden önce diğer iyileştirmeler gerçekleştirmek izin verin. Örneğin, aşağıdaki kod parçası, türünde bir değişkeni bildirir <xref:System.IO.FileStream>:  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
 ms.openlocfilehash: 0ba07d8979a2910ce4ec775493e38c714240f642
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997166"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>Nasıl yapılır: Bileşik Şeklin Dolgusunu Denetleme
 <xref:System.Windows.Media.GeometryGroup.FillRule%2A> Özelliği bir <xref:System.Windows.Media.GeometryGroup> veya <xref:System.Windows.Media.PathGeometry>, "bileşik şeklin belirli bir noktaya parçası olup olmadığını belirlemek için kullandığı bir kuralı" belirtir. Olası iki değeri vardır <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> ve <xref:System.Windows.Media.FillRule.Nonzero>. Aşağıdaki bölümlerde, bu iki kuralın kullanmayı anlatmaktadır.  

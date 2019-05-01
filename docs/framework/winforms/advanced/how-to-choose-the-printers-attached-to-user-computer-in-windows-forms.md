@@ -10,11 +10,11 @@ helpviewer_keywords:
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
 ms.openlocfilehash: efd65ff6417b1a63a7f87917c4d9a95dedc464ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004451"
 ---
 # <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Nasıl yapılır: Windows Forms'da Bir Kullanıcının Bilgisayarına Bağlanan Yazıcıları Seçme
 Genellikle, kullanıcıların bir yazıcı yazdırmak için varsayılan yazıcı dışında seçmek istersiniz. Kullanıcıların bunları kullanarak yüklü arasından seçim yapmasını sağlayabilirsiniz <xref:System.Windows.Forms.PrintDialog> bileşeni. Aracılığıyla <xref:System.Windows.Forms.PrintDialog> bileşeni <xref:System.Windows.Forms.DialogResult> , <xref:System.Windows.Forms.PrintDialog> bileşen yakalanır ve yazıcı seçmek için kullanılır.  

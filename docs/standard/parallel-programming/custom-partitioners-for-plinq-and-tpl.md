@@ -11,11 +11,11 @@ ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 73c745fbbdb66777b50478623d969c125f92474b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973426"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ ve TPL için Özel Bölümleyiciler
 Bir işlem bir veri kaynağı üzerinde paralel hale getirmek için gerekli adımlar için biri *bölüm* birden çok iş parçacığı tarafından erişilebilen eşzamanlı olarak birden çok bölümlere kaynak. PLINQ ve görev paralel kitaplığı (TPL), paralel sorgu yazdığınızda şeffaf bir şekilde çalışması varsayılan bölümleyicilerin sağlayın veya <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngü. Daha Gelişmiş senaryolar için kendi bölümleyici takabilirsiniz.  
@@ -100,25 +100,25 @@ Bir işlem bir veri kaynağı üzerinde paralel hale getirmek için gerekli adı
 ### <a name="contract-for-partitioners"></a>Sözleşme Bölümleyiciler  
  Özel bir bölümleyici uygulama PLINQ doğru etkileşimi sağlamak için aşağıdaki yönergeleri izleyin ve <xref:System.Threading.Tasks.Parallel.ForEach%2A> tpl'de:  
   
--   Varsa <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> adlı bağımsız değişkeni sıfır veya daha az `partitionsCount`, throw <xref:System.ArgumentOutOfRangeException>. PLINQ ve TPL hiçbir zaman içinde geçer ancak bir `partitionCount` 0 eşittir, ancak yine de olasılığını karşı koruma sağlamak öneririz.  
+- Varsa <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> adlı bağımsız değişkeni sıfır veya daha az `partitionsCount`, throw <xref:System.ArgumentOutOfRangeException>. PLINQ ve TPL hiçbir zaman içinde geçer ancak bir `partitionCount` 0 eşittir, ancak yine de olasılığını karşı koruma sağlamak öneririz.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> ve <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> her zaman döndürmelidir `partitionsCount` bölüm sayısı. Bölümleyici verileri çalıştırır ve istenen sayıda bölüm oluşturulamıyor, yöntem her kalan bir bölüm için boş bir numaralandırıcı döndürmesi gerekir. Aksi takdirde, PLINQ ve TPL hem oluşturmaz bir <xref:System.InvalidOperationException>.  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> ve <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> her zaman döndürmelidir `partitionsCount` bölüm sayısı. Bölümleyici verileri çalıştırır ve istenen sayıda bölüm oluşturulamıyor, yöntem her kalan bir bölüm için boş bir numaralandırıcı döndürmesi gerekir. Aksi takdirde, PLINQ ve TPL hem oluşturmaz bir <xref:System.InvalidOperationException>.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>, ve <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> hiçbir zaman döndürmelidir `null` (`Nothing` Visual Basic'te). Eğer öyleyse, PLINQ / TPL oluşturur bir <xref:System.InvalidOperationException>.  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>, ve <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> hiçbir zaman döndürmelidir `null` (`Nothing` Visual Basic'te). Eğer öyleyse, PLINQ / TPL oluşturur bir <xref:System.InvalidOperationException>.  
   
--   Bölümler döndüren yöntemler, her zaman tam olarak ve benzersiz bir şekilde veri kaynağı numaralandırabilirsiniz bölümler döndürmelidir. Özel bölümleyici tasarımını tarafından gerekli kılınmadıkça hiçbir çoğaltma veri kaynağı veya atlanan öğeleri olmalıdır. Bu kural uyulmazsa, çıkış sırası karıştırılmış.  
+- Bölümler döndüren yöntemler, her zaman tam olarak ve benzersiz bir şekilde veri kaynağı numaralandırabilirsiniz bölümler döndürmelidir. Özel bölümleyici tasarımını tarafından gerekli kılınmadıkça hiçbir çoğaltma veri kaynağı veya atlanan öğeleri olmalıdır. Bu kural uyulmazsa, çıkış sırası karıştırılmış.  
   
--   Böylece çıkış sırasını değil karıştırılmış aşağıdaki Boole alıcıları her zaman doğru bir şekilde aşağıdaki değerleri döndürmesi gerekir:  
+- Böylece çıkış sırasını değil karıştırılmış aşağıdaki Boole alıcıları her zaman doğru bir şekilde aşağıdaki değerleri döndürmesi gerekir:  
   
-    -   `KeysOrderedInEachPartition`: Her bölüm anahtar dizinlerini artan öğeleri döndürür.  
+    - `KeysOrderedInEachPartition`: Her bölüm anahtar dizinlerini artan öğeleri döndürür.  
   
-    -   `KeysOrderedAcrossPartitions`: Bölüm anahtar çiftlerine getirilen tüm bölümler için *miyim* bölüm anahtar çiftlerine yüksektir *miyim*-1.  
+    - `KeysOrderedAcrossPartitions`: Bölüm anahtar çiftlerine getirilen tüm bölümler için *miyim* bölüm anahtar çiftlerine yüksektir *miyim*-1.  
   
-    -   `KeysNormalized`: Tüm anahtar dizinlerini tekdüze sıfırdan başlayarak, boşluk olmadan artmaktadır.  
+    - `KeysNormalized`: Tüm anahtar dizinlerini tekdüze sıfırdan başlayarak, boşluk olmadan artmaktadır.  
   
--   Tüm dizinler benzersiz olması gerekir. Yinelenen dizinleri olmayabilir. Bu kural uyulmazsa, çıkış sırası karıştırılmış.  
+- Tüm dizinler benzersiz olması gerekir. Yinelenen dizinleri olmayabilir. Bu kural uyulmazsa, çıkış sırası karıştırılmış.  
   
--   Tüm dizinler negatif olmamalıdır. Bu kural uyulmazsa, PLINQ/TPL özel durumlar.  
+- Tüm dizinler negatif olmamalıdır. Bu kural uyulmazsa, PLINQ/TPL özel durumlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

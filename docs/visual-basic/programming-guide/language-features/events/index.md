@@ -6,11 +6,11 @@ helpviewer_keywords:
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 ms.openlocfilehash: 73a740d8fa9b9f293e4babb1d2edef81aaeae8aa
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973205"
 ---
 # <a name="events-visual-basic"></a>Olaylar (Visual Basic)
 Yordamları gerçekte bir sırayla yürütülen bir dizi olarak Visual Studio projesi görselleştirme ancak çoğu aktivita typu EventDriven programlarıdır — yani, yürütmenin akışını adlı dış oluşumları tarafından belirlenir *olayları*.  
@@ -53,11 +53,11 @@ Yordamları gerçekte bir sırayla yürütülen bir dizi olarak Visual Studio pr
   
  `WithEvents` Deyimi ve `Handles` yan tümcesi olan genellikle en iyi seçenek olay işleyicileri kullandıkları bildirim temelli söz dizimi olay işleme kodu daha kolay hale getirdiği için okuma ve hata ayıklama için. Ancak, aşağıdaki sınırlamalar kullanımı ile ilgili dikkat edilmesi `WithEvents` değişkenleri:  
   
--   Kullanamazsınız bir `WithEvents` değişken olarak bir nesne değişkeni. Diğer bir deyişle, olarak bildiremezsiniz `Object`— değişken bildirdiğinizde, sınıf adı belirtmeniz gerekir.  
+- Kullanamazsınız bir `WithEvents` değişken olarak bir nesne değişkeni. Diğer bir deyişle, olarak bildiremezsiniz `Object`— değişken bildirdiğinizde, sınıf adı belirtmeniz gerekir.  
   
--   Paylaşılan olayları sınıf örneklerinin bağlı değil çünkü kullanamazsınız `WithEvents` bildirimli olarak paylaşılan olayları işlemek için. Benzer şekilde, kullanamazsınız `WithEvents` veya `Handles` olayları işlemek için bir `Structure`. Her iki durumda da kullanabileceğinizi `AddHandler` bu olayları işlemek için deyimi.  
+- Paylaşılan olayları sınıf örneklerinin bağlı değil çünkü kullanamazsınız `WithEvents` bildirimli olarak paylaşılan olayları işlemek için. Benzer şekilde, kullanamazsınız `WithEvents` veya `Handles` olayları işlemek için bir `Structure`. Her iki durumda da kullanabileceğinizi `AddHandler` bu olayları işlemek için deyimi.  
   
--   Dizi oluşturulamıyor `WithEvents` değişkenleri.  
+- Dizi oluşturulamıyor `WithEvents` değişkenleri.  
   
  `WithEvents` değişkenleri, bir veya daha fazla olay türünü ya da aynı türde bir olayı işlemek için bir veya daha fazla olay işleyicileri işlemek tek olay işleyicisine izin verin.  
   
@@ -91,7 +91,7 @@ Yordamları gerçekte bir sırayla yürütülen bir dizi olarak Visual Studio pr
   
 ### <a name="to-handle-events-from-a-base-class"></a>Bir temel sınıf olayları işlemek için  
   
--   Türetilmiş sınıf içinde olay işleyicisi ekleyerek bildirmek bir `Handles MyBase.` *eventname* deyimi, olay işleyici yordamı bildirimi satırına burada *eventname* olayda adıdır işlemekte olduğunuz temel sınıf. Örneğin:  
+- Türetilmiş sınıf içinde olay işleyicisi ekleyerek bildirmek bir `Handles MyBase.` *eventname* deyimi, olay işleyici yordamı bildirimi satırına burada *eventname* olayda adıdır işlemekte olduğunuz temel sınıf. Örneğin:  
   
      [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   

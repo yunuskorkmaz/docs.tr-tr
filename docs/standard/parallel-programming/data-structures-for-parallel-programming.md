@@ -8,11 +8,11 @@ ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7eb79aaf1f207d8d5ec175f32dc9a47170d604f8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973400"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Paralel Programlama için Veri Yapıları
 .NET Framework sürüm 4 paralel programlama eşzamanlı koleksiyon sınıfları, hafif eşitleme temellerine ve yavaş başlatma türlerine yönelik birtakım dahil olmak üzere, kullanışlı olan birkaç yeni türlerini tanıtır. Bu tür görev paralel kitaplığı ve PLINQ'da dahil olmak üzere birden çok iş parçacıklı uygulamanın kodlar ile kullanabilirsiniz.  
@@ -48,9 +48,9 @@ ms.locfileid: "55479704"
   
  Daha fazla bilgi için bkz.:  
   
--   [Nasıl yapılır: Düşük düzeyli eşitleme için SpinLock kullanma](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+- [Nasıl yapılır: Düşük düzeyli eşitleme için SpinLock kullanma](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
--   [Nasıl yapılır: Eş zamanlı görevleri bir engelle eşitleme](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
+- [Nasıl yapılır: Eş zamanlı görevleri bir engelle eşitleme](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
 ## <a name="lazy-initialization-classes"></a>Yavaş başlatma sınıfları  
  Gerekli kadar geç başlatma ile bir nesne için bellek ayrılmadı. Yavaş başlatma, nesne ayırmalarını eşit bir program ömrü yayarak performansını iyileştirebilir. Herhangi bir özel tür için yavaş başlatma türü sarmalama tarafından etkinleştirebilirsiniz <xref:System.Lazy%601>.  

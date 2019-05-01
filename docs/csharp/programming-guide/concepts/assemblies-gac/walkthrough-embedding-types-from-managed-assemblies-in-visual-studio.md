@@ -3,11 +3,11 @@ title: "İzlenecek yol: Yönetilen derlemeler Visual Studio'da türler katışt�
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 ms.openlocfilehash: ca1acab5dc08bc7790d86b0dda3b9c7f58cab10c
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61975279"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>İzlenecek yol: Yönetilen derlemeler Visual Studio'da türler katıştırma (C#)
 

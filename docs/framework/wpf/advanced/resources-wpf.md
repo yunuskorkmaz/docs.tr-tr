@@ -9,11 +9,11 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
 ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981896"
 ---
 # <a name="resources-wpf"></a>Kaynaklar (WPF)
 Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir nesnedir. WPF, farklı türdeki kaynakların destekler. Bu kaynaklar öncelikle iki kaynak türleri şunlardır: XAML kaynakları ve kaynak veri dosyaları. XAML kaynakları Fırçalar ve stilleri verilebilir. Kaynak veri dosyaları uygulamanın gereken yürütülebilir olmayan veri dosyalarıdır.  

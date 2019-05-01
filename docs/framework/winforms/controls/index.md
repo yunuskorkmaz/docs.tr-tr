@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, about Windows Forms controls
 ms.assetid: f050de8f-4ebd-4042-94b8-edf9a1dbd52a
 ms.openlocfilehash: 2fb4ffd4d2f39f0b11f1db4d152c5922e1ac4d19
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973816"
 ---
 # <a name="windows-forms-controls"></a>Windows Forms Denetimleri
 Tasarım ve kullanıcı arabirimi, Windows Forms uygulamalarının değiştirme gibi ekleme, hizalama ve yerleştirmenize gerekecektir. Denetimleri form nesnelerin içerdiği nesneleridir. Her denetim türü kendi özellikleri, yöntemleri ve belirli bir amaç için uygun hale getiren olayları sahiptir. Tasarımcıda denetimleri işlemenizi ve denetimlerini çalışma zamanında dinamik olarak eklemek için kod yazın.  

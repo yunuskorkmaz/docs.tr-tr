@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
 ms.openlocfilehash: da35f209b632bdf9e4ab2298239a505df69d6048
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982637"
 ---
 # <a name="xshared-attribute"></a>x:Shared Özniteliği
 Ayarlandığında `false`, böylece tüm istekler için aynı örneğini paylaşmak yerine, her istek için yeni bir örneği oluşturma isteği öznitelikli kaynağı için WPF kaynak alma davranışını değiştirir.  
@@ -45,9 +45,9 @@ Ayarlandığında `false`, böylece tüm istekler için aynı örneğini paylaş
   
  WPF, `x:Shared` yalnızca aşağıdaki koşullarda geçerli olur:  
   
--   <xref:System.Windows.ResourceDictionary> İle öğeleri içeren `x:Shared` derlenmelidir. <xref:System.Windows.ResourceDictionary> Gevşek XAML içinde olamaz ya da temaları için kullanılır.  
+- <xref:System.Windows.ResourceDictionary> İle öğeleri içeren `x:Shared` derlenmelidir. <xref:System.Windows.ResourceDictionary> Gevşek XAML içinde olamaz ya da temaları için kullanılır.  
   
--   <xref:System.Windows.ResourceDictionary> Öğelerini içeren başka içinde iç içe olmamalıdır değil <xref:System.Windows.ResourceDictionary>. Örneğin, kullanamazsınız `x:Shared` öğeleri için bir <xref:System.Windows.ResourceDictionary> içinde olan bir <xref:System.Windows.Style> zaten olan bir <xref:System.Windows.ResourceDictionary> öğesi.  
+- <xref:System.Windows.ResourceDictionary> Öğelerini içeren başka içinde iç içe olmamalıdır değil <xref:System.Windows.ResourceDictionary>. Örneğin, kullanamazsınız `x:Shared` öğeleri için bir <xref:System.Windows.ResourceDictionary> içinde olan bir <xref:System.Windows.Style> zaten olan bir <xref:System.Windows.ResourceDictionary> öğesi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

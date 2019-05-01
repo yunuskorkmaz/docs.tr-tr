@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
 ms.openlocfilehash: 161f38e474534d5a0e522817c4bd64925bb4cac6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007636"
 ---
 # <a name="unwrapped-messages"></a>Açılmamış İletiler
 Açılmamış iletiler bu örnek gösterir. Varsayılan olarak, ileti gövdesi, bir hizmet işlemi parametreleri sarmalanmış şekilde biçimlendirilir. Aşağıdaki örnekte gösterildiği bir `Add` istek iletisi `ICalculator` Sarmalanan modunda hizmet.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
 ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007337"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters ve XAML
 Bu konu, genel XAML dil özelliği olarak dizeden tür dönüştürme amacı tanıtır. .NET Framework'teki <xref:System.ComponentModel.TypeConverter> sınıfı XAML öznitelik kullanımı bir özellik değeri olarak kullanılabilecek özel bir yönetilen sınıf uygulamasını bir parçası olarak belirli bir amaca hizmet. Özel bir sınıf yazma ve XAML ayarlanabilir öznitelik değeri olarak kullanılabilmesi için bir sınıfın örneklerini istiyorsanız uygulamak ihtiyacınız olabilecek bir <xref:System.ComponentModel.TypeConverterAttribute> sınıfınıza, özel bir yazma <xref:System.ComponentModel.TypeConverter> sınıfı veya her ikisini de.  
@@ -59,13 +59,13 @@ Bu konu, genel XAML dil özelliği olarak dizeden tür dönüştürme amacı tan
   
  <xref:System.ComponentModel.TypeConverter> ve dizeleri XAML işleme amacıyla bu nesnelerden dönüştürme için uygun olan dört üyeleri tanımlar:  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
   
  Bu en önemli yöntemdir <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>. Bu yöntem, Giriş dizesinin gerekli nesne türüne dönüştürür. NET olarak söylemek gerekirse, <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> yönteminin çok geniş bir tür Dönüştürücüsü'nın hedeflenen hedef türüne dönüştürün ve bu nedenle çalışma zamanı dönüştürmeleri destekleyen gibi ancak XAML amacıyla XAML genişletmek amacıyla hizmet uygulanmasını işleyebilen kod yolu olan bir <xref:System.String> önemli giriş.  
   

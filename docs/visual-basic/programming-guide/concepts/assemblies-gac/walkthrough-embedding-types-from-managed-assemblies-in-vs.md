@@ -2,12 +2,12 @@
 title: "İzlenecek yol: Visual Studio'da (Visual Basic) yönetilen derlemelerden türler katıştırma"
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 836d035aab06f18c13e3675fbd72c5ab9879a3d2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 18f22a771ab7279f177fe39d8c372a8517056890
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359473"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809134"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>İzlenecek yol: Visual Studio'da (Visual Basic) yönetilen derlemelerden türler katıştırma
 
@@ -209,13 +209,13 @@ Tür bilgilerini COM birlikte çalışma derlemelerini, destekliyoruz türü ekl
 
 3. SampleClass.vb dosyasını açın. Aşağıdaki kod satırlarını SampleClass sınıfına ekleyin.
 
-```vb
-Public Function GetDate() As DateTime Implements ISampleInterface.GetDate
-    Return Now
-End Function
-```
+    ```vb
+    Public Function GetDate() As DateTime Implements ISampleInterface.GetDate
+        Return Now
+    End Function
+    ```
 
-    Save the file.
+    Dosyayı kaydedin.
 
 4. Projeyi kaydedin.
 

@@ -6,10 +6,10 @@ helpviewer_keywords:
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
 ms.openlocfilehash: 267cdffdc532aaa2b31de835c31d23e93aca8c54
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990346"
 ---
 # <a name="default-message-contract"></a>Varsayılan İleti Sözleşmesi
 Varsayılan ileti anlaşması örnek, kullanıcı tarafından tanımlanan özel bir ileti için ve hizmet işlemlerine geçirildiği hizmet gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) belirlenmiş bir hizmet olarak bir hesap makinesi arabirimi uygulayan. Toplama, çıkarma, çarpma ve bölme kullanılan bireysel hizmet işlemlerinde yerine [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), bu örnek, hem işlenen hem de işleç içeren ve döndüren özel bir ileti geçirir. aritmetik hesaplama sonucu.  

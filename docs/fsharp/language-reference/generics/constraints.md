@@ -3,11 +3,11 @@ title: Kısıtlamalar
 description: Hakkında bilgi edinin F# bir genel tür veya işlev içinde bir tür bağımsız değişkeni için gereksinimleri belirtmek için genel tür parametreleri uygulanan kısıtlamaları.
 ms.date: 05/16/2016
 ms.openlocfilehash: b253ce50707512a0d46c41bba2dde34adcc24d0e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937520"
 ---
 # <a name="constraints"></a>Kısıtlamalar
 
@@ -31,8 +31,8 @@ Genel tür içinde kullanılabilir türleri sınırlamak uygulayabileceğiniz ç
 |Oluşturucu kısıtlaması|*tür-parametresi* : (yeni: birimi -&gt; ' bir)|Sağlanan türü bir varsayılan oluşturucuya sahip olmalıdır.|
 |Değer türü kısıtlaması|: Yapı|Sağlanan türü, bir .NET değer türü olması gerekir.|
 |Başvuru türü kısıtlaması|: Yapı değil|Sağlanan türü, bir .NET başvuru türü olması gerekir.|
-|Sabit listesi türü kısıtlaması|: sabit listesi&lt;*temel alınan türü*&gt;|Sağlanan türü belirtilen temel türe sahip bir listeden seçimli türü olmalıdır; Genel kullanım için tasarlanmamıştır.|
-|Temsilci kısıtlaması|: temsilci&lt;*demet parametre türü*, *dönüş türü*&gt;|Sağlanan türü belirtilen bağımsız değişkenler olan bir temsilci türü ve dönüş değeri; Genel kullanım için tasarlanmamıştır.|
+|Sabit listesi türü kısıtlaması|: enum&lt;*underlying-type*&gt;|Sağlanan türü belirtilen temel türe sahip bir listeden seçimli türü olmalıdır; Genel kullanım için tasarlanmamıştır.|
+|Temsilci kısıtlaması|: delegate&lt;*tuple-parameter-type*, *return-type*&gt;|Sağlanan türü belirtilen bağımsız değişkenler olan bir temsilci türü ve dönüş değeri; Genel kullanım için tasarlanmamıştır.|
 |Karşılaştırma kısıtlaması|: karşılaştırma|Sağlanan türü karşılaştırma desteklemesi gerekir.|
 |Eşitliği kısıtlaması|: Eşitlik|Sağlanan türü eşitlik desteklemesi gerekir.|
 |Yönetilmeyen kısıtlaması|: Yönetilmeyen|Sağlanan türü, yönetilmeyen bir türü olmalıdır. Yönetilmeyen türler belirli temel türleri (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, veya `decimal`), numaralandırma türleri `nativeptr<_>`, veya alanları olmak üzere tüm yönetilmeyen tür genel olmayan yapısı.|

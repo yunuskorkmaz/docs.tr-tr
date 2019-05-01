@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 35ef113acffbebdcd4cb585970e575f17959f75b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8d30b7b98648e36a3008ac015f9560620f77b363
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518038"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809504"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Öğretici: Bir Windows hizmeti uygulaması oluşturma
 
@@ -32,13 +32,13 @@ Başlamak için projeyi oluşturmak ve hizmetin düzgün çalışması için ger
 
    > [!NOTE]
    > Görmüyorsanız **Windows hizmeti** şablon yüklemeniz gerekebilir **.NET Masaüstü geliştirmesinden** iş yükü:
-   >  
+   >
    > İçinde **yeni proje** iletişim kutusunda **açık Visual Studio yükleyicisi** sol alt. Seçin **.NET masaüstü geliştirme** iş yükü ve ardından **Değiştir**.
 
 3. İçin **adı**, girin *MyNewService*ve ardından **Tamam**.
 
    **Tasarım** sekmesi görünür (**Service1.cs [Design]** veya **gt;service1.vb [Design]**).
-   
+
    Proje şablonu adında bir bileşen sınıfını içeren `Service1` öğesinden devralan <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Hizmeti başlatmak için kodu gibi temel hizmet kodunun çoğunu içerir.
 
 ## <a name="rename-the-service"></a>Hizmet yeniden adlandır
@@ -53,11 +53,11 @@ Hizmet Yeniden Adlandır **Service1** için **MyNewService**.
 
     ![Yeniden adlandırma istemi](media/windows-service-rename.png "Windows hizmetini yeniden adlandırma, istemi")
 
-2. İçinde **tasarım** sekmesinde **özellikleri** kısayol menüsünden. Gelen **özellikleri** penceresinde değişiklik **ServiceName** değerini *MyNewService*.
+3. İçinde **tasarım** sekmesinde **özellikleri** kısayol menüsünden. Gelen **özellikleri** penceresinde değişiklik **ServiceName** değerini *MyNewService*.
 
     ![Hizmet Özellikleri](media/windows-service-properties.png "Windows hizmet özellikleri")
 
-3. Seçin **Tümünü Kaydet** gelen **dosya** menüsü.
+4. Seçin **Tümünü Kaydet** gelen **dosya** menüsü.
 
 ## <a name="add-features-to-the-service"></a>Hizmete özellik ekleme
 
@@ -97,7 +97,7 @@ Kod düzenleyicisinde **MyNewService.cs** veya **MyNewService.vb**, bulun <xref:
 
 #### <a name="polling"></a>Yoklama
 
-Bir hizmet uygulaması, uzun süre çalışan olacak şekilde tasarlandığından, genellikle yoklar veya izler, ayarlanan sistem <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemi. `OnStart` Yöntemi, böylece sistem kilitli değilse hizmetin çalışması başladıktan sonra işletim sistemine döndürmelidir. 
+Bir hizmet uygulaması, uzun süre çalışan olacak şekilde tasarlandığından, genellikle yoklar veya izler, ayarlanan sistem <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemi. `OnStart` Yöntemi, böylece sistem kilitli değilse hizmetin çalışması başladıktan sonra işletim sistemine döndürmelidir.
 
 Basit bir yoklama mekanizması kurmak için kullanın <xref:System.Timers.Timer?displayProperty=nameWithType> bileşeni. Süreölçer başlatır bir <xref:System.Timers.Timer.Elapsed> düzenli aralıklarla zaman hizmetinizi yapabilir, izleme olayı. Kullandığınız <xref:System.Timers.Timer> bileşeni aşağıdaki gibi:
 
@@ -173,7 +173,7 @@ Bir kod satırı Ekle <xref:System.ServiceProcess.ServiceBase.OnStop%2A> hizmet 
 
 ### <a name="define-other-actions-for-the-service"></a>Diğer Eylemler için hizmet tanımlama
 
-Geçersiz kılabilirsiniz <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>, ve <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> bileşeniniz için ek işlemler tanımlamak için yöntemleri. 
+Geçersiz kılabilirsiniz <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>, ve <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> bileşeniniz için ek işlemler tanımlamak için yöntemleri.
 
 Aşağıdaki kodda gösterildiği nasıl geçersiz kılmanıza da olanak <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> yönteminde `MyNewService` sınıfı:
 
@@ -182,7 +182,7 @@ Aşağıdaki kodda gösterildiği nasıl geçersiz kılmanıza da olanak <xref:S
 
 ## <a name="set-service-status"></a>Hizmet durumunu ayarla
 
-Hizmetleri, kendi durumunu rapor [Hizmet Denetimi Yöneticisi](/windows/desktop/Services/service-control-manager) böylece bir kullanıcı bir hizmet doğru şekilde çalışıp çalışmadığını söyleyebilirsiniz. Varsayılan olarak, bir hizmet öğesinden devralan <xref:System.ServiceProcess.ServiceBase> SERVICE_STOPPED SERVICE_PAUSED ve SERVICE_RUNNING durumu ayarları, sınırlı sayıda raporlar. Bir hizmetin başlatılması biraz zaman alır, SERVICE_START_PENDING durumunu raporlamak kullanışlıdır. 
+Hizmetleri, kendi durumunu rapor [Hizmet Denetimi Yöneticisi](/windows/desktop/Services/service-control-manager) böylece bir kullanıcı bir hizmet doğru şekilde çalışıp çalışmadığını söyleyebilirsiniz. Varsayılan olarak, bir hizmet öğesinden devralan <xref:System.ServiceProcess.ServiceBase> SERVICE_STOPPED SERVICE_PAUSED ve SERVICE_RUNNING durumu ayarları, sınırlı sayıda raporlar. Bir hizmetin başlatılması biraz zaman alır, SERVICE_START_PENDING durumunu raporlamak kullanışlıdır.
 
 Windows çağıran kod ekleyerek SERVICE_START_PENDING ve SERVICE_STOP_PENDING durum ayarlarını uygulayabilirsiniz [artırılmış](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) işlevi.
 
@@ -319,7 +319,7 @@ Windows çağıran kod ekleyerek SERVICE_START_PENDING ve SERVICE_STOP_PENDING d
 
     ' Update the service state to Stopped.
     serviceStatus.dwCurrentState = ServiceState.SERVICE_STOPPED
-    SetServiceStatus(Me.ServiceHandle, serviceStatus)    
+    SetServiceStatus(Me.ServiceHandle, serviceStatus)
     ```
 
 ## <a name="add-installers-to-the-service"></a>Hizmete yükleyiciler ekleme
@@ -332,27 +332,27 @@ Windows çağıran kod ekleyerek SERVICE_START_PENDING ve SERVICE_STOP_PENDING d
 
      Varsayılan olarak, Visual Studio adında bir bileşen sınıfını ekler `ProjectInstaller`, projenize iki yükleyici içeriyor. Bu yükleyicilerden hizmetiniz ve hizmetin ilişkili işlem içindir.
 
-4. İçinde **tasarım** görüntüleme **ProjectInstaller**seçin **Serviceınstaller1** bir görsel için C# projesi veya **Serviceınstaller1**Visual Basic projesi için ardından **özellikleri** kısayol menüsünden.
+3. İçinde **tasarım** görüntüleme **ProjectInstaller**seçin **Serviceınstaller1** bir görsel için C# projesi veya **Serviceınstaller1**Visual Basic projesi için ardından **özellikleri** kısayol menüsünden.
 
-5. İçinde **özellikleri** penceresinde doğrulayın <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> özelliği **MyNewService**.
+4. İçinde **özellikleri** penceresinde doğrulayın <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> özelliği **MyNewService**.
 
-6. Metne ekleme <xref:System.ServiceProcess.ServiceInstaller.Description%2A> özelliği gibi *örnek hizmeti*. 
+5. Metne ekleme <xref:System.ServiceProcess.ServiceInstaller.Description%2A> özelliği gibi *örnek hizmeti*.
 
      Bu metin görünür **açıklama** sütununun **Hizmetleri** penceresi ve kullanıcının hizmete açıklar.
 
     ![Hizmetler penceresini hizmet açıklamasında. ](media/windows-service-description.png "Hizmet açıklaması")
 
-7. Metne ekleme <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> özelliği. Örneğin, *MyNewService görünen ad*. 
+6. Metne ekleme <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> özelliği. Örneğin, *MyNewService görünen ad*.
 
      Bu metin görünür **görünen ad** sütununun **Hizmetleri** penceresi. Bu ad farklı olabilir <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> özelliği adı Sistem kullanır (örneğin, adı için kullandığınız `net start` hizmetinizi başlatmak için komut).
 
-8. Ayarlama <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> özelliğini <xref:System.ServiceProcess.ServiceStartMode.Automatic> aşağı açılan listeden.
+7. Ayarlama <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> özelliğini <xref:System.ServiceProcess.ServiceStartMode.Automatic> aşağı açılan listeden.
 
-9. İşiniz bittiğinde, **özellikleri** windows gibi şu şekilde görünmelidir:
+8. İşiniz bittiğinde, **özellikleri** windows gibi şu şekilde görünmelidir:
 
      ![Bir Windows hizmeti için yükleyici özelliklerini](media/windows-service-installer-properties.png "Windows Installer özellikleri hizmet")
 
-9. İçinde **tasarım** görüntüleme **ProjectInstaller**, seçin **ServiceProcessInstaller1** bir görsel için C# projesi veya **ServiceProcessInstaller1**  Visual Basic projesi için ardından **özellikleri** kısayol menüsünden. Ayarlama <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> özelliğini <xref:System.ServiceProcess.ServiceAccount.LocalSystem> aşağı açılan listeden. 
+9. İçinde **tasarım** görüntüleme **ProjectInstaller**, seçin **ServiceProcessInstaller1** bir görsel için C# projesi veya **ServiceProcessInstaller1**  Visual Basic projesi için ardından **özellikleri** kısayol menüsünden. Ayarlama <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> özelliğini <xref:System.ServiceProcess.ServiceAccount.LocalSystem> aşağı açılan listeden.
 
      Bu ayar hizmetini yükler ve yerel sistem hesabı kullanılarak çalıştırılır.
 
@@ -364,7 +364,7 @@ Yükleyiciler hakkında daha fazla bilgi için bkz. [nasıl yapılır: Hizmet uy
 ## <a name="optional-set-startup-parameters"></a>(İsteğe bağlı) Başlangıç parametrelerini ayarlayın
 
 > [!NOTE]
-> Başlangıç parametreleri eklemek karar vermeden önce hizmetinize bilgi geçirmek için en iyi yolu olup olmadığını göz önünde bulundurun. Bunlar, kullanımı kolay ve ayrıştırma ve kullanıcı bir kolayca bunları geçersiz kılabilirsiniz ancak bulmak ve belgeleri kullanmak bir kullanıcı için daha zor olabilir. Genel olarak, hizmetiniz birkaç taneden fazla yalnızca başlangıç parametre gerektiriyorsa, kayıt defteri veya bir yapılandırma dosyası yerine kullanmalısınız. 
+> Başlangıç parametreleri eklemek karar vermeden önce hizmetinize bilgi geçirmek için en iyi yolu olup olmadığını göz önünde bulundurun. Bunlar, kullanımı kolay ve ayrıştırma ve kullanıcı bir kolayca bunları geçersiz kılabilirsiniz ancak bulmak ve belgeleri kullanmak bir kullanıcı için daha zor olabilir. Genel olarak, hizmetiniz birkaç taneden fazla yalnızca başlangıç parametre gerektiriyorsa, kayıt defteri veya bir yapılandırma dosyası yerine kullanmalısınız.
 
 Bir Windows hizmeti, komut satırı bağımsız değişkenleri veya başlangıç parametreleri kabul edebilir. İşlem Başlangıç parametrelerine kod eklediğinizde, bir kullanıcı ile kendi özel başlangıç parametreleri hizmet Özellikler penceresindeki hizmetinizi başlatabilirsiniz. Ancak, bu başlangıç parametreleri, hizmetin bir sonraki başlatılışında kalıcı değildir. Başlangıç parametreleri kalıcı olarak ayarlamak için kayıt defterinde ayarlanan.
 
@@ -480,13 +480,13 @@ Windows hizmeti oluşturduğunuza göre bunu yükleyebilirsiniz. Bir Windows hiz
     installutil MyNewService.exe
     ```
 
-    Hizmet başarıyla yüklerse, komut başarılı olduğunu bildirir. 
+    Hizmet başarıyla yüklerse, komut başarılı olduğunu bildirir.
 
     Sistem bulamazsa *installutil.exe*, bilgisayarınızda mevcut olduğundan emin olun. Bu araç, .NET Framework klasörüne yüklenir *% windir%\Microsoft.NET\Framework[64]\\&lt;framework sürümü&gt;*. Örneğin, 64-bit sürüm için varsayılan yolu olan *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
 
-    Varsa **installutil.exe** işlem başarısız olursa, nedenini bulmak için yükleme günlüğüne bakın. Varsayılan olarak, günlük hizmeti yürütülebilir olarak aynı klasörde olduğu. Yükleme başarısız olabilir: 
+    Varsa **installutil.exe** işlem başarısız olursa, nedenini bulmak için yükleme günlüğüne bakın. Varsayılan olarak, günlük hizmeti yürütülebilir olarak aynı klasörde olduğu. Yükleme başarısız olabilir:
     - <xref:System.ComponentModel.RunInstallerAttribute> Sınıfı üzerinde mevcut değilse `ProjectInstaller` sınıfı.
-    -  Öznitelik belirlendiğinden `true`. 
+    - Öznitelik belirlendiğinden `true`.
     - `ProjectInstaller` Sınıfı değil olarak tanımlanan `public`.
 
 Daha fazla bilgi için [nasıl yapılır: Hizmetleri Yükleme ve kaldırma](how-to-install-and-uninstall-services.md).
@@ -520,7 +520,7 @@ Daha fazla bilgi için [nasıl yapılır: Hizmetleri Yükleme ve kaldırma](how-
 
 ## <a name="clean-up-resources"></a>Kaynakları temizleme
 
-Windows hizmet uygulaması artık ihtiyacınız kalmadığında, kaldırabilirsiniz. 
+Windows hizmet uygulaması artık ihtiyacınız kalmadığında, kaldırabilirsiniz.
 
 1. Açık **Visual Studio için geliştirici komut istemi** yönetici kimlik bilgilerine sahip.
 

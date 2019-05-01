@@ -10,11 +10,11 @@ helpviewer_keywords:
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
 ms.openlocfilehash: 6b178ac6b93205afebb1bea45f1b7e94826cb670
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002176"
 ---
 # <a name="storyboards-overview"></a>Görsel Taslaklara Genel Bakış
 Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animation.Storyboard> animasyonların ve düzenleme nesneleri. Etkileşimli olarak nasıl işleneceğini açıklar <xref:System.Windows.Media.Animation.Storyboard> nesneleri ve söz dizimi hedefleyen dolaylı özelliği tanımlar.  
@@ -29,11 +29,11 @@ Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animatio
   
  A <xref:System.Windows.Media.Animation.Storyboard> kapsayıcı zaman çizelgesi için içerdiği zaman çizelgelerini hedefleme bilgileri sağlayan bir tür. Herhangi bir türde bir görsel taslak içerebilir <xref:System.Windows.Media.Animation.Timeline>diğer kapsayıcı zaman çizelgeleri ve animasyonları dahil olmak üzere. <xref:System.Windows.Media.Animation.Storyboard> nesneleri, nesnelerle ve özelliklerle çeşitli düzenlemek ve karmaşık zamanlama davranışlarını denetlemek kolaylaştıran bir tek bir zaman çizelgesi ağacında etkileyen zaman çizelgelerini birleştirmenizi sağlar. Örneğin, şu üç şeyi yapar bir düğme istediğinizi varsayalım.  
   
--   Büyütme ve kullanıcı düğmeyi seçtiğinde rengini değiştirin.  
+- Büyütme ve kullanıcı düğmeyi seçtiğinde rengini değiştirin.  
   
--   Ardından tıklandığında geri özgün durumuna küçülür ve artırabilirsiniz.  
+- Ardından tıklandığında geri özgün durumuna küçülür ve artırabilirsiniz.  
   
--   Daralt ve devre dışı kalırsa, yüzde 50 opaklık için Soluklaştır.  
+- Daralt ve devre dışı kalırsa, yüzde 50 opaklık için Soluklaştır.  
   
  Bu durumda, birden fazla aynı nesneye uygulanan bir animasyon sahip ve farklı saatler yerine düğmeyi durumuna bağımlı yürütmek istediğiniz. <xref:System.Windows.Media.Animation.Storyboard> nesneleri, animasyonları düzenlemek ve bir veya daha fazla nesneye gruplar halinde uygulamanızı sağlar.  
   
@@ -43,11 +43,11 @@ Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animatio
   
  Örneğin, kullanabileceğinizi bir <xref:System.Windows.Media.Animation.Storyboard> aşağıdakileri yapmak için:  
   
--   Animasyon bir <xref:System.Windows.Media.SolidColorBrush> (çerçevesi olmayan öğe), boyar bir düğmenin arka planı (bir tür <xref:System.Windows.FrameworkElement>),  
+- Animasyon bir <xref:System.Windows.Media.SolidColorBrush> (çerçevesi olmayan öğe), boyar bir düğmenin arka planı (bir tür <xref:System.Windows.FrameworkElement>),  
   
--   Animasyon bir <xref:System.Windows.Media.SolidColorBrush> (çerçevesi olmayan öğe), boyar dolgusunu bir <xref:System.Windows.Media.GeometryDrawing> (çerçevesi olmayan öğe) kullanarak görüntülenen bir <xref:System.Windows.Controls.Image> (<xref:System.Windows.FrameworkElement>).  
+- Animasyon bir <xref:System.Windows.Media.SolidColorBrush> (çerçevesi olmayan öğe), boyar dolgusunu bir <xref:System.Windows.Media.GeometryDrawing> (çerçevesi olmayan öğe) kullanarak görüntülenen bir <xref:System.Windows.Controls.Image> (<xref:System.Windows.FrameworkElement>).  
   
--   Kod içinde animasyon ekleme bir <xref:System.Windows.Media.SolidColorBrush> de içeren bir sınıf tarafından bildirilen bir <xref:System.Windows.FrameworkElement>, <xref:System.Windows.Media.SolidColorBrush> adı ile kayıtlı <xref:System.Windows.FrameworkElement>.  
+- Kod içinde animasyon ekleme bir <xref:System.Windows.Media.SolidColorBrush> de içeren bir sınıf tarafından bildirilen bir <xref:System.Windows.FrameworkElement>, <xref:System.Windows.Media.SolidColorBrush> adı ile kayıtlı <xref:System.Windows.FrameworkElement>.  
   
  Ancak, kullanamayabilirsiniz bir <xref:System.Windows.Media.Animation.Storyboard> animasyon uygulamak için bir <xref:System.Windows.Media.SolidColorBrush> adıyla kaydetmedi bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement>, veya bir özelliği ayarlamak için kullanılmayan bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement>.  
   
@@ -140,9 +140,9 @@ Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animatio
   
  Where  
   
--   *ElementPropertyName* özelliği <xref:System.Windows.FrameworkElement> hangi <xref:System.Windows.Freezable> ayarlamak için kullanılır ve  
+- *ElementPropertyName* özelliği <xref:System.Windows.FrameworkElement> hangi <xref:System.Windows.Freezable> ayarlamak için kullanılır ve  
   
--   *FreezablePropertyName* özelliği <xref:System.Windows.Freezable> animasyon uygulamak için.  
+- *FreezablePropertyName* özelliği <xref:System.Windows.Freezable> animasyon uygulamak için.  
   
  Aşağıdaki kod, animasyon ekleme işlemi gösterilmektedir <xref:System.Windows.Media.SolidColorBrush.Color%2A> , bir <xref:System.Windows.Media.SolidColorBrush> ayarlamak için kullanılır  
   
@@ -186,9 +186,9 @@ Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animatio
   
  Where  
   
--   *OwnerPropertyArrayIndex* dizinidir <xref:System.Windows.DependencyProperty> tanımlayıcısını içeren bir dizi <xref:System.Windows.FrameworkElement> nesnenin özellik, <xref:System.Windows.Freezable> ayarlamak için kullanılır ve  
+- *OwnerPropertyArrayIndex* dizinidir <xref:System.Windows.DependencyProperty> tanımlayıcısını içeren bir dizi <xref:System.Windows.FrameworkElement> nesnenin özellik, <xref:System.Windows.Freezable> ayarlamak için kullanılır ve  
   
--   *FreezablePropertyArrayIndex* dizinidir <xref:System.Windows.DependencyProperty> hedef özellik tanımlayıcısını içeren bir dizi.  
+- *FreezablePropertyArrayIndex* dizinidir <xref:System.Windows.DependencyProperty> hedef özellik tanımlayıcısını içeren bir dizi.  
   
  Aşağıdaki örnekte gösterildiği <xref:System.Windows.PropertyPath.Path%2A> ile birlikte <xref:System.Windows.PropertyPath.PathParameters%2A> önceki örnekte tanımlanan.
   
@@ -225,17 +225,17 @@ Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animatio
 ## <a name="interactively-controlling-a-storyboard-in-xaml"></a>XAML içinde bir film şeridini etkileşimli olarak denetleme  
  İçinde bir film şeridi başlatmak için [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], kullandığınız bir <xref:System.Windows.Media.Animation.BeginStoryboard> eylem tetikler. <xref:System.Windows.Media.Animation.BeginStoryboard> animasyon ve görsel taslak başlar özelliklerini ve nesneleri animasyonları dağıtır. (Bu işlem hakkında daha fazla ayrıntı için bkz: [animasyon ve zamanlama sistemine genel bakış](animation-and-timing-system-overview.md).) Size, <xref:System.Windows.Media.Animation.BeginStoryboard> bir ad belirterek, <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> özelliği yaptığınız, denetlenebilir bir film şeridi. Başlatıldıktan sonra film şeridi etkileşimli olarak denetleyebilirsiniz. Bir film şeridini denetlemek için olay tetikleyicilerini ile kullanma denetlenebilir bir film şeridi eylemlerin bir listesi verilmiştir.  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>: Film duraklatılır.  
+- <xref:System.Windows.Media.Animation.PauseStoryboard>: Film duraklatılır.  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>: Duraklatılmış bir film şeridini sürdürür.  
+- <xref:System.Windows.Media.Animation.ResumeStoryboard>: Duraklatılmış bir film şeridini sürdürür.  
   
--   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Şeridinin hızını değiştirir.  
+- <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Şeridinin hızını değiştirir.  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Varsa, bir görsel taslak dolgu süresinin sonuna ilerler.  
+- <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Varsa, bir görsel taslak dolgu süresinin sonuna ilerler.  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>: Görsel taslak durdurur.  
+- <xref:System.Windows.Media.Animation.StopStoryboard>: Görsel taslak durdurur.  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>: Görsel taslak kaldırır.  
+- <xref:System.Windows.Media.Animation.RemoveStoryboard>: Görsel taslak kaldırır.  
   
  Aşağıdaki örnekte, denetlenebilir bir film şeridi Eylemler, etkileşimli bir film şeridini denetlemek için kullanılır.  
   
@@ -247,17 +247,17 @@ Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animatio
   
  Aşağıdaki liste işlemek için kullanılan yöntemleri gösterir. bir <xref:System.Windows.Media.Animation.Storyboard> başlatıldıktan sonra:  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Remove%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Remove%2A>  
   
  Bu yöntemleri kullanarak oluşturmanız gerekmez avantajlarındandır <xref:System.Windows.Trigger> veya <xref:System.Windows.TriggerAction> nesneler; denetlenebilir bir başvuru yeterlidir <xref:System.Windows.Media.Animation.Storyboard> işlemek istediğiniz.  
   
@@ -272,13 +272,13 @@ Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animatio
 ## <a name="animate-in-a-style"></a>Bir Stile Animasyon Ekleme  
  Kullanabileceğiniz <xref:System.Windows.Media.Animation.Storyboard> animasyonları tanımlamak için nesneleri bir <xref:System.Windows.Style>. İle animasyon bir <xref:System.Windows.Media.Animation.Storyboard> içinde bir <xref:System.Windows.Style> kullanmaya benzer bir <xref:System.Windows.Media.Animation.Storyboard> başka bir yerde, aşağıdaki istisnalarla üç:  
   
--   Belirtmeyin bir <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>; <xref:System.Windows.Media.Animation.Storyboard> her zaman öğeyi hedefleyen <xref:System.Windows.Style> uygulanır. Hedef <xref:System.Windows.Freezable> nesnelerini dolaylı hedefleme kullanmanız gerekir. Dolaylı hedefleme hakkında daha fazla bilgi için bkz. [dolaylı hedefleme](#pathsyntaxforchangeable) bölümü.  
+- Belirtmeyin bir <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>; <xref:System.Windows.Media.Animation.Storyboard> her zaman öğeyi hedefleyen <xref:System.Windows.Style> uygulanır. Hedef <xref:System.Windows.Freezable> nesnelerini dolaylı hedefleme kullanmanız gerekir. Dolaylı hedefleme hakkında daha fazla bilgi için bkz. [dolaylı hedefleme](#pathsyntaxforchangeable) bölümü.  
   
--   Belirtemezsiniz bir <xref:System.Windows.EventTrigger.SourceName%2A> için bir <xref:System.Windows.EventTrigger> veya <xref:System.Windows.Trigger>.  
+- Belirtemezsiniz bir <xref:System.Windows.EventTrigger.SourceName%2A> için bir <xref:System.Windows.EventTrigger> veya <xref:System.Windows.Trigger>.  
   
--   Dinamik kaynak başvuruları veya veri bağlama ifadeleri ayarlamak için kullanamazsınız <xref:System.Windows.Media.Animation.Storyboard> veya animasyon özellik değerleri. Çünkü içindeki her şey bir <xref:System.Windows.Style> iş parçacığı açısından güvenli olmalıdır ve zamanlama sistemi <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> bunları iş parçacığı açısından güvenli hale getirmek için nesneleri. A <xref:System.Windows.Media.Animation.Storyboard> veya onun alt öğe zaman çizelgelerini dinamik kaynak başvuruları veya veri bağlama ifadeleri içeriyorsa nelze zmrazit. Dondurma ve diğer hakkında daha fazla bilgi için <xref:System.Windows.Freezable> özellikler bkz [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md).  
+- Dinamik kaynak başvuruları veya veri bağlama ifadeleri ayarlamak için kullanamazsınız <xref:System.Windows.Media.Animation.Storyboard> veya animasyon özellik değerleri. Çünkü içindeki her şey bir <xref:System.Windows.Style> iş parçacığı açısından güvenli olmalıdır ve zamanlama sistemi <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> bunları iş parçacığı açısından güvenli hale getirmek için nesneleri. A <xref:System.Windows.Media.Animation.Storyboard> veya onun alt öğe zaman çizelgelerini dinamik kaynak başvuruları veya veri bağlama ifadeleri içeriyorsa nelze zmrazit. Dondurma ve diğer hakkında daha fazla bilgi için <xref:System.Windows.Freezable> özellikler bkz [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md).  
   
--   İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], için olay işleyicileri bildiremezsiniz <xref:System.Windows.Media.Animation.Storyboard> veya animasyon olayları.  
+- İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], için olay işleyicileri bildiremezsiniz <xref:System.Windows.Media.Animation.Storyboard> veya animasyon olayları.  
   
  Stil içinde bir film şeridi tanımlama gösteren bir örnek için bkz: [stil animasyon Ekle](how-to-animate-in-a-style.md) örnek.  
   
@@ -286,13 +286,13 @@ Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animatio
 ## <a name="animate-in-a-controltemplate"></a>ControlTemplate İçinde Animasyon Ekleme  
  Kullanabileceğiniz <xref:System.Windows.Media.Animation.Storyboard> animasyonları tanımlamak için nesneleri bir <xref:System.Windows.Controls.ControlTemplate>. İle animasyon bir <xref:System.Windows.Media.Animation.Storyboard> içinde bir <xref:System.Windows.Controls.ControlTemplate> kullanmaya benzer bir <xref:System.Windows.Media.Animation.Storyboard> başka bir yerde, aşağıdaki iki özel durum ile:  
   
--   <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> Alt nesneler için yalnızca yönlendirebiliriz <xref:System.Windows.Controls.ControlTemplate>. Varsa <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> belirtilmezse, animasyon öğeye hedefler <xref:System.Windows.Controls.ControlTemplate> uygulanır.  
+- <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> Alt nesneler için yalnızca yönlendirebiliriz <xref:System.Windows.Controls.ControlTemplate>. Varsa <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> belirtilmezse, animasyon öğeye hedefler <xref:System.Windows.Controls.ControlTemplate> uygulanır.  
   
--   <xref:System.Windows.EventTrigger.SourceName%2A> İçin bir <xref:System.Windows.EventTrigger> veya <xref:System.Windows.Trigger> alt nesneler için yalnızca yönlendirebiliriz <xref:System.Windows.Controls.ControlTemplate>.  
+- <xref:System.Windows.EventTrigger.SourceName%2A> İçin bir <xref:System.Windows.EventTrigger> veya <xref:System.Windows.Trigger> alt nesneler için yalnızca yönlendirebiliriz <xref:System.Windows.Controls.ControlTemplate>.  
   
--   Dinamik kaynak başvuruları veya veri bağlama ifadeleri ayarlamak için kullanamazsınız <xref:System.Windows.Media.Animation.Storyboard> veya animasyon özellik değerleri. Çünkü içindeki her şey bir <xref:System.Windows.Controls.ControlTemplate> iş parçacığı açısından güvenli olmalıdır ve zamanlama sistemi <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> bunları iş parçacığı açısından güvenli hale getirmek için nesneleri. A <xref:System.Windows.Media.Animation.Storyboard> veya onun alt öğe zaman çizelgelerini dinamik kaynak başvuruları veya veri bağlama ifadeleri içeriyorsa nelze zmrazit. Dondurma ve diğer hakkında daha fazla bilgi için <xref:System.Windows.Freezable> özellikler bkz [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md).  
+- Dinamik kaynak başvuruları veya veri bağlama ifadeleri ayarlamak için kullanamazsınız <xref:System.Windows.Media.Animation.Storyboard> veya animasyon özellik değerleri. Çünkü içindeki her şey bir <xref:System.Windows.Controls.ControlTemplate> iş parçacığı açısından güvenli olmalıdır ve zamanlama sistemi <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> bunları iş parçacığı açısından güvenli hale getirmek için nesneleri. A <xref:System.Windows.Media.Animation.Storyboard> veya onun alt öğe zaman çizelgelerini dinamik kaynak başvuruları veya veri bağlama ifadeleri içeriyorsa nelze zmrazit. Dondurma ve diğer hakkında daha fazla bilgi için <xref:System.Windows.Freezable> özellikler bkz [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md).  
   
--   İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], için olay işleyicileri bildiremezsiniz <xref:System.Windows.Media.Animation.Storyboard> veya animasyon olayları.  
+- İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], için olay işleyicileri bildiremezsiniz <xref:System.Windows.Media.Animation.Storyboard> veya animasyon olayları.  
   
  İçinde bir film şeridini tanımlama gösteren bir örnek için bir <xref:System.Windows.Controls.ControlTemplate>, bkz: [ControlTemplate içinde animasyon Ekle](how-to-animate-in-a-controltemplate.md) örnek.  
   

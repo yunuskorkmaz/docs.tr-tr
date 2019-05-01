@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d9279808e4ad15b693d06ac8a99dd33a609e5a8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992517"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize Metodu
 Derleme meta verilerini ve ikili tahmini boyutu geçerli kapsamda alır.  
@@ -40,11 +40,11 @@ HRESULT GetSaveSize (
  `fSave`  
  [in] Değerini [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) bir doğru ya da yaklaşık boyutunu almak belirten sabit listesi. Yalnızca üç değerler geçerlidir: cssAccurate, cssQuick ve cssDiscardTransientCAs:  
   
--   cssAccurate tam boyutu kaydetme döndürür ancak hesaplamak için uzun sürer.  
+- cssAccurate tam boyutu kaydetme döndürür ancak hesaplamak için uzun sürer.  
   
--   cssQuick güvenliği için doldurulan bir boyutunu döndürür ancak hesaplamak için daha kısa sürer.  
+- cssQuick güvenliği için doldurulan bir boyutunu döndürür ancak hesaplamak için daha kısa sürer.  
   
--   cssDiscardTransientCAs söyler `GetSaveSize` discardable özel öznitelikler yerine atabilirsiniz.  
+- cssDiscardTransientCAs söyler `GetSaveSize` discardable özel öznitelikler yerine atabilirsiniz.  
   
  `pdwSaveSize`  
  [out] Dosyayı kaydetmek için gereken boyut için bir işaretçi.  

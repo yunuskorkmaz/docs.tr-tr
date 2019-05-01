@@ -14,22 +14,22 @@ helpviewer_keywords:
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
 ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59335725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007103"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Forms ve WPF Birlikte Çalışabilirlik Giriş Mimarisi
 Arasındaki birlikte çalışabilirlik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hem teknolojiler uygun klavye giriş işleme sahip olmasını gerektirir. Bu konuda, bu teknolojiler, klavye ve karma uygulamalarda kesintisiz birlikte çalışabilirliği etkinleştirmek için işlenen ileti nasıl uygulamak açıklanmaktadır.  
   
  Bu konu aşağıdaki alt bölümleri içerir:  
   
--   Kalıcı olmayan formlar ve iletişim kutuları  
+- Kalıcı olmayan formlar ve iletişim kutuları  
   
--   WindowsFormsHost Klavyesi ve ileti işleme  
+- WindowsFormsHost Klavyesi ve ileti işleme  
   
--   ElementHost Klavyesi ve ileti işleme  
+- ElementHost Klavyesi ve ileti işleme  
   
 ## <a name="modeless-forms-and-dialog-boxes"></a>Kalıcı olmayan formlar ve iletişim kutuları  
  Çağrı <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> metodunda <xref:System.Windows.Forms.Integration.WindowsFormsHost> kalıcı olmayan bir form veya iletişim kutusunu açmak için öğe bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-tabanlı bir uygulama.  
@@ -39,13 +39,13 @@ Arasındaki birlikte çalışabilirlik [!INCLUDE[TLA2#tla_winclient](../../../..
 ## <a name="windowsformshost-keyboard-and-message-processing"></a>WindowsFormsHost Klavyesi ve ileti işleme  
  Tarafından barındırılan bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-tabanlı uygulama [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] klavye ve ileti işleme aşağıdakilerden oluşur:  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost> Sınıfı gelen iletileri alır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tarafından uygulanan ileti döngüsü <xref:System.Windows.Interop.ComponentDispatcher> sınıfı.  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost> Sınıfı gelen iletileri alır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tarafından uygulanan ileti döngüsü <xref:System.Windows.Interop.ComponentDispatcher> sınıfı.  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost> Sınıfı oluşturur, bir vekil [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] sıradan emin olmak için ileti döngüsü [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] klavye işleme gerçekleşir.  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost> Sınıfı oluşturur, bir vekil [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] sıradan emin olmak için ileti döngüsü [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] klavye işleme gerçekleşir.  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost> Sınıfının Implements <xref:System.Windows.Interop.IKeyboardInputSink> odak yönetimi ile koordine etmek için arabirim [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost> Sınıfının Implements <xref:System.Windows.Interop.IKeyboardInputSink> odak yönetimi ile koordine etmek için arabirim [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost> Denetimleri kendilerini ve kendi ileti döngüleri başlatır.  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost> Denetimleri kendilerini ve kendi ileti döngüleri başlatır.  
   
  Aşağıdaki bölümlerde bu parçaları işlem daha ayrıntılı açıklanmaktadır.  
   
@@ -88,13 +88,13 @@ Arasındaki birlikte çalışabilirlik [!INCLUDE[TLA2#tla_winclient](../../../..
 ## <a name="elementhost-keyboard-and-message-processing"></a>ElementHost Klavyesi ve ileti işleme  
  Tarafından barındırılan bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] klavye ve ileti işleme aşağıdakilerden oluşur:  
   
--   <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.IKeyboardInputSink>, ve <xref:System.Windows.Interop.IKeyboardInputSite> arabirimi uygulamaları.  
+- <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.IKeyboardInputSink>, ve <xref:System.Windows.Interop.IKeyboardInputSite> arabirimi uygulamaları.  
   
--   Sekme ve ok tuşları.  
+- Sekme ve ok tuşları.  
   
--   Komut anahtarları ve iletişim kutusunu anahtarları.  
+- Komut anahtarları ve iletişim kutusunu anahtarları.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hızlandırıcı işleme.  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hızlandırıcı işleme.  
   
  Aşağıdaki bölümlerde bu bölümlerinde daha ayrıntılı açıklanmaktadır.  
   
@@ -118,11 +118,11 @@ Arasındaki birlikte çalışabilirlik [!INCLUDE[TLA2#tla_winclient](../../../..
   
  Çünkü varsayılan <xref:System.Windows.Interop.HwndSource> uygulaması <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A> yöntemi döndürür `false`, WM_CHAR iletileri, aşağıdaki mantık kullanılarak işlenir:  
   
--   <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType> Yöntemi geçersiz kılınmıştır barındırılan öğelerine tüm WM_CHAR iletileri iletilen emin olmak için.  
+- <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType> Yöntemi geçersiz kılınmıştır barındırılan öğelerine tüm WM_CHAR iletileri iletilen emin olmak için.  
   
--   ALT tuşuna basıldığında, ileti WM_SYSCHAR'dır. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Bu iletiyi üzerinden önişle değil <xref:System.Windows.Forms.Control.IsInputChar%2A> yöntemi. Bu nedenle, <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> yöntemi geçersiz kılınmıştır Sorgulanacak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> kayıtlı Hızlandırıcı için. Kayıtlı bir Hızlandırıcı bulunursa <xref:System.Windows.Input.AccessKeyManager> işler.  
+- ALT tuşuna basıldığında, ileti WM_SYSCHAR'dır. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Bu iletiyi üzerinden önişle değil <xref:System.Windows.Forms.Control.IsInputChar%2A> yöntemi. Bu nedenle, <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> yöntemi geçersiz kılınmıştır Sorgulanacak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> kayıtlı Hızlandırıcı için. Kayıtlı bir Hızlandırıcı bulunursa <xref:System.Windows.Input.AccessKeyManager> işler.  
   
--   ALT tuşunu basılı değilse, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> sınıfı işlenmemiş giriş işler. Giriş bir Hızlandırıcı ise <xref:System.Windows.Input.AccessKeyManager> işler. <xref:System.Windows.Input.InputManager.PostProcessInput> Olayı işlenmemiş olan WM_CHAR iletileri için işlenir.  
+- ALT tuşunu basılı değilse, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> sınıfı işlenmemiş giriş işler. Giriş bir Hızlandırıcı ise <xref:System.Windows.Input.AccessKeyManager> işler. <xref:System.Windows.Input.InputManager.PostProcessInput> Olayı işlenmemiş olan WM_CHAR iletileri için işlenir.  
   
  Kullanıcı ALT tuşuna bastığında Hızlandırıcı görsel ipuçları tüm form üzerinde gösterilmektedir. Bu davranışı destekleyen tüm <xref:System.Windows.Forms.Integration.ElementHost> active form üzerinde denetimleri bağımsız olarak, Denetim odağa WM_SYSKEYDOWN iletileri alırsınız.  
   
@@ -134,6 +134,6 @@ Arasındaki birlikte çalışabilirlik [!INCLUDE[TLA2#tla_winclient](../../../..
 - <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [İzlenecek yol: WPF'de Windows Forms bileşik denetimini barındırma](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [İzlenecek yol: WPF bileşik denetimini Windows Forms içinde barındırma](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
 - [WPF ve Win32 Birlikte Çalışması](wpf-and-win32-interoperation.md)

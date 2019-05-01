@@ -3,11 +3,11 @@ title: İş Akışı Hizmeti Ana Bilgisayar Dahili Bileşenleri
 ms.date: 03/30/2017
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
 ms.openlocfilehash: 0596e15e27460a08f859ec3398afbeae752c86fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984245"
 ---
 # <a name="workflow-service-host-internals"></a>İş Akışı Hizmeti Ana Bilgisayar Dahili Bileşenleri
 <xref:System.ServiceModel.WorkflowServiceHost> bir konak için iş akışı hizmetleri sağlar. Gelen iletileri dinlemek üzere sorumludur ve bunları uygun iş akışı hizmet örneği için yönlendirme, kaldırma ve boşta iş akışları ve daha pek çok kalıcı denetlediğini. Bu konuda, WorkflowServiceHost gelen iletilerin nasıl işlediği açıklanmıştır.  

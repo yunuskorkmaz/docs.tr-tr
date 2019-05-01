@@ -9,24 +9,24 @@ ms.assetid: 492e010f-7493-4134-9505-f7008ccdaae6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 01b12af8c3c3a2f834827ff14665050e07b31467
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985601"
 ---
 # <a name="hosting-structures"></a>Barındırma Yapıları
-Bu bölümde barındırma API'sini kullanır yönetilmeyen yapılar açıklanmaktadır.  
+Bu bölümde barındırma API'SİNİN kullandığı yönetilmeyen yapıları açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [AssemblyBindInfo Yapısı](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)  
- Başvurulan derlemeyi hakkında ayrıntılı bilgi sağlar.  
+ Başvurulan derleme hakkında ayrıntılı bilgiler sağlar.  
   
  [BucketParameters Yapısı](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md)  
- Olay ve parametreleri tür adını olayla ilişkili geçerli özel durumu için depolar.  
+ Olay ile ilişkili olan geçerli bir özel durum için bir olay ve parametreleri türü adını depolar.  
   
  [COR_GC_STATS Yapısı](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)  
- Ortak dil çalışma zamanı (CLR) atık toplama mekanizmasını ilgili istatistikler sağlar.  
+ Ortak dil çalışma zamanı (CLR) çöp toplama mekanizması hakkında istatistikler sağlar.  
   
  [COR_GC_THREAD_STATS Yapısı](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md)  
  Çöp toplama için ilgili iş parçacığı başına istatistikleri içerir.  
@@ -35,13 +35,13 @@ Bu bölümde barındırma API'sini kullanır yönetilmeyen yapılar açıklanmak
  Hata Raporlama özel bir döküm eklenmesi için bir öğe açıklar.  
   
  [MDAInfo Yapısı](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md)  
- Hakkında ayrıntılar sağlar `Event_MDAFired` yönetilen hata ayıklama Yardımcısı (MDA) oluşturulmasını tetikleyen olayı.  
+ Hakkında ayrıntılar sağlar `Event_MDAFired` olayı yönetilen hata ayıklama Yardımcısı (MDA) oluşturulmasını tetikler.  
   
  [ModuleBindInfo Yapısı](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md)  
- Başvurulan modül ve içerdiği derleme hakkında ayrıntılı bilgi sağlar.  
+ Başvurulan modül ve onu içeren derleme hakkında ayrıntılı bilgi sağlar.  
   
  [StackOverflowInfo Yapısı](../../../../docs/framework/unmanaged-api/hosting/stackoverflowinfo-structure.md)  
- Taşması nedeniyle atılan özel durum oluştu Taşması ve bilgi türünü saklar.  
+ Taşması nedeniyle oluşturulan özel durum oluştu taşma ve bilgi türünü saklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Barındırma Coclassları](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  

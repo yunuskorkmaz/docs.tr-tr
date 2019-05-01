@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
 ms.openlocfilehash: aeb14bddf98adf53a52c8897994bd0fb6fa498ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983482"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>UI Otomasyon RangeValue Denetim Düzeni Uygulama
 > [!NOTE]
@@ -25,9 +25,9 @@ ms.locfileid: "59175805"
 ## <a name="implementation-guidelines-and-conventions"></a>Uygulama yönergeleri ve kuralları  
  Aralık değeri denetim düzeni uygularken aşağıdaki yönergeler ve kuralları dikkat edin:  
   
--   Denetimler yerel ayarına veya kullanıcı tercihi göre kendi desteklenen özellikler recalibration izin verir. Buna örnek olarak, sıcaklığı Fahrenhayt veya Santigrat cinsinden görüntülemek için ayarlanabilir bir termometre denetimdir.  
+- Denetimler yerel ayarına veya kullanıcı tercihi göre kendi desteklenen özellikler recalibration izin verir. Buna örnek olarak, sıcaklığı Fahrenhayt veya Santigrat cinsinden görüntülemek için ayarlanabilir bir termometre denetimdir.  
   
--   İlerleme çubukları veya kaydırıcıları, gibi belirsiz aralık değerleri denetimleri normalleştirilmiş bu değerlere sahip olmalıdır.  
+- İlerleme çubukları veya kaydırıcıları, gibi belirsiz aralık değerleri denetimleri normalleştirilmiş bu değerlere sahip olmalıdır.  
   
  ![Progress bar.](../../../docs/framework/ui-automation/media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
 Değerin türü tamsayı ve Minimum ve maksimum özellik değerlerini olduğu bir ilerleme çubuğu örneği normalleştirilmiş 0 ile 100 için sırasıyla  
@@ -37,10 +37,10 @@ Değerin türü tamsayı ve Minimum ve maksimum özellik değerlerini olduğu bi
   
 |Gerekli üye|Üye türü|Notlar|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Özellik|Yok.|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Özellik|Yok.|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Özellik|Yok.|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Özellik|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Özellik|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Özellik|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Özellik|None|  
 |<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Yöntemler|Yok.|  

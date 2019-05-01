@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
 ms.openlocfilehash: 03d3a0c6026761fcdbc45472f2bbb7ac593f4394
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004477"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>Nasıl yapılır: Panoya Veri Ekleme
 <xref:System.Windows.Forms.Clipboard> Sınıfı, Windows işletim sistemi Pano özelliğini ile etkileşim kurmak için kullanabileceğiniz yöntemler sağlar. Birçok uygulama Pano verileri için geçici bir deposu olarak kullanın. Örneğin, Word'ün işlemci panoya kes/yapıştır işlemleri sırasında kullanın. Pano, başka bir uygulamadan veri aktarmak için kullanışlıdır.  

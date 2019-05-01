@@ -9,44 +9,44 @@ helpviewer_keywords:
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
 ms.openlocfilehash: 5b759baebb7192c1ee94b4aa925198864ba7a31a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007168"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>İzlenecek yol: WPF’de Windows Forms Denetimlerini Düzenleme
 Bu izlenecek yol size nasıl kullanılacağını gösterir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzenlemek için düzen özelliklerini [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] karma uygulamada denetimleri.  
   
  Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
   
--   Proje oluşturuluyor.  
+- Proje oluşturuluyor.  
   
--   Varsayılan düzen ayarları kullanıyor.  
+- Varsayılan düzen ayarları kullanıyor.  
   
--   İçeriği boyutlandırma.  
+- İçeriği boyutlandırma.  
   
--   Konumlandırmayı mutlak kullanma.  
+- Konumlandırmayı mutlak kullanma.  
   
--   Açıkça boyutunu belirtme.  
+- Açıkça boyutunu belirtme.  
   
--   Düzen özelliklerini ayarlama.  
+- Düzen özelliklerini ayarlama.  
   
--   Z düzenini sınırlamaları anlama.  
+- Z düzenini sınırlamaları anlama.  
   
--   Yerleştirme.  
+- Yerleştirme.  
   
--   Görünürlük ayarlama.  
+- Görünürlük ayarlama.  
   
--   Esnetme değil bir denetim barındırma.  
+- Esnetme değil bir denetim barındırma.  
   
--   Ölçeklendirme.  
+- Ölçeklendirme.  
   
--   Döndürme.  
+- Döndürme.  
   
--   Ayar doldurma ve kenar boşlukları.  
+- Ayar doldurma ve kenar boşlukları.  
   
--   Dinamik düzen kapsayıcıları kullanma.  
+- Dinamik düzen kapsayıcıları kullanma.  
   
  Bu izlenecek yolda gösterilen görevler tam kod listesi için bkz. [WPF Örneği'nde Windows Forms denetimlerini düzenleme](https://go.microsoft.com/fwlink/?LinkID=159971).  
   
@@ -64,11 +64,11 @@ Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
   
 2. Çözüm Gezgini'nde, aşağıdaki derlemelere başvurular ekleyin.  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
-    -   System.Drawing  
+    - System.Drawing  
   
 3. MainWindow.xaml XAML görünümünde açmak için çift tıklayın.  
   

@@ -1,25 +1,25 @@
 ---
-title: Service fabric'e Windows kapsayıcıları ne zaman
+title: Service Fabric’e Windows Kapsayıcıları ne zaman dağıtılmalıdır?
 description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | Service fabric'e Windows kapsayıcıları ne zaman
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 01d76f325480c7cf09fef36b02589a602e3ee11e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973660"
 ---
-# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Service fabric'e Windows kapsayıcıları ne zaman
+# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Service Fabric’e Windows Kapsayıcıları ne zaman dağıtılmalıdır?
 
 Windows kapsayıcılarında tabanlı uygulamaları hızlı bir şekilde daha Iaas sanal makinelerinden taşımasına platformları kullanmanız gerekir. Geliştirilmiş otomatik ölçeklenebilirlik ve yüksek ölçeklenebilirlik için budur ve tam yönetim deneyiminde dağıtımlar için önemli geliştirmeler elde etmek için yükseltmeleri, sürüm oluşturma, geri alma işlemleri ve sistem durumu izleme. ' De Microsoft Azure bulut, şirket içi ya da başka bir bulutta kullanılabilir Azure Service Fabric, orchestrator ile bu hedeflere elde edebilirsiniz.
 
 Birçok kuruluşun kaldırarak ve kapsayıcıları tek parçalı uygulamalarla mevcut iki nedenden dolayı kaydırma:
 
--   Maliyet indirimleri, birleştirme ve temizleme mevcut donanım veya daha yüksek yoğunlukta çalışan uygulamaların nedeniyle.
+- Maliyet indirimleri, birleştirme ve temizleme mevcut donanım veya daha yüksek yoğunlukta çalışan uygulamaların nedeniyle.
 
--   Geliştirme ve operasyon arasında tutarlı dağıtım sözleşme.
+- Geliştirme ve operasyon arasında tutarlı dağıtım sözleşme.
 
 Maliyet indirimleri sürdürdüğünü anlaşılır ve tüm kuruluşların bu hedefe birleştirme izleme olasıdır. Tutarlı dağıtım, değerlendirmek için daha zor olduğu halde önemli olarak eşit olduğu. Geliştiriciler, bunları uygun teknolojiyi kullanmayı tercih ücretsizdir ve operasyon ekibinin uygulamaları dağıtmak ve yönetmek için tek bir yol alır tutarlı dağıtım sözleşme diyor. İşbu sözleşme işlemlerinin karmaşıklığını birçok farklı teknoloji ile uğraşmak zorunda ya da yalnızca belirli teknolojileri ile çalışmak için geliştiricilerin zorlama sorunları azaltır. Esas olarak, her uygulama kendi içinde yansıması kapsayıcıya alınmış.
 

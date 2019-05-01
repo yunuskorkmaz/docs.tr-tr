@@ -14,28 +14,28 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
 ms.openlocfilehash: 02847a813566c4675f7df2c88fa2e4e1f6138ecb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949519"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET içinde normal ifadeler için en iyi uygulamalar
 <a name="top"></a> .NET içinde normal ifade altyapısı yerine desen karşılaştırma ve metin eşleşen metni işleyen güçlü, tam özellikli bir araçtır. Çoğu durumda desen eşleme işlemini hızlı ve verimli şekilde yapar. Ancak bazı durumlarda normal ifade motoru çok yavaş görünebilir. Aşırı durumlarda saatler ve hatta günler boyunca görece küçük bir girişi işlerken yanıt vermeyi durdurmuş gibi bile görünebilir.  
   
  Bu konu, normal ifadelerinin en iyi performansa ulaşabilmesi için geliştiricilerin benimseyebileceği en iyi yöntemlerden bazılarını özetlemektedir. Aşağıdaki bölümleri içerir:  
   
--   [Giriş kaynağını düşünün](#InputSource)  
+- [Giriş kaynağını düşünün](#InputSource)  
   
--   [Nesne örneklemesini uygun şekilde yönetme](#ObjectInstantiation)  
+- [Nesne örneklemesini uygun şekilde yönetme](#ObjectInstantiation)  
   
--   [Geri izlemenin alma](#Backtracking)  
+- [Geri izlemenin alma](#Backtracking)  
   
--   [Zaman aşımı değerlerini kullanma](#Timeouts)  
+- [Zaman aşımı değerlerini kullanma](#Timeouts)  
   
--   [Yalnızca gerekli olduğunda yakala](#Capture)  
+- [Yalnızca gerekli olduğunda yakala](#Capture)  
   
--   [İlgili Konular](#RelatedTopics)  
+- [İlgili Konular](#RelatedTopics)  
   
 <a name="InputSource"></a>   
 ## <a name="consider-the-input-source"></a>Giriş Kaynağını düşünün  
@@ -45,11 +45,11 @@ ms.locfileid: "53152818"
   
  Sınırlandırılmamış girdide eşlemek yapmak için, normal bir ifade üç tür metni verimli olarak işleyebilmelidir:  
   
--   Normal ifade deseniyle eşleşen metin.  
+- Normal ifade deseniyle eşleşen metin.  
   
--   Normal ifade deseniyle eşleşmeyen metin.  
+- Normal ifade deseniyle eşleşmeyen metin.  
   
--   Normal ifade deseniyle neredeyse eşleşen metin.  
+- Normal ifade deseniyle neredeyse eşleşen metin.  
   
  Son metin türü, sınırlandırılmış girdi işlemek üzere yazılmış bir normal ifade için özellikle sorunludur. Bu normal ifade ayrıca kapsamlı dayanıyorsa [geri izlemenin](../../../docs/standard/base-types/backtracking-in-regular-expressions.md), normal ifade motoru normal dışı miktarda zamanı ayırabilirsiniz (bazı durumlarda saatler ya da günler) görünüşte zararsız bir metni işlemeye.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "53152818"
   
  Bu sorunu çözmek için, şunları yapabilirsiniz:  
   
--   Bir desen geliştirirken, özellikle de normal ifadeniz sınırlandırılmamış girdiyi işlemek üzere tasarlandıysa, geri dönüşün normal ifade altyapısının performansını nasıl etkileyeceğini düşünmelisiniz. Daha fazla bilgi için [olması, ücretsiz olarak geri](#Backtracking) bölümü.  
+- Bir desen geliştirirken, özellikle de normal ifadeniz sınırlandırılmamış girdiyi işlemek üzere tasarlandıysa, geri dönüşün normal ifade altyapısının performansını nasıl etkileyeceğini düşünmelisiniz. Daha fazla bilgi için [olması, ücretsiz olarak geri](#Backtracking) bölümü.  
   
--   Normal ifadenizi geçerli girdilerin yanı sıra gereçsiz ve neredeyse geçerli girdiler de kullanarak baştan aşağı test edin. Belirli bir normal ifadeye girdi üretmek için kullanabileceğiniz [Rex](https://www.microsoft.com/en-us/research/project/rex-regular-expression-exploration/), Microsoft Research'den bir normal ifade İnceleme aracı.  
+- Normal ifadenizi geçerli girdilerin yanı sıra gereçsiz ve neredeyse geçerli girdiler de kullanarak baştan aşağı test edin. Belirli bir normal ifadeye girdi üretmek için kullanabileceğiniz [Rex](https://www.microsoft.com/en-us/research/project/rex-regular-expression-exploration/), Microsoft Research'den bir normal ifade İnceleme aracı.  
   
  [Başa dön](#top)  
   
@@ -82,13 +82,13 @@ ms.locfileid: "53152818"
   
  Normal ifade altyapısını belirli bir normal ifade deseniyle birleştirebilir, sonra altyapıyı birkaç şekilde metin eşlemesi yapmak üzere kullanabilirsiniz:  
   
--   Gibi bir statik desen eşleme yöntemini çağırabilirsiniz <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType>. Bu, bir normal ifade nesnesine öndeğer atanmasını gerektirmez.  
+- Gibi bir statik desen eşleme yöntemini çağırabilirsiniz <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType>. Bu, bir normal ifade nesnesine öndeğer atanmasını gerektirmez.  
   
--   Örneği oluşturabilir bir <xref:System.Text.RegularExpressions.Regex> nesne ve yorumlanan normal ifade örneğinin desen eşleme yöntemini çağırabilirsiniz. Bu, normal ifade altyapısını bir normal ifade desenine bağlamak için varsayılan yöntemdir. Sonuç olduğunda bir <xref:System.Text.RegularExpressions.Regex> nesnesi örneği olmadan bir `options` içeren bağımsız değişken <xref:System.Text.RegularExpressions.RegexOptions.Compiled> bayrağı.  
+- Örneği oluşturabilir bir <xref:System.Text.RegularExpressions.Regex> nesne ve yorumlanan normal ifade örneğinin desen eşleme yöntemini çağırabilirsiniz. Bu, normal ifade altyapısını bir normal ifade desenine bağlamak için varsayılan yöntemdir. Sonuç olduğunda bir <xref:System.Text.RegularExpressions.Regex> nesnesi örneği olmadan bir `options` içeren bağımsız değişken <xref:System.Text.RegularExpressions.RegexOptions.Compiled> bayrağı.  
   
--   Örneği oluşturabilir bir <xref:System.Text.RegularExpressions.Regex> nesne ve derlenmiş normal ifade örneğinin desen eşleme yöntemini çağırabilirsiniz. Normal ifade nesneleri derlenmiş desenleri temsil eder ne zaman bir <xref:System.Text.RegularExpressions.Regex> nesnesi örneği ile bir `options` içeren bağımsız değişken <xref:System.Text.RegularExpressions.RegexOptions.Compiled> bayrağı.  
+- Örneği oluşturabilir bir <xref:System.Text.RegularExpressions.Regex> nesne ve derlenmiş normal ifade örneğinin desen eşleme yöntemini çağırabilirsiniz. Normal ifade nesneleri derlenmiş desenleri temsil eder ne zaman bir <xref:System.Text.RegularExpressions.Regex> nesnesi örneği ile bir `options` içeren bağımsız değişken <xref:System.Text.RegularExpressions.RegexOptions.Compiled> bayrağı.  
   
--   Oluşturabileceğiniz özel amaçlı <xref:System.Text.RegularExpressions.Regex> bir belirli bir normal ifade deseniyle katı olarak birleştirilmiş sıkı bir şekilde nesne, derleyebilir ve tek başına bir derleme için kaydedin. Çağrı yaparak bunu <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> yöntemi.  
+- Oluşturabileceğiniz özel amaçlı <xref:System.Text.RegularExpressions.Regex> bir belirli bir normal ifade deseniyle katı olarak birleştirilmiş sıkı bir şekilde nesne, derleyebilir ve tek başına bir derleme için kaydedin. Çağrı yaparak bunu <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> yöntemi.  
   
  Normal ifade eşleme yöntemlerini çağırma biçiminizin uygulamanız üzerinde önemli bir etkisi olabilir. Aşağıdaki bölümler, uygulamanızın performansını iyileştirmek için statik yöntem çağrılarının, yorumlanan normal ifadelerin ve derlenmiş normal ifadelerin ne zaman kullanılacağını tartışmaktadır.  
   
@@ -154,9 +154,9 @@ ms.locfileid: "53152818"
   
  Aşağıdaki durumlarda normal ifadeleri bütünleşik bir dosyaya derlemenizi öneririz:  
   
--   Yeniden kullanılabilir normal ifadeler üretmek isteyen yetkin bir geliştiriciyseniz.  
+- Yeniden kullanılabilir normal ifadeler üretmek isteyen yetkin bir geliştiriciyseniz.  
   
--   Normal ifadenizin desen eşleme yöntemlerinizin belirsiz kere (bir ya da iki kezden binlerce ya da on binlerce defa) çağrılmasını bekliyorsanız. Derlenmiş veya yorumlanan normal ifadelerden farklı olarak, ayrı derlemelere derlenen normal ifadeler, yöntem çağrısı sayısından bağımsız olarak tutarlı bir performans sunar.  
+- Normal ifadenizin desen eşleme yöntemlerinizin belirsiz kere (bir ya da iki kezden binlerce ya da on binlerce defa) çağrılmasını bekliyorsanız. Derlenmiş veya yorumlanan normal ifadelerden farklı olarak, ayrı derlemelere derlenen normal ifadeler, yöntem çağrısı sayısından bağımsız olarak tutarlı bir performans sunar.  
   
  Performansı en iyi hale getirmek için derlenmiş normal ifadeler kullanıyorsanız, derlemeyi oluşturmak, normal ifade motorunu yüklemek ve bunun desen eşleyen yöntemlerini yürütmek için yansıtma kullanmamanız gerekir. Bu, normal ifade desenlerini dinamik olarak oluşturmaktan kaçınmanızı ve desen eşleme seçeneklerini (örneğin harf büyüklüğüne duyarlı eşleme) derleme oluşturulurken belirtmenizi gerekli kılar. Ayrıca derlemeyi, normal ifadeyi kullanan koddan oluşturan kodu ayırmanızı gerektirir.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "53152818"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack4.cs#11)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack4.vb#11)]  
   
- .NET içinde normal ifade dili, iç içe niceleyicileri çıkarmak için kullanabileceğiniz aşağıdaki dil öğelerini içerir. Daha fazla bilgi için [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ .NET içinde normal ifade dili, iç içe niceleyicileri çıkarmak için kullanabileceğiniz aşağıdaki dil öğelerini içerir. Daha fazla bilgi için bkz. [Gruplandırma Yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
 |Dil öğesi|Açıklama|  
 |----------------------|-----------------|  
@@ -237,11 +237,11 @@ ms.locfileid: "53152818"
   
  Normal ifade zaman aşımı aralığı, normal ifade altyapısının zaman aşımına uğramadan önce tek bir eşleşen arayacağı süreyi tanımlar. Varsayılan zaman aşımı aralığı <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>, normal ifade zaman aşımına olacağı anlamına gelir. Aşağıdaki şekilde bu değeri geçersiz kılabilir ve bir zaman aşımı aralığı tanımlayabilirsiniz:  
   
--   Başlattığınızda bir zaman aşımı değeri sağlayarak bir <xref:System.Text.RegularExpressions.Regex> çağırarak <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> Oluşturucusu.  
+- Başlattığınızda bir zaman aşımı değeri sağlayarak bir <xref:System.Text.RegularExpressions.Regex> çağırarak <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> Oluşturucusu.  
   
--   Yöntemi gibi bir statik desen çağırarak <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> veya <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>, içeren bir `matchTimeout` parametresi.  
+- Yöntemi gibi bir statik desen çağırarak <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> veya <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>, içeren bir `matchTimeout` parametresi.  
   
--   Çağrılarak oluşturulmuş derlenmiş normal ifadeler <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> türünde bir parametresi olan yapılandırıcının çağrılmasıyla yöntemi, <xref:System.TimeSpan>.  
+- Çağrılarak oluşturulmuş derlenmiş normal ifadeler <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> türünde bir parametresi olan yapılandırıcının çağrılmasıyla yöntemi, <xref:System.TimeSpan>.  
   
  Normal ifade yöntemi bir zaman aşımı aralığı belirlediyseniz ve bu aralığın sonunda bir eşleşme bulunamadı, oluşturur bir <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> özel durum. Özel durum işleyicinizde, eşlemeyi daha uzun bir zaman aralığı ile yeniden denemeyi, eşleme denemesinden vazgeçip bir eşleme olmadığını varsaymayı ya da eşleme denemesinden vazgeçip özel durum bilgisini gelecekteki analizler için kaydetmeyi seçebilirsiniz.  
   
@@ -281,13 +281,13 @@ ms.locfileid: "53152818"
   
  Tutmayı, şu yöntemlerden biriyle devre dışı bırakabilirsiniz:  
   
--   Kullanım `(?:subexpression)` dil öğesi. Bu öğe, geçerli olduğu gruptaki eşleşen alt dizelerin tutulmasını engeller. Herhangi bir yuvalanmış grupta alt dize yakalamalarını devre dışı bırakmaz.  
+- Kullanım `(?:subexpression)` dil öğesi. Bu öğe, geçerli olduğu gruptaki eşleşen alt dizelerin tutulmasını engeller. Herhangi bir yuvalanmış grupta alt dize yakalamalarını devre dışı bırakmaz.  
   
--   Kullanım <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> seçeneği. Normal ifade deseninde tüm adlandırılmamış ya da örtük yakalamaları devre dışı bırakır. Bu seçeneği kullandığınızda yalnızca tanımlı adlandırılmış gruplarla eşleşen alt dizeler `(?<name>subexpression)` dil öğesi tutulabilir. <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> Bayrağı geçilebilir `options` parametresinin bir <xref:System.Text.RegularExpressions.Regex> sınıf oluşturucusu veya `options` parametresinin bir <xref:System.Text.RegularExpressions.Regex> statik eşleme yönteminin.  
+- Kullanım <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> seçeneği. Normal ifade deseninde tüm adlandırılmamış ya da örtük yakalamaları devre dışı bırakır. Bu seçeneği kullandığınızda yalnızca tanımlı adlandırılmış gruplarla eşleşen alt dizeler `(?<name>subexpression)` dil öğesi tutulabilir. <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> Bayrağı geçilebilir `options` parametresinin bir <xref:System.Text.RegularExpressions.Regex> sınıf oluşturucusu veya `options` parametresinin bir <xref:System.Text.RegularExpressions.Regex> statik eşleme yönteminin.  
   
--   Kullanım `n` seçeneğini `(?imnsx)` dil öğesi. Bu seçenek, tutulan tüm adlandırılmamış veya örtük öğeleri, öğenin normal ifade deseninde ortaya çıktığı noktadan başlayarak devre dışı bırakır. Ya da kadar deseninin veya kadar yakalamaları devre dışı `(-n)` seçeneği adlandırılmamış veya örtük öğeleri sağlar. Daha fazla bilgi için [çeşitli yapıları](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).  
+- Kullanım `n` seçeneğini `(?imnsx)` dil öğesi. Bu seçenek, tutulan tüm adlandırılmamış veya örtük öğeleri, öğenin normal ifade deseninde ortaya çıktığı noktadan başlayarak devre dışı bırakır. Ya da kadar deseninin veya kadar yakalamaları devre dışı `(-n)` seçeneği adlandırılmamış veya örtük öğeleri sağlar. Daha fazla bilgi için bkz. [Çeşitli Yapılar](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).  
   
--   Kullanım `n` seçeneğini `(?imnsx:subexpression)` dil öğesi. Bu seçenek tüm adlandırılmamış veya örtük öğeleri devre dışı bırakır. `subexpression`. Yakalamalar adlandırılmamış ya da örtük yuvalı yakalama grupları tarafından devre dışı bırakılır.  
+- Kullanım `n` seçeneğini `(?imnsx:subexpression)` dil öğesi. Bu seçenek tüm adlandırılmamış veya örtük öğeleri devre dışı bırakır. `subexpression`. Yakalamalar adlandırılmamış ya da örtük yuvalı yakalama grupları tarafından devre dışı bırakılır.  
   
  [Başa dön](#top)  
   

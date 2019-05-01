@@ -4,12 +4,12 @@ description: Azure işlevleri, sunucusuz özellikler birden çok dil arasında (
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 2d8729276a5797bd8b89c39d8fb03c6f20646ea0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.openlocfilehash: 4febcc01eebf3efce3fc1eb42e19c2ec6c0baa52
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145169"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807902"
 ---
 # <a name="azure-functions"></a>Azure İşlevleri
 
@@ -25,7 +25,7 @@ Daha fazla bilgi için [Azure işlevleri belgelerinde](https://docs.microsoft.co
 
 Azure işlevleri çalışma zamanı iki sürümü vardır: 1.x ve 2.x'i. Sürüm 1.x olan genel kullanıma (GA). .NET geliştirme portalı veya Windows makineleri destekler ve .NET Framework'ü kullanır. 1.x destekler C#, JavaScript ve F#, Python, PHP, TypeScript, Batch, Bash ve PowerShell için Deneysel desteği.
 
-Sürüm 2.x önizlemededir. .NET Core yararlanır ve Windows, macOS ve Linux makinelerini platformlar arası geliştirmeyi destekler. 2.x Java için birinci sınıf destek ekler, ancak henüz doğrudan Deneysel dillerden herhangi birini desteklemiyor. Sürüm 2.x üçüncü taraf uzantıları bağımsız sürüm oluşturma işlemlerini bağlamaları platforma sağlayan yeni bir bağlama genişletilebilirlik modeli kullanır ve daha rahat bir yürütme ortamı.
+[Sürüm 2.x de genel kullanıma sunulan artık](https://azure.microsoft.com/blog/introducing-azure-functions-2-0/). .NET Core yararlanır ve Windows, macOS ve Linux makinelerini platformlar arası geliştirmeyi destekler. 2.x Java için birinci sınıf destek ekler, ancak henüz doğrudan Deneysel dillerden herhangi birini desteklemiyor. Sürüm 2.x üçüncü taraf uzantıları bağımsız sürüm oluşturma işlemlerini bağlamaları platforma sağlayan yeni bir bağlama genişletilebilirlik modeli kullanır ve daha rahat bir yürütme ortamı.
 
 > **1.x ile içinde bilinen bir sorun var. [bağlama yeniden yönlendirme desteği](https://github.com/Azure/azure-functions-host/issues/992).** Sorun için .NET geliştirme özeldir. Kitaplıkların çalışma zamanı'nda bulunan farklı bir sürüm kitaplıkları bağımlı olan projeler etkilenir. İşlevleri ekibi, sorunu somut ilerleme kaydediyor için kaydoldu. Genel kullanıma geçmeden önce takım 2.x bağlama yeniden yönlendirmelerini ele alınacaktır. Önerilen düzeltmeler ve geçici çözümler resmi takım deyimiyle buradan kullanılabilir: [Azure işlevleri'nde derleme çözümlemesine](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
 

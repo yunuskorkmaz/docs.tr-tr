@@ -3,11 +3,11 @@ title: Öbekleme Kanalı
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
 ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002384"
 ---
 # <a name="chunking-channel"></a>Öbekleme Kanalı
 Windows Communication Foundation (WCF) kullanarak büyük iletileri gönderirken, genellikle bu iletileri arabelleğe almak için kullanılan bellek miktarını sınırlamak için tercih edilir. Olası bir çözüm (toplu veri gövdesinde olduğunu varsayarak) ileti akışı sağlamaktır. Ancak bazı protokoller, iletinin tamamı arabelleğe alma gerektirir. Güvenilir Mesajlaşma ve güvenlik gibi iki örnek verilebilir. Başka bir olası öbekleri adlı küçük iletilere büyük ileti ayırmak, söz konusu öbekleri bir öbek teker teker gönderilir ve alıcı tarafında büyük ileti yeniden oluşturmak için bir çözümdür. Uygulama bu parçalama yapabilirsiniz ve serbest Öbekleme veya özel bir kanalda yapmak için kullanabilirsiniz. Kümeleme kanal örnek nasıl bir özel protokolü veya katmanlı kanal Öbekleme ve büyük iletilerin XML'deki Öbekleme yapmak için kullanılabileceğini gösterir.  
@@ -240,30 +240,30 @@ interface ITestService
   
  Önemli birkaç ayrıntıları:  
   
--   İlk çağrı gönderme `ThrowIfDisposedOrNotOpened` emin olmak için `CommunicationState` açılır.  
+- İlk çağrı gönderme `ThrowIfDisposedOrNotOpened` emin olmak için `CommunicationState` açılır.  
   
--   Her oturum için bir kerede yalnızca bir ileti gönderilmesi için gönderme eşitlenir. Var olan bir `ManualResetEvent` adlı `sendingDone` öbekli bir ileti gönderildiğinde sıfırlanır. Son öbek ileti gönderildikten sonra bu olay ayarlanır. Send yöntemi giden ileti göndermeye çalışmadan önce ayarlamak bu olay için bekler.  
+- Her oturum için bir kerede yalnızca bir ileti gönderilmesi için gönderme eşitlenir. Var olan bir `ManualResetEvent` adlı `sendingDone` öbekli bir ileti gönderildiğinde sıfırlanır. Son öbek ileti gönderildikten sonra bu olay ayarlanır. Send yöntemi giden ileti göndermeye çalışmadan önce ayarlamak bu olay için bekler.  
   
--   Kilitleri Gönder `CommunicationObject.ThisLock` önlemek için eşitleme durumu değişiklikleri gönderilirken. Bkz: <xref:System.ServiceModel.Channels.CommunicationObject> hakkında daha fazla bilgi için belgelere <xref:System.ServiceModel.Channels.CommunicationObject> durumları ve Durum makinesi.  
+- Kilitleri Gönder `CommunicationObject.ThisLock` önlemek için eşitleme durumu değişiklikleri gönderilirken. Bkz: <xref:System.ServiceModel.Channels.CommunicationObject> hakkında daha fazla bilgi için belgelere <xref:System.ServiceModel.Channels.CommunicationObject> durumları ve Durum makinesi.  
   
--   Gönderme geçirilen zaman aşımı, tüm öbekleri gönderme içeren tüm gönderme işlemi için zaman aşımı olarak kullanılır.  
+- Gönderme geçirilen zaman aşımı, tüm öbekleri gönderme içeren tüm gönderme işlemi için zaman aşımı olarak kullanılır.  
   
--   Özel <xref:System.Xml.XmlDictionaryWriter> tasarım, tüm özgün ileti gövdesini arabelleğe almayı önlemek için seçildi. Alınacak olsaydık bir <xref:System.Xml.XmlDictionaryReader> gövdesi kullanma `message.GetReaderAtBodyContents` tüm gövdesinin arabelleğe. Bunun yerine, özel bir sahibiz <xref:System.Xml.XmlDictionaryWriter> yapan `message.WriteBodyContents`. İletiyi WriteBase64 yazıcısı, yazıcı iletileri parçalara'kurmak paketleri ve bunları gönderir çağrıları iç kanal kullanma. Öbek gönderilene kadar WriteBase64 engeller.  
+- Özel <xref:System.Xml.XmlDictionaryWriter> tasarım, tüm özgün ileti gövdesini arabelleğe almayı önlemek için seçildi. Alınacak olsaydık bir <xref:System.Xml.XmlDictionaryReader> gövdesi kullanma `message.GetReaderAtBodyContents` tüm gövdesinin arabelleğe. Bunun yerine, özel bir sahibiz <xref:System.Xml.XmlDictionaryWriter> yapan `message.WriteBodyContents`. İletiyi WriteBase64 yazıcısı, yazıcı iletileri parçalara'kurmak paketleri ve bunları gönderir çağrıları iç kanal kullanma. Öbek gönderilene kadar WriteBase64 engeller.  
   
 ## <a name="implementing-the-receive-operation"></a>Uygulama alma işlemi  
  Yüksek bir düzeyde alma işlemi önce gelen ileti olmadığını denetler `null` ve sahip olduğu eylem ise `ChunkingAction`. Her iki ölçütleri karşılamıyorsa ileti alma değiştirilmeden döndürülür. Aksi takdirde, Al yeni bir oluşturur `ChunkingReader` ve yeni bir `ChunkingMessage` etrafında sarmalanmış (çağırarak `GetNewChunkingMessage`). Bu yeni döndürmeden önce `ChunkingMessage`, alma kullanan bir iş parçacığı havuzu iş parçacığını yürütmek için `ReceiveChunkLoop`, çağıran `innerChannel.Receive` döngü ve öbekleri için ellerini `ChunkingReader` son öbek ileti alındığında veya alma işlemi zamanı aşımını isabet kadar.  
   
  Önemli birkaç ayrıntıları:  
   
--   İlk çağrı gönderme gibi alan `ThrowIfDisposedOrNotOepned` emin olmak için `CommunicationState` açılır.  
+- İlk çağrı gönderme gibi alan `ThrowIfDisposedOrNotOepned` emin olmak için `CommunicationState` açılır.  
   
--   Alma oturum aynı anda yalnızca bir ileti alınabilmesi için de eşitlenir. Bu, başlangıç öbek iletisi alındıktan sonra sonraki alınan iletilerin tümünü bir son öbeği iletisi alınana kadar bu yeni öbek dizisi içindeki öbekleri olmaları beklenir çünkü özellikle önemlidir. Alma şu anda devre dışı bırakmak öbekli iletinin ait öbeklerin tümü alınana kadar iç kanal iletilerden çekme gerçekleştirilemiyor. Bunu gerçekleştirmek için kullandığı almak bir `ManualResetEvent` adlı `currentMessageCompleted`, son öbek ileti alındı ve yeni bir başlangıç öbek ileti alındığında sıfırlama sırasında ayarlanır.  
+- Alma oturum aynı anda yalnızca bir ileti alınabilmesi için de eşitlenir. Bu, başlangıç öbek iletisi alındıktan sonra sonraki alınan iletilerin tümünü bir son öbeği iletisi alınana kadar bu yeni öbek dizisi içindeki öbekleri olmaları beklenir çünkü özellikle önemlidir. Alma şu anda devre dışı bırakmak öbekli iletinin ait öbeklerin tümü alınana kadar iç kanal iletilerden çekme gerçekleştirilemiyor. Bunu gerçekleştirmek için kullandığı almak bir `ManualResetEvent` adlı `currentMessageCompleted`, son öbek ileti alındı ve yeni bir başlangıç öbek ileti alındığında sıfırlama sırasında ayarlanır.  
   
--   Gönderme, alma alma sırasında eşitlenmiş durumu geçişleri engellemez. Örneğin, yakın alma ve bekler sırasında özgün iletinin bekleyen alma tamamlandı veya belirtilen zaman aşımı değeri ulaşılana kadar çağrılabilir.  
+- Gönderme, alma alma sırasında eşitlenmiş durumu geçişleri engellemez. Örneğin, yakın alma ve bekler sırasında özgün iletinin bekleyen alma tamamlandı veya belirtilen zaman aşımı değeri ulaşılana kadar çağrılabilir.  
   
--   Alınacak geçirilen zaman aşımı tamamı için zaman aşımını alma gibi tüm parçalar içeren işlemi kullanılır.  
+- Alınacak geçirilen zaman aşımı tamamı için zaman aşımını alma gibi tüm parçalar içeren işlemi kullanılır.  
   
--   İleti gövdesi gelen öbek iletileri hızdan daha düşük bir hızda iletiyi tüketir katmanı kullanıp kullanmadığına `ChunkingReader` tarafından belirtilen sınıra kadar gelen söz konusu öbekleri arabelleği `ChunkingBindingElement.MaxBufferedChunks`. Bu sınıra ulaşıldığında, öbeği arabelleğe alınan bir Öbek ile kullanılan ya da alma zaman aşımı ulaşılana kadar daha düşük bir katmandan diğerine alınır.  
+- İleti gövdesi gelen öbek iletileri hızdan daha düşük bir hızda iletiyi tüketir katmanı kullanıp kullanmadığına `ChunkingReader` tarafından belirtilen sınıra kadar gelen söz konusu öbekleri arabelleği `ChunkingBindingElement.MaxBufferedChunks`. Bu sınıra ulaşıldığında, öbeği arabelleğe alınan bir Öbek ile kullanılan ya da alma zaman aşımı ulaşılana kadar daha düşük bir katmandan diğerine alınır.  
   
 ## <a name="communicationobject-overrides"></a>CommunicationObject geçersiz kılmaları  
   

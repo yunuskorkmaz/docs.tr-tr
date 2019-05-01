@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a1b189b79a02f04b7f795ff2524441f12b053cec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984639"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost Arabirimi
 Kendi sürüm numarasına göre belirli bir sürümü ortak dil çalışma zamanı (CLR) döndürür, tüm yüklü CLRs listesinde, belirtilen bir işlemde yüklenen tüm çalışma zamanları listesinde, bir derlemeye derlemek, bir işleminden çıkmak için kullanılan CLR sürümü bulmak için yöntemler sağlar bir temiz çalışma zamanı kapatması ve sorgu eski API bağlama.  

@@ -25,11 +25,11 @@ helpviewer_keywords:
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
 ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001580"
 ---
 # <a name="input-overview"></a>Girişe Genel Bakış
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Alt sistemi sağlayan güçlü [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] giriş çeşitli cihazlardan almak için fare, klavye, dokunmatik ve Kalem dahil. Bu konu tarafından sağlanan hizmetleri açıklar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve giriş sistemleri mimarisini açıklar.
@@ -144,43 +144,43 @@ ms.locfileid: "59320021"
 ### <a name="prerequisites"></a>Önkoşullar
  Dokunmaya yanıt veren bir uygulama geliştirmek için aşağıdaki bileşenlere ihtiyacınız var.
 
--   Visual Studio 2010.
+- Visual Studio 2010.
 
--   Windows 7.
+- Windows 7.
 
--   Windows dokunmatik destekleyen bir dokunmatik gibi bir cihaz.
+- Windows dokunmatik destekleyen bir dokunmatik gibi bir cihaz.
 
 ### <a name="terminology"></a>Terminoloji
  Dokunma işlemi tartışılırken aşağıdaki terimler kullanılır.
 
--   **Touch** Windows 7 tarafından tanınan bir kullanıcı girişi türü. Genellikle, dokunma dokunmatik ekranda parmağınızı koyarak başlatılır. Cihazın parmak'ın konumunu ve taşıma fare giriş olarak yalnızca dönüştürüldüyse dizüstü bilgisayarlarına ortak olan dokunmatik gibi cihazları touch desteklemez unutmayın.
+- **Touch** Windows 7 tarafından tanınan bir kullanıcı girişi türü. Genellikle, dokunma dokunmatik ekranda parmağınızı koyarak başlatılır. Cihazın parmak'ın konumunu ve taşıma fare giriş olarak yalnızca dönüştürüldüyse dizüstü bilgisayarlarına ortak olan dokunmatik gibi cihazları touch desteklemez unutmayın.
 
--   **Multitouch** aynı anda birden fazla noktasından oluşan touch olduğu. Windows 7 ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] multitouch destekler. Her dokunma ele alınmıştır belgelerine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], kavramlar multitouch için geçerlidir.
+- **Multitouch** aynı anda birden fazla noktasından oluşan touch olduğu. Windows 7 ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] multitouch destekler. Her dokunma ele alınmıştır belgelerine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], kavramlar multitouch için geçerlidir.
 
--   A **işleme** touch bir nesneye uygulanan fiziksel bir eylem olarak yorumlanıp yorumlanmadığını oluşur. İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], olayları düzenleme giriş çeviri, genişletme veya döndürme düzenleme olarak yorumlayın.
+- A **işleme** touch bir nesneye uygulanan fiziksel bir eylem olarak yorumlanıp yorumlanmadığını oluşur. İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], olayları düzenleme giriş çeviri, genişletme veya döndürme düzenleme olarak yorumlayın.
 
--   A `touch device` dokunma girişini dokunmatik üzerinde tek bir parmak gibi üreten bir cihazı temsil eder.
+- A `touch device` dokunma girişini dokunmatik üzerinde tek bir parmak gibi üreten bir cihazı temsil eder.
 
 ### <a name="controls-that-respond-to-touch"></a>Yanıt denetimleri
  Aşağıdaki denetimler görünümden kaydırılan içerik varsa bir parmak denetimi arasında sürükleyerek kaydırılabileceğini.
 
--   <xref:System.Windows.Controls.ComboBox>
+- <xref:System.Windows.Controls.ComboBox>
 
--   <xref:System.Windows.Controls.ContextMenu>
+- <xref:System.Windows.Controls.ContextMenu>
 
--   <xref:System.Windows.Controls.DataGrid>
+- <xref:System.Windows.Controls.DataGrid>
 
--   <xref:System.Windows.Controls.ListBox>
+- <xref:System.Windows.Controls.ListBox>
 
--   <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.ListView>
 
--   <xref:System.Windows.Controls.MenuItem>
+- <xref:System.Windows.Controls.MenuItem>
 
--   <xref:System.Windows.Controls.TextBox>
+- <xref:System.Windows.Controls.TextBox>
 
--   <xref:System.Windows.Controls.ToolBar>
+- <xref:System.Windows.Controls.ToolBar>
 
--   <xref:System.Windows.Controls.TreeView>
+- <xref:System.Windows.Controls.TreeView>
 
  <xref:System.Windows.Controls.ScrollViewer> Tanımlar <xref:System.Windows.Controls.ScrollViewer.PanningMode%2A?displayProperty=nameWithType> ekli touch kaydırma etkinleştirilip etkinleştirilmediği yatay, dikey, her ikisi de veya hiçbiri belirtmenize olanak tanıyan özellik. <xref:System.Windows.Controls.ScrollViewer.PanningDeceleration%2A?displayProperty=nameWithType> Özelliği, kullanıcı dokunmatik ekranı gelen parmak kaldırıncaya olduğunda ne kadar hızlı kaydırma yavaşlar belirtir. <xref:System.Windows.Controls.ScrollViewer.PanningRatio%2A?displayProperty=nameWithType> Ekli özellik düzenleme uzaklığı çevrilecek uzaklığı kayan oranını belirtir.
 
@@ -189,25 +189,25 @@ ms.locfileid: "59320021"
 
  Üç bağımsız olarak tanımlayan sınıf benzer şekilde davranır aşağıdaki olaylar tanımlayın.
 
--   <xref:System.Windows.UIElement.TouchDown>
+- <xref:System.Windows.UIElement.TouchDown>
 
--   <xref:System.Windows.UIElement.TouchMove>
+- <xref:System.Windows.UIElement.TouchMove>
 
--   <xref:System.Windows.UIElement.TouchUp>
+- <xref:System.Windows.UIElement.TouchUp>
 
--   <xref:System.Windows.UIElement.TouchEnter>
+- <xref:System.Windows.UIElement.TouchEnter>
 
--   <xref:System.Windows.UIElement.TouchLeave>
+- <xref:System.Windows.UIElement.TouchLeave>
 
--   <xref:System.Windows.UIElement.PreviewTouchDown>
+- <xref:System.Windows.UIElement.PreviewTouchDown>
 
--   <xref:System.Windows.UIElement.PreviewTouchMove>
+- <xref:System.Windows.UIElement.PreviewTouchMove>
 
--   <xref:System.Windows.UIElement.PreviewTouchUp>
+- <xref:System.Windows.UIElement.PreviewTouchUp>
 
--   <xref:System.Windows.UIElement.GotTouchCapture>
+- <xref:System.Windows.UIElement.GotTouchCapture>
 
--   <xref:System.Windows.UIElement.LostTouchCapture>
+- <xref:System.Windows.UIElement.LostTouchCapture>
 
  Klavye ve fare olayları gibi yönlendirilmiş olaylar touch olaylardır. İle başlayan olayları `Preview` olayları ve ile başlayan olayları tünel `Touch` tırmanma olaylardır. Yönlendirilmiş olaylar hakkında daha fazla bilgi için bkz. [yönlendirilmiş olaylara genel bakış](routed-events-overview.md). Bu olayları işlediğinizde, giriş, herhangi bir öğenin göreli konumunu çağırarak alabilirsiniz <xref:System.Windows.Input.TouchEventArgs.GetTouchPoint%2A> veya <xref:System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints%2A> yöntemi.
 
@@ -232,11 +232,11 @@ ms.locfileid: "59320021"
 ### <a name="manipulation-events"></a>Olayları düzenleme
  Burada bir uygulamasını etkinleştiren bir kullanıcı, nesneyi işlemek durumlarda <xref:System.Windows.UIElement> olayları düzenleme sınıfı tanımlar. Dokunma konumu yalnızca rapor dokunma olayları, giriş nasıl yorumlanacağını olayları düzenleme bildirin. İşlemeleri, çeviri, genişletme ve döndürme üç tür vardır. Aşağıdaki liste, üç tür işlemeleri çağırmayı açıklar.
 
--   Bir nesne üzerinde bir parmak koyun ve parmak çeviri işleme çağırmak için dokunmatik ekran arasında taşıyın. Bu, genellikle nesne taşır.
+- Bir nesne üzerinde bir parmak koyun ve parmak çeviri işleme çağırmak için dokunmatik ekran arasında taşıyın. Bu, genellikle nesne taşır.
 
--   Bir nesne üzerinde iki yola yerleştirin ve yaklaşacak şekilde veya başka bir genişletme işleme çağrılacak dışında küçüldükleri parmağınızı taşıyın. Bu genellikle nesne yeniden boyutlandırır.
+- Bir nesne üzerinde iki yola yerleştirin ve yaklaşacak şekilde veya başka bir genişletme işleme çağrılacak dışında küçüldükleri parmağınızı taşıyın. Bu genellikle nesne yeniden boyutlandırır.
 
--   Bir nesne üzerinde iki yola yerleştirin ve diğer döndürme düzenleme çağrılacak etrafında parmağınızı döndürün. Bu, genellikle nesne döndürür.
+- Bir nesne üzerinde iki yola yerleştirin ve diğer döndürme düzenleme çağrılacak etrafında parmağınızı döndürün. Bu, genellikle nesne döndürür.
 
  Aynı anda birden fazla işleme türünü ortaya çıkabilir.
 
@@ -246,17 +246,17 @@ ms.locfileid: "59320021"
 
  <xref:System.Windows.UIElement> Aşağıdaki olayları düzenleme tanımlar.
 
--   <xref:System.Windows.UIElement.ManipulationStarting>
+- <xref:System.Windows.UIElement.ManipulationStarting>
 
--   <xref:System.Windows.UIElement.ManipulationStarted>
+- <xref:System.Windows.UIElement.ManipulationStarted>
 
--   <xref:System.Windows.UIElement.ManipulationDelta>
+- <xref:System.Windows.UIElement.ManipulationDelta>
 
--   <xref:System.Windows.UIElement.ManipulationInertiaStarting>
+- <xref:System.Windows.UIElement.ManipulationInertiaStarting>
 
--   <xref:System.Windows.UIElement.ManipulationCompleted>
+- <xref:System.Windows.UIElement.ManipulationCompleted>
 
--   <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
+- <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
 
  Varsayılan olarak, bir <xref:System.Windows.UIElement> bu olayları düzenleme almaz. Olayları işleme almak için bir <xref:System.Windows.UIElement>ayarlayın <xref:System.Windows.UIElement.IsManipulationEnabled%2A?displayProperty=nameWithType> için `true`.
 
@@ -300,13 +300,13 @@ ms.locfileid: "59320021"
 
  Aşağıdaki listede, önceki resimde gösterilen dokunma ve düzenleme olayları arasındaki ilişkiyi açıklar.
 
--   İlk dokunmatik cihazın ne zaman oluşturur bir <xref:System.Windows.UIElement.TouchDown> olayda bir <xref:System.Windows.UIElement>, işleme mantığı çağrıları <xref:System.Windows.UIElement.CaptureTouch%2A> oluşturan yöntemi <xref:System.Windows.UIElement.GotTouchCapture> olay.
+- İlk dokunmatik cihazın ne zaman oluşturur bir <xref:System.Windows.UIElement.TouchDown> olayda bir <xref:System.Windows.UIElement>, işleme mantığı çağrıları <xref:System.Windows.UIElement.CaptureTouch%2A> oluşturan yöntemi <xref:System.Windows.UIElement.GotTouchCapture> olay.
 
--   Zaman <xref:System.Windows.UIElement.GotTouchCapture> gerçekleşir, işleme mantığı çağrıları <xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType> oluşturan yöntemi <xref:System.Windows.UIElement.ManipulationStarting> olay.
+- Zaman <xref:System.Windows.UIElement.GotTouchCapture> gerçekleşir, işleme mantığı çağrıları <xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType> oluşturan yöntemi <xref:System.Windows.UIElement.ManipulationStarting> olay.
 
--   Zaman <xref:System.Windows.UIElement.TouchMove> işleme mantığı oluşturur, olaylar meydana <xref:System.Windows.UIElement.ManipulationDelta> önce meydana gelen olayları <xref:System.Windows.UIElement.ManipulationInertiaStarting> olay.
+- Zaman <xref:System.Windows.UIElement.TouchMove> işleme mantığı oluşturur, olaylar meydana <xref:System.Windows.UIElement.ManipulationDelta> önce meydana gelen olayları <xref:System.Windows.UIElement.ManipulationInertiaStarting> olay.
 
--   Son dokunduğunuzda cihaz öğe başlatır <xref:System.Windows.UIElement.TouchUp> olay işleme mantığı oluşturur <xref:System.Windows.UIElement.ManipulationInertiaStarting> olay.
+- Son dokunduğunuzda cihaz öğe başlatır <xref:System.Windows.UIElement.TouchUp> olay işleme mantığı oluşturur <xref:System.Windows.UIElement.ManipulationInertiaStarting> olay.
 
 <a name="focus"></a>
 ## <a name="focus"></a>Odağı

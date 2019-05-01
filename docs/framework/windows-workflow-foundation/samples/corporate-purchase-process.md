@@ -3,11 +3,11 @@ title: Şirket Satın Alma İşlemi
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
 ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005400"
 ---
 # <a name="corporate-purchase-process"></a>Şirket Satın Alma İşlemi
 Bu örnek çok basit bir istek teklifleri (RFP) tabanlı satın alma işlemi için en iyi otomatik öneri seçimiyle oluşturma işlemini gösterir. Bunu birleştirir <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, ve <xref:System.Activities.Statements.ForEach%601> ve işlemini temsil eden bir iş akışı oluşturmak için özel bir etkinlik.
@@ -16,27 +16,27 @@ Bu örnek çok basit bir istek teklifleri (RFP) tabanlı satın alma işlemi iç
 
 ## <a name="requirements"></a>Gereksinimler
 
--   Visual Studio 2012.
+- Visual Studio 2012.
 
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
 
 ## <a name="demonstrates"></a>Gösteriler
 
--   Özel etkinlikler.
+- Özel etkinlikler.
 
--   Etkinlik oluşturma.
+- Etkinlik oluşturma.
 
--   Yer işaretleri.
+- Yer işaretleri.
 
--   Kalıcılık.
+- Kalıcılık.
 
--   Şema Kalıcılık.
+- Şema Kalıcılık.
 
--   İzleme.
+- İzleme.
 
--   İzleme.
+- İzleme.
 
--   Barındırma [!INCLUDE[wf1](../../../../includes/wf1-md.md)] farklı istemcileri ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulamaları ve WinForms uygulamaları).
+- Barındırma [!INCLUDE[wf1](../../../../includes/wf1-md.md)] farklı istemcileri ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulamaları ve WinForms uygulamaları).
 
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
@@ -52,21 +52,21 @@ Bu örnek çok basit bir istek teklifleri (RFP) tabanlı satın alma işlemi iç
   
 1. Şirket x bir çalışan bir istek teklifi (RFP) oluşturur.  
   
-    1.  Çalışan türü RFP başlık ve açıklama.  
+    1. Çalışan türü RFP başlık ve açıklama.  
   
-    2.  Çalışan tekliflerini göndermek için davet etmek istediği satıcıları seçer.  
+    2. Çalışan tekliflerini göndermek için davet etmek istediği satıcıları seçer.  
   
 2. Çalışan teklif gönderir.  
   
-    1.  İş akışı örneği oluşturulur.  
+    1. İş akışı örneği oluşturulur.  
   
-    2.  İş akışı, teklifler göndermek tüm satıcılar için bekliyor.  
+    2. İş akışı, teklifler göndermek tüm satıcılar için bekliyor.  
   
 3. Tüm teklifleri alındıktan sonra iş akışı alınan tüm teklifleri yinelenir ve en iyisi seçer.  
   
-    1.  Her bir satıcı, (Bu örnekte saygınlığı liste içinde VendorRepository.cs depolar) bir üretme ününe sahip.  
+    1. Her bir satıcı, (Bu örnekte saygınlığı liste içinde VendorRepository.cs depolar) bir üretme ününe sahip.  
   
-    2.  Teklif toplam değeri (satıcı tarafından yazdığınız değer) tarafından belirlenir * (satıcı saygınlığı kaydedildiği) / 100.  
+    2. Teklif toplam değeri (satıcı tarafından yazdığınız değer) tarafından belirlenir * (satıcı saygınlığı kaydedildiği) / 100.  
   
 4. Özgün istek sahibine gönderilen tüm teklifleri görebilirsiniz. Özel bir rapor bölümünde en iyi teklifi sunulur.  
   
@@ -155,20 +155,20 @@ Bu örnek çok basit bir istek teklifleri (RFP) tabanlı satın alma işlemi iç
   
 ### <a name="web-client-options"></a>Web istemci seçenekleri  
   
--   **Yeni bir RFP oluşturma**: Yeni bir istek teklifleri (RFP) oluşturur ve satın alma işlemi iş akışı başlatır.  
+- **Yeni bir RFP oluşturma**: Yeni bir istek teklifleri (RFP) oluşturur ve satın alma işlemi iş akışı başlatır.  
   
--   **Yenileme**: Etkin ve ana penceresinde tamamlanmış RFPs listesini yeniler.  
+- **Yenileme**: Etkin ve ana penceresinde tamamlanmış RFPs listesini yeniler.  
   
--   **Görünüm**: Mevcut bir RFP içeriğini gösterir. Satıcılar, kendi önerileri gönderebildiği (davet varsa veya RFP bitmeyen).  
+- **Görünüm**: Mevcut bir RFP içeriğini gösterir. Satıcılar, kendi önerileri gönderebildiği (davet varsa veya RFP bitmeyen).  
   
--   Farklı görüntüle: Kullanıcının istenen Katılımcısı seçerek farklı kimliklerle RFP erişebildiği **olarak görüntülemek** birleşik giriş kutusu etkin RFPs kılavuzunda.  
+- Farklı görüntüle: Kullanıcının istenen Katılımcısı seçerek farklı kimliklerle RFP erişebildiği **olarak görüntülemek** birleşik giriş kutusu etkin RFPs kılavuzunda.  
   
 ### <a name="winforms-client-options"></a>WinForms istemci seçenekleri  
   
--   **RFP oluşturma**: Yeni bir istek teklifleri (RFP) oluşturur ve satın alma işlemi iş akışı başlatır.  
+- **RFP oluşturma**: Yeni bir istek teklifleri (RFP) oluşturur ve satın alma işlemi iş akışı başlatır.  
   
--   **Yenileme**: Etkin ve ana penceresinde tamamlanmış RFPs listesini yeniler.  
+- **Yenileme**: Etkin ve ana penceresinde tamamlanmış RFPs listesini yeniler.  
   
--   **Görüntüleme RFP**: Mevcut bir RFP içeriğini gösterir. Satıcılar, kendi önerileri gönderebildiği (davet varsa veya RFP bitmeyen)  
+- **Görüntüleme RFP**: Mevcut bir RFP içeriğini gösterir. Satıcılar, kendi önerileri gönderebildiği (davet varsa veya RFP bitmeyen)  
   
--   **Farklı Bağlan**: Kullanıcının istenen Katılımcısı seçerek farklı kimliklerle RFP erişebildiği **olarak görüntülemek** birleşik giriş kutusu etkin RFPs kılavuzunda.
+- **Farklı Bağlan**: Kullanıcının istenen Katılımcısı seçerek farklı kimliklerle RFP erişebildiği **olarak görüntülemek** birleşik giriş kutusu etkin RFPs kılavuzunda.

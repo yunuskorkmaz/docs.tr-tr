@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
 ms.openlocfilehash: 00a2dae818091c20649deae79c093a61b6e93732
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983261"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>UI Otomasyon SelectionItem Denetim Düzeni Uygulama
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59183761"
 ## <a name="implementation-guidelines-and-conventions"></a>Uygulama yönergeleri ve kuralları  
  Seçim öğesi denetim düzeni uygularken aşağıdaki yönergeler ve kuralları dikkat edin:  
   
--   Uygulama alt denetimler yönetme tek seçim denetimleri <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, gibi **ekran çözünürlüğü** kaydırıcı **görüntü özellikleri** iletişim kutusu, uygulamalıdır<xref:System.Windows.Automation.Provider.ISelectionProvider>ve bunların alt öğeleri hem de uygulamalıdır <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> ve <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
+- Uygulama alt denetimler yönetme tek seçim denetimleri <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, gibi **ekran çözünürlüğü** kaydırıcı **görüntü özellikleri** iletişim kutusu, uygulamalıdır<xref:System.Windows.Automation.Provider.ISelectionProvider>ve bunların alt öğeleri hem de uygulamalıdır <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> ve <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iselectionitemprovider"></a>Gerekli üyeleri ISelectionItemProvider için  
@@ -35,10 +35,10 @@ ms.locfileid: "59183761"
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Özellik|None|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Yöntem|Yok.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Yöntem|None|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Olay|Bir kapsayıcı seçim önemli ölçüde değişti ve daha fazla gönderilmesi gerekir harekete geçirilen <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> ve <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> olayı <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> sabiti izin verir.|  
   
--   Sonucu bir <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>e <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>, veya bir <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> tek bir seçili öğe bir <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> oluşmalıdır; Aksi takdirde Gönder <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent> /  <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> uygun şekilde.  
+- Sonucu bir <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>e <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>, veya bir <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> tek bir seçili öğe bir <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> oluşmalıdır; Aksi takdirde Gönder <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent> /  <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> uygun şekilde.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Özel Durumlar  

@@ -4,12 +4,12 @@ description: ML.NET ikili sınıflandırma senaryoda yaklaşım tahmin uygun eyl
 ms.date: 04/18/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 45e94e325fc4fbfaf1e71f7839d5083e44d5863e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b07668f19219040ea5a4dbfd7f175088f38357d
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973707"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808239"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Öğretici: ML.NET kullanımda bir yaklaşım analizi ikili sınıflandırma senaryosu
 
@@ -98,7 +98,7 @@ Giriş veri kümesi sınıfı `SentimentData`, sahip bir `string` Açıklama (`S
 |WOW... Burası sevdiği.              |    1.     |
 |Hizmet çok sor.              |    1.     |
 
-`SentimentPrediction` Tahmin sınıf, model eğitiminin sonra kullanılır. Tek bir Boole değeri vardır (`Sentiment`) ve bir `PredictedLabel` `ColumnName` özniteliği. `Label` Oluşturabilir ve ayrıca bölünmüş test veri kümesini kullanıma ile model değerlendirmek için kullanılan model ya da onun eğitmek için kullanılır. `PredictedLabel` Tahmin ve değerlendirme sırasında kullanılır. Değerlendirme, eğitim verileri, tahmin edilen değerleri ve modeli kullanılır.
+`SentimentPrediction` Tahmin sınıf, model eğitiminin sonra kullanılır. Devraldığı `SentimentData` görüntülemek için `SentimentText` Öngörüler ile. `SentimentPrediction` sahip tek bir Boole değeri (`Sentiment`) ve bir `PredictedLabel` `ColumnName` özniteliği. `Label` Oluşturabilir ve ayrıca bölünmüş test veri kümesini kullanıma ile model değerlendirmek için kullanılan model ya da onun eğitmek için kullanılır. `PredictedLabel` Tahmin ve değerlendirme sırasında kullanılır. Değerlendirme, eğitim verileri, tahmin edilen değerleri ve modeli kullanılır.
 
 [MLContext sınıfı](xref:Microsoft.ML.MLContext) bir tüm ML.NET işlemleri için başlangıç noktası ve başlatma `mlContext` modeli oluşturma iş akışı nesneleri arasında paylaşılabilir bir yeni ML.NET ortamı oluşturur. Bu, kavramsal olarak, benzer `DBContext` Entity Framework.
 
@@ -348,11 +348,7 @@ Aşağıdaki kodu kullanarak tahminler elde etmek için bir başlık oluşturun:
 
 [!code-csharp[OutputHeaders](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddInfoMessage "Display prediction outputs")]
 
-Özgün açıklamayı, tahmin edilen bir yaklaşım kullanarak ile birleştirerek tahmin sonuçlarını görüntülemeden önce [Zip()](xref:System.Linq.Enumerable.Zip%2A) yöntemi:
-
-[!code-csharp[BuildTuples](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#BuildSentimentPredictionPairs "Build the pairs of sentiment data and predictions")]
-
-Şimdi `SentimentText` ve `Sentiment` olan bir sınıf içinde kullanıldığında, sonuçları görüntüler:
+Çünkü `SentimentPrediction` devralınan `SentimentData`, `Transform()` doldurulmuş yöntemi `SentimentText` tahmin edilen alanlara sahip. ML.NET işlemi işlerken, her bileşen sütunları ekler ve bu sonuçları görüntülemek kolaylaştırır:
 
 [!code-csharp[DisplayPredictions](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DisplayResults "Display the predictions")]
 

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
 ms.openlocfilehash: e66acae5e98d561883f4ad59853dfd862c8ebfee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946464"
 ---
 # <a name="statements-in-visual-basic"></a>Visual Basic'deki Deyimler
 
@@ -156,7 +156,7 @@ Bir deyimi, genellikle bir satıra sığacak, ancak çok uzun olduğunda, bir bo
 
     [!code-vb[VbVbalrLineContinuation#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#3)]
 
-    Daha fazla bilgi için [nesne başlatıcıları: adlandırılmış ve anonim türler](./objects-and-classes/object-initializers-named-and-anonymous-types.md) veya [koleksiyon başlatıcıları](./collection-initializers/index.md).
+    Daha fazla bilgi için [nesne başlatıcıları: Adlandırılmış ve anonim türler](./objects-and-classes/object-initializers-named-and-anonymous-types.md) veya [koleksiyon başlatıcıları](./collection-initializers/index.md).
 
 - Sonra açık bir gömülü ifade (`<%=`) veya bir katıştırılmış deyim bitiminden önce (`%>`) içinde bir XML değişmez değeri. Örneğin:
 
@@ -196,7 +196,7 @@ Bir deyimi, genellikle bir satıra sığacak, ancak çok uzun olduğunda, bir bo
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
-   Daha fazla bilgi için [ile... End With deyimi](../../../visual-basic/language-reference/statements/with-end-with-statement.md) veya [nesne başlatıcıları: adlandırılmış ve anonim türler](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
+   Daha fazla bilgi için [ile... End With deyimi](../../../visual-basic/language-reference/statements/with-end-with-statement.md) veya [nesne başlatıcıları: Adlandırılmış ve anonim türler](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
 
 - Bir XML eksen özellik niteleyicisi sonra (`.` veya `.@` veya `...`). Ancak, bir satır devamlılığı karakteri içermelidir (`_`) belirttiğinizde üye niteleyicisi kullanırken `With` anahtar sözcüğü. Örneğin:
 

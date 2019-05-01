@@ -9,11 +9,11 @@ helpviewer_keywords:
 - printing [Windows Forms], print support
 ms.assetid: a4a2960c-eb70-48e2-b641-cfb222704e46
 ms.openlocfilehash: 8e008f2cb4b2f32cdba676e68d9fd790530e2b06
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011859"
 ---
 # <a name="windows-forms-print-support"></a>Windows Forms Yazdırma Desteği
 Windows Forms'ta baskı oluşur öncelikle kullanarak [PrintDocument bileşeni](../controls/printdocument-component-windows-forms.md) yazdırmak, kullanıcının etkinleştirmek için bileşen ve [PrintPreviewDialog denetimi](../controls/printpreviewdialog-control-windows-forms.md) denetimi [PrintDialog Bileşen](../controls/printdialog-component-windows-forms.md) ve [PageSetupDialog bileşeni](../controls/pagesetupdialog-component-windows-forms.md) alışmanızı sağlamak için Windows işletim sistemi kullanıcılara tanıdık bir grafik arabirim sağlamak için bileşenler.  

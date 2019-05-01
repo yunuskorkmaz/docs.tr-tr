@@ -6,11 +6,11 @@ helpviewer_keywords:
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
 ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002345"
 ---
 # <a name="timing-behaviors-overview"></a>Zamanlama Davranışlarına Genel Bakış
 Bu konuda, animasyonları ve diğer zamanlama davranışları açıklanmaktadır <xref:System.Windows.Media.Animation.Timeline> nesneleri.  
@@ -106,9 +106,9 @@ Bu konuda, animasyonları ve diğer zamanlama davranışları açıklanmaktadır
   
  Aşağıdaki örnek, oluşturur bir <xref:System.Windows.Media.Animation.Storyboard> olan iki alt <xref:System.Windows.Media.Animation.DoubleAnimation> nesneleri. Her ikisi de <xref:System.Windows.Media.Animation.DoubleAnimation> nesnelere animasyon <xref:System.Windows.FrameworkElement.Width%2A> , bir <xref:System.Windows.Shapes.Rectangle> 0-100. <xref:System.Windows.Shapes.Rectangle> Öğelere sahip olmayan animasyon <xref:System.Windows.FrameworkElement.Width%2A> 500 [cihaz bağımsız piksel] değerleri.  
   
--   <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Özelliği ilk <xref:System.Windows.Media.Animation.DoubleAnimation> ayarlanır <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, varsayılan değer. Sonuç olarak, sonra 100 dikdörtgenin genişliğini kalır <xref:System.Windows.Media.Animation.DoubleAnimation> sona erer.  
+- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Özelliği ilk <xref:System.Windows.Media.Animation.DoubleAnimation> ayarlanır <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, varsayılan değer. Sonuç olarak, sonra 100 dikdörtgenin genişliğini kalır <xref:System.Windows.Media.Animation.DoubleAnimation> sona erer.  
   
--   <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> İkinci özelliği <xref:System.Windows.Media.Animation.DoubleAnimation> ayarlanır <xref:System.Windows.Media.Animation.FillBehavior.Stop>. Sonuç olarak, <xref:System.Windows.FrameworkElement.Width%2A> ikinci <xref:System.Windows.Shapes.Rectangle> sonra 500 döner <xref:System.Windows.Media.Animation.DoubleAnimation> sona erer.  
+- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> İkinci özelliği <xref:System.Windows.Media.Animation.DoubleAnimation> ayarlanır <xref:System.Windows.Media.Animation.FillBehavior.Stop>. Sonuç olarak, <xref:System.Windows.FrameworkElement.Width%2A> ikinci <xref:System.Windows.Shapes.Rectangle> sonra 500 döner <xref:System.Windows.Media.Animation.DoubleAnimation> sona erer.  
   
  [!code-xaml[animation_ovws_snippet#TBFillBehaviorExample](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbfillbehaviorexample)]  
   
@@ -116,11 +116,11 @@ Bu konuda, animasyonları ve diğer zamanlama davranışları açıklanmaktadır
 ## <a name="properties-that-control-the-speed-of-a-timeline"></a>Zaman çizelgesinin hızını denetleyen özellikler  
  <xref:System.Windows.Media.Animation.Timeline> Sınıfı hızını belirtmek için üç özellikleri sağlar:  
   
--   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> – Zaman ilerledikçe için üst göre hızı belirtir bir <xref:System.Windows.Media.Animation.Timeline>. Birden büyük değerler hızını artırır <xref:System.Windows.Media.Animation.Timeline> ve alt <xref:System.Windows.Media.Animation.Timeline> nesneleri; değerleri sıfır ve bir arasındaki yavaşlamasına bu. Belirten bir değeri, <xref:System.Windows.Media.Animation.Timeline> üst işlemleriyle aynı fiyat ilerler. <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Kapsayıcı zaman çizelgesinin ayar tüm alt etkiler <xref:System.Windows.Media.Animation.Timeline> nesneler de.  
+- <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> – Zaman ilerledikçe için üst göre hızı belirtir bir <xref:System.Windows.Media.Animation.Timeline>. Birden büyük değerler hızını artırır <xref:System.Windows.Media.Animation.Timeline> ve alt <xref:System.Windows.Media.Animation.Timeline> nesneleri; değerleri sıfır ve bir arasındaki yavaşlamasına bu. Belirten bir değeri, <xref:System.Windows.Media.Animation.Timeline> üst işlemleriyle aynı fiyat ilerler. <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Kapsayıcı zaman çizelgesinin ayar tüm alt etkiler <xref:System.Windows.Media.Animation.Timeline> nesneler de.  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – Yüzdesini belirtir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> hızlandırma bir zaman çizelgesi harcanan. Bir örnek için bkz [nasıl yapılır: Bir animasyonu hızlandırma veya Yavaşlatma](how-to-accelerate-or-decelerate-an-animation.md). 
+- <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – Yüzdesini belirtir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> hızlandırma bir zaman çizelgesi harcanan. Bir örnek için bkz [nasıl yapılır: Bir animasyonu hızlandırma veya Yavaşlatma](how-to-accelerate-or-decelerate-an-animation.md). 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Yüzdesini belirtir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> yavaşlatma bir zaman çizelgesi harcanan. Bir örnek için bkz [nasıl yapılır: Bir animasyonu hızlandırma veya Yavaşlatma](how-to-accelerate-or-decelerate-an-animation.md).  
+- <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Yüzdesini belirtir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> yavaşlatma bir zaman çizelgesi harcanan. Bir örnek için bkz [nasıl yapılır: Bir animasyonu hızlandırma veya Yavaşlatma](how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

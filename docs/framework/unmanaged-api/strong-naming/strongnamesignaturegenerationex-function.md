@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5d60b9a9ae566b5bd686b27b2e09861a8414979
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000239"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx İşlevi
 Belirtilen bayraklar göre belirtilen derleme için tanımlayıcı ad imzası oluşturur.  
@@ -70,9 +70,9 @@ BOOLEAN StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in] Bir veya daha fazla aşağıdaki değerlerden biri:  
   
--   `SN_SIGN_ALL_FILES` (0x00000001) - bağlı olan modüller için tüm karmaları yeniden oynatmanız.  
+- `SN_SIGN_ALL_FILES` (0x00000001) - bağlı olan modüller için tüm karmaları yeniden oynatmanız.  
   
--   `SN_TEST_SIGN` (0x00000002) - derlemeyi test imzalayın.  
+- `SN_TEST_SIGN` (0x00000002) - derlemeyi test imzalayın.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  `true` başarıyla tamamlandığında; Aksi takdirde, `false`.  

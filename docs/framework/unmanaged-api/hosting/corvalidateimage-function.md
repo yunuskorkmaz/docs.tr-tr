@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: df9cc0cc86237b1ec439a4ec4fa6a75429c416d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985783"
 ---
 # <a name="corvalidateimage-function"></a>_CorValidateImage İşlevi
 Yönetilen modül görüntüleri doğrular ve bunlar yüklendikten sonra işletim sistemi yükleyicisi bildirir.  
@@ -53,23 +53,23 @@ STDAPI _CorValidateImage (
 ## <a name="remarks"></a>Açıklamalar  
  Windows XP ve sonraki sürümlerinde, işletim sistemi yükleyicisi yönetilen modüller için ortak nesne dosyası biçimi (COFF) üst bilgisindeki COM tanımlayıcısı dizin bit inceleyerek denetler. Yönetilen bir modül bit kümesinin gösterir. Yükleyici, yönetilen bir modül algılarsa, MsCorEE.dll ve aramalar yükler `_CorValidateImage`, aşağıdaki eylemleri gerçekleştirir:  
   
--   Görüntünün geçerli yönetilen bir modül olduğunu doğrular.  
+- Görüntünün geçerli yönetilen bir modül olduğunu doğrular.  
   
--   Ortak dil çalışma zamanı (CLR) bir giriş noktası için giriş noktası görüntüde değiştirir.  
+- Ortak dil çalışma zamanı (CLR) bir giriş noktası için giriş noktası görüntüde değiştirir.  
   
--   Windows 64-bit sürümleri için bellekte PE32 je typu PE32 + biçimine dönüştürerek görüntü değiştirir.  
+- Windows 64-bit sürümleri için bellekte PE32 je typu PE32 + biçimine dönüştürerek görüntü değiştirir.  
   
--   Yönetilen modül görüntüleri yüklendiğinde yükleyici geri döner.  
+- Yönetilen modül görüntüleri yüklendiğinde yükleyici geri döner.  
   
  Yürütülebilir görüntüler için işletim sistemi yükleyicisi sonra çağıran [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) işlevi, bağımsız yürütülebilir dosya belirtilen giriş noktası olarak. DLL derleme görüntüler için yükleyici çağırır [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) işlevi.  
   
  `_CorExeMain` veya `_CorDllMain` aşağıdaki eylemleri gerçekleştirir:  
   
--   CLR'yi başlatır.  
+- CLR'yi başlatır.  
   
--   Derlemesinin CLR başlığındaki yönetilen giriş noktasını bulur.  
+- Derlemesinin CLR başlığındaki yönetilen giriş noktasını bulur.  
   
--   Yürütmeyi başlatır.  
+- Yürütmeyi başlatır.  
   
  Yükleyici çağrıları [_corımageunloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) işlev yönetilen modül görüntüleri kaldırıldı. Ancak, bu işlev, herhangi bir işlem gerçekleştirmez; hemen döndürür.  
   

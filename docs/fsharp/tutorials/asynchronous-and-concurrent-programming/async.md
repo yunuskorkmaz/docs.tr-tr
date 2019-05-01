@@ -2,12 +2,12 @@
 title: Zaman uyumsuz programlama
 description: Bilgi nasıl F# zaman uyumsuz programlama, kullanımı kolay ve doğal dil için dil düzeyinde bir programlama modeli aracılığıyla gerçekleştirilir.
 ms.date: 06/20/2016
-ms.openlocfilehash: 6925a0132f9beed6be5f9dded3630b551072bea2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8cd7d7bcecabe8ea2c33a4787fe9ebbadd67fe67
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343460"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808231"
 ---
 # <a name="async-programming-in-f"></a>Zaman uyumsuz programlamada, F\#
 
@@ -26,7 +26,7 @@ Bir zaman uyumsuz ifadesinin türü olduğunu anlamak için en önemli kavram ol
 open System
 open System.Net
 
-let fetchHtmlAsync url = 
+let fetchHtmlAsync url =
     async {
         let uri = Uri(url)
         use webClient = new WebClient()
@@ -45,11 +45,11 @@ Ve İşte bu kadar! Kullanımı dışında `async`, `let!`, ve `return`, bu yaln
 
 Dikkate almaya değer birkaç söz dizimi yapıları vardır:
 
-*   `let!` (Bu, başka bir bağlamda çalışır) zaman uyumsuz ifadenin sonucu bağlar.
-*   `use!` yalnızca gibi çalışır `let!`, ancak kapsam dışına çıktığında bağımlı kaynaklarını siler.
-*   `do!` hiçbir şey döndürmeyen bir zaman uyumsuz iş akışı await.
-*   `return` yalnızca bir async ifadesinden bir sonuç döndürür.
-*   `return!` başka bir zaman uyumsuz iş akışı çalıştırır ve sonuç olarak, dönüş değeri döndürür.
+* `let!` (Bu, başka bir bağlamda çalışır) zaman uyumsuz ifadenin sonucu bağlar.
+* `use!` yalnızca gibi çalışır `let!`, ancak kapsam dışına çıktığında bağımlı kaynaklarını siler.
+* `do!` hiçbir şey döndürmeyen bir zaman uyumsuz iş akışı await.
+* `return` yalnızca bir async ifadesinden bir sonuç döndürür.
+* `return!` başka bir zaman uyumsuz iş akışı çalıştırır ve sonuç olarak, dönüş değeri döndürür.
 
 Ayrıca, normal `let`, `use`, ve `do` anahtar sözcükleri normal işlevinde olduğu gibi zaman uyumsuz sürümleri ile birlikte kullanılabilir.
 
@@ -59,45 +59,45 @@ Daha önce bahsedildiği gibi zaman uyumsuz kodu açıkça başlatılması gerek
 
 1. `Async.RunSynchronously` başka bir iş parçacığında bir zaman uyumsuz iş akışı başlatılacağından ve sonucunu bekler.
 
-```fsharp
-open System
-open System.Net
+    ```fsharp
+    open System
+    open System.Net
 
-let fetchHtmlAsync url = 
-    async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
-        let! html = webClient.AsyncDownloadString(uri)
-        return html
-    }
+    let fetchHtmlAsync url =
+        async {
+            let uri = Uri(url)
+            use webClient = new WebClient()
+            let! html = webClient.AsyncDownloadString(uri)
+            return html
+        }
 
- // Execution will pause until fetchHtmlAsync finishes
- let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
+    // Execution will pause until fetchHtmlAsync finishes
+    let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
 
- // you actually have the result from fetchHtmlAsync now!
- printfn "%s" html
- ```
+    // you actually have the result from fetchHtmlAsync now!
+    printfn "%s" html
+    ```
 
 2. `Async.Start` başka bir iş parçacığında zaman uyumsuz bir iş akışını başlatmak ve olacak **değil** sonucunu bekler.
 
-```fsharp
-open System
-open System.Net
-  
-let uploadDataAsync url data = 
-    async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
-        webClient.UploadStringAsync(uri, data)
-    }
+    ```fsharp
+    open System
+    open System.Net
 
-let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
+    let uploadDataAsync url data =
+        async {
+            let uri = Uri(url)
+            use webClient = new WebClient()
+            webClient.UploadStringAsync(uri, data)
+        }
 
-// Execution will continue after calling this!
-Async.Start(workflow)
+    let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
 
-printfn "%s" "uploadDataAsync is running in the background..."
- ```
+    // Execution will continue after calling this!
+    Async.Start(workflow)
+
+    printfn "%s" "uploadDataAsync is running in the background..."
+    ```
 
 Bir zaman uyumsuz iş akışı daha özel senaryoları için kullanılabilir başlatmak için farklı yöntemleri vardır. Ayrıntılı olan [zaman uyumsuz başvurusu](https://msdn.microsoft.com/library/ee370232.aspx).
 
@@ -115,13 +115,13 @@ Aşağıdaki örnekte `Async.Parallel` paralel dört popüler sitelerden HTML in
 open System
 open System.Net
 
-let urlList = 
+let urlList =
     [ "https://www.microsoft.com"
       "https://www.google.com"
       "https://www.amazon.com"
       "https://www.facebook.com" ]
 
-let fetchHtmlAsync url = 
+let fetchHtmlAsync url =
     async {
         let uri = Uri(url)
         use webClient = new WebClient()
@@ -144,13 +144,13 @@ for html in htmlList do
 
 ## <a name="important-info-and-advice"></a>Önemli bilgiler ve öneriler
 
-*   "Async" tükettiğiniz tüm işlevleri sonuna
+* "Async" tükettiğiniz tüm işlevleri sonuna
 
  Bu yalnızca bir adlandırma kuralı olsa da, API keşfedilebilirliğini gibi şeyleri kolaylaştırır. Özellikle varsa aynı yordamı zaman uyumlu ve zaman uyumsuz sürümlerini açıkça adı zaman uyumsuz olduğu durum için iyi bir fikirdir.
 
-*   Derleyiciye dinleyin!
+* Derleyiciye dinleyin!
 
- F#ın derleyici çok katı, neredeyse imkansız vericidir gibi bir şey yapmadan "async" kod eşzamanlı olarak çalıştır. Bir uyarı arasında geliyorsa, kod nasıl çalışır düşündüğünüz yürütme olmaz işareti olmasıdır. Derleyici mutlu yapabilirsiniz, kodunuzu büyük olasılıkla beklenen şekilde çalıştırır.
+F#ın derleyici çok katı, neredeyse imkansız vericidir gibi bir şey yapmadan "async" kod eşzamanlı olarak çalıştır. Bir uyarı arasında geliyorsa, kod nasıl çalışır düşündüğünüz yürütme olmaz işareti olmasıdır. Derleyici mutlu yapabilirsiniz, kodunuzu büyük olasılıkla beklenen şekilde çalıştırır.
 
 ## <a name="for-the-cvb-programmer-looking-into-f"></a>İçin C#/VB Programcı F aranıyor\#
 
@@ -164,23 +164,23 @@ Diğer bazı benzerlikler ve önemli farklar vardır.
 
 ### <a name="similarities"></a>Benzerlikler
 
-*   `let!`, `use!`, ve `do!` için benzer `await` bir zaman uyumsuz iş içinden çağrılırken bir `async{ }` blok.
+* `let!`, `use!`, ve `do!` için benzer `await` bir zaman uyumsuz iş içinden çağrılırken bir `async{ }` blok.
 
- Üç anahtar sözcükler yalnızca içinde kullanılabilir bir `async { }` bloğu nasıl benzer `await` içinde yalnızca çağrılabilen bir `async` yöntemi. Kısacası, `let!` yakalamak ve bir sonucu kullanmak istediğinizde içindir `use!` aynı ancak için kaynaklarını temizlendi kullanıldığı sonra bir şeydir ve `do!` tamamlamak için hiçbir değer döndürmeyen bir zaman uyumsuz iş akışı beklemek istediğinizde içindir devam etmeden önce.
+  Üç anahtar sözcükler yalnızca içinde kullanılabilir bir `async { }` bloğu nasıl benzer `await` içinde yalnızca çağrılabilen bir `async` yöntemi. Kısacası, `let!` yakalamak ve bir sonucu kullanmak istediğinizde içindir `use!` aynı ancak için kaynaklarını temizlendi kullanıldığı sonra bir şeydir ve `do!` tamamlamak için hiçbir değer döndürmeyen bir zaman uyumsuz iş akışı beklemek istediğinizde içindir devam etmeden önce.
 
-*   F#Veri paralelliği benzer şekilde destekler.
+* F#Veri paralelliği benzer şekilde destekler.
 
- Çok farklı bir şekilde çalışır ancak `Async.Parallel` karşılık gelen `Task.WhenAll` tümü tamamlandığında, birtakım zaman uyumsuz işler sonuçları isteyen senaryosu için.
+  Çok farklı bir şekilde çalışır ancak `Async.Parallel` karşılık gelen `Task.WhenAll` tümü tamamlandığında, birtakım zaman uyumsuz işler sonuçları isteyen senaryosu için.
 
 ### <a name="differences"></a>Farkları
 
-*   İç içe geçmiş `let!` değil izin, farklı olarak iç içe geçmiş `await`
+* İç içe geçmiş `let!` değil izin, farklı olarak iç içe geçmiş `await`
 
- Farklı `await`, iç içe geçirilemez, `let!` olamaz ve başka içinde kullanmadan önce ilişkili sonucu olmalıdır `let!`, `do!`, veya `use!`.
+  Farklı `await`, iç içe geçirilemez, `let!` olamaz ve başka içinde kullanmadan önce ilişkili sonucu olmalıdır `let!`, `do!`, veya `use!`.
 
-*   İptal desteği basittir F# kıyasla C#/VB.
+* İptal desteği basittir F# kıyasla C#/VB.
 
- Bir görev sürecin yarısında, yürütme iptalini destekleyen C#/VB gerektirir denetimi `IsCancellationRequested` özelliği veya arama `ThrowIfCancellationRequested()` üzerinde bir `CancellationToken` zaman uyumsuz yönteme geçirilen nesne.
+  Bir görev sürecin yarısında, yürütme iptalini destekleyen C#/VB gerektirir denetimi `IsCancellationRequested` özelliği veya arama `ThrowIfCancellationRequested()` üzerinde bir `CancellationToken` zaman uyumsuz yönteme geçirilen nesne.
 
 Buna karşılık, F# doğal olarak edilebilen zaman uyumsuz iş akışları. İptal basit bir üç adımlık işlemdir.
 
@@ -200,7 +200,7 @@ let workflow =
             printfn "Working..."
             do! Async.Sleep 1000
     }
-    
+
 let tokenSource = new CancellationTokenSource()
 
 // Start the workflow in the background
@@ -214,6 +214,6 @@ Ve İşte bu kadar!
 
 ## <a name="further-resources"></a>Ek kaynaklar:
 
-*   [MSDN üzerinde zaman uyumsuz iş akışları](https://msdn.microsoft.com/library/dd233250.aspx)
-*   [Zaman uyumsuz sıraları içinF#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
-*   [F#Veri HTTP yardımcı programları](https://fsharp.github.io/FSharp.Data/library/Http.html)
+* [MSDN üzerinde zaman uyumsuz iş akışları](https://msdn.microsoft.com/library/dd233250.aspx)
+* [Zaman uyumsuz sıraları içinF#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
+* [F#Veri HTTP yardımcı programları](https://fsharp.github.io/FSharp.Data/library/Http.html)

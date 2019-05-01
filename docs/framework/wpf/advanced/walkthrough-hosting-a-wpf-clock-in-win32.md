@@ -1,19 +1,19 @@
 ---
-title: "İzlenecek yol: Win32'de WPF saati barındırma"
+title: 'İzlenecek yol: WPF Saatini Win32 içinde Barındırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interoperability [WPF], tutorials
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: a13e21281a4bdb365c3a0541d88cd94b6476492e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.openlocfilehash: 4001c34f6673e036bdbf731baed782c6dc0a16b0
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494954"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808032"
 ---
-# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>İzlenecek yol: Win32'de WPF saati barındırma
+# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>İzlenecek yol: WPF Saatini Win32 içinde Barındırma
 
 Yerleştirmenin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içinde [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulamaları kullanın <xref:System.Windows.Interop.HwndSource>, içeren HWND sağlar, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği. Oluşturduğunuz ilk <xref:System.Windows.Interop.HwndSource>, parametreler için CreateWindow benzer vererek. Size daha sonra <xref:System.Windows.Interop.HwndSource> hakkında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik içinde olmasını istediğiniz. Son olarak, / HWND elde <xref:System.Windows.Interop.HwndSource>. Bu izlenecek yol karma oluşturma işlemini gösterir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içinde [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] işletim sistemi in uygulama **tarih ve saat özellikleri** iletişim.
 
@@ -29,11 +29,11 @@ Bu öğreticide, birlikte çalışabilirlik uygulama oluşturmanın önemli adı
 
 Aşağıdaki grafikte, bu öğreticinin hedeflenen son ürün gösterilmektedir:
 
-![Tarih ve Saat Özellikleri iletişim kutusu](./media/interoparch06.PNG "InteropArch06")
+![Tarih ve Saat Özellikleri iletişim kutusunu gösteren ekran görüntüsü.](./media/walkthrough-hosting-a-wpf-clock-in-win32/date-time-properties-dialog.png)
 
-C++ oluşturarak bu iletişim kutusunu yeniden oluşturabileceğinizi [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] projesi [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]ve aşağıdaki oluşturmak için iletişim kutusu düzenleyicisini kullanma:
+Oluşturarak bu iletişim kutusunu yeniden oluşturabileceğinizi bir C++ Win32 Proje Visual Studio ve aşağıdaki oluşturmak için iletişim kutusu düzenleyicisini kullanma:
 
-![Tarih ve Saat Özellikleri iletişim kutusu](./media/interoparch07.PNG "InteropArch07")
+![Yeniden oluşturulan tarih ve Saat Özellikleri iletişim kutusu](./media/walkthrough-hosting-a-wpf-clock-in-win32/recreated-date-time-properties-dialog.png)
 
 (Kullanın gerekmez [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] kullanılacak <xref:System.Windows.Interop.HwndSource>, ve yazmak için C++ kullanın gerekmez [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlar, ancak bunu yapmak için oldukça tipik bir yoludur ve kendisi de adım öğretici açıklaması için uygundur).
 
@@ -229,7 +229,7 @@ Ve eşlik eden arka plan kod şu şekildedir:
 
 Nihai sonucu şu şekilde görünür:
 
-![Tarih ve Saat Özellikleri iletişim kutusu](./media/interoparch08.PNG "InteropArch08")
+![Nihai sonucu tarih ve Saat Özellikleri iletişim kutusu](./media/walkthrough-hosting-a-wpf-clock-in-win32/final-result-date-time-properties-dialog.png)
 
 Sonuç şu ekran üretilen kod için karşılaştırmak için bkz [Win32 saati birlikte çalışma örneği](https://go.microsoft.com/fwlink/?LinkID=160051).
 

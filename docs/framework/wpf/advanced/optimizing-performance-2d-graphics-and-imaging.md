@@ -13,11 +13,11 @@ helpviewer_keywords:
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
 ms.openlocfilehash: 4fca9231872a268470c9bcfa73e7a0c0a26d300c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981948"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Performansı iyileştirme: 2B Grafikleri ve Görüntüleme
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uygulamanızın gereksinimleri için çok sayıda 2B grafikleri ve iyileştirilebilir görüntü işlevselliği sağlar. Bu konu, bu alanlarda performansı en iyi duruma getirme hakkında bilgi sağlar.  
@@ -34,13 +34,13 @@ ms.locfileid: "59074995"
   
  Dört tür <xref:System.Windows.Media.Drawing> nesneler:  
   
--   <xref:System.Windows.Media.GeometryDrawing> Bir şekil çizer.  
+- <xref:System.Windows.Media.GeometryDrawing> Bir şekil çizer.  
   
--   <xref:System.Windows.Media.ImageDrawing> Bir resim çizer.  
+- <xref:System.Windows.Media.ImageDrawing> Bir resim çizer.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> Metin çizer.  
+- <xref:System.Windows.Media.GlyphRunDrawing> Metin çizer.  
   
--   <xref:System.Windows.Media.DrawingGroup> Diğer çizimleri çizer. Çizim grubu, tek bir bileşik çizim diğer çizimlerini birleştirmek için kullanın.  
+- <xref:System.Windows.Media.DrawingGroup> Diğer çizimleri çizer. Çizim grubu, tek bir bileşik çizim diğer çizimlerini birleştirmek için kullanın.  
   
  <xref:System.Windows.Media.GeometryDrawing> Nesnesi, geometri içeriğini işlemek için kullanılır. <xref:System.Windows.Media.Geometry> Sınıfı ve gibi kendisinden türetilen somut sınıflar <xref:System.Windows.Media.CombinedGeometry>, <xref:System.Windows.Media.EllipseGeometry>, ve <xref:System.Windows.Media.PathGeometry>, 2B grafikleri işlemek için bir yol sağlar, aynı zamanda isabet sınaması ve kırpma desteği sağlar. Geometri nesneleri, bir denetimin, örneğin, bölge tanımlamak veya bir resme uygulanacak kırpma bölgesini tanımlamak için kullanılabilir. Geometri nesneleri dikdörtgenler ve daireler ya da iki veya daha fazla geometri nesneleri oluşturulan bileşik bölgeleri gibi basit bölgelerde olabilir. Daha karmaşık bir geometrik bölgeler birleştirerek oluşturulabilir <xref:System.Windows.Media.PathSegment>-gibi türetilmiş nesneler, <xref:System.Windows.Media.ArcSegment>, <xref:System.Windows.Media.BezierSegment>, ve <xref:System.Windows.Media.QuadraticBezierSegment>.  
   
@@ -70,13 +70,13 @@ ms.locfileid: "59074995"
   
  Görüntüleri kullanarak daha iyi performans elde etmeye yönelik aşağıdaki önerileri dikkate alın:  
   
--   Uygulamanıza küçük resimleri görüntülemek gerekiyorsa, azaltılmış boyutlu bir görüntünün sürümünü oluşturma göz önünde bulundurun. Varsayılan olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görüntünüzü yükler ve tam boyutuna getirir. Yalnızca bir küçük resim görüntüsü sürümü istiyorsanız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gereksiz kendi tam boyutlu görüntüyü kodunu çözer ve ardından, bir küçük resim boyutu aşağı ölçeklendirir. Bu gereksiz ek yükten kaçınmak için ya da istek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görüntüyü bir küçük resim boyutu için kod çözme veya istemek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir küçük resim boyutu resim yüklenemiyor.  
+- Uygulamanıza küçük resimleri görüntülemek gerekiyorsa, azaltılmış boyutlu bir görüntünün sürümünü oluşturma göz önünde bulundurun. Varsayılan olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görüntünüzü yükler ve tam boyutuna getirir. Yalnızca bir küçük resim görüntüsü sürümü istiyorsanız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gereksiz kendi tam boyutlu görüntüyü kodunu çözer ve ardından, bir küçük resim boyutu aşağı ölçeklendirir. Bu gereksiz ek yükten kaçınmak için ya da istek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görüntüyü bir küçük resim boyutu için kod çözme veya istemek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir küçük resim boyutu resim yüklenemiyor.  
   
--   Her zaman varsayılan boyutu değil de, istenen boyuta görüntü çözer. Yukarıda belirtildiği gibi istek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görüntünüzü istenen boyuta ve değil varsayılan tam boyutlu çözülecek. Yalnızca uygulamanızın çalışma kümesi, ancak yürütme hızını azaltır.  
+- Her zaman varsayılan boyutu değil de, istenen boyuta görüntü çözer. Yukarıda belirtildiği gibi istek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görüntünüzü istenen boyuta ve değil varsayılan tam boyutlu çözülecek. Yalnızca uygulamanızın çalışma kümesi, ancak yürütme hızını azaltır.  
   
--   Mümkünse, gibi birden çok görüntülerini bir film şeridi oluşan tek bir görüntüye görüntüleri birleştirin.  
+- Mümkünse, gibi birden çok görüntülerini bir film şeridi oluşan tek bir görüntüye görüntüleri birleştirin.  
   
--   Daha fazla bilgi için [Imaging genel bakış](../graphics-multimedia/imaging-overview.md).  
+- Daha fazla bilgi için [Imaging genel bakış](../graphics-multimedia/imaging-overview.md).  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
  Herhangi bir bit eşlem ölçeğini animasyon ekleme, örnekleme algoritması varsayılan yüksek kaliteli görüntü, bazen etkili şekilde animasyonların titremesine neden kare oranı azalmasına neden için yeterli sistem kaynaklarına kullanabilir. Ayarlayarak <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> özelliği <xref:System.Windows.Media.RenderOptions> nesnesini <xref:System.Windows.Media.BitmapScalingMode.LowQuality> bir bit eşlem olduğunda daha yumuşak bir animasyon oluşturabilirsiniz. <xref:System.Windows.Media.BitmapScalingMode.LowQuality> modu söyler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kalite açısından iyileştirilmiş algoritmasını kullanarak görüntüleri işlerken hızı için iyileştirilmiş bir algoritmaya geçiş yapmak için işleme altyapısı.  

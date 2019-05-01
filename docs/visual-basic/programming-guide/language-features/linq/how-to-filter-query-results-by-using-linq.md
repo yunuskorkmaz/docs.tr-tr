@@ -12,11 +12,11 @@ helpviewer_keywords:
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
 ms.openlocfilehash: fc4d43ef9181f1a290d37c137b4fc6f7f16588b7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59332059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001032"
 ---
 # <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Nasıl yapılır: Sorgu sonuçlarını LINQ (Visual Basic) kullanarak Filtrele
 Dil ile tümleşik sorgu (LINQ), Veritabanı bilgilerine erişmek ve sorguları yürütmek kolaylaştırır.  
@@ -81,5 +81,5 @@ Dil ile tümleşik sorgu (LINQ), Veritabanı bilgilerine erişmek ve sorguları 
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Sorgular](../../../../visual-basic/language-reference/queries/index.md)
-- [LINQ - SQL](../../../../framework/data/adonet/sql/linq/index.md)
-- [DataContext yöntemi (O/R Tasarımcısı)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext Metotları (O/R Tasarımcısı)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

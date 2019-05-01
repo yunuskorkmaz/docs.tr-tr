@@ -9,11 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
 ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973764"
 ---
 # <a name="tilebrush-overview"></a>TileBrush Genel Bakışı
 <xref:System.Windows.Media.TileBrush> nesneleri sağlar, önemli bir görüntü ile bir alanı nasıl boyanacağını denetim <xref:System.Windows.Media.Drawing>, veya <xref:System.Windows.Media.Visual>. Bu konu nasıl kullanılacağını açıklar <xref:System.Windows.Media.TileBrush> özellikleri nasıl üzerinde daha fazla denetim kazanmak için bir <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, veya <xref:System.Windows.Media.VisualBrush> alanı boyar.  
@@ -40,11 +40,11 @@ TileBrush ile döşeme TileMode'u bileşenleri
 ## <a name="brush-content"></a>İçerik fırça  
  Üç farklı türde vardır <xref:System.Windows.Media.TileBrush> her farklı bir içerik türüyle boyar.  
   
--   Fırça ise bir <xref:System.Windows.Media.ImageBrush>, bu içeriği bir görüntüsüdür <xref:System.Windows.Media.ImageBrush.ImageSource%2A> özellik belirtir içeriğini <xref:System.Windows.Media.ImageBrush>.  
+- Fırça ise bir <xref:System.Windows.Media.ImageBrush>, bu içeriği bir görüntüsüdür <xref:System.Windows.Media.ImageBrush.ImageSource%2A> özellik belirtir içeriğini <xref:System.Windows.Media.ImageBrush>.  
   
--   Fırça ise bir <xref:System.Windows.Media.DrawingBrush>, çizim bu içeriktir. <xref:System.Windows.Media.DrawingBrush.Drawing%2A> Özellik belirtir içeriğini <xref:System.Windows.Media.DrawingBrush>.  
+- Fırça ise bir <xref:System.Windows.Media.DrawingBrush>, çizim bu içeriktir. <xref:System.Windows.Media.DrawingBrush.Drawing%2A> Özellik belirtir içeriğini <xref:System.Windows.Media.DrawingBrush>.  
   
--   Fırça ise bir <xref:System.Windows.Media.VisualBrush>, bir görseli bu içeriktir. <xref:System.Windows.Media.VisualBrush.Visual%2A> Özellik belirtir içeriğini <xref:System.Windows.Media.VisualBrush>.  
+- Fırça ise bir <xref:System.Windows.Media.VisualBrush>, bir görseli bu içeriktir. <xref:System.Windows.Media.VisualBrush.Visual%2A> Özellik belirtir içeriğini <xref:System.Windows.Media.VisualBrush>.  
   
  Konum ve boyut sayısını belirtebilirsiniz <xref:System.Windows.Media.TileBrush> kullanarak içerik <xref:System.Windows.Media.TileBrush.Viewbox%2A> özelliği bırakmak yaygın olsa <xref:System.Windows.Media.TileBrush.Viewbox%2A> varsayılan değerine ayarlayın. Varsayılan olarak, <xref:System.Windows.Media.TileBrush.Viewbox%2A> fırçanın içeriği tamamen içerecek şekilde yapılandırılmıştır. Yapılandırma hakkında daha fazla bilgi için <xref:System.Windows.Controls.Viewbox>, bkz: <xref:System.Windows.Controls.Viewbox> özellik sayfası.  
   
@@ -52,13 +52,13 @@ TileBrush ile döşeme TileMode'u bileşenleri
 ## <a name="the-base-tile"></a>Taban döşemesi  
  A <xref:System.Windows.Media.TileBrush> taban döşemesi içeriği. <xref:System.Windows.Media.TileBrush.Stretch%2A> Özellik denetimleri nasıl <xref:System.Windows.Media.TileBrush> , içeriği esnetilmiş taban döşemesi doldurmak için. <xref:System.Windows.Media.TileBrush.Stretch%2A> Özelliği tarafından tanımlanan aşağıdaki değerleri kabul eder <xref:System.Windows.Media.Stretch> sabit listesi:  
   
--   <xref:System.Windows.Media.Stretch.None>: Fırçanın içeriği kutucuğu dolduracak şekilde genişletilir değil.  
+- <xref:System.Windows.Media.Stretch.None>: Fırçanın içeriği kutucuğu dolduracak şekilde genişletilir değil.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: Fırçanın içeriği kutucuğu sığacak şekilde ölçeklendirilir. İçeriğin yükseklik ve genişlik bağımsız olarak ölçeklendirilir çünkü içerik özgün en boy oranını korunmayabilir. Diğer bir deyişle, fırçanın içeriği tamamen çıkış kutucuk doldurmak için karışmış olabilir.  
+- <xref:System.Windows.Media.Stretch.Fill>: Fırçanın içeriği kutucuğu sığacak şekilde ölçeklendirilir. İçeriğin yükseklik ve genişlik bağımsız olarak ölçeklendirilir çünkü içerik özgün en boy oranını korunmayabilir. Diğer bir deyişle, fırçanın içeriği tamamen çıkış kutucuk doldurmak için karışmış olabilir.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: Fırçanın içeriği tamamen döşeme sığacak şekilde ölçeklendirilir. İçeriğin en boy oranı korunur.  
+- <xref:System.Windows.Media.Stretch.Uniform>: Fırçanın içeriği tamamen döşeme sığacak şekilde ölçeklendirilir. İçeriğin en boy oranı korunur.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: Fırçanın içeriği, içeriğin özgün en boy oranını koruyarak tamamen çıkış alanı dolduracak şekilde ölçeklendirilir.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: Fırçanın içeriği, içeriğin özgün en boy oranını koruyarak tamamen çıkış alanı dolduracak şekilde ölçeklendirilir.  
   
  Aşağıdaki görüntüde farklı gösterir <xref:System.Windows.Media.TileBrush.Stretch%2A> ayarları.  
   
@@ -99,15 +99,15 @@ TileBrush ile döşeme TileMode'u bileşenleri
 ### <a name="tiling-behavior"></a>Döşeme davranışı  
  A <xref:System.Windows.Media.TileBrush> taban döşemesi, çıkış alanı ve başka bir döşeme modu tamamen dolmaması olduğunda döşenmiş bir desen oluşturur <xref:System.Windows.Media.TileMode.None> belirtilir. Bir kutucuğu fırçanın kutucuk çıkış alanı tamamen dolmaması olduğunda kendi <xref:System.Windows.Media.TileBrush.TileMode%2A> özelliği, taban döşemesi çıkış alanı dolduracak şekilde çoğaltılacak ve bu durumda, temel döşemenin nasıl çoğaltılacak olup olmadığını belirtir. <xref:System.Windows.Media.TileBrush.TileMode%2A> Özelliği tarafından tanımlanan aşağıdaki değerleri kabul eder <xref:System.Windows.Media.TileMode> sabit listesi:  
   
--   <xref:System.Windows.Media.TileMode.None>: Yalnızca temel döşeme çizilir.  
+- <xref:System.Windows.Media.TileMode.None>: Yalnızca temel döşeme çizilir.  
   
--   <xref:System.Windows.Media.TileMode.Tile>: Taban döşemesi çizilmiş ve kalan alan bir kutucuğun sağ kenarı sol kenarına sonraki ve bitişik olacak şekilde taban döşemesi benzer şekilde alt ve üst için yinelenen tarafından doldurulur.  
+- <xref:System.Windows.Media.TileMode.Tile>: Taban döşemesi çizilmiş ve kalan alan bir kutucuğun sağ kenarı sol kenarına sonraki ve bitişik olacak şekilde taban döşemesi benzer şekilde alt ve üst için yinelenen tarafından doldurulur.  
   
--   <xref:System.Windows.Media.TileMode.FlipX>: Aynı <xref:System.Windows.Media.TileMode.Tile>, ancak diğer sütunların döşemeleri yatay olarak çevrilmiştir.  
+- <xref:System.Windows.Media.TileMode.FlipX>: Aynı <xref:System.Windows.Media.TileMode.Tile>, ancak diğer sütunların döşemeleri yatay olarak çevrilmiştir.  
   
--   <xref:System.Windows.Media.TileMode.FlipY>: Aynı <xref:System.Windows.Media.TileMode.Tile>, ancak diğer satırları kutucuk dikey olarak çevrilmiştir.  
+- <xref:System.Windows.Media.TileMode.FlipY>: Aynı <xref:System.Windows.Media.TileMode.Tile>, ancak diğer satırları kutucuk dikey olarak çevrilmiştir.  
   
--   <xref:System.Windows.Media.TileMode.FlipXY>: Bir birleşimi <xref:System.Windows.Media.TileMode.FlipX> ve <xref:System.Windows.Media.TileMode.FlipY>.  
+- <xref:System.Windows.Media.TileMode.FlipXY>: Bir birleşimi <xref:System.Windows.Media.TileMode.FlipX> ve <xref:System.Windows.Media.TileMode.FlipY>.  
   
  Aşağıdaki görüntüde, farklı döşeme modlarını gösterir.  
   

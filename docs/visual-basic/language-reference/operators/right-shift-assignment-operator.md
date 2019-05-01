@@ -11,11 +11,11 @@ helpviewer_keywords:
 - '>>= operator [Visual Basic]'
 ms.assetid: 2bcd9abb-7a8c-4229-b75d-8816ff1dc700
 ms.openlocfilehash: 1076ce62077391f2c88ebdd621d1dbd6fb40d647
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982390"
 ---
 # <a name="-operator-visual-basic"></a>>> = işleci (Visual Basic)
 Bir değişken veya özellik değerini temel aritmetik sağa kaydırma gerçekleştirir ve sonucu değişken veya özellik için atar.  

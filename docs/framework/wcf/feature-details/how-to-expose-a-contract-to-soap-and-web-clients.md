@@ -6,15 +6,15 @@ dev_langs:
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
 ms.openlocfilehash: d82c5e3fc33528eadc3c404cca59a3dcf905e0e2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000928"
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Nasıl yapılır: Bir Sözleşmeyi SOAP ve Web İstemcilerine Sunma
 
-Varsayılan olarak, Windows Communication Foundation (WCF) uç noktalar yalnızca SOAP istemcilerin kullanımına sunuyor. İçinde [nasıl yapılır: temel bir WCF Web HTTP hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), bir uç nokta SOAP olmayan istemciler için kullanılabilir hale getirilir. Aynı anlaşmaya her iki yönde bir Web uç noktası ve bir SOAP uç noktası olarak kullanılabilir hale getirmek istediğinizde zamanlar olabilir. Bu konuda bir örnek bunun nasıl yapılacağı gösterilmektedir.
+Varsayılan olarak, Windows Communication Foundation (WCF) uç noktalar yalnızca SOAP istemcilerin kullanımına sunuyor. İçinde [nasıl yapılır: Temel bir WCF Web HTTP hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), bir uç nokta SOAP olmayan istemciler için kullanılabilir hale getirilir. Aynı anlaşmaya her iki yönde bir Web uç noktası ve bir SOAP uç noktası olarak kullanılabilir hale getirmek istediğinizde zamanlar olabilir. Bu konuda bir örnek bunun nasıl yapılacağı gösterilmektedir.
 
 ## <a name="to-define-the-service-contract"></a>Hizmet sözleşmesini tanımlama
 

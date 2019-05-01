@@ -3,11 +3,11 @@ title: Yerel Kanal
 ms.date: 03/30/2017
 ms.assetid: fa1917a4-f701-4e82-a439-14a16282c7cc
 ms.openlocfilehash: 1711909ada4756dd2723f62160eef0ad12c03174
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989839"
 ---
 # <a name="local-channel"></a>Yerel Kanal
 Yerel kanal aynı uygulama etki alanı içinde iletişim kurmak için kullanılan bir Windows Communication Foundation (WCF) aktarım kanalıdır. Burada aynı uygulama etki alanında çalışan istemci ve hizmet ve ek yükü tipik WCF kanalı yığınının (seri hale getirme ve seri durumundan çıkarma iletilerinin) kaçınılmalıdır senaryoları için kullanışlıdır.  
@@ -18,9 +18,9 @@ Yerel kanal aynı uygulama etki alanı içinde iletişim kurmak için kullanıla
 ## <a name="discussion"></a>Tartışma  
  Örnek, iki proje dosyaları içerir:  
   
--   **LocalChannel**: Yerel kanal geçerli uygulama etki alanı içinde programlı gösterimi. Bu projede gönderen bileşeni bellek içi kuyruğu ileti yerleştirir ve alıcı bileşen alması iletiyi kuyruktan.  
+- **LocalChannel**: Yerel kanal geçerli uygulama etki alanı içinde programlı gösterimi. Bu projede gönderen bileşeni bellek içi kuyruğu ileti yerleştirir ve alıcı bileşen alması iletiyi kuyruktan.  
   
--   **ClientAndService**: Bu proje bir hizmeti bir konsol uygulamasında barındırır ve aynı uygulama etki alanı içinde hizmetini çağırmak için bir istemci çalıştırır.  
+- **ClientAndService**: Bu proje bir hizmeti bir konsol uygulamasında barındırır ve aynı uygulama etki alanı içinde hizmetini çağırmak için bir istemci çalıştırır.  
   
  Yerel kanal tasarım kanal yığını hem hızını artırmak için seri hale getirme işlemi atlanıyor. Yerel taşıma kanalının hizmet çağrıları istemciden hizmete taşımayı ve istemciye geri dönüş değeri için bir kuyruk kullanma uygulanır. Örnek parametreler ve dönüş değerleri serileştirme yerine, nesneleri kopyalar.  
   

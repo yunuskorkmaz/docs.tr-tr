@@ -8,11 +8,11 @@ helpviewer_keywords:
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
 ms.openlocfilehash: 81a19d063f31b3c28fc15a061b5173495e83f6fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009129"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>İzlenecek yol: FlowLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme
 Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içeriği boyutu değiştikçe uygun şekilde düzenler bir düzene sahip bir form gerektirir. Ne zaman dinamik bir düzen gerekir ve işlemek istemediğiniz <xref:System.Windows.Forms.Control.Layout> açıkça kodunuzda olayları, Düzen panelini kullanma göz önünde bulundurun.  
@@ -23,23 +23,23 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
   
  <xref:System.Windows.Forms.FlowLayoutPanel> İçeriğini belirli bir akış yönünü ayarlar: yatay veya dikey. İçeriği sonraki bir satır veya sonraki bir sütun sarmalanabilir. Alternatif olarak, içeriğinin yerine kırpılmış DC'de sona erdi. Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
   
--   Bir Windows Forms projesi oluşturma  
+- Bir Windows Forms projesi oluşturma  
   
--   Denetimleri yatay ve dikey olarak düzenleme  
+- Denetimleri yatay ve dikey olarak düzenleme  
   
--   Akış yönü değiştirme  
+- Akış yönü değiştirme  
   
--   Ekleme akış sonu  
+- Ekleme akış sonu  
   
--   Doldurma ve kenar boşluklarını kullanarak denetimleri düzenleme  
+- Doldurma ve kenar boşluklarını kullanarak denetimleri düzenleme  
   
--   Araç kutusunda çift tıklayarak denetimler ekleme  
+- Araç kutusunda çift tıklayarak denetimler ekleme  
   
--   Anahattı çizerek bir denetim ekleme  
+- Anahattı çizerek bir denetim ekleme  
   
--   Şapka karakterini kullanarak denetimleri ekleme  
+- Şapka karakterini kullanarak denetimleri ekleme  
   
--   Mevcut denetimleri farklı bir üst öğeye yeniden atama  
+- Mevcut denetimleri farklı bir üst öğeye yeniden atama  
   
  İşlemi tamamladığınızda, bu önemli bir düzen özellikleri tarafından oynadığı rol, bir anlayışa sahip olacaksınız.  
   
@@ -179,13 +179,13 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Düzen bölmeleri ve denetimleri kullanarak karmaşık Düzen elde edebilirsiniz. Daha fazla araştırma için öneriler şunlardır:  
   
--   Aşağıdakilerden birini yeniden boyutlandırın <xref:System.Windows.Forms.Button> büyük boyut ve düzenini üzerindeki etkisini Not denetimleri.  
+- Aşağıdakilerden birini yeniden boyutlandırın <xref:System.Windows.Forms.Button> büyük boyut ve düzenini üzerindeki etkisini Not denetimleri.  
   
--   Düzen bölmelerini diğer düzen bölmeleri içerebilir. Bırakma ile deneme bir <xref:System.Windows.Forms.TableLayoutPanel> denetime varolan bir denetimi.  
+- Düzen bölmelerini diğer düzen bölmeleri içerebilir. Bırakma ile deneme bir <xref:System.Windows.Forms.TableLayoutPanel> denetime varolan bir denetimi.  
   
--   Dock <xref:System.Windows.Forms.FlowLayoutPanel> üst form denetimi. Formu yeniden boyutlandırmak ve düzeni üzerindeki etkisini dikkat edin.  
+- Dock <xref:System.Windows.Forms.FlowLayoutPanel> üst form denetimi. Formu yeniden boyutlandırmak ve düzeni üzerindeki etkisini dikkat edin.  
   
--   Ayarlama <xref:System.Windows.Forms.Control.Visible%2A> özelliği denetimlere birinin `false` ve Not nasıl <xref:System.Windows.Forms.FlowLayoutPanel> yanıt olarak yeniden akış.  
+- Ayarlama <xref:System.Windows.Forms.Control.Visible%2A> özelliği denetimlere birinin `false` ve Not nasıl <xref:System.Windows.Forms.FlowLayoutPanel> yanıt olarak yeniden akış.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

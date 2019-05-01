@@ -6,11 +6,11 @@ helpviewer_keywords:
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
 ms.openlocfilehash: 0ffd4fb05a5a409d74f8a9401a5fb021db0cd99b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981555"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Bir WPF Uygulamasını Dağıtma (WPF)
 Windows Presentation Foundation (WPF) uygulamaları tasarlandıktan sonra bunların dağıtılması gerekir. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve .NET Framework çeşitli dağıtım teknolojileri içerir. Dağıtım teknolojisi dağıtmak için kullanılan bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama uygulama türüne bağlıdır. Bu konu, her dağıtım teknolojisi kısa bir genel bakış ve her dağıtım gereksinimleri ile birlikte nasıl kullanıldığını sağlar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama türü.  
@@ -19,21 +19,21 @@ Windows Presentation Foundation (WPF) uygulamaları tasarlandıktan sonra bunlar
 ## <a name="deployment-technologies"></a>Dağıtım teknolojileri  
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve .NET Framework dahil olmak üzere çeşitli dağıtım teknolojileri şunları içerir:  
   
--   XCopy dağıtım.  
+- XCopy dağıtım.  
   
--   [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] Dağıtım.  
+- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] Dağıtım.  
   
--   [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] Dağıtım.  
+- [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] Dağıtım.  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>XCopy dağıtım  
  XCopy dağıtım XCopy komut satırı program dosyaları bir konumdan diğerine kopyalamak için kullanımını gösterir. XCopy dağıtım şu durumlarda uygundur:  
   
--   Uygulama kendi içinde bağımsızdır. İstemciyi çalıştırmak için güncelleştirmeniz gerekmez.  
+- Uygulama kendi içinde bağımsızdır. İstemciyi çalıştırmak için güncelleştirmeniz gerekmez.  
   
--   Uygulama dosyaları taşınması gerekir bir konumdan diğerine gibi bir yapı konumundan (yerel diskte, [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] dosya paylaşımı vb.) için bir yayımlama konumu (Web sitesi [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] dosya paylaşımı vb.).  
+- Uygulama dosyaları taşınması gerekir bir konumdan diğerine gibi bir yapı konumundan (yerel diskte, [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] dosya paylaşımı vb.) için bir yayımlama konumu (Web sitesi [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] dosya paylaşımı vb.).  
   
--   Uygulama (Başlat menüsü kısayolundan, Masaüstü simgesi vb.) tümleşik Kabuk gerektirmez.  
+- Uygulama (Başlat menüsü kısayolundan, Masaüstü simgesi vb.) tümleşik Kabuk gerektirmez.  
   
  XCopy basit dağıtım senaryoları için uygun olsa da, daha karmaşık dağıtım özellikleri gerekli olduğunda sınırlı. Özellikle, genellikle XCopy kullanarak, oluşturma, yürütme ve dağıtım sağlam bir şekilde yönetmek için betikleri sürdürmek için ek yüke neden olur. Ayrıca, sürüm oluşturma, kaldırma veya geri alma Xcopy komutunu desteklemiyor.  
   
@@ -49,15 +49,15 @@ Windows Presentation Foundation (WPF) uygulamaları tasarlandıktan sonra bunlar
 ### <a name="clickonce-deployment"></a>ClickOnce dağıtımı  
  [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] Web stili olmayan Web uygulamaları için uygulama dağıtımı sağlar. Uygulamalar için yayımlanan ve Web veya dosya sunucusundan dağıtılan. Ancak [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] tam desteklemez istemci çeşitli özellikleri [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]-yüklü uygulamalar, aşağıdakileri içeren bir alt kümesini destekler:  
   
--   Başlangıç menüsünde ve programları Denetim Masası ile tümleştirme.  
+- Başlangıç menüsünde ve programları Denetim Masası ile tümleştirme.  
   
--   Sürüm oluşturma, geri alma ve kaldırma.  
+- Sürüm oluşturma, geri alma ve kaldırma.  
   
--   Çevrimiçi yükleme modunu, her zaman bir uygulamanın dağıtım konumuna başlatır.  
+- Çevrimiçi yükleme modunu, her zaman bir uygulamanın dağıtım konumuna başlatır.  
   
--   Yeni sürümleri yayımlandığında otomatik güncelleştirme.  
+- Yeni sürümleri yayımlandığında otomatik güncelleştirme.  
   
--   Dosya uzantıları kaydı.  
+- Dosya uzantıları kaydı.  
   
  Hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)], bkz: [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment).  
   
@@ -65,11 +65,11 @@ Windows Presentation Foundation (WPF) uygulamaları tasarlandıktan sonra bunlar
 ## <a name="deploying-wpf-applications"></a>WPF Uygulamalarını Dağıtma  
  Dağıtım seçenekleri bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama, uygulama türüne bağlıdır. Bir dağıtım perspektifinden [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] üç önemli uygulama türü vardır:  
   
--   Tek başına uygulamalar.  
+- Tek başına uygulamalar.  
   
--   Yalnızca işaretleme [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uygulamalar.  
+- Yalnızca işaretleme [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uygulamalar.  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>Tek başına uygulamaları dağıtma  
@@ -89,11 +89,11 @@ Windows Presentation Foundation (WPF) uygulamaları tasarlandıktan sonra bunlar
 ### <a name="deploying-xaml-browser-applications"></a>XAML tarayıcı uygulamaları dağıtma  
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] Dağıtılacak aşağıdaki üç dosyayı gerektiren derlenmiş uygulamalar şunlardır:  
   
--   *ApplicationName*.exe: Çalıştırılabilir derlemesinin uygulama dosyası.  
+- *ApplicationName*.exe: Çalıştırılabilir derlemesinin uygulama dosyası.  
   
--   *ApplicationName*.xbap: Dağıtım bildirimi.  
+- *ApplicationName*.xbap: Dağıtım bildirimi.  
   
--   *ApplicationName*. exe.manifest: Uygulama bildirimi.  
+- *ApplicationName*. exe.manifest: Uygulama bildirimi.  
   
 > [!NOTE]
 >  Dağıtım ve uygulama bildirimleri hakkında daha fazla bilgi için bkz: [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md).  

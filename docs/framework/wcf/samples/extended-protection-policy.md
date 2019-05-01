@@ -3,11 +3,11 @@ title: Genişletilmiş Koruma İlkesi
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
 ms.openlocfilehash: 645b48b3c7ce3daaaedac372ba5ba6fd5edfc8f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990177"
 ---
 # <a name="extended-protection-policy"></a>Genişletilmiş Koruma İlkesi
 Genişletilmiş koruma, ADAM-de-adam (MITM) saldırılarına karşı korumaya yönelik bir güvenlik girişimidir. MITM saldırı bir güvenlik tehdididir bir MITM istemci kimlik bilgilerini alır ve bir sunucuya iletir.  
@@ -34,9 +34,9 @@ Genişletilmiş koruma, ADAM-de-adam (MITM) saldırılarına karşı korumaya y�
   
 4. Bu örnek, Internet Information Services (IIS) Yöneticisi'nden yüklenebilecek bir sunucu sertifikası varlığını gerektirir böylece sunucu ile güvenli bir kanal oluşturmak istemci gerektirir.  
   
-    1.  IIS Yöneticisi'ni açın. Açık **sunucu sertifikaları**, içinde göründüğü **özellik görünümü** (makine adı) kök düğümü seçildiğinde sekme.  
+    1. IIS Yöneticisi'ni açın. Açık **sunucu sertifikaları**, içinde göründüğü **özellik görünümü** (makine adı) kök düğümü seçildiğinde sekme.  
   
-    2.  Bu örnek test amacıyla otomatik olarak imzalanan bir sertifika oluşturun. Internet Explorer'ı güvenli olmadığı hakkında sertifika istemek için istemiyorsanız, sertifikayı güvenilen kök sertifika yetkilisi depolarında yükleyin.  
+    2. Bu örnek test amacıyla otomatik olarak imzalanan bir sertifika oluşturun. Internet Explorer'ı güvenli olmadığı hakkında sertifika istemek için istemiyorsanız, sertifikayı güvenilen kök sertifika yetkilisi depolarında yükleyin.  
   
 5. Açık **eylemleri** bölmesinde varsayılan Web sitesi için. Tıklayın **Site Düzenle**, **bağlamaları**. Bir tür olarak HTTPS eklemek henüz yoksa, bağlantı noktası numarası 443'tür. Önceki adımda oluşturulan SSL sertifika atayın.  
   

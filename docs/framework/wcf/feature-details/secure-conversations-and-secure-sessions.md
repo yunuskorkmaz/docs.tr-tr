@@ -3,11 +3,11 @@ title: Güvenli İletişimler ve Güvenli Oturumlar
 ms.date: 03/30/2017
 ms.assetid: 48cb104a-532d-40ae-aa57-769dae103fda
 ms.openlocfilehash: 9b2c22d6db5a773bfb3f3a41e458b530fc889d71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991009"
 ---
 # <a name="secure-conversations-and-secure-sessions"></a>Güvenli İletişimler ve Güvenli Oturumlar
 Bir Windows Communication Foundation (WCF) doğrulaması ve bir şifreleme ve dijital imza işlemi sırasında kabul ediyorum iki uç noktalar arasında güvenli oturumlar kurma olanağı özelliğidir. Örneğin, hizmet uç noktası kimlik doğrulaması için bir X.509 sertifikası temel bir güvenlik belirteci göndermek için bir istemci uç noktası gerektirebilir. İstemci kimliği doğrulandıktan sonra hizmet uç noktası bir güvenlik bağlamı belirteci (SCT) sonra oturum içinde tüm sonraki iletileri güvenli hale getirmek için kullanılan istemciye geri döndürür. Bu güvenli oturum oluşturma, SCT simetrik anahtar içerdiğinden daha verimli olmasını iki uç nokta arasında alınıp verilen iletileri kümesini etkinleştirir. Hangi X.509 sertifikaları üzerine dayalı, asimetrik anahtarlar simetrik ne zaman anahtarları daha önemli ölçüde daha fazla hesaplama gücü gerektiren bir dijital imza oluşturulurken veya veri kümesini şifreleme.  

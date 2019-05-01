@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: e5ef455a-e049-429c-8005-30c93132fb79
 ms.openlocfilehash: 1a5378665d29e02799dd732d17705e462f40a2b1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009506"
 ---
 # <a name="toolstrip-control-windows-forms"></a>ToolStrip Denetimi (Windows Forms)
 <xref:System.Windows.Forms.ToolStrip> menüleri, Denetim ve kullanıcı denetimleri, Windows Forms uygulamalarındaki barındırabilir araç çubukları denetimlerdir.  
@@ -73,13 +73,13 @@ ms.locfileid: "57721469"
  [Nasıl yapılır: Özel ToolStripRenderer uygulama](how-to-implement-a-custom-toolstriprenderer.md)  
  Özelleştirme açıklar bir <xref:System.Windows.Forms.ToolStrip> türetildiği bir sınıf uygulama Denetim <xref:System.Windows.Forms.ToolStripRenderer>.  
   
--   [Nasıl yapılır: Tasarımcı kullanarak standart öğelerle temel bir Windows Formları ToolStrip oluşturma](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
+- [Nasıl yapılır: Tasarımcı kullanarak standart öğelerle temel bir Windows Formları ToolStrip oluşturma](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
   
--   [Nasıl yapılır: Bir ToolStrip forma ToolStripContainer taşıma](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
+- [Nasıl yapılır: Bir ToolStrip forma ToolStripContainer taşıma](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
   
--   [İzlenecek yol: Profesyonel stilde ToolStrip denetimi oluşturma](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
+- [İzlenecek yol: Profesyonel stilde ToolStrip denetimi oluşturma](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
   
--   [İzlenecek yol: Menü birleştirme ve ToolStrip denetimleri içeren MDI formu oluşturma](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
+- [İzlenecek yol: Menü birleştirme ve ToolStrip denetimleri içeren MDI formu oluşturma](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.ToolStrip> Sınıfı  

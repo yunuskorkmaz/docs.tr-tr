@@ -3,11 +3,11 @@ title: WF Durum makinesi etkinlikleri
 ms.date: 03/30/2017
 ms.assetid: 93312eaf-07e0-4a55-b4f7-4cdbbc4dee2d
 ms.openlocfilehash: 5aee2a7cb078d9d62c9296f7dda9f28ff812a88a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004607"
 ---
 # <a name="state-machine-activities-in-wf"></a>WF Durum makinesi etkinlikleri
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] çeşitli sistem tarafından sağlanan etkinlikleri ve etkinlik tasarımcıları, durum makine iş akışları oluşturmak için sağlar.  

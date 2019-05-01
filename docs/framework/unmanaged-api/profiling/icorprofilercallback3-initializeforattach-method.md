@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 84d07fe975bab1b0af81299893b52142630b5bb9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992244"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>ICorProfilerCallback3::InitializeForAttach Yöntemi
 Ortak dil çalışma zamanı (CLR) profil oluşturucu bir iliştirme işleminden sonra kendi durumunu başlatmak üzere bir fırsat vermek tarafından çağrılır.  

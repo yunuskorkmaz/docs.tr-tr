@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
 ms.openlocfilehash: 74e5908dfcd42d031464ffccedb530be4a71a3f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983365"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>UI Otomasyon MultipleView Denetim Düzeni Uygulama
 > [!NOTE]
@@ -27,13 +27,13 @@ ms.locfileid: "59125204"
 ## <a name="implementation-guidelines-and-conventions"></a>Uygulama yönergeleri ve kuralları  
  Birden çok görünüm denetim düzeni uygularken aşağıdaki yönergeler ve kuralları dikkat edin:  
   
--   <xref:System.Windows.Automation.Provider.IMultipleViewProvider> Ayrıca, geçerli görünüm sağlayan bir denetimi farklıysa, geçerli görünüm yöneten bir kapsayıcıda uygulanmalıdır. Örneğin, görünüm denetimi için Windows Gezgini uygulamadan yönetilen Windows Explorer geçerli klasör içeriği için bir liste denetimini içerir.  
+- <xref:System.Windows.Automation.Provider.IMultipleViewProvider> Ayrıca, geçerli görünüm sağlayan bir denetimi farklıysa, geçerli görünüm yöneten bir kapsayıcıda uygulanmalıdır. Örneğin, görünüm denetimi için Windows Gezgini uygulamadan yönetilen Windows Explorer geçerli klasör içeriği için bir liste denetimini içerir.  
   
--   İçeriği sıralama mümkün olan denetimi birden çok görünüm desteklemek için dikkate alınmaz.  
+- İçeriği sıralama mümkün olan denetimi birden çok görünüm desteklemek için dikkate alınmaz.  
   
--   Görünümler koleksiyonu örneklerinde aynı olmalıdır.  
+- Görünümler koleksiyonu örneklerinde aynı olmalıdır.  
   
--   Görünüm adları metin okuma, Braille ve okunabilir diğer uygulamalar için uygun olması gerekir.  
+- Görünüm adları metin okuma, Braille ve okunabilir diğer uygulamalar için uygun olması gerekir.  
   
 <a name="Required_Members_for_IMultipleViewProvider"></a>   
 ## <a name="required-members-for-imultipleviewprovider"></a>Gerekli üyeleri IMultipleViewProvider için  

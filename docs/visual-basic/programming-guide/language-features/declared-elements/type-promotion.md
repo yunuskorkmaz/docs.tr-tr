@@ -11,11 +11,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
 ms.openlocfilehash: f7ac6bfb944da8bd50e035ba97b2b513176dc661
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973309"
 ---
 # <a name="type-promotion-visual-basic"></a>Tür Yükseltme (Visual Basic)
 Modül içindeki bir programlama öğesi bildirdiğinizde, Visual Basic modülü içeren ad alanı kapsamında yükseltir. Bu olarak bilinir *türü promosyon*.  
@@ -54,9 +54,9 @@ Modül içindeki bir programlama öğesi bildirdiğinizde, Visual Basic modülü
 ## <a name="recommendations"></a>Öneriler  
  Aşağıdaki öneriler, iyi bir programlama uygulama temsil eder.  
   
--   **Benzersiz adları.** Programlama öğelerine adlandırma üzerinde tam denetime sahiptir, bu her zaman her yerde benzersiz adlar kullanacak şekilde iyi bir fikirdir. Aynı adlara ek onay gerektirir ve kodunuzun okunmasını zorlaştırabilir. Bunlar ayrıca ince hatalar ve beklenmeyen sonuçlara yol açabilir.  
+- **Benzersiz adları.** Programlama öğelerine adlandırma üzerinde tam denetime sahiptir, bu her zaman her yerde benzersiz adlar kullanacak şekilde iyi bir fikirdir. Aynı adlara ek onay gerektirir ve kodunuzun okunmasını zorlaştırabilir. Bunlar ayrıca ince hatalar ve beklenmeyen sonuçlara yol açabilir.  
   
--   **Tam nitelenmiş.** Modüller ve diğer öğeleri aynı ad ile çalışırken, güvenli bir yaklaşım her zaman tam nitelenmiş için tüm programlama öğeleri kullanmaktır. Tür promosyonu modülü üyesi engellenmediğinden ve tam olarak bu üyede nitelendirmeyin, yanlışlıkla farklı bir programlama öğesine erişebilir.  
+- **Tam nitelenmiş.** Modüller ve diğer öğeleri aynı ad ile çalışırken, güvenli bir yaklaşım her zaman tam nitelenmiş için tüm programlama öğeleri kullanmaktır. Tür promosyonu modülü üyesi engellenmediğinden ve tam olarak bu üyede nitelendirmeyin, yanlışlıkla farklı bir programlama öğesine erişebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

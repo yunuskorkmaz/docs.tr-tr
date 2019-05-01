@@ -11,11 +11,11 @@ helpviewer_keywords:
 - media [WPF], controlling playback of
 ms.assetid: 6885a730-e054-4c16-8c1e-ffe17b1f7c32
 ms.openlocfilehash: bb7319fc7ccec0220cbd79a32d5d015f9f2422d0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984052"
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>Nasıl yapılır: MediaElement (Yürüt, Duraklat, Durdur, Ses Düzeyi ve Hız) Denetimi
 Aşağıdaki örnek kullanmanın medya kayıttan yürütmeyi denetlemek nasıl gösterir bir <xref:System.Windows.Controls.MediaElement>. Örnek Yürüt, Duraklat, Durdur ve ortamı geri ve İleri Atla yanı sıra, ses ve hız oranını ayarlamak olanak tanıyan bir basit bir medya yürütücüsü oluşturur.  

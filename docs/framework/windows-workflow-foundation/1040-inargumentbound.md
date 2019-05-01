@@ -3,10 +3,11 @@ title: 1040 - InArgumentBound
 ms.date: 03/30/2017
 ms.assetid: 7dfaad1b-36c0-4575-84c1-31d63b0eaf5d
 ms.openlocfilehash: 984372c07ccfb11f2f05d5488fa5ffc95075db41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009753"
 ---
 # <a name="1040---inargumentbound"></a>1040 - InArgumentBound
 ## <a name="properties"></a>Özellikler  
@@ -14,23 +15,23 @@ ms.lasthandoff: 05/04/2018
 |||  
 |-|-|  
 |Kimlik|1040|  
-|Anahtar Sözcükler|WFActivities|  
+|anahtar sözcükler|WFActivities|  
 |Düzey|Ayrıntılı|  
 |Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
   
 ## <a name="description"></a>Açıklama  
- In bağımsız değişken bağlı gösterir.  
+ Bir giriş bağımsız değişkeni bağlı gösterir.  
   
 ## <a name="message"></a>İleti  
- '%2', DisplayName faaliyete bağımsız '%1': '%3', örnek kimliği: '%4', değer ile bağlı: %5.  
+ Bağımsız değişkeninde '%1' etkinliği '%2', DisplayName: '%3', InstanceId: '%4', değer ile ilişkili: %5.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|InArgument|xs: String|InArgument adı.|  
-|Etkinlik|xs: String|Etkinlik türü adı.|  
-|Görünen adı|xs: String|Etkinliğin görünen adı.|  
-|örnek kimliği|xs: String|Etkinlik örnek kimliği.|  
-|Değer|xs: String|Değer InArgument bağlı.|  
-|AppDomain|xs: String|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|InArgument|xs:string|InArgument adı.|  
+|Etkinlik|xs:string|Etkinlik türü adı.|  
+|displayName|xs:string|Etkinliğin görünen adı.|  
+|InstanceId|xs:string|Etkinlik örneği kimliği.|  
+|Değer|xs:string|InArgument için sınır değeri.|  
+|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|

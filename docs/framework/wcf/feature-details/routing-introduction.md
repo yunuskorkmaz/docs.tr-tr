@@ -3,11 +3,11 @@ title: Yönlendirme Tanıtımı
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
 ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991100"
 ---
 # <a name="routing-introduction"></a>Yönlendirme Tanıtımı
 Yönlendirme hizmeti, yönlendirme iletilerinin ileti içeriğine göre yeteneğine sahip bir genel takılabilir SOAP aracı sağlar. Yönlendirme hizmeti ile hizmet toplama, hizmet sürümü oluşturma, öncelikli Yönlendirme ve çok noktaya yayın yönlendirme gibi senaryolara olanak tanır ve yönlendirme karmaşık mantık oluşturabilirsiniz. Yönlendirme hizmeti, hata, işleme sağlar ve birincil hedef uç noktasına gönderilirken bir hata oluşması durumunda iletilerin gönderildiği listelerini yedekleme uç nokta ayarlamak de sağlar.  
@@ -156,9 +156,9 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
  Birçok yönlendirme hizmeti yapılandırması için belirli tek bir uç nokta iletileri yönlendiren özel filtre mantığı kullanırken, belirli bir ileti birden çok hedef Uç noktalara yönlendirmek gerekebilir. Çok noktaya yayın için birden fazla hedefe bir ileti, aşağıdaki koşulların doğru olması gerekir:  
   
--   Kanal şekli istek-yanıt olmamalıdır (ancak tek yönlü veya çift yönlü olabilir) çünkü isteğine yanıt olarak istemci uygulaması tarafından yalnızca bir yanıt aldı.  
+- Kanal şekli istek-yanıt olmamalıdır (ancak tek yönlü veya çift yönlü olabilir) çünkü isteğine yanıt olarak istemci uygulaması tarafından yalnızca bir yanıt aldı.  
   
--   Birden çok filtre döndürmelidir `true` ileti değerlendirirken.  
+- Birden çok filtre döndürmelidir `true` ileti değerlendirirken.  
   
  Bu koşullar karşılanıyorsa, ileti değerlendirmek için tüm filtre tüm uç noktalara yönlendirilir `true`. Aşağıdaki örnek, uç nokta adresini iletisi ise iki uç noktalara yönlendirilmek iletilerinde sonuçları bir yönlendirme yapılandırması tanımlar `http://localhost:8000/routingservice/router/rounding`.  
   
@@ -195,33 +195,33 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
  **İstek işleme**  
   
--   Alma **MessageVersion** giden bağlama/kanal.  
+- Alma **MessageVersion** giden bağlama/kanal.  
   
--   Gövde Okuyucu için özgün iletisi görüntüleniyor.  
+- Gövde Okuyucu için özgün iletisi görüntüleniyor.  
   
--   Aynı eylemi, gövde okuyucu ve yeni bir yeni bir ileti oluşturma **MessageVersion**.  
+- Aynı eylemi, gövde okuyucu ve yeni bir yeni bir ileti oluşturma **MessageVersion**.  
   
--   Varsa <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, Kime FaultTo, kopyalama ve yeni iletisi RelatesTo üst bilgi.  
+- Varsa <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, Kime FaultTo, kopyalama ve yeni iletisi RelatesTo üst bilgi.  
   
--   Tüm ileti özelliklerini yeni iletinin kopyalayın.  
+- Tüm ileti özelliklerini yeni iletinin kopyalayın.  
   
--   Yanıtı işlerken kullanılacak özgün istek iletisi Store.  
+- Yanıtı işlerken kullanılacak özgün istek iletisi Store.  
   
--   Yeni İstek iletisi döndürür.  
+- Yeni İstek iletisi döndürür.  
   
  **Yanıt işleme**  
   
--   Alma **MessageVersion** özgün istek iletisi.  
+- Alma **MessageVersion** özgün istek iletisi.  
   
--   Gövde Okuyucu için alınan yanıt iletisi alın.  
+- Gövde Okuyucu için alınan yanıt iletisi alın.  
   
--   Yeni bir yanıt iletisi gövdesi okuyucu aynı eylemi oluşturun ve **MessageVersion** özgün istek iletisi.  
+- Yeni bir yanıt iletisi gövdesi okuyucu aynı eylemi oluşturun ve **MessageVersion** özgün istek iletisi.  
   
--   Varsa <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, Kime FaultTo, kopyalama ve yeni iletisi RelatesTo üst bilgi.  
+- Varsa <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, Kime FaultTo, kopyalama ve yeni iletisi RelatesTo üst bilgi.  
   
--   Yeni ileti için ileti özelliklerinde kopyalayın.  
+- Yeni ileti için ileti özelliklerinde kopyalayın.  
   
--   Yeni bir yanıt iletisi döndürür.  
+- Yeni bir yanıt iletisi döndürür.  
   
  Varsayılan olarak, **SoapProcessingBehavior** istemci uç noktaları tarafından otomatik olarak eklenir <xref:System.ServiceModel.Routing.RoutingBehavior> hizmet başladığında; ancak, SOAP işleme kullanarak tüm istemci uç noktaları için eklenen olup olmadığını kontrol edebilirsiniz <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A> özelliği. Ayrıca doğrudan belirli bir uç davranışı eklemek ve da etkinleştirebilir veya SOAP işleme daha ayrıntılı bir denetim gerekiyorsa uç nokta düzeyinde bu davranışı devre dışı.  
   

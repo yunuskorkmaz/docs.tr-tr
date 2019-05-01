@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms, images
 ms.assetid: 7152b45b-a55c-49bc-8c78-ae002a844f71
 ms.openlocfilehash: 2ce19642b37946db7a172e61004688059dba61db
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003944"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>Resimler, Bit Eşlemler ve Meta Dosyaları
 `Image` Izgara görüntüleri (bit) ile çalışmak için yöntemler sağlayan soyut bir temel sınıfı ve vektör görüntüleri (meta dosyaları). `Bitmap` Sınıfı ve <xref:System.Drawing.Imaging.Metafile> hem de devralan sınıf `Image` sınıfı. `Bitmap` Sınıfı yeteneklerini genişletir `Image` yükleme, kaydetme ve ızgara görüntüleri işlemek için ek yöntemleri sağlayarak sınıfı. <xref:System.Drawing.Imaging.Metafile> Sınıfı yeteneklerini genişletir `Image` kaydetme ve vektör görüntüleri İnceleme için ek yöntemleri sağlayarak sınıfı.  

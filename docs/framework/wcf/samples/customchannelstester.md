@@ -3,11 +3,11 @@ title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
 ms.openlocfilehash: 7402ac9ccc0e5e1777fa77f339d7605e1d306e13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990619"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 `CustomChannelsTester` Bir dizi önceden tanımlanmış hizmet sözleşmeleri, özel kanal uygulamaları test etmek için kullanabileceğiniz bir araçtır. Hizmet sözleşmeleri kümesini seçin ve bir XML dosyası kullanarak aracı geçirin. Araç ardından, özel kanal uygulamaları ileti değişimi sırasında sınayan istemci ve hizmet oluşturur.  
@@ -20,7 +20,7 @@ ms.locfileid: "59312676"
   
 ### <a name="to-run-the-tool"></a>Aracı çalıştırmak için  
   
--   Komut isteminde aşağıdaki komutu yazın:  
+- Komut isteminde aşağıdaki komutu yazın:  
   
     ```  
     CustomChannelsTester.exe /binding:YourCustomBindngName /dll:TheAssemblyWhereThisTypeisDefined /testspec:XmlFileNameWhichContainsTestOptions  

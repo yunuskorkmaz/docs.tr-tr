@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0aabff090634f1ecdeec5636336ad1fb77b8b81c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988929"
 ---
 # <a name="icordebugeval2rudeabort-method"></a>ICorDebugEval2::RudeAbort Yöntemi
 Hesaplama durdurur bu `ICorDebugEval2` şu anda gerçekleştiriyor.  
@@ -34,12 +34,12 @@ HRESULT RudeAbort ();
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- `RudeAbort` hata ayıklama oturumu güvenli olmayan bir durumda bırakır şekilde değerlendirici tutan kilitleri bırakmaz. Bunu yaparken çok dikkatli bu yöntemi çağırın.  
+ `RudeAbort` güvenli olmayan bir durumda hata ayıklama oturumu bırakır, böylece değerlendirme tutan kilitleri serbest bırakmaz. İşlemini çok dikkatli bu yöntemi çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

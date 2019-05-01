@@ -1,23 +1,23 @@
 ---
 title: F# Koleksiyon Türleri
-description: "F # koleksiyon türleri ve bunlar .NET Framework'teki koleksiyon türlerinden farklılıklar hakkında bilgi edinin."
+description: Hakkında bilgi edinin F# koleksiyon türlerini ve nasıl, .NET Framework koleksiyon türleri farklı.
 ms.date: 05/16/2016
 ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43864767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996820"
 ---
 # <a name="f-collection-types"></a>F# Koleksiyon Türleri
 
-Bu konuyu gözden geçirerek hangi F # koleksiyon türü en iyi uyan belirli bir gereksinimi belirleyebilirsiniz. Bu koleksiyon türleri olanlar gibi .NET Framework koleksiyon türlerini farklı `System.Collections.Generic` ad alanı, F # koleksiyon türleri nesne yönelimli bir perspektif yerine işlevsel programlama perspektif tasarlanmış olmasıdır. Özellikle, yalnızca dizi koleksiyon değişebilir öğelere sahiptir. Bu nedenle, bir koleksiyon değiştirdiğinizde, özgün koleksiyon değiştirme yerine değiştirilen koleksiyonu bir örneğini oluşturun.
+Bu konuyu gözden geçirerek hangi belirleyebilirsiniz F# koleksiyon türü en iyi uyan belirli bir gereksinimi karşılamak. Bu koleksiyon türleri olanlar gibi .NET Framework koleksiyon türlerini farklı `System.Collections.Generic` uygulamasındaki isim uzayı F# koleksiyon türleri, işlevsel programlama perspektif yerine nesne yönelimli tasarlanmıştır Perspektif. Özellikle, yalnızca dizi koleksiyon değişebilir öğelere sahiptir. Bu nedenle, bir koleksiyon değiştirdiğinizde, özgün koleksiyon değiştirme yerine değiştirilen koleksiyonu bir örneğini oluşturun.
 
 Koleksiyon türleri, nesneleri depolandığı veri yapısı türü ayrıca farklı. Karma tabloları, bağlantılı liste ve diziler gibi veri yapıları farklı performans özellikleri ve kullanılabilir işlemleri farklı bir dizi var.
 
 ## <a name="f-collection-types"></a>F# Koleksiyon Türleri
 
-Aşağıdaki tabloda, F # koleksiyon türleri gösterilmiştir.
+Aşağıdaki tabloda F# koleksiyon türleri.
 
 |Tür|Açıklama|İlgili bağlantılar|
 |----|-----------|-------------|
@@ -25,17 +25,17 @@ Aşağıdaki tabloda, F # koleksiyon türleri gösterilmiştir.
 |[Dizi](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|Tümü aynı türde olan ardışık veri öğelerinin sabit boyutlu, sıfır tabanlı, değişebilir bir koleksiyonu.|[Diziler](arrays.md)<br /><br />[Array Modülü](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D Modülü](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D Modülü](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
 |[Seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Tümü tek öğeleri mantıksal bir dizi. Veri koleksiyonu sıralı bir büyük, varsa, ancak tüm öğeleri kullanmak mutlaka beklemiyoruz dizileri özellikle yararlı olur. Tek tek sırası öğeleri yalnızca'olarak hesaplanır, yoksa bir dizisi listesini daha iyi gerçekleştirebilir, böylece tüm öğeleri kullanılan gerekmez. Dizileri olarak temsil edilir `seq<'T>` bir diğer ad türü için `IEnumerable<T>`. Bu nedenle, uygulayan bir .NET Framework tür `System.Collections.Generic.IEnumerable<'T>` dizisi olarak kullanılabilir.|[Diziler](sequences.md)<br /><br />[Seq Modülü](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
 |[Harita](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Öğe değişmez bir sözlük. Öğeleri anahtar tarafından erişilir.|[Map Modülü](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
-|[Ayarlayın](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Karşılaştırma olduğu F # Yapısal karşılaştırma işlevi, büyük olasılıkla uygulamalarını kullanan ikili ağaçları temel alan bir sabit kümesi `System.IComparable` anahtar değerler üzerinden arabirimi.|[Set Modülü](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
+|[Ayarlayın](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Burada karşılaştırma, ikili ağaçları temel alan bir sabit kümesi F# olabilecek uygulamaları kullanan Yapısal karşılaştırma işlevi, `System.IComparable` anahtar değerler üzerinden arabirimi.|[Set Modülü](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
 
 ### <a name="table-of-functions"></a>Tablo işlevleri
 
-Bu bölümde, F # koleksiyon türleri üzerinde kullanılabilir olan işlevlerin karşılaştırır. Burada N birinci koleksiyon boyutudur ve M ikinci koleksiyon boyutu varsa işlevi hesaplama karmaşıklığını verilir. Bir tire (-) Bu işlev koleksiyonu üzerinde kullanılabilir olmadığını gösterir. Dizileri gevşek değerlendirildiği için hemen döndürüldüğünden rağmen yine de numaralandırıldığı zaman dizisi performansını etkiler Seq.distinct gibi bir işlevi O(1) olabilir.
+Bu bölümde, kullanılabilir olan işlevlerin karşılaştırır F# koleksiyon türleri. Burada N birinci koleksiyon boyutudur ve M ikinci koleksiyon boyutu varsa işlevi hesaplama karmaşıklığını verilir. Bir tire (-) Bu işlev koleksiyonu üzerinde kullanılabilir olmadığını gösterir. Dizileri gevşek değerlendirildiği için hemen döndürüldüğünden rağmen yine de numaralandırıldığı zaman dizisi performansını etkiler Seq.distinct gibi bir işlevi O(1) olabilir.
 
-|İşlev|Dizi|List|Dizisi|Harita|Ayarlayın|Açıklama|
+|İşlev|Dizi|List|Dizisi|Eşleme|Ayarlayın|Açıklama|
 |--------|-----|----|--------|---|---|-----------|
 |Ekleme|O(M)|O(N)|O(N)|-|-|İlk koleksiyonun ikinci koleksiyon öğelerini tarafından izlenen öğeleri içeren yeni bir koleksiyon döndürür.|
 |add|-|-|-|O (log N)|O (log N)|Eklenen öğeyi yeni bir koleksiyon döndürür.|
-|Ortalama|O(N)|O(N)|O(N)|-|-|Koleksiyondaki öğelerin ortalamasını döndürür.|
+|ortalama|O(N)|O(N)|O(N)|-|-|Koleksiyondaki öğelerin ortalamasını döndürür.|
 |averageBy|O(N)|O(N)|O(N)|-|-|Her öğeye uygulanan sağlanan işlev sonuçlarının ortalamasını döndürür.|
 |blit|O(N)|-|-|-|-|Bir dizinin bir bölümünü kopyalar.|
 |önbellek|-|-|O(N)|-|-|Hesaplar ve bir dizi öğelerini depolar.|
@@ -70,7 +70,7 @@ Bu bölümde, F # koleksiyon türleri üzerinde kullanılabilir olan işlevlerin
 |forall2|O(N)|O(N)|O(N)|-|-|Karşılık gelen tüm koleksiyon öğelerini belirli bir koşul ikili karşılamak olup olmadığını sınar.|
 |Alma / n.|O(1)|O(N)|O(N)|-|-|Bir öğenin dizinini verilen koleksiyondan döndürür.|
 |HEAD|-|O(1)|O(1)|-|-|Koleksiyonun ilk öğesine döndürür.|
-|Init|O(N)|O(N)|O(1)|-|-|Boyutu ve öğeleri hesaplamak için oluşturucu işlevi verilen bir koleksiyon oluşturur.|
+|init|O(N)|O(N)|O(1)|-|-|Boyutu ve öğeleri hesaplamak için oluşturucu işlevi verilen bir koleksiyon oluşturur.|
 |initInfinite|-|-|O(1)|-|-|Bir sıra üretir, yinelendiğinde ardışık öğeleri verilen işlevin çağırarak döndürür.|
 |INTERSECT|-|-|-|-|O (log N &#42; günlük M)|İki kümenin kesişimini hesaplar.|
 |intersectMany|-|-|-|-|O (N1 &AMP;#42; N2...)|Bir dizi kümenin kesişimini hesaplar. Sıra boş olmamalıdır.|
@@ -140,7 +140,7 @@ Bu bölümde, F # koleksiyon türleri üzerinde kullanılabilir olan işlevlerin
 |sıkıştırmasını açın|O(N)|O(N)|O(N)|-|-|Çiftlerinin listesini iki liste halinde ayırır.|
 |unzip3|O(N)|O(N)|O(N)|-|-|Bir liste Üçlü dizisini üç listeye böler.|
 |Pencereli|-|-|O(N)|-|-|Girdi dizisinden çizilen öğeleri içeren kayan pencere ortaya çıkarır bir dizisini döndürür. Her pencere, yeni bir dizi olarak döndürülür.|
-|Zip|O(N)|O(N)|O(N)|-|-|Listeye iki koleksiyon çifti birleştirir. İki liste eşit uzunlukta olmalıdır.|
+|zip|O(N)|O(N)|O(N)|-|-|Listeye iki koleksiyon çifti birleştirir. İki liste eşit uzunlukta olmalıdır.|
 |zip3|O(N)|O(N)|O(N)|-|-|Koleksiyonların bir listesi halinde Üçlü birleştirir. Listeleri eşit uzunlukta olmalıdır.|
 
 ## <a name="see-also"></a>Ayrıca bkz.

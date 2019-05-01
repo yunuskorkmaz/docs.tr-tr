@@ -1,5 +1,5 @@
 ---
-title: ICorDebugProcess::GetObject Metodu
+title: ICorDebugProcess::GetObject Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugProcess.GetObject
@@ -18,13 +18,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84b6edf122aa3d6d942e06c9f5c7dd13b0bfa19e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987733"
 ---
-# <a name="icordebugprocessgetobject-method"></a>ICorDebugProcess::GetObject Metodu
+# <a name="icordebugprocessgetobject-method"></a>ICorDebugProcess::GetObject Yöntemi
 Bu yöntem uygulanmadı.  
   
 ## <a name="syntax"></a>Sözdizimi  

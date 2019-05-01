@@ -5,11 +5,11 @@ helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
 ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991068"
 ---
 # <a name="routing-scenarios"></a>Yönlendirme Senaryoları
 Yönlendirme hizmeti yüksek oranda özelleştirilebilir olsa da, bunu yeni bir yapılandırma sıfırdan oluştururken, verimli yönlendirme mantığı tasarlamak için bir mücadele haline gelebilir.  Ancak, çoğu yönlendirme hizmeti yapılandırma izleyin birçok yaygın senaryo vardır. Bu senaryolar belirli yapılandırmanızı doğrudan geçerli değil. ancak, yönlendirme hizmeti bu senaryolar işlemek için nasıl yapılandırılabileceğini anlama, yönlendirme hizmeti anlaşılmasına yardımcı olur.  
@@ -49,9 +49,9 @@ Yönlendirme hizmeti yüksek oranda özelleştirilebilir olsa da, bunu yeni bir 
 ### <a name="multicast"></a>Çok noktaya yayın  
  Genellikle ileti yönlendirme, belirli bir hedef uç noktasına her ileti yönlendirme.  Bununla birlikte, iletinin bir kopyasını birden çok hedef Uç noktalara yönlendirmek zaman zaman gerekebilir. Çok noktaya yayın yönlendirme gerçekleştirmek için aşağıdaki koşulların doğru olması gerekir:  
   
--   (Bu tek yönlü veya çift yönlü olabilir, ancak) kanal şekli yalnızca bir yanıt isteğine yanıt olarak istemci uygulaması tarafından alınan, istek-yanıt taahhütlerin olduğundan istek-yanıt olmamalıdır.  
+- (Bu tek yönlü veya çift yönlü olabilir, ancak) kanal şekli yalnızca bir yanıt isteğine yanıt olarak istemci uygulaması tarafından alınan, istek-yanıt taahhütlerin olduğundan istek-yanıt olmamalıdır.  
   
--   Birden çok filtre döndürmelidir **true** ileti değerlendirirken.  
+- Birden çok filtre döndürmelidir **true** ileti değerlendirirken.  
   
  Bu koşullar karşılanıyorsa true döndüren bir filtre ile ilişkili her bir hedef uç noktasının iletinin bir kopyasını alır.  
   

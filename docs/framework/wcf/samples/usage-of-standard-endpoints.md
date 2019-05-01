@@ -6,8 +6,8 @@ ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006344"
 ---
 # <a name="usage-of-standard-endpoints"></a>Standart uç noktaları
 
@@ -143,13 +143,13 @@ public class CustomEndpoint : ServiceEndpoint
 
 2. Başlamak birden çok proje etkinleştirin.
 
-    1.  İçinde **Çözüm Gezgini**, standart uç noktaları çözüme sağ tıklayın ve ardından **özellikleri**.
+    1. İçinde **Çözüm Gezgini**, standart uç noktaları çözüme sağ tıklayın ve ardından **özellikleri**.
 
-    2.  İçinde **ortak özellikler**seçin **başlangıç projesi**ve ardından **birden fazla başlangıç projesi**.
+    2. İçinde **ortak özellikler**seçin **başlangıç projesi**ve ardından **birden fazla başlangıç projesi**.
 
-    3.  Hizmet projesi ile listenin başına taşı **eylem** kümesine **Başlat**.
+    3. Hizmet projesi ile listenin başına taşı **eylem** kümesine **Başlat**.
 
-    4.  İstemci projesi hizmet projesi sonra da WITH move **eylem** kümesine **Başlat**.
+    4. İstemci projesi hizmet projesi sonra da WITH move **eylem** kümesine **Başlat**.
 
          Bu, istemci projesinin sonra hizmet projesi yürütüldüğünü belirtir.
 

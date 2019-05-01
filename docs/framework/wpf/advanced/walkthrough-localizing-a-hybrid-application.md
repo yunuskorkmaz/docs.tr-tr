@@ -6,11 +6,11 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
 ms.openlocfilehash: 01530d4ae9779934948bbaff60fbbd392de6e701
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007142"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>İzlenecek yol: Karma Uygulamayı Yerelleştirme
 
@@ -18,15 +18,15 @@ Bu izlenecek yol size nasıl yerelleştirileceği konusunda gösterir [!INCLUDE[
 
 Bu kılavuzda gösterilen görevler aşağıdakileri içerir:
 
--   Oluşturma [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] konak projesi.
+- Oluşturma [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] konak projesi.
 
--   Yerelleştirilebilir İçerik ekleme.
+- Yerelleştirilebilir İçerik ekleme.
 
--   Yerelleştirme etkinleştiriliyor.
+- Yerelleştirme etkinleştiriliyor.
 
--   Kaynak Tanımlayıcıları atanıyor.
+- Kaynak Tanımlayıcıları atanıyor.
 
--   LocBaml aracı, bir uydu derlemesi üretmek için kullanma.
+- LocBaml aracı, bir uydu derlemesi üretmek için kullanma.
 
 Bu izlenecek yolda gösterilen görevler tam kod listesi için bkz. [görevlerin yerelleştirme](https://go.microsoft.com/fwlink/?LinkID=160015).
 
@@ -36,7 +36,7 @@ Bu izlenecek yolda gösterilen görevler tam kod listesi için bkz. [görevlerin
 
 Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="creating-the-windows-forms-host-project"></a>Windows Forms konak projesi oluşturma
 

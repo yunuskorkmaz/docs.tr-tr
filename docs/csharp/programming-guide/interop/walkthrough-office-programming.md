@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
 ms.openlocfilehash: 1f46d6594c249db394a5493ad9cdbbb1937a5d45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61974798"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>İzlenecek yol: Office Programlama (C# ve Visual Basic)
 Visual Studio, C# ve Visual Basic, Microsoft Office programlama artıran özellikleri sunar. Yararlı C# özellikleri adlandırılmış ve isteğe bağlı bağımsız değişkenler içerir ve dönüş türü değerlerinin `dynamic`. COM programlama, atlayabilirsiniz `ref` Dizinli Özellikler anahtar sözcüğü ve kazanç erişim. Visual Basic'de özellikler, lambda ifadeleri ve koleksiyon başlatıcıları deyimlerinde otomatik uygulanan özellikler içerir.
@@ -93,11 +93,11 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
   
      Bu yöntemi, iki yeni C# özellikleri kullanılır. Bu özelliklerin her ikisi de Visual Basic'te zaten mevcut.  
   
-    -   Yöntemi [Ekle](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) sahip bir *isteğe bağlı parametre* belirli bir şablon belirtmek için. İsteğe bağlı parametreler, yeni [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], parametrenin varsayılan değeri kullanmak istiyorsanız, bu parametreye yönelik bağımsız değişkeni atlamak sağlar. Önceki örnekte hiçbir bağımsız değişken gönderildiği `Add` varsayılan şablonu kullanır ve yeni bir çalışma kitabı oluşturur. C# ' ın önceki sürümlerinde eşdeğer deyimi bir yer tutucu bağımsız değişken gerektiriyor: `excelApp.Workbooks.Add(Type.Missing)`.  
+    - Yöntemi [Ekle](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) sahip bir *isteğe bağlı parametre* belirli bir şablon belirtmek için. İsteğe bağlı parametreler, yeni [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], parametrenin varsayılan değeri kullanmak istiyorsanız, bu parametreye yönelik bağımsız değişkeni atlamak sağlar. Önceki örnekte hiçbir bağımsız değişken gönderildiği `Add` varsayılan şablonu kullanır ve yeni bir çalışma kitabı oluşturur. C# ' ın önceki sürümlerinde eşdeğer deyimi bir yer tutucu bağımsız değişken gerektiriyor: `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Daha fazla bilgi için [adlandırılmış ve isteğe bağlı bağımsız değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   
-    -   `Range` Ve `Offset` özelliklerini [aralığı](<xref:Microsoft.Office.Interop.Excel.Range>) nesne kullanım *özellikleri dizine* özelliği. Bu özellik, aşağıdaki tipik C# sözdizimi ile bu özellikler COM türünden kullanmasını sağlar. Dizinli Özellikler de etkinleştirmeniz kullanmanızı `Value` özelliği `Range` kullanma gereksinimini ortadan kaldırır, nesne `Value2` özelliği. `Value` Özelliği tarihine, ancak dizin isteğe bağlıdır. İsteğe bağlı bağımsız değişkenler ve dizinli özellikler aşağıdaki örnekte birlikte çalışır.  
+    - `Range` Ve `Offset` özelliklerini [aralığı](<xref:Microsoft.Office.Interop.Excel.Range>) nesne kullanım *özellikleri dizine* özelliği. Bu özellik, aşağıdaki tipik C# sözdizimi ile bu özellikler COM türünden kullanmasını sağlar. Dizinli Özellikler de etkinleştirmeniz kullanmanızı `Value` özelliği `Range` kullanma gereksinimini ortadan kaldırır, nesne `Value2` özelliği. `Value` Özelliği tarihine, ancak dizin isteğe bağlıdır. İsteğe bağlı bağımsız değişkenler ve dizinli özellikler aşağıdaki örnekte birlikte çalışır.  
   
          [!code-csharp[csOfficeWalkthrough#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#5)]  
   

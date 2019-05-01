@@ -6,10 +6,10 @@ ms.author: jekoritz
 ms.date: 01/18/2019
 ms.openlocfilehash: d1da6be56e14f72e17cf8fc9ba343ce148fe0931
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973517"
 ---
 # <a name="platform-invoke-pinvoke"></a>Platform Çağırma (P/Invoke)
 
@@ -38,9 +38,9 @@ public class Program
 
 Önceki örnekte basit bir işlemdir ancak ne yönetilen koddan yönetilmeyen işlevleri çağırmak gerekli olan kapalı göstermez. Şimdi örnek adım:
 
-*   Satır #1 gösterir kullanarak deyimi için `System.Runtime.InteropServices` gereken tüm öğeleri içeren ad alanı.
-*   Satır #7 tanıtır `DllImport` özniteliği. Bu öznitelik, çalışma zamanı yönetilmeyen DLL yükleyeceğini bildirdiğinde önemlidir. Geçirilen dize bizim hedef işlevi DLL ' dir. Ayrıca, hangi belirtir [karakter kümesi](./charset.md) dizeleri taşıma için kullanılacak. Son olarak, bu işlev çağrı yaptığını belirtir [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) ve kullanıcı ile alabilirsiniz. Bu nedenle çalışma zamanı hata kodu yakalamalısınız <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType>.
-*   #8 nin en önemli özelliği P/Invoke iş satırıdır. Bir yönetilen yöntemin tanımlar **tam aynı imzaya** yönetilmeyen olarak. Fark, yeni bir anahtar sözcük bildirime sahip `extern`çağırdığınızda, çalışma zamanı bu söyleyen dış bir Metoda ve, çalışma zamanı içinde belirtilen DLL bulmalısınız `DllImport` özniteliği.
+* Satır #1 gösterir kullanarak deyimi için `System.Runtime.InteropServices` gereken tüm öğeleri içeren ad alanı.
+* Satır #7 tanıtır `DllImport` özniteliği. Bu öznitelik, çalışma zamanı yönetilmeyen DLL yükleyeceğini bildirdiğinde önemlidir. Geçirilen dize bizim hedef işlevi DLL ' dir. Ayrıca, hangi belirtir [karakter kümesi](./charset.md) dizeleri taşıma için kullanılacak. Son olarak, bu işlev çağrı yaptığını belirtir [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) ve kullanıcı ile alabilirsiniz. Bu nedenle çalışma zamanı hata kodu yakalamalısınız <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType>.
+* #8 nin en önemli özelliği P/Invoke iş satırıdır. Bir yönetilen yöntemin tanımlar **tam aynı imzaya** yönetilmeyen olarak. Fark, yeni bir anahtar sözcük bildirime sahip `extern`çağırdığınızda, çalışma zamanı bu söyleyen dış bir Metoda ve, çalışma zamanı içinde belirtilen DLL bulmalısınız `DllImport` özniteliği.
 
 Yönetilen herhangi bir yöntemi gibi örneğin geri kalanı yöntemi yalnızca çalıştırır.
 
@@ -138,10 +138,10 @@ namespace ConsoleApplication1
 
 Şimdi, örnek atalım:
 
-*   #9. satırına örnekte geri çağırma, yönetilmeyen koddan imzayla eşleşen bir temsilci tanımlar. LPARAM ve HWND türleri nasıl temsil edildiğini fark kullanarak `IntPtr` yönetilen kod.
-*   #13 ve #14. satır tanıtmak `EnumWindows` user32.dll kitaplığından işlevi.
-*   Satırları #17-20 temsilci uygulayın. Bu basit örnekte, yalnızca tutamaç konsola çıktı istiyoruz.
-*   Son olarak, satır #24, dış yöntemi çağrılır ve Temsilcide geçirildi.
+* #9. satırına örnekte geri çağırma, yönetilmeyen koddan imzayla eşleşen bir temsilci tanımlar. LPARAM ve HWND türleri nasıl temsil edildiğini fark kullanarak `IntPtr` yönetilen kod.
+* #13 ve #14. satır tanıtmak `EnumWindows` user32.dll kitaplığından işlevi.
+* Satırları #17-20 temsilci uygulayın. Bu basit örnekte, yalnızca tutamaç konsola çıktı istiyoruz.
+* Son olarak, satır #24, dış yöntemi çağrılır ve Temsilcide geçirildi.
 
 Linux ve Macos'ta örnekleri aşağıda gösterilmiştir. Bunlar için kullandığımız `ftw` bulunabilir işlevi `libc`, C Kitaplığı. Bu işlev, dizin hiyerarşileri geçirmek için kullanılır ve bir işlev işaretçisi, parametrelerinden biri alır. Aşağıdaki imza söz konusu işlev vardır: `int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`.
 

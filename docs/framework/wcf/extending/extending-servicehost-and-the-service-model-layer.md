@@ -5,30 +5,30 @@ helpviewer_keywords:
 - extending service models [WCF]
 ms.assetid: 954c138a-1cd0-45a0-8abe-e4d2b8ff5400
 ms.openlocfilehash: 9e08b5b7b11848262d2cb7b6ed5715799d597889
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991776"
 ---
 # <a name="extending-servicehost-and-the-service-model-layer"></a>ServiceHost Hizmet Modeli Katmanını Genişletme
-Temel alınan kanalları dışında gelen iletileri çekme, bunları yöntem çağrılarına uygulama kodundaki içine çevirme ve sonuçları çağırana geri göndermek için hizmet modeli katmanını sorumludur. Hizmet modeli uzantıları değiştirebilir veya yürütme veya iletişim davranışı ve istemci veya dağıtıcısı işlevi, özel davranışları, ileti ve parametre kişiler tarafından ele ve diğer genişletilebilirlik işlevleri içeren özellikler uygular.  
+Hizmet modeli katmanını çağırana geri göndererek arka plandaki kanal gelen iletileri çekerek ve bunları yöntem çağrıları uygulama kodunda içine çevirme sorumludur. Hizmet modeli uzantıları değiştirebilir veya yürütme veya iletişim davranışı ve istemci veya dağıtıcı işlevi, özel davranışlar, ileti ve parametre durdurma ve diğer genişletilebilirlik işlevlerini içeren özellikler uygular.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [İstemcileri Genişletme](../../../../docs/framework/wcf/extending/extending-clients.md)  
- Kesebilen ve istemci çalışma zamanı olarak özel uzantılarınızın istemci uygulamalarında ekleyebilirsiniz sınıfları değiştirme arabirimler açıklanmaktadır. Örneğin, özel istemci ileti günlüğe kaydetme gerçekleştirmek, özel ileti serileştirme gerçekleştirmek ve benzeri.  
+ Uzantılarınızı özel istemci uygulamalarında ekleyebilirsiniz sınıfları yanı sıra istemci çalışma zamanı değiştirmek ve arabirimler açıklanmaktadır. Örneğin, özel istemci ileti günlüğe kaydetmeyi gerçekleştirmek, özel ileti serileştirme yapmak ve benzeri.  
   
  [Dağıtıcıları Genişletme](../../../../docs/framework/wcf/extending/extending-dispatchers.md)  
- Kesebilen ve hizmet çalışma zamanı olarak özel uzantılarınızın hizmet uygulamalarını ekleyebilirsiniz sınıfları değiştirme arabirimler açıklanmaktadır. Örneğin, özel hizmet günlüğü, hizmet tarafı ileti doğrulama, özel göndermeyi ve benzeri gerçekleştirebilirsiniz.  
+ İçinde özel uzantılarınızı hizmet uygulamalarını ekleyebilirsiniz sınıfları yanı sıra, hizmet çalışma zamanı değiştirmek ve arabirimler açıklanmaktadır. Örneğin, özel hizmet günlüğü, hizmet tarafı ileti doğrulama, özel gönderme ve benzeri gerçekleştirebilirsiniz.  
   
  [Genişletilebilen Nesneler](../../../../docs/framework/wcf/extending/extensible-objects.md)  
- Beş genişletilebilen nesneler açıklar ve <xref:System.ServiceModel.IExtensibleObject%601> düzeni. Genişletilebilir object deseni ya da varolan çalışma zamanı sınıflarını yeni işlevselliği ile genişletmek veya bir nesne için yeni durum eklemek için kullanılır. Genişletilebilen nesneler birine ekli uzantılar, paylaşılan durum ve bunlar erişebileceği bir ortak Genişletilebilir nesneye iliştirilmiş işlevlerine erişimini işleme çok farklı aşamalarında davranışları etkinleştirin.  
+ Beş genişletilebilen nesneler açıklar ve <xref:System.ServiceModel.IExtensibleObject%601> deseni. Genişletilebilir nesne düzeni ya da var olan çalışma zamanı sınıflar yeni işlevlerle genişletmek veya bir nesneye yeni bir durum eklemek için kullanılır. Genişletilebilen nesneler birine bağlı uzantılar, paylaşılan durum ve işlevselliği, erişimleri olan bir ortak Genişletilebilir nesnesine erişmek için işleme çok farklı aşamalarında davranışları etkinleştirin.  
   
  [Çalışma Zamanını Davranışlarla Yapılandırma ve Genişletme](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)  
- Ayarları değiştirmek veya WCF çalışma zamanı'nda uzantıları eklemek için davranışları kullanın. WCF sistem uygulanan davranış azaltma, depolamasına ve birçok diğer yönlerini Hizmetleri ve işlemleri denetleme içerir. Bu bölümde, kendi özel davranışları ve bunları her iki program aracılığıyla kullanımına nasıl ve yapılandırma dosyaları kullanılarak nasıl oluşturulacağını açıklar.  
+ Ayarları değiştirmek veya WCF çalışma zamanı'nda uzantıları eklemek için davranışları kullanın. WCF sistem uygulanan davranış azaltma, depolamasına ve birçok diğer yönleri Hizmetleri ve işlemleri denetleme içerir. Bu bölümde, kendi özel davranışlarınızı ve bunları program aracılığıyla her iki kullanmak için kullanılabilir hale getirme ve yapılandırma dosyalarını kullanarak nasıl oluşturulacağı açıklanmaktadır.  
   
  [ServiceHostFactory Kullanarak Barındırmayı Genişletme](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)  
- Nasıl genişletileceğini açıklar <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType>, <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>ve <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> ana bilgisayar ortamının özelleştirmek için sınıflar.  
+ Nasıl genişletileceğini açıklar <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType>, <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>ve <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> konak ortamı özelleştirmek için sınıflar.  
   
 ## <a name="reference"></a>Başvuru  
   

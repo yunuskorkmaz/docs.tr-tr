@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
 ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007141"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>İzlenecek yol: WindowsFormsHost Öğesi Kullanarak Özellikleri Eşleme
 
@@ -21,17 +21,17 @@ Bu izlenecek yol size nasıl kullanılacağını gösterir <xref:System.Windows.
 
 Bu kılavuzda gösterilen görevler aşağıdakileri içerir:
 
--   Proje oluşturuluyor.
+- Proje oluşturuluyor.
 
--   Uygulama düzenini tanımlama.
+- Uygulama düzenini tanımlama.
 
--   Yeni bir özellik eşlemesi tanımlama.
+- Yeni bir özellik eşlemesi tanımlama.
 
--   Varsayılan özellik eşlemesi kaldırılıyor.
+- Varsayılan özellik eşlemesi kaldırılıyor.
 
--   Varsayılan özellik eşlemesi değiştiriliyor.
+- Varsayılan özellik eşlemesi değiştiriliyor.
 
--   Varsayılan özellik eşlemesi genişletme.
+- Varsayılan özellik eşlemesi genişletme.
 
 Bu izlenecek yolda gösterilen görevler tam kod listesi için bkz. [WindowsFormsHost öğesi örneği kullanarak eşleme özelliklerini](https://go.microsoft.com/fwlink/?LinkID=160019).
 
@@ -41,7 +41,7 @@ Bitirdiğiniz zaman, eşlemek mümkün olmayacak [!INCLUDE[TLA2#tla_winclient](.
 
 Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="create-and-set-up-the-project"></a>Oluşturma ve projesi kurun
 
@@ -76,7 +76,7 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 ### <a name="to-define-a-new-property-mapping"></a>Yeni bir özellik eşlemesi tanımlamak için
 
--   Tanımı aşağıdaki kodu kopyalayarak `Window1` sınıfı.
+- Tanımı aşağıdaki kodu kopyalayarak `Window1` sınıfı.
 
      [!code-csharp[PropertyMappingWithWfhSample#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#14)]
      [!code-vb[PropertyMappingWithWfhSample#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#14)]
@@ -93,7 +93,7 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 ### <a name="to-remove-a-default-property-mapping"></a>Varsayılan özellik eşlemesini kaldırmak için
 
--   Tanımı aşağıdaki kodu kopyalayarak `Window1` sınıfı.
+- Tanımı aşağıdaki kodu kopyalayarak `Window1` sınıfı.
 
      [!code-csharp[PropertyMappingWithWfhSample#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#13)]
      [!code-vb[PropertyMappingWithWfhSample#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#13)]
@@ -106,7 +106,7 @@ Varsayılan eşleme ve arama kaldırarak bir varsayılan özellik eşlemesini de
 
 ### <a name="to-replace-a-default-property-mapping"></a>Varsayılan özellik eşlemesini değiştirmek için
 
--   Tanımı aşağıdaki kodu kopyalayarak `Window1` sınıfı.
+- Tanımı aşağıdaki kodu kopyalayarak `Window1` sınıfı.
 
      [!code-csharp[PropertyMappingWithWfhSample#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#12)]
      [!code-vb[PropertyMappingWithWfhSample#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#12)]
@@ -123,7 +123,7 @@ Varsayılan özellik eşlemesini ve ayrıca kendi eşleme ile genişletmek kulla
 
 ### <a name="to-extend-a-default-property-mapping"></a>Varsayılan özellik eşlemesi genişletmek için
 
--   Tanımı aşağıdaki kodu kopyalayarak `Window1` sınıfı.
+- Tanımı aşağıdaki kodu kopyalayarak `Window1` sınıfı.
 
      [!code-csharp[PropertyMappingWithWfhSample#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#15)]
      [!code-vb[PropertyMappingWithWfhSample#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#15)]
@@ -145,11 +145,11 @@ Varsayılan özellik eşlemesini ve ayrıca kendi eşleme ile genişletmek kulla
 
      `WindowLoaded` Yöntemi tanıtıcıları <xref:System.Windows.FrameworkElement.Loaded> olay ve aşağıdaki başlatmaya gerçekleştirir.
 
-    -   Oluşturur bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> denetimi.
+    - Oluşturur bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> denetimi.
 
-    -   Özellik eşlemelerini ayarlamak için daha önce izlenecek içinde tanımlanan yöntemleri çağırır.
+    - Özellik eşlemelerini ayarlamak için daha önce izlenecek içinde tanımlanan yöntemleri çağırır.
 
-    -   Eşlenen özelliklere başlangıç değerleri atar.
+    - Eşlenen özelliklere başlangıç değerleri atar.
 
 2. Tuşuna **F5** oluşturun ve uygulamayı çalıştırın. Etkisini görmek için bu onay kutusuna tıklayın <xref:System.Windows.FrameworkElement.FlowDirection%2A> eşleme. Düzen onay kutusuna tıklayın, soldan sağa yönünü tersine çevirir.
 

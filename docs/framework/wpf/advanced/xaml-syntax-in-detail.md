@@ -30,11 +30,11 @@ helpviewer_keywords:
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
 ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981376"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ayrıntılı XAML Sözdizimi
 Bu konuda, XAML söz dizimi öğeleri tanımlamak için kullanılan terimleri tanımlar. Bu terimler sık kalanında bu belge, WPF belgeler için her ikisi de özellikle ve XAML veya XAML dil desteğini System.Xaml düzeyinde Etkin temel XAML kavramları kullanan diğer çerçeveler için kullanılır. Bu konu başlığı altında bu konu başlığı altında tanıtılan temel terminoloji genişletir. [XAML genel bakış (WPF)](xaml-overview-wpf.md).  
@@ -58,9 +58,9 @@ Bu konuda, XAML söz dizimi öğeleri tanımlamak için kullanılan terimleri ta
 ## <a name="object-element-syntax"></a>Nesne öğesi sözdizimi  
  *Nesne öğesi sözdizimi* bir XML öğesi bildirerek bir CLR sınıf veya yapı başlatan XAML biçimlendirme sözdizimi aşağıdaki gibidir. Bu sözdizimi, diğer biçimlendirme diller gibi HTML öğesi sözdizimi benzer. Nesne öğesi sözdizimi bir sol açılı ayraç ile başlar (\<), ardından sınıf veya yapının örneği oluşturulan tür adı. Sıfır veya daha fazla boşluk tür adı izleyebilir ve sıfır veya daha fazla öznitelik de bildirilen nesne öğesi her bir öznitelik adı ayıran bir veya daha fazla boşluk ile "value" eşleştirmesi. Son olarak, aşağıdakilerden biri doğru olmalıdır:  
   
--   Öğesini ve etiket bir sağ açılı ayraç (>) hemen ardından bir eğik çizgi (/) tarafından kapatılmalıdır.  
+- Öğesini ve etiket bir sağ açılı ayraç (>) hemen ardından bir eğik çizgi (/) tarafından kapatılmalıdır.  
   
--   Açılış etiketinde bir sağ açılı ayraç (>) tamamlanması gerekir. Diğer nesne öğeleri, özellik öğelerinin veya iç metin, açılış etiketinde takip edebilirsiniz. Tam olarak hangi içeriği burada bulunabilecek genellikle öğesi nesne modeli tarafından sınırlanır. Kapanış etiketi nesne öğesi eşdeğer Ayrıca, uygun iç içe geçme mevcut ve diğer açılış ve kapanış etiketi çiftleri ile dengelemeniz gerekir.  
+- Açılış etiketinde bir sağ açılı ayraç (>) tamamlanması gerekir. Diğer nesne öğeleri, özellik öğelerinin veya iç metin, açılış etiketinde takip edebilirsiniz. Tam olarak hangi içeriği burada bulunabilecek genellikle öğesi nesne modeli tarafından sınırlanır. Kapanış etiketi nesne öğesi eşdeğer Ayrıca, uygun iç içe geçme mevcut ve diğer açılış ve kapanış etiketi çiftleri ile dengelemeniz gerekir.  
   
  .NET tarafından uygulandığı gibi XAML nesne öğelerinin türleri, özellikleri veya olayları ve CLR ad alanları ve bütünleştirilmiş kod için XAML ad alanları öznitelikler içine eşleyen kuralları kümesi vardır. WPF ve .NET Framework için XAML nesne öğelerini eşleyin [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] başvurulan derlemeler içinde tanımlanan türleri ve öznitelikleri eşlemek için bu türlerin üyeleri. Bir CLR türü XAML içinde başvurduğunuzda, devralınan üyeleri de o türdeki erişiminiz vardır.  
   
@@ -154,11 +154,11 @@ Bu konuda, XAML söz dizimi öğeleri tanımlamak için kullanılan terimleri ta
 ## <a name="collection-syntax"></a>Koleksiyon söz dizimi  
  Değer türü bir koleksiyon olduğu özellikleri tanımlamak için XAML işlemcisi uygulamaları XAML belirtimi gerektirir. . NET'te genel XAML işlemci uygulamasında, yönetilen kod ve CLR temel alır ve koleksiyon türleri aşağıdakilerden biri aracılığıyla tanımlar:  
   
--   Uygulayan türü <xref:System.Collections.IList>.  
+- Uygulayan türü <xref:System.Collections.IList>.  
   
--   Uygulayan türü <xref:System.Collections.IDictionary>.  
+- Uygulayan türü <xref:System.Collections.IDictionary>.  
   
--   Tür türetilir <xref:System.Array> (XAML içindeki diziler hakkında daha fazla bilgi için bkz: [x: Array işaretleme uzantısı](../../xaml-services/x-array-markup-extension.md).)  
+- Tür türetilir <xref:System.Array> (XAML içindeki diziler hakkında daha fazla bilgi için bkz: [x: Array işaretleme uzantısı](../../xaml-services/x-array-markup-extension.md).)  
   
  Özellik türü bir koleksiyon, ardından çıkarsanan koleksiyon türü bir nesne öğesi olarak işaretleme belirtilmesi gerekmez. Bunun yerine, koleksiyondaki öğelerin olmaya yönelik öğeleri bir veya daha fazla öğenin alt öğeleri özellik belirtilir. Her bir öğe yükleme sırasında bir nesne için değerlendirilir ve çağırarak koleksiyona eklenen `Add` yöntemi örtülü koleksiyon. Örneğin, <xref:System.Windows.Style.Triggers%2A> özelliği <xref:System.Windows.Style> özel koleksiyon türü alan <xref:System.Windows.TriggerCollection>, uygulayan <xref:System.Collections.IList>. Örneği oluşturmak gerekli olmayan bir <xref:System.Windows.TriggerCollection> biçimlendirmede nesne öğesi. Bunun yerine, bir veya daha fazla belirttiğiniz <xref:System.Windows.Trigger> öğeleri içinde öğeleri olarak `Style.Triggers` özellik öğesi burada <xref:System.Windows.Trigger> (veya türetilmiş bir sınıf) kesin türü belirtilmiş ve örtük için öğe türü olarak beklenen tür <xref:System.Windows.TriggerCollection>.  
   
@@ -264,9 +264,9 @@ Bu konuda, XAML söz dizimi öğeleri tanımlamak için kullanılan terimleri ta
   
  Ekli özelliklerini kullanma yüzeysel olarak özellik öğesi sözdizimine benzer bir sözdizimi da belirttiğiniz bir *typeName*. *propertyName* birleşimi. İki önemli farklar vardır:  
   
--   Kullanabileceğiniz *typeName*. *propertyName* birlikte öznitelik söz dizimi aracılığıyla eklenen bir özelliği ayarlamak için kullanılır. Ekli özellikler yalnızca durum özellik adı uygun yerlerde öznitelik sözdizimi içinde bir gereksinim bağımlıdır.  
+- Kullanabileceğiniz *typeName*. *propertyName* birlikte öznitelik söz dizimi aracılığıyla eklenen bir özelliği ayarlamak için kullanılır. Ekli özellikler yalnızca durum özellik adı uygun yerlerde öznitelik sözdizimi içinde bir gereksinim bağımlıdır.  
   
--   Özellik öğesi sözdizimine iliştirilmiş özellikler için de kullanabilirsiniz. Ancak, tipik bir özellik öğesi sözdizimi için *typeName* özellik öğesi içeren bir nesne öğe belirtin. Ekli bir özellik için başvuruyorsanız sonra *typeName* ekli değil içeren nesne öğesi özelliği tanımlayan sınıftır.  
+- Özellik öğesi sözdizimine iliştirilmiş özellikler için de kullanabilirsiniz. Ancak, tipik bir özellik öğesi sözdizimi için *typeName* özellik öğesi içeren bir nesne öğe belirtin. Ekli bir özellik için başvuruyorsanız sonra *typeName* ekli değil içeren nesne öğesi özelliği tanımlayan sınıftır.  
   
 <a name="attached_events"></a>   
 ## <a name="attached-events"></a>Ekli Olaylar  

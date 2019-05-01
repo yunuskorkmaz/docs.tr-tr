@@ -5,11 +5,11 @@ helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
 ms.openlocfilehash: e34f2033ec0f7dac784634d06712d65786503299
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991269"
 ---
 # <a name="queues-overview"></a>Kuyruklar Genel Bakış
 Bu bölümde genel tanıtır ve ardındaki temel kavramları, kuyruğa alınmış iletişim. Sonraki bölümlerde, sıraya alma burada açıklanan kavramlar, Windows Communication Foundation (WCF) nasıl bildirilen hakkında ayrıntılara gidin.  
@@ -36,9 +36,9 @@ Bu bölümde genel tanıtır ve ardındaki temel kavramları, kuyruğa alınmı�
 ## <a name="queues-and-transactions"></a>Kuyruklar ve işlemler  
  İşlemler bir işlem başarısız olursa, tüm işlemler başarısız olacak şekilde bir dizi işlemlerini gruplamanıza izin verin. Bir kişi kendi tasarruf hesabından 1,000 kendi denetleme hesabınıza aktarmak bir ATM kullandığında hareketleri kullanmak nasıl bir örneğidir. Bu, şu işlemleri kapsar:  
   
--   1.000 ABD Doları tasarruf hesaptan geri alınmasının.  
+- 1.000 ABD Doları tasarruf hesaptan geri alınmasının.  
   
--   1,000 denetleme hesaba ürünü.  
+- 1,000 denetleme hesaba ürünü.  
   
  İlk işlemi başarılı olur ve 1.000 ABD Doları tasarruf hesabından çekildiğinde ancak ikinci işlem başarısız ise, zaten tasarruf hesabından iptal olduğundan 1,000 kaybolur. Bir işlem başarısız olursa hesapları geçerli bir durumda tutmak için iki işlem başarısız olmalıdır.  
   
@@ -59,9 +59,9 @@ Bu bölümde genel tanıtır ve ardındaki temel kavramları, kuyruğa alınmı�
   
  Hedef sıra ya da yaşam süresi sona ermekte ulaşmak başarısız olan bir ileti gibi herhangi bir hata ayrı olarak işlenmesi gerekir. Seyrek, bu nedenle, kuyruğa alınmış uygulamaları iki mantığı yazmak değil:  
   
--   İleti gönderme ve alma, service mantığı ve normal istemci.  
+- İleti gönderme ve alma, service mantığı ve normal istemci.  
   
--   Başarısız iletim veya teslim gelen iletileri işlemek için telafi mantığı.  
+- Başarısız iletim veya teslim gelen iletileri işlemek için telafi mantığı.  
   
  Aşağıdaki bölümlerde bu kavramlar açıklanmaktadır.  
   

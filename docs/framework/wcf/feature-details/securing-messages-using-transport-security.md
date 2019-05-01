@@ -3,11 +3,11 @@ title: Taşıma Güveliği Kullanarak İletileri Güvenli Hale Getirme
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 ms.openlocfilehash: f32e932bb6616911baa8991cb46a5940c8d285ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990970"
 ---
 # <a name="securing-messages-using-transport-security"></a>Taşıma Güveliği Kullanarak İletileri Güvenli Hale Getirme
 Bu bölümde, kuyruğa gönderilen iletileri güvenli hale getirmek için kullanabileceğiniz bir Message Queuing (MSMQ) aktarım güvenliği açıklanmaktadır.  
@@ -25,11 +25,11 @@ Bu bölümde, kuyruğa gönderilen iletileri güvenli hale getirmek için kullan
   
  Aktarım güvenliği kullanarak <xref:System.ServiceModel.NetMsmqBinding> ve <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> MSMQ iletileri güvenliği nasıl etkilediğini aktarım sırasında iletim sırası ve hedef sıra arasında güvenli bir yerde gösterir:  
   
--   İletinin emin olmak için imzalama değiştirilmiş değil.  
+- İletinin emin olmak için imzalama değiştirilmiş değil.  
   
--   İletinin görülen veya değiştirilmiş emin olmak için şifreleme. Bu önerilir ancak isteğe bağlıdır.  
+- İletinin görülen veya değiştirilmiş emin olmak için şifreleme. Bu önerilir ancak isteğe bağlıdır.  
   
--   Tanımlayan takası ileti gönderen hedef sıra Yöneticisi.  
+- Tanımlayan takası ileti gönderen hedef sıra Yöneticisi.  
   
  MSMQ, bağımsız olarak kimlik doğrulaması, hedef kuyruk bir erişim denetimi listesi (ACL) istemci hedef kuyruğa ileti gönderme izni olup olmadığını denetlemek için vardır. Alıcı uygulamanın hedef kuyruktan ileti alma izni de denetlenir.  
   

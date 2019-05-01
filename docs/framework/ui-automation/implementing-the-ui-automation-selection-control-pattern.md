@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
 ms.openlocfilehash: 6b5e0e4e0a14410c23833db6cc90d23e7959ad22
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983274"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>UI Otomasyon Seçim Denetim Düzenini Uygulama
 > [!NOTE]
@@ -25,16 +25,16 @@ ms.locfileid: "59087733"
 ## <a name="implementation-guidelines-and-conventions"></a>Uygulama yönergeleri ve kuralları  
  Seçim denetim düzeni uygularken aşağıdaki yönergeler ve kuralları dikkat edin:  
   
--   Denetimleri uygulayan <xref:System.Windows.Automation.Provider.ISelectionProvider> tek veya birden çok alt öğeler seçilmesine izin verin. Örneğin, tek bir seçim birleşik giriş kutusu ve kaydırıcı radyo düğmesi grubunda desteklerken liste kutusu, liste görünümü ile ağaç görünümü birden fazla seçimi destekler.  
+- Denetimleri uygulayan <xref:System.Windows.Automation.Provider.ISelectionProvider> tek veya birden çok alt öğeler seçilmesine izin verin. Örneğin, tek bir seçim birleşik giriş kutusu ve kaydırıcı radyo düğmesi grubunda desteklerken liste kutusu, liste görünümü ile ağaç görünümü birden fazla seçimi destekler.  
   
--   Minimum, maksimum ve sürekli bir aralık gibi sahip denetimler **birim** kaydırıcı denetimi, uygulamanız gerekir <xref:System.Windows.Automation.Provider.IRangeValueProvider> yerine <xref:System.Windows.Automation.Provider.ISelectionProvider>.  
+- Minimum, maksimum ve sürekli bir aralık gibi sahip denetimler **birim** kaydırıcı denetimi, uygulamanız gerekir <xref:System.Windows.Automation.Provider.IRangeValueProvider> yerine <xref:System.Windows.Automation.Provider.ISelectionProvider>.  
   
--   Uygulama alt denetimler yönetme tek seçim denetimleri <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, gibi **ekran çözünürlüğü** kaydırıcı **görüntü özellikleri** iletişim kutusu veya **rengi Seçici** Seçim denetiminden [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (aşağıda gösterilen), uygulamalıdır <xref:System.Windows.Automation.Provider.ISelectionProvider>; bunların alt öğeleri hem de uygulamalıdır <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> ve <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
+- Uygulama alt denetimler yönetme tek seçim denetimleri <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, gibi **ekran çözünürlüğü** kaydırıcı **görüntü özellikleri** iletişim kutusu veya **rengi Seçici** Seçim denetiminden [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (aşağıda gösterilen), uygulamalıdır <xref:System.Windows.Automation.Provider.ISelectionProvider>; bunların alt öğeleri hem de uygulamalıdır <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> ve <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
   
  ![Renk Seçici vurgulanan sarı ile. ](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Renk örneği dize eşleme örneği  
   
--   Menüler desteklemez <xref:System.Windows.Automation.SelectionPattern>. Grafik ve metin içeren menü öğeleri ile çalışıyorsanız (gibi **önizleme bölmesinde** öğeler **görünümü** menüde [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)]) ve durumu iletmeniz gerekir, uygulamalıdır<xref:System.Windows.Automation.Provider.IToggleProvider>.  
+- Menüler desteklemez <xref:System.Windows.Automation.SelectionPattern>. Grafik ve metin içeren menü öğeleri ile çalışıyorsanız (gibi **önizleme bölmesinde** öğeler **görünümü** menüde [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)]) ve durumu iletmeniz gerekir, uygulamalıdır<xref:System.Windows.Automation.Provider.IToggleProvider>.  
   
 <a name="Required_Members_for_ISelectionProvider"></a>   
 ## <a name="required-members-for-iselectionprovider"></a>Gerekli üyeleri ISelectionProvider için  

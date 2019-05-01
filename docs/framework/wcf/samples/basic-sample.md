@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
 ms.openlocfilehash: 1ceee6dd11b59ab9b43797ca8b1fd80c232fc8ea
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002644"
 ---
 # <a name="basic-sample"></a>Temel Örnek
 Bu örnek, bir hizmet bulunabilir hale getirme ve arayın ve kayıtlı bir bulunabilir hizmet çağırmak nasıl gösterir. Bu örnek iki projeden oluşan: hizmet ve istemci.

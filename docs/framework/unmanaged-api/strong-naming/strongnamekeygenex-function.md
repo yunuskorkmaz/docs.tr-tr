@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: af75a645b11325b96740807f9a3df65f5a676026
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000252"
 ---
 # <a name="strongnamekeygenex-function"></a>StrongNameKeyGenEx İşlevi
 Tanımlayıcı ad kullanmak için belirtilen anahtar boyutu ile yeni bir ortak/özel anahtar çifti oluşturur.  
@@ -47,9 +47,9 @@ BOOLEAN StrongNameKeyGenEx (
  `dwFlags`  
  [in] Kaydedilen anahtar bırakın belirtir. Aşağıdaki değerleri desteklenir:  
   
--   kullanılan 0x00000000 - `wszKeyContainer` geçici bir anahtar kapsayıcısı adını oluşturmak için null.  
+- kullanılan 0x00000000 - `wszKeyContainer` geçici bir anahtar kapsayıcısı adını oluşturmak için null.  
   
--   0x00000001 (`SN_LEAVE_KEY`)-anahtar sol kaydedilmesi gerektiğini belirtir.  
+- 0x00000001 (`SN_LEAVE_KEY`)-anahtar sol kaydedilmesi gerektiğini belirtir.  
   
  `dwKeySize`  
  [in] İstenen bit cinsinden anahtar boyutunu.  

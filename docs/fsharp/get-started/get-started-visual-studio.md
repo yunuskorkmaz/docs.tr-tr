@@ -2,12 +2,12 @@
 title: Kullanmaya başlama F# Visual Studio'da
 description: Nasıl kullanacağınızı öğrenin F# Visual Studio ile.
 ms.date: 07/03/2018
-ms.openlocfilehash: 020e5d32b3aa5d5a2195c19d70d8fe684fbd56ef
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.openlocfilehash: 9b02a5d295f982b1911dab567213fa9a2b6c4304
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59331916"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808015"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Kullanmaya başlama F# Visual Studio'da
 
@@ -25,7 +25,7 @@ Visual Studio'da en temel projelerden birine bir konsol uygulamasıdır.  Nasıl
 
 3. Şunlardan birini seçin **.NET Core konsol uygulaması** veya **konsol uygulaması**.
 
-3. Seçin **Tamam** oluşturmak için düğmeyi F# proje!  Görmelisiniz bir F# Çözüm Gezgini'nde proje.
+4. Seçin **Tamam** oluşturmak için düğmeyi F# proje!  Görmelisiniz bir F# Çözüm Gezgini'nde proje.
 
 ## <a name="writing-your-code"></a>Kod yazma
 
@@ -35,7 +35,7 @@ Visual Studio'da en temel projelerden birine bir konsol uygulamasıdır.  Nasıl
 
 Önceki kod örneğinde, bir işlev `square` adlı girdi aldığı tanımlanan `x` ve kendisi tarafından çarpar.  Çünkü F# kullanan [tür çıkarımı](../language-reference/type-inference.md), türü `x` belirtilmesi gerekmez.  F# Derleyici çarpma olduğu geçerli türlerinin bilincindedir ve bir türe atar `x` bağlı `square` çağrılır.  Üzerine gelin, `square`, aşağıdaki görmeniz gerekir:
 
-```
+```fsharp
 val square: x:int -> int
 ```
 
@@ -63,7 +63,7 @@ Henüz yapmadıysanız, kullanıma [Turu F# ](../tour.md), bazı çekirdek özel
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [F# turu](../tour.md)
+- [F# Turu](../tour.md)
 - [F#Dil Başvurusu](../language-reference/index.md)
 - [Tür çıkarımı](../language-reference/type-inference.md)
 - [Simge ve işleç başvurusu](../language-reference/symbol-and-operator-reference/index.md)

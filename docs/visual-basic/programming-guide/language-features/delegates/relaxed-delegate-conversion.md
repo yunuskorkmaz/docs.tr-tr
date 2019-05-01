@@ -7,11 +7,11 @@ helpviewer_keywords:
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
 ms.openlocfilehash: 57e863d9781721a997ae49e1a5c9d8f3562a1bd0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973292"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>Gevşek Temsilci Dönüşümü (Visual Basic)
 Gevşek temsilci dönüşümü bile bunların imzalarını aynı olmadığında abonelerimizin ve işlevleri temsilci veya işleyicileri için atamanızı sağlar. Bu nedenle, temsilciler bağlama zaten için yöntem çağrılarına izin verilen bağlama ile tutarlı olur.  
@@ -19,7 +19,7 @@ Gevşek temsilci dönüşümü bile bunların imzalarını aynı olmadığında 
 ## <a name="parameters-and-return-type"></a>Parametreler ve dönüş türü  
  Tam imza eşleştirme yerine, aşağıdaki koşulların karşılanması gevşek dönüşüm gerektirir, `Option Strict` ayarlanır `On`:  
   
--   Bir genişletme dönüşümü her temsilcinin parametre veri türünden atanan işlevin karşılık gelen parametrenin veri türü için mevcut olmalıdır veya `Sub`. Aşağıdaki örnekte, temsilci `Del1` bir parametreye sahip bir `Integer`. Parametre `m` içinde atanan lambda ifadeleri var olan bir genişletme dönüşümü bir veri türüne sahip olmalıdır `Integer`, gibi `Long` veya `Double`.  
+- Bir genişletme dönüşümü her temsilcinin parametre veri türünden atanan işlevin karşılık gelen parametrenin veri türü için mevcut olmalıdır veya `Sub`. Aşağıdaki örnekte, temsilci `Del1` bir parametreye sahip bir `Integer`. Parametre `m` içinde atanan lambda ifadeleri var olan bir genişletme dönüşümü bir veri türüne sahip olmalıdır `Integer`, gibi `Long` veya `Double`.  
   
      [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
@@ -29,7 +29,7 @@ Gevşek temsilci dönüşümü bile bunların imzalarını aynı olmadığında 
   
      [!code-vb[VbVbalrRelaxedDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#8)]  
   
--   Atanan işlevin dönüş türünden ters yönde genişletme dönüştürmesi olmalıdır veya `Sub` temsilcinin dönüş türü. Aşağıdaki örneklerde, her atanmış bir lambda ifadesinin gövdesi için widens bir veri türü değerlendirilmelidir `Integer` çünkü dönüş türü `del1` olduğu `Integer`.  
+- Atanan işlevin dönüş türünden ters yönde genişletme dönüştürmesi olmalıdır veya `Sub` temsilcinin dönüş türü. Aşağıdaki örneklerde, her atanmış bir lambda ifadesinin gövdesi için widens bir veri türü değerlendirilmelidir `Integer` çünkü dönüş türü `del1` olduğu `Integer`.  
   
      [!code-vb[VbVbalrRelaxedDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#3)]  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
 ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006412"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme
 Windows Communication Foundation (WCF) uygulamaları, SOAP hatası nesneleri ve SOAP hatası nesneleri yönetilen özel durum nesnelere yönetilen özel durum nesneleri eşleyerek hata durumları işleyin. Bu bölümdeki konular, hata ortaya çıkarmak için sözleşmeler tasarlamak nasıl özel SOAP hataları olarak koşulları, bu tür hataları hizmeti uygulamasının bir parçası olarak döndürülecek nasıl ve istemciler bu tür hataları nasıl catch tartışın.  
@@ -25,9 +25,9 @@ Windows Communication Foundation (WCF) uygulamaları, SOAP hatası nesneleri ve 
   
  Genellikle, hizmetler (ve çift yönlü istemciler) başarıyla hata işleme uygulamalarıyla tümleştirmek için aşağıdaki adımları uygulayın:  
   
--   Özel durum koşulları için özel SOAP hataları eşleyin.  
+- Özel durum koşulları için özel SOAP hataları eşleyin.  
   
--   İstemciler ve hizmetler gönderin ve SOAP hataları özel durumlar olarak alın.  
+- İstemciler ve hizmetler gönderin ve SOAP hataları özel durumlar olarak alın.  
   
  Ayrıca, WCF istemcileri ve Hizmetleri bildirilmemiş soap hataları, hata ayıklama amacıyla kullanabileceğiniz ve varsayılan hata davranışına genişletebilirsiniz. Aşağıdaki bölümlerde, bu görevler ve kavramlar açıklanmaktadır.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
 ms.openlocfilehash: 155d5c36483accc12d066a5530fea20a563e1498
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977567"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>LINQ'i Destekleyen Visual Basic Özellikleri
 Adı [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Visual Basic'de sorgu söz dizimi destekler ve doğrudan dilinde diğer dil yapıları teknoloji ifade eder. İle [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], dış veri kaynağına karşı sorgu için yeni bir dil öğrenmek gerekmez. İlişkisel veritabanlarını, XML depoları veya nesneleri verilere karşı Visual Basic kullanarak sorgulayabilirsiniz. Sorgu dili özellikleri, bu tümleştirme, sözdizimi hataları ve tür güvenliği için derleme zamanı denetimi sağlar. Visual Basic'te, çeşitli zengin sorguları yazma bilmek zorunda çoğunu zaten bildiğiniz Bu tümleştirme de sağlar.  

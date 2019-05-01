@@ -4,55 +4,55 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 ms.openlocfilehash: 43fa859aa84189817dffe74ecd72253ab9b82585
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940497"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Nasıl yapılır: WIF İzleme Kullanarak Talep Kullanan Uygulama ve Hizmetlerde Hata Ayıklama
 ## <a name="applies-to"></a>Uygulanan Öğe  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)  
+- Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)  
   
--   WIF uygulamalarında hata ayıklama ve sorun giderme  
+- WIF uygulamalarında hata ayıklama ve sorun giderme  
   
 ## <a name="summary"></a>Özet  
  İzlemeyi analiz etmek nasıl izleme Görüntüleyicisi aracı kullanarak kaydeder ve bu'nasıl yapılır WIF izlemeyi yapılandırma, izleme günlükleri toplamak gerekli adımlar açıklar. Bu izleme girişleri WIF ilgili sorunları gidermek için gerekli eylemleri için genel eşleme sağlar.  
   
 ## <a name="contents"></a>İçindekiler  
   
--   Amaçlar  
+- Amaçlar  
   
--   Adımların Özeti  
+- Adımların Özeti  
   
--   1. adım – WIF Web.config yapılandırma dosyası kullanarak izlemeyi yapılandırma  
+- 1. adım – WIF Web.config yapılandırma dosyası kullanarak izlemeyi yapılandırma  
   
--   2. adım: WIF izleme dosyaları izleme Görüntüleyicisi aracı kullanarak analiz edin  
+- 2. adım: WIF izleme dosyaları izleme Görüntüleyicisi aracı kullanarak analiz edin  
   
--   3. adım – WIF düzeltmek için çözümleri tanımla ilgili sorunlar  
+- 3. adım – WIF düzeltmek için çözümleri tanımla ilgili sorunlar  
   
--   İlgili öğeler  
+- İlgili öğeler  
   
 ## <a name="objectives"></a>Amaçlar  
   
--   WIF izlemeyi yapılandırın.  
+- WIF izlemeyi yapılandırın.  
   
--   Görünüm izleme izleme Görüntüleyicisi Aracı'nda günlüğe kaydeder.  
+- Görünüm izleme izleme Görüntüleyicisi Aracı'nda günlüğe kaydeder.  
   
--   WIF tanımlamak ilgili sorunları izleme günlüğüne kaydeder.  
+- WIF tanımlamak ilgili sorunları izleme günlüğüne kaydeder.  
   
--   Uygulama WIF düzeltici eylemler ilgili sorunları izleme günlükleri bulunamadı.  
+- Uygulama WIF düzeltici eylemler ilgili sorunları izleme günlükleri bulunamadı.  
   
 ## <a name="summary-of-steps"></a>Adımların Özeti  
   
--   1. adım – WIF Web.config yapılandırma dosyası kullanarak izlemeyi yapılandırma  
+- 1. adım – WIF Web.config yapılandırma dosyası kullanarak izlemeyi yapılandırma  
   
--   2. adım: WIF izleme dosyaları izleme Görüntüleyicisi aracı kullanarak analiz edin  
+- 2. adım: WIF izleme dosyaları izleme Görüntüleyicisi aracı kullanarak analiz edin  
   
--   3. adım – WIF düzeltmek için çözümleri tanımla ilgili sorunlar  
+- 3. adım – WIF düzeltmek için çözümleri tanımla ilgili sorunlar  
   
 ## <a name="step-1--configure-wif-tracing-using-webconfig-configuration-file"></a>1. adım – WIF Web.config yapılandırma dosyası kullanarak izlemeyi yapılandırma  
  Bu adımda, yapılandırma bölümlerine değişiklikleri ekleyeceksiniz *Web.config* olaylarını izleme ve izleme günlüğüne saklamak WIF etkinleştirme dosya.  
@@ -108,4 +108,4 @@ ms.locfileid: "59321555"
   
 ## <a name="related-items"></a>İlgili öğeler  
   
--   [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

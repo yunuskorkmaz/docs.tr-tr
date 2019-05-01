@@ -12,11 +12,11 @@ ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7a3bbbaa565a6c118082456a1ab6d7af59db7067
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982481"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>Kısmen Güvenilen Koddan Kitaplıkları Kullanma
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -26,27 +26,27 @@ ms.locfileid: "59119281"
   
  Paylaşılan çağırmak için tam güven konak ya da korumalı alan izin verilmez daha az alan uygulamalar yönetilen kitaplıkları kitaplığı yazıcı özellikle kullanımının kendisine izin vermediği sürece <xref:System.Security.AllowPartiallyTrustedCallersAttribute> özniteliği. Bu nedenle, uygulama yazarları bazı kitaplıklar kendisine kısmen güvenilen bağlamından kullanılabilir olmayacağını farkında olmanız gerekir. Varsayılan olarak, tüm kod, yürütür kısmi güven [korumalı alan](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) ve de tam güven derleme listesini kısmen güvenilir değil. Kısmen güvenilen bir bağlamdan yürütülecek veya kısmen güvenilen kod tarafından çağrılmak için kodunuzu düşünmüyorsanız bu bölümdeki bilgiler hakkında merak gerekmez. Ancak, kısmen güvenilen bir bağlamdan gerekir ya da kısmen güvenilen kod ile etkileşim çalışmasına bir kod yazarsanız, aşağıdaki faktörleri dikkate almanız gerekir:  
   
--   Kitaplıkları birden çok uygulama tarafından paylaşılacak için tanımlayıcı ad ile imzalanması gerekir. Güçlü adlar izin genel bütünleştirilmiş kod önbelleğine yerleştirilen ya da tam güven listesine bir korumalı alana alma, kodunuzu <xref:System.AppDomain>, ve tüketiciler, belirli bir mobil kod parçasını gerçekten sizden kaynağının olduğunu doğrulamak izin verir.  
+- Kitaplıkları birden çok uygulama tarafından paylaşılacak için tanımlayıcı ad ile imzalanması gerekir. Güçlü adlar izin genel bütünleştirilmiş kod önbelleğine yerleştirilen ya da tam güven listesine bir korumalı alana alma, kodunuzu <xref:System.AppDomain>, ve tüketiciler, belirli bir mobil kod parçasını gerçekten sizden kaynağının olduğunu doğrulamak izin verir.  
   
--   Varsayılan olarak, güçlü adlı [düzey 1](../../../docs/framework/misc/security-transparent-code-level-1.md) paylaşılan kitaplıklar gerçekleştirmek örtük [LinkDemand](../../../docs/framework/misc/link-demands.md) için tam güven otomatik olarak herhangi bir şey yapmanıza gerek kalmadan kitaplığı yazıcı.  
+- Varsayılan olarak, güçlü adlı [düzey 1](../../../docs/framework/misc/security-transparent-code-level-1.md) paylaşılan kitaplıklar gerçekleştirmek örtük [LinkDemand](../../../docs/framework/misc/link-demands.md) için tam güven otomatik olarak herhangi bir şey yapmanıza gerek kalmadan kitaplığı yazıcı.  
   
--   Bir çağıranın tam güven yok ancak yine de bir tür kitaplığı çağırmayı dener, çalışma zamanı oluşturur bir <xref:System.Security.SecurityException> çağıran Kitaplığı'na bağlamak için izin verilmez.  
+- Bir çağıranın tam güven yok ancak yine de bir tür kitaplığı çağırmayı dener, çalışma zamanı oluşturur bir <xref:System.Security.SecurityException> çağıran Kitaplığı'na bağlamak için izin verilmez.  
   
--   Otomatik devre dışı bırakmak için **LinkDemand** ve oluşturulan gelen özel durumu engellersiniz, koyabilirsiniz **AllowPartiallyTrustedCallersAttribute** paylaşılan bir derleme kapsamı özniteliği Kitaplığı. Bu öznitelik, yönetilen kısmen güvenilen koddan çağrılan Kitaplıklarınızı sağlar.  
+- Otomatik devre dışı bırakmak için **LinkDemand** ve oluşturulan gelen özel durumu engellersiniz, koyabilirsiniz **AllowPartiallyTrustedCallersAttribute** paylaşılan bir derleme kapsamı özniteliği Kitaplığı. Bu öznitelik, yönetilen kısmen güvenilen koddan çağrılan Kitaplıklarınızı sağlar.  
   
--   Bu öznitelik bir kitaplıkla erişim izni kısmen güvenilen kod tarafından tanımlanan yine de sınırlamalar tabidir <xref:System.AppDomain>.  
+- Bu öznitelik bir kitaplıkla erişim izni kısmen güvenilen kod tarafından tanımlanan yine de sınırlamalar tabidir <xref:System.AppDomain>.  
   
--   Sahip olmayan bir kitaplık çağrılacak kısmen güvenilen kod için programlı hiçbir yolu yoktur **AllowPartiallyTrustedCallersAttribute** özniteliği.  
+- Sahip olmayan bir kitaplık çağrılacak kısmen güvenilen kod için programlı hiçbir yolu yoktur **AllowPartiallyTrustedCallersAttribute** özniteliği.  
   
  Belirli bir uygulamaya özel kitaplıkları, tanımlayıcı ad gerekmez veya **AllowPartiallyTrustedCallersAttribute** özniteliği ve uygulama dışında kötü amaçlı kod tarafından başvurulamaz. Bu kod, ekstra bir şey yapmanıza gerek kalmadan Geliştirici mobil kısmen güvenilen kod tarafından kasıtlı veya kasıtsız kötüye karşı korunur.  
   
  Açıkça kod aşağıdaki türde kısmen güvenilen kod tarafından kullanım etkinleştirme dikkate almanız gerekir:  
   
--   Güvenlik açıkları için titizlikle test edilmiştir ve nda açıklanan yönergelere uygun olan kod [güvenli kodlama kılavuzları](../../../docs/standard/security/secure-coding-guidelines.md).  
+- Güvenlik açıkları için titizlikle test edilmiştir ve nda açıklanan yönergelere uygun olan kod [güvenli kodlama kılavuzları](../../../docs/standard/security/secure-coding-guidelines.md).  
   
--   Kısmen güvenilen senaryoları için özel olarak yazılmış kesin adlandırılmış kod kitaplıkları.  
+- Kısmen güvenilen senaryoları için özel olarak yazılmış kesin adlandırılmış kod kitaplıkları.  
   
--   Tüm bileşenleri (kısmen veya tamamen güvenilir olup olmadığını) Internet'ten indirilen kod tarafından çağrılacak bir tanımlayıcı ad ile imzalanmış.  
+- Tüm bileşenleri (kısmen veya tamamen güvenilir olup olmadığını) Internet'ten indirilen kod tarafından çağrılacak bir tanımlayıcı ad ile imzalanmış.  
   
 > [!NOTE]
 >  .NET Framework sınıf kitaplığındaki bazı sınıflar olmadığı **AllowPartiallyTrustedCallersAttribute** özniteliği ve kısmen güvenilen kod tarafından çağrılamaz.  

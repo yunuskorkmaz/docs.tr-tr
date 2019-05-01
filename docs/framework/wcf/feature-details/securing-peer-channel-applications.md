@@ -3,11 +3,11 @@ title: Eş Kanalı Uygulamalarını Güvenli Hale Getirme
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
 ms.openlocfilehash: a747923f81f4773eb58a4b7500cf4fc1c006f889
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990957"
 ---
 # <a name="securing-peer-channel-applications"></a>Eş Kanalı Uygulamalarını Güvenli Hale Getirme
 Gibi diğer bağlamalar altında [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` güvenlik varsayılan olarak etkin olan ve her ikisi de taşıma ve ileti tabanlı güvenlik (veya) sunar. Bu konuda, bu iki tür güvenlik anlatılmaktadır. Bağlama belirtimi güvenlik modu etiketinde tarafından belirtilen güvenlik türünü (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
@@ -15,16 +15,16 @@ Gibi diğer bağlamalar altında [!INCLUDE[vstecwinfx](../../../../includes/vste
 ## <a name="transport-based-security"></a>Aktarım tabanlı güvenlik  
  Eş kanal taşıma, ikisi de ayarını WMI'ya gerektiren güvenliğini sağlamak için iki tür kimlik doğrulama bilgilerini destekler `ClientCredentialSettings.Peer` özelliği ilişkili `ChannelFactory`:  
   
--   Parola. İstemciler, bağlantıların kimliğini doğrulamak için gizli bir parola bilgisini kullanır. Bu kimlik bilgisi türü kullanıldığında `ClientCredentialSettings.Peer.MeshPassword` geçerli bir parola taşımalıdır ve isteğe bağlı olarak bir `X509Certificate2` örneği.  
+- Parola. İstemciler, bağlantıların kimliğini doğrulamak için gizli bir parola bilgisini kullanır. Bu kimlik bilgisi türü kullanıldığında `ClientCredentialSettings.Peer.MeshPassword` geçerli bir parola taşımalıdır ve isteğe bağlı olarak bir `X509Certificate2` örneği.  
   
--   Sertifika. Belirli uygulama kimlik doğrulaması kullanılır. Bu kimlik bilgisi türü kullanıldığında, somut bir uygulama kullanmalısınız <xref:System.IdentityModel.Selectors.X509CertificateValidator> içinde `ClientCredentialSettings.Peer.PeerAuthentication`.  
+- Sertifika. Belirli uygulama kimlik doğrulaması kullanılır. Bu kimlik bilgisi türü kullanıldığında, somut bir uygulama kullanmalısınız <xref:System.IdentityModel.Selectors.X509CertificateValidator> içinde `ClientCredentialSettings.Peer.PeerAuthentication`.  
   
 ## <a name="message-based-security"></a>İleti tabanlı güvenlik  
  İleti güveliği kullanarak, böylece tüm alıcı taraf tarafından güvenilen bir taraf gönderilen ileti doğrulayabilirsiniz giden iletiler uygulamada oturum ve ileti olmadığını değiştirilmiş. Şu anda yalnızca X.509 kimlik bilgisi ileti imzalama eş kanalı destekler.  
   
 ## <a name="best-practices"></a>En İyi Yöntemler  
   
--   Bu bölümde, eş kanalı uygulamalarını güvenli hale getirmek için en iyi uygulamalar ele alınmaktadır.  
+- Bu bölümde, eş kanalı uygulamalarını güvenli hale getirmek için en iyi uygulamalar ele alınmaktadır.  
   
 ### <a name="enable-security-with-peer-channel-applications"></a>Eş kanalı uygulamalarını ile güvenliği etkinleştirme  
  Eş kanal protokoller dağıtılmış doğası nedeniyle kafes üyelik, gizlilik ve güvenli olmayan bir ağ gizlilik zorlamak güçtür. İstemcilerle çözümleyicisini arasındaki iletişimin güvenliğini sağlamak unutmamak önemlidir. Eş Adı Çözümleme Protokolü (PNRP) altında kimlik sahtekarlığı önlemek için güvenli adları ve diğer yaygın saldırılardan kullanın. Bir özel Çözücü hizmet bağlantısı istemcilerin kullandığı her iki ileti ve aktarım tabanlı güvenlik dahil olmak üzere çözümleyici hizmetiyle bağlantı güvenliği etkinleştirerek güvenli hale getirin.  

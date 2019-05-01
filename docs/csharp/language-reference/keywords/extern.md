@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: d860f1a3c6917238a529093672dc5f2abc5ae066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: edc513a31d348dc685ce70aa8e63577473e47d97
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620206"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773874"
 ---
 # <a name="extern-c-reference"></a>extern (C# Başvurusu)
 
@@ -43,46 +43,46 @@ Bu örnekte, bir C kitaplığına (bir yerel DLL) çağıran bir C# programı g�
 
 1. Aşağıdaki C dosyası oluşturun ve adlandırın `cmdll.c`:
 
-```c
-// cmdll.c
-// Compile with: -LD
-int __declspec(dllexport) SampleMethod(int i)
-{
-  return i*10;
-}
-```
+    ```c
+    // cmdll.c
+    // Compile with: -LD
+    int __declspec(dllexport) SampleMethod(int i)
+    {
+      return i*10;
+    }
+    ```
 
 2. Visual Studio Kurulum dizininden bir Visual Studio x64 (veya x32) yerel Araçlar komut istemi penceresi açın ve `cmdll.c` yazarak dosya **cl -LD cmdll.c** komut isteminde.
 
 3. Aynı dizinde, aşağıdaki C# dosyası oluşturun ve adlandırın `cm.cs`:
 
-```csharp
-// cm.cs
-using System;
-using System.Runtime.InteropServices;
-public class MainClass
-{
-    [DllImport("Cmdll.dll")]
-      public static extern int SampleMethod(int x);
-
-    static void Main()
+    ```csharp
+    // cm.cs
+    using System;
+    using System.Runtime.InteropServices;
+    public class MainClass
     {
-        Console.WriteLine("SampleMethod() returns {0}.", SampleMethod(5));
+        [DllImport("Cmdll.dll")]
+          public static extern int SampleMethod(int x);
+
+        static void Main()
+        {
+            Console.WriteLine("SampleMethod() returns {0}.", SampleMethod(5));
+        }
     }
-}
-```
+    ```
 
 4. Visual Studio Kurulum dizininden bir Visual Studio x64 (veya x32) yerel Araçlar komut istemi penceresi açın ve `cm.cs` yazarak dosyası:
 
-> **CSC cm.cs** (x64 için komut istemi) — veya — **csc-platform: x 86 cm.cs** (x32 için komut istemi)
+    > **CSC cm.cs** (x64 için komut istemi) — veya — **csc-platform: x 86 cm.cs** (x32 için komut istemi)
 
-Bu yürütülebilir dosya oluşturur `cm.exe`.
+    Bu yürütülebilir dosya oluşturur `cm.exe`.
 
 5. `cm.exe`'i çalıştırın. `SampleMethod` Yöntemi 5 değerini değerin 10 ile çarpılmış olarak döndüren DLL dosyasına geçirir.  Program şu çıktıyı üretir:
 
-```
-SampleMethod() returns 50.
-```
+    ```
+    SampleMethod() returns 50.
+    ```
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

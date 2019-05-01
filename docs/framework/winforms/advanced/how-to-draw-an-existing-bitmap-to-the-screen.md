@@ -10,11 +10,11 @@ helpviewer_keywords:
 - images [Windows Forms], displaying on Windows Forms
 ms.assetid: 5bc558d7-b326-4050-a834-b8600da0de95
 ms.openlocfilehash: 90511adf9caffe7952e270d6fe32dd85162a29d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004191"
 ---
 # <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>Nasıl yapılır: Ekrana Mevcut bir Bit Eşlemi Çizme
 Bu gibi durumlarda, mevcut bir görüntüyü kolayca ekranda çizebilirsiniz. İlk oluşturmak gereken bir <xref:System.Drawing.Bitmap> nesnesi alan bir dosya adı, bit eşlem Oluşturucu <xref:System.Drawing.Bitmap.%23ctor%28System.String%29>. Bu oluşturucu, BMP, GIF, JPEG, PNG ve TIFF gibi birçok farklı dosya biçimleri görüntülerle kabul eder. Oluşturduktan sonra <xref:System.Drawing.Bitmap> nesne, bu geçirmek <xref:System.Drawing.Bitmap> nesnesini <xref:System.Drawing.Graphics.DrawImage%2A> yöntemi bir <xref:System.Drawing.Graphics> nesne.  

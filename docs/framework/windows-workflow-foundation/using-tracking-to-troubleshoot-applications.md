@@ -3,11 +3,11 @@ title: Uygulamalarda Sorun Giderme için İzleme Kullanma
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
 ms.openlocfilehash: 62c46ca36c89c023bfc775eb76ba454c9a4162c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004594"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Uygulamalarda Sorun Giderme için İzleme Kullanma
 Windows Workflow Foundation (WF), Windows Workflow Foundation uygulama veya hizmet yürütülmesini ayrıntı vermek için iş akışı ile ilgili bilgileri izlemenize olanak sağlar. Bir iş akışı örneği yürütülürken iş akışı olaylarını yakalamak Windows Workflow Foundation konakları gösterebilmektedir. İş akışınızı hataları veya özel durum oluşturursa, Windows Workflow Foundation ayrıntıları işlemesi sorun giderme için izleme kullanabilirsiniz.  

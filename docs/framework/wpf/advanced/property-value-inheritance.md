@@ -7,11 +7,11 @@ helpviewer_keywords:
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
 ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981922"
 ---
 # <a name="property-value-inheritance"></a>Özellik Değeri Kalıtımı
 Özellik değeri kalıtımı özelliğidir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sistemi. Özellik değeri kalıtımı alt öğelerini üstten öğeleri, bu değer en yakın üst öğede herhangi bir yerde ayarlanmış olarak devralınması belirli bir özellik değeri kalıtımı ağacındaki sağlar. Sistem büyük olasılıkla tüm sayfa kök recurses için üst öğe Ayrıca özellik değeri devralma yoluyla değeri elde. Özellik değeri devralma varsayılan özellik sistemi davranış değildir; bir özellik alt öğeleri üzerinde özellik değeri kalıtımı başlatmak bu özelliği neden için özel meta verileri ayarıyla oluşturulmalıdır.  

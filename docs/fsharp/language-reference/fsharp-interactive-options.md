@@ -3,11 +3,11 @@ title: F# Etkileşimli Seçenekleri
 description: Tarafından desteklenen komut satırı seçenekleri hakkında F# etkileşimli, fsi.exe.
 ms.date: 05/16/2016
 ms.openlocfilehash: cca1ef6671878acb1b837d6590139d5de7b7167d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996807"
 ---
 # <a name="f-interactive-options"></a>F# Etkileşimli Seçenekleri
 
@@ -42,7 +42,7 @@ Listeleri göründüğü F# etkileşimli seçenek bağımsız değişkeni, liste
 |**--deterministic**[**+**&#124;**-**]|(Modülü sürüm GUID'si ve zaman damgası dahil) belirlenimci bir derleme oluşturur.|
 |**--Yönet**|Bildirir F# dosyaları yükledikten veya verilen komut satırı üzerinde betiği çalıştırdıktan sonra çıkmak için etkileşimli.|
 |**--fullpaths**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
-|**--GUI**[**+**&#124;**-**]|Etkinleştirir veya Windows Forms olay döngüsünü devre dışı bırakır. Varsayılan durumda etkindir.|
+|**--gui**[**+**&#124;**-**]|Etkinleştirir veya Windows Forms olay döngüsünü devre dışı bırakır. Varsayılan durumda etkindir.|
 |**--Yardım**<br /><br />**-?**|Komut satırı sözdizimi ve her seçeneğin kısa bir açıklamasını görüntülemek için kullanılır.|
 |**--lib:&lt;klasör listesi&gt;**<br /><br />**-I:&lt;klasör listesi&gt;**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
 |**--Yük:&lt;dosya adı&gt;**|Başlangıçta verilen kaynak kodu derler ve derlenmiş yükler F# oturuma oluşturur. Hedef kaynak gibi komut dosyası yönergeleri içeriyorsa **#use** veya **#load**, kullanmanız gereken **--kullanın** veya **#use** yerine **--yük** veya **#load**.|
@@ -50,7 +50,7 @@ Listeleri göründüğü F# etkileşimli seçenek bağımsız değişkeni, liste
 |**--noframework**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md)|
 |**--nologo**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
 |**--nowarn:&lt;uyarı listesi&gt;**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
-|**--en iyi duruma getirme**[**+**&#124;**-**]|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
+|**--optimize**[**+**&#124;**-**]|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
 |**--preferreduilang:&lt;dil&gt;**| Tercih edilen çıkış dilini kültür adı (örneğin, es-ES, ja-JP) belirtir. |
 |**--quiet**|Bastır F# etkileşimli derleyicisinin çıktısının **stdout** akış.|
 |**--Teklif hata ayıklama**|Ek hata ayıklama bilgilerinin türetilmiştir ifadeler yayınlaması gerektiğini belirtir F# değişmez ve yansıtılan tanımlar. Hata ayıklama bilgileri için özel özniteliklerine eklenir bir F# ifadesi Ağaç düğümünün. Bkz: [kod tırnak işaretleri](code-quotations.md) ve [Expr.CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|

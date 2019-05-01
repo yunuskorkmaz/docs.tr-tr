@@ -3,11 +3,11 @@ title: WCF'de Kullanılan Güvenlik Kavramları
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
 ms.openlocfilehash: 3ef2b9c104fa15de17a769c9ca9354e5cef085bf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990879"
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF'de Kullanılan Güvenlik Kavramları
 Windows Communication Foundation (WCF) güvenlik kavramları zaten kullanımda üzerine ve çeşitli güvenlik altyapısına içinde dağıtılmış.  

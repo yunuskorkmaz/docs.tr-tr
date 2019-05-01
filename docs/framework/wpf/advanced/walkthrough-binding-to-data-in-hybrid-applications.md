@@ -9,30 +9,30 @@ helpviewer_keywords:
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
 ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981818"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>İzlenecek yol: Karma Uygulamalarda Veriye Bağlama
 Bir veri kaynağı bir denetime bağlama olup, temel alınan verilere erişimi olan kullanıcılar sağlamak için gerekli kullanmakta olduğunuz [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] veya [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Bu izlenecek yol, veri bağlama iki dahil karma uygulamalarda nasıl kullanabileceğinizi gösterir. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrol eder.  
   
  Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
   
--   Proje oluşturuluyor.  
+- Proje oluşturuluyor.  
   
--   Veri şablonu tanımlama.  
+- Veri şablonu tanımlama.  
   
--   Form düzenini belirtme.  
+- Form düzenini belirtme.  
   
--   Veri bağlamaları belirtme.  
+- Veri bağlamaları belirtme.  
   
--   Birlikte çalışması kullanarak veri görüntüleme.  
+- Birlikte çalışması kullanarak veri görüntüleme.  
   
--   Veri kaynağı projeye ekleniyor.  
+- Veri kaynağı projeye ekleniyor.  
   
--   Veri kaynağına bağlama.  
+- Veri kaynağına bağlama.  
   
  Bu izlenecek yolda gösterilen görevler tam kod listesi için bkz. [karma uygulamalar için örnek veri bağlama](https://go.microsoft.com/fwlink/?LinkID=159983).  
   
@@ -41,9 +41,9 @@ Bir veri kaynağı bir denetime bağlama olup, temel alınan verilere erişimi o
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:  
   
--   Visual Studio.  
+- Visual Studio.  
   
--   Microsoft SQL Server üzerinde çalışan Northwind örnek veritabanına erişim.  
+- Microsoft SQL Server üzerinde çalışan Northwind örnek veritabanına erişim.  
   
 ## <a name="creating-the-project"></a>Projeyi Oluşturma  
   
@@ -53,9 +53,9 @@ Bir veri kaynağı bir denetime bağlama olup, temel alınan verilere erişimi o
   
 2. Çözüm Gezgini'nde, aşağıdaki derlemelere başvurular ekleyin.  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
 3. İçinde MainWindow.xaml açın [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
@@ -74,7 +74,7 @@ Bir veri kaynağı bir denetime bağlama olup, temel alınan verilere erişimi o
   
 #### <a name="to-define-the-data-template"></a>Veri şablonu tanımlamak için  
   
--   İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.  
+- İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.  
   
      [!code-xaml[WPFWithWFAndDatabinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
@@ -83,13 +83,13 @@ Bir veri kaynağı bir denetime bağlama olup, temel alınan verilere erişimi o
   
 #### <a name="to-set-up-the-grid-layout"></a>Kılavuz düzeni'kurmak için  
   
--   İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.  
+- İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.  
   
      [!code-xaml[WPFWithWFAndDatabinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
 #### <a name="to-set-up-the-label-controls"></a>Etiket denetimleri ayarlamak için  
   
--   İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.  
+- İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.  
   
      [!code-xaml[WPFWithWFAndDatabinding#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
@@ -100,7 +100,7 @@ Bir veri kaynağı bir denetime bağlama olup, temel alınan verilere erişimi o
   
 #### <a name="to-specify-data-bindings"></a>Veri bağlamaları belirtmek için  
   
--   İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.  
+- İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.  
   
      <xref:System.Windows.Data.Binding> Sınıfı bağlamalar <xref:System.Windows.Controls.TextBox> veritabanında uygun alanlara denetimleri.  
   
@@ -111,7 +111,7 @@ Bir veri kaynağı bir denetime bağlama olup, temel alınan verilere erişimi o
   
 #### <a name="to-display-data-in-the-datagridview-control"></a>DataGridView denetiminde verileri görüntülemek için  
   
--   İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.  
+- İçine aşağıdaki XAML kopyalama <xref:System.Windows.Controls.Grid> öğenin bildirimi.  
   
      [!code-xaml[WPFWithWFAndDatabinding#7](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   

@@ -5,22 +5,22 @@ f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
 ms.openlocfilehash: 397648618ea3764efafb5cff41deaef320bbeff3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982442"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub veya Function tanımlı değil (Visual Basic)
 A `Sub` veya `Function` çağrılması için tanımlanmalıdır. Bu hatanın olası nedenleri şunlardır:  
   
--   Yordam adı yazım hatası.  
+- Yordam adı yazım hatası.  
   
--   Bu projeye bir başvuru eklemeden açıkça başka bir projeden bir yordam çağırma çalışılırken **başvuruları** iletişim kutusu.  
+- Bu projeye bir başvuru eklemeden açıkça başka bir projeden bir yordam çağırma çalışılırken **başvuruları** iletişim kutusu.  
   
--   Çağıran yordama görünür değil bir yordam belirtme.  
+- Çağıran yordama görünür değil bir yordam belirtme.  
   
--   Bir Windows dinamik bağlantı kitaplığı (DLL) yordamı veya belirtilen kitaplık veya kod kaynağı Macintosh kod kaynak yordamı bildirme.  
+- Bir Windows dinamik bağlantı kitaplığı (DLL) yordamı veya belirtilen kitaplık veya kod kaynağı Macintosh kod kaynak yordamı bildirme.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   

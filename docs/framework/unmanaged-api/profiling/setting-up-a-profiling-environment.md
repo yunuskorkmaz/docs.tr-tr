@@ -13,11 +13,11 @@ ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bfa11083fad7a3ccc6a208f5f0e4b68e9e1bc18c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000434"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Profil Oluşturma Ortamını Ayarlama
 > [!NOTE]
@@ -25,9 +25,9 @@ ms.locfileid: "59098188"
   
  Yönetilen bir işlem (uygulama veya hizmet) başlatıldığında, ortak dil çalışma zamanı (CLR) yükler. CLR başlatılırken, işlemin bir profil oluşturucuya bağlanması gerekip gerekmediğine karar vermek için aşağıdaki iki ortam değişkenini değerlendirir:  
   
--   COR_ENABLE_PROFILING: Bu ortam değişkeni varsa ve 1 olarak ayarlanmış CLR Profil oluşturucuya bağlanır.  
+- COR_ENABLE_PROFILING: Bu ortam değişkeni varsa ve 1 olarak ayarlanmış CLR Profil oluşturucuya bağlanır.  
   
--   COR_PROFILER: Cor_enable_profılıng geçişleri işaretlerseniz, CLR, bu CLSID veya önceden kayıt defterinde depolanmış olması gereken ProgID sahip profil oluşturucuya bağlanır. Cor_profıler ortam değişkeni, aşağıdaki iki örnekte gösterildiği gibi bir dize olarak tanımlanır.  
+- COR_PROFILER: Cor_enable_profılıng geçişleri işaretlerseniz, CLR, bu CLSID veya önceden kayıt defterinde depolanmış olması gereken ProgID sahip profil oluşturucuya bağlanır. Cor_profıler ortam değişkeni, aşağıdaki iki örnekte gösterildiği gibi bir dize olarak tanımlanır.  
   
     ```  
     set COR_PROFILER={32E2F4DA-1BEA-47ea-88F9-C5DAF691C94A}  
@@ -45,23 +45,23 @@ ms.locfileid: "59098188"
 ## <a name="environment-variable-scope"></a>Ortam değişken kapsamı  
  Cor_enable_profılıng ve cor_profıler ortam değişkenlerini nasıl ayarladığınız etki kapsamlarını belirler. Bu değişkenleri aşağıdaki yollardan biriyle ayarlayabilirsiniz:  
   
--   Değişkenleri ayarlarsanız bir [Icordebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) çağrı, bunlar geçerli anda çalışmakta olan uygulama. (Ayrıca ortamı devralan bu uygulama tarafından başlatılmış diğer uygulamalara uygulanacaklardır.)  
+- Değişkenleri ayarlarsanız bir [Icordebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) çağrı, bunlar geçerli anda çalışmakta olan uygulama. (Ayrıca ortamı devralan bu uygulama tarafından başlatılmış diğer uygulamalara uygulanacaklardır.)  
   
--   Değişkenleri komut istemi penceresinde ayarlarsanız, bu pencereden başlatılan tüm uygulamalara uygulanacaklardır.  
+- Değişkenleri komut istemi penceresinde ayarlarsanız, bu pencereden başlatılan tüm uygulamalara uygulanacaklardır.  
   
--   Değişkenleri kullanıcı düzeyinde ayarlarsanız, dosya Gezgini ile başlattığınız tüm uygulamalara uygulanacaklardır. Bir komut istemi penceresi bu ortam ayarlarını değişkenleri ayarladıktan sonra açtığınız sahiptir ve bu pencereden başlayacağınız uygulamaları içerecektir. Kullanıcı düzeyinde ortam değişkenlerini ayarlamak için sağ **Bilgisayarım**, tıklayın **özellikleri**, tıklayın **Gelişmiş** sekmesini tıklatın, **ortamı Değişkenleri**ve değişkenleri ekleyip **kullanıcı değişkenleri** listesi.  
+- Değişkenleri kullanıcı düzeyinde ayarlarsanız, dosya Gezgini ile başlattığınız tüm uygulamalara uygulanacaklardır. Bir komut istemi penceresi bu ortam ayarlarını değişkenleri ayarladıktan sonra açtığınız sahiptir ve bu pencereden başlayacağınız uygulamaları içerecektir. Kullanıcı düzeyinde ortam değişkenlerini ayarlamak için sağ **Bilgisayarım**, tıklayın **özellikleri**, tıklayın **Gelişmiş** sekmesini tıklatın, **ortamı Değişkenleri**ve değişkenleri ekleyip **kullanıcı değişkenleri** listesi.  
   
--   Değişkenleri bilgisayar düzeyinde ayarlarsanız, bu bilgisayarda başlatılan tüm uygulamalara uygulanacaklardır. Bu bilgisayarda açtığınız komut istemi penceresi bu ortam ayarlarını ve bu pencereden başlayacağınız uygulamaları içerecektir. Bu, o bilgisayardaki her yönetilen her işlemin oluşturucunuz ile başlayacağı anlamına gelir. Bilgisayar düzeyinde ortam değişkenlerini ayarlamak için sağ **Bilgisayarım**, tıklayın **özellikleri**, tıklayın **Gelişmiş** sekmesini tıklatın, **ortamı Değişkenleri**, değişkenleri ekleyip **sistem değişkenlerini** listelemek ve bilgisayarınızı yeniden başlatın. Yeniden başlattıktan sonra değişkenler sistem çapında olacaktır.  
+- Değişkenleri bilgisayar düzeyinde ayarlarsanız, bu bilgisayarda başlatılan tüm uygulamalara uygulanacaklardır. Bu bilgisayarda açtığınız komut istemi penceresi bu ortam ayarlarını ve bu pencereden başlayacağınız uygulamaları içerecektir. Bu, o bilgisayardaki her yönetilen her işlemin oluşturucunuz ile başlayacağı anlamına gelir. Bilgisayar düzeyinde ortam değişkenlerini ayarlamak için sağ **Bilgisayarım**, tıklayın **özellikleri**, tıklayın **Gelişmiş** sekmesini tıklatın, **ortamı Değişkenleri**, değişkenleri ekleyip **sistem değişkenlerini** listelemek ve bilgisayarınızı yeniden başlatın. Yeniden başlattıktan sonra değişkenler sistem çapında olacaktır.  
   
  Bir Windows hizmeti profili oluşturuyorsanız, ortam değişkenlerini ayarladıktan ve profil oluşturucu DLL'yi kaydettikten sonra bilgisayarınızı yeniden başlatmanız gerekir. Bu değerlendirmeler hakkında daha fazla bilgi için bkz [bir Windows hizmeti profili](#windows_service).  
   
 ## <a name="additional-considerations"></a>Dikkat edilecek diğer noktalar  
   
--   Profil Oluşturucu sınıfının Implements [Icorprofilercallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) ve [Icorprofilercallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) arabirimleri. .NET Framework sürüm 2. 0'da, bir profil oluşturucu uygulamalıdır `ICorProfilerCallback2`. Bu, eğer okumuyorsa `ICorProfilerCallback2` yüklenmeyecek.  
+- Profil Oluşturucu sınıfının Implements [Icorprofilercallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) ve [Icorprofilercallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) arabirimleri. .NET Framework sürüm 2. 0'da, bir profil oluşturucu uygulamalıdır `ICorProfilerCallback2`. Bu, eğer okumuyorsa `ICorProfilerCallback2` yüklenmeyecek.  
   
--   İşlem verili bir ortamda tek seferde yalnızca bir profil oluşturucu profil oluşturabilirsiniz. İki farklı profil oluşturucuyu farklı ortamlarda kaydedebilirsiniz, ancak her ayrı işlemlerin profilini oluşturmalıdır. Profil Oluşturucu, işlemde COM sunucusu, profili oluşturulan işlem olarak aynı adres alanına eşlenmiş bir DLL olarak uygulanmalıdır. Bu, profil oluşturucunun işlemde çalıştığı anlamına gelir. .NET Framework, herhangi bir COM sunucusu türünü desteklemez. Örneğin, bir profil oluşturucu uzak bir bilgisayardan uygulamaları izlemek isterse, bunu her bilgisayarda Toplayıcı aracılarını uygulamalıdır. Bu aracılar, sonuçları toplar ve onları merkezi veri toplama bilgisayarına iletir.  
+- İşlem verili bir ortamda tek seferde yalnızca bir profil oluşturucu profil oluşturabilirsiniz. İki farklı profil oluşturucuyu farklı ortamlarda kaydedebilirsiniz, ancak her ayrı işlemlerin profilini oluşturmalıdır. Profil Oluşturucu, işlemde COM sunucusu, profili oluşturulan işlem olarak aynı adres alanına eşlenmiş bir DLL olarak uygulanmalıdır. Bu, profil oluşturucunun işlemde çalıştığı anlamına gelir. .NET Framework, herhangi bir COM sunucusu türünü desteklemez. Örneğin, bir profil oluşturucu uzak bir bilgisayardan uygulamaları izlemek isterse, bunu her bilgisayarda Toplayıcı aracılarını uygulamalıdır. Bu aracılar, sonuçları toplar ve onları merkezi veri toplama bilgisayarına iletir.  
   
--   Profil Oluşturucu, işlemde oluşturulan bir COM nesnesi olduğundan, profilli her uygulama kendi profil oluşturucu kopyasına sahip. Bu nedenle, birden çok uygulamadan veri işlemek tek bir profil oluşturucu örneği yok. Ancak, günlük dosyası önlemek için profil oluşturucu günlüğe kaydetme koduna mantık diğer profilli uygulamalardan üzerine yazmasını eklemeniz gerekir.  
+- Profil Oluşturucu, işlemde oluşturulan bir COM nesnesi olduğundan, profilli her uygulama kendi profil oluşturucu kopyasına sahip. Bu nedenle, birden çok uygulamadan veri işlemek tek bir profil oluşturucu örneği yok. Ancak, günlük dosyası önlemek için profil oluşturucu günlüğe kaydetme koduna mantık diğer profilli uygulamalardan üzerine yazmasını eklemeniz gerekir.  
   
 ## <a name="initializing-the-profiler"></a>Profiler'ı başlatma  
  Her iki ortam değişkeni denetimi başarılı olduğunda, CLR Profil Oluşturucu bir örneğini com benzer şekilde oluşturur. `CoCreateInstance` işlevi. Profil Oluşturucu doğrudan çağrı aracılığıyla yüklenmediğinden `CoCreateInstance`. Bu nedenle, bir çağrı `CoInitialize`, iş parçacığı modelinin ayarlanmasını gerektiren engellenir. CLR sonra çağıran [Icorprofilercallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) yönteminde profil oluşturucu. Bu yöntemin imzası aşağıdaki gibidir.  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
 ms.openlocfilehash: 765befcf88247e4b2101b13c4937352ba4b070fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009155"
 ---
 # <a name="varieties-of-custom-controls"></a>Özel Denetim Çeşitleri
 .NET Framework ile geliştirin ve yeni denetimleri uygulayın. Devralma yoluyla da olarak mevcut denetimleri hakkında bilgi sahibi kullanıcı denetiminin işlevselliğini genişletebilirsiniz. Ayrıca, kendi boyama gerçekleştiren özel denetimler yazabilirsiniz.  
@@ -31,17 +31,17 @@ ms.locfileid: "59170714"
   
  <xref:System.Windows.Forms.Control> Sınıfı Windows Forms uygulamalarında visual display sağlamak için aşağıdaki görevleri gerçekleştirir:  
   
--   Bir pencere tutucu kullanıma sunar.  
+- Bir pencere tutucu kullanıma sunar.  
   
--   İleti yönlendirme yönetir.  
+- İleti yönlendirme yönetir.  
   
--   Fare ve klavye olaylarını ve diğer birçok kullanıcı arabirimi olayları sağlar.  
+- Fare ve klavye olaylarını ve diğer birçok kullanıcı arabirimi olayları sağlar.  
   
--   Gelişmiş Düzen özelliklerini sağlar.  
+- Gelişmiş Düzen özelliklerini sağlar.  
   
--   Görsel görüntüsüne özgü birçok özellikleri gibi içeren <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, ve <xref:System.Windows.Forms.Control.Width%2A>.  
+- Görsel görüntüsüne özgü birçok özellikleri gibi içeren <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, ve <xref:System.Windows.Forms.Control.Width%2A>.  
   
--   Güvenlik ve Microsoft® ActiveX denetimi olarak görev yapacak bir Windows Forms denetimi için gerekli iş parçacığı oluşturma desteği sağlar.  
+- Güvenlik ve Microsoft® ActiveX denetimi olarak görev yapacak bir Windows Forms denetimi için gerekli iş parçacığı oluşturma desteği sağlar.  
   
  Çok altyapısının temel sınıfı tarafından sağlandığından, kendi Windows Forms denetimleri geliştirme oldukça kolaydır.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59170714"
   
  Devralınan <xref:System.Windows.Forms.UserControl> , sınıf:  
   
--   Çeşitli Windows Forms denetimleri işlevlerini tek bir yeniden kullanılabilir biriminde birleştirmek istediğiniz.  
+- Çeşitli Windows Forms denetimleri işlevlerini tek bir yeniden kullanılabilir biriminde birleştirmek istediğiniz.  
   
 ### <a name="extended-controls"></a>Genişletilmiş denetimler  
  Devralınan bir denetimi varolan herhangi bir Windows Forms denetimden türetebilirsiniz. Bu yaklaşımda, bir Windows Forms denetiminin devralınan işlevlerin korumak ve ardından özel özellikler, yöntemler veya diğer özellikleri ekleyerek işlevselliği genişletir. Bu seçenekle temel denetimin Boya mantığını geçersiz kılmasını ve ardından görünümünü değiştirerek kullanıcı arabirimi genişletme.  
@@ -74,9 +74,9 @@ ms.locfileid: "59170714"
   
  Bir Windows Forms denetimi devralır:  
   
--   İhtiyacınız olan işlevleri çoğunu zaten varolan bir Windows Forms denetimi aynı.  
+- İhtiyacınız olan işlevleri çoğunu zaten varolan bir Windows Forms denetimi aynı.  
   
--   Varolan bir denetimi için yeni bir grafik kullanıcı arabirimi tasarım istediğiniz veya özel bir grafik kullanıcı arabirimi gerekmez.  
+- Varolan bir denetimi için yeni bir grafik kullanıcı arabirimi tasarım istediğiniz veya özel bir grafik kullanıcı arabirimi gerekmez.  
   
 ### <a name="custom-controls"></a>Özel denetimler  
  Önemli ölçüde baştan devralarak oluşturmak için bir denetim oluşturmak için başka bir yolu olan <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control> Sınıfı, tüm denetimler tarafından fare ve klavye olaylarını işleme dahil olmak üzere gerekli temel işlevleri ancak hiçbir özel denetim işlevselliğini veya grafik arabirim sağlar.  
@@ -91,9 +91,9 @@ ms.locfileid: "59170714"
   
  Devralınan <xref:System.Windows.Forms.Control> , sınıf:  
   
--   Özel bir grafik gösterimi denetiminizin sunmak istiyorsunuz.  
+- Özel bir grafik gösterimi denetiminizin sunmak istiyorsunuz.  
   
--   Standart denetimler kullanılabilir olmayan özel işlevselliği uygulamak gerekir.  
+- Standart denetimler kullanılabilir olmayan özel işlevselliği uygulamak gerekir.  
   
 ### <a name="activex-controls"></a>ActiveX Denetimleri  
  Windows formlar altyapısına ana bilgisayar Windows Forms denetimleri için optimize edilmiştir ancak ActiveX denetimlerini kullanmaya devam edebilirsiniz. Visual Studio'da bu görevi için desteği yoktur. Daha fazla bilgi için [nasıl yapılır: Windows Forms'a ActiveX denetimleri ekleme](how-to-add-activex-controls-to-windows-forms.md).  

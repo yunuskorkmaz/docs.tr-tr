@@ -13,11 +13,11 @@ helpviewer_keywords:
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
 ms.openlocfilehash: 641db19cc6493a20c9f9a34622f466e3623c32ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973829"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Zamanında Veri Yükleme ile Sanal Modu Uygulama
 Sanal modda uygulamak için bir neden <xref:System.Windows.Forms.DataGridView> yalnızca gerekli verileri almak üzere denetimidir. Bu adlandırılır *tam zamanında veri yükleme*.  

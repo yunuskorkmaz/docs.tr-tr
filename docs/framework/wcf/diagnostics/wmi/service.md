@@ -3,11 +3,11 @@ title: Hizmet
 ms.date: 03/30/2017
 ms.assetid: 999806e1-6376-409e-b998-b0af391adfe7
 ms.openlocfilehash: c59672b3b7617d9c28d99f7d534b6e7f2f2e9fbb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991451"
 ---
 # <a name="service"></a>Hizmet
 Hizmet  
@@ -46,7 +46,7 @@ class Service
  Hizmet tarafından kullanılan tabanı.  
   
 ### <a name="behaviors"></a>Davranışlar  
- Veri türü: davranışı dizi  
+ Veri türü: Davranış dizi  
   
  Erişim türü: salt okunur  
   
@@ -109,7 +109,7 @@ class Service
  Hizmet açıldığı zaman.  
   
 ### <a name="outgoingchannels"></a>OutgoingChannels  
- Veri türü: kanal dizisi  
+ Veri türü: Kanal dizisi  
   
  Erişim türü: salt okunur  
   

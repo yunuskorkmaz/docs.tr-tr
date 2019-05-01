@@ -8,11 +8,11 @@ helpviewer_keywords:
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
 ms.openlocfilehash: b13fd85ae01fd0b6f3c963d87a372add930be99d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61975305"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>İzlenecek yol: Visual Basic'te IEnumerable(Of T) uygulama
 <xref:System.Collections.Generic.IEnumerable%601> Arabirimi, aynı anda bir öğe değerlerini bir dizi döndüren sınıflar tarafından uygulanır. Aynı anda bir öğe ile çalışmak için eksiksiz veri Seti yüklemek gerekmez veri döndüren avantajı. Yalnızca tek bir öğe verileri yüklemek için yeterli bellek kullanmak zorunda. Uygulayan sınıflar `IEnumerable(T)` arabirimi ile kullanılabilir `For Each` döngüler veya LINQ sorguları.  

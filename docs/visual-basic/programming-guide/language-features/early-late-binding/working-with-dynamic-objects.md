@@ -5,11 +5,11 @@ helpviewer_keywords:
 - dynamic objects [Visual Basic]
 ms.assetid: bdee2a00-07ff-46f9-86dd-fdac9b99cc97
 ms.openlocfilehash: ea7d7aae1cd79a0243a9c721b5e3958fba82f84f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973192"
 ---
 # <a name="working-with-dynamic-objects-visual-basic"></a>Dinamik Nesnelerle Çalışma (Visual Basic)
 Dinamik nesneler sağlayan başka bir deyişle, dışındaki `Object` türüne, nesneye geç bağlama çalışma zamanında. Dinamik Nesne, tanımlanan dinamik arabirimleri kullanarak çalışma zamanında özellikler ve yöntemler gibi üyeleri sunan <xref:System.Dynamic> ad alanı. Sınıfları kullanabilirsiniz <xref:System.Dynamic> bir statik türü veya biçimi eşleşmeyen veri yapıları ile çalışma nesneleri oluşturmak için ad alanı. IronPython ve Ironruby gibi dinamik dilleri tanımlanan dinamik nesneler de kullanabilirsiniz. Dinamik nesneler oluşturma veya dinamik dilinde tanımlandığı bir dinamik nesnesini gösteren örnekler için bkz: [izlenecek yol: Dinamik nesneler oluşturma ve kullanma](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md), <xref:System.Dynamic.DynamicObject>, veya <xref:System.Dynamic.ExpandoObject>.  

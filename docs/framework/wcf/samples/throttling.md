@@ -7,10 +7,10 @@ helpviewer_keywords:
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
 ms.openlocfilehash: d41270d63d188443207c78a3c55b469e2bd7b482
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006318"
 ---
 # <a name="throttling"></a>Sınırlama
 Azaltma örnek azaltma denetimleri kullanımını gösterir. Azaltma denetimleri sınırlarını eşzamanlı çağrıları, örnekleri veya oturumları kaynakların aşırı kullanımını önlemek için sayısına yerleştirin. Azaltma davranışı, hizmet yapılandırma dosyası ayarlarında belirtilir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan.  

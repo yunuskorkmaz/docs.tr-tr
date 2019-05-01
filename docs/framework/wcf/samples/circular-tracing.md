@@ -3,11 +3,11 @@ title: Döngüsel İzleme
 ms.date: 03/30/2017
 ms.assetid: 5ff139f9-8806-47bc-8f33-47fe6c436b92
 ms.openlocfilehash: cd1a0c85dd42a7f064e75c7efdacb9ea46ef445d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002418"
 ---
 # <a name="circular-tracing"></a>Döngüsel İzleme
 Bu örnek, bir döngüsel arabellek İzleme dinleyicisi uygulamasını gösterir. Sık karşılaşılan bir senaryodur üretim Hizmetleri için uzun süreler için kullanılabilen hizmetler ve izleme günlüğü düşük bir düzeyde etkin ' dir. Bu hizmetler, çok fazla disk alanı kullanır. Bir hizmet sorunlarını giderirken, izleme günlüğü en son verileri sorununuzu çözmek için geçerlidir. Bu örnek yalnızca en son izlemeleri, yapılandırılabilir bir veri miktarına kadar diskte tutulur bir döngüsel arabellek İzleme dinleyicisi uygulanışı gösterilmektedir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve özel İzleme dinleyicisi içerir.  

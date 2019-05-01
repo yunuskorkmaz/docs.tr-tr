@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
 ms.openlocfilehash: 9f13f9d95c40b964c5eb416c590a5d603d714bac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991022"
 ---
 # <a name="schema-import-and-export"></a>Şema İçeri ve Dışarı Aktarma
 Windows Communication Foundation (WCF) içeren yeni bir serileştirme motoruna <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` Arasında çevirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri ve XML (her iki yönde). Serileştirici kendisini ek olarak, WCF, ilişkili şema içeri ve dışarı aktarma mekanizması şema içerir. *Şema* seri hale getirici üretir veya seri durumdan çıkarıcı erişip XML şeklini resmi, kesin ve makine tarafından okunabilir bir açıklaması. WCF World Wide Web Consortium (W3C) XML Şeması Tanım Dili (XSD) çok sayıda üçüncü taraf platformlarıyla çalışabilen yaygın olarak, şema gösterimi olarak kullanır.  
@@ -33,11 +33,11 @@ Windows Communication Foundation (WCF) içeren yeni bir serileştirme motoruna <
   
  Oluşturulan tür birkaç veri sözleşme en iyi izlediğini unutmayın (bulunan [en iyi uygulamalar: Veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)):  
   
--   Türün uyguladığı <xref:System.Runtime.Serialization.IExtensibleDataObject> arabirimi. Daha fazla bilgi için [İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+- Türün uyguladığı <xref:System.Runtime.Serialization.IExtensibleDataObject> arabirimi. Daha fazla bilgi için [İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
--   Veri üyeleri, özel alanlar sarmalayan genel özellikleri olarak uygulanır.  
+- Veri üyeleri, özel alanlar sarmalayan genel özellikleri olarak uygulanır.  
   
--   Kısmi bir sınıf sınıftır ve eklemeler oluşturulan kodu değiştirmeden yapılabilir.  
+- Kısmi bir sınıf sınıftır ve eklemeler oluşturulan kodu değiştirmeden yapılabilir.  
   
  <xref:System.Runtime.Serialization.XsdDataContractExporter> Ters yapmanıza olanak tanır; ile seri hale getirilebilir bir tür `DataContractSerializer` ve bir XSD şema belgesi oluşturabilirsiniz.  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
 ms.openlocfilehash: 85fb12028687578b76e0f16061deb9b9a4de70e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003983"
 ---
 # <a name="how-to-print-a-windows-form"></a>Nasıl yapılır: Bir Windows Formunu Yazdırma
 Geliştirme sürecinin bir parçası olarak, genellikle Windows formunuza bir kopyasını yazdırmak isteyeceksiniz. Aşağıdaki kod örneği kullanarak geçerli forma bir kopyasını yazdırmak gösterilmektedir <xref:System.Drawing.Graphics.CopyFromScreen%2A> yöntemi.  
@@ -30,9 +30,9 @@ Geliştirme sürecinin bir parçası olarak, genellikle Windows formunuza bir ko
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
--   Yazıcı erişmek için izniniz yok.  
+- Yazıcı erişmek için izniniz yok.  
   
--   Yüklü yazıcı yok yoktur.  
+- Yüklü yazıcı yok yoktur.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Bu kod örneği çalıştırmak için bilgisayarınızda kullandığınız yazıcıya erişim izni olması gerekir.  

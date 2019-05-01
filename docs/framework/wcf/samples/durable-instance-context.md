@@ -3,11 +3,11 @@ title: Dayanıklı Örnek Bağlamı
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
 ms.openlocfilehash: 25772e7f119ddd5a144d223f402e815380b3eba5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990276"
 ---
 # <a name="durable-instance-context"></a>Dayanıklı Örnek Bağlamı
 Bu örnek nasıl özelleştirileceğini dayanıklı örnek bağlamı etkinleştirmek için Windows Communication Foundation (WCF) çalışma zamanı gösterir. SQL Server 2005 (SQL Server 2005 Express bu durumda), yedekleme deposu olarak kullanır. Ancak, ayrıca özel depolama mekanizmaları erişmek için bir yol sağlar.  
@@ -233,11 +233,11 @@ else
   
  Yeni durum ve Genişletilebilir nesne desenine kullanarak davranışı ekleyerek kendi InstanceContext çalışma zamanı bileşeni genişletme WCF sağlar. Genişletilebilir nesne düzeni WCF'de ya da var olan çalışma zamanı sınıflar yeni işlevlerle genişletmek veya bir nesne için yeni durum özellikler eklemek için kullanılır. Genişletilebilir nesne deseni - IExtensibleObject üç arabirimi vardır\<T >, IExtension\<T > ve IExtensionCollection\<T >:  
   
--   IExtensibleObject\<T > arabirimini işlevleriyle özelleştirme uzantılara izin ver nesneler tarafından gerçekleştirilir.  
+- IExtensibleObject\<T > arabirimini işlevleriyle özelleştirme uzantılara izin ver nesneler tarafından gerçekleştirilir.  
   
--   IExtension\<T > arabirimini uzantıları t türü sınıfların nesneleri tarafından uygulanan  
+- IExtension\<T > arabirimini uzantıları t türü sınıfların nesneleri tarafından uygulanan  
   
--   IExtensionCollection\<T > türüne göre IExtensions almak için izin veren IExtensions koleksiyonunu arabirimidir.  
+- IExtensionCollection\<T > türüne göre IExtensions almak için izin veren IExtensions koleksiyonunu arabirimidir.  
   
  Bu nedenle InstanceContextExtension sınıfı IExtension arabirimi uygulayan ve bağlam kimliğini kaydetmek için gerekli durumu tanımlayan oluşturulmalıdır Bu sınıf, durum Yöneticisi tarafından kullanılan depolama tutmak için de sağlar. Yeni durumu kaydedildikten sonra değiştirmek olası olmamalıdır. Bu nedenle durum sağlanan ve oluşturulan ve ardından yalnızca erişilebilir salt okunur özelliklerini kullanarak zaman örneğine kaydedilir.  
   

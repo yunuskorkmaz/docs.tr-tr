@@ -5,11 +5,11 @@ helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
 ms.openlocfilehash: 2dd4f82e8a100074850b21d298e91dc5dc15c59d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999264"
 ---
 # <a name="event-logging-in-wcf"></a>WCF'de Etkinlikleri Günlüğe Kaydetme
 Windows Communication Foundation (WCF) Windows olay günlüğünden ilgili iç olayları izler.  
@@ -20,19 +20,19 @@ Windows Communication Foundation (WCF) Windows olay günlüğünden ilgili iç o
 ### <a name="application-event-log"></a>Uygulama olay günlüğü  
  **Uygulama olay günlüğüne** WCF tarafından oluşturulan olaylar çoğunu içerir. Girişlerin çoğu belirli bir özellik için uygulama başlatma başarısız olduğunu gösterir. Örnekler:  
   
--   İleti günlüğe kaydetme/izleme: İzleme ve iletileri günlüğe kaydetme başarısız olduğunda WCF olay günlüğüne bir olay yazar. Ancak, her izleme başarısız bir olayı tetikler. Olay günlüğü izlemeleri hatalarla tamamen doldurulmuş önlemek için bu tür bir olay için 10 dakikalık bir Kararma süre WCF uygular. Başka bir deyişle, WCF izleme hatası olay günlüğüne yazar, bu nedenle yeniden en az 10 dakika için yapacağınız değil.  
+- İleti günlüğe kaydetme/izleme: İzleme ve iletileri günlüğe kaydetme başarısız olduğunda WCF olay günlüğüne bir olay yazar. Ancak, her izleme başarısız bir olayı tetikler. Olay günlüğü izlemeleri hatalarla tamamen doldurulmuş önlemek için bu tür bir olay için 10 dakikalık bir Kararma süre WCF uygular. Başka bir deyişle, WCF izleme hatası olay günlüğüne yazar, bu nedenle yeniden en az 10 dakika için yapacağınız değil.  
   
--   Paylaşılan dinleyici: WCF TCP bağlantı noktası paylaşım hizmetini başlatmak başarısız olduğunda bir olayı günlüğe kaydeder.  
+- Paylaşılan dinleyici: WCF TCP bağlantı noktası paylaşım hizmetini başlatmak başarısız olduğunda bir olayı günlüğe kaydeder.  
   
--   [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]: Hizmeti başlatmak başarısız olduğunda olayları kaydeder.  
+- [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]: Hizmeti başlatmak başarısız olduğunda olayları kaydeder.  
   
--   Başlatma hataları veya kilitlenmeleri gibi kritik ve hata olayları  
+- Başlatma hataları veya kilitlenmeleri gibi kritik ve hata olayları  
   
--   Günlüğe ileti kaydetme açık: Günlüğe ileti kaydetme açık olduğunda olayları kaydeder. Hassas ve uygulamaya özgü bilgileri ileti üstbilgileri ve gövdeleri kaydedilebilir yöneticiyi bilgilendirmek üzere budur.  
+- Günlüğe ileti kaydetme açık: Günlüğe ileti kaydetme açık olduğunda olayları kaydeder. Hassas ve uygulamaya özgü bilgileri ileti üstbilgileri ve gövdeleri kaydedilebilir yöneticiyi bilgilendirmek üzere budur.  
   
--   Bir olay kaydedilir, `enableLoggingKnownPII` özniteliğini `machineSettings` öğesinin `machine.config` dosya ayarlanır. Bu öznitelik makine üzerinde çalışan herhangi bir uygulama bilinen kişisel olarak tanımlanabilen bilgileri (PII) için izinli olup olmadığını belirtir.  
+- Bir olay kaydedilir, `enableLoggingKnownPII` özniteliğini `machineSettings` öğesinin `machine.config` dosya ayarlanır. Bu öznitelik makine üzerinde çalışan herhangi bir uygulama bilinen kişisel olarak tanımlanabilen bilgileri (PII) için izinli olup olmadığını belirtir.  
   
--   Varsa `logKnownPii` ya da özniteliğinde `app.config` veya `web.config` dosya kümesine `true` PII günlük özelliğini açmak belirli bir uygulama için ancak `enableLoggingKnownPII` özniteliğini `machineSettings` öğesinin `machine.config` dosya ayarlanmış için `false`, bir olay kaydedilir. Ayrıca, her iki `logKnownPii` ve `enableLoggingKnownPII` ayarlandığından `true`, ve olay günlüğe kaydedilir. Bu yapılandırma ayarları hakkında daha fazla bilgi için bkz: güvenlik bölümünü [iletileri günlüğe kaydetmeyi yapılandırma](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) konu.  
+- Varsa `logKnownPii` ya da özniteliğinde `app.config` veya `web.config` dosya kümesine `true` PII günlük özelliğini açmak belirli bir uygulama için ancak `enableLoggingKnownPII` özniteliğini `machineSettings` öğesinin `machine.config` dosya ayarlanmış için `false`, bir olay kaydedilir. Ayrıca, her iki `logKnownPii` ve `enableLoggingKnownPII` ayarlandığından `true`, ve olay günlüğe kaydedilir. Bu yapılandırma ayarları hakkında daha fazla bilgi için bkz: güvenlik bölümünü [iletileri günlüğe kaydetmeyi yapılandırma](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) konu.  
   
 ### <a name="security-event-log"></a>Güvenlik olay günlüğü  
  **Güvenlik olay günlüğü** WCF tarafından günlüğe kaydedilen güvenlik denetim olaylarını içerir.  

@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Meta Verileri Alma ve Uyumlu Bir Hizmet Ekleme'
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
 ms.openlocfilehash: edf8fe2f174202d19b075ec218f059ea9b988843
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000798"
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Nasıl yapılır: Meta Verileri Alma ve Uyumlu Bir Hizmet Ekleme
 Genellikle, aynı kişi değildir tasarlayıp Hizmetleri. Birlikte çalışma uygulamaları önemli olduğu ortamlarda sözleşmelerine tasarlanan veya Web Hizmetleri Açıklama Dili (WSDL) açıklanan ve bir geliştirici, sağlanan Sözleşmesi ile uyumlu bir hizmet uygulaması gerekir. Windows Communication Foundation (WCF) için bir hizmetiniz geçirme ancak kablo biçimini korumak isteyebilirsiniz. Ayrıca, çift yönlü sözleşmeler de bir geri çağırma anlaşması uygulamak çağıranlar gerektirir.  
@@ -39,17 +39,17 @@ Genellikle, aynı kişi değildir tasarlayıp Hizmetleri. Birlikte çalışma uy
   
  Aşağıdaki kod gösterir:  
   
--   Hizmet sözleşmesi arabirim, uygulandığında, sözleşme gereksinimleriyle uyumlu (`ISampleService`).  
+- Hizmet sözleşmesi arabirim, uygulandığında, sözleşme gereksinimleriyle uyumlu (`ISampleService`).  
   
--   Her iki hizmet sözleşme arabirimini genişletir istemci kullanımı için yardımcı arabirimi ve <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> ve bir istemci uygulamasında kullanılır (`ISampleServiceChannel`).  
+- Her iki hizmet sözleşme arabirimini genişletir istemci kullanımı için yardımcı arabirimi ve <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> ve bir istemci uygulamasında kullanılır (`ISampleServiceChannel`).  
   
--   Genişleten helper sınıfı <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> ve bir istemci uygulamasında kullanılır (`SampleServiceClient`).  
+- Genişleten helper sınıfı <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> ve bir istemci uygulamasında kullanılır (`SampleServiceClient`).  
   
--   Hizmetten oluşturulan yapılandırma dosyası.  
+- Hizmetten oluşturulan yapılandırma dosyası.  
   
--   Basit bir `ISampleService` hizmet uygulaması.  
+- Basit bir `ISampleService` hizmet uygulaması.  
   
--   İstemci tarafı yapılandırma dosyasının dönüştürme için bir hizmet tarafı sürümü.  
+- İstemci tarafı yapılandırma dosyasının dönüştürme için bir hizmet tarafı sürümü.  
   
 [!code-csharp[ClientProxyCodeSample#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/proxycode.cs#1)]
 

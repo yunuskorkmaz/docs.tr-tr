@@ -7,11 +7,11 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 ms.assetid: a09dbf76-0966-4cbf-a66a-2083ba98e068
 ms.openlocfilehash: ec9002ffa4a7e2c82f59d52344764a01afe4c568
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011490"
 ---
 # <a name="custom-control-painting-and-rendering"></a>Özel Denetim Boyama ve İşleme
 Özel boyama denetimlerin .NET Framework tarafından daha kolay pek çok karmaşık görev biridir. Özel denetim yazarken, denetiminizin grafik görünümü ile ilgili birçok seçeneğiniz vardır. Devralınan bir denetim yazıyorsanız `Control`, Denetim, grafik gösterimi işleme veren kod sağlamanız gerekir. Devralarak bir kullanıcı denetimi oluşturuyorsanız `UserControl`, veya devraldığını Windows Forms denetimleri birinden, standart grafik gösterimi geçersiz kılabilir ya da kendi grafik kodunu sağlayın. Bağlı denetimler için özel işleme sağlamak istiyorsanız bir `UserControl` geliştirmekte olduğunuz, seçeneklerinizi daha sınırlı olur, ancak yine de çok çeşitli grafik denetimleri ve uygulamaları olasılıklarını izin.  

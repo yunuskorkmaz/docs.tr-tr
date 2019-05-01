@@ -3,20 +3,20 @@ title: PII Güvenlik Kilidi
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 ms.openlocfilehash: 13ed280e9b7de2b205e0878761dbf97e168f06d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989657"
 ---
 # <a name="pii-security-lockdown"></a>PII Güvenlik Kilidi
 Bu örnek, bir Windows Communication Foundation (WCF) hizmeti tarafından güvenlikle ilgili çeşitli özelliklerini denetlemek nasıl gösterir:  
   
--   Bir hizmetin yapılandırma dosyasındaki hassas bilgileri şifrelemek üzere.  
+- Bir hizmetin yapılandırma dosyasındaki hassas bilgileri şifrelemek üzere.  
   
--   Böylece hizmet alt dizinleri iç içe öğeleri yapılandırma dosyasındaki kilitleme ayarları geçersiz kılamazsınız.  
+- Böylece hizmet alt dizinleri iç içe öğeleri yapılandırma dosyasındaki kilitleme ayarları geçersiz kılamazsınız.  
   
--   İzleme ve ileti günlükleri, kişisel bilgilerin (PII) günlüğüne denetleme.  
+- İzleme ve ileti günlükleri, kişisel bilgilerin (PII) günlüğüne denetleme.  
   
 > [!IMPORTANT]
 >  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
@@ -124,9 +124,9 @@ Bu örnek, bir Windows Communication Foundation (WCF) hizmeti tarafından güven
   
  Yapılandırma dosyası öğelerini DPAPI ve RSA kullanarak şifreleme de mümkündür. Daha fazla bilgi için aşağıdaki bağlantılara bakın:  
   
--   [Güvenli bir ASP.NET uygulamaları: Kimlik doğrulaması, yetkilendirme ve güvenli iletişim](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [Güvenli bir ASP.NET uygulamaları: Kimlik doğrulaması, yetkilendirme ve güvenli iletişim](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
--   [Nasıl yapılır: ASP.NET 2.0 yapılandırma bölümleri şifrelemek RSA kullanarak](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [Nasıl yapılır: ASP.NET 2.0 yapılandırma bölümleri şifrelemek RSA kullanarak](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   

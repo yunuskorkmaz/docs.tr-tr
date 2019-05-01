@@ -3,11 +3,11 @@ title: İşe Alma İşlemi
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
 ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005062"
 ---
 # <a name="hiring-process"></a>İşe Alma İşlemi
 Bu örnek nasıl uygulanacağını Mesajlaşma etkinlikleri ve iş akışı hizmetlerinde barındırılan iki iş akışlarını kullanarak bir iş sürecini gösterir. Bu iş akışları Contoso, Inc. adlı kurgusal bir şirkette BT altyapısını bir parçasıdır  
@@ -18,35 +18,35 @@ Bu örnek nasıl uygulanacağını Mesajlaşma etkinlikleri ve iş akışı hizm
   
  Bu örnek, aşağıdaki özellikleri gösterir. [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]:  
   
--   <xref:System.Activities.Statements.Flowchart> ve <xref:System.Activities.Statements.Sequence> iş süreçlerini modelleme için iş akışları.  
+- <xref:System.Activities.Statements.Flowchart> ve <xref:System.Activities.Statements.Sequence> iş süreçlerini modelleme için iş akışları.  
   
--   İş akışı hizmetleri.  
+- İş akışı hizmetleri.  
   
--   Mesajlaşma etkinlikleri.  
+- Mesajlaşma etkinlikleri.  
   
--   İçerik temelli bağıntı.  
+- İçerik temelli bağıntı.  
   
--   Özel etkinlikler (bildirim ve kod tabanlı).  
+- Özel etkinlikler (bildirim ve kod tabanlı).  
   
--   Sistem tarafından sağlanan SQL server Kalıcılık.  
+- Sistem tarafından sağlanan SQL server Kalıcılık.  
   
--   Özel <xref:System.Activities.Persistence.PersistenceParticipant>.  
+- Özel <xref:System.Activities.Persistence.PersistenceParticipant>.  
   
--   Özel izleme.  
+- Özel izleme.  
   
--   Windows (ETW) izleme için izleme olayı.  
+- Windows (ETW) izleme için izleme olayı.  
   
--   Etkinlik oluşturma.  
+- Etkinlik oluşturma.  
   
--   <xref:System.Activities.Statements.Parallel> etkinlikler.  
+- <xref:System.Activities.Statements.Parallel> etkinlikler.  
   
--   <xref:System.Activities.Statements.CancellationScope> Etkinlik.  
+- <xref:System.Activities.Statements.CancellationScope> Etkinlik.  
   
--   Dayanıklı zamanlayıcılar (<xref:System.Activities.Statements.Delay> etkinliği).  
+- Dayanıklı zamanlayıcılar (<xref:System.Activities.Statements.Delay> etkinliği).  
   
--   İşlem.  
+- İşlem.  
   
--   Aynı çözümdeki birden çok iş akışı.  
+- Aynı çözümdeki birden çok iş akışı.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
@@ -64,25 +64,25 @@ Bu örnek nasıl uygulanacağını Mesajlaşma etkinlikleri ve iş akışı hizm
   
 2. İstek sahibinin Yöneticisi isteği onaylamanız gerekir:  
   
-    1.  Yönetici isteği reddedebilir.  
+    1. Yönetici isteği reddedebilir.  
   
-    2.  Yönetici isteği belirtmesine ek bilgi için dönebilirsiniz:  
+    2. Yönetici isteği belirtmesine ek bilgi için dönebilirsiniz:  
   
-        1.  İstek sahibinin inceler ve Yöneticisi isteği gönderir.  
+        1. İstek sahibinin inceler ve Yöneticisi isteği gönderir.  
   
-    3.  Yönetici onaylayabilirsiniz.  
+    3. Yönetici onaylayabilirsiniz.  
   
 3. İstek sahibinin manager onayladıktan sonra Departman sahibi isteği onaylamanız gerekir:  
   
-    1.  Departman sahibi reddedebilirsiniz.  
+    1. Departman sahibi reddedebilirsiniz.  
   
-    2.  Departman sahibi onaylayabilirsiniz.  
+    2. Departman sahibi onaylayabilirsiniz.  
   
 4. Departman sahibi onayladıktan sonra işlemi 2 ik yöneticileri veya CEO onayını gerektirir:  
   
-    1.  İşlem, kabul edilen veya reddedilen durumuna geçiş yapabilirsiniz.  
+    1. İşlem, kabul edilen veya reddedilen durumuna geçiş yapabilirsiniz.  
   
-    2.  İşlem kabul edilirse, yeni bir örneğini `ResumeRequest` iş akışı başlatılır (`ResumeRequest` HiringRequest.csproj için bir hizmet başvurusu ile bağlantılıdır.)  
+    2. İşlem kabul edilirse, yeni bir örneğini `ResumeRequest` iş akışı başlatılır (`ResumeRequest` HiringRequest.csproj için bir hizmet başvurusu ile bağlantılıdır.)  
   
  Yeni bir çalışan işe alma yöneticileri onayladıktan sonra ik uygun aday bulmanız gerekir. Bu işlem ikinci bir iş akışı tarafından gerçekleştirilir (`ResumeRequest`ResumeRequestService.csproj içinde tanımlanmış). Bu iş akışı Contoso'nun dış Kariyerleri Web sitesine bir kariyer fırsatla gönderen bir iş göndermek için bir işlemi tanımlar, başvuran sürdürür alır ve iş posta durumunu izler. Konumları (bir süresi dolana kadar) bir sabit bir zaman aralığı için kullanılabilir veya bir çalışan şubeden kaldırmaya karar kadar. `ResumeRequest` İş akışı, aşağıdaki adımlardan oluşur:  
   
@@ -215,19 +215,19 @@ Bu örnek nasıl uygulanacağını Mesajlaşma etkinlikleri ve iş akışı hizm
   
 2. Çözüm yapı başarısız olursa aşağıdakileri doğrulayın:  
   
-    -   Başvuru `ContosoHR` gelen eksik `InternalClient` veya `CareersWebSite` projeleri.  
+    - Başvuru `ContosoHR` gelen eksik `InternalClient` veya `CareersWebSite` projeleri.  
   
 3. Yürütülecek çözümü başarısız olursa aşağıdakileri doğrulayın:  
   
-    1.  Tüm hizmetler çalışıyor.  
+    1. Tüm hizmetler çalışıyor.  
   
-    2.  Hizmet başvurularını güncelleştirilir.  
+    2. Hizmet başvurularını güncelleştirilir.  
   
-        1.  App_WebReferences klasörünü açın  
+        1. App_WebReferences klasörünü açın  
   
-        2.  Sağ **Contoso** seçip **Web/hizmet başvurularını güncelleştirme**.  
+        2. Sağ **Contoso** seçip **Web/hizmet başvurularını güncelleştirme**.  
   
-        3.  Visual Studio'da CTRL + SHIFT + B tuşlarına basarak çözümü yeniden oluşturun.  
+        3. Visual Studio'da CTRL + SHIFT + B tuşlarına basarak çözümü yeniden oluşturun.  
   
 ## <a name="uninstalling"></a>Kaldırma  
   

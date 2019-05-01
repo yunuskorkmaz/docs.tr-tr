@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
 ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008208"
 ---
 # <a name="path-markup-syntax"></a>Yol Biçimlendirme Sözdizimi
 Yolları açıklanmıştır [şekiller ve temel çizimlere WPF genel bakışında](shapes-and-basic-drawing-in-wpf-overview.md) ve [geometrisi](geometry-overview.md), ancak bu konuda yol belirtmek için kullanabileceğiniz güçlü ve karmaşık mini dil ayrıntılı olarak açıklanmaktadır. geometriler daha sıkı bir şekilde kullanarak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -25,11 +25,11 @@ Yolları açıklanmıştır [şekiller ve temel çizimlere WPF genel bakışınd
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>StreamGeometry ve PathFigureCollection Mini dilleri  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Geometrik yollar açıklamak için mini-diller sağlayan iki sınıf sağlar: <xref:System.Windows.Media.StreamGeometry> ve <xref:System.Windows.Media.PathFigureCollection>.  
   
--   Kullandığınız <xref:System.Windows.Media.StreamGeometry> türünün özelliğini ayarlarken mini dil <xref:System.Windows.Media.Geometry>, gibi <xref:System.Windows.UIElement.Clip%2A> özelliği bir <xref:System.Windows.UIElement> veya <xref:System.Windows.Shapes.Path.Data%2A> özelliği bir <xref:System.Windows.Shapes.Path> öğesi. Aşağıdaki örnek oluşturmak için öznitelik sözdizimi kullanan bir <xref:System.Windows.Media.StreamGeometry>.  
+- Kullandığınız <xref:System.Windows.Media.StreamGeometry> türünün özelliğini ayarlarken mini dil <xref:System.Windows.Media.Geometry>, gibi <xref:System.Windows.UIElement.Clip%2A> özelliği bir <xref:System.Windows.UIElement> veya <xref:System.Windows.Shapes.Path.Data%2A> özelliği bir <xref:System.Windows.Shapes.Path> öğesi. Aşağıdaki örnek oluşturmak için öznitelik sözdizimi kullanan bir <xref:System.Windows.Media.StreamGeometry>.  
   
      [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
   
--   Kullandığınız <xref:System.Windows.Media.PathFigureCollection> ayarlarken mini dil <xref:System.Windows.Media.PathGeometry.Figures%2A> özelliği bir <xref:System.Windows.Media.PathGeometry>. Aşağıdaki örnek oluşturmak için bir öznitelik sözdizimi kullanan bir <xref:System.Windows.Media.PathFigureCollection> için bir <xref:System.Windows.Media.PathGeometry>.  
+- Kullandığınız <xref:System.Windows.Media.PathFigureCollection> ayarlarken mini dil <xref:System.Windows.Media.PathGeometry.Figures%2A> özelliği bir <xref:System.Windows.Media.PathGeometry>. Aşağıdaki örnek oluşturmak için bir öznitelik sözdizimi kullanan bir <xref:System.Windows.Media.PathFigureCollection> için bir <xref:System.Windows.Media.PathGeometry>.  
   
      [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
   
