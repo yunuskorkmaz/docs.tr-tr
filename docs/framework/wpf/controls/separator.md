@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Separator control [WPF]
 ms.assetid: 1b872bc6-1a26-401c-989b-3fafecc5a4ef
 ms.openlocfilehash: d3d8fb637363a154013115f95bae52904467b46e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938963"
 ---
-# <a name="separator"></a><span data-ttu-id="e35ab-102">Ayırıcı</span><span class="sxs-lookup"><span data-stu-id="e35ab-102">Separator</span></span>
-<span data-ttu-id="e35ab-103">A <xref:System.Windows.Controls.Separator> denetim çizer çizgi, yatay veya dikey, denetimler, içindeki öğeler arasında gibi <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, ve <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="e35ab-103">A <xref:System.Windows.Controls.Separator> control draws a line, horizontal or vertical, between items in controls, such as <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, and <xref:System.Windows.Controls.ToolBar>.</span></span>  
+# <a name="separator"></a><span data-ttu-id="27986-102">Ayırıcı</span><span class="sxs-lookup"><span data-stu-id="27986-102">Separator</span></span>
+<span data-ttu-id="27986-103">A <xref:System.Windows.Controls.Separator> denetimi çizen bir satır, yatay veya dikey denetimleri bulunan öğeler arasındaki gibi <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, ve <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="27986-103">A <xref:System.Windows.Controls.Separator> control draws a line, horizontal or vertical, between items in controls, such as <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, and <xref:System.Windows.Controls.ToolBar>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e35ab-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="e35ab-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="27986-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="27986-104">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="e35ab-105">Başvuru</span><span class="sxs-lookup"><span data-stu-id="e35ab-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="27986-105">Başvuru</span><span class="sxs-lookup"><span data-stu-id="27986-105">Reference</span></span>  
  <xref:System.Windows.Controls.Separator>

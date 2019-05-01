@@ -3,22 +3,22 @@ title: 'Nasıl yapılır: Bir dize (Visual Basic) ayrıştırılamıyor'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
 ms.openlocfilehash: 815e94b3b41c2c0cc1d18d598307ab292919bea4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942603"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a><span data-ttu-id="361cc-102">Nasıl yapılır: Bir dize (Visual Basic) ayrıştırılamıyor</span><span class="sxs-lookup"><span data-stu-id="361cc-102">How to: Parse a String (Visual Basic)</span></span>
-<span data-ttu-id="361cc-103">Bu konuda, bir XML ağacı oluşturma işlemi gösterilmektedir C#.</span><span class="sxs-lookup"><span data-stu-id="361cc-103">This topic shows how to create an XML tree in C#.</span></span>  
+# <a name="how-to-parse-a-string-visual-basic"></a><span data-ttu-id="5dec6-102">Nasıl yapılır: Bir dize (Visual Basic) ayrıştırılamıyor</span><span class="sxs-lookup"><span data-stu-id="5dec6-102">How to: Parse a String (Visual Basic)</span></span>
+<span data-ttu-id="5dec6-103">Bu konuda, bir XML ağacı oluşturma işlemi gösterilmektedir C#.</span><span class="sxs-lookup"><span data-stu-id="5dec6-103">This topic shows how to create an XML tree in C#.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="361cc-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="361cc-104">Example</span></span>  
- <span data-ttu-id="361cc-105">Kullanarak, Visual Basic'te bir dizeyi ayrıştırmak `XElement.Parse` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="361cc-105">You can parse a string in Visual Basic by using the `XElement.Parse` method.</span></span> <span data-ttu-id="361cc-106">Ancak, XML değişmez değerleri, XML değişmez değerleri, bir dizedeki XML Ayrıştırma olarak aynı performans cezaları gelen karşılaşmaz çünkü aşağıdaki kodda gösterildiği gibi kullanmak daha verimlidir.</span><span class="sxs-lookup"><span data-stu-id="361cc-106">However, it is more efficient to use XML literals, as shown in following code, because XML literals do not suffer from the same performance penalties as parsing XML from a string.</span></span>  
+## <a name="example"></a><span data-ttu-id="5dec6-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="5dec6-104">Example</span></span>  
+ <span data-ttu-id="5dec6-105">Kullanarak, Visual Basic'te bir dizeyi ayrıştırmak `XElement.Parse` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="5dec6-105">You can parse a string in Visual Basic by using the `XElement.Parse` method.</span></span> <span data-ttu-id="5dec6-106">Ancak, XML değişmez değerleri, XML değişmez değerleri, bir dizedeki XML Ayrıştırma olarak aynı performans cezaları gelen karşılaşmaz çünkü aşağıdaki kodda gösterildiği gibi kullanmak daha verimlidir.</span><span class="sxs-lookup"><span data-stu-id="5dec6-106">However, it is more efficient to use XML literals, as shown in following code, because XML literals do not suffer from the same performance penalties as parsing XML from a string.</span></span>  
   
- <span data-ttu-id="361cc-107">XML değişmez değerlerini kullanarak, yalnızca kopyalayın ve Visual Basic programınızı XML dosyanızı yapıştırın.</span><span class="sxs-lookup"><span data-stu-id="361cc-107">By using XML literals, you can just copy and paste your XML into your Visual Basic program.</span></span>  
+ <span data-ttu-id="5dec6-107">XML değişmez değerlerini kullanarak, yalnızca kopyalayın ve Visual Basic programınızı XML dosyanızı yapıştırın.</span><span class="sxs-lookup"><span data-stu-id="5dec6-107">By using XML literals, you can just copy and paste your XML into your Visual Basic program.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="361cc-108">Metni ayrıştırma veya bir metin dosyasından bir XML belgesi yüklenirken işlevsel oluşturma verimli değildir.</span><span class="sxs-lookup"><span data-stu-id="361cc-108">Parsing text or loading an XML document from a text file is less efficient than functional construction.</span></span> <span data-ttu-id="361cc-109">Bir XML ağacı koddan başlatırken, metin ayrıştırmak üzere daha işlevsel oluşturma kullanmak için daha az işlemci zamanı alır.</span><span class="sxs-lookup"><span data-stu-id="361cc-109">If you are initializing an XML tree from code, it takes less processor time to use functional construction than to parse text.</span></span>  
+>  <span data-ttu-id="5dec6-108">Metni ayrıştırma veya bir metin dosyasından bir XML belgesi yüklenirken işlevsel oluşturma verimli değildir.</span><span class="sxs-lookup"><span data-stu-id="5dec6-108">Parsing text or loading an XML document from a text file is less efficient than functional construction.</span></span> <span data-ttu-id="5dec6-109">Bir XML ağacı koddan başlatırken, metin ayrıştırmak üzere daha işlevsel oluşturma kullanmak için daha az işlemci zamanı alır.</span><span class="sxs-lookup"><span data-stu-id="5dec6-109">If you are initializing an XML tree from code, it takes less processor time to use functional construction than to parse text.</span></span>  
   
 ```vb  
 Dim contacts as XElement = _  
@@ -49,6 +49,6 @@ Dim contacts as XElement = _
     </Contacts>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="361cc-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="361cc-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5dec6-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5dec6-110">See also</span></span>
 
-- [<span data-ttu-id="361cc-111">Ayrıştırma XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="361cc-111">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [<span data-ttu-id="5dec6-111">Ayrıştırma XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5dec6-111">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

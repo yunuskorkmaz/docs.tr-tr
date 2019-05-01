@@ -9,22 +9,22 @@ helpviewer_keywords:
 - detecting whether the WPF plug-in for Firefox is installed [WPF]
 ms.assetid: 5f839373-e3fb-44f1-88ad-4a0761f02189
 ms.openlocfilehash: 138c212e79654b8ac875628692b49bb6a38cb695
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947881"
 ---
-# <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a><span data-ttu-id="371f0-102">Nasıl yapılır: Firefox WPF Eklentisinin Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="371f0-102">How to: Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>
+# <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a><span data-ttu-id="38bd9-102">Nasıl yapılır: Firefox WPF Eklentisinin Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="38bd9-102">How to: Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>
 
-<span data-ttu-id="371f0-103">Windows Presentation Foundation (WPF) için Firefox eklentisini sağlayan [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] ve XAML dosyalarının Mozilla Firefox tarayıcınızda çalıştırın kaybedilir.</span><span class="sxs-lookup"><span data-stu-id="371f0-103">The Windows Presentation Foundation (WPF) plug-in for Firefox enables [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] and loose XAML files to run in the Mozilla Firefox browser.</span></span> <span data-ttu-id="371f0-104">Bu konu, HTML ve JavaScript Yöneticiler Firefox WPF eklentisinin yüklü olup olmadığını belirlemek için kullanabileceğiniz yazılmış bir komut dosyası sağlar.</span><span class="sxs-lookup"><span data-stu-id="371f0-104">This topic provides a script written in HTML and JavaScript that administrators can use to determine whether the WPF plug-in for Firefox is installed.</span></span>
+<span data-ttu-id="38bd9-103">Windows Presentation Foundation (WPF) için Firefox eklentisini sağlayan [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] ve XAML dosyalarının Mozilla Firefox tarayıcınızda çalıştırın kaybedilir.</span><span class="sxs-lookup"><span data-stu-id="38bd9-103">The Windows Presentation Foundation (WPF) plug-in for Firefox enables [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] and loose XAML files to run in the Mozilla Firefox browser.</span></span> <span data-ttu-id="38bd9-104">Bu konu, HTML ve JavaScript Yöneticiler Firefox WPF eklentisinin yüklü olup olmadığını belirlemek için kullanabileceğiniz yazılmış bir komut dosyası sağlar.</span><span class="sxs-lookup"><span data-stu-id="38bd9-104">This topic provides a script written in HTML and JavaScript that administrators can use to determine whether the WPF plug-in for Firefox is installed.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="371f0-105">Yükleme, dağıtma ve algılama hakkında daha fazla bilgi için [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], bkz: [geliştiriciler için .NET Framework yükleme](../../install/guide-for-developers.md).</span><span class="sxs-lookup"><span data-stu-id="371f0-105">For more information about installing, deploying, and detecting the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], see [Install the .NET Framework for developers](../../install/guide-for-developers.md).</span></span>
+> <span data-ttu-id="38bd9-105">Yükleme, dağıtma ve algılama hakkında daha fazla bilgi için [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], bkz: [geliştiriciler için .NET Framework yükleme](../../install/guide-for-developers.md).</span><span class="sxs-lookup"><span data-stu-id="38bd9-105">For more information about installing, deploying, and detecting the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], see [Install the .NET Framework for developers](../../install/guide-for-developers.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="371f0-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="371f0-106">Example</span></span>
+## <a name="example"></a><span data-ttu-id="38bd9-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="38bd9-106">Example</span></span>
 
-<span data-ttu-id="371f0-107">Zaman [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] olan yüklü istemci bilgisayar için Firefox WPF eklentisinin ile yapılandırılır.</span><span class="sxs-lookup"><span data-stu-id="371f0-107">When the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is installed, the client computer is configured with a WPF plug-in for Firefox.</span></span> <span data-ttu-id="371f0-108">Aşağıdaki örnek betik, Firefox WPF eklentisinin için denetler ve ardından uygun durum iletisini görüntüler.</span><span class="sxs-lookup"><span data-stu-id="371f0-108">The following example script checks for the WPF plug-in for Firefox and then displays an appropriate status message.</span></span>
+<span data-ttu-id="38bd9-107">Zaman [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] olan yüklü istemci bilgisayar için Firefox WPF eklentisinin ile yapılandırılır.</span><span class="sxs-lookup"><span data-stu-id="38bd9-107">When the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is installed, the client computer is configured with a WPF plug-in for Firefox.</span></span> <span data-ttu-id="38bd9-108">Aşağıdaki örnek betik, Firefox WPF eklentisinin için denetler ve ardından uygun durum iletisini görüntüler.</span><span class="sxs-lookup"><span data-stu-id="38bd9-108">The following example script checks for the WPF plug-in for Firefox and then displays an appropriate status message.</span></span>
 
 ```html
 <HTML>
@@ -56,16 +56,16 @@ ms.locfileid: "57469319"
 </HTML>
 ```
 
-<span data-ttu-id="371f0-109">Firefox için WPF eklentisi onay başarılı olursa, aşağıdaki durum iletisi görüntülenir:</span><span class="sxs-lookup"><span data-stu-id="371f0-109">If the check for the WPF plug-in for Firefox is successful, the following status message is displayed:</span></span>
+<span data-ttu-id="38bd9-109">Firefox için WPF eklentisi onay başarılı olursa, aşağıdaki durum iletisi görüntülenir:</span><span class="sxs-lookup"><span data-stu-id="38bd9-109">If the check for the WPF plug-in for Firefox is successful, the following status message is displayed:</span></span>
 
 `The WPF plug-in for Firefox is installed.`
 
-<span data-ttu-id="371f0-110">Aksi takdirde, aşağıdaki durum iletisi görüntülenir:</span><span class="sxs-lookup"><span data-stu-id="371f0-110">Otherwise, the following status message is displayed:</span></span>
+<span data-ttu-id="38bd9-110">Aksi takdirde, aşağıdaki durum iletisi görüntülenir:</span><span class="sxs-lookup"><span data-stu-id="38bd9-110">Otherwise, the following status message is displayed:</span></span>
 
 `The WPF plug-in for Firefox is not installed. Please install or reinstall the .NET Framework 3.5.`
 
-## <a name="see-also"></a><span data-ttu-id="371f0-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="371f0-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="38bd9-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="38bd9-111">See also</span></span>
 
-- [<span data-ttu-id="371f0-112">.NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="371f0-112">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
-- [<span data-ttu-id="371f0-113">.NET Framework 3.5'in Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="371f0-113">Detect Whether the .NET Framework 3.5 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-5-is-installed.md)
-- [<span data-ttu-id="371f0-114">WPF XAML Tarayıcı Uygulamalarına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="371f0-114">WPF XAML Browser Applications Overview</span></span>](wpf-xaml-browser-applications-overview.md)
+- [<span data-ttu-id="38bd9-112">.NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="38bd9-112">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+- [<span data-ttu-id="38bd9-113">.NET Framework 3.5'in Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="38bd9-113">Detect Whether the .NET Framework 3.5 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-5-is-installed.md)
+- [<span data-ttu-id="38bd9-114">WPF XAML Tarayıcı Uygulamalarına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="38bd9-114">WPF XAML Browser Applications Overview</span></span>](wpf-xaml-browser-applications-overview.md)

@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Viewport3D [WPF]
 ms.assetid: 42bfbd99-c7c6-43f1-940b-90448faa412e
 ms.openlocfilehash: c3238161a01df67b05be6284b8eed61981ff3974
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947335"
 ---
-# <a name="how-to-hit-test-in-a-viewport3d"></a><span data-ttu-id="b4c36-102">Nasıl yapılır: Viewport3D'de Tıklama Testi</span><span class="sxs-lookup"><span data-stu-id="b4c36-102">How to: Hit Test in a Viewport3D</span></span>
-<span data-ttu-id="b4c36-103">Bu örnek nasıl tıklama testi için 3B Görsellerde gösterir bir <xref:System.Windows.Controls.Viewport3D>.</span><span class="sxs-lookup"><span data-stu-id="b4c36-103">This example shows how to hit test for 3D Visuals in a <xref:System.Windows.Controls.Viewport3D>.</span></span>  
+# <a name="how-to-hit-test-in-a-viewport3d"></a><span data-ttu-id="037dd-102">Nasıl yapılır: Viewport3D'de Tıklama Testi</span><span class="sxs-lookup"><span data-stu-id="037dd-102">How to: Hit Test in a Viewport3D</span></span>
+<span data-ttu-id="037dd-103">Bu örnek nasıl tıklama testi için 3B Görsellerde gösterir bir <xref:System.Windows.Controls.Viewport3D>.</span><span class="sxs-lookup"><span data-stu-id="037dd-103">This example shows how to hit test for 3D Visuals in a <xref:System.Windows.Controls.Viewport3D>.</span></span>  
   
- <span data-ttu-id="b4c36-104">Çünkü <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 2B ve 3B bilgilerini döndürür yalnızca 3B sonuçları okumak için test sonuçlarını yinelemek mümkündür.</span><span class="sxs-lookup"><span data-stu-id="b4c36-104">Because <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> returns 2D and 3D information, it is possible to iterate through the test results to read only 3D results.</span></span>  
+ <span data-ttu-id="037dd-104">Çünkü <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 2B ve 3B bilgilerini döndürür yalnızca 3B sonuçları okumak için test sonuçlarını yinelemek mümkündür.</span><span class="sxs-lookup"><span data-stu-id="037dd-104">Because <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> returns 2D and 3D information, it is possible to iterate through the test results to read only 3D results.</span></span>  
   
  [!code-csharp[HitTest3D#HitTest3D3DN4](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn4)]
  [!code-vb[HitTest3D#HitTest3D3DN4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn4)]  
   
- <span data-ttu-id="b4c36-105"><xref:System.Windows.Media.HitTestResultBehavior> Aşağıdaki kodda, isabet test sonuçlarını nasıl işleneceğini belirler.</span><span class="sxs-lookup"><span data-stu-id="b4c36-105">The <xref:System.Windows.Media.HitTestResultBehavior> in the following code determines how the hit test results are processed.</span></span>  <span data-ttu-id="b4c36-106">`UpdateResultInfo` ve `UpdateMaterial` yerel olarak tanımlanan yöntemler.</span><span class="sxs-lookup"><span data-stu-id="b4c36-106">`UpdateResultInfo` and `UpdateMaterial` are locally defined methods.</span></span>  
+ <span data-ttu-id="037dd-105"><xref:System.Windows.Media.HitTestResultBehavior> Aşağıdaki kodda, isabet test sonuçlarını nasıl işleneceğini belirler.</span><span class="sxs-lookup"><span data-stu-id="037dd-105">The <xref:System.Windows.Media.HitTestResultBehavior> in the following code determines how the hit test results are processed.</span></span>  <span data-ttu-id="037dd-106">`UpdateResultInfo` ve `UpdateMaterial` yerel olarak tanımlanan yöntemler.</span><span class="sxs-lookup"><span data-stu-id="037dd-106">`UpdateResultInfo` and `UpdateMaterial` are locally defined methods.</span></span>  
   
  [!code-csharp[HitTest3D#HitTest3D3DN5](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn5)]
  [!code-vb[HitTest3D#HitTest3D3DN5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn5)]  
   
-## <a name="see-also"></a><span data-ttu-id="b4c36-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b4c36-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="037dd-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="037dd-107">See also</span></span>
 
-- [<span data-ttu-id="b4c36-108">3B isabet sınaması örneği</span><span class="sxs-lookup"><span data-stu-id="b4c36-108">3-D Hit Testing Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=159959)
+- [<span data-ttu-id="037dd-108">3B isabet sınaması örneği</span><span class="sxs-lookup"><span data-stu-id="037dd-108">3-D Hit Testing Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=159959)

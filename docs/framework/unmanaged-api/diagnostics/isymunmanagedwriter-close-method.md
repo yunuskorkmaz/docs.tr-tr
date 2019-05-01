@@ -18,30 +18,30 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4d3497d3167715d3e8a04f10a6687260949e4a36
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934062"
 ---
-# <a name="isymunmanagedwriterclose-method"></a><span data-ttu-id="6555e-102">ISymUnmanagedWriter::Close Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6555e-102">ISymUnmanagedWriter::Close Method</span></span>
-<span data-ttu-id="6555e-103">Sembolleri sembol deposuna uyguladıktan sonra sembol yazıcı kapatır.</span><span class="sxs-lookup"><span data-stu-id="6555e-103">Closes the symbol writer after committing the symbols to the symbol store.</span></span>  
+# <a name="isymunmanagedwriterclose-method"></a><span data-ttu-id="ae58b-102">ISymUnmanagedWriter::Close Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ae58b-102">ISymUnmanagedWriter::Close Method</span></span>
+<span data-ttu-id="ae58b-103">Sembolleri sembol deposuna uyguladıktan sonra sembol yazıcı kapatır.</span><span class="sxs-lookup"><span data-stu-id="ae58b-103">Closes the symbol writer after committing the symbols to the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6555e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6555e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ae58b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ae58b-104">Syntax</span></span>  
   
 ```  
 HRESULT Close();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="6555e-105">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="6555e-105">Return Value</span></span>  
- <span data-ttu-id="6555e-106">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="6555e-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ae58b-105">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="ae58b-105">Return Value</span></span>  
+ <span data-ttu-id="ae58b-106">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="ae58b-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6555e-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6555e-107">Remarks</span></span>  
- <span data-ttu-id="6555e-108">Bu çağrıdan sonra sembol yazıcısı güncelleştirmeleri daha fazla geçersiz hale gelir.</span><span class="sxs-lookup"><span data-stu-id="6555e-108">After this call, the symbol writer becomes invalid for further updates.</span></span> <span data-ttu-id="6555e-109">Sembol yazıcı simgeleri kaydetmeden kapatmak için kullanmak [Isymunmanagedwriter::Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) yöntemi yerine.</span><span class="sxs-lookup"><span data-stu-id="6555e-109">To close the symbol writer without committing the symbols, use the [ISymUnmanagedWriter::Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) method instead.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ae58b-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ae58b-107">Remarks</span></span>  
+ <span data-ttu-id="ae58b-108">Bu çağrıdan sonra sembol yazıcısı güncelleştirmeleri daha fazla geçersiz hale gelir.</span><span class="sxs-lookup"><span data-stu-id="ae58b-108">After this call, the symbol writer becomes invalid for further updates.</span></span> <span data-ttu-id="ae58b-109">Sembol yazıcı simgeleri kaydetmeden kapatmak için kullanmak [Isymunmanagedwriter::Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) yöntemi yerine.</span><span class="sxs-lookup"><span data-stu-id="ae58b-109">To close the symbol writer without committing the symbols, use the [ISymUnmanagedWriter::Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) method instead.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6555e-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6555e-110">Requirements</span></span>  
- <span data-ttu-id="6555e-111">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="6555e-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ae58b-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ae58b-110">Requirements</span></span>  
+ <span data-ttu-id="ae58b-111">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ae58b-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6555e-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6555e-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ae58b-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ae58b-112">See also</span></span>
 
-- [<span data-ttu-id="6555e-113">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6555e-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="ae58b-113">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ae58b-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

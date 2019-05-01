@@ -11,17 +11,17 @@ ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 49476a4417e5431842f8e2ba0371c53c5c9f03e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948899"
 ---
-# <a name="axlrsakeyvaluetopublickeytoken-function"></a><span data-ttu-id="47708-102">\_AxlRSAKeyValueToPublicKeyToken işlevi</span><span class="sxs-lookup"><span data-stu-id="47708-102">\_AxlRSAKeyValueToPublicKeyToken function</span></span>
+# <a name="axlrsakeyvaluetopublickeytoken-function"></a><span data-ttu-id="f4c37-102">\_AxlRSAKeyValueToPublicKeyToken işlevi</span><span class="sxs-lookup"><span data-stu-id="f4c37-102">\_AxlRSAKeyValueToPublicKeyToken function</span></span>
 
-<span data-ttu-id="47708-103">Tanımlayıcı ad bir ortak anahtar belirteci için bir mod ve üs dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="47708-103">Converts a Modulus and Exponent to a strong name public key token.</span></span>  
+<span data-ttu-id="f4c37-103">Tanımlayıcı ad bir ortak anahtar belirteci için bir mod ve üs dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="f4c37-103">Converts a Modulus and Exponent to a strong name public key token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="47708-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="47708-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f4c37-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f4c37-104">Syntax</span></span>  
   
 ```  
 HRESULT _AxlRSAKeyValueToPublicKeyToken (  
@@ -31,19 +31,19 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="47708-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="47708-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f4c37-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f4c37-105">Parameters</span></span>  
  `pModulusBlob`  
- <span data-ttu-id="47708-106">[in] Base64 kodlamalı Modulus blob (gelen \<Modulus > öğesi).</span><span class="sxs-lookup"><span data-stu-id="47708-106">[in] The base64-encoded Modulus blob (from the \<Modulus> element).</span></span>  <span data-ttu-id="47708-107">Bkz: [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) yapısı.</span><span class="sxs-lookup"><span data-stu-id="47708-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="f4c37-106">[in] Base64 kodlamalı Modulus blob (gelen \<Modulus > öğesi).</span><span class="sxs-lookup"><span data-stu-id="f4c37-106">[in] The base64-encoded Modulus blob (from the \<Modulus> element).</span></span>  <span data-ttu-id="f4c37-107">Bkz: [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) yapısı.</span><span class="sxs-lookup"><span data-stu-id="f4c37-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
   
  `pExponentBlob`  
- <span data-ttu-id="47708-108">[in] Base64 kodlamalı üs blob (gelen \<üs > öğesi).</span><span class="sxs-lookup"><span data-stu-id="47708-108">[in] The base64-encoded Exponent blob (from the \<Exponent> element).</span></span> <span data-ttu-id="47708-109">Bkz: [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) yapısı.</span><span class="sxs-lookup"><span data-stu-id="47708-109">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="f4c37-108">[in] Base64 kodlamalı üs blob (gelen \<üs > öğesi).</span><span class="sxs-lookup"><span data-stu-id="f4c37-108">[in] The base64-encoded Exponent blob (from the \<Exponent> element).</span></span> <span data-ttu-id="f4c37-109">Bkz: [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) yapısı.</span><span class="sxs-lookup"><span data-stu-id="f4c37-109">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
   
  `ppwszPublicKeyToken`  
- <span data-ttu-id="47708-110">[out] WCHAR işaretçisi \* onaltılık kodlanmış ortak anahtar belirteci almak için.</span><span class="sxs-lookup"><span data-stu-id="47708-110">[out] A pointer to WCHAR \* to receive the hex-encoded public key token.</span></span>  
+ <span data-ttu-id="f4c37-110">[out] WCHAR işaretçisi \* onaltılık kodlanmış ortak anahtar belirteci almak için.</span><span class="sxs-lookup"><span data-stu-id="f4c37-110">[out] A pointer to WCHAR \* to receive the hex-encoded public key token.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="47708-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="47708-111">Return Value</span></span>  
- <span data-ttu-id="47708-112">`S_OK` işlev başarılı olursa.</span><span class="sxs-lookup"><span data-stu-id="47708-112">`S_OK` if the function succeeds.</span></span> <span data-ttu-id="47708-113">Aksi takdirde bir hata kodu döndürür.</span><span class="sxs-lookup"><span data-stu-id="47708-113">Otherwise, returns an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f4c37-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="f4c37-111">Return Value</span></span>  
+ <span data-ttu-id="f4c37-112">`S_OK` işlev başarılı olursa.</span><span class="sxs-lookup"><span data-stu-id="f4c37-112">`S_OK` if the function succeeds.</span></span> <span data-ttu-id="f4c37-113">Aksi takdirde bir hata kodu döndürür.</span><span class="sxs-lookup"><span data-stu-id="f4c37-113">Otherwise, returns an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="47708-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="47708-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f4c37-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f4c37-114">See also</span></span>
 
-- [<span data-ttu-id="47708-115">Authenticode</span><span class="sxs-lookup"><span data-stu-id="47708-115">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+- [<span data-ttu-id="f4c37-115">Authenticode</span><span class="sxs-lookup"><span data-stu-id="f4c37-115">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
