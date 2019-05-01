@@ -10,21 +10,21 @@ helpviewer_keywords:
 - Point4D structures [WPF], testing for equality
 ms.assetid: e004a67e-db7f-4af8-a31f-e6b2a44ccf34
 ms.openlocfilehash: ce1188e99ef2b0682427cc2e227aaccd27f7c4f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050642"
 ---
-# <a name="how-to-test-point4d-structures-for-equality-and-inequality"></a><span data-ttu-id="9284e-102">Nasıl yapılır: Eşitlik ve Eşitsizlik için Point4D Yapılarını Test Etme</span><span class="sxs-lookup"><span data-stu-id="9284e-102">How to: Test Point4D structures for equality and inequality</span></span>
-<span data-ttu-id="9284e-103">Bu örnek nasıl test edileceğini gösterir <xref:System.Windows.Media.Media3D.Point4D> yapıları eşitlik ve eşitsizlik için.</span><span class="sxs-lookup"><span data-stu-id="9284e-103">This example shows how to test <xref:System.Windows.Media.Media3D.Point4D> structures for equality and inequality.</span></span>  
+# <a name="how-to-test-point4d-structures-for-equality-and-inequality"></a><span data-ttu-id="79f7c-102">Nasıl yapılır: Eşitlik ve Eşitsizlik için Point4D Yapılarını Test Etme</span><span class="sxs-lookup"><span data-stu-id="79f7c-102">How to: Test Point4D structures for equality and inequality</span></span>
+<span data-ttu-id="79f7c-103">Bu örnek nasıl test edileceğini gösterir <xref:System.Windows.Media.Media3D.Point4D> yapıları eşitlik ve eşitsizlik için.</span><span class="sxs-lookup"><span data-stu-id="79f7c-103">This example shows how to test <xref:System.Windows.Media.Media3D.Point4D> structures for equality and inequality.</span></span>  
   
- <span data-ttu-id="9284e-104">Aşağıdaki kod nasıl test edileceğini göstermektedir <xref:System.Windows.Media.Media3D.Point4D> yapıları için eşitlik ve eşitsizlik kullanarak <xref:System.Windows.Media.Media3D.Point4D> eşitlik yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="9284e-104">The following code illustrates how to test <xref:System.Windows.Media.Media3D.Point4D> structures for equality and inequality using the <xref:System.Windows.Media.Media3D.Point4D> equality methods.</span></span>  <span data-ttu-id="9284e-105"><xref:System.Windows.Media.Media3D.Point4D> Yapıları aşırı yüklenmiş eşitlik kullanarak eşitlik için test (`==`) işleci, aşırı yüklenmiş eşitsizlik kullanarak ardından eşitsizlik için (`!=`) işleç ve son olarak bir <xref:System.Windows.Media.Media3D.Point3D> yapısı ve <xref:System.Windows.Media.Media3D.Point4D> yapısı, statik kullanarak eşitlik için denetlenir <xref:System.Windows.Media.Media3D.Point4D.Equals%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9284e-105">The <xref:System.Windows.Media.Media3D.Point4D> structures are tested for equality using the overloaded equality (`==`) operator, then for inequality using the overloaded inequality (`!=`) operator, and finally a <xref:System.Windows.Media.Media3D.Point3D> structure and a <xref:System.Windows.Media.Media3D.Point4D> structure are checked for equality using the static <xref:System.Windows.Media.Media3D.Point4D.Equals%2A> method.</span></span>  
+ <span data-ttu-id="79f7c-104">Aşağıdaki kod nasıl test edileceğini göstermektedir <xref:System.Windows.Media.Media3D.Point4D> yapıları için eşitlik ve eşitsizlik kullanarak <xref:System.Windows.Media.Media3D.Point4D> eşitlik yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="79f7c-104">The following code illustrates how to test <xref:System.Windows.Media.Media3D.Point4D> structures for equality and inequality using the <xref:System.Windows.Media.Media3D.Point4D> equality methods.</span></span>  <span data-ttu-id="79f7c-105"><xref:System.Windows.Media.Media3D.Point4D> Yapıları aşırı yüklenmiş eşitlik kullanarak eşitlik için test (`==`) işleci, aşırı yüklenmiş eşitsizlik kullanarak ardından eşitsizlik için (`!=`) işleç ve son olarak bir <xref:System.Windows.Media.Media3D.Point3D> yapısı ve <xref:System.Windows.Media.Media3D.Point4D> yapısı, statik kullanarak eşitlik için denetlenir <xref:System.Windows.Media.Media3D.Point4D.Equals%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="79f7c-105">The <xref:System.Windows.Media.Media3D.Point4D> structures are tested for equality using the overloaded equality (`==`) operator, then for inequality using the overloaded inequality (`!=`) operator, and finally a <xref:System.Windows.Media.Media3D.Point3D> structure and a <xref:System.Windows.Media.Media3D.Point4D> structure are checked for equality using the static <xref:System.Windows.Media.Media3D.Point4D.Equals%2A> method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9284e-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="9284e-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="79f7c-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="79f7c-106">Example</span></span>  
  [!code-csharp[3DGallery_procedural_snip#Point4DEqualityExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Misc3DOperationsExample.cs#point4dequalityexample_csharp)]  
   
-## <a name="see-also"></a><span data-ttu-id="9284e-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9284e-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="79f7c-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="79f7c-107">See also</span></span>
 
 - <xref:System.Windows.Media.Media3D.Point4D.op_Equality%2A>
 - <xref:System.Windows.Media.Media3D.Point4D.op_Inequality%2A>

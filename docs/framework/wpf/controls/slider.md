@@ -8,23 +8,23 @@ helpviewer_keywords:
 - Slider control [WPF]
 ms.assetid: fb037e2a-0002-458b-9e6b-321623fe72a7
 ms.openlocfilehash: 6d8836bc91283f83c95e63a8b948eed46fc94bca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023864"
 ---
-# <a name="slider"></a><span data-ttu-id="e8342-102">Kaydırıcı</span><span class="sxs-lookup"><span data-stu-id="e8342-102">Slider</span></span>
-<span data-ttu-id="e8342-103"><xref:System.Windows.Controls.Slider> Taşıyarak bir aralıktaki değerleri seçmenizi sağlar bir <xref:System.Windows.Controls.Primitives.Thumb> boyunca bir <xref:System.Windows.Controls.Primitives.Track>.</span><span class="sxs-lookup"><span data-stu-id="e8342-103">The <xref:System.Windows.Controls.Slider> allows you select from a range of values by moving a <xref:System.Windows.Controls.Primitives.Thumb> along a <xref:System.Windows.Controls.Primitives.Track>.</span></span>  
+# <a name="slider"></a><span data-ttu-id="8a126-102">Kaydırıcı</span><span class="sxs-lookup"><span data-stu-id="8a126-102">Slider</span></span>
+<span data-ttu-id="8a126-103"><xref:System.Windows.Controls.Slider> Taşıyarak bir aralıktaki değerleri seçmenizi sağlar bir <xref:System.Windows.Controls.Primitives.Thumb> boyunca bir <xref:System.Windows.Controls.Primitives.Track>.</span><span class="sxs-lookup"><span data-stu-id="8a126-103">The <xref:System.Windows.Controls.Slider> allows you select from a range of values by moving a <xref:System.Windows.Controls.Primitives.Thumb> along a <xref:System.Windows.Controls.Primitives.Track>.</span></span>  
   
- <span data-ttu-id="e8342-104">Yatay bir örneği aşağıda gösterilmiştir <xref:System.Windows.Controls.Slider> denetimi.</span><span class="sxs-lookup"><span data-stu-id="e8342-104">The following illustration shows an example of a horizontal <xref:System.Windows.Controls.Slider> control.</span></span>  
+ <span data-ttu-id="8a126-104">Yatay bir örneği aşağıda gösterilmiştir <xref:System.Windows.Controls.Slider> denetimi.</span><span class="sxs-lookup"><span data-stu-id="8a126-104">The following illustration shows an example of a horizontal <xref:System.Windows.Controls.Slider> control.</span></span>  
   
- <span data-ttu-id="e8342-105">![Yatay çizgilerinin kaydırıcıyla](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span><span class="sxs-lookup"><span data-stu-id="e8342-105">![Horizontal slider with tick marks](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span></span>  
+ <span data-ttu-id="8a126-105">![Yatay çizgilerinin kaydırıcıyla](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span><span class="sxs-lookup"><span data-stu-id="8a126-105">![Horizontal slider with tick marks](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e8342-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="e8342-106">In This Section</span></span>  
- [<span data-ttu-id="e8342-107">Kaydırıcı Üzerinde İşaretleri Özelleştirme</span><span class="sxs-lookup"><span data-stu-id="e8342-107">Customize the Ticks on a Slider</span></span>](how-to-customize-the-ticks-on-a-slider.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8a126-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="8a126-106">In This Section</span></span>  
+ [<span data-ttu-id="8a126-107">Kaydırıcı Üzerinde İşaretleri Özelleştirme</span><span class="sxs-lookup"><span data-stu-id="8a126-107">Customize the Ticks on a Slider</span></span>](how-to-customize-the-ticks-on-a-slider.md)  
   
-## <a name="reference"></a><span data-ttu-id="e8342-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="e8342-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="8a126-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="8a126-108">Reference</span></span>  
  <xref:System.Windows.Controls.Slider>  
   <xref:System.Windows.Controls.Primitives.Track>  
   <xref:System.Windows.Controls.Primitives.Thumb>

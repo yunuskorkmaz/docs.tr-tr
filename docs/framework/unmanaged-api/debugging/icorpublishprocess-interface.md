@@ -17,34 +17,34 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 08dfa3ddbfd9cffdb0cb88d0325e5703a854668a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993518"
 ---
-# <a name="icorpublishprocess-interface"></a><span data-ttu-id="8df6a-102">ICorPublishProcess Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8df6a-102">ICorPublishProcess Interface</span></span>
-<span data-ttu-id="8df6a-103">Görüntülenecek işlemle ilgili bilgilere erişen yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="8df6a-103">Provides methods that access information to be displayed about a process.</span></span>  
+# <a name="icorpublishprocess-interface"></a><span data-ttu-id="056e4-102">ICorPublishProcess Arabirimi</span><span class="sxs-lookup"><span data-stu-id="056e4-102">ICorPublishProcess Interface</span></span>
+<span data-ttu-id="056e4-103">Görüntülenecek işlemle ilgili bilgilere erişen yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="056e4-103">Provides methods that access information to be displayed about a process.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="8df6a-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="8df6a-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="056e4-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="056e4-104">Methods</span></span>  
   
-|<span data-ttu-id="8df6a-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="8df6a-105">Method</span></span>|<span data-ttu-id="8df6a-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8df6a-106">Description</span></span>|  
+|<span data-ttu-id="056e4-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="056e4-105">Method</span></span>|<span data-ttu-id="056e4-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="056e4-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="8df6a-107">EnumAppDomains Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8df6a-107">EnumAppDomains Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-enumappdomains-method.md)|<span data-ttu-id="8df6a-108">Alır bir [Icorpublishappdomainenum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) bu tarafından başvurulan işlemde uygulama etki alanları içeren örneğini `ICorPublishProcess`.</span><span class="sxs-lookup"><span data-stu-id="8df6a-108">Gets an [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) instance that contains the application domains in the process referenced by this `ICorPublishProcess`.</span></span>|  
-|[<span data-ttu-id="8df6a-109">GetDisplayName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8df6a-109">GetDisplayName Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-getdisplayname-method.md)|<span data-ttu-id="8df6a-110">Bu tarafından başvurulan işlemi için yürütülebilir dosyanın tam yolunu alır `ICorPublishProcess`.</span><span class="sxs-lookup"><span data-stu-id="8df6a-110">Gets the full path of the executable for the process referenced by this `ICorPublishProcess`.</span></span>|  
-|[<span data-ttu-id="8df6a-111">GetProcessID Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8df6a-111">GetProcessID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-getprocessid-method.md)|<span data-ttu-id="8df6a-112">Bu tarafından başvurulan işlem için işletim sistemi tanımlayıcısını alır `ICorPublishProcess`.</span><span class="sxs-lookup"><span data-stu-id="8df6a-112">Gets the operating system identifier for the process referenced by this `ICorPublishProcess`.</span></span>|  
-|[<span data-ttu-id="8df6a-113">IsManaged Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8df6a-113">IsManaged Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-ismanaged-method.md)|<span data-ttu-id="8df6a-114">İşlem bu tarafından başvurulan olup olmadığını gösteren bir değer alır `ICorPublishProcess` yönetilen kod çalıştırması bilinmektedir.</span><span class="sxs-lookup"><span data-stu-id="8df6a-114">Gets a value that indicates whether the process referenced by this `ICorPublishProcess` is known to be running managed code.</span></span>|  
+|[<span data-ttu-id="056e4-107">EnumAppDomains Yöntemi</span><span class="sxs-lookup"><span data-stu-id="056e4-107">EnumAppDomains Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-enumappdomains-method.md)|<span data-ttu-id="056e4-108">Alır bir [Icorpublishappdomainenum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) bu tarafından başvurulan işlemde uygulama etki alanları içeren örneğini `ICorPublishProcess`.</span><span class="sxs-lookup"><span data-stu-id="056e4-108">Gets an [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) instance that contains the application domains in the process referenced by this `ICorPublishProcess`.</span></span>|  
+|[<span data-ttu-id="056e4-109">GetDisplayName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="056e4-109">GetDisplayName Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-getdisplayname-method.md)|<span data-ttu-id="056e4-110">Bu tarafından başvurulan işlemi için yürütülebilir dosyanın tam yolunu alır `ICorPublishProcess`.</span><span class="sxs-lookup"><span data-stu-id="056e4-110">Gets the full path of the executable for the process referenced by this `ICorPublishProcess`.</span></span>|  
+|[<span data-ttu-id="056e4-111">GetProcessID Yöntemi</span><span class="sxs-lookup"><span data-stu-id="056e4-111">GetProcessID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-getprocessid-method.md)|<span data-ttu-id="056e4-112">Bu tarafından başvurulan işlem için işletim sistemi tanımlayıcısını alır `ICorPublishProcess`.</span><span class="sxs-lookup"><span data-stu-id="056e4-112">Gets the operating system identifier for the process referenced by this `ICorPublishProcess`.</span></span>|  
+|[<span data-ttu-id="056e4-113">IsManaged Yöntemi</span><span class="sxs-lookup"><span data-stu-id="056e4-113">IsManaged Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-ismanaged-method.md)|<span data-ttu-id="056e4-114">İşlem bu tarafından başvurulan olup olmadığını gösteren bir değer alır `ICorPublishProcess` yönetilen kod çalıştırması bilinmektedir.</span><span class="sxs-lookup"><span data-stu-id="056e4-114">Gets a value that indicates whether the process referenced by this `ICorPublishProcess` is known to be running managed code.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8df6a-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8df6a-115">Requirements</span></span>  
- <span data-ttu-id="8df6a-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8df6a-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="056e4-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="056e4-115">Requirements</span></span>  
+ <span data-ttu-id="056e4-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="056e4-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8df6a-117">**Üst bilgi:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="8df6a-117">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="056e4-117">**Üst bilgi:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="056e4-117">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="8df6a-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8df6a-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="056e4-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="056e4-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8df6a-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8df6a-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="056e4-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="056e4-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8df6a-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8df6a-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="056e4-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="056e4-120">See also</span></span>
 
-- [<span data-ttu-id="8df6a-121">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="8df6a-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="8df6a-122">CorpubPublish Coclass</span><span class="sxs-lookup"><span data-stu-id="8df6a-122">CorpubPublish Coclass</span></span>](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+- [<span data-ttu-id="056e4-121">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="056e4-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="056e4-122">CorpubPublish Coclass</span><span class="sxs-lookup"><span data-stu-id="056e4-122">CorpubPublish Coclass</span></span>](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)

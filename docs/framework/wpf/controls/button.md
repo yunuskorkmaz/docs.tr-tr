@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Button control [WPF]
 ms.assetid: a9d8f5a5-c98c-463e-808a-5a4e63173098
 ms.openlocfilehash: 277338ae11090fa3701135cd0ac761da0a887255
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051890"
 ---
-# <a name="button"></a><span data-ttu-id="2dcc1-102">Düğme</span><span class="sxs-lookup"><span data-stu-id="2dcc1-102">Button</span></span>
-<span data-ttu-id="2dcc1-103">A <xref:System.Windows.Controls.Button> denetim fare, klavye, ekran kalemi, veya başka bir giriş cihazı ve harekete geçirirse kullanıcı girişine tepki verdiğini bir <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.</span><span class="sxs-lookup"><span data-stu-id="2dcc1-103">A <xref:System.Windows.Controls.Button> control reacts to user input from a mouse, keyboard, stylus, or other input device and raises a <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.</span></span> <span data-ttu-id="2dcc1-104">A <xref:System.Windows.Controls.Button> bir temel bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] metin gibi basit içerik içerebilir ve resimler gibi karmaşık içerik de içerebilir bileşeni ve <xref:System.Windows.Controls.Panel> kontrol eder.</span><span class="sxs-lookup"><span data-stu-id="2dcc1-104">A <xref:System.Windows.Controls.Button> is a basic [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] component that can contain simple content, such as text, and can also contain complex content, such as images and <xref:System.Windows.Controls.Panel> controls.</span></span>  
+# <a name="button"></a><span data-ttu-id="c994c-102">Düğme</span><span class="sxs-lookup"><span data-stu-id="c994c-102">Button</span></span>
+<span data-ttu-id="c994c-103">A <xref:System.Windows.Controls.Button> denetim fare, klavye, ekran kalemi, veya başka bir giriş cihazı ve harekete geçirirse kullanıcı girişine tepki verdiğini bir <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.</span><span class="sxs-lookup"><span data-stu-id="c994c-103">A <xref:System.Windows.Controls.Button> control reacts to user input from a mouse, keyboard, stylus, or other input device and raises a <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.</span></span> <span data-ttu-id="c994c-104">A <xref:System.Windows.Controls.Button> bir temel bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] metin gibi basit içerik içerebilir ve resimler gibi karmaşık içerik de içerebilir bileşeni ve <xref:System.Windows.Controls.Panel> kontrol eder.</span><span class="sxs-lookup"><span data-stu-id="c994c-104">A <xref:System.Windows.Controls.Button> is a basic [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] component that can contain simple content, such as text, and can also contain complex content, such as images and <xref:System.Windows.Controls.Panel> controls.</span></span>  
   
- <span data-ttu-id="2dcc1-105">![Düğme durumları](./media/ss-ctl-buttons.bmp "SS_CTL_buttons")</span><span class="sxs-lookup"><span data-stu-id="2dcc1-105">![Button states](./media/ss-ctl-buttons.bmp "SS_CTL_buttons")</span></span>  
+ <span data-ttu-id="c994c-105">![Düğme durumları](./media/ss-ctl-buttons.bmp "SS_CTL_buttons")</span><span class="sxs-lookup"><span data-stu-id="c994c-105">![Button states](./media/ss-ctl-buttons.bmp "SS_CTL_buttons")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2dcc1-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="2dcc1-106">In This Section</span></span>  
- [<span data-ttu-id="2dcc1-107">Görüntüsü Bulunan bir Düğme Oluşturma</span><span class="sxs-lookup"><span data-stu-id="2dcc1-107">Create a Button That Has an Image</span></span>](how-to-create-a-button-that-has-an-image.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c994c-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="c994c-106">In This Section</span></span>  
+ [<span data-ttu-id="c994c-107">Görüntüsü Bulunan bir Düğme Oluşturma</span><span class="sxs-lookup"><span data-stu-id="c994c-107">Create a Button That Has an Image</span></span>](how-to-create-a-button-that-has-an-image.md)  
   
-## <a name="reference"></a><span data-ttu-id="2dcc1-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="2dcc1-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c994c-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="c994c-108">Reference</span></span>  
  <xref:System.Windows.Controls.Button>  
  <xref:System.Windows.Controls.Primitives.ButtonBase>  
  <xref:System.Windows.Controls.RadioButton>  

@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d8f830ca7e273b65dc9ec77566a02df6c32cd464
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045545"
 ---
-# <a name="corpekind-enumeration"></a><span data-ttu-id="cd2bc-102">CorPEKind Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="cd2bc-102">CorPEKind Enumeration</span></span>
-<span data-ttu-id="cd2bc-103">Çağrısından döndürülen bir taşınabilir yürütülebilir (PE) dosya açıklayan değerleri içeren [Imetadataımport2::getpekind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span><span class="sxs-lookup"><span data-stu-id="cd2bc-103">Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span></span>  
+# <a name="corpekind-enumeration"></a><span data-ttu-id="1c446-102">CorPEKind Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="1c446-102">CorPEKind Enumeration</span></span>
+<span data-ttu-id="1c446-103">Çağrısından döndürülen bir taşınabilir yürütülebilir (PE) dosya açıklayan değerleri içeren [Imetadataımport2::getpekind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span><span class="sxs-lookup"><span data-stu-id="1c446-103">Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cd2bc-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cd2bc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1c446-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1c446-104">Syntax</span></span>  
   
 ```  
 typedef enum CorPEKind {  
@@ -41,27 +41,27 @@ typedef enum CorPEKind {
 } CorPEKind;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="cd2bc-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="cd2bc-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="1c446-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="1c446-105">Members</span></span>  
   
-|<span data-ttu-id="cd2bc-106">Üye</span><span class="sxs-lookup"><span data-stu-id="cd2bc-106">Member</span></span>|<span data-ttu-id="cd2bc-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="cd2bc-107">Description</span></span>|  
+|<span data-ttu-id="1c446-106">Üye</span><span class="sxs-lookup"><span data-stu-id="1c446-106">Member</span></span>|<span data-ttu-id="1c446-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1c446-107">Description</span></span>|  
 |------------|-----------------|  
-|`peNot`|<span data-ttu-id="cd2bc-108">Bunun bir PE dosyası olmadığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="cd2bc-108">Indicates that this is not a PE file.</span></span>|  
-|`peILOnly`|<span data-ttu-id="cd2bc-109">Bu PE dosyası yalnızca yönetilen kod içerdiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="cd2bc-109">Indicates that this PE file contains only managed code.</span></span>|  
-|`pe32BitRequired`|<span data-ttu-id="cd2bc-110">Gösterir. Bu PE dosyası Win32 çağrısı yapar.</span><span class="sxs-lookup"><span data-stu-id="cd2bc-110">Indicates that this PE file makes Win32 calls.</span></span>|  
-|`pe32Plus`|<span data-ttu-id="cd2bc-111">Bu PE dosyası bir 64-bit platformda çalıştırıldığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="cd2bc-111">Indicates that this PE file runs on a 64-bit platform.</span></span>|  
-|`pe32Unmanaged`|<span data-ttu-id="cd2bc-112">Bu PE dosyası yerel kod olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="cd2bc-112">Indicates that this PE file is native code.</span></span>|  
-|<span data-ttu-id="cd2bc-113">pe32BitPreferred</span><span class="sxs-lookup"><span data-stu-id="cd2bc-113">pe32BitPreferred</span></span>|<span data-ttu-id="cd2bc-114">Bu PE dosyası platformdan bağımsız ve 32-bit ortamında yüklenmesini tercih gösterir.</span><span class="sxs-lookup"><span data-stu-id="cd2bc-114">Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.</span></span>|  
+|`peNot`|<span data-ttu-id="1c446-108">Bunun bir PE dosyası olmadığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="1c446-108">Indicates that this is not a PE file.</span></span>|  
+|`peILOnly`|<span data-ttu-id="1c446-109">Bu PE dosyası yalnızca yönetilen kod içerdiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="1c446-109">Indicates that this PE file contains only managed code.</span></span>|  
+|`pe32BitRequired`|<span data-ttu-id="1c446-110">Gösterir. Bu PE dosyası Win32 çağrısı yapar.</span><span class="sxs-lookup"><span data-stu-id="1c446-110">Indicates that this PE file makes Win32 calls.</span></span>|  
+|`pe32Plus`|<span data-ttu-id="1c446-111">Bu PE dosyası bir 64-bit platformda çalıştırıldığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="1c446-111">Indicates that this PE file runs on a 64-bit platform.</span></span>|  
+|`pe32Unmanaged`|<span data-ttu-id="1c446-112">Bu PE dosyası yerel kod olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="1c446-112">Indicates that this PE file is native code.</span></span>|  
+|<span data-ttu-id="1c446-113">pe32BitPreferred</span><span class="sxs-lookup"><span data-stu-id="1c446-113">pe32BitPreferred</span></span>|<span data-ttu-id="1c446-114">Bu PE dosyası platformdan bağımsız ve 32-bit ortamında yüklenmesini tercih gösterir.</span><span class="sxs-lookup"><span data-stu-id="1c446-114">Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cd2bc-115">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="cd2bc-115">Remarks</span></span>  
- <span data-ttu-id="cd2bc-116">Bu değerleri bit düzeyinde bileşimlerde kullanılır.</span><span class="sxs-lookup"><span data-stu-id="cd2bc-116">These values can be used in bitwise combinations.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1c446-115">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1c446-115">Remarks</span></span>  
+ <span data-ttu-id="1c446-116">Bu değerleri bit düzeyinde bileşimlerde kullanılır.</span><span class="sxs-lookup"><span data-stu-id="1c446-116">These values can be used in bitwise combinations.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cd2bc-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cd2bc-117">Requirements</span></span>  
- <span data-ttu-id="cd2bc-118">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cd2bc-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1c446-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1c446-117">Requirements</span></span>  
+ <span data-ttu-id="1c446-118">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1c446-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cd2bc-119">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="cd2bc-119">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="1c446-119">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="1c446-119">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="cd2bc-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cd2bc-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1c446-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1c446-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cd2bc-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cd2bc-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c446-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1c446-121">See also</span></span>
 
-- [<span data-ttu-id="cd2bc-122">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="cd2bc-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="1c446-122">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="1c446-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

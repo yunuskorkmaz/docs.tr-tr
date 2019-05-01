@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 15c5e8b34f2748868611bd7dc47ef73c491b1338
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045441"
 ---
-# <a name="cornotificationfortokenmovement-enumeration"></a><span data-ttu-id="b0ff8-102">CorNotificationForTokenMovement Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="b0ff8-102">CorNotificationForTokenMovement Enumeration</span></span>
-<span data-ttu-id="b0ff8-103">Belirteç remap gerçekleştiğinde, meta veri API'si istemciye gönderilecek bildirimler belirtir.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-103">Specifies the notifications that will be sent to the metadata API client when a token remap occurs.</span></span>  
+# <a name="cornotificationfortokenmovement-enumeration"></a><span data-ttu-id="fd9ac-102">CorNotificationForTokenMovement Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="fd9ac-102">CorNotificationForTokenMovement Enumeration</span></span>
+<span data-ttu-id="fd9ac-103">Belirteç remap gerçekleştiğinde, meta veri API'si istemciye gönderilecek bildirimler belirtir.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-103">Specifies the notifications that will be sent to the metadata API client when a token remap occurs.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b0ff8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b0ff8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fd9ac-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="fd9ac-104">Syntax</span></span>  
   
 ```  
 typedef enum CorNotificationForTokenMovement {  
@@ -61,44 +61,44 @@ typedef enum CorNotificationForTokenMovement {
 } CorNotificationForTokenMovement;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b0ff8-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="b0ff8-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="fd9ac-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="fd9ac-105">Members</span></span>  
   
-|<span data-ttu-id="b0ff8-106">Üye</span><span class="sxs-lookup"><span data-stu-id="b0ff8-106">Member</span></span>|<span data-ttu-id="b0ff8-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b0ff8-107">Description</span></span>|  
+|<span data-ttu-id="fd9ac-106">Üye</span><span class="sxs-lookup"><span data-stu-id="fd9ac-106">Member</span></span>|<span data-ttu-id="fd9ac-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="fd9ac-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDNotifyDefault`|<span data-ttu-id="b0ff8-108">Bildirim zamanı `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, veya `mdFieldDef` belirteçleri taşıma.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-108">Notify when `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, or `mdFieldDef` tokens move.</span></span>|  
-|`MDNotifyAll`|<span data-ttu-id="b0ff8-109">Herhangi bir belirteci hareket ettiğinde bildirin.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-109">Notify when any token moves.</span></span>|  
-|`MDNotifyNone`|<span data-ttu-id="b0ff8-110">Belirteçleri taşıdığınızda bildirme.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-110">Do not notify when tokens move.</span></span>|  
-|`MDNotifyMethodDef`|<span data-ttu-id="b0ff8-111">Bildirim zamanı bir `mdMethodDef` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-111">Notify when an `mdMethodDef` token moves.</span></span>|  
-|`MDNotifyMemberRef`|<span data-ttu-id="b0ff8-112">Bildirim zamanı bir `mdMemberRef` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-112">Notify when an `mdMemberRef` token moves.</span></span>|  
-|`MDNotifyFieldDef`|<span data-ttu-id="b0ff8-113">Bildirim zamanı bir `mdFieldDef` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-113">Notify when an `mdFieldDef` token moves.</span></span>|  
-|`MDNotifyTypeRef`|<span data-ttu-id="b0ff8-114">Bildirim zamanı bir `mdTypeRef` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-114">Notify when an `mdTypeRef` token moves.</span></span>|  
-|`MDNotifyTypeDef`|<span data-ttu-id="b0ff8-115">Bildirim zamanı bir `mdTypeDef` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-115">Notify when an `mdTypeDef` token moves.</span></span>|  
-|`MDNotifyParamDef`|<span data-ttu-id="b0ff8-116">Bildirim zamanı bir `mdParamDef` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-116">Notify when an `mdParamDef` token moves.</span></span>|  
-|`MDNotifyInterfaceImpl`|<span data-ttu-id="b0ff8-117">Bildirim zamanı bir `mdInterfaceImpl` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-117">Notify when an `mdInterfaceImpl` token moves.</span></span>|  
-|`MDNotifyProperty`|<span data-ttu-id="b0ff8-118">Bildirim zamanı bir `mdProperty` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-118">Notify when an `mdProperty` token moves.</span></span>|  
-|`MDNotifyEvent`|<span data-ttu-id="b0ff8-119">Bildirim zamanı bir `mdEvent` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-119">Notify when an `mdEvent` token moves.</span></span>|  
-|`MDNotifySignature`|<span data-ttu-id="b0ff8-120">Bildirim zamanı bir `mdSignature` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-120">Notify when an `mdSignature` token moves.</span></span>|  
-|`MDNotifyTypeSpec`|<span data-ttu-id="b0ff8-121">Bildirim zamanı bir `mdTypeSpec` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-121">Notify when an `mdTypeSpec` token moves.</span></span>|  
-|`MDNotifyCustomAttribute`|<span data-ttu-id="b0ff8-122">Bildirim zamanı bir `mdCustomAttribute` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-122">Notify when an `mdCustomAttribute` token moves.</span></span>|  
-|`MDNotifySecurityValue`|<span data-ttu-id="b0ff8-123">Bildirim zamanı bir `mdSecurityValue` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-123">Notify when an `mdSecurityValue` token moves.</span></span>|  
-|`MDNotifyPermission`|<span data-ttu-id="b0ff8-124">Bildirim zamanı bir `mdPermission` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-124">Notify when an `mdPermission` token moves.</span></span>|  
-|`MDNotifyModuleRef`|<span data-ttu-id="b0ff8-125">Bildirim zamanı bir `mdModuleRef` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-125">Notify when an `mdModuleRef` token moves.</span></span>|  
-|`MDNotifyNameSpace`|<span data-ttu-id="b0ff8-126">Bildirim zamanı bir `mdNameSpace` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-126">Notify when an `mdNameSpace` token moves.</span></span>|  
-|`MDNotifyAssemblyRef`|<span data-ttu-id="b0ff8-127">Bildirim zamanı bir `mdAssemblyRef` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-127">Notify when an `mdAssemblyRef` token moves.</span></span>|  
-|`MDNotifyFile`|<span data-ttu-id="b0ff8-128">Bildirim zamanı bir `mdFile` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-128">Notify when an `mdFile` token moves.</span></span>|  
-|`MDNotifyExportedType`|<span data-ttu-id="b0ff8-129">Bildirim zamanı bir `mdExportedType` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-129">Notify when an `mdExportedType` token moves.</span></span>|  
-|`MDNotifyResource`|<span data-ttu-id="b0ff8-130">Bildirim zamanı bir `mdManifestResource` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-130">Notify when an `mdManifestResource` token moves.</span></span>|  
+|`MDNotifyDefault`|<span data-ttu-id="fd9ac-108">Bildirim zamanı `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, veya `mdFieldDef` belirteçleri taşıma.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-108">Notify when `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, or `mdFieldDef` tokens move.</span></span>|  
+|`MDNotifyAll`|<span data-ttu-id="fd9ac-109">Herhangi bir belirteci hareket ettiğinde bildirin.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-109">Notify when any token moves.</span></span>|  
+|`MDNotifyNone`|<span data-ttu-id="fd9ac-110">Belirteçleri taşıdığınızda bildirme.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-110">Do not notify when tokens move.</span></span>|  
+|`MDNotifyMethodDef`|<span data-ttu-id="fd9ac-111">Bildirim zamanı bir `mdMethodDef` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-111">Notify when an `mdMethodDef` token moves.</span></span>|  
+|`MDNotifyMemberRef`|<span data-ttu-id="fd9ac-112">Bildirim zamanı bir `mdMemberRef` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-112">Notify when an `mdMemberRef` token moves.</span></span>|  
+|`MDNotifyFieldDef`|<span data-ttu-id="fd9ac-113">Bildirim zamanı bir `mdFieldDef` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-113">Notify when an `mdFieldDef` token moves.</span></span>|  
+|`MDNotifyTypeRef`|<span data-ttu-id="fd9ac-114">Bildirim zamanı bir `mdTypeRef` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-114">Notify when an `mdTypeRef` token moves.</span></span>|  
+|`MDNotifyTypeDef`|<span data-ttu-id="fd9ac-115">Bildirim zamanı bir `mdTypeDef` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-115">Notify when an `mdTypeDef` token moves.</span></span>|  
+|`MDNotifyParamDef`|<span data-ttu-id="fd9ac-116">Bildirim zamanı bir `mdParamDef` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-116">Notify when an `mdParamDef` token moves.</span></span>|  
+|`MDNotifyInterfaceImpl`|<span data-ttu-id="fd9ac-117">Bildirim zamanı bir `mdInterfaceImpl` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-117">Notify when an `mdInterfaceImpl` token moves.</span></span>|  
+|`MDNotifyProperty`|<span data-ttu-id="fd9ac-118">Bildirim zamanı bir `mdProperty` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-118">Notify when an `mdProperty` token moves.</span></span>|  
+|`MDNotifyEvent`|<span data-ttu-id="fd9ac-119">Bildirim zamanı bir `mdEvent` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-119">Notify when an `mdEvent` token moves.</span></span>|  
+|`MDNotifySignature`|<span data-ttu-id="fd9ac-120">Bildirim zamanı bir `mdSignature` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-120">Notify when an `mdSignature` token moves.</span></span>|  
+|`MDNotifyTypeSpec`|<span data-ttu-id="fd9ac-121">Bildirim zamanı bir `mdTypeSpec` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-121">Notify when an `mdTypeSpec` token moves.</span></span>|  
+|`MDNotifyCustomAttribute`|<span data-ttu-id="fd9ac-122">Bildirim zamanı bir `mdCustomAttribute` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-122">Notify when an `mdCustomAttribute` token moves.</span></span>|  
+|`MDNotifySecurityValue`|<span data-ttu-id="fd9ac-123">Bildirim zamanı bir `mdSecurityValue` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-123">Notify when an `mdSecurityValue` token moves.</span></span>|  
+|`MDNotifyPermission`|<span data-ttu-id="fd9ac-124">Bildirim zamanı bir `mdPermission` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-124">Notify when an `mdPermission` token moves.</span></span>|  
+|`MDNotifyModuleRef`|<span data-ttu-id="fd9ac-125">Bildirim zamanı bir `mdModuleRef` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-125">Notify when an `mdModuleRef` token moves.</span></span>|  
+|`MDNotifyNameSpace`|<span data-ttu-id="fd9ac-126">Bildirim zamanı bir `mdNameSpace` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-126">Notify when an `mdNameSpace` token moves.</span></span>|  
+|`MDNotifyAssemblyRef`|<span data-ttu-id="fd9ac-127">Bildirim zamanı bir `mdAssemblyRef` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-127">Notify when an `mdAssemblyRef` token moves.</span></span>|  
+|`MDNotifyFile`|<span data-ttu-id="fd9ac-128">Bildirim zamanı bir `mdFile` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-128">Notify when an `mdFile` token moves.</span></span>|  
+|`MDNotifyExportedType`|<span data-ttu-id="fd9ac-129">Bildirim zamanı bir `mdExportedType` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-129">Notify when an `mdExportedType` token moves.</span></span>|  
+|`MDNotifyResource`|<span data-ttu-id="fd9ac-130">Bildirim zamanı bir `mdManifestResource` belirteç taşır.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-130">Notify when an `mdManifestResource` token moves.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b0ff8-131">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b0ff8-131">Remarks</span></span>  
- <span data-ttu-id="b0ff8-132">Bir belirteç (yani taşındı) yeniden eşlenebilir meta veri birleştirme sırasında.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-132">A token may be re-mapped (that is, moved) during a metadata merge.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fd9ac-131">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="fd9ac-131">Remarks</span></span>  
+ <span data-ttu-id="fd9ac-132">Bir belirteç (yani taşındı) yeniden eşlenebilir meta veri birleştirme sırasında.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-132">A token may be re-mapped (that is, moved) during a metadata merge.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b0ff8-133">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b0ff8-133">Requirements</span></span>  
- <span data-ttu-id="b0ff8-134">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b0ff8-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fd9ac-133">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="fd9ac-133">Requirements</span></span>  
+ <span data-ttu-id="fd9ac-134">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fd9ac-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b0ff8-135">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="b0ff8-135">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="fd9ac-135">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="fd9ac-135">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="b0ff8-136">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0ff8-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="fd9ac-136">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fd9ac-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b0ff8-137">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b0ff8-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fd9ac-137">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fd9ac-137">See also</span></span>
 
-- [<span data-ttu-id="b0ff8-138">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="b0ff8-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="fd9ac-138">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="fd9ac-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

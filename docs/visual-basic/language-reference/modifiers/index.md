@@ -3,91 +3,91 @@ title: Değiştiriciler (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
 ms.openlocfilehash: 466d69ec966037ae3a980bba381fc61be52f30e6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051188"
 ---
-# <a name="modifiers-visual-basic"></a><span data-ttu-id="9bb3c-102">Değiştiriciler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9bb3c-102">Modifiers (Visual Basic)</span></span>
-<span data-ttu-id="9bb3c-103">Bu bölümdeki konular, Visual Basic çalışma zamanı değiştiriciler belgeleyin.</span><span class="sxs-lookup"><span data-stu-id="9bb3c-103">The topics in this section document Visual Basic run-time modifiers.</span></span>  
+# <a name="modifiers-visual-basic"></a><span data-ttu-id="47d62-102">Değiştiriciler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="47d62-102">Modifiers (Visual Basic)</span></span>
+<span data-ttu-id="47d62-103">Bu bölümdeki konular, Visual Basic çalışma zamanı değiştiriciler belgeleyin.</span><span class="sxs-lookup"><span data-stu-id="47d62-103">The topics in this section document Visual Basic run-time modifiers.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9bb3c-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="9bb3c-104">In This Section</span></span>  
- [<span data-ttu-id="9bb3c-105">Ansi</span><span class="sxs-lookup"><span data-stu-id="9bb3c-105">Ansi</span></span>](../../../visual-basic/language-reference/modifiers/ansi.md)  
+## <a name="in-this-section"></a><span data-ttu-id="47d62-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="47d62-104">In This Section</span></span>  
+ [<span data-ttu-id="47d62-105">Ansi</span><span class="sxs-lookup"><span data-stu-id="47d62-105">Ansi</span></span>](../../../visual-basic/language-reference/modifiers/ansi.md)  
   
- [<span data-ttu-id="9bb3c-106">Assembly</span><span class="sxs-lookup"><span data-stu-id="9bb3c-106">Assembly</span></span>](../../../visual-basic/language-reference/modifiers/assembly.md)  
+ [<span data-ttu-id="47d62-106">Assembly</span><span class="sxs-lookup"><span data-stu-id="47d62-106">Assembly</span></span>](../../../visual-basic/language-reference/modifiers/assembly.md)  
   
- [<span data-ttu-id="9bb3c-107">Async</span><span class="sxs-lookup"><span data-stu-id="9bb3c-107">Async</span></span>](../../../visual-basic/language-reference/modifiers/async.md)  
+ [<span data-ttu-id="47d62-107">Async</span><span class="sxs-lookup"><span data-stu-id="47d62-107">Async</span></span>](../../../visual-basic/language-reference/modifiers/async.md)  
   
- [<span data-ttu-id="9bb3c-108">Auto</span><span class="sxs-lookup"><span data-stu-id="9bb3c-108">Auto</span></span>](../../../visual-basic/language-reference/modifiers/auto.md)  
+ [<span data-ttu-id="47d62-108">Auto</span><span class="sxs-lookup"><span data-stu-id="47d62-108">Auto</span></span>](../../../visual-basic/language-reference/modifiers/auto.md)  
   
- [<span data-ttu-id="9bb3c-109">ByRef</span><span class="sxs-lookup"><span data-stu-id="9bb3c-109">ByRef</span></span>](../../../visual-basic/language-reference/modifiers/byref.md)  
+ [<span data-ttu-id="47d62-109">ByRef</span><span class="sxs-lookup"><span data-stu-id="47d62-109">ByRef</span></span>](../../../visual-basic/language-reference/modifiers/byref.md)  
   
- [<span data-ttu-id="9bb3c-110">ByVal</span><span class="sxs-lookup"><span data-stu-id="9bb3c-110">ByVal</span></span>](../../../visual-basic/language-reference/modifiers/byval.md)  
+ [<span data-ttu-id="47d62-110">ByVal</span><span class="sxs-lookup"><span data-stu-id="47d62-110">ByVal</span></span>](../../../visual-basic/language-reference/modifiers/byval.md)  
   
- [<span data-ttu-id="9bb3c-111">Default</span><span class="sxs-lookup"><span data-stu-id="9bb3c-111">Default</span></span>](../../../visual-basic/language-reference/modifiers/default.md)  
+ [<span data-ttu-id="47d62-111">Default</span><span class="sxs-lookup"><span data-stu-id="47d62-111">Default</span></span>](../../../visual-basic/language-reference/modifiers/default.md)  
   
- [<span data-ttu-id="9bb3c-112">Friend</span><span class="sxs-lookup"><span data-stu-id="9bb3c-112">Friend</span></span>](../../../visual-basic/language-reference/modifiers/friend.md)  
+ [<span data-ttu-id="47d62-112">Friend</span><span class="sxs-lookup"><span data-stu-id="47d62-112">Friend</span></span>](../../../visual-basic/language-reference/modifiers/friend.md)  
   
- [<span data-ttu-id="9bb3c-113">İçinde</span><span class="sxs-lookup"><span data-stu-id="9bb3c-113">In</span></span>](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
+ [<span data-ttu-id="47d62-113">İçinde</span><span class="sxs-lookup"><span data-stu-id="47d62-113">In</span></span>](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
   
- [<span data-ttu-id="9bb3c-114">Iterator</span><span class="sxs-lookup"><span data-stu-id="9bb3c-114">Iterator</span></span>](../../../visual-basic/language-reference/modifiers/iterator.md)  
+ [<span data-ttu-id="47d62-114">Iterator</span><span class="sxs-lookup"><span data-stu-id="47d62-114">Iterator</span></span>](../../../visual-basic/language-reference/modifiers/iterator.md)  
   
- [<span data-ttu-id="9bb3c-115">Key</span><span class="sxs-lookup"><span data-stu-id="9bb3c-115">Key</span></span>](../../../visual-basic/language-reference/modifiers/key.md)  
+ [<span data-ttu-id="47d62-115">Key</span><span class="sxs-lookup"><span data-stu-id="47d62-115">Key</span></span>](../../../visual-basic/language-reference/modifiers/key.md)  
   
- [<span data-ttu-id="9bb3c-116">Modül \<anahtar sözcüğü ></span><span class="sxs-lookup"><span data-stu-id="9bb3c-116">Module \<keyword></span></span>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
+ [<span data-ttu-id="47d62-116">Modül \<anahtar sözcüğü ></span><span class="sxs-lookup"><span data-stu-id="47d62-116">Module \<keyword></span></span>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
   
- [<span data-ttu-id="9bb3c-117">MustInherit</span><span class="sxs-lookup"><span data-stu-id="9bb3c-117">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
+ [<span data-ttu-id="47d62-117">MustInherit</span><span class="sxs-lookup"><span data-stu-id="47d62-117">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
   
- [<span data-ttu-id="9bb3c-118">MustOverride</span><span class="sxs-lookup"><span data-stu-id="9bb3c-118">MustOverride</span></span>](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [<span data-ttu-id="47d62-118">MustOverride</span><span class="sxs-lookup"><span data-stu-id="47d62-118">MustOverride</span></span>](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
   
- [<span data-ttu-id="9bb3c-119">Narrowing</span><span class="sxs-lookup"><span data-stu-id="9bb3c-119">Narrowing</span></span>](../../../visual-basic/language-reference/modifiers/narrowing.md)  
+ [<span data-ttu-id="47d62-119">Narrowing</span><span class="sxs-lookup"><span data-stu-id="47d62-119">Narrowing</span></span>](../../../visual-basic/language-reference/modifiers/narrowing.md)  
   
- [<span data-ttu-id="9bb3c-120">NotInheritable</span><span class="sxs-lookup"><span data-stu-id="9bb3c-120">NotInheritable</span></span>](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
+ [<span data-ttu-id="47d62-120">NotInheritable</span><span class="sxs-lookup"><span data-stu-id="47d62-120">NotInheritable</span></span>](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
   
- [<span data-ttu-id="9bb3c-121">NotOverridable</span><span class="sxs-lookup"><span data-stu-id="9bb3c-121">NotOverridable</span></span>](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
+ [<span data-ttu-id="47d62-121">NotOverridable</span><span class="sxs-lookup"><span data-stu-id="47d62-121">NotOverridable</span></span>](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
   
- [<span data-ttu-id="9bb3c-122">Optional</span><span class="sxs-lookup"><span data-stu-id="9bb3c-122">Optional</span></span>](../../../visual-basic/language-reference/modifiers/optional.md)  
+ [<span data-ttu-id="47d62-122">Optional</span><span class="sxs-lookup"><span data-stu-id="47d62-122">Optional</span></span>](../../../visual-basic/language-reference/modifiers/optional.md)  
   
- [<span data-ttu-id="9bb3c-123">Çıkış</span><span class="sxs-lookup"><span data-stu-id="9bb3c-123">Out</span></span>](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
+ [<span data-ttu-id="47d62-123">Çıkış</span><span class="sxs-lookup"><span data-stu-id="47d62-123">Out</span></span>](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
   
- [<span data-ttu-id="9bb3c-124">Overloads</span><span class="sxs-lookup"><span data-stu-id="9bb3c-124">Overloads</span></span>](../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [<span data-ttu-id="47d62-124">Overloads</span><span class="sxs-lookup"><span data-stu-id="47d62-124">Overloads</span></span>](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
- [<span data-ttu-id="9bb3c-125">Overridable</span><span class="sxs-lookup"><span data-stu-id="9bb3c-125">Overridable</span></span>](../../../visual-basic/language-reference/modifiers/overridable.md)  
+ [<span data-ttu-id="47d62-125">Overridable</span><span class="sxs-lookup"><span data-stu-id="47d62-125">Overridable</span></span>](../../../visual-basic/language-reference/modifiers/overridable.md)  
   
- [<span data-ttu-id="9bb3c-126">Overrides</span><span class="sxs-lookup"><span data-stu-id="9bb3c-126">Overrides</span></span>](../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [<span data-ttu-id="47d62-126">Overrides</span><span class="sxs-lookup"><span data-stu-id="47d62-126">Overrides</span></span>](../../../visual-basic/language-reference/modifiers/overrides.md)  
   
- [<span data-ttu-id="9bb3c-127">ParamArray</span><span class="sxs-lookup"><span data-stu-id="9bb3c-127">ParamArray</span></span>](../../../visual-basic/language-reference/modifiers/paramarray.md)  
+ [<span data-ttu-id="47d62-127">ParamArray</span><span class="sxs-lookup"><span data-stu-id="47d62-127">ParamArray</span></span>](../../../visual-basic/language-reference/modifiers/paramarray.md)  
   
- [<span data-ttu-id="9bb3c-128">Partial</span><span class="sxs-lookup"><span data-stu-id="9bb3c-128">Partial</span></span>](../../../visual-basic/language-reference/modifiers/partial.md)  
+ [<span data-ttu-id="47d62-128">Partial</span><span class="sxs-lookup"><span data-stu-id="47d62-128">Partial</span></span>](../../../visual-basic/language-reference/modifiers/partial.md)  
   
- [<span data-ttu-id="9bb3c-129">Private</span><span class="sxs-lookup"><span data-stu-id="9bb3c-129">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)  
+ [<span data-ttu-id="47d62-129">Private</span><span class="sxs-lookup"><span data-stu-id="47d62-129">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)  
   
- [<span data-ttu-id="9bb3c-130">Özel korumalı</span><span class="sxs-lookup"><span data-stu-id="9bb3c-130">Private Protected</span></span>](../../../visual-basic/language-reference/modifiers/private-protected.md)  
+ [<span data-ttu-id="47d62-130">Private Protected</span><span class="sxs-lookup"><span data-stu-id="47d62-130">Private Protected</span></span>](../../../visual-basic/language-reference/modifiers/private-protected.md)  
   
- [<span data-ttu-id="9bb3c-131">Protected</span><span class="sxs-lookup"><span data-stu-id="9bb3c-131">Protected</span></span>](../../../visual-basic/language-reference/modifiers/protected.md)  
+ [<span data-ttu-id="47d62-131">Protected</span><span class="sxs-lookup"><span data-stu-id="47d62-131">Protected</span></span>](../../../visual-basic/language-reference/modifiers/protected.md)  
 
- [<span data-ttu-id="9bb3c-132">Korumalı Friend</span><span class="sxs-lookup"><span data-stu-id="9bb3c-132">Protected Friend</span></span>](../../../visual-basic/language-reference/modifiers/protected-friend.md)  
+ [<span data-ttu-id="47d62-132">Protected Friend</span><span class="sxs-lookup"><span data-stu-id="47d62-132">Protected Friend</span></span>](../../../visual-basic/language-reference/modifiers/protected-friend.md)  
   
- [<span data-ttu-id="9bb3c-133">Public</span><span class="sxs-lookup"><span data-stu-id="9bb3c-133">Public</span></span>](../../../visual-basic/language-reference/modifiers/public.md)  
+ [<span data-ttu-id="47d62-133">Public</span><span class="sxs-lookup"><span data-stu-id="47d62-133">Public</span></span>](../../../visual-basic/language-reference/modifiers/public.md)  
   
- [<span data-ttu-id="9bb3c-134">ReadOnly</span><span class="sxs-lookup"><span data-stu-id="9bb3c-134">ReadOnly</span></span>](../../../visual-basic/language-reference/modifiers/readonly.md)  
+ [<span data-ttu-id="47d62-134">ReadOnly</span><span class="sxs-lookup"><span data-stu-id="47d62-134">ReadOnly</span></span>](../../../visual-basic/language-reference/modifiers/readonly.md)  
   
- [<span data-ttu-id="9bb3c-135">Shadows</span><span class="sxs-lookup"><span data-stu-id="9bb3c-135">Shadows</span></span>](../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [<span data-ttu-id="47d62-135">Shadows</span><span class="sxs-lookup"><span data-stu-id="47d62-135">Shadows</span></span>](../../../visual-basic/language-reference/modifiers/shadows.md)  
   
- [<span data-ttu-id="9bb3c-136">Shared</span><span class="sxs-lookup"><span data-stu-id="9bb3c-136">Shared</span></span>](../../../visual-basic/language-reference/modifiers/shared.md)  
+ [<span data-ttu-id="47d62-136">Shared</span><span class="sxs-lookup"><span data-stu-id="47d62-136">Shared</span></span>](../../../visual-basic/language-reference/modifiers/shared.md)  
   
- [<span data-ttu-id="9bb3c-137">Static</span><span class="sxs-lookup"><span data-stu-id="9bb3c-137">Static</span></span>](../../../visual-basic/language-reference/modifiers/static.md)  
+ [<span data-ttu-id="47d62-137">Static</span><span class="sxs-lookup"><span data-stu-id="47d62-137">Static</span></span>](../../../visual-basic/language-reference/modifiers/static.md)  
   
- [<span data-ttu-id="9bb3c-138">Unicode</span><span class="sxs-lookup"><span data-stu-id="9bb3c-138">Unicode</span></span>](../../../visual-basic/language-reference/modifiers/unicode.md)  
+ [<span data-ttu-id="47d62-138">Unicode</span><span class="sxs-lookup"><span data-stu-id="47d62-138">Unicode</span></span>](../../../visual-basic/language-reference/modifiers/unicode.md)  
   
- [<span data-ttu-id="9bb3c-139">Widening</span><span class="sxs-lookup"><span data-stu-id="9bb3c-139">Widening</span></span>](../../../visual-basic/language-reference/modifiers/widening.md)  
+ [<span data-ttu-id="47d62-139">Widening</span><span class="sxs-lookup"><span data-stu-id="47d62-139">Widening</span></span>](../../../visual-basic/language-reference/modifiers/widening.md)  
   
- [<span data-ttu-id="9bb3c-140">WithEvents</span><span class="sxs-lookup"><span data-stu-id="9bb3c-140">WithEvents</span></span>](../../../visual-basic/language-reference/modifiers/withevents.md)  
+ [<span data-ttu-id="47d62-140">WithEvents</span><span class="sxs-lookup"><span data-stu-id="47d62-140">WithEvents</span></span>](../../../visual-basic/language-reference/modifiers/withevents.md)  
   
- [<span data-ttu-id="9bb3c-141">WriteOnly</span><span class="sxs-lookup"><span data-stu-id="9bb3c-141">WriteOnly</span></span>](../../../visual-basic/language-reference/modifiers/writeonly.md)  
+ [<span data-ttu-id="47d62-141">WriteOnly</span><span class="sxs-lookup"><span data-stu-id="47d62-141">WriteOnly</span></span>](../../../visual-basic/language-reference/modifiers/writeonly.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="9bb3c-142">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="9bb3c-142">Related Sections</span></span>  
- [<span data-ttu-id="9bb3c-143">Visual Basic Dili Başvurusu</span><span class="sxs-lookup"><span data-stu-id="9bb3c-143">Visual Basic Language Reference</span></span>](../../../visual-basic/language-reference/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="47d62-142">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="47d62-142">Related Sections</span></span>  
+ [<span data-ttu-id="47d62-143">Visual Basic Dili Başvurusu</span><span class="sxs-lookup"><span data-stu-id="47d62-143">Visual Basic Language Reference</span></span>](../../../visual-basic/language-reference/index.md)  
   
- [<span data-ttu-id="9bb3c-144">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9bb3c-144">Visual Basic</span></span>](../../../visual-basic/index.md)
+ [<span data-ttu-id="47d62-144">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="47d62-144">Visual Basic</span></span>](../../../visual-basic/index.md)

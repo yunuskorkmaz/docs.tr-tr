@@ -8,42 +8,42 @@ helpviewer_keywords:
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
 ms.openlocfilehash: 4936ba7bcd78c4867dae99df8bad11776cf655db
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010325"
 ---
-# <a name="animation-and-timing-how-to-topics"></a><span data-ttu-id="b9252-102">Animasyon ve Zamanlama ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="b9252-102">Animation and Timing How-to Topics</span></span>
-<span data-ttu-id="b9252-103">Aşağıdaki konular nasıl kullanılacağını gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animasyon ve zamanlama sistemine uygulamalarınızda.</span><span class="sxs-lookup"><span data-stu-id="b9252-103">The following topics demonstrate how to use the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animation and timing system in your applications.</span></span>  
+# <a name="animation-and-timing-how-to-topics"></a><span data-ttu-id="c7da2-102">Animasyon ve Zamanlama ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="c7da2-102">Animation and Timing How-to Topics</span></span>
+<span data-ttu-id="c7da2-103">Aşağıdaki konular nasıl kullanılacağını gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animasyon ve zamanlama sistemine uygulamalarınızda.</span><span class="sxs-lookup"><span data-stu-id="c7da2-103">The following topics demonstrate how to use the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animation and timing system in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b9252-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="b9252-104">In This Section</span></span>  
- [<span data-ttu-id="b9252-105">Bir Animasyonu Hızlandırma veya Yavaşlatma</span><span class="sxs-lookup"><span data-stu-id="b9252-105">Accelerate or Decelerate an Animation</span></span>](how-to-accelerate-or-decelerate-an-animation.md)  
- [<span data-ttu-id="b9252-106">Yineleme Döngüsü Sırasında Animasyon Değerlerini Biriktirme</span><span class="sxs-lookup"><span data-stu-id="b9252-106">Accumulate Animation Values During Repeat Cycles</span></span>](how-to-accumulate-animation-values-during-repeat-cycles.md)  
- [<span data-ttu-id="b9252-107">Animasyon Başlangıç Değerine Animasyon Çıkış Değeri Ekleme</span><span class="sxs-lookup"><span data-stu-id="b9252-107">Add an Animation Output Value to an Animation Starting Value</span></span>](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
- [<span data-ttu-id="b9252-108">Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="b9252-108">Animate a Property by Using a Storyboard</span></span>](how-to-animate-a-property-by-using-a-storyboard.md)  
- [<span data-ttu-id="b9252-109">Görsel Taslak Kullanmadan Özelliğe Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="b9252-109">Animate a Property Without Using a Storyboard</span></span>](how-to-animate-a-property-without-using-a-storyboard.md)  
- [<span data-ttu-id="b9252-110">ControlTemplate İçinde Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="b9252-110">Animate in a ControlTemplate</span></span>](how-to-animate-in-a-controltemplate.md)  
- [<span data-ttu-id="b9252-111">Bir Stile Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="b9252-111">Animate in a Style</span></span>](how-to-animate-in-a-style.md)  
- [<span data-ttu-id="b9252-112">Bir Öğe veya Fırça Opaklığına Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="b9252-112">Animate the Opacity of an Element or Brush</span></span>](how-to-animate-the-opacity-of-an-element-or-brush.md)  
- [<span data-ttu-id="b9252-113">Zaman Çizelgesinin Hızını Değiştirmeden Saat Hızını Değiştirme</span><span class="sxs-lookup"><span data-stu-id="b9252-113">Change the Speed of a Clock Without Changing the Speed of Its Timeline</span></span>](change-the-speed-of-a-clock.md)  
- [<span data-ttu-id="b9252-114">Görsel Taslağı Başladıktan Sonra Etkileşimli Yöntemlerini Kullanarak Denetleme</span><span class="sxs-lookup"><span data-stu-id="b9252-114">Control a Storyboard After It Starts Using Its Interactive Methods</span></span>](how-to-control-a-storyboard-after-it-starts.md)  
- [<span data-ttu-id="b9252-115">Bir Animasyonu Gelen, İçin ve Göre Kullanarak Denetleme</span><span class="sxs-lookup"><span data-stu-id="b9252-115">Control an Animation using From, To, and By</span></span>](how-to-control-an-animation-using-from-to-and-by.md)  
- [<span data-ttu-id="b9252-116">Ad Kapsamı Tanımlama</span><span class="sxs-lookup"><span data-stu-id="b9252-116">Define a Name Scope</span></span>](how-to-define-a-name-scope.md)  
- [<span data-ttu-id="b9252-117">Saatin Durumu Değiştiğinde Bildirim Alma</span><span class="sxs-lookup"><span data-stu-id="b9252-117">Receive Notification When a Clock's State Changes</span></span>](how-to-receive-notification-when-clock-state-changes.md)  
- [<span data-ttu-id="b9252-118">Animasyonu Yineleme</span><span class="sxs-lookup"><span data-stu-id="b9252-118">Repeat an Animation</span></span>](how-to-repeat-an-animation.md)  
- [<span data-ttu-id="b9252-119">Görsel Taslak Arama</span><span class="sxs-lookup"><span data-stu-id="b9252-119">Seek a Storyboard</span></span>](how-to-seek-a-storyboard.md)  
- [<span data-ttu-id="b9252-120">Görsel Taslağı Zaman Uyumlu Olarak Arama</span><span class="sxs-lookup"><span data-stu-id="b9252-120">Seek a Storyboard Synchronously</span></span>](how-to-seek-a-storyboard-synchronously.md)  
- [<span data-ttu-id="b9252-121">Animasyon için Süre Ayarlama</span><span class="sxs-lookup"><span data-stu-id="b9252-121">Set a Duration for an Animation</span></span>](how-to-set-a-duration-for-an-animation.md)  
- [<span data-ttu-id="b9252-122">Görsel Taslakla Özelliğe Animasyon Ekledikten Sonra Ayarlama</span><span class="sxs-lookup"><span data-stu-id="b9252-122">Set a Property After Animating It with a Storyboard</span></span>](how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
- [<span data-ttu-id="b9252-123">Alt Öğe Zaman Çizelgelerini Kullanarak Animasyonları Basitleştirme</span><span class="sxs-lookup"><span data-stu-id="b9252-123">Simplify Animations by Using Child Timelines</span></span>](how-to-simplify-animations-by-using-child-timelines.md)  
- [<span data-ttu-id="b9252-124">Görsel Taslak Animasyonları Arasında HandoffBehavior Belirtme</span><span class="sxs-lookup"><span data-stu-id="b9252-124">Specify HandoffBehavior Between Storyboard Animations</span></span>](how-to-specify-handoffbehavior-between-storyboard-animations.md)  
- [<span data-ttu-id="b9252-125">Etkin Döneminin Sonuna Gelen Zaman Çizelgesi için FillBehavior Belirtme</span><span class="sxs-lookup"><span data-stu-id="b9252-125">Specify the FillBehavior for a Timeline that has Reached the End of Its Active Period</span></span>](specify-the-fillbehavior-for-a-timeline.md)  
- [<span data-ttu-id="b9252-126">Zaman Çizelgesinin Otomatik Olarak Ters Çevrilip Çevrilmeyeceğini Belirtme</span><span class="sxs-lookup"><span data-stu-id="b9252-126">Specify Whether a Timeline Automatically Reverses</span></span>](how-to-specify-whether-a-timeline-automatically-reverses.md)  
- [<span data-ttu-id="b9252-127">Özellik Değeri Değiştiğinde bir Animasyonu Tetikleme</span><span class="sxs-lookup"><span data-stu-id="b9252-127">Trigger an Animation When a Property Value Changes</span></span>](how-to-trigger-an-animation-when-a-property-value-changes.md)  
- [<span data-ttu-id="b9252-128">Görsel Taslağı Başladıktan Sonra Denetlemek için Olay Tetikleyicilerini Kullanma</span><span class="sxs-lookup"><span data-stu-id="b9252-128">Use Event Triggers to Control a Storyboard After It Starts</span></span>](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c7da2-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="c7da2-104">In This Section</span></span>  
+ [<span data-ttu-id="c7da2-105">Bir Animasyonu Hızlandırma veya Yavaşlatma</span><span class="sxs-lookup"><span data-stu-id="c7da2-105">Accelerate or Decelerate an Animation</span></span>](how-to-accelerate-or-decelerate-an-animation.md)  
+ [<span data-ttu-id="c7da2-106">Yineleme Döngüsü Sırasında Animasyon Değerlerini Biriktirme</span><span class="sxs-lookup"><span data-stu-id="c7da2-106">Accumulate Animation Values During Repeat Cycles</span></span>](how-to-accumulate-animation-values-during-repeat-cycles.md)  
+ [<span data-ttu-id="c7da2-107">Animasyon Başlangıç Değerine Animasyon Çıkış Değeri Ekleme</span><span class="sxs-lookup"><span data-stu-id="c7da2-107">Add an Animation Output Value to an Animation Starting Value</span></span>](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
+ [<span data-ttu-id="c7da2-108">Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="c7da2-108">Animate a Property by Using a Storyboard</span></span>](how-to-animate-a-property-by-using-a-storyboard.md)  
+ [<span data-ttu-id="c7da2-109">Görsel Taslak Kullanmadan Özelliğe Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="c7da2-109">Animate a Property Without Using a Storyboard</span></span>](how-to-animate-a-property-without-using-a-storyboard.md)  
+ [<span data-ttu-id="c7da2-110">ControlTemplate İçinde Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="c7da2-110">Animate in a ControlTemplate</span></span>](how-to-animate-in-a-controltemplate.md)  
+ [<span data-ttu-id="c7da2-111">Bir Stile Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="c7da2-111">Animate in a Style</span></span>](how-to-animate-in-a-style.md)  
+ [<span data-ttu-id="c7da2-112">Bir Öğe veya Fırça Opaklığına Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="c7da2-112">Animate the Opacity of an Element or Brush</span></span>](how-to-animate-the-opacity-of-an-element-or-brush.md)  
+ [<span data-ttu-id="c7da2-113">Zaman Çizelgesinin Hızını Değiştirmeden Saat Hızını Değiştirme</span><span class="sxs-lookup"><span data-stu-id="c7da2-113">Change the Speed of a Clock Without Changing the Speed of Its Timeline</span></span>](change-the-speed-of-a-clock.md)  
+ [<span data-ttu-id="c7da2-114">Görsel Taslağı Başladıktan Sonra Etkileşimli Yöntemlerini Kullanarak Denetleme</span><span class="sxs-lookup"><span data-stu-id="c7da2-114">Control a Storyboard After It Starts Using Its Interactive Methods</span></span>](how-to-control-a-storyboard-after-it-starts.md)  
+ [<span data-ttu-id="c7da2-115">Bir Animasyonu Gelen, İçin ve Göre Kullanarak Denetleme</span><span class="sxs-lookup"><span data-stu-id="c7da2-115">Control an Animation using From, To, and By</span></span>](how-to-control-an-animation-using-from-to-and-by.md)  
+ [<span data-ttu-id="c7da2-116">Ad Kapsamı Tanımlama</span><span class="sxs-lookup"><span data-stu-id="c7da2-116">Define a Name Scope</span></span>](how-to-define-a-name-scope.md)  
+ [<span data-ttu-id="c7da2-117">Saatin Durumu Değiştiğinde Bildirim Alma</span><span class="sxs-lookup"><span data-stu-id="c7da2-117">Receive Notification When a Clock's State Changes</span></span>](how-to-receive-notification-when-clock-state-changes.md)  
+ [<span data-ttu-id="c7da2-118">Animasyonu Yineleme</span><span class="sxs-lookup"><span data-stu-id="c7da2-118">Repeat an Animation</span></span>](how-to-repeat-an-animation.md)  
+ [<span data-ttu-id="c7da2-119">Görsel Taslak Arama</span><span class="sxs-lookup"><span data-stu-id="c7da2-119">Seek a Storyboard</span></span>](how-to-seek-a-storyboard.md)  
+ [<span data-ttu-id="c7da2-120">Görsel Taslağı Zaman Uyumlu Olarak Arama</span><span class="sxs-lookup"><span data-stu-id="c7da2-120">Seek a Storyboard Synchronously</span></span>](how-to-seek-a-storyboard-synchronously.md)  
+ [<span data-ttu-id="c7da2-121">Animasyon için Süre Ayarlama</span><span class="sxs-lookup"><span data-stu-id="c7da2-121">Set a Duration for an Animation</span></span>](how-to-set-a-duration-for-an-animation.md)  
+ [<span data-ttu-id="c7da2-122">Görsel Taslakla Özelliğe Animasyon Ekledikten Sonra Ayarlama</span><span class="sxs-lookup"><span data-stu-id="c7da2-122">Set a Property After Animating It with a Storyboard</span></span>](how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
+ [<span data-ttu-id="c7da2-123">Alt Öğe Zaman Çizelgelerini Kullanarak Animasyonları Basitleştirme</span><span class="sxs-lookup"><span data-stu-id="c7da2-123">Simplify Animations by Using Child Timelines</span></span>](how-to-simplify-animations-by-using-child-timelines.md)  
+ [<span data-ttu-id="c7da2-124">Görsel Taslak Animasyonları Arasında HandoffBehavior Belirtme</span><span class="sxs-lookup"><span data-stu-id="c7da2-124">Specify HandoffBehavior Between Storyboard Animations</span></span>](how-to-specify-handoffbehavior-between-storyboard-animations.md)  
+ [<span data-ttu-id="c7da2-125">Etkin Döneminin Sonuna Gelen Zaman Çizelgesi için FillBehavior Belirtme</span><span class="sxs-lookup"><span data-stu-id="c7da2-125">Specify the FillBehavior for a Timeline that has Reached the End of Its Active Period</span></span>](specify-the-fillbehavior-for-a-timeline.md)  
+ [<span data-ttu-id="c7da2-126">Zaman Çizelgesinin Otomatik Olarak Ters Çevrilip Çevrilmeyeceğini Belirtme</span><span class="sxs-lookup"><span data-stu-id="c7da2-126">Specify Whether a Timeline Automatically Reverses</span></span>](how-to-specify-whether-a-timeline-automatically-reverses.md)  
+ [<span data-ttu-id="c7da2-127">Özellik Değeri Değiştiğinde bir Animasyonu Tetikleme</span><span class="sxs-lookup"><span data-stu-id="c7da2-127">Trigger an Animation When a Property Value Changes</span></span>](how-to-trigger-an-animation-when-a-property-value-changes.md)  
+ [<span data-ttu-id="c7da2-128">Görsel Taslağı Başladıktan Sonra Denetlemek için Olay Tetikleyicilerini Kullanma</span><span class="sxs-lookup"><span data-stu-id="c7da2-128">Use Event Triggers to Control a Storyboard After It Starts</span></span>](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
   
-## <a name="reference"></a><span data-ttu-id="b9252-129">Başvuru</span><span class="sxs-lookup"><span data-stu-id="b9252-129">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c7da2-129">Başvuru</span><span class="sxs-lookup"><span data-stu-id="c7da2-129">Reference</span></span>  
  <xref:System.Windows.Media.Animation.Timeline>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
@@ -54,5 +54,5 @@ ms.locfileid: "57358502"
   
  <xref:System.Windows.Media.Animation>  
   
-## <a name="related-sections"></a><span data-ttu-id="b9252-130">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="b9252-130">Related Sections</span></span>  
- [<span data-ttu-id="b9252-131">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="b9252-131">Graphics and Multimedia</span></span>](index.md)
+## <a name="related-sections"></a><span data-ttu-id="c7da2-130">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="c7da2-130">Related Sections</span></span>  
+ [<span data-ttu-id="c7da2-131">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="c7da2-131">Graphics and Multimedia</span></span>](index.md)

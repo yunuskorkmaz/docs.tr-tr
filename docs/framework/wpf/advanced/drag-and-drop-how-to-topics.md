@@ -7,23 +7,23 @@ helpviewer_keywords:
 - drag-and-drop [WPF], how-to topics
 ms.assetid: 559c0804-c62a-4640-b6b9-cbd2aa9fb99c
 ms.openlocfilehash: 87c1425e6eaf03b900e07cfd9fc489ef01b1607a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010442"
 ---
-# <a name="drag-and-drop-how-to-topics"></a><span data-ttu-id="c3880-102">Sürükleme ve Bırakma ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="c3880-102">Drag and Drop How-to Topics</span></span>
-<span data-ttu-id="c3880-103">Aşağıdaki örnekler kullanarak, yaygın görevlerin nasıl gerçekleştirileceğini gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sürükle ve bırak framework.</span><span class="sxs-lookup"><span data-stu-id="c3880-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] drag-and-drop framework.</span></span>  
+# <a name="drag-and-drop-how-to-topics"></a><span data-ttu-id="39564-102">Sürükleme ve Bırakma ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="39564-102">Drag and Drop How-to Topics</span></span>
+<span data-ttu-id="39564-103">Aşağıdaki örnekler kullanarak, yaygın görevlerin nasıl gerçekleştirileceğini gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sürükle ve bırak framework.</span><span class="sxs-lookup"><span data-stu-id="39564-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] drag-and-drop framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c3880-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="c3880-104">In This Section</span></span>  
- [<span data-ttu-id="c3880-105">RichTextBox Denetimine Bırakılan bir Dosyayı Açma</span><span class="sxs-lookup"><span data-stu-id="c3880-105">Open a File That is Dropped on a RichTextBox Control</span></span>](how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
- [<span data-ttu-id="c3880-106">Veri Nesnesi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="c3880-106">Create a Data Object</span></span>](how-to-create-a-data-object.md)  
- [<span data-ttu-id="c3880-107">Veri Nesnesinde Veri Biçiminin Olup Olmadığını Belirleme</span><span class="sxs-lookup"><span data-stu-id="c3880-107">Determine if a Data Format is Present in a Data Object</span></span>](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
- [<span data-ttu-id="c3880-108">Bir Veri Nesnesi İçinde Veri Biçimlerini Listeleme</span><span class="sxs-lookup"><span data-stu-id="c3880-108">List the Data Formats in a Data Object</span></span>](how-to-list-the-data-formats-in-a-data-object.md)  
- [<span data-ttu-id="c3880-109">Belirli Veri Biçiminde Veri Alma</span><span class="sxs-lookup"><span data-stu-id="c3880-109">Retrieve Data in a Particular Data Format</span></span>](how-to-retrieve-data-in-a-particular-data-format.md)  
- [<span data-ttu-id="c3880-110">Veri Nesnesinde Birden Çok Veri Biçimini Depolama</span><span class="sxs-lookup"><span data-stu-id="c3880-110">Store Multiple Data Formats in a Data Object</span></span>](how-to-store-multiple-data-formats-in-a-data-object.md)  
+## <a name="in-this-section"></a><span data-ttu-id="39564-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="39564-104">In This Section</span></span>  
+ [<span data-ttu-id="39564-105">RichTextBox Denetimine Bırakılan bir Dosyayı Açma</span><span class="sxs-lookup"><span data-stu-id="39564-105">Open a File That is Dropped on a RichTextBox Control</span></span>](how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
+ [<span data-ttu-id="39564-106">Veri Nesnesi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="39564-106">Create a Data Object</span></span>](how-to-create-a-data-object.md)  
+ [<span data-ttu-id="39564-107">Veri Nesnesinde Veri Biçiminin Olup Olmadığını Belirleme</span><span class="sxs-lookup"><span data-stu-id="39564-107">Determine if a Data Format is Present in a Data Object</span></span>](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
+ [<span data-ttu-id="39564-108">Bir Veri Nesnesi İçinde Veri Biçimlerini Listeleme</span><span class="sxs-lookup"><span data-stu-id="39564-108">List the Data Formats in a Data Object</span></span>](how-to-list-the-data-formats-in-a-data-object.md)  
+ [<span data-ttu-id="39564-109">Belirli Veri Biçiminde Veri Alma</span><span class="sxs-lookup"><span data-stu-id="39564-109">Retrieve Data in a Particular Data Format</span></span>](how-to-retrieve-data-in-a-particular-data-format.md)  
+ [<span data-ttu-id="39564-110">Veri Nesnesinde Birden Çok Veri Biçimini Depolama</span><span class="sxs-lookup"><span data-stu-id="39564-110">Store Multiple Data Formats in a Data Object</span></span>](how-to-store-multiple-data-formats-in-a-data-object.md)  
   
-## <a name="see-also"></a><span data-ttu-id="c3880-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c3880-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="39564-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="39564-111">See also</span></span>
 
-- [<span data-ttu-id="c3880-112">Sürükleme ve Bırakmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="c3880-112">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)
+- [<span data-ttu-id="39564-112">Sürükleme ve Bırakmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="39564-112">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51403c52d7f8a216e83b817f157979f4af1c433a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994779"
 ---
-# <a name="icordebugmodulebreakpointgetmodule-method"></a><span data-ttu-id="d5322-102">ICorDebugModuleBreakpoint::GetModule Metodu</span><span class="sxs-lookup"><span data-stu-id="d5322-102">ICorDebugModuleBreakpoint::GetModule Method</span></span>
-<span data-ttu-id="d5322-103">", Bu Kesme noktasının ayarlandığı modülü başvuran bir Icordebugmodule için" bir arabirim işaretçisi alır.</span><span class="sxs-lookup"><span data-stu-id="d5322-103">Gets an interface pointer to an "ICorDebugModule" that references the module in which this breakpoint is set.</span></span>  
+# <a name="icordebugmodulebreakpointgetmodule-method"></a><span data-ttu-id="35e21-102">ICorDebugModuleBreakpoint::GetModule Metodu</span><span class="sxs-lookup"><span data-stu-id="35e21-102">ICorDebugModuleBreakpoint::GetModule Method</span></span>
+<span data-ttu-id="35e21-103">", Bu Kesme noktasının ayarlandığı modülü başvuran bir Icordebugmodule için" bir arabirim işaretçisi alır.</span><span class="sxs-lookup"><span data-stu-id="35e21-103">Gets an interface pointer to an "ICorDebugModule" that references the module in which this breakpoint is set.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d5322-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d5322-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="35e21-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="35e21-104">Syntax</span></span>  
   
 ```  
 HRESULT GetModule (  
@@ -35,17 +35,17 @@ HRESULT GetModule (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d5322-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d5322-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="35e21-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="35e21-105">Parameters</span></span>  
  `ppModule`  
- <span data-ttu-id="d5322-106">[out] Adresine bir işaretçi bir `ICorDebugModule` kesme noktası ayarlandığında modülüne başvuruyor arabirimi.</span><span class="sxs-lookup"><span data-stu-id="d5322-106">[out] A pointer to the address of an `ICorDebugModule` interface that references the module in which the breakpoint is set.</span></span>  
+ <span data-ttu-id="35e21-106">[out] Adresine bir işaretçi bir `ICorDebugModule` kesme noktası ayarlandığında modülüne başvuruyor arabirimi.</span><span class="sxs-lookup"><span data-stu-id="35e21-106">[out] A pointer to the address of an `ICorDebugModule` interface that references the module in which the breakpoint is set.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d5322-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d5322-107">Requirements</span></span>  
- <span data-ttu-id="d5322-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d5322-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="35e21-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="35e21-107">Requirements</span></span>  
+ <span data-ttu-id="35e21-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="35e21-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d5322-109">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d5322-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="35e21-109">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="35e21-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d5322-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d5322-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="35e21-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="35e21-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d5322-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d5322-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="35e21-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="35e21-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d5322-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d5322-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="35e21-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="35e21-112">See also</span></span>

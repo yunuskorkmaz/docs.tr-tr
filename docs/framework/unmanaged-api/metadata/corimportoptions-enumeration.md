@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a2f71a277484adbbfe3628222c635528cdab03e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59156136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045753"
 ---
-# <a name="corimportoptions-enumeration"></a><span data-ttu-id="d04ae-102">CorImportOptions Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="d04ae-102">CorImportOptions Enumeration</span></span>
-<span data-ttu-id="d04ae-103">Geçerli kapsam dışında bir derleme içeri aktarma sırasında davranışını denetleyen bayrak değerlerini içerir.</span><span class="sxs-lookup"><span data-stu-id="d04ae-103">Contains flag values that control the behavior during importation of an assembly outside the current scope.</span></span>  
+# <a name="corimportoptions-enumeration"></a><span data-ttu-id="82f9f-102">CorImportOptions Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="82f9f-102">CorImportOptions Enumeration</span></span>
+<span data-ttu-id="82f9f-103">Geçerli kapsam dışında bir derleme içeri aktarma sırasında davranışını denetleyen bayrak değerlerini içerir.</span><span class="sxs-lookup"><span data-stu-id="82f9f-103">Contains flag values that control the behavior during importation of an assembly outside the current scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d04ae-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d04ae-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="82f9f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="82f9f-104">Syntax</span></span>  
   
 ```  
 typedef enum CorImportOptions {  
@@ -44,27 +44,27 @@ typedef enum CorImportOptions {
 } CorImportOptions;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="d04ae-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="d04ae-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="82f9f-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="82f9f-105">Members</span></span>  
   
-|<span data-ttu-id="d04ae-106">Üye</span><span class="sxs-lookup"><span data-stu-id="d04ae-106">Member</span></span>|<span data-ttu-id="d04ae-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d04ae-107">Description</span></span>|  
+|<span data-ttu-id="82f9f-106">Üye</span><span class="sxs-lookup"><span data-stu-id="82f9f-106">Member</span></span>|<span data-ttu-id="82f9f-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="82f9f-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDImportOptionDefault`|<span data-ttu-id="d04ae-108">Silinmiş kayıtlar atlamak için varsayılan davranış gösterir.</span><span class="sxs-lookup"><span data-stu-id="d04ae-108">Indicates the default behavior, which is to skip deleted records.</span></span>|  
-|`MDImportOptionAll`|<span data-ttu-id="d04ae-109">Tüm meta veriler listelenmiş olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="d04ae-109">Indicates that all metadata should be enumerated.</span></span>|  
-|`MDImportOptionAllTypeDefs`|<span data-ttu-id="d04ae-110">Silinmiş olanlar da dahil olmak üzere tüm tür tanımları, listelenmiş olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="d04ae-110">Indicates that all TypeDefs, including deleted ones, should be enumerated.</span></span>|  
-|`MDImportOptionAllMethodDefs`|<span data-ttu-id="d04ae-111">Silinmiş olanlar da dahil olmak üzere tüm MethodDefs listelenmiş olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="d04ae-111">Indicates that all MethodDefs, including deleted ones, should be enumerated.</span></span>|  
-|`MDImportOptionAllFieldDefs`|<span data-ttu-id="d04ae-112">Silinmiş olanlar da dahil olmak üzere tüm FieldDefs listelenmiş olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="d04ae-112">Indicates that all FieldDefs, including deleted ones, should be enumerated.</span></span>|  
-|`MDImportOptionAllProperties`|<span data-ttu-id="d04ae-113">Silinmiş olanlar da dahil olmak üzere tüm PropertyDefs listelenmiş olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="d04ae-113">Indicates that all PropertyDefs, including deleted ones, should be enumerated.</span></span>|  
-|`MDImportOptionAllEvents`|<span data-ttu-id="d04ae-114">Silinmiş olanlar da dahil olmak üzere tüm EventDefs listelenmiş olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="d04ae-114">Indicates that all EventDefs, including deleted ones, should be enumerated.</span></span>|  
-|`MDImportOptionAllCustomAttributes`|<span data-ttu-id="d04ae-115">Silinmiş olanlar da dahil olmak üzere tüm özel öznitelikleri listelenmiş olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="d04ae-115">Indicates that all custom attributes, including deleted ones, should be enumerated.</span></span>|  
-|`MDImportOptionAllExportedTypes`|<span data-ttu-id="d04ae-116">Silinmiş olanlar da dahil olmak üzere dışarı aktarılan tüm türler listelenmiş olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="d04ae-116">Indicates that all exported types, including deleted ones, should be enumerated.</span></span>|  
+|`MDImportOptionDefault`|<span data-ttu-id="82f9f-108">Silinmiş kayıtlar atlamak için varsayılan davranış gösterir.</span><span class="sxs-lookup"><span data-stu-id="82f9f-108">Indicates the default behavior, which is to skip deleted records.</span></span>|  
+|`MDImportOptionAll`|<span data-ttu-id="82f9f-109">Tüm meta veriler listelenmiş olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="82f9f-109">Indicates that all metadata should be enumerated.</span></span>|  
+|`MDImportOptionAllTypeDefs`|<span data-ttu-id="82f9f-110">Silinmiş olanlar da dahil olmak üzere tüm tür tanımları, listelenmiş olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="82f9f-110">Indicates that all TypeDefs, including deleted ones, should be enumerated.</span></span>|  
+|`MDImportOptionAllMethodDefs`|<span data-ttu-id="82f9f-111">Silinmiş olanlar da dahil olmak üzere tüm MethodDefs listelenmiş olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="82f9f-111">Indicates that all MethodDefs, including deleted ones, should be enumerated.</span></span>|  
+|`MDImportOptionAllFieldDefs`|<span data-ttu-id="82f9f-112">Silinmiş olanlar da dahil olmak üzere tüm FieldDefs listelenmiş olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="82f9f-112">Indicates that all FieldDefs, including deleted ones, should be enumerated.</span></span>|  
+|`MDImportOptionAllProperties`|<span data-ttu-id="82f9f-113">Silinmiş olanlar da dahil olmak üzere tüm PropertyDefs listelenmiş olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="82f9f-113">Indicates that all PropertyDefs, including deleted ones, should be enumerated.</span></span>|  
+|`MDImportOptionAllEvents`|<span data-ttu-id="82f9f-114">Silinmiş olanlar da dahil olmak üzere tüm EventDefs listelenmiş olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="82f9f-114">Indicates that all EventDefs, including deleted ones, should be enumerated.</span></span>|  
+|`MDImportOptionAllCustomAttributes`|<span data-ttu-id="82f9f-115">Silinmiş olanlar da dahil olmak üzere tüm özel öznitelikleri listelenmiş olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="82f9f-115">Indicates that all custom attributes, including deleted ones, should be enumerated.</span></span>|  
+|`MDImportOptionAllExportedTypes`|<span data-ttu-id="82f9f-116">Silinmiş olanlar da dahil olmak üzere dışarı aktarılan tüm türler listelenmiş olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="82f9f-116">Indicates that all exported types, including deleted ones, should be enumerated.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d04ae-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d04ae-117">Requirements</span></span>  
- <span data-ttu-id="d04ae-118">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d04ae-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="82f9f-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="82f9f-117">Requirements</span></span>  
+ <span data-ttu-id="82f9f-118">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="82f9f-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d04ae-119">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="d04ae-119">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="82f9f-119">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="82f9f-119">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="d04ae-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d04ae-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="82f9f-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="82f9f-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d04ae-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d04ae-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="82f9f-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="82f9f-121">See also</span></span>
 
-- [<span data-ttu-id="d04ae-122">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="d04ae-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="82f9f-122">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="82f9f-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
