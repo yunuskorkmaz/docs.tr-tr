@@ -1,17 +1,17 @@
 ---
-title: Zamanlama açıklarıyla doldurmayı kullanarak CBC modunda simetrik şifre çözme
+title: Doldurmayı kullanarak CBC modunda simetrik şifre çözmedeki zamanlama açıkları
 description: Algılama ve doldurmayı kullanarak Şifre blok zincirleme (CBC) modunu simetrik şifre çözme ile zamanlama güvenlik açıklarını azaltmaya öğrenin.
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
 ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933906"
 ---
-# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Zamanlama açıklarıyla doldurmayı kullanarak CBC modunda simetrik şifre çözme
+# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Doldurmayı kullanarak CBC modunda simetrik şifre çözmedeki zamanlama açıkları
 
 Microsoft, artık ilk ciphertext bütünlüğünü dışında sağlamaya gerek kalmadan doğrulanabilir doldurma yapıldıysa simetrik şifreleme şifre blok zincirleme (CBC) modunu ile şifrelenen verilerin şifresini çözmek güvenli olduğunu düşündüğü özgü koşullar. Bu judgement üzerinde şu anda bilinen şifreleme araştırmaları temel alır. 
 

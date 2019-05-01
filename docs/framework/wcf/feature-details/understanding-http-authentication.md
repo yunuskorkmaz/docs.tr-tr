@@ -3,11 +3,11 @@ title: HTTP Kimlik Doğrulamasını Anlama
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
 ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918911"
 ---
 # <a name="understanding-http-authentication"></a>HTTP Kimlik Doğrulamasını Anlama
 Kimlik doğrulaması, bir istemcinin bir kaynağa erişmek uygun olup olmadığını belirleme işlemi şeklindedir. HTTP protokolü anlaşması güvenli kaynak erişimi için bir araç olarak kimlik doğrulamasını destekler.  
@@ -29,11 +29,11 @@ Kimlik doğrulaması, bir istemcinin bir kaynağa erişmek uygun olup olmadığ�
 ## <a name="choosing-an-authentication-scheme"></a>Bir kimlik doğrulama düzeni seçme  
  Olası kimlik doğrulama düzeni için HTTP sunucusu seçerken dikkate alınması gereken birkaç öğe şunları içerir:  
   
--   Kaynak korunması gerekip gerekmediğini düşünün. HTTP kimlik doğrulaması kullanarak daha fazla veri aktarımı gerektirir ve istemciler ile birlikte çalışabilirlik sınırlayabilirsiniz. Korunması gerekmez kaynakları anonim erişime izin verin.  
+- Kaynak korunması gerekip gerekmediğini düşünün. HTTP kimlik doğrulaması kullanarak daha fazla veri aktarımı gerektirir ve istemciler ile birlikte çalışabilirlik sınırlayabilirsiniz. Korunması gerekmez kaynakları anonim erişime izin verin.  
   
--   Kaynak korunması gerekiyorsa, hangi kimlik doğrulama düzenleri gerekli düzeyde güvenlik sağladığını göz önünde bulundurun. Burada tartışılan zayıf standart kimlik doğrulama düzeni, temel kimlik doğrulaması kullanılır. Temel kimlik doğrulaması, kullanıcının kimlik bilgilerini korumaz. En güçlü standart kimlik doğrulama Anlaşma kimlik doğrulaması, Kerberos protokolü kaynaklanan kullanılır.  
+- Kaynak korunması gerekiyorsa, hangi kimlik doğrulama düzenleri gerekli düzeyde güvenlik sağladığını göz önünde bulundurun. Burada tartışılan zayıf standart kimlik doğrulama düzeni, temel kimlik doğrulaması kullanılır. Temel kimlik doğrulaması, kullanıcının kimlik bilgilerini korumaz. En güçlü standart kimlik doğrulama Anlaşma kimlik doğrulaması, Kerberos protokolü kaynaklanan kullanılır.  
   
--   Bir sunucu (WWW kimlik denetimi üst bilgilerinde) herhangi sunmalıdır değil değil Düzen hazır kabul etmek ya da, yeterince korumalı kaynağa güvenliğini sağlamaz. İstemciler sunucusu kimlik doğrulama düzeni arasında seçim ücretsizdir. Bazı istemciler varsayılan bir zayıf bir kimlik doğrulama düzeni ya da sunucu listesindeki ilk kimlik doğrulaması düzeni.  
+- Bir sunucu (WWW kimlik denetimi üst bilgilerinde) herhangi sunmalıdır değil değil Düzen hazır kabul etmek ya da, yeterince korumalı kaynağa güvenliğini sağlamaz. İstemciler sunucusu kimlik doğrulama düzeni arasında seçim ücretsizdir. Bazı istemciler varsayılan bir zayıf bir kimlik doğrulama düzeni ya da sunucu listesindeki ilk kimlik doğrulaması düzeni.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

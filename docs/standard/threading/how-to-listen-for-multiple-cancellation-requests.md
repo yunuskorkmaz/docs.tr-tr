@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Birden çok iptal isteğini dinleme'
+title: 'Nasıl yapılır: Birden Çok İptal İsteğini Dinleme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,13 +12,13 @@ ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 17874b8b9733ea18d4877e2c79810fcd6247db0b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926207"
 ---
-# <a name="how-to-listen-for-multiple-cancellation-requests"></a>Nasıl yapılır: Birden çok iptal isteğini dinleme
+# <a name="how-to-listen-for-multiple-cancellation-requests"></a>Nasıl yapılır: Birden Çok İptal İsteğini Dinleme
 Bu örnek, bir işlem ya da belirteç istediği zaman iptal edebilirsiniz iki iptal belirteçleri için aynı anda dinlenecek gösterilmektedir.  
   
 > [!NOTE]

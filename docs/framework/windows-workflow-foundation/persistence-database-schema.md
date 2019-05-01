@@ -3,11 +3,11 @@ title: Kalıcılık Veritabanı Şeması
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
 ms.openlocfilehash: 38df4b3d629840f1b5def2eafa0d074a2b2397a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864175"
 ---
 # <a name="persistence-database-schema"></a>Kalıcılık Veritabanı Şeması
 Bu konuda, SQL iş akışı örneği Store tarafından desteklenen ortak görünümler açıklanmaktadır.  
@@ -28,9 +28,9 @@ Bu konuda, SQL iş akışı örneği Store tarafından desteklenen ortak görün
 |CurrentMachine|nvarchar(128)|Bilgisayar adı şu anda iş akışı örneği belleğe sahip gösterir.|  
 |LastMachine|Nvarchar(450)|İş akışı örneği yüklendi son bilgisayarı gösterir.|  
 |ExecutionStatus|Nvarchar(450)|İş akışının geçerli yürütme durumunu gösterir. Olası durumlar şunlardır **Executing**, **boşta**, **kapalı**.|  
-|Isınitialized|Bit|İş akışı örneği başlatılmış olup olmadığını gösterir. Başlatılan iş akışı örneği en az bir kez kalıcı bir iş akışı örneği ' dir.|  
-|IsSuspended|Bit|İş akışı örneği askıya olup olmadığını gösterir.|  
-|IsCompleted|Bit|İş akışı örneği yürütmesini bitirene olup olmadığını gösterir. **Not:**  IIf **InstanceCompletionAction** özelliği **DeleteAll**, örnekleri tamamlandıktan sonra görünümünden kaldırılır.|  
+|Isınitialized|bit|İş akışı örneği başlatılmış olup olmadığını gösterir. Başlatılan iş akışı örneği en az bir kez kalıcı bir iş akışı örneği ' dir.|  
+|IsSuspended|bit|İş akışı örneği askıya olup olmadığını gösterir.|  
+|IsCompleted|bit|İş akışı örneği yürütmesini bitirene olup olmadığını gösterir. **Not:**  IIf **InstanceCompletionAction** özelliği **DeleteAll**, örnekleri tamamlandıktan sonra görünümünden kaldırılır.|  
 |EncodingOption|Mini tamsayı|Veri özellikleri serileştirmek için kullanılan kodlama açıklar.<br /><br /> -0 – hiçbir kodlama<br />-1 – GzipStream|  
 |ReadWritePrimitiveDataProperties|VARBINARY(max)|Örnek yüklendiğinde, geri iş akışı çalışma zamanı sağlanan serileştirilmiş bir örnek veri özelliklerini içerir.<br /><br /> Özel bütünleştirilmiş kod yok blob serisini kaldırmak için gerekli olup olmadığını anlamına gelir. yerel bir CLR türü her temel özelliğidir.|  
 |WriteOnlyPrimitiveDataProperties|VARBINARY(max)|Örnek yüklendiğinde, geri iş akışı çalışma zamanı için sağlanan değil serileştirilmiş bir örnek veri özelliklerini içerir.<br /><br /> Özel bütünleştirilmiş kod yok blob serisini kaldırmak için gerekli olup olmadığını anlamına gelir. yerel bir CLR türü her temel özelliğidir.|  

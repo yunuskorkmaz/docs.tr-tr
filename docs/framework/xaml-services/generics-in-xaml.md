@@ -5,11 +5,11 @@ helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
 ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954108"
 ---
 # <a name="generics-in-xaml"></a>XAML'deki Genel Türler
 .NET Framework XAML System.Xaml içinde uygulandığı şekilde hizmetleri genel CLR Türleri kullanma desteği sağlar. Bu destek sınırlamalar genel türler tür bağımsız değişkeni belirtmek ve uygun çağırarak kısıtlamanın zorlanması içerir `Add` genel koleksiyon çalışmaları için yöntemi. Bu konuda, kullanma ve XAML genel türleri başvuran yönleri açıklanmaktadır.  

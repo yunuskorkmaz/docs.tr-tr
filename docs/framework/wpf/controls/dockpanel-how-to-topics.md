@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], DockPanel
 ms.assetid: 62544800-db6a-4124-8cb0-ed9bc4a90901
 ms.openlocfilehash: ff2f23a0515f8a086d3082c6bf3000c49ed91dfd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911865"
 ---
 # <a name="dockpanel-how-to-topics"></a>DockPanel Nasıl Yapılır Konuları
 Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.DockPanel> bir düzen kapsayıcısı kenarında alt öğeleri konumlandırmak için öğesi.  

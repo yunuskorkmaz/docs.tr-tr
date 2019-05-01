@@ -5,13 +5,13 @@ author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
 ms.openlocfilehash: 5566ab83040ce5dc23520401e3fc4bb619af4ec4
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "49400499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909966"
 ---
-# <a name="dependencies"></a>Bağımlılıkları
+# <a name="dependencies"></a>Bağımlılıklar
 
 Bir .NET Kitaplığı'na bağımlılıkları ekleme birincil yolu, NuGet paketlerini başvuruyor. NuGet paket başvuruları hızlı bir şekilde yeniden kullanmak ve önceden yazılı işlevselliğinden olanak sağlar, ancak uyuşmazlıkları .NET geliştiricileri için ortak bir kaynağı oldukları. Bağımlılıkları doğru şekilde yönetme, diğer .NET kitaplıkları değişiklikleri .NET Kitaplığı ' nıza kesilmesini önlemek önemlidir ve tersi!
 

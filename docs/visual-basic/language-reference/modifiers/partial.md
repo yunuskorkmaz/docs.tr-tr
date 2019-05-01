@@ -15,11 +15,11 @@ helpviewer_keywords:
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
 ms.openlocfilehash: 0f74935d58d47e65b5eb614abc86a3fc9c8e6c42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920620"
 ---
 # <a name="partial-visual-basic"></a>Kısmi (Visual Basic)
 Bir tür bildirimi türü kısmi tanımı olduğunu gösterir.  
@@ -68,15 +68,15 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 ## <a name="best-practices"></a>En İyi Yöntemler  
   
--   Normal koşullar altında tek bir türde geliştirme arasında iki veya daha fazla bildirimleri bölmeniz gerekir değil. Bu nedenle, çoğu durumda gerekmeyen `Partial` anahtar sözcüğü.  
+- Normal koşullar altında tek bir türde geliştirme arasında iki veya daha fazla bildirimleri bölmeniz gerekir değil. Bu nedenle, çoğu durumda gerekmeyen `Partial` anahtar sözcüğü.  
   
--   Okunabilirlik için her bir kısmi bildirimi bir tür içermelidir `Partial` anahtar sözcüğü. Derleyicinin anahtar sözcüğü atlamak en fazla bir kısmi bildirimi sağlar; iki veya daha fazla Bunu atlarsanız, derleyici bir hata bildirir.  
+- Okunabilirlik için her bir kısmi bildirimi bir tür içermelidir `Partial` anahtar sözcüğü. Derleyicinin anahtar sözcüğü atlamak en fazla bir kısmi bildirimi sağlar; iki veya daha fazla Bunu atlarsanız, derleyici bir hata bildirir.  
   
 ## <a name="behavior"></a>Davranış  
   
--   **Bildirimleri birleşimi.** Derleyicinin tür tüm kısmi bildirimleri birleşimi değerlendirir. Kısmi her tanımındaki her değiştiricisi türün tamamı için geçerlidir ve her kısmi tanımındaki her üye, türün tamamı için kullanılabilir.  
+- **Bildirimleri birleşimi.** Derleyicinin tür tüm kısmi bildirimleri birleşimi değerlendirir. Kısmi her tanımındaki her değiştiricisi türün tamamı için geçerlidir ve her kısmi tanımındaki her üye, türün tamamı için kullanılabilir.  
   
--   **Tür promosyonu modülleri kısmi türler için izin verilmiyor.** Kısmi bir tanımını modül içinde ise, o türün tür yükseltme otomatik olarak engellenmediğinden olur. Böyle bir durumda, kısmi tanımları kümesini beklenmeyen sonuçlar ve hatta derleyici hataları neden olabilir. Daha fazla bilgi için [tür promosyonu](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
+- **Tür promosyonu modülleri kısmi türler için izin verilmiyor.** Kısmi bir tanımını modül içinde ise, o türün tür yükseltme otomatik olarak engellenmediğinden olur. Böyle bir durumda, kısmi tanımları kümesini beklenmeyen sonuçlar ve hatta derleyici hataları neden olabilir. Daha fazla bilgi için [tür promosyonu](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
   
      Yalnızca tam yollarının aynı olduğunda derleyici kısmi tanımları birleştirir.  
   

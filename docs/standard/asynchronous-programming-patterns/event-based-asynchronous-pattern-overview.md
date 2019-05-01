@@ -17,24 +17,24 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
 ms.openlocfilehash: 3f3c7e96f1c372bb05aba9bef81192aec47b3cde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61870272"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış
 Aynı anda birçok görevi gerçekleştiren henüz kullanıcı etkileşimine yanıt verebilir durumda kalması uygulamalar genellikle birden çok iş parçacığı kullanan bir tasarım gerektirir. <xref:System.Threading> Ad alanı, çok iş parçacıklı yüksek performanslı uygulamalar oluşturmak için gerekli olan tüm araçları sağlar, ancak etkili bir şekilde bu araçları kullanarak, birden çok iş parçacıklı yazılım Mühendisliği önemli deneyimiyle gerektirir. Görece basit birden çok iş parçacıklı uygulamalar için <xref:System.ComponentModel.BackgroundWorker> bileşeni, basit bir çözüm sağlar. Zaman uyumsuz daha gelişmiş uygulamalar için olay tabanlı zaman uyumsuz desene uyar bir class uygulamayı düşünün.  
   
  Olay tabanlı zaman uyumsuz desen çok iş parçacıklı uygulamalar avantajları pek çok iş parçacıklı tasarımında devralınan karmaşık sorunların gizleyerek kullanılabilir hale getirir. Bu deseni destekleyen bir sınıf kullanarak size izin verebilirsiniz:  
   
--   Uygulamanızı kesintiye uğratmadan indirmeleri ve "arka planda," veritabanı işlemleri gibi uzun süren görevleri gerçekleştirin.  
+- Uygulamanızı kesintiye uğratmadan indirmeleri ve "arka planda," veritabanı işlemleri gibi uzun süren görevleri gerçekleştirin.  
   
--   Birden çok işlem her tamamlandığında bildirim alma eşzamanlı olarak yürütün.  
+- Birden çok işlem her tamamlandığında bildirim alma eşzamanlı olarak yürütün.  
   
--   Kaynakları ("asılı") durdurmadan kullanılabilir olana kadar bekleyin, uygulamanızın.  
+- Kaynakları ("asılı") durdurmadan kullanılabilir olana kadar bekleyin, uygulamanızın.  
   
--   Bilinen olayları ve temsilci modelini kullanarak zaman uyumsuz işlemleri iletişim. Olay işleyicileri ve temsilcileri kullanma ile ilgili daha fazla bilgi için bkz: [olayları](../../../docs/standard/events/index.md).  
+- Bilinen olayları ve temsilci modelini kullanarak zaman uyumsuz işlemleri iletişim. Olay işleyicileri ve temsilcileri kullanma ile ilgili daha fazla bilgi için bkz: [olayları](../../../docs/standard/events/index.md).  
   
  Olay tabanlı zaman uyumsuz deseni destekleyen bir sınıf adlı bir veya daha fazla yöntemi olacaktır _MethodName_**zaman uyumsuz**. Bu yöntemler, zaman uyumlu sürümler, geçerli iş parçacığında aynı işlemi yansıtma. Sınıfı ayrıca olabilir bir _MethodName_**tamamlandı** olay ve olabilir bir _MethodName_**AsyncCancel** (ya da yalnızca  **CancelAsync**) yöntemi.  
   

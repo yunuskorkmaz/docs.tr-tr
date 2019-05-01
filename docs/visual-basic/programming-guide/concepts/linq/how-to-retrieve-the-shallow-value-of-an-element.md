@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: (Visual Basic) öğenin yüzeysel değerini alma'
 ms.date: 07/20/2015
 ms.assetid: 730a6670-fb8c-41fc-8a1b-eb97a837e432
 ms.openlocfilehash: 69e85c3b87ef1052bbb3eab832f93774fa35066f
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918092"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>Nasıl yapılır: (Visual Basic) öğenin yüzeysel değerini alma
 

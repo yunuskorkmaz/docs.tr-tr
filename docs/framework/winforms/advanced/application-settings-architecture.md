@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
 ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946750"
 ---
 # <a name="application-settings-architecture"></a>Uygulama Ayarları Mimarisi
 Bu konuda, uygulama ayarları mimarisi nasıl çalıştığını açıklanır ve mimarinin gruplandırılmış ayarları ve ayarları anahtarları gibi gelişmiş özellikleri keşfediyor.  
@@ -24,15 +24,15 @@ Bu konuda, uygulama ayarları mimarisi nasıl çalıştığını açıklanır ve
 ## <a name="defining-settings"></a>Ayarları tanımlama  
  Uygulama ayarları mimarisi içinde her ikisi de kullanılan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ve Windows Forms ve her iki ortamlar genelinde paylaşılan, temel sınıfların bir sayı içerir. En önemlisi <xref:System.Configuration.SettingsBase>, koleksiyonu aracılığıyla ayarlarına erişim sağlar ve yükleme ve kaydetme ayarları için alt düzey yöntemler sağlar. Her ortamın kendi sınıfından türetilen uygulayan <xref:System.Configuration.SettingsBase> bu ortam için ek ayarlar işlevselliği sağlamak için. Windows Forms tabanlı bir uygulama, tüm uygulama ayarları türetilen bir sınıfta tanımlanmalıdır <xref:System.Configuration.ApplicationSettingsBase> temel sınıf için aşağıdaki işlevsellik ekleyen sınıfı:  
   
--   Üst düzey yükleme ve kaydetme işlemleri  
+- Üst düzey yükleme ve kaydetme işlemleri  
   
--   Kullanıcı kapsamlı ayarları için destek  
+- Kullanıcı kapsamlı ayarları için destek  
   
--   Kullanıcı ayarları için önceden tanımlanmış varsayılan döndürülüyor  
+- Kullanıcı ayarları için önceden tanımlanmış varsayılan döndürülüyor  
   
--   Uygulamanın önceki sürümden yükseltme ayarları  
+- Uygulamanın önceki sürümden yükseltme ayarları  
   
--   Ayarlar doğrulanıyor, bunlar değiştirilmeden önce ya da önce kaydedilmeden  
+- Ayarlar doğrulanıyor, bunlar değiştirilmeden önce ya da önce kaydedilmeden  
   
  Bir dizi içinde tanımlanan öznitelikleri kullanarak ayarları açıklanabilir <xref:System.Configuration> ad alanı; bunlar [uygulama ayarları öznitelikleri](application-settings-attributes.md). Bir ayar tanımlarken ile uygulamanız gerekir <xref:System.Configuration.ApplicationScopedSettingAttribute> veya <xref:System.Configuration.UserScopedSettingAttribute>, ayarı uygulamanın tamamı veya yalnızca geçerli kullanıcı için geçerli olup olmadığını açıklar.  
   
@@ -46,11 +46,11 @@ Bu konuda, uygulama ayarları mimarisi nasıl çalıştığını açıklanır ve
   
  İle yayımlanan yapılandırma sistemi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] statik uygulama yapılandırma verileri yerel bilgisayarın machine.config dosyasının veya içinde sağlama destekleyen bir `app.`ile dağıttığınız exe.config dosyası Uygulamanızı. <xref:System.Configuration.LocalFileSettingsProvider> Sınıfı bu yerel destek aşağıdaki yollarla genişletir:  
   
--   Uygulama kapsamlı ayarlar ya da bir machine.config dosyasına depolanabilir veya `app.`exe.config dosyaları. Machine.config her zaman salt okunur, çalışırken `app`. exe.config uygulamalarının çoğu için güvenlik konuları salt okunur tarafından kısıtlanan.  
+- Uygulama kapsamlı ayarlar ya da bir machine.config dosyasına depolanabilir veya `app.`exe.config dosyaları. Machine.config her zaman salt okunur, çalışırken `app`. exe.config uygulamalarının çoğu için güvenlik konuları salt okunur tarafından kısıtlanan.  
   
--   Kullanıcı kapsamlı ayarları depolanabilir `app`. exe.config dosyaları, bu durumda bunlar statik varsayılan olarak kabul edilir.  
+- Kullanıcı kapsamlı ayarları depolanabilir `app`. exe.config dosyaları, bu durumda bunlar statik varsayılan olarak kabul edilir.  
   
--   Varsayılan olmayan kullanıcı kapsamlı ayarları yeni bir dosyada depolanan *kullanıcı*.config, burada *kullanıcı* uygulama şu anda yürüten kişinin kullanıcı adıdır. Bir kullanıcı kapsamlı ayarı için varsayılan belirtebilirsiniz <xref:System.Configuration.DefaultSettingValueAttribute>. Kullanıcı kapsamlı ayarları uygulama yürütme sırasında sıklıkla değiştiğinden `user`.config olduğundan her zaman okuma/yazma.  
+- Varsayılan olmayan kullanıcı kapsamlı ayarları yeni bir dosyada depolanan *kullanıcı*.config, burada *kullanıcı* uygulama şu anda yürüten kişinin kullanıcı adıdır. Bir kullanıcı kapsamlı ayarı için varsayılan belirtebilirsiniz <xref:System.Configuration.DefaultSettingValueAttribute>. Kullanıcı kapsamlı ayarları uygulama yürütme sırasında sıklıkla değiştiğinden `user`.config olduğundan her zaman okuma/yazma.  
   
  Tüm üç yapılandırma dosyaları XML biçiminde ayarları depolar. Uygulama kapsamlı ayarlar için üst düzey XML öğesi `<appSettings>`, ancak `<userSettings>` kullanıcı kapsamlı ayarları için kullanılır. Bir `app`. exe.config dosyasını kullanıcı kapsamlı ayarları şuna benzer için hem uygulama kapsamlı ayarlar ve varsayılanlar içerir:  
   

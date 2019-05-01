@@ -8,11 +8,11 @@ helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
 ms.openlocfilehash: d327605c084cd5fb1c65fbb786e871b421730b83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946685"
 ---
 # <a name="programming-wcf-security"></a>WCF Güvenliğini Programlama
 Bu konu, güvenli bir Windows Communication Foundation (WCF) uygulaması oluşturmak için kullanılan temel programlama görevlerini açıklar. Bu konu, yalnızca kimlik doğrulaması, gizliliği ve bütünlük, toplu olarak bilinen içermektedir *aktarım güvenliği*. Bu konuda, yetkilendirme (kaynaklarına veya hizmetlerine erişim denetimi); içermez Yetkilendirme hakkında daha fazla bilgi için bkz: [yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -33,17 +33,17 @@ Bu konu, güvenli bir Windows Communication Foundation (WCF) uygulaması oluştu
   
      Üç seçeneğiniz vardır:  
   
-    1.  `Transport`  
+    1. `Transport`  
   
          Aktarım güvenliği seçtiğiniz bağlama kullanan mekanizmasını bağlıdır. Örneğin, kullanıyorsanız `WSHttpBinding` güvenlik mekanizması Güvenli Yuva Katmanı (SSL) (aynı zamanda HTTPS protokolü için mekanizma) kaldırılır. Genel olarak bakıldığında, aktarım güvenliği ana avantajı, hangi aktarım ne olursa olsun, kullandığınız iyi aktarım hızı sunan olmanızdır. Ancak, iki sınırlamalara sahiptir: İlk aktarım mekanizması bir kullanıcının kimliğini doğrulamak için kullanılan kimlik bilgisi türünü belirleyen ' dir. Yalnızca hizmet kimlik bilgilerini farklı türde talep diğer hizmetleriyle gerekiyorsa bir dezavantajı budur. İkinci güvenlik ileti düzeyinde uygulanmadığından güvenlik bir atlama atlamalı şekilde uçtan uca yerine, uygulanmasıdır. Yalnızca istemci ile hizmet arasında ileti yolu aracılar içeriyorsa bu ikinci sınırlama bir sorundur. Hangi aktarım kullanılacak hakkında daha fazla bilgi için bkz: [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Aktarım güvenliği kullanma hakkında daha fazla bilgi için bkz. [aktarım güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
-    2.  `Message`  
+    2. `Message`  
   
          İleti güvenliği her ileti gerekli üst bilgileri içerir ve ileti tutmak için verileri güvenli anlamına gelir. Üstbilgileri olarak değiştiğinden, herhangi bir sayıda kimlik bilgileri içerebilir. Bu, diğer hizmetlerle aktarım mekanizması sağlayamazsınız bir belirli kimlik bilgisi türü bu talebi birlikte veya iletinin her bir hizmet farklı bir kimlik bilgisi türü burada talepleri birden fazla hizmeti ile kullanılmalıdır bir etmen haline gelir.  
   
          Daha fazla bilgi için [ileti güvenliği](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
-    3.  `TransportWithMessageCredential`  
+    3. `TransportWithMessageCredential`  
   
          Bu seçenek, güvenli ileti aktarım için Aktarım katmanı kullanır, her ileti Zengin kimlik bilgilerini içerirken diğer hizmetleri gerekir. Bu performans avantajı aktarım güvenliği ile ileti güvenliği zengin kimlik bilgilerinin avantajlarından birleştirir. Bu aşağıdaki bağlamalarla kullanılabilir: <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding>, <xref:System.ServiceModel.NetPeerTcpBinding>, ve <xref:System.ServiceModel.WSHttpBinding>.  
   
@@ -56,19 +56,19 @@ Bu konu, güvenli bir Windows Communication Foundation (WCF) uygulaması oluştu
 ## <a name="setting-the-client-credential-type"></a>İstemci kimlik bilgileri türünü ayarlama  
  Bir istemci kimlik bilgileri türünü gerektiği gibi seçin. Daha fazla bilgi için [kimlik bilgisi türü seçme](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md). Aşağıdaki istemci kimlik bilgisi türleri kullanılabilir:  
   
--   `Windows`  
+- `Windows`  
   
--   `Certificate`  
+- `Certificate`  
   
--   `Digest`  
+- `Digest`  
   
--   `Basic`  
+- `Basic`  
   
--   `UserName`  
+- `UserName`  
   
--   `NTLM`  
+- `NTLM`  
   
--   `IssuedToken`  
+- `IssuedToken`  
   
  Modu nasıl ayarladığına bağlı olarak, kimlik bilgisi türü ayarlamanız gerekir. Örneğin, seçtiğiniz `wsHttpBinding`ve ayrıca daha sonra "İleti" moduna `clientCredentialType` aşağıdaki değerlerden biri olarak ileti öğenin özniteliği: `None`, `Windows`, `UserName`, `Certificate` , ve `IssuedToken`yapılandırmasını aşağıda gösterildiği gibi.  
   

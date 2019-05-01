@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
 ms.openlocfilehash: 71e0ffc7f03a27a878aeb48eda9fbc58e5faae82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945333"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By Tümcesi (Visual Basic)
 Bir sorgu sonucunun öğelerini gruplandırır. Ayrıca her grup için toplama işlevleri uygulamak için kullanılabilir. Gruplandırma işlemi, bir veya daha fazla anahtarlar üzerinde temel alır.  
@@ -31,19 +31,19 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 ## <a name="parts"></a>Bölümler  
   
--   `listField1`, `listField2`  
+- `listField1`, `listField2`  
   
      İsteğe bağlı. Bir veya daha fazla alan sorgu değişkeni veya açıkça gruplandırılmış sonuca dahil için alanları tanımlayan değişkenleri. Sorgu değişkeni veya değişkenleri tüm alanlar, hiçbir alan belirtilmesi durumunda, gruplandırılmış sonuca dahil edilir.  
   
--   `keyExp1`  
+- `keyExp1`  
   
      Gerekli. Öğe grupları belirlemek için kullanılacak anahtarı tanımlayan bir ifade. Bir bileşik anahtarı belirtmek için birden fazla anahtar belirtebilir.  
   
--   `keyExp2`  
+- `keyExp2`  
   
      İsteğe bağlı. İle birlikte bir veya daha fazla ek anahtarlar `keyExp1` bileşik bir anahtar oluşturmak için.  
   
--   `aggregateList`  
+- `aggregateList`  
   
      Gerekli. Grupların nasıl toplanır tanımlayan bir veya daha fazla ifadeler. Gruplandırılmış sonuçlar için bir üye adını tanımlamak için kullanmak `Group` anahtar sözcüğü aşağıdaki biçimlerden birini olabilir:  
   

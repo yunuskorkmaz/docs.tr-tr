@@ -13,11 +13,11 @@ helpviewer_keywords:
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
 ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794738"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir değişkenin kapsamını denetleme
 Normalde, içinde bir değişkeni olduğunu *kapsam*, ya da, bildirdiğiniz, bölge, başvuru için görünür. Bazı durumlarda, değişken 's *erişim düzeyi* kapsamını etkileyebilir.  
@@ -28,13 +28,13 @@ Normalde, içinde bir değişkeni olduğunu *kapsam*, ya da, bildirdiğiniz, bö
   
 #### <a name="to-make-a-variable-visible-only-within-a-block"></a>Bir değişken yalnızca bir blok içinde görünür hale getirmek için  
   
--   Bir yerde [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md) başlatma ve bildirim deyimleri, bloğun başlangıcını arasında örneğin sonlandırma arasında değişken için `For` ve `Next` bilgilerinin bir `For` döngü.  
+- Bir yerde [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md) başlatma ve bildirim deyimleri, bloğun başlangıcını arasında örneğin sonlandırma arasında değişken için `For` ve `Next` bilgilerinin bir `For` döngü.  
   
      Yalnızca değişken bloğu içinde başvurabilirsiniz.  
   
 #### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>Bir değişken yalnızca bir yordam içinde görünür hale getirmek için  
   
--   Bir yerde `Dim` yordam içinde ancak herhangi bir blok dışındaki değişken bildirimi (gibi bir `With`... `End With` blok).  
+- Bir yerde `Dim` yordam içinde ancak herhangi bir blok dışındaki değişken bildirimi (gibi bir `With`... `End With` blok).  
   
      İçinde yordamda bulunan herhangi bir bloğu içinde dahil olmak üzere bu yordamı yalnızca değişkene başvurabilirsiniz.  
   

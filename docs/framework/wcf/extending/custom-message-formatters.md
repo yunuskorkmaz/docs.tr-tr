@@ -3,11 +3,11 @@ title: Custom Message Formatters
 ms.date: 03/30/2017
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
 ms.openlocfilehash: af1596c65fc87a68bc3dc2ab5ab2d82133e0fed4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857981"
 ---
 # <a name="custom-message-formatters"></a>Custom Message Formatters
 Bir ileti içeriği genellikle XML biçiminde, genellikle bir uygulama için uygun bir biçim değil. Uygulamaları başlama ve özelliklerini ayarlayarak nesneleri işleyin. Windows Communication Foundation (WCF) kullanan *veri anlaşması* dönüştürmek için bir <xref:System.ServiceModel.Channels.Message> nesnesine kolayca bir uygulama tarafından işlenen bir nesne. Bu işlemler, serileştirme ve seri durumundan çıkarma adı verilir. Bu aynı koşulları serileştirme açıklamak ve ilgisiz bir işlemdir ileti kablo biçimine veya biçiminden Aktarım katmanı tarafından yapılan seri durumdan çıkarma için kullanıldığını unutmayın.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
 ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954095"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama
 
@@ -45,13 +45,13 @@ Temel bir okuma düğüm döngü XAML düğümü akışı incelemek için aşağ
 
 - Temel <xref:System.Xaml.XamlNodeType> geçerli düğüm veya geçerli kayıt çağrısı olarak düğüm içeriği hakkında bilgi edinmek için aşağıdakilerden birini bildirilir:
 
-    - İçin bir <xref:System.Xaml.XamlXmlReader.NodeType%2A> , <xref:System.Xaml.XamlNodeType.StartMember> veya <xref:System.Xaml.XamlNodeType.EndMember>, çağrı <xref:System.Xaml.XamlXmlReader.Member%2A> edinme <xref:System.Xaml.XamlMember> üyesi hakkında bilgi. Üye olabilecek bir not bir <xref:System.Xaml.XamlDirective>, ve bu nedenle yukarıdaki nesne türü tanımlı geleneksel üyesi mutlaka olmayabilir. Örneğin, `x:Name` uygulanan bir nesneyi bir XAML üyesi olarak görünür burada <xref:System.Xaml.XamlMember.IsDirective%2A> geçerlidir ve <xref:System.Xaml.XamlMember.Name%2A> üyesidir `Name`, bu yönerge, XAML dili XAML ad alanı altında olduğunu gösteren diğer özelliklere sahip.
+  - İçin bir <xref:System.Xaml.XamlXmlReader.NodeType%2A> , <xref:System.Xaml.XamlNodeType.StartMember> veya <xref:System.Xaml.XamlNodeType.EndMember>, çağrı <xref:System.Xaml.XamlXmlReader.Member%2A> edinme <xref:System.Xaml.XamlMember> üyesi hakkında bilgi. Üye olabilecek bir not bir <xref:System.Xaml.XamlDirective>, ve bu nedenle yukarıdaki nesne türü tanımlı geleneksel üyesi mutlaka olmayabilir. Örneğin, `x:Name` uygulanan bir nesneyi bir XAML üyesi olarak görünür burada <xref:System.Xaml.XamlMember.IsDirective%2A> geçerlidir ve <xref:System.Xaml.XamlMember.Name%2A> üyesidir `Name`, bu yönerge, XAML dili XAML ad alanı altında olduğunu gösteren diğer özelliklere sahip.
 
-    - İçin bir <xref:System.Xaml.XamlXmlReader.NodeType%2A> , <xref:System.Xaml.XamlNodeType.StartObject> veya <xref:System.Xaml.XamlNodeType.EndObject>, çağrı <xref:System.Xaml.XamlXmlReader.Type%2A> edinme <xref:System.Xaml.XamlType> bir nesneyle ilgili bilgileri.
+  - İçin bir <xref:System.Xaml.XamlXmlReader.NodeType%2A> , <xref:System.Xaml.XamlNodeType.StartObject> veya <xref:System.Xaml.XamlNodeType.EndObject>, çağrı <xref:System.Xaml.XamlXmlReader.Type%2A> edinme <xref:System.Xaml.XamlType> bir nesneyle ilgili bilgileri.
 
-    - İçin bir <xref:System.Xaml.XamlXmlReader.NodeType%2A> , <xref:System.Xaml.XamlNodeType.Value>, çağrı <xref:System.Xaml.XamlXmlReader.Value%2A>. Yalnızca basit ifadesi bir değerin bir üyesi veya başlatma metni (ancak, bu konunun ilerideki bölümde açıklandığı gibi tür dönüştürme davranışı bilmeniz) bir nesne için ise bir düğüm bir değerdir.
+  - İçin bir <xref:System.Xaml.XamlXmlReader.NodeType%2A> , <xref:System.Xaml.XamlNodeType.Value>, çağrı <xref:System.Xaml.XamlXmlReader.Value%2A>. Yalnızca basit ifadesi bir değerin bir üyesi veya başlatma metni (ancak, bu konunun ilerideki bölümde açıklandığı gibi tür dönüştürme davranışı bilmeniz) bir nesne için ise bir düğüm bir değerdir.
 
-    - İçin bir <xref:System.Xaml.XamlXmlReader.NodeType%2A> , <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>, çağrı <xref:System.Xaml.XamlXmlReader.Namespace%2A> bir ad alanı düğümü için ad alanı bilgileri elde etmek için.
+  - İçin bir <xref:System.Xaml.XamlXmlReader.NodeType%2A> , <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>, çağrı <xref:System.Xaml.XamlXmlReader.Namespace%2A> bir ad alanı düğümü için ad alanı bilgileri elde etmek için.
 
 - Çağrı <xref:System.Xaml.XamlXmlReader.Read%2A> XAML okuyucu XAML düğüm akış sonraki düğümü geçin ve yeniden adımları tekrarlayın.
 
@@ -140,15 +140,15 @@ XAML düğüm akış üzerinde aşağıdaki davranış güvenebilirsiniz:
 
 - A `Value` düğümü değeri temsil eder; yok "EndValue" yoktur. Yalnızca izlenebilir bir `EndMember`.
 
-    - XAML başlatma metin nesnesinin oluşturma tarafından kullanılan bir nesne değeri yapısında sonuçlanmaz. Bunun yerine bir üye için bir özel üye düğüm adlı `_Initialization` oluşturulur. ve bu üye düğümünü başlatma değer dizesi içerir. Varsa, `_Initialization` her zaman ilk olan `StartMember`. `_Initialization` XAML dil XAML namescope ile bazı XAML Hizmetleri gösterimleri, açıklamak için nitelenebilir `_Initialization` yedekleme türleri içinde tanımlanan bir özellik değil.
+  - XAML başlatma metin nesnesinin oluşturma tarafından kullanılan bir nesne değeri yapısında sonuçlanmaz. Bunun yerine bir üye için bir özel üye düğüm adlı `_Initialization` oluşturulur. ve bu üye düğümünü başlatma değer dizesi içerir. Varsa, `_Initialization` her zaman ilk olan `StartMember`. `_Initialization` XAML dil XAML namescope ile bazı XAML Hizmetleri gösterimleri, açıklamak için nitelenebilir `_Initialization` yedekleme türleri içinde tanımlanan bir özellik değil.
 
-    - Üyenin değeri değerinin bir özniteliğini temsil eder. Sonunda olabilir bir değer dönüştürücü bu değer işleme dahil olan ve düz bir dize değeridir. Ancak, bu düğümü akışı XAML nesne yazıcısı işler kadar değerlendirilmez. XAML nesne yazıcısı gerekli XAML şema içeriği ve tür sistemi eşlemesi değer dönüştürmeleri için gerekli olan diğer destek sahiptir.
+  - Üyenin değeri değerinin bir özniteliğini temsil eder. Sonunda olabilir bir değer dönüştürücü bu değer işleme dahil olan ve düz bir dize değeridir. Ancak, bu düğümü akışı XAML nesne yazıcısı işler kadar değerlendirilmez. XAML nesne yazıcısı gerekli XAML şema içeriği ve tür sistemi eşlemesi değer dönüştürmeleri için gerekli olan diğer destek sahiptir.
 
 - Bir `EndMember` düğüm arkasından bir `StartMember` düğümü tarafından veya sonraki üyesi için bir `EndObject` düğümü üyesi sahibi.
 
 - Bir `EndObject` düğüm arkasından bir `EndMember` düğümü. Tarafından da izlenebilir bir `StartObject` düğüm nesneleri, bir koleksiyonun öğeleri meslektaşlarınız olduğu durumlar için. Ya da tarafından izlenebilir bir `Namespace` yaklaşan bir geçerli düğüm `StartObject`.
 
-    - Tüm düğüm akış kapatılırken benzersiz kullanım durumu için `EndObject` , kök herhangi bir şey tarafından izlenmiyor; okuyucu artık bitiş dosya, ve <xref:System.Xaml.XamlReader.Read%2A> döndürür `false`.
+  - Tüm düğüm akış kapatılırken benzersiz kullanım durumu için `EndObject` , kök herhangi bir şey tarafından izlenmiyor; okuyucu artık bitiş dosya, ve <xref:System.Xaml.XamlReader.Read%2A> döndürür `false`.
 
 <a name="value_converters_and_the_xaml_node_stream"></a>
 

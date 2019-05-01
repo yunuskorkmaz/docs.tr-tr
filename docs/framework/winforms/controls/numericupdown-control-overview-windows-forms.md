@@ -9,11 +9,11 @@ helpviewer_keywords:
 - spin button control [Windows Forms], Windows Forms
 ms.assetid: cff3cf30-4d46-4381-87df-37bfe83c71c5
 ms.openlocfilehash: 218eb685e546acac76a18450612a1601ab87276b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61805768"
 ---
 # <a name="numericupdown-control-overview-windows-forms"></a>NumericUpDown Denetimine Genel Bakış (Windows Forms)
 <xref:System.Windows.Forms.NumericUpDown> Denetimi bir birleşimini bir metin kutusu ve bir çift değer ayarlamak için kullanıcının tıklayabileceği oklar gibi görünüyor. Denetim, görüntüler ve sabit sayısal değerli Seçenekleri listesinden tek bir sayısal değer ayarlar. Kullanıcı, artırmak ve sayı tıklayarak yukarı ve aşağı ok tuşlarını, yukarı ve aşağı ok tuşlarına basarak ya da denetiminin metin kutusu bölümünde bir sayı yazmak azaltın. Yukarı Ok tuşuna tıklayarak sayısını en doğru taşır; Aşağı Ok tuşuna tıklayarak sayısını en doğru taşır.  

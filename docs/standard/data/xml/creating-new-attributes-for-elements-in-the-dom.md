@@ -1,5 +1,5 @@
 ---
-title: DOM öğeleri için yeni öznitelikler oluşturma
+title: DOM Öğeleri için Yeni Öznitelikler Oluşturma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,18 +9,18 @@ ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 870e800220031338557792fa612d4a3101e79f90
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934452"
 ---
-# <a name="creating-new-attributes-for-elements-in-the-dom"></a>DOM öğeleri için yeni öznitelikler oluşturma
+# <a name="creating-new-attributes-for-elements-in-the-dom"></a>DOM Öğeleri için Yeni Öznitelikler Oluşturma
 Yeni öznitelikler oluşturma öznitelikleri düğümler, ancak bir öğe düğümü özellikleridir ve içerdiği diğer düğüm türleri oluşturmaktan daha farklı bir **XmlAttributeCollection** öğeyle ilişkili. Bir öznitelik oluşturun ve öğe eklemek için birden çok yolu vardır:  
   
--   Öğe düğümü edinin ve kullanın **SetAttribute** o öğenin özniteliği koleksiyona bir öznitelik eklemek için.  
+- Öğe düğümü edinin ve kullanın **SetAttribute** o öğenin özniteliği koleksiyona bir öznitelik eklemek için.  
   
--   Oluşturma bir **XmlAttribute** düğümü kullanan **CreateAttribute** yöntemi, öğe düğümü alın ve ardından kullanmak **SetAttributeNode** bu öznitelik koleksiyon düğümü eklemek için öğe.  
+- Oluşturma bir **XmlAttribute** düğümü kullanan **CreateAttribute** yöntemi, öğe düğümü alın ve ardından kullanmak **SetAttributeNode** bu öznitelik koleksiyon düğümü eklemek için öğe.  
   
  Aşağıdaki örnek, bir öznitelik kullanarak bir öğe ekleme işlemi gösterilmektedir **SetAttribute** yöntemi.  
   

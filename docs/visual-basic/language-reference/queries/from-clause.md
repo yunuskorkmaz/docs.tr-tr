@@ -11,11 +11,11 @@ helpviewer_keywords:
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
 ms.openlocfilehash: b18ef2f291e20d8a150972a980ba063377b0bc3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945346"
 ---
 # <a name="from-clause-visual-basic"></a>From Tümcesi (Visual Basic)
 Bir veya daha fazla aralık değişkenleri ve bir sorgu koleksiyonu belirtir.  
@@ -48,21 +48,21 @@ From element [ As type ] In collection [ _ ]
   
  Her `From` yan tümcesi sorguyu daraltmak için ek sorgu yan tümceleri herhangi bir birleşimi tarafından takip. Sorgu aşağıdaki yollarla daraltabilirsiniz:  
   
--   Örtük olarak kullanarak birden çok koleksiyon birleştirme `From` ve `Select` yan tümcesi kullanılarak açık şekilde veya `Join` veya `Group Join` yan tümceleri.  
+- Örtük olarak kullanarak birden çok koleksiyon birleştirme `From` ve `Select` yan tümcesi kullanılarak açık şekilde veya `Join` veya `Group Join` yan tümceleri.  
   
--   Kullanım `Where` sorgu sonucu filtrelemek için yan tümcesi.  
+- Kullanım `Where` sorgu sonucu filtrelemek için yan tümcesi.  
   
--   Sonuç kullanarak sıralama `Order By` yan tümcesi.  
+- Sonuç kullanarak sıralama `Order By` yan tümcesi.  
   
--   Şuna benzer sonuçlar gruplamak kullanarak `Group By` yan tümcesi.  
+- Şuna benzer sonuçlar gruplamak kullanarak `Group By` yan tümcesi.  
   
--   Kullanım `Aggregate` yan tümcesi için tüm sorgu sonucu değerlendiremedik toplama işlevleri tanımlamak için.  
+- Kullanım `Aggregate` yan tümcesi için tüm sorgu sonucu değerlendiremedik toplama işlevleri tanımlamak için.  
   
--   Kullanım `Let` yan tanıtan bir yineleme değişkeninin değeri ifade yerine bir koleksiyona göre belirlenir.  
+- Kullanım `Let` yan tanıtan bir yineleme değişkeninin değeri ifade yerine bir koleksiyona göre belirlenir.  
   
--   Kullanım `Distinct` yan yinelenen sorgu sonuçları yoksay.  
+- Kullanım `Distinct` yan yinelenen sorgu sonuçları yoksay.  
   
--   Kullanarak, döndürülecek sonuç parçalarını tanımlamak `Skip`, `Take`, `Skip While`, ve `Take While` yan tümceleri.  
+- Kullanarak, döndürülecek sonuç parçalarını tanımlamak `Skip`, `Take`, `Skip While`, ve `Take While` yan tümceleri.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki sorgu ifadesi kullanan bir `From` yan tümcesinin aralık değişkenini bildirmek için `cust` her `Customer` nesnesine `customers` koleksiyonu. `Where` Yan tümcesi, çıkış belirtilen bölgeden müşterilere kısıtlamak için aralık değişkeni kullanır. `For Each` Döngü, her müşteri için şirket adı sorgu sonucu görüntüler.  

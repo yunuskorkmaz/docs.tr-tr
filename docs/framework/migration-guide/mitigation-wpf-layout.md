@@ -5,11 +5,11 @@ ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f81af76ed305fb614202c240e449adc62b310933
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61871255"
 ---
 # <a name="mitigation-wpf-layout"></a>Azaltma: WPF düzeni
 WPF denetimleri düzenini biraz değiştirebilirsiniz.  
@@ -17,11 +17,11 @@ WPF denetimleri düzenini biraz değiştirebilirsiniz.
 ## <a name="impact"></a>Etki  
  Bu değişikliğin ardından:  
   
--   Öğelerin yükseklik ve genişlik büyütür veya en fazla bir piksel küçültür.  
+- Öğelerin yükseklik ve genişlik büyütür veya en fazla bir piksel küçültür.  
   
--   Bir nesne yerleşimini en fazla bir piksel taşıyabilirsiniz.  
+- Bir nesne yerleşimini en fazla bir piksel taşıyabilirsiniz.  
   
--   Ortalanmış öğeleri yatay veya dikey olarak en fazla bir piksel merkezin olabilir.  
+- Ortalanmış öğeleri yatay veya dikey olarak en fazla bir piksel merkezin olabilir.  
   
  Bu yeni bir düzen, varsayılan olarak, yalnızca .NET Framework 4.6 hedefleyen uygulamalar için etkinleştirilir.  
   

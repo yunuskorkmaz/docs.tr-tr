@@ -14,8 +14,8 @@ ms.openlocfilehash: 3c0fcf9bd1c1e8df19458f681497b77348279915
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914848"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework'teki yenilikler
 
@@ -62,7 +62,7 @@ Bu makale, her yeni özellik hakkında kapsamlı bilgi sağlamaz ve değiştiril
 - [Temel sınıflar](#core48)
 - [Windows Communication Foundation (WCF)](#wcf48)
 - [Windows Presentation Foundation (WPF)](#wpf48)
-- [Ortak dil çalışma zamanı](#clr48) 
+- [Ortak dil çalışma zamanı](#clr48)
 
 Yardımcı teknoloji kullanıcılar için uygun bir deneyim sağlamak için uygulamanın veren geliştirilmiş Erişilebilirlik önemli bir .NET Framework 4.8 odağı olmaya devam eder. .NET Framework 4.8'teki erişilebilirlik geliştirmeleri hakkında daha fazla bilgi için bkz: [erişilebilirlik .NET Framework'teki yenilikler](whats-new-in-accessibility.md).
 
@@ -79,7 +79,7 @@ Yardımcı teknoloji kullanıcılar için uygun bir deneyim sağlamak için uygu
 - <xref:System.Security.Cryptography.RC2CryptoServiceProvider>
 - <xref:System.Security.Cryptography.RijndaelManaged>
 - <xref:System.Security.Cryptography.RIPEMD160Managed>
-- <xref:System.Security.Cryptography.SHA256Managed> 
+- <xref:System.Security.Cryptography.SHA256Managed>
 
 Bunun yerine, bu sınıflar, sistem şifreleme kitaplığa şifreleme işlemleri yönlendirin. Bu değişikliğin etkili bir şekilde olası karmaşık birbirinden Geliştirici ortamlarını ve üretim ortamlarını kaldırır ve yerel bileşenlerin yapar ve yönetilen bileşenleri aynı şifreleme ilkesi altında çalışır. Bu özel durumları bağlı uygulamalar geri yükleyebilir, önceki davranışı AppContext anahtarı ayarlayarak `Switch.System.Security.Cryptography.UseLegacyFipsThrow` için `true`. Daha fazla bilgi için [yönetilen şifreleme sınıflarını değil throw bir CryptographyException FIPS modunda](../migration-guide/retargeting/4.7.2-4.8.md#managed-cryptography-classes-do-not-throw-a-cryptographyexception-in-fips-mode).
 
@@ -93,7 +93,7 @@ Bunun yerine, bu sınıflar, sistem şifreleme kitaplığa şifreleme işlemleri
 
 **ServiceHealthBehavior giriş**
 
-Sistem durumu uç noktaları, düzenleme araçları tarafından sistem durumlarına göre hizmetleri yönetmek için yaygın olarak kullanılır. Sistem durumu denetimleri de izleme araçları tarafından izlemek ve hizmetin performans ve kullanılabilirlik ile ilgili bildirimleri sağlamak için kullanılabilir. 
+Sistem durumu uç noktaları, düzenleme araçları tarafından sistem durumlarına göre hizmetleri yönetmek için yaygın olarak kullanılır. Sistem durumu denetimleri de izleme araçları tarafından izlemek ve hizmetin performans ve kullanılabilirlik ile ilgili bildirimleri sağlamak için kullanılabilir.
 
 **ServiceHealthBehavior** genişleten bir WCF Hizmeti davranış <xref:System.ServiceModel.Description.IServiceBehavior>.  Eklenen <xref:System.ServiceModel.Description.ServiceDescription.Behaviors?displayProperty=nameWithType> koleksiyonu, bir hizmet davranışını şunları yapar:
 
@@ -106,15 +106,15 @@ Sistem durumu uç noktasını ortaya çıkarır ve WCF hizmet durumu bilgilerini
 - Kod. Örneğin:
 
   ```csharp
-  ServiceHost host = new ServiceHost(typeof(Service1), 
-                     new Uri("http://contoso:81/Service1")); 
+  ServiceHost host = new ServiceHost(typeof(Service1),
+                     new Uri("http://contoso:81/Service1"));
   ServiceHealthBehavior healthBehavior =
-      host.Description.Behaviors.Find<ServiceHealthBehavior>(); 
+      host.Description.Behaviors.Find<ServiceHealthBehavior>();
   if (healthBehavior == null)
-  { 
-     healthBehavior = new ServiceHealthBehavior(); 
-  } 
-   host.Description.Behaviors.Add(healthBehavior); 
+  {
+     healthBehavior = new ServiceHealthBehavior();
+  }
+   host.Description.Behaviors.Add(healthBehavior);
   ```
 
 - Bir yapılandırma dosyası kullanarak. Örneğin:
@@ -137,7 +137,7 @@ Bir hizmetin sistem durumu gibi sorgu parametrelerini kullanarak sorgulanabilir 
 Sorgu parametreleri ve örnekleri:
 
 - OnDispatcherFailure: `https://contoso:81/Service1?health&OnDispatcherFailure=455`
-  
+
   Herhangi bir kanal dağıtıcıları durumunu daha büyük olduğunda 455 bir HTTP yanıtı durum kodu döndürülür <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>.
 
 - OnListenerFailure: `https://contoso:81/Service1?health&OnListenerFailure=465`
@@ -147,11 +147,11 @@ Sorgu parametreleri ve örnekleri:
 - OnThrottlePercentExceeded: `https://contoso:81/Service1?health&OnThrottlePercentExceeded= 70:350,95:500`
 
   Yanıt ve HTTP yanıt kodunu {200-599} tetikleyen {1: 100} yüzdesini belirtir. Bu örnekte:
-  
+
     - Yüzde 95'ten büyükse, 500 bir HTTP yanıt kodu döndürülür.
-    
+
     - Varsa yüzdesi veya 70 ila 95 arasında 350 döndürülür.
-    
+
     - Aksi takdirde, 200 döndürülür.
 
 Hizmet durumu olabilir ya da HTML gibi bir sorgu dizesi belirterek görüntülenen `https://contoso:81/Service1?health` veya XML gibi bir sorgu dizesi belirterek `https://contoso:81/Service1?health&Xml`. Bir sorgu dizesi ister `https://contoso:81/Service1?health&NoContent` boş HTML sayfası döndürür.
@@ -162,9 +162,9 @@ Hizmet durumu olabilir ya da HTML gibi bir sorgu dizesi belirterek görüntülen
 
 **Yüksek DPI geliştirmeleri**
 
-.NET Framework 4.8 WPF, Windows V2 İzleyici başına DPI tanıma ve karma mod DPI ölçeklendirme desteği ekler. Bkz: [Windows üzerinde yüksek DPI Masaüstü uygulama geliştirme](/desktop/hidpi/high-dpi-desktop-application-development-on-windows) yüksek DPI geliştirme hakkında ek bilgi için. 
+.NET Framework 4.8 WPF, Windows V2 İzleyici başına DPI tanıma ve karma mod DPI ölçeklendirme desteği ekler. Bkz: [Windows üzerinde yüksek DPI Masaüstü uygulama geliştirme](/desktop/hidpi/high-dpi-desktop-application-development-on-windows) yüksek DPI geliştirme hakkında ek bilgi için.
 
-.NET framework 4.8 artırır, karışık modlu DPI ölçeklendirme destekleyen platformlarda yüksek DPI WPF uygulamalarında barındırılan Cwnd'lerden ve Windows Forms olan birlikte çalışma için destek (başlatma ile Windows 10 Nisan 2018 güncelleştirmesi). Barındırılan Cwnd'lerden ya da Windows Formları denetimleri oluştururken karışık mod DPI ölçeklendirilmiş olarak windows çağırarak [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) ve [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext), içinde barındırılabilen bir İzleyici başına V2 WPF uygulaması ve bu boyutlandırıldığından ve uygun şekilde ölçeklendirilebilir. Bu tür barındırılan içeriğin Yerel DPİ'de işlenmez; Bunun yerine, işletim sistemi barındırılan içerik uygun boyuta ölçeklendirir. Monitör başına v2 DPI tanıma modu desteği de barındırılacak bir WPF denetimleri sağlar (yani, shapemap) yerel bir yüksek DPI uygulama penceresinde. 
+.NET framework 4.8 artırır, karışık modlu DPI ölçeklendirme destekleyen platformlarda yüksek DPI WPF uygulamalarında barındırılan Cwnd'lerden ve Windows Forms olan birlikte çalışma için destek (başlatma ile Windows 10 Nisan 2018 güncelleştirmesi). Barındırılan Cwnd'lerden ya da Windows Formları denetimleri oluştururken karışık mod DPI ölçeklendirilmiş olarak windows çağırarak [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) ve [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext), içinde barındırılabilen bir İzleyici başına V2 WPF uygulaması ve bu boyutlandırıldığından ve uygun şekilde ölçeklendirilebilir. Bu tür barındırılan içeriğin Yerel DPİ'de işlenmez; Bunun yerine, işletim sistemi barındırılan içerik uygun boyuta ölçeklendirir. Monitör başına v2 DPI tanıma modu desteği de barındırılacak bir WPF denetimleri sağlar (yani, shapemap) yerel bir yüksek DPI uygulama penceresinde.
 
 Karma mod yüksek DPI ölçeklendirmesini desteğini etkinleştirmek için aşağıdakileri ayarlayabilirsiniz [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) uygulama yapılandırma dosyasına geçer:
 
@@ -180,11 +180,11 @@ Karma mod yüksek DPI ölçeklendirmesini desteğini etkinleştirmek için aşa�
 
 Çalışma zamanı'nda .NET Framework 4.8 aşağıdaki değişiklikleri ve geliştirmeleri içerir:
 
-**JIT derleyicisine yönelik geliştirmeler**. .NET Framework 4.8 olarak Just-ın-time (JIT) derleyici, JIT derleyicisi, .NET Core 2.1 dayanır. Birçok iyileştirmeleri ve hata düzeltmeleri için .NET Core 2.1 JIT derleyicisi yapılan tüm .NET Framework 4.8 JIT Derleyici dahil edilir. 
+**JIT derleyicisine yönelik geliştirmeler**. .NET Framework 4.8 olarak Just-ın-time (JIT) derleyici, JIT derleyicisi, .NET Core 2.1 dayanır. Birçok iyileştirmeleri ve hata düzeltmeleri için .NET Core 2.1 JIT derleyicisi yapılan tüm .NET Framework 4.8 JIT Derleyici dahil edilir.
 
 **NGEN geliştirmeleri**. Çalışma zamanı için kendi bellek yönetimini geliştirdi [Native Image Generator](../tools/ngen-exe-native-image-generator.md) NGEN görüntülerinin eşlenen verilerin bellekte böylece (NGEN) görüntüler. Bu da, yürütülecek bellek değiştirerek rastgele kod yürütmek için deneyen saldırıları için kullanılabilir'ın yüzey alanını azaltır.
 
-**Kötü amaçlı yazılımdan koruma için tüm bütünleştirilmiş kodları taranıyor**. Önceki .NET Framework sürümlerinde, Windows Defender'ı veya üçüncü taraf kötü amaçlı yazılımdan koruma yazılımları kullanarak diskten yüklenen tüm derlemeler çalışma zamanı tarar. Ancak, yüklenen derlemeleri diğer kaynaklardan gelen, gibi tarafından <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> yöntemi değil taranır ve potansiyel olarak algılanmayan kötü amaçlı yazılım içerebilir. Windows 10 üzerinde .NET Framework 4.8 ile başlayarak, çalışma zamanı bir tarama uygulayan kötü amaçlı yazılımdan koruma çözümleri tarafından tetikler [kötü amaçlı yazılımdan koruma tarama arabirimi (AMSI)](/windows/desktop/AMSI/antimalware-scan-interface-portal).  
+**Kötü amaçlı yazılımdan koruma için tüm bütünleştirilmiş kodları taranıyor**. Önceki .NET Framework sürümlerinde, Windows Defender'ı veya üçüncü taraf kötü amaçlı yazılımdan koruma yazılımları kullanarak diskten yüklenen tüm derlemeler çalışma zamanı tarar. Ancak, yüklenen derlemeleri diğer kaynaklardan gelen, gibi tarafından <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> yöntemi değil taranır ve potansiyel olarak algılanmayan kötü amaçlı yazılım içerebilir. Windows 10 üzerinde .NET Framework 4.8 ile başlayarak, çalışma zamanı bir tarama uygulayan kötü amaçlı yazılımdan koruma çözümleri tarafından tetikler [kötü amaçlı yazılımdan koruma tarama arabirimi (AMSI)](/windows/desktop/AMSI/antimalware-scan-interface-portal).
 
 <a name="v472" />
 

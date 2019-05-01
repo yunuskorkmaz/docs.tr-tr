@@ -22,11 +22,11 @@ helpviewer_keywords:
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
 ms.openlocfilehash: ac47b6d7fa4861d18646a23f442caccc4062852f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864503"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic'de Mantıksal ve Bit Düzeyinde İşleçler
 Mantıksal işleçler karşılaştırma `Boolean` ifadeleri ve dönüş bir `Boolean` sonucu. `And`, `Or`, `AndAlso`, `OrElse`, Ve `Xor` işleçleri *ikili* bunlar iki işlenenden tuttuğundan, while `Not` işleci *birli* tek bir işlenen aldığından. Bu işleçlerden bazıları, tam sayı değerleri üzerinde bit düzeyinde mantıksal işlemleri de yapabilirsiniz.  
@@ -72,13 +72,13 @@ Mantıksal işleçler karşılaştırma `Boolean` ifadeleri ve dönüş bir `Boo
   
  Yukarıdaki örnekte ayarlar `x` 1. Bu, aşağıdaki nedenlerden dolayı gerçekleşir:  
   
--   Değerleri, ikili olarak kabul edilir:  
+- Değerleri, ikili olarak kabul edilir:  
   
      3. ikili biçimini 011 =  
   
      5'te ikili biçimini 101 =  
   
--   `And` İşleci, ikili temsili bir ikili konum (bit) aynı anda karşılaştırır. Verilen konumda bitlerin her ikisi de 1, 1 sonuç o konuma yerleştirilir. Her iki bit 0 ise, 0 sonuç o konuma yerleştirilir. Önceki örnekte bu gibi işe:  
+- `And` İşleci, ikili temsili bir ikili konum (bit) aynı anda karşılaştırır. Verilen konumda bitlerin her ikisi de 1, 1 sonuç o konuma yerleştirilir. Her iki bit 0 ise, 0 sonuç o konuma yerleştirilir. Önceki örnekte bu gibi işe:  
   
      011 (ikili biçimde 3)  
   
@@ -86,7 +86,7 @@ Mantıksal işleçler karşılaştırma `Boolean` ifadeleri ve dönüş bir `Boo
   
      001 (ikili biçimde sonuç)  
   
--   Sonucun ondalık olarak kabul edilir. 001 değeri ikili 1, bu nedenle gösterimidir `x` = 1.  
+- Sonucun ondalık olarak kabul edilir. 001 değeri ikili 1, bu nedenle gösterimidir `x` = 1.  
   
  Bit düzeyinde `Or` veya her ikisini karşılaştırılan bitleri 1 ise 1 sonuç bite atanır dışında işlemi benzer. `Xor` Karşılaştırılan BITS (hem değil) tam olarak birine 1 ise 1 sonuç bite atar. `Not` tek bir işlenen alan, imza biti dahil olmak üzere tüm bitleri tersine çevirir ve sonucu bu değeri atar. Yani için pozitif bir sayı, imzalı `Not` her zaman negatif bir değer döndürür ve negatif sayılar için `Not` her zaman bir pozitif veya sıfır değeri döndürür.  
   

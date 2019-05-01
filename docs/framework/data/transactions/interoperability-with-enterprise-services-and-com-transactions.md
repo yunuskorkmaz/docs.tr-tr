@@ -3,11 +3,11 @@ title: Kurumsal Hizmetler ve COM+ İşlemleri ile Birlikte Çalışabilirlik
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
 ms.openlocfilehash: 8b86a032e7cbc27332864c9cc96009f12b72c53d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793659"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Kurumsal Hizmetler ve COM+ İşlemleri ile Birlikte Çalışabilirlik
 <xref:System.Transactions> Ad alanı, bu ad alanı kullanılarak oluşturulan işlem nesneleri ve COM + oluşturulan işlemleri arasındaki birlikte çalışabilirlik destekler.  
@@ -29,9 +29,9 @@ ms.locfileid: "59301912"
   
  <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>aşağıdaki gereksinimleri belirtir.  
   
--   Zaman <xref:System.Transactions.Transaction.Current%2A> tabanlıysa <xref:System.Transactions> işlemleri varsayılan bağlamı dışındaki bir bağlamda çalışır olduğunu algılarsa COM + bağlamında desteklemelidir. Not varsayılan bağlamı bir işlem içeremez. Varsayılan bağlamında, bu nedenle, hatta ile <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, tarafından kullanılan iş parçacığı yerel depolama alanında depolanan işlem <xref:System.Transactions> için döndürülen <xref:System.Transactions.Transaction.Current%2A>.  
+- Zaman <xref:System.Transactions.Transaction.Current%2A> tabanlıysa <xref:System.Transactions> işlemleri varsayılan bağlamı dışındaki bir bağlamda çalışır olduğunu algılarsa COM + bağlamında desteklemelidir. Not varsayılan bağlamı bir işlem içeremez. Varsayılan bağlamında, bu nedenle, hatta ile <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, tarafından kullanılan iş parçacığı yerel depolama alanında depolanan işlem <xref:System.Transactions> için döndürülen <xref:System.Transactions.Transaction.Current%2A>.  
   
--   Yeni bir <xref:System.Transactions.TransactionScope> nesnesi oluşturulur ve varsayılan bağlamı için geçerli olan işlem dışındaki bir bağlamda oluşturulmasıyla meydana <xref:System.Transactions.TransactionScope> nesne yansıtılan COM +. Bu durumda, <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> gibi davranır <xref:System.Transactions.EnterpriseServicesInteropOption.Full> , yeni bir COM + içeriği oluşturur.  
+- Yeni bir <xref:System.Transactions.TransactionScope> nesnesi oluşturulur ve varsayılan bağlamı için geçerli olan işlem dışındaki bir bağlamda oluşturulmasıyla meydana <xref:System.Transactions.TransactionScope> nesne yansıtılan COM +. Bu durumda, <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> gibi davranır <xref:System.Transactions.EnterpriseServicesInteropOption.Full> , yeni bir COM + içeriği oluşturur.  
   
  Ayrıca, <xref:System.Transactions.Transaction.Current%2A> her ikisini de ayarlanmış <xref:System.Transactions.EnterpriseServicesInteropOption.Full> ve <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, her iki mod yaptığından <xref:System.Transactions.Transaction.Current%2A> doğrudan ayarlanamaz.  Ayarlanacak yapmaya <xref:System.Transactions.Transaction.Current%2A> doğrudan dışındaki oluşturma bir <xref:System.Transactions.TransactionScope> sonuçlanır bir <xref:System.InvalidOperationException>. <xref:System.Transactions.EnterpriseServicesInteropOption> Numaralandırma değeri kullanmak üzere hangi değeri açıkça belirtmeyen yeni işlem kapsamlar tarafından devralınır. Yeni bir oluşturursanız, örneğin, <xref:System.Transactions.TransactionScope> nesnesi ile <xref:System.Transactions.EnterpriseServicesInteropOption.Full>ve sonra bir saniye oluşturun <xref:System.Transactions.TransactionScope> nesnesi ancak belirtmeyin bir <xref:System.Transactions.EnterpriseServicesInteropOption> değeri, ikinci <xref:System.Transactions.TransactionScope> nesne de sahip bir <xref:System.Transactions.EnterpriseServicesInteropOption.Full>.  
   
@@ -39,11 +39,11 @@ ms.locfileid: "59301912"
   
 1. <xref:System.Transactions.Transaction.Current%2A> bir işlem olup olmadığını görmek için denetlenir. Bu onay sonuçlanır:  
   
-    -   Bir kapsam olup olmadığını denetleyin.  
+    - Bir kapsam olup olmadığını denetleyin.  
   
-    -   Değerini bir kapsam ise <xref:System.Transactions.EnterpriseServicesInteropOption> kapsam başlangıçta oluşturulduğunda geçirilen numaralandırma denetlenir.  
+    - Değerini bir kapsam ise <xref:System.Transactions.EnterpriseServicesInteropOption> kapsam başlangıçta oluşturulduğunda geçirilen numaralandırma denetlenir.  
   
-    -   Varsa <xref:System.Transactions.EnterpriseServicesInteropOption> numaralandırma ayarı <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, COM + işlem (<xref:System.EnterpriseServices> işlem) öncelikli <xref:System.Transactions> işlem yönetilen iş parçacığı yerel depolama.  
+    - Varsa <xref:System.Transactions.EnterpriseServicesInteropOption> numaralandırma ayarı <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, COM + işlem (<xref:System.EnterpriseServices> işlem) öncelikli <xref:System.Transactions> işlem yönetilen iş parçacığı yerel depolama.  
   
          Değer ayarlanmışsa <xref:System.Transactions.EnterpriseServicesInteropOption.None>, <xref:System.Transactions> işlem yönetilen iş parçacığı yerel depolama alanında öncelik alır.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "59301912"
   
 3. Yeni bir işlem oluşturulur için aşağıdaki değerleri arasında olup olmadığını <xref:System.Transactions.EnterpriseServicesInteropOption> neden:  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>: bir COM + bağlamla ilişkili bir işlem oluşturulur.  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.Full>: bir COM + bağlamla ilişkili bir işlem oluşturulur.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.None>: bir <xref:System.Transactions> işlem oluşturulur.  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.None>: bir <xref:System.Transactions> işlem oluşturulur.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: bir COM + bağlamı ise, bir işlem oluşturulur ve bağlamına iliştirilemez.  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: bir COM + bağlamı ise, bir işlem oluşturulur ve bağlamına iliştirilemez.  
   
  Aşağıdaki tabloda Enterprise Hizmetleri (ES) bağlamını ve kullanarak bir işlem gerektiren bir işlem kapsamı gösterilmektedir <xref:System.Transactions.EnterpriseServicesInteropOption> sabit listesi.  
   
@@ -75,6 +75,6 @@ ms.locfileid: "59301912"
   
  Yukarıdaki tabloda:  
   
--   ST anlamına gelir kapsamın ortam işlem tarafından yönetilir <xref:System.Transactions>herhangi ayrı <xref:System.EnterpriseServices> bulunabilecek bağlamı'nın işlem.  
+- ST anlamına gelir kapsamın ortam işlem tarafından yönetilir <xref:System.Transactions>herhangi ayrı <xref:System.EnterpriseServices> bulunabilecek bağlamı'nın işlem.  
   
--   ES anlamına gelir kapsamın ortam işlem aynı olduğunu <xref:System.EnterpriseServices> bağlamı'nın işlem.
+- ES anlamına gelir kapsamın ortam işlem aynı olduğunu <xref:System.EnterpriseServices> bağlamı'nın işlem.

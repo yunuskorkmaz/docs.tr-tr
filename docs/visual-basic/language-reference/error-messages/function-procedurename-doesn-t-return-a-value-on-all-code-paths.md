@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
 ms.openlocfilehash: badcfea4f24ba3858071e02ba47b8f77ab557f88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802385"
 ---
 # <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>İşlev '\<procedurename >' bütün kod yollarında değer döndürmüyor
 İşlev '\<procedurename >' bütün kod yollarında değer döndürmüyor. 'Return' deyiminiz eksik olabilir mi?  
@@ -21,11 +21,11 @@ ms.locfileid: "58824838"
   
  Bir değer döndürmek bir `Function` aşağıdaki yollardan biriyle yordamda:  
   
--   Değer bir [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md).  
+- Değer bir [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md).  
   
--   Değer atayın `Function` yordamı adlandırın ve ardından gerçekleştirmek bir `Exit Function` deyimi.  
+- Değer atayın `Function` yordamı adlandırın ve ardından gerçekleştirmek bir `Exit Function` deyimi.  
   
--   Değer atayın `Function` yordamı adlandırın ve ardından gerçekleştirmek `End Function` deyimi.  
+- Değer atayın `Function` yordamı adlandırın ve ardından gerçekleştirmek `End Function` deyimi.  
   
  Denetim için geçerse `Exit Function` veya `End Function` ve yordam adı için herhangi bir değer atamadıysanız, yordamın dönüş veri türünün varsayılan değerini döndürür. Daha fazla bilgi için "Davranışı" bölümüne bakın. [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md).  
   
@@ -35,7 +35,7 @@ ms.locfileid: "58824838"
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Denetim akışı mantığınızı denetleyin ve bir dönüş neden her deyiminden önce bir değer atadığınız emin olun.  
+- Denetim akışı mantığınızı denetleyin ve bir dönüş neden her deyiminden önce bir değer atadığınız emin olun.  
   
      Her zaman kullanırsanız her iade yordamdan gelen bir değer döndürür garanti daha kolaydır `Return` deyimi. Bu, son deyim önce yaparsanız `End Function` olmalıdır bir `Return` deyimi.  
   

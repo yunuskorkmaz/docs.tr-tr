@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
 ms.openlocfilehash: 603ee57475b3e7b1af607d49050e3276fd3082d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929083"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Nasıl yapılır: Zaman Uyumsuz Bir Hizmet İşlemi Uygulama
 Windows Communication Foundation (WCF) uygulamalar, bir hizmet işlemi zaman uyumlu veya zaman uyumsuz olarak nasıl çağıran istemciye dikte olmadan uygulanabilir. Örneğin, zaman uyumsuz hizmet işlemlerini zaman uyumlu olarak çağrılması ve zaman uyumlu hizmet işlemlerini zaman uyumsuz olarak çağrılabilir. İşlem bir istemci uygulamasında zaman uyumsuz olarak çağırma gösteren bir örnek için bkz [nasıl yapılır: Hizmet işlemlerini zaman uyumsuz çağırma](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Zaman uyumlu ve zaman uyumsuz işlemler hakkında daha fazla bilgi için bkz: [Hizmet sözleşmeleri tasarlama](../../../docs/framework/wcf/designing-service-contracts.md) ve [zaman uyumlu ve zaman uyumsuz işlemler](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). Bu konu zaman uyumsuz bir hizmet işlemi temel yapısını tanımlar, kod tam değil. Hem hizmet hem de istemci tarafında tam bir örnek için bkz: [zaman uyumsuz](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100)).  
@@ -34,11 +34,11 @@ Windows Communication Foundation (WCF) uygulamalar, bir hizmet işlemi zaman uyu
   
 1. Hizmet sözleşme arabirimi ile:  
   
-    1.  Eş zamanlı `SampleMethod` işlemi.  
+    1. Eş zamanlı `SampleMethod` işlemi.  
   
-    2.  Zaman uyumsuz `BeginSampleMethod` işlemi.  
+    2. Zaman uyumsuz `BeginSampleMethod` işlemi.  
   
-    3.  Zaman uyumsuz `BeginServiceAsyncMethod` / `EndServiceAsyncMethod` işlemi çifti.  
+    3. Zaman uyumsuz `BeginServiceAsyncMethod` / `EndServiceAsyncMethod` işlemi çifti.  
   
 2. Bir hizmet uygulamasını kullanarak bir <xref:System.IAsyncResult?displayProperty=nameWithType> nesne.  
   

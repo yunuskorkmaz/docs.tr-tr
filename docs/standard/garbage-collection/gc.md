@@ -5,11 +5,11 @@ ms.date: 07/22/2016
 ms.technology: dotnet-standard
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
 ms.openlocfilehash: 8046cb744dccaf512208d517c243640820efce8e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945380"
 ---
 # <a name="automatic-memory-management-and-garbage-collection"></a>Otomatik bellek yönetimi ve çöp toplama
 
@@ -31,7 +31,7 @@ Performansı artırmak açısından, çalışma zamanı büyük nesneler için a
 
 ## <a name="generations-and-performance"></a>Nesiller ve Performans
 
-Atık toplayıcının performansını optimize etmek için, yönetilen yığın üç nesle ayrılır: 0, 1 ve 2. Çalışma zamanının atık toplama algoritması, bilgisayar yazılımı endüstrisinin atık toplama şemaları ile deneyler gerçekleştirerek doğru olduğunu anladığı birkaç genellemeyi temel alır. İlk olarak, yönetilen yığının tamamı yerine yönetilen yığının bir bölümü için belleği sıkıştırmak daha hızlıdır. İkinci olarak, yeni nesneler daha kısa, eski nesnelerse daha uzun ömre sahip olur. Son olarak, yeni nesneler birbirleriyle ilişkili olma eğilimindedir ve uygulama tarafından yaklaşık olarak aynı zamanda erişilirler.
+Atık toplayıcının performansını optimize etmek için Yönetilen yığın üç kuşaklar halinde ayrılmıştır: 0, 1 ve 2. Çalışma zamanının atık toplama algoritması, bilgisayar yazılımı endüstrisinin atık toplama şemaları ile deneyler gerçekleştirerek doğru olduğunu anladığı birkaç genellemeyi temel alır. İlk olarak, yönetilen yığının tamamı yerine yönetilen yığının bir bölümü için belleği sıkıştırmak daha hızlıdır. İkinci olarak, yeni nesneler daha kısa, eski nesnelerse daha uzun ömre sahip olur. Son olarak, yeni nesneler birbirleriyle ilişkili olma eğilimindedir ve uygulama tarafından yaklaşık olarak aynı zamanda erişilirler.
 
 Çalışma zamanının atık toplayıcısı, yeni nesneleri nesil 0'da tutar. Uygulama ömrünün başlarında oluşturulan ve toplamalardan sonra varlığını sürdüren nesneler yükseltilerek nesil 1 ve 2'de tutulur. Nesne yükseltme işlemi bu konunun ilerleyen bölümlerinde açıklanmıştır. Yönetilen yığının tamamındansa bir bölümünü sıkıştırmak daha hızlı olduğundan, bu yöntem atık toplayıcının her toplama işleminde tüm yönetilen yığın için belleği serbest bırakmasındansa yalnızca belirli bir nesildeki belleği serbest bırakmasına olanak sağlar.
 

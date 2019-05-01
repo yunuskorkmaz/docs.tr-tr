@@ -12,11 +12,11 @@ helpviewer_keywords:
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
 ms.openlocfilehash: 7beae9bb886c7c79d4d97375887bfecb0c2a40c1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792164"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>İzlenecek yol: Çalışma Zamanında Durum Çubuğu Bilgilerini Güncelleştirme
 > [!IMPORTANT]
@@ -88,6 +88,6 @@ ms.locfileid: "59333320"
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Nasıl yapılır: Bir StatusBar Denetimine Panel Ekleme](how-to-add-panels-to-a-statusbar-control.md)
-- [Nasıl yapılır: Windows Forms StatusBar Denetiminde Hangi Panele Tıklandığını Belirleme](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Nasıl yapılır: Bir StatusBar denetimine panel ekleme](how-to-add-panels-to-a-statusbar-control.md)
+- [Nasıl yapılır: Windows Forms StatusBar denetiminde hangi panele tıklandığını belirleme](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [StatusBar Denetimine Genel Bakış](statusbar-control-overview-windows-forms.md)

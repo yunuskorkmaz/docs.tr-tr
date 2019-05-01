@@ -5,51 +5,51 @@ ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
 ms.openlocfilehash: b07a8930255786686fb1e587b2a29bbc708eff63
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940510"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>Nasıl yapılır: WIF Kullanarak Oturum Açmış Durumu Gösterme
 ## <a name="applies-to"></a>Uygulanan Öğe  
   
--   Microsoft® Windows® Identity Foundation (WIF) 4.5  
+- Microsoft® Windows® Identity Foundation (WIF) 4.5  
   
--   ASP.NET® Web formları  
+- ASP.NET® Web formları  
   
 ## <a name="summary"></a>Özet  
  Bu konuda, oturum durumu WIF özelliği etkinleştirilmiş bir ASP.NET uygulamasında görüntülenecek açıklar. WIF, talep kullanan, uygulama ve yönetme kimlik doğrulaması ve yetkilendirme için uygulama kaynakları oluşturmaya yönelik bir mekanizma sağlar.  
   
 ## <a name="contents"></a>İçindekiler  
   
--   Genel Bakış  
+- Genel Bakış  
   
--   Adımların Özeti  
+- Adımların Özeti  
   
--   1. adım – yükleme kimlik ve erişim uzantısı  
+- 1. adım – yükleme kimlik ve erişim uzantısı  
   
--   2. adım – bir bağlı olan taraf ASP.NET uygulaması oluşturma  
+- 2. adım – bir bağlı olan taraf ASP.NET uygulaması oluşturma  
   
--   Adım 3 – kullanıcıların kimliğini doğrulamak için etkinleştirme yerel geliştirme  
+- Adım 3 – kullanıcıların kimliğini doğrulamak için etkinleştirme yerel geliştirme  
   
--   4. adım: ASP.NET uygulamanız oturum durumu görüntülemek için değiştirin  
+- 4. adım: ASP.NET uygulamanız oturum durumu görüntülemek için değiştirin  
   
--   5. adım – WIF ve ASP.NET uygulamanız arasındaki tümleştirme testi  
+- 5. adım – WIF ve ASP.NET uygulamanız arasındaki tümleştirme testi  
   
 ## <a name="overview"></a>Genel Bakış  
  Bu konuda, WIF kullanarak talep kullanan uygulama oluşturmak nasıl ve nasıl kolayca veya bir kullanıcı oturumu açıkken eşleşmediğini gösterir. Kimlik ve erişim Visual Studio uzantısı dahil olan yerel geliştirme STS'si aşağıdaki adımları kullanın. Yerel geliştirme STS'si talep uygulamanızla tümleştirmenin basit bir yöntem sağlamak amacıyla bir test ve geliştirme ortamı için tasarlanmıştır. Hiçbir zaman bir üretim ortamında gerçek kimlik doğrulaması gerçekleştirmez ve kimlik bilgileri gerekli değil olarak kullanılmalıdır. Ancak, kesinlik temelli kod aşağıdaki adımlarda gerçek kimlik doğrulaması kullanarak üretime hazır bir uygulama için aynıdır.  
   
 ## <a name="summary-of-steps"></a>Adımların Özeti  
   
--   1. adım – yükleme kimlik ve erişim uzantısı  
+- 1. adım – yükleme kimlik ve erişim uzantısı  
   
--   2. adım – bir bağlı olan taraf ASP.NET uygulaması oluşturma  
+- 2. adım – bir bağlı olan taraf ASP.NET uygulaması oluşturma  
   
--   Adım 3 – kullanıcıların kimliğini doğrulamak için etkinleştirme yerel geliştirme  
+- Adım 3 – kullanıcıların kimliğini doğrulamak için etkinleştirme yerel geliştirme  
   
--   4. adım: ASP.NET uygulamanız oturum durumu görüntülemek için değiştirin  
+- 4. adım: ASP.NET uygulamanız oturum durumu görüntülemek için değiştirin  
   
--   5. adım – WIF ve ASP.NET uygulamanız arasındaki tümleştirme testi  
+- 5. adım – WIF ve ASP.NET uygulamanız arasındaki tümleştirme testi  
   
 ## <a name="step-1--install-the-identity-and-access-extension"></a>1. adım – yükleme kimlik ve erişim uzantısı  
  Bu adımda, Visual Studio 2012 için kimlik ve erişim uzantısının nasıl yapılandırılacağı açıklanır. Bu uzantı STS uç noktaları ile iletişim kurmak için uygulamanızı yapılandırma işlemi otomatik hale getirir.  

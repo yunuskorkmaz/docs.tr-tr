@@ -3,11 +3,11 @@ title: Desteklenen ve Desteklenmeyen LINQ Yöntemleri (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
 ms.openlocfilehash: 74b3973f931fa6f0d1f5b380833b8d5e5566563b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797689"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Desteklenen ve Desteklenmeyen LINQ Yöntemleri (LINQ to Entities)
 Bu bölümde desteklenen veya desteklenmeyen, dil ile tümleşik sorgu (LINQ) standart sorgu işleçleri hakkında bilgi [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular. LINQ standart sorgu işleçlerinin çoğu, tamsayı bağımsız değişken kabul eden aşırı yüklenmiş bir sürümü vardır. Tamsayı bağımsız değişkeni sıfır tabanlı bir dizin üzerinde çalıştırılan dizisindeki karşılık gelen bir <xref:System.Collections.Generic.IEqualityComparer%601>, veya <xref:System.Collections.Generic.IComparer%601>. Aksi belirtilmediği sürece, bu aşırı yüklenmiş sürümleri LINQ standart sorgu işleçlerinin desteklenmez ve kullanılmaya çalışılırsa, bir özel durum oluşturur.  

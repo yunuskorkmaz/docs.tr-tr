@@ -10,20 +10,20 @@ helpviewer_keywords:
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
 ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947959"
 ---
 # <a name="user-drawn-controls"></a>Kullanıcı Çizimli Denetimler
 .NET Framework kolayca kendi denetimleri geliştirme olanağı sağlar. Standart denetimler kodla birlikte ilişkili bir dizi olan bir kullanıcı denetimi oluşturabilir veya sıfırdan kendi denetiminizi yukarı tasarlayabilirsiniz. Devralma, varolan bir denetimden devralan bir denetim oluşturma ve doğal işlevselliği eklemek için bile kullanabilirsiniz. Hangi yaklaşımı kullanın, .NET Framework özel bir grafik arabirim için oluşturduğunuz herhangi bir denetimi çizmek için işlevsellik sağlar.  
   
  Boyama bir denetimin, denetimin içindeki kod yürütmeyi tarafından gerçekleştirilir <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi. Tek bağımsız değişkeni <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi bir <xref:System.Windows.Forms.PaintEventArgs> tüm bilgi ve denetim oluşturmak için gereken işlevselliği sağlayan nesne. <xref:System.Windows.Forms.PaintEventArgs> Denetiminizin işlemede kullanılan iki asıl nesneler özellikleri sağlar:  
   
--   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Nesne - dikdörtgenin çizileceğini denetim bölümünü temsil eder. Bu, tüm olabilir denetimi veya denetim, denetimin nasıl çizilmeden bağlı olarak bir parçası.  
+- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Nesne - dikdörtgenin çizileceğini denetim bölümünü temsil eder. Bu, tüm olabilir denetimi veya denetim, denetimin nasıl çizilmeden bağlı olarak bir parçası.  
   
--   <xref:System.Drawing.Graphics> Object - çeşitli grafik odaklı nesneleri ve denetiminizi çizmek için gereken işlevselliği sağlayan yöntemler kapsüller.  
+- <xref:System.Drawing.Graphics> Object - çeşitli grafik odaklı nesneleri ve denetiminizi çizmek için gereken işlevselliği sağlayan yöntemler kapsüller.  
   
  Daha fazla bilgi için <xref:System.Drawing.Graphics> nesne ve onu kullanmak üzere nasıl [nasıl yapılır: Çizim için grafik nesneleri oluşturma](../advanced/how-to-create-graphics-objects-for-drawing.md).  
   

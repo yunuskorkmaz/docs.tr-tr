@@ -8,11 +8,11 @@ helpviewer_keywords:
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
 ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864350"
 ---
 # <a name="extension-methods-visual-basic"></a>Uzantı Yöntemleri (Visual Basic)
 Genişletme yöntemleri, geliştiricilerin zaten yeni bir türetilmiş tür oluşturmadan tanımlanan veri türlerine özel işlevsellik eklemek sağlar. Genişletme yöntemleri mevcut türü bir örnek yöntemi gibi çağrılabilen bir yöntem yazmaktır mümkün kılar.  
@@ -93,19 +93,19 @@ End Module
 ## <a name="types-that-can-be-extended"></a>Genişletilebilen türler  
  Aşağıdakiler dahil olmak üzere bir Visual Basic parametre listesinde temsil edilebilir çoğu türlerinde bir genişletme yöntemi tanımlayabilirsiniz:  
   
--   Sınıflar (başvuru türleri)  
+- Sınıflar (başvuru türleri)  
   
--   Yapılar (değer türleri)  
+- Yapılar (değer türleri)  
   
--   Arabirimler  
+- Arabirimler  
   
--   Temsilciler  
+- Temsilciler  
   
--   ByRef ve ByVal bağımsız değişkenleri  
+- ByRef ve ByVal bağımsız değişkenleri  
   
--   Genel yöntem parametreleri  
+- Genel yöntem parametreleri  
   
--   Diziler  
+- Diziler  
   
  İlk parametre genişletme yönteminin genişlettiği veri türünü belirttiğinden gereklidir ve isteğe bağlı olamaz. Bu nedenle `Optional` parametreleri ve `ParamArray` parametreleri parametre listesindeki ilk parametre olamaz.  
   
@@ -118,15 +118,15 @@ End Module
   
  Genellikle sahibi olmadığınız türlere eklediğiniz genişletme yöntemleri daha denetim türlere eklenen genişletme yöntemlerinden daha savunmasızdır. Birkaç uzantı yöntemlerinizi engelleyebilecek birçok ait olmayan sınıflarda ortaya çıkabilir.  
   
--   Parametreye daraltma dönüşümü bağımsız değişkenden parametreye ile çağrı deyimindeki bağımsız değişkenlerle uyumlu imzası olan bir erişilebilir örnek üye varsa, örnek yöntemi herhangi bir genişletme yöntemi yerine kullanılacaktır. Bu nedenle, uygun bir örnek yöntemi, belirli bir noktada bir sınıfa eklenirse, bağlı olduğunuz mevcut uzantı üyesi erişilemez duruma gelebilir.  
+- Parametreye daraltma dönüşümü bağımsız değişkenden parametreye ile çağrı deyimindeki bağımsız değişkenlerle uyumlu imzası olan bir erişilebilir örnek üye varsa, örnek yöntemi herhangi bir genişletme yöntemi yerine kullanılacaktır. Bu nedenle, uygun bir örnek yöntemi, belirli bir noktada bir sınıfa eklenirse, bağlı olduğunuz mevcut uzantı üyesi erişilemez duruma gelebilir.  
   
--   Genişletme yönteminin yazarı diğer programcıların öncelik özgün öncelikli olabilecek, çakışan genişletme yöntemleri yazmasını engelleyemez.  
+- Genişletme yönteminin yazarı diğer programcıların öncelik özgün öncelikli olabilecek, çakışan genişletme yöntemleri yazmasını engelleyemez.  
   
--   Genişletme yöntemleri kendi ad alanına yerleştirerek sağlamlığı artırabilirsiniz. Kitaplığınızı kullanan Tüketiciler, bir ad alanı dahil edebilir veya hariç veya kitaplık kalanından ayrı olarak ad alanları arasından seçim.  
+- Genişletme yöntemleri kendi ad alanına yerleştirerek sağlamlığı artırabilirsiniz. Kitaplığınızı kullanan Tüketiciler, bir ad alanı dahil edebilir veya hariç veya kitaplık kalanından ayrı olarak ad alanları arasından seçim.  
   
--   Özellikle, arabirimin veya sınıfın sahibi değil, bu sınıfları genişletmek yerine arabirimleri genişletmek daha güvenli olabilir. Arabirimdeki bir değişiklik, uygulandığı her sınıfı etkiler. Bu nedenle, yazarın ekleme veya bir arabirimdeki yöntemlerde değiştirme olasılığı daha az olabilir. Ancak, bir sınıf, aynı imzaya sahip genişletme yöntemleri olan iki arabirim uygularsa, her iki uzantı yöntemi görülebilir.  
+- Özellikle, arabirimin veya sınıfın sahibi değil, bu sınıfları genişletmek yerine arabirimleri genişletmek daha güvenli olabilir. Arabirimdeki bir değişiklik, uygulandığı her sınıfı etkiler. Bu nedenle, yazarın ekleme veya bir arabirimdeki yöntemlerde değiştirme olasılığı daha az olabilir. Ancak, bir sınıf, aynı imzaya sahip genişletme yöntemleri olan iki arabirim uygularsa, her iki uzantı yöntemi görülebilir.  
   
--   Yapabilecekleriniz en belirgin türü genişletin. Tür hiyerarşisinde çok türetildiği bir tür seçerseniz katmanı vardır örnek yöntemlerine veya yöntemlerinizle çakışabilecek genişletme yöntemlerine giriş olasılıklarını.  
+- Yapabilecekleriniz en belirgin türü genişletin. Tür hiyerarşisinde çok türetildiği bir tür seçerseniz katmanı vardır örnek yöntemlerine veya yöntemlerinizle çakışabilecek genişletme yöntemlerine giriş olasılıklarını.  
   
 ## <a name="extension-methods-instance-methods-and-properties"></a>Genişletme yöntemleri, örnek yöntemler ve Özellikler  
  Bir kapsamdaki örnek yöntemi deyim çağırma bağımsız değişkenlerle uyumlu imzası olan, örnek yöntemi yerine herhangi bir genişletme yöntemi seçilir. Genişletme yönteminin eşleşmesi daha iyi olsa bile örnek yönteminindir. Aşağıdaki örnekte, `ExampleClass` adlandırılmış bir örnek yöntemi içeren `ExampleMethod` türünde bir parametreye sahip `Integer`. Genişletme yöntemi `ExampleMethod` genişletir `ExampleClass`, ve türünde bir parametreye sahip `Long`.  

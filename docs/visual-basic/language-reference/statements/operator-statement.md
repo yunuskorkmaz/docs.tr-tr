@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
 ms.openlocfilehash: 184970d33aae4af135153f9d6f6755770bdf84f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784065"
 ---
 # <a name="operator-statement"></a>Operator Deyimi
 Operatör sembolünü, işlenenleri ve bir sınıf ya da yapı üzerinde bir işleç yordamı tanımlayan kodu bildirir.  
@@ -114,28 +114,28 @@ End Operator
 ## <a name="matched-pairs"></a>Eşleşen çiftleri  
  Belirli işleçleri eşleşen çiftleri tanımlamanız gerekir. Böyle bir çifti ya da işleç tanımlarsanız, diğeri de tanımlamanız gerekir. Eşleşen çiftleri şunlardır:  
   
--   `=` ve `<>`  
+- `=` ve `<>`  
   
--   `>` ve `<`  
+- `>` ve `<`  
   
--   `>=` ve `<=`  
+- `>=` ve `<=`  
   
--   `IsTrue` ve `IsFalse`  
+- `IsTrue` ve `IsFalse`  
   
 ## <a name="data-type-restrictions"></a>Veri türü kısıtlamaları  
  Tanımladığınız her işleci üzerinde tanımladığınız sınıf veya yapı kapsaması gerekir. Başka bir deyişle, sınıf veya yapı aşağıdaki veri türünde yer almalıdır:  
   
--   Birli işleç işleneni.  
+- Birli işleç işleneni.  
   
--   En az bir ikili işlecinin işlenenleri.  
+- En az bir ikili işlecinin işlenenleri.  
   
--   İşlenen veya bir dönüştürme işlecinin dönüş türü.  
+- İşlenen veya bir dönüştürme işlecinin dönüş türü.  
   
  Belirli operatörün ek veri kısıtlamaları, aşağıdaki gibi yazın:  
   
--   Tanımlarsanız `IsTrue` ve `IsFalse` işleçleri, bunların her ikisi de döndürmelidir `Boolean` türü.  
+- Tanımlarsanız `IsTrue` ve `IsFalse` işleçleri, bunların her ikisi de döndürmelidir `Boolean` türü.  
   
--   Tanımlarsanız `<<` ve `>>` işleçleri, bunların her ikisini de belirtmelisiniz `Integer` yazın `operandtype` , `operand2`.  
+- Tanımlarsanız `<<` ve `>>` işleçleri, bunların her ikisini de belirtmelisiniz `Integer` yazın `operandtype` , `operand2`.  
   
  İki işlenenden türüne karşılık gelen dönüş türü yok. Örneğin, bir karşılaştırma işleci gibi `=` veya `<>` döndürebilir `Boolean` iki işlenenin olsa bile `Boolean`.  
   
@@ -144,11 +144,11 @@ End Operator
   
  Tanımlanamaz `AndAlso` işleci ile doğrudan bir `Operator` deyimi. Ancak, kullanabileceğiniz `AndAlso` aşağıdaki koşulların yerine getirilmesini varsa:  
   
--   Tanımladığınız `And` için kullanmak istediğiniz aynı işlenen türlerinde `AndAlso`.  
+- Tanımladığınız `And` için kullanmak istediğiniz aynı işlenen türlerinde `AndAlso`.  
   
--   Tanımınız `And` üzerinde tanımladığınız, sınıf veya yapı aynı türü döndürür.  
+- Tanımınız `And` üzerinde tanımladığınız, sınıf veya yapı aynı türü döndürür.  
   
--   Tanımladığınız `IsFalse` üzerinde tanımladığınız sınıf ya da yapı üzerinde operatör `And`.  
+- Tanımladığınız `IsFalse` üzerinde tanımladığınız sınıf ya da yapı üzerinde operatör `And`.  
   
  Benzer şekilde, kullanabileceğiniz `OrElse` tanımladıysanız, `Or` sınıf veya yapı ve size dönüş türüyle aynı işlenenlerde tanımladığınız `IsTrue` sınıf veya yapı.  
   
@@ -157,11 +157,11 @@ End Operator
   
  Bir dönüştürme yordamı olmasını bildirirseniz `Widening`, yordam kodunuzun hatalarını oluşturmamanız gerekir. Aşağıdaki anlamına gelir:  
   
--   Her zaman geçerli bir değer türü döndürmelidir `type`.  
+- Her zaman geçerli bir değer türü döndürmelidir `type`.  
   
--   Tüm olası özel durumları ve diğer hata durumlarını işlemelidir.  
+- Tüm olası özel durumları ve diğer hata durumlarını işlemelidir.  
   
--   Bu çağrı yaptığı tüm yordamları bir hata döndürür işlemesi gerekir.  
+- Bu çağrı yaptığı tüm yordamları bir hata döndürür işlemesi gerekir.  
   
  Bir dönüştürme yordamı başarısız olabilir bir olasılık yoktur veya onun işlenmeyen bir özel durum neden olabilir, olmasını bildirmelidir `Narrowing`.  
   

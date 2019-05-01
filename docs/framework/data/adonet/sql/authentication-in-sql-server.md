@@ -3,18 +3,18 @@ title: SQL Server’da Kimlik Doğrulaması
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
 ms.openlocfilehash: f7fac0756da3bcc19ee6370468f0e0e65c428d35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879026"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server’da Kimlik Doğrulaması
 SQL Server, iki kimlik doğrulama modu, Windows kimlik doğrulama modu ve karma mod destekler.  
   
--   Windows kimlik doğrulaması varsayılandır ve bu SQL Server güvenlik modeli, sıkı bir şekilde Windows ile tümleşik olduğundan genellikle tümleşik güvenlik adlandırılır. Belirli Windows kullanıcı ve grup hesapları için SQL Server oturum açma güvenilirdir. Ek kimlik bilgileri sunmak önceden doğrulanmış Windows kullanıcılar yok.  
+- Windows kimlik doğrulaması varsayılandır ve bu SQL Server güvenlik modeli, sıkı bir şekilde Windows ile tümleşik olduğundan genellikle tümleşik güvenlik adlandırılır. Belirli Windows kullanıcı ve grup hesapları için SQL Server oturum açma güvenilirdir. Ek kimlik bilgileri sunmak önceden doğrulanmış Windows kullanıcılar yok.  
   
--   Karma mod kimlik doğrulaması hem Windows hem de SQL Server tarafından destekler. Kullanıcı adı ve parola çiftleri SQL Server'ın içinde saklanır.  
+- Karma mod kimlik doğrulaması hem Windows hem de SQL Server tarafından destekler. Kullanıcı adı ve parola çiftleri SQL Server'ın içinde saklanır.  
   
 > [!IMPORTANT]
 >  Mümkünse, Windows kimlik doğrulaması kullanmanızı öneririz. Windows kimlik doğrulaması, SQL Server'da kullanıcıların kimliğini doğrulamak için bir dizi şifrelenmiş iletileri kullanır. SQL Server oturumları kullanıldığında, SQL Server oturum açma adları ve şifrelenmiş parolalar daha az güvenli hale getirir ağ üzerinden geçirilir.  
@@ -31,19 +31,19 @@ SQL Server, iki kimlik doğrulama modu, Windows kimlik doğrulama modu ve karma 
 ## <a name="authentication-scenarios"></a>Kimlik doğrulama senaryoları  
  Windows kimlik doğrulaması genellikle en iyi aşağıdaki durumlarda seçimdir:  
   
--   Bir etki alanı denetleyicisi yoktur.  
+- Bir etki alanı denetleyicisi yoktur.  
   
--   Uygulama ve veritabanı aynı bilgisayarda var.  
+- Uygulama ve veritabanı aynı bilgisayarda var.  
   
--   Örneği veya SQL Server Express LocalDB kullanıyor.  
+- Örneği veya SQL Server Express LocalDB kullanıyor.  
   
  SQL Server oturum açma bilgileri, genellikle aşağıdaki durumlarda kullanılır:  
   
--   Bir çalışma grubu zaten varsa.  
+- Bir çalışma grubu zaten varsa.  
   
--   Kullanıcılar farklı, güvenilmeyen etki alanlarından bağlanır.  
+- Kullanıcılar farklı, güvenilmeyen etki alanlarından bağlanır.  
   
--   Internet uygulamaları gibi [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
+- Internet uygulamaları gibi [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
   
 > [!NOTE]
 >  Belirten Windows kimlik doğrulaması, SQL Server oturumu devre dışı bırakmaz. ALTER oturum açma devre dışı kullanın [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] üst düzeyde ayrıcalıklı SQL Server oturum açma devre dışı bırakma bildirimi.  
@@ -51,11 +51,11 @@ SQL Server, iki kimlik doğrulama modu, Windows kimlik doğrulama modu ve karma 
 ## <a name="login-types"></a>Oturum açma türleri  
  SQL Server oturumu açma üç türlerini destekler:  
   
--   Yerel Windows kullanıcı hesabı veya güvenilen etki alanı hesabı. Windows kullanıcı hesaplarının kimliğini doğrulamak için Windows üzerinde SQL Server kullanır.  
+- Yerel Windows kullanıcı hesabı veya güvenilen etki alanı hesabı. Windows kullanıcı hesaplarının kimliğini doğrulamak için Windows üzerinde SQL Server kullanır.  
   
--   Windows grubu. Bir Windows grubuna erişim verme grubun üyesi olan tüm Windows kullanıcı oturumları erişim verir.  
+- Windows grubu. Bir Windows grubuna erişim verme grubun üyesi olan tüm Windows kullanıcı oturumları erişim verir.  
   
--   SQL Server oturum açma. SQL Server kullanıcı adı ve parola karmasını hem ana veritabanında oturum açma denemesi doğrulamak için iç kimlik doğrulama yöntemleri kullanarak depolar.  
+- SQL Server oturum açma. SQL Server kullanıcı adı ve parola karmasını hem ana veritabanında oturum açma denemesi doğrulamak için iç kimlik doğrulama yöntemleri kullanarak depolar.  
   
 > [!NOTE]
 >  SQL Server, sertifikalar veya yalnızca kod imzalama için kullanılan asimetrik anahtarlar oluşturulan oturum açma bilgileri sağlar. SQL Server'a bağlanmak için kullanılamaz.  

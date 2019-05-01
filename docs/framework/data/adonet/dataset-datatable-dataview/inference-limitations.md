@@ -3,11 +3,11 @@ title: Çıkarım Sınırlamaları
 ms.date: 03/30/2017
 ms.assetid: 78517994-5d57-44f8-9d20-38812977de09
 ms.openlocfilehash: 308d2ffdd9e2cb16626861e25613657f341a4ccb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879651"
 ---
 # <a name="inference-limitations"></a>Çıkarım Sınırlamaları
 Çıkarma işleminin bir <xref:System.Data.DataSet> XML şemasından XML öğeleri kullanıma bağlı olarak farklı şemalar sonuçlanabilir. Örneğin, aşağıdaki XML belgeleri göz önünde bulundurun.  

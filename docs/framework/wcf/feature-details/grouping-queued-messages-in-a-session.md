@@ -8,11 +8,11 @@ helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
 ms.openlocfilehash: 37f0874ea99ee928e49a54a3e6a05ea4ef06f84e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855926"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Oturumda Kuyruğa Alınmış İletileri Gruplandırma
 Windows Communication Foundation (WCF) tarafından tek bir alıcı uygulamanın bir dizi ilgili ileti işleme için bir arada gruplandırmak izin veren bir oturum sağlar. Bir oturumun parçasıdır iletileri aynı işlemin bir parçası olmalıdır. Tüm oturum işlenmek üzere bir ileti başarısız olursa tüm iletiler aynı işlemin bir parçası olduğundan geri alınır. Oturumları edilemeyen ve zehirli kuyrukları benzer davranışlara sahip. Oturumları için yapılandırılmış bir kuyruğa alınmış bağlaması üzerindeki yaşam süresi (TTL) özelliği zaman oturum bir bütün olarak uygulanır. Yalnızca TTL'nin süresi dolmadan önce bazı oturumdaki iletiler gönderilir, tüm oturumda edilemeyen sırasına konur. Benzer şekilde, uygulama kuyruktan bir uygulamaya gönderilecek bir oturumda ileti başarısız olursa, tüm oturumda (varsa) zehirli sıraya konur.  

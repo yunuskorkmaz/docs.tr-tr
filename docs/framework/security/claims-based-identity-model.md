@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
 ms.openlocfilehash: 3313b2ad36260415d0ac505e01523dd999f85424
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792825"
 ---
 # <a name="claims-based-identity-model"></a>Talep Tabanlı Kimlik Modeli
 Talep kullanan uygulamalar oluştururken, kullanıcı kimliği uygulamanızda talepler kümesi olarak temsil edilir. Bir talep kullanıcının adı, başka bir e-posta adresi olabilir. Bunun ardında yatan fikir, bir dış kimlik sisteminin uygulamanıza yaptığı her istekle kullanıcı hakkında bilmesi gereken her şeyi ve aldığınız verilerin güvenilir bir kaynaktan geldiğine dair şifreleme güvencesini sağlayacak şekilde yapılandırılmış olmasıdır.  
   
  Bu modelde, çoklu oturum açma daha kolay bir şekilde gerçekleştirilir ve uygulamanız artık aşağıdakilerden sorumlu olmaz:  
   
--   Kullanıcıların kimliğini doğrulama.  
+- Kullanıcıların kimliğini doğrulama.  
   
--   Kullanıcı hesaplarını ve parolalarını depolama.  
+- Kullanıcı hesaplarını ve parolalarını depolama.  
   
--   Kullanıcı kimliği ayrıntılarını bulmak için kurumsal dizinleri çağırma.  
+- Kullanıcı kimliği ayrıntılarını bulmak için kurumsal dizinleri çağırma.  
   
--   Diğer platformlardaki veya şirketlerdeki kimlik sistemleriyle tümleşme.  
+- Diğer platformlardaki veya şirketlerdeki kimlik sistemleriyle tümleşme.  
   
  Bu modelde, uygulamanız kullanıcınızın kimliğini doğrulayan sistem tarafından sağlanan taleplere göre kimlikle ilgili kararlar verir. Bu, kullanıcının adıyla basit uygulama kişiselleştirmesinden kullanıcıyı uygulamanızdaki daha değerli özelliklere ve kaynaklara erişmek için yetkilendirmeye kadar her şey olabilir.  
   
  Bu konuda, aşağıdaki bilgiler sağlanmaktadır:  
   
--   [Beyana dayalı kimliğe giriş](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
+- [Beyana dayalı kimliğe giriş](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
   
--   [Beyana dayalı kimlik modeli için temel senaryo](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
+- [Beyana dayalı kimlik modeli için temel senaryo](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
   
 <a name="BKMK_1"></a>   
 ## <a name="introduction-to-claims-based-identity"></a>Beyana Dayalı Kimliğe Giriş  

@@ -3,11 +3,11 @@ title: İş Akışı Hizmeti Ana Bilgisayar Genişletilebilirliği
 ms.date: 03/30/2017
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
 ms.openlocfilehash: e37a33643fb58d93be953720303cd069e72a690e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929798"
 ---
 # <a name="workflow-service-host-extensibility"></a>İş Akışı Hizmeti Ana Bilgisayar Genişletilebilirliği
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] sağlar <xref:System.ServiceModel.Activities.WorkflowServiceHost> iş akışı hizmetlerini barındırma için sınıf. Bu sınıf, kendi kendine yönetilen bir uygulamada bir iş akışı hizmeti veya bir Windows hizmet barındırıyorsanız kullanılır. Bu sınıf, Internet Information Services (IIS) veya Windows İşlem Etkinleştirme Hizmeti (WAS) ile bir iş akışı hizmeti barındırma olduğunda da kullanılır. <xref:System.ServiceModel.Activities.WorkflowServiceHost> Sınıfı özel uzantıları eklemeyi uzantı noktaları boşta davranışı değiştirmek ve ana bilgisayar, hizmet olmayan iş akışları (Mesajlaşma etkinlikleri kullanmayın iş akışları) sağlar.  
@@ -18,13 +18,13 @@ ms.locfileid: "59196482"
 ## <a name="react-to-unhandled-exceptions"></a>İşlenmeyen özel durumlar için react  
  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> Bir iş akışı hizmeti içinde işlenmeyen bir özel durum oluşursa yapılacak eylem belirtmenize olanak sağlar. <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior.Action%2A> Özellik birini belirtir <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction> değerleri:  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Abandon> – İş akışı hizmet örneği durdurur.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Abandon> – İş akışı hizmet örneği durdurur.  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.AbandonAndSuspend> – Geri son kalıcı duruma alır ve iş akışı hizmet örneği askıya alır. Bu yalnızca, iş akışının zaten en az bir kez kalıcı yapılmadı oluşur. Aksi durumda iş akışı örneği iptal edildi.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.AbandonAndSuspend> – Geri son kalıcı duruma alır ve iş akışı hizmet örneği askıya alır. Bu yalnızca, iş akışının zaten en az bir kez kalıcı yapılmadı oluşur. Aksi durumda iş akışı örneği iptal edildi.  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel> – Örneği iptal eder.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel> – Örneği iptal eder.  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Terminate> – Örneği sonlandırır.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Terminate> – Örneği sonlandırır.  
   
  Bu davranış, aşağıdaki örnekte gösterildiği gibi kodda yapılandırılabilir.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949610"
 ---
 # <a name="sending-and-receiving-faults"></a>Hataları Gönderme ve Alma
 SOAP hatalarının hata durum bilgisini bir hizmetten istemci ve hizmet için bir istemciden çift yönlü durumda birlikte çalışabilen bir biçimde aktarın. Genellikle hizmet özel hata içeriği tanımlar ve hangi işlemlerin döndürülmeleri belirtir. (Daha fazla bilgi için [tanımlama ve belirtme hatası](../../../docs/framework/wcf/defining-and-specifying-faults.md).) Bu konu nasıl bir hizmet ya da çift yönlü istemci bu hataları karşılık gelen hata koşulu olduğunda ve bir istemci nasıl gönderebilir açıklar veya hizmet uygulaması bu hataların işler. Hata işleme Windows Communication Foundation (WCF) uygulamalarında genel bakış için bkz. [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -47,9 +47,9 @@ SOAP hatalarının hata durum bilgisini bir hizmetten istemci ve hizmet için bi
 ## <a name="handling-faults"></a>Hataları işleme  
  WCF istemcileri, iletişim sırasında oluşan SOAP hataları ilgilendiren istemci uygulamaları için yönetilen özel durumlar oluşturulur. Herhangi bir program yürütme sırasında oluşabilecek birçok özel durumları olsa da, iletişimin sonucu olarak aşağıdaki iki tür özel durumları işlemek WCF istemci programlama modelini kullanan uygulamalar bekleyebilirsiniz.  
   
--   <xref:System.TimeoutException>  
+- <xref:System.TimeoutException>  
   
--   <xref:System.ServiceModel.CommunicationException>  
+- <xref:System.ServiceModel.CommunicationException>  
   
  <xref:System.TimeoutException> Belirtilen zaman aşımı süresi işlem aştığında, nesne atılır.  
   
@@ -81,13 +81,13 @@ SOAP hatalarının hata durum bilgisini bir hizmetten istemci ve hizmet için bi
   
  Genellikle, istemci nesnesi kanalları aşağıdaki yollardan biriyle kapalı:  
   
--   WCF istemci nesnesi zaman dönüştürülmeden.  
+- WCF istemci nesnesi zaman dönüştürülmeden.  
   
--   İstemci uygulaması çağırdığında <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>.  
+- İstemci uygulaması çağırdığında <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>.  
   
--   İstemci uygulaması çağırdığında <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>.  
+- İstemci uygulaması çağırdığında <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>.  
   
--   İstemci uygulama bir işlem, çağırdığında, bir oturum için Sonlandırıcı bir işlemdir.  
+- İstemci uygulama bir işlem, çağırdığında, bir oturum için Sonlandırıcı bir işlemdir.  
   
  Her durumda, kanal kapatma, uygulama düzeyinde karmaşık işlevselliği desteklemek için iletileri gönderme temel alınan tüm kanalları kapatma başlamak için kanal bildirir. Örneğin, bir sözleşme oturumları gerektirdiğinde bağlama bir oturumu yeniden kurulana kadar hizmet kanalı ile ileti değiş tokuşu ile oturum oluşturmak çalışır. Kanal kapatıldığında, temel alınan oturum kanalı hizmeti, oturum sonlandırılır bildirir. Bu durumda, kanal zaten, kapalı, iptal edilmiş ya da aksi takdirde (örneğin bir ağ kablosu) kullanılamıyor, istemci kanal oturumu sona erer ve bir özel durum sonuçlanabilir hizmet kanalı bildirin olamaz.  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
 ms.openlocfilehash: c6c36641463a45b79d437ae3910bbe7474d425cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929304"
 ---
 # <a name="how-to-examine-the-security-context"></a>Nasıl yapılır: Güvenlik Bağlamını İnceleme
 Windows Communication Foundation (WCF) hizmetlerini programlama, hizmet güvenlik bağlamı hizmeti ile kimlik doğrulaması için kullanılan talep ve istemci kimlik bilgileri hakkındaki ayrıntıları belirlemenizi sağlar. Bu özellikleri kullanılarak yapılır <xref:System.ServiceModel.ServiceSecurityContext> sınıfı.  
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) hizmetlerini programlama, hizmet güvenli
   
 ### <a name="to-get-the-current-security-context"></a>Geçerli güvenlik bağlamı almak için  
   
--   Statik özellik erişim <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> geçerli güvenlik bağlamı alınamıyor. Geçerli bağlamın iş başvurusundan özelliklerinden herhangi birini inceleyin.  
+- Statik özellik erişim <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> geçerli güvenlik bağlamı alınamıyor. Geçerli bağlamın iş başvurusundan özelliklerinden herhangi birini inceleyin.  
   
 ### <a name="to-determine-the-identity-of-the-caller"></a>Arayan kimliğini belirlemek için  
   
@@ -46,13 +46,13 @@ Windows Communication Foundation (WCF) hizmetlerini programlama, hizmet güvenli
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Aşağıdaki ad kodunu kullanır:  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.IdentityModel.Policy>  
+- <xref:System.IdentityModel.Policy>  
   
--   <xref:System.IdentityModel.Claims>  
+- <xref:System.IdentityModel.Claims>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

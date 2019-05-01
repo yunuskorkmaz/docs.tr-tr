@@ -10,11 +10,11 @@ helpviewer_keywords:
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
 ms.openlocfilehash: 3a12c3ac7250ee2904d571406d5008d451c9dc35
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783831"
 ---
 # <a name="synclock-statement"></a>SyncLock Deyimi
 Bir deyim bloğunu için özel bir kilit bloğu yürütmeden önce alır.  
@@ -46,25 +46,25 @@ End SyncLock
   
 ## <a name="rules"></a>Kurallar  
   
--   Dal oluşturma. Dal oluşturamazsınız bir `SyncLock` blok dışındaysa önleyin.  
+- Dal oluşturma. Dal oluşturamazsınız bir `SyncLock` blok dışındaysa önleyin.  
   
--   Kilit nesne değeri. Değerini `lockobject` olamaz `Nothing`. İçinde kullanmadan önce nesnesi kilitlenemedi oluşturmalısınız bir `SyncLock` deyimi.  
+- Kilit nesne değeri. Değerini `lockobject` olamaz `Nothing`. İçinde kullanmadan önce nesnesi kilitlenemedi oluşturmalısınız bir `SyncLock` deyimi.  
   
      Değerini değiştiremezsiniz `lockobject` yürütülürken bir `SyncLock` blok. Mekanizması nesnesi kilitlenemedi değişmeden kalmasını gerektirir.  
   
--   Kullanamazsınız [Await](../../../visual-basic/language-reference/operators/await-operator.md) işlecinde bir `SyncLock` blok.  
+- Kullanamazsınız [Await](../../../visual-basic/language-reference/operators/await-operator.md) işlecinde bir `SyncLock` blok.  
   
 ## <a name="behavior"></a>Davranış  
   
--   Mekanizması. Bir iş parçacığı ulaştığında `SyncLock` deyimi olarak değerlendirilir `lockobject` deyim ve ifade tarafından döndürülen nesne üzerinde özel bir kilit alması kadar yürütmeyi askıya alır. Başka bir iş parçacığı ulaştığında `SyncLock` deyimi, onu değil bir kilit alınması ilk iş parçacığında yürütülene kadar `End SyncLock` deyimi.  
+- Mekanizması. Bir iş parçacığı ulaştığında `SyncLock` deyimi olarak değerlendirilir `lockobject` deyim ve ifade tarafından döndürülen nesne üzerinde özel bir kilit alması kadar yürütmeyi askıya alır. Başka bir iş parçacığı ulaştığında `SyncLock` deyimi, onu değil bir kilit alınması ilk iş parçacığında yürütülene kadar `End SyncLock` deyimi.  
   
--   Korunan veriler. Varsa `lockobject` olduğu bir `Shared` değişken, özel bir kilit herhangi bir sınıfın örneğini bir iş parçacığında yürütülmesini engeller `SyncLock` başka bir iş parçacığı yürütülürken engelleyin. Bu, tüm örnekler arasında paylaşılan verileri korur.  
+- Korunan veriler. Varsa `lockobject` olduğu bir `Shared` değişken, özel bir kilit herhangi bir sınıfın örneğini bir iş parçacığında yürütülmesini engeller `SyncLock` başka bir iş parçacığı yürütülürken engelleyin. Bu, tüm örnekler arasında paylaşılan verileri korur.  
   
      Varsa `lockobject` bir örneği değişkenidir (değil `Shared`), kilit yürütülmesini geçerli örneğinde çalışan iş parçacığı engeller `SyncLock` başka bir iş parçacığıyla aynı örneğinde aynı anda blok. Bu, tek bir örnek tarafından tutulan verileri korur.  
   
--   Alım ve yayın. A `SyncLock` blok davranacağını gibi bir `Try...Finally` oluşturma, hangi `Try` blok üzerinde özel bir kilit alması `lockobject` ve `Finally` blok yayımlar. Bu nedenle, `SyncLock` blok blok çıkış ne olursa olsun kilit, yayın garanti eder. İşlenmeyen özel durum söz konusu olduğunda bile bu geçerlidir.  
+- Alım ve yayın. A `SyncLock` blok davranacağını gibi bir `Try...Finally` oluşturma, hangi `Try` blok üzerinde özel bir kilit alması `lockobject` ve `Finally` blok yayımlar. Bu nedenle, `SyncLock` blok blok çıkış ne olursa olsun kilit, yayın garanti eder. İşlenmeyen özel durum söz konusu olduğunda bile bu geçerlidir.  
   
--   Framework çağırır. `SyncLock` Blok edinme ve özel bir kilit çağırarak serbest `Enter` ve `Exit` yöntemlerinin `Monitor` sınıfını <xref:System.Threading> ad alanı.  
+- Framework çağırır. `SyncLock` Blok edinme ve özel bir kilit çağırarak serbest `Enter` ve `Exit` yöntemlerinin `Monitor` sınıfını <xref:System.Threading> ad alanı.  
   
 ## <a name="programming-practices"></a>Programlama yöntemler  
  `lockobject` İfade her zaman özel olarak, sınıfın ait olduğu bir nesneye değerlendirin. Size bildirmelidir bir `Private` geçerli örneğine ait verileri korumak için nesne değişkeni veya bir `Private Shared` için tüm örnekleri ortak verileri korumak için nesne değişkeni.  

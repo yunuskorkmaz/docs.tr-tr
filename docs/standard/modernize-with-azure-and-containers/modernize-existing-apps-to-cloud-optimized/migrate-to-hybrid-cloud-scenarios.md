@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: b04c6edecf5b63f191cb2e0f808fb1d0f801d0a3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936740"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Karma bulut senaryolarına geçiş
 
@@ -33,9 +33,9 @@ Azure Stack, kuruluşunuzun veri merkezinden Azure Hizmetleri elde etmenizi sağ
 
 Azure Stack, gereksinimlerinizi karşılamak üzere iki dağıtım seçenekleri sunulur:
 
--   Azure Stack tümleşik sistemleri
+- Azure Stack tümleşik sistemleri
 
--   Azure Stack Geliştirme Seti
+- Azure Stack Geliştirme Seti
 
 ### <a name="azure-stack-integrated-systems"></a>Azure Stack tümleşik sistemleri
 
@@ -47,23 +47,23 @@ Microsoft Azure Stack geliştirme Seti'ni değerlendirmek ve Azure Stack hakkın
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Azure hibrit bulut**
+- **Azure hibrit bulut**
 
     <https://azure.microsoft.com/overview/hybrid-cloud/>
 
--   **Azure Stack**
+- **Azure Stack**
 
     <https://azure.microsoft.com/overview/azure-stack/>
 
--   **Windows kapsayıcıları için Active Directory hizmet hesapları**
+- **Windows kapsayıcıları için Active Directory hizmet hesapları**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts>
 
--   **Active Directory desteği ile bir kapsayıcı oluşturma**
+- **Active Directory desteği ile bir kapsayıcı oluşturma**
 
     <https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/>
 
--   **Azure hibrit avantajı lisanslama**
+- **Azure hibrit avantajı lisanslama**
 
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 

@@ -20,32 +20,32 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936766"
 ---
 # <a name="common-type-system"></a>Ortak Tür Sistemi
 Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışma zamanı'nda yönetilen tanımlar ve çalışma zamanının diller arası tümleştirme desteğinin önemli bir bölümü de olan. Ortak tür sistemi şu işlevleri gerçekleştirir:  
   
--   Etkinleştirme diller arası tümleştirme, tür güvenliği ve yüksek performanslı kod yürütmesine yardımcı olan bir çerçeve oluşturur.  
+- Etkinleştirme diller arası tümleştirme, tür güvenliği ve yüksek performanslı kod yürütmesine yardımcı olan bir çerçeve oluşturur.  
   
--   Birçok programlama dilinin tam uygulamasını destekleyen bir nesne odaklı bir model sağlar.  
+- Birçok programlama dilinin tam uygulamasını destekleyen bir nesne odaklı bir model sağlar.  
   
--   Dillerin izlemesi gereken, farklı dillerde yazılan nesneler birbiriyle etkileşim kurabilir yardımcı olun kuralları tanımlar.  
+- Dillerin izlemesi gereken, farklı dillerde yazılan nesneler birbiriyle etkileşim kurabilir yardımcı olun kuralları tanımlar.  
   
--   Temel veri türlerini içeren bir kitaplık sağlar (gibi <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32>, ve <xref:System.UInt64>) uygulama geliştirmesinde kullanılan.  
+- Temel veri türlerini içeren bir kitaplık sağlar (gibi <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32>, ve <xref:System.UInt64>) uygulama geliştirmesinde kullanılan.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
--   [. NET'te türleri](#types_in_the_net_framework)  
+- [. NET'te türleri](#types_in_the_net_framework)  
   
--   [Tür Tanımları](#type_definitions)  
+- [Tür Tanımları](#type_definitions)  
   
--   [Tür Üyeleri](#type_members)  
+- [Tür Üyeleri](#type_members)  
   
--   [Tür üye özellikleri](#characteristics_of_type_members)  
+- [Tür üye özellikleri](#characteristics_of_type_members)  
   
 <a name="types_in_the_net_framework"></a>   
 ## <a name="types-in-net"></a>. NET'te türleri  
@@ -57,15 +57,15 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
   
  . NET'te ortak tür sistemi, türlerin şu beş kategorisini destekler:  
   
--   [Sınıflar](#Classes)  
+- [Sınıflar](#Classes)  
   
--   [Yapılar](#Structures)  
+- [Yapılar](#Structures)  
   
--   [Sabit Listeleri](#Enumerations)  
+- [Sabit Listeleri](#Enumerations)  
   
--   [Arabirimler](#Interfaces)  
+- [Arabirimler](#Interfaces)  
   
--   [Temsilciler](#Delegates)  
+- [Temsilciler](#Delegates)  
   
 <a name="Classes"></a>   
 ### <a name="classes"></a>Sınıflar  
@@ -106,13 +106,13 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
   
  Aşağıdaki ek kısıtlamalar sabit listelere uygulanır:  
   
--   Kendi yöntemlerini tanımlayamazlar.  
+- Kendi yöntemlerini tanımlayamazlar.  
   
--   Arabirimleri uygulayamazlar.  
+- Arabirimleri uygulayamazlar.  
   
--   Özellikleri veya etkinlikleri tanımlayamazlar.  
+- Özellikleri veya etkinlikleri tanımlayamazlar.  
   
--   Genel tür içinde yalnızca içe nedeniyle genel olmadıkları sürece genel olamazlar. Diğer bir deyişle, bir numaralandırma kendi Tür parametrelerine sahip olamaz.  
+- Genel tür içinde yalnızca içe nedeniyle genel olmadıkları sürece genel olamazlar. Diğer bir deyişle, bir numaralandırma kendi Tür parametrelerine sahip olamaz.  
   
     > [!NOTE]
     >  Visual Basic, C# ve C++ ile oluşturulan iç içe türleri (numaralandırmalar dahil) tüm kapsayan genel türlerin tür parametrelerini içerir ve bu nedenle, kendi tür parametreleri yoksa bile geneldir. Daha fazla bilgi için bkz: "İç içe türler" <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> başvuru konusu.  
@@ -130,13 +130,13 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
   
  Aşağıdaki ek kısıtlamalar arayüzlere uygulanır:  
   
--   Bir arabirim herhangi bir erişilebilirlikle bildirilebilir, ancak arabirim üyeleri genel erişilebilirliğin tamamına sahip olmalıdır.  
+- Bir arabirim herhangi bir erişilebilirlikle bildirilebilir, ancak arabirim üyeleri genel erişilebilirliğin tamamına sahip olmalıdır.  
   
--   Arabirimler oluşturucuları tanımlayamaz.  
+- Arabirimler oluşturucuları tanımlayamaz.  
   
--   Arabirimler alanları tanımlayamaz.  
+- Arabirimler alanları tanımlayamaz.  
   
--   Arabirimler yalnızca örnek üyelerini tanımlayabilir. Statik üyeleri tanımlayamazlar.  
+- Arabirimler yalnızca örnek üyelerini tanımlayabilir. Statik üyeleri tanımlayamazlar.  
   
  Daha fazla arabirim aynı imzaya sahip bir üye bildirebilirsiniz olduğundan, bir uygulama, üyeyi gerektiren arabirime eşlemek için her dil kuralları sağlaması gerekir ve bu üyeler farklı uygulamalara sahip olabilir.  
   
@@ -170,17 +170,17 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
 ## <a name="type-definitions"></a>Tür Tanımları  
  Bir tür tanımı aşağıdakileri içerir:  
   
--   Tür üzerinde tanımlı herhangi bir öznitelik.  
+- Tür üzerinde tanımlı herhangi bir öznitelik.  
   
--   Türün erişilebilirliği (görünürlük).  
+- Türün erişilebilirliği (görünürlük).  
   
--   Türün adı.  
+- Türün adı.  
   
--   Türün temel türü.  
+- Türün temel türü.  
   
--   Tür tarafından uygulanan her arabirim.  
+- Tür tarafından uygulanan her arabirim.  
   
--   Her türün üyeleri için tanımlar.  
+- Her türün üyeleri için tanımlar.  
   
 ### <a name="attributes"></a>Öznitelikler  
  Öznitelikler kullanıcı tanımlı ek meta veriler sağlar. En yaygın olarak, bunlar, derlemesi içinde bir türle ilgili ek bilgi depolamak veya tasarım zamanı veya çalışma zamanı ortamı ya da bir tür üye davranışını değiştirmek için kullanılır.  
@@ -199,22 +199,22 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
   
  Erişilebilirlik etki alanı iç içe üyenin `M` bir türde bildirilen `T` bir programın `P` şu şekilde tanımlanır (dikkate alınarak `M` kendisi bir tür olabilir):  
   
--   Varsa öğesinin bildirilen erişilebilirliği `M` olduğu `public`, Erişilebilirlik etki alanı `M` erişilebilirlik etki alanıdır `T`.  
+- Varsa öğesinin bildirilen erişilebilirliği `M` olduğu `public`, Erişilebilirlik etki alanı `M` erişilebilirlik etki alanıdır `T`.  
   
--   Varsa öğesinin bildirilen erişilebilirliği `M` olduğu `protected internal`, Erişilebilirlik etki alanı `M` erişilebilirlik etki alanının kesişimidir `T` öğesinin program metni ile `P` ve türetilen her türlü program metni `T` dışında bildirilen `P`.  
+- Varsa öğesinin bildirilen erişilebilirliği `M` olduğu `protected internal`, Erişilebilirlik etki alanı `M` erişilebilirlik etki alanının kesişimidir `T` öğesinin program metni ile `P` ve türetilen her türlü program metni `T` dışında bildirilen `P`.  
   
--   Varsa öğesinin bildirilen erişilebilirliği `M` olduğu `protected`, Erişilebilirlik etki alanı `M` erişilebilirlik etki alanının kesişimidir `T` öğesinin program metni ile `T` ve türetilenhertür`T`.  
+- Varsa öğesinin bildirilen erişilebilirliği `M` olduğu `protected`, Erişilebilirlik etki alanı `M` erişilebilirlik etki alanının kesişimidir `T` öğesinin program metni ile `T` ve türetilenhertür`T`.  
   
--   Varsa öğesinin bildirilen erişilebilirliği `M` olduğu `internal`, Erişilebilirlik etki alanı `M` erişilebilirlik etki alanının kesişimidir `T` öğesinin program metni ile `P`.  
+- Varsa öğesinin bildirilen erişilebilirliği `M` olduğu `internal`, Erişilebilirlik etki alanı `M` erişilebilirlik etki alanının kesişimidir `T` öğesinin program metni ile `P`.  
   
--   Varsa öğesinin bildirilen erişilebilirliği `M` olduğu `private`, Erişilebilirlik etki alanı `M` öğesinin program metnidir `T`.  
+- Varsa öğesinin bildirilen erişilebilirliği `M` olduğu `private`, Erişilebilirlik etki alanı `M` öğesinin program metnidir `T`.  
   
 ### <a name="type-names"></a>Tür Adları  
  Ortak tür sistemi, adlar üzerinde yalnızca iki kısıtlama uygular:  
   
--   Tüm adlar Unicode (16-bit) karakter dizeleri olarak kodlanır.  
+- Tüm adlar Unicode (16-bit) karakter dizeleri olarak kodlanır.  
   
--   Adları 0x0000 bir gömülü (16-bit) değeri için izin verilmez.  
+- Adları 0x0000 bir gömülü (16-bit) değeri için izin verilmez.  
   
  Ancak, çoğu dil tür adlarına ek kısıtlamalar büyük oranda yansıtmaktadır. Tüm karşılaştırmalar bayt bayt temelinde gerçekleştirilir ve bu nedenle büyük/küçük harfe ve yerel ayarlardan bağımsızdır.  
   
@@ -229,25 +229,25 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
 ## <a name="type-members"></a>Tür Üyeleri  
  Çalışma zamanı türünün durumunu ve davranışını belirtir, türün üyeleri tanımlamanıza olanak sağlar. Tür üyeleri şunları içerir:  
   
--   [Alanlar](#Fields)  
+- [Alanlar](#Fields)  
   
--   [Özellikler](#Properties)  
+- [Özellikler](#Properties)  
   
--   [Yöntemler](#Methods)  
+- [Yöntemler](#Methods)  
   
--   [Oluşturucular](#Constructors)  
+- [Oluşturucular](#Constructors)  
   
--   [Olaylar](#Events)  
+- [Olaylar](#Events)  
   
--   [İç içe geçmiş türler](#NestedTypes)  
+- [İç içe geçmiş türler](#NestedTypes)  
   
 <a name="Fields"></a>   
 ### <a name="fields"></a>Alanlar  
  Bir alan açıklar ve türün durumunun kısmını içerir. Alanlar, çalışma zamanı tarafından desteklenen herhangi bir türde olabilir. En yaygın olarak, ya da alanları `private` veya `protected`, böylece bunlar yalnızca sınıf içinden veya türetilmiş sınıftan erişilebilir. Bir özellik kümesi erişimcisi, genellikle bir alanın değeri türünün dışından değiştirilip değiştirilmediğini kullanılır. Genel olarak gösterilen alanlar genellikle salt okunurdur ve iki türde olabilir:  
   
--   Sabitler, değeri tasarım zamanında atanır. Bunlar kullanılarak tanımlanmamış olsalar da bunlar bir sınıfın statik üyeleri `static` (`Shared` Visual Basic'te) anahtar sözcüğü.  
+- Sabitler, değeri tasarım zamanında atanır. Bunlar kullanılarak tanımlanmamış olsalar da bunlar bir sınıfın statik üyeleri `static` (`Shared` Visual Basic'te) anahtar sözcüğü.  
   
--   Sınıf oluşturucuda değerleri atanabilir salt okunur değişkenler.  
+- Sınıf oluşturucuda değerleri atanabilir salt okunur değişkenler.  
   
  Aşağıdaki örnek, salt okunur alanların bu iki kullanımı gösterilmiştir.  
   
@@ -312,9 +312,9 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
 ### <a name="inheriting-overriding-and-hiding-members"></a>Devralma, geçersiz kılma ve üyeleri gizleme  
  Türetilmiş bir tür temel türünün tüm üyelerini devralır; diğer bir deyişle, bu üyeler tanımlanır ve türetilmiş bir tür için kullanılabilir. Davranışı veya nitelikleri devralınan üyelerin iki yolla değiştirilebilir:  
   
--   Türetilmiş bir tür devralınmış bir üyeyi aynı imzayla yeni bir üye tanımlayarak gizleyebilir. Bu önceden genel bir üyeyi özel yapmak veya olarak işaretlenmiş bir devralınan yönteme ilişkin yeni davranış tanımlamak için yapılabilir `final`.  
+- Türetilmiş bir tür devralınmış bir üyeyi aynı imzayla yeni bir üye tanımlayarak gizleyebilir. Bu önceden genel bir üyeyi özel yapmak veya olarak işaretlenmiş bir devralınan yönteme ilişkin yeni davranış tanımlamak için yapılabilir `final`.  
   
--   Türetilmiş bir tür devralınan sanal yöntemi geçersiz kılabilirsiniz. Geçersiz kılma yöntemi, çalışma zamanı yerine derleme zamanında bilinen değişken türü değerin türüne göre çağrılacak yöntemin yeni tanımını sağlar. Yalnızca sanal yöntem olarak işaretlenmişse bir yöntem sanal bir yöntemi geçersiz kılabilir `final` ve yeni yöntemi en azından sanal yöntem kadar ulaşılabilirse geçersiz.  
+- Türetilmiş bir tür devralınan sanal yöntemi geçersiz kılabilirsiniz. Geçersiz kılma yöntemi, çalışma zamanı yerine derleme zamanında bilinen değişken türü değerin türüne göre çağrılacak yöntemin yeni tanımını sağlar. Yalnızca sanal yöntem olarak işaretlenmişse bir yöntem sanal bir yöntemi geçersiz kılabilir `final` ve yeni yöntemi en azından sanal yöntem kadar ulaşılabilirse geçersiz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -6,22 +6,22 @@ helpviewer_keywords:
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
 ms.openlocfilehash: 7180e5141572d219ed02c57103e9d4b80cde536e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938235"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Nasıl yapılır: (Visual Basic) değeri değişmeyen bir değişken oluşturma
 Bir değişkenin değerini değiştirmez kavramımız çelişkili görünebilir. Ancak bazı durumlarda bir sabit uygun olmadığı durumlarda ve sabit bir değere sahip bir değişken sağlamak kullanışlıdır. Böyle bir durumda olan bir üye değişkeni tanımlayabilirsiniz [salt okunur](../../../../visual-basic/language-reference/modifiers/readonly.md) anahtar sözcüğü.  
   
  Kullanamazsınız [Const deyimi](../../../../visual-basic/language-reference/statements/const-statement.md) bildirmek ve aşağıdaki durumlarda bir sabit değer atamak için:  
   
--   `Const` Deyimi kullanmak istediğiniz veri türünü kabul etmiyor  
+- `Const` Deyimi kullanmak istediğiniz veri türünü kabul etmiyor  
   
--   Derleme zamanında bir değer kattığını değil  
+- Derleme zamanında bir değer kattığını değil  
   
--   Sabit değer derleme zamanında işlem belirleyemiyoruz  
+- Sabit değer derleme zamanında işlem belirleyemiyoruz  
   
 ### <a name="to-create-a-variable-that-does-not-change-in-value"></a>Değeri değişmeyen bir değişken oluşturmak için  
   

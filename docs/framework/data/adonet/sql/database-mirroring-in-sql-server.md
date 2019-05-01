@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
 ms.openlocfilehash: 1445a95fc6360a7956048d2bae2d840f9c3f7a99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877818"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server’da Veritabanı Yansıtması
 SQL Server veritabanı yansıtma, bir kopya veya yansıtma, bir yedek sunucu üzerinde bir SQL Server veritabanının tutmanızı sağlar. Yansıtma, verilerin iki ayrı kopyasını süreleri ve yüksek düzeyde kullanılabilirlik sağladığınızdan hiç var ve veri yedekliği tamamlamak sağlar. Geliştirici herhangi bir eylemde bulunmanız veya bir SQL Server veritabanı için yapılandırıldıktan sonra kod yazmaya gerek yoktur, böylece SQL Server için .NET veri sağlayıcısı, veritabanı yansıtması için örtük desteği sağlar. Ayrıca, <xref:System.Data.SqlClient.SqlConnection> nesne destekleyen bir yük devretme iş ortağı sunucu adını sağlayan sağlayan bir açık bir bağlantı modu <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  

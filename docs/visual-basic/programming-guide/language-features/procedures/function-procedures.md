@@ -10,11 +10,11 @@ helpviewer_keywords:
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
 ms.openlocfilehash: 568489d6034316e895cd999801241fa995aadefa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864409"
 ---
 # <a name="function-procedures-visual-basic"></a>İşlev Yordamları (Visual Basic)
 A `Function` yordamdır kapsadığı Visual Basic deyimleri bir dizi `Function` ve `End Function` deyimleri. `Function` Yordamı bir görevi gerçekleştirir ve çağıran koda denetimini döndürür. Denetimi geri döndüğünde, ayrıca çağrıldığı koda bir değer döndürür.  
@@ -54,7 +54,7 @@ End Function
 ## <a name="returning-values"></a>Değerler döndüren  
  Değer bir `Function` yordamı gönderir çağıran koda geri dönüş değeri olarak adlandırılır. Yordam bu değer iki yoldan birini döndürür:  
   
--   Kullandığı `Return` deyimi döndürür ve dönüş değeri belirtmek için çağırma program hemen denetim. Aşağıdaki örnek bunu göstermektedir.  
+- Kullandığı `Return` deyimi döndürür ve dönüş değeri belirtmek için çağırma program hemen denetim. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -64,7 +64,7 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
--   Bir veya daha fazla deyim yordamın, kendi işlev adı için bir değer atar. Denetim kadar çağıran program döndürmez bir `Exit Function` veya `End Function` deyimi yürütülür. Aşağıdaki örnek bunu göstermektedir.  
+- Bir veya daha fazla deyim yordamın, kendi işlev adı için bir değer atar. Denetim kadar çağıran program döndürmez bir `Exit Function` veya `End Function` deyimi yürütülür. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
 ms.openlocfilehash: ff2d8c324aee8bbccef050c020e5392368b05b1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907315"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>Bir Numaralandırmanın Ne Zaman Kullanılacağı (Visual Basic)
 Numaralandırmalar ilgili sabitlerinin kümeleriyle çalışmak için kolay bir yolunu sunar. Bir numaralandırma veya `Enum`, değerler için simgesel bir addır. Numaralandırmalar veri türleri olarak kabul edilir ve değişkenleri ve özellikleri ile kullanım için sabitler kümesini oluşturmak için kullanabilirsiniz.  
@@ -19,13 +19,13 @@ Numaralandırmalar ilgili sabitlerinin kümeleriyle çalışmak için kolay bir 
   
  Numaralandırmalar kullanmanın avantajları şunlardır:  
   
--   Sırasını değiştirme ya da sayı yanlış yazmanız kaynaklanan hataları azaltır.  
+- Sırasını değiştirme ya da sayı yanlış yazmanız kaynaklanan hataları azaltır.  
   
--   Değerleri gelecekte değiştirilmesini daha kolay hale getirir.  
+- Değerleri gelecekte değiştirilmesini daha kolay hale getirir.  
   
--   Hataları içine şekilde katlamayı olasılığını yani kod okumak daha kolay hale getirir.  
+- Hataları içine şekilde katlamayı olasılığını yani kod okumak daha kolay hale getirir.  
   
--   İleriye dönük uyumluluk sağlar. Numaralandırmalar ile kodunuzu gelecekte birinin üyesi adlara karşılık gelen değerleri değişirse başarısız etkilenme olasılığı da düşer.  
+- İleriye dönük uyumluluk sağlar. Numaralandırmalar ile kodunuzu gelecekte birinin üyesi adlara karşılık gelen değerleri değişirse başarısız etkilenme olasılığı da düşer.  
   
 ## <a name="naming-enumerations"></a>Adlandırma sabit listeleri  
  Numaralandırma üyeleri için bir adlandırma kuralını kullanın. Visual Basic bir sabit listesi üye adı karşılaştığında, diğer başvurulan tür kitaplıkları aynı adı içeriyorsa bir özel durum. Uygulama veya bileşen değerleri tanımlayan benzersiz bir ön ekini kullanın.  

@@ -3,11 +3,11 @@ title: SQL Server'da Kimliğe Bürünme İzinlerini Özelleştirme
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
 ms.openlocfilehash: dd7fb4c94c5a0a9bca0cd36b8d76864158072d4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877910"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>SQL Server'da Kimliğe Bürünme İzinlerini Özelleştirme
 Çoğu uygulama, temel tablolar için erişimi kısıtlamak için sahiplik zinciri bağlı olan verilere erişmek için saklı yordamlar kullanır. Saklı yordamları ÇALIŞTIRMA izinlerini iptal etme veya temel tablolardan izinleri reddetme verebilirsiniz. SQL Server tabloları ve saklı yordam sahibi aynıysa çağıranın izinlerini kontrol yapmaz. Ancak, sahiplik zinciri nesneleri farklı sahipleri varsa veya dinamik SQL söz konusu olduğunda çalışmaz.  
@@ -59,11 +59,11 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="specifying-the-execution-context"></a>Yürütme bağlamı belirtme  
  Bir kullanıcı belirtmeye ek olarak, EXECUTE AS aşağıdaki anahtar sözcükler birini kullanabilirsiniz.  
   
--   ÇAĞIRICI. ARAYAN yürütme, varsayılan değerdir; diğer bir seçenek belirtilirse, yordamı çağıran güvenlik bağlamında yürütür.  
+- ÇAĞIRICI. ARAYAN yürütme, varsayılan değerdir; diğer bir seçenek belirtilirse, yordamı çağıran güvenlik bağlamında yürütür.  
   
--   SAHİBİ. SAHİBİ olarak yürütülen yordamı sahibi bağlamında yordamı yürütür. Yordam tarafından sahip olunan bir şema oluşturulursa `dbo` veya veritabanı sahibi, Kısıtlanmamış izinlere sahip yordamı çalıştırır.  
+- SAHİBİ. SAHİBİ olarak yürütülen yordamı sahibi bağlamında yordamı yürütür. Yordam tarafından sahip olunan bir şema oluşturulursa `dbo` veya veritabanı sahibi, Kısıtlanmamış izinlere sahip yordamı çalıştırır.  
   
--   KENDİ KENDİNE. Kendi KENDİNE yürütme, saklı yordamı oluşturan güvenlik bağlamında yürütür. Bu belirtilen bir kullanıcı olarak yürütülen eşdeğerdir belirtilen kullanıcı oluşturulması veya değiştirilmesi yordamı kişi burada.  
+- KENDİ KENDİNE. Kendi KENDİNE yürütme, saklı yordamı oluşturan güvenlik bağlamında yürütür. Bu belirtilen bir kullanıcı olarak yürütülen eşdeğerdir belirtilen kullanıcı oluşturulması veya değiştirilmesi yordamı kişi burada.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

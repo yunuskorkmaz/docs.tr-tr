@@ -23,11 +23,11 @@ ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 371e958aca87c922c902d8efd945d94d611672d9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61870090"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Zaman Uyumlu Metotları Zaman Uyumsuz Olarak Çağırma
 
@@ -45,13 +45,13 @@ ms.locfileid: "46702887"
 
 Bu konudaki kod örnekleri kullanmak için dört yaygın yolları göstermek `BeginInvoke` ve `EndInvoke` zaman uyumsuz çağrıları yapma. Arama sonra `BeginInvoke` aşağıdakileri yapabilirsiniz:
 
--   Bazı iş yapmak ve sonra çağrı `EndInvoke` çağrı tamamlanana kadar bloğu için.
+- Bazı iş yapmak ve sonra çağrı `EndInvoke` çağrı tamamlanana kadar bloğu için.
 
--   Elde bir <xref:System.Threading.WaitHandle> kullanarak <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType> özelliğini kullanın, <xref:System.Threading.WaitHandle.WaitOne%2A> kadar blok yürütme yöntemine <xref:System.Threading.WaitHandle> işareti verilen ve sonra çağrı `EndInvoke`.
+- Elde bir <xref:System.Threading.WaitHandle> kullanarak <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType> özelliğini kullanın, <xref:System.Threading.WaitHandle.WaitOne%2A> kadar blok yürütme yöntemine <xref:System.Threading.WaitHandle> işareti verilen ve sonra çağrı `EndInvoke`.
 
--   Yoklama <xref:System.IAsyncResult> tarafından döndürülen `BeginInvoke` zaman uyumsuz çağrı tamamlanıp tamamlanmadığını belirlemek ve ardından çağırmak için `EndInvoke`.
+- Yoklama <xref:System.IAsyncResult> tarafından döndürülen `BeginInvoke` zaman uyumsuz çağrı tamamlanıp tamamlanmadığını belirlemek ve ardından çağırmak için `EndInvoke`.
 
--   Bir temsilci için bir geri çağırma yöntemine geçirmek `BeginInvoke`. Yöntem üzerinde yürütülen bir <xref:System.Threading.ThreadPool> zaman uyumsuz çağrı tamamlandığında iş parçacığı. Geri çağırma yöntemi çağrıları `EndInvoke`.
+- Bir temsilci için bir geri çağırma yöntemine geçirmek `BeginInvoke`. Yöntem üzerinde yürütülen bir <xref:System.Threading.ThreadPool> zaman uyumsuz çağrı tamamlandığında iş parçacığı. Geri çağırma yöntemi çağrıları `EndInvoke`.
 
 > [!IMPORTANT]
 > Hangi yöntem ne olursa olsun kullanın, her zaman çağrı `EndInvoke` , zaman uyumsuz çağrı tamamlanması.
@@ -101,11 +101,11 @@ Bu konudaki kod örnekleri kullanmak için dört yaygın yolları göstermek `Be
 
  Bu örnek ile ilgili notlar:
 
--   `threadId` Parametresinin `TestMethod` olduğu bir `out` parametre ([`<Out>` `ByRef` Visual Basic'te), giriş değeri tarafından hiç kullanılmamış `TestMethod`. İşlevsiz bir değişken geçirilir `BeginInvoke` çağırın. Varsa `threadId` parametresi olan bir `ref` parametre (`ByRef` Visual Basic'te), değişkeni bir sınıf seviyesi alanını böylece, her iki geçirilebilir olması gerekirdi `BeginInvoke` ve `EndInvoke`.
+- `threadId` Parametresinin `TestMethod` olduğu bir `out` parametre ([`<Out>` `ByRef` Visual Basic'te), giriş değeri tarafından hiç kullanılmamış `TestMethod`. İşlevsiz bir değişken geçirilir `BeginInvoke` çağırın. Varsa `threadId` parametresi olan bir `ref` parametre (`ByRef` Visual Basic'te), değişkeni bir sınıf seviyesi alanını böylece, her iki geçirilebilir olması gerekirdi `BeginInvoke` ve `EndInvoke`.
 
--   Geçirilen durum bilgilerini `BeginInvoke` çıkış iletisini biçimlendirmek için geri çağırma yöntemi kullanan bir biçim dizesi. Türü olarak geçtiğinden <xref:System.Object>, kullanılmadan önce durum bilgisi, doğru türe dönüştürmeniz gerekir.
+- Geçirilen durum bilgilerini `BeginInvoke` çıkış iletisini biçimlendirmek için geri çağırma yöntemi kullanan bir biçim dizesi. Türü olarak geçtiğinden <xref:System.Object>, kullanılmadan önce durum bilgisi, doğru türe dönüştürmeniz gerekir.
 
--   Geri çağırma üzerinde yapılan bir <xref:System.Threading.ThreadPool> iş parçacığı. <xref:System.Threading.ThreadPool> Ana iş parçacığı sona ererse, ana iş parçacığı örneğin tamamlamak yeteri kadar geri çağırma için uyku moduna sahiptir çalışan uygulama tutma arka plan iş parçacığı akışlardır.
+- Geri çağırma üzerinde yapılan bir <xref:System.Threading.ThreadPool> iş parçacığı. <xref:System.Threading.ThreadPool> Ana iş parçacığı sona ererse, ana iş parçacığı örneğin tamamlamak yeteri kadar geri çağırma için uyku moduna sahiptir çalışan uygulama tutma arka plan iş parçacığı akışlardır.
 
  [!code-cpp[AsyncDelegateExamples#5](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/callback.cpp#5)]
  [!code-csharp[AsyncDelegateExamples#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/callback.cs#5)]

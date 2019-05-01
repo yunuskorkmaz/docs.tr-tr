@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
 ms.openlocfilehash: 545f0f4a56e72e32d2225217225d441a10f0e52e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803447"
 ---
 # <a name="elementname-is-obsolete-visual-basic-warning"></a>'\<elementname >' eski (Visual Basic uyarısı)
 Bir ifade ile işaretlenmiş bir programlama öğesi erişmeye <xref:System.ObsoleteAttribute> özniteliğini ve bir uyarı olarak değerlendirilecek yönergesi.  
@@ -25,7 +25,7 @@ Bir ifade ile işaretlenmiş bir programlama öğesi erişmeye <xref:System.Obso
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Kaynak kodu başvuru öğe adı doğru yazım olduğundan emin olun.  
+- Kaynak kodu başvuru öğe adı doğru yazım olduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

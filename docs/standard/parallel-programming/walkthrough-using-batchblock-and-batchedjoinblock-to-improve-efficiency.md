@@ -12,11 +12,11 @@ ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 79bbf33ff1b1e843836aa1b93188970b6a1c8ede
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908641"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>İzlenecek yol: Verimliliği Artırmak için BatchBlock ve BatchedJoinBlock'u Kullanma
 TPL veri akışı kitaplığı sağlar <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> ve böylece, bu bildirimleri alabilen ve bir veya daha fazla kaynaktan veri arabellek ve ardından o arabelleğe alınan verileri bir koleksiyon olarak yayınlar sınıfları. Bu toplu işleme mekanizması bir veya daha fazla kaynaktan veri toplayın ve ardından birden fazla veri öğesi toplu olarak işleme yararlı olur. Örneğin, kayıtları bir veritabanına eklemek için veri akışı kullanan bir uygulamayı düşünün. Bu işlem, birden çok öğe aynı zamanda bir kerede yerine sıralı olarak eklenirse daha verimli olabilir. Bu belgenin nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> sınıfı gibi veritabanı verimliliğini artırmak için işlemler Ekle. Ayrıca nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> hem sonuçları hem de program veritabanından okuduğunda oluşan özel durumları yakalamak için sınıf.
@@ -34,19 +34,19 @@ TPL veri akışı kitaplığı sağlar <xref:System.Threading.Tasks.Dataflow.Bat
   
  Bu izlenecek yol aşağıdaki bölümleri içerir:  
   
--   [Konsol uygulaması oluşturma](#creating)  
+- [Konsol uygulaması oluşturma](#creating)  
   
--   [Çalışan sınıfı tanımlama](#employeeClass)  
+- [Çalışan sınıfı tanımlama](#employeeClass)  
   
--   [Çalışan veritabanı işlemleri tanımlama](#operations)  
+- [Çalışan veritabanı işlemleri tanımlama](#operations)  
   
--   [Çalışan verilerini veritabanına ara belleğe almadan ekleme](#nonBuffering)  
+- [Çalışan verilerini veritabanına ara belleğe almadan ekleme](#nonBuffering)  
   
--   [Veritabanına çalışan verilerini eklemek için arabelleğe almayı kullanma](#buffering)  
+- [Veritabanına çalışan verilerini eklemek için arabelleğe almayı kullanma](#buffering)  
   
--   [Veritabanından çalışan verilerini okumak için arabelleğe alınmış birleşim kullanma](#bufferedJoin)  
+- [Veritabanından çalışan verilerini okumak için arabelleğe alınmış birleşim kullanma](#bufferedJoin)  
   
--   [Tam örnek](#complete)  
+- [Tam örnek](#complete)  
   
 <a name="creating"></a>   
 ## <a name="creating-the-console-application"></a>Konsol Uygulaması Oluşturma  

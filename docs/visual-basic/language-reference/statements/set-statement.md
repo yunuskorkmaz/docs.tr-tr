@@ -11,11 +11,11 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
 ms.openlocfilehash: 0a8d95ffbabf03a0e6c9d88edb28c248b60f3252
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783883"
 ---
 # <a name="set-statement-visual-basic"></a>Set Deyimi (Visual Basic)
 Bildiren bir `Set` bir özelliğe değer atamak için kullanılan özellik yordamı.  
@@ -35,13 +35,13 @@ End Set
  `accessmodifier`  
  İsteğe bağlı biri `Get` ve `Set` bu özellik deyimlerinde. Aşağıdakilerden biri olabilir:  
   
--   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
--   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
--   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
--   `Protected Friend`  
+- `Protected Friend`  
   
  Bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
@@ -70,13 +70,13 @@ End Set
   
 ## <a name="rules"></a>Kurallar  
   
--   **Karışık erişim düzeyleri.** Okuma-yazma özelliği tanımlıyorsanız, isteğe bağlı olarak farklı erişim düzeyi için belirtebilirsiniz `Get` veya `Set` yordamı, ancak ikisine birden değil. Bunu yaparsanız, yordam erişim düzeyi özellik erişim düzeyinden daha kısıtlayıcı olmalıdır. Örneğin, özellik bildirilirse `Friend`, bildirebilirsiniz `Set` yordamı `Private`, ama `Public`.  
+- **Karışık erişim düzeyleri.** Okuma-yazma özelliği tanımlıyorsanız, isteğe bağlı olarak farklı erişim düzeyi için belirtebilirsiniz `Get` veya `Set` yordamı, ancak ikisine birden değil. Bunu yaparsanız, yordam erişim düzeyi özellik erişim düzeyinden daha kısıtlayıcı olmalıdır. Örneğin, özellik bildirilirse `Friend`, bildirebilirsiniz `Set` yordamı `Private`, ama `Public`.  
   
      Tanımlıyorsanız, bir `WriteOnly` özelliği `Set` yordamı tüm özelliği temsil eder. Farklı bir erişim düzeyini bildiremezsiniz `Set`, iki erişim düzeyi özelliği ayarlamanız gerekir.  
   
 ## <a name="behavior"></a>Davranış  
   
--   **Bir özellik yordamı döndürüyor.** Zaman `Set` yordamı çağıran koda döndürür, sağlanan depolanacak değer deyimi yürütme devam eder.  
+- **Bir özellik yordamı döndürüyor.** Zaman `Set` yordamı çağıran koda döndürür, sağlanan depolanacak değer deyimi yürütme devam eder.  
   
      `Set` özellik yordamları kullanarak döndürebilir [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md) veya [çıkış bildirimi](../../../visual-basic/language-reference/statements/exit-statement.md).  
   

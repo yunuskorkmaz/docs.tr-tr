@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
 ms.openlocfilehash: 67ceedffecdfba8ec0c2829a3af31d194f18bd88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920672"
 ---
 # <a name="optional-visual-basic"></a>İsteğe Bağlı (Visual Basic)
 Yordam çağrıldığında bir yordam bağımsız değişkeninin atlanabileceğini belirtir.  
@@ -25,13 +25,13 @@ Yordam çağrıldığında bir yordam bağımsız değişkeninin atlanabileceği
   
  `Optional` Bu bağlamda değiştirici kullanılabilir:  
   
--   [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
 >  İsteğe bağlı parametrelerle veya parametresiz bir yordamı çağrılırken, konuma veya ada göre bağımsız değişkenler geçirebilirsiniz. Daha fazla bilgi için [geçirmeden bağımsız değişkenleri konuma ve ada göre](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).  

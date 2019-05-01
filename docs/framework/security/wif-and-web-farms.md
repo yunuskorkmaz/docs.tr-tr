@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
 ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796110"
 ---
 # <a name="wif-and-web-farms"></a>WIF ve Web Grupları
 Bağlı olan bir taraf (RP) uygulamasının bir web grubunda dağıtılan kaynakların güvenliğini sağlamak için Windows Identity Foundation (WIF) kullandığınızda, WIF üzerinde çalışan farklı RP uygulaması örneğini belirteçleri işleyebildiğinden emin olmak için bazı adımları uygulamanız gerekir gruptaki bilgisayarların. Oturum belirteci imzalar, şifreleme doğrulama Bu işleme içerir ve oturumu simgelerin şifresini, oturumu belirteçlerini önbelleğe alma ve algılama güvenlik belirteçleri yeniden yürütülmesi.  
@@ -17,21 +17,21 @@ Bağlı olan bir taraf (RP) uygulamasının bir web grubunda dağıtılan kaynak
   
  WIF, varsayılan ayarlar kullanıldığında şunları yapar:  
   
--   Bir örneği kullanan <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> okuma ve yazma Oturum belirteci sınıfı (örneği <xref:System.IdentityModel.Tokens.SessionSecurityToken> sınıfı) talepler ve diğer kimlik doğrulaması için kullanılan güvenlik belirteci yanı sıra oturumu hakkında bilgi taşır kendisi. Oturum belirteci paketlenir ve oturum tanımlama bilgisinde depolanır. Varsayılan olarak, <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> kullanan <xref:System.IdentityModel.ProtectedDataCookieTransform> sınıfını Oturum belirteci korumak için veri koruma API'si (DPAPI) kullanır. DPAPI, kullanıcı veya makine kimlik bilgilerini kullanarak koruma sağlar ve kullanıcı profilinde anahtar veri depolar.  
+- Bir örneği kullanan <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> okuma ve yazma Oturum belirteci sınıfı (örneği <xref:System.IdentityModel.Tokens.SessionSecurityToken> sınıfı) talepler ve diğer kimlik doğrulaması için kullanılan güvenlik belirteci yanı sıra oturumu hakkında bilgi taşır kendisi. Oturum belirteci paketlenir ve oturum tanımlama bilgisinde depolanır. Varsayılan olarak, <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> kullanan <xref:System.IdentityModel.ProtectedDataCookieTransform> sınıfını Oturum belirteci korumak için veri koruma API'si (DPAPI) kullanır. DPAPI, kullanıcı veya makine kimlik bilgilerini kullanarak koruma sağlar ve kullanıcı profilinde anahtar veri depolar.  
   
--   Varsayılan, bellek içi uyarlamasını kullanır <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> depolamak ve oturum belirteci işlemek için sınıf.  
+- Varsayılan, bellek içi uyarlamasını kullanır <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> depolamak ve oturum belirteci işlemek için sınıf.  
   
  RP uygulaması tek bir bilgisayara dağıtılmış senaryolarda bu varsayılan ayarları uyumludur; Ancak, bir web grubunda dağıtıldığında, her HTTP isteği gönderilen ve farklı bir bilgisayarda çalışan RP uygulaması farklı bir örneği tarafından işlenebilir. Belirteç koruma ve belirteç önbelleğe belirli bir bilgisayarda bağımlı olduğundan, bu senaryoda, yukarıda açıklanan varsayılan WIF ayarları çalışmaz.  
   
  Bir web grubundaki bir RP uygulaması dağıtmak için işleme oturumu belirteçleri (veya yeniden yürütülmüş belirteçlerin) belirli bir bilgisayar üzerinde çalışan uygulama bağımlı değil emin olmanız gerekir. Yapmanın bir yolu, RP uygulamanız ASP.NET tarafından sağlanan işlevselliği kullanmasını sağlayacak şekilde uygulamak için budur `<machineKey>` yapılandırma öğesi oturumu belirteçleri işlemek için Dağıtılmış önbelleğe alma sağlar ve belirteçlerin yeniden yürütülmesi. `<machineKey>` Öğesi, doğrulama, şifreleme ve web grubundaki farklı bilgisayarlarda aynı anahtarlar belirtmenize olanak tanıyan bir yapılandırma dosyasında belirteçlerin şifresini çözmek için gereken anahtarları belirtmenize olanak sağlar. Özel oturum belirteci işleyicisi WIF sağlar <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>, belirtilen tuşlarını kullanarak belirteçleri koruyan `<machineKey>` öğesi. Bu strateji uygulamak için aşağıdaki yönergeleri izleyin:  
   
--   ASP.NET kullanmak `<machineKey>` gruptaki bilgisayarların genelinde kullanılan imzalama ve şifreleme anahtarları açıkça belirtmek için yapılandırma öğesi. Aşağıdaki XML belirtimi gösterir `<machineKey>` öğesi altında `<system.web>` öğesi bir yapılandırma dosyası.  
+- ASP.NET kullanmak `<machineKey>` gruptaki bilgisayarların genelinde kullanılan imzalama ve şifreleme anahtarları açıkça belirtmek için yapılandırma öğesi. Aşağıdaki XML belirtimi gösterir `<machineKey>` öğesi altında `<system.web>` öğesi bir yapılandırma dosyası.  
   
     ```xml  
     <machineKey compatibilityMode="Framework45" decryptionKey="CC510D … 8925E6" validationKey="BEAC8 … 6A4B1DE" />  
     ```  
   
--   Kullanmak için uygulamayı yapılandırma <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> belirteci işleyicisi koleksiyon ekleyerek. Önce kaldırmanız gerekir <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> (veya herhangi bir işleyici türetilen <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> sınıfı) bu tür bir işleyici varsa belirteci işleyicisi koleksiyondan. <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> Kullanan <xref:System.IdentityModel.Services.MachineKeyTransform> belirtilen şifreleme malzemelerini kullanarak oturum tanımlama bilgisi verileri koruyan sınıfı `<machineKey>` öğesi. Aşağıdaki XML nasıl ekleneceğini gösterir <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> belirteci işleyicisi koleksiyonuna.  
+- Kullanmak için uygulamayı yapılandırma <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> belirteci işleyicisi koleksiyon ekleyerek. Önce kaldırmanız gerekir <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> (veya herhangi bir işleyici türetilen <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> sınıfı) bu tür bir işleyici varsa belirteci işleyicisi koleksiyondan. <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> Kullanan <xref:System.IdentityModel.Services.MachineKeyTransform> belirtilen şifreleme malzemelerini kullanarak oturum tanımlama bilgisi verileri koruyan sınıfı `<machineKey>` öğesi. Aşağıdaki XML nasıl ekleneceğini gösterir <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> belirteci işleyicisi koleksiyonuna.  
   
     ```xml  
     <securityTokenHandlers>  
@@ -40,7 +40,7 @@ Bağlı olan bir taraf (RP) uygulamasının bir web grubunda dağıtılan kaynak
     </securityTokenHandlers>  
     ```  
   
--   Öğesinden türetilen <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> ve uygulama dağıtılmış önbellek, diğer bir deyişle, RP çalıştırabilirsiniz gruptaki tüm bilgisayarların erişilebilir bir önbellek. RP belirterek, dağıtılmış önbellek kullanmak için yapılandırma [ \<sessionSecurityTokenCache >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) yapılandırma dosyasındaki öğesi. Geçersiz kılabilirsiniz <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> alt öğelerinin uygulamak için türetilmiş sınıf içinde yöntemi `<sessionSecurityTokenCache>` gerektirilirse öğesi.  
+- Öğesinden türetilen <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> ve uygulama dağıtılmış önbellek, diğer bir deyişle, RP çalıştırabilirsiniz gruptaki tüm bilgisayarların erişilebilir bir önbellek. RP belirterek, dağıtılmış önbellek kullanmak için yapılandırma [ \<sessionSecurityTokenCache >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) yapılandırma dosyasındaki öğesi. Geçersiz kılabilirsiniz <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> alt öğelerinin uygulamak için türetilmiş sınıf içinde yöntemi `<sessionSecurityTokenCache>` gerektirilirse öğesi.  
   
     ```xml  
     <caches>  
@@ -52,7 +52,7 @@ Bağlı olan bir taraf (RP) uygulamasının bir web grubunda dağıtılan kaynak
   
      Dağıtılmış önbelleğe almayı uygulayın yollarından biri, bir WCF ön uç özel önbelleğinizi sağlamaktır. Bir WCF Hizmeti önbelleğe almayı uygulama konusunda daha fazla bilgi için bkz. [önbellek WCF Hizmeti](#BKMK_TheWCFCachingService). RP uygulaması, önbelleğe alma hizmeti çağırmak amacıyla kullanabileceğiniz bir WCF istemcisi uygulama hakkında daha fazla bilgi için bkz. [önbelleğe alma WCF istemci](#BKMK_TheWCFClient).  
   
--   Uygulamanızı yeniden yürütülmüş belirteçleri algılarsa, benzer bir dağıtılmış türeterek stratejisi belirteç yeniden yürütme önbelleği için önbelleğe alma izlemeniz gereken <xref:System.IdentityModel.Tokens.TokenReplayCache> ve önbelleğe alma hizmeti, belirteç yeniden yürütme işaret [ \< tokenReplayCache >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) yapılandırma öğesi.  
+- Uygulamanızı yeniden yürütülmüş belirteçleri algılarsa, benzer bir dağıtılmış türeterek stratejisi belirteç yeniden yürütme önbelleği için önbelleğe alma izlemeniz gereken <xref:System.IdentityModel.Tokens.TokenReplayCache> ve önbelleğe alma hizmeti, belirteç yeniden yürütme işaret [ \< tokenReplayCache >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) yapılandırma öğesi.  
   
 > [!IMPORTANT]
 >  Tüm örnek XML ve bu konudaki kod öğesinden alınır [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) örnek.  

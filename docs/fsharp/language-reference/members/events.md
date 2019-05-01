@@ -3,11 +3,11 @@ title: Olaylar
 description: Bilgi nasıl F# olayları GUI programlamada önemlidir kullanıcı eylemlerini, işlev çağrıları ilişkilendirmek etkinleştirin.
 ms.date: 05/16/2016
 ms.openlocfilehash: 8972d9ab358ff9ff903e8bbbe42b74beea683233
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903935"
 ---
 # <a name="events"></a>Olaylar
 

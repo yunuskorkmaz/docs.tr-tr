@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS-AT protocol [WCF]
 ms.assetid: 04a4c200-0af0-4c5d-a3d9-87cb7339e054
 ms.openlocfilehash: 8a8265873e4287e1455659aa4d9fae7e1d570a00
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932853"
 ---
 # <a name="using-ws-atomictransaction"></a>WS-AtomicTransaction Kullanma
 WS-AtomicTransaction (WS-AT) bir birlikte çalışabilen işlem protokolüdür. Web hizmeti iletileri kullanarak dağıtılmış işlemler akış ve birlikte çalışabilen bir biçimde heterojen işlem altyapılar arasında koordine olanak tanır. WS-AT arasında dağıtılmış uygulamalar, işlem yöneticileri ve kaynak yöneticileri sonucu atomik sürücü için iki aşamalı tamamlama protokolü kullanır.  
@@ -20,9 +20,9 @@ WS-AtomicTransaction (WS-AT) bir birlikte çalışabilen işlem protokolüdür. 
   
  Protokol etkiler Seçimi:  
   
--   İstemciden sunucuya işlem akışı için kullanılan ileti üstbilgilerini biçimi.  
+- İstemciden sunucuya işlem akışı için kullanılan ileti üstbilgilerini biçimi.  
   
--   Hareketin sonucu çözmek için iki aşamalı tamamlama protokolü işlem yöneticisi istemcinin ve sunucunun işlem arasında çalıştırmak için kullanılan ağ protokolüdür.  
+- Hareketin sonucu çözmek için iki aşamalı tamamlama protokolü işlem yöneticisi istemcinin ve sunucunun işlem arasında çalıştırmak için kullanılan ağ protokolüdür.  
   
  WCF kullanarak sunucu ve istemci yazılır, WS-AT kullanmanız gerekmez. Bunun yerine, varsayılan ayarları kullanabilirsiniz `NetTcpBinding` ile `TransactionFlow` kullanacağı etkin, öznitelik `OleTransactions` yerine protokol. Daha fazla bilgi için [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md). Aksi takdirde, Web Hizmetleri, üçüncü taraf teknolojileri üzerine kurulmuş hareketleri akışa alındığından, WS-AT kullanmanız gerekir.  
   

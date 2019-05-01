@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
 ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877689"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Birden Çok Etkin Sonuç Kümesini Etkinleştirme
 Birden çok etkin sonuç kümesi (MARS) tek bir bağlantı üzerinde birden çok toplu iş yürütme izin vermek için SQL Server ile birlikte çalışan bir özelliktir. SQL Server ile kullanmak için MARS etkinleştirilmişse kullanılan her komut nesnesi bir oturum bağlantı ekler.  
@@ -75,15 +75,15 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Toplu yürütme ortamını aşağıdaki bileşenleri içerir:  
   
--   (Örneğin, ANSI_NULLS, DATE_FORMAT, dil, TEXTSIZE) seçeneklerini ayarlama  
+- (Örneğin, ANSI_NULLS, DATE_FORMAT, dil, TEXTSIZE) seçeneklerini ayarlama  
   
--   Güvenlik bağlamı (kullanıcı/uygulama rolü)  
+- Güvenlik bağlamı (kullanıcı/uygulama rolü)  
   
--   Veritabanı bağlamı (geçerli veritabanı)  
+- Veritabanı bağlamı (geçerli veritabanı)  
   
--   Yürütme durumu değişkenleri (örneğin, @@ERROR, @@ROWCOUNT, @@FETCH_STATUS @@IDENTITY)  
+- Yürütme durumu değişkenleri (örneğin, @@ERROR, @@ROWCOUNT, @@FETCH_STATUS @@IDENTITY)  
   
--   Üst düzey geçici tablolar  
+- Üst düzey geçici tablolar  
   
  MARS ile bir varsayılan yürütme ortamı için bir bağlantı ilişkilidir. Belirli bir bağlantı altında çalıştırmaya başlar her yeni batch varsayılan ortamın bir kopyasını alır. Belirtilen bir toplu iş altında kod yürütüldüğünde, ortama yapılan tüm değişiklikler belirli toplu belirlenir. Bir kez yürütme tamamlandığında, yürütme ayarları varsayılan ortama kopyalanır. Aynı işlemde sıralı olarak yürütülecek birkaç komut veren tek bir toplu iş söz konusu olduğunda, semantiği eski istemciler veya sunucular içeren bağlantılar tarafından kullanıma sunulan aynıdır.  
   

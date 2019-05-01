@@ -12,11 +12,11 @@ helpviewer_keywords:
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
 ms.openlocfilehash: ea719b60a6bcd40494666d4923fad296a8ddae70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907393"
 ---
 # <a name="composite-data-types-visual-basic"></a>Bileşik Veri Türleri (Visual Basic)
 Başlangıç veri türleri Visual Basic kaynakları'na ek olarak, öğeleri oluşturmak için farklı türde de toplayabilir *bileşik veri türleri* yapılar, diziler ve sınıflar gibi. Bileşik veri türleri, temel türleri ve diğer bileşik türler oluşturabilirsiniz. Örneğin, yapı öğeleri bir dizi veya bir yapı dizi üyeleri ile tanımlayabilirsiniz.  
@@ -36,11 +36,11 @@ Bir demet eşleşen türleri önceden tanımlanmıştır iki veya daha fazla ala
 ## <a name="array-types"></a>Dizi türleri  
  Tüm diziler kapsayan tek bir veri türü yoktur. Veri türü bir dizi belirli bir örneğini aşağıdaki tarafından belirlenir:  
   
--   Bir dizi olma olgusu  
+- Bir dizi olma olgusu  
   
--   Dizinin boyut (boyut sayısı)  
+- Dizinin boyut (boyut sayısı)  
   
--   Dizinin öğe türü  
+- Dizinin öğe türü  
   
  Özellikle, belirli bir boyutun uzunluğu örneğinin veri türünün bir parçası değil. Aşağıdaki örnek bunu göstermektedir.  
   

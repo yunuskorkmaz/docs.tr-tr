@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
 ms.openlocfilehash: 382d2aeff98b7d48dbae07dadb04ed644c3f4449
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856835"
 ---
 # <a name="federation"></a>Federasyon
 Bu konuda birleşik güvenliği kavramını kısa bir genel bakış sağlar. Ayrıca, Federasyon güvenlik mimariyi dağıtmak için Windows Communication Foundation (WCF) desteği açıklanmaktadır. Federasyon gösteren örnek bir uygulama için bkz. [Federasyon örneği](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -44,17 +44,17 @@ Bu konuda birleşik güvenliği kavramını kısa bir genel bakış sağlar. Ayr
   
  Genellikle, kuruluş B, A kuruluştan bir kullanıcı geçerli çeşit hizmet erişmeden önce kimlik doğrulaması sağlaması gerekir. Ayrıca, kuruluş Ayrıca kullanıcı söz konusu belirli kaynağa erişim yetkisi olması gerekebilir. Bu sorunu gidermek ve kuruluştaki B kaynağa erişmek için bir kuruluştaki kullanıcılara etkinleştirmek için bir yol aşağıdaki gibidir:  
   
--   Bir kuruluşun kullanıcıları, kimlik bilgilerini (kullanıcı adı ve parola) kuruluş b ile kaydedin.  
+- Bir kuruluşun kullanıcıları, kimlik bilgilerini (kullanıcı adı ve parola) kuruluş b ile kaydedin.  
   
--   Kaynak erişim sırasında bir kuruluşun kullanıcıları kuruluş B için kimlik bilgilerini sunmak ve kaynağa erişmeden önce kimlikleri doğrulanır.  
+- Kaynak erişim sırasında bir kuruluşun kullanıcıları kuruluş B için kimlik bilgilerini sunmak ve kaynağa erişmeden önce kimlikleri doğrulanır.  
   
  Bu yaklaşım, üç önemli engelleri vardır:  
   
--   Yerel kullanıcı kimlik bilgilerini yönetmenin yanı sıra bir kuruluştan kullanıcılar için kimlik bilgilerini yönetmek B kuruluş var.  
+- Yerel kullanıcı kimlik bilgilerini yönetmenin yanı sıra bir kuruluştan kullanıcılar için kimlik bilgilerini yönetmek B kuruluş var.  
   
--   Bir kuruluştaki kullanıcılara ek bir kimlik bilgileri kümesini bulundurmak gerekir (diğer bir deyişle, bir ek kullanıcı adınızı ve parolanızı hatırlayacağınızdan) dışında normalde A. kuruluşundaki kaynaklara erişmek için kullandıkları kimlik bilgileri Bu genellikle zayıf güvenlik önlemi olduğu birden çok hizmet sitede aynı kullanıcı adı ve parola kullanarak uygulama teşvik eder.  
+- Bir kuruluştaki kullanıcılara ek bir kimlik bilgileri kümesini bulundurmak gerekir (diğer bir deyişle, bir ek kullanıcı adınızı ve parolanızı hatırlayacağınızdan) dışında normalde A. kuruluşundaki kaynaklara erişmek için kullandıkları kimlik bilgileri Bu genellikle zayıf güvenlik önlemi olduğu birden çok hizmet sitede aynı kullanıcı adı ve parola kullanarak uygulama teşvik eder.  
   
--   Kaynak kuruluşta B bazı değeri olarak kuruluşların algılar gibi mimarisi ölçeklenmez.  
+- Kaynak kuruluşta B bazı değeri olarak kuruluşların algılar gibi mimarisi ölçeklenmez.  
   
  Daha önce bahsedilen dezavantajları adresleri, alternatif bir yaklaşım, Federasyon güvenlik görevlendirmek sağlamaktır. Bu yaklaşım, kuruluşların A ve B bir güven ilişkisi kurmak ve güvenlik belirteci hizmeti (kurulan güven aracılığı yapmaktan etkinleştirmek için STS) kullanın.  
   
@@ -76,13 +76,13 @@ Bu konuda birleşik güvenliği kavramını kısa bir genel bakış sağlar. Ayr
 ### <a name="phase-1-design-phase"></a>1. Aşama: Tasarım aşaması  
  Tasarım aşamasında, istemcinin kullandığı [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) hizmet uç noktasını kullanıma sunar politikasını okuyun ve hizmetin kimlik doğrulaması ve yetkilendirme gereksinimlerine toplanacak. İstemcide aşağıdaki güvenlik iletişim düzeni oluşturmak için uygun proxy oluşturulur:  
   
--   Bir güvenlik belirteci istemcisinin güven içinde STS almak.  
+- Bir güvenlik belirteci istemcisinin güven içinde STS almak.  
   
--   Belirteç sts'ye hizmet güven bölgedeki sunar.  
+- Belirteç sts'ye hizmet güven bölgedeki sunar.  
   
--   Bir güvenlik belirteci hizmeti güven bölge içinde STS almak.  
+- Bir güvenlik belirteci hizmeti güven bölge içinde STS almak.  
   
--   Hizmete erişmek için hizmet belirteci sunar.  
+- Hizmete erişmek için hizmet belirteci sunar.  
   
 ### <a name="phase-2-run-time-phase"></a>2. Aşama: Çalışma zamanı aşaması  
  Çalıştırma aşamasında, istemci bir WCF istemcisi sınıfı nesnesinin örneğini oluşturur ve WCF istemcisi kullanarak bir çağrı yapar. WCF temel çerçevesinde, Federasyon güvenlik iletişim deseni yukarıda açıklanan adımları işler ve sorunsuz bir şekilde hizmeti kullanmak ve istemcinin sağlar.  

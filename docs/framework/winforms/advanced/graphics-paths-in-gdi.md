@@ -11,28 +11,28 @@ helpviewer_keywords:
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
 ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938164"
 ---
 # <a name="graphics-paths-in-gdi"></a>GDI+'da Grafik Yolları
 Yolları çizgiler, dikdörtgenler ve basit eğrileri birleştirerek oluşturulur. Geri çekilemedi [vektör grafiklerine genel bakış](vector-graphics-overview.md) resimler çizmek için en kullanışlı olması için aşağıdaki temel yapı taşlarını kanıtladıktan:  
   
--   satırları  
+- satırları  
   
--   Dikdörtgenler  
+- Dikdörtgenler  
   
--   Ellipses  
+- Ellipses  
   
--   Yay  
+- Yay  
   
--   Çokgenler  
+- Çokgenler  
   
--   Ana Eğriler  
+- Ana Eğriler  
   
--   Bézier eğrileri  
+- Bézier eğrileri  
   
  GDI +'ta, <xref:System.Drawing.Drawing2D.GraphicsPath> nesne, bu yapı taşlarını bir dizi tek bir birimde toplamanıza olanak sağlar. Tüm satırları, dikdörtgenler, çokgenler ve eğriler dizisini ardından bir çağrı ile kurulabilir <xref:System.Drawing.Graphics.DrawPath%2A> yöntemi <xref:System.Drawing.Graphics> sınıfı. Aşağıdaki çizimde, bir satır, bir yay Bézier eğri ve Kardinal eğri birleştirilerek oluşturulan bir yolunu gösterir.  
   

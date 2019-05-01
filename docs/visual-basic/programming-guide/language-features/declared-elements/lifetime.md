@@ -11,11 +11,11 @@ helpviewer_keywords:
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
 ms.openlocfilehash: 7a8730834c5241ddb1271d689cdda8942741f15f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917936"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic'de Ömür
 *Ömrü* bir bildirilen süre sırasında hangi BT kullanıma açık öğesidir. Değişkenleri ömürlü yalnızca öğelerdir. Bu amaçla, derleyici parametreler değerlendirir ve değişkenlerin özel durumlar işlevi döndürür. Bir değişkenin ömrü değeri biriken içerebileceği süreyi temsil eder. Yaşam süresi boyunca değerini değiştirebilirsiniz, ancak her zaman belirli bir değeri tutar.  

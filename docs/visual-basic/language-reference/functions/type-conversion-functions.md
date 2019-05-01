@@ -82,11 +82,11 @@ helpviewer_keywords:
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
 ms.openlocfilehash: 56dad921b2900061dbe2db0d8f1faaf759641f87
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802303"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Tür Dönüştürme İşlevleri (Visual Basic)
 Bu da dönüştürme kodunun ifadeyi değerlendiren kodun bir parçası olduğu anlamına derlenmiş satır içi işlevlerdir. Bazen bir yordam performansı artıran dönüştürme gerçekleştirmek için hiçbir çağrı yoktur. Her işlev bir özel veri türü için bir ifade olacak şekilde zorlar.  
@@ -171,21 +171,21 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 
 ## <a name="behavior"></a>Davranış  
   
--   **Zorlama.** Genel olarak, varsayılan veri türü yerine belirli bir veri türüne bir işlemin sonucunu coerce için veri türü dönüştürme işlevleri kullanabilirsiniz. Örneğin, `CDec` burada tek duyarlıklı, çift duyarlıklı veya tamsayı aritmetik normalde geçtiğine durumlarda ondalık aritmetik zorlamak için.  
+- **Zorlama.** Genel olarak, varsayılan veri türü yerine belirli bir veri türüne bir işlemin sonucunu coerce için veri türü dönüştürme işlevleri kullanabilirsiniz. Örneğin, `CDec` burada tek duyarlıklı, çift duyarlıklı veya tamsayı aritmetik normalde geçtiğine durumlarda ondalık aritmetik zorlamak için.  
   
--   **Dönüştürme başarısız.** Varsa `expression` işleve geçirilen için hangi BT dönüştürülmekte olan veri türü aralığının dışında olduğundan bir <xref:System.OverflowException> gerçekleşir.  
+- **Dönüştürme başarısız.** Varsa `expression` işleve geçirilen için hangi BT dönüştürülmekte olan veri türü aralığının dışında olduğundan bir <xref:System.OverflowException> gerçekleşir.  
   
--   **Kesirli bölümleri.** Bir tam sayıya nonintegral değeri dönüştürdüğünüzde türü, tamsayı dönüştürme işlevleri (`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng`, ve `CUShort`) Kaldır kesirli bölümü ve değeri en yakın tamsayıya yuvarlar.  
+- **Kesirli bölümleri.** Bir tam sayıya nonintegral değeri dönüştürdüğünüzde türü, tamsayı dönüştürme işlevleri (`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng`, ve `CUShort`) Kaldır kesirli bölümü ve değeri en yakın tamsayıya yuvarlar.  
   
      Kesirli bölümü tam olarak ise 0,5, tamsayı dönüştürme işlevleri yuvarlak kendisine en yakın çift tamsayıya. Örneğin, 0 ve 1.5 hem de 2 yuvarlak 2.5 0,5 yuvarlar. Bazen adlandırılır *banker yuvarlama*, ve amacı dengelemek birlikte birçok sayı eklerken birikebilir sapması.  
   
      `CInt` ve `CLng` farklı <xref:Microsoft.VisualBasic.Conversion.Int%2A> ve <xref:Microsoft.VisualBasic.Conversion.Fix%2A> hangi round, bir sayının kesirli kısmını yerine truncate işlevleri. Ayrıca, `Fix` ve `Int` , geçirdiğiniz her zaman aynı veri türünde bir değer döndürür.  
   
--   **Tarih/saat dönüştürme.** Kullanım <xref:Microsoft.VisualBasic.Information.IsDate%2A> işlevi bir tarih ve saat değeri dönüştürülebilir ise belirlemek için. `CDate` Tarih değişmez değerleri ve zaman değişmez ancak sayısal değerleri algılar. Visual Basic 6.0 dönüştürülecek `Date` değerini bir `Date` değer Visual Basic 2005 veya sonraki sürümler, kullanabileceğiniz <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> yöntemi.  
+- **Tarih/saat dönüştürme.** Kullanım <xref:Microsoft.VisualBasic.Information.IsDate%2A> işlevi bir tarih ve saat değeri dönüştürülebilir ise belirlemek için. `CDate` Tarih değişmez değerleri ve zaman değişmez ancak sayısal değerleri algılar. Visual Basic 6.0 dönüştürülecek `Date` değerini bir `Date` değer Visual Basic 2005 veya sonraki sürümler, kullanabileceğiniz <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> yöntemi.  
   
--   **Nötr tarih/saat değerleri.** [Date veri türü](../../../visual-basic/language-reference/data-types/date-data-type.md) her zaman tarih ve saat bilgileri içerir. Tür dönüştürme amacı doğrultusunda, Visual Basic 1/1/0001 (Ocak 1 yılının 1) olarak göz önünde bulundurur bir *bağımsız değer* tarihini ve 00:00:00 (gece yarısı) süresi için bağımsız bir değer olarak. Dönüştürürseniz, bir `Date` bir dize değerine `CStr` nötr değerlerini sonuç dizesindeki içermez. Örneğin, dönüştürmek, `#January 1, 0001 9:30:00#` bir dize, "9:30:00 AM" sonucudur; tarih bilgisi bastırılır. Ancak, tarih bilgileri özgün hala mevcut `Date` değeri ve işlevlerinde aşağıdaki gibi kurtarılabilir <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> işlevi.  
+- **Nötr tarih/saat değerleri.** [Date veri türü](../../../visual-basic/language-reference/data-types/date-data-type.md) her zaman tarih ve saat bilgileri içerir. Tür dönüştürme amacı doğrultusunda, Visual Basic 1/1/0001 (Ocak 1 yılının 1) olarak göz önünde bulundurur bir *bağımsız değer* tarihini ve 00:00:00 (gece yarısı) süresi için bağımsız bir değer olarak. Dönüştürürseniz, bir `Date` bir dize değerine `CStr` nötr değerlerini sonuç dizesindeki içermez. Örneğin, dönüştürmek, `#January 1, 0001 9:30:00#` bir dize, "9:30:00 AM" sonucudur; tarih bilgisi bastırılır. Ancak, tarih bilgileri özgün hala mevcut `Date` değeri ve işlevlerinde aşağıdaki gibi kurtarılabilir <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> işlevi.  
   
--   **Kültür duyarlılık.** Dizeleri içeren tür dönüştürme işlevleri, uygulama için geçerli kültür ayarlara dayanan dönüştürmeler gerçekleştirin. Örneğin, `CDate` tarih biçimleri sisteminizin yerel ayarına göre tanır. Gün, ay ve yıl bölgeniz için doğru sırada sağlamanız gerekir ya da tarih doğru şekilde yorumlanabilir değil. "Çarşamba" gibi bir haftanın gün dize içeriyorsa, uzun tarih biçimi tanınmıyor.  
+- **Kültür duyarlılık.** Dizeleri içeren tür dönüştürme işlevleri, uygulama için geçerli kültür ayarlara dayanan dönüştürmeler gerçekleştirin. Örneğin, `CDate` tarih biçimleri sisteminizin yerel ayarına göre tanır. Gün, ay ve yıl bölgeniz için doğru sırada sağlamanız gerekir ya da tarih doğru şekilde yorumlanabilir değil. "Çarşamba" gibi bir haftanın gün dize içeriyorsa, uzun tarih biçimi tanınmıyor.  
   
      İçin veya bir biçimde, yerel ayar tarafından belirtilen dışında bir değer bir dize gösterimini dönüştürmek istiyorsanız, Visual Basic tür dönüştürme işlevleri kullanamazsınız. Bunu yapmak için `ToString(IFormatProvider)` ve `Parse(String, IFormatProvider)` yöntemleri bu değerin türü. Örneğin, <xref:System.Double.Parse%2A?displayProperty=nameWithType> bir dizeye dönüştürürken bir `Double`ve <xref:System.Double.ToString%2A?displayProperty=nameWithType> türünde bir değer dönüştürülürken `Double` bir dize.  
   

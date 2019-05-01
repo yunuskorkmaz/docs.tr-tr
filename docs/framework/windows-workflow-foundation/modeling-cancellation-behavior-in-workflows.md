@@ -3,11 +3,11 @@ title: İptal davranışını iş akışlarında modelleme
 ms.date: 03/30/2017
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
 ms.openlocfilehash: 8bbd746d40e9114eacd5a752481d5316c3f30e57
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934712"
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>İptal davranışını iş akışlarında modelleme
 Etkinlikler iptal edilemez bir iş akışı içinde örneğin tarafından bir <xref:System.Activities.Statements.Parallel> tamamlanmamış dalları iptal etkinlik zaman kendi <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> değerlendiren `true`, veya konak çağırırsa iş akışının dışında <xref:System.Activities.WorkflowApplication.Cancel%2A>. İptal işleme sağlamak için iş akışı yazarları kullanabilirsiniz <xref:System.Activities.Statements.CancellationScope> etkinliği <xref:System.Activities.Statements.CompensableActivity> etkinliği veya iptal etme mantığı sağlayan özel etkinlikler oluşturur. Bu konu, iş akışlarında iptal genel bir bakış sağlar.  

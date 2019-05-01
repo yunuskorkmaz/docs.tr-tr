@@ -11,11 +11,11 @@ ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63931f4498f4c1f313e7980b91ef712d4a46a837
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926314"
 ---
 # <a name="exceptions-in-managed-threads"></a>Yönetilen İş Parçacıklarında Özel Durumlar
 .NET Framework sürüm 2.0 ile başlayarak, ortak dil çalışma zamanı doğal olarak devam etmek için iş parçacıklarının en işlenmeyen özel durumları tanır. Çoğu durumda bu işlenmeyen özel durumu uygulamanın sonlandırılmasına neden anlamına gelir.  
@@ -25,11 +25,11 @@ ms.locfileid: "43865185"
   
  Ortak dil çalışma zamanı program akışı denetimi için kullanılan bir backstop belirli işlenmeyen özel durumları sağlar:  
   
--   A <xref:System.Threading.ThreadAbortException> çünkü bir iş parçacığında oluşturulan <xref:System.Threading.Thread.Abort%2A> çağrıldı.  
+- A <xref:System.Threading.ThreadAbortException> çünkü bir iş parçacığında oluşturulan <xref:System.Threading.Thread.Abort%2A> çağrıldı.  
   
--   Bir <xref:System.AppDomainUnloadedException> iş parçacığı yürütüyordur uygulama etki alanı kaldırıldı çünkü bir dizi oluşturulur.  
+- Bir <xref:System.AppDomainUnloadedException> iş parçacığı yürütüyordur uygulama etki alanı kaldırıldı çünkü bir dizi oluşturulur.  
   
--   Ortak dil çalışma zamanı ya da bir ana bilgisayar işlemi bir iç özel durum tarafından iş parçacığı sonlanır.  
+- Ortak dil çalışma zamanı ya da bir ana bilgisayar işlemi bir iç özel durum tarafından iş parçacığı sonlanır.  
   
  Herhangi birini bu özel durumları iş parçacıklarında ortak dil çalışma zamanı tarafından oluşturulan işlenmemiş özel durum iş parçacığı sonlanır, ancak ortak dil çalışma zamanı özel durumu, devam etmek izin vermez.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "43865185"
 ## <a name="change-from-previous-versions"></a>Önceki sürümlerden değiştirme  
  Yönetilen iş parçacıkları için en önemli değişiklik ilgilidir. .NET Framework sürüm 1.0 ve 1.1, ortak dil çalışma zamanı aşağıdaki durumlarda işlenmeyen özel durumlara ilişkin bir backstop sağlar:  
   
--   Bir iş parçacığı havuzu iş parçacığı üzerinde işlenmeyen bir özel durum de yoktur. Bir görev değil işleyen bir özel durum oluşturduğunda, çalışma zamanı özel durum yığın izlemesi konsola yazdırır ve iş parçacığının iş parçacığı havuzuna döndürür.  
+- Bir iş parçacığı havuzu iş parçacığı üzerinde işlenmeyen bir özel durum de yoktur. Bir görev değil işleyen bir özel durum oluşturduğunda, çalışma zamanı özel durum yığın izlemesi konsola yazdırır ve iş parçacığının iş parçacığı havuzuna döndürür.  
   
--   Bir iş parçacığında işlenmeyen bir özel durum ile oluşturulmuş gibi bir şey olduğunu <xref:System.Threading.Thread.Start%2A> yöntemi <xref:System.Threading.Thread> sınıfı. Böyle bir iş parçacığı üzerinde çalışan kodu değil işleyen bir özel durum oluşturduğunda, çalışma zamanı özel durum yığın izlemesi konsola yazdırır ve düzgün bir şekilde iş parçacığı sonlanır.  
+- Bir iş parçacığında işlenmeyen bir özel durum ile oluşturulmuş gibi bir şey olduğunu <xref:System.Threading.Thread.Start%2A> yöntemi <xref:System.Threading.Thread> sınıfı. Böyle bir iş parçacığı üzerinde çalışan kodu değil işleyen bir özel durum oluşturduğunda, çalışma zamanı özel durum yığın izlemesi konsola yazdırır ve düzgün bir şekilde iş parçacığı sonlanır.  
   
--   Sonlandırıcı iş parçacığı işlenmeyen bir özel olarak böyle bir şey yoktur. Bir sonlandırıcı olmayan işleyen bir özel durum oluşturduğunda, çalışma zamanı özel durum yığın izlemesi konsola yazdırır ve ardından sonlandırıcılar çalıştırmayı sürdürmek herhangi bir sonlandırıcı sağlar.  
+- Sonlandırıcı iş parçacığı işlenmeyen bir özel olarak böyle bir şey yoktur. Bir sonlandırıcı olmayan işleyen bir özel durum oluşturduğunda, çalışma zamanı özel durum yığın izlemesi konsola yazdırır ve ardından sonlandırıcılar çalıştırmayı sürdürmek herhangi bir sonlandırıcı sağlar.  
   
  Yönetilen iş parçacığı ön plan veya arka plan durum, bu davranışı etkilemez.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "43865185"
 ### <a name="migrating-code"></a>Kod geçirme  
  Genel olarak, değişiklik düzeltilebilir böylece daha önce tanınmayan programlama sorunları açığa çıkarır. Bazı durumlarda, ancak programcılar örneğin iş parçacıklarını sonlandırma çalışma zamanı backstop avantajlarından almış. Duruma bağlı olarak, aşağıdaki geçiş stratejileri birini düşünmelisiniz:  
   
--   Kod, sinyal alındığında düzgün bir şekilde iş parçacığından çıkar şekilde yeniden yapılandırabilirsiniz.  
+- Kod, sinyal alındığında düzgün bir şekilde iş parçacığından çıkar şekilde yeniden yapılandırabilirsiniz.  
   
--   Kullanım <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> iş parçacığını durdurmak için yöntemi.  
+- Kullanım <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> iş parçacığını durdurmak için yöntemi.  
   
--   İşlem sonlandırma devam edebilmeniz adına bir iş parçacığı durdurulması gerekir, böylece otomatik olarak işlem çıkış sonlandırılır iş parçacığı bir arka plan iş parçacığı sağlayın.  
+- İşlem sonlandırma devam edebilmeniz adına bir iş parçacığı durdurulması gerekir, böylece otomatik olarak işlem çıkış sonlandırılır iş parçacığı bir arka plan iş parçacığı sağlayın.  
   
  Her durumda, strateji özel durumlar için tasarım yönergeleri izlemelidir. Bkz: [özel durumlar için tasarım yönergeleri](../../../docs/standard/design-guidelines/exceptions.md).  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
 ms.openlocfilehash: 641edd2d0e0dde5f509c8fa77ccf65358fa76a31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920120"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic'de Ana Yordam
 Her Visual Basic uygulama çağrılan yordam içermelidir `Main`. Bu yordamı başlangıç noktası ve uygulamanız için genel denetimi olarak işlev görür. .NET Framework çağrıları, `Main` uygulamanızı yüklendikten ve denetim geçirmeye hazır olduğunda yordamı. Bir Windows Forms uygulaması oluşturmakta olduğunuz sürece, yazmanız gereken `Main` yordamı kendi çalışan uygulamalar için.  
@@ -23,11 +23,11 @@ Her Visual Basic uygulama çağrılan yordam içermelidir `Main`. Bu yordamı ba
 ## <a name="requirements-for-the-main-procedure"></a>Main yordamı için gereksinimleri  
  (Genellikle ile uzantısı .exe) kendi çalıştığı bir dosya içermelidir bir `Main` yordamı. Bir kitaplık (örneğin ile .dll uzantısı) kendi çalıştırılmaz ve gerekli olmayan bir `Main` yordamı. Oluşturabileceğiniz farklı türde projelere gereksinimleri aşağıdaki gibidir:  
   
--   Konsol uygulamalarının çalıştığı kendi ve en az bir sağlamalısınız `Main` yordamı. biçimindeki telefon numarasıdır.  
+- Konsol uygulamalarının çalıştığı kendi ve en az bir sağlamalısınız `Main` yordamı. biçimindeki telefon numarasıdır.  
   
--   Windows Forms uygulamaları kendi çalıştırın. Ancak, Visual Basic Derleyicisi otomatik olarak oluşturduğu bir `Main` gibi bir yordamda bir uygulama ve zorunda kalmadan bir yazma.  
+- Windows Forms uygulamaları kendi çalıştırın. Ancak, Visual Basic Derleyicisi otomatik olarak oluşturduğu bir `Main` gibi bir yordamda bir uygulama ve zorunda kalmadan bir yazma.  
   
--   Sınıf kitaplıkları gerekli olmayan bir `Main` yordamı. Bunlar, Windows Denetim Kitaplığı ve Web denetimi kitaplıkları içerir. Web uygulamaları, sınıf kitaplıkları dağıtılır.  
+- Sınıf kitaplıkları gerekli olmayan bir `Main` yordamı. Bunlar, Windows Denetim Kitaplığı ve Web denetimi kitaplıkları içerir. Web uygulamaları, sınıf kitaplıkları dağıtılır.  
   
 ## <a name="declaring-the-main-procedure"></a>Main yordamı bildirme  
  Bildirmek için dört yolla `Main` yordamı. Veya bağımsız değişken alabilir ve bir değer veya döndürebilir.  
@@ -35,7 +35,7 @@ Her Visual Basic uygulama çağrılan yordam içermelidir `Main`. Bu yordamı ba
 > [!NOTE]
 >  Bildirirseniz `Main` bir sınıfta kullanmalısınız `Shared` anahtar sözcüğü. Bir modüldeki `Main` olması gerekmez `Shared`.  
   
--   Bildirmek için en kolay yolu olan bir `Sub` bağımsız değişken almaz veya bir değer döndüren yordam.  
+- Bildirmek için en kolay yolu olan bir `Sub` bağımsız değişken almaz veya bir değer döndüren yordam.  
   
     ```  
     Module mainModule  
@@ -47,7 +47,7 @@ Her Visual Basic uygulama çağrılan yordam içermelidir `Main`. Bu yordamı ba
     End Module  
     ```  
   
--   `Main` Ayrıca döndürebilir bir `Integer` programınız için çıkış kodu işletim sisteminin kullandığı değer. Diğer programları, Windows ERRORLEVEL değeri inceleyerek bu kodu test edebilirsiniz. Çıkış kodu döndürülecek bildirmelisiniz `Main` olarak bir `Function` yerine yordam bir `Sub` yordamı.  
+- `Main` Ayrıca döndürebilir bir `Integer` programınız için çıkış kodu işletim sisteminin kullandığı değer. Diğer programları, Windows ERRORLEVEL değeri inceleyerek bu kodu test edebilirsiniz. Çıkış kodu döndürülecek bildirmelisiniz `Main` olarak bir `Function` yerine yordam bir `Sub` yordamı.  
   
     ```  
     Module mainModule  
@@ -64,7 +64,7 @@ Her Visual Basic uygulama çağrılan yordam içermelidir `Main`. Bu yordamı ba
     End Module  
     ```  
   
--   `Main` Ayrıca gerçekleştirebileceğiniz bir `String` bağımsız değişken olarak bir dizi. Dizideki her bir dizenin programınızı çağırmak için kullanılan komut satırı bağımsız değişkenlerden biri içerir. Değerlerine bağlı olarak farklı eylemleri gerçekleştirebilirsiniz.  
+- `Main` Ayrıca gerçekleştirebileceğiniz bir `String` bağımsız değişken olarak bir dizi. Dizideki her bir dizenin programınızı çağırmak için kullanılan komut satırı bağımsız değişkenlerden biri içerir. Değerlerine bağlı olarak farklı eylemleri gerçekleştirebilirsiniz.  
   
     ```  
     Module mainModule  
@@ -88,7 +88,7 @@ Her Visual Basic uygulama çağrılan yordam içermelidir `Main`. Bu yordamı ba
     End Module  
     ```  
   
--   Bildirebilirsiniz `Main` bir çıkış kodu gibi döndürmediğine ancak komut satırı bağımsız değişkenlerini inceleyin.  
+- Bildirebilirsiniz `Main` bir çıkış kodu gibi döndürmediğine ancak komut satırı bağımsız değişkenlerini inceleyin.  
   
     ```  
     Module mainModule  

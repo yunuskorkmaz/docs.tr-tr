@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Windows Forms], recoloring images
 ms.assetid: f28c54fd-9c80-4f6f-b242-55f7ffcda84b
 ms.openlocfilehash: b6ec90f5102b562a252218be84aa7b3141e05b83
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948076"
 ---
 # <a name="recoloring-images"></a>Resimleri Yeniden Renklendirme
 Yeniden renklendirme görüntü renkleri ayarlama işlemidir. Bazı örnekler yeniden renklendirme, başka bir, başka bir renge göre bir renk yoğunluğu ayarlama, parlaklık veya tüm renk karşıtlığını ayarlama ve renkleri için gri dönüştürme için bir renk değiştiriyorsunuz.  

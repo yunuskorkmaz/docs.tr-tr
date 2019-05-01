@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
 ms.openlocfilehash: a4561359e4d7cb0f6ebe44a5deb09b3374556ed8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801653"
 ---
 # <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a>'Extension' özniteliği yalnızca 'Module', 'Sub' veya 'Function' bildirimlerine uygulanabilir
 Visual Basic'te bir veri türü genişletmek için tek bir standart modül içinde bir genişletme yöntemi tanımlamak için yoludur. Genişletme yöntemi olabilir bir `Sub` yordamı veya `Function` yordamı. Tüm uzantı yöntemleri uzantı özniteliğiyle işaretlenmelidir `<Extension()>`, gelen <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanı. İsteğe bağlı olarak, bir uzantı yöntemini içeren modül aynı şekilde işaretlenmiş olabilir. Herhangi bir kullanıma uzantısı özniteliği geçerli değil.  
@@ -21,9 +21,9 @@ Visual Basic'te bir veri türü genişletmek için tek bir standart modül için
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Uzantı özniteliğine kaldırın.  
+- Uzantı özniteliğine kaldırın.  
   
--   Uzantınızı kapsayan bir modülde tanımlanmış bir yöntem olarak yeniden tasarlayın.  
+- Uzantınızı kapsayan bir modülde tanımlanmış bir yöntem olarak yeniden tasarlayın.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte tanımlayan bir `Print` yöntemi `String` veri türü.  

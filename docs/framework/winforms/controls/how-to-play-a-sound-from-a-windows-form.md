@@ -12,11 +12,11 @@ helpviewer_keywords:
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
 ms.openlocfilehash: 3b9eb6f902d0d2193f0099f8e868e4ead347ce26
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913416"
 ---
 # <a name="how-to-play-a-sound-from-a-windows-form"></a>Nasıl yapılır: Bir Windows Formdan Ses Çalma
 Bu örnek, çalışma zamanında verilen yolda bir ses çalar.  
@@ -40,26 +40,26 @@ private void playSimpleSound()
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Dosya adı yerine `"c:\Windows\Media\chimes.wav"` ile geçerli bir dosya adı.  
+- Dosya adı yerine `"c:\Windows\Media\chimes.wav"` ile geçerli bir dosya adı.  
   
--   (C#) Başvuru <xref:System.Media?displayProperty=nameWithType> ad alanı.  
+- (C#) Başvuru <xref:System.Media?displayProperty=nameWithType> ad alanı.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Dosya işlemleri blokları uygun yapılandırılmış özel durum işleme içinde içine alınması.  
   
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
--   Yol adı yanlış biçimlendirilmiş. Örneğin, geçersiz karakterler içeriyor veya yalnızca boşluk (<xref:System.ArgumentException> sınıfı).  
+- Yol adı yanlış biçimlendirilmiş. Örneğin, geçersiz karakterler içeriyor veya yalnızca boşluk (<xref:System.ArgumentException> sınıfı).  
   
--   Salt okunur yoludur (<xref:System.IO.IOException> sınıfı).  
+- Salt okunur yoludur (<xref:System.IO.IOException> sınıfı).  
   
--   Yol adı `null` (<xref:System.ArgumentNullException> sınıfı).  
+- Yol adı `null` (<xref:System.ArgumentNullException> sınıfı).  
   
--   Yol adı çok uzun (<xref:System.IO.PathTooLongException> sınıfı).  
+- Yol adı çok uzun (<xref:System.IO.PathTooLongException> sınıfı).  
   
--   Yol geçersiz (<xref:System.IO.DirectoryNotFoundException> sınıfı).  
+- Yol geçersiz (<xref:System.IO.DirectoryNotFoundException> sınıfı).  
   
--   Yalnızca bir iki nokta üst üste, yoludur ":" (<xref:System.NotSupportedException> sınıfı).  
+- Yalnızca bir iki nokta üst üste, yoludur ":" (<xref:System.NotSupportedException> sınıfı).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, dosyayı `Form1.vb` Visual Basic kaynak dosyası olmayabilir. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.  

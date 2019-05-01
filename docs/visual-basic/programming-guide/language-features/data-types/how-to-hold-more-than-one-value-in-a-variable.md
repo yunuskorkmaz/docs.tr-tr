@@ -12,11 +12,11 @@ helpviewer_keywords:
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
 ms.openlocfilehash: e2e1648ea508ecdd744adb8d2a4f7fdbc1e586c4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59332267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906496"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Nasıl yapılır: (Visual Basic) değişkende birden fazla değer tutma
 Olması bildirirseniz bir değişkeni birden fazla değer içeren bir *bileşik veri türü*.  
@@ -29,11 +29,11 @@ Olması bildirirseniz bir değişkeni birden fazla değer içeren bir *bileşik 
   
 2. Bileşik veri türü zaten tanımlı değilse, değişken kullanabilmesi tanımlayın.  
   
-    -   Bir yapı tanımla bir [Structure deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md).  
+    - Bir yapı tanımla bir [Structure deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md).  
   
-    -   Bir dizi tanımlamak bir [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md).  
+    - Bir dizi tanımlamak bir [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md).  
   
-    -   İle bir sınıf tanımlayan bir [Class deyimi](../../../../visual-basic/language-reference/statements/class-statement.md).  
+    - İle bir sınıf tanımlayan bir [Class deyimi](../../../../visual-basic/language-reference/statements/class-statement.md).  
   
 3. İle bir değişken bildirmek bir `Dim` deyimi.  
   

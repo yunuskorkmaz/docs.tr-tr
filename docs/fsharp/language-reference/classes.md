@@ -3,11 +3,11 @@ title: Sınıflar
 description: Bilgi nasıl F# sınıfları, özellikleri, yöntemleri ve olayları olabilir nesneleri temsil eden türleridir.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6bf838e98acecb89436d3e87809d9eb6da0c66d5
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61870298"
 ---
 # <a name="classes"></a>Sınıflar
 

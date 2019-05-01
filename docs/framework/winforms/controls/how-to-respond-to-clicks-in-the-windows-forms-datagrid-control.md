@@ -13,11 +13,11 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
 ms.openlocfilehash: 55ca52390cd6c5d5af4a764ea4438d8ce935dfbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913100"
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Nasıl yapılır: Windows Forms DataGrid Denetiminde Tıklamalara Yanıt Verme
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "59191906"
   
 ### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>DataGrid kullanıcı farklı bir hücre seçtiğinde algılamak için  
   
--   İçinde <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> olay işleyicisi, uygun şekilde yanıt vermek için kod yazın.  
+- İçinde <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> olay işleyicisi, uygun şekilde yanıt vermek için kod yazın.  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -56,7 +56,7 @@ ms.locfileid: "59191906"
   
 ### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>Kullanıcı hangi kısmını DataGrid tıkladı belirlemek için  
   
--   Çağrı <xref:System.Windows.Forms.DataGrid.HitTest%2A> uygun olay işleyicisi, gibi yönteminde <xref:System.Windows.Forms.Control.MouseDown> veya <xref:System.Windows.Forms.Control.Click> olay.  
+- Çağrı <xref:System.Windows.Forms.DataGrid.HitTest%2A> uygun olay işleyicisi, gibi yönteminde <xref:System.Windows.Forms.Control.MouseDown> veya <xref:System.Windows.Forms.Control.Click> olay.  
   
      <xref:System.Windows.Forms.DataGrid.HitTest%2A> Yöntemi döndürür bir <xref:System.Windows.Forms.DataGrid.HitTestInfo> satır ve sütunları tıklandı alanı içeren nesne.  
   

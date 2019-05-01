@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: 84dda12b-88a2-4cd2-92b3-8db87b28d14c
 ms.openlocfilehash: 49e7d6768d8739bba94c9e8d38bcc582c8bd6e4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902908"
 ---
 # <a name="how-to-represent-tables-as-classes"></a>Nasıl yapılır: Tabloları Sınıf Olarak Temsil Etme
 Kullanım [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.TableAttribute> bir sınıf, bir veritabanı tablosu ile ilişkili bir varlık sınıfı olarak belirtmek için özniteliği.  
   
 ### <a name="to-map-a-class-to-a-database-table"></a>Bir sınıf için bir veritabanı tablosu eşlemek için  
   
--   Ekleme <xref:System.Data.Linq.Mapping.TableAttribute> sınıf bildirimine özniteliği.  
+- Ekleme <xref:System.Data.Linq.Mapping.TableAttribute> sınıf bildirimine özniteliği.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod kurar `Customer` sınıf ile ilişkili bir varlık sınıfı olarak `Customers` veritabanı tablosu.  

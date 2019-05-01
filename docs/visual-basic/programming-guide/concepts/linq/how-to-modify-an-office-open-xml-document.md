@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Office Open XML belgesi (Visual Basic) değiştirme'
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
 ms.openlocfilehash: 5ec5451112855b687abded3ec64dda18423881f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942564"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Nasıl yapılır: Office Open XML belgesi (Visual Basic) değiştirme
 Bu konuda kaydeder Office Open XML belge açılır ve değiştirdiği bir örnek sunulmaktadır.  

@@ -3,11 +3,11 @@ title: SQL Server’da Uygulama Rolleri Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
 ms.openlocfilehash: f836fd239eca30d0a1f4a667cddc844446d1d951
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878026"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>SQL Server’da Uygulama Rolleri Oluşturma
 Uygulama rolleri, bir veritabanı rolü ya da kullanıcı yerine bir uygulama için izinler atamak için bir yol sağlar. Kullanıcılar veritabanına bağlanmak, uygulama rolü etkinleştirmek ve uygulamaya verilen izinler varsayılır. Uygulama rolü için verilen izinler bağlantı süresi boyunca yürürlükte değil.  
@@ -18,23 +18,23 @@ Uygulama rolleri, bir veritabanı rolü ya da kullanıcı yerine bir uygulama i�
 ## <a name="application-role-features"></a>Uygulama rolü özellikleri  
  Uygulama rolleri aşağıdaki özelliklere sahiptir:  
   
--   Veritabanı rolünden farklı olarak, uygulama rolleri hiç üye içerir.  
+- Veritabanı rolünden farklı olarak, uygulama rolleri hiç üye içerir.  
   
--   Uygulama rolleri, uygulamanın uygulama rolü adı ve parola sağlayan olduğunda etkinleşir `sp_setapprole` sistem saklı yordamı.  
+- Uygulama rolleri, uygulamanın uygulama rolü adı ve parola sağlayan olduğunda etkinleşir `sp_setapprole` sistem saklı yordamı.  
   
--   Parola istemci bilgisayarında depolanır ve çalışma zamanında sağlanan; bir uygulama rolü içinde SQL Server etkinleştirilemiyor.  
+- Parola istemci bilgisayarında depolanır ve çalışma zamanında sağlanan; bir uygulama rolü içinde SQL Server etkinleştirilemiyor.  
   
--   Parola şifrelenmez. Parola parametresi tek yönlü bir karma depolanır.  
+- Parola şifrelenmez. Parola parametresi tek yönlü bir karma depolanır.  
   
--   Sonra uygulama rolü edinilen izinleri bağlantı süresi boyunca yürürlükte kalır.  
+- Sonra uygulama rolü edinilen izinleri bağlantı süresi boyunca yürürlükte kalır.  
   
--   Uygulama rolü için izinleri devralır `public` rol.  
+- Uygulama rolü için izinleri devralır `public` rol.  
   
--   Bir üyesi değilse `sysadmin` sabit sunucu rolünün bir uygulama rolü etkinleştirir, güvenlik bağlamı, uygulama rolü için bağlantının süresi boyunca geçer.  
+- Bir üyesi değilse `sysadmin` sabit sunucu rolünün bir uygulama rolü etkinleştirir, güvenlik bağlamı, uygulama rolü için bağlantının süresi boyunca geçer.  
   
--   Oluşturursanız, bir `guest` hesabı uygulama rolü olan bir veritabanında herhangi birinin, çağırma oturum açma bilgileri veya uygulama rolü için bir veritabanı kullanıcı hesabı oluşturmanız gerekmez. Uygulama rolleri başka bir veritabanı yalnızca Eğer doğrudan erişebileceği bir `guest` hesap ikinci veritabanında var  
+- Oluşturursanız, bir `guest` hesabı uygulama rolü olan bir veritabanında herhangi birinin, çağırma oturum açma bilgileri veya uygulama rolü için bir veritabanı kullanıcı hesabı oluşturmanız gerekmez. Uygulama rolleri başka bir veritabanı yalnızca Eğer doğrudan erişebileceği bir `guest` hesap ikinci veritabanında var  
   
--   Oturum açma adları, SYSTEM_USER gibi döndüren yerleşik işlevler uygulama rolü çağrılan oturum açma adını döndürür. Veritabanı kullanıcı adları döndüren yerleşik işlevler uygulama rolü adını döndürür.  
+- Oturum açma adları, SYSTEM_USER gibi döndüren yerleşik işlevler uygulama rolü çağrılan oturum açma adını döndürür. Veritabanı kullanıcı adları döndüren yerleşik işlevler uygulama rolü adını döndürür.  
   
 ### <a name="the-principle-of-least-privilege"></a>En düşük öncelik ilkesini  
  Parola tehlikeye durumunda uygulama rolleri yalnızca gerekli izinleri verilmelidir. İzinleri `public` rol uygulama rolü kullanarak herhangi bir veritabanında iptal. Devre dışı `guest` uygulama rolü arayanlar erişmesini istemediğiniz herhangi bir veritabanı hesabında.  
@@ -47,9 +47,9 @@ Uygulama rolleri, bir veritabanı rolü ya da kullanıcı yerine bir uygulama i�
   
  Aşağıdaki alternatifleri isteyebilirsiniz.  
   
--   EXECUTE AS ile değiştirmeyi kullanın bağlamı ile tanımlama bilgisi NO REVERT ve onun yan tümceleri deyimiyle. Bir kullanıcı hesabı için bir oturum açma eşlenmemiş bir veritabanı oluşturabilirsiniz. Ardından bu hesap için izinleri atayın. Çünkü bu izni tabanlı, parola tabanlı oturum açma daha az kullanıcı ile EXECUTE AS kullanarak daha güvenlidir. Daha fazla bilgi için [ile SQL Server'da kimliğe bürünme izinlerini özelleştirme](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- EXECUTE AS ile değiştirmeyi kullanın bağlamı ile tanımlama bilgisi NO REVERT ve onun yan tümceleri deyimiyle. Bir kullanıcı hesabı için bir oturum açma eşlenmemiş bir veritabanı oluşturabilirsiniz. Ardından bu hesap için izinleri atayın. Çünkü bu izni tabanlı, parola tabanlı oturum açma daha az kullanıcı ile EXECUTE AS kullanarak daha güvenlidir. Daha fazla bilgi için [ile SQL Server'da kimliğe bürünme izinlerini özelleştirme](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
   
--   Saklı yordamlar yalnızca yordamları yürütme için izin verme sertifikalarla oturum açın. Daha fazla bilgi için [SQL Server'da saklı yordam imzalama](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Saklı yordamlar yalnızca yordamları yürütme için izin verme sertifikalarla oturum açın. Daha fazla bilgi için [SQL Server'da saklı yordam imzalama](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  

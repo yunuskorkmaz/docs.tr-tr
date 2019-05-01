@@ -5,11 +5,11 @@ ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 37241dd666a5d10eeb35bcbb4c9e09a5bc56f620
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61871520"
 ---
 # <a name="mitigation-path-normalization"></a>Azaltma: Yol normalleştirme
 Hedef uygulama ile başlangıç [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], .NET Framework'teki yolu normalleştirme değişti.  
@@ -17,26 +17,26 @@ Hedef uygulama ile başlangıç [!INCLUDE[net_v462](../../../includes/net-v462-m
 ## <a name="what-is-path-normalization"></a>Yol normalleştirme nedir?  
  Bir yol normalleştirme, böylece geçerli bir yol hedef işletim sisteminde uyan bir yol veya dosya tanımlayan dize değiştirme içerir. Normalleştirme genellikle içerir:  
   
--   Bileşen ve dizin ayırıcı standart hale getirme.  
+- Bileşen ve dizin ayırıcı standart hale getirme.  
   
--   Geçerli dizine göreli bir yol uygulanıyor.  
+- Geçerli dizine göreli bir yol uygulanıyor.  
   
--   Göreli dizini değerlendirme (`.`) veya bir üst dizin (`..`) bir yolda.  
+- Göreli dizini değerlendirme (`.`) veya bir üst dizin (`..`) bir yolda.  
   
--   Karakterleri kırpma belirtilmiş.  
+- Karakterleri kırpma belirtilmiş.  
   
 ## <a name="the-changes"></a>Değişiklikleri  
  Hedefleyen uygulamalar ile başlayan [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], yol normalleştirme aşağıdaki yollarla değişmiştir:  
   
--   İşletim sistemi için çalışma zamanı erteler [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) yolları'leri normalleştirmek için işlevi.  
+- İşletim sistemi için çalışma zamanı erteler [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) yolları'leri normalleştirmek için işlevi.  
   
--   Artık normalleştirme directory Segment (örneğin, bir dizin adı, sonunda boşluk) sonuna kırpma içerir.  
+- Artık normalleştirme directory Segment (örneğin, bir dizin adı, sonunda boşluk) sonuna kırpma içerir.  
   
--   Cihaz yolu sözdizimi tam güven için destek dahil olmak üzere `\\.\` ve dosya g/ç API'leri mscorlib.dll için `\\?\`.  
+- Cihaz yolu sözdizimi tam güven için destek dahil olmak üzere `\\.\` ve dosya g/ç API'leri mscorlib.dll için `\\?\`.  
   
--   Çalışma zamanı, cihaz sözdizimi yolları doğrulamaz.  
+- Çalışma zamanı, cihaz sözdizimi yolları doğrulamaz.  
   
--   Alternatif veri akışları erişmek için cihaz sözdizimi desteklenmiyor.  
+- Alternatif veri akışları erişmek için cihaz sözdizimi desteklenmiyor.  
   
 ## <a name="impact"></a>Etki  
  Hedefleyen uygulamalar için [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] veya daha sonra bu değişiklikleri varsayılan olarak etkindir. Daha önce erişilemeyen yolları erişmek yöntemleri sağlarken performansı.  

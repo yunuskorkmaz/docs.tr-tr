@@ -15,11 +15,11 @@ ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 77740f86265db86c998af25e6e9ed4c20a7014e6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910318"
 ---
 # <a name="commonly-used-collection-types"></a>Çok Kullanılan Koleksiyon Türleri
 Koleksiyon, karma tabloları, kuyrukları, yığınları, paketleri, sözlük ve listeler gibi veri koleksiyonlarının ortak çeşitlemeleri türleridir.  

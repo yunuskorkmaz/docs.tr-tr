@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
 ms.openlocfilehash: fa8607bf72dfb344048ec82514182dcb6810274d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803863"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>'ByRef' parametresinin değeri kopyalama '\<parametername >' eşleşen bağımsız değişkene geri türüne daralan '\<typename1 >' türü için '\<typename2 >'
 Bir yordam bağımsız değişken için karşılık gelen parametre türü widens çağrılır ve bağımsız değişken parametre dönüştürme daraltma.  
@@ -27,11 +27,11 @@ Bir yordam bağımsız değişken için karşılık gelen parametre türü widen
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Mümkünse, Visual Basic, herhangi bir dönüştürme yapmak gerekmez. Bu nedenle aynı türde çağıran bir bağımsız değişken yordam parametresi kullanın.  
+- Mümkünse, Visual Basic, herhangi bir dönüştürme yapmak gerekmez. Bu nedenle aynı türde çağıran bir bağımsız değişken yordam parametresi kullanın.  
   
--   Bağımsız değişken içeren bir yordamı çağırma gerekiyorsa parametre türünden farklı yazın ancak ihtiyaç duymayan çağırma bağımsız değişkeni bir değer döndürmek parametre tanımlayın [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) yerine `ByRef`.  
+- Bağımsız değişken içeren bir yordamı çağırma gerekiyorsa parametre türünden farklı yazın ancak ihtiyaç duymayan çağırma bağımsız değişkeni bir değer döndürmek parametre tanımlayın [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) yerine `ByRef`.  
   
--   Çağırma bağımsız değişkeni bir değer döndürmesi gerekiyorsa, geriye doğru dönüştürme işleci olarak tanımlama [Widening](../../../visual-basic/language-reference/modifiers/widening.md), mümkünse.  
+- Çağırma bağımsız değişkeni bir değer döndürmesi gerekiyorsa, geriye doğru dönüştürme işleci olarak tanımlama [Widening](../../../visual-basic/language-reference/modifiers/widening.md), mümkünse.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - attributes [Visual Basic]
 ms.assetid: 5deb2b8a-1afd-4dbd-8ee8-f093d74ad0eb
 ms.openlocfilehash: b3f93cfdde8e5063c5bf0503857dfc149ee90026
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797052"
 ---
 # <a name="attributes-visual-basic"></a>Öznitelikler (Visual Basic)
 Visual Basic nesneleri yönetilmeyen kod ile birlikte çalışmak sağlayan çeşitli öznitelikler ve modül üyeleri modül adı erişilmesini sağlayan bir öznitelik sağlar. Aşağıdaki tabloda, Visual Basic tarafından kullanılan öznitelikleri listeler.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
 ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906717"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir yapıyı bildirme
 Yapı bildirimi ile başlayan [Structure deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md), ve ile sona `End Structure` deyimi. Bu iki deyimden arasında en az bir bildirmelisiniz *öğesi*. Öğeleri herhangi bir veri türünde olabilir, ancak en az bir paylaşılmayan bir değişken veya paylaşılmayan, özel olmayan bir olay olması gerekir.  

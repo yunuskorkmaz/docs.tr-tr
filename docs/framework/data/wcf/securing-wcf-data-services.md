@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
 ms.openlocfilehash: 1e134d877c45af00e2a2fb7e7ef0882ffd7ddc48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875738"
 ---
 # <a name="securing-wcf-data-services"></a>WCF Veri Hizmetlerinin Güvenliğini Sağlama
 Bu konuda, geliştirme, dağıtma ve WCF Veri Hizmetleri ve uygulamaları, açık veri Protokolü (OData) destekleyen, erişim Hizmetleri'ni çalıştırmak için belirli güvenlik konuları açıklanmaktadır. Güvenli .NET Framework uygulamaları oluşturmaya yönelik önerileri de izlemelidir.  
@@ -82,15 +82,15 @@ OData HTTP protokolünü temel alır. HTTP iletisinde, üstbilgi veri hizmeti ta
 ### <a name="custom-hosting-requirements"></a>Özel Barındırma Gereksinimleri  
  Varsayılan olarak, WCF Veri Hizmetleri, IIS'de barındırılan ASP.NET uygulaması olarak oluşturulur. Bu, veri hizmetinin bu platformun güvenli davranışlarını kullanmasını sağlar. Özel bir ana bilgisayar tarafından barındırılan bir WCF Veri Hizmetleri tanımlayabilirsiniz. Daha fazla bilgi için [veri hizmetini barındıran](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md). Veri hizmetini barındıran bileşenler ve platform, veri hizmetine yapılan saldırıları önlemek için aşağıdaki güvenlik davranışlarını sağlamalıdır:  
   
--   Olası tüm işlemler için veri hizmeti isteğinde kabul edilen URI'nin uzunluğunu sınırlama.  
+- Olası tüm işlemler için veri hizmeti isteğinde kabul edilen URI'nin uzunluğunu sınırlama.  
   
--   Hem gelen hem de giden HTTP iletilerinin boyutunu sınırlama.  
+- Hem gelen hem de giden HTTP iletilerinin boyutunu sınırlama.  
   
--   Herhangi bir zamanda bekleyen isteklerin toplam sayısını sınırlama.  
+- Herhangi bir zamanda bekleyen isteklerin toplam sayısını sınırlama.  
   
--   HTTP üstbilgilerinin ve değerlerinin boyutunu sınırlama ve üstbilgi verilerine WCF Veri Hizmetleri erişim sağlar.  
+- HTTP üstbilgilerinin ve değerlerinin boyutunu sınırlama ve üstbilgi verilerine WCF Veri Hizmetleri erişim sağlar.  
   
--   TCP SYN ve ileti yeniden yürütme saldırıları gibi bilinen saldırıları algılama ve önleme.  
+- TCP SYN ve ileti yeniden yürütme saldırıları gibi bilinen saldırıları algılama ve önleme.  
   
 ### <a name="values-are-not-further-encoded"></a>Değerler Daha Fazla Kodlanmaz  
  Veri hizmetine gönderilen özellik değerleri WCF Veri Hizmetleri çalışma zamanı tarafından daha fazla kodlanmaz. Örneğin, bir varlığın dize özelliği biçimlendirilmiş HTML içeriği içerdiğinde, etiketler veri hizmeti tarafından kodlanmış HTML değildir. Veri hizmeti yanıttaki özellik değerlerini de kodlamaz. İstemci Kitaplığı da ek kodlama gerçekleştirmez.  
@@ -98,17 +98,17 @@ OData HTTP protokolünü temel alır. HTTP iletisinde, üstbilgi veri hizmeti ta
 ### <a name="considerations-for-client-applications"></a>İstemci Uygulamaları için Önemli Noktalar  
  Aşağıdaki güvenlik hususlarını WCF Veri Hizmetleri istemci OData hizmetlere erişmek için kullandıkları uygulamalar için geçerlidir:  
   
--   İstemci kitaplığı, veri hizmetine erişmek için kullanılan protokollerin uygun düzeyde güvenlik sağladığını varsayar.  
+- İstemci kitaplığı, veri hizmetine erişmek için kullanılan protokollerin uygun düzeyde güvenlik sağladığını varsayar.  
   
--   İstemci kitaplığı, platform tarafından sağlanan temel taşıma yığınlarının zaman aşımları ve ayrıştırma seçenekleri için tüm varsayılan değerleri kullanır.  
+- İstemci kitaplığı, platform tarafından sağlanan temel taşıma yığınlarının zaman aşımları ve ayrıştırma seçenekleri için tüm varsayılan değerleri kullanır.  
   
--   İstemci kitaplığı, uygulama yapılandırma dosyalarından ayar okumaz.  
+- İstemci kitaplığı, uygulama yapılandırma dosyalarından ayar okumaz.  
   
--   İstemci kitaplığı, etki alanları arasında erişim mekanizması uygulamaz. Bunun yerine, temel HTTP yığını tarafından sağlanan mekanizmalardan yararlanır.  
+- İstemci kitaplığı, etki alanları arasında erişim mekanizması uygulamaz. Bunun yerine, temel HTTP yığını tarafından sağlanan mekanizmalardan yararlanır.  
   
--   İstemci kitaplığının kullanıcı arabirimi öğesi yoktur ve hiçbir zaman aldığı veya gönderdiği verileri görüntülemeye veya oluşturmaya çalışmaz.  
+- İstemci kitaplığının kullanıcı arabirimi öğesi yoktur ve hiçbir zaman aldığı veya gönderdiği verileri görüntülemeye veya oluşturmaya çalışmaz.  
   
--   İstemci uygulamalarının her zaman kullanıcı girişini ve güvenilmeyen hizmetlerden kabul edilen verileri doğrulamasını öneririz.  
+- İstemci uygulamalarının her zaman kullanıcı girişini ve güvenilmeyen hizmetlerden kabul edilen verileri doğrulamasını öneririz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

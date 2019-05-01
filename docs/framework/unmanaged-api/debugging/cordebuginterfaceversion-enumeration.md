@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: df57cd5a2121c216fc23b9c608de091b002147e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792918"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion Numaralandırması
 Bir arabirim, .NET Framework sürümünü veya bir arabirim içinde tanıtılan .NET Framework sürümünü belirtir.  
@@ -227,15 +227,15 @@ typedef enum CorDebugInterfaceVersion {
 ## <a name="interface-names"></a>Arabirim adı  
  Hata ayıklama API Arabirimi adların sonuna sayı (örneğin, "3" `ICorDebugThread3`) arabirimi, .NET Framework'ün sürümü olmayan sürümünü belirtir. Hata ayıklama API'sindeki tüm arabirimi adları, .NET Framework sürüm 1 sunulan arabirimler dışında sürüm numaralarını içerir. Arabirimi sürüm numaralarını and.NET Framework sürüm numaraları arasındaki bir ilişkiyi içerik olarak farklı.  
   
--   Tüm örtük olarak sürüm 1 olduğundan, .NET Framework sürüm 1.0 sunulan arabirimler numaralarını dahil değildir.  
+- Tüm örtük olarak sürüm 1 olduğundan, .NET Framework sürüm 1.0 sunulan arabirimler numaralarını dahil değildir.  
   
--   .NET Framework sürüm 1.1, 1.0 sürümü arabirimleri kullanır ve herhangi bir yeni hata ayıklama arabirimleri sunmaz.  
+- .NET Framework sürüm 1.1, 1.0 sürümü arabirimleri kullanır ve herhangi bir yeni hata ayıklama arabirimleri sunmaz.  
   
--   .NET Framework 2.0 sürümünde sunulan 14 hata ayıklama arabirimleri mantıksal uzantıları kendi sürüm 1 ortaklarınıza ve "2" sayısı adlarını içerir.  
+- .NET Framework 2.0 sürümünde sunulan 14 hata ayıklama arabirimleri mantıksal uzantıları kendi sürüm 1 ortaklarınıza ve "2" sayısı adlarını içerir.  
   
--   .NET Framework 3.0 ve 3.5 sürümlerini mevcut .NET Framework 2.0 arabirimleri kullanır ve hiçbir yeni arabirim ekleme.  
+- .NET Framework 3.0 ve 3.5 sürümlerini mevcut .NET Framework 2.0 arabirimleri kullanır ve hiçbir yeni arabirim ekleme.  
   
--   [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Arabirimi sürümleri bir karışımını sunar. Örneğin, her ikisi de `ICorDebugThread3` ve `ICorDebugThread4` üçüncü ve dördüncü sürümlerini görünen `ICorDebugThread` arabirimi. [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] İlk sürümü de tanıtır `ICorDebugStackWalk` arabirimi ve ikinci sürümü `ICorDebugNativeFrame` arabirimi (`ICorDebugNativeFrame2`).  
+- [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Arabirimi sürümleri bir karışımını sunar. Örneğin, her ikisi de `ICorDebugThread3` ve `ICorDebugThread4` üçüncü ve dördüncü sürümlerini görünen `ICorDebugThread` arabirimi. [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] İlk sürümü de tanıtır `ICorDebugStackWalk` arabirimi ve ikinci sürümü `ICorDebugNativeFrame` arabirimi (`ICorDebugNativeFrame2`).  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

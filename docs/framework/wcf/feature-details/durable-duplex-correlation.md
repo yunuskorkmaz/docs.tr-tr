@@ -3,11 +3,11 @@ title: Dayanıklı Çift Yönlü Bağıntı
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
 ms.openlocfilehash: f2f5fe557f1f8754758d0dd9b4042cacc62cc61f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856615"
 ---
 # <a name="durable-duplex-correlation"></a>Dayanıklı Çift Yönlü Bağıntı
 Dayanıklı çift yönlü bağıntı, geri çağırma bağıntı olarak da bilinen bir iş akışı hizmeti ilk çağırana bir geri çağırma göndermek için bir gereksinimi olduğunda yararlıdır. WCF çift yönlü, farklı bir geri çağırma dilediğiniz zaman gelecekte oluşabilir ve aynı kanalı veya kanal ömrü bağlı değildir; çağıran bir etkin uç noktası için geri çağırma iletiyi dinleme sahip tek gereksinim olmasıdır. Bu, uzun süre çalışan konuşmada iletişim kurmak iki iş akışı hizmetleri sağlar. Bu konu, dayanıklı çift yönlü bağıntı genel bir bakış sağlar.  
@@ -16,7 +16,7 @@ Dayanıklı çift yönlü bağıntı, geri çağırma bağıntı olarak da bilin
  Dayanıklı çift yönlü bağıntı kullanmak için iki hizmet gibi çift yönlü işlemleri destekleyen bir bağlamı etkin bağlama kullanmalısınız <xref:System.ServiceModel.NetTcpContextBinding> veya <xref:System.ServiceModel.WSHttpContextBinding>. Arama hizmeti kayıtları bir <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> kendi istemci üzerinde istenen bağlama <xref:System.ServiceModel.Endpoint>. Alan hizmeti ilk çağrıda bu verileri alır ve ardından, kendi kullanır <xref:System.ServiceModel.Endpoint> içinde <xref:System.ServiceModel.Activities.Send> çağrıda arama hizmeti etkinlik. Bu örnekte, iki hizmet birbiriyle iletişim kurar. İlk hizmet ikinci hizmet üzerinde bir yöntemi çağırır ve ardından bir yanıt bekler. İkinci hizmet adını geri çağırma yöntemi bilir, ancak bu yöntem hizmetinin uç noktası, tasarım zamanında bilinmiyor.  
   
 > [!NOTE]
-> Dayanıklı çift yönlü yalnızca olabilir kullanılabilir <xref:System.ServiceModel.Channels.AddressingVersion> uç noktası ile yapılandırılmış <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Bu değilse bir <xref:System.InvalidOperationException> şu ileti ile özel durum oluştu: "iletiyi içeren bir uç nokta başvurusu için bir geri çağırma bağlam üstbilgiyle [AddressingVersion değerini](http://schemas.xmlsoap.org/ws/2004/08/addressing). Geri çağırma bağlam AddressingVersion değerini 'WSAddressing10' ile yapılandırıldığında, yalnızca iletilebilir.
+> Dayanıklı çift yönlü yalnızca olabilir kullanılabilir <xref:System.ServiceModel.Channels.AddressingVersion> uç noktası ile yapılandırılmış <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Bu, yoksa bir <xref:System.InvalidOperationException> şu ileti ile özel durum oluştu: "İletiyi içeren bir uç nokta başvurusu için bir geri çağırma bağlam üstbilgiyle [AddressingVersion değerini](http://schemas.xmlsoap.org/ws/2004/08/addressing). Geri çağırma bağlam AddressingVersion değerini 'WSAddressing10' ile yapılandırıldığında, yalnızca iletilebilir.
   
  Aşağıdaki örnekte, bir geri çağırma oluşturan bir iş akışı hizmeti barındırılan <xref:System.ServiceModel.Endpoint> kullanarak <xref:System.ServiceModel.WSHttpContextBinding>.  
   

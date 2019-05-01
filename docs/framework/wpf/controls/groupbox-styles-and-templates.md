@@ -10,11 +10,11 @@ helpviewer_keywords:
 - templates [WPF], GroupBox
 ms.assetid: 33df7037-0a1b-476f-b9d0-41566a777699
 ms.openlocfilehash: 5ef8e4b44bc2b6072fa730f33c10191b64954f7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911268"
 ---
 # <a name="groupbox-styles-and-templates"></a>GroupBox Stilleri ve Şablonları
 <a name="introduction"></a> Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.GroupBox> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  

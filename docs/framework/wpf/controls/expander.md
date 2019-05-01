@@ -11,11 +11,11 @@ helpviewer_keywords:
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
 ms.openlocfilehash: a7dc0d2cc32d387f87221748ab94ac82c2dfc8b0
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911839"
 ---
 # <a name="expander"></a>Genişletici
 Bir <xref:System.Windows.Controls.Expander> bir başlığı görüntüleme ve diğer ayrıntıları görmek için veya bir bölümü bir başlık en fazla daraltmak için bu üstbilgiyi Genişlet açmasına olanak sağlar.  

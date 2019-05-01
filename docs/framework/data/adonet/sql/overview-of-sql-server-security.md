@@ -3,20 +3,20 @@ title: SQL Server Güvenliğine Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
 ms.openlocfilehash: de0c79a95a786f33b05c88ce4ed298837f2a6923
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922206"
 ---
 # <a name="overview-of-sql-server-security"></a>SQL Server Güvenliğine Genel Bakış
 Güvenlik katmanları örtüşen derinlemesine savunma stratejisi, sayaç güvenlik tehditleri için en iyi yoludur. SQL Server veritabanı yöneticilerinin ve geliştiricilerin güvenli veritabanı uygulamaları ve sayaç tehditleri oluşturmak izin vermek için tasarlanmış bir güvenlik mimarisi sağlar. Her SQL Server sürümü, SQL Server'ın önceki sürümlerinde yeni özellikleri ve işlevleri tanıtımıyla geliştirdi. Ancak, güvenlik kutuya gelmez. Her uygulama, güvenlik gereksinimleri açısından benzersizdir. Geliştiriciler hangi özellik bileşimi anlamak gerekir ve işlevselliği için en uygun sayaç bilinen tehditlere ve gelecekte oluşabilecek tehditleri beklenir.  
   
  Bir SQL Server örneği ile sunucu başlangıç varlıkların hiyerarşik bir koleksiyonunu içerir. Her sunucu birden çok veritabanını, ve her veritabanı güvenliği sağlanabilir nesnelerin bir koleksiyonunu içerir. Güvenli kılınabilir her SQL Server ilişkili *izinleri* için verilebilir bir *asıl*, tek tek, bir grup olduğu veya SQL Server'a erişim verilen işlem. SQL Server güvenlik çerçevesi güvenli kılınabilir varlıklara erişimi yöneten *kimlik doğrulaması* ve *yetkilendirme*.  
   
--   Kimlik doğrulaması, SQL Server'ın kullandığı bir asıl sunucu değerlendiren kimlik bilgileri göndererek erişim isteğinde oturum açmadan işlemidir. Kimlik doğrulaması, kullanıcı veya kimlik doğrulaması gerçekleştirilen işlem kimliğini oluşturur.  
+- Kimlik doğrulaması, SQL Server'ın kullandığı bir asıl sunucu değerlendiren kimlik bilgileri göndererek erişim isteğinde oturum açmadan işlemidir. Kimlik doğrulaması, kullanıcı veya kimlik doğrulaması gerçekleştirilen işlem kimliğini oluşturur.  
   
--   Yetkilendirme bir sorumluya erişmek güvenli kılınabilir kaynakları ve işlemleri için bu kaynakları izin belirleme işlemidir.  
+- Yetkilendirme bir sorumluya erişmek güvenli kılınabilir kaynakları ve işlemleri için bu kaynakları izin belirleme işlemidir.  
   
  Bu bölümdeki konular, SQL Server güvenlik temelleri, SQL Server Books Online'nın ilgili sürümünde kapsamlı belgeler bağlantıları sağlayan kapsar.  
   

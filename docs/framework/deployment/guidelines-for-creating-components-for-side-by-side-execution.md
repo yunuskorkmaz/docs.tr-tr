@@ -8,52 +8,52 @@ ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0e88ba4260e9deaf53ae828f222d32f8ece61ffa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61873346"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Yan Yana Yürütme için Bileşen Oluşturma Yönergeleri
 Yan yana yürütme için tasarlanmış bileşen ya da yönetilen uygulamalar oluşturmak için aşağıdaki genel yönergeleri izleyin:  
   
--   Türü kimlik, bir dosyanın belirli bir sürüme bağlayın.  
+- Türü kimlik, bir dosyanın belirli bir sürüme bağlayın.  
   
      Ortak dil çalışma zamanı, tanımlayıcı adlı derlemeler kullanarak, belirli dosya sürümüne türü kimlik bağlar. Bir uygulama veya yan yana yürütme için bileşen oluşturmak için tüm derlemelerin tanımlayıcı bir ad vermeniz gerekir. Bu, kesin türü kimliği oluşturur ve herhangi bir tür çözümlemesi için doğru dosya yönlendirilir sağlar. Bir katı adlı derleme sürüm, kültür ve çalışma zamanı, bağlama isteği yerine getirmek için doğru dosyayı bulmak için kullanır. yayımcı bilgilerini içerir.  
   
--   Sürüm algılayan depolamayı kullanın.  
+- Sürüm algılayan depolamayı kullanın.  
   
      Çalışma zamanı, genel derleme önbelleğinde sürüm ile uyumlu depolama sağlamak için kullanır. Genel Derleme Önbelleği, .NET Framework kullanan her bir bilgisayarda yüklü bir sürümü kullanan dizin yapısıdır. Bu derleme için yeni bir sürümü yüklü olduğunda derlemeleri genel derleme önbelleğinde yüklü üzerine yazılmaz.  
   
--   Bir uygulama veya yalıtım modunda çalışan bir bileşen oluşturun.  
+- Bir uygulama veya yalıtım modunda çalışan bir bileşen oluşturun.  
   
      Bir uygulama veya yalıtım modunda çalışan bir bileşen, uygulamanın veya bileşenin iki örneği aynı anda çalıştırılırken, çakışmaları önlemek için kaynakları yönetmeniz gerekir. Ayrıca uygulama veya bileşenin bir sürüme özgü dosya yapısı kullanmanız gerekir.  
   
 ## <a name="application-and-component-isolation"></a>Uygulama ve bileşen yalıtım  
  Başarılı bir uygulama veya yan yana yürütme için bileşen tasarlamak için bir anahtar yalıtımı ' dir. Uygulama veya bileşen gereken tüm kaynakları yönetebilir, özellikle g/ç, yalıtılmış bir şekilde dosya. Uygulama veya bileşen yalıtım modunda çalıştığından emin olmak için aşağıdaki yönergeleri izleyin:  
   
--   Kayıt defterine bir sürüme özgü şekilde yazın. Yığınlar veya sürümü belirtmek ve bilgi veya durumu bileşen sürümleri arasında paylaşmayın anahtarları değerleri Store. Bu iki uygulamanın ya da bilgi yazmasını aynı anda çalışan bileşenleri engeller.  
+- Kayıt defterine bir sürüme özgü şekilde yazın. Yığınlar veya sürümü belirtmek ve bilgi veya durumu bileşen sürümleri arasında paylaşmayın anahtarları değerleri Store. Bu iki uygulamanın ya da bilgi yazmasını aynı anda çalışan bileşenleri engeller.  
   
--   Adlandırılmış çekirdek nesneleri sürüme özgü kılmak bir yarış durumu oluşmaz. Örneğin, aynı uygulamayı iki sürümlerinden iki semaforları birbirine beklerken bir yarış durumu oluşur.  
+- Adlandırılmış çekirdek nesneleri sürüme özgü kılmak bir yarış durumu oluşmaz. Örneğin, aynı uygulamayı iki sürümlerinden iki semaforları birbirine beklerken bir yarış durumu oluşur.  
   
--   Dosya ve dizin adları sürüm farkında olun. Bu dosya yapıları sürüm bilgisi esas yararlanmalıdır anlamına gelir.  
+- Dosya ve dizin adları sürüm farkında olun. Bu dosya yapıları sürüm bilgisi esas yararlanmalıdır anlamına gelir.  
   
--   Kullanıcı hesapları ve grupları bir sürüme özgü bir şekilde oluşturun. Kullanıcı hesapları ve grupları bir uygulama tarafından oluşturulan sürüm tarafından tanıtılmalıdır. Kullanıcı hesaplarını ve grupları bir uygulamanın sürümleri arasında paylaşmayın.  
+- Kullanıcı hesapları ve grupları bir sürüme özgü bir şekilde oluşturun. Kullanıcı hesapları ve grupları bir uygulama tarafından oluşturulan sürüm tarafından tanıtılmalıdır. Kullanıcı hesaplarını ve grupları bir uygulamanın sürümleri arasında paylaşmayın.  
   
 ## <a name="installing-and-uninstalling-versions"></a>Yükleme ve sürümleri kaldırma  
  Yan yana yürütme için bir uygulama tasarlarken, yükleme ve sürümleri kaldırma ile ilgili aşağıdaki yönergeleri izleyin:  
   
--   .NET Framework'ün altında farklı bir sürümünü çalıştıran diğer uygulamalar tarafından gerekli olabilecek kayıt defterinden bilgi silmeyin.  
+- .NET Framework'ün altında farklı bir sürümünü çalıştıran diğer uygulamalar tarafından gerekli olabilecek kayıt defterinden bilgi silmeyin.  
   
--   .NET Framework'ün altında farklı bir sürümünü çalıştıran diğer uygulamalar tarafından gerekli olabilecek kayıt defteri bilgilerini değiştirmeyin.  
+- .NET Framework'ün altında farklı bir sürümünü çalıştıran diğer uygulamalar tarafından gerekli olabilecek kayıt defteri bilgilerini değiştirmeyin.  
   
--   .NET Framework'ün altında farklı bir sürümünü çalıştıran diğer uygulamalar tarafından gerekli olabilecek COM bileşenlerini kaydı değildir.  
+- .NET Framework'ün altında farklı bir sürümünü çalıştıran diğer uygulamalar tarafından gerekli olabilecek COM bileşenlerini kaydı değildir.  
   
--   Değişmez **Inprocserver32** veya diğer önceden kaydedilmiş bir COM sunucusu için kayıt defteri girdileri.  
+- Değişmez **Inprocserver32** veya diğer önceden kaydedilmiş bir COM sunucusu için kayıt defteri girdileri.  
   
--   Kullanıcı hesapları veya farklı bir .NET Framework sürümünde çalışan diğer uygulamalar tarafından gerekli olabilecek grupları silmeyin.  
+- Kullanıcı hesapları veya farklı bir .NET Framework sürümünde çalışan diğer uygulamalar tarafından gerekli olabilecek grupları silmeyin.  
   
--   Herhangi bir sürüm bilgisi olmayan yolunu içeren bir kayıt defterine eklemeyin.  
+- Herhangi bir sürüm bilgisi olmayan yolunu içeren bir kayıt defterine eklemeyin.  
   
 ## <a name="file-version-number-and-assembly-version-number"></a>Dosyanın sürüm numarası ve derleme sürüm numarası  
  Dosya, çalışma zamanı tarafından kullanılmayan bir Win32 sürüm kaynağı sürümüdür. Genel olarak, bir yerinde güncelleştirme için bile dosya sürümünü güncelleştirin. İki özdeş dosyaların farklı dosya sürümü bilgilerini olabilir ve iki farklı dosyalar aynı dosya sürümü bilgilerini olabilir.  

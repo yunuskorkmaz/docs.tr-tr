@@ -3,11 +3,11 @@ title: Bağıntı Sorunlarını Giderme
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
 ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932827"
 ---
 # <a name="troubleshooting-correlation"></a>Bağıntı Sorunlarını Giderme
 Bağıntı birbirleriyle ve doğru iş akışı örneği iş akışı hizmeti iletileri ilişkilendirmek için kullanılır, ancak doğru şekilde yapılandırılmamışsa, ileti alınmadı ve uygulamalar düzgün çalışmaz. Bu konu, bağıntı sorunlarını giderme için çeşitli yöntemler için genel bir bakış sağlar ve ayrıca bağıntı kullanırken oluşabilecek bazı yaygın sorunlar listelenir.
@@ -161,7 +161,7 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.
 ```
 
- Kalıcılık arasında izin verilmez bir <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> çifti veya <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> çifti. No-persist bölge hem etkinlikleri tamamlanana kadar sürer oluşturulur. Bir gecikme etkinliği gibi bir etkinliği bu no-persist bölgede ve boşta durumuna gelir iş akışının sağlar, bu konak olduklarında iş akışları kalıcı hale getirmek için yapılandırılmış boş olsa bile iş akışı kalıcı olmaz. Bir kalıcı etkinliği gibi bir etkinlik açıkça no-kalan bölgesinde kalıcı hale getirmek çalışırsa, önemli bir özel durum, iş akışı iptali oluşturulur ve <xref:System.ServiceModel.FaultException> çağırana döndürülür. Önemli özel durum iletisi "System.InvalidOperationException: kalıcı etkinlikleri hiçbir Kalıcılık bloğu içinde bulunan yapılamıyor.". Bu özel durumun çağırana döndürülen değil ancak izleme etkin olup olmadığını gözlemlendi. İleti için <xref:System.ServiceModel.FaultException> "işlemi gerçekleştirilemedi iş akışı örneği '5836145b 7da2 - 49 d 0-a052-a49162adeab6' tamamlandığından" olan arayana döndürülür.
+ Kalıcılık arasında izin verilmez bir <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> çifti veya <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> çifti. No-persist bölge hem etkinlikleri tamamlanana kadar sürer oluşturulur. Bir gecikme etkinliği gibi bir etkinliği bu no-persist bölgede ve boşta durumuna gelir iş akışının sağlar, bu konak olduklarında iş akışları kalıcı hale getirmek için yapılandırılmış boş olsa bile iş akışı kalıcı olmaz. Bir kalıcı etkinliği gibi bir etkinlik açıkça no-kalan bölgesinde kalıcı hale getirmek çalışırsa, önemli bir özel durum, iş akışı iptali oluşturulur ve <xref:System.ServiceModel.FaultException> çağırana döndürülür. Önemli özel durum iletisi "System.InvalidOperationException: Kalıcı etkinlikleri hiçbir Kalıcılık bloğu içinde bulunan yapılamıyor. ". Bu özel durumun çağırana döndürülen değil ancak izleme etkin olup olmadığını gözlemlendi. İleti için <xref:System.ServiceModel.FaultException> "işlemi gerçekleştirilemedi iş akışı örneği '5836145b 7da2 - 49 d 0-a052-a49162adeab6' tamamlandığından" olan arayana döndürülür.
 
  İstek-yanıt bağıntısı hakkında daha fazla bilgi için bkz: [istek-yanıt](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md).
 
@@ -188,7 +188,7 @@ MessageQuerySet = new MessageQuerySet
 }
 ```
 
- Bir XPath sorgusu data korelace alınır, hatalı yapılandırıldıysa, şu iletiyle bir hata döndürülür: "boş bir sonuç kümesi bir bağıntı sorgu üretilenleri kaydeder. Lütfen bağıntı sorguları uç noktası için doğru şekilde yapılandırıldığından emin olun." Bu sorunu gidermek için hızlı bir şekilde, önceki bölümde açıklandığı bir değişmez değer ile XPath sorgusu değiştirmektir. XPath sorgusu Oluşturucusu'nda kullanmanız durumunda bu sorun oluşabilir **bağıntı başlatıcılar Ekle** veya **definice vlastnosti Correlateson** iletişim kutuları ve iş akışı hizmetinizi ileti sözleşmeleri kullanır. Aşağıdaki örnekte, bir ileti anlaşması sınıfı tanımlanır.
+ Bir XPath sorgusu data korelace alınır, hatalı yapılandırıldıysa, şu iletiyle bir hata döndürülür: "Boş bir sonuç kümesi bir bağıntı sorgu üretilenleri kaydeder. Lütfen bağıntı sorguları uç noktası için doğru şekilde yapılandırıldığından emin olun." Bu sorunu gidermek için hızlı bir şekilde, önceki bölümde açıklandığı bir değişmez değer ile XPath sorgusu değiştirmektir. XPath sorgusu Oluşturucusu'nda kullanmanız durumunda bu sorun oluşabilir **bağıntı başlatıcılar Ekle** veya **definice vlastnosti Correlateson** iletişim kutuları ve iş akışı hizmetinizi ileti sözleşmeleri kullanır. Aşağıdaki örnekte, bir ileti anlaşması sınıfı tanımlanır.
 
 ```csharp
 [MessageContract]

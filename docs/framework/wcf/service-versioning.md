@@ -3,11 +3,11 @@ title: Hizmet Sürümü Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
 ms.openlocfilehash: 27d54cdf6f49bd9433f43290c97706af81d98b6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949792"
 ---
 # <a name="service-versioning"></a>Hizmet Sürümü Oluşturma
 İlk dağıtım ve potansiyel olarak kendi ömürlerine sırasında birkaç kez sonra Hizmetleri (ve bunlar ortaya uç noktaları) için çeşitli iş gereksinimlerini, bilgi teknolojisi gereksinimlerini değiştirme gibi nedenlerle, değiştirilmesi veya diğer adres gerekebilir sorun. Her değişikliği hizmetinin yeni bir sürümünü içeriyor. Bu konu, Windows Communication Foundation (WCF) sürüm oluşturmayı göz önünde bulundurun açıklanmaktadır.  
@@ -15,13 +15,13 @@ ms.locfileid: "59122414"
 ## <a name="four-categories-of-service-changes"></a>Hizmet değişikliklerini dört kategorileri  
  Gerekli hizmetlere yapılan değişiklikleri dört kategoride sınıflandırılabilir:  
   
--   Sözleşme değişiklikler: Örneğin, bir işlem eklenebilir veya bir veri öğesi içinde bir ileti eklendiğinde veya değiştirilmiş.  
+- Sözleşme değişiklikler: Örneğin, bir işlem eklenebilir veya bir veri öğesi içinde bir ileti eklendiğinde veya değiştirilmiş.  
   
--   Değişiklikleri adres: Örneğin, bir hizmet uç noktaları yeni adreslerine sahip olduğu farklı bir konuma taşır.  
+- Değişiklikleri adres: Örneğin, bir hizmet uç noktaları yeni adreslerine sahip olduğu farklı bir konuma taşır.  
   
--   Bağlama değişiklikler: Örneğin, bir güvenlik mekanizması değişiklikler veya ayarlarını değiştirebilirsiniz.  
+- Bağlama değişiklikler: Örneğin, bir güvenlik mekanizması değişiklikler veya ayarlarını değiştirebilirsiniz.  
   
--   Uygulama değişiklikler: Örneğin, bir iç yöntem uygulaması değiştiğinde.  
+- Uygulama değişiklikler: Örneğin, bir iç yöntem uygulaması değiştiğinde.  
   
  Bu değişikliklerden bazıları "önemli" olarak adlandırılır ve diğerleri "bölünemez." Bir değişiklik *bölünemez* başarıyla önceki sürümde işlenen tüm iletileri yeni sürümde başarılı bir şekilde işlenir. Bu ölçütü karşılamayan herhangi bir değişiklik olup bir *bozucu* değiştirin.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "59122414"
 ### <a name="strict-versioning"></a>Katı sürüm oluşturma  
  Birçok senaryoda sürümleri değiştirerek bir sorun olduğunda hizmeti Geliştirici istemciler üzerinde denetime sahip değil ve bu nedenle nasıl bunlar XML veya şema yapılacak değişikliklere tepki hakkında varsayımlar yapamazsınız. Bu durumlarda, yeni iletileri iki nedenden dolayı eski şemayla, doğrulama garanti etmeniz gerekir:  
   
--   Eski istemciler, şema değişmez varsayımına ile geliştirilmiştir. Bunlar, bunlar hiç için tasarlanmış olan iletileri işlemek başarısız olabilir.  
+- Eski istemciler, şema değişmez varsayımına ile geliştirilmiştir. Bunlar, bunlar hiç için tasarlanmış olan iletileri işlemek başarısız olabilir.  
   
--   Eski istemciler, hatta iletileri işlemek üzere çalışmadan önce gerçek şema doğrulaması eski şemayla gerçekleştirebilir.  
+- Eski istemciler, hatta iletileri işlemek üzere çalışmadan önce gerçek şema doğrulaması eski şemayla gerçekleştirebilir.  
   
  Önerilen senaryolarda adları mevcut veri sözleşmeleri sabit olarak kabul et ve yenilerini benzersiz XML ile oluşturmak için tam bir yaklaşımdır. Hizmet Geliştirici sonra yeni yöntemler için var olan bir hizmet sözleşmesini eklemek veya yeni bir hizmet sözleşmesi yeni veri anlaşması kullanan yöntemleri ile oluşturabilirsiniz.  
   
@@ -63,9 +63,9 @@ ms.locfileid: "59122414"
 ### <a name="distinguishing-between-data-contract-and-net-types"></a>Veri sözleşmesi ve .NET türleri arasında ayrım  
  Bir .NET sınıf veya yapı bir veri anlaşması uygulayarak izlenebilir <xref:System.Runtime.Serialization.DataContractAttribute> öznitelik sınıfı. .NET türü ve onun veri sözleşme projeksiyonlar iki ayrı sorunları var. Aynı veri anlaşması projeksiyon ile birden çok .NET türleri olması mümkündür. Bu ayrım, böylece mevcut istemcilerin bile word'ün katı algılama uyum koruma tahmini veri sözleşme korurken .NET türünü değiştirmek izin verme özellikle yararlıdır. Her zaman bu birbirinden .NET type ve veri sözleşme korumak için yapmanız gereken iki şey vardır:  
   
--   Belirtin bir <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> ve <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>. Her zaman ve .NET türünün adı önlemek için veri anlaşması ad alanı sözleşmede açıklanmasını gelen ad alanı ve adını belirtmeniz gerekir. .NET ad alanını değiştirme veya adı yazın, daha sonra karar verirseniz, bu şekilde, veri sözleşme aynı kalır.  
+- Belirtin bir <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> ve <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>. Her zaman ve .NET türünün adı önlemek için veri anlaşması ad alanı sözleşmede açıklanmasını gelen ad alanı ve adını belirtmeniz gerekir. .NET ad alanını değiştirme veya adı yazın, daha sonra karar verirseniz, bu şekilde, veri sözleşme aynı kalır.  
   
--   Belirtin <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>. Her zaman .NET üye adınızı sözleşmede yararlanılmasını önlemek için veri üyeleri adını belirtmeniz gerekir. Daha sonra .NET üyenin adını değiştirmeye karar verirseniz, bu şekilde, veri sözleşme aynı kalır.  
+- Belirtin <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>. Her zaman .NET üye adınızı sözleşmede yararlanılmasını önlemek için veri üyeleri adını belirtmeniz gerekir. Daha sonra .NET üyenin adını değiştirmeye karar verirseniz, bu şekilde, veri sözleşme aynı kalır.  
   
 ### <a name="changing-or-removing-members"></a>Üyeleri kaldırma veya değiştirme  
  Lax sürüm kullanılabilir olsa bile bir üye adı ya da veri türünü değiştirme veya kaldırma veri üyeleri bölünmesi farklıdır. Gerekli değilse, yeni bir veri sözleşmesi oluşturun.  

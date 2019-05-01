@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Canvas control [WPF], setting positioning properties
 ms.assetid: 1636b950-2b5a-4507-8a10-c5034cc58b1c
 ms.openlocfilehash: 06508e1198736ccb1cbda41641dff4bc634ef82b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910487"
 ---
 # <a name="how-to-get-or-set-canvas-positioning-properties"></a>Nasıl yapılır: Tuval Konumlandırma Özelliklerini Alma veya Ayarlama
 Bu örnek, yerleştirme yöntemlerini kullanmayı gösterir. <xref:System.Windows.Controls.Canvas> alt konumlandırmak için öğesi. Bu örnekte bu içerikte bir <xref:System.Windows.Controls.ListBoxItem> temsil etmek için konumlandırma değerler ve değerlerin örneğine dönüştürür <xref:System.Double>, yerleştirme için gerekli bir bağımsız değişken olduğu. Değerlerin geri dizelere dönüştürülür ve metin olarak görüntülenen bir <xref:System.Windows.Controls.TextBlock> kullanarak öğesi <xref:System.Windows.Controls.Canvas.GetLeft%2A> yöntemi.  

@@ -1,18 +1,18 @@
 ---
-title: Var olan düğümleri bir belgeden diğerine kopyalama
+title: Var Olan Düğümleri Bir Belgeden Diğerine Kopyalama
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 744c97e8728d0a65bff8e7bb7a7dbb298afe1800
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44088095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934556"
 ---
-# <a name="copying-existing-nodes-from-one-document-to-another"></a>Var olan düğümleri bir belgeden diğerine kopyalama
+# <a name="copying-existing-nodes-from-one-document-to-another"></a>Var Olan Düğümleri Bir Belgeden Diğerine Kopyalama
 **ImportNode** yöntemi tarafından bir düğüm veya tüm düğüm alt ağacı kopyalandığı birinden mekanizmasıdır **XmlDocument** diğerine. Çağrısından döndürülen düğümü öznitelik değerleri, düğüm adı, düğüm türü ve ön ek, yerel ad ve ad alanı Tekdüzen Kaynak Tanımlayıcısı (URI) gibi tüm ad alanı ile ilgili özniteliklere de dahil olmak üzere kaynak belge düğümünden bir kopyasıdır. Kaynak belge değiştirilmez. Düğüm içe aktardıktan sonra hala düğümleri eklemek için kullanılan yöntemlerden birini kullanarak ağacına eklemeniz gerekir.  
   
  Düğüm, yeni bir belgeye eklendiğinde, yeni belgeyi bir düğümün sahip olduğu. Düğümlerden ayrı bir belge parçalarını oluşturulmamış olsa bile her düğüm oluşturulduğunda, sahip olan bir belge olduğunu nedenidir. Bu XML belge nesne modeli (DOM) bir gereksinimdir ve Fabrika oluşturma tasarım gereği zorunlu kılınır **XmlDocument** sınıfı. Örneğin, **CreateElement**, yeni bir düğüm oluşturmak için tek yoludur.  
@@ -28,7 +28,7 @@ ms.locfileid: "44088095"
 |XmlComment|Verileri dahil olmak üzere düğümü kopyalar.|Verileri dahil olmak üzere düğümü kopyalar.|  
 |XmlDocumentFragment|Alt kaynak düğümünün yinelemeli olarak içeri aktarıldı ve karşılık gelen alt ağacı oluşturmak için yeniden elde edilen düğümler var.|Boş bir **XmlDocumentFragment** oluşturulur.|  
 |XmlDocumentType|Düğümü kendi verisini dahil olmak üzere, kopyalar.|Düğümü kendi verisini dahil olmak üzere, kopyalar.|  
-|XmlElement|Kaynak öğesi alt öğeleri yinelemeli olarak içeri aktarıldı ve karşılık gelen alt ağacı oluşturmak için yeniden elde edilen düğümler var. **Not:** varsayılan öznitelik kopyalanmaz. İçeri aktarılan belge bu öğe adı için varsayılan öznitelikler tanımlıyorsa, bunlar atanır.|Belirtilen öznitelik düğümleri kaynak öğenin alınır ve oluşturulan **XmlAttribute** düğümleri, yeni bir öğe için eklenir. Alt düğümler kopyalanmaz. **Not:** varsayılan öznitelik kopyalanmaz. İçeri aktarılan belge bu öğe adı için varsayılan öznitelikler tanımlıyorsa, bunlar atanır.|  
+|XmlElement|Kaynak öğesi alt öğeleri yinelemeli olarak içeri aktarıldı ve karşılık gelen alt ağacı oluşturmak için yeniden elde edilen düğümler var. **Not:**  Varsayılan öznitelik kopyalanmaz. İçeri aktarılan belge bu öğe adı için varsayılan öznitelikler tanımlıyorsa, bunlar atanır.|Belirtilen öznitelik düğümleri kaynak öğenin alınır ve oluşturulan **XmlAttribute** düğümleri, yeni bir öğe için eklenir. Alt düğümler kopyalanmaz. **Not:**  Varsayılan öznitelik kopyalanmaz. İçeri aktarılan belge bu öğe adı için varsayılan öznitelikler tanımlıyorsa, bunlar atanır.|  
 |XmlEntityReference|Kaynak ve hedef belgeleri farklı şekilde tanımlanmış varlıkların sahip olabileceğinden, bu yöntem yalnızca kopyalar **XmlEntityReference** düğümü. Yerine konacak metin dahil değildir. Hedef belgede tanımlanan varlığı varsa, değeri atanır.|Kaynak ve hedef belgeleri farklı şekilde tanımlanmış varlıkların sahip olabileceğinden, bu yöntem yalnızca kopyalar **XmlEntityReference** düğümü. Yerine konacak metin dahil değildir. Hedef belgede tanımlanan varlığı varsa, değeri atanır.|  
 |XmlProcessingInstruction|Hedef ve veri değeri, içeri aktarılan bir düğümden diğerine kopyalar.|Hedef ve veri değeri, içeri aktarılan bir düğümden diğerine kopyalar.|  
 |XmlText|Verileri dahil olmak üzere düğümü kopyalar.|Verileri dahil olmak üzere düğümü kopyalar.|  

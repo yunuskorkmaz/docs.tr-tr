@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5ad12f94-7459-4a93-a421-4160d1a90715
 ms.openlocfilehash: 405a82c625853d242ca68088ffdf81b6bcd7c518
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922220"
 ---
 # <a name="multiple-bulk-copy-operations"></a>Çoklu Toplu Kopyalama İşlemleri
 Tek bir örneğini kullanarak birden çok toplu kopyalama işlemleri gerçekleştirebileceğiniz bir <xref:System.Data.SqlClient.SqlBulkCopy> sınıfı. İşlem parametrelerini (örneğin, hedef tablonun adı) kopyaları arasında değiştirirseniz, bunları önce herhangi bir sonraki çağrılar güncellemelisiniz **WriteToServer** yöntemleri, aşağıdaki örnekte gösterildiği gibi. Belirli bir örneği önceki toplu kopyalama işlemi olduğu açıkça değiştirmediğiniz sürece tüm özellik değerlerini aynı kalır.  

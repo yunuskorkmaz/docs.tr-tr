@@ -1,16 +1,16 @@
 ---
-title: WIF kod örneği dizini
+title: WIF Kod Örneği Dizini
 ms.date: 03/30/2017
 ms.assetid: 6711f01a-4743-43ce-95ab-5e2302a363ea
 author: BrucePerlerMS
 ms.openlocfilehash: b1c875f6c49a3097a75f88b1c25555fd7e891b1f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909408"
 ---
-# <a name="wif-code-sample-index"></a>WIF kod örneği dizini
+# <a name="wif-code-sample-index"></a>WIF Kod Örneği Dizini
 
 Windows Identity Foundation 4.5 için kod örnekleri şunlardır:
 

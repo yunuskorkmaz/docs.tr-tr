@@ -1,15 +1,15 @@
 ---
-title: Gerekli bağımsız değişkenler ve aşırı yüklenmiş gruplar
+title: Gerekli Bağımsız Değişkenler ve Aşırı Yüklenmiş Gruplar
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
 ms.openlocfilehash: b5006a201ce5db68e925bd5764fadde308bbccb4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937793"
 ---
-# <a name="required-arguments-and-overload-groups"></a>Gerekli bağımsız değişkenler ve aşırı yüklenmiş gruplar
+# <a name="required-arguments-and-overload-groups"></a>Gerekli Bağımsız Değişkenler ve Aşırı Yüklenmiş Gruplar
 Etkinlikleri belirli bağımsız değişkenler etkinliğinin yürütme için geçerli olacak şekilde bağlanması için gerekli olacak şekilde yapılandırılabilir. `RequiredArgument` Özniteliği, belirli bir etkinliğin bağımsız gerekli olduğunu belirtmek için kullanılır ve `OverloadGroup` öznitelik gerekli bağımsız değişken kategorisi gruplamak için kullanılır. Öznitelikleri kullanarak etkinlik yazarlar basit veya karmaşık etkinlik doğrulama yapılandırmaları sağlayabilir.  
   
 ## <a name="using-required-arguments"></a>Gerekli bağımsız değişkenleri kullanma  
@@ -144,19 +144,19 @@ Public class DbUpdate: AsyncCodeActivity
   
  Aşırı yükleme grubu tanımlarken:  
   
--   Bir aşırı yükleme grubu bir alt veya başka bir aşırı yükleme grubu eşdeğer bir dizi olamaz.  
+- Bir aşırı yükleme grubu bir alt veya başka bir aşırı yükleme grubu eşdeğer bir dizi olamaz.  
   
     > [!NOTE]
     >  Bu kuralın tek istisnası yoktur. Aşırı yükleme grubu başka bir aşırı yükleme grubu bir alt kümesidir ve alt yalnızca bağımsız değişken varsa burada `RequiredArgument` olduğu `false`, aşırı yükleme grubu geçerli ise.  
   
--   Aşırı yüklenmiş gruplar binebilir ancak kesişimi gruplarının birini veya ikisini de aşırı yüklenmiş gruplar tüm gerekli bağımsız içeriyorsa bir hata değildir. Önceki örnekte `G2` ve `G3` grupları çakışan aşırı yükleme, ancak bir ya da hem de grupların tüm bağımsız değişkenler kesişimi içermediğinden, bu geçerli.  
+- Aşırı yüklenmiş gruplar binebilir ancak kesişimi gruplarının birini veya ikisini de aşırı yüklenmiş gruplar tüm gerekli bağımsız içeriyorsa bir hata değildir. Önceki örnekte `G2` ve `G3` grupları çakışan aşırı yükleme, ancak bir ya da hem de grupların tüm bağımsız değişkenler kesişimi içermediğinden, bu geçerli.  
   
  Bağımsız değişken bir aşırı yükleme grubunda bağlanırken:  
   
--   Aşırı yükleme grubunun ilişkili tüm kabul edildiği `RequiredArgument` bağımsız değişken grubunda bağlıdır.  
+- Aşırı yükleme grubunun ilişkili tüm kabul edildiği `RequiredArgument` bağımsız değişken grubunda bağlıdır.  
   
--   Bir grubu sıfır varsa `RequiredArgument` bağımsız değişkenleri ve en az bir bağımsız değişken bağlı, sonra Grup bağlı olarak kabul edilir.  
+- Bir grubu sıfır varsa `RequiredArgument` bağımsız değişkenleri ve en az bir bağımsız değişken bağlı, sonra Grup bağlı olarak kabul edilir.  
   
--   Bir doğrulama hatası olduğu sürece bir aşırı yükleme grubu olmayan hiçbir aşırı yüklenmiş gruplar bağlıysa `RequiredArgument` da bağımsız değişkenler.  
+- Bir doğrulama hatası olduğu sürece bir aşırı yükleme grubu olmayan hiçbir aşırı yüklenmiş gruplar bağlıysa `RequiredArgument` da bağımsız değişkenler.  
   
--   Bağlı, birden fazla aşırı yükleme grubu için bir hata olduğunu, aşırı yüklemelerden birine grubundaki tüm gerekli bağımsız değişkenler bağlıdır ve başka bir aşırı yükleme grubundaki herhangi bir bağımsız değişken de bağlıdır.
+- Bağlı, birden fazla aşırı yükleme grubu için bir hata olduğunu, aşırı yüklemelerden birine grubundaki tüm gerekli bağımsız değişkenler bağlıdır ve başka bir aşırı yükleme grubundaki herhangi bir bağımsız değişken de bağlıdır.

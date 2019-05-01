@@ -7,38 +7,38 @@ ms.openlocfilehash: 6af0336e19df4ba2a99a52f8726e78ed92f5a79e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940471"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Nasıl yapılır: WCF Web Hizmeti Uygulaması için WIF Etkinleştirme
 ## <a name="applies-to"></a>Uygulanan Öğe  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Microsoft® Windows® Communication Foundation (WCF)  
+- Microsoft® Windows® Communication Foundation (WCF)  
   
 ## <a name="summary"></a>Özet  
  Bu 'Nasıl Yapılır' makalesi, bir WCF web hizmetinde WIF'yi etkinleştirmeye yönelik adım adım ayrıntılı yordamları sağlar. Ayrıca, uygulama çalıştırıldığında web hizmetinin beyanları doğru olarak sunduğunu doğrulamak amacıyla uygulamanın nasıl test edileceğine ilişkin yönergeler verilir. Bu 'Nasıl Yapılır' konusunda bir Güvenlik Belirteci Hizmeti (STS) oluşturmaya yönelik ayrıntılı yönergeler yer almaz ve bunun yerine Kimlik ve Erişim aracı ile birlikte gelen Geliştirme STS'si kullanılır. Geliştirme STS'si gerçek kimlik doğrulaması yapmaz ve yalnızca test amaçlarına yöneliktir. Bu 'Nasıl Yapılır' konusunu tamamlamak için Kimlik ve Erişim aracını yüklemeniz gerekir. Şu konumdan indirilebilir: [Kimlik ve erişim aracı](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>İçindekiler  
   
--   Amaçlar  
+- Amaçlar  
   
--   Genel Bakış  
+- Genel Bakış  
   
--   Adımların Özeti  
+- Adımların Özeti  
   
--   1. Adım – Basit bir WCF Hizmeti Oluşturma  
+- 1. Adım – Basit bir WCF Hizmeti Oluşturma  
   
--   2. Adım – WCF Hizmeti İçin Bir İstemci Uygulaması Oluşturma  
+- 2. Adım – WCF Hizmeti İçin Bir İstemci Uygulaması Oluşturma  
   
--   3. Adım – Çözümünüzü Test Etme  
+- 3. Adım – Çözümünüzü Test Etme  
   
 ## <a name="objectives"></a>Amaçlar  
   
--   Verilen belirteçleri gerektiren bir WCF hizmeti oluşturma  
+- Verilen belirteçleri gerektiren bir WCF hizmeti oluşturma  
   
--   STS'den bir belirteç isteyen ve bunu WCF hizmetine aktaran bir WCF istemcisi oluşturma  
+- STS'den bir belirteç isteyen ve bunu WCF hizmetine aktaran bir WCF istemcisi oluşturma  
   
 ## <a name="overview"></a>Genel Bakış  
  Bu 'Nasıl Yapılır' makalesi, bir geliştiricinin WCF hizmetleri geliştirirken federasyon kimlik doğrulamasını nasıl kullanabileceğini göstermeyi amaçlar. WCF hizmetlerinde federasyon kullanmanın avantajlarından bazıları şunlardır:  
@@ -55,11 +55,11 @@ ms.locfileid: "59977437"
   
 ## <a name="summary-of-steps"></a>Adımların Özeti  
   
--   1. Adım – Basit bir WCF Hizmeti Oluşturma  
+- 1. Adım – Basit bir WCF Hizmeti Oluşturma  
   
--   2. Adım – WCF Hizmeti İçin Bir İstemci Uygulaması Oluşturma  
+- 2. Adım – WCF Hizmeti İçin Bir İstemci Uygulaması Oluşturma  
   
--   3. Adım – Çözümünüzü Test Etme  
+- 3. Adım – Çözümünüzü Test Etme  
   
 ## <a name="step-1--create-a-simple-wcf-service"></a>1. Adım – Basit bir WCF Hizmeti Oluşturma  
  Bu adımda, Kimlik ve Erişim aracının içindeki Geliştirme STS'sini kullanan yeni bir WCF hizmeti oluşturacaksınız.  

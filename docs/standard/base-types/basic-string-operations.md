@@ -11,11 +11,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seadec18
 ms.openlocfilehash: 8621e79ad6e305f3859dc269965ecd216081f695
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936818"
 ---
 # <a name="basic-string-operations-in-net"></a>.NET içinde temel dize işlemleri
 Uygulamalar genellikle kullanıcılar için kullanıcı girişini temel alarak iletileri oluşturarak yanıt. Örneğin, yeni oturum açan bir kullanıcı kullanıcı adını içeren özelleştirilmiş bir Karşılama ile yanıt vermek Web siteleri için sık karşılaşılan bir durum değil. Çeşitli yöntemlerin <xref:System.String?displayProperty=nameWithType> ve <xref:System.Text.StringBuilder?displayProperty=nameWithType> sınıfları, kullanıcı arabiriminde görüntülenecek özel dizeleri dinamik olarak oluşturmak sağlar. Bu yöntemler bir dizi bayt dizilerden yeni dizeler oluşturma, değerleri dize karşılaştırma ve mevcut dizeleri değiştirme gibi temel dize işlemleri gerçekleştirmenize yardımcı.  
@@ -39,7 +39,7 @@ Uygulamalar genellikle kullanıcılar için kullanıcı girişini temel alarak i
  [StringBuilder Sınıfını Kullanma](../../../docs/standard/base-types/stringbuilder.md)  
  İle dinamik dize nesneleri oluşturup değiştirmesi açıklar <xref:System.Text.StringBuilder> sınıfı.  
   
- [Nasıl Yapılır: Temel dize işlemeleri gerçekleştirme](../../../docs/standard/base-types/basic-manipulations.md)  
+ [Nasıl yapılır: Temel dize işlemeleri gerçekleştirme](../../../docs/standard/base-types/basic-manipulations.md)  
  Temel dize işlemleri kullanımını gösterir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

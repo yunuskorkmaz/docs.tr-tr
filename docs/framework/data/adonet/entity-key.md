@@ -3,24 +3,24 @@ title: entity key
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
 ms.openlocfilehash: 1484a73450d5a435f795f18f122c7fe8494cf197
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879196"
 ---
 # <a name="entity-key"></a>entity key
 Bir *Varlık anahtarı* olduğu bir [özelliği](../../../../docs/framework/data/adonet/property.md) veya özellikleri kümesi bir [varlık türü](../../../../docs/framework/data/adonet/entity-type.md) kimliğini belirlemek için kullanılır. Bir varlık anahtarı oluşturan özelliklerini tasarım zamanında seçilir. Varlık anahtar özelliklerin değerlerini içinde bir varlık türü örneği benzersiz şekilde tanımlamalıdır bir [varlık kümesi](../../../../docs/framework/data/adonet/entity-set.md) çalışma zamanında. Bir varlık kümesindeki örneklerin benzersizliği garanti etmek için bir varlık anahtarı oluşturan özellikleri seçilmelidir.  
   
  Bir varlık anahtarı için bir özellikler kümesini için gereksinimleri şunlardır:  
   
--   Bir varlık kümesi içinde hiçbir iki varlık anahtarları aynı olabilir. Diğer bir deyişle, herhangi iki varlık için bir varlık kümesindeki bir anahtar oluşturan tüm özellikler için değerleri aynı olamaz. Ancak, bazı (Tümü değil) bir varlığı değerleri olan anahtar aynı olabilir.  
+- Bir varlık kümesi içinde hiçbir iki varlık anahtarları aynı olabilir. Diğer bir deyişle, herhangi iki varlık için bir varlık kümesindeki bir anahtar oluşturan tüm özellikler için değerleri aynı olamaz. Ancak, bazı (Tümü değil) bir varlığı değerleri olan anahtar aynı olabilir.  
   
--   Varlık anahtarı NULL olmayan, sabit, kümesinden oluşmalıdır [ilkel tür özellikleri](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
+- Varlık anahtarı NULL olmayan, sabit, kümesinden oluşmalıdır [ilkel tür özellikleri](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
   
--   Belirtilen varlık türü için bir varlık anahtarı oluşturan özelliklerini değiştiremezsiniz. Belirtilen varlık türü için olası Varlık anahtarı birden fazla izin veremez; vekil anahtarlar desteklenmez.  
+- Belirtilen varlık türü için bir varlık anahtarı oluşturan özelliklerini değiştiremezsiniz. Belirtilen varlık türü için olası Varlık anahtarı birden fazla izin veremez; vekil anahtarlar desteklenmez.  
   
--   Bir devralma hiyerarşisinde bir varlığı söz konusu olduğunda kök varlığın varlık anahtarı oluşturan tüm özelliklerini içermelidir ve varlık anahtarı üzerinde kök varlık türü olarak tanımlanmış olması gerekir. Daha fazla bilgi için [varlık veri modeli: Devralma](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).  
+- Bir devralma hiyerarşisinde bir varlığı söz konusu olduğunda kök varlığın varlık anahtarı oluşturan tüm özelliklerini içermelidir ve varlık anahtarı üzerinde kök varlık türü olarak tanımlanmış olması gerekir. Daha fazla bilgi için [varlık veri modeli: Devralma](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).  
   
 ## <a name="example"></a>Örnek  
  Varlık üç kavramsal bir modelle Aşağıdaki diyagramda gösterilmektedir: `Book`, `Publisher`, ve `Author`. Her varlık türünün varlık anahtarıyla olun özellikleri "(anahtar)" ile belirtilir. Unutmayın `Author` varlık türünde iki özelliklerini içeren bir varlık anahtarı `Name` ve `Address`.  

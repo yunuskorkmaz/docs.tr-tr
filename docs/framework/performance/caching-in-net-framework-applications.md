@@ -7,11 +7,11 @@ helpviewer_keywords:
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 ms.openlocfilehash: a57489af2f2af59f128f5d86be844b43c9c49840
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788147"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework Uygulamalarında Önbelleğe Alma
 Önbelleğe alma, verileri hızlı erişim için bellekte depolamanızı sağlar. Verileri yeniden erişildiğinde uygulamaları özgün kaynaktan almak yerine önbellekten veri alabilirsiniz. Bu, performansı ve ölçeklenebilirliği artırabilir. Ayrıca, önbelleğe alma, veri kaynağının geçici olarak devre dışı olduğunda yaptığı veri yok.  
@@ -24,17 +24,17 @@ ms.locfileid: "59085786"
 ## <a name="caching-data"></a>Verileri Önbelleğe Alma  
  Sınıflarını kullanarak bilgileri önbelleğe alabilir <xref:System.Runtime.Caching> ad alanı. Bu ad alanındaki önbelleğe alma sınıflar aşağıdaki özellikleri sağlar:  
   
--   Özel önbellek uygulamaları oluşturmak için temel sağlayan soyut türler.  
+- Özel önbellek uygulamaları oluşturmak için temel sağlayan soyut türler.  
   
--   Bir somut bellekteki nesne önbelleği uygulaması.  
+- Bir somut bellekteki nesne önbelleği uygulaması.  
   
  Soyut temel sınıf önbelleğe alma (<xref:System.Runtime.Caching.ObjectCache>) aşağıdaki önbelleğe alma görevlerini tanımlar:  
   
--   Oluşturma ve önbellek girişlerinin yönetme.  
+- Oluşturma ve önbellek girişlerinin yönetme.  
   
--   Sona erme ve çıkarma bilgilerini belirtme.  
+- Sona erme ve çıkarma bilgilerini belirtme.  
   
--   Önbellek girişlerinin değişikliklere yanıt olarak harekete geçirilen olayları tetikleme.  
+- Önbellek girişlerinin değişikliklere yanıt olarak harekete geçirilen olayları tetikleme.  
   
  <xref:System.Runtime.Caching.MemoryCache> Sınıfı, bellekteki nesne önbelleği uygulaması <xref:System.Runtime.Caching.ObjectCache> sınıfı. Kullanabileceğiniz <xref:System.Runtime.Caching.MemoryCache> önbelleğe alma görevlerin çoğu için sınıf.  
   
@@ -67,11 +67,11 @@ ms.locfileid: "59085786"
   
  Önbelleğe alma genişletmek için aşağıdakileri yapabilirsiniz:  
   
--   Öğesinden türetilen özel bir sınıf oluşturmak <xref:System.Runtime.Caching.ObjectCache> sınıf ve türetilen sınıfın özel önbellek uygulamasında belirtin.  
+- Öğesinden türetilen özel bir sınıf oluşturmak <xref:System.Runtime.Caching.ObjectCache> sınıf ve türetilen sınıfın özel önbellek uygulamasında belirtin.  
   
--   Türetilen bir sınıf oluşturmanız <xref:System.Runtime.Caching.MemoryCache> sınıfı ve özelleştirme veya türetilmiş sınıf genişletin. Bunu yapmak nasıl bir örnek için bkz [birden fazla önbellek nesneleri kullanarak bir ASP.NET uygulamasında uygulama verilerini önbelleğe alma](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx).  
+- Türetilen bir sınıf oluşturmanız <xref:System.Runtime.Caching.MemoryCache> sınıfı ve özelleştirme veya türetilmiş sınıf genişletin. Bunu yapmak nasıl bir örnek için bkz [birden fazla önbellek nesneleri kullanarak bir ASP.NET uygulamasında uygulama verilerini önbelleğe alma](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx).  
   
--   Türetilen bir sınıf oluşturmanız <xref:System.Web.Caching.OutputCacheProvider> sınıfı ve uygulamayı özel çıktı önbelleği sağlayıcısı kullanacak şekilde yapılandırın.  
+- Türetilen bir sınıf oluşturmanız <xref:System.Web.Caching.OutputCacheProvider> sınıfı ve uygulamayı özel çıktı önbelleği sağlayıcısı kullanacak şekilde yapılandırın.  
   
  Daha fazla bilgi için bkz: Giriş [ASP.NET 4 (VS 2010 ve .NET 4.0 serisi) ile Genişletilebilir çıktı önbelleği](https://go.microsoft.com/fwlink/?LinkId=185772) Scott Guthrie'nin blogundan.  
   

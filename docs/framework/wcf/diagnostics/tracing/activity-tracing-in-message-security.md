@@ -3,23 +3,23 @@ title: İleti Güvenliğinde Etkinlik İzleme
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
 ms.openlocfilehash: c3bd36598fd903dc016959149e563174624d084b
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912658"
 ---
 # <a name="activity-tracing-in-message-security"></a>İleti Güvenliğinde Etkinlik İzleme
 Bu konuda, aşağıdaki üç aşamaya olur güvenlik işlenmek Etkinlik izleme açıklanmaktadır.  
   
--   Anlaşma/SCT exchange. Bu, daha sonra (ikili veri değişimi üzerinden) taşıma veya ileti katman (üzerinden SOAP ileti alışverişlerinde) oluşabilir.  
+- Anlaşma/SCT exchange. Bu, daha sonra (ikili veri değişimi üzerinden) taşıma veya ileti katman (üzerinden SOAP ileti alışverişlerinde) oluşabilir.  
   
--   İleti şifreleme/şifre çözme, imza doğrulaması ve kimlik doğrulaması ile. Ortam etkinlik, genellikle "işlem Action." görüntülenir  
+- İleti şifreleme/şifre çözme, imza doğrulaması ve kimlik doğrulaması ile. Ortam etkinlik, genellikle "işlem Action." görüntülenir  
   
--   Yetkilendirme ve doğrulama. Bu, yerel olarak veya ne zaman uç noktalar arasında iletişim kuran oluşabilir.  
+- Yetkilendirme ve doğrulama. Bu, yerel olarak veya ne zaman uç noktalar arasında iletişim kuran oluşabilir.  
   
 ## <a name="negotiationsct-exchange"></a>Anlaşma/SCT exchange  
- İstemci üzerinde oluşturulan anlaşma/SCT değişimi aşamasında, iki etkinlik türleri: "Ayarlanmış yukarı güvenli oturum" ve "Güvenli oturumu kapat." "Güvenli Oturumu Kapat" Cancel iletisi izlemelerini içerse de "Güvenli oturum ayarlayın" k/RSTR/SCT ileti alışverişlerinde izlemelerini kapsar.  
+ Anlaşma/SCT değişimi aşamasında, istemcide iki etkinlik türleri oluşturulur: "Güvenli oturum ayarlayın" ve "Güvenli oturumu kapat." "Güvenli Oturumu Kapat" Cancel iletisi izlemelerini içerse de "Güvenli oturum ayarlayın" k/RSTR/SCT ileti alışverişlerinde izlemelerini kapsar.  
   
  Sunucuda, her istek/yanıt lk/RSTR/SCT için kendi etkinliğinde görüntülenir. Varsa `propagateActivity` = `true` hem sunucu hem de istemci, sunucunun etkinliklerde aynı Kimliğe sahip ve "Kurulum güvenli hizmet izleme görüntüleyicisini görüntülendiğinde oturumdaki" birlikte görünür.  
   
@@ -42,7 +42,7 @@ Bu konuda, aşağıdaki üç aşamaya olur güvenlik işlenmek Etkinlik izleme a
 |-|---------------------------------------------------------------------------------|  
 |Saati şifreleme/şifre çözme yanı sıra imzası kimlik doğrulaması'olmuyor iletisi|Alınan ileti üzerinde|  
 |Etkinlikler|İzlemeler, istemci ve sunucu üzerinde ProcessAction etkinliğinde gönderilir.|  
-|izlemeleri|-sendSecurityHeader (gönderen):<br />-Oturum ileti<br />-İstek verileri şifreleme<br />-receiveSecurityHeader (alıcı):<br />-İmzasını<br />-Yanıt verilerin şifresini<br />-Kimlik doğrulaması|  
+|izlemeleri|-   sendSecurityHeader (sender):<br />-Oturum ileti<br />-İstek verileri şifreleme<br />-receiveSecurityHeader (alıcı):<br />-İmzasını<br />-Yanıt verilerin şifresini<br />-Kimlik doğrulaması|  
   
 > [!NOTE]
 >  Saf aktarım modunda, yalnızca içinde hiçbir ek etkinlikler ile Aktarım ileti şifreleme/şifre çözme gerçekleşir.  

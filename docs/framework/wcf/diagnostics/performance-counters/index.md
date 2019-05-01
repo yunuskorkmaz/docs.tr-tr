@@ -5,11 +5,11 @@ helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
 ms.openlocfilehash: 31c5b386d707aa49cd36d536f1c8b419eb74a658
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916415"
 ---
 # <a name="wcf-performance-counters"></a>WCF Performans Sayaçları
 Çok sayıda performans sayaçları, uygulamanızın performansını ölçmek amacıyla Windows Communication Foundation (WCF) içerir.  
@@ -27,11 +27,11 @@ ms.locfileid: "59087865"
   
  `performanceCounters` Özniteliği, belirli türde bir performans sayaçlarını etkinleştirmek için ayarlanabilir. Geçerli değerler:  
   
--   Tüm: Tüm kategori sayaçları (ServiceModelService, ServiceModelEndpoint ve ServiceModelOperation) etkinleştirilir.  
+- Tüm: Tüm kategori sayaçları (ServiceModelService, ServiceModelEndpoint ve ServiceModelOperation) etkinleştirilir.  
   
--   ServiceOnly: Yalnızca ServiceModelService kategori sayaçları etkinleştirildi. Varsayılan değer budur.  
+- ServiceOnly: Yalnızca ServiceModelService kategori sayaçları etkinleştirildi. Varsayılan değer budur.  
   
--   Kapalı: ServiceModel * performans sayaçları devre dışı bırakıldı.  
+- Kapalı: ServiceModel * performans sayaçları devre dışı bırakıldı.  
   
  Tüm WCF uygulamaları için performans sayaçlarını etkinleştirmek istiyorsanız, yapılandırma ayarlarını Machine.config dosyasında yerleştirebilirsiniz.  Lütfen **performans sayaçları için artan bellek boyutunu** bölümünde aşağıdaki performans sayaçları için yeterli bellek makinenizde yapılandırma hakkında daha fazla bilgi için.  
   
@@ -63,11 +63,11 @@ config.Save();
   
  Kayıt defterinde WCF kategorileri için performans sayacı bellek miktarını değiştirebilirsiniz. Bunu yapmak için yeni bir DWORD değeri adlı eklemeniz gerekir `FileMappingSize` için üç aşağıdaki konumlardan ve bayt cinsinden istenen değere ayarlayın. Bu değişikliklerin devreye alınır böylece, makineyi yeniden başlatın.  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
   
  Ne zaman nesneleri (örneğin, ServiceHost) çok sayıda kaldırıldıklarından atık olarak toplanmış olması bekleniyor, ancak `PrivateBytes` performans sayacı kayıt olağandışı ölçüde yüksek bir sayı. Bu sorunu çözmek için kendi uygulamaya özgü sayaçları ekleyin veya kullanın `performanceCounters` yalnızca hizmet düzeyi sayaçları etkinleştirmek için özniteliği.  
   
@@ -76,11 +76,11 @@ config.Save();
   
  WMI Performans sayacı örneğinin adını almak için kullanabilirsiniz. Örneğin,  
   
--   Hizmet sayaç örneği adı WMI aracılığıyla elde edilebilir [hizmet](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) örneğinin "CounterInstanceName" özelliği.  
+- Hizmet sayaç örneği adı WMI aracılığıyla elde edilebilir [hizmet](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) örneğinin "CounterInstanceName" özelliği.  
   
--   Uç nokta sayaç örneği adı WMI aracılığıyla elde edilebilir [uç nokta](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) örneğinin "CounterInstanceName" özelliği.  
+- Uç nokta sayaç örneği adı WMI aracılığıyla elde edilebilir [uç nokta](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) örneğinin "CounterInstanceName" özelliği.  
   
--   İşlem sayaç örneği adı WMI aracılığıyla elde edilebilir [uç nokta](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) örneğinin "GetOperationCounterInstanceName" yöntemi.  
+- İşlem sayaç örneği adı WMI aracılığıyla elde edilebilir [uç nokta](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) örneğinin "GetOperationCounterInstanceName" yöntemi.  
   
  WMI hakkında daha fazla bilgi için bkz. [tanılama için Windows Yönetim araçları kullanarak](../../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
@@ -126,15 +126,15 @@ ServiceName@ServiceBaseAddress
 ## <a name="programming-the-wcf-performance-counters"></a>WCF performans sayaçları programlama  
  WCF performans sayaçları program aracılığıyla erişebilmesi için çeşitli dosyaları SDK yükleme klasörüne yüklenir. Bu dosyalar aşağıda listelenmiştir.  
   
--   _ServiceModelEndpointPerfCounters.vrg  
+- _ServiceModelEndpointPerfCounters.vrg  
   
--   _ServiceModelOperationPerfCounters.vrg  
+- _ServiceModelOperationPerfCounters.vrg  
   
--   _ServiceModelServicePerfCounters.vrg  
+- _ServiceModelServicePerfCounters.vrg  
   
--   _SMSvcHostPerfCounters.vrg  
+- _SMSvcHostPerfCounters.vrg  
   
--   _TransactionBridgePerfCounters.vrg  
+- _TransactionBridgePerfCounters.vrg  
   
  Sayaçları programlama yoluyla erişim hakkında daha fazla bilgi için bkz. [performans sayacı programlama mimarisi](https://go.microsoft.com/fwlink/?LinkId=95179).  
   

@@ -7,11 +7,11 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
 ms.openlocfilehash: eb1ba14bbcfe4e561fa575b9802126fab59d31fc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61860626"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (dil ile tümleşik sorgu)
 
@@ -103,15 +103,15 @@ Soru sorun bu şekilde **yalnızca sorgu söz dizimi kullanmalısınız?**
 
 Bu sorunun yanıtı **Evet** varsa...
 
-*   Mevcut codebase zaten kullandığı sorgu söz dizimi
-*   Sorgularınızın karmaşıklığı nedeniyle içinde kapsam değişkenleri gerekir
-*   Tercih ettiğiniz sorgu söz dizimi ve kod temelinizde departmanınızı olmaz
+* Mevcut codebase zaten kullandığı sorgu söz dizimi
+* Sorgularınızın karmaşıklığı nedeniyle içinde kapsam değişkenleri gerekir
+* Tercih ettiğiniz sorgu söz dizimi ve kod temelinizde departmanınızı olmaz
 
 Bu sorunun yanıtı **hiçbir** varsa...
 
-*   Mevcut codebase zaten kullandığı API söz dizimi
-*   İçinde sorgularınızı kapsam değişkenleri gerek sahip
-*   Tercih ettiğiniz API söz dizimi ve kod temelinizde departmanınızı olmaz
+* Mevcut codebase zaten kullandığı API söz dizimi
+* İçinde sorgularınızı kapsam değişkenleri gerek sahip
+* Tercih ettiğiniz API söz dizimi ve kod temelinizde departmanınızı olmaz
 
 ## <a name="essential-samples"></a>Temel örnekler
 
@@ -119,7 +119,7 @@ LINQ örnekleri gerçekten kapsamlı bir listesi için ziyaret [101 LINQ örnekl
 
 Bazı önemli parçaları LINQ hızlı bir örnek verilmiştir. LINQ burada büyütmüş daha önemli ölçüde daha fazla işlevsellik sağladığından kapsamlı, hiçbir şekilde budur.
 
-*   Ekmekler ve ezmesi - `Where`, `Select`, ve `Aggregate`:
+* Ekmekler ve ezmesi - `Where`, `Select`, ve `Aggregate`:
 
 ```csharp
 // Filtering a list
@@ -142,14 +142,14 @@ int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```
 
-*   Bir liste düzleştirme:
+* Bir liste düzleştirme:
 
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 ```
 
-*   UNION (ile özel bir karşılaştırıcı) iki kümesi arasında:
+* UNION (ile özel bir karşılaştırıcı) iki kümesi arasında:
 
 ```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
@@ -184,7 +184,7 @@ public class DogHairLengthComparer : IEqualityComparer<Dog>
 var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthComparer());
 ```
 
-*   İki kesişimi:
+* İki kesişimi:
 
 ```csharp
 // Gets the volunteers who spend share time with two humane societies.
@@ -192,7 +192,7 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
 ```
 
-*   Sıralama:
+* Sıralama:
 
 ```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
@@ -201,7 +201,7 @@ var results = DirectionsProcessor.GetDirections(start, end)
               .ThenBy(direction => direction.EstimatedTime);
 ```
 
-*   Son olarak, örnek daha gelişmiş: iki örneği aynı türdeki özelliklerin değerlerini eşit olup olmadığını belirleme (Borrowed ve gelen değiştirilmiş [StackOverflow yazıya](https://stackoverflow.com/a/844855)):
+* Son olarak, örnek daha gelişmiş: iki örneği aynı türdeki özelliklerin değerlerini eşit olup olmadığını belirleme (Borrowed ve gelen değiştirilmiş [StackOverflow yazıya](https://stackoverflow.com/a/844855)):
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -252,6 +252,6 @@ LINQ ile kolayca ifade edilebilir paralelleştirilebilir CPU bağımlı iş (di�
 
 ## <a name="further-resources"></a>Ek kaynaklar:
 
-*   [101 LINQ örneği](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-*   [Linqpad](https://www.linqpad.net/), oyun alanı ortamı ve veritabanını sorgulama altyapısı için C#/F#/VB
-*   [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/),-LINQ nesnelerin nasıl gerçekleştirilir öğrenmek için kitap
+* [101 LINQ örneği](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+* [Linqpad](https://www.linqpad.net/), oyun alanı ortamı ve veritabanını sorgulama altyapısı için C#/F#/VB
+* [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/),-LINQ nesnelerin nasıl gerçekleştirilir öğrenmek için kitap

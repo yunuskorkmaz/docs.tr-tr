@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
 author: BrucePerlerMS
 ms.openlocfilehash: 4deeb1d84f2621adb7ff1b649a505138b6856ec1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790500"
 ---
 # <a name="tokenreplaydetection"></a>\<tokenReplayDetection >
 Belirteç yeniden yürütme algılaması sağlar ve belirteçleri sona erme süresini belirtir.  
@@ -42,7 +42,7 @@ Belirteç yeniden yürütme algılaması sağlar ve belirteçleri sona erme sür
 |expirationPeriod|A <xref:System.TimeSpan> öğenin süresi doldu ve önbellekten kaldırıldı olarak kabul edilmeden önce zaman maksimum miktarını belirtir.  Belirtme hakkında daha fazla bilgi için <xref:System.TimeSpan> değerleri, görmek [Timespan değerleri](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Hiçbiri  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

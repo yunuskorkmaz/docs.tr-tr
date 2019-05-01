@@ -3,11 +3,11 @@ title: İşlevsel Programlama ve Kesin programlama karşılaştırması (Visual 
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
 ms.openlocfilehash: dec9fd4b59d96c0548e49276a27103114a7b3e8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931676"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>İşlevsel Programlama ve Kesin programlama karşılaştırması (Visual Basic)
 Bu konuda karşılaştırır ve işlevsel programlama daha geleneksel buyurgan (yordamsal) programlamaya ile karşılaştırır.  
@@ -35,11 +35,11 @@ Bu konuda karşılaştırır ve işlevsel programlama daha geleneksel buyurgan (
 ## <a name="advantages-of-pure-functions"></a>Saf işlevler avantajları  
  Saf işlevler olarak işlevsel dönüşümlere uygulamak için birincil saf işlevler birleştirilebilir nedeni: başka bir deyişle, bağımsızdır ve durum bilgisi olmayan. Bu özelliklere birtakım avantajlar, aşağıdakiler dahil olmak üzere getirin:  
   
--   Okunurluğu ve sürdürülebilirliği. Bu, her işlevin belirli bir görevi gerçekleştirmek için tasarlandığından bağımsız değişkenlerinden verilir. İşlevi, tüm dış durumuna bağımlı kalmayacak.  
+- Okunurluğu ve sürdürülebilirliği. Bu, her işlevin belirli bir görevi gerçekleştirmek için tasarlandığından bağımsız değişkenlerinden verilir. İşlevi, tüm dış durumuna bağımlı kalmayacak.  
   
--   Daha kolay reiterative geliştirme. Kod yeniden düzenlenmesi daha kolay olduğundan, değişiklikleri tasarlamak için genellikle uygulamak daha kolaydır. Örneğin, karmaşık bir dönüştürme yazın ve sonra biraz kod dönüşümünde birkaç kez yinelenir fark varsayalım. Saf bir yöntem aracılığıyla yeniden düzenlerseniz, yan etkileri hakkında endişelenmenize gerek kalmadan dilediğiniz zaman saf yönteminizi çağırabilir.  
+- Daha kolay reiterative geliştirme. Kod yeniden düzenlenmesi daha kolay olduğundan, değişiklikleri tasarlamak için genellikle uygulamak daha kolaydır. Örneğin, karmaşık bir dönüştürme yazın ve sonra biraz kod dönüşümünde birkaç kez yinelenir fark varsayalım. Saf bir yöntem aracılığıyla yeniden düzenlerseniz, yan etkileri hakkında endişelenmenize gerek kalmadan dilediğiniz zaman saf yönteminizi çağırabilir.  
   
--   Daha kolay test ve hata ayıklama. Saf işlevler daha kolay yalıtım modunda test edilebilir olduğundan, normal değerler, geçerli istisnai durumlara ve geçersiz istisnai durumlara saf işlev çağıran test kodu yazabilirsiniz.  
+- Daha kolay test ve hata ayıklama. Saf işlevler daha kolay yalıtım modunda test edilebilir olduğundan, normal değerler, geçerli istisnai durumlara ve geçersiz istisnai durumlara saf işlev çağıran test kodu yazabilirsiniz.  
   
 ## <a name="transitioning-for-oop-developers"></a>Geçiş OOP geliştiricileri için  
  Geleneksel nesne yönelimli programlama, (OOP) çoğu Geliştirici kesinliği/yordam stili programlamada bilirsiniz. Saf işlevsel stilde geliştirmeye geçiş yapmak için bunlar kendi düşünmek ve yaklaşımları geliştirme için bir geçiş yapmanız gerekir.  

@@ -9,32 +9,32 @@ helpviewer_keywords:
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
 ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937975"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Nasıl yapılır: Yazı Tipi Aileleri ve Yazı Tipleri Oluşturma
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] yazı tipleri ile aynı yazı tipi ancak farklı stillerde yazı tipi aileleri gruplandırır. Örneğin, aşağıdaki yazı tipleri Arial yazı tipi ailesini içerir:  
   
--   Arial normal  
+- Arial normal  
   
--   Arial kalın  
+- Arial kalın  
   
--   Arial İtalik  
+- Arial İtalik  
   
--   Arial Kalın İtalik  
+- Arial Kalın İtalik  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] form aileleri için dört stilleri kullanır: normal, kalın, italik ve kalın italik. Sıfat gibi *daraltmak* ve *yuvarlatılmış* stilleri; dikkate alınmaz aile adı bir parçası olduklarından değil. Örneğin, dar Arial yazı tipi ailesi aşağıdaki üyeleri ile şöyledir:  
   
--   Arial dar normal  
+- Arial dar normal  
   
--   Arial dar kalın  
+- Arial dar kalın  
   
--   Arial dar italik  
+- Arial dar italik  
   
--   Dar Arial Kalın İtalik  
+- Dar Arial Kalın İtalik  
   
  Metinle çizebilirsiniz önce [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], oluşturmak gereken bir <xref:System.Drawing.FontFamily> nesnesi ve bir <xref:System.Drawing.Font> nesne. <xref:System.Drawing.FontFamily> Nesnesini belirtir (örneğin, Arial), yazı tipi ve <xref:System.Drawing.Font> boyutu, stil ve birimler nesnesini belirtir.  
   

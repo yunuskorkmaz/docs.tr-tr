@@ -24,11 +24,11 @@ ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20dd6f9ab601277161079230effdaeeabd1bb13a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793100"
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework'te Yansıma
 Sınıflarda <xref:System.Reflection> ad alanı, birlikte <xref:System.Type?displayProperty=nameWithType>, yüklenen hakkında bilgi edinmek etkinleştirdiğiniz [derlemeleri](../app-domains/assemblies-in-the-common-language-runtime.md) ve gibi bunlar dahilinde tanımlanan türler [sınıfları](../../standard/base-types/common-type-system.md#classes), [arabirimleri](../../standard/base-types/common-type-system.md#interfaces), ve [değer türleri](../../csharp/language-reference/keywords/value-types.md). Yansıma, çalışma zamanında tür örnekleri oluşturma ve çağırma ve bunlara erişmek için de kullanabilirsiniz. Yansıma belirli yönleri hakkında konular için bkz [ilgili konular](#related_topics) sonunda, bu genel bakış.
@@ -37,23 +37,23 @@ Sınıflarda <xref:System.Reflection> ad alanı, birlikte <xref:System.Type?disp
   
  [Derlemeleri](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) türü üyeleri içeren modüller içerir ve modülleri türleri içerir. Yansıma, derlemeler, modüller ve türler yalıtan nesneleri sağlar. Yansıma, dinamik olarak bir türün bir örneğini oluşturma, bağlama türü var olan bir nesneye veya mevcut bir nesneden türü almak için kullanabilirsiniz. Ardından, türün yöntemlerini çağırmak veya kendi alanlarına ve özelliklerine erişebilirsiniz. Yansıma tipik kullanımları şunlardır:  
   
--   Kullanım <xref:System.Reflection.Assembly> tanımlamak ve derlemeler yüklemek için derleme bildiriminde listelenen, bu derlemedeki bir türünü bulun ve bir örneğini oluşturmak modülleri yükleme.  
+- Kullanım <xref:System.Reflection.Assembly> tanımlamak ve derlemeler yüklemek için derleme bildiriminde listelenen, bu derlemedeki bir türünü bulun ve bir örneğini oluşturmak modülleri yükleme.  
   
--   Kullanım <xref:System.Reflection.Module> modülü ve modülde sınıfları içeren derleme gibi bilgileri bulmak için. Ayrıca, tüm genel yöntemler veya modülde tanımlanan diğer belirli, Global olmayan yöntemler de alabilirsiniz.  
+- Kullanım <xref:System.Reflection.Module> modülü ve modülde sınıfları içeren derleme gibi bilgileri bulmak için. Ayrıca, tüm genel yöntemler veya modülde tanımlanan diğer belirli, Global olmayan yöntemler de alabilirsiniz.  
   
--   Kullanım <xref:System.Reflection.ConstructorInfo> adı, parametreleri gibi bilgileri bulmak için erişim değiştiricilerine (gibi `public` veya `private`) ve uygulama ayrıntılarını (gibi `abstract` veya `virtual`) bir oluşturucu. Kullanım <xref:System.Type.GetConstructors%2A> veya <xref:System.Type.GetConstructor%2A> yöntemi bir <xref:System.Type> belirli bir oluşturucuyu çağırmak için.  
+- Kullanım <xref:System.Reflection.ConstructorInfo> adı, parametreleri gibi bilgileri bulmak için erişim değiştiricilerine (gibi `public` veya `private`) ve uygulama ayrıntılarını (gibi `abstract` veya `virtual`) bir oluşturucu. Kullanım <xref:System.Type.GetConstructors%2A> veya <xref:System.Type.GetConstructor%2A> yöntemi bir <xref:System.Type> belirli bir oluşturucuyu çağırmak için.  
   
--   Kullanım <xref:System.Reflection.MethodInfo> adı gibi bilgileri bulmak için dönüş türü, parametreleri, erişim değiştiricileri (gibi `public` veya `private`) ve uygulama ayrıntılarını (gibi `abstract` veya `virtual`) yöntemi. Kullanım <xref:System.Type.GetMethods%2A> veya <xref:System.Type.GetMethod%2A> yöntemi bir <xref:System.Type> belirli bir yöntemi çağırmak için.  
+- Kullanım <xref:System.Reflection.MethodInfo> adı gibi bilgileri bulmak için dönüş türü, parametreleri, erişim değiştiricileri (gibi `public` veya `private`) ve uygulama ayrıntılarını (gibi `abstract` veya `virtual`) yöntemi. Kullanım <xref:System.Type.GetMethods%2A> veya <xref:System.Type.GetMethod%2A> yöntemi bir <xref:System.Type> belirli bir yöntemi çağırmak için.  
   
--   Kullanım <xref:System.Reflection.FieldInfo> adı gibi bilgileri bulmak için erişim değiştiricileri (gibi `public` veya `private`) ve uygulama ayrıntılarını (gibi `static`), bir alanın ve almak veya alan değerlerini ayarlamak için.  
+- Kullanım <xref:System.Reflection.FieldInfo> adı gibi bilgileri bulmak için erişim değiştiricileri (gibi `public` veya `private`) ve uygulama ayrıntılarını (gibi `static`), bir alanın ve almak veya alan değerlerini ayarlamak için.  
   
--   Kullanım <xref:System.Reflection.EventInfo> ad, olay işleyici veri türü, özel öznitelikler, türü ve bir olayın yansıtılan türü bildirme gibi bilgileri bulmak ve eklemek veya olay işleyicilerini kaldırmak için.  
+- Kullanım <xref:System.Reflection.EventInfo> ad, olay işleyici veri türü, özel öznitelikler, türü ve bir olayın yansıtılan türü bildirme gibi bilgileri bulmak ve eklemek veya olay işleyicilerini kaldırmak için.  
   
--   Kullanım <xref:System.Reflection.PropertyInfo> adı gibi bilgileri bulmak için türü, veri türü, türü bildirmek yansıtılır ve bir özelliğin ve almak veya özellik değerlerini ayarlamak için salt okunur veya yazılabilir durumu.  
+- Kullanım <xref:System.Reflection.PropertyInfo> adı gibi bilgileri bulmak için türü, veri türü, türü bildirmek yansıtılır ve bir özelliğin ve almak veya özellik değerlerini ayarlamak için salt okunur veya yazılabilir durumu.  
   
--   Kullanım <xref:System.Reflection.ParameterInfo> bir parametrenin adı gibi bilgileri bulmak için veri türü, bir giriş veya çıkış parametresi ve parametre konumunu bir yöntem imzası bir parametre olup olmadığını.  
+- Kullanım <xref:System.Reflection.ParameterInfo> bir parametrenin adı gibi bilgileri bulmak için veri türü, bir giriş veya çıkış parametresi ve parametre konumunu bir yöntem imzası bir parametre olup olmadığını.  
   
--   Kullanım <xref:System.Reflection.CustomAttributeData> uygulama etki alanı salt yansıma bağlamında çalışırken özel öznitelikler hakkında bilgi bulmak için. <xref:System.Reflection.CustomAttributeData> bunları örneklerini oluşturmaya gerek kalmadan öznitelikleri incelemenize olanak sağlar.  
+- Kullanım <xref:System.Reflection.CustomAttributeData> uygulama etki alanı salt yansıma bağlamında çalışırken özel öznitelikler hakkında bilgi bulmak için. <xref:System.Reflection.CustomAttributeData> bunları örneklerini oluşturmaya gerek kalmadan öznitelikleri incelemenize olanak sağlar.  
   
  Sınıflarını <xref:System.Reflection.Emit> ad alanı, çalışma zamanında türleri oluşturmanıza olanak sağlayan bir yansıma özel biçimi sağlayın.  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
 ms.openlocfilehash: e696ccb7327197c2f3a2468d30085dc6d390e034
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934342"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Nasıl yapılır: Olay bilgilerini metin dosyasına (Visual Basic) yazma
 Kullanabileceğiniz `My.Application.Log` ve `My.Log` gerçekleşen olaylar hakkında bilgileri, uygulamanızda oturum nesneleri. Bu örnek nasıl kullanılacağını gösterir `My.Application.Log.WriteEntry` bir günlük dosyasına izleme bilgileri günlüğe kaydetmek için yöntemi.  
@@ -24,11 +24,11 @@ Kullanabileceğiniz `My.Application.Log` ve `My.Log` gerçekleşen olaylar hakk�
   
      App.config dosyası yoksa:  
   
-    1.  Üzerinde **proje** menüsünde seçin **Yeni Öğe Ekle**.  
+    1. Üzerinde **proje** menüsünde seçin **Yeni Öğe Ekle**.  
   
-    2.  Gelen **Yeni Öğe Ekle** iletişim kutusunda **uygulama yapılandırma dosyası**.  
+    2. Gelen **Yeni Öğe Ekle** iletişim kutusunda **uygulama yapılandırma dosyası**.  
   
-    3.  **Ekle**'yi tıklatın.  
+    3. **Ekle**'yi tıklatın.  
   
 2. Bulun `<listeners>` uygulama yapılandırma dosyasında bölümü.  
   
@@ -61,7 +61,7 @@ Kullanabileceğiniz `My.Application.Log` ve `My.Log` gerçekleşen olaylar hakk�
   
 ### <a name="to-write-event-information-to-the-file-log"></a>Olay bilgilerini dosya günlüğüne yazmak için  
   
--   Kullanım `My.Application.Log.WriteEntry` veya `My.Application.Log.WriteException` bilgi dosyası günlüğüne yazmak için yöntemi. Daha fazla bilgi için [nasıl yapılır: Günlük iletileri yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) ve [nasıl yapılır: Günlük özel durumları](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
+- Kullanım `My.Application.Log.WriteEntry` veya `My.Application.Log.WriteException` bilgi dosyası günlüğüne yazmak için yöntemi. Daha fazla bilgi için [nasıl yapılır: Günlük iletileri yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) ve [nasıl yapılır: Günlük özel durumları](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
   
      Bir derleme için dosya günlük dinleyici yapılandırdıktan sonra tüm aldığı iletileri `My.Application.Log` Bu bütünleştirilmiş koddan yazar.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
 ms.openlocfilehash: 2237ba71487afc132f9164243a664b277397ccfa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939119"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource Bileşenine Genel Bakış
 <xref:System.Windows.Forms.BindingSource> Bileşen denetimleri temel alınan veri kaynağına bağlama işlemini basitleştirmek üzere tasarlanmıştır. <xref:System.Windows.Forms.BindingSource> Bileşen bir conduit hem bağlamak diğer denetimler için bir veri kaynağı olarak görev yapar. Bu, temel alınan veri listesine komutları geçirme sırasında veri bağlantısının formunuzun bir Özet sağlar. Bileşen işlevlerinin veri kaynağı olarak ayrıca, verileri doğrudan, ekleyebilirsiniz.  

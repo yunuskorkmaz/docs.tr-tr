@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: (Visual Basic) büyük XML belgelerinin akış dönü�
 ms.date: 07/20/2015
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
 ms.openlocfilehash: 8761f5fbf4e6137c1ae6b202b6717579c6f78d4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789135"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>Nasıl yapılır: (Visual Basic) büyük XML belgelerinin akış dönüşümünü gerçekleştirme
 Bazen büyük XML dosyalarını dönüştürme ve uygulamanızı yazın, böylece bellek Ayak izi uygulamanın öngörülebilir gerekir. Çok büyük bir XML dosyası ile XML ağacı doldurma denerseniz, bellek kullanımınızı orantılı dosya boyutunu (diğer bir deyişle, aşırı). Bu nedenle, bir akış teknik yerine kullanmanız gerekir.  

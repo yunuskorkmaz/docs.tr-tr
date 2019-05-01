@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
 ms.openlocfilehash: 06b20b4f61741f2174654d749df55c3c4348c547
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787471"
 ---
 # <a name="name-membername-is-not-cls-compliant"></a>Adı \<membername > CLS uyumlu değil
 Bir derleme olarak işaretlenmiş `<CLSCompliant(True)>` ancak bir alt çizgi ile başlayan bir ada sahip bir üye sunar (`_`).  
@@ -29,9 +29,9 @@ Bir derleme olarak işaretlenmiş `<CLSCompliant(True)>` ancak bir alt çizgi il
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Denetime kaynak kodu varsa, alt çizgi ile başlamıyor şekilde üye adıyla değiştirin.  
+- Denetime kaynak kodu varsa, alt çizgi ile başlamıyor şekilde üye adıyla değiştirin.  
   
--   Üye adı değişmeden kalmasını gerektiriyorsa, kaldırma <xref:System.CLSCompliantAttribute> kendi tanımından veya olarak işaretlemek `<CLSCompliant(False)>`. Yine de derleme olarak işaretleyebilirsiniz `<CLSCompliant(True)>`.  
+- Üye adı değişmeden kalmasını gerektiriyorsa, kaldırma <xref:System.CLSCompliantAttribute> kendi tanımından veya olarak işaretlemek `<CLSCompliant(False)>`. Yine de derleme olarak işaretleyebilirsiniz `<CLSCompliant(True)>`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

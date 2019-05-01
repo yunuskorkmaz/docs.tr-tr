@@ -3,11 +3,11 @@ title: LINQ to SQL Kullanmaya İlişkin Tipik Adımlar
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
 ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876986"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>LINQ to SQL Kullanmaya İlişkin Tipik Adımlar
 Uygulamak için bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulama, bu konunun ilerleyen bölümlerinde açıklanan adımları izleyin. Çok adımlı isteğe bağlı olduğunu unutmayın. Varsayılan durumunda, nesne modelini kullanabilirsiniz çok mümkündür.  
@@ -20,32 +20,32 @@ Uygulamak için bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. Model oluşturmak için bir aracı seçin.  
  Üç Araçlar, model oluşturmak için kullanılabilir.  
   
--   , [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+- , [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
      Bu tasarımcı, varolan bir veritabanından nesne modeli oluşturmak için zengin kullanıcı arabirimi sağlar. Bu araç, Visual Studio IDE bir parçasıdır ve küçük veya Orta veritabanları için uygundur.  
   
--   SQLMetal kod oluşturma aracı  
+- SQLMetal kod oluşturma aracı  
   
      Bu komut satırı yardımcı programını seçeneklerden biraz farklı takımına [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]. Büyük veritabanları modelleme bu aracı kullanarak en iyi şekilde gerçekleştirilir. Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
--   Kod Düzenleyicisi  
+- Kod Düzenleyicisi  
   
      Visual Studio Kod Düzenleyicisi'ni veya başka bir düzenleyici kullanarak kendi kodunuzu yazabilirsiniz. Mevcut bir veritabanı olan ve kullanabilirsiniz, bu hatalara olabilir, bu yaklaşım önerilmez [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] veya SQLMetal aracı. Ancak, Kod Düzenleyicisi iyileştirme veya diğer araçları kullanarak zaten oluşturulmuş kodu değiştirmek için yararlı olabilir. Daha fazla bilgi için [nasıl yapılır: Kod Düzenleyicisi'ni kullanarak varlık sınıflarını özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2. Oluşturmak istediğiniz kod türünü seçin.  
   
--   A C# veya öznitelik tabanlı eşleme için Visual Basic kaynak kodu dosyası.  
+- A C# veya öznitelik tabanlı eşleme için Visual Basic kaynak kodu dosyası.  
   
      Bu kod dosyasının sonra Visual Studio projenize ekleyin. Daha fazla bilgi için [öznitelik tabanlı eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
--   Dış eşleme için bir XML dosyası.  
+- Dış eşleme için bir XML dosyası.  
   
      Bu yaklaşımı kullanarak, uygulama kodunuz dışında eşleme meta veri tutabilirsiniz. Daha fazla bilgi için [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
     > [!NOTE]
     >  [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] Dış eşleme dosyalarının oluşturulmasını desteklemiyor. Bu özelliği uygulamak için SQLMetal Aracı'nı kullanmanız gerekir.  
   
--   Son bir kod dosyası oluşturmadan önce değiştirebileceğiniz bir DBML dosyası.  
+- Son bir kod dosyası oluşturmadan önce değiştirebileceğiniz bir DBML dosyası.  
   
      Bu gelişmiş bir özelliktir.  
   

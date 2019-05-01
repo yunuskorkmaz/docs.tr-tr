@@ -13,11 +13,11 @@ ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 870f65fdbf263913134d0528c200d3c2990a498c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908706"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>İzlenecek yol: Veri Akışı Ardışık Düzeni Oluşturma
 Hizmetini kullanıyor olsanız da <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType>, ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> ileti almak için yöntemler kaynak Bloklar, ileti blokları forma bağlanabilir bir *veri akışı işlem hattı*. Bir veri akışı ardışık düzeni bileşenleri dizisidir veya *veri akışı bloklarının*, her biri, daha büyük bir hedefe katkıda bulunan belirli bir görevi gerçekleştirir. Başka bir veri akışı bloğundan bir ileti aldığında, her veri akışı bloğu veri akışı ardışık düzeninde çalışma gerçekleştirir. Bu bir benzerliği otomobil üretimde montaj ' dir. Her araç montaj hattı geçerken çerçevenin bir istasyondan birleştirir, altyapısı ve benzeri bir yükler. Bir montaj hattı aynı anda birleştirilmeleri birden çok araçları sağladığından, aynı anda tüm araçlar bir birleştirme daha iyi aktarım hızı sağlar.

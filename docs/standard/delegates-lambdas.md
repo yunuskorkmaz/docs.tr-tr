@@ -7,11 +7,11 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
 ms.openlocfilehash: 3d4aa5e60ab9bb134716bddcf90b6fc6b07c2ea0
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941043"
 ---
 # <a name="delegates-and-lambdas"></a>Temsilciler ve lambda ifadeleri
 
@@ -46,9 +46,9 @@ public class Program
 
 Geliştirme işlemi kolaylaştırmak için .NET programcıları yeniden ve yeni türler oluşturmak için olmaması temsilci türleri kümesi içerir. Bunlar `Func<>`, `Action<>` ve `Predicate<>`, ve bunlar gerek kalmadan .NET API'lerini çeşitli yerlerde yeni temsilci türleri tanımlamak için kullanılabilir. Elbette, kullanılacak düşünülen işlemleriyle yapmak için çoğunlukla sahip imzaları içindeki göreceğiniz gibi üç arasında bazı farklar vardır:
 
-*   `Action<>` temsilcinin bağımsız değişkenleri kullanarak bir eylem gerçekleştirmek için ihtiyaç olduğunda kullanılır.
-*   `Func<>` genellikle bir dönüştürme taraftan, varsa, kullanılan diğer bir deyişle, temsilcinin bağımsız değişkenleri farklı bir sonuç biçimine dönüştürmeniz gerekir. Tahminler, bu birinci bir örnektir.
-*   `Predicate<>` bağımsız değişken, temsilci koşulu karşılayıp karşılamadığını belirlemek gerektiğinde kullanılır. Olarak da yazılabilir bir `Func<T, bool>`.
+* `Action<>` temsilcinin bağımsız değişkenleri kullanarak bir eylem gerçekleştirmek için ihtiyaç olduğunda kullanılır.
+* `Func<>` genellikle bir dönüştürme taraftan, varsa, kullanılan diğer bir deyişle, temsilcinin bağımsız değişkenleri farklı bir sonuç biçimine dönüştürmeniz gerekir. Tahminler, bu birinci bir örnektir.
+* `Predicate<>` bağımsız değişken, temsilci koşulu karşılayıp karşılamadığını belirlemek gerektiğinde kullanılır. Olarak da yazılabilir bir `Func<T, bool>`.
 
 Biz artık yukarıdaki örneğimizde alabilir ve kullanarak yeniden `Func<>` temsilci yerine özel bir tür. Program, tam olarak aynı çalışmaya devam edecek.
 
@@ -159,6 +159,6 @@ public MainWindow()
 
 ## <a name="further-reading-and-resources"></a>Daha fazla bilgi ve kaynaklar
 
-*   [Temsilciler](../../docs/csharp/programming-guide/delegates/index.md)
-*   [Anonim İşlevler](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
-*   [Lambda ifadeleri](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+* [Temsilciler](../../docs/csharp/programming-guide/delegates/index.md)
+* [Anonim İşlevler](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+* [Lambda ifadeleri](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

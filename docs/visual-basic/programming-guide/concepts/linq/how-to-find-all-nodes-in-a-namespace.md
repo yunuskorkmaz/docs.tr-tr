@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Tüm düğümleri bulma bir Namespace (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
 ms.openlocfilehash: c04447df1d4a3e29558a3bad172715d2bdee340b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855679"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Nasıl yapılır: Tüm düğümleri bulma bir Namespace (Visual Basic)
 Her bir öğe veya öznitelik, belirli bir ad alanındaki tüm düğümleri bulmak için ad alanı filtreleyebilirsiniz.  

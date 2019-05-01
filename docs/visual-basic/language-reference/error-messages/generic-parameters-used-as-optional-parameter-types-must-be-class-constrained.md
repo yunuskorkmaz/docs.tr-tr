@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
 ms.openlocfilehash: 9b0293472f5eda74c2bf8fb215e15ae5cf8d8b98
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802338"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>İsteğe bağlı parametre türleri olarak kullanılan genel parametreler üzerinde sınıf kısıtlaması olmalıdır
 Bir yordam kullanan bir başvuru türü olması zorunlu değildir bir tür parametresi isteğe bağlı bir parametre ile bildirilir.  
@@ -25,7 +25,7 @@ Bir yordam kullanan bir başvuru türü olması zorunlu değildir bir tür param
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Tür parametresi yalnızca bir başvuru türü kabul edecek şekilde sınırlamak veya isteğe bağlı parametresi için kullanmayın.  
+- Tür parametresi yalnızca bir başvuru türü kabul edecek şekilde sınırlamak veya isteğe bağlı parametresi için kullanmayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

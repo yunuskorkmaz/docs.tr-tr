@@ -3,11 +3,11 @@ title: LINQ to SQL’de Kod Oluşturma
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
 ms.openlocfilehash: 6565655cdb3222a8c9fa7e7759bac09d57ee269b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903285"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL’de Kod Oluşturma
 Kod kullanarak bir veritabanı göstermek için oluşturabilir [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] veya SQLMetal komut satırı aracı. Her iki durumda da, uçtan uca kod oluşturma üç aşamada gerçekleşir:  

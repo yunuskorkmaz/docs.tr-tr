@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
 ms.openlocfilehash: 3027be6ee4ed3664b81c661b6a086a3604573833
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802615"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>İfade bir değerdir, bu nedenle atama işleminin hedefi olamaz
 Bir deyim, deyim için bir değer atamak çalışır. Yalnızca bir yazılabilir değişken, özelliği veya dizi öğesi için çalışma zamanında bir değer atayabilirsiniz. Aşağıdaki örnek nasıl bu hata oluşabilir gösterir.  
@@ -49,13 +49,13 @@ exitButton.Location = exitLocation
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Deyimi, deyim için bir değer atar, ifade tek yazılabilir değişkeni, özelliği veya dizi öğesi ile değiştirin.  
+- Deyimi, deyim için bir değer atar, ifade tek yazılabilir değişkeni, özelliği veya dizi öğesi ile değiştirin.  
   
--   İfade bir değer türü (genellikle bir yapı) aracılığıyla dolaylı erişim yaparsa, değer türü tutacak bir değişken oluşturun.  
+- İfade bir değer türü (genellikle bir yapı) aracılığıyla dolaylı erişim yaparsa, değer türü tutacak bir değişken oluşturun.  
   
--   Uygun yapısını (veya başka bir değer türü) değişkene atayın.  
+- Uygun yapısını (veya başka bir değer türü) değişkene atayın.  
   
--   Bir değer atamak üzere bir özelliğe erişmek için bu değişkeni kullanın.  
+- Bir değer atamak üzere bir özelliğe erişmek için bu değişkeni kullanın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

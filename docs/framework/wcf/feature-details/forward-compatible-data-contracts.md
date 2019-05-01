@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
 ms.openlocfilehash: 90d9409d7e41ddda99caf24ebe0e249ee04723d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855913"
 ---
 # <a name="forward-compatible-data-contracts"></a>İleri Uyumlu Veri Sözleşmeleri
 Bir özellik, Windows Communication Foundation (veri sözleşme sistem sözleşmelerin WCF) zaman içindeki bölünemez şekilde geliştirebilirsiniz. Diğer bir deyişle, bir istemci bir veri anlaşması daha eski bir sürümüyle aynı veri anlaşması bir sürüme sahip bir hizmet ile iletişim kurabilir veya bir istemci bir veri anlaşması'nın daha yeni bir sürümü ile aynı veri anlaşması daha eski bir sürümü ile iletişim kurabilir. Daha fazla bilgi için [en iyi uygulamalar: Veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
 ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875322"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Bir veri hizmeti istemci uygulaması (WCF Veri Hizmetleri) kullanma
 Kullanıma sunan bir hizmet erişebileceğiniz bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] bir URI ile bir Web tarayıcısı sağlanarak akış. Bir kaynak adresi URI sağlar ve istek iletilerinin erişmek veya kaynak temsil eden temel alınan verileri değiştirmek için bu adrese gönderilir. Tarayıcı bir HTTP GET komutu çalıştırır ve istenen kaynak olarak döndüren bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Daha fazla bilgi için [bir Web tarayıcısından hizmete erişim](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -23,24 +23,24 @@ Kullanıma sunan bir hizmet erişebileceğiniz bir [!INCLUDE[ssODataFull](../../
 ### <a name="http-actions"></a>HTTP eylemleri  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] destekler gerçekleştirmek için aşağıdaki HTTP eylemleri oluşturma, okuma, güncelleştirme ve silme işlemleri adresli kaynak temsil eden varlık verileri üzerinde:  
   
--   **HTTP GET** -bir kaynak bir tarayıcıdan erişildiğinde bu varsayılan değerdir. Yükü yok istek iletisinde sağlanır ve istenen veriler içeren bir yükü yanıt yöntemiyle döndürülür.  
+- **HTTP GET** -bir kaynak bir tarayıcıdan erişildiğinde bu varsayılan değerdir. Yükü yok istek iletisinde sağlanır ve istenen veriler içeren bir yükü yanıt yöntemiyle döndürülür.  
   
--   **HTTP POST** -sağlanan kaynak içinde yeni varlık verilerini ekler. İstek iletisinin yükteki eklenecek veri sağlanır. Yanıt iletisinin yükü, yeni oluşturulan varlığın verilerini içerir. Bu, herhangi bir otomatik olarak oluşturulan anahtar değeri içerir. Üst bilgi de ele alan yeni varlık Kaynak URI içeriyor.  
+- **HTTP POST** -sağlanan kaynak içinde yeni varlık verilerini ekler. İstek iletisinin yükteki eklenecek veri sağlanır. Yanıt iletisinin yükü, yeni oluşturulan varlığın verilerini içerir. Bu, herhangi bir otomatik olarak oluşturulan anahtar değeri içerir. Üst bilgi de ele alan yeni varlık Kaynak URI içeriyor.  
   
--   **HTTP DELETE** -belirtilen kaynak temsil eden varlık verilerini siler. Bir yük istek veya yanıt iletilerindeki mevcut değil.  
+- **HTTP DELETE** -belirtilen kaynak temsil eden varlık verilerini siler. Bir yük istek veya yanıt iletilerindeki mevcut değil.  
   
--   **HTTP PUT** - istenen kaynak varlık veri istek iletisi yükteki sağlanan yeni verilerle mevcut değiştirir.  
+- **HTTP PUT** - istenen kaynak varlık veri istek iletisi yükteki sağlanan yeni verilerle mevcut değiştirir.  
   
--   **HTTP birleştirme** - yalnızca varlık verilerini değiştirmek için veri kaynağındaki bir ekleme ardından delete yürütürken verimsizlikleri nedeniyle [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] yeni bir HTTP birleştirme eylemi tanıtır. İstek iletisinin yükü adresli varlık kaynağı değiştirmesi gereken özellikleri içerir. HTTP birleştirme HTTP belirtimini tanımlanmadığından üzerinden olmayan bir HTTP birleştirme isteği yönlendirmek için ek işleme gerektirebilir[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] kullanan sunucuları.  
+- **HTTP birleştirme** - yalnızca varlık verilerini değiştirmek için veri kaynağındaki bir ekleme ardından delete yürütürken verimsizlikleri nedeniyle [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] yeni bir HTTP birleştirme eylemi tanıtır. İstek iletisinin yükü adresli varlık kaynağı değiştirmesi gereken özellikleri içerir. HTTP birleştirme HTTP belirtimini tanımlanmadığından üzerinden olmayan bir HTTP birleştirme isteği yönlendirmek için ek işleme gerektirebilir[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] kullanan sunucuları.  
   
  Daha fazla bilgi için [OData: İşlemleri](https://go.microsoft.com/fwlink/?LinkId=185792).  
   
 ### <a name="payload-formats"></a>Yük biçimleri  
  Bir HTTP PUT, HTTP POST ve HTTP birleştirme isteği için bir istek iletisi yükü, veri hizmetine gönderdiğiniz varlık verilerini içerir. Akıştaki içeriği ileti üzerinde veri biçimi bağlıdır. Böyle bir yükü de silme dışındaki tüm eylemler HTTP yanıtlarını içerir. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] erişim ve veri hizmeti ile değiştirmek için aşağıdaki yük biçimleri destekler:  
   
--   **Atom** -tarafından tanımlanan diğer bir deyişle, XML tabanlı ileti kodlama [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Atom yayımlama Web akışları, pod yayınlarını, Wiki'ler için veri değişimi, HTTP üzerinden etkinleştirmek için protokol (AtomPub) ve XML tabanlı Internet işlevselliği için bir genişletme olarak. Daha fazla bilgi için [OData: Atom biçimi](https://go.microsoft.com/fwlink/?LinkId=185794).  
+- **Atom** -tarafından tanımlanan diğer bir deyişle, XML tabanlı ileti kodlama [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Atom yayımlama Web akışları, pod yayınlarını, Wiki'ler için veri değişimi, HTTP üzerinden etkinleştirmek için protokol (AtomPub) ve XML tabanlı Internet işlevselliği için bir genişletme olarak. Daha fazla bilgi için [OData: Atom biçimi](https://go.microsoft.com/fwlink/?LinkId=185794).  
   
--   **JSON** -JavaScript nesne gösterimi (JSON) olan bir alt kümeyi programlama JavaScript dilinin temel bir basit veri değişim biçimi. Daha fazla bilgi için [OData: JSON biçiminde](https://go.microsoft.com/fwlink/?LinkId=185795).  
+- **JSON** -JavaScript nesne gösterimi (JSON) olan bir alt kümeyi programlama JavaScript dilinin temel bir basit veri değişim biçimi. Daha fazla bilgi için [OData: JSON biçiminde](https://go.microsoft.com/fwlink/?LinkId=185795).  
   
  HTTP isteği iletisi üst bilgisinde yükü ileti biçimi istenir. Daha fazla bilgi için [OData: İşlemleri](https://go.microsoft.com/fwlink/?LinkID=185792).  
   

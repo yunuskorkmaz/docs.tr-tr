@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: 75db9126-e70c-4e81-921d-b83c0a4a9f50
 ms.openlocfilehash: bb101c57cfb453e0419357741c5cf42dc29221b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913204"
 ---
 # <a name="how-to-provide-standard-menu-items-to-a-form"></a>Nasıl yapılır: Bir Forma Standart Menü Öğeleri Sağlama
 Formlarınızla için standart bir menü sağlayabilir <xref:System.Windows.Forms.MenuStrip> denetimi.  
@@ -32,7 +32,7 @@ Formlarınızla için standart bir menü sağlayabilir <xref:System.Windows.Form
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Sistem, System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular.  
+- Sistem, System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular.  
   
  Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   

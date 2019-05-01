@@ -3,17 +3,17 @@ title: Özel Filtreler
 ms.date: 03/30/2017
 ms.assetid: 97cf247d-be0a-4057-bba9-3be5c45029d5
 ms.openlocfilehash: 4140a944ed195e1defc1a0677d8e26ff4ff85beb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857226"
 ---
 # <a name="custom-filters"></a>Özel Filtreler
-Özel Filtreler, sistem tarafından sağlanan ileti filtreleri kullanılarak elde edemiyor eşleşen mantığı tanımlamanıza olanak sağlar. Örneğin, belirli ileti öğesi karma hale getirir ve filtre doğru döndürme zorunluluğu olup olmadığını belirlemek için değeri inceler özel filtre veya yanlış oluşturabilirsiniz.  
+Özel Filtreler sistem tarafından sağlanan ileti filtreleri kullanarak elde edemiyor eşleşen mantığı tanımlamanızı sağlar. Örneğin, bir özel ileti öğesi karma hale getirir ve ardından filtrenin doğru döndürme zorunluluğu olup olmadığını belirlemek için değer inceler özel filtre ya da yanlış oluşturabilirsiniz.  
   
 ## <a name="implementation"></a>Uygulama  
- Özel filtre uygulamasıdır <xref:System.ServiceModel.Dispatcher.MessageFilter> soyut taban sınıfı. Özel filtre uygularken Oluşturucusu isteğe bağlı olarak tek bir dize parametresi kabul edebilir. Bu parametre, herhangi bir değer veya filtre gerçekleştirmek için çalışma zamanında gereken yapılandırma eşleşen sağlamak amacıyla MessageFilter oluşturucuya geçirilen yapılandırma bilgilerini içerir. Örneğin, bu iletinin değerlendirilen içinde filtre arar bir değer sağlamak için kullanılabilir. Aşağıdaki örnek, bir dize parametre kabul eden bir özel ileti filtresi temel uyarlamasını gösterir:  
+ Özel bir filtre uygulamasıdır <xref:System.ServiceModel.Dispatcher.MessageFilter> soyut temel sınıf. Özel filtrenizle uygularken Oluşturucusu isteğe bağlı olarak tek bir dize parametresi kabul edebilir. Bu parametre, herhangi bir değer veya filtre gerçekleştirmek için çalışma zamanında gereken yapılandırma eşleşen sağlamak amacıyla MessageFilter oluşturucuya geçirilen yapılandırma bilgilerini içerir. Örneğin, bu filtre değerlendirilen ileti içinde arar bir değer sağlamak için kullanılabilir. Aşağıdaki örnek, bir dize parametresi kabul eden bir özel ileti filtresi uygulaması gösterir:  
   
 ```csharp  
 public class MyMessageFilter: MessageFilter  
@@ -39,25 +39,25 @@ public class MyMessageFilter: MessageFilter
 ```  
   
 > [!NOTE]
->  Gerçek bir uygulama, bu ileti filtresi döndürmelidir belirlemek için ileti inceleyeceksiniz mantığı eşleşme yöntemleri içeren **true** veya **false**.  
+>  Gerçek bir uygulamada eşleştirme yöntemleri bu ileti filtresi döndürmelidir belirlemek için ileti inceleyeceği mantığı içeren **true** veya **false**.  
   
 ### <a name="performance"></a>Performans  
- Özel filtre uygularken, filtre bir ileti değerlendirmesini tamamlamak gereken en fazla süreyi dikkate önemlidir. Bir eşleşme önce bir ileti birden çok filtreleriyle hesaplanan, tüm filtreleri değerlendirilmeden önce istemci isteği zaman aşımına yaptığından emin olmak önemlidir. Bu nedenle bir özel filtre yalnızca içeriği veya filtre ölçütünü eşleşip eşleşmediğini belirlemek için bir ileti özniteliklerini değerlendirmek için gereken kodu içermelidir.  
+ Özel filtre uygulanırken, filtre bir ileti değerlendirmesini tamamlamak gereken süre uzunluğu en fazla dikkate önemlidir. Önce bir eşleşme bulunduğu bir ileti birden çok filtrelere göre değerlendirilebilir beri tüm filtreleri değerlendirilmeden önce istemci isteğinin zaman aşımına uğramaz sağlamak önemlidir. Bu nedenle özel filtre yalnızca içeriğini veya özniteliklerini filtre ölçütlerini eşleşip eşleşmediğini belirlemek için bir ileti değerlendirmek için gereken kodu içermesi gerekir.  
   
  Genel olarak, aşağıdaki özel filtre uygularken kaçınmanız gerekir:  
   
--   GÇ, verileri diske veya bir veritabanına kaydetme gibi.  
+- GÇ, verileri diske veya bir veritabanına kaydetme gibi.  
   
--   İşlem, bir belge içinde birden çok kayıt üzerinden döngü gibi gereksizdir.  
+- İşlem, bir belge içinde birden çok kayıt üzerinde döngü gibi gereksiz.  
   
--   Paylaşılan kaynaklar üzerinde bir kilit elde etme veya bir veritabanında aramalar gerçekleştiren çağrıları gibi işlemleri engelliyor.  
+- Paylaşılan kaynaklar üzerinde bir kilit alma veya bir veritabanında aramalar gerçekleştiren çağrıları gibi işlemleri engelliyor.  
   
- Özel filtre bir üretim ortamında kullanmadan önce Filtre bir ileti değerlendirmek için geçen ortalama süreyi belirlemek için performans testlerini çalıştırmanız gerekir. Filtre tablosunda kullanılan diğer filtrelerle Ortalama işleme süresi ile birlikte kullanıldığında, bu doğru şekilde istemci uygulaması tarafından belirtilen en büyük zaman aşımı değeri belirlemenize olanak tanır.  
+ Özel filtre bir üretim ortamında kullanmadan önce Filtre bir ileti değerlendirmek için gereken ortalama süreyi belirlemek için performans testleri çalıştırmanız gerekir. Ortalama işlem süresi filtre tablosunda kullanılan bir filtre ile birlikte kullanıldığında, bu istemci uygulaması tarafından belirtilen en uzun zaman aşımı değeri doğru bir şekilde belirlemenize olanak tanır.  
   
 ## <a name="usage"></a>Kullanım  
- Özel filtre yönlendirme hizmeti ile kullanabilmeniz için onu filtre tabloya yeni bir filtre giriş türü belirterek "Özel," İleti Filtresi tam olarak nitelenmiş tür adını ve derlemenizi adını eklemeniz gerekir.  Diğer bir MessageFilters olduğu gibi ile özel filtrenin oluşturucuya geçirilen dize filterData belirtebilirsiniz.  
+ Özel filtrenizle yönlendirme hizmeti ile kullanmak için filtre tabloya yeni bir filtre giriş türü belirterek "Özel," İleti Filtresi tam olarak nitelenmiş tür adını ve derlemenizin adını eklemeniz gerekir.  İle diğer MessageFilters olduğu gibi özel filtrenin oluşturucuya geçirilen dize filterData belirtebilirsiniz.  
   
- Aşağıdaki örnekler, yönlendirme hizmeti ile özel bir filtre kullanarak göstermektedir:  
+ Aşağıdaki örnekler yönlendirme hizmeti ile özel bir filtre kullanarak göstermektedir:  
   
 ```xml  
 <!--ROUTING SECTION -->  

@@ -3,11 +3,11 @@ title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
 ms.openlocfilehash: 97197926db0b44f1ad36e2eba6ab6bec42eced33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943929"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 ConfigurationCodeGenerator yapılandırma sistemi için özel kanal uygulamaları göstermek için kullanabileceğiniz bir araçtır. Bu, kanalınızı yalnızca bunlar sistem tarafından sağlanan gibi bağlama yapılandırırsınız .config dosyasını kullanarak yapılandırmak, kullanıcıların, özel bir kanal sağlar `NetTcpBinding` veya özel bir bağlama kullanarak `TcpTransportBindingElement`.  
@@ -42,9 +42,9 @@ ConfigurationCodeGenerator yapılandırma sistemi için özel kanal uygulamalar�
   
      Komut için üç .cs dosyası üretir `BindingElement` (belirttiyseniz / olması: seçeneği), standart için beş .cs dosya `Binding` (/sb belirtilmişse: seçeneği) ve bir .xml dosyası.  
   
-    1.  .cs birini uygular, /be seçeneğini kullandıysanız, dosyaları `BindingElementExtensionSection` , bağlama öğesi için. Bu kod kullanıma sunar, `BindingElement` yapılandırma sistemi için özel diğer bağlamalar, bağlama öğesi kullanabilirsiniz. Diğer dosyalar Varsayılanları ve sabitleri temsil eden sınıfları içerir. Dosyalarınız `//TODO` , varsayılan değerleri güncelleştirmek için hatırlatmak için açıklama.  
+    1. .cs birini uygular, /be seçeneğini kullandıysanız, dosyaları `BindingElementExtensionSection` , bağlama öğesi için. Bu kod kullanıma sunar, `BindingElement` yapılandırma sistemi için özel diğer bağlamalar, bağlama öğesi kullanabilirsiniz. Diğer dosyalar Varsayılanları ve sabitleri temsil eden sınıfları içerir. Dosyalarınız `//TODO` , varsayılan değerleri güncelleştirmek için hatırlatmak için açıklama.  
   
-    2.  /Sb seçeneğini belirttiyseniz, iki .cs dosyaların uygulayan bir `StandardBindingElement` ve `StandardBindingCollectionElement` sırasıyla, yapılandırma sistemi, standart bağlamayı gösterir. Diğer dosyalar Varsayılanları ve sabitleri temsil eden sınıfları içerir. Dosyalarınız `//TODO` , varsayılan değerleri güncelleştirmek için hatırlatmak için açıklama.  
+    2. /Sb seçeneğini belirttiyseniz, iki .cs dosyaların uygulayan bir `StandardBindingElement` ve `StandardBindingCollectionElement` sırasıyla, yapılandırma sistemi, standart bağlamayı gösterir. Diğer dosyalar Varsayılanları ve sabitleri temsil eden sınıfları içerir. Dosyalarınız `//TODO` , varsayılan değerleri güncelleştirmek için hatırlatmak için açıklama.  
   
          /Sb belirtilmişse: CodeToAddTo seçeneği\<*YourStdBinding*> .cs standart bağlamanız uygulayan bir sınıf içinde el ile eklemelisiniz koduna sahip.  
   

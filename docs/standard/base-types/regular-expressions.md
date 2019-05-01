@@ -23,35 +23,35 @@ ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 33aaf09e284db5c818eb0ff3917533cce5e70ad7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811663"
 ---
 # <a name="net-regular-expressions"></a>.NET normal ifadeler
-Normal ifadeler, metin işleme için güçlü, esnek ve verimli bir yöntem sunar. Normal ifadeleri desen eşleştirme kapsamlı gösterimi, hızlı bir şekilde belirli karakter düzenleri bulmak için metin büyük miktarlarda ayrıştırılamıyor sağlar; önceden tanımlanmış bir desen (örneğin, bir e-posta adresi); eşleştiğinden emin olmak için metin doğrulamak için ayıklama, düzenleme, değiştirin veya metin silmek için alt dizeler; Ayıklanan dizelerin bir raporu oluşturmak için bir koleksiyona eklemek için ve. Dizeler üzerinde çalışan veya büyük metin bloklarını ayrıştıran uygulamalar için normal ifadeler vazgeçilmez bir araçtır.  
+Normal ifadeler, metin işleme için güçlü, esnek ve verimli bir yöntem sunar. Normal ifadelerin kapsamlı desen eşleştirme gösterimi hızlı bir şekilde büyük miktarlarda metini belirli karakter desenlerini bulmak için ayrıştırılacak sağlar; önceden tanımlı bir desenle (örneğin bir e-posta adresi); eşleştiğinden emin olmak için metin doğrulamak için ayıklamak için Düzenle, Değiştir veya metin alt dizeleri silin; ve bir rapor oluşturmak için ayıklanan dizeleri bir koleksiyona eklemek için. Dizeler üzerinde çalışan veya büyük metin bloklarını ayrıştıran uygulamalar için normal ifadeler vazgeçilmez bir araçtır.  
   
 ## <a name="how-regular-expressions-work"></a>Normal İfadeler Nasıl Çalışır?  
- Normal ifadelerle işleme metnin bir merkez tarafından temsil edilen normal ifade altyapısı olan <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> .NET nesne. Metinleri normal ifadeler kullanarak işlemek için, normal ifade altyapısına en azından aşağıdaki iki bilgi öğesinin sağlanması gerekir:  
+ Tarafından temsil edilen normal ifade altyapısının Normal ifadelerle metin ana parçası olan <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> .NET nesnesi. Metinleri normal ifadeler kullanarak işlemek için, normal ifade altyapısına en azından aşağıdaki iki bilgi öğesinin sağlanması gerekir:  
   
--   Metinde tanımlanacak olan normal ifade deseni.  
+- Metinde tanımlanacak olan normal ifade deseni.  
   
-     .NET, normal ifade desenleri özel sözdizimi veya Perl 5 normal ifadeler ile uyumludur ve sağdan sola eşleşen gibi diğer bazı özellikler ekler, dil tarafından tanımlanır. Daha fazla bilgi için bkz: [normal ifade dili - hızlı başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md).  
+     . NET'te, normal ifade desenleri, bir özel sözdizimi ya da Perl 5 normal ifadeleriyle uyumlu olan ve sağdan sola eşleştirme gibi bazı ek özellikler ekleyen bir dil tarafından tanımlanır. Daha fazla bilgi için [normal ifade dili - hızlı başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md).  
   
--   Normal ifade deseni için ayrıştırılacak olan metin.  
+- Normal ifade deseni için ayrıştırılacak olan metin.  
   
  <xref:System.Text.RegularExpressions.Regex> sınıfının yöntemleri aşağıdaki işlemleri gerçekleştirmenizi sağlar:  
   
--   <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> metodunu çağırarak normal ifade deseninin giriş metninde oluşup oluşmayacağını belirleyin. Kullanan bir örnek <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> metin, doğrulama yöntemi bkz [nasıl yapılır: dizelerin geçerli e-posta biçiminde olduğunu doğrulama](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
+- <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> metodunu çağırarak normal ifade deseninin giriş metninde oluşup oluşmayacağını belirleyin. Kullanan bir örnek için <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> metin doğrulamak için yöntem bkz [nasıl yapılır: Dizelerin geçerli e-posta biçiminde olduğunu doğrulama](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
   
--   <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> veya <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> yöntemini çağırarak, normal ifade deseniyle eşleşen metnin bir veya tüm oluşumlarını alın. İlk yöntem, eşleşen metin hakkında bilgi sağlayan bir <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> nesnesi döndürür. İkinci yöntem, ayrıştırılan metinde bulunan her bir eşleşme için bir <xref:System.Text.RegularExpressions.MatchCollection> nesnesi içeren bir <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> nesnesi döndürür.  
+- <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> veya <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> yöntemini çağırarak, normal ifade deseniyle eşleşen metnin bir veya tüm oluşumlarını alın. İlk yöntem, eşleşen metin hakkında bilgi sağlayan bir <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> nesnesi döndürür. İkinci yöntem, ayrıştırılan metinde bulunan her bir eşleşme için bir <xref:System.Text.RegularExpressions.MatchCollection> nesnesi içeren bir <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> nesnesi döndürür.  
   
--   <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> yöntemini çağırarak normal ifade deseniyle eşleşen metni değiştirin. Kullanma örnekleri için <xref:System.Text.RegularExpressions.Regex.Replace%2A> yöntemi bir dizeden geçersiz karakterleri kaldırın ve tarih biçimleri değiştirmek için bkz: [nasıl yapılır: Şerit bir dizeden geçersiz karakterleri](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md) ve [örnek: tarih biçimlerini değiştirme](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md).  
+- <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> yöntemini çağırarak normal ifade deseniyle eşleşen metni değiştirin. Kullanan örnekler <xref:System.Text.RegularExpressions.Regex.Replace%2A> tarih biçimlerini değiştirmek ve geçersiz karakterleri bir dizeden kaldırmak için yöntem bkz [nasıl yapılır: Dizeden bir dizeden geçersiz karakterleri çıkartma](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md) ve [örneği: Tarih biçimlerini değiştirme](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md).  
   
- Normal ifade nesnesi modeli genel bakış için bkz: [normal ifade nesnesi modeli](../../../docs/standard/base-types/the-regular-expression-object-model.md).  
+ Normal ifade nesne modeline genel bakış için bkz: [normal ifade nesnesi modeli](../../../docs/standard/base-types/the-regular-expression-object-model.md).  
   
- Normal ifade dili hakkında daha fazla bilgi için bkz: [normal ifade dili - hızlı başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md) veya indirin ve bu broşürler biri yazdırma:  
+ Normal ifade dili hakkında daha fazla bilgi için bkz: [normal ifade dili - hızlı başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md) veya indirin ve bu broşürler birini yazdırın:  
   
  [Word (.docx) biçiminde hızlı başvuru](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [PDF (.pdf) biçiminde hızlı başvuru](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
@@ -59,15 +59,15 @@ Normal ifadeler, metin işleme için güçlü, esnek ve verimli bir yöntem suna
 ## <a name="regular-expression-examples"></a>Normal İfade Örnekleri  
  <xref:System.String> sınıfı, daha büyük bir dizede sabit değer dizelerini bulmak istediğiniz zaman kullanabileceğiniz dize arama ve yerleştirme yöntemlerini içerir. Normal ifadeler en çok, büyük bir dizedeki alt dizelerin birini konumlandırmak istediğinizde veya aşağıdaki örnekte gösterildiği gibi bir dizede desenleri tanımlamak istediğinizde kullanışlıdır.  
   
-### <a name="example-1-replacing-substrings"></a>Örnek 1: Alt Dizeleri Değiştirme  
+### <a name="example-1-replacing-substrings"></a>Örnek 1: Alt dizeleri değiştirme  
  Bir posta listesinin, ada ve soyada ek olarak bazen bir ünvan (Mr., Mrs., Miss veya Ms.) içerdiğini varsayın. Eğer listeden zarf etiketleri oluştururken ünvanları dahil etmek istemiyorsanız, aşağıdaki örnekte gösterildiği gibi ünvanları kaldırmak için bir normal ifade kullanabilirsiniz.  
   
  [!code-csharp[Conceptual.Regex#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example1.cs#2)]
  [!code-vb[Conceptual.Regex#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example1.vb#2)]  
   
- Normal ifade deseni`(Mr\.? |Mrs\.? |Miss |Ms\.? )` "Mr", "Bay", "Mrs", "Merve", "İsabetsizliği", "Ms ya da"Ms.". herhangi bir örneğini eşleşir <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> yöntemine yapılan çağrı, eşleşen dizeyi <xref:System.String.Empty?displayProperty=nameWithType> ile değiştirir; yani başka bir deyişle bu dizeyi orijinal dizeden kaldırır.  
+ Normal ifade deseni`(Mr\.? |Mrs\.? |Miss |Ms\.? )` "Mr", "Bay", "Mrs", "Mrs.", "Miss", "Ms veya"Ms.". tüm oluşumlarıyla eşleşir <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> yöntemine yapılan çağrı, eşleşen dizeyi <xref:System.String.Empty?displayProperty=nameWithType> ile değiştirir; yani başka bir deyişle bu dizeyi orijinal dizeden kaldırır.  
   
-### <a name="example-2-identifying-duplicated-words"></a>Örnek 2: Yinelenen Sözcükleri Tanımlama  
+### <a name="example-2-identifying-duplicated-words"></a>Örnek 2: Yinelenen sözcükleri tanımlama  
  Kelimeleri yanlışlıkla yinelemek yazarların yaptığı yaygın bir hatadır. Bir normal ifade, aşağıdaki örnekte gösterdiği gibi yinelenen kelimeleri tanımlamak için kullanılabilir.  
   
  [!code-csharp[Conceptual.Regex#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example2.cs#3)]
@@ -78,22 +78,22 @@ Normal ifadeler, metin işleme için güçlü, esnek ve verimli bir yöntem suna
 |||  
 |-|-|  
 |`\b`|Bir sözcük sınırında başla.|  
-|(\w+?)|Bir veya daha fazla sözcük karakterleri, mümkün olduğunca az karakter ancak aynı. Birlikte, bunlar için olarak adlandırılabilir bir grup form `\1`.|  
+|(\w+?)|Bir veya daha fazla sözcük karakterini, ancak mümkün olduğunca kadar az karakterle eşleştirin. Birlikte, bunlar olarak başvurulabilen bir grup form `\1`.|  
 |`\s`|Bir boşluk karakteri ile eşleştirin.|  
-|`\1`|Adlı gruba eşittir alt dizeyi eşleştirmek `\1`.|  
+|`\1`|Adlı gruba eşit olan alt dizeyle eşleş `\1`.|  
 |`\b`|Bir sözcük sınırıyla eşleş.|  
   
  <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> yöntemi, normal ifade ayarları <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> şeklinde ayarlanmış olarak çağırılır. Bu nedenle eşleştirme işlemi büyük/küçük harfe duyarsızdır, ve örnek "This this" alt dizesini bir yineleme olarak tanımlar.  
   
  Giriş dizesinin "this?this" alt dizesini içerdiğini unutmayın. Ancak, aradaki noktalama işareti nedeniyle bu, bir yineleme olarak tanımlanmaz.  
   
-### <a name="example-3-dynamically-building-a-culture-sensitive-regular-expression"></a>Örnek 3: Kültüre Duyarlı Normal Bir İfadeyi Dinamik Olarak Oluşturma  
- Aşağıdaki örnek tarafından sunulan esneklik birlikte normal ifadeler gücünü gösterilmektedir. NET Genelleştirme özellikleri. Sistemin geçerli kültüründeki para birimi değerlerinin biçimini belirlemek için <xref:System.Globalization.NumberFormatInfo> nesnesini kullanır. Ardından metinden para birimi değerleri ayıklayan bir normal ifadeyi dinamik olarak oluşturmak için bu bilgiyi kullanır. Her bir eşleşme için, yalnızca sayısal dizeyi içeren alt grubu ayıklar, bir <xref:System.Decimal> değerine dönüştürür ve toplamı hesaplar.  
+### <a name="example-3-dynamically-building-a-culture-sensitive-regular-expression"></a>Örnek 3: Kültüre duyarlı normal bir ifade dinamik olarak oluşturma  
+ Aşağıdaki örnek, sunduğu esneklik ile birleştirilen normal ifadelerin gücünü gösterir. NET Genelleştirme özellikleri. Sistemin geçerli kültüründeki para birimi değerlerinin biçimini belirlemek için <xref:System.Globalization.NumberFormatInfo> nesnesini kullanır. Ardından metinden para birimi değerleri ayıklayan bir normal ifadeyi dinamik olarak oluşturmak için bu bilgiyi kullanır. Her bir eşleşme için, yalnızca sayısal dizeyi içeren alt grubu ayıklar, bir <xref:System.Decimal> değerine dönüştürür ve toplamı hesaplar.  
   
  [!code-csharp[Conceptual.Regex#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example.cs#1)]
  [!code-vb[Conceptual.Regex#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example.vb#1)]  
   
- Geçerli kültür İngilizce - bir bilgisayarda Amerika Birleşik Devletleri (en-US) örnek dinamik olarak normal ifade derlemeler `\$\s*[-+]?([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`. Bu normal ifade deseni aşağıdaki şekilde yorumlanabilir:  
+ Geçerli kültürü English - en bir bilgisayarda Amerika Birleşik Devletleri (en-US) örnek normal ifadeyi dinamik olarak oluşturur `\$\s*[-+]?([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`. Bu normal ifade deseni aşağıdaki şekilde yorumlanabilir:  
   
 |||  
 |-|-|  
@@ -115,11 +115,11 @@ Normal ifadeler, metin işleme için güçlü, esnek ve verimli bir yöntem suna
 |-----------|-----------------|  
 |[Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Normal ifadeler tanımlamak için kullanabileceğiniz karakterler, operatörler ve yapılar kümesi hakkında bilgi sağlar.|  
 |[Normal İfade Nesne Modeli](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Normal ifade sınıflarının nasıl kullanılacağını gösteren bilgileri ve kod örneklerini sağlar.|  
-|[Normal İfade Davranışının Ayrıntıları](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|.NET normal ifadeler davranışını ve özellikleri hakkında bilgi sağlar.|  
+|[Normal İfade Davranışının Ayrıntıları](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|.NET normal ifadelerin davranışı ve özellikleri hakkında bilgi sağlar.|  
 |[Normal İfade Örnekleri](../../../docs/standard/base-types/regular-expression-examples.md)|Normal ifadelerin genel kullanımlarını gösteren kod örnekleri sağlar.|  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
- [Normal ifadeler - hızlı başvuru (Word biçiminde de indirilebilir)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Normal ifadeler - hızlı başvuru (PDF biçimli indirme)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+ [Normal ifadeler - hızlı başvuru (indirme, Word biçiminde)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Normal ifadeler - hızlı başvuru (PDF biçimindeki indirme)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
 ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879820"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>DataSet ve XmlDataDocument Eşitlemesi
 ADO.NET <xref:System.Data.DataSet> verilerin ilişkisel bir gösterimini sağlar. Hiyerarşik veri erişimi için .NET Framework XML sınıfları kullanabilirsiniz. Tarihsel olarak, bu iki verilerini sunumu ayrı olarak kullanılmış. Ancak, .NET Framework verilerine ilişkisel ve hiyerarşik temsillerini gerçek zamanlı, zaman uyumlu erişiminizi sağlar **veri kümesi** nesne ve <xref:System.Xml.XmlDataDocument> nesne, sırasıyla.  
@@ -19,7 +19,7 @@ ADO.NET <xref:System.Data.DataSet> verilerin ilişkisel bir gösterimini sağlar
   
  Eşitleyebilirsiniz birkaç şekilde bir **veri kümesi** ile bir **XmlDataDocument**. Şunları yapabilirsiniz:  
   
--   Doldurma bir **veri kümesi** şeması (diğer bir deyişle, ilişkisel bir yapısı) ve verilerle ve ardından yeni bir eşitleme **XmlDataDocument**. Bu, hiyerarşik bir görünümü var olan ilişkisel veri sağlar. Örneğin:  
+- Doldurma bir **veri kümesi** şeması (diğer bir deyişle, ilişkisel bir yapısı) ve verilerle ve ardından yeni bir eşitleme **XmlDataDocument**. Bu, hiyerarşik bir görünümü var olan ilişkisel veri sağlar. Örneğin:  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -37,7 +37,7 @@ ADO.NET <xref:System.Data.DataSet> verilerin ilişkisel bir gösterimini sağlar
     XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);  
     ```  
   
--   Doldurma bir **veri kümesi** yalnızca şema ile (bir türü kesin belirlenmiş gibi **veri kümesi**), ile eşitlemek bir **XmlDataDocument**ve ardından Yük  **XmlDataDocument** XML belgesinden. Bu, var olan hiyerarşik verilerin ilişkisel bir görünümünü sağlar. Sütun adlarının ve tablo adları, **veri kümesi** şema ile eşitlenme istediğiniz XML öğeleri adları aynı olmalıdır. Bu eşleştirme büyük küçük harfe duyarlı değildir.  
+- Doldurma bir **veri kümesi** yalnızca şema ile (bir türü kesin belirlenmiş gibi **veri kümesi**), ile eşitlemek bir **XmlDataDocument**ve ardından Yük  **XmlDataDocument** XML belgesinden. Bu, var olan hiyerarşik verilerin ilişkisel bir görünümünü sağlar. Sütun adlarının ve tablo adları, **veri kümesi** şema ile eşitlenme istediğiniz XML öğeleri adları aynı olmalıdır. Bu eşleştirme büyük küçük harfe duyarlı değildir.  
   
      Unutmayın, şema **veri kümesi** yalnızca ilişkisel görünümünüzde kullanıma sunmak istiyorsanız XML öğeleri ile eşleşmesi gerekir. Bu şekilde, çok büyük bir XML belgesi ve oldukça küçük bir ilişkisel "Pencere" Bu belge üzerinde olabilir. **XmlDataDocument** tüm XML belgesi olsa bile korur **veri kümesi** yalnızca küçük bir kısmını kullanıma sunar. (Bu ayrıntılı bir örnek için bkz. [bir DataSet'i bir XmlDataDocument ile eşitleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md).)  
   
@@ -63,7 +63,7 @@ ADO.NET <xref:System.Data.DataSet> verilerin ilişkisel bir gösterimini sağlar
   
      Yüklenemiyor bir **XmlDataDocument** ile eşitlenmişse bir **veri kümesi** verilerini içeren. bir özel durum oluşturulur.  
   
--   Yeni bir **XmlDataDocument** XML belgesinden yükleyin ve ardından ilişkisel görünümünü kullanarak veri erişim **veri kümesi** özelliği **XmlDataDocument**. Şemasını ayarlamanız gerekir **veri kümesi** veri görmeden önce **XmlDataDocument** kullanarak **veri kümesi**. Tablo adlarının, sütun yeniden adları, **veri kümesi** şema ile eşitlenme istediğiniz XML öğeleri adları aynı olmalıdır. Bu eşleştirme büyük küçük harfe duyarlı değildir.  
+- Yeni bir **XmlDataDocument** XML belgesinden yükleyin ve ardından ilişkisel görünümünü kullanarak veri erişim **veri kümesi** özelliği **XmlDataDocument**. Şemasını ayarlamanız gerekir **veri kümesi** veri görmeden önce **XmlDataDocument** kullanarak **veri kümesi**. Tablo adlarının, sütun yeniden adları, **veri kümesi** şema ile eşitlenme istediğiniz XML öğeleri adları aynı olmalıdır. Bu eşleştirme büyük küçük harfe duyarlı değildir.  
   
      Aşağıdaki kod örneği, verilerin ilişkisel görünümüne erişime izin gösterilmiştir bir **XmlDataDocument**.  
   

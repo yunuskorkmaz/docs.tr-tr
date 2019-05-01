@@ -18,11 +18,11 @@ helpviewer_keywords:
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
 ms.openlocfilehash: 83538dc971419ad7918c16c5ccbd2003d16e2c6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931748"
 ---
 # <a name="custom-serialization"></a>Özel serileştirme
 Özel seri hale getirme serileştirme ve seri durumundan çıkarma bir türün denetleme işlemidir. Serileştirme denetleyerek, türü çekirdek işlevselliğini bozucu olmayan bir tür sürümleri arasında seri hale getrime ve yeteneği olan serileştirme uyumluluğu sağlamak mümkündür. Örneğin, bir tür ilk sürümü olabilir yalnızca iki alan. Sonraki sürümünde bir tür, pek çok daha fazla alan eklenir. Henüz bir uygulamanın ikinci sürümü seri hale getirmek ve her iki türü seri durumdan olması gerekir. Aşağıdaki bölümler serileştirme denetlemek nasıl açıklar.
@@ -35,13 +35,13 @@ ms.locfileid: "54628006"
 ## <a name="running-custom-methods-during-and-after-serialization"></a>Özel yöntemlerini sırasında ve sonra serileştirme çalıştıran  
  En iyi yöntem ve (.NET Framework'ün 2.0 sürümünde sunulan) kolay yolu olan aşağıdaki öznitelikler sırasında ve seri hale getirme sonra veri düzeltmek için kullanılan yöntemleri uygulamak için:  
   
--   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
   
--   <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+- <xref:System.Runtime.Serialization.OnSerializedAttribute>  
   
--   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
+- <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
  Bu öznitelikler herhangi birinin veya tüm dört serileştirme ve seri durumundan çıkarma işlemlerinin aşamadan katılmak türüne izin verin. Öznitelikleri yöntemleri her aşamada çağrılmalıdır türü belirtin. Yöntemleri seri hale getirme akışı erişim değil ancak bunun yerine nesne önce ve seri hale getirme, veya önce ve sonra seri durumundan çıkarma alter izin. Öznitelikleri türü devralma hiyerarşisinin tüm düzeylerinde uygulanabilir ve her yöntem hiyerarşide temel en türetilen çağrılır. Bu mekanizma karmaşıklığı ve uygulama ortaya çıkan sorunları kaçınan <xref:System.Runtime.Serialization.ISerializable> serileştirme ve seri durumundan çıkarma en türetilen uygulamaya için sorumluluk vererek arabirimi. Ayrıca, bu mekanizma alanları ve seri hale getirme akışı almanın popülasyonu yok sayılacak biçimlendiricileri sağlar. Ayrıntıları ve örnekleri serileştirme ve seri durumundan çıkarma denetlemek için önceki bağlantılardan herhangi birine tıklayın.  
   

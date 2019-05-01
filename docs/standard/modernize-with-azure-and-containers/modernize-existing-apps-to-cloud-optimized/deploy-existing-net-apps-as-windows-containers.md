@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
 ms.openlocfilehash: ad0da9f7f0412c14b5362e3f631a7aa4af1f8260
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61812066"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 
@@ -39,13 +39,13 @@ Windows kapsayıcıları içinde tam olarak uygulama paketleme işlemi otomatik 
 
 Çoğu kuruluş aşağıdaki nedenlerden dolayı mevcut tek yapılı uygulamaları kapsayıcıya alma:
 
--   **Yayın geliştirilmiş dağıtım yoluyla çeviklik**. Kapsayıcılar, geliştirme ve operasyon arasında tutarlı dağıtım sözleşme sunar. Kapsayıcıları kullandığınızda, geliştiricilerin söyleyin duymazsınız, "Benim makinemde neden üretimde çalışır?" Diyor "üretimde çalışır, bir kapsayıcı olarak çalışır, böylece." İle tüm bağımlılıkları, paketlenmiş bir uygulama, desteklenen tüm kapsayıcı tabanlı ortamda çalıştırılabilir. Tüm dağıtım hedefleri (geliştirme, QA, hazırlama, üretim) çalıştırmak için tasarlanmıştı şekilde çalışacaktır. Dağıtım önemli ölçüde artıran, sonraki bir aşamadan diğerine taşıdığınızda, çoğu frictions kapsayıcıları ortadan kaldırarak kodlama işini daha hızlı gönderin.
+- **Yayın geliştirilmiş dağıtım yoluyla çeviklik**. Kapsayıcılar, geliştirme ve operasyon arasında tutarlı dağıtım sözleşme sunar. Kapsayıcıları kullandığınızda, geliştiricilerin söyleyin duymazsınız, "Benim makinemde neden üretimde çalışır?" Diyor "üretimde çalışır, bir kapsayıcı olarak çalışır, böylece." İle tüm bağımlılıkları, paketlenmiş bir uygulama, desteklenen tüm kapsayıcı tabanlı ortamda çalıştırılabilir. Tüm dağıtım hedefleri (geliştirme, QA, hazırlama, üretim) çalıştırmak için tasarlanmıştı şekilde çalışacaktır. Dağıtım önemli ölçüde artıran, sonraki bir aşamadan diğerine taşıdığınızda, çoğu frictions kapsayıcıları ortadan kaldırarak kodlama işini daha hızlı gönderin.
 
--   **İndirimleri maliyet**. Kapsayıcılar, birleştirme ve temizleme donanımdan veya uygulamaları donanım birimi başına daha yüksek yoğunlukta çalışan tarafından ya da maliyetlerini düşürmek için sağlama.
+- **İndirimleri maliyet**. Kapsayıcılar, birleştirme ve temizleme donanımdan veya uygulamaları donanım birimi başına daha yüksek yoğunlukta çalışan tarafından ya da maliyetlerini düşürmek için sağlama.
 
--   **Taşınabilirlik**. Kapsayıcılar, modüler ve taşınabilir. Docker kapsayıcıları, herhangi bir sunucu işletim sistemi (Linux ve Windows), tüm büyük genel bulut (Microsoft Azure, Amazon AWS, Google, IBM) ve şirket içi ve özel veya hibrit bulut ortamlarında desteklenir.
+- **Taşınabilirlik**. Kapsayıcılar, modüler ve taşınabilir. Docker kapsayıcıları, herhangi bir sunucu işletim sistemi (Linux ve Windows), tüm büyük genel bulut (Microsoft Azure, Amazon AWS, Google, IBM) ve şirket içi ve özel veya hibrit bulut ortamlarında desteklenir.
 
--   **Denetim**. Kapsayıcılar kapsayıcı düzeyinde denetlenir esnek ve güvenli bir ortam sunar. Bir kapsayıcı güvenli, yalıtılmış ve yürütme kısıtlama ilkeleri kapsayıcıdaki ayarlayarak bile sınırlıdır. Windows kapsayıcıları hakkında bölümünde olarak ayrıntılı, Windows Server 2016 ve Hyper-V kapsayıcıları ek kurumsal destek seçenekleri sunar.
+- **Denetim**. Kapsayıcılar kapsayıcı düzeyinde denetlenir esnek ve güvenli bir ortam sunar. Bir kapsayıcı güvenli, yalıtılmış ve yürütme kısıtlama ilkeleri kapsayıcıdaki ayarlayarak bile sınırlıdır. Windows kapsayıcıları hakkında bölümünde olarak ayrıntılı, Windows Server 2016 ve Hyper-V kapsayıcıları ek kurumsal destek seçenekleri sunar.
 
 Geliştirme ve bakımını yapmanız için kapsayıcılar kullandığınızda önemli geliştirmeler çeviklik, taşınabilirlik ve denetim için önemli maliyet indirimleri sonuçta sağlama.
 
@@ -123,15 +123,15 @@ Bir kapsayıcı olan veya olmayan Hyper-V yalıtım Windows üzerinde çalışan
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Windows kapsayıcıları belgeleri**
+- **Windows kapsayıcıları belgeleri**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/>
 
--   **Windows kapsayıcıları ile ilgili temel bilgiler**
+- **Windows kapsayıcıları ile ilgili temel bilgiler**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
--   **Bilgi grafiği: Microsoft ve kapsayıcılar**
+- **Bilgi grafiği: Microsoft ve kapsayıcılar**
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -145,18 +145,18 @@ Ancak, bile QA ve geliştirme/Test ortamları ve üretim dağıtım ortamı hakk
 > **Şekil 4-7.5.** Azure'da kapsayıcı ekosistemi
 
 Kapsayıcı ekosisteminden azure'da altyapı değerlendirilir kapsayıcıları destekleyen aşağıdaki ürünler:
--   **Azure Container Instances (ACI)**
--   **Azure sanal makineleri** (kapsayıcının destekle)
--   **Azure sanal makine ölçek kümeleri** (kapsayıcının destekle)
+- **Azure Container Instances (ACI)**
+- **Azure sanal makineleri** (kapsayıcının destekle)
+- **Azure sanal makine ölçek kümeleri** (kapsayıcının destekle)
 
 Bu üç ACI gerek, yükseltmek/yama uygulamak, vb. için temel işletim sistemi sürdürmeniz gerekmez, ancak ACI yine de daha iyi kitabın yaklaşan bölümlerinde anlatıldığı gibi altyapı düzeyinde konumlandırılmış gerçeğidir harika bir avantaj sağlar.
 
 Aynı anda daha PaaS (hizmet olarak Platform) yerleştirdiğiniz düzeyi destekleyici Azure kapsayıcıları ürünleri şunlardır:
 
--   **Azure uygulama hizmeti**
--   **Azure Kubernetes Service (AKS ve ACS)**
--   **Azure Service Fabric** 
--   **Azure Batch** 
+- **Azure uygulama hizmeti**
+- **Azure Kubernetes Service (AKS ve ACS)**
+- **Azure Service Fabric** 
+- **Azure Batch** 
 
 Daha sonra Azure Container Registry, kaydetme ve özel kapsayıcı görüntülerinizi dağıtırken tüm önceki ürünlerden kullanabileceğiniz Azure'de barındırılan bir yüksek ölçeklenebilir kapsayıcı kayıt defteridir.
 

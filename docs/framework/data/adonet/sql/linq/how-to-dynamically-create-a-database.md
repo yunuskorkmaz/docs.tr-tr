@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
 ms.openlocfilehash: ab5e2867ce85fcc82e1114696c129aae878bbee6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877272"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Nasıl yapılır: Dinamik Olarak Veritabanı Oluşturma
 LINQ to SQL nesne modeli, bir ilişkisel veritabanına eşlenir. İlişkisel veritabanının yapısını tanımlamak için öznitelik tabanlı eşleme veya bir dış eşleme dosyası kullanarak eşleme etkindir. Her iki senaryoda veritabanı kullanarak yeni bir örneğini oluşturabilirsiniz ilişkisel veritabanı hakkında yeterli bilgi yok <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> yöntemi.  
@@ -19,9 +19,9 @@ LINQ to SQL nesne modeli, bir ilişkisel veritabanına eşlenir. İlişkisel ver
   
  Kullanabileceğiniz <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> senaryoları, özellikle de Microsoft SQL Server 2008 gibi bir bilinen veri sağlayıcısı kullanılabilir olduğunda herhangi bir sayıda yöntem. Tipik senaryolar aşağıdakileri içerir:  
   
--   Otomatik olarak kendisini bir müşteri sisteminde yükleyen bir uygulama oluşturuyorsanız.  
+- Otomatik olarak kendisini bir müşteri sisteminde yükleyen bir uygulama oluşturuyorsanız.  
   
--   Yerel bir veritabanı çevrimdışı durumunu kaydetmek için gereken bir istemci uygulaması oluşturuyorsunuz.  
+- Yerel bir veritabanı çevrimdışı durumunu kaydetmek için gereken bir istemci uygulaması oluşturuyorsunuz.  
   
  Ayrıca <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> .mdf dosyası veya bağlantı dizenizi bağlı olarak bir katalog adı'nı kullanarak SQL Server ile yöntemi. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kullandığı bağlantı dizesi oluşturulacak veritabanının tanımlamak için ve hangi sunucuda veritabanı oluşturulacak.  
   

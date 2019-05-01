@@ -11,11 +11,11 @@ helpviewer_keywords:
 - properties [WPF], change notifications
 ms.assetid: 30b59d9e-8c3a-4349-aa82-4be837e841cf
 ms.openlocfilehash: d37d468acc94470be8c2afdc495b40168932ec83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931449"
 ---
 # <a name="how-to-implement-property-change-notification"></a>Nasıl yapılır: Özellik Değişikliği Bildirimi Uygulama
 Desteklemek için <xref:System.Windows.Data.BindingMode.OneWay> veya <xref:System.Windows.Data.BindingMode.TwoWay> otomatik olarak bağlama kaynağının (örneğin kullanıcı, bir form düzenlediğinde otomatik olarak güncelleştirilen Önizleme bölmesinde sağlamak için), dinamik değişiklikleri yansıtacak şekilde, bağlama hedefi özellikleri etkinleştirmek için bağlama, sınıfı uygun özellik değişikliği bildirimleri sağlaması gerekir. Bu örnekte, uygulayan bir sınıf oluşturma işlemi gösterilmektedir <xref:System.ComponentModel.INotifyPropertyChanged>.  

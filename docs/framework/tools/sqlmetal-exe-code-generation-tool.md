@@ -10,20 +10,20 @@ helpviewer_keywords:
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
 ms.openlocfilehash: 80e0bcd341f9059fc6787756f8e743aedc5dc43e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61919808"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Kod Üretme Aracı)
 SqlMetal komut satırı aracı için kod ve eşleme üretir [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] bileşeninin [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Bu konunun ilerisinde görünen seçenekleri uygulayarak, SqlMetal'den aşağıdakileri içeren çeşitli farklı eylemler gerçekleştirmesini isteyebilirsiniz:  
   
--   Bir veritabanından, kaynak kodu ve eşleme öznitelikleri veya bir eşleme dosyası oluşturmak.  
+- Bir veritabanından, kaynak kodu ve eşleme öznitelikleri veya bir eşleme dosyası oluşturmak.  
   
--   Bir veritabanından, dosya özelleştirme için bir ara veritabanı işaretleme dili (.dbml) dosyası oluşturmak.  
+- Bir veritabanından, dosya özelleştirme için bir ara veritabanı işaretleme dili (.dbml) dosyası oluşturmak.  
   
--   Bir .dbml dosyasından, kod veya eşleme öznitelikleri veya bir eşleme dosyası üretmek.  
+- Bir .dbml dosyasından, kod veya eşleme öznitelikleri veya bir eşleme dosyası üretmek.  
   
  Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Varsayılan olarak, dosya şu konumdadır `drive`: \Program SDKs\Windows\v`n.nn`\bin. Visual Studio yüklemezseniz da SQLMetal dosyasını indirerek edinebilirsiniz [Windows SDK'sı](https://go.microsoft.com/fwlink/?LinkId=142225).  
   
@@ -88,9 +88,9 @@ sqlmetal [options] [<input file>]
 ## <a name="remarks"></a>Açıklamalar  
  SqlMetal işlevi aslında iki adımdan oluşur:  
   
--   Veritabanını meta verilerini bir .dbml dosyasına ayıklama.  
+- Veritabanını meta verilerini bir .dbml dosyasına ayıklama.  
   
--   Kod çıktı dosyası oluşturma.  
+- Kod çıktı dosyası oluşturma.  
   
      Uygun komut satırı seçeneklerini kullanarak, Visual Basic veya C# kaynak kodu oluşturabilir veya bir XML eşleme dosyası üretebilirsiniz.  
   
@@ -100,9 +100,9 @@ sqlmetal [options] [<input file>]
   
  [!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] bir veya daha fazla aşağıdaki koşullardan biri doğruysa, bir özel durum oluşturur:  
   
--   SqlMetal, kendi kendini çağıran bir saklı yordam ayıklamaya çalışır.  
+- SqlMetal, kendi kendini çağıran bir saklı yordam ayıklamaya çalışır.  
   
--   Bir saklı yordam, işlev veya görünümün iç içe geçme düzeyini 32'yi aşıyor.  
+- Bir saklı yordam, işlev veya görünümün iç içe geçme düzeyini 32'yi aşıyor.  
   
      SqlMetal, bu özel durumu yakalar ve bir uyarı olarak bildirir.  
   

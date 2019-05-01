@@ -5,11 +5,11 @@ f1_keywords:
 - vbrNamedArgumentOnParamArray
 ms.assetid: ba35fb86-329a-4ceb-864b-045c07661482
 ms.openlocfilehash: 155b42a104b30553e067aa4e0681ec565640bd5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938391"
 ---
 # <a name="named-arguments-cannot-match-paramarray-parameters"></a>Adlandırılmış bağımsız değişkenler ParamArray parametreleriyle eşleşmiyor
 Parametre dizileri değerine göre geçirilmelidir.  

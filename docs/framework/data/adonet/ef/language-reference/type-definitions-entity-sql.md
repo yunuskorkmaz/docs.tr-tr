@@ -3,11 +3,11 @@ title: Tür tanımları (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
 ms.openlocfilehash: 2e068db0ce202c26cad36c8ed7adf0acdfb8e363
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879560"
 ---
 # <a name="type-definitions-entity-sql"></a>Tür tanımları (varlık SQL)
 Bir tür tanımı bildirim deyiminde kullanılan bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] satır içi işlev.  
@@ -19,25 +19,25 @@ Bir tür tanımı bildirim deyiminde kullanılan bir [!INCLUDE[esql](../../../..
   
  Tür tanımlarını şöyle olabilir:  
   
--   Tanımlayıcı (örneğin, "Int32" veya "AdventureWorks.Order") türü.  
+- Tanımlayıcı (örneğin, "Int32" veya "AdventureWorks.Order") türü.  
   
--   Anahtar sözcüğü `COLLECTION` parantez (örneğin, "Collection(AdventureWorks.Order)"). başka bir tür tanımında ardından  
+- Anahtar sözcüğü `COLLECTION` parantez (örneğin, "Collection(AdventureWorks.Order)"). başka bir tür tanımında ardından  
   
--   Anahtar sözcüğü satır parantez (örneğin, "Row(x AdventureWorks.Order)") içinde özellik tanımları listesi tarafından izlenen. Özellik tanımları sahip bir biçimi gibi "`identifier type_definition`, `identifier type_definition`,...".  
+- Anahtar sözcüğü satır parantez (örneğin, "Row(x AdventureWorks.Order)") içinde özellik tanımları listesi tarafından izlenen. Özellik tanımları sahip bir biçimi gibi "`identifier type_definition`, `identifier type_definition`,...".  
   
--   Türü (örneğin, "Ref(AdventureWorks.Order)"). parantez içinde tanımlayıcısının arkasından REF anahtar sözcüğü Başvuru türü tanımı işleci, bağımsız değişken olarak bir varlık türü gerektirir. Basit bir tür bağımsız değişkeni olarak belirtemezsiniz.  
+- Türü (örneğin, "Ref(AdventureWorks.Order)"). parantez içinde tanımlayıcısının arkasından REF anahtar sözcüğü Başvuru türü tanımı işleci, bağımsız değişken olarak bir varlık türü gerektirir. Basit bir tür bağımsız değişkeni olarak belirtemezsiniz.  
   
  Tür tanımları da iç içe geçirebilirsiniz (örneğin, "koleksiyonu (Row(x Ref(AdventureWorks.Order)))").  
   
  Tür tanımı seçenekleri şunlardır:  
   
--   `IdentifierName supported_type`, veya  
+- `IdentifierName supported_type`, veya  
   
--   `IdentifierName` KOLEKSİYON (`type_definition`), veya  
+- `IdentifierName` KOLEKSİYON (`type_definition`), veya  
   
--   `IdentifierName` SATIR (`property_definition`), veya  
+- `IdentifierName` SATIR (`property_definition`), veya  
   
--   `IdentifierName` REF (`supported_entity_type`)  
+- `IdentifierName` REF (`supported_entity_type`)  
   
  Özellik tanımı seçeneği `IdentifierName type_definition`.  
   

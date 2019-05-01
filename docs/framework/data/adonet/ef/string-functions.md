@@ -3,11 +3,11 @@ title: Dize İşlevleri
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
 ms.openlocfilehash: 6da257cad90232426c71221dfd9d418265479bbe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879131"
 ---
 # <a name="string-functions"></a>Dize İşlevleri
 SQL Server (SqlClient) için .NET Framework veri sağlayıcısı sağlar `String` girdi işlemleri işlevleri `String` ve dönüş bir `String` veya sayısal bir değer sonucu. Bu işlevler SqlServer ad alanında SqlClient kullanırken, kullanılabilir bağımlıdır. Bir sağlayıcının ad özelliği, hangi önekin türleri ve işlevleri gibi belirli yapılar için bu sağlayıcı tarafından kullanılan bulmak Entity Framework sağlar.  

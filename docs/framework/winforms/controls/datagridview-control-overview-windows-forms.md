@@ -20,11 +20,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
 ms.openlocfilehash: 095c89fd305b1eeb73e2919760abe48e848c6aa0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902323"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>DataGridView Denetimine Genel Bakış (Windows Forms)
 > [!NOTE]
@@ -36,13 +36,13 @@ ms.locfileid: "59112885"
   
  <xref:System.Windows.Forms.DataGridView> Denetimi için aşağıda açıklanan sınıfların örneklerini bağlamak için standart Windows Forms veri bağlama modelini destekler:  
   
--   Uygulayan sınıfa <xref:System.Collections.IList> arabirimi, tek boyutlu diziler de dahil olmak üzere.  
+- Uygulayan sınıfa <xref:System.Collections.IList> arabirimi, tek boyutlu diziler de dahil olmak üzere.  
   
--   Uygulayan sınıfa <xref:System.ComponentModel.IListSource> gibi arabirim <xref:System.Data.DataTable> ve <xref:System.Data.DataSet> sınıfları.  
+- Uygulayan sınıfa <xref:System.ComponentModel.IListSource> gibi arabirim <xref:System.Data.DataTable> ve <xref:System.Data.DataSet> sınıfları.  
   
--   Uygulayan sınıfa <xref:System.ComponentModel.IBindingList> gibi arabirim <xref:System.ComponentModel.BindingList%601> sınıfı.  
+- Uygulayan sınıfa <xref:System.ComponentModel.IBindingList> gibi arabirim <xref:System.ComponentModel.BindingList%601> sınıfı.  
   
--   Uygulayan sınıfa <xref:System.ComponentModel.IBindingListView> gibi arabirim <xref:System.Windows.Forms.BindingSource> sınıfı.  
+- Uygulayan sınıfa <xref:System.ComponentModel.IBindingListView> gibi arabirim <xref:System.Windows.Forms.BindingSource> sınıfı.  
   
  <xref:System.Windows.Forms.DataGridView> Denetimi bu arabirimleri tarafından döndürülen nesnelerin genel özelliklerini veya özellikler koleksiyonu tarafından döndürülen veri bağlamayı destekler bir <xref:System.ComponentModel.ICustomTypeDescriptor> döndürülen nesnelerin uygulanırsa, arabirim.  
   

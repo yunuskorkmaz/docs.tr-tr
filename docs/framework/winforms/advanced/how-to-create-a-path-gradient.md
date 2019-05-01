@@ -13,8 +13,8 @@ ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938090"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Nasıl yapılır: Yol Gradyanı Oluşturma
 <xref:System.Drawing.Drawing2D.PathGradientBrush> Sınıfı renkleri yavaş yavaş değişen bir şeklin dolgu özelleştirmenize olanak tanır. Örneğin, merkezi bir yolu için bir renk ve başka bir renk için bir yol sınırını belirtebilirsiniz. Ayrıca her bir yol sınırları boyunca birkaç noktası için farklı renkler belirtebilirsiniz.  
@@ -26,7 +26,7 @@ Bu makaledeki örneklerde bir denetimin çağrılan yöntemlerdir <xref:System.W
 
 ### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Bir elips yol gradyanı ile doldurmak için  
   
--   Aşağıdaki örnek, bir elips yol gradyan fırçası ile doldurur. Orta rengini Mavi olarak ayarlanır ve sınır rengini Açık Deniz Mavisi olarak ayarlanır. Dolu Elips aşağıda gösterilmiştir.  
+- Aşağıdaki örnek, bir elips yol gradyan fırçası ile doldurur. Orta rengini Mavi olarak ayarlanır ve sınır rengini Açık Deniz Mavisi olarak ayarlanır. Dolu Elips aşağıda gösterilmiştir.  
   
      ![Gradyan yolu, bir elips doldurur.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
@@ -43,12 +43,12 @@ Bu makaledeki örneklerde bir denetimin çağrılan yöntemlerdir <xref:System.W
   
 ### <a name="to-specify-points-on-the-boundary"></a>Sınırında noktaları belirtmek için  
   
--   Aşağıdaki örnek, bir yıldız şeklinde yolundan yolu gradyan fırçası oluşturur. Kod kümeleri <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> özelliği kütle merkezi kırmızı yıldız'ın en rengini ayarlar. Ardından kod kümeleri <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> çeşitli renkleri belirtmek için özelliği (depolanan `colors` dizisi) bireysel noktalarda `points` dizi. Son kod açıklaması yıldız şeklinde yolun yol gradyan fırçası ile doldurur.  
+- Aşağıdaki örnek, bir yıldız şeklinde yolundan yolu gradyan fırçası oluşturur. Kod kümeleri <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> özelliği kütle merkezi kırmızı yıldız'ın en rengini ayarlar. Ardından kod kümeleri <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> çeşitli renkleri belirtmek için özelliği (depolanan `colors` dizisi) bireysel noktalarda `points` dizi. Son kod açıklaması yıldız şeklinde yolun yol gradyan fırçası ile doldurur.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
--   Aşağıdaki örnek bir yol gradyanı olmadan çizer bir <xref:System.Drawing.Drawing2D.GraphicsPath> kodu nesnesi. Belirli <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> örnek oluşturucusunda bir dizi noktaları alır ancak gerektirmez bir <xref:System.Drawing.Drawing2D.GraphicsPath> nesne. Ayrıca, <xref:System.Drawing.Drawing2D.PathGradientBrush> bir dikdörtgen bir yol değil doldurmak için kullanılır. Dikdörtgen, bazı dikdörtgen olmayan boyanır şekilde fırça tarafından fırça tanımlamak için kullanılan kapalı yolu fazladır. Dikdörtgenin (noktalı çizgi) ve yolun gradyan fırçası tarafından boyanan dikdörtgenin bir bölümü aşağıda gösterilmiştir: 
+- Aşağıdaki örnek bir yol gradyanı olmadan çizer bir <xref:System.Drawing.Drawing2D.GraphicsPath> kodu nesnesi. Belirli <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> örnek oluşturucusunda bir dizi noktaları alır ancak gerektirmez bir <xref:System.Drawing.Drawing2D.GraphicsPath> nesne. Ayrıca, <xref:System.Drawing.Drawing2D.PathGradientBrush> bir dikdörtgen bir yol değil doldurmak için kullanılır. Dikdörtgen, bazı dikdörtgen olmayan boyanır şekilde fırça tarafından fırça tanımlamak için kullanılan kapalı yolu fazladır. Dikdörtgenin (noktalı çizgi) ve yolun gradyan fırçası tarafından boyanan dikdörtgenin bir bölümü aşağıda gösterilmiştir: 
   
      ![Yolun gradyan fırçası tarafından boyanan gradyan bölümü.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
@@ -57,7 +57,7 @@ Bu makaledeki örneklerde bir denetimin çağrılan yöntemlerdir <xref:System.W
   
 ### <a name="to-customize-a-path-gradient"></a>Yol gradyanı özelleştirmek için  
   
--   Yolun gradyan fırçası özelleştirmenin bir yolu olan ayarlamak için kendi <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> özelliği. Odak ölçekler ana yolun içinde bulunan iç bir yol belirtin. Orta renk her yerde içinde iç yol yerine yalnızca merkez noktasını görüntülenir.  
+- Yolun gradyan fırçası özelleştirmenin bir yolu olan ayarlamak için kendi <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> özelliği. Odak ölçekler ana yolun içinde bulunan iç bir yol belirtin. Orta renk her yerde içinde iç yol yerine yalnızca merkez noktasını görüntülenir.  
   
      Aşağıdaki örnek, bir elips yola göre yolu gradyan fırçası oluşturur. Kod sınır rengini Mavi olarak ayarlar, merkezi rengini Açık Deniz Mavisi olarak ayarlar ve ardından elips yol doldurmak için yol gradyan fırçası kullanır.  
   
@@ -74,7 +74,7 @@ Bu makaledeki örneklerde bir denetimin çağrılan yöntemlerdir <xref:System.W
   
 ### <a name="to-customize-with-interpolation"></a>İlişkilendirme özelleştirmek için  
   
--   Yolun gradyan fırçası özelleştirmek için başka bir ilişkilendirme renkler bir dizi ve bir dizi ilişkilendirme konumlarını belirtmek için yoludur.  
+- Yolun gradyan fırçası özelleştirmek için başka bir ilişkilendirme renkler bir dizi ve bir dizi ilişkilendirme konumlarını belirtmek için yoludur.  
   
      Aşağıdaki örnek, bir üçgeni temel yolu gradyan fırçası oluşturur. Kod kümeleri <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> özellik yolu gradyan fırça renkleri (koyu yeşil, Açık Deniz Mavisi, mavi) bir dizi ve bir dizi ilişkilendirme konumları (0, 0.25, 1) belirtmek için. İçin merkez noktasını bir sınır bu üçgen taşırken, renk için Açık Deniz Mavisi, ardından da mavi aqua kademeli olarak koyu yeşilden değiştirir. Koyu Yeşil değişimi için Açık Deniz Mavisi, koyu yeşil, mavi uzaklığı yüzde 25'olmuyor.  
   
@@ -87,7 +87,7 @@ Bu makaledeki örneklerde bir denetimin çağrılan yöntemlerdir <xref:System.W
   
 ### <a name="to-set-the-center-point"></a>Merkez noktasını ayarlamak için  
   
--   Varsayılan olarak, merkezi bir yolu gradyan fırçası fırça oluşturmak için kullanılan yolu kütle merkezi noktasıdır. Merkez noktasının konumunu ayarlayarak değiştirebilirsiniz <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> özelliği <xref:System.Drawing.Drawing2D.PathGradientBrush> sınıfı.  
+- Varsayılan olarak, merkezi bir yolu gradyan fırçası fırça oluşturmak için kullanılan yolu kütle merkezi noktasıdır. Merkez noktasının konumunu ayarlayarak değiştirebilirsiniz <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> özelliği <xref:System.Drawing.Drawing2D.PathGradientBrush> sınıfı.  
   
      Aşağıdaki örnek, bir üç nokta işaretine göre yolu gradyan fırçası oluşturur. Elips merkezini altındadır (70'ten, 35), ancak yolun gradyan fırçası merkez noktasını ayarlanır (120, 40).  
   
@@ -98,7 +98,7 @@ Bu makaledeki örneklerde bir denetimin çağrılan yöntemlerdir <xref:System.W
   
      ![Gradyan yolu ile doldurulmuş elips ve orta noktası.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
--   Fırça oluşturmak için kullanılan yolu dışında bir konuma yol gradyan fırçası merkez noktasını ayarlayabilirsiniz. Aşağıdaki örnek ayarlamak için yapılan çağrı değiştirir <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> önceki kodda özelliği.  
+- Fırça oluşturmak için kullanılan yolu dışında bir konuma yol gradyan fırçası merkez noktasını ayarlayabilirsiniz. Aşağıdaki örnek ayarlamak için yapılan çağrı değiştirir <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> önceki kodda özelliği.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  

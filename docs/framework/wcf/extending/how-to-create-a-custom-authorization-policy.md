@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
 ms.openlocfilehash: 05130e809356369ee2b43d9af86acf69fe527e9a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902336"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Nasıl yapılır: Özel Yetkilendirme İlkesi Oluşturma
 Windows Communication Foundation (WCF) kimlik modeli altyapısı, bir talep tabanlı yetkilendirme modelini destekler. Talep belirteçleri ayıklanan, isteğe bağlı olarak özel yetkilendirme ilkesi tarafından işlenen ve ardından yerleştirilip bir <xref:System.IdentityModel.Policy.AuthorizationContext> , ardından incelenebilir yetkilendirme kararları vermek için. Özel bir ilke, uygulama tarafından beklenen talep gelen belirteçleri gelen talepleri dönüştürmek için kullanılabilir. Bu şekilde, uygulama katmanı WCF desteklediği farklı belirteç türleri tarafından sunulan farklı talepleri ayrıntılarından yalıtılmış. Bu konuda, bir hizmet tarafından kullanılan ilkeleri koleksiyonunu Bu ilkeyi ekleme ve özel yetkilendirme ilkesi uygulamak nasıl gösterir.  

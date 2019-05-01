@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6bee5da4-adf7-42e6-8f78-63a9e5c6dbad
 ms.openlocfilehash: c95e30c65c6096140fca0c1241e76fbc7af4df3d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929135"
 ---
 # <a name="how-to-specify-a-client-binding-in-code"></a>Nasıl yapılır: Kodda İstemci Bağlama Belirtme
 Bu örnekte, bir hesap makinesi hizmetini kullanması için bir istemci oluşturulur ve o istemci için bağlama kesin kodda belirtilen. İstemcisinin eriştiği `CalculatorService`, uygulayan `ICalculator` arabirimi ve hizmet ve Kullan istemci <xref:System.ServiceModel.BasicHttpBinding> sınıfı.  

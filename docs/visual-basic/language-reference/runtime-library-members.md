@@ -10,11 +10,11 @@ helpviewer_keywords:
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
 ms.openlocfilehash: 061782dbd0ac54286a6c0da74fe769d98848f118
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945190"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic Çalışma Süresi Kitaplık Üyeleri
 `Microsoft.VisualBasic` Ad alanı, sınıflar, modüller, sabitleri ve Visual Basic çalışma zamanı kitaplığı oluşturur numaralandırmaları içerir. Bu kitaplık üyeleri, yordamlar, özellikleri ve kodunuzda kullanabileceğiniz sabit değerler sağlayın. Her bir modül ve sınıf işlevinin belirli bir kategoriye temsil eder.  

@@ -10,11 +10,11 @@ ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 834652318d4cb1cbcebe27a922d210ef87026ed5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872605"
 ---
 # <a name="registering-assemblies-with-com"></a>Derlemeleri COM ile Kaydetme
 Adlı bir komut satırı aracını çalıştırdığınız [derleme Kayıt Aracı (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) kaydetmek veya com ile kullanmak için derleme kaydını kaldırmak için .NET Framework sınıfı COM istemcilerinin şeffaf bir şekilde kullanabilmeniz için RegAsm.exe'yi sınıfına ilişkin bilgileri sistem kayıt defterine ekler. <xref:System.Runtime.InteropServices.RegistrationServices> Sınıfı eşdeğer bir işlevselliği sağlar.  
@@ -30,11 +30,11 @@ Adlı bir komut satırı aracını çalıştırdığınız [derleme Kayıt Arac�
   
  HKCR\CLSID altında\\{0000... 0000} anahtarı, varsayılan değer sınıfının ProgID için ayarlanır ve iki yeni adlandırılmış değerler, sınıf ve bütünleştirilmiş koduna eklenir. Çalışma zamanı derleme değeri Kayıt Defteri'nden okur ve çalışma zamanı derlemenin çözümleyici açın geçirir. Derleme Çözücü, ad ve sürüm numarası gibi derleme bilgileri temel alarak, derleme bulmayı dener. Derleme Çözücü bir derlemeyi bulmak derlemeyi aşağıdaki konumlardan birinde olmak zorundadır:  
   
--   Genel Derleme Önbelleği (tanımlayıcı adlı bütünleştirilmiş kod olmalıdır).  
+- Genel Derleme Önbelleği (tanımlayıcı adlı bütünleştirilmiş kod olmalıdır).  
   
--   Uygulama dizininde. Uygulama yolu yüklenen derlemeler, yalnızca bu uygulamadan erişilebilir.  
+- Uygulama dizininde. Uygulama yolu yüklenen derlemeler, yalnızca bu uygulamadan erişilebilir.  
   
--   Belirtilen bir dosya yolu boyunca **/ codebase** Regasm.exe seçeneği.  
+- Belirtilen bir dosya yolu boyunca **/ codebase** Regasm.exe seçeneği.  
   
  RegAsm.exe da HKCR\CLSID Inprocserver32 anahtarında oluşturur\\{0000... 0000} anahtarı. Anahtar için varsayılan değer, ortak dil çalışma zamanı (Mscoree.dll) başlatır dll adına ayarlanır.  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
 ms.openlocfilehash: a97a51d4570d87eaa873fb3152ad810f528dff46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61829666"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Nasıl yapılır: (Visual Basic) türetilmiş sınıf tarafından gizlenen bir değişkene erişme
 Kod türetilen bir sınıfta bir değişken eriştiğinde, derleyici en yakın erişilebilir sürüme, yani erişilebilir sürümü başvuru normalde az derivational adımlardan geriye dönük erişen sınıf çözümler. Değişken türetilmiş sınıf içinde tanımlanmış olması durumunda, kod normalde bu tanımı erişir.  
@@ -23,7 +23,7 @@ Kod türetilen bir sınıfta bir değişken eriştiğinde, derleyici en yakın e
   
 ### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>Türetilmiş sınıf tarafından gizlenen bir temel sınıf değişkene erişmek için  
   
--   Bir ifade veya atama ifadesi değişken adıyla önünde `MyBase` anahtar sözcüğü ve bir süre (`.`).  
+- Bir ifade veya atama ifadesi değişken adıyla önünde `MyBase` anahtar sözcüğü ve bir süre (`.`).  
   
      Derleyici, değişkenin temel sınıftaki sürümün başvuruyu çözümler.  
   

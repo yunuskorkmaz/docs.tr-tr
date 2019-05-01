@@ -3,11 +3,11 @@ title: XElement ve XDocument Objects2 geçerli içerik
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
 ms.openlocfilehash: bb5dda6bee0863a2ef951975e92c55184df9d516
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907588"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement ve XDocument Nesnelerinin Geçerli İçeriği
 Bu konuda, Oluşturucular ve öğelerini ve belgeleri için içerik eklemek için kullandığınız yöntemlere geçirilen geçerli bağımsız değişkenler açıklanmaktadır.  
@@ -17,35 +17,35 @@ Bu konuda, Oluşturucular ve öğelerini ve belgeleri için içerik eklemek içi
   
  Basit içerik eklerken, çeşitli türleri bu yönteme geçirilebilir. Geçerli türleri aşağıdakileri kapsamaktadır:  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.Decimal>  
+- <xref:System.Decimal>  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.DateTime>  
+- <xref:System.DateTime>  
   
--   <xref:System.TimeSpan>  
+- <xref:System.TimeSpan>  
   
--   <xref:System.DateTimeOffset>  
+- <xref:System.DateTimeOffset>  
   
--   Uygulayan herhangi bir tür `Object.ToString`.  
+- Uygulayan herhangi bir tür `Object.ToString`.  
   
--   Uygulayan herhangi bir tür <xref:System.Collections.Generic.IEnumerable%601>.  
+- Uygulayan herhangi bir tür <xref:System.Collections.Generic.IEnumerable%601>.  
   
  Karmaşık içerik eklerken, çeşitli türleri bu yönteme geçirilen:  
   
--   <xref:System.Xml.Linq.XObject>  
+- <xref:System.Xml.Linq.XObject>  
   
--   <xref:System.Xml.Linq.XNode>  
+- <xref:System.Xml.Linq.XNode>  
   
--   <xref:System.Xml.Linq.XAttribute>  
+- <xref:System.Xml.Linq.XAttribute>  
   
--   Uygulayan herhangi bir tür <xref:System.Collections.Generic.IEnumerable%601>  
+- Uygulayan herhangi bir tür <xref:System.Collections.Generic.IEnumerable%601>  
   
  Bir nesne uyguluyorsa <xref:System.Collections.Generic.IEnumerable%601>, koleksiyon nesnesi içinde listelenmiş ve koleksiyondaki tüm öğelerin eklenir. Koleksiyon içeriyorsa <xref:System.Xml.Linq.XNode> veya <xref:System.Xml.Linq.XAttribute> nesneler, koleksiyondaki her öğe ayrı olarak eklenir. Koleksiyon, metin (veya metne dönüştürülür nesneleri) içeriyorsa, koleksiyondaki metin birleştirilmiş ve tek bir metin düğümü olarak eklendi.  
   
@@ -62,15 +62,15 @@ Bu konuda, Oluşturucular ve öğelerini ve belgeleri için içerik eklemek içi
   
  Bir belge için geçerli içerik aşağıdakileri içerir:  
   
--   Sıfır veya bir <xref:System.Xml.Linq.XDocumentType> nesneleri. Belge türlerini öğeden önce gelmelidir.  
+- Sıfır veya bir <xref:System.Xml.Linq.XDocumentType> nesneleri. Belge türlerini öğeden önce gelmelidir.  
   
--   Sıfır veya bir öğe.  
+- Sıfır veya bir öğe.  
   
--   Sıfır veya daha fazla açıklama.  
+- Sıfır veya daha fazla açıklama.  
   
--   Sıfır veya daha fazla işleme yönergeleri.  
+- Sıfır veya daha fazla işleme yönergeleri.  
   
--   Yalnızca sıfır veya daha fazla metin düğümleri boşluk.  
+- Yalnızca sıfır veya daha fazla metin düğümleri boşluk.  
   
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>Oluşturucular ve içerik eklemeye izin ver işlevleri  
  Alt içeriğin eklemek aşağıdaki yöntemlerden izin bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XDocument>:  

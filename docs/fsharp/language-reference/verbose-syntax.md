@@ -3,11 +3,11 @@ title: Ayrıntılı Sözdizimi
 description: Kapsamlı ve basit sözdiziminde arasındaki farkı öğrenin F# programlama dilidir.
 ms.date: 05/16/2016
 ms.openlocfilehash: c770f2843276619cb2878198a537dcfb9c054b6b
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902310"
 ---
 # <a name="verbose-syntax"></a>Ayrıntılı Sözdizimi
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
 ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903363"
 ---
 # <a name="frequently-asked-questions"></a>Sıkça Sorulan Sorular
 Aşağıdaki bölümlerde, uyguladığınızda karşılaşabileceğiniz bazı yaygın sorunlar yanıt [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -34,18 +34,18 @@ Aşağıdaki bölümlerde, uyguladığınızda karşılaşabileceğiniz bazı ya
   
  Bağlantı kullanımı hakkında tam Ayrıntılar aşağıdakilere bağlıdır:  
   
--   Bağlantı durumu, <xref:System.Data.Linq.DataContext> ile bir bağlantı nesnesi oluşturulur.  
+- Bağlantı durumu, <xref:System.Data.Linq.DataContext> ile bir bağlantı nesnesi oluşturulur.  
   
--   Bağlantı dizesi ayarlarını (örneğin, etkinleştirme birden çok etkin sonuç kümesi (MARS). Daha fazla bilgi için [birden çok etkin sonuç kümesi (MARS)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).  
+- Bağlantı dizesi ayarlarını (örneğin, etkinleştirme birden çok etkin sonuç kümesi (MARS). Daha fazla bilgi için [birden çok etkin sonuç kümesi (MARS)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).  
   
 ## <a name="updating-without-querying"></a>Sorgulama olmadan güncelleştiriliyor  
  S. Tablo verilerini ilk veritabanını sorgulama olmadan güncelleştirebilir miyim?  
   
  A. Ancak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] set tabanlı güncelleştirme komutları yok. ilk sorgulama olmadan güncelleştirmek için aşağıdaki tekniklerden birini kullanabilirsiniz:  
   
--   Kullanım <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> SQL kod gönderilecek.  
+- Kullanım <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> SQL kod gönderilecek.  
   
--   Nesnesinin yeni bir örneğini oluşturun ve güncelleştirme etkileyen tüm geçerli değerleri (alanlar) başlatır. Ardından nesneye ekleyin <xref:System.Data.Linq.DataContext> kullanarak <xref:System.Data.Linq.Table%601.Attach%2A> ve değiştirmek istediğiniz alanı değiştirin.  
+- Nesnesinin yeni bir örneğini oluşturun ve güncelleştirme etkileyen tüm geçerli değerleri (alanlar) başlatır. Ardından nesneye ekleyin <xref:System.Data.Linq.DataContext> kullanarak <xref:System.Data.Linq.Table%601.Attach%2A> ve değiştirmek istediğiniz alanı değiştirin.  
   
 ## <a name="unexpected-query-results"></a>Beklenmeyen sorgu sonuçları  
  S. Sorgum beklenmeyen sonuçlar döndürüyor. Nasıl nasıl bir durumla karşılaşıyorsunuz inceleyebilirsiniz?  
@@ -57,9 +57,9 @@ Aşağıdaki bölümlerde, uyguladığınızda karşılaşabileceğiniz bazı ya
   
  A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veritabanı tarafından oluşturulan değerleri depolanmış yordamlar yoluyla döndürmek için iki yol sunar:  
   
--   Çıkış sonucu adlandırarak.  
+- Çıkış sonucu adlandırarak.  
   
--   Çıkış parametresi açıkça belirterek.  
+- Çıkış parametresi açıkça belirterek.  
   
  Yanlış çıktının bir örneği verilmiştir. Çünkü [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sonuçları eşlenemez her zaman 0 değerini döndürür:  
   

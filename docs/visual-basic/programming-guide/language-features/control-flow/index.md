@@ -9,30 +9,30 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], control flow
 ms.assetid: 5623ef47-52b1-4202-befd-9af36422ec6f
 ms.openlocfilehash: 14133dc764d6708d8b7a3366038bc3240e5cbc76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906665"
 ---
 # <a name="control-flow-in-visual-basic"></a>Visual Basic'de Denetim Akışı
-Sol düzenlenmemiş bir program baştan gelen kendi deyimleri ile devam eder. Bazı çok basit programları ile için tek yönlü Bu akış yazılabilir. Ancak, güç çoğunu ve herhangi bir programlama dili yardımcı programı denetim ifadeleri ve döngüler yürütme sırasını değiştirme olanağı gelir.  
+Sol düzenlenmemiş bir program aracılığıyla kendi deyimleri baştan sona devam eder. Bazı basit programları, yalnızca bu tek yönlü akışıyla yazılabilir. Ancak, güç çoğunu ve herhangi bir programlama dilinde yardımcı programı denetim ifadeleri ve döngüler ile yürütme sırasını değiştirme olanağı gelir.  
   
- Denetim yapıları programınızın yürütme akışını olanak sağlar. Denetim yapıları kullanma, kararlarını verir veya eylemleri yineler Visual Basic kodu yazabilirsiniz. Diğer denetim yapıları bir kaynağın elden garanti veya bir dizi deyimi aynı nesne başvurusu üzerinde çalıştırmak sağlar.  
+ Denetim yapıları, program yürütmenin akışını olanak tanır. Denetim yapıları kullanarak, kararları veya eylemleri yineler, Visual Basic kod yazabilirsiniz. Diğer denetim yapıları, bir kaynağın elden garanti ya da aynı nesne başvurusu üzerinde bir dizi deyim çalıştırmak olanak tanır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Karar Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
  Dal oluşturma için kullanılan denetim yapıları açıklar.  
   
  [Döngü Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- Denetim yapıları işlemleri yinelemek için kullanılan açıklanır.  
+ İşlemleri yinelemek için kullanılan denetim yapıları açıklar.  
   
  [Diğer Denetim Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)  
- Denetim yapıları kaynak elden ve nesne erişimi için kullanılan açıklar.  
+ Kaynak atma ve nesne erişimi için kullanılan denetim yapıları açıklar.  
   
  [İç İçe Geçmiş Denetim Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- Kapak diğer denetim yapıları içindeki yapıları denetler.  
+ Diğer denetim yapıları içindeki yapıları kapsar denetler.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Denetim Akışı Özeti](../../../../visual-basic/language-reference/keywords/control-flow-summary.md)  
- Dil Başvurusu sayfalarına bağlantılar bu konu üzerinde sağlar.
+ Bu konu üzerinde dil başvurusu sayfalara bağlantılar sağlar.
