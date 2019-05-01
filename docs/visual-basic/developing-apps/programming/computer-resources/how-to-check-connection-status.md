@@ -11,23 +11,23 @@ ms.openlocfilehash: fd618852c2d0650f168edf8dac53931216fc3a9b
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014043"
 ---
-# <a name="how-to-check-connection-status-in-visual-basic"></a><span data-ttu-id="26eb1-102">Nasıl yapılır: Visual Basic'te bağlantı durumunu denetleyin</span><span class="sxs-lookup"><span data-stu-id="26eb1-102">How to: Check Connection Status in Visual Basic</span></span>
-<span data-ttu-id="26eb1-103"><xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> Özelliği, bilgisayar bir çalışma ağ veya Internet bağlantısı olup olmadığını belirlemek için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="26eb1-103">The <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> property can be used to determine whether the computer has a working network or Internet connection.</span></span>  
+# <a name="how-to-check-connection-status-in-visual-basic"></a><span data-ttu-id="ee63f-102">Nasıl yapılır: Visual Basic'te bağlantı durumunu denetleyin</span><span class="sxs-lookup"><span data-stu-id="ee63f-102">How to: Check Connection Status in Visual Basic</span></span>
+<span data-ttu-id="ee63f-103"><xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> Özelliği, bilgisayar bir çalışma ağ veya Internet bağlantısı olup olmadığını belirlemek için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="ee63f-103">The <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> property can be used to determine whether the computer has a working network or Internet connection.</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-check-whether-a-computer-has-a-working-connection"></a><span data-ttu-id="26eb1-104">Bir bilgisayarda çalışan bir bağlantı olup olmadığını denetlemek için</span><span class="sxs-lookup"><span data-stu-id="26eb1-104">To check whether a computer has a working connection</span></span>  
+### <a name="to-check-whether-a-computer-has-a-working-connection"></a><span data-ttu-id="ee63f-104">Bir bilgisayarda çalışan bir bağlantı olup olmadığını denetlemek için</span><span class="sxs-lookup"><span data-stu-id="ee63f-104">To check whether a computer has a working connection</span></span>  
   
--   <span data-ttu-id="26eb1-105">Belirlemek olmadığını `IsAvailable` özelliği `True` veya `False`.</span><span class="sxs-lookup"><span data-stu-id="26eb1-105">Determine whether the `IsAvailable` property is `True` or `False`.</span></span> <span data-ttu-id="26eb1-106">Aşağıdaki kod, özelliğin durumunu denetler ve rapor:</span><span class="sxs-lookup"><span data-stu-id="26eb1-106">The following code checks the property's status and reports it:</span></span>  
+- <span data-ttu-id="ee63f-105">Belirlemek olmadığını `IsAvailable` özelliği `True` veya `False`.</span><span class="sxs-lookup"><span data-stu-id="ee63f-105">Determine whether the `IsAvailable` property is `True` or `False`.</span></span> <span data-ttu-id="ee63f-106">Aşağıdaki kod, özelliğin durumunu denetler ve rapor:</span><span class="sxs-lookup"><span data-stu-id="ee63f-106">The following code checks the property's status and reports it:</span></span>  
   
      [!code-vb[VbResourceTasks#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#3)]  
   
-     <span data-ttu-id="26eb1-107">Bu kod örneği, bir IntelliSense kod parçacığı da kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="26eb1-107">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="26eb1-108">Kod parçacığı Seçici'de bulunur **bağlantı ve ağ**.</span><span class="sxs-lookup"><span data-stu-id="26eb1-108">In the code snippet picker, it is located in **Connectivity and Networking**.</span></span> <span data-ttu-id="26eb1-109">Daha fazla bilgi için [kod parçacıkları](/visualstudio/ide/code-snippets).</span><span class="sxs-lookup"><span data-stu-id="26eb1-109">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
+     <span data-ttu-id="ee63f-107">Bu kod örneği, bir IntelliSense kod parçacığı da kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="ee63f-107">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="ee63f-108">Kod parçacığı Seçici'de bulunur **bağlantı ve ağ**.</span><span class="sxs-lookup"><span data-stu-id="ee63f-108">In the code snippet picker, it is located in **Connectivity and Networking**.</span></span> <span data-ttu-id="ee63f-109">Daha fazla bilgi için [kod parçacıkları](/visualstudio/ide/code-snippets).</span><span class="sxs-lookup"><span data-stu-id="ee63f-109">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="26eb1-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="26eb1-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ee63f-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ee63f-110">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable>

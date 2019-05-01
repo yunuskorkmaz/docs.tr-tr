@@ -10,27 +10,27 @@ helpviewer_keywords:
 - images [WPF], bitmap
 ms.assetid: be180b56-ca6e-4da3-a839-f6b0bf482f7d
 ms.openlocfilehash: eb81644bc69edcd1465cf43224eb6af369b5fb3d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010234"
 ---
-# <a name="bitmap-effects"></a><span data-ttu-id="8bb38-102">Bit Eşlem Efektleri</span><span class="sxs-lookup"><span data-stu-id="8bb38-102">Bitmap Effects</span></span>
-<span data-ttu-id="8bb38-103">Bu bölümdeki konular, bit eşlem görüntüleri kullanarak görsel efektler uygulanacağını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8bb38-103">The topics in this section describe how to apply visual effects to bitmap images using [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="bitmap-effects"></a><span data-ttu-id="16257-102">Bit Eşlem Efektleri</span><span class="sxs-lookup"><span data-stu-id="16257-102">Bitmap Effects</span></span>
+<span data-ttu-id="16257-103">Bu bölümdeki konular, bit eşlem görüntüleri kullanarak görsel efektler uygulanacağını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="16257-103">The topics in this section describe how to apply visual effects to bitmap images using [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="8bb38-104">İçinde [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] ya da sonraki <xref:System.Windows.Media.Effects.BitmapEffect> sınıf artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="8bb38-104">In the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] or later, the <xref:System.Windows.Media.Effects.BitmapEffect> class is obsolete.</span></span> <span data-ttu-id="8bb38-105">Kullanmayı denerseniz <xref:System.Windows.Media.Effects.BitmapEffect> sınıfı, geçersiz bir özel durum alırsınız.</span><span class="sxs-lookup"><span data-stu-id="8bb38-105">If you try to use the <xref:System.Windows.Media.Effects.BitmapEffect> class, you will get an obsolete exception.</span></span> <span data-ttu-id="8bb38-106">Gereksiz olmayan alternatif <xref:System.Windows.Media.Effects.BitmapEffect> sınıfı <xref:System.Windows.Media.Effects.Effect> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="8bb38-106">The non-obsolete alternative to the <xref:System.Windows.Media.Effects.BitmapEffect> class is the <xref:System.Windows.Media.Effects.Effect> class.</span></span> <span data-ttu-id="8bb38-107">Çoğu durumda <xref:System.Windows.Media.Effects.Effect> sınıfı, önemli ölçüde daha hızlıdır.</span><span class="sxs-lookup"><span data-stu-id="8bb38-107">In most situations, the <xref:System.Windows.Media.Effects.Effect> class is significantly faster.</span></span>  
+>  <span data-ttu-id="16257-104">İçinde [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] ya da sonraki <xref:System.Windows.Media.Effects.BitmapEffect> sınıf artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="16257-104">In the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] or later, the <xref:System.Windows.Media.Effects.BitmapEffect> class is obsolete.</span></span> <span data-ttu-id="16257-105">Kullanmayı denerseniz <xref:System.Windows.Media.Effects.BitmapEffect> sınıfı, geçersiz bir özel durum alırsınız.</span><span class="sxs-lookup"><span data-stu-id="16257-105">If you try to use the <xref:System.Windows.Media.Effects.BitmapEffect> class, you will get an obsolete exception.</span></span> <span data-ttu-id="16257-106">Gereksiz olmayan alternatif <xref:System.Windows.Media.Effects.BitmapEffect> sınıfı <xref:System.Windows.Media.Effects.Effect> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="16257-106">The non-obsolete alternative to the <xref:System.Windows.Media.Effects.BitmapEffect> class is the <xref:System.Windows.Media.Effects.Effect> class.</span></span> <span data-ttu-id="16257-107">Çoğu durumda <xref:System.Windows.Media.Effects.Effect> sınıfı, önemli ölçüde daha hızlıdır.</span><span class="sxs-lookup"><span data-stu-id="16257-107">In most situations, the <xref:System.Windows.Media.Effects.Effect> class is significantly faster.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8bb38-108">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="8bb38-108">In This Section</span></span>  
- [<span data-ttu-id="8bb38-109">Bit Eşlem Etkilerine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="8bb38-109">Bitmap Effects Overview</span></span>](bitmap-effects-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="16257-108">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="16257-108">In This Section</span></span>  
+ [<span data-ttu-id="16257-109">Bit Eşlem Etkilerine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="16257-109">Bitmap Effects Overview</span></span>](bitmap-effects-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="8bb38-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="8bb38-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="16257-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="16257-110">Reference</span></span>  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
   
  <xref:System.Windows.Media.Effects>  
   
-## <a name="related-sections"></a><span data-ttu-id="8bb38-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="8bb38-111">Related Sections</span></span>  
- [<span data-ttu-id="8bb38-112">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="8bb38-112">Graphics and Multimedia</span></span>](index.md)  
+## <a name="related-sections"></a><span data-ttu-id="16257-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="16257-111">Related Sections</span></span>  
+ [<span data-ttu-id="16257-112">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="16257-112">Graphics and Multimedia</span></span>](index.md)  
   
- [<span data-ttu-id="8bb38-113">Görüntülemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="8bb38-113">Imaging Overview</span></span>](imaging-overview.md)
+ [<span data-ttu-id="16257-113">Görüntülemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="16257-113">Imaging Overview</span></span>](imaging-overview.md)

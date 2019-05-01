@@ -18,16 +18,16 @@ helpviewer_keywords:
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
 ms.openlocfilehash: 1a5c47a2f1bc8a8b9e1b0263b90006a0e58e17bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013484"
 ---
-# <a name="--operator-visual-basic"></a><span data-ttu-id="1e950-102">- İşleci (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1e950-102">- Operator (Visual Basic)</span></span>
-<span data-ttu-id="1e950-103">İki sayısal ifadeye veya sayısal bir ifadenin negatif değerini arasındaki farkı döndürür.</span><span class="sxs-lookup"><span data-stu-id="1e950-103">Returns the difference between two numeric expressions or the negative value of a numeric expression.</span></span>  
+# <a name="--operator-visual-basic"></a><span data-ttu-id="69e6f-102">- İşleci (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="69e6f-102">- Operator (Visual Basic)</span></span>
+<span data-ttu-id="69e6f-103">İki sayısal ifadeye veya sayısal bir ifadenin negatif değerini arasındaki farkı döndürür.</span><span class="sxs-lookup"><span data-stu-id="69e6f-103">Returns the difference between two numeric expressions or the negative value of a numeric expression.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1e950-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1e950-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="69e6f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="69e6f-104">Syntax</span></span>  
   
 ```  
       expression1 – expression2  
@@ -35,42 +35,42 @@ ms.locfileid: "58830675"
 – expression1  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="1e950-105">Bölümler</span><span class="sxs-lookup"><span data-stu-id="1e950-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="69e6f-105">Bölümler</span><span class="sxs-lookup"><span data-stu-id="69e6f-105">Parts</span></span>  
  `expression1`  
- <span data-ttu-id="1e950-106">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="1e950-106">Required.</span></span> <span data-ttu-id="1e950-107">Herhangi bir sayısal ifade.</span><span class="sxs-lookup"><span data-stu-id="1e950-107">Any numeric expression.</span></span>  
+ <span data-ttu-id="69e6f-106">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="69e6f-106">Required.</span></span> <span data-ttu-id="69e6f-107">Herhangi bir sayısal ifade.</span><span class="sxs-lookup"><span data-stu-id="69e6f-107">Any numeric expression.</span></span>  
   
  `expression2`  
- <span data-ttu-id="1e950-108">Sürece gerekli `–` işleci, negatif bir değer hesaplıyor.</span><span class="sxs-lookup"><span data-stu-id="1e950-108">Required unless the `–` operator is calculating a negative value.</span></span> <span data-ttu-id="1e950-109">Herhangi bir sayısal ifade.</span><span class="sxs-lookup"><span data-stu-id="1e950-109">Any numeric expression.</span></span>  
+ <span data-ttu-id="69e6f-108">Sürece gerekli `–` işleci, negatif bir değer hesaplıyor.</span><span class="sxs-lookup"><span data-stu-id="69e6f-108">Required unless the `–` operator is calculating a negative value.</span></span> <span data-ttu-id="69e6f-109">Herhangi bir sayısal ifade.</span><span class="sxs-lookup"><span data-stu-id="69e6f-109">Any numeric expression.</span></span>  
   
-## <a name="result"></a><span data-ttu-id="1e950-110">Sonuç</span><span class="sxs-lookup"><span data-stu-id="1e950-110">Result</span></span>  
- <span data-ttu-id="1e950-111">Sonuç arasındaki farktır `expression1` ve `expression2`, ya da eksi değeri kadar çevrilerek `expression1`.</span><span class="sxs-lookup"><span data-stu-id="1e950-111">The result is the difference between `expression1` and `expression2`, or the negated value of `expression1`.</span></span>  
+## <a name="result"></a><span data-ttu-id="69e6f-110">Sonuç</span><span class="sxs-lookup"><span data-stu-id="69e6f-110">Result</span></span>  
+ <span data-ttu-id="69e6f-111">Sonuç arasındaki farktır `expression1` ve `expression2`, ya da eksi değeri kadar çevrilerek `expression1`.</span><span class="sxs-lookup"><span data-stu-id="69e6f-111">The result is the difference between `expression1` and `expression2`, or the negated value of `expression1`.</span></span>  
   
- <span data-ttu-id="1e950-112">Sonuç veri türü olan veri türleri için uygun bir sayısal tür `expression1` ve `expression2`.</span><span class="sxs-lookup"><span data-stu-id="1e950-112">The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`.</span></span> <span data-ttu-id="1e950-113">"Tamsayı aritmetik" tablolarında bkz [işleci sonuçlarını veri türleri](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span><span class="sxs-lookup"><span data-stu-id="1e950-113">See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span></span>  
+ <span data-ttu-id="69e6f-112">Sonuç veri türü olan veri türleri için uygun bir sayısal tür `expression1` ve `expression2`.</span><span class="sxs-lookup"><span data-stu-id="69e6f-112">The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`.</span></span> <span data-ttu-id="69e6f-113">"Tamsayı aritmetik" tablolarında bkz [işleci sonuçlarını veri türleri](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span><span class="sxs-lookup"><span data-stu-id="69e6f-113">See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span></span>  
   
-## <a name="supported-types"></a><span data-ttu-id="1e950-114">Desteklenen türler</span><span class="sxs-lookup"><span data-stu-id="1e950-114">Supported Types</span></span>  
- <span data-ttu-id="1e950-115">Tüm sayısal türler.</span><span class="sxs-lookup"><span data-stu-id="1e950-115">All numeric types.</span></span> <span data-ttu-id="1e950-116">Bu imzalanmamış ve kayan nokta türlerini içerir ve `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="1e950-116">This includes the unsigned and floating-point types and `Decimal`.</span></span>  
+## <a name="supported-types"></a><span data-ttu-id="69e6f-114">Desteklenen türler</span><span class="sxs-lookup"><span data-stu-id="69e6f-114">Supported Types</span></span>  
+ <span data-ttu-id="69e6f-115">Tüm sayısal türler.</span><span class="sxs-lookup"><span data-stu-id="69e6f-115">All numeric types.</span></span> <span data-ttu-id="69e6f-116">Bu imzalanmamış ve kayan nokta türlerini içerir ve `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="69e6f-116">This includes the unsigned and floating-point types and `Decimal`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1e950-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1e950-117">Remarks</span></span>  
- <span data-ttu-id="1e950-118">Daha önce gösterilen sözdiziminde gösterilen ilk kullanımında `–` işleci *ikili* aritmetik çıkarma işleci iki sayısal ifade arasındaki farkı.</span><span class="sxs-lookup"><span data-stu-id="1e950-118">In the first usage shown in the syntax shown previously, the `–` operator is the *binary* arithmetic subtraction operator for the difference between two numeric expressions.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="69e6f-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="69e6f-117">Remarks</span></span>  
+ <span data-ttu-id="69e6f-118">Daha önce gösterilen sözdiziminde gösterilen ilk kullanımında `–` işleci *ikili* aritmetik çıkarma işleci iki sayısal ifade arasındaki farkı.</span><span class="sxs-lookup"><span data-stu-id="69e6f-118">In the first usage shown in the syntax shown previously, the `–` operator is the *binary* arithmetic subtraction operator for the difference between two numeric expressions.</span></span>  
   
- <span data-ttu-id="1e950-119">Daha önce gösterilen sözdiziminde gösterilen ikinci kullanımı `–` işleci *birli* değilleme işleci bir ifadenin negatif değerini için.</span><span class="sxs-lookup"><span data-stu-id="1e950-119">In the second usage shown in the syntax shown previously, the `–` operator is the *unary* negation operator for the negative value of an expression.</span></span> <span data-ttu-id="1e950-120">Bu anlamda işareti ters olan olumsuzlama oluşur `expression1` sonuç pozitif olur böylece varsa `expression1` negatiftir.</span><span class="sxs-lookup"><span data-stu-id="1e950-120">In this sense, the negation consists of reversing the sign of `expression1` so that the result is positive if `expression1` is negative.</span></span>  
+ <span data-ttu-id="69e6f-119">Daha önce gösterilen sözdiziminde gösterilen ikinci kullanımı `–` işleci *birli* değilleme işleci bir ifadenin negatif değerini için.</span><span class="sxs-lookup"><span data-stu-id="69e6f-119">In the second usage shown in the syntax shown previously, the `–` operator is the *unary* negation operator for the negative value of an expression.</span></span> <span data-ttu-id="69e6f-120">Bu anlamda işareti ters olan olumsuzlama oluşur `expression1` sonuç pozitif olur böylece varsa `expression1` negatiftir.</span><span class="sxs-lookup"><span data-stu-id="69e6f-120">In this sense, the negation consists of reversing the sign of `expression1` so that the result is positive if `expression1` is negative.</span></span>  
   
- <span data-ttu-id="1e950-121">Her iki ifade değerlendirilirse [hiçbir şey](../../../visual-basic/language-reference/nothing.md), `–` işleci, sıfır olarak değerlendirir.</span><span class="sxs-lookup"><span data-stu-id="1e950-121">If either expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the `–` operator treats it as zero.</span></span>  
+ <span data-ttu-id="69e6f-121">Her iki ifade değerlendirilirse [hiçbir şey](../../../visual-basic/language-reference/nothing.md), `–` işleci, sıfır olarak değerlendirir.</span><span class="sxs-lookup"><span data-stu-id="69e6f-121">If either expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the `–` operator treats it as zero.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="1e950-122">`–` İşleci olabilir *aşırı*, işleneni, sınıf veya yapı türüne sahip olduğunda bir sınıf veya yapı davranışını tanımlayabilirsiniz, anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="1e950-122">The `–` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="1e950-123">Kodunuz bu tür bir sınıf veya yapı üzerinde bu işleç kullanıyorsa, yeniden tanımlanan davranışını anladığınızdan emin olun.</span><span class="sxs-lookup"><span data-stu-id="1e950-123">If your code uses this operator on such a class or structure, make sure that you understand its redefined behavior.</span></span> <span data-ttu-id="1e950-124">Daha fazla bilgi için [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="1e950-124">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
+>  <span data-ttu-id="69e6f-122">`–` İşleci olabilir *aşırı*, işleneni, sınıf veya yapı türüne sahip olduğunda bir sınıf veya yapı davranışını tanımlayabilirsiniz, anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="69e6f-122">The `–` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="69e6f-123">Kodunuz bu tür bir sınıf veya yapı üzerinde bu işleç kullanıyorsa, yeniden tanımlanan davranışını anladığınızdan emin olun.</span><span class="sxs-lookup"><span data-stu-id="69e6f-123">If your code uses this operator on such a class or structure, make sure that you understand its redefined behavior.</span></span> <span data-ttu-id="69e6f-124">Daha fazla bilgi için [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="69e6f-124">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1e950-125">Örnek</span><span class="sxs-lookup"><span data-stu-id="1e950-125">Example</span></span>  
- <span data-ttu-id="1e950-126">Aşağıdaki örnekte `–` hesaplamak ve iki sayı arasındaki farkı döndürmek için işleç ve bir sayı negatif yapılacak.</span><span class="sxs-lookup"><span data-stu-id="1e950-126">The following example uses the `–` operator to calculate and return the difference between two numbers, and then to negate a number.</span></span>  
+## <a name="example"></a><span data-ttu-id="69e6f-125">Örnek</span><span class="sxs-lookup"><span data-stu-id="69e6f-125">Example</span></span>  
+ <span data-ttu-id="69e6f-126">Aşağıdaki örnekte `–` hesaplamak ve iki sayı arasındaki farkı döndürmek için işleç ve bir sayı negatif yapılacak.</span><span class="sxs-lookup"><span data-stu-id="69e6f-126">The following example uses the `–` operator to calculate and return the difference between two numbers, and then to negate a number.</span></span>  
   
  [!code-vb[VbVbalrOperators#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#10)]  
   
- <span data-ttu-id="1e950-127">Bu deyimler yürütülmesinin `binaryResult` 124.45 içerir ve `unaryResult` –334.90 içerir.</span><span class="sxs-lookup"><span data-stu-id="1e950-127">Following the execution of these statements, `binaryResult` contains 124.45 and `unaryResult` contains –334.90.</span></span>  
+ <span data-ttu-id="69e6f-127">Bu deyimler yürütülmesinin `binaryResult` 124.45 içerir ve `unaryResult` –334.90 içerir.</span><span class="sxs-lookup"><span data-stu-id="69e6f-127">Following the execution of these statements, `binaryResult` contains 124.45 and `unaryResult` contains –334.90.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1e950-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1e950-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="69e6f-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="69e6f-128">See also</span></span>
 
-- [<span data-ttu-id="1e950-129">-= İşleci (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1e950-129">-= Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
-- [<span data-ttu-id="1e950-130">Aritmetik İşleçler</span><span class="sxs-lookup"><span data-stu-id="1e950-130">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [<span data-ttu-id="1e950-131">Visual Basic'de İşleç önceliği</span><span class="sxs-lookup"><span data-stu-id="1e950-131">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="1e950-132">İşlevselliğe Göre Listelenmiş İşleçler</span><span class="sxs-lookup"><span data-stu-id="1e950-132">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="1e950-133">Visual Basic'de aritmetik işleçler</span><span class="sxs-lookup"><span data-stu-id="1e950-133">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [<span data-ttu-id="69e6f-129">-= İşleci (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="69e6f-129">-= Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+- [<span data-ttu-id="69e6f-130">Aritmetik İşleçler</span><span class="sxs-lookup"><span data-stu-id="69e6f-130">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [<span data-ttu-id="69e6f-131">Visual Basic'de İşleç önceliği</span><span class="sxs-lookup"><span data-stu-id="69e6f-131">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="69e6f-132">İşlevselliğe Göre Listelenmiş İşleçler</span><span class="sxs-lookup"><span data-stu-id="69e6f-132">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="69e6f-133">Visual Basic'de aritmetik işleçler</span><span class="sxs-lookup"><span data-stu-id="69e6f-133">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

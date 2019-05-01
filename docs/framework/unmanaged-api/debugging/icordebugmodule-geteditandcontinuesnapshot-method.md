@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3d3cf2947380a7d48a261faf1bbc24ec5773b970
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994883"
 ---
-# <a name="icordebugmodulegeteditandcontinuesnapshot-method"></a><span data-ttu-id="3b49b-102">ICorDebugModule::GetEditAndContinueSnapshot Metodu</span><span class="sxs-lookup"><span data-stu-id="3b49b-102">ICorDebugModule::GetEditAndContinueSnapshot Method</span></span>
-<span data-ttu-id="3b49b-103">Kullanım dışı.</span><span class="sxs-lookup"><span data-stu-id="3b49b-103">Deprecated.</span></span>  
+# <a name="icordebugmodulegeteditandcontinuesnapshot-method"></a><span data-ttu-id="345cf-102">ICorDebugModule::GetEditAndContinueSnapshot Metodu</span><span class="sxs-lookup"><span data-stu-id="345cf-102">ICorDebugModule::GetEditAndContinueSnapshot Method</span></span>
+<span data-ttu-id="345cf-103">Kullanım dışı.</span><span class="sxs-lookup"><span data-stu-id="345cf-103">Deprecated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3b49b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3b49b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="345cf-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="345cf-104">Syntax</span></span>  
   
 ```  
 HRESULT GetEditAndContinueSnapshot(  
@@ -35,11 +35,11 @@ HRESULT GetEditAndContinueSnapshot(
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="3b49b-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3b49b-105">Requirements</span></span>  
- <span data-ttu-id="3b49b-106">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3b49b-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="345cf-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="345cf-105">Requirements</span></span>  
+ <span data-ttu-id="345cf-106">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="345cf-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3b49b-107">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3b49b-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="345cf-107">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="345cf-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3b49b-108">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3b49b-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="345cf-108">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="345cf-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3b49b-109">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b49b-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="345cf-109">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="345cf-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

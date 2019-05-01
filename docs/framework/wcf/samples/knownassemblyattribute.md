@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
 ms.openlocfilehash: d6ed22790f5abc01b44accc05e09e75d105df429
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006622"
 ---
-# <a name="knownassemblyattribute"></a><span data-ttu-id="32901-102">KnownAssemblyAttribute</span><span class="sxs-lookup"><span data-stu-id="32901-102">KnownAssemblyAttribute</span></span>
-<span data-ttu-id="32901-103">Bu örnek nasıl serileştirme ve seri durumundan çıkarma işlemleri kullanarak özelleştirilebilir gösterir <xref:System.Runtime.Serialization.DataContractResolver> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="32901-103">This sample demonstrates how the serialization and deserialization processes can be customized by using the <xref:System.Runtime.Serialization.DataContractResolver> class.</span></span> <span data-ttu-id="32901-104">Bu örnek, dinamik olarak bilinen türler seri hale getirme ve seri durumundan çıkarma sırasında nasıl ekleneceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="32901-104">This sample shows how to dynamically add known types during serialization and deserialization.</span></span>  
+# <a name="knownassemblyattribute"></a><span data-ttu-id="b2752-102">KnownAssemblyAttribute</span><span class="sxs-lookup"><span data-stu-id="b2752-102">KnownAssemblyAttribute</span></span>
+<span data-ttu-id="b2752-103">Bu örnek nasıl serileştirme ve seri durumundan çıkarma işlemleri kullanarak özelleştirilebilir gösterir <xref:System.Runtime.Serialization.DataContractResolver> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="b2752-103">This sample demonstrates how the serialization and deserialization processes can be customized by using the <xref:System.Runtime.Serialization.DataContractResolver> class.</span></span> <span data-ttu-id="b2752-104">Bu örnek, dinamik olarak bilinen türler seri hale getirme ve seri durumundan çıkarma sırasında nasıl ekleneceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="b2752-104">This sample shows how to dynamically add known types during serialization and deserialization.</span></span>  
   
-## <a name="sample-details"></a><span data-ttu-id="32901-105">Örnek Ayrıntıları</span><span class="sxs-lookup"><span data-stu-id="32901-105">Sample Details</span></span>  
- <span data-ttu-id="32901-106">Bu örnekte, dört proje oluşur.</span><span class="sxs-lookup"><span data-stu-id="32901-106">This sample is composed of four projects.</span></span> <span data-ttu-id="32901-107">Bunlardan biri aşağıdaki hizmet sözleşmesini tanımlayan IIS tarafından barındırılan hizmeti, karşılık gelir.</span><span class="sxs-lookup"><span data-stu-id="32901-107">One of them corresponds to the service, to be hosted by IIS, which defines the following service contract.</span></span>  
+## <a name="sample-details"></a><span data-ttu-id="b2752-105">Örnek Ayrıntıları</span><span class="sxs-lookup"><span data-stu-id="b2752-105">Sample Details</span></span>  
+ <span data-ttu-id="b2752-106">Bu örnekte, dört proje oluşur.</span><span class="sxs-lookup"><span data-stu-id="b2752-106">This sample is composed of four projects.</span></span> <span data-ttu-id="b2752-107">Bunlardan biri aşağıdaki hizmet sözleşmesini tanımlayan IIS tarafından barındırılan hizmeti, karşılık gelir.</span><span class="sxs-lookup"><span data-stu-id="b2752-107">One of them corresponds to the service, to be hosted by IIS, which defines the following service contract.</span></span>  
   
 ```csharp
 // Definition of a service contract.  
@@ -38,7 +38,7 @@ public interface IDataContractCalculator
 }  
 ```  
   
- <span data-ttu-id="32901-108">Hizmet sözleşmesi, aşağıdaki örnekte gösterildiği gibi uygulanır.</span><span class="sxs-lookup"><span data-stu-id="32901-108">The service contract is implemented as shown in the following example.</span></span>  
+ <span data-ttu-id="b2752-108">Hizmet sözleşmesi, aşağıdaki örnekte gösterildiği gibi uygulanır.</span><span class="sxs-lookup"><span data-stu-id="b2752-108">The service contract is implemented as shown in the following example.</span></span>  
   
 ```csharp
 // Service class that implements the service contract.  
@@ -84,7 +84,7 @@ public interface IDataContractCalculator
 }  
 ```  
   
- <span data-ttu-id="32901-109">Başka bir proje sunucusu ile iletişim kurar ve kullanıma sunduğu yöntemleri çağıran istemciye karşılık gelir.</span><span class="sxs-lookup"><span data-stu-id="32901-109">Another project corresponds to the client, which communicates with the server and invokes the methods that it exposes.</span></span> <span data-ttu-id="32901-110">Aşağıdaki örnekte istemci tanımı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="32901-110">The definition of the client is shown in the following example.</span></span>  
+ <span data-ttu-id="b2752-109">Başka bir proje sunucusu ile iletişim kurar ve kullanıma sunduğu yöntemleri çağıran istemciye karşılık gelir.</span><span class="sxs-lookup"><span data-stu-id="b2752-109">Another project corresponds to the client, which communicates with the server and invokes the methods that it exposes.</span></span> <span data-ttu-id="b2752-110">Aşağıdaki örnekte istemci tanımı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="b2752-110">The definition of the client is shown in the following example.</span></span>  
   
 ```csharp  
  // Client implementation code.  
@@ -187,11 +187,11 @@ public interface IDataContractCalculator
 }  
 ```  
   
- <span data-ttu-id="32901-111">Hizmet sözleşmesi tanımını ile işaretlenmiş `KnownAssembly` özniteliği.</span><span class="sxs-lookup"><span data-stu-id="32901-111">The definition of the service contract is marked with the `KnownAssembly` attribute.</span></span> <span data-ttu-id="32901-112">Bu öznitelik tüm hizmet ve istemci tarafından çalışma zamanında bilinen türleri içeren bir kitaplık adını içerir.</span><span class="sxs-lookup"><span data-stu-id="32901-112">This attribute contains the name of a library of types, which all become known at runtime by both the service and the client.</span></span>  
+ <span data-ttu-id="b2752-111">Hizmet sözleşmesi tanımını ile işaretlenmiş `KnownAssembly` özniteliği.</span><span class="sxs-lookup"><span data-stu-id="b2752-111">The definition of the service contract is marked with the `KnownAssembly` attribute.</span></span> <span data-ttu-id="b2752-112">Bu öznitelik tüm hizmet ve istemci tarafından çalışma zamanında bilinen türleri içeren bir kitaplık adını içerir.</span><span class="sxs-lookup"><span data-stu-id="b2752-112">This attribute contains the name of a library of types, which all become known at runtime by both the service and the client.</span></span>  
   
- <span data-ttu-id="32901-113">`KnownAssembly` Özniteliğini uygular `IContractBehavior` tanımlamak için bir `DataContractSerializer` ile bir `DataContractResolver` her işlem davranışları için tanımlanmış.</span><span class="sxs-lookup"><span data-stu-id="32901-113">The `KnownAssembly` attribute implements `IContractBehavior` in order to define a `DataContractSerializer` with a `DataContractResolver` defined for each of the operation behaviors.</span></span> <span data-ttu-id="32901-114">`DataContractResolver` Oluşturulduğunda ve Serileştirme ve seri kaldırma farklı olduğunda kullanılacak adları ve türleri arasında eşleme ile bir sözlük oluşturur, derleme üzerinden yansıtır.</span><span class="sxs-lookup"><span data-stu-id="32901-114">The `DataContractResolver` reflects over the assembly when it is created, and creates the dictionary with the mapping between types and names to be used when serializing and deserializing the different types.</span></span> <span data-ttu-id="32901-115">Bu şekilde `ResolveType` ve `ResolveName` türleri sözlükte gerekli verileri aramak gerekir.</span><span class="sxs-lookup"><span data-stu-id="32901-115">In that way, the `ResolveType` and `ResolveName` types must look up the data required in the dictionary.</span></span>  
+ <span data-ttu-id="b2752-113">`KnownAssembly` Özniteliğini uygular `IContractBehavior` tanımlamak için bir `DataContractSerializer` ile bir `DataContractResolver` her işlem davranışları için tanımlanmış.</span><span class="sxs-lookup"><span data-stu-id="b2752-113">The `KnownAssembly` attribute implements `IContractBehavior` in order to define a `DataContractSerializer` with a `DataContractResolver` defined for each of the operation behaviors.</span></span> <span data-ttu-id="b2752-114">`DataContractResolver` Oluşturulduğunda ve Serileştirme ve seri kaldırma farklı olduğunda kullanılacak adları ve türleri arasında eşleme ile bir sözlük oluşturur, derleme üzerinden yansıtır.</span><span class="sxs-lookup"><span data-stu-id="b2752-114">The `DataContractResolver` reflects over the assembly when it is created, and creates the dictionary with the mapping between types and names to be used when serializing and deserializing the different types.</span></span> <span data-ttu-id="b2752-115">Bu şekilde `ResolveType` ve `ResolveName` türleri sözlükte gerekli verileri aramak gerekir.</span><span class="sxs-lookup"><span data-stu-id="b2752-115">In that way, the `ResolveType` and `ResolveName` types must look up the data required in the dictionary.</span></span>  
   
- <span data-ttu-id="32901-116">`DataContractResolver` Bu örnek, aşağıdaki örnekte gösterilen için tanımlanmış.</span><span class="sxs-lookup"><span data-stu-id="32901-116">The `DataContractResolver` defined for this sample is shown in the following example.</span></span>  
+ <span data-ttu-id="b2752-116">`DataContractResolver` Bu örnek, aşağıdaki örnekte gösterilen için tanımlanmış.</span><span class="sxs-lookup"><span data-stu-id="b2752-116">The `DataContractResolver` defined for this sample is shown in the following example.</span></span>  
   
 ```csharp
 public class MyDataContractResolver : DataContractResolver  
@@ -275,7 +275,7 @@ public class MyDataContractResolver : DataContractResolver
    }  
 ```  
   
- <span data-ttu-id="32901-117">Bu örnekte kullanılan tür kitaplığı aşağıdaki örnekte gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="32901-117">The library of types used in this sample is shown in the following example.</span></span>  
+ <span data-ttu-id="b2752-117">Bu örnekte kullanılan tür kitaplığı aşağıdaki örnekte gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="b2752-117">The library of types used in this sample is shown in the following example.</span></span>  
   
 ```csharp 
  [DataContract]  
@@ -320,9 +320,9 @@ public class ComplexNumberWithMagnitude : ComplexNumber
 }  
 ```  
   
- <span data-ttu-id="32901-118">Unutmayın `ComplexNumber` statik olarak bilmeniz gerekmez `ComplexNumberWithMagnitude` çalışma zamanında bilinen olur çünkü yazın.</span><span class="sxs-lookup"><span data-stu-id="32901-118">Note that `ComplexNumber` does not need to statically know the `ComplexNumberWithMagnitude` type, because it becomes known at runtime.</span></span>  
+ <span data-ttu-id="b2752-118">Unutmayın `ComplexNumber` statik olarak bilmeniz gerekmez `ComplexNumberWithMagnitude` çalışma zamanında bilinen olur çünkü yazın.</span><span class="sxs-lookup"><span data-stu-id="b2752-118">Note that `ComplexNumber` does not need to statically know the `ComplexNumberWithMagnitude` type, because it becomes known at runtime.</span></span>  
   
- <span data-ttu-id="32901-119">Örneği oluşturulan ve yürütülen olduğunda bu istemcinin beklenen çıktı.</span><span class="sxs-lookup"><span data-stu-id="32901-119">When the sample is built and executed, this is the expected output obtained in the client:</span></span>  
+ <span data-ttu-id="b2752-119">Örneği oluşturulan ve yürütülen olduğunda bu istemcinin beklenen çıktı.</span><span class="sxs-lookup"><span data-stu-id="b2752-119">When the sample is built and executed, this is the expected output obtained in the client:</span></span>  
   
 ```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
@@ -344,29 +344,29 @@ Lists combined:
 4 + 4i  
 ```  
   
-#### <a name="to-set-up-run-and-build-the-sample"></a><span data-ttu-id="32901-120">Ayarlamak için çalıştırın ve örnek oluşturma</span><span class="sxs-lookup"><span data-stu-id="32901-120">To set up, run, and build the sample</span></span>  
+#### <a name="to-set-up-run-and-build-the-sample"></a><span data-ttu-id="b2752-120">Ayarlamak için çalıştırın ve örnek oluşturma</span><span class="sxs-lookup"><span data-stu-id="b2752-120">To set up, run, and build the sample</span></span>  
   
-1. <span data-ttu-id="32901-121">Çözüme sağ tıklayın **KnownAssemblyAttribute** seçip **özellikleri**.</span><span class="sxs-lookup"><span data-stu-id="32901-121">Right-click the solution **KnownAssemblyAttribute** and select **Properties**.</span></span>  
+1. <span data-ttu-id="b2752-121">Çözüme sağ tıklayın **KnownAssemblyAttribute** seçip **özellikleri**.</span><span class="sxs-lookup"><span data-stu-id="b2752-121">Right-click the solution **KnownAssemblyAttribute** and select **Properties**.</span></span>  
   
-2. <span data-ttu-id="32901-122">İçinde **ortak özellikler**seçin **başlangıç projesi**ve ardından **birden fazla başlangıç projesi**.</span><span class="sxs-lookup"><span data-stu-id="32901-122">In **Common Properties**, select **Startup Project**, and then click **Multiple startup projects**.</span></span>  
+2. <span data-ttu-id="b2752-122">İçinde **ortak özellikler**seçin **başlangıç projesi**ve ardından **birden fazla başlangıç projesi**.</span><span class="sxs-lookup"><span data-stu-id="b2752-122">In **Common Properties**, select **Startup Project**, and then click **Multiple startup projects**.</span></span>  
   
-3. <span data-ttu-id="32901-123">Ekleme **Başlat** eyleme **hizmet** ve **istemci** projeleri.</span><span class="sxs-lookup"><span data-stu-id="32901-123">Add the **Start** action to the **Service** and **Client** projects.</span></span>  
+3. <span data-ttu-id="b2752-123">Ekleme **Başlat** eyleme **hizmet** ve **istemci** projeleri.</span><span class="sxs-lookup"><span data-stu-id="b2752-123">Add the **Start** action to the **Service** and **Client** projects.</span></span>  
   
-4. <span data-ttu-id="32901-124">Tıklayın **Tamam**basın **F5** örneği çalıştırmak için.</span><span class="sxs-lookup"><span data-stu-id="32901-124">Click **OK**, and press **F5** to run the sample.</span></span>  
+4. <span data-ttu-id="b2752-124">Tıklayın **Tamam**basın **F5** örneği çalıştırmak için.</span><span class="sxs-lookup"><span data-stu-id="b2752-124">Click **OK**, and press **F5** to run the sample.</span></span>  
   
-5. <span data-ttu-id="32901-125">Uygulama doğru çalışmıyorsa, ortamınızı doğru şekilde ayarlandığını gösterdiğinde emin olmak için aşağıdaki adımları izleyin:</span><span class="sxs-lookup"><span data-stu-id="32901-125">If the application does not run properly, follow these steps to make sure your environment has been properly set up:</span></span>  
+5. <span data-ttu-id="b2752-125">Uygulama doğru çalışmıyorsa, ortamınızı doğru şekilde ayarlandığını gösterdiğinde emin olmak için aşağıdaki adımları izleyin:</span><span class="sxs-lookup"><span data-stu-id="b2752-125">If the application does not run properly, follow these steps to make sure your environment has been properly set up:</span></span>  
   
-6. <span data-ttu-id="32901-126">Gerçekleştirdiğinizden emin olmak [kerelik kümesi ayarlama yordamı için Windows Communication Foundation örnekleri](https://go.microsoft.com/fwlink/?LinkId=150774).</span><span class="sxs-lookup"><span data-stu-id="32901-126">Ensure that you have performed the [One-Time Set Up Procedure for the Windows Communication Foundation Samples](https://go.microsoft.com/fwlink/?LinkId=150774).</span></span>  
+6. <span data-ttu-id="b2752-126">Gerçekleştirdiğinizden emin olmak [kerelik kümesi ayarlama yordamı için Windows Communication Foundation örnekleri](https://go.microsoft.com/fwlink/?LinkId=150774).</span><span class="sxs-lookup"><span data-stu-id="b2752-126">Ensure that you have performed the [One-Time Set Up Procedure for the Windows Communication Foundation Samples](https://go.microsoft.com/fwlink/?LinkId=150774).</span></span>  
   
-7. <span data-ttu-id="32901-127">Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örneği oluşturmaya](https://go.microsoft.com/fwlink/?LinkId=150775).</span><span class="sxs-lookup"><span data-stu-id="32901-127">To build the solution, follow the instructions in [Building the Windows Communication Foundation Sample](https://go.microsoft.com/fwlink/?LinkId=150775).</span></span>  
+7. <span data-ttu-id="b2752-127">Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örneği oluşturmaya](https://go.microsoft.com/fwlink/?LinkId=150775).</span><span class="sxs-lookup"><span data-stu-id="b2752-127">To build the solution, follow the instructions in [Building the Windows Communication Foundation Sample](https://go.microsoft.com/fwlink/?LinkId=150775).</span></span>  
   
-8. <span data-ttu-id="32901-128">Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](https://go.microsoft.com/fwlink/?LinkId=150776).</span><span class="sxs-lookup"><span data-stu-id="32901-128">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](https://go.microsoft.com/fwlink/?LinkId=150776).</span></span>  
+8. <span data-ttu-id="b2752-128">Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](https://go.microsoft.com/fwlink/?LinkId=150776).</span><span class="sxs-lookup"><span data-stu-id="b2752-128">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](https://go.microsoft.com/fwlink/?LinkId=150776).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="32901-129">Örnekler, makinenizde zaten yüklü.</span><span class="sxs-lookup"><span data-stu-id="32901-129">The samples may already be installed on your machine.</span></span> <span data-ttu-id="32901-130">Devam etmeden önce şu (varsayılan) dizin denetleyin.</span><span class="sxs-lookup"><span data-stu-id="32901-130">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="b2752-129">Örnekler, makinenizde zaten yüklü.</span><span class="sxs-lookup"><span data-stu-id="b2752-129">The samples may already be installed on your machine.</span></span> <span data-ttu-id="b2752-130">Devam etmeden önce şu (varsayılan) dizin denetleyin.</span><span class="sxs-lookup"><span data-stu-id="b2752-130">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="32901-131">Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.</span><span class="sxs-lookup"><span data-stu-id="32901-131">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="32901-132">Bu örnek, şu dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="32901-132">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="b2752-131">Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.</span><span class="sxs-lookup"><span data-stu-id="b2752-131">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b2752-132">Bu örnek, şu dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="b2752-132">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  

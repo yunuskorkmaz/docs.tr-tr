@@ -9,30 +9,30 @@ helpviewer_keywords:
 - adorners [WPF], binding to specified UIElements
 ms.assetid: b2101611-a0ee-4137-bdb8-9b3673d2e6b9
 ms.openlocfilehash: b6909fec466c2b31a7f4156c43b21a0c724f0217
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018976"
 ---
-# <a name="how-to-bind-an-adorner-to-an-element"></a><span data-ttu-id="79b3f-102">Nasıl yapılır: Öğeye bir Donatıcı Bağlama</span><span class="sxs-lookup"><span data-stu-id="79b3f-102">How to: Bind an Adorner to an Element</span></span>
-<span data-ttu-id="79b3f-103">Bu örnekte, program aracılığıyla belirtilen bir öğeye bir donatıcı bağlama işlemi gösterilmektedir <xref:System.Windows.UIElement>.</span><span class="sxs-lookup"><span data-stu-id="79b3f-103">This example shows how to programmatically bind an adorner to a specified <xref:System.Windows.UIElement>.</span></span>  
+# <a name="how-to-bind-an-adorner-to-an-element"></a><span data-ttu-id="b5e26-102">Nasıl yapılır: Öğeye bir Donatıcı Bağlama</span><span class="sxs-lookup"><span data-stu-id="b5e26-102">How to: Bind an Adorner to an Element</span></span>
+<span data-ttu-id="b5e26-103">Bu örnekte, program aracılığıyla belirtilen bir öğeye bir donatıcı bağlama işlemi gösterilmektedir <xref:System.Windows.UIElement>.</span><span class="sxs-lookup"><span data-stu-id="b5e26-103">This example shows how to programmatically bind an adorner to a specified <xref:System.Windows.UIElement>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="79b3f-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="79b3f-104">Example</span></span>  
- <span data-ttu-id="79b3f-105">Belirli bir öğeye bir donatıcı bağlama için <xref:System.Windows.UIElement>, şu adımları izleyin:</span><span class="sxs-lookup"><span data-stu-id="79b3f-105">To bind an adorner to a particular <xref:System.Windows.UIElement>, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="b5e26-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="b5e26-104">Example</span></span>  
+ <span data-ttu-id="b5e26-105">Belirli bir öğeye bir donatıcı bağlama için <xref:System.Windows.UIElement>, şu adımları izleyin:</span><span class="sxs-lookup"><span data-stu-id="b5e26-105">To bind an adorner to a particular <xref:System.Windows.UIElement>, follow these steps:</span></span>  
   
-1. <span data-ttu-id="79b3f-106">Çağrı `static` yöntemi <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> almak için bir <xref:System.Windows.Documents.AdornerLayer> nesnesi <xref:System.Windows.UIElement> donatılmış için.</span><span class="sxs-lookup"><span data-stu-id="79b3f-106">Call the `static` method <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> to get an <xref:System.Windows.Documents.AdornerLayer> object for the <xref:System.Windows.UIElement> to be adorned.</span></span> <span data-ttu-id="79b3f-107"><xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> Belirtilen adreste başlayan görsel ağaç'kurmak gezer **UIElement**ve bulduğu ilk donatıcı katmanı döndürür.</span><span class="sxs-lookup"><span data-stu-id="79b3f-107"><xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> walks up the visual tree, starting at the specified **UIElement**, and returns the first adorner layer it finds.</span></span> <span data-ttu-id="79b3f-108">(Hiçbir donatıcı katman bulunursa, yöntem null değeri döndürür.)</span><span class="sxs-lookup"><span data-stu-id="79b3f-108">(If no adorner layers are found, the method returns null.)</span></span>  
+1. <span data-ttu-id="b5e26-106">Çağrı `static` yöntemi <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> almak için bir <xref:System.Windows.Documents.AdornerLayer> nesnesi <xref:System.Windows.UIElement> donatılmış için.</span><span class="sxs-lookup"><span data-stu-id="b5e26-106">Call the `static` method <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> to get an <xref:System.Windows.Documents.AdornerLayer> object for the <xref:System.Windows.UIElement> to be adorned.</span></span> <span data-ttu-id="b5e26-107"><xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> Belirtilen adreste başlayan görsel ağaç'kurmak gezer **UIElement**ve bulduğu ilk donatıcı katmanı döndürür.</span><span class="sxs-lookup"><span data-stu-id="b5e26-107"><xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> walks up the visual tree, starting at the specified **UIElement**, and returns the first adorner layer it finds.</span></span> <span data-ttu-id="b5e26-108">(Hiçbir donatıcı katman bulunursa, yöntem null değeri döndürür.)</span><span class="sxs-lookup"><span data-stu-id="b5e26-108">(If no adorner layers are found, the method returns null.)</span></span>  
   
-2. <span data-ttu-id="79b3f-109">Çağrı <xref:System.Windows.Documents.AdornerLayer.Add%2A> donatıcıyı hedefe bağlamak için yöntemi **UIElement**.</span><span class="sxs-lookup"><span data-stu-id="79b3f-109">Call the <xref:System.Windows.Documents.AdornerLayer.Add%2A> method to bind the adorner to the target **UIElement**.</span></span>  
+2. <span data-ttu-id="b5e26-109">Çağrı <xref:System.Windows.Documents.AdornerLayer.Add%2A> donatıcıyı hedefe bağlamak için yöntemi **UIElement**.</span><span class="sxs-lookup"><span data-stu-id="b5e26-109">Call the <xref:System.Windows.Documents.AdornerLayer.Add%2A> method to bind the adorner to the target **UIElement**.</span></span>  
   
- <span data-ttu-id="79b3f-110">Aşağıdaki örnekte (yukarıda gösterilen) SimpleCircleAdorner bağlayan bir <xref:System.Windows.Controls.TextBox> adlı *myTextBox*.</span><span class="sxs-lookup"><span data-stu-id="79b3f-110">The following example binds a SimpleCircleAdorner (shown above) to a <xref:System.Windows.Controls.TextBox> named *myTextBox*.</span></span>  
+ <span data-ttu-id="b5e26-110">Aşağıdaki örnekte (yukarıda gösterilen) SimpleCircleAdorner bağlayan bir <xref:System.Windows.Controls.TextBox> adlı *myTextBox*.</span><span class="sxs-lookup"><span data-stu-id="b5e26-110">The following example binds a SimpleCircleAdorner (shown above) to a <xref:System.Windows.Controls.TextBox> named *myTextBox*.</span></span>  
   
  [!code-csharp[Adorners_SimpleCircleAdorner#_AdornSingleElement](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornsingleelement)]
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornSingleElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornsingleelement)]  
   
 > [!NOTE]
->  <span data-ttu-id="79b3f-111">Kullanarak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] başka bir öğeye bir donatıcı bağlamak için şu anda desteklenmiyor.</span><span class="sxs-lookup"><span data-stu-id="79b3f-111">Using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] to bind an adorner to another element is currently not supported.</span></span>  
+>  <span data-ttu-id="b5e26-111">Kullanarak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] başka bir öğeye bir donatıcı bağlamak için şu anda desteklenmiyor.</span><span class="sxs-lookup"><span data-stu-id="b5e26-111">Using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] to bind an adorner to another element is currently not supported.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79b3f-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="79b3f-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b5e26-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b5e26-112">See also</span></span>
 
-- [<span data-ttu-id="79b3f-113">Donatıcılara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="79b3f-113">Adorners Overview</span></span>](adorners-overview.md)
+- [<span data-ttu-id="b5e26-113">Donatıcılara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b5e26-113">Adorners Overview</span></span>](adorners-overview.md)

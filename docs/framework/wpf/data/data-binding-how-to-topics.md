@@ -8,53 +8,53 @@ helpviewer_keywords:
 - binding data [WPF], how-to topics
 ms.assetid: a3b2563e-d879-41a7-9dfd-ac56b27fdcad
 ms.openlocfilehash: 49929dc5afaa9bc1e97589d244c2bdbbd14cdb00
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023760"
 ---
-# <a name="data-binding-how-to-topics"></a><span data-ttu-id="dd4dc-102">Veri Bağlama ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="dd4dc-102">Data Binding How-to Topics</span></span>
-<span data-ttu-id="dd4dc-103">Bu bölümdeki konularda, ortak dil çalışma zamanı (CLR) nesneleri ve XML biçiminde veri kaynakları çeşitli veri öğeleri bağlamak için veri bağlama kullanmayı açıklar.</span><span class="sxs-lookup"><span data-stu-id="dd4dc-103">The topics in this section describe how to use data binding to bind elements to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>  
+# <a name="data-binding-how-to-topics"></a><span data-ttu-id="b2e86-102">Veri Bağlama ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="b2e86-102">Data Binding How-to Topics</span></span>
+<span data-ttu-id="b2e86-103">Bu bölümdeki konularda, ortak dil çalışma zamanı (CLR) nesneleri ve XML biçiminde veri kaynakları çeşitli veri öğeleri bağlamak için veri bağlama kullanmayı açıklar.</span><span class="sxs-lookup"><span data-stu-id="b2e86-103">The topics in this section describe how to use data binding to bind elements to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="dd4dc-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="dd4dc-104">In This Section</span></span>  
- [<span data-ttu-id="dd4dc-105">Basit bir Bağlama Oluşturma</span><span class="sxs-lookup"><span data-stu-id="dd4dc-105">Create a Simple Binding</span></span>](how-to-create-a-simple-binding.md)  
- [<span data-ttu-id="dd4dc-106">Bağlama Kaynağı Belirtme</span><span class="sxs-lookup"><span data-stu-id="dd4dc-106">Specify the Binding Source</span></span>](how-to-specify-the-binding-source.md)  
- [<span data-ttu-id="dd4dc-107">XAML'de Bağlama için Veriyi Kullanılabilir Yapma</span><span class="sxs-lookup"><span data-stu-id="dd4dc-107">Make Data Available for Binding in XAML</span></span>](how-to-make-data-available-for-binding-in-xaml.md)  
- [<span data-ttu-id="dd4dc-108">TextBox Metni Kaynağı Güncelleştirdiğinde Denetleme</span><span class="sxs-lookup"><span data-stu-id="dd4dc-108">Control When the TextBox Text Updates the Source</span></span>](how-to-control-when-the-textbox-text-updates-the-source.md)  
- [<span data-ttu-id="dd4dc-109">Bağlama Yönünü Belirtme</span><span class="sxs-lookup"><span data-stu-id="dd4dc-109">Specify the Direction of the Binding</span></span>](how-to-specify-the-direction-of-the-binding.md)  
- [<span data-ttu-id="dd4dc-110">Koleksiyona Bağlama ve Seçime Göre Bilgi Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="dd4dc-110">Bind to a Collection and Display Information Based on Selection</span></span>](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
- [<span data-ttu-id="dd4dc-111">Sabit Listesine Bağlama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-111">Bind to an Enumeration</span></span>](how-to-bind-to-an-enumeration.md)  
- [<span data-ttu-id="dd4dc-112">İki Denetimin Özelliklerini Bağlama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-112">Bind the Properties of Two Controls</span></span>](how-to-bind-the-properties-of-two-controls.md)  
- [<span data-ttu-id="dd4dc-113">Bağlama Doğrulaması Uygulama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-113">Implement Binding Validation</span></span>](how-to-implement-binding-validation.md)  
- [<span data-ttu-id="dd4dc-114">Özel Nesneler Üzerinde Doğrulama Mantığı Uygulama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-114">Implement Validation Logic on Custom Objects</span></span>](how-to-implement-validation-logic-on-custom-objects.md)  
- [<span data-ttu-id="dd4dc-115">Bağımlı Hedef Özelliğinden Bağlama Nesnesi Alma</span><span class="sxs-lookup"><span data-stu-id="dd4dc-115">Get the Binding Object from a Bound Target Property</span></span>](how-to-get-the-binding-object-from-a-bound-target-property.md)  
- [<span data-ttu-id="dd4dc-116">CompositeCollection Uygulama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-116">Implement a CompositeCollection</span></span>](how-to-implement-a-compositecollection.md)  
- [<span data-ttu-id="dd4dc-117">Bağımlı Veri Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="dd4dc-117">Convert Bound Data</span></span>](how-to-convert-bound-data.md)  
- [<span data-ttu-id="dd4dc-118">Kod İçinde Bağlama Oluşturma</span><span class="sxs-lookup"><span data-stu-id="dd4dc-118">Create a Binding in Code</span></span>](how-to-create-a-binding-in-code.md)  
- [<span data-ttu-id="dd4dc-119">Veri Koleksiyonunun Varsayılan Görünümünü Alma</span><span class="sxs-lookup"><span data-stu-id="dd4dc-119">Get the Default View of a Data Collection</span></span>](how-to-get-the-default-view-of-a-data-collection.md)  
- [<span data-ttu-id="dd4dc-120">Veri CollectionView İçindeki Nesneler Aracılığıyla Gezinme</span><span class="sxs-lookup"><span data-stu-id="dd4dc-120">Navigate Through the Objects in a Data CollectionView</span></span>](how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
- [<span data-ttu-id="dd4dc-121">Görünümde Veri Filtreleme</span><span class="sxs-lookup"><span data-stu-id="dd4dc-121">Filter Data in a View</span></span>](how-to-filter-data-in-a-view.md)  
- [<span data-ttu-id="dd4dc-122">Görünümde Verileri Sıralama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-122">Sort Data in a View</span></span>](how-to-sort-data-in-a-view.md)  
- [<span data-ttu-id="dd4dc-123">XAML İçerisinde bir Görüntü Kullanarak Verileri Sıralama ve Gruplama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-123">Sort and Group Data Using a View in XAML</span></span>](how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [<span data-ttu-id="dd4dc-124">Hiyerarşik Veriler ile Ana Öğe-Ayrıntı Desenini Kullanma</span><span class="sxs-lookup"><span data-stu-id="dd4dc-124">Use the Master-Detail Pattern with Hierarchical Data</span></span>](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
- [<span data-ttu-id="dd4dc-125">Hiyerarşik XML Verileri ile Ana Öğe-Ayrıntı Desenini Kullanma</span><span class="sxs-lookup"><span data-stu-id="dd4dc-125">Use the Master-Detail Pattern with Hierarchical XML Data</span></span>](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
- [<span data-ttu-id="dd4dc-126">Bağımlı Öğeler Listesine Göre Değer Üretme</span><span class="sxs-lookup"><span data-stu-id="dd4dc-126">Produce a Value Based on a List of Bound Items</span></span>](how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
- [<span data-ttu-id="dd4dc-127">Özellik Değişikliği Bildirimi Uygulama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-127">Implement Property Change Notification</span></span>](how-to-implement-property-change-notification.md)  
- [<span data-ttu-id="dd4dc-128">ObservableCollection Oluşturma ve Bağlama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-128">Create and Bind to an ObservableCollection</span></span>](how-to-create-and-bind-to-an-observablecollection.md)  
- [<span data-ttu-id="dd4dc-129">PriorityBinding Uygulama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-129">Implement PriorityBinding</span></span>](how-to-implement-prioritybinding.md)  
- [<span data-ttu-id="dd4dc-130">XMLDataProvider ve XPath Sorgularını Kullanarak XML Verilerine Bağlama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-130">Bind to XML Data Using an XMLDataProvider and XPath Queries</span></span>](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
- [<span data-ttu-id="dd4dc-131">XML Sorgu Sonuçları için XDocument, XElement veya LINQ'ya Bağlama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-131">Bind to XDocument, XElement, or LINQ for XML Query Results</span></span>](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
- [<span data-ttu-id="dd4dc-132">XML Ad Alanlarını Kullanarak Veri Bağlama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-132">Use XML Namespaces in Data Binding</span></span>](how-to-use-xml-namespaces-in-data-binding.md)  
- [<span data-ttu-id="dd4dc-133">ADO.NET Veri Kaynağına Bağlama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-133">Bind to an ADO.NET Data Source</span></span>](how-to-bind-to-an-ado-net-data-source.md)  
- [<span data-ttu-id="dd4dc-134">Bir Yönteme Bağlama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-134">Bind to a Method</span></span>](how-to-bind-to-a-method.md)  
- [<span data-ttu-id="dd4dc-135">Bağlama Güncelleştirmeleri Bildirimini Ayarlama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-135">Set Up Notification of Binding Updates</span></span>](how-to-set-up-notification-of-binding-updates.md)  
- [<span data-ttu-id="dd4dc-136">Bağlamaları Temizleme</span><span class="sxs-lookup"><span data-stu-id="dd4dc-136">Clear Bindings</span></span>](how-to-clear-bindings.md)  
- [<span data-ttu-id="dd4dc-137">DataTemplate ile Oluşturulan Öğeleri Bulma</span><span class="sxs-lookup"><span data-stu-id="dd4dc-137">Find DataTemplate-Generated Elements</span></span>](how-to-find-datatemplate-generated-elements.md)  
- [<span data-ttu-id="dd4dc-138">Web Hizmetine Bağlama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-138">Bind to a Web Service</span></span>](how-to-bind-to-a-web-service.md)  
- [<span data-ttu-id="dd4dc-139">LINQ Sorgusunun Sonuçlarına Bağlama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-139">Bind to the Results of a LINQ Query</span></span>](how-to-bind-to-the-results-of-a-linq-query.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b2e86-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="b2e86-104">In This Section</span></span>  
+ [<span data-ttu-id="b2e86-105">Basit bir Bağlama Oluşturma</span><span class="sxs-lookup"><span data-stu-id="b2e86-105">Create a Simple Binding</span></span>](how-to-create-a-simple-binding.md)  
+ [<span data-ttu-id="b2e86-106">Bağlama Kaynağı Belirtme</span><span class="sxs-lookup"><span data-stu-id="b2e86-106">Specify the Binding Source</span></span>](how-to-specify-the-binding-source.md)  
+ [<span data-ttu-id="b2e86-107">XAML'de Bağlama için Veriyi Kullanılabilir Yapma</span><span class="sxs-lookup"><span data-stu-id="b2e86-107">Make Data Available for Binding in XAML</span></span>](how-to-make-data-available-for-binding-in-xaml.md)  
+ [<span data-ttu-id="b2e86-108">TextBox Metni Kaynağı Güncelleştirdiğinde Denetleme</span><span class="sxs-lookup"><span data-stu-id="b2e86-108">Control When the TextBox Text Updates the Source</span></span>](how-to-control-when-the-textbox-text-updates-the-source.md)  
+ [<span data-ttu-id="b2e86-109">Bağlama Yönünü Belirtme</span><span class="sxs-lookup"><span data-stu-id="b2e86-109">Specify the Direction of the Binding</span></span>](how-to-specify-the-direction-of-the-binding.md)  
+ [<span data-ttu-id="b2e86-110">Koleksiyona Bağlama ve Seçime Göre Bilgi Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="b2e86-110">Bind to a Collection and Display Information Based on Selection</span></span>](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
+ [<span data-ttu-id="b2e86-111">Sabit Listesine Bağlama</span><span class="sxs-lookup"><span data-stu-id="b2e86-111">Bind to an Enumeration</span></span>](how-to-bind-to-an-enumeration.md)  
+ [<span data-ttu-id="b2e86-112">İki Denetimin Özelliklerini Bağlama</span><span class="sxs-lookup"><span data-stu-id="b2e86-112">Bind the Properties of Two Controls</span></span>](how-to-bind-the-properties-of-two-controls.md)  
+ [<span data-ttu-id="b2e86-113">Bağlama Doğrulaması Uygulama</span><span class="sxs-lookup"><span data-stu-id="b2e86-113">Implement Binding Validation</span></span>](how-to-implement-binding-validation.md)  
+ [<span data-ttu-id="b2e86-114">Özel Nesneler Üzerinde Doğrulama Mantığı Uygulama</span><span class="sxs-lookup"><span data-stu-id="b2e86-114">Implement Validation Logic on Custom Objects</span></span>](how-to-implement-validation-logic-on-custom-objects.md)  
+ [<span data-ttu-id="b2e86-115">Bağımlı Hedef Özelliğinden Bağlama Nesnesi Alma</span><span class="sxs-lookup"><span data-stu-id="b2e86-115">Get the Binding Object from a Bound Target Property</span></span>](how-to-get-the-binding-object-from-a-bound-target-property.md)  
+ [<span data-ttu-id="b2e86-116">CompositeCollection Uygulama</span><span class="sxs-lookup"><span data-stu-id="b2e86-116">Implement a CompositeCollection</span></span>](how-to-implement-a-compositecollection.md)  
+ [<span data-ttu-id="b2e86-117">Bağımlı Veri Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="b2e86-117">Convert Bound Data</span></span>](how-to-convert-bound-data.md)  
+ [<span data-ttu-id="b2e86-118">Kod İçinde Bağlama Oluşturma</span><span class="sxs-lookup"><span data-stu-id="b2e86-118">Create a Binding in Code</span></span>](how-to-create-a-binding-in-code.md)  
+ [<span data-ttu-id="b2e86-119">Veri Koleksiyonunun Varsayılan Görünümünü Alma</span><span class="sxs-lookup"><span data-stu-id="b2e86-119">Get the Default View of a Data Collection</span></span>](how-to-get-the-default-view-of-a-data-collection.md)  
+ [<span data-ttu-id="b2e86-120">Veri CollectionView İçindeki Nesneler Aracılığıyla Gezinme</span><span class="sxs-lookup"><span data-stu-id="b2e86-120">Navigate Through the Objects in a Data CollectionView</span></span>](how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
+ [<span data-ttu-id="b2e86-121">Görünümde Veri Filtreleme</span><span class="sxs-lookup"><span data-stu-id="b2e86-121">Filter Data in a View</span></span>](how-to-filter-data-in-a-view.md)  
+ [<span data-ttu-id="b2e86-122">Görünümde Verileri Sıralama</span><span class="sxs-lookup"><span data-stu-id="b2e86-122">Sort Data in a View</span></span>](how-to-sort-data-in-a-view.md)  
+ [<span data-ttu-id="b2e86-123">XAML İçerisinde bir Görüntü Kullanarak Verileri Sıralama ve Gruplama</span><span class="sxs-lookup"><span data-stu-id="b2e86-123">Sort and Group Data Using a View in XAML</span></span>](how-to-sort-and-group-data-using-a-view-in-xaml.md)  
+ [<span data-ttu-id="b2e86-124">Hiyerarşik Veriler ile Ana Öğe-Ayrıntı Desenini Kullanma</span><span class="sxs-lookup"><span data-stu-id="b2e86-124">Use the Master-Detail Pattern with Hierarchical Data</span></span>](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
+ [<span data-ttu-id="b2e86-125">Hiyerarşik XML Verileri ile Ana Öğe-Ayrıntı Desenini Kullanma</span><span class="sxs-lookup"><span data-stu-id="b2e86-125">Use the Master-Detail Pattern with Hierarchical XML Data</span></span>](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
+ [<span data-ttu-id="b2e86-126">Bağımlı Öğeler Listesine Göre Değer Üretme</span><span class="sxs-lookup"><span data-stu-id="b2e86-126">Produce a Value Based on a List of Bound Items</span></span>](how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
+ [<span data-ttu-id="b2e86-127">Özellik Değişikliği Bildirimi Uygulama</span><span class="sxs-lookup"><span data-stu-id="b2e86-127">Implement Property Change Notification</span></span>](how-to-implement-property-change-notification.md)  
+ [<span data-ttu-id="b2e86-128">ObservableCollection Oluşturma ve Bağlama</span><span class="sxs-lookup"><span data-stu-id="b2e86-128">Create and Bind to an ObservableCollection</span></span>](how-to-create-and-bind-to-an-observablecollection.md)  
+ [<span data-ttu-id="b2e86-129">PriorityBinding Uygulama</span><span class="sxs-lookup"><span data-stu-id="b2e86-129">Implement PriorityBinding</span></span>](how-to-implement-prioritybinding.md)  
+ [<span data-ttu-id="b2e86-130">XMLDataProvider ve XPath Sorgularını Kullanarak XML Verilerine Bağlama</span><span class="sxs-lookup"><span data-stu-id="b2e86-130">Bind to XML Data Using an XMLDataProvider and XPath Queries</span></span>](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
+ [<span data-ttu-id="b2e86-131">XML Sorgu Sonuçları için XDocument, XElement veya LINQ'ya Bağlama</span><span class="sxs-lookup"><span data-stu-id="b2e86-131">Bind to XDocument, XElement, or LINQ for XML Query Results</span></span>](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
+ [<span data-ttu-id="b2e86-132">XML Ad Alanlarını Kullanarak Veri Bağlama</span><span class="sxs-lookup"><span data-stu-id="b2e86-132">Use XML Namespaces in Data Binding</span></span>](how-to-use-xml-namespaces-in-data-binding.md)  
+ [<span data-ttu-id="b2e86-133">ADO.NET Veri Kaynağına Bağlama</span><span class="sxs-lookup"><span data-stu-id="b2e86-133">Bind to an ADO.NET Data Source</span></span>](how-to-bind-to-an-ado-net-data-source.md)  
+ [<span data-ttu-id="b2e86-134">Bir Yönteme Bağlama</span><span class="sxs-lookup"><span data-stu-id="b2e86-134">Bind to a Method</span></span>](how-to-bind-to-a-method.md)  
+ [<span data-ttu-id="b2e86-135">Bağlama Güncelleştirmeleri Bildirimini Ayarlama</span><span class="sxs-lookup"><span data-stu-id="b2e86-135">Set Up Notification of Binding Updates</span></span>](how-to-set-up-notification-of-binding-updates.md)  
+ [<span data-ttu-id="b2e86-136">Bağlamaları Temizleme</span><span class="sxs-lookup"><span data-stu-id="b2e86-136">Clear Bindings</span></span>](how-to-clear-bindings.md)  
+ [<span data-ttu-id="b2e86-137">DataTemplate ile Oluşturulan Öğeleri Bulma</span><span class="sxs-lookup"><span data-stu-id="b2e86-137">Find DataTemplate-Generated Elements</span></span>](how-to-find-datatemplate-generated-elements.md)  
+ [<span data-ttu-id="b2e86-138">Web Hizmetine Bağlama</span><span class="sxs-lookup"><span data-stu-id="b2e86-138">Bind to a Web Service</span></span>](how-to-bind-to-a-web-service.md)  
+ [<span data-ttu-id="b2e86-139">LINQ Sorgusunun Sonuçlarına Bağlama</span><span class="sxs-lookup"><span data-stu-id="b2e86-139">Bind to the Results of a LINQ Query</span></span>](how-to-bind-to-the-results-of-a-linq-query.md)  
   
-## <a name="reference"></a><span data-ttu-id="dd4dc-140">Başvuru</span><span class="sxs-lookup"><span data-stu-id="dd4dc-140">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="b2e86-140">Başvuru</span><span class="sxs-lookup"><span data-stu-id="b2e86-140">Reference</span></span>  
  <xref:System.Windows.Data>  
   
  <xref:System.Windows.Data.Binding>  
@@ -63,7 +63,7 @@ ms.locfileid: "57360582"
   
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
-## <a name="related-sections"></a><span data-ttu-id="dd4dc-141">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="dd4dc-141">Related Sections</span></span>  
- [<span data-ttu-id="dd4dc-142">Veri Bağlama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-142">Data Binding</span></span>](data-binding-wpf.md)  
+## <a name="related-sections"></a><span data-ttu-id="b2e86-141">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="b2e86-141">Related Sections</span></span>  
+ [<span data-ttu-id="b2e86-142">Veri Bağlama</span><span class="sxs-lookup"><span data-stu-id="b2e86-142">Data Binding</span></span>](data-binding-wpf.md)  
   
- [<span data-ttu-id="dd4dc-143">Veri Bağlama</span><span class="sxs-lookup"><span data-stu-id="dd4dc-143">Data Binding</span></span>](../advanced/optimizing-performance-data-binding.md)
+ [<span data-ttu-id="b2e86-143">Veri Bağlama</span><span class="sxs-lookup"><span data-stu-id="b2e86-143">Data Binding</span></span>](../advanced/optimizing-performance-data-binding.md)

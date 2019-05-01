@@ -18,15 +18,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a0ef1e6511bf8e452a336ba6ea02359fe41e07cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996118"
 ---
-# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="4db1d-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4db1d-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
-<span data-ttu-id="4db1d-103">`GetErrorCode` artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="4db1d-103">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="4db1d-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="4db1d-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="b83b0-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b83b0-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
+<span data-ttu-id="b83b0-103">`GetErrorCode` artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="b83b0-103">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="b83b0-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="b83b0-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4db1d-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4db1d-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b83b0-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b83b0-105">See also</span></span>
 
-- [<span data-ttu-id="4db1d-106">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="4db1d-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="b83b0-106">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="b83b0-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
