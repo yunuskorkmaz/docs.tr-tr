@@ -11,22 +11,22 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
 ms.openlocfilehash: 93136d4c87463db7128a68957b243c1ef13a90eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62036367"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>Önbellek İlkesi Etkileşimi — Yaş Üst Sınırı ve En Az Eskime
 İstemci uygulamayı çevrimiçiyken içeriği getirildiğinden emin olun yardımcı olmak için istemci önbellek İlkesi ve sunucu yeniden doğrulama gereksinimleri etkileşimi her zaman en koruyucu önbellek İlkesi'nde sonuçlanır. Bu konu başlığı altındaki tüm örnekler, 1 Ocak önbelleğe alınır ve 4 Ocak süresi bir kaynağın önbellek ilkesini gösterir.  
   
  Aşağıdaki örnekler yaş üst sınırını müdahalesini sonuçları önbellek İlkesi gösterir (`maxAge`) ve en az eskime (`minFresh`) değerleri.  
   
--   Önbellek İlkesi ayarlarsa `maxAge` = 2 gün ve `minFresh` belirtilmemişse, içeriği yeniden doğrulanır 3 Ocak'ta.  
+- Önbellek İlkesi ayarlarsa `maxAge` = 2 gün ve `minFresh` belirtilmemişse, içeriği yeniden doğrulanır 3 Ocak'ta.  
   
--   Önbellek İlkesi ayarlarsa `maxAge` = 2 gün ve `minFresh` = 1 gün göre `maxAge`, içeriği 3 Ocak tarihine kadar yeni. Şunlara göre `minFresh`, içeriği 3 Ocak tarihine kadar yeni. Bu nedenle, içerik 3 Ocak'ta yeniden doğrulanır gerekir.  
+- Önbellek İlkesi ayarlarsa `maxAge` = 2 gün ve `minFresh` = 1 gün göre `maxAge`, içeriği 3 Ocak tarihine kadar yeni. Şunlara göre `minFresh`, içeriği 3 Ocak tarihine kadar yeni. Bu nedenle, içerik 3 Ocak'ta yeniden doğrulanır gerekir.  
   
--   Önbellek İlkesi ayarlarsa `maxAge` = 2 gün ve `minFresh` = 2 gün göre `maxAge`, içeriği 3 Ocak tarihine kadar yeni. Şunlara göre `minFresh` 2 Ocak tarihine kadar yeni içeriktir. Bu nedenle, içeriğin 2 Ocak yeniden doğrulanır gerekir.  
+- Önbellek İlkesi ayarlarsa `maxAge` = 2 gün ve `minFresh` = 2 gün göre `maxAge`, içeriği 3 Ocak tarihine kadar yeni. Şunlara göre `minFresh` 2 Ocak tarihine kadar yeni içeriktir. Bu nedenle, içeriğin 2 Ocak yeniden doğrulanır gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

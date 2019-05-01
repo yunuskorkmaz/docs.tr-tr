@@ -5,11 +5,11 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
 ms.openlocfilehash: 27212045d9870c9f2fc15509d76f3e9b07d8657f
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019353"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama
 
@@ -85,7 +85,7 @@ Bu kılavuz, uygulama oluşturmaya uçtan uca yönergeler sağlar *tek parça* w
 
 Bu kılavuz için tamamlayıcı ["_.NET mikro Hizmetleri. Kapsayıcılı .NET uygulamaları mimarisi_"](../microservices-architecture/index.md) hangi odaklanır daha fazla üzerinde Docker, mikro hizmetler ve kapsayıcılar dağıtımının Kurumsal uygulamalarını barındırmak için.
 
-### <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET mikro Hizmetleri. Kapsayıcılı .NET uygulamaları mimarisi
+### <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET mikro Hizmetleri. Kapsayıcılı .NET Uygulamaları Mimarisi
 
 - **e-kitabı**  
   <https://aka.ms/MicroservicesEbook>

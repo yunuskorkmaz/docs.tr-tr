@@ -10,32 +10,32 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
 ms.openlocfilehash: 4e005ea96df45da8326386f8b43aa5640ce810b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050628"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF İçinde URI'leri Paketleme
 Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] belirlemek ve aşağıdakiler dahil pek çok yolla dosyalarını yüklemek için kullanılır:  
   
--   Belirtme [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] göstermek için bir uygulama ilk kez başlatıldığında.  
+- Belirtme [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] göstermek için bir uygulama ilk kez başlatıldığında.  
   
--   Görüntüleri yükleniyor.  
+- Görüntüleri yükleniyor.  
   
--   Sayfa Gezinme.  
+- Sayfa Gezinme.  
   
--   Yürütülebilir olmayan veri dosyaları yükleniyor.  
+- Yürütülebilir olmayan veri dosyaları yükleniyor.  
   
  Ayrıca, [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] belirlemek ve konumları, aşağıdakiler dahil çeşitli arasından dosyaları yüklemek için kullanılabilir:  
   
--   Geçerli derleme.  
+- Geçerli derleme.  
   
--   Başvurulan bir derleme.  
+- Başvurulan bir derleme.  
   
--   Bir derlemeye göreli bir konum.  
+- Bir derlemeye göreli bir konum.  
   
--   Kaynak siteyi uygulamanın.  
+- Kaynak siteyi uygulamanın.  
   
  Belirlemekten ve bu konumlardan bu tür dosyaları yüklenirken tutarlı bir mekanizma sağlamanız [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] genişletilmesinde yararlanır *URI şeması paketleme*. Bu konuda düzenine genel bir bakış sağlar, paketi oluşturmak için nasıl ele alınmaktadır [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] mutlak veya göreli bir çeşitli senaryoları ele alınmaktadır [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] ve [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Paketi'ni kullanma göstermeden önce çözüm, [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] hem biçimlendirmeden ve kod.  
 
@@ -59,15 +59,15 @@ Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../
   
  Paketler ve bölümleri, uygulamalar ve dosyalar burada bir uygulaması (paket) dahil olmak üzere bir veya daha fazla dosyaları (parça) içerebilir, benzer:  
   
--   Yerel bütünleştirilmiş kod içine derlenmiş kaynak dosyaları.  
+- Yerel bütünleştirilmiş kod içine derlenmiş kaynak dosyaları.  
   
--   Başvurulan bir bütünleştirilmiş kod içine derlenmiş kaynak dosyaları.  
+- Başvurulan bir bütünleştirilmiş kod içine derlenmiş kaynak dosyaları.  
   
--   Bir başvuru bütünleştirilmiş kod içine derlenmiş kaynak dosyaları.  
+- Bir başvuru bütünleştirilmiş kod içine derlenmiş kaynak dosyaları.  
   
--   İçerik dosyaları.  
+- İçerik dosyaları.  
   
--   Kaynak dosyaları sitesi.  
+- Kaynak dosyaları sitesi.  
   
  Bu tür dosyaları, erişmeye [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] iki yetkilileri destekler: uygulama: / / / ve siteoforigin: / / /. Uygulama: / / / yetkilisi kaynak ve içerik dosyaları dahil olmak üzere derleme zamanında bilinen uygulama veri dosyalarını tanımlar. Siteoforigin: / / / yetkilisi kaynak dosyaları sitesi tanımlar. Her yetki kapsamını aşağıdaki şekilde gösterilmiştir.  
   
@@ -86,9 +86,9 @@ Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../
 ### <a name="local-assembly-resource-file"></a>Yerel bütünleştirilmiş kod kaynak dosyası  
  Paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] aşağıdaki yetkilisi ve yol için bir kaynak yerel bütünleştirilmiş kod içine derlenmiş olan dosya kullanır:  
   
--   **Yetkilisi**: uygulama: / / /.  
+- **Yetkilisi**: uygulama: / / /.  
   
--   **Yol**: Yerel derleme proje klasörü köküne yolunu da dahil olmak üzere kaynak dosyanın adı.  
+- **Yol**: Yerel derleme proje klasörü köküne yolunu da dahil olmak üzere kaynak dosyanın adı.  
   
  Paketi aşağıdaki örnekte [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] derlemenin yerel proje klasörünün kök dizininde bulunan kaynak dosyası.  
   
@@ -102,21 +102,21 @@ Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../
 ### <a name="referenced-assembly-resource-file"></a>Başvurulan bütünleştirilmiş kod kaynak dosyası  
  Paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] aşağıdaki yetkilisi ve yol için bir kaynak bir başvurulan bütünleştirilmiş kod içine derlenmiş dosya kullanır:  
   
--   **Yetkilisi**: uygulama: / / /.  
+- **Yetkilisi**: uygulama: / / /.  
   
--   **Yol**: Başvurulan bir bütünleştirilmiş kod içine derlenmiş bir kaynak dosyasının adıdır. Yol aşağıdaki biçime uymalıdır:  
+- **Yol**: Başvurulan bir bütünleştirilmiş kod içine derlenmiş bir kaynak dosyasının adıdır. Yol aşağıdaki biçime uymalıdır:  
   
      *AssemblyShortName*{*;Version*]{*;PublicKey*];component/*Path*  
   
-    -   **AssemblyShortName**: başvurulan derleme için kısa bir ad.  
+    - **AssemblyShortName**: başvurulan derleme için kısa bir ad.  
   
-    -   **; Sürüm** [isteğe bağlı]: kaynak dosyasını içeren başvurulan derlemenin sürümü. Bu kısa aynı ada sahip iki veya daha fazla başvurulan derlemeler yüklü olduğunda kullanılır.  
+    - **; Sürüm** [isteğe bağlı]: kaynak dosyasını içeren başvurulan derlemenin sürümü. Bu kısa aynı ada sahip iki veya daha fazla başvurulan derlemeler yüklü olduğunda kullanılır.  
   
-    -   **; PublicKey** [isteğe bağlı]: başvurulan derlemeyi imzalamak için kullanılan ortak anahtar. Bu kısa aynı ada sahip iki veya daha fazla başvurulan derlemeler yüklü olduğunda kullanılır.  
+    - **; PublicKey** [isteğe bağlı]: başvurulan derlemeyi imzalamak için kullanılan ortak anahtar. Bu kısa aynı ada sahip iki veya daha fazla başvurulan derlemeler yüklü olduğunda kullanılır.  
   
-    -   **; Bileşen**: başvurulan derleme yerel bütünleştirilmiş koddan başvurulur belirtir.  
+    - **; Bileşen**: başvurulan derleme yerel bütünleştirilmiş koddan başvurulur belirtir.  
   
-    -   **/ Yol**: başvurulan derlemenin proje klasörünün göreli yolunu da dahil olmak üzere kaynak dosyasının adı.  
+    - **/ Yol**: başvurulan derlemenin proje klasörünün göreli yolunu da dahil olmak üzere kaynak dosyasının adı.  
   
  Paketi aşağıdaki örnekte [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] başvurulan derlemenin proje klasörünün kök dizininde bulunan kaynak dosyası.  
   
@@ -138,9 +138,9 @@ Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../
 ## <a name="content-file-pack-uris"></a>İçerik dosyası paketi URI'ler  
  Paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] bir içerik dosyası aşağıdaki yetkilisi ve yolu kullanır:  
   
--   **Yetkilisi**: uygulama: / / /.  
+- **Yetkilisi**: uygulama: / / /.  
   
--   **Yol**: Dosya sistemi konumu uygulamanın ana yürütülebilir derlemenin göreli yolu da dahil olmak üzere içerik dosyasının adı.  
+- **Yol**: Dosya sistemi konumu uygulamanın ana yürütülebilir derlemenin göreli yolu da dahil olmak üzere içerik dosyasının adı.  
   
  Paketi aşağıdaki örnekte [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] çalıştırılabilir derlemesinin aynı klasörde bulunan içerik dosyası.  
   
@@ -157,9 +157,9 @@ Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../
 ## <a name="site-of-origin-pack-uris"></a>Kaynak Paketi URI'lerin site  
  Paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] aşağıdaki yetkilisi ve yol bir kaynak sitesi için dosya kullanır:  
   
--   **Yetkilisi**: siteoforigin: / / /.  
+- **Yetkilisi**: siteoforigin: / / /.  
   
--   **Yol**: Sitenin içinden çalıştırılabilir derlemesinin başlatıldı konumun göreli yolunu da dahil olmak üzere kaynak dosyasının adı.  
+- **Yol**: Sitenin içinden çalıştırılabilir derlemesinin başlatıldı konumun göreli yolunu da dahil olmak üzere kaynak dosyasının adı.  
   
  Paketi aşağıdaki örnekte [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] çalıştırılabilir derlemesinin başlatıldığı konumda depolanan kaynak dosyasının site.  
   
@@ -175,17 +175,17 @@ Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../
   
  Tür [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yaygın olarak yapılandırılmış olan dosyaları [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` aşağıdaki kendi kök öğe olarak birine sahip öğeleri:  
   
--   <xref:System.Windows.Window?displayProperty=nameWithType>  
+- <xref:System.Windows.Window?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Page?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Page?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Navigation.PageFunction%601?displayProperty=nameWithType>  
+- <xref:System.Windows.Navigation.PageFunction%601?displayProperty=nameWithType>  
   
--   <xref:System.Windows.ResourceDictionary?displayProperty=nameWithType>  
+- <xref:System.Windows.ResourceDictionary?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Documents.FlowDocument?displayProperty=nameWithType>  
+- <xref:System.Windows.Documents.FlowDocument?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>  
   
 <a name="Absolute_vs_Relative_Pack_URIs"></a>   
 ## <a name="absolute-vs-relative-pack-uris"></a>Mutlak vs. Paketi göreli URI'ler  
@@ -246,11 +246,11 @@ Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../
   
  [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Çözüm için geçerli değildir [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] şuna başvurun:  
   
--   İçerik dosyaları başvurulan derlemelerde: Bu dosya türlerini tarafından desteklenmeyen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+- İçerik dosyaları başvurulan derlemelerde: Bu dosya türlerini tarafından desteklenmeyen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
--   Başvurulan bütünleştirilmiş kod içinde gömülü dosyalar: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] bunları tanımlayan adı başvurulan derlemenin içerirler benzersiz olduğu ve `;component` soneki.  
+- Başvurulan bütünleştirilmiş kod içinde gömülü dosyalar: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] bunları tanımlayan adı başvurulan derlemenin içerirler benzersiz olduğu ve `;component` soneki.  
   
--   Kaynak dosyaları sitesi: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] bunları tanımlayan benzersiz olduğundan, çünkü bunlar yalnızca paketi tarafından tanımlanan dosyalar [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] siteoforigin içeren: / / / yetkilisi.  
+- Kaynak dosyaları sitesi: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] bunları tanımlayan benzersiz olduğundan, çünkü bunlar yalnızca paketi tarafından tanımlanan dosyalar [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] siteoforigin içeren: / / / yetkilisi.  
   
  Paketi bir basitleştirme [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] çözüm için kaynak ve içerik dosyalarının konumlarını biraz bağımsız olarak kodu sağlar. Örneğin, bir içerik dosyası, paketi yeniden yerel bütünleştirilmiş kod kaynak dosyası varsa [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] paketi kullanan kodu gibi kaynak aynı şekilde kalır [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
   
@@ -258,17 +258,17 @@ Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../
 ## <a name="programming-with-pack-uris"></a>Paketi bir URI'leri ile programlama  
  Birçok [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sınıfları uygulama paketi ayarlanabilir özellikleri [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]de dahil olmak üzere:  
   
--   <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Frame.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Frame.Source%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Window.Icon%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Window.Icon%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Image.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Image.Source%2A?displayProperty=nameWithType>  
   
  Bu özellikleri biçimlendirme hem kod ayarlayabilirsiniz. Bu bölümde, her ikisi için de temel yapılarını gösterir ve daha sonra ortak senaryo örneklerini gösterir.  
   

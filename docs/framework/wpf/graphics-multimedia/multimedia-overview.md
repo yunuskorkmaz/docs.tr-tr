@@ -6,11 +6,11 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62030387"
 ---
 # <a name="multimedia-overview"></a>Multimedyaya Genel Bakış
 Multimedya özellikleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ses ve video kullanıcı deneyimini iyileştirmek için uygulamalarınızla tümleştirin olanak sağlar. Bu konuda multimedya özelliklerini tanıtır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -37,11 +37,11 @@ Multimedya özellikleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasha
 ### <a name="independent-mode"></a>Bağımsız mod  
  Bağımsız modda medya içeriği medya kayıttan yürütme beraberinde getirir. Bağımsız mod, aşağıdaki seçenekleri sağlar:  
   
--   Ortamın <xref:System.Uri> doğrudan belirtilebilir.  
+- Ortamın <xref:System.Uri> doğrudan belirtilebilir.  
   
--   Medya kayıttan yürütme doğrudan denetlenebilir.  
+- Medya kayıttan yürütme doğrudan denetlenebilir.  
   
--   Ortamın <xref:System.Windows.Controls.MediaElement.Position%2A> ve <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> özellikleri değiştirilebilir.  
+- Ortamın <xref:System.Windows.Controls.MediaElement.Position%2A> ve <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> özellikleri değiştirilebilir.  
   
  Ortam ya da ayarı tarafından yüklenen <xref:System.Windows.Controls.MediaElement> nesnenin <xref:System.Windows.Controls.MediaElement.Source%2A> özelliği veya çağırarak <xref:System.Windows.Media.MediaPlayer> nesnenin <xref:System.Windows.Media.MediaPlayer.Open%2A> yöntemi.  
   
@@ -52,11 +52,11 @@ Multimedya özellikleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasha
 ### <a name="clock-mode"></a>Saat modu  
  Saat modunda bir <xref:System.Windows.Media.MediaTimeline> sürücüleri medya kayıttan yürütme. Saat modu, aşağıdaki özelliklere sahiptir:  
   
--   Ortamın <xref:System.Uri> aracılığıyla dolaylı olarak ayarlanmış bir <xref:System.Windows.Media.MediaTimeline>.  
+- Ortamın <xref:System.Uri> aracılığıyla dolaylı olarak ayarlanmış bir <xref:System.Windows.Media.MediaTimeline>.  
   
--   Medya kayıttan yürütme saati tarafından denetlenebilir. Ortam nesnesinin denetim yöntemleri kullanılamaz.  
+- Medya kayıttan yürütme saati tarafından denetlenebilir. Ortam nesnesinin denetim yöntemleri kullanılamaz.  
   
--   Medya ayarlayarak yüklendiği bir <xref:System.Windows.Media.MediaTimeline> nesnenin <xref:System.Windows.Media.MediaTimeline.Source%2A> saati zaman çizelgesinden oluşturarak ve saat için medya nesnesi atama özelliği. Medya bu şekilde de yüklü olduğunda bir <xref:System.Windows.Media.MediaTimeline> içinde bir <xref:System.Windows.Media.Animation.Storyboard> hedefleri bir <xref:System.Windows.Controls.MediaElement>.  
+- Medya ayarlayarak yüklendiği bir <xref:System.Windows.Media.MediaTimeline> nesnenin <xref:System.Windows.Media.MediaTimeline.Source%2A> saati zaman çizelgesinden oluşturarak ve saat için medya nesnesi atama özelliği. Medya bu şekilde de yüklü olduğunda bir <xref:System.Windows.Media.MediaTimeline> içinde bir <xref:System.Windows.Media.Animation.Storyboard> hedefleri bir <xref:System.Windows.Controls.MediaElement>.  
   
  Saat modunda medya kayıttan yürütmeyi denetlemek için <xref:System.Windows.Media.Animation.ClockController> denetim yöntemleri kullanılmalıdır. A <xref:System.Windows.Media.Animation.ClockController> öğesinden alınan <xref:System.Windows.Media.Animation.ClockController> özelliği <xref:System.Windows.Media.MediaClock>. Ya da denetim yöntemlerini kullanmayı denerseniz bir <xref:System.Windows.Controls.MediaElement> veya <xref:System.Windows.Media.MediaPlayer> saati modundayken, nesne bir <xref:System.InvalidOperationException> oluşturulur.  
   

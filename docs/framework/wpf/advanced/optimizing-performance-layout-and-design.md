@@ -10,11 +10,11 @@ helpviewer_keywords:
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
 ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050226"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Performansı iyileştirme: Düzen ve Tasarım
 Tasarımı, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Düzen hesaplama ve nesne başvurularını doğrulama gereksiz yük oluşturarak uygulama performansını etkileyebilir. Nesneleri, oluşumunu özellikle, çalışma zamanında uygulamanızın performans özelliklerine etkileyebilir.  
@@ -26,25 +26,25 @@ Tasarımı, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winc
   
  Düzen sistemi, bir koleksiyondaki her bir alt üyesi için iki geçiş yapar: bir ölçü geçişi ve düzenleme geçişi. Her alt nesne geçersiz kılınan kendi uygulamasını sağlar <xref:System.Windows.UIElement.Measure%2A> ve <xref:System.Windows.UIElement.Arrange%2A> kendi özel düzen davranışı sağlamak için yöntemleri. En basit şekliyle, düzen, bir öğenin yeniden boyutlandırılmış konumlandırılmış ve ekranda çizilmiş müşteri adayları bir özyinelemeli sistemidir.  
   
--   Bir alt <xref:System.Windows.UIElement> nesne, çekirdek özellikleri sağlayarak düzen işlemine başlar.  
+- Bir alt <xref:System.Windows.UIElement> nesne, çekirdek özellikleri sağlayarak düzen işlemine başlar.  
   
--   Nesnenin <xref:System.Windows.FrameworkElement> boyutu gibi ilişkili özellikleri <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, ve <xref:System.Windows.FrameworkElement.Margin%2A>, değerlendirilir.  
+- Nesnenin <xref:System.Windows.FrameworkElement> boyutu gibi ilişkili özellikleri <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, ve <xref:System.Windows.FrameworkElement.Margin%2A>, değerlendirilir.  
   
--   <xref:System.Windows.Controls.Panel>-belirli bir mantıksal uygulandığı gibi <xref:System.Windows.Controls.DockPanel.Dock%2A> özelliği <xref:System.Windows.Controls.DockPanel>, veya <xref:System.Windows.Controls.StackPanel.Orientation%2A> özelliği <xref:System.Windows.Controls.StackPanel>.  
+- <xref:System.Windows.Controls.Panel>-belirli bir mantıksal uygulandığı gibi <xref:System.Windows.Controls.DockPanel.Dock%2A> özelliği <xref:System.Windows.Controls.DockPanel>, veya <xref:System.Windows.Controls.StackPanel.Orientation%2A> özelliği <xref:System.Windows.Controls.StackPanel>.  
   
--   İçerik düzenleme veya tüm alt nesneleri ölçüldükten sonra konumlandırılmış.  
+- İçerik düzenleme veya tüm alt nesneleri ölçüldükten sonra konumlandırılmış.  
   
--   Alt nesneler koleksiyonunun ekrana çizilir.  
+- Alt nesneler koleksiyonunun ekrana çizilir.  
   
  Aşağıdaki eylemlerden herhangi birini meydana gelirse düzeni geçiş işlemi tekrar çağrılır:  
   
--   Bir alt nesnesi, koleksiyona eklenir.  
+- Bir alt nesnesi, koleksiyona eklenir.  
   
--   A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> alt nesneye uygulanır.  
+- A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> alt nesneye uygulanır.  
   
--   <xref:System.Windows.UIElement.UpdateLayout%2A> Yöntemi, alt nesne için çağrılır.  
+- <xref:System.Windows.UIElement.UpdateLayout%2A> Yöntemi, alt nesne için çağrılır.  
   
--   Geçişleri düzenleme veya ölçü etkileyen meta verileri ile işaretlenmiş bir bağımlılık özelliğinin değeri için bir değişiklik olduğunda.  
+- Geçişleri düzenleme veya ölçü etkileyen meta verileri ile işaretlenmiş bir bağımlılık özelliğinin değeri için bir değişiklik olduğunda.  
   
 ### <a name="use-the-most-efficient-panel-where-possible"></a>Mümkün olduğunda en verimli panelini kullanın  
  Düzen işleminin doğrudan, düzen davranışını karmaşıklığı <xref:System.Windows.Controls.Panel>-türetilmiş öğeleri kullanırsınız. Örneğin, bir <xref:System.Windows.Controls.Grid> veya <xref:System.Windows.Controls.StackPanel> denetimi çok daha fazla işlevsellik sağlayan bir <xref:System.Windows.Controls.Canvas> denetimi. Bu işlev daha büyük bir artış fiyat performans maliyetleri daha büyük bir artış olur. Ancak, İşlevler gerekmiyorsa, bir <xref:System.Windows.Controls.Grid> denetimi sağlar, kullanmanız gerektiğini daha az maliyetli alternatifleri gibi bir <xref:System.Windows.Controls.Canvas> veya özel bir paneli.  

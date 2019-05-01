@@ -3,11 +3,11 @@ title: Özel Bulma Ölçütleri
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: d676d7b2edbfb517f3fd8fe0c99fe7cc54eca2a8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59332540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006375"
 ---
 # <a name="custom-find-criteria"></a>Özel Bulma Ölçütleri
 Bu örnek, mantığı kullanarak özel kapsam eşleşme oluşturma ve bir özel bulma hizmeti uygulama gösterir. İstemciler işlevselliği eşleşen özel kapsam iyileştirmek ve daha fazla WCF bulma bulma sistem tarafından sağlanan işlevleri temel alarak oluşturmak için kullanın. Bu örnek kapsayan senaryo aşağıdaki gibidir:  
@@ -20,9 +20,9 @@ Bu örnek, mantığı kullanarak özel kapsam eşleşme oluşturma ve bir özel 
   
 ## <a name="demonstrates"></a>Gösteriler  
   
--   Özel bulma hizmeti oluşturma.  
+- Özel bulma hizmeti oluşturma.  
   
--   Özel kapsam eşleştirme algoritması tarafından uygulama.  
+- Özel kapsam eşleştirme algoritması tarafından uygulama.  
   
 ## <a name="discussion"></a>Tartışma  
  İstemci ölçütlerle eşleşen "Veya" türü için arıyor. Bir hizmeti, kendi uç kapsamlarda herhangi bir istemci tarafından sağlanan kapsamları eşleşiyorsa geri yanıt verir. Bu durumda, istemci tüm kapsamlar aşağıdaki listede olan bir hesap makinesi hizmetinde arayışındadır:  

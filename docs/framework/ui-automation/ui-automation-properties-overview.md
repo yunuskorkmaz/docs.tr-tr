@@ -6,11 +6,11 @@ helpviewer_keywords:
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
 ms.openlocfilehash: 9028f9f99ee22dd480d817bc8aa94c7113a15c9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032325"
 ---
 # <a name="ui-automation-properties-overview"></a>UI Otomasyon Özelliklerine Genel Bakış
 > [!NOTE]
@@ -20,9 +20,9 @@ ms.locfileid: "59223010"
   
  Bu bölüm, kapsamlı bir genel bakış sağlar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] özellikleri. Aşağıdaki konularda daha ayrıntılı bilgi verilmiştir:  
   
--   [İstemciler İçin UI Otomasyonu Özellikleri](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+- [İstemciler İçin UI Otomasyonu Özellikleri](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
   
--   [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
+- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
   
 <a name="Property_Identifiers"></a>   
 ## <a name="property-identifiers"></a>Özellik tanımlayıcıları  
@@ -139,15 +139,15 @@ ms.locfileid: "59223010"
 ## <a name="localization"></a>Yerelleştirme  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sağlayıcıları aşağıdaki özellikleri işletim sisteminin dilinde sunmalıdır:  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.AccessKeyProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.AccessKeyProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
   
 <a name="Properties_and_Events"></a>   
 ## <a name="properties-and-events"></a>Özellikler ve olaylar  

@@ -3,11 +3,11 @@ title: (LINQ to XML) XML ağaçlarını değiştirme (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4ae511a5-4fc9-4178-9c8e-761357deae3f
 ms.openlocfilehash: 4673902880822e6e4ed0bc144aedc2428faa5b69
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031804"
 ---
 # <a name="modifying-xml-trees-linq-to-xml-visual-basic"></a>(LINQ to XML) XML ağaçlarını değiştirme (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir bellek içi XML ağacı için deposudur. Yükleme veya ayrıştırma bir kaynaktan bir XML ağacı sonra [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] o ağaç yerinde değiştirebilir ve belki de bir dosyaya kaydetme veya uzak bir sunucuya gönderme ağacı seri hale getirme olanak tanır.  

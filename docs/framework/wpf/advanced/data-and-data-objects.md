@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
 ms.openlocfilehash: 9dc195ece60739cf0c137a2893c9e9150e0d4d3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010624"
 ---
 # <a name="data-and-data-objects"></a>Veri ve Veri Nesneleri
 Bir Sürükle ve bırak işleminin bir parçası aktarılan veriler bir veri nesnesi içinde depolanır.  Kavramsal olarak, bir veri nesnesi, bir veya daha fazla aşağıdaki çiftleri oluşur:  
   
--   Bir <xref:System.Object> gerçek verileri içeren.  
+- Bir <xref:System.Object> gerçek verileri içeren.  
   
--   Karşılık gelen bir veri biçimi tanımlayıcısı.  
+- Karşılık gelen bir veri biçimi tanımlayıcısı.  
   
  Temel olarak gösterilen herhangi bir şeyi verilerini oluşabilir <xref:System.Object>.  Karşılık gelen veri biçimi dizesidir veya <xref:System.Type> sağlayan hangi veri biçimi hakkında bir ipucu olur.  Veri nesneleri birden çok veri/veri biçimi barındırmayı destekler; Bu, birden çok biçimde veri sağlamak tek bir veri nesnesi sağlar.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yollar: Özel Animasyonlu Düğme oluşturma'
+title: 'İzlenecek yollar: Özel Animasyonlu Düğme Oluşturma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom animated buttons [WPF]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
 ms.openlocfilehash: 3c601641a0eb1024722b4f449f0ab23e54fe93dd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024475"
 ---
-# <a name="walkthroughs-create-a-custom-animated-button"></a>İzlenecek yollar: Özel Animasyonlu Düğme oluşturma
+# <a name="walkthroughs-create-a-custom-animated-button"></a>İzlenecek yollar: Özel Animasyonlu Düğme Oluşturma
 Adından da anlaşılacağı gibi Windows Presentation Foundation (WPF) müşteriler için sunum deneyimlerini zenginleştirmek idealdir. Bu izlenecek yollar (animasyonları dahil) bir düğme davranışını ve görünümünü özelleştirmek nasıl gösterir. Bu özelleştirme bitti bu özel düğme kolayca herhangi bir düğmeye uygulamanızda uygulayabilirsiniz böylece stil ve şablon kullanarak. Aşağıdaki çizimde özelleştirilmiş bir düğme, oluşturacağınız gösterilir.  
   
  ![Oluşturacağınız özelleştirilmiş bir düğme](./media/custom-button-blend-intro.jpg "custom_button_blend_Intro")  

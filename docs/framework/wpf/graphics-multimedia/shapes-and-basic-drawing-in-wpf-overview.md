@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
 ms.openlocfilehash: 1ce0e661d88b7c4d5719c4f11ef0912c5bacb587
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008364"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler
 Bu konu ile nasıl genel bir fikir veren <xref:System.Windows.Shapes.Shape> nesneleri. A <xref:System.Windows.Shapes.Shape> bir tür <xref:System.Windows.UIElement> ekrana bir şekil çizme olanak sağlar. Kullanıcı Arabirimi öğeleri olduklarından <xref:System.Windows.Shapes.Shape> nesneleri içinde kullanılabilir <xref:System.Windows.Controls.Panel> öğeleri ve çoğu denetim.  
@@ -28,13 +28,13 @@ Bu konu ile nasıl genel bir fikir veren <xref:System.Windows.Shapes.Shape> nesn
 ## <a name="shape-objects"></a>Şekil nesneleri  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çok sayıda kullanıma hazır sunar <xref:System.Windows.Shapes.Shape> nesneleri.  Tüm şekil nesneleri devralınacak <xref:System.Windows.Shapes.Shape> sınıfı. Kullanılabilir şekil nesneleri dahil etme <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, ve <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Shapes.Shape> nesneleri, aşağıdaki genel özellikleri paylaşır.  
   
--   <xref:System.Windows.Shapes.Shape.Stroke%2A>: Şeklin ana hat nasıl boyanacağını açıklar.  
+- <xref:System.Windows.Shapes.Shape.Stroke%2A>: Şeklin ana hat nasıl boyanacağını açıklar.  
   
--   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: Şeklin ana hat kalınlığı açıklar.  
+- <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: Şeklin ana hat kalınlığı açıklar.  
   
--   <xref:System.Windows.Shapes.Shape.Fill%2A>: Şeklin içinin nasıl boyanacağını açıklar.  
+- <xref:System.Windows.Shapes.Shape.Fill%2A>: Şeklin içinin nasıl boyanacağını açıklar.  
   
--   Koordinatları ve köşeleri belirtmek için veri özellikleri, CİHAZDAN bağımsız piksel cinsinden ölçülür.  
+- Koordinatları ve köşeleri belirtmek için veri özellikleri, CİHAZDAN bağımsız piksel cinsinden ölçülür.  
   
  Oldukları türetilmesi çünkü <xref:System.Windows.UIElement>, şekil nesneleri, paneller ve çoğu denetimleri içinde kullanılabilir. <xref:System.Windows.Controls.Canvas> Masasıdır karmaşık çizimleri oluşturmak için mutlak alt nesnelerinin konumlandırma desteklediğinden özellikle iyi bir seçimdir.  
   
@@ -154,13 +154,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  Uzat özelliği şu değerlerden birini alır:  
   
--   <xref:System.Windows.Media.Stretch.None>: <xref:System.Windows.Shapes.Shape> Nesnenin içeriğini değil uzatılır.  
+- <xref:System.Windows.Media.Stretch.None>: <xref:System.Windows.Shapes.Shape> Nesnenin içeriğini değil uzatılır.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: <xref:System.Windows.Shapes.Shape> Nesnenin içeriğini kendi düzen alanı dolduracak şekilde uzatılır.  En boy oranı korunur değil.  
+- <xref:System.Windows.Media.Stretch.Fill>: <xref:System.Windows.Shapes.Shape> Nesnenin içeriğini kendi düzen alanı dolduracak şekilde uzatılır.  En boy oranı korunur değil.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: <xref:System.Windows.Shapes.Shape> Nesnenin içeriğini mümkün olduğunca, özgün en boy oranını korurken kendi düzen alanı dolduracak şekilde uzatılır.  
+- <xref:System.Windows.Media.Stretch.Uniform>: <xref:System.Windows.Shapes.Shape> Nesnenin içeriğini mümkün olduğunca, özgün en boy oranını korurken kendi düzen alanı dolduracak şekilde uzatılır.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: <xref:System.Windows.Shapes.Shape> Nesnenin içeriğini, tamamen kendi özgün en boy oranını korurken kendi düzen alanı dolduracak şekilde uzatılır.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: <xref:System.Windows.Shapes.Shape> Nesnenin içeriğini, tamamen kendi özgün en boy oranını korurken kendi düzen alanı dolduracak şekilde uzatılır.  
   
  Unutmayın, bir <xref:System.Windows.Shapes.Shape> nesnenin içeriğini uzatılır <xref:System.Windows.Shapes.Shape> nesnenin anahat uzatma sonra boyanır.  
   

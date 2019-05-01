@@ -9,11 +9,11 @@ ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c6447cd37e4718093acfb3a0e2db053c13a027d3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62015149"
 ---
 # <a name="managed-threading"></a>Yönetilen İş Parçacığı Oluşturma
 Bir işlemci veya birçok bilgisayarla geliştirmekte olduğunuz olup olmadığını uygulama şu anda diğer iş yapıyor olsanız bile, uygulamanızın en hızlı yanıt veren kullanıcı etkileşimi sağlamak istersiniz. Birden çok iş parçacığı yürütme kullanmaktır, uygulamanızın kullanıcı yanıt veren tutun ve aynı anda en güçlü yollarından biri işlemci arasında veya kullanıcı olayları sırasında bile kullanın. Bu bölümde, iş parçacığı temel kavramları açıklar, ancak yönetilen iş parçacığı kavramları ve yönetilen iş parçacığı kullanarak odaklanır.  

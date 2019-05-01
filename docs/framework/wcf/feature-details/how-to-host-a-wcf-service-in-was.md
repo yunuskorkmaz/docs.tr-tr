@@ -3,11 +3,11 @@ title: "Nasıl yapılır: WAS'de WCF Hizmeti Barındırma"
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
 ms.openlocfilehash: 157c18d1640ccf1a61f871e5e3e9fef70b6a7e79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039097"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Nasıl yapılır: WAS'de WCF Hizmeti Barındırma
 Bu konuda anahatları Windows İşlem Etkinleştirme Hizmetleri (WAS olarak da bilinir) oluşturmak için gereken temel adımlarda barındırılan Windows Communication Foundation (WCF) hizmet. OLAN HTTP olmayan aktarım kurallarıyla çalışma Internet Information Services (IIS) özellikleri genelleştirilmiş olduğundan yeni işlem Etkinleştirme hizmeti. WCF dinleyici bağdaştırıcı arabirimi gibi TCP ve adlandırılmış kanallar ve Message Queuing, WCF tarafından desteklenen HTTP olmayan protokolleri üzerinden alınan etkinleştirme isteklerini iletişim kurmak için kullanır.  
@@ -19,19 +19,19 @@ Bu konuda anahatları Windows İşlem Etkinleştirme Hizmetleri (WAS olarak da b
   
  WAS içinde barındırılan bir WCF hizmeti, standart bağlamaları normal şekilde kullanılır. Ancak, kullanırken <xref:System.ServiceModel.NetTcpBinding> ve <xref:System.ServiceModel.NetNamedPipeBinding> WAS barındırılan hizmeti yapılandırmak için bir kısıtlama yerine getirilmesi gerekir. Farklı uç noktalar aynı taşıma kullandığınızda, aşağıdaki yedi özellikleri eşleştirilecek bağlama ayarları vardır:  
   
--   ConnectionBufferSize  
+- ConnectionBufferSize  
   
--   ChannelInitializationTimeout  
+- ChannelInitializationTimeout  
   
--   maxPendingConnections  
+- maxPendingConnections  
   
--   MaxOutputDelay  
+- MaxOutputDelay  
   
--   maxPendingAccepts  
+- maxPendingAccepts  
   
--   ConnectionPoolSettings.IdleTimeout  
+- ConnectionPoolSettings.IdleTimeout  
   
--   ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint  
+- ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint  
   
  Aksi durumda, başlatılmış olan bir uç nokta önce her zaman bu özelliklerin değerlerini belirler ve daha sonra eklenen uç noktaları throw bir <xref:System.ServiceModel.ServiceActivationException> bu ayarları eşleşmiyorsa.  
   

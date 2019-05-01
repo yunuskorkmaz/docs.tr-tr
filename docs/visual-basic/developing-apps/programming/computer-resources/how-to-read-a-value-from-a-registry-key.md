@@ -9,11 +9,11 @@ helpviewer_keywords:
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
 ms.openlocfilehash: bc71dd2e3a78454236b2f6f30c2d51aa596e5b8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013991"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te kayıt defteri anahtarından değer okuma
 `GetValue` Yöntemi `My.Computer.Registry` nesne, Windows kayıt defteri değerlerini okumak için kullanılabilir.  
@@ -26,7 +26,7 @@ ms.locfileid: "58840191"
   
 ### <a name="to-read-a-value-from-a-registry-key"></a>Kayıt defteri anahtarından değer okuma için  
   
--   Kullanma `GetValue` yolunu ve adını belirterek yöntemi) kayıt defteri anahtarından değer okuma için. Aşağıdaki örnek değeri okuyan `Name` gelen `HKEY_CURRENT_USER\Software\MyApp` ve bir ileti kutusunda görüntüler.  
+- Kullanma `GetValue` yolunu ve adını belirterek yöntemi) kayıt defteri anahtarından değer okuma için. Aşağıdaki örnek değeri okuyan `Name` gelen `HKEY_CURRENT_USER\Software\MyApp` ve bir ileti kutusunda görüntüler.  
   
      [!code-vb[VbResourceTasks#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#4)]  
   
@@ -34,7 +34,7 @@ ms.locfileid: "58840191"
   
 ### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>Bir değer olup olmadığını belirlemek için bir kayıt defteri anahtarında var.  
   
--   Kullanım `GetValue` değerini almak için yöntemi. Aşağıdaki kod, değeri var ve bir ileti döndürür, aksi takdirde denetler.  
+- Kullanım `GetValue` değerini almak için yöntemi. Aşağıdaki kod, değeri var ve bir ileti döndürür, aksi takdirde denetler.  
   
      [!code-vb[VbResourceTasks#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#12)]  
   
@@ -43,11 +43,11 @@ ms.locfileid: "58840191"
   
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
--   Anahtar adı `Nothing` (<xref:System.ArgumentNullException>).  
+- Anahtar adı `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Kullanıcı kayıt defteri anahtarlarını Okuma izinlerine sahip değil (<xref:System.Security.SecurityException>).  
+- Kullanıcı kayıt defteri anahtarlarını Okuma izinlerine sahip değil (<xref:System.Security.SecurityException>).  
   
--   Anahtar adı 255 karakter sınırını aşıyor (<xref:System.ArgumentException>).  
+- Anahtar adı 255 karakter sınırını aşıyor (<xref:System.ArgumentException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Bu işlemi çalıştırmak için ayrıcalık düzeyi verilen tarafından derlemeyi <xref:System.Security.Permissions.RegistryPermission> sınıfı. Kısmi güven bağlamda çalıştırıyorsanız, işlem yetersiz ayrıcalıklar nedeniyle bir özel durum fırlatabilir. Benzer şekilde, kullanıcı oluşturma veya ayarlarına yazma için doğru ACL'leri olması gerekir. Örneğin, kod erişim güvenlik izni olan yerel bir uygulama işletim sistemi izniniz olmayabilir. Daha fazla bilgi için [kod erişimi güvenliği Temelleri](../../../../framework/misc/code-access-security-basics.md).  

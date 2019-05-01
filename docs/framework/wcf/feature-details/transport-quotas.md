@@ -5,11 +5,11 @@ helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
 ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050720"
 ---
 # <a name="transport-quotas"></a>Taşıma Kotaları
 Taşıma kotaları bağlantı aşırı kaynakları tüketen ne zaman karar için bir ilke mekanizmasıdır. Kota kota değeri aşıldı sonra ek kaynaklar kullanımını engelleyen bir sınıra sahiptir. Taşıma kotaları kötü amaçlı veya istenmeyen hizmet reddi saldırılarını engeller.  
@@ -19,11 +19,11 @@ Taşıma kotaları bağlantı aşırı kaynakları tüketen ne zaman karar için
 ## <a name="types-of-transport-quotas"></a>Taşıma kotaları türleri  
  WCF taşımalar kotalar üç tür vardır:  
   
--   *Zaman aşımları* uzun bir süre için kaynakları bağlamadan üzerinde kullanan hizmet reddi saldırılarını azaltın.  
+- *Zaman aşımları* uzun bir süre için kaynakları bağlamadan üzerinde kullanan hizmet reddi saldırılarını azaltın.  
   
--   *Bellek ayırma sınırı* engelle tüketme sistem belleği ve diğer bağlantıları için hizmet engelleme tek bir bağlantı.  
+- *Bellek ayırma sınırı* engelle tüketme sistem belleği ve diğer bağlantıları için hizmet engelleme tek bir bağlantı.  
   
--   *Koleksiyon boyutu sınırları* içinde sınırlı kaynağı dolaylı olarak bellek ya da kaynakların tüketimini bağlı.  
+- *Koleksiyon boyutu sınırları* içinde sınırlı kaynağı dolaylı olarak bellek ya da kaynakların tüketimini bağlı.  
   
 ## <a name="transport-quota-descriptions"></a>Aktarım kotası açıklamaları  
  Bu bölümde, standart WCF taşımalar için kullanılabilir taşıma kotaları açıklanmaktadır: HTTP (S), TCP/IP ve adlandırılmış kanallar. Özel aktarımları bu listede yer almayan kendi yapılandırılabilir kotalar getirebilir. Kotalarını hakkında bilgi almak özel bir taşıma belgelerine bakın.  

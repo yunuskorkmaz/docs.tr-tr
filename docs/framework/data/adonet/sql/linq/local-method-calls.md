@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c34b5012-aee9-4994-9364-1d99d12b7463
 ms.openlocfilehash: c8a4c29b1faa3c05f2cf32e9a60104b43a9b1c40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033520"
 ---
 # <a name="local-method-calls"></a>Yerel Yöntem Çağrıları
 Yerel yöntem çağrısı nesne modeli içinde yürütülen biridir. Uzak yöntem çağırma biridir, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL çevirir ve yürütme için veritabanı altyapısı iletir. Yerel yöntem çağrıları gereklidir, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL çağrısına çeviremez. Aksi takdirde, bir <xref:System.InvalidOperationException> oluşturulur.  

@@ -3,11 +3,11 @@ title: SystemWebRouting Tümleştirme Örneği
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
 ms.openlocfilehash: f4f9772583bbd66d19cc59f453489965aabf74b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007766"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting Tümleştirme Örneği
 Bu örnek, sınıflarda barındırma katmanın tümleştirmesiyle gösterir <xref:System.Web.Routing> ad alanı. Sınıflarda <xref:System.Web.Routing> ad alanı, doğrudan fiziksel kaynağa karşılık gelmeyen URL'lerini kullanacak şekilde bir uygulama izin verin. Web yönlendirme kullanarak geri gerçek WCF hizmetleri ardından eşlenen HTTP sanal adresleri oluşturmak Geliştirici sağlar. Bu, bir WCF hizmeti bir fiziksel dosya ya da kaynağa gerek kalmadan barındırılması gerekir veya hizmetleri gibi .html veya .aspx dosyaları içermeyen URL'lerle erişilmesi gerektiğinde kullanışlıdır. Bu örnek nasıl kullanılacağını gösterir <xref:System.Web.Routing.RouteTable> global.asax dosyasında tanımlanmış hizmetleri çalıştırmak için eşlenen sanal bir URI'leri oluşturmak için sınıf. 
@@ -58,13 +58,13 @@ Bu örnek, bilgisayarınızda zaten yüklü. Devam etmeden önce şu (varsayıla
   
 3. Internet Information Services (IIS) Yöneticisi'nde bir Web uygulaması oluşturun.  
   
-    1.  IIS Yöneticisi'nde sağ tıklayın **varsayılan Web sitesi** seçip **uygulama ekleme**.  
+    1. IIS Yöneticisi'nde sağ tıklayın **varsayılan Web sitesi** seçip **uygulama ekleme**.  
   
-    2.  İçin **diğer**, yazın `WebRoutingIntegration`.  
+    2. İçin **diğer**, yazın `WebRoutingIntegration`.  
   
-    3.  İçin **fiziksel yolu**, projenin içinde hizmet klasörü seçin.  
+    3. İçin **fiziksel yolu**, projenin içinde hizmet klasörü seçin.  
   
-    4.  Tuşuna **Tamam**.  
+    4. Tuşuna **Tamam**.  
   
 4. Web uygulaması'nı sağ tıklatıp seçerek, uygulamayı başlatmak **uygulamasını Yönet** ardından **Gözat**.  
   

@@ -3,11 +3,11 @@ title: Yapılandırma Örneği
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
 ms.openlocfilehash: 48f66c4110d048f714dae0943f97f3f4aa7cd419
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002254"
 ---
 # <a name="configuration-sample"></a>Yapılandırma Örneği
 Bu örnek, bir hizmet bulunabilir hale getirmek için bir yapılandırma dosyası kullanımını gösterir.  
@@ -27,15 +27,15 @@ Bu örnek, bir hizmet bulunabilir hale getirmek için bir yapılandırma dosyas�
 ## <a name="service-configuration"></a>Hizmet yapılandırması  
  Bu örnek yapılandırma dosyasında iki özelliklerini gösterir:  
   
--   Hizmetin bir standart bulunabilir olmasını sağlama <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
+- Hizmetin bir standart bulunabilir olmasını sağlama <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
   
--   Bulma ile ilgili bilgi hizmetin uygulama uç noktası ve bazı standart uç noktasında bulma ile ilgili ayarlar ayarlama için ayarlanıyor.  
+- Bulma ile ilgili bilgi hizmetin uygulama uç noktası ve bazı standart uç noktasında bulma ile ilgili ayarlar ayarlama için ayarlanıyor.  
   
  Bulmayı etkinleştirmek için birkaç değişiklik hizmeti için uygulama yapılandırma dosyasında yapılması gerekir:  
   
--   Bulma uç noktası eklenmelidir `<service>` öğesi. Bu bir standarttır <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> uç noktası. Bu çalışma zamanı bulma hizmeti ile ilişkilendiren bir sistem uç noktadır. Bu uç nokta ileti bulma hizmeti dinler.  
+- Bulma uç noktası eklenmelidir `<service>` öğesi. Bu bir standarttır <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> uç noktası. Bu çalışma zamanı bulma hizmeti ile ilişkilendiren bir sistem uç noktadır. Bu uç nokta ileti bulma hizmeti dinler.  
   
--   A `<serviceDiscovery>` davranışı eklenir `<serviceBehaviors>` bölümü. Bu çalışma zamanında bulunacak hizmetini etkinleştirir ve bulma için dinlemek için daha önce bahsedilen bulma uç noktası kullanan `Probe` ve `Resolve` iletileri. Bu iki eklemeleriyle, hizmet belirtilen bulma uç noktada bulunabilir.  
+- A `<serviceDiscovery>` davranışı eklenir `<serviceBehaviors>` bölümü. Bu çalışma zamanında bulunacak hizmetini etkinleştirir ve bulma için dinlemek için daha önce bahsedilen bulma uç noktası kullanan `Probe` ve `Resolve` iletileri. Bu iki eklemeleriyle, hizmet belirtilen bulma uç noktada bulunabilir.  
   
  Yapılandırma aşağıdaki kod parçacığında, bir uygulama uç noktası ve tanımlanmış bir bulma uç noktası ile bir hizmeti gösterir:  
   

@@ -3,11 +3,11 @@ title: Web Hizmetleri ile LINQ to SQL N Katmanı
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
 ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033546"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>Web Hizmetleri ile LINQ to SQL N Katmanı
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] özellikle orta katman Web hizmeti gibi bir zamanı gevşek bağlanmış veri erişim katmanı (DAL) olarak kullanılmak üzere tasarlanmıştır. Sunu katmanına bir ASP.NET Web sayfası olduğu sonra kullandığınız <xref:System.Web.UI.WebControls.LinqDataSource> Web sunucu denetimi, kullanıcı arabirimi arasında veri aktarımını yönetme ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] orta katman. Sunu katmanına bir ASP.NET sayfasına değil, serileştirme ve seri durumundan çıkarma veri yönetmek için bazı ek işleri hem Orta katmanda hem de sunu katmanı yapmalısınız.  

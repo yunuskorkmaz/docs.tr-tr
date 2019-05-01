@@ -7,66 +7,66 @@ helpviewer_keywords:
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
 ms.openlocfilehash: c97bd891f0bbb58f8b267296b9b53e00a5486622
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047054"
 ---
 # <a name="wcf-feature-details"></a>WCF Özellik Ayrıntıları
-Windows Communication Foundation (WCF) ileti işlevleri bir uygulamanın üzerinde kapsamlı denetim sağlar. Bu bölümdeki konular, kullanılabilir özellikleri hakkında ayrıntılı bilgi uygulamasına gidin. Temel programlama hakkında daha fazla bilgi için bkz: [temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+Windows Communication Foundation (WCF) ileti işlevleri bir uygulamanın üzerinde kapsamlı denetim sağlar. Bu bölümdeki konularda, kullanılabilir özellikler hakkında daha fazla ayrıntıya gidin. Temel programlama hakkında daha fazla bilgi için bkz. [temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- İş akışı hizmetleri oluşturulacağı ve yapılandırılacağı açıklamaktadır.  
+ İş akışı hizmetlerini oluşturup yapılandırın açıklar.  
   
- [Uç Noktalar: Adresler, Bağlamalar ve Anlaşmalar](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- Hizmet birden çok yönlerini kontrol açıklar.  
+ [Uç noktalar: Adresleri, bağlamalar ve sözleşmeler](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ Birden çok hizmetiniz yönlerini denetlemek nasıl açıklar.  
   
  [Veri Aktarma ve Seri Hale Getirme](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
- Birlikte çalışabilirlik veya gelecekteki uyumluluk için seri hale getirme verilerinin nasıl uyarlanabilir açıklar.  
+ Birlikte çalışabilirlik veya gelecekte uyumluluk için seri hale getirme verilerinin nasıl uyarlanabilir açıklar.  
   
  [Oturumlar, Örnek Oluşturma ve Eşzamanlılık](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
- WCF ve uygulamanız için doğru modunu seçmek nasıl depolamasına ve oturum modlarını açıklar.  
+ WCF ve uygulamanız için doğru moda seçme depolamasına ve oturum modları açıklanmaktadır.  
   
  [Taşımalar](../../../../docs/framework/wcf/feature-details/transports.md)  
- Aktarım katmanı, kanal yığının en düşük düzeyde yapılandırılması açıklanmaktadır.  
+ Aktarım katmanı, en alt düzeyin kanal yığınının yapılandırılması açıklanmaktadır.  
   
  [Kuyruklar ve Güvenilir Oturumlar](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)  
- Alıcı uygulamanın adına gönderen bir uygulamadan gelen iletileri depolamak ve daha sonra bu iletileri alma işlemini yapan uygulamanın iletme sıralarını açıklar.  
+ Gönderen bir uygulama adına alıcı uygulama gelen iletileri depolamak ve daha sonra bu alıcı uygulamasına iletileri iletebilir sıraları açıklanmaktadır.  
   
  [İşlemler](../../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)  
- Gerekirse geri alınabilir hizmetteki işlem oluşturma açıklanmaktadır.  
+ Gerekirse alınabilir operasyonlar oluşturma açıklanır.  
   
  [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)  
- WCF güvenlik gizliliği ve bütünlük sahip uygulamalar oluşturmak için nasıl yardımcı olduğunu açıklar. Ayrıca kimlik doğrulaması ve yetkilendirme özellikleri denetim olarak kullanılabilir.  
+ WCF güvenlik gizliliği ve bütünlüğü sahip uygulamalar oluşturmanıza nasıl yardımcı olduğunu açıklar. Ayrıca kimlik doğrulaması ve yetkilendirme özellikleri denetim olarak kullanılabilir.  
   
  [Eşler Arası Ağ](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- Hizmetler ve istemcileri eş oluşturma ayrıntıları verilmektedir.  
+ Hizmetler ve istemcileri eş oluşturma işlemi açıklanmaktadır.  
   
  [Meta Veriler](../../../../docs/framework/wcf/feature-details/metadata.md)  
- Meta veri mimarisi ve biçimleri açıklar.  
+ Meta veri mimarisine ve biçimler açıklar.  
   
  [İstemciler](../../../../docs/framework/wcf/feature-details/clients.md)  
- Çeşitli hizmetlere erişmesine istemciler oluşturmayı açıklar.  
+ Çeşitli Hizmetleri erişen istemciler oluşturmayı açıklar.  
   
  [Barındırma](../../../../docs/framework/wcf/feature-details/hosting.md)  
- Barındırma açıklar. Bir hizmet başka bir uygulama tarafından barındırılabilen veya kendi kendini barındıran olabilir.  
+ Barındırma açıklar. Bir hizmet başka bir uygulama tarafından barındırılabilir veya şirket içinde barındırılan olabilir.  
   
  [Birlikte Çalışabilirlik ve Tümleştirme](../../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)  
- COM + barındırılan bir bileşen tabanlı uygulama mantığı önemli ölçüde yatırımınız varsa yeniden yazmaya gerek yerine mevcut mantığınızı genişletmek için WCF kullanmayı açıklar.  
+ COM +'da barındırılan bir bileşen tabanlı uygulama mantığı önemli ölçüde yatırımınız varsa yeniden yazmak zorunda yerine mevcut mantığınızı genişletmek için WCF kullanmayı açıklar.  
   
  [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- WCF Hizmeti işlemlerini olmayan SOAP uç noktalara kullanıma sunmak geliştiricilerin sağlar WCF Web programlama modeli açıklar.  
+ WCF Web programlama modeli olmayan bir SOAP uç noktalarına WCF Hizmeti işlemlerini kullanıma sunmak geliştiricilerinin sağlayan açıklar.  
   
  [WCF Dağıtımı](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
  Bir WCF hizmetinden dağıtım akışlarını kolayca kullanıma sunmak için destek açıklanır.  
   
  [AJAX Tümleştirme ve JSON Desteği](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
- ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) JavaScript nesne gösterimi (JSON) veri biçimi WCF hizmetleri izin veren ve AJAX istemcilere işlemleri kullanıma sunmak destek açıklanır.  
+ ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) ve JavaScript nesne gösterimi (JSON) veri biçimi WCF hizmetleri izin vermek AJAX istemcilere operations kullanıma sunmak için desteğini açıklar.  
   
  [WCF Bulma](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
- WS bulma protokolünü kullanarak bir birlikte çalışabilen şekilde çalışma zamanında bulunabilir olması hizmetleri etkinleştirmek için destek açıklanır.  
+ WS bulma protokolünü kullanarak birlikte çalışabilir bir şekilde çalışma zamanında bulunabilir olması hizmetleri etkinleştirmek için destek açıklanır.  
   
  [Yönlendirme](../../../../docs/framework/wcf/feature-details/routing.md)  
  Yönlendirme hizmeti açıklar.  

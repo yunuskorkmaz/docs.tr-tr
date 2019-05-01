@@ -3,11 +3,11 @@ title: Büyük Veriler ve Akış Yapma
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
 ms.openlocfilehash: 25ecc1db8218dfb49f591998140d86f551c5a0d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038616"
 ---
 # <a name="large-data-and-streaming"></a>Büyük Veriler ve Akış Yapma
 Windows Communication Foundation (WCF) iletişimleri XML tabanlı bir altyapıdır. XML veri yaygın olarak tanımlanan standart metin biçiminde kodlanmış çünkü [XML 1.0 belirtimi](https://go.microsoft.com/fwlink/?LinkId=94838), bağlı sistemleri geliştiricilere ve mimarlara genellikle açısından gönderilen iletileri kablo ayak izini (veya boyut) hakkında arasında Ağ ve metin tabanlı XML kodlama verimli ikili veri aktarımı için özel zorlukları doğurur.  
@@ -48,11 +48,11 @@ Windows Communication Foundation (WCF) iletişimleri XML tabanlı bir altyapıd�
   
  Aktarımları oluşan büyük veriler içeriklerin ikili veri aktarımları olduğu en yaygın senaryo nesneler:  
   
--   Kolayca bir ileti sırasına bölünmesi olamaz.  
+- Kolayca bir ileti sırasına bölünmesi olamaz.  
   
--   Zamanında teslim edilmelidir.  
+- Zamanında teslim edilmelidir.  
   
--   Aktarım başlatıldığında, tamamen kullanılamaz.  
+- Aktarım başlatıldığında, tamamen kullanılamaz.  
   
  Bu kısıtlamaları olmayan veriler için daha büyük bir ileti bir oturuma kapsamında dizileri ileti göndermek genellikle daha iyi. Daha fazla bilgi için bu konunun ilerleyen bölümlerindeki "Veri akışı" bölümüne bakın.  
   
@@ -112,9 +112,9 @@ class MyData
   
  MTOM kullanırken, önceki veri anlaşması aşağıdaki kurallara göre sıralanır:  
   
--   Varsa `binaryBuffer` değil `null` ve ayrı ayrı MTOM externalization Yükü (MIME üst bilgileri ve benzeri) yaslamak için yeterli veri içeren Base64 karşılaştırıldığında kodlama, veriler te dış ve ikili bir MIME bölümü olarak iletiyi içeren bir denetim. Eşik, verileri Base64 kodlanmış.  
+- Varsa `binaryBuffer` değil `null` ve ayrı ayrı MTOM externalization Yükü (MIME üst bilgileri ve benzeri) yaslamak için yeterli veri içeren Base64 karşılaştırıldığında kodlama, veriler te dış ve ikili bir MIME bölümü olarak iletiyi içeren bir denetim. Eşik, verileri Base64 kodlanmış.  
   
--   Dize (ve ikili olmayan diğer tüm türleri) her zaman boyutundan bağımsız olarak, ileti gövdesi içindeki bir dizeyle gösterilir.  
+- Dize (ve ikili olmayan diğer tüm türleri) her zaman boyutundan bağımsız olarak, ileti gövdesi içindeki bir dizeyle gösterilir.  
   
  MTOM kodlama aynı önceki örnekte gösterilen şekilde bir açık veri anlaşması kullanıp bir işlemde bir parametre listesini kullanın, iç içe veri sözleşmelerine sahiptir veya bir veri anlaşması nesnesi bir koleksiyon içine aktarmak etkisidir. Bayt dizileri her zaman en iyi duruma getirme için aday olduğunu ve en iyi duruma getirme eşikleri karşılandığında iyileştirilmiştir.  
   
@@ -129,21 +129,21 @@ class MyData
 ### <a name="restrictions"></a>Kısıtlamalar  
  Akış etkinleştirildiğinde WCF özellikleri önemli sayıda kullanamazsınız:  
   
--   Tüm ileti içeriği üzerinde karma hesaplaması gerektirdiğinden ileti gövdesi için dijital imzalar gerçekleştirilemiyor. Akış ile içerik ileti üstbilgilerini oluşturulan ve gönderilen ve bu nedenle, bir dijital imza hesaplanamıyor, tam olarak kullanılamaz.  
+- Tüm ileti içeriği üzerinde karma hesaplaması gerektirdiğinden ileti gövdesi için dijital imzalar gerçekleştirilemiyor. Akış ile içerik ileti üstbilgilerini oluşturulan ve gönderilen ve bu nedenle, bir dijital imza hesaplanamıyor, tam olarak kullanılamaz.  
   
--   Şifreleme verileri doğru şekilde reconstructed olduğunu doğrulamak için dijital imzalar bağlıdır.  
+- Şifreleme verileri doğru şekilde reconstructed olduğunu doğrulamak için dijital imzalar bağlıdır.  
   
--   Güvenilir oturum aktarımı bir ileti kaybedildiğinde gönderilen iletiler yeniden teslim istemcide arabellek gerekir ve iletileri hizmette mesajları durumunda ileti sırası korumak için hizmet uygulaması için teslim etmeden önce saklamak gerekir Çıkış dizi.  
+- Güvenilir oturum aktarımı bir ileti kaybedildiğinde gönderilen iletiler yeniden teslim istemcide arabellek gerekir ve iletileri hizmette mesajları durumunda ileti sırası korumak için hizmet uygulaması için teslim etmeden önce saklamak gerekir Çıkış dizi.  
   
  Bu işlev kısıtlamaları nedeniyle yalnızca aktarım düzeyi güvenlik seçenekleri akış ve güvenilir oturumları kapatamıyor kullanabilirsiniz. Akış yalnızca aşağıdaki sistem tanımlı bağlamalarla kullanılabilir:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>  
+- <xref:System.ServiceModel.BasicHttpBinding>  
   
--   <xref:System.ServiceModel.NetTcpBinding>  
+- <xref:System.ServiceModel.NetTcpBinding>  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>  
+- <xref:System.ServiceModel.NetNamedPipeBinding>  
   
--   <xref:System.ServiceModel.WebHttpBinding>  
+- <xref:System.ServiceModel.WebHttpBinding>  
   
  Çünkü, temel alınan taşımalarına <xref:System.ServiceModel.NetTcpBinding> ve <xref:System.ServiceModel.NetNamedPipeBinding> devralınan güvenilir teslim ve bağlantı tabanlı oturum desteği HTTP, bu iki bağlamaları yalnızca en düşük düzeyde uygulamada bu kısıtlamaları etkilenir.  
   
@@ -160,11 +160,11 @@ class MyData
 ### <a name="enabling-streaming"></a>Akış'ı etkinleştirme  
  Aşağıdaki yollarla akış etkinleştirebilirsiniz:  
   
--   Gönder ve akış modunda isteklerini kabul etmek okuyup kabul edin ve yanıtların arabelleğe alınan modunda döndürür (<xref:System.ServiceModel.TransferMode.StreamedRequest>).  
+- Gönder ve akış modunda isteklerini kabul etmek okuyup kabul edin ve yanıtların arabelleğe alınan modunda döndürür (<xref:System.ServiceModel.TransferMode.StreamedRequest>).  
   
--   Gönder ve arabelleğe alınan modda isteklerini kabul etmek okuyup kabul edin ve akış modunda yanıtlarını döndürmek (<xref:System.ServiceModel.TransferMode.StreamedResponse>).  
+- Gönder ve arabelleğe alınan modda isteklerini kabul etmek okuyup kabul edin ve akış modunda yanıtlarını döndürmek (<xref:System.ServiceModel.TransferMode.StreamedResponse>).  
   
--   Gönderin ve her iki yönde de akış modunda isteklerini ve yanıtlarını alın. (<xref:System.ServiceModel.TransferMode.Streamed>).  
+- Gönderin ve her iki yönde de akış modunda isteklerini ve yanıtlarını alın. (<xref:System.ServiceModel.TransferMode.Streamed>).  
   
  Aktarım modunu ayarlayarak akış devre dışı bırakabilir <xref:System.ServiceModel.TransferMode.Buffered>, tüm bağlamaları varsayılan ayarı olduğu. Aşağıdaki kod, aktarım modunun yapılandırmada ayarlamak gösterilmektedir.  
   

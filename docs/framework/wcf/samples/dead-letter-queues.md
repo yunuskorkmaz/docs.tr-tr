@@ -3,11 +3,11 @@ title: Teslim Edilemeyen İletiler Sırası
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
 ms.openlocfilehash: 379b6901e835a6820d194edda1d7727df789bfd8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051968"
 ---
 # <a name="dead-letter-queues"></a>Teslim Edilemeyen İletiler Sırası
 Bu örnek ve teslim başarısız olmuş bir iletiyi işlemek nasıl gösterir. Dayanır [işlem temelli MSMQ bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) örnek. Bu örnekte `netMsmqBinding` bağlama. Hizmeti, sıraya alınan iletileri alma hizmeti gözlemleyin sağlamak için bir şirket içinde barındırılan bir konsol uygulamasıdır.
@@ -24,15 +24,15 @@ Bu örnek ve teslim başarısız olmuş bir iletiyi işlemek nasıl gösterir. D
 
  Teslim edilemeyen kuyrukta `NetMsmqBinding` bağlama şu özelliklerde ifade edilir:
 
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> Gerekli istemci tarafından eski ileti sırası türünü express özellik. Bu numaralandırma aşağıdaki değerlere sahip:
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> Gerekli istemci tarafından eski ileti sırası türünü express özellik. Bu numaralandırma aşağıdaki değerlere sahip:
 
--   `None`: Hiçbir eski ileti sırası istemci tarafından gereklidir.
+- `None`: Hiçbir eski ileti sırası istemci tarafından gereklidir.
 
--   `System`: Sistem eski ileti sırası ölü iletileri depolamak için kullanılır. Sistem eski ileti sırası bilgisayarda çalışan tüm uygulamalar tarafından paylaşılır.
+- `System`: Sistem eski ileti sırası ölü iletileri depolamak için kullanılır. Sistem eski ileti sırası bilgisayarda çalışan tüm uygulamalar tarafından paylaşılır.
 
--   `Custom`: Kullanarak belirtilen özel bir eski ileti sırası <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> özelliği ölü iletileri depolamak için kullanılır. Bu özellik yalnızca üzerinde kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)]. Aynı bilgisayarda çalışan diğer uygulamalarla paylaşmak yerine, uygulamanın kendi geçerliliğini yitirmiş kuyruk kullanmanız gerekir, bu kullanılır.
+- `Custom`: Kullanarak belirtilen özel bir eski ileti sırası <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> özelliği ölü iletileri depolamak için kullanılır. Bu özellik yalnızca üzerinde kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)]. Aynı bilgisayarda çalışan diğer uygulamalarla paylaşmak yerine, uygulamanın kendi geçerliliğini yitirmiş kuyruk kullanmanız gerekir, bu kullanılır.
 
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> belirli bir kuyruğa atılacak kullanmak için express özellik. Bu yalnızca kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> belirli bir kuyruğa atılacak kullanmak için express özellik. Bu yalnızca kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
  Bu örnekte, istemci bir işlem kapsamında hizmetten toplu iletiler gönderir ve "zaman yaşam" Bu iletileri (yaklaşık 2 saniye) için rastgele düşük bir değer belirtir. İstemci Ayrıca, süresi dolan iletileri kuyruğa kullanmak için özel bir sahipsiz sırayı belirtir.
 
@@ -314,15 +314,15 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 2. Hizmet ilk olarak çalıştırılırsa, sıranın mevcut olduğundan emin olun kontrol eder. Kuyruk yoksa, bir hizmeti oluşturacaksınız. İlk sırayı oluşturmak için hizmet çalıştırabileceğiniz veya bir MSMQ Kuyruk Yöneticisi ile oluşturabilirsiniz. Windows 2008'de bir kuyruk oluşturmak için aşağıdaki adımları izleyin.
 
-    1.  Visual Studio 2012'de Sunucu Yöneticisi'ni açın.
+    1. Visual Studio 2012'de Sunucu Yöneticisi'ni açın.
 
-    2.  Genişletin **özellikleri** sekmesi.
+    2. Genişletin **özellikleri** sekmesi.
 
-    3.  Sağ **özel ileti kuyrukları**seçip **yeni**, **özel sıra**.
+    3. Sağ **özel ileti kuyrukları**seçip **yeni**, **özel sıra**.
 
-    4.  Denetleme **işlem** kutusu.
+    4. Denetleme **işlem** kutusu.
 
-    5.  Girin `ServiceModelSamplesTransacted` yeni Kuyruğun adı.
+    5. Girin `ServiceModelSamplesTransacted` yeni Kuyruğun adı.
 
 3. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
 

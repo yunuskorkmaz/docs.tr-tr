@@ -5,11 +5,11 @@ helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
 ms.openlocfilehash: ca336e2ffa3831167088d92bfca017ce2226d8a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014329"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Visual Basic'te Bileşenler Oluşturma ve Kullanma
 A *bileşen* uygulayan bir sınıf <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> arabirimi ya da uygulayan bir sınıftan türetilen doğrudan veya dolaylı olarak <xref:System.ComponentModel.IComponent>. A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yeniden kullanılabilir, diğer nesnelerle etkileşim kurabilir ve dış kaynaklara ve tasarım zamanı desteği üzerinde denetim sağlayan bir nesne bir bileşendir.  
@@ -23,40 +23,40 @@ A *bileşen* uygulayan bir sınıf <xref:System.ComponentModel.IComponent?displa
   
  <xref:System.ComponentModel.Component> Ve <xref:System.ComponentModel.MarshalByValueComponent> sınıflardır, temel uygulamaları <xref:System.ComponentModel.IComponent> arabirimi. Bu sınıflar arasındaki ana fark <xref:System.ComponentModel.Component> sınıfı başvuruya göre sıralanmış sırada <xref:System.ComponentModel.IComponent> değere göre sıralanır. Aşağıdaki listede uygulayıcıları için sunduğu geniş kapsamlı yönergeler sağlar.  
   
--   Bileşeniniz başvuruya göre sıralanması gerekiyorsa türetilen <xref:System.ComponentModel.Component>.  
+- Bileşeniniz başvuruya göre sıralanması gerekiyorsa türetilen <xref:System.ComponentModel.Component>.  
   
--   Bileşeniniz değere göre sıralanması gerekiyorsa türetilen <xref:System.ComponentModel.MarshalByValueComponent>.  
+- Bileşeniniz değere göre sıralanması gerekiyorsa türetilen <xref:System.ComponentModel.MarshalByValueComponent>.  
   
--   Tek devralma nedeniyle temel uygulamaları birinden bileşeniniz türetilemez, uygulama <xref:System.ComponentModel.IComponent>.  
+- Tek devralma nedeniyle temel uygulamaları birinden bileşeniniz türetilemez, uygulama <xref:System.ComponentModel.IComponent>.  
   
 ## <a name="component-classes"></a>Bileşen Sınıfları  
  <xref:System.ComponentModel> Ad alanı, bileşenlerin ve denetimlerin çalışma zamanı ve tasarım zamanı davranışını uygulamak için kullanılan sınıfları sağlar. Bu ad alanı, sınıflar ve öznitelikler ve tür dönüştürücüleri uygulama, veri kaynaklarını bağlama ve bileşenleri lisanslama arabirimler içerir.  
   
  Çekirdek Bileşen sınıfları şunlardır:  
   
--   <xref:System.ComponentModel.Component>. Temel bir uygulama için <xref:System.ComponentModel.IComponent> arabirimi. Bu sınıf, uygulamalar arasında paylaşma nesnesi sağlar.  
+- <xref:System.ComponentModel.Component>. Temel bir uygulama için <xref:System.ComponentModel.IComponent> arabirimi. Bu sınıf, uygulamalar arasında paylaşma nesnesi sağlar.  
   
--   <xref:System.ComponentModel.MarshalByValueComponent>. Temel bir uygulama için <xref:System.ComponentModel.IComponent> arabirimi.  
+- <xref:System.ComponentModel.MarshalByValueComponent>. Temel bir uygulama için <xref:System.ComponentModel.IComponent> arabirimi.  
   
--   <xref:System.ComponentModel.Container>. Temel uygulama <xref:System.ComponentModel.IContainer> arabirimi. Bu sınıf, sıfır veya daha fazla bileşen kapsüller.  
+- <xref:System.ComponentModel.Container>. Temel uygulama <xref:System.ComponentModel.IContainer> arabirimi. Bu sınıf, sıfır veya daha fazla bileşen kapsüller.  
   
  Bileşen Lisanslamayı için kullanılan sınıflar bazıları şunlardır:  
   
--   <xref:System.ComponentModel.License>. Tüm lisansları için soyut temel sınıf. Bir bileşenin belirli bir örneği için bir lisans verilir.  
+- <xref:System.ComponentModel.License>. Tüm lisansları için soyut temel sınıf. Bir bileşenin belirli bir örneği için bir lisans verilir.  
   
--   <xref:System.ComponentModel.LicenseManager>. Özellikleri ve yöntemleri bileşene bir lisans eklemek ve yönetmenize olanak sağlayan bir <xref:System.ComponentModel.LicenseProvider>.  
+- <xref:System.ComponentModel.LicenseManager>. Özellikleri ve yöntemleri bileşene bir lisans eklemek ve yönetmenize olanak sağlayan bir <xref:System.ComponentModel.LicenseProvider>.  
   
--   <xref:System.ComponentModel.LicenseProvider>. Bir lisans sağlayıcısı uygulamak için soyut temel sınıf.  
+- <xref:System.ComponentModel.LicenseProvider>. Bir lisans sağlayıcısı uygulamak için soyut temel sınıf.  
   
--   <xref:System.ComponentModel.LicenseProviderAttribute>. Belirtir <xref:System.ComponentModel.LicenseProvider> sınıfı ile kullanmak için sınıf.  
+- <xref:System.ComponentModel.LicenseProviderAttribute>. Belirtir <xref:System.ComponentModel.LicenseProvider> sınıfı ile kullanmak için sınıf.  
   
  Açıklayan ve bileşenleri kalıcı hale getirmeniz için yaygın olarak kullanılan sınıflar.  
   
--   <xref:System.ComponentModel.TypeDescriptor>. Öznitelikler, özellikler ve olaylar gibi bir bileşen için özellikleri hakkında bilgi sağlar.  
+- <xref:System.ComponentModel.TypeDescriptor>. Öznitelikler, özellikler ve olaylar gibi bir bileşen için özellikleri hakkında bilgi sağlar.  
   
--   <xref:System.ComponentModel.EventDescriptor>. Bir olay hakkında bilgi sağlar.  
+- <xref:System.ComponentModel.EventDescriptor>. Bir olay hakkında bilgi sağlar.  
   
--   <xref:System.ComponentModel.PropertyDescriptor>. Bir özellik hakkında bilgi sağlar.  
+- <xref:System.ComponentModel.PropertyDescriptor>. Bir özellik hakkında bilgi sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Denetim ve Bileşen Yazmada Sorun Giderme](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  

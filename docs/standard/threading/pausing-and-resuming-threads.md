@@ -1,5 +1,5 @@
 ---
-title: Duraklatma ve iş parçacıkları kesme
+title: İş parçacıklarını duraklatma ve kesintiye uğratma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce1855027e89f21d96e6cf761afcaaabb9b5138f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62015123"
 ---
-# <a name="pausing-and-interrupting-threads"></a>Duraklatma ve iş parçacıkları kesme
+# <a name="pausing-and-interrupting-threads"></a>İş parçacıklarını duraklatma ve kesintiye uğratma
 
 İş parçacığı etkinlikleri eşitlemek için en yaygın yollarından bloğu ve yayın iş parçacıkları veya nesneleri Kilitle veya bölgeleri olabilir. Bu kilitleme ve mekanizmaları engelleme hakkında daha fazla bilgi için bkz. [eşitleme temellerine genel bakış](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
   
@@ -45,9 +45,9 @@ ms.locfileid: "54648225"
   
  Bekleme yönetilen bir bekleme ise <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> ve <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> hem de iş parçacığı hemen Uyandırma. Yönetilmeyen bir bekleme bekleme ise (örneğin, bir platform çağırma çağrısı Win32 [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) işlevi), hiçbiri <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> ya da <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> kadar döndürür veya yönetilen koda çağıran iş parçacığının denetimini ele geçirebilir. Yönetilen kodda davranış aşağıdaki gibidir:  
   
--   <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> bir iş parçacığı dışında olabilir ve neden olan herhangi bir bekleme modundan bir <xref:System.Threading.ThreadInterruptedException> hedef iş parçacığında için.  
+- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> bir iş parçacığı dışında olabilir ve neden olan herhangi bir bekleme modundan bir <xref:System.Threading.ThreadInterruptedException> hedef iş parçacığında için.  
   
--   <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> bir iş parçacığı dışında olabilir ve neden olan herhangi bir bekleme modundan bir <xref:System.Threading.ThreadAbortException> iş parçacığında harekete geçirilmesine. Ayrıntılar için bkz [iş parçacıklarını yok etme](../../../docs/standard/threading/destroying-threads.md).  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> bir iş parçacığı dışında olabilir ve neden olan herhangi bir bekleme modundan bir <xref:System.Threading.ThreadAbortException> iş parçacığında harekete geçirilmesine. Ayrıntılar için bkz [iş parçacıklarını yok etme](../../../docs/standard/threading/destroying-threads.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

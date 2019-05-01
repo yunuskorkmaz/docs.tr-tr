@@ -6,11 +6,11 @@ helpviewer_keywords:
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
 ms.openlocfilehash: 4808d87322d5b21b70ec38e2eb31b2b204938745
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008247"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Çeşitli Veri Türleri (Visual Basic)
 Visual Basic, sayı veya karakterlerden doğru yönlendirilmiş olmayan çeşitli veri türleri sağlar. Bunun yerine, bunlar özelleştirilmiş verilerle gibi Evet/Hayır değerleri, tarih/saat değerleri ve nesne adresleri ilgilenir.  

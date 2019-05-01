@@ -8,11 +8,11 @@ helpviewer_keywords:
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
 ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021160"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic Dili İzlenecek Yolu
 İzlenecek yollar, bunları ürün veya belirli bir özellik alanı hakkında öğrenmeye başlayın için iyi bir yer sağlar ortak senaryolar için adım adım yönergeler sağlar.  
@@ -77,5 +77,5 @@ ms.locfileid: "55739468"
  [Visual Basic'te bir nesneyi kalıcı kılma](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Basit bir nesne oluşturmak ve verileri bir dosyaya kalıcı hale getirmek nasıl gösterir.  
   
- [İzlenecek yol: Önce test desteği kullanımdan üret özelliği](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
+ [İzlenecek yol: Kullanımdan Üret Özelliği ile Önce Test Desteği](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
  Önce test geliştirme, burada ilk birim testleri yazma ve ardından başarılı testler yapmak için kaynak kodunu yazma işlemi gösterilmektedir.

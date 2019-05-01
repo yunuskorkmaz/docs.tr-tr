@@ -8,11 +8,11 @@ helpviewer_keywords:
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 ms.openlocfilehash: 0b3977e73e3b2aa9e80e2dab08d15035283b8387
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022330"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>İzlenecek yol: (Visual Basic) COM nesnelerinde kalıtım uygulama
 Visual Basic sınıfları türetebilirsiniz `Public` olanlar Visual Basic'in önceki sürümlerinde oluşturulan COM nesnelerini sınıfları. Özellikler ve yöntemler COM nesnelerden devralınan sınıf geçersiz kılınan gibi özellikleri olarak aşırı ve herhangi bir taban sınıf yöntemlerini geçersiz kılınmış veya aşırı yüklenmiş. COM nesneleri içinden devralma derlemeniz istemediğiniz var olan bir sınıf kitaplığı olduğunda yararlıdır.  
@@ -125,9 +125,9 @@ Visual Basic sınıfları türetebilirsiniz `Public` olanlar Visual Basic'in ön
   
  Özellikler ve yöntemler COM sınıflardan devralınan bir yerel özellik veya değiştiren bir özellik veya temel bir COM sınıftan devralınan yöntemini bildirebilirsiniz anlamı kılınabilir. Devralınan COM özellikleri geçersiz kılmak için kuralları, diğer özellikleri ve yöntemleri aşağıdaki istisnalar dışında geçersiz kılmak için kurallar benzerdir:  
   
--   Herhangi bir özelliği veya bir COM sınıftan devralınan yöntemi geçersiz kılarsanız, tüm diğer devralınan özellikleri ve yöntemleri geçersiz kılmanız gerekir.  
+- Herhangi bir özelliği veya bir COM sınıftan devralınan yöntemi geçersiz kılarsanız, tüm diğer devralınan özellikleri ve yöntemleri geçersiz kılmanız gerekir.  
   
--   Kullandığınız özellikler `ByRef` parametreleri geçersiz kılınamaz.  
+- Kullandığınız özellikler `ByRef` parametreleri geçersiz kılınamaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

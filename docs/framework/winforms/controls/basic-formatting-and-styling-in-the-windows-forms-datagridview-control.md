@@ -6,11 +6,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], formatting
 ms.assetid: b9b90836-1f56-4aa9-8db8-edc78fe830e8
 ms.openlocfilehash: 5e967c1bbe54095cc11e48b014600158da7fe6a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011690"
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Temel Biçim ve Stiller
 `DataGridView` Denetim temel hücrelerin görünüşünü ve görüntü biçimlendirme hücre değerlerini tanımlamak kolaylaştırır. Görünüm tanımlayabilirsiniz ve biçimlendirme stilleri tek tek hücrelere, özel sütunlar ve satırlar hücreleri veya denetimindeki tüm hücreleri özelliklerini ayarlayarak `DataGridViewCellStyle` çeşitli erişilen nesneler `DataGridView` denetim özellikleri. Ayrıca, bu stilleri hücre değerini gibi faktörlere göre işleyerek dinamik olarak değiştirebilirsiniz `CellFormatting` olay.  

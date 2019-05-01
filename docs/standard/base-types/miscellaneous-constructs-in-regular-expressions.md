@@ -13,11 +13,11 @@ ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8956726915ebe1c0b1c7654e62e2e28620274b4a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025086"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Normal İfadelerdeki Çeşitli Yapılar
 .NET içinde normal ifadeler üç çeşitli dil yapıları içerir. Biri, etkinleştirme veya devre dışı ortasında bir normal ifade deseni eşleştirme belirli seçenekleri sağlar. Kalan iki normal bir ifadede açıklamalar ekleme olanak tanır.  
@@ -42,7 +42,7 @@ ms.locfileid: "48836290"
  Normal ifade seçenekleri tarafından tanımlanan herhangi bir değişiklik `(?imnsx-imnsx)` kalır kapsayan grubun sonuna kadar geçerli oluşturun.  
   
 > [!NOTE]
->  `(?imnsx-imnsx:` *Subexpression* `)` gruplama yapısında bir alt ifade için aynı işlevselliği sağlar. Daha fazla bilgi için [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+>  `(?imnsx-imnsx:` *Subexpression* `)` gruplama yapısında bir alt ifade için aynı işlevselliği sağlar. Daha fazla bilgi için bkz. [Gruplandırma Yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
  Aşağıdaki örnekte `i`, `n`, ve `x` büyük/küçük harfe ve açık yakalamalar etkinleştirmek ve normal ifade deseninde bir normal ifade ortasında beyaz boşluğu yok saymak için Seçenekler.  
   

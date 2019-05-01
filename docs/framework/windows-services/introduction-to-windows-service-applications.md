@@ -23,11 +23,11 @@ helpviewer_keywords:
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
 ms.openlocfilehash: a98528a4bae1a22352096958cfec2350b21ddf8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008700"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows Hizmet Uygulamalarına Giriş
 Eski adıyla NT Hizmetleri olarak bilinen Microsoft Windows Hizmetleri kendi Windows oturumlarında çalışan uzun süreli yürütülebilir uygulamalar oluşturmanıza olanak sağlar. Bu hizmetler, bilgisayar önyükleme yaptığında, otomatik olarak başlatılabilir duraklatılabilir ve yeniden başlatılabilir ve herhangi bir kullanıcı arabirimi gösterme. Bu özellikler Hizmetleri sunucusunda veya aynı bilgisayarda çalışan diğer kullanıcılarla engellemeyen uzun süreli işlevselliğe gereksinim duyduğunuzda kullanım için ideal hale getirir. Ayrıca, hizmetleri veya varsayılan bilgisayar hesabından oturum açan kullanıcıdan farklı bir belirli kullanıcı hesabının güvenlik bağlamında da çalıştırabilirsiniz. Hizmetleri ve Windows oturumları hakkında daha fazla bilgi için Windows SDK belgelerine bakın.  
@@ -41,19 +41,19 @@ Eski adıyla NT Hizmetleri olarak bilinen Microsoft Windows Hizmetleri kendi Win
 ## <a name="service-applications-vs-other-visual-studio-applications"></a>Hizmet uygulamaları vs. Diğer Visual Studio uygulamalarını  
  Hizmet uygulamaları işlevinden farklı çeşitli şekillerde birçok diğer proje türleri:  
   
--   Projenin anlamlı bir şekilde çalışabilmesi için önce bir hizmet uygulama projesinin oluşturduğu derlenmiş yürütülebilir dosya sunucuya yüklenmelidir. Hata ayıklama yapılamıyor veya F5 veya F11 tuşuna basarak bir hizmet uygulaması çalıştırın; kodunda bir hizmet veya adımı hemen çalıştıramazsınız. Bunun yerine, yüklemeniz gerekir ve hizmetinizi başlatın ve ardından hizmetin işlemine bir hata ayıklayıcı ekleyin. Daha fazla bilgi için [nasıl yapılır: Windows hizmet uygulamalarında hata ayıklama](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).  
+- Projenin anlamlı bir şekilde çalışabilmesi için önce bir hizmet uygulama projesinin oluşturduğu derlenmiş yürütülebilir dosya sunucuya yüklenmelidir. Hata ayıklama yapılamıyor veya F5 veya F11 tuşuna basarak bir hizmet uygulaması çalıştırın; kodunda bir hizmet veya adımı hemen çalıştıramazsınız. Bunun yerine, yüklemeniz gerekir ve hizmetinizi başlatın ve ardından hizmetin işlemine bir hata ayıklayıcı ekleyin. Daha fazla bilgi için [nasıl yapılır: Windows hizmet uygulamalarında hata ayıklama](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).  
   
--   Bazı proje türlerinden farklı olarak, hizmet uygulamaları için Yükleme bileşenleri oluşturmanız gerekir. Yükleme bileşenleri yüklemek ve sunucunun hizmet kaydı ve Windows ile hizmetiniz için bir giriş oluşturmak **Hizmet Denetim Yöneticisi**. Daha fazla bilgi için [nasıl yapılır: Hizmet uygulamasına yükleyiciler ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+- Bazı proje türlerinden farklı olarak, hizmet uygulamaları için Yükleme bileşenleri oluşturmanız gerekir. Yükleme bileşenleri yüklemek ve sunucunun hizmet kaydı ve Windows ile hizmetiniz için bir giriş oluşturmak **Hizmet Denetim Yöneticisi**. Daha fazla bilgi için [nasıl yapılır: Hizmet uygulamasına yükleyiciler ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
--   `Main` Hizmet uygulamanızı, projenize hizmetler için Çalıştır komutunu vermelidir yöntemi içerir. `Run` Metodunun hizmetlerine **Hizmet Denetim Yöneticisi** uygun sunucuda. Kullanırsanız **Windows Hizmetleri** proje şablonu, bu yöntem yazılmış sizin için otomatik olarak. Hizmet yüklemenin hizmet başlatmayla aynı şey olmadığını unutmayın. "Hizmet ömrü" aşağıda daha fazla bilgi için bkz.  
+- `Main` Hizmet uygulamanızı, projenize hizmetler için Çalıştır komutunu vermelidir yöntemi içerir. `Run` Metodunun hizmetlerine **Hizmet Denetim Yöneticisi** uygun sunucuda. Kullanırsanız **Windows Hizmetleri** proje şablonu, bu yöntem yazılmış sizin için otomatik olarak. Hizmet yüklemenin hizmet başlatmayla aynı şey olmadığını unutmayın. "Hizmet ömrü" aşağıda daha fazla bilgi için bkz.  
   
--   Windows hizmet uygulamaları, farklı bir iş istasyonunda oturum açmış kullanıcının etkileşimli istasyonundan çalışır. Pencere istasyonu bir pano, genel Atomlar kümesi ve bir masaüstü nesne grubu içeren güvenli bir nesnedir. Windows hizmetinin istasyonu etkileşimli bir istasyon olmadığı için iletişim kutularını gelen bir Windows hizmeti uygulaması görülmeyecektir ve programınızın yanıt vermeyi durdurmasına neden olabilir içinde oluşturulur. Benzer şekilde, hata iletileri Windows olay günlüğüne yerine kullanıcı arabiriminde oluşturulmak.  
+- Windows hizmet uygulamaları, farklı bir iş istasyonunda oturum açmış kullanıcının etkileşimli istasyonundan çalışır. Pencere istasyonu bir pano, genel Atomlar kümesi ve bir masaüstü nesne grubu içeren güvenli bir nesnedir. Windows hizmetinin istasyonu etkileşimli bir istasyon olmadığı için iletişim kutularını gelen bir Windows hizmeti uygulaması görülmeyecektir ve programınızın yanıt vermeyi durdurmasına neden olabilir içinde oluşturulur. Benzer şekilde, hata iletileri Windows olay günlüğüne yerine kullanıcı arabiriminde oluşturulmak.  
   
      .NET Framework tarafından desteklenen Windows hizmet sınıfları etkileşimli kanallarla etkileşimi, diğer bir deyişle, oturum açan kullanıcının desteklemez. .NET Framework, aynı zamanda istasyonları ve masaüstlerini temsil eden sınıfları içermez. Windows hizmetinizin diğer istasyonlar ile etkileşmesi şartsa, yönetilmeyen Windows API'sine erişmeniz gerekecektir. Daha fazla bilgi için Windows SDK belgelerine bakın.  
   
      Windows hizmetinin kullanıcı ya da diğer istasyonlar ile oturum açan hiçbir kullanıcı ya da kullanıcının beklenmedik bir masaüstü nesne kümesi olması gibi senaryoları beklenmediğini içerecek şekilde dikkatle tasarlanmalıdır etkileşimi. Bazı durumlarda, kullanıcı denetimi altında çalışan bir Windows uygulaması yazmak daha uygun olabilir.  
   
--   Windows hizmet uygulamaları kendi güvenlik bağlamlarında çalışır ve uygulamaların yüklü Windows bilgisayara kullanıcı oturum açmadan önce başlatılır. Ayrıca, hizmet içinde çalıştırmak için hangi kullanıcı hesabı dikkatli bir şekilde planlamanız gerekir; Sistem hesabı altında çalışan bir hizmet, daha fazla izinleri ve bir kullanıcı hesabından ayrıcalıklara sahiptir.  
+- Windows hizmet uygulamaları kendi güvenlik bağlamlarında çalışır ve uygulamaların yüklü Windows bilgisayara kullanıcı oturum açmadan önce başlatılır. Ayrıca, hizmet içinde çalıştırmak için hangi kullanıcı hesabı dikkatli bir şekilde planlamanız gerekir; Sistem hesabı altında çalışan bir hizmet, daha fazla izinleri ve bir kullanıcı hesabından ayrıcalıklara sahiptir.  
   
 ## <a name="service-lifetime"></a>Hizmet ömrü  
  Bir hizmet, ömrü süresince birçok dahili durumdan gider. İlk olarak, hizmet üzerinde çalışacağı sisteme yüklenir. Bu işlem hizmet projesi için yükleyicileri yürütür ve hizmeti yükler **Hizmet Denetim Yöneticisi** o bilgisayar için. **Hizmet Denetim Yöneticisi** hizmetlerini yönetmek için Windows tarafından sağlanan Merkezi hizmet programıdır.  
@@ -76,9 +76,9 @@ Eski adıyla NT Hizmetleri olarak bilinen Microsoft Windows Hizmetleri kendi Win
   
 ## <a name="requirements"></a>Gereksinimler  
   
--   Hizmetlerini oluşturdunuz, içinde bir **Windows hizmeti** uygulama projesi veya devralındığında .exe dosyası oluşturan ve devralınan bir.NET Framework kullanan başka bir proje <xref:System.ServiceProcess.ServiceBase> sınıfı.  
+- Hizmetlerini oluşturdunuz, içinde bir **Windows hizmeti** uygulama projesi veya devralındığında .exe dosyası oluşturan ve devralınan bir.NET Framework kullanan başka bir proje <xref:System.ServiceProcess.ServiceBase> sınıfı.  
   
--   Windows Hizmetleri içeren projeler, proje ve Hizmetleri için yükleme bileşenlerine sahip olmalıdır. Bu kolayca gerçekleştirilebilir **özellikleri** penceresi. Daha fazla bilgi için [nasıl yapılır: Hizmet uygulamasına yükleyiciler ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+- Windows Hizmetleri içeren projeler, proje ve Hizmetleri için yükleme bileşenlerine sahip olmalıdır. Bu kolayca gerçekleştirilebilir **özellikleri** penceresi. Daha fazla bilgi için [nasıl yapılır: Hizmet uygulamasına yükleyiciler ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

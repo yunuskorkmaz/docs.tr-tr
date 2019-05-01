@@ -3,11 +3,11 @@ title: 'Taşıma: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
 ms.openlocfilehash: 8d72ab5c7d8c461cd2ce4d4003d449ac9fe7e807
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007727"
 ---
 # <a name="transport-udp"></a>Taşıma: UDP
 UDP taşıma örnek nasıl uygulanacağı UDP tek noktaya yayın ve çok noktaya yayın özel bir Windows Communication Foundation (WCF) aktarım olarak gösterir. Örnek kanal çerçevesi kullanarak ve en iyi yöntemleri WCF özel taşıma WCF'de, oluşturmak için önerilen yordamı açıklar. Özel bir taşıma oluşturmak için adımları aşağıdaki gibidir:  
@@ -32,15 +32,15 @@ UDP taşıma örnek nasıl uygulanacağı UDP tek noktaya yayın ve çok noktaya
 ## <a name="message-exchange-patterns"></a>İleti Exchange desenleri  
  İlk adım karar vermek için özel bir taşıma yazıyor hangi ileti Exchange desenleri (MEPs) taşıma için gereklidir. Aralarından seçim yapabileceğiniz üç MEPs vardır:  
   
--   Veri birimi (IInputChannel/IOutputChannel)  
+- Veri birimi (IInputChannel/IOutputChannel)  
   
      Bir veri birimi MEP kullanırken, bir istemci bir "Başlat ve unut" exchange kullanarak bir ileti gönderir. Bir Başlat ve unut değişimi, başarılı bir teslimat bant dışı onay gerektiren bir. İleti, geçiş sırasında kaybolur ve hiçbir zaman hizmet ulaşın. İstemci sonunda gönderme işlemi başarıyla tamamlarsa, uzak uç noktada bir ileti aldı garanti etmez. Bunun üstünde kurallarınızı oluştururken veri birimi Mesajlaşma için temel yapı taşı olan — güvenilir protokolleri ve güvenli protokolleri dahil. İstemci veri birimi kanalları uygulamak <xref:System.ServiceModel.Channels.IOutputChannel> arabirimi ve hizmet veri birimi kanalları uygulamak <xref:System.ServiceModel.Channels.IInputChannel> arabirimi.  
   
--   İstek-yanıt (IRequestChannel/IReplyChannel'ı)  
+- İstek-yanıt (IRequestChannel/IReplyChannel'ı)  
   
      Bu MEP bir ileti gönderilir ve bir yanıt aldı. Desen, istek-yanıt çiftlerinden oluşur. İstek-yanıt çağrıları örnekleri: uzaktan yordam çağrısı (RPC) ve tarayıcı alır. Bu düzen, yarı çift yönlü da bilinir. Bu MEP içinde istemci kanalları uygulamak <xref:System.ServiceModel.Channels.IRequestChannel> ve hizmet kanalları uygulamak <xref:System.ServiceModel.Channels.IReplyChannel>.  
   
--   Çift yönlü (IDuplexChannel)  
+- Çift yönlü (IDuplexChannel)  
   
      Çift yönlü MEP tercihe bağlı sayıda istemci tarafından gönderilen ve alınan herhangi bir sırada iletileri sağlar. Çift yönlü MEP bir telefon konuşması gibi burada konuşulan her bir sözcüğün bir ileti numarasıdır. Her iki tarafında da gönderebilir ve alabilir bu MEP, istemci ve hizmet kanalları tarafından uygulanan arabirimi çünkü <xref:System.ServiceModel.Channels.IDuplexChannel>.  
   
@@ -52,17 +52,17 @@ UDP taşıma örnek nasıl uygulanacağı UDP tek noktaya yayın ve çok noktaya
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject ve WCF nesne yaşam döngüsü  
  WCF sahip gibi nesnelerin ömrünü yönetmek için kullanılan ortak bir Durum makinesi <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, ve <xref:System.ServiceModel.Channels.IChannelListener> iletişim için kullanılır. Bu iletişim nesneleri mevcut beş durum vardır. Bu durumlar tarafından temsil edilen <xref:System.ServiceModel.CommunicationState> numaralandırma ve aşağıdaki gibi şunlardır:  
   
--   Oluşturma tarihi: Bu durumda, bir <xref:System.ServiceModel.ICommunicationObject> , ilk oluşturulduğunda. Bu durumda hiçbir giriş/çıkış (g/ç) gerçekleşir.  
+- Oluşturma tarihi: Bu durumda, bir <xref:System.ServiceModel.ICommunicationObject> , ilk oluşturulduğunda. Bu durumda hiçbir giriş/çıkış (g/ç) gerçekleşir.  
   
--   Açma: Bu nesneler geçiş durumu <xref:System.ServiceModel.ICommunicationObject.Open%2A> çağrılır. Bu noktada, özellikler sabit yapılır ve giriş/çıkış başlayabilirsiniz. Bu geçiş, yalnızca oluşturulan durumu geçerli değil.  
+- Açma: Bu nesneler geçiş durumu <xref:System.ServiceModel.ICommunicationObject.Open%2A> çağrılır. Bu noktada, özellikler sabit yapılır ve giriş/çıkış başlayabilirsiniz. Bu geçiş, yalnızca oluşturulan durumu geçerli değil.  
   
--   Açıldı: Bu durum açma işlemi tamamlandığında geçiş nesneleri. Bu geçiş, yalnızca açılış durumu geçerli değil. Bu noktada, nesne aktarımı için tam olarak kullanılabilir.  
+- Açıldı: Bu durum açma işlemi tamamlandığında geçiş nesneleri. Bu geçiş, yalnızca açılış durumu geçerli değil. Bu noktada, nesne aktarımı için tam olarak kullanılabilir.  
   
--   Kapatma: Bu nesneler geçiş durumu <xref:System.ServiceModel.ICommunicationObject.Close%2A> normal şekilde kapatılmasını için çağrılır. Bu geçiş, yalnızca açık durumu geçerli değil.  
+- Kapatma: Bu nesneler geçiş durumu <xref:System.ServiceModel.ICommunicationObject.Close%2A> normal şekilde kapatılmasını için çağrılır. Bu geçiş, yalnızca açık durumu geçerli değil.  
   
--   Kapalı: Kapanış durum nesneleri artık kullanılabilir değildir. Genel olarak, en fazla yapılandırma İnceleme için hala erişilebilir, ancak hiçbir iletişim ortaya çıkabilir. Bu durum atıldı için eşdeğerdir.  
+- Kapalı: Kapanış durum nesneleri artık kullanılabilir değildir. Genel olarak, en fazla yapılandırma İnceleme için hala erişilebilir, ancak hiçbir iletişim ortaya çıkabilir. Bu durum atıldı için eşdeğerdir.  
   
--   Hatalı: Faulted durumunda nesneleri incelemesi erişebilir, ancak artık kullanılamaz. Nesnesi, bir kurtarılamaz bir hata oluştuğunda, bu duruma geçer. Bu durum yalnızca geçerli geçiş halinde olan `Closed` durumu.  
+- Hatalı: Faulted durumunda nesneleri incelemesi erişebilir, ancak artık kullanılamaz. Nesnesi, bir kurtarılamaz bir hata oluştuğunda, bu duruma geçer. Bu durum yalnızca geçerli geçiş halinde olan `Closed` durumu.  
   
  Her bir durum geçişi için harekete olaylar vardır. <xref:System.ServiceModel.ICommunicationObject.Abort%2A> Yöntemi herhangi bir zamanda çağrılabilir ve nesne geçiş hemen geçerli durumunu kapalı duruma neden olur. Çağırma <xref:System.ServiceModel.ICommunicationObject.Abort%2A> herhangi bir bitmemiş iş sonlandırır.  
   
@@ -70,13 +70,13 @@ UDP taşıma örnek nasıl uygulanacağı UDP tek noktaya yayın ve çok noktaya
 ## <a name="channel-factory-and-channel-listener"></a>Kanal fabrikası ve kanal dinleyicisi  
  Sonraki adım özel bir taşıma yazma uygulaması oluşturmaktır <xref:System.ServiceModel.Channels.IChannelFactory> ve istemci kanallar için <xref:System.ServiceModel.Channels.IChannelListener> hizmet kanalları için. Kanal katmanını kanallar oluşturmak için bir Fabrika deseni kullanır. WCF bu işlem için temel sınıfı Yardımcıları sağlar.  
   
--   <xref:System.ServiceModel.Channels.CommunicationObject> Sınıfının Implements <xref:System.ServiceModel.ICommunicationObject> ve 2. adımda daha önce açıklanan Durum makinesi uygular. 
+- <xref:System.ServiceModel.Channels.CommunicationObject> Sınıfının Implements <xref:System.ServiceModel.ICommunicationObject> ve 2. adımda daha önce açıklanan Durum makinesi uygular. 
 
--   <xref:System.ServiceModel.Channels.ChannelManagerBase> Sınıfının Implements <xref:System.ServiceModel.Channels.CommunicationObject> ve birleşik bir temel sınıf için <xref:System.ServiceModel.Channels.ChannelFactoryBase> ve <xref:System.ServiceModel.Channels.ChannelListenerBase>. <xref:System.ServiceModel.Channels.ChannelManagerBase> Sınıfı çalışır birlikte <xref:System.ServiceModel.Channels.ChannelBase>, uygulayan bir temel sınıf olan <xref:System.ServiceModel.Channels.IChannel>.  
+- <xref:System.ServiceModel.Channels.ChannelManagerBase> Sınıfının Implements <xref:System.ServiceModel.Channels.CommunicationObject> ve birleşik bir temel sınıf için <xref:System.ServiceModel.Channels.ChannelFactoryBase> ve <xref:System.ServiceModel.Channels.ChannelListenerBase>. <xref:System.ServiceModel.Channels.ChannelManagerBase> Sınıfı çalışır birlikte <xref:System.ServiceModel.Channels.ChannelBase>, uygulayan bir temel sınıf olan <xref:System.ServiceModel.Channels.IChannel>.  
   
--   <xref:System.ServiceModel.Channels.ChannelFactoryBase> Sınıfının Implements <xref:System.ServiceModel.Channels.ChannelManagerBase> ve <xref:System.ServiceModel.Channels.IChannelFactory> ve birleştirir `CreateChannel` aşırı birine `OnCreateChannel` soyut yöntemi.  
+- <xref:System.ServiceModel.Channels.ChannelFactoryBase> Sınıfının Implements <xref:System.ServiceModel.Channels.ChannelManagerBase> ve <xref:System.ServiceModel.Channels.IChannelFactory> ve birleştirir `CreateChannel` aşırı birine `OnCreateChannel` soyut yöntemi.  
   
--   <xref:System.ServiceModel.Channels.ChannelListenerBase> Sınıfının Implements <xref:System.ServiceModel.Channels.IChannelListener>. Bu temel durum yönetimini üstlenir.  
+- <xref:System.ServiceModel.Channels.ChannelListenerBase> Sınıfının Implements <xref:System.ServiceModel.Channels.IChannelListener>. Bu temel durum yönetimini üstlenir.  
   
  Bu örnekte Üreteç uygulaması UdpChannelFactory.cs içinde yer alır ve dinleyici uygulamasına UdpChannelListener.cs içinde yer alır. <xref:System.ServiceModel.Channels.IChannel> Uygulamalarıdır UdpOutputChannel.cs ve UdpInputChannel.cs.  
   
@@ -255,9 +255,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ## <a name="adding-a-standard-binding"></a>Standart bir bağlaması ekleniyor  
  Bizim bağlama öğesi, aşağıdaki iki şekilde kullanılabilir:  
   
--   Özel bağlama üzerinden: Özel bağlama bağlama öğeleri bir rastgele kümesi temel alınarak kendi bağlama oluşturmasına olanak tanır.  
+- Özel bağlama üzerinden: Özel bağlama bağlama öğeleri bir rastgele kümesi temel alınarak kendi bağlama oluşturmasına olanak tanır.  
   
--   Sistem tarafından sağlanan bir bağlamayı kullanarak, bizim bağlama öğesi içerir. Bu sistem tanımlı bağlamalar sayısı gibi sağlar WCF `BasicHttpBinding`, `NetTcpBinding`, ve `WsHttpBinding`. Her biri bu bağlamaları, iyi tanımlanmış bir profili ile ilişkilidir.  
+- Sistem tarafından sağlanan bir bağlamayı kullanarak, bizim bağlama öğesi içerir. Bu sistem tanımlı bağlamalar sayısı gibi sağlar WCF `BasicHttpBinding`, `NetTcpBinding`, ve `WsHttpBinding`. Her biri bu bağlamaları, iyi tanımlanmış bir profili ile ilişkilidir.  
   
  Örnek profili bağlamasında uygulayan `SampleProfileUdpBinding`, öğesinden türetildiğini <xref:System.ServiceModel.Channels.Binding>. `SampleProfileUdpBinding` İçindeki en fazla dört bağlama öğelerini içeren: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement`, ve `ReliableSessionBindingElement`.  
   

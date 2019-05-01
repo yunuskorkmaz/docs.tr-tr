@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
 ms.openlocfilehash: ee7b0b40d74d908dc4f25372273f852662370df0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037139"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Ertelenmiş içerik (WCF Veri Hizmetleri) yükleme
 Varsayılan olarak, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir sorgunun döndürdüğü veri miktarını sınırlar. Ancak, ilgili varlıkları, disk belleğine alınan yanıt verileri ve gerektiğinde veri hizmetinden ikili veri akışları gibi ek veriler açıkça yükleyebilirsiniz. Bu konu, uygulamanıza böyle ertelenmiş içerik yükleme açıklar.  
@@ -22,14 +22,14 @@ Varsayılan olarak, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 
 ## <a name="related-entities"></a>İlgili varlıklar  
  Bir sorgu çalıştırdığınızda, yalnızca belirtilen varlık kümesindeki varlıklar döndürülür. Örneğin, Northwind verileri hizmeti yönelik bir sorgu döndürdüğünde `Customers` varsayılan olarak ilgili varlıkları `Orders` varlıkları alınmadı, arasında bir ilişki olsa bile `Customers` ve `Orders`. Ayrıca, disk belleği veri hizmeti etkinleştirildiğinde, hizmetten sonraki veri sayfaları açıkça yüklemelisiniz. İlgili varlıkları yükleme için iki yol vardır:  
   
--   **İstekli yükleme**: Kullanabileceğiniz `$expand` sorgu ilişkilendirme varlığı için ilişkili olan varlıkları iade isteği için sorgu seçeneği, istenen sorgu ayarlayın. Kullanım <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> metodunda <xref:System.Data.Services.Client.DataServiceQuery%601> eklemek için `$expand` veri hizmetine gönderilen sorgu seçeneği. Aşağıdaki örnekte olduğu gibi virgülle ayrılarak birden çok ilgili varlık kümeleri isteyebilir. Sorgu tarafından istenen tüm varlıkları tek bir yanıtta döndürülür. Aşağıdaki örnek döndürür `Order_Details` ve `Customers` ile birlikte `Orders` varlık kümesi:  
+- **İstekli yükleme**: Kullanabileceğiniz `$expand` sorgu ilişkilendirme varlığı için ilişkili olan varlıkları iade isteği için sorgu seçeneği, istenen sorgu ayarlayın. Kullanım <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> metodunda <xref:System.Data.Services.Client.DataServiceQuery%601> eklemek için `$expand` veri hizmetine gönderilen sorgu seçeneği. Aşağıdaki örnekte olduğu gibi virgülle ayrılarak birden çok ilgili varlık kümeleri isteyebilir. Sorgu tarafından istenen tüm varlıkları tek bir yanıtta döndürülür. Aşağıdaki örnek döndürür `Order_Details` ve `Customers` ile birlikte `Orders` varlık kümesi:  
   
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#expandorderdetailsspecific)]  
   
      [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 12 kullanarak tek bir sorguda eklenebilir varlık kümeleri sayısını sınırlayan `$expand` sorgu seçeneği.  
   
--   **Açık yükleme**: Çağırabilirsiniz <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> metodunda <xref:System.Data.Services.Client.DataServiceContext> açıkça ilgili varlıkları yükleme örneği. Her çağrı <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> yöntemi, veri hizmeti için ayrı bir istek oluşturur. Aşağıdaki örnek açıkça yükler `Order_Details` için bir `Orders` varlık:  
+- **Açık yükleme**: Çağırabilirsiniz <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> metodunda <xref:System.Data.Services.Client.DataServiceContext> açıkça ilgili varlıkları yükleme örneği. Her çağrı <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> yöntemi, veri hizmeti için ayrı bir istek oluşturur. Aşağıdaki örnek açıkça yükler `Order_Details` için bir `Orders` varlık:  
   
      [!code-csharp[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadrelatedorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadrelatedorderdetailsspecific)]  

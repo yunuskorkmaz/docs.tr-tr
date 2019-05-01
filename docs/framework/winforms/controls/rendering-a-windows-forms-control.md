@@ -11,24 +11,24 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
 ms.openlocfilehash: 8de87e17d1baedccfe18bfded3ccab7ab59f0a09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012483"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Windows Forms Denetimini İşleme
 İşleme görsel bir temsili bir kullanıcının ekranda oluşturma işlemini gösterir. Windows Forms kullanan [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (yeni Windows grafik kitaplığının) işleme için. Erişim sağlayan bir yönetilen sınıflar [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bulunan <xref:System.Drawing?displayProperty=nameWithType> ad alanı ve bunun alt ad boşlukları.  
   
  Aşağıdaki öğeler denetimi işlemede ilgilidir:  
   
--   Taban sınıfı tarafından sağlanan çizim işlevselliği <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+- Taban sınıfı tarafından sağlanan çizim işlevselliği <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
--   Temel öğelerini [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] grafik kitaplığı.  
+- Temel öğelerini [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] grafik kitaplığı.  
   
--   Çizim bölge geometrisi.  
+- Çizim bölge geometrisi.  
   
--   Grafik kaynakları serbest bırakma yordamı.  
+- Grafik kaynakları serbest bırakma yordamı.  
   
 ## <a name="drawing-functionality-provided-by-control"></a>Denetimi tarafından sağlanan işlevselliği çizme  
  Temel sınıf <xref:System.Windows.Forms.Control> aracılığıyla çizim işlevselliği sağlar, <xref:System.Windows.Forms.Control.Paint> olay. Bir denetim oluşturur <xref:System.Windows.Forms.Control.Paint> görünümünü güncelleştirmek gerektiğinde olay. .NET Framework içindeki olaylar hakkında daha fazla bilgi için bkz. [Handling and Raising Events](../../../standard/events/index.md).  

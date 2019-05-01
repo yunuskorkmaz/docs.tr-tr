@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30001
 ms.assetid: 43c1b509-15f9-4e91-bcad-90bcb5f6f191
 ms.openlocfilehash: 1c2b30045b25c1ef6542eff74716e9919ab8af93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013731"
 ---
 # <a name="statement-is-not-valid-in-a-namespace"></a>Deyim ad alanında geçerli değil
 Bir ad alanı düzeyinde deyimi yer alamaz. Ad alanı düzeyinde izin yalnızca modülü, arabirim, sınıf, temsilci, numaralandırma ve yapı bildirimleri bildirimlerdir.  
@@ -21,7 +21,7 @@ Bir ad alanı düzeyinde deyimi yer alamaz. Ad alanı düzeyinde izin yalnızca 
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Deyim, bir modülü, sınıf, arabirim, yapısı, sabit listesi veya temsilci tanımı içinde bir konuma taşıyın.  
+- Deyim, bir modülü, sınıf, arabirim, yapısı, sabit listesi veya temsilci tanımı içinde bir konuma taşıyın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 024b1f3f7e08dc21582789de7f3899e8e44d5e39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041840"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>ICorProfilerCallback::RemotingServerSendingReply Yöntemi
 Profil Oluşturucu işlemi bir uzak yöntem çağırma isteği işlemeyi tamamladıktan ve yanıt bir kanal üzerinden iletilmek üzere olduğunu bildirir.  
@@ -39,11 +39,11 @@ HRESULT RemotingServerSendingReply(
  `pCookie`  
  [in] Sağlanan değerle karşılık gelecek bir GUID işaretçisi [Icorprofilercallback::remotingclientreceivingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) Bu koşullar altında:  
   
--   Uzaktan iletişim GUID tanımlama bilgilerinin etkin olur.  
+- Uzaktan iletişim GUID tanımlama bilgilerinin etkin olur.  
   
--   Kanal ileti iletilirken başarılı olur.  
+- Kanal ileti iletilirken başarılı olur.  
   
--   GUID tanımlama bilgileri istemci tarafı işlemini üzerinde etkindir.  
+- GUID tanımlama bilgileri istemci tarafı işlemini üzerinde etkindir.  
   
  Bu, uzak hizmet çağrıları ve bir mantıksal çağrı yığını oluşturulmasını kolay eşlemeye izin verir.  
   

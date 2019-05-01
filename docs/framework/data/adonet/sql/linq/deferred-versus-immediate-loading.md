@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
 ms.openlocfilehash: ae20dbe557c3cf56a273556c24578056843e9af6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032467"
 ---
 # <a name="deferred-versus-immediate-loading"></a>Ertelenmiş ve Hemen Yükleme Karşılaştırması
 Bir nesne için sorgularken, yalnızca istediğiniz nesneyi gerçekten alın. *İlgili* nesneleri olmayan otomatik olarak getirilen aynı anda. (Daha fazla bilgi için [sorgulama arasında ilişkiler](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Bunları erişme denemesi bunları alır bir istek oluşturur çünkü ilgili nesneler zaten olmayan olgu yüklenmiş göremez.  
@@ -29,9 +29,9 @@ Bir nesne için sorgularken, yalnızca istediğiniz nesneyi gerçekten alın. *�
   
  Gerçekten gerekenleri, aynı zamanda ilgili nesneleri kümesini almak için bir yoldur. Böylece, hiçbir zaman fazla veya az kullanım amacınız için gerekli olandan alınıyor sonuçları bir grafik bölümünü kümesidir. Bu amaçla [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sağlar <xref:System.Data.Linq.DataLoadOptions> için nesne modeli, bölge ve hemen yükleme. Yöntemler şunlardır:  
   
--   <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> Hemen ana hedef ilgili verileri yüklemek için yöntemi.  
+- <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> Hemen ana hedef ilgili verileri yüklemek için yöntemi.  
   
--   <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> Yöntemine filtre nesneleri için belirli bir ilişkinin alınır.  
+- <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> Yöntemine filtre nesneleri için belirli bir ilişkinin alınır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

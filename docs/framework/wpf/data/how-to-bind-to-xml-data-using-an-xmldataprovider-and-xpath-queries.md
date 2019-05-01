@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: f6cd09279cf23d3273e7a4083950a5f42714c8bf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: 3a3df65f0c20cff49f9bd2a8790e8d9ae0032391
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097232"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809585"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Nasıl yapılır: XMLDataProvider ve XPath Sorgularını Kullanarak XML Verilerine Bağlama
 Bu örnek nasıl bağlanacağını gösterir [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] verileri kullanarak bir <xref:System.Windows.Data.XmlDataProvider>.  
@@ -30,19 +30,19 @@ Bu örnek nasıl bağlanacağını gösterir [!INCLUDE[TLA#tla_xml](../../../../
   
  <xref:System.Windows.Controls.ListBox> Bu örneği çalıştırdığınızda aşağıdaki öğeleri gösterir. Bunlar *başlık*s tüm öğelerin altında *Books* ile ya da bir *hisse senedi* değerini "*kullanıma*" veya *numarası* değeri 3 veya daha büyük veya eşittir 8. Dikkat hiçbir *CD* çünkü öğeleri döndürülür <xref:System.Windows.Data.XmlDataProvider.XPath%2A> değerinin ayarlanmış <xref:System.Windows.Data.XmlDataProvider> gösterir, yalnızca *Books* öğeleri ortaya (aslında bir filtre ayarlayarak).  
   
- ![XPath örnek](./media/xpathexample.PNG "XPathExample")  
+ ![XPath Örneğin dört books başlığını gösteren ekran görüntüsü.](./media/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries/xpath-example-listbox-details.png)  
   
  Bu örnekte, bir kitap adları görüntülenir, çünkü <xref:System.Windows.Data.Binding.XPath%2A> , <xref:System.Windows.Controls.TextBlock> bağlama <xref:System.Windows.DataTemplate> ayarlanmış "*başlık*". Gibi bir özniteliğin değerini görüntülemek istiyorsanız *ISBN*, ayarlarsınız <xref:System.Windows.Data.Binding.XPath%2A> değerini "`@ISBN`".  
   
  **XPath** özelliklerinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XmlNode.SelectNodes yöntemi tarafından işlenir. Değiştirebileceğiniz **XPath** farklı sonuçlar elde etmek için sorgular. İşte bazı örnekler için <xref:System.Windows.Data.Binding.XPath%2A> sorgu sınır <xref:System.Windows.Controls.ListBox> önceki örnekte:  
   
--   `XPath="Book[1]"` ilk kitap öğesi eylem ("XML") döndürür. Unutmayın **XPath** dizinleri, 1, 0 bağlıdır.  
+- `XPath="Book[1]"` ilk kitap öğesi eylem ("XML") döndürür. Unutmayın **XPath** dizinleri, 1, 0 bağlıdır.  
   
--   `XPath="Book[@*]"` herhangi bir özniteliği tüm kitap öğelerini döndürür.  
+- `XPath="Book[@*]"` herhangi bir özniteliği tüm kitap öğelerini döndürür.  
   
--   `XPath="Book[last()-1]"` İkinci son kitap öğesi ("Karşınızda Microsoft .NET") döndürür.  
+- `XPath="Book[last()-1]"` İkinci son kitap öğesi ("Karşınızda Microsoft .NET") döndürür.  
   
--   `XPath="*[position()>3]"` ilk 3 hariç tüm kitap öğeleri döndürür.  
+- `XPath="*[position()>3]"` ilk 3 hariç tüm kitap öğeleri döndürür.  
   
  Çalıştırdığınızda bir **XPath** döndürür, sorgu bir <xref:System.Xml.XmlNode> veya XmlNodes listesi. <xref:System.Xml.XmlNode> olan bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] kullanabileceğiniz anlamına gelir, nesne <xref:System.Windows.Data.Binding.Path%2A> özelliğine bağlamak için [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] özellikleri. Önceki örnek yeniden göz önünde bulundurun. Örneğin geri kalanı aynı kalır ve değiştirirseniz <xref:System.Windows.Controls.TextBlock> aşağıdaki bağlama, döndürülen XmlNodes içinde adlarını görürsünüz <xref:System.Windows.Controls.ListBox>. Bu durumda, döndürülen tüm düğümlerin adıdır "*kitap*".  
   

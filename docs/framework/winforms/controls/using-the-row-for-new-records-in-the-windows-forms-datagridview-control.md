@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
 ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009181"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Yeni Kayıtlar için Satır Kullanma
 Kullandığınızda, bir <xref:System.Windows.Forms.DataGridView> uygulamanızdaki verileri düzenlemek için genellikle, kullanıcılarınızın veri deposuna veri yeni satır ekleme olanağı sağlayacak istersiniz. <xref:System.Windows.Forms.DataGridView> Denetimi, bir satır yeni kayıtlar için her zaman son satır gösterilen sağlayarak bu işlevselliği destekler. Kendi satır üst bilgisi olarak bir yıldız işareti (*) simgesiyle işaretlenir. Aşağıdaki bölümlerde yeni kayıtlar için satır programla etkin olduğunda dikkate almanız gereken şeylerden bazıları açıklanmaktadır.  
@@ -29,9 +29,9 @@ Kullandığınızda, bir <xref:System.Windows.Forms.DataGridView> uygulamanızda
 ## <a name="the-rows-collection"></a>Satır koleksiyonu  
  Yeni kayıtlar için satır içerdiği <xref:System.Windows.Forms.DataGridView> denetimin <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyon ancak davranışını farklı iki yönden:  
   
--   Yeni kayıtlar için satır alanından kaldırılamaz <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyon programlı olarak. Bir <xref:System.InvalidOperationException> bu denenirse oluşturulur. Kullanıcı ayrıca yeni kayıtlar için satır silinemiyor. <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> Yöntemi bu satırdan kaldırmaz <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyonu.  
+- Yeni kayıtlar için satır alanından kaldırılamaz <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyon programlı olarak. Bir <xref:System.InvalidOperationException> bu denenirse oluşturulur. Kullanıcı ayrıca yeni kayıtlar için satır silinemiyor. <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> Yöntemi bu satırdan kaldırmaz <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyonu.  
   
--   Hiçbir satır, yeni kayıtlar için satır sonra eklenebilir. Bir <xref:System.InvalidOperationException> bu denenirse tetiklenir. Sonuç olarak yeni kayıtlar için her zaman son satıra satırdır <xref:System.Windows.Forms.DataGridView> denetimi. Yöntemlerde <xref:System.Windows.Forms.DataGridViewRowCollection> satır ekleme —<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, ve <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— tüm çağrı ekleme yöntemleri dahili olarak yeni kayıtlar için satır olduğunda.  
+- Hiçbir satır, yeni kayıtlar için satır sonra eklenebilir. Bir <xref:System.InvalidOperationException> bu denenirse tetiklenir. Sonuç olarak yeni kayıtlar için her zaman son satıra satırdır <xref:System.Windows.Forms.DataGridView> denetimi. Yöntemlerde <xref:System.Windows.Forms.DataGridViewRowCollection> satır ekleme —<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, ve <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— tüm çağrı ekleme yöntemleri dahili olarak yeni kayıtlar için satır olduğunda.  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>Yeni kayıtlar için satır Visual özelleştirme  
  Yeni kayıtlar için satır oluşturulduğunda tarafından belirtilen satır bağlı olduğu <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> özelliği. Bu satır için belirtilmeyen herhangi bir hücre stilleri, diğer özelliklerden devralınır. Hücre stili devralma hakkında daha fazla bilgi için bkz. [Windows Forms DataGridView denetimindeki hücre stilleri](cell-styles-in-the-windows-forms-datagridview-control.md).  

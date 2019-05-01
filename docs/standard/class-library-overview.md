@@ -40,11 +40,11 @@ ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025970"
 ---
 # <a name="net-class-library-overview"></a>.NET sınıf kitaplığına genel bakış
 
@@ -52,17 +52,17 @@ ms.locfileid: "56970577"
   
  .NET, .NET uygulamalarının, bileşenlerinin ve denetimlerinin temel türleridir. .NET uygulamaları, şu işlevleri gerçekleştirmesini türleri şunlardır:  
   
--   Temel veri türlerini ve özel durumları temsil eder.  
+- Temel veri türlerini ve özel durumları temsil eder.  
   
--   Veri yapıları kapsüller.  
+- Veri yapıları kapsüller.  
   
--   Perform I/O.  
+- Perform I/O.  
   
--   Yüklenen türleri hakkında bilgi erişim.  
+- Yüklenen türleri hakkında bilgi erişim.  
   
--   .NET Framework güvenlik denetimlerinden çağırın.  
+- .NET Framework güvenlik denetimlerinden çağırın.  
   
--   Veri erişimi, zengin istemci tarafı GUI ve sunucu tarafından denetlenen, istemci tarafı GUI sağlar.  
+- Veri erişimi, zengin istemci tarafı GUI ve sunucu tarafından denetlenen, istemci tarafı GUI sağlar.  
   
  .NET zengin bir soyut ve somut (soyut olmayan) sınıflarının yanı sıra arabirimleri sağlar. Kendi sınıflarınızı aktarımlar, olduğu gibi veya pek çok durumda somut sınıflar'ı kullanın. Bir arabirimin işlevselliğini kullanmak için bir arabirimi uygulayan bir sınıf oluşturabilir veya arabirimi uygulayan .NET sınıflarının birinden bir sınıf türetin.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "56970577"
   
  Temel türler .NET sağlar, kısaca her türünü tanımlar ve karşılık gelen türü Visual Basic'te gösterir, aşağıdaki tabloda C#, C++ ve F#.  
   
-|Kategori|Sınıf adı|Açıklama|Visual Basic veri türü|C# veri türü|C + +/ CLI veri türü|F#veri türü|  
+|Kategori|Sınıf adı|Açıklama|Visual Basic veri türü|C# veri türü|C++/ CLI veri türü|F#veri türü|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Tamsayı|<xref:System.Byte>|8 bitlik işaretsiz tamsayı.|**Bayt**|**byte**|**İmzasız char**|**byte**|  
 ||<xref:System.SByte>|Bir 8 bit işaretli tamsayı.<br /><br /> CLS uyumlu değil.|**SByte**|**sbyte**|**char**<br /> -veya-<br /> **İmzalı** **char**|**sbyte**|  
@@ -104,7 +104,7 @@ ms.locfileid: "56970577"
 ||<xref:System.IntPtr>|Temel alınan Platformu (32-bit platformlarda bir 32-bit değeri) ve 64-bit değeri bir 64-bit platformlarda boyutu bağımlı bir işaretli tamsayı.|**IntPtr**<br /><br /> Yerleşik tür yok.|**IntPtr**<br /><br /> Yerleşik tür yok.|**IntPtr**<br /><br /> Yerleşik tür yok.|**unativeint**|  
 ||<xref:System.UIntPtr>|Temel alınan Platformu (32-bit platformlarda bir 32-bit değeri) ve 64-bit değeri bir 64-bit platformlarda boyutu bağlıdır, işaretsiz bir tamsayı.<br /><br /> CLS uyumlu değil.|**UIntPtr**<br /><br /> Yerleşik tür yok.|**UIntPtr**<br /><br /> Yerleşik tür yok.|**UIntPtr**<br /><br /> Yerleşik tür yok.|**unativeint**|  
 ||<xref:System.Object>|Nesne hiyerarşisi kökü.|**Nesne**|**object**|**Nesne ^**|**obj**|  
-||<xref:System.String>|Unicode karakterden oluşan bir sabit, sabit uzunluklu dize.|**dize**|**string**|**String ^**|**string**|  
+||<xref:System.String>|Unicode karakterden oluşan bir sabit, sabit uzunluklu dize.|**Dize**|**string**|**String ^**|**string**|  
   
  Temel veri türlerinin yanı sıra <xref:System> ad alanı, uygulama etki alanları ve atık toplayıcı gibi temel çalışma zamanı kavramları uğraşmanız sınıfları için özel durumları işlemek sınıflar arasında değişen 100'den fazla sınıflar içerir. <xref:System> Ad alanında ayrıca birçok ikinci düzey ad alanları bulunur.  
   

@@ -1,5 +1,5 @@
 ---
-title: DOM genişletme
+title: DOM Genişletme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ced76a0bb28a91824676f496b28143a921b987de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62027257"
 ---
-# <a name="extending-the-dom"></a>DOM genişletme
+# <a name="extending-the-dom"></a>DOM Genişletme
 
 Microsoft .NET Framework XML belge nesne modeli (DOM) uygulaması sağlayan bir temel sınıf kümesi içerir. <xref:System.Xml.XmlNode>Ve onun türetilmiş sınıfları, yöntemleri ve gidin olanak tanıyan özellikler sorgulamak ve içeriği ve yapısı bir XML belgesi değiştirme sağlar.
 

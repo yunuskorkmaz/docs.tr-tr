@@ -3,34 +3,34 @@ title: Yönlendirme Hizmeti
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
 ms.openlocfilehash: 905c84d801a27e588e2c539f987d6280aae7b994
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991062"
 ---
 # <a name="routing-service"></a>Yönlendirme Hizmeti
 Yönlendirme hizmeti bir ileti yönlendirici işlevi gören genel bir SOAP aracıdır. Yönlendirme hizmeti temel işlevlerini iletisini üst bilgi veya ileti gövdesi içindeki bir değere göre bir istemci uç noktası iletilmesi bir ileti veren ileti içeriği temel iletileri yönlendirmek yeteneğidir.  
   
  <xref:System.ServiceModel.Routing.RoutingService> Windows Communication Foundation (WCF) hizmet olarak uygulanan <xref:System.ServiceModel.Routing> ad alanı. İleti içeriği'da bir veya daha fazla istemci uç noktalarına her ileti yol tabanlı ve yönlendirme hizmeti iletilerini bir veya daha fazla hizmet uç noktalarını kullanıma sunar. Hizmet aşağıdaki özellikleri sağlar:  
   
--   İçerik tabanlı yönlendirme  
+- İçerik tabanlı yönlendirme  
   
-    -   Hizmet toplama  
+    - Hizmet toplama  
   
-    -   Hizmet sürümü oluşturma  
+    - Hizmet sürümü oluşturma  
   
-    -   Öncelikli yönlendirme  
+    - Öncelikli yönlendirme  
   
-    -   Dinamik yapılandırma  
+    - Dinamik yapılandırma  
   
--   Bağlantı protokolü  
+- Bağlantı protokolü  
   
--   SOAP işleme  
+- SOAP işleme  
   
--   Gelişmiş hata işleme  
+- Gelişmiş hata işleme  
   
--   Yedekleme uç noktaları  
+- Yedekleme uç noktaları  
   
  Bir veya daha fazla bu hedeflere gerçekleştirir aracı bir hizmet oluşturmak mümkün olsa da, genellikle gibi bir uygulama belirli bir senaryoyu ya da çözüm bağlıdır ve kolayca yeni uygulamalar için uygulanamaz.  
   
@@ -48,13 +48,13 @@ Yönlendirme hizmeti bir ileti yönlendirici işlevi gören genel bir SOAP arac�
   
  Aracılığıyla filtre tablolar halinde gruplandırmayı ileti filtreleri yönlendirme mantığı birden çok yönlendirme senaryoları gibi işlemeye izin veren oluşturulabilir:  
   
--   Hizmet toplama  
+- Hizmet toplama  
   
--   Hizmet sürümü oluşturma  
+- Hizmet sürümü oluşturma  
   
--   Öncelikli yönlendirme  
+- Öncelikli yönlendirme  
   
--   Dinamik yapılandırma  
+- Dinamik yapılandırma  
   
  İleti filtreleri ve filtre tabloları hakkında daha fazla bilgi için bkz. [yönlendirme giriş](../../../../docs/framework/wcf/feature-details/routing-introduction.md) ve [ileti filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
@@ -97,13 +97,13 @@ Yönlendirme hizmeti bir ileti yönlendirici işlevi gören genel bir SOAP arac�
 ## <a name="streaming"></a>Akış  
  Akış desteklemek için bağlama ayarlarsanız, yönlendirme hizmeti başarıyla iletileri akışını yapabilirsiniz.  Ancak, bazı koşullar altında iletileri arabelleğe gerekebilir vardır:  
   
--   Çok noktaya yayın (ek ileti kopya oluşturmak için arabellek)  
+- Çok noktaya yayın (ek ileti kopya oluşturmak için arabellek)  
   
--   Yük devretme (arabellek yedek gönderilecek iletinin gerekiyor durumunda)  
+- Yük devretme (arabellek yedek gönderilecek iletinin gerekiyor durumunda)  
   
--   System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly false (filtreler gövdesi inceleyebilmeniz adına bir MessageBuffer ile MessageFilterTable sunmak için arabellek)  
+- System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly false (filtreler gövdesi inceleyebilmeniz adına bir MessageBuffer ile MessageFilterTable sunmak için arabellek)  
   
--   Dinamik yapılandırma  
+- Dinamik yapılandırma  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

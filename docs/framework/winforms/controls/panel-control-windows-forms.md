@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Panel control [Windows Forms]
 ms.assetid: 37c69803-5084-4347-b035-54cfbabdc310
 ms.openlocfilehash: 752f64b2430c1fc7df4f3fd724fc12fe535ecb70
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012665"
 ---
 # <a name="panel-control-windows-forms"></a>Panel Denetimi (Windows Forms)
 Windows Forms `Panel` denetimleri, diğer denetimleri için tanımlanabilen bir gruplama sağlamak için kullanılır. Genellikle, bir form işlevi tarafından alt bölümlere ayırmak için panoları kullanın. `Panel` Denetim benzer <xref:System.Windows.Forms.GroupBox> denetler; ancak, yalnızca `Panel` denetimi, kaydırma çubukları sahip olabilir ve yalnızca <xref:System.Windows.Forms.GroupBox> denetimi, bir başlık görüntüler.  

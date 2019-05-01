@@ -1,15 +1,15 @@
 ---
-title: Kısıtlanmış paralel ForEach
+title: Kısıtlanmış Paralel ForEach
 ms.date: 03/30/2017
 ms.assetid: f2855b5f-e9a7-433d-96a4-40fc31025215
 ms.openlocfilehash: fd30a1ac587359a054a273b3deca2e9bb8bc2798
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004867"
 ---
-# <a name="throttled-parallel-foreach"></a>Kısıtlanmış paralel ForEach
+# <a name="throttled-parallel-foreach"></a>Kısıtlanmış Paralel ForEach
 
 `ThrottleParallelForEach` Etkinlik benzer <xref:System.Activities.Statements.ParallelForEach%601> etkinliği ile bir özel durum olan ayarlamaya olanak tanır eşzamanlılık faktörü yürütmek için eşzamanlı dalların sayısını sınırlamak için. `ThrottleParallelForEach` Etkinlik türetilir <xref:System.Activities.NativeActivity>, diğer etkinlikleri (alt) zamanlamak gereken ve bu yalnızca üzerinden erişilebilir olduğundan <xref:System.Activities.NativeActivityContext> sınıfı.
 

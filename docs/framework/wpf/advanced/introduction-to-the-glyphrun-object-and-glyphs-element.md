@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
 ms.openlocfilehash: 0e5ec2b89f015c7e061b59fea755eb368f1ac7a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031310"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>GlyphRun Nesnesi ve Karakter Öğesine Giriş
 Bu konu başlığı altında açıklanır <xref:System.Windows.Media.GlyphRun> nesne ve <xref:System.Windows.Documents.Glyphs> öğesi.  
@@ -27,13 +27,13 @@ Bu konu başlığı altında açıklanır <xref:System.Windows.Media.GlyphRun> n
   
 2. Yazdırma senaryoları.  
   
-    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] bir cihaz yazıcı dili olarak.  
+    - [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] bir cihaz yazıcı dili olarak.  
   
-    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
+    - [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
   
-    -   Çıktı, önceki yazıcı sürücülerini [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] sabit biçimde uygulamalar.  
+    - Çıktı, önceki yazıcı sürücülerini [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] sabit biçimde uygulamalar.  
   
-    -   Yazdırma Biriktiricisi biçimi.  
+    - Yazdırma Biriktiricisi biçimi.  
   
 3. Önceki sürümlerini istemciler dahil olmak üzere sabit biçimli belge gösterimi [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve diğer bilgi işlem cihazları.  
   
@@ -67,15 +67,15 @@ Bu konu başlığı altında açıklanır <xref:System.Windows.Media.GlyphRun> n
 ### <a name="indices-property"></a>Dizinleri özelliği  
  <xref:System.Windows.Documents.Glyphs.Indices%2A> Özelliği karakter belirtimleri dizesidir. Glyphs dizisini tek bir küme oluşturur. Burada, kümedeki ilk karakter belirtimi kaç karakter belirtimi ve kümeyi oluşturmak için kaç tane kod noktaları birleştirmek gelmelidir. <xref:System.Windows.Documents.Glyphs.Indices%2A> Özelliği bir dize içinde aşağıdaki özellikleri toplar.  
   
--   Simge dizinleri  
+- Simge dizinleri  
   
--   Karakter öncelikli genişlikler  
+- Karakter öncelikli genişlikler  
   
--   Karakter eki vektörlerini birleştirme  
+- Karakter eki vektörlerini birleştirme  
   
--   Glif kod noktaları küme eşleme  
+- Glif kod noktaları küme eşleme  
   
--   Glif bayrakları  
+- Glif bayrakları  
   
  Her karakter belirtimi aşağıdaki biçime sahiptir.  
   

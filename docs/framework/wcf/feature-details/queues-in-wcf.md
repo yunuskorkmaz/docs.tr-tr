@@ -5,22 +5,22 @@ helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
 ms.openlocfilehash: e28c91a8cc1798a4d0cd690f72e503b687af0108
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046456"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation'da Kuyruklar
 Bu bölümdeki konular, kuyruklar için Windows Communication Foundation (WCF) desteği açıklanmaktadır. WCF yararlanarak Microsoft Message (daha önce MSMQ da bilinir) Queuing tarafından bir aktarım olarak queuing için destek sağlar ve aşağıdaki senaryolara olanak tanır:  
   
--   Gevşek bağlantılı uygulamalar. Gönderen uygulamaların, kuyruklara alıcı uygulamanın iletiyi işlemek kullanılabilir olup olmadığını bilmek gerek kalmadan iletileri gönderebilir. Kuyruğa alma uygulamaları iletileri ne kadar hızlı işleyebilir bağlı olmayan bir hızda kuyruğa ileti göndermek bir gönderme uygulaması sağlayan işleme bağımsızlığı sağlar. Bir kuyruğa ileti göndermek için ileti işleme sıkıca değil, genel sistem kullanılabilirliği artırır.  
+- Gevşek bağlantılı uygulamalar. Gönderen uygulamaların, kuyruklara alıcı uygulamanın iletiyi işlemek kullanılabilir olup olmadığını bilmek gerek kalmadan iletileri gönderebilir. Kuyruğa alma uygulamaları iletileri ne kadar hızlı işleyebilir bağlı olmayan bir hızda kuyruğa ileti göndermek bir gönderme uygulaması sağlayan işleme bağımsızlığı sağlar. Bir kuyruğa ileti göndermek için ileti işleme sıkıca değil, genel sistem kullanılabilirliği artırır.  
   
--   Hata Yalıtımı. Gönderme ve ileti kuyruğa alma uygulamaları birbirini etkilemeden başarısız olabilir. Örneğin, alıcı uygulama başarısız olursa, kuyruğa ileti göndermek uygulama göndermeye devam edebilirsiniz. Alıcı yeniden sakınca yoktur, bu kuyruktan iletileri işleyebilir. Hata yalıtımı, genel sistem güvenilirliğini ve kullanılabilirliğini artırır.  
+- Hata Yalıtımı. Gönderme ve ileti kuyruğa alma uygulamaları birbirini etkilemeden başarısız olabilir. Örneğin, alıcı uygulama başarısız olursa, kuyruğa ileti göndermek uygulama göndermeye devam edebilirsiniz. Alıcı yeniden sakınca yoktur, bu kuyruktan iletileri işleyebilir. Hata yalıtımı, genel sistem güvenilirliğini ve kullanılabilirliğini artırır.  
   
--   Yük Dengeleme. Gönderen uygulamaların alma uygulamaları ile ileti sık zora sokar. Bir alıcı kısası olmaması eşleşmeyen ileti üretim ve tüketim ücretleri kuyruklar yönetebilirsiniz.  
+- Yük Dengeleme. Gönderen uygulamaların alma uygulamaları ile ileti sık zora sokar. Bir alıcı kısası olmaması eşleşmeyen ileti üretim ve tüketim ücretleri kuyruklar yönetebilirsiniz.  
   
--   Bağlantısı kesilmiş işlemler. Gönderme, alma ve işleme gibi yüksek Gecikmeli ağlar veya sınırlı kullanılabilirlik ağlar üzerinden mobil cihazlar söz konusu olduğunda iletişim kaybedebilir. Kuyruklar, bu işlemler devam etmek bile uç noktaları ne zaman kesilir izin verin. Bağlantı kurulduğunda, alıcı uygulamasına iletileri kuyruğa gönderir.  
+- Bağlantısı kesilmiş işlemler. Gönderme, alma ve işleme gibi yüksek Gecikmeli ağlar veya sınırlı kullanılabilirlik ağlar üzerinden mobil cihazlar söz konusu olduğunda iletişim kaybedebilir. Kuyruklar, bu işlemler devam etmek bile uç noktaları ne zaman kesilir izin verin. Bağlantı kurulduğunda, alıcı uygulamasına iletileri kuyruğa gönderir.  
   
  WCF uygulaması kuyrukları özelliği kullanmak için standart bağlamaları birini kullanabilirsiniz veya standart bağlamaları birini gereksinimlerinize uygun değil, özel bir bağlama oluşturabilirsiniz. İlgili standart bağlamaları ve bir seçim yapma hakkında daha fazla bilgi için bkz: [nasıl yapılır: WCF uç noktaları ile mesaj alışverişi ve ileti kuyruğa alma uygulamaları](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Özel bağlamalar oluşturma hakkında daha fazla bilgi için bkz. [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

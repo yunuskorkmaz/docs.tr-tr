@@ -6,11 +6,11 @@ helpviewer_keywords:
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
 ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032025"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF Genel Bakışında Çift Yönlü Özellikler
 Herhangi diğer geliştirme platformu, farklı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çift yönlü içeriği hızlı geliştirilmesini destekleyen birçok özellik vardır, örneğin, verileri karma soldan sağa ve için sağ aynı belgede sol. Aynı anda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Arapça ve kullanıcıların konuşma İbranice gibi çift yönlü özellikler ihtiyaç duyan kullanıcılar için mükemmel bir deneyim oluşturur.  
@@ -166,11 +166,11 @@ Herhangi diğer geliştirme platformu, farklı [!INCLUDE[TLA2#tla_winclient](../
   
  Bu özellik, sayılar için kültür nasıl belirlendiğini belirtir. Bu üç birini alır <xref:System.Windows.Media.NumberCultureSource> sabit listesi değerleri.  
   
--   Geçersiz kıl: Sayı kültüre ait olduğu <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> özelliği.  
+- Geçersiz kıl: Sayı kültüre ait olduğu <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> özelliği.  
   
--   Metin: Çalıştırma metin kültürünü sayı kültürdür. Biçimlendirme içinde bu olacaktır `xml:lang`, veya diğer adıyla `Language` özelliği (<xref:System.Windows.FrameworkElement.Language%2A> veya <xref:System.Windows.FrameworkContentElement.Language%2A>). Ayrıca, türetilen sınıflar için varsayılan olarak etkin <xref:System.Windows.FrameworkContentElement>. Bu tür sınıflar içeren <xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>, <xref:System.Windows.Documents.Table?displayProperty=nameWithType>, <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType> ve benzeri.  
+- Metin: Çalıştırma metin kültürünü sayı kültürdür. Biçimlendirme içinde bu olacaktır `xml:lang`, veya diğer adıyla `Language` özelliği (<xref:System.Windows.FrameworkElement.Language%2A> veya <xref:System.Windows.FrameworkContentElement.Language%2A>). Ayrıca, türetilen sınıflar için varsayılan olarak etkin <xref:System.Windows.FrameworkContentElement>. Bu tür sınıflar içeren <xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>, <xref:System.Windows.Documents.Table?displayProperty=nameWithType>, <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType> ve benzeri.  
   
--   Kullanıcı: Geçerli iş parçacığı kültürünü sayı kültürdür. Bu özellik tüm alt sınıflar için varsayılan değer <xref:System.Windows.FrameworkElement> gibi <xref:System.Windows.Controls.Page>, <xref:System.Windows.Window> ve <xref:System.Windows.Controls.TextBlock>.  
+- Kullanıcı: Geçerli iş parçacığı kültürünü sayı kültürdür. Bu özellik tüm alt sınıflar için varsayılan değer <xref:System.Windows.FrameworkElement> gibi <xref:System.Windows.Controls.Page>, <xref:System.Windows.Window> ve <xref:System.Windows.Controls.TextBlock>.  
   
  **CultureOverride**:  
   
@@ -180,15 +180,15 @@ Herhangi diğer geliştirme platformu, farklı [!INCLUDE[TLA2#tla_winclient](../
   
  Bu özellik gerçekleştirmek için sayı değiştirme türünü belirtir. Aşağıdakilerden birini alır <xref:System.Windows.Media.NumberSubstitutionMethod> sabit listesi değerleri.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Değiştirme yöntemi sayı kültürün üzerinde belirlenir <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> özelliği. Bu varsayılandır.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Değiştirme yöntemi sayı kültürün üzerinde belirlenir <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> özelliği. Bu varsayılandır.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Sayı kültür Arapça veya Farsça bir kültür ise, rakamları içeriğine bağlı olduğunu belirtir.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Sayı kültür Arapça veya Farsça bir kültür ise, rakamları içeriğine bağlı olduğunu belirtir.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.European>: Sayıları, her zaman Avrupa basamaklı olarak işlenir.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.European>: Sayıları, her zaman Avrupa basamaklı olarak işlenir.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>: Sayılar, kültürün tarafından belirtilen sayı kültür için Ulusal basamak kullanarak işlenir <xref:System.Globalization.CultureInfo.NumberFormat%2A>.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>: Sayılar, kültürün tarafından belirtilen sayı kültür için Ulusal basamak kullanarak işlenir <xref:System.Globalization.CultureInfo.NumberFormat%2A>.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: Sayılar, sayı kültürü için geleneksel basamak kullanarak işlenir. Çoğu kültürde için aynı budur <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>. Ancak, <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> sonuçlanıyor Latin basamak bazı Arapça kültürler için bu değer tüm kültürler için kullanılabilecek Arapça Arapça basamaklı sonucunu.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: Sayılar, sayı kültürü için geleneksel basamak kullanarak işlenir. Çoğu kültürde için aynı budur <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>. Ancak, <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> sonuçlanıyor Latin basamak bazı Arapça kültürler için bu değer tüm kültürler için kullanılabilecek Arapça Arapça basamaklı sonucunu.  
   
  Bu değerleri bir çift yönlü içerik geliştirici için anlamı nedir? Çoğu durumda, geliştirici yalnızca tanımlamanız gerekebilir <xref:System.Windows.FlowDirection> ve her metin dili [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğesi, örneğin `Language="ar-SA"` ve <xref:System.Windows.Media.NumberSubstitution> mantığının doğru göre numaraları görüntüleme üstlenir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Aşağıdaki örnek Arapça ve İngilizce numaralarını kullanarak gösterir bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Arapça bir sürümünde çalışan uygulama [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
   

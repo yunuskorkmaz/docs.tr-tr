@@ -1,5 +1,5 @@
 ---
-title: XPathNavigator kullanarak XML verilerini ayıklama
+title: XPathNavigator Kullanarak XML Verilerini Ayıklama
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f25fa9706d43dd69da233e474127543dfdf83fb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62027231"
 ---
-# <a name="extract-xml-data-using-xpathnavigator"></a>XPathNavigator kullanarak XML verilerini ayıklama
+# <a name="extract-xml-data-using-xpathnavigator"></a>XPathNavigator Kullanarak XML Verilerini Ayıklama
 Microsoft .NET Framework XML belgesinde temsil etmek için birkaç farklı yolu vardır. Bu kullanarak içerir bir <xref:System.String>, kullanarak veya <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument>, veya <xref:System.Xml.XPath.XPathDocument> sınıfları. Bu bir XML belgesi farklı temsilleri arasında taşıma kolaylaştırmak için <xref:System.Xml.XPath.XPathNavigator> XML olarak ayıklanmasında sınıfı bir dizi yöntem ve özellik sağlar bir <xref:System.String>, <xref:System.Xml.XmlReader> nesne veya <xref:System.Xml.XmlWriter> nesne.  
   
 ## <a name="convert-an-xpathnavigator-to-a-string"></a>Bir XPathNavigator bir dizeye Dönüştür  

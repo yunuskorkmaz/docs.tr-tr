@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
 ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62036237"
 ---
 # <a name="localization-attributes-and-comments"></a>Yerelleştirme Öznitelikleri ve Yorumlar
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Yerelleştirme açıklamalarını olan özellikleri içinde [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kaynak kodu, kurallar ve ipuçları için yerelleştirme sağlamak için geliştiriciler tarafından sağlanan. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Yerelleştirme açıklamalarını iki bilgi kümesi içerir: Yerelleştirme öznitelikleri ve serbest biçimli yerelleştirme yorumlar. Yerelleştirme öznitelikleri tarafından kullanılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerelleştirme hangi kaynakların yerelleştirilmesi belirtmek için API. Serbest biçimli, uygulama yazarı eklemek isteyen herhangi bir bilgi yorumlardır.  
@@ -27,11 +27,11 @@ ms.locfileid: "59301860"
   
 3. Atanabilecek değerleri şunlardır:  
   
-    -   **Hiçbiri** -hem açıklamalarını ve özniteliklerini derleme içinde kalır, hem de ayrı bir dosya oluşturulur.  
+    - **Hiçbiri** -hem açıklamalarını ve özniteliklerini derleme içinde kalır, hem de ayrı bir dosya oluşturulur.  
   
-    -   **CommentsOnly** - derleme yalnızca açıklamalardan ve bunları ayrı LocFile içine yerleştirir.  
+    - **CommentsOnly** - derleme yalnızca açıklamalardan ve bunları ayrı LocFile içine yerleştirir.  
   
-    -   **Tüm** - açıklamaları hem de derleme öznitelikleri ve bunları iki ayrı bir LocFile içine yerleştirir.  
+    - **Tüm** - açıklamaları hem de derleme öznitelikleri ve bunları iki ayrı bir LocFile içine yerleştirir.  
   
 4. Gelen yerelleştirilebilir kaynaklar ayıklanırken [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)], Yerelleştirme öznitelikleri tarafından uymaya [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] yerelleştirme API'si.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "59301860"
   
  Öznitelik üç tür vardır:  
   
--   **Kategori**. Bu değer bir yerelleştiriciye aracından değiştirilebilir olup olmayacağını belirtir. Bkz. <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
+- **Kategori**. Bu değer bir yerelleştiriciye aracından değiştirilebilir olup olmayacağını belirtir. Bkz. <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
   
--   **Okunabilirlik**. Bu bir yerelleştiriciye aracı gerekip gerekmediğini belirten bir değer okuma (ve görüntüleme). Bkz. <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
+- **Okunabilirlik**. Bu bir yerelleştiriciye aracı gerekip gerekmediğini belirten bir değer okuma (ve görüntüleme). Bkz. <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
   
--   **Modifiability'e göre**. Bu, bir yerelleştiriciye aracı değiştirilmesi için bir değer izin verip vermediğini belirtir. Bkz. <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
+- **Modifiability'e göre**. Bu, bir yerelleştiriciye aracı değiştirilmesi için bir değer izin verip vermediğini belirtir. Bkz. <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
   
  Bu öznitelikler, boşlukla ayrılmış herhangi bir sırada belirtilebilir. Yinelenen öznitelikleri belirtilmesi durumunda, son özniteliğini eski olanları geçersiz kılar. Örneğin, Localization.Attributes son değeri olduğundan "Değiştirilemeyen değiştirilebilir" kümeleri Modifiability'i Modifiable =.  
   

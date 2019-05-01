@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
 ms.openlocfilehash: a5a32220ad1f638bf2e93051e9b436d8270aec2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039623"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Bir Hizmetin Kimliğini Kimlik Doğrulama için Geçersiz Kılma
 Genellikle, istemci kimlik bilgisi türü seçiminde kimlik hizmeti metaveri türünü belirler. çünkü bir hizmette kimlik ayarlamak gerekmez. Örneğin, aşağıdaki yapılandırma kodunu kullanır [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) öğesi ve kümelerini `clientCredentialType` Windows için özniteliği.  
@@ -27,24 +27,24 @@ Genellikle, istemci kimlik bilgisi türü seçiminde kimlik hizmeti metaveri tü
 > [!NOTE]
 >  Anlaşma olmadan Windows kimlik bilgisi türü kullanmak için hizmetin kullanıcı hesabını Active Directory etki alanı ile kayıtlı SPN erişimi olmalıdır. Bunu aşağıdaki yöntemlerle yapabilirsiniz:  
   
--   NetworkService veya LocalSystem hesabı hizmetinizi çalıştırmak için kullanın. Bu hesapların makinenin Active Directory etki alanına katıldığında kurulur SPN makineye erişimi olduğundan, WCF uygun SPN öğe içinde hizmet uç noktası hizmetin meta verilerinde (WSDL) otomatik olarak oluşturur.  
+- NetworkService veya LocalSystem hesabı hizmetinizi çalıştırmak için kullanın. Bu hesapların makinenin Active Directory etki alanına katıldığında kurulur SPN makineye erişimi olduğundan, WCF uygun SPN öğe içinde hizmet uç noktası hizmetin meta verilerinde (WSDL) otomatik olarak oluşturur.  
   
--   Hizmetinizi çalıştırmak için rastgele bir Active Directory etki alanı hesabı kullanın. Bu durumda, Setspn.exe yardımcı programı aracı kullanarak bunu yapabilirsiniz, etki alanı hesabı için bir SPN oluşturmak. Hizmet hesabı için SPN oluşturduğunuzda, WCF meta verilerini (WSDL) aracılığıyla hizmetin istemciler söz konusu SPN yayımlamak için yapılandırın. Bu uç nokta kimliğini ortaya çıkarılan uç noktası için bir uygulama yapılandırma dosyası veya kod üzerinden ayarlayarak yapılır.  
+- Hizmetinizi çalıştırmak için rastgele bir Active Directory etki alanı hesabı kullanın. Bu durumda, Setspn.exe yardımcı programı aracı kullanarak bunu yapabilirsiniz, etki alanı hesabı için bir SPN oluşturmak. Hizmet hesabı için SPN oluşturduğunuzda, WCF meta verilerini (WSDL) aracılığıyla hizmetin istemciler söz konusu SPN yayımlamak için yapılandırın. Bu uç nokta kimliğini ortaya çıkarılan uç noktası için bir uygulama yapılandırma dosyası veya kod üzerinden ayarlayarak yapılır.  
   
  SPN hakkında daha fazla bilgi, Kerberos protokolü ve Active Directory için bkz. [Kerberos teknik ek Windows için](https://go.microsoft.com/fwlink/?LinkId=88330).  
   
 ### <a name="when-spn-or-upn-equals-the-empty-string"></a>Boş bir dize zaman SPN veya UPN eşittir  
  SPN veya UPN boş bir dize eşit ayarlarsanız pek çok farklı, kullanılan güvenlik düzeyini ve kimlik doğrulaması moduna bağlı olarak gerçekleşir:  
   
--   Aktarım düzeyi güvenlik kullanıyorsanız, NT LanMan (NTLM) kimlik doğrulaması seçilir.  
+- Aktarım düzeyi güvenlik kullanıyorsanız, NT LanMan (NTLM) kimlik doğrulaması seçilir.  
   
--   İleti düzeyi güvenliği kullanıyorsanız, kimlik doğrulaması, kimlik doğrulaması moduna bağlı olarak başarısız olabilir:  
+- İleti düzeyi güvenliği kullanıyorsanız, kimlik doğrulaması, kimlik doğrulaması moduna bağlı olarak başarısız olabilir:  
   
--   Kullanıyorsanız `spnego` modu ve `AllowNtlm` özniteliği `false`, kimlik doğrulaması başarısız.  
+- Kullanıyorsanız `spnego` modu ve `AllowNtlm` özniteliği `false`, kimlik doğrulaması başarısız.  
   
--   Kullanıyorsanız `spnego` modu ve `AllowNtlm` özniteliği `true`, kimlik doğrulama başarısız olursa, UPN boşsa, ancak SPN boşsa başarılı olur.  
+- Kullanıyorsanız `spnego` modu ve `AllowNtlm` özniteliği `true`, kimlik doğrulama başarısız olursa, UPN boşsa, ancak SPN boşsa başarılı olur.  
   
--   Kullanıyorsanız (diğer adıyla "kesin") doğrudan Kerberos, kimlik doğrulaması başarısız olur.  
+- Kullanıyorsanız (diğer adıyla "kesin") doğrudan Kerberos, kimlik doğrulaması başarısız olur.  
   
 ### <a name="using-the-identity-element-in-configuration"></a>Kullanarak \<kimlik > yapılandırma öğesi  
  Sertifika için daha önce gösterilen bağlamasında istemci kimlik bilgileri türünü değiştirirseniz`,` oluşturulan WSDL seri hale getirilmiş bir Base64 içeriyorsa aşağıdaki kodda gösterildiği gibi kimlik değeri için X.509 sertifikası. Windows dışındaki tüm istemci kimlik bilgisi türleri için varsayılan değer budur.  

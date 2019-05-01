@@ -5,11 +5,11 @@ helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
 ms.openlocfilehash: 0fba0b8814597f58018c4c5feba85082ef035e1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031323"
 ---
 # <a name="typography-in-wpf"></a>WPF'de Tipografi
 Bu konu, ana tipografik özelliklerini tanıtır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Geliştirilmiş kalitesini ve metin işleme performansını bu özellikler [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipografi destek, Gelişmiş uluslararası metin yazı tipi desteği geliştirilmiştir ve yeni metin uygulama programlama arabirimleri (API).  
@@ -45,39 +45,39 @@ ClearType y yönünde düzgünleştirme ile metin
 ## <a name="enhanced-international-text-support"></a>Gelişmiş uluslararası metin desteği  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aşağıdaki özellikleri sağlayarak Gelişmiş uluslararası metin desteği sağlar:  
   
--   Otomatik satır aralığı Uyarlamalı ölçümü kullanarak, tüm yazma sistemleri.  
+- Otomatik satır aralığı Uyarlamalı ölçümü kullanarak, tüm yazma sistemleri.  
   
--   Uluslararası metin için geniş destek. Daha fazla bilgi için [WPF için genelleştirme](globalization-for-wpf.md).  
+- Uluslararası metin için geniş destek. Daha fazla bilgi için [WPF için genelleştirme](globalization-for-wpf.md).  
   
--   Dil temelli satır kesme, heceleme ve gerekçe.  
+- Dil temelli satır kesme, heceleme ve gerekçe.  
   
 <a name="Enhanced_Font_Support"></a>   
 ## <a name="enhanced-font-support"></a>Gelişmiş yazı tipi desteği  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aşağıdaki özellikleri sağlayarak gelişmiş yazı tipi desteği sağlar:  
   
--   Tüm metni için Unicode. Yazı tipi davranışı ve artık seçim charset veya kod gerektirir.  
+- Tüm metni için Unicode. Yazı tipi davranışı ve artık seçim charset veya kod gerektirir.  
   
--   Yazı tipi davranışı sistem yerel ayarları gibi genel ayarlar bağımsızdır.  
+- Yazı tipi davranışı sistem yerel ayarları gibi genel ayarlar bağımsızdır.  
   
--   Ayrı <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>, ve <xref:System.Windows.FontStyle> türleri tanımlamak için bir <xref:System.Windows.Media.FontFamily>. Bu kıyasla daha fazla esneklik sağlar [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] programlama, hangi Boolean birleşimlerini italik ve kalın yazı tipi ailesi tanımlamak için kullanılır.  
+- Ayrı <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>, ve <xref:System.Windows.FontStyle> türleri tanımlamak için bir <xref:System.Windows.Media.FontFamily>. Bu kıyasla daha fazla esneklik sağlar [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] programlama, hangi Boolean birleşimlerini italik ve kalın yazı tipi ailesi tanımlamak için kullanılır.  
   
--   Yönü (yatay ve dikey) yazma bağımsız yazı tipi adı olarak işlenir.  
+- Yönü (yatay ve dikey) yazma bağımsız yazı tipi adı olarak işlenir.  
   
--   Yazı tipi bağlama ve yazı tipi taşınabilir geri dönüş [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] bileşik yazı tipi teknolojisi kullanılarak dosya. Bileşik yazı tiplerinin tam aralığı çok dilli yazı tipleri oluşumu için izin verin. Bileşik yazı tipleri, ayrıca eksik karakter görüntüleme engelleyen bir mekanizma sağlar. Daha fazla bilgi için konusundaki yorumlara bakın <xref:System.Windows.Media.FontFamily> sınıfı.  
+- Yazı tipi bağlama ve yazı tipi taşınabilir geri dönüş [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] bileşik yazı tipi teknolojisi kullanılarak dosya. Bileşik yazı tiplerinin tam aralığı çok dilli yazı tipleri oluşumu için izin verin. Bileşik yazı tipleri, ayrıca eksik karakter görüntüleme engelleyen bir mekanizma sağlar. Daha fazla bilgi için konusundaki yorumlara bakın <xref:System.Windows.Media.FontFamily> sınıfı.  
   
--   Bir grup tek dili yazı tipi kullanarak bileşik yazı oluşturulan uluslararası yazı tipleri. Birden çok dil için yazı tiplerini geliştirirken kaynak maliyetleri kaydeder.  
+- Bir grup tek dili yazı tipi kullanarak bileşik yazı oluşturulan uluslararası yazı tipleri. Birden çok dil için yazı tiplerini geliştirirken kaynak maliyetleri kaydeder.  
   
--   Bileşik yazı tipleri, böylece belge taşınabilirliği sağlayan bir belgeye katıştırılır. Daha fazla bilgi için konusundaki yorumlara bakın <xref:System.Windows.Media.FontFamily> sınıfı.  
+- Bileşik yazı tipleri, böylece belge taşınabilirliği sağlayan bir belgeye katıştırılır. Daha fazla bilgi için konusundaki yorumlara bakın <xref:System.Windows.Media.FontFamily> sınıfı.  
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>Yeni metin uygulama programlama arabirimleri (API)  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] birkaç metin sağlar [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] geliştiricilerin uygulamalarında metin dahil olmak üzere kullanın. Bunlar [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] üç kategoriye ayrılır:  
   
--   **Düzen ve kullanıcı arabirimi**. Genel metin denetimleri için [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)].  
+- **Düzen ve kullanıcı arabirimi**. Genel metin denetimleri için [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)].  
   
--   **Basit Metin çizim**. Nesneleri doğrudan metin çizme sağlar.  
+- **Basit Metin çizim**. Nesneleri doğrudan metin çizme sağlar.  
   
--   **Gelişmiş metin biçimlendirme**. Bir özel metin altyapısı olanak tanır.  
+- **Gelişmiş metin biçimlendirme**. Bir özel metin altyapısı olanak tanır.  
   
 ### <a name="layout-and-user-interface"></a>Düzen ve kullanıcı arabirimi  
  En üst düzeyde işlevsellik, metin [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] ortak sağlamak [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] gibi denetimler <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock>, ve <xref:System.Windows.Controls.TextBox>. Bu denetimlerin temel sağlamak [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğeleri içinde bir uygulama ve teklif sunmak ve metin ile etkileşim kurmak için kolay bir yol. Gibi denetimler <xref:System.Windows.Controls.RichTextBox> ve <xref:System.Windows.Controls.PasswordBox> etkinleştir daha gelişmiş veya özel metin işleme. Gibi sınıfları <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection>, ve <xref:System.Windows.Documents.TextPointer> yararlı metin düzenlemesini etkinleştirin. Bunlar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] denetimleri sağlar özellikleri gibi <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, ve <xref:System.Windows.Controls.Control.FontStyle%2A>, metin işlemek için kullanılan yazı tipi denetlemenize olanak tanır.  

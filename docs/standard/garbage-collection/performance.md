@@ -9,24 +9,24 @@ ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026191"
 ---
 # <a name="garbage-collection-and-performance"></a>Çöp Toplama ve Performans
 <a name="top"></a> Bu konu, atık toplama ve bellek kullanımı ile ilgili sorunları açıklar. Yönetilen yığınla ilgili sorunları ele alır ve çöp toplamanın uygulamalarınız üzerindeki etkisinin nasıl en aza indirgenebileceğini açıklar. Her başlıkta, problemleri araştırmak için kullanabileceğiniz prosedürlerin bağlantıları yer alır.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
--   [Performans analiz araçları](#performance_analysis_tools)  
+- [Performans analiz araçları](#performance_analysis_tools)  
   
--   [Performans sorunlarını giderme](#troubleshooting_performance_issues)  
+- [Performans sorunlarını giderme](#troubleshooting_performance_issues)  
   
--   [Sorun giderme kılavuzları](#troubleshooting_guidelines)  
+- [Sorun giderme kılavuzları](#troubleshooting_guidelines)  
   
--   [Performans Denetim prosedürleri](#performance_check_procedures)  
+- [Performans Denetim prosedürleri](#performance_check_procedures)  
   
 <a name="performance_analysis_tools"></a>   
 ## <a name="performance-analysis-tools"></a>Performans Analiz Araçları  
@@ -46,11 +46,11 @@ ms.locfileid: "59310570"
 ### <a name="garbage-collection-etw-events"></a>Çöp Toplama ETW Olayları  
  Windows için olay izleme (ETW), .NET Framework tarafından sağlanan ve profil oluşturma ile hata ayıklama desteğini tamamlayan bir izleme sistemidir. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], [çöp toplama ETW olayları](../../../docs/framework/performance/garbage-collection-etw-events.md) Yönetilen yığın istatistiksel bir açısından analiz etmek için yararlı bilgiler yakalayın. Örneğin, çöp toplama olayı gerçekleşmek üzereyken oluşturulan `GCStart_V1` olayı, aşağıdaki bilgileri sağlar:  
   
--   Hangi nesne neslinin toplandığı.  
+- Hangi nesne neslinin toplandığı.  
   
--   Çöp toplama işlemini neyin tetiklediği.  
+- Çöp toplama işlemini neyin tetiklediği.  
   
--   Çöp toplama işleminin türü (eşzamanlı veya eşzamansız).  
+- Çöp toplama işleminin türü (eşzamanlı veya eşzamansız).  
   
  ETW olay günlüğü verimlidir ve çöp toplamayla ilgili hiçbir performans sorununu gizlemez. Bir işlem, ETW olaylarıyla birlikte kendi olaylarını sağlayabilir. Günlüğe kaydedildiğinde, yığın problemlerinin nasıl ve ne zaman oluştuğunu belirlemek için hem uygulamanın olayları hem de çöp toplama olayları eşleştirilebilir. Örneğin bir sunucu uygulaması, olayları bir istemci isteğinin başında ve sonunda sağlayabilir.  
   
@@ -69,29 +69,29 @@ ms.locfileid: "59310570"
 ## <a name="troubleshooting-performance-issues"></a>Performans Sorunlarını Giderme  
  İlk adım [sorunun çöp toplamadan olup](#IsGC). Eğer sorunun bu olduğunu belirlerseniz, aşağıdaki listeden sorunu gidermeyi seçin.  
   
--   [Bellek durum](#Issue_OOM)  
+- [Bellek durum](#Issue_OOM)  
   
--   [İşlem çok fazla bellek kullanıyor](#Issue_TooMuchMemory)  
+- [İşlem çok fazla bellek kullanıyor](#Issue_TooMuchMemory)  
   
--   [Çöp Toplayıcısı nesneleri yeterince hızlı kazanmıyor](#Issue_NotFastEnough)  
+- [Çöp Toplayıcısı nesneleri yeterince hızlı kazanmıyor](#Issue_NotFastEnough)  
   
--   [Yönetilen yığın çok parçalanmış](#Issue_Fragmentation)  
+- [Yönetilen yığın çok parçalanmış](#Issue_Fragmentation)  
   
--   [Atık toplama duraksamaları çok uzun](#Issue_LongPauses)  
+- [Atık toplama duraksamaları çok uzun](#Issue_LongPauses)  
   
--   [Nesil 0 çok büyük.](#Issue_Gen0)  
+- [Nesil 0 çok büyük.](#Issue_Gen0)  
   
--   [Bir çöp toplama sırasındaki CPU kullanımı çok yüksek](#Issue_HighCPU)  
+- [Bir çöp toplama sırasındaki CPU kullanımı çok yüksek](#Issue_HighCPU)  
   
 <a name="Issue_OOM"></a>   
 ### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Sorun: Bellek durum  
  Yönetilen bir <xref:System.OutOfMemoryException> oluşturulması için iki meşru durum vardır:  
   
--   Sanal bellek tükeniyor.  
+- Sanal bellek tükeniyor.  
   
      Çöp toplayıcısı önceden belirlenmiş bir boyutun segmentlerindeki sistemden bellek ayırır. Eğer bir ayırma işlemi için ek bir segment gerekirse, ancak işlemin sanal bellek alanının bitişiğinde boş bir blok kalmamışsa, yönetilen yığın için ayırma başarısız olur.  
   
--   Ayrılacak yeterli fiziksel belleğe sahip olmama.  
+- Ayrılacak yeterli fiziksel belleğe sahip olmama.  
   
 |Performans denetimleri|  
 |------------------------|  
@@ -99,11 +99,11 @@ ms.locfileid: "59310570"
   
  Özel durumun meşru olmadığını belirlerseniz, aşağıdaki bilgilerle Microsoft Müşteri Hizmetleri ve Destek birimiyle iletişime geçin:  
   
--   Yönetilen yetersiz bellek özel durumu olan yığın.  
+- Yönetilen yetersiz bellek özel durumu olan yığın.  
   
--   Tam bellek dökümü.  
+- Tam bellek dökümü.  
   
--   Sanal veya fiziksel belleğin bir sorun olmadığını gösteren veriler dahil olmak üzere, meşru bir yetersiz bellek özel durumu olmadığını kanıtlayan veriler.  
+- Sanal veya fiziksel belleğin bir sorun olmadığını gösteren veriler dahil olmak üzere, meşru bir yetersiz bellek özel durumu olmadığını kanıtlayan veriler.  
   
 <a name="Issue_TooMuchMemory"></a>   
 ### <a name="issue-the-process-uses-too-much-memory"></a>Sorun: İşlem çok fazla bellek kullanıyor  
@@ -141,11 +141,11 @@ ms.locfileid: "59310570"
   
  Sanal belleğin parçalanması toplamanın segment eklemesini engelliyorsa, bunun sebebi aşağıdakilerden biri olabilir:  
   
--   Birçok küçük derlemenin sık sık yüklenmesi ve kaldırılması.  
+- Birçok küçük derlemenin sık sık yüklenmesi ve kaldırılması.  
   
--   Yönetilemeyen kodla karşılıklı çalışılırken COM nesnelerinde çok fazla atıf tutulması.  
+- Yönetilemeyen kodla karşılıklı çalışılırken COM nesnelerinde çok fazla atıf tutulması.  
   
--   Büyük nesne yığınının sık sık yığın segmentlerinin ayrılmasına ve boşaltılmasına neden olan büyük geçici nesnelerin oluşturulması.  
+- Büyük nesne yığınının sık sık yığın segmentlerinin ayrılmasına ve boşaltılmasına neden olan büyük geçici nesnelerin oluşturulması.  
   
      Bir uygulama CLR'yi barındırdığı sırada çöp toplayıcıdan segmentlerini tutmasını isteyebilir. Bu, segment ayırma sıklığını azaltır. Bu öğesindeki STARTUP_HOARD_GC_VM bayrağı kullanılarak başarılır [STARTUP_FLAGS numaralandırma](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).  
   
@@ -201,24 +201,24 @@ ms.locfileid: "59310570"
 ### <a name="when-to-measure-the-managed-heap-size"></a>Yönetilen Yığın Boyutu Ne Zaman Ölçülmeli  
  Bir profil oluşturucu kullanmıyorsanız, performans sorunlarını etkili bir biçimde tanılamak için tutarlı bir ölçüm düzeni oluşturmanız gerekecektir. Bir zamanlama oluşturmak için aşağıdaki noktaları göz önünde bulundurun:  
   
--   Bir nesil 2 çöp toplamanın ardından ölçerseniz, yönetilen bütün yığın atıktan arınmış olacaktır (etkin olmayan nesneler).  
+- Bir nesil 2 çöp toplamanın ardından ölçerseniz, yönetilen bütün yığın atıktan arınmış olacaktır (etkin olmayan nesneler).  
   
--   Bir nesil 0 çöp toplamanın hemen ardından ölçerseniz nesil 1 ve 2'deki nesneler henüz toplanmamış olacaktır.  
+- Bir nesil 0 çöp toplamanın hemen ardından ölçerseniz nesil 1 ve 2'deki nesneler henüz toplanmamış olacaktır.  
   
--   Bir çöp toplamadan hemen önce ölçerseniz, çöp toplama başlamadan önce mümkün olduğunca fazla ayırmayı ölçersiniz.  
+- Bir çöp toplamadan hemen önce ölçerseniz, çöp toplama başlamadan önce mümkün olduğunca fazla ayırmayı ölçersiniz.  
   
--   Çöp toplama veri yapıları gezinme için geçerli bir durumda olmadığından ve size tam sonuçlar vermeyebileceğinden çöp toplama sırasında ölçüm yapmak çeşitli sorunlara yol açar. Bu tasarım gereğidir.  
+- Çöp toplama veri yapıları gezinme için geçerli bir durumda olmadığından ve size tam sonuçlar vermeyebileceğinden çöp toplama sırasında ölçüm yapmak çeşitli sorunlara yol açar. Bu tasarım gereğidir.  
   
--   Eşzamanlı çöp toplama özellikli iş istasyonu çöp toplama kullandığınızda, geri kazanılan nesneler sıkıştırılmayacağından, yığın boyutu aynı veya daha büyük olabilir (parçalanma boyutu daha büyük gösterebilir).  
+- Eşzamanlı çöp toplama özellikli iş istasyonu çöp toplama kullandığınızda, geri kazanılan nesneler sıkıştırılmayacağından, yığın boyutu aynı veya daha büyük olabilir (parçalanma boyutu daha büyük gösterebilir).  
   
--   Nesil 2'deki eşzamanlı çöp toplama, fiziksel bellek yükü çok fazla olduğunda geciktirilir.  
+- Nesil 2'deki eşzamanlı çöp toplama, fiziksel bellek yükü çok fazla olduğunda geciktirilir.  
   
  Aşağıdaki yordam, yönetilen yığını ölçmek için nasıl bir kesme noktası ayarlayacağınızı açıklar.  
   
 <a name="GenBreak"></a>   
 ##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>Çöp toplamanın sonunda bir kesme noktası ayarlamak için  
   
--   SOS hata ayıklama uzantısı yüklü olan WinDbg'lerde aşağıdaki komutu yazın:  
+- SOS hata ayıklama uzantısı yüklü olan WinDbg'lerde aşağıdaki komutu yazın:  
   
      **BP mscorwks! WKS::GCHeap::RestartEE "j (dwo (mscorwks! WKS::GCHeap::GcCondemnedGeneration) 2 ==) 'kb';' g'"**  
   
@@ -234,44 +234,44 @@ ms.locfileid: "59310570"
 ## <a name="performance-check-procedures"></a>Performans Denetim Prosedürleri  
  Bu bölümde, performans sorunlarınızın sebeplerini ortadan kaldırmak için aşağıdaki yordamlar açıklanmaktadır:  
   
--   [Sorunun çöp toplamadan kaynaklanıp kaynaklanmadığını belirleyin.](#IsGC)  
+- [Sorunun çöp toplamadan kaynaklanıp kaynaklanmadığını belirleyin.](#IsGC)  
   
--   [Bellek yetersiz özel yönetilip yönetilmediğini belirleyin.](#OOMIsManaged)  
+- [Bellek yetersiz özel yönetilip yönetilmediğini belirleyin.](#OOMIsManaged)  
   
--   [Ne kadar sanal bellek ayrılabileceğini belirleyin.](#GetVM)  
+- [Ne kadar sanal bellek ayrılabileceğini belirleyin.](#GetVM)  
   
--   [Yeterli fiziksel bellek olup olmadığını belirler.](#Physical)  
+- [Yeterli fiziksel bellek olup olmadığını belirler.](#Physical)  
   
--   [Yönetilen yığının ne kadar bellek kullandığını belirleyin.](#ManagedHeapCommit)  
+- [Yönetilen yığının ne kadar bellek kullandığını belirleyin.](#ManagedHeapCommit)  
   
--   [Ne kadar bellek yönetilen yığında ayırdığını belirleyin.](#ManagedHeapReserve)  
+- [Ne kadar bellek yönetilen yığında ayırdığını belirleyin.](#ManagedHeapReserve)  
   
--   [Büyük nesneler, kuşak 2 belirleyin.](#ExamineGen2)  
+- [Büyük nesneler, kuşak 2 belirleyin.](#ExamineGen2)  
   
--   [Nesnelere yapılan atıfları belirleyin.](#ObjRef)  
+- [Nesnelere yapılan atıfları belirleyin.](#ObjRef)  
   
--   [Bir sonlandırıcının çalıştırılıp çalıştırılmadığını belirleyin.](#Induce)  
+- [Bir sonlandırıcının çalıştırılıp çalıştırılmadığını belirleyin.](#Induce)  
   
--   [Sonlandırılmayı bekleyen nesneler olup olmadığını belirler.](#Finalize)  
+- [Sonlandırılmayı bekleyen nesneler olup olmadığını belirler.](#Finalize)  
   
--   [Yönetilen yığında boş alan miktarını belirler.](#Fragmented)  
+- [Yönetilen yığında boş alan miktarını belirler.](#Fragmented)  
   
--   [Sabitlenen nesne sayısını belirleyin.](#Pinned)  
+- [Sabitlenen nesne sayısını belirleyin.](#Pinned)  
   
--   [Bir çöp Toplamadaki sürenin uzunluğunu belirleyin.](#TimeInGC)  
+- [Bir çöp Toplamadaki sürenin uzunluğunu belirleyin.](#TimeInGC)  
   
--   [Bir çöp toplama işlemini neyin tetiklediğini belirleyin.](#Triggered)  
+- [Bir çöp toplama işlemini neyin tetiklediğini belirleyin.](#Triggered)  
   
--   [Yüksek CPU kullanımına çöp toplamanın sebep olup olmadığını belirler.](#HighCPU)  
+- [Yüksek CPU kullanımına çöp toplamanın sebep olup olmadığını belirler.](#HighCPU)  
   
 <a name="IsGC"></a>   
 ##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>Sorunun çöp toplamadan kaynaklanıp kaynaklanmadığını belirlemek için  
   
--   Şu iki bellek performans sayacını inceleyin:  
+- Şu iki bellek performans sayacını inceleyin:  
   
-    -   **Gc'de zaman**. Son çöp toplama döngüsünden sonra gerçekleşen bir çöp toplamaya harcanan süresinin yüzdesini gösterir. Bu sayacı kullanarak çöp toplayıcısının yönetilen yığın alanı açmak için ne kadar süre harcadığını belirleyebilirsiniz. Eğer çöp toplamaya harcanan süre göreceli olarak düşükse, bu, yönetilen yığın dışında bir kaynak problemi olduğunu gösteriyor olabilir. Bu sayaç, süreçte eş zamanlı veya arka plan çöp toplama işlemleri varsa düzgün olmayabilir.  
+    - **Gc'de zaman**. Son çöp toplama döngüsünden sonra gerçekleşen bir çöp toplamaya harcanan süresinin yüzdesini gösterir. Bu sayacı kullanarak çöp toplayıcısının yönetilen yığın alanı açmak için ne kadar süre harcadığını belirleyebilirsiniz. Eğer çöp toplamaya harcanan süre göreceli olarak düşükse, bu, yönetilen yığın dışında bir kaynak problemi olduğunu gösteriyor olabilir. Bu sayaç, süreçte eş zamanlı veya arka plan çöp toplama işlemleri varsa düzgün olmayabilir.  
   
-    -   **# Toplam kaydedilmiş bayt**. Çöp toplayıcısı tarafından o an yürütülen sanal bellek miktarını gösterir. Bu sayacı kullanarak çöp toplayıcı tarafından uygulamanızın kullandığı belleğin aşırı bir kısmının kullanılıp kullanılmadığını belirleyebilirsiniz.  
+    - **# Toplam kaydedilmiş bayt**. Çöp toplayıcısı tarafından o an yürütülen sanal bellek miktarını gösterir. Bu sayacı kullanarak çöp toplayıcı tarafından uygulamanızın kullandığı belleğin aşırı bir kısmının kullanılıp kullanılmadığını belirleyebilirsiniz.  
   
      Bellek performans sayaçlarının çoğu, her çöp toplamanın sonunda güncelleştirilir. Bu nedenle, hakkında bilgi almak istediğiniz geçerli koşulları yansıtmayabilir.  
   
@@ -311,7 +311,7 @@ ms.locfileid: "59310570"
 <a name="GetVM"></a>   
 ##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>Ne kadar sanal belleğin ayrılabileceğini belirlemek için  
   
--   SOS hata ayıklama uzantısı yüklenmiş WinDbg'de, en büyük boş bölgeyi almak için şu komutu yazın:  
+- SOS hata ayıklama uzantısı yüklenmiş WinDbg'de, en büyük boş bölgeyi almak için şu komutu yazın:  
   
      **! Adres - Özet**  
   
@@ -325,7 +325,7 @@ ms.locfileid: "59310570"
   
      -veya-  
   
--   Kullanım **vmstat** komutu:  
+- Kullanım **vmstat** komutu:  
   
      **! vmstat**  
   
@@ -353,7 +353,7 @@ ms.locfileid: "59310570"
 <a name="ManagedHeapCommit"></a>   
 ##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>Yönetilen yığının ne kadar bellek kullandığını belirlemek için  
   
--   Yönetilen yığının kullandığı bayt sayısını elde etmek için `# Total committed bytes` bellek performans sayacını kullanın. Çöp toplayıcı yığınların hepsini aynı zamanda değil, ihtiyaç duyulan bir segmentte yürütür.  
+- Yönetilen yığının kullandığı bayt sayısını elde etmek için `# Total committed bytes` bellek performans sayacını kullanın. Çöp toplayıcı yığınların hepsini aynı zamanda değil, ihtiyaç duyulan bir segmentte yürütür.  
   
     > [!NOTE]
     >  `# Bytes in all Heaps` performans sayacı yönetilen yığın tarafından kullanılan gerçek bellek kullanımını göstermediğinden, bu sayacı kullanmayın. Bu değere bir neslin boyutu dahildir ve aslında onun eşik sınırı, yani, eğer nesil nesnelerle doluysa bir çöp toplama işlemini başlatan boyutu gösterir. Bu nedenle, bu değer genellikle sıfırdır.  
@@ -361,14 +361,14 @@ ms.locfileid: "59310570"
 <a name="ManagedHeapReserve"></a>   
 ##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>Yönetilen yığının ne kadar bellek ayırdığını belirlemek için  
   
--   `# Total reserved bytes` bellek performans sayacını kullanın.  
+- `# Total reserved bytes` bellek performans sayacını kullanın.  
   
      Çöp toplayıcı belleği parçalar halinde ayırır ve bir segment kullanarak başladığı belirleyebilirsiniz **eeheap** komutu.  
   
     > [!IMPORTANT]
     >  Atık toplayıcının her segment için ayırdığı bellek miktarını belirleyebilirsiniz olsa da, kesim boyutunu uygulamaya özgü ve düzenli güncelleştirmeleri dahil olmak üzere dilediğiniz zaman değiştirilebilir. Uygulamanız hiçbir zaman hakkında varsayımlar veya belirli bir segment boyutuna göre değişir ve segment ayırma için kullanılabilir bellek miktarını yapılandırmak için denemeniz gerekir.  
   
--   SOS hata ayıklama uzantısının yüklendiği WinDbg veya Visual Studio hata ayıklayıcısında şu komutu yazın:  
+- SOS hata ayıklama uzantısının yüklendiği WinDbg veya Visual Studio hata ayıklayıcısında şu komutu yazın:  
   
      **! eeheap -gc**  
   
@@ -409,7 +409,7 @@ ms.locfileid: "59310570"
 <a name="ExamineGen2"></a>   
 ##### <a name="to-determine-large-objects-in-generation-2"></a>Nesil 2'deki büyük nesneleri belirlemek için  
   
--   SOS hata ayıklama uzantısının yüklendiği WinDbg veya Visual Studio hata ayıklayıcısında şu komutu yazın:  
+- SOS hata ayıklama uzantısının yüklendiği WinDbg veya Visual Studio hata ayıklayıcısında şu komutu yazın:  
   
      **! dumpheap-stat**  
   
@@ -448,13 +448,13 @@ ms.locfileid: "59310570"
 <a name="ObjRef"></a>   
 ##### <a name="to-determine-references-to-objects"></a>Nesnelere olan atıfları belirlemek için  
   
--   SOS hata ayıklama uzantısı yüklenmiş WinDbg'de, nesnelere yapılan atıfları listelemek için aşağıdaki komutu yazın:  
+- SOS hata ayıklama uzantısı yüklenmiş WinDbg'de, nesnelere yapılan atıfları listelemek için aşağıdaki komutu yazın:  
   
      **! gcroot**  
   
      `-or-`  
   
--   Belirli bir nesneye yapılan atıfları belirlemek için, şu adresleri ekleyin:  
+- Belirli bir nesneye yapılan atıfları belirlemek için, şu adresleri ekleyin:  
   
      **! gcroot 1c37b2ac**  
   
@@ -481,7 +481,7 @@ ms.locfileid: "59310570"
 <a name="Induce"></a>   
 ##### <a name="to-determine-whether-a-finalizer-has-been-run"></a>Bir sonlandırıcının çalıştırılıp çalıştırılmadığını belirlemek için  
   
--   Aşağıdaki kodu içeren bir test programı çalıştırın:  
+- Aşağıdaki kodu içeren bir test programı çalıştırın:  
   
     ```  
     GC.Collect();  
@@ -518,7 +518,7 @@ ms.locfileid: "59310570"
 <a name="Fragmented"></a>   
 ##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>Yönetilen yığında ne kadar boş alan olduğunu belirlemek için  
   
--   SOS hata ayıklama uzantısının yüklendiği WinDbg veya Visual Studio hata ayıklayıcısında şu komutu yazın:  
+- SOS hata ayıklama uzantısının yüklendiği WinDbg veya Visual Studio hata ayıklayıcısında şu komutu yazın:  
   
      **! dumpheap-ücretsiz - yazın stat**  
   
@@ -532,7 +532,7 @@ ms.locfileid: "59310570"
     Total 230 objects  
     ```  
   
--   Nesil 0'daki boş alanı belirlemek için, nesle göre bellek tüketimi bilgilerini öğrenmek için aşağıdaki komutu yazın:  
+- Nesil 0'daki boş alanı belirlemek için, nesle göre bellek tüketimi bilgilerini öğrenmek için aşağıdaki komutu yazın:  
   
      **! eeheap -gc**  
   
@@ -552,7 +552,7 @@ ms.locfileid: "59310570"
     46120000 46120038  49e05d04   0x03ce5ccc(63855820)  
     ```  
   
--   Nesil 0 tarafından kullanılan alanı hesaplayın:  
+- Nesil 0 tarafından kullanılan alanı hesaplayın:  
   
      **? 49e05d04-0x49521f8c**  
   
@@ -562,7 +562,7 @@ ms.locfileid: "59310570"
     Evaluate expression: 9321848 = 008e3d78  
     ```  
   
--   Aşağıdaki komut, nesil 0 aralığındaki boş alanların dökümünü verir:  
+- Aşağıdaki komut, nesil 0 aralığındaki boş alanların dökümünü verir:  
   
      **! dumpheap-yazın ücretsiz - stat 0x49521f8c 49e05d04**  
   
@@ -594,7 +594,7 @@ ms.locfileid: "59310570"
 <a name="Pinned"></a>   
 ##### <a name="to-determine-the-number-of-pinned-objects"></a>Sabitlenen nesne sayısını belirlemek için  
   
--   SOS hata ayıklama uzantısının yüklendiği WinDbg veya Visual Studio hata ayıklayıcısında şu komutu yazın:  
+- SOS hata ayıklama uzantısının yüklendiği WinDbg veya Visual Studio hata ayıklayıcısında şu komutu yazın:  
   
      **! gchandles**  
   
@@ -609,7 +609,7 @@ ms.locfileid: "59310570"
 <a name="TimeInGC"></a>   
 ##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>Bir çöp toplama işleminde sürenin uzunluğunu belirlemek için  
   
--   `% Time in GC` bellek performans sayacını inceleyin.  
+- `% Time in GC` bellek performans sayacını inceleyin.  
   
      Değer, örnek bir zaman aralığı kullanılarak hesaplanır. Her çöp toplama işlemi sonrası sayaçlar güncellendiğinden, ikisi arasında bir toplama işlemi gerçekleşmediyse geçerli örnek öncekiyle aynı değere sahip olacaktır.  
   
@@ -640,7 +640,7 @@ ms.locfileid: "59310570"
   
      İkinci nesil 2 çöp toplama, üçüncü aralık sırasında başlamış ve beşinci aralıkta bitmiştir. En kötü durumu varsayarak, son çöp toplama işlemi, ikinci aralığın başlangıcında biten bir nesil 0 toplama işlemine aittir ve nesil 2 çöp toplama, beşinci aralığın sonunda bitmiştir. Bu nedenle, nesil 0 çöp toplamanın sonu ile nesil 2 çöp toplamanın sonu arasında geçen süre 4 saniyedir. `% Time in GC` sayacı %20 olduğundan, nesil 2 çöp toplama en fazla (4 saniye * 20% = 800 ms) sürmüş olabilir.  
   
--   Alternatif olarak, kullanarak bir çöp toplamanın uzunluğunu belirleyebilir [çöp toplama ETW olayları](../../../docs/framework/performance/garbage-collection-etw-events.md)ve çöp toplamanın süresini belirlemek için bilgileri analiz edin.  
+- Alternatif olarak, kullanarak bir çöp toplamanın uzunluğunu belirleyebilir [çöp toplama ETW olayları](../../../docs/framework/performance/garbage-collection-etw-events.md)ve çöp toplamanın süresini belirlemek için bilgileri analiz edin.  
   
      Örneğin, aşağıdaki veriler, eş zamanlı olmayan bir çöp toplama işlemi sırasında meydana gelen bir olay dizisini gösterir.  
   
@@ -696,7 +696,7 @@ ms.locfileid: "59310570"
 <a name="Triggered"></a>   
 ##### <a name="to-determine-what-triggered-a-garbage-collection"></a>Bir çöp toplama işlemini neyin tetiklediğini belirlemek için  
   
--   Hata ayıklama uzantısının yüklendiği WinDbg veya Visual Studio hata ayıklayıcısında, bütün iş parçacıklarını çağrı yığınlarıyla birlikte görmek için aşağıdaki komutu yazın:  
+- Hata ayıklama uzantısının yüklendiği WinDbg veya Visual Studio hata ayıklayıcısında, bütün iş parçacıklarını çağrı yığınlarıyla birlikte görmek için aşağıdaki komutu yazın:  
   
      **~\*kb**  
   
@@ -774,7 +774,7 @@ ms.locfileid: "59310570"
 <a name="HighCPU"></a>   
 ##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>Yüksek CPU kullanımına çöp toplamanın sebep olup olmadığını belirlemek için  
   
--   `% Time in GC` bellek performans sayaç değeriyle işlem süresini karşılaştırın.  
+- `% Time in GC` bellek performans sayaç değeriyle işlem süresini karşılaştırın.  
   
      `% Time in GC` değeri işlem süresiyle aynı anda artıyorsa, yüksek CPU kullanımına çöp toplama işlemi neden oluyor demektir. Böyle olmuyorsa, yüksek kullanımın nerede meydana geldiğini bulmak için uygulamayı profilleyin.  
   

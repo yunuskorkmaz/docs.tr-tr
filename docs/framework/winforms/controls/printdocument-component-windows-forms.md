@@ -6,11 +6,11 @@ helpviewer_keywords:
 - printing [Windows Forms], documents
 ms.assetid: 5af6a51d-66f6-43cd-a8cd-d64eb18fe7e7
 ms.openlocfilehash: 4bb03ef95f10f5eb1795e50f5147d245623e18e8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012613"
 ---
 # <a name="printdocument-component-windows-forms"></a>PrintDocument Bileşeni (Windows Forms)
 Windows Forms `PrintDocument` bileşen ne açıklayan özellikleri ayarlamak için kullanılır ve sonra Windows tabanlı uygulamalar içinde belge yazdırma için. İle birlikte kullanılabilir <xref:System.Windows.Forms.PrintDialog> belge yazdırma tüm yönlerini komutta olmasını bileşeni.  

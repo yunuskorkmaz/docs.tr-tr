@@ -3,11 +3,11 @@ title: SQL Server CLR Tümleştirmesine Giriş
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
 ms.openlocfilehash: dc7d19bf361ed5fcda1fd5edf64eeb5e4ce15a71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033884"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server CLR Tümleştirmesine Giriş
 Ortak dil çalışma zamanı (CLR), Microsoft .NET Framework kalbidir ve tüm .NET Framework kod yürütme ortamı sağlar. CLR içinde çalışan kod, yönetilen kod olarak adlandırılır. CLR, ayırma ve bellek, tür güvenliği, özel durum işleme, iş parçacığı yönetimi ve güvenlik zorlama yönetme çeşitli işlevleri ve tam zamanında (JIT) derleme dahil olmak üzere, program yürütme için gerekli hizmetleri sağlar.  
@@ -20,7 +20,7 @@ Ortak dil çalışma zamanı (CLR), Microsoft .NET Framework kalbidir ve tüm .N
   
  **SQL Server Çevrimiçi Kitapları**  
   
--   [Ortak dil çalışma zamanı (CLR) tümleştirme genel bakış](https://go.microsoft.com/fwlink/?LinkId=115242)  
+- [Ortak dil çalışma zamanı (CLR) tümleştirme genel bakış](https://go.microsoft.com/fwlink/?LinkId=115242)  
   
 ## <a name="enabling-clr-integration"></a>CLR tümleştirmesini etkinleştirme  
  Ortak dil çalışma zamanı (CLR) tümleştirme özelliği, Microsoft SQL Server'da varsayılan olarak kapalıdır ve CLR tümleştirmesini kullanılarak yüklenen nesneler kullanmak için etkinleştirilmesi gerekir. Transact-SQL kullanarak CLR tümleştirmesini etkinleştirmek için `clr enabled` seçeneği `sp_configure` gösterildiği saklı yordam:  
@@ -38,7 +38,7 @@ GO
   
  **SQL Server Çevrimiçi Kitapları**  
   
--   [CLR tümleştirmesini etkinleştirme](https://go.microsoft.com/fwlink/?LinkId=115230)  
+- [CLR tümleştirmesini etkinleştirme](https://go.microsoft.com/fwlink/?LinkId=115230)  
   
 ## <a name="deploying-a-clr-assembly"></a>Bir CLR derlemesi dağıtma  
  CLR yöntemleri test ve test sunucusunda doğrulandı sonra dağıtım betiğini kullanarak üretim sunucularına dağıtılabilir. Dağıtım betiği, el ile veya SQL Server Management Studio kullanılarak oluşturulabilir. Daha ayrıntılı bilgi için SQL Server Books Online'nın sürümü kullandığınız SQL Server sürümü için bkz.  
@@ -54,7 +54,7 @@ GO
   
  **SQL Server Çevrimiçi Kitapları**  
   
--   [CLR tümleştirme güvenliği](https://go.microsoft.com/fwlink/?LinkId=115234)  
+- [CLR tümleştirme güvenliği](https://go.microsoft.com/fwlink/?LinkId=115234)  
   
 ## <a name="debugging-a-clr-assembly"></a>Bir CLR derlemesi hata ayıklama  
  Microsoft SQL Server Transact-SQL ve ortak dil çalışma zamanı (CLR) nesneleri veritabanındaki hata ayıklama için destek sağlar. Diller arasında çalışan hata ayıklama: kullanıcılar adım sorunsuz bir şekilde CLR nesnelerini Transact-SQL'den ve bunun tersi de geçerlidir.  
@@ -63,7 +63,7 @@ GO
   
  **SQL Server Çevrimiçi Kitapları**  
   
--   [Hata ayıklama CLR veritabanı nesneleri](https://go.microsoft.com/fwlink/?LinkId=115236)  
+- [Hata ayıklama CLR veritabanı nesneleri](https://go.microsoft.com/fwlink/?LinkId=115236)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

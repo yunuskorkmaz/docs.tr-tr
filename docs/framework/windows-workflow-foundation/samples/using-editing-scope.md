@@ -3,11 +3,11 @@ title: Düzenleme Kapsamını Kullanma
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
 ms.openlocfilehash: 6417e51a29215ce2da22fa4c655642a5fe9b7d18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004776"
 ---
 # <a name="using-editing-scope"></a>Düzenleme Kapsamını Kullanma
 Bu örnek, tek bir atomik birim alınabilir olacak şekilde bir değişiklik kümesini toplu gösterilmiştir. Varsayılan olarak, bir etkinlik Tasarımcısı yazarı tarafından gerçekleştirilen eylemler otomatik olarak geri al/Yinele sisteme tümleşiktir.  
@@ -28,9 +28,9 @@ Bu örnek, tek bir atomik birim alınabilir olacak şekilde bir değişiklik kü
   
 2. Tıklayın **açık kapsamı düzenleme**.  
   
-    1.  Bu komutu çağıran <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> düzenleme bir kapsam oluşturur ve düzenleme da yığına iter.  
+    1. Bu komutu çağıran <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> düzenleme bir kapsam oluşturur ve düzenleme da yığına iter.  
   
-    2.  Üç etkinlikleri daha sonra eklenen seçili <xref:System.Activities.Presentation.Model.ModelItem>. Düzenleme kapsamına ile açılmış değil gerçekleştiriyorsanız <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, üç yeni etkinlik Tasarımcısı tuvalinde görüneceği. Bu işlemi olduğundan içinde hala beklemede <xref:System.Activities.Presentation.Model.EditingScope>, Tasarımcı henüz güncelleştirilmemiş.  
+    2. Üç etkinlikleri daha sonra eklenen seçili <xref:System.Activities.Presentation.Model.ModelItem>. Düzenleme kapsamına ile açılmış değil gerçekleştiriyorsanız <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, üç yeni etkinlik Tasarımcısı tuvalinde görüneceği. Bu işlemi olduğundan içinde hala beklemede <xref:System.Activities.Presentation.Model.EditingScope>, Tasarımcı henüz güncelleştirilmemiş.  
   
 3. Tuşuna **Kapat düzenleme kapsamı** düzenleme kapsamına tamamlanamadı. Üç Etkinlik Tasarımcısı'nda görünür.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
 ms.openlocfilehash: b6537faa3be7ee28a934927fc95100a34a64e176
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009493"
 ---
 # <a name="toolstrip-technology-summary"></a>ToolStrip Teknoloiji Özeti
 Bu konu hakkında bilgiler için özetlenmiştir `ToolStrip` denetimi ve kullanımını destekleyen sınıflar.  
@@ -25,23 +25,23 @@ Bu konu hakkında bilgiler için özetlenmiştir `ToolStrip` denetimi ve kullan�
 ## <a name="background"></a>Arka Plan  
  İle `ToolStrip` denetimi ve ilişkili sınıflarının, tutarlı ve profesyonel görünümünü ve davranışını olan Gelişmiş araç işlevselliğini oluşturabilirsiniz. `ToolStrip` Denetimi ve sınıfları önceki denetimlerin üzerine aşağıdaki geliştirmeleri sunar:  
   
--   Daha tutarlı bir olay modeli.  
+- Daha tutarlı bir olay modeli.  
   
--   Görev listeleri ve koleksiyon düzenleyicileri öğesi içeren daha tutarlı bir tasarım zamanı davranışını.  
+- Görev listeleri ve koleksiyon düzenleyicileri öğesi içeren daha tutarlı bir tasarım zamanı davranışını.  
   
--   Özel işleme ile `ToolStripManager` ve `ToolStripRenderer`.  
+- Özel işleme ile `ToolStripManager` ve `ToolStripRenderer`.  
   
--   Yerleşik radye ile (Yuvalandığında araç alanı içinde yatay veya dikey boşluk paylaşımını) `ToolStripContainer` ve `ToolStripPanel`.  
+- Yerleşik radye ile (Yuvalandığında araç alanı içinde yatay veya dikey boşluk paylaşımını) `ToolStripContainer` ve `ToolStripPanel`.  
   
--   Tasarım zamanı ve çalışma zamanı ile öğelerinin yeniden sıralanmasını <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> özelliği.  
+- Tasarım zamanı ve çalışma zamanı ile öğelerinin yeniden sıralanmasını <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> özelliği.  
   
--   Bir taşma menüsü öğeleri yeniden konumlandırma <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> özelliği.  
+- Bir taşma menüsü öğeleri yeniden konumlandırma <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> özelliği.  
   
--   Tamamen yapılandırılabilir denetim konumuyla `ToolStripContainer`, `ToolStripPanel`, ve `ToolStripContentPanel`.  
+- Tamamen yapılandırılabilir denetim konumuyla `ToolStripContainer`, `ToolStripPanel`, ve `ToolStripContentPanel`.  
   
--   Barındırılmasını `ToolStrip`, geleneksel ya da özel denetimler kullanarak `ToolStripControlHost`.  
+- Barındırılmasını `ToolStrip`, geleneksel ya da özel denetimler kullanarak `ToolStripControlHost`.  
   
--   Birleştirme `ToolStrip` denetimlerini kullanma `ToolStripPanel`.  
+- Birleştirme `ToolStrip` denetimlerini kullanma `ToolStripPanel`.  
   
  `ToolStrip` Genişletilebilir temel sınıfı olan `MenuStrip`, `ContextMenuStrip`, ve `StatusStrip`. Bu denetimler <xref:System.Windows.Forms.ToolStripItem> ortak davranışını ve olay işlemede, devralınan kapsayıcıları genişlettiğini her uygulama için uygun davranışı ile ilgilidir. Öğesinden türetilen denetimler <xref:System.Windows.Forms.ToolStripItem> aşağıdaki tabloda listelenmiştir. Temel `ToolStrip` sınıfı boyama, kullanıcı girişini ve bu denetimleri için sürükle ve bırak olayları işler.  
   
@@ -63,26 +63,26 @@ Bu konu hakkında bilgiler için özetlenmiştir `ToolStrip` denetimi ve kullan�
 ### <a name="task-dialog-boxes"></a>Görev iletişim kutuları  
  Visual Studio'da bir denetim Tasarımcısı'nda akıllı etiketine tıkladığınızda kolay erişim için bir görev listesi çok sık kullanılan komutlar için görüntüler.  
   
--   [MenuStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
+- [MenuStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
--   [ToolStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
+- [ToolStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
   
--   [ContextMenuStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
+- [ContextMenuStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
   
--   [StatusStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
+- [StatusStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
   
--   [ToolStripContainer görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
+- [ToolStripContainer görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
   
 ### <a name="items-collection-editors"></a>Öğeler Koleksiyonu Düzenleyicisi  
  Visual Studio'da tıkladığınızda, **öğe düzenleme** görev listesinde veya seçin ve denetim sağ tıklayın **öğe düzenleme** Koleksiyonu Düzenleyicisi denetimi için kısayol menüsünde görüntülenir. Koleksiyon düzenleyiciler, ekleme, kaldırma ve denetimi içeren öğeleri yeniden sıralamak olanak tanır. Ayrıca, görüntüleyebilir ve denetimi ve denetimin öğeleri özelliklerini değiştirin.  
   
--   [MenuStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
+- [MenuStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [StatusStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
+- [StatusStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
   
--   [ContextMenuStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
+- [ContextMenuStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
   
--   [ToolStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
+- [ToolStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
   
 ## <a name="hosting-controls"></a>Denetimleri barındırma  
  <xref:System.Windows.Forms.ToolStripControlHost> Sınıfı için yerleşik sarmalayıcıları sağlar <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox>, ve <xref:System.Windows.Forms.ToolStripProgressBar> kontrol eder. Başka var veya COM denetiminde de barındırabilir bir <xref:System.Windows.Forms.ToolStripControlHost>.  

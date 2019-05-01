@@ -9,11 +9,11 @@ helpviewer_keywords:
 - slider controls [Windows Forms], about slider controls
 ms.assetid: 95910ecb-8a4c-4776-89fa-206c89ed6973
 ms.openlocfilehash: 1606db73485944f3dfa8b9c084bffda817520c7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009272"
 ---
 # <a name="trackbar-control-overview-windows-forms"></a>TrackBar Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.TrackBar> denetimi (bazen "kaydırıcı" denetimi olarak da adlandırılır), büyük miktarda bilgiyi arasında gezinmek için veya bir sayısal ayar görsel olarak ayarlamak için kullanılır. <xref:System.Windows.Forms.TrackBar> Denetime sahip olmak üzere iki parçadan: parmak olarak da bilinen bir kaydırıcı ve değer çizgileri. Thumb ayarlanabilir bir parçasıdır. Konumuna karşılık gelen <xref:System.Windows.Forms.TrackBar.Value%2A> özelliği. Değer çizgilerinin düzenli aralıklarla aralıklı görsel göstergeleri ' dir. Trackbar belirtin ve yatay veya dikey yönde hizalanabilir artışlarla taşır. Örneğin, bir sistem için imleç yanıp sönme hızı veya fare hızı denetlemek için izleme çubuğu kullanabilirsiniz.  

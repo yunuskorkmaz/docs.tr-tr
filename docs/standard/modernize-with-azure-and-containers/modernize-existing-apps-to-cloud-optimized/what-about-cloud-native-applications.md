@@ -1,17 +1,17 @@
 ---
-title: Bulutta çalışan uygulamalar hakkında neler diyeceksiniz?
+title: Bulutta Yerel uygulamalar nedir?
 description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | Bulutta çalışan uygulamalar hakkında neler diyeceksiniz?
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 10f7761b7c0d2ddd8cb9247b1a02aa49cdc4e5d4
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012132"
 ---
-# <a name="what-about-cloud-native-applications"></a>Bulutta çalışan uygulamalar hakkında neler diyeceksiniz?
+# <a name="what-about-cloud-native-applications"></a>Bulutta Yerel uygulamalar nedir?
 
 Ancak [bulutta yerel](https://azure.microsoft.com/overview/cloudnative/) uygulamaları odaklandığı değildir bu kılavuz, bu modernizasyonu olgunluk seviyesi bir anlayışa sahip ve bu bulut için iyileştirilmiş uygulamalardan ayırt etmek için yararlı olur.
 

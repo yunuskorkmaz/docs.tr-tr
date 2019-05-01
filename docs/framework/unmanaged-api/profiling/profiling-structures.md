@@ -9,36 +9,36 @@ ms.assetid: 750385f2-f365-41b1-939f-ca2f2ff9b466
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 229218cb15963846da91f688b0d2faacb20031c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000447"
 ---
 # <a name="profiling-structures"></a>Profil Oluşturma Yapıları
-Bu bölümde, profil oluşturma API'si kullanan yönetilmeyen yapılar açıklanmaktadır.  
+Bu bölümde, profil oluşturma API'SİNİN kullandığı yönetilmeyen yapıları açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [COR_PRF_ASSEMBLY_REFERENCE_INFO Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)  
- Ortak dil çalışma zamanı bir derleme başvurusu kapatma ilerlemesi gerçekleştirirken düşünmelisiniz bir başvuru derleme hakkında bilgi sağlar.  
+ Ortak dil çalışma zamanı, bir derleme başvurusu kapanış Yürüme yaparken göz önünde bulundurmanız gereken bir başvuru bütünleştirilmiş kodu hakkında bilgi sağlar.  
   
  [COR_PRF_CODE_INFO Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md)  
- Yerel kod bellekte bir bitişik bloğunu temsil eder.  
+ Yerel kod bellekte bitişik bir bloğunu temsil eder.  
   
  [COR_PRF_EX_CLAUSE_INFO Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-ex-clause-info-structure.md)  
- Bir özel durum yan tümcesi örneği ve ilişkili çerçevesini ilgili bilgileri depolar.  
+ Bir özel durum yan tümcesi örneği ve ilişkili çerçevesini hakkındaki bilgileri saklar.  
   
  [COR_PRF_FUNCTION Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-structure.md)  
- Derlenmiş sürüm kimliği Kimliğini birleştiren bir işlev benzersiz bir gösterimini sağlar.  
+ Znovu sürümü kimliği Kimliğini birleştirerek bir işlev benzersiz bir gösterimini sağlar.  
   
  [COR_PRF_FUNCTION_ARGUMENT_INFO Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md)  
- Soldan sağa sırayla bir işlevin bağımsız değişkenler temsil eder.  
+ Soldan sağa doğru sırayla bir işlevin bağımsız değişkenlerini temsil eder.  
   
  [COR_PRF_FUNCTION_ARGUMENT_RANGE Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)  
- İşlev bağımsız değişkenleri bitişik bellek soldan sağa sırayla depolanan bloğunu temsil eder.  
+ İşlev bağımsız değişkenleri bitişik bellek sırayla soldan sağa depolanan bloğunu temsil eder.  
   
  [COR_PRF_GC_GENERATION_RANGE Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)  
- Çöp toplama yapılıyor bir bellek aralığı (yani, blok) açıklar.  
+ Çöp toplama aşamasında bir bellek aralığı (yani, blok) açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  COR_DEBUG_IL_TO_NATIVE_MAP  

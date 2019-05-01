@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: b95699430a05ef9d81c705b05d04b4ab06e7abc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3b8ae80ff17ea2cf12c3d78c092dd3233ac0751d
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307658"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773977"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ Sorgu İşlemlerinde Tür İlişkileri (C#)
 Etkili bir şekilde sorgu yazmak için bir sorgu işleminde değişken türlerinin birbirleriyle nasıl ilişkili olduğunu anlamanız gerekir. Bu ilişkileri anladıysanız, daha kolay anlarsınız [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] örneklerini ve kod örneklerini belgelerinde. Ayrıca, değişkenleri kullanarak örtük olarak belirlenmiş ne olacağını perde arkasında anlayacaksınız `var`.  
@@ -29,7 +29,7 @@ Etkili bir şekilde sorgu yazmak için bir sorgu işleminde değişken türlerin
 ## <a name="queries-that-do-not-transform-the-source-data"></a>Kaynak verileri Dönüştürmeyen sorgular  
  Aşağıdaki çizimde gösterildiği bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] nesneler sorgu veriler üzerinde hiçbir dönüştürme gerçekleştirdiği bir işlem. Kaynak bir dize sırası içerir ve sorgu çıktısı da dizeler dizisidir.  
   
- ![Veri ilişkisi türleri bir LINQ Sorgu](../../../../csharp/programming-guide/concepts/linq/media/linq_flow1.png "LINQ_flow1")  
+ ![Bir LINQ Sorgu veri türlerinin ilişkiyi gösteren diyagram.](./media/type-relationships-in-linq-query-operations/linq-query-data-type-relation.png)  
   
 1. Veri kaynağının tür bağımsız değişkeni aralık değişkeninin türünü belirler.  
   
@@ -40,7 +40,7 @@ Etkili bir şekilde sorgu yazmak için bir sorgu işleminde değişken türlerin
 ## <a name="queries-that-transform-the-source-data"></a>Kaynak verileri dönüştüren sorgular  
  Aşağıdaki çizimde gösterildiği bir [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] sorgu veri üzerinde basit bir dönüştürme gerçekleştiren işlemi. Sorgu dizisi alır `Customer` nesneler giriş olarak ve yalnızca seçer `Name` sonucun bir özellik. Çünkü `Name` bir dize, dize sırası çıktı olarak bir sorgu oluşturur.  
   
- ![Veri türünü dönüştüren bir sorgu](../../../../csharp/programming-guide/concepts/linq/media/linq_flow2.png "LINQ_flow2")  
+ ![Veri türünü dönüştüren bir sorgu gösteren diyagram.](./media/type-relationships-in-linq-query-operations/linq-query-transform-data-type.png)  
   
 1. Veri kaynağının tür bağımsız değişkeni aralık değişkeninin türünü belirler.  
   
@@ -50,7 +50,7 @@ Etkili bir şekilde sorgu yazmak için bir sorgu işleminde değişken türlerin
   
  Aşağıdaki çizim biraz daha karmaşık bir dönüştürmeyi gösterir. `select` Deyimi özgün yalnızca iki üyesini yakalayan, anonim bir tür döndürür `Customer` nesne.  
   
- ![Veri türünü dönüştüren bir sorgu](../../../../csharp/programming-guide/concepts/linq/media/linq_flow3.png "LINQ_flow3")  
+ ![Veri türü dönüşümleri daha karmaşık bir sorgu gösteren diyagram.](./media/type-relationships-in-linq-query-operations/linq-complex-query-transform-data-type.png)  
   
 1. Veri kaynağının tür bağımsız değişkeni her zaman sorgudaki Aralık değişkeninin türüdür.  
   
@@ -61,7 +61,7 @@ Etkili bir şekilde sorgu yazmak için bir sorgu işleminde değişken türlerin
 ## <a name="letting-the-compiler-infer-type-information"></a>Derleyicinin tür bilgilerini çıkarmasına izin vererek  
  Sorgu işlemindeki tür ilişkilerini anlamanız gerekir, ancak derleyicinin tüm çalışmayı sizin için gerçekleştirmesini sağlamak için seçeneğiniz vardır. Anahtar sözcüğü [var](../../../../csharp/language-reference/keywords/var.md) sorgu işlemindeki herhangi bir yerel değişken için kullanılabilir. Aşağıdaki çizim, daha önce bahsedilen 2 numaralı örneğe benzer. Ancak, derleyici, sorgu işlemindeki her değişken için güçlü tür sağlar.  
   
- ![Akış türü örtülü yazma ile](../../../../csharp/programming-guide/concepts/linq/media/linq_flow4.png "LINQ_flow4")  
+ ![Örtülü yazma ile tür akışını gösteren diyagram.](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
   
  Hakkında daha fazla bilgi için `var`, bkz: [örtük olarak yazılan yerel değişkenler](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   

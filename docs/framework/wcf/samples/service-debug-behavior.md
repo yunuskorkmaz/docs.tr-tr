@@ -3,11 +3,11 @@ title: Hizmet Hata Ayıklama Davranışı
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
 ms.openlocfilehash: bfed164093e10c070b24832cf5a3be362ad3bc56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007922"
 ---
 # <a name="service-debug-behavior"></a>Hizmet Hata Ayıklama Davranışı
 Bu örnek, hizmet hata ayıklama davranışı ayarları nasıl yapılandırılabileceğini göstermektedir. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), uygulayan `ICalculator` hizmet sözleşmesi. Bu örnek, hizmet hata ayıklama davranışı yapılandırma dosyasında açıkça tanımlar. Bunu de kesin kod içinde yapılabilir.  
@@ -33,12 +33,12 @@ Bu örnek, hizmet hata ayıklama davranışı ayarları nasıl yapılandırılab
   
  [\<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) hizmet hata ayıklama davranışı özelliklerini değiştirme sağlayan yapılandırma öğesi. Kullanıcı şunları gerçekleştirmek için bu davranışı değiştirebilirsiniz:  
   
--   Böylece, özel durum kullanarak bildirilmedi bile uygulama kodu tarafından oluşturulan tüm özel durum döndürülecek hizmetin <xref:System.ServiceModel.FaultContractAttribute>. Ayarlayarak yapılır `includeExceptionDetailInFaults` için `true`. Bu ayar, sunucu beklenmeyen bir özel durum burada atma durumlarda hata ayıklama sırasında yararlıdır.  
+- Böylece, özel durum kullanarak bildirilmedi bile uygulama kodu tarafından oluşturulan tüm özel durum döndürülecek hizmetin <xref:System.ServiceModel.FaultContractAttribute>. Ayarlayarak yapılır `includeExceptionDetailInFaults` için `true`. Bu ayar, sunucu beklenmeyen bir özel durum burada atma durumlarda hata ayıklama sırasında yararlıdır.  
   
     > [!IMPORTANT]
     >  Bir üretim ortamında bu ayarı etkinleştirmek için güvenli değildir. Beklenmeyen sunucu özel durum istemci ve bunu ayarlama hedeflenmemiştir bazı bilgiler olabilir `includeExceptionDetailsInFaults` için `true` içinde bilgi sızıntısı neden olabilir.  
   
--   [ \<ServiceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) de etkinleştirmek veya devre dışı yardım sayfasına açmasına olanak sağlar. Her bir hizmet, isteğe bağlı olarak hizmet için WSDL almak için uç nokta gibi hizmet hakkındaki bilgileri içeren bir Yardım sayfası kullanıma sunabilirsiniz. Bu ayarlayarak etkinleştirilebilir `httpHelpPageEnabled` için `true`. Bu hizmetin taban adresi için bir GET isteği için döndürülecek yardım sayfasına sağlar. Başka bir özniteliğini ayarlayarak bu adresi değişebilir `httpHelpPageUrl`. Bu HTTP yerine HTTPS kullanarak güvenli hale getirebilirsiniz. Bu ayarlayarak yapılabilir `httpsHelpPageEnabled` ve `httpsHelpPageUrl`.  
+- [ \<ServiceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) de etkinleştirmek veya devre dışı yardım sayfasına açmasına olanak sağlar. Her bir hizmet, isteğe bağlı olarak hizmet için WSDL almak için uç nokta gibi hizmet hakkındaki bilgileri içeren bir Yardım sayfası kullanıma sunabilirsiniz. Bu ayarlayarak etkinleştirilebilir `httpHelpPageEnabled` için `true`. Bu hizmetin taban adresi için bir GET isteği için döndürülecek yardım sayfasına sağlar. Başka bir özniteliğini ayarlayarak bu adresi değişebilir `httpHelpPageUrl`. Bu HTTP yerine HTTPS kullanarak güvenli hale getirebilirsiniz. Bu ayarlayarak yapılabilir `httpsHelpPageEnabled` ve `httpsHelpPageUrl`.  
   
  Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İlk üç işlemleri (ekleme, çıkarma ve Çarp) başarılı olması gerekir. Son işlem ("bölme") bir bölme sıfır özel durum ile başarısız olur.  
   

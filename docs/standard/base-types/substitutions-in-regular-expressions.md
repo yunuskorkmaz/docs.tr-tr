@@ -16,11 +16,11 @@ ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51e22407bd20cc6aa17b242948a83d698167590e
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025060"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Normal İfadelerdeki Değişimler
 <a name="Top"></a> Değişimler, yalnızca değişiklik desenleri içinde tanınan dil öğeleridir. Giriş dizesinde eşleşen metnin yerini alacak metnin tümünü veya bir kısmını tanımlamak için normal bir ifade deseni kullanırlar. Değiştirme deseni, değişmez karakterlerin yanı sıra bir veya birden çok değiştirmeden oluşabilir. Değiştirme desenleri aşırı yüklemeleri için sağlanan <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> yönteminin bir `replacement` parametresi ve <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemi. Yöntemleri tarafından tanımlanan deseni ile eşleşen desen değiştirin `replacement` parametresi.  
@@ -33,7 +33,7 @@ ms.locfileid: "54030165"
 |`${` *Adı* `}`|Tarafından belirtilen adlandırılmış grubuyla eşleştirilen son alt dizeyi içerir `(?<` *adı* `> )` değiştirme dizesinde. Daha fazla bilgi için [adlandırılmış bir grubu değiştirme](#Named).|  
 |`$$`|Değiştirme dizesinde tek bir "$" değişmez değerini içerir. Daha fazla bilgi için [bir "$" simgesini değiştirme](#DollarSign).|  
 |`$&`|Değiştirme dizesinde tüm eşleşmenin bir kopyasını içerir. Daha fazla bilgi için [tüm eşleşmeyi değiştirme](#EntireMatch).|  
-|``$` ``|Giriş dizesinin tüm metini, değiştirme dizininde eşleşmenin önüne ekler. Daha fazla bilgi için [metni değiştirme](#BeforeMatch).|  
+|``$` ``| Değiştirme dizesinde önce eşleşmenin Giriş dizesinin tüm metnini içerir. Daha fazla bilgi için [metni değiştirme](#BeforeMatch).|  
 |`$'`|Giriş dizesinin tüm metini, değiştirme dizininde eşleşmenin sonrasına ekler. Daha fazla bilgi için [eşleştirmeden sonraki metni](#AfterMatch).|  
 |`$+`|Değiştirme dizesinde yakalanan son grubu içerir. Daha fazla bilgi için [son yakalanan grubu değiştirme](#LastGroup).|  
 |`$_`|Değiştirme dizesinde tüm giriş dizesinin bir kopyasını içerir. Daha fazla bilgi için [tüm giriş dizesini değiştirme](#EntireString).|  

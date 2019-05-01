@@ -3,11 +3,11 @@ title: Güvenilir Görünüm Hizmeti
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
 ms.openlocfilehash: 4921b2746b9df362a0bb3e6048602d41f3f2faaf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007701"
 ---
 # <a name="trusted-facade-service"></a>Güvenilir Görünüm Hizmeti
 Bu senaryo örneği çağıranın kimlik bilgilerini bir hizmetten diğerine Windows Communication Foundation (WCF) kullanarak akış yapmayı gösteren güvenlik altyapısı.  
@@ -16,11 +16,11 @@ Bu senaryo örneği çağıranın kimlik bilgilerini bir hizmetten diğerine Win
   
  Bu örnek aşağıdaki bileşenlerden oluşur:  
   
--   Hesaplayıcı istemci  
+- Hesaplayıcı istemci  
   
--   Hesaplayıcı cephe hizmeti  
+- Hesaplayıcı cephe hizmeti  
   
--   Hesaplayıcı arka uç hizmeti  
+- Hesaplayıcı arka uç hizmeti  
   
  İstek doğrulanıyor ve arayan kimlik doğrulaması için sorumlu cephe hizmetidir. Başarılı kimlik doğrulaması ve doğrulama sonra istek iç ağ çevre ağından denetimli iletişim kanalını kullanarak arka uç hizmetine iletir. Bu bilgiler, işleme, arka uç hizmetine kullanabilmesi iletilen isteğin bir parçası olarak cephe hizmet çağıranının kimliğini hakkında bilgi içerir. Çağıranının kimliğini kullanarak iletilen bir `Username` ileti içinde güvenlik belirteci `Security` başlığı. Örnek, iletme ve bu bilgileri ayıklamak için WCF güvenlik altyapısı kullanır. `Security` başlığı.  
   
@@ -234,7 +234,7 @@ Press <ENTER> to terminate client.
   
  Toplu iş dosyaları farklı bölümlerini kısa bir genel bakış sağlar.  
   
--   Sunucu sertifikası oluşturuluyor.  
+- Sunucu sertifikası oluşturuluyor.  
   
      Setup.bat toplu iş dosyasından aşağıdaki satırları kullanılacak sunucu sertifikası oluşturun.  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate client.
   
      `%SERVER_NAME%` Değişkeni, sunucu adını belirtir: localhost varsayılan değerdir. Depolanmış bir sertifikayla LocalMachine depolama.  
   
--   Cephe hizmetin sertifika istemcinin güvenilen sertifika depolama alanına yükleniyor.  
+- Cephe hizmetin sertifika istemcinin güvenilen sertifika depolama alanına yükleniyor.  
   
      Aşağıdaki satırı cephe hizmetin sertifika istemcisi güvenilir Kişiler deposuna kopyalar. MakeCert.exe tarafından oluşturulan sertifikaları örtük olarak istemci sistemi tarafından güvenilir değildir çünkü bu adım gereklidir. Bir istemci güvenilen kök sertifikayı kök erişim izni verilmiş bir sertifika zaten varsa — örneğin, Microsoft tarafından verilen sertifika — sunucu sertifikasında istemci sertifika deposunun doldurulması, bu adım gerekli değildir.  
   

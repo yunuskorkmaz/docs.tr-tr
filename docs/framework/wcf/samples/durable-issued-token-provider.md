@@ -3,11 +3,11 @@ title: Dayanıklı Verilen Belirteç Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
 ms.openlocfilehash: f91f603e91b1f640ebe97229a1a433446cddb0cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990216"
 ---
 # <a name="durable-issued-token-provider"></a>Dayanıklı Verilen Belirteç Sağlayıcısı
 Bu örnek, verilen belirteç sağlayıcısı, özel bir istemci uygulama gösterilmiştir.  
@@ -15,21 +15,21 @@ Bu örnek, verilen belirteç sağlayıcısı, özel bir istemci uygulama göster
 ## <a name="discussion"></a>Tartışma  
  Windows Communication Foundation (WCF) bir belirteç sağlayıcısı güvenlik altyapısı için kimlik bilgilerini sağlamak için kullanılır. Belirteç sağlayıcı genel hedef inceler ve böylece ileti güvenlik altyapısı güvenli hale getirebilirsiniz, kimlik bilgileri sorunları uygun. WCF ile birlikte gelir bir [!INCLUDE[infocard](../../../../includes/infocard-md.md)] belirteç sağlayıcısı. Özel belirteç sağlayıcıları, aşağıdaki durumlarda kullanışlıdır:  
   
--   Yerleşik belirteç sağlayıcısı ile çalışamaz bir kimlik bilgisi deposu varsa.  
+- Yerleşik belirteç sağlayıcısı ile çalışamaz bir kimlik bilgisi deposu varsa.  
   
--   Kullanıcı için WCF istemci kimlik bilgileri kullandığında ayrıntıları sağladığında noktadan kimlik dönüştürme için kendi özel mekanizması sağlamak istiyorsanız.  
+- Kullanıcı için WCF istemci kimlik bilgileri kullandığında ayrıntıları sağladığında noktadan kimlik dönüştürme için kendi özel mekanizması sağlamak istiyorsanız.  
   
--   Özel belirteç oluşturuluyorsa.  
+- Özel belirteç oluşturuluyorsa.  
   
  Bu örnek, bir güvenlik belirteci hizmeti (STS) tarafından verilen belirteçlere önbelleğe alan özel bir belirteç sağlayıcısı oluşturmak nasıl gösterir.  
   
  Özetlemek gerekirse, bu örnek aşağıdaki gösterir:  
   
--   Nasıl bir istemci özel bir belirteç sağlayıcısı ile yapılandırılabilir.  
+- Nasıl bir istemci özel bir belirteç sağlayıcısı ile yapılandırılabilir.  
   
--   Verilen belirteçleri önbelleğe alınmış ve WCF istemcisine sağlanan nasıl.  
+- Verilen belirteçleri önbelleğe alınmış ve WCF istemcisine sağlanan nasıl.  
   
--   Sunucu, sunucunun X.509 sertifikası kullanarak istemci tarafından nasıl doğrulanır.  
+- Sunucu, sunucunun X.509 sertifikası kullanarak istemci tarafından nasıl doğrulanır.  
   
  Bu örnek, bir istemci konsol programı'nı (Client.exe), bir güvenlik belirteci hizmeti konsol programı (Securitytokenservice.exe) ve hizmeti bir konsol programı (Service.exe) oluşur. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular. Anlaşma tarafından tanımlanan `ICalculator` matematik işlemlerinden sunan arabirimi (ekleme, çıkarma, çarpma ve bölme). İstemci güvenlik belirteci hizmeti (STS) gelen bir güvenlik belirteci alır ve hizmet verilen matematik işlemi ve sonuç ile hizmet verilen yanıtları için zaman uyumlu istekleri yapar. İstemci etkinliği konsol penceresinde görünür.  
   

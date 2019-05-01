@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 78e8c3cacd89f88cbfa062cb30e5b3474c2614ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 74c31c748dd3483aa87afb2c9a7d926965c9f1ed
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517856"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773931"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Nasıl yapılır: IIS üzerinde çalışan bir WCF veri hizmeti geliştirme
 
@@ -23,9 +23,9 @@ Bu konuda, WCF Veri Hizmetleri Internet Information Services (IIS) üzerinde ça
 > [!NOTE]
 > Northwind verileri hizmeti oluşturmak için Northwind örnek veritabanıyla yerel bilgisayarda yüklü gerekir. Bu örnek veritabanı karşıdan yüklemek için indirme sayfasında bakın [örnek veritabanları için SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
 
- Bu konuda Entity Framework kullanarak bir veri hizmeti oluşturulacağını gösterir. Diğer Veri Hizmetleri sağlayıcıları kullanılabilir. Daha fazla bilgi için [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
+Bu konuda Entity Framework kullanarak bir veri hizmeti oluşturulacağını gösterir. Diğer Veri Hizmetleri sağlayıcıları kullanılabilir. Daha fazla bilgi için [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
 
- Hizmeti oluşturduktan sonra veri hizmeti kaynaklarına erişimi açıkça sağlamanız gerekir. Daha fazla bilgi için [nasıl yapılır: Veri hizmetine erişmesini](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
+Hizmeti oluşturduktan sonra veri hizmeti kaynaklarına erişimi açıkça sağlamanız gerekir. Daha fazla bilgi için [nasıl yapılır: Veri hizmetine erişmesini](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>IIS üzerinde çalışan ASP.NET web uygulaması oluşturun
 
@@ -35,7 +35,7 @@ Bu konuda, WCF Veri Hizmetleri Internet Information Services (IIS) üzerinde ça
 
 3. Seçin **ASP.NET Web uygulaması** şablonu.
 
-1. Girin `NorthwindService` olarak projenin adı.
+4. Girin `NorthwindService` olarak projenin adı.
 
 5. **Tamam**'ı tıklatın.
 
@@ -47,13 +47,13 @@ Bu konuda, WCF Veri Hizmetleri Internet Information Services (IIS) üzerinde ça
 
 9. Yönetici ayrıcalıklarıyla komut isteminden (işletim sistemi) bağlı olarak aşağıdaki komutlardan birini yürütün:
 
-    -   32 bit sistemler:
+    - 32 bit sistemler:
 
         ```console
         "%windir%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
         ```
 
-    -   64 bit sistemler:
+    - 64 bit sistemler:
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
@@ -63,13 +63,13 @@ Bu konuda, WCF Veri Hizmetleri Internet Information Services (IIS) üzerinde ça
 
 10. Yönetici ayrıcalıklarıyla komut isteminden (işletim sistemi) bağlı olarak aşağıdaki komutlardan birini yürütün:
 
-    -   32 bit sistemler:
+    - 32 bit sistemler:
 
         ```console
         "%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe" -i -enable
         ```
 
-    -   64 bit sistemler:
+    - 64 bit sistemler:
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe" -i -enable
@@ -132,11 +132,11 @@ Bu konuda, WCF Veri Hizmetleri Internet Information Services (IIS) üzerinde ça
 
 5. Aşağıdakilerden birini yaparak veri modeli veritabanına bağlanmak ve ardından **sonraki**:
 
-    -   Önceden yapılandırılmış bir veritabanı bağlantısı yoksa tıklayın **yeni bağlantı** ve yeni bir bağlantı oluşturun. Daha fazla bilgi için [nasıl yapılır: SQL Server veritabanlarına bağlantı oluşturma](https://go.microsoft.com/fwlink/?LinkId=123631). Bu SQL Server örneği, Northwind örnek veritabanına ekli olması gerekir.
+    - Önceden yapılandırılmış bir veritabanı bağlantısı yoksa tıklayın **yeni bağlantı** ve yeni bir bağlantı oluşturun. Daha fazla bilgi için [nasıl yapılır: SQL Server veritabanlarına bağlantı oluşturma](https://go.microsoft.com/fwlink/?LinkId=123631). Bu SQL Server örneği, Northwind örnek veritabanına ekli olması gerekir.
 
          \- veya -
 
-    -   Northwind veritabanına bağlanmak için zaten yapılandırılmış bir veritabanı bağlantısı varsa, bu bağlantı bağlantılar listesinden seçin.
+    - Northwind veritabanına bağlanmak için zaten yapılandırılmış bir veritabanı bağlantısı varsa, bu bağlantı bağlantılar listesinden seçin.
 
 6. Sihirbazın son sayfasında, veritabanında tüm tabloların onay kutularını işaretleyin ve görünümler ve saklı yordamlar için onay kutularını temizleyin.
 

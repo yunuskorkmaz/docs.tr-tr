@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 8a59a78bbf7ec38f32b14e67d4cb35a9c2375e94
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012041"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Bulut için iyileştirilmiş uygulamalar için var olan .NET uygulamalarını modernleştirme nedenleri
 
@@ -33,13 +33,13 @@ Anahtar *çevikliği*. Tüm dağıtım geliştirmeden üretime kadar bir mutlak 
 
 Aşağıdaki listede, ana sacayakları veya Bulut için iyileştirilmiş uygulamalarına yönelik yöntemler açıklanmaktadır. Tümünün veya yalnızca bu kurallara aşamalı ya da artımlı bir yaklaşım benimseyebilirsiniz dikkat edin:
 
--   **Kapsayıcıları**. Kapsayıcılar uygulama ile uygulamanın bağımlılıkları içerecek şekilde yüklemenizi sağlar. Kapsayıcı, üretim ortamlarına dağıtmak ya da hazırlık ortamı test karşılaşabileceğiniz sorunların sayısını önemli ölçüde azaltır. Sonuç olarak, kapsayıcılar, uygulama tesliminin çevikliği geliştiriyor.
+- **Kapsayıcıları**. Kapsayıcılar uygulama ile uygulamanın bağımlılıkları içerecek şekilde yüklemenizi sağlar. Kapsayıcı, üretim ortamlarına dağıtmak ya da hazırlık ortamı test karşılaşabileceğiniz sorunların sayısını önemli ölçüde azaltır. Sonuç olarak, kapsayıcılar, uygulama tesliminin çevikliği geliştiriyor.
 
--   **Dayanıklı ve ölçeklenebilir bulut**. Bulut, yönetilen, esnek, ölçeklenebilir ve dayanıklı bir platform sunar. Bu özellikleri, maliyeti geliştirmeleri kazanmak ve yüksek oranda kullanılabilir ve güvenilir uygulamaları bir sürekli teslim, teslim etmek zorunludur. Yönetilen, yönetilen bir veritabanı gibi yönetilen Hizmetleri önbellek hizmeti (CaaS) ve yönetilen depolama, uygulamanızın bakım maliyetlerini ortadan kaldırılmasına, temel parçaları olarak.
+- **Dayanıklı ve ölçeklenebilir bulut**. Bulut, yönetilen, esnek, ölçeklenebilir ve dayanıklı bir platform sunar. Bu özellikleri, maliyeti geliştirmeleri kazanmak ve yüksek oranda kullanılabilir ve güvenilir uygulamaları bir sürekli teslim, teslim etmek zorunludur. Yönetilen, yönetilen bir veritabanı gibi yönetilen Hizmetleri önbellek hizmeti (CaaS) ve yönetilen depolama, uygulamanızın bakım maliyetlerini ortadan kaldırılmasına, temel parçaları olarak.
 
--   **İzleme**. Özel durumları ve uygulama performası sorunlarını algılamak ve tanılamak için iyi bir yol olmadan güvenilir bir uygulama sahip olamaz. Uygulama performansı yönetimi ve anında analiz eyleme dönüştürülebilir Öngörüler elde edin gerekir.
+- **İzleme**. Özel durumları ve uygulama performası sorunlarını algılamak ve tanılamak için iyi bir yol olmadan güvenilir bir uygulama sahip olamaz. Uygulama performansı yönetimi ve anında analiz eyleme dönüştürülebilir Öngörüler elde edin gerekir.
 
--   **DevOps kültürü ve sürekli teslim**. DevOps uygulamaları benimsemek takımlar artık bağımsız siloları içinde çalıştığı kültürel bir değişiklik gerektirir. CI/CD işlem hatları, yalnızca geliştirme ve BT işlem ekipleri, kapsayıcılar ve CI/CD araçları tarafından desteklenen arasında artan bir işbirliği olduğunda mümkündür.
+- **DevOps kültürü ve sürekli teslim**. DevOps uygulamaları benimsemek takımlar artık bağımsız siloları içinde çalıştığı kültürel bir değişiklik gerektirir. CI/CD işlem hatları, yalnızca geliştirme ve BT işlem ekipleri, kapsayıcılar ve CI/CD araçları tarafından desteklenen arasında artan bir işbirliği olduğunda mümkündür.
 
 Şekil 4-2, bulut için iyileştirilmiş bir uygulama, ana isteğe bağlı yapı taşına gösterir. Daha fazla yapı taşları uygulamanız, uygulamanızın, müşterilerinizin beklentilerini karşılamak başarılı olması için readier olur.
 
@@ -55,13 +55,13 @@ Kuruluşunuz kademeli olarak bu teknolojiler ve yaklaşım benimseyebilirsiniz. 
 
 Bulut için iyileştirilmiş bir uygulama mevcut bir uygulamaya (bütçeden veya kodlama olmadan) dönüştürme aşağıdaki faydaları elde edebilirsiniz:
 
--   **Düşük maliyet, bulut sağlayıcısı tarafından yönetilen altyapı işlendiğinden**. Uygulamaları bulut için iyileştirilmiş, bulutun kullanıma hazır esneklik, otomatik ölçeklendirme ve yüksek kullanılabilirlik kullanarak bulut avantajlarından yararlanın. Avantajları, yalnızca işlem özelliklerine (VM'ler ve kapsayıcılar) ilişkilidir, ancak bulut kaynaklarında de bağlı DBaaS, CaaS ve herhangi bir altyapının gibi bir uygulama gerekli.
+- **Düşük maliyet, bulut sağlayıcısı tarafından yönetilen altyapı işlendiğinden**. Uygulamaları bulut için iyileştirilmiş, bulutun kullanıma hazır esneklik, otomatik ölçeklendirme ve yüksek kullanılabilirlik kullanarak bulut avantajlarından yararlanın. Avantajları, yalnızca işlem özelliklerine (VM'ler ve kapsayıcılar) ilişkilidir, ancak bulut kaynaklarında de bağlı DBaaS, CaaS ve herhangi bir altyapının gibi bir uygulama gerekli.
 
--   **Dayanıklı uygulama ve altyapı**. Buluta geçirirken, geçici hataları Kucak gerekir; bulutta hataları meydana gelir. Ayrıca, bulut altyapısından ve donanım "değiştirilebilir," geçici kapalı kalma süresi için fırsatlar artıran kullanılabilir. Aynı zamanda, iç bulut özellikleri ve uygulama dayanıklılığı ve kurtarmayı belirli uygulama geliştirme teknikleri bulutta beklenmeyen hatalardan kurtarmak çok kolay hale getirmek.
+- **Dayanıklı uygulama ve altyapı**. Buluta geçirirken, geçici hataları Kucak gerekir; bulutta hataları meydana gelir. Ayrıca, bulut altyapısından ve donanım "değiştirilebilir," geçici kapalı kalma süresi için fırsatlar artıran kullanılabilir. Aynı zamanda, iç bulut özellikleri ve uygulama dayanıklılığı ve kurtarmayı belirli uygulama geliştirme teknikleri bulutta beklenmeyen hatalardan kurtarmak çok kolay hale getirmek.
 
--   **Uygulama performansını daha ayrıntılı Öngörüler**. Azure Application Insights görselleştirme için sistem durumu yönetimi, günlüğe kaydetme ve bildirimleri sağlamak gibi izleme araçları bulut. Denetim günlükleri uygulamaları hata ayıklama ve denetim, güvenilir bulut uygulaması için temel kolaylaştırır.
+- **Uygulama performansını daha ayrıntılı Öngörüler**. Azure Application Insights görselleştirme için sistem durumu yönetimi, günlüğe kaydetme ve bildirimleri sağlamak gibi izleme araçları bulut. Denetim günlükleri uygulamaları hata ayıklama ve denetim, güvenilir bulut uygulaması için temel kolaylaştırır.
 
--   **Çevik dağıtımları olan uygulama taşınabilirliğini**. Kapsayıcılar (Docker altyapısını temel alan Linux veya Windows kapsayıcıları) bulut kilitli bir uygulama önlemenin en iyi çözümü sunar. Kapsayıcılar, Docker ana bilgisayarları ve çoklu bulut düzenleyicileri kullanarak kolayca bir ortamdan taşıma veya başka bir bulut. Kapsayıcılar genellikle herhangi bir ortam (aşama/test/üretim) dağıtımları oluşan ayırmamıza ortadan kaldırır.
+- **Çevik dağıtımları olan uygulama taşınabilirliğini**. Kapsayıcılar (Docker altyapısını temel alan Linux veya Windows kapsayıcıları) bulut kilitli bir uygulama önlemenin en iyi çözümü sunar. Kapsayıcılar, Docker ana bilgisayarları ve çoklu bulut düzenleyicileri kullanarak kolayca bir ortamdan taşıma veya başka bir bulut. Kapsayıcılar genellikle herhangi bir ortam (aşama/test/üretim) dağıtımları oluşan ayırmamıza ortadan kaldırır.
 
 Tüm avantajlar, uçtan uca uygulama yaşam döngünüz için önemli maliyet indirimleri sonuçta sağlayın.
 

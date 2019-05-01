@@ -9,32 +9,32 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
 ms.openlocfilehash: 4d7bb6eef398746a4bd2dc4dbf3d526da1c1e0f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014225"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Visual Basic'te My Ad Alanını Genişletme
 `My` Visual Basic'de ad alanı özellikleri ve kolayca .NET Framework'ün gücünden yararlanmak sağlayan yöntemler sunar. `My` Ad alanı genellikle zor bir görev için tek bir kod satırının azaltma ortak programlama sorunlarını basitleştirir. Ayrıca, `My` davranışını özelleştirebilmeniz için ad alanı tam olarak Genişletilebilir `My` ve belirli bir uygulama gereksinimlerine uyum sağlamak için hiyerarşi için yeni hizmet ekleyin. Her ikisi de bu konu açıklar nasıl özelleştirileceğini mevcut üyeleri `My` ad alanı ve kendi özel sınıflar için ekleme `My` ad alanı.  
   
  **Konu içerikleri**  
   
--   [My Namespace üyeleri varolan özelleştirme](#customizing)  
+- [My Namespace üyeleri varolan özelleştirme](#customizing)  
   
--   [My nesnelere üye ekleme](#addingtoobjects)  
+- [My nesnelere üye ekleme](#addingtoobjects)  
   
--   [Özel nesne eklemeyi My Namespace](#addingcustom)  
+- [Özel nesne eklemeyi My Namespace](#addingcustom)  
   
--   [Üye ekleme My Namespace](#addingtonamespace)  
+- [Üye ekleme My Namespace](#addingtonamespace)  
   
--   [Nesnelerim özel olaylar ekleme](#addingevents)  
+- [Nesnelerim özel olaylar ekleme](#addingevents)  
   
--   [Tasarım yönergeleri](#design)  
+- [Tasarım yönergeleri](#design)  
   
--   [Sınıf kitaplıkları için tasarlama My](#designing)  
+- [Sınıf kitaplıkları için tasarlama My](#designing)  
   
--   [Paketleme ve hata ayıklama uzantıları](#packaging)  
+- [Paketleme ve hata ayıklama uzantıları](#packaging)  
   
 ## <a name="customizing"></a> My Namespace üyeleri varolan özelleştirme  
  `My` Ad alanında Visual Basic kullanıma sunan sık kullanılan uygulamanız, bilgisayarınız ve daha fazla bilgi. Nesnelerin tam listesi için `My` ad bkz [My başvuru](../../../visual-basic/language-reference/keywords/my-reference.md). Mevcut üyeleri özelleştirmeniz gerekebilir `My` ad alanı, daha iyi eşleşecek uygulamanızın ihtiyaçlarını. Bir nesnenin herhangi bir özelliği `My` salt okunur olmayan ad alanı, özel bir değere ayarlanabilir.  
@@ -76,22 +76,22 @@ ms.locfileid: "58814169"
 ## <a name="design"></a> Tasarım yönergeleri  
  Uzantıları geliştirirken `My` ad alanı uzantısı bileşenlerinizi bakım maliyetlerini en aza indirmek için aşağıdaki yönergeleri kullanın.  
   
--   **Uzantı mantığı içerir.** Dahil olan mantıksal `My` ad alanı uzantısı, gerekli işlevleri kullanıma sunmak için gereken kodu içermelidir `My` ad alanı. Uzantınızı kullanıcı projelerinde kod kaynağı olarak yer alacağı için uzantı bileşeninin yüksek bakım maliyeti doğurur ve mümkün olduğunda kaçınılmalıdır.  
+- **Uzantı mantığı içerir.** Dahil olan mantıksal `My` ad alanı uzantısı, gerekli işlevleri kullanıma sunmak için gereken kodu içermelidir `My` ad alanı. Uzantınızı kullanıcı projelerinde kod kaynağı olarak yer alacağı için uzantı bileşeninin yüksek bakım maliyeti doğurur ve mümkün olduğunda kaçınılmalıdır.  
   
--   **Proje varsayımlar en aza indirin.** Oluşturduğunuzda, uzantıları `My` ad alanı, bir dizi başvuruları, proje düzeyi Imports veya belirli bir derleyici ayarları varsaymayın (örneğin, `Option Strict` kapalı). Bunun yerine, bağımlılıkları en aza indirmek ve kullanarak tüm tür başvurularını tam olarak nitelemek `Global` anahtar sözcüğü. Ayrıca, uzantı ile derlendiğinden emin olmak `Option Strict` uzantı hataları en aza indirmek için üzerinde.  
+- **Proje varsayımlar en aza indirin.** Oluşturduğunuzda, uzantıları `My` ad alanı, bir dizi başvuruları, proje düzeyi Imports veya belirli bir derleyici ayarları varsaymayın (örneğin, `Option Strict` kapalı). Bunun yerine, bağımlılıkları en aza indirmek ve kullanarak tüm tür başvurularını tam olarak nitelemek `Global` anahtar sözcüğü. Ayrıca, uzantı ile derlendiğinden emin olmak `Option Strict` uzantı hataları en aza indirmek için üzerinde.  
   
--   **Uzantı kodu yalıtın.** Tek bir dosyada kod yerleştirme uzantınızın Visual Studio öğe şablonu kolayca dağıtılabilir hale getirir. Daha fazla bilgi için bu konunun ilerleyen bölümlerinde "Paketleme ve dağıtma uzantıları" konusuna bakın. Tüm yerleştirme `My` ad alanı uzantı kodu tek bir dosyada veya ayrı bir klasörde bir proje de bulmalarına yardımcı olacak `My` ad alanı uzantısı.  
+- **Uzantı kodu yalıtın.** Tek bir dosyada kod yerleştirme uzantınızın Visual Studio öğe şablonu kolayca dağıtılabilir hale getirir. Daha fazla bilgi için bu konunun ilerleyen bölümlerinde "Paketleme ve dağıtma uzantıları" konusuna bakın. Tüm yerleştirme `My` ad alanı uzantı kodu tek bir dosyada veya ayrı bir klasörde bir proje de bulmalarına yardımcı olacak `My` ad alanı uzantısı.  
   
 ## <a name="designing"></a> Sınıf kitaplıkları için tasarlama My  
  Çoğu nesne modelleri ile olduğu gibi bazı tasarım desenleri çalışmak iyi `My` ad alanı ve diğerleri yapın. Bir uzantı tasarlarken `My` ad alanı, aşağıdaki ilkeleri göz önünde bulundurun:  
   
--   **Durum bilgisi olmayan yöntemler.** Yöntemleri `My` ad alanı, belirli bir görev için eksiksiz bir çözüm sağlamalıdır. Yönteme geçirilen parametre değerleri belirli bir görevi tamamlamak için gereken tüm girişler sağladığından emin olun. Açık kaynak bağlantıları gibi önceki durum kullanan yöntemleri oluşturmaktan kaçının.  
+- **Durum bilgisi olmayan yöntemler.** Yöntemleri `My` ad alanı, belirli bir görev için eksiksiz bir çözüm sağlamalıdır. Yönteme geçirilen parametre değerleri belirli bir görevi tamamlamak için gereken tüm girişler sağladığından emin olun. Açık kaynak bağlantıları gibi önceki durum kullanan yöntemleri oluşturmaktan kaçının.  
   
--   **Genel örnekleri.** Tutulur yalnızca durumu `My` projeye genel ad alanı. Örneğin, `My.Application.Info` uygulama genelinde paylaşılan durum kapsüller.  
+- **Genel örnekleri.** Tutulur yalnızca durumu `My` projeye genel ad alanı. Örneğin, `My.Application.Info` uygulama genelinde paylaşılan durum kapsüller.  
   
--   **Basit parametre türleri.** Karmaşık bir parametre türleri önleyerek basit bir anlatım gözetildiği. Bunun yerine, giriş parametresi yok ya da ele yöntemleri oluşturun veya dizeleri, ilkel türler vb. gibi basit giriş türlerini alır.  
+- **Basit parametre türleri.** Karmaşık bir parametre türleri önleyerek basit bir anlatım gözetildiği. Bunun yerine, giriş parametresi yok ya da ele yöntemleri oluşturun veya dizeleri, ilkel türler vb. gibi basit giriş türlerini alır.  
   
--   **Fabrika yöntemleri.** Bazı türleri oluşturmak mutlaka zordur. Uzantıları olarak Fabrika yöntemleri sağlayan `My` ad alanı daha kolay bulmak ve bu kategoriye giren türleri kullanmasına olanak sağlar. İyi bir Üreteç yöntemi örneğidir `My.Computer.FileSystem.OpenTextFileReader`. .NET Framework'te bulunan çeşitli akış türü vardır. Özellikle, metin dosyaları belirterek `OpenTextFileReader` kullanıcının kullanmak için hangi akışını anlamanıza yardımcı olur.  
+- **Fabrika yöntemleri.** Bazı türleri oluşturmak mutlaka zordur. Uzantıları olarak Fabrika yöntemleri sağlayan `My` ad alanı daha kolay bulmak ve bu kategoriye giren türleri kullanmasına olanak sağlar. İyi bir Üreteç yöntemi örneğidir `My.Computer.FileSystem.OpenTextFileReader`. .NET Framework'te bulunan çeşitli akış türü vardır. Özellikle, metin dosyaları belirterek `OpenTextFileReader` kullanıcının kullanmak için hangi akışını anlamanıza yardımcı olur.  
   
  Bu yönergeler, sınıf kitaplıkları için genel bir tasarım ilkeleri kullanımını değil. Bunun yerine, Visual Basic kullanan geliştiriciler için optimize edilmiş önerileri olduklarını ve `My` ad alanı. Genel tasarım ilkeleri sınıf kitaplıkları oluşturmak için bkz: [çerçeve tasarım yönergeleri](../../../standard/design-guidelines/index.md).  
   

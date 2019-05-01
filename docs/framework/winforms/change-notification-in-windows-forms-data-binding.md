@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
 ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011885"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Windows Forms Veri Bağlamada Bildirimi Değiştirme
 Bir Windows Forms veri bağlamanın en önemli kavramları *bildirimi değiştirme*. Bağlama denetimleri ve veri kaynağı her zaman en son veri sağlamak için veri bağlama için değişiklik bildirimi eklemeniz gerekir. Özellikle ilişkili denetimler, veri kaynağına yapılan değişikliklerin bildirilmesini güvence altına almak istediğiniz ve veri kaynağına bağlı bir denetim özelliklerine yapılan değişiklikler, bildirilir.  
   
  Veri bağlama türüne bağlı olarak değişiklik bildirimi farklı tür vardır:  
   
--   Basit bağlama, bir tek denetim özelliği tek bir nesnenin örneğine bağlanır.  
+- Basit bağlama, bir tek denetim özelliği tek bir nesnenin örneğine bağlanır.  
   
--   Listedeki bir öğeye özelliğini veya bir denetim özelliği bağlı bir tek bir denetim özelliği liste tabanlı bağlama nesnelerin listesine bağlı.  
+- Listedeki bir öğeye özelliğini veya bir denetim özelliği bağlı bir tek bir denetim özelliği liste tabanlı bağlama nesnelerin listesine bağlı.  
   
  Ayrıca, veri bağlama için kullanmak istediğiniz Windows Forms denetimleri oluşturuyorsanız uygulamalısınız *PropertyName*için bağlı bir denetim özelliğini değişiklikleri yayılana böylece deseni denetimlere değiştirildi veri kaynağı.  
   

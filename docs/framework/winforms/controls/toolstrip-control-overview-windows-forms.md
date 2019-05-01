@@ -10,11 +10,11 @@ helpviewer_keywords:
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
 ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009532"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ToolStrip> denetimi ve ilişkili sınıflarının sağlayan ortak bir çerçeve kullanıcı arabirimi öğeleri araç çubukları, durum çubukları ve menüler birleştirmek için. <xref:System.Windows.Forms.ToolStrip> denetimleri yatay veya dikey boşluk paylaşma olanağı, araç çubuklarının olduğu yerinde etkinleştirme ve düzenleme, özel düzen ve radye, içeren zengin bir tasarım zamanı deneyimi sunar.  
@@ -24,19 +24,19 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> denetimi ve ilişkili sını
 ## <a name="features-of-the-toolstrip-controls"></a>ToolStrip denetimlerinin özellikleri  
  Kullanım <xref:System.Windows.Forms.ToolStrip> denetimi:  
   
--   Kapsayıcılar arasında ortak bir kullanıcı arabirimi sunar.  
+- Kapsayıcılar arasında ortak bir kullanıcı arabirimi sunar.  
   
--   Özelleştirilmiş kolayca oluşturabilir, destek yaygın olarak çalıştırılan araç çubukları kullanıcı arabirimi ve düzen özellikleri, Gelişmiş metin ve görüntüleri, aşağı açılır düğmeler ve denetimleri yerleştirme, radye, düğmeler gibi taşma düğmeler ve çalışma zamanı, yeniden sıralama <xref:System.Windows.Forms.ToolStrip> öğeleri.  
+- Özelleştirilmiş kolayca oluşturabilir, destek yaygın olarak çalıştırılan araç çubukları kullanıcı arabirimi ve düzen özellikleri, Gelişmiş metin ve görüntüleri, aşağı açılır düğmeler ve denetimleri yerleştirme, radye, düğmeler gibi taşma düğmeler ve çalışma zamanı, yeniden sıralama <xref:System.Windows.Forms.ToolStrip> öğeleri.  
   
--   Taşma ve çalışma zamanı öğeyi yeniden sıralamayı destekler. Bunları görüntülemek için yeterli alan olmadığında taşma özellik öğeleri açılan menüye taşır. bir <xref:System.Windows.Forms.ToolStrip>.  
+- Taşma ve çalışma zamanı öğeyi yeniden sıralamayı destekler. Bunları görüntülemek için yeterli alan olmadığında taşma özellik öğeleri açılan menüye taşır. bir <xref:System.Windows.Forms.ToolStrip>.  
   
--   Tipik bir görünümünü ve davranışını bir ortak işleme modeliyle işletim sisteminin destekler.  
+- Tipik bir görünümünü ve davranışını bir ortak işleme modeliyle işletim sisteminin destekler.  
   
--   Diğer denetimlerin olaylarını işlemek aynı şekilde tüm kapsayıcılar ve içerilen öğelerin için tutarlı bir şekilde olayları işleyin.  
+- Diğer denetimlerin olaylarını işlemek aynı şekilde tüm kapsayıcılar ve içerilen öğelerin için tutarlı bir şekilde olayları işleyin.  
   
--   Sürükleyin öğeleri birinden <xref:System.Windows.Forms.ToolStrip> diğerine veya içinde bir <xref:System.Windows.Forms.ToolStrip>.  
+- Sürükleyin öğeleri birinden <xref:System.Windows.Forms.ToolStrip> diğerine veya içinde bir <xref:System.Windows.Forms.ToolStrip>.  
   
--   Aşağı açılan denetimleri ve kullanıcı arabirimi tür düzenleyicileri Gelişmiş düzenleri oluşturmak bir <xref:System.Windows.Forms.ToolStripDropDown>.  
+- Aşağı açılan denetimleri ve kullanıcı arabirimi tür düzenleyicileri Gelişmiş düzenleri oluşturmak bir <xref:System.Windows.Forms.ToolStripDropDown>.  
   
  Kullanma <xref:System.Windows.Forms.ToolStripControlHost> sınıfı diğer denetimleri kullanmak üzere bir <xref:System.Windows.Forms.ToolStrip> ve geçirmesine <xref:System.Windows.Forms.ToolStrip> onlar için işlev.  
   

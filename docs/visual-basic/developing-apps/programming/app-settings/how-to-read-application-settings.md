@@ -7,11 +7,11 @@ helpviewer_keywords:
 - application settings [Visual Basic], reading
 ms.assetid: eb3428ef-115e-49a8-a878-e0613183fee0
 ms.openlocfilehash: e7d909563ca7e991a51c2f921b5248aa587a83d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014082"
 ---
 # <a name="how-to-read-application-settings-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te uygulama ayarlarını okuma
 Bir kullanıcı ayarı üzerinde ayarın özelliğine erişerek edinebilirsiniz `My.Settings` nesne.  

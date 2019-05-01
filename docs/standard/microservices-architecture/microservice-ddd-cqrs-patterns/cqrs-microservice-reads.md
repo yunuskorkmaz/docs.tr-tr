@@ -1,15 +1,15 @@
 ---
-title: CQRS mikro hizmetinde okuma/sorgulama uygulama
+title: CQRS mikro hizmetinde okuma/sorgulama işlemleri uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Sıralama mikro hizmet Dapper kullanarak hizmetine CQRS modelinin sorguları tarafında uygulanması anlayın.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
 ms.openlocfilehash: 104c7564b7dd29209b48d99b1dea7524c07d7e69
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020081"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS mikro hizmetinde okuma/sorgulama uygulayın
 

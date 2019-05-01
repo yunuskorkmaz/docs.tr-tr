@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: XML öğesi ve XML öznitelik adlarını Sınıflandır'
+title: 'Nasıl yapılır: XML Öğesini ve XML Öznitelik Adlarını Niteleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 3c477923387e5a28dcc14b44b0f77bb6acb686e5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
-ms.translationtype: MT
+ms.openlocfilehash: 04e9dd3c135c516fa5554b9b547306337fb6a668
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176740"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807819"
 ---
-# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Nasıl yapılır: XML öğesi ve XML öznitelik adlarını Sınıflandır
+# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Nasıl yapılır: XML Öğesini ve XML Öznitelik Adlarını Niteleme
 
 XML ad alanları örneklerini tarafından bulunan <xref:System.Xml.Serialization.XmlSerializerNamespaces> sınıf adlı World Wide Web Consortium (W3C) belirtimi için uygun olmalıdır [ad alanları XML](https://www.w3.org/TR/REC-xml-names/).
 
@@ -32,7 +32,7 @@ XML ad alanları, XML öğelerine ve XML belgeleri XML öznitelikleri adlarını
 
 3. Uygun uygulamak `System.Xml.Serialization` , sınıf veya öznitelik her üyesine <xref:System.Xml.Serialization.XmlSerializer> XML belgesine serileştirmek için.
 
-  Kullanılabilir öznitelikler: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute>, ve <xref:System.Xml.Serialization.XmlTypeAttribute>.
+    Kullanılabilir öznitelikler: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute>, ve <xref:System.Xml.Serialization.XmlTypeAttribute>.
 
 4. Ayarlama `Namespace` özelliğine her özniteliğinin ad alanı değerlerinden birine `XmlSerializerNamespaces`.
 
@@ -176,6 +176,6 @@ public class Book
 - [XML Serileştirmeye Giriş](introducing-xml-serialization.md)
 - [XmlSerializer sınıfını](xref:System.Xml.Serialization.XmlSerializer)
 - [XML Serileştirmeyi Denetleyen Öznitelikler](attributes-that-control-xml-serialization.md)
-- [Nasıl yapılır: XML Akışı için Alternatif Öğe Adı Belirtme](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [Nasıl yapılır: Nesne Serileştirme](how-to-serialize-an-object.md)
-- [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](how-to-deserialize-an-object.md)
+- [Nasıl yapılır: Bir XML Stream için alternatif öğe adı belirtin](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Nasıl yapılır: Bir nesneyi serileştirmek](how-to-serialize-an-object.md)
+- [Nasıl yapılır: Bir nesneyi seri durumdan çıkarma](how-to-deserialize-an-object.md)

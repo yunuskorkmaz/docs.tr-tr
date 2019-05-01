@@ -10,11 +10,11 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
 ms.openlocfilehash: fbe2aa724274022446498a89618f37787f0fa8bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013380"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGrid Denetimini Biçimlendirme
 
@@ -25,11 +25,11 @@ ms.locfileid: "59333580"
   
  Biçimlendirme üç temel unsur vardır <xref:System.Windows.Forms.DataGrid> denetimi:  
   
--   Verilerin görüntülendiği bir varsayılan stilde kurmak için özellikleri ayarlayabilirsiniz.  
+- Verilerin görüntülendiği bir varsayılan stilde kurmak için özellikleri ayarlayabilirsiniz.  
   
--   Bu temelden belirli tablolar, çalışma zamanında görüntülenme biçimini özelleştirebilirsiniz.  
+- Bu temelden belirli tablolar, çalışma zamanında görüntülenme biçimini özelleştirebilirsiniz.  
   
--   Son olarak, hangi sütunların renkleri yanı sıra veri kılavuzunda görüntülenen değiştirebilirsiniz ve diğer biçimlendirme gösterilir.  
+- Son olarak, hangi sütunların renkleri yanı sıra veri kılavuzunda görüntülenen değiştirebilirsiniz ve diğer biçimlendirme gösterilir.  
   
  Bir ilk adım olarak, veri kılavuzu biçimlendirme özellikleri ayarlayabilirsiniz <xref:System.Windows.Forms.DataGrid> kendisi. Bu renk ve biçim seçimleri kendisinden sonra veri tabloları ve sütunları görüntülenen bağlı olarak değişiklik yapabilirsiniz bir temel oluşturur.  
   

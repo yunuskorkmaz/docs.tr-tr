@@ -3,20 +3,20 @@ title: Geçiş Kılavuzu
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
 ms.openlocfilehash: a36108e8c711b9e5d5253b19a9122373fc513855
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010000"
 ---
 # <a name="migration-guidance"></a>Geçiş Kılavuzu
 İçinde [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsoft ikinci ana sürüm Windows Workflow Foundation (WF) yayımladı. [!INCLUDE[wf1](../../../includes/wf1-md.md)] çıkan [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (Bu System.Workflow.* ad alanlarında türleri dahil; artık WF3 adlandırılır) ve geliştirilmiş içinde [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 olduğunu da parçası [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ancak yeni bir iş akışı teknoloji vardır (System.Activities. türlerinde\* ad alanları; WF4 başvurulan). WF4 benimsemek ne zaman düşünürken öncelikle zamanlamasını denetlemek bilmek önemlidir.  
   
--   WF3 tam olarak desteklenen bir parçası olan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].  
+- WF3 tam olarak desteklenen bir parçası olan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].  
   
--   WF3 uygulamaları çalıştırıp [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] yapmadan ve tam olarak desteklenmeye devam edilir.  
+- WF3 uygulamaları çalıştırıp [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] yapmadan ve tam olarak desteklenmeye devam edilir.  
   
--   Yeni WF3 uygulamalar oluşturulabilir ve mevcut uygulamalarınızı Visual Studio 2012'de düzenlenebilir ve tam olarak desteklenir.  
+- Yeni WF3 uygulamalar oluşturulabilir ve mevcut uygulamalarınızı Visual Studio 2012'de düzenlenebilir ve tam olarak desteklenir.  
   
  Bu nedenle, .NET Framework 4 benimsemeye karar kullanacağınıza karar WF4 için Taşı'den ayrılmış (System.Activities.*) WF3 gelen (System.Workflow.\*). Bu konuda WF4 WF3 ile çalışma hakkında bilgi sağlayan WF geçiş kılavuzuna bağlantılar sağlar.  
   

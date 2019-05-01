@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: .NET içinde temel dize işlemeleri gerçekleştirme'
+title: 'Nasıl yapılır: .NET içinde temel dize işlemeleri gerçekleştirme'
 description: Birçok dize yöntemlerini çağıran bir örneğe bakın.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
@@ -13,13 +13,13 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: 11f8043745c631a642b437339240cbf06fc8df5b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025944"
 ---
-# <a name="how-to-perform-basic-string-manipulations-in-net"></a>Nasıl Yapılır: .NET içinde temel dize işlemeleri gerçekleştirme
+# <a name="how-to-perform-basic-string-manipulations-in-net"></a>Nasıl yapılır: .NET içinde temel dize işlemeleri gerçekleştirme
 Aşağıdaki örnek, bazı ele yöntemlerini kullanır [temel dize işlemleri](../../../docs/standard/base-types/basic-string-operations.md) dize işlemeleri gerçek bir uygulamada bulunan bir biçimde gerçekleştiren bir sınıf oluşturmak için konuları. `MailToData` Sınıf adını ve bireysel adresini ayrı özelliklerinde depolar ve birleştirmek için bir yol sağlar `City`, `State`, ve `Zip` alanlarına kullanıcıya görüntülemek için tek bir dize. Ayrıca, sınıfı tek bir dize olarak Şehir, eyalet ve posta kodu bilgilerini girmesini sağlar; Uygulama, otomatik olarak tek bir dizeyi ayrıştırır ve karşılık gelen özelliğine doğru bilgilerin girer.  
   
  Kolaylık olması için bu örnekte, bir komut satırı arabirimi ile bir konsol uygulaması kullanılmaktadır.  

@@ -3,11 +3,11 @@ title: Özel İzleme
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
 ms.openlocfilehash: 7e275af046013dcd76cb61c25ace1d96fd7e4b93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005370"
 ---
 # <a name="custom-tracking"></a>Özel İzleme
 Bu örnek bir özel izleme Katılımcısı oluşturma ve izleme verilerini içeriğini konsola yazma gösterir. Ayrıca, örnek yayma yapmayı gösteren <xref:System.Activities.Tracking.CustomTrackingRecord> doldurulmuş olan kullanıcı nesneleri tanımlanan veri. Konsol tabanlı izleme katılımcı filtreleri <xref:System.Activities.Tracking.TrackingRecord> nesneleri bir izleme profili kullanan iş akışı tarafından yayılan kod içinde oluşturulan bir nesne.
@@ -110,9 +110,9 @@ invoker.Extensions.Add(customTrackingParticipant);
 ### <a name="emitting-custom-tracking-records"></a>Özel izleme kayıtları yayma
  Bu örnek ayrıca yayma özelliği gösterir <xref:System.Activities.Tracking.CustomTrackingRecord> özel iş akışı etkinlik nesneleri:
 
--   <xref:System.Activities.Tracking.CustomTrackingRecord> Nesnelerinin oluşturulduğu ve kayıtla derleyicisindeki istenen kullanıcı tarafından tanımlanan verilerle doldurulur.
+- <xref:System.Activities.Tracking.CustomTrackingRecord> Nesnelerinin oluşturulduğu ve kayıtla derleyicisindeki istenen kullanıcı tarafından tanımlanan verilerle doldurulur.
 
--   <xref:System.Activities.Tracking.CustomTrackingRecord> Track yöntemi çağırarak yayılan <xref:System.Activities.ActivityContext>.
+- <xref:System.Activities.Tracking.CustomTrackingRecord> Track yöntemi çağırarak yayılan <xref:System.Activities.ActivityContext>.
 
  Aşağıdaki örnek yayma gösterilmektedir <xref:System.Activities.Tracking.CustomTrackingRecord> özel bir etkinlik içinde nesneler.
 

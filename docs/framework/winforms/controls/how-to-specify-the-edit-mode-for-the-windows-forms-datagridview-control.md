@@ -9,22 +9,22 @@ helpviewer_keywords:
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
 ms.openlocfilehash: 7cb9278cd311d211ef95df238b930970ae472d05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012951"
 ---
 # <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminin Düzenleme Modunu Belirtme
 Varsayılan olarak, kullanıcılar geçerli içeriğini düzenleyebilir <xref:System.Windows.Forms.DataGridView> yazmak ya da F2 tuşuna basarak metin kutusu hücre. Tüm aşağıdaki koşullardan biri karşılanırsa bu hücre düzenleme moduna girer:  
   
--   Temel alınan veri kaynağına düzenlemeyi destekler.  
+- Temel alınan veri kaynağına düzenlemeyi destekler.  
   
--   <xref:System.Windows.Forms.DataGridView> Denetimi etkinleştirildi.  
+- <xref:System.Windows.Forms.DataGridView> Denetimi etkinleştirildi.  
   
--   <xref:System.Windows.Forms.DataGridView.EditMode%2A> Özellik değeri değil <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.  
+- <xref:System.Windows.Forms.DataGridView.EditMode%2A> Özellik değeri değil <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.  
   
--   `ReadOnly` Hücre, satır, sütun ve denetim özellikleri olan tüm kümesine `false`.  
+- `ReadOnly` Hücre, satır, sütun ve denetim özellikleri olan tüm kümesine `false`.  
   
  Kullanıcı düzenleme modunda hücre değerini değiştirin ve değişikliği veya özgün değerine hücreye dönmek için ESC kaydetmek için ENTER tuşuna basın.  
   
@@ -32,7 +32,7 @@ Varsayılan olarak, kullanıcılar geçerli içeriğini düzenleyebilir <xref:Sy
   
 ### <a name="to-change-the-edit-mode-of-a-datagridview-control"></a>DataGridView denetiminin düzenleme modunu değiştirmek için  
   
--   Ayarlama <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> özelliğini uygun <xref:System.Windows.Forms.DataGridViewEditMode> sabit listesi.  
+- Ayarlama <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> özelliğini uygun <xref:System.Windows.Forms.DataGridViewEditMode> sabit listesi.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
@@ -40,9 +40,9 @@ Varsayılan olarak, kullanıcılar geçerli içeriğini düzenleyebilir <xref:Sy
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   A <xref:System.Windows.Forms.DataGridView> adlı Denetim `dataGridView1`.  
+- A <xref:System.Windows.Forms.DataGridView> adlı Denetim `dataGridView1`.  
   
--   Başvurular <xref:System> ve <xref:System.Windows.Forms> derlemeler.  
+- Başvurular <xref:System> ve <xref:System.Windows.Forms> derlemeler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

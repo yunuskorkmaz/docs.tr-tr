@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a49252d00f75b4d0b6325aeae0aab22f8ada5e4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000330"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies İşlevi
 İki derlemenin yalnızca tanımlayıcı ad imzaları tarafından farklı olup olmadığını belirler.  
@@ -48,11 +48,11 @@ BOOLEAN StrongNameCompareAssemblies (
  `pdwResult`  
  [out] Aşağıdaki değerlerden biri:  
   
--   `SN_CMP_DIFFERENT` (0) - derlemeleri farklı veri içerdiğini belirtir.  
+- `SN_CMP_DIFFERENT` (0) - derlemeleri farklı veri içerdiğini belirtir.  
   
--   `SN_CMP_IDENTICAL` (1) - derlemeleri tam olarak aynı kendi imzaları ve sağlama toplamı dahil olmak üzere olduğunu belirtir.  
+- `SN_CMP_IDENTICAL` (1) - derlemeleri tam olarak aynı kendi imzaları ve sağlama toplamı dahil olmak üzere olduğunu belirtir.  
   
--   `SN_CMP_SIGONLY` (2) - derlemeler yalnızca imza ve sağlama toplamı farklı olduğunu belirtir.  
+- `SN_CMP_SIGONLY` (2) - derlemeler yalnızca imza ve sağlama toplamı farklı olduğunu belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  `true` başarıyla tamamlandığında; Aksi takdirde, `false`.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - option buttons [Windows Forms], displaying in MenuStrip
 ms.assetid: 8b596af2-9ff8-4f7b-93d7-cba830e167f4
 ms.openlocfilehash: e764c7e181870d8faf6157cacc13164977ce2e3b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013432"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Nasıl yapılır: MenuStrip (Windows Forms) seçenek düğmeleri görüntüleme
 Seçenek düğmeleri, radyo düğmeleri olarak da bilinir, kullanıcılar yalnızca teker teker seçebilir dışında onay kutularını işaretleyin benzerdir. Ancak varsayılan olarak <xref:System.Windows.Forms.ToolStripMenuItem> sınıfı seçenek düğmesini davranışı sağlamaz, sınıfı menü öğeleri için seçenek düğmesini davranışı uygulamak için özelleştirebileceğiniz onay kutusu davranış sağlayan bir <xref:System.Windows.Forms.MenuStrip> denetimi.  
@@ -78,7 +78,7 @@ Seçenek düğmeleri, radyo düğmeleri olarak da bilinir, kullanıcılar yalnı
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Sistem, System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
+- Sistem, System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

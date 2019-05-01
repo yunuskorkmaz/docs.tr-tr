@@ -8,11 +8,11 @@ helpviewer_keywords:
 - digital ink [WPF]
 ms.assetid: d0d6df69-daf9-4cf3-b7f9-ffee588037a3
 ms.openlocfilehash: 1f68eafba64f45a77687d09d2e1ab709a76c0e33
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010572"
 ---
 # <a name="digital-ink"></a>Dijital Mürekkep
 Bu bölümde, dijital mürekkebi kullanımı ele alınmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Geleneksel olarak yalnızca Tablet PC SDK içinde bulunan, dijital mürekkep çekirdek Windows Presentation Foundation artık kullanılabilir. Başka bir deyişle, Windows Presentation Foundation'ın gücünü kullanarak artık BB'yi Tablet PC uygulamaları geliştirebilirsiniz.  

@@ -3,11 +3,11 @@ title: 3507 - ServiceEndpointAdded
 ms.date: 03/30/2017
 ms.assetid: c068fc0e-07ee-4551-9824-ea7216e1fe37
 ms.openlocfilehash: c787a1a5af752a3d08e2049cfa0b600b7739e56c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009844"
 ---
 # <a name="3507---serviceendpointadded"></a>3507 - ServiceEndpointAdded
 ## <a name="properties"></a>Özellikler  
@@ -15,7 +15,7 @@ ms.locfileid: "33512066"
 |||  
 |-|-|  
 |Kimlik|3507|  
-|Anahtar Sözcükler|WFServices|  
+|anahtar sözcükler|WFServices|  
 |Düzey|Bilgiler|  
 |Kanal|Microsoft Windows uygulama sunucusu-uygulamalar/analitik|  
   
@@ -29,7 +29,7 @@ ms.locfileid: "33512066"
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|Adres|xs: String|Uç nokta adresi.|  
-|Bağlama|xs: String|Uç nokta bağlama.|  
-|Daralma|xs: String|Uç nokta sözleşme.|  
-|AppDomain|xs: String|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|Adres|xs:string|Uç nokta adresi.|  
+|Bağlama|xs:string|Uç nokta bağlama.|  
+|Sözleşme|xs:string|Sözleşme Bitiş noktası.|  
+|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|

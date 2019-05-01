@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
 ms.openlocfilehash: 392d548a5f89c31d94af9134b8cc3a37b28d8c6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009116"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>İzlenecek yol: TableLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme
 Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içeriği boyutu değiştikçe uygun şekilde düzenler bir düzene sahip bir form gerektirir. Ne zaman dinamik bir düzen gerekir ve işlemek istemediğiniz <xref:System.Windows.Forms.Control.Layout> açıkça kodunuzda olayları, Düzen panelini kullanma göz önünde bulundurun.  
@@ -28,21 +28,21 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
   
  Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
   
--   Bir Windows Forms projesi oluşturma  
+- Bir Windows Forms projesi oluşturma  
   
--   Satırlar ve sütunlar denetimleri düzenleme  
+- Satırlar ve sütunlar denetimleri düzenleme  
   
--   Ayar satır ve sütun özellikleri  
+- Ayar satır ve sütun özellikleri  
   
--   Kapsayıcı satırlar ve sütunlar bir denetimi ile  
+- Kapsayıcı satırlar ve sütunlar bir denetimi ile  
   
--   Taşan otomatik işleme  
+- Taşan otomatik işleme  
   
--   Araç kutusunda çift tıklayarak denetimler ekleme  
+- Araç kutusunda çift tıklayarak denetimler ekleme  
   
--   Anahattı çizerek bir denetim ekleme  
+- Anahattı çizerek bir denetim ekleme  
   
--   Mevcut denetimleri farklı bir üst öğeye yeniden atama  
+- Mevcut denetimleri farklı bir üst öğeye yeniden atama  
   
  İşlemi tamamladığınızda, bu önemli bir düzen özellikleri tarafından oynadığı rol, bir anlayışa sahip olacaksınız.  
   
@@ -158,25 +158,25 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
   
 #### <a name="to-demonstrate-that-multiple-controls-within-cells-are-not-permitted"></a>Hücreleri içinde birden çok denetim verilmeyen göstermek için  
   
--   Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** içine <xref:System.Windows.Forms.TableLayoutPanel> denetlemek ve dolu hücrelerden biri bırakın. Unutmayın <xref:System.Windows.Forms.TableLayoutPanel> denetimi izin vermemektedir bırakmak <xref:System.Windows.Forms.Button> dolu hücresine denetimi.  
+- Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** içine <xref:System.Windows.Forms.TableLayoutPanel> denetlemek ve dolu hücrelerden biri bırakın. Unutmayın <xref:System.Windows.Forms.TableLayoutPanel> denetimi izin vermemektedir bırakmak <xref:System.Windows.Forms.Button> dolu hücresine denetimi.  
   
 ## <a name="swapping-controls"></a>Denetimleri değiştirme  
  <xref:System.Windows.Forms.TableLayoutPanel> Denetimi iki farklı hücresini kaplayan denetimleri takas etmenizi sağlar.  
   
 #### <a name="to-swap-controls"></a>Denetimleri değiştirmek için  
   
--   Sürükleyin <xref:System.Windows.Forms.Button> bir dolu hücre ve başka bir dolu hücre üzerine içine bırak denetimleri. İki denetimi bir hücreden diğer taşınan olduğunu unutmayın.  
+- Sürükleyin <xref:System.Windows.Forms.Button> bir dolu hücre ve başka bir dolu hücre üzerine içine bırak denetimleri. İki denetimi bir hücreden diğer taşınan olduğunu unutmayın.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Düzen bölmeleri ve denetimleri kullanarak karmaşık Düzen elde edebilirsiniz. Daha fazla araştırma için öneriler şunlardır:  
   
--   Aşağıdakilerden birini yeniden boyutlandırmaya çalışın <xref:System.Windows.Forms.Button> büyük boyut ve düzenini üzerindeki etkisini Not denetimleri.  
+- Aşağıdakilerden birini yeniden boyutlandırmaya çalışın <xref:System.Windows.Forms.Button> büyük boyut ve düzenini üzerindeki etkisini Not denetimleri.  
   
--   Birden çok denetimlere seçimi yapıştırın <xref:System.Windows.Forms.TableLayoutPanel> denetlemek ve denetimlerin nasıl eklenir not edin.  
+- Birden çok denetimlere seçimi yapıştırın <xref:System.Windows.Forms.TableLayoutPanel> denetlemek ve denetimlerin nasıl eklenir not edin.  
   
--   Düzen bölmelerini diğer düzen bölmeleri içerebilir. Bırakma ile deneme bir <xref:System.Windows.Forms.TableLayoutPanel> denetime varolan bir denetimi.  
+- Düzen bölmelerini diğer düzen bölmeleri içerebilir. Bırakma ile deneme bir <xref:System.Windows.Forms.TableLayoutPanel> denetime varolan bir denetimi.  
   
--   Dock <xref:System.Windows.Forms.TableLayoutPanel> üst form denetimi. Formu yeniden boyutlandırmak ve düzeni üzerindeki etkisini dikkat edin.  
+- Dock <xref:System.Windows.Forms.TableLayoutPanel> üst form denetimi. Formu yeniden boyutlandırmak ve düzeni üzerindeki etkisini dikkat edin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

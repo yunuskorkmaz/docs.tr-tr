@@ -6,22 +6,22 @@ dev_langs:
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
 ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005647"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Özel Bileşik Tasarımcılar - İş Akışı Öğeleri Sunucu
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> Düzenlemek kapsanan öğelerin koleksiyonunu için izin veren WF Tasarımcı programlama modeli içinde bir anahtar türü. Bu örnek, düzenlenebilir bir koleksiyon ortaya çıkarır bir etkinlik Tasarımcısı oluşturma gösterilmektedir.
 
  Bu örnek gösterir:
 
--   Özel Etkinlik Tasarımcısı ile oluşturma bir <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.
+- Özel Etkinlik Tasarımcısı ile oluşturma bir <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.
 
--   Bir etkinlik Tasarımcısı ile "daraltılmış" ve "genişletilmiş" Görünüm oluşturuluyor.
+- Bir etkinlik Tasarımcısı ile "daraltılmış" ve "genişletilmiş" Görünüm oluşturuluyor.
 
--   Yeniden barındırılan bir uygulamanın varsayılan tasarımcıda geçersiz kılma.
+- Yeniden barındırılan bir uygulamanın varsayılan tasarımcıda geçersiz kılma.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma
 
@@ -32,15 +32,15 @@ ms.locfileid: "59344877"
 ## <a name="sample-highlights"></a>Örnek öne çıkan özellikleri
  Bu örneğe yönelik kodun aşağıda gösterilmiştir:
 
--   Bir tasarımcı etkinlik oluşturulmuştur:  `Parallel`
+- Bir tasarımcı etkinlik oluşturulmuştur:  `Parallel`
 
--   Özel Etkinlik Tasarımcısı ile oluşturulmasını bir <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Tablonuzu gereken bazı noktalar:
+- Özel Etkinlik Tasarımcısı ile oluşturulmasını bir <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Tablonuzu gereken bazı noktalar:
 
-    -   WPF verilerini bağlama bağlamak için kullanımına dikkat edin `ModelItem.Branches`. `ModelItem` özelliği açıktır `WorkflowElementDesigner` Tasarımcı kullanılmıştır, bu durumda, arka plandaki nesneye başvuran bizim `Parallel`.
+    - WPF verilerini bağlama bağlamak için kullanımına dikkat edin `ModelItem.Branches`. `ModelItem` özelliği açıktır `WorkflowElementDesigner` Tasarımcı kullanılmıştır, bu durumda, arka plandaki nesneye başvuran bizim `Parallel`.
 
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> Koleksiyondaki bireysel öğeleri arasında görüntülemek için bir görsel yerleştirme için kullanılabilir.
+    - <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> Koleksiyondaki bireysel öğeleri arasında görüntülemek için bir görsel yerleştirme için kullanılabilir.
 
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> koleksiyondaki öğelerin düzeni belirlemek için sağlanan bir şablonudur. Bu durumda, yatay yığın paneli kullanılır.
+    - <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> koleksiyondaki öğelerin düzeni belirlemek için sağlanan bir şablonudur. Bu durumda, yatay yığın paneli kullanılır.
 
  Bu aşağıdaki kod örneği bunu gösterir.
 
@@ -60,9 +60,9 @@ ms.locfileid: "59344877"
   </sad:WorkflowItemsPresenter>
 ```
 
--   İlişkilendirmesini gerçekleştirmek `DesignerAttribute` için `Parallel` türü ve ardından çıkış öznitelikleri bildirdi.
+- İlişkilendirmesini gerçekleştirmek `DesignerAttribute` için `Parallel` türü ve ardından çıkış öznitelikleri bildirdi.
 
-    -   İlk olarak, tüm varsayılan tasarımcıları kaydedin.
+    - İlk olarak, tüm varsayılan tasarımcıları kaydedin.
 
  Kod örneği verilmiştir.
 
@@ -80,7 +80,7 @@ metadata.Register()
 RegisterCustomMetadata()
 ```
 
-    -   Ardından, paralel olarak geçersiz kılma `RegisterCustomMetadata` yöntemi.
+    - Ardından, paralel olarak geçersiz kılma `RegisterCustomMetadata` yöntemi.
 
  Aşağıdaki kod, C# ve Visual Basic'te bu gösterir.
 
@@ -101,7 +101,7 @@ Sub RegisterCustomMetadata()
 End Sub
 ```
 
--   Son olarak, farklı veri şablonları ve temel uygun şablonu seçmek için Tetikleyiciler kullanımına dikkat edin `IsRootDesigner` özelliği.
+- Son olarak, farklı veri şablonları ve temel uygun şablonu seçmek için Tetikleyiciler kullanımına dikkat edin `IsRootDesigner` özelliği.
 
  Kod örneği verilmiştir.
 

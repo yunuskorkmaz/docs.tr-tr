@@ -10,11 +10,11 @@ helpviewer_keywords:
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
 ms.openlocfilehash: 39b3ad9bebfc56002f77ad6e9026a4446c95455b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020674"
 ---
 # <a name="brush-transformation-overview"></a>Fırça Dönüşümüne Genel Bakış
 Fırça sınıf iki dönüşüm özellikleri sağlar: <xref:System.Windows.Media.Brush.Transform%2A> ve <xref:System.Windows.Media.Brush.RelativeTransform%2A>. Özellikleri döndürme, ölçeklendirme, eğme ve bir fırça içeriğini olanak sağlar. Bu konu, bu iki özellik farklılıkları açıklar ve bunların kullanım örneklerini sağlar.  

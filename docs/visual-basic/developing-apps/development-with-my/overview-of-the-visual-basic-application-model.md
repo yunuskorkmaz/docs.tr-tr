@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
 ms.openlocfilehash: 02cc71dbda47d078284d9a2ec07538dfa063ac75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014160"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic Uygulama Modeline Genel Bakış
 Visual Basic, Windows Forms uygulamalarının davranışını denetlemek için iyi tanımlanmış bir modeli sağlar: Visual Basic uygulama modeli. Bu model, uygulama başlatma ve kapatma yanı çalýþýrçalýþma yakalama işlenmeyen özel durum olaylarını işlemek için olaylarını içerir. Tek örnek uygulamalar geliştirmeye yönelik destek de sağlar. Uygulama modeli Genişletilebilir olduğundan daha fazla denetim gerektiren geliştiriciler kendi geçersiz kılınabilir yöntemleri özelleştirebilirsiniz.  
@@ -22,9 +22,9 @@ Visual Basic, Windows Forms uygulamalarının davranışını denetlemek için i
   
  Tek Örnekli uygulama başlar ve ilk örneği veya uygulama bir sonraki örneği olup olmadığını denetler:  
   
--   İlk örnek ise, her zamanki şekilde başlatır.  
+- İlk örnek ise, her zamanki şekilde başlatır.  
   
--   İlk örnek çalışırken, uygulamayı başlatmak için sonraki girişimleri çok farklı davranışa neden olur. Sonraki deneme ilk örnek komut satırı bağımsız değişkenleri bildirir ve hemen çıkar. İlk örnek tutamaçları `StartupNextInstance` ne sonraki örneğinin komut satırı bağımsız değişkenleri olan ve çalışmaya devam eder belirlemek için olay.  
+- İlk örnek çalışırken, uygulamayı başlatmak için sonraki girişimleri çok farklı davranışa neden olur. Sonraki deneme ilk örnek komut satırı bağımsız değişkenleri bildirir ve hemen çıkar. İlk örnek tutamaçları `StartupNextInstance` ne sonraki örneğinin komut satırı bağımsız değişkenleri olan ve çalışmaya devam eder belirlemek için olay.  
   
      Bir sonraki örneği ilk örneğini nasıl sinyalleri Bu diyagramda gösterilmiştir:  
   
@@ -35,21 +35,21 @@ Visual Basic, Windows Forms uygulamalarının davranışını denetlemek için i
 ## <a name="events-in-the-application-model"></a>Uygulama modeli olayları  
  Aşağıdaki olaylar uygulama modeli bulundu:  
   
--   **Uygulama başlatma**. Uygulama başlatır <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> başladığında olay. Bu olay işleme tarafından ana formu yüklenmeden önce uygulamayı başlatan bir kodu ekleyebilirsiniz. `Startup` Olay ayrıca sağlayan bu aşamasında bir uygulamanın başlatma işleminin yürütülmesini iptal etmek için isterseniz.  
+- **Uygulama başlatma**. Uygulama başlatır <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> başladığında olay. Bu olay işleme tarafından ana formu yüklenmeden önce uygulamayı başlatan bir kodu ekleyebilirsiniz. `Startup` Olay ayrıca sağlayan bu aşamasında bir uygulamanın başlatma işleminin yürütülmesini iptal etmek için isterseniz.  
   
      Uygulama başlangıç koduna çalışırken bir ekranı göstermek için uygulamayı yapılandırabilirsiniz. Varsayılan olarak, uygulama modeli Karşılama bastırır. zaman ekranında da `/nosplash` veya `-nosplash` komut satırı bağımsız değişkeni kullanılmıştır.  
   
--   **Tek örnek uygulamalarına**. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> Olayı, tek örnekli uygulama bir sonraki örneği başlatıldığında oluşturulur. Olay komut satırı bağımsız değişkenlerini sonraki örneğinin geçirir.  
+- **Tek örnek uygulamalarına**. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> Olayı, tek örnekli uygulama bir sonraki örneği başlatıldığında oluşturulur. Olay komut satırı bağımsız değişkenlerini sonraki örneğinin geçirir.  
   
--   **İşlenmeyen özel durumları**. Uygulama işlenmeyen bir özel durumla karşılaşırsa, bilmemektedir <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> olay. Bu olayı işleyicinizi özel durum inceleyebilir ve yürütme devam edilip edilmeyeceğini belirler.  
+- **İşlenmeyen özel durumları**. Uygulama işlenmeyen bir özel durumla karşılaşırsa, bilmemektedir <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> olay. Bu olayı işleyicinizi özel durum inceleyebilir ve yürütme devam edilip edilmeyeceğini belirler.  
   
      `UnhandledException` Olayı bazı durumlarda oluşmaz. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>.  
   
--   **Ağ bağlantısı değişiklikleri**. Bilgisayarın ağ kullanılabilirliğini değişirse, uygulamayı başlatır <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged> olay.  
+- **Ağ bağlantısı değişiklikleri**. Bilgisayarın ağ kullanılabilirliğini değişirse, uygulamayı başlatır <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged> olay.  
   
      `NetworkAvailabilityChanged` Olayı bazı durumlarda oluşmaz. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
   
--   **Uygulama kapatma**. Uygulamanın sağladığı <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> hakkında kapatmak için olduğunda sinyal olay. İlgili olay işleyicisi, işlemleri gerçekleştirmek uygulamanız gereken emin olursunuz; kapatma ve kaydetme, örneğin — tamamlanır. Ana formu kapandığında kapatmak için veya yalnızca tüm forms kapattığınızda kapatmak için yapılandırabilirsiniz.  
+- **Uygulama kapatma**. Uygulamanın sağladığı <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> hakkında kapatmak için olduğunda sinyal olay. İlgili olay işleyicisi, işlemleri gerçekleştirmek uygulamanız gereken emin olursunuz; kapatma ve kaydetme, örneğin — tamamlanır. Ana formu kapandığında kapatmak için veya yalnızca tüm forms kapattığınızda kapatmak için yapılandırabilirsiniz.  
   
 ## <a name="availability"></a>Kullanılabilirlik  
  Varsayılan olarak, Visual Basic uygulama modeli, Windows Forms projeleri için kullanılabilir. Farklı başlangıç nesnesi kullanmak için uygulamayı yapılandırma veya uygulama kodu ile özel bir başlangıç `Sub Main`, nesne veya sınıf bir uygulamasını sağlamak üzere gerekebilir <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> uygulama modelini kullanmak için sınıf. Başlangıç nesnesi değiştirme hakkında daha fazla bilgi için bkz: [uygulama sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  

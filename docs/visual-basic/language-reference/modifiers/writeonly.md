@@ -12,11 +12,11 @@ helpviewer_keywords:
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
 ms.openlocfilehash: 1b8de27e872914ba59d73126d2a9a7c42609165e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051825"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
 Bir özellik yazılabileceğini ancak okunamayacağını olduğunu belirtir.  
@@ -34,15 +34,15 @@ Bir özellik yazılabileceğini ancak okunamayacağını olduğunu belirtir.
 > [!IMPORTANT]
 >  Ne zaman tanımlama ve kullanma bir `WriteOnly` özelliği, aşağıdaki ek koruyucu ölçüleri göz önünde bulundurun:  
   
--   **Geçersiz kılma.** Özellik bir sınıf üyesi ise, varsayılan olarak izin [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)ve onu bildirmeyin `Overridable` veya `MustOverride`. Bu, türetilmiş bir sınıf bir geçersiz kılma yoluyla istenmeyen erişim bulunmasını önler.  
+- **Geçersiz kılma.** Özellik bir sınıf üyesi ise, varsayılan olarak izin [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)ve onu bildirmeyin `Overridable` veya `MustOverride`. Bu, türetilmiş bir sınıf bir geçersiz kılma yoluyla istenmeyen erişim bulunmasını önler.  
   
--   **Erişim düzeyi.** Bir veya daha fazla değişkenlerinde özelliğin hassas verileri tutarsanız, bunları bildirdiğinizde [özel](../../../visual-basic/language-reference/modifiers/private.md) böylece başka bir kod onlara erişebilir.  
+- **Erişim düzeyi.** Bir veya daha fazla değişkenlerinde özelliğin hassas verileri tutarsanız, bunları bildirdiğinizde [özel](../../../visual-basic/language-reference/modifiers/private.md) böylece başka bir kod onlara erişebilir.  
   
--   **Şifreleme.** Tüm hassas verileri, şifreli biçimde yerine düz metin Store. Kötü amaçlı kod şekilde bellek alanı erişim kazanırsa, yapmak daha zor olan verilerin kullanın. Şifreleme de hassas verileri seri hale getirmek gerekli olması durumunda yararlıdır.  
+- **Şifreleme.** Tüm hassas verileri, şifreli biçimde yerine düz metin Store. Kötü amaçlı kod şekilde bellek alanı erişim kazanırsa, yapmak daha zor olan verilerin kullanın. Şifreleme de hassas verileri seri hale getirmek gerekli olması durumunda yararlıdır.  
   
--   **Sıfırlanıyor.** Sınıf, yapı veya modül özellik tanımlama Sonlandırılmakta, hassas verileri varsayılan değerlerine veya diğer anlamsız değerlere sıfırlayın. Genel erişim için bellek alanı Boşaltıldığında bu ek koruma sağlar.  
+- **Sıfırlanıyor.** Sınıf, yapı veya modül özellik tanımlama Sonlandırılmakta, hassas verileri varsayılan değerlerine veya diğer anlamsız değerlere sıfırlayın. Genel erişim için bellek alanı Boşaltıldığında bu ek koruma sağlar.  
   
--   **Kalıcılık.** Bunu önlemek, örneğin diskte hassas verilerin kalıcı olarak tutmaz. Aynı zamanda, hassas verileri panoya yazma değil.  
+- **Kalıcılık.** Bunu önlemek, örneğin diskte hassas verilerin kalıcı olarak tutmaz. Aynı zamanda, hassas verileri panoya yazma değil.  
   
  `WriteOnly` Bu bağlamda değiştirici kullanılabilir:  
   

@@ -3,11 +3,11 @@ title: association set
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
 ms.openlocfilehash: af9297d9c827b12ed8611e99930234511f7f661c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034612"
 ---
 # <a name="association-set"></a>association set
 Bir *ilişki kümesi* için mantıksal bir kapsayıcıdır [ilişkilendirme](../../../../docs/framework/data/adonet/association-type.md) örnekleri aynı türde. Bir ilişki kümesi, bir veri yapısı modelleme değil; diğer bir deyişle, veriler veya ilişkileri yapısını açıklamaz. Böylece bir veri deposuna eşlenebilir bunun yerine, bir ilişki kümesi bir yapısı (örneğin, ortak dil çalışma zamanı veya bir SQL Server veritabanı) barındıran veya depolama ortamı için Grup ilişkilendirme örnekleri için sağlar.  
@@ -16,11 +16,11 @@ Bir *ilişki kümesi* için mantıksal bir kapsayıcıdır [ilişkilendirme](../
   
  Bir ilişki kümesi için bir tanım, aşağıdaki bilgileri içerir:  
   
--   İlişkilendirmenin adını ayarlayın. (Gerekli)  
+- İlişkilendirmenin adını ayarlayın. (Gerekli)  
   
--   Hangi örnekleri içerecek ilişkilendirme. (Gerekli)  
+- Hangi örnekleri içerecek ilişkilendirme. (Gerekli)  
   
--   İki [ilişkilendirme ucu ayarlanmış](../../../../docs/framework/data/adonet/association-set-end.md).  
+- İki [ilişkilendirme ucu ayarlanmış](../../../../docs/framework/data/adonet/association-set-end.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki diyagramda iki ilişkilendirmeleri kavramsal bir modelle gösterilmektedir: `PublishedBy`, ve `WrittenBy`. İlişki Setleri hakkında bilgi diyagramda ilettiği değil olsa da, bir sonraki diyagramda bu modeli temelinde varlık setleri ve ilişki Setleri bir örnek gösterir.  

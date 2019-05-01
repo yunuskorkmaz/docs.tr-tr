@@ -9,10 +9,10 @@ helpviewer_keywords:
 ms.assetid: f1303184-fce4-44fb-88b4-aac5f42d5d77
 ms.openlocfilehash: 9519fd85177d5d2adf97b54652c19330954edadf
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014524"
 ---
 # <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>Nasıl yapılır: Uygulama başlatma ve gönderme tuş vuruşları (Visual Basic)
 Bu örnekte `Shell` hesaplayıcı uygulamayı başlatmak için işlevi ve ardından tuş vuruşları kullanarak göndererek iki sayıyı çarpar `My.Computer.Keyboard.SendKeys` yöntemi.  

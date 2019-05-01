@@ -3,31 +3,31 @@ title: Dış Eşleme
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
 ms.openlocfilehash: 4b493279307f61847b72048c5bfa9dc14a38fe29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037901"
 ---
 # <a name="external-mapping"></a>Dış Eşleme
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekleyen *dış eşleme*, bir işlem olarak, ayrı bir XML dosyasına, nesne modeli ile veritabanı veri modeli arasında eşleme belirtmek için kullanın. Bir dış eşleme dosyası kullanmanın avantajları şunlardır:  
   
--   Eşleme kodunuzu uygulama kodunuz dışında tutabilirsiniz. Bu yaklaşım, uygulama kodunuzda dağınıklığı azaltır.  
+- Eşleme kodunuzu uygulama kodunuz dışında tutabilirsiniz. Bu yaklaşım, uygulama kodunuzda dağınıklığı azaltır.  
   
--   Bir yapılandırma dosyası gibi bir dış eşleme dosyası davranabilirsiniz. Örneğin, ikili dosyaları aktarma sonra dış eşleme dosyasını değiştirerek, uygulamanızın nasıl davranacağını güncelleştirebilirsiniz.  
+- Bir yapılandırma dosyası gibi bir dış eşleme dosyası davranabilirsiniz. Örneğin, ikili dosyaları aktarma sonra dış eşleme dosyasını değiştirerek, uygulamanızın nasıl davranacağını güncelleştirebilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
  Eşleme dosyasını bir XML dosyası olmalıdır ve dosya karşı doğrulamalıdır bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] şema tanımı (.xsd) dosyası.  
   
  Aşağıdaki kurallar geçerlidir:  
   
--   Eşleme dosyasını bir XML dosyası olmalıdır.  
+- Eşleme dosyasını bir XML dosyası olmalıdır.  
   
--   XML eşleme dosyası karşı XML şema tanımı dosyası geçerli olmalıdır. Daha fazla bilgi için [nasıl yapılır: DBML ve dış eşleme dosyalarını doğrulama](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+- XML eşleme dosyası karşı XML şema tanımı dosyası geçerli olmalıdır. Daha fazla bilgi için [nasıl yapılır: DBML ve dış eşleme dosyalarını doğrulama](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
   
--   Dış eşleme öznitelik tabanlı eşleme geçersiz kılar. Diğer bir deyişle, bir dış eşleme kaynak oluşturmak için kullandığınızda bir <xref:System.Data.Linq.DataContext>, <xref:System.Data.Linq.DataContext> sınıflarında oluşturduğunuz tüm eşleme öznitelikleri yok sayar. Bu davranış, sınıfın dış eşleme dosyasında olup olmadığı dahil geçerlidir.  
+- Dış eşleme öznitelik tabanlı eşleme geçersiz kılar. Diğer bir deyişle, bir dış eşleme kaynak oluşturmak için kullandığınızda bir <xref:System.Data.Linq.DataContext>, <xref:System.Data.Linq.DataContext> sınıflarında oluşturduğunuz tüm eşleme öznitelikleri yok sayar. Bu davranış, sınıfın dış eşleme dosyasında olup olmadığı dahil geçerlidir.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] iki eşleme yaklaşım (öznitelik tabanlı ve dış) karma kullanımını desteklemiyor.  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] iki eşleme yaklaşım (öznitelik tabanlı ve dış) karma kullanımını desteklemiyor.  
   
 ## <a name="xml-schema-definition-file"></a>XML şema tanımı dosyası  
  Dış eşlemede [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] karşı aşağıdaki XML şema tanımı geçerli olmalıdır.  

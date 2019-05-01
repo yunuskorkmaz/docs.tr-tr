@@ -1,17 +1,17 @@
 ---
-title: .NET Framework Docker kapsayıcıları için ne zaman
+title: Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | .NET Framework Docker kapsayıcıları için ne zaman
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
 ms.openlocfilehash: 4c1149c02c32c357c4817af539eb0cf529266181
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019535"
 ---
-# <a name="when-to-choose-net-framework-for-docker-containers"></a>.NET Framework Docker kapsayıcıları için ne zaman
+# <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
 
 .NET Core için yeni uygulamalar ve uygulama desenleri önemli avantaj sunar, ancak .NET Framework, varolan birçok senaryo için iyi bir seçim olmaya devam edecektir.
 
@@ -35,11 +35,11 @@ Bazı .NET Framework teknolojilerini .NET Core (sürüm 2.2 şu andan itibaren)'
 
 Aşağıdaki liste de .NET Core kullanılamayan teknolojilerinin çoğu gösterir 2.x:
 
--   ASP.NET Web Forms. Bu teknoloji, yalnızca .NET Framework üzerinde kullanılabilir. Şu anda .NET Core ile ASP.NET Web Forms getirmek için hiçbir plan yok.
+- ASP.NET Web Forms. Bu teknoloji, yalnızca .NET Framework üzerinde kullanılabilir. Şu anda .NET Core ile ASP.NET Web Forms getirmek için hiçbir plan yok.
 
--   WCF hizmetleri. Zaman bile bir [WCF istemci Kitaplığı](https://github.com/dotnet/wcf) mid-2017, WCF sunucusu uygulaması yalnızca .NET Framework üzerinde kullanılabilir olarak .NET Core, gelen WCF hizmetleri kullanma kullanıma sunulmuştur. Bu senaryo olarak kabul edilir .NET Core, gelecek sürümleri için kabul edilme bile bazı API'leri vardır [Windows Uyumluluk Paketi](../../../core/porting/windows-compat-pack.md).
+- WCF hizmetleri. Zaman bile bir [WCF istemci Kitaplığı](https://github.com/dotnet/wcf) mid-2017, WCF sunucusu uygulaması yalnızca .NET Framework üzerinde kullanılabilir olarak .NET Core, gelen WCF hizmetleri kullanma kullanıma sunulmuştur. Bu senaryo olarak kabul edilir .NET Core, gelecek sürümleri için kabul edilme bile bazı API'leri vardır [Windows Uyumluluk Paketi](../../../core/porting/windows-compat-pack.md).
 
--   İş akışı ile ilgili hizmetler. Windows Workflow Foundation (WF) iş akışı Hizmetleri (WCF + WF tek bir hizmette) ve WCF Veri Hizmetleri (eski adıyla ADO.NET Data Services da bilinir) yalnızca .NET Framework üzerinde kullanılabilir. Şu anda .NET Core getirilecek herhangi bir plan da vardır.
+- İş akışı ile ilgili hizmetler. Windows Workflow Foundation (WF) iş akışı Hizmetleri (WCF + WF tek bir hizmette) ve WCF Veri Hizmetleri (eski adıyla ADO.NET Data Services da bilinir) yalnızca .NET Framework üzerinde kullanılabilir. Şu anda .NET Core getirilecek herhangi bir plan da vardır.
 
 Teknolojilerin yanı sıra resmi listelenen [.NET Core yol haritası](https://github.com/aspnet/Home/wiki/Roadmap), diğer özellikler, .NET Core için unity'nin. Olarak etiketlenmiş öğeler tam listesi için bakmak [bağlantı noktası çekirdek](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) Corefx'te GitHub sitesinde. Bu liste bu bileşenler, .NET Core getirmek için Microsoft'un taahhüdü temsil etmiyor Not — öğeleri yalnızca topluluk gelen istekleri yakalayın. Yukarıda listelenen bileşenleri önem verdiğiniz, böylece kendi sesinizi heard GitHub üzerindeki tartışmaların katılan göz önünde bulundurun. Ve bir şeyler eksik olduğunu düşünüyorsanız, lütfen [Corefx'te depoya yeni bir sorun dosya](https://github.com/dotnet/corefx/issues/new).
 
@@ -53,16 +53,16 @@ Bu arada, herhangi bir platform veya Azure hizmeti yine de .NET Core API istemci
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **.NET Core Kılavuzu**  
+- **.NET Core Kılavuzu**  
     [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
--   **.NET Core ile .NET Framework'ten taşıma**  
+- **.NET Core ile .NET Framework'ten taşıma**  
     [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
--   **Docker Üzerinde .NET Framework Kılavuzu**  
+- **Docker Üzerinde .NET Framework Kılavuzu**  
     [https://docs.microsoft.com/dotnet/framework/docker/](../../../framework/docker/index.md)
 
--   **.NET bileşenleri'ne genel bakış**  
+- **.NET bileşenleri'ne genel bakış**  
     [https://docs.microsoft.com/dotnet/standard/components](../../components.md)
 
 >[!div class="step-by-step"]

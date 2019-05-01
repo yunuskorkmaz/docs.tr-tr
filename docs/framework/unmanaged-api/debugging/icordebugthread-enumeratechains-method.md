@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e01f94e9574ebc032bc45490fd88ff92e9104aa3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994051"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>ICorDebugThread::EnumerateChains Yöntemi
 Bu Icordebugthread nesnesindeki tüm yığın zincirlerini içeren bir Icordebugchainenum Numaralandırıcı için bir arabirim işaretçisi alır.  
@@ -42,11 +42,11 @@ HRESULT EnumerateChains (
 ## <a name="remarks"></a>Açıklamalar  
  Yığın zincirinin iş parçacığı için fiziksel çağrı yığınını temsil eder. Aşağıdaki durumlarda bir yığın zincirinin sınırı oluşturun:  
   
--   Yönetilmeyen veya yönetilene geçiş.  
+- Yönetilmeyen veya yönetilene geçiş.  
   
--   Bir içerik anahtarı.  
+- Bir içerik anahtarı.  
   
--   Bir hata ayıklayıcı, bir kullanıcı iş parçacığının geçirme.  
+- Bir hata ayıklayıcı, bir kullanıcı iş parçacığının geçirme.  
   
  En basit durumda tek bir bağlamda yalnızca yönetilen kod çalıştıran iş parçacığı yığın zincirlerini ve iş parçacıkları arasında bire bir iletişimin sunulacaktır.  
   

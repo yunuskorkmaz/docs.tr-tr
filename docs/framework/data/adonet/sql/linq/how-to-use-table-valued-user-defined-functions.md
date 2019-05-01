@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
 ms.openlocfilehash: eedc2e9b997e91ed9fe0038f260aa475d23a0627
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033598"
 ---
 # <a name="how-to-use-table-valued-user-defined-functions"></a>Nasıl yapılır: Tablo Değerli Kullanıcı Tanımlı İşlevler Kullanma
 Tek bir satır kümesi (aksine, saklı yordamlar, birden çok sonuç şekli dönebilirsiniz) tablo değerli bir işlev döndürür. Tablo değerli bir işlev dönüş türü olduğundan `Table`, bir tablo değerli işlev bir tablo kullanabileceğiniz SQL her yerde kullanabilirsiniz. Bir tablo gibi tablo değerli işlev ayrıca davranabilirsiniz.  

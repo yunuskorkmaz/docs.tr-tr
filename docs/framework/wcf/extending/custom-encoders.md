@@ -3,11 +3,11 @@ title: Özel Kodlayıcılar
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
 ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996911"
 ---
 # <a name="custom-encoders"></a>Özel Kodlayıcılar
 Bu konu, özel kodlayıcılar oluşturulacağını açıklar.  
@@ -30,11 +30,11 @@ Bu konu, özel kodlayıcılar oluşturulacağını açıklar.
   
  WCF sağlayan aşağıdaki bağlama öğeleri türetilen türde <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> metin, ikili ve ileti aktarım en iyi duruma getirme mekanizması (MTOM) kodlama sağlayabilen sınıf:  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: En birlikte çalışabilir, ancak XML iletileri için en az verimli Kodlayıcı. Genellikle bir Web hizmeti veya Web hizmeti istemcisi metinsel XML anlayabilirsiniz. Ancak, büyük ikili veri olarak metin blokları iletme verimli değildir.  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: En birlikte çalışabilir, ancak XML iletileri için en az verimli Kodlayıcı. Genellikle bir Web hizmeti veya Web hizmeti istemcisi metinsel XML anlayabilirsiniz. Ancak, büyük ikili veri olarak metin blokları iletme verimli değildir.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Karakter kodlamasını belirtir. bağlama öğesi ve ileti sürüm oluşturmayı ikili tabanlı XML iletileri için kullanılan temsil eder. Bu kodlama seçenekleri, ancak en az çalışabilen en etkili yöntemdir çünkü yalnızca WCF uç noktaları tarafından desteklenir.  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Karakter kodlamasını belirtir. bağlama öğesi ve ileti sürüm oluşturmayı ikili tabanlı XML iletileri için kullanılan temsil eder. Bu kodlama seçenekleri, ancak en az çalışabilen en etkili yöntemdir çünkü yalnızca WCF uç noktaları tarafından desteklenir.  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Bir ileti aktarım en iyi duruma getirme mekanizması (MTOM) kodlama kullanılarak bir ileti için kullanılan ileti sürüm oluşturmayı ve karakter kodlamasını belirtir. bağlama öğesi temsil eder. MTOM WCF iletilerinde ikili veri aktarımı için verimli bir teknolojidir. MTOM Kodlayıcısı, verimlilik ve birlikte çalışabilirlik arasında dengeleme dener. MTOM kodlama çoğu XML metin biçiminde aktarır, ancak büyük ikili veri blokları olarak ileterek iyileştirir-olan metin dönüştürme olmadan.  
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Bir ileti aktarım en iyi duruma getirme mekanizması (MTOM) kodlama kullanılarak bir ileti için kullanılan ileti sürüm oluşturmayı ve karakter kodlamasını belirtir. bağlama öğesi temsil eder. MTOM WCF iletilerinde ikili veri aktarımı için verimli bir teknolojidir. MTOM Kodlayıcısı, verimlilik ve birlikte çalışabilirlik arasında dengeleme dener. MTOM kodlama çoğu XML metin biçiminde aktarır, ancak büyük ikili veri blokları olarak ileterek iyileştirir-olan metin dönüştürme olmadan.  
   
  Bir ikili, MTOM ya da metin bağlama öğesi oluşturur <xref:System.ServiceModel.Channels.MessageEncoderFactory>. Bir ikili, MTOM ya da metin üreteci oluşturur <xref:System.ServiceModel.Channels.MessageEncoderFactory> örneği. Genellikle, yalnızca tek bir örneği yok. Ancak farklı bir kodlayıcı oturumları kullanılıyorsa, her oturum için sağlanabilir. İkili Kodlayıcı sağlar (bkz. XML altyapı) dinamik sözlükleri koordine etmek için bunu kullanın.  
   
@@ -69,19 +69,19 @@ Bu konu, özel kodlayıcılar oluşturulacağını açıklar.
 ## <a name="writing-your-own-encoder"></a>Kendi Kodlayıcı yazma  
  Kendi özel ileti Kodlayıcı uygulamak için aşağıdaki soyut temel sınıflar, özel uygulamalar sağlamalıdır:  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder>  
+- <xref:System.ServiceModel.Channels.MessageEncoder>  
   
--   <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
   
  Bir iletinin bellek içi gösteriminden bir akışa yazılabilir bir temsili dönüştürme saklanmış olduğu içinde <xref:System.ServiceModel.Channels.MessageEncoder> XML okuyucular ve belirli türlerdeki XML kodlamaları destekleyen XML yazıcılar için bir üreteci hizmet veren sınıf.  
   
--   Geçersiz kılmanız gerekir, bu sınıfın temel yöntemler şunlardır:  
+- Geçersiz kılmanız gerekir, bu sınıfın temel yöntemler şunlardır:  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> hangi alır bir <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> nesne ve içine Yazar bir <xref:System.IO.Stream> nesne.  
+- <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> hangi alır bir <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> nesne ve içine Yazar bir <xref:System.IO.Stream> nesne.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> hangi alır bir <xref:System.IO.Stream> nesne ve en fazla üstbilgi boyutu ve döndürür bir <xref:System.ServiceModel.Channels.Message> nesne.  
+- <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> hangi alır bir <xref:System.IO.Stream> nesne ve en fazla üstbilgi boyutu ve döndürür bir <xref:System.ServiceModel.Channels.Message> nesne.  
   
  Buna standart aktarım protokolünü ve özelleştirilmiş kodlama arasında dönüştürme işleyen bu yöntemleri yazdığınız kodu var.  
   

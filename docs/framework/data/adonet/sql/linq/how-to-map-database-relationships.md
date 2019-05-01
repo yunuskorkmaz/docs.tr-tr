@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
 ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033728"
 ---
 # <a name="how-to-map-database-relationships"></a>Nasıl yapılır: Veritabanı İlişkilerini Eşleme
 Her zaman aynı olacak herhangi bir veri ilişkileri varlık sınıfınızda özelliğine başvuruyor şifreleyebilirsiniz. Northwind örnek veritabanındaki gibi müşteriler genellikle, sipariş olduğundan her zaman bir ilişki yoktur modelinde müşterilerin ve siparişlerinin arasında.  
@@ -22,11 +22,11 @@ Her zaman aynı olacak herhangi bir veri ilişkileri varlık sınıfınızda öz
   
  Çoğu ilişki tek-çok, bu konunun ilerleyen bölümlerinde örnekte olduğu gibi ' dir. Bire bir veya çoktan çoğa ilişkilerini şu şekilde gösterebilir.  
   
--   Bire bir: Bu tür bir ilişkiyi temsil eden dahil ederek <xref:System.Data.Linq.EntitySet%601> her iki tarafında.  
+- Bire bir: Bu tür bir ilişkiyi temsil eden dahil ederek <xref:System.Data.Linq.EntitySet%601> her iki tarafında.  
   
      Örneğin, bir `Customer` - `SecurityCode` ilişki, Müşteri'nin güvenlik kodu içinde bulunmaz oluşturulan `Customer` tablo ve yalnızca yetkili kişiler tarafından erişilebilecek.  
   
--   Çoktan çoğa: Çoktan çoğa ilişkilerin, bağlantı tablonun birincil anahtarı (olarak da adlandırılan *birleşim* tablo) bir bileşik diğer iki tablodan yabancı anahtarları tarafından oluşturulmuş.  
+- Çoktan çoğa: Çoktan çoğa ilişkilerin, bağlantı tablonun birincil anahtarı (olarak da adlandırılan *birleşim* tablo) bir bileşik diğer iki tablodan yabancı anahtarları tarafından oluşturulmuş.  
   
      Örneğin, bir `Employee` - `Project` oluşturulmuş çoktan çoğa ilişki bağlantı tablosunu kullanarak `EmployeeProject`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tür bir ilişkiye üç sınıflarını kullanarak modellenebilir gerektirir: `Employee`, `Project`, ve `EmployeeProject`. Bu durumda, arasındaki ilişkiyi değiştirme bir `Employee` ve `Project` birincil anahtarın bir güncelleştirme gerektiren görünebilir `EmployeeProject`. Ancak, varolan silinmesi iyi bu durum modellenmiştir `EmployeeProject` ve yeni bir oluşturma `EmployeeProject`.  
   

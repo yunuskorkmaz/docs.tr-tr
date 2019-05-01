@@ -3,22 +3,22 @@ title: UriTemplate Tablosu Dağıtıcı Örneği
 ms.date: 03/30/2017
 ms.assetid: 3b32975d-ba90-4c5c-83bc-2fbb48f11c0c
 ms.openlocfilehash: 800765c6b01e49b730414132ac64ab8eed3e9e5f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59330837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007579"
 ---
 # <a name="uritemplate-table-dispatcher-sample"></a>UriTemplate Tablosu Dağıtıcı Örneği
 <xref:System.UriTemplateTable> Sınıfı bir dizi birlikte çalışmak için bir sözlük benzeri ilişkilendirilebilir tablo yapısı sağlar <xref:System.UriTemplate> örnekleri. Bu örnek, bir temel dispatching altyapısı kullanılarak oluşturulan gösterir `UriTemplateTable`, genel bir kullanım senaryosu `UriTemplateTable` sınıfı.  
   
  Bu örnek aşağıdaki kavramlar gösterir `UriTemplateTable` sınıfı:  
   
--   Temsilcileri ile ilişkilendirme `UriTemplates` içinde bir `UriTemplateTable`.  
+- Temsilcileri ile ilişkilendirme `UriTemplates` içinde bir `UriTemplateTable`.  
   
--   Kullanarak <xref:System.UriTemplateTable.MatchSingle%2A> belirli bir URI için doğru işleyici temsilcisini almak için.  
+- Kullanarak <xref:System.UriTemplateTable.MatchSingle%2A> belirli bir URI için doğru işleyici temsilcisini almak için.  
   
--   İsteği işlemek için işleyici temsilcisini çağrılıyor.  
+- İsteği işlemek için işleyici temsilcisini çağrılıyor.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   

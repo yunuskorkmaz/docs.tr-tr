@@ -8,11 +8,11 @@ helpviewer_keywords:
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
 ms.openlocfilehash: 98f8c6611340c89409697918ff8a16eaabe3c7a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010571"
 ---
 # <a name="dependency-property-metadata"></a>Bağımlılık Özelliği Meta Verisi
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ne bildirilen bir özellik üzerinden erişiyorsanız hakkında veya genel olabilir ötesine giden sistem raporlama bir meta veri özellik sistemi içerir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] özellikleri. Meta verileri için bir bağımlılık özelliği bir bağımlılık özelliği tanımlayan bir sınıf tarafından da bir benzersiz bir şekilde atanabilir bağımlılık özelliği için farklı bir sınıf eklendiğinde değiştirilebilir ve özellikle devralan tüm türetilmiş sınıfları tarafından geçersiz kılınabilir bağımlılık özelliği tanımlayan temel sınıf.  
@@ -25,11 +25,11 @@ ms.locfileid: "59170371"
 ## <a name="how-dependency-property-metadata-is-used"></a>Bağımlılık özelliği meta verileri nasıl kullanılır  
  Bağımlılık özelliği meta verisi bağımlılık özelliği özelliklerini incelemek için sorgulanabilir bir nesne olarak bulunmaktadır. Herhangi bir verilen bağımlılık özelliği işlenmesi sırasında bu meta veriler Ayrıca özellik sistemi tarafından sık erişilebilir. Bağımlılık özelliği için meta veri nesnesi, aşağıdaki bilgi türlerini içerebilir:  
   
--   Yerel değer, stil, devralma, vb. bağımlılık özelliği için başka bir değer belirlenebilir, bağımlılık özelliği için varsayılan değer. Bağımlılık özellikleri için değerleri atarken özellik sistemi tarafından kullanılan öncelikli nasıl varsayılan değerleri katılan bir tam açıklaması için bkz [bağımlılık özelliği değer önceliği](dependency-property-value-precedence.md).  
+- Yerel değer, stil, devralma, vb. bağımlılık özelliği için başka bir değer belirlenebilir, bağımlılık özelliği için varsayılan değer. Bağımlılık özellikleri için değerleri atarken özellik sistemi tarafından kullanılan öncelikli nasıl varsayılan değerleri katılan bir tam açıklaması için bkz [bağımlılık özelliği değer önceliği](dependency-property-value-precedence.md).  
   
--   Sahibi-tür başına temelinde zorlama veya değişiklik bildirimi davranışlarını etkileyen geri çağırma uygulamaları başvurular. İzin verilen erişim kapsamındaki başvuruları sürece meta verilerinden gerçek başvurular alma genellikle mümkün olmadığından bu geri aramalarda genellikle bir ortak olmayan erişim düzeyiyle tanımlandığına dikkat edin. Bağımlılık özelliği geri aramaları hakkında daha fazla bilgi için bkz. [bağımlılık özelliği geri aramaları ve doğrulama](dependency-property-callbacks-and-validation.md).  
+- Sahibi-tür başına temelinde zorlama veya değişiklik bildirimi davranışlarını etkileyen geri çağırma uygulamaları başvurular. İzin verilen erişim kapsamındaki başvuruları sürece meta verilerinden gerçek başvurular alma genellikle mümkün olmadığından bu geri aramalarda genellikle bir ortak olmayan erişim düzeyiyle tanımlandığına dikkat edin. Bağımlılık özelliği geri aramaları hakkında daha fazla bilgi için bkz. [bağımlılık özelliği geri aramaları ve doğrulama](dependency-property-callbacks-and-validation.md).  
   
--   Söz konusu bağımlılık özelliği bir WPF çerçeve düzeyi özelliği olarak kabul edilir, meta veri bilgileri ve durum WPF çerçeve düzeyi gibi hizmetler için rapor WPF çerçeve düzeyi bağımlılık özelliği özellikleriyle içerebilir Yerleşim altyapısı ve özellik devralma mantığı. Bağımlılık özelliği meta verisi bu yönü hakkında daha fazla bilgi için bkz. [çerçeve özelliği meta verileri](framework-property-metadata.md).  
+- Söz konusu bağımlılık özelliği bir WPF çerçeve düzeyi özelliği olarak kabul edilir, meta veri bilgileri ve durum WPF çerçeve düzeyi gibi hizmetler için rapor WPF çerçeve düzeyi bağımlılık özelliği özellikleriyle içerebilir Yerleşim altyapısı ve özellik devralma mantığı. Bağımlılık özelliği meta verisi bu yönü hakkında daha fazla bilgi için bkz. [çerçeve özelliği meta verileri](framework-property-metadata.md).  
   
 <a name="APIs"></a>   
 ## <a name="metadata-apis"></a>Meta veri API'leri  
@@ -62,15 +62,15 @@ ms.locfileid: "59170371"
   
  Meta verileri geçersiz kılma, farklı bir meta veri özelliklerini birleştirilmiş değiştirildi veya olan.  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> birleştirilir. Yeni bir eklerseniz <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, bu geri çağırma meta verilerinde depolanır. Belirtmezseniz, bir <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> değerini geçersiz kılma olarak <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> meta verilerinde belirtilen en yakın üst nesneden bir başvuru olarak yükseltilir.  
+- <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> birleştirilir. Yeni bir eklerseniz <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, bu geri çağırma meta verilerinde depolanır. Belirtmezseniz, bir <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> değerini geçersiz kılma olarak <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> meta verilerinde belirtilen en yakın üst nesneden bir başvuru olarak yükseltilir.  
   
--   Gerçek özellik sistemi davranışını <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> hiyerarşideki tüm meta veri sahipleri için uygulamaları korunur ve özellik sistemi tarafından yürütme sırası içeren bir tablo en çok türetilen sınıfın geri çağırmaları önce çağrılır emin olmasına eklenir.  
+- Gerçek özellik sistemi davranışını <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> hiyerarşideki tüm meta veri sahipleri için uygulamaları korunur ve özellik sistemi tarafından yürütme sırası içeren bir tablo en çok türetilen sınıfın geri çağırmaları önce çağrılır emin olmasına eklenir.  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> değiştirilir. Belirtmezseniz, bir <xref:System.Windows.PropertyMetadata.DefaultValue%2A> değerini geçersiz kılma olarak <xref:System.Windows.PropertyMetadata.DefaultValue%2A> meta verilerinde belirtilen en yakın üst öğesinden gelir.  
+- <xref:System.Windows.PropertyMetadata.DefaultValue%2A> değiştirilir. Belirtmezseniz, bir <xref:System.Windows.PropertyMetadata.DefaultValue%2A> değerini geçersiz kılma olarak <xref:System.Windows.PropertyMetadata.DefaultValue%2A> meta verilerinde belirtilen en yakın üst öğesinden gelir.  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> uygulamaları değiştirilir. Yeni bir eklerseniz <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, bu geri çağırma meta verilerinde depolanır. Belirtmezseniz, bir <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> değerini geçersiz kılma olarak <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> meta verilerinde belirtilen en yakın üst nesneden bir başvuru olarak yükseltilir.  
+- <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> uygulamaları değiştirilir. Yeni bir eklerseniz <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, bu geri çağırma meta verilerinde depolanır. Belirtmezseniz, bir <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> değerini geçersiz kılma olarak <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> meta verilerinde belirtilen en yakın üst nesneden bir başvuru olarak yükseltilir.  
   
--   Özellik sistemi yalnızca davranıştır <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> hemen meta verilerde çağrılır. Başvuru diğer <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> hiyerarşi uygulamalarında korunur.  
+- Özellik sistemi yalnızca davranıştır <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> hemen meta verilerde çağrılır. Başvuru diğer <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> hiyerarşi uygulamalarında korunur.  
   
  Bu davranış tarafından uygulanan <xref:System.Windows.PropertyMetadata.Merge%2A>ve türetilmiş meta veri sınıflarında geçersiz kılınabilir.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
 ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025450"
 ---
 # <a name="white-space-processing-in-xaml"></a>XAML'de Boşluk İşleme
 XAML dil kuralları önemli boşlukların işlenen, tarafından durum bir [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] işlemci uygulamasında. Bu bölümde, XAML dili kurallar listelenmiştir. Ayrıca tarafından tanımlanan ek boşluk işleme belgeleri [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] XAML işlemci ve seri hale getirme için XAML yazıcı uygulamasıdır.  
@@ -41,13 +41,13 @@ XAML dil kuralları önemli boşlukların işlenen, tarafından durum bir [!INCL
 ## <a name="white-space-in-inner-text-and-string-primitives"></a>Boşluk iç metni ve dize temelleri  
  XAML öğeleri içinde bulunan iç metni önceki normalleştirme kuralları uygulanır. Normalleştirme sonra XAML işlemci herhangi bir iç metin uygun bir türe şu şekilde dönüştürür:  
   
--   Özelliğin türü bir koleksiyon değil, ancak doğrudan değil bir <xref:System.Object> türü, XAML işlemci onun tür dönüştürücü kullanarak bu türe dönüştürmeye çalışır. Burada başarısız bir dönüştürme, bir derleme zamanı hatasına neden olur.  
+- Özelliğin türü bir koleksiyon değil, ancak doğrudan değil bir <xref:System.Object> türü, XAML işlemci onun tür dönüştürücü kullanarak bu türe dönüştürmeye çalışır. Burada başarısız bir dönüştürme, bir derleme zamanı hatasına neden olur.  
   
--   Özelliğin türü bir koleksiyon ve iç metni bitişik ise (müdahalede bulunan öğe etiket yok), iç metni tek bir ayrıştırılır <xref:System.String>. Koleksiyon türü alamaz, <xref:System.String>, bu da bir derleme zamanı hatasına neden olur.  
+- Özelliğin türü bir koleksiyon ve iç metni bitişik ise (müdahalede bulunan öğe etiket yok), iç metni tek bir ayrıştırılır <xref:System.String>. Koleksiyon türü alamaz, <xref:System.String>, bu da bir derleme zamanı hatasına neden olur.  
   
--   Özelliğin türü ise <xref:System.Object>, iç metni tek bir ayrıştırılır <xref:System.String>. Var olan müdahale cihazlarınız varsa öğe etiketleri, bu derleme zamanı hatası nedeniyle neden olur <xref:System.Object> türü tek bir nesne anlamına gelir (<xref:System.String> veya başka türlü).  
+- Özelliğin türü ise <xref:System.Object>, iç metni tek bir ayrıştırılır <xref:System.String>. Var olan müdahale cihazlarınız varsa öğe etiketleri, bu derleme zamanı hatası nedeniyle neden olur <xref:System.Object> türü tek bir nesne anlamına gelir (<xref:System.String> veya başka türlü).  
   
--   Özelliğin türü koleksiyonudur ve iç metni bitişik değil, ilk alt dizeyi dönüştürülür bir <xref:System.String> ve bir koleksiyon öğesi olarak eklenir, müdahalede bulunan öğe, bir koleksiyon öğesi olarak eklenir ve son olarak (varsa) izleyen alt dizedir Üçüncü olarak koleksiyona eklenen <xref:System.String> öğesi.  
+- Özelliğin türü koleksiyonudur ve iç metni bitişik değil, ilk alt dizeyi dönüştürülür bir <xref:System.String> ve bir koleksiyon öğesi olarak eklenir, müdahalede bulunan öğe, bir koleksiyon öğesi olarak eklenir ve son olarak (varsa) izleyen alt dizedir Üçüncü olarak koleksiyona eklenen <xref:System.String> öğesi.  
   
 <a name="preserving_whitespace"></a>   
 ## <a name="preserving-white-space"></a>Koruma boşluk  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - option lists in Windows Forms
 ms.assetid: 5bc064c7-bc1f-4b62-8f4b-252f864b118e
 ms.openlocfilehash: 92d5f330fbd5269e15bf52dc11ad998939aa18e4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009077"
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri
 Kullanıcılara bir seçenek yelpazesinden listesi sağlamak istiyorsanız Windows Form çeşitli denetimlere ekleyebilirsiniz. Bağlı olarak ne kadar istediğiniz kullanıcılarınızın kısıtlamak input, ekleyebileceğiniz bir <xref:System.Windows.Forms.ListBox> denetimi, bir <xref:System.Windows.Forms.ComboBox> denetimi veya <xref:System.Windows.Forms.CheckedListBox> denetimi. En iyi hangi denetimin gereksinimlerinize uyan belirlemek için aşağıdaki bağlantıları kullanın.  

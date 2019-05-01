@@ -3,11 +3,11 @@ title: NativeActivity Temel Sınıfı
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
 ms.openlocfilehash: f718d247e7110b46cdd13038c7c93c1e45612c75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009987"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity Temel Sınıfı
 
@@ -16,21 +16,21 @@ ms.locfileid: "59296595"
 ## <a name="using-nativeactivitycontext"></a>NativeActivityContext kullanma
  İş akışı çalışma zamanı özellikleri içinden erişilebilir <xref:System.Activities.NativeActivity.Execute%2A> üyeleri kullanarak yöntemi `context` türünde parametre <xref:System.Activities.NativeActivityContext>. Aracılığıyla kullanılabilen özellikleri <xref:System.Activities.NativeActivityContext> şunları içerir:
 
--   Alma ve bağımsız değişkenler ve değişkenleri ayarlama.
+- Alma ve bağımsız değişkenler ve değişkenleri ayarlama.
 
--   Bağımlı etkinliklerle zamanlama <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>
+- Bağımlı etkinliklerle zamanlama <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>
 
--   Etkinlik yürütme durduruluyor kullanarak <xref:System.Activities.NativeActivityContext.Abort%2A>.
+- Etkinlik yürütme durduruluyor kullanarak <xref:System.Activities.NativeActivityContext.Abort%2A>.
 
--   Yürütme kullanarak alt iptal etme <xref:System.Activities.NativeActivityContext.CancelChild%2A> ve <xref:System.Activities.NativeActivityContext.CancelChildren%2A>.
+- Yürütme kullanarak alt iptal etme <xref:System.Activities.NativeActivityContext.CancelChild%2A> ve <xref:System.Activities.NativeActivityContext.CancelChildren%2A>.
 
--   Bu tür yöntemler olarak kullanarak etkinlik yer işaretleri erişim <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>, <xref:System.Activities.NativeActivityContext.RemoveBookmark%2A>, ve <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A>.
+- Bu tür yöntemler olarak kullanarak etkinlik yer işaretleri erişim <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>, <xref:System.Activities.NativeActivityContext.RemoveBookmark%2A>, ve <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A>.
 
--   Özel İzleme özelliklerini kullanarak <xref:System.Activities.CodeActivityContext.Track%2A>.
+- Özel İzleme özelliklerini kullanarak <xref:System.Activities.CodeActivityContext.Track%2A>.
 
--   Etkinlik yürütme özellikleri ve değer özellikleri kullanarak erişim <xref:System.Activities.CodeActivityContext.GetProperty%2A> ve <xref:System.Activities.NativeActivityContext.GetValue%2A>.
+- Etkinlik yürütme özellikleri ve değer özellikleri kullanarak erişim <xref:System.Activities.CodeActivityContext.GetProperty%2A> ve <xref:System.Activities.NativeActivityContext.GetValue%2A>.
 
--   Etkinlik eylemleri ve işlevleri kullanarak zamanlama <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> ve <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A>.
+- Etkinlik eylemleri ve işlevleri kullanarak zamanlama <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> ve <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A>.
 
 ### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>NativeActivity devralan bir özel etkinlik oluşturmak için
 

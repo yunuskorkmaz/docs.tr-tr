@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034560"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Yapılandırma parametreleri ve parametre veri türleri
 
@@ -50,15 +50,15 @@ Bir parametrenin veri türü için belirli [!INCLUDE[dnprdnshort](../../../../in
 
 |.NET Framework türü|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
-|<xref:System.Boolean>|Boole değeri|Bit|Boole değeri|Bit|Bayt|
+|<xref:System.Boolean>|Boole değeri|bit|Boole değeri|bit|Bayt|
 |<xref:System.Byte>|Bayt|Mini tamsayı|UnsignedTinyInt|Mini tamsayı|Bayt|
-|bayt]|İkili|Değişken İkili. 8000 bayt olan bayt dizisini ikili, en yüksek boyuttan büyük olması durumunda bu örtülü dönüştürme başarısız olur. 8000 bayt değerinden daha büyük bayt dizileri için açıkça ayarlanmış <xref:System.Data.SqlDbType>.|VarBinary|İkili|Ham|
+|byte[]|İkili|Değişken İkili. 8000 bayt olan bayt dizisini ikili, en yüksek boyuttan büyük olması durumunda bu örtülü dönüştürme başarısız olur. 8000 bayt değerinden daha büyük bayt dizileri için açıkça ayarlanmış <xref:System.Data.SqlDbType>.|VarBinary|İkili|Ham|
 |<xref:System.Char>| |Çıkarımını yapma bir <xref:System.Data.SqlDbType> char desteklenmiyor.|Char|Char|Bayt|
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|
 |<xref:System.DateTimeOffset>|DateTimeOffset|SQL Server 2008'de DateTimeOffset. Çıkarımını yapma bir <xref:System.Data.SqlDbType> DateTimeOffset SQL Server'ın SQL Server 2008'den önceki sürümlerinde desteklenmez.|||DateTime|
-|<xref:System.Decimal>|Ondalık|Ondalık|Ondalık|Sayısal|Sayı|
-|<xref:System.Double>|Çift|Kayan|çift|çift|Çift|
-|<xref:System.Single>|Tek|Gerçek|Tek|Gerçek|Kayan|
+|<xref:System.Decimal>|Ondalık|Ondalık|Ondalık|Numeric|Sayı|
+|<xref:System.Double>|Çift|Float|çift|çift|Çift|
+|<xref:System.Single>|Tek|Gerçek|Tek|Gerçek|Float|
 |<xref:System.Guid>|Guid|Benzersiz tanımlayıcı|Guid|Benzersiz tanımlayıcı|Ham|
 |<xref:System.Int16>|Int16|Tamsayı|Tamsayı|Tamsayı|Int16|
 |<xref:System.Int32>|Int32|int|int|int|Int32|
@@ -68,10 +68,10 @@ Bir parametrenin veri türü için belirli [!INCLUDE[dnprdnshort](../../../../in
 |<xref:System.TimeSpan>|Zaman|SQL Server 2008'de saat. Çıkarımını yapma bir <xref:System.Data.SqlDbType> TimeSpan SQL Server'ın SQL Server 2008'den önceki sürümlerinde desteklenmez.|DBTime|Zaman|DateTime|
 |<xref:System.UInt16>|UInt16|Çıkarımını yapma bir <xref:System.Data.SqlDbType> UInt16 desteklenmiyor.|UnsignedSmallInt|int|UInt16|
 |<xref:System.UInt32>|UInt32|Çıkarımını yapma bir <xref:System.Data.SqlDbType> UInt32 desteklenmiyor.|unsignedInt|BigInt|UInt32|
-|<xref:System.UInt64>|UInt64|Çıkarımını yapma bir <xref:System.Data.SqlDbType> Uınt64 ' desteklenmiyor.|UnsignedBigInt|Sayısal|Sayı|
+|<xref:System.UInt64>|UInt64|Çıkarımını yapma bir <xref:System.Data.SqlDbType> Uınt64 ' desteklenmiyor.|UnsignedBigInt|Numeric|Sayı|
 ||AnsiString|VarChar|VarChar|VarChar|VarChar|
 ||AnsiStringFixedLength|Char|Char|Char|Char|
-||Para Birimi|para|Para Birimi|Çıkarımını yapma bir `OdbcType` gelen `Currency` desteklenmiyor.|Sayı|
+||Para Birimi|money|Para Birimi|Çıkarımını yapma bir `OdbcType` gelen `Currency` desteklenmiyor.|Sayı|
 ||Tarih|SQL Server 2008'de tarih. Çıkarımını yapma bir <xref:System.Data.SqlDbType> tarihinden itibaren SQL Server'ın SQL Server 2008'den önceki sürümlerinde desteklenmez.|DBDate|Tarih|DateTime|
 ||SByte|Çıkarımını yapma bir <xref:System.Data.SqlDbType> SByte desteklenmiyor.|Mini tamsayı|Çıkarımını yapma bir `OdbcType` SByte desteklenmiyor.|SByte|
 ||StringFixedLength|nChar|WChar|nChar|nChar|

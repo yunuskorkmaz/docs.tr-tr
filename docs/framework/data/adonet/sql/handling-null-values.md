@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
 ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59332150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032482"
 ---
 # <a name="handling-null-values"></a>Null Değerleri İşleme
 Bir sütundaki değer bilinmeyen veya eksik olduğunda, ilişkisel bir veritabanındaki bir null değer kullanılır. Bir null, boş bir dize (karakter veya tarih/saat veri türleri için) ya da sıfır değeri (sayısal veri türleri için) olur. Tüm null değerlere tutarlı bir şekilde işlenir böylece ANSI SQL 92 belirtimi boş tüm veri türleri için aynı olması gerektiğini belirtir. <xref:System.Data.SqlTypes> Uygulayarak ad alanı null bir semantik sağlar <xref:System.Data.SqlTypes.INullable> arabirimi. Her veri türlerini <xref:System.Data.SqlTypes> kendi `IsNull` özelliği ve `Null` veri türü örneğine atanabilir değer.  
@@ -21,11 +21,11 @@ Bir sütundaki değer bilinmeyen veya eksik olduğunda, ilişkisel bir veritaban
 ## <a name="nulls-and-three-valued-logic"></a>Null değerler ve üç değerli mantığı  
  Null değerlere izin verecek sütun tanımlarında üç değerli mantıksal uygulamanıza tanıtır. Bir karşılaştırma üç koşullardan birini değerlendirebilirsiniz:  
   
--   Doğru  
+- Doğru  
   
--   False  
+- False  
   
--   Bilinmiyor  
+- Bilinmiyor  
   
  Null bilinmeyen olarak kabul edilir çünkü birbirine Karşılaştırılan iki null değeri eşit olacak şekilde dikkate alınmaz. Aritmetik işleçler işlenenlerin null ise kullanarak da ifadeleri sonucu de null olur.  
   
@@ -118,7 +118,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>SqlTypes ve CLR Türleri ile null değerleri karşılaştırma  
- Null değerler karşılaştırılırken biçimini arasındaki farkı anlamak önemlidir `Equals` yöntemi null değerleri değerlendirir <xref:System.Data.SqlTypes> CLR türleriyle çalışma şeklini değiştirmeyen. Tüm <xref:System.Data.SqlTypes>`Equals` yöntemleri null değerlerini değerlendirmek için veritabanı semantiğini kullanın: ya da değerler, null, null karşılaştırma verir. Öte yandan, CLR kullanarak `Equals` yöntemi iki <xref:System.Data.SqlTypes> her ikisi de null ise true verir. Bu bir örnek yöntemi gibi CLR'ın kullanımı arasındaki fark gösterdiğinden `String.Equals` yöntemi ve statik ve paylaşılan yöntemi kullanarak `SqlString.Equals`.  
+ Null değerler karşılaştırılırken biçimini arasındaki farkı anlamak önemlidir `Equals` yöntemi null değerleri değerlendirir <xref:System.Data.SqlTypes> CLR türleriyle çalışma şeklini değiştirmeyen. Tüm <xref:System.Data.SqlTypes> `Equals` yöntemleri null değerlerini değerlendirmek için veritabanı semantiğini kullanın: ya da değerler, null, null karşılaştırma verir. Öte yandan, CLR kullanarak `Equals` yöntemi iki <xref:System.Data.SqlTypes> her ikisi de null ise true verir. Bu bir örnek yöntemi gibi CLR'ın kullanımı arasındaki fark gösterdiğinden `String.Equals` yöntemi ve statik ve paylaşılan yöntemi kullanarak `SqlString.Equals`.  
   
  Aşağıdaki örnek, sonuç farkı gösterir `SqlString.Equals` yöntemi ve `String.Equals` her bir null değer çiftinin ve bir çift boş dizeler geçirildiğinde yöntemi.  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
 ms.openlocfilehash: 89d9517a92155f569a15c5272bcecc1c8f427f1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013159"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimi Tarafından Görüntülenen Resmi Ayarlama
 Çeşitli Windows Forms denetimleri, görüntüleri görüntüleyebilirsiniz. Görüntü denetimi gibi bir disk simgesini gösteren düğme üzerinde amacını açıklar bir simge olabilir **Kaydet** komutu. Alternatif olarak, simge, istediğiniz görünümü denetiminin kendilerinde olmasına arka plan görüntüsü olabilir.  

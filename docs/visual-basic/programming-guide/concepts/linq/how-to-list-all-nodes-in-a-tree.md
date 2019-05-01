@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: (Visual Basic) bir ağaçtaki tüm düğümleri listel
 ms.date: 07/20/2015
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
 ms.openlocfilehash: 6576beaaed00905ce7a09f338251934ea375cb7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021628"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir ağaçtaki tüm düğümleri listeleyin
 Bazen bir ağaçtaki tüm düğümleri listelemek yararlıdır. Bu tam olarak bir yöntem veya özellik ağaç etkilemesi öğrenme zaman yararlı olabilir. Metin biçiminde tüm düğümleri listeleyen bir yaklaşım, tam olarak ve özellikle herhangi bir düğüm ağaçta tanımlayan bir XPath ifadesi oluşturmaktır.  

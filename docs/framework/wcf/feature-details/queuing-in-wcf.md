@@ -3,11 +3,11 @@ title: WCF'de Kuyruğa Alma
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
 ms.openlocfilehash: 502f1ad74cd4bd6294db11a3e48f4c41068704ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049641"
 ---
 # <a name="queuing-in-wcf"></a>WCF'de Kuyruğa Alma
 Bu bölümde, Windows Communication Foundation (WCF) kuyruğa alınan iletişim kullanmayı açıklar.  
@@ -21,11 +21,11 @@ Bu bölümde, Windows Communication Foundation (WCF) kuyruğa alınan iletişim 
   
  Wcf'de kuyruğa alınmış bağlama hakkında uyarılar şunlardır:  
   
--   Varsayılan bağlama WCF'de kuyruğa alınan işlemler tek yönlü olması gerekir, çünkü tüm servis kuyruklarını kullanarak çift yönlü iletişimi desteklemez. İki yönlü iletişim örnek ([iki yönlü iletişimi](../../../../docs/framework/wcf/samples/two-way-communication.md)) kuyruklarını kullanarak çift yönlü iletişim uygulamak için iki yönlü sözleşmeler kullanılması gösterilmektedir.  
+- Varsayılan bağlama WCF'de kuyruğa alınan işlemler tek yönlü olması gerekir, çünkü tüm servis kuyruklarını kullanarak çift yönlü iletişimi desteklemez. İki yönlü iletişim örnek ([iki yönlü iletişimi](../../../../docs/framework/wcf/samples/two-way-communication.md)) kuyruklarını kullanarak çift yönlü iletişim uygulamak için iki yönlü sözleşmeler kullanılması gösterilmektedir.  
   
--   Bir WCF oluşturmak için WCF istemcisi oluşturma ve kuyruğa alınan iletişim uygun şekilde yapılandırmak için bağlama bilgilerini elde etmek için doğrudan sorgulanabilir böylece meta veri değişimi kullanarak istemci hizmeti hakkında ek bir HTTP uç noktası gerektirir.  
+- Bir WCF oluşturmak için WCF istemcisi oluşturma ve kuyruğa alınan iletişim uygun şekilde yapılandırmak için bağlama bilgilerini elde etmek için doğrudan sorgulanabilir böylece meta veri değişimi kullanarak istemci hizmeti hakkında ek bir HTTP uç noktası gerektirir.  
   
--   Üzerinde sıraya alınan bağlama bağlı olarak, WCF dışında ek bir yapılandırma gereklidir. Örneğin, <xref:System.ServiceModel.NetMsmqBinding> WCF ile birlikte gelen sınıfı yanı sıra bağlamalarını yapılandırmak için en düşük düzeyde Message Queuing (MSMQ) yapılandırma gerektirir.  
+- Üzerinde sıraya alınan bağlama bağlı olarak, WCF dışında ek bir yapılandırma gereklidir. Örneğin, <xref:System.ServiceModel.NetMsmqBinding> WCF ile birlikte gelen sınıfı yanı sıra bağlamalarını yapılandırmak için en düşük düzeyde Message Queuing (MSMQ) yapılandırma gerektirir.  
   
  Aşağıdaki bölümlerde, MSMQ üzerinde temel WCF ile birlikte gelen belirli sıraya alınan bağlamaları açıklanmaktadır.  
   
@@ -48,9 +48,9 @@ Bu bölümde, Windows Communication Foundation (WCF) kuyruğa alınan iletişim 
 #### <a name="exactlyonce-and-durable-properties"></a>ExactlyOnce ve dayanıklı özellikleri  
  `ExactlyOnce` Ve `Durable` özellikler, ileti kuyrukları arasında nasıl aktarıldığı etkiler:  
   
--   `ExactlyOnce`: Ayarlandığında `true` (varsayılan), ileti teslim ise değil yineleniyor, kuyruğa alınmış kanal sağlar. Ayrıca, ileti kaybolmaz sağlar. İleti teslim ya da ileti yaşam süresi için ileti teslim önce sona edilemeyen kuyrukta başarısız iletinin teslim hatanın nedenini birlikte kaydedilir. Ayarlandığında `false`, kuyruğa alınmış kanal ileti aktarım için çaba yapar. Bu durumda, eski ileti sırası isteğe bağlı olarak seçebilirsiniz.  
+- `ExactlyOnce`: Ayarlandığında `true` (varsayılan), ileti teslim ise değil yineleniyor, kuyruğa alınmış kanal sağlar. Ayrıca, ileti kaybolmaz sağlar. İleti teslim ya da ileti yaşam süresi için ileti teslim önce sona edilemeyen kuyrukta başarısız iletinin teslim hatanın nedenini birlikte kaydedilir. Ayarlandığında `false`, kuyruğa alınmış kanal ileti aktarım için çaba yapar. Bu durumda, eski ileti sırası isteğe bağlı olarak seçebilirsiniz.  
   
--   `Durable:` Ayarlandığında `true` (varsayılan), MSMQ İleti arızaya diskte depolar, kuyruğa alınmış kanal sağlar. Bu nedenle, MSMQ hizmeti durdurun ve yeniden başlatmak için olsaydı, iletileri disk için hedef sıra aktarılan veya hizmete teslim. Ayarlandığında `false`, iletileri geçici deposunda depolanır ve MSMQ hizmeti durdurup yeniden üzerinde kaybolur.  
+- `Durable:` Ayarlandığında `true` (varsayılan), MSMQ İleti arızaya diskte depolar, kuyruğa alınmış kanal sağlar. Bu nedenle, MSMQ hizmeti durdurun ve yeniden başlatmak için olsaydı, iletileri disk için hedef sıra aktarılan veya hizmete teslim. Ayarlandığında `false`, iletileri geçici deposunda depolanır ve MSMQ hizmeti durdurup yeniden üzerinde kaybolur.  
   
  İçin `ExactlyOnce` Güvenilir Aktarım MSMQ kuyruk işlem gerektirir. Ayrıca, MSMQ işlem kuyruktan okunmak üzere bir işlem gerektirir. Bu nedenle, kullandığınız zaman `NetMsmqBinding`, unutmayın iletileri ne zaman gönderileceği ve alınacağı bir işlem gereklidir `ExactlyOnce` ayarlanır `true`. Benzer şekilde, MSMQ kuyruk ne zaman gibi en yüksek çaba Güvenceleri için işlem olmayan gerektirir `ExactlyOnce` olduğu `false` ve volatile Mesajlaşma için. Bu nedenle, ayarlarken `ExactlyOnce` için `false` veya için dayanıklı `false`, gönderdiğiniz veya bir işlem kullanarak alırsınız.  
   
@@ -66,9 +66,9 @@ Bu bölümde, Windows Communication Foundation (WCF) kuyruğa alınan iletişim 
   
  Bağlama, ilgilenilen iki özelliğe sahiptir:  
   
--   `DeadLetterQueue`: Bu özellik eski ileti sırası istemediğini gösteren bir sabit listesidir. Bir istenirse numaralandırma eski ileti sırası türünü de içerir. Değerler `None`, `System`, ve `Custom`. Bu özelliklerin yorumlama hakkında daha fazla bilgi için bkz. [ileti aktarımı hatalarını işlemek için teslim edilemeyen kuyrukları kullanma](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+- `DeadLetterQueue`: Bu özellik eski ileti sırası istemediğini gösteren bir sabit listesidir. Bir istenirse numaralandırma eski ileti sırası türünü de içerir. Değerler `None`, `System`, ve `Custom`. Bu özelliklerin yorumlama hakkında daha fazla bilgi için bkz. [ileti aktarımı hatalarını işlemek için teslim edilemeyen kuyrukları kullanma](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
--   `CustomDeadLetterQueue`: Bu özellik uygulamaya özgü eski ileti sırası Tekdüzen Kaynak Tanımlayıcısı (URI) adresidir. Bu gerekli ise `DeadLetterQueue`.`Custom` seçilir.  
+- `CustomDeadLetterQueue`: Bu özellik uygulamaya özgü eski ileti sırası Tekdüzen Kaynak Tanımlayıcısı (URI) adresidir. Bu gerekli ise `DeadLetterQueue`.`Custom` seçilir.  
   
 #### <a name="poison-message-handling-properties"></a>Zehirli ileti işleme özellikleri  
  Hizmet, bir işlem altında hedef kuyruktan iletileri okuduğunda, hizmet çeşitli nedenlerle iletiyi işlemek başarısız olabilir. İleti geri yeniden okumak için sıraya konur. Bir dizi poison ileti işleme tekrar tekrar başarısız iletileri ile dağıtılacak bağlama özellikleri yapılandırılabilir. Dört özellik vardır: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay`, ve `ReceiveErrorHandling`. Bu özellikler hakkında daha fazla bilgi için bkz. [zehirli ileti işleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
@@ -83,47 +83,47 @@ Bu bölümde, Windows Communication Foundation (WCF) kuyruğa alınan iletişim 
 #### <a name="other-properties"></a>Diğer özellikler  
  Önceki özelliklerine ek olarak, bağlama Ekle kullanıma sunulan diğer MSMQ özgü özellikler:  
   
--   `UseSourceJournal`: Bu kaynak günlük kaydı belirtmek için bir özelliği etkinleştirilir. Kaynak günlük kaydı başarıyla iletim sırasından gönderilen iletileri izlemek bir MSMQ özelliğidir.  
+- `UseSourceJournal`: Bu kaynak günlük kaydı belirtmek için bir özelliği etkinleştirilir. Kaynak günlük kaydı başarıyla iletim sırasından gönderilen iletileri izlemek bir MSMQ özelliğidir.  
   
--   `UseMsmqTracing`: MSMQ izleme açık olduğunu belirtmek için bir özellik. MSMQ izleme, bir rapor kuyruğa bir ileti ayrıldığında ya da bir MSMQ Kuyruk Yöneticisi'ni barındıran bir makinenin ulaşan her zaman rapor iletileri gönderir.  
+- `UseMsmqTracing`: MSMQ izleme açık olduğunu belirtmek için bir özellik. MSMQ izleme, bir rapor kuyruğa bir ileti ayrıldığında ya da bir MSMQ Kuyruk Yöneticisi'ni barındıran bir makinenin ulaşan her zaman rapor iletileri gönderir.  
   
--   `QueueTransferProtocol`: Kuyruk kuyruk iletisi aktarımlar için kullanılacak protokolü numaralandırması. MSMQ yerel kuyruk sırası Aktarım Protokolü ve SOAP Güvenilir Mesajlaşma Protokolü (SRMP) adlı bir SOAP tabanlı Protokolü uygular. Kuyruk sırası aktarımları için HTTP aktarımı kullanarak SRMP kullanılır. Kuyruk sırası aktarımları için HTTPS kullanan güvenli SRMP kullanılır.  
+- `QueueTransferProtocol`: Kuyruk kuyruk iletisi aktarımlar için kullanılacak protokolü numaralandırması. MSMQ yerel kuyruk sırası Aktarım Protokolü ve SOAP Güvenilir Mesajlaşma Protokolü (SRMP) adlı bir SOAP tabanlı Protokolü uygular. Kuyruk sırası aktarımları için HTTP aktarımı kullanarak SRMP kullanılır. Kuyruk sırası aktarımları için HTTPS kullanan güvenli SRMP kullanılır.  
   
--   `UseActiveDirectory`: Active Directory kuyruk adres çözümlemesi için kullanılıp kullanılmayacağını belirten bir Boole değeri. Varsayılan olarak, bu kapalıdır. Daha fazla bilgi için [hizmet uç noktaları ve kuyruk işleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+- `UseActiveDirectory`: Active Directory kuyruk adres çözümlemesi için kullanılıp kullanılmayacağını belirten bir Boole değeri. Varsayılan olarak, bu kapalıdır. Daha fazla bilgi için [hizmet uç noktaları ve kuyruk işleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  `MsmqIntegrationBinding` C, C++, COM veya System.Messaging API'leri ile yazılmış mevcut bir MSMQ uygulamasıyla iletişim kurmak için WCF uç noktasını istediğinizde kullanılır.  
   
  Bağlama özellikleri aynıdır `NetMsmqBinding`. Ancak, aşağıdaki farklar geçerlidir:  
   
--   İşlem anlaşması için `MsmqIntegrationBinding` türünde tek bir parametre almak için kısıtlı <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> gövde türü olduğu tür parametresi.  
+- İşlem anlaşması için `MsmqIntegrationBinding` türünde tek bir parametre almak için kısıtlı <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> gövde türü olduğu tür parametresi.  
   
--   MSMQ yerel ileti özelliklerinin çoğunu içinde sunulur <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> kullanmak için.  
+- MSMQ yerel ileti özelliklerinin çoğunu içinde sunulur <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> kullanmak için.  
   
--   Serileştirme ve seri durumundan çıkarma ileti gövdesi ile yardımcı olmak için seri hale getiricileri genişletme XML ve ActiveX gibi sağlanır.  
+- Serileştirme ve seri durumundan çıkarma ileti gövdesi ile yardımcı olmak için seri hale getiricileri genişletme XML ve ActiveX gibi sağlanır.  
   
 ### <a name="sample-code"></a>Örnek Kod  
  WCF yazmaya yönelik adım adım yönergeler için MSMQ kullanan hizmetler aşağıdaki konulara bakın:  
   
--   [Nasıl yapılır: WCF uç noktaları ve ileti uygulamaları ile Exchange ileti](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+- [Nasıl yapılır: WCF uç noktaları ve ileti uygulamaları ile Exchange ileti](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [Nasıl yapılır: WCF uç noktaları ile kuyruğa alınmış iletiler gönderip alır](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+- [Nasıl yapılır: WCF uç noktaları ile kuyruğa alınmış iletiler gönderip alır](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  Wcf'de MSMQ kullanımını gösteren tamamlanmış kod örneği için aşağıdaki konulara bakın:  
   
--   [İşlem Gerçekleştirilmiş MSMQ Bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
+- [İşlem Gerçekleştirilmiş MSMQ Bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
   
--   [Geçici Kuyruğa Alınmış İletişim](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
+- [Geçici Kuyruğa Alınmış İletişim](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
   
--   [Teslim Edilemeyen İletiler Sırası](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
+- [Teslim Edilemeyen İletiler Sırası](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
   
--   [Oturumlar ve Kuyruklar](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
+- [Oturumlar ve Kuyruklar](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
   
--   [Çift Yönlü İletişim](../../../../docs/framework/wcf/samples/two-way-communication.md) 
+- [Çift Yönlü İletişim](../../../../docs/framework/wcf/samples/two-way-communication.md) 
   
--   [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
+- [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
   
--   [Message Queuing Üzerinden İleti Güvenliği](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+- [Message Queuing Üzerinden İleti Güvenliği](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

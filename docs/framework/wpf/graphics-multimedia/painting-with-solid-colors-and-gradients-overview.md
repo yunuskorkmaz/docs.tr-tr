@@ -10,11 +10,11 @@ helpviewer_keywords:
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
 ms.openlocfilehash: 7945660f40e44596fe36a6b9d53223a0e264a064
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009467"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış
 Bu konu nasıl kullanılacağını açıklar <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, ve <xref:System.Windows.Media.RadialGradientBrush> düz renkler, doğrusal gradyanlar ve radyal gradyanlar ile Boyama nesneleri.  
@@ -27,15 +27,15 @@ Bu konu nasıl kullanılacağını açıklar <xref:System.Windows.Media.SolidCol
 ### <a name="using-a-solidcolorbrush-in-xaml"></a>SolidColorBrush "XAML" kullanma  
  İçinde bir düz renk ile bir alanı boyama için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], aşağıdaki seçeneklerden birini kullanın.  
   
--   Ada göre bir önceden tanımlanmış tek renk Fırçası seçin.  Örneğin, bir düğmenin ayarlayabilirsiniz <xref:System.Windows.Controls.Control.Background%2A> "Red" veya "MediumBlue şeklinde".  Diğer listesini düz renk fırçaları önceden tanımlanmış statik özelliklerini görmek <xref:System.Windows.Media.Brushes> sınıfı. Bir örnek verilmiştir.  
+- Ada göre bir önceden tanımlanmış tek renk Fırçası seçin.  Örneğin, bir düğmenin ayarlayabilirsiniz <xref:System.Windows.Controls.Control.Background%2A> "Red" veya "MediumBlue şeklinde".  Diğer listesini düz renk fırçaları önceden tanımlanmış statik özelliklerini görmek <xref:System.Windows.Media.Brushes> sınıfı. Bir örnek verilmiştir.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
--   Bir renk, 32 bit renk paletinden kırmızı, yeşil ve mavi tek bir düz renk birleştirilecek miktarda belirterek seçin.  32-bit paletinden bir renk belirtmeye yönelik biçimi "*#rrggbb*" burada *rr* kırmızı, göreli miktarını belirten iki basamaklı bir onaltılık sayı olduğu *gg* Yeşil, belirtir ve *bb* mavi miktarını belirtir.  Ayrıca, rengi olarak belirtilebilir "#*geçirgenliğini belirttiği*" nerede *aa* belirtir *alfa* değeri veya saydamlığını rengi. Bu yaklaşım, kısmen saydam olan renkleri oluşturmanıza olanak sağlar.  Aşağıdaki örnekte, <xref:System.Windows.Controls.Control.Background%2A> , bir <xref:System.Windows.Controls.Button> onaltılık gösterim kullanılarak tamamen opak kırmızı olarak ayarlayın.  
+- Bir renk, 32 bit renk paletinden kırmızı, yeşil ve mavi tek bir düz renk birleştirilecek miktarda belirterek seçin.  32-bit paletinden bir renk belirtmeye yönelik biçimi "*#rrggbb*" burada *rr* kırmızı, göreli miktarını belirten iki basamaklı bir onaltılık sayı olduğu *gg* Yeşil, belirtir ve *bb* mavi miktarını belirtir.  Ayrıca, rengi olarak belirtilebilir "#*geçirgenliğini belirttiği*" nerede *aa* belirtir *alfa* değeri veya saydamlığını rengi. Bu yaklaşım, kısmen saydam olan renkleri oluşturmanıza olanak sağlar.  Aşağıdaki örnekte, <xref:System.Windows.Controls.Control.Background%2A> , bir <xref:System.Windows.Controls.Button> onaltılık gösterim kullanılarak tamamen opak kırmızı olarak ayarlayın.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
--   Özellik etiketi sözdizimi tanımlamak için kullanmak bir <xref:System.Windows.Media.SolidColorBrush>. Bu sözdizimi, daha ayrıntılı ancak fırça opaklığını gibi ek ayarları belirtmenize olanak sağlar. Aşağıdaki örnekte, <xref:System.Windows.Controls.Control.Background%2A> iki özelliklerini <xref:System.Windows.Controls.Button> öğeleri tamamen opak kırmızı ayarlanır. İlk fırçanın rengi, önceden tanımlı renk adı kullanılarak tanımlanır. İkinci fırçanın rengi, onaltılık gösterim kullanılarak tanımlanır.  
+- Özellik etiketi sözdizimi tanımlamak için kullanmak bir <xref:System.Windows.Media.SolidColorBrush>. Bu sözdizimi, daha ayrıntılı ancak fırça opaklığını gibi ek ayarları belirtmenize olanak sağlar. Aşağıdaki örnekte, <xref:System.Windows.Controls.Control.Background%2A> iki özelliklerini <xref:System.Windows.Controls.Button> öğeleri tamamen opak kırmızı ayarlanır. İlk fırçanın rengi, önceden tanımlı renk adı kullanılarak tanımlanır. İkinci fırçanın rengi, onaltılık gösterim kullanılarak tanımlanır.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]  
   
@@ -43,11 +43,11 @@ Bu konu nasıl kullanılacağını açıklar <xref:System.Windows.Media.SolidCol
 ### <a name="painting-with-a-solidcolorbrush-in-code"></a>Kod içinde SolidColorBrush ile Boyama  
  Kodda düz renk ile bir alanı boyama için aşağıdaki seçeneklerden birini kullanın.  
   
--   Tarafından sağlanan önceden tanımlanmış Fırçalar birini <xref:System.Windows.Media.Brushes> sınıfı. Aşağıdaki örnekte, <xref:System.Windows.Controls.Control.Background%2A> , bir <xref:System.Windows.Controls.Button> ayarlanır <xref:System.Windows.Media.Brushes.Red%2A>.  
+- Tarafından sağlanan önceden tanımlanmış Fırçalar birini <xref:System.Windows.Media.Brushes> sınıfı. Aşağıdaki örnekte, <xref:System.Windows.Controls.Control.Background%2A> , bir <xref:System.Windows.Controls.Button> ayarlanır <xref:System.Windows.Media.Brushes.Red%2A>.  
   
      [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedBrush1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedbrush1csharp)]  
   
--   Oluşturma bir <xref:System.Windows.Media.SolidColorBrush> ve kendi <xref:System.Windows.Media.SolidColorBrush.Color%2A> özelliğini kullanarak bir <xref:System.Windows.Media.Color> yapısı. Önceden tanımlanmış bir rengi kullanabileceğiniz <xref:System.Windows.Media.Colors> sınıfı veya oluşturabilir bir <xref:System.Windows.Media.Color> 'using static <xref:System.Windows.Media.Color.FromArgb%2A> yöntemi.  
+- Oluşturma bir <xref:System.Windows.Media.SolidColorBrush> ve kendi <xref:System.Windows.Media.SolidColorBrush.Color%2A> özelliğini kullanarak bir <xref:System.Windows.Media.Color> yapısı. Önceden tanımlanmış bir rengi kullanabileceğiniz <xref:System.Windows.Media.Colors> sınıfı veya oluşturabilir bir <xref:System.Windows.Media.Color> 'using static <xref:System.Windows.Media.Color.FromArgb%2A> yöntemi.  
   
      Aşağıdaki örnek nasıl ayarlanacağını gösterir <xref:System.Windows.Media.SolidColorBrush.Color%2A> özelliği bir <xref:System.Windows.Media.SolidColorBrush> kullanarak önceden tanımlanmış bir rengi.  
   
@@ -81,9 +81,9 @@ Bu konu nasıl kullanılacağını açıklar <xref:System.Windows.Media.SolidCol
   
  <xref:System.Windows.Media.GradientStop> Gradyan fırçası temel yapı bloğudur.  Gradyan durak belirtir bir <xref:System.Windows.Media.GradientStop.Color%2A> konumundaki bir <xref:System.Windows.Media.GradientStop.Offset%2A> gradyan ekseni.  
   
--   Gradyan durağının <xref:System.Windows.Media.GradientStop.Color%2A> özellik gradyan rengini belirtir. Önceden tanımlanmış bir rengi kullanarak rengini ayarlayabilir (tarafından sağlanan <xref:System.Windows.Media.Colors> sınıfı) veya ScRGB veya ARGB değerlerini belirterek. İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], bir renk tanımlamak için onaltılık gösterim de kullanabilir. Daha fazla bilgi için <xref:System.Windows.Media.Color> yapısı.  
+- Gradyan durağının <xref:System.Windows.Media.GradientStop.Color%2A> özellik gradyan rengini belirtir. Önceden tanımlanmış bir rengi kullanarak rengini ayarlayabilir (tarafından sağlanan <xref:System.Windows.Media.Colors> sınıfı) veya ScRGB veya ARGB değerlerini belirterek. İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], bir renk tanımlamak için onaltılık gösterim de kullanabilir. Daha fazla bilgi için <xref:System.Windows.Media.Color> yapısı.  
   
--   Gradyan durağının <xref:System.Windows.Media.GradientStop.Offset%2A> özellik gradyan eksende gradyan durağının renk konumunu belirtir. Uzaklık bir <xref:System.Double> 1-0'dan aralıkları. Daha yakın bir gradyan durağının uzaklık değeri 0'a daha yakın renk geçişin başlangıca yaklaşır. Daha yakın gradyan uzaklık değeri 1'e yakın renk gradyanı sonuna kadar olan olan.  
+- Gradyan durağının <xref:System.Windows.Media.GradientStop.Offset%2A> özellik gradyan eksende gradyan durağının renk konumunu belirtir. Uzaklık bir <xref:System.Double> 1-0'dan aralıkları. Daha yakın bir gradyan durağının uzaklık değeri 0'a daha yakın renk geçişin başlangıca yaklaşır. Daha yakın gradyan uzaklık değeri 1'e yakın renk gradyanı sonuna kadar olan olan.  
   
  Gradyan durakları arasındaki her noktasının rengini, doğrusal gradyan duraklarının sınırlayıcı iki tarafından belirtilen renk birleşimi olarak ilişkilendirilir. Aşağıdaki resimde, önceki örnekte gradyan duraklarının vurgular. Gradyan duraklarının konumuna daireler işaretlemek ve gradyan eksen kesikli çizgiye gösterir.  
   

@@ -3,11 +3,11 @@ title: Özel Durum ve Hataları İşleme
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
 ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991425"
 ---
 # <a name="handling-exceptions-and-faults"></a>Özel Durum ve Hataları İşleme
 Özel durumlar, yerel hizmet veya istemci uygulamaları içindeki hataları iletişim kurmak için kullanılır. Hataları, diğer taraftan, hataları hizmet sınırları arasında olduğu gibi sunucudan istemciye ya da tam tersi iletişim kurmak için kullanılır. Hataları ek olarak, taşıma kanalları çoğunlukla aktarım özgü mekanizmaları aktarım düzeyi hataları iletişim kurmak için kullanır. Örneğin, HTTP aktarımı 404 gibi durum kodları (bir hata geri göndermek için uç nokta yok) bir mevcut olmayan uç nokta URL'si iletişim kurmak için kullanır. Bu belgenin özel kanal yazarları için rehberlik üç bölüm oluşur. İlk bölüm ne zaman ve nasıl tanımlamak ve özel durumlar rehberlik sağlar. İkinci bölüm oluşturma ve hataları kullanma yönergeleri sağlar. Özel kanal kullanıcısı çalışan uygulamaları giderilmesine yardımcı olmak için izleme bilgisi sağlamak üzere nasıl üçüncü bölümünde açıklanmaktadır.  
@@ -309,9 +309,9 @@ public class MessageFault
 ## <a name="tracing"></a>İzleme  
  Aralıklı Sorunlar burada yalnızca mümkün değildir, hata ayıklayıcı ve kodu adımlayın ekleme ya da .NET Framework tanılama üretim uygulamaları yardımcı olmak için bir yol olarak izleme program yürütme için bir mekanizma sağlar. Bu mekanizma temel bileşenleri bulunan <xref:System.Diagnostics?displayProperty=nameWithType> ad alanı ve oluşur:  
   
--   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, yazılması için izleme bilgilerini kaynağı olan <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, gelen izlenecek bilgi alması somut dinleyiciler için Özet temel sınıf olan <xref:System.Diagnostics.TraceSource> ve bir dinleyici özgü hedefe çıktı. Örneğin, <xref:System.Diagnostics.XmlWriterTraceListener> çıkışları izleme bilgileri için bir XML dosyası. Son olarak, <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, izleme ayrıntı denetim uygulama izin verir ve genellikle yapılandırmada belirtilir.  
+- <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, yazılması için izleme bilgilerini kaynağı olan <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, gelen izlenecek bilgi alması somut dinleyiciler için Özet temel sınıf olan <xref:System.Diagnostics.TraceSource> ve bir dinleyici özgü hedefe çıktı. Örneğin, <xref:System.Diagnostics.XmlWriterTraceListener> çıkışları izleme bilgileri için bir XML dosyası. Son olarak, <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, izleme ayrıntı denetim uygulama izin verir ve genellikle yapılandırmada belirtilir.  
   
--   Temel bileşenlerine ek olarak, kullandığınız [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) WCF aramak ve görüntülemek için izler. Araç kullanılarak yazılan ve WCF tarafından oluşturulan özel izleme dosyaları için tasarlanan <xref:System.Diagnostics.XmlWriterTraceListener>. Aşağıdaki şekilde, izleme katılan çeşitli bileşenleri gösterir.  
+- Temel bileşenlerine ek olarak, kullandığınız [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) WCF aramak ve görüntülemek için izler. Araç kullanılarak yazılan ve WCF tarafından oluşturulan özel izleme dosyaları için tasarlanan <xref:System.Diagnostics.XmlWriterTraceListener>. Aşağıdaki şekilde, izleme katılan çeşitli bileşenleri gösterir.  
   
  ![Özel durumları ve hataları işleme](../../../../docs/framework/wcf/extending/media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
   

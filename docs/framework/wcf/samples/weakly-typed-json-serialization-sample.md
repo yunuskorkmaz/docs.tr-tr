@@ -3,11 +3,11 @@ title: Zayıf yazılmış JSON Seri Hale Getirme Örneği
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
 ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006362"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Zayıf yazılmış JSON Seri Hale Getirme Örneği
 Verilen kablo biçimini veya kablo biçimini geri bir kullanıcı tanımlı türe seri durumdan çıkarılırken bir kullanıcı tanımlı türe serileştirilirken verilen kullanıcı tanımlı tür hem hizmet hem de istemcinin kullanılabilir olması gerekir. Genellikle bunu gerçekleştirmek için <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği, bu kullanıcı tarafından tanımlanan türlerine uygulandığında ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelik üyeleri için uygulanır. Bu mekanizma da JavaScript nesne gösterimi (JSON) nesneler ile çalışma konusunda açıklandığı gibi uygulanır [nasıl yapılır: JSON verileri seri hale getrime ve](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-ms.openlocfilehash: 743160889c4f24a9edb2d0f9799662a74c5061fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: 72b9799d1f5ba7efa37d5f8f2a633e6806a58607
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842089"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808086"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>My Özellikleri Proje Türüne Nasıl Bağımlıdır (Visual Basic)
 `My` yalnızca belirli proje türü tarafından gerekli nesneleri gösterir. Örneğin, `My.Forms` nesnesi olan bir Windows Forms uygulamasında kullanılabilir, ancak bir konsol uygulaması kullanılabilir değil. Bu konuda açıklayan `My` nesneleri farklı proje türlerinde kullanılabilir.  
@@ -17,11 +17,11 @@ ms.locfileid: "58842089"
 ## <a name="my-in-windows-applications-and-web-sites"></a>My içinde Windows uygulamaları ve Web siteleri  
  `My` Geçerli proje türünde yararlı olan nesneleri gösterir; Bu, geçerli olmayan nesneler bastırır. Örneğin, aşağıdaki gösterir görüntüde `My` nesne modelinde bir Windows Forms projesi.  
   
- ![Şeklin My Windows Forms uygulamasında](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")  
+ ![Gösteren diyagram My nesne modelinde bir Windows Forms uygulaması.](./media/how-my-depends-on-project-type/my-object-model-windows-forms.png)  
   
  Bir Web sitesi projesindeki `My` bir Web geliştiricisi için uygun olan nesneler sunar (gibi `My.Request` ve `My.Response` nesneleri) ilgili olmayan nesneler gizleme sırasında (gibi `My.Forms` nesne). Aşağıdaki görüntüde `My` nesne modelinde bir Web sitesi projesi:  
   
- ![Şeklin benim bir Web uygulaması](../../../visual-basic/developing-apps/development-with-my/media/myinweb.png "MyInWeb")  
+ ![Gösteren diyagram My nesne modeli bir Web uygulaması.](./media/how-my-depends-on-project-type/my-object-model-web.png)  
   
 ## <a name="project-details"></a>Proje Ayrıntıları  
  Aşağıdaki tabloda gösterir `My` nesneleri, varsayılan olarak etkinleştirilir, sekiz proje türleri için: Windows uygulama, sınıf kitaplığı, konsol uygulaması, Windows Denetim Kitaplığı, Web denetim kitaplığı, Windows hizmeti, boş ve Web sitesi.  

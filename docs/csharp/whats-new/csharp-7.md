@@ -3,12 +3,12 @@ title: C# 7.0 - C# Kılavuzu yenilikler nelerdir?
 description: Yeni özelliklere genel bakış sürümünü 7.0 almak C# dili.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 69e32bf6aae0da15c23e8f08da8c2bb9e3d3456e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 942a126ae026897d608c9fb077fc5f10ff73c110
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481307"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773925"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 yenilikleri
 
@@ -194,7 +194,7 @@ Daha fazla bilgi için [ref anahtar sözcüğü](../language-reference/keywords/
 
 ## <a name="local-functions"></a>Yerel işlevler
 
-Sınıflar için birçok tasarım tek bir konumdan Aranan yöntemleri kapsar. Bu ek özel yöntemleri her yöntem, küçük ve odaklı tutun. *Yerel işlevler* , başka bir yöntem bağlamı içinde yöntemleri bildirmek etkinleştirin. Yerel işlevler çalıştığı bağlamı olduğu bildirilen yerel yöntemi yalnızca çağrılır, görmek için sınıf okuyucular için kolaylaştırır.
+Sınıflar için birçok tasarım tek bir konumdan Aranan yöntemleri kapsar. Bu ek özel yöntemleri her yöntem, küçük ve odaklı tutun. *Yerel işlevler* , başka bir yöntem bağlamı içinde yöntemleri bildirmek etkinleştirin. Yerel işlevler için yerel yöntemi yalnızca içinde bildirildiği bağlamdan çağrılır görmek, okuyucular sınıfın kolaylaştırır.
 
 Yerel işlevler için iki yaygın kullanım örnekleri vardır: Genel yineleyici yöntemleri ve genel zaman uyumsuz yöntemler. Her iki yöntem tür hataları programcılar beklenebilir daha sonra rapor kod oluşturur. Yineleyici yöntemleri, yalnızca özel durumların gözlemlenen döndürülen dizi numaralandırır kod çağırırken. Zaman uyumsuz yöntemlerde özel durumların yalnızca zaman uyulması gereken döndürülen `Task` beklenir. Aşağıdaki örnek, yerel bir işlevi kullanarak yineleyici yöntemin ayıran parametre doğrulaması gösterir:
 

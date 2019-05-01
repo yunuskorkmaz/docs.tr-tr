@@ -8,11 +8,11 @@ helpviewer_keywords:
 - calendars
 ms.assetid: 051c6518-e0ca-426b-855c-f9bf70972970
 ms.openlocfilehash: 589eb55e001441230da3f8a0c5652c2a3dccb829
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012756"
 ---
 # <a name="monthcalendar-control-windows-forms"></a>MonthCalendar Denetimi (Windows Forms)
 Windows Forms `MonthCalendar` denetimi görüntülemek ve tarih bilgisini ayarlamak kullanıcılar için sezgisel bir grafik arabirim sağlar. Denetimin ayın sütunlarındaki haftanın günleri altında düzenlenmiş numaralı gün içeren bir kılavuz görüntüler. Farklı bir ay, aylık resim yazısı her iki tarafındaki oka düğmelere tıklayarak seçebilirsiniz. Benzer aksine <xref:System.Windows.Forms.DateTimePicker> denetimi, bu denetimi; tarih aralığı seçebilirsiniz ancak <xref:System.Windows.Forms.DateTimePicker> denetimi kez ayarlamanızı sağlar tarihleri yanı sıra.  

@@ -3,11 +3,11 @@ title: 'Özel durumlar: İnvalidArg işlevi'
 description: Bilgi nasıl F# 'invalidArg' işlevi bağımsız değişken özel durum oluşturur.
 ms.date: 05/16/2016
 ms.openlocfilehash: 7fd8d48b80970dbbafc0c23a478b4ccf3490f3ee
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996891"
 ---
 # <a name="exceptions-the-invalidarg-function"></a>Özel durumlar: İnvalidArg işlevi
 
@@ -39,7 +39,7 @@ System.ArgumentException: Month parameter out of range.
 
 - [Özel Durum İşleme](index.md)
 - [Özel Durum Türleri](exception-types.md)
-- [Özel durumlar: `try...with` İfadesi](the-try-with-expression.md)
-- [Özel durumlar: `try...finally` İfadesi](the-try-finally-expression.md)
+- [Özel Durumlar: `try...with` İfadesi](the-try-with-expression.md)
+- [Özel Durumlar: `try...finally` İfadesi](the-try-finally-expression.md)
 - [Özel durumlar: `raise` işlevi](the-raise-function.md)
-- [Özel durumlar: `failwith` İşlevi](the-failwith-function.md)
+- [Özel Durumlar: `failwith` İşlevi](the-failwith-function.md)

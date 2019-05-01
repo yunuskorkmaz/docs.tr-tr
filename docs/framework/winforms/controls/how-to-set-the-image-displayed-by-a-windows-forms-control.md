@@ -13,11 +13,11 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
 ms.openlocfilehash: 1de835bda5ac906837ac3fbd97b87f68f14d1953
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013146"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Nasıl yapılır: Windows Forms Denetimi Tarafından Görüntülenen Resmi Ayarlama
 Çeşitli Windows Forms denetimleri, görüntüleri görüntüleyebilirsiniz. Bu görüntüler gibi bir disket simgesini gösteren düğme üzerinde denetimin amacını açıklamak simgeler olabilir **Kaydet** komutu. Alternatif olarak, simgeler arka plan görüntüleri görünümünü ve davranışını istediğiniz hakkında denetim vermek olabilir.  

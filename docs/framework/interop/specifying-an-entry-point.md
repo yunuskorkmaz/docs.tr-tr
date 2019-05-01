@@ -9,24 +9,24 @@ ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 15a441ea7b0b16c83c590289d04cf0c10623fb85
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032763"
 ---
 # <a name="specifying-an-entry-point"></a>Giriş Noktası Belirtme
 Bir giriş noktası, bir işlevin bir DLL içindeki konumunu tanımlar. Yönetilen bir proje içinde, bir hedef işlevin özgün adı veya sıra giriş noktası, birlikte çalışabilirlik sınırında bu işlevi tanımlar. Ayrıca, işlemi etkin şekilde yeniden adlandırarak giriş noktasını farklı bir adla eşleyebilirsiniz.  
   
  Bir DLL işlevini yeniden adlandırmak için olası nedenlerin bir listesi aşağıdadır:  
   
--   Büyük/küçük harf duyarlı API işlev adlarını kullanmaktan kaçınmak için  
+- Büyük/küçük harf duyarlı API işlev adlarını kullanmaktan kaçınmak için  
   
--   Varolan adlandırma standartlarına uymak için  
+- Varolan adlandırma standartlarına uymak için  
   
--   Farklı veri türleri alan işlevleri barındırmak için (aynı DLL işlevinin birden çok sürümünü bildirerek)  
+- Farklı veri türleri alan işlevleri barındırmak için (aynı DLL işlevinin birden çok sürümünü bildirerek)  
   
--   ANSI ve Unicode sürümlerini içeren API'leri kullanmayı kolaylaştırmak için  
+- ANSI ve Unicode sürümlerini içeren API'leri kullanmayı kolaylaştırmak için  
   
  Bu konu, bir DLL işlevinin yönetilen kod içinde nasıl yeniden adlandıracağını gösterir.  
   

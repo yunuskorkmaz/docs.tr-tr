@@ -6,11 +6,11 @@ helpviewer_keywords:
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
 ms.openlocfilehash: 5495d8198d30f4462fa9772f7d663664c82c6dee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050369"
 ---
 # <a name="working-with-nats-and-firewalls"></a>NAT ve Güvenlik Duvarlarıyla Çalışma
 İstemci ve sunucu bir ağ bağlantısının sık değil doğrudan ve iletişim için yol. Paket filtre, yönlendirilmiş, analiz ve uç nokta makinelerde ve ağ ara makineler tarafından dönüştürülür. Ağ adresi çevirisi (NAT) ve güvenlik duvarları ağ iletişimi katılabilir Ara uygulamaları için ortak örnekleridir.  
@@ -45,11 +45,11 @@ ms.locfileid: "59296348"
   
  İstemci-sunucu uygulamaları için ortak bir topoloji, yalnızca giden güvenlik duvarı ve güçlü bir güvenlik duvarı ile doğrudan adreslenebilir bir sunucuya Teredo olmadan bir NAT arkasındaki istemciler olmasını sağlamaktır. Bu senaryo, bir çift yönlü MEP ile TCP taşıma ve istek-yanıt ile bir HTTP aktarımı MEP çalışmak iyi. Eşler arası uygulamalar için ortak bir topoloji, NAT ve güvenlik duvarlarıyla arkasında iki uç noktaları sağlamaktır. Bu senaryoda ve ağ topolojisi bilinmeyen olduğu senaryolarda aşağıdaki önerileri göz önünde bulundurun:  
   
--   Çift taşımalar kullanmayın. İkili aktarım bağlantı başarıyla kurulduktan olasılığını azaltır daha fazla bağlantı açar.  
+- Çift taşımalar kullanmayın. İkili aktarım bağlantı başarıyla kurulduktan olasılığını azaltır daha fazla bağlantı açar.  
   
--   Kaynak bağlantısı üzerinden kurmanın arka kanal desteği. Arka kanal gibi çift yönlü TCP kullanarak, daha az bağlantı, bağlantı başarıyla kurulduktan olasılığını artırır açılır.  
+- Kaynak bağlantısı üzerinden kurmanın arka kanal desteği. Arka kanal gibi çift yönlü TCP kullanarak, daha az bağlantı, bağlantı başarıyla kurulduktan olasılığını artırır açılır.  
   
--   Erişilebilir bir hizmet uç noktaları kaydetme veya trafik geçişini kullanır. Teredo sunucusu gibi bir genel olarak erişilebilen bağlantı hizmeti kullanarak, ağ topolojisini kısıtlayıcı veya bilinmeyen olduğunda bağlantı başarıyla kurulduktan olasılığını önemli ölçüde artırır.  
+- Erişilebilir bir hizmet uç noktaları kaydetme veya trafik geçişini kullanır. Teredo sunucusu gibi bir genel olarak erişilebilen bağlantı hizmeti kullanarak, ağ topolojisini kısıtlayıcı veya bilinmeyen olduğunda bağlantı başarıyla kurulduktan olasılığını önemli ölçüde artırır.  
   
  Tek yönlü, istek-yanıt ve çift yönlü MEPs ve standart TCP, TCP ile Teredo, aşağıdaki tablolarda inceleyin ve standart ve ikili HTTP WCF'de taşır.  
   

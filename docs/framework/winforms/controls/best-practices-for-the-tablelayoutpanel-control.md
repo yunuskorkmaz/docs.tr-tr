@@ -15,11 +15,11 @@ helpviewer_keywords:
 - automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
 ms.openlocfilehash: 57abf3527af146f1ce918bcabbc6a5a34bfb9b34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011742"
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>TableLayoutPanel Denetimi için En İyi Yöntemler
 <xref:System.Windows.Forms.TableLayoutPanel> Denetim dikkatli bir şekilde Windows formlarınızı kullanmadan önce dikkate almanız gereken güçlü düzen özelliklerini sağlar.  
@@ -30,17 +30,17 @@ ms.locfileid: "59773837"
 ### <a name="targeted-use"></a>Hedeflenen kullanın  
  Kullanım <xref:System.Windows.Forms.TableLayoutPanel> olabildiğince az denetim. Bunu yeniden boyutlandırılabilir düzeni gerektiren tüm durumlarda kullanmamalısınız. Aşağıdaki listede açıklanmıştır kullanımını en iyi yararlanan düzenleri <xref:System.Windows.Forms.TableLayoutPanel> denetimi:  
   
--   Birbirleriyle orantılı olarak yeniden boyutlandırmak birden çok form parçası olan düzenler.  
+- Birbirleriyle orantılı olarak yeniden boyutlandırmak birden çok form parçası olan düzenler.  
   
--   Değiştirildiğinde veya eklendiğinde veya çıkarıldığında kullanıcı tarafından özelleştirilebilir alanlara sahip veri girişi formları gibi çalışma zamanında dinamik olarak oluşturulan düzenleri tercihleri temelinde.  
+- Değiştirildiğinde veya eklendiğinde veya çıkarıldığında kullanıcı tarafından özelleştirilebilir alanlara sahip veri girişi formları gibi çalışma zamanında dinamik olarak oluşturulan düzenleri tercihleri temelinde.  
   
--   Genel bir sabit boyutta kalması gereken düzenler. Örneğin, 800 x 600 ' küçük kalması gereken bir iletişim kutusu olabilir, ancak yerelleştirilmiş dizeleri desteklemeniz gerekiyor.  
+- Genel bir sabit boyutta kalması gereken düzenler. Örneğin, 800 x 600 ' küçük kalması gereken bir iletişim kutusu olabilir, ancak yerelleştirilmiş dizeleri desteklemeniz gerekiyor.  
   
  Aşağıdaki liste önemli ölçüde kullanarak avantaj elde değil düzenleri açıklar <xref:System.Windows.Forms.TableLayoutPanel> denetimi:  
   
--   Etiket ve metin girişi alanlarının tek bir sütun basit veri girişi formları ile tek bir sütun.  
+- Etiket ve metin girişi alanlarının tek bir sütun basit veri girişi formları ile tek bir sütun.  
   
--   Bir yeniden boyutlandırma meydana geldiğinde, tüm kullanılabilir alanı dolduracak alan büyük tek bir form görüntüler. Bu, tek bir görüntüleyen bir form örneğidir <xref:System.Windows.Forms.PropertyGrid> denetimi. Formu yeniden boyutlandırıldığında başka bir şey genişletmeniz gerekir çünkü bu durumda, sabitleme, kullanın.  
+- Bir yeniden boyutlandırma meydana geldiğinde, tüm kullanılabilir alanı dolduracak alan büyük tek bir form görüntüler. Bu, tek bir görüntüleyen bir form örneğidir <xref:System.Windows.Forms.PropertyGrid> denetimi. Formu yeniden boyutlandırıldığında başka bir şey genişletmeniz gerekir çünkü bu durumda, sabitleme, kullanın.  
   
  Hangi denetimlerin olması gereken seçerken dikkatli bir <xref:System.Windows.Forms.TableLayoutPanel> denetimi. Bağlama kullanarak 30 oranında büyümesine metni yer varsa kullanmayı <xref:System.Windows.Forms.Control.Anchor%2A> yalnızca özellik. Düzeninizi tarafından gerekli alanı tahmin edebilirsiniz, kullanım <xref:System.Windows.Forms.Control.Dock%2A> ve <xref:System.Windows.Forms.Control.Anchor%2A> kalan alanı ayrıntılarını tahmin etmek daha kolaydır ve <xref:System.Windows.Forms.Control.AutoSize%2A> davranışı.  
   

@@ -1,5 +1,5 @@
 ---
-title: Kaydetme ve belge yazma
+title: Belge Kaydetme ve Yazma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,28 +9,28 @@ ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 83aad5d45dda1784069839662486f7dbcc307542
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62027036"
 ---
-# <a name="saving-and-writing-a-document"></a>Kaydetme ve belge yazma
+# <a name="saving-and-writing-a-document"></a>Belge Kaydetme ve Yazma
 Ne zaman yükler ve kaydeder bir <xref:System.Xml.XmlDocument>, aşağıdaki yollarla kaydedilmiş belge orijinalden farklı olabilir:  
   
--   Varsa <xref:System.Xml.XmlDocument.PreserveWhitespace%2A> özelliği `true` önce <xref:System.Xml.XmlDocument.Save%2A> yöntemi çağrıldığında, boşluk belgedeki; çıktısında korunur, bu özellik ise `false`, <xref:System.Xml.XmlDocument> otomatik girintileri çıktı.  
+- Varsa <xref:System.Xml.XmlDocument.PreserveWhitespace%2A> özelliği `true` önce <xref:System.Xml.XmlDocument.Save%2A> yöntemi çağrıldığında, boşluk belgedeki; çıktısında korunur, bu özellik ise `false`, <xref:System.Xml.XmlDocument> otomatik girintileri çıktı.  
   
--   Öznitelikler arasındaki tüm boşluk tek bir boşluk olarak azaltılır.  
+- Öznitelikler arasındaki tüm boşluk tek bir boşluk olarak azaltılır.  
   
--   Öğeler arasındaki boşluk değiştirilir. Önemli boşluk korunur ve önemsiz boşluk değildir. Ancak Belge kaydedildiğinde kullanacak <xref:System.Xml.XmlTextWriter> **Indenting** düzgünce daha okunabilir yapmak için Çıkış'ı yazdırmak için varsayılan modu.  
+- Öğeler arasındaki boşluk değiştirilir. Önemli boşluk korunur ve önemsiz boşluk değildir. Ancak Belge kaydedildiğinde kullanacak <xref:System.Xml.XmlTextWriter> **Indenting** düzgünce daha okunabilir yapmak için Çıkış'ı yazdırmak için varsayılan modu.  
   
--   Kullanılan öznitelik değeri tırnak karakteri için çift tırnak işareti, varsayılan olarak değiştirilir. Kullanabileceğiniz <xref:System.Xml.XmlTextReader.QuoteChar%2A> özelliği <xref:System.Xml.XmlTextWriter> teklif karakter çift tırnak işareti veya tek tırnak işareti ayarlamak için.  
+- Kullanılan öznitelik değeri tırnak karakteri için çift tırnak işareti, varsayılan olarak değiştirilir. Kullanabileceğiniz <xref:System.Xml.XmlTextReader.QuoteChar%2A> özelliği <xref:System.Xml.XmlTextWriter> teklif karakter çift tırnak işareti veya tek tırnak işareti ayarlamak için.  
   
--   Varsayılan olarak, sayısal karakter varlıkları ister `{` genişletilir.  
+- Varsayılan olarak, sayısal karakter varlıkları ister `{` genişletilir.  
   
--   Giriş belgesinde bulunan bayt sırası işareti korunmaz. Farklı bir kodlama belirten bir XML bildirimi açıkça oluşturmadığınız sürece UCS-2 UTF-8 kaydedilir.  
+- Giriş belgesinde bulunan bayt sırası işareti korunmaz. Farklı bir kodlama belirten bir XML bildirimi açıkça oluşturmadığınız sürece UCS-2 UTF-8 kaydedilir.  
   
--   Yazmak isterseniz <xref:System.Xml.XmlDocument> bir dosya veya akışı içine yazılan çıktıyı belgenin içeriğini aynıdır. Diğer bir deyişle, <xref:System.Xml.XmlDeclaration> bir belgede yer alan ve belgeyi yazılırken kullanılan kodlama bildirimi düğümde verilen aynı kodlama olup olmadığını yalnızca yazılır.  
+- Yazmak isterseniz <xref:System.Xml.XmlDocument> bir dosya veya akışı içine yazılan çıktıyı belgenin içeriğini aynıdır. Diğer bir deyişle, <xref:System.Xml.XmlDeclaration> bir belgede yer alan ve belgeyi yazılırken kullanılan kodlama bildirimi düğümde verilen aynı kodlama olup olmadığını yalnızca yazılır.  
   
 ## <a name="writing-an-xmldeclaration"></a>Bir XmlDeclaration yazma  
  <xref:System.Xml.XmlDocument> Ve <xref:System.Xml.XmlDeclaration> üyeleri <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlNode.InnerXml%2A>, ve <xref:System.Xml.XmlNode.WriteTo%2A>, ek olarak <xref:System.Xml.XmlDocument> yöntemlerinin <xref:System.Xml.XmlDocument.Save%2A> ve <xref:System.Xml.XmlDocument.WriteContentTo%2A>, bir XML bildirimi oluştur.  

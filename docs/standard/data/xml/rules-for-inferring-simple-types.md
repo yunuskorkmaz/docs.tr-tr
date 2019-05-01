@@ -1,18 +1,18 @@
 ---
-title: Basit türlerin çıkarımını yapma kuralları
+title: Basit Türlerin Çıkarımını Yapma Kuralları
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 15e7692abfe06ec9e9f91a3b229bf99971eaecc1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62027023"
 ---
-# <a name="rules-for-inferring-simple-types"></a>Basit türlerin çıkarımını yapma kuralları
+# <a name="rules-for-inferring-simple-types"></a>Basit Türlerin Çıkarımını Yapma Kuralları
 Açıklayan nasıl <xref:System.Xml.Schema.XmlSchemaInference> sınıfı öznitelikler ve öğeler için veri türünü çıkarsar.  
   
  <xref:System.Xml.Schema.XmlSchemaInference> Sınıfı öznitelikler ve öğeler basit türler için veri türünü çıkarsar. Bu bölümde birden çok farklı değerler şunlardır: tek bir tür için mutabık ve nasıl şema tanımlama olası çıkarsanan türleri açıklanmaktadır `xsi` öznitelikleri işlenir.  

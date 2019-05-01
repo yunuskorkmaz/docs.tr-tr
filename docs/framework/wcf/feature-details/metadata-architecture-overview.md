@@ -5,11 +5,11 @@ helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
 ms.openlocfilehash: f9c903dd520f1aa85fc0577264288ecbc8c62a7f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046576"
 ---
 # <a name="metadata-architecture-overview"></a>Meta Veri Mimarisi Genel Bakış
 Windows Communication Foundation (WCF) hizmet meta verileri içeri dışarı aktarma, yayımlama, alma ve zengin bir altyapı sağlar. WCF hizmetleri, böylece Svcutil.exe gibi araçları otomatik olarak hizmete erişim için istemci kodu oluşturmak hizmet uç noktaları ile etkileşim kurmayı açıklamak için meta verileri kullanın.  

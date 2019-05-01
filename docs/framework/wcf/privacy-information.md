@@ -7,11 +7,11 @@ helpviewer_keywords:
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
 ms.openlocfilehash: e506908299109f94be6d190017b381fe7b4ee044
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033000"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation Gizlilik Bilgileri
 Microsoft, son kullanıcılar gizlilik korumayı taahhüt eder. Sürüm 3.0, Windows Communication Foundation (WCF) kullanarak bir uygulamayı derlerken, uygulamanızı kullanıcılarınıza gizlilik etkileyebilir. Örneğin, uygulamanızın açıkça kullanıcı bilgilerini toplayabilir veya istek veya Web sitenize Internet üzerinden bilgi göndermek olabilir. Uygulamanızda Microsoft teknolojisini eklemek, bu teknoloji gizlilik etkileyebilecek kendi davranışını olabilir. Sizin veya son kullanıcı seçmediğiniz sürece farklı bize göndermek WCF bilgileri Microsoft'a uygulamanızdan göndermez.  
@@ -38,9 +38,9 @@ Microsoft, son kullanıcılar gizlilik korumayı taahhüt eder. Sürüm 3.0, Win
   
  Kimlik doğrulaması, istemciler ve hizmetler arasında kimlik bilgilerini geçirerek gerçekleştirilir. Kimlik doğrulaması aktarım düzeyi güvenlik ile aşağıdakilerden biri olması veya SOAP ileti güvenlik gibi düzeyi:  
   
--   SOAP ileti güvenliğinde, kimlik doğrulama kullanıcı adı/parola, X.509 sertifikaları, Kerberos biletleri ve her biri, dağıtımcı bağlı olarak kişisel bilgiler içerebilir, SAML belirteçlerini gibi kimlik bilgileri aracılığıyla gerçekleştirilir.  
+- SOAP ileti güvenliğinde, kimlik doğrulama kullanıcı adı/parola, X.509 sertifikaları, Kerberos biletleri ve her biri, dağıtımcı bağlı olarak kişisel bilgiler içerebilir, SAML belirteçlerini gibi kimlik bilgileri aracılığıyla gerçekleştirilir.  
   
--   Aktarım güvenliği kullanarak, HTTP kimlik doğrulama düzenleri gibi geleneksel aktarım kimlik doğrulama mekanizmaları kimlik doğrulaması yapılır (temel, Digest, Negotiate, tümleşik Windows kimlik doğrulaması, None, NTLM ve anonim) ve form kimlik doğrulaması.  
+- Aktarım güvenliği kullanarak, HTTP kimlik doğrulama düzenleri gibi geleneksel aktarım kimlik doğrulama mekanizmaları kimlik doğrulaması yapılır (temel, Digest, Negotiate, tümleşik Windows kimlik doğrulaması, None, NTLM ve anonim) ve form kimlik doğrulaması.  
   
  Kimlik doğrulaması iletişim uç noktaları arasında kurulan güvenli oturum neden olabilir. Oturum, güvenlik oturumu ömrünü süren bir GUID ile tanımlanır. Aşağıdaki tabloda neler tutulur gösterir ve burada.  
   

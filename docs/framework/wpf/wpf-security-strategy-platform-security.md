@@ -17,17 +17,17 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1415042110a074b270cf1afd286d487ec7369747
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dfcc11c78ffc408de71c88e2c1c7b0522ffe3732
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212420"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808339"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF Güvenlik Stratejisi - Platform Güvenliği
 Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlamasına karşın, bu da işletim sistemini içeren, temel alınan platformu'nın güvenlik özelliklerine yararlanır [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], ve [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Sağlamak üzere bu katmanları birleştirin [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] herhangi tek hata noktası önlemek için aşağıdaki şekilde gösterildiği gibi çalışır bir güçlü, savunma güvenlik modeli:  
   
- ![WPF güvenlik çizim](./media/windowplatformsecurity.PNG "windowplatformsecurity")  
+ ![WPF güvenlik modelini gösteren diyagram.](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
  Bu konunun geri kalanı ilgili bu katmanların her özellikleri anlatılmaktadır [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] özellikle.  
 
@@ -39,9 +39,9 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
  Genel bir gözden geçirme ve Windows güçlendirme ek olarak, üç anahtar özelliklerinden vardır [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] , bu konu başlığında ele alınacaktır:  
   
--   /GS derleme  
+- /GS derleme  
   
--   [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
+- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
   
 #### <a name="gs-compilation"></a>/GS derleme  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] Tüm dahil olmak üzere pek çok çekirdek sistem kitaplıkları derleyerek koruma sağlayan [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bağımlılıklar gibi [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], arabellek taşmalarına azaltmaya yardımcı olmak için. Bunu, /GS parametresi ile C/C++ komut satırı derleyicisini kullanarak elde edilir. Arabellek taşmaları açıkça kaçınılmalıdır olsa da, /GS derleme bir-savunma yanlışlıkla veya kötü amaçlı olarak bunları tarafından oluşturulan olası güvenlik açıklarına karşı bir örnek sağlar.  
@@ -66,9 +66,9 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
   
  Bu güvenlik tehditlerine karşı koruma yollarından biri, en az miktarda gerekli ayrıcalıklara uygulamalar çalıştırmaktır. Bu en düşük öncelik ilkesini bilinir ve çekirdek özelliğidir [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] işletim sistemi. Bu özellik, kullanıcı hesabı denetimi (UAC) olarak adlandırılır ve tarafından kullanılan [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] UAC iki önemli şekilde:  
   
--   Bir yönetici kullanıcı olsa bile, çoğu uygulama UAC ayrıcalıklarıyla varsayılan olarak, çalıştırılacak; yalnızca yönetici ayrıcalıkları gerekir. uygulamaları yönetici ayrıcalıklarıyla çalıştırın. Yönetici ayrıcalıklarıyla çalıştırmak için uygulamaları açıkça ya da kendi uygulama bildirim veya farklı bir güvenlik ilkesine giriş olarak işaretlenmesi gerekir.  
+- Bir yönetici kullanıcı olsa bile, çoğu uygulama UAC ayrıcalıklarıyla varsayılan olarak, çalıştırılacak; yalnızca yönetici ayrıcalıkları gerekir. uygulamaları yönetici ayrıcalıklarıyla çalıştırın. Yönetici ayrıcalıklarıyla çalıştırmak için uygulamaları açıkça ya da kendi uygulama bildirim veya farklı bir güvenlik ilkesine giriş olarak işaretlenmesi gerekir.  
   
--   Uyumluluk sağlamak için gibi sanallaştırma çözümleri. Örneğin, C:\Program Files gibi kısıtlı konumlara yazmak pek çok uygulama deneyin. UAC altında yürütülen uygulamalarda, kullanıcı başına alternatif konum yazmak için yönetici ayrıcalıkları gerektirmez bulunmaktadır. Kendisine yazıyorsanız düşündüğünüz uygulamaların gerçekten alternatif, kullanıcı başına konumuna yazma olacak şekilde UAC altında çalışan uygulamalar için UAC C:\Program Files sanallaştırır. Bu tür bir uyumluluk iş önceden UAC'a çalıştırılamadı birçok uygulamaları çalıştırmak işletim sistemi sağlar.  
+- Uyumluluk sağlamak için gibi sanallaştırma çözümleri. Örneğin, C:\Program Files gibi kısıtlı konumlara yazmak pek çok uygulama deneyin. UAC altında yürütülen uygulamalarda, kullanıcı başına alternatif konum yazmak için yönetici ayrıcalıkları gerektirmez bulunmaktadır. Kendisine yazıyorsanız düşündüğünüz uygulamaların gerçekten alternatif, kullanıcı başına konumuna yazma olacak şekilde UAC altında çalışan uygulamalar için UAC C:\Program Files sanallaştırır. Bu tür bir uyumluluk iş önceden UAC'a çalıştırılamadı birçok uygulamaları çalıştırmak işletim sistemi sağlar.  
   
 #### <a name="code-integrity-checks"></a>Kod bütünlüğü denetimleri  
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] Sistem dosyalarını veya çekirdek yükleme/çalıştırma zamanında eklenmiş gelen kötü amaçlı kod önlemeye yardımcı olmak için daha ayrıntılı kod bütünlüğü denetimlerini içerir. Bu, sistem dosyası koruma gider.  
@@ -100,11 +100,11 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
   
  Yönetilen uygulamalar, Microsoft Ara dil (MSIL içine) derlenir. Yönetilen bir uygulamada yöntem yürütüldüğünde, MSIL tam zamanında (JIT) derleme aracılığıyla yerel kod derlenir. JIT derlemesi kod daha önceden emin olmak çok sayıda güvenlik ve sağlamlık kuralları uygulayan bir doğrulama işlemi içerir:  
   
--   Tür sözleşmeleri ihlal  
+- Tür sözleşmeleri ihlal  
   
--   Arabellek taşmaları Ekle  
+- Arabellek taşmaları Ekle  
   
--   Çok bellek erişim.  
+- Çok bellek erişim.  
   
  Güvenilen kod olarak kabul edilir, doğrulama kurallarına uymuyor yönetilen kodu yürütmek için izin verilmez.  
   
@@ -116,29 +116,29 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
   
  Tarafından yönetilen bir uygulamaya verilen izinler kümesini [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] yürütme başlatıldığında bir izin kümesi bilinir ve uygulama tarafından sağlanan kanıt tarafından belirlenir. İçin [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamalar, sağlanan kanıt olduğu konum veya uygulamalar, başlatılan bölge. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] Aşağıdaki bölgeler tanımlar:  
   
--   **Bilgisayarım**. Uygulamaları İstemci makinesinden (tam güvenilir) başlattı.  
+- **Bilgisayarım**. Uygulamaları İstemci makinesinden (tam güvenilir) başlattı.  
   
--   **Yerel Intranet**. İntranetten başlatılan uygulamalar. (Biraz güvenilir).  
+- **Yerel Intranet**. İntranetten başlatılan uygulamalar. (Biraz güvenilir).  
   
--   **Internet**. Internet'ten başlatılan uygulamalar. (Az güvenli).  
+- **Internet**. Internet'ten başlatılan uygulamalar. (Az güvenli).  
   
--   **Güvenilen siteler**. Uygulamaları güvenilir olarak bir kullanıcı tarafından tanımlanmış. (Az güvenli).  
+- **Güvenilen siteler**. Uygulamaları güvenilir olarak bir kullanıcı tarafından tanımlanmış. (Az güvenli).  
   
--   **Güvenilmeyen siteleri**. Güvenilmeyen bir kullanıcı tarafından belirlenen uygulamalar. (Güvenilmeyen).  
+- **Güvenilmeyen siteleri**. Güvenilmeyen bir kullanıcı tarafından belirlenen uygulamalar. (Güvenilmeyen).  
   
  Her biri bu bölgeler için [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] eşleşen her ilişkilendirilmiş güven düzeyi izinleri içeren bir önceden tanımlanmış izin kümesi sağlar. Bu güncelleştirmeler şunlardır:  
   
--   **FullTrust**. Gelen başlatılan uygulamalara **Bilgisayarım** bölge. Tüm olası izinleri verilir.  
+- **FullTrust**. Gelen başlatılan uygulamalara **Bilgisayarım** bölge. Tüm olası izinleri verilir.  
   
--   **LocalIntranet**. Gelen başlatılan uygulamalara **yerel Intranet** bölge. İzinler kümesini Orta yalıtılmış depolama, Kısıtlanmamış UI erişimine, sınırsız dosya iletişim kutuları, sınırlı yansıma, ortam değişkenleri sınırlı erişim de dahil olmak üzere bir istemci makine kaynaklarına erişim sağlamak için verilir. Kayıt defteri gibi önemli kaynakları için izinleri sağlanmadı.  
+- **LocalIntranet**. Gelen başlatılan uygulamalara **yerel Intranet** bölge. İzinler kümesini Orta yalıtılmış depolama, Kısıtlanmamış UI erişimine, sınırsız dosya iletişim kutuları, sınırlı yansıma, ortam değişkenleri sınırlı erişim de dahil olmak üzere bir istemci makine kaynaklarına erişim sağlamak için verilir. Kayıt defteri gibi önemli kaynakları için izinleri sağlanmadı.  
   
--   **Internet**. Gelen başlatılan uygulamalara **Internet** veya **Güvenilen siteler** bölge. İzinler kümesini yalıtılmış depolama da dahil olmak üzere bir istemci makine kaynaklarına sınırlı erişimi dosyasını açın. sağlanan yalnızca verilir ve kullanıcı Arabirimi sınırlı. Esas olarak, bu izni yalıtır uygulamaları İstemci makinesinden ayarlar.  
+- **Internet**. Gelen başlatılan uygulamalara **Internet** veya **Güvenilen siteler** bölge. İzinler kümesini yalıtılmış depolama da dahil olmak üzere bir istemci makine kaynaklarına sınırlı erişimi dosyasını açın. sağlanan yalnızca verilir ve kullanıcı Arabirimi sınırlı. Esas olarak, bu izni yalıtır uygulamaları İstemci makinesinden ayarlar.  
   
  Uygulama olacak şekilde tanımlanan **güvenilmeyen siteleri** bölge tarafından izin verilen [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] hiç. Sonuç olarak, önceden tanımlanmış bir izin kümesi için yok.  
   
- Aşağıdaki şekil, bölgeleri, izin kümeleri, izinleri ve kaynakları arasındaki ilişkiyi gösterir.  
+ Aşağıdaki şekilde, bölgeleri, izin kümeleri, izinleri ve kaynakları arasındaki ilişki gösterilmektedir:  
   
- ![CAS izin kümeleri](./media/caspermissionsets.png "CASPermissionSets")  
+ ![CAS izin kümeleri gösteren diyagram.](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
  Bu kısıtlamalar bölge güvenlik sanal uygulama eşit herhangi biri Internet, kod bir [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] bir sistem kitaplığından alır dahil olmak üzere [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Bu kodun her bit kilitli, hatta sağlar [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Ne yazık ki, yürütmek için bir [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] Internet bölgesi güvenlik korumalı alanı tarafından etkinleştirilmiş daha fazla izin gerektirir işlevi yürütmek için gereken.  
   
@@ -149,11 +149,11 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
   
  Bunu yürüttüğünüzden [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], arka plandaki [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kodu çağırmak için kullanılabilir olandan daha fazla işlevsellik yürütmek [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]de dahil olmak üzere:  
   
--   İşleme için bir pencere tutucu (hWnd) oluşturma  
+- İşleme için bir pencere tutucu (hWnd) oluşturma  
   
--   İleti gönderme  
+- İleti gönderme  
   
--   Tahoma yazı tipi yükleniyor  
+- Tahoma yazı tipi yükleniyor  
   
  Bir güvenlik ile korumalı uygulamadan tüm bu işlemleri doğrudan erişim sağlayan açısından, geri dönülemez olacaktır.  
   
@@ -190,11 +190,11 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
   
  Öncesinde [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)], kullanıcılar aşağıdaki hiçbirini tabi olabilir:  
   
--   Rastgele açılır pencereleri.  
+- Rastgele açılır pencereleri.  
   
--   Kafa karıştırıcı betiği yeniden yönlendirme.  
+- Kafa karıştırıcı betiği yeniden yönlendirme.  
   
--   Bazı Web sitelerinde çok sayıda güvenlik iletişim kutuları.  
+- Bazı Web sitelerinde çok sayıda güvenlik iletişim kutuları.  
   
  Bazı durumlarda, kullanıcılar yükleme taklit ederek kandırmaya güvenilmeyen Web sitelerinden isteriz [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] ya da art arda gösterme bir [!INCLUDE[TLA#tla_actx](../../../includes/tlasharptla-actx-md.md)] yükleme iletişim kutusu, kullanıcı bu iptal olsa bile. Bu teknikler kullanarak, çok sayıda kullanıcı casus yazılım uygulamaların yüklenmesini ile sonuçlanan kötü kararların içine sağladı, mümkündür.  
   

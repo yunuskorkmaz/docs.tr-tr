@@ -3,11 +3,11 @@ title: Tek Yönlü
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
 ms.openlocfilehash: e82034a79610ea7956b3ef07508295578461de1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008039"
 ---
 # <a name="one-way"></a>Tek Yönlü
 Bu örnek, bir hizmet sözleşmesi ile tek yönlü hizmet işlemleri gösterir. İstemci, hizmet işlemlerini çift yönlü hizmet işlemleri ile olduğu gibi tamamlanması için beklemez. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve kullandığı `wsHttpBinding` bağlama. Bu örnekte, alan ve istekleri işleyen hizmet gözlemleyin sağlamak için şirket içinde barındırılan bir konsol uygulaması hizmetidir. İstemci ayrıca bir konsol uygulamasıdır.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
 ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002397"
 ---
 # <a name="timing-events-overview"></a>Zamanlama Olaylarına Genel Bakış
 Bu konu başlığı altında kullanılabilir beş zamanlama olayları kullanmayı açıklar <xref:System.Windows.Media.Animation.Timeline> ve <xref:System.Windows.Media.Animation.Clock> nesneleri.  
@@ -23,11 +23,11 @@ Bu konu başlığı altında kullanılabilir beş zamanlama olayları kullanmay�
   
  Özellikler animasyon uygulamak için birden çok yolla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
--   **Görsel taslak nesneleri kullanarak** (işaretleme ve kod): Kullanabileceğiniz <xref:System.Windows.Media.Animation.Storyboard> düzenlemek ve bir veya daha fazla nesnelere animasyon dağıtmak için nesneleri. Bir örnek için bkz. [görsel taslak kullanarak özelliğe animasyon ekleme](how-to-animate-a-property-by-using-a-storyboard.md).  
+- **Görsel taslak nesneleri kullanarak** (işaretleme ve kod): Kullanabileceğiniz <xref:System.Windows.Media.Animation.Storyboard> düzenlemek ve bir veya daha fazla nesnelere animasyon dağıtmak için nesneleri. Bir örnek için bkz. [görsel taslak kullanarak özelliğe animasyon ekleme](how-to-animate-a-property-by-using-a-storyboard.md).  
   
--   **Yerel animasyon kullanarak** (yalnızca kod): Uygulayabileceğiniz <xref:System.Windows.Media.Animation.AnimationTimeline> nesneleri doğrudan bunlar animasyon ekleme özellikleri. Bir örnek için bkz. [özelliği olmadan kullanarak bir görsel taslak animasyon](how-to-animate-a-property-without-using-a-storyboard.md).  
+- **Yerel animasyon kullanarak** (yalnızca kod): Uygulayabileceğiniz <xref:System.Windows.Media.Animation.AnimationTimeline> nesneleri doğrudan bunlar animasyon ekleme özellikleri. Bir örnek için bkz. [özelliği olmadan kullanarak bir görsel taslak animasyon](how-to-animate-a-property-without-using-a-storyboard.md).  
   
--   **Saatler kullanarak** (yalnızca kod): Açıkça saat oluşturma yönetebilir ve animasyon saatler kendiniz dağıtın.  Bir örnek için bkz. [AnimationClock kullanarak bir özelliğe animasyon ekleme](how-to-animate-a-property-by-using-an-animationclock.md).  
+- **Saatler kullanarak** (yalnızca kod): Açıkça saat oluşturma yönetebilir ve animasyon saatler kendiniz dağıtın.  Bir örnek için bkz. [AnimationClock kullanarak bir özelliğe animasyon ekleme](how-to-animate-a-property-by-using-an-animationclock.md).  
   
  Bunları işaretleme ve kod kullanabilirsiniz, çünkü bu genel bakışta örneklerde <xref:System.Windows.Media.Animation.Storyboard> nesneleri. Bununla birlikte, açıklanan kavramlar özellikleri diğer yöntemleri için uygulanabilir.  
   

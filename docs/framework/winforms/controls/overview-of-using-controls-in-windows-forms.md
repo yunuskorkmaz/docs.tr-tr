@@ -10,11 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
 ms.openlocfilehash: 247ec4fc11f33587e77c49244b239a574c8f3cfc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012717"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Windows Forms'ta Denetimlerin Kullanımına Genel Bakış
 Bu konu, bir Windows Forms uygulaması temel öğelerini açıklar ve denetimlerini kullanır ve bir Windows Forms uygulamasında olayları işleyen basit bir örnektir.  
@@ -22,9 +22,9 @@ Bu konu, bir Windows Forms uygulaması temel öğelerini açıklar ve denetimler
 ## <a name="simple-windows-forms-applications"></a>Basit bir Windows Forms uygulamaları  
  En az bir Windows Forms uygulaması aşağıdaki öğelerden oluşur:  
   
--   Öğesinden türetilen bir veya daha fazla sınıf <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
+- Öğesinden türetilen bir veya daha fazla sınıf <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
   
--   A `Main` çağıran yöntem `static` (`shared` Visual Basic'te) <xref:System.Windows.Forms.Application.Run%2A> yöntemi ve geçişleri bir <xref:System.Windows.Forms.Form> ona örneği. <xref:System.Windows.Forms.Application.Run%2A> Yöntemi uygulama işletim sisteminden iletileri işler.  
+- A `Main` çağıran yöntem `static` (`shared` Visual Basic'te) <xref:System.Windows.Forms.Application.Run%2A> yöntemi ve geçişleri bir <xref:System.Windows.Forms.Form> ona örneği. <xref:System.Windows.Forms.Application.Run%2A> Yöntemi uygulama işletim sisteminden iletileri işler.  
   
  Aşağıdaki kod örneği, bir Windows Forms uygulaması temel öğelerini gösterir.  
   

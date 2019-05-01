@@ -16,36 +16,36 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: 079cb3e969ee2c6d4e0163106769765cd96e96b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025814"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Sınıfları
 <a name="Top"></a> Bir karakter sınıfı içeren bir eşleşmenin başarılı olması için giriş dizesinde bulunabilecek karakterleri kümesini tanımlar. .NET içinde normal ifade dili aşağıdaki karakter sınıflarını destekler:  
   
--   Pozitif karakter grupları. Giriş dizesindeki bir karakter, belirli bir karakter kümesindekindeki karakterlerden biriyle eşleşmelidir. Daha fazla bilgi için [pozitif karakter grubu](#PositiveGroup).  
+- Pozitif karakter grupları. Giriş dizesindeki bir karakter, belirli bir karakter kümesindekindeki karakterlerden biriyle eşleşmelidir. Daha fazla bilgi için [pozitif karakter grubu](#PositiveGroup).  
   
--   Negatif karakter grupları. Giriş dizesindeki bir karakter, belirli bir karakter kümesindekindeki karakterlerden biriyle eşleşmemelidir. Daha fazla bilgi için [negatif karakter grubu](#NegativeGroup).  
+- Negatif karakter grupları. Giriş dizesindeki bir karakter, belirli bir karakter kümesindekindeki karakterlerden biriyle eşleşmemelidir. Daha fazla bilgi için [negatif karakter grubu](#NegativeGroup).  
   
--   Herhangi bir karakter. `.` (Nokta) karakteridir normal bir ifadede dışında herhangi bir karakterle eşleşen joker karakteri `\n`. Daha fazla bilgi için [herhangi bir karakter](#AnyCharacter).  
+- Herhangi bir karakter. `.` (Nokta) karakteridir normal bir ifadede dışında herhangi bir karakterle eşleşen joker karakteri `\n`. Daha fazla bilgi için [herhangi bir karakter](#AnyCharacter).  
   
--   Genel bir Unicode kategorisi veya adlandırılmış blok. Giriş dizesindeki bir karakter, eşleşmenin başarılı olması için belirli bir Unicode kategorisinin üyesi veya bir bitişik Unicode karakterleri aralığında olmalıdır. Daha fazla bilgi için [Unicode kategorisi veya Unicode bloğu](#CategoryOrBlock).  
+- Genel bir Unicode kategorisi veya adlandırılmış blok. Giriş dizesindeki bir karakter, eşleşmenin başarılı olması için belirli bir Unicode kategorisinin üyesi veya bir bitişik Unicode karakterleri aralığında olmalıdır. Daha fazla bilgi için [Unicode kategorisi veya Unicode bloğu](#CategoryOrBlock).  
   
--   Negatif bir Unicode kategorisi veya adlandırılmış blok. Giriş dizesindeki bir karakter, eşleşmenin başarılı olması için belirli bir Unicode kategorisinin üyesi veya bir bitişik Unicode karakterleri aralığında olmamalıdır. Daha fazla bilgi için [negatif Unicode kategorisi veya Unicode bloğu](#NegativeCategoryOrBlock).  
+- Negatif bir Unicode kategorisi veya adlandırılmış blok. Giriş dizesindeki bir karakter, eşleşmenin başarılı olması için belirli bir Unicode kategorisinin üyesi veya bir bitişik Unicode karakterleri aralığında olmamalıdır. Daha fazla bilgi için [negatif Unicode kategorisi veya Unicode bloğu](#NegativeCategoryOrBlock).  
   
--   Bir sözcük karakteri. Giriş dizesindeki bir karakter, sözcüklerdeki karakterler için uygun olan herhangi bir Unicode kategorisine ait olabilir. Daha fazla bilgi için [sözcük karakteri](#WordCharacter).  
+- Bir sözcük karakteri. Giriş dizesindeki bir karakter, sözcüklerdeki karakterler için uygun olan herhangi bir Unicode kategorisine ait olabilir. Daha fazla bilgi için [sözcük karakteri](#WordCharacter).  
   
--   Sözcük olmayan karakter. Giriş dizesindeki bir karakter, sözcük karakteri olmayan herhangi bir Unicode kategorisine ait olabilir. Daha fazla bilgi için [sözcük olmayan karakter](#NonWordCharacter).  
+- Sözcük olmayan karakter. Giriş dizesindeki bir karakter, sözcük karakteri olmayan herhangi bir Unicode kategorisine ait olabilir. Daha fazla bilgi için [sözcük olmayan karakter](#NonWordCharacter).  
   
--   Boşluk karakteri. Giriş dizesindeki bir karakter herhangi bir Unicode ayıraç karakteri veya herhangi bir denetim karakteri olabilir. Daha fazla bilgi için [boşluk karakteri](#WhitespaceCharacter).  
+- Boşluk karakteri. Giriş dizesindeki bir karakter herhangi bir Unicode ayıraç karakteri veya herhangi bir denetim karakteri olabilir. Daha fazla bilgi için [boşluk karakteri](#WhitespaceCharacter).  
   
--   Boşluk olmayan karakter. Giriş dizesindeki bir karakter boşluk karakteri olmayan herhangi bir karakter olabilir. Daha fazla bilgi için [boşluk olmayan karakter](#NonWhitespaceCharacter).  
+- Boşluk olmayan karakter. Giriş dizesindeki bir karakter boşluk karakteri olmayan herhangi bir karakter olabilir. Daha fazla bilgi için [boşluk olmayan karakter](#NonWhitespaceCharacter).  
   
--   Ondalık basamak. Giriş dizesindeki bir karakter Unicode ondalık basamakları olarak sınıflandırılan karakterlerden biri olabilir. Daha fazla bilgi için [ondalık basamak karakteri](#DigitCharacter).  
+- Ondalık basamak. Giriş dizesindeki bir karakter Unicode ondalık basamakları olarak sınıflandırılan karakterlerden biri olabilir. Daha fazla bilgi için [ondalık basamak karakteri](#DigitCharacter).  
   
--   Ondalık olmayan basamak. Giriş dizesindeki bir karakter, bir Unicode basamak karakteri dışındaki herhangi bir karakter olabilir. Daha fazla bilgi için [ondalık basamak karakteri](#NonDigitCharacter).  
+- Ondalık olmayan basamak. Giriş dizesindeki bir karakter, bir Unicode basamak karakteri dışındaki herhangi bir karakter olabilir. Daha fazla bilgi için [ondalık basamak karakteri](#NonDigitCharacter).  
   
  .NET karakter sınıfı çıkarma ifadelerini, bir karakter sınıfı, başka bir karakter sınıfını çıkararak sonucu olarak bir karakter kümesi tanımlamanıza olanak sağlayan destekler. Daha fazla bilgi için [karakter sınıfı çıkarma](#CharacterClassSubtraction).  
   
@@ -160,7 +160,7 @@ ms.locfileid: "54622955"
 ## <a name="any-character-"></a>Herhangi Bir Karakter: .  
  Nokta karakterini (.) dışında herhangi bir karakterle eşleşir `\n` (yeni satır karakteri, \u000A) aşağıdaki iki duruma sahip:  
   
--   Bir normal ifade deseni tarafından değiştirilirse <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> seçeneği veya deseni kısmı, içerip içermediğini `.` karakter sınıfı tarafından değiştirildiğinde `s` seçeneği `.` herhangi bir karakterle eşleşir. Daha fazla bilgi için bkz. [Normal İfade Seçenekleri](../../../docs/standard/base-types/regular-expression-options.md).  
+- Bir normal ifade deseni tarafından değiştirilirse <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> seçeneği veya deseni kısmı, içerip içermediğini `.` karakter sınıfı tarafından değiştirildiğinde `s` seçeneği `.` herhangi bir karakterle eşleşir. Daha fazla bilgi için bkz. [Normal İfade Seçenekleri](../../../docs/standard/base-types/regular-expression-options.md).  
   
      Aşağıdaki örnekte olan farklı davranışlarını gösterir `.` karakter sınıfının varsayılan olarak ve <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> seçeneği. Normal ifade `^.+` dize başlangıcında başlar ve her karakter ile eşleşir. Varsayılan olarak eşleştirme, ilk satırın sonunda biter; satır başı karakteri normal ifade deseniyle eşleşen `\r` veya \u000D, ancak eşleşmiyor `\n`. Çünkü <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> seçeneği Giriş dizesinin tamamının tek bir satır olarak yorumladığından, giriş dizesindeki her karakterle eşleşir dahil olmak üzere `\n`.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "54622955"
 > [!NOTE]
 >  Dışında herhangi bir karakterle eşleştiği için `\n`, `.` karakter sınıfı ayrıca eşleşen `\r` (satır başı karakteri, \u000D).  
   
--   Bir pozitif veya negatif karakter grubunda, nokta bir karakter sınıfı yerine sabit karakter olarak kabul edilir. Daha fazla bilgi için [pozitif karakter grubu](#PositiveGroup) ve [negatif karakter grubu](#NegativeGroup) bu konuda daha önce. Aşağıdaki örnek, nokta karakterini içeren bir normal ifade tanımlayarak bir gösterim sağlar (`.`) hem bir karakter sınıfı ve bir pozitif karakter grubunun bir üyesi olarak. Normal ifade `\b.*[.?!;:](\s|\z)` bir sözcük sınırında başlar, nokta dahil olmak üzere beş noktalama işaretleri karşılaşana kadar herhangi bir karakterle eşleşir ve ardından bir boşluk karakteri veya dizenin sonuyla eşleşir.  
+- Bir pozitif veya negatif karakter grubunda, nokta bir karakter sınıfı yerine sabit karakter olarak kabul edilir. Daha fazla bilgi için [pozitif karakter grubu](#PositiveGroup) ve [negatif karakter grubu](#NegativeGroup) bu konuda daha önce. Aşağıdaki örnek, nokta karakterini içeren bir normal ifade tanımlayarak bir gösterim sağlar (`.`) hem bir karakter sınıfı ve bir pozitif karakter grubunun bir üyesi olarak. Normal ifade `\b.*[.?!;:](\s|\z)` bir sözcük sınırında başlar, nokta dahil olmak üzere beş noktalama işaretleri karşılaşana kadar herhangi bir karakterle eşleşir ve ardından bir boşluk karakteri veya dizenin sonuyla eşleşir.  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  

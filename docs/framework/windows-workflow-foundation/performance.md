@@ -1,15 +1,15 @@
 ---
-title: Windows Workflow Foundation 4 performansı
+title: Windows Workflow Foundation 4 Performansı
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
 ms.openlocfilehash: f7590591bfac374f6de637f57fad9853b82ca20c
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007035"
 ---
-# <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 performansı
+# <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 Performansı
 
  Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] büyük bir düzeltme ağır yatırımlarla Windows Workflow Foundation (WF), performans içerir.  Bu yeni bir düzeltme önemli tasarım değişiklikleri önceki sürümlerinden tanıtır [!INCLUDE[wf1](../../../includes/wf1-md.md)] .NET Framework 3.0 bir parçası olarak gönderilen ve [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Programlama modeli, çalışma zamanı ve performansı ve kullanılabilirliği büyük ölçüde artırmak için araç setinin bir mimariye kavuşturulan olmuştur. Bu konu, bu değişiklikleri önemli performans özellikleri gösterir ve bu önceki sürüme karşı karşılaştırır.
 
@@ -45,7 +45,7 @@ ms.locfileid: "57845741"
 
  WF4 bu oldukça farklı işler. Etkinlik şablonunu alıp, yeni bir ActivityInstance nesnesi oluşturur ve Zamanlayıcı kuyruğa ekler. Tüm bu işlem yalnızca açık nesne oluşturma içerir ve çok hafif.
 
-### <a name="asynchronous-programming"></a>Zaman uyumsuz programlama
+### <a name="asynchronous-programming"></a>Zaman Uyumsuz Programlama
  Uygulamalar genellikle daha iyi performans ve ölçeklenebilirlik g/ç gibi uzun süre çalışan engelleme işlemleri veya dağıtılmış bilgi işlem işlemleri için zaman uyumsuz programlama ile sahiptir. Temel etkinlik türleri aracılığıyla zaman uyumsuz destek WF4 sağlar <xref:System.Activities.AsyncCodeActivity>, <xref:System.Activities.AsyncCodeActivity%601>. Çalışma zamanı zaman uyumsuz etkinlikler yerel olarak anlıyor ve zaman uyumsuz iş bekleyen olmakla birlikte bu nedenle otomatik olarak örnek no-persist bölgesinde koyabilirsiniz. Özel etkinlikler iş akışı Zamanlayıcı iş parçacığı bulunduran ve paralel olarak çalıştırmak için herhangi bir etkinlik engelleme olmadan zaman uyumsuz çalışmayı gerçekleştirmek için bu türlerinden türeyebilir.
 
 ### <a name="messaging"></a>İleti
@@ -376,25 +376,25 @@ public class Workflow1 : Activity
 
  WF4 SQL kalıcı bir sağlayıcı veritabanı katmanında daha fazla iş gerçekleştireceğini unutmayın.  SQL veritabanı, burada CPU ve disk kullanımını izlemek önemlidir bir performans sorunu haline gelebilir.  Aşağıdaki eklediğinizden emin olun performans sayaçlarını SQL veritabanı performans testi iş akışı uygulamaları:
 
--   PhysicalDisk\\% Disk Zamanı okuma
+- PhysicalDisk\\% Disk Zamanı okuma
 
--   PhysicalDisk\\% Disk Zamanı
+- PhysicalDisk\\% Disk Zamanı
 
--   PhysicalDisk\\% Disk yazma saati
+- PhysicalDisk\\% Disk yazma saati
 
--   PhysicalDisk\\% ortalama Disk kuyruğu uzunluğu
+- PhysicalDisk\\% ortalama Disk kuyruğu uzunluğu
 
--   PhysicalDisk\Avg. Disk okuma kuyruğu uzunluğu
+- PhysicalDisk\Avg. Disk okuma kuyruğu uzunluğu
 
--   PhysicalDisk\Avg. Disk yazma kuyruğu uzunluğu
+- PhysicalDisk\Avg. Disk yazma kuyruğu uzunluğu
 
--   PhysicalDisk\Current Disk kuyruğu uzunluğu
+- PhysicalDisk\Current Disk kuyruğu uzunluğu
 
--   İşlemci bilgileri\\% işlemci zamanı
+- İşlemci bilgileri\\% işlemci zamanı
 
--   SQLServer:Latches\Average Mandal bekleme süresi (ms)
+- SQLServer:Latches\Average Mandal bekleme süresi (ms)
 
--   SQLServer:Latches\Latch bekler/sn
+- SQLServer:Latches\Latch bekler/sn
 
 ### <a name="tracking"></a>İzleme
  İş akışı izleme, bir iş akışı ilerlemesini izlemek için kullanılabilir.  İzleme olayları dahil edilmiş bilgileri bir izleme profili tarafından belirlenir.  Daha karmaşık izleme profili, izleme daha pahalı olur.
@@ -407,13 +407,13 @@ public class Workflow1 : Activity
 
  ETW İzleme SQL yerine kullanmanın yaklaşımın avantajları şunlardır:
 
--   Olayları izleme koleksiyonu başka bir işlem için ayrılabilir.  Bu, olayların nasıl kaydedileceğini daha fazla esneklik sağlar.
+- Olayları izleme koleksiyonu başka bir işlem için ayrılabilir.  Bu, olayların nasıl kaydedileceğini daha fazla esneklik sağlar.
 
--   ETW İzleme olayları kolayca WCF ETW olayları veya bir SQL Server veya çekirdek sağlayıcısı gibi diğer ETW sağlayıcıları ile birleştirilir.
+- ETW İzleme olayları kolayca WCF ETW olayları veya bir SQL Server veya çekirdek sağlayıcısı gibi diğer ETW sağlayıcıları ile birleştirilir.
 
--   İş akışı yazarları WF3 SQL izleme hizmetin toplu iş modu gibi belirli izleme yer alan bir uygulama daha iyi çalışması için bir iş akışı alter gerek yoktur.
+- İş akışı yazarları WF3 SQL izleme hizmetin toplu iş modu gibi belirli izleme yer alan bir uygulama daha iyi çalışması için bir iş akışı alter gerek yoktur.
 
--   Yönetici izleme üzerinde veya ana bilgisayar işlemi geri dönüştürme olmadan kapatabilirsiniz.
+- Yönetici izleme üzerinde veya ana bilgisayar işlemi geri dönüştürme olmadan kapatabilirsiniz.
 
  ETW İzleme için performans avantajlarının bir dezavantajı ile gelir.  Sistemin yoğun kaynak baskısı altında ise ETW olayları kaybolabilir.  Olayların işlenmesini normal program yürütme engelleyecek şekilde tasarlanmamıştır ve bu nedenle, tüm ETW olayları abonelerini için yayın garanti edilmez.  Bu sistem durumu izleme harika ancak denetim için uygun ETW İzleme sağlar.
 

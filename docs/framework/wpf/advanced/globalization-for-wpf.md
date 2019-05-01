@@ -8,11 +8,11 @@ helpviewer_keywords:
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
 ms.openlocfilehash: 9a08fdeaa3517b1483af3f9958ad2db1c64648b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031349"
 ---
 # <a name="globalization-for-wpf"></a>WPF için Genelleştirme
 Bu konu yazarken farkında olmanız gereken sorunların tanıtır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] küresel pazarda uygulamalar. Genelleştirme programlama öğeleri tanımlanan [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] içinde `System.Globalization`.
@@ -69,59 +69,59 @@ Aşağıdaki örnek, bir onaltılık karakter başvurusu gösterir. Sahip olduğ
 
  Aşağıdaki komut, şu anda desteklenmektedir:
 
--   Arapça
+- Arapça
 
--   Bengali
+- Bengali
 
--   Devanagari
+- Devanagari
 
--   Kiril
+- Kiril
 
--   Yunanca
+- Yunanca
 
--   Gucerat dili
+- Gucerat dili
 
--   Gurmuki
+- Gurmuki
 
--   İbranice
+- İbranice
 
--   Kavramsal betikler
+- Kavramsal betikler
 
--   Kannada dili
+- Kannada dili
 
--   Lao dili
+- Lao dili
 
--   Latin
+- Latin
 
--   Malayalam dili
+- Malayalam dili
 
--   Moğolca
+- Moğolca
 
--   Odia
+- Odia
 
--   Süryanice
+- Süryanice
 
--   Tamil dili
+- Tamil dili
 
--   Telugu dili
+- Telugu dili
 
--   Thaana
+- Thaana
 
--   Tay dili *
+- Tay dili *
 
--   Tibet dili
+- Tibet dili
 
  * Bu görünen bırakın ve Tay metni düzenleme desteklenir; sözcük bölme değil.
 
  Aşağıdaki komut, şu anda desteklenmemektedir:
 
--   Khmer
+- Khmer
 
--   Eski Hangul Kore dili
+- Eski Hangul Kore dili
 
--   Myanmar
+- Myanmar
 
--   Sinhala
+- Sinhala
 
  Tüm yazı sistemi destek altyapıları [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipi. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] yazı tipleri içerebilir [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] daha iyi uluslararası ve yüksek kaliteli tipografik yazı tipleri tasarlamak için yazı tipi oluşturucularını etkinleştiren Düzen tabloları. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Yazı tipi düzeni tablolar, metin düzenini iyileştirmek metin işleme uygulamalarını etkinleştirme glif değişimler, karakter konumlandırması, yaslama ve temel konumlandırma, ilgili bilgiler içerir.
 
@@ -133,9 +133,9 @@ Aşağıdaki örnek, bir onaltılık karakter başvurusu gösterir. Sahip olduğ
 ### <a name="international-layout"></a>Uluslararası düzeni
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Yatay desteklemek için kullanışlı bir yol, çift yönlü ve dikey düzeni sağlar. Presentation Framework <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliği düzeni tanımlamak için kullanılabilir. Akış yönü modelleri şunlardır:
 
--   *LeftToRight* -Latin, Doğu Asya ve benzeri için yatay düzeni.
+- *LeftToRight* -Latin, Doğu Asya ve benzeri için yatay düzeni.
 
--   *RightToLeft* -Arapça, İbranice ve diğerleri için çift yönlü.
+- *RightToLeft* -Arapça, İbranice ve diğerleri için çift yönlü.
 
 <a name="developing_localizable_apps"></a>
 ## <a name="developing-localizable-applications"></a>Yerelleştirilebilir Uygulamalar Geliştirme

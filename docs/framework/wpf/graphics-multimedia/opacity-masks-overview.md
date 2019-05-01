@@ -7,11 +7,11 @@ helpviewer_keywords:
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
 ms.openlocfilehash: 84525e58487ce9b0bc26f77ff8dbced734bc90a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008479"
 ---
 # <a name="opacity-masks-overview"></a>Opaklık Maskelerine Genel Bakış
 Opaklık maskeleri saydam veya saydam kısmen bölümleri bir öğe veya görselin yapmanızı sağlar. Geçirgenlik maskesi oluşturma için geçerli bir <xref:System.Windows.Media.Brush> için <xref:System.Windows.UIElement.OpacityMask%2A> özelliği bir öğe veya <xref:System.Windows.Media.Visual>.  Fırça öğeye veya görsel eşlenir ve her fırça piksel geçirgenlik değeri elde edilen opaklık öğe veya görselin karşılık gelen her pikselin belirlemek için kullanılır.  
@@ -36,21 +36,21 @@ Opaklık maskeleme örneği
 ## <a name="creating-an-opacity-mask"></a>Geçirgenlik maskesi oluşturma  
  Geçirgenlik maskesi oluşturma için oluşturduğunuz bir <xref:System.Windows.Media.Brush> ve uygulamak <xref:System.Windows.UIElement.OpacityMask%2A> bir öğe veya görselin özelliği. Herhangi bir türde kullanabileceğiniz <xref:System.Windows.Media.Brush> geçirgenlik maskesi olarak.  
   
--   <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Bir öğe veya görünümden visual fade yapmak için kullanılır.  
+- <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Bir öğe veya görünümden visual fade yapmak için kullanılır.  
   
      Aşağıdaki görüntüde bir <xref:System.Windows.Media.LinearGradientBrush> geçirgenlik maskesi olarak kullanılır.  
   
      ![Bir LinearGradientBrush opaklık maskesine sahip bir nesne](./media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
 LinearGradientBrush opaklık maskeleme örneği  
   
--   <xref:System.Windows.Media.ImageBrush>: Doku ve yazılım ya da bozuk efektler oluşturmak için kullanılır.  
+- <xref:System.Windows.Media.ImageBrush>: Doku ve yazılım ya da bozuk efektler oluşturmak için kullanılır.  
   
      Aşağıdaki görüntüde bir <xref:System.Windows.Media.ImageBrush> geçirgenlik maskesi olarak kullanılır.  
   
      ![Bir ImageBrush opaklık maskesine sahip bir nesne](./media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
 LinearGradientBrush opaklık maskeleme örneği  
   
--   <xref:System.Windows.Media.DrawingBrush>: Şekilleri ve görüntüleri gradyanlar modellerinden karmaşık opaklık maskeleri oluşturmak için kullanılır.  
+- <xref:System.Windows.Media.DrawingBrush>: Şekilleri ve görüntüleri gradyanlar modellerinden karmaşık opaklık maskeleri oluşturmak için kullanılır.  
   
      Aşağıdaki görüntüde bir <xref:System.Windows.Media.DrawingBrush> geçirgenlik maskesi olarak kullanılır.  
   

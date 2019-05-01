@@ -1,14 +1,14 @@
 ---
-title: WCF istemci kaynakları serbest bırakmak için iptal etmek ve kapatmak kullanın
+title: Kapat ve Durdur seçeneklerini kullanarak WCF istemci kaynaklarını serbest bırakma
 description: Dispose, başarısız ve ağ başarısız olduğunda özel durumlar. Bu, istenmeyen davranışlara neden olabilir. Bunun yerine, yakın kullanın ve ağ başarısız olduğunda istemci kaynakları serbest bırakmak için İptal.
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
 ms.openlocfilehash: 58f828d9cd85806f5f04c349a7de18828ab5f6f2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007584"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>Kapat ve ağ bağlantıları güvenli bir şekilde bırakılan iptal yayın kaynakları
 

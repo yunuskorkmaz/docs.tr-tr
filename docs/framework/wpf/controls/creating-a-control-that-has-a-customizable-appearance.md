@@ -14,11 +14,11 @@ helpviewer_keywords:
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
 ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017787"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Özelleştirilebilir Görünümü olan Denetim Oluşturma
 <a name="introduction"></a>
@@ -37,17 +37,17 @@ Bir özel denetim şablonunu kullanan bir onay kutusu
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
--   [Önkoşullar](#prerequisites)  
+- [Önkoşullar](#prerequisites)  
   
--   [Bölümleri ve durumlar modeli](#parts_and_states_model)  
+- [Bölümleri ve durumlar modeli](#parts_and_states_model)  
   
--   [ControlTemplate içinde görsel yapı ve denetim görsel davranışını tanımlama](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)  
+- [ControlTemplate içinde görsel yapı ve denetim görsel davranışını tanımlama](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)  
   
--   [ControlTemplate içinde kod parçalarını kullanma](#using_parts_of_the_controltemplate_in_code)  
+- [ControlTemplate içinde kod parçalarını kullanma](#using_parts_of_the_controltemplate_in_code)  
   
--   [Denetim sözleşmesi sağlama](#providing_the_control_contract)  
+- [Denetim sözleşmesi sağlama](#providing_the_control_contract)  
   
--   [Tam örnek](#complete_example)  
+- [Tam örnek](#complete_example)  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
@@ -60,11 +60,11 @@ Bir özel denetim şablonunu kullanan bir onay kutusu
 ## <a name="parts-and-states-model"></a>Bölümleri ve durumlar modeli  
  Bölümleri ve durumları modelini görsel yapı ve denetim görsel davranışını nasıl tanımlanacağını belirtir. Bölümleri ve durumları modelini izlemek için şunları yapmalıdır:  
   
--   Görsel yapı ve visual davranışını tanımlayan <xref:System.Windows.Controls.ControlTemplate> denetimi.  
+- Görsel yapı ve visual davranışını tanımlayan <xref:System.Windows.Controls.ControlTemplate> denetimi.  
   
--   Denetim şablonunun bölümlerine ile denetim mantığının etkileşim kurduğunda bazı en iyi uygulamaları izleyin.  
+- Denetim şablonunun bölümlerine ile denetim mantığının etkileşim kurduğunda bazı en iyi uygulamaları izleyin.  
   
--   Ne eklenmelidir belirtmek için bir denetim sözleşmesi sağlayan <xref:System.Windows.Controls.ControlTemplate>.  
+- Ne eklenmelidir belirtmek için bir denetim sözleşmesi sağlayan <xref:System.Windows.Controls.ControlTemplate>.  
   
  Görsel yapı ve visual davranışını tanımladığınızda <xref:System.Windows.Controls.ControlTemplate> bir denetimin uygulama yazarları görsel yapı ve visual davranışını yeni bir oluşturarak değiştirebilirsiniz <xref:System.Windows.Controls.ControlTemplate> kod yazmak yerine.   Uygulama belirten bir denetim sözleşmesi yazar, sağlamanız gereken <xref:System.Windows.FrameworkElement> nesneleri ve durumlar tanımlanmalıdır <xref:System.Windows.Controls.ControlTemplate>. Bölümleri ile etkileşim kurduğunuzda bazı en iyi uygulamaları izlemelisiniz <xref:System.Windows.Controls.ControlTemplate> denetiminiz düzgün tamamlanmamış işler, böylece <xref:System.Windows.Controls.ControlTemplate>.  Bu üç ilkeyi uygularsanız, uygulama oluşturmak yazarları bir <xref:System.Windows.Controls.ControlTemplate> denetiminiz için gibi kolayca denetimleri ile birlikte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Aşağıdaki bölümde her birini ayrıntılı bu önerileri açıklanmaktadır.  
   
@@ -134,18 +134,18 @@ Bir özel denetim şablonunu kullanan bir onay kutusu
   
  <xref:System.Windows.VisualStateManager.GoToState%2A> Yöntemi uygun şekilde film şeridini durdurmak ve başlatmak için gerekli mantığı gerçekleştirir. Bir denetim çağırdığında <xref:System.Windows.VisualStateManager.GoToState%2A> kendi durumunu değiştirmek için <xref:System.Windows.VisualStateManager> şunları yapar:  
   
--   Varsa <xref:System.Windows.VisualState> denetimin gittiği sahip bir <xref:System.Windows.Media.Animation.Storyboard>, film şeridi başlar. Ardından, eğer <xref:System.Windows.VisualState> denetim geldiği sahip bir <xref:System.Windows.Media.Animation.Storyboard>, film şeridi sonlandırılır.  
+- Varsa <xref:System.Windows.VisualState> denetimin gittiği sahip bir <xref:System.Windows.Media.Animation.Storyboard>, film şeridi başlar. Ardından, eğer <xref:System.Windows.VisualState> denetim geldiği sahip bir <xref:System.Windows.Media.Animation.Storyboard>, film şeridi sonlandırılır.  
   
--   Denetim zaten belirtilen durumda ise <xref:System.Windows.VisualStateManager.GoToState%2A> hiç eylem almaması ve döndürür `true`.  
+- Denetim zaten belirtilen durumda ise <xref:System.Windows.VisualStateManager.GoToState%2A> hiç eylem almaması ve döndürür `true`.  
   
--   Belirtilen durum yoksa <xref:System.Windows.Controls.ControlTemplate> , `control`, <xref:System.Windows.VisualStateManager.GoToState%2A> hiç eylem almaması ve döndürür `false`.  
+- Belirtilen durum yoksa <xref:System.Windows.Controls.ControlTemplate> , `control`, <xref:System.Windows.VisualStateManager.GoToState%2A> hiç eylem almaması ve döndürür `false`.  
   
 #### <a name="best-practices-for-working-with-the-visualstatemanager"></a>VisualStateManager ile çalışmak için en iyi yöntemler  
  Denetim durumlarını korumak için şunları yapmanız önerilir:  
   
--   Özelliklerini, durumunu izlemek için kullanın.  
+- Özelliklerini, durumunu izlemek için kullanın.  
   
--   Durumlar arasında geçiş için bir yardımcı yöntem oluşturun.  
+- Durumlar arasında geçiş için bir yardımcı yöntem oluşturun.  
   
  `NumericUpDown` Denetim kullanır, `Value` olup izlemek için özellik `Positive` veya `Negative` durumu.  `NumericUpDown` Denetimini de tanımlar `Focused` ve `UnFocused` durumlarını izleyen <xref:System.Windows.UIElement.IsFocused%2A> özelliği. Doğal olarak denetimin bir özelliğine karşılık gelmeyen bildiren kullanırsanız, durumunu izlemek için özel bir özellik tanımlayabilirsiniz.  
   
@@ -160,11 +160,11 @@ Bir özel denetim şablonunu kullanan bir onay kutusu
   
  Bir denetimin durumunu burada değişebilir üç tipik yerler şunlardır:  
   
--   Zaman <xref:System.Windows.Controls.ControlTemplate> uygulanan <xref:System.Windows.Controls.Control>.  
+- Zaman <xref:System.Windows.Controls.ControlTemplate> uygulanan <xref:System.Windows.Controls.Control>.  
   
--   Bir özellik değiştiğinde.  
+- Bir özellik değiştiğinde.  
   
--   Bir olay gerçekleştiğinde.  
+- Bir olay gerçekleştiğinde.  
   
  Aşağıdaki örnekler, durumunu güncelleme göstermektedir `NumericUpDown` bu gibi durumlarda denetimi.  
   
@@ -189,33 +189,33 @@ Bir özel denetim şablonunu kullanan bir onay kutusu
 ## <a name="providing-the-control-contract"></a>Denetim sözleşmesi sağlama  
  Bir denetim sözleşmesi sağlayan böylece <xref:System.Windows.Controls.ControlTemplate> yazarlar şablonda konulacaklar bilmeniz. Denetim sözleşmesi üç öğe vardır:  
   
--   Görsel öğeler denetimin mantığı kullanır.  
+- Görsel öğeler denetimin mantığı kullanır.  
   
--   Denetim ve her durumun ait olduğu Grup durumları.  
+- Denetim ve her durumun ait olduğu Grup durumları.  
   
--   Denetimin görsel olarak etkileyen genel özellikler.  
+- Denetimin görsel olarak etkileyen genel özellikler.  
   
  Yeni bir oluşturan birinin <xref:System.Windows.Controls.ControlTemplate> bilmesi gereken <xref:System.Windows.FrameworkElement> nesneleri denetimin mantığı kullanır, ne tür oluşturduğunu ve adını. A <xref:System.Windows.Controls.ControlTemplate> Yazar ayrıca gereken olası her durum denetimi olabilir ve hangi adını bilmek <xref:System.Windows.VisualStateGroup> durumu yer.  
   
  Dönme `NumericUpDown` örnek, bir denetim bekliyor <xref:System.Windows.Controls.ControlTemplate> aşağıdaki olmasını <xref:System.Windows.FrameworkElement> nesneler:  
   
--   A <xref:System.Windows.Controls.Primitives.RepeatButton> adlı `UpButton`.  
+- A <xref:System.Windows.Controls.Primitives.RepeatButton> adlı `UpButton`.  
   
--   A <xref:System.Windows.Controls.Primitives.RepeatButton> çağırılır `DownButton.`  
+- A <xref:System.Windows.Controls.Primitives.RepeatButton> çağırılır `DownButton.`  
   
  Denetim, şu durumlarda olabilir:  
   
--   İçinde `ValueStates`<xref:System.Windows.VisualStateGroup>  
+- İçinde `ValueStates`<xref:System.Windows.VisualStateGroup>  
   
-    -   `Positive`  
+    - `Positive`  
   
-    -   `Negative`  
+    - `Negative`  
   
--   İçinde `FocusStates`<xref:System.Windows.VisualStateGroup>  
+- İçinde `FocusStates`<xref:System.Windows.VisualStateGroup>  
   
-    -   `Focused`  
+    - `Focused`  
   
-    -   `Unfocused`  
+    - `Unfocused`  
   
  Ne belirtmek için <xref:System.Windows.FrameworkElement> denetim nesneleri bekler, kullandığınız <xref:System.Windows.TemplatePartAttribute>, beklenen öğelerin türünü ve adını belirtir.  Olası durumlar denetimin belirtmek için kullandığınız <xref:System.Windows.TemplateVisualStateAttribute>, durumun adını ve hangi belirten <xref:System.Windows.VisualStateGroup> ait.  PUT <xref:System.Windows.TemplatePartAttribute> ve <xref:System.Windows.TemplateVisualStateAttribute> denetim sınıf tanımı.  
   

@@ -6,20 +6,20 @@ ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b10ab992089e2e9280162c4cd2273bc1d9dc35e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026685"
 ---
 # <a name="xslt-extension-objects"></a>XSLT Genişletme Nesneleri
 Uzantı nesneler, stil sayfaları genişletmek için kullanılır. Genişletme nesneleri tarafından korunur <xref:System.Xml.Xsl.XsltArgumentList> sınıfı.  
   
  Ekli komut dosyası yerine bir uzantı nesnesi kullanmanın avantajları şunlardır:  
   
--   Daha iyi kapsülleme ve sınıfları kullanılmasını sağlar.  
+- Daha iyi kapsülleme ve sınıfları kullanılmasını sağlar.  
   
--   Stil sayfaları, daha küçük ve daha rahat olmasını sağlar.  
+- Stil sayfaları, daha küçük ve daha rahat olmasını sağlar.  
   
  XSLT genişletme nesneleri eklenir <xref:System.Xml.Xsl.XsltArgumentList> kullanarak nesne <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> yöntemi. Bir tam adı ve ad alanı URI o anda uzantısı nesnesi ile ilişkilendirilmiş.  
   

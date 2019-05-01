@@ -1,18 +1,18 @@
 ---
-title: Dış XSLT stil sayfaları ile belgelerini çözümleme
+title: Dış XSLT Stil Sayfaları ile Belgelerini Çözümleme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 91d4e5bf3846dc2859c519227c0dee2c9d36343c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62027075"
 ---
-# <a name="resolving-external-xslt-style-sheets-and-documents"></a>Dış XSLT stil sayfaları ile belgelerini çözümleme
+# <a name="resolving-external-xslt-style-sheets-and-documents"></a>Dış XSLT Stil Sayfaları ile Belgelerini Çözümleme
 Bazı birkaç kez dönüştürme sırasında dış kaynakları çözümleme gerekebilir.  
   
 > [!NOTE]
@@ -20,11 +20,11 @@ Bazı birkaç kez dönüştürme sırasında dış kaynakları çözümleme gere
   
  Bazı birkaç kez dönüştürme sırasında dış kaynakları çözümleme gerekebilir:  
   
--   Sırasında <xref:System.Xml.Xsl.XslTransform.Load%2A> bir dış stil sayfası bulunamadı.  
+- Sırasında <xref:System.Xml.Xsl.XslTransform.Load%2A> bir dış stil sayfası bulunamadı.  
   
--   Sırasında <xref:System.Xml.Xsl.XslTransform.Load%2A> herhangi çözümlenecek `<xsl:include>` veya `<xsl:import>` öğeleri stil sayfası bulunamadı.  
+- Sırasında <xref:System.Xml.Xsl.XslTransform.Load%2A> herhangi çözümlenecek `<xsl:include>` veya `<xsl:import>` öğeleri stil sayfası bulunamadı.  
   
--   Sırasında <xref:System.Xml.Xsl.XslTransform.Transform%2A> herhangi çözümlenecek `document()` işlevleri.  
+- Sırasında <xref:System.Xml.Xsl.XslTransform.Transform%2A> herhangi çözümlenecek `document()` işlevleri.  
   
 ## <a name="using-the-xmlresolver-class"></a>XmlResolver sınıfını kullanma  
  Bir ağ kaynağına erişmek için kimlik doğrulaması gerekiyorsa kullanın <xref:System.Xml.Xsl.XslTransform.Load%2A> içeren yöntemlerin bir <xref:System.Xml.XmlResolver> geçirilecek parametre <xref:System.Xml.XmlResolver> gerekli kimlik bilgisi özellikleri olan nesne.  

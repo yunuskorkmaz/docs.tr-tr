@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
 ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032350"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>İzlenecek yol: WPF içinde Win32 Denetimini Barındırma
 Windows Presentation Foundation (WPF) uygulamaları oluşturmak için zengin bir ortam sağlar. Win32 kodu önemli ölçüde yatırımınız varsa, ancak bu en az bazılarını yeniden daha etkili olabilir, söz konusu kodu WPF uygulamanızda yerine tamamen yeniden yazın. WPF WPF sayfasında bir Win32 penceresinde barındırma için basit bir mekanizma sağlar.  
@@ -47,9 +47,9 @@ Windows Presentation Foundation (WPF) uygulamaları oluşturmak için zengin bir
   
 6. Bildirim alt denetimler gibi ana pencerenin gönderilen Seçili iletileri işler. Bunu yapmanın iki yolu vardır.  
   
-    -   Barındırma sınıfınızdaki iletileri işlemek isterseniz, geçersiz kılma <xref:System.Windows.Interop.HwndHost.WndProc%2A> yöntemi <xref:System.Windows.Interop.HwndHost> sınıfı.  
+    - Barındırma sınıfınızdaki iletileri işlemek isterseniz, geçersiz kılma <xref:System.Windows.Interop.HwndHost.WndProc%2A> yöntemi <xref:System.Windows.Interop.HwndHost> sınıfı.  
   
-    -   WPF iletileri işleyen, işlemek isterseniz <xref:System.Windows.Interop.HwndHost> sınıfı <xref:System.Windows.Interop.HwndHost.MessageHook> arka plan kod olayı. Bu olay, barındırılan pencere tarafından alınan her ileti için gerçekleşir. Bu seçeneği belirlerseniz, hala tanımlamalısınız <xref:System.Windows.Interop.HwndHost.WndProc%2A>, ancak yalnızca en az bir uygulama gerekir.  
+    - WPF iletileri işleyen, işlemek isterseniz <xref:System.Windows.Interop.HwndHost> sınıfı <xref:System.Windows.Interop.HwndHost.MessageHook> arka plan kod olayı. Bu olay, barındırılan pencere tarafından alınan her ileti için gerçekleşir. Bu seçeneği belirlerseniz, hala tanımlamalısınız <xref:System.Windows.Interop.HwndHost.WndProc%2A>, ancak yalnızca en az bir uygulama gerekir.  
   
 7. Geçersiz kılma <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> ve <xref:System.Windows.Interop.HwndHost.WndProc%2A> yöntemlerinin <xref:System.Windows.Interop.HwndHost>. Karşılamak için bu yöntemleri geçersiz kılmanız gerekir <xref:System.Windows.Interop.HwndHost> sözleşme, ancak yalnızca gerekebilir en az bir uygulama sağlamak.  
   
@@ -129,13 +129,13 @@ Windows Presentation Foundation (WPF) uygulamaları oluşturmak için zengin bir
 ## <a name="implement-communication-between-the-control-and-the-page"></a>Uygulama sayfası ile Denetim arasındaki iletişimi  
  Windows iletiler göndererek denetimi değiştirebilirsiniz. Kullanıcı için konak penceresinin bildirim göndererek ile etkileşim kurduğunda denetimi size bildirir. [WPF'de Win32 ListBox denetimini barındırma](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control) örnek bunun nasıl çalıştığını, çeşitli örnekler sağlayan bir kullanıcı Arabirimi içerir:  
   
--   Bir öğeyi listeye ekleyin.  
+- Bir öğeyi listeye ekleyin.  
   
--   Seçili öğeyi listeden silin  
+- Seçili öğeyi listeden silin  
   
--   Seçili öğenin metni görüntüler.  
+- Seçili öğenin metni görüntüler.  
   
--   Öğe, listede görüntüler.  
+- Öğe, listede görüntüler.  
   
  Geleneksel bir Win32 uygulaması için olduğu gibi kullanıcının da öğeyi liste kutusunda üzerine tıklayarak seçebilirsiniz. Görüntülenen verileri seçme, ekleme veya bir öğe ekleme kullanıcının liste kutusunun durumu her değiştiğinde güncelleştirilir.  
   

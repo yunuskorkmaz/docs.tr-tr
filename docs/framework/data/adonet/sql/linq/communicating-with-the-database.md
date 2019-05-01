@@ -3,11 +3,11 @@ title: Veritabanı ile İletişim Kurma
 ms.date: 03/30/2017
 ms.assetid: 659d9817-bcaa-457f-9639-169394177274
 ms.openlocfilehash: d767bbe706b4fc9efb00031fddf8f6bd3369b485
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032415"
 ---
 # <a name="communicating-with-the-database"></a>Veritabanı ile İletişim Kurma
 Bu bölümdeki konular, oluşturmak ve veritabanı ile iletişimi sürdürme temel bazı yönleri açıklanmaktadır.  

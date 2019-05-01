@@ -3,11 +3,11 @@ title: SQL-CLR Özel Tür Eşlemeleri
 ms.date: 03/30/2017
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
 ms.openlocfilehash: bc92d54cad6a977268ef3f000c684d5f195a933d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037056"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>SQL-CLR Özel Tür Eşlemeleri
 SQLMetal komut satırı aracı, Object Relational Designer (O/R Tasarımcısı) kullandığınızda, ortak dil çalışma zamanı (CLR) ile SQL Server arasında eşleme türü otomatik olarak belirtilir.  

@@ -1,18 +1,18 @@
 ---
-title: XML şemasından çıkarım yapma
+title: XML Şemasından Çıkarım Yapma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: b18e7ffd-3c04-482d-9934-ba2f6a59b2c9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e3056ead487cc737003f7de5b877a706f1d444c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62027140"
 ---
-# <a name="inferring-an-xml-schema"></a>XML şemasından çıkarım yapma
+# <a name="inferring-an-xml-schema"></a>XML Şemasından Çıkarım Yapma
 Şema nesne modeli (SOM) kullanmayı açıklar <xref:System.Xml.Schema.XmlSchemaInference> yapısı bir XML belgesi bir XML Şeması Tanım Dili (XSD) şema çıkarsanacak sınıfı.  
   
  Şema nesne modeli (SOM) <xref:System.Xml.Schema.XmlSchemaInference> sınıfını <xref:System.Xml.Schema?displayProperty=nameWithType> ad alanı bir XML Şeması Tanım Dili (XSD) şeması bir XML belgesi yapısından Infer olanak tanır. <xref:System.Xml.Schema.XmlSchemaInference> Sınıfı, XML belgesi doğrulamak için bir XML Şeması çıkarır.  

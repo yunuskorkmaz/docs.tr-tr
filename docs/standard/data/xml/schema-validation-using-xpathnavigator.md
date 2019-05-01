@@ -1,5 +1,5 @@
 ---
-title: XPathNavigator kullanarak şema doğrulama
+title: XPathNavigator Kullanarak Şema Doğrulama
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 335e6578767c130760f322aa2b015ea7b0f317f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026997"
 ---
-# <a name="schema-validation-using-xpathnavigator"></a>XPathNavigator kullanarak şema doğrulama
+# <a name="schema-validation-using-xpathnavigator"></a>XPathNavigator Kullanarak Şema Doğrulama
 Kullanarak <xref:System.Xml.XmlDocument> sınıfı, içerdiği XML içeriği doğrulamak bir <xref:System.Xml.XmlDocument> iki yolla nesne. Bir doğrulama kullanarak XML içeriği doğrulamak için ilk yoludur <xref:System.Xml.XmlReader> nesne ve ikinci yol ise <xref:System.Xml.XmlDocument.Validate%2A> yöntemi <xref:System.Xml.XmlDocument> sınıfı. XML kullanarak içeriğin salt okunur doğrulama de gerçekleştirebilirsiniz <xref:System.Xml.XPath.XPathDocument> sınıfı.  
   
 ## <a name="validating-xml-data"></a>XML verileri doğrulama  

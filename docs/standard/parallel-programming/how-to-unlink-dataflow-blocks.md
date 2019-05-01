@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Veri akışı bloklarının bağlantısını kaldırma'
+title: 'Nasıl yapılır: Veri Akışı Bloklarının Bağlantısını Kaldırma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93705653169b5efce3e3a062b7490abc4ea39c30
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018924"
 ---
-# <a name="how-to-unlink-dataflow-blocks"></a>Nasıl yapılır: Veri akışı bloklarının bağlantısını kaldırma
+# <a name="how-to-unlink-dataflow-blocks"></a>Nasıl yapılır: Veri Akışı Bloklarının Bağlantısını Kaldırma
 Bu belge, bir hedef veri akışı bloğu kaynağından bağlantısının nasıl kaldırılacağını açıklar.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -43,7 +43,7 @@ Bu belge, bir hedef veri akışı bloğu kaynağından bağlantısının nasıl 
   
  Visual Basic  
   
- **Vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReceiveAny.vb**  
+ **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReceiveAny.vb**  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

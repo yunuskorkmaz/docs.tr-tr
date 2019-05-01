@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control types, Text
 ms.assetid: ab0d0ada-8a71-4547-9c03-aadf675938f2
 ms.openlocfilehash: f98477117981504b9c4df43626c7bcb8c4088922
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996560"
 ---
 # <a name="ui-automation-support-for-the-text-control-type"></a>Metin Denetim Türü İçin UI Otomasyon Desteği
 > [!NOTE]
@@ -33,11 +33,11 @@ ms.locfileid: "59103785"
   
  Bir metin denetimi, tek başına bir etiket veya bir form üzerinde statik metin olarak kullanılabilir. Ayrıca y: yapısı içinde bulunabilir  
   
--   ListItem  
+- ListItem  
   
--   Treeıtem  
+- Treeıtem  
   
--   DataItem  
+- DataItem  
   
  Metin denetimi içerik görünümünde olabilir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] metin aracılığıyla genellikle görüntülendiğinden ağaç `NameProperty` başka bir denetim. Örneğin bir birleşik giriş kutusu denetimi etiketlemek için kullanılan metin denetiminin kullanıma sunulan `NameProperty` değeri. Birleşik giriş kutusu denetimi UI Otomasyon ağacı içerik görünümünde olduğundan, metin denetiminin olması gerekli değildir. Metin denetimlerini, 0 alt öğeleri her zaman içerik Görünümü'nde sahiptir.  
   
@@ -76,13 +76,13 @@ ms.locfileid: "59103785"
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Olay|Destek|Notlar|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|Gerekli|None|  
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|Gerekli|Yok.|  
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|Gerekli|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> özellik değişti olayı.|Gerekli|Yok.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> özellik değişti olayı.|Gerekli|Yok.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> özellik değişti olayı.|Gerekli|Yok.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> özellik değişti olayı.|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> özellik değişti olayı.|hiçbir zaman|None|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Gerekli|Yok.|  
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> özellik değişti olayı.|hiçbir zaman|Yok.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Gerekli|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Gerekli|None|  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 81acda4d395563fc8e0000e38036d1aaa0f14471
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62043230"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember Yöntemi
 Bir türün veya geçerli kapsam dışında tanımlanan ve bu başvuru için bir belirteç tanımlar modülü belirtilen üyesine bir başvuru oluşturur.  
@@ -72,11 +72,11 @@ HRESULT DefineImportMember (
   
  Genellikle, önce kullanırsınız `DefineImportMember` yöntemi oluşturmanız gerekir, geçerli kapsam, bir tür başvurusu veya hedef üyenin üst sınıf, arabirim veya modül için modülü başvurusu. Bu başvuru için meta veri belirteci sonra geçirilen `tkParent` bağımsız değişken. Derleyici veya bağlayıcı tarafından daha çözümlenir, hedef üyenin üst başvuru oluşturmak gerekmez. Özetlersek:  
   
--   Hedef alan veya yöntem üyesiyse, kullanın [Imetadataemit::definetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) veya [Imetadataemit::defineımporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) geçerli kapsamda bir tür başvurusu için oluşturmak üzere yöntemi Üyenin üst sınıfta veya üst arabirimi.  
+- Hedef alan veya yöntem üyesiyse, kullanın [Imetadataemit::definetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) veya [Imetadataemit::defineımporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) geçerli kapsamda bir tür başvurusu için oluşturmak üzere yöntemi Üyenin üst sınıfta veya üst arabirimi.  
   
--   Genel bir değişken veya genel işlev (diğer bir deyişle, bir üyesi değil bir sınıf veya arabirim) hedef üye ise kullanın [Imetadataemit::definemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) geçerli kapsamda üyenin üst için bir modül başvurusu oluşturmak için yöntemi Modül.  
+- Genel bir değişken veya genel işlev (diğer bir deyişle, bir üyesi değil bir sınıf veya arabirim) hedef üye ise kullanın [Imetadataemit::definemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) geçerli kapsamda üyenin üst için bir modül başvurusu oluşturmak için yöntemi Modül.  
   
--   Hedef üyenin üst daha sonra derleyici veya bağlayıcı tarafından çözümlenir, ardından geçirin `mdTokenNil` içinde `tkParent`. Tek senaryo, bu geçerlidir genel bir işlev olduğunda veya genel değişkeni geçerli bir modüle sonuçta bağlanacak bir .obj dosyasından içeri aktarılan ve meta veriler birleştirilir.  
+- Hedef üyenin üst daha sonra derleyici veya bağlayıcı tarafından çözümlenir, ardından geçirin `mdTokenNil` içinde `tkParent`. Tek senaryo, bu geçerlidir genel bir işlev olduğunda veya genel değişkeni geçerli bir modüle sonuçta bağlanacak bir .obj dosyasından içeri aktarılan ve meta veriler birleştirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

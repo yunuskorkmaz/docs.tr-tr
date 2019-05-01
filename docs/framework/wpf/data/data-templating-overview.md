@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
 ms.openlocfilehash: 98fff9ba84f386e93549fa94fe84f7b2b0fff5fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021550"
 ---
 # <a name="data-templating-overview"></a>Veri Şablonu Oluşturmaya Genel Bakış
 WPF veri şablonu oluşturma modeli, verilerinizin sunumu tanımlamak için büyük esneklik sağlar. WPF denetimleri verilerini sunumu özelleştirmeyi desteklemek için yerleşik işlevselliğe sahiptir. Bu konu öncelikle nasıl tanımlanacağını gösterir bir <xref:System.Windows.DataTemplate> ve ardından özel mantığı ve hiyerarşik veri görüntüleme desteği göre şablonları seçimini gibi diğer veri şablonu oluşturma özellikleri sunar.  

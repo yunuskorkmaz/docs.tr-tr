@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4433f05a76d389f6dda5afcfe898d942c4e7d05f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c07747c5100f6f7b7ee80b2e7e39d22362698e4
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59978529"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807839"
 ---
 # <a name="default-marshaling-for-strings"></a>Dizeler için Varsayılan Hazırlama
 
@@ -92,6 +92,7 @@ Aşağıdaki tabloda bir yöntemi bağımsız değişken bir platform çağırma
 |`UnmanagedType.BStr`|COM Stili `BSTR` önekli bir uzunluk ve Unicode karakter.|
 |`UnmanagedType.LPStr` (varsayılan)|Null ile sonlandırılmış bir dizi ANSI karakter işaretçisi.|
 |`UnmanagedType.LPTStr`|Null ile sonlandırılmış bir dizi platform bağımlı karakter işaretçisi.|
+|`UnmanagedType.LPUTF8Str`|UTF-8 null ile sonlandırılmış bir dizi işaretçi karakterleri kodlanmıştır.|
 |`UnmanagedType.LPWStr`|Null ile sonlandırılmış bir dizi Unicode karakter işaretçisi.|
 |`UnmanagedType.TBStr`|COM Stili `BSTR` önekli bir uzunluk ve platforma bağımlı karakter.|
 |`VBByRefStr`|Bir dizede değiştirilecek Visual Basic .NET sağlayan bir değer kod yönetilmeyen ve yönetilen kodda sonuçları yansıtılmasını. Bu değer, yalnızca platform çağırma için desteklenir. Visual Basic için varsayılan değer budur `ByVal` dizeleri.|
@@ -110,6 +111,8 @@ class StringLibAPI
     [DllImport("StringLib.dll")]
     public static extern void PassLPTStr([MarshalAs(UnmanagedType.LPTStr)] string s);
     [DllImport("StringLib.dll")]
+    public static extern void PassLPUTF8Str([MarshalAs(UnmanagedType.LPUTF8Str)] string s);
+    [DllImport("StringLib.dll")]
     public static extern void PassBStr([MarshalAs(UnmanagedType.BStr)] string s);
     [DllImport("StringLib.dll")]
     public static extern void PassAnsiBStr([MarshalAs(UnmanagedType.AnsiBStr)] string s);
@@ -120,18 +123,20 @@ class StringLibAPI
 
 ```vb
 Class StringLibAPI
-    Public Declare Auto Sub PassLPStr Lib "StringLib.dll" _
-        (<MarshalAs(UnmanagedType.LPStr)> s As String)
-    Public Declare Auto Sub PassLPWStr Lib "StringLib.dll" _
-        (<MarshalAs(UnmanagedType.LPWStr)> s As String)
-    Public Declare Auto Sub PassLPTStr Lib "StringLib.dll" _
-        (<MarshalAs(UnmanagedType.LPTStr)> s As String)
-    Public Declare Auto Sub PassBStr Lib "StringLib.dll" _
-        (<MarshalAs(UnmanagedType.BStr)> s As String)
-    Public Declare Auto Sub PassAnsiBStr Lib "StringLib.dll" _
-        (<MarshalAs(UnmanagedType.AnsiBStr)> s As String)
-    Public Declare Auto Sub PassTBStr Lib "StringLib.dll" _
-        (<MarshalAs(UnmanagedType.TBStr)> s As String)
+    Public Declare Auto Sub PassLPStr Lib "StringLib.dll" (
+        <MarshalAs(UnmanagedType.LPStr)> s As String)
+    Public Declare Auto Sub PassLPWStr Lib "StringLib.dll" (
+        <MarshalAs(UnmanagedType.LPWStr)> s As String)
+    Public Declare Auto Sub PassLPTStr Lib "StringLib.dll" (
+        <MarshalAs(UnmanagedType.LPTStr)> s As String)
+    Public Declare Auto Sub PassLPUTF8Str Lib "StringLib.dll" (
+        <MarshalAs(UnmanagedType.LPUTF8Str)> s As String)
+    Public Declare Auto Sub PassBStr Lib "StringLib.dll" (
+        <MarshalAs(UnmanagedType.BStr)> s As String)
+    Public Declare Auto Sub PassAnsiBStr Lib "StringLib.dll" (
+        <MarshalAs(UnmanagedType.AnsiBStr)> s As String)
+    Public Declare Auto Sub PassTBStr Lib "StringLib.dll" (
+        <MarshalAs(UnmanagedType.TBStr)> s As String)
 End Class
 ```
 
@@ -144,6 +149,7 @@ Dizeleri yapıları geçerli üyeleridir; Ancak, <xref:System.Text.StringBuilder
 |`UnmanagedType.BStr`|COM Stili `BSTR` önekli bir uzunluk ve Unicode karakter.|
 |`UnmanagedType.LPStr` (varsayılan)|Null ile sonlandırılmış bir dizi ANSI karakter işaretçisi.|
 |`UnmanagedType.LPTStr`|Null ile sonlandırılmış bir dizi platform bağımlı karakter işaretçisi.|
+|`UnmanagedType.LPUTF8Str`|UTF-8 null ile sonlandırılmış bir dizi işaretçi karakterleri kodlanmıştır.|
 |`UnmanagedType.LPWStr`|Null ile sonlandırılmış bir dizi Unicode karakter işaretçisi.|
 |`UnmanagedType.ByValTStr`|Karakter sabit uzunluklu dizi; dizi türü içeren yapı karakter kümesi tarafından belirlenir.|
 

@@ -11,8 +11,8 @@ ms.openlocfilehash: fd618852c2d0650f168edf8dac53931216fc3a9b
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014043"
 ---
 # <a name="how-to-check-connection-status-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te bağlantı durumunu denetleyin
 <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> Özelliği, bilgisayar bir çalışma ağ veya Internet bağlantısı olup olmadığını belirlemek için kullanılabilir.  
@@ -21,7 +21,7 @@ ms.locfileid: "59974454"
   
 ### <a name="to-check-whether-a-computer-has-a-working-connection"></a>Bir bilgisayarda çalışan bir bağlantı olup olmadığını denetlemek için  
   
--   Belirlemek olmadığını `IsAvailable` özelliği `True` veya `False`. Aşağıdaki kod, özelliğin durumunu denetler ve rapor:  
+- Belirlemek olmadığını `IsAvailable` özelliği `True` veya `False`. Aşağıdaki kod, özelliğin durumunu denetler ve rapor:  
   
      [!code-vb[VbResourceTasks#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#3)]  
   

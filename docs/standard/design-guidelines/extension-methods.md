@@ -1,17 +1,17 @@
 ---
-title: Uzantı Metotları
+title: Genişletme Yöntemleri
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: KrzysztofCwalina
 ms.openlocfilehash: bd5f67c3bd766625e7c22b3ca9986cfbca8854bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026425"
 ---
-# <a name="extension-methods"></a>Uzantı Metotları
+# <a name="extension-methods"></a>Genişletme Yöntemleri
 Genişletme yöntemleri örnek yöntem çağrısı sözdizimi kullanılarak çağrılabilir için statik yöntemler sağlayan bir dil özelliğidir. Bu yöntemler üzerinde çalışılacak yöntemidir örneği temsil eden en az bir parametre almalıdır.  
   
  Bu tür genişletme yöntemlerini sınıfı "sponsor" sınıf olarak adlandırılır ve statik olarak bildirilmelidir. Genişletme yöntemleri kullanmak için bir sponsor sınıfı tanımlayan ad alanı içe aktarmanız gerekir.  
@@ -22,9 +22,9 @@ Genişletme yöntemleri örnek yöntem çağrısı sözdizimi kullanılarak ça�
   
  **✓ CONSIDER** genişletme yöntemleri aşağıdaki senaryolardan birini kullanarak:  
   
--   Yardımcısı sağlamak açısından temel arabirimi işlevselliği söyledi, ilgili arabirim, her bir uygulama için işlevselliği yazılabilir. Somut uygulamalarını aksi arabirimlerine atama yapılamaz olmasıdır. Örneğin, `LINQ to Objects` işleçlerini genişletme yöntemleri tüm uygulanır <xref:System.Collections.Generic.IEnumerable%601> türleri. Bu nedenle, tüm `IEnumerable<>` LINQ özellikli otomatik olarak uygulamasıdır.  
+- Yardımcısı sağlamak açısından temel arabirimi işlevselliği söyledi, ilgili arabirim, her bir uygulama için işlevselliği yazılabilir. Somut uygulamalarını aksi arabirimlerine atama yapılamaz olmasıdır. Örneğin, `LINQ to Objects` işleçlerini genişletme yöntemleri tüm uygulanır <xref:System.Collections.Generic.IEnumerable%601> türleri. Bu nedenle, tüm `IEnumerable<>` LINQ özellikli otomatik olarak uygulamasıdır.  
   
--   Bazı tür bağımlı, ancak böyle bir bağımlılık bir örnek yöntemi zaman gösterebileceği bağımlılık Yönetimi kurallarını bölün. Örneğin, bir bağımlılık <xref:System.String> için <xref:System.Uri?displayProperty=nameWithType> olduğu gibi olmayabilir ve bu nedenle `String.ToUri()` döndüren örnek yöntem `System.Uri` bağımlılık yönetimi açısından yanlış bir tasarım olur. Bir statik genişletme yöntemi `Uri.ToUri(this string str)` döndüren `System.Uri` bir çok daha iyi bir tasarım olur.  
+- Bazı tür bağımlı, ancak böyle bir bağımlılık bir örnek yöntemi zaman gösterebileceği bağımlılık Yönetimi kurallarını bölün. Örneğin, bir bağımlılık <xref:System.String> için <xref:System.Uri?displayProperty=nameWithType> olduğu gibi olmayabilir ve bu nedenle `String.ToUri()` döndüren örnek yöntem `System.Uri` bağımlılık yönetimi açısından yanlış bir tasarım olur. Bir statik genişletme yöntemi `Uri.ToUri(this string str)` döndüren `System.Uri` bir çok daha iyi bir tasarım olur.  
   
  **X AVOID** üzerinde genişletme yöntemleri tanımlama <xref:System.Object?displayProperty=nameWithType>.  
   

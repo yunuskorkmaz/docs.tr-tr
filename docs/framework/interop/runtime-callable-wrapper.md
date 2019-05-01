@@ -11,11 +11,11 @@ ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5a4a2f59ee81ac7884050f588d9bd437977490e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032805"
 ---
 # <a name="runtime-callable-wrapper"></a>Çalışma Zamanı Aranabilir Sarmalayıcısı
 Ortak dil çalışma zamanı, COM nesneleri çalışma zamanı çağrılabilir sarmalayıcı (RCW) adlı bir ara sunucu aracılığıyla kullanıma sunar. RCW, .NET istemcileri için normal bir nesne görünmesine karşın, birincil bir .NET istemcisi ve COM nesnesi arasındaki çağrıların sıralamakta işlevidir.  

@@ -3,11 +3,11 @@ title: İşlevler (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 52b3d776-5acc-4f69-b614-5a43ce56ef9f
 ms.openlocfilehash: f31f829b53160da5a043617b9aa999b398859f17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034170"
 ---
 # <a name="functions-entity-sql"></a>İşlevler (varlık SQL)
 Entity SQL kullanıcı tanımlı işlevler, kurallı işlevler ve sağlayıcıya özgü işlevleri destekler. Kullanıcı tanımlı işlevler kavramsal model veya satır içi sorgu belirtilmiş. Daha fazla bilgi için [kullanıcı tanımlı işlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).  

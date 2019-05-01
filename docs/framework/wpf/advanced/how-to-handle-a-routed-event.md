@@ -9,11 +9,11 @@ helpviewer_keywords:
 - bubbling events [WPF]
 ms.assetid: 157787b4-f469-4047-8777-5b034145f32e
 ms.openlocfilehash: edb3d6724af89b7e85986c50b579084e3c4e5070
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001513"
 ---
 # <a name="how-to-handle-a-routed-event"></a>Nasıl yapılır: Yönlendirilmiş Olayı İşleme
 Bu örnek nasıl tırmanma olayları iş ve nasıl yönlendirilmiş olay verileri işleyen bir işleyici yazılacağını gösterir.  

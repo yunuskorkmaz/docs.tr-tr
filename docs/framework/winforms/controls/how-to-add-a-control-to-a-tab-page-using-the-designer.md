@@ -7,11 +7,11 @@ helpviewer_keywords:
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
 ms.openlocfilehash: f30db784a51c98aebaa8b95926bc8c62003ee390
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011248"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak bir Sekme Sayfasına Denetim Ekleme
 Windows Forms kullanımını <xref:System.Windows.Forms.TabControl> düzenli bir şekilde diğer denetimleri görüntülemektir. Bir sekme sayfası ana parçası üzerinde bir resim görüntülemek için bu yönergeleri kullanabilirsiniz. Simge bir sekme sayfası etiket parçası ekleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms Tabcontrol'un görünüşünü değiştirme](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  

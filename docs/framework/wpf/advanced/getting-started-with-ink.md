@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 4309b1108b2ea96eb298ff3bb876a0f63b80dc32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d633111c5abc572b0fc27c1a5b32050681504073
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343603"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807947"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>WPF mürekkep ile çalışmaya başlama
 
@@ -104,7 +104,7 @@ Yordam kodundan tüm WPF özelliklerine erişebilirsiniz. Tüm XAML kullanmayan 
 
 1. Sağ tıklayarak PresentationCore PresentationFramework ve WindowsBase derlemelere başvurular ekleyin **başvuruları** içinde **Çözüm Gezgini** seçip **BaşvuruEkle**.
 
-   ![Başvuru Yöneticisi PresentationCore ve PresentationFramework gösteriliyor](./media/getting-started-with-ink/references.png)
+   ![Başvuru Yöneticisi PresentationCore ve PresentationFramework gösteriliyor](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
 
 1. Tuşlarına basarak uygulamayı derleyin **F5**.
 

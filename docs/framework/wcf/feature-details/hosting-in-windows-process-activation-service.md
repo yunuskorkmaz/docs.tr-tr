@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
 ms.openlocfilehash: 5b234a00f3194fcf40a33d25302cff16d5999b05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039383"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows İşlem Etkinleştirme Hizmetinde Barındırma
 Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları Windows Communication Foundation (WCF) hizmetlerini barındırmak içeren çalışan işlemleri yaşam süresini yönetir. WAS işlem modelini genelleştirir [!INCLUDE[iis601](../../../../includes/iis601-md.md)] HTTP sunucusu, HTTP bağımlılığını kaldırarak işlem modeli. Bu, hem HTTP hem de ileti tabanlı etkinleştirme destekleyen ve çok sayıda belirli bir makinede uygulamaları barındırmak için eklenebilir bir barındırma ortamında Net.TCP gibi HTTP olmayan protokolleri kullanmak WCF hizmetleri sağlar.  
@@ -18,13 +18,13 @@ Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları Win
   
  WAS işlem modeli, uygulamaların daha sağlam, daha kolay yönetilebilir ve kaynakları verimli kullanan bir biçimde barındırılmasına olanak sağlayan birçok özellik sunar:  
   
--   İleti tabanlı etkinleştirme uygulamaların ve çalışan işlem uygulamaları başlatabilir ve yanıt olarak HTTP ve HTTP olmayan protokolleri kullanarak gelen gelen iş öğelerini dinamik olarak durdurabilirsiniz.  
+- İleti tabanlı etkinleştirme uygulamaların ve çalışan işlem uygulamaları başlatabilir ve yanıt olarak HTTP ve HTTP olmayan protokolleri kullanarak gelen gelen iş öğelerini dinamik olarak durdurabilirsiniz.  
   
--   Güçlü uygulama ve çalışan işlemi geri dönüştürme çalışan uygulamaların durumunu korumak üzere.  
+- Güçlü uygulama ve çalışan işlemi geri dönüştürme çalışan uygulamaların durumunu korumak üzere.  
   
--   Merkezi uygulama yapılandırması ve yönetimi.  
+- Merkezi uygulama yapılandırması ve yönetimi.  
   
--   Dağıtım ayak izine tam IIS yüklemeye gerek kalmadan IIS işlem modelini yararlanmak uygulamaları sağlar.  
+- Dağıtım ayak izine tam IIS yüklemeye gerek kalmadan IIS işlem modelini yararlanmak uygulamaları sağlar.  
   
  WAS özellikler hakkında daha fazla bilgi için bkz. [IIS 7.0 Beta: IIS 7.0 Web Yönetim](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010546"
 ---
 # <a name="dependency-property-value-precedence"></a>Bağımlılık Özelliği Değer Önceliği
 <a name="introduction"></a> Bu konu açıklar nasıl işleyişini [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sistemi bir bağımlılık özelliğinin değeri etkileyebilir ve hangi yönlerini özelliği tarafından sistemi geçerli etkili bir özelliğinin değerini için öncelik açıklar.  
@@ -47,9 +47,9 @@ ms.locfileid: "59315692"
   
 4. **TemplatedParent şablonu özellikleri.** Bir öğeye sahip bir <xref:System.Windows.FrameworkElement.TemplatedParent%2A> bir şablonunun bir parçası oluşturulmuş olsa bile (bir <xref:System.Windows.Controls.ControlTemplate> veya <xref:System.Windows.DataTemplate>). Bu geçerli olduğunda hakkında daha fazla bilgi için bkz [TemplatedParent](#templatedparent) bu konuda. Şablon içerisinde, aşağıdaki öncelik geçerlidir:  
   
-    1.  Gelen tetikler <xref:System.Windows.FrameworkElement.TemplatedParent%2A> şablonu.  
+    1. Gelen tetikler <xref:System.Windows.FrameworkElement.TemplatedParent%2A> şablonu.  
   
-    2.  Özellik kümeleri (genellikle ile [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] öznitelikler) içinde <xref:System.Windows.FrameworkElement.TemplatedParent%2A> şablonu.  
+    2. Özellik kümeleri (genellikle ile [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] öznitelikler) içinde <xref:System.Windows.FrameworkElement.TemplatedParent%2A> şablonu.  
   
 5. **Örtük stil.** Yalnızca geçerli `Style` özelliği. `Style` Özelliği herhangi bir stil kaynağı tarafından o öğenin türüyle eşleşen bir anahtar ile doldurulur. Stil kaynağı sayfası veya uygulama olması gerekir. Temalar bir örtük stil kaynağı için arama devam etmez.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "59315692"
   
 9. **Varsayılan (tema) stili.** Bu geçerli olduğunda ve tema stilleri şablonlarında tema stilleri nasıl ilişki kuracağını hakkında daha fazla bilgi için bkz: [(tema) varsayılan stillerini](#themestyles) bu konunun devamındaki. Varsayılan stil içinde aşağıdaki öncelik sırası uygular:  
   
-    1.  Tema stili etkin tetikler.  
+    1. Tema stili etkin tetikler.  
   
-    2.  Tema stilde ayarlayıcı.  
+    2. Tema stilde ayarlayıcı.  
   
 10. **Devralma.** Bunlar özellikle uygulamanın tamamında her öğe üzerinde ayarlanmaması olacak şekilde birkaç bağımlılık özellikleri değerleri alt öğeleri için üst öğeden devralır. Ayrıntılar için bkz. [özellik değeri kalıtımı](property-value-inheritance.md).  
   
@@ -77,11 +77,11 @@ ms.locfileid: "59315692"
 ## <a name="the-style-property"></a>Stil özelliği  
  Daha önce açıklanan arama düzenini dışındaki tüm olası bağımlılık özellikleri için geçerlidir: <xref:System.Windows.FrameworkElement.Style%2A> özelliği. <xref:System.Windows.FrameworkElement.Style%2A> Özelliği benzersiz olduğundan, bunu kendi stil olamaz, 5 ila 8 öncelikli öğeleri geçerli olmadığı için. Ayrıca animasyon ekleme veya zorlama <xref:System.Windows.FrameworkElement.Style%2A> kullanılmaması önerilir (ve animasyon <xref:System.Windows.FrameworkElement.Style%2A> özel animasyon sınıfı gerektirir). Bu, üç şekilde bırakır <xref:System.Windows.FrameworkElement.Style%2A> özelliği ayarlanmış olması:  
   
--   **Açık stili.** <xref:System.Windows.FrameworkElement.Style%2A> Özelliği doğrudan ayarlayın. Çoğu senaryoda stili satır içi olarak tanımlanan değildir, ancak bunun yerine bir kaynak olarak açık anahtar tarafından başvuruluyor. Bu durumda, yerel bir değer, öncelik madde 3'ymiş gibi Style özelliği işlevi görür.  
+- **Açık stili.** <xref:System.Windows.FrameworkElement.Style%2A> Özelliği doğrudan ayarlayın. Çoğu senaryoda stili satır içi olarak tanımlanan değildir, ancak bunun yerine bir kaynak olarak açık anahtar tarafından başvuruluyor. Bu durumda, yerel bir değer, öncelik madde 3'ymiş gibi Style özelliği işlevi görür.  
   
--   **Örtük stil.** <xref:System.Windows.FrameworkElement.Style%2A> Özelliği doğrudan ayarlanmadı. Ancak, <xref:System.Windows.FrameworkElement.Style%2A> düzeyde kaynak arama sırası (sayfası, uygulama) varsa ve stili, uygulanacak türüyle eşleşen bir kaynak anahtarı kullanılarak Anahtarlanan. Bu durumda, <xref:System.Windows.FrameworkElement.Style%2A> özelliğinin kendisini davranır dizideki öğe 5 olarak tanımlanmış bir önceliğe göre. Bu durum kullanarak algılanabilir <xref:System.Windows.DependencyPropertyHelper> karşı <xref:System.Windows.FrameworkElement.Style%2A> özelliği ve örnek kod <xref:System.Windows.BaseValueSource.ImplicitStyleReference> sonuçları.  
+- **Örtük stil.** <xref:System.Windows.FrameworkElement.Style%2A> Özelliği doğrudan ayarlanmadı. Ancak, <xref:System.Windows.FrameworkElement.Style%2A> düzeyde kaynak arama sırası (sayfası, uygulama) varsa ve stili, uygulanacak türüyle eşleşen bir kaynak anahtarı kullanılarak Anahtarlanan. Bu durumda, <xref:System.Windows.FrameworkElement.Style%2A> özelliğinin kendisini davranır dizideki öğe 5 olarak tanımlanmış bir önceliğe göre. Bu durum kullanarak algılanabilir <xref:System.Windows.DependencyPropertyHelper> karşı <xref:System.Windows.FrameworkElement.Style%2A> özelliği ve örnek kod <xref:System.Windows.BaseValueSource.ImplicitStyleReference> sonuçları.  
   
--   **Varsayılan Stil**olarak da bilinen **tema stili.** <xref:System.Windows.FrameworkElement.Style%2A> Özelliği doğrudan ayarlı değil ve aslında olarak okuyacaksa `null` gönderinizi çalıştırma. Bu durumda, stili parçası olan çalışma zamanı teması değerlendirmesinden gelen gelen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sunu altyapısı.  
+- **Varsayılan Stil**olarak da bilinen **tema stili.** <xref:System.Windows.FrameworkElement.Style%2A> Özelliği doğrudan ayarlı değil ve aslında olarak okuyacaksa `null` gönderinizi çalıştırma. Bu durumda, stili parçası olan çalışma zamanı teması değerlendirmesinden gelen gelen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sunu altyapısı.  
   
  İçin örtük stiller Temalar içinde değil, tam olarak - türüyle eşleşmelidir bir `MyButton` `Button`-türetilmiş sınıf için bir stil örtük olarak kullanmaz `Button`.  
   

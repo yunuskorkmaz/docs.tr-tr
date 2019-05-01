@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
 ms.openlocfilehash: 784072ecd133333dec13509d0ac10c69b2161cf8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034404"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>DataView’dan DataTable Oluşturma
 Verileri bir veri kaynağından alınan ve doldurduktan sonra bir <xref:System.Data.DataTable> verilerle, sıralama, filtreleme veya aksi halde tekrar almadan döndürülen verileri sınırlamak isteyebilirsiniz. <xref:System.Data.DataView> Sınıfı bunu mümkün kılar. Ayrıca, yeni bir oluşturmanız gerekir, <xref:System.Data.DataTable> gelen <xref:System.Data.DataView>, kullanabileceğiniz <xref:System.Data.DataView.ToTable%2A> tüm satırları ve sütunları veya verilerin bir alt kümesini yeni kopyalamak için yöntemi <xref:System.Data.DataTable>. <xref:System.Data.DataView.ToTable%2A> Yöntemi için aşırı yüklemeler sağlar:  
   
--   Oluşturma bir <xref:System.Data.DataTable> sütunların bir alt kümesi olan sütunlar içeren <xref:System.Data.DataView>.  
+- Oluşturma bir <xref:System.Data.DataTable> sütunların bir alt kümesi olan sütunlar içeren <xref:System.Data.DataView>.  
   
--   Oluşturma bir <xref:System.Data.DataTable> yalnızca ayrı satırları içeren <xref:System.Data.DataView>, Transact-SQL'de DISTINCT anahtar sözcüğüne öğesine için.  
+- Oluşturma bir <xref:System.Data.DataTable> yalnızca ayrı satırları içeren <xref:System.Data.DataView>, Transact-SQL'de DISTINCT anahtar sözcüğüne öğesine için.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki konsol uygulama örneği oluşturur bir <xref:System.Data.DataTable> verileri içeren **Person.Contact** tablosundaki **AdventureWorks** örnek veritabanı. Ardından, örnek bir sıralanmış oluşturur ve filtrelenmiş <xref:System.Data.DataView> göre <xref:System.Data.DataTable>. İçeriğini görüntüleme sonra <xref:System.Data.DataTable> ve <xref:System.Data.DataView>, yeni bir örnek oluşturur <xref:System.Data.DataTable> gelen <xref:System.Data.DataView> çağırarak <xref:System.Data.DataView.ToTable%2A> kullanılabilir sütunların yalnızca bir alt seçme yöntemi. Son olarak, örnek yeni içeriğini görüntüler <xref:System.Data.DataTable>.  

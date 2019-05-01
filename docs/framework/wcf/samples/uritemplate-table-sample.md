@@ -3,22 +3,22 @@ title: UriTemplate Tablo Örneği
 ms.date: 03/30/2017
 ms.assetid: 5dd1d38f-1989-4c64-820d-821f5a02216a
 ms.openlocfilehash: 4543d4676344d10c3e380c3522a7ca5a6a8d6294
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59293969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006453"
 ---
 # <a name="uritemplate-table-sample"></a>UriTemplate Tablo Örneği
 <xref:System.UriTemplateTable> Sınıfı bir dizi birlikte çalışmak için bir sözlük benzeri ilişkilendirilebilir tablo yapısı sağlar `UriTemplate` örnekleri. Belirli Tekdüzen Kaynak Tanımlayıcıları (URI'lar) verimli bir şekilde tablosundaki tüm şablonları karşı eşleştirilebildiği ve eşleşen şablonuyla ilişkili veriler alınabilir.  
   
  Bu örnek, ilgili aşağıdaki temel kavramları gösterir `UriTemplateTable` sınıfı:  
   
--   Örnekleme için söz dizimi bir `UriTemplateTable`.  
+- Örnekleme için söz dizimi bir `UriTemplateTable`.  
   
--   Doldurma bir `UriTemplateTable` anahtar/değer çiftleri kümesi.  
+- Doldurma bir `UriTemplateTable` anahtar/değer çiftleri kümesi.  
   
--   Tabloyu kullanarak karşı bir aday URI eşleşen <xref:System.UriTemplateTable.MatchSingle%2A>.  
+- Tabloyu kullanarak karşı bir aday URI eşleşen <xref:System.UriTemplateTable.MatchSingle%2A>.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   

@@ -3,11 +3,11 @@ title: Yönlendirme Hizmeti ile Merhaba Dünya
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
 ms.openlocfilehash: 37d2eaffa1ca5a4cce27c4950d00987828a61196
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006609"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Yönlendirme Hizmeti ile Merhaba Dünya
 Bu örnek, Windows Communication Foundation (WCF) yönlendirme hizmeti gösterir. Yönlendirme hizmeti, içerik tabanlı bir yönlendirici uygulamanıza dahil etmek kolay bir WCF bileşenidir. Bu örnek, yönlendirme hizmeti kullanarak iletişim kurmak için standart WCF hesaplayıcı örnek uyum sağlar. Bu örnekte, hesaplayıcı istemci yönlendirici tarafından sunulan bir uç noktaya iletileri göndermek için yapılandırılır. Yönlendirme hizmeti, kendisine gönderilen tüm iletileri kabul etmesini ve hesaplayıcı hizmetine karşılık gelen bir uç nokta iletmek için yapılandırılır. Bu nedenle istemci tarafından gönderilen iletileri yönlendirici tarafından alınan ve gerçek hesaplayıcı hizmete yeniden yönlendirilen. Hesaplayıcı hizmetinden gelen iletileri hangi sırayla bunları hesaplayıcı istemciye aktarır yeniden yönlendiriciye gönderilir.
@@ -21,9 +21,9 @@ Bu örnek, Windows Communication Foundation (WCF) yönlendirme hizmeti gösterir
     > [!NOTE]
     >  F5 tuşuna basarsanız, hesaplayıcı istemci otomatik olarak başlar. CTRL + SHIFT + B (derleme) tuşuna basarsanız, kendiniz uygulamaları başlatmanız gerekir.
     >
-    > 1.  Hesaplayıcı istemci (./CalculatorClient/bin/client.exe
-    > 2.  Hesaplayıcı hizmeti (. / CalculatorService/bin/service.exe)
-    > 3.  Yönlendirme Hizmeti (. / RoutingService/bin/RoutingService.exe)
+    > 1. Hesaplayıcı istemci (./CalculatorClient/bin/client.exe
+    > 2. Hesaplayıcı hizmeti (. / CalculatorService/bin/service.exe)
+    > 3. Yönlendirme Hizmeti (. / RoutingService/bin/RoutingService.exe)
 
 3. İstemcisini başlatmak için ENTER tuşuna basın.
 

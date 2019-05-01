@@ -18,26 +18,26 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
 ms.openlocfilehash: da535da0b0d1416597d2a62a96cec544d7be68fb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011820"
 ---
 # <a name="backgroundworker-component-overview"></a>BackgroundWorker Bileşenine Genel Bakış
 Yürütmek için uzun bir zaman alabilir çok sık gerçekleştirilen işlemler vardır. Örneğin:  
   
--   Görüntüyü indirir  
+- Görüntüyü indirir  
   
--   Web hizmeti çağrıları  
+- Web hizmeti çağrıları  
   
--   Dosya indirir ve yükler (eşler arası uygulamalar dahil)  
+- Dosya indirir ve yükler (eşler arası uygulamalar dahil)  
   
--   Karmaşık yerel hesaplamalar  
+- Karmaşık yerel hesaplamalar  
   
--   Veritabanı işlemleri  
+- Veritabanı işlemleri  
   
--   Göreli bellek erişimi yavaş hızını verilen, yerel disk erişimi  
+- Göreli bellek erişimi yavaş hızını verilen, yerel disk erişimi  
   
  Bunlar gibi işlemler, bunlar çalışırken kesmek, kullanıcı arabirimi neden olabilir. Duyarlı bir kullanıcı Arabirimi istediğiniz ve uzun gecikmeler gibi işlemlerle ilişkili ile karşı karşıya kalmaktadır <xref:System.ComponentModel.BackgroundWorker> bileşeni, uygun bir çözüm sağlar.  
   

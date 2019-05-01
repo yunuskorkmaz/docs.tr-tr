@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
 ms.openlocfilehash: 079decb76b45566f354418d671145f0c284628c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007740"
 ---
 # <a name="tracing-and-message-logging"></a>İleti İzleme ve Kaydetme
 Bu örnek, izleme ve ileti günlüğe kaydetmeyi etkinleştirme gösterir. Sonuçta elde edilen izleme ve ileti günlüklerini kullanarak görüntülenen [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -52,11 +52,11 @@ Bu örnek, izleme ve ileti günlüğe kaydetmeyi etkinleştirme gösterir. Sonu�
   
  Kullanıcı tanımlı etkinlik izlemeleri oluşturarak ServiceModel tarafından sağlanan izleme genişletmek mümkündür. Kullanıcı tanımlı Etkinlik izleme için izleme etkinliklerin oluşturmasına olanak tanır:  
   
--   Grup izlemeleri içine mantıksal iş birimleri.  
+- Grup izlemeleri içine mantıksal iş birimleri.  
   
--   Etkinlikleri aktarımları ve yayma ile ilişkilendirin.  
+- Etkinlikleri aktarımları ve yayma ile ilişkilendirin.  
   
--   WCF izleme (örneğin, bir günlük dosyası disk alanı maliyeti) performans maliyeti azalır.  
+- WCF izleme (örneğin, bir günlük dosyası disk alanı maliyeti) performans maliyeti azalır.  
   
  Kullanıcı tanımlı Etkinlik izleme hakkında daha fazla bilgi için lütfen bkz [genişletme izleme](../../../../docs/framework/wcf/samples/extending-tracing.md) örnek.  
   

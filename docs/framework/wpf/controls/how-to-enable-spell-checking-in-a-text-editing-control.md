@@ -12,11 +12,11 @@ helpviewer_keywords:
 - checking spelling [WPF]
 ms.assetid: 6f953d2b-67e8-4012-84ce-53c0e958da47
 ms.openlocfilehash: 7381bafc349506d89058581e9ed62a4348a72865
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031953"
 ---
 # <a name="how-to-enable-spell-checking-in-a-text-editing-control"></a>Nasıl yapılır: Metin Düzenleme Denetiminde Yazım Denetimini Etkinleştirme
 Aşağıdaki örnek gerçek zamanlı yazım denetimini etkinleştirme gösterilmiştir bir <xref:System.Windows.Controls.TextBox> kullanarak <xref:System.Windows.Controls.SpellCheck.IsEnabled%2A> özelliği <xref:System.Windows.Controls.SpellCheck> sınıfı.  

@@ -1,5 +1,5 @@
 ---
-title: Şema derleme için XmlSchemaSet
+title: Şema Derleme için XmlSchemaSet
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e56680a74bc6800242ff56d27bcf179ee372df74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026841"
 ---
-# <a name="xmlschemaset-for-schema-compilation"></a>Şema derleme için XmlSchemaSet
+# <a name="xmlschemaset-for-schema-compilation"></a>Şema Derleme için XmlSchemaSet
 Açıklar <xref:System.Xml.Schema.XmlSchemaSet>, burada XML Şeması Tanım Dili (XSD) şemaları depolanabilir ve doğrulanmış bir önbellek.  
   
 ## <a name="the-xmlschemaset-class"></a>XmlSchemaSet sınıfı  
@@ -37,9 +37,9 @@ Açıklar <xref:System.Xml.Schema.XmlSchemaSet>, burada XML Şeması Tanım Dili
 ## <a name="migrating-to-the-xmlschemaset"></a>Geçiş için XmlSchemaSet  
  Aşağıdaki kod örneği yeni geçiş için bir kılavuz sağlar <xref:System.Xml.Schema.XmlSchemaSet> eski sınıftan <xref:System.Xml.Schema.XmlSchemaCollection> sınıfı. Kod örneği, iki sınıf arasındaki aşağıdaki temel farklar gösterilmektedir.  
   
--   Farklı <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaCollection> sınıfı çağrılırken, şemalar derlenmiş değil <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaSet>. <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> Yöntemi <xref:System.Xml.Schema.XmlSchemaSet> örnek kodda açıkça çağrılır.  
+- Farklı <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaCollection> sınıfı çağrılırken, şemalar derlenmiş değil <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaSet>. <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> Yöntemi <xref:System.Xml.Schema.XmlSchemaSet> örnek kodda açıkça çağrılır.  
   
--   Üzerinden yinelemek için bir <xref:System.Xml.Schema.XmlSchemaSet>, kullanmanız gereken <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> özelliği <xref:System.Xml.Schema.XmlSchemaSet>.  
+- Üzerinden yinelemek için bir <xref:System.Xml.Schema.XmlSchemaSet>, kullanmanız gereken <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> özelliği <xref:System.Xml.Schema.XmlSchemaSet>.  
   
  Aşağıdaki kullanılmıyor <xref:System.Xml.Schema.XmlSchemaCollection> kod örneği.  
   

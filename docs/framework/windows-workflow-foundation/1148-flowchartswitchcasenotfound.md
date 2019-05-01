@@ -3,11 +3,11 @@ title: 1148 - FlowchartSwitchCaseNotFound
 ms.date: 03/30/2017
 ms.assetid: 9ee7fcee-e040-4306-968e-ed840a1cb00c
 ms.openlocfilehash: 7e96b5b7652d404e6fdbe2c04c6a4069ca78f20f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33511965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009922"
 ---
 # <a name="1148---flowchartswitchcasenotfound"></a>1148 - FlowchartSwitchCaseNotFound
 ## <a name="properties"></a>Özellikler  
@@ -15,19 +15,19 @@ ms.locfileid: "33511965"
 |||  
 |-|-|  
 |Kimlik|1148|  
-|Anahtar Sözcükler|WFActivities|  
+|anahtar sözcükler|WFActivities|  
 |Düzey|Bilgiler|  
 |Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
   
 ## <a name="description"></a>Açıklama  
- Eşleşen bir durumda ya da bir akış çizelgesi anahtar varsayılan durumda bulunamadı gösterir. Akış Çizelgesi yürütme sona erer.  
+ Eşleşen servis talebi ya da bir akış anahtar varsayılan durumda bulunamadı gösterir. Akış Çizelgesi yürütme sona erecek.  
   
 ## <a name="message"></a>İleti  
- Akış Çizelgesi ' %1'/FlowSwitch - bulma örneği etkinlik ne varsayılan deyimin sonucu eşleşen bir durumda. Akış Çizelgesi yürütme sona erer.  
+ Akış ' %1'/FlowSwitch - bir servis talebi etkinliği ne varsayılan ifade sonucu eşleşen servis talebi bulun. Akış Çizelgesi yürütme sona erecek.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|Akış Çizelgesi|xs: String|Akış görünen adı.|  
-|AppDomain|xs: String|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|Akış Çizelgesi|xs:string|Akış görünen adı.|  
+|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|

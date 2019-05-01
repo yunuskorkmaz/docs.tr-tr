@@ -6,11 +6,11 @@ helpviewer_keywords:
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
 ms.openlocfilehash: e3ca5193db9dbcb4674680884a6372e6383c0852
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014355"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>Bilgisayar Bağlantı Noktalarına Erişme (Visual Basic)
 `My.Computer.Ports` Nesnesi, bir özellik ve bilgisayar ile seri bağlantı noktalarına erişmek için bir yöntem sağlar.  

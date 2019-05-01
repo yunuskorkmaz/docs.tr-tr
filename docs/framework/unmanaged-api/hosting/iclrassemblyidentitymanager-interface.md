@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b209e568b1e65ed785155d045cd48d1248672da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985042"
 ---
 # <a name="iclrassemblyidentitymanager-interface"></a>ICLRAssemblyIdentityManager Arabirimi
 Derlemeler hakkında ortak dil çalışma zamanı (CLR) ile konak arasındaki iletişimi desteklemek için yöntemler sağlar.  

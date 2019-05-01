@@ -3,11 +3,11 @@ title: OperationContext Erişimi
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
 ms.openlocfilehash: c104ceb22117d7cc53050a6513a4aea58fdff8c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005608"
 ---
 # <a name="accessing-operationcontext"></a>OperationContext Erişimi
 Bu örnek gösterir nasıl Mesajlaşma etkinlikleri (<xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.Send>) bir özel kapsam etkinliğiyle erişmek için kullanılan <xref:System.ServiceModel.OperationContext.Current%2A> ve ekleyebilir veya bir giden veya gelen ileti içinde bir özel ileti üst bilgisi alınamıyor.  
@@ -28,13 +28,13 @@ Bu örnek gösterir nasıl Mesajlaşma etkinlikleri (<xref:System.ServiceModel.A
   
 2. URL ACL eklendikten sonra aşağıdaki adımları kullanın.  
   
-    1.  Çözümü oluşturun.  
+    1. Çözümü oluşturun.  
   
-    2.  Çözüme sağ tıklayıp seçerek birden çok başlangıç projesi ayarlama **başlangıç projelerini Ayarla**.  
+    2. Çözüme sağ tıklayıp seçerek birden çok başlangıç projesi ayarlama **başlangıç projelerini Ayarla**.  
   
-    3.  Ekleme **hizmet** ve **istemci** (bu sırayla) birden çok başlangıç projesi olarak.  
+    3. Ekleme **hizmet** ve **istemci** (bu sırayla) birden çok başlangıç projesi olarak.  
   
-    4.  Uygulamayı çalıştırın. İstemci Konsolu iki kez çalışan bir iş akışı gösterir ve bu iş akışı örnek kimliği hizmet verme penceresi gösterir.  
+    4. Uygulamayı çalıştırın. İstemci Konsolu iki kez çalışan bir iş akışı gösterir ve bu iş akışı örnek kimliği hizmet verme penceresi gösterir.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

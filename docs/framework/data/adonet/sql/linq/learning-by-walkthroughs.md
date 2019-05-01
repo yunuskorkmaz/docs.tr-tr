@@ -3,11 +3,11 @@ title: İzlenecek Yollarla Öğrenme
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
 ms.openlocfilehash: 611644ce9d6f95bc4113b81bfff36ecaf9cf0b4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033541"
 ---
 # <a name="learning-by-walkthroughs"></a>İzlenecek Yollarla Öğrenme
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Belgeler birkaç izlenecek yollar sağlar. Bu konu (sorun giderme dahil) bazı genel kılavuz sorunları ele alır ve hakkında bilgi almak için birkaç adım izlenecek yollar için bağlantılar sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -30,20 +30,20 @@ ms.locfileid: "59329316"
 ## <a name="general"></a>Genel  
  Aşağıdaki bilgiler, bu izlenecek yollar için genel ilgilidir:  
   
--   Ortam: Her [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] izlenecek yol, Visual Studio tümleşik geliştirme ortamı (IDE) kullanır.  
+- Ortam: Her [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] izlenecek yol, Visual Studio tümleşik geliştirme ortamı (IDE) kullanır.  
   
--   SQL altyapısı: Bu izlenecek yollar, SQL Server Express kullanarak uygulanacak yazılır. SQL Server Express yoksa, ücretsiz olarak indirebilirsiniz. Daha fazla bilgi için [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- SQL altyapısı: Bu izlenecek yollar, SQL Server Express kullanarak uygulanacak yazılır. SQL Server Express yoksa, ücretsiz olarak indirebilirsiniz. Daha fazla bilgi için [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
     > [!NOTE]
     >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] izlenecek yollar, bağlantı dizesi olarak bir dosya adı kullanın. Kolaylık olması açısından olan yalnızca bir dosya adını belirterek, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kullanıcılar için SQL Server Express sağlar. Her zaman güvenlik sorunlarına dikkat edin. Daha fazla bilgi için [LINQ to SQL'de güvenlik](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] izlenecek yollar, Northwind örnek veritabanıyla kurulan genellikle gerektirir. Daha fazla bilgi için [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] izlenecek yollar, Northwind örnek veritabanıyla kurulan genellikle gerektirir. Daha fazla bilgi için [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
--   İletişim kutuları ve menü komutları kılavuzları gördüğünüz açıklanana Yardım'da, etkin ayarlarınıza ve Visual Studio sürümü bağlı olarak farklı olabilir. Ayarlarınızı değiştirmek için tıklayın **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
+- İletişim kutuları ve menü komutları kılavuzları gördüğünüz açıklanana Yardım'da, etkin ayarlarınıza ve Visual Studio sürümü bağlı olarak farklı olabilir. Ayarlarınızı değiştirmek için tıklayın **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
--   Çok katmanlı senaryoları izlenecek yollar için geliştirme bilgisayardan ayrı olan bir bilgisayar bir sunucu bulunması gerekir ve sunucuya erişmek için uygun izinlere sahip olmalıdır.  
+- Çok katmanlı senaryoları izlenecek yollar için geliştirme bilgisayardan ayrı olan bir bilgisayar bir sunucu bulunması gerekir ve sunucuya erişmek için uygun izinlere sahip olmalıdır.  
   
--   Siparişler tablosu Northwind örnek veritabanındaki genellikle temsil eden sınıfı adı `[Order]`. Kaçış gereklidir çünkü `Order` Visual Basic'te bir anahtar sözcüktür.  
+- Siparişler tablosu Northwind örnek veritabanındaki genellikle temsil eden sınıfı adı `[Order]`. Kaçış gereklidir çünkü `Order` Visual Basic'te bir anahtar sözcüktür.  
   
 ## <a name="troubleshooting"></a>Sorun giderme  
  Bu izlenecek yollarında kullanılan veritabanları erişmek için yeterli izinlere sahip olmadığınızdan çalışma zamanı hataları oluşabilir. En yaygın olarak bu sorunları gidermek için aşağıdaki adımlara bakın.  

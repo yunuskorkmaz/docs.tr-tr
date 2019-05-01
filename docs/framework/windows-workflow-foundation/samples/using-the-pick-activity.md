@@ -3,11 +3,11 @@ title: Pick Etkinliği Kullanma
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
 ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004737"
 ---
 # <a name="using-the-pick-activity"></a>Pick Etkinliği Kullanma
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Activities.Statements.Pick> etkinlik.
@@ -24,17 +24,17 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Activities.Statement
 
  Örnek İş Akışı Tasarımcısı sürümü Tasarımcı bir iş akışı Tasarımcısı'nda oluşturma işlemini gösterir. Aşağıdaki dosyalar dahil edilir:
 
--   Program.cs: İçerir `Main` örnek iş akışı yürüten işlev.
+- Program.cs: İçerir `Main` örnek iş akışı yürüten işlev.
 
--   ReadString.cs: Konsolundan bazı giriş okur özel bir etkinlik.
+- ReadString.cs: Konsolundan bazı giriş okur özel bir etkinlik.
 
--   Sequence1.XAML: Kullanan çekme Tasarımcı kullanılarak oluşturulmuş bir iş akışı.
+- Sequence1.XAML: Kullanan çekme Tasarımcı kullanılarak oluşturulmuş bir iş akışı.
 
  Bir iş akışı Tasarımcısı'nda oluşturma kodlanmış iş akışı örneği kodlanmış sürümünü gösterir. Aşağıdaki dosyalar dahil edilir:
 
--   Program.cs: İçerir `Main` örnek iş akışı yürüten işlev.
+- Program.cs: İçerir `Main` örnek iş akışı yürüten işlev.
 
--   ReadString.cs: Konsolundan bazı giriş okur özel bir etkinlik.
+- ReadString.cs: Konsolundan bazı giriş okur özel bir etkinlik.
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 

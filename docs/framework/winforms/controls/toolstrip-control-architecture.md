@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
 ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009623"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip Denetim Mimarisi
 <xref:System.Windows.Forms.ToolStrip> Ve <xref:System.Windows.Forms.ToolStripItem> sınıfları, araç, durum ve menü öğeleri görüntülemek için esnek, Genişletilebilir bir sistem sağlar. Bu sınıfların tümü bulunur <xref:System.Windows.Forms> ad alanı ve bunların tümü genellikle adlandırılır "ToolStrip" ön ekine sahip (gibi <xref:System.Windows.Forms.ToolStripOverflow>) veya "Şeridinde" soneki ile (gibi <xref:System.Windows.Forms.MenuStrip>).  
@@ -25,56 +25,56 @@ ms.locfileid: "59296218"
   
  Aşağıdaki öğeler ile her ikisini de sorunsuz çalışacak şekilde özel olarak tasarlanmış <xref:System.Windows.Forms.ToolStripSystemRenderer> ve <xref:System.Windows.Forms.ToolStripProfessionalRenderer> tüm yönleri içinde. Tasarım zamanında için varsayılan olarak kullanılabilir olmaları <xref:System.Windows.Forms.ToolStrip> denetimi:  
   
--   <xref:System.Windows.Forms.ToolStripButton>  
+- <xref:System.Windows.Forms.ToolStripButton>  
   
--   <xref:System.Windows.Forms.ToolStripSeparator>  
+- <xref:System.Windows.Forms.ToolStripSeparator>  
   
--   <xref:System.Windows.Forms.ToolStripLabel>  
+- <xref:System.Windows.Forms.ToolStripLabel>  
   
--   <xref:System.Windows.Forms.ToolStripDropDownButton>  
+- <xref:System.Windows.Forms.ToolStripDropDownButton>  
   
--   <xref:System.Windows.Forms.ToolStripSplitButton>  
+- <xref:System.Windows.Forms.ToolStripSplitButton>  
   
--   <xref:System.Windows.Forms.ToolStripTextBox>  
+- <xref:System.Windows.Forms.ToolStripTextBox>  
   
--   <xref:System.Windows.Forms.ToolStripComboBox>  
+- <xref:System.Windows.Forms.ToolStripComboBox>  
   
 ### <a name="menustrip"></a>MenuStrip  
  <xref:System.Windows.Forms.MenuStrip> yerine geçen en üst düzey kapsayıcı <xref:System.Windows.Forms.MainMenu>. Anahtar işleme ve birden çok belge arabirimi (MDI) özellikler de sağlar. İşlevsellik, <xref:System.Windows.Forms.ToolStripDropDownItem> ve <xref:System.Windows.Forms.ToolStripMenuItem> ile birlikte çalışma <xref:System.Windows.Forms.MenuStrip>, ancak bunlar türetilmiştir <xref:System.Windows.Forms.ToolStripItem>.  
   
  Aşağıdaki öğeler ile her ikisini de sorunsuz çalışacak şekilde özel olarak tasarlanmış <xref:System.Windows.Forms.ToolStripSystemRenderer> ve <xref:System.Windows.Forms.ToolStripProfessionalRenderer> tüm yönleri içinde. Tasarım zamanında için varsayılan olarak kullanılabilir olmaları <xref:System.Windows.Forms.MenuStrip> denetimi:  
   
--   <xref:System.Windows.Forms.ToolStripMenuItem>  
+- <xref:System.Windows.Forms.ToolStripMenuItem>  
   
--   <xref:System.Windows.Forms.ToolStripTextBox>  
+- <xref:System.Windows.Forms.ToolStripTextBox>  
   
--   <xref:System.Windows.Forms.ToolStripComboBox>  
+- <xref:System.Windows.Forms.ToolStripComboBox>  
   
 ### <a name="statusstrip"></a>StatusStrip  
  <xref:System.Windows.Forms.StatusStrip> değiştirir <xref:System.Windows.Forms.StatusBar> denetimi. Özel özellikleri <xref:System.Windows.Forms.StatusStrip> özel tablo düzeni dahil, formun boyutlandırma ve taşıma GRIPS, desteği ve `Spring` veren özelliği, bir <xref:System.Windows.Forms.ToolStripStatusLabel> otomatik olarak kullanılabilir alanı dolduracak şekilde.  
   
  Aşağıdaki öğeler ile her ikisini de sorunsuz çalışacak şekilde özel olarak tasarlanmış <xref:System.Windows.Forms.ToolStripSystemRenderer> ve <xref:System.Windows.Forms.ToolStripProfessionalRenderer> tüm yönleri içinde. Tasarım zamanında için varsayılan olarak kullanılabilir olmaları <xref:System.Windows.Forms.StatusStrip> denetimi:  
   
--   <xref:System.Windows.Forms.ToolStripStatusLabel>  
+- <xref:System.Windows.Forms.ToolStripStatusLabel>  
   
--   <xref:System.Windows.Forms.ToolStripDropDownButton>  
+- <xref:System.Windows.Forms.ToolStripDropDownButton>  
   
--   <xref:System.Windows.Forms.ToolStripSplitButton>  
+- <xref:System.Windows.Forms.ToolStripSplitButton>  
   
--   <xref:System.Windows.Forms.ToolStripProgressBar>  
+- <xref:System.Windows.Forms.ToolStripProgressBar>  
   
 ### <a name="contextmenustrip"></a>ContextMenuStrip  
  <xref:System.Windows.Forms.ContextMenuStrip> değiştirir <xref:System.Windows.Forms.ContextMenu>. İlişkilendirebilirsiniz bir <xref:System.Windows.Forms.ContextMenuStrip> herhangi bir denetimi ve sağ fare tıklatın otomatik olarak bağlam menüsünden (veya kısayol menüsünden) görüntüler. Göstermek bir <xref:System.Windows.Forms.ContextMenuStrip> kullanarak program aracılığıyla <xref:System.Windows.Forms.ToolStripDropDown.Show%2A> yöntemi. <xref:System.Windows.Forms.ContextMenuStrip> İptal edilebilen destekler <xref:System.Windows.Forms.ToolStripDropDown.Opening> ve <xref:System.Windows.Forms.ToolStripDropDown.Closing> dinamik nüfus ve birden çok tıklamayla senaryoları işlemek için olayları. <xref:System.Windows.Forms.ContextMenuStrip> görüntüleri, menü öğesi denetim durumu, metin, erişim anahtarları, kısayolları ve basamaklı menüler destekler.  
   
  Aşağıdaki öğeler ile her ikisini de sorunsuz çalışacak şekilde özel olarak tasarlanmış <xref:System.Windows.Forms.ToolStripSystemRenderer> ve <xref:System.Windows.Forms.ToolStripProfessionalRenderer> tüm yönleri içinde. Tasarım zamanında için varsayılan olarak kullanılabilir olmaları <xref:System.Windows.Forms.ContextMenuStrip> denetimi:  
   
--   <xref:System.Windows.Forms.ToolStripMenuItem>  
+- <xref:System.Windows.Forms.ToolStripMenuItem>  
   
--   <xref:System.Windows.Forms.ToolStripSeparator>  
+- <xref:System.Windows.Forms.ToolStripSeparator>  
   
--   <xref:System.Windows.Forms.ToolStripTextBox>  
+- <xref:System.Windows.Forms.ToolStripTextBox>  
   
--   <xref:System.Windows.Forms.ToolStripComboBox>  
+- <xref:System.Windows.Forms.ToolStripComboBox>  
   
 ### <a name="toolstrip-generic-features"></a>ToolStrip genel özellikleri  
  Aşağıdaki konularda, özellikler ve için genel davranış açıklanmaktadır <xref:System.Windows.Forms.ToolStrip> ve denetimleri türetilmiş.  
@@ -95,26 +95,26 @@ ms.locfileid: "59296218"
   
  Aşağıdaki listede ana öğe için ilgili üyeleri ve bunların kullanımını açıklar.  
   
--   <xref:System.Windows.Forms.ToolStripDropDown.OwnerItem%2A> Kaynak açılır öğesi öğe erişir. Bu benzer <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A>, ancak bir denetim döndürmek yerine döndürür bir <xref:System.Windows.Forms.ToolStripItem>.  
+- <xref:System.Windows.Forms.ToolStripDropDown.OwnerItem%2A> Kaynak açılır öğesi öğe erişir. Bu benzer <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A>, ancak bir denetim döndürmek yerine döndürür bir <xref:System.Windows.Forms.ToolStripItem>.  
   
--   <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A> Kaynak denetimdir belirler, <xref:System.Windows.Forms.ContextMenuStrip> ne zaman birden çok denetim paylaşmak aynı <xref:System.Windows.Forms.ContextMenuStrip>.  
+- <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A> Kaynak denetimdir belirler, <xref:System.Windows.Forms.ContextMenuStrip> ne zaman birden çok denetim paylaşmak aynı <xref:System.Windows.Forms.ContextMenuStrip>.  
   
--   <xref:System.Windows.Forms.ToolStripItem.GetCurrentParent%2A> salt okunur bir erişimcisi için <xref:System.Windows.Forms.ToolStripItem.Parent%2A> özelliği. Döndürülen geçerli bir üst gösterir, bir üst bir sahibinden farklı <xref:System.Windows.Forms.ToolStrip> öğesi, hangi taşma alanında olabilir görüntülendiği içinde.  
+- <xref:System.Windows.Forms.ToolStripItem.GetCurrentParent%2A> salt okunur bir erişimcisi için <xref:System.Windows.Forms.ToolStripItem.Parent%2A> özelliği. Döndürülen geçerli bir üst gösterir, bir üst bir sahibinden farklı <xref:System.Windows.Forms.ToolStrip> öğesi, hangi taşma alanında olabilir görüntülendiği içinde.  
   
--   <xref:System.Windows.Forms.ToolStripItem.Owner%2A> döndürür <xref:System.Windows.Forms.ToolStrip> geçerli olan öğeleri koleksiyonu içerir <xref:System.Windows.Forms.ToolStripItem>. Başvurmak için en iyi yolu budur <xref:System.Windows.Forms.ToolStrip.ImageList%2A> veya diğer üst düzey özellikleri <xref:System.Windows.Forms.ToolStrip> taşma işlemek için özel kod yazmadan.  
+- <xref:System.Windows.Forms.ToolStripItem.Owner%2A> döndürür <xref:System.Windows.Forms.ToolStrip> geçerli olan öğeleri koleksiyonu içerir <xref:System.Windows.Forms.ToolStripItem>. Başvurmak için en iyi yolu budur <xref:System.Windows.Forms.ToolStrip.ImageList%2A> veya diğer üst düzey özellikleri <xref:System.Windows.Forms.ToolStrip> taşma işlemek için özel kod yazmadan.  
   
 #### <a name="behavior-of-inherited-controls"></a>Devralınan denetimler davranışı  
  Devralma işleminde kullanılan her durumda aşağıdaki denetimleri kilitli:  
   
--   <xref:System.Windows.Forms.ToolStrip>  
+- <xref:System.Windows.Forms.ToolStrip>  
   
--   <xref:System.Windows.Forms.MenuStrip>  
+- <xref:System.Windows.Forms.MenuStrip>  
   
--   <xref:System.Windows.Forms.ContextMenuStrip>  
+- <xref:System.Windows.Forms.ContextMenuStrip>  
   
--   <xref:System.Windows.Forms.StatusStrip>  
+- <xref:System.Windows.Forms.StatusStrip>  
   
--   <xref:System.Windows.Forms.ToolStripPanel> panellerinde içeren bir <xref:System.Windows.Forms.ToolStripContainer> ve aynı zamanda bireysel <xref:System.Windows.Forms.ToolStripPanel> kontrol eder.  
+- <xref:System.Windows.Forms.ToolStripPanel> panellerinde içeren bir <xref:System.Windows.Forms.ToolStripContainer> ve aynı zamanda bireysel <xref:System.Windows.Forms.ToolStripPanel> kontrol eder.  
   
  Örneğin, önceki listesinde bir veya birden fazla denetimin'ı kullanarak yeni bir Windows Forms uygulaması oluşturun. Bir veya daha fazla denetim için erişim değiştiricisi ayarlamak `public` veya `protected`ve ardından projeyi derleyin. İlk formundan devralan bir form ekleyin ve ardından devralınan bir denetim seçin. Denetim, kendi erişim değiştiricisi olduysa gibi davrandığından, kilitli görünür `private`.  
   
@@ -138,13 +138,13 @@ ms.locfileid: "59296218"
 #### <a name="inherited-behavior-of-child-controls"></a>Alt denetimlerin devralınan davranışı  
  Önceki adımları tamamladıktan sonra devralınan aşağıdaki davranış gerçekleşir:  
   
--   Tasarımcıda denetim devralınan bir simge ile görünür.  
+- Tasarımcıda denetim devralınan bir simge ile görünür.  
   
--   <xref:System.Windows.Forms.ToolStripPanel> Denetimler kilitli; seçin veya bunların içeriğini yeniden düzenleyin.  
+- <xref:System.Windows.Forms.ToolStripPanel> Denetimler kilitli; seçin veya bunların içeriğini yeniden düzenleyin.  
   
--   Denetimlere ekleyebilirsiniz <xref:System.Windows.Forms.ToolStripContentPanel>denetimleri taşımak ve alt denetimlerin okunmaları <xref:System.Windows.Forms.ToolStripContentPanel>.  
+- Denetimlere ekleyebilirsiniz <xref:System.Windows.Forms.ToolStripContentPanel>denetimleri taşımak ve alt denetimlerin okunmaları <xref:System.Windows.Forms.ToolStripContentPanel>.  
   
--   Form oluşturduktan sonra değişiklikleriniz kaydedilir.  
+- Form oluşturduktan sonra değişiklikleriniz kaydedilir.  
   
     > [!NOTE]
     >  Erişim değiştiricileri tümünden kaldırmak <xref:System.Windows.Forms.ToolStripPanel> parçası olan denetimler bir <xref:System.Windows.Forms.ToolStripContainer>. Erişim değiştiricisi <xref:System.Windows.Forms.ToolStripContainer> tam denetim yönetir.  
@@ -152,26 +152,26 @@ ms.locfileid: "59296218"
 #### <a name="partial-trust"></a>Kısmi Güven  
  Sınırlamaları `ToolStrip`s kısmi güven altında kişisel bilgilerin yetkisiz kişiler veya hizmetler tarafından kullanılabilecek yanlışlıkla girişini engellemek için tasarlanmıştır. Koruyucu ölçüleri aşağıdaki gibidir:  
   
--   `ToolStripDropDown` denetimleri gerekli kıl <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> öğeleri görüntülemek için bir <xref:System.Windows.Forms.ToolStripControlHost>. Bu gibi her iki iç denetimleri için geçerlidir <xref:System.Windows.Forms.ToolStripTextBox>, <xref:System.Windows.Forms.ToolStripComboBox>, ve <xref:System.Windows.Forms.ToolStripProgressBar> de kullanıcı tarafından oluşturulan farklı olarak. Bu gereksinim karşılanmadığı durumda, bu öğeler görüntülenmez. Hiçbir özel durum oluşturulur.  
+- `ToolStripDropDown` denetimleri gerekli kıl <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> öğeleri görüntülemek için bir <xref:System.Windows.Forms.ToolStripControlHost>. Bu gibi her iki iç denetimleri için geçerlidir <xref:System.Windows.Forms.ToolStripTextBox>, <xref:System.Windows.Forms.ToolStripComboBox>, ve <xref:System.Windows.Forms.ToolStripProgressBar> de kullanıcı tarafından oluşturulan farklı olarak. Bu gereksinim karşılanmadığı durumda, bu öğeler görüntülenmez. Hiçbir özel durum oluşturulur.  
   
--   Ayarı <xref:System.Windows.Forms.ToolStripDropDown.AutoClose%2A> özelliğini `false` izin verilmiyor ve iptal edilebilir <xref:System.Windows.Forms.ToolStripDropDown.Closing> olay parametresi yok sayıldı. Bu, birden fazla tuş vuruşu açılan öğe kapatılıyor olmadan girin mümkün kılar. Bu gereksinim karşılanmazsa gibi öğeleri görüntülenmez. Hiçbir özel durum oluşturulur.  
+- Ayarı <xref:System.Windows.Forms.ToolStripDropDown.AutoClose%2A> özelliğini `false` izin verilmiyor ve iptal edilebilir <xref:System.Windows.Forms.ToolStripDropDown.Closing> olay parametresi yok sayıldı. Bu, birden fazla tuş vuruşu açılan öğe kapatılıyor olmadan girin mümkün kılar. Bu gereksinim karşılanmazsa gibi öğeleri görüntülenmez. Hiçbir özel durum oluşturulur.  
   
--   Kısmi güven bağlamlarda dışında meydana gelirse olayları işleme birçok tuş vuruşu harekete Geçirilmemesi <xref:System.Security.Permissions.UIPermissionWindow.AllWindows>.  
+- Kısmi güven bağlamlarda dışında meydana gelirse olayları işleme birçok tuş vuruşu harekete Geçirilmemesi <xref:System.Security.Permissions.UIPermissionWindow.AllWindows>.  
   
--   Erişim anahtarlarını olmayan zaman işlenen <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> verilmemiştir.  
+- Erişim anahtarlarını olmayan zaman işlenen <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> verilmemiştir.  
   
 #### <a name="usage"></a>Kullanım  
  Aşağıdaki kullanım düzenlerine sahip bir boşluğunu <xref:System.Windows.Forms.ToolStrip> düzen, klavye etkileşim ve son kullanıcı davranışı:  
   
--   Birleşik bir <xref:System.Windows.Forms.ToolStripPanel>  
+- Birleşik bir <xref:System.Windows.Forms.ToolStripPanel>  
   
      <xref:System.Windows.Forms.ToolStrip> İçinde konumlandırılabilir <xref:System.Windows.Forms.ToolStripPanel> ve çapraz <xref:System.Windows.Forms.ToolStripPanel>s. `Dock` Özelliği yoksayılır ve <xref:System.Windows.Forms.ToolStrip.Stretch%2A> özelliği `false`, boyutu <xref:System.Windows.Forms.ToolStrip> öğeleri eklendikçe büyür <xref:System.Windows.Forms.ToolStripPanel>. Genellikle, <xref:System.Windows.Forms.ToolStrip> sekme sırasının yer almaz.  
   
--   Yuvalanmış  
+- Yuvalanmış  
   
      <xref:System.Windows.Forms.ToolStrip> Bir tarafı sabit bir konum bir kapsayıcıda yerleştirilir ve, yerleştirilmiş tüm edge boyutuna genişletir. Genellikle, <xref:System.Windows.Forms.ToolStrip> sekme sırasının yer almaz.  
   
--   Mutlak konumlu  
+- Mutlak konumlu  
   
      <xref:System.Windows.Forms.ToolStrip> Tarafından yerleştirilen diğer denetimler gibi olmamasıdır <xref:System.Windows.Forms.Control.Location%2A> özelliği, sabit bir boyutu vardır ve genellikle sekme sırasının katılır.  
   
@@ -197,11 +197,11 @@ ms.locfileid: "59296218"
 ##### <a name="stack-layouts"></a>Yığın düzeni  
  Yığınlama olan öğelerin birbiriyle yanında her iki ucunda düzenleme <xref:System.Windows.Forms.ToolStrip>. Aşağıdaki listede, yığın düzeni açıklanmaktadır.  
   
--   <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow> varsayılandır. Bu ayar neden <xref:System.Windows.Forms.ToolStrip> otomatik olarak dağıtabilirler düzenini değiştirmek için <xref:System.Windows.Forms.ToolStrip.Orientation%2A> sürükleme ve senaryoları yerleştirme işlemek için özellik.  
+- <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow> varsayılandır. Bu ayar neden <xref:System.Windows.Forms.ToolStrip> otomatik olarak dağıtabilirler düzenini değiştirmek için <xref:System.Windows.Forms.ToolStrip.Orientation%2A> sürükleme ve senaryoları yerleştirme işlemek için özellik.  
   
--   <xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow> işler <xref:System.Windows.Forms.ToolStrip> diğer dikey öğeleri.  
+- <xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow> işler <xref:System.Windows.Forms.ToolStrip> diğer dikey öğeleri.  
   
--   <xref:System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow> işler <xref:System.Windows.Forms.ToolStrip> diğer yatay öğeleri.  
+- <xref:System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow> işler <xref:System.Windows.Forms.ToolStrip> diğer yatay öğeleri.  
   
 ##### <a name="other-features-of-stack-layouts"></a>Yığın düzeni ilişkin diğer özellikleri  
  <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> sonuna belirler <xref:System.Windows.Forms.ToolStrip> hizalandığı öğesi için.  
@@ -218,32 +218,32 @@ ms.locfileid: "59296218"
 ##### <a name="flow-layout"></a>Akış düzeni  
  <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> Düzen, varsayılan için <xref:System.Windows.Forms.ContextMenuStrip>, <xref:System.Windows.Forms.ToolStripDropDownMenu>, ve <xref:System.Windows.Forms.ToolStripOverflow>. Benzer <xref:System.Windows.Forms.FlowLayoutPanel>. Özelliklerinin <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> Düzen aşağıdaki gibidir:  
   
--   Tüm özelliklerini <xref:System.Windows.Forms.FlowLayoutPanel> tarafından kullanıma sunulan <xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A> özelliği. Dönüştürmelisiniz <xref:System.Windows.Forms.LayoutSettings> sınıfının bir <xref:System.Windows.Forms.FlowLayoutSettings> sınıfı.  
+- Tüm özelliklerini <xref:System.Windows.Forms.FlowLayoutPanel> tarafından kullanıma sunulan <xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A> özelliği. Dönüştürmelisiniz <xref:System.Windows.Forms.LayoutSettings> sınıfının bir <xref:System.Windows.Forms.FlowLayoutSettings> sınıfı.  
   
--   Kullanabileceğiniz <xref:System.Windows.Forms.ToolStripItem.Dock%2A> ve <xref:System.Windows.Forms.ToolStripItem.Anchor%2A> satır içinde öğeleri hizalamak için kod özellikleri.  
+- Kullanabileceğiniz <xref:System.Windows.Forms.ToolStripItem.Dock%2A> ve <xref:System.Windows.Forms.ToolStripItem.Anchor%2A> satır içinde öğeleri hizalamak için kod özellikleri.  
   
--   <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> Özelliği yok sayılır.  
+- <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> Özelliği yok sayılır.  
   
--   İçinde <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> olayı İnceleme <xref:System.Windows.Forms.ToolStripItem.Placement%2A> bir öğe üzerinde ana yerleştirilmiş olup olmadığını belirlemek için özellik <xref:System.Windows.Forms.ToolStrip> veya uygun olmayan.  
+- İçinde <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> olayı İnceleme <xref:System.Windows.Forms.ToolStripItem.Placement%2A> bir öğe üzerinde ana yerleştirilmiş olup olmadığını belirlemek için özellik <xref:System.Windows.Forms.ToolStrip> veya uygun olmayan.  
   
--   Tutamacı işlenmez ve bu nedenle bir <xref:System.Windows.Forms.ToolStrip> içinde <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> düzen stili bir <xref:System.Windows.Forms.ToolStripPanel> taşınamaz.  
+- Tutamacı işlenmez ve bu nedenle bir <xref:System.Windows.Forms.ToolStrip> içinde <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> düzen stili bir <xref:System.Windows.Forms.ToolStripPanel> taşınamaz.  
   
--   <xref:System.Windows.Forms.ToolStrip> Taşma düğmesini değil işlenen ve <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> göz ardı edilir.  
+- <xref:System.Windows.Forms.ToolStrip> Taşma düğmesini değil işlenen ve <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> göz ardı edilir.  
   
 ##### <a name="table-layout"></a>Tablo düzeni  
  <xref:System.Windows.Forms.ToolStripLayoutStyle.Table> Düzen, varsayılan için <xref:System.Windows.Forms.StatusStrip>. Benzer <xref:System.Windows.Forms.TableLayoutPanel>. Özelliklerinin <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> Düzen aşağıdaki gibidir:  
   
--   Tüm özelliklerini <xref:System.Windows.Forms.TableLayoutPanel> tarafından kullanıma sunulan <xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A> özelliği. Dönüştürmelisiniz <xref:System.Windows.Forms.LayoutSettings> sınıfının bir <xref:System.Windows.Forms.TableLayoutSettings> sınıfı.  
+- Tüm özelliklerini <xref:System.Windows.Forms.TableLayoutPanel> tarafından kullanıma sunulan <xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A> özelliği. Dönüştürmelisiniz <xref:System.Windows.Forms.LayoutSettings> sınıfının bir <xref:System.Windows.Forms.TableLayoutSettings> sınıfı.  
   
--   Kullanabileceğiniz <xref:System.Windows.Forms.ToolStripItem.Dock%2A> ve <xref:System.Windows.Forms.ToolStripItem.Anchor%2A> tablo hücresi içinde öğeleri hizalamak için kod özellikleri.  
+- Kullanabileceğiniz <xref:System.Windows.Forms.ToolStripItem.Dock%2A> ve <xref:System.Windows.Forms.ToolStripItem.Anchor%2A> tablo hücresi içinde öğeleri hizalamak için kod özellikleri.  
   
--   <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> Özelliği yok sayılır.  
+- <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> Özelliği yok sayılır.  
   
--   İçinde <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> olayı İnceleme <xref:System.Windows.Forms.ToolStripItem.Placement%2A> bir öğe üzerinde ana yerleştirilmiş olup olmadığını belirlemek için özellik <xref:System.Windows.Forms.ToolStrip> veya uygun olmayan.  
+- İçinde <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> olayı İnceleme <xref:System.Windows.Forms.ToolStripItem.Placement%2A> bir öğe üzerinde ana yerleştirilmiş olup olmadığını belirlemek için özellik <xref:System.Windows.Forms.ToolStrip> veya uygun olmayan.  
   
--   Tutamacı işlenmez ve bu nedenle bir <xref:System.Windows.Forms.ToolStrip> içinde <xref:System.Windows.Forms.ToolStripLayoutStyle.Table> düzen stili bir <xref:System.Windows.Forms.ToolStripPanel> taşınamaz.  
+- Tutamacı işlenmez ve bu nedenle bir <xref:System.Windows.Forms.ToolStrip> içinde <xref:System.Windows.Forms.ToolStripLayoutStyle.Table> düzen stili bir <xref:System.Windows.Forms.ToolStripPanel> taşınamaz.  
   
--   <xref:System.Windows.Forms.ToolStrip> Taşma düğmesini değil işlenen ve <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> göz ardı edilir.  
+- <xref:System.Windows.Forms.ToolStrip> Taşma düğmesini değil işlenen ve <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> göz ardı edilir.  
   
 ## <a name="toolstripitem"></a>ToolStripItem  
  Aşağıdaki konularda açıklanmıştır <xref:System.Windows.Forms.ToolStripItem> ve ondan türetilen denetimler.  
@@ -296,9 +296,9 @@ ms.locfileid: "59296218"
 ### <a name="toolstripcontrolhost"></a>ToolStripControlHost  
  <xref:System.Windows.Forms.ToolStripControlHost> soyut temel sınıf için <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox>, ve <xref:System.Windows.Forms.ToolStripProgressBar>. <xref:System.Windows.Forms.ToolStripControlHost> özel denetimler, iki şekilde de dahil olmak üzere, diğer denetimler barındırabilirsiniz:  
   
--   Oluşturmak bir <xref:System.Windows.Forms.ToolStripControlHost> türetildiği bir sınıf ile <xref:System.Windows.Forms.Control>. Barındırılan denetim ve özellikleri tam olarak erişmek için dönüştürmelisiniz <xref:System.Windows.Forms.ToolStripControlHost.Control%2A> özelliğini geri gerçek sınıf, temsil eder.  
+- Oluşturmak bir <xref:System.Windows.Forms.ToolStripControlHost> türetildiği bir sınıf ile <xref:System.Windows.Forms.Control>. Barındırılan denetim ve özellikleri tam olarak erişmek için dönüştürmelisiniz <xref:System.Windows.Forms.ToolStripControlHost.Control%2A> özelliğini geri gerçek sınıf, temsil eder.  
   
--   Genişletme <xref:System.Windows.Forms.ToolStripControlHost>ve devralınan sınıfın varsayılan oluşturucusunu geçirme, türetilen bir sınıf temel sınıf oluşturucusunu <xref:System.Windows.Forms.Control>. Bu seçenek, ortak denetim yöntemleri ve özellikleri kolay erişim için kaydırma sağlar bir <xref:System.Windows.Forms.ToolStrip>.  
+- Genişletme <xref:System.Windows.Forms.ToolStripControlHost>ve devralınan sınıfın varsayılan oluşturucusunu geçirme, türetilen bir sınıf temel sınıf oluşturucusunu <xref:System.Windows.Forms.Control>. Bu seçenek, ortak denetim yöntemleri ve özellikleri kolay erişim için kaydırma sağlar bir <xref:System.Windows.Forms.ToolStrip>.  
   
 ### <a name="toolstripcombobox"></a>ToolStripComboBox  
  <xref:System.Windows.Forms.ToolStripComboBox> olan <xref:System.Windows.Forms.ComboBox> barındırmak için en iyi duruma getirilmiş bir <xref:System.Windows.Forms.ToolStrip>. Bir alt kümesini barındırılan denetimin özellikleri ve olayları sırasında sunulur <xref:System.Windows.Forms.ToolStripComboBox> düzeyi, ancak arka plandaki <xref:System.Windows.Forms.ComboBox> denetimidir tam olarak erişilebilir <xref:System.Windows.Forms.ToolStripComboBox.ComboBox%2A> özelliği.  
@@ -326,15 +326,15 @@ ms.locfileid: "59296218"
 ### <a name="toolstripitem-generic-features"></a>ToolStripItem genel özellikleri  
  <xref:System.Windows.Forms.ToolStripItem> Aşağıdaki genel özellikleri ve denetimleri devralma seçenekleri sağlar:  
   
--   Çekirdek olayları  
+- Çekirdek olayları  
   
--   Görüntü işleme  
+- Görüntü işleme  
   
--   Hizalama  
+- Hizalama  
   
--   Metin ve resim ilişkisi  
+- Metin ve resim ilişkisi  
   
--   Görüntü stili  
+- Görüntü stili  
   
 #### <a name="core-events"></a>Çekirdek olayları  
  <xref:System.Windows.Forms.ToolStripItem> denetimleri kendi tıklatın, fare ve Boya olayları almak ve bazı klavye da ön işleme gerçekleştirebilir.  
@@ -344,11 +344,11 @@ ms.locfileid: "59296218"
   
  Resim ölçeklendirmeyi hem de özellikleri etkileşimi göre belirlenir <xref:System.Windows.Forms.ToolStrip> ve <xref:System.Windows.Forms.ToolStripItem>gibi:  
   
--   <xref:System.Windows.Forms.ToolStrip.ImageScalingSize%2A> görüntünün birleşimi tarafından belirlenen şekilde son görüntünün ölçek <xref:System.Windows.Forms.ToolStripItem.ImageScaling%2A> ayarı ve kapsayıcının <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> ayarı.  
+- <xref:System.Windows.Forms.ToolStrip.ImageScalingSize%2A> görüntünün birleşimi tarafından belirlenen şekilde son görüntünün ölçek <xref:System.Windows.Forms.ToolStripItem.ImageScaling%2A> ayarı ve kapsayıcının <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> ayarı.  
   
-    -   Varsa <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> olduğu `true` (varsayılan) ve <xref:System.Windows.Forms.ToolStripItemImageScaling> olduğu <xref:System.Windows.Forms.ToolStripItemImageScaling.SizeToFit>, hiçbir resim ölçeklendirmeyi gerçekleşir ve <xref:System.Windows.Forms.ToolStrip> boyutu en büyük öğeyi veya önceden belirlenmiş bir minimum boyut olan.  
+    - Varsa <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> olduğu `true` (varsayılan) ve <xref:System.Windows.Forms.ToolStripItemImageScaling> olduğu <xref:System.Windows.Forms.ToolStripItemImageScaling.SizeToFit>, hiçbir resim ölçeklendirmeyi gerçekleşir ve <xref:System.Windows.Forms.ToolStrip> boyutu en büyük öğeyi veya önceden belirlenmiş bir minimum boyut olan.  
   
-    -   Varsa <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> olan `false` ve <xref:System.Windows.Forms.ToolStripItemImageScaling> olan <xref:System.Windows.Forms.ToolStripItemImageScaling.None>, her iki görüntü ya da <xref:System.Windows.Forms.ToolStrip> ölçeklendirme gerçekleşir.  
+    - Varsa <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> olan `false` ve <xref:System.Windows.Forms.ToolStripItemImageScaling> olan <xref:System.Windows.Forms.ToolStripItemImageScaling.None>, her iki görüntü ya da <xref:System.Windows.Forms.ToolStrip> ölçeklendirme gerçekleşir.  
   
 #### <a name="alignment"></a>Hizalama  
  Değerini <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> özelliği belirler sonuna <xref:System.Windows.Forms.ToolStrip> konumunda bir öğe görünen. <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> Özelliği yalnızca çalıştığı yerleşim stilini <xref:System.Windows.Forms.ToolStrip> yığın taşması değerlerden birine ayarlayın.  
@@ -364,17 +364,17 @@ ms.locfileid: "59296218"
 ## <a name="accessory-classes"></a>Aksesuar sınıfları  
  Çeşitli diğer işlevleri sağlayan sınıflar içerir:  
   
--   <xref:System.Windows.Forms.ToolStripManager> destekleyen <xref:System.Windows.Forms.ToolStrip>-ilgili görevleri birleştirme, ayarları ve işleyici seçeneklerini gibi tüm uygulamalar için.  
+- <xref:System.Windows.Forms.ToolStripManager> destekleyen <xref:System.Windows.Forms.ToolStrip>-ilgili görevleri birleştirme, ayarları ve işleyici seçeneklerini gibi tüm uygulamalar için.  
   
--   <xref:System.Windows.Forms.ToolStripRenderer> belirli bir stil veya tema uygulamanıza imkan sağlar bir <xref:System.Windows.Forms.ToolStrip> kolayca.  
+- <xref:System.Windows.Forms.ToolStripRenderer> belirli bir stil veya tema uygulamanıza imkan sağlar bir <xref:System.Windows.Forms.ToolStrip> kolayca.  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> kalemler ve Fırçalar değiştirilebilir renk tabloyu temel alarak oluşturur (<xref:System.Windows.Forms.ProfessionalColorTable>).  
+- <xref:System.Windows.Forms.ToolStripProfessionalRenderer> kalemler ve Fırçalar değiştirilebilir renk tabloyu temel alarak oluşturur (<xref:System.Windows.Forms.ProfessionalColorTable>).  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer> Sistem renkleri ve bir düz görsel stil için geçerlidir <xref:System.Windows.Forms.ToolStrip> uygulamalar.  
+- <xref:System.Windows.Forms.ToolStripSystemRenderer> Sistem renkleri ve bir düz görsel stil için geçerlidir <xref:System.Windows.Forms.ToolStrip> uygulamalar.  
   
--   <xref:System.Windows.Forms.ToolStripContainer> benzer <xref:System.Windows.Forms.SplitContainer>. Dört yerleşik yan panel kullanır (örneklerini <xref:System.Windows.Forms.ToolStripPanel>) ve bir yönetim paneli (örneği <xref:System.Windows.Forms.ToolStripContentPanel>) tipik bir düzenleme oluşturmak için. Yan paneller kaldıramazsınız ancak bunları gizleyebilirsiniz. Kaldırma ne merkezi panelini gizle. Bir veya daha fazla düzenleyebilirsiniz <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, veya <xref:System.Windows.Forms.StatusStrip> yan paneller ve denetimleri, diğer denetimler için merkezi Masası'nı kullanabilirsiniz. <xref:System.Windows.Forms.ToolStripContentPanel> Da tutarlı bir görünüm için formunun gövdesine Oluşturucu destek almak için bir yol sağlar. <xref:System.Windows.Forms.ToolStripContainer> Birden Çok Belgeli Arabirim (MDI) desteklemez.  
+- <xref:System.Windows.Forms.ToolStripContainer> benzer <xref:System.Windows.Forms.SplitContainer>. Dört yerleşik yan panel kullanır (örneklerini <xref:System.Windows.Forms.ToolStripPanel>) ve bir yönetim paneli (örneği <xref:System.Windows.Forms.ToolStripContentPanel>) tipik bir düzenleme oluşturmak için. Yan paneller kaldıramazsınız ancak bunları gizleyebilirsiniz. Kaldırma ne merkezi panelini gizle. Bir veya daha fazla düzenleyebilirsiniz <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, veya <xref:System.Windows.Forms.StatusStrip> yan paneller ve denetimleri, diğer denetimler için merkezi Masası'nı kullanabilirsiniz. <xref:System.Windows.Forms.ToolStripContentPanel> Da tutarlı bir görünüm için formunun gövdesine Oluşturucu destek almak için bir yol sağlar. <xref:System.Windows.Forms.ToolStripContainer> Birden Çok Belgeli Arabirim (MDI) desteklemez.  
   
--   <xref:System.Windows.Forms.ToolStripPanel> taşıma ve düzenleme için alan sağlar <xref:System.Windows.Forms.ToolStrip> kontrol eder. Bu nedenle seçerseniz, yalnızca tek bir panel kullanabilirsiniz ve <xref:System.Windows.Forms.ToolStripPanel> iyi MDI senaryolarında çalışır.  
+- <xref:System.Windows.Forms.ToolStripPanel> taşıma ve düzenleme için alan sağlar <xref:System.Windows.Forms.ToolStrip> kontrol eder. Bu nedenle seçerseniz, yalnızca tek bir panel kullanabilirsiniz ve <xref:System.Windows.Forms.ToolStripPanel> iyi MDI senaryolarında çalışır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

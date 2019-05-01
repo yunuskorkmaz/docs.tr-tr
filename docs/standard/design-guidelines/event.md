@@ -1,5 +1,5 @@
 ---
-title: Olay tasarımı
+title: Olay Tasarımı
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: KrzysztofCwalina
 ms.openlocfilehash: 530c68ea5342263acd07f8dc8a8c8ce889652503
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026451"
 ---
-# <a name="event-design"></a>Olay tasarımı
+# <a name="event-design"></a>Olay Tasarımı
 Olayları en yaygın kullanılan geri çağırmalar (kullanıcı koda çağrı için framework izin yapıları) biçimindedir. Başka bir geri çağırma mekanizmalar Temsilciler, sanal üyeleri ve arabirim tabanlı eklentileri alma üyeleri içerir. Kullanılabilirlik incelemeleri verilerden geliştiricilerin çoğu kullandıkları için bir geri çağırma mekanizmaları çok olayları kullanarak daha iyi olduğunu gösterir. Olayları Visual Studio ve birçok dili ile sorunsuz şekilde tümleşiktir.  
   
  İki olay gruplarını olduğuna dikkat edin önemlidir: öncesi olayları ve bir durum olarak değiştirdikten sonra oluşturulan olayları adlı Sistem değişiklikleri durumunu önce harekete geçirilen olayları sonrası olayları çağrılır. Bir ön olayının örnek verilebilir `Form.Closing`, bir form kapatılmadan hemen önce oluşturulur. Örnek sonrası olayının `Form.Closed`, bir form kapatıldıktan sonra oluşturulur.  

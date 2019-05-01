@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
 ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020483"
 ---
 # <a name="drawing-objects-overview"></a>Çizim Nesnelerine Genel Bakış
 Bu konu tanıtır <xref:System.Windows.Media.Drawing> nesneleri ve bunları şekiller, bit eşlemler, metin ve medya verimli bir şekilde çizmek için kullanmayı açıklar. Kullanma <xref:System.Windows.Media.Drawing> küçük resim, oluşturduğunuz nesneleri boyama ile bir <xref:System.Windows.Media.DrawingBrush>, veya <xref:System.Windows.Media.Visual> nesneleri.  
@@ -23,25 +23,25 @@ Bu konu tanıtır <xref:System.Windows.Media.Drawing> nesneleri ve bunları şek
 ## <a name="what-is-a-drawing-object"></a>Çizim nesnesi nedir?  
  A <xref:System.Windows.Media.Drawing> nesne gibi bir şekil, bit eşlem, görüntü veya metin satırı görünür içeriği açıklar. Farklı türde çizimler içeriği farklı türleri açıklanmaktadır. Çizim nesneleri farklı türlerinin bir listesi verilmiştir.  
   
--   <xref:System.Windows.Media.GeometryDrawing> Bir şekil çizer.  
+- <xref:System.Windows.Media.GeometryDrawing> Bir şekil çizer.  
   
--   <xref:System.Windows.Media.ImageDrawing> Resim çizer.  
+- <xref:System.Windows.Media.ImageDrawing> Resim çizer.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> Metin çizer.  
+- <xref:System.Windows.Media.GlyphRunDrawing> Metin çizer.  
   
--   <xref:System.Windows.Media.VideoDrawing> – Bir ses veya video dosyası çalar.  
+- <xref:System.Windows.Media.VideoDrawing> – Bir ses veya video dosyası çalar.  
   
--   <xref:System.Windows.Media.DrawingGroup> Diğer çizimler çizer. Çizim grubu, tek bir bileşik çizim diğer çizimlerini birleştirmek için kullanın.  
+- <xref:System.Windows.Media.DrawingGroup> Diğer çizimler çizer. Çizim grubu, tek bir bileşik çizim diğer çizimlerini birleştirmek için kullanın.  
   
  <xref:System.Windows.Media.Drawing> nesneleri yönlüdür; kullanabileceğiniz birçok yöntemle bir <xref:System.Windows.Media.Drawing> nesne.  
   
--   Kullanarak, bir görüntü olarak görüntüleyebilirsiniz bir <xref:System.Windows.Media.DrawingImage> ve <xref:System.Windows.Controls.Image> denetimi.  
+- Kullanarak, bir görüntü olarak görüntüleyebilirsiniz bir <xref:System.Windows.Media.DrawingImage> ve <xref:System.Windows.Controls.Image> denetimi.  
   
--   İle kullanabileceğiniz bir <xref:System.Windows.Media.DrawingBrush> gibi bir nesne boyanacak <xref:System.Windows.Controls.Page.Background%2A> , bir <xref:System.Windows.Controls.Page>.  
+- İle kullanabileceğiniz bir <xref:System.Windows.Media.DrawingBrush> gibi bir nesne boyanacak <xref:System.Windows.Controls.Page.Background%2A> , bir <xref:System.Windows.Controls.Page>.  
   
--   Görünümünü tanımlamak için kullanabileceğiniz bir <xref:System.Windows.Media.DrawingVisual>.  
+- Görünümünü tanımlamak için kullanabileceğiniz bir <xref:System.Windows.Media.DrawingVisual>.  
   
--   İçeriğini listeleme için kullanabileceğiniz bir <xref:System.Windows.Media.Visual>.  
+- İçeriğini listeleme için kullanabileceğiniz bir <xref:System.Windows.Media.Visual>.  
   
  WPF çizim şekiller, bit eşlemler, metin ve medya özellikli olan nesnelerin diğer türleri sağlar. Örneğin, ayrıca kullanabileceğiniz <xref:System.Windows.Shapes.Shape> şekiller çizmek için nesneleri ve <xref:System.Windows.Controls.MediaElement> denetimi video uygulamanıza eklemek için başka bir yol sağlar. Bu nedenle ne zaman kullanmalısınız <xref:System.Windows.Media.Drawing> nesneleri? Performans avantajı kazanmak için framework düzeyi özellikleri özelliğinden faydalanmasına veya, ihtiyacınız olduğunda <xref:System.Windows.Freezable> özellikleri. Çünkü <xref:System.Windows.Media.Drawing> nesneler için destek yetersizliği [Düzen](../advanced/layout.md), giriş ve odak ile alt düzey çizim ve arka plan, küçük resim, açıklama için ideal hale performans avantajlarının sağladıkları <xref:System.Windows.Media.Visual> nesneleri.  
   

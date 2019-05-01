@@ -6,8 +6,8 @@ ms.openlocfilehash: e19894a685f511d22252d0b3a79f77b83b7fda99
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003099"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Özel İleti Kodlayıcısı: Sıkıştırma Kodlayıcısı
 Bu örnek, Windows Communication Foundation (WCF) platformunu kullanarak özel bir kodlayıcı uygulamak nasıl gösterir.  
@@ -29,13 +29,13 @@ Bu örnek, Windows Communication Foundation (WCF) platformunu kullanarak özel b
   
  Örnek oluşturma ve bir WCF uygulamaya özel ileti Kodlayıcı tümleştirme gösterir. ' % S'kitaplığı GZipEncoder.dll hem istemci hem de hizmet ile dağıtılır. Bu örnek, ayrıca ileti sıkıştırma etkisini gösterir. GZipEncoder.dll kodda şunlar gösterilmektedir:  
   
--   Özel bir kodlayıcı ve Kodlayıcı fabrikası oluşturma.  
+- Özel bir kodlayıcı ve Kodlayıcı fabrikası oluşturma.  
   
--   Bir bağlama öğesi için özel bir kodlayıcı geliştirme.  
+- Bir bağlama öğesi için özel bir kodlayıcı geliştirme.  
   
--   Özel bağlama yapılandırma özel bağlama öğeleri tümleştirmek için kullanma.  
+- Özel bağlama yapılandırma özel bağlama öğeleri tümleştirmek için kullanma.  
   
--   Özel bağlama öğesinin dosya yapılandırması izin vermek için özel yapılandırma işleyicisi geliştirme.  
+- Özel bağlama öğesinin dosya yapılandırması izin vermek için özel yapılandırma işleyicisi geliştirme.  
   
  Daha önce belirtildiği gibi özel bir kodlayıcı uygulanan birden fazla katman vardır. Her biri bu Katmanlar arasındaki ilişkiyi daha iyi anlamak için aşağıdaki listede hizmet başlatma için basitleştirilmiş bir olaylar dizisi şöyledir:  
   
@@ -43,13 +43,13 @@ Bu örnek, Windows Communication Foundation (WCF) platformunu kullanarak özel b
   
 2. Yapılandırma bilgilerini okuyun.  
   
-    1.  Özel yapılandırma işleyicisi hizmeti yapılandırmasını kaydeder.  
+    1. Özel yapılandırma işleyicisi hizmeti yapılandırmasını kaydeder.  
   
-    2.  Hizmet ana bilgisayarı oluşturulur ve açılır.  
+    2. Hizmet ana bilgisayarı oluşturulur ve açılır.  
   
-    3.  Özel yapılandırma öğesi oluşturur ve özel bağlama öğesini döndürür.  
+    3. Özel yapılandırma öğesi oluşturur ve özel bağlama öğesini döndürür.  
   
-    4.  Özel bağlama öğesi oluşturur ve bir ileti Kodlayıcı üreteci döndürür.  
+    4. Özel bağlama öğesi oluşturur ve bir ileti Kodlayıcı üreteci döndürür.  
   
 3. Bir ileti alındı.  
   
