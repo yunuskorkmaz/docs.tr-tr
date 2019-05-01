@@ -11,11 +11,11 @@ ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b44ff3f460d2f33903f7f083cd1bb59c7bf83e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946971"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ'te Sıra Koruma
 PLINQ'da hedef doğruluk sürdürürken performans en üst düzeye çıkarmaktır. Bir sorgu çalıştırmak mümkün olduğunca hızlı ancak yine de doğru sonuçlar gerekir. Bazı durumlarda, korunması için kaynak dizisinin sırasını doğruluk gerektirir; Ancak, sıralama hesaplama açısından pahalı olabilir. Bu nedenle, varsayılan olarak, PLINQ kaynak dizi sıralamasını korumaz. Bu bağlamda, PLINQ benzer [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], ancak sıralamasını korumak, nesnelere LINQ,.  
@@ -44,25 +44,25 @@ PLINQ'da hedef doğruluk sürdürürken performans en üst düzeye çıkarmaktı
 ## <a name="query-operators-and-ordering"></a>Sorgu işleçleri ve sıralama  
  Sıra koruması bir sorgu veya kadar tüm işlemler aşağıdaki sorgu işleçleri tanıtmak <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> çağrılır:  
   
--   <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  
+- <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>  
+- <xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.ThenBy%2A>  
+- <xref:System.Linq.ParallelEnumerable.ThenBy%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>  
+- <xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>  
   
  Bazı durumlarda, aşağıdaki PLINQ sorgu işleçleri doğru sonuçlar için sıralanmış kaynak dizilerini gerektirebilir:  
   
--   <xref:System.Linq.ParallelEnumerable.Reverse%2A>  
+- <xref:System.Linq.ParallelEnumerable.Reverse%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>  
+- <xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.TakeWhile%2A>  
+- <xref:System.Linq.ParallelEnumerable.TakeWhile%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.SkipWhile%2A>  
+- <xref:System.Linq.ParallelEnumerable.SkipWhile%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.Zip%2A>  
+- <xref:System.Linq.ParallelEnumerable.Zip%2A>  
   
  Bazı PLINQ sorgu işleçleri, ister kendi kaynak dizisi sıralı sırasız veya bağlı olarak farklı davranır. Aşağıdaki tabloda bu işleçleri listelenir.  
   

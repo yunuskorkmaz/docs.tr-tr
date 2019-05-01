@@ -16,11 +16,11 @@ ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e890e4172e645e9919ea88ec5835aaed7432c0c6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947192"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>Nasıl yapılır: Dizeden karakterleri okuma
 Aşağıdaki kod örnekleri, zaman uyumlu veya zaman uyumsuz olarak bir dizeden karakterleri okuma işlemini göstermektedir.  

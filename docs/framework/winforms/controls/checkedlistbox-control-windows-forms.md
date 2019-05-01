@@ -14,11 +14,11 @@ helpviewer_keywords:
 - list boxes
 ms.assetid: 2a525f72-0245-41d7-94e9-b9c971dc4484
 ms.openlocfilehash: 4d24a25a0b033caeb165566eb0dc5a2e189a8d4a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956461"
 ---
 # <a name="checkedlistbox-control-windows-forms"></a>CheckedListBox Denetimi (Windows Forms)
 Windows Forms `CheckedListBox` denetim öğeleri listesini gibi görüntüler <xref:System.Windows.Forms.ListBox> denetlemek ve öğelerin yanında bir onay işareti listede de görüntüleyebilirsiniz.  

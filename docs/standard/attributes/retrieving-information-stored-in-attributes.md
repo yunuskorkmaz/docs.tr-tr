@@ -14,11 +14,11 @@ ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d921c13765f5d61ce9822df0b4059b2cf93a6f6d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969422"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Özniteliklerde Depolanan Bilgileri Alma
 Özel bir öznitelik alma basit bir işlemdir. Öncelikle, almak istediğiniz öznitelik örneği bildirin. Ardından, <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> almak istediğiniz özniteliğinin değeri için yeni öznitelik başlatmak için yöntemi. Yeni öznitelik başlatıldıktan sonra sadece özellikleri değerlerini almak için kullanın.  
@@ -28,11 +28,11 @@ ms.locfileid: "54744095"
   
  Bu bölümde, öznitelikleri almak için aşağıdaki yöntemleri açıklanmaktadır:  
   
--   [Tek bir örneği bir öznitelik alma](#cpconretrievingsingleinstanceofattribute)  
+- [Tek bir örneği bir öznitelik alma](#cpconretrievingsingleinstanceofattribute)  
   
--   [Birden fazla aynı kapsam için uygulanan bir öznitelik alma](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
+- [Birden fazla aynı kapsam için uygulanan bir öznitelik alma](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
   
--   [Birden çok örneğini farklı kapsamlara uygulanan bir öznitelik alma](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
+- [Birden çok örneğini farklı kapsamlara uygulanan bir öznitelik alma](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
 <a name="cpconretrievingsingleinstanceofattribute"></a>   
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>Tek bir örneği bir öznitelik alma  

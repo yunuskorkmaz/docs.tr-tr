@@ -38,11 +38,11 @@ helpviewer_keywords:
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
 ms.openlocfilehash: 29e5cbe09026dd52811c6c5fb88e940b45b7c0bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971749"
 ---
 # <a name="data-type-summary-visual-basic"></a>Veri Türü Özeti (Visual Basic)
 Aşağıdaki tabloda, Visual Basic veri türleri, destek, ortak dil çalışma zamanı türleri, kendi nominal depolama alanı ayırma ve kendi değer aralıklarına gösterir.  
@@ -77,16 +77,16 @@ Aşağıdaki tabloda, Visual Basic veri türleri, destek, ortak dil çalışma z
 ## <a name="memory-consumption"></a>Bellek tüketimi  
  Başlangıç veri türü bildirdiğinizde, kendi bellek tüketimi kendi nominal depolama ayırma ile aynı olduğunu varsaymak güvenli değildir. Aşağıdaki konular nedeniyle budur:  
   
--   **Depolama ataması.** Ortak dil çalışma zamanı, geçerli uygulama yürütülmekte olan platform özelliklerine dayanan depolama alanı atayabilir. Bellek neredeyse dolu ise, bunu mümkün olduğunca birbirine yakın, bildirilen öğeler paketi. Diğer durumlarda bellek adresleri doğal donanım sınırlarına performansını en iyi duruma Hizala.  
+- **Depolama ataması.** Ortak dil çalışma zamanı, geçerli uygulama yürütülmekte olan platform özelliklerine dayanan depolama alanı atayabilir. Bellek neredeyse dolu ise, bunu mümkün olduğunca birbirine yakın, bildirilen öğeler paketi. Diğer durumlarda bellek adresleri doğal donanım sınırlarına performansını en iyi duruma Hizala.  
   
--   **Platform genişliği.** Bir 64-bit platformlarda depolama ataması, 32-bit platformlarda atama farklıdır.  
+- **Platform genişliği.** Bir 64-bit platformlarda depolama ataması, 32-bit platformlarda atama farklıdır.  
   
 ### <a name="composite-data-types"></a>Bileşik Veri Türleri  
  Bileşik veri türünün, bir yapının ya da bir dizi gibi her üyesine ilgili noktaların aynısı geçerlidir. Yalnızca birlikte türün üyelerinin nominal depolama ayırmalarını eklemeyi üzerinde güvenemezsiniz. Ayrıca, aşağıdaki gibi diğer önemli noktalar vardır:  
   
--   **Ek yükü.** Bazı bileşik türler ek bellek gereksinimleri vardır. Örneğin, bir dizi dizisi için ve ayrıca her boyut için ek bellek kullanır. Bir 32 bit platformda bu ek şu anda 12 bayt artı 8 bayt her boyut için yüktür. Bu gereksinim, bir 64-bit platformda iki katına çıkarılır.  
+- **Ek yükü.** Bazı bileşik türler ek bellek gereksinimleri vardır. Örneğin, bir dizi dizisi için ve ayrıca her boyut için ek bellek kullanır. Bir 32 bit platformda bu ek şu anda 12 bayt artı 8 bayt her boyut için yüktür. Bu gereksinim, bir 64-bit platformda iki katına çıkarılır.  
   
--   **Depolama düzeni.** Ayrıca, siparişin bellekteki depolama sırasının bildirim ile aynı olduğunu güvenli bir şekilde varsayamazsınız. Hatta 2 baytlık veya 4 baytlık bir sınır gibi bayt hizalama hakkında varsayımlar yapamazsınız. Bir sınıf veya yapı tanımlama ve üyelerini depolama düzenini denetlemek için ihtiyacınız varsa uygulayabileceğiniz <xref:System.Runtime.InteropServices.StructLayoutAttribute> sınıf veya yapı için özniteliği.  
+- **Depolama düzeni.** Ayrıca, siparişin bellekteki depolama sırasının bildirim ile aynı olduğunu güvenli bir şekilde varsayamazsınız. Hatta 2 baytlık veya 4 baytlık bir sınır gibi bayt hizalama hakkında varsayımlar yapamazsınız. Bir sınıf veya yapı tanımlama ve üyelerini depolama düzenini denetlemek için ihtiyacınız varsa uygulayabileceğiniz <xref:System.Runtime.InteropServices.StructLayoutAttribute> sınıf veya yapı için özniteliği.  
   
 ### <a name="object-overhead"></a>Nesnenin ek yükü  
  Bir `Object` başvuran başlangıç veya bileşik veri türü 4 bayt veri türünde yer alan veriler ek olarak kullanır.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - grouping controls [Windows Forms]
 ms.assetid: ee7fb3ed-2fae-4df3-bdeb-15d42e5d7d75
 ms.openlocfilehash: b808a76f4aa9d2c28c838d0c6cfd7bc28d589061
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971268"
 ---
 # <a name="groupbox-control-windows-forms"></a>GroupBox Denetimi (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.GroupBox> denetimleri, diğer denetimleri için tanımlanabilen bir gruplama sağlamak için kullanılır. Genellikle Grup kutuları, form işlevi tarafından alt bölümlere ayırmak için kullanır. Örneğin, bir sipariş formu gibi kullanmak için hangi gece taşıyıcı postalama seçenekleri belirten olabilir. Kullanıcı grubu kutusundaki tüm seçenekleri gruplandırma mantıksal görsel bir ipucu sağlar. <xref:System.Windows.Forms.GroupBox> Denetim benzer <xref:System.Windows.Forms.Panel> denetler; ancak, yalnızca <xref:System.Windows.Forms.GroupBox> denetimi, bir başlık görüntüler ve yalnızca <xref:System.Windows.Forms.Panel> denetimi, kaydırma çubukları sahip olabilir.  

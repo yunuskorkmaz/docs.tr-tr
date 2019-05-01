@@ -8,11 +8,11 @@ ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949272"
 ---
 # <a name="loader-etw-events"></a>Yükleyici ETW Olayları
 <a name="top"></a> Bu olaylar, yükleme ve kaldırma uygulama etki alanları, derlemeler ve modüller için ilgili bilgileri toplayın.  
@@ -21,15 +21,15 @@ ms.locfileid: "59141537"
   
  Yükleyici olayları aşağıdaki alt bölümlere:  
   
--   [Uygulama etki alanı olayları](#application_domain_events)  
+- [Uygulama etki alanı olayları](#application_domain_events)  
   
--   [CLR yükleyici derleme olayları](#clr_loader_assembly_events)  
+- [CLR yükleyici derleme olayları](#clr_loader_assembly_events)  
   
--   [Modülü olayları](#module_events)  
+- [Modülü olayları](#module_events)  
   
--   [CLR etki alanı modülü olayları](#clr_domain_module_events)  
+- [CLR etki alanı modülü olayları](#clr_domain_module_events)  
   
--   [Aralık modülü olayları](#module_range_events)  
+- [Aralık modülü olayları](#module_range_events)  
   
 <a name="application_domain_events"></a>   
 ## <a name="application-domain-events"></a>Uygulama etki alanı olayları  
@@ -134,11 +134,11 @@ ms.locfileid: "59141537"
   
 ### <a name="remarks"></a>Açıklamalar  
   
--   "Pdb" adlarında sahip alanlar profil oluşturma araçları tarafından profil oluşturma oturumu sırasında yüklenen modülleri eşleşen pdb bulmak için kullanılabilir. Bu alanların değerlerini normalde yüklü modüllerin eşleşen pdb bulmak için hata ayıklayıcıları tarafından kullanılan modül IMAGE_DIRECTORY_ENTRY_DEBUG bölümlere yazılan veriler karşılık gelir.  
+- "Pdb" adlarında sahip alanlar profil oluşturma araçları tarafından profil oluşturma oturumu sırasında yüklenen modülleri eşleşen pdb bulmak için kullanılabilir. Bu alanların değerlerini normalde yüklü modüllerin eşleşen pdb bulmak için hata ayıklayıcıları tarafından kullanılan modül IMAGE_DIRECTORY_ENTRY_DEBUG bölümlere yazılan veriler karşılık gelir.  
   
--   Yönetilen derleyici tarafından oluşturulan MSIL modülü için karşılık gelen yönetilen PDB "ManagedPdb" ile başlayan alan adları bakın (gibi C# veya Visual Basic Derleyicisi). Bu PDB yönetilen PDB biçimi kullanır ve özgün yönetilen kaynak kodu, dosya ve satır numaralarını sembol adları gibi öğeleri MSIL modülü ile derlenmiş MSIL öğeleri nasıl eşleneceğine açıklar.  
+- Yönetilen derleyici tarafından oluşturulan MSIL modülü için karşılık gelen yönetilen PDB "ManagedPdb" ile başlayan alan adları bakın (gibi C# veya Visual Basic Derleyicisi). Bu PDB yönetilen PDB biçimi kullanır ve özgün yönetilen kaynak kodu, dosya ve satır numaralarını sembol adları gibi öğeleri MSIL modülü ile derlenmiş MSIL öğeleri nasıl eşleneceğine açıklar.  
   
--   NGen çağrılarak oluşturulan PDB "NativePdb" ile başlayan alan adları başvurmak `NGEN createPDB`. Bu PDB yerel PDB biçimi kullanır ve özgün yönetilen kaynak kodu, dosya ve satır numaralarını sembol adları gibi öğeleri NGen modüle derlenmiş yerel öğeleri nasıl eşleneceğine açıklar.  
+- NGen çağrılarak oluşturulan PDB "NativePdb" ile başlayan alan adları başvurmak `NGEN createPDB`. Bu PDB yerel PDB biçimi kullanır ve özgün yönetilen kaynak kodu, dosya ve satır numaralarını sembol adları gibi öğeleri NGen modüle derlenmiş yerel öğeleri nasıl eşleneceğine açıklar.  
   
  [Başa dön](#top)  
   

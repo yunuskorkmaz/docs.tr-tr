@@ -15,42 +15,42 @@ ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5e32d2d4424d05b95af1eda400974da3293b8499
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969110"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Yönetilmeyen Kaynakları Temizleme
-Uygulamanızın oluşturduğu nesneler çoğunluğu için üzerinde güvenebilirsiniz. Bellek yönetimi işlemek için NET'in atık toplayıcı. Ancak, yönetilmeyen kaynaklar içeren nesneler oluşturduğunuzda, uygulamanızda kullanmayı bitirdiğinizde, bu kaynakları açıkça serbest bırakmanız gerekir. En sık karşılaşılan yönetilmeyen kaynak türleri, dosyalar, pencereler, ağ bağlantıları veya veritabanı bağlantıları gibi işletim sistemi kaynaklarını saran nesnelerdir. Çöp toplayıcı yönetilmeyen bir kaynağı kapsülleyen bir nesnenin kullanım ömrünü izleyebilir olsa da, yönetilmeyen kaynağı nasıl serbest bırakacağını ve temizleyeceğini bilmez.  
+Uygulamanızın oluşturduğu nesnelerin çoğu için üzerinde güvenebilirsiniz. Bellek yönetimi işlemede NET'in çöp toplayıcı. Ancak, yönetilmeyen kaynaklar içeren nesneler oluşturduğunuzda, uygulamanızda kullanmayı bitirdiğinizde, bu kaynakları açıkça serbest bırakmanız gerekir. En sık karşılaşılan yönetilmeyen kaynak türleri, dosyalar, pencereler, ağ bağlantıları veya veritabanı bağlantıları gibi işletim sistemi kaynaklarını saran nesnelerdir. Çöp toplayıcı yönetilmeyen bir kaynağı kapsülleyen bir nesnenin kullanım ömrünü izleyebilir olsa da, yönetilmeyen kaynağı nasıl serbest bırakacağını ve temizleyeceğini bilmez.  
   
  Türleriniz yönetilmeyen kaynaklar ise, aşağıdakileri yapmanız gerekir:  
   
--   Uygulama [düzeni dispose](../../../docs/standard/design-guidelines/dispose-pattern.md). Bu sağlamanızı ister bir <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> yönetilmeyen kaynakları belirleyici sürümü etkinleştirmek için uygulama. Türü çağrılarınızı tüketicisi <xref:System.IDisposable.Dispose%2A> zaman nesnesi (ve kaynaklarını) artık gerekli. <xref:System.IDisposable.Dispose%2A> Yöntemi hemen yönetilmeyen kaynakları serbest bırakır.  
+- Uygulama [dispose deseni](../../../docs/standard/design-guidelines/dispose-pattern.md). Bu sağlamanızı ister bir <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> yönetilmeyen kaynakların belirli şekilde serbest bırakılmasını etkinleştirmek için uygulama. Bir tüketici türü çağrılarınızı, <xref:System.IDisposable.Dispose%2A> zaman nesnesi (ve kullandığı kaynaklar) artık gerekli. <xref:System.IDisposable.Dispose%2A> Yöntemi yönetilmeyen kaynakları hemen serbest bırakır.  
   
--   Yönetilmeyen kaynaklarınızı çağırmak bir tüketici türünüze unutması durumunda, serbest bırakılacak sağlamak <xref:System.IDisposable.Dispose%2A>. Bunu yapmak için iki yol vardır:  
+- Yönetilmeyen kaynaklarınızı çağrılacak türünüzün bir tüketicisi unutması durumunda, yayımlanabilmesine olanak sağlayan <xref:System.IDisposable.Dispose%2A>. Bunu yapmak için iki yol vardır:  
   
-    -   Yönetilmeyen kaynağınızı sarmak için güvenli bir tanıtıcı kullanın. Önerilen yöntem budur. Güvenli tanıtıcıları türetilir <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> sınıfı ve sağlam bir dahil <xref:System.Object.Finalize%2A> yöntemi. Güvenli bir tanıtıcı kullandığınızda, yalnızca uygulamanız <xref:System.IDisposable> arabirim ve güvenli tanıtıcının çağrısı <xref:System.Runtime.InteropServices.SafeHandle.Dispose%2A> yönteminde, <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> uygulaması. Varsa güvenli tutamacın sonlandırıcıyı otomatik olarak atık toplayıcısı tarafından çağrılır, <xref:System.IDisposable.Dispose%2A> yöntemi çağrılmaz.  
+    - Yönetilmeyen kaynağınızı sarmak için güvenli bir tanıtıcı kullanın. Önerilen yöntem budur. Güvenli tanıtıcılar türetilir <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> sınıfı ve güçlü bir dahil <xref:System.Object.Finalize%2A> yöntemi. Güvenli bir tanıtıcı kullandığınızda, yalnızca uygulamanız <xref:System.IDisposable> arabirim ve güvenli tanıtıcınızın çağrı <xref:System.Runtime.InteropServices.SafeHandle.Dispose%2A> yönteminde, <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> uygulaması. Güvenli tanıtıcının Sonlandırıcısı otomatik olarak atık toplayıcı tarafından çağrılır, <xref:System.IDisposable.Dispose%2A> yöntemi çağrılmadı.  
   
          —veya—  
   
-    -   Geçersiz kılma <xref:System.Object.Finalize%2A?displayProperty=nameWithType> yöntemi. Sonlandırma etkinleştirir yönetilmeyen kaynakları belirleyici olmayan sürümü çağırmak bir tür tüketici başarısız olduğunda <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> bunları belirleyici biçimde silmek için. Ancak, nesne sonlandırma karmaşık ve hataya açık bir işlem olduğundan, kendi sonlandırıcınızı sağlamak yerine güvenli tanıtıcı kullanmanız önerilir.  
+    - Geçersiz kılma <xref:System.Object.Finalize%2A?displayProperty=nameWithType> yöntemi. Sonlandırma yönetilmeyen kaynakların belirli olmayan şekilde serbest çağırmak bir tür tüketici başarısız olduğunda sağlayan <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> onları belirsiz şekilde atmak için. Ancak, nesne sonlandırma karmaşık ve hataya açık bir işlem olduğundan, kendi sonlandırıcınızı sağlamak yerine güvenli tanıtıcı kullanmanız önerilir.  
   
- Tüketiciler türünüze sonra çağırabilir, <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> doğrudan yönetilmeyen kaynaklar tarafından kullanılan belleği boşaltmak için uygulama. Ne zaman düzgün uygulamanız bir <xref:System.IDisposable.Dispose%2A> yöntemi, ya da güvenli tanıtıcının <xref:System.Object.Finalize%2A> yöntemini veya kendi geçersiz kılma <xref:System.Object.Finalize%2A?displayProperty=nameWithType> yöntemi kaynakları temizlemek için koruyucu olur durumunda <xref:System.IDisposable.Dispose%2A> yöntemi çağrılmaz.  
+ Türünüzün tüketicileri daha sonra çağırabilir, <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> doğrudan yönetilmeyen kaynaklar tarafından kullanılan belleği serbest bırakmak. Doğru şekilde uyguladığınızda bir <xref:System.IDisposable.Dispose%2A> yöntemi, ya da güvenli tanıtıcınızın <xref:System.Object.Finalize%2A> yöntemi veya geçersiz kılan kendi <xref:System.Object.Finalize%2A?displayProperty=nameWithType> yöntemi kaynakları temizlemek için bir önlem haline gelir durumunda <xref:System.IDisposable.Dispose%2A> yöntemi çağrılmadı.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Dispose Yöntemi Uygulama](../../../docs/standard/garbage-collection/implementing-dispose.md)  
- Nasıl uygulandığı açıklanır [düzeni dispose](../../../docs/standard/design-guidelines/dispose-pattern.md) yönetilmeyen kaynakları serbest bırakmak için.  
+ Nasıl uygulanacağını açıklar [dispose deseni](../../../docs/standard/design-guidelines/dispose-pattern.md) yönetilmeyen kaynakları serbest bırakmak.  
   
  [IDisposable Uygulayan Nesneler Kullanma](../../../docs/standard/garbage-collection/using-objects.md)  
- Nasıl bir türde tüketicileri emin açıklar kendi <xref:System.IDisposable.Dispose%2A> uygulaması çağrılır. C# kullanarak öneririz `using` deyimi veya Visual Basic `Using` Bunu yapmak için deyimi.  
+ Nasıl bir türün tüketicilerinin sağlayacaklarını açıklar, <xref:System.IDisposable.Dispose%2A> uygulama çağrılır. Kullanmanızı öneririz C# `using` deyimi veya Visual Basic `Using` Bunu yapmak için deyimi.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.IDisposable?displayProperty=nameWithType>  
- Tanımlar <xref:System.IDisposable.Dispose%2A> yönetilmeyen kaynakları serbest bırakmak için yöntem.  
+ Tanımlar <xref:System.IDisposable.Dispose%2A> yöntemi yönetilmeyen kaynakları serbest bırakmak.  
   
  <xref:System.Object.Finalize%2A?displayProperty=nameWithType>  
- Tarafından yönetilmeyen kaynakları serbest bırakılmaz nesne sonlandırma sağlar <xref:System.IDisposable.Dispose%2A> yöntemi.  
+ Tarafından yönetilmeyen kaynakları serbest bırakılmazsa, nesne sonlandırması sağlar <xref:System.IDisposable.Dispose%2A> yöntemi.  
   
  <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType>  
- Sonlandırmayı bastırır. Bu yöntem geleneksel yönteminden çağrılan bir `Dispose` bir sonlandırıcı yürütülmesini engellemek için yöntem.
+ Sonlandırmayı bastırır. Yönteminden özel olarak bu yöntem çağrılır bir `Dispose` bir sonlandırıcının yürütülmesini önlemek için yöntemi.

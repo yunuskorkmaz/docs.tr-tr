@@ -12,11 +12,11 @@ ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce97089ec71fc910079910957e784605387f3e06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966887"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Nasıl yapılır: Komut satırından bir Windows Forms uygulaması oluşturma
 Aşağıdaki yordamlar oluşturmak ve komut satırından bir Windows Forms uygulaması çalıştırmak için tamamlamanız gereken temel adımlarda açıklar. Visual Studio'da bu yordamları için kapsamlı desteği yoktur.  Ayrıca bkz: [izlenecek yol: WPF içinde Forms Denetimi'ne bir Windows barındırma](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).  
@@ -44,11 +44,11 @@ Aşağıdaki yordamlar oluşturmak ve komut satırından bir Windows Forms uygul
   
 4. Ekleme bir `Main` sınıfı için yöntemi.  
   
-    1.  Uygulama <xref:System.STAThreadAttribute> C# `Main` yöntemi, Windows Forms uygulamasının adını belirtin tek kullanımlık apartman. (Windows forms uygulamaları Visual Basic ile kullanılacak tek kullanımlık apartman modeli varsayılan olarak geliştirilen beri öznitelik Visual Basic'te, gerekli değildir.)  
+    1. Uygulama <xref:System.STAThreadAttribute> C# `Main` yöntemi, Windows Forms uygulamasının adını belirtin tek kullanımlık apartman. (Windows forms uygulamaları Visual Basic ile kullanılacak tek kullanımlık apartman modeli varsayılan olarak geliştirilen beri öznitelik Visual Basic'te, gerekli değildir.)  
   
-    2.  Çağrı <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> uygulamanıza işletim sistemi stilleri uygulamak için.  
+    2. Çağrı <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> uygulamanıza işletim sistemi stilleri uygulamak için.  
   
-    3.  Form örneği oluşturun ve çalıştırın.  
+    3. Form örneği oluşturun ve çalıştırın.  
   
      [!code-csharp[System.Windows.Forms.BasicForm#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.BasicForm#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
@@ -59,11 +59,11 @@ Aşağıdaki yordamlar oluşturmak ve komut satırından bir Windows Forms uygul
   
 2. Form derleyin.  
   
-    -   C# kullanıyorsanız yazın: `csc form1.cs`  
+    - C# kullanıyorsanız yazın: `csc form1.cs`  
   
          `-or-`  
   
-    -   Visual Basic kullanıyorsanız yazın: `vbc form1.vb`  
+    - Visual Basic kullanıyorsanız yazın: `vbc form1.vb`  
   
 3. Komut isteminde aşağıdakini yazın: `Form1.exe`  
   
@@ -111,7 +111,7 @@ Aşağıdaki yordamlar oluşturmak ve komut satırından bir Windows Forms uygul
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   Kodu derlemek için derlemek ve uygulamayı çalıştırmak nasıl açıklayan devam etmeden yordam yönergeleri izleyin.  
+- Kodu derlemek için derlemek ve uygulamayı çalıştırmak nasıl açıklayan devam etmeden yordam yönergeleri izleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

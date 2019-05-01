@@ -9,11 +9,11 @@ helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
 ms.openlocfilehash: ee4d30b82ceada5c4f3fc4ad95dc8eeedd9355b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970839"
 ---
 # <a name="myresources-object"></a>My.Resources Nesnesi
 Uygulama kaynaklarına erişmek için özellikler ve sınıfları sağlar.  
@@ -32,11 +32,11 @@ Uygulama kaynaklarına erişmek için özellikler ve sınıfları sağlar.
   
  Her kaynak bir ad, kategori ve değere sahip ve bu kaynak ayarlarını kaynağa erişmek için özelliği nasıl görünür `My.Resources` nesne. Eklenen kaynaklar için **Proje Tasarımcısı**:  
   
--   Özelliğin adını belirleyen adı  
+- Özelliğin adını belirleyen adı  
   
--   Kaynak veri özelliğinin değeri olan  
+- Kaynak veri özelliğinin değeri olan  
   
--   Kategori özelliğinin türü belirler:  
+- Kategori özelliğinin türü belirler:  
   
 |Kategori|Özellik verilerinin türü|  
 |---|---|  

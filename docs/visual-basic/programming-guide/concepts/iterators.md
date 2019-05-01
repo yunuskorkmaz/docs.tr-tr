@@ -3,11 +3,11 @@ title: Yineleyiciler (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
 ms.openlocfilehash: 313ce0c79a71af1b602ecd4ccc9bd0ebceb5696e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966185"
 ---
 # <a name="iterators-visual-basic"></a>Yineleyiciler (Visual Basic)
 Bir *yineleyici* koleksiyonlarına listeler ve diziler gibi adım için kullanılabilir.  
@@ -44,21 +44,21 @@ End Function
   
  **Bu konudaki**  
   
--   [Basit bir yineleyici](#BKMK_SimpleIterator)  
+- [Basit bir yineleyici](#BKMK_SimpleIterator)  
   
--   [Koleksiyon sınıfı oluşturma](#BKMK_CollectionClass)  
+- [Koleksiyon sınıfı oluşturma](#BKMK_CollectionClass)  
   
--   [Try blokları](#BKMK_TryBlocks)  
+- [Try blokları](#BKMK_TryBlocks)  
   
--   [Anonim Metotlar](#BKMK_AnonymousMethods)  
+- [Anonim Metotlar](#BKMK_AnonymousMethods)  
   
--   [Yineleyiciler genel listeyle kullanma](#BKMK_GenericList)  
+- [Yineleyiciler genel listeyle kullanma](#BKMK_GenericList)  
   
--   [Söz dizimi bilgileri](#BKMK_SyntaxInformation)  
+- [Söz dizimi bilgileri](#BKMK_SyntaxInformation)  
   
--   [Teknik uygulama](#BKMK_Technical)  
+- [Teknik uygulama](#BKMK_Technical)  
   
--   [Yineleyicilerin kullanın](#BKMK_UseOfIterators)  
+- [Yineleyicilerin kullanın](#BKMK_UseOfIterators)  
   
 > [!NOTE]
 >  Konusunda basit bir yineleyici örnek hariç tüm örnekler için dahil [içeri aktarmalar](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) deyimleri için `System.Collections` ve `System.Collections.Generic` ad alanları.  
@@ -438,11 +438,11 @@ End Class
 ## <a name="BKMK_UseOfIterators"></a> Yineleyicilerin kullanın  
  Yineleyiciler basitliğinin korumak etkinleştirme bir `For Each` döngü listesi sırası doldurmak için karmaşık kodlar kullanmanız gerektiğinde. Aşağıdakileri yapmak istediğinizde bu yararlı olabilir:  
   
--   Liste sonra ilk dağıtmayın `For Each` döngü yinelemesi.  
+- Liste sonra ilk dağıtmayın `For Each` döngü yinelemesi.  
   
--   Büyük bir liste ilk yinelemeyi önce tam olarak yüklenmesini önlemek bir `For Each` döngü. Tablo satırları toplu yükleme için disk belleğine alınan fetch buna bir örnektir. Başka bir örnek <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> yineleyiciler .NET Framework içindeki uygulayan yöntemi.  
+- Büyük bir liste ilk yinelemeyi önce tam olarak yüklenmesini önlemek bir `For Each` döngü. Tablo satırları toplu yükleme için disk belleğine alınan fetch buna bir örnektir. Başka bir örnek <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> yineleyiciler .NET Framework içindeki uygulayan yöntemi.  
   
--   Yineleyici listesinde oluşturmaya kapsüller. Yineleyici yöntem içinde listesi oluşturmak ve ardından her bir döngü sonucu verecek.  
+- Yineleyici listesinde oluşturmaya kapsüller. Yineleyici yöntem içinde listesi oluşturmak ve ardından her bir döngü sonucu verecek.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

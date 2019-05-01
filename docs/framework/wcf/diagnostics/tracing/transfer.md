@@ -3,11 +3,11 @@ title: Aktarma
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
 ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964495"
 ---
 # <a name="transfer"></a>Aktarma
 Bu konu, Windows Communication Foundation (WCF) Etkinlik izleme modelinde aktarımı açıklar.  
@@ -35,9 +35,9 @@ Bu konu, Windows Communication Foundation (WCF) Etkinlik izleme modelinde aktar�
 ## <a name="example-of-transfers"></a>Aktarımları örneği  
  Aşağıdaki liste iki aktarımı örnekler.  
   
--   Bir hizmet konağı oluşturduğunuzda, çağıran kod denetiminden Oluşturucu kazanır veya çağıran kod oluşturucuya aktarır. Oluşturucu yürütme sona erdiğinde, çağrıldığı koda denetimini döndürür veya Oluşturucu çağıran koda geri aktarır. İç içe geçmiş bir ilişkinin durum budur.  
+- Bir hizmet konağı oluşturduğunuzda, çağıran kod denetiminden Oluşturucu kazanır veya çağıran kod oluşturucuya aktarır. Oluşturucu yürütme sona erdiğinde, çağrıldığı koda denetimini döndürür veya Oluşturucu çağıran koda geri aktarır. İç içe geçmiş bir ilişkinin durum budur.  
   
--   Dinleyici aktarım veri işlemeye başladığında, yeni bir iş parçacığı oluşturur ve işleme, Denetim ve veri geçirme için uygun içerik için bayt alma etkinlik uygulamalı. İş parçacığı istek işlemeyi tamamlandığında, bayt Al etkinliği hiçbir şey dinleyici için geçirir. Bu durumda, bir aktarımı ancak yeni iş parçacığı etkinliği dışında hiçbir aktarım sahibiz. İki etkinliği ilgili ancak iç içe yerleştirilmiş.  
+- Dinleyici aktarım veri işlemeye başladığında, yeni bir iş parçacığı oluşturur ve işleme, Denetim ve veri geçirme için uygun içerik için bayt alma etkinlik uygulamalı. İş parçacığı istek işlemeyi tamamlandığında, bayt Al etkinliği hiçbir şey dinleyici için geçirir. Bu durumda, bir aktarımı ancak yeni iş parçacığı etkinliği dışında hiçbir aktarım sahibiz. İki etkinliği ilgili ancak iç içe yerleştirilmiş.  
   
 ## <a name="activity-transfer-sequence"></a>Etkinlik aktarım dizisi  
  İyi biçimlendirilmiş bir etkinlik aktarım dizisi, aşağıdaki adımları içerir.  

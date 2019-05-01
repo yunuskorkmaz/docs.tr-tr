@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
 ms.openlocfilehash: 4c96665994a7e56bc70f72b66d5922f5a6472a13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961245"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML'de Katıştırılmış İfadeler (Visual Basic)
 Katıştırılmış ifadeler, çalışma zamanında değerlendirilen bir ifade içeren bir XML sabit değerleri oluşturmanıza olanak sağlar. Katıştırılmış bir ifade sözdizimi `<%=` `expression` `%>`, olduğu aynı söz dizimi içinde kullanılan [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -42,27 +42,27 @@ Katıştırılmış ifadeler, çalışma zamanında değerlendirilen bir ifade i
 |XML öğesi özniteliği|<xref:System.Xml.Linq.XAttribute> veya bir koleksiyonu <xref:System.Xml.Linq.XAttribute>|Yoksayıldı|  
 |XML belgesi kök öğesi|<xref:System.Xml.Linq.XElement> veya bir koleksiyonu <xref:System.Xml.Linq.XElement> nesne ve tercihe bağlı sayıda <xref:System.Xml.Linq.XProcessingInstruction> ve <xref:System.Xml.Linq.XComment> nesneleri|Yoksayıldı|  
   
--   Bir XML öğesinin adındaki katıştırılmış bir ifade örneği:  
+- Bir XML öğesinin adındaki katıştırılmış bir ifade örneği:  
   
      [!code-vb[VbXMLSamples#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#32)]  
   
--   Bir XML öğesi içeriğinde katıştırılmış bir ifade örneği:  
+- Bir XML öğesi içeriğinde katıştırılmış bir ifade örneği:  
   
      [!code-vb[VbXMLSamples#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#33)]  
   
--   Bir XML öğesi öznitelik adı bir gömülü ifade örneği:  
+- Bir XML öğesi öznitelik adı bir gömülü ifade örneği:  
   
      [!code-vb[VbXMLSamples#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#34)]  
   
--   Gömülü deyim bir XML öğesi öznitelik değeri örneği:  
+- Gömülü deyim bir XML öğesi öznitelik değeri örneği:  
   
      [!code-vb[VbXMLSamples#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#35)]  
   
--   Bir XML öğesi özniteliği katıştırılmış bir ifadede örneği:  
+- Bir XML öğesi özniteliği katıştırılmış bir ifadede örneği:  
   
      [!code-vb[VbXMLSamples#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#36)]  
   
--   Bir XML belgesi kök öğesi içinde katıştırılmış bir ifade örneği:  
+- Bir XML belgesi kök öğesi içinde katıştırılmış bir ifade örneği:  
   
      [!code-vb[VbXMLSamples#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#37)]  
   

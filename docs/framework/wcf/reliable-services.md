@@ -9,11 +9,11 @@ helpviewer_keywords:
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
 ms.openlocfilehash: a617100e46d4bcafb9325efa99c255f2f8ee5981
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955174"
 ---
 # <a name="reliable-services"></a>Güvenilir Hizmetler
 Kuyruklar ve güvenilir oturumlar güvenilir Mesajlaşma uygulayan Windows Communication Foundation (WCF) özellikleridir. Bu konu, WCF güvenilir Mesajlaşma özelliklerini açıklar.  
@@ -22,15 +22,15 @@ Kuyruklar ve güvenilir oturumlar güvenilir Mesajlaşma uygulayan Windows Commu
   
  Güvenilir Mesajlaşma aşağıdaki işlevleri gerçekleştirir:  
   
--   Bir kaynaktan bir hedefe ileti aktarma veya taşıma hatalarından bağımsız olarak gönderilen iletiler için Güvenceleri aktarır.  
+- Bir kaynaktan bir hedefe ileti aktarma veya taşıma hatalarından bağımsız olarak gönderilen iletiler için Güvenceleri aktarır.  
   
--   Kaynak ve hedef birbirinden ayırır. Kaynak veya hedef kullanılabilir olsa bile bu bağımsız hatası ve kaynak ve hedef olarak güvenilir aktarım kurtarma ve ileti teslimini sağlar.  
+- Kaynak ve hedef birbirinden ayırır. Kaynak veya hedef kullanılabilir olsa bile bu bağımsız hatası ve kaynak ve hedef olarak güvenilir aktarım kurtarma ve ileti teslimini sağlar.  
   
  Güvenilir Mesajlaşma sık yüksek gecikme karşılığında sunulur. *Gecikme süresi* iletisinin kaynaktan hedefe ulaşmak gereken süre anlamına gelmektedir. WCF, bu nedenle, aşağıdaki türleri güvenilir Mesajlaşma sağlar:  
   
--   [Güvenilir oturumlar](../../../docs/framework/wcf/feature-details/reliable-sessions.md), güvenilir aktarım gecikme süresi yüksek bir maliyet olmadan sunar.  
+- [Güvenilir oturumlar](../../../docs/framework/wcf/feature-details/reliable-sessions.md), güvenilir aktarım gecikme süresi yüksek bir maliyet olmadan sunar.  
   
--   [Wcf'de kuyruklar](../../../docs/framework/wcf/feature-details/queues-in-wcf.md), hem güvenilir aktarımları hem de kaynak ve hedef arasında ayrım sağlar.  
+- [Wcf'de kuyruklar](../../../docs/framework/wcf/feature-details/queues-in-wcf.md), hem güvenilir aktarımları hem de kaynak ve hedef arasında ayrım sağlar.  
   
 ## <a name="reliable-sessions"></a>Güvenilir oturumlar  
  Güvenilir oturumlar uçtan uca güvenilir iletiler arasında aktarımı bir kaynak hem de sayı veya (kaynak ve hedef) Mesajlaşma uç noktaları ayrı aracılar türü ne olursa olsun WS-güvenilir Mesajlaşma protokolü kullanarak bir hedef sağlayın. Bu, SOAP (örneğin, HTTP proxy) kullanmayan herhangi bir aktarım aracılar içerir veya akış uç noktaları arasında iletileri için gerekli olan SOAP (örneğin, SOAP tabanlı yönlendiriciler veya köprüler) kullanan aracılar. Güvenilir oturumlar maskesi SOAP ileti düzeyi hataları bir bellek içi aktarım penceresini kullanma ve aktarım hatası durumunda bağlantıları yeniden oluşturun.  

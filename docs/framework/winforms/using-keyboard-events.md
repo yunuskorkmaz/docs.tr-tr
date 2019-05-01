@@ -10,11 +10,11 @@ helpviewer_keywords:
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
 ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966925"
 ---
 # <a name="using-keyboard-events"></a>Klavye Olaylarını Kullanma
 Çoğu Windows Forms program klavye girdisi klavye olaylarını işleme göre işleyin. Bu konu, klavye olayları zaman her bir olay ve sağlanan verileri her olay için kullanılacağı hakkında ayrıntılar dahil olmak üzere, genel bir bakış sağlar.  Ayrıca bkz: [olay işleyicilerine genel bakış (Windows Forms)](event-handlers-overview-windows-forms.md) ve [olaylara genel bakış (Windows Forms)](events-overview-windows-forms.md).  
@@ -22,11 +22,11 @@ ms.locfileid: "59114276"
 ## <a name="keyboard-events"></a>Klavye olayları  
  Windows Forms, bir kullanıcı bir klavye tuşuna bastığında oluşan iki olay ve bir kullanıcı bir klavye anahtar bıraktığında bir olay sağlar:  
   
--   <xref:System.Windows.Forms.Control.KeyDown> Gerçekleştiğinde bir kez  
+- <xref:System.Windows.Forms.Control.KeyDown> Gerçekleştiğinde bir kez  
   
--   <xref:System.Windows.Forms.Control.KeyPress> Olayı, bir kullanıcı aynı tuşunu basılı tutar birden çok kez gerçekleşebilir.  
+- <xref:System.Windows.Forms.Control.KeyPress> Olayı, bir kullanıcı aynı tuşunu basılı tutar birden çok kez gerçekleşebilir.  
   
--   <xref:System.Windows.Forms.Control.KeyUp> Olayı, bir kullanıcı bir anahtar zaman serbest sonra oluşur.  
+- <xref:System.Windows.Forms.Control.KeyUp> Olayı, bir kullanıcı bir anahtar zaman serbest sonra oluşur.  
   
  Bir kullanıcı bir tuşuna bastığında, Windows Forms klavye iletisi karakter anahtarı veya fiziksel bir anahtar belirtir yükseltmek için hangi olay tabanlı belirler. Karakter ve fiziksel anahtarlar hakkında daha fazla bilgi için bkz. [nasıl klavye girişi çalışır](how-keyboard-input-works.md).  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
 ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947894"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Nasıl yapılır: UI Olan Eklenti Oluşturma
 Bu örnek, bir Windows Presentation Foundation (WPF tek başına uygulama tarafından barındırılan WPF) olan bir eklenti oluşturma işlemi gösterilmektedir.  
@@ -25,9 +25,9 @@ Bu örnek, bir Windows Presentation Foundation (WPF tek başına uygulama taraf�
   
  Bu örnekte, bu senaryoyu WPF uzantıları için .NET Framework eklenti modeli vurgular ve aşağıdaki varsayar:  
   
--   Bilgi işlem hattı, eklenti ve konak geliştirme gibi .NET Framework eklenti modeli, sahibi. Bu kavramları alışkın değilseniz bkz [eklentiler ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Bir işlem hattı, bir eklenti ve ana bilgisayar uygulamasına uygulanışı gösteren bir öğretici için bkz [izlenecek yol: Genişletilebilir uygulama oluşturma](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
+- Bilgi işlem hattı, eklenti ve konak geliştirme gibi .NET Framework eklenti modeli, sahibi. Bu kavramları alışkın değilseniz bkz [eklentiler ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Bir işlem hattı, bir eklenti ve ana bilgisayar uygulamasına uygulanışı gösteren bir öğretici için bkz [izlenecek yol: Genişletilebilir uygulama oluşturma](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
   
--   .NET Framework eklenti modeli WPF uzantılarını bilgi. Bkz: [WPF Eklentilerine Genel Bakış](wpf-add-ins-overview.md).  
+- .NET Framework eklenti modeli WPF uzantılarını bilgi. Bkz: [WPF Eklentilerine Genel Bakış](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Örnek  
  Bir WPF UI olan eklenti oluşturmak için her işlem hattı segment, eklenti ve ana bilgisayar uygulaması için özel kod gerektirir.  
@@ -87,9 +87,9 @@ Bu örnek, bir Windows Presentation Foundation (WPF tek başına uygulama taraf�
   
  Eklentinin kullanıcı Arabirimi ile etkileşim işlemek için kod eklentinin uygulama etki alanında çalışır. Bu etkileşimlerin şunları içerir:  
   
--   İşleme <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.  
+- İşleme <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.  
   
--   Gösteren <xref:System.Windows.MessageBox>.  
+- Gösteren <xref:System.Windows.MessageBox>.  
   
  Bu etkinlik ana bilgisayar uygulamasını tamamen yalıtılır.  
   

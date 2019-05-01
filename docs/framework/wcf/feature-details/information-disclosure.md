@@ -3,11 +3,11 @@ title: Bilgileri Açıklama
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
 ms.openlocfilehash: b42faeb4043302e5e70379cc4e1de3cb8bd96af4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972607"
 ---
 # <a name="information-disclosure"></a>Bilgileri Açıklama
 Bilgilerin açıklanması, bir saldırganın bir sistem hakkında değerli bilgiler sağlar. Bu nedenle, her zaman ve mi kötü niyetli bir kullanıcı tarafından kullanılabilir, devamlılığımız bilgiler göz önünde bulundurun. Aşağıdaki olası bilgi ifşası saldırıları listeler ve her risk azaltma işlemleri sağlar.  
@@ -32,16 +32,16 @@ Bilgilerin açıklanması, bir saldırganın bir sistem hakkında değerli bilgi
   
  Risk azaltma işlemleri şunlardır:  
   
--   Hizmet başvurularını güvenilir olarak kabul edilir. Bunlar üzerinde oynanmadığını değil emin olmak için hizmet başvurusu örnekleri aktarma zaman dikkatli olun.  
+- Hizmet başvurularını güvenilir olarak kabul edilir. Bunlar üzerinde oynanmadığını değil emin olmak için hizmet başvurusu örnekleri aktarma zaman dikkatli olun.  
   
--   Bazı uygulamalar, uzak konak tarafından kanıtlanmış hizmet başvurusu ve güven verilerini dayalı güven etkileşimli kurma izin veren bir kullanıcı deneyimi sunabilir. WCF böyle bir özellik için genişletilebilirlik noktaları sağlar, ancak kullanıcı bunları uygulanan gerekir.  
+- Bazı uygulamalar, uzak konak tarafından kanıtlanmış hizmet başvurusu ve güven verilerini dayalı güven etkileşimli kurma izin veren bir kullanıcı deneyimi sunabilir. WCF böyle bir özellik için genişletilebilirlik noktaları sağlar, ancak kullanıcı bunları uygulanan gerekir.  
   
 ## <a name="ntlm"></a>NTLM  
  Varsayılan olarak, Windows etki alanı ortamında kimliğini doğrulamak ve kullanıcılara yetki vermek için Kerberos protokolü Windows kimlik doğrulaması kullanır. Kerberos protokolü için herhangi bir nedenle kullanılamıyorsa, NT LAN Manager (NTLM) bir geri dönüş olarak kullanılır. Ayarlayarak bu davranışı devre dışı bırakabilirsiniz <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> özelliğini `false`. NTLM izin verirken dikkat edilmesi gereken konular şunlardır:  
   
--   NTLM için istemci kullanıcı adını gösterir. Kullanıcı adı gizli tutulması gerekiyorsa, ardından ayarlayın `AllowNTLM` bağlama özelliği `false`.  
+- NTLM için istemci kullanıcı adını gösterir. Kullanıcı adı gizli tutulması gerekiyorsa, ardından ayarlayın `AllowNTLM` bağlama özelliği `false`.  
   
--   NTLM kimlik doğrulaması sağlamaz. Bu nedenle, istemci bir kimlik doğrulama protokolü NTLM kullandığınızda, doğru hizmet ile iletişim kurduğunu garanti edemez.  
+- NTLM kimlik doğrulaması sağlamaz. Bu nedenle, istemci bir kimlik doğrulama protokolü NTLM kullandığınızda, doğru hizmet ile iletişim kurduğunu garanti edemez.  
   
 ### <a name="specifying-client-credentials-or-invalid-identity-forces-ntlm-usage"></a>İstemci kimlik bilgileri veya geçersiz kimlik zorlar NTLM kullanımını belirtme  
  Bir istemci oluştururken, istemci kimlik bilgileri olmadan bir etki alanı adı belirterek veya bir geçersiz bir sunucu kimliğini belirterek Kerberos protokolü yerine kullanılacak NTLM neden (varsa `AlllowNtlm` özelliği `true`). NTLM kimlik doğrulaması yapmak için bilgi büyük olasılıkla partilere açık.  

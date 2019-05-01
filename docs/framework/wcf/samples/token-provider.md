@@ -3,32 +3,32 @@ title: Belirteç Sağlayıcı
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
 ms.openlocfilehash: 9c10d67093fb09cb97f2010926ebaa6176df86c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965665"
 ---
 # <a name="token-provider"></a>Belirteç Sağlayıcı
 Bu örnek, özel bir belirteç sağlayıcısını uygulamak nasıl gösterir. Windows Communication Foundation (WCF) bir belirteç sağlayıcısı güvenlik altyapısı için kimlik bilgilerini sağlamak için kullanılır. Belirteç sağlayıcı genel hedef inceler ve böylece ileti güvenlik altyapısı güvenli hale getirebilirsiniz, kimlik bilgileri sorunları uygun. WCF varsayılan kimlik bilgileri Yöneticisi belirteç sağlayıcısı ile birlikte gelir. WCF ayrıca ile birlikte gelir bir [!INCLUDE[infocard](../../../../includes/infocard-md.md)] belirteç sağlayıcısı. Özel belirteç sağlayıcıları, aşağıdaki durumlarda kullanışlıdır:
 
--   Bu belirteci sağlayıcıları ile çalışamaz bir kimlik bilgisi deposu varsa.
+- Bu belirteci sağlayıcıları ile çalışamaz bir kimlik bilgisi deposu varsa.
 
--   Kullanıcı için WCF istemci framework kimlik bilgileri kullandığında ayrıntıları sağladığında noktadan kimlik dönüştürme için kendi özel mekanizması sağlamak istiyorsanız.
+- Kullanıcı için WCF istemci framework kimlik bilgileri kullandığında ayrıntıları sağladığında noktadan kimlik dönüştürme için kendi özel mekanizması sağlamak istiyorsanız.
 
--   Özel belirteç oluşturuluyorsa.
+- Özel belirteç oluşturuluyorsa.
 
  Bu örnek, kullanıcı girişini başka bir biçime dönüştürür özel bir belirteç sağlayıcısı oluşturmak nasıl gösterir.
 
  Özetlemek gerekirse, bu örnek aşağıdaki gösterir:
 
--   Nasıl bir istemci bir kullanıcı adı/parola çifti kullanarak kimlik doğrulaması yapabilir.
+- Nasıl bir istemci bir kullanıcı adı/parola çifti kullanarak kimlik doğrulaması yapabilir.
 
--   Nasıl bir istemci özel bir belirteç sağlayıcısı ile yapılandırılabilir.
+- Nasıl bir istemci özel bir belirteç sağlayıcısı ile yapılandırılabilir.
 
--   Sunucunun istemci kimlik bilgileri ile özel bir parola ile nasıl doğrulayabilirsiniz <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> kullanıcı adı ve parola eşleştiğini doğrular.
+- Sunucunun istemci kimlik bilgileri ile özel bir parola ile nasıl doğrulayabilirsiniz <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> kullanıcı adı ve parola eşleştiğini doğrular.
 
--   Sunucu, sunucunun X.509 sertifikası kullanarak istemci tarafından nasıl doğrulanır.
+- Sunucu, sunucunun X.509 sertifikası kullanarak istemci tarafından nasıl doğrulanır.
 
  Ayrıca bu örnek nasıl çağıranının kimliğini özel belirteç kimlik doğrulama işleminden sonra erişilebilir gösterir.
 
@@ -219,7 +219,7 @@ static void DisplayIdentityInformation()
 
  Aşağıda, böylece uygun yapılandırmasında çalıştırılacak değiştirilebilir toplu iş dosyaları farklı bölümlerini kısa bir genel bakış sağlar:
 
--   Sunucu sertifikası oluşturuluyor.
+- Sunucu sertifikası oluşturuluyor.
 
      Setup.bat toplu iş dosyasından aşağıdaki satırları kullanılacak sunucu sertifikası oluşturun. `%SERVER_NAME%` Değişkeni, sunucu adını belirtir. Kendi sunucu adını belirtmek için bu değişkeni değiştirin. Localhost bu toplu iş dosyasında varsayılan değerdir.
 
@@ -233,7 +233,7 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Sunucu sertifikasını istemcinin güvenilen sertifika depolama alanına yükleniyor:
+- Sunucu sertifikasını istemcinin güvenilen sertifika depolama alanına yükleniyor:
 
      İstemci güvenilir kişiler uygulamasına Setup.bat toplu dosya kopyalama sunucu sertifikasının aşağıdaki satırları depolayın. MakeCert.exe tarafından oluşturulan sertifikaları örtük olarak istemci sistemi tarafından güvenilir değildir çünkü bu adım gereklidir. Bir istemci güvenilen kök sertifikayı kök erişim izni verilmiş bir sertifika zaten varsa — örneğin, Microsoft tarafından verilen sertifika — sunucu sertifikasında istemci sertifika deposunun doldurulması, bu adım gerekli değildir.
 

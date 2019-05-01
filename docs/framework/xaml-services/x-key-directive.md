@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
 ms.openlocfilehash: 6ac878f24de594f8557ded8b0c3356217021b035
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971827"
 ---
 # <a name="xkey-directive"></a>x:Key Yönergesi
 Oluşturulan ve XAML tanımlı bir sözlükte başvurulan öğeleri benzersiz olarak tanımlar. Ekleme bir `x:Key` değerdir XAML nesnesi öğesine örneğin WPF içindeki bir kaynak sözlüğünde bir kaynağı tanımlamak için en yaygın yolu <xref:System.Windows.ResourceDictionary>.  
@@ -61,9 +61,9 @@ Oluşturulan ve XAML tanımlı bir sözlükte başvurulan öğeleri benzersiz ol
 ## <a name="wpf-usage-notes"></a>WPF kullanım notları  
  Üst alt nesnelerin nesnesini bir <xref:System.Collections.IDictionary> WPF gibi bir uygulama <xref:System.Windows.ResourceDictionary>, genellikle içermelidir bir `x:Key` özniteliği ve anahtar değer bu sözlük dahilinde benzersiz olmalıdır. İki önemli özel durum vardır:  
   
--   Bazı WPF türleri sözlük kullanımı için bir örtülü anahtar bildirir. Örneğin, bir <xref:System.Windows.Style> ile bir <xref:System.Windows.Style.TargetType%2A>, veya bir <xref:System.Windows.DataTemplate> ile bir <xref:System.Windows.DataTemplate.DataType%2A>, kullanılabilir bir <xref:System.Windows.ResourceDictionary> ve örtük anahtarı kullanabilir.  
+- Bazı WPF türleri sözlük kullanımı için bir örtülü anahtar bildirir. Örneğin, bir <xref:System.Windows.Style> ile bir <xref:System.Windows.Style.TargetType%2A>, veya bir <xref:System.Windows.DataTemplate> ile bir <xref:System.Windows.DataTemplate.DataType%2A>, kullanılabilir bir <xref:System.Windows.ResourceDictionary> ve örtük anahtarı kullanabilir.  
   
--   WPF birleştirilmiş bir kaynak sözcük kavramını destekler. Anahtarlar birleştirilmiş sözlükler arasında paylaşılabilir ve paylaşılan anahtar davranışına kullanılarak erişilebilir <xref:System.Windows.FrameworkContentElement.FindResource%2A>. Daha fazla bilgi için [birleştirilmiş kaynak sözlükleri](../wpf/advanced/merged-resource-dictionaries.md).  
+- WPF birleştirilmiş bir kaynak sözcük kavramını destekler. Anahtarlar birleştirilmiş sözlükler arasında paylaşılabilir ve paylaşılan anahtar davranışına kullanılarak erişilebilir <xref:System.Windows.FrameworkContentElement.FindResource%2A>. Daha fazla bilgi için [birleştirilmiş kaynak sözlükleri](../wpf/advanced/merged-resource-dictionaries.md).  
   
  Genel WPF XAML uygulama ve uygulama modelinde, anahtar benzersizlik XAML biçimlendirme derleyici tarafından denetlenmez. Bunun yerine, eksik veya benzersiz olmayan `x:Key` değerleri yükleme zamanı XAML ayrıştırıcı hatalarına neden olur. Ancak WPF için sözlüklerin Visual Studio işleme gibi hataları tasarım aşamasında unutmayın genellikle.  
   
@@ -101,11 +101,11 @@ keyObject
 |-|-|  
 |`keyObject`|Object öğesi için anahtar olarak kullanılan nesne için bir verilen `object` bir özel sözlükte.|  
   
--   Bu tür bir kullanım için kapsayıcı/üst burada gösterilmez. `object` Özel sözlük uygulamasını temsil eden bir nesne öğesinin alt olması beklenir. `keyObject` bir nesne örneği (veya bir değer türünün bir değerinin) olması bekleniyor, belirli özel sözlük uygulaması için anahtar olarak uygun.  
+- Bu tür bir kullanım için kapsayıcı/üst burada gösterilmez. `object` Özel sözlük uygulamasını temsil eden bir nesne öğesinin alt olması beklenir. `keyObject` bir nesne örneği (veya bir değer türünün bir değerinin) olması bekleniyor, belirli özel sözlük uygulaması için anahtar olarak uygun.  
   
--   WPF bu kullanımı gerektiren sözlükler uygulamaz. Nesne anahtarları olan XAML içinde sözlük oluşturma arzu olduğu bazı özel sözlük senaryoları için belki yararlı XAML dilinin daha genel bir özelliğidir. Bu nedenle bir nesne anahtarı kullanılması gerekli değildir, dize olmayan kaynaklar için kullanan örtük stilleri gibi WFP özellikleri, oluşturma veya anahtarlarının belirterek için diğer teknikler vardır.  
+- WPF bu kullanımı gerektiren sözlükler uygulamaz. Nesne anahtarları olan XAML içinde sözlük oluşturma arzu olduğu bazı özel sözlük senaryoları için belki yararlı XAML dilinin daha genel bir özelliğidir. Bu nedenle bir nesne anahtarı kullanılması gerekli değildir, dize olmayan kaynaklar için kullanan örtük stilleri gibi WFP özellikleri, oluşturma veya anahtarlarının belirterek için diğer teknikler vardır.  
   
--   *keyObject* doğrudan nesne örneği yerine nesne öğesi biçiminde biçimlendirme uzantısı kullanımı da olabilir.  
+- *keyObject* doğrudan nesne örneği yerine nesne öğesi biçiminde biçimlendirme uzantısı kullanımı da olabilir.  
   
 ## <a name="silverlight-usage-notes"></a>Silverlight kullanım notları  
  `x:Key` Silverlight için ayrı olarak belgelenmiştir. Daha fazla bilgi için [XAML Namespace (x:) Dil özellikleri (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  

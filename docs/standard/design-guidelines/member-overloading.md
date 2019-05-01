@@ -1,5 +1,5 @@
 ---
-title: Üye aşırı yüklemesi
+title: Üye Aşırı Yüklemesi
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
 author: KrzysztofCwalina
 ms.openlocfilehash: b13f9e1551aec7e53ba1ac2ed0b9049d46b0a756
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945554"
 ---
-# <a name="member-overloading"></a>Üye aşırı yüklemesi
+# <a name="member-overloading"></a>Üye Aşırı Yüklemesi
 Üye aşırı yüklemesi, iki veya daha fazla üye, yalnızca sayı veya parametre türünü farklılık gösterir ancak aynı ada sahip aynı türde oluşturma anlamına gelir. Örneğin, aşağıdaki içinde `WriteLine` yöntemi aşırı yüklüdür:  
   
 ```  
