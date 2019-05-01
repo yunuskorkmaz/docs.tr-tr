@@ -8,25 +8,25 @@ helpviewer_keywords:
 - controls [WPF], Grid
 ms.assetid: 90e07c2d-237f-47b4-a632-771570b77fd0
 ms.openlocfilehash: a9ef840d98a6c7aa5db841dd0ff860e2fb1d044a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911540"
 ---
-# <a name="grid-how-to-topics"></a><span data-ttu-id="aebdd-102">Kılavuz ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="aebdd-102">Grid How-to Topics</span></span>
-<span data-ttu-id="aebdd-103">Bu bölümdeki konular kullanarak öğeleri konumlandırmak nasıl açıklar <xref:System.Windows.Controls.Grid> öğesi.</span><span class="sxs-lookup"><span data-stu-id="aebdd-103">The topics in this section describe how to position elements using the <xref:System.Windows.Controls.Grid> element.</span></span>  
+# <a name="grid-how-to-topics"></a><span data-ttu-id="a4ba1-102">Kılavuz ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="a4ba1-102">Grid How-to Topics</span></span>
+<span data-ttu-id="a4ba1-103">Bu bölümdeki konular kullanarak öğeleri konumlandırmak nasıl açıklar <xref:System.Windows.Controls.Grid> öğesi.</span><span class="sxs-lookup"><span data-stu-id="a4ba1-103">The topics in this section describe how to position elements using the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="aebdd-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="aebdd-104">In This Section</span></span>  
- [<span data-ttu-id="aebdd-105">Kılavuz Kullanarak Standart UI İletişim Kutusu Oluşturma</span><span class="sxs-lookup"><span data-stu-id="aebdd-105">Build a Standard UI Dialog Box by Using Grid</span></span>](how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
- [<span data-ttu-id="aebdd-106">Karmaşık Kılavuz Oluşturma</span><span class="sxs-lookup"><span data-stu-id="aebdd-106">Create a Complex Grid</span></span>](how-to-create-a-complex-grid.md)  
- [<span data-ttu-id="aebdd-107">Kılavuz Öğesi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="aebdd-107">Create a Grid Element</span></span>](how-to-create-a-grid-element.md)  
- [<span data-ttu-id="aebdd-108">GridLengthConverter Nesnesi Oluşturma ve Kullanma</span><span class="sxs-lookup"><span data-stu-id="aebdd-108">Create and Use a GridLengthConverter Object</span></span>](how-to-create-and-use-a-gridlengthconverter-object.md)  
- [<span data-ttu-id="aebdd-109">ColumnDefinitionsCollections ve RowDefinitionsCollections Kullanarak Sütunları ve Satırları İşleme</span><span class="sxs-lookup"><span data-stu-id="aebdd-109">Manipulate Columns and Rows by Using ColumnDefinitionsCollections and RowDefinitionsCollections</span></span>](manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
- [<span data-ttu-id="aebdd-110">Bir Kılavuzun Alt Öğelerini Konumlandırma</span><span class="sxs-lookup"><span data-stu-id="aebdd-110">Position the Child Elements of a Grid</span></span>](how-to-position-the-child-elements-of-a-grid.md)  
- [<span data-ttu-id="aebdd-111">Kılavuzlar Arasında Boyutlandırma Özelliklerini Paylaşma</span><span class="sxs-lookup"><span data-stu-id="aebdd-111">Share Sizing Properties Between Grids</span></span>](how-to-share-sizing-properties-between-grids.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a4ba1-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="a4ba1-104">In This Section</span></span>  
+ [<span data-ttu-id="a4ba1-105">Kılavuz Kullanarak Standart UI İletişim Kutusu Oluşturma</span><span class="sxs-lookup"><span data-stu-id="a4ba1-105">Build a Standard UI Dialog Box by Using Grid</span></span>](how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
+ [<span data-ttu-id="a4ba1-106">Karmaşık Kılavuz Oluşturma</span><span class="sxs-lookup"><span data-stu-id="a4ba1-106">Create a Complex Grid</span></span>](how-to-create-a-complex-grid.md)  
+ [<span data-ttu-id="a4ba1-107">Kılavuz Öğesi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="a4ba1-107">Create a Grid Element</span></span>](how-to-create-a-grid-element.md)  
+ [<span data-ttu-id="a4ba1-108">GridLengthConverter Nesnesi Oluşturma ve Kullanma</span><span class="sxs-lookup"><span data-stu-id="a4ba1-108">Create and Use a GridLengthConverter Object</span></span>](how-to-create-and-use-a-gridlengthconverter-object.md)  
+ [<span data-ttu-id="a4ba1-109">ColumnDefinitionsCollections ve RowDefinitionsCollections Kullanarak Sütunları ve Satırları İşleme</span><span class="sxs-lookup"><span data-stu-id="a4ba1-109">Manipulate Columns and Rows by Using ColumnDefinitionsCollections and RowDefinitionsCollections</span></span>](manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
+ [<span data-ttu-id="a4ba1-110">Bir Kılavuzun Alt Öğelerini Konumlandırma</span><span class="sxs-lookup"><span data-stu-id="a4ba1-110">Position the Child Elements of a Grid</span></span>](how-to-position-the-child-elements-of-a-grid.md)  
+ [<span data-ttu-id="a4ba1-111">Kılavuzlar Arasında Boyutlandırma Özelliklerini Paylaşma</span><span class="sxs-lookup"><span data-stu-id="a4ba1-111">Share Sizing Properties Between Grids</span></span>](how-to-share-sizing-properties-between-grids.md)  
   
-## <a name="reference"></a><span data-ttu-id="aebdd-112">Başvuru</span><span class="sxs-lookup"><span data-stu-id="aebdd-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a4ba1-112">Başvuru</span><span class="sxs-lookup"><span data-stu-id="a4ba1-112">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -41,9 +41,9 @@ ms.locfileid: "57377683"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="aebdd-113">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="aebdd-113">Related Sections</span></span>  
- [<span data-ttu-id="aebdd-114">Düzen</span><span class="sxs-lookup"><span data-stu-id="aebdd-114">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="a4ba1-113">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="a4ba1-113">Related Sections</span></span>  
+ [<span data-ttu-id="a4ba1-114">Düzen</span><span class="sxs-lookup"><span data-stu-id="a4ba1-114">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="aebdd-115">İzlenecek yol: İlk WPF Masaüstü Uygulamam</span><span class="sxs-lookup"><span data-stu-id="aebdd-115">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="a4ba1-115">İzlenecek yol: İlk WPF Masaüstü Uygulamam</span><span class="sxs-lookup"><span data-stu-id="a4ba1-115">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="aebdd-116">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="aebdd-116">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="a4ba1-116">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="a4ba1-116">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

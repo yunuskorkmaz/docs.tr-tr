@@ -3,16 +3,16 @@ title: 'Örnek XML Dosyası: Test yapılandırmasına bir Namespace3'
 ms.date: 07/20/2015
 ms.assetid: aff02614-30ee-45e1-bc0f-d64b193d20b8
 ms.openlocfilehash: aef70e1ff7a7d61a1730588cc9e2ad26e6b67007
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786951"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="97aa9-102">Örnek XML Dosyası: Bir Ad Alanında Test Yapılandırması</span><span class="sxs-lookup"><span data-stu-id="97aa9-102">Sample XML File: Test Configuration in a Namespace</span></span>
-<span data-ttu-id="97aa9-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="97aa9-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="97aa9-104">Bu bir test yapılandırma dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="97aa9-104">This is a test configuration file.</span></span> <span data-ttu-id="97aa9-105">Bir ad alanında XML'dir.</span><span class="sxs-lookup"><span data-stu-id="97aa9-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="bcac2-102">Örnek XML Dosyası: Bir Ad Alanında Test Yapılandırması</span><span class="sxs-lookup"><span data-stu-id="bcac2-102">Sample XML File: Test Configuration in a Namespace</span></span>
+<span data-ttu-id="bcac2-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="bcac2-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="bcac2-104">Bu bir test yapılandırma dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="bcac2-104">This is a test configuration file.</span></span> <span data-ttu-id="bcac2-105">Bir ad alanında XML'dir.</span><span class="sxs-lookup"><span data-stu-id="bcac2-105">The XML is in a namespace.</span></span>  
   
-## <a name="testconfiginnamespacexml"></a><span data-ttu-id="97aa9-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="97aa9-106">TestConfigInNamespace.xml</span></span>  
+## <a name="testconfiginnamespacexml"></a><span data-ttu-id="bcac2-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="bcac2-106">TestConfigInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -56,6 +56,6 @@ ms.locfileid: "58821333"
 </Tests>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="97aa9-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="97aa9-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bcac2-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bcac2-107">See also</span></span>
 
-- [<span data-ttu-id="97aa9-108">Örnek XML Belgeleri (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="97aa9-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="bcac2-108">Örnek XML Belgeleri (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="bcac2-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

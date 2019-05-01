@@ -9,30 +9,30 @@ helpviewer_keywords:
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
 ms.openlocfilehash: 9fbb2fa4d403f59619792271eb3b8046cfa23949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59054994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790719"
 ---
-# <a name="tooltip"></a><span data-ttu-id="a2b0c-102">ToolTip</span><span class="sxs-lookup"><span data-stu-id="a2b0c-102">ToolTip</span></span>
-<span data-ttu-id="a2b0c-103">Kullanıcı fare işaretçisini bir öğenin üzerinden, gibi üzerinde durakladığında görüntülenen küçük bir açılır pencere bir araç ipucu olan bir <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="a2b0c-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span>  
+# <a name="tooltip"></a><span data-ttu-id="9565a-102">ToolTip</span><span class="sxs-lookup"><span data-stu-id="9565a-102">ToolTip</span></span>
+<span data-ttu-id="9565a-103">Kullanıcı fare işaretçisini bir öğenin üzerinden, gibi üzerinde durakladığında görüntülenen küçük bir açılır pencere bir araç ipucu olan bir <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="9565a-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span>  
   
- <span data-ttu-id="a2b0c-104">Fare işaretçisi işaret eden aşağıdaki çizimde **Kapat**<xref:System.Windows.Controls.Button>, daha sonra kendi tanımlayan görüntüler <xref:System.Windows.Controls.ToolTip>.</span><span class="sxs-lookup"><span data-stu-id="a2b0c-104">The following illustration shows a mouse pointer that points to the **Close**<xref:System.Windows.Controls.Button>, which then displays its identifying <xref:System.Windows.Controls.ToolTip>.</span></span>  
+ <span data-ttu-id="9565a-104">Fare işaretçisi işaret eden aşağıdaki çizimde **Kapat**<xref:System.Windows.Controls.Button>, daha sonra kendi tanımlayan görüntüler <xref:System.Windows.Controls.ToolTip>.</span><span class="sxs-lookup"><span data-stu-id="9565a-104">The following illustration shows a mouse pointer that points to the **Close**<xref:System.Windows.Controls.Button>, which then displays its identifying <xref:System.Windows.Controls.ToolTip>.</span></span>  
   
- <span data-ttu-id="a2b0c-105">Görüntülenen araç ipucu ile Kapat düğmesi</span><span class="sxs-lookup"><span data-stu-id="a2b0c-105">Close button with its tooltip displayed</span></span>  
+ <span data-ttu-id="9565a-105">Görüntülenen araç ipucu ile Kapat düğmesi</span><span class="sxs-lookup"><span data-stu-id="9565a-105">Close button with its tooltip displayed</span></span>  
   
- <span data-ttu-id="a2b0c-106">![Araç İpucu ekran](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span><span class="sxs-lookup"><span data-stu-id="a2b0c-106">![ToolTip screenshot](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span></span>  
+ <span data-ttu-id="9565a-106">![Araç İpucu ekran](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span><span class="sxs-lookup"><span data-stu-id="9565a-106">![ToolTip screenshot](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a2b0c-107">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="a2b0c-107">In This Section</span></span>  
- [<span data-ttu-id="a2b0c-108">Araç İpucuna Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="a2b0c-108">ToolTip Overview</span></span>](tooltip-overview.md)  
-  [<span data-ttu-id="a2b0c-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="a2b0c-109">How-to Topics</span></span>](tooltip-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9565a-107">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="9565a-107">In This Section</span></span>  
+ [<span data-ttu-id="9565a-108">Araç İpucuna Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="9565a-108">ToolTip Overview</span></span>](tooltip-overview.md)  
+  [<span data-ttu-id="9565a-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="9565a-109">How-to Topics</span></span>](tooltip-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="a2b0c-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="a2b0c-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9565a-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="9565a-110">Reference</span></span>  
  <xref:System.Windows.Controls.ToolTip>  
   <xref:System.Windows.Controls.ToolTipService>  
   <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="a2b0c-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="a2b0c-111">Related Sections</span></span>  
- [<span data-ttu-id="a2b0c-112">Açılan Pencereye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="a2b0c-112">Popup Overview</span></span>](popup-overview.md)  
-  [<span data-ttu-id="a2b0c-113">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="a2b0c-113">How-to Topics</span></span>](popup-how-to-topics.md)
+## <a name="related-sections"></a><span data-ttu-id="9565a-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="9565a-111">Related Sections</span></span>  
+ [<span data-ttu-id="9565a-112">Açılan Pencereye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="9565a-112">Popup Overview</span></span>](popup-overview.md)  
+  [<span data-ttu-id="9565a-113">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="9565a-113">How-to Topics</span></span>](popup-how-to-topics.md)
