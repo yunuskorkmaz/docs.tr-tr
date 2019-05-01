@@ -5,18 +5,18 @@ f1_keywords:
 - vbrDiagnosticInfo_Memory
 ms.assetid: 1ba8f774-5858-438e-914e-99fddc9e5e7e
 ms.openlocfilehash: a8d1f3799de11596b9eed9df39e143587e283b55
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970527"
 ---
 # <a name="could-not-obtain-memory-information-due-to-internal-error"></a>İç hata nedeniyle bellek bilgileri alınamadı
 Bellek bilgileri özelliklerinden birini çağrısı `My.Computer.Info` nesnesi oluşturulamadı.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Ekleme bir `Try...Catch` bloğu içine çağrı bellek bilgileri özelliğine `My.Computer.Info` nesne.  
+- Ekleme bir `Try...Catch` bloğu içine çağrı bellek bilgileri özelliğine `My.Computer.Info` nesne.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

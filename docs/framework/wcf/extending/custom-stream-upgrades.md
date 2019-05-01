@@ -6,8 +6,8 @@ ms.openlocfilehash: 8c769321702deb774c04613d5fe5eb2fde069063
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967914"
 ---
 # <a name="custom-stream-upgrades"></a>Özel Akış Yükseltmeleri
 İstemci ve sunucu arasında bulunan bayt sürekli bir akış üzerinde Stream odaklı taşımalar TCP ve adlandırılmış kanallar gibi çalışır. Bu akış tarafından gerçekleştirilen bir <xref:System.IO.Stream> nesne. Bir akış yükseltme istemci kanal yığınına bir isteğe bağlı Protokolü katmanı eklemek ister ve bunu yapmak için iletişim kanalı diğer ucuna sorar. Özgün değiştirerek akış yükseltme oluşur <xref:System.IO.Stream> yükseltilmiş bir nesne.  
@@ -32,35 +32,35 @@ ms.locfileid: "59977775"
 ## <a name="how-to-implement-a-stream-upgrade"></a>Stream yükseltme gerçekleştirme  
  Windows Communication Foundation (WCF) dört sağlar `abstract` uygulayabileceğiniz sınıflar:  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
   
  Özel akış yükseltmeyi uygulamak için aşağıdakileri yapın. Bu yordam istemci ve sunucu makinelerde en az bir akış yükseltme işlemi uygular.  
   
 1. Uygulayan bir sınıf oluşturma <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>.  
   
-    1.  Geçersiz kılma <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> yükseltilmesi ve yükseltilmiş akış döndürmek için akışa almak için yöntemi. Bu yöntem zaman uyumlu olarak çalışır; zaman uyumsuz olarak yükseltmeyi başlatmak için benzer yöntemler vardır.  
+    1. Geçersiz kılma <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> yükseltilmesi ve yükseltilmiş akış döndürmek için akışa almak için yöntemi. Bu yöntem zaman uyumlu olarak çalışır; zaman uyumsuz olarak yükseltmeyi başlatmak için benzer yöntemler vardır.  
   
-    2.  Geçersiz kılma <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> ek güncellenerek denetlemek için yöntem.  
+    2. Geçersiz kılma <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> ek güncellenerek denetlemek için yöntem.  
   
 2. Uygulayan bir sınıf oluşturma <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>.  
   
-    1.  Geçersiz kılma <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> yükseltilmesi ve yükseltilmiş akış döndürmek için akışa almak için yöntemi. Bu yöntem zaman uyumlu olarak çalışır; Yükseltme zaman uyumsuz olarak kabul etmek için benzer yöntemler vardır.  
+    1. Geçersiz kılma <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> yükseltilmesi ve yükseltilmiş akış döndürmek için akışa almak için yöntemi. Bu yöntem zaman uyumlu olarak çalışır; Yükseltme zaman uyumsuz olarak kabul etmek için benzer yöntemler vardır.  
   
-    2.  Geçersiz kılma <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> istenen yükseltme bu yükseltme acceptor bu noktada, yükseltme işlemi tarafından desteklenip desteklenmediğini belirlemek için yöntemi.  
+    2. Geçersiz kılma <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> istenen yükseltme bu yükseltme acceptor bu noktada, yükseltme işlemi tarafından desteklenip desteklenmediğini belirlemek için yöntemi.  
   
 3. Uygulayan bir sınıf oluşturmanız <xref:System.ServiceModel.Channels.StreamUpgradeProvider>. Geçersiz kılma <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> ve <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A> acceptor ve 2 ve 1. adımda tanımlanan Başlatıcı örnekleri döndürmek için yöntemleri.  
   
 4. Uygulayan bir sınıf oluşturma <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>.  
   
-    1.  Geçersiz kılma <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> istemcide yöntemi ve <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> hizmette yöntemi.  
+    1. Geçersiz kılma <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> istemcide yöntemi ve <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> hizmette yöntemi.  
   
-    2.  Geçersiz kılma <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> istemcide yöntemi ve <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> yükseltme bağlama öğesi eklemek için hizmet metodunda <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>.  
+    2. Geçersiz kılma <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> istemcide yöntemi ve <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> yükseltme bağlama öğesi eklemek için hizmet metodunda <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>.  
   
 5. Yeni akış yükseltme bağlama öğesi, sunucu ve istemci makinelerinde bağlamaları ekleyin.  
   

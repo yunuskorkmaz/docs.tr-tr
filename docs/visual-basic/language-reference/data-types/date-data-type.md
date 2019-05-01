@@ -16,11 +16,11 @@ helpviewer_keywords:
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
 ms.openlocfilehash: 42a36351ad70bc16b6cad63450ee5fcb3ed4f1ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971814"
 ---
 # <a name="date-data-type-visual-basic"></a>Date Veri Türü (Visual Basic)
 IEEE 64-bit (8 bayt) 12:00: 00'da (gece yarısı), 1 Ocak 0001-31 Aralık 9999 yılın yılın arasında değişen tarihleri ve saatleri temsil eden bir değer PM 11:59:59.9999999 tutar. Her artış, Gregoryen takvimindeki 1 yılının 1 Ocak başından beri geçen 100 nanosaniyelik geçen süreyi temsil eder. En yüksek değer 100 nanosaniyelik 10000 yılın 1 Ocak, başlamadan önce temsil eder.  
@@ -61,11 +61,11 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
   
 ## <a name="programming-tips"></a>Programlama İpuçları  
   
--   **Birlikte çalışabilirlik değerlendirmeleri.** Örnek otomasyon ve COM nesneleri için .NET Framework için yazılmaz bileşenleriyle arabirim, tarih/saat türleri diğer ortamlarda unutmayın Visual Basic ile uyumlu değil `Date` türü. Bir tarih/saat değişkeni böyle bir bileşene geçiriyorsanız, olarak bildirin `Double` yerine `Date` , yeni bir Visual Basic kod ve dönüştürme yöntemleri kullanın <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> ve <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.  
+- **Birlikte çalışabilirlik değerlendirmeleri.** Örnek otomasyon ve COM nesneleri için .NET Framework için yazılmaz bileşenleriyle arabirim, tarih/saat türleri diğer ortamlarda unutmayın Visual Basic ile uyumlu değil `Date` türü. Bir tarih/saat değişkeni böyle bir bileşene geçiriyorsanız, olarak bildirin `Double` yerine `Date` , yeni bir Visual Basic kod ve dönüştürme yöntemleri kullanın <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> ve <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.  
   
--   **Tür karakterleri.** `Date` değişmez değer türü karakteri ya da tanımlayıcı türü karakteri var. Ancak derleyici değişmez değerleri sayı işaretleri alınmış işler (`# #`) olarak `Date`.  
+- **Tür karakterleri.** `Date` değişmez değer türü karakteri ya da tanımlayıcı türü karakteri var. Ancak derleyici değişmez değerleri sayı işaretleri alınmış işler (`# #`) olarak `Date`.  
   
--   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.DateTime?displayProperty=nameWithType> yapısı.  
+- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.DateTime?displayProperty=nameWithType> yapısı.  
   
 ## <a name="example"></a>Örnek  
  Bir değişken veya sabiti `Date` tarih ve saat veri türü tutar. Aşağıdaki örnek bunu göstermektedir.  

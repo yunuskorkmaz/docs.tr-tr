@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
 ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971918"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML Biçimlendirme Uzantılarına Genel Bakış
 Biçimlendirme uzantıları, basit bir tür ya da özel bir XAML türü bir değer almak için bir XAML tekniğidir. Öznitelik kullanımı için biçimlendirme uzantıları açılış kaşlı ayracından bilinen karakter dizisini kullanın. `{` işaretleme uzantısı kapsamı ve bir kapanış küme ayracını girmek için `}` çıkmak için. .NET Framework XAML hizmetlerinde kullanırken bazı System.Xaml derlemesinden önceden tanımlanmış XAML dil biçimlendirme uzantıları kullanabilirsiniz. Alt sınıfı ayrıca <xref:System.Windows.Markup.MarkupExtension> sınıfı System.Xaml içinde tanımlanan ve kendi biçimlendirme uzantılarını tanımlayın. Veya zaten bu çerçeve başvurduğunuz, belirli bir framework tarafından tanımlanan biçimlendirme uzantıları kullanabilirsiniz.  
@@ -54,9 +54,9 @@ Biçimlendirme uzantıları, basit bir tür ya da özel bir XAML türü bir değ
 ## <a name="defining-the-support-type-for-a-custom-markup-extension"></a>Destek türü için özel biçimlendirme uzantısı tanımlama  
  .NET Framework XAML Hizmetlerinde veya .NET Framework XAML hizmetlerinde yapı çerçeveleri kullandığınızda, biçimlendirme uzantısı destek türü adını öğrenmek için iki seçeneğiniz vardır. Tür adı, erişim ve bunların XAML, biçimlendirme uzantısı kullanımı karşılaştığınızda bir işaretleme uzantısı destek türü çağırmak nasıl XAML nesne yazıcılar girişiminde uygundur. Adlandırma aşağıdaki stratejilerden birini kullanın:  
   
--   XAML işaretleme kullanım belirtecine tam bir eşleşme olması için tür adı. Örneğin, destek için bir `{Collate ...}` uzantısı kullanımı, destek türü adı `Collate`.  
+- XAML işaretleme kullanım belirtecine tam bir eşleşme olması için tür adı. Örneğin, destek için bir `{Collate ...}` uzantısı kullanımı, destek türü adı `Collate`.  
   
--   Kullanım dize belirteci ve son olarak türü adı `Extension`. Örneğin, destek için bir `{Collate ...}` uzantısı kullanımı, destek türü adı `CollateExtension`.  
+- Kullanım dize belirteci ve son olarak türü adı `Extension`. Örneğin, destek için bir `{Collate ...}` uzantısı kullanımı, destek türü adı `CollateExtension`.  
   
  Aramak için arama sırası olduğundan `Extension`-sonekli sınıf adı ve sınıf adı bulun `Extension` soneki.  
   
@@ -81,9 +81,9 @@ public Collate(CollationMode collationMode) {...}
   
  İşaretleme uzantısı oluşturulacak bir nesne ise gibi işleme kavramsal olarak çalışır ve ardından, bu üye değerlerinin ayarlanır. Ayarlamak için her belirtilen özellik benzer XAML ayrıştırıldığında, belirtilen üyenin üzerinde oluşturulan bir nesneye nasıl ayarlanabilir şekilde değerlendirilir. İki önemli farklar vardır:  
   
--   Daha önce belirtildiği gibi bir işaretleme uzantısı destek türü XAML içinde örneği için varsayılan bir oluşturucusu olması gerekmez. Kendi nesne oluşturmayı mümkün bağımsız değişkenlerinden biri içinde metin sözdiziminde simgeleştirilmiş ve konumsal veya adlandırılmış bağımsız değişkenler değerlendirilen ve o anda uygun Oluşturucu çağrılır kadar ertelenir.  
+- Daha önce belirtildiği gibi bir işaretleme uzantısı destek türü XAML içinde örneği için varsayılan bir oluşturucusu olması gerekmez. Kendi nesne oluşturmayı mümkün bağımsız değişkenlerinden biri içinde metin sözdiziminde simgeleştirilmiş ve konumsal veya adlandırılmış bağımsız değişkenler değerlendirilen ve o anda uygun Oluşturucu çağrılır kadar ertelenir.  
   
--   İşaretleme uzantıları kullanımları yuvalanabilir. En içteki işaretleme uzantısı, ilk olarak değerlendirilir. Bu nedenle, böyle bir kullanım varsayılır ve yapı parametrelerden biri üretmek için bir değer dönüştürücü (örneğin, bir işaretleme uzantısı) gerektiren bir türü bildirin.  
+- İşaretleme uzantıları kullanımları yuvalanabilir. En içteki işaretleme uzantısı, ilk olarak değerlendirilir. Bu nedenle, böyle bir kullanım varsayılır ve yapı parametrelerden biri üretmek için bir değer dönüştürücü (örneğin, bir işaretleme uzantısı) gerektiren bir türü bildirin.  
   
  Önceki örnekte gösterildiği gibi işleme güvenme. .NET Framework XAML Hizmetleri XAML nesne yazıcısı numaralandırma sabit adları yerel düzeyde listelenmiş değerler olarak işler.  
   
@@ -124,9 +124,9 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> raporları <xref:System.Type> nesne için bilgi türü <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> döndürür. Saf imzası tarafından <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> döndürür <xref:System.Object>. Ancak, çeşitli tüketicileri daha kesin bir dönüş türü bilgi isteyebilirsiniz. Şunları içerir:  
   
--   Tasarımcılar ve türünü algılayan sağlamak mümkün olabilir IDE'ler, biçimlendirme uzantısı kullanımı için destek.  
+- Tasarımcılar ve türünü algılayan sağlamak mümkün olabilir IDE'ler, biçimlendirme uzantısı kullanımı için destek.  
   
--   Uygulamaları Gelişmiş `SetMarkupExtension` üzerinde belirli bilinen dallanma yerine, dönüş türü bir işaretleme uzantının belirlemek için yansıma dayanan hedef sınıflarını işleyicileri <xref:System.Windows.Markup.MarkupExtension> ada göre uygulamaları.  
+- Uygulamaları Gelişmiş `SetMarkupExtension` üzerinde belirli bilinen dallanma yerine, dönüş türü bir işaretleme uzantının belirlemek için yansıma dayanan hedef sınıflarını işleyicileri <xref:System.Windows.Markup.MarkupExtension> ada göre uygulamaları.  
   
 <a name="serialization_of_markup_extension_usages"></a>   
 ## <a name="serialization-of-markup-extension-usages"></a>Biçimlendirme uzantısı kullanımı serileştirilmesi  

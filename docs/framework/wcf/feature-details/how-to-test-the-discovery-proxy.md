@@ -3,11 +3,11 @@ title: "Nasıl yapılır: Keşif Proxy'sini Test Etme"
 ms.date: 03/30/2017
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
 ms.openlocfilehash: 856b86241299585b80d58c6d37582463736a5935
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972919"
 ---
 # <a name="how-to-test-the-discovery-proxy"></a>Nasıl yapılır: Keşif Proxy'sini Test Etme
 Keşif proxy'si uygulama gösteren dördüncü dört konuları budur. Önceki konu [nasıl yapılır: Bir hizmet bulmak için keşif proxy'sini kullanan bir istemci uygulaması yürütürsünüz](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md), Keşif proxy'si hizmet bulmak için kullanır ve ardından hizmeti çağıran bir WCF istemci uygulaması uygulanır. Bu konu, beklendiği gibi keşif proxy'si, hizmet ve istemci uygulama iş doğrulamak açıklar.  

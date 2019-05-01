@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
 ms.openlocfilehash: 485e7a17073d72618b9599113179cddde748e697
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972035"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>ErrorProvider Bileşenine Genel Bakış (Windows Forms)
 Windows Forms [ErrorProvider](errorprovider-component-windows-forms.md) bileşeni, bir form veya denetim kullanıcı girişini doğrulamak için kullanılır. Genellikle, bir form üzerinde kullanıcı girişini doğrulama veya dataset içindeki hataları görüntüleme ile birlikte kullanılır. Bir ileti kutusu kapatıldıktan sonra hata iletisi artık görünür olmadığı için bir hata sağlayıcısı bir hata iletisi bir ileti kutusu görüntüleme daha daha iyi bir alternatiftir. <xref:System.Windows.Forms.ErrorProvider> Bileşen bir hata simgesi görüntülenir (![ErrorProvider simgesi](./media/vberrorprovidericon.gif "vbErrorProviderIcon")) gibi bir metin kutusu; kullanıcının fareyi üzerine getirdiğinde ilgili denetimin yanındaki hata simgesi, bir araç ipucu, hata iletisi dizesi gösteren görüntülenir.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 ms.openlocfilehash: 7ee4ce1d6efdc4927fc2d20100f0b12f7405261f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972360"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Windows Formları Tasarımcısında Tasarım Zamanı Hataları
 Bu konuda, Microsoft Visual Studio ile yüklemek Windows Form Tasarımcısı başarısız olduğunda görüntülenen tasarım zamanı hata listesinin kullanımını ve anlamı açıklanmaktadır. Bu hata listesi görüntülenirse, tasarımcıda bir hatayı, ancak kodunuzda hataları düzeltmek için yardımcı olması amacıyla yorumladığınıza değil.  
@@ -25,11 +25,11 @@ Bu konuda, Microsoft Visual Studio ile yüklemek Windows Form Tasarımcısı ba�
   
  Genişletmek veya bir hata kategori hata kategorisi başlığı tıklayarak ya da genişletme/daraltma Köşeli Çift Ayraca tıklayarak Daralt. Hata kategorisi genişlettiğinizde, aşağıdaki ek Yardım görüntülenir:  
   
--   Bu hatanın örnekleri.  
+- Bu hatanın örnekleri.  
   
--   Bu hatayla ilgili Yardım.  
+- Bu hatayla ilgili Yardım.  
   
--   Bu hata hakkındaki Forum gönderileri.  
+- Bu hata hakkındaki Forum gönderileri.  
   
 ### <a name="instances-of-this-error"></a>Bu hatanın örnekleri  
  Ek hata geçerli projenizdeki tüm örneklerini listele Yardım. Birçok hata şu biçimde kesin bir konuma içerir: *[Proje adı]* *[Form adı]* satır:*[satır numarası]* sütun:*[sütun numarası]*. **Koduna Git** bağlantı kodunuzda hatanın oluştuğu konumuna götürür.  
@@ -45,9 +45,9 @@ Bu konuda, Microsoft Visual Studio ile yüklemek Windows Form Tasarımcısı ba�
 ### <a name="forum-posts-about-this-error"></a>Bu hata hakkındaki Forum gönderileri  
  Ek Yardım MSDN forum gönderilerini hata ile ilgili bir bağlantı içerir. Forumlar, hata iletisi dizesi göre aranır. Ayrıca aşağıdaki forumları aramayı deneyin:  
   
--   [Windows Forms Tasarımcısı Forumu](https://go.microsoft.com/fwlink/?LinkId=203524)  
+- [Windows Forms Tasarımcısı Forumu](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Windows Forms forumları](https://go.microsoft.com/fwlink/?LinkId=203523)  
+- [Windows Forms forumları](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>Yoksay ve devam et  
  Hata koşulu yoksaymak ve tasarımcı yüklemeye devam etmek seçebilirsiniz. Bu eylem seçme içinde beklenmeyen davranışlara neden olabilir. Örneğin, denetimleri tasarım yüzeyinde görünmeyebilir.  

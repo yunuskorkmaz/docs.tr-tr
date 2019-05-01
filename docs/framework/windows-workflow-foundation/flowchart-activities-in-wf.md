@@ -3,11 +3,11 @@ title: WF etkinliklerini akış çizelgesi
 ms.date: 03/30/2017
 ms.assetid: e80d9734-b43a-4d21-a250-74400330a4c0
 ms.openlocfilehash: e311c97a35acd8bc973b2833f1de1bc017682d64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945684"
 ---
 # <a name="flowchart-activities-in-wf"></a>WF etkinliklerini akış çizelgesi
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] yürütmeyi denetleme ve bir akış içinde dallanma birkaç sistem tarafından sağlanan etkinliği sağlar.  

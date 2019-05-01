@@ -5,22 +5,22 @@ f1_keywords:
 - vbrMouse_NoMouseIsPresent
 ms.assetid: 4472fd57-4217-4463-9d3c-dc4a8fe88f1b
 ms.openlocfilehash: c0e4e2a8cb0aa641b179d8b2608af384d7d4181e
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58044648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944943"
 ---
 # <a name="no-mouse-is-present"></a>Fare yok
 Özelliklerinden birini `My.Computer.Mouse` nesne çağrıldı, ancak hiçbir fare veya fare bağlantı noktası yüklü bilgisayar sahiptir.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Ekleme bir `Try...Catch` bloğu içine arama özelliğine `My.Computer.Mouse` nesne.  
+- Ekleme bir `Try...Catch` bloğu içine arama özelliğine `My.Computer.Mouse` nesne.  
   
      — veya —  
   
--   Fare bilgisayara yükleyin.  
+- Fare bilgisayara yükleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

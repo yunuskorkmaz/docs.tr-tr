@@ -1,15 +1,15 @@
 ---
-title: İş akışlarında hata ayıklama
+title: İş Akışlarında Hata Ayıklama
 ms.date: 03/30/2017
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
 ms.openlocfilehash: 17cee1f1b509e777edd3f08c55d473d768b19b55
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945879"
 ---
-# <a name="debugging-workflows"></a>İş akışlarında hata ayıklama
+# <a name="debugging-workflows"></a>İş Akışlarında Hata Ayıklama
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] geliştirme ortamından çalışan iş akışlarında hata ayıklama için çeşitli seçenekler sunar. İş Akışı Tasarımcısı'nda, XAML ve kod ayıklanabilir.  
   
 ## <a name="debugging-in-the-workflow-designer"></a>İş Akışı Tasarımcısı'nda hata ayıklama  
@@ -25,7 +25,7 @@ ms.locfileid: "43861389"
  Ayrıca iş akışı hata ayıklama, Visual Studio'nun altyapı bir işleme kullanmayı destekler. Bu, Internet Information Services (IIS) 7.0 gibi farklı bir konak ortamında çalışan bir iş akışı hata ayıklamak iş akışı Yazar sağlar.  
   
 ## <a name="remote-debugging"></a>Uzaktan Hata Ayıklama  
- Windows Workflow Foundation (WF) uzaktan hata ayıklama, uzaktan hata ayıklama için diğer Visual Studio bileşenleri ile aynı işlevleri. Uzaktan hata ayıklama hakkında daha fazla bilgi için bkz. [nasıl yapılır: uzaktan hata ayıklamayı etkinleştir](https://go.microsoft.com/fwlink/?LinkId=196257).  
+ Windows Workflow Foundation (WF) uzaktan hata ayıklama, uzaktan hata ayıklama için diğer Visual Studio bileşenleri ile aynı işlevleri. Uzaktan hata ayıklama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Uzaktan hata ayıklamayı etkinleştirme](https://go.microsoft.com/fwlink/?LinkId=196257).  
   
 > [!NOTE]
 >  İş akışı uygulaması x86 hedefliyorsa mimarisi ve uzaktan hata ayıklama Visual Studio uzak bilgisayarda yüklü veya iş akışı uygulama için hedef olarak değiştirilir sürece çalışmaz sonra bir 64 bit işletim sistemi çalıştıran bir bilgisayarda barındırılır **Herhangi bir CPU**.  

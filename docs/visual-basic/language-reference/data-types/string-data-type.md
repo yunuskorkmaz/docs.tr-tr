@@ -19,11 +19,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
 ms.openlocfilehash: 3e87dc6527b4351467b1155439ee8266157c16ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971723"
 ---
 # <a name="string-data-type-visual-basic"></a>Dize Veri Türü (Visual Basic)
 İmzasız 16-bit (2 baytlık) kod noktaları dizisi bu aralık 0 ile 65535 arasında bir değer tutar. Her *kod noktası*, ya da karakter kodunu tek bir Unicode karakterini temsil eder. Bir dize yaklaşık iki milyardan fazla 0'dan içerebilir (2 ^ 31) Unicode karakter.  
@@ -70,13 +70,13 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 ## <a name="programming-tips"></a>Programlama İpuçları  
   
--   **Negatif sayılar.** Karakter tarafından tutulan unutmayın `String` işaretsizdir ve negatif değerleri temsil edemez. Her iki durumda da kullanmamalısınız `String` sayısal değerleri tutmak için.  
+- **Negatif sayılar.** Karakter tarafından tutulan unutmayın `String` işaretsizdir ve negatif değerleri temsil edemez. Her iki durumda da kullanmamalısınız `String` sayısal değerleri tutmak için.  
   
--   **Birlikte çalışabilirlik değerlendirmeleri.** .NET Framework yazılmaz bileşenleriyle arabirim örnek otomasyon ve COM nesneleri için dize karakterlerine farklı veri genişliği (8 bit) sahip diğer ortamlarda unutmayın. 8 bitlik karakterleri bir dize bağımsız değişkeni böyle bir bileşene geçiriyorsanız, olarak bildirin `Byte()`, bir dizi `Byte` öğeleri yerine `String` yeni Visual Basic kod.  
+- **Birlikte çalışabilirlik değerlendirmeleri.** .NET Framework yazılmaz bileşenleriyle arabirim örnek otomasyon ve COM nesneleri için dize karakterlerine farklı veri genişliği (8 bit) sahip diğer ortamlarda unutmayın. 8 bitlik karakterleri bir dize bağımsız değişkeni böyle bir bileşene geçiriyorsanız, olarak bildirin `Byte()`, bir dizi `Byte` öğeleri yerine `String` yeni Visual Basic kod.  
   
--   **Tür karakterleri.** Tanımlayıcı türü karakteri ekleme `$` herhangi bir tanımlayıcı zorlar `String` veri türü. `String` hiçbir değişmez değer türü karakteri var. Ancak, derleyici değişmez değerleri tırnak içine işler (`" "`) olarak `String`.  
+- **Tür karakterleri.** Tanımlayıcı türü karakteri ekleme `$` herhangi bir tanımlayıcı zorlar `String` veri türü. `String` hiçbir değişmez değer türü karakteri var. Ancak, derleyici değişmez değerleri tırnak içine işler (`" "`) olarak `String`.  
   
--   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.String?displayProperty=nameWithType> sınıfı.  
+- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.String?displayProperty=nameWithType> sınıfı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

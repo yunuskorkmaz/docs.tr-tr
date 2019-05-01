@@ -5,11 +5,11 @@ helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
 ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971957"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>.NET Framework XAML Hizmetlerinde Kullanılacak Özel Türleri Tanımlama
 İş nesneler özel türleri tanımlama ya da bir bağımlılık belirli çerçeveler sahip olmayan türleri izleyebilirsiniz XAML için bazı en iyi yöntemler vardır. Bu uygulamaları izlerseniz, .NET Framework XAML hizmetlerinde ve XAML okuyucular ve yazıcılar XAML türünüz XAML özelliklerini bulabilir ve XAML tür sistemi kullanarak XAML düğüm akış uygun gösterimi verin. Bu konu için tür tanımları, üye tanımları ve CLR türleri veya üyeleri öznitelik atanıyor en iyi uygulamaları açıklar.  
@@ -17,9 +17,9 @@ ms.locfileid: "59164443"
 ## <a name="constructor-patterns-and-type-definitions-for-xaml"></a>Oluşturucu desenler ve XAML için tür tanımları  
  Bir XAML nesne öğesi olarak örneği için özel bir sınıf aşağıdaki gereksinimleri karşılamalıdır:  
   
--   Özel bir sınıf, ortak olmalıdır ve bir varsayılan (parametresiz) ortak oluşturucu kullanıma açmalıdır. (Aşağıdaki bölümde yapıları ile ilgili notlar için bkz.)  
+- Özel bir sınıf, ortak olmalıdır ve bir varsayılan (parametresiz) ortak oluşturucu kullanıma açmalıdır. (Aşağıdaki bölümde yapıları ile ilgili notlar için bkz.)  
   
--   Özel bir sınıf, iç içe geçmiş bir sınıf olmalıdır. Tam ad yolunda "dot" ekstra sınıf ad alanı bölme belirsiz hale getirir ve iliştirilmiş özellikler gibi diğer XAML özelliklerle uğratır.  
+- Özel bir sınıf, iç içe geçmiş bir sınıf olmalıdır. Tam ad yolunda "dot" ekstra sınıf ad alanı bölme belirsiz hale getirir ve iliştirilmiş özellikler gibi diğer XAML özelliklerle uğratır.  
   
  Bir nesne bir nesne öğesi olarak oluşturulabilir, oluşturulan nesne nesnesi olarak temel alan herhangi bir özelliği özellik öğesi biçiminin doldurabilirsiniz.  
   
@@ -72,9 +72,9 @@ ms.locfileid: "59164443"
   
  `public static object Get` *PropertyName* `(object`  `target` `)`  
   
--   `target` Nesnesi, uygulamanızdaki daha belirli bir tür olarak belirtilebilir. İliştirilebilir üyelik kullanımını kapsamını belirlemek için kullanabilirsiniz; hedeflenen Kapsamınız dışında kullanımları, ardından bir XAML ayrıştırma hatası ortaya çıkmış geçersiz dönüştürme özel durumlar. Parametre adı `target` bir gereksinim değildir, ancak adlı `target` çoğu uygulamalarında kural tarafından.  
+- `target` Nesnesi, uygulamanızdaki daha belirli bir tür olarak belirtilebilir. İliştirilebilir üyelik kullanımını kapsamını belirlemek için kullanabilirsiniz; hedeflenen Kapsamınız dışında kullanımları, ardından bir XAML ayrıştırma hatası ortaya çıkmış geçersiz dönüştürme özel durumlar. Parametre adı `target` bir gereksinim değildir, ancak adlı `target` çoğu uygulamalarında kural tarafından.  
   
--   Dönüş değeri, uygulamanızda daha belirli bir tür olarak belirtilebilir.  
+- Dönüş değeri, uygulamanızda daha belirli bir tür olarak belirtilebilir.  
   
  Desteklemek için bir <xref:System.ComponentModel.TypeConverter> öznitelik kullanımı iliştirilebilir üyesi için etkin metin sözdizimi geçerli <xref:System.ComponentModel.TypeConverterAttribute> için `Get` *PropertyName* erişimcisi. Uygulama `get` yerine `set` nonintuitive; görünebilir ancak bu kavramı destekler, seri hale getirilebilir salt okunur iliştirilebilir üyesi, olan Tasarımcı senaryolarda yararlıdır.  
   
@@ -83,9 +83,9 @@ ms.locfileid: "59164443"
   
  `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
   
--   `target` Nesne belirtilebilir, uygulamanızda aynı mantığı ve sonuçları daha belirli bir tür olarak önceki bölümde açıklandığı gibi.  
+- `target` Nesne belirtilebilir, uygulamanızda aynı mantığı ve sonuçları daha belirli bir tür olarak önceki bölümde açıklandığı gibi.  
   
--   `value` Nesnesi, uygulamanızdaki daha belirli bir tür olarak belirtilebilir.  
+- `value` Nesnesi, uygulamanızdaki daha belirli bir tür olarak belirtilebilir.  
   
  Bu yöntem değeri öznitelik formunda genellikle XAML kullanım gelen giriş olduğunu unutmayın. Öznitelik formunda olmalıdır değer dönüştürücü metin söz dizimi desteğini ve şirket özniteliğini `Get` *PropertyName* erişimcisi.  
   

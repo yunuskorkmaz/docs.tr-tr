@@ -16,11 +16,11 @@ topic_type:
 author: hoyosjs
 ms.author: juhoyosa
 ms.openlocfilehash: 752d87c5f4a6b8d854a06be8962ee754cdd4622d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965964"
 ---
 # <a name="dacpmoduledata-structure"></a>DacpModuleData Yapısı
 
@@ -55,8 +55,8 @@ Bu yapı, çalışma zamanı içinde yer alan ve herhangi bir üst bilgiler veya
 
 ## <a name="requirements"></a>Gereksinimler
 **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** Yok.  
-**Kitaplığı:** None  
+**Üst bilgi:** None  
+**Kitaplığı:** Yok.  
 **.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.

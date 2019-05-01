@@ -11,11 +11,11 @@ helpviewer_keywords:
 - retrieving offset values from visual objects [WPF]
 ms.assetid: 889a1dd6-1b11-445a-b351-fbb04c53ee34
 ms.openlocfilehash: 4787b771c7e59a8b033b9267079c068a5845a1e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947504"
 ---
 # <a name="how-to-get-the-offset-of-a-visual"></a>Nasıl yapılır: Görselin Sapmasını Alma
 Bu örnekler bir görsel nesnesinin veya tüm üst veya alt öğesi üst göre bir uzaklık değeri almak nasıl gösterir.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
 ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971879"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier Yönergesi
 Adlandırılmış nesne başvuruları için alanları ile tanımlanan şekilde XAML derlemesi davranışı değiştirir <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> yerine erişim <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> varsayılan davranışı.  
@@ -36,11 +36,11 @@ Adlandırılmış nesne başvuruları için alanları ile tanımlanan şekilde X
   
  Değeri `x:FieldModifier` öznitelik programlama diline göre değişir ve belirli çerçeveleri amacı farklılık gösterebilir. Her bir dilin nasıl uyguladığını kullanılacak dize bağlıdır, <xref:System.CodeDom.Compiler.CodeDomProvider> ve döndürür anlamı tanımlamak için tür dönüştürücüleri <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> ve <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, ve bu dilin büyük küçük harfe duyarlı olup olmadığını.  
   
--   C#, belirlemek üzere iletilecek dizeyi <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> olduğu `public`.  
+- C#, belirlemek üzere iletilecek dizeyi <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> olduğu `public`.  
   
--   Microsoft Visual Basic .NET, atamak için geçirilecek dize için <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> olduğu `Public`.  
+- Microsoft Visual Basic .NET, atamak için geçirilecek dize için <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> olduğu `Public`.  
   
--   İçin [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], XAML için hiçbir hedef zaten var; Bu nedenle, dize geçirilecek tanımsızdır.  
+- İçin [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], XAML için hiçbir hedef zaten var; Bu nedenle, dize geçirilecek tanımsızdır.  
   
  Belirtebilirsiniz <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> (`internal` içinde C#, `Friend` Visual Basic'te) ancak belirten <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> olağan dışı çünkü `NotPublic` varsayılan davranışı olduğundan.  
   

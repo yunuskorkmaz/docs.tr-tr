@@ -21,11 +21,11 @@ helpviewer_keywords:
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
 ms.openlocfilehash: b90fdb562f9d65858ac477321a18067cc6e621a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971718"
 ---
 # <a name="single-data-type-visual-basic"></a>Single Veri Türü (Visual Basic)
 Ayrı tutma IEEE 32-bit (4-bayt) tek duyarlıklı kayan nokta sayı değerini - 3.4028235E + 38 arasında değişen imzalı ile - 1.401298E-45 negatif değerleri ve 1.401298E-45 3.4028235E + 38 pozitif değerler için aracılığıyla. Tek duyarlıklı sayılar yaklaşık bir gerçek sayı olarak depolar.  
@@ -37,15 +37,15 @@ Ayrı tutma IEEE 32-bit (4-bayt) tek duyarlıklı kayan nokta sayı değerini - 
   
 ## <a name="programming-tips"></a>Programlama İpuçları  
   
--   **Duyarlık.** Kayan noktalı sayı ile çalıştığınızda, bunlar her zaman kesin bir gösterimi bellekte olmadığını aklınızda bulundurun. Değer karşılaştırması gibi bazı işlemleri öğesinden bu beklenmeyen sonuçlara neden olabilir ve `Mod` işleci. Daha fazla bilgi için [veri türleri sorunlarını giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+- **Duyarlık.** Kayan noktalı sayı ile çalıştığınızda, bunlar her zaman kesin bir gösterimi bellekte olmadığını aklınızda bulundurun. Değer karşılaştırması gibi bazı işlemleri öğesinden bu beklenmeyen sonuçlara neden olabilir ve `Mod` işleci. Daha fazla bilgi için [veri türleri sorunlarını giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
--   **Genişletme.** `Single` Widens veri türü için `Double`. Yani dönüştürebilirsiniz `Single` için `Double` karşılaşmadan bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
+- **Genişletme.** `Single` Widens veri türü için `Double`. Yani dönüştürebilirsiniz `Single` için `Double` karşılaşmadan bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
   
--   **Sondaki sıfırlar.** Kayan nokta veri türleri, sondaki 0 karakterleri, herhangi bir iç gösterimi yoktur. Örneğin, bunlar 4.2 4.2000 arasında ayrılmaz. Sonuç olarak, sondaki 0 karakterleri görüntülediğinizde veya kayan nokta değerlerini yazdırma görünmez.  
+- **Sondaki sıfırlar.** Kayan nokta veri türleri, sondaki 0 karakterleri, herhangi bir iç gösterimi yoktur. Örneğin, bunlar 4.2 4.2000 arasında ayrılmaz. Sonuç olarak, sondaki 0 karakterleri görüntülediğinizde veya kayan nokta değerlerini yazdırma görünmez.  
   
--   **Tür karakterleri.** Değişmez değer türü karakterinin `F` sabit değerine zorlar `Single` veri türü. Tanımlayıcı türü karakteri ekleme `!` herhangi bir tanımlayıcı zorlar `Single`.  
+- **Tür karakterleri.** Değişmez değer türü karakterinin `F` sabit değerine zorlar `Single` veri türü. Tanımlayıcı türü karakteri ekleme `!` herhangi bir tanımlayıcı zorlar `Single`.  
   
--   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Single?displayProperty=nameWithType> yapısı.  
+- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Single?displayProperty=nameWithType> yapısı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

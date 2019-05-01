@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], DataGrid control compared
 ms.assetid: d412c786-140e-4210-8a56-a68467530a55
 ms.openlocfilehash: 6802ef375d8d15826725e68f5065317192523178
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972217"
 ---
 # <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Windows Forms DataGridView ve DataGrid Denetimleri Arasındaki Farklar
 <xref:System.Windows.Forms.DataGridView> Denetimidir yerini alan yeni bir denetim <xref:System.Windows.Forms.DataGrid> denetimi. <xref:System.Windows.Forms.DataGridView> Denetim eksik olan çok sayıda temel ve gelişmiş özellikler sağlar <xref:System.Windows.Forms.DataGrid> denetimi. Ayrıca, mimarisi <xref:System.Windows.Forms.DataGridView> denetimi yapar, genişletmek ve daha özelleştirmek çok daha kolay <xref:System.Windows.Forms.DataGrid> denetimi.  

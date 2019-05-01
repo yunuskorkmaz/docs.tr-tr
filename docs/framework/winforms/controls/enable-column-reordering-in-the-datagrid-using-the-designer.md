@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: d82bd69c-6799-4439-a32c-91139c5901d1
 ms.openlocfilehash: 966ffe131d10b97fe9632bb1ff23273b1dabd061
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972100"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetimindeki Sütun Yeniden Sıralamayı Etkinleştirme
 Windows Forms'ta görüntülenen verileri görüntülerken <xref:System.Windows.Forms.DataGridView> denetimi, kullanıcılar bazen belirli sütunlardaki değerleri karşılaştırmak istediğinizde. Özellikle de kullanıcıların İleri ve geri yatay, ilgilendiğiniz tüm sütunları görmek için kaydırma gerekir, bu yaygın denetiminde sütunları ayrılırsa kullanışsız olabilir. Sütunları yeniden sıralamak, kullanıcılarınızın etkinleştirerek sütun değerleri daha kolay karşılaştırma görevini yapabilirsiniz. Sütun yeniden sıralamayı etkinleştirdiğinizde, kullanıcıların bir sütun fare ile sütun üst bilgisini sürükleyerek yeni bir konuma taşıyabilirsiniz.  
@@ -24,7 +24,7 @@ Windows Forms'ta görüntülenen verileri görüntülerken <xref:System.Windows.
   
 ### <a name="to-enable-column-reordering"></a>Sütun yeniden sıralamayı etkinleştirmek için  
   
--   Akıllı etiket karakterini tıklayın (![akıllı etiket karakterini](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) sağ üst köşesindeki <xref:System.Windows.Forms.DataGridView> denetlemek ve ardından **sütun yeniden sıralamayı etkinleştirme**.  
+- Akıllı etiket karakterini tıklayın (![akıllı etiket karakterini](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) sağ üst köşesindeki <xref:System.Windows.Forms.DataGridView> denetlemek ve ardından **sütun yeniden sıralamayı etkinleştirme**.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

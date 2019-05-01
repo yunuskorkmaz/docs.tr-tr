@@ -15,11 +15,11 @@ helpviewer_keywords:
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
 ms.openlocfilehash: 1da5de4971928ca23a23c4dcfc5f338c4d7a3875
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971788"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte veri türü (Visual Basic)
 
@@ -64,13 +64,13 @@ Tamsayı sabit değeri aralığının dışında ise `SByte` (diğer bir deyişl
 
 ## <a name="programming-tips"></a>Programlama ipuçları
   
--   **CLS uyumluluğu.** `SByte` Veri türü değil parçası [ortak dil belirtimi](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), böylece onu kullanan bileşen CLS uyumlu kod kullanamıyor.
+- **CLS uyumluluğu.** `SByte` Veri türü değil parçası [ortak dil belirtimi](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), böylece onu kullanan bileşen CLS uyumlu kod kullanamıyor.
 
--   **Genişletme.** `SByte` Widens veri türü için `Short`, `Integer`, `Long`, `Decimal`, `Single`, ve `Double`. Yani dönüştürebilirsiniz `SByte` karşılaşmadan bu türlerden birine bir <xref:System.OverflowException?displayProperty=nameWithType> hata.
+- **Genişletme.** `SByte` Widens veri türü için `Short`, `Integer`, `Long`, `Decimal`, `Single`, ve `Double`. Yani dönüştürebilirsiniz `SByte` karşılaşmadan bu türlerden birine bir <xref:System.OverflowException?displayProperty=nameWithType> hata.
   
--   **Tür karakterleri.** `SByte` değişmez değer türü karakteri ya da tanımlayıcı türü karakteri var.  
+- **Tür karakterleri.** `SByte` değişmez değer türü karakteri ya da tanımlayıcı türü karakteri var.  
   
--   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.SByte?displayProperty=nameWithType> yapısı.
+- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.SByte?displayProperty=nameWithType> yapısı.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

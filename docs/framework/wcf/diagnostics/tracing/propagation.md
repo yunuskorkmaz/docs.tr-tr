@@ -3,11 +3,11 @@ title: Yayma
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
 ms.openlocfilehash: faa0e6ecb53963587e3fc253cd8beae1dc2c4bf5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971385"
 ---
 # <a name="propagation"></a>Yayma
 Bu konu, Windows Communication Foundation (WCF) izleme modelinde Etkinlik yayma açıklar.  
@@ -26,11 +26,11 @@ Bu konu, Windows Communication Foundation (WCF) izleme modelinde Etkinlik yayma 
 ## <a name="propagation-definition"></a>Yayma tanımı  
  Aşağıdaki koşulların tümü uygularsanız N etkinliği için etkinlik M'ın gAId yayılır.  
   
--   N, M nedeniyle oluşturulur  
+- N, M nedeniyle oluşturulur  
   
--   N-M'ın gAId bilinir  
+- N-M'ın gAId bilinir  
   
--   N'ın gAId M'ın gAId için eşittir.  
+- N'ın gAId M'ın gAId için eşittir.  
   
  Aşağıdaki XML şemada gösterildiği gibi gAId ActivityID ileti üst bilgisi dağıtılır.  
   

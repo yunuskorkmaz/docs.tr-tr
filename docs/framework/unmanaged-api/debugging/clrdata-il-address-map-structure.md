@@ -1,5 +1,5 @@
 ---
-title: CLRDATA_IL_ADDRESS_MAP yapısı
+title: CLRDATA_IL_ADDRESS_MAP Yapısı
 ms.date: 01/16/2019
 api.name:
 - CLRDATA_IL_ADDRESS_MAP Structure
@@ -16,13 +16,13 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: 3aac7e24fa9cd03350aebf5f441063bcedfaed04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961297"
 ---
-# <a name="clrdatailaddressmap-structure"></a>CLRDATA_IL_ADDRESS_MAP yapısı
+# <a name="clrdatailaddressmap-structure"></a>CLRDATA_IL_ADDRESS_MAP Yapısı
 
 Bir IL adresi eşleme tanımlar.
 
@@ -56,8 +56,8 @@ Bu yapı, çalışma zamanı içinde yer alan ve herhangi bir üst bilgiler veya
 ## <a name="requirements"></a>Gereksinimler
 
 **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** Hiçbiri  
-**Kitaplığı:** Hiçbiri   
+**Üst bilgi:** None  
+**Kitaplığı:** Yok.   
 **.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.

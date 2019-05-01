@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Bir çalışan iş akışı örneğinin tanımını güncelleştirme'
+title: 'Nasıl yapılır: Çalışan İş Akışı Örneğinin Tanımını Güncelleştirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
 ms.openlocfilehash: d3ff9d217d085e3afe5171cce9d80f8dbc32ff36
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969493"
 ---
-# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Nasıl yapılır: Bir çalışan iş akışı örneğinin tanımını güncelleştirme
+# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Nasıl yapılır: Çalışan İş Akışı Örneğinin Tanımını Güncelleştirme
 
 Dinamik güncelleştirme, uygulama geliştiricilerinin'bir kalıcı iş akışı örneği iş akışı tanımını güncelleştirmek için iş akışı için bir mekanizma sağlar. Gerekli değişiklik, bir hata düzeltmesi, yeni gereksinimleri uygulamak için veya beklenmeyen değişiklikleri uyum sağlamak için olabilir. Bu adım öğreticide kalıcı örnekleri değiştirmek için dinamik güncelleştirme kullanmayı gösteren `v1` sürümünde bulunan yeni işlevleri eşleştirmek için iş akışı tahmin numarası [nasıl yapılır: Bir iş akışı yan yana birden çok sürümünü konak](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 

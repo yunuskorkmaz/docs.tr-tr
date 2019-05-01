@@ -10,18 +10,18 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949948"
 ---
 # <a name="lazy-initialization"></a>Yavaş Başlatma
 *Yavaş başlatma* nesnenin anlamına gelir oluşturulduktan önce kullanılana kadar ertelenir. (Bu konu için koşulları *yavaş başlatma* ve *yavaş oluşturmada* eşanlamlıdır.) Yavaş başlatma, öncelikle performansı iyileştirmek için kısıp hesaplama önlemek ve program bellek gereksinimlerini azaltmak için kullanılır. En yaygın senaryolar şunlardır:  
   
--   Oluşturmak pahalı bir nesnesinin yüklü ve program kullanamayabilir. Örneğin, bellekte olduğunu varsayalım. bir `Customer` nesnesi bir `Orders` içeren büyük bir dizi özelliği `Order` nesneleri başlatılması için bir veritabanı bağlantısı gerektirir. Kullanıcı, siparişleri görüntülemek veya bir hesaplamanın verileri kullanmak hiçbir zaman isterse, sistem belleği veya döngüleri bilgi işlem oluşturmak için kullanılacak bir neden yoktur. Kullanarak `Lazy<Orders>` bildirmek için `Orders` kaçınırsınız İsraf sistem kaynaklarının olmadığında nesne yavaş başlatma için nesne.  
+- Oluşturmak pahalı bir nesnesinin yüklü ve program kullanamayabilir. Örneğin, bellekte olduğunu varsayalım. bir `Customer` nesnesi bir `Orders` içeren büyük bir dizi özelliği `Order` nesneleri başlatılması için bir veritabanı bağlantısı gerektirir. Kullanıcı, siparişleri görüntülemek veya bir hesaplamanın verileri kullanmak hiçbir zaman isterse, sistem belleği veya döngüleri bilgi işlem oluşturmak için kullanılacak bir neden yoktur. Kullanarak `Lazy<Orders>` bildirmek için `Orders` kaçınırsınız İsraf sistem kaynaklarının olmadığında nesne yavaş başlatma için nesne.  
   
--   Ne zaman oluşturulacağı pahalı bir nesneye sahip ve diğer pahalı işlemler tamamlandıktan sonra oluşturulduktan kadar erteleme istiyorsunuz. Örneğin, programınız başlar, ancak bazı yalnızca hemen gerekli olan birden fazla nesne örneklerini yükler varsayalım. Gerekli nesnelerden oluşturulan kadar gerekli olmayan nesnelerin başlatılması erteleyerek program başlangıç performansını artırabilir.  
+- Ne zaman oluşturulacağı pahalı bir nesneye sahip ve diğer pahalı işlemler tamamlandıktan sonra oluşturulduktan kadar erteleme istiyorsunuz. Örneğin, programınız başlar, ancak bazı yalnızca hemen gerekli olan birden fazla nesne örneklerini yükler varsayalım. Gerekli nesnelerden oluşturulan kadar gerekli olmayan nesnelerin başlatılması erteleyerek program başlangıç performansını artırabilir.  
   
  Yavaş başlatma gerçekleştirmek için kendi kodunuzu yazabilirsiniz olmasa da kullanmanızı öneririz <xref:System.Lazy%601> yerine. <xref:System.Lazy%601> ve ilgili türlerinden de iş parçacığı güvenliği destek ve tutarlı bir özel durum yayma İlkesi belirtin.  
   
@@ -128,11 +128,11 @@ ms.locfileid: "59182305"
   
  <xref:System.Threading.ThreadLocal%601> aynı şekilde çok nesne sarmalar <xref:System.Lazy%601>, temel farklar:  
   
--   Her iş parçacığı, diğer iş parçacığı tarafından erişilebilir değil, kendi özel verileri kullanarak iş parçacığı yerel değişkenini ayarlar.  
+- Her iş parçacığı, diğer iş parçacığı tarafından erişilebilir değil, kendi özel verileri kullanarak iş parçacığı yerel değişkenini ayarlar.  
   
--   <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> Özelliği okuma-yazma ve bir kez herhangi bir sayıda değiştirilebilir. Bu örneğin, bir özel durum yayma etkileyebilir `get` işlemi, bir özel durum yükseltme, ancak bir sonraki başarılı bir şekilde değer başlatabilirsiniz.  
+- <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> Özelliği okuma-yazma ve bir kez herhangi bir sayıda değiştirilebilir. Bu örneğin, bir özel durum yayma etkileyebilir `get` işlemi, bir özel durum yükseltme, ancak bir sonraki başarılı bir şekilde değer başlatabilirsiniz.  
   
--   Hiçbir başlatma temsilci sağlanırsa <xref:System.Threading.ThreadLocal%601> Sarmalanan türünü türünün varsayılan değerini kullanarak başlatın. Bu bağlamda <xref:System.Threading.ThreadLocal%601> tutarlıdır <xref:System.ThreadStaticAttribute> özniteliği.  
+- Hiçbir başlatma temsilci sağlanırsa <xref:System.Threading.ThreadLocal%601> Sarmalanan türünü türünün varsayılan değerini kullanarak başlatın. Bu bağlamda <xref:System.Threading.ThreadLocal%601> tutarlıdır <xref:System.ThreadStaticAttribute> özniteliği.  
   
  Aşağıdaki örnek, her iş parçacığı erişen gösterir `ThreadLocal<int>` örneğini benzersiz kendi veri kopyasını alır.  
   

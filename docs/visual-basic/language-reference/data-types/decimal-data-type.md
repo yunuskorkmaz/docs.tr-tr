@@ -21,11 +21,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
 ms.openlocfilehash: 4d530a8c1f85d2f0045184c05df63849047a8204
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971776"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Onluk Veri Türü (Visual Basic)
 Ayrı tutma 128-bit (16 baytlık) değerler tarafından 10 değişken güç ölçeği 96 bit (12-bayt) tamsayıları temsil eden imzalı. Ölçeklendirme çarpanı ondalık noktasının sağındaki basamak sayısını belirtir; 0 ile 28 arasında çeşitlilik gösterir. İle bir ölçek 0 (ondalık basamak) 79,228,162,514,264,337,593,543,950,335 +/-olası en büyük değer olan (7 +/-.9228162514264337593543950335E + 28). 28 ondalık basamakları olan en büyük değeri 7.9228162514264337593543950335 +/-, ise sıfır olmayan en küçük değeri +/-0.0000000000000000000000000001 (+/-1E-28).  
@@ -37,13 +37,13 @@ Ayrı tutma 128-bit (16 baytlık) değerler tarafından 10 değişken güç öl�
   
 ## <a name="programming-tips"></a>Programlama İpuçları  
   
--   **Duyarlık.** `Decimal` bir kayan nokta veri türü değil. `Decimal` Yapısı tutan bir imza biti ve Ölçeklendirme çarpanı ondalık kesir değeri hangi kısmı olduğunu belirten bir tamsayı ile birlikte bir ikili tamsayı değeri. Bu nedenle, `Decimal` numarasına sahip daha kesin bir gösterimi kayan nokta türleri daha bellekte (`Single` ve `Double`).  
+- **Duyarlık.** `Decimal` bir kayan nokta veri türü değil. `Decimal` Yapısı tutan bir imza biti ve Ölçeklendirme çarpanı ondalık kesir değeri hangi kısmı olduğunu belirten bir tamsayı ile birlikte bir ikili tamsayı değeri. Bu nedenle, `Decimal` numarasına sahip daha kesin bir gösterimi kayan nokta türleri daha bellekte (`Single` ve `Double`).  
   
--   **Performans.** `Decimal` Veri türü, tüm sayısal türlerin en yavaş. Bir veri türü seçmeden önce performans karşı duyarlılığı önemini tartmanız gerekir.  
+- **Performans.** `Decimal` Veri türü, tüm sayısal türlerin en yavaş. Bir veri türü seçmeden önce performans karşı duyarlılığı önemini tartmanız gerekir.  
   
--   **Genişletme.** `Decimal` Widens veri türü için `Single` veya `Double`. Yani dönüştürebilirsiniz `Decimal` karşılaşmadan bu türlerden birine bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
+- **Genişletme.** `Decimal` Widens veri türü için `Single` veya `Double`. Yani dönüştürebilirsiniz `Decimal` karşılaşmadan bu türlerden birine bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
   
--   **Sondaki sıfırlar.** Visual Basic sıfırları depolamaz bir `Decimal` değişmez. Ancak, bir `Decimal` değişkeni hesaplama açısından alınan sonundaki sıfırları korur. Aşağıdaki örnek bunu göstermektedir.  
+- **Sondaki sıfırlar.** Visual Basic sıfırları depolamaz bir `Decimal` değişmez. Ancak, bir `Decimal` değişkeni hesaplama açısından alınan sonundaki sıfırları korur. Aşağıdaki örnek bunu göstermektedir.  
   
     ```  
     Dim d1, d2, d3, d4 As Decimal  
@@ -59,9 +59,9 @@ Ayrı tutma 128-bit (16 baytlık) değerler tarafından 10 değişken güç öl�
   
      D1 2.375, d2 = 1.625, d3 = 4.000, d4 = 4 =  
   
--   **Tür karakterleri.** Değişmez değer türü karakterinin `D` sabit değerine zorlar `Decimal` veri türü. Tanımlayıcı türü karakteri ekleme `@` herhangi bir tanımlayıcı zorlar `Decimal`.  
+- **Tür karakterleri.** Değişmez değer türü karakterinin `D` sabit değerine zorlar `Decimal` veri türü. Tanımlayıcı türü karakteri ekleme `@` herhangi bir tanımlayıcı zorlar `Decimal`.  
   
--   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Decimal?displayProperty=nameWithType> yapısı.  
+- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Decimal?displayProperty=nameWithType> yapısı.  
   
 ## <a name="range"></a>Aralık  
  Kullanmanız gerekebilir `D` türü için büyük bir değer atamak için karakteri bir `Decimal` değişken veya sabit. Bu gereksinim olduğundan derleyici değişmez değer olarak yorumlar `Long` sürece bir değişmez değer türü karakteri aşağıdaki örnekte gösterildiği gibi değişmez değer izler.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
 ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949870"
 ---
 # <a name="securing-services"></a>Hizmetleri Güvenli Hale Getirme
 Bir Windows Communication Foundation (WCF) hizmetinin güvenlik iki birincil gereksinimlerini oluşur: güvenlik ve yetkilendirme aktarın. (Üçüncü bir gereksinim, güvenlik olaylarının denetlenmesini açıklanan [denetim](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Kısaca, aktarım güvenliği (hem hizmet hem de istemci kimlik doğrulama) kimlik gizliliği (ileti şifreleme) ve bütünlüğü (dijital oynama algılamak imzalama) içerir. Yetkilendirme, kaynaklarına, örneğin, bir dosyayı okumak yalnızca ayrıcalıklı kullanıcıların erişim denetimidir. WCF özelliklerini kullanarak, iki birincil gereksinimlerini kolayca uygulanır.  

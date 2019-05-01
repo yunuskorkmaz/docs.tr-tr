@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows Forms dialog boxes [Windows Forms], tabs
 ms.assetid: 2b4ea784-a39d-463c-81d8-af74ce068476
 ms.openlocfilehash: 4511882aa4c7804e535f228dd150c26a8f7689f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971944"
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>TabControl Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.TabControl> etiketler, bir dosya dolabı klasörlerinde kümesi ya da bir not defterinde Bölücü gibi birden fazla sekme görüntüler. Sekmeler, resim ve diğer denetimleri içerebilir. Sekme denetimi, Windows işletim sisteminde, Denetim Masası görüntü özellikleri gibi pek çok yerde görünür çok sayfalı iletişim kutusu türünü oluşturmak için kullanabilirsiniz. Ayrıca, <xref:System.Windows.Forms.TabControl> bir grup ilgili özellikleri ayarlamak için kullanılan özellik sayfaları oluşturmak için kullanılabilir.  

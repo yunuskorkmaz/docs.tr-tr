@@ -17,11 +17,11 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
 ms.openlocfilehash: 4d93b1e40371b00f9d1ff69ec31ad0983beb493f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971736"
 ---
 # <a name="uinteger-data-type"></a>UInteger veri türü
 
@@ -66,17 +66,17 @@ Dim number = &H_0FAC_14D7ui
 
  `UInteger` Ve `Integer` veri türleri olduğundan bu en iyi performansı bir 32-bit işlemci üzerinde sağlamak daha küçük tamsayı türleri (`UShort`, `Short`, `Byte`, ve `SByte`), daha az BITS kullandıkları olsa bile daha fazla sürebilir Yükleme, depolama ve getirme.  
   
--   **Negatif sayılar.** Çünkü `UInteger` işaretsiz bir türü, negatif bir sayıyı temsil edemez. Tek işlenenli eksi işareti kullanırsanız (`-`) yazmak için değerlendirilen bir ifade işlecinin `UInteger`, Visual Basic ifade dönüştürür `Long` ilk.  
+- **Negatif sayılar.** Çünkü `UInteger` işaretsiz bir türü, negatif bir sayıyı temsil edemez. Tek işlenenli eksi işareti kullanırsanız (`-`) yazmak için değerlendirilen bir ifade işlecinin `UInteger`, Visual Basic ifade dönüştürür `Long` ilk.  
   
--   **CLS uyumluluğu.** `UInteger` Veri türü değil parçası [ortak dil belirtimi](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), böylece onu kullanan bileşen CLS uyumlu kod kullanamıyor.
+- **CLS uyumluluğu.** `UInteger` Veri türü değil parçası [ortak dil belirtimi](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), böylece onu kullanan bileşen CLS uyumlu kod kullanamıyor.
   
--   **Birlikte çalışabilirlik değerlendirmeleri.** Örnek otomasyon ve COM nesneleri için .NET Framework için yazılmaz bileşenleriyle arabirim, gibi türleri akılda tutulması `uint` diğer ortamlarda farklı veri genişliği (16 bit) olabilir. Bir 16 bit bağımsız değişkeni böyle bir bileşene geçiriyorsanız, olarak bildirin `UShort` yerine `UInteger` Yönetilen Visual Basic kodunuzda.  
+- **Birlikte çalışabilirlik değerlendirmeleri.** Örnek otomasyon ve COM nesneleri için .NET Framework için yazılmaz bileşenleriyle arabirim, gibi türleri akılda tutulması `uint` diğer ortamlarda farklı veri genişliği (16 bit) olabilir. Bir 16 bit bağımsız değişkeni böyle bir bileşene geçiriyorsanız, olarak bildirin `UShort` yerine `UInteger` Yönetilen Visual Basic kodunuzda.  
   
--   **Genişletme.** `UInteger` Widens veri türü için `Long`, `ULong`, `Decimal`, `Single`, ve `Double`. Yani dönüştürebilirsiniz `UInteger` karşılaşmadan bu türlerden birine bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
+- **Genişletme.** `UInteger` Widens veri türü için `Long`, `ULong`, `Decimal`, `Single`, ve `Double`. Yani dönüştürebilirsiniz `UInteger` karşılaşmadan bu türlerden birine bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
   
--   **Tür karakterleri.** Değişmez değer türü karakterleri ekleme `UI` sabit değerine zorlar `UInteger` veri türü. `UInteger` hiçbir tanımlayıcı türü karakteri var.  
+- **Tür karakterleri.** Değişmez değer türü karakterleri ekleme `UI` sabit değerine zorlar `UInteger` veri türü. `UInteger` hiçbir tanımlayıcı türü karakteri var.  
   
--   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.UInt32?displayProperty=nameWithType> yapısı.  
+- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.UInt32?displayProperty=nameWithType> yapısı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
