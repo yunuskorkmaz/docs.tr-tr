@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e6a95a636623f0b4ea75706039194572ecf1bbe0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969929"
 ---
-# <a name="iclrassemblyreferencelistisassemblyreferenceinlist-method"></a><span data-ttu-id="7463c-102">ICLRAssemblyReferenceList::IsAssemblyReferenceInList Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7463c-102">ICLRAssemblyReferenceList::IsAssemblyReferenceInList Method</span></span>
-<span data-ttu-id="7463c-103">Sağlanan işaretçi listesinde bir derlemeye başvuran olup olmadığını gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="7463c-103">Gets a value that indicates whether the supplied pointer refers to an assembly in the list.</span></span>  
+# <a name="iclrassemblyreferencelistisassemblyreferenceinlist-method"></a><span data-ttu-id="c4203-102">ICLRAssemblyReferenceList::IsAssemblyReferenceInList Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c4203-102">ICLRAssemblyReferenceList::IsAssemblyReferenceInList Method</span></span>
+<span data-ttu-id="c4203-103">Sağlanan işaretçi listesinde bir derlemeye başvuran olup olmadığını gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="c4203-103">Gets a value that indicates whether the supplied pointer refers to an assembly in the list.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7463c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7463c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c4203-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c4203-104">Syntax</span></span>  
   
 ```  
 HRESULT IsAssemblyReferenceInList (  
@@ -35,30 +35,30 @@ HRESULT IsAssemblyReferenceInList (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7463c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7463c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c4203-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c4203-105">Parameters</span></span>  
  `pName`  
- <span data-ttu-id="7463c-106">[in] Derleme Aranmak üzere bir arabirim işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="7463c-106">[in] An interface pointer to the assembly for which to search.</span></span> <span data-ttu-id="7463c-107">Geçerli değerler türünü `IAssemblyName` veya `IReferenceIdentity`.</span><span class="sxs-lookup"><span data-stu-id="7463c-107">Valid values are of type `IAssemblyName` or `IReferenceIdentity`.</span></span>  
+ <span data-ttu-id="c4203-106">[in] Derleme Aranmak üzere bir arabirim işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="c4203-106">[in] An interface pointer to the assembly for which to search.</span></span> <span data-ttu-id="c4203-107">Geçerli değerler türünü `IAssemblyName` veya `IReferenceIdentity`.</span><span class="sxs-lookup"><span data-stu-id="c4203-107">Valid values are of type `IAssemblyName` or `IReferenceIdentity`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7463c-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="7463c-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c4203-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="c4203-108">Return Value</span></span>  
   
-|<span data-ttu-id="7463c-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7463c-109">HRESULT</span></span>|<span data-ttu-id="7463c-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7463c-110">Description</span></span>|  
+|<span data-ttu-id="c4203-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c4203-109">HRESULT</span></span>|<span data-ttu-id="c4203-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c4203-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="7463c-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="7463c-111">S_OK</span></span>|<span data-ttu-id="7463c-112">Dize listesinde görünür.</span><span class="sxs-lookup"><span data-stu-id="7463c-112">The string appears in the list.</span></span>|  
-|<span data-ttu-id="7463c-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="7463c-113">S_FALSE</span></span>|<span data-ttu-id="7463c-114">Dize, listede görünmez.</span><span class="sxs-lookup"><span data-stu-id="7463c-114">The string does not appear in the list.</span></span>|  
-|<span data-ttu-id="7463c-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="7463c-115">E_FAIL</span></span>|<span data-ttu-id="7463c-116">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="7463c-116">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="7463c-117">Ortak dil çalışma zamanı, artık E_FAIL bir yöntemin dönüşünün ardından, işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="7463c-117">After a method returns E_FAIL, the common language runtime is no longer usable within the process.</span></span> <span data-ttu-id="7463c-118">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="7463c-118">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="c4203-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="c4203-111">S_OK</span></span>|<span data-ttu-id="c4203-112">Dize listesinde görünür.</span><span class="sxs-lookup"><span data-stu-id="c4203-112">The string appears in the list.</span></span>|  
+|<span data-ttu-id="c4203-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="c4203-113">S_FALSE</span></span>|<span data-ttu-id="c4203-114">Dize, listede görünmez.</span><span class="sxs-lookup"><span data-stu-id="c4203-114">The string does not appear in the list.</span></span>|  
+|<span data-ttu-id="c4203-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="c4203-115">E_FAIL</span></span>|<span data-ttu-id="c4203-116">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="c4203-116">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="c4203-117">Ortak dil çalışma zamanı, artık E_FAIL bir yöntemin dönüşünün ardından, işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="c4203-117">After a method returns E_FAIL, the common language runtime is no longer usable within the process.</span></span> <span data-ttu-id="c4203-118">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="c4203-118">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="7463c-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7463c-119">Requirements</span></span>  
- <span data-ttu-id="7463c-120">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7463c-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c4203-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c4203-119">Requirements</span></span>  
+ <span data-ttu-id="c4203-120">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c4203-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7463c-121">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7463c-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="c4203-121">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c4203-121">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="7463c-122">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="7463c-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c4203-122">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="c4203-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="7463c-123">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7463c-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c4203-123">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c4203-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7463c-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7463c-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c4203-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c4203-124">See also</span></span>
 
-- [<span data-ttu-id="7463c-125">ICLRAssemblyIdentityManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7463c-125">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="7463c-126">ICLRAssemblyReferenceList Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7463c-126">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [<span data-ttu-id="7463c-127">IHostAssemblyManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7463c-127">IHostAssemblyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
-- [<span data-ttu-id="7463c-128">IHostAssemblyStore Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7463c-128">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+- [<span data-ttu-id="c4203-125">ICLRAssemblyIdentityManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c4203-125">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="c4203-126">ICLRAssemblyReferenceList Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c4203-126">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [<span data-ttu-id="c4203-127">IHostAssemblyManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c4203-127">IHostAssemblyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
+- [<span data-ttu-id="c4203-128">IHostAssemblyStore Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c4203-128">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)

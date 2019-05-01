@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 78aaa5d8031e7b554eee2a147d9940ff8d7f7e02
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940393"
 ---
-# <a name="inotifysink2onsynccallenter-method"></a><span data-ttu-id="2859e-102">INotifySink2::OnSyncCallEnter Yöntemi</span><span class="sxs-lookup"><span data-stu-id="2859e-102">INotifySink2::OnSyncCallEnter Method</span></span>
-<span data-ttu-id="2859e-103">Bir çağrı girerken çağrılır.</span><span class="sxs-lookup"><span data-stu-id="2859e-103">Gets invoked when entering a call.</span></span>  
+# <a name="inotifysink2onsynccallenter-method"></a><span data-ttu-id="0e977-102">INotifySink2::OnSyncCallEnter Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0e977-102">INotifySink2::OnSyncCallEnter Method</span></span>
+<span data-ttu-id="0e977-103">Bir çağrı girerken çağrılır.</span><span class="sxs-lookup"><span data-stu-id="0e977-103">Gets invoked when entering a call.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2859e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2859e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0e977-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0e977-104">Syntax</span></span>  
   
 ```  
 HRESULT OnSyncCallEnter  
@@ -38,24 +38,24 @@ HRESULT OnSyncCallEnter
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2859e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2859e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0e977-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0e977-105">Parameters</span></span>  
  `in_CallID`  
- <span data-ttu-id="2859e-106">[in] Girilen çağrı kimliği.</span><span class="sxs-lookup"><span data-stu-id="2859e-106">[in] ID of the call being entered.</span></span> <span data-ttu-id="2859e-107">Bkz: [call_ıd yapısı](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span><span class="sxs-lookup"><span data-stu-id="2859e-107">See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span></span>  
+ <span data-ttu-id="0e977-106">[in] Girilen çağrı kimliği.</span><span class="sxs-lookup"><span data-stu-id="0e977-106">[in] ID of the call being entered.</span></span> <span data-ttu-id="0e977-107">Bkz: [call_ıd yapısı](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span><span class="sxs-lookup"><span data-stu-id="0e977-107">See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span></span>  
   
  `in_pBuffer`  
- <span data-ttu-id="2859e-108">[in] Arabellek çağırın.</span><span class="sxs-lookup"><span data-stu-id="2859e-108">[in] Call buffer.</span></span>  
+ <span data-ttu-id="0e977-108">[in] Arabellek çağırın.</span><span class="sxs-lookup"><span data-stu-id="0e977-108">[in] Call buffer.</span></span>  
   
  `in_BufferSize`  
- <span data-ttu-id="2859e-109">[in] Çağrı arabelleğin bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="2859e-109">[in] Size of the call buffer, in bytes.</span></span>  
+ <span data-ttu-id="0e977-109">[in] Çağrı arabelleğin bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="0e977-109">[in] Size of the call buffer, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2859e-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="2859e-110">Return Value</span></span>  
- <span data-ttu-id="2859e-111">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="2859e-111">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0e977-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="0e977-110">Return Value</span></span>  
+ <span data-ttu-id="0e977-111">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="0e977-111">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2859e-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2859e-112">Requirements</span></span>  
- <span data-ttu-id="2859e-113">**Üst bilgi:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="2859e-113">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0e977-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0e977-112">Requirements</span></span>  
+ <span data-ttu-id="0e977-113">**Üst bilgi:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="0e977-113">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2859e-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2859e-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0e977-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0e977-114">See also</span></span>
 
-- [<span data-ttu-id="2859e-115">INotifySink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="2859e-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="2859e-116">INotifySource2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="2859e-116">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="2859e-117">INotifyConnection2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="2859e-117">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="0e977-115">INotifySink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0e977-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="0e977-116">INotifySource2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0e977-116">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="0e977-117">INotifyConnection2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0e977-117">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
