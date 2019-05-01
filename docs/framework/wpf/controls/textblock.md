@@ -8,22 +8,22 @@ helpviewer_keywords:
 - TextBlock control [WPF]
 ms.assetid: ea5f7826-7a92-4de9-9eee-10ef700ce7b6
 ms.openlocfilehash: 31ef66ba7e584b88a38185a4d3ad02ca413fad34
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790955"
 ---
-# <a name="textblock"></a><span data-ttu-id="e0187-102">TextBlock</span><span class="sxs-lookup"><span data-stu-id="e0187-102">TextBlock</span></span>
-<span data-ttu-id="e0187-103"><xref:System.Windows.Controls.TextBlock> Denetim sağlayan esnek metin desteği [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.</span><span class="sxs-lookup"><span data-stu-id="e0187-103">The <xref:System.Windows.Controls.TextBlock> control provides flexible text support for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="e0187-104">Öğe, öncelikli olarak doğru temel hedeflenen [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] metnin birden fazla paragraf gerektirmeyen senaryolar.</span><span class="sxs-lookup"><span data-stu-id="e0187-104">The element is targeted primarily toward basic [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenarios that do not require more than one paragraph of text.</span></span>  
+# <a name="textblock"></a><span data-ttu-id="6f68e-102">TextBlock</span><span class="sxs-lookup"><span data-stu-id="6f68e-102">TextBlock</span></span>
+<span data-ttu-id="6f68e-103"><xref:System.Windows.Controls.TextBlock> Denetim sağlayan esnek metin desteği [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.</span><span class="sxs-lookup"><span data-stu-id="6f68e-103">The <xref:System.Windows.Controls.TextBlock> control provides flexible text support for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="6f68e-104">Öğe, öncelikli olarak doğru temel hedeflenen [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] metnin birden fazla paragraf gerektirmeyen senaryolar.</span><span class="sxs-lookup"><span data-stu-id="6f68e-104">The element is targeted primarily toward basic [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenarios that do not require more than one paragraph of text.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e0187-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="e0187-105">In This Section</span></span>  
- [<span data-ttu-id="e0187-106">TextBlock Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="e0187-106">TextBlock Overview</span></span>](textblock-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6f68e-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="6f68e-105">In This Section</span></span>  
+ [<span data-ttu-id="6f68e-106">TextBlock Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="6f68e-106">TextBlock Overview</span></span>](textblock-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="e0187-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="e0187-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6f68e-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="6f68e-107">Reference</span></span>  
  <xref:System.Windows.Controls.Label>  
   
-## <a name="related-sections"></a><span data-ttu-id="e0187-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="e0187-108">Related Sections</span></span>  
- [<span data-ttu-id="e0187-109">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="e0187-109">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)  
+## <a name="related-sections"></a><span data-ttu-id="6f68e-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="6f68e-108">Related Sections</span></span>  
+ [<span data-ttu-id="6f68e-109">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="6f68e-109">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)  
   
- [<span data-ttu-id="e0187-110">Akış Belgesine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="e0187-110">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
+ [<span data-ttu-id="6f68e-110">Akış Belgesine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="6f68e-110">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)

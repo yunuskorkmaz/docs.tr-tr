@@ -8,28 +8,28 @@ helpviewer_keywords:
 - ListView control [WPF]
 ms.assetid: fc3784a7-c9e8-4e2b-909a-7af37cef9b43
 ms.openlocfilehash: c90849c27f7bbef2338ef255350a7dccd40c99e3
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932593"
 ---
-# <a name="listview"></a><span data-ttu-id="0d1d6-102">ListView</span><span class="sxs-lookup"><span data-stu-id="0d1d6-102">ListView</span></span>
-<span data-ttu-id="0d1d6-103"><xref:System.Windows.Controls.ListView> Denetim bir veri öğeleri kümesi farklı düzenler veya görünümleri görüntülemek için altyapı sağlar.</span><span class="sxs-lookup"><span data-stu-id="0d1d6-103">The <xref:System.Windows.Controls.ListView> control provides the infrastructure to display a set of data items in different layouts or views.</span></span>  
+# <a name="listview"></a><span data-ttu-id="7a809-102">ListView</span><span class="sxs-lookup"><span data-stu-id="7a809-102">ListView</span></span>
+<span data-ttu-id="7a809-103"><xref:System.Windows.Controls.ListView> Denetim bir veri öğeleri kümesi farklı düzenler veya görünümleri görüntülemek için altyapı sağlar.</span><span class="sxs-lookup"><span data-stu-id="7a809-103">The <xref:System.Windows.Controls.ListView> control provides the infrastructure to display a set of data items in different layouts or views.</span></span>  
   
- <span data-ttu-id="0d1d6-104">Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.ListView>.</span><span class="sxs-lookup"><span data-stu-id="0d1d6-104">The following illustration shows a <xref:System.Windows.Controls.ListView>.</span></span>  
+ <span data-ttu-id="7a809-104">Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.ListView>.</span><span class="sxs-lookup"><span data-stu-id="7a809-104">The following illustration shows a <xref:System.Windows.Controls.ListView>.</span></span>  
   
  ![Bir ListView GridView çıktıyla gösteren ekran görüntüsü.](./media/gridview-overview/listview-gridview-output.jpg)  
   
-## <a name="in-this-section"></a><span data-ttu-id="0d1d6-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="0d1d6-106">In This Section</span></span>  
- [<span data-ttu-id="0d1d6-107">Genel Bakışlar</span><span class="sxs-lookup"><span data-stu-id="0d1d6-107">Overviews</span></span>](listview-overviews.md)  
- [<span data-ttu-id="0d1d6-108">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="0d1d6-108">How-to Topics</span></span>](listview-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7a809-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="7a809-106">In This Section</span></span>  
+ [<span data-ttu-id="7a809-107">Genel Bakışlar</span><span class="sxs-lookup"><span data-stu-id="7a809-107">Overviews</span></span>](listview-overviews.md)  
+ [<span data-ttu-id="7a809-108">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="7a809-108">How-to Topics</span></span>](listview-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="0d1d6-109">Başvuru</span><span class="sxs-lookup"><span data-stu-id="0d1d6-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7a809-109">Başvuru</span><span class="sxs-lookup"><span data-stu-id="7a809-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   <xref:System.Windows.Controls.ListViewItem>  
   <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="0d1d6-110">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="0d1d6-110">Related Sections</span></span>  
- [<span data-ttu-id="0d1d6-111">Veri Bağlamaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="0d1d6-111">Data Binding Overview</span></span>](../data/data-binding-overview.md)  
-  [<span data-ttu-id="0d1d6-112">Veri Şablonu Oluşturmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="0d1d6-112">Data Templating Overview</span></span>](../data/data-templating-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="7a809-110">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="7a809-110">Related Sections</span></span>  
+ [<span data-ttu-id="7a809-111">Veri Bağlamaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7a809-111">Data Binding Overview</span></span>](../data/data-binding-overview.md)  
+  [<span data-ttu-id="7a809-112">Veri Şablonu Oluşturmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7a809-112">Data Templating Overview</span></span>](../data/data-templating-overview.md)

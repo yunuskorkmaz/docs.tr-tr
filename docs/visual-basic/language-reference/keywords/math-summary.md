@@ -8,26 +8,26 @@ helpviewer_keywords:
 - math functions
 ms.assetid: 6abf2dd7-92d2-488a-8e2b-819be9b30c3f
 ms.openlocfilehash: d7447a3155c9727a9c55ea86826d1ef15ac21243
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802962"
 ---
-# <a name="math-summary-visual-basic"></a><span data-ttu-id="ed676-102">Matematik Özeti (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ed676-102">Math Summary (Visual Basic)</span></span>
-<span data-ttu-id="ed676-103">Visual Basic dili anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaç tarafından düzenlenir ve kullanın.</span><span class="sxs-lookup"><span data-stu-id="ed676-103">Visual Basic language keywords and run-time library members are organized by purpose and use.</span></span>  
+# <a name="math-summary-visual-basic"></a><span data-ttu-id="0b889-102">Matematik Özeti (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0b889-102">Math Summary (Visual Basic)</span></span>
+<span data-ttu-id="0b889-103">Visual Basic dili anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaç tarafından düzenlenir ve kullanın.</span><span class="sxs-lookup"><span data-stu-id="0b889-103">Visual Basic language keywords and run-time library members are organized by purpose and use.</span></span>  
   
-|<span data-ttu-id="ed676-104">Eylem</span><span class="sxs-lookup"><span data-stu-id="ed676-104">Action</span></span>|<span data-ttu-id="ed676-105">Dil öğesi</span><span class="sxs-lookup"><span data-stu-id="ed676-105">Language element</span></span>|  
+|<span data-ttu-id="0b889-104">Eylem</span><span class="sxs-lookup"><span data-stu-id="0b889-104">Action</span></span>|<span data-ttu-id="0b889-105">Dil öğesi</span><span class="sxs-lookup"><span data-stu-id="0b889-105">Language element</span></span>|  
 |------------|----------------------|  
-|<span data-ttu-id="ed676-106">Trigonometrik işlevler türetilir.</span><span class="sxs-lookup"><span data-stu-id="ed676-106">Derive trigonometric functions.</span></span>|<span data-ttu-id="ed676-107"><xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A></span><span class="sxs-lookup"><span data-stu-id="ed676-107"><xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A></span></span>|  
-|<span data-ttu-id="ed676-108">Genel hesaplamalar.</span><span class="sxs-lookup"><span data-stu-id="ed676-108">General calculations.</span></span>|<span data-ttu-id="ed676-109"><xref:System.Math.Exp%2A>, <xref:System.Math.Log%2A>, <xref:System.Math.Sqrt%2A></span><span class="sxs-lookup"><span data-stu-id="ed676-109"><xref:System.Math.Exp%2A>, <xref:System.Math.Log%2A>, <xref:System.Math.Sqrt%2A></span></span>|  
-|<span data-ttu-id="ed676-110">Rastgele sayılar üretin.</span><span class="sxs-lookup"><span data-stu-id="ed676-110">Generate random numbers.</span></span>|<span data-ttu-id="ed676-111"><xref:Microsoft.VisualBasic.VBMath.Randomize%2A>, <xref:Microsoft.VisualBasic.VBMath.Rnd%2A></span><span class="sxs-lookup"><span data-stu-id="ed676-111"><xref:Microsoft.VisualBasic.VBMath.Randomize%2A>, <xref:Microsoft.VisualBasic.VBMath.Rnd%2A></span></span>|  
-|<span data-ttu-id="ed676-112">Mutlak değer elde edin.</span><span class="sxs-lookup"><span data-stu-id="ed676-112">Get absolute value.</span></span>|<xref:System.Math.Abs%2A>|  
-|<span data-ttu-id="ed676-113">Bir ifadenin oturum alın.</span><span class="sxs-lookup"><span data-stu-id="ed676-113">Get the sign of an expression.</span></span>|<xref:System.Math.Sign%2A>|  
-|<span data-ttu-id="ed676-114">Sayısal dönüşümler gerçekleştirin.</span><span class="sxs-lookup"><span data-stu-id="ed676-114">Perform numeric conversions.</span></span>|<span data-ttu-id="ed676-115"><xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></span><span class="sxs-lookup"><span data-stu-id="ed676-115"><xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></span></span>|  
+|<span data-ttu-id="0b889-106">Trigonometrik işlevler türetilir.</span><span class="sxs-lookup"><span data-stu-id="0b889-106">Derive trigonometric functions.</span></span>|<span data-ttu-id="0b889-107"><xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A></span><span class="sxs-lookup"><span data-stu-id="0b889-107"><xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A></span></span>|  
+|<span data-ttu-id="0b889-108">Genel hesaplamalar.</span><span class="sxs-lookup"><span data-stu-id="0b889-108">General calculations.</span></span>|<span data-ttu-id="0b889-109"><xref:System.Math.Exp%2A>, <xref:System.Math.Log%2A>, <xref:System.Math.Sqrt%2A></span><span class="sxs-lookup"><span data-stu-id="0b889-109"><xref:System.Math.Exp%2A>, <xref:System.Math.Log%2A>, <xref:System.Math.Sqrt%2A></span></span>|  
+|<span data-ttu-id="0b889-110">Rastgele sayılar üretin.</span><span class="sxs-lookup"><span data-stu-id="0b889-110">Generate random numbers.</span></span>|<span data-ttu-id="0b889-111"><xref:Microsoft.VisualBasic.VBMath.Randomize%2A>, <xref:Microsoft.VisualBasic.VBMath.Rnd%2A></span><span class="sxs-lookup"><span data-stu-id="0b889-111"><xref:Microsoft.VisualBasic.VBMath.Randomize%2A>, <xref:Microsoft.VisualBasic.VBMath.Rnd%2A></span></span>|  
+|<span data-ttu-id="0b889-112">Mutlak değer elde edin.</span><span class="sxs-lookup"><span data-stu-id="0b889-112">Get absolute value.</span></span>|<xref:System.Math.Abs%2A>|  
+|<span data-ttu-id="0b889-113">Bir ifadenin oturum alın.</span><span class="sxs-lookup"><span data-stu-id="0b889-113">Get the sign of an expression.</span></span>|<xref:System.Math.Sign%2A>|  
+|<span data-ttu-id="0b889-114">Sayısal dönüşümler gerçekleştirin.</span><span class="sxs-lookup"><span data-stu-id="0b889-114">Perform numeric conversions.</span></span>|<span data-ttu-id="0b889-115"><xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></span><span class="sxs-lookup"><span data-stu-id="0b889-115"><xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="ed676-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ed676-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b889-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0b889-116">See also</span></span>
 
-- [<span data-ttu-id="ed676-117">Türetilen Matematik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="ed676-117">Derived Math Functions</span></span>](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
-- [<span data-ttu-id="ed676-118">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="ed676-118">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
-- [<span data-ttu-id="ed676-119">Visual Basic Çalışma Süresi Kitaplık Üyeleri</span><span class="sxs-lookup"><span data-stu-id="ed676-119">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)
+- [<span data-ttu-id="0b889-117">Türetilen Matematik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="0b889-117">Derived Math Functions</span></span>](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
+- [<span data-ttu-id="0b889-118">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="0b889-118">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="0b889-119">Visual Basic Çalışma Süresi Kitaplık Üyeleri</span><span class="sxs-lookup"><span data-stu-id="0b889-119">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)

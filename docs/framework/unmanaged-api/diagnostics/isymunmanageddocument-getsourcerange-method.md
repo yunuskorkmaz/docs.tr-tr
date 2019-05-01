@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 59420cfd29c3228aece9fc5ae02b950db6099ea0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939870"
 ---
-# <a name="isymunmanageddocumentgetsourcerange-method"></a><span data-ttu-id="bc423-102">ISymUnmanagedDocument::GetSourceRange Yöntemi</span><span class="sxs-lookup"><span data-stu-id="bc423-102">ISymUnmanagedDocument::GetSourceRange Method</span></span>
-<span data-ttu-id="bc423-103">Katıştırılmış kaynak Belirtilen aralıktaki belirli arabelleğe döndürür.</span><span class="sxs-lookup"><span data-stu-id="bc423-103">Returns the specified range of the embedded source into the given buffer.</span></span> <span data-ttu-id="bc423-104">Arabellek kaynağını tutabilecek kadar büyük olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="bc423-104">The buffer must be large enough to hold the source.</span></span>  
+# <a name="isymunmanageddocumentgetsourcerange-method"></a><span data-ttu-id="eae74-102">ISymUnmanagedDocument::GetSourceRange Yöntemi</span><span class="sxs-lookup"><span data-stu-id="eae74-102">ISymUnmanagedDocument::GetSourceRange Method</span></span>
+<span data-ttu-id="eae74-103">Katıştırılmış kaynak Belirtilen aralıktaki belirli arabelleğe döndürür.</span><span class="sxs-lookup"><span data-stu-id="eae74-103">Returns the specified range of the embedded source into the given buffer.</span></span> <span data-ttu-id="eae74-104">Arabellek kaynağını tutabilecek kadar büyük olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="eae74-104">The buffer must be large enough to hold the source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bc423-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="bc423-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eae74-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="eae74-105">Syntax</span></span>  
   
 ```  
 HRESULT GetSourceRange(  
@@ -41,31 +41,31 @@ HRESULT GetSourceRange(
         length_is(*pcSourceBytes)] BYTE source[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bc423-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="bc423-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="eae74-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="eae74-106">Parameters</span></span>  
  `startLine`  
- <span data-ttu-id="bc423-107">[in] Geçerli belgedeki başlangıç satırı.</span><span class="sxs-lookup"><span data-stu-id="bc423-107">[in] The starting line in the current document.</span></span>  
+ <span data-ttu-id="eae74-107">[in] Geçerli belgedeki başlangıç satırı.</span><span class="sxs-lookup"><span data-stu-id="eae74-107">[in] The starting line in the current document.</span></span>  
   
  `startColumn`  
- <span data-ttu-id="bc423-108">[in] Geçerli belgedeki başlangıç sütunu.</span><span class="sxs-lookup"><span data-stu-id="bc423-108">[in] The starting column in the current document.</span></span>  
+ <span data-ttu-id="eae74-108">[in] Geçerli belgedeki başlangıç sütunu.</span><span class="sxs-lookup"><span data-stu-id="eae74-108">[in] The starting column in the current document.</span></span>  
   
  `endLine`  
- <span data-ttu-id="bc423-109">[in] Geçerli belgedeki son satır.</span><span class="sxs-lookup"><span data-stu-id="bc423-109">[in] The final line in the current document.</span></span>  
+ <span data-ttu-id="eae74-109">[in] Geçerli belgedeki son satır.</span><span class="sxs-lookup"><span data-stu-id="eae74-109">[in] The final line in the current document.</span></span>  
   
  `endColumn`  
- <span data-ttu-id="bc423-110">[in] Son sütun geçerli belge.</span><span class="sxs-lookup"><span data-stu-id="bc423-110">[in] The final column in the current document.</span></span>  
+ <span data-ttu-id="eae74-110">[in] Son sütun geçerli belge.</span><span class="sxs-lookup"><span data-stu-id="eae74-110">[in] The final column in the current document.</span></span>  
   
  `cSourceBytes`  
- <span data-ttu-id="bc423-111">[in] Kaynak, bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="bc423-111">[in] The size of the source, in bytes.</span></span>  
+ <span data-ttu-id="eae74-111">[in] Kaynak, bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="eae74-111">[in] The size of the source, in bytes.</span></span>  
   
  `pcSourceBytes`  
- <span data-ttu-id="bc423-112">[out] Kaynak boyutu alan bir değişken için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="bc423-112">[out] A pointer to a variable that receives the source size.</span></span>  
+ <span data-ttu-id="eae74-112">[out] Kaynak boyutu alan bir değişken için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="eae74-112">[out] A pointer to a variable that receives the source size.</span></span>  
   
  `source`  
- <span data-ttu-id="bc423-113">[out] Boyutu ve belirtilen kaynak belgesinde bayt aralığı uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="bc423-113">[out] The size and length of the specified range of the source document, in bytes.</span></span>  
+ <span data-ttu-id="eae74-113">[out] Boyutu ve belirtilen kaynak belgesinde bayt aralığı uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="eae74-113">[out] The size and length of the specified range of the source document, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="bc423-114">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="bc423-114">Return Value</span></span>  
- <span data-ttu-id="bc423-115">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="bc423-115">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="eae74-114">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="eae74-114">Return Value</span></span>  
+ <span data-ttu-id="eae74-115">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="eae74-115">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bc423-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bc423-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eae74-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="eae74-116">See also</span></span>
 
-- [<span data-ttu-id="bc423-117">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="bc423-117">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="eae74-117">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="eae74-117">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

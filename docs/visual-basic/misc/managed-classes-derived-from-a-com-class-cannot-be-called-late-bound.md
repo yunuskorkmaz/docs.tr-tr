@@ -5,19 +5,19 @@ f1_keywords:
 - vbrLateboundCallToInheritedComClass
 ms.assetid: 7bc16e84-8d29-4f8e-bc4f-002c65c71099
 ms.openlocfilehash: fa4574df47c6609eda4a1d3841147618f47c85d0
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58041622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922349"
 ---
-# <a name="managed-classes-derived-from-a-com-class-cannot-be-called-late-bound"></a><span data-ttu-id="b8b41-102">Bir COM sınıfından türetilmiş yönetilen sınıflar, geç bağlanan çağrılamaz.</span><span class="sxs-lookup"><span data-stu-id="b8b41-102">Managed classes derived from a COM class cannot be called late-bound.</span></span>
-<span data-ttu-id="b8b41-103">Bir COM sınıfından türetilen bir yönetilen sınıf geç bağlanan çağrı yapmak çalışıldı; Böyle çağrılar desteklenmiyor.</span><span class="sxs-lookup"><span data-stu-id="b8b41-103">You attempted to make a late-bound call to a managed class derived from a COM Class; such calls are not supported.</span></span>  
+# <a name="managed-classes-derived-from-a-com-class-cannot-be-called-late-bound"></a><span data-ttu-id="befab-102">Bir COM sınıfından türetilmiş yönetilen sınıflar, geç bağlanan çağrılamaz.</span><span class="sxs-lookup"><span data-stu-id="befab-102">Managed classes derived from a COM class cannot be called late-bound.</span></span>
+<span data-ttu-id="befab-103">Bir COM sınıfından türetilen bir yönetilen sınıf geç bağlanan çağrı yapmak çalışıldı; Böyle çağrılar desteklenmiyor.</span><span class="sxs-lookup"><span data-stu-id="befab-103">You attempted to make a late-bound call to a managed class derived from a COM Class; such calls are not supported.</span></span>  
   
-### <a name="to-correct-the-problem"></a><span data-ttu-id="b8b41-104">Sorunu düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="b8b41-104">To correct the problem</span></span>  
+### <a name="to-correct-the-problem"></a><span data-ttu-id="befab-104">Sorunu düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="befab-104">To correct the problem</span></span>  
   
--   <span data-ttu-id="b8b41-105">Çağrı yapma erken bağlanmış.</span><span class="sxs-lookup"><span data-stu-id="b8b41-105">Make the call early bound.</span></span>  
+- <span data-ttu-id="befab-105">Çağrı yapma erken bağlanmış.</span><span class="sxs-lookup"><span data-stu-id="befab-105">Make the call early bound.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b8b41-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b8b41-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="befab-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="befab-106">See also</span></span>
 
-- [<span data-ttu-id="b8b41-107">Hata Türleri</span><span class="sxs-lookup"><span data-stu-id="b8b41-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="befab-107">Hata Türleri</span><span class="sxs-lookup"><span data-stu-id="befab-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
