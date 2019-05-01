@@ -12,11 +12,11 @@ ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61873177"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Çalışma Zamanının Derlemelerin Konumunu Bulması
 .NET Framework uygulamanızı başarıyla dağıtmak için ortak dil çalışma zamanının nasıl bulur ve uygulamanızı oluşturan derlemeleri bağlar anlamanız gerekir. Varsayılan olarak, çalışma zamanı tamamen aynı sürümünün uygulamanın derlendiği bir derleme ile bağlamak çalışır. Bu varsayılan davranışı yapılandırma dosyası ayarlarının tarafından geçersiz kılınabilir.  
@@ -51,11 +51,11 @@ ms.locfileid: "59342353"
   
 4. [Derleme için araştırmaları](#step4) aşağıdaki adımları kullanarak:  
   
-    1.  Yapılandırma ve yayımcı ilkesi özgün başvuruyu etkilemez ve bağlama isteği kullanılarak oluşturulmuşsa <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> yöntemi, çalışma zamanı denetimleri için konum ipuçları.  
+    1. Yapılandırma ve yayımcı ilkesi özgün başvuruyu etkilemez ve bağlama isteği kullanılarak oluşturulmuşsa <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> yöntemi, çalışma zamanı denetimleri için konum ipuçları.  
   
-    2.  Bir kod temeli yapılandırma dosyalarında bulunması durumunda bu konum yalnızca çalışma zamanı denetler. Bu araştırma başarısız olursa, bağlama isteği başarısız oldu ve hiçbir diğer yoklama gerçekleşir çalışma zamanı belirler.  
+    2. Bir kod temeli yapılandırma dosyalarında bulunması durumunda bu konum yalnızca çalışma zamanı denetler. Bu araştırma başarısız olursa, bağlama isteği başarısız oldu ve hiçbir diğer yoklama gerçekleşir çalışma zamanı belirler.  
   
-    3.  Araştırmalar açıklanan buluşsal yöntemlerini kullanarak derleme [bölümü yoklama](#step4). Derleme araştırma bulunamazsa, çalışma zamanı derleme sağlamak için Windows Yükleyici ister. Bu, bir isteğe bağlı Yükleme özelliği olarak görev yapar.  
+    3. Araştırmalar açıklanan buluşsal yöntemlerini kullanarak derleme [bölümü yoklama](#step4). Derleme araştırma bulunamazsa, çalışma zamanı derleme sağlamak için Windows Yükleyici ister. Bu, bir isteğe bağlı Yükleme özelliği olarak görev yapar.  
   
         > [!NOTE]
         >  Güçlü adı olmayan derlemeler için denetimi sürümü yoktur ve güçlü adı olmayan derlemeler için çalışma zamanı genel derleme önbelleğinde kontrol etmez.  
@@ -64,11 +64,11 @@ ms.locfileid: "59342353"
 ## <a name="step-1-examining-the-configuration-files"></a>1. Adım: Yapılandırma dosyalarını İnceleme  
  Derleme bağlama davranışı üç XML dosyalarını temel alan farklı düzeylerde yapılandırılabilir:  
   
--   Uygulama yapılandırma dosyası.  
+- Uygulama yapılandırma dosyası.  
   
--   Yayımcı ilkesi dosyası.  
+- Yayımcı ilkesi dosyası.  
   
--   Makine yapılandırma dosyası.  
+- Makine yapılandırma dosyası.  
   
  Bu dosyalar aynı sözdizimini izleyin ve bağlama yönlendirmeleri, kod, konumunu ve belirli derlemelerde modları bağlama gibi bilgiler sağlar. Her bir yapılandırma dosyası içerebilir bir [ \<assemblyBinding > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) , bağlama işlemini yeniden yönlendirir. Alt öğeleri [ \<assemblyBinding > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) dahil [ \<dependentAssembly > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md). Alt [ \<dependentAssembly > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md) dahil [ \<assemblyIdentity > öğesi](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment), [ \<bindingRedirect > öğe](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)ve [ \<codeBase > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md).  
   
@@ -172,13 +172,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ### <a name="locating-the-assembly-through-probing"></a>Algılama aracılığıyla derlemenin bulma  
  Yoksa hiçbir [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) öğesi uygulama yapılandırma dosyasında, çalışma zamanı araştırmaları dört ölçütleri kullanarak bütünleştirilmiş kod:  
   
--   Uygulamayı nerede yürütülmekte olduğu kök konumu uygulama tabanı.  
+- Uygulamayı nerede yürütülmekte olduğu kök konumu uygulama tabanı.  
   
--   Kültür, başvurulan derleme kültürü özniteliğidir.  
+- Kültür, başvurulan derleme kültürü özniteliğidir.  
   
--   Adı, başvurulan derlemenin adıdır.  
+- Adı, başvurulan derlemenin adıdır.  
   
--   `privatePath` Özniteliği [ \<yoklama >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) kök konumu altında alt dizinler kullanıcı tanımlı liste öğesi. Bu konum uygulama yapılandırma dosyasında ve yönetilen kod kullanarak belirtilen <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> uygulama etki alanı özelliği. Yönetilen kodda, yönetilen kod belirtildiğinde `privatePath` ilk araştırıldığı, uygulama yapılandırma dosyasında belirtilen yol izlediği.  
+- `privatePath` Özniteliği [ \<yoklama >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) kök konumu altında alt dizinler kullanıcı tanımlı liste öğesi. Bu konum uygulama yapılandırma dosyasında ve yönetilen kod kullanarak belirtilen <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> uygulama etki alanı özelliği. Yönetilen kodda, yönetilen kod belirtildiğinde `privatePath` ilk araştırıldığı, uygulama yapılandırma dosyasında belirtilen yol izlediği.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>Kültür dizinleri ve uygulama temel algılama  
  Çalışma zamanı, her zaman bir URL veya uygulamanın kök dizini bir bilgisayarda olabilen uygulamanın Base yoklama başlar. Uygulama tabanı başvurulan derleme bulunamadı ve kültür bilgisi yok sağlanan, çalışma zamanı derleme adı ile alt dizinleri arar. Araştırılan dizinler şunlardır:  
@@ -213,13 +213,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="probing-examples"></a>Örneklerini yoklama  
  Verilen aşağıdaki bilgilerle:  
   
--   Başvurulan bütünleştirilmiş kod adı: myAssembly  
+- Başvurulan bütünleştirilmiş kod adı: myAssembly  
   
--   Uygulama kök dizini: `http://www.code.microsoft.com`  
+- Uygulama kök dizini: `http://www.code.microsoft.com`  
   
--   [\<yoklama >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) öğesi yapılandırma dosyasında belirtir: depo  
+- [\<yoklama >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) öğesi yapılandırma dosyasında belirtir: depo  
   
--   Kültür: Gizle  
+- Kültür: Gizle  
   
  Çalışma zamanı, aşağıdaki URL'ler araştırmaları:  
   

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
 ms.openlocfilehash: 5b1f8ccc402f7f5928a33f434664b0f28d108e6d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61828626"
 ---
 # <a name="declared-element-names-visual-basic"></a>Bildirilen Öğe Adları (Visual Basic)
 Bildirilen her öğe olarak da bilinen bir ada sahip bir *tanımlayıcı*, olan kod başvurduğu için kullanır.  
@@ -36,13 +36,13 @@ Bildirilen her öğe olarak da bilinen bir ada sahip bir *tanımlayıcı*, olan 
 ## <a name="rules"></a>Kurallar  
  Visual Basic'te bir öğe adı, aşağıdaki kurallara uymanız gerekir:  
   
--   Alfabetik bir karakter veya alt çizgi ile başlamalıdır (`_`).  
+- Alfabetik bir karakter veya alt çizgi ile başlamalıdır (`_`).  
   
--   Yalnızca alfabetik karakterler, ondalık sayılar ve alt çizgi içermelidir.  
+- Yalnızca alfabetik karakterler, ondalık sayılar ve alt çizgi içermelidir.  
   
--   Bir alt çizgiyle başlıyorsa en az bir alfasayısal karakter veya ondalık sayı içermelidir.  
+- Bir alt çizgiyle başlıyorsa en az bir alfasayısal karakter veya ondalık sayı içermelidir.  
   
--   Daha fazla 1023 karakterden uzun olmamalıdır.  
+- Daha fazla 1023 karakterden uzun olmamalıdır.  
   
  Uzunluk sınırını 1023 karakteri de tam adı, tüm dize gibi geçerlidir `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.  
   
@@ -75,9 +75,9 @@ Bildirilen her öğe olarak da bilinen bir ada sahip bir *tanımlayıcı*, olan 
   
  Genel olarak, kaçış adları kullanmanız gereken yalnızca:  
   
--   Kodunuzu anahtar sözcüğü bir ad kullanılan yedek değil Visual Basic'in önceki bir sürümden geçiş yaptı; veya  
+- Kodunuzu anahtar sözcüğü bir ad kullanılan yedek değil Visual Basic'in önceki bir sürümden geçiş yaptı; veya  
   
--   Belirli bir anahtar değil ayrılmış başka bir dilde yazılmış kodu ile çalışma.  
+- Belirli bir anahtar değil ayrılmış başka bir dilde yazılmış kodu ile çalışma.  
   
  Aksi takdirde, adını, anahtar sözcüğü ile çakışırsa, öğeyi yeniden adlandırmadan düşünmelisiniz. Tümleşik geliştirme ortamı (IDE), bunu yapmak için kolay bir yol sağlar. Daha fazla bilgi için [yeniden düzenleme](/visualstudio/vb-ide/refactoring-vb).  
   

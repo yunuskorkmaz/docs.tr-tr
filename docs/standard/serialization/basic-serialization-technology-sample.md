@@ -3,11 +3,11 @@ title: Temel Serileştirme Teknolojisi Örneği
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795024"
 ---
 # <a name="basic-serialization-technology-sample"></a>Temel Serileştirme Teknolojisi Örneği
 [Örneği indirin](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -62,21 +62,21 @@ ms.locfileid: "59315016"
   
  Aşağıdaki madde işaretleri sınıflar Bu örnek tarafından kullanılan ve teknolojiler kısaca anlatın.  
   
--   Çalışma zamanı seri hale getirme  
+- Çalışma zamanı seri hale getirme  
   
-    -   <xref:System.Runtime.Serialization.IFormatter>Ya da başvurmak için kullanılan bir <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> veya bir <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> nesne.  
+    - <xref:System.Runtime.Serialization.IFormatter>Ya da başvurmak için kullanılan bir <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> veya bir <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> nesne.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> İkili biçimde bir akışa bağlı bir liste serileştirmek için kullanılır. İkili biçimlendirici, yalnızca bir biçimi kullanıp <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> anladığı türü. Ancak, veri kısa olabilir.  
+    - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> İkili biçimde bir akışa bağlı bir liste serileştirmek için kullanılır. İkili biçimlendirici, yalnızca bir biçimi kullanıp <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> anladığı türü. Ancak, veri kısa olabilir.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> SOAP biçiminde bir akışa bağlı bir liste serileştirmek için kullanılır. SOAP standart bir biçimidir.  
+    - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> SOAP biçiminde bir akışa bağlı bir liste serileştirmek için kullanılır. SOAP standart bir biçimidir.  
   
--   Akış G/Ç  
+- Akış G/Ç  
   
-    -   <xref:System.IO.Stream>Serileştirme ve seri halinden dağıtmak için kullanılır. Bu örnekte kullanılan belirli akış türü <xref:System.IO.FileStream> türü. Ancak, serileştirme türetilen her türlü kullanılabilir <xref:System.IO.Stream>.  
+    - <xref:System.IO.Stream>Serileştirme ve seri halinden dağıtmak için kullanılır. Bu örnekte kullanılan belirli akış türü <xref:System.IO.FileStream> türü. Ancak, serileştirme türetilen her türlü kullanılabilir <xref:System.IO.Stream>.  
   
-    -   <xref:System.IO.File> Oluşturmak için kullanılan <xref:System.IO.FileStream> nesneler için okuma ve disk üzerindeki dosyalar oluşturuluyor.  
+    - <xref:System.IO.File> Oluşturmak için kullanılan <xref:System.IO.FileStream> nesneler için okuma ve disk üzerindeki dosyalar oluşturuluyor.  
   
-    -   <xref:System.IO.FileStream> Seri hale getirmek ve bağlı listeler serisini kaldırmak için kullanılır.  
+    - <xref:System.IO.FileStream> Seri hale getirmek ve bağlı listeler serisini kaldırmak için kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

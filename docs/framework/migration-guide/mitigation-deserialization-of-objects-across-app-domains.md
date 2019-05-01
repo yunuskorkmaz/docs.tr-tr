@@ -5,11 +5,11 @@ ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fbde11672dc17f80a45defc0a55bcf841e83c324
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61871685"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Azaltma: Uygulama etki alanlarında nesneleri seri durumdan çıkarma
 Bazı durumlarda, bir uygulama farklı uygulama temeli kullanan iki veya daha fazla uygulama etki alanı kullandığında, uygulama etki alanları arasında nesnelerin mantıksal çağrı bağlamında serisini kaldırma girişimi özel bir durum oluşturur.  
@@ -27,13 +27,13 @@ Bazı durumlarda, bir uygulama farklı uygulama temeli kullanan iki veya daha fa
   
 5. Eğer yapılandırma sistemi daha başlatılmadıysa, başlatılmasını tamamlamalıdır. Bu, diğer şeylerin yanı sıra, çalışma zamanının bir yapılandırma sistemi için tutarlı bir yol oluşturması gerektiği anlamına gelir ki bunu aşağıdaki şekilde gerçekleştirir:  
   
-    1.  Varsayılan olmayan uygulama etki alanı için kanıt arar.  
+    1. Varsayılan olmayan uygulama etki alanı için kanıt arar.  
   
-    2.  Varsayılan uygulama etki alanını temel alarak, varsayılan olmayan etki alanı için olan kanıtları hesaplamayı dener.  
+    2. Varsayılan uygulama etki alanını temel alarak, varsayılan olmayan etki alanı için olan kanıtları hesaplamayı dener.  
   
-    3.  Varsayılan uygulama etki alanı için kanıt alma çağrısı, varsayılan olmayan uygulama etki alanından varsayılan uygulama etki alanına, uygulama etki alanları arasında bir çağrıyı tetikler.  
+    3. Varsayılan uygulama etki alanı için kanıt alma çağrısı, varsayılan olmayan uygulama etki alanından varsayılan uygulama etki alanına, uygulama etki alanları arasında bir çağrıyı tetikler.  
   
-    4.  .NET Framework'teki uygulama etki alanları arası anlaşması kapsamında, mantıksal çağrı bağlamının içeriğinin uygulama etki alanı sınırları arasında sıralanması gerekir.  
+    4. .NET Framework'teki uygulama etki alanları arası anlaşması kapsamında, mantıksal çağrı bağlamının içeriğinin uygulama etki alanı sınırları arasında sıralanması gerekir.  
   
 6. Mantıksal çağrı bağlamındaki türler varsayılan uygulama etki alanında çözümlenemediği için, bir özel durum oluşturulur.  
   

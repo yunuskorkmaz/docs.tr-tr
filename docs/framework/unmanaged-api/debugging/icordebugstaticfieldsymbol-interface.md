@@ -5,11 +5,11 @@ ms.assetid: c0b93609-631e-4b15-878a-189ede922631
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 382f3fc9377c25379809badac0bc580c3593cbde
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782596"
 ---
 # <a name="icordebugstaticfieldsymbol-interface"></a>ICorDebugStaticFieldSymbol Arabirimi
 Statik bir alan için hata ayıklama bilgilerini temsil eder.  

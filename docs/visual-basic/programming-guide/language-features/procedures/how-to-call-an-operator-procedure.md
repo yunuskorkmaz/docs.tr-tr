@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
 ms.openlocfilehash: d68781aa12ab7c1c717031ca252c5f3120649edc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59335491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863941"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir işleç yordamı çağırma
 Bir ifadede operatör sembolünü kullanarak, bir işleç yordamı çağırma. Bir dönüştürme operatörünün söz konusu olduğunda, çağrı [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md) bir değeri bir veri türünden dönüştürme.  
@@ -56,12 +56,12 @@ Bir ifadede operatör sembolünü kullanarak, bir işleç yordamı çağırma. B
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İşleç Yordamları](./operator-procedures.md)
-- [Nasıl yapılır: İşleç Tanımlama](./how-to-define-an-operator.md)
-- [Nasıl yapılır: Dönüştürme İşleci Tanımlama](./how-to-define-a-conversion-operator.md)
+- [Nasıl yapılır: Bir işleci tanımlama](./how-to-define-an-operator.md)
+- [Nasıl yapılır: Bir dönüşüm işleci tanımlama](./how-to-define-a-conversion-operator.md)
 - [Operator Deyimi](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Genişletme](../../../../visual-basic/language-reference/modifiers/widening.md)
-- [Daraltma](../../../../visual-basic/language-reference/modifiers/narrowing.md)
-- [Structure Yapısı](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Nasıl yapılır: Bir yapıyı bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
+- [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
+- [Structure Deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Nasıl yapılır: Yapıyı Bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Örtük ve Açık Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Genişletme ve Daraltma Dönüşümleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Genişletme ve Daraltma Dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

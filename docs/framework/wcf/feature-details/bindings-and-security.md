@@ -8,11 +8,11 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
 ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857798"
 ---
 # <a name="bindings-and-security"></a>Bağlamalar ve Güvenlik
 Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağlamalar program WCF uygulamaları için hızlı bir yol sunar. Bunun tek istisnası, etkin bir varsayılan güvenlik düzeni tüm bağlamaları vardır. Bu konuda güvenlik ihtiyaçları için doğru bağlama seçmenize yardımcı olur.  
@@ -35,21 +35,21 @@ Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağla
   
  Bu bağlama, bir dizi aşağıdaki gibi mevcut teknolojiler ile kullanılmak üzere tasarlanmıştır:  
   
--   ASP.NET Web Hizmetleri (ASMX), sürüm 1.  
+- ASP.NET Web Hizmetleri (ASMX), sürüm 1.  
   
--   Web hizmeti geliştirmeleri (WSE) uygulamaları.  
+- Web hizmeti geliştirmeleri (WSE) uygulamaları.  
   
--   Web hizmetlerini birlikte çalışabilirlik tanımlandığı gibi temel profilini (WS-ı) belirtimi (<https://go.microsoft.com/fwlink/?LinkId=38955>).  
+- Web hizmetlerini birlikte çalışabilirlik tanımlandığı gibi temel profilini (WS-ı) belirtimi (<https://go.microsoft.com/fwlink/?LinkId=38955>).  
   
--   WS içinde tanımlandığı gibi temel güvenlik profili-ediyorum.  
+- WS içinde tanımlandığı gibi temel güvenlik profili-ediyorum.  
   
  Varsayılan olarak, bu bağlantı güvenli değil. ASMX hizmetleriyle çalışmak için tasarlanmıştır. Güvenlik etkinleştirildiğinde, Windows tümleşik güvenliği temel kimlik doğrulaması ve Özet gibi Internet Information Services (IIS) güvenlik mekanizmaları ile bağlama sorunsuz birlikte çalışma için tasarlanmıştır. Daha fazla bilgi için [aktarım güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Bu bağlama, aşağıdakileri destekler:  
   
--   Aktarım güvenliği HTTPS.  
+- Aktarım güvenliği HTTPS.  
   
--   HTTP temel kimlik doğrulaması.  
+- HTTP temel kimlik doğrulaması.  
   
--   WS-güvenlik.  
+- WS-güvenlik.  
   
  Daha fazla bilgi için <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>, ve <xref:System.ServiceModel.BasicHttpSecurityMode>.  
   
@@ -58,11 +58,11 @@ Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağla
   
  Varsayılan olarak, bu bağlama WS-Security belirtimi uygular ve WS - uygulama hizmetleri ile birlikte çalışabilirlik sağlar * belirtimleri. Aşağıdakileri destekler:  
   
--   Aktarım güvenliği HTTPS.  
+- Aktarım güvenliği HTTPS.  
   
--   WS-güvenlik.  
+- WS-güvenlik.  
   
--   HTTPS ile SOAP ileti kimlik bilgisi güvenlik arayan kimliğini doğrulamak için koruma taşıma.  
+- HTTPS ile SOAP ileti kimlik bilgisi güvenlik arayan kimliğini doğrulamak için koruma taşıma.  
   
  Daha fazla bilgi için <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, ve <xref:System.ServiceModel.HttpProxyCredentialType>.  
   
@@ -71,23 +71,23 @@ Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağla
   
  Bu bağlama, çift yönlü hizmet uygulamaları sağlamak için tasarlanmıştır. Bu bağlama, ileti tabanlı aktarım güvenliği için WS-Security belirtimi uygular. Aktarım güvenliği kullanılamıyor. Varsayılan olarak, aşağıdaki özellikleri sağlar:  
   
--   WS-Reliable Mesajlaşma için güvenilirlik uygular.  
+- WS-Reliable Mesajlaşma için güvenilirlik uygular.  
   
--   Aktarım güvenliği ve kimlik doğrulaması için WS-güvenlik uygular.  
+- Aktarım güvenliği ve kimlik doğrulaması için WS-güvenlik uygular.  
   
--   HTTP ileti teslimi için kullanır.  
+- HTTP ileti teslimi için kullanır.  
   
--   İleti metni/XML kodlaması kullanır.  
+- İleti metni/XML kodlaması kullanır.  
   
  WS-güvenlik (ileti Katmanı Güvenliği) kullanarak, bağlama aşağıdaki parametreleri yapılandırmanıza olanak sağlar:  
   
--   Şifreleme algoritması belirlemek için Güvenlik algoritması paketi.  
+- Şifreleme algoritması belirlemek için Güvenlik algoritması paketi.  
   
--   Aşağıdaki seçenekler bağlama:  
+- Aşağıdaki seçenekler bağlama:  
   
-    -   Hizmet kimlik bilgileri kullanılabilir-bant istemcide sağlama.  
+    - Hizmet kimlik bilgileri kullanılabilir-bant istemcide sağlama.  
   
-    -   Kanal kurulumunun parçası olarak hizmetinden hizmet kimlik bilgilerini sağlayan anlaşma.  
+    - Kanal kurulumunun parçası olarak hizmetinden hizmet kimlik bilgilerini sağlayan anlaşma.  
   
  Daha fazla bilgi için bkz. <xref:System.ServiceModel.WSDualHttpSecurity> ve <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
   
@@ -96,21 +96,21 @@ Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağla
   
  Bu bağlama, çapraz makine haberleşmesi için optimize edilmiştir. Varsayılan olarak, aşağıdaki özelliklere sahiptir:  
   
--   Aktarım Katmanı Güvenliği uygular.  
+- Aktarım Katmanı Güvenliği uygular.  
   
--   Aktarım güvenliği ve kimlik doğrulaması için Windows Güvenlik yararlanır.  
+- Aktarım güvenliği ve kimlik doğrulaması için Windows Güvenlik yararlanır.  
   
--   TCP aktarımı için kullanır.  
+- TCP aktarımı için kullanır.  
   
--   Implements ikili ileti kodlama.  
+- Implements ikili ileti kodlama.  
   
--   Uygular, WS-Reliable Mesajlaşma.  
+- Uygular, WS-Reliable Mesajlaşma.  
   
  Seçenekler aşağıdakileri içerir:  
   
--   İleti düzeyi güvenlik (WS-güvenlik kullanarak).  
+- İleti düzeyi güvenlik (WS-güvenlik kullanarak).  
   
--   Aktarım güvenliği ileti kimlik bilgileri ile — gizliliği ve bütünlüğü WS-Security tarafından sağlanan yetkilendirme için TCP ve kimlik bilgileri Aktarım Katmanı Güvenliği (TLS) tarafından sağlanan.  
+- Aktarım güvenliği ileti kimlik bilgileri ile — gizliliği ve bütünlüğü WS-Security tarafından sağlanan yetkilendirme için TCP ve kimlik bilgileri Aktarım Katmanı Güvenliği (TLS) tarafından sağlanan.  
   
  Daha fazla bilgi için <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, ve <xref:System.ServiceModel.MessageCredentialType>.  
   
@@ -119,17 +119,17 @@ Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağla
   
  Bu bağlama (genellikle aynı makinede) çapraz proses haberleşmesi için optimize edilmiştir. Varsayılan olarak, bu bağlama, aşağıdaki özelliklere sahiptir:  
   
--   İleti aktarma ve kimlik doğrulaması için güvenlik kullanan taşıma.  
+- İleti aktarma ve kimlik doğrulaması için güvenlik kullanan taşıma.  
   
--   İleti teslimi için adlandırılmış kanallar kullanır.  
+- İleti teslimi için adlandırılmış kanallar kullanır.  
   
--   Implements ikili ileti kodlama.  
+- Implements ikili ileti kodlama.  
   
--   Şifreleme ve ileti imzalama.  
+- Şifreleme ve ileti imzalama.  
   
  Seçenekler aşağıdakileri içerir:  
   
--   Windows güvenliğini kullanarak kimlik doğrulaması.  
+- Windows güvenliğini kullanarak kimlik doğrulaması.  
   
  Daha fazla bilgi için <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode>, ve <xref:System.ServiceModel.NamedPipeTransportSecurity>.  
   
@@ -140,9 +140,9 @@ Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağla
   
  Varsayılan olarak, bu bağlama aktarım güvenliği kullanır ve güvenlik özellikleri sağlar:  
   
--   Güvenlik olabilir (hiçbiri) devre dışı.  
+- Güvenlik olabilir (hiçbiri) devre dışı.  
   
--   MSMQ taşıma güvenliği (taşıma).  
+- MSMQ taşıma güvenliği (taşıma).  
   
  Daha fazla bilgi için bkz. <xref:System.ServiceModel.NetMsmqSecurity> ve <xref:System.ServiceModel.NetMsmqSecurityMode>.  
   
@@ -153,15 +153,15 @@ Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağla
   
  Varsayılan olarak, bu bağlama aktarım güvenliği kullanır ve güvenlik özellikleri sağlar:  
   
--   Güvenlik olabilir (hiçbiri) devre dışı.  
+- Güvenlik olabilir (hiçbiri) devre dışı.  
   
--   MSMQ taşıma güvenliği (taşıma).  
+- MSMQ taşıma güvenliği (taşıma).  
   
--   SOAP tabanlı ileti güvenliği (mesaj).  
+- SOAP tabanlı ileti güvenliği (mesaj).  
   
--   Eş zamanlı aktarım iletisi güvenlik ve (her ikisi de).  
+- Eş zamanlı aktarım iletisi güvenlik ve (her ikisi de).  
   
--   İstemci kimlik bilgisi türleri desteklenir: None, Windows, kullanıcı adı, sertifika, IssuedToken.  
+- İstemci kimlik bilgisi türleri desteklenir: None, Windows, kullanıcı adı, sertifika, IssuedToken.  
   
  <xref:System.ServiceModel.MessageCredentialType.Certificate> Kimlik bilgisi yalnızca güvenlik modu olarak ayarlandığında desteklenir <xref:System.ServiceModel.NetMsmqSecurityMode.Both> veya <xref:System.ServiceModel.NetMsmqSecurityMode.Message>.  
   
@@ -204,7 +204,7 @@ Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağla
   
 |Tür|Açıklama|  
 |----------|-----------------|  
-|None|İstemci mevcut herhangi bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
+|Yok.|İstemci mevcut herhangi bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
 |Temel|Temel kimlik doğrulaması. Daha fazla bilgi için HTTP kimlik doğrulaması RFC 2617 – bakın: Temel ve Özet kimlik doğrulaması, kullanılabilir <https://go.microsoft.com/fwlink/?LinkId=84023>.|  
 |Özet|Özet kimlik doğrulaması. Daha fazla bilgi için HTTP kimlik doğrulaması RFC 2617 – bakın: Temel ve Özet kimlik doğrulaması, kullanılabilir <https://go.microsoft.com/fwlink/?LinkId=84023>.|  
 |NTLM|NT LAN Manager (NTLM) kimlik doğrulaması.|  
@@ -217,7 +217,7 @@ Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağla
   
 |Tür|Açıklama|  
 |----------|-----------------|  
-|None|Anonim istemci ile etkileşim kurmak hizmet sağlar.|  
+|Yok.|Anonim istemci ile etkileşim kurmak hizmet sağlar.|  
 |Windows|Windows kimlik bilgisi kimliği doğrulanmış bağlamında yapılması SOAP ileti alışverişlerinde sağlar.|  
 |UserName|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir kullanıcı adı kimlik bilgisi. Güvenlik modu ayarlandığında unutmayın `TransportWithMessageCredential`, WCF parola ve bu anahtarları kullanarak ileti modu güvenliği için Özet veya türetme anahtarı parola gönderme desteklemez. Bu nedenle, WCF aktarma kullanıcı adı kimlik bilgilerini kullanarak güvenli zorlar.|  
 |Sertifika|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir sertifika.|  

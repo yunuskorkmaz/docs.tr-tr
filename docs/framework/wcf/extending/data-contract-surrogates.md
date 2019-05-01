@@ -5,11 +5,11 @@ helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
 ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858032"
 ---
 # <a name="data-contract-surrogates"></a>Veri Sözleşmesi Yedekleri
 Veri anlaşması *vekil* veri anlaşması modeli üzerinde oluşturulmuş, Gelişmiş bir özelliktir. Bu özellik türü özelleştirme ve kullanıcılar nasıl bir tür, seri durumdan çıkarılmış veya öngörülen meta verileri içine serileştirilmiş değiştirmek istediğiniz durumlarda değiştirme için kullanılmak üzere tasarlanmıştır. Bir veri anlaşması türü, alanlar ve özellikler ile işaretlenmemiş için belirtilmemiş bazı senaryolar, bir vekil nerede kullanılabilir olduğunda <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği veya kullanıcılar şema farklılıkları dinamik olarak oluşturmak istediğiniz.  
@@ -37,13 +37,13 @@ Veri anlaşması *vekil* veri anlaşması modeli üzerinde oluşturulmuş, Geli�
   
  [!code-csharp[C_IDataContractSurrogate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#3)]  
   
--   Seri hale getirme üzerinde bu yöntem tarafından döndürülen eşleme sonradan surrogated örneği özgün örneğe çağırarak dönüştürmek için kullanılan <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> yöntemi.  
+- Seri hale getirme üzerinde bu yöntem tarafından döndürülen eşleme sonradan surrogated örneği özgün örneğe çağırarak dönüştürmek için kullanılan <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> yöntemi.  
   
--   Seri durumundan çıkarma işleminde, bu yöntem tarafından döndürülen eşleme, temsilci türünün bir örneği seri durumdan çıkarılacak seri hale getirici tarafından kullanılır. Daha sonra çağıran <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> surrogated örneği özgün türün bir örneğine dönüştürülecek.  
+- Seri durumundan çıkarma işleminde, bu yöntem tarafından döndürülen eşleme, temsilci türünün bir örneği seri durumdan çıkarılacak seri hale getirici tarafından kullanılır. Daha sonra çağıran <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> surrogated örneği özgün türün bir örneğine dönüştürülecek.  
   
--   Dışarı aktarma üzerinde bu yöntem tarafından döndürülen vekil türü meta verileri oluşturmak için veri anlaşması almak için yansıtılır.  
+- Dışarı aktarma üzerinde bu yöntem tarafından döndürülen vekil türü meta verileri oluşturmak için veri anlaşması almak için yansıtılır.  
   
--   İçeri aktarma işlemi sırasında Başlangıç türü desteğine başvurma gibi amaçlarla kullanmak için veri anlaşması almak için yansıtılan bir temsilci türü değiştirilir.  
+- İçeri aktarma işlemi sırasında Başlangıç türü desteğine başvurma gibi amaçlarla kullanmak için veri anlaşması almak için yansıtılan bir temsilci türü değiştirilir.  
   
  <xref:System.Type> Parametredir, seri durumdan çıkarılmış, içeri aktarılan veya dışarı aktarılan serileştirilmekte olan nesnenin türü. <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> Vekil türü işlemez, yöntem giriş türünü döndürmesi gerekir. Aksi takdirde, uygun surrogated türü döndürür. Çok sayıda eşlemeleri, yedek birden fazla varsa, bu yöntemde tanımlanabilir.  
   

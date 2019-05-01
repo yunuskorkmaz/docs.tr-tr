@@ -3,11 +3,11 @@ title: Kaynak Tüketimini Denetleme ve Performansı Geliştirme
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
 ms.openlocfilehash: 11d1333ed0ae8b46f8f87fa6f4643d4b31fac3ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785066"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Kaynak Tüketimini Denetleme ve Performansı Geliştirme
 Bu konuda çeşitli özelliklerini denetimi kaynak tüketimi için çalışma ve performans ölçümlerini etkileyen farklı alanlarda Windows Communication Foundation (WCF) mimarisi açıklanmaktadır.

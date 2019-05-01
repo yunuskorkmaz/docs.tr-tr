@@ -10,20 +10,20 @@ helpviewer_keywords:
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
 ms.openlocfilehash: c8df3d57e5a6ff1f0021381db189025719808641
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876518"
 ---
 # <a name="how-to-execute-data-service-queries-wcf-data-services"></a>Nasıl yapılır: Veri Hizmeti sorguları (WCF Veri Hizmetleri) yürütme
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] oluşturulan istemci veri hizmeti sınıfları kullanarak bir .NET Framework tabanlı istemci uygulamadan bir veri hizmetini sorgulama olanak tanır. Aşağıdaki yöntemlerden birini kullanarak sorgu yürütebilirsiniz:  
   
--   Adlandırılmış bir LINQ Sorgu yürütülürken <xref:System.Data.Services.Client.DataServiceQuery%601> , elde <xref:System.Data.Services.Client.DataServiceContext> , `Add Data Service Reference` aracı oluşturur.  
+- Adlandırılmış bir LINQ Sorgu yürütülürken <xref:System.Data.Services.Client.DataServiceQuery%601> , elde <xref:System.Data.Services.Client.DataServiceContext> , `Add Data Service Reference` aracı oluşturur.  
   
--   Adlandırılmış numaralandırma tarafından dolaylı olarak <xref:System.Data.Services.Client.DataServiceQuery%601> , elde <xref:System.Data.Services.Client.DataServiceContext> , `Add Data Service Reference` aracı oluşturur.  
+- Adlandırılmış numaralandırma tarafından dolaylı olarak <xref:System.Data.Services.Client.DataServiceQuery%601> , elde <xref:System.Data.Services.Client.DataServiceContext> , `Add Data Service Reference` aracı oluşturur.  
   
--   Çağırarak açıkça <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> metodunda <xref:System.Data.Services.Client.DataServiceQuery%601>, veya <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> zaman uyumsuz yürütme için yöntemi.  
+- Çağırarak açıkça <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> metodunda <xref:System.Data.Services.Client.DataServiceQuery%601>, veya <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> zaman uyumsuz yürütme için yöntemi.  
   
  Daha fazla bilgi için [veri hizmetini sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
   

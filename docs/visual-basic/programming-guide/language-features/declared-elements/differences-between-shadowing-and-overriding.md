@@ -6,11 +6,11 @@ helpviewer_keywords:
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
 ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827950"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Gölgeleme ve Geçersiz Kılma Arasındaki Farklar (Visual Basic)
 Bir temel sınıftan devralınan bir sınıf tanımladığınızda, bazen bir veya daha fazla türetilmiş sınıf içinde temel sınıf öğe yeniden tanımlamak istersiniz. Gölgeleme ve geçersiz kılma ikisi de bu amaç için olan.  
@@ -41,15 +41,15 @@ Bir temel sınıftan devralınan bir sınıf tanımladığınızda, bazen bir ve
 ## <a name="guidelines"></a>Kuralları  
  Normalde, aşağıdaki durumlarda geçersiz kılma kullanın:  
   
--   Çok biçimli türetilmiş sınıflar tanımlarsınız.  
+- Çok biçimli türetilmiş sınıflar tanımlarsınız.  
   
--   Aynı öğe türü ve çağrı sırası zorunlu derleyici yaşama güvenliği kullanmanız gerekir.  
+- Aynı öğe türü ve çağrı sırası zorunlu derleyici yaşama güvenliği kullanmanız gerekir.  
   
  Normalde, aşağıdaki durumlarda gölgeleme kullanın:  
   
--   Temel sınıfınız değiştirilebilir ve sizinki aynı adı kullanarak bir öğe tanımlama beklenir.  
+- Temel sınıfınız değiştirilebilir ve sizinki aynı adı kullanarak bir öğe tanımlama beklenir.  
   
--   Öğe türü değiştirme veya arama sırası isterler.  
+- Öğe türü değiştirme veya arama sırası isterler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

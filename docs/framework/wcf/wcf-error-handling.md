@@ -3,11 +3,11 @@ title: WCF Hata İşleme
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
 ms.openlocfilehash: d70edacd2447fbe0b0b6db42b93f699ce7c17003
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791228"
 ---
 # <a name="wcf-error-handling"></a>WCF Hata İşleme
 WCF uygulaması tarafından karşılaşılan hataları üç gruplardan birine ait:  
@@ -26,13 +26,13 @@ WCF uygulaması tarafından karşılaşılan hataları üç gruplardan birine ai
   
  WCF'de işleme hata, bir veya daha fazlasını tarafından gerçekleştirilir:  
   
--   Doğrudan özel durum işleme. Bu yalnızca iletişimi ve proxy/kanal hataları için gerçekleştirilir.  
+- Doğrudan özel durum işleme. Bu yalnızca iletişimi ve proxy/kanal hataları için gerçekleştirilir.  
   
--   Hata sözleşmeleri kullanma  
+- Hata sözleşmeleri kullanma  
   
--   Uygulama <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimi  
+- Uygulama <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimi  
   
--   İşleme <xref:System.ServiceModel.ServiceHost> olayları  
+- İşleme <xref:System.ServiceModel.ServiceHost> olayları  
   
 ## <a name="fault-contracts"></a>Hata sözleşmeleri  
  Hata sözleşmelerine izin vermek, Platform hizmeti işlemi sırasında oluşabilecek hataları tanımlamak bağımsız bir şekilde. Varsayılan olarak, gelen bir hizmet işlemi içinde oluşturulan tüm özel durumlar istemciye döndürülecek bir <xref:System.ServiceModel.FaultException> nesne. <xref:System.ServiceModel.FaultException> Nesne çok az bilgi içerir. Hatalı sözleşme tanımlayarak ve hata olarak döndüren istemciye gönderilen bilgiler denetleyebilirsiniz bir <xref:System.ServiceModel.FaultException%601>. Daha fazla bilgi için [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

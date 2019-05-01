@@ -37,11 +37,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
 ms.openlocfilehash: 768f7704851a5f54f4b4a7535fe2584e20bfaa0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906795"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic'de Genel Türler (Visual Basic)
 A *genel tür* uyum sağlayan çeşitli veri türleri için aynı işlevi gerçekleştirmek için tek bir programlama öğesi. Bir genel sınıf ya da yordamın tanımladığınızda, kendisi için bu işlevi gerçekleştirmek isteyebileceğiniz her veri türü için ayrı bir sürüm tanımlamak zorunda değildir.  
@@ -89,19 +89,19 @@ A *genel tür* uyum sağlayan çeşitli veri türleri için aynı işlevi gerçe
   
  Genel tür, bu alternatifleri kıyasla aşağıdaki avantajlara sahiptir:  
   
--   **Tür güvenliği.** Genel türler, derleme zamanı tür denetimi uygular. Türleri temel alan `Object` herhangi bir veri türü kabul edin ve bir giriş veri türü kabul edilebilir olup olmadığını denetlemek için kod yazmanız gerekir. Genel türler ile derleyici önce çalışma zamanı tür uyumsuzluklarına yakalayabilir.  
+- **Tür güvenliği.** Genel türler, derleme zamanı tür denetimi uygular. Türleri temel alan `Object` herhangi bir veri türü kabul edin ve bir giriş veri türü kabul edilebilir olup olmadığını denetlemek için kod yazmanız gerekir. Genel türler ile derleyici önce çalışma zamanı tür uyumsuzluklarına yakalayabilir.  
   
--   **Performans.** Genel türler gerekmez *kutusu* ve *unbox* veri, çünkü her biri bir veri türü için özel olarak tasarlanmıştır. İşlemleri temel alarak `Object` kendisine dönüştürmek için giriş veri türleri kutusunda gerekir `Object` ve veri çıkışı için hedeflenen unbox. Kutulama ve kutudan çıkarma performansı düşürebilir.  
+- **Performans.** Genel türler gerekmez *kutusu* ve *unbox* veri, çünkü her biri bir veri türü için özel olarak tasarlanmıştır. İşlemleri temel alarak `Object` kendisine dönüştürmek için giriş veri türleri kutusunda gerekir `Object` ve veri çıkışı için hedeflenen unbox. Kutulama ve kutudan çıkarma performansı düşürebilir.  
   
      Türleri temel alan `Object` olan de geç bağlanan, üyelerinin erişmek ek bir kod çalışma zamanında gerektirdiğini anlamına gelir. Bu da performansı azaltır.  
   
--   **Kod birleştirme.** Kod bir genel tür içinde yalnızca bir kez tanımlanması gerekir. Bu sürüm için belirli veri türü olan tek fark ile bir dizi türüne özgü sürümleri bir türün her sürümünde, aynı kodu çoğaltılması gerekir. İle genel türleri, türe özgü sürümlerini özgün genel türden tüm oluşturulur.  
+- **Kod birleştirme.** Kod bir genel tür içinde yalnızca bir kez tanımlanması gerekir. Bu sürüm için belirli veri türü olan tek fark ile bir dizi türüne özgü sürümleri bir türün her sürümünde, aynı kodu çoğaltılması gerekir. İle genel türleri, türe özgü sürümlerini özgün genel türden tüm oluşturulur.  
   
--   **Yeniden kod.** Genel ise bir özel veri türü üzerinde benzemez kod çeşitli veri türleri ile yeniden kullanılabilir. Genellikle, olmayan ilk tahmin bile bir veri türü ile kullanabilirsiniz.  
+- **Yeniden kod.** Genel ise bir özel veri türü üzerinde benzemez kod çeşitli veri türleri ile yeniden kullanılabilir. Genellikle, olmayan ilk tahmin bile bir veri türü ile kullanabilirsiniz.  
   
--   **IDE desteği.** Genel bir türden bildirilen oluşturulan tür kullandığınızda, kodunuzu geliştirirken tümleşik geliştirme ortamı (IDE), daha fazla destek verebilirsiniz. Örneğin, IntelliSense yapıcıya veya yönteme bağımsız değişken için türe özgü seçeneğine gösterebilirsiniz.  
+- **IDE desteği.** Genel bir türden bildirilen oluşturulan tür kullandığınızda, kodunuzu geliştirirken tümleşik geliştirme ortamı (IDE), daha fazla destek verebilirsiniz. Örneğin, IntelliSense yapıcıya veya yönteme bağımsız değişken için türe özgü seçeneğine gösterebilirsiniz.  
   
--   **Genel algoritmalar.** Tür bağımsız soyut algoritmalar genel türler için iyi adaylar değildir. Örneğin, sıralar, genel bir yordam öğelerini kullanarak <xref:System.IComparable> arabirimi uygulayan herhangi bir veri türü ile kullanılabilir <xref:System.IComparable>.  
+- **Genel algoritmalar.** Tür bağımsız soyut algoritmalar genel türler için iyi adaylar değildir. Örneğin, sıralar, genel bir yordam öğelerini kullanarak <xref:System.IComparable> arabirimi uygulayan herhangi bir veri türü ile kullanılabilir <xref:System.IComparable>.  
   
 ## <a name="constraints"></a>Kısıtlamalar  
  Kodun bir genel tür tanımı olarak tür mümkün olduğu bağımsız olması olsa da, genel tür için sağlanan herhangi bir veri türü, belirli bir özelliği gerektirmesine gerekebilir. Örneğin, iki öğeyi sıralama veya harmanlama amacıyla karşılaştırmak istiyorsanız, kendi veri türü uygulamalıdır <xref:System.IComparable> arabirimi. Bu gereksinim ekleyerek zorunlu kılabilir bir *kısıtlaması* tür parametresi için.  
@@ -116,13 +116,13 @@ A *genel tür* uyum sağlayan çeşitli veri türleri için aynı işlevi gerçe
 ### <a name="types-of-constraints"></a>Tür kısıtlamaları  
  Kısıtlama, herhangi bir bileşimini aşağıdaki gereksinimleri belirtebilirsiniz:  
   
--   Tür bağımsız değişkeni bir veya daha fazla arabirim uygulamalıdır  
+- Tür bağımsız değişkeni bir veya daha fazla arabirim uygulamalıdır  
   
--   Tür bağımsız değişkeni gerekir türünde olmalı veya en fazla bir sınıftan devralma  
+- Tür bağımsız değişkeni gerekir türünde olmalı veya en fazla bir sınıftan devralma  
   
--   Tür bağımsız değişkeni erişilebilir nesneleri oluşturduğu kod parametresiz bir oluşturucu kullanıma açmalıdır  
+- Tür bağımsız değişkeni erişilebilir nesneleri oluşturduğu kod parametresiz bir oluşturucu kullanıma açmalıdır  
   
--   Tür bağımsız değişkeni olmalıdır bir *başvuru türüne*, veya olması gereken bir *değer türü*  
+- Tür bağımsız değişkeni olmalıdır bir *başvuru türüne*, veya olması gereken bir *değer türü*  
   
  Birden çok gereksinimi dayatmak gerekiyorsa, virgülle ayrılmış bir kullandığınız *sınırlama listesi* kaşlı ayraçlar içinde (`{ }`). Erişilebilir bir oluşturucu gerektirecek şekilde dahil [New işleci](../../../../visual-basic/language-reference/operators/new-operator.md) listesinde anahtar sözcüğü. Bir başvuru türü gerektirecek şekilde dahil `Class` anahtar sözcüğü bir değer türü gerektirir; dahil `Structure` anahtar sözcüğü.  
   
@@ -136,15 +136,15 @@ A *genel tür* uyum sağlayan çeşitli veri türleri için aynı işlevi gerçe
 ## <a name="important-terms"></a>Önemli koşullar  
  Genel türler tanıtır ve aşağıdaki koşulları kullanın:  
   
--   *Genel tür*. Sınıfı, yapıyı, arabirimi, yordamı veya bildirdiğinizde, kendisi için en az bir veri türü sağladığınız temsilci tanımı.  
+- *Genel tür*. Sınıfı, yapıyı, arabirimi, yordamı veya bildirdiğinizde, kendisi için en az bir veri türü sağladığınız temsilci tanımı.  
   
--   *Tür parametresi*. Türü bildirdiğinizde bir genel tür tanımında, siz bir veri türü için yer tutucu olarak sağlayın.  
+- *Tür parametresi*. Türü bildirdiğinizde bir genel tür tanımında, siz bir veri türü için yer tutucu olarak sağlayın.  
   
--   *Tür bağımsız değişkeni*. Oluşturulan tür genel bir türden bildirdiğinizde, bir tür parametresi yerini alan özel veri türü.  
+- *Tür bağımsız değişkeni*. Oluşturulan tür genel bir türden bildirdiğinizde, bir tür parametresi yerini alan özel veri türü.  
   
--   *Kısıtlama*. Bir koşula göre sınırlar tür bağımsız değişkeni bir tür parametresi için sağlayabilirsiniz. Bir kısıtlaması, tür bağımsız değişkeni gerekir belirli bir arabirim, olabilir veya belirli bir sınıftan, erişilebilir bir parametresiz oluşturucuya sahip veya bir başvuru türü veya değer türü olması gerektiğini gerektirebilir. Bu kısıtlamalar birleştirebilirsiniz, ancak en fazla bir sınıfı belirtebilirsiniz.  
+- *Kısıtlama*. Bir koşula göre sınırlar tür bağımsız değişkeni bir tür parametresi için sağlayabilirsiniz. Bir kısıtlaması, tür bağımsız değişkeni gerekir belirli bir arabirim, olabilir veya belirli bir sınıftan, erişilebilir bir parametresiz oluşturucuya sahip veya bir başvuru türü veya değer türü olması gerektiğini gerektirebilir. Bu kısıtlamalar birleştirebilirsiniz, ancak en fazla bir sınıfı belirtebilirsiniz.  
   
--   *Türü oluşturulan*. Sınıf, yapı, arabirim, yordamı veya temsilci genel bir türden tür bağımsız değişkenleri için tür parametrelerinden biri sağlanarak bildirilir.  
+- *Türü oluşturulan*. Sınıf, yapı, arabirim, yordamı veya temsilci genel bir türden tür bağımsız değişkenleri için tür parametrelerinden biri sağlanarak bildirilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

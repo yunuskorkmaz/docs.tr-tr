@@ -9,11 +9,11 @@ helpviewer_keywords:
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
 ms.openlocfilehash: 05cbe8b18a0d9635091b373d0acddb2ba665cc37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794322"
 ---
 # <a name="serialization-guidelines"></a>Serileştirme yönergeleri
 Bu belgenin bir API tasarlama serileştirilecek göz önünde için yönergeleri listeler.  
@@ -32,22 +32,22 @@ Bu belgenin bir API tasarlama serileştirilecek göz önünde için yönergeleri
   
 ## <a name="guidelines"></a>Kuralları  
   
--   Yeni türleri tasarım serileştirme hakkında düşünün.  
+- Yeni türleri tasarım serileştirme hakkında düşünün.  
   
      Serileştirme herhangi bir tür için bir önemli tasarım husus çünkü programlar sürdürülmesi veya aktarım türü örneklerini gerekebilir.  
   
 ### <a name="choosing-the-right-serialization-technology-to-support"></a>Destek için sağ serileştirme teknolojiyi seçmenizde  
  Belirtilen her türlü none, bir veya daha fazla seri hale getirme teknolojilerini destekler.  
   
--   DÜŞÜNÜN destekleyen *veri sözleşme serileştirme* örneklerinin kalıcı veya kullanılan Web Hizmetleri gerekiyorsa.  
+- DÜŞÜNÜN destekleyen *veri sözleşme serileştirme* örneklerinin kalıcı veya kullanılan Web Hizmetleri gerekiyorsa.  
   
--   DÜŞÜNÜN destekleyen *XML serileştirme* yerine veya türü seri olduğunda, üretilen XML biçimi hakkında daha fazla denetime ihtiyacınız varsa, veri sözleşme serileştirme yanı sıra.  
+- DÜŞÜNÜN destekleyen *XML serileştirme* yerine veya türü seri olduğunda, üretilen XML biçimi hakkında daha fazla denetime ihtiyacınız varsa, veri sözleşme serileştirme yanı sıra.  
   
      Bu, veri sözleşme seri hale getirme tarafından Örneğin, XML özniteliği üretmek için desteklenmeyen bir XML yapı kullanmak için gereken yere bazı birlikte çalışabilirlik senaryolarında gerekli olabilir.  
   
--   DÜŞÜNÜN destekleyen *çalışma zamanı serileştirme* örneklerinin .NET uzaktan iletişim sınırlarında yolculuk gerekiyorsa.  
+- DÜŞÜNÜN destekleyen *çalışma zamanı serileştirme* örneklerinin .NET uzaktan iletişim sınırlarında yolculuk gerekiyorsa.  
   
--   Sadece genel Kalıcılık nedenlerle destekleme çalışma zamanı serileştirme veya XML serileştirme özen gösterin. Bunun yerine veri sözleşme serileştirme tercih  
+- Sadece genel Kalıcılık nedenlerle destekleme çalışma zamanı serileştirme veya XML serileştirme özen gösterin. Bunun yerine veri sözleşme serileştirme tercih  
   
 #### <a name="supporting-data-contract-serialization"></a>Destek veri sözleşme seri hale getirme  
  Türleri uygulayarak veri sözleşme serileştirme destekleyebilir <xref:System.Runtime.Serialization.DataContractAttribute> türüne ve <xref:System.Runtime.Serialization.DataMemberAttribute> üyelerine (alanlar ve Özellikler) türü.  

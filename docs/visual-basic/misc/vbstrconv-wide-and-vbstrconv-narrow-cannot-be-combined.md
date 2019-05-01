@@ -5,11 +5,11 @@ f1_keywords:
 - vbrArgument_IllegalWideNarrow
 ms.assetid: a53b4e6a-36b1-4e36-b2c5-8196313ec599
 ms.openlocfilehash: 917fcdfcb34778074db6a19c04e12c3cf8de90dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61818761"
 ---
 # <a name="vbstrconvwide-and-vbstrconvnarrow-cannot-be-combined"></a>Argumenty VbStrConv.Wide a VbStrConv.Narrow nelze kombinovat
 Birleştirmek, uygulamanız çalışırken `VbStrConv` numaralandırma üyelerini `Wide` ve `Narrow`, hangi karşılıklı olarak birbirini dışlar.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
 ms.openlocfilehash: b50c902f69f7602dbad4663dc35bf0a2b932973f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796987"
 ---
 # <a name="char-data-type-visual-basic"></a>Char Veri Türü (Visual Basic)
 Değer 0 ile 65535 arasında değişen ayrı tutma imzasız 16-bit (2 baytlık) kod işaret eder. Her *kod noktası*, ya da karakter kodunu tek bir Unicode karakterini temsil eder.  
@@ -47,15 +47,15 @@ charVar = "Z"C
   
 ## <a name="programming-tips"></a>Programlama İpuçları  
   
--   **Negatif sayılar.** `Char` işaretsiz bir türü ve negatif bir değeri temsil edemeyen. Her iki durumda da kullanmamalısınız `Char` sayısal değerleri tutmak için.  
+- **Negatif sayılar.** `Char` işaretsiz bir türü ve negatif bir değeri temsil edemeyen. Her iki durumda da kullanmamalısınız `Char` sayısal değerleri tutmak için.  
   
--   **Birlikte çalışabilirlik değerlendirmeleri.** .NET Framework yazılmaz bileşenleriyle arabirim örnek otomasyon ve COM nesneleri için karakter türleri farklı veri genişliği (8 bit) sahip diğer ortamlarda unutmayın. Böyle bir bileşene 8-bit bağımsız değişken geçirirseniz, olarak bildirin `Byte` yerine `Char` yeni Visual Basic kod.  
+- **Birlikte çalışabilirlik değerlendirmeleri.** .NET Framework yazılmaz bileşenleriyle arabirim örnek otomasyon ve COM nesneleri için karakter türleri farklı veri genişliği (8 bit) sahip diğer ortamlarda unutmayın. Böyle bir bileşene 8-bit bağımsız değişken geçirirseniz, olarak bildirin `Byte` yerine `Char` yeni Visual Basic kod.  
   
--   **Genişletme.** `Char` Widens veri türü için `String`. Yani dönüştürebilirsiniz `Char` için `String` ve değil karşınıza çıkacak bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
+- **Genişletme.** `Char` Widens veri türü için `String`. Yani dönüştürebilirsiniz `Char` için `String` ve değil karşınıza çıkacak bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
   
--   **Tür karakterleri.** Değişmez değer türü karakterinin `C` değişmez değer için bir tek karakter dizesine zorlar `Char` veri türü. `Char` hiçbir tanımlayıcı türü karakteri var.  
+- **Tür karakterleri.** Değişmez değer türü karakterinin `C` değişmez değer için bir tek karakter dizesine zorlar `Char` veri türü. `Char` hiçbir tanımlayıcı türü karakteri var.  
   
--   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Char?displayProperty=nameWithType> yapısı.  
+- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Char?displayProperty=nameWithType> yapısı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

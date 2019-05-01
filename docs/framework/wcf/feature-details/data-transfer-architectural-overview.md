@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
 ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856613"
 ---
 # <a name="data-transfer-architectural-overview"></a>Veri Aktarımı Mimarisi Genel Bakış
 Windows Communication Foundation (WCF), bir Mesajlaşma altyapısı düşünülebilir. Bu iletileri almak, bunları işlemek ve bunları başka bir eylem için kullanıcı kodu için gönderme veya kullanıcı kodu tarafından verilen veri iletileri oluşturmak ve bunları bir hedefe sunun. İleri düzey geliştiriciler için tasarlanmıştır, bu konu, iletileri ve içerdiği veri işleme mimarisini açıklar. Veri göndermek ve almak nasıl daha basit, görev odaklı görünümü için bkz: [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -66,9 +66,9 @@ Windows Communication Foundation (WCF), bir Mesajlaşma altyapısı düşünüle
 ### <a name="getting-data-from-a-message-body"></a>Bir iletinin gövdesinden veri alma  
  İleti gövdesinde iki ana şekilde depolanan verileri de ayıklayabilirsiniz:  
   
--   Çağırarak tüm ileti gövdesi tek seferde alabilirsiniz <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> yöntemi ve bir XML yazıcısı geçirirsiniz. Eksiksiz bir ileti gövdesi için bu yazıcısı yazılır. Tek seferde tüm ileti gövdesi alma olarak da adlandırılır *bir iletiyi yazmanın*. Yazma, öncelikle kanal yığını tarafından yapılır, iletileri gönderirken — kanal yığınının bir parçası genellikle tüm ileti gövdesi erişin, kodlamak ve gönderin.  
+- Çağırarak tüm ileti gövdesi tek seferde alabilirsiniz <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> yöntemi ve bir XML yazıcısı geçirirsiniz. Eksiksiz bir ileti gövdesi için bu yazıcısı yazılır. Tek seferde tüm ileti gövdesi alma olarak da adlandırılır *bir iletiyi yazmanın*. Yazma, öncelikle kanal yığını tarafından yapılır, iletileri gönderirken — kanal yığınının bir parçası genellikle tüm ileti gövdesi erişin, kodlamak ve gönderin.  
   
--   İleti gövdesinin dışında bilgi almak için başka bir yolu <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> ve bir XML okuyucuyu almak. İleti gövdesi ardından okuyucuyu yöntemleri çağırarak gerektiği gibi sıralı olarak erişilebilir. İleti gövdesi parça--parça alma olarak da adlandırılır *bir ileti okuma*. İleti okuma öncelikle hizmet çerçevesi tarafından iletileri alınırken kullanılır. Örneğin, <xref:System.Runtime.Serialization.DataContractSerializer> olan kullanımda hizmet çerçevesi gövdesi bir XML okuyucuyu almak ve ardından ileti--öğe okuma ve karşılık gelen Nesne grafiği oluşturmak başlayacaktır seri durumundan çıkarma altyapısı geçirin.  
+- İleti gövdesinin dışında bilgi almak için başka bir yolu <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> ve bir XML okuyucuyu almak. İleti gövdesi ardından okuyucuyu yöntemleri çağırarak gerektiği gibi sıralı olarak erişilebilir. İleti gövdesi parça--parça alma olarak da adlandırılır *bir ileti okuma*. İleti okuma öncelikle hizmet çerçevesi tarafından iletileri alınırken kullanılır. Örneğin, <xref:System.Runtime.Serialization.DataContractSerializer> olan kullanımda hizmet çerçevesi gövdesi bir XML okuyucuyu almak ve ardından ileti--öğe okuma ve karşılık gelen Nesne grafiği oluşturmak başlayacaktır seri durumundan çıkarma altyapısı geçirin.  
   
  İleti gövdesi yalnızca bir kez alınabilir. Bu, yalnızca iletme akışlarla çalışma mümkün kılar. Örneğin, yazabileceğiniz bir <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> okur geçersiz kılma bir <xref:System.IO.FileStream> ve sonuçları bir XML bilgi kümesi döndürür. Hiçbir zaman "dosyanın başına geri sarmak" gerekir.  
   
@@ -160,11 +160,11 @@ Windows Communication Foundation (WCF), bir Mesajlaşma altyapısı düşünüle
 ### <a name="the-istreamprovider-interface"></a>IStreamProvider arabirimi  
  Bir XML yazıcısı için akış gövde içeren bir giden iletisi yazarken <xref:System.ServiceModel.Channels.Message> çağrıları aşağıdakine benzer bir dizi kullanan kendi <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> uygulama:  
   
--   Akış (örneğin, XML etiketi açma) önceki tüm gerekli bilgileri yazın.  
+- Akış (örneğin, XML etiketi açma) önceki tüm gerekli bilgileri yazın.  
   
--   Akış yazın.  
+- Akış yazın.  
   
--   Akış (örneğin, XML kapatma etiketi) aşağıdaki bilgileri yazın.  
+- Akış (örneğin, XML kapatma etiketi) aşağıdaki bilgileri yazın.  
   
  Bu, iyi XML metin kodlaması benzer Kodlamalar ile çalışır. Ancak, bazı XML bilgi kümesi bilgileri (için başlangıç ve bitiş XML öğesi etiketler gibi) öğeleri içinde yer alan verileri birlikte yerleştirmeyin. Örneğin, kodlama MTOM ileti birden çok parçaya bölünür. Bir bölümü diğer bölümleri gerçek öğe içeriği için başvurular içerebilir XML bilgi içerir. XML bilgi kümesi sonrası bilgi kümesi arabellek, dışarı yazın ve ardından içeriği akış şekilde yazmak için mantıklı şekilde akış içeriği, karşılaştırma normalde küçüktür. Zaman kapatma buna öğesi etiketi yazıldığı akış henüz yazılmadı.  
   

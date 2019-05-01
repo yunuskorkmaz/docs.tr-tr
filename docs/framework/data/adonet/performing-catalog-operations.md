@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
 ms.openlocfilehash: beb5d2db898df1c98662d53190ac1432acc746e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878234"
 ---
 # <a name="performing-catalog-operations"></a>Katalog İşlemleri Gerçekleştirme
 Bir veritabanı veya katalog, CREATE TABLE veya CREATE PROCEDURE deyimi gibi değiştirmek için bir komut çalıştırmak için oluşturma bir **komut** uygun SQL deyimlerini kullanarak nesne ve **bağlantı** nesne. Komutu ile yürütme **ExecuteNonQuery** yöntemi **komut** nesne.  

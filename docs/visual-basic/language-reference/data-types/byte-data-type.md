@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 ms.openlocfilehash: 217778a21fb9f231f448436ca5a68c42e5837566
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797013"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte veri türü (Visual Basic)
 Değeri 0 ile 255 arasında imzalanmamış 8-bit (1-bayt) tamsayıları tutar.
@@ -48,15 +48,15 @@ Dim number As Byte = &H_6A
 
 ## <a name="programming-tips"></a>Programlama ipuçları
 
--   **Negatif sayılar.** Çünkü `Byte` işaretsiz bir türü, negatif bir sayıyı temsil edemez. Tek işlenenli eksi işareti kullanırsanız (`-`) yazmak için değerlendirilen bir ifade işlecinin `Byte`, Visual Basic ifade dönüştürür `Short` ilk.
+- **Negatif sayılar.** Çünkü `Byte` işaretsiz bir türü, negatif bir sayıyı temsil edemez. Tek işlenenli eksi işareti kullanırsanız (`-`) yazmak için değerlendirilen bir ifade işlecinin `Byte`, Visual Basic ifade dönüştürür `Short` ilk.
   
--   **Biçim dönüştürme.** Visual Basic okur veya yazar dosyaları veya DLL'leri, yöntemleri ve özellikleri çağırdığında, otomatik olarak veri biçimleri arasında dönüştürme yapabilirsiniz. İkili verilerin depolanmasını `Byte` değişkenleri ve dizileri gibi bir biçim dönüştürmelerini sırasında korunur. Kullanmamalısınız bir `String` ikili veriler için değişken içerikleri biçimlerini ANSI ve Unicode arasında dönüştürme sırasında bozuk olduğundan.
+- **Biçim dönüştürme.** Visual Basic okur veya yazar dosyaları veya DLL'leri, yöntemleri ve özellikleri çağırdığında, otomatik olarak veri biçimleri arasında dönüştürme yapabilirsiniz. İkili verilerin depolanmasını `Byte` değişkenleri ve dizileri gibi bir biçim dönüştürmelerini sırasında korunur. Kullanmamalısınız bir `String` ikili veriler için değişken içerikleri biçimlerini ANSI ve Unicode arasında dönüştürme sırasında bozuk olduğundan.
 
--   **Genişletme.** `Byte` Widens veri türü için `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, veya `Double`. Yani dönüştürebilirsiniz `Byte` karşılaşmadan bu türlerden birine bir <xref:System.OverflowException?displayProperty=nameWithType> hata.
+- **Genişletme.** `Byte` Widens veri türü için `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, veya `Double`. Yani dönüştürebilirsiniz `Byte` karşılaşmadan bu türlerden birine bir <xref:System.OverflowException?displayProperty=nameWithType> hata.
   
--   **Tür karakterleri.** `Byte` değişmez değer türü karakteri ya da tanımlayıcı türü karakteri var.
+- **Tür karakterleri.** `Byte` değişmez değer türü karakteri ya da tanımlayıcı türü karakteri var.
 
--   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Byte?displayProperty=nameWithType> yapısı.
+- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Byte?displayProperty=nameWithType> yapısı.
 
 ## <a name="example"></a>Örnek
 

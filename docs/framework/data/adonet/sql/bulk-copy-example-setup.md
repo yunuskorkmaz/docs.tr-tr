@@ -3,11 +3,11 @@ title: Toplu Kopyalama Örnek Kurulumu
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
 ms.openlocfilehash: 6244afff348edbde46fdfda7481910aca2b25939
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878663"
 ---
 # <a name="bulk-copy-example-setup"></a>Toplu Kopyalama Örnek Kurulumu
 <xref:System.Data.SqlClient.SqlBulkCopy> Sınıfı, yalnızca SQL Server tablolarına veri yazmak için kullanılabilir. Bu konuda gösterilen kod örnekleri, SQL Server örnek veritabanını kullanır **AdventureWorks**. Varolan tablolardan değiştirmekten kaçınmak için kod örnekleri önce oluşturmalısınız tablolara veri yazma.  

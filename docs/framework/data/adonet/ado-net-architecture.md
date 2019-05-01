@@ -3,11 +3,11 @@ title: ADO.NET Mimarisi
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
 ms.openlocfilehash: 3f3fc0c8c125c57116da4f1de467d738ac36ca29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880093"
 ---
 # <a name="adonet-architecture"></a>ADO.NET Mimarisi
 Geleneksel veri işleme öncelikli olarak bağlantı tabanlı, iki katmanlı modeli üzerinde yararlandı. Veri işleme, çok katmanlı mimariler giderek kullanır gibi programcılar kendi uygulamaları için daha iyi ölçeklenebilirlik sağlamak için bağlantısı kesik bir yaklaşıma geçirirsiniz.  
@@ -29,13 +29,13 @@ ADO.NET mimarisi
 ### <a name="choosing-a-datareader-or-a-dataset"></a>DataReader veya bir veri kümesi seçme  
  İstediğinize karar verdiğinizde, uygulamanızın kullanıp kullanmayacağını bir `DataReader` (bkz [alma verileri kullanarak bir DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)) veya bir `DataSet` (bkz [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)), türünü göz önünde bulundurun uygulamanızın gerektirdiği işlevselliği. Kullanım bir `DataSet` aşağıdakileri yapmak için:  
   
--   Verilerin uygulamanızda yerel olarak işlemek önbelleğe alınması. Yalnızca bir sorgunun sonuçlarını okumak gerekiyorsa `DataReader` daha iyi bir seçimdir.  
+- Verilerin uygulamanızda yerel olarak işlemek önbelleğe alınması. Yalnızca bir sorgunun sonuçlarını okumak gerekiyorsa `DataReader` daha iyi bir seçimdir.  
   
--   Uzak veri katmanları arasında veya bir XML Web hizmeti.  
+- Uzak veri katmanları arasında veya bir XML Web hizmeti.  
   
--   Dinamik olarak bir Windows Forms denetimine bağlama veya birleştirme ve birden fazla kaynaktan veri ilgili gibi verilerle etkileşim kurun.  
+- Dinamik olarak bir Windows Forms denetimine bağlama veya birleştirme ve birden fazla kaynaktan veri ilgili gibi verilerle etkileşim kurun.  
   
--   Kapsamlı bir işlem açık bir bağlantı diğer istemciler tarafından kullanılacak bağlantı boşaltır veri kaynağına gerek kalmadan veri gerçekleştirin.  
+- Kapsamlı bir işlem açık bir bağlantı diğer istemciler tarafından kullanılacak bağlantı boşaltır veri kaynağına gerek kalmadan veri gerçekleştirin.  
   
  Tarafından sağlanan işlevselliği gerekmiyorsa `DataSet`, kullanarak uygulamanızın performansını iyileştirebilir `DataReader` verilerinizi yalnızca iletme, salt okunur bir biçimde dönün. Ancak `DataAdapter` kullanır `DataReader` içeriğini doldurmak için bir `DataSet` (bkz [dataadapter'dan bir DataSet doldurma](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)), kullanarak `DataReader`, bellek kaydedecek çünkü performansı artırabilir. kullanılması tarafından `DataSet`ve oluşturup içeriğini doldurmak için gerekli olan işleme engel `DataSet`.  
   

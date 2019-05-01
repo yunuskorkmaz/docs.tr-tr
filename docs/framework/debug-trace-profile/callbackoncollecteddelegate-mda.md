@@ -17,11 +17,11 @@ ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 459465064fe9db9f2f0aebb4153a3caea173af4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875075"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>callbackOnCollectedDelegate MDA
 `callbackOnCollectedDelegate` Yönetilen hata ayıklama Yardımcısı (MDA) etkin olduğu bir temsilci gelen yönetilen ve yönetilmeyen kodu bir işlev işaretçisi olarak sıralanır ve çöp olarak toplanacak temsilci sonra bir geri çağırma, işlev işaretçisi üzerinde yerleştirilir.  

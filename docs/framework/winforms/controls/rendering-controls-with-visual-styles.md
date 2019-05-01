@@ -11,11 +11,11 @@ helpviewer_keywords:
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
 ms.openlocfilehash: b0b301bca33842dfb68de9143b665bed73f17b74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903441"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Denetimleri Görsel Stilde İşleme
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Görsel stilleri kullanarak bunları destekleyen işletim sistemlerinde arabirimi (UI) öğeleri işleme denetimleri ve diğer Windows kullanıcı için destek sağlar. Bu konuda destek çeşitli düzeylerde anlatılmaktadır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] işleme denetimleri ve diğer UI öğeleri ile işletim sisteminin geçerli görsel stili.  
@@ -27,27 +27,27 @@ ms.locfileid: "59146776"
   
  Bu sınıfların bazıları, görsel stilleri olmanıza bakılmaksızın ilgili denetim çizmek için tasarlanmıştır. Görsel stiller etkinleştirilirse, sınıf üyeleri görsel stilde ilgili denetim çizme; görsel stiller devre dışıysa, sınıf üyeleri Klasik Windows stili denetim çizer. Bu sınıfları şunlardır:  
   
--   <xref:System.Windows.Forms.ButtonRenderer>  
+- <xref:System.Windows.Forms.ButtonRenderer>  
   
--   <xref:System.Windows.Forms.CheckBoxRenderer>  
+- <xref:System.Windows.Forms.CheckBoxRenderer>  
   
--   <xref:System.Windows.Forms.GroupBoxRenderer>  
+- <xref:System.Windows.Forms.GroupBoxRenderer>  
   
--   <xref:System.Windows.Forms.RadioButtonRenderer>  
+- <xref:System.Windows.Forms.RadioButtonRenderer>  
   
  Diğer sınıflar, yalnızca görsel stilleri kullanılabilir ve görsel stillerini devre dışı bırakılırsa, üyeleri bir özel durum oluşturur, ilgili denetim çizebilirsiniz. Bu sınıfları şunlardır:  
   
--   <xref:System.Windows.Forms.ComboBoxRenderer>  
+- <xref:System.Windows.Forms.ComboBoxRenderer>  
   
--   <xref:System.Windows.Forms.ProgressBarRenderer>  
+- <xref:System.Windows.Forms.ProgressBarRenderer>  
   
--   <xref:System.Windows.Forms.ScrollBarRenderer>  
+- <xref:System.Windows.Forms.ScrollBarRenderer>  
   
--   <xref:System.Windows.Forms.TabRenderer>  
+- <xref:System.Windows.Forms.TabRenderer>  
   
--   <xref:System.Windows.Forms.TextBoxRenderer>  
+- <xref:System.Windows.Forms.TextBoxRenderer>  
   
--   <xref:System.Windows.Forms.TrackBarRenderer>  
+- <xref:System.Windows.Forms.TrackBarRenderer>  
   
  Bir denetim çizmek için bu sınıflar kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Denetim işleme sınıfı kullanma](how-to-use-a-control-rendering-class.md).  
   

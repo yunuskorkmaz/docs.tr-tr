@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
 ms.openlocfilehash: 1892e910a86e01b7b2ee0f6a2403ad7af4688808
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857785"
 ---
 # <a name="how-to-create-a-custom-claim"></a>Nasıl yapılır: Özel Talep Oluşturma
 Windows Communication Foundation (WCF) kimlik modeli altyapısı oluşturmak için bir dizi yerleşik talep türleri ve yardımcı işlevlerini haklarıyla sağlar <xref:System.IdentityModel.Claims.Claim> örnekleriyle bu türleri ve hakları. Bu yerleşik talepler, model bilgileri varsayılan olarak WCF destekleyen istemci kimlik bilgisi türlerinde bulunan şekilde tasarlanmıştır. Çoğu durumda, yerleşik talep yeterlidir; Ancak bazı uygulamalar, özel talepler gerektirebilir. Bir talep talep türünü, talep için geçerli olduğu için kaynak ve doğrudan diğer bir deyişle olarak onaylanan bu kaynak üzerinde oluşur. Bu konuda bir özel talep oluşturma işlemini açıklar.  
@@ -19,15 +19,15 @@ Windows Communication Foundation (WCF) kimlik modeli altyapısı oluşturmak iç
   
 1. Talep türü, kaynak değeri ve sağa geçirerek özel talep oluşturma <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> Oluşturucusu.  
   
-    1.  Talep türü için benzersiz bir değer karar verin.  
+    1. Talep türü için benzersiz bir değer karar verin.  
   
          Talep türünü bir benzersiz tanımlayıcıdır. Talep türü için kullanılan dize tanımlayıcı benzersiz olduğundan emin olun özel talep tasarımcının sorumluluğundadır. WCF tarafından tanımlanan talep türlerinin bir listesi için bkz. <xref:System.IdentityModel.Claims.ClaimTypes> sınıfı.  
   
-    2.  Basit veri türü ve kaynak için bir değer seçin.  
+    2. Basit veri türü ve kaynak için bir değer seçin.  
   
          Bir kaynak bir nesnedir. Kaynak CLR türü gibi basit bir tür olabilir <xref:System.String> veya <xref:System.Int32>, veya serializable bir tür. WCF tarafından talep çeşitli noktalarda serileştirilme şeklini çünkü kaynak CLR türü seri hale getirilebilir, olması gerekir. İlkel türler seri hale getirilebilir.  
   
-    3.  WCF veya özel bir hak için benzersiz bir değer tarafından tanımlanan bir sağ seçin.  
+    3. WCF veya özel bir hak için benzersiz bir değer tarafından tanımlanan bir sağ seçin.  
   
          Bir hak benzersiz dize bir tanımlayıcıdır. WCF tarafından tanımlanan hakları tanımlanan <xref:System.IdentityModel.Claims.Rights> sınıfı.  
   
@@ -42,11 +42,11 @@ Windows Communication Foundation (WCF) kimlik modeli altyapısı oluşturmak iç
   
 1. Talep türü, kaynak değeri ve sağa geçirerek özel talep oluşturma <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> Oluşturucusu.  
   
-    1.  Talep türü için benzersiz bir değer karar verin.  
+    1. Talep türü için benzersiz bir değer karar verin.  
   
          Talep türünü bir benzersiz tanımlayıcıdır. Talep türü için kullanılan dize tanımlayıcı benzersiz olduğundan emin olun özel talep tasarımcının sorumluluğundadır. WCF tarafından tanımlanan talep türlerinin bir listesi için bkz. <xref:System.IdentityModel.Claims.ClaimTypes> sınıfı.  
   
-    2.  Seçin veya kaynak için serileştirilebilir bir temel olmayan türde tanımlayın.  
+    2. Seçin veya kaynak için serileştirilebilir bir temel olmayan türde tanımlayın.  
   
          Bir kaynak bir nesnedir. WCF tarafından talep çeşitli noktalarda serileştirilme şeklini çünkü kaynak CLR türü seri hale getirilebilir, olması gerekir. İlkel türler, zaten seri hale getirilebilir.  
   
@@ -57,7 +57,7 @@ Windows Communication Foundation (WCF) kimlik modeli altyapısı oluşturmak iç
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)] 
          [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]        
   
-    3.  WCF veya özel bir hak için benzersiz bir değer tarafından tanımlanan bir sağ seçin.  
+    3. WCF veya özel bir hak için benzersiz bir değer tarafından tanımlanan bir sağ seçin.  
   
          Bir hak benzersiz dize bir tanımlayıcıdır. WCF tarafından tanımlanan hakları tanımlanan <xref:System.IdentityModel.Claims.Rights> sınıfı.  
   

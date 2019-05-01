@@ -17,18 +17,18 @@ ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 874501ac6dc4ea0ea1c0c97cdd2b802dfdb6bbb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811725"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standart Tarih ve Saat Biçim Dizeleri
 Standart tarih ve saat biçimi dizesi tek biçim belirleyici bir tarih ve saat değerinin metin gösterimini tanımlamak için kullanır. Beyaz boşluk da dahil olmak üzere birden fazla karakter içeren bir tarih ve saat biçim dizesi, özel bir tarih ve saat biçimi dizesi yorumlanır; Daha fazla bilgi için [özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Standart veya özel bir biçim dizesi iki şekilde kullanılabilir:  
   
--   Bir biçimlendirme işleminin sonucunda ortaya çıkan dizeyi tanımlamak için.  
+- Bir biçimlendirme işleminin sonucunda ortaya çıkan dizeyi tanımlamak için.  
   
--   Dönüştürülebilir bir tarih ve saat değeri metin temsilini tanımlamak için bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> ayrıştırma işlemiyle değeri.  
+- Dönüştürülebilir bir tarih ve saat değeri metin temsilini tanımlamak için bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> ayrıştırma işlemiyle değeri.  
 
 > [!TIP]
 >  İndirebileceğiniz [biçimlendirme yardımcı programı](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), biçim sağlayan bir uygulama dizeleri sayısal veya tarih ve saat değerleri ve sonuç dizeyi görüntülemenizi.  
@@ -63,17 +63,17 @@ Standart tarih ve saat biçim dizeleri ile her ikisini de kullanılabilir <xref:
   
  Eğer bir biçimlendirme işleminde standart format dizesi belirli bir kültürün özel biçim dizesiyle eşleniyorsa, uygulamanız özel biçim dizeleri aşağıdaki şekillerden birinde kullanılan belirli kültürü tanımlayabilir:  
   
--   Varsayılan (veya geçerli( kültürü kullanabilirsiniz. Aşağıdaki örnek geçerli kültürün kısa tarih biçimini kullanarak bir tarih görüntüler. Bu durumda geçerli kültür en-US değeridir.  
+- Varsayılan (veya geçerli( kültürü kullanabilirsiniz. Aşağıdaki örnek geçerli kültürün kısa tarih biçimini kullanarak bir tarih görüntüler. Bu durumda geçerli kültür en-US değeridir.  
   
      [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
      [!code-vb[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#1)]  
   
--   Geçirebilirsiniz bir <xref:System.Globalization.CultureInfo> biçimlendirmesi olan bir yöntem kullanılacak kültürü temsil eden bir nesne bir <xref:System.IFormatProvider> parametresi. Aşağıdaki örnek pt-BR kültürünün kısa tarih biçimini kullanarak bir tarih görüntüler.  
+- Geçirebilirsiniz bir <xref:System.Globalization.CultureInfo> biçimlendirmesi olan bir yöntem kullanılacak kültürü temsil eden bir nesne bir <xref:System.IFormatProvider> parametresi. Aşağıdaki örnek pt-BR kültürünün kısa tarih biçimini kullanarak bir tarih görüntüler.  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
--   Geçirebilirsiniz bir <xref:System.Globalization.DateTimeFormatInfo> olan bir yönteme biçimlendirme bilgisini sağlayan nesnenin bir <xref:System.IFormatProvider> parametresi. Aşağıdaki örnek, kısa tarih biçimini kullanarak bir tarih görüntüler. bir <xref:System.Globalization.DateTimeFormatInfo> hr-HR kültürü için nesne.  
+- Geçirebilirsiniz bir <xref:System.Globalization.DateTimeFormatInfo> olan bir yönteme biçimlendirme bilgisini sağlayan nesnenin bir <xref:System.IFormatProvider> parametresi. Aşağıdaki örnek, kısa tarih biçimini kullanarak bir tarih görüntüler. bir <xref:System.Globalization.DateTimeFormatInfo> hr-HR kültürü için nesne.  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
@@ -85,7 +85,7 @@ Standart tarih ve saat biçim dizeleri ile her ikisini de kullanılabilir <xref:
   
 |Standart biçim dizeleri|DateTimeFormatInfo.InvariantInfo özelliği tarafından tanımı|Özel biçim dizesi|  
 |----------------------------|----------------------------------------------------------|--------------------------|  
-|"O" veya "o"|Hiçbiri|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|  
+|"O" veya "o"|Yok.|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|  
 |"R" ya da "r"|<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|ddd, dd MMM yyyy HH':'mm':'ss 'GMT'|  
 |"s"|<xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A>|yyyy'-'MM'-'dd'T'HH':'mm':'ss|  
 |"u"|<xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>|yyyy'-'MM'-'dd HH':'mm':'ss'Z'|  
@@ -249,11 +249,11 @@ Standart tarih ve saat biçim dizeleri ile her ikisini de kullanılabilir <xref:
   
  'O"veya"o"standart biçim tanımlayıcısı (ve" yyyy '-' MM'-'dd'T' HH': 'mm':'ss '.' fffffffK"özel biçim dizesi), ISO 8601 temsil eden saat dilimi bilgilerini korumak için üç yol avantajlarından yararlanır <xref:System.DateTime.Kind%2A> özelliği <xref:System.DateTime> değerleri:  
   
--   Saat dilimi bileşeninin <xref:System.DateTimeKind.Local?displayProperty=nameWithType> bir uzaklık UTC tarih ve saat değerleri olan (örneğin, +01: 00, -07:00). Tüm <xref:System.DateTimeOffset> değerleri de bu biçimde temsil edilir.  
+- Saat dilimi bileşeninin <xref:System.DateTimeKind.Local?displayProperty=nameWithType> bir uzaklık UTC tarih ve saat değerleri olan (örneğin, +01: 00, -07:00). Tüm <xref:System.DateTimeOffset> değerleri de bu biçimde temsil edilir.  
   
--   Saat dilimi bileşeninin <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> tarih ve saat değerleri UTC temsil etmek üzere "Z" (hangi temsil eden sıfır uzaklık) kullanır.  
+- Saat dilimi bileşeninin <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> tarih ve saat değerleri UTC temsil etmek üzere "Z" (hangi temsil eden sıfır uzaklık) kullanır.  
   
--   <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> Tarih ve saat değerlerini hiçbir saat dilimi bilgisi var.  
+- <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> Tarih ve saat değerlerini hiçbir saat dilimi bilgisi var.  
   
  "O" veya "o" standart biçim tanımlayıcısı bir Uluslararası standardına uygun olduğundan, biçimlendirme ve ayrıştırma işlemi her zaman belirticisi kullanan sabit kültürü ve Miladi takvimi kullanır.  
   

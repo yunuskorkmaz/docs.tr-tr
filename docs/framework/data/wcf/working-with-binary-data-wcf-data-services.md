@@ -9,18 +9,18 @@ helpviewer_keywords:
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
 ms.openlocfilehash: de85a3aca629582e79712b71ae2e3413b919ab28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875166"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>İkili verileri (WCF Veri Hizmetleri) ile çalışma
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığı sağlar, almak ve ikili verileri güncelleştirmek bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] aşağıdaki yollardan biriyle akış:  
   
--   Varlık bir basit tür özelliği. Kolayca belleğe yüklenebilen nesneleri küçük ikili verilerle çalışma için önerilen yöntem budur. Bu durumda, veri modeli tarafından ortaya konan bir varlık özelliği ikili özelliğidir ve veri hizmeti yanıt iletisinde base-64 ikili kodlanan XML olarak ikili verileri serileştirir.  
+- Varlık bir basit tür özelliği. Kolayca belleğe yüklenebilen nesneleri küçük ikili verilerle çalışma için önerilen yöntem budur. Bu durumda, veri modeli tarafından ortaya konan bir varlık özelliği ikili özelliğidir ve veri hizmeti yanıt iletisinde base-64 ikili kodlanan XML olarak ikili verileri serileştirir.  
   
--   Ayrı ikili kaynak akışı. Erişme ve fotoğraf, video veya başka türde bir kodlanmış ikili verileri temsil edebilir ikili büyük nesne (BLOB) verilerin değiştirilmesi için önerilen yöntem budur.  
+- Ayrı ikili kaynak akışı. Erişme ve fotoğraf, video veya başka türde bir kodlanmış ikili verileri temsil edebilir ikili büyük nesne (BLOB) verilerin değiştirilmesi için önerilen yöntem budur.  
   
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] sınıfında tanımlandığı gibi HTTP kullanarak ikili verilerin akış uygulayan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Bu mekanizma ikili veri hesaplarından ayrı bir medya kaynağı olarak işlem görür ancak medya bağlantısı girişinin çağrılan bir varlıkla ilgili. Daha fazla bilgi için [Akış sağlayıcısı](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   

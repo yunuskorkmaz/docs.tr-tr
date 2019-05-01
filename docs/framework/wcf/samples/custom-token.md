@@ -3,11 +3,11 @@ title: Özel Belirteç
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
 ms.openlocfilehash: fbde7d1006cabddafa7e03fdee0e3493416001da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855055"
 ---
 # <a name="custom-token"></a>Özel Belirteç
 Bu örnek, bir Windows Communication Foundation (WCF) uygulamasına özel bir belirteç uygulamasını ekleme gösterir. Örnekte bir `CreditCardToken` istemci kredi kartı bilgilerini güvenli bir şekilde hizmetine geçirilecek. Belirteç WS-güvenlik ileti üstbilgisinde imzalanır ve yanı sıra ileti gövdesi ve diğer ileti üstbilgileri simetrik güvenlik bağlama öğesi kullanılarak şifrelenir. Bu, yerleşik belirteçleri yeterli olmadığı durumlarda kullanışlıdır. Bu örnek, bir yerleşik belirteçlerin kullanmak yerine bir hizmete özel güvenlik belirteci gösterilmiştir. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.
@@ -17,13 +17,13 @@ Bu örnek, bir Windows Communication Foundation (WCF) uygulamasına özel bir be
 
  Özetlemek gerekirse, bu örnek aşağıdaki gösterir:
 
--   Nasıl bir istemci bir hizmete bir özel güvenlik belirteci geçirebilirsiniz.
+- Nasıl bir istemci bir hizmete bir özel güvenlik belirteci geçirebilirsiniz.
 
--   Nasıl hizmet kullanabilir ve bir özel güvenlik belirteci doğrulayın.
+- Nasıl hizmet kullanabilir ve bir özel güvenlik belirteci doğrulayın.
 
--   Nasıl WCF hizmet kodunun, özel güvenlik belirteci dahil olmak üzere alınan güvenlik belirteçleri hakkında bilgi edinebilirsiniz.
+- Nasıl WCF hizmet kodunun, özel güvenlik belirteci dahil olmak üzere alınan güvenlik belirteçleri hakkında bilgi edinebilirsiniz.
 
--   Sunucu X.509 sertifikasının nasıl ileti şifreleme ve imza için kullanılan simetrik anahtarı korumak için kullanılır.
+- Sunucu X.509 sertifikasının nasıl ileti şifreleme ve imza için kullanılan simetrik anahtarı korumak için kullanılır.
 
 ## <a name="client-authentication-using-a-custom-security-token"></a>Özel güvenlik belirteci kullanılarak istemci kimlik doğrulaması
  Hizmeti kullanarak program aracılığıyla oluşturulan tek bir uç noktasını kullanıma sunar `BindingHelper` ve `EchoServiceHost` sınıfları. Uç nokta, adres, bağlama ve bir sözleşme oluşur. Özel bağlama kullanma yapılandırılmış bağlama `SymmetricSecurityBindingElement` ve `HttpTransportBindingElement`. Bu örnek ayarlar `SymmetricSecurityBindingElement` simetrik anahtar aktarım sırasında korumak ve özel bir geçirmek için bir hizmetin X.509 sertifikası kullanılacak `CreditCardToken` WS-güvenlik ileti üstbilgisinde bir imzalanmış ve şifrelenmiş güvenlik belirteci olarak. Davranış, istemci kimlik doğrulaması ve ayrıca hizmet X.509 sertifikası hakkında daha fazla bilgi için kullanılacak hizmet kimlik bilgilerini belirtir.
@@ -543,7 +543,7 @@ string GetCallerCreditCardNumber()
 
  Aşağıda, böylece uygun yapılandırmasında çalıştırılacak değiştirilebilir toplu iş dosyaları farklı bölümlerini kısa bir genel bakış sağlar.
 
--   Sunucu sertifikası oluşturuluyor:
+- Sunucu sertifikası oluşturuluyor:
 
      Aşağıdaki satırları gelen `Setup.bat` toplu iş dosyası kullanılacak sunucu sertifikası oluşturun. `%SERVER_NAME%` Değişkeni, sunucu adını belirtir. Kendi sunucu adını belirtmek için bu değişkeni değiştirin. Bu toplu iş dosyasında localhost varsayılandır. Değiştirirseniz `%SERVER_NAME%` değişken Client.cs ve adını da dosyalara gidin ve gerekir localhost tüm örneklerini Setup.bat betikte kullandığınız sunucu adı ile değiştirin.
 
@@ -559,7 +559,7 @@ string GetCallerCreditCardNumber()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Sunucu sertifikasını istemcinin güvenilen sertifika depolama alanına yükleniyor:
+- Sunucu sertifikasını istemcinin güvenilen sertifika depolama alanına yükleniyor:
 
      İstemci güvenilir kişiler uygulamasına Setup.bat toplu dosya kopyalama sunucu sertifikasının aşağıdaki satırları depolayın. MakeCert.exe tarafından oluşturulan sertifikaları örtük olarak istemci sistemi tarafından güvenilir değildir çünkü bu adım gereklidir. Bir istemci güvenilen kök sertifikayı kök erişim izni verilmiş bir sertifika zaten varsa — örneğin, Microsoft tarafından verilen sertifika — sunucu sertifikasında istemci sertifika deposunun doldurulması, bu adım gerekli değildir.
 
@@ -570,7 +570,7 @@ string GetCallerCreditCardNumber()
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   IIS barındırılan hizmeti için sertifika özel anahtar erişimi etkinleştirmek için IIS tarafından barındırılan işlem altında çalıştığı hesabın özel anahtar için uygun izinleri verilmelidir. Bu, son adımda Setup.bat betiği tarafından gerçekleştirilir.
+- IIS barındırılan hizmeti için sertifika özel anahtar erişimi etkinleştirmek için IIS tarafından barındırılan işlem altında çalıştığı hesabın özel anahtar için uygun izinleri verilmelidir. Bu, son adımda Setup.bat betiği tarafından gerçekleştirilir.
 
     ```
     echo ************

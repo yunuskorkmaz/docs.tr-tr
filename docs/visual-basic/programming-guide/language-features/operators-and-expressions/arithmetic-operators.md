@@ -14,11 +14,11 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
 ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61830368"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic'de Aritmetik İşleçler
 Aritmetik işleçler değişmez değerleri, değişkenleri, diğer ifadeler, işlevi ve özellik çağrılarını ve sabitleri tarafından temsil edilen sayısal değerleri hesaplama ilgili alışık olduğunuz aritmetik işlemleri çoğunu gerçekleştirmek için kullanılır. Ayrıca aritmetik sınıflandırılmış işlenenden tek bit düzeyinde işlem ve bunların bit düzenleri sola veya sağa kaydırma bit kaydırma işleçleri şunlardır.  
@@ -70,13 +70,13 @@ Aritmetik işleçler değişmez değerleri, değişkenleri, diğer ifadeler, iş
   
  Sonucu ucunu kaydırılacak bitlerin diğer sonunda yeniden girmesini yok anlamına gelir özelliği aritmetik kaydırmalar döngüsel, değildir. Bir kaydırma işleci boşaltılmış bit konumları gibi ayarlayın:  
   
--   aritmetik sola kaydırma için 0  
+- aritmetik sola kaydırma için 0  
   
--   0 için bir pozitif sayı aritmetik sağa kaydırma  
+- 0 için bir pozitif sayı aritmetik sağa kaydırma  
   
--   İmzasız veri türü aritmetik sağa kaydırma için 0 (`Byte`, `UShort`, `UInteger`, `ULong`)  
+- İmzasız veri türü aritmetik sağa kaydırma için 0 (`Byte`, `UShort`, `UInteger`, `ULong`)  
   
--   aritmetik sağa kaydırma, negatif bir sayı 1 (`SByte`, `Short`, `Integer`, veya `Long`)  
+- aritmetik sağa kaydırma, negatif bir sayı 1 (`SByte`, `Short`, `Integer`, veya `Long`)  
   
  Aşağıdaki örnek kaydırır bir `Integer` sağa ve sola değeri.  
   

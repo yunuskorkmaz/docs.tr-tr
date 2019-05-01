@@ -3,11 +3,11 @@ title: "Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekl
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
 ms.openlocfilehash: 31c89aeed2577c5dd11ae59ee4a4d692210e5f37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856498"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme
 Bu konuda, Keşif proxy'si uygulama anlatılmaktadır dört konuları saniyedir. Önceki konu [nasıl yapılır: Keşif proxy'si uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), Keşif proxy'si uygulanır. Bu konu başlığında, duyuru iletiler gönderen bir WCF hizmeti oluşturma (`Hello` ve `Bye`) kaydetmek ve kendisi ile keşif proxy'si kaydını silmek keşif proxy'si için neden olur.
@@ -18,9 +18,9 @@ Bu konuda, Keşif proxy'si uygulama anlatılmaktadır dört konuları saniyedir.
 
 2. Aşağıdaki derlemelere başvurular ekleyin:
 
-    1.  System.ServiceModel
+    1. System.ServiceModel
 
-    2.  System.ServiceModel.Discovery
+    2. System.ServiceModel.Discovery
 
 3. Adlı projeye yeni bir sınıf ekleyin `CalculatorService`.
 

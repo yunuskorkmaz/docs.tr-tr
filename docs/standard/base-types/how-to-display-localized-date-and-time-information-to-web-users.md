@@ -16,11 +16,11 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855490"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Nasıl yapılır: Web Kullanıcılarına Yerelleştirilmiş Tarih ve Saat Bilgilerini Görüntüleme
 Bir Web sayfası dünyanın herhangi bir yere görüntülenebileceğinden ayrıştırma ve biçimlendirme tarih ve saat değerlerini işlemleri (genellikle Web sunucusunun yerel kültür biçiminde) bir varsayılan biçimi üzerinde doğrulamamalısınız kullanıcıyla etkileşim kurulurken. Bunun yerine, işlemek tarih ve saat dizeleri giriş kullanıcı tarafından Web forms, tercih edilen kullanıcının kültürü kullanarak dizeleri çözümlenmelidir. Benzer şekilde, tarih ve saat verileri kullanıcıya kullanıcının kültürü için uygun bir biçimde görüntülenmesi gerekir. Bu konuda, bunun nasıl yapılacağı gösterilmektedir.  
@@ -35,9 +35,9 @@ Bir Web sayfası dünyanın herhangi bir yere görüntülenebileceğinden ayrı�
   
 4. Çağırın ya da `TryParse` veya `Parse` yöntemi <xref:System.DateTime> veya <xref:System.DateTimeOffset> türü dönüştürmeyi deneyin. Bir aşırı yüklemesini kullanmanız `TryParse` veya `Parse` yöntemi ile bir `provider` parametresi, aşağıdakilerden birini geçirin:  
   
-    -   <xref:System.Globalization.CultureInfo> 3. adımda oluşturulan nesne.  
+    - <xref:System.Globalization.CultureInfo> 3. adımda oluşturulan nesne.  
   
-    -   <xref:System.Globalization.DateTimeFormatInfo> Tarafından döndürülen nesne <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> özelliği <xref:System.Globalization.CultureInfo> 3. adımda oluşturulan nesne.  
+    - <xref:System.Globalization.DateTimeFormatInfo> Tarafından döndürülen nesne <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> özelliği <xref:System.Globalization.CultureInfo> 3. adımda oluşturulan nesne.  
   
 5. Dönüştürme başarısız olursa tarafından döndürülen 2 dize dizisi kalan her öğe için 4 arasındaki adımları yineleyin <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği.  
   
@@ -65,9 +65,9 @@ Bir Web sayfası dünyanın herhangi bir yere görüntülenebileceğinden ayrı�
   
 10. Çağırın ya da <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> veya <xref:System.DateTime.TryParse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%2CSystem.DateTime%40%29?displayProperty=nameWithType> tarih ve saat için kullanıcının isteği dönüştürmek için yöntemi bir <xref:System.DateTime> değeri. Bir yöntemi aşırı yüklemesini kullanın bir `provider` parametresi, aşağıdakilerden birini geçirin:  
   
-    -   <xref:System.Globalization.CultureInfo> 8. adımda oluşturulan nesne.  
+    - <xref:System.Globalization.CultureInfo> 8. adımda oluşturulan nesne.  
   
-    -   <xref:System.Globalization.DateTimeFormatInfo> Tarafından döndürülen nesne <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> özelliği <xref:System.Globalization.CultureInfo> 8. adımda oluşturulan nesne.  
+    - <xref:System.Globalization.DateTimeFormatInfo> Tarafından döndürülen nesne <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> özelliği <xref:System.Globalization.CultureInfo> 8. adımda oluşturulan nesne.  
   
 11. Adımda 10 ayrıştırma işlemi başarısız olursa, 13. adıma gidin. Aksi takdirde, çağrı <xref:System.UInt32.Parse%28System.String%29?displayProperty=nameWithType> kullanıcının saat dilimi uzaklığı dize gösterimini bir tamsayıya dönüştürmek için yöntemi.  
   
@@ -100,13 +100,13 @@ Bir Web sayfası dünyanın herhangi bir yere görüntülenebileceğinden ayrı�
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Kodu derlemek için oluşturun bir [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] arka plan kod olmadan Web sayfası. Tüm mevcut kodlar değiştirir, böylece örnek Web sayfasına kopyalayın. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web sayfası aşağıdaki denetimleri içermelidir:  
   
--   A <xref:System.Web.UI.WebControls.Label> kodda başvurulmuyor denetimi. Ayarlama, <xref:System.Web.UI.WebControls.TextBox.Text%2A> özelliğini "bir sayı girin:".  
+- A <xref:System.Web.UI.WebControls.Label> kodda başvurulmuyor denetimi. Ayarlama, <xref:System.Web.UI.WebControls.TextBox.Text%2A> özelliğini "bir sayı girin:".  
   
--   A <xref:System.Web.UI.WebControls.TextBox> adlı Denetim `DateString`.  
+- A <xref:System.Web.UI.WebControls.TextBox> adlı Denetim `DateString`.  
   
--   A <xref:System.Web.UI.WebControls.Button> adlı Denetim `OKButton`. Ayarlama, <xref:System.Web.UI.WebControls.Button.Text%2A> özelliği için "Tamam".  
+- A <xref:System.Web.UI.WebControls.Button> adlı Denetim `OKButton`. Ayarlama, <xref:System.Web.UI.WebControls.Button.Text%2A> özelliği için "Tamam".  
   
--   A <xref:System.Web.UI.WebControls.HiddenField> adlı Denetim `DateInfo`.  
+- A <xref:System.Web.UI.WebControls.HiddenField> adlı Denetim `DateInfo`.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  HTML akışına betik ekleme gelen bir kullanıcı önlemek için kullanıcı girişi hiçbir zaman doğrudan ve sunucu yanıtında yansıtılması gerekir. Bunun yerine, bunu kullanarak kodlanması gereken <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> yöntemi.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
 ms.openlocfilehash: 3b4f00617418d5f84a0da5d0e531e1f671b58bb1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791384"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma
 Bağlamaları bir uç noktaya bağlanmak için gereken iletişim ayrıntılarını belirtin nesneleridir. Daha açık belirtmek gerekirse bağlamaları taşımaları, kablo biçimleri (ileti kodlama) ve ilgili uç nokta veya istemci kanal için kullanılacak protokolleri ayrıntılarını tanımlayarak istemci veya hizmet çalışma zamanı oluşturmak için kullanılan yapılandırma bilgilerini içerir. Çalışan bir Windows Communication Foundation (WCF) hizmet oluşturmak için her hizmet uç noktasında bir bağlama gerektirir. Bu konuda, belirli bir bağlama için bir uç nokta nasıl belirtildiğine bağlamaları nedir ve nasıl tanımlandığı açıklanmaktadır.  
@@ -29,13 +29,13 @@ Bağlamaları bir uç noktaya bağlanmak için gereken iletişim ayrıntıların
 ## <a name="system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamalar  
  WCF çoğu uygulama gereksinimlerini ve senaryoları kapsayacak şekilde tasarlanmış sistem tarafından sağlanan bağlamaları kümesini içerir. Aşağıdaki sınıflar, sistem tarafından sağlanan bağlamalar bazı örnekler temsil eder:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>: WS uyan bir HTTP protokolü Web hizmetlerine bağlanmak için uygun bağlama-ı Basic Profile 1.1 belirtimi (örneğin, [ASMX] ASP.NET Web Hizmetleri-tabanlı hizmetler).  
+- <xref:System.ServiceModel.BasicHttpBinding>: WS uyan bir HTTP protokolü Web hizmetlerine bağlanmak için uygun bağlama-ı Basic Profile 1.1 belirtimi (örneğin, [ASMX] ASP.NET Web Hizmetleri-tabanlı hizmetler).  
   
--   <xref:System.ServiceModel.WSHttpBinding>: Web uygun Uç noktalara bağlanmak için uygun bağlama bir HTTP protokolü belirtimlerine protokolleri Hizmetleri.  
+- <xref:System.ServiceModel.WSHttpBinding>: Web uygun Uç noktalara bağlanmak için uygun bağlama bir HTTP protokolü belirtimlerine protokolleri Hizmetleri.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: Diğer WCF uç noktaları aynı makineye bağlanmak için kodlama ve adlandırılmış kanal taşıma Windows ile birlikte teknolojileri çerçeveleme .NET ikili kullanır.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Diğer WCF uç noktaları aynı makineye bağlanmak için kodlama ve adlandırılmış kanal taşıma Windows ile birlikte teknolojileri çerçeveleme .NET ikili kullanır.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: .NET ikili kodlama ve Message Queuing (MSMQ olarak da bilinir) ile birlikte teknolojileri çerçeveleme diğer WCF uç noktaları ile kuyruğa alınan iletinin bağlantılar oluşturmak için kullanır.  
+- <xref:System.ServiceModel.NetMsmqBinding>: .NET ikili kodlama ve Message Queuing (MSMQ olarak da bilinir) ile birlikte teknolojileri çerçeveleme diğer WCF uç noktaları ile kuyruğa alınan iletinin bağlantılar oluşturmak için kullanır.  
   
  Sistem tarafından sağlanan bağlamaları, açıklamalar, tam bir listesi için bkz. [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md).  
   
@@ -52,9 +52,9 @@ Bağlamaları bir uç noktaya bağlanmak için gereken iletişim ayrıntıların
 ## <a name="code-and-configuration"></a>Kod ve yapılandırma  
  Tanımlayın veya kod veya yapılandırma yoluyla bağlamaları yapılandırın. Bu iki yaklaşımı, örneğin, bir sistem tarafından sağlanan kullanıp kullanmadığınızı veya kullanılan bağlama türünü bağımsızdır <xref:System.ServiceModel.Channels.CustomBinding> bağlama. Derlediğinizde genel olarak, kod kullanarak, tanımı bağlama üzerinde tam denetim sağlar. Yapılandırmayı kullanarak diğer taraftan, Sistem Yöneticisi veya bir WCF hizmeti veya bağlama parametrelerini değiştirmek için istemci kullanıcı sağlar. Belirli bir makine gereksinimlerini tahmin edip içine dağıtılması için bir WCF uygulaması'nın koşulları ağ yolu olduğundan bu esnekliğin genellikle tercih edilir. Bağlayıcı (ve adresleme) bilgilerin koddan ayıran yeniden derleyin veya uygulama yeniden dağıtmaya gerek olmadan bağlama ayrıntılarını değiştirmek Yöneticiler sağlar. Kod içinde bağlama tanımlanmazsa, yapılandırma dosyasında yapılan herhangi bir yapılandırma temelli tanımı üzerine yazılacağını unutmayın. Bu yaklaşımların örnekler için aşağıdaki konulara bakın:  
   
--   [Nasıl yapılır: Yönetilen bir uygulamada bir WCF Hizmeti barındırma](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) kod içinde bağlama oluşturma örneği sağlar.  
+- [Nasıl yapılır: Yönetilen bir uygulamada bir WCF Hizmeti barındırma](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) kod içinde bağlama oluşturma örneği sağlar.  
   
--   [Öğretici: Bir Windows Communication Foundation istemcisi oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md) yapılandırmayı kullanarak bir istemci oluşturma örneği sağlar.  
+- [Öğretici: Bir Windows Communication Foundation istemcisi oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md) yapılandırmayı kullanarak bir istemci oluşturma örneği sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

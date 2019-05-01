@@ -14,11 +14,11 @@ ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2028bc8d9f160daef8afcdf881e1dfd514b4c94f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792931"
 ---
 # <a name="viewing-type-information"></a>Tür Bilgilerini Görüntüleme
 <xref:System.Type?displayProperty=nameWithType> Sınıfı, yansıma için merkezi. Ortak dil çalışma zamanı oluşturur **türü** yansıma istediğinde yüklenen bir türü için. Kullanabileceğiniz bir **türü** nesnenin yöntemler, alanlar, özellikler ve türü hakkında her şeyi öğrenmek için iç içe geçmiş sınıflar.  

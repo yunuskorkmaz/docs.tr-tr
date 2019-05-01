@@ -10,11 +10,11 @@ ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd75bd14b2393d9b316d90070894f214dfa60c88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908810"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>İzlenecek yol: Windows Forms Uygulaması'nda Veri Akışı Kullanma
 Bu belge, bir Windows Forms uygulamasında görüntü işleme gerçekleştiren veri akışı bloğu ağının nasıl oluşturulacağını gösterir.  
@@ -29,13 +29,13 @@ Bu belge, bir Windows Forms uygulamasında görüntü işleme gerçekleştiren v
 ## <a name="sections"></a>Bölümler  
  Bu izlenecek yol aşağıdaki bölümleri içerir:  
   
--   [Windows Forms uygulaması oluşturma](#winforms)  
+- [Windows Forms uygulaması oluşturma](#winforms)  
   
--   [Veri akışı ağ oluşturma](#network)  
+- [Veri akışı ağ oluşturma](#network)  
   
--   [Veri akışı ağ kullanıcı arabirimine bağlanma](#ui)  
+- [Veri akışı ağ kullanıcı arabirimine bağlanma](#ui)  
   
--   [Tam örnek](#complete)  
+- [Tam örnek](#complete)  
   
 <a name="winforms"></a>   
 ## <a name="creating-the-windows-forms-application"></a>Windows Forms uygulaması oluşturma  

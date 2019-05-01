@@ -12,11 +12,11 @@ helpviewer_keywords:
 - controls [WPF], StackPanel
 ms.assetid: f9239086-451f-42e6-81f7-ef89ef349742
 ms.openlocfilehash: 8338421dfb1bea856c15edf9d324cec955584f9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911253"
 ---
 # <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>Nasıl yapılır: StackPanel ve DockPanel Arasında Seçim Yapma
 Bu örnek nasıl kullanma arasında seçim gösterir bir <xref:System.Windows.Controls.StackPanel> veya <xref:System.Windows.Controls.DockPanel> içeriğinde yığın ne zaman bir <xref:System.Windows.Controls.Panel>.  

@@ -5,31 +5,31 @@ ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1484d50df51ea85a94da0aad1ebaab54b80a6ecb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866801"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET Yerel ile Başlangıç İyileştirmesini Hesaplama
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulama başlatma süresini önemli ölçüde artırır. Bu geliştirme, taşınabilir, düşük güç tüketimli cihazlar ve karmaşık uygulamaları ile özellikle fark edilebilir. Bu konu, bu başlangıç geliştirme ölçmek için gereken temel araçları ile çalışmaya başlamanıza yardımcı olur.  
   
  Performans araştırmalar kolaylaştırmak için .NET Framework ve Windows için olay izleme Windows (olaylar meydana geldiğinde tooling bildirmek uygulamanızı sağlayan ETW) adlı bir olay çerçevesi kullanın. Ardından, kolayca görüntüleyin ve ETW olayları analiz etmek için PerfView adında bir araç kullanabilirsiniz. Bu konu açıklar nasıl yapılır:  
   
--   Kullanım <xref:System.Diagnostics.Tracing.EventSource> olayları yaymak için sınıf.  
+- Kullanım <xref:System.Diagnostics.Tracing.EventSource> olayları yaymak için sınıf.  
   
--   Bu olayları toplamak için PerfView kullanın.  
+- Bu olayları toplamak için PerfView kullanın.  
   
--   Bu olayları görüntülemek için PerfView kullanın.  
+- Bu olayları görüntülemek için PerfView kullanın.  
   
 ## <a name="using-eventsource-to-emit-events"></a>EventSource olaylarını yaymak için kullanma  
  <xref:System.Diagnostics.Tracing.EventSource> bir özel olay sağlayıcısı oluşturulacağı bir temel sınıf sağlar. Öğesinin genel olarak, oluşturduğunuz <xref:System.Diagnostics.Tracing.EventSource> ve kaydırma `Write*` kendi olay yöntemleri ile yöntemleri. Bir singleton deseni genellikle her biri için kullanılan <xref:System.Diagnostics.Tracing.EventSource>.  
   
  Örneğin, aşağıdaki örnekte sınıfı iki performans özelliklerini ölçmek için kullanılabilir:  
   
--   Zamana kadar `App` sınıf oluşturucusu çağrıldı.  
+- Zamana kadar `App` sınıf oluşturucusu çağrıldı.  
   
--   Zamana kadar `MainPage` Oluşturucusu çağrıldı.  
+- Zamana kadar `MainPage` Oluşturucusu çağrıldı.  
   
  [!code-csharp[ProjectN_ETW#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw1.cs#1)]  
   
@@ -39,13 +39,13 @@ ms.locfileid: "59088294"
   
  Örneğin, bir RSS Okuyucu oluşturduğunuz düşünün. Birkaç günlüğe bir olay yazmak için ilgi çekici konumlar:  
   
--   Ne zaman ana sayfasında önce işlenir.  
+- Ne zaman ana sayfasında önce işlenir.  
   
--   Eski RSS hikayeleri yerel depolama alanından zaman seri.  
+- Eski RSS hikayeleri yerel depolama alanından zaman seri.  
   
--   Ne zaman uygulamanızı yeni hikayeleri eşitlemeye başlar.  
+- Ne zaman uygulamanızı yeni hikayeleri eşitlemeye başlar.  
   
--   Uygulamanızı yeni hikayeleri eşitleniyor ne zaman sona ermiştir.  
+- Uygulamanızı yeni hikayeleri eşitleniyor ne zaman sona ermiştir.  
   
  Uygulama izleme basittir: Yalnızca türetilmiş sınıf üzerinde uygun yöntemi çağırın. Kullanarak `AppEventSource` önceki örnekte, bir uygulama gibi işaretleyebilir:  
   
@@ -78,20 +78,20 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  PerfView başlattıktan sonra uygulamanızı çalıştırın. Unutmayın, uygulamanızı çalıştıran gereken birkaç nokta vardır:  
   
--   Yayın derleme, hata ayıklama derlemesi kullanın. Hata ayıklama yapılarında, genellikle ek hata denetimi ve hata işleme uygulama beklenenden daha yavaş çalışmasına neden olabilecek kodunu içerir.  
+- Yayın derleme, hata ayıklama derlemesi kullanın. Hata ayıklama yapılarında, genellikle ek hata denetimi ve hata işleme uygulama beklenenden daha yavaş çalışmasına neden olabilecek kodunu içerir.  
   
--   Bir hata ayıklayıcısı ekli, uygulamanızı çalıştıran uygulamanızın performansını etkiler.  
+- Bir hata ayıklayıcısı ekli, uygulamanızı çalıştıran uygulamanızın performansını etkiler.  
   
--   Windows uygulama başlatma sürelerini hızlandırmak için birden çok önbelleğe alma stratejilerine kullanır. Uygulamanız şu anda bellekte önbelleğe alınmış ve diskten yüklü olması gerekmez, daha hızlı bir şekilde başlar. Tutarlılık sağlamak için başlatın ve uygulamanızı birkaç kez ölçme önce kapatın.  
+- Windows uygulama başlatma sürelerini hızlandırmak için birden çok önbelleğe alma stratejilerine kullanır. Uygulamanız şu anda bellekte önbelleğe alınmış ve diskten yüklü olması gerekmez, daha hızlı bir şekilde başlar. Tutarlılık sağlamak için başlatın ve uygulamanızı birkaç kez ölçme önce kapatın.  
   
  PerfView yayılan olayları toplayabilir, böylece, uygulamanızı çalıştırdığınızda seçin **toplamasını Durdur** düğmesi. Genellikle, gereksiz olayları elde uygulamanızı kapatmadan önce koleksiyonu durdurmanız gerekir. Ancak, kapatma ya da ertelenmesi performans ölçüm yaptığınız, koleksiyon devam isteyebilirsiniz.  
   
 ## <a name="displaying-the-events"></a>Olaylarını görüntüleme  
  Zaten toplanan olayları görüntülemek için .etl açmak için PerfView kullanın veya. etl.zip dosyası oluşturulur ve seçin **olayları**. ETW olayları, diğer işlemlerin olaylarını dahil olmak üzere çok sayıda ilgili bilgileri topladıktan. Araştırmanızı odaklanmak için aşağıdaki olaylar görünümü metin kutularına tamamlayın:  
   
--   İçinde **filtresi** kutusunda, uygulama adınız (olmadan ".exe") belirtin.  
+- İçinde **filtresi** kutusunda, uygulama adınız (olmadan ".exe") belirtin.  
   
--   İçinde **olay türleri filtresi** kutusunda, belirtin `Process/Start | MyCompany-MyApp`. Bu olaylar için bir filtre Şirketim MyApp ve Windows çekirdek/işlem/başlangıç olayı ayarlar.  
+- İçinde **olay türleri filtresi** kutusunda, belirtin `Process/Start | MyCompany-MyApp`. Bu olaylar için bir filtre Şirketim MyApp ve Windows çekirdek/işlem/başlangıç olayı ayarlar.  
   
  Tüm olaylar, sol bölmede listelenen seçin (Ctrl-A) ve **Enter** anahtarı. Artık, her olay zaman damgası görmeye olmalıdır. Bu zaman damgaları izleme başlangıcını göreli olduğundan başlangıcından bu yana geçen süreyi belirlemek için işlemin başlangıç zamanından itibaren her olayın zaman çıkarılacak sahip. İki zaman damgaları seçmek için CTRL tuşuna basıp tıklayarak kullanıyorsanız, bunları sayfanın alt kısmındaki durum çubuğunda görüntülenen arasındaki fark görürsünüz. Bu, herhangi iki olay görüntüdeki (işlem başlangıç dahil) arasında geçen süreyi görmek kolaylaştırır. Görünüm için kısayol menüsünü açın ve CSV dosyalarına dışarı aktarma veya kaydetmek veya verileri işlemek için Microsoft Excel'i açıp gibi kullanışlı seçenekler, bir dizi seçin.  
   

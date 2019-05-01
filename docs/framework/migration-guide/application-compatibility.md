@@ -9,11 +9,11 @@ ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dcbcced47cfb2031e4a35a7437ec875a20354eed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872059"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework'te Uygulama Uyumluluğu
 
@@ -42,11 +42,11 @@ Yeniden hedefleme sorunları 4.0 hedef bütünleştirilmiş 4.5 hedefine artık 
 
 Her sorun, aşağıdaki bilgileri içerir:
 
--   Önceki bir sürümden değişikliklerin açıklaması.
+- Önceki bir sürümden değişikliklerin açıklaması.
 
--   Nasıl değişiklik müşteriler ve herhangi bir geçici çözüm sürümler arasında uyumluluğu korumak kullanılabilir olup etkiler.
+- Nasıl değişiklik müşteriler ve herhangi bir geçici çözüm sürümler arasında uyumluluğu korumak kullanılabilir olup etkiler.
 
--   Ne kadar önemli olduğunu değişikliği'nin bir değerlendirme. Bir uyumluluk sorununu kategorilere ayrılabilir gibi:
+- Ne kadar önemli olduğunu değişikliği'nin bir değerlendirme. Bir uyumluluk sorununu kategorilere ayrılabilir gibi:
 
     |   |   |
     |---|---|
@@ -55,18 +55,18 @@ Her sorun, aşağıdaki bilgileri içerir:
     |Uç durum|Bir değişiklik belirli, genel olmayan senaryolar altında uygulamaları etkiler.|
     |Geçirgen|Bir değişiklik ile uygulamanın geliştiricisi veya kullanıcısı üzerinde fark edilebilir etkisi.|
 
--   Sürüm değişikliği framework ilk görüntülendiğinde gösterir. Bazı değişiklikler belirli bir sürümünde sunulan ve sonraki bir sürümde geri; Bu da gösterilir.
+- Sürüm değişikliği framework ilk görüntülendiğinde gösterir. Bazı değişiklikler belirli bir sürümünde sunulan ve sonraki bir sürümde geri; Bu da gösterilir.
 
--   Değişiklik türü:
+- Değişiklik türü:
 
     |   |   |
     |---|---|
     |Yeniden Hedefleme|Bu değişiklik, .NET Framework'ün yeni bir sürümünü hedefleyecek şekilde derlenen uygulamaları etkiler.|
     |Çalışma zamanı|Bu değişiklik, .NET Framework'ün önceki bir sürümünü hedefler, ancak daha sonraki bir sürümü üzerinde çalışan mevcut bir uygulamayı etkiler.|
 
--   Etkilenen API'leri, varsa.
+- Etkilenen API'leri, varsa.
 
--   Kullanılabilir tanılama kimlikleri
+- Kullanılabilir tanılama kimlikleri
 
 ## <a name="usage"></a>Kullanım
 Başlamak için aşağıdaki uyumluluk değişiklik türünü seçin:

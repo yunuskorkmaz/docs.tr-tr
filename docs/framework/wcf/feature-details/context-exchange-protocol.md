@@ -3,11 +3,11 @@ title: Bağlam Değişimi Protokolü
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
 ms.openlocfilehash: a6bc0ac45282d94a6aea8dbbdb5a7d34163c692e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857356"
 ---
 # <a name="context-exchange-protocol"></a>Bağlam Değişimi Protokolü
 Bu bölümde, Windows Communication Foundation (WCF) .NET Framework sürüm 3.5 sürümünde tanıtılan bağlam değişimi Protokolü açıklanmaktadır. Bu protokol, istemci bir hizmeti tarafından sağlanan bir bağlam kabul edin ve bu hizmet aynı istemci kanal örneği gönderilen tüm istekler geçerli kanala sağlar. Bağlam değişimi Protokolü uygulanmasının sunucu ve istemci arasında bağlamı yaymak için aşağıdaki iki mekanizma birini kullanabilirsiniz: HTTP tanımlama bilgileri veya bir SOAP üst bilgisi.  
@@ -21,16 +21,16 @@ Bu bölümde, Windows Communication Foundation (WCF) .NET Framework sürüm 3.5 
   
  Bu modda okuduğunuzda listesi verilmiştir:  
   
--   Yapmaya bağlamını kullanarak sıfırlamak `SetContext` kanal açılan oluşturur sonra bir <xref:System.InvalidOperationException>.  
+- Yapmaya bağlamını kullanarak sıfırlamak `SetContext` kanal açılan oluşturur sonra bir <xref:System.InvalidOperationException>.  
   
--   Yapmaya kullanarak içerik göndermeye <xref:System.ServiceModel.Channels.ContextMessageProperty> giden iletisinde oluşturur bir <xref:System.InvalidOperationException>.  
+- Yapmaya kullanarak içerik göndermeye <xref:System.ServiceModel.Channels.ContextMessageProperty> giden iletisinde oluşturur bir <xref:System.InvalidOperationException>.  
   
--   Kanalı ile belirli bir bağlam zaten başlatılmış, belirli bir içerik sunucusundan bir ileti alındığında, sonuçlanır bir <xref:System.ServiceModel.ProtocolException>.  
+- Kanalı ile belirli bir bağlam zaten başlatılmış, belirli bir içerik sunucusundan bir ileti alındığında, sonuçlanır bir <xref:System.ServiceModel.ProtocolException>.  
   
     > [!NOTE]
     >  Yalnızca açık olarak herhangi bir bağlam olmadan kanal açıldığında bir başlangıç bağlamı sunucudan almak uygundur.  
   
--   <xref:System.ServiceModel.Channels.ContextMessageProperty> Üzerinde gelen iletilerin her zaman null şeklindedir.  
+- <xref:System.ServiceModel.Channels.ContextMessageProperty> Üzerinde gelen iletilerin her zaman null şeklindedir.  
   
 ## <a name="mode-2-application-context-management"></a>2. modu: Uygulama içerik yönetimi  
  Bu modu etkin olduğunda <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> ayarlanır `false`. Bu modda, bağlam içerik kanalı yönetmez. Bunu almak, yönetmek ve bağlamı kullanarak uygulamak için uygulamanın sorumluluğundadır <xref:System.ServiceModel.Channels.ContextMessageProperty>. Çağrılacak yapmaya `GetContext` veya `SetContext` sonuçlanır bir <xref:System.InvalidOperationException>.  
@@ -53,7 +53,7 @@ Bu bölümde, Windows Communication Foundation (WCF) .NET Framework sürüm 3.5 
   
  Bağlam değişimi protokolü için destek gerektiren bir hizmet uç noktaları, yayımlanmış bir ilke içinde açık zorlaştırabilir. Bağlam değişimi Protokolü SOAP düzeyinde desteklemek veya HTTP tanımlama bilgisi desteğini etkinleştirmek için istemci gereksinimi temsil etmek için iki yeni ilke onaylamalarını tanıtılmıştır. Deyimlerinize hizmetine ilke oluşturulmasını değeri tarafından denetlenen <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> özelliğini aşağıdaki gibi:  
   
--   İçin <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>, aşağıdaki onay oluşturulur:  
+- İçin <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>, aşağıdaki onay oluşturulur:  
   
     ```xml  
     <IncludeContext   
@@ -61,7 +61,7 @@ Bu bölümde, Windows Communication Foundation (WCF) .NET Framework sürüm 3.5 
     protectionLevel="Sign" />  
     ```  
   
--   İçin <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie>, aşağıdaki onay oluşturulur:  
+- İçin <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie>, aşağıdaki onay oluşturulur:  
   
     ```xml  
     <HttpUseCookie xmlns="http://schemas.xmlsoap.org/soap/http"/>  

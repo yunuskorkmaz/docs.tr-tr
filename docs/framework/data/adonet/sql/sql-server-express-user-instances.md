@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
 ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876284"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express Kullanıcı Örnekleri
 Microsoft SQL Server Express Edition (SQL Server Express) .NET Framework veri sağlayıcısı için SQL Server kullanırken yalnızca kullanılabilir kullanıcı örneği özelliğini destekler (`SqlClient`). Bir kullanıcı örneği, SQL Server Express Veritabanı Altyapısı'nın üst örneği tarafından oluşturulan ayrı bir örneğidir. Kullanıcı örnekleri eklemek ve SQL Server Express veritabanlarına bağlanmak için kendi yerel bilgisayarlarında yönetici olmayan kullanıcılar izin verin. Her örneği, tek kullanıcı, kullanıcı başına tek örnek güvenlik bağlamı altında çalışır.  
@@ -41,15 +41,15 @@ sp_configure 'user instances enabled','0'
   
  Aşağıda gösterilen örnek bağlantı dizesi hakkında aşağıdakileri unutmayın:  
   
--   `Data Source` Anahtar sözcüğü üst SQL Server'ın kullanıcı örneği oluşturan Express örneğine başvurur. The default instance is .\sqlexpress.  
+- `Data Source` Anahtar sözcüğü üst SQL Server'ın kullanıcı örneği oluşturan Express örneğine başvurur. The default instance is .\sqlexpress.  
   
--   `Integrated Security` ayarlanır `true`. Bir kullanıcı örneğine bağlanmak için Windows kimlik doğrulaması gereklidir; SQL Server oturumları desteklenmez.  
+- `Integrated Security` ayarlanır `true`. Bir kullanıcı örneğine bağlanmak için Windows kimlik doğrulaması gereklidir; SQL Server oturumları desteklenmez.  
   
--   `User Instance` Ayarlanır `true`, bir kullanıcı örneği başlatır. (Varsayılan değer `false`.)  
+- `User Instance` Ayarlanır `true`, bir kullanıcı örneği başlatır. (Varsayılan değer `false`.)  
   
--   `AttachDbFileName` Bağlantı dizesi anahtar kelimesi, tam yol adını içermelidir birincil veritabanı dosyasını (.mdf) eklemek için kullanılır. `AttachDbFileName` Ayrıca, "genişletilmiş özellikler" ve "başlangıç dosyası adı" anahtarları içinde karşılık gelen bir <xref:System.Data.SqlClient.SqlConnection> bağlantı dizesi.  
+- `AttachDbFileName` Bağlantı dizesi anahtar kelimesi, tam yol adını içermelidir birincil veritabanı dosyasını (.mdf) eklemek için kullanılır. `AttachDbFileName` Ayrıca, "genişletilmiş özellikler" ve "başlangıç dosyası adı" anahtarları içinde karşılık gelen bir <xref:System.Data.SqlClient.SqlConnection> bağlantı dizesi.  
   
--   `|DataDirectory|` Kanal sembolleri içine değiştirme dizesi bağlantısı açılıyor uygulamanın veri dizini gösterir ve .mdf ve .ldf veritabanı ve günlük dosyalarının konumunu belirten göreli bir yol sağlar. Bu dosyaları başka bir yerde bulmak isterseniz, dosyaların tam yolunu sağlamanız gerekir.  
+- `|DataDirectory|` Kanal sembolleri içine değiştirme dizesi bağlantısı açılıyor uygulamanın veri dizini gösterir ve .mdf ve .ldf veritabanı ve günlük dosyalarının konumunu belirten göreli bir yol sağlar. Bu dosyaları başka bir yerde bulmak isterseniz, dosyaların tam yolunu sağlamanız gerekir.  
   
 ```  
 Data Source=.\\SQLExpress;Integrated Security=true;  
@@ -144,11 +144,11 @@ private static void OpenSqlConnection()
   
  Kullanıcı örneği senaryoları şunları içerir:  
   
--   Herhangi bir tek kullanıcı uygulama burada veri paylaşımı gerekli değildir.  
+- Herhangi bir tek kullanıcı uygulama burada veri paylaşımı gerekli değildir.  
   
--   ClickOnce dağıtımı. .NET Framework 2.0 (veya üzeri) ve SQL Server Express hedef bilgisayarda zaten yüklüyse, bir ClickOnce eylem sonucu olarak karşıdan yükleme paketini yüklenebilir ve yönetici olmayan kullanıcılar tarafından kullanılabilir. Bu kurulumun bir parçası olduğu yönetici SQL Server Express yüklemeniz gerektiğini unutmayın. Daha fazla bilgi için [Windows Forms için ClickOnce dağıtımı](../../../winforms/clickonce-deployment-for-windows-forms.md).
+- ClickOnce dağıtımı. .NET Framework 2.0 (veya üzeri) ve SQL Server Express hedef bilgisayarda zaten yüklüyse, bir ClickOnce eylem sonucu olarak karşıdan yükleme paketini yüklenebilir ve yönetici olmayan kullanıcılar tarafından kullanılabilir. Bu kurulumun bir parçası olduğu yönetici SQL Server Express yüklemeniz gerektiğini unutmayın. Daha fazla bilgi için [Windows Forms için ClickOnce dağıtımı](../../../winforms/clickonce-deployment-for-windows-forms.md).
   
--   Özel ASP.NET, Windows kimlik doğrulaması kullanarak barındırma. Tek bir SQL Server Express örneği intranet üzerinde barındırılabilir. Uygulamayı, kimliğe bürünme kullanılmadığında ASPNET Windows hesabı kullanarak bağlanır. Kullanıcı örnekleri, üçüncü taraf veya paylaşılan barındırma burada tüm uygulamalar aynı kullanıcı örneği paylaşımında yapabileceği ve artık birbirinden yalıtılmış kalır senaryoları için kullanılmamalıdır.  
+- Özel ASP.NET, Windows kimlik doğrulaması kullanarak barındırma. Tek bir SQL Server Express örneği intranet üzerinde barındırılabilir. Uygulamayı, kimliğe bürünme kullanılmadığında ASPNET Windows hesabı kullanarak bağlanır. Kullanıcı örnekleri, üçüncü taraf veya paylaşılan barındırma burada tüm uygulamalar aynı kullanıcı örneği paylaşımında yapabileceği ve artık birbirinden yalıtılmış kalır senaryoları için kullanılmamalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

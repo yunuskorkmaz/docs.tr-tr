@@ -13,20 +13,20 @@ ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 24e7eed539898c511250a1a09a187448e9424890
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872579"
 ---
 # <a name="registration-free-com-interop"></a>Kayıtsız COM Birlikte Çalışma
 Kayıtsız COM birlikte çalışma bütünleştirilmiş kod bilgileri depolamak için Windows kayıt defteri kullanmadan bir bileşen etkinleştirir. Dağıtım sırasında bir bilgisayarda bir bileşen kaydetmek yerine Win32 stili bildirim dosyalarını, bağlama ve etkinleştirme hakkında bilgiler içeren tasarım zamanında oluşturun. Bu bildirim dosyaları yerine kayıt defteri anahtarları, bir nesnenin etkinleştirme doğrudan.  
   
  Kayıtsız etkinleştirme için bunları dağıtım sırasında kayıt yerine derlemelerinizin kullanarak iki avantaj sağlar:  
   
--   Bir bilgisayar üzerinde birden fazla sürümü yüklendiğinde hangi DLL sürümü etkinleştirilir denetleyebilirsiniz.  
+- Bir bilgisayar üzerinde birden fazla sürümü yüklendiğinde hangi DLL sürümü etkinleştirilir denetleyebilirsiniz.  
   
--   Son kullanıcılar, XCOPY veya FTP, uygulamanızı bilgisayarlarında uygun bir dizine kopyalamak için kullanabilirsiniz. Uygulama bu dizinden çalıştırabilirsiniz.  
+- Son kullanıcılar, XCOPY veya FTP, uygulamanızı bilgisayarlarında uygun bir dizine kopyalamak için kullanabilirsiniz. Uygulama bu dizinden çalıştırabilirsiniz.  
   
  Kayıtsız COM birlikte çalışması için gereken bildirimleri iki tür Bu bölümde açıklanmaktadır: uygulama ve bileşen bildirimleri. Bu bildirimler, XML dosyalarıdır. Bir uygulama geliştiricisi tarafından oluşturulan bir uygulama bildirimi, derlemeler ve derleme bağımlılıklarını açıklayan meta veriler içerir. Bir bileşen bildirimini oluşturulan bir bileşen geliştirici tarafından aksi takdirde Windows kayıt defterinde yer alan bilgiler içerir.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
 ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863707"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Nasıl yapılır: (Visual Basic) için bir yordam parametresini tanımlama
 A *parametre* çağıran kod, çağırdığında bir değeri yordama geçirmeye izin verir. Her parametre için bir yordam adı ve veri türünü belirten bir değişken bildirmek aynı şekilde bildirin. Ayrıca geçirme mekanizma belirtin ve parametre isteğe bağlıdır.  
@@ -46,18 +46,18 @@ A *parametre* çağıran kod, çağırdığında bir değeri yordama geçirmeye 
   
      Tüm programlama öğeleriniz için veri türlerini belirtme olarak bilinir *güçlü yazım, yazım*. Ayarladığınızda `Option Strict On`, Visual Basic güçlü yazım, yazım zorlar. Bu, aşağıdaki nedenlerden dolayı önerilir:  
   
-    -   Bu değişkenler ve parametreler için IntelliSense desteği sağlar. Bunu siz kodunuzu yazarken, özelliklerini ve diğer üyeleri görmenizi sağlar.  
+    - Bu değişkenler ve parametreler için IntelliSense desteği sağlar. Bunu siz kodunuzu yazarken, özelliklerini ve diğer üyeleri görmenizi sağlar.  
   
-    -   Derleyicinin tür denetimi sağlar. Bu, catch taşma gibi hatalar nedeniyle çalışma zamanında başarısız olabilir deyimleri yardımcı olur. Ayrıca bunları desteği olmayan nesneler üzerinde yöntemlere yapılan çağrılar yakalar.  
+    - Derleyicinin tür denetimi sağlar. Bu, catch taşma gibi hatalar nedeniyle çalışma zamanında başarısız olabilir deyimleri yardımcı olur. Ayrıca bunları desteği olmayan nesneler üzerinde yöntemlere yapılan çağrılar yakalar.  
   
-    -   Bu, kodunuzun daha hızlı bir şekilde yürütülmesini sonuçlanır. Bunun bir nedeni olduğundan bir programlama öğesi için bir veri türü belirtmezseniz, Visual Basic Derleyicisi, atamasını `Object` türü. Derlenmiş kod arasında ileri ve geri dönüştürmek zorunda kalabilirsiniz `Object` ve diğer veri türleri, performansı azaltır.  
+    - Bu, kodunuzun daha hızlı bir şekilde yürütülmesini sonuçlanır. Bunun bir nedeni olduğundan bir programlama öğesi için bir veri türü belirtmezseniz, Visual Basic Derleyicisi, atamasını `Object` türü. Derlenmiş kod arasında ileri ve geri dönüştürmek zorunda kalabilirsiniz `Object` ve diğer veri türleri, performansı azaltır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yordamlar](./index.md)
 - [Alt Yordamlar](./sub-procedures.md)
 - [İşlev Yordamları](./function-procedures.md)
-- [Nasıl yapılır: Bir Yordama Bağımsız Değişkenler Geçirme](./how-to-pass-arguments-to-a-procedure.md)
+- [Nasıl yapılır: Bir yordama bağımsız değişkenler geçirme](./how-to-pass-arguments-to-a-procedure.md)
 - [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)
 - [Özyinelemeli Yordamlar](./recursive-procedures.md)
 - [Yordam Aşırı Yüklemesi](./procedure-overloading.md)

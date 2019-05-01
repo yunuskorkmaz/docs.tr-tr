@@ -3,11 +3,11 @@ title: Gövdeye göre Yönlendir
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
 ms.openlocfilehash: b8a3f7785d7d59d8ad85d6dddde7fd6a04a12d63
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787562"
 ---
 # <a name="route-by-body"></a>Gövdeye göre Yönlendir
 Bu örnek nasıl herhangi bir SOAP eylemi ileti nesneleri kabul eden bir hizmet uygulanacağı gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan. Tek bir hizmeti uygulayan `Calculate` kabul eden bir işlem bir <xref:System.ServiceModel.Channels.Message> istek parametresi ve döndürür bir <xref:System.ServiceModel.Channels.Message> yanıt.  

@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
 ms.openlocfilehash: 7c6c4ea777f62541f8ca8fa79fdd024e5f5cf2ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787614"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma
 Birden fazla kimlik bilgisi gerektiren bir özel güvenlik düzeni olması mümkündür. Örneğin, bir hizmetin istemci yalnızca bir kullanıcı adı ve parola talep edebilir, ancak aynı zamanda istemci kanıtlayan bir kimlik bilgisi 18 yaşın üzerinde olan. İkinci bir kimlik bilgisi bir *kimlik bilgisi destekleyen*. Bu konuda, bu kimlik bilgilerini bir Windows Communication Foundation (WCF) istemcisinde uygulamak açıklanmaktadır.  
@@ -39,28 +39,28 @@ Birden fazla kimlik bilgisi gerektiren bir özel güvenlik düzeni olması mümk
   
  Özel bağlama oluştururken ilk adım, üç tür olabilir bir güvenlik bağlama öğesi oluşturmaktır:  
   
--   <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
  Tüm sınıflar devralınacak <xref:System.ServiceModel.Channels.SecurityBindingElement>, dört ilgili özellikleri içerir:  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.EndpointSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.EndpointSupportingTokenParameters%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.OperationSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.OperationSupportingTokenParameters%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalEndpointSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalEndpointSupportingTokenParameters%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalOperationSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalOperationSupportingTokenParameters%2A>  
   
 #### <a name="scopes"></a>Kapsamları  
  Kimlik bilgileri desteklemek için iki kapsamları mevcuttur:  
   
--   *Destek belirteçleri uç nokta* bir uç noktanın tüm işlemleri destekler. Diğer bir deyişle, herhangi bir uç nokta işlemi çağrılan her destekleme belirteci temsil eden kimlik bilgisi kullanılabilir.  
+- *Destek belirteçleri uç nokta* bir uç noktanın tüm işlemleri destekler. Diğer bir deyişle, herhangi bir uç nokta işlemi çağrılan her destekleme belirteci temsil eden kimlik bilgisi kullanılabilir.  
   
--   *Destek belirteçleri işlemi* yalnızca belirli bir uç nokta işlemi destekler.  
+- *Destek belirteçleri işlemi* yalnızca belirli bir uç nokta işlemi destekler.  
   
  Özellik adlarının tarafından belirtildiği gibi destekleyici kimlik bilgileri gerekli veya isteğe bağlı olabilir. Diğer bir deyişle, varsa, destekleyici kimlik bilgileri kullanılır, ancak gerekli değildir, ancak mevcut değilse kimlik doğrulaması başarısız değil.  
   

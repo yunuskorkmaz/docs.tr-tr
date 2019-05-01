@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
 ms.openlocfilehash: bbf306b31dd2bc9cfcfb877351205970fc63706f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788784"
 ---
 # <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>Nasıl yapılır: (WCF Veri Hizmetleri) istemci isteğinde üst bilgileri Ayarla
 Kullanırken [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] destekleyen bir veri hizmetine erişmek için İstemci Kitaplığı [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], istemci kitaplığının veri hizmetine gönderilen istek iletilerinin gerekli HTTP üst bilgilerini otomatik olarak ayarlar. Ancak, veri hizmeti talep tabanlı kimlik doğrulaması veya tanımlama bilgileri gerektirdiğinde gibi bazı durumlarda, gerekli ileti üstbilgileri ayarlamak için istemci kitaplığı bilmez. Daha fazla bilgi için [WCF Veri Hizmetleri güvenli hale getirme](../../../../docs/framework/data/wcf/securing-wcf-data-services.md#clientAuthentication). Gönderilmeden önce bu gibi durumlarda el ile ileti üstbilgileri istek iletisinde ayarlamanız gerekir. Bu konudaki örnek nasıl işleneceğini gösterir <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> veri hizmetine gönderilmeden önce yeni bir üst bilgisi için istek iletisi eklemek için olay.  

@@ -3,11 +3,11 @@ title: UDP Taşıma Kullanarak Çok Noktaya Yayın Yapan Uygulamalar Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
 ms.openlocfilehash: b65a277b6e76767d1e3bfdbebbac5051759986e0
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857200"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>UDP Taşıma Kullanarak Çok Noktaya Yayın Yapan Uygulamalar Oluşturma
 Çok noktaya yayın uygulamaları, noktadan noktaya bağlantılar kurmak zorunda kalmadan aynı anda çok sayıda alıcı küçük iletileri gönderir. Bu tür uygulamaların Vurgu güvenilirlik hızıdır. Diğer bir deyişle, belirli bir ileti gerçekten alındığında olmak üzere daha güncel veri göndermek daha önemlidir. WCF destekler kullanarak çok noktaya yayın uygulamaları yazma <xref:System.ServiceModel.UdpBinding>. Bu aktarım nerede küçük iletilerini istemci sayısı için aynı anda göndermek için bir hizmet gerektiği senaryolarda yararlıdır. Bir bandı uygulama, böyle bir hizmet örneğidir.  

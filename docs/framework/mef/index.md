@@ -11,11 +11,11 @@ ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872852"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -62,7 +62,7 @@ MEF ve Yönetilen Genişletilebilirlik Çerçevesi hafif Genişletilebilir uygul
 
 <a name="simplecalculator_an_example_application"></a>
 
-## <a name="simplecalculator-an-example-application"></a>SimpleCalculator: Bir örnek uygulama
+## <a name="simplecalculator-an-example-application"></a>SimpleCalculator: Örnek bir uygulama
 
 MEF neler yapabileceğinizi görmek için en basit yolu, basit bir MEF uygulaması oluşturmaktır. Bu örnekte çok basit hesap makinesi SimpleCalculator adlı oluşturun. "5 + 3" biçiminde temel aritmetik komutları kabul eden bir konsol uygulaması oluşturmak için SimpleCalculator amacı olan veya "6-2" ve doğru yanıtları döndürür. MEF kullanarak, uygulamanın kodunu değiştirmeden yeni işleç eklemek mümkün olacaktır.
 
@@ -469,17 +469,17 @@ public class Mod : SimpleCalculator.IOperation
 
  Bu da sipariş sözleşmesiyle eşleşecek şekilde unutmayın <xref:System.ComponentModel.Composition.ExportAttribute> özniteliği, aynı türde olmalıdır <xref:System.ComponentModel.Composition.ImportAttribute>.
 
- Projeyi derlemek ve çalıştırmak. Yeni Mod (%) işleci test edin.
+ Projeyi derlemek ve çalıştırmak. Yeni Mod (%) test etme işleci.
 
 <a name="conclusion"></a>
 ## <a name="conclusion"></a>Sonuç
  Bu konuda, MEF temel kavramlarını ele.
 
--   Bölümleri ve Katalog bileşim kapsayıcı
+- Bölümleri ve Katalog bileşim kapsayıcı
 
      Bölümleri ve kapsayıcının MEF uygulamasının temel yapı taşları şunlardır. Alır ya da en fazla kendisi de dahil bir değer verir herhangi bir nesne bir parçasıdır. Katalog, belirli bir kaynaktan bölümleri koleksiyonu sağlar. Kapsayıcının Kataloğu tarafından sağlanan bölümleri oluşturmak, içeri dışarı aktarmalar bağlaması için kullanır.
 
--   İçeri ve dışarı aktarmalar
+- İçeri ve dışarı aktarmalar
 
      İçeri ve dışarı aktarmalar bileşenleri tarafından iletişim yoludur. Bir içeri aktarma ile bileşenin belirli bir değer veya nesne için bir gereksinim belirtir ve isteğe bağlı olarak dışa kullanılabilirliğini bir değer belirtir. Her bir içeri aktarma, dışarı aktarmaları sözleşmesi yoluyla listesiyle eşleştirilir.
 

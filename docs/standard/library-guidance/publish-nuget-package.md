@@ -5,11 +5,11 @@ author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
 ms.openlocfilehash: 036aa99c89790274628c40824be7e230d81850fe
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909863"
 ---
 # <a name="publishing-a-nuget-package"></a>Bir NuGet Paketi Yayımlama
 

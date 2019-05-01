@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 ms.openlocfilehash: db9b3d31ba9657d26c1fb76ce4002afad949a881
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788914"
 ---
 # <a name="-platform-visual-basic"></a>-platform (Visual Basic)
 Çıkış dosyası hangi ortak dil çalışma zamanı (CLR) platform sürümünü çalıştırabilirsiniz belirtir.  
@@ -38,31 +38,31 @@ ms.locfileid: "59301171"
   
  Genel olarak, .NET Framework derlemeleri Visual Basic'te yazılmış aynı platformdan bağımsız olarak çalışır. Ancak, farklı platformlarda farklı şekilde davranan bazı durumlar vardır. Bu yaygın durumlar şunlardır:  
   
--   Herhangi bir işaretçi türü gibi platforma göre boyutunu değiştiren üyeler içeren yapılar.  
+- Herhangi bir işaretçi türü gibi platforma göre boyutunu değiştiren üyeler içeren yapılar.  
   
--   Sabit boyutlar içeren işaretçi aritmetiği.  
+- Sabit boyutlar içeren işaretçi aritmetiği.  
   
--   Tanıtıcılar için `Integer` yerine <xref:System.IntPtr> kullanan yanlış platform çağrıları veya COM bildirimleri.  
+- Tanıtıcılar için `Integer` yerine <xref:System.IntPtr> kullanan yanlış platform çağrıları veya COM bildirimleri.  
   
--   Atama <xref:System.IntPtr> için `Integer`.  
+- Atama <xref:System.IntPtr> için `Integer`.  
   
--   Platform kullanarak çağırma veya COM birlikte çalışma bileşenlerle tüm platformlarda mevcut değildir.  
+- Platform kullanarak çağırma veya COM birlikte çalışma bileşenlerle tüm platformlarda mevcut değildir.  
   
  **-Platform** seçeneği kodunuzun çalışacak mimarisi hakkında varsayımlar yapmış biliyorsanız, bazı sorunları azaltmak. Özellikle:  
   
--   Bir 64 bit platformları hedefleyen karar ve uygulamanın bir 32-bit makinede çalıştırılması, hata iletisi çok daha önce gelir ve bu anahtarı kullanmadan oluşan bir hata daha sorunu daha yöneliktir.  
+- Bir 64 bit platformları hedefleyen karar ve uygulamanın bir 32-bit makinede çalıştırılması, hata iletisi çok daha önce gelir ve bu anahtarı kullanmadan oluşan bir hata daha sorunu daha yöneliktir.  
   
--   Ayarlarsanız `x86` seçeneğinde bayrağı ve uygulamayı daha sonra bir 64-bit makinede çalıştırmak, uygulamayı yerel olarak çalıştırmak yerine WOW alt sistemi çalıştırır.  
+- Ayarlarsanız `x86` seçeneğinde bayrağı ve uygulamayı daha sonra bir 64-bit makinede çalıştırmak, uygulamayı yerel olarak çalıştırmak yerine WOW alt sistemi çalıştırır.  
   
  Bir 64 bit Windows işletim sisteminde:  
   
--   Derlenmiş derlemelerde `-platform:x86` WOW64 altında çalışan 32 bitlik CLR üzerinde yürütülür.  
+- Derlenmiş derlemelerde `-platform:x86` WOW64 altında çalışan 32 bitlik CLR üzerinde yürütülür.  
   
--   Yürütülebilir dosyalar ile derlenmiş olan `-platform:anycpu` 64 bitlik CLR yürütülür.  
+- Yürütülebilir dosyalar ile derlenmiş olan `-platform:anycpu` 64 bitlik CLR yürütülür.  
   
--   Bir DLL ile derlenmiş `-platform:anycpu` aynı CLR'yi işlem içine yüklenmiş olarak yürütülür.  
+- Bir DLL ile derlenmiş `-platform:anycpu` aynı CLR'yi işlem içine yüklenmiş olarak yürütülür.  
   
--   İle derlenen yürütülebilir dosyaları `-platform:anycpu32bitpreferred` 32 bitlik CLR yürütülür.  
+- İle derlenen yürütülebilir dosyaları `-platform:anycpu32bitpreferred` 32 bitlik CLR yürütülür.  
   
  Bir Windows 64-bit sürümünü çalıştırmak için uygulama geliştirme hakkında daha fazla bilgi için bkz. [64-bit uygulamalar](../../../framework/64-bit-apps.md).  
   

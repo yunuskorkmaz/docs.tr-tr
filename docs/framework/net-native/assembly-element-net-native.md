@@ -5,11 +5,11 @@ ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c0788c05edace2142d348c679c73aa1b4404ce75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868868"
 ---
 # <a name="assembly-element-net-native"></a>\<Derleme > öğesi (.NET yerel)
 Çalışma zamanı yansıma ilkesini belirtilen bir derlemedeki tüm türleri için geçerlidir.  

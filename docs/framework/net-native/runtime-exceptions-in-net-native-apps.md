@@ -5,11 +5,11 @@ ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 06e07c41d398c0792094b4481a38c69b2ba73004
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866788"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET Native Uygulamalarında Çalışma Zamanı Özel Durumları
 Hata ayıklama ve yayın yapılandırmaları tamamen farklı olduğundan kendi Hedef platformlar üzerinde Evrensel Windows platformu uygulamanızın sürüm derlemeleri test etmek önemlidir. Varsayılan olarak, uygulamanızı derlemek için .NET Core çalışma zamanı hata ayıklama yapılandırması kullanır, ancak sürüm yapılandırmasını yerel kod için uygulamanızı derlemek için .NET Native kullanır.  
@@ -24,11 +24,11 @@ Hata ayıklama ve yayın yapılandırmaları tamamen farklı olduğundan kendi H
   
  .NET Native ile derlenmiş sürüm yapıları için hata ayıklaması yaptığınızda:  
   
--   .NET normal hata ayıklama araçları farklı .NET yerel hata ayıklama altyapısı kullanırsınız.  
+- .NET normal hata ayıklama araçları farklı .NET yerel hata ayıklama altyapısı kullanırsınız.  
   
--   Yürütülebilir dosyanızın boyutunu mümkün olduğunca azaltılır. .NET Native yürütülebilir bir dosya boyutunu azaltır, yollardan biridir önemli ölçüde daha ayrıntılı olarak ele alınan bir konu olan çalışma zamanı özel durum iletileri kırpma tarafından [çalışma zamanı özel durum iletileri](#Messages) bölümü.  
+- Yürütülebilir dosyanızın boyutunu mümkün olduğunca azaltılır. .NET Native yürütülebilir bir dosya boyutunu azaltır, yollardan biridir önemli ölçüde daha ayrıntılı olarak ele alınan bir konu olan çalışma zamanı özel durum iletileri kırpma tarafından [çalışma zamanı özel durum iletileri](#Messages) bölümü.  
   
--   Kodunuzu son derece iyileştirilmiştir. Yani bu satır içi kullanım, mümkün olduğunda kullanılır. (Satır içi kod dış rutinleri çağıran yordam taşır.)   .NET Native özelleştirilmiş bir çalışma zamanı sağlar ve agresif inlining'i etkiler görüntülenen hata ayıklama sırasında çağrı yığınını uygulayan, olgu.  Daha fazla bilgi için [çalışma zamanının çağrı yığınındaki](#CallStack) bölümü.  
+- Kodunuzu son derece iyileştirilmiştir. Yani bu satır içi kullanım, mümkün olduğunda kullanılır. (Satır içi kod dış rutinleri çağıran yordam taşır.)   .NET Native özelleştirilmiş bir çalışma zamanı sağlar ve agresif inlining'i etkiler görüntülenen hata ayıklama sırasında çağrı yığınını uygulayan, olgu.  Daha fazla bilgi için [çalışma zamanının çağrı yığınındaki](#CallStack) bölümü.  
   
 > [!NOTE]
 >  Hata ayıklama ve yayın derlemeleri denetleme veya işaretini .NET yerel araç zinciriyle derlenmiş olup olmadığını kontrol edebilirsiniz **.NET yerel araç zinciriyle derle** kutusu.   Ancak, Windows Store, uygulamanızın .NET Native araç zinciri ile üretim sürümü her zaman derleyeceği unutmayın.  

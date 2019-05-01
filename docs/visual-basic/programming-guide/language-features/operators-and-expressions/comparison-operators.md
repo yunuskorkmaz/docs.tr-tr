@@ -16,11 +16,11 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
 ms.openlocfilehash: d08974a929a723d4037300f9d72ae03c072d47fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827963"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Visual Basic'de Karşılaştırma İşleçleri
 Karşılaştırma işleçleri iki ifadeden karşılaştırın ve dönüş bir `Boolean` değerleri arasındaki ilişkiyi gösteren bir değer. Sayısal değerler için dizeleri Karşılaştırma işleçleri ve nesneleri Karşılaştırma işleçleri karşılaştırmak için işleci vardır. Üç tür işleç tüm burada ele alınmıştır.  

@@ -1,5 +1,5 @@
 ---
-title: Soyutlama uygulamak için temel sınıflar
+title: Soyutlama Uygulamak için Temel Sınıflar
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,13 +8,13 @@ helpviewer_keywords:
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
 author: KrzysztofCwalina
 ms.openlocfilehash: 6811423258481fcbae24743c9b17f3f20c379c58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785547"
 ---
-# <a name="base-classes-for-implementing-abstractions"></a>Soyutlama uygulamak için temel sınıflar
+# <a name="base-classes-for-implementing-abstractions"></a>Soyutlama Uygulamak için Temel Sınıflar
 NET olarak söylemek gerekirse, başka bir sınıfın bu türden türetilmiş bir sınıf bir temel sınıf olur. Amacıyla bu bölümde, ancak bir taban sınıf genellikle ortak bir Özet sağlar veya diğer sınıfların bazılarını yeniden kullanmak uygulama yine de devralma varsayılan için tasarlanmış bir sınıftır. Temel sınıflar, genellikle bir Özet bir hiyerarşinin kökü altındaki çeşitli özel uygulamalar arasındaki devralma hiyerarşilerini ortasında bulunur.  
   
  Bunlar, uygulama Yardımcıları soyutlama uygulamak için hizmet eder. Örneğin, öğelerin sıralı koleksiyonlar için Framework'ün soyutlama biri olan <xref:System.Collections.Generic.IList%601> arabirimi. Uygulama <xref:System.Collections.Generic.IList%601> Önemsiz değildir ve bu nedenle çerçeve gibi birkaç temel sınıf sağlar <xref:System.Collections.ObjectModel.Collection%601> ve <xref:System.Collections.ObjectModel.KeyedCollection%602>, hangi hizmet Yardımcıları özel koleksiyonlar uygulamak için.  

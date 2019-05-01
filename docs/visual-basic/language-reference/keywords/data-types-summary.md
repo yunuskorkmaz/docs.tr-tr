@@ -5,11 +5,11 @@ helpviewer_keywords:
 - data types [Visual Basic], Visual Basic
 ms.assetid: 4ea2ef2a-3d4d-42d9-9f8f-173a37c96e53
 ms.openlocfilehash: cb7d77d87e37cd4cdc4872fd862c575737a8d3cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801926"
 ---
 # <a name="data-types-summary-visual-basic"></a>Veri Türleri Özeti (Visual Basic)
 Visual Basic dili anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaç tarafından düzenlenir ve kullanın.  

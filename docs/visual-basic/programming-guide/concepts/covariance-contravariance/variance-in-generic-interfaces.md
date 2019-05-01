@@ -3,28 +3,28 @@ title: Variance in Generic Interfaces (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
 ms.openlocfilehash: 50a1aeb5c17a0f193b9e90ca2167ef298f7ed237
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787224"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>Variance in Generic Interfaces (Visual Basic)
 .NET framework 4, çeşitli genel arabirimlerin mevcut sapma desteği sunmuştur. Bu arabirimleri uygulayan sınıfların örtük dönüştürme varyansı desteği sağlar. Aşağıdaki arabirimlerinden şimdi değişken şunlardır:  
   
--   <xref:System.Collections.Generic.IEnumerable%601> (T değişkendir)  
+- <xref:System.Collections.Generic.IEnumerable%601> (T değişkendir)  
   
--   <xref:System.Collections.Generic.IEnumerator%601> (T değişkendir)  
+- <xref:System.Collections.Generic.IEnumerator%601> (T değişkendir)  
   
--   <xref:System.Linq.IQueryable%601> (T değişkendir)  
+- <xref:System.Linq.IQueryable%601> (T değişkendir)  
   
--   <xref:System.Linq.IGrouping%602> (`TKey` ve `TElement` birlikte değişken olduğu)  
+- <xref:System.Linq.IGrouping%602> (`TKey` ve `TElement` birlikte değişken olduğu)  
   
--   <xref:System.Collections.Generic.IComparer%601> (T karşıtıdır)  
+- <xref:System.Collections.Generic.IComparer%601> (T karşıtıdır)  
   
--   <xref:System.Collections.Generic.IEqualityComparer%601> (T karşıtıdır)  
+- <xref:System.Collections.Generic.IEqualityComparer%601> (T karşıtıdır)  
   
--   <xref:System.IComparable%601> (T karşıtıdır)  
+- <xref:System.IComparable%601> (T karşıtıdır)  
   
  Kovaryans arabirimi genel tür parametresi tarafından tanımlanan daha fazla türetilmiş bir dönüş türüne sahip bir yöntem sağlar. Kovaryans özelliği açıklamak için bu genel arabirimler göz önünde bulundurun: `IEnumerable(Of Object)` ve `IEnumerable(Of String)`. `IEnumerable(Of String)` Arabirimi devralmaz `IEnumerable(Of Object)` arabirimi. Ancak, `String` türü devralma `Object` türü ve bazı durumlarda bu arabirimler nesnelerin birbirleriyle atamak isteyebilirsiniz. Bu aşağıdaki kod örneğinde gösterilir.  
   

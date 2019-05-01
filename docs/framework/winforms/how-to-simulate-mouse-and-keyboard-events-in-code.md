@@ -13,11 +13,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
 ms.openlocfilehash: 6931f9b012a67c2d18995f2a3a56f290be0f0ddb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801003"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Nasıl yapılır: Kodda Fare ve Klavye Olaylarının Benzetimini Yapma
 Windows Forms programlama yoluyla fare ve klavye girdisi benzetimi için çeşitli seçenekler sunar. Bu konu, bu seçeneklerine genel bakış sağlar.  
@@ -85,7 +85,7 @@ Windows Forms programlama yoluyla fare ve klavye girdisi benzetimi için çeşit
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Sistem, System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular.  
+- Sistem, System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular.  
   
  Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   

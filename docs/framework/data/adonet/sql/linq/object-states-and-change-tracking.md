@@ -3,11 +3,11 @@ title: Nesne Durumları ve Değişiklik İzleme
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
 ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794400"
 ---
 # <a name="object-states-and-change-tracking"></a>Nesne Durumları ve Değişiklik İzleme
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesneler her zaman katılan bazı *durumu*. Örneğin, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yeni bir nesne oluşturur nesne `Unchanged` durumu. Kendiniz oluşturduğunuz yeni bir nesne için bilinmeyen <xref:System.Data.Linq.DataContext> ve `Untracked` durumu. Başarılı yürütülmesinin <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, bilinen tüm nesneleri [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bulunan `Unchanged` durumu. (Tek özel durumu başarıyla bulunan veritabanından silinmiş olanlar tarafından temsil edilen `Deleted` durum ve kullanılamaz durumda uygulamasındaki <xref:System.Data.Linq.DataContext> örneği.)  
@@ -38,11 +38,11 @@ ms.locfileid: "59191161"
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir nesne silindiğinde aşağıdaki işlemeyi gerçekleştirir (<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) kendi tablosundan:  
   
--   Zaman <xref:System.Data.Linq.DataContext.SubmitChanges%2A> olarak adlandırılan bir `DELETE` işlemi, bu nesne için gerçekleştirilir.  
+- Zaman <xref:System.Data.Linq.DataContext.SubmitChanges%2A> olarak adlandırılan bir `DELETE` işlemi, bu nesne için gerçekleştirilir.  
   
--   Kaldırma işlemi yüklü olup bağımsız olarak, ilgili nesnelere dağıtılmadı. Özellikle, ilgili nesneleri ilişki özelliği güncelleştirmek için yüklenmez.  
+- Kaldırma işlemi yüklü olup bağımsız olarak, ilgili nesnelere dağıtılmadı. Özellikle, ilgili nesneleri ilişki özelliği güncelleştirmek için yüklenmez.  
   
--   Başarılı yürütme sonrasında <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, nesneler kümesine `Deleted` durumu. Sonuç olarak, nesne kullanamazsınız veya kendi `id` bakımından <xref:System.Data.Linq.DataContext>. İç önbelleği tarafından tutulan bir <xref:System.Data.Linq.DataContext> örneği alınan veya hatta veritabanında nesne silindikten sonra yeni olarak, eklenen nesneleri ortadan değil.  
+- Başarılı yürütme sonrasında <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, nesneler kümesine `Deleted` durumu. Sonuç olarak, nesne kullanamazsınız veya kendi `id` bakımından <xref:System.Data.Linq.DataContext>. İç önbelleği tarafından tutulan bir <xref:System.Data.Linq.DataContext> örneği alınan veya hatta veritabanında nesne silindikten sonra yeni olarak, eklenen nesneleri ortadan değil.  
   
  Çağırabilirsiniz <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> yalnızca tarafından izlenen bir nesnede <xref:System.Data.Linq.DataContext>. İçin bir `Untracked` nesne çağırmanız <xref:System.Data.Linq.Table%601.Attach%2A> çağırmadan önce <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>. Çağırma <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> üzerinde bir `Untracked` nesne bir özel durum oluşturur.  
   

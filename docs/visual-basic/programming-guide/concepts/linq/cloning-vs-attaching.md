@@ -3,11 +3,11 @@ title: Kopyalama ve Düğmelere (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3c3bd105-c9d3-49bd-875b-27ab4e8bc7a3
 ms.openlocfilehash: 59ffedfdbb2820683f1e6cc232154688f5c29fc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789109"
 ---
 # <a name="cloning-vs-attaching-visual-basic"></a>Kopyalama ve Düğmelere (Visual Basic)
 Eklerken <xref:System.Xml.Linq.XNode> (dahil olmak üzere <xref:System.Xml.Linq.XElement>) veya <xref:System.Xml.Linq.XAttribute> yeni içerik üstü yoksa, nesneleri yalnızca bağlı XML ağacına yeni bir ağaç nesneleri. Yeni içerik zaten üst öğe ve başka bir XML ağacının bir parçası ise, yeni içerik kopyalanmış olan. Yeni kopyalanan içeriği sonra XML ağacına eklenir.  

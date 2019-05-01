@@ -21,11 +21,11 @@ ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61873241"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Sınıflar, Yapılar ve Birleşimleri Hazırlama
 .NET Framework sınıfları ve yapıları benzerdir. Hem alanlar, özellikler ve olaylar olabilir. Bunlar, ayrıca statik ve statik olmayan yöntemleri olabilir. Bir önemli fark, yapılar değer türüdür ve sınıflar, başvuru türleridir ' dir.  
@@ -50,19 +50,19 @@ ms.locfileid: "59113730"
   
  Yapılar örneği, orijinal işlev bildirimleriyle gösterilen aşağıdaki yönetilmeyen işlevleri kullanır:  
   
--   **TestStructInStruct** Pinvokelib.DLL'den dışarı.  
+- **TestStructInStruct** Pinvokelib.DLL'den dışarı.  
   
     ```  
     int TestStructInStruct(MYPERSON2* pPerson2);  
     ```  
   
--   **TestStructInStruct3** Pinvokelib.DLL'den dışarı.  
+- **TestStructInStruct3** Pinvokelib.DLL'den dışarı.  
   
     ```  
     void TestStructInStruct3(MYPERSON3 person3);  
     ```  
   
--   **TestArrayInStruct** Pinvokelib.DLL'den dışarı.  
+- **TestArrayInStruct** Pinvokelib.DLL'den dışarı.  
   
     ```  
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
@@ -98,23 +98,23 @@ typedef struct _MYARRAYSTRUCT
   
  Yönetilen `MyPerson`, `MyPerson2`, `MyPerson3`, ve `MyArrayStruct` yapılar aşağıdaki özellik vardır:  
   
--   `MyPerson` yalnızca dize üyeleri içerir. [CharSet](specifying-a-character-set.md) alan yönetilmeyen işleve geçirildiğinde ANSI biçim dizeleri ayarlar.  
+- `MyPerson` yalnızca dize üyeleri içerir. [CharSet](specifying-a-character-set.md) alan yönetilmeyen işleve geçirildiğinde ANSI biçim dizeleri ayarlar.  
   
--   `MyPerson2` içeren bir **IntPtr** için `MyPerson` yapısı. **IntPtr** türü .NET Framework uygulamaları kod işaretlenmediği sürece işaretçileri kullanmadığından yönetilmeyen yapısına orijinal işaretçiyle değiştirir **güvenli**.  
+- `MyPerson2` içeren bir **IntPtr** için `MyPerson` yapısı. **IntPtr** türü .NET Framework uygulamaları kod işaretlenmediği sürece işaretçileri kullanmadığından yönetilmeyen yapısına orijinal işaretçiyle değiştirir **güvenli**.  
   
--   `MyPerson3` içeren `MyPerson` katıştırılmış bir yapı olarak. Başka bir yapı içinde katıştırılmış bir yapı ana yapısına doğrudan katıştırılmış yapısı öğelerini yerleştirerek düzleştirilebilir veya katıştırılmış bir yapısı olarak, bu örnekte olduğu gibi bırakılabilir.  
+- `MyPerson3` içeren `MyPerson` katıştırılmış bir yapı olarak. Başka bir yapı içinde katıştırılmış bir yapı ana yapısına doğrudan katıştırılmış yapısı öğelerini yerleştirerek düzleştirilebilir veya katıştırılmış bir yapısı olarak, bu örnekte olduğu gibi bırakılabilir.  
   
--   `MyArrayStruct` tamsayı dizisi içerir. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Öznitelik kümeleri <xref:System.Runtime.InteropServices.UnmanagedType> numaralandırma değerini **ByValArray**, dizideki öğelerin sayısını belirtmek için kullanılır.  
+- `MyArrayStruct` tamsayı dizisi içerir. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Öznitelik kümeleri <xref:System.Runtime.InteropServices.UnmanagedType> numaralandırma değerini **ByValArray**, dizideki öğelerin sayısını belirtmek için kullanılır.  
   
  Bu örnekte, tüm yapıları için <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliği, üyelerin bellekte sıralı olarak, göründükleri sırayla gözüktükleri uygulanır.  
   
  `LibWrap` Sınıfı için yönetilen prototipleri içeren `TestStructInStruct`, `TestStructInStruct3`, ve `TestArrayInStruct` çağıran yöntemleri `App` sınıfı. Her bir prototip gibi tek bir parametre bildirir:  
   
--   `TestStructInStruct` bir başvuru türüne bildirir `MyPerson2` parametre olarak.  
+- `TestStructInStruct` bir başvuru türüne bildirir `MyPerson2` parametre olarak.  
   
--   `TestStructInStruct3` tür bildirir `MyPerson3` parametre olarak ve parametre değeri geçirir.  
+- `TestStructInStruct3` tür bildirir `MyPerson3` parametre olarak ve parametre değeri geçirir.  
   
--   `TestArrayInStruct` bir başvuru türüne bildirir `MyArrayStruct` parametre olarak.  
+- `TestArrayInStruct` bir başvuru türüne bildirir `MyArrayStruct` parametre olarak.  
   
  Parametre içermedikçe yöntemlerinin bağımsız değişkenleri değere göre geçirilir gibi yapıları **ref** (**ByRef** Visual Basic'te) anahtar sözcüğü. Örneğin, `TestStructInStruct` yöntemi (bir adresi değeri) başvuru türünde bir nesne geçirir `MyPerson2` yönetilmeyen kod için. Yapıyı işlemek için `MyPerson2` noktaları için örnek bir arabellek belirli bir boyuttaki oluşturur ve birleştirerek adresini döndürür <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A?displayProperty=nameWithType> ve <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> yöntemleri. Ardından, örnek içerik yönetilen yapısı yönetilmeyen arabelleğe kopyalar. Son olarak, örnek kullanır <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A?displayProperty=nameWithType> sıralama verilerini bir yönteme bir yönetilen nesneye yönetilmeyen arabellekteki ve <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A?displayProperty=nameWithType> yönetilmeyen bellek bloğunu serbest bırakmak için yöntemi.  
   
@@ -133,7 +133,7 @@ typedef struct _MYARRAYSTRUCT
   
  FindFile örneği, orijinal işlev bildirimleriyle gösterilen aşağıdaki yönetilmeyen işlevi kullanır:  
   
--   **FindFirstFile** Kernel32.dll öğesinden dışa aktarılır.  
+- **FindFirstFile** Kernel32.dll öğesinden dışa aktarılır.  
   
     ```  
     HANDLE FindFirstFile(LPCTSTR lpFileName, LPWIN32_FIND_DATA lpFindFileData);  
@@ -176,7 +176,7 @@ typedef struct _WIN32_FIND_DATA
   
  Birleşimler örneği, orijinal işlev bildirimleriyle gösterilen aşağıdaki yönetilmeyen işlevi kullanır:  
   
--   **TestUnion** Pinvokelib.DLL'den dışarı.  
+- **TestUnion** Pinvokelib.DLL'den dışarı.  
   
     ```  
     void TestUnion(MYUNION u, int type);  
@@ -219,7 +219,7 @@ union MYUNION2
   
  SysTime örneği, orijinal işlev bildirimleriyle gösterilen aşağıdaki yönetilmeyen işlevi kullanır:  
   
--   **GetSystemTime** Kernel32.dll öğesinden dışa aktarılır.  
+- **GetSystemTime** Kernel32.dll öğesinden dışa aktarılır.  
   
     ```  
     VOID GetSystemTime(LPSYSTEMTIME lpSystemTime);  
@@ -270,11 +270,11 @@ typedef struct _MYSTRSTRUCT2
   
  `App` Sınıfının Implements `UsingMarshaling` dizi geçirmek için gerekli tüm görevleri gerçekleştiren yöntemi. Dizi ile işaretlenmiş `out` (`ByRef` Visual Basic'te) verileri göstermek için anahtar sözcüğü, çağırana çağrılan geçirir. Aşağıdaki uygulama kullanan <xref:System.Runtime.InteropServices.Marshal> sınıfı yöntemleri:  
   
--   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> yönetilen bir nesnenin yönetilmeyen buffer'dan alınan verileri hazırlamak için.  
+- <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> yönetilen bir nesnenin yönetilmeyen buffer'dan alınan verileri hazırlamak için.  
   
--   <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> yapısında dizeler için ayrılan belleği serbest bırakmak için.  
+- <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> yapısında dizeler için ayrılan belleği serbest bırakmak için.  
   
--   <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> dizi için ayrılmış belleği serbest bırakmak için.  
+- <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> dizi için ayrılmış belleği serbest bırakmak için.  
   
  Daha önce belirtildiği gibi C# güvenli olmayan koda izin verir ve [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] desteklemez. İçinde C# örneği `UsingUnsafePointer` işaretçileri yerine kullanan alternatif bir yöntem uygulamasıdır <xref:System.Runtime.InteropServices.Marshal> geçirmek için sınıfı yeniden diziyi içeren `MyUnsafeStruct` yapısı.  
   

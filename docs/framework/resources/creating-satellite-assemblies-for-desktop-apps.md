@@ -26,11 +26,11 @@ ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1aecd8e6dcec73ba4dc45d4bf8f365503888687e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793059"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Masaüstü Uygulamaları için Uydu Derlemeleri Oluşturma
 Kaynak dosyaları, yerelleştirilmiş uygulamalar olarak merkezi bir rol oynar. Bunlar, bir uygulama kullanıcının kendi dil ve kültür dizeler, görüntüler ve diğer verileri görüntüler ve kullanıcının kendi dil veya kültür için kaynaklar kullanılamıyorsa, alternatif veri sağlamak için etkinleştirin. .NET Framework, bulun ve yerelleştirilmiş kaynakları almak için bir hub-and-spoke modelini kullanır. Yerelleştirilemeyen yürütülebilir kod ve nötr olarak adlandırılan tek bir kültür için kaynakları içeren ana derleme hub'ı olan veya varsayılan kültür. Geri dönüş kültürü uygulamanın varsayılan kültürüdür; hiçbir yerelleştirilmiş kaynaklar kullanılabilir olduğunda kullanılır. Kullandığınız <xref:System.Resources.NeutralResourcesLanguageAttribute> kültürü uygulamanın varsayılan kültürünü belirtmek için özniteliği. Her bir uçtaki tek bir yerelleştirilmiş kültür için kaynaklar içeriyor ancak hiçbir kod içermiyor bir uydu derlemeye bağlanır. Uydu derlemeleri ana derlemenin parçası olmadığından, kolayca güncelleştirmek veya uygulamanın ana derlemesini değiştirmeden belirli bir kültüre karşılık gelen kaynakları değiştirin.  
@@ -41,16 +41,16 @@ Kaynak dosyaları, yerelleştirilmiş uygulamalar olarak merkezi bir rol oynar. 
 ## <a name="satellite-assembly-name-and-location"></a>Uydu derleme adı ve konumu  
  Bunlar kolayca bulunan kaldırılabilir ve böylece kaynakları belirli konumlara yerleştirin hub-and-spoke modelini gerektirir. Beklendiği gibi değil derleme ve adı kaynakları yapmak veya bunları doğru konumda yerleştirmeyin, ortak dil çalışma zamanı bunları bulmanız mümkün olmayacaktır ve varsayılan kültürün kaynakları yerine kullanır. .NET Framework kaynak tarafından temsil edilen Yöneticisi bir <xref:System.Resources.ResourceManager> nesne, otomatik olarak yerelleştirilmiş kaynaklara erişmek için kullanılır. Kaynak Yöneticisi için aşağıdakiler gereklidir:  
   
--   Tek bir uydu derlemesi, belirli bir kültüre ait tüm kaynakları içermelidir. Diğer bir deyişle, bir tek bir ikili .resources dosyasına birden çok .txt veya .resx dosyalarına derlemeniz gerekir.  
+- Tek bir uydu derlemesi, belirli bir kültüre ait tüm kaynakları içermelidir. Diğer bir deyişle, bir tek bir ikili .resources dosyasına birden çok .txt veya .resx dosyalarına derlemeniz gerekir.  
   
--   Uygulama dizininde, kültürün kaynakları depolayan her yerelleştirilmiş kültür için ayrı bir alt dizin olmalıdır. Alt ad kültür adı ile aynı olmalıdır. Alternatif olarak, genel derleme önbelleğinde uydu bütünleştirilmiş kodlarınızı depolayabilirsiniz. Bu durumda, derlemenin tanımlayıcı ad kültür bilgilerini bileşeninin kültürü belirtmeniz gerekir. (Bkz [yükleme uydu derlemeleri genel derleme önbelleğinde](#SN) bu konunun ilerleyen bölümlerinde.)  
+- Uygulama dizininde, kültürün kaynakları depolayan her yerelleştirilmiş kültür için ayrı bir alt dizin olmalıdır. Alt ad kültür adı ile aynı olmalıdır. Alternatif olarak, genel derleme önbelleğinde uydu bütünleştirilmiş kodlarınızı depolayabilirsiniz. Bu durumda, derlemenin tanımlayıcı ad kültür bilgilerini bileşeninin kültürü belirtmeniz gerekir. (Bkz [yükleme uydu derlemeleri genel derleme önbelleğinde](#SN) bu konunun ilerleyen bölümlerinde.)  
   
     > [!NOTE]
     >  Uygulamanızı subcultures için kaynaklar içeriyorsa, her alt ayrı bir alt dizinde uygulama dizinine yerleştirin. Kendi ana kültürün dizin alt dizinler subcultures yerleştirmeyin.  
   
--   Uydu derleme uygulama ile aynı ada sahip olmalıdır ve dosya adı uzantısını kullanmanız gerekir ". resources.dll". Örneğin, bir uygulama Example.exe adlandırılmışsa, her bir uydu derlemesini adını Example.resources.dll olmalıdır. Uydu derleme adı kaynak dosya kültürünü göstermez unutmayın. Ancak, uydu derleme kültürü belirten bir dizinde görünür.  
+- Uydu derleme uygulama ile aynı ada sahip olmalıdır ve dosya adı uzantısını kullanmanız gerekir ". resources.dll". Örneğin, bir uygulama Example.exe adlandırılmışsa, her bir uydu derlemesini adını Example.resources.dll olmalıdır. Uydu derleme adı kaynak dosya kültürünü göstermez unutmayın. Ancak, uydu derleme kültürü belirten bir dizinde görünür.  
   
--   Uydu derlemesinin kültürle ilgili bilgileri derlemenin meta verilerde eklenmesi gerekir. Kültür adı uydu derleme meta verilerini depolamak için belirttiğiniz `/culture` seçeneğini kullandığınızda [Assembly Linker](../../../docs/framework/tools/al-exe-assembly-linker.md) kaynakları uydu derlemede katıştırmak için.  
+- Uydu derlemesinin kültürle ilgili bilgileri derlemenin meta verilerde eklenmesi gerekir. Kültür adı uydu derleme meta verilerini depolamak için belirttiğiniz `/culture` seçeneğini kullandığınızda [Assembly Linker](../../../docs/framework/tools/al-exe-assembly-linker.md) kaynakları uydu derlemede katıştırmak için.  
   
  İçinde yüklemiyorsanız uygulamalar için bir örnek dizin yapısını ve konum gereksinimleri aşağıdaki çizimde [genel derleme önbelleği](../../../docs/framework/app-domains/gac.md). .Txt ve .resources uzantılı öğeleri son uygulama ile gelmeyecektir. Bu, son uydu kaynak derlemeleri oluşturmak için kullanılan ara kaynak dosyalarıdır. Bu örnekte, .resx dosyalarını .txt dosyaları için alternatif. Daha fazla bilgi için [kaynakları paketleme ve dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). 
  
@@ -97,11 +97,11 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 3. Ek kültürleri (en-US, fr-FR ve ru-RU) için destek uygulamaya aşağıdaki şekilde ekleyin:  
   
-    -   En-US veya İngilizce (ABD) kültürü desteklemek için Greeting.en-US.resx veya Greeting.en US.txt adlı bir kaynak dosyası oluşturun ve adlı tek bir dize depolamak `HelloString` "Merhaba Dünya!" değeri olan  
+    - En-US veya İngilizce (ABD) kültürü desteklemek için Greeting.en-US.resx veya Greeting.en US.txt adlı bir kaynak dosyası oluşturun ve adlı tek bir dize depolamak `HelloString` "Merhaba Dünya!" değeri olan  
   
-    -   Fr-FR ya da Fransızca (Fransa) kültürü desteklemek için Greeting.fr-FR.resx veya Greeting.fr FR.txt adlı bir kaynak dosyası oluşturun ve adlı tek bir dize depolamak `HelloString` "Salut tout le monde!" değeri olan  
+    - Fr-FR ya da Fransızca (Fransa) kültürü desteklemek için Greeting.fr-FR.resx veya Greeting.fr FR.txt adlı bir kaynak dosyası oluşturun ve adlı tek bir dize depolamak `HelloString` "Salut tout le monde!" değeri olan  
   
-    -   Ru-RU veya Rusça (Rusya) kültürü desteklemek için Greeting.ru RU.resx veya Greeting.ru RU.txt adlı bir kaynak dosyası oluşturun ve adlı tek bir dize depolamak `HelloString` "Всем привет!" değeri olan  
+    - Ru-RU veya Rusça (Rusya) kültürü desteklemek için Greeting.ru RU.resx veya Greeting.ru RU.txt adlı bir kaynak dosyası oluşturun ve adlı tek bir dize depolamak `HelloString` "Всем привет!" değeri olan  
   
 4. Kullanım [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) her bir metin veya XML kaynak dosyası bir ikili .resources dosyasına derlemek için. Çıktı, .resx veya .txt dosyaları, ancak bir .resources uzantısını olarak aynı kök dosya adı olan dosyalar kümesidir. Örneğin Visual Studio ile oluşturma, derleme işlemi otomatik olarak gerçekleştirilir. Visual Studio kullanmıyorsanız, .resx dosyalarını .resources dosyalarına derlemek için aşağıdaki komutları çalıştırın:  
   
@@ -226,11 +226,11 @@ gacutil -i:StringLibrary.resources.dll
   
 5. Ek kültürleri (en-US, fr-FR ve ru-RU kültürler) için destek uygulamaya aşağıdaki şekilde ekleyin:  
   
-    -   "En-US" ya da İngilizce (ABD) kültürü desteklemek için Strings.en-US.resx veya Strings.en US.txt adlı bir kaynak dosyası oluşturun ve adlı tek bir dize depolamak `Greeting` değeri olan "Hello!".  
+    - "En-US" ya da İngilizce (ABD) kültürü desteklemek için Strings.en-US.resx veya Strings.en US.txt adlı bir kaynak dosyası oluşturun ve adlı tek bir dize depolamak `Greeting` değeri olan "Hello!".  
   
-    -   "Fr-FR" ya da Fransızca (Fransa) kültürü desteklemek için Strings.fr-FR.resx veya Strings.fr FR.txt adlı bir kaynak dosyası oluşturun ve adlı tek bir dize depolamak `Greeting` "İyi günlüğü!" değeri olan  
+    - "Fr-FR" ya da Fransızca (Fransa) kültürü desteklemek için Strings.fr-FR.resx veya Strings.fr FR.txt adlı bir kaynak dosyası oluşturun ve adlı tek bir dize depolamak `Greeting` "İyi günlüğü!" değeri olan  
   
-    -   Rusça (Rusya) kültürü ve "ru-RU" desteklemek için Strings.ru RU.resx veya Strings.ru RU.txt adlı bir kaynak dosyası oluşturun ve adlı tek bir dize depolamak `Greeting` "Привет!" değeri olan  
+    - Rusça (Rusya) kültürü ve "ru-RU" desteklemek için Strings.ru RU.resx veya Strings.ru RU.txt adlı bir kaynak dosyası oluşturun ve adlı tek bir dize depolamak `Greeting` "Привет!" değeri olan  
   
 6. Kullanım [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) her bir metin veya XML kaynak dosyası bir ikili .resources dosyasına derlemek için. Çıktı, .resx veya .txt dosyaları, ancak bir .resources uzantısını olarak aynı kök dosya adı olan dosyalar kümesidir. Örneğin Visual Studio ile oluşturma, derleme işlemi otomatik olarak gerçekleştirilir. Visual Studio kullanmıyorsanız, .resx dosyalarını .resources dosyalarına derlemek için aşağıdaki komutu çalıştırın:  
   

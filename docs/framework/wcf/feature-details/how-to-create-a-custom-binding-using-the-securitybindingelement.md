@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787861"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma
 Windows Communication Foundation (WCF) yapılandırılabilir, ancak tam esneklik sağlamaz, WCF destekleyen tüm güvenlik seçeneklerini yapılandırırken birçok sistem tarafından sağlanan bağlamalar içerir. Bu konu, tek tek bağlama öğelerini doğrudan özel bağlama oluşturma işlemini gösterir ve böyle bir bağlamanın oluştururken belirttiğiniz güvenlik ayarlarından bazıları vurgular. Özel bağlamalar oluşturma hakkında daha fazla bilgi için bkz. [bağlamaları genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md).  
@@ -32,22 +32,22 @@ Windows Communication Foundation (WCF) yapılandırılabilir, ancak tam esneklik
   
  Ek sınıflar, taşıma düzeyi güvenliği sağlandığında kullanılır:  
   
--   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
 ## <a name="required-binding-elements"></a>Bağlama öğelerinin gerekli  
  Çok sayıda içine bir bağlama birleştirilebilir olası bağlama öğeleri vardır. Bu birleşim geçerli değildir. Bu bölümde, bir güvenlik bağlama bulunması gereken gerekli öğeler açıklanmaktadır.  
   
  Geçerli güvenlik bağlamaları, aşağıdakiler dahil olmak üzere birçok faktöre bağlıdır:  
   
--   Güvenlik modu.  
+- Güvenlik modu.  
   
--   Aktarım Protokolü.  
+- Aktarım Protokolü.  
   
--   Sözleşmede belirtilen ileti değişim deseni (MEP).  
+- Sözleşmede belirtilen ileti değişim deseni (MEP).  
   
  Aşağıdaki tabloda her bir önceki faktörler bileşimi geçerli bağlama öğesi yığın yapılandırmalarını gösterir. Bunların en az gereksinimleri olduğunu unutmayın. İleti bağlama öğeleri, işlem bağlama öğeleri ve diğer bağlama öğeleri kodlama gibi bağlamaya ek bağlama öğeleri ekleyebilirsiniz.  
   

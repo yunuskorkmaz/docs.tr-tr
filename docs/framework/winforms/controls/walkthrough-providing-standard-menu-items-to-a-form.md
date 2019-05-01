@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
 ms.openlocfilehash: b4957a3f2efcb31594806a188e3d3bb10c2dac09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792216"
 ---
 # <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>İzlenecek yol: Bir Forma Standart Menü Öğeleri Sağlama
 Formlarınızla için standart bir menü sağlayabilir <xref:System.Windows.Forms.MenuStrip> denetimi.  
   
  Bu izlenecek yolda nasıl kullanılacağını gösterir. bir <xref:System.Windows.Forms.MenuStrip> standart menü oluşturmak için denetimi. Bir kullanıcı bir menü öğesi seçtiğinde, form ayrıca yanıt verir. Aşağıdaki görevler bu kılavuzda gösterilen:  
   
--   Bir Windows Forms projesi oluşturma.  
+- Bir Windows Forms projesi oluşturma.  
   
--   Standart menü oluşturma.  
+- Standart menü oluşturma.  
   
--   Oluşturma bir <xref:System.Windows.Forms.StatusStrip> denetimi.  
+- Oluşturma bir <xref:System.Windows.Forms.StatusStrip> denetimi.  
   
--   Menü öğesi seçimi işleme.  
+- Menü öğesi seçimi işleme.  
   
  İşlemi tamamladığınızda, menü öğesi seçimleri görüntüleyen bir standart menü formla olacaktır bir <xref:System.Windows.Forms.StatusStrip> denetimi.  
   
@@ -40,7 +40,7 @@ Formlarınızla için standart bir menü sağlayabilir <xref:System.Windows.Form
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yolu tamamlamak için şunlar gerekir:  
   
--   Oluşturma ve Windows Forms application projesi Visual Studio'nun yüklü bilgisayarda çalıştırmak için yeterli izinleri yok.  
+- Oluşturma ve Windows Forms application projesi Visual Studio'nun yüklü bilgisayarda çalıştırmak için yeterli izinleri yok.  
   
 ## <a name="creating-the-project"></a>Projeyi Oluşturma  
  İlk adım projeyi oluşturmak ve formu ayarlamaktır.  
@@ -113,11 +113,11 @@ Formlarınızla için standart bir menü sağlayabilir <xref:System.Windows.Form
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Bu kılavuzda, bir form içeren bir standart menü oluşturdunuz. Kullanabileceğiniz <xref:System.Windows.Forms.ToolStrip> birçok başka amaçlarla denetimlerin ailesi:  
   
--   Sahip, denetimler için kısayol menüleri oluşturma <xref:System.Windows.Forms.ContextMenuStrip>. Daha fazla bilgi için [ContextMenu bileşenine genel bakış](contextmenu-component-overview-windows-forms.md).  
+- Sahip, denetimler için kısayol menüleri oluşturma <xref:System.Windows.Forms.ContextMenuStrip>. Daha fazla bilgi için [ContextMenu bileşenine genel bakış](contextmenu-component-overview-windows-forms.md).  
   
--   Yerleştirme ile birden çok belge arabirimi (MDI) form oluşturma <xref:System.Windows.Forms.ToolStrip> kontrol eder. Daha fazla bilgi için [izlenecek yol: Menü birleştirme ve ToolStrip denetimleri içeren MDI formu oluşturma](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
+- Yerleştirme ile birden çok belge arabirimi (MDI) form oluşturma <xref:System.Windows.Forms.ToolStrip> kontrol eder. Daha fazla bilgi için [izlenecek yol: Menü birleştirme ve ToolStrip denetimleri içeren MDI formu oluşturma](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
--   Verin, <xref:System.Windows.Forms.ToolStrip> profesyonel bir görünümünü denetler. Daha fazla bilgi için [nasıl yapılır: Bir uygulama için ToolStrip oluşturucusunu ayarlama](how-to-set-the-toolstrip-renderer-for-an-application.md).  
+- Verin, <xref:System.Windows.Forms.ToolStrip> profesyonel bir görünümünü denetler. Daha fazla bilgi için [nasıl yapılır: Bir uygulama için ToolStrip oluşturucusunu ayarlama](how-to-set-the-toolstrip-renderer-for-an-application.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

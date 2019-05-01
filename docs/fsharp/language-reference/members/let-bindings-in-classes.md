@@ -3,11 +3,11 @@ title: Sınıflardaki let Bağlamaları
 description: Özel alanlar ve özel işlevler için tanımlamayı öğrenin F# kullanarak sınıfları 'let' sınıf tanımında bağlar.
 ms.date: 05/16/2016
 ms.openlocfilehash: 03dd583a141971284e6a8ddaad02272236cd1e4c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903778"
 ---
 # <a name="let-bindings-in-classes"></a>Sınıflardaki let Bağlamaları
 

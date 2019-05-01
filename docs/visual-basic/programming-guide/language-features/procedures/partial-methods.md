@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 ms.openlocfilehash: 765a667f18340c53909c3ff1e9fcc5f2ffc0f9bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791943"
 ---
 # <a name="partial-methods-visual-basic"></a>Kısmi Yöntemler (Visual Basic)
 Kısmi yöntemler, koda Özel mantık eklemek geliştiricilerin sağlar. Genellikle, kod tasarımcı tarafından oluşturulan bir sınıf parçasıdır. Kısmi yöntemler bir kod Oluşturucu tarafından oluşturulan bir kısmi sınıf tanımlanır ve bunlar genellikle bir şey değiştirildiğini bildirim sağlamak için kullanılır. Bunlar Geliştirici değişikliğe yanıt özel davranışını belirtmek etkinleştirin.  
@@ -33,11 +33,11 @@ End Sub
   
  Tanımı aşağıdaki koşulları karşılaması gerekir:  
   
--   Yöntem olmalıdır bir `Sub`değil bir `Function`.  
+- Yöntem olmalıdır bir `Sub`değil bir `Function`.  
   
--   Yöntemin gövdesi boş bırakılmalıdır.  
+- Yöntemin gövdesi boş bırakılmalıdır.  
   
--   Erişim değiştiricisi olmalıdır `Private`.  
+- Erişim değiştiricisi olmalıdır `Private`.  
   
 ## <a name="implementation"></a>Uygulama  
  Uygulama, kısmi yöntem gövdesinde doldurma öncelikli olarak oluşur. Uygulama, genellikle ayrı bir kısmi sınıf tanımından olduğundan ve oluşturulan kodun genişletmek isteyen bir geliştirici tarafından yazılan.  

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e8a842dd531576b1029c3924d12b1a4bd95bde37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791566"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress Yöntemi
 Belirtilen iş parçacığı kapsamında belirtilen statik iş parçacığı alanı adresini alır.  
@@ -53,9 +53,9 @@ HRESULT GetThreadStaticAddress(
 ## <a name="remarks"></a>Açıklamalar  
  `GetThreadStaticAddress` Yöntemi aşağıdakilerden birini döndürebilir:  
   
--   Bir CORPROF_E_DATAINCOMPLETE belirtilen statik alanı belirtilen bağlam bir adres değil atandıysa HRESULT.  
+- Bir CORPROF_E_DATAINCOMPLETE belirtilen statik alanı belirtilen bağlam bir adres değil atandıysa HRESULT.  
   
--   Adresleri nesnelerin çöp koleksiyonu yığınında olabilir. Çöp toplamanın ardından bu adresler geçersiz hale gelebilir bunu sonra atık toplama profil oluşturucular geçerli olduğunu varsayın değil.  
+- Adresleri nesnelerin çöp koleksiyonu yığınında olabilir. Çöp toplamanın ardından bu adresler geçersiz hale gelebilir bunu sonra atık toplama profil oluşturucular geçerli olduğunu varsayın değil.  
   
  Bir sınıfın sınıf oluşturucusu tamamlanmadan önce `GetThreadStaticAddress` bazı statik alanlar zaten başlatılmış olabilir ancak tüm kendi statik alanları için CORPROF_E_DATAINCOMPLETE döndürür ve çöp toplama nesneleri kök dizini değiştirme.  
   

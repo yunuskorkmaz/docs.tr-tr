@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30020
 ms.assetid: 228afebd-1203-4bd3-8d7a-c5c56f3cedc4
 ms.openlocfilehash: b828de196a12128a9f34ee1f9ff1e57fee22c687
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61799196"
 ---
 # <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a>'Is' için başvuru türünde işlenenler gerekir, ancak bu işlenen değer türünde '\<typename >'
 `Is` Karşılaştırma işleci iki nesne değişkenini aynı örneğe atıfta olup olmadığını belirler. Bu karşılaştırma, değer türleri için tanımlanmadı.  
@@ -21,7 +21,7 @@ ms.locfileid: "58843857"
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Uygun aritmetik karşılaştırma işlecini kullanın veya `Like` iki veri türünü karşılaştırmak için işleci.  
+- Uygun aritmetik karşılaştırma işlecini kullanın veya `Like` iki veri türünü karşılaştırmak için işleci.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Spring property [Windows Forms]
 ms.assetid: 18bde842-a93c-48dd-9db3-15738a1775ce
 ms.openlocfilehash: 7d79a885f49168c3883259826e7b8ae62eec1dab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785781"
 ---
 # <a name="how-to-use-the-spring-property-interactively-in-a-statusstrip"></a>Nasıl yapılır: Bir StatusStrip içinde Spring Özelliğini Etkileşimli Kullanma
 Kullanabileceğiniz <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> konumlandırmak için özellik bir <xref:System.Windows.Forms.ToolStripStatusLabel> denetimine bir <xref:System.Windows.Forms.StatusStrip> denetimi. <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> Özelliği olup olmadığını <xref:System.Windows.Forms.ToolStripStatusLabel> denetimi otomatik olarak mevcut alan doldurulur üzerinde <xref:System.Windows.Forms.StatusStrip> denetimi.  
@@ -33,7 +33,7 @@ Kullanabileceğiniz <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> k
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   System.Windows.Forms System.Design ve System.Drawing derlemelerine başvurular.  
+- System.Windows.Forms System.Design ve System.Drawing derlemelerine başvurular.  
   
  Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   

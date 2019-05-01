@@ -11,11 +11,11 @@ helpviewer_keywords:
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
 ms.openlocfilehash: c016722332dafa3d3be91a1e9e98cc0ce9a49717
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908004"
 ---
 # <a name="nested-control-structures-visual-basic"></a>İç İçe Geçmiş Denetim Yapıları (Visual Basic)
 Örneğin denetim ifadeleri diğer denetim ifadelerine içine yerleştirebilirsiniz bir `If...Then...Else` içinde engelleyecek bir `For...Next` döngü. Başka bir denetim deyiminin içinde yer bir denetim deyimidir olduğu söylenir *iç içe geçmiş*.  

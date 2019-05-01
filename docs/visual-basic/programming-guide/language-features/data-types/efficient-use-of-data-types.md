@@ -14,11 +14,11 @@ helpviewer_keywords:
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
 ms.openlocfilehash: 0b517bca3a9e296eb891e30df91c1d32eb357432
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907224"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Veri Türlerinin Etkili Kullanımı (Visual Basic)
 Bildirilmemiş değişkenler ve bir veri türü bildirilen değişkenler atanmış `Object` veri türü. Bu hızlı yazma kolaylaştırır, ancak bunları daha yavaş çalışmasına neden olabilir.  
@@ -26,11 +26,11 @@ Bildirilmemiş değişkenler ve bir veri türü bildirilen değişkenler atanmı
 ## <a name="strong-typing"></a>Yazarak güçlü  
  Tüm değişkenlerin veri türlerini belirtme olarak bilinir *güçlü yazım, yazım*. Güçlü yazım, yazım kullanarak çeşitli avantajları vardır:  
   
--   Bu değişkenleri için IntelliSense desteği sağlar. Bu kod yazarken özelliklerini ve diğer üyeleri görmenizi sağlar.  
+- Bu değişkenleri için IntelliSense desteği sağlar. Bu kod yazarken özelliklerini ve diğer üyeleri görmenizi sağlar.  
   
--   Bu derleyici tür denetimi yararlanır. Bu, çalışma zamanında taşma gibi hatalar nedeniyle başarısız olabilir deyimleri yakalar. Ayrıca bunları desteği olmayan nesneler üzerinde yöntemlere yapılan çağrılar yakalar.  
+- Bu derleyici tür denetimi yararlanır. Bu, çalışma zamanında taşma gibi hatalar nedeniyle başarısız olabilir deyimleri yakalar. Ayrıca bunları desteği olmayan nesneler üzerinde yöntemlere yapılan çağrılar yakalar.  
   
--   Bu, kodunuzun daha hızlı bir şekilde yürütülmesini sonuçlanır.  
+- Bu, kodunuzun daha hızlı bir şekilde yürütülmesini sonuçlanır.  
   
 ## <a name="most-efficient-data-types"></a>En verimli veri türleri  
  Kesir hiçbir zaman içeren değişkenlerini tam sayı veri türleri nonintegral türleri daha büyük/küçük harf etkilidir. Visual Basic'te `Integer` ve `UInteger` en verimli sayısal türleri.  

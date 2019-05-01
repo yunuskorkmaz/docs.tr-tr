@@ -13,8 +13,8 @@ ms.openlocfilehash: 9dda2cf99bdd3152e234bec4a143a7ab5ebd4cae
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61870207"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework'te sürüm uyumluluğu
 
@@ -51,7 +51,7 @@ Uygulamada bu uyumluluk .NET Framework ve programlama tekniklerindeki görünü�
 
 Uygulama veya bileşen .NET Framework 4.5 (.NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 veya 4.8 onun nokta sürümleri dahil) üzerinde beklenen şekilde çalışmazsa, aşağıdaki denetim listelerini kullanın:
 
--  Uygulamanızı geliştirilmiştir, .NET Framework 4.0 ile başlayan .NET Framework'ün herhangi bir sürümünü çalıştırmak için bkz: [.NET Framework'te uygulama uyumluluğu](application-compatibility.md) hedeflenen .NET Framework sürümünüz arasında değişiklik listesini oluşturmak için ve uygulamanızın üzerinde çalıştığı sürümü.
+- Uygulamanızı geliştirilmiştir, .NET Framework 4.0 ile başlayan .NET Framework'ün herhangi bir sürümünü çalıştırmak için bkz: [.NET Framework'te uygulama uyumluluğu](application-compatibility.md) hedeflenen .NET Framework sürümünüz arasında değişiklik listesini oluşturmak için ve uygulamanızın üzerinde çalıştığı sürümü.
 
 - Bir .NET Framework 3.5 uygulamanız varsa, ayrıca bkz: [.NET Framework 4 geçiş sorunları](../migration-guide/net-framework-4-migration-issues.md).
 

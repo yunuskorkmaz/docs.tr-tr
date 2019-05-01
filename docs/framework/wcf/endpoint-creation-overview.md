@@ -8,11 +8,11 @@ helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
 ms.openlocfilehash: 6aecad3719fff98a2e834cff6eee9cfe39a699aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858461"
 ---
 # <a name="endpoint-creation-overview"></a>Uç Noktası Oluşturma Genel Bakış
 Bir Windows Communication Foundation (WCF) hizmetiyle kurulan tüm iletişimlerde üzerinden gerçekleşir *uç noktaları* hizmeti. Uç noktaları, istemcilerin bir WCF hizmeti sunan işlevine erişim sağlar. Bu bölümde, bir uç nokta yapısını açıklar ve bir uç nokta yapılandırması ve kodda nasıl tanımlanacağını açıklar.  
@@ -20,11 +20,11 @@ Bir Windows Communication Foundation (WCF) hizmetiyle kurulan tüm iletişimlerd
 ## <a name="the-structure-of-an-endpoint"></a>Bir uç nokta yapısı  
  Her uç nokta uç noktası, istemci uç noktasıyla nasıl iletişim kurabilir belirten bir bağlama ve uygun olan yöntemler tanımlayan bir sözleşme nerede bulacağını gösteren bir adres içeriyor.  
   
--   **Adres**. Adres benzersiz şekilde uç noktayı tanımlar ve olası tüketiciler hizmet nerede olduğunu bildirir. WCF nesne modeli tarafından temsil edilir <xref:System.ServiceModel.EndpointAddress> Tekdüzen Kaynak Tanımlayıcısı (URI) ve bir kimlik, bazı Web Hizmetleri Açıklama Dili (WSDL) öğeleri ve isteğe bağlı bir koleksiyonunu içeren adres özelliklerini içeren adresi üstbilgileri. İsteğe bağlı üst bilgileri tanımlamak veya uç nokta ile etkileşime geçmek için ek ayrıntılı adresleme bilgi sağlar. Daha fazla bilgi için [bir uç nokta adresi belirtme](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+- **Adres**. Adres benzersiz şekilde uç noktayı tanımlar ve olası tüketiciler hizmet nerede olduğunu bildirir. WCF nesne modeli tarafından temsil edilir <xref:System.ServiceModel.EndpointAddress> Tekdüzen Kaynak Tanımlayıcısı (URI) ve bir kimlik, bazı Web Hizmetleri Açıklama Dili (WSDL) öğeleri ve isteğe bağlı bir koleksiyonunu içeren adres özelliklerini içeren adresi üstbilgileri. İsteğe bağlı üst bilgileri tanımlamak veya uç nokta ile etkileşime geçmek için ek ayrıntılı adresleme bilgi sağlar. Daha fazla bilgi için [bir uç nokta adresi belirtme](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
--   **Bağlama**. Bağlama uç noktasıyla iletişim nasıl belirtir. Bağlama nasıl uç nokta kullanmak için hangi Aktarım Protokolü dahil olmak üzere dünya ile (örneğin, TCP veya HTTP) hangi (örneğin, metin veya ikili) iletileri için kullanılacak kodlama iletişim kurar ve hangi güvenlik gereksinimleri (gereken belirtir. Örneğin, Güvenli Yuva Katmanı [SSL] veya SOAP ileti güvenliği). Daha fazla bilgi için [hizmetlerini yapılandırın ve istemciler için bağlamaları kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
+- **Bağlama**. Bağlama uç noktasıyla iletişim nasıl belirtir. Bağlama nasıl uç nokta kullanmak için hangi Aktarım Protokolü dahil olmak üzere dünya ile (örneğin, TCP veya HTTP) hangi (örneğin, metin veya ikili) iletileri için kullanılacak kodlama iletişim kurar ve hangi güvenlik gereksinimleri (gereken belirtir. Örneğin, Güvenli Yuva Katmanı [SSL] veya SOAP ileti güvenliği). Daha fazla bilgi için [hizmetlerini yapılandırın ve istemciler için bağlamaları kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
--   **Hizmet sözleşmesini**. Hizmet sözleşmesi istemciye uç noktasını kullanıma sunar işlevler açıklanmaktadır. Bir anlaşma, bir istemci çağırabilirsiniz işlemleri, ileti biçimi ve giriş parametreleri veya işlem ve işleme veya istemci bekleyebileceğiniz yanıt iletisi türü çağırmak için gereken veri türünü belirtir. Sözleşmeler üç temel türde karşılık gelen temel ileti exchange desenlerini (MEPs): veri birimi (tek yönlü), istek/yanıt ve çift yönlü (çift yönlü). Hizmet sözleşmesi, erişilen, belirli veri türleri ve ileti formatları gerektiren veri ve ileti sözleşmeleri de kullanabilirsiniz. Bir hizmet sözleşmesini tanımlama hakkında daha fazla bilgi için bkz. [Hizmet sözleşmeleri tasarlama](../../../docs/framework/wcf/designing-service-contracts.md). Bir istemci da çift yönlü MEP hizmette iletileri alacak şekilde geri çağırma anlaşması adlı bir hizmet tarafından tanımlanan sözleşme uygulamak için gerekli unutmayın. Daha fazla bilgi için [çift yönlü Hizmetler](../../../docs/framework/wcf/feature-details/duplex-services.md).  
+- **Hizmet sözleşmesini**. Hizmet sözleşmesi istemciye uç noktasını kullanıma sunar işlevler açıklanmaktadır. Bir anlaşma, bir istemci çağırabilirsiniz işlemleri, ileti biçimi ve giriş parametreleri veya işlem ve işleme veya istemci bekleyebileceğiniz yanıt iletisi türü çağırmak için gereken veri türünü belirtir. Sözleşmeler üç temel türde karşılık gelen temel ileti exchange desenlerini (MEPs): veri birimi (tek yönlü), istek/yanıt ve çift yönlü (çift yönlü). Hizmet sözleşmesi, erişilen, belirli veri türleri ve ileti formatları gerektiren veri ve ileti sözleşmeleri de kullanabilirsiniz. Bir hizmet sözleşmesini tanımlama hakkında daha fazla bilgi için bkz. [Hizmet sözleşmeleri tasarlama](../../../docs/framework/wcf/designing-service-contracts.md). Bir istemci da çift yönlü MEP hizmette iletileri alacak şekilde geri çağırma anlaşması adlı bir hizmet tarafından tanımlanan sözleşme uygulamak için gerekli unutmayın. Daha fazla bilgi için [çift yönlü Hizmetler](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
  Kesin kod kullanarak veya bildirimli olarak yapılandırma yoluyla bir hizmet için uç nokta belirtilebilir. Uç nokta belirtilmezse çalışma zamanı hizmeti tarafından uygulanan her bir hizmet sözleşmesi için her bir temel adres için bir varsayılan uç nokta ekleyerek varsayılan uç noktaları sağlar. Bağlamalarında ve adreslerinde dağıtılan bir hizmette hizmet geliştirilen kullandığı olanlardan genellikle farklı olduğundan uç noktaları kodda tanımlama genellikle pratik değildir. Genel olarak, kod yerine yapılandırma kullanarak hizmet uç noktaları tanımlamak daha yararlı olur. Bağlama tutulması ve adresleme bilgilerini kodunun dışında yeniden derleyin ve uygulamayı yeniden dağıtmak zorunda kalmadan değiştirmek sağlar.  
   
@@ -34,13 +34,13 @@ Bir Windows Communication Foundation (WCF) hizmetiyle kurulan tüm iletişimlerd
 ## <a name="defining-endpoints-in-code"></a>Uç noktaları kodda tanımlama  
  Aşağıdaki örnek, aşağıdaki kodda bir uç nokta belirtmek verilmektedir:  
   
--   Sözleşme tanımlamasına bir `IEcho` birisinin adını ve yankı yanıtı ile kabul eden hizmet türü "Hello \<name >!".  
+- Sözleşme tanımlamasına bir `IEcho` birisinin adını ve yankı yanıtı ile kabul eden hizmet türü "Hello \<name >!".  
   
--   Uygulama bir `Echo` hizmet tarafından tanımlanan tür `IEcho` sözleşme.  
+- Uygulama bir `Echo` hizmet tarafından tanımlanan tür `IEcho` sözleşme.  
   
--   Bir uç nokta adresini belirtin `http://localhost:8000/Echo` hizmeti.  
+- Bir uç nokta adresini belirtin `http://localhost:8000/Echo` hizmeti.  
   
--   Yapılandırma `Echo` kullanarak hizmet bir <xref:System.ServiceModel.WSHttpBinding> bağlama.  
+- Yapılandırma `Echo` kullanarak hizmet bir <xref:System.ServiceModel.WSHttpBinding> bağlama.  
   
 ```csharp  
 Namespace Echo  

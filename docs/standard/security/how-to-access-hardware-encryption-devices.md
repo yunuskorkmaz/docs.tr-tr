@@ -16,11 +16,11 @@ ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33af618ac3971df76683fd64346e1aa1e5977177
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795209"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>Nasıl yapılır: Donanım Şifreleme Cihazlarına Erişim
 Kullanabileceğiniz <xref:System.Security.Cryptography.CspParameters> donanım şifreleme cihazlarına erişim için sınıf. Örneğin, bu sınıf, uygulamanızın bir akıllı kart, donanım rastgele sayı üretici veya belirli bir şifreleme algoritması bir donanım uygulaması ile tümleştirmek için kullanabilirsiniz.  
@@ -54,8 +54,8 @@ Kullanabileceğiniz <xref:System.Security.Cryptography.CspParameters> donanım �
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   Dahil <xref:System> ve <xref:System.Security.Cryptography> ad alanları.  
+- Dahil <xref:System> ve <xref:System.Security.Cryptography> ad alanları.  
   
--   Bir akıllı kart okuyucu ve sürücüleri yüklü olmalıdır.  
+- Bir akıllı kart okuyucu ve sürücüleri yüklü olmalıdır.  
   
--   Başlatması gerekir <xref:System.Security.Cryptography.CspParameters> kart okuyucu için belirli bilgileri kullanarak nesne.  Daha fazla bilgi için kart okuyucusu belgelerine bakın.
+- Başlatması gerekir <xref:System.Security.Cryptography.CspParameters> kart okuyucu için belirli bilgileri kullanarak nesne.  Daha fazla bilgi için kart okuyucusu belgelerine bakın.

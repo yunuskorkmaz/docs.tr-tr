@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
 ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791722"
 ---
 # <a name="federationconfiguration"></a>\<Federationconfiguration'a >
 Yapılandırır <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) ve <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) kullanırken, Federasyon kimlik doğrulaması WS-Federation protokolü aracılığıyla. Yapılandırır <xref:System.Security.Claims.ClaimsAuthorizationManager> kullanırken <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> veya <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> beyana dayalı erişim denetimi sağlamak için sınıf.  
@@ -52,9 +52,9 @@ Yapılandırır <xref:System.IdentityModel.Services.WSFederationAuthenticationMo
 ## <a name="remarks"></a>Açıklamalar  
  \<Federationconfiguration'a > öğesi iki farklı senaryolarda ayarları sağlar:  
   
--   WS-Federasyon Pasif bir Web uygulamasında kullanırken, yapılandırdığınız ayarları ögesinin <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) ve <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM). Ayrıca, güvenlik belirteci işleyicileri ve sertifikaları ve talep Yetkilendirme Yöneticisi'ni ve talepler kimlik doğrulama Yöneticisi gibi bileşenleri yapılandırmak için kullanılacak kimlik yapılandırması başvuruyor.  
+- WS-Federasyon Pasif bir Web uygulamasında kullanırken, yapılandırdığınız ayarları ögesinin <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) ve <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM). Ayrıca, güvenlik belirteci işleyicileri ve sertifikaları ve talep Yetkilendirme Yöneticisi'ni ve talepler kimlik doğrulama Yöneticisi gibi bileşenleri yapılandırmak için kullanılacak kimlik yapılandırması başvuruyor.  
   
--   Kullanırken <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> veya <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> kodunuzda beyana dayalı erişim denetimi sağlamak için sınıf, talep Yetkilendirme Yöneticisi'ni ve yetkilendirme sağlamak için kullanılan ilke yapılandırır kimlik yapılandırma öğesine başvuruda bulunuyor kararları. Bu da pasif Web senaryoları olmayan senaryolarda geçerlidir; Örneğin, Windows Communication Foundation (WCF) uygulamaları veya Web tabanlı yer almayan bir uygulama. Uygulama Pasif bir Web uygulaması değilse [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) öğesini (ve alt ilke öğelerine, varsa) tarafından başvurulan kimlik yapılandırmasının `<federationConfiguration>` öğesi yalnızca ayarlar uygulanır. Diğerleri yoksayılır.  
+- Kullanırken <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> veya <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> kodunuzda beyana dayalı erişim denetimi sağlamak için sınıf, talep Yetkilendirme Yöneticisi'ni ve yetkilendirme sağlamak için kullanılan ilke yapılandırır kimlik yapılandırma öğesine başvuruda bulunuyor kararları. Bu da pasif Web senaryoları olmayan senaryolarda geçerlidir; Örneğin, Windows Communication Foundation (WCF) uygulamaları veya Web tabanlı yer almayan bir uygulama. Uygulama Pasif bir Web uygulaması değilse [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) öğesini (ve alt ilke öğelerine, varsa) tarafından başvurulan kimlik yapılandırmasının `<federationConfiguration>` öğesi yalnızca ayarlar uygulanır. Diğerleri yoksayılır.  
   
  Senaryo bağımsız olarak, çalışma zamanı varsayılan Federasyon yapılandırması yükler. Davranışı şu şekilde tanımlanır:  
   

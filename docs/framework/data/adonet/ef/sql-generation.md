@@ -3,11 +3,11 @@ title: SQL Üretimi
 ms.date: 03/30/2017
 ms.assetid: 0e16aa02-d458-4418-a765-58b42aad9315
 ms.openlocfilehash: 108a68f74849c7fa1418775c2a37db06d9d947ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879159"
 ---
 # <a name="sql-generation"></a>SQL Üretimi
 Sağlayıcı için yazdığınız zaman [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], çevirme gerekir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] belirli bir veritabanı için SQL Server Transact-SQL veya PL/SQL Oracle gibi anlayabilmeniz SQL içine ağaçları komutu. Bu bölümde, için SQL oluşturma bileşeni (için SELECT sorgusu) geliştirme hakkında bilgi edineceksiniz bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sağlayıcısı. Ekleme hakkında bilgi için güncelleştirme ve sorguları silmek için bkz [değişiklik SQL oluşturma](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md).  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
 ms.openlocfilehash: a9f74f025af6dfc5737ea9f4971f68c5ad913e8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793464"
 ---
 # <a name="batching-operations-wcf-data-services"></a>Toplu işlemler (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Destekler toplu işleme isteklerinin bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-bağlı hizmeti. Daha fazla bilgi için [OData: Toplu işleme](https://go.microsoft.com/fwlink/?LinkId=186075). İçinde [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], kullanan her işlem <xref:System.Data.Services.Client.DataServiceContext>Sorguyu yürüten veya veri hizmetine gönderilen ayrı bir istek sonuçlarında değişiklikleri kaydetmeden gibi. İşlem kümesi için mantıksal bir kapsam sürdürmek için operasyonel toplu açıkça tanımlayabilirsiniz. Bu, toplu işlemdeki tüm işlemleri tek bir HTTP isteği veri hizmetine gönderilen, server'ın atomik olarak işlemlerini sağlar ve veri hizmetine gidiş dönüş sayısını azaltan sağlar.  

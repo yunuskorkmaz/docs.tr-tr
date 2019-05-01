@@ -3,11 +3,11 @@ title: CREATEREF (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 489828cf-a335-4449-9360-b0d92eec5481
 ms.openlocfilehash: 6ae4712fb280418ad8cf17cd68a7bbcd9cf3b8a9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59335660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785287"
 ---
 # <a name="createref-entity-sql"></a>CREATEREF (varlık SQL)
 Bir entityset varlık başvuruları fabricates.  

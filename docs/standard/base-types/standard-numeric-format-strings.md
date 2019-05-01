@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a11a9d18999bc7741e12af16d43fba8c03318da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811881"
 ---
 # <a name="standard-numeric-format-strings"></a>Standart Sayısal Biçim Dizeleri
 
 Standart sayısal biçim dizeleri, genel sayısal türleri biçimlendirmek için kullanılır. Standart sayısal biçim dizesi biçimi alır `Axx`burada:  
   
--   `A` tek bir alfabetik karakter adlı *biçim belirticisi*. Beyaz boşluk da dahil olmak üzere birden fazla alfabetik karakter içeren herhangi bir sayısal biçim dizesi, özel bir sayısal biçim dizesi olarak yorumlanır. Daha fazla bilgi için [özel sayısal biçim dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+- `A` tek bir alfabetik karakter adlı *biçim belirticisi*. Beyaz boşluk da dahil olmak üzere birden fazla alfabetik karakter içeren herhangi bir sayısal biçim dizesi, özel bir sayısal biçim dizesi olarak yorumlanır. Daha fazla bilgi için [özel sayısal biçim dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
--   `xx` İsteğe bağlı bir tamsayı olarak adlandırılan *duyarlık belirtici*. Precision belirleyici 0'dan 99'a kadar uzanır ve sonuç basamak sayısını etkiler. Duyarlık belirtici, sayının dize gösterimindeki basamak sayısını kontrol eder unutmayın. Sayının kendisini yuvarlamaz. Bir yuvarlama işlemi gerçekleştirmek için kullanın <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType>, veya <xref:System.Math.Round%2A?displayProperty=nameWithType> yöntemi.  
+- `xx` İsteğe bağlı bir tamsayı olarak adlandırılan *duyarlık belirtici*. Precision belirleyici 0'dan 99'a kadar uzanır ve sonuç basamak sayısını etkiler. Duyarlık belirtici, sayının dize gösterimindeki basamak sayısını kontrol eder unutmayın. Sayının kendisini yuvarlamaz. Bir yuvarlama işlemi gerçekleştirmek için kullanın <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType>, veya <xref:System.Math.Round%2A?displayProperty=nameWithType> yöntemi.  
   
     Zaman *duyarlık belirtici* denetimleri, sonuç dizesinin, sonuç dizesinde kesirli basamakların sayısı sonsuz kesin sonucu en yakın olanında gösterilebilen bir sonuç yuvarlanır birkaç yansıtır. Varsa iki eşit yakın gösterilebilir sonuçları:
     - **.NET Framework ve .NET Core ile .NET Core 2.0 kadar**, çalışma zamanı sonucu daha az önemli basamak ile seçer (diğer bir deyişle, kullanarak <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
@@ -73,13 +73,13 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
 
 Standart bir sayısal biçimli dize, şu iki yoldan biriyle sayısal bir değerin biçimlendirmesini tanımlamak için kullanılabilir:  
   
--   Bir aşırı yüklemesini geçirilebilir `ToString` yöntemin bir `format` parametresi. Aşağıdaki örnek, sayısal bir değer (Bu durumda, en-US kültürü) geçerli kültüründeki para birimi dizesi olarak biçimlendirir.  
+- Bir aşırı yüklemesini geçirilebilir `ToString` yöntemin bir `format` parametresi. Aşağıdaki örnek, sayısal bir değer (Bu durumda, en-US kültürü) geçerli kültüründeki para birimi dizesi olarak biçimlendirir.  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
--   Olarak sağlanabilir `formatString` bağımsız değişken yöntemlerle kullanılan biçim öğesinde <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, ve <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Daha fazla bilgi için [bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md). Aşağıdaki örnek, bir dizeye bir para birimi değeri eklemek için bir biçim öğesi kullanmaktadır.  
+- Olarak sağlanabilir `formatString` bağımsız değişken yöntemlerle kullanılan biçim öğesinde <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, ve <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Daha fazla bilgi için [bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md). Aşağıdaki örnek, bir dizeye bir para birimi değeri eklemek için bir biçim öğesi kullanmaktadır.  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
@@ -91,7 +91,7 @@ Standart bir sayısal biçimli dize, şu iki yoldan biriyle sayısal bir değeri
      [!code-csharp-interactive[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
   
--   Olarak sağlanabilir `formatString` bağımsız değişkeni olarak bir aradeğerlendirme dizesinde ilişkilendirilmiş ifade öğesi. Daha fazla bilgi için [dize ilişkilendirme](../../csharp/language-reference/tokens/interpolated.md) konu C# başvurusu veya [Ara değerli dizeler](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) konuda Visual Basic başvurusu.  
+- Olarak sağlanabilir `formatString` bağımsız değişkeni olarak bir aradeğerlendirme dizesinde ilişkilendirilmiş ifade öğesi. Daha fazla bilgi için [dize ilişkilendirme](../../csharp/language-reference/tokens/interpolated.md) konu C# başvurusu veya [Ara değerli dizeler](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) konuda Visual Basic başvurusu.  
   
  Aşağıdaki bölümlerde her standart sayısal biçim dizesi hakkında ayrıntılı bilgi sağlanmaktadır.  
   

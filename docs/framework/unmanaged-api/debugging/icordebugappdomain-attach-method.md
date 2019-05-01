@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a290ca162e5ab71b4184d166bcd00f1d0217cb94
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785183"
 ---
 # <a name="icordebugappdomainattach-method"></a>ICorDebugAppDomain::Attach Yöntemi
-Hata ayıklayıcı uygulama etki alanına ekler.  
+Hata ayıklayıcı, uygulama etki alanına ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,12 +34,12 @@ HRESULT Attach ();
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hata ayıklayıcı olayları almaya ve uygulama etki alanı, hata ayıklamayı etkinleştirmek için uygulama etki bağlı olması gerekir.  
+ Hata ayıklayıcı olayları almaya ve uygulama etki alanını hata ayıklamayı etkinleştirmek için uygulama etki bağlı olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

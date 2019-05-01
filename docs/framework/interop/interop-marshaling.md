@@ -9,11 +9,11 @@ ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61873242"
 ---
 # <a name="interop-marshaling"></a>Birlikte Çalışma Hazırlama
 <a name="top"></a> Birlikte çalışma hazırlama veri çağrıları sırasında yönetilen ve yönetilmeyen bellek arasında yöntem bağımsız değişkenleri ve dönüş değerleri nasıl geçirilir yönetir. Birlikte çalışma hazırlama ortak dil çalışma zamanının sıralama hizmeti tarafından gerçekleştirilen bir çalışma zamanı etkinliğidir.  
@@ -24,23 +24,23 @@ ms.locfileid: "57677220"
   
  Bu genel bakış aşağıdaki bölümleri içerir:  
   
--   [Platform çağırma ve COM birlikte çalışma modelleri](#platform_invoke_and_com_interop_models)  
+- [Platform çağırma ve COM birlikte çalışma modelleri](#platform_invoke_and_com_interop_models)  
   
--   [Marshaling ve COM apartmanlar](#marshaling_and_com_apartments)  
+- [Marshaling ve COM apartmanlar](#marshaling_and_com_apartments)  
   
--   [Uzak çağrılar hazırlama](#marshaling_remote_calls)  
+- [Uzak çağrılar hazırlama](#marshaling_remote_calls)  
   
--   [İlgili Konular](#related_topics)  
+- [İlgili Konular](#related_topics)  
   
--   [Başvuru](#reference)  
+- [Başvuru](#reference)  
   
 <a name="platform_invoke_and_com_interop_models"></a>   
 ## <a name="platform-invoke-and-com-interop-models"></a>Platform çağırma ve COM birlikte çalışma modelleri  
  Ortak dil çalışma zamanı yönetilmeyen kod ile birlikte çalışma için iki mekanizma sağlar:  
   
--   Platform çağırma, yönetilmeyen bir kitaplığından dışa aktarılan işlevleri çağırmak yönetilen kod sağlar.  
+- Platform çağırma, yönetilmeyen bir kitaplığından dışa aktarılan işlevleri çağırmak yönetilen kod sağlar.  
   
--   Yönetilen kodun Bileşen Nesne Modeli (COM) nesneleri, arabirimler aracılığıyla etkileşim sağlar COM birlikte çalışma.  
+- Yönetilen kodun Bileşen Nesne Modeli (COM) nesneleri, arabirimler aracılığıyla etkileşim sağlar COM birlikte çalışma.  
   
  Her iki platform çağırma ve COM birlikte çalışma kullanım birlikte çalışma doğru yöntem bağımsız çağıran ve çağrılan ve geri arasında taşımak için hazırlama gerekli. Aşağıdaki çizimde gösterildiği gibi bir platform çağırma yöntemi çağrısı akışlar yönetilmeyen kod ve hiçbir zaman zaman dışında başka şekilde yönetilen [geri çağırma işlevleri](callback-functions.md) kullanılır. Platform çağırma olsa bile çağrıları yalnızca yönetilmeyen kod için yönetilen akış, giriş veya çıkış parametreleri olarak her iki yönde veri akabilir. COM birlikte çalışma yöntemi çağrıları, herhangi bir yönde akabilir.  
   
@@ -86,9 +86,9 @@ ms.locfileid: "57677220"
   
  Çapraz-Grup sıralama için aşağıdakileri yapabilirsiniz:  
   
--   Sınırının ötesinde birçok çağrıları olduğunda, fark edilebilir çapraz-grup sıralama yükü kabul edin. COM bileşeni başarıyla apartman sınırını aşan çağrı için tür kitaplığı kaydetmeniz gerekir.  
+- Sınırının ötesinde birçok çağrıları olduğunda, fark edilebilir çapraz-grup sıralama yükü kabul edin. COM bileşeni başarıyla apartman sınırını aşan çağrı için tür kitaplığı kaydetmeniz gerekir.  
   
--   Ana iş parçacığı STA ya da MTA istemci iş parçacığı ayarlayarak değiştirir. Örneğin, varsa, C# istemci çağrıları birçok STA COM bileşenlerini, ana iş parçacığı için STA ayarlayarak çapraz-grup sıralama önleyebilirsiniz.  
+- Ana iş parçacığı STA ya da MTA istemci iş parçacığı ayarlayarak değiştirir. Örneğin, varsa, C# istemci çağrıları birçok STA COM bileşenlerini, ana iş parçacığı için STA ayarlayarak çapraz-grup sıralama önleyebilirsiniz.  
   
     > [!NOTE]
     >  Sonra iş parçacığı bir C# istemci için STA ayarlandığında, çapraz-grup sıralama MTA COM bileşenleri çağrıları gerekir.  
@@ -101,9 +101,9 @@ ms.locfileid: "57677220"
 ## <a name="marshaling-remote-calls"></a>Uzak çağrılar hazırlama  
  Çapraz-Grup hazırlama gibi ile hazırlama COM nesneleri ayrı işlemlerde bulunan her yönetilen ve yönetilmeyen kod arasındaki her çağrıda dahil. Örneğin:  
   
--   Uzak bir ana bilgisayarın yönetilen bir sunucuda çağıran bir COM istemcisi Dağıtılmış COM (DCOM) kullanır.  
+- Uzak bir ana bilgisayarın yönetilen bir sunucuda çağıran bir COM istemcisi Dağıtılmış COM (DCOM) kullanır.  
   
--   Çağıran uzak ana bilgisayarda bir COM sunucusu yönetilen istemci DCOM kullanır.  
+- Çağıran uzak ana bilgisayarda bir COM sunucusu yönetilen istemci DCOM kullanır.  
   
  COM hazırlama, işlem ve konak sınırları içinde iletişim kanalları sağlamak ve nasıl birlikte çalışma hazırlama aşağıdaki çizimde gösterilmektedir.  
   
@@ -116,9 +116,9 @@ ms.locfileid: "57677220"
   
  Bu çizimde:  
   
--   Yönetilmeyen bir istemci bir COM nesnesi için uzak bir ana bilgisayardan bu başvuru alır ve yönetilen bir nesneye başvuru alır. DCOM Uzaktan iletişim mekanizmasıdır.  
+- Yönetilmeyen bir istemci bir COM nesnesi için uzak bir ana bilgisayardan bu başvuru alır ve yönetilen bir nesneye başvuru alır. DCOM Uzaktan iletişim mekanizmasıdır.  
   
--   Yönetilen istemci uzak bir ana bilgisayardan bu başvuruyu alır bir COM nesnesi yönetilen bir nesneye bir başvuru alır. DCOM Uzaktan iletişim mekanizmasıdır.  
+- Yönetilen istemci uzak bir ana bilgisayardan bu başvuruyu alır bir COM nesnesi yönetilen bir nesneye bir başvuru alır. DCOM Uzaktan iletişim mekanizmasıdır.  
   
     > [!NOTE]
     >  Dışarı aktarılan tür kitaplığı yönetilen sunucunun kayıtlı olması gerekir.  

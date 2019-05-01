@@ -5,11 +5,11 @@ ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61861237"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma
 Bu makalede, büyük bir .NET Framework uygulamaları veya işlem büyük miktarda verileri dosyalar veya veritabanları gibi uygulama performansını iyileştirmek için ipuçları sağlar. C# ve Visual Basic derleyicileri, yönetilen kodda yeniden yazma bu ipuçlarını gelir ve bu makale, çeşitli gerçek örnekler C# derleyicisi içerir. 
@@ -453,13 +453,13 @@ class Compilation { /*...*/
   
  Bu makalede, nasıl özellikle büyük sistemleri veya büyük miktarda veri işleyen sistemleri için uygulamanızın yanıt hızını etkileyebilir performans sorununun belirtileri bilincinde olmalısınız almıştık. Ortak culprits kutulama, dize işlemeleri, LINQ ve lambda, önbellek boyutu sınırı veya çıkarma ilkesini, uygunsuz kullanımdan sözlükleri ve yapıları etrafında geçirme olmadan zaman uyumsuz yöntemlerde önbelleğe almayı içerir. Uygulamalarınızı ayarlama dört bilgiler göz önünde bulundurun:  
   
--   Yoksa beklenenden önce en iyi duruma getirme – üretken ve problemleri fark, uygulamanızı ayarlama. 
+- Yoksa beklenenden önce en iyi duruma getirme – üretken ve problemleri fark, uygulamanızı ayarlama. 
   
--   Profilleri şekilde yok –, olmayan ölçüm yaptığınız, tahmin. 
+- Profilleri şekilde yok –, olmayan ölçüm yaptığınız, tahmin. 
   
--   İyi Araçlar fark olun – PerfView indirin ve deneyin. 
+- İyi Araçlar fark olun – PerfView indirin ve deneyin. 
   
--   Tüm olduğu ayırmaları hakkında – diğer bir deyişle derleyici platformu ekibinden yeni derleyiciler performansını iyileştirme zamanlarının çoğunu burada harcanan. 
+- Tüm olduğu ayırmaları hakkında – diğer bir deyişle derleyici platformu ekibinden yeni derleyiciler performansını iyileştirme zamanlarının çoğunu burada harcanan. 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

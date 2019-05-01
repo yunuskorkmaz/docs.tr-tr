@@ -13,22 +13,22 @@ ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 798fcacab5bd74dbd6569a68a3b598c0bb63a0a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872644"
 ---
 # <a name="specifying-a-character-set"></a>Karakter Kümesi Belirtme
 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Alan denetimleri dize sıralama ve platform çağırma DLL'de bulur işlev adlarını nasıl belirler. Bu konuda, hem davranışları açıklanmaktadır.  
   
  Bazı API'leri iki dize bağımsız değişkenler almayan işlevleri sürümü dışarı aktar: (ANSI) dar ve geniş (Unicode). Windows API, örneğin, aşağıdaki giriş noktası adları içerir **MessageBox** işlevi:  
   
--   **MessageBoxA**  
+- **MessageBoxA**  
   
      1-bayt karakter ANSI biçimlendirme, "A" giriş noktası adına göre ayırt sağlar. Çağrılar **MessageBoxA** her zaman dizeleri ANSI biçimde hazırlama.  
   
--   **MessageBoxW**  
+- **MessageBoxW**  
   
      2-bayt karakter Unicode biçimlendirme, "W" giriş noktası adına göre ayırt sağlar. Çağrılar **MessageBoxW** her zaman dizeleri Unicode biçiminde hazırlama.  
   
@@ -37,11 +37,11 @@ ms.locfileid: "59087748"
   
  <xref:System.Runtime.InteropServices.CharSet.Ansi> (varsayılan değer)  
   
--   Dize sıralama  
+- Dize sıralama  
   
      Platform çağırma sıraladığında dizeleri ANSI biçimine yönetilen biçimlerini (Unicode).  
   
--   Ad eşleştirme  
+- Ad eşleştirme  
   
      Zaman <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> alandır `true`, varsayılan olarak olduğu gibi [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], platform çağırma yalnızca belirttiğiniz ad arar. Örneğin, belirtirseniz **MessageBox**, platform çağırma arar **MessageBox** ve tam yazım bulamadığında başarısız olur.  
   
@@ -49,11 +49,11 @@ ms.locfileid: "59087748"
   
  <xref:System.Runtime.InteropServices.CharSet.Unicode>  
   
--   Dize sıralama  
+- Dize sıralama  
   
      Platform çağırma yönetilen biçimlerini (Unicode) kopyaları dizeleri Unicode biçiminde.  
   
--   Ad eşleştirme  
+- Ad eşleştirme  
   
      Zaman `ExactSpelling` alandır `true`, varsayılan olarak olduğu gibi [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], platform çağırma yalnızca belirttiğiniz ad arar. Örneğin, belirtirseniz **MessageBox**, platform çağırma arar **MessageBox** ve tam yazım bulamazsanız başarısız olur.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59087748"
   
  <xref:System.Runtime.InteropServices.CharSet.Auto>  
   
--   Platform çağırma arasında ANSI ve Unicode biçimlerini hedef platformunu temel alan çalışma zamanında seçer.  
+- Platform çağırma arasında ANSI ve Unicode biçimlerini hedef platformunu temel alan çalışma zamanında seçer.  
   
 ## <a name="specifying-a-character-set-in-visual-basic"></a>Visual Basic'te bir karakter kümesi belirtme  
  Aşağıdaki örnek bildirir **MessageBox** işlevi üç kez, her seferinde farklı karakter kümesi davranış. Karakter kümesi davranış ekleyerek Visual Basic'te belirtebilirsiniz **ANSI**, **Unicode**, veya **otomatik** bildirim deyiminin anahtar sözcük.  

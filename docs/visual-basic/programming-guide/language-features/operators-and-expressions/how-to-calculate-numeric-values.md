@@ -12,11 +12,11 @@ helpviewer_keywords:
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
 ms.openlocfilehash: 33184d9be275f5e777ffd79c6dd4e3182d865de7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864688"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Nasıl yapılır: (Visual Basic) sayısal değerleri hesaplama
 Sayısal değerlerin sayısal ifadeler kullanarak hesaplayabilirsiniz. A *sayısal ifadenin* değişmez değerleri, sabitleri ve değişkenleri temsil eden sayısal değerleri içeren ifade ve bu değerleri üzerinde işlem işleçleri.  
@@ -25,7 +25,7 @@ Sayısal değerlerin sayısal ifadeler kullanarak hesaplayabilirsiniz. A *sayıs
   
 #### <a name="to-calculate-a-numeric-value"></a>Bir sayısal değer hesaplamak için  
   
--   Bir veya daha fazla sayısal değişmez değerleri, sabitleri ve değişkenleri sayısal bir ifadenin birleştirin. Aşağıdaki örnek, bazı geçerli bir sayısal ifadeye gösterir.  
+- Bir veya daha fazla sayısal değişmez değerleri, sabitleri ve değişkenleri sayısal bir ifadenin birleştirin. Aşağıdaki örnek, bazı geçerli bir sayısal ifadeye gösterir.  
   
      `93.217`  
   
@@ -41,7 +41,7 @@ Sayısal değerlerin sayısal ifadeler kullanarak hesaplayabilirsiniz. A *sayıs
   
 #### <a name="to-store-a-numeric-value"></a>Sayısal bir değeri depolamak için  
   
--   Aşağıdaki örnekte de gösterildiği gibi bir değişken için bir sayısal ifade tarafından temsil edilen değeri atamak, atama deyiminin kullanabilirsiniz.  
+- Aşağıdaki örnekte de gösterildiği gibi bir değişken için bir sayısal ifade tarafından temsil edilen değeri atamak, atama deyiminin kullanabilirsiniz.  
   
      [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
@@ -54,7 +54,7 @@ Sayısal değerlerin sayısal ifadeler kullanarak hesaplayabilirsiniz. A *sayıs
   
 #### <a name="to-override-normal-operator-precedence"></a>Normal İşleç önceliği geçersiz kılmak için  
   
--   İlk gerçekleştirmek istediğiniz işlemleri kapsamak için ayraç kullanın. Aşağıdaki örnek, iki farklı sonuçlar aynı işleçler ve işlenenleri gösterir.  
+- İlk gerçekleştirmek istediğiniz işlemleri kapsamak için ayraç kullanın. Aşağıdaki örnek, iki farklı sonuçlar aynı işleçler ve işlenenleri gösterir.  
   
      [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   

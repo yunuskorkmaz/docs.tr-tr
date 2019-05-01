@@ -5,11 +5,11 @@ ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20657e0a583890b851ab8e15c50bce791a3641b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866775"
 ---
 # <a name="property-element-net-native"></a>\<Özellik > öğesi (.NET yerel)
 Çalışma zamanı yansıma ilkesini bir özellik için geçerlidir.  
@@ -81,9 +81,9 @@ ms.locfileid: "59094495"
   
  Ancak, derleme ve bu örnek yürütme oluşturur bir [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) özel durum. Meta veri yaptık olsa da `Book` türü kullanılabilir alamadık özellik alıcıları uygulamaları dinamik olarak kullanılabilir hale getirmek. Tarafından iki yoldan biriyle ya da Biz bu hatayı düzeltebilir:  
   
--   tanımlayarak `Dynamic` İlkesi `Book` yazın, [ \<türü >](../../../docs/framework/net-native/type-element-net-native.md) öğesi.  
+- tanımlayarak `Dynamic` İlkesi `Book` yazın, [ \<türü >](../../../docs/framework/net-native/type-element-net-native.md) öğesi.  
   
--   İç içe bir ekleyerek [ \<özellik >](../../../docs/framework/net-native/property-element-net-native.md) default.rd.xml dosyanın aşağıdaki gibi alıcı çağırmak için istiyoruz her özellik için öğesi.  
+- İç içe bir ekleyerek [ \<özellik >](../../../docs/framework/net-native/property-element-net-native.md) default.rd.xml dosyanın aşağıdaki gibi alıcı çağırmak için istiyoruz her özellik için öğesi.  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

@@ -3,11 +3,11 @@ title: <transport> / <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
 ms.openlocfilehash: a1540b53d4af76141c1daee60a6bddbbecd9d6da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788303"
 ---
 # <a name="transport-of-ws2007httpbinding"></a>\<Aktarım >, \<ws2007HttpBinding >
 HTTP taşıma için kimlik doğrulama ayarlarını tanımlar.  
@@ -56,7 +56,7 @@ HTTP taşıma için kimlik doğrulama ayarlarını tanımlar.
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|None|Güvenlik devre dışı bırakıldı.|  
+|Yok.|Güvenlik devre dışı bırakıldı.|  
 |Temel|Temel kimlik doğrulaması kullanır.|  
 |Özet|Özet kimlik doğrulaması kullanır.|  
 |NTLM|Bir Windows etki alanı ile bir geri dönüş olarak NTLM kullanır.|  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
 ms.openlocfilehash: 0ddd7d0d2a57afc02aa7483ba5e83b65c48af534
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920763"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
 Bir özelliğin ya da yordamın bu sınıfta uygulanmadığını ve kullanmadan önce türetilmiş bir sınıfta geçersiz kılınması belirtir.  
@@ -30,13 +30,13 @@ Bir özelliğin ya da yordamın bu sınıfta uygulanmadığını ve kullanmadan 
   
 ## <a name="rules"></a>Kurallar  
   
--   **Tamamlanmamış bildirimi.** Belirttiğinizde `MustOverride`, özellik veya yordam, kodun ek satırları değil vermezsiniz bile `End Function`, `End Property`, veya `End Sub` deyimi.  
+- **Tamamlanmamış bildirimi.** Belirttiğinizde `MustOverride`, özellik veya yordam, kodun ek satırları değil vermezsiniz bile `End Function`, `End Property`, veya `End Sub` deyimi.  
   
--   **Birleşik değiştiriciler.** Belirtemezsiniz `MustOverride` ile birlikte `NotOverridable`, `Overridable`, veya `Shared` aynı bildirimde.  
+- **Birleşik değiştiriciler.** Belirtemezsiniz `MustOverride` ile birlikte `NotOverridable`, `Overridable`, veya `Shared` aynı bildirimde.  
   
--   **Gölgeleme ve geçersiz kılma.** Devralınan bir öğe hem gölgeleme ve geçersiz kılma bulunabileceğini, ancak iki yaklaşım arasında önemli farklar vardır. Daha fazla bilgi için [Visual Basic'de gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+- **Gölgeleme ve geçersiz kılma.** Devralınan bir öğe hem gölgeleme ve geçersiz kılma bulunabileceğini, ancak iki yaklaşım arasında önemli farklar vardır. Daha fazla bilgi için [Visual Basic'de gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
--   **Diğer koşullar.** Dışında bir geçersiz kılma kullanılamaz bir öğe adlandırılan bir *saf sanal* öğesi.  
+- **Diğer koşullar.** Dışında bir geçersiz kılma kullanılamaz bir öğe adlandırılan bir *saf sanal* öğesi.  
   
  `MustOverride` Bu bağlamda değiştirici kullanılabilir:  
   

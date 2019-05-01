@@ -9,11 +9,11 @@ helpviewer_keywords:
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
 ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856720"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF ile Temsilcilik ve Kimliğe Bürünme
 *Kimliğe bürünme* Hizmetleri İstemci Erişim hizmeti etki alanının kaynaklarına erişimi kısıtlama kullanmak yaygın bir tekniktir. Hizmeti etki alanı kaynaklarına ya da yerel dosyaları (kimliğe bürünme) gibi makine kaynakları veya bir dosya paylaşımı (temsilci) gibi başka bir makinedeki bir kaynak olabilir. Örnek bir uygulama için bkz: [istemci kimliğine bürünme](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Kimliğe bürünme kullanma örneği için bkz: [nasıl yapılır: Bir hizmette istemci kimliğine bürünme](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -37,22 +37,22 @@ ms.locfileid: "59345527"
 ### <a name="cached-token-impersonation"></a>Önbelleğe alınan belirteç kimliğe bürünme  
  Önbelleğe alınan belirteç kimliğe bürünme ile aşağıdakileri gerçekleştirebilirsiniz:  
   
--   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>, ve <xref:System.ServiceModel.NetTcpBinding> Windows istemci kimlik bilgileri.  
+- <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>, ve <xref:System.ServiceModel.NetTcpBinding> Windows istemci kimlik bilgileri.  
   
--   <xref:System.ServiceModel.BasicHttpBinding> ile bir <xref:System.ServiceModel.BasicHttpSecurityMode> kümesine <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> kimlik bilgisi ve diğer istemci hizmeti için geçerli bir Windows hesabı eşleyebilirsiniz bir kullanıcı adı kimlik bilgisi nerede sunar standart bağlama.  
+- <xref:System.ServiceModel.BasicHttpBinding> ile bir <xref:System.ServiceModel.BasicHttpSecurityMode> kümesine <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> kimlik bilgisi ve diğer istemci hizmeti için geçerli bir Windows hesabı eşleyebilirsiniz bir kullanıcı adı kimlik bilgisi nerede sunar standart bağlama.  
   
--   Tüm <xref:System.ServiceModel.Channels.CustomBinding> ile Windows istemci kimlik bilgilerini kullanan `requireCancellation` kümesine `true`. (Aşağıdaki sınıflarda özellik kullanılabilir: <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters>, ve <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>.) Güvenli konuşma bağlamadaki kullanılırsa, ayrıca olmalıdır `requireCancellation` özelliğini `true`.  
+- Tüm <xref:System.ServiceModel.Channels.CustomBinding> ile Windows istemci kimlik bilgilerini kullanan `requireCancellation` kümesine `true`. (Aşağıdaki sınıflarda özellik kullanılabilir: <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters>, ve <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>.) Güvenli konuşma bağlamadaki kullanılırsa, ayrıca olmalıdır `requireCancellation` özelliğini `true`.  
   
--   Tüm <xref:System.ServiceModel.Channels.CustomBinding> istemci bir kullanıcı adı kimlik bilgisi nerede sunar. Güvenli konuşma bağlamadaki kullanılır, ayrıca olmalıdır `requireCancellation` özelliğini `true`.  
+- Tüm <xref:System.ServiceModel.Channels.CustomBinding> istemci bir kullanıcı adı kimlik bilgisi nerede sunar. Güvenli konuşma bağlamadaki kullanılır, ayrıca olmalıdır `requireCancellation` özelliğini `true`.  
   
 ### <a name="s4u-based-impersonation"></a>Kimliğe bürünme S4U tabanlı  
  S4U tabanlı kimliğe bürünme ile aşağıdakileri gerçekleştirebilirsiniz:  
   
--   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>, ve <xref:System.ServiceModel.NetTcpBinding> , hizmet için geçerli bir Windows hesabı eşleyebilirsiniz sertifika istemci kimlik bilgileri.  
+- <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>, ve <xref:System.ServiceModel.NetTcpBinding> , hizmet için geçerli bir Windows hesabı eşleyebilirsiniz sertifika istemci kimlik bilgileri.  
   
--   Tüm <xref:System.ServiceModel.Channels.CustomBinding> ile Windows istemci kimlik bilgilerini kullanan `requireCancellation` özelliğini `false`.  
+- Tüm <xref:System.ServiceModel.Channels.CustomBinding> ile Windows istemci kimlik bilgilerini kullanan `requireCancellation` özelliğini `false`.  
   
--   Tüm <xref:System.ServiceModel.Channels.CustomBinding> kullanan bir kullanıcı adı veya Windows istemcisi kimlik bilgisi ve güvenli Konuşmayla `requireCancellation` özelliğini `false`.  
+- Tüm <xref:System.ServiceModel.Channels.CustomBinding> kullanan bir kullanıcı adı veya Windows istemcisi kimlik bilgisi ve güvenli Konuşmayla `requireCancellation` özelliğini `false`.  
   
  Hizmet istemci kimliğine bürünür ölçüde hizmet hesabı kimliğe bürünme, kimliğe bürünme kullanılan tür ve büyük olasılıkla istemci verir kimliğe bürünme kapsamını çalıştığında tutan ayrıcalıklarını bağlıdır.  
   
@@ -201,9 +201,9 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
  Kısıtlanmış temsili yapılandırma hakkında daha ayrıntılı yönergeler için MSDN'de aşağıdaki konulara bakın:  
   
--   [Kerberos temsilci seçme sorunlarını giderme](https://go.microsoft.com/fwlink/?LinkId=36724)  
+- [Kerberos temsilci seçme sorunlarını giderme](https://go.microsoft.com/fwlink/?LinkId=36724)  
   
--   [Kerberos protokol geçişi ve kısıtlanmış temsil](https://go.microsoft.com/fwlink/?LinkId=36725)  
+- [Kerberos protokol geçişi ve kısıtlanmış temsil](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

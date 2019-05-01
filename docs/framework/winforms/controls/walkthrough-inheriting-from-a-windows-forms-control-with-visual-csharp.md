@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
 ms.openlocfilehash: cafd8685f34537f8efb372967dc45682afbe8fa0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792240"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>İzlenecek yol: Visual C ile Windows Forms Denetimi'nden devralma\#
 İle [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)], güçlü özel denetimler aracılığıyla oluşturabilirsiniz *devralma*. Devralma üzerinden tüm standart Windows Forms denetimleri devralınan işlevlerini korur, ancak özel işlevler de dahil denetimleri oluşturabilirsiniz. Bu izlenecek yolda, adlı basit bir devralınan denetim oluşturacaksınız `ValueButton`. Bu düğme, standart Windows Forms işlevselliği devralır <xref:System.Windows.Forms.Button> denetlemek ve adlı bir özel özellik açığa çıkarır `ButtonValue`.  

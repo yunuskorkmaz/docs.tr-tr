@@ -5,11 +5,11 @@ helpviewer_keywords:
 - breaking changes [Visual Basic]
 ms.assetid: 708fb176-35eb-4cbc-a6e7-a04c6e3bdaff
 ms.openlocfilehash: 847034503f2797cf16a944478ebf9587a6985e82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797078"
 ---
 # <a name="visual-basic-breaking-changes-in-visual-studio"></a>Visual Basic Visual Studio'da bozucu değişiklikler
 Visual Studio 2017 ile ilgili en son belgeler için bkz. [Visual Studio 2017 Belgeleri](https://docs.microsoft.com/visualstudio/).

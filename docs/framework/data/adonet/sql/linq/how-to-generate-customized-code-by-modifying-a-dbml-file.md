@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: DBML Dosyasını Değiştirerek Özelleştirilmiş Kod
 ms.date: 03/30/2017
 ms.assetid: 50ad597a-8598-42d3-82dd-fc7d702ebc37
 ms.openlocfilehash: c3fa4d9db4076309ab7d6066cc7072797eaead54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877350"
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>Nasıl yapılır: DBML Dosyasını Değiştirerek Özelleştirilmiş Kod Oluşturma
 Visual Basic oluşturabilir veya C# kaynak koddan bir veritabanı işaretleme dili (.dbml) meta veri dosyası. Bu yaklaşım, varsayılan .dbml dosyası uygulama eşlemesi kodu oluşturmadan önce özelleştirmek için bir fırsat sağlar. Bu gelişmiş bir özelliktir.  

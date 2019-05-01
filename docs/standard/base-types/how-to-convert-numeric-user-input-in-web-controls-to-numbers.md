@@ -16,11 +16,11 @@ ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0f732f5bf61ed65fe7e62d110494d874262e30fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61860639"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Nasıl yapılır: Web Denetimlerindeki Sayısal Kullanıcı Girişlerini Sayıya Dönüştürme
 Kullanıcıların dünyanın herhangi bir Web sayfası görüntülenebileceğinden sayısal verileri girebilirsiniz bir <xref:System.Web.UI.WebControls.TextBox> neredeyse sınırsız sayıda biçimleri denetimi. Sonuç olarak, yerel ve Web sayfasının kullanıcı kültürü belirlemek çok önemlidir. Kullanıcı girişini ayrıştırmasına, daha sonra kullanıcının yerel ayar ve kültür tarafından tanımlanan biçimlendirme kurallarını uygulayabilirsiniz.  
@@ -35,9 +35,9 @@ Kullanıcıların dünyanın herhangi bir Web sayfası görüntülenebileceğind
   
 4. Çağırın ya da `TryParse` veya `Parse` kullanıcı dönüştürmek istediğiniz sayısal türü yöntemi için giriş. Bir aşırı yüklemesini kullanmanız `TryParse` veya `Parse` yöntemi ile bir `provider` parametresi, aşağıdakilerden birini geçirin:  
   
-    -   <xref:System.Globalization.CultureInfo> 3. adımda oluşturulan nesne.  
+    - <xref:System.Globalization.CultureInfo> 3. adımda oluşturulan nesne.  
   
-    -   <xref:System.Globalization.NumberFormatInfo> Tarafından döndürülen nesne <xref:System.Globalization.CultureInfo.NumberFormat%2A> özelliği <xref:System.Globalization.CultureInfo> 3. adımda oluşturulan nesne.  
+    - <xref:System.Globalization.NumberFormatInfo> Tarafından döndürülen nesne <xref:System.Globalization.CultureInfo.NumberFormat%2A> özelliği <xref:System.Globalization.CultureInfo> 3. adımda oluşturulan nesne.  
   
 5. Dönüştürme başarısız olursa tarafından döndürülen 2 dize dizisi kalan her öğe için 4 arasındaki adımları yineleyin <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği.  
   
@@ -60,11 +60,11 @@ Kullanıcıların dünyanın herhangi bir Web sayfası görüntülenebileceğind
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Kodu derlemek için dosyaya kopyalayın bir [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] olan tüm mevcut kodlar değiştirir. Bu nedenle arka plan kod sayfası. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web sayfası aşağıdaki denetimleri içermelidir:  
   
--   A <xref:System.Web.UI.WebControls.Label> kodda başvurulmuyor denetimi. Ayarlama, <xref:System.Web.UI.WebControls.TextBox.Text%2A> özelliğini "bir sayı girin:".  
+- A <xref:System.Web.UI.WebControls.Label> kodda başvurulmuyor denetimi. Ayarlama, <xref:System.Web.UI.WebControls.TextBox.Text%2A> özelliğini "bir sayı girin:".  
   
--   A <xref:System.Web.UI.WebControls.TextBox> adlı Denetim `NumericString`.  
+- A <xref:System.Web.UI.WebControls.TextBox> adlı Denetim `NumericString`.  
   
--   A <xref:System.Web.UI.WebControls.Button> adlı Denetim `OKButton`. Ayarlama, <xref:System.Web.UI.WebControls.Button.Text%2A> özelliği için "Tamam".  
+- A <xref:System.Web.UI.WebControls.Button> adlı Denetim `OKButton`. Ayarlama, <xref:System.Web.UI.WebControls.Button.Text%2A> özelliği için "Tamam".  
   
  Sınıfın adını değiştirmek `NumericUserInput` tarafından tanımlanan sınıfı adını `Inherits` özniteliği [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sayfanın `Page` yönergesi. Adını değiştirmek `NumericInput` nesnesi tarafından tanımlanan adına başvuru `id` özniteliği [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sayfanın `form` etiketi.  
   

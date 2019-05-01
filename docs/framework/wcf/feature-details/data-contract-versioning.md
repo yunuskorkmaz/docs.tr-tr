@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
 ms.openlocfilehash: 53080975c03430a6c05bf72f58610b328430a3c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857161"
 ---
 # <a name="data-contract-versioning"></a>Veri Sözleşmesi Sürümü Oluşturma
 Uygulamaları değiştikçe, ayrıca değiştirmek zorunda kalabilirsiniz veri sözleşmeleri Hizmetleri kullanın. Bu konu açıklar nasıl sürüm veri anlaşmaları. Bu konuda, veri sözleşmesi sürümü oluşturma mekanizmaları açıklanmaktadır. Eksiksiz bir genel bakış ve öngörücü sürüm oluşturma yönergeleri için bkz: [en iyi uygulamalar: Veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -34,13 +34,13 @@ Uygulamaları değiştikçe, ayrıca değiştirmek zorunda kalabilirsiniz veri s
   
  Bazı değişiklikler iletilen verileri değiştirebilir ancak olabilir veya bozucu değildir. Aşağıdaki değişiklikleri her zaman ayırırsınız:  
   
--   Değiştirme <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> veya <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> veri anlaşması değeri.  
+- Değiştirme <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> veya <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> veri anlaşması değeri.  
   
--   Kullanarak veri üyelerinin sırasını değiştirme <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute>.  
+- Kullanarak veri üyelerinin sırasını değiştirme <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute>.  
   
--   Bir veri üyesi yeniden adlandırma.  
+- Bir veri üyesi yeniden adlandırma.  
   
--   Veri anlaşması bir veri üyesinin değiştiriliyor. Örneğin, "Müşteri" bir türe sahip "Kişi" adlı bir veri sözleşmesi adlı bir veri sözleşmesi ile bir dizeyi bir tamsayıya veya bir tür veri üyesi türünün değiştirilmesi.  
+- Veri anlaşması bir veri üyesinin değiştiriliyor. Örneğin, "Müşteri" bir türe sahip "Kişi" adlı bir veri sözleşmesi adlı bir veri sözleşmesi ile bir dizeyi bir tamsayıya veya bir tür veri üyesi türünün değiştirilmesi.  
   
  Aşağıdaki değişiklikleri de mümkündür.  
   
@@ -90,9 +90,9 @@ Uygulamaları değiştikçe, ayrıca değiştirmek zorunda kalabilirsiniz veri s
 ## <a name="omitted-default-values"></a>Belirtilmemişse varsayılan değerler  
  (Önerilmez olsa da) mümkündür ayarlanacak `EmitDefaultValue` DataMemberAttribute özniteliğine özellik `false`anlatılan şekilde [veri üyesi varsayılan değerler](../../../../docs/framework/wcf/feature-details/data-member-default-values.md). Bu ayar `false`, varsayılan değerine ayarlanırsa veri üyesi yayılan değil (genellikle null ya da sıfır). Bu iki yolla farklı sürümleri gerekli veri üyeleri ile uyumlu değil:  
   
--   Bir veri sözleşmesi ile bir sürüm gerekli bir veri üyesi varsayılan alamaz (boş veya sıfır) veri üyesi olan farklı bir sürümünden verileri `EmitDefaultValue` kümesine `false`.  
+- Bir veri sözleşmesi ile bir sürüm gerekli bir veri üyesi varsayılan alamaz (boş veya sıfır) veri üyesi olan farklı bir sürümünden verileri `EmitDefaultValue` kümesine `false`.  
   
--   Gerekli veri üyesine sahip `EmitDefaultValue` kümesine `false` varsayılan seri hale getirmek için kullanılamaz (boş veya sıfır) değeri, ancak seri durumundan çıkarma böyle bir değeri alabilir. Bu bir gidiş dönüşü sorun oluşturur (veri okunabilir ancak aynı verileri sonra yazılamaz). Bu nedenle, `IsRequired` olduğu `true` ve `EmitDefaultValue` olduğu `false` herhangi bir veri sözleşmesi sürümü gidiş dönüş içinde sonuçlanmaz bir değer üretmek için, bir sürüm, diğer tüm sürümler için aynı bileşimini uygulamalıdır.  
+- Gerekli veri üyesine sahip `EmitDefaultValue` kümesine `false` varsayılan seri hale getirmek için kullanılamaz (boş veya sıfır) değeri, ancak seri durumundan çıkarma böyle bir değeri alabilir. Bu bir gidiş dönüşü sorun oluşturur (veri okunabilir ancak aynı verileri sonra yazılamaz). Bu nedenle, `IsRequired` olduğu `true` ve `EmitDefaultValue` olduğu `false` herhangi bir veri sözleşmesi sürümü gidiş dönüş içinde sonuçlanmaz bir değer üretmek için, bir sürüm, diğer tüm sürümler için aynı bileşimini uygulamalıdır.  
   
 ## <a name="schema-considerations"></a>Şema konuları  
  Hangi şema veri anlaşması türleri için üretilen açıklaması için bkz [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  

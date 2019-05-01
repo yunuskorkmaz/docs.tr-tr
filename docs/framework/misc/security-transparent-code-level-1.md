@@ -12,11 +12,11 @@ ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868765"
 ---
 # <a name="security-transparent-code-level-1"></a>Güvenliği saydam kod, düzey 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,11 +28,11 @@ ms.locfileid: "59161076"
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
--   [Düzey 1 saydamlık modeli](#the_level_1_transparency_model)  
+- [Düzey 1 saydamlık modeli](#the_level_1_transparency_model)  
   
--   [Saydamlık öznitelikleri](#transparency_attributes)  
+- [Saydamlık öznitelikleri](#transparency_attributes)  
   
--   [Güvenlik saydamlık örnekleri](#security_transparency_examples)  
+- [Güvenlik saydamlık örnekleri](#security_transparency_examples)  
   
 <a name="the_level_1_transparency_model"></a>   
 ## <a name="the-level-1-transparency-model"></a>Düzey 1 saydamlık modeli  
@@ -40,11 +40,11 @@ ms.locfileid: "59161076"
   
  Tüm derleme, bir derlemede bazı sınıflar veya bazı yöntemler bir sınıftaki güvenlik açısından saydam olarak işaretleyebilirsiniz. Güvenliği saydam kod ayrıcalıklarını yükseltme yapamazsınız. Bu kısıtlama, üç sonuçları vardır:  
   
--   Güvenliği saydam kod gerçekleştiremezsiniz <xref:System.Security.Permissions.SecurityAction.Assert> eylemler.  
+- Güvenliği saydam kod gerçekleştiremezsiniz <xref:System.Security.Permissions.SecurityAction.Assert> eylemler.  
   
--   Güvenliği saydam kod tarafından karşılanması herhangi bir bağlantı talebi tam isteğe bağlı olur.  
+- Güvenliği saydam kod tarafından karşılanması herhangi bir bağlantı talebi tam isteğe bağlı olur.  
   
--   Güvenliği saydam kod yürütülmesi gereken tüm güvenli olmayan (doğrulanamayan) kodu için talepte bulunur neden <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> güvenlik izni.  
+- Güvenliği saydam kod yürütülmesi gereken tüm güvenli olmayan (doğrulanamayan) kodu için talepte bulunur neden <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> güvenlik izni.  
   
  Bu kurallar, ortak dil çalışma zamanı tarafından (CLR) yürütme sırasında uygulanır. Güvenliği saydam kod için çağrıda bulunanların geri çağıran kod, tüm güvenlik gereksinimlerini geçirir. Güvenliği saydam kod akış taleplerini ayrıcalıklarını yükseltme yapamazsınız. Düşük güven uygulama güvenliği saydam kod çağırır ve talep etmek için yüksek ayrıcalık neden olur, isteğe bağlı Akış düşük güven kodu ve başarısız olur. Güvenliği saydam kod, gerçekleştirilemiyor çünkü talep durdurulamıyor eylemleri onay. Aynı güvenliği saydam kod tam güven kodu sonuçlarında başarılı bir istek çağrılır.  
   

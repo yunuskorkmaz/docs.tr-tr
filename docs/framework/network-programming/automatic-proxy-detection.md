@@ -15,11 +15,11 @@ helpviewer_keywords:
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
 ms.openlocfilehash: 656a21a7b8801a2c3b72b25531705576fcf047cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866827"
 ---
 # <a name="automatic-proxy-detection"></a>Otomatik Ara Sunucu Algılama
 Otomatik proxy algılama, bir Web proxy sunucusu sistem tarafından tanımlanan ve istemci adına istek göndermek için kullanılan bir işlemdir. Bu özellik Web Proxy Otomatik Bulma (WPAD) de denir. Otomatik proxy algılama etkinleştirildiğinde, istek için kullanılan proxy kümesini döndürmekten sorumlu bir proxy yapılandırma betiğini bulmak sistem çalışır. Proxy yapılandırma betiği bulunursa, betik indirilen, derlenmiş ve kullandığı bir istek için proxy bilgilerini, istek akışı veya yanıt alındığında yerel bilgisayarda çalıştırmak bir <xref:System.Net.WebProxy> örneği.  

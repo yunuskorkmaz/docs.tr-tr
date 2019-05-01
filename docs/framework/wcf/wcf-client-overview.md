@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
 ms.openlocfilehash: 5cb73dfeaac4f1c23724dc71b0f1f5d07fd28b5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791241"
 ---
 # <a name="wcf-client-overview"></a>WCF İstemcisi Genel Bakış
 Bu bölümde, istemci uygulamaları neler, yapılandırma, oluşturma ve bir Windows Communication Foundation (WCF) istemci kullanın ve istemci uygulamalarının güvenliğini nasıl açıklanmaktadır.  
@@ -30,15 +30,15 @@ Bu bölümde, istemci uygulamaları neler, yapılandırma, oluşturma ve bir Win
   
  Aşağıdaki bölümlerde, şu adımları tartışmak ve kısa tanıtımları aşağıdaki sorunlar için sağlayın:  
   
--   Hataları işleme.  
+- Hataları işleme.  
   
--   Yapılandırma ve istemcileri güvenli hale getirme.  
+- Yapılandırma ve istemcileri güvenli hale getirme.  
   
--   Çift yönlü hizmetler için geri çağırma nesnelerinin oluşturuluyor.  
+- Çift yönlü hizmetler için geri çağırma nesnelerinin oluşturuluyor.  
   
--   Hizmetleri zaman uyumsuz olarak çağırma.  
+- Hizmetleri zaman uyumsuz olarak çağırma.  
   
--   İstemci kanalları kullanarak arama hizmetleri.  
+- İstemci kanalları kullanarak arama hizmetleri.  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Hizmet sözleşmesi, bağlamalar ve adresleri alın  
  WCF'de, hizmetler ve istemcileri yönetilen öznitelikleri, arabirimler ve yöntemler kullanarak sözleşmeler model. Bir istemci uygulamasındaki bir hizmete bağlanmak için hizmet sözleşmesi için tür bilgilerini edinmeniz gerekir. Genellikle, kullanarak bunu [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), meta veri hizmetinden indiren bir yönetilen kaynak kod dosyasını tercih ettiğiniz dilde dönüştürür ve bir istemci oluşturur WCF istemci nesnenizin yapılandırmak için kullanabileceğiniz uygulama yapılandırma dosyası. Çağırmak için WCF istemci nesne oluşturmak için kullanacaksanız, örneğin bir `MyCalculatorService`, ve bu hizmet için meta veriler yayımlanma bildiğiniz `http://computerName/MyCalculatorService/Service.svc?wsdl`, aşağıdaki kod örneğinde elde etmek için Svcutil.exe kullanma işlemini gösterir, ardından bir `ClientCode.vb` dosya yönetilen kod içinde hizmet sözleşmesi içeriyor.  
@@ -146,11 +146,11 @@ End Interface
   
  Çift yönlü hizmetler istemcileri gerekir:  
   
--   Bir geri çağırma anlaşması sınıf uygulayın.  
+- Bir geri çağırma anlaşması sınıf uygulayın.  
   
--   Geri çağırma anlaşması uygulama sınıfının bir örneğini oluşturun ve oluşturmak için bunu kullanın <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> WCF istemci oluşturucuya geçirdiğiniz bir nesne.  
+- Geri çağırma anlaşması uygulama sınıfının bir örneğini oluşturun ve oluşturmak için bunu kullanın <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> WCF istemci oluşturucuya geçirdiğiniz bir nesne.  
   
--   İşlem çağırma ve işlem geri çağırmaları işlemek.  
+- İşlem çağırma ve işlem geri çağırmaları işlemek.  
   
  Çift yönlü WCF istemci nesneleri işlevi, bunlar geri çağırmalar, geri arama hizmetinin yapılandırılması dahil olmak üzere desteklemek için gereken işlevselliği göstermek üzere bu durumun nonduplex karşılıkları ister.  
   

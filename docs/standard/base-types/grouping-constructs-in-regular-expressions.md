@@ -16,22 +16,22 @@ ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2aa7c35ebc06fb67d9cf6216233d2bed65ae76ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789278"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Normal İfadelerdeki Gruplandırma Yapıları
 Yapıları gruplandırma, normal ifade alt ifadeler tanımlamak ve bir Giriş dizesinin alt dizeler yakalayın. Yapıları gruplandırma, aşağıdakileri yapmak için kullanabilirsiniz:  
   
--   Giriş dizesinde yinelenen bir alt ifade eşleştirin.  
+- Giriş dizesinde yinelenen bir alt ifade eşleştirin.  
   
--   Bir miktar belirleyiciyi, birden çok normal ifade dil öğeleri olan bir alt ifade için geçerlidir. Miktar Belirleyicileri hakkında daha fazla bilgi için bkz: [miktar belirleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+- Bir miktar belirleyiciyi, birden çok normal ifade dil öğeleri olan bir alt ifade için geçerlidir. Miktar Belirleyicileri hakkında daha fazla bilgi için bkz: [miktar belirleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
--   Bir alt ifade tarafından döndürülen dize dahil <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> ve <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemleri.  
+- Bir alt ifade tarafından döndürülen dize dahil <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> ve <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemleri.  
   
--   Tek tek alt ifadeler gelen almak <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> özelliği ve bunları ayrı ayrı işlemek bir bütün olarak eşleşen metin.  
+- Tek tek alt ifadeler gelen almak <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> özelliği ve bunları ayrı ayrı işlemek bir bütün olarak eşleşen metin.  
   
  Aşağıdaki tablo, .NET normal ifade motoru tarafından desteklenen gruplandırma yapıları listeler ve bunların yakalama yakalamasız mı olduğunu gösterir.  
   
@@ -63,13 +63,13 @@ Yapıları gruplandırma, normal ifade alt ifadeler tanımlamak ve bir Giriş di
   
  Yakalanan gruplar dört farklı şekilde erişebilir:  
   
--   Yeniden başvuru kullanarak normal bir ifade içinde oluşturun. Eşleşen alt ifadeyi aynı normal ifadede sözdizimi kullanılarak başvurulur `\` *numarası*burada *numarası* yakalanan alt sıra sayısı.  
+- Yeniden başvuru kullanarak normal bir ifade içinde oluşturun. Eşleşen alt ifadeyi aynı normal ifadede sözdizimi kullanılarak başvurulur `\` *numarası*burada *numarası* yakalanan alt sıra sayısı.  
   
--   Adlandırılan yeniden başvuru kullanarak normal bir ifade içinde oluşturun. Eşleşen alt ifadeyi aynı normal ifadede sözdizimi kullanılarak başvurulur `\k<` *adı*`>`burada *adı* bir yakalama grubu adı veya `\k<` *numarası*`>`burada *numarası* bir yakalama grubunu sıra sayısı. Bir yakalama grubu, bir sıra numarası aynı olan bir varsayılan ada sahip. Daha fazla bilgi için [adlandırılmış eşleşen alt ifadeler](#named_matched_subexpression) bu konuda.  
+- Adlandırılan yeniden başvuru kullanarak normal bir ifade içinde oluşturun. Eşleşen alt ifadeyi aynı normal ifadede sözdizimi kullanılarak başvurulur `\k<` *adı*`>`burada *adı* bir yakalama grubu adı veya `\k<` *numarası*`>`burada *numarası* bir yakalama grubunu sıra sayısı. Bir yakalama grubu, bir sıra numarası aynı olan bir varsayılan ada sahip. Daha fazla bilgi için [adlandırılmış eşleşen alt ifadeler](#named_matched_subexpression) bu konuda.  
   
--   Kullanarak `$` *numarası* değiştirme sırayla bir <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> veya <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemi çağrısı, burada *numarası* yakalanan alt sıra sayısı.  
+- Kullanarak `$` *numarası* değiştirme sırayla bir <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> veya <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemi çağrısı, burada *numarası* yakalanan alt sıra sayısı.  
   
--   Kullanarak programlama yoluyla <xref:System.Text.RegularExpressions.GroupCollection> tarafından döndürülen nesne <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> özelliği. Üye koleksiyonda sıfır konumundaki tüm normal ifade eşleştirmesi temsil eder. Sonraki her üye bir eşleşen alt ifadeyi temsil eder. Daha fazla bilgi için [Grouping Constructs ve normal ifade nesneleri](#Objects) bölümü.  
+- Kullanarak programlama yoluyla <xref:System.Text.RegularExpressions.GroupCollection> tarafından döndürülen nesne <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> özelliği. Üye koleksiyonda sıfır konumundaki tüm normal ifade eşleştirmesi temsil eder. Sonraki her üye bir eşleşen alt ifadeyi temsil eder. Daha fazla bilgi için [Grouping Constructs ve normal ifade nesneleri](#Objects) bölümü.  
   
  Yinelenen metindeki sözcükleri tanımlayan bir normal ifade aşağıdaki örnekte gösterilmektedir. Normal ifade deseninin iki yakalama grupları yinelenen sözcük iki örneğini temsil eder. İkinci örnek, başlangıç konumuna giriş dizesinde bildirmek için yakalanır.  
   
@@ -112,17 +112,17 @@ Yapıları gruplandırma, normal ifade alt ifadeler tanımlamak ve bir Giriş di
   
  Adlandırılmış yakalanan gruplar aşağıdaki yöntemlerle erişebilirsiniz:  
   
--   Adlandırılan yeniden başvuru kullanarak normal bir ifade içinde oluşturun. Eşleşen alt ifadeyi aynı normal ifadede sözdizimi kullanılarak başvurulur `\k<` *adı*`>`burada *adı* yakalanan alt adıdır.  
+- Adlandırılan yeniden başvuru kullanarak normal bir ifade içinde oluşturun. Eşleşen alt ifadeyi aynı normal ifadede sözdizimi kullanılarak başvurulur `\k<` *adı*`>`burada *adı* yakalanan alt adıdır.  
   
--   Yeniden başvuru kullanarak normal bir ifade içinde oluşturun. Eşleşen alt ifadeyi aynı normal ifadede sözdizimi kullanılarak başvurulur `\` *numarası*burada *numarası* yakalanan alt sıra sayısı. Adlandırılmış eşleşen alt ifadeler sırayla soldan sağa eşleşen alt ifadeler sonra numaralandırılır.  
+- Yeniden başvuru kullanarak normal bir ifade içinde oluşturun. Eşleşen alt ifadeyi aynı normal ifadede sözdizimi kullanılarak başvurulur `\` *numarası*burada *numarası* yakalanan alt sıra sayısı. Adlandırılmış eşleşen alt ifadeler sırayla soldan sağa eşleşen alt ifadeler sonra numaralandırılır.  
   
--   Kullanarak `${` *adı* `}` değiştirme sırayla bir <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> veya <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemi çağrısı, burada *adı* yakalanan alt adıdır.  
+- Kullanarak `${` *adı* `}` değiştirme sırayla bir <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> veya <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemi çağrısı, burada *adı* yakalanan alt adıdır.  
   
--   Kullanarak `$` *numarası* değiştirme sırayla bir <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> veya <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemi çağrısı, burada *numarası* yakalanan alt sıra sayısı.  
+- Kullanarak `$` *numarası* değiştirme sırayla bir <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> veya <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemi çağrısı, burada *numarası* yakalanan alt sıra sayısı.  
   
--   Kullanarak programlama yoluyla <xref:System.Text.RegularExpressions.GroupCollection> tarafından döndürülen nesne <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> özelliği. Üye koleksiyonda sıfır konumundaki tüm normal ifade eşleştirmesi temsil eder. Sonraki her üye bir eşleşen alt ifadeyi temsil eder. Adlandırılmış yakalanan gruplar numaralı yakalanan gruplar sonra koleksiyondaki depolanır.  
+- Kullanarak programlama yoluyla <xref:System.Text.RegularExpressions.GroupCollection> tarafından döndürülen nesne <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> özelliği. Üye koleksiyonda sıfır konumundaki tüm normal ifade eşleştirmesi temsil eder. Sonraki her üye bir eşleşen alt ifadeyi temsil eder. Adlandırılmış yakalanan gruplar numaralı yakalanan gruplar sonra koleksiyondaki depolanır.  
   
--   Alt ifade adına sağlayarak programlı olarak <xref:System.Text.RegularExpressions.GroupCollection> nesnenin dizin oluşturucu (C#) veya kendi <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> özelliği (Visual Basic'te).  
+- Alt ifade adına sağlayarak programlı olarak <xref:System.Text.RegularExpressions.GroupCollection> nesnenin dizin oluşturucu (C#) veya kendi <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> özelliği (Visual Basic'te).  
   
  Basit bir normal ifade deseni gösterilmektedir nasıl (adlandırılmamış) numaralı ve adlandırılmış gruplara programlama yoluyla veya normal ifade dili söz dizimi kullanılarak başvurulabilir. Normal ifade `((?<One>abc)\d+)?(?<Two>xyz)(.*)` aşağıdaki yakalama grupları ve ada göre sayı üretir. İlk ifade eder ve tüm desen için her zaman yakalama grubu (sayı 0).  
   
@@ -446,11 +446,11 @@ Yapıları gruplandırma, normal ifade alt ifadeler tanımlamak ve bir Giriş di
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>Yapıları ve Normal İfade Nesnelerini Gruplandırma  
  Yakalama grubu normal bir ifadeyle eşleşen alt dizeler tarafından temsil edilir <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> alınabilir nesneleri <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> tarafından döndürülen nesne <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> özelliği. <xref:System.Text.RegularExpressions.GroupCollection> Nesnesini şu şekilde doldurulur:  
   
--   İlk <xref:System.Text.RegularExpressions.Group> (dizin nesnesi) koleksiyon nesnesinde tüm eşleşmeyi temsil eder.  
+- İlk <xref:System.Text.RegularExpressions.Group> (dizin nesnesi) koleksiyon nesnesinde tüm eşleşmeyi temsil eder.  
   
--   Sonraki kümesi <xref:System.Text.RegularExpressions.Group> nesneleri adlandırılmamış (numaralandırılmış) yakalama grupları temsil eder. Normal ifadede, soldan sağa doğru tanımlandıkları sırayla görünürler. 1 ile adlandırılmamış sayısı bu grupları arasında dizin değerlerini yakalama grupları koleksiyondaki. (Belirli bir grubun dizini için numaralandırılmış alt ifadeye yeniden başvur eşdeğerdir. Yeniden başvurular hakkında daha fazla bilgi için bkz. [yeniden başvuru yapıları](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)  
+- Sonraki kümesi <xref:System.Text.RegularExpressions.Group> nesneleri adlandırılmamış (numaralandırılmış) yakalama grupları temsil eder. Normal ifadede, soldan sağa doğru tanımlandıkları sırayla görünürler. 1 ile adlandırılmamış sayısı bu grupları arasında dizin değerlerini yakalama grupları koleksiyondaki. (Belirli bir grubun dizini için numaralandırılmış alt ifadeye yeniden başvur eşdeğerdir. Yeniden başvurular hakkında daha fazla bilgi için bkz. [yeniden başvuru yapıları](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)  
   
--   En son kümesi <xref:System.Text.RegularExpressions.Group> nesneler adlandırılmış yakalama grupları temsil eder. Normal ifadede, soldan sağa doğru tanımlandıkları sırayla görünürler. Adlandırılmış yakalama grubu ilk dizin değerini yakalama son adlandırılmamış grubun dizininin bir biridir. Varsa yakalama grupları normal ifadede adlandırılmamış adlı yakalama grubu ilk dizin değerini biridir.  
+- En son kümesi <xref:System.Text.RegularExpressions.Group> nesneler adlandırılmış yakalama grupları temsil eder. Normal ifadede, soldan sağa doğru tanımlandıkları sırayla görünürler. Adlandırılmış yakalama grubu ilk dizin değerini yakalama son adlandırılmamış grubun dizininin bir biridir. Varsa yakalama grupları normal ifadede adlandırılmamış adlı yakalama grubu ilk dizin değerini biridir.  
   
  Karşılık gelen bir yakalama grubu için bir miktar belirleyiciyi uygularsanız <xref:System.Text.RegularExpressions.Group> nesnenin <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>, <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>, ve <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> özellikleri bir yakalama grubu tarafından yakalanan son alt dizeyi yansıtır. Eksiksiz bir miktar belirleyiciler gelen olan grupları tarafından yakalanan alt dizeler alabilirsiniz <xref:System.Text.RegularExpressions.CaptureCollection> tarafından döndürülen nesne <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> özelliği.  
   

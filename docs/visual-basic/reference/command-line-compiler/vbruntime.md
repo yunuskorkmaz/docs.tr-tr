@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
 ms.openlocfilehash: a1988fcd19c6629d85ae0e739681fd39fe033c0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796136"
 ---
 # <a name="-vbruntime"></a>-vbruntime
 Derleyici, Visual Basic çalışma zamanı kitaplığı veya bir belirli çalışma zamanı kitaplık başvurusu olan bir başvuru olmadan derlemesi gerektiğini belirtir.  
@@ -50,35 +50,35 @@ Derleyici, Visual Basic çalışma zamanı kitaplığı veya bir belirli çalı�
   
  Aşağıdaki çalışma zamanı üyeleri bir parçasıdır:  
   
--   <xref:Microsoft.VisualBasic.CompilerServices.Conversions> Sınıfı  
+- <xref:Microsoft.VisualBasic.CompilerServices.Conversions> Sınıfı  
   
--   <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29> Yöntemi  
+- <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29> Yöntemi  
   
--   <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29> Yöntemi  
+- <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29> Yöntemi  
   
--   <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> Yöntemi  
+- <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> Yöntemi  
   
--   <xref:Microsoft.VisualBasic.Constants.vbBack> Sabit  
+- <xref:Microsoft.VisualBasic.Constants.vbBack> Sabit  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCr> Sabit  
+- <xref:Microsoft.VisualBasic.Constants.vbCr> Sabit  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCrLf> Sabit  
+- <xref:Microsoft.VisualBasic.Constants.vbCrLf> Sabit  
   
--   <xref:Microsoft.VisualBasic.Constants.vbFormFeed> Sabit  
+- <xref:Microsoft.VisualBasic.Constants.vbFormFeed> Sabit  
   
--   <xref:Microsoft.VisualBasic.Constants.vbLf> Sabit  
+- <xref:Microsoft.VisualBasic.Constants.vbLf> Sabit  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNewLine> Sabit  
+- <xref:Microsoft.VisualBasic.Constants.vbNewLine> Sabit  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullChar> Sabit  
+- <xref:Microsoft.VisualBasic.Constants.vbNullChar> Sabit  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullString> Sabit  
+- <xref:Microsoft.VisualBasic.Constants.vbNullString> Sabit  
   
--   <xref:Microsoft.VisualBasic.Constants.vbTab> Sabit  
+- <xref:Microsoft.VisualBasic.Constants.vbTab> Sabit  
   
--   <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> Sabit  
+- <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> Sabit  
   
--   Bazı nesneler `My` türü  
+- Bazı nesneler `My` türü  
   
  Kullanarak derleme yaparsanız `-vbruntime*` seçeneği ve kodunuzu çekirdek işlevselliği gömülü Visual Basic Çalışma Zamanı Kitaplığı'ndan bir üye başvuruyor, derleyici üyesi kullanılabilir olmadığını belirten bir hata döndürür.  
   

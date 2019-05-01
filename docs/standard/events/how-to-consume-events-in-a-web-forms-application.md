@@ -15,11 +15,11 @@ ms.assetid: 73bf8638-c4ec-4069-b0bb-a1dc79b92e32
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc1dee9377200e4c9fd575b8dcd00982db45f249
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908589"
 ---
 # <a name="how-to-consume-events-in-a-web-forms-application"></a>Nasıl yapılır: Bir Windows Formları Uygulamasında Olayları Kullanma
 ASP.NET Web Forms uygulamalarında yaygın bir senaryo, bir Web sayfası denetimleri ile doldurun ve ardından, kullanıcı denetimi dayalı belirli bir eylemi gerçekleştirmek sağlamaktır. Örneğin, bir <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> denetimi, kullanıcının Web sayfasında tıkladığında bir olay başlatır. Olayını işleyerek, uygulamanız için bu düğmeye tıklayın uygun uygulama mantığını gerçekleştirebilirsiniz.  

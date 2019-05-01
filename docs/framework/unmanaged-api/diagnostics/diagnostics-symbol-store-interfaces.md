@@ -12,21 +12,21 @@ ms.assetid: f96987d5-e6a5-478b-ac5e-302e16545cce
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6fca7359888b8b73b2e1cf709ab708d71abf0db6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787900"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>Tanılama Sembol Deposu Arabirimleri
-Bu konuda, bir hata ayıklayıcısı tarafından kullanılmak üzere sembol bilgileri oluşturmak bir derleyici etkinleştirmek yönetilmeyen arabirimler açıklanmaktadır.  
+Bu konuda, bir hata ayıklayıcı tarafından kullanım için sembol bilgisi oluşturmak bir derleyiciyi etkinleştir yönetilmeyen arabirimler açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [IBindingDisplay Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)  
- Çalışan uygulama geçerli bağlama bilgilerini görüntüleme yöntemleri sağlar.  
+ Çalışan uygulamayı geçerli bağlama bilgilerini görüntülemek için yöntemler sağlar.  
   
  [IDebugAutoAttach Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)  
- Bir sunucu çağrılan hata ayıklayıcı otomatik eklemek için arabirimi tanımlar.  
+ Hata ayıklayıcı sunucu çağrılan otomatik iliştirme için arabirimi tanımlar.  
   
  [INotifyConnection2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
  Kaydetme ve bağlantı bildirim kaynağı kaydını kaldırmak için kullanılan yöntemler bildirir.  
@@ -38,13 +38,13 @@ Bu konuda, bir hata ayıklayıcısı tarafından kullanılmak üzere sembol bilg
  Bildirim filtreleri ayarlamak için bir yöntem bildirir.  
   
  [ISymENCUnmanagedMethod Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)  
- Düzenle ve devam et özelliği için bilgiler sağlar.  
+ Düzenle ve devam et özelliği için bilgi sağlar.  
   
  [ISymUnmanagedAsyncMethod Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)  
  Bu bir arabirimdir okuma tamamlayan [Isymunmanagedasyncmethodpropertieswriter arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md).  
   
  [ISymUnmanagedAsyncMethodPropertiesWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)  
- İsteğe bağlı zaman uyumsuz yöntem bilgileri yöntemi simge başına tanımlanmasına olanak tanır. İle açılmış bir yöntem kullanmanız gerekir (diğer bir deyişle, yapılan çağrılar arasında [OpenMethod yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)ve [CloseMethod yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)).  
+ İsteğe bağlı zaman uyumsuz yöntem bilgileri yöntemi sembol başına tanımlanmasına olanak tanır. Açılan bir yöntemle kullanmanız gerekir (diğer bir deyişle, yapılan çağrılar arasında [OpenMethod yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)ve [CloseMethod yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)).  
   
  [ISymUnmanagedBinder Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)  
  Yönetilmeyen kod için bir simge bağlayıcı temsil eder.  
@@ -62,52 +62,52 @@ Bu konuda, bir hata ayıklayıcısı tarafından kullanılmak üzere sembol bilg
  Yönetilmeyen kaynakları siler.  
   
  [ISymUnmanagedDocument Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)  
- Sembol deposu tarafından başvurulan bir belgeyi temsil eder.  
+ Bir sembol deposu tarafından başvurulan bir belgeyi temsil eder.  
   
  [ISymUnmanagedDocumentWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)  
- Sembol deposu tarafından başvurulan bir belge için yazma yöntemleri sağlar.  
+ Bir sembol deposu tarafından başvurulan bir belge için yazma yöntemleri sağlar.  
   
  [ISymUnmanagedENCUpdate Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)  
- Düzenle ve devam et özelliği için yöntemleri sağlar.  
+ Düzenle ve devam et özelliği için yöntemler sağlar.  
   
  [ISymUnmanagedMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)  
- Sembol deposu içinde yöntemi temsil eder.  
+ Sembol deposundaki bir yöntemi temsil eder.  
   
  [ISymUnmanagedNamespace Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)  
  Bir ad alanı temsil eder.  
   
  [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)  
- Belgeler, yöntemleri ve sembol deposu değişkenler erişim sağlayan bir simge okuyucuyu temsil eder.  
+ Belgeler, yöntemler ve değişkenler bir sembol deposundaki erişim sağlayan bir sembol okuyucu temsil eder.  
   
  [ISymUnmanagedReader2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)  
- Verilen bir yöntem belirteci ve bir düzenleme ve kopyalama sürüm numarası bir simge okuyucu yöntemi alır.  
+ Bir sembol okuyucu yöntemi verilen token metody ve bir düzenleme ve kopyalama sürüm numarasını alır.  
   
  [ISymUnmanagedReaderSymbolSearchInfo Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)  
- Sembol arama bilgilerini alma yöntemleri sağlar.  
+ Sembol arama bilgilerini almak için yöntemler sağlar.  
   
  [ISymUnmanagedScope Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)  
- Bir yöntem sözcük kapsamında temsil eder.  
+ Bir sözlü kapsamda bir yöntemi temsil eder.  
   
  [ISymUnmanagedScope2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)  
- Bir sözcük kapsamı içinde bir yöntemi gösterir ve genişletir `ISymUnmanagedScope` arabirimi yöntemleriyle kapsamı içinde tanımlanan sabitleri hakkında bilgi edinin...  
+ Bir sözcük kapsamı içindeki bir yöntemi temsil eder ve genişleten `ISymUnmanagedScope` arabirim yöntemleriyle kapsamında tanımlanmış sabitleri hakkında bilgi edinin...  
   
  [ISymUnmanagedSourceServerModule Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)  
- Kaynak sunucu veriler için bir modül sağlar.  
+ Kaynak sunucu verileri için bir modül sağlar.  
   
  [ISymUnmanagedSymbolSearchInfo Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)  
- Arama yolu hakkında bilgi edinme yöntemleri sağlar.  
+ Arama yolu hakkında bilgi almak için yöntemler sağlar.  
   
  [ISymUnmanagedVariable Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)  
- Bir parametre, yerel bir değişken ya da bir alan gibi bir değişkeni temsil eder.  
+ Bir parametre, yerel bir değişken veya bir alan gibi bir değişkeni temsil eder.  
   
  [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- Sembol yazıcıyı temsil eder ve belgeleri, sıralama noktaları, sözcük kapsamlar ve değişkenleri tanımlamak için yöntemler sağlar.  
+ Sembol yazıcıyı temsil eder ve belgeler, dizi noktaları, sözcük kapsamları ve değişkenleri tanımlamak için yöntemler sağlar.  
   
  [ISymUnmanagedWriter2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
- Sembol yazıcıyı temsil eder ve belgeleri, sıralama noktaları, sözcük kapsamlar ve değişkenleri tanımlamak için yöntemler sağlar. Genişletir `ISymUnmanagedWriter` arabirimi.  
+ Sembol yazıcıyı temsil eder ve belgeler, dizi noktaları, sözcük kapsamları ve değişkenleri tanımlamak için yöntemler sağlar. Genişletir `ISymUnmanagedWriter` arabirimi.  
   
  [ISymUnmanagedWriter3 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)  
- Sembol yazıcıyı temsil eder ve belgeleri, sıralama noktaları, sözcük kapsamlar ve değişkenleri tanımlamak için yöntemler sağlar. Genişletir `ISymUnmanagedWriter` arabirimi.  
+ Sembol yazıcıyı temsil eder ve belgeler, dizi noktaları, sözcük kapsamları ve değişkenleri tanımlamak için yöntemler sağlar. Genişletir `ISymUnmanagedWriter` arabirimi.  
   
  [ISymUnmanagedWriter4 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-interface.md)  
  Isymunmanagedwriter4 arabirimi.  

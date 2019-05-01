@@ -8,11 +8,11 @@ ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d9281e52de43391a92262f85084715ccabd5515
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868920"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Kod Erişim Güvenlik İlkesi Uyumluluğu ve Geçiş
 
@@ -96,7 +96,7 @@ Bazı örnekler aşağıda verilmiştir. Alan geçersiz aşırı olanlardır <xr
 
 <a name="errors_and_warnings"></a>
 
-## <a name="errors-and-warnings"></a>Hatalar ve uyarılar
+## <a name="errors-and-warnings"></a>Hatalar ve Uyarılar
 
 Kullanıldıklarında aşağıdaki hata iletilerinden artık kullanılmayan türler ve üyeler oluşturur. Unutmayın <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> türün kendisine eski değil.
 

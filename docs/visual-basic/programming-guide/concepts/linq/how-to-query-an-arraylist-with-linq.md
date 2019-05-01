@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: (Visual Basic) LINQ ile ArrayList sorgulama'
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
 ms.openlocfilehash: ed440a7970d0ef1a49af36fa56b1c7ca74715e5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908173"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Nasıl yapılır: (Visual Basic) LINQ ile ArrayList sorgulama
 LINQ Sorgu genel olmayan için kullanırken <xref:System.Collections.IEnumerable> koleksiyonlar gibi <xref:System.Collections.ArrayList>, koleksiyon içindeki nesneler belirli türünü yansıtacak şekilde Aralık değişkeninin türünü açıkça belirtmesi gerekir. Örneğin, bir <xref:System.Collections.ArrayList> , `Student` nesneleri, [From yan tümcesi](../../../../visual-basic/language-reference/queries/from-clause.md) şöyle görünmelidir:  

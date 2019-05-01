@@ -10,11 +10,11 @@ helpviewer_keywords:
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
 ms.openlocfilehash: 24d48a9dfdf10601099333e52073bb7fa3579beb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800795"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Windows Forms'ta Olayların Sırası
 Windows Forms uygulamalarında olayları ortaya çıkar geliştiriciler bu olayların her biri sırayla işleme ile ilgili belirli ilgilenilen sırasıdır. Bir durum için olayların ne zaman formun parçalarını yeniden gibi gözlemlemenize işleme çağırdığında bir farkındalık olaylar çalışma zamanında oluşturulur kesin siparişin gereklidir. Bu konu, uygulamalar ve denetimleri ömrünü birkaç önemli aşamaları sırasında olayları bazında bazı ayrıntılar sağlar. Fare giriş olayları sırası hakkında belirli Ayrıntılar için bkz [Windows Forms'ta fare olayları](mouse-events-in-windows-forms.md). Windows Forms'ta olayların genel bakış için bkz. [olaylara genel bakış](events-overview-windows-forms.md). Olay işleyicileri düzenini hakkında daha fazla ayrıntı için bkz: [olay işleyicilerine genel bakış](event-handlers-overview-windows-forms.md).  
@@ -22,29 +22,29 @@ Windows Forms uygulamalarında olayları ortaya çıkar geliştiriciler bu olayl
 ## <a name="application-startup-and-shutdown-events"></a>Uygulama başlatma ve kapatma olayları  
  <xref:System.Windows.Forms.Form> Ve <xref:System.Windows.Forms.Control> sınıfları bir dizi uygulama başlatma ve kapatma ile ilgili olayları gösterir. Bir Windows Forms uygulaması başladığında, ana formu başlangıç olayları aşağıdaki sırayla oluşturulur:  
   
--   <xref:System.Windows.Forms.Control.HandleCreated?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Control.HandleCreated?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Control.BindingContextChanged?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Control.BindingContextChanged?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Load?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.Load?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Control.VisibleChanged?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Control.VisibleChanged?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Activated?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.Activated?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Shown?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.Shown?displayProperty=nameWithType>  
   
  Bir uygulama kapandığında ana formu kapatma olayları aşağıdaki sırayla oluşturulur:  
   
--   <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Closed?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.Closed?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.FormClosed?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.FormClosed?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Deactivate?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.Deactivate?displayProperty=nameWithType>  
   
  <xref:System.Windows.Forms.Application.ApplicationExit> Olayı <xref:System.Windows.Forms.Application> sınıfı, ana formu kapatma olaylarını sonra oluşturulur.  
   
@@ -54,31 +54,31 @@ Windows Forms uygulamalarında olayları ortaya çıkar geliştiriciler bu olayl
 ## <a name="focus-and-validation-events"></a>Odak ve doğrulama olayları  
  Klavye (SEKMESİ, SHIFT + TAB vb.) kullanarak çağırarak odağı değiştirdiğinizde <xref:System.Windows.Forms.Control.Select%2A> veya <xref:System.Windows.Forms.Control.SelectNextControl%2A> yöntemleri veya ayarlayarak <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> özelliğini geçerli biçime, odak olayları <xref:System.Windows.Forms.Control> sınıfı aşağıdaki sırayla gerçekleşir :  
   
--   <xref:System.Windows.Forms.Control.Enter>  
+- <xref:System.Windows.Forms.Control.Enter>  
   
--   <xref:System.Windows.Forms.Control.GotFocus>  
+- <xref:System.Windows.Forms.Control.GotFocus>  
   
--   <xref:System.Windows.Forms.Control.Leave>  
+- <xref:System.Windows.Forms.Control.Leave>  
   
--   <xref:System.Windows.Forms.Control.Validating>  
+- <xref:System.Windows.Forms.Control.Validating>  
   
--   <xref:System.Windows.Forms.Control.Validated>  
+- <xref:System.Windows.Forms.Control.Validated>  
   
--   <xref:System.Windows.Forms.Control.LostFocus>  
+- <xref:System.Windows.Forms.Control.LostFocus>  
   
  Değiştirdiğinizde odak fareyi kullanarak veya çağırarak <xref:System.Windows.Forms.Control.Focus%2A> yöntemi, odak olayları <xref:System.Windows.Forms.Control> sınıfı aşağıdaki sırayla gerçekleşir:  
   
--   <xref:System.Windows.Forms.Control.Enter>  
+- <xref:System.Windows.Forms.Control.Enter>  
   
--   <xref:System.Windows.Forms.Control.GotFocus>  
+- <xref:System.Windows.Forms.Control.GotFocus>  
   
--   <xref:System.Windows.Forms.Control.LostFocus>  
+- <xref:System.Windows.Forms.Control.LostFocus>  
   
--   <xref:System.Windows.Forms.Control.Leave>  
+- <xref:System.Windows.Forms.Control.Leave>  
   
--   <xref:System.Windows.Forms.Control.Validating>  
+- <xref:System.Windows.Forms.Control.Validating>  
   
--   <xref:System.Windows.Forms.Control.Validated>  
+- <xref:System.Windows.Forms.Control.Validated>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

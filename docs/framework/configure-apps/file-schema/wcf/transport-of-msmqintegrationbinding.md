@@ -3,11 +3,11 @@ title: <transport> / <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
 ms.openlocfilehash: 3126618eca6e8317968c6eb568a04615ec8de884
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788368"
 ---
 # <a name="transport-of-msmqintegrationbinding"></a>\<Aktarım >, \<MsmqIntegrationBinding >
 Message Queuing tümleştirme taşıma güvenlik ayarlarını tanımlar.  
@@ -43,7 +43,7 @@ msmqIntegrationBinding
 |`msmqSecureHashAlgorithm`|-İmzanın bir parçası Özet işlem alanında kullanılan algoritmayı belirtir. Geçerli değerler şunlardır:<br />-MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> Varsayılan, SHA1 değeridir. Bu öznitelik türünde <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.<br>Çakışma sorunları nedeniyle MD5 ve SHA1, SHA256 veya iyi Microsoft önerir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ None  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

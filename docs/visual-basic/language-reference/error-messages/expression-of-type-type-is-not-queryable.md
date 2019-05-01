@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
 ms.openlocfilehash: 121c0a95a3a6bb695d9c73347c733cba215a0de4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59304161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801627"
 ---
 # <a name="expression-of-type-type-is-not-queryable"></a>Türündeki ifade \<türü > sorgulanabilir değil
 Türündeki ifade \<türü > sorgulanabilir değil. Bir derleme başvurusunun ve/veya ad alanı alma LINQ sağlayıcısı için eksik olmadığından emin olun.  
@@ -38,7 +38,7 @@ Türündeki ifade \<türü > sorgulanabilir değil. Bir derleme başvurusunun ve
 - <xref:System.Linq>
 - <xref:System.Data.Linq>
 - <xref:System.Xml.Linq>
-- [Visual Basic'de LINQ'e Giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
 - [References ve Imports Deyimi](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)

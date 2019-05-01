@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
 ms.openlocfilehash: c78cc682c0776bfb0ce09dec7ba1ff8cab504285
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857148"
 ---
 # <a name="data-member-order"></a>Veri Üye Sırası
 Bazı uygulamalarda, verileri çeşitli veri üyeleri'nın gönderilir veya (örneğin, veri serileştirilmiş XML'de görünme sırasını) alınabilmesi için beklenen sırasını bilmek yararlıdır. Bazen bu sırayı değiştirmek gerekli olabilir. Bu konu, sıralama kuralları açıklar.  
@@ -20,11 +20,11 @@ Bazı uygulamalarda, verileri çeşitli veri üyeleri'nın gönderilir veya (ör
 ## <a name="basic-rules"></a>Temel kurallar  
  Verileri sıralama için temel kurallar şunlardır:  
   
--   Bir veri anlaşması türü devralma hiyerarşisinin bir parçasıysa, veri üyeleri temel türlerinden her zaman sırayla ilk.  
+- Bir veri anlaşması türü devralma hiyerarşisinin bir parçasıysa, veri üyeleri temel türlerinden her zaman sırayla ilk.  
   
--   Sonraki sırayla sahip olmayan geçerli türün veri üyesi <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelik kümesi, alfabetik olarak sıralayın.  
+- Sonraki sırayla sahip olmayan geçerli türün veri üyesi <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelik kümesi, alfabetik olarak sıralayın.  
   
--   Sonraki sahip herhangi bir veri üyesi olan <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelik kümesi. Bu değeri tarafından sıralanan `Order` özelliği ilk ve alfabetik olarak birden fazla belirli bir üyesi ise `Order` değeri. Sipariş değerleri atlanabilir.  
+- Sonraki sahip herhangi bir veri üyesi olan <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelik kümesi. Bu değeri tarafından sıralanan `Order` özelliği ilk ve alfabetik olarak birden fazla belirli bir üyesi ise `Order` değeri. Sipariş değerleri atlanabilir.  
   
  Alfabetik çağırarak kurulduğunda <xref:System.String.CompareOrdinal%2A> yöntemi.  
   

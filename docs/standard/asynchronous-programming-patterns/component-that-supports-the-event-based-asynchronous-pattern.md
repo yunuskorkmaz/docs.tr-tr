@@ -19,11 +19,11 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
 ms.openlocfilehash: da6f21ba452c5c0413881759879cca371507a290
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869999"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama
 Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanız uygulayarak zaman uyumsuz işlevleri vererek göz önünde bulundurun [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -34,19 +34,19 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
   
  Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
   
--   Bileşeni oluşturma  
+- Bileşeni oluşturma  
   
--   Genel zaman uyumsuz olayları ve temsilcileri tanımlama  
+- Genel zaman uyumsuz olayları ve temsilcileri tanımlama  
   
--   Özel temsilcileri tanımlama  
+- Özel temsilcileri tanımlama  
   
--   Genel olaylar uygulama  
+- Genel olaylar uygulama  
   
--   Tamamlama yöntemi uygulama  
+- Tamamlama yöntemi uygulama  
   
--   Çalışan yöntemlerini uygulayan  
+- Çalışan yöntemlerini uygulayan  
   
--   Uygulama başlatma ve iptal yöntemi  
+- Uygulama başlatma ve iptal yöntemi  
   
  Bu konudaki tek bir liste olarak kodu kopyalamak için bkz: [nasıl yapılır: Olay tabanlı zaman uyumsuz desenin istemcisini uygulama](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
@@ -55,7 +55,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
   
 #### <a name="to-create-the-component"></a>Bileşeni oluşturmak için  
   
--   Adlı bir sınıf oluşturmak `PrimeNumberCalculator` öğesinden devralan <xref:System.ComponentModel.Component>.  
+- Adlı bir sınıf oluşturmak `PrimeNumberCalculator` öğesinden devralan <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Genel zaman uyumsuz olayları ve temsilcileri tanımlama  
  Bileşeniniz olayları kullanan istemciler için iletişim kurar. _MethodName_**tamamlandı** olay uyarıları zaman uyumsuz bir görev tamamlandığında istemcilere ve _MethodName_**ProgressChanged**olay bildiren istemciler ilerleme durumunu zaman uyumsuz bir görev.  
@@ -87,7 +87,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
   
 #### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
   
--   Bileşen derleyin.  
+- Bileşen derleyin.  
   
      İki Derleyici uyarılarını alırsınız:  
   
@@ -148,7 +148,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
   
 #### <a name="to-complete-an-asynchronous-operation"></a>Zaman uyumsuz bir işlemi tamamlamak için:  
   
--   Tamamlama yöntemini uygulayın. Doldurmak için kullandığı altı parametreleri alan bir `CalculatePrimeCompletedEventArgs` aracılığıyla istemcinin istemciye döndürülen `CalculatePrimeCompletedEventHandler`. İstemcinin görev kimlik belirteci iç koleksiyondan kaldırır ve bir çağrı ile zaman uyumsuz işlem yaşam süresi sona ermeden <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>. <xref:System.ComponentModel.AsyncOperation> İş parçacığı veya uygulama modeli için uygun olan bir bağlam çağrısı sürekliliğe devreder.  
+- Tamamlama yöntemini uygulayın. Doldurmak için kullandığı altı parametreleri alan bir `CalculatePrimeCompletedEventArgs` aracılığıyla istemcinin istemciye döndürülen `CalculatePrimeCompletedEventHandler`. İstemcinin görev kimlik belirteci iç koleksiyondan kaldırır ve bir çağrı ile zaman uyumsuz işlem yaşam süresi sona ermeden <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>. <xref:System.ComponentModel.AsyncOperation> İş parçacığı veya uygulama modeli için uygun olan bir bağlam çağrısı sürekliliğe devreder.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#26)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#26)]  
@@ -158,7 +158,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
   
 #### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
   
--   Bileşen derleyin.  
+- Bileşen derleyin.  
   
      Bir derleyici uyarısı alırsınız:  
   
@@ -212,7 +212,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
   
 #### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
   
--   Bileşen derleyin.  
+- Bileşen derleyin.  
   
      Tüm bu yazılacak kalır başlatmak ve zaman uyumsuz işlemleri iptal etmek için yöntemler şunlardır `CalculatePrimeAsync` ve `CancelAsync`.  
   
@@ -238,7 +238,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
   
 #### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
   
--   Bileşen derleyin.  
+- Bileşen derleyin.  
   
  `PrimeNumberCalculator` Bileşendir artık tamamlandı ve kullanıma hazır.  
   
@@ -253,6 +253,6 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Arka Planda İşlem Çalıştırma](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Nasıl yapılır: Arka planda işlem çalıştırma](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
 - [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
 - [Olay Tabanlı Zaman Uyumsuz Desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

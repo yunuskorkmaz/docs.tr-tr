@@ -14,20 +14,20 @@ ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2717655ac73cac6635aba563f008feb460a5f788
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793217"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Yansıma Yaymadaki Güvenlik Sorunları
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Ara dil (MSIL), her biri kendi güvenlik sorunları Microsoft yaymak için üç yol sunar:  
   
--   [Dinamik derlemeler](#Dynamic_Assemblies)  
+- [Dinamik derlemeler](#Dynamic_Assemblies)  
   
--   [Anonim olarak barındırılan dinamik yöntemler](#Anonymously_Hosted_Dynamic_Methods)  
+- [Anonim olarak barındırılan dinamik yöntemler](#Anonymously_Hosted_Dynamic_Methods)  
   
--   [Dinamik yöntemler varolan derlemeleri ile ilişkili](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
+- [Dinamik yöntemler varolan derlemeleri ile ilişkili](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
   
  Dinamik kod üretebilirsiniz yönteminden bağımsız olarak, oluşturulan kod yürütme, türleri ve yöntemleri oluşturulan kod tarafından gereken tüm izinleri gerektirir.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "59074527"
 ### <a name="generating-dynamic-assemblies-from-partially-trusted-code"></a>Kısmen güvenilen koddan dinamik derlemeler oluşturma  
  Internet izinlerine sahip bir derleme geçici dinamik derleme oluşturmak ve, kod yürütmesine koşulları göz önünde bulundurun:  
   
--   Dinamik derlemenin yalnızca genel türleri ve üyeleri diğer derlemelerin kullanır.  
+- Dinamik derlemenin yalnızca genel türleri ve üyeleri diğer derlemelerin kullanır.  
   
--   Bu türler ve üyeler tarafından talep edilen izinler kısmen güvenilen bir derlemede izin kümesi dahil edilir.  
+- Bu türler ve üyeler tarafından talep edilen izinler kısmen güvenilen bir derlemede izin kümesi dahil edilir.  
   
--   Derleme kaydedilmedi diske.  
+- Derleme kaydedilmedi diske.  
   
--   Hata ayıklama sembolleri oluşturulmaz. (`Internet` ve `LocalIntranet` izin kümeleri gerekli izinleri içermez.)  
+- Hata ayıklama sembolleri oluşturulmaz. (`Internet` ve `LocalIntranet` izin kümeleri gerekli izinleri içermez.)  
   
 <a name="Anonymously_Hosted_Dynamic_Methods"></a>   
 ## <a name="anonymously-hosted-dynamic-methods"></a>Anonim barındırılan dinamik metotlar  
@@ -70,9 +70,9 @@ ms.locfileid: "59074527"
   
  Uygulama etki alanı izin veriliyorsa, anonim olarak barındırılan dinamik yöntemlerin JIT görünürlük denetimlerini aşağıdaki kısıtlama tabi atlayabilirsiniz: Ortak olmayan türler ve üyeler tarafından anonim olarak barındırılan dinamik bir yöntem erişilen derlemelerde, izin kümeleri eşit olan veya kümelerine, yayan çağrı yığınını izin kümesi olması gerekir. Bu kısıtlı özelliği JIT görünürlük atlamak için denetler etkin uygulama etki alanı verirse <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> bayrağı.  
   
--   İzin yok, yöntemi yalnızca genel türleri ve üyeleri kullanıyorsa, yapım sırasında gereklidir.  
+- İzin yok, yöntemi yalnızca genel türleri ve üyeleri kullanıyorsa, yapım sırasında gereklidir.  
   
--   Atlanacak JIT görünürlük denetimleri belirtirseniz, yöntem oluşturulduğunda gerçekleştiren talep içeren <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> bayrağı ve izin kümesi erişiliyor ortak olmayan üyeyi içeren derleme.  
+- Atlanacak JIT görünürlük denetimleri belirtirseniz, yöntem oluşturulduğunda gerçekleştiren talep içeren <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> bayrağı ve izin kümesi erişiliyor ortak olmayan üyeyi içeren derleme.  
   
  Ortak olmayan üyeye izin kümesi dikkate alınır olduğundan, verilmiş kod kısmen güvenilen <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> güvenilir derlemelerinin ortak olmayan üyeler yürüterek kendi ayrıcalıklarını yükseltme yapamazsınız.  
   
@@ -85,9 +85,9 @@ ms.locfileid: "59074527"
 ### <a name="generating-anonymously-hosted-dynamic-methods-from-partially-trusted-code"></a>Oluşturma anonim olarak barındırılan dinamik yöntemler kısmen güvenilen koddan  
  Internet izinlerine sahip bir derleme anonim olarak barındırılan dinamik bir yöntem oluşturmak ve çalıştırmak koşulları göz önünde bulundurun:  
   
--   Dinamik yöntem, yalnızca genel türleri ve üyelerini kullanır. Kendi izin kümesini içeriyorsa <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>ortakdeğil türlere kullanabilirsiniz ve herhangi bir derleme, verme kümesi üyeleri eşit ya da bir alt kümesini, yayan derlemenin izin kümesi olması.  
+- Dinamik yöntem, yalnızca genel türleri ve üyelerini kullanır. Kendi izin kümesini içeriyorsa <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>ortakdeğil türlere kullanabilirsiniz ve herhangi bir derleme, verme kümesi üyeleri eşit ya da bir alt kümesini, yayan derlemenin izin kümesi olması.  
   
--   Tüm türler ve üyeler dinamik yöntemi tarafından kullanılan gerekli olan izinler kısmen güvenilen bir derlemede izin kümesi dahil edilir.  
+- Tüm türler ve üyeler dinamik yöntemi tarafından kullanılan gerekli olan izinler kısmen güvenilen bir derlemede izin kümesi dahil edilir.  
   
 > [!NOTE]
 >  Dinamik yöntemler, hata ayıklama sembolleri desteklemez.  
@@ -96,21 +96,21 @@ ms.locfileid: "59074527"
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>Dinamik yöntemler varolan derlemeleri ile ilişkili  
  Dinamik bir yöntem bir tür veya var olan bir derlemede modülü ilişkilendirmek için herhangi birini kullanmak <xref:System.Reflection.Emit.DynamicMethod> oluşturucular ilişkili typ nebo modul belirtin. Dinamik bir yöntem var olan bir türü ile ilişkili olduğundan bu oluşturucuları çağırmak için gereken izinler farklılık veya modül dinamik yöntem ortak olmayan türler ve üyeler için erişmenizi sağlar:  
   
--   Bir türü ile ilişkili olan dinamik bir yöntem türü, hatta özel üyeler, tüm üyeleri erişebilir ve ilişkili türü içeren tüm iç türlerine ve üyelerine derlemedeki.  
+- Bir türü ile ilişkili olan dinamik bir yöntem türü, hatta özel üyeler, tüm üyeleri erişebilir ve ilişkili türü içeren tüm iç türlerine ve üyelerine derlemedeki.  
   
--   Bir modül ile ilişkili olan dinamik bir yöntem tüm erişimi olan `internal` türler ve üyeler (`Friend` Visual Basic'te `assembly` ortak dil çalışma zamanı meta verilerinde) modülünde.  
+- Bir modül ile ilişkili olan dinamik bir yöntem tüm erişimi olan `internal` türler ve üyeler (`Friend` Visual Basic'te `assembly` ortak dil çalışma zamanı meta verilerinde) modülünde.  
   
  Ayrıca, görünürlüğü atlama yeteneği JIT Derleyici denetler belirten bir oluşturucu kullanabilirsiniz. Bunun yapılması, dinamik yöntem tüm türlerine ve üyelerine erişim düzeyi ne olursa olsun tüm derlemelerde erişmenizi sağlar.  
   
  Oluşturucu tarafından talep edilen izinler bağlıdır, dinamik yöntem vermek karar ne kadar erişimi:  
   
--   Yönteminiz yalnızca genel türleri ve üyeleri kullanıyorsa ve kendi türü veya kendi modülünüzü ile ilişkilendirmek, hiçbir izinleri gereklidir.  
+- Yönteminiz yalnızca genel türleri ve üyeleri kullanıyorsa ve kendi türü veya kendi modülünüzü ile ilişkilendirmek, hiçbir izinleri gereklidir.  
   
--   Oluşturucu, JIT görünürlük denetimlerini atlanması gerektiğini belirtirseniz, talepleri <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> bayrağı.  
+- Oluşturucu, JIT görünürlük denetimlerini atlanması gerektiğini belirtirseniz, talepleri <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> bayrağı.  
   
--   Dinamik yöntem başka bir tür ile ilişkilendirirseniz, kendi derlemesi içindeki başka bir tür Oluşturucu talepleri bile <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> bayrağı ve <xref:System.Security.Permissions.SecurityPermission> ile <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType> bayrağı.  
+- Dinamik yöntem başka bir tür ile ilişkilendirirseniz, kendi derlemesi içindeki başka bir tür Oluşturucu talepleri bile <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> bayrağı ve <xref:System.Security.Permissions.SecurityPermission> ile <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType> bayrağı.  
   
--   Dinamik yöntem bir tür veya başka bir derlemede modülü ile ilişkilendirirseniz, Oluşturucu iki şey talepleri: <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> bayrağı ve başka bir modül içeren derleme izin kümesi. Diğer bir deyişle, tüm izinleri hedef modülü izin kümesi çağrı yığınınızı içermelidir yanı sıra <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
+- Dinamik yöntem bir tür veya başka bir derlemede modülü ile ilişkilendirirseniz, Oluşturucu iki şey talepleri: <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> bayrağı ve başka bir modül içeren derleme izin kümesi. Diğer bir deyişle, tüm izinleri hedef modülü izin kümesi çağrı yığınınızı içermelidir yanı sıra <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
     > [!NOTE]
     >  Hedef talep kümesi sağlıyorsa geriye dönük uyumluluk için artı <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> başarısız olursa Oluşturucusu taleplerini <xref:System.Security.Permissions.SecurityPermission> ile <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType> bayrağı.  
@@ -126,13 +126,13 @@ ms.locfileid: "59074527"
   
  Internet izinlerine sahip bir derleme dinamik bir yöntem oluşturmak ve çalıştırmak koşulları göz önünde bulundurun:  
   
--   Dinamik yöntem modül veya kendisini çıkaran derlemeninkinden türü ile ilişkili veya kendi izin kümesini içeren <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> ve izni olan bir modül bir derleme ile ilişkili eşit ya da bir alt kümesini, yayan derlemenin izin kümesi kümesidir.  
+- Dinamik yöntem modül veya kendisini çıkaran derlemeninkinden türü ile ilişkili veya kendi izin kümesini içeren <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> ve izni olan bir modül bir derleme ile ilişkili eşit ya da bir alt kümesini, yayan derlemenin izin kümesi kümesidir.  
   
--   Dinamik yöntem, yalnızca genel türleri ve üyelerini kullanır. Kendi izin kümesini içeriyorsa <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> ve izni olan bir modül bir derleme ile ilişkili kümesi eşit ya da bir alt kümesini, yayan derlemenin izin kümesi, türler ve üyeler işaretlenmiş kullanabilirsiniz `internal` (`Friend` Visual Basic'te `assembly`ortak dil çalışma zamanı meta verilerinde) ilişkilendirilmiş modülü içinde.  
+- Dinamik yöntem, yalnızca genel türleri ve üyelerini kullanır. Kendi izin kümesini içeriyorsa <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> ve izni olan bir modül bir derleme ile ilişkili kümesi eşit ya da bir alt kümesini, yayan derlemenin izin kümesi, türler ve üyeler işaretlenmiş kullanabilirsiniz `internal` (`Friend` Visual Basic'te `assembly`ortak dil çalışma zamanı meta verilerinde) ilişkilendirilmiş modülü içinde.  
   
--   Kısmen güvenilen bir derlemede izin kümesi, dinamik yöntem tarafından kullanılan üyeleri ve türleri tarafından talep edilen izinler dahil edilir.  
+- Kısmen güvenilen bir derlemede izin kümesi, dinamik yöntem tarafından kullanılan üyeleri ve türleri tarafından talep edilen izinler dahil edilir.  
   
--   Dinamik yöntem, JIT görünürlük denetimlerini atlamasını değil.  
+- Dinamik yöntem, JIT görünürlük denetimlerini atlamasını değil.  
   
 > [!NOTE]
 >  Dinamik yöntemler, hata ayıklama sembolleri desteklemez.  

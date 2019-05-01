@@ -13,10 +13,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0c558c744ee31d8e8299da87e6c2715875dd2dcd
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61873314"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme
 

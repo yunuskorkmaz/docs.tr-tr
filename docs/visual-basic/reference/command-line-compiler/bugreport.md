@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
 ms.openlocfilehash: e7b4ebc58b6fe9850b92ef945cb0d715e4369efe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61839572"
 ---
 # <a name="-bugreport"></a>-bugreport
 Bir hata raporu dosyası oluştururken kullanabileceğiniz bir dosya oluşturur.  
@@ -31,17 +31,17 @@ Bir hata raporu dosyası oluştururken kullanabileceğiniz bir dosya oluşturur.
 ## <a name="remarks"></a>Açıklamalar  
  Aşağıdaki bilgileri eklenir `file`:  
   
--   Derlemedeki tüm kaynak kodu dosyalarının bir kopyasını.  
+- Derlemedeki tüm kaynak kodu dosyalarının bir kopyasını.  
   
--   Derlemede kullanılan derleyici seçeneklerinin bir listesi.  
+- Derlemede kullanılan derleyici seçeneklerinin bir listesi.  
   
--   Derleyici, ortak dil çalışma zamanı ve işletim sistemi sürüm bilgisi.  
+- Derleyici, ortak dil çalışma zamanı ve işletim sistemi sürüm bilgisi.  
   
--   Derleyici çıkışı, varsa.  
+- Derleyici çıkışı, varsa.  
   
--   Kendileri için sizden istenir, sorun açıklaması.  
+- Kendileri için sizden istenir, sorun açıklaması.  
   
--   Sorunun ne düşündüğünüzü açıklaması düzeltilmelidir, kendileri için sizden istenir.  
+- Sorunun ne düşündüğünüzü açıklaması düzeltilmelidir, kendileri için sizden istenir.  
   
  Tüm kaynak kodu dosyalarının bir kopyasını dahil olduğundan `file`, kısa olası programına (şüphelenilen) kod hatasını yeniden oluşturmak isteyebilirsiniz.  
   

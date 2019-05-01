@@ -15,11 +15,11 @@ ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 45f0e30efac32dec42cf0687fa0da40f4d6dca4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909083"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Koleksiyonlardaki Karşılaştırmalar ve Sıralamalar
 <xref:System.Collections> Sınıfları kaldırılacak öğe için arama olup olmadığını koleksiyonları, yönetme veya anahtar-değer çiftinin değer döndüren ilgili neredeyse tüm işlemler karşılaştırmalar gerçekleştirin.  
@@ -30,9 +30,9 @@ ms.locfileid: "54551832"
 ## <a name="checking-for-equality"></a>Eşitlik için denetleniyor  
  Yöntemler gibi `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A>, ve `Remove` eşitlik karşılaştırıcısının koleksiyon öğeleri için kullanın. Koleksiyon genelse, öğe eşitlik aşağıdaki kılavuzlara göre karşılaştırılır:  
   
--   T türü uygulayan <xref:System.IEquatable%601> genel arabirim sonra eşitlik karşılaştırıcısının <xref:System.IEquatable%601.Equals%2A> o arabirimin yöntemi.  
+- T türü uygulayan <xref:System.IEquatable%601> genel arabirim sonra eşitlik karşılaştırıcısının <xref:System.IEquatable%601.Equals%2A> o arabirimin yöntemi.  
   
--   T türü uygulamazsa <xref:System.IEquatable%601>, <xref:System.Object.Equals%2A?displayProperty=nameWithType> kullanılır.  
+- T türü uygulamazsa <xref:System.IEquatable%601>, <xref:System.Object.Equals%2A?displayProperty=nameWithType> kullanılır.  
   
  Ayrıca, bazı oluşturucu aşırı yüklemeleri sözlük koleksiyonlar için kabul bir <xref:System.Collections.Generic.IEqualityComparer%601> eşitlik için anahtarları karşılaştırmak için kullanılan uygulama. Bir örnek için bkz <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> Oluşturucusu.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "54551832"
   
  En az bir uygulama karşılaştırılan nesnelerin varsayılan karşılaştırıcı kullanır **IComparable** arabirimi. Uygulamak için iyi bir uygulamadır **IComparable** üzerinde tüm sınıflar, değerleri bir liste koleksiyon veya bir sözlük koleksiyondaki anahtarlar olarak kullanılır. Genel bir koleksiyon için eşitlik karşılaştırma aşağıdakilere göre belirlenir:  
   
--   T türü uygulayan <xref:System.IComparable%601?displayProperty=nameWithType> genel arabirim sonra varsayılan karşılaştırıcı <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> o arabirimin yöntemi  
+- T türü uygulayan <xref:System.IComparable%601?displayProperty=nameWithType> genel arabirim sonra varsayılan karşılaştırıcı <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> o arabirimin yöntemi  
   
--   T türü genel olmayan uyguluyorsa <xref:System.IComparable?displayProperty=nameWithType> arabirim ise varsayılan karşılaştırıcı <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> o arabirimin yöntemi.  
+- T türü genel olmayan uyguluyorsa <xref:System.IComparable?displayProperty=nameWithType> arabirim ise varsayılan karşılaştırıcı <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> o arabirimin yöntemi.  
   
--   T türü ya da arabirimi uygulamaz, ardından hiçbir varsayılan karşılaştırıcı yoktur ve bir karşılaştırıcı veya karşılaştırma temsilciyi açıkça belirtilmelidir.  
+- T türü ya da arabirimi uygulamaz, ardından hiçbir varsayılan karşılaştırıcı yoktur ve bir karşılaştırıcı veya karşılaştırma temsilciyi açıkça belirtilmelidir.  
   
  Açık karşılaştırma sağlamak için bazı yöntemler kabul bir **IComparer** bir parametre olarak bir uygulama. Örneğin, <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> yöntemi kabul bir <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> uygulaması.  
   

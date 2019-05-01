@@ -8,11 +8,11 @@ ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: caedc586a9d33ecbdc4a8c7202abcfdaafabd98c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61919652"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (.NET Güvenlik Not Ekleyici Aracı)
 .NET güvenlik Not ekleyici Aracı (SecAnnotate.exe) tanımlayan bir komut satırı uygulamasıdır `SecurityCritical` ve `SecuritySafeCritical` bir veya daha fazla bölümleri.  

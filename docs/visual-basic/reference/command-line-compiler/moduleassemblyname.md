@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
 ms.openlocfilehash: b0279c5ac658c7d0749f62066abbd705d0a271af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793906"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Bu modül bir parçası olacağı derlemenin adını belirtir.  
@@ -33,9 +33,9 @@ Bu modül bir parçası olacağı derlemenin adını belirtir.
   
  `-moduleassemblyname` Seçeneği, yalnızca aşağıdaki true olduğunda gereklidir:  
   
--   Modül bir veri türü erişmesi gereken bir `Friend` başvurulan bir derleme türü.  
+- Modül bir veri türü erişmesi gereken bir `Friend` başvurulan bir derleme türü.  
   
--   Başvurulan derleme modülü derlenecek olan derlemeye arkadaş derleme erişim verildi.  
+- Başvurulan derleme modülü derlenecek olan derlemeye arkadaş derleme erişim verildi.  
   
  Bir modül oluşturma hakkında daha fazla bilgi için bkz. [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Arkadaş bütünleştirilmiş kodları hakkında daha fazla bilgi için bkz: [arkadaş derlemeleri](../../../standard/assembly/friend-assemblies.md).  
   

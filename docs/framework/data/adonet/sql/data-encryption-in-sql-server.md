@@ -3,11 +3,11 @@ title: SQL Server’da Veri Şifreleme
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
 ms.openlocfilehash: 1acb720b8a4f8beb27bb1a5236efdb6f2bb44383
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877883"
 ---
 # <a name="data-encryption-in-sql-server"></a>SQL Server’da Veri Şifreleme
 SQL Server şifrelemek ve bir sertifika, asimetrik anahtar veya simetrik anahtar kullanarak verilerin şifresini çözmek için işlevler sağlar. Tüm bunların bir iç sertifika deposunda yönetir. Depolama ve sertifikaları anahtarlar üzerindeki katman hiyerarşideki bir düzeyde bir şifreleme hiyerarşisi kullanır. Bu özellik alanı SQL Server'ın, gizli depolama olarak adlandırılır.  

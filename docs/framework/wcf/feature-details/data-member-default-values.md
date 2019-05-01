@@ -12,8 +12,8 @@ ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857122"
 ---
 # <a name="data-member-default-values"></a>Veri Üyesi Varsayılan Değerler
 İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], türlerine sahip bir kavramı *varsayılan değerler*. Örneğin, varsayılan değer: bir başvuru türü için `null`, ve isteğe bağlı olarak bir tamsayı türü için sıfır ise. Seri hale getirilmiş verilerden veri üyesi varsayılan değerine ayarlandığında atlamak için zaman zaman istenen bir durumdur. Varsayılan değer üyesine sahip olduğundan, gerçek bir değer seri hale yok; Bu, bir performans avantajı vardır.  
@@ -50,9 +50,9 @@ ms.locfileid: "59973726"
 ### <a name="schema-representation"></a>Şema gösterimi  
  Veri üyeleri XML Şeması Tanım Dili (XSD) şeması gösterimi ayrıntılarını olduğunda `EmitDefaultValue` özelliği `false` ele alınmıştır [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Ancak, kısa bir özeti verilmiştir:  
   
--   Zaman <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> ayarlanır `false`, Windows Communication Foundation (WCF) için belirli bir ek açıklama yer alan şemada gösterilir. Bu bilgileri temsil eden birlikte çalışabilen bir yolu yoktur. Özellikle, şema "varsayılan" özniteliği, bu amaç için kullanılmaz `minOccurs` özniteliği yalnızca etkilenen <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> ayarı ve `nillable` özniteliği, türü yalnızca veri üyesi tarafından etkilenir.  
+- Zaman <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> ayarlanır `false`, Windows Communication Foundation (WCF) için belirli bir ek açıklama yer alan şemada gösterilir. Bu bilgileri temsil eden birlikte çalışabilen bir yolu yoktur. Özellikle, şema "varsayılan" özniteliği, bu amaç için kullanılmaz `minOccurs` özniteliği yalnızca etkilenen <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> ayarı ve `nillable` özniteliği, türü yalnızca veri üyesi tarafından etkilenir.  
   
--   Şemada kullanılacak gerçek varsayılan değeri yok. Bu, uygun şekilde eksik bir öğesini yorumlamak için en fazla alıcı uç noktadır.  
+- Şemada kullanılacak gerçek varsayılan değeri yok. Bu, uygun şekilde eksik bir öğesini yorumlamak için en fazla alıcı uç noktadır.  
   
  Şema içeri aktarma, <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> otomatik olarak ayarlanırsa `false` bahsedilen WCF özgü açıklama daha önce algılanır. Ayrıca ayarlanmış `false` olan başvuru türleri için `nillable` özelliğini `false` tüketildiğinde sık gerçekleşen belirli bir birlikte çalışabilirlik senaryolarını desteklemek üzere [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri.  
   

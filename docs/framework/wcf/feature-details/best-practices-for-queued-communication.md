@@ -6,11 +6,11 @@ helpviewer_keywords:
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
 ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858084"
 ---
 # <a name="best-practices-for-queued-communication"></a>Kuyruğa Alınan İletişim için En İyi Uygulamalar
 Bu konu, Windows Communication Foundation (WCF) kuyruğa alınan iletişim için önerilen yöntemler sağlar. Aşağıdaki bölümlerde, önerilen uygulamaların bir senaryo açısından ele alınmıştır.  
@@ -48,11 +48,11 @@ Bu konu, Windows Communication Foundation (WCF) kuyruğa alınan iletişim için
 ## <a name="achieving-high-throughput"></a>Yüksek verimlilik elde etmeye  
  Tek bir uç nokta üzerinde yüksek performans sağlamak için aşağıdakileri kullanın:  
   
--   İşlem yapılan toplu işlem. İşlenen toplu işleme, çok sayıda ileti tek bir işlemde okuyabilmelerini sağlar. Bu işlem yürütmeleri genel performansı artırmak, en iyi duruma getirir. Toplu işleme maliyeti, tek bir iletide bir yığın içindeki bir hata oluşması sonra toplu işin tamamını geri alınır ve iletileri işlenen teker teker yeniden toplu güvenlidir kadar olması gerekiyorsa. Toplu işlem sırasında katılan diğer kaynak yöneticileri olduğunda özellikle sistem performansını artırmak için tercih edilen yol, bu nedenle çoğu durumda, zehirli iletiler nadir rastlanır. Daha fazla bilgi için [bir işlemde toplu ileti](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
+- İşlem yapılan toplu işlem. İşlenen toplu işleme, çok sayıda ileti tek bir işlemde okuyabilmelerini sağlar. Bu işlem yürütmeleri genel performansı artırmak, en iyi duruma getirir. Toplu işleme maliyeti, tek bir iletide bir yığın içindeki bir hata oluşması sonra toplu işin tamamını geri alınır ve iletileri işlenen teker teker yeniden toplu güvenlidir kadar olması gerekiyorsa. Toplu işlem sırasında katılan diğer kaynak yöneticileri olduğunda özellikle sistem performansını artırmak için tercih edilen yol, bu nedenle çoğu durumda, zehirli iletiler nadir rastlanır. Daha fazla bilgi için [bir işlemde toplu ileti](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
   
--   Eşzamanlılık. Eşzamanlılık verimliliğini artırır, ancak eşzamanlılık çakışması paylaşılan kaynaklar için de etkiler. Daha fazla bilgi için [eşzamanlılık](../../../../docs/framework/wcf/samples/concurrency.md).  
+- Eşzamanlılık. Eşzamanlılık verimliliğini artırır, ancak eşzamanlılık çakışması paylaşılan kaynaklar için de etkiler. Daha fazla bilgi için [eşzamanlılık](../../../../docs/framework/wcf/samples/concurrency.md).  
   
--   Azaltma. En iyi performans için dağıtıcı ardışık düzeninde iletilerin sayısını azaltma. Bunu yapmak nasıl bir örnek için bkz [azaltma](../../../../docs/framework/wcf/samples/throttling.md).  
+- Azaltma. En iyi performans için dağıtıcı ardışık düzeninde iletilerin sayısını azaltma. Bunu yapmak nasıl bir örnek için bkz [azaltma](../../../../docs/framework/wcf/samples/throttling.md).  
   
  Toplu işlem kullanırken, eşzamanlılık ve azaltma için eş zamanlı toplu Çevir dikkat edin.  
   
@@ -75,11 +75,11 @@ Bu konu, Windows Communication Foundation (WCF) kuyruğa alınan iletişim için
   
  Kullanırken `MsmqIntegrationBinding`, şunlara dikkat edin:  
   
--   Bir WCF ileti gövdesi bir MSMQ İleti gövdesi ile aynı değil. Sıraya alınan bir bağlamayı kullanarak bir WCF ileti gönderirken, WCF ileti gövdesi içinde bir MSMQ iletisinin yerleştirilir. Bu ek bilgileri oblivious MSMQ altyapısıdır; Bu, yalnızca MSMQ iletiyi görür.  
+- Bir WCF ileti gövdesi bir MSMQ İleti gövdesi ile aynı değil. Sıraya alınan bir bağlamayı kullanarak bir WCF ileti gönderirken, WCF ileti gövdesi içinde bir MSMQ iletisinin yerleştirilir. Bu ek bilgileri oblivious MSMQ altyapısıdır; Bu, yalnızca MSMQ iletiyi görür.  
   
--   `MsmqIntegrationBinding` popüler serileştirme türlerini destekler. Genel iletinin gövde türü serileştirme türü temel alarak <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, farklı tür parametreleri alır. Örneğin, <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> gerektirir `MsmqMessage\<byte[]>` ve <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> gerektirir `MsmqMessage<Stream>`.  
+- `MsmqIntegrationBinding` popüler serileştirme türlerini destekler. Genel iletinin gövde türü serileştirme türü temel alarak <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, farklı tür parametreleri alır. Örneğin, <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> gerektirir `MsmqMessage\<byte[]>` ve <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> gerektirir `MsmqMessage<Stream>`.  
   
--   XML serileştirme ile bilinen türü kullanarak belirtebilirsiniz `KnownTypes` özniteliği [ \<davranışı >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) öğesi XML ileti seri durumdan nasıl belirlemek için kullanılır.  
+- XML serileştirme ile bilinen türü kullanarak belirtebilirsiniz `KnownTypes` özniteliği [ \<davranışı >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) öğesi XML ileti seri durumdan nasıl belirlemek için kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

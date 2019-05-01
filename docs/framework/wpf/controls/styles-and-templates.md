@@ -8,11 +8,11 @@ helpviewer_keywords:
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
 ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790916"
 ---
 # <a name="styles-and-templates"></a>Stilleri ve Şablonları
 Bir paket için bir uygulama, belge veya kullanıcı arabirimi (UI) Tasarımcısı görsel açıdan ilgi çekici uygulamaları oluşturmaya olanak tanıyan özellikler (stiller, şablonlar, tetikleyiciler ve görsel Taslaklar) ve Windows Presentation Foundation (WPF) stil ve şablon oluşturma bakın Ürün için özel bir görünüm üzerinde standart hale getirin.  

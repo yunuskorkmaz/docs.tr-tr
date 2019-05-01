@@ -10,11 +10,11 @@ ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7dd67ea312f3677b9010dfea7f14fa366259bcd6
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793386"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Dinamik Dil Çalışma Zamanına Genel Bakış
 
@@ -24,11 +24,11 @@ Dinamik dilleri belirleyebilir bir nesne türünü çalışma zamanında, statik
 
 Çoğu dinamik diller, geliştiriciler için aşağıdaki avantajları sağlar:
 
--   Bir hızlı geri bildirim döngüsü (REPL veya okuma değerlendirmek yazdırma döngü) kullanma olanağı. Bu, birkaç ifadelerini girin ve sonuçları görmek için bunları hemen yürütme sağlar.
+- Bir hızlı geri bildirim döngüsü (REPL veya okuma değerlendirmek yazdırma döngü) kullanma olanağı. Bu, birkaç ifadelerini girin ve sonuçları görmek için bunları hemen yürütme sağlar.
 
--   Hem üst alt geliştirme hem de daha geleneksel aşağıdan yukarıya geliştirme desteği. Örneğin, yukarıdan aşağıya yaklaşımı kullandığınızda, henüz uygulanmadı işlevlerini ve ihtiyaç duyduğunuzda ardından temel uygulamaları ekleyin.
+- Hem üst alt geliştirme hem de daha geleneksel aşağıdan yukarıya geliştirme desteği. Örneğin, yukarıdan aşağıya yaklaşımı kullandığınızda, henüz uygulanmadı işlevlerini ve ihtiyaç duyduğunuzda ardından temel uygulamaları ekleyin.
 
--   Yeniden düzenleme ve kod genelindeki statik tür bildirimleri değiştirmek olmadığı için kod değişiklikleri, daha kolay.
+- Yeniden düzenleme ve kod genelindeki statik tür bildirimleri değiştirmek olmadığı için kod değişiklikleri, daha kolay.
 
 Dinamik dilleri mükemmel komut dosyası dilleri olun. Müşterilerin yeni komutlar ve işlevler ile dinamik dilleri kullanılarak oluşturulmuş uygulamaları kolayca genişletebilirsiniz. Dinamik dilleri, Web siteleri oluşturmak için de sık kullanılan ve sunucu grupları bakımı, çeşitli yardımcı programlarını geliştirme ve veri dönüşümleri gerçekleştirme harnesses test edin.
 
@@ -51,9 +51,9 @@ CLR gibi DLR .NET Framework'ün bir parçasıdır ve .NET Framework ve Visual St
 
 DLR kullanılarak geliştirilen diller örnekleri şunları içerir:
 
--   IronPython. Açık kaynak yazılımlardan olarak [GitHub](https://github.com/IronLanguages/ironpython2) Web sitesi.
+- IronPython. Açık kaynak yazılımlardan olarak [GitHub](https://github.com/IronLanguages/ironpython2) Web sitesi.
 
--   Ironruby. Açık kaynak yazılımlardan olarak [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044) Web sitesi.
+- Ironruby. Açık kaynak yazılımlardan olarak [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044) Web sitesi.
 
 ## <a name="primary-dlr-advantages"></a>Birincil DLR avantajları
  DLR aşağıdaki avantajları sağlar.
@@ -80,11 +80,11 @@ DLR kullanılarak geliştirilen diller örnekleri şunları içerir:
 
  Bir hizmet kümesi için daha iyi CLR DLR ekler dinamik dili destekleyen. Bu hizmetler şunları içerir:
 
--   İfade ağaçları. DLR dil semantiği temsil etmek için ifade ağaçları kullanır. Bu amaç için denetim akışı, atama ve diğer dil modelleme düğümleri içerecek şekilde genişletilmiş LINQ ifade ağaçları DLR sahiptir. Daha fazla bilgi için [ifade ağaçları (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) veya [ifade ağaçları (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
+- İfade ağaçları. DLR dil semantiği temsil etmek için ifade ağaçları kullanır. Bu amaç için denetim akışı, atama ve diğer dil modelleme düğümleri içerecek şekilde genişletilmiş LINQ ifade ağaçları DLR sahiptir. Daha fazla bilgi için [ifade ağaçları (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) veya [ifade ağaçları (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
 
--   Site önbelleğe alma çağırın. A *dinamik çağrı sitesini* gerçekleştirmek olduğu gibi bir işlem kodu bir yerinde olduğundan `a + b` veya `a.b()` dinamik nesneler üzerinde. DLR özelliklerini önbelleğe `a` ve `b` (genellikle bu nesne türleri) ve işlemi hakkında bilgi. Bu tür bir işlem daha önce gerçekleştirilen varsa DLR önbellekten hızlı dağıtım için gerekli tüm bilgileri alır.
+- Site önbelleğe alma çağırın. A *dinamik çağrı sitesini* gerçekleştirmek olduğu gibi bir işlem kodu bir yerinde olduğundan `a + b` veya `a.b()` dinamik nesneler üzerinde. DLR özelliklerini önbelleğe `a` ve `b` (genellikle bu nesne türleri) ve işlemi hakkında bilgi. Bu tür bir işlem daha önce gerçekleştirilen varsa DLR önbellekten hızlı dağıtım için gerekli tüm bilgileri alır.
 
--   Dinamik Nesne birlikte çalışabilirlik. Sınıfları ve arabirimleri dinamik nesneleri ve işlemleri temsil eder ve dil uygulayıcılar ve dinamik kitaplıklar yazarları tarafından kullanılan bir dizi DLR sağlar. Bu sınıflar ve arabirimler dahil <xref:System.Dynamic.IDynamicMetaObjectProvider>, <xref:System.Dynamic.DynamicMetaObject>, <xref:System.Dynamic.DynamicObject>, ve <xref:System.Dynamic.ExpandoObject>.
+- Dinamik Nesne birlikte çalışabilirlik. Sınıfları ve arabirimleri dinamik nesneleri ve işlemleri temsil eder ve dil uygulayıcılar ve dinamik kitaplıklar yazarları tarafından kullanılan bir dizi DLR sağlar. Bu sınıflar ve arabirimler dahil <xref:System.Dynamic.IDynamicMetaObjectProvider>, <xref:System.Dynamic.DynamicMetaObject>, <xref:System.Dynamic.DynamicObject>, ve <xref:System.Dynamic.ExpandoObject>.
 
 Yalnızca .NET Framework ile ancak diğer altyapıları ve Silverlight ve com gibi hizmetler ile iletişim kurmak için çağrı siteleri DLR bağlayıcıları kullanır Bağlayıcıları, bir dil semantiği şifreleyebilir ve ifade ağaçları kullanarak bir çağrı sitesine işlemleri gerçekleştirmek nasıl belirtin. Bu, dinamik olarak sağlar ve DLR kitaplıkları paylaşma ve DLR destekleyen teknoloji erişmek için kullandığınız diller statik olarak belirlenmiş.
 

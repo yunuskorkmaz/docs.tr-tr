@@ -8,11 +8,11 @@ ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 37b226cad9a34f1629d2972dacf8019adad54d7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61873593"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler
 Çoğu veri türleri, hem yönetilen hem de yönetilmeyen bellekte bir ortak gösterilmesi ve birlikte çalışma sıralayıcısı ile özel işlem gerektirmez. Bu tür adında *türlerse* arasında geçirildiğinde, dönüştürme gerektirmediği için yönetilen ve yönetilmeyen kod.  
@@ -21,35 +21,35 @@ ms.locfileid: "59115381"
   
  Aşağıdaki türlerini <xref:System> ad alanı blittable türleri şunlardır:  
   
--   <xref:System.Byte?displayProperty=nameWithType>  
+- <xref:System.Byte?displayProperty=nameWithType>  
   
--   <xref:System.SByte?displayProperty=nameWithType>  
+- <xref:System.SByte?displayProperty=nameWithType>  
   
--   <xref:System.Int16?displayProperty=nameWithType>  
+- <xref:System.Int16?displayProperty=nameWithType>  
   
--   <xref:System.UInt16?displayProperty=nameWithType>  
+- <xref:System.UInt16?displayProperty=nameWithType>  
   
--   <xref:System.Int32?displayProperty=nameWithType>  
+- <xref:System.Int32?displayProperty=nameWithType>  
   
--   <xref:System.UInt32?displayProperty=nameWithType>  
+- <xref:System.UInt32?displayProperty=nameWithType>  
   
--   <xref:System.Int64?displayProperty=nameWithType>  
+- <xref:System.Int64?displayProperty=nameWithType>  
   
--   <xref:System.UInt64?displayProperty=nameWithType>  
+- <xref:System.UInt64?displayProperty=nameWithType>  
   
--   <xref:System.IntPtr?displayProperty=nameWithType>  
+- <xref:System.IntPtr?displayProperty=nameWithType>  
   
--   <xref:System.UIntPtr?displayProperty=nameWithType>  
+- <xref:System.UIntPtr?displayProperty=nameWithType>  
   
--   <xref:System.Single?displayProperty=nameWithType>  
+- <xref:System.Single?displayProperty=nameWithType>  
   
--   <xref:System.Double?displayProperty=nameWithType>  
+- <xref:System.Double?displayProperty=nameWithType>  
   
  Aşağıdaki karmaşık türler, ayrıca blittable türleri şunlardır:  
   
--   Tamsayı dizisi gibi belirli bir türlerse tek boyutlu dizi. Ancak blittable türleri değişken bir dizi içeren bir tür kendisini değil blok halinde kopyalanabilir.  
+- Tamsayı dizisi gibi belirli bir türlerse tek boyutlu dizi. Ancak blittable türleri değişken bir dizi içeren bir tür kendisini değil blok halinde kopyalanabilir.  
   
--   Biçimlendirilmiş değer türleri yalnızca bir blok halinde kopyalanabilir türler (ve biçimlendirilmiş türleri olarak sıralanmış, sınıflar) bulunur. Biçimlendirilmiş değer türleri hakkında daha fazla bilgi için bkz: [değer türleri için varsayılan hazırlama](default-marshaling-behavior.md#default-marshaling-for-value-types).  
+- Biçimlendirilmiş değer türleri yalnızca bir blok halinde kopyalanabilir türler (ve biçimlendirilmiş türleri olarak sıralanmış, sınıflar) bulunur. Biçimlendirilmiş değer türleri hakkında daha fazla bilgi için bkz: [değer türleri için varsayılan hazırlama](default-marshaling-behavior.md#default-marshaling-for-value-types).  
   
  Nesne başvuruları blittable değil. Bu blittable başlarına olan nesnelere yapılan başvuruların dizisi içerir. Örneğin, blittable bir yapısı tanımlayabilirsiniz, ancak bu yapıların yapılan başvuruların dizisi içeren bir blok halinde kopyalanabilir türü tanımlayamazsınız.  
   

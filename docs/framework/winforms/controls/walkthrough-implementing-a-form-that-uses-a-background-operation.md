@@ -16,11 +16,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
 ms.openlocfilehash: 6399fb853162174895d892399fd3eb5226101515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792203"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>İzlenecek yol: Arka Plan İşlemi Kullanan Bir Form Uygulama
 Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kullanıcı arabirimi (UI) istemediğiniz veya kullanabileceğiniz "askıda," <xref:System.ComponentModel.BackgroundWorker> başka bir iş parçacığı üzerindeki işlemi yürütmek için sınıf.  
@@ -29,13 +29,13 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kul
   
  Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
   
--   Windows tabanlı bir uygulama oluşturma  
+- Windows tabanlı bir uygulama oluşturma  
   
--   Oluşturma bir <xref:System.ComponentModel.BackgroundWorker> formunuza  
+- Oluşturma bir <xref:System.ComponentModel.BackgroundWorker> formunuza  
   
--   Zaman uyumsuz olay işleyicileri ekleme  
+- Zaman uyumsuz olay işleyicileri ekleme  
   
--   İlerleme durumunu raporlama ve iptal için destek ekleme  
+- İlerleme durumunu raporlama ve iptal için destek ekleme  
   
  Bu örnekte kullanılan kod tam listesi için bkz. [nasıl yapılır: Arka plan işlemi kullanan bir Form uygulama](how-to-implement-a-form-that-uses-a-background-operation.md).  
   
@@ -68,7 +68,7 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kul
   
 #### <a name="to-create-a-backgroundworker-with-the-designer"></a>Bir BackgroundWorker tasarımcı ile oluşturma  
   
--   Gelen **bileşenleri** sekmesinde **araç kutusu**, sürükleyin bir <xref:System.ComponentModel.BackgroundWorker> forma.  
+- Gelen **bileşenleri** sekmesinde **araç kutusu**, sürükleyin bir <xref:System.ComponentModel.BackgroundWorker> forma.  
   
 ## <a name="adding-asynchronous-event-handlers"></a>Zaman uyumsuz olay işleyicileri ekleme  
  Olay işleyicileri eklemek artık hazırsınız <xref:System.ComponentModel.BackgroundWorker> bileşenin zaman uyumsuz olayları. Fibonacci numaraları hesaplar, arka planda çalıştırılacak zaman alıcı bir işlem olay işleyicilere biri tarafından çağrılır.  
@@ -145,7 +145,7 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kul
   
 #### <a name="to-test-your-project"></a>Projenizi test etmek için  
   
--   Derlemek ve uygulamayı çalıştırmak için F5 tuşuna basın.  
+- Derlemek ve uygulamayı çalıştırmak için F5 tuşuna basın.  
   
      Hesaplama arka planda çalışırken göreceğiniz <xref:System.Windows.Forms.ProgressBar> hesaplamanın tamamlanma yönelik ilerleme durumunu görüntüleme. Ayrıca, bekleyen işlemi iptal edebilirsiniz.  
   
@@ -154,11 +154,11 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kul
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Kullanan bir form uyguladıysanız göre bir <xref:System.ComponentModel.BackgroundWorker> arka planda bir hesaplama yürütmek için bileşen diğer zaman uyumsuz işlemler olasılıklarını keşfedebilirsiniz:  
   
--   Birden çok kullanın <xref:System.ComponentModel.BackgroundWorker> birkaç eşzamanlı operasyonlar için nesneleri.  
+- Birden çok kullanın <xref:System.ComponentModel.BackgroundWorker> birkaç eşzamanlı operasyonlar için nesneleri.  
   
--   Çok iş parçacıklı uygulamanızda hata ayıklamak için bkz: [nasıl yapılır: İş parçacıkları penceresini kullanma](/visualstudio/debugger/how-to-use-the-threads-window).  
+- Çok iş parçacıklı uygulamanızda hata ayıklamak için bkz: [nasıl yapılır: İş parçacıkları penceresini kullanma](/visualstudio/debugger/how-to-use-the-threads-window).  
   
--   Zaman uyumsuz programlama modelini destekleyen kendi bileşeni uygulayın. Daha fazla bilgi için [olay tabanlı zaman uyumsuz desene genel bakış](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
+- Zaman uyumsuz programlama modelini destekleyen kendi bileşeni uygulayın. Daha fazla bilgi için [olay tabanlı zaman uyumsuz desene genel bakış](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
     > [!CAUTION]
     >  Her türlü çoklu iş parçacığı kullanırken, büyük olasılıkla kendiniz çok önemli ve karmaşık hataları ortaya çıkarır. Başvurun [yönetilen iş parçacığı oluşturma en iyi yöntemler](../../../standard/threading/managed-threading-best-practices.md) kullanan herhangi bir çözümü uygulamadan önce çoklu iş parçacığı kullanımı.  

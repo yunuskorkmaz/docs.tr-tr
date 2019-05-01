@@ -14,21 +14,21 @@ ms.openlocfilehash: ca42512daa35d7efd7296c277a575bf131749ad2
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795061"
 ---
 # <a name="cancellation-in-managed-threads"></a>Yönetilen İş Parçacıklarında İptal
 İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework, ortak iptali zaman uyumsuz veya uzun süre çalışan zaman uyumlu işlemler için birleşik bir modeli kullanır. Bu model, bir iptal belirteci adlı basit bir nesne üzerinde temel alır. Yeni iş parçacıkları veya görevleri oluşturarak iptal edilebilir işlemleri, bir veya daha fazla örneğin çağıran nesnesi belirteç her işlem için iletir. Tek işlemler, diğer işlemler için belirteç kopyalarını sırayla geçirebilirsiniz. Bazı daha sonraki bir zamanda belirteci oluşturan nesnesini bu işlemler neler yaptıklarını durdurma isteği için kullanabilirsiniz. İstekte bulunan nesne yalnızca iptal isteği gönderebilir ve her dinleyici isteği fark ve uygun ve hızlı bir şekilde yanıt sorumludur.  
   
  Ortak iptali modeli uygulamada genel düzen şöyledir:  
   
--   Örneği bir <xref:System.Threading.CancellationTokenSource> nesne yöneten ve tek tek iptal belirteçleri iptal bildirimi gönderir.  
+- Örneği bir <xref:System.Threading.CancellationTokenSource> nesne yöneten ve tek tek iptal belirteçleri iptal bildirimi gönderir.  
   
--   Tarafından döndürülen belirtecin geçip <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> her görev veya iptal için bekleyen iş parçacığı özelliği.  
+- Tarafından döndürülen belirtecin geçip <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> her görev veya iptal için bekleyen iş parçacığı özelliği.  
   
--   Her görev veya iptal için yanıt vermek için iş parçacığı için bir mekanizma sağlar.  
+- Her görev veya iptal için yanıt vermek için iş parçacığı için bir mekanizma sağlar.  
   
--   Çağrı <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> iptal bildirim sağlamak için yöntemi.  
+- Çağrı <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> iptal bildirim sağlamak için yöntemi.  
   
 > [!IMPORTANT]
 >  <xref:System.Threading.CancellationTokenSource> Sınıfının Implements <xref:System.IDisposable> arabirimi. Çağırdığınızdan emin olmalıdır <xref:System.Threading.CancellationTokenSource.Dispose%2A?displayProperty=nameWithType> iptal belirteci kaynağı, tüm ücretsiz kullanmayı bitirdiğinizde yöntemi yönetilmeyen kaynakları da tutar.  
@@ -39,17 +39,17 @@ ms.locfileid: "59975669"
   
  Yeni iptal etme modeli iptal algılayan uygulamaları ve kitaplıkları oluşturmak kolaylaştırır ve aşağıdaki özellikleri destekler:  
   
--   İptali ortaktır ve Dinleyicide zorunlu değildir. Dinleyici düzgün bir şekilde bir iptal isteğine yanıt olarak sonlandırmak nasıl belirler.  
+- İptali ortaktır ve Dinleyicide zorunlu değildir. Dinleyici düzgün bir şekilde bir iptal isteğine yanıt olarak sonlandırmak nasıl belirler.  
   
--   İsteyen dinleme yapması farklıdır. İptal edilebilir bir işlem çağıran bir nesne, ne zaman (Şimdiye kadar değilse) İptal işlemi istendikten kontrol edebilirsiniz.  
+- İsteyen dinleme yapması farklıdır. İptal edilebilir bir işlem çağıran bir nesne, ne zaman (Şimdiye kadar değilse) İptal işlemi istendikten kontrol edebilirsiniz.  
   
--   İstenen nesne, yalnızca bir yöntem çağrısı kullanarak belirteç tüm kopyalarını iptal isteğini verir.  
+- İstenen nesne, yalnızca bir yöntem çağrısı kullanarak belirteç tüm kopyalarını iptal isteğini verir.  
   
--   Dinleyici için birden çok belirteç aynı anda bunları birine katılarak dinleyebilirsiniz *bağlı belirteci*.  
+- Dinleyici için birden çok belirteç aynı anda bunları birine katılarak dinleyebilirsiniz *bağlı belirteci*.  
   
--   Kullanıcı kodu dikkat edin ve kitaplık koddan iptal isteklerini yanıtlamasını ve kitaplık kodu dikkat edin ve kullanıcı kodundan iptal isteklerini yanıtlamasını.  
+- Kullanıcı kodu dikkat edin ve kitaplık koddan iptal isteklerini yanıtlamasını ve kitaplık kodu dikkat edin ve kullanıcı kodundan iptal isteklerini yanıtlamasını.  
   
--   Dinleyiciler, yoklama, geri çağırma kaydı ya da bekleme tanıtıcıları üzerinde bekleyen iptal isteklerini bildirilebilir.  
+- Dinleyiciler, yoklama, geri çağırma kaydı ya da bekleme tanıtıcıları üzerinde bekleyen iptal isteklerini bildirilebilir.  
   
 ## <a name="cancellation-types"></a>İptal türleri  
  İptal framework, aşağıdaki tabloda listelenen ilgili türleri kümesi olarak uygulanır.  
@@ -108,11 +108,11 @@ ms.locfileid: "59975669"
   
  Sistem yanıt hızını sağlamak üzere ve kilitlenmeleri önlemek için aşağıdaki yönergeleri geri çağırmaları kaydederken gelmelidir:  
   
--   Zaman uyumlu ve bu nedenle çağrısı adlandırılır çünkü geri çağırma yöntemi hızlı olmalıdır <xref:System.Threading.CancellationTokenSource.Cancel%2A> geri dönene kadar döndürmez.  
+- Zaman uyumlu ve bu nedenle çağrısı adlandırılır çünkü geri çağırma yöntemi hızlı olmalıdır <xref:System.Threading.CancellationTokenSource.Cancel%2A> geri dönene kadar döndürmez.  
   
--   Eğer <xref:System.Threading.CancellationTokenRegistration.Dispose%2A> geri çağırma çalıştığından ve geri çağırma bekleyen bir kilidi tutan sırada programınızı kilitlenme. Sonra `Dispose` döndüren geri çağırma tarafından gerekli tüm kaynakları serbest bırakabilirsiniz.  
+- Eğer <xref:System.Threading.CancellationTokenRegistration.Dispose%2A> geri çağırma çalıştığından ve geri çağırma bekleyen bir kilidi tutan sırada programınızı kilitlenme. Sonra `Dispose` döndüren geri çağırma tarafından gerekli tüm kaynakları serbest bırakabilirsiniz.  
   
--   Geri çağırmaları el ile herhangi bir iş parçacığı değil gerçekleştirmesi gereken veya <xref:System.Threading.SynchronizationContext> kullanımı bir geri çağırma. Bir geri çağırma belirli bir iş parçacığı üzerinde çalışması gerekiyorsa kullanın <xref:System.Threading.CancellationTokenRegistration?displayProperty=nameWithType> hedef syncContext, belirtmenize olanak tanıyan Oluşturucusu olan etkin <xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=nameWithType>. El ile bir geri çağırma iş parçacığı gerçekleştirme kilitlenmeye neden olabilir.  
+- Geri çağırmaları el ile herhangi bir iş parçacığı değil gerçekleştirmesi gereken veya <xref:System.Threading.SynchronizationContext> kullanımı bir geri çağırma. Bir geri çağırma belirli bir iş parçacığı üzerinde çalışması gerekiyorsa kullanın <xref:System.Threading.CancellationTokenRegistration?displayProperty=nameWithType> hedef syncContext, belirtmenize olanak tanıyan Oluşturucusu olan etkin <xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=nameWithType>. El ile bir geri çağırma iş parçacığı gerçekleştirme kilitlenmeye neden olabilir.  
   
  Daha eksiksiz bir örnek için bkz: [nasıl yapılır: İptal isteklerini geri aramaları kaydetme](../../../docs/standard/threading/how-to-register-callbacks-for-cancellation-requests.md).  
   
@@ -140,11 +140,11 @@ ms.locfileid: "59975669"
 ## <a name="cooperation-between-library-code-and-user-code"></a>Kitaplık kodu ve kullanıcı kodu arasında işbirliği  
  Birleşik iptalini çerçevesi, kullanıcı kodu çalışılabilir bir kitaplık kodu iptal etmek ve kullanıcı kodu iptal etmek kitaplık kodu için mümkün kılar. Sorunsuz bir işbirliği yaparak bu yönergeleri izleyerek her bir tarafta bağlıdır:  
   
--   Kitaplık kodu iptal edilebilir işlemleri sağlıyorsa, bir dış iptal belirtecini kabul edin ve böylece kullanıcı kodu iptal isteğinde bulunabilirsiniz genel yöntemleri de sağlamalıdır.  
+- Kitaplık kodu iptal edilebilir işlemleri sağlıyorsa, bir dış iptal belirtecini kabul edin ve böylece kullanıcı kodu iptal isteğinde bulunabilirsiniz genel yöntemleri de sağlamalıdır.  
   
--   Kitaplık kodu kullanıcı kodu çağırırsa, kitaplık kodu bir OperationCanceledException(externalToken) olarak yorumlamak *ortak iptali*ve bir hata özel durum olarak mutlaka.  
+- Kitaplık kodu kullanıcı kodu çağırırsa, kitaplık kodu bir OperationCanceledException(externalToken) olarak yorumlamak *ortak iptali*ve bir hata özel durum olarak mutlaka.  
   
--   Kullanıcı temsilcilerinde iptal isteklerine kitaplığı koddan zamanında yanıt vermek denemelidir.  
+- Kullanıcı temsilcilerinde iptal isteklerine kitaplığı koddan zamanında yanıt vermek denemelidir.  
   
  <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ve <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> örnekler sınıflarının aşağıdaki yönergeleri izleyin. Daha fazla bilgi için [görev iptali](../../../docs/standard/parallel-programming/task-cancellation.md) ve [nasıl yapılır: PLINQ sorgusunu iptal etme](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
   

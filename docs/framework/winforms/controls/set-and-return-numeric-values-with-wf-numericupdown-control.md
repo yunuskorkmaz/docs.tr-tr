@@ -12,11 +12,11 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], setting and returning values
 ms.assetid: 5bd8f8cd-4c12-49ea-9cc3-2a647d064689
 ms.openlocfilehash: c73200eb1c373f1d723ba82f2e6be5b625496b59
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902232"
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Nasıl yapılır: Windows Forms NumericUpDown Denetimi ile Sayı Değerleri Ayarlama ve Döndürme
 Windows Forms sayısal değerini <xref:System.Windows.Forms.NumericUpDown> denetimi tarafından belirlenir, <xref:System.Windows.Forms.NumericUpDown.Value%2A> özelliği. Herhangi bir özellik olarak ile yalnızca koşullu testler için denetimin değerini yazabilirsiniz. Bir kez <xref:System.Windows.Forms.NumericUpDown.Value%2A> özelliği, doğrudan bu işlemleri gerçekleştirmek için kod yazarak bunu ayarlayabilirsiniz veya çağırabilirsiniz <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> ve <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> yöntemleri.  
@@ -55,7 +55,7 @@ Windows Forms sayısal değerini <xref:System.Windows.Forms.NumericUpDown> denet
   
 ### <a name="to-return-the-numeric-value"></a>Sayısal değer döndürmek için  
   
--   Erişim <xref:System.Windows.Forms.NumericUpDown.Value%2A> kod özelliği.  
+- Erişim <xref:System.Windows.Forms.NumericUpDown.Value%2A> kod özelliği.  
   
     ```vb  
     If NumericUpDown1.Value >= 65 Then  

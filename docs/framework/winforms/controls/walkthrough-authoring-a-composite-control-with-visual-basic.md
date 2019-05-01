@@ -14,11 +14,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
 ms.openlocfilehash: 6404e5933f886578b4ad8afd0d3da324541fc3f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792255"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>İzlenecek yol: Visual Basic İle Bileşik Denetim Yazma
 Bileşik denetimler, özel bir grafik arabirim oluşturulabilir yeniden ve bir yöntemdir. Bileşik Denetim aslında bir görsel bir temsili ile bileşenidir. Bu nedenle, bir veya daha fazla Windows Forms denetimleri, bileşenleri veya kullanıcı girişini doğrulama, görüntü özelliklerini değiştirerek veya yazar tarafından gereken diğer görevleri gerçekleştirme işlevselliğini genişletebildiği kod bloklarını oluşabilir. Bileşik denetimler, diğer denetimlerle aynı şekilde Windows formlarında yerleştirilebilir. Bu kılavuzun ilk bölümünde oluşturduğunuz adlı basit bir bileşik denetim `ctlClock`. İzlenecek yol ikinci kısmında, işlevlerini genişletmek `ctlClock` devralma yoluyla.  

@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: WCF REST Programlama Modeli Kullanarak Rastgele Verile
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
 ms.openlocfilehash: d7da3a5c6dd4f04c4d902dab9c2dff40413ddd20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857342"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Nasıl yapılır: WCF REST Programlama Modeli Kullanarak Rastgele Verileri Kabul Eden Bir Hizmet Oluşturma
 Bazen geliştiriciler, veri hizmeti işleminden döndürülen nasıl tam denetimi olmalıdır. Bir hizmet işlemi, verileri bir biçimde byWCF desteklenmiyor döndürmelidir olduğunda bu durum geçerlidir. Bu konuda, rastgele verileri alan bir hizmet oluşturmak için WCF REST programlama modeli kullanarak anlatılmaktadır.  
@@ -191,7 +191,7 @@ namespace ReceiveRawData
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   Kod başvurusu System.ServiceModel.dll ve System.ServiceModel.Web.dll derlenirken  
+- Kod başvurusu System.ServiceModel.dll ve System.ServiceModel.Web.dll derlenirken  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

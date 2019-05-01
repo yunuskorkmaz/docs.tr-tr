@@ -8,26 +8,26 @@ ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2bb2b0dd95877fc6492f6d23a19c14688cd78f7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788069"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Uygulama Etki Alanı Kaynak İzleme (ARM) ETW Olayları
 <a name="top"></a> Bu olayları, uygulama etki alanı durumu hakkında ayrıntılı tanılama bilgileri sağlar. Bu olayları kullanan ya da aynı bilgileri edinmek için uygulama etki alanı kaynak izleme (ARM) özelliğini kullanın.  
   
  Bu kategori aşağıdaki olaylar oluşur:  
   
--   [ThreadCreated olay](#threadcreated_event)  
+- [ThreadCreated olay](#threadcreated_event)  
   
--   [AppDomainMemAllocated olay](#appdomainmemallocated_event)  
+- [AppDomainMemAllocated olay](#appdomainmemallocated_event)  
   
--   [AppDomainMemSurvived olay](#appdomainmemsurvived_event)  
+- [AppDomainMemSurvived olay](#appdomainmemsurvived_event)  
   
--   [ThreadAppDomainEnter olay](#threadappdomainenter_event)  
+- [ThreadAppDomainEnter olay](#threadappdomainenter_event)  
   
--   [ThreadTerminated olay](#threadterminated_event)  
+- [ThreadTerminated olay](#threadterminated_event)  
   
 <a name="threadcreated_event"></a>   
 ## <a name="threadcreated-event"></a>ThreadCreated olay  

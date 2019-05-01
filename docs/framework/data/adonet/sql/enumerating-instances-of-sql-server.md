@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
 ms.openlocfilehash: a723679fe18352e115df78af72975097dc28b617
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877597"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server (ADO.NET) Numaralandırma Örnekleri
 SQL Server, geçerli ağ içinde SQL Server örneklerini bulmak için uygulamaların izin verir. <xref:System.Data.Sql.SqlDataSourceEnumerator> Sınıfı sağlayarak uygulama geliştiricisi, bu bilgileri sunan bir <xref:System.Data.DataTable> görünür olan tüm sunucular hakkında bilgiler içeren. Bu tablo, ağ üzerinde yer alan bir kullanıcı yeni bir bağlantı oluşturmak çalıştığında sağlanan listesiyle eşleşen ve üzerinde kullanılabilen tüm sunucuları içeren aşağı açılan liste genişletir kullanılabilir sunucu örneklerinin bir listesini içeren döndürülen **bağlantı Özellikleri** iletişim kutusu. Görüntülenen sonuçlar her zaman eksiksiz değildir.  

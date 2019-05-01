@@ -1,18 +1,18 @@
 ---
-title: SqlDependency ile değişiklikleri algılama
+title: SqlDependency ile Değişiklikleri Algılama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
 ms.openlocfilehash: 839642c4fea45f4f37c5dc351d71417d46d07093
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877675"
 ---
-# <a name="detecting-changes-with-sqldependency"></a>SqlDependency ile değişiklikleri algılama
+# <a name="detecting-changes-with-sqldependency"></a>SqlDependency ile Değişiklikleri Algılama
 
 A <xref:System.Data.SqlClient.SqlDependency> nesne ilişkili bir <xref:System.Data.SqlClient.SqlCommand> sorgu sonuçları başlangıçta alınan farklı algılamak için. Bir temsilciye de atayabilirsiniz `OnChange` olay sonuçları için ilişkili bir komut değiştirdiğinizde, ateşlenir. İlişkilendirmeniz gerekir <xref:System.Data.SqlClient.SqlDependency> komutu yürütmeden önce komutu. `HasChanges` Özelliği <xref:System.Data.SqlClient.SqlDependency> veri ilk alındıktan sonra sorgu sonuçları değiştirdiyseniz belirlemek için de kullanılabilir.
 

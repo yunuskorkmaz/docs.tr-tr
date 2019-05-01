@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
 ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788836"
 ---
 # <a name="structured-navigation-overview"></a>Yapılandırılmış Gezintiye Genel Bakış
 Tarafından barındırılan içerik bir [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, veya bir <xref:System.Windows.Navigation.NavigationWindow> paketi tarafından tanımlanan sayfaların oluşan [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] ve için köprüler tarafından gitme. Sayfalar ve, bunlar, köprüler tarafından tanımlandığı şekilde gezinilebilir yolları yapısını gezinti topolojisi bilinir. Böyle bir topoloji, çeşitli uygulama türleri, belgeler içinde gezinmek, uygun. Bu tür uygulamalar için kullanıcı bir sayfadan başka bir sayfaya ya da sayfa diğer ilgili hiçbir şeyi bilmenize gerek olmadan gidebilirsiniz.  
@@ -25,15 +25,15 @@ Tarafından barındırılan içerik bir [!INCLUDE[TLA#tla_xbap](../../../../incl
 ## <a name="structured-navigation"></a>Yapılandırılmış gezintiye  
  Bir sayfa yapılandırılmış bir gezinti başka bir sayfa çağırdığında, bazılarını veya tümünü aşağıdaki davranışları gereklidir:  
   
--   Arama sayfası, isteğe bağlı olarak adlandırılan sayfası için gerekli parametreleri geçirme çağrılan sayfasına gider.  
+- Arama sayfası, isteğe bağlı olarak adlandırılan sayfası için gerekli parametreleri geçirme çağrılan sayfasına gider.  
   
--   Bir kullanıcı arama sayfası kullanılarak tamamlandığında Aranan sayfasında, özel arama sayfası isteğe bağlı olarak döndürür:  
+- Bir kullanıcı arama sayfası kullanılarak tamamlandığında Aranan sayfasında, özel arama sayfası isteğe bağlı olarak döndürür:  
   
-    -   Açıklayan nasıl (örneğin, bir kullanıcı bir Tamam düğmesine veya iptal düğmesi basılı olup olmadığını) arama sayfası tamamlandıktan sonra durum bilgilerini döndürüyor.  
+    - Açıklayan nasıl (örneğin, bir kullanıcı bir Tamam düğmesine veya iptal düğmesi basılı olup olmadığını) arama sayfası tamamlandıktan sonra durum bilgilerini döndürüyor.  
   
-    -   (Örneğin, yeni çalışan ayrıntıları) kullanıcıdan toplanan bu veri döndürüyor.  
+    - (Örneğin, yeni çalışan ayrıntıları) kullanıcıdan toplanan bu veri döndürüyor.  
   
--   Arama sayfası çağrılan sayfaya geri döndüğünde, çağrılan sayfanın adlı başka bir sayfadan bir örneğini ayırmak için Gezinti geçmişinden kaldırılır.  
+- Arama sayfası çağrılan sayfaya geri döndüğünde, çağrılan sayfanın adlı başka bir sayfadan bir örneğini ayırmak için Gezinti geçmişinden kaldırılır.  
   
  Bu davranışların aşağıdaki şekilde gösterilmiştir:  
   
@@ -115,17 +115,17 @@ Tarafından barındırılan içerik bir [!INCLUDE[TLA#tla_xbap](../../../../incl
   
  Çağrılan sayfasına parametreleri geçirmek için gerekli değildir. Bunun yerine, aşağıdakileri yapabilirsiniz:  
   
--   Arama sayfasından:  
+- Arama sayfasından:  
   
-    1.  Çağrılan örneği <xref:System.Windows.Navigation.PageFunction%601> kullanan varsayılan oluşturucu.  
+    1. Çağrılan örneği <xref:System.Windows.Navigation.PageFunction%601> kullanan varsayılan oluşturucu.  
   
-    2.  Parametrelerinde Store <xref:System.Windows.Application.Properties%2A>.  
+    2. Parametrelerinde Store <xref:System.Windows.Application.Properties%2A>.  
   
-    3.  Çağrılan gidin <xref:System.Windows.Navigation.PageFunction%601>.  
+    3. Çağrılan gidin <xref:System.Windows.Navigation.PageFunction%601>.  
   
--   Çağrılan gelen <xref:System.Windows.Navigation.PageFunction%601>:  
+- Çağrılan gelen <xref:System.Windows.Navigation.PageFunction%601>:  
   
-    -   Alma ve içerisinde depolanan parametreleri kullanma <xref:System.Windows.Application.Properties%2A>.  
+    - Alma ve içerisinde depolanan parametreleri kullanma <xref:System.Windows.Application.Properties%2A>.  
   
  Ancak, kısa süre içinde anlatıldığı gibi hala kod örneği ve çağrılan sayfa tarafından döndürülen veriler toplamak için çağrılan sayfasına gitmek için kullanacağınız. Bu nedenle, <xref:System.Windows.Navigation.PageFunction%601> Canlı; Aksi halde tutulması için gereksinimleri, sonraki açışınızda ulaşmanıza <xref:System.Windows.Navigation.PageFunction%601>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] başlatır <xref:System.Windows.Navigation.PageFunction%601> kullanan varsayılan oluşturucu.  
   

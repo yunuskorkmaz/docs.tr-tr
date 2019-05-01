@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
 ms.openlocfilehash: 7125914e64ac3c7643f7338b1343654794cf45da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787536"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma
 WCF hizmetleri ve istemcilerin <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için bağlama.  WebSockets olacaktır kullanılabilir <xref:System.ServiceModel.NetHttpBinding> hizmet sözleşmesini tanımlayan bir geri çağırma anlaşması belirler. Bu konu açıklar nasıl uygulanacağı bir WCF hizmeti ve kullanan istemci <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için.  
@@ -108,7 +108,7 @@ WCF hizmetleri ve istemcilerin <xref:System.ServiceModel.NetHttpBinding> WebSock
   
      Geri çağırma anlaşması işlemi zaman uyumsuz bir yöntem uygulanır.  
   
-    1.  İstemci kodu uygulayın.  
+    1. İstemci kodu uygulayın.  
   
         ```csharp  
         class Program  
@@ -133,7 +133,7 @@ WCF hizmetleri ve istemcilerin <xref:System.ServiceModel.NetHttpBinding> WebSock
   
          CallbackHandler açıklık için buraya yinelenir. İstemci uygulaması, yeni bir InstanceContext oluşturur ve uygulamasını geri çağırma arabirimi belirtir. Ardından yeni oluşturulan InstanceContext başvuru gönderme proxy sınıfının bir örneğini oluşturur. İstemci hizmeti çağırıp, belirtilen geri çağırma anlaşması kullanarak istemci hizmeti çağırır.  
   
-    2.  İstemciyi yapılandırma  
+    2. İstemciyi yapılandırma  
   
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  

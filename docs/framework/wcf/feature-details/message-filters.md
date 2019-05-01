@@ -5,11 +5,11 @@ helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
 ms.openlocfilehash: fc4656a76894eb3a844bc9f2187847fd9eff0ffe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786005"
 ---
 # <a name="message-filters"></a>İleti Filtreleri
 İçerik tabanlı yönlendirme uygulamak için yönlendirme hizmeti kullanan <xref:System.ServiceModel.Dispatcher.MessageFilter> adresi, uç nokta adı ya da belirli bir XPath ifadesi gibi bir ileti belirli bölümlerini inceleyin uygulamaları. İleti filtreleri hiçbiri ile sağlanmışsa [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] ihtiyaçlarınızı karşılamak, temel yeni bir uygulama oluşturarak özel filtre oluşturabilir <xref:System.ServiceModel.Dispatcher.MessageFilter> sınıfı.  
@@ -28,7 +28,7 @@ ms.locfileid: "48839111"
 |Eylem|Kullanan <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> belirli bir eylemi içeren iletileri eşleşmesi için sınıf.|Temel filtre uygulamak için eylem.|\<Filtre adı "action1" filterType = "Action" filterData = = "http://namespace/contract/operation" / >|  
 |EndpointAddress|Kullanan <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> sınıfı ile <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` içeren belirli bir adresi iletileri eşleştirilecek.|Filtreleme (Kime üstbilgisinde) adresi.|\<Filtre adı "Adresi1" filterType = "EndpointAddress" filterData = = "http://host/vdir/s.svc/b" / >|  
 |EndpointAddressPrefix|Kullanan <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> sınıfı ile <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` belirli adres ön eki içeren iletileri eşleştirilecek.|Eşleşen en uzun ön ek kullanımı üzerine filtre adresi.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
-|ve|Kullanan <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> döndürmeden önce her iki koşul her zaman değerlendirilir sınıfı.|filterData kullanılmaz; Bunun yerine Filtre1 ve Filtresi2 olması gereken karşılık gelen ileti filtreleri (Ayrıca tabloda) adlarını sahip **ve**ed birlikte.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
+|And|Kullanan <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> döndürmeden önce her iki koşul her zaman değerlendirilir sınıfı.|filterData kullanılmaz; Bunun yerine Filtre1 ve Filtresi2 olması gereken karşılık gelen ileti filtreleri (Ayrıca tabloda) adlarını sahip **ve**ed birlikte.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
 |Özel|Genişleten ve kullanıcı tanımlı bir tür <xref:System.ServiceModel.Dispatcher.MessageFilter> sınıfı ve bir dize alan bir oluşturucusu vardır.|CustomType öznitelik sınıfı oluşturmak için tam olarak nitelenmiş tür adıdır; Filtre veri filtresi oluştururken oluşturucuya geçirilecek dizedir.|\<Filtre adı "custom1" filterType = "Özel" customType="CustomAssembly.CustomMsgFilter, CustomAssembly =" filterData = "Özel veri" / >|  
 |EndpointName|Kullanan <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> gelen üzerinde hizmet uç noktası adını temel iletileri eşleşmesi için sınıf.|Hizmet uç noktası adı örneğin: "serviceEndpoint1".  Bu, yönlendirme hizmeti üzerinde kullanıma sunulan uç noktalardan biri olmalıdır.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
 |MatchAll|Kullanan <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> sınıfı. Bu filtre ile eşleşen tüm gelen iletileri.|filterData kullanılmaz. Bu filtre, her zaman tüm iletiler aynı olacaktır.|\<Filtre adı "matchAll1" filterType = = "MatchAll" / >|  

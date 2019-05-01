@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
 ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877753"
 ---
 # <a name="date-and-time-data"></a>Tarih ve Saat Verileri
 SQL Server 2008, tarih ve saat bilgilerini işlemek için yeni veri türlerini tanıtır. Yeni veri türleri, tarih ve saat için farklı türler ve büyük aralığı, hassasiyet ve saat dilimini tanıma ile genişletilmiş veri türleri içerir. İle .NET Framework sürüm 3.5 Service Pack 1, SQL Server için .NET Framework veri sağlayıcısı (SP) Başlangıç (<xref:System.Data.SqlClient>) SQL Server 2008 veritabanı altyapısı için yeni özellikler hakkında tam destek sağlar. .NET Framework 3.5 SP1'i yüklemeniz gerekir (veya üzeri) ile SqlClient bu yeni özellikleri kullanmak için.  
@@ -51,13 +51,13 @@ SQL Server 2008, tarih ve saat bilgilerini işlemek için yeni veri türlerini t
 ## <a name="datetime-data-types-and-parameters"></a>Tarih/saat veri türleri ve parametreleri  
  Aşağıdaki numaralandırmalar eklenmiş <xref:System.Data.SqlDbType> yeni tarih ve saat veri türleri desteklemek için.  
   
--   `SqlDbType.Date`  
+- `SqlDbType.Date`  
   
--   `SqlDbType.Time`  
+- `SqlDbType.Time`  
   
--   `SqlDbType.DateTime2`  
+- `SqlDbType.DateTime2`  
   
--   `SqlDbType.DateTimeOffSet`  
+- `SqlDbType.DateTimeOffSet`  
 
 Veri türünü belirleyebileceğiniz bir <xref:System.Data.SqlClient.SqlParameter> önceki birini kullanarak <xref:System.Data.SqlDbType> numaralandırma. 
 
@@ -66,9 +66,9 @@ Veri türünü belirleyebileceğiniz bir <xref:System.Data.SqlClient.SqlParamete
 
  Türünü belirtebilirsiniz bir <xref:System.Data.SqlClient.SqlParameter> ayarlayarak genel <xref:System.Data.SqlClient.SqlParameter.DbType%2A> özelliği bir `SqlParameter` belirli bir nesneye <xref:System.Data.DbType> numaralandırma değeri. Aşağıdaki sabit listesi değerleri eklenmiş <xref:System.Data.DbType> desteklemek için `datetime2` ve `datetimeoffset` veri türleri:  
   
--   DbType.DateTime2  
+- DbType.DateTime2  
   
--   DbType.DateTimeOffset  
+- DbType.DateTimeOffset  
   
  Bu yeni numaralandırmalara ek `Date`, `Time`, ve `DateTime` .NET Framework'ün önceki sürümlerinde var olan bir numaralandırma.  
   
@@ -219,11 +219,11 @@ command.Parameters.AddWithValue( _
 ## <a name="specifying-date-and-time-values-as-literals"></a>Değişmez değer olarak tarih ve saat değerleri belirtme  
  Tarih ve saat veri türleri, birçok farklı değişmez değer dize biçimleri, hangi SQL Server'ı kullanarak belirtebilirsiniz, sonra bunları yapılarını iç tarih/saat dönüştürme, çalışma zamanında değerlendirir. SQL Server tek tırnak işareti (') tarih ve saat verilerini tanır. Aşağıdaki örnekler, bazı biçimler göstermektedir:  
   
--   Alfabetik tarih biçimleri, gibi `'October 15, 2006'`.  
+- Alfabetik tarih biçimleri, gibi `'October 15, 2006'`.  
   
--   Gibi sayısal tarih biçimleri `'10/15/2006'`.  
+- Gibi sayısal tarih biçimleri `'10/15/2006'`.  
   
--   Dize biçimleri gibi unseparated `'20061015'`, hangi yorumlanabilir 15 Ekim 2006 ISO standart tarih biçimi kullanıyorsanız.  
+- Dize biçimleri gibi unseparated `'20061015'`, hangi yorumlanabilir 15 Ekim 2006 ISO standart tarih biçimi kullanıyorsanız.  
   
 > [!NOTE]
 >  Tüm değişmez değer dize biçimleri ve diğer özellikler SQL Server Books Online tarih ve saat veri türleri için kapsamlı belgeler bulabilirsiniz.  

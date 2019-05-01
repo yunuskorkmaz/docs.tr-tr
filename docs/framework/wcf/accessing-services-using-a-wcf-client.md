@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
 ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782440"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF İstemcisi Kullanarak Hizmetlere Erişme
 
@@ -178,11 +178,11 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 Birçok özel durumlar bir WCF istemcisi tarafından oluşturulan bir özel hizmet tarafından kaynaklanır. Bu bazı örnekleri şunlardır:
 
--   <xref:System.Net.Sockets.SocketException>: Varolan bir bağlantı uzak konak tarafından zorla kapatıldı.
+- <xref:System.Net.Sockets.SocketException>: Varolan bir bağlantı uzak konak tarafından zorla kapatıldı.
 
--   <xref:System.ServiceModel.CommunicationException>: Temel alınan bağlantı beklenmedik biçimde kapatıldı.
+- <xref:System.ServiceModel.CommunicationException>: Temel alınan bağlantı beklenmedik biçimde kapatıldı.
 
--   <xref:System.ServiceModel.CommunicationObjectAbortedException>: Yuva bağlantısı iptal edildi. Bu ileti, uzak ana bilgisayarda veya bir alt ağ kaynağı sorunu aşılması alma zaman aşımı işlenirken bir hata tarafından kaynaklanabilir.
+- <xref:System.ServiceModel.CommunicationObjectAbortedException>: Yuva bağlantısı iptal edildi. Bu ileti, uzak ana bilgisayarda veya bir alt ağ kaynağı sorunu aşılması alma zaman aşımı işlenirken bir hata tarafından kaynaklanabilir.
 
 Bu tür özel durumlar oluştuğunda, sorunu çözmek için en iyi hizmet tarafında izlemeyi ve var. hangi özel durum oluştu belirlemek için yoludur. İzleme hakkında daha fazla bilgi için bkz: [izleme](../../../docs/framework/wcf/diagnostics/tracing/index.md) ve [uygulamanız sorun giderme için izleme kullanarak](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 

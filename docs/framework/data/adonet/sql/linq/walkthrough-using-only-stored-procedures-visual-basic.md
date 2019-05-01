@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
 ms.openlocfilehash: 1527e3b4b614d4e700ae0c2c0fc555e14c7bc8d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876739"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>İzlenecek yol: Yalnızca Saklı Yordamlar Kullanma (Visual Basic)
 Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] senaryosu kullanarak verilerine erişmek için saklı yordamlar yalnızca. Bu yaklaşım, genellikle veri deposu nasıl erişilir sınırlamak için Veritabanı yöneticileri tarafından kullanılır.  
@@ -28,13 +28,13 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yol aşağıdakileri gerektirir:  
   
--   Bu izlenecek yol, dosyaları tutmak için ayrılmış bir klasör ("c:\linqtest3") kullanır. İzlenecek yol başlamadan önce bu klasörü oluşturun.  
+- Bu izlenecek yol, dosyaları tutmak için ayrılmış bir klasör ("c:\linqtest3") kullanır. İzlenecek yol başlamadan önce bu klasörü oluşturun.  
   
--   Northwind örnek veritabanı.  
+- Northwind örnek veritabanı.  
   
      Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Yükleme sitesinden indirebilirsiniz. Yönergeler için [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Veritabanı indirdikten sonra northwnd.mdf dosya c:\linqtest3 klasöre kopyalayın.  
   
--   Northwind veritabanından oluşturulan Visual Basic kod dosyası.  
+- Northwind veritabanından oluşturulan Visual Basic kod dosyası.  
   
      Bu izlenecek yol, şu komut satırıyla SqlMetal Aracı'nı kullanarak yazılmıştır:  
   
@@ -45,17 +45,17 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
 ## <a name="overview"></a>Genel Bakış  
  Bu kılavuz altı ana görevden oluşur:  
   
--   Ayarlama [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio'daki çözüm.  
+- Ayarlama [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio'daki çözüm.  
   
--   System.Data.Linq derleme projeye ekleniyor.  
+- System.Data.Linq derleme projeye ekleniyor.  
   
--   Veritabanı kod dosyası projeye ekleniyor.  
+- Veritabanı kod dosyası projeye ekleniyor.  
   
--   Veritabanına bir bağlantı oluşturuluyor.  
+- Veritabanına bir bağlantı oluşturuluyor.  
   
--   Kullanıcı arabirimi ayarlama.  
+- Kullanıcı arabirimi ayarlama.  
   
--   Çalıştıran ve uygulamayı test etme.  
+- Çalıştıran ve uygulamayı test etme.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Bir LINQ to SQL çözümü oluşturma  
  Bu ilk görevde oluşturduğunuz derlemek ve çalıştırmak için gerekli başvuruları içeren bir Visual Studio çözümü bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proje.  

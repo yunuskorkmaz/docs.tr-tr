@@ -5,11 +5,11 @@ helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
 ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857096"
 ---
 # <a name="denial-of-service"></a>Hizmet Reddi
 Hizmet reddi bir sistemde iletilerin işleneceğini veya oldukça yavaş işlenir şekilde doludur oluşur.  
@@ -19,22 +19,22 @@ Hizmet reddi bir sistemde iletilerin işleneceğini veya oldukça yavaş işleni
   
  Risk azaltma işlemleri şunlardır:  
   
--   Öğesinden türetilen <xref:System.Xml.NameTable> sınıfı ve en fazla boyut kotasını zorlayın. (Kullanımını önleyemez bir <xref:System.Xml.NameTable> veya geçiş <xref:System.Xml.NameTable> tam olduğunda.)  
+- Öğesinden türetilen <xref:System.Xml.NameTable> sınıfı ve en fazla boyut kotasını zorlayın. (Kullanımını önleyemez bir <xref:System.Xml.NameTable> veya geçiş <xref:System.Xml.NameTable> tam olduğunda.)  
   
--   Belirtilen özellikleri kullanmaktan kaçının ve bunun yerine kullanın <xref:System.Xml.XmlReader.MoveToAttribute%2A> yöntemiyle <xref:System.Xml.XmlReader.IsStartElement%2A> yöntemi mümkün olduğunda; bu yöntemleri değil dönün dizeleri ve bu nedenle overfilling sorununu önlemek <xref:System.Xml.NameTable> koleksiyonu.  
+- Belirtilen özellikleri kullanmaktan kaçının ve bunun yerine kullanın <xref:System.Xml.XmlReader.MoveToAttribute%2A> yöntemiyle <xref:System.Xml.XmlReader.IsStartElement%2A> yöntemi mümkün olduğunda; bu yöntemleri değil dönün dizeleri ve bu nedenle overfilling sorununu önlemek <xref:System.Xml.NameTable> koleksiyonu.  
   
 ## <a name="malicious-client-sends-excessive-license-requests-to-service"></a>Kötü amaçlı bir istemci aşırı lisans istekleri hizmetine gönderir.  
  Kötü amaçlı bir istemci aşırı lisans istekleri hizmetiyle bombards, aşırı bellek kullanılacak sunucuyu neden olabilir.  
   
  Azaltma: Aşağıdaki özellikleri kullanın <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> sınıfı:  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: zaman sınırlı maksimum sayısını kontrol `SecurityContextToken`sonra sunucunun önbelleğe alan s `SPNego` veya `SSL` anlaşması.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: zaman sınırlı maksimum sayısını kontrol `SecurityContextToken`sonra sunucunun önbelleğe alan s `SPNego` veya `SSL` anlaşması.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: ömrünü denetimleri `SecurityContextTokens` , aşağıdaki sunucu sorunlarını `SPNego` veya `SSL` anlaşması. Sunucu önbelleklerini `SecurityContextToken`bu süre boyunca s.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: ömrünü denetimleri `SecurityContextTokens` , aşağıdaki sunucu sorunlarını `SPNego` veya `SSL` anlaşması. Sunucu önbelleklerini `SecurityContextToken`bu süre boyunca s.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: sunucuda ancak herhangi bir uygulama iletisi işlendi için oluşturulan güvenli konuşma en fazla sayısını denetler. Bu kota, hizmetine güvenli konuşma oluşturma, böylece istemci başına durumunu korumak üzere bir hizmetin neden, ancak hiçbir zaman kullanarak istemcilerin önler.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: sunucuda ancak herhangi bir uygulama iletisi işlendi için oluşturulan güvenli konuşma en fazla sayısını denetler. Bu kota, hizmetine güvenli konuşma oluşturma, böylece istemci başına durumunu korumak üzere bir hizmetin neden, ancak hiçbir zaman kullanarak istemcilerin önler.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: hizmet tutan bir güvenli konuşma Canlı konuşma için istemcideki bir uygulama iletisi almadan en uzun süreyi denetler. Bu kota, hizmetine güvenli konuşma oluşturma, böylece istemci başına durumunu korumak üzere bir hizmetin neden, ancak hiçbir zaman kullanarak istemcilerin önler.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: hizmet tutan bir güvenli konuşma Canlı konuşma için istemcideki bir uygulama iletisi almadan en uzun süreyi denetler. Bu kota, hizmetine güvenli konuşma oluşturma, böylece istemci başına durumunu korumak üzere bir hizmetin neden, ancak hiçbir zaman kullanarak istemcilerin önler.  
   
 ## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>WSDualHttpBinding veya çift özel bağlamalar istemci kimlik doğrulaması gerektir  
  Varsayılan olarak, <xref:System.ServiceModel.WSDualHttpBinding> sahip güvenlik etkin. Mümkündür, ancak olması durumunda istemci kimlik doğrulaması tarafından devre dışı ayarı <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> özelliğini <xref:System.ServiceModel.MessageCredentialType.None>, kötü niyetli bir kullanıcı bir hizmet reddi saldırısı üçüncü bir hizmet üzerinde neden olabilir. Kötü amaçlı bir istemci bir akışı üçüncü hizmet vermek için ileti göndermek için yönlendirebilirsiniz çünkü bu durum oluşabilir.  

@@ -3,11 +3,11 @@ title: Bağıntı
 ms.date: 03/30/2017
 ms.assetid: 60151f6c-19b7-47af-9cdc-76c2ac95f301
 ms.openlocfilehash: 4c5dc97cfe37b7720c8b0769ca9e49b25c3af908
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857252"
 ---
 # <a name="correlation"></a>Bağıntı
 İş akışı hizmeti uygulamaları diğer hizmetlerle iletişim kurduğunda, bunlar arasındaki iletiler için uygun iş akışı örneği dağıtılmadan önemlidir. Bağıntı, bunun için bir mekanizma sağlar. Bu bölümdeki konular, bağıntı ve farklı bir iş akışı hizmeti senaryolarında kullanmak nasıl bir genel bakış sağlar.  

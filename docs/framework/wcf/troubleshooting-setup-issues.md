@@ -3,11 +3,11 @@ title: Kurulum Sorunlarını Giderme
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
 ms.openlocfilehash: 69242ec745f2a5b945ae64eb558070dbf0d39c10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791540"
 ---
 # <a name="troubleshooting-setup-issues"></a>Kurulum Sorunlarını Giderme
 Bu konu, Windows Communication Foundation (WCF) sorunları kümesi sorun giderme açıklar.  
@@ -15,15 +15,15 @@ Bu konu, Windows Communication Foundation (WCF) sorunları kümesi sorun giderme
 ## <a name="some-windows-communication-foundation-registry-keys-are-not-repaired-by-performing-an-msi-repair-operation-on-the-net-framework-30"></a>Bazı Windows Communication Foundation kayıt defteri anahtarlarını bir .NET Framework 3.0 MSI onarım işlemi gerçekleştirerek onarılır değil  
  Aşağıdaki kayıt defteri anahtarlarını silerseniz:  
   
--   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelService 3.0.0.0  
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelService 3.0.0.0  
   
--   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelOperation 3.0.0.0  
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelOperation 3.0.0.0  
   
--   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelEndpoint 3.0.0.0  
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelEndpoint 3.0.0.0  
   
--   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SMSvcHost 3.0.0.0  
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SMSvcHost 3.0.0.0  
   
--   3.0.0.0 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC köprüsü  
+- 3.0.0.0 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC köprüsü  
   
  Onarım dan başlatılan .NET Framework 3.0 yükleyicisini kullanarak çalıştırırsanız anahtarları yeniden oluşturulmaz **Program Ekle/Kaldır** uygulaması **Denetim Masası**. Bu anahtarları düzgün yeniden oluşturmak için kullanıcı kaldırın ve .NET Framework 3. 0'ı yeniden yüklemeniz gerekir.  
   

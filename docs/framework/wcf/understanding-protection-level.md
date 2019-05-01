@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
 ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791436"
 ---
 # <a name="understanding-protection-level"></a>Koruma Düzeylerini Anlama
 `ProtectionLevel` Özelliği bulunan birçok farklı sınıflarında gibi <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> sınıfları. Özellik, bir ileti bölümü (veya tam) nasıl korunduğunu denetler. Bu konuda, Windows Communication Foundation (WCF) özelliği ve nasıl çalıştığı açıklanmaktadır.  
@@ -26,33 +26,33 @@ ms.locfileid: "59096055"
 ## <a name="basics"></a>Temel bilgileri  
  Koruma düzeyi özelliğini daha iyi anlamak için aşağıdaki temel deyimleri geçerlidir:  
   
--   Herhangi bir ileti bölümü için üç temel koruma düzeyleri vardır. (Her yerde gerçekleşir) özelliği, birine ayarlanmış <xref:System.Net.Security.ProtectionLevel> sabit listesi değerleri. Koruma artan düzende içerirler:  
+- Herhangi bir ileti bölümü için üç temel koruma düzeyleri vardır. (Her yerde gerçekleşir) özelliği, birine ayarlanmış <xref:System.Net.Security.ProtectionLevel> sabit listesi değerleri. Koruma artan düzende içerirler:  
   
-    -   `None`.  
+    - `None`.  
   
-    -   `Sign`. Korunan bölümün dijital olarak imzalanır. Bu, herhangi bir korumalı iletiyi bölümüyle değiştirme algılama sağlar.  
+    - `Sign`. Korunan bölümün dijital olarak imzalanır. Bu, herhangi bir korumalı iletiyi bölümüyle değiştirme algılama sağlar.  
   
-    -   `EncryptAndSign`. İleti bölümü, kapatmadan önce gizlilik emin olmak için şifrelenir.  
+    - `EncryptAndSign`. İleti bölümü, kapatmadan önce gizlilik emin olmak için şifrelenir.  
   
--   Yalnızca koruma gereksinimlerini ayarlayabilirsiniz *uygulama verileri* bu özellik. Örneğin, WS-Addressing üst bilgileri altyapı verilerdir ve bu nedenle, etkilenmez `ProtectionLevel`.  
+- Yalnızca koruma gereksinimlerini ayarlayabilirsiniz *uygulama verileri* bu özellik. Örneğin, WS-Addressing üst bilgileri altyapı verilerdir ve bu nedenle, etkilenmez `ProtectionLevel`.  
   
--   Güvenlik modu ayarlandığında `Transport`, iletinin tamamı aktarım mekanizması tarafından korunur. Bu nedenle, bir iletinin farklı bölümleri için ayrı koruma düzeyini hiçbir etkisi olmaz.  
+- Güvenlik modu ayarlandığında `Transport`, iletinin tamamı aktarım mekanizması tarafından korunur. Bu nedenle, bir iletinin farklı bölümleri için ayrı koruma düzeyini hiçbir etkisi olmaz.  
   
--   `ProtectionLevel` Geliştiricinin kurabileceği yoludur *en düşük düzey* bağlama ile uyumlu olmalıdır. Hizmet dağıtıldığında, yapılandırmada belirtilen gerçek bağlama olabilir veya en düşük düzey desteklemiyor olabilir. Örneğin, varsayılan <xref:System.ServiceModel.BasicHttpBinding> sınıfı (zaman etkinleştirilebilir rağmen) güvenlik sağlamaz. Bu nedenle, başka bir ayara sahip bir sözleşme ile kullanmaya `None` bir özel durum oluşturulmasına neden olur.  
+- `ProtectionLevel` Geliştiricinin kurabileceği yoludur *en düşük düzey* bağlama ile uyumlu olmalıdır. Hizmet dağıtıldığında, yapılandırmada belirtilen gerçek bağlama olabilir veya en düşük düzey desteklemiyor olabilir. Örneğin, varsayılan <xref:System.ServiceModel.BasicHttpBinding> sınıfı (zaman etkinleştirilebilir rağmen) güvenlik sağlamaz. Bu nedenle, başka bir ayara sahip bir sözleşme ile kullanmaya `None` bir özel durum oluşturulmasına neden olur.  
   
--   Hizmet gerektiriyorsa en düşük `ProtectionLevel` için tüm iletileri `Sign`, (belki de bir WCF olmayan teknoloji tarafından oluşturulan) bir istemci şifrelemek ve tüm iletileri oturum (daha fazla gerekli en düşük olmayan). Bu durumda, WCF, istemci en fazla yapmış olduğundan, bir özel durum oluşturmayacaksa. Ancak, WCF uygulamaları (Hizmetleri veya istemciler) bir ileti bölümü mümkün olduğu durumlarda fazladan güvence altına almayacağını ancak en düşük düzeyi uyacaktır unutmayın. Kullanırken da unutmayın `Transport` daha ayrıntılı bir düzeyde korumak kendiliğinden alınamıyor, çünkü güvenlik modu olarak Aktarım ileti akışı aşırı güvenli.  
+- Hizmet gerektiriyorsa en düşük `ProtectionLevel` için tüm iletileri `Sign`, (belki de bir WCF olmayan teknoloji tarafından oluşturulan) bir istemci şifrelemek ve tüm iletileri oturum (daha fazla gerekli en düşük olmayan). Bu durumda, WCF, istemci en fazla yapmış olduğundan, bir özel durum oluşturmayacaksa. Ancak, WCF uygulamaları (Hizmetleri veya istemciler) bir ileti bölümü mümkün olduğu durumlarda fazladan güvence altına almayacağını ancak en düşük düzeyi uyacaktır unutmayın. Kullanırken da unutmayın `Transport` daha ayrıntılı bir düzeyde korumak kendiliğinden alınamıyor, çünkü güvenlik modu olarak Aktarım ileti akışı aşırı güvenli.  
   
--   Ayarlarsanız `ProtectionLevel` açıkça ya da için `Sign` veya `EncryptAndSign`, güvenliği etkinleştirilmiş bir bağlama ardından kullanmanız gerekir ya da bir özel durum oluşturulur.  
+- Ayarlarsanız `ProtectionLevel` açıkça ya da için `Sign` veya `EncryptAndSign`, güvenliği etkinleştirilmiş bir bağlama ardından kullanmanız gerekir ya da bir özel durum oluşturulur.  
   
--   Güvenlik sağlayan bir bağlamayı seçin ve ayarlamayın `ProtectionLevel` sözleşmesi, veriler şifrelenir ve imzalanmış tüm uygulama herhangi bir özellikte.  
+- Güvenlik sağlayan bir bağlamayı seçin ve ayarlamayın `ProtectionLevel` sözleşmesi, veriler şifrelenir ve imzalanmış tüm uygulama herhangi bir özellikte.  
   
--   Güvenlik etkin olmayan bir bağlama seçerseniz (örneğin, `BasicHttpBinding` sınıfında varsayılan olarak devre dışı güvenlik) ve `ProtectionLevel` hiçbir uygulama verileri korunur daha sonra açıkça, ayarlı değil.  
+- Güvenlik etkin olmayan bir bağlama seçerseniz (örneğin, `BasicHttpBinding` sınıfında varsayılan olarak devre dışı güvenlik) ve `ProtectionLevel` hiçbir uygulama verileri korunur daha sonra açıkça, ayarlı değil.  
   
--   Tüm uygulama verileri, aktarım düzeyinde güvenlik uygulayan bir bağlama kullanıyorsanız, taşıma özelliklerine göre sağlanır.  
+- Tüm uygulama verileri, aktarım düzeyinde güvenlik uygulayan bir bağlama kullanıyorsanız, taşıma özelliklerine göre sağlanır.  
   
--   İleti düzeyi güvenlik uygulayan bir bağlama kullanırsanız, uygulama veri sözleşme ayarlamak koruma düzeylerine göre sağlanır. İletileri tüm uygulama verileri şifrelenir ve imzalı sonra bir koruma düzeyi belirtmezseniz.  
+- İleti düzeyi güvenlik uygulayan bir bağlama kullanırsanız, uygulama veri sözleşme ayarlamak koruma düzeylerine göre sağlanır. İletileri tüm uygulama verileri şifrelenir ve imzalı sonra bir koruma düzeyi belirtmezseniz.  
   
--   `ProtectionLevel` Farklı kapsam düzeylerinde ayarlanabilir. Yoktur, sonraki bölümde açıklanan kapsamlar ile ilişkilendirilmiş bir hiyerarşi.  
+- `ProtectionLevel` Farklı kapsam düzeylerinde ayarlanabilir. Yoktur, sonraki bölümde açıklanan kapsamlar ile ilişkilendirilmiş bir hiyerarşi.  
   
 ## <a name="scoping"></a>Kapsam belirleme  
  Ayar `ProtectionLevel` üstteki API altındaki tüm düzeyleri düzeyini ayarlar. Varsa `ProtectionLevel` hiyerarşi düzeyi yepyeni bir düzeye artık sıfırlanır daha düşük bir düzeyde, aşağıdaki tüm API'leri için farklı bir değer ayarlanır (Bununla birlikte, API'ler, yukarıda yine de etkilenecek en üst düzey tarafından). Hiyerarşi aşağıdaki gibidir. Öznitelikleri aynı düzeyde eştir.  

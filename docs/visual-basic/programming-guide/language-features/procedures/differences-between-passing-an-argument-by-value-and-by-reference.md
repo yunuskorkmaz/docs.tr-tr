@@ -9,11 +9,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 ms.assetid: 5f5c38fe-3e2d-494c-8fff-f4025b55ec93
 ms.openlocfilehash: 1b85941c14721280a5025db442c4793930244ec8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864552"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>Değere ve Başvuruya Göre Bağımsız Değişken Geçirme Arasındaki Farklar (Visual Basic)
 Bir yordam için bir veya daha fazla değişken geçtiğinizde, her bağımsız değişken çağıran koddaki temel programlama öğesine karşılık gelir. Bu temel alınan öğenin değeri veya buna bir başvuru geçirebilirsiniz. Bu olarak bilinir *mekanizması geçirme*.  

@@ -1,17 +1,17 @@
 ---
-title: Uygulama geliştirme veya test ortamı için RabbitMQ ile bir olay yolu
+title: Geliştirme veya test ortamı için RabbitMQ ile bir olay veri yolu uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Geliştirme ve test ortamları için tümleştirme olayları için Mesajlaşma bir olay veri yolu uygulamak için RabbitMQ kullanın.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
 ms.openlocfilehash: 2bcd3491c58884653cd6c119753696019151bfed
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864279"
 ---
-# <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Uygulama geliştirme veya test ortamı için RabbitMQ ile bir olay yolu
+# <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Geliştirme veya test ortamı için RabbitMQ ile bir olay veri yolu uygulama
 
 Bir kapsayıcıda çalışan RabbitMQ hizmetine uygulama gibi temel, özel olay veri yolu oluşturursanız, yalnızca geliştirme ve test ortamları için kullanılması gerektiğini diyerek başlamanız gerekir. Üretime hazır service bus bir parçası olarak oluşturmadığınız sürece, üretim ortamı için bunun kullanmamanız gerekir. Bir ticari hizmet veri yolu olan birçok üretime hazır önemli özellikleri basit bir özel olay veri yolu eksik olabilir.
 

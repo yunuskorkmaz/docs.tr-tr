@@ -5,11 +5,11 @@ helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
 ms.openlocfilehash: 6d9ea3b877e7c735cf789039b2a6956037372888
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782414"
 ---
 # <a name="basic-programming-lifecycle"></a>Temel Programlama Yaşam Döngüsü
 Windows Communication Foundation (WCF) uygulamaların aynı bilgisayarda Internet üzerinden ya da farklı uygulama platformları üzerinde olup olmadıklarını iletişim kurmasına olanak sağlar. Bu konu, bir WCF uygulaması oluşturmak için gereken görevleri özetler. Çalışan bir örnek uygulama için bkz. [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md).  

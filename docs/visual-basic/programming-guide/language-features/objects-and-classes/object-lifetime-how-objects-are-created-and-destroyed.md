@@ -23,11 +23,11 @@ helpviewer_keywords:
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
 ms.openlocfilehash: 553868ae82501e479acadd04b3d5e4447bcea36e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61867151"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Nesne Ömrü: Nesneler nasıl oluşturulur ve yok (Visual Basic)
 Bir sınıf, bir nesne örneği kullanılarak oluşturulan `New` anahtar sözcüğü. Bunlar kullanılmadan önce başlatma görevleri genellikle yeni nesneler üzerinde gerçekleştirilmelidir. Genel başlangıç görevleri, veritabanlarına bağlanma ve kayıt defteri anahtarlarının okumanızı dosyalarını açma içerir. Visual Basic denetimleri adı verilen yordamları kullanarak yeni nesnelerin başlatılmasını *oluşturucular* (başlatma denetime izin veren özel yöntemleri).  
@@ -84,13 +84,13 @@ Bir sınıf, bir nesne örneği kullanılarak oluşturulan `New` anahtar sözcü
 ### <a name="implementing-idisposable"></a>IDisposable uygulayan  
  Uygulayan bir sınıf <xref:System.IDisposable> arabirimi, bu kod bölümlerini içermelidir:  
   
--   Nesne atıldı olmadığını izlemek için bir alan:  
+- Nesne atıldı olmadığını izlemek için bir alan:  
   
     ```  
     Protected disposed As Boolean = False  
     ```  
   
--   Bir aşırı yüklemesini <xref:System.IDisposable.Dispose%2A> , sınıfın kaynaklarını serbest bırakır. Bu yöntem çağrılmalıdır <xref:System.IDisposable.Dispose%2A> ve `Finalize` temel sınıf yöntemleri:  
+- Bir aşırı yüklemesini <xref:System.IDisposable.Dispose%2A> , sınıfın kaynaklarını serbest bırakır. Bu yöntem çağrılmalıdır <xref:System.IDisposable.Dispose%2A> ve `Finalize` temel sınıf yöntemleri:  
   
     ```  
     Protected Overridable Sub Dispose(ByVal disposing As Boolean)  
@@ -104,7 +104,7 @@ Bir sınıf, bir nesne örneği kullanılarak oluşturulan `New` anahtar sözcü
     End Sub  
     ```  
   
--   Uygulanışı <xref:System.IDisposable.Dispose%2A> , yalnızca aşağıdaki kodu içerir:  
+- Uygulanışı <xref:System.IDisposable.Dispose%2A> , yalnızca aşağıdaki kodu içerir:  
   
     ```  
     Public Sub Dispose() Implements IDisposable.Dispose  
@@ -113,7 +113,7 @@ Bir sınıf, bir nesne örneği kullanılarak oluşturulan `New` anahtar sözcü
     End Sub  
     ```  
   
--   Geçersiz kılma `Finalize` yalnızca aşağıdaki kodu içeren yöntemi:  
+- Geçersiz kılma `Finalize` yalnızca aşağıdaki kodu içeren yöntemi:  
   
     ```  
     Protected Overrides Sub Finalize()  

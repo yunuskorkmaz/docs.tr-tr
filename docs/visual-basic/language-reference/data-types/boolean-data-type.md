@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
 ms.openlocfilehash: 7b64302d801a08f976de0ec969983c821f7a8471
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797000"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boole Veri Türü (Visual Basic)
 Yalnızca ayrı tutma değerleri `True` veya `False`. Anahtar sözcükler `True` ve `False` iki durum için karşılık gelen `Boolean` değişkenleri.  
@@ -36,11 +36,11 @@ Yalnızca ayrı tutma değerleri `True` veya `False`. Anahtar sözcükler `True`
   
 ## <a name="programming-tips"></a>Programlama İpuçları  
   
--   **Negatif sayılar.** `Boolean` bir sayısal tür değil ve negatif bir değeri temsil edemeyen. Her iki durumda da kullanmamalısınız `Boolean` sayısal değerleri tutmak için.  
+- **Negatif sayılar.** `Boolean` bir sayısal tür değil ve negatif bir değeri temsil edemeyen. Her iki durumda da kullanmamalısınız `Boolean` sayısal değerleri tutmak için.  
   
--   **Tür karakterleri.** `Boolean` değişmez değer türü karakteri ya da tanımlayıcı türü karakteri var.  
+- **Tür karakterleri.** `Boolean` değişmez değer türü karakteri ya da tanımlayıcı türü karakteri var.  
   
--   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Boolean?displayProperty=nameWithType> yapısı.  
+- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Boolean?displayProperty=nameWithType> yapısı.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte, `runningVB` olduğu bir `Boolean` Evet/Hayır basit depolayan değişken.  

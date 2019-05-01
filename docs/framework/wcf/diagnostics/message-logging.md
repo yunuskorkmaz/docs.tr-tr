@@ -3,11 +3,11 @@ title: İleti Günlüğe Kaydetme
 ms.date: 03/30/2017
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
 ms.openlocfilehash: e189b6c2997c7d4d7422e61fa22be95678aeb911
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797442"
 ---
 # <a name="message-logging"></a>İleti Günlüğe Kaydetme
 Windows Communication Foundation (WCF) çevrimdışı kullanım için gelen ve giden iletileri günlüğe yeteneği sağlar. İleti günlüğe kaydetme, hangi iletisi ve ileti gövdesi aşağıdaki gibi görünür görmenizi sağlar. Bu tür bir günlük bağımsız değişken olarak geçirildi ve nasıl XML olarak ifade edilen bağımsız değişkenleri alan uç noktası gördüğünüz menüsünü genişletmeniz halinde özellikle yararlı olur. Ayrıca, aldığı gibi ileti günlüğe kaydetme, nasıl iletinin geldiği görmek için yanlış biçimlendirilmiş iletiler de tanılama sağlar. Ayrıca, güvenlik inceleyebilirsiniz kullanılan belirteçleri, bölümleri şifrelenir ve imzalanmış ve bölümleri değişmeden.  

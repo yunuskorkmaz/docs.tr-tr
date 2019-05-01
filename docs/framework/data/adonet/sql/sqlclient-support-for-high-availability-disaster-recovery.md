@@ -3,11 +3,11 @@ title: Yüksek Kullanılabilirlik, Olağanüstü Durum Kurtarma için SqlClient 
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876101"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Yüksek Kullanılabilirlik, Olağanüstü Durum Kurtarma için SqlClient Desteği
 Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) yüksek kullanılabilirlik, olağanüstü durum kurtarma--AlwaysOn Kullanılabilirlik grupları için.  AlwaysOn Kullanılabilirlik grupları özelliği SQL Server 2012'ye eklendi. AlwaysOn Kullanılabilirlik grupları hakkında daha fazla bilgi için SQL Server Books Online'a bakın.  
@@ -21,9 +21,9 @@ Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../.
   
  Aşağıdaki bağlantı özelliklerini SqlClient içinde eklenen [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]:  
   
--   `ApplicationIntent`  
+- `ApplicationIntent`  
   
--   `MultiSubnetFailover`  
+- `MultiSubnetFailover`  
   
  Bu bağlantı dizesi anahtar sözcükler ile programlı bir şekilde değiştirebilirsiniz:  
   
@@ -45,17 +45,17 @@ Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../.
   
  Bir kullanılabilirlik grubuna bir sunucu veya SQL Server 2012 yük devretme kümesi örneği bağlanmak için aşağıdaki yönergeleri kullanın:  
   
--   Kullanım `MultiSubnetFailover` bağlantı özelliği için bir tek alt ağ veya birden çok alt ağ; bağlanırken, her ikisi için de performansı iyileştirir.  
+- Kullanım `MultiSubnetFailover` bağlantı özelliği için bir tek alt ağ veya birden çok alt ağ; bağlanırken, her ikisi için de performansı iyileştirir.  
   
--   Bir kullanılabilirlik grubuna bağlanmak için bağlantı dizenizi sunucusu olarak kullanılabilirlik grubunun kullanılabilirlik grubu dinleyicisini belirtin.  
+- Bir kullanılabilirlik grubuna bağlanmak için bağlantı dizenizi sunucusu olarak kullanılabilirlik grubunun kullanılabilirlik grubu dinleyicisini belirtin.  
   
--   64'ten fazla IP adresi ile yapılandırılmış bir SQL Server'a bağlanırken bağlantı hatası neden olur.  
+- 64'ten fazla IP adresi ile yapılandırılmış bir SQL Server'a bağlanırken bağlantı hatası neden olur.  
   
--   Kullanan bir uygulamanın davranışını `MultiSubnetFailover` bağlantı özelliği, kimlik doğrulama türüne göre değil etkilenir: SQL Server kimlik doğrulaması, Kerberos kimlik doğrulaması veya Windows kimlik doğrulaması.  
+- Kullanan bir uygulamanın davranışını `MultiSubnetFailover` bağlantı özelliği, kimlik doğrulama türüne göre değil etkilenir: SQL Server kimlik doğrulaması, Kerberos kimlik doğrulaması veya Windows kimlik doğrulaması.  
   
--   Değeri Artır `Connect Timeout` için yük devretme zamanına uyum sağlayamayacak ve uygulama bağlantı yeniden deneme girişimleri azaltmak için.  
+- Değeri Artır `Connect Timeout` için yük devretme zamanına uyum sağlayamayacak ve uygulama bağlantı yeniden deneme girişimleri azaltmak için.  
   
--   Dağıtılmış işlemler desteklenmez.  
+- Dağıtılmış işlemler desteklenmez.  
   
  Bir ikincil çoğaltma konumuna bağlanma, salt okunur yönlendirme etkin değilse, aşağıdaki durumlarda başarısız olur:  
   

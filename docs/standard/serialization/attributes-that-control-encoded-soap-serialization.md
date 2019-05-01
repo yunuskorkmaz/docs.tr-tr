@@ -1,5 +1,5 @@
 ---
-title: Kodlanmış SOAP serileştirmesini denetleyen öznitelikler
+title: Kodlanmış SOAP Serileştirmesini Denetleyen Öznitelikler
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SOAP, XML serialization
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
 ms.openlocfilehash: 2961d9abc6c32e78b5a61e8f2bbea5cfcf6677bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794946"
 ---
-# <a name="attributes-that-control-encoded-soap-serialization"></a>Kodlanmış SOAP serileştirmesini denetleyen öznitelikler
+# <a name="attributes-that-control-encoded-soap-serialization"></a>Kodlanmış SOAP Serileştirmesini Denetleyen Öznitelikler
 
 Adlı World Wide Web Consortium (W3C) belgenin [Basit Nesne Erişim Protokolü (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/) nasıl SOAP parametreleri kodlanmış açıklayan isteğe bağlı bir bölüm (Bölüm 5) içerir. Belirtiminin 5 bölümüne uymak için özel öznitelikler bulundu kümesi kullanmak <xref:System.Xml.Serialization> ad alanı. Özniteliklerle sınıfları ve sınıf üyeleri için uygun olarak uygulayın ve ardından <xref:System.Xml.Serialization.XmlSerializer> sınıf veya sınıfların örneklerini serileştirmek için.
 

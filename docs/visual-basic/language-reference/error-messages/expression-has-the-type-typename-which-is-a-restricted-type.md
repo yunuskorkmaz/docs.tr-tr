@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
 ms.openlocfilehash: 017a2458562068727674bd3fd9cda8c33d989e8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803174"
 ---
 # <a name="expression-has-the-type-typename-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-object-or-valuetype"></a>İfade türüne sahip '\<typename >' kısıtlanmış bir tür olan ve 'Object' veya 'ValueType' öğesinden devralınan üyelere erişim için kullanılamaz
 Bir ifade, ortak dil çalışma zamanı tarafından (CLR) Kutulu bir türe değerlendirir ancak kutulama gerektiren bir üye erişir.  

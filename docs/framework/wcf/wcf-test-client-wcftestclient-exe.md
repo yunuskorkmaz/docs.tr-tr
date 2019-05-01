@@ -3,11 +3,11 @@ title: WCF Test İstemcisi (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 ms.openlocfilehash: cd6f0d7a98ca5bc5f6bee45ad296341a5b91b2a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791202"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF Test İstemcisi (WcfTestClient.exe)
 Windows Communication Foundation (WCF) Test İstemcisi (WcfTestClient.exe), kullanıcılara test parametreleri giriş, hizmete girdi gönderme olanağı sağlar ve hizmet geri gönderir yanıtı görüntüleyin bir GUI araçtır. Bu test WCF hizmet konağı ile birleştirildiğinde deneyimi sorunsuz bir hizmet sağlar.  
@@ -136,34 +136,34 @@ Windows Communication Foundation (WCF) Test İstemcisi (WcfTestClient.exe), kull
 ## <a name="features-supported-by-wcf-test-client"></a>WCF Test istemcisi tarafından desteklenen özellikler  
  WCF Test istemcisi tarafından desteklenen özelliklerin bir listesi verilmiştir:  
   
--   Hizmet başlatma: İstek/yanıt ve tek yönlü mesaj.  
+- Hizmet başlatma: İstek/yanıt ve tek yönlü mesaj.  
   
--   Bağlamaları: Tüm bağlamaları svcutil.exe'yi desteklenir.  
+- Bağlamaları: Tüm bağlamaları svcutil.exe'yi desteklenir.  
   
--   Oturum denetleme.  
+- Oturum denetleme.  
   
--   İleti sözleşmesi.  
+- İleti sözleşmesi.  
   
--   XML serileştirme.  
+- XML serileştirme.  
   
  WCF Test istemcisi tarafından desteklenmeyen özelliklerin bir listesi verilmiştir:  
   
--   Türleri: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, türleri uygulayan <xref:System.Xml.Serialization.IXmlSerializable> arabirimi ilgili dahil olmak üzere, <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> özniteliği ve <xref:System.Xml.Linq.XDocument> ve <xref:System.Xml.Linq.XElement> türleri ve ADO.NET <xref:System.Data.DataTable> türü.  
+- Türleri: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, türleri uygulayan <xref:System.Xml.Serialization.IXmlSerializable> arabirimi ilgili dahil olmak üzere, <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> özniteliği ve <xref:System.Xml.Linq.XDocument> ve <xref:System.Xml.Linq.XElement> türleri ve ADO.NET <xref:System.Data.DataTable> türü.  
   
--   Çift yönlü sözleşme.  
+- Çift yönlü sözleşme.  
   
--   İşlem.  
+- İşlem.  
   
--   Güvenlik: [!INCLUDE[infocard](../../../includes/infocard-md.md)] , sertifika ve kullanıcı adı/parola.  
+- Güvenlik: [!INCLUDE[infocard](../../../includes/infocard-md.md)] , sertifika ve kullanıcı adı/parola.  
   
--   Bindings: WSFederationbinding, herhangi bir bağlam bağlamaları ve Https bağlaması, WebHttpbinding (Json yanıt iletisi desteği).  
+- Bindings: WSFederationbinding, herhangi bir bağlam bağlamaları ve Https bağlaması, WebHttpbinding (Json yanıt iletisi desteği).  
   
 ## <a name="closing-wcf-test-client"></a>WCF Test İstemcisi kapatma  
  WCF Test istemcisi aşağıdaki şekilde kapatabilirsiniz:  
   
--   Üzerinde **dosya** menüsünü tıklatın **çıkış**. Alternatif olarak, WCF Test İstemcisi ana penceresinde tıklayın **Kapat**. Hem bu eylemlerden birini de WCF hizmet otomatik konağı kapatın ve WCF Test İstemcisi Visual Studio tarafından başlatıldıysa, Visual Studio hata ayıklama işlemini durdurun.  
+- Üzerinde **dosya** menüsünü tıklatın **çıkış**. Alternatif olarak, WCF Test İstemcisi ana penceresinde tıklayın **Kapat**. Hem bu eylemlerden birini de WCF hizmet otomatik konağı kapatın ve WCF Test İstemcisi Visual Studio tarafından başlatıldıysa, Visual Studio hata ayıklama işlemini durdurun.  
   
--   Sağ **WCF hizmet konağı** bildirim alanına ve ardından simge **çıkış.** Bu işlem, WCF hizmeti otomatik konağı ve WCF Test İstemcisi aşağı kapatır ve Visual Studio hata ayıklama işlemi durdurur.  
+- Sağ **WCF hizmet konağı** bildirim alanına ve ardından simge **çıkış.** Bu işlem, WCF hizmeti otomatik konağı ve WCF Test İstemcisi aşağı kapatır ve Visual Studio hata ayıklama işlemi durdurur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

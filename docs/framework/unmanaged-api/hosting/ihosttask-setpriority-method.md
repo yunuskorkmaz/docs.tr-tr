@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c5382341a8c0c6455438af9e8c476348ab2467a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789512"
 ---
 # <a name="ihosttasksetpriority-method"></a>IHostTask::SetPriority Yöntemi
 Düzey istekler ana iş parçacığı önceliği ayarlamak için geçerli tarafından temsil edilen bir görev [Ihosttask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) örneği.  
@@ -53,19 +53,19 @@ HRESULT SetPriority (
 ## <a name="remarks"></a>Açıklamalar  
  İş parçacıkları kısmen bir iş parçacığının öncelik düzeyini temel alan bir hepsini bir kez deneme sistemi kullanarak verilen işlem. `SetPriority` Geçerli görev için bu iş parçacığı öncelik düzeyi ayarlamak CLR sağlar. Aşağıdaki `newPriority` değerler desteklenir.  
   
--   THREAD_PRIORITY_ABOVE_NORMAL  
+- THREAD_PRIORITY_ABOVE_NORMAL  
   
--   THREAD_PRIORITY_BELOW_NORMAL  
+- THREAD_PRIORITY_BELOW_NORMAL  
   
--   THREAD_PRIORITY_HIGHEST  
+- THREAD_PRIORITY_HIGHEST  
   
--   THREAD_PRIORITY_IDLE  
+- THREAD_PRIORITY_IDLE  
   
--   THREAD_PRIORITY_LOWEST  
+- THREAD_PRIORITY_LOWEST  
   
--   THREAD_PRIORITY_NORMAL  
+- THREAD_PRIORITY_NORMAL  
   
--   THREAD_PRIORITY_TIME_CRITICAL  
+- THREAD_PRIORITY_TIME_CRITICAL  
   
  CLR çağrıları `SetPriority` zaman değerini <xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType> kullanıcı kodu tarafından değiştirildi. Bir ana iş parçacığı önceliği ataması için kendi algoritmaları tanımlayabilir ve bu isteği yok saymak ücretsizdir.  
   

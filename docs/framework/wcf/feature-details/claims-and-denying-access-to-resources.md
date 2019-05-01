@@ -5,11 +5,11 @@ helpviewer_keywords:
 - claims [WCF], denying access to resources
 ms.assetid: 145ebb41-680e-4256-b14c-1efb4af1e982
 ms.openlocfilehash: 4f48c59090579f4b451f615bb792a4dcb73f6df5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857603"
 ---
 # <a name="claims-and-denying-access-to-resources"></a>Beyanlar ve Kaynaklara Erişimi Reddetme
 Windows Communication Foundation (WCF) bir beyana dayalı yetkilendirme mekanizması destekler. Talep varlığını temel alarak kaynaklara erişimine yanı sıra sistemleri genellikle talep varlığını temel alarak kaynaklara erişimi reddetme. Bu sistemlere incelemelisiniz <xref:System.IdentityModel.Policy.AuthorizationContext> aramadan önce erişimine izin verilmesinden neden talepler için erişimin reddedilmesi neden talepler için.  

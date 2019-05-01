@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
 ms.openlocfilehash: 41e099cdca4f02231fd4b1cc8bce2c4b1e511c71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878832"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>(LINQ to DataSet) DataView ile filtreleme
 Ardından bir UI denetimine üzerinden bir istemciye verileri sunmak ve belirli ölçütleri kullanarak veri filtreleme olanağı, veri bağlama, önemli bir yönüdür. <xref:System.Data.DataView> verileri filtreleme ve toplantı belirli filtre ölçütlerini veri satırları kümelerine döndürmek için birçok yol sağlar. Dize tabanlı yanı sıra filtreleme yetenekleri <xref:System.Data.DataView> kullanma olanağı da sağlar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeleri filtreleme ölçütlerine. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeler, dize tabanlı filtreleme daha çok daha karmaşık ve güçlü filtreleme işlemleri için izin verin.  
   
  Kullanarak verilere filtre uygulamak iki yolla bir <xref:System.Data.DataView>:  
   
--   Oluşturma bir <xref:System.Data.DataView> gelen bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu ile bir Where yan tümcesi.  
+- Oluşturma bir <xref:System.Data.DataView> gelen bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu ile bir Where yan tümcesi.  
   
--   Var olan ve dize tabanlı filtreleme yeteneklerini kullanın <xref:System.Data.DataView>.  
+- Var olan ve dize tabanlı filtreleme yeteneklerini kullanın <xref:System.Data.DataView>.  
   
 ## <a name="creating-dataview-from-a-query-with-filtering-information"></a>Bir sorgunun filtre bilgilerle DataView oluşturma  
  A <xref:System.Data.DataView> nesne öğesinden oluşturulabilir bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu. Bu sorgu içeriyorsa bir `Where` yan tümcesi <xref:System.Data.DataView> sorguyu filtreleme bilgilerle oluşturulur. İfadede `Where` yan tümcesi hangi veri satırları dahil edilecek belirlemek için kullanılan <xref:System.Data.DataView>, ve filtre temelini oluşturur.  
@@ -76,9 +76,9 @@ Ardından bir UI denetimine üzerinden bir istemciye verileri sunmak ve belirli 
 ## <a name="clearing-the-filter"></a>Filtre temizleniyor  
  Filtre bir <xref:System.Data.DataView> filtreleme kullanarak ayarlandıktan sonra temizlenebilir <xref:System.Data.DataView.RowFilter%2A> özelliği. Filtre bir <xref:System.Data.DataView> iki farklı yolla silinebilir:  
   
--   Ayarlama <xref:System.Data.DataView.RowFilter%2A> özelliğini `null`.  
+- Ayarlama <xref:System.Data.DataView.RowFilter%2A> özelliğini `null`.  
   
--   Ayarlama <xref:System.Data.DataView.RowFilter%2A> boş bir dize özelliği.  
+- Ayarlama <xref:System.Data.DataView.RowFilter%2A> boş bir dize özelliği.  
   
 ### <a name="example"></a>Örnek  
  Aşağıdaki örnek, oluşturur bir <xref:System.Data.DataView> sorgudan ve ardından filtre ayarlayarak temizler <xref:System.Data.DataView.RowFilter%2A> özelliğini `null`:  

@@ -1,5 +1,5 @@
 ---
-title: Soyut sınıf tasarımı
+title: Soyut Sınıf Tasarımı
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
 author: KrzysztofCwalina
 ms.openlocfilehash: 6eec3bb4575b89c6476e6c3410050c705141777f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785560"
 ---
-# <a name="abstract-class-design"></a>Soyut sınıf tasarımı
+# <a name="abstract-class-design"></a>Soyut Sınıf Tasarımı
 **X DO NOT** soyut türlerinde genel ya da korumalı iç oluşturucuları tanımlama.  
   
  Oluşturucular, yalnızca kullanıcıların türünün örneğini oluşturmak gerekir, ortak olmalıdır. Bir soyut türün örneklerini oluşturamayacağınızdan bir public Oluşturucu ile soyut bir tür yanlış ve yanıltıcı kullanıcılar için tasarlanmıştır.  

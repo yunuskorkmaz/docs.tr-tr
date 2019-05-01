@@ -8,11 +8,11 @@ ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5803ef1d174c3e3a5e8e18b130e6b7a0c65eac81
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61919665"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)
 [!INCLUDE[wrt](../../../includes/wrt-md.md)] Meta verileri dışarı aktarma Aracı (Winmdexp.exe) bir .NET Framework modülünü içeren bir dosyaya dönüştürür [!INCLUDE[wrt](../../../includes/wrt-md.md)] meta verileri. Ancak .NET Framework derlemeleri ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] meta veri dosyaları aynı fiziksel biçim kullanın, .NET Framework derlemeleri otomatik olarak kullanılamaz, yani meta veri tablolarının içeriğinde farklar vardır [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenleri . Bir .NET Framework modülünü işleminin bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeni olarak adlandırılır *verme*. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], sonuçta elde edilen Windows meta veri (.winmd) dosyası hem meta veriler hem de uygulama bulunur.  

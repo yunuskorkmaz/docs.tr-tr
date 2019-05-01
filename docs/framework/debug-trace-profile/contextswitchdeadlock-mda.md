@@ -15,11 +15,11 @@ ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 43404ba24f6308d8da17b03df9997e893799c8d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875010"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 
@@ -39,11 +39,11 @@ Varsayılan olarak, Visual Basic konsol uygulamaları ana iş parçacığı içi
 
 Bu MDA aşağıdaki koşulların tümü karşılandığında, yanlışlıkla etkinleştirilecek mümkündür:
 
--   Bir uygulama STA iş parçacığı için COM bileşenlerini kitaplıkları doğrudan veya dolaylı olarak oluşturur.
+- Bir uygulama STA iş parçacığı için COM bileşenlerini kitaplıkları doğrudan veya dolaylı olarak oluşturur.
 
--   Uygulama hata ayıklayıcıda durduruldu ve kullanıcı uygulamanın devam veya adım işlemi gerçekleştirildi.
+- Uygulama hata ayıklayıcıda durduruldu ve kullanıcı uygulamanın devam veya adım işlemi gerçekleştirildi.
 
--   Yönetilemeyen hata ayıklama etkin değil.
+- Yönetilemeyen hata ayıklama etkin değil.
 
 MDA yanlışlıkla etkinleştirilip etkinleştirilmediğini belirlemek için tüm kesme noktalarını devre dışı bırakmak, uygulamayı yeniden başlatın ve durmadan çalışmasına izin. MDA etkinleştirilmemesi halinde ilk etkinleştirme false olasıdır. Bu durumda, hata ayıklama oturumu ile önlemek için MDA devre dışı bırakın.
 

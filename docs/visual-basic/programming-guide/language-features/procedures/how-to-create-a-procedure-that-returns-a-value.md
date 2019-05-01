@@ -7,11 +7,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
 ms.openlocfilehash: 115c1df4bd49d5848d72c4cbd0242a49a12740c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59335504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863733"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir değer döndüren bir yordam oluşturma
 Kullandığınız bir `Function` yordamın çağrıldığı koda bir değer döndürür.  
@@ -44,5 +44,5 @@ Kullandığınız bir `Function` yordamın çağrıldığı koda bir değer dön
 - [İşleç Yordamları](./operator-procedures.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Function Deyimi](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Nasıl yapılır: Bir Yordamdan Değer Döndürme](./how-to-return-a-value-from-a-procedure.md)
-- [Nasıl yapılır: Değer Döndüren Bir Yordam Çağırma](./how-to-call-a-procedure-that-returns-a-value.md)
+- [Nasıl yapılır: Bir yordamdan değer döndürme](./how-to-return-a-value-from-a-procedure.md)
+- [Nasıl yapılır: Bir değer döndüren bir yordam çağırma](./how-to-call-a-procedure-that-returns-a-value.md)

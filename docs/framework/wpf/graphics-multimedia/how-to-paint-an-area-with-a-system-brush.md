@@ -7,30 +7,30 @@ helpviewer_keywords:
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
 ms.openlocfilehash: e713903e2cfbb63cb64ceb94621317f9e76dea70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921725"
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>Nasıl yapılır: Sistem Fırçası ile bir Alanı Boyama
 <xref:System.Windows.SystemColors> Sınıfı sağlar sistem fırçaları ve renkler, erişim gibi <xref:System.Windows.SystemColors.ControlBrush%2A>, <xref:System.Windows.SystemColors.ControlBrushKey%2A>, ve <xref:System.Windows.SystemColors.DesktopBrush%2A>. Sistem Fırçası olduğu bir <xref:System.Windows.Media.SolidColorBrush> nesnesini belirtilen sistem renk ile bir alanı boyar. Sistem Fırçası her zaman bir tek renk dolgu üretir; gradyan oluşturmak için kullanılamaz.  
   
  Sistem fırçaları statik veya dinamik bir kaynak kullanabilirsiniz. Kullanıcı sistem fırçası değiştirirse uygulama çalışırken otomatik olarak güncelleştirilecek fırça istiyorsanız bir dinamik kaynak kullanın. Aksi takdirde, bir statik kaynak kullanın. SystemColors sınıfı çeşitli katı bir adlandırma kuralını uyguladığınızdan statik özellikler içerir:  
   
--   *\<SystemColor>* Brush  
+- *\<SystemColor>* Brush  
   
      Statik başvuru alır bir <xref:System.Windows.Media.SolidColorBrush> belirtilen sistem renk.  
   
--   *\<SystemColor >* BrushKey  
+- *\<SystemColor >* BrushKey  
   
      Dinamik başvuru alır bir <xref:System.Windows.Media.SolidColorBrush> belirtilen sistem renk.  
   
--   *\<SystemColor >* rengi  
+- *\<SystemColor >* rengi  
   
      Statik başvuru alır bir <xref:System.Windows.Media.Color> belirtilen sistem renk yapısı.  
   
--   *\<SystemColor >* ColorKey  
+- *\<SystemColor >* ColorKey  
   
      Dinamik bir başvuru edinir <xref:System.Windows.Media.Color> belirtilen sistem renk yapısı.  
   

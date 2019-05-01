@@ -11,11 +11,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
 ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785859"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Nasıl yapılır: Dosya Aramak için Arka Plan İş Parçacığı Kullanma
 <xref:System.ComponentModel.BackgroundWorker> Bileşeni değiştirir ve işlevsellik ekler <xref:System.Threading> ad alanı; ancak <xref:System.Threading> ad alanı korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [BackgroundWorker bileşenine genel bakış](backgroundworker-component-overview.md).  
@@ -28,13 +28,13 @@ ms.locfileid: "59157807"
   
  Aşağıdaki örnek (`DirectorySearcher`) belirtilen arama dizesi ile eşleşen dosyaları için bir arka plan iş parçacığı yinelemeli olarak ara bir dizin kullanır ve ardından arama sonucu içeren bir liste kutusu doldurur birden çok iş parçacıklı bir Windows Forms denetimi gösterir. Örnek tarafından gösterilen anahtar kavramları aşağıdaki gibidir:  
   
--   `DirectorySearcher` arama yapmak için yeni bir iş parçacığı başlatılır. İş parçacığını yürüten `ThreadProcedure` sırayla yardımcı çağıran yöntemi `RecurseDirectory` gerçek arama yapın ve liste kutusunu doldurmak için yöntemi. Ancak, liste kutusunu doldurma iş parçacıkları arası çağrı, sonraki iki madde işaretli öğeleri açıklandığı gibi'gerektirir.  
+- `DirectorySearcher` arama yapmak için yeni bir iş parçacığı başlatılır. İş parçacığını yürüten `ThreadProcedure` sırayla yardımcı çağıran yöntemi `RecurseDirectory` gerçek arama yapın ve liste kutusunu doldurmak için yöntemi. Ancak, liste kutusunu doldurma iş parçacıkları arası çağrı, sonraki iki madde işaretli öğeleri açıklandığı gibi'gerektirir.  
   
--   `DirectorySearcher` tanımlar `AddFiles` bir liste kutusuna; dosyaları ekleme yöntemi ancak `RecurseDirectory` doğrudan çağrılamaz `AddFiles` çünkü `AddFiles` oluşturulan yalnızca STA iş parçacığında yürütebilir `DirectorySearcher`.  
+- `DirectorySearcher` tanımlar `AddFiles` bir liste kutusuna; dosyaları ekleme yöntemi ancak `RecurseDirectory` doğrudan çağrılamaz `AddFiles` çünkü `AddFiles` oluşturulan yalnızca STA iş parçacığında yürütebilir `DirectorySearcher`.  
   
--   Tek yolu `RecurseDirectory` çağırabilirsiniz `AddFiles` bir iş parçacıkları arası çağrı — diğer bir deyişle, çağırarak <xref:System.Windows.Forms.Control.Invoke%2A> veya <xref:System.Windows.Forms.Control.BeginInvoke%2A> sıralamakta `AddFiles` oluşturma iş parçacığı için `DirectorySearcher`. `RecurseDirectory` kullanan <xref:System.Windows.Forms.Control.BeginInvoke%2A> böylece çağrı zaman uyumsuz olarak yapılabilir.  
+- Tek yolu `RecurseDirectory` çağırabilirsiniz `AddFiles` bir iş parçacıkları arası çağrı — diğer bir deyişle, çağırarak <xref:System.Windows.Forms.Control.Invoke%2A> veya <xref:System.Windows.Forms.Control.BeginInvoke%2A> sıralamakta `AddFiles` oluşturma iş parçacığı için `DirectorySearcher`. `RecurseDirectory` kullanan <xref:System.Windows.Forms.Control.BeginInvoke%2A> böylece çağrı zaman uyumsuz olarak yapılabilir.  
   
--   Bir yöntem hazırlama eşdeğer bir işlev işaretçisine veya geri çağırma gerektirir. Bu, .NET Framework'teki temsilcileri kullanma gerçekleştirilir. <xref:System.Windows.Forms.Control.BeginInvoke%2A> bir temsilci, bir bağımsız değişken olarak alır. `DirectorySearcher` Bu nedenle bir temsilci tanımlar (`FileListDelegate`), bağlar `AddFiles` örneğine `FileListDelegate` , kurucu ve bu temsilci örneğini geçişleri <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` Ayrıca, arama tamamlandığında sıralanmış bir olay temsilci tanımlar.  
+- Bir yöntem hazırlama eşdeğer bir işlev işaretçisine veya geri çağırma gerektirir. Bu, .NET Framework'teki temsilcileri kullanma gerçekleştirilir. <xref:System.Windows.Forms.Control.BeginInvoke%2A> bir temsilci, bir bağımsız değişken olarak alır. `DirectorySearcher` Bu nedenle bir temsilci tanımlar (`FileListDelegate`), bağlar `AddFiles` örneğine `FileListDelegate` , kurucu ve bu temsilci örneğini geçişleri <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` Ayrıca, arama tamamlandığında sıralanmış bir olay temsilci tanımlar.  
   
 ```vb  
 Option Strict  
