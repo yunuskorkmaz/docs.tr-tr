@@ -5,11 +5,11 @@ helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
 ms.openlocfilehash: a43546b9cbb95cd16c1d94372e786acd103ea0bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921959"
 ---
 # <a name="load-balancing"></a>YükDengeleme
 Windows Communication Foundation (WCF) uygulamaları kapasitesini artırmak yollarından biri, bunları bir yük dengeli bir sunucu grubunda dağıtarak ölçeklendirme sağlamaktır. WCF uygulamaları, Windows Ağ Yükü Dengeleme gibi yazılım yük Dengeleyiciler gibi teknikler, standart yük dengelemeyi ve bunun yanı sıra donanım tabanlı Yük Dengeleme Gereçleri kullanarak Yük Dengeleme olabilir.  
@@ -82,9 +82,9 @@ Windows Communication Foundation (WCF) uygulamaları kapasitesini artırmak yoll
 ## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>WSHttp bağlama ve WSDualHttp bağlama ile Yük Dengeleme  
  Hem <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.WSDualHttpBinding> yapılandırma bağlama varsayılan birden fazla değişiklik yapılır sağlanan HTTP Yük Dengeleme teknikleri kullanarak yük dengeli.  
   
--   Güvenlik bağlamı kurma Kapat: Bu ayarı tarafından gerçekleştirilebilir <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> özelliği <xref:System.ServiceModel.WSHttpBinding> için `false`. Güvenlik oturumu gerekliyse, alternatif olarak, bu durum bilgisi olan güvenlik oturumu açıklandığı kullanmak da mümkündür [güvenli oturumlar](../../../docs/framework/wcf/feature-details/secure-sessions.md) konu. Durum bilgisi olan güvenlik oturumu koruma güvenlik belirtecinin bir parçası olarak her bir istekle tüm durumları güvenlik oturumu için iletilen gibi durum bilgisiz kalmasına hizmetini etkinleştirin. Bir durum bilgisi olan güvenlik oturumu etkinleştirmek için bunu kullanmak için gerekli olduğunu unutmayın bir <xref:System.ServiceModel.Channels.CustomBinding> veya kullanıcı tanımlı <xref:System.ServiceModel.Channels.Binding> gerekli yapılandırma ayarlarını üzerinde gösterilmez <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.WSDualHttpBinding> sistem tarafından sağlanır.  
+- Güvenlik bağlamı kurma Kapat: Bu ayarı tarafından gerçekleştirilebilir <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> özelliği <xref:System.ServiceModel.WSHttpBinding> için `false`. Güvenlik oturumu gerekliyse, alternatif olarak, bu durum bilgisi olan güvenlik oturumu açıklandığı kullanmak da mümkündür [güvenli oturumlar](../../../docs/framework/wcf/feature-details/secure-sessions.md) konu. Durum bilgisi olan güvenlik oturumu koruma güvenlik belirtecinin bir parçası olarak her bir istekle tüm durumları güvenlik oturumu için iletilen gibi durum bilgisiz kalmasına hizmetini etkinleştirin. Bir durum bilgisi olan güvenlik oturumu etkinleştirmek için bunu kullanmak için gerekli olduğunu unutmayın bir <xref:System.ServiceModel.Channels.CustomBinding> veya kullanıcı tanımlı <xref:System.ServiceModel.Channels.Binding> gerekli yapılandırma ayarlarını üzerinde gösterilmez <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.WSDualHttpBinding> sistem tarafından sağlanır.  
   
--   Güvenilir oturumlar kullanmayın. Varsayılan olarak bu özelliği kapalıdır.  
+- Güvenilir oturumlar kullanmayın. Varsayılan olarak bu özelliği kapalıdır.  
   
 ## <a name="load-balancing-the-nettcp-binding"></a>Yük Dengeleme Net.TCP bağlama  
  <xref:System.ServiceModel.NetTcpBinding> Yük dengeli IP-katman Yük Dengeleme teknikleri. Ancak, <xref:System.ServiceModel.NetTcpBinding> bağlantı gecikme süresini azaltmak için varsayılan olarak TCP bağlantı havuzları. Yük Dengeleme temel mekanizması uğratan iyileştirme budur. En iyi duruma getirmek için birincil yapılandırma değeri <xref:System.ServiceModel.NetTcpBinding> kiralama zaman aşımı, bağlantı havuzu ayarlarını bir parçasıdır. Bağlantı havuzu grubu içindeki belirli sunuculara ilişkili olmasını istemci bağlantıları neden olur. (Kiralama zaman aşımı ayarı tarafından denetlenen bir faktör) bu bağlantılar ömrünü artırmak, gruptaki çeşitli sunucular arasında yük dağıtımı dengesiz hale gelir. Sonuç olarak ortalama süresi arttıkça çağırın. Bunu kullanırken <xref:System.ServiceModel.NetTcpBinding> yük dengeli senaryolarda bağlama tarafından kullanılan varsayılan kiralama zaman aşımını azaltmayı göz önünde bulundurun. Uygulama bağımlı olsa da en iyi değeri 30 saniyelik kiralama zaman aşımı yük dengeli senaryoları için makul bir başlangıç noktası var. Kanal kiralama zaman aşımı ve diğer taşıma kotaları hakkında daha fazla bilgi için bkz. [taşıma kotaları](../../../docs/framework/wcf/feature-details/transport-quotas.md).  

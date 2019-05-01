@@ -1,5 +1,5 @@
 ---
-title: Etkinlikler ve geri aramalar
+title: Etkinlikler ve Geri Aramalar
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
 author: KrzysztofCwalina
 ms.openlocfilehash: 3609d6ac4847cb081740fd698869df4976f83f8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960413"
 ---
-# <a name="events-and-callbacks"></a>Etkinlikler ve geri aramalar
+# <a name="events-and-callbacks"></a>Etkinlikler ve Geri Aramalar
 Geri çağırmalar, geri bir temsilci yoluyla kullanıcı kodu çağırmak bir çerçeve izin genişletilebilirlik noktalarıdır. Bu Temsilciler, genellikle bir yöntemin bir parametresi aracılığıyla framework geçirilir.  
   
  Temsilci (bir olay işleyicisi) sağlama için kullanışlı ve tutarlı bir söz dizimi destekleyen bir özel durum geri çağırmalar olaylardır. Ayrıca, Visual Studio'nun deyim tamamlama ve tasarımcılar olay-tabanlı API'ler kullanarak Yardım sağlayabilir. (Bkz [olay tasarımı](../../../docs/standard/design-guidelines/event.md).)  

@@ -6,22 +6,22 @@ helpviewer_keywords:
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
 ms.openlocfilehash: 3b7e1d04173741088935104e8d4225691927a27b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951599"
 ---
 # <a name="application-development"></a>Uygulama Geliştirme
 <a name="introduction"></a> Windows Presentation Foundation (WPF), aşağıdaki türde uygulamaları geliştirmek için kullanılan bir sunu çerçevesidir:  
   
--   Tek başına uygulamalar (Geleneksel bir stil [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] için yüklü olan ve istemci bilgisayardan çalıştırma yürütülebilir derlemelere olarak derlenen uygulamalar).  
+- Tek başına uygulamalar (Geleneksel bir stil [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] için yüklü olan ve istemci bilgisayardan çalıştırma yürütülebilir derlemelere olarak derlenen uygulamalar).  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (uygulama yürütülebilir derlemelere oluşturulur ve Web tarayıcıları tarafından gibi barındırılan Gezinti sayfalarının oluşan [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] veya Mozilla Firefox).  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (uygulama yürütülebilir derlemelere oluşturulur ve Web tarayıcıları tarafından gibi barındırılan Gezinti sayfalarının oluşan [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] veya Mozilla Firefox).  
   
--   Özel denetim kitaplığı (yeniden kullanılabilir denetimler içeren yürütülebilir olmayan derlemeler).  
+- Özel denetim kitaplığı (yeniden kullanılabilir denetimler içeren yürütülebilir olmayan derlemeler).  
   
--   Sınıf kitaplıkları (yeniden kullanılabilir sınıfları içeren yürütülebilir olmayan derlemeler).  
+- Sınıf kitaplıkları (yeniden kullanılabilir sınıfları içeren yürütülebilir olmayan derlemeler).  
   
 > [!NOTE]
 >  WPF türlerini kullanarak bir Windows hizmetinde kesinlikle önerilmez. Bir Windows hizmetinde bu özellikleri kullanmaya çalışırsanız, bunlar düzenleme beklendiği gibi çalışmayabilir.  
@@ -32,21 +32,21 @@ ms.locfileid: "59211068"
 ## <a name="application-management"></a>Uygulama Yönetimi  
  Yürütülebilir dosya [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar genellikle aşağıdakileri içeren işlev bir çekirdek kümesi gerektirir:  
   
--   Oluşturma ve ortak uygulama altyapısı (oluşturma, bir giriş noktası yönteminin ve sistem ve giriş iletileri almak için Windows ileti döngüsü gibi) yönetme.  
+- Oluşturma ve ortak uygulama altyapısı (oluşturma, bir giriş noktası yönteminin ve sistem ve giriş iletileri almak için Windows ileti döngüsü gibi) yönetme.  
   
--   İzleme ve uygulama yaşam süresi ile etkileşim kurma.  
+- İzleme ve uygulama yaşam süresi ile etkileşim kurma.  
   
--   Alma ve işleme komut satırı parametreleri.  
+- Alma ve işleme komut satırı parametreleri.  
   
--   Uygulama kapsamı özelliklerini paylaşma ve [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kaynakları.  
+- Uygulama kapsamı özelliklerini paylaşma ve [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kaynakları.  
   
--   Algılama ve işlenmeyen özel durumları işleme.  
+- Algılama ve işlenmeyen özel durumları işleme.  
   
--   Çıkış kodları döndürme.  
+- Çıkış kodları döndürme.  
   
--   Tek başına uygulamalar Windows yönetme.  
+- Tek başına uygulamalar Windows yönetme.  
   
--   Gezinti bölmesinde İzleme [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]ve gezinti windows ve çerçeveleri ile tek başına uygulamalar.  
+- Gezinti bölmesinde İzleme [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]ve gezinti windows ve çerçeveleri ile tek başına uygulamalar.  
   
  Bu özellikler tarafından uygulanan <xref:System.Windows.Application> kullanarak uygulamalarınıza ekleyin sınıfı bir *uygulama tanımı*.  
   
@@ -62,13 +62,13 @@ ms.locfileid: "59211068"
 ## <a name="windows-and-dialog-boxes"></a>Windows ve iletişim kutuları  
  Kullanıcılar etkileşimde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tek başına uygulamalar windows aracılığıyla. Bir pencere amacı, uygulama içeriğini barındırmak ve genellikle içeriklerle etkileşim olanağı tanıyan uygulama işlevselliği kullanıma sunma oluşturmaktır. İçinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], windows tarafından alınır <xref:System.Windows.Window> sınıfı, hangi destekler:  
   
--   Oluşturma ve windows gösteriliyor.  
+- Oluşturma ve windows gösteriliyor.  
   
--   Sahibi ve sahip penceresi ilişkileri oluşturma.  
+- Sahibi ve sahip penceresi ilişkileri oluşturma.  
   
--   Pencere görünümü (örneğin, boyut, konum, simgeler, başlık çubuğu metni, kenarlık) yapılandırma.  
+- Pencere görünümü (örneğin, boyut, konum, simgeler, başlık çubuğu metni, kenarlık) yapılandırma.  
   
--   İzleme ve bir pencere ömrü ile etkileşim kurma.  
+- İzleme ve bir pencere ömrü ile etkileşim kurma.  
   
  Daha fazla bilgi için [WPF Windows genel bakış](wpf-windows-overview.md).  
   
@@ -84,23 +84,23 @@ ms.locfileid: "59211068"
 ## <a name="navigation"></a>Gezinti  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sayfaları kullanarak Web stili gezintiyi destekler (<xref:System.Windows.Controls.Page>) ve köprüleri (<xref:System.Windows.Documents.Hyperlink>). Gezinti bir çeşitli şekillerde aşağıdakileri içeren uygulanabilir:  
   
--   Bir Web tarayıcısında barındırılan tek başına sayfa.  
+- Bir Web tarayıcısında barındırılan tek başına sayfa.  
   
--   Sayfaların derlenmiş içine bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] bir Web tarayıcısında barındırılır.  
+- Sayfaların derlenmiş içine bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] bir Web tarayıcısında barındırılır.  
   
--   Sayfaları bir tek başına uygulamasına derlenmiş ve gezinti pencere tarafından barındırılan (<xref:System.Windows.Navigation.NavigationWindow>).  
+- Sayfaları bir tek başına uygulamasına derlenmiş ve gezinti pencere tarafından barındırılan (<xref:System.Windows.Navigation.NavigationWindow>).  
   
--   Çerçeve tarafından barındırılan sayfaları (<xref:System.Windows.Controls.Frame>) barındırılması bir tek başına sayfasında veya bir sayfa ya derlenmiş bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ya da tek başına bir uygulama.  
+- Çerçeve tarafından barındırılan sayfaları (<xref:System.Windows.Controls.Frame>) barındırılması bir tek başına sayfasında veya bir sayfa ya derlenmiş bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ya da tek başına bir uygulama.  
   
  Gezinti, kolaylaştırmak için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aşağıdaki uygular:  
   
--   <xref:System.Windows.Navigation.NavigationService>, paylaşılan Gezinti altyapısı tarafından kullanılan Gezinti isteklerini işlemek için <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, ve [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] içi uygulama gezinti desteklemek için.  
+- <xref:System.Windows.Navigation.NavigationService>, paylaşılan Gezinti altyapısı tarafından kullanılan Gezinti isteklerini işlemek için <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, ve [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] içi uygulama gezinti desteklemek için.  
   
--   Gezinti başlatmak için Gezinti yöntemleri.  
+- Gezinti başlatmak için Gezinti yöntemleri.  
   
--   İzleme ve gezinti ömrü ile etkileşim kurmak için Gezinti olayları'nı tıklatın.  
+- İzleme ve gezinti ömrü ile etkileşim kurmak için Gezinti olayları'nı tıklatın.  
   
--   Geri ve İleri gezinme bir günlüğünü kullanarak hatırlamak, hangi ayrıca inceledi ve yönetilmesine.  
+- Geri ve İleri gezinme bir günlüğünü kullanarak hatırlamak, hangi ayrıca inceledi ve yönetilmesine.  
   
  Bilgi için [gezintiye genel bakış](navigation-overview.md).  
   

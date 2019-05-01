@@ -8,11 +8,11 @@ ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4649f33fe07e7780630fbd11170bb54046617c14
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946945"
 ---
 # <a name="parallel-diagnostic-tools"></a>Paralel Tanılama Araçları
 Visual Studio hata ayıklama ve profil oluşturma çok iş parçacıklı uygulamalar için kapsamlı destek sağlar.  
@@ -20,11 +20,11 @@ Visual Studio hata ayıklama ve profil oluşturma çok iş parçacıklı uygulam
 ## <a name="debugging"></a>Hata Ayıklama  
  Visual Studio hata ayıklayıcısını paralel uygulamalarda hata ayıklama için yeni windows ekler. Daha fazla bilgi için aşağıdaki konulara bakın:  
   
--   [Paralel Yığınlar Penceresini Kullanma](/visualstudio/debugger/using-the-parallel-stacks-window)  
+- [Paralel Yığınlar Penceresini Kullanma](/visualstudio/debugger/using-the-parallel-stacks-window)  
   
--   [Görevleri Penceresini Kullanma](/visualstudio/debugger/using-the-tasks-window)  
+- [Görevleri Penceresini Kullanma](/visualstudio/debugger/using-the-tasks-window)  
   
--   [İzlenecek yol: paralel uygulamada hata ayıklama](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).  
+- [İzlenecek yol: Paralel uygulamada hata ayıklama](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).  
   
 ## <a name="profiling"></a>Profil Oluşturma  
  Eşzamanlılık görselleştiricisi rapor görünümlerini birbirleriyle ve diğer işlemler sistem üzerindeki iş parçacıklarından paralel bir programdaki iş parçacıklarının nasıl etkileşime görselleştirmenize olanak tanır. Daha fazla bilgi için [eşzamanlılık görselleştiricisi](/visualstudio/profiling/concurrency-visualizer).  

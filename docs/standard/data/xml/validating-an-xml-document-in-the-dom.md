@@ -10,11 +10,11 @@ ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951963"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>DOM’da XML Belgesi Doğrulama
 <xref:System.Xml.XmlDocument> Sınıfı varsayılan olarak XML belge nesne modeli (DOM) içinde bir XML Şeması Tanım Dili (XSD) şeması veya belge türü tanımı (DTD'nin) karşı doğrulamaz; XML yalnızca doğru biçimlendirilmemiş doğrulanır.  
@@ -56,9 +56,9 @@ ms.locfileid: "59298428"
   
  DOM'a yüklü XML verileri doğrularken aşağıdaki noktaları dikkate alın  
   
--   Yukarıdaki örnekte, <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> geçersiz bir türe karşılaşıldığında çağrılır. Varsa bir <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> doğrulanmasını temel ayarlanmadı <xref:System.Xml.XmlReader>e <xref:System.Xml.Schema.XmlSchemaValidationException> oluşan <xref:System.Xml.XmlDocument.Load%2A> herhangi bir öznitelik veya öğenin türü doğrulama şemasında belirtilen karşılık gelen türü eşleşmiyorsa çağrılır.  
+- Yukarıdaki örnekte, <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> geçersiz bir türe karşılaşıldığında çağrılır. Varsa bir <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> doğrulanmasını temel ayarlanmadı <xref:System.Xml.XmlReader>e <xref:System.Xml.Schema.XmlSchemaValidationException> oluşan <xref:System.Xml.XmlDocument.Load%2A> herhangi bir öznitelik veya öğenin türü doğrulama şemasında belirtilen karşılık gelen türü eşleşmiyorsa çağrılır.  
   
--   Ne zaman bir XML belgesi yüklendiği içine bir <xref:System.Xml.XmlDocument> varsayılan değerlerini tanımlayan ilişkili bir şeması ile nesne <xref:System.Xml.XmlDocument> bu varsayılan XML belgesinde göründüyse gibi davranır. Diğer bir deyişle <xref:System.Xml.XmlReader.IsEmptyElement%2A> özelliği her zaman döndürür `false` şemadan varsayılan bir öğe için. XML belgesinde boş bir öğe olarak yazılmış olsa bile.  
+- Ne zaman bir XML belgesi yüklendiği içine bir <xref:System.Xml.XmlDocument> varsayılan değerlerini tanımlayan ilişkili bir şeması ile nesne <xref:System.Xml.XmlDocument> bu varsayılan XML belgesinde göründüyse gibi davranır. Diğer bir deyişle <xref:System.Xml.XmlReader.IsEmptyElement%2A> özelliği her zaman döndürür `false` şemadan varsayılan bir öğe için. XML belgesinde boş bir öğe olarak yazılmış olsa bile.  
   
 ## <a name="validating-an-xml-document-in-the-dom"></a>DOM’da XML Belgesi Doğrulama  
  <xref:System.Xml.XmlDocument.Validate%2A> Yöntemi <xref:System.Xml.XmlDocument> sınıfı DOM şemalarda karşı yüklenen XML verileri doğrular <xref:System.Xml.XmlDocument> nesnenin <xref:System.Xml.XmlDocument.Schemas%2A> özelliği. Doğrulama başarıyla tamamlandıktan sonra şema varsayılanları uygulanır, metin değerleri atomik değerleri gereken şekilde dönüştürülür ve tür bilgileri doğrulanmış bilgi öğeleri ile ilişkilidir. Sonuç olarak, daha önce türü belirsiz XML veri türü belirtilmiş XML veri değiştirir.  

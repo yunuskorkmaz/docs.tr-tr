@@ -11,11 +11,11 @@ ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 906d9d4dfd1c1082a4b49b7143f590967dcc7fd0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61919388"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (Yalıtılmış Depolama Aracı)
 Yalıtılmış Depolama aracı, geçerli kullanıcı için varolan tüm depoları listeler veya kaldırır.  
@@ -49,11 +49,11 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
  Uygulamaların, bir kullanıcı için iki depodan birine veya makine deposuna kaydetme seçeneği vardır:  
   
--   Kullanıcı verileri dolaşımı kullanıcı için etkinleştirilmiş olsa dahi (Windows 2000 ve sonraki sürümlerde) Dolaşımda olmayacağı garantili bir konumda yerel depo yok.  
+- Kullanıcı verileri dolaşımı kullanıcı için etkinleştirilmiş olsa dahi (Windows 2000 ve sonraki sürümlerde) Dolaşımda olmayacağı garantili bir konumda yerel depo yok.  
   
--   Dolaşım deposu, Dolaşımda olabilen bir konumda var, ancak Dolaşım kullanıcı Windows NT Yönetimi yoluyla etkinleştirilmişse yalnızca bunu yapabilirsiniz.  
+- Dolaşım deposu, Dolaşımda olabilen bir konumda var, ancak Dolaşım kullanıcı Windows NT Yönetimi yoluyla etkinleştirilmişse yalnızca bunu yapabilirsiniz.  
   
--   Makine deposu bir makinedeki tüm kullanıcılar için ortaktır ve o makinede ortak bir dizin altında depolanır.  
+- Makine deposu bir makinedeki tüm kullanıcılar için ortaktır ve o makinede ortak bir dizin altında depolanır.  
   
     > [!NOTE]
     >  Makine deposu .NET Framework sürüm 2.0'da yeni bir özelliktir.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
 ms.openlocfilehash: e45de705eb25d58857239cc549125c524765aaa5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960088"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Nasıl yapılır: Başka bir dizine Visual Basic'te bir dizini kopyalama
 Kullanım <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> başka bir dizini kopyalama için yöntemi. Bu yöntem, dizini ve bunun yanı sıra dizin içeriğini kopyalar. Hedef dizin yoksa, oluşturulur. Hedef konumda aynı adda bir dizin olup olmadığını ve `overwrite` ayarlanır `False`, iki dizin içeriğini birleştirilir. İşlem sırasında dizini için yeni bir ad belirtebilirsiniz.  
@@ -21,7 +21,7 @@ Kullanım <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> başka
   
 ### <a name="to-copy-a-directory-to-another-directory"></a>Bir dizini diğerine kopyalama için  
   
--   Kullanım `CopyDirectory` yöntemi, kaynak ve hedef dizin adlarını belirleme. Aşağıdaki örnekte adlı dizine kopyalanır `TestDirectory1` içine `TestDirectory2`, mevcut dosyaların üzerine.  
+- Kullanım `CopyDirectory` yöntemi, kaynak ve hedef dizin adlarını belirleme. Aşağıdaki örnekte adlı dizine kopyalanır `TestDirectory1` içine `TestDirectory2`, mevcut dosyaların üzerine.  
   
      [!code-vb[VbVbcnMyFileSystem#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#16)]  
   
@@ -30,35 +30,35 @@ Kullanım <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> başka
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
--   Dizin bir iki nokta üst üste (:) veya eğik çizgi içeriyor. belirtilen yeni adı (\ veya /) (<xref:System.ArgumentException>).  
+- Dizin bir iki nokta üst üste (:) veya eğik çizgi içeriyor. belirtilen yeni adı (\ veya /) (<xref:System.ArgumentException>).  
   
--   Yol aşağıdaki nedenlerden biri için geçerli değildir: sıfır uzunluklu bir dize olan, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya cihaz yoludur (ile başlayan \\ \\.\\) (<xref:System.ArgumentException>).  
+- Yol aşağıdaki nedenlerden biri için geçerli değildir: sıfır uzunluklu bir dize olan, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya cihaz yoludur (ile başlayan \\ \\.\\) (<xref:System.ArgumentException>).  
   
--   Çünkü bu yolu geçerli değil `Nothing` (<xref:System.ArgumentNullException>).  
+- Çünkü bu yolu geçerli değil `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `destinationDirectoryName` olan `Nothing` ya da boş bir dize (<xref:System.ArgumentNullException>)  
+- `destinationDirectoryName` olan `Nothing` ya da boş bir dize (<xref:System.ArgumentNullException>)  
   
--   Kaynak dizin yok (<xref:System.IO.DirectoryNotFoundException>).  
+- Kaynak dizin yok (<xref:System.IO.DirectoryNotFoundException>).  
   
--   Kaynak dizini kök dizindir (<xref:System.IO.IOException>).  
+- Kaynak dizini kök dizindir (<xref:System.IO.IOException>).  
   
--   Birleşik yolu varolan bir dosyaya işaret (<xref:System.IO.IOException>).  
+- Birleşik yolu varolan bir dosyaya işaret (<xref:System.IO.IOException>).  
   
--   Kaynak yolu ve hedef yolu aynıdır (<xref:System.IO.IOException>).  
+- Kaynak yolu ve hedef yolu aynıdır (<xref:System.IO.IOException>).  
   
--   `ShowUI` ayarlanır `UIOption.AllDialogs` ve kullanıcı işlemi iptal ya da bir veya daha fazla dosyalarını şu dizinde kopyalanamaz (<xref:System.OperationCanceledException>).  
+- `ShowUI` ayarlanır `UIOption.AllDialogs` ve kullanıcı işlemi iptal ya da bir veya daha fazla dosyalarını şu dizinde kopyalanamaz (<xref:System.OperationCanceledException>).  
   
--   Döngüsel bir işlemdir (<xref:System.InvalidOperationException>).  
+- Döngüsel bir işlemdir (<xref:System.InvalidOperationException>).  
   
--   Yol, iki nokta üst üste (:) içeriyor. (<xref:System.NotSupportedException>).  
+- Yol, iki nokta üst üste (:) içeriyor. (<xref:System.NotSupportedException>).  
   
--   Yolun sistem tarafından tanımlanan uzunluk üst sınırını aşıyor (<xref:System.IO.PathTooLongException>).  
+- Yolun sistem tarafından tanımlanan uzunluk üst sınırını aşıyor (<xref:System.IO.PathTooLongException>).  
   
--   Yolda bir dosya veya klasör adı iki nokta üst üste (:) içeriyor veya biçimi geçersiz (<xref:System.NotSupportedException>).  
+- Yolda bir dosya veya klasör adı iki nokta üst üste (:) içeriyor veya biçimi geçersiz (<xref:System.NotSupportedException>).  
   
--   Kullanıcı yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
+- Kullanıcı yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
   
--   Bir hedef dosya var, ancak erişilemez (<xref:System.UnauthorizedAccessException>).  
+- Bir hedef dosya var, ancak erişilemez (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

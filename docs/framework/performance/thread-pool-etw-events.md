@@ -8,20 +8,20 @@ ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caacee591c4df8389cea241916618f50da56b22b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949168"
 ---
 # <a name="thread-pool-etw-events"></a>İş Parçacığı Havuzu ETW Olayları
 <a name="top"></a> Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplayın.  
   
  İş parçacığı havuzu olayları iki tür vardır:  
   
--   [Çalışan iş parçacığı havuzu olayları](#worker), uygulama iş parçacığı havuzu ve iş yüklerini etkisini eşzamanlılık denetimi kullanımı hakkında bilgi sağlar.  
+- [Çalışan iş parçacığı havuzu olayları](#worker), uygulama iş parçacığı havuzu ve iş yüklerini etkisini eşzamanlılık denetimi kullanımı hakkında bilgi sağlar.  
   
--   [G/ç iş parçacığı havuzu olayları](#io), oluşturulan, kullanımdan, g/ç iş parçacıkları hakkında bilgi sağlayan unretired veya iş parçacığı havuzundaki sonlandırıldı.  
+- [G/ç iş parçacığı havuzu olayları](#io), oluşturulan, kullanımdan, g/ç iş parçacıkları hakkında bilgi sağlayan unretired veya iş parçacığı havuzundaki sonlandırıldı.  
   
 <a name="worker"></a>   
 ## <a name="worker-thread-pool-events"></a>Çalışan iş parçacığı havuzu olayları  
@@ -148,7 +148,7 @@ ms.locfileid: "59119138"
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Sayı|Kazanma: UInt64|Yeni oluşturulan iş parçacığı gibi g/ç iş parçacığı sayısı.|  
+|Count|Kazanma: UInt64|Yeni oluşturulan iş parçacığı gibi g/ç iş parçacığı sayısı.|  
 |NumRetired|Kazanma: UInt64|Devre dışı bırakılan çalışan iş parçacığı sayısı.|  
 |ClrInstanceID|Win:UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
   
@@ -169,7 +169,7 @@ ms.locfileid: "59119138"
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Sayı|Kazanma: UInt64|Kalan iş parçacığı havuzunda g/ç iş parçacığı sayısı.|  
+|Count|Kazanma: UInt64|Kalan iş parçacığı havuzunda g/ç iş parçacığı sayısı.|  
 |NumRetired|Kazanma: UInt64|Devre dışı bırakılan g/ç iş parçacığı sayısı.|  
 |ClrInstanceID|Win:UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
   
@@ -190,7 +190,7 @@ ms.locfileid: "59119138"
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Sayı|Kazanma: UInt64|Bu da dahil olmak üzere iş parçacığı havuzundaki g/ç iş parçacığı sayısı.|  
+|Count|Kazanma: UInt64|Bu da dahil olmak üzere iş parçacığı havuzundaki g/ç iş parçacığı sayısı.|  
 |NumRetired|Kazanma: UInt64|Devre dışı bırakılan g/ç iş parçacığı sayısı.|  
 |ClrInstanceID|Win:UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
   
@@ -211,7 +211,7 @@ ms.locfileid: "59119138"
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Sayı|Kazanma: UInt64|Kalan iş parçacığı havuzunda g/ç iş parçacığı sayısı.|  
+|Count|Kazanma: UInt64|Kalan iş parçacığı havuzunda g/ç iş parçacığı sayısı.|  
 |NumRetired|Kazanma: UInt64|Devre dışı bırakılan g/ç iş parçacığı sayısı.|  
 |ClrInstanceID|Win:UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
   

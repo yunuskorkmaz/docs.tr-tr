@@ -13,22 +13,22 @@ helpviewer_keywords:
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
 ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967043"
 ---
 # <a name="data-binding-and-windows-forms"></a>Veri Bağlama ve Windows Forms
 Windows Forms'ta yalnızca geleneksel veri kaynaklarına da bağlayabilirsiniz, ancak Ayrıca verileri içeren neredeyse her yapı için. Çalışma zamanında hesaplamak, bir dosyadan okunan veya diğer denetimlerin değerleri türetilen değerler dizisi bağlayabilirsiniz.  
   
  Ayrıca, herhangi bir denetime herhangi bir özelliği veri kaynağına da bağlayabilirsiniz. Geleneksel veri bağlamasında, genellikle görüntü özelliği bağlamak — Örneğin, <xref:System.Windows.Forms.Control.Text%2A> özelliği bir <xref:System.Windows.Forms.TextBox> denetim — veri kaynağı. İle [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], ayrıca diğer özelliklerini de bağlama aracılığıyla ayarlama seçeneğiniz de vardır. Bağlama, aşağıdaki görevleri gerçekleştirmek için kullanabilirsiniz:  
   
--   Grafiği bir görüntü denetiminin ayarlanıyor.  
+- Grafiği bir görüntü denetiminin ayarlanıyor.  
   
--   Bir veya daha fazla denetim arka plan rengini ayarlama.  
+- Bir veya daha fazla denetim arka plan rengini ayarlama.  
   
--   Denetimleri boyutunu ayarlama.  
+- Denetimleri boyutunu ayarlama.  
   
  Esas olarak, veri bağlama herhangi bir çalışma zamanı erişilebilir özelliği herhangi bir form denetiminin ayarlanmasından otomatik bir yolu var.  
   

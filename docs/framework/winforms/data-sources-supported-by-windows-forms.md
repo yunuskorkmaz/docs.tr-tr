@@ -16,11 +16,11 @@ helpviewer_keywords:
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
 ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967095"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Forms Tarafından Desteklenen Veri Kaynakları
 Geleneksel olarak, veri bağlama uygulamalarda, veritabanlarında depolanan verilerin yararlanmak için kullanıldı. Belirli en düşük gereksinimleri karşılanmadığı sürece Windows Forms veri bağlama ile veritabanları ve bunun yanı sıra diğer yapıları, diziler ve Koleksiyonlar gibi verileri verilere erişebilir.  
@@ -47,15 +47,15 @@ Geleneksel olarak, veri bağlama uygulamalarda, veritabanlarında depolanan veri
  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] veri nesneleri  
  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] bağlama için uygun olan veri yapıları sayısı sağlar. Her karmaşıklığı ve Gelişmiş algoritmaların içinde değişir.  
   
--   <xref:System.Data.DataColumn>. A <xref:System.Data.DataColumn> temel yapı bloğu olduğu bir <xref:System.Data.DataTable>bu sütun sayısı bir tablo oluşturur. Her <xref:System.Data.DataColumn> sahip bir <xref:System.Data.DataColumn.DataType%2A> veri sütununu ayrı tutma (örneğin, otomobiller açıklayan bir tablodaki bir otomobilin yap) türünü belirleyen özelliği. Basit bir denetim bağlamak (aşağıdaki gibi bir <xref:System.Windows.Forms.TextBox> denetimin <xref:System.Windows.Forms.Control.Text%2A> özelliği) bir sütuna veri tablosu içinde.  
+- <xref:System.Data.DataColumn>. A <xref:System.Data.DataColumn> temel yapı bloğu olduğu bir <xref:System.Data.DataTable>bu sütun sayısı bir tablo oluşturur. Her <xref:System.Data.DataColumn> sahip bir <xref:System.Data.DataColumn.DataType%2A> veri sütununu ayrı tutma (örneğin, otomobiller açıklayan bir tablodaki bir otomobilin yap) türünü belirleyen özelliği. Basit bir denetim bağlamak (aşağıdaki gibi bir <xref:System.Windows.Forms.TextBox> denetimin <xref:System.Windows.Forms.Control.Text%2A> özelliği) bir sütuna veri tablosu içinde.  
   
--   <xref:System.Data.DataTable>. A <xref:System.Data.DataTable> satırları ve sütunları içeren bir tablo olarak gösterimidir [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Veri tablosu içeren iki koleksiyona: <xref:System.Data.DataColumn>, (Bu sonuç olarak bu tabloya girilen veri türlerini belirlemek) belirli bir tabloda veri sütunlarını temsil eden ve <xref:System.Data.DataRow>, bir tablodaki veri satırlarının temsil eden. Karmaşık bir denetim için bir veri tablosunda yer alan bilgileri bağlamak (bağlama gibi <xref:System.Windows.Forms.DataGridView> veri tablosu denetimi). Ancak, bağladığınızda için bir <xref:System.Data.DataTable>, gerçekten bağlama tablonun varsayılan görünüme olan.  
+- <xref:System.Data.DataTable>. A <xref:System.Data.DataTable> satırları ve sütunları içeren bir tablo olarak gösterimidir [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Veri tablosu içeren iki koleksiyona: <xref:System.Data.DataColumn>, (Bu sonuç olarak bu tabloya girilen veri türlerini belirlemek) belirli bir tabloda veri sütunlarını temsil eden ve <xref:System.Data.DataRow>, bir tablodaki veri satırlarının temsil eden. Karmaşık bir denetim için bir veri tablosunda yer alan bilgileri bağlamak (bağlama gibi <xref:System.Windows.Forms.DataGridView> veri tablosu denetimi). Ancak, bağladığınızda için bir <xref:System.Data.DataTable>, gerçekten bağlama tablonun varsayılan görünüme olan.  
   
--   <xref:System.Data.DataView>. A <xref:System.Data.DataView> filtre veya sıralanmış bir tek veri tablo özelleştirilmiş bir görünümüdür. Veri Görünümü "snapshot" karmaşık veriye bağlı denetimler tarafından kullanılan verilerdir. Basit-bağlama veya veri görünümündeki verileri karmaşık bağlamak ancak bir sabit "resim" temiz ve güncelleştirme veri kaynağı yerine veri bağlama unutmayın.  
+- <xref:System.Data.DataView>. A <xref:System.Data.DataView> filtre veya sıralanmış bir tek veri tablo özelleştirilmiş bir görünümüdür. Veri Görünümü "snapshot" karmaşık veriye bağlı denetimler tarafından kullanılan verilerdir. Basit-bağlama veya veri görünümündeki verileri karmaşık bağlamak ancak bir sabit "resim" temiz ve güncelleştirme veri kaynağı yerine veri bağlama unutmayın.  
   
--   <xref:System.Data.DataSet>. A <xref:System.Data.DataSet> tablolarını, ilişkileri ve bir veritabanındaki verilere kısıtlamaları oluşan bir koleksiyondur. Basit veya karmaşık bağlamak için bir veri kümesindeki verileri, ancak varsayılan bağlama duyarlı <xref:System.Data.DataViewManager> için <xref:System.Data.DataSet> (sonraki noktaya bakın).  
+- <xref:System.Data.DataSet>. A <xref:System.Data.DataSet> tablolarını, ilişkileri ve bir veritabanındaki verilere kısıtlamaları oluşan bir koleksiyondur. Basit veya karmaşık bağlamak için bir veri kümesindeki verileri, ancak varsayılan bağlama duyarlı <xref:System.Data.DataViewManager> için <xref:System.Data.DataSet> (sonraki noktaya bakın).  
   
--   <xref:System.Data.DataViewManager>. A <xref:System.Data.DataViewManager> tüm özelleştirilmiş bir görünümü olan <xref:System.Data.DataSet>, benzer bir <xref:System.Data.DataView>, ancak dahil ilişkileri. İle bir <xref:System.Data.DataViewManager.DataViewSettings%2A> koleksiyonu ayarlayabileceğiniz varsayılan filtreler ve görünümler için sıralama seçeneklerinde, <xref:System.Data.DataViewManager> için belirli bir tabloya sahiptir.  
+- <xref:System.Data.DataViewManager>. A <xref:System.Data.DataViewManager> tüm özelleştirilmiş bir görünümü olan <xref:System.Data.DataSet>, benzer bir <xref:System.Data.DataView>, ancak dahil ilişkileri. İle bir <xref:System.Data.DataViewManager.DataViewSettings%2A> koleksiyonu ayarlayabileceğiniz varsayılan filtreler ve görünümler için sıralama seçeneklerinde, <xref:System.Data.DataViewManager> için belirli bir tabloya sahiptir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

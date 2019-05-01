@@ -1,5 +1,5 @@
 ---
-title: ICorDebugProcess4 arabirimi
+title: ICorDebugProcess4 Arabirimi
 ms.date: 02/07/2019
 api_name:
 - ICorDebugProcess4
@@ -16,13 +16,13 @@ topic_type:
 author: hoyosjs
 ms.author: juhoyosa
 ms.openlocfilehash: 1bdc958f2516bcd7c2eb74312fbf478e6d49535a
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948815"
 ---
-# <a name="icordebugprocess4-interface"></a>ICorDebugProcess4 arabirimi
+# <a name="icordebugprocess4-interface"></a>ICorDebugProcess4 Arabirimi
 
 İşlem yürütme denetimi dışında için destek sağlar.
 
@@ -40,9 +40,9 @@ Bu arabirim, çalışma zamanı içinde bulunur ve herhangi bir üst bilgiler ve
 
 **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
 
-**Üst bilgi:** Hiçbiri
+**Üst bilgi:** Yok.
 
-**Kitaplığı:** Hiçbiri
+**Kitaplığı:** None
 
 **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 

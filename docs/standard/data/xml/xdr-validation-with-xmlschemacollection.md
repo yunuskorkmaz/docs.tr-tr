@@ -1,5 +1,5 @@
 ---
-title: XmlSchemaCollection ile XDR doğrulaması
+title: XmlSchemaCollection ile XDR Doğrulaması
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ca806f0f9c7e1ad859affe05d5db8ec0d3b36b03
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44078881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959074"
 ---
-# <a name="xdr-validation-with-xmlschemacollection"></a>XmlSchemaCollection ile XDR doğrulaması
+# <a name="xdr-validation-with-xmlschemacollection"></a>XmlSchemaCollection ile XDR Doğrulaması
 
 Karşı doğrulama XML verileri azaltılmış (XDR) şema içinde depolanıyorsa **XmlSchemaCollection**, ad alanı URI belirtilen şema koleksiyonuna zaman eklendi ile ilişkilidir. **XmlValidatingReader** koleksiyondaki bu URI'ye karşılık gelen şema XML belgesindeki ad alanı URI eşler.
 

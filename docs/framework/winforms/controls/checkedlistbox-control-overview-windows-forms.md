@@ -9,11 +9,11 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 ms.assetid: e6cff3ce-e2ba-458e-851f-299e8e9c8abf
 ms.openlocfilehash: 8ff23ff449bc3b90fbd51bab1d73f8a7268bee05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956370"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>CheckedListBox Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.CheckedListBox> denetim genişletir <xref:System.Windows.Forms.ListBox> denetimi. Neredeyse her şeyi bir liste kutusu yapar ve öğelerin yanında bir onay işareti listede de görüntüleyebilirsiniz yapar. İki denetimi arasındaki diğer farklılıklardan işaretli liste kutuları yalnızca desteği olan <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; ve liste kutuları yalnızca bir öğe olması ya da hiçbiri seçili denetlenebilir. Seçili bir öğe form üzerinde vurgulu olarak görünür ve işaretli bir öğe ile aynı olmadığını unutmayın.  

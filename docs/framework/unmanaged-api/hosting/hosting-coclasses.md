@@ -1,5 +1,5 @@
 ---
-title: Barındırma Coclass’ları
+title: Barındırma Yardımcı Sınıfları
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting coclasses [.NET Framework]
@@ -9,27 +9,27 @@ ms.assetid: e32d8667-58ee-4760-814f-d22963881622
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8dbe16c1bd9293cd109e9ce7f1211d6651551bc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946087"
 ---
-# <a name="hosting-coclasses"></a>Barındırma Coclass’ları
-Bu bölümde barındırma API'sini kullanan yönetilmeyen API coclass'ları açıklar.  
+# <a name="hosting-coclasses"></a>Barındırma Yardımcı Sınıfları
+Bu bölümde barındırma API'SİNİN kullandığı yönetilmeyen API coclass'ları açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [CLRRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)  
- Kod yürütmeyi çalışma zamanı tarafından yönetmek için arabirim sağlar.  
+ Kod yürütme çalışma zamanı tarafından yönetmek için arabirim sağlar.  
   
  [ComCallUnmarshal Coclass](../../../../docs/framework/unmanaged-api/hosting/comcallunmarshal-coclass.md)  
- Arabirim İşaretçileri hazırlama yönetmek için arabirim sağlar.  
+ Arabirim işaretçilerini sıralama yönetmek için arabirim sağlar.  
   
  [CorRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)  
- Ortak dil çalışma zamanı tarafından yürütülen uygulamaları yönetmek için arabirim sağlar.  
+ Ortak dil çalışma zamanı tarafından yürütülen uygulamalarını yönetmek için arabirim sağlar.  
   
  [TypeNameFactory Coclass](../../../../docs/framework/unmanaged-api/hosting/typenamefactory-coclass.md)  
- Tür adı deconstruction yönetmek için bir arabirim sağlar.  
+ Ayrıştırma deyiminin türü adı yönetmek için bir arabirim sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  

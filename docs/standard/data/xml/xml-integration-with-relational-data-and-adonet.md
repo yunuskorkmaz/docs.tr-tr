@@ -6,22 +6,22 @@ ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fbc381395720b6b63a8cdfb44c55808d4608e77f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959100"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>İlişkisel Veriler ve ADO.NET ile XML Tümleştirmesi
 **XmlDataDocument** , türetilmiş bir sınıfı **XmlDocument**ve XML verileri içerir. Avantajı **XmlDataDocument** ilişkisel ve hiyerarşik veriler arasında bir köprü sağlar. Bu bir **XmlDocument** için bağlanabilir bir **veri kümesi** ve hem sınıflarını iki sınıflarında bulunan verilere yapılan değişiklikleri eşitleyebilirsiniz. Bir **XmlDocument** bağlanan bir **veri kümesi** ilişkisel veriler ile tümleştirmek XML verir ve verilerinizin ya da XML olarak veya bir biçimde temsil gerekmez. Her ikisini de yapabilirsiniz ve tek bir veri temsilini için kısıtlı olabilir değil.  
   
  Verilerin iki görünümlerde kullanılabilir olduğu avantajları şunlardır:  
   
--   Bir XML belgesi yapılandırılmış kısmı bir veri kümesine eşlenmesi verimli bir şekilde depolanan, dizine ve Aranan.  
+- Bir XML belgesi yapılandırılmış kısmı bir veri kümesine eşlenmesi verimli bir şekilde depolanan, dizine ve Aranan.  
   
--   Verimli bir şekilde dönüştürmeleri, doğrulama ve gezinti gösterim depolanır XML verilerinde bir imleç modeli aracılığıyla yapılabilir. Bazen, bunu daha verimli bir şekilde XML içinde depolanıyorsa daha ilişkisel yapıları karşı yapılabilir bir **XmlDocument** modeli.  
+- Verimli bir şekilde dönüştürmeleri, doğrulama ve gezinti gösterim depolanır XML verilerinde bir imleç modeli aracılığıyla yapılabilir. Bazen, bunu daha verimli bir şekilde XML içinde depolanıyorsa daha ilişkisel yapıları karşı yapılabilir bir **XmlDocument** modeli.  
   
--   **Veri kümesi** XML'nin bir kısmı depolayabilirsiniz. Diğer bir deyişle, kullanabileceğiniz **XPath** veya **XslTransform** için depolamak için bir **veri kümesi** yalnızca bu öğeler ve öznitelikler ilgi. Büyük veriler üzerinde yayma değişikliklerle daha küçük, filtrelenmiş veri alt kümesini için değişiklik yapılamaz buradan **XmlDataDocument**.  
+- **Veri kümesi** XML'nin bir kısmı depolayabilirsiniz. Diğer bir deyişle, kullanabileceğiniz **XPath** veya **XslTransform** için depolamak için bir **veri kümesi** yalnızca bu öğeler ve öznitelikler ilgi. Büyük veriler üzerinde yayma değişikliklerle daha küçük, filtrelenmiş veri alt kümesini için değişiklik yapılamaz buradan **XmlDataDocument**.  
   
  İçine yüklenen veriler üzerinde dönüşüm çalıştırabilirsiniz **veri kümesi** SQL Server'dan. .NET Framework sınıfları stili yönetilen WinForm bağlamak için başka bir seçenektir ve WebForm denetimleri bir **veri kümesi** XML giriş akışından doldurulmuş.  
   

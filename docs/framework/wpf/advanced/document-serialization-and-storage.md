@@ -7,11 +7,11 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962740"
 ---
 # <a name="document-serialization-and-storage"></a>Belge Serileştirme ve Depolama
 Microsoft .NET Framework, yüksek kaliteli belgeleri görüntülemek ve oluşturmak için güçlü bir ortam sağlar.  Sabit belgeler hem akış Gelişmiş belgelerini destekleyen gelişmiş özellikler ile güçlü 2B görüntüleme denetimleri, birleştirilmiş ve 3B grafik özellikleri .NET Framework uygulamaları, kalite ve kullanıcı deneyimi yepyeni bir düzeye taşıyın.  Esnek bir bellek içi temsili bir belgenin yönetebilmek .NET Framework'ün temel bir özelliği ve verimli bir şekilde kaydedin ve bir veri deposundan belge yükleme neredeyse her uygulamanın.  Bir belge bir dış veri deposuna iç bellek içi gösterimden dönüştürme işlemi, serileştirme olarak adlandırılır.  Bir veri deposunun okuma ve orijinal bellek içi örnek yeniden ters işlemi seri durumundan çıkarma olarak adlandırılır.  
@@ -24,19 +24,19 @@ Microsoft .NET Framework, yüksek kaliteli belgeleri görüntülemek ve oluştur
   
 ### <a name="features-of-net-framework-30-document-serializers"></a>.NET Framework 3.0 belge seri hale getiricileri genişletme özellikleri  
   
--   Üst düzey belge nesneleri (mantıksal ağaç ve görseller) doğrudan erişim verimli depolama sayfalandırılmış içeriği, 2B/3B öğeleri, görüntüleri, medya, köprüler, ek açıklamalar ve diğer destek içeriği etkinleştirin.  
+- Üst düzey belge nesneleri (mantıksal ağaç ve görseller) doğrudan erişim verimli depolama sayfalandırılmış içeriği, 2B/3B öğeleri, görüntüleri, medya, köprüler, ek açıklamalar ve diğer destek içeriği etkinleştirin.  
   
--   Zaman uyumlu ve zaman uyumsuz işlem.  
+- Zaman uyumlu ve zaman uyumsuz işlem.  
   
--   Gelişmiş Özellikler ile eklenti seri hale getiricileri genişletme desteği:  
+- Gelişmiş Özellikler ile eklenti seri hale getiricileri genişletme desteği:  
   
-    -   Tüm .NET Framework uygulamaları tarafından kullanılmak üzere sistem genelinde erişim.  
+    - Tüm .NET Framework uygulamaları tarafından kullanılmak üzere sistem genelinde erişim.  
   
-    -   Eklenti bulunabilirliği basit uygulaması.  
+    - Eklenti bulunabilirliği basit uygulaması.  
   
-    -   Basit Dağıtım, yükleme ve güncelleştirme özel üçüncü taraf eklentileri için.  
+    - Basit Dağıtım, yükleme ve güncelleştirme özel üçüncü taraf eklentileri için.  
   
-    -   Özel çalışma zamanı ayarları ve seçenekleri için kullanıcı arabirimi desteği.  
+    - Özel çalışma zamanı ayarları ve seçenekleri için kullanıcı arabirimi desteği.  
   
 ### <a name="xps-print-path"></a>XPS yazdırma yolu  
  Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu ayrıca çıktıda aracılığıyla belgeleri yazdırma için genişletilebilir bir mekanizma sağlar.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] hem bir belge dosyası biçimi görev yapar ve yerel yazdırma biriktiricisi biçimi [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] belgeleri doğrudan gönderilebilir [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-uyumlu yazıcılara Ara biçime dönüştürme gereksinimi olmadan.  Bkz: [yazdırma genel bakış](printing-overview.md) yazdırma yolu çıkış seçenekler ve özellikler hakkında daha fazla bilgi için.  

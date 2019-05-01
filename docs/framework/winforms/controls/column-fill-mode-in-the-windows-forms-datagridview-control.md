@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
 ms.openlocfilehash: a85745d39903719ec1e44ccf70df72d472720b7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956292"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sütun Doldurma Modu
 Sütun doldurma modu içinde <xref:System.Windows.Forms.DataGridView> denetimi, böylece bunlar kullanılabilir görüntüleme alanının genişliğini dolgu sütunlarını otomatik olarak yeniden boyutlandırır. Denetimi dışında her bir sütunun genişliğini eşit tutmak gerekli veya daha büyük olduğunda yatay kaydırma çubuğunun görüntülemez, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> özellik değeri.  
@@ -45,22 +45,22 @@ Sütun doldurma modu içinde <xref:System.Windows.Forms.DataGridView> denetimi, 
 ### <a name="comments"></a>Açıklamalar  
  Bu Tanıtım uygulamasını kullanmak için:  
   
--   Formun boyutunu değiştirin. Oranlarını koruma tarafından gösterilen sırada sütun genişliklerini nasıl değiştiğini gözlemlersiniz <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> özellik değerleri.  
+- Formun boyutunu değiştirin. Oranlarını koruma tarafından gösterilen sırada sütun genişliklerini nasıl değiştiğini gözlemlersiniz <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> özellik değerleri.  
   
--   Fare ile sütun ayırıcılarını sürükleyerek sütunu boyutları değiştirin. Gözlemleyin nasıl <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> değerleri değiştiğinde.  
+- Fare ile sütun ayırıcılarını sürükleyerek sütunu boyutları değiştirin. Gözlemleyin nasıl <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> değerleri değiştiğinde.  
   
--   Değişiklik <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> değer için bir sütun ve formu yeniden boyutlandırmak için sürükleyin. Gözlemleyin nasıl formun yeterince, küçük yaptığınızda <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> değerlerin değil aşağıda Git <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> değerleri.  
+- Değişiklik <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> değer için bir sütun ve formu yeniden boyutlandırmak için sürükleyin. Gözlemleyin nasıl formun yeterince, küçük yaptığınızda <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> değerlerin değil aşağıda Git <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> değerleri.  
   
--   Değişiklik <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> değerleri büyük sayılar tüm sütunları ve böylece birleşik değerleri denetiminin genişliğini aşıyor. Yatay kaydırma çubuğunun nasıl göründüğünü gözlemleyin.  
+- Değişiklik <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> değerleri büyük sayılar tüm sütunları ve böylece birleşik değerleri denetiminin genişliğini aşıyor. Yatay kaydırma çubuğunun nasıl göründüğünü gözlemleyin.  
   
--   Değişiklik <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> bazı sütunları için değerler. Sütunları veya formunu yeniden boyutlandırdığınızda etkisi gözlemleyin.  
+- Değişiklik <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> bazı sütunları için değerler. Sütunları veya formunu yeniden boyutlandırdığınızda etkisi gözlemleyin.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Sistem, System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
+- Sistem, System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
   
--   Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
+- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

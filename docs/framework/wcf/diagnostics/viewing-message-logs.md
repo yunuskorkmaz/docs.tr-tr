@@ -3,11 +3,11 @@ title: İleti Günlüklerini Görüntüleme
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
 ms.openlocfilehash: 2322d2a6e0c5a6f26ad103be72230666f6bca191
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964404"
 ---
 # <a name="viewing-message-logs"></a>İleti Günlüklerini Görüntüleme
 Bu konu, ileti günlüklerini görüntüleme biçimini açıklar.  
@@ -29,9 +29,9 @@ Bu konu, ileti günlüklerini görüntüleme biçimini açıklar.
   
  Bu sorunu çözmek için aşağıdaki yöntemlerden birini kullanabilirsiniz.  
   
--   Yalnızca iki üç ileti günlükleri görüntüleme [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) dilediğiniz zaman.  
+- Yalnızca iki üç ileti günlükleri görüntüleme [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) dilediğiniz zaman.  
   
--   Üç tüm günlüklerde görüntülerseniz gerekir [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) aynı anda yeni bir geçiş hizmeti değiştirebilirsiniz <xref:System.ServiceModel.Channels.Message> örneği. Bu örnek hariç tüm üstbilgileri yanı sıra gelen ileti gövdesinin bir kopyasını olmalıdır `ActivityId` ve `Action` üstbilgileri. Aşağıdaki kod örneği, bunun nasıl yapılacağı gösterilmektedir.  
+- Üç tüm günlüklerde görüntülerseniz gerekir [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) aynı anda yeni bir geçiş hizmeti değiştirebilirsiniz <xref:System.ServiceModel.Channels.Message> örneği. Bu örnek hariç tüm üstbilgileri yanı sıra gelen ileti gövdesinin bir kopyasını olmalıdır `ActivityId` ve `Action` üstbilgileri. Aşağıdaki kod örneği, bunun nasıl yapılacağı gösterilmektedir.  
   
 ```csharp
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
@@ -50,15 +50,15 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
 ## <a name="exceptional-cases-for-inaccurate-message-logging-content"></a>Olağanüstü durumlar için yanlış ileti günlüğe kaydetme içeriği  
  Aşağıdaki koşullarda iletileri günlüğe kaydedilmesini tam temsili sekizli akış kablo mevcut olmayabilir.  
   
--   Hiçbiri gelen / adres/içinde iletileri için BasicHttpBinding için zarf üst bilgileri günlüğe kaydedilen ad alanı.  
+- Hiçbiri gelen / adres/içinde iletileri için BasicHttpBinding için zarf üst bilgileri günlüğe kaydedilen ad alanı.  
   
--   Boşluk eşleşmiyor olabilir.  
+- Boşluk eşleşmiyor olabilir.  
   
--   Gelen iletiler için boş öğeleri farklı şekilde temsil edilebilir. Örneğin, \<etiket >\</etiketi > yerine \<etiket / >  
+- Gelen iletiler için boş öğeleri farklı şekilde temsil edilebilir. Örneğin, \<etiket >\</etiketi > yerine \<etiket / >  
   
--   Bilinen PII günlüğü devre dışı bırakıldığında varsayılan veya açık ayarı enableLoggingKnownPii = "true".  
+- Bilinen PII günlüğü devre dışı bırakıldığında varsayılan veya açık ayarı enableLoggingKnownPii = "true".  
   
--   Kodlama, UTF-8'e dönüştürme için etkinleştirilir.  
+- Kodlama, UTF-8'e dönüştürme için etkinleştirilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

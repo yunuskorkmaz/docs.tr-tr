@@ -5,11 +5,11 @@ helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
 ms.openlocfilehash: ace1b40b25bd12ff7092459e468a90f382434bf4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938768"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Özel Türler ve Kitaplıkar İçin XAML İlişkili CLR Öznitelikleri
 Bu konuda, .NET Framework XAML hizmetlerinde tarafından tanımlanan ortak dil çalışma zamanı (CLR) öznitelikleri açıklanmaktadır. Ayrıca, XAML ile ilgili bir senaryo uygulamayı derlemeler veya türler için olan .NET Framework içinde tanımlanan diğer CLR öznitelikleri açıklar. Derlemeleri, türleri veya üyeleri bu CLR öznitelikleri ile öznitelik atanıyor, türleriyle ilgili XAML türü sistem bilgileri sağlar. XAML düğümü akışı doğrudan işlemek veya ayrılmış XAML okuyucular ve yazıcılar XAML aracılığıyla .NET Framework XAML hizmetlerinde kullanan herhangi bir XAML tüketici bilgileri sağlanır.  
@@ -90,9 +90,9 @@ Bu konuda, .NET Framework XAML hizmetlerinde tarafından tanımlanan ortak dil �
   
  **Bağımsız değişkenleri:** Attribution iki biçimini destekler:  
   
--   Öznitelikli türüne bir özelliğin adını belirten dize.  
+- Öznitelikli türüne bir özelliğin adını belirten dize.  
   
--   Bir özelliğin adını belirten dize ve bir <xref:System.Type> türünün adlı özelliği tanımlar. Bu form XAML namescope özelliği iliştirilebilir bir üye belirtmek için geçerlidir.  
+- Bir özelliğin adını belirten dize ve bir <xref:System.Type> türünün adlı özelliği tanımlar. Bu form XAML namescope özelliği iliştirilebilir bir üye belirtmek için geçerlidir.  
   
  <xref:System.Windows.Markup.NameScopePropertyAttribute> Öznitelikli sınıf için XAML namescope değer sağlayan bir alan özelliği belirtir. XAML namescope özelliği uygulayan bir nesne başvurusu beklenir <xref:System.Windows.Markup.INameScope> ve gerçek XAML namescope, depolama ve davranışını içerir.  
   
@@ -219,9 +219,9 @@ Bu konuda, .NET Framework XAML hizmetlerinde tarafından tanımlanan ortak dil �
   
  **Bağımsız değişkenleri:**  
   
--   XAML ad alanı listelense tanımlayıcısını belirten bir dize.  
+- XAML ad alanı listelense tanımlayıcısını belirten bir dize.  
   
--   Önceki bağımsız XAML ad alanı listelense XAML ad alanı tanımlayıcısını belirten bir dize.  
+- Önceki bağımsız XAML ad alanı listelense XAML ad alanı tanımlayıcısını belirten bir dize.  
   
  <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> XAML ad alanı tarafından başka bir XAML ad alanı birden fazla yolu eklendi olduğunu belirtir. Genellikle, subsuming XAML ad alanı belirtilirse, önceden tanımlanmış <xref:System.Windows.Markup.XmlnsDefinitionAttribute>. Bu bir teknik olabilir bir XAML sözlük bir kitaplıkta ve daha önce tutulan sözlük karşı önceden tanımlanmış biçimlendirme ile uyumlu hale getirmek için sürüm oluşturma için kullanılır.  
   
@@ -230,40 +230,40 @@ Bu konuda, .NET Framework XAML hizmetlerinde tarafından tanımlanan ortak dil �
   
  **Bağımsız değişkenleri:**  
   
--   Tanımlamak için XAML ad alanı tanımlayıcısını belirten bir dize.  
+- Tanımlamak için XAML ad alanı tanımlayıcısını belirten bir dize.  
   
--   Bir CLR ad alanı adları bir dize. CLR ad uzayı genel türler, derlemede tanımlamanız gerekir ve en az bir CLR ad alanı türleri için XAML kullanım kullanılmaya.  
+- Bir CLR ad alanı adları bir dize. CLR ad uzayı genel türler, derlemede tanımlamanız gerekir ve en az bir CLR ad alanı türleri için XAML kullanım kullanılmaya.  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> Derleme başına temelinde XAML ad alanı için tür çözümlemesi XAML nesne yazıcısı veya XAML şema içeriği tarafından kullanılan sonra bir CLR ad alanı arasındaki eşlemeyi belirtir.  
   
  Birden fazla <xref:System.Windows.Markup.XmlnsDefinitionAttribute> bir bütünleştirilmiş koda uygulanabilir. Bu, aşağıdaki nedenlerden herhangi bir birleşimini için yapılabilir:  
   
--   Kitaplık tasarım mantıksal organizasyonu çalışma zamanı API erişimi için birden çok CLR ad alanını içerir. Ancak, bu ad alanlarında tüm türleri aynı XAML ad başvurarak XAML kullanılabilir olmasını istersiniz. Bu durumda, birkaç uygulama <xref:System.Windows.Markup.XmlnsDefinitionAttribute> aynı öznitelikleri <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> ancak farklı değer <xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A> değerleri. Framework veya uygulama varsayılan XAML ad alanı, ortak kullanım olabilir amaçlamaktadır XAML ad alanı eşlemeleri tanımlıyorsanız, bu özellikle yararlıdır.  
+- Kitaplık tasarım mantıksal organizasyonu çalışma zamanı API erişimi için birden çok CLR ad alanını içerir. Ancak, bu ad alanlarında tüm türleri aynı XAML ad başvurarak XAML kullanılabilir olmasını istersiniz. Bu durumda, birkaç uygulama <xref:System.Windows.Markup.XmlnsDefinitionAttribute> aynı öznitelikleri <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> ancak farklı değer <xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A> değerleri. Framework veya uygulama varsayılan XAML ad alanı, ortak kullanım olabilir amaçlamaktadır XAML ad alanı eşlemeleri tanımlıyorsanız, bu özellikle yararlıdır.  
   
--   Birden çok CLR ad kitaplığı tasarım içerir ve söz konusu CLR ad alanlarında türleri kullanımları arasında bilinçli bir XAML ad alanı ayrım istediğiniz.  
+- Birden çok CLR ad kitaplığı tasarım içerir ve söz konusu CLR ad alanlarında türleri kullanımları arasında bilinçli bir XAML ad alanı ayrım istediğiniz.  
   
--   Birden fazla XAML ad alanı erişilebilir olmasını istediğiniz ve derlemede bir CLR ad alanı tanımlayın. Bu senaryoda, aynı kod temeli ile birden çok sözcük dağarcıklarını desteklediğiniz oluşur.  
+- Birden fazla XAML ad alanı erişilebilir olmasını istediğiniz ve derlemede bir CLR ad alanı tanımlayın. Bu senaryoda, aynı kod temeli ile birden çok sözcük dağarcıklarını desteklediğiniz oluşur.  
   
--   XAML dil desteği bir veya birden çok CLR ad alanlarında tanımlarsınız. Bu, <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> değeri `http://schemas.microsoft.com/winfx/2006/xaml`.  
+- XAML dil desteği bir veya birden çok CLR ad alanlarında tanımlarsınız. Bu, <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> değeri `http://schemas.microsoft.com/winfx/2006/xaml`.  
   
 ### <a name="xmlnsprefixattribute"></a>XmlnsPrefixAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.XmlnsPrefixAttribute>  
   
  **Bağımsız değişkenleri:**  
   
--   XAML ad alanı tanımlayıcısını belirten bir dize.  
+- XAML ad alanı tanımlayıcısını belirten bir dize.  
   
--   Bir önerilen ön eki belirten bir dize.  
+- Bir önerilen ön eki belirten bir dize.  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> XAML ad alanı için kullanılacak bir önerilen ön ekini belirtir. .NET Framework XAML hizmetlerinde tarafından seri hale getirilmiş bir XAML dosyasında öğeler ve öznitelikler yazarken önek yararlıdır <xref:System.Xaml.XamlXmlWriter>, veya düzenleme özellikleri ne zaman bir XAML uygulama kitaplığı olan XAML tasarım ortamı ile etkileşim kurar.  
   
  Birden fazla <xref:System.Windows.Markup.XmlnsPrefixAttribute> bir bütünleştirilmiş koda uygulanabilir. Bu, aşağıdaki nedenlerden herhangi bir birleşimini için yapılabilir:  
   
--   Derlemenizi türleri için birden fazla XAML ad alanı tanımlar. Bu durumda her XAML ad alanı için farklı bir önek değerleri tanımlamanız gerekir.  
+- Derlemenizi türleri için birden fazla XAML ad alanı tanımlar. Bu durumda her XAML ad alanı için farklı bir önek değerleri tanımlamanız gerekir.  
   
--   Birden çok sözcük dağarcıklarını destekleme ve her bir sözlük ve XAML ad alanı için farklı önekler kullanın.  
+- Birden çok sözcük dağarcıklarını destekleme ve her bir sözlük ve XAML ad alanı için farklı önekler kullanın.  
   
--   XAML dil desteği derlemesinde tanımlayın ve sahip bir <xref:System.Windows.Markup.XmlnsDefinitionAttribute> için `http://schemas.microsoft.com/winfx/2006/xaml`. Bu durumda, genellikle önek Yükselt `x`.  
+- XAML dil desteği derlemesinde tanımlayın ve sahip bir <xref:System.Windows.Markup.XmlnsDefinitionAttribute> için `http://schemas.microsoft.com/winfx/2006/xaml`. Bu durumda, genellikle önek Yükselt `x`.  
   
 > [!NOTE]
 >  .NET framework XAML hizmetlerinde, ayrıca XAML ile ilgili öznitelik tanımlar <xref:System.Windows.Markup.RootNamespaceAttribute>. Bu öznitelik bir proje sistemi desteği için derleme düzeyi özniteliktir ve XAML özel türleri için uygun değil.  

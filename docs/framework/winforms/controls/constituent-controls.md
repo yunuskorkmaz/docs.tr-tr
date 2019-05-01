@@ -10,11 +10,11 @@ helpviewer_keywords:
 - user controls [Windows Forms], constituent controls
 ms.assetid: 5565e720-198b-4bbd-a2bd-c447ba641798
 ms.openlocfilehash: 76a5a4f9b02a71616d247a1bb0f03cc0aec1d70d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956082"
 ---
 # <a name="constituent-controls"></a>Bağlı Denetimler
 Bir kullanıcı denetimi oluşturan denetimleri veya *bağlı denetimler* özel grafik işleme için geldiğinde terimiyle gösterilen gibi göreceli olarak sabit olduğundan. Tüm Windows Forms denetimleri aracılığıyla kendi kendi işleme işlemek <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi. Bu yöntem korunduğundan, geliştiriciler için erişilebilir değil ve böylece denetimin boyandığında yürütülmesini önlenemeyen. Bu, ancak bağlı denetimler görünümünü etkilemek için kod eklenemiyor anlamına gelmez. Ek işleme, olay işleyici ekleme tarafından gerçekleştirilebilir. Örneğin, yazma varsayalım. bir <xref:System.Windows.Forms.UserControl> adlı bir düğme olan `MyButton`. Tarafından sağlanan ne ötesinde ek işleme sağlamak onlardan <xref:System.Web.UI.WebControls.Button>, aşağıdakine benzer şekilde kullanıcı denetiminize için kod eklersiniz:  

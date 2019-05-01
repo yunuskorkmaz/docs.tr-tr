@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
 ms.openlocfilehash: a12fa587d5df0ed95dd0f15ccfbe2ef886185b9e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934127"
 ---
 # <a name="updating-data-in-a-data-source"></a>Bir Veri Kaynağındaki Verileri Güncelleştirme
 (Örneğin, INSERT, UPDATE veya DELETE) verileri değiştirme SQL deyimleri, satır döndürmeyen. Benzer şekilde, birçok saklı yordamlar, bir eylem gerçekleştirin ancak satır döndürmeyen. Satır döndürmeyen komutları yürütmek için oluşturun bir **komut** uygun SQL komut nesnesiyle ve **bağlantı**, gerekli dahil olmak üzere **parametreleri**. Komutu ile yürütme **ExecuteNonQuery** yöntemi **komut** nesne.  

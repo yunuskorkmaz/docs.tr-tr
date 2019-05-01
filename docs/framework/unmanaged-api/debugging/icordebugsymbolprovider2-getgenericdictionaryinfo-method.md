@@ -5,11 +5,11 @@ ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f171af8dbfa4e812711e95e5587b314753cd9350
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944656"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo yöntemi
 Genel bir sözlük harita alır.  
@@ -33,9 +33,9 @@ HRESULT GetGenericDictionaryInfo(
   
  Eşleme, üst düzey iki bölümden oluşur:  
   
--   A [dizin](#Directory) bu dahil tüm sözlüklerin göreli sanal adreslerine (RVA) içeren.  
+- A [dizin](#Directory) bu dahil tüm sözlüklerin göreli sanal adreslerine (RVA) içeren.  
   
--   Bayt hizalı [yığın](#Heap) nesne oluşturmada bilgileri içeren. Son directory girişinin hemen sonra başlar.  
+- Bayt hizalı [yığın](#Heap) nesne oluşturmada bilgileri içeren. Son directory girişinin hemen sonra başlar.  
   
 <a name="Directory"></a>   
 ## <a name="the-directory"></a>Dizin  
@@ -43,13 +43,13 @@ HRESULT GetGenericDictionaryInfo(
   
  Genel bir sözlük harita öğesinin dizin bölümü aşağıdaki yapıya sahiptir:  
   
--   İlk 4 baytı dictionary girişlerinin (diğer bir deyişle, sözlükteki göreli sanal adreslerine sayısı) sayısını içerir. Bu değer anılacaktır *N*. Yüksek bit ayarlanmışsa girişleri artan düzende göreli sanal adres göre sıralanır.  
+- İlk 4 baytı dictionary girişlerinin (diğer bir deyişle, sözlükteki göreli sanal adreslerine sayısı) sayısını içerir. Bu değer anılacaktır *N*. Yüksek bit ayarlanmışsa girişleri artan düzende göreli sanal adres göre sıralanır.  
   
--   *N* dizin girdisi izleyin. Her girişin iki 4 baytlık Segment 8 baytlık oluşur:  
+- *N* dizin girdisi izleyin. Her girişin iki 4 baytlık Segment 8 baytlık oluşur:  
   
-    -   Bayt 0-3: RVA; sözlüğün göreli sanal adres.  
+    - Bayt 0-3: RVA; sözlüğün göreli sanal adres.  
   
-    -   4-7 baytlar: Uzaklık; yığın başlangıcını göre bir uzaklık.  
+    - 4-7 baytlar: Uzaklık; yığın başlangıcını göre bir uzaklık.  
   
 <a name="Heap"></a>   
 ## <a name="the-heap"></a>Yığın  
@@ -63,11 +63,11 @@ Heap Size = Stream.Length – (Directory Size + 4)
   
  Yığındaki her örneklemesi bilgi öğesi için biçimi şu şekildedir:  
   
--   Bu örnek oluşturma bilgi öğesi sıkıştırılmış ECMA meta veri biçimi bayt uzunluğu. Değeri, bu uzunluğu bilgileri içermez.  
+- Bu örnek oluşturma bilgi öğesi sıkıştırılmış ECMA meta veri biçimi bayt uzunluğu. Değeri, bu uzunluğu bilgileri içermez.  
   
--   Genel örnek oluşturma türleri sayısı veya *T*, sıkıştırılmış ECMA meta veri biçiminde.  
+- Genel örnek oluşturma türleri sayısı veya *T*, sıkıştırılmış ECMA meta veri biçiminde.  
   
--   *T* türlerini, her temsil ECMA türü imza biçiminde.  
+- *T* türlerini, her temsil ECMA türü imza biçiminde.  
   
  Her yığın öğe uzunluğu dahilini Basit Dizin bölümü yığın etkilemeden sıralama sağlar.  
   

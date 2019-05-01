@@ -9,18 +9,18 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
 ms.openlocfilehash: babae31a3be9775d07ca84c54e1177d297cab5cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956287"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Bir Windows Formunda bir ActiveX Denetimi Barındırmayla İlgili Konular
 Windows Forms ana bilgisayar Windows Forms denetimleri için optimize edilmiştir ancak ActiveX denetimlerini kullanmaya devam edebilirsiniz. ActiveX denetimlerini kullanan bir uygulamayı planlarken, aşağıdaki konuları göz önünde bulundurun:  
   
--   **Güvenlik** ortak dil çalışma zamanı kod erişim güvenliği ile ilgili olarak geliştirilmiştir. Windows Forms özelliklerine sahip uygulamalar ile erişilebilir işlevselliğinin büyük sorun olmadan tam olarak güvenilen bir ortamda ve yarı güvenilir bir ortamda çalıştırabilirsiniz. Windows Forms denetimleri, hiçbir zorluklar ile bir tarayıcıda barındırılabilir. Ancak, Windows Forms ActiveX denetimlerinde bu güvenlik geliştirmeleri yararlanamaz. Bir ActiveX denetimi çalışıyor ile ayarlanan yönetilmeyen kod iznini gerektirir <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> özelliği. Güvenlik ve yönetilmeyen kod iznini hakkında daha fazla bilgi için bkz: <xref:System.Security.Permissions.SecurityPermissionAttribute>.  
+- **Güvenlik** ortak dil çalışma zamanı kod erişim güvenliği ile ilgili olarak geliştirilmiştir. Windows Forms özelliklerine sahip uygulamalar ile erişilebilir işlevselliğinin büyük sorun olmadan tam olarak güvenilen bir ortamda ve yarı güvenilir bir ortamda çalıştırabilirsiniz. Windows Forms denetimleri, hiçbir zorluklar ile bir tarayıcıda barındırılabilir. Ancak, Windows Forms ActiveX denetimlerinde bu güvenlik geliştirmeleri yararlanamaz. Bir ActiveX denetimi çalışıyor ile ayarlanan yönetilmeyen kod iznini gerektirir <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> özelliği. Güvenlik ve yönetilmeyen kod iznini hakkında daha fazla bilgi için bkz: <xref:System.Security.Permissions.SecurityPermissionAttribute>.  
   
--   **Toplam sahip olma maliyetini** bir Windows forma eklenen ActiveX denetimleri, oluşturulan dosyaların boyutunu önemli ölçüde ekleyebilirsiniz bağlandığında, Windows Form dağıtılır. Ayrıca, Windows Forms ActiveX denetimleri kullanarak, kayıt defterine yazma gerektirir. Bu gerektirmeyen Windows Forms denetimleri, bir kullanıcının bilgisayarına daha bozucu budur.  
+- **Toplam sahip olma maliyetini** bir Windows forma eklenen ActiveX denetimleri, oluşturulan dosyaların boyutunu önemli ölçüde ekleyebilirsiniz bağlandığında, Windows Form dağıtılır. Ayrıca, Windows Forms ActiveX denetimleri kullanarak, kayıt defterine yazma gerektirir. Bu gerektirmeyen Windows Forms denetimleri, bir kullanıcının bilgisayarına daha bozucu budur.  
   
     > [!NOTE]
     >  ActiveX çalışma denetimi bir COM birlikte çalışma sarmalayıcısı kullanımı gerektirir. Daha fazla bilgi için [Visual Basic ve Visual C# COM birlikte çalışabilirlik](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  

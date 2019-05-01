@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
 ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938950"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static İşaretleme Uzantısı
 Tanımlanan herhangi bir statik değere göre kod varlığa başvuran bir [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– uyumlu şekilde. Başvurulan statik özelliği, XAML içinde bir özelliğinin değeri sağlamak için kullanılabilir.  
@@ -38,10 +38,10 @@ Tanımlanan herhangi bir statik değere göre kod varlığa başvuran bir [!INCL
 
 Başvurulan kod varlık aşağıdakilerden biri olmalıdır:  
   
--   Bir sabiti  
--   Statik bir özellik  
--   Bir alan  
--   Bir sabit listesi değeri
+- Bir sabiti  
+- Statik bir özellik  
+- Bir alan  
+- Bir sabit listesi değeri
 
 XAML biçimlendirme veya bir XAML yükleme zamanı ayrıştırma özel durumu ise başka kod bir varlık, statik olmayan bir özellik gibi belirten bir derleme zamanı hatasına neden olur.  
 
@@ -74,11 +74,11 @@ Teknik olarak mümkün olan diğer iki XAML kullanımları vardır. Ancak, bu ku
 ## <a name="wpf-usage-notes"></a>WPF kullanım notları  
  WPF programlama için kullandığınız varsayılan XAML ad alanı birçok yararlı statik özellikleri içermiyor ve kullanışlı statik özelliklerin çoğu sahip gerek kalmadan, kullanımı kolaylaştırmak tür dönüştürücüleri gibi desteği `{x:Static}` . Statik özellikler için aşağıdakilerden biri doğruysa bir XAML ad alanı için bir önek eşlemeniz gerekir:  
   
--   WPF içinde var, ancak WPF için varsayılan XAML ad alanı bir parçası olmayan bir türe başvuruyor ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]). Bunu kullanmak için oldukça sık karşılaşılan bir senaryodur `x:Static`. Örneğin, kullanabilirsiniz bir `x:Static` bir XAML ad alanı eşlemesi ile başvuru <xref:System> statik özelliklerini başvurmak için CLR ad alanı ve mscorlib derlemesi <xref:System.Environment> sınıfı.  
+- WPF içinde var, ancak WPF için varsayılan XAML ad alanı bir parçası olmayan bir türe başvuruyor ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]). Bunu kullanmak için oldukça sık karşılaşılan bir senaryodur `x:Static`. Örneğin, kullanabilirsiniz bir `x:Static` bir XAML ad alanı eşlemesi ile başvuru <xref:System> statik özelliklerini başvurmak için CLR ad alanı ve mscorlib derlemesi <xref:System.Environment> sınıfı.  
   
--   Özel bir derlemeden bir tür başvuruyor.  
+- Özel bir derlemeden bir tür başvuruyor.  
   
--   Varsayılan WPF XAML ad alanı bir parçası olarak eşlenmedi CLR ad alanı içinde türüdür, ancak bir WPF derlemede mevcut bir türe başvuruyor. CLR ad alanları için WPF eşleme varsayılan XAML ad alanına çeşitli WPF derlemeleri tanımlarında tarafından gerçekleştirilen (Bu kavramı hakkında daha fazla bilgi için bkz: [XAML ad alanları ve WPF XAML için Namespace eşlemesi](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). XAML için genellikle gibi amaçlanmayan çoğunlukla sınıf tanımları, CLR ad uzayı oluşturuluyorsa olmayan eşlenen bir CLR ad alanları varolabilir <xref:System.Windows.Threading>.  
+- Varsayılan WPF XAML ad alanı bir parçası olarak eşlenmedi CLR ad alanı içinde türüdür, ancak bir WPF derlemede mevcut bir türe başvuruyor. CLR ad alanları için WPF eşleme varsayılan XAML ad alanına çeşitli WPF derlemeleri tanımlarında tarafından gerçekleştirilen (Bu kavramı hakkında daha fazla bilgi için bkz: [XAML ad alanları ve WPF XAML için Namespace eşlemesi](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). XAML için genellikle gibi amaçlanmayan çoğunlukla sınıf tanımları, CLR ad uzayı oluşturuluyorsa olmayan eşlenen bir CLR ad alanları varolabilir <xref:System.Windows.Threading>.  
   
  WPF için ön ekleri ve XAML ad alanları kullanma hakkında daha fazla bilgi için bkz. [XAML ad alanları ve WPF XAML Namespace eşleme](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   

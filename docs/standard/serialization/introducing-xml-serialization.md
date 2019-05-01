@@ -1,5 +1,5 @@
 ---
-title: XML serileştirmeye giriş
+title: XML Serileştirmeye Giriş
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
 ms.openlocfilehash: 491819c52c5bb1e7767e41fce7e56d8f95d10286
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933698"
 ---
-# <a name="introducing-xml-serialization"></a>XML serileştirmeye giriş
+# <a name="introducing-xml-serialization"></a>XML Serileştirmeye Giriş
 
 Seri hale getirme kolayca taşınan bir forma bir nesne dönüştürme işlemidir. Örneğin, bir nesneyi serileştirip ve bir istemci ve sunucu arasında HTTP kullanarak Internet üzerinden aktarım. Diğer tarafta akıştan nesne seri durumundan çıkarma yeniden oluşturur.
 
@@ -28,8 +28,7 @@ Seri hale getirme kolayca taşınan bir forma bir nesne dönüştürme işlemidi
 > [!NOTE]
 > XML serileştirme yöntemleri, Dizinleyicileri, özel alanları veya salt okunur özelliklerini (dışında salt okunur koleksiyonlar) dönüştürmez. Bir nesnenin tüm alanları ve özellikleri serileştirmek için ve ortak ve özel, kullanın <xref:System.Runtime.Serialization.DataContractSerializer> XML serileştirme yerine.
 
- XML serileştirme merkezi sınıfta olan <xref:System.Xml.Serialization.XmlSerializer> sınıfı ve bu sınıftaki yöntemleri en önemli **serileştirme** ve **Deserialize** yöntemleri. 
-  <xref:System.Xml.Serialization.XmlSerializer> C# dosyaları oluşturur ve bunları bu serileştirme gerçekleştirmek için .dll dosyalarıyla derler. .NET Framework 2.0 [XML serileştiricisi Oluşturma Aracı (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) önceden uygulamanızla dağıtılması ve başlangıç performansı artırmak için bu serileştirme derlemeler oluşturmak üzere tasarlanmıştır. XML akışı tarafından oluşturulan **XmlSerializer** World Wide Web Consortium (W3C) ile uyumlu [XML Şeması Tanım Dili (XSD) 1.0 öneri](https://www.w3.org/TR/xslt). Ayrıca, oluşturulan veri türleri başlıklı belge ile uyumludur "XML şema bölümü 2: Veri türleri."
+ XML serileştirme merkezi sınıfta olan <xref:System.Xml.Serialization.XmlSerializer> sınıfı ve bu sınıftaki yöntemleri en önemli **serileştirme** ve **Deserialize** yöntemleri. <xref:System.Xml.Serialization.XmlSerializer> C# dosyaları oluşturur ve bunları bu serileştirme gerçekleştirmek için .dll dosyalarıyla derler. .NET Framework 2.0 [XML serileştiricisi Oluşturma Aracı (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) önceden uygulamanızla dağıtılması ve başlangıç performansı artırmak için bu serileştirme derlemeler oluşturmak üzere tasarlanmıştır. XML akışı tarafından oluşturulan **XmlSerializer** World Wide Web Consortium (W3C) ile uyumlu [XML Şeması Tanım Dili (XSD) 1.0 öneri](https://www.w3.org/TR/xslt). Ayrıca, oluşturulan veri türleri başlıklı belge ile uyumludur "XML şema bölümü 2: Veri türleri."
 
  Nesnelerinizi verilerde biçiminde sınıflar, alanları, özellikler, ilkel türler, dizileri ve hatta katıştırılmış XML gibi programlama dili yapıları kullanarak açıklanan **XmlElement** veya **XmlAttribute**nesneleri. Özniteliklerle, ek açıklamalı kendi sınıflar, oluşturma seçeneğiniz vardır veya varolan bir XML şemasını temel alan sınıflar oluşturmak için XML şema tanımı aracını kullanarak.
 

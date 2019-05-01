@@ -6,11 +6,11 @@ helpviewer_keywords:
 - SaveFileDialog component
 ms.assetid: 6f5d9321-37d7-4448-ac4c-a33c42b2a766
 ms.openlocfilehash: 552e6cae64ab3b30279e04512a87b18c2f2b068a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947985"
 ---
 # <a name="savefiledialog-component-windows-forms"></a>SaveFileDialog Bileşeni (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.SaveFileDialog> bir önceden yapılandırılmış bir iletişim kutusu bir bileşendir. Bunu Windows tarafından kullanılan standart dosyayı Kaydet iletişim kutusu ile aynı olur. Devraldığı <xref:System.Windows.Forms.CommonDialog> sınıfı.  

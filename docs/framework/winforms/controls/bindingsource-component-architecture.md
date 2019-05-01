@@ -8,28 +8,28 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
 ms.openlocfilehash: 81559444b6e3da2861e48bdc637ae01d246c0758
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961583"
 ---
 # <a name="bindingsource-component-architecture"></a>BindingSource Bileşeni Mimarisi
 İle <xref:System.Windows.Forms.BindingSource> bileşeni, Evrensel bağlayabilirsiniz tüm Windows Formları denetimleri için veri kaynakları.  
   
  <xref:System.Windows.Forms.BindingSource> Bileşeni denetimlerini bir veri kaynağına bağlama işlemini basitleştirir ve geleneksel veri bağlama aşağıdaki avantajları sunar:  
   
--   İş nesneler için tasarım zamanı bağlamayı etkinleştirir.  
+- İş nesneler için tasarım zamanı bağlamayı etkinleştirir.  
   
--   Kapsülleyen <xref:System.Windows.Forms.CurrencyManager> işlevsellik ve kullanıma sunan <xref:System.Windows.Forms.CurrencyManager> tasarım zamanında olayları.  
+- Kapsülleyen <xref:System.Windows.Forms.CurrencyManager> işlevsellik ve kullanıma sunan <xref:System.Windows.Forms.CurrencyManager> tasarım zamanında olayları.  
   
--   Destekleyen liste oluşturma basitleştirir <xref:System.ComponentModel.IBindingList> değişikliği bildirimi listesi yerel olarak desteklemeyen veri kaynakları listesinde değişiklik bildirimi sağlayarak arabirimi.  
+- Destekleyen liste oluşturma basitleştirir <xref:System.ComponentModel.IBindingList> değişikliği bildirimi listesi yerel olarak desteklemeyen veri kaynakları listesinde değişiklik bildirimi sağlayarak arabirimi.  
   
--   Bir genişletilebilirlik noktası sağlar <xref:System.ComponentModel.IBindingList.AddNew%2A?displayProperty=nameWithType> yöntemi.  
+- Bir genişletilebilirlik noktası sağlar <xref:System.ComponentModel.IBindingList.AddNew%2A?displayProperty=nameWithType> yöntemi.  
   
--   Veri kaynağı ve denetim arasında bir yöneltme düzeyi sağlar. Veri kaynağı çalışma zamanında değiştirebiliyorsa, bu yöneltme önemlidir.  
+- Veri kaynağı ve denetim arasında bir yöneltme düzeyi sağlar. Veri kaynağı çalışma zamanında değiştirebiliyorsa, bu yöneltme önemlidir.  
   
--   Diğer ilgili verileri Windows Forms dentimleriyle özellikle birlikte çalışır <xref:System.Windows.Forms.BindingNavigator> ve <xref:System.Windows.Forms.DataGridView> kontrol eder.  
+- Diğer ilgili verileri Windows Forms dentimleriyle özellikle birlikte çalışır <xref:System.Windows.Forms.BindingNavigator> ve <xref:System.Windows.Forms.DataGridView> kontrol eder.  
   
  Bu nedenlerle, <xref:System.Windows.Forms.BindingSource> bileşenidir, Windows Forms denetimleri veri kaynaklarına bağlamak için tercih edilen yoludur.  
   
@@ -40,38 +40,38 @@ ms.locfileid: "59165353"
   
  Tarafından sağlanan tutarlı arabirimi <xref:System.Windows.Forms.BindingSource> bileşen denetimlere veri bağlama işlemini büyük ölçüde basitleştirir. Veri kaynağı türler değişikliği bildirimi, <xref:System.Windows.Forms.BindingSource> bileşen denetim ve veri kaynağı arasındaki değişiklikleri otomatik olarak iletişim kurar. Değişiklik bildirimi sağlamayan veri kaynağı türleri için değişiklik bildirimleri yükseltmek sağlayan olaylar sağlanır. Aşağıdaki liste tarafından desteklenen özellikler gösterir <xref:System.Windows.Forms.BindingSource> bileşeni:  
   
--   Yöneltme.  
+- Yöneltme.  
   
--   Para birimi yönetimi.  
+- Para birimi yönetimi.  
   
--   Veri kaynağı olarak bir listesi.  
+- Veri kaynağı olarak bir listesi.  
   
--   <xref:System.Windows.Forms.BindingSource> olarak bir <xref:System.ComponentModel.IBindingList>.  
+- <xref:System.Windows.Forms.BindingSource> olarak bir <xref:System.ComponentModel.IBindingList>.  
   
--   Özel öğe oluşturma.  
+- Özel öğe oluşturma.  
   
--   İşlem öğe oluşturma.  
+- İşlem öğe oluşturma.  
   
--   <xref:System.Collections.IEnumerable> destekler.  
+- <xref:System.Collections.IEnumerable> destekler.  
   
--   Tasarım zamanı desteği.  
+- Tasarım zamanı desteği.  
   
--   Statik <xref:System.Windows.Forms.ListBindingHelper> yöntemleri.  
+- Statik <xref:System.Windows.Forms.ListBindingHelper> yöntemleri.  
   
--   Sıralama ve filtreleme ile <xref:System.ComponentModel.IBindingListView> arabirimi.  
+- Sıralama ve filtreleme ile <xref:System.ComponentModel.IBindingListView> arabirimi.  
   
--   İle tümleştirme <xref:System.Windows.Forms.BindingNavigator>.  
+- İle tümleştirme <xref:System.Windows.Forms.BindingNavigator>.  
   
 ### <a name="indirection"></a>Yöneltme  
  <xref:System.Windows.Forms.BindingSource> Bileşeni, Denetim ve veri kaynağı arasında bir yöneltme düzeyi sağlar. Bir denetimi doğrudan bir veri kaynağına bağlama yerine denetime bağlamak bir <xref:System.Windows.Forms.BindingSource>, ve veri kaynağına ekleme <xref:System.Windows.Forms.BindingSource> bileşenin <xref:System.Windows.Forms.BindingSource.DataSource%2A> özelliği.  
   
  Bu yöneltme düzeyi ile veri kaynağı denetimi bağlama sıfırlamadan değiştirebilirsiniz. Bu, aşağıdaki özellikleri sağlar:  
   
--   İliştirebilirsiniz <xref:System.Windows.Forms.BindingSource> geçerli denetim bağlamalarını korurken farklı veri kaynaklarına.  
+- İliştirebilirsiniz <xref:System.Windows.Forms.BindingSource> geçerli denetim bağlamalarını korurken farklı veri kaynaklarına.  
   
--   Veri kaynağındaki öğeleri değiştirmek ve ilişkili denetimler bildirir. Daha fazla bilgi için [nasıl yapılır: BindingSource ile Windows Forms denetiminde veri kaynağı güncelleştirmelerini yansıtma](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md).  
+- Veri kaynağındaki öğeleri değiştirmek ve ilişkili denetimler bildirir. Daha fazla bilgi için [nasıl yapılır: BindingSource ile Windows Forms denetiminde veri kaynağı güncelleştirmelerini yansıtma](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md).  
   
--   Bağlayabileceğiniz bir <xref:System.Type> bellekte bir nesne yerine. Daha fazla bilgi için [nasıl yapılır: Bir Windows Forms denetimini bir türe bağlama](how-to-bind-a-windows-forms-control-to-a-type.md). Ardından, bir nesneye çalışma zamanında bağlayabilirsiniz.  
+- Bağlayabileceğiniz bir <xref:System.Type> bellekte bir nesne yerine. Daha fazla bilgi için [nasıl yapılır: Bir Windows Forms denetimini bir türe bağlama](how-to-bind-a-windows-forms-control-to-a-type.md). Ardından, bir nesneye çalışma zamanında bağlayabilirsiniz.  
   
 ### <a name="currency-management"></a>Para birimi yönetimi  
  <xref:System.Windows.Forms.BindingSource> Bileşenini uygulayan <xref:System.Windows.Forms.ICurrencyManagerProvider> para birimi yönetimini işlemek için arabirim. İle <xref:System.Windows.Forms.ICurrencyManagerProvider> arabirimi da erişebilirsiniz için para birimi Yöneticisi için bir <xref:System.Windows.Forms.BindingSource>, başka bir para birimi Yöneticisi yanı sıra <xref:System.Windows.Forms.BindingSource> aynı bağlı <xref:System.Windows.Forms.BindingSource.DataMember%2A>.  
@@ -128,11 +128,11 @@ ms.locfileid: "59165353"
 ### <a name="transactional-item-creation"></a>İşlem öğesi oluşturma  
  <xref:System.Windows.Forms.BindingSource> Bileşenini uygulayan <xref:System.ComponentModel.ICancelAddNew> arabirimi, işlem bir öğe oluşturmanıza olanak tanır. Yeni bir öğe için bir çağrı kullanılarak ayrıştırmanın oluşturulduktan sonra <xref:System.Windows.Forms.BindingSource.AddNew%2A>, ayrıca kaydedilmiş veya aşağıdaki yollarla geri alındı:  
   
--   <xref:System.ComponentModel.ICancelAddNew.EndNew%2A> Yöntemi açıkça eklenmeyi bekliyor işleyin.  
+- <xref:System.ComponentModel.ICancelAddNew.EndNew%2A> Yöntemi açıkça eklenmeyi bekliyor işleyin.  
   
--   Ekleme, kaldırma veya taşıma, gibi başka bir toplama işlemi gerçekleştirmek, örtük olarak eklenmeyi bekliyor işleme.  
+- Ekleme, kaldırma veya taşıma, gibi başka bir toplama işlemi gerçekleştirmek, örtük olarak eklenmeyi bekliyor işleme.  
   
--   <xref:System.ComponentModel.ICancelAddNew.CancelNew%2A> Yöntemi geri eklenmeyi bekliyor, metodu zaten kaydedilmemiş.  
+- <xref:System.ComponentModel.ICancelAddNew.CancelNew%2A> Yöntemi geri eklenmeyi bekliyor, metodu zaten kaydedilmemiş.  
   
 ### <a name="ienumerable-support"></a>IEnumerable desteği  
  <xref:System.Windows.Forms.BindingSource> Bileşeni sağlayan denetimlerini bağlama <xref:System.Collections.IEnumerable> veri kaynakları. Bu bileşen için bir veri kaynağı gibi bağlayabilirsiniz bir <xref:System.Data.SqlClient.SqlDataReader?displayProperty=nameWithType>.  
@@ -147,13 +147,13 @@ ms.locfileid: "59165353"
 ### <a name="static-listbindinghelper-methods"></a>Statik ListBindingHelper yöntemleri  
  <xref:System.Windows.Forms.BindingContext?displayProperty=nameWithType>, <xref:System.Windows.Forms.CurrencyManager?displayProperty=nameWithType>, Ve <xref:System.Windows.Forms.BindingSource> listesinden bir liste oluşturmak için tüm paylaşım ortak mantığını türleri bir `DataSource` / `DataMember` çifti. Ayrıca, bu sık kullanılan mantıksal genel kullanım için tarafından denetim yazarlar ve diğer üçüncü taraflara aşağıdaki sunulan `static` yöntemleri:  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A>  
+- <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A>  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>.  
+- <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>.  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetListName%2A>  
+- <xref:System.Windows.Forms.ListBindingHelper.GetListName%2A>  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetListItemType%2A>  
+- <xref:System.Windows.Forms.ListBindingHelper.GetListItemType%2A>  
   
 ### <a name="sorting-and-filtering-with-the-ibindinglistview-interface"></a>Sıralama ve filtreleme ile IBindingListView arabirimi  
  <xref:System.Windows.Forms.BindingSource> Bileşenini uygulayan <xref:System.ComponentModel.IBindingListView> genişleten arabirimi <xref:System.ComponentModel.IBindingList> arabirimi. <xref:System.ComponentModel.IBindingList> Tek sütun sıralama sunar ve <xref:System.ComponentModel.IBindingListView> teklifler Gelişmiş sıralama ve filtreleme. İle <xref:System.ComponentModel.IBindingListView>sıralayabilir ve filtre öğeleri aynı zamanda veri kaynağı, veri kaynağında, bu arabirimlerinden birini uygular. <xref:System.Windows.Forms.BindingSource> Bileşen, bu üyenin bir başvuru uygulaması sağlamaz. Bunun yerine, aramalar temel alınan listesine iletilir.  

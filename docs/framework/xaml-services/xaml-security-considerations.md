@@ -9,8 +9,8 @@ ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938794"
 ---
 # <a name="xaml-security-considerations"></a>XAML Güvenlik Konuları
 Bu konuda, XAML ve .NET Framework XAML Hizmetleri API kullanırken uygulama güvenliği için en iyi uygulamalar açıklanmaktadır.  
@@ -34,9 +34,9 @@ Bu konuda, XAML ve .NET Framework XAML Hizmetleri API kullanırken uygulama güv
 ## <a name="xaml-namespaces-and-assembly-trust"></a>XAML ad alanları ve bütünleştirilmiş kod güven  
  Temel nitelenmemiş sözdizimi ve XAML derleme için özel bir XAML ad alanı eşlemesi yorumlaması için tanım ayırt arasında güvenilir ve güvenilir olmayan bir derleme olarak bir uygulama etki alanına yüklenen. Bu nedenle, güvenilen bir derlemenin hedeflenen XAML ad alanı eşlemesi sızmasını ve XAML kaynağının bildirilen nesne ve özellik bilgilerini yakalamak güvenilir olmayan bir derleme için teknik olarak mümkündür. Bu durumu önlemek için Güvenlik gereksinimleriniz varsa, aşağıdaki tekniklerden birini kullanarak, hedeflenen XAML ad alanı eşlemesi yapılmalıdır:  
   
--   Uygulamanızın XAML tarafından yapılan tüm XAML ad alanı eşlemesi içindeki tanımlayıcı adı ile tam derleme adını kullanın.  
+- Uygulamanızın XAML tarafından yapılan tüm XAML ad alanı eşlemesi içindeki tanımlayıcı adı ile tam derleme adını kullanın.  
   
--   Başvuru bütünleştirilmiş kodları, sabit bir kümesi için belirli bir oluşturarak eşleme derleme kısıtlama <xref:System.Xaml.XamlSchemaContext> okuyucular ve XAML yazarları, XAML için nesne. Bkz. <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.  
+- Başvuru bütünleştirilmiş kodları, sabit bir kümesi için belirli bir oluşturarak eşleme derleme kısıtlama <xref:System.Xaml.XamlSchemaContext> okuyucular ve XAML yazarları, XAML için nesne. Bkz. <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.  
   
 ## <a name="xaml-type-mapping-and-type-system-access"></a>XAML tür eşlemesi ve tür sistem erişimi  
  XAML için CLR temel CLR tür sistemine nasıl uyguladığını eşdüzeyde, birçok yönden kendi tür sistemi destekler. Ancak, bazı yönlerini türü tanıma burada kendi tür bilgilerini temel alarak bir türle ilgili güven kararları yapmak için türlerini destekleyen CLR türü bilgileri erteleme. XAML tür sistemi belirli raporlama özelliklerinin bazıları sanal yöntemler açık kalır ve bu nedenle, tam olarak özgün .NET Framework XAML hizmetlerinde uygulamaları denetimi altında olmayan olmasıdır. XAML tür sistemi genişletilebilirliği, XAML kendisi ve olası alternatif tür eşlemesi stratejileri varsayılan XAML şema içeriği ve varsayılan CLR destekli uygulama karşı eşleşecek şekilde genişletilebilir olduğundan bu genişletilebilirlik noktaları vardır. Daha fazla bilgi için bkz özgü Notlar çeşitli özelliklerini <xref:System.Xaml.XamlType> ve <xref:System.Xaml.XamlMember>.  

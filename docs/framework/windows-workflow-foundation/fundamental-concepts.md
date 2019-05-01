@@ -1,15 +1,15 @@
 ---
-title: Temel Windows Workflow kavramları
+title: Temel Windows Workflow Kavramları
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
 ms.openlocfilehash: ce17e5436ecff1937db605450d187184df9104a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945671"
 ---
-# <a name="fundamental-windows-workflow-concepts"></a>Temel Windows Workflow kavramları
+# <a name="fundamental-windows-workflow-concepts"></a>Temel Windows Workflow Kavramları
 İş akışı geliştirme [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] bazı geliştiriciler için yeni kavramları kullanır. Bu konuda bazı kavramları ve nasıl uygulandığı açıklanmaktadır.  
   
 ## <a name="workflows-and-activities"></a>İş akışları ve etkinlikler  
@@ -27,27 +27,27 @@ ms.locfileid: "57703419"
 ## <a name="workflow-runtime"></a>İş akışı çalışma zamanı  
  İş akışı çalışma zamanı içinde iş akışları yürütme ortamıdır. <xref:System.Activities.WorkflowInvoker> bir iş akışını yürütmek için en basit yoludur. Konağın kullandığı <xref:System.Activities.WorkflowInvoker> aşağıdakiler:  
   
--   Zaman uyumlu bir iş akışını çağırmak için.  
+- Zaman uyumlu bir iş akışını çağırmak için.  
   
--   Giriş sağlamak veya bir iş akışından çıkış almak için.  
+- Giriş sağlamak veya bir iş akışından çıkış almak için.  
   
--   Etkinlikleri tarafından kullanılmak üzere uzantıları eklemek için.  
+- Etkinlikleri tarafından kullanılmak üzere uzantıları eklemek için.  
   
  <xref:System.Activities.ActivityInstance> Konaklar çalışma zamanı ile etkileşim kurmak için kullanabileceğiniz bir iş parçacığı Ara sunucudur. Konağın kullandığı <xref:System.Activities.ActivityInstance> aşağıdakiler:  
   
--   Oluşturma veya bir örnek deposundan yüklenirken örneğini almak için.  
+- Oluşturma veya bir örnek deposundan yüklenirken örneğini almak için.  
   
--   Örnek yaşam döngüsü olaylarını almak.  
+- Örnek yaşam döngüsü olaylarını almak.  
   
--   İş akışının yürütülmesini denetlemek için.  
+- İş akışının yürütülmesini denetlemek için.  
   
--   Giriş sağlamak veya bir iş akışından çıkış almak için.  
+- Giriş sağlamak veya bir iş akışından çıkış almak için.  
   
--   Bir iş akışı devamlılık sinyal ve değerleri iş akışına aktarmak için.  
+- Bir iş akışı devamlılık sinyal ve değerleri iş akışına aktarmak için.  
   
--   İş akışı verileri kalıcı hale getirmek için.  
+- İş akışı verileri kalıcı hale getirmek için.  
   
--   Etkinlikleri tarafından kullanılmak üzere uzantıları eklemek için.  
+- Etkinlikleri tarafından kullanılmak üzere uzantıları eklemek için.  
   
  Etkinlikler, uygun kullanarak iş akışı çalışma zamanı ortamı erişim elde edersiniz <xref:System.Activities.ActivityContext> gibi türetilmiş bir sınıf, <xref:System.Activities.NativeActivityContext> veya <xref:System.Activities.CodeActivityContext>. Bunlar bu bağımsız değişkenleri ve değişkenlerini çözmek için alt etkinlikler zamanlamak için ve birçok diğer amaçlar için kullanır.  
   
@@ -57,10 +57,10 @@ ms.locfileid: "57703419"
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Kalıcılık, kaldırma ve uzun süre çalışan iş akışları  
  Windows iş akışı sağlayarak uzun süreli reaktif programlarını geliştirme kolaylaştırır:  
   
--   Dış giriş erişim etkinlikler.  
+- Dış giriş erişim etkinlikler.  
   
--   Oluşturma olanağı <xref:System.Activities.Bookmark> konak dinleyici tarafından devam ettirilebilir nesneleri.  
+- Oluşturma olanağı <xref:System.Activities.Bookmark> konak dinleyici tarafından devam ettirilebilir nesneleri.  
   
--   Bir iş akışının veriyi kalıcı olarak kaldırma iş akışı ve yeniden yükleyin ve işlemin sürdürülmesini yanıt akışında yeniden etkinleştirme olanağı <xref:System.Activities.Bookmark> belirli bir iş akışı nesneleri.  
+- Bir iş akışının veriyi kalıcı olarak kaldırma iş akışı ve yeniden yükleyin ve işlemin sürdürülmesini yanıt akışında yeniden etkinleştirme olanağı <xref:System.Activities.Bookmark> belirli bir iş akışı nesneleri.  
   
  Bir iş akışı etkinlikleri yürütmek için daha fazla hiç etkinlik yok veya tüm kadar şu anda yürütülen etkinlikler için giriş bekleyen kadar sürekli olarak yürütür. Bu ikinci durumda, iş akışı boş. Boşta sahiplikten iş akışları kaldırmak bir konak için ortak olan ve bir ileti olduğunda yürütme devam etmek için bunları yeniden ulaşır. <xref:System.ServiceModel.Activities.WorkflowServiceHost> Bu özellik için işlevsellik sağlar ve Genişletilebilir bir kaldırma İlkesi sağlar. Geçici bir durum verilerini veya kalıcı yapılamıyor diğer veri bloklarını yürütme için onu kullanarak kalıcı olmasını değil bir etkinlik bir konağa belirtir <xref:System.Activities.NoPersistHandle>. Bir iş akışı kullanarak, veri kalıcı depolama ortamı için de açıkça kalıcı <xref:System.Activities.Statements.Persist> etkinlik.

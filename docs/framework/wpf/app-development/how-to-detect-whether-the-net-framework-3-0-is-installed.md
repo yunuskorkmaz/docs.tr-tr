@@ -1,5 +1,5 @@
 ---
-title: Nasıl yapılır .NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama
+title: "Nasıl yapılır: .NET Framework 3.0'in Yüklü Olup Olmadığını Algılama"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WinFX Runtime user-agent string
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
 ms.openlocfilehash: 27f856b895f48dc2365a1721dbc90294269899c7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947829"
 ---
-# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Nasıl yapılır .NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Nasıl yapılır: .NET Framework 3.0'in Yüklü Olup Olmadığını Algılama
 Yöneticiler bir sistemde Microsoft .NET Framework uygulamaları dağıtmadan önce ilk olarak, .NET Framework çalışma zamanı mevcut olduğunu onaylamanız gerekir. Bu konu, HTML/JavaScript dilinde yazılmış bir komut dosyası sağlar. Yöneticiler, .NET Framework bir sistemde mevcut olup olmadığını belirlemek için kullanabilirsiniz.  
   
 > [!NOTE]

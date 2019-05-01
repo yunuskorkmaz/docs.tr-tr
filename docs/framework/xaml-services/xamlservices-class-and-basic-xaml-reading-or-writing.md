@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
 ms.openlocfilehash: c9ef6a215587750f66d2cf8b5b54cbc51f89037e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938742"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices Sınıfı ve Temel XAML Okuma veya Yazma
 <xref:System.Xaml.XamlServices> XAML düğümü akışı özel erişim gerektiren değil XAML senaryoları için kullanılan bir .NET Framework XAML hizmetlerinde tarafından sağlanan sınıfı veya bu düğümünden elde edilen XAML türü sistem bilgileri kullanılabilir. <xref:System.Xaml.XamlServices> API aşağıdaki gibi özetlenen: `Load` veya `Parse` XAML yükleme yolu desteklemek için `Save` kaydetme yolu, bir XAML desteklemek için ve `Transform` bir yükleme yolu birleştiren bir teknik sağlar ve yol kaydetmek için. `Transform` bir XAML şema diğerine geçmek için kullanılabilir. Bu konu, her biri bu API sınıflandırmalar özetler ve belirli bir yöntemi aşırı yüklemeleri arasındaki farklar açıklanmaktadır.  
@@ -25,9 +25,9 @@ ms.locfileid: "59162275"
   
  <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> ve <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> okuyucular .NET Framework'ün önceki sürümlerinden biçimlerinin kullanan aşırı yüklemeler. Bu aşırı yüklemeler kullanmak için zaten bir okuyucu örneği oluşturulan ve kullanılan kendi `Create` XAML ilgili biçiminde (metin veya XML) yüklemek için API. Zaten diğer okuyucuların kayıt işaretçileri taşıdığınız veya diğer işlemlerle gerçekleştirilen, bu önemli değildir. Yükleme yolu mantığından <xref:System.Xaml.XamlServices.Load%2A> her zaman aşağı kökünden giriş tüm XAML işler. Bu aşırı yüklemeler için senaryolar şunları içerebilir:  
   
--   Varolan bir XML özel metin düzenleyici özelliğini düzenleme basit XAML sağlarsınız yüzeyleri tasarlayın.  
+- Varolan bir XML özel metin düzenleyici özelliğini düzenleme basit XAML sağlarsınız yüzeyleri tasarlayın.  
   
--   Çekirdek türevleri <xref:System.IO> senaryoları, kullandığınız ayrılmış okuyucular dosyaları ya da akış'ı açmak için. Mantığınızı ilkel denetleme veya XAML yüklemeye çalışmadan önce içeriğini işleme gerçekleştirir.  
+- Çekirdek türevleri <xref:System.IO> senaryoları, kullandığınız ayrılmış okuyucular dosyaları ya da akış'ı açmak için. Mantığınızı ilkel denetleme veya XAML yüklemeye çalışmadan önce içeriğini işleme gerçekleştirir.  
   
  Ya da bir dosya veya akışı yükleyebilir veya oluşturduğunuz bir <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, veya <xref:System.Xaml.XamlReader> , kaydırma XAML girişinizi okuyucunun API'lerle yükleyerek.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "59162275"
   
  `Load` Daha Gelişmiş senaryolar sağlar imza <xref:System.Xaml.XamlServices.Load%28System.Xaml.XamlReader%29>. Bu imza aşağıdaki durumlarda birini kullanabilirsiniz:  
   
--   Kendi tanımladığınız bir <xref:System.Xaml.XamlReader>.  
+- Kendi tanımladığınız bir <xref:System.Xaml.XamlReader>.  
   
--   Ayarlarını belirtmek gereken <xref:System.Xaml.XamlReader> varsayılan ayarlardan farklı.  
+- Ayarlarını belirtmek gereken <xref:System.Xaml.XamlReader> varsayılan ayarlardan farklı.  
   
  Varsayılan olmayan ayarların örnekleri ayarladığınızdan aşağıdakilerden herhangi birini: <xref:System.Xaml.XamlReaderSettings.AllowProtectedMembersOnRoot%2A>; <xref:System.Xaml.XamlReaderSettings.BaseUri%2A>; <xref:System.Xaml.XamlReaderSettings.IgnoreUidsOnPropertyElements%2A>; <xref:System.Xaml.XamlReaderSettings.LocalAssembly%2A>; <xref:System.Xaml.XamlReaderSettings.ValuesMustBeString%2A>. İçin varsayılan okuyucu <xref:System.Xaml.XamlServices> olduğu <xref:System.Xaml.XamlXmlReader>. Kendi sağlarsanız <xref:System.Xaml.XamlXmlReader>, ayarlarla, varsayılan olmayan ayarlamak için özellikler şunlardır <xref:System.Xaml.XamlXmlReaderSettings>: <xref:System.Xaml.XamlXmlReaderSettings.CloseInput%2A>; <xref:System.Xaml.XamlXmlReaderSettings.SkipXmlCompatibilityProcessing%2A>; <xref:System.Xaml.XamlXmlReaderSettings.XmlLang%2A>; <xref:System.Xaml.XamlXmlReaderSettings.XmlSpacePreserve%2A>.  
   

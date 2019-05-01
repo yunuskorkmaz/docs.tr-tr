@@ -1,19 +1,19 @@
 ---
-title: Dinamik güncelleştirme
+title: Dinamik Güncelleştirme
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
 ms.openlocfilehash: e28a34e500034eec6cf250d94cf7631ca85a7d40
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945814"
 ---
-# <a name="dynamic-update"></a>Dinamik güncelleştirme
+# <a name="dynamic-update"></a>Dinamik Güncelleştirme
 
 Dinamik güncelleştirme, uygulama geliştiricilerinin'bir kalıcı iş akışı örneği iş akışı tanımını güncelleştirmek için iş akışı için bir mekanizma sağlar. Bu, bir hata düzeltmesi, yeni gereksinimleri uygulamak için veya beklenmeyen değişiklikleri uyum sağlamak için olabilir. Bu konuda sunulan dinamik güncelleştirme işlevlerine genel bakış sağlar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
 
-## <a name="dynamic-update"></a>Dinamik güncelleştirme
+## <a name="dynamic-update"></a>Dinamik Güncelleştirme
 
 Bir kalıcı iş akışı örneği için dinamik güncelleştirmeleri uygulamak için bir <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> oluşturulur, istediğiniz değişiklikleri yansıtacak şekilde kalıcı iş akışı örneği değişiklik yapma açıklayan yönergeler çalışma zamanı için içerir. Güncelleştirme eşlemesi oluşturulduktan sonra bu istenen kalıcı iş akışı örneklerine uygulanır. Dinamik güncelleştirme uygulandıktan sonra yeni güncelleştirilmiş iş akışı tanımı kullanarak iş akışı örneği sürdürülebilir. Oluşturma ve bir güncelleştirme eşlemesi uygulamak için gereken dört adım vardır.
 

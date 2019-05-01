@@ -1,5 +1,5 @@
 ---
-title: XML belgesi oluşturma
+title: XML Belgesi Oluşturma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: 877e9c62-b082-4bfb-bc5b-f47297eb30ef
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b76140fb7d79b1e191c0451cd7556963130d224a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959061"
 ---
-# <a name="xml-document-creation"></a>XML belgesi oluşturma
+# <a name="xml-document-creation"></a>XML Belgesi Oluşturma
 Bir XML belgesi oluşturmak için iki yolu vardır. Oluşturmak için bir yolu olan bir **XmlDocument** parametre olmadan. Oluşturmak için diğer yol ise bir **XmlDocument** ve parametre olarak bir XmlNameTable geçirin. Aşağıdaki örnek, yeni, boş oluşturma işlemi gösterilmektedir **XmlDocument** hiçbir parametreleri kullanarak.  
   
 ```vb  

@@ -28,11 +28,11 @@ ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b0185d79d8663d552378248f0e021a7fee8f0522
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956110"
 ---
 # <a name="formatting-types-in-net"></a>. NET'te biçimlendirme türleri
 <a name="Introduction"></a> Biçimlendirme, böylece ortaya çıkan dize kullanıcılara görüntülenebilir ya da orijinal veri türünü geri yüklemek için seri durumdan, sınıf, yapı ya da numaralandırma değerinin bir örneğinin kendi dize sunumuna dönüştürme işlemidir. Bu dönüştürme, bir dizi güçlük çıkarabilir:  
@@ -122,7 +122,7 @@ ms.locfileid: "50189725"
 > [!WARNING]
 >  İle başlayan [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] içeren bir <xref:Windows.Foundation.IStringable> tek bir yöntemi ile arabirim [Istringable](xref:Windows.Foundation.IStringable.ToString%2A), varsayılan biçimlendirme desteği sağlar. Ancak Yönetilen türlerin uygulamamasını öneririz `IStringable` arabirimi. Daha fazla bilgi için " [!INCLUDE[wrt](../../../includes/wrt-md.md)] ve `IStringable` arabirimi" bölümünde <xref:System.Object.ToString%2A?displayProperty=nameWithType> başvuru sayfası.  
   
- Arabirimler dışında tüm türler türetildiği <xref:System.Object>, bu işlev özel sınıflarınıza ya da yapıları için otomatik olarak sağlanır. Bununla birlikte, varsayılan olarak sağlanan işlev `ToString` yöntemi sınırlıdır: türü tanımlamasına rağmen türün bir örneğini hakkındaki tüm bilgileri sağlamak başarısız. Bu nesne hakkında bilgi sağlayan nesnenin dize gösterimini sağlamak için geçersiz kılmanız gerekir `ToString` yöntemi.  
+ Arabirimler dışında tüm türler türetildiği <xref:System.Object>, bu işlev özel sınıflarınıza ya da yapıları için otomatik olarak sağlanır. Bununla birlikte, varsayılan olarak sağlanan işlev `ToString` yöntemi sınırlıdır: Türü tanımlamasına rağmen türün bir örneğini hakkındaki tüm bilgileri sağlamak başarısız olur. Bu nesne hakkında bilgi sağlayan nesnenin dize gösterimini sağlamak için geçersiz kılmanız gerekir `ToString` yöntemi.  
   
 > [!NOTE]
 >  Yapıları devralmanız <xref:System.ValueType>, hangi sırayla türetilmiş olan <xref:System.Object>. Ancak <xref:System.ValueType> geçersiz kılmalar <xref:System.Object.ToString%2A?displayProperty=nameWithType>, uygulaması aynıdır.  
@@ -231,7 +231,7 @@ ms.locfileid: "50189725"
 ### <a name="custom-format-strings"></a>Özel Biçim Dizeleri  
  Standart biçim dizelerine ek olarak, .NET, hem sayısal değerler hem de tarih ve saat değerleri için özel biçim dizeleri tanımlar. Bir özel biçim dizesinde bir değerin dize temsilini tanımlayan bir veya daha fazla özel biçim belirleyicisinden oluşur. Örneğin, özel tarih ve saat biçim dizesi "yyyy/mm/dd hh:mm:ss.ffff t zzz" formundaki kendi dize temsiline dönüştürür "2008/11/15 07:45:00.0000 P -08:00" en-US kültürü için. Benzer şekilde, özel biçim dizesi "0000", tamsayı değeri 12 "0012"'ye dönüştürür. Özel biçim dizeleri tam bir listesi için bkz. [özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) ve [özel sayısal biçim dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
- Bir biçim dizesi tek özel biçim belirleyicisinden oluşuyorsa, Biçim belirleyicisi standart biçim belirteci ile Karışıklığı önlemek için yüzde (%) sembolü gelmelidir. Aşağıdaki örnek, belirli bir tarihin ayın tek basamaklı veya iki basamaklı bir sayı görüntülemek için "M" özel Biçim belirleyicisi kullanır.  
+ Yüzde (%) bir biçim dizesi tek özel biçim belirleyicisinden oluşuyorsa, biçim belirticisi gelmelidir bir standart biçim belirteci ile Karışıklığı önlemek için simge. Aşağıdaki örnek, belirli bir tarihin ayın tek basamaklı veya iki basamaklı bir sayı görüntülemek için "M" özel Biçim belirleyicisi kullanır.  
   
  [!code-csharp[Conceptual.Formatting.Overview#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/singlecustom1.cs#8)]
  [!code-vb[Conceptual.Formatting.Overview#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/singlecustom1.vb#8)]  

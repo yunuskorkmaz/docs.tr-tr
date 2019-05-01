@@ -5,11 +5,11 @@ ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bb41cc47351ccf22fcd522b7d4291c235312bfaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948661"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting Yöntemi
 Etkinleştirir veya sanal modül bölme devre dışı bırakır.  
@@ -54,40 +54,40 @@ HRESULT EnableVirtualModuleSplitting(
 ## <a name="behavioral-differences"></a>Davranışsal farklılıklar  
  Kapsayıcı modüller aşağıdaki davranışları ve özelliklere sahiptir:  
   
--   Tüm bağlı alt modüller için meta verilerinin birlikte birleştirilir.  
+- Tüm bağlı alt modüller için meta verilerinin birlikte birleştirilir.  
   
--   Tür adlarının karıştırılmış.  
+- Tür adlarının karıştırılmış.  
   
--   [Icordebugmodule::GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) yöntemi bir diskteki modülüne yolunu döndürür.  
+- [Icordebugmodule::GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) yöntemi bir diskteki modülüne yolunu döndürür.  
   
--   [Icordebugmodule::getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) yöntemi, o yansıma boyutunu döndürür.  
+- [Icordebugmodule::getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) yöntemi, o yansıma boyutunu döndürür.  
   
--   Alt modülleri ICorDebugAssembly3.EnumerateContainedAssemblies yöntemi listeler.  
+- Alt modülleri ICorDebugAssembly3.EnumerateContainedAssemblies yöntemi listeler.  
   
--   ICorDebugAssembly3.GetContainerAssembly yöntemi döndürür `S_FALSE`.  
+- ICorDebugAssembly3.GetContainerAssembly yöntemi döndürür `S_FALSE`.  
   
  Alt modüller aşağıdaki davranışları ve özelliklere sahiptir:  
   
--   Birleştirilmiş yalnızca özgün derlemeye karşılık gelen meta verileri sınırlı bir dizi sahiptirler.  
+- Birleştirilmiş yalnızca özgün derlemeye karşılık gelen meta verileri sınırlı bir dizi sahiptirler.  
   
--   Meta veri adlarının karıştırılmış değil.  
+- Meta veri adlarının karıştırılmış değil.  
   
--   Meta veri belirteçleri oluşturma işleminde birleştirilmesinden önce orijinal derleme belirteçlerinde eşleşecek şekilde düşüktür.  
+- Meta veri belirteçleri oluşturma işleminde birleştirilmesinden önce orijinal derleme belirteçlerinde eşleşecek şekilde düşüktür.  
   
--   [Icordebugmodule::GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) yöntemi, derleme adı, dosya yolu döndürür.  
+- [Icordebugmodule::GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) yöntemi, derleme adı, dosya yolu döndürür.  
   
--   [Icordebugmodule::getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) yöntemi özgün birleştirilmemiş resim boyutu döndürür.  
+- [Icordebugmodule::getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) yöntemi özgün birleştirilmemiş resim boyutu döndürür.  
   
--   ICorDebugModule3.EnumerateContainedAssemblies yöntemi döndürür `S_FALSE`.  
+- ICorDebugModule3.EnumerateContainedAssemblies yöntemi döndürür `S_FALSE`.  
   
--   İçeren modül ICorDebugAssembly3.GetContainerAssembly yöntemi döndürür.  
+- İçeren modül ICorDebugAssembly3.GetContainerAssembly yöntemi döndürür.  
   
 ## <a name="interfaces-retrieved-from-modules"></a>Modüllerden alınan arabirimler  
  Arabirimleri çeşitli oluşturulabilir veya modüllerden alınır. Bunlardan bazıları:  
   
--   Tarafından döndürülen Icordebugclass nesneyi [Icordebugmodule::getclassfromtoken](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md) yöntemi.  
+- Tarafından döndürülen Icordebugclass nesneyi [Icordebugmodule::getclassfromtoken](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md) yöntemi.  
   
--   Tarafından döndürülen Icordebugassembly nesneyi [Icordebugmodule::getassembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md) yöntemi.  
+- Tarafından döndürülen Icordebugassembly nesneyi [Icordebugmodule::getassembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md) yöntemi.  
   
  Bu nesneler tarafından her zaman önbelleğe alınan [Icordebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md), ve mi oluşturulmuş veya kapsayıcı modülü ya da bir alt modül sorgulanan bağımsız olarak aynı işaretçi kimliğe sahip olur. Alt modül filtrelenmiş bir görünüm değil ayrı bir önbellekle kendi kopya bu önbelleğe alınan nesneleri sağlar.  
   

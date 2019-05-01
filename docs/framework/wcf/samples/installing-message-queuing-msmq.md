@@ -3,11 +3,11 @@ title: İleti Kuyruğa Alma Yükleme (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
 ms.openlocfilehash: 64736f8f0a34a53658dd2838738a3d36b3891d2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954953"
 ---
 # <a name="installing-message-queuing-msmq"></a>İleti Kuyruğa Alma Yükleme (MSMQ)
 Aşağıdaki yordamlar, Message Queuing 4.0 ve Message Queuing 3.0 nasıl yükleneceğini gösterir.  
@@ -37,9 +37,9 @@ Aşağıdaki yordamlar, Message Queuing 4.0 ve Message Queuing 3.0 nasıl yükle
   
 3. Microsoft Message Queue (MSMQ) sunucusunu genişletin, Microsoft Message Queue (MSMQ) Sunucu Çekirdeği'ni genişletin ve sonra yüklemek aşağıdaki olan Message Queuing özellikler için onay kutularını seçin:  
   
-    -   MSMQ Active Directory etki alanı Hizmetleri Tümleştirme (bir etki alanına katılmış bilgisayarlar için).  
+    - MSMQ Active Directory etki alanı Hizmetleri Tümleştirme (bir etki alanına katılmış bilgisayarlar için).  
   
-    -   MSMQ HTTP desteği.  
+    - MSMQ HTTP desteği.  
   
 4. **Tamam**'ı tıklatın.  
   

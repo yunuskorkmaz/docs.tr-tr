@@ -6,11 +6,11 @@ helpviewer_keywords:
 - sample applications [Visual Basic]
 ms.assetid: 09c6bc12-25fd-4359-a5fc-8dab8dddbfd2
 ms.openlocfilehash: 5b7ef535c0f93900c42c77f296ae1eb43df668b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968395"
 ---
 # <a name="visual-basic-sample-applications"></a>Visual Basic Örnek Uygulamaları
 Visual Studio indirme ve yükleme kaynağından tam ve paketli Visual Basic uygulama örneklerini için kullanabileceğiniz [MSDN Kod Galerisi](https://code.msdn.microsoft.com)  

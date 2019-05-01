@@ -6,11 +6,11 @@ helpviewer_keywords:
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
 ms.openlocfilehash: 2399ec1342280df101e2818399e0f41f10d9606d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945086"
 ---
 # <a name="attribute-list-visual-basic"></a>Öznitelik Listesi (Visual Basic)
 Bildirilmiş programlama öğesine uygulanacak öznitelikleri belirtir. Birden çok öznitelik virgülle ayrılır. Bir öznitelik için sözdizimi aşağıdadır.  
@@ -36,15 +36,15 @@ Bildirilmiş programlama öğesine uygulanacak öznitelikleri belirtir. Birden �
   
 ## <a name="rules"></a>Kurallar  
   
--   **Yerleştirme.** En bildirilmiş programlama öğesine için öznitelikleri uygulayabilirsiniz. Bir veya daha fazla öznitelik uygulamak için yerleştirme bir *öznitelik bloğuna* öğe bildirimi başında. Öznitelik listesindeki her bir giriş, uygulamak istediğiniz bir öznitelik değiştiricisi ve bu öznitelik çağırma için kullanmakta olduğunuz bağımsız değişkenleri belirtir.  
+- **Yerleştirme.** En bildirilmiş programlama öğesine için öznitelikleri uygulayabilirsiniz. Bir veya daha fazla öznitelik uygulamak için yerleştirme bir *öznitelik bloğuna* öğe bildirimi başında. Öznitelik listesindeki her bir giriş, uygulamak istediğiniz bir öznitelik değiştiricisi ve bu öznitelik çağırma için kullanmakta olduğunuz bağımsız değişkenleri belirtir.  
   
--   **Açılı ayraçlar.** Bir öznitelik listesi sağlarsanız, açılı ayraçlar içine gerekir ("`<`"ve"`>`").  
+- **Açılı ayraçlar.** Bir öznitelik listesi sağlarsanız, açılı ayraçlar içine gerekir ("`<`"ve"`>`").  
   
--   **Bildiriminin bir parçası.** Öznitelik, öğe bildirimi, ayrı bir bildirimi bir parçası olması gerekir. Satır devamlılığı sırası kullanabilirsiniz (" `_`") bildirim deyimindeki birden çok kaynak kod satırlarına genişletmek için.  
+- **Bildiriminin bir parçası.** Öznitelik, öğe bildirimi, ayrı bir bildirimi bir parçası olması gerekir. Satır devamlılığı sırası kullanabilirsiniz (" `_`") bildirim deyimindeki birden çok kaynak kod satırlarına genişletmek için.  
   
--   **Değiştiriciler.** Bir öznitelik değiştirici (`Assembly` veya `Module`) bir kaynak dosyasının başında programlama öğesine uygulanan her bir öznitelik için gereklidir. Bir kaynak dosyasının başında olmayan öğelere uygulanan öznitelikleri üzerinde öznitelik değiştiricilere izin verilmez.  
+- **Değiştiriciler.** Bir öznitelik değiştirici (`Assembly` veya `Module`) bir kaynak dosyasının başında programlama öğesine uygulanan her bir öznitelik için gereklidir. Bir kaynak dosyasının başında olmayan öğelere uygulanan öznitelikleri üzerinde öznitelik değiştiricilere izin verilmez.  
   
--   **Bağımsız değişkenler.** Bir öznitelik için konumsal bağımsız değişkenler, herhangi bir değişken veya özellik başlatıcıları gelmelidir.  
+- **Bağımsız değişkenler.** Bir öznitelik için konumsal bağımsız değişkenler, herhangi bir değişken veya özellik başlatıcıları gelmelidir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek geçerli <xref:System.Runtime.InteropServices.DllImportAttribute> özniteliği için iskelet tanımını bir `Function` yordamı.  

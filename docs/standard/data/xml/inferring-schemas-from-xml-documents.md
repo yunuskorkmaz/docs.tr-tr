@@ -1,5 +1,5 @@
 ---
-title: XML belgelerinden çıkarımını yapma
+title: XML Belgelerinden Şema Çıkarımı Yapma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,13 +10,13 @@ ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0b4727ead8abb9b3618f8b9dda8f7a9eb4b2321f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968148"
 ---
-# <a name="inferring-schemas-from-xml-documents"></a>XML belgelerinden çıkarımını yapma
+# <a name="inferring-schemas-from-xml-documents"></a>XML Belgelerinden Şema Çıkarımı Yapma
 Bu konu nasıl kullanılacağını açıklar <xref:System.Xml.Schema.XmlSchemaInference> yapısı bir XML belgesi bir XML Şeması Tanım Dili (XSD) şema çıkarsanacak sınıfı.  
   
 ## <a name="the-schema-inference-process"></a>Şema çıkarımı işlemi  
@@ -36,7 +36,7 @@ Bu konu nasıl kullanılacağını açıklar <xref:System.Xml.Schema.XmlSchemaIn
   
  Yukarıdaki örnekte, zaman içinde `attribute1` öznitelik değeri ile karşılaşıldığında `6` tarafından <xref:System.Xml.Schema.XmlSchemaInference> işlemi varsayılır türünde olmasını `xs:unsignedByte`. Zaman ikinci `parent` öğesi tarafından karşılaştı <xref:System.Xml.Schema.XmlSchemaInference> sürecini kısıtlaması izin vermek için gevşekleştirildiğini türüne değiştirerek `xs:string` çünkü değerini `attribute1` özniteliktir artık `A`. Benzer şekilde, `minOccurs` özniteliği için tüm `child` şemada çıkarılan öğeleri izin vermek için gevşekleştirildiğini için `minOccurs="0"` ikinci üst öğenin alt öğeleri olduğundan.  
   
-## <a name="inferring-schemas-from-xml-documents"></a>XML belgelerinden çıkarımını yapma  
+## <a name="inferring-schemas-from-xml-documents"></a>XML Belgelerinden Şema Çıkarımı Yapma  
  <xref:System.Xml.Schema.XmlSchemaInference> Sınıfını kullanan iki aşırı <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> bir XML belgesi bir şemanın çıkarsandığı yöntemleri.  
   
  İlk <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> yöntemi, bir XML belgesine dayanan bir şema oluşturmak için kullanılır. İkinci <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> yöntemi, birden çok XML belgeleri tanımlayan bir şema çıkarsanacak kullanılır. Örneğin, birden çok XML belgeleri için besleyebilecek <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> XML belgeleri tüm kümesini tanımlayan bir şema oluşturmak için bir zaman yöntemi.  

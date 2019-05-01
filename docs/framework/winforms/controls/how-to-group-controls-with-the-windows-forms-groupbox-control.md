@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
 ms.openlocfilehash: d2bad0020d18cd262bc2fe3489a00209308bd7b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59335881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941329"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Nasıl yapılır: Windows Forms GroupBox Denetimiyle Denetimleri Gruplandırma
 Windows Forms <xref:System.Windows.Forms.GroupBox> denetimleri başka denetimler gruplandırmak için kullanılır. Grup denetimleri için üç neden vardır:  
   
--   Görsel gruplandırılmasını ilgili form öğeleri için açık kullanıcı arabirimi oluşturmak için.  
+- Görsel gruplandırılmasını ilgili form öğeleri için açık kullanıcı arabirimi oluşturmak için.  
   
--   Programlı gruplandırması (örneğin radyo düğmeleri) oluşturmak için.  
+- Programlı gruplandırması (örneğin radyo düğmeleri) oluşturmak için.  
   
--   Denetimleri bir birim olarak tasarım zamanında taşımak için.  
+- Denetimleri bir birim olarak tasarım zamanında taşımak için.  
   
 ### <a name="to-create-a-group-of-controls"></a>Denetimlerin bir grup oluşturmak için  
   

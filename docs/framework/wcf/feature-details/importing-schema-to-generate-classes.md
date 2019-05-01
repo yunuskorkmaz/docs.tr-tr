@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
 ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972672"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Sınıf Oluşturmak için Şemayı İçe Aktarma
 Windows Communication Foundation (WCF) ile kullanılabilir şemaları gelen sınıflar oluşturmak için <xref:System.Runtime.Serialization.XsdDataContractImporter> sınıfı. Bu konu, işlem ve farklılıkları açıklar.  
@@ -148,13 +148,13 @@ Windows Communication Foundation (WCF) ile kullanılabilir şemaları gelen sın
   
 ##### <a name="design-considerations"></a>Tasarım konuları  
   
--   Zayıf yazılmış bir XML gösterimi ile doğrudan çalışmak zor olabilir. Bir alternatif serileştirme motoruna gibi kullanmayı göz önünde bulundurun <xref:System.Xml.Serialization.XmlSerializer>, şema verilerle uyumlu değil sözleşme türü kesin belirlenmiş bir şekilde çalışmak için. Daha fazla bilgi için [XmlSerializer sınıfını kullanarak](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+- Zayıf yazılmış bir XML gösterimi ile doğrudan çalışmak zor olabilir. Bir alternatif serileştirme motoruna gibi kullanmayı göz önünde bulundurun <xref:System.Xml.Serialization.XmlSerializer>, şema verilerle uyumlu değil sözleşme türü kesin belirlenmiş bir şekilde çalışmak için. Daha fazla bilgi için [XmlSerializer sınıfını kullanarak](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
--   Bazı şema yapıları tarafından içeri aktarılamaz <xref:System.Runtime.Serialization.XsdDataContractImporter> bile <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> özelliği `true`. Yeniden kullanmayı <xref:System.Xml.Serialization.XmlSerializer> böyle durumlar için.  
+- Bazı şema yapıları tarafından içeri aktarılamaz <xref:System.Runtime.Serialization.XsdDataContractImporter> bile <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> özelliği `true`. Yeniden kullanmayı <xref:System.Xml.Serialization.XmlSerializer> böyle durumlar için.  
   
--   Tam şema yapıları desteklenen zaman <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> olduğu `true` veya `false` açıklanan [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+- Tam şema yapıları desteklenen zaman <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> olduğu `true` veya `false` açıklanan [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
--   Şeması için üretilen <xref:System.Xml.Serialization.IXmlSerializable> türleri içe ve dışa aktarılan kalitesini korumak değil. Diğer bir deyişle, oluşturulan türlerinden şemasını dışarı aktarıp sınıfları içeri aktarma özgün şema döndürmez.  
+- Şeması için üretilen <xref:System.Xml.Serialization.IXmlSerializable> türleri içe ve dışa aktarılan kalitesini korumak değil. Diğer bir deyişle, oluşturulan türlerinden şemasını dışarı aktarıp sınıfları içeri aktarma özgün şema döndürmez.  
   
  Birleştirmek mümkündür <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> seçeneğini <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> daha önce açıklanan seçeneği. Sahip olarak oluşturulacak türleri <xref:System.Xml.Serialization.IXmlSerializable> kullanırken uygulamaları yapısal onay atlandı <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> özelliği.  
   
@@ -175,9 +175,9 @@ Windows Communication Foundation (WCF) ile kullanılabilir şemaları gelen sın
 #### <a name="import-options-advanced-options"></a>İçeri aktarma seçenekleri: Gelişmiş Seçenekleri  
  Aşağıdaki içeri aktarma Gelişmiş Seçenekler:  
   
--   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> özellik. Belirtin <xref:System.CodeDom.Compiler.CodeDomProvider> oluşturulan sınıflar için kod oluşturmak için kullanılacak. İçeri aktarma mekanizması girişimleri önlemek için Özellikler <xref:System.CodeDom.Compiler.CodeDomProvider> desteklemez. Varsa <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> ayarlı değil, tam kümesini [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] özellikleri, kısıtlama olmadan kullanılır.  
+- <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> özellik. Belirtin <xref:System.CodeDom.Compiler.CodeDomProvider> oluşturulan sınıflar için kod oluşturmak için kullanılacak. İçeri aktarma mekanizması girişimleri önlemek için Özellikler <xref:System.CodeDom.Compiler.CodeDomProvider> desteklemez. Varsa <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> ayarlı değil, tam kümesini [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] özellikleri, kısıtlama olmadan kullanılır.  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> özellik. Bir <xref:System.Runtime.Serialization.IDataContractSurrogate> uygulaması, bu özellik ile belirtilebilir. <xref:System.Runtime.Serialization.IDataContractSurrogate> İçeri aktarma işlemi özelleştirir. Daha fazla bilgi için [veri anlaşması yedekleri](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Varsayılan olarak, hiçbir vekil kullanılır.  
+- <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> özellik. Bir <xref:System.Runtime.Serialization.IDataContractSurrogate> uygulaması, bu özellik ile belirtilebilir. <xref:System.Runtime.Serialization.IDataContractSurrogate> İçeri aktarma işlemi özelleştirir. Daha fazla bilgi için [veri anlaşması yedekleri](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Varsayılan olarak, hiçbir vekil kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -7,11 +7,11 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
 ms.openlocfilehash: b3cfc44c430a02ec9ffce75ebff5c8f9cc46505c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945424"
 ---
 # <a name="framework-libraries"></a>Framework kitaplıkları
 
@@ -41,23 +41,23 @@ BCL en temel türleri ve yardımcı işlevleri sağlar ve diğer tüm .NET sın�
 
 .NET, neredeyse tüm .NET uygulamalarının iºlerinin olan veri yapılarının bir kümesi içerir. Bunlar çoğunlukla koleksiyonlar, ancak diğer türleri de içerir.
 
-*   <xref:System.Array> -Kesin dizin ile ulaşılan türleri nesnelerinin bir dizisini temsil eder. Kendi yapı başına sabit bir boyuta sahiptir.
-*   <xref:System.Collections.Generic.List%601> -Dizin ile ulaşılan nesneleri türü kesin belirlenmiş bir listesini temsil eder. Gerektiğinde otomatik olarak boyutlandırılır.
-*   <xref:System.Collections.Generic.Dictionary%602> -Bir anahtarla dizinlenen değerlerin bir koleksiyonunu temsil eder. Değerler, anahtar erişilebilir. Gerektiğinde otomatik olarak boyutlandırılır.
-*   <xref:System.Uri> -URI'nin bölümlerine kolay erişim ve Tekdüzen Kaynak Tanımlayıcısı (URI) bir nesne temsili sağlar.
-*   <xref:System.DateTime> -Anlık süre içinde genellikle bir tarih ve saat olarak ifade edilen temsil eder.
+* <xref:System.Array> -Kesin dizin ile ulaşılan türleri nesnelerinin bir dizisini temsil eder. Kendi yapı başına sabit bir boyuta sahiptir.
+* <xref:System.Collections.Generic.List%601> -Dizin ile ulaşılan nesneleri türü kesin belirlenmiş bir listesini temsil eder. Gerektiğinde otomatik olarak boyutlandırılır.
+* <xref:System.Collections.Generic.Dictionary%602> -Bir anahtarla dizinlenen değerlerin bir koleksiyonunu temsil eder. Değerler, anahtar erişilebilir. Gerektiğinde otomatik olarak boyutlandırılır.
+* <xref:System.Uri> -URI'nin bölümlerine kolay erişim ve Tekdüzen Kaynak Tanımlayıcısı (URI) bir nesne temsili sağlar.
+* <xref:System.DateTime> -Anlık süre içinde genellikle bir tarih ve saat olarak ifade edilen temsil eder.
 
 ## <a name="utility-apis"></a>Yardımcı program API'leri
 
 .NET yardımcı programı, birçok önemli görevler için işlevsellik sağlayan API'ler kümesini içerir.
 
-*   <xref:System.Net.Http.HttpClient> -HTTP istekleri göndermek ve bir URI tarafından tanımlanan bir kaynaktan HTTP yanıtları almak için bir API.
-*   <xref:System.Xml.Linq.XDocument> -Yükleme ve LINQ ile XML belgeleri sorgulama bir API.
-*   <xref:System.IO.StreamReader> -Dosyaları okuma bir API. 
-*   <xref:System.IO.StreamWriter> -Dosyalara yazma bir API.
+* <xref:System.Net.Http.HttpClient> -HTTP istekleri göndermek ve bir URI tarafından tanımlanan bir kaynaktan HTTP yanıtları almak için bir API.
+* <xref:System.Xml.Linq.XDocument> -Yükleme ve LINQ ile XML belgeleri sorgulama bir API.
+* <xref:System.IO.StreamReader> -Dosyaları okuma bir API. 
+* <xref:System.IO.StreamWriter> -Dosyalara yazma bir API.
 
 ## <a name="app-model-apis"></a>Uygulama modeli API'leri
 
 Birçok uygulama-.NET, çeşitli şirketler tarafından sağlanan ile kullanılabilecek modeli vardır.
 
-*   [ASP.NET](https://www.asp.net) -Web siteleri ve hizmetleri oluşturmak için bir web çerçevesi sağlar. Windows, Linux ve Macos'ta (ASP.NET sürümüne bağlıdır) desteklenir.
+* [ASP.NET](https://www.asp.net) -Web siteleri ve hizmetleri oluşturmak için bir web çerçevesi sağlar. Windows, Linux ve Macos'ta (ASP.NET sürümüne bağlıdır) desteklenir.

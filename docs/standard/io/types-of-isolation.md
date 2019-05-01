@@ -21,28 +21,28 @@ ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9471d98bad9b0fbf7931f80b1e41a5e9169b2896
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947171"
 ---
 # <a name="types-of-isolation"></a>Yalıtım Türleri
 Yalıtılmış Depolama erişimi oluşturan kullanıcıya her zaman kısıtlandırılır. Bu tür bir yalıtım uygulamak için kod deposu açıldığında çalıştığı işlemle ilişkili kimlik olduğu ortak dil çalışma zamanı aynı işletim sistemini algılar, kullanıcı kimlik kavramını kullanır. Bu kimlik, kimliği doğrulanmış kullanıcı kimliği olmakla birlikte kimliğe bürünme dinamik olarak değiştirmek için geçerli kullanıcının kimliğini neden olabilir.  
   
  Yalıtılmış Depolama erişimi de uygulama etki alanı ve derlemeye veya tek başına bir derleme ile ilişkili kimliğine göre sınırlıdır. Çalışma zamanı bu kimlikleri aşağıdaki yollarla alır:  
   
--   Etki alanı kimliği, tam bir URL olabilir, bir web uygulaması söz konusu olduğunda, uygulama kanıtı temsil eder. Kabuk barındırılan kodu için etki alanı kimliği uygulama dizini yola göre uyarlanabilir. Örneğin, yürütülebilir dosya yolu C:\Office\MyApp.exe çalışırsa, etki alanı kimliği C:\Office\MyApp.exe olacaktır.  
+- Etki alanı kimliği, tam bir URL olabilir, bir web uygulaması söz konusu olduğunda, uygulama kanıtı temsil eder. Kabuk barındırılan kodu için etki alanı kimliği uygulama dizini yola göre uyarlanabilir. Örneğin, yürütülebilir dosya yolu C:\Office\MyApp.exe çalışırsa, etki alanı kimliği C:\Office\MyApp.exe olacaktır.  
   
--   Derleme, bütünleştirilmiş kanıt kimliğidir. Bu derlemenin olabilen bir şifreleme dijital imzadan gelebilir [tanımlayıcı ad](../../../docs/framework/app-domains/strong-named-assemblies.md), derleme veya URL kimliğini yazılım yayımcısı. Sonra bir derlemenin tanımlayıcı ad hem de bir yazılım yayımcı kimliği varsa yazılım yayımcı kimliği kullanılır. Derleme Internet'ten gelen ve imzasız ise URL kimlik kullanılır. Derlemeler ve güçlü adlar hakkında daha fazla bilgi için bkz. [Derlemelerle programlama](../../../docs/framework/app-domains/programming-with-assemblies.md).  
+- Derleme, bütünleştirilmiş kanıt kimliğidir. Bu derlemenin olabilen bir şifreleme dijital imzadan gelebilir [tanımlayıcı ad](../../../docs/framework/app-domains/strong-named-assemblies.md), derleme veya URL kimliğini yazılım yayımcısı. Sonra bir derlemenin tanımlayıcı ad hem de bir yazılım yayımcı kimliği varsa yazılım yayımcı kimliği kullanılır. Derleme Internet'ten gelen ve imzasız ise URL kimlik kullanılır. Derlemeler ve güçlü adlar hakkında daha fazla bilgi için bkz. [Derlemelerle programlama](../../../docs/framework/app-domains/programming-with-assemblies.md).  
   
--   Gezici depolarda gezici kullanıcı profili olan bir kullanıcı hesabı ile taşıyın. Dosyaları bir ağ dizinine yazılır ve kullanıcının oturum açtığı tüm bilgisayarlara indirilir. Gezici kullanıcı profilleri hakkında daha fazla bilgi için bkz: <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
+- Gezici depolarda gezici kullanıcı profili olan bir kullanıcı hesabı ile taşıyın. Dosyaları bir ağ dizinine yazılır ve kullanıcının oturum açtığı tüm bilgisayarlara indirilir. Gezici kullanıcı profilleri hakkında daha fazla bilgi için bkz: <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
   
  Yalıtılmış Depolama, kullanıcı, etki alanı ve derleme kimliği kavramlarını birleştirerek her biri kendi kullanım senaryoları sahip aşağıdaki yollarla veri ayırabilirsiniz:  
   
--   [Kullanıcı ve derlemeye göre yalıtım](#UserAssembly)  
+- [Kullanıcı ve derlemeye göre yalıtım](#UserAssembly)  
   
--   [Kullanıcı, etki alanı ve derlemeye göre yalıtım](#UserDomainAssembly)  
+- [Kullanıcı, etki alanı ve derlemeye göre yalıtım](#UserDomainAssembly)  
   
  Ya da bu ayırmayı gezici kullanıcı profili ile birleştirilebilir. Daha fazla bilgi için konudaki [yalıtılmış depolama ve dolaşım](#Roaming).  
   

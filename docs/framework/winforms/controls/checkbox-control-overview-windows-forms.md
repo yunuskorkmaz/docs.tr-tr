@@ -9,11 +9,11 @@ helpviewer_keywords:
 - check boxes [Windows Forms], about check boxes
 ms.assetid: 085a4e0b-9046-473f-b141-d0edddfb2ebb
 ms.openlocfilehash: 2a18327d9836d1dbbcd5d5d6e73f217637736d20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938976"
 ---
 # <a name="checkbox-control-overview-windows-forms"></a>CheckBox Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.CheckBox> denetimi, belirli bir koşul açıp olup olmadığını gösterir. Evet sunmak için yaygın olarak kullanılan/yok veya kullanıcının True/False seçimi. Birden çok seçenek, bir veya daha fazla kullanıcının seçim yapabileceği görüntülenecek gruplarında onay kutusu denetimleri kullanabilirsiniz.  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5998ce684726b2386d8f1e05eb7eaeccf455747c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946790"
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters Yapısı
 Olay ile ilişkili olan geçerli bir özel durum için bir olay ve parametreleri türü adını depolar.  

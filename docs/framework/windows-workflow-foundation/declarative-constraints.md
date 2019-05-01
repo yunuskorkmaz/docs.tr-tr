@@ -1,15 +1,15 @@
 ---
-title: Bildirim temelli kısıtlamalar
+title: Bildirim Temelli Kısıtlamalar
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
 ms.openlocfilehash: e3ced8f6f88d698273ace5c8b74fe90b94fa9720
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945827"
 ---
-# <a name="declarative-constraints"></a>Bildirim temelli kısıtlamalar
+# <a name="declarative-constraints"></a>Bildirim Temelli Kısıtlamalar
 Bildirim temelli kısıtlamalar, güçlü bir doğrulama yöntemi için bir etkinlik ve ilişkilerini diğer etkinliklerle sunar. Kısıtlamalar için bir etkinlik yazma işlemi sırasında yapılandırılır, ancak ek kısıtlamaları, iş akışı ana bilgisayarı tarafından belirtilebilir. Bu konuda, etkinlik doğrulama sağlamak için bildirim temelli kısıtlamalar kullanarak genel bir bakış sağlar.  
   
 ## <a name="using-declarative-constraints"></a>Bildirim temelli kısıtlamalar kullanma  

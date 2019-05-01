@@ -1,5 +1,5 @@
 ---
-title: Ad alanlarının adları
+title: Ad Alanlarının Adları
 ms.date: 10/22/2008
 helpviewer_keywords:
 - names [.NET Framework], conflicts
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
 ms.openlocfilehash: 0099c5c8a863023099b377e139461606de3e1e1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940991"
 ---
-# <a name="names-of-namespaces"></a>Ad alanlarının adları
+# <a name="names-of-namespaces"></a>Ad Alanlarının Adları
 Olarak diğer adlandırma kuralları ile hedef ad alanları adlandırırken yeterli netlik ad alanı içeriğini olma olasılığı nedir hemen bilmek framework kullanarak programcısı için oluşturuyor. Aşağıdaki şablonu genel bir kural ad alanlarını adlandırma belirtir:  
   
  `<Company>.(<Product>|<Technology>)[.<Feature>][.<Subnamespace>]`  
@@ -49,7 +49,7 @@ Olarak diğer adlandırma kuralları ile hedef ad alanları adlandırırken yete
   
  Belirli ad alanları farklı kategorileri için tür adı çakışmalarını önleme ilkeleri vardır.  
   
--   **Uygulama modeli ad alanları**  
+- **Uygulama modeli ad alanları**  
   
      Tek bir uygulama modeline ait olan ad alanları sıklıkla birlikte kullanılır, ancak diğer uygulama modellerini ad alanları ile neredeyse hiçbir zaman kullanılır. Örneğin, <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanı ile birlikte kullanılan nadiren <xref:System.Web.UI?displayProperty=nameWithType> ad alanı. İyi bilinen uygulama modeli ad gruplarının listesi verilmiştir:  
   
@@ -60,11 +60,11 @@ Olarak diğer adlandırma kuralları ile hedef ad alanları adlandırırken yete
   
      Örneğin, adlı bir tür eklemeyin `Page` için <xref:System.Web.UI.Adapters?displayProperty=nameWithType> ad alanı, çünkü <xref:System.Web.UI?displayProperty=nameWithType> ad alanını adlı bir tür zaten var. `Page`.  
   
--   **Altyapı ad alanları**  
+- **Altyapı ad alanları**  
   
      Bu grup, nadiren uygulamaların ortak bir geliştirme sırasında içeri aktarılan ad alanlarını içerir. Örneğin, `.Design` ad alanları programlama geliştirme araçları oluştururken temel olarak kullanılır. Bu ad alanlarında türleri ile çakışmaları önleme önemli değildir.  
   
--   **Temel ad alanları**  
+- **Temel ad alanları**  
   
      Temel ad alanlarını dahil tüm `System` ad alanları, uygulama modellerin ad alanları ve altyapı ad alanlarını hariç. Temel ad alanlarını içeren diğerleriyle birlikte, `System`, `System.IO`, `System.Xml`, ve `System.Net`.  
   
@@ -72,7 +72,7 @@ Olarak diğer adlandırma kuralları ile hedef ad alanları adlandırırken yete
   
      Örneğin, hiçbir zaman kullanmayın `Stream` olarak bir tür adı. İle çakışmadığı <xref:System.IO.Stream?displayProperty=nameWithType>, çok kullanılan tür.  
   
--   **Teknoloji ad grupları**  
+- **Teknoloji ad grupları**  
   
      Bu kategori, tüm ad alanları ile aynı ilk iki ad alanı düğümleri içerir `(<Company>.<Technology>*`), aşağıdakiler gibi `Microsoft.Build.Utilities` ve `Microsoft.Build.Tasks`. Türler için tek bir teknoloji ait birbiriyle çakışmadığından emin önemlidir.  
   

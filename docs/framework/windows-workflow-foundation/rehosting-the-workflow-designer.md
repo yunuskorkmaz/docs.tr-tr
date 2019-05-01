@@ -3,11 +3,11 @@ title: İş Akışı Tasarımcısını Yeniden Barındırma
 ms.date: 03/30/2017
 ms.assetid: bec1fc28-f902-4edb-86c5-436cec802c2b
 ms.openlocfilehash: 98048ca58bf635f4e87241befa083dc240deaecf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968187"
 ---
 # <a name="rehosting-the-workflow-designer"></a>İş Akışı Tasarımcısını Yeniden Barındırma
 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] Visual Studio 2012 dışında ortamlarda oluşturma, değiştirme ve izleme amacıyla rehosted.

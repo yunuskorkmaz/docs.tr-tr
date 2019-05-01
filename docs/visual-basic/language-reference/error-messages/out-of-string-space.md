@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID14
 ms.assetid: 16681c75-a400-422d-9351-c691d3c7614e
 ms.openlocfilehash: 119d17e1aea974a0c40451260e671994653cee46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946568"
 ---
 # <a name="out-of-string-space-visual-basic"></a>Dizeler için ayrılan alan doldu (Visual Basic)
 Visual Basic ile çok büyük dizelerin kullanabilirsiniz. Ancak, diğer programları ve dizelerinizle çalışma biçiminizi gereksinimlerini yine de bu hataya neden olabilir.  

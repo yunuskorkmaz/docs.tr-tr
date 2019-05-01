@@ -3,11 +3,11 @@ title: Tür Sağlayıcıları
 description: Bilgi nasıl bir F# tür sağlayıcısı türleri, özellikleri ve yöntemleri programlarınızda kullanmak için sağlayan bir bileşenidir.
 ms.date: 04/02/2018
 ms.openlocfilehash: 39000fd1ca2af78afd1c333816fe9d5c0e2517cb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967771"
 ---
 # <a name="type-providers"></a>Tür Sağlayıcıları
 

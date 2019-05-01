@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9a757e3b28a94c96e28a5bab736a6820a83617a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939639"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>ISymUnmanagedMethod::GetParameters Metodu
 Bu yöntem için parametreleri alır. Parametre, yöntemin imzası'içinde tanımlanan sırayla döndürülür.  

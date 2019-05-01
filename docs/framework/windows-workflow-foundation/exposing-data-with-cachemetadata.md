@@ -1,15 +1,15 @@
 ---
-title: CacheMetadata ile verileri gösterme
+title: CacheMetadata ile verileri kullanıma sunma
 ms.date: 03/30/2017
 ms.assetid: 34832f23-e93b-40e6-a80b-606a855a00d9
 ms.openlocfilehash: a044c896e56541ee954fc33853376eb8293c6ede
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945710"
 ---
-# <a name="exposing-data-with-cachemetadata"></a>CacheMetadata ile verileri gösterme
+# <a name="exposing-data-with-cachemetadata"></a>CacheMetadata ile verileri kullanıma sunma
 
 Bir etkinlik çalıştırmadan önce iş akışı çalışma zamanı yürütme sürdürmek için gereken etkinlik hakkında tüm bilgiler alır. İş akışı çalışma zamanı yürütme sırasında bu bilgileri alır <xref:System.Activities.Activity.CacheMetadata%2A> yöntemi. Varsayılan uygulama bu yöntemin tüm genel bağımsız değişkenler, değişkenler ve çocuk etkinliklerinin zamanında yürütülür etkinlik tarafından sunulan çalışma zamanı sağlar; Etkinlik daha fazla bilgi için çalışma zamanı bu (örneğin, özel üyeler veya etkinlikleri etkinlik tarafından zamanlanması) vermeniz gerekiyorsa, bunu sağlamak için bu yöntem geçersiz kılınabilir.
 

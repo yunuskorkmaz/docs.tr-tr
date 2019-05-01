@@ -8,11 +8,11 @@ helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
 ms.openlocfilehash: 4fe21bb5b91143dff4d0a9f24bbc39be5e529985
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967862"
 ---
 # <a name="specifying-an-endpoint-address"></a>Bir Uç Noktası Adresi Belirtme
 Bir Windows Communication Foundation (WCF) hizmetiyle kurulan tüm iletişimlerde kendi uç noktalar üzerinden gerçekleşir. Her <xref:System.ServiceModel.Description.ServiceEndpoint> içeren bir <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>ve <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Hangi işlemleri kullanılabilir sözleşme belirtir. Bağlama hizmetiyle iletişim kurma ve adresi hizmet nerede bulacağını belirler. Her uç nokta, benzersiz bir adres olmalıdır. Uç nokta adresini tarafından temsil edilen <xref:System.ServiceModel.EndpointAddress> hizmetinin adresini temsil eden bir Tekdüzen Kaynak Tanımlayıcısı (URI) içeren sınıf bir <xref:System.ServiceModel.EndpointAddress.Identity%2A>, hizmetin güvenlik kimliğini ve isteğe bağlı bir koleksiyonunu temsil eden <xref:System.ServiceModel.EndpointAddress.Headers%2A>. İsteğe bağlı üst bilgileri tanımlamak veya uç nokta ile etkileşime geçmek için adresleme daha ayrıntılı bilgi sağlar. Örneğin, gelen iletileri işlemek nasıl, nerede uç nokta bir yanıt iletisi göndermelidir veya birden fazla örneği bulunduğunda, belirli bir kullanıcıdan gelen iletiyi işlemek için kullanılacak bir hizmetin hangi örneğinin üst bilgileri belirtebilir.  
@@ -22,13 +22,13 @@ Bir Windows Communication Foundation (WCF) hizmetiyle kurulan tüm iletişimlerd
   
  Çoğu taşımalar için URI adresi dört bölümden oluşur. Örneğin, bu URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` aşağıdaki dört bölümden oluşur:  
   
--   Düzen: http:  
+- Düzen: http:  
   
--   Makine: `www.fabrikam.com`  
+- Makine: `www.fabrikam.com`  
   
--   (İsteğe bağlı) Bağlantı noktası: 322  
+- (İsteğe bağlı) Bağlantı noktası: 322  
   
--   Yol: /mathservice.svc/secureEndpoint  
+- Yol: /mathservice.svc/secureEndpoint  
   
  Her uç nokta başvurusu ek tanımlayıcı bilgiler ekleyin bazı başvuru parametreleri gerçekleştirebilirsiniz EPR modelinin bir parçası olan. WCF'de, bu başvuru parametreleri örnekleri olarak modellenir <xref:System.ServiceModel.Channels.AddressHeader> sınıfı.  
   

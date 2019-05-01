@@ -5,34 +5,34 @@ f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
 ms.openlocfilehash: d3d0ebd003f178567ec9e9b19d6baccb8bc15f60
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935245"
 ---
 # <a name="bad-file-mode"></a>Hatalı dosya modu
 Dosya içerikleri düzenleme içinde kullanılan ifadeleri dosyası içinde açıldı moduna uygun olmalıdır. Olası nedenler şunlardır:  
   
--   A `FilePutObject` veya `FileGetObject` deyimi bir sıralı dosyasını belirtir.  
+- A `FilePutObject` veya `FileGetObject` deyimi bir sıralı dosyasını belirtir.  
   
--   A `Print` deyim için bir erişim modu dışında açılmış bir dosyada belirtir `Output` veya `Append`.  
+- A `Print` deyim için bir erişim modu dışında açılmış bir dosyada belirtir `Output` veya `Append`.  
   
--   Bir `Input` deyim için bir erişim modu dışında açılmış bir dosyasını belirtir `Input`  
+- Bir `Input` deyim için bir erişim modu dışında açılmış bir dosyasını belirtir `Input`  
   
--   Salt okunur dosyaya yazma girişimi.  
+- Salt okunur dosyaya yazma girişimi.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Emin `FilePutObject` ve `FileGetObject` için açık olan dosyaları yalnızca başvuran `Random` veya `Binary` erişim.  
+- Emin `FilePutObject` ve `FileGetObject` için açık olan dosyaları yalnızca başvuran `Random` veya `Binary` erişim.  
   
--   Emin `Print` belirtir ya da için açılan bir dosyanın `Output` veya `Append` erişim modu. Aksi halde veri dosyasına yerleştirmeniz farklı bir deyim kullanın veya uygun bir modda dosyayı tekrar açın.  
+- Emin `Print` belirtir ya da için açılan bir dosyanın `Output` veya `Append` erişim modu. Aksi halde veri dosyasına yerleştirmeniz farklı bir deyim kullanın veya uygun bir modda dosyayı tekrar açın.  
   
--   Emin `Input` için açılan bir dosyanın belirtir `Input`. Aksi durumda, farklı bir deyim veri dosyasında veya uygun bir modda dosyasını yeniden kullanın.  
+- Emin `Input` için açılan bir dosyanın belirtir `Input`. Aksi durumda, farklı bir deyim veri dosyasında veya uygun bir modda dosyasını yeniden kullanın.  
   
--   Salt okunur dosya yazıyorsanız, dosya okuma/yazma durumunu değiştirebilir veya yazma çalışmayın.  
+- Salt okunur dosya yazıyorsanız, dosya okuma/yazma durumunu değiştirebilir veya yazma çalışmayın.  
   
--   Kullanılabilir işlevselliği kullanmak `My.Computer.FileSystem` nesne.  
+- Kullanılabilir işlevselliği kullanmak `My.Computer.FileSystem` nesne.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

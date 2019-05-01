@@ -1,5 +1,5 @@
 ---
-title: Şema derleme sonrası bilgi kümesi
+title: Şema Derleme Sonrası Bilgi Kümesi
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,13 +10,13 @@ ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7e7892289248c9651b529bcc68d7228b8babb28a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949506"
 ---
-# <a name="post-schema-compilation-infoset"></a>Şema derleme sonrası bilgi kümesi
+# <a name="post-schema-compilation-infoset"></a>Şema Derleme Sonrası Bilgi Kümesi
 [World Wide Web Consortium (W3C) XML Şeması öneri](https://www.w3.org/XML/Schema) öncesi şema doğrulama ve şema derleme için sunulmalıdır bilgisi kümesi (bilgi kümesi) ele alınmaktadır. XML şema nesne modeli (SOM) önce ve sonra bu Etkilenme görünümleri <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaSet> çağrılır.  
   
  Öncesi schema doğrulama bilgi kümesi şemasını düzenleme sırasında oluşturulmuştur. Şema derleme sonrası bilgi kümesi sonra oluşturulan <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaSet> şemanın derlenmesi sırasında çağrılır ve özellikler olarak gösterilir.  

@@ -6,11 +6,11 @@ ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2b3a2432deb1e956060ab3615db01821658f8782
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959256"
 ---
 # <a name="xml-document-object-model-dom"></a>XML Belge Nesne Modeli (DOM)
 XML belge nesne modeli (DOM) sınıfı, bir XML belgesi bir bellek içi gösterimidir. DOM programlı olarak okuma, işleme ve XML belgesi değiştirmenize olanak sağlar. **XmlReader** sınıfı ayrıca XML okur; ancak, önbelleğe alınmamış yalnızca iletme, salt okunur erişim sağlar. Bu özniteliğin değerini veya bir öğeyi veya özelliği ekleyin ve düğümleri kaldırma içeriği düzenlemek için hiçbir özellikleri olduğu anlamına gelir **XmlReader**. DOM sunucunun birincil işlevi olduğu düzenleme Gerçek XML verilerini bir dosya veya başka bir nesneden gelen doğrusal bir biçimde depolanır ancak ortak ve yapılandırılmış biçimde XML verilerini bellek içinde temsil edilen adıdır. XML veri verilmiştir.  
@@ -39,32 +39,32 @@ XML belge yapısı
   
  XML belge yapısı içinde bu çizimde gösterilen her bir daire olarak adlandırılan bir düğümü temsil eder. bir **XmlNode** nesne. **XmlNode** nesnesi DOM ağacında temel nesnedir. **XmlDocument** sınıfını **XmlNode**, (örneğin, belleğe yüklenirken veya XML dosya kaydediliyor. bir bütün olarak belge işlemlerini gerçekleştirmek için yöntemleri destekler. Ayrıca, **XmlDocument** görüntüleme ve tüm XML belgesindeki düğüm işlemek için bir yol sağlar. Her ikisi de **XmlNode** ve **XmlDocument** performans ve kullanılabilirlik geliştirmeleri mevcut olabilir ve yöntemleri ve özelliklerine sahiptir:  
   
--   Erişim ve öğe düğümlerinin varlık başvurusu düğümleri ve benzeri gibi DOM için belirli düğümler değiştirin.  
+- Erişim ve öğe düğümlerinin varlık başvurusu düğümleri ve benzeri gibi DOM için belirli düğümler değiştirin.  
   
--   Gibi bir öğe düğümü metin düğümü içeren bilgilerine ek olarak tüm düğümleri alın.  
+- Gibi bir öğe düğümü metin düğümü içeren bilgilerine ek olarak tüm düğümleri alın.  
   
     > [!NOTE]
     >  Bir uygulama yapısı veya düzenleme DOM tarafından sağlanan özellikleri gerektirmiyorsa **XmlReader** ve **XmlWriter** sınıfları için XML önbelleğe alınmamış, yalnızca iletme akış erişim sağlar. Daha fazla bilgi için bkz. <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter>.  
   
  **Düğüm** nesnelerin yöntemleri ve özellikleri yanı sıra, temel ve iyi tanımlanmış özellikler kümesi vardır. Bu özelliklere bazıları şunlardır:  
   
--   Düğümlerin tek üst düğümü, bir düğümü hemen üstüne olan üst düğümü vardır. Bir üst öğeye sahip olmayan tek düğümlerin, üst düzey düğüm ve belge parçalarını ve belgenin kendisini içeren belge kökü olur.  
+- Düğümlerin tek üst düğümü, bir düğümü hemen üstüne olan üst düğümü vardır. Bir üst öğeye sahip olmayan tek düğümlerin, üst düzey düğüm ve belge parçalarını ve belgenin kendisini içeren belge kökü olur.  
   
--   Çoğu düğümleri hemen altındaki düğümleri olan birden çok alt düğümleri olabilir. Alt düğümleri içeren düğüm türlerinin bir listesi verilmiştir.  
+- Çoğu düğümleri hemen altındaki düğümleri olan birden çok alt düğümleri olabilir. Alt düğümleri içeren düğüm türlerinin bir listesi verilmiştir.  
   
-    -   **Belge**  
+    - **Belge**  
   
-    -   **DocumentFragment**  
+    - **DocumentFragment**  
   
-    -   **EntityReference**  
+    - **EntityReference**  
   
-    -   **Öğe**  
+    - **Öğe**  
   
-    -   **Öznitelik**  
+    - **Öznitelik**  
   
      **XmlDeclaration**, **gösterimi**, **varlık**, **CDATASection**, **metin**,  **Yorum**, **instruction**, ve **DocumentType** düğümlerinin alt düğümleri sahip değil.  
   
--   Aynı düzeyde diyagram tarafından temsil edilen düğümlerden **kitap** ve **PubInfo** düğümlerdir, eşdüzey öğesi.  
+- Aynı düzeyde diyagram tarafından temsil edilen düğümlerden **kitap** ve **PubInfo** düğümlerdir, eşdüzey öğesi.  
   
  Bir DOM öznitelikleri nasıl işler özelliğidir. Öznitelik, üst, alt ve eşdüzey ilişkileri parçası olan düğümleri değildir. Öznitelikleri bir öğe düğümü özelliği olarak kabul edilir ve bir ad ve değer çifti oluşur. Örneğin, XML veri oluşan varsa `format="dollar`"öğeyle ilişkili `price`, word `format` adını ve değerini `format` özniteliği `dollar`. Alınacak `format="dollar"` özniteliği **fiyat** düğümünü çağırmanızı **GetAttribute** imleç konumu olduğunda yöntemi `price` öğe düğümü. Daha fazla bilgi için [DOM özniteliklerine erişim](../../../../docs/standard/data/xml/accessing-attributes-in-the-dom.md).  
   

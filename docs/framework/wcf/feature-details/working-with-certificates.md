@@ -8,11 +8,11 @@ helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
 ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929850"
 ---
 # <a name="working-with-certificates"></a>Sertifikalarla Çalışma
 Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijital sertifikalar sık iletileri dijital olarak imzala istemcilere ve sunuculara kimlik doğrulaması ve şifreleme için kullanılır. Bu konuda kısaca X.509 dijital sertifika özellikleri ve bunların WCF'de nasıl kullanılacağını açıklar ve WCF ve sertifikaları kullanarak yaygın görevlerin nasıl yerine getirileceğini gösteren ya da, bu kavramları daha açıklayan konulara bağlantılar içerir.  
@@ -29,27 +29,27 @@ Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijita
 ## <a name="certificate-stores"></a>Sertifika depoları  
  Sertifika deposunda bulunamadı. Daha fazla alt depolarına bölünür iki ana depo konum yok. Bilgisayarda yöneticiyseniz MMC ek bileşenini aracını kullanarak her iki ana depoları görüntüleyebilirsiniz. Yönetici olmayan kullanıcılar, yalnızca geçerli kullanıcı deposu görüntüleyebilirsiniz.  
   
--   **Yerel makine deposuna**. Bu gibi makine işlemler tarafından erişilen sertifikaları içeren [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. İstemcilerin sunucuya kimlik doğrulaması sertifikalarını depolamak için bu konumu kullanır.  
+- **Yerel makine deposuna**. Bu gibi makine işlemler tarafından erişilen sertifikaları içeren [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. İstemcilerin sunucuya kimlik doğrulaması sertifikalarını depolamak için bu konumu kullanır.  
   
--   **Geçerli kullanıcı deposu**. Etkileşimli uygulamalar genellikle bilgisayarın geçerli kullanıcı için sertifikalar buraya yerleştirin. Bir istemci uygulaması oluşturuyorsanız, genellikle bir kullanıcı bir hizmete kimlik doğrulaması sertifikaları yerleştirdiğiniz budur.  
+- **Geçerli kullanıcı deposu**. Etkileşimli uygulamalar genellikle bilgisayarın geçerli kullanıcı için sertifikalar buraya yerleştirin. Bir istemci uygulaması oluşturuyorsanız, genellikle bir kullanıcı bir hizmete kimlik doğrulaması sertifikaları yerleştirdiğiniz budur.  
   
  Bu iki depoları daha fazla alt depolarına bölünür. Bunların en önemlisi, WCF ile programlama içerir:  
   
--   **Güvenilen kök sertifika yetkilileri**. Bu depodaki bir sertifika yetkilisi sertifikasına geri izlenebilir sertifikalarını da zinciri oluşturmak için bu depoda sertifikaları kullanabilirsiniz.  
+- **Güvenilen kök sertifika yetkilileri**. Bu depodaki bir sertifika yetkilisi sertifikasına geri izlenebilir sertifikalarını da zinciri oluşturmak için bu depoda sertifikaları kullanabilirsiniz.  
   
     > [!IMPORTANT]
     >  Bile güvenilir bir üçüncü taraf sertifika yetkilisinden sertifika gelmez yerel bilgisayar, örtük olarak bu depoda yer herhangi bir sertifika güvenir. Bu nedenle, tam olarak veren kişiye güvendiğiniz ve sonuçları anladığınızdan sürece herhangi bir sertifika bu deposuna yerleştirmeyin.  
   
--   **Kişisel**. Bu depo, bir bilgisayarın bir kullanıcıyla ilişkili sertifikaları için kullanılır. Genellikle bu depo, sertifika yetkilisi sertifikaları Güvenilen kök sertifika yetkilileri deposunda bulunan biri tarafından verilen sertifikaların kullanılır. Alternatif olarak, burada bulunan bir sertifika kendi kendine verilmesi ve bir uygulama tarafından güvenilen.  
+- **Kişisel**. Bu depo, bir bilgisayarın bir kullanıcıyla ilişkili sertifikaları için kullanılır. Genellikle bu depo, sertifika yetkilisi sertifikaları Güvenilen kök sertifika yetkilileri deposunda bulunan biri tarafından verilen sertifikaların kullanılır. Alternatif olarak, burada bulunan bir sertifika kendi kendine verilmesi ve bir uygulama tarafından güvenilen.  
   
  Sertifika depoları hakkında daha fazla bilgi için bkz. [sertifika depolarını](/windows/desktop/secauthn/certificate-stores).  
   
 ### <a name="selecting-a-store"></a>Bir Store seçme  
  Bir sertifikanın depolanacağı yeri seçilmesi bağlıdır nasıl ve ne zaman hizmet veya istemcinin çalıştırır. Aşağıdaki genel kurallar geçerlidir:  
   
--   WCF hizmeti bir Windows hizmeti kullanımda barındırılıyorsa **yerel makine** depolayın. Yerel makine deposuna sertifika yüklemek için yönetici ayrıcalıkları gerekli olduğunu unutmayın.  
+- WCF hizmeti bir Windows hizmeti kullanımda barındırılıyorsa **yerel makine** depolayın. Yerel makine deposuna sertifika yüklemek için yönetici ayrıcalıkları gerekli olduğunu unutmayın.  
   
--   Hizmet veya istemcinin bir kullanıcı hesabı altında çalışan bir uygulama ise, ardından kullanın **geçerli kullanıcının** depolayın.  
+- Hizmet veya istemcinin bir kullanıcı hesabı altında çalışan bir uygulama ise, ardından kullanın **geçerli kullanıcının** depolayın.  
   
 ### <a name="accessing-stores"></a>Depoları erişme  
  Depoları, bir bilgisayardaki klasörler gibi erişim denetim listeleri (ACL'ler) korunur. Internet Information Services (IIS) tarafından barındırılan hizmet oluşturulurken [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] işlemini çalıştıran altında [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hesabı. Hesabı sertifikaları içeren depoya erişimine sahip olmalıdır, bir hizmeti kullanır. Ana mağazaların her biri varsayılan erişim listesi ile korunuyor, ancak liste değiştirilebilir. Bir mağazaya erişmek için ayrı bir rol oluşturursanız, bu rolü erişim izni vermeniz gerekir. WinHttpCertConfig.exe aracını kullanarak erişimi listesini değiştirme konusunda bilgi almak için bkz: [nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). IIS ile istemci sertifikaları kullanma hakkında daha fazla bilgi için bkz. [nasıl bir ASP.NET Web uygulaması kimlik doğrulaması için bir istemci sertifikasını kullanarak bir Web hizmeti çağırmak amacıyla](https://go.microsoft.com/fwlink/?LinkId=88914).  
@@ -74,11 +74,11 @@ Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijita
   
  Ayrıca, yapılandırma özelliğini ayarlayabilirsiniz. Aşağıdaki öğeler, doğrulama modunu belirtmek için kullanılır:  
   
--   [\<kimlik doğrulama >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+- [\<kimlik doğrulama >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
--   [\<peerAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
+- [\<peerAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
--   [\<messageSenderAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
+- [\<messageSenderAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>Özel kimlik doğrulama  
  `CertificateValidationMode` Özelliği de sertifika kimlik doğrulaması nasıl yapılır özelleştirme olanak sağlar. Varsayılan olarak, düzeyi `ChainTrust`. Kullanılacak <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> değeri ayarlamanız gerekir `CustomCertificateValidatorType` öznitelik bir bütünleştirilmiş kod ve sertifikayı doğrulamak için kullanılan tür. Özel Doğrulayıcı sağlayıcısı oluşturmak için Özet devralmalıdır <xref:System.IdentityModel.Selectors.X509CertificateValidator> sınıfı.  

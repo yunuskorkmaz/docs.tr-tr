@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir alt görevin kendi üst öğesine eklenmesini önleme'
+title: 'Nasıl yapılır: Alt Görevin Üst Göreve Eklenmesini Önleme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ ms.assetid: c0fb85d4-9e80-4905-9f65-29acc54201c4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7506a57e29b7942bd06141baa2d2b048ed998214
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937442"
 ---
-# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>Nasıl yapılır: Bir alt görevin kendi üst öğesine eklenmesini önleme
+# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>Nasıl yapılır: Alt Görevin Üst Göreve Eklenmesini Önleme
 Bu belge, bir alt görevin üst göreve eklenmesini önleme gösterilmiştir. Bir üçüncü taraf tarafından yazılan ve görevleri de kullanan bir bileşen çağırdığınızda, bir alt görevin üst göreve eklenmesini önleme yararlıdır. Örneğin, kullanan bir üçüncü parti bileşeniniz <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> oluşturma seçeneği bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> nesne sorunlara neden olabilir, kodunuzda uzun süreli veya işlenmeyen bir özel durum oluşturur.  
   
 ## <a name="example"></a>Örnek  
@@ -37,7 +37,7 @@ Bu belge, bir alt görevin üst göreve eklenmesini önleme gösterilmiştir. Bi
   
  Visual Basic  
   
- **Vbc.exe DenyChildAttach.vb**  
+ **vbc.exe DenyChildAttach.vb**  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
   

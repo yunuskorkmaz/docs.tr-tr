@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b8fa39a54437e60737aa052c495f58422bc0d3fe
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946243"
 ---
 # <a name="icordebugtypeenumeratetypeparameters-method"></a>ICorDebugType::EnumerateTypeParameters Yöntemi
 Bir arabirim işaretçisi alır içeren bir Icordebugtypeenum <xref:System.Type> bu Icordebugtype tarafından başvurulan sınıfın parametreleri.  
@@ -42,11 +42,11 @@ HRESULT EnumerateTypeParameters (
 ## <a name="remarks"></a>Açıklamalar  
  Kullanabileceğiniz `EnumerateTypeParameters` CorElementType değeri tarafından döndürdüyse [Icordebugtype::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) ELEMENT_TYPE_CLASS, ELEMENT_TYPE_VALUETYPE, ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF ve ELEMENT_TYPE_ PTR veya ELEMENT_TYPE_FNPTR. Parametreler ve bunların sırası sayısını türüne bağlıdır:  
   
--   ELEMENT_TYPE_CLASS veya ELEMENT_TYPE_VALUETYPE: Bulunan tür parametreleri sayısı `ICorDebugTypeEnum` bu yöntem döndürdüğünü, karşılık gelen sınıf için biçimsel tür parametrelerinin sayısına bağımlı. Örneğin, türü ise `class Dict<String,int32>`, ardından `EnumerateTypeParameters` döndürür bir `ICorDebugTypeEnum` temsil eden nesneler içeren `String` ve `int32` dizideki.  
+- ELEMENT_TYPE_CLASS veya ELEMENT_TYPE_VALUETYPE: Bulunan tür parametreleri sayısı `ICorDebugTypeEnum` bu yöntem döndürdüğünü, karşılık gelen sınıf için biçimsel tür parametrelerinin sayısına bağımlı. Örneğin, türü ise `class Dict<String,int32>`, ardından `EnumerateTypeParameters` döndürür bir `ICorDebugTypeEnum` temsil eden nesneler içeren `String` ve `int32` dizideki.  
   
--   ELEMENT_TYPE_FNPTR: Bulunan tür parametreleri sayısı `ICorDebugTypeEnum` bir bağımsız değişken işlev tarafından kabul sayısından daha büyük olacaktır. Bulunan ilk tür parametresi `ICorDebugTypeEnum` işlevin dönüş türü ve sonraki tür parametreleri, işlevin parametrelerdir.  
+- ELEMENT_TYPE_FNPTR: Bulunan tür parametreleri sayısı `ICorDebugTypeEnum` bir bağımsız değişken işlev tarafından kabul sayısından daha büyük olacaktır. Bulunan ilk tür parametresi `ICorDebugTypeEnum` işlevin dönüş türü ve sonraki tür parametreleri, işlevin parametrelerdir.  
   
--   ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF veya ELEMENT_TYPE_PTR: Bir tür parametresi döndürülür. Örneğin, türü gibi bir dizi türü ise `int32[]`,`EnumerateTypeParameters` döndüreceği bir `ICorDebugTypeEnum` içeren bir nesneyi temsil eden `int32`.  
+- ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF veya ELEMENT_TYPE_PTR: Bir tür parametresi döndürülür. Örneğin, türü gibi bir dizi türü ise `int32[]`,`EnumerateTypeParameters` döndüreceği bir `ICorDebugTypeEnum` içeren bir nesneyi temsil eden `int32`.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

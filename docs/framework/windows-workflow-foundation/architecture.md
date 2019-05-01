@@ -1,15 +1,15 @@
 ---
-title: Windows Workflow mimarisi
+title: Windows Workflow Mimarisi
 ms.date: 03/30/2017
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
 ms.openlocfilehash: 5d6e1ead9184bfb61eb466389671ca2e74264ae3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945931"
 ---
-# <a name="windows-workflow-architecture"></a>Windows Workflow mimarisi
+# <a name="windows-workflow-architecture"></a>Windows Workflow Mimarisi
 Windows Workflow Foundation (WF) etkileşimli uzun süre çalışan uygulamalar geliştirmek için Özet düzeyine başlatır. İş birimleri etkinlikleri kapsüllenir. Etkinlikleri olanakları sağlayan akış denetimi, özel durum işleme, hata yayma, durumu verilerini, yüklenmesi ve kaldırılması bellek, izleme ve işlem akışı devam eden iş akışı kalıcılığı için bir ortamda çalıştırın.  
   
 ## <a name="activity-architecture"></a>Etkinlik mimarisi  
@@ -43,10 +43,10 @@ xmlns="http://schemas.microsoft.com/2009/workflow">
 ## <a name="activity-life-cycle"></a>Etkinlik yaşam döngüsü  
  İçinde bir etkinlik örneği başlar <xref:System.Activities.ActivityInstanceState.Executing> durumu. Özel durumlar karşılaşılan sürece tüm alt etkinlik yürütme ve diğer bekleyen iş tamamlanana kadar bu durumda kalır (<xref:System.Activities.Bookmark> nesneleri, örneğin) tamamlandığında, hangi geçişleri noktası konumunda <xref:System.Activities.ActivityInstanceState.Closed> durumu. Bir etkinlik örneğinin üst alt iptal etmek isteyebilir; alt iptal edilmesi durumunda tamamlanırsa <xref:System.Activities.ActivityInstanceState.Canceled> durumu. Yürütme sırasında bir özel durum oluşturulursa, çalışma zamanı etkinliğini koyar <xref:System.Activities.ActivityInstanceState.Faulted> belirtin ve etkinliklerin üst zincir oluşturan bir özel durum yayar. Bir etkinliğin üç tamamlanma durumu aşağıda verilmiştir:  
   
--   **Kapalı:** Etkinlik, iş tamamlandı ve çıkıldı.  
+- **Kapalı:** Etkinlik, iş tamamlandı ve çıkıldı.  
   
--   **İptal edildi:** Etkinlik düzgün bir şekilde çalışmasını terk ve çıkıldı. Bu durum geri girildiğinde, iş açıkça döndürülmez.  
+- **İptal edildi:** Etkinlik düzgün bir şekilde çalışmasını terk ve çıkıldı. Bu durum geri girildiğinde, iş açıkça döndürülmez.  
   
--   **Hatalı:** Etkinlik, bir hatayla karşılaştı ve çalışmasını tamamlamadan çıkıldı.  
+- **Hatalı:** Etkinlik, bir hatayla karşılaştı ve çalışmasını tamamlamadan çıkıldı.  
   
  Etkinlikleri kalabilir <xref:System.Activities.ActivityInstanceState.Executing> kalıcı veya kaldırıldı durumu.

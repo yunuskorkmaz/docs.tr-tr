@@ -1,16 +1,16 @@
 ---
-title: WIF talep programlama modeli
+title: WIF Talep Programlama Modeli
 ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
 ms.openlocfilehash: 543db91eaa058a87cfe579a23abb710f21ec1b85
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953601"
 ---
-# <a name="wif-claims-programming-model"></a>WIF talep programlama modeli
+# <a name="wif-claims-programming-model"></a>WIF Talep Programlama Modeli
 ASP.NET ve Windows Communication Foundation (WCF) geliştiricileri, IIdentity ve IPrincipal arabirimleri genellikle kullanıcının kimlik bilgileri ile çalışmak için kullanın. Artık her zaman Aşağıdaki diyagramda gösterildiği gibi herhangi bir asıl için mevcut taleplerdir şekilde .NET 4.5 içinde Windows Identity Foundation (WIF) tümleştirilmiştir:
 
  ![WIF talep programlama modeli gösteren diyagram.](./media/wif-claims-programming-model/wif-claims-programming-model.png)

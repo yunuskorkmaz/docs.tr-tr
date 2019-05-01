@@ -12,11 +12,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], adding transparency
 ms.assetid: 5440f48c-3ac9-44c3-b170-c1c110bdbab8
 ms.openlocfilehash: 7a8286fb741effaf668b87e90da04f79d1490de2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960946"
 ---
 # <a name="alpha-blending-lines-and-fills"></a>Çizgi ve Dolgularda Alfa Karışım Kullanma
 İçinde [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 8 bitlik her alfa, kırmızı, yeşil ve mavi bir 32-bit değerle bir renktir. Renk saydam alfa değeri gösterir — istediğiniz rengi karışık arka plan rengi ile uzantısı. Alfa değerleri aralığı 0 ile 255, burada 0 tamamen saydam bir rengi temsil eder ve 255 arasında bir tam opak rengi temsil eder.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
 ms.openlocfilehash: b1676189582596ad69981b330ffb081539e949da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960959"
 ---
 # <a name="about-gdi-managed-code"></a>GDI+ Yönetilen Kodu Hakkında
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] iki boyutlu bir vektör grafikleri ve görüntüleme tipografi sunan Windows işletim sisteminin bölümüdür. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] artırır [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (grafik cihaz önceki Windows sürümleriyle dahil arabirimi) yeni özellikleri ekleyerek ve var olan özellikleri iyileştirme.  

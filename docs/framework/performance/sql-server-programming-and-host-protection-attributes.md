@@ -15,11 +15,11 @@ ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1049187dabbea64599617bb4372ed50515a51e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949194"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>SQL Server Programlama ve Ana Bilgisayar Koruması Öznitelikleri
 Ana bilgisayarın gereksinimlerini hem kod erişimi güvenliği hem de konak kaynağı koruma için yükleme ve yönetilen kod içinde bir SQL Server konağı yürütme yeteneği gerektirir.  Kod erişim güvenlik gereksinimlerini üç SQL Server izin kümeleri biri tarafından belirtilir: GÜVENLİ, dış erişim veya güvenli değil. Kod içinde güvenli yürütme veya dış erişim izin kümeleri gereken belirli türler veya sahip üyeler önlemek <xref:System.Security.Permissions.HostProtectionAttribute> özniteliği uygulandı. <xref:System.Security.Permissions.HostProtectionAttribute> Türleri veya yöntemleri, özel kod tanımlar güvenilirlik garantisi, yapıları kadar bir güvenlik izni konak izin verme değil.  Kullanımını <xref:System.Security.Permissions.HostProtectionAttribute> konak kararlılığını korumanıza yardımcı olur bir programlama modeli uygular.  
@@ -27,11 +27,11 @@ Ana bilgisayarın gereksinimlerini hem kod erişimi güvenliği hem de konak kay
 ## <a name="host-protection-attributes"></a>Konak koruması öznitelikleri  
  Konak koruması öznitelikleri türler veya uygun konak programlama modeli ve güvenilirlik tehdit artan aşağıdaki düzeylerde temsil üyeler tanımlayın:  
   
--   Aksi takdirde zararsızdır.  
+- Aksi takdirde zararsızdır.  
   
--   Sunucusu tarafından yönetilen kullanıcı kodunu destabilization neden olabilir.  
+- Sunucusu tarafından yönetilen kullanıcı kodunu destabilization neden olabilir.  
   
--   Sunucu işlemi kendisini destabilization neden olabilir.  
+- Sunucu işlemi kendisini destabilization neden olabilir.  
   
  SQL Server bir tür veya üye olan kullanımına izin vermeyen bir <xref:System.Security.Permissions.HostProtectionAttribute> belirten bir <xref:System.Security.Permissions.HostProtectionResource> değerini <xref:System.Security.Permissions.HostProtectionResource.SharedState>, <xref:System.Security.Permissions.HostProtectionResource.Synchronization>, <xref:System.Security.Permissions.HostProtectionResource.MayLeakOnAbort>, veya <xref:System.Security.Permissions.HostProtectionResource.ExternalProcessMgmt>. Bu paylaşım durumunu etkinleştirmek, bir eşitleme gerçekleştirin, bir kaynak sızıntısı sonlandırıldığında neden veya SQL Server işlemi bütünlüğünü etkileyen üyelerini çağırarak derlemelerden engeller.  
   

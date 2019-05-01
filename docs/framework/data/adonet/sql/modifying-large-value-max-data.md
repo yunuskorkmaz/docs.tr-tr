@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
 ms.openlocfilehash: eb938cfae645a9cc3811f1b5a02cddef742bac89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922232"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET İçinde Büyük Değerli (Maks) Verileri Değiştirme
 Büyük nesne (LOB) veri türleri 8 kilobayt (KB) maksimum satır boyutu aşan olanlardır. SQL Server sağlayan bir `max` tanımlayıcısı için `varchar`, `nvarchar`, ve `varbinary` veri türleri değerlerinin depolama 2 büyüklüğünde izin vermek için ^ 32 bayt. Tablo sütunları ve Transact-SQL değişkenleri belirtin `varchar(max)`, `nvarchar(max)`, veya `varbinary(max)` veri türleri. ADO.NET, `max` veri türleri getirilen tarafından bir `DataReader`ve iki giriş ve çıkış parametresi değerleri olmadan herhangi bir özel işleme olarak belirtilebilir. İçin büyük `varchar` veri türleri, veriler alınır ve artımlı olarak güncelleştirildi.  
@@ -26,11 +26,11 @@ Büyük nesne (LOB) veri türleri 8 kilobayt (KB) maksimum satır boyutu aşan o
 ## <a name="large-value-type-restrictions"></a>Büyük bir değer türü kısıtlamaları  
  Aşağıdaki kısıtlamalar uygulamak `max` veri türleri, daha küçük veri türleri için mevcut değildir:  
   
--   A `sql_variant` büyük içeremez `varchar` veri türü.  
+- A `sql_variant` büyük içeremez `varchar` veri türü.  
   
--   Büyük `varchar` sütunları dizin anahtar sütunu olarak belirtilemez. Kümelenmemiş bir dizin içinde bulunan bir sütunda verilir.  
+- Büyük `varchar` sütunları dizin anahtar sütunu olarak belirtilemez. Kümelenmemiş bir dizin içinde bulunan bir sütunda verilir.  
   
--   Büyük `varchar` sütunları bölümleme anahtar sütunu olarak kullanılamaz.  
+- Büyük `varchar` sütunları bölümleme anahtar sütunu olarak kullanılamaz.  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>Transact-SQL büyük değerli türlerle çalışma  
  Transact-SQL `OPENROWSET` işlev, bağlanma ve uzak veri erişim tek seferlik bir yöntem. Tüm bir OLE DB veri kaynağından uzak verilere erişmek gerekli bağlantı bilgilerini içerir. `OPENROWSET` işlevmiş gibi bir tablo adı sorgusunun FROM yan tümcesinde başvuruda bulunulabilir. Ayrıca bir INSERT, UPDATE, hedef tablo olarak başvurulabilir veya silme deyiminin, OLE DB sağlayıcısı yeteneklerini tabidir.  

@@ -3,18 +3,18 @@ title: Basic2
 ms.date: 03/30/2017
 ms.assetid: 04e4d3bd-ab89-4b50-8f42-2a4430751a9c
 ms.openlocfilehash: 72540a1a36a8807a1644c10448210ddc8bf15b75
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944124"
 ---
 # <a name="basic"></a>Temel
-Bu bölümde temel Windows Communication Foundation (WCF) işlevselliğini göstermek örnekleri bölümleri içerir.  
+Bu bölümde, temel Windows Communication Foundation (WCF) işlevlerini gösteren örnekler bölümlerini içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
- Tipik bir hizmet ve WCF kullanan tipik bir istemciye uygulamak üzere gösterilmiştir.  
+ Tipik bir hizmeti ve WCF kullanarak tipik bir istemci uygulama gösterilmiştir.  
   
  [AJAX](../../../../docs/framework/wcf/samples/ajax.md)  
  Zaman uyumsuz JavaScript ve XML gösterir.  
@@ -23,13 +23,13 @@ Bu bölümde temel Windows Communication Foundation (WCF) işlevselliğini göst
  Bir uç nokta öğesinin bağlama özniteliği kullanmayı gösterir.  
   
  [İstemci](../../../../docs/framework/wcf/samples/client.md)  
- WCF istemci uygulamaları gösterir.  
+ WCF istemci uygulamalarının gösterir.  
   
  [Anlaşma](../../../../docs/framework/wcf/samples/contract.md)  
  Veri sözleşmeleri gösterir.  
   
  [Bulma](../../../../docs/framework/wcf/samples/discovery-samples.md)  
- WCF keşif gösterir.  
+ WCF bulma gösterir.  
   
  [Yönetim](../../../../docs/framework/wcf/samples/management.md)  
  WCF yönetim gösterir.  
@@ -47,4 +47,4 @@ Bu bölümde temel Windows Communication Foundation (WCF) işlevselliğini göst
  DemonstratesWCF dağıtım.  
   
  [Web](../../../../docs/framework/wcf/samples/web.md)  
- Web barındırma WCF'de gösterilmiştir.
+ WCF Web barındırma gösterir.

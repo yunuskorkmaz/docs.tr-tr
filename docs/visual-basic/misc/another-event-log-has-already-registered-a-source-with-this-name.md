@@ -3,11 +3,11 @@ title: Zaten bir kaynak başka bir olay günlüğü bu ada sahip kayıtlı
 ms.date: 07/20/2015
 ms.assetid: e6f5cd95-bb3f-4845-84fb-ae623a9bd44e
 ms.openlocfilehash: d932869504b2d8a5f3a948b190e5528bfcfa664f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940625"
 ---
 # <a name="another-event-log-has-already-registered-a-source-with-this-name"></a>Zaten bir kaynak başka bir olay günlüğü bu ada sahip kayıtlı
 Bir giriş için bir olay günlüğüne yazmak için burada belirtilen kaynağı başka bir olay günlüğü ile kayıtlı çalışıldı.  

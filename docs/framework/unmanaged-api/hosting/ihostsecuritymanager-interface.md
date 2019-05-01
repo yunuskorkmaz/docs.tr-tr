@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f45379fe8640ef7e7b3917bac8d10ca956d75ffb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61957592"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager Arabirimi
 Erişim ve güvenlik bağlamı şu anda yürütülen iş parçacığının denetime izin veren yöntemler sağlar.  
@@ -42,13 +42,13 @@ Erişim ve güvenlik bağlamı şu anda yürütülen iş parçacığının denet
   
  CLR, yönetilen iş parçacığı bağlamı dahili olarak işler. İşleme özel sorgular `IHostSecurityManager` aşağıdaki durumlarda:  
   
--   Sonlandırıcı iş parçacığında, sonlandırıcı yürütme sırasında.  
+- Sonlandırıcı iş parçacığında, sonlandırıcı yürütme sırasında.  
   
--   Sınıf ve modül Oluşturucu yürütme sırasında.  
+- Sınıf ve modül Oluşturucu yürütme sırasında.  
   
--   Zaman uyumsuz noktalarda yapılan çağrıda çalışan iş parçacığı üzerinde [Ihostthreadpoolmanager::QueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) yöntemi.  
+- Zaman uyumsuz noktalarda yapılan çağrıda çalışan iş parçacığı üzerinde [Ihostthreadpoolmanager::QueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) yöntemi.  
   
--   G/ç tamamlama bağlantı noktaları Bakım.  
+- G/ç tamamlama bağlantı noktaları Bakım.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

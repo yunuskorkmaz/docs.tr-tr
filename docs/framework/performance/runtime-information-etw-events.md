@@ -8,11 +8,11 @@ ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: af27ddaa69d34976929f40055bc2cc668f877e87
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949220"
 ---
 # <a name="runtime-information-etw-events"></a>Çalışma Zamanı Bilgileri ETW Olayları
 Bu ETW olayları SKU, sürüm numarası, hangi çalışma zamanı etkinleştirildi, şekilde dahil olmak üzere çalışma zamanı, GUID, (varsa), ile başlatıldığından komut satırı parametreleri hakkında bilgi ve diğer ilgili bilgileri kaydeder. Bir işlem içinde birden çok çalışma zamanları yürütülüyorsa, bu olaylar (ClrInstanceID) tarafından sağlanan bilgiler, çalışma zamanları belirsizliğinin ortadan kaldırılmasını yardımcı olur.  

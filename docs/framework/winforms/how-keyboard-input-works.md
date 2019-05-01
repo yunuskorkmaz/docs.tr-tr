@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
 ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966978"
 ---
 # <a name="how-keyboard-input-works"></a>Klavye Girdisi Nasıl Çalışır
 Windows Forms klavye girdisi Windows iletilere yanıt olarak klavye olayları yükselterek işler. Çoğu Windows Forms uygulamaları klavye girişi, klavye olaylarını işleme tarafından özel olarak işler. Ancak, bir denetim ulaşmadan önce anahtarları kesintiye gibi daha gelişmiş klavye girişi senaryoları uygulayabilmesi klavye iletileri nasıl çalıştığını anlamak gerekir. Bu konu, Windows Forms tanır ve klavye iletileri nasıl yönlendirileceğini genel bir bakış sağlar anahtar veri türlerini açıklar. Klavye olaylarını hakkında daha fazla bilgi için bkz. [kullanan klavye olayları](using-keyboard-events.md).  

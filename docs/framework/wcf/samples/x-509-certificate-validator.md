@@ -3,11 +3,11 @@ title: X.509 Sertifika Doğrulayıcı
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
 ms.openlocfilehash: 88364aabf5df3a4f41d83613c0c4328b2d5979a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949922"
 ---
 # <a name="x509-certificate-validator"></a>X.509 Sertifika Doğrulayıcı
 Bu örnek bir özel X.509 Sertifika Doğrulayıcı uygulama gösterir. Bu, yerleşik X.509 Sertifika doğrulama modları hiçbiri uygulama gereksinimlerini için uygun olduğu durumlarda kullanışlıdır. Bu örnek, şirket içinde verilen sertifikaları kabul eden özel Doğrulayıcı sağlayıcısı olan bir hizmete gösterir. İstemci hizmete kimlik doğrulaması için bu tür bir sertifika kullanır.
@@ -16,11 +16,11 @@ Bu örnek bir özel X.509 Sertifika Doğrulayıcı uygulama gösterir. Bu, yerle
 
  Özet olarak, bu örnek gösterir nasıl:
 
--   İstemci, bir X.509 sertifikası kullanılarak doğrulanabilir.
+- İstemci, bir X.509 sertifikası kullanılarak doğrulanabilir.
 
--   Sunucu, istemci kimlik bilgileri özel X509CertificateValidator karşı doğrular.
+- Sunucu, istemci kimlik bilgileri özel X509CertificateValidator karşı doğrular.
 
--   Sunucu sunucusunun X.509 sertifikasını kullanarak kimlik doğrulaması yapılır.
+- Sunucu sunucusunun X.509 sertifikasını kullanarak kimlik doğrulaması yapılır.
 
  Hizmet, App.config yapılandırma dosyası kullanılarak tanımlanmış hizmet ile iletişim kurmak için tek bir uç noktayı kullanıma sunar. Uç nokta, adres, bağlama ve bir sözleşme oluşur. Bir standart yapılandırılmış bağlama `wsHttpBinding` varsayılanları kullanarak `WSSecurity` ve istemci sertifikası kimlik doğrulaması. Hizmet davranışı, Doğrulayıcı sınıfını türü ile birlikte istemci X.509 sertifikalarını doğrulamak için özel modunu belirtir. Davranış da serviceCertificate öğesini kullanarak sunucu sertifikasını belirtir. Sunucu sertifikası için aynı değeri içermesi gerekir `SubjectName` olarak `findValue` içinde [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
@@ -254,7 +254,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
  Aşağıda, böylece uygun yapılandırmasında çalıştırılacak değiştirilebilir toplu iş dosyaları farklı bölümlerini kısa bir genel bakış sağlar:
 
--   Sunucu sertifikası oluşturuluyor:
+- Sunucu sertifikası oluşturuluyor:
 
      Setup.bat toplu iş dosyasından aşağıdaki satırları kullanılacak sunucu sertifikası oluşturun. % Sunucu_adı % değişkeni, sunucu adını belirtir. Kendi sunucu adını belirtmek için bu değişkeni değiştirin. Localhost varsayılan değerdir.
 
@@ -268,7 +268,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Sunucu sertifikasını istemcinin güvenilen sertifika depolama alanına yükleniyor:
+- Sunucu sertifikasını istemcinin güvenilen sertifika depolama alanına yükleniyor:
 
      İstemci güvenilir kişiler uygulamasına Setup.bat toplu dosya kopyalama sunucu sertifikasının aşağıdaki satırları depolayın. MakeCert.exe tarafından oluşturulan sertifikaları istemci sistem tarafından örtük olarak güvenilmeyen olduğundan bu adım gereklidir. Bir istemci güvenilen kök sertifikayı kök erişim izni verilmiş bir sertifika zaten varsa — örneğin, Microsoft tarafından verilen sertifika — sunucu sertifikasında istemci sertifika deposunun doldurulması, bu adım gerekli değildir.
 
@@ -276,7 +276,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   İstemci sertifikası oluşturma:
+- İstemci sertifikası oluşturma:
 
      Setup.bat toplu iş dosyasından aşağıdaki satırları kullanılacak istemci sertifikası oluşturun. % Değişken % USER_NAME istemci adını belirtir. Bu istemci kodu arar adı olduğundan, bu değer "test1" için ayarlanır. USER_NAME % değerini değiştirirseniz Client.cs kaynak dosyasında karşılık gelen değeri değiştirin ve istemciyi yeniden oluşturun.
 
@@ -292,7 +292,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%USER_NAME% -sky exchange -pe
     ```
 
--   İstemci sertifikası sunucusunun güvenilen sertifika depolama alanına yükleme:
+- İstemci sertifikası sunucusunun güvenilen sertifika depolama alanına yükleme:
 
      Setup.bat toplu iş dosyasında aşağıdaki satırları istemci sertifikası güvenilir Kişiler deposuna kopyalar. MakeCert.exe tarafından oluşturulan sertifikaları sunucu sistem tarafından örtük olarak güvenilmeyen olduğundan bu adım gereklidir. Bir güvenilen kök sertifikayı kök erişim izni verilmiş bir sertifika zaten varsa — örneğin, Microsoft tarafından verilen sertifika — istemci sertifikası ile sunucu sertifika deposuna yerleştirmek, bu adım gerekli değildir.
 

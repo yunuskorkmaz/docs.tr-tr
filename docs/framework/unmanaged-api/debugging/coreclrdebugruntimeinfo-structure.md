@@ -19,14 +19,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 88fcc5959054f1cdf7c9543674584a4bde26d896
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966048"
 ---
 # <a name="coreclrdebugruntimeinfo-structure"></a>CoreClrDebugRuntimeInfo Yapısı
-Bir işlemde bir uzak makinede yüklü bir ortak dil çalışma zamanı (CLR) örneğini temsil eder.  
+Bir işlem uzak bir makinede yüklü olduğu bir ortak dil çalışma zamanı (CLR) örneği temsil eder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,13 +40,13 @@ struct  CoreClrDebugRuntimeInfo {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`m_dwInternalID`|Hedef makine üzerinde çalışan uzaktan hata ayıklama proxy tarafından atanan çalışma zamanı tanımlayıcısı.|  
+|`m_dwInternalID`|Hedef makine üzerinde çalışan uzaktan hata ayıklama proxy'si tarafından atanan çalışma zamanı tanımlayıcısı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CoreClrRemoteDebuggingInterfaces.h  
+ **Üst bilgi:** CoreClrRemoteDebuggingInterfaces.h  
   
- **Kitaplığı:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86.dll  
   
  **.NET framework sürümleri:** 3.5 SP1

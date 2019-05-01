@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
 ms.openlocfilehash: 9fa6e4114e9579079705700708840f2814b03b99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935505"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Hizmet Çalışma Zamanı Davranışını Belirtme
 Bir hizmet sözleşmesini tasarladıktan sonra ([Hizmet sözleşmeleri tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)) ve hizmet sözleşmeniz ([hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)) işlemi davranışını yapılandırabilirsiniz. Hizmet çalışma zamanı. Bu konu, sistem tarafından sağlanan hizmet ve işlem davranışları açıklar ve yeni davranışlar oluşturma hakkında daha fazla bilgi bulmak nereye açıklar. Bazı davranışları öznitelik olarak uygulanır, ancak çoğu uygulama yapılandırma dosyası kullanılarak uygulanır veya programlama yoluyla. Hizmet uygulamanızın yapılandırma hakkında daha fazla bilgi için bkz. [Hizmetleri'ni Yapılandırma](../../../docs/framework/wcf/configuring-services.md).  
@@ -27,25 +27,25 @@ Bir hizmet sözleşmesini tasarladıktan sonra ([Hizmet sözleşmeleri tasarlama
 ## <a name="servicebehaviorattribute-and-operationbehaviorattribute"></a>ServiceBehaviorAttribute ve OperationBehaviorAttribute  
  En önemli davranışlarının olan <xref:System.ServiceModel.ServiceBehaviorAttribute> ve <xref:System.ServiceModel.OperationBehaviorAttribute> denetlemek için kullanabileceğiniz öznitelikleri:  
   
--   Örnek yaşam süresi yok  
+- Örnek yaşam süresi yok  
   
--   Eşzamanlılık ve eşitleme desteği  
+- Eşzamanlılık ve eşitleme desteği  
   
--   Yapılandırma davranışı  
+- Yapılandırma davranışı  
   
--   İşlem davranışı  
+- İşlem davranışı  
   
--   Serileştirme davranışı  
+- Serileştirme davranışı  
   
--   Meta veri dönüştürme  
+- Meta veri dönüştürme  
   
--   Oturum yaşam süresi  
+- Oturum yaşam süresi  
   
--   Adres filtreleme ve üst bilgisi işleme  
+- Adres filtreleme ve üst bilgisi işleme  
   
--   Kimliğe bürünme  
+- Kimliğe bürünme  
   
--   Bu öznitelikler kullanmak için öznitelik hizmet veya işlemi uygulamasıyla ilgili kapsam için uygun işaretleyin ve özelliklerini ayarlayın. Örneğin, aşağıdaki kod örneği kullanan bir işlem uygulaması gösterir <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A?displayProperty=nameWithType> özelliği bu işlemin çağıranlar kimliğe bürünme desteği gerektirir.  
+- Bu öznitelikler kullanmak için öznitelik hizmet veya işlemi uygulamasıyla ilgili kapsam için uygun işaretleyin ve özelliklerini ayarlayın. Örneğin, aşağıdaki kod örneği kullanan bir işlem uygulaması gösterir <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A?displayProperty=nameWithType> özelliği bu işlemin çağıranlar kimliğe bürünme desteği gerektirir.  
   
  [!code-csharp[OperationBehaviorAttribute_Impersonation#1](../../../samples/snippets/csharp/VS_Snippets_CFX/operationbehaviorattribute_impersonation/cs/services.cs#1)]
  [!code-vb[OperationBehaviorAttribute_Impersonation#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/operationbehaviorattribute_impersonation/vb/services.vb#1)]  
@@ -77,36 +77,36 @@ Bir hizmet sözleşmesini tasarladıktan sonra ([Hizmet sözleşmeleri tasarlama
 ### <a name="service-behaviors"></a>Hizmet davranışları  
  Aşağıdaki davranışları hizmetleri üzerinde çalışır.  
   
--   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Bu hizmet çalıştırılabilir olup olmadığını belirtmek için bir WCF Hizmeti uygulanan [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uyumluluk modu.  
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Bu hizmet çalıştırılabilir olup olmadığını belirtmek için bir WCF Hizmeti uygulanan [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uyumluluk modu.  
   
--   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Hizmet istemci talep nasıl yetkilendirir denetler.  
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Hizmet istemci talep nasıl yetkilendirir denetler.  
   
--   <xref:System.ServiceModel.Description.ServiceCredentials>. Bir hizmet kimlik bilgisi yapılandırır. Bu sınıf, bir X.509 sertifikası gibi hizmete ilişkin kimlik bilgileri belirtmek için kullanın.  
+- <xref:System.ServiceModel.Description.ServiceCredentials>. Bir hizmet kimlik bilgisi yapılandırır. Bu sınıf, bir X.509 sertifikası gibi hizmete ilişkin kimlik bilgileri belirtmek için kullanın.  
   
--   <xref:System.ServiceModel.Description.ServiceDebugBehavior>. Hata ayıklamayı etkinleştirir ve yardımcı bir WCF hizmeti için bilgi özellikleri.  
+- <xref:System.ServiceModel.Description.ServiceDebugBehavior>. Hata ayıklamayı etkinleştirir ve yardımcı bir WCF hizmeti için bilgi özellikleri.  
   
--   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. Hizmet meta verileri ve ilgili bilgilerin yayınlanmasını denetler.  
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. Hizmet meta verileri ve ilgili bilgilerin yayınlanmasını denetler.  
   
--   <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>. Güvenlik olaylarını denetleme davranışını belirtir.  
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>. Güvenlik olaylarını denetleme davranışını belirtir.  
   
--   <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>. Hizmet performansı ayarlamak etkinleştirdiğiniz çalışma zamanı aktarım ayarları yapılandırır.  
+- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>. Hizmet performansı ayarlamak etkinleştirdiğiniz çalışma zamanı aktarım ayarları yapılandırır.  
   
 ### <a name="endpoint-behaviors"></a>Uç nokta davranışları  
  Aşağıdaki davranışları uç noktalarında çalışır. Bu davranışların çoğu, istemci uygulamalarında kullanılır.  
   
--   <xref:System.ServiceModel.CallbackBehaviorAttribute>. Bir geri çağırma hizmet uygulaması, bir çift yönlü istemci uygulaması olarak yapılandırır.  
+- <xref:System.ServiceModel.CallbackBehaviorAttribute>. Bir geri çağırma hizmet uygulaması, bir çift yönlü istemci uygulaması olarak yapılandırır.  
   
--   <xref:System.ServiceModel.Description.CallbackDebugBehavior>. Bir WCF geri çağırma nesnesi için hizmet hata ayıklamasını etkinleştirir.  
+- <xref:System.ServiceModel.Description.CallbackDebugBehavior>. Bir WCF geri çağırma nesnesi için hizmet hata ayıklamasını etkinleştirir.  
   
--   <xref:System.ServiceModel.Description.ClientCredentials>. Yanı sıra istemci ve hizmet kimlik bilgilerini yapılandırın, hizmet istemci üzerinde kullanım için kimlik bilgisi kimlik doğrulaması ayarları izin verir.  
+- <xref:System.ServiceModel.Description.ClientCredentials>. Yanı sıra istemci ve hizmet kimlik bilgilerini yapılandırın, hizmet istemci üzerinde kullanım için kimlik bilgisi kimlik doğrulaması ayarları izin verir.  
   
--   <xref:System.ServiceModel.Description.ClientViaBehavior>. Taşıma kanalının oluşturulması gereken Tekdüzen Kaynak Tanımlayıcısı (URI) belirtmek için istemciler tarafından kullanılır.  
+- <xref:System.ServiceModel.Description.ClientViaBehavior>. Taşıma kanalının oluşturulması gereken Tekdüzen Kaynak Tanımlayıcısı (URI) belirtmek için istemciler tarafından kullanılır.  
   
--   <xref:System.ServiceModel.Description.MustUnderstandBehavior>. Devre dışı bırakmak için WCF bildirir `MustUnderstand` işleniyor.  
+- <xref:System.ServiceModel.Description.MustUnderstandBehavior>. Devre dışı bırakmak için WCF bildirir `MustUnderstand` işleniyor.  
   
--   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>. Eş zamanlı kullanmak için çalışma zamanı bildirir kanallar için işlemi alır.  
+- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>. Eş zamanlı kullanmak için çalışma zamanı bildirir kanallar için işlemi alır.  
   
--   <xref:System.ServiceModel.Description.TransactedBatchingBehavior>. İşlem desteği alan taşımalar alma işlemlerinde en iyi duruma getirir.  
+- <xref:System.ServiceModel.Description.TransactedBatchingBehavior>. İşlem desteği alan taşımalar alma işlemlerinde en iyi duruma getirir.  
   
 ### <a name="contract-behaviors"></a>Sözleşme davranışları  
  <xref:System.ServiceModel.DeliveryRequirementsAttribute>. Hizmet veya istemci uygulamasına bağlamaları sağlaması gereken özellik gereksinimlerini belirtir.  
@@ -114,11 +114,11 @@ Bir hizmet sözleşmesini tasarladıktan sonra ([Hizmet sözleşmeleri tasarlama
 ### <a name="operation-behaviors"></a>İşlem davranışları  
  Aşağıdaki işlem davranışları işlemleri için seri hale getirme ve işlem denetimleri belirtin.  
   
--   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. Çalışma zamanı davranışını temsil eden <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.  
+- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. Çalışma zamanı davranışını temsil eden <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.  
   
--   <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>. Çalışma zamanı davranışını denetleyen `XmlSerializer` ve bir işlem ile ilişkilendirir.  
+- <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>. Çalışma zamanı davranışını denetleyen `XmlSerializer` ve bir işlem ile ilişkilendirir.  
   
--   <xref:System.ServiceModel.TransactionFlowAttribute>. Bir hizmet işlemi bir işlem üst bilgisi kabul eden düzeyini belirtir.  
+- <xref:System.ServiceModel.TransactionFlowAttribute>. Bir hizmet işlemi bir işlem üst bilgisi kabul eden düzeyini belirtir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

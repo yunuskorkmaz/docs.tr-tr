@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
 ms.openlocfilehash: f1f5a668c5d4f52ef7dd9f60a31c04f2173165f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972373"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>ShouldSerialize ile Varsayılan Değerleri Tanımlama ve Yöntemleri Sıfırlama
 `ShouldSerialize` ve `Reset` özelliği yoksa, bir özelliği için sağlayabilirsiniz isteğe bağlı yöntemlerdir bir basit varsayılan değere sahip. Özelliği bir basit varsayılan değere sahipse, uygulamalıdır <xref:System.ComponentModel.DefaultValueAttribute> ve bunun yerine varsayılan değer özniteliği sınıf oluşturucusuna sağlayın. Bu mekanizmaların birini Tasarımcısı'nda aşağıdaki özellikleri sağlar:  
   
--   Varsayılan değerini değiştirdiyseniz özellik tarayıcısında visual belirtme özelliği sağlar.  
+- Varsayılan değerini değiştirdiyseniz özellik tarayıcısında visual belirtme özelliği sağlar.  
   
--   Kullanıcı özelliği sağ tıklatın ve seçin **sıfırlama** özelliği varsayılan değerine geri yüklemek için.  
+- Kullanıcı özelliği sağ tıklatın ve seçin **sıfırlama** özelliği varsayılan değerine geri yüklemek için.  
   
--   Tasarımcı daha verimli kod oluşturur.  
+- Tasarımcı daha verimli kod oluşturur.  
   
     > [!NOTE]
     >  Ya da uygulama <xref:System.ComponentModel.DefaultValueAttribute> veya sağlayan `Reset` *PropertyName* ve `ShouldSerialize` *PropertyName* yöntemleri. Her ikisini birden kullanmayın.  

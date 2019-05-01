@@ -10,11 +10,11 @@ ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951716"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Yönetilmeyen Kod İçin Güvenli Kodlama Yönergeleri
 Yönetilmeyen kod (örneğin, yerel kod API'leri, Win32 gibi) çağırmak bazı kitaplık kodu gerekiyor. Bu son yönetilen kod için güvenlik çevresi dışarıya gitme anlamına gelir çünkü dikkat gerekiyor. Tarafsız güvenlik kodunuz ise hem kodunuz hem de onu çağıran herhangi bir kod kod iznini yönetilmeyen gerekir (<xref:System.Security.Permissions.SecurityPermission> ile <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> belirtilmiş işareti).  
@@ -25,9 +25,9 @@ Yönetilmeyen kod (örneğin, yerel kod API'leri, Win32 gibi) çağırmak bazı 
   
  Yerel kod içine kod yolu sağlayan herhangi bir yönetilen kod için kötü amaçlı kod olası hedef olduğundan, hangi yönetilmeyen kod belirleme güvenli bir şekilde kullanılabilir ve son derece dikkatli olunmalıdır nasıl kullanılmalıdır gerektirir. Genellikle, yönetilmeyen koda hiçbir zaman doğrudan kısmen güvenilen arayanlara açılmamalıdır. Yönetilmeyen kod kısmen güvenilen kod tarafından çağrılabilir kitaplıkları kullanımda güvenliğini değerlendirme içinde iki birincil ilgili önemli noktalar vardır:  
   
--   **İşlevsellik**. Yönetilmeyen API potansiyel olarak tehlikeli olabilecek işlemleri gerçekleştirmek bir çağırıcıya izin vermeyen bir işlevsellik sağlar mı? Kod erişimi güvenliği, kaynaklara erişim de uygular, böylece API dosyaları, bir kullanıcı arabirimi kullanıp kullanmadığını göz önünde bulundurun için izinleri kullanır veya iş parçacığı, veya bilgi korumalı olup olmadığını gösterir. Aşması durumunda, sarmalama yönetilen koda izin vermeden önce gerekli izinleri talep gerekir. Ayrıca, bir izin tarafından korunmayan olsa da bellek erişimi için katı tür güvenliği sýnýrlandýrýlmasýna gerekir.  
+- **İşlevsellik**. Yönetilmeyen API potansiyel olarak tehlikeli olabilecek işlemleri gerçekleştirmek bir çağırıcıya izin vermeyen bir işlevsellik sağlar mı? Kod erişimi güvenliği, kaynaklara erişim de uygular, böylece API dosyaları, bir kullanıcı arabirimi kullanıp kullanmadığını göz önünde bulundurun için izinleri kullanır veya iş parçacığı, veya bilgi korumalı olup olmadığını gösterir. Aşması durumunda, sarmalama yönetilen koda izin vermeden önce gerekli izinleri talep gerekir. Ayrıca, bir izin tarafından korunmayan olsa da bellek erişimi için katı tür güvenliği sýnýrlandýrýlmasýna gerekir.  
   
--   **Parametre denetimi**. Yaygın bir saldırı geçişleri beklenmeyen parametreleri belirtimi dışında çalışmasına neden girişimi API yönetilmeyen kod yöntemleri açığa. Aralık dışı dizin kullanarak arabellek taşmasına neden veya arka plandaki kod bir hata yararlanabilir herhangi bir parametre olarak uzaklık değerleri bu tür saldırılar, yaygın bir örneği değil. Yönetilmeyen kod API (sonra gerekli taleplerini) kısmen güvenilen için işlevsel olarak güvenli olsa bile, bu nedenle, çağıranlar, yönetilen gerekir ayrıca olsak da istenmeyen çağrı kötü amaçlı koddan yönetilen kullanarak mümkün olduğundan emin olmak için onay parametresi geçerlilik kod kod sarmalayıcı katmanı.  
+- **Parametre denetimi**. Yaygın bir saldırı geçişleri beklenmeyen parametreleri belirtimi dışında çalışmasına neden girişimi API yönetilmeyen kod yöntemleri açığa. Aralık dışı dizin kullanarak arabellek taşmasına neden veya arka plandaki kod bir hata yararlanabilir herhangi bir parametre olarak uzaklık değerleri bu tür saldırılar, yaygın bir örneği değil. Yönetilmeyen kod API (sonra gerekli taleplerini) kısmen güvenilen için işlevsel olarak güvenli olsa bile, bu nedenle, çağıranlar, yönetilen gerekir ayrıca olsak da istenmeyen çağrı kötü amaçlı koddan yönetilen kullanarak mümkün olduğundan emin olmak için onay parametresi geçerlilik kod kod sarmalayıcı katmanı.  
   
 ## <a name="using-suppressunmanagedcodesecurityattribute"></a>SuppressUnmanagedCodeSecurityAttribute Kullanma  
  Sunduğundan ve ardından yönetilmeyen kod çağırmak için bir performans en boy yoktur. Böyle her bir çağrı için güvenlik sistem otomatik olarak her zaman içinde bir yığın ilerlemesi kaynaklanan yönetilmeyen kod iznine ihtiyaç duyar. Assert ve hemen yönetilmeyen kod çağırmak, yığın ilerlemesi anlamsız olabilir:, onay ve yönetilmeyen kod aramanız oluşur.  
@@ -36,11 +36,11 @@ Yönetilmeyen kod (örneğin, yerel kod API'leri, Win32 gibi) çağırmak bazı 
   
  Kullanırsanız **SuppressUnmanagedCodeSecurityAttribute**, şu noktaları kontrol edin:  
   
--   Yönetilmeyen kod girişi noktası iç ya da aksi takdirde, kodunuz dışında erişilemez olun.  
+- Yönetilmeyen kod girişi noktası iç ya da aksi takdirde, kodunuz dışında erişilemez olun.  
   
--   Tüm çağrıların yönetilmeyen koda olası bir güvenlik açığı var. Kodunuzu dolaylı olarak yönetilmeyen koda çağrı ve güvenlik denetimi önlemek için kötü amaçlı kod için bir portal olmadığından emin olun. Uygun izinleri talep.  
+- Tüm çağrıların yönetilmeyen koda olası bir güvenlik açığı var. Kodunuzu dolaylı olarak yönetilmeyen koda çağrı ve güvenlik denetimi önlemek için kötü amaçlı kod için bir portal olmadığından emin olun. Uygun izinleri talep.  
   
--   Aşağıdaki bölümde açıklandığı gibi yönetilmeyen koda tehlikeli yol oluştururken açıkça tanımlamak için bir adlandırma kuralı kullanmak...  
+- Aşağıdaki bölümde açıklandığı gibi yönetilmeyen koda tehlikeli yol oluştururken açıkça tanımlamak için bir adlandırma kuralı kullanmak...  
   
 ## <a name="naming-convention-for-unmanaged-code-methods"></a>Yönetilmeyen kod yöntemleri için adlandırma kuralı  
  Yönetilmeyen kod yöntemleri adlandırmak için kullanışlı ve yüksek oranda önerilen kuralı kuruldu. Tüm yönetilmeyen kod yöntemleri üç kategoriye ayrılır: **güvenli**, **yerel**, ve **güvenli**. Bu anahtar sözcükler çeşitli giriş noktaları yönetilmeyen kod içinde tanımlanmış sınıf adları kullanılabilir. Kaynak kodunda bu anahtar sözcükler sınıf adı olarak eklenmesi gereken `Safe.GetTimeOfDay`, `Native.Xyz`, veya `Unsafe.DangerousAPI`, örneğin. Aşağıdaki tabloda açıklandığı gibi her bu anahtar sözcüklerden biri bu sınıfı kullanan geliştiriciler için yararlı bir güvenlik bilgileri sağlar.  

@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: (Visual Basic) dinamik sorgular derlemek için ifade a
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
 ms.openlocfilehash: 2f91d95f888ab98902cc300afb61c41b62e64050
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966224"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Nasıl yapılır: (Visual Basic) dinamik sorgular derlemek için ifade ağaçları kullanma
 LINQ içinde uygulama veri kaynaklarını hedefleyen yapılandırılmış sorguların temsil etmek için ifade ağaçları kullanılan <xref:System.Linq.IQueryable%601>. Örneğin, LINQ sağlayıcı uygulayan <xref:System.Linq.IQueryable%601> ilişkisel veri deposu sorgulamak için arabirim. Visual Basic Derleyicisi, çalışma zamanında bir ifade ağacı oluşturan koda gibi veri kaynakları hedef sorguları derler. Sorgu sağlayıcısına geçiş ifadesi ağaç veri yapısı ve veri kaynağı için uygun bir sorgu dili küçültmesini.  
@@ -101,13 +101,13 @@ Next
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   Yeni bir **konsol uygulaması** proje.  
+- Yeni bir **konsol uygulaması** proje.  
   
--   Zaten başvurulmayan System.Core.dll öğesine başvuru ekleyin.  
+- Zaten başvurulmayan System.Core.dll öğesine başvuru ekleyin.  
   
--   System.Linq.Expressions ad alanı içerir.  
+- System.Linq.Expressions ad alanı içerir.  
   
--   Örnek kodu kopyalayın ve yapıştırın `Main` `Sub` yordamı.  
+- Örnek kodu kopyalayın ve yapıştırın `Main` `Sub` yordamı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - curves [Windows Forms], drawing
 ms.assetid: 76e92623-4130-4644-b867-faca58bdb3a2
 ms.openlocfilehash: 92e7b1e8b4ce37db633b5dafe212a252b854d1af
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935453"
 ---
 # <a name="constructing-and-drawing-curves"></a>Eğriler Oluşturma ve Çizme
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] eğrileri çeşitli türlerini destekler: üç nokta, yay, eğriler ve Bézier eğrileri. Bir elips, sınırlayıcı dikdörtgeni tarafından tanımlanır; Yay Başlangıç açısı ve bir tarama açısı tarafından tanımlanan bir elips bölümüdür. Kardinal eğri, bir dizi noktaları ve gerilimi parametresi tarafından tanımlanır; eğri dizideki her noktası sorunsuz geçtiği ve gerilimi parametre bends eğrinin şeklini etkiler. Bézier eğri iki uç nokta ve iki denetim noktaları eğri denetim noktaları üzerinden geçmez tanımlanır, ancak denetim noktaları yönünü etkiler ve eğri bir uç noktasından diğerine geçebileceği Kıvrım.  

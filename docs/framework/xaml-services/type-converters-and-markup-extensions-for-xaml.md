@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
 ms.openlocfilehash: e6f8ed3b893319e771eb0af96da7a58a7fad5c9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954276"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları
 Tür dönüştürücülerinde ve İşaretleme uzantılarında Nesne grafiği bileşenleri oluşturmak için XAML türü sistemleri ve XAML yazarları kullanan iki tekniklerdir. Farklı bazı özellikleri paylaşır olsa da, tür dönüştürücüleri ve İşaretleme uzantılarında XAML düğümü akışı temsil edilir. Bu belgede kümesi, tür dönüştürücüleri, biçimlendirme uzantılarını ve benzer yapıları bazen topluca için değer dönüştürücüler adlandırılır.  
@@ -22,13 +22,13 @@ Tür dönüştürücülerinde ve İşaretleme uzantılarında Nesne grafiği bil
 ## <a name="value-converters"></a>Değer dönüştürücüler  
  XAML içinde değer dönüştürücüler çeşitli senaryolar için kullanılır. Aşağıdaki liste, XAML değer dönüştürücüler farklı türde gösterir:  
   
--   Tür dönüştürücü  
+- Tür dönüştürücü  
   
--   İşaretleme uzantısı  
+- İşaretleme uzantısı  
   
--   Değer seri hale getirici  
+- Değer seri hale getirici  
   
--   İlgili sınıfı veya XAML metni sözdizimi mantığı sağlayan destek sınıfı  
+- İlgili sınıfı veya XAML metni sözdizimi mantığı sağlayan destek sınıfı  
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Tür dönüştürücüleri  

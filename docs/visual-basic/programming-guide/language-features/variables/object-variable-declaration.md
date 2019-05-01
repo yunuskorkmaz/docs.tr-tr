@@ -13,11 +13,11 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
 ms.openlocfilehash: 4a3ef3a8254153fa8695ffacd9829ca9316d77a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959984"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Nesne Değişken Bildirimi (Visual Basic)
 Bir normal bir bildirim deyiminin bir nesne değişkenini bildirmek için kullanın. Veri türü için ya da belirttiğiniz `Object` (diğer bir deyişle, [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)) veya nesne olduğu oluşturulacak daha belirli bir sınıf.  
@@ -49,19 +49,19 @@ Dim objC As System.OperatingSystem
 ### <a name="advantages-of-early-binding"></a>Erken bağlama avantajları  
  Belirli bir sınıf olarak bir nesne değişkeni bildirme çeşitli avantajlar sağlar:  
   
--   Otomatik tür denetleme  
+- Otomatik tür denetleme  
   
--   Belirli bir sınıfın tüm üyeleri için erişim garantisi  
+- Belirli bir sınıfın tüm üyeleri için erişim garantisi  
   
--   Kod Düzenleyicisi'nde Microsoft IntelliSense desteği  
+- Kod Düzenleyicisi'nde Microsoft IntelliSense desteği  
   
--   Geliştirilmiş kod okunabilirliğini  
+- Geliştirilmiş kod okunabilirliğini  
   
--   Kodunuzu daha az hataları  
+- Kodunuzu daha az hataları  
   
--   Hataları sırasında yakalanan derleme zamanı yerine çalışma zamanı  
+- Hataları sırasında yakalanan derleme zamanı yerine çalışma zamanı  
   
--   Daha hızlı kod yürütme  
+- Daha hızlı kod yürütme  
   
 ## <a name="access-to-object-variable-members"></a>Nesne değişkeni üye erişimi  
  Zaman `Option Strict` etkinleştirilmişse `On`, yalnızca yöntemleri ve özellikleri ile kaydedilebilmeniz bu sınıfın bir nesne değişkenine erişebilir. Aşağıdaki örnek bunu göstermektedir.  
