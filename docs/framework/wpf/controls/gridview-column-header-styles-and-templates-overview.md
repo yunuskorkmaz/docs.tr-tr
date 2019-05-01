@@ -9,11 +9,11 @@ helpviewer_keywords:
 - GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
 ms.openlocfilehash: 83643d8acea706bad439683702e4228d240b97bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911371"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>GridView Sütun Üstbilgi Stil ve Şablonlarına Genel Bakış
 Bu genel bakışta bir sütun başlığını özelleştirmek için kullandığınız özellikler için öncelik sırasını anlatır <xref:System.Windows.Controls.GridView> görünüm modu bir <xref:System.Windows.Controls.ListView> denetimi.  

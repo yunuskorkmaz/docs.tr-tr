@@ -26,11 +26,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
 ms.openlocfilehash: f14cc28960af28530bda9a78c1309dea10c18b8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864357"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Yordamları Aşırı Yüklemeye İlişkin Düşünceler (Visual Basic)
 Bir yordamı aşırı yükleme, farklı bir kullanmalısınız *imza* aşırı yüklü her sürüm için. Bu, genellikle her sürüm başka bir parametre listesi belirtmelisiniz anlamına gelir. Daha fazla bilgi için bkz: "Farklı imza" [yordam aşırı yüklemesi](./procedure-overloading.md).  
@@ -50,14 +50,14 @@ Bir yordamı aşırı yükleme, farklı bir kullanmalısınız *imza* aşırı y
 #### <a name="when-to-use-overloaded-versions"></a>Ne zaman aşırı yüklenmiş sürümleri kullanın  
  Aşağıdaki durumlarda bir dizi aşırı yüklü sürümlerini tanımlama düşünebilirsiniz:  
   
--   Yordam kodunda mantığı olup çağrıldığı koda bir isteğe bağlı bağımsız değişkeni veya sağlar bağlı olarak önemli ölçüde farklılık gösterir.  
+- Yordam kodunda mantığı olup çağrıldığı koda bir isteğe bağlı bağımsız değişkeni veya sağlar bağlı olarak önemli ölçüde farklılık gösterir.  
   
--   Yordam kodu güvenilir bir şekilde çağıran kod tarafından sağlanan bağımsız değişken isteğe bağlı olup olmadığını test edilemez. Bu durumda, yoksa hiçbir olası aday varsayılan bir değer için örneğin, çağıran kodun sağlamak için beklenebilir değil.  
+- Yordam kodu güvenilir bir şekilde çağıran kod tarafından sağlanan bağımsız değişken isteğe bağlı olup olmadığını test edilemez. Bu durumda, yoksa hiçbir olası aday varsayılan bir değer için örneğin, çağıran kodun sağlamak için beklenebilir değil.  
   
 #### <a name="when-to-use-optional-parameters"></a>Olduğunda isteğe bağlı parametreler kullanılacak  
  Bir veya daha fazla isteğe bağlı parametreler aşağıdaki durumlarda tercih edebilirsiniz:  
   
--   Çağıran kod, isteğe bağlı bağımsız değişken sağlamıyor çalıştırıldığında yalnızca gerekli eylem parametresi varsayılan değerine ayarlamaktır. Bir veya daha fazla tek bir sürüm tanımlarsanız, böyle bir durumda yordamının kodunu daha az karmaşık olabilir `Optional` parametreleri.  
+- Çağıran kod, isteğe bağlı bağımsız değişken sağlamıyor çalıştırıldığında yalnızca gerekli eylem parametresi varsayılan değerine ayarlamaktır. Bir veya daha fazla tek bir sürüm tanımlarsanız, böyle bir durumda yordamının kodunu daha az karmaşık olabilir `Optional` parametreleri.  
   
  Daha fazla bilgi için [isteğe bağlı parametreler](./optional-parameters.md).  
   
@@ -67,18 +67,18 @@ Bir yordamı aşırı yükleme, farklı bir kullanmalısınız *imza* aşırı y
 #### <a name="when-to-use-overloaded-versions"></a>Ne zaman aşırı yüklenmiş sürümleri kullanın  
  Aşağıdaki durumlarda bir dizi aşırı yüklü sürümlerini tanımlama düşünebilirsiniz:  
   
--   Çağıran kod hiçbir zaman birden çok az sayıda değerler için parametre dizisi geçen biliyor.  
+- Çağıran kod hiçbir zaman birden çok az sayıda değerler için parametre dizisi geçen biliyor.  
   
--   Yordam kodunda mantığı çağıran kod geçirir kaç değerlerine bağlı olarak önemli ölçüde farklılık gösterir.  
+- Yordam kodunda mantığı çağıran kod geçirir kaç değerlerine bağlı olarak önemli ölçüde farklılık gösterir.  
   
--   Çağıran kod, farklı veri türleri değerlerinin geçmesini sağlayabilirsiniz.  
+- Çağıran kod, farklı veri türleri değerlerinin geçmesini sağlayabilirsiniz.  
   
 #### <a name="when-to-use-a-parameter-array"></a>Ne zaman bir parametre dizisi kullanılır?  
  Daha iyi tarafından sunulan bir `ParamArray` parametre aşağıdaki durumlarda:  
   
--   Çağıran kod için parametre dizisi geçirebilirsiniz kaç değer tahmin etmek mümkün değildir ve büyük bir sayı olabilir.  
+- Çağıran kod için parametre dizisi geçirebilirsiniz kaç değer tahmin etmek mümkün değildir ve büyük bir sayı olabilir.  
   
--   Yordam mantıksal kendisini çağıran kod geçirir, her değer esas olarak aynı işlemleri gerçekleştirmek tüm değerleri üzerinden yineleme için uygundur.  
+- Yordam mantıksal kendisini çağıran kod geçirir, her değer esas olarak aynı işlemleri gerçekleştirmek tüm değerleri üzerinden yineleme için uygundur.  
   
  Daha fazla bilgi için [parametre dizileri](./parameter-arrays.md).  
   
@@ -96,11 +96,11 @@ Bir yordamı aşırı yükleme, farklı bir kullanmalısınız *imza* aşırı y
 ## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Bir ParamArray parametresiyle için örtük aşırı yüklemeleri  
  Derleyici bir yordama göz önünde bulundurur bir [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) ne çağıran kod parametre dizisine gibi geçirir birbirinden farklı aşırı yüklemeler, sonsuz bir sayıda parametre:  
   
--   Ne zaman çağıran kodu bir bağımsız değişken sağlamıyor için bir aşırı yükleme `ParamArray`  
+- Ne zaman çağıran kodu bir bağımsız değişken sağlamıyor için bir aşırı yükleme `ParamArray`  
   
--   Çağıran kod tek boyutlu bir dizi zaman kaynakları için bir aşırı `ParamArray` öğe türü  
+- Çağıran kod tek boyutlu bir dizi zaman kaynakları için bir aşırı `ParamArray` öğe türü  
   
--   Her bir pozitif tamsayı için bir aşırı yükleme için çağıran kod sağlar, her biri bağımsız değişken sayısı olduğunda `ParamArray` öğe türü  
+- Her bir pozitif tamsayı için bir aşırı yükleme için çağıran kod sağlar, her biri bağımsız değişken sayısı olduğunda `ParamArray` öğe türü  
   
  Aşağıdaki bildirimleri bu örtük aşırı yüklemeler göstermektedir.  
   
@@ -115,11 +115,11 @@ Bir yordamı aşırı yükleme, farklı bir kullanmalısınız *imza* aşırı y
 ## <a name="typeless-programming-as-an-alternative-to-overloading"></a>Aşırı yükleme alternatif olarak yazısız programlama  
  Farklı veri türleri için bir parametre geçirmek çağıran kod izin vermek istiyorsanız, alternatif bir yaklaşım yazısız programlama ' dir. Tür denetleme anahtara ayarlayabilirsiniz `Off` ya da ile [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md) veya [/optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) derleyici seçeneği. Ardından parametrenin veri türü bildirmek gerekmez. Ancak, bu yaklaşım, aşırı yüklemesi için kıyasla aşağıdaki dezavantajları bulunur:  
   
--   Yazısız programlama yürütme daha az verimli kod üretir.  
+- Yazısız programlama yürütme daha az verimli kod üretir.  
   
--   Yordamı, geçirilen düşünmektedir her veri türü için test etmeniz gerekir.  
+- Yordamı, geçirilen düşünmektedir her veri türü için test etmeniz gerekir.  
   
--   Derleyici çağıran kod yordamı desteklemediği bir veri türü geçerse hata sinyali vermek olamaz.  
+- Derleyici çağıran kod yordamı desteklemediği bir veri türü geçerse hata sinyali vermek olamaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

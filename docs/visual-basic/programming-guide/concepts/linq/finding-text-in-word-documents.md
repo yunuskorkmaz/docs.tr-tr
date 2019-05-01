@@ -3,11 +3,11 @@ title: (Visual Basic) Word belgelerinde metin bulma
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
 ms.openlocfilehash: f8414662e2013b152e471d6c4c003e602c0d277d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931553"
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>(Visual Basic) Word belgelerinde metin bulma
 Bu konu faydalı bir şey için önceki sorguları genişletir: bir dizenin tüm örnekleri belgede bulun.  
@@ -305,7 +305,7 @@ StyleName:Code ><
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Sonraki bölümde WordprocessingML belgelerinin hakkında daha fazla bilgi verilmektedir:  
   
--   [Ayrıntılar Office Open XML WordprocessingML belgelerinin (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+- [Ayrıntılar Office Open XML WordprocessingML belgelerinin (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

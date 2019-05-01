@@ -5,13 +5,13 @@ author: jamesnk
 ms.author: mairaw
 ms.date: 12/10/2018
 ms.openlocfilehash: e6f811039f74649564cbfb42ef67e0a406e4cd70
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909785"
 ---
-# <a name="versioning"></a>Sürüm oluşturma
+# <a name="versioning"></a>Sürüm Oluşturma
 
 Yazılım kitaplığı sürüm 1.0 nadiren tamamlanmıştır. İyi kitaplıkları ekleme özellikleri, hataları düzeltiyor ve performansı iyileştirme zamanla evrim. Mevcut kullanıcıları bozmadan her sürümü ile ek değer sağlayan bir .NET Kitaplığı'nın yeni sürümleri serbest bırakabilirsiniz önemlidir.
 

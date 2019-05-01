@@ -15,11 +15,11 @@ ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0aef9a1c81172cda9b6df4574edb331e0ed137ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61860717"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Nasıl yapılır: Gidiş Dönüş Tarih ve Saat Değerleri
 Birçok uygulamada, bir tarih ve saat değerini, tek bir nokta zaman içinde kesin bir şekilde tanımlamak için tasarlanmıştır. Bu konuda, kaydetme ve geri yükleme işlemi gösterilmektedir bir <xref:System.DateTime> değeri bir <xref:System.DateTimeOffset> değer ve bir tarih ve saat değeri zaman ile kaydedilen değer aynı zamanda geri yüklenen değeri tanımlar, böylece bilgi bölge.  
@@ -83,21 +83,21 @@ Birçok uygulamada, bir tarih ve saat değerini, tek bir nokta zaman içinde kes
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örneği gerektirir:  
   
--   Aşağıdaki ad alanlarını C# ile içe aktarılacağını `using` ifadelerini veya Visual Basic `Imports` ifadeleri:  
+- Aşağıdaki ad alanlarını C# ile içe aktarılacağını `using` ifadelerini veya Visual Basic `Imports` ifadeleri:  
   
-    -   <xref:System> (Yalnızca C#).  
+    - <xref:System> (Yalnızca C#).  
   
-    -   <xref:System.Globalization?displayProperty=nameWithType>.  
+    - <xref:System.Globalization?displayProperty=nameWithType>.  
   
-    -   <xref:System.IO?displayProperty=nameWithType>.  
+    - <xref:System.IO?displayProperty=nameWithType>.  
   
-    -   <xref:System.Runtime.Serialization?displayProperty=nameWithType>.  
+    - <xref:System.Runtime.Serialization?displayProperty=nameWithType>.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
+    - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
   
--   Bir System.Core.dll başvurusu.  
+- Bir System.Core.dll başvurusu.  
   
--   Her örnek, dışındaki kod `DateInTimeZone` sınıfı, bir sınıf veya Visual Basic module'u içinde bulunan yöntemlerdeki sarmalanmış ve çağrılır `Main` yöntemi.  
+- Her örnek, dışındaki kod `DateInTimeZone` sınıfı, bir sınıf veya Visual Basic module'u içinde bulunan yöntemlerdeki sarmalanmış ve çağrılır `Main` yöntemi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

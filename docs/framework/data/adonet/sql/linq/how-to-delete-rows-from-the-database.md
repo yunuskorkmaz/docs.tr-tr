@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
 ms.openlocfilehash: 401d445e49e3712b8c59fa9bc9a2e53500a5db16
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903909"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>Nasıl yapılır: Veritabanından Satır Silme
 Buna karşılık gelen kaldırarak bir veritabanındaki satırları silebilirsiniz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ilgili tablo koleksiyonu nesneleri. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygun SQL yaptığınız değişiklikleri çevirir `DELETE` komutları.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] desteklemez veya art arda silme işlemleri tanıyın. Bunu yönelik kısıtlamalar içeren bir tabloda bir satır silmek istiyorsanız, aşağıdaki görevlerden birini tamamlamanız gerekir:  
   
--   Ayarlama `ON DELETE CASCADE` veritabanında yabancı anahtar kısıtlaması kuralı.  
+- Ayarlama `ON DELETE CASCADE` veritabanında yabancı anahtar kısıtlaması kuralı.  
   
--   Kendi kodunuzu ilk üst nesnenin silinmesini engelleyen alt nesneleri silmek için kullanın.  
+- Kendi kodunuzu ilk üst nesnenin silinmesini engelleyen alt nesneleri silmek için kullanın.  
   
  Aksi takdirde, bir özel durum oluşturulur. İkinci kod örneğinde bu konunun ilerleyen bölümlerinde bkz.  
   

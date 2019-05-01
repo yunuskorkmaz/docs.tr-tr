@@ -1,5 +1,5 @@
 ---
-title: DOM özniteliklerine erişim
+title: DOM Özniteliklerine Erişim
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08919e05f8396d37cb50ca24989b86000c854411
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921647"
 ---
-# <a name="accessing-attributes-in-the-dom"></a>DOM özniteliklerine erişim
+# <a name="accessing-attributes-in-the-dom"></a>DOM Özniteliklerine Erişim
 
 Öznitelikleri öğesi, öğenin alt öğelerine özellikleridir. Bu ayrım eşdüzey, üst ve alt düğümleri XML belge nesne modeli (DOM) gezinmek için kullanılan yöntemleri nedeniyle büyük/küçük harf önemlidir. Örneğin, **PreviousSibling** ve **NextSibling** yöntemleri öğeden bir özniteliği veya öznitelikleri arasında gezinmek için kullanılmaz. Bunun yerine bir öznitelik bir öğenin bir özelliktir ve sahibi bir öğe, sahip bir **OwnerElement** özelliği değil bir **özelliğindeki** özelliği ve gezinti farklı yöntemleri vardır.
 

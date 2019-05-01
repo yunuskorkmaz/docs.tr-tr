@@ -10,11 +10,11 @@ helpviewer_keywords:
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
 ms.openlocfilehash: f0196457235ad77df545a367573f62b43209269d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906990"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Kullanıcı Tanımlı Sabitler (Visual Basic)
 Bir sayı veya dize değişmez yerini alır, anlamlı bir ad bir sabittir. Sabitler adından da anlaşılacağı gibi bir uygulamanın yürütülmesini sabit kalması değerlerini depolar. Denetimleri veya birlikte çalıştığınız bileşenleri tarafından tanımlanan sabitleri kullanabilir veya kendi oluşturabilirsiniz. Kendiniz oluşturduğunuz sabitleri olarak açıklanmıştır *kullanıcı tanımlı*.  
@@ -37,13 +37,13 @@ Bir sayı veya dize değişmez yerini alır, anlamlı bir ad bir sabittir. Sabit
 ## <a name="scope-of-user-defined-constants"></a>Kullanıcı tanımlı sabitler kapsamı  
  A `Const` deyiminin kapsamı değil, aynı konumda bildirilen bir değişken ile aynı. Kapsam aşağıdaki yollardan birini belirtebilirsiniz:  
   
--   Yalnızca bir yordam içinde var olan bir sabit oluşturmak için bu yordam içinde bildirin.  
+- Yalnızca bir yordam içinde var olan bir sabit oluşturmak için bu yordam içinde bildirin.  
   
--   Bir sınıf içindeki tüm yordamlara, ancak bu modül dışında herhangi bir kod için kullanılabilir bir sabit oluşturmak için sınıf bildirimleri bölümünde bildirin.  
+- Bir sınıf içindeki tüm yordamlara, ancak bu modül dışında herhangi bir kod için kullanılabilir bir sabit oluşturmak için sınıf bildirimleri bölümünde bildirin.  
   
--   Bir derlemenin tüm üyeleri, ancak derlemenin dışından istemciler için kullanılabilir bir sabit değer oluşturmak için kullanarak bildirin `Friend` sınıf bildirimleri bölümünde anahtar sözcüğü.  
+- Bir derlemenin tüm üyeleri, ancak derlemenin dışından istemciler için kullanılabilir bir sabit değer oluşturmak için kullanarak bildirin `Friend` sınıf bildirimleri bölümünde anahtar sözcüğü.  
   
--   Uygulamanın tamamında kullanılabilir bir sabit oluşturmak için kullanarak bildirin `Public` bildirimlerinde anahtar sözcük bölümünde sınıfı.  
+- Uygulamanın tamamında kullanılabilir bir sabit oluşturmak için kullanarak bildirin `Public` bildirimlerinde anahtar sözcük bölümünde sınıfı.  
   
  Daha fazla bilgi için [nasıl yapılır: Bir sabit bildirme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md).  
   

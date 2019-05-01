@@ -11,11 +11,11 @@ helpviewer_keywords:
 - IBindingList interface
 ms.assetid: 834cc15c-50bc-4a8b-a610-313d6a217357
 ms.openlocfilehash: 2463a9c77a9836ff251e799056cc5131bf6c99e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800864"
 ---
 # <a name="how-to-implement-the-itypedlist-interface"></a>Nasıl yapılır: ITypedList Arabirimini Uygulama
 Uygulama <xref:System.ComponentModel.ITypedList> bağlanabilir bir listesi için şema bulunmasını etkinleştirmek için arabirim.  
@@ -35,7 +35,7 @@ Uygulama <xref:System.ComponentModel.ITypedList> bağlanabilir bir listesi için
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular.  
+- System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -3,11 +3,11 @@ title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
 ms.openlocfilehash: 24cf36aba81b5bb31eaac475361e2d07bc6f8b12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788407"
 ---
 # <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment >
 Bu öğe, belirli taşıma için hizmet barındırma ortamını gösteren türü tanımlar. Bu öğe boş ise, varsayılan türü kullanılır. Bu öğe yalnızca uygulama veya makine düzeyinde yapılandırma dosyalarını kullanılabilir.  
@@ -63,25 +63,25 @@ Bu öğe, belirli taşıma için hizmet barındırma ortamını gösteren türü
 ## <a name="remarks"></a>Açıklamalar  
  Varsayılan olarak, çalışma yan yana barındırılan uygulama etki alanı (AppDomain) içinde ASP.NET ile WCF hizmetleri. WCF ve ASP.NET aynı AppDomain içinde bulunabilir olsa da, WCF istekleri varsayılan olarak ASP.NET HTTP ardışık düzeni tarafından işlenmez. Sonuç olarak, ASP.NET uygulama platformu çeşitli öğeleri, WCF hizmetleri için kullanılamaz. Bunlar  
   
--   ASP.NET dosya/URL yetkilendirmesi  
+- ASP.NET dosya/URL yetkilendirmesi  
   
--   ASP.NET kimliğe bürünme  
+- ASP.NET kimliğe bürünme  
   
--   Tanımlama bilgisi tabanlı oturum durumu  
+- Tanımlama bilgisi tabanlı oturum durumu  
   
--   HttpContext.Current  
+- HttpContext.Current  
   
--   Özel HTTP aracılığıyla işlem hattı genişletilebilirliği  
+- Özel HTTP aracılığıyla işlem hattı genişletilebilirliği  
   
  WCF hizmetlerinizi ASP.NET bağlamda işlev ve yalnızca HTTP üzerinden iletişim kurması gerekiyorsa, WCF'ın ASP.NET uyumluluk modunun kullanabilirsiniz. Bu mod üzerinde ne zaman etkin `aspNetCompatibilityEnabled` özniteliği `true` uygulama düzeyinde. Hizmet uygulamaları, uyumluluk modu kullanarak çalıştırmak için kendi yeteneği bildirmelidir <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> sınıfı. Uyumluluk modu etkinleştirildiğinde  
   
--   ASP.NET dosya/URL yetkilendirmesi, WCF yetkilendirme önce uygulanır. Bir yetkilendirme kararı, aktarım düzeyinde isteğin kimliğini temel alır. İleti düzeyinde kimlikleri yok sayılır.  
+- ASP.NET dosya/URL yetkilendirmesi, WCF yetkilendirme önce uygulanır. Bir yetkilendirme kararı, aktarım düzeyinde isteğin kimliğini temel alır. İleti düzeyinde kimlikleri yok sayılır.  
   
--   ASP.NET kimliğe bürünme bağlamda yürütülecek WCF Hizmeti işlemlerini başlatın. ASP.NET kimliğe bürünme hem de WCF kimliğe bürünme belirli bir hizmet için etkinleştirilip etkinleştirilmediğini WCF kimliğe bürünülmüş bağlamdaki geçerlidir.  
+- ASP.NET kimliğe bürünme bağlamda yürütülecek WCF Hizmeti işlemlerini başlatın. ASP.NET kimliğe bürünme hem de WCF kimliğe bürünme belirli bir hizmet için etkinleştirilip etkinleştirilmediğini WCF kimliğe bürünülmüş bağlamdaki geçerlidir.  
   
--   WCF hizmet kodundan HttpContext.Current kullanılabilir ve HTTP olmayan uç noktaları açıklamanızı hizmetler engellenir.  
+- WCF hizmet kodundan HttpContext.Current kullanılabilir ve HTTP olmayan uç noktaları açıklamanızı hizmetler engellenir.  
   
--   WCF istekleri ASP.NET işlem hattı tarafından işlenir. Gelen istekleri davranacak şekilde yapılandırılmış HttpModules işlem WCF istekleri de olabilir. Bunlar, ASP.NET platform bileşenleri içerebilir (örneğin, <xref:System.Web.SessionState.SessionStateModule>), üçüncü taraf özel modüller yanı sıra.  
+- WCF istekleri ASP.NET işlem hattı tarafından işlenir. Gelen istekleri davranacak şekilde yapılandırılmış HttpModules işlem WCF istekleri de olabilir. Bunlar, ASP.NET platform bileşenleri içerebilir (örneğin, <xref:System.Web.SessionState.SessionStateModule>), üçüncü taraf özel modüller yanı sıra.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneği, ASP uyumluluk modunu etkinleştirmek gösterilmektedir.  

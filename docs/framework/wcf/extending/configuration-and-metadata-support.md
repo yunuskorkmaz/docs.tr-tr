@@ -3,11 +3,11 @@ title: Yapılandırma ve Meta Veri Desteği
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
 ms.openlocfilehash: abc9177fcc7b338a365d61721b63041ddcd68ab9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858370"
 ---
 # <a name="configuration-and-metadata-support"></a>Yapılandırma ve Meta Veri Desteği
 Bu konu, bağlamalar ve bağlama öğeleri yapılandırma ve meta veri desteğini etkinleştirmek açıklar.  
@@ -15,13 +15,13 @@ Bu konu, bağlamalar ve bağlama öğeleri yapılandırma ve meta veri desteğin
 ## <a name="overview-of-configuration-and-metadata"></a>Yapılandırma ve meta veri genel bakış  
  İsteğe bağlı öğeler 1, 2 ve 4 aşağıdaki görevleri bu konuda ele alınmıştır, [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md) görev listesi.  
   
--   Yapılandırma dosyası bir bağlama öğesi desteğini etkinleştirme.  
+- Yapılandırma dosyası bir bağlama öğesi desteğini etkinleştirme.  
   
--   Yapılandırma dosyası bağlama desteğini etkinleştirme.  
+- Yapılandırma dosyası bağlama desteğini etkinleştirme.  
   
--   WSDL ve ilke onaylamaları için bir bağlama öğesi veriliyor.  
+- WSDL ve ilke onaylamaları için bir bağlama öğesi veriliyor.  
   
--   WSDL ve ilke Onaylamalar eklemek ve bağlama veya bağlama öğesi yapılandırmak için tanımlayıcı.  
+- WSDL ve ilke Onaylamalar eklemek ve bağlama veya bağlama öğesi yapılandırmak için tanımlayıcı.  
   
  Kullanıcı tanımlı bağlamalar ve bağlama öğeleri oluşturma hakkında daha fazla bilgi için bkz: [Creating User-Defined bağlamaları](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md) ve [BindingElement oluşturma](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)sırasıyla.  
   

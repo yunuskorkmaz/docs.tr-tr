@@ -6,11 +6,11 @@ helpviewer_keywords:
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
 ms.openlocfilehash: 1eefd82a149d0bc215ca441e92c7d737a744b1e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856563"
 ---
 # <a name="data-transfer-and-serialization"></a>Veri Aktarma ve Seri Hale Getirme
 Bağlı bir sistemde, hizmetler ve istemcileri üzerinde herhangi bir görevi tamamlamak için veri alışverişi bağlıdır. Bir hizmet veya istemci bir geliştirici olarak, Windows Communication Foundation (WCF) veri ve veri seri hale getirme verimli ve sürdürmek daha kolay olan uygulamalar oluşturmak için işleme biçimini de anlamanız gerekir.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - controls [WPF], Menu
 ms.assetid: 67df6de5-db96-4c71-b752-af90729a6537
 ms.openlocfilehash: a3250cfd3fd651cb4ed3c4fd6975f5b5c89195f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942161"
 ---
 # <a name="menu-overview"></a>Menüye Genel Bakış
 <xref:System.Windows.Controls.Menu> Sınıfı komutlara ve olay işleyicilerine hiyerarşik sırayla ilişkili öğeleri düzenlemenize olanak sağlar. Her <xref:System.Windows.Controls.Menu> öğesi içeren bir koleksiyon, <xref:System.Windows.Controls.MenuItem> öğeleri.  

@@ -3,11 +3,11 @@ title: 'Örnek XML Dosyası: Bir Namespace1 alanında sayısal veriler'
 ms.date: 07/20/2015
 ms.assetid: f01cc0a1-fb55-4b42-8380-16f4be47d6f4
 ms.openlocfilehash: 09954798615954d238273b3d4ed71b5ff475394f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786977"
 ---
 # <a name="sample-xml-file-numerical-data-in-a-namespace"></a>Örnek XML Dosyası: Bir Ad Alanında Sayısal Veriler
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Bu dosya, birleşimi, ortalama ve Gruplama için sayısal veriler içerir. Bir ad alanında XML'dir.  

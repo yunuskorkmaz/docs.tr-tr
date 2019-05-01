@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
 ms.openlocfilehash: 17c4d4289cf90b66d52986c054d4807ecff2b3d8
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793893"
 ---
 # <a name="remove"></a>\<kaldırma >
 Belirtilen güvenlik belirteci işleyicisi belirteci işleyicisi koleksiyondan kaldırır.  
@@ -41,7 +41,7 @@ Belirtilen güvenlik belirteci işleyicisi belirteci işleyicisi koleksiyondan k
 |türü|Kaldırılacak belirteç işleyicisinin CLR tür adı. Belirtme hakkında daha fazla bilgi için `type` özniteliği için bkz: [özel tür başvurularını](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references). Gerekli.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Hiçbiri  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

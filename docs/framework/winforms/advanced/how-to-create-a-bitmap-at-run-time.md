@@ -9,11 +9,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], examples [Visual Basic]
 ms.assetid: 737bae30-e599-4e1d-bf30-bab8280b32be
 ms.openlocfilehash: 3acaf18afa621a182c26f00c0594516ac573e281
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937741"
 ---
 # <a name="how-to-create-a-bitmap-at-run-time"></a>Nasıl yapılır: Çalışma Zamanında Bit Eşlem Oluşturma
 Bu örneği oluşturur ve çizer bir <xref:System.Drawing.Bitmap> nesne ve var olan bir Windows Formları içinde görüntüler <xref:System.Windows.Forms.PictureBox> denetimi.  
@@ -25,7 +25,7 @@ Bu örneği oluşturur ve çizer bir <xref:System.Drawing.Bitmap> nesne ve var o
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Sistem, System.Drawing ve System.Windows.Forms derlemeleri alır bir Windows formu.  
+- Sistem, System.Drawing ve System.Windows.Forms derlemeleri alır bir Windows formu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

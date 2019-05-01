@@ -27,11 +27,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
 ms.openlocfilehash: 9121041f936c091cda0e2af41b4f5be8d826d582
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906639"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Nasıl yapılır: (Visual Basic) farklı veri türlerinde aynı işlevselliği sağlayabilen bir sınıf tanımlama
 Bir sınıf tanımlayabilir, farklı veri türlerinde aynı işlevselliği sağlayan nesneleri oluşturabileceğiniz öğesinden. Bunu yapmak için bir veya daha fazla belirttiğiniz *tür parametrelerindeki* tanımında. Sınıf çeşitli veri türlerini kullanan nesneler için bir şablon olarak hizmet verebilir. Bu şekilde tanımlanan bir sınıfa bir *genel sınıf*.  
@@ -50,11 +50,11 @@ Bir sınıf tanımlayabilir, farklı veri türlerinde aynı işlevselliği sağl
   
 4. Kodunuzu basit atama dışında bir tür parametresi üzerinde işlemler gerçekleştirirse, o tür parametreyle izleyin bir `As` yan tümcesi bir veya daha fazla eklemek için *kısıtlamaları*. Kısıtlama türü, tür parametresi için sağlanan aşağıdaki gibi bir gereksinimi karşılayan garanti eder:  
   
-    -   Bir işlem gibi destekleyen `>`, kodunuzu gerçekleştiren  
+    - Bir işlem gibi destekleyen `>`, kodunuzu gerçekleştiren  
   
-    -   Kodunuzu erişen bir yöntemi gibi bir üye destekler  
+    - Kodunuzu erişen bir yöntemi gibi bir üye destekler  
   
-    -   Parametresiz bir Oluşturucu  
+    - Parametresiz bir Oluşturucu  
   
      Kısıtlamalardan belirtmezseniz, yalnızca işlemler ve kodunuzu kullanabileceğiniz üyeleri tarafından desteklenen olanlardır [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md). Daha fazla bilgi için [tür listesi](../../../../visual-basic/language-reference/statements/type-list.md).  
   

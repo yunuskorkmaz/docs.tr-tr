@@ -5,11 +5,11 @@ helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
 ms.openlocfilehash: 198b664ff52b42b7f393eec3e8162f3a12037d9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935531"
 ---
 # <a name="wcf-syndication"></a>WCF Dağıtımı
 Windows Communication Foundation (WCF) okuyun ve bunları oluşturduğunuz yanı sıra bunları bir hizmet uç noktasında kullanıma olanak tanıyan dağıtım akışlarını Atom, RSS veya diğer özel biçimler kolayca çalışmak için destek sağlar. Bu bölümdeki konular bu programlama modeli için dağıtım ayrıntılı açıklar.  

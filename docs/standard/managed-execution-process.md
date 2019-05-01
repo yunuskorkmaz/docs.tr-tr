@@ -13,11 +13,11 @@ ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909758"
 ---
 # <a name="managed-execution-process"></a>Yönetilen Yürütme İşlemi
 <a name="introduction"></a> Yönetilen yürütme işlemi, bu konunun ilerleyen bölümlerinde ayrıntılı ele alınmıştır aşağıdaki adımları içerir:  
@@ -58,9 +58,9 @@ ms.locfileid: "59336154"
 ## <a name="compiling-msil-to-native-code"></a>MSIL olarak yerel kod derleme  
  Microsoft Ara dilini (MSIL) çalıştırmadan önce hedef makine mimarisi için yerel kod için ortak dil çalışma zamanı karşı derlenmelidir. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Bu dönüşümü gerçekleştirmek için iki yol sunar:  
   
--   .NET Framework just-in-time (JIT) derleyicisi.  
+- .NET Framework just-in-time (JIT) derleyicisi.  
   
--   .NET Framework [Ngen.exe (yerel Görüntü Oluşturucu)](../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+- .NET Framework [Ngen.exe (yerel Görüntü Oluşturucu)](../../docs/framework/tools/ngen-exe-native-image-generator.md).  
   
 ### <a name="compilation-by-the-jit-compiler"></a>Derleme için JIT derleyicisi tarafından  
  JIT derlemesi yerel kod isteğe bağlı olarak uygulama çalışma zamanı, bir derlemenin içeriğini ne zaman yüklendi ve yürütülen MSIL dönüştürür. Geliştiriciler, JIT Derleyici her desteklenen CPU mimarisine yönelik ortak dil çalışma zamanı sağlar çünkü JIT olarak derlenmiş olan ve başka bir makine mimariler ile farklı bilgisayarlarda çalışan olabilir bir MSIL derleme kümesi oluşturabilir. Bununla birlikte, yönetilen kod, platforma özgü yerel API'lerin veya platforma özel sınıf kitaplığı çağırırsa, yalnızca bu işletim sisteminde çalışır.  
@@ -70,22 +70,22 @@ ms.locfileid: "59336154"
 ### <a name="install-time-code-generation-using-ngenexe"></a>NGen.exe kullanarak yükleme zamanı kodu oluşturma  
  Çünkü JIT derleyicisine, yerel kod için tek tek zaman bir derlemenin MSIL dönüştürür, derlemede tanımlanan bir yöntem de çağrıldığında, çalışma zamanında olumsuz performansını etkiler. Azaltılmış performansın kabul edilebilir olduğunu çoğu durumda. Daha da önemlisi, JIT derleyicisi tarafından üretilen kod derlemesini tetikleyen işleme bağlıdır. Birden çok süreçler arasında paylaşılamaz. Oluşturulan kod veya derleme kümesi paylaşan birden çok işlem farklı bir uygulama birden çok çağrıları arasında paylaşılacak izin vermek için ortak dil çalışma zamanı, zamanında tamamlanan derleme modu destekler. Bu, zaman tamamlanan derleme modu kullanan [Ngen.exe (yerel Görüntü Oluşturucu)](../../docs/framework/tools/ngen-exe-native-image-generator.md) JIT derleyicisi gibi MSIL dönüştürmek için yerel derlemelere çok kod. Ancak, Ngen.exe işlemi üç yolla JIT derleyicisi verilerinden farklılık gösterir:  
   
--   Bu uygulama çalışırken yerine uygulamayı çalıştırmadan önce yerel koda dönüştürme MSIL işlemi gerçekleştirir.  
+- Bu uygulama çalışırken yerine uygulamayı çalıştırmadan önce yerel koda dönüştürme MSIL işlemi gerçekleştirir.  
   
--   Bu, tüm derleme birer birer birer birer bir yöntem yerine derler.  
+- Bu, tüm derleme birer birer birer birer bir yöntem yerine derler.  
   
--   Oluşturulan kodun yerel görüntü önbelleğinde disk üzerinde bir dosya olarak kalıcıdır.  
+- Oluşturulan kodun yerel görüntü önbelleğinde disk üzerinde bir dosya olarak kalıcıdır.  
   
 ### <a name="code-verification"></a>Kod doğrulama  
  Yönetici doğrulamayı atlama kodu izin veren bir güvenlik ilkesi kurmuştur sürece yerel kod için derlemenin bir parçası olarak, doğrulama sürecini MSIL kodu geçmesi gerekir. Doğrulama kodu erişmek için yetkili bellek konumlarına erişir anlamına gelen tür güvenli olup olmadığını öğrenmek için MSIL ve meta verileri inceler. Tür güvenliği nesneleri birbirinden yalıtmaya yardımcı olur ve bunları yanlışlıkla veya kötü amaçlı bozulmaya karşı korunmasına yardımcı olur. Ayrıca, kod üzerinde güvenlik kısıtlamaları güvenilir bir şekilde zorunlu tutulabilir güvence sağlar.  
   
  Çalışma zamanı doğrulanabilir şekilde güvenli yazın olan kod için aşağıdaki deyimleri doğruysa olgu kullanır:  
   
--   Bir başvuru türü kesin olarak başvurulan türü ile uyumludur.  
+- Bir başvuru türü kesin olarak başvurulan türü ile uyumludur.  
   
--   Yalnızca uygun şekilde tanımlanmış işlemleri, bir nesne üzerinde çağrılır.  
+- Yalnızca uygun şekilde tanımlanmış işlemleri, bir nesne üzerinde çağrılır.  
   
--   Ne iddia Kimlikleridir.  
+- Ne iddia Kimlikleridir.  
   
  Doğrulama işlemi sırasında MSIL kodu kod bellek konumlarına erişim ve düzgün bir şekilde tanımlanmış türler yalnızca yoluyla yöntemleri çağırmak onaylayın girişimi incelenir. Örneğin, kod, bir nesnenin alanlarını bellek konumları taşmasına izin veren bir şekilde erişilmesini izin veremez. Ayrıca, doğrulama kodu yanlış MSIL tür güvenliği kurallarını ihlal için neden olabileceği için MSIL doğru bir şekilde oluşturuldu olup olmadığını, belirlemek için inceler. Doğrulama işlemi, tür kullanımı uyumlu kod iyi tanımlanmış bir dizi geçirir ve tür kullanımı uyumlu kod geçirir. Ancak, bazı tür kullanımı uyumlu kod doğrulama doğrulama işleminin bazı sınırlamalar nedeniyle geçebilir değildir ve bazı diller, tasarım gereği, doğrulanabilir şekilde tür kullanımı uyumlu kod üretmez. Kodu çalıştırdığınızda, tür kullanımı uyumlu kod güvenlik ilkesi tarafından gereklidir, ancak doğrulama kodu geçmez, bir özel durum oluşturulur.  
   

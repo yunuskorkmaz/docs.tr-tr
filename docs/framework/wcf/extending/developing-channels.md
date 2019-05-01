@@ -3,11 +3,11 @@ title: Geliştirme Kanalları
 ms.date: 03/30/2017
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
 ms.openlocfilehash: 44fb0da52c60b900c41b7b497861c12ed72d8ffc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858071"
 ---
 # <a name="developing-channels"></a>Geliştirme Kanalları
 Windows Communication Foundation (WCF) ile kullanılabilecek bir protokolü veya taşıma kanalı geliştirmek için uygulama katmanı birkaç adım gerektirir. Bu konuda, bu adımları açıklar ve daha fazla bilgi için belirli konulara gösterir. Kanal modeli ve bu konunun başlarında bahsedilen çeşitli türlerini anlamak için bkz: [kanal modeline genel bakış](../../../../docs/framework/wcf/extending/channel-model-overview.md). Tam aktarım kanal örnek için bkz [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  

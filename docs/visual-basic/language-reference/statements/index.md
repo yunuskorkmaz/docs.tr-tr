@@ -5,14 +5,14 @@ helpviewer_keywords:
 - statements [Visual Basic]
 ms.assetid: 1cbd7703-8d3b-48fd-831e-14c9cc85675a
 ms.openlocfilehash: 6c77a0e921038aca6cd9d2ed28cc34e588d9079f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784221"
 ---
 # <a name="statements-visual-basic"></a>Deyimler (Visual Basic)
-Bu bölümdeki konular, tablolar executable deyimleri ve Visual Basic bildirimi ve birçok deyimleri uygulamak önemli listeleri içerir.  
+Bu bölümdeki konular, tablolar ve Visual Basic bildirimi yürütülebilir deyimleri ve fazla sayıda deyim için geçerli olan önemli listelerin içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [A-E Deyimleri](../../../visual-basic/language-reference/statements/a-e-statements.md)  
@@ -32,6 +32,6 @@ Bu bölümdeki konular, tablolar executable deyimleri ve Visual Basic bildirimi 
  [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Visual Basic Dil Başvurusu](../../../visual-basic/language-reference/index.md)  
+ [Visual Basic Dili Başvurusu](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)

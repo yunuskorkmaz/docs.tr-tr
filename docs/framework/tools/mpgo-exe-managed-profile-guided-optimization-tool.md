@@ -11,11 +11,11 @@ ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0258edb552b53130e7df47df6ccefa9b30def843
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61919743"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Yönetilen Profil Temelli İyileştirme Aracı)
 
@@ -102,9 +102,9 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 ## <a name="using-mpgoexe-from-visual-studio"></a>Visual Studio'dan Mpgo.exe'yi kullanma  
  Mpgo.exe Visual Studio'dan çalıştırabilirsiniz (bkz [nasıl yapılır: Derleme olayları belirtme (C#)](/visualstudio/ide/how-to-specify-build-events-csharp)) aşağıdaki kısıtlamalarla:  
   
--   Visual Studio makroları aynı zamanda varsayılan olarak sonlarında eğik çizgiler içerdiğinden, sonda eğik çizgileri olan tırnak işaretli yollar kullanamazsınız. (Örneğin, `–OutDir "C:\Output Folder\"` geçersiz.) Bu kısıtlamayı çözmek için sondaki eğik çizgilerden kaçınabilirsiniz. (Örneğin, `-OutDir "$(OutDir)\"` yerine.)  
+- Visual Studio makroları aynı zamanda varsayılan olarak sonlarında eğik çizgiler içerdiğinden, sonda eğik çizgileri olan tırnak işaretli yollar kullanamazsınız. (Örneğin, `–OutDir "C:\Output Folder\"` geçersiz.) Bu kısıtlamayı çözmek için sondaki eğik çizgilerden kaçınabilirsiniz. (Örneğin, `-OutDir "$(OutDir)\"` yerine.)  
   
--   Varsayılan olarak, Mpgo.exe Visual Studio yapı yolu üzerinde değildir. Yolu Visual Studio'ya eklemeli ya da Mpgo komut satırında tam yolu belirtmelisiniz. Kullanabilirsiniz `–Scenario` veya `–Import` Visual Studio'da oluşturma sonrası olay parametresi. Ancak, tipik işlem kullanmaktır `–Scenario` bir kez bir geliştirici komut istemi için Visual Studio ve ardından `–Import` her yapıdan sonra; en iyi duruma getirilmiş derlemeleri güncelleştirmek için örneğin: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
+- Varsayılan olarak, Mpgo.exe Visual Studio yapı yolu üzerinde değildir. Yolu Visual Studio'ya eklemeli ya da Mpgo komut satırında tam yolu belirtmelisiniz. Kullanabilirsiniz `–Scenario` veya `–Import` Visual Studio'da oluşturma sonrası olay parametresi. Ancak, tipik işlem kullanmaktır `–Scenario` bir kez bir geliştirici komut istemi için Visual Studio ve ardından `–Import` her yapıdan sonra; en iyi duruma getirilmiş derlemeleri güncelleştirmek için örneğin: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
   
 <a name="samples"></a>   
 ## <a name="examples"></a>Örnekler  

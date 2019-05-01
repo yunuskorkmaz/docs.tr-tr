@@ -3,11 +3,11 @@ title: Sabit değerler
 description: Değişmez değer türleri hakkında bilgi edinin F# programlama dilidir.
 ms.date: 02/08/2019
 ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904572"
 ---
 # <a name="literals"></a>Sabit değerler
 
@@ -40,7 +40,7 @@ Aşağıdaki tabloda, değişmez değer türleri gösterilmektedir F#. Onaltıl�
 |Char|Unicode karakter|yok|`'a'`|
 |Dize|Unicode dizesi|yok|`"text\n"`<br /><br />veya<br /><br />`@"c:\filename"`<br /><br />veya<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />veya<br /><br />`"string1" + "string2"`<br /><br />Ayrıca bkz: [dizeleri](Strings.md).|
 |byte|ASCII karakteri|B|`'a'B`|
-|bayt]|ASCII dizesi|B|`"text"B`|
+|byte[]|ASCII dizesi|B|`"text"B`|
 |Dize veya bayt]|Verbatim dizesi|@ ön ek|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
 ## <a name="remarks"></a>Açıklamalar

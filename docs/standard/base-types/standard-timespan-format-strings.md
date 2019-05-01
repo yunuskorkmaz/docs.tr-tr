@@ -20,11 +20,11 @@ ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1bf7424c8aa2ae816340f6fa641e5c79a56ae0dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811819"
 ---
 # <a name="standard-timespan-format-strings"></a>Standart TimeSpan Biçim Dizeleri
 <a name="Top"></a> Standart <xref:System.TimeSpan> biçim dizesi metin temsilini tanımlamak için bir tek biçim belirticisi kullanan bir <xref:System.TimeSpan> bir biçimlendirme işleminden kaynaklanan değeri. Beyaz boşluk da dahil olmak üzere birden fazla karakter içeren herhangi bir biçim dizesi, özel olarak yorumlanır <xref:System.TimeSpan> biçimlendirme dizesi. Daha fazla bilgi için [Custom TimeSpan Format Strings](../../../docs/standard/base-types/custom-timespan-format-strings.md) .  

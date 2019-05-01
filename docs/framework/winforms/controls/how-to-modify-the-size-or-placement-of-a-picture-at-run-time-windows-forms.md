@@ -12,22 +12,22 @@ helpviewer_keywords:
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
 ms.openlocfilehash: d0a86d7fe53dba3da6bd63587561f82877bc2f06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913737"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Nasıl yapılır: Çalışma zamanında (Windows Forms) boyutunu veya bir resim yerleşimini Değiştir
 Windows Forms kullanırsanız <xref:System.Windows.Forms.PictureBox> denetimi bir form üzerinde ayarladığınız <xref:System.Windows.Forms.PictureBox.SizeMode%2A> özelliği için:  
   
--   Resmin sol üst köşesinde denetimin sol üst köşesinde ile Hizala  
+- Resmin sol üst köşesinde denetimin sol üst köşesinde ile Hizala  
   
--   Merkezi Denetim içindeki resmi  
+- Merkezi Denetim içindeki resmi  
   
--   Denetimin görüntülediği resmi uyacak şekilde boyutu değiştirin  
+- Denetimin görüntülediği resmi uyacak şekilde boyutu değiştirin  
   
--   Denetime sığması için görüntüler herhangi bir resmi Uzat  
+- Denetime sığması için görüntüler herhangi bir resmi Uzat  
   
  Bir resim (özellikle bir bit eşlem biçimi) uzatma görüntü kalitesini kaybına neden olabilir. Çalışma zamanında resimleri çizim için grafik yönergeleri listeleridir, meta dosyaları, bit eşlemler daha uzatma için daha uygundur.  
   

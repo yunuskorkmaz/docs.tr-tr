@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XML namespace prefixes [Visual Basic]
 ms.assetid: 4292e1d9-eb8f-49d6-a3aa-f05a5fbe24d1
 ms.openlocfilehash: 244329058624bebb03440961c1dda4a50b4efb8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791787"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>Nasıl yapılır: XML Namespace öneklerini (Visual Basic) bildirme ve kullanma
 Bu örnek, XML ad alanı öneki içeri aktarma gösterir `ns` ve bir XML değişmez değeri ve XML eksen özelliklerini kullanın.  
@@ -21,7 +21,7 @@ Bu örnek, XML ad alanı öneki içeri aktarma gösterir `ns` ve bir XML değiş
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Bir başvuru <xref:System.Xml.Linq> ad alanı.  
+- Bir başvuru <xref:System.Xml.Linq> ad alanı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

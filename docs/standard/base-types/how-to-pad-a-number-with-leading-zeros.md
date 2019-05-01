@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir sayı önünde sıfır ile doldurur.'
+title: 'Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma'
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,13 +14,13 @@ ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 54c3eb734184adf5168607cfc8bcbf6c17ea493a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61860652"
 ---
-# <a name="how-to-pad-a-number-with-leading-zeros"></a>Nasıl yapılır: Bir sayı önünde sıfır ile doldurur.
+# <a name="how-to-pad-a-number-with-leading-zeros"></a>Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma
 
 "D"'ı kullanarak bir tamsayıya baştaki sıfırlar ekleyebilirsiniz [standart sayısal biçim dizesi](../../../docs/standard/base-types/standard-numeric-format-strings.md) bir duyarlık belirtici ile. Tamsayı ve kayan nokta sayıları baştaki sıfırlar ekleyebilirsiniz bir [özel sayısal biçim dizesi](../../../docs/standard/base-types/custom-numeric-format-strings.md). Bu makalede, bir sayı sıfırları ile doldurulacak iki yöntem de kullanmayı gösterir.
 

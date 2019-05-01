@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
 ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61839416"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Bir Visual Basic Programının Yapısı
 Bir Visual Basic programını standart yapı taşlarından oluşturulmuştur. A *çözüm* bir veya daha fazla proje içerir. A *proje* sırayla bir veya daha fazla içerebilir. Her *derleme* bir veya daha fazla kaynak dosyalarından derlenir. A *kaynak dosyası* tanımı ve sınıflar, yapılar, modülleri ve sonuç olarak, kodunuzu içeren arabirimleri uygulamasını sağlar.  
@@ -47,30 +47,30 @@ Bir Visual Basic programını standart yapı taşlarından oluşturulmuştur. A 
 ## <a name="namespace-level-programming-elements"></a>Namespace düzeyi programlama öğeleri  
  Sınıflar, yapılar ve modüller, kaynak dosyanızdaki tüm kod içerir. Bunlar *ad alanı düzeyinde* öğeleri, bir ad alanındaki veya kaynak dosya düzeyinde görünebilir. Bunlar, diğer programlama öğeleri bildirimlerini basılı tutun. Öğe imzaları tanımlayın, ancak herhangi bir uygulama sağlamak, arabirimler, Modül düzeyinde de görünür. Modül düzeyi öğeler hakkında daha fazla bilgi için aşağıdakilere bakın:  
   
--   [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
+- [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
+- [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
--   [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)  
+- [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)  
   
--   [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
+- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
  Verileri ad alanı düzeyinde sabit listeleri ve temsilciler öğeleridir.  
   
 ## <a name="module-level-programming-elements"></a>Modül düzeyi programlama öğeleri  
  Yordamları, işleçler, özellikler ve olaylar yürütülebilir kod (çalışma zamanında işlemleri deyimleri) içerebileceği yalnızca programlama öğelerdir. Bunlar *Modül düzeyinde* , programınızın öğeleri. Yordam düzeyi öğeler hakkında daha fazla bilgi için aşağıdakilere bakın:  
   
--   [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator Deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [Operator Deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
+- [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
   
  Veri Modül düzeyinde değişkenleri, sabitleri, sabit listeleri ve temsilciler öğeleridir.  
   
@@ -82,13 +82,13 @@ Bir Visual Basic programını standart yapı taşlarından oluşturulmuştur. A 
 ## <a name="the-main-procedure"></a>Main yordamı  
  `Main` Yordamı uygulamanız yüklendiğinde çalıştırmak için ilk kodu verilmiştir. `Main` Uygulamanız için genel denetim ve başlangıç noktası olarak görev yapar. Dört çeşitleri vardır `Main`:  
   
--   `Sub Main()`  
+- `Sub Main()`  
   
--   `Sub Main(ByVal cmdArgs() As String)`  
+- `Sub Main(ByVal cmdArgs() As String)`  
   
--   `Function Main() As Integer`  
+- `Function Main() As Integer`  
   
--   `Function Main(ByVal cmdArgs() As String) As Integer`  
+- `Function Main(ByVal cmdArgs() As String) As Integer`  
   
  Bu yordam en sık kullanılan çeşitli olan `Sub Main()`. Daha fazla bilgi için [Visual Basic'de ana yordam](../../../visual-basic/programming-guide/program-structure/main-procedure.md).  
   

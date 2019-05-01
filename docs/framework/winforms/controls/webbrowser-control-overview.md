@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
 ms.openlocfilehash: c75d0b348a2f3dd678f2bfb235bce2e4e227c4b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792138"
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser Denetimine Genel Bakış
 <xref:System.Windows.Forms.WebBrowser> Denetim WebBrowser ActiveX denetimi yönetilen sarmalayıcı sağlar. Yönetilen sarmalayıcı Windows Forms istemci uygulamalarınızı Web sayfaları görüntülemenizi sağlar. Kullanabileceğiniz <xref:System.Windows.Forms.WebBrowser> Internet Explorer Web uygulamanızı veya gözatma işlevselliği çoğaltmak için denetimi, varsayılan Internet Explorer işlevini devre dışı bırakın ve basit bir HTML belge Görüntüleyicisi denetimi kullanın. DHTML tabanlı kullanıcı arabirimi öğeleri formunuza eklemek ve içinde barındırılan olgu gizlemek için denetimi de kullanabilirsiniz <xref:System.Windows.Forms.WebBrowser> denetimi. Bu yaklaşım, Web denetimleri Windows Forms denetimlerinde Tek bir uygulama ile sorunsuzca birleştirin sağlar.  

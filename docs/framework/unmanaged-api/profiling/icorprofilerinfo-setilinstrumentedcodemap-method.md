@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3a574a04e5746a8b2c9c32160e82aa503b392729
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792645"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap Yöntemi
 Belirtilen Microsoft Ara dil (MSIL) map girişleri kullanarak belirtilen işlev için kod Haritası ayarlar.  
@@ -58,11 +58,11 @@ HRESULT SetILInstrumentedCodeMap(
   
  Hata ayıklayıcı, her eski uzaklığı bir MSIL içindeki özgün, değiştirilmemiş MSIL kod uzaklığı için ifade eder ve her yeni uzaklık yeni, izleme eklenmiş kod içinde MSIL uzaklığı başvurduğu varsayar. Harita, artan düzende sıralanmalıdır. Düzgün çalışması için atlamak için aşağıdaki yönergeleri izleyin:  
   
--   İzleme eklenmiş MSIL kodu yeniden değil.  
+- İzleme eklenmiş MSIL kodu yeniden değil.  
   
--   Özgün MSIL kodunu kaldırmayın.  
+- Özgün MSIL kodunu kaldırmayın.  
   
--   Program veritabanı (PDB) dosyasındaki dizi noktalarını girişlerinde haritada içerir. Harita eksik girdiler enterpolasyon değil. Bu nedenle, aşağıdaki harita verilen:  
+- Program veritabanı (PDB) dosyasındaki dizi noktalarını girişlerinde haritada içerir. Harita eksik girdiler enterpolasyon değil. Bu nedenle, aşağıdaki harita verilen:  
   
      (0 eski, 0 yeni)  
   
@@ -70,17 +70,17 @@ HRESULT SetILInstrumentedCodeMap(
   
      (9 eski, 20 yeni)  
   
-    -   Yeni Uzaklık 0, 0, 1, 2, 3 veya 4 eski bir uzaklık eşleştirilir.  
+    - Yeni Uzaklık 0, 0, 1, 2, 3 veya 4 eski bir uzaklık eşleştirilir.  
   
-    -   Eski bir uzaklık 5, 6, 7 veya 8, 10 yeni uzaklık eşleştirilir.  
+    - Eski bir uzaklık 5, 6, 7 veya 8, 10 yeni uzaklık eşleştirilir.  
   
-    -   9 veya daha eski bir uzaklık yeni uzaklık 20 eşleştirilir.  
+    - 9 veya daha eski bir uzaklık yeni uzaklık 20 eşleştirilir.  
   
-    -   Yeni bir uzaklığı 0, 1, 2, 3, 4, 5, 6, 7, 8 veya 9 eski uzaklığı 0 eşleştirilir.  
+    - Yeni bir uzaklığı 0, 1, 2, 3, 4, 5, 6, 7, 8 veya 9 eski uzaklığı 0 eşleştirilir.  
   
-    -   Yeni bir uzaklık 10, 11, 12, 13, 14, 15, 16, 17, 18 veya 19 eski uzaklığı 5 eşleştirilir.  
+    - Yeni bir uzaklık 10, 11, 12, 13, 14, 15, 16, 17, 18 veya 19 eski uzaklığı 5 eşleştirilir.  
   
-    -   20 veya üzeri bir yeni uzaklığı eski uzaklığı 9 eşleştirilir.  
+    - 20 veya üzeri bir yeni uzaklığı eski uzaklığı 9 eşleştirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

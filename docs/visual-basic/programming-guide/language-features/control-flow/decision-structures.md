@@ -10,11 +10,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
 ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907016"
 ---
 # <a name="decision-structures-visual-basic"></a>Karar Yapıları (Visual Basic)
 Visual Basic koşulları test etmeye ve test sonuçlarına bağlı olarak farklı işlemler gerçekleştirmek olanak sağlar. True veya false, bir ifadenin çeşitli değerleri için veya bir deyimler serisini çalıştırdığınızda oluşturulan çeşitli özel durumlar için olan bir koşul için test edebilirsiniz.  
@@ -26,13 +26,13 @@ Visual Basic koşulları test etmeye ve test sonuçlarına bağlı olarak farkl�
 ## <a name="ifthenelse-construction"></a>If... Daha sonra... Başka bir yapı  
  `If...Then...Else` yapılarını için bir veya daha fazla koşulları test etmeye ve bir veya daha fazla deyim her koşula bağlı çalıştırmanıza olanak tanır. Koşulları test etmeye ve eylemleri aşağıdaki yollarla kullanabilirsiniz:  
   
--   Bir koşul ise, bir veya daha fazla deyimleri çalıştırın `True`  
+- Bir koşul ise, bir veya daha fazla deyimleri çalıştırın `True`  
   
--   Bir koşul ise, bir veya daha fazla deyimleri çalıştırın `False`  
+- Bir koşul ise, bir veya daha fazla deyimleri çalıştırın `False`  
   
--   Bir koşul ise, bazı deyimleri çalıştırın `True` ve diğerleri ise `False`  
+- Bir koşul ise, bazı deyimleri çalıştırın `True` ve diğerleri ise `False`  
   
--   Önceki koşul ise, ek bir koşul testi `False`  
+- Önceki koşul ise, ek bir koşul testi `False`  
   
  Tüm bu olanaklar sunan denetim yapısı [varsa... Daha sonra... Else deyimi](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Sadece bir test ve çalıştırmak için bir ifade varsa, tek satır sürümü kullanabilirsiniz. Koşullar ve Eylemler daha karmaşık bir dizi varsa, birden çok satır sürümü kullanabilirsiniz.  
   

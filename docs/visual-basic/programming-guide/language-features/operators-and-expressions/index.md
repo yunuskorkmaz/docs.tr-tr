@@ -11,11 +11,11 @@ helpviewer_keywords:
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
 ms.openlocfilehash: b762c3002913cbd925579ef28f2aa01411976c32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864331"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic'de İşleçler ve İfadeler
 Bir *işleci* değerlerini tutan bir veya daha fazla kod öğeleri üzerinde bir işlem gerçekleştiren bir kod öğedir. Değişkenleri, sabitleri, sabit değerleri, özellikleri, değeri öğeleri dahil döndürür `Function` ve `Operator` yordamları ve ifadeler.  
@@ -25,13 +25,13 @@ Bir *işleci* değerlerini tutan bir veya daha fazla kod öğeleri üzerinde bir
 ## <a name="types-of-operators"></a>Tür işleç  
  Visual Basic işleçleri aşağıdaki türlerini sağlar:  
   
--   [Aritmetik işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) , bit düzenleri kaydırma gibi sayısal değerleri üzerinde tanıdık hesaplamalar.  
+- [Aritmetik işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) , bit düzenleri kaydırma gibi sayısal değerleri üzerinde tanıdık hesaplamalar.  
   
--   [Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md) iki ifadeden karşılaştırın ve dönüş bir `Boolean` Karşılaştırmanın sonucu temsil eden değer.  
+- [Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md) iki ifadeden karşılaştırın ve dönüş bir `Boolean` Karşılaştırmanın sonucu temsil eden değer.  
   
--   [Birleştirme işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) tek bir dize olarak birden çok dizeyi birleştirme.  
+- [Birleştirme işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) tek bir dize olarak birden çok dizeyi birleştirme.  
   
--   [Mantıksal ve bit düzeyinde işleçler Visual Basic'te](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md) birleştirmek `Boolean` veya sayısal değerler ve değerlerin aynı veri türünde bir sonuç döndürür.  
+- [Mantıksal ve bit düzeyinde işleçler Visual Basic'te](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md) birleştirmek `Boolean` veya sayısal değerler ve değerlerin aynı veri türünde bir sonuç döndürür.  
   
  Operatör ile birleştirilmiş değer öğeleri adlı *işlenenler* bu işleci. İşleçleri birleşik atama işleci hariç değer öğeleri form ifadeleri ile hangi formların bir *deyimi*. Daha fazla bilgi için [deyimleri](../../../../visual-basic/programming-guide/language-features/statements.md).  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
 ms.openlocfilehash: 149bbac6d301a9c2f166d05698e3780171126cb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938651"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML Açıklama Değişmez Değeri (Visual Basic)
 Bir değişmez değer temsil eden bir <xref:System.Xml.Linq.XComment> nesne.  
@@ -39,9 +39,9 @@ Bir değişmez değer temsil eden bir <xref:System.Xml.Linq.XComment> nesne.
 ## <a name="remarks"></a>Açıklamalar  
  XML açıklama değişmez değerleri, belge içeriğini içermez; Belge hakkındaki bilgileri içerirler. XML açıklama bölümü dizisi "--> ile" sona erer. Bu, aşağıdaki noktaları anlamına gelir:  
   
--   Gömülü ifade sınırlayıcılar geçerli XML yorumu içerik olduğundan, bir katıştırılmış deyim bir XML açıklama değişmez değeri kullanamazsınız.  
+- Gömülü ifade sınırlayıcılar geçerli XML yorumu içerik olduğundan, bir katıştırılmış deyim bir XML açıklama değişmez değeri kullanamazsınız.  
   
--   XML açıklama bölümleri iç içe geçirilemez, çünkü `content` değeri içeremez "-->".  
+- XML açıklama bölümleri iç içe geçirilemez, çünkü `content` değeri içeremez "-->".  
   
  Bir XML açıklama değişmez değeri bir değişkene atayın ya da bir XML öğesi değişmez değeri içerir.  
   

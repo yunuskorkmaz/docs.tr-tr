@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
 ms.openlocfilehash: 4e0831a045da5eb5798d10aeb977981ecae20040
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869678"
 ---
 # <a name="value-types-and-reference-types"></a>Değer Türleri ve Başvuru Türleri
 Visual Basic'de Veri türleri sınıflandırmalarına göre uygulanır. Visual Basic veri türleri, belirli bir tür değişkeninin kendi verilerini veya verileri için bir işaretçi depolar göre sınıflandırılabilir. Kendi verilerini depolayan ise bir *değer türü*; başka bir yerde olduğu bellekteki verileri için bir işaretçi tutan bir *başvuru türüne*.  
@@ -23,13 +23,13 @@ Visual Basic'de Veri türleri sınıflandırmalarına göre uygulanır. Visual B
 ## <a name="value-types"></a>Değer Türleri  
  Bir veri türü olan bir *değer türü* kendi bellek ayırma verileri tutuyorsa. Değer türleri aşağıdakileri kapsamaktadır:  
   
--   Tüm sayısal veri türleri  
+- Tüm sayısal veri türleri  
   
--   `Boolean`, `Char`, ve `Date`  
+- `Boolean`, `Char`, ve `Date`  
   
--   Başvuru türleri üyelerinin olması durumunda bile tüm yapıları  
+- Başvuru türleri üyelerinin olması durumunda bile tüm yapıları  
   
--   Her zaman kendi temel türü olduğundan numaralandırmalar `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, veya `ULong`  
+- Her zaman kendi temel türü olduğundan numaralandırmalar `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, veya `ULong`  
   
  Başvuru türü üyeleri içeren olsa bile her bir değer türü yapısıdır. Bu nedenle, değer türleri gibi `Char` ve `Integer` .NET Framework yapıları tarafından uygulanır.  
   
@@ -38,13 +38,13 @@ Visual Basic'de Veri türleri sınıflandırmalarına göre uygulanır. Visual B
 ## <a name="reference-types"></a>Başvuru Türleri  
  A *başvuru türüne* verilerini tutan başka bir bellek konumuna bir işaretçi içerir. Başvuru türleri aşağıdakileri kapsamaktadır:  
   
--   `String`  
+- `String`  
   
--   Tüm diziler, kendi öğeleri değer türleri olsa bile  
+- Tüm diziler, kendi öğeleri değer türleri olsa bile  
   
--   Sınıfı, gibi türleri <xref:System.Windows.Forms.Form>  
+- Sınıfı, gibi türleri <xref:System.Windows.Forms.Form>  
   
--   Temsilciler  
+- Temsilciler  
   
  Bir sınıf bir *başvuru türüne*. Bu nedenle, başvuru türleri gibi `Object` ve `String` tarafından desteklenen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] sınıfları. Üyeleri, değer türleri olsa bile, her dizide bir başvuru türü olduğunu unutmayın.  
   
@@ -57,15 +57,15 @@ Dim totals() As Single = New Single(8) {}
 ## <a name="elements-that-are-not-types"></a>Türleri öğeleri  
  Bunların hiçbirine olarak bildirilen bir öğe için bir veri türü belirtilemez çünkü aşağıdaki programlama öğeleri türleri olarak nitelendirmeyin:  
   
--   Ad Alanları  
+- Ad Alanları  
   
--   Modüller  
+- Modüller  
   
--   Olaylar  
+- Olaylar  
   
--   Özellikler ve yordamlar  
+- Özellikler ve yordamlar  
   
--   Değişkenleri, sabitleri ve alanlar  
+- Değişkenleri, sabitleri ve alanlar  
   
 ## <a name="working-with-the-object-data-type"></a>Nesne veri türü ile çalışma  
  Bir başvuru türü veya değer türü bir değişkene atayabilirsiniz `Object` veri türü. Bir `Object` değişken veri için hiçbir zaman kendisi her zaman bir işaretçi tutar. Ancak, bir değer türüne atarsanız bir `Object` kendi verilerini tutan gibi değişken davranır. Daha fazla bilgi için [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md).  

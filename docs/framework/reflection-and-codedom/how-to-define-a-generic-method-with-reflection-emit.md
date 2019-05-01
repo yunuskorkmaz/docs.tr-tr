@@ -12,11 +12,11 @@ ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 49c490b57574f8c9c9c93e3e0da2089cec95481f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793269"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Nasıl yapılır: Yansıma Yayma ile Genel Yöntem Tanımlama
 İlk yordamda, iki tür parametreleri ile basit bir genel yöntem oluşturulacağını ve tür parametreleri için sınıf kısıtlamaları, arabirim kısıtlamasını ve özel kısıtlamalar uygulamak nasıl gösterir.  
@@ -164,11 +164,11 @@ ms.locfileid: "59344240"
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   C# kodu içeren `using` deyimleri (`Imports` Visual Basic'te) derleme için gerekli.  
+- C# kodu içeren `using` deyimleri (`Imports` Visual Basic'te) derleme için gerekli.  
   
--   Hiçbir ek derleme başvurularını gereklidir.  
+- Hiçbir ek derleme başvurularını gereklidir.  
   
--   Csc.exe, vbc.exe veya cl.exe kullanarak komut satırındaki kodu derleyin. Visual Studio'da Kodu derlemek için bir konsol uygulaması projesi şablonu içine koyun.  
+- Csc.exe, vbc.exe veya cl.exe kullanarak komut satırındaki kodu derleyin. Visual Studio'da Kodu derlemek için bir konsol uygulaması projesi şablonu içine koyun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

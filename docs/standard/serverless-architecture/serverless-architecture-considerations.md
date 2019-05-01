@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: b12a09c0fcef7e7ff954a3f959fb9e3080a6e859
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940952"
 ---
-# <a name="serverless-architecture-considerations"></a>Sunucusuz mimari konuları
+# <a name="serverless-architecture-considerations"></a>Sunucusuz mimaride dikkat edilmesi gerekenler
 
 Sunucusuz bir mimari benimsenmesi, bazı zorluklar geliyor. Bu bölümde daha yaygın konuları dikkat edilmesi gereken bazı keşfediyor. Bu zorluklar çözümleri sahiptir. Tüm mimari seçenek olarak, sunucusuz mimariye geçin kararı yalnızca dikkatle Artıları ve eksileri dikkate sonra yapılması gerekir. Uygulamanızın ihtiyaçlarına bağlı olarak, sunucusuz bir uygulama belirli bileşenler için doğru çözüm değildir karar verebilirsiniz.
 

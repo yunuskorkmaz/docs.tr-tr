@@ -7,20 +7,20 @@ helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
 ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857421"
 ---
 # <a name="configuring-system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamaları Yapılandırma
 Bir uç noktaya konuşurken kullanın ve bir uç noktaya bağlanmak nasıl göstermek için iletişim mekanizması bağlantılarını belirtin. Bağlamaları nasıl Windows Communication Foundation (WCF) kanalları yukarı gerekli iletişime özellikleri katmanlıdır tanımlayan öğeleri oluşur. Bir bağlama üç öğe türleri içerir:  
   
--   Güvenlik, güvenilirlik, içerik akışı ayarlarında veya kullanıcı tanımlı protokolleri uç noktasına gönderilen iletileri ile kullanılacak belirleyen Protokolü kanal bağlama öğeleri.  
+- Güvenlik, güvenilirlik, içerik akışı ayarlarında veya kullanıcı tanımlı protokolleri uç noktasına gönderilen iletileri ile kullanılacak belirleyen Protokolü kanal bağlama öğeleri.  
   
--   Uç noktaya, örneğin, TCP veya HTTP iletileri gönderirken kullanılacak temel alınan Aktarım Protokolü belirlemek kanal bağlama öğeleri taşıma.  
+- Uç noktaya, örneğin, TCP veya HTTP iletileri gönderirken kullanılacak temel alınan Aktarım Protokolü belirlemek kanal bağlama öğeleri taşıma.  
   
--   İleti kablo uç noktaya, örneğin, gönderilen iletiler için metin/XML, ikili, kullanılacak kodlamayı bağlama öğeleri, kodlama veya ileti aktarım en iyi duruma getirme mekanizması (MTOM).  
+- İleti kablo uç noktaya, örneğin, gönderilen iletiler için metin/XML, ikili, kullanılacak kodlamayı bağlama öğeleri, kodlama veya ileti aktarım en iyi duruma getirme mekanizması (MTOM).  
   
  Bu konuda, tüm sistem tarafından sağlanan Windows Communication Foundation (WCF) bağlamaları sunulmaktadır. Bunlardan hiçbiri uygulamanız için tam gereksinimleri karşılıyorsa, kullanarak bir bağlama oluşturabilirsiniz <xref:System.ServiceModel.Channels.CustomBinding> sınıfı. Özel bağlamalar oluşturma hakkında daha fazla bilgi için bkz. [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

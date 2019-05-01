@@ -20,11 +20,11 @@ helpviewer_keywords:
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
 ms.openlocfilehash: 9f1a71e8e2e3e4ebb9b412be74b5ea8702eb164f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827164"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Genişletme ve Daraltma Dönüşümleri (Visual Basic)
 Önemli bir tür dönüştürme ile dönüştürmenin sonucu hedef veri türü aralık içinde olup olmadığını noktadır.  
@@ -68,15 +68,15 @@ ms.locfileid: "58842557"
 ## <a name="narrowing-conversions"></a>Daraltma dönüşümleri  
  Standart daraltma dönüştürmelerini şunları içerir:  
   
--   (Her türün kendisine widens dışında) önceki içinde genişletme dönüştürmeleri, ters yönde tablo  
+- (Her türün kendisine widens dışında) önceki içinde genişletme dönüştürmeleri, ters yönde tablo  
   
--   Dönüştürmeleri arasında herhangi bir yönde [Boole](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) ve herhangi bir sayısal tür  
+- Dönüştürmeleri arasında herhangi bir yönde [Boole](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) ve herhangi bir sayısal tür  
   
--   Herhangi bir sayısal tür dönüştürmelerinde herhangi numaralandırılmış tür (`Enum`)  
+- Herhangi bir sayısal tür dönüştürmelerinde herhangi numaralandırılmış tür (`Enum`)  
   
--   Dönüştürmeleri arasında herhangi bir yönde [dize](../../../../visual-basic/language-reference/data-types/string-data-type.md) ve herhangi bir sayısal tür `Boolean`, veya [tarihi](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
+- Dönüştürmeleri arasında herhangi bir yönde [dize](../../../../visual-basic/language-reference/data-types/string-data-type.md) ve herhangi bir sayısal tür `Boolean`, veya [tarihi](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
   
--   Bu türden türetilmiş türe türü bir veri türü veya nesne dönüşümleri  
+- Bu türden türetilmiş türe türü bir veri türü veya nesne dönüşümleri  
   
  Daraltma dönüştürmeleri her zaman çalışma zamanında başarılı ve başarısız veya veri kaybına neden. Hedef veri türüne dönüştürülen değer alamaz, bir hata meydana gelir. Örneğin, bir sayısal dönüştürme bir taşma neden olabilir. Derleyicisi daraltma dönüştürmelerini örtülü olarak sürece izin vermiyor [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md) anahtara denetimi türünü ayarlar `Off`.  
   
@@ -89,9 +89,9 @@ ms.locfileid: "58842557"
 ## <a name="exceptions-during-conversion"></a>Dönüşüm sırasında özel durumlar  
  Genişletme dönüştürmeleri her zaman başarılı, özel durumlar oluşturmayın. Daraltma dönüştürmeleri, başarısız olduğunda, en yaygın olarak aşağıdaki özel durumlar:  
   
--   <xref:System.InvalidCastException> — iki tür arasında dönüştürme tanımlanmadıysa  
+- <xref:System.InvalidCastException> — iki tür arasında dönüştürme tanımlanmadıysa  
   
--   <xref:System.OverflowException> — (sadece integral türleri) dönüştürülen değer hedef türü için çok büyük ise  
+- <xref:System.OverflowException> — (sadece integral türleri) dönüştürülen değer hedef türü için çok büyük ise  
   
  Bir sınıf veya yapı tanımlıyorsa bir [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md) , sınıf veya yapı, gelen veya dönüştürme işleci olarak görev yapacak, `CType` , uygun gördüğü herhangi bir özel durum oluşturabilir. Ayrıca, `CType` Visual Basic işlevleri deniyor olabilir veya [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yöntemleri sırayla çeşitli özel durumlar oluşturabilir.  
   

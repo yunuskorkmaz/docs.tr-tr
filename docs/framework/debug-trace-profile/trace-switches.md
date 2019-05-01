@@ -15,11 +15,11 @@ ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 85a1a017197826717280f53995ed98f26f1d80bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61873866"
 ---
 # <a name="trace-switches"></a>İzleme Anahtarları
 İzleme anahtarları etkinleştirmek, devre dışı bırakın ve İzleme çıkışı filtrelemek olanak sağlar. Bunlar, mevcut kodunuzu ve .config dosyası aracılığıyla harici olarak yapılandırılabilir nesnelerdir. .NET Framework içinde sağlanan izleme anahtarlarını üç tür vardır: <xref:System.Diagnostics.BooleanSwitch> sınıfı <xref:System.Diagnostics.TraceSwitch> sınıfı ve <xref:System.Diagnostics.SourceSwitch> sınıfı. <xref:System.Diagnostics.BooleanSwitch> Bir iki durumlu izleme deyimleri çeşitli devre dışı bırakma veya etkinleştirme anahtarı, sınıf görevi görür. <xref:System.Diagnostics.TraceSwitch> Ve <xref:System.Diagnostics.SourceSwitch> sınıfları belirli izleme düzeyi için bir izleme anahtarı etkinleştirmenize izin böylece <xref:System.Diagnostics.Trace> veya <xref:System.Diagnostics.TraceSource> düzeyi ve altındaki tüm düzeyleri için belirtilen iletileri görüntülenir. Geçiş devre dışı bırakırsanız, izleme iletileri görüntülenmez. Bu sınıflar türetilen Özet (**MustInherit**) sınıfı **anahtar**gibi bir kullanıcı tarafından geliştirilen anahtar gerekir.  
@@ -33,13 +33,13 @@ ms.locfileid: "59132671"
 ## <a name="trace-levels"></a>İzleme düzeyi  
  Kullanırken **TraceSwitch**, ek hususlar vardır. A **TraceSwitch** döndüren dört özellikler nesnesinde **Boole** anahtar belirli en az bir düzeye ayarlanıp ayarlanmadığını belirten değerleri:  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=nameWithType>  
   
  Düzeyleri, bir sorunu çözmek için gereken bu bilgileri yalnızca aldığınız izleme bilgilerinin miktarını sınırlamak sağlar. Ayarlayarak ve uygun izleme düzeyi için izleme anahtarları yapılandırma, izleme çıktısı istediğiniz ayrıntı düzeyini belirtin. Hiç hata iletileri, uyarı iletilerini, bilgilendirme iletileri, ayrıntılı izleme iletileri veya ileti alabilir.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "59132671"
   
 |Enum değeri|Tamsayı değeri|Görüntülenen ileti türü (veya belirtilen çıkış hedefine yazılmış)|  
 |----------------------|-------------------|---------------------------------------------------------------------------|  
-|Kapalı|0|Yok.|  
+|Kapalı|0|None|  
 |Hata|1.|Yalnızca hata iletileri|  
 |Uyarı|2|Uyarı iletileri ve hata iletileri|  
 |Bilgi|3|Bilgilendirme iletileri, uyarı iletileri ve hata iletileri|  

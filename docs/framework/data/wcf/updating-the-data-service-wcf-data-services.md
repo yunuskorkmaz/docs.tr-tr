@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
 ms.openlocfilehash: 42980aa4691d8ecb9868336ecb270c9ad937b5a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876115"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Veri hizmetini (WCF Veri Hizmetleri) güncelleştirme
 Kullanırken [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanmak için istemci kitaplığı bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışı, kitaplık istemci veri hizmeti sınıfların örneklerini akış girişleri çevirir. Bu veri hizmeti sınıfları kullanılarak izlenen <xref:System.Data.Services.Client.DataServiceContext> hangi <xref:System.Data.Services.Client.DataServiceQuery%601> ait. İstemcinin, üzerinde yöntemleri kullanarak rapor varlıkları yapılan değişiklikleri izler. <xref:System.Data.Services.Client.DataServiceContext>. Bu yöntemler, eklenen ve Silinen varlıkları ve ayrıca özellik değerlerini veya varlık örnekleri arasında ilişkiler için yaptığınız değişiklikleri izlemek istemci etkinleştirin. Çağırdığınızda bu izlenen değişiklikleri REST tabanlı işlemler veri hizmetine gönderilen <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> yöntemi.  
@@ -54,13 +54,13 @@ Kullanırken [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanm
   
  Nesneler eklerken aşağıdaki maddeler geçerlidir:  
   
--   Bir nesne bağlı olduğu <xref:System.Data.Services.Client.EntityStates.Unchanged> durumu.  
+- Bir nesne bağlı olduğu <xref:System.Data.Services.Client.EntityStates.Unchanged> durumu.  
   
--   Bir nesne eklendiğinde eklenen nesneyi ilgili nesneleri ayrıca bağlı değilsiniz.  
+- Bir nesne eklendiğinde eklenen nesneyi ilgili nesneleri ayrıca bağlı değilsiniz.  
   
--   Varlık zaten bağlam tarafından izleniyorsa, bir nesne eklenemiyor.  
+- Varlık zaten bağlam tarafından izleniyorsa, bir nesne eklenemiyor.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> Alan yöntemi aşırı yüklemesini bir `etag` parametresi ile birlikte bir eTag değeri alındı bir varlık nesnesine bağlarken kullanılır. Bu eTag değeri, sonra bağlı nesneyi değişiklikler kaydedildiğinde için eşzamanlılık denetlemek için kullanılır.  
+- <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> Alan yöntemi aşırı yüklemesini bir `etag` parametresi ile birlikte bir eTag değeri alındı bir varlık nesnesine bağlarken kullanılır. Bu eTag değeri, sonra bağlı nesneyi değişiklikler kaydedildiğinde için eşzamanlılık denetlemek için kullanılır.  
   
  Daha fazla bilgi için [nasıl yapılır: Mevcut bir varlığı Dataservicecontext'e ekleme](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md).  
   

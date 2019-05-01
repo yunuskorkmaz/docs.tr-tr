@@ -3,11 +3,11 @@ title: Keşif Bulma ve FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
 ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856524"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Keşif Bulma ve FindCriteria
 Bir bulma bulma işlemi bir veya daha fazla Hizmetleri bulmak için bir istemci tarafından başlatılan ve bulma ana eylemleri biridir. Bir bulma gerçekleştirme ağ üzerinden bir WS-bulma işlemi araştırma iletisi gönderir. Ölçütlerle eşleşen Hizmetleri yanıt WS-bulma ProbeMatch iletileriyle belirtilen. Bulma iletileri hakkında daha fazla bilgi için bkz. [WS-bulma belirtimi](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -20,21 +20,21 @@ Bir bulma bulma işlemi bir veya daha fazla Hizmetleri bulmak için bir istemci 
   
  Arama ölçütleri şunlardır:  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> -İsteğe bağlı. Aranan hizmet ve genellikle bir hizmet için ararken kullanılan ölçütü sözleşme adı. Birden fazla sözleşme adı belirtilirse, yalnızca hizmet uç noktaları tüm sözleşmelerin eşleşen yanıtlayın. WCF'de bir uç nokta yalnızca bir sözleşme destekleyebileceğini unutmayın.  
+- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> -İsteğe bağlı. Aranan hizmet ve genellikle bir hizmet için ararken kullanılan ölçütü sözleşme adı. Birden fazla sözleşme adı belirtilirse, yalnızca hizmet uç noktaları tüm sözleşmelerin eşleşen yanıtlayın. WCF'de bir uç nokta yalnızca bir sözleşme destekleyebileceğini unutmayın.  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> -İsteğe bağlı. Belirli hizmet uç noktalarını sınıflandırmak için kullanılan mutlak bir URI'leri kapsamlardır. Bu senaryolarda, burada aynı anlaşmaya birden fazla uç nokta kullanıma sunmak ve aramak için bir yol uç noktaları bir alt kümesi için istediğiniz kullanmak isteyebilirsiniz. Birden fazla kapsam belirtilmezse, yalnızca hizmet uç noktaları tüm kapsamlar eşleşen yanıtlayın.  
+- <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> -İsteğe bağlı. Belirli hizmet uç noktalarını sınıflandırmak için kullanılan mutlak bir URI'leri kapsamlardır. Bu senaryolarda, burada aynı anlaşmaya birden fazla uç nokta kullanıma sunmak ve aramak için bir yol uç noktaları bir alt kümesi için istediğiniz kullanmak isteyebilirsiniz. Birden fazla kapsam belirtilmezse, yalnızca hizmet uç noktaları tüm kapsamlar eşleşen yanıtlayın.  
   
--   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> -Kapsamlar araştırma iletisi ve onun uç noktasında alanları eşleştirirken kullanılan eşleştirme algoritmasını belirtir. Desteklenen beş kapsam eşleşen kural vardır:  
+- <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> -Kapsamlar araştırma iletisi ve onun uç noktasında alanları eşleştirirken kullanılan eşleştirme algoritmasını belirtir. Desteklenen beş kapsam eşleşen kural vardır:  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> Karşılaştırma büyük/küçük harfe temel dize.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> Karşılaştırma büyük/küçük harfe temel dize.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> eşleşme parçaları tarafından ayrılmış "/". Bir arama `http://contoso/building1` kapsamlı bir hizmet eşleşen `http://contoso/building/floor1`. Eşleşmemesi Not `http://contoso/building100` son iki Segment eşleşmediğinden.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> eşleşme parçaları tarafından ayrılmış "/". Bir arama `http://contoso/building1` kapsamlı bir hizmet eşleşen `http://contoso/building/floor1`. Eşleşmemesi Not `http://contoso/building100` son iki Segment eşleşmediğinden.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> kapsamlar tarafından kesimleri kullanarak bir LDAP URL'si ile eşleşir.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> kapsamlar tarafından kesimleri kullanarak bir LDAP URL'si ile eşleşir.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> kapsamları bir UUID dizesiyle tam olarak eşleşir.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> kapsamları bir UUID dizesiyle tam olarak eşleşir.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> bir kapsam belirtmeyen Hizmetleri eşleşir.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> bir kapsam belirtmeyen Hizmetleri eşleşir.  
   
      Bir kapsam eşleşen kural belirtilmezse <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix> kullanılır.  
   

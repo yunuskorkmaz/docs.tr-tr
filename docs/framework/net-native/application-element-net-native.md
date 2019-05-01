@@ -5,11 +5,11 @@ ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868619"
 ---
 # <a name="application-element-net-native"></a>\<Uygulama > öğesi (.NET yerel)
 Birçok farklı uygulama türleri ve olan meta verilerini yansıma çalışma zamanında kullanılabilir ve tüm program öğeleri bir uygulama çalışma zamanı yansıma ilkenin uygulanacağı tür üyeleri için kapsayıcı görevi görür.  
@@ -81,9 +81,9 @@ Birçok farklı uygulama türleri ve olan meta verilerini yansıma çalışma za
   
  `<Application>` Öğesi iki yoldan biriyle kullanılabilir:  
   
--   Program öğelerine olan meta verileri tanımlamak için bir kapsayıcı çalışma zamanında gereklidir. Bu durumda, `<Application>` öğesi herhangi bir özniteliği sahip. Derleme zamanında derleyici araçları alt öğeler tarafından tanıtılan program öğeler için .NET Framework Çekirdek kitaplıkları dahil olmak üzere tüm kitaplıkları arama `<Application>` öğesi. Buna karşılık, derleyici araçları yalnızca belirlenen kitaplık arama [ \<kitaplığı >](../../../docs/framework/net-native/library-element-net-native.md) öğesi için alt öğeler tarafından tanıtılan program öğelerine [ \<kitaplığı >](../../../docs/framework/net-native/library-element-net-native.md).  
+- Program öğelerine olan meta verileri tanımlamak için bir kapsayıcı çalışma zamanında gereklidir. Bu durumda, `<Application>` öğesi herhangi bir özniteliği sahip. Derleme zamanında derleyici araçları alt öğeler tarafından tanıtılan program öğeler için .NET Framework Çekirdek kitaplıkları dahil olmak üzere tüm kitaplıkları arama `<Application>` öğesi. Buna karşılık, derleyici araçları yalnızca belirlenen kitaplık arama [ \<kitaplığı >](../../../docs/framework/net-native/library-element-net-native.md) öğesi için alt öğeler tarafından tanıtılan program öğelerine [ \<kitaplığı >](../../../docs/framework/net-native/library-element-net-native.md).  
   
--   Yansıma, seri hale getirme ve birlikte çalışma için birçok farklı uygulama ilkesini ayarlar bir öğe. Özniteliklerini `<Application>` define öğesi tarafından tanımlanan alt öğeler tarafından geçersiz kılınabilir birçok farklı uygulama ilkesi `<Application>` veya [ \<kitaplığı >](../../../docs/framework/net-native/library-element-net-native.md) öğesi.  
+- Yansıma, seri hale getirme ve birlikte çalışma için birçok farklı uygulama ilkesini ayarlar bir öğe. Özniteliklerini `<Application>` define öğesi tarafından tanımlanan alt öğeler tarafından geçersiz kılınabilir birçok farklı uygulama ilkesi `<Application>` veya [ \<kitaplığı >](../../../docs/framework/net-native/library-element-net-native.md) öğesi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,11 +8,11 @@ ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 70fab3dc418e3eb92e39a7c2b1365e8582b81834
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61871266"
 ---
 # <a name="mitigation-tls-protocols"></a>Azaltma: TLS protokolleri
 .NET Framework 4.6 ile başlayan <xref:System.Net.ServicePointManager?displayProperty=nameWithType> ve <xref:System.Net.Security.SslStream?displayProperty=nameWithType> sınıfları aşağıdaki üç protokolden birini kullanmak için izin verilir: Tls1.0, Tls1.1 veya Tls 1.2. SSL3.0 protokolünün ve RC4 şifreleme desteklenmez.  
@@ -20,21 +20,21 @@ ms.locfileid: "59125100"
 ## <a name="impact"></a>Etki  
  Bu değişiklik etkiler:  
   
--   Bir HTTPS sunucusu ya da aşağıdaki türlerinden herhangi birini kullanarak bir yuva sunucusu konuşmak için SSL kullanan tüm uygulamalarda: <xref:System.Net.Http.HttpClient>, <xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.Mail.SmtpClient>, ve <xref:System.Net.Security.SslStream>.  
+- Bir HTTPS sunucusu ya da aşağıdaki türlerinden herhangi birini kullanarak bir yuva sunucusu konuşmak için SSL kullanan tüm uygulamalarda: <xref:System.Net.Http.HttpClient>, <xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.Mail.SmtpClient>, ve <xref:System.Net.Security.SslStream>.  
   
--   Tls1.0, Tls1.1 veya Tls 1.2 desteklemek için yükseltilemez herhangi bir sunucu tarafı uygulama...  
+- Tls1.0, Tls1.1 veya Tls 1.2 desteklemek için yükseltilemez herhangi bir sunucu tarafı uygulama...  
   
 ## <a name="mitigation"></a>Azaltma  
  Önerilen risk azaltma Tls1.0, Tls1.1 veya Tls 1.2 sunucu tarafı uygulamayı yükseltmektir. Bu uygun değilse veya istemci uygulamaları kopmuş <xref:System.AppContext> sınıfı, bu özellik iki yöntemden biriyle dışında kabul etmek için kullanılabilir:  
   
--   Programlı olarak aşağıdaki gibi bir kod parçacığını kullanarak:  
+- Programlı olarak aşağıdaki gibi bir kod parçacığını kullanarak:  
   
      [!code-csharp[AppCompat.SSLProtocols#1](../../../samples/snippets/csharp/VS_Snippets_CLR/appcompat.sslprotocols/cs/program.cs#1)]
      [!code-vb[AppCompat.SSLProtocols#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/appcompat.sslprotocols/vb/module1.vb#1)]  
   
      Çünkü <xref:System.Net.ServicePointManager> nesne yalnızca bu uyumluluk ayarlarını tanımlama uygulamasının yapacağı ilk şey bir kez olmalıdır başlatılır.  
   
--   Aşağıdaki satırı ekleyerek [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) app.config dosyanıza bölümünü:  
+- Aşağıdaki satırı ekleyerek [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) app.config dosyanıza bölümünü:  
   
     ```xml  
     <AppContextSwitchOverrides value="Switch.System.Net.DontEnableSchUseStrongCrypto=true"/>  

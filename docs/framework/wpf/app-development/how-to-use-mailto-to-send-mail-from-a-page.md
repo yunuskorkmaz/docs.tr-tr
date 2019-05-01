@@ -7,11 +7,11 @@ helpviewer_keywords:
 - mail [WPF], sending from pages
 ms.assetid: b64b9518-df17-4232-94f2-455a4f77ee48
 ms.openlocfilehash: 68055c17b2bec4cd5c3efe05c48eda0ff973bc88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949831"
 ---
 # <a name="how-to-use-mailto-to-send-mail-from-a-page"></a>Nasıl yapılır: Sayfadan Posta Göndermek için mailto: Kullanma
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Documents.Hyperlink> ile birlikte bir **mailto:**[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  

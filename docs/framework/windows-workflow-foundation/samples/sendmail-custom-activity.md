@@ -3,11 +3,11 @@ title: SendMail Özel Etkinliği
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
 ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785950"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail Özel Etkinliği
 Bu örnek, türetilen özel etkinlik oluşturma işlemini gösterir <xref:System.Activities.AsyncCodeActivity> bir iş akışı uygulaması içinde kullanmak için SMTP kullanarak posta göndermek için. Özel Etkinlik özelliklerini kullanan <xref:System.Net.Mail.SmtpClient> zaman uyumsuz olarak e-posta gönderin ve kimlik doğrulaması içeren e-posta göndermek için. Test modu, belirteç değiştirme, dosya şablonları ve test bırakma yolu gibi bazı son kullanıcı özellikler de sağlar.  
@@ -21,7 +21,7 @@ Bu örnek, türetilen özel etkinlik oluşturma işlemini gösterir <xref:System
 |EnableSsl|bool|Belirtir olup olmadığını <xref:System.Net.Mail.SmtpClient> Güvenli Yuva Katmanı (SSL) bağlantıyı şifrelemek için kullanır.|  
 |UserName|Dize|Kullanıcı adı, gönderenin kimliğini doğrulamak için kimlik bilgilerini ayarlayın <xref:System.Net.Mail.SmtpClient.Credentials%2A> özelliği.|  
 |Parola|Dize|Gönderenin kimliğini doğrulamak için kimlik bilgilerini ayarlayın parola <xref:System.Net.Mail.SmtpClient.Credentials%2A> özelliği.|  
-|Özne|<xref:System.Activities.InArgument%601>\<dize >|İletinin konusu.|  
+|Subject|<xref:System.Activities.InArgument%601>\<dize >|İletinin konusu.|  
 |Gövde|<xref:System.Activities.InArgument%601>\<dize >|İletinin gövdesi.|  
 |Ekler|<xref:System.Activities.InArgument%601>\<dize >|Bu e-posta iletisine ekli veri depolamak için kullanılan ek koleksiyonu.|  
 |Başlangıç|<xref:System.Net.Mail.MailAddress>|Bu e-posta iletisi için adres.|  
@@ -107,13 +107,13 @@ new SendMail
   
  Bir SMTP sunucusu kurma hakkında daha fazla bilgi için aşağıdaki bağlantılara bakın.  
   
--   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [SMTP Hizmeti (IIS 6.0) yapılandırma](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [SMTP Hizmeti (IIS 6.0) yapılandırma](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [IIS 7.0: SMTP e-posta Yapılandır](https://go.microsoft.com/fwlink/?LinkId=150457)  
+- [IIS 7.0: SMTP e-posta Yapılandır](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [SMTP hizmeti nasıl yüklenir?](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [SMTP hizmeti nasıl yüklenir?](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
  Üçüncü taraflarca sağlanan SMTP öykünücüsünü indirme için kullanılabilir.  
   

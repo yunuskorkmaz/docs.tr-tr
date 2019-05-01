@@ -3,11 +3,11 @@ title: Öğe Metni Çıkarımını Yapma
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
 ms.openlocfilehash: 6ffe8f2fbf01fbe8dfa9d78f3dfb9e39b6e80b16
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879638"
 ---
 # <a name="inferring-element-text"></a>Öğe Metni Çıkarımını Yapma
 Bir öğenin metni içeren ve yeni bir sütun adıyla (öznitelikleri olan öğe) veya yinelenen öğeler gibi tablolar olarak çıkarılan için alt öğe yok **TableName_Text** öğe için ortaya çıkan tablosuna eklenir. Öğesinde bulunan metin tablosunda bir satıra eklenir ve yeni bir sütun depolanır. **Columnmapping'in** yeni sütunun özellik ayarlanacak **MappingType.SimpleContent**.  

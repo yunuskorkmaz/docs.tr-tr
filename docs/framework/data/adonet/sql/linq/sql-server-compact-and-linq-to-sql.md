@@ -3,11 +3,11 @@ title: SQL Server Compact ve LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
 ms.openlocfilehash: db3f7aef082d965dc27b69f5a966ff038c0ffac0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917858"
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact ve LINQ to SQL
 SQL Server Compact ile Visual Studio yüklü varsayılan bir veritabanıdır. Daha fazla bilgi için [kullanarak SQL Server Compact (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/aa983321(v=vs.110)).  
@@ -19,28 +19,28 @@ SQL Server Compact ile Visual Studio yüklü varsayılan bir veritabanıdır. Da
   
  Aşağıdaki özelliklere dikkat edin:  
   
--   SQL Server Compact veritabanı dosyaları (.sdf uzantısına) karşı doğrudan kullanılabilen bir DLL paketlenir.  
+- SQL Server Compact veritabanı dosyaları (.sdf uzantısına) karşı doğrudan kullanılabilen bir DLL paketlenir.  
   
--   SQL Server Compact istemci uygulama ile aynı işlemde çalıştırır. SQL Server Compact ile iletişimi verimliliğini, bu nedenle SQL Server ile iletişim kurarken daha önemli ölçüde daha yüksek olabilir. Öte yandan, SQL Server Compact Katılımcısı giderlerini ile yönetilen ve yönetilmeyen kod arasındaki birlikte çalışabilirlik gerektirir.  
+- SQL Server Compact istemci uygulama ile aynı işlemde çalıştırır. SQL Server Compact ile iletişimi verimliliğini, bu nedenle SQL Server ile iletişim kurarken daha önemli ölçüde daha yüksek olabilir. Öte yandan, SQL Server Compact Katılımcısı giderlerini ile yönetilen ve yönetilmeyen kod arasındaki birlikte çalışabilirlik gerektirir.  
   
--   SQL Server Compact DLL'si boyutu küçüktür. Bu özellik, genel uygulama boyutunu azaltır.  
+- SQL Server Compact DLL'si boyutu küçüktür. Bu özellik, genel uygulama boyutunu azaltır.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Çalışma zamanı ve SQLMetal komut satırı aracı SQL Server Compact destekler.  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Çalışma zamanı ve SQLMetal komut satırı aracı SQL Server Compact destekler.  
   
--   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] SQL Server Compact desteklemez.  
+- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] SQL Server Compact desteklemez.  
   
 ## <a name="feature-set"></a>Özellik kümesi  
  SQL Server Compact özellik kümesini etkileyen aşağıdaki yollarla SQL Server özellik kümesini çok daha kolay [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamalar:  
   
--   SQL Server Compact saklı yordamları veya görünümleri desteklemez.  
+- SQL Server Compact saklı yordamları veya görünümleri desteklemez.  
   
--   SQL Server Compact, yalnızca bir alt kümesini veri türleri ve SQL işlevleri destekler.  
+- SQL Server Compact, yalnızca bir alt kümesini veri türleri ve SQL işlevleri destekler.  
   
--   SQL Server Compact, SQL yapıları yalnızca bir kısmını destekler.  
+- SQL Server Compact, SQL yapıları yalnızca bir kısmını destekler.  
   
--   SQL Server Compact, en az bir iyileştirici sağlar. Bazı sorgular zaman aşımına uğrayabilir mümkündür.  
+- SQL Server Compact, en az bir iyileştirici sağlar. Bazı sorgular zaman aşımına uğrayabilir mümkündür.  
   
--   SQL Server Compact, kısmi güven desteklemez.  
+- SQL Server Compact, kısmi güven desteklemez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

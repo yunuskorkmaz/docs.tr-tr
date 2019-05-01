@@ -8,11 +8,11 @@ helpviewer_keywords:
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
 ms.openlocfilehash: 6be464ce85bd3ba91dd6e6cc810ec7d04edc0c3d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911852"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>DataGrid Denetiminde Varsayılan Klavye ve Fare Davranışı
 Bu konu, kullanıcılar ile nasıl etkileşim kurabileceğine açıklar <xref:System.Windows.Controls.DataGrid> klavyeyi ve fareyi kullanarak denetimi.  
@@ -55,21 +55,21 @@ Bu konu, kullanıcılar ile nasıl etkileşim kurabileceğine açıklar <xref:Sy
   
  Aşağıdaki seçim tuşları çok satırlı seçimini değiştirin.  
   
--   SHIFT + AŞAĞI OK  
+- SHIFT + AŞAĞI OK  
   
--   SHIFT + YUKARI OK  
+- SHIFT + YUKARI OK  
   
--   SHIFT+PAGE DOWN  
+- SHIFT+PAGE DOWN  
   
--   ÜST KARAKTER + PAGE UP  
+- ÜST KARAKTER + PAGE UP  
   
--   CTRL + SHIFT + AŞAĞI OK  
+- CTRL + SHIFT + AŞAĞI OK  
   
--   CTRL + SHIFT + YUKARI OK  
+- CTRL + SHIFT + YUKARI OK  
   
--   CTRL+SHIFT+HOME  
+- CTRL+SHIFT+HOME  
   
--   CTRL+SHIFT+END  
+- CTRL+SHIFT+END  
   
 ## <a name="default-mouse-behavior"></a>Fare davranışı  
  Varsayılan fare davranışı aşağıdaki tabloda <xref:System.Windows.Controls.DataGrid>.  

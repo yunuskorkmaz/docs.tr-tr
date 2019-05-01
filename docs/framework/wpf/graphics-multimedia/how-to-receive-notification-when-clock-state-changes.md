@@ -9,11 +9,11 @@ helpviewer_keywords:
 - notifications [WPF], clocks' state changes
 ms.assetid: ecb10fc9-d0c2-45c3-b0a1-7b11baa733da
 ms.openlocfilehash: dc3fffb88ce59ceb908d6febd2f078820513b641
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942148"
 ---
 # <a name="how-to-receive-notification-when-a-clocks-state-changes"></a>Nasıl yapılır: Saatin Durumu Değiştiğinde Bildirim Alma
 Saatin <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> bir olay oluşursa, kendi <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> zaman saati başlatıldığında veya durdurulduğunda gibi geçersiz hale gelir. Bu olay ile kullanarak doğrudan kaydedebilirsiniz bir <xref:System.Windows.Media.Animation.Clock>, ya da kullanarak kaydedebilirsiniz bir <xref:System.Windows.Media.Animation.Timeline>.  

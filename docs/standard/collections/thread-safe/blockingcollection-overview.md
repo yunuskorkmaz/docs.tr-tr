@@ -11,34 +11,34 @@ ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: abf6f193f97319db0cdff7e2a33846cdf011fbdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908771"
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection Genel Bakışı
 <xref:System.Collections.Concurrent.BlockingCollection%601> Aşağıdaki özellikleri sağlayan bir iş parçacığı güvenli koleksiyon sınıfı şöyledir:  
   
--   Üretici-tüketici deseninin bir uygulaması.  
+- Üretici-tüketici deseninin bir uygulaması.  
   
--   Eş zamanlı ekleme ve birden çok iş parçacığından öğelerinin sürüyor.  
+- Eş zamanlı ekleme ve birden çok iş parçacığından öğelerinin sürüyor.  
   
--   İsteğe bağlı kapasite üst sınırı.  
+- İsteğe bağlı kapasite üst sınırı.  
   
--   Koleksiyon boş ya da tam olduğunda engelleme ekleme ve kaldırma işlemleri.  
+- Koleksiyon boş ya da tam olduğunda engelleme ekleme ve kaldırma işlemleri.  
   
--   Ekleme ve kaldırma ", engelleme yapmadığından veya belirli bir süre kadar engelleme işlemleri deneyin".  
+- Ekleme ve kaldırma ", engelleme yapmadığından veya belirli bir süre kadar engelleme işlemleri deneyin".  
   
--   Uygulayan herhangi bir koleksiyon türü yalıtır <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>  
+- Uygulayan herhangi bir koleksiyon türü yalıtır <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>  
   
--   İptal belirteçleri ile iptal etme.  
+- İptal belirteçleri ile iptal etme.  
   
--   Sabit listesi ile iki tür `foreach` (`For Each` Visual Basic'te):  
+- Sabit listesi ile iki tür `foreach` (`For Each` Visual Basic'te):  
   
-    1.  Salt okunur sabit listesi.  
+    1. Salt okunur sabit listesi.  
   
-    2.  Bunlar tıklamanızdır öğeleri kaldırır numaralandırması.  
+    2. Bunlar tıklamanızdır öğeleri kaldırır numaralandırması.  
   
 ## <a name="bounding-and-blocking-support"></a>Sınırlama ve engelleme desteği  
  <xref:System.Collections.Concurrent.BlockingCollection%601> sınırlama ve engelleme destekler. Yol sınırlama koleksiyonunun kapasite üst sınırı ayarlayabilirsiniz. Sınırlayıcı bellek koleksiyonda en büyük boyutunu denetlemenizi sağlar ve alıcı iş parçacığı önceden tablasından taşınmasını oluşturmayan iş parçacıkları engeller belirli senaryolarda önemlidir.  

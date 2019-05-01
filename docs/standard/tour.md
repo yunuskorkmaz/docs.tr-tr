@@ -1,5 +1,5 @@
 ---
-title: .NET turu
+title: .NET Turu
 description: Bazı .NET tanınmış özellikleri aracılığıyla Kılavuzlu bir turu.
 author: cartermp
 ms.author: wiwagn
@@ -7,13 +7,13 @@ ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
 ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936311"
 ---
-# <a name="tour-of-net"></a>.NET turu
+# <a name="tour-of-net"></a>.NET Turu
 
 .NET, genel amaçlı geliştirme platformudur. Birden çok programlama dilleri, zaman uyumsuz ve eş zamanlı programlama modellerini ve yerel birlikte çalışabilirliği, birden çok platformda sağlayan çok çeşitli senaryolar için destek gibi birkaç temel özellikleri var.
 
@@ -111,13 +111,13 @@ Zaman uyumsuz programlama, birinci sınıf bir kavram içinde .NET framework kit
 
 . NET'te zaman uyumsuz programlama hakkında daha fazla bilgi edinmek için başlayın [zaman uyumsuz genel bakış](async.md) konu.
 
-## <a name="language-integrated-query-linq"></a>Dil ile tümleşik sorgu (LINQ)
+## <a name="language-integrated-query-linq"></a>Dil ile Tümleşik Sorgu (LINQ)
 
 LINQ, güçlü bir C# ve VB için veri işletim için basit, bildirim temelli kod yazmanıza olanak tanıyan özellikler kümesidir. Veriler (örneğin, bellek içi nesneler, bir SQL veritabanı veya bir XML belgesi) pek çok biçimde olabilir, ancak genellikle yazma LINQ kodunu veri kaynağı tarafından farklı değildir.
 
 Daha fazla bilgi edinin ve bazı örnekleri görmek için bkz: [LINQ (dil ile tümleşik sorgu)](using-linq.md) konu.
 
-## <a name="native-interoperability"></a>Yerel birlikte çalışabilirliği
+## <a name="native-interoperability"></a>Native ile birlikte çalışma
 
 Her işletim sistemi sistem hizmetlerini sağlayan bir uygulama programlama arabirimi (API) içerir. .NET bu API'leri çağırmak için birçok yol sağlar.
 

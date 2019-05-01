@@ -11,11 +11,11 @@ ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 26128e5d707d3f331dc2b691f5a5f798bdf84c25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908667"
 ---
 # <a name="understanding-speedup-in-plinq"></a>PLINQ'te Hızlandırmayı Anlama
 PLINQ birincil amacı, çok çekirdekli bilgisayarlarda paralel sorgu temsilcileri yürüterek Plınq sorgularının LINQ yürütülmesini hızlandırmak sağlamaktır. Kaynak koleksiyondaki her öğe işlenmesini bağımsız olarak, paylaşılan durumu olmadan arasında bireysel temsilciler dahil olduğunda PLINQ en iyi şekilde çalışır. Bu işlemler LINQ nesneleri ve PLINQ için ortak olan ve genellikle denir "*delightfully paralel*" çünkü bunlar kendilerini kolayca birden çok iş parçacığında zamanlamaya uygun. Ancak, tüm sorguları tamamen delightfully paralel işlemleri oluşur; Çoğu durumda, bir sorgu, ya da paralelleştirildi olamaz veya paralel yürütme yavaş, bazı işleçler içerir. Ve tamamen delightfully paralel bile sorgular ile PLINQ gerekir yine de veri kaynağının bölüm ve iş parçacıkları üzerinde iş zamanlama ve sorgu tamamlandığında genellikle sonuçları birleştirin. Tüm bu işlemler, paralelleştirme hesaplama maliyetine ekleyin; Bu maliyetler paralelleştirme ekleme adlı *yükü*. PLINQ sorgusunda en iyi performansı elde etmek için delightfully paralel bölümleri en üst düzeye çıkarmak ve getirdiği ek yüke gerek bölümleri en aza indirmek için hedeftir. Bu makalede, mümkün olduğunca etkili doğru sonuçları hala sonuçlanmıyor sırasında PLINQ sorguları yazmanıza yardımcı olacak bilgiler sağlar.  
@@ -74,15 +74,15 @@ PLINQ birincil amacı, çok çekirdekli bilgisayarlarda paralel sorgu temsilcile
   
  Aşağıdaki listede, varsayılan olarak PLINQ sıralı modunda yürütülür sorgu şekiller açıklanmaktadır:  
   
--   Bir Select içeren sorgular dizini, dizinlenmiş SelectMany veya kaldırıldı veya özgün dizinleri yeniden düzenlenmiş olan bir sıralama veya filtreleme işleci sonra ElementAt yan tümcesi.  
+- Bir Select içeren sorgular dizini, dizinlenmiş SelectMany veya kaldırıldı veya özgün dizinleri yeniden düzenlenmiş olan bir sıralama veya filtreleme işleci sonra ElementAt yan tümcesi.  
   
--   SkipWhile işleci bir Al ' TakeWhile, Atla içeren ve dizinleri kaynak dizisindeki özgün sırayla olmadığı sorgular.  
+- SkipWhile işleci bir Al ' TakeWhile, Atla içeren ve dizinleri kaynak dizisindeki özgün sırayla olmadığı sorgular.  
   
--   ZIP veya SequenceEquals, veri kaynaklarından biri özgün sıralı bir dizine sahip ve diğer veri kaynağı dizinlenebilir sürece içeren sorgular (yani bir dizi veya IList(T)).  
+- ZIP veya SequenceEquals, veri kaynaklarından biri özgün sıralı bir dizine sahip ve diğer veri kaynağı dizinlenebilir sürece içeren sorgular (yani bir dizi veya IList(T)).  
   
--   Concat, dizinlenebilir veri kaynaklarına uygulanır sürece içeren sorgular.  
+- Concat, dizinlenebilir veri kaynaklarına uygulanır sürece içeren sorgular.  
   
--   Tersine, bir dizine veri kaynağına uygulanan sürece içeren sorgular.  
+- Tersine, bir dizine veri kaynağına uygulanan sürece içeren sorgular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

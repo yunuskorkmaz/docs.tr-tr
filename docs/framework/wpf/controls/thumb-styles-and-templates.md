@@ -1,5 +1,5 @@
 ---
-title: Parmak stilleri ve şablonları
+title: Parmak Stilleri ve Şablonları
 ms.date: 03/30/2017
 helpviewer_keywords:
 - states [WPF], Thumb
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - parts [WPF], Thumb
 ms.assetid: 86a49235-62d9-414e-923e-53126e3f930a
 ms.openlocfilehash: b7fc595f0c592d42f118c6b5542edf93716c2fca
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57507312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790786"
 ---
-# <a name="thumb-styles-and-templates"></a>Parmak stilleri ve şablonları
+# <a name="thumb-styles-and-templates"></a>Parmak Stilleri ve Şablonları
 
 Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.Primitives.Thumb> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).
 

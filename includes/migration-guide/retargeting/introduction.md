@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d4f22aa41eb7aeffd655d980cb8418649462273e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757790"
+---
 ## <a name="introduction"></a>Giriş
 Yeniden hedefleme değişiklikleri farklı bir .NET Framework'ü hedefleyen için derlenen uygulamaları etkiler. Bunlara aşağıdakiler dahildir:
 

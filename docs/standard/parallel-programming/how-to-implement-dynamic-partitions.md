@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Dinamik bölümleri uygulama'
+title: 'Nasıl yapılır: Dinamik Bölümleri Uygulama'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ ms.assetid: c875ad12-a161-43e6-ad1c-3d6927c536a7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 792488e53ffb7f870e21fdd1ad3ef94bf0303b1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811559"
 ---
-# <a name="how-to-implement-dynamic-partitions"></a>Nasıl yapılır: Dinamik bölümleri uygulama
+# <a name="how-to-implement-dynamic-partitions"></a>Nasıl yapılır: Dinamik Bölümleri Uygulama
 Aşağıdaki örnek, özel bir uygulama gösterilmektedir <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> dinamik bölümlemeyi uygular ve belirli bir aşırı kullanılan <xref:System.Threading.Tasks.Parallel.ForEach%2A> ve PLINQ.  
   
 ## <a name="example"></a>Örnek  

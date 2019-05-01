@@ -13,11 +13,11 @@ ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2159199fc12ef83a6bf4a44841d71799e0dad4dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868972"
 ---
 # <a name="securing-method-access"></a>Yöntem Erişiminin Güvenliğini Sağlama
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,17 +28,17 @@ ms.locfileid: "59166185"
   
  Metot erişimini kısıtlamak için yönetilen kodu sunar birkaç yolu:  
   
--   Güvenilir olabilir, sınıf, derleme veya türetilmiş sınıflar erişilebilirlik kapsamını sınırlamak. Bu metot erişimini sınırlamak için en basit yoludur. Bazı durumlarda üst sınıfın kimliğini paylaştıkları rağmen genel olarak, türetilmiş sınıflar Not bunlar, türetilen sınıf daha az güvenilir olabilir. Özellikle, güven from anahtar sözcüğü Infer değil **korumalı**, değil gerekmeyen kullanılan güvenlik bağlamı.  
+- Güvenilir olabilir, sınıf, derleme veya türetilmiş sınıflar erişilebilirlik kapsamını sınırlamak. Bu metot erişimini sınırlamak için en basit yoludur. Bazı durumlarda üst sınıfın kimliğini paylaştıkları rağmen genel olarak, türetilmiş sınıflar Not bunlar, türetilen sınıf daha az güvenilir olabilir. Özellikle, güven from anahtar sözcüğü Infer değil **korumalı**, değil gerekmeyen kullanılan güvenlik bağlamı.  
   
--   Belirli bir kimlik--esas olarak, herhangi belirli arayanlar yöntemi erişimi sınırlamak [kanıt](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) (tanımlayıcı ad, yayımcı, bölge vb.) öğesini seçin.  
+- Belirli bir kimlik--esas olarak, herhangi belirli arayanlar yöntemi erişimi sınırlamak [kanıt](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) (tanımlayıcı ad, yayımcı, bölge vb.) öğesini seçin.  
   
--   Seçtiğiniz izinlere sahip arayanlara metot erişimini sınırlayın.  
+- Seçtiğiniz izinlere sahip arayanlara metot erişimini sınırlayın.  
   
  Benzer şekilde, bildirim temelli güvenlik sınıf devralma denetlemenizi sağlar. Kullanabileceğiniz **Inheritancedemand** aşağıdakileri yapmak için:  
   
--   Türetilen sınıflar belirtilen kimlik veya iznine sahip olması gerekir.  
+- Türetilen sınıflar belirtilen kimlik veya iznine sahip olması gerekir.  
   
--   Belirtilen kimlik veya iznine sahip olması için belirli yöntemleri geçersiz kılan türetilmiş sınıflar gerektirir.  
+- Belirtilen kimlik veya iznine sahip olması için belirli yöntemleri geçersiz kılan türetilmiş sınıflar gerektirir.  
   
  Aşağıdaki örnek, Arayanların belirli bir tanımlayıcı ad ile imzalanması gerektirerek sınırlı erişim için genel bir sınıf korunmasına nasıl yardımcı olacağını gösterir. Bu örnekte <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> ile bir **isteğe** için tanımlayıcı ad. Görev tabanlı bir derlemeyi katı bir adla imzalamak hakkında bilgi için bkz. [bkz](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
   

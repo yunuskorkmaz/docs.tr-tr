@@ -3,11 +3,11 @@ title: Saniyede Bırakılan Güvenli Mesajlaşma İletileri
 ms.date: 03/30/2017
 ms.assetid: a11b0b80-b242-48e1-b0bb-7f756db5486b
 ms.openlocfilehash: 7722b32f99b302c5c272e095033879c9e04c7ee1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916038"
 ---
 # <a name="reliable-messaging-messages-dropped-per-second"></a>Saniyede Bırakılan Güvenli Mesajlaşma İletileri
 Sayaç adı: Saniye başına bırakılan güvenilir Mesajlaşma oturumları.  

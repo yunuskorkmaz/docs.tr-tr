@@ -6,11 +6,11 @@ helpviewer_keywords:
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
 ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856550"
 ---
 # <a name="distributed-application-security"></a>Dağıtılan Uygulama Güvenliği
 Windows Communication Foundation (WCF) güvenlik üç önemli işlevsel alanları bozuk: güvenlik, erişim denetimi ve denetim aktarın. Aktarım güvenliği, kimlik doğrulaması bütünlüğü ve gizliliği sağlar. Aktarım güvenliği aşağıdakilerden biri tarafından sağlanır: aktarım güvenliği, ileti güvenliği veya `TransportWithMessageCredential`.  
@@ -20,11 +20,11 @@ Windows Communication Foundation (WCF) güvenlik üç önemli işlevsel alanlar�
 ## <a name="transfer-security-scenarios"></a>Aktarım güvenliği senaryoları  
  WCF aktarma güvenlik görevlendirmek yaygın senaryolar şunlardır:  
   
--   Windows kullanarak güvenli aktarım. Bir WCF istemcisi ve hizmet, bir Windows etki alanı (veya Windows orman) dağıtılır. İstemci ve hizmet, ileti bütünlüğü ve ileti gizliliği karşılıklı kimlik doğrulaması gereksinimleri içerir böylece iletileri kişisel verileri içerir. Ayrıca, kavram gereklidir belirli bir işlem, örneğin, ileti alıcısı imza bilgilerini kaydetmek oluştuğunu.  
+- Windows kullanarak güvenli aktarım. Bir WCF istemcisi ve hizmet, bir Windows etki alanı (veya Windows orman) dağıtılır. İstemci ve hizmet, ileti bütünlüğü ve ileti gizliliği karşılıklı kimlik doğrulaması gereksinimleri içerir böylece iletileri kişisel verileri içerir. Ayrıca, kavram gereklidir belirli bir işlem, örneğin, ileti alıcısı imza bilgilerini kaydetmek oluştuğunu.  
   
--   Güvenli aktarım kullanarak `UserName` ve HTTPS. Bir WCF istemcisi ve hizmet Internet üzerinden çalışacak şekilde geliştirilen gerekir. İstemci kimlik bilgileri, bir kullanıcı adı/parola çiftleri veritabanına karşı kimlik doğrulaması. Hizmet, güvenilir bir Güvenli Yuva Katmanı (SSL) sertifikasını kullanarak bir HTTPS adresi dağıtılır. İletileri Internet üzerinden yolculuk ediyor çünkü istemci ve hizmet birbirini doğrulanması gerekir ve iletileri gizliliği ve bütünlüğü aktarım sırasında korunur.  
+- Güvenli aktarım kullanarak `UserName` ve HTTPS. Bir WCF istemcisi ve hizmet Internet üzerinden çalışacak şekilde geliştirilen gerekir. İstemci kimlik bilgileri, bir kullanıcı adı/parola çiftleri veritabanına karşı kimlik doğrulaması. Hizmet, güvenilir bir Güvenli Yuva Katmanı (SSL) sertifikasını kullanarak bir HTTPS adresi dağıtılır. İletileri Internet üzerinden yolculuk ediyor çünkü istemci ve hizmet birbirini doğrulanması gerekir ve iletileri gizliliği ve bütünlüğü aktarım sırasında korunur.  
   
--   Sertifikaları kullanarak güvenli aktarım. Bir WCF istemcisi ve hizmet genel internet üzerinden çalışmak için geliştirilmiş gerekir. İstemci ve hizmet iletileri güvenli hale getirmek için kullanılan sertifikaları her ikisi de sahiptir. Hizmet ve istemci Internet birbirleri ile iletişim kurmak ve ileti bütünlüğü ve gizliliği karşılıklı kimlik doğrulaması gerektiren yüksek değerli işlemleri gerçekleştirmek için kullanın.  
+- Sertifikaları kullanarak güvenli aktarım. Bir WCF istemcisi ve hizmet genel internet üzerinden çalışmak için geliştirilmiş gerekir. İstemci ve hizmet iletileri güvenli hale getirmek için kullanılan sertifikaları her ikisi de sahiptir. Hizmet ve istemci Internet birbirleri ile iletişim kurmak ve ileti bütünlüğü ve gizliliği karşılıklı kimlik doğrulaması gerektiren yüksek değerli işlemleri gerçekleştirmek için kullanın.  
   
 ## <a name="integrity-confidentiality-and-authentication"></a>Kimlik doğrulaması bütünlüğü ve gizlilik  
  Üç işlev — bütünlüğü, gizlilik ve kimlik doğrulaması — birlikte Aktarım güvenlik olarak da adlandırılır. Aktarım güvenliği bir dağıtılmış uygulama tehditlerin azaltılmasına yardımcı olacak işlevleri sağlar. Aşağıdaki tabloda kısaca aktarım güvenliği olun üç işlevleri açıklanmaktadır.  
@@ -64,7 +64,7 @@ Windows Communication Foundation (WCF) güvenlik üç önemli işlevsel alanlar�
   
 |Ayar|Açıklama|  
 |-------------|-----------------|  
-|None|İstemci mevcut herhangi bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
+|Yok.|İstemci mevcut herhangi bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
 |Temel|Temel kimlik doğrulaması belirtir.  RFC2617, ek bilgi için bkz. "[HTTP kimlik doğrulaması: Temel ve Özet kimlik doğrulama](https://go.microsoft.com/fwlink/?LinkId=88313). "|  
 |Özet|Özet kimlik doğrulaması belirtir.  RFC2617, ek bilgi için bkz. "[HTTP kimlik doğrulaması: Temel ve Özet kimlik doğrulama](https://go.microsoft.com/fwlink/?LinkId=88313). "|  
 |NTLM|Bir Windows etki alanında SSPI anlaşması kullanılarak Windows kimlik doğrulaması belirtir.<br /><br /> SSPI anlaşması Kerberos protokolü veya NT LanMan (NTLM) kullanarak sonuçlanır.|  
@@ -76,7 +76,7 @@ Windows Communication Foundation (WCF) güvenlik üç önemli işlevsel alanlar�
   
 |Ayar|Açıklama|  
 |-------------|-----------------|  
-|None|Anonim istemci ile etkileşim kurmak hizmet sağlar.|  
+|Yok.|Anonim istemci ile etkileşim kurmak hizmet sağlar.|  
 |Windows|SOAP ileti alışverişlerinde Windows kimlik bilgisi kimliği doğrulanmış bağlamı altında gerçekleşmesini sağlar. Kerberos protokolü veya NTLM kimlik doğrulama hizmeti olarak çekmek için SSPI anlaşması mekanizması kullanır.|  
 |Kullanıcı adı|Bir kullanıcı adı kimlik bilgisi ile istemcinin kimliğinin doğrulanmasını gerektiren hizmet sağlar. WCF kullanıcı adıyla bir imza oluşturma veya verileri şifreleme gibi şifreleme işlemleri izin vermediğini unutmayın. Bu nedenle, WCF aktarma kullanıcı adı kimlik bilgilerini kullanarak güvenli zorlar.|  
 |Sertifika|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir sertifika.|  

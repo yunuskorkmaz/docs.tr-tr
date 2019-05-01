@@ -9,30 +9,30 @@ ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 210a0a7d84f21360dce93627cdf6a27777c09968
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874478"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework'teki Performans Sayaçları
 Bu konu içinde bulabilirsiniz performans sayaçları listesi sağlar [Windows Performans İzleyicisi'ni](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
   
--   [Özel durum performans sayaçları](#exception)  
+- [Özel durum performans sayaçları](#exception)  
   
--   [Interop performans sayaçları](#interop)  
+- [Interop performans sayaçları](#interop)  
   
--   [JIT performans sayaçları](#jit)  
+- [JIT performans sayaçları](#jit)  
   
--   [Yükleme performans sayaçları](#loading)  
+- [Yükleme performans sayaçları](#loading)  
   
--   [Kilit ve iş parçacığı performans sayaçları](#lockthread)  
+- [Kilit ve iş parçacığı performans sayaçları](#lockthread)  
   
--   [Bellek performans sayaçları](#memory)  
+- [Bellek performans sayaçları](#memory)  
   
--   [Ağ performans sayaçları](#networking)  
+- [Ağ performans sayaçları](#networking)  
   
--   [Güvenlik performans sayaçları](#security)  
+- [Güvenlik performans sayaçları](#security)  
   
 <a name="exception"></a>   
 ## <a name="exception-performance-counters"></a>Özel durum performans sayaçları  
@@ -161,21 +161,21 @@ Bu konu içinde bulabilirsiniz performans sayaçları listesi sağlar [Windows P
   
  Ağ performans sayaçları desteklenen çeşitli sınıfı vardır:  
   
--   Olay sayaçları, bazı olay sayısını ölçer.  
+- Olay sayaçları, bazı olay sayısını ölçer.  
   
--   Gönderilen veya alınan veri miktarı ölçen verileri sayaçları.  
+- Gönderilen veya alınan veri miktarı ölçen verileri sayaçları.  
   
--   Ne kadar süreyle farklı süreçlerini ölçen sayaçları süresi yararlanın. Nesnelerde süreleri ölçülür her zaman aralığını (genellikle saniye) farklı durumlar dışında geldikleri sonra.  
+- Ne kadar süreyle farklı süreçlerini ölçen sayaçları süresi yararlanın. Nesnelerde süreleri ölçülür her zaman aralığını (genellikle saniye) farklı durumlar dışında geldikleri sonra.  
   
--   Belirli bir yapan nesne sayısını ölçmek aralığı başına sayaçları (normalde saniyede) aralığı başına işleme geçiş.  
+- Belirli bir yapan nesne sayısını ölçmek aralığı başına sayaçları (normalde saniyede) aralığı başına işleme geçiş.  
   
  Ağ performans sayaçları olayları için şunları içerir:  
   
--   **Kurulan bağlantılar**  
+- **Kurulan bağlantılar**  
   
--   **Alınan veri birimi sayısı**  
+- **Alınan veri birimi sayısı**  
   
--   **Gönderilen veri birimi**  
+- **Gönderilen veri birimi**  
   
  İşlem başlatıldığından bu yana bu performans sayaçlarını sayımları sağlar. Sayısı <xref:System.Net.Sockets.Socket> kurulan bağlantılar içeren açık <xref:System.Net.Sockets.Socket> olan akış yuva diğer sınıfları tarafından yapılan de internal olarak çağrıları ile bağlantı için bir uygulama tarafından yöntemini çağırır (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.WebClient>, ve <xref:System.Net.Sockets.TcpClient>, örneğin) için <xref:System.Net.Sockets.Socket> sınıfı  
   
@@ -183,33 +183,33 @@ Bu konu içinde bulabilirsiniz performans sayaçları listesi sağlar [Windows P
   
  Ağ performans sayaçları veriler için aşağıdakileri içerir:  
   
--   **Alınan bayt sayısı**  
+- **Alınan bayt sayısı**  
   
--   **Gönderilen bayt sayısı**  
+- **Gönderilen bayt sayısı**  
   
  İşlem başlatıldığından bu yana yukarıdaki sayaçları bayt sayısını sağlar.  
   
  Ne kadar sürdüğünü izleyen iki süresi sayaçları vardır <xref:System.Net.HttpWebRequest> aracılığıyla kendi ömrü geçirilecek nesneleri döngüsü veya sadece bu parçası:  
   
--   **HttpWebRequest ortalama yaşam süresi**  
+- **HttpWebRequest ortalama yaşam süresi**  
   
--   **HttpWebRequest ortalama kuyruk süresi**  
+- **HttpWebRequest ortalama kuyruk süresi**  
   
  İçin **HttpWebRequest ortalama yaşam süresi** sayacı, çoğu kullanım ömrünü <xref:System.Net.HttpWebRequest> nesneleri uygulamanın yanıt akışına kapalı zaman gönderinizi nesne oluşturulduktan zaman ile her zaman başlar. Genel olmayan iki durum vardır:  
   
--   Uygulamanın hiçbir zaman çağırırsa <xref:System.Net.HttpWebRequest.GetResponse%2A> veya <xref:System.Net.HttpWebRequest.BeginGetResponse%2A> yöntemleri ve ardından ömrünü <xref:System.Net.HttpWebRequest> nesne göz ardı edilir.  
+- Uygulamanın hiçbir zaman çağırırsa <xref:System.Net.HttpWebRequest.GetResponse%2A> veya <xref:System.Net.HttpWebRequest.BeginGetResponse%2A> yöntemleri ve ardından ömrünü <xref:System.Net.HttpWebRequest> nesne göz ardı edilir.  
   
--   Varsa <xref:System.Net.HttpWebRequest> nesnesi oluşturur bir <xref:System.Net.WebException> çağırırken <xref:System.Net.HttpWebRequest.GetResponse%2A> veya <xref:System.Net.HttpWebRequest.EndGetResponse%2A> yöntemleri ömrü sona erer özel durum oluştuğunda. Teknik olarak, temel alınan yanıt akış da bu noktada kapalı (kullanıcı tarafından döndürülen yanıt akışına yanıt akışına bir kopyasını içeren bir bellek akış gerçekten değer).  
+- Varsa <xref:System.Net.HttpWebRequest> nesnesi oluşturur bir <xref:System.Net.WebException> çağırırken <xref:System.Net.HttpWebRequest.GetResponse%2A> veya <xref:System.Net.HttpWebRequest.EndGetResponse%2A> yöntemleri ömrü sona erer özel durum oluştuğunda. Teknik olarak, temel alınan yanıt akış da bu noktada kapalı (kullanıcı tarafından döndürülen yanıt akışına yanıt akışına bir kopyasını içeren bir bellek akış gerçekten değer).  
   
  Belirli izleme dört sayaç vardır <xref:System.Net.HttpWebRequest> aralığı başına işleme sorunları nesne. Uygulama geliştiricileri, Yöneticiler, bu performans sayaçlarını yardımcı olabilir ve destek personeli daha iyi anlamak ne <xref:System.Net.HttpWebRequest> nesneleri yapıyor. Sayaçlar aşağıdakileri içerir:  
   
--   **Oluşturulan HttpWebRequests/sn**  
+- **Oluşturulan HttpWebRequests/sn**  
   
--   **Kuyruğa Alınan HttpWebRequests/sn**  
+- **Kuyruğa Alınan HttpWebRequests/sn**  
   
--   **İptal HttpWebRequests/sn**  
+- **İptal HttpWebRequests/sn**  
   
--   **Başarısız HttpWebRequests/sn**  
+- **Başarısız HttpWebRequests/sn**  
   
  İçin **HttpWebRequests iptal edildi/sn** sayaç, dahili çağrıları <xref:System.Net.HttpWebRequest.Abort%2A> de sayılır. Bu iç çağrıları, genellikle uygulamanın ölçmek istediğiniz zaman aşımları tarafından neden olur.  
   
@@ -233,9 +233,9 @@ for (int i = 0; i < Array.Length; i++)
   
  Ağ performans sayaçları, iki kategoride listelenmiştir:  
   
--   ".NET CLR - özgün ağ performans sayaçları sunulan .NET Framework sürüm 2 ve .NET Framework sürüm 2'de desteklenir ve daha sonra".  
+- ".NET CLR - özgün ağ performans sayaçları sunulan .NET Framework sürüm 2 ve .NET Framework sürüm 2'de desteklenir ve daha sonra".  
   
--   ".NET CLR ağ 4.0.0.0" - Yukarıdaki yuva tüm yeni performans desteklenen .NET Framework sürüm 4 ve üzeri sayaçları. Bu yeni sayaçları performans bilgilerini sağlamaları <xref:System.Net.HttpWebRequest> nesneleri.  
+- ".NET CLR ağ 4.0.0.0" - Yukarıdaki yuva tüm yeni performans desteklenen .NET Framework sürüm 4 ve üzeri sayaçları. Bu yeni sayaçları performans bilgilerini sağlamaları <xref:System.Net.HttpWebRequest> nesneleri.  
   
  Erişim ve uygulamada performans sayaçları hakkında daha fazla bilgi için bkz. [performans sayaçları](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   

@@ -11,8 +11,8 @@ ms.openlocfilehash: 6feabadff17538f4a7368c348f7b72226e2d678e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800158"
 ---
 # <a name="windows-forms-coordinates"></a>Windows Forms Koordinatları
 Koordinat sistemi bir Windows formu için cihaz koordinatlarına temel alır ve cihaz birim (genellikle, piksel) temel Windows Forms'ta çizme, ölçü birimidir. Ekran noktalarında x ve y koordinatını çiftlerine göre sağa ve yukarıdan altına artırma y koordinatları artırma x koordinatları ile açıklanmaktadır. Ekranına göre kaynak konumu, ekran veya istemci koordinatları olup belirtiyorsanız bağlı olarak değişir.  

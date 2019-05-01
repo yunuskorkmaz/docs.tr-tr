@@ -13,20 +13,20 @@ helpviewer_keywords:
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
 ms.openlocfilehash: 88002e2c099ed9503beddb190d243aadcc1087fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908030"
 ---
 # <a name="array-conversions-visual-basic"></a>Dizi Dönüştürmeleri (Visual Basic)
 Aşağıdaki koşulları karşılaması koşuluyla, bir dizi türü farklı bir dizi türüne dönüştürebilirsiniz:  
   
--   **Eşit boyut.** Sıralamalara sahip iki dizinin aynı olmalıdır, yani boyut sayıları aynı olmalıdır. Ancak, ilgili boyutların uzunlukları aynı olması gerekmez.  
+- **Eşit boyut.** Sıralamalara sahip iki dizinin aynı olmalıdır, yani boyut sayıları aynı olmalıdır. Ancak, ilgili boyutların uzunlukları aynı olması gerekmez.  
   
--   **Öğe veri türü.** İki dizi öğeleri veri türleri, başvuru türünde olması gerekir. Dönüştüremezsiniz bir `Integer` için dizi bir `Long` dizisi geçirin veya hatta için bir `Object` dizisi en az bir değer türü olduğundan. Daha fazla bilgi için [değer türleri ve başvuru türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+- **Öğe veri türü.** İki dizi öğeleri veri türleri, başvuru türünde olması gerekir. Dönüştüremezsiniz bir `Integer` için dizi bir `Long` dizisi geçirin veya hatta için bir `Object` dizisi en az bir değer türü olduğundan. Daha fazla bilgi için [değer türleri ve başvuru türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
--   **Convertibility.** Genişletme veya daraltma, dönüştürme, olası iki dizi öğesi türleri arasında olmalıdır. Bu gereksinim başarısız bir örnek denenen bir dönüştürme arasında olan bir `String` dizi ve bir sınıf bir dizi türetilen <xref:System.Attribute?displayProperty=nameWithType>. Ortak hiçbir şey bu iki tür vardır ve bunlar arasında dönüştürme herhangi bir türde bulunmaktadır.  
+- **Convertibility.** Genişletme veya daraltma, dönüştürme, olası iki dizi öğesi türleri arasında olmalıdır. Bu gereksinim başarısız bir örnek denenen bir dönüştürme arasında olan bir `String` dizi ve bir sınıf bir dizi türetilen <xref:System.Attribute?displayProperty=nameWithType>. Ortak hiçbir şey bu iki tür vardır ve bunlar arasında dönüştürme herhangi bir türde bulunmaktadır.  
   
  Bir dizi türünde bir dönüştürme diğerine genişletme veya ilgili öğelerin dönüştürme genişletme daraltma mı bağlı olarak daraltma. Daha fazla bilgi için [Widening ve daraltma dönüşümleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   

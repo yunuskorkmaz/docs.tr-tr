@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 652000367c19572f73296c704047830ce1c74574
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914530"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity İşlevi
 Eşdeğer olup olmadığını belirlemek için iki derleme kimlikleri karşılaştırır.  
@@ -65,11 +65,11 @@ STDAPI CompareAssemblyIdentity (
 ## <a name="remarks"></a>Açıklamalar  
  `CompareAssemblyIdentity` denetler olmadığını `pwzAssemblyIdentity1` ve `pwzAssemblyIdentity2` eşdeğerdir. `pfEquivalent` ayarlanır `true` altında bir veya daha fazla aşağıdaki koşullardan biri:  
   
--   İki derleme kimlikleri büyük/küçük harf eşdeğerdir. Kesin adlandırılmış derlemelerin için denkliği derleme adı, sürüm, ortak anahtar belirteci ve kültür aynı olmasını gerektirir. Yalnızca adlandırılmış derlemeler için derleme adı ve kültür bir eşleşme denkliği gerektirir.  
+- İki derleme kimlikleri büyük/küçük harf eşdeğerdir. Kesin adlandırılmış derlemelerin için denkliği derleme adı, sürüm, ortak anahtar belirteci ve kültür aynı olmasını gerektirir. Yalnızca adlandırılmış derlemeler için derleme adı ve kültür bir eşleşme denkliği gerektirir.  
   
--   Derleme kimlikleri'hem de .NET Framework derlemelerini bakın. Bu durum döndürür `true` bile derleme sürüm numaraları eşleşmiyor.  
+- Derleme kimlikleri'hem de .NET Framework derlemelerini bakın. Bu durum döndürür `true` bile derleme sürüm numaraları eşleşmiyor.  
   
--   İki derlemenin Yönetilen derlemeler değildir ancak `fUnified1` veya `fUnified2` ayarlandı `true`.  
+- İki derlemenin Yönetilen derlemeler değildir ancak `fUnified1` veya `fUnified2` ayarlandı `true`.  
   
  `fUnified` Bayrağı belirten kesin adlandırılmış bütünleştirilmiş kod sürümü sayısı kadar tüm sürüm numaraları için kesin adlandırılmış derlemeyi eşdeğer olarak değerlendirilir. Örneğin, varsa değerini `pwzAssemblyIndentity1` olan "MyAssembly, sürüm 3.0.0.0, culture = neutral, publicKeyToken = =..." ve değerini `fUnified1` olduğu `true`, bu sürüm için 0.0.0.0 3.0.0.0 MyAssembly tüm sürümlerini gerektiğini gösterir eşdeğer olarak kabul edilir. Böyle bir durumda ise `pwzAssemblyIndentity2` aynı derlemenin başvurduğu `pwzAssemblyIndentity1`, onu daha düşük bir sürüm numarası olan `pfEquivalent` ayarlanır `true`. Varsa `pwzAssemblyIdentity2` daha yüksek bir sürüm numarası, başvuran `pfEquivalent` ayarlanır `true` yalnızca değerini `fUnified2` olduğu `true`.  
   

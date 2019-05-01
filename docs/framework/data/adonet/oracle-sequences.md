@@ -3,20 +3,20 @@ title: Oracle Dizileri
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
 ms.openlocfilehash: 8fe7513093d06f3928540f2de8cba902ce62b56e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878460"
 ---
 # <a name="oracle-sequences"></a>Oracle Dizileri
 Oracle için .NET Framework veri sağlayıcısı kullanarak ekler gerçekleştirdikten sonra anahtar Oracle sırası sunucu tarafından oluşturulan değerleri almak için destek sağlar. <xref:System.Data.OracleClient.OracleDataAdapter>.  
   
  SQL Server ve Oracle, birincil anahtar olarak belirlenebilir sütunları otomatik olarak artırma oluşturmayı destekler. Tabloya satır eklendikçe bu değerler sunucu tarafından oluşturulur. SQL Server'da, bir sütunun kimlik özelliği ayarlayın; Oracle bir dizi oluşturun. Otomatik artış sütunları SQL Server ve Oracle dizileri arasındaki fark olmasıdır:  
   
--   SQL Server'daki sütun otomatik artış sütunu olarak işaretlemek ve yeni bir satır ekleyin, SQL Server otomatik olarak yeni sütun değerlerini oluşturur.  
+- SQL Server'daki sütun otomatik artış sütunu olarak işaretlemek ve yeni bir satır ekleyin, SQL Server otomatik olarak yeni sütun değerlerini oluşturur.  
   
--   Oracle, tablonuzda bir sütun için yeni değerler oluşturmak için bir sıra oluşturmak, ancak sıra ve tablo veya sütun arasında doğrudan bağlantı yoktur. Oracle dizisi, bir tablo veya saklı yordam gibi bir nesnedir.  
+- Oracle, tablonuzda bir sütun için yeni değerler oluşturmak için bir sıra oluşturmak, ancak sıra ve tablo veya sütun arasında doğrudan bağlantı yoktur. Oracle dizisi, bir tablo veya saklı yordam gibi bir nesnedir.  
   
  Bir Oracle veritabanında bir dizi oluşturduğunuzda, bunun başlangıçtaki değerini ve Artım değerleri arasında tanımlayabilirsiniz. Ayrıca, yeni satırları göndermeden önce yeni değerler dizisi sorgulayabilirsiniz. Veritabanına eklemeden önce anahtar değerlerinin yeni satırlar için kodunuzu tanıyabilmesi anlamına gelir.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
 ms.openlocfilehash: ca2ed1fcf113e06535c8900e5836eb64f9b23958
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875594"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Nasıl yapılır: Veri Hizmeti için istemci kimlik bilgileri (WCF Veri Hizmetleri) istek belirtin
 Varsayılan olarak, kimlik bilgilerini istemci kitaplığı için bir isteği gönderirken sağlamaz bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] hizmeti. Ancak, kimlik bilgilerini sağlayarak istekleri veri hizmeti kimlik doğrulaması gönderilmesi belirtebilirsiniz bir <xref:System.Net.NetworkCredential> için <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> özelliği <xref:System.Data.Services.Client.DataServiceContext>. Daha fazla bilgi için [WCF Veri Hizmetleri güvenli hale getirme](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). Bu konudaki örnek açıkça tarafından kullanılan kimlik bilgilerini sağlamak üzere nasıl gösterir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] veriler veri hizmetinden isterken istemci.  
@@ -44,11 +44,11 @@ Varsayılan olarak, kimlik bilgilerini istemci kitaplığı için bir isteği g�
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Bu konudaki örnek için aşağıdaki güvenlik değerlendirmeleri geçerlidir:  
   
--   Bu örnekte verilen kimlik bilgilerinin çalıştığını doğrulamak için Northwind verileri hizmeti anonim erişim dışında bir kimlik doğrulama şeması kullanması gerekir. Aksi halde, veri hizmetini barındıran Web sitesinin kimlik bilgileri istenmez.  
+- Bu örnekte verilen kimlik bilgilerinin çalıştığını doğrulamak için Northwind verileri hizmeti anonim erişim dışında bir kimlik doğrulama şeması kullanması gerekir. Aksi halde, veri hizmetini barındıran Web sitesinin kimlik bilgileri istenmez.  
   
--   Kullanıcı kimlik bilgileri, yürütme sırasında yalnızca istenen ve önbelleğe. Kimlik bilgileri her zaman güvenli bir şekilde depolanması gerekir.  
+- Kullanıcı kimlik bilgileri, yürütme sırasında yalnızca istenen ve önbelleğe. Kimlik bilgileri her zaman güvenli bir şekilde depolanması gerekir.  
   
--   Temel ve Özet kimlik doğrulaması ile gönderilen veriler şifrelenmez, bu şekilde verileri bir saldırgan tarafından görülebilir. Ayrıca, temel kimlik doğrulaması kimlik bilgilerini (kullanıcı adı ve parola) düz metin olarak gönderilir ve kesilebilir.  
+- Temel ve Özet kimlik doğrulaması ile gönderilen veriler şifrelenmez, bu şekilde verileri bir saldırgan tarafından görülebilir. Ayrıca, temel kimlik doğrulaması kimlik bilgilerini (kullanıcı adı ve parola) düz metin olarak gönderilir ve kesilebilir.  
   
  Daha fazla bilgi için [WCF Veri Hizmetleri güvenli hale getirme](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).  
   

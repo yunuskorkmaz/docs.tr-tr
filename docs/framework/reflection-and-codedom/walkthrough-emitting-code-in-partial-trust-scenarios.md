@@ -17,11 +17,11 @@ ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793086"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>İzlenecek yol: Kısmi Güven Senaryolarında Kod Yayma
 Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak bazı özellikler kısmen güvenilen kodda özel izinler gerektirir. Ayrıca, yansıma yayılımı, güvenlikli saydam derlemeler tarafından kısmi güven ile kullanılmak üzere tasarlanmış bir özelliği, anonim olarak barındırılan dinamik yöntemler vardır.  
@@ -31,14 +31,14 @@ Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak baz
   
  Bu izlenecek yol aşağıdaki görevleri gösterir:  
   
--   [Testi kısmen güvenilen kod basit bir korumalı alan ayarı](#Setting_up).  
+- [Testi kısmen güvenilen kod basit bir korumalı alan ayarı](#Setting_up).  
   
     > [!IMPORTANT]
     >  Bu, kısmi güvenli kodla denemek için basit bir yoludur. Aslında güvenilmeyen konumlardan gelen kodu çalıştırmak için bkz: [nasıl yapılır: Korumalı alanda kısmen güvenilen kodu çalıştırma](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
   
--   [Kısmen güvenilir uygulama etki alanlarında kod çalıştırma](#Running_code).  
+- [Kısmen güvenilir uygulama etki alanlarında kod çalıştırma](#Running_code).  
   
--   [Anonim olarak barındırılan dinamik yöntemleri yayma ve kısmi güvende kod yürütmek için](#Using_methods).  
+- [Anonim olarak barındırılan dinamik yöntemleri yayma ve kısmi güvende kod yürütmek için](#Using_methods).  
   
  Kısmi güven senaryolarında kod yayma hakkında daha fazla bilgi için bkz. [yansıma yayma güvenlik sorunları](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).  
   
@@ -48,9 +48,9 @@ Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak baz
 ## <a name="setting-up-partially-trusted-locations"></a>Kısmen güvenilen konumları hazırlama  
  Aşağıdaki iki yordam, kısmi güven ile kodu test edebileceğiniz konumları ayarlama işlemini göstermektedir.  
   
--   İlk yordam, kod Internet izinlerine sahip koruma alanlı uygulama etki alanı oluşturma gösterilmektedir.  
+- İlk yordam, kod Internet izinlerine sahip koruma alanlı uygulama etki alanı oluşturma gösterilmektedir.  
   
--   İkinci yordam, ekleme işlemi açıklanır <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> eşit veya daha az Güve derlemeler içerisindeki özel verilere erişmesini etkinleştirmek için bir kısmen güvenilir uygulama etki alanı için bayrak.  
+- İkinci yordam, ekleme işlemi açıklanır <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> eşit veya daha az Güve derlemeler içerisindeki özel verilere erişmesini etkinleştirmek için bir kısmen güvenilir uygulama etki alanı için bayrak.  
   
 ### <a name="creating-sandboxed-application-domains"></a>Koruma alanlı uygulama etki alanları oluşturma  
  Derlemelerinizin kısmi güvenle çalışacağı bir uygulama etki alanı oluşturmak için kullanarak derlemelere verilecek izin kümesi belirtmelisiniz <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> yöntemi aşırı yüklemesi, uygulama etki alanı oluşturmak için. İzin kümesini belirtmenin en kolay yolu, adlandırılmış bir izin kümesi Güvenlik İlkesi'nden almak sağlamaktır.  
@@ -155,7 +155,7 @@ Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak baz
   
 #### <a name="to-use-anonymously-hosted-dynamic-methods"></a>Kullanılacak anonim olarak barındırılan dinamik metotlar  
   
--   Bir ilişkilendirilmiş modülü veya türü belirtmeyen bir kurucu kullanarak anonim olarak barındırılan bir dinamik yöntem oluşturun.  
+- Bir ilişkilendirilmiş modülü veya türü belirtmeyen bir kurucu kullanarak anonim olarak barındırılan bir dinamik yöntem oluşturun.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#15](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#15)]
      [!code-vb[HowToEmitCodeInPartialTrust#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#15)]  
@@ -164,7 +164,7 @@ Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak baz
   
      Dinamik bir yöntem yaymak için özel izin gerekir ancak kullandığı kod türlerinin ve yöntemlerin tarafından talep izinleri gerektirir. Örneğin, yayılan kod dosyaya erişen bir yöntemini çağırırsa, gerektiriyorsa <xref:System.Security.Permissions.FileIOPermission>. Güven düzeyi izni yoksa, gösterilen kod çalıştırıldığında bir güvenlik özel durum oluşturulur. Burada gösterilen kod yalnızca kullanan bir dinamik yöntem yayar <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> yöntemi. Bu nedenle, kod kısmen güvenilen konumlardan yürütülebilir.  
   
--   Alternatif olarak, kullanarak JIT görünürlük denetimlerini atlamak için sınırlanmasıyla anonim olarak barındırılan dinamik bir yöntem oluşturmak <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29> oluşturucusu ve belirterek `true` için `restrictedSkipVisibility` parametresi.  
+- Alternatif olarak, kullanarak JIT görünürlük denetimlerini atlamak için sınırlanmasıyla anonim olarak barındırılan dinamik bir yöntem oluşturmak <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29> oluşturucusu ve belirterek `true` için `restrictedSkipVisibility` parametresi.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
@@ -191,15 +191,15 @@ Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak baz
   
  Örnek bir yardımcı yöntem için sınırlı bir izin kümesi oluşturmak için kullanır. `Internet` izinleri ve ardından bir uygulama etki alanı oluşturur kullanarak <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> yöntemi aşırı yüklemesi, etki alanında çalışan tüm kodun bu izin kümesini kullandığını belirtmek için. Örnek örneği oluşturur `Worker` sınıf uygulama etki alanında ve yürüten `AccessPrivateMethod` iki kez yöntemi.  
   
--   İlk kez `AccessPrivateMethod` yöntemi yürütüldüğünde, JIT görünürlük denetimleri zorlanır. Çağrıldığında, JIT görünürlük denetimlerini, özel yönteme erişmesini engellediğinden dinamik yöntem başarısız olur.  
+- İlk kez `AccessPrivateMethod` yöntemi yürütüldüğünde, JIT görünürlük denetimleri zorlanır. Çağrıldığında, JIT görünürlük denetimlerini, özel yönteme erişmesini engellediğinden dinamik yöntem başarısız olur.  
   
--   İkinci kez `AccessPrivateMethod` yöntemi yürütüldüğünde, JIT görünürlük denetimleri atlanır. Dinamik yöntem derlendiğinde, çünkü başarısız `Internet` verme kümesi görünürlük denetimlerini atlamak için yeterli izin vermez.  
+- İkinci kez `AccessPrivateMethod` yöntemi yürütüldüğünde, JIT görünürlük denetimleri atlanır. Dinamik yöntem derlendiğinde, çünkü başarısız `Internet` verme kümesi görünürlük denetimlerini atlamak için yeterli izin vermez.  
   
  Örnek ekler <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> izin kümesine. Bu örnek, ardından ikinci bir etki alanı oluşturur, tüm kod, etki alanında çalışan belirtme yeni izin kümesi izinler verilir. Örnek örneği oluşturur `Worker` sınıfının yeni bir uygulama etki alanında ve her iki yeniden yüklemesini yürütmektedir `AccessPrivateMethod` yöntemi.  
   
--   İlk aşırı yüklemesini `AccessPrivateMethod` yöntemi yürütülür ve JIT görünürlük denetimleri atlanır. Dinamik yöntem derler ve kod yayan derlemenin özel yöntemi içeren derleme ile aynı olduğu için başarıyla yürütür. Bu nedenle, güven düzeyleri eşittir. Uygulama, içerip içermediğini `Worker` sınıfının yer aldığı çeşitli derlemeler, bunların tümü aynı güven düzeyinde olacağından bu derlemelerden herhangi biri için aynı işlem başarılı olabilir.  
+- İlk aşırı yüklemesini `AccessPrivateMethod` yöntemi yürütülür ve JIT görünürlük denetimleri atlanır. Dinamik yöntem derler ve kod yayan derlemenin özel yöntemi içeren derleme ile aynı olduğu için başarıyla yürütür. Bu nedenle, güven düzeyleri eşittir. Uygulama, içerip içermediğini `Worker` sınıfının yer aldığı çeşitli derlemeler, bunların tümü aynı güven düzeyinde olacağından bu derlemelerden herhangi biri için aynı işlem başarılı olabilir.  
   
--   İkinci aşırı yüklemesi `AccessPrivateMethod` yöntemi yürütüldüğünde ve yeniden JIT görünürlük denetimleri atlanır. Bu süre dinamik yöntem, derlendiğinde, erişmeye çalıştığı için başarısız `internal` `FirstChar` özelliği <xref:System.String> sınıfı. İçeren derleme <xref:System.String> sınıfı, tam olarak güvenilir. Bu nedenle daha yüksek düzeyde güven kodu yayan derlemeden gereklidir.  
+- İkinci aşırı yüklemesi `AccessPrivateMethod` yöntemi yürütüldüğünde ve yeniden JIT görünürlük denetimleri atlanır. Bu süre dinamik yöntem, derlendiğinde, erişmeye çalıştığı için başarısız `internal` `FirstChar` özelliği <xref:System.String> sınıfı. İçeren derleme <xref:System.String> sınıfı, tam olarak güvenilir. Bu nedenle daha yüksek düzeyde güven kodu yayan derlemeden gereklidir.  
   
  Bu karşılaştırmayı gösteren nasıl <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> kısmen güvenilen görünürlük kontrollerini atlamasını diğer kısmen güvenilen kod için güvenli kodun güvenliğini tehlikeye atmadan etkinleştirir.  
   
@@ -209,7 +209,7 @@ Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak baz
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   Bu kod örneği Visual Studio'da derleme yaparsanız, kendisine geçirdiğiniz ad alanını katmak için sınıf adını değiştirmeniz gerekir <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> yöntemi. Varsayılan olarak, ad alanı projenin adıdır. Örneğin, proje "PartialTrust" ise, sınıf adı "PartialTrust.Worker" olmalıdır.  
+- Bu kod örneği Visual Studio'da derleme yaparsanız, kendisine geçirdiğiniz ad alanını katmak için sınıf adını değiştirmeniz gerekir <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> yöntemi. Varsayılan olarak, ad alanı projenin adıdır. Örneğin, proje "PartialTrust" ise, sınıf adı "PartialTrust.Worker" olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

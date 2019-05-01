@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Özel veri akışı blok türü oluşturma'
+title: 'İzlenecek yol: Özel bir Veri Akışı Blok Türü Oluşturma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 380bcb6d2a2846d09267eeb3a0d637469ce9fba5
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909460"
 ---
-# <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>İzlenecek yol: Özel veri akışı blok türü oluşturma
+# <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>İzlenecek yol: Özel bir Veri Akışı Blok Türü Oluşturma
 TPL veri akışı kitaplığı işlevleri çeşitli sağlayan birkaç veri akışı bloğu türleri sağlasa da, özel blok türleri oluşturabilirsiniz. Bu belge, özel davranış uygulayan bir veri akışı bloğu türünü oluşturmanın açıklar.  
   
 ## <a name="prerequisites"></a>Önkoşullar  
@@ -61,7 +61,7 @@ TPL veri akışı kitaplığı işlevleri çeşitli sağlayan birkaç veri akı�
   
  Visual Basic  
   
- **Vbc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.vb**  
+ **vbc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.vb**  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

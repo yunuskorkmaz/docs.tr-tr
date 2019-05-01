@@ -3,24 +3,24 @@ title: Ortak öznitelikler (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
 ms.openlocfilehash: e001c9a637d2e5e34e77158704e4ad81d6973a50
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794036"
 ---
 # <a name="common-attributes-visual-basic"></a>Ortak öznitelikler (Visual Basic)
 Bu konuda, Visual Basic programlarında en çok kullanılan öznitelikler açıklanmaktadır.  
   
--   [Genel Öznitelikler](#Global)  
+- [Genel Öznitelikler](#Global)  
   
--   [Geçersiz öznitelik](#Obsolete)  
+- [Geçersiz öznitelik](#Obsolete)  
   
--   [Conditional özniteliği](#Conditional)  
+- [Conditional özniteliği](#Conditional)  
   
--   [Arayan bilgileri öznitelikleri](#CallerInfo)  
+- [Arayan bilgileri öznitelikleri](#CallerInfo)  
   
--   [Visual Basic öznitelikleri](#VB)  
+- [Visual Basic öznitelikleri](#VB)  
   
 ## <a name="Global"></a> Genel Öznitelikler  
  Çoğu öznitelik sınıfları veya yöntemleri gibi belirli dil öğelerini uygulanır; Ancak, bazı öznitelikler genel — bir tüm derleme veya modül için geçerlidir. Örneğin, <xref:System.Reflection.AssemblyVersionAttribute> özniteliği, böyle bir derleme içinde sürüm bilgileri ekleme için kullanılabilir:  
@@ -33,11 +33,11 @@ Bu konuda, Visual Basic programlarında en çok kullanılan öznitelikler açık
   
  Derleme özniteliklerinin bir derlemeyle ilgili bilgi sağlayan değerlerdir. Bunlar, aşağıdaki kategorilere ayrılır:  
   
--   Derleme kimliği öznitelikleri  
+- Derleme kimliği öznitelikleri  
   
--   Bilgilendirme özniteliklerini  
+- Bilgilendirme özniteliklerini  
   
--   Derleme bildirimi öznitelikleri  
+- Derleme bildirimi öznitelikleri  
   
 ### <a name="assembly-identity-attributes"></a>Derleme kimliği öznitelikleri  
  Üç öznitelikler (katı bir adla, eğer varsa) bir derlemenin kimliğini belirler: ad, sürüm ve kültür. Bu öznitelikler, bütünleştirilmiş kodun tam adı oluşturur ve kodda başvurduğunuzda gereklidir. Bir derlemenin sürüm ve kültür öznitelikleri kullanarak ayarlayabilirsiniz. Ancak, Visual Studio IDE'de derleyici tarafından adı değeri ayarlanır [derleme bilgileri iletişim kutusu](/visualstudio/ide/reference/assembly-information-dialog-box), veya Assembly Linker (Al.exe) derleme oluşturulduğunda derleme bildirimi içeren dosyada. <xref:System.Reflection.AssemblyFlagsAttribute> Özniteliği, derlemenin birden fazla kopyası bulunabilir olup olmadığını belirtir.  

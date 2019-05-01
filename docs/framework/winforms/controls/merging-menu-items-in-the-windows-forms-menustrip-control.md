@@ -6,11 +6,11 @@ helpviewer_keywords:
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
 ms.openlocfilehash: dbe1c0325499e7b925d504fc80f9034f9e387475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936363"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Windows Forms MenuStrip Denetiminde Menü Öğelerini Birleştirme
 Çok Belgeli Arabirim (MDI) uygulaması varsa, üst formun menülerle menü öğeleri veya alt formun tamamını menülerden birleştirebilirsiniz.  
@@ -20,9 +20,9 @@ ms.locfileid: "59231571"
 ## <a name="general-concepts"></a>Genel Kavramlar  
  Hem hedef hem de kaynak denetimi birleştirme yordamları içerir:  
   
--   Hedef <xref:System.Windows.Forms.MenuStrip> içine, birleştirme menü öğeleri ana veya MDI üst formu denetimi.  
+- Hedef <xref:System.Windows.Forms.MenuStrip> içine, birleştirme menü öğeleri ana veya MDI üst formu denetimi.  
   
--   Kaynak <xref:System.Windows.Forms.MenuStrip> hedef menüye birleştirmek istediğiniz menü öğeleri içeren MDI alt formu denetimi.  
+- Kaynak <xref:System.Windows.Forms.MenuStrip> hedef menüye birleştirmek istediğiniz menü öğeleri içeren MDI alt formu denetimi.  
   
  <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> Geçerli MDI başlıkları ile doldurmak, aşağı açılan liste formun MDI üst menü öğesi özelliği tanımlar. Genellikle, üzerinde şu anda açık olan bir MDI alt öğe listesinde **penceresi** menüsü.  
   

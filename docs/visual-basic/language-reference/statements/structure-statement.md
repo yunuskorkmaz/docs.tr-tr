@@ -13,11 +13,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
 ms.openlocfilehash: ab446319a9e0ef295387d0d6768e813a158939c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783870"
 ---
 # <a name="structure-statement"></a>Structure Yapısı
 Bir yapının adını bildirir ve değişkenleri, özellikleri, olayları ve yapısını oluşturan yordamların tanımını tanıtır.  
@@ -61,31 +61,31 @@ End Structure
   
 ## <a name="rules"></a>Kurallar  
   
--   **İç içe geçme.** İçindeki başka bir yapı tanımlayabilirsiniz. Dış yapı adlı *içeren yapı*, ve iç yapı adında bir *iç içe geçmiş yapısı*. Ancak içeren yapı ile iç içe geçmiş bir yapının üyelerine erişemezsiniz. Bunun yerine, iç içe geçmiş yapının veri türünde bir değişken bildirmeniz gerekir.  
+- **İç içe geçme.** İçindeki başka bir yapı tanımlayabilirsiniz. Dış yapı adlı *içeren yapı*, ve iç yapı adında bir *iç içe geçmiş yapısı*. Ancak içeren yapı ile iç içe geçmiş bir yapının üyelerine erişemezsiniz. Bunun yerine, iç içe geçmiş yapının veri türünde bir değişken bildirmeniz gerekir.  
   
--   **Üye bildirimi.** Bir yapının her üyesini bildirmeniz gerekir. Yapı üyesi olamaz [korumalı](../../../visual-basic/language-reference/modifiers/protected.md) veya `Protected Friend` hiçbir şey bir yapısından devralabileceğinden. Ancak yapının kendisi, olabilir `Protected` veya `Protected Friend`.  
+- **Üye bildirimi.** Bir yapının her üyesini bildirmeniz gerekir. Yapı üyesi olamaz [korumalı](../../../visual-basic/language-reference/modifiers/protected.md) veya `Protected Friend` hiçbir şey bir yapısından devralabileceğinden. Ancak yapının kendisi, olabilir `Protected` veya `Protected Friend`.  
   
      Sıfır veya daha çok paylaşılmayan değişkenler veya paylaşılmayan, özel olmayan olaylar yapısına bildirebilirsiniz. Bazıları paylaşılmayan olsa bile yalnızca sabitler, özellikler ve yordamlar, sahip olamaz.  
   
--   **Başlatma.** Bir yapının bildiriminin bir parçası olarak herhangi bir paylaşılmayan veri üyesinin değerini başlatılamıyor. Böyle bir veri üyesini, yapıdaki parametreli bir kurucu yapısı hakkında başlatmak, veya yapının örneğini oluşturduktan sonra üyeye bir değer atayın.  
+- **Başlatma.** Bir yapının bildiriminin bir parçası olarak herhangi bir paylaşılmayan veri üyesinin değerini başlatılamıyor. Böyle bir veri üyesini, yapıdaki parametreli bir kurucu yapısı hakkında başlatmak, veya yapının örneğini oluşturduktan sonra üyeye bir değer atayın.  
   
--   **Devralma.** Bir yapı dışında herhangi bir türden devralamaz <xref:System.ValueType>, öğesinden, tüm devralamaz. Özellikle, bir yapı bir başkasından devralınamaz.  
+- **Devralma.** Bir yapı dışında herhangi bir türden devralamaz <xref:System.ValueType>, öğesinden, tüm devralamaz. Özellikle, bir yapı bir başkasından devralınamaz.  
   
      Kullanamazsınız [devralan deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md) belirtmek için bir yapı tanımında bile <xref:System.ValueType>.  
   
--   **Uygulama.** Yapısı kullanıyorsa [Implements deyimi](../../../visual-basic/language-reference/statements/implements-statement.md), belirttiğiniz her arabirim tarafından tanımlanan her üyeyi uygulamalısınız `interfacenames`.  
+- **Uygulama.** Yapısı kullanıyorsa [Implements deyimi](../../../visual-basic/language-reference/statements/implements-statement.md), belirttiğiniz her arabirim tarafından tanımlanan her üyeyi uygulamalısınız `interfacenames`.  
   
--   **Varsayılan özellik.** Bir yapı en fazla bir özellik olarak belirtebilirsiniz, *varsayılan özellik*kullanarak [varsayılan](../../../visual-basic/language-reference/modifiers/default.md) değiştiricisi. Daha fazla bilgi için [varsayılan](../../../visual-basic/language-reference/modifiers/default.md).  
+- **Varsayılan özellik.** Bir yapı en fazla bir özellik olarak belirtebilirsiniz, *varsayılan özellik*kullanarak [varsayılan](../../../visual-basic/language-reference/modifiers/default.md) değiştiricisi. Daha fazla bilgi için [varsayılan](../../../visual-basic/language-reference/modifiers/default.md).  
   
 ## <a name="behavior"></a>Davranış  
   
--   **Erişim düzeyi.** Bir yapı içerisinde, her bir üyeyi kendi erişim düzeyiyle bildirebilirsiniz. Varsayılan olarak tüm yapı üyeleri [genel](../../../visual-basic/language-reference/modifiers/public.md) erişim. Erişim değiştiricileri ile kullanıcıların erişim düzeylerini ayarlama bile daha kısıtlı bir erişim düzeyi yapısı varsa bu otomatik olarak erişim üyelere erişimi kısıtlar.  
+- **Erişim düzeyi.** Bir yapı içerisinde, her bir üyeyi kendi erişim düzeyiyle bildirebilirsiniz. Varsayılan olarak tüm yapı üyeleri [genel](../../../visual-basic/language-reference/modifiers/public.md) erişim. Erişim değiştiricileri ile kullanıcıların erişim düzeylerini ayarlama bile daha kısıtlı bir erişim düzeyi yapısı varsa bu otomatik olarak erişim üyelere erişimi kısıtlar.  
   
--   **Kapsam.** Kendi içeren ad alanı, sınıf, yapı veya modül kapsamdadır bir yapıdır.  
+- **Kapsam.** Kendi içeren ad alanı, sınıf, yapı veya modül kapsamdadır bir yapıdır.  
   
      Her yapı üyesi kapsamını tamamıdır.  
   
--   **Yaşam süresi.** Bir yapının kendisi bir yaşam süresi yok. Bunun yerine, bu yapının her örneğinin tüm diğer örneklerden bağımsız bir ömrü vardır.  
+- **Yaşam süresi.** Bir yapının kendisi bir yaşam süresi yok. Bunun yerine, bu yapının her örneğinin tüm diğer örneklerden bağımsız bir ömrü vardır.  
   
      Bir örneği ömrünü tarafından oluşturulduğunda başlar bir [New işleci](../../../visual-basic/language-reference/operators/new-operator.md) yan tümcesi. Tutan değişken ömrü sona erdiğinde sona erer.  
   
@@ -93,11 +93,11 @@ End Structure
   
      Yapı üyelerinin ömürleri nasıl ve nerede beyan edildiklerine bağlıdır bağlı olarak var. Daha fazla bilgi için "Ömür" başlığına bakın. [Class deyimi](../../../visual-basic/language-reference/statements/class-statement.md).  
   
--   **Nitelik.** Bir yapı dışındaki kod, bir üyenin adını bu yapı adıyla nitelemelidir.  
+- **Nitelik.** Bir yapı dışındaki kod, bir üyenin adını bu yapı adıyla nitelemelidir.  
   
      İç içe bir yapı içinde kod programlama öğesine nitelenmemiş bir başvuru yaparsa, Visual Basic öğe için ilk olarak iç içe yapıda, sonra içeren yapısında ve benzeri en dıştaki içeren öğede arar. Daha fazla bilgi için [bildirilmiş öğelere başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
--   **Bellek tüketimi.** Tüm bileşik veri türleri gibi ile güvenli bir şekilde, üyelerinin nominal depolama ayırmalarını birlikte ekleyerek bir yapının toplam bellek tüketimini hesaplanamaz. Ayrıca, siparişin bellekteki depolama sırasının bildirim ile aynı olduğunu güvenli bir şekilde varsayamazsınız. Bir yapının depolama düzenini denetlemek için ihtiyacınız varsa, uygulayabilirsiniz <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliğini `Structure` deyimi.  
+- **Bellek tüketimi.** Tüm bileşik veri türleri gibi ile güvenli bir şekilde, üyelerinin nominal depolama ayırmalarını birlikte ekleyerek bir yapının toplam bellek tüketimini hesaplanamaz. Ayrıca, siparişin bellekteki depolama sırasının bildirim ile aynı olduğunu güvenli bir şekilde varsayamazsınız. Bir yapının depolama düzenini denetlemek için ihtiyacınız varsa, uygulayabilirsiniz <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliğini `Structure` deyimi.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte `Structure` deyimi bir çalışan için ilgili veri kümesini tanımlamak için. Kullanımını gösteren `Public`, `Friend`, ve `Private` veri öğelerinin duyarlılığını yansıtmak için üyeleri. Yordam, özellik ve olay üyelerini de gösterir.  

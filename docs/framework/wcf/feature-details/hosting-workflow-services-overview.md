@@ -3,11 +3,11 @@ title: İş Akışı Hizmetlerini Barındırma Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 19f3704f-06bf-4eeb-8724-5224e02d7ead
 ms.openlocfilehash: dbe271e30e9c4e98a52c01ffaa21de25c127c7ff
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855900"
 ---
 # <a name="hosting-workflow-services-overview"></a>İş Akışı Hizmetlerini Barındırma Genel Bakış
 Yürütülecek iş akışı hizmetleri barındırılması gerekir. <xref:System.ServiceModel.WorkflowServiceHost> (İş akışları barındırılması için Mesajlaşma kullanmak için gerekli olmasa da) destekleyen birden çok örneği, yapılandırma ve WCF ileti kullanıma hazır iş akışı ana bilgisayarı.  Ayrıca Kalıcılık, izleme ve hizmet davranışlarını bir dizi aracılığıyla örneği denetimi ile tümleştirilir.  WCF'ın ' olduğu gibi <xref:System.ServiceModel.ServiceHost>, <xref:System.ServiceModel.WorkflowServiceHost> herhangi bir yönetilen .NET uygulamasında şirket içinde barındırılan veya web barındırılan-(.xamlx dosyası) IIS / WAS'da.  Bu bölümdeki konular, bir iş akışı hizmeti barındırma açıklar.  
@@ -25,7 +25,7 @@ Yürütülecek iş akışı hizmetleri barındırılması gerekir. <xref:System.
  [İş Akışı Denetim Uç Noktası](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
  İş akışı örnekleri oluşturmak izin veren bir uç nokta tanımlanacağını açıklar.
   
- [Nasıl yapılır: Windows Server App Fabric ile İş Akışı Hizmeti Barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-workflow-service-with-windows-server-app-fabric.md)  
+ [Nasıl yapılır: Windows Server App Fabric ile bir iş akışı hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-workflow-service-with-windows-server-app-fabric.md)  
  Windows Server App Fabric içinde var olan bir iş akışı hizmeti barındırma işlemi gösterilmektedir.  
   
  [WorkflowServiceHost Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-workflowservicehost.md)  

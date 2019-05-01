@@ -6,13 +6,13 @@ dev_langs:
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
 ms.openlocfilehash: 131d99457427e0818f78076d987f550a99ad7cf0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929317"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Nasıl yapılır: yönetilen bir uygulamada bir WCF Hizmeti barındırma
+# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Nasıl yapılır: Yönetilen bir uygulamada bir WCF Hizmeti barındırma
 
 Bir hizmet içinde yönetilen bir uygulamayı barındırmak için hizmet içinde yönetilen bir uygulama kodu için kod ekleme, hizmet için bir uç nokta kesin kodda, yapılandırma veya varsayılan uç nokta kullanarak aracılığıyla bildirimli olarak tanımlamanızı ve oluşturup bir örneğini <xref:System.ServiceModel.ServiceHost>.
 
@@ -50,7 +50,7 @@ Aşağıdaki yordam, şirket içinde barındırılan hizmeti bir konsol uygulama
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]
 
     > [!NOTE]
-    > Tanımlaması ve hizmet arabirimi hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir hizmet sözleşmesini tanımlama](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) ve [nasıl yapılır: bir hizmet sözleşmesini uygulama](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).
+    > Tanımlaması ve hizmet arabirimi hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir hizmet sözleşmesini tanımlama](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) ve [nasıl yapılır: Bir hizmet sözleşmesini uygulama](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).
 
 5. Üst kısmındaki `Main` yöntemi, bir örneğini oluşturmak <xref:System.Uri> sınıfı ile hizmet için temel adres.
 
@@ -67,7 +67,7 @@ Aşağıdaki yordam, şirket içinde barındırılan hizmeti bir konsol uygulama
 
 7. Tuşuna **Ctrl**+**Shift**+**B** çözümü derlemek için.
 
-## <a name="test-the-service"></a>Test hizmeti
+## <a name="test-the-service"></a>Hizmeti test etme
 
 1. Tuşuna **Ctrl**+**F5** hizmeti çalıştırmak için.
 
@@ -99,11 +99,11 @@ Aşağıdaki örnek, oluşturur bir <xref:System.ServiceModel.ServiceHost> tür�
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [Nasıl yapılır: IIS'de WCF Hizmeti Barındırma](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Nasıl yapılır: IIS'de WCF Hizmeti barındırma](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
 - [Kendini Barındırma](../../../docs/framework/wcf/samples/self-host.md)
 - [Barındırma Hizmetleri](../../../docs/framework/wcf/hosting-services.md)
-- [Nasıl yapılır: Bir Hizmet Anlaşması Tanımlama](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
-- [Nasıl yapılır: Bir Hizmet Anlaşmasını Uygulama](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
+- [Nasıl yapılır: Bir hizmet sözleşmesini tanımlama](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [Nasıl yapılır: Bir hizmet sözleşmesini uygulama](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
 - [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [Sistem Tarafından Sağlanan Bağlamalar](../../../docs/framework/wcf/system-provided-bindings.md)

@@ -3,11 +3,11 @@ title: Filtreleme
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
 ms.openlocfilehash: 7051e69f6a38d536251c26365a634d4ffbc46f1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856706"
 ---
 # <a name="filtering"></a>Filtreleme
 Sistem filtreleme Windows Communication Foundation (WCF), iletileri eşleşmesi ve işletimsel karar vermek için bildirim temelli filtreleri kullanabilirsiniz. Filtreleri içeren bir ileti iletinin bölümünü inceleyerek yapmanız gerekenler belirlemek için kullanabilirsiniz. Sıraya alma işlemi, örneğin, priority öğesi bir ileti kuyruğu öne taşınıp taşınmayacağını belirleme bilinen üstbilgisinin denetlemek için bir XPath 1.0 sorgu kullanabilirsiniz.  
@@ -36,9 +36,9 @@ Sistem filtreleme Windows Communication Foundation (WCF), iletileri eşleşmesi 
 ### <a name="endpoint-address-filters"></a>Uç nokta adresi filtreleri  
  <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> Filtreler iletileri ve bir uç nokta adresini temel alan ileti arabelleklerinin üstbilgi koleksiyonu içinde temsil edilen. Bir ileti gibi bir filtre geçirmek aşağıdaki koşullar karşılanmalıdır:  
   
--   Filtrenin adresi Tekdüzen Kaynak Tanımlayıcısı (URI) bir ileti üst bilgisi ile aynı olmalıdır.  
+- Filtrenin adresi Tekdüzen Kaynak Tanımlayıcısı (URI) bir ileti üst bilgisi ile aynı olmalıdır.  
   
--   Her uç nokta parametresi filtre adresini (`address.Headers` koleksiyonu) bir başlık iletisi üzerinde eşlemek için bulmanız gerekir. Fazladan üst bilgiler ileti veya mesaj arabelleğine eşleşme kalması kabul edilebilir `true`.  
+- Her uç nokta parametresi filtre adresini (`address.Headers` koleksiyonu) bir başlık iletisi üzerinde eşlemek için bulmanız gerekir. Fazladan üst bilgiler ileti veya mesaj arabelleğine eşleşme kalması kabul edilebilir `true`.  
   
 ### <a name="prefix-endpoint-address-filters"></a>Uç nokta adresi filtreleri öneki  
   
@@ -79,9 +79,9 @@ Sistem filtreleme Windows Communication Foundation (WCF), iletileri eşleşmesi 
 ### <a name="de-multiplexing"></a>XML'deki çoğullama  
  Ne zaman birden fazla uç nokta fan aynı `ServiceListener` kablo, iletileri çoğullamasını ve bir belirli uç nokta adresine ait olup olmadığını bilmek tek yolu kullanmaktır <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>s, kayıtlı uç noktaları tarafından doğru iletileri seçin üst bilgilerinde depolanan bilgileri bir arama gerçekleştirme. Bu filtrelere geçen iletileri hem de karşılık gelen tüm gerekli üstbilgileri vardır:  
   
--   URI'de `EndpointAddress`.  
+- URI'de `EndpointAddress`.  
   
--   Rest uç noktası parametrelerini `EndpointAddress` belirtilmiş <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
+- Rest uç noktası parametrelerini `EndpointAddress` belirtilmiş <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

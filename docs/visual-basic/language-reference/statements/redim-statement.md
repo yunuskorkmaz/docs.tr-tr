@@ -27,11 +27,11 @@ helpviewer_keywords:
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
 ms.openlocfilehash: 8f5f3172eaa6b43d9b07aefa0036708b26087777
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783968"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim Deyimi (Visual Basic)
 Bir dizi değişkeni için depolama alanını yeniden ayırır.  
@@ -59,31 +59,31 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="rules"></a>Kurallar  
   
--   **Birden fazla değişken.** Aynı bildirim deyiminde birden fazla dizi değişkenlerini yeniden boyutlandırma ve belirtin `name` ve `boundlist` bölümleri her değişken için. Birden fazla değişken virgülle ayrılır.  
+- **Birden fazla değişken.** Aynı bildirim deyiminde birden fazla dizi değişkenlerini yeniden boyutlandırma ve belirtin `name` ve `boundlist` bölümleri her değişken için. Birden fazla değişken virgülle ayrılır.  
   
--   **Dizi sınırları.** Her giriş `boundlist` alt ve söz konusu boyut üst sınırları belirtebilirsiniz. Her zaman alt sınır olan 0 (sıfır). Değil (Bu üst sınırı yanı sıra bir durumdur) boyutun uzunluğu o boyut için en yüksek olası dizin değeri üst sınırıdır. Her boyutun dizini 0 ile üst sınır değeri arasında değişebilir.  
+- **Dizi sınırları.** Her giriş `boundlist` alt ve söz konusu boyut üst sınırları belirtebilirsiniz. Her zaman alt sınır olan 0 (sıfır). Değil (Bu üst sınırı yanı sıra bir durumdur) boyutun uzunluğu o boyut için en yüksek olası dizin değeri üst sınırıdır. Her boyutun dizini 0 ile üst sınır değeri arasında değişebilir.  
   
      İçindeki boyutların sayısına `boundlist` dizi boyutları (derece) özgün sayısı ile eşleşmelidir.  
   
--   **Veri türleri.** `ReDim` Deyimi bir diziye veya öğelerine veri türünü değiştirin.  
+- **Veri türleri.** `ReDim` Deyimi bir diziye veya öğelerine veri türünü değiştirin.  
   
--   **Başlatma.** `ReDim` Deyimi, dizi öğeleri için yeni başlangıç değerleri sağlayamazsınız.  
+- **Başlatma.** `ReDim` Deyimi, dizi öğeleri için yeni başlangıç değerleri sağlayamazsınız.  
   
--   **Boyut.** `ReDim` Deyimi (boyut sayısı) dizi boyut sayısını değiştirin.  
+- **Boyut.** `ReDim` Deyimi (boyut sayısı) dizi boyut sayısını değiştirin.  
   
--   **Koruma ile yeniden boyutlandırma.** Kullanırsanız `Preserve`, sadece son boyutu dizinin yeniden boyutlandırabilirsiniz. Diğer her bir boyut için var olan bir dizi sınırı belirtmeniz gerekir.  
+- **Koruma ile yeniden boyutlandırma.** Kullanırsanız `Preserve`, sadece son boyutu dizinin yeniden boyutlandırabilirsiniz. Diğer her bir boyut için var olan bir dizi sınırı belirtmeniz gerekir.  
   
      Örneğin, yalnızca bir boyut diziniz varsa, boyut yeniden boyutlandırma ve yalnızca boyut ve son değiştirme çünkü hala dizinin tüm içerikleri korumak. İki veya daha fazla boyuta diziniz varsa kullanırsanız ancak sadece son boyutu boyutunu değiştirebileceğiniz `Preserve`.  
   
--   **özellikleri.** Kullanabileceğiniz `ReDim` değerler dizisi tutan bir özellikte.  
+- **özellikleri.** Kullanabileceğiniz `ReDim` değerler dizisi tutan bir özellikte.  
   
 ## <a name="behavior"></a>Davranış  
   
--   **Dizi değiştirme.** `ReDim` Varolan bir diziye serbest bırakır ve aynı dereceye yeni bir dizi oluşturur. Yeni bir dizi yayımlanan dizide dizi değişkenini değiştirir.  
+- **Dizi değiştirme.** `ReDim` Varolan bir diziye serbest bırakır ve aynı dereceye yeni bir dizi oluşturur. Yeni bir dizi yayımlanan dizide dizi değişkenini değiştirir.  
   
--   **Başlatma olmadan korur.** Siz belirtmezseniz `Preserve`, `ReDim` kendi veri türü için varsayılan değer kullanarak yeni bir dizi öğelerini başlatır.  
+- **Başlatma olmadan korur.** Siz belirtmezseniz `Preserve`, `ReDim` kendi veri türü için varsayılan değer kullanarak yeni bir dizi öğelerini başlatır.  
   
--   **Koruma ile başlatma.** Belirtirseniz `Preserve`, Visual Basic mevcut bir diziden öğeleri için yeni bir diziye kopyalar.  
+- **Koruma ile başlatma.** Belirtirseniz `Preserve`, Visual Basic mevcut bir diziden öğeleri için yeni bir diziye kopyalar.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek dizinin var olan veri kaybı olmadan son boyutu dinamik bir dizinin boyutunu artırır ve ardından kısmi veri kaybıyla sonuçlanan boyuta azaltır. Son olarak, özgün değerine geri boyutunu azaltır ve tüm dizi öğeleri yeniden başlatır.  

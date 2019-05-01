@@ -8,11 +8,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
 ms.openlocfilehash: 0827c1919597e9eb85bfa41721676008b76564d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902505"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>RichTextBox Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi görüntüleme, girerek ve biçimlendirme metin düzenleme için kullanılır. <xref:System.Windows.Forms.RichTextBox> Netimi her şeyi <xref:System.Windows.Forms.TextBox> denetimi yapar, ancak ayrıca yazı tiplerini, renkleri ve bağlantılar görüntülemek; metin ve görüntüleri gömülü bir dosyadan; yüklemek ve belirtilen karakter bulun. <xref:System.Windows.Forms.RichTextBox> Denetimi genellikle metin düzenlemesini sağlar ve Microsoft Word gibi bir sözcük işleme uygulamalarını benzer özellikleri görüntülemek için kullanılır. Gibi <xref:System.Windows.Forms.TextBox> denetimi <xref:System.Windows.Forms.RichTextBox> denetimi, kaydırma çubukları; görüntüleyebilir ancak tersine <xref:System.Windows.Forms.TextBox> denetimi, varsayılan ayardır yatay ve dikey kaydırma çubukları gerektiği şekilde görüntülenecek ve ek kaydırma çubuğu ayarları vardır.  

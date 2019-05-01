@@ -3,11 +3,11 @@ title: WCF Hizmet Yayımlama
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
 ms.openlocfilehash: 33725c2f393529a7e59ed0b3ae1db01a359fb9a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791215"
 ---
 # <a name="wcf-service-publishing"></a>WCF Hizmet Yayımlama
 
@@ -17,19 +17,19 @@ Windows Communication Foundation (WCF) hizmet yayımlama, aslında bir üretim o
 
 WCF hizmet yayımlama dizi WCF hizmet kitaplığı şablonları ve aşağıdakileri içerir, karşılık gelen öğe şablonları, oluşturulan yayımlama WCF hizmetleri destekler:
 
--   Öğe şablonu ile WCF hizmet kitaplığı şablonu.
+- Öğe şablonu ile WCF hizmet kitaplığı şablonu.
 
--   Dağıtım hizmet kitaplığı.
+- Dağıtım hizmet kitaplığı.
 
 Bu hizmet şablonlarını seçerek bulabilirsiniz **dosya** > **yeni proje** > [**Visual Basic** veya **Visual C#** ] > **WCF**. Diğer (WCF iş akışı hizmeti uygulaması ve WCF hizmeti uygulaması gibi) bu konumda WCF şablonları için kullanarak yayımlayabileceğiniz [tek tıklamayla web uygulamaları için yayımlamayı](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110)).
 
 Hizmet aşağıdaki hedef konumlara yayımlanabilir.
 
--   Yerel IIS.
+- Yerel IIS.
 
--   Dosya sistemi.
+- Dosya sistemi.
 
--   FTP sitesi.
+- FTP sitesi.
 
 ## <a name="using-wcf-service-publishing"></a>Kullanarak WCF hizmet yayımlama
 
@@ -63,9 +63,9 @@ Yerel IIS uygulamanızı dağıtmayı tercih ederseniz, IIS kurulumuyla ilgili h
 
  Oluşturulan Web.config dosyası Web barındırma ve App.config içeriğini aşağıdaki değişikliklerle birlikte WCF hizmet kitaplığı için faydalı olan Web bölümleri içerir:
 
--   Taban adresi çıkarılır.
+- Taban adresi çıkarılır.
 
--   Ayarlarında `<diagnostics>` öğesi, hedef platform izleme ayarlarını korumak için dışlanır.
+- Ayarlarında `<diagnostics>` öğesi, hedef platform izleme ayarlarını korumak için dışlanır.
 
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>IIS WCF hizmetleri HTTP olmayan bağlamaları ile yayımlama
  IIS7.0 kullanıyorsanız veya daha sonra HTTP olmayan IIS bağlamaları ile WCF hizmetlerine yayımlayabilirsiniz. Bazı öncesi yapılandırmalar yapmanız gerekir. Daha fazla bilgi için lütfen konuları bakın [Windows İşlem Etkinleştirme hizmetinde barındırma](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).

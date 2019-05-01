@@ -18,20 +18,20 @@ ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4fab94c85745bf17a632d04c563070d79b48aa95
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61861074"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Nasıl yapılır: Özel Sayısal Biçim Sağlayıcıları Tanımlama ve Kullanma
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Sayısal değerlerin dize gösterimini üzerinde kapsamlı denetim verir. Bu, sayısal değerlerin biçimini özelleştirmek için aşağıdaki özellikleri destekler:  
   
--   Standart sayısal biçim dizeleri, sayı, dize gösterimine dönüştürmek için önceden tanımlanmış birtakım biçimleri sağlar. Herhangi bir sayısal biçimlendirme yöntemi, aşağıdaki gibi kullanabilirsiniz <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, olan bir `format` parametresi. Ayrıntılar için bkz [standart sayısal biçim dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
+- Standart sayısal biçim dizeleri, sayı, dize gösterimine dönüştürmek için önceden tanımlanmış birtakım biçimleri sağlar. Herhangi bir sayısal biçimlendirme yöntemi, aşağıdaki gibi kullanabilirsiniz <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, olan bir `format` parametresi. Ayrıntılar için bkz [standart sayısal biçim dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
--   Simge kümesi sağlayan özel sayısal biçim dizeleri, özel sayısal biçim belirleyicilerinin tanımlamak için birleştirilebilir. Herhangi bir sayısal biçimlendirme yöntemi, gibi de kullanılabilir <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, olan bir `format` parametresi. Ayrıntılar için bkz [özel sayısal biçim dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+- Simge kümesi sağlayan özel sayısal biçim dizeleri, özel sayısal biçim belirleyicilerinin tanımlamak için birleştirilebilir. Herhangi bir sayısal biçimlendirme yöntemi, gibi de kullanılabilir <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, olan bir `format` parametresi. Ayrıntılar için bkz [özel sayısal biçim dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
--   Özel <xref:System.Globalization.CultureInfo> veya <xref:System.Globalization.NumberFormatInfo> simgeleri tanımlamak ve biçimlendirme sayısal değerlerinin dize temsillerini görüntülenmesinde kullanılan desenleri, nesneleri. Herhangi bir sayısal biçimlendirme yöntemi, aşağıdaki gibi kullanabilirsiniz <xref:System.Int32.ToString%2A>, olan bir `provider` parametresi. Genellikle, `provider` parametresi kültüre özgü biçimlendirme belirtmek için kullanılır.  
+- Özel <xref:System.Globalization.CultureInfo> veya <xref:System.Globalization.NumberFormatInfo> simgeleri tanımlamak ve biçimlendirme sayısal değerlerinin dize temsillerini görüntülenmesinde kullanılan desenleri, nesneleri. Herhangi bir sayısal biçimlendirme yöntemi, aşağıdaki gibi kullanabilirsiniz <xref:System.Int32.ToString%2A>, olan bir `provider` parametresi. Genellikle, `provider` parametresi kültüre özgü biçimlendirme belirtmek için kullanılır.  
   
  Bazı durumlarda (örneğin, bir uygulama biçimlendirilmiş hesap numarası, bir kimlik numarası veya posta kodu görüntüle gerekir) aşağıdaki üç tekniklerden uygun değildir. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Ayrıca ne bir biçimlendirme nesnesi tanımlamanızı sağlayan bir <xref:System.Globalization.CultureInfo> ya da bir <xref:System.Globalization.NumberFormatInfo> sayısal bir değer nasıl biçimlendirildiğini belirlemek için nesne. Bu konu, böyle bir nesnenin uygulamak için adım adım yönergeler sağlar ve telefon numaraları biçimlendiren bir örnek sağlar.  
   
@@ -41,21 +41,21 @@ ms.locfileid: "59318383"
   
 2. Uygulama <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yöntemi. <xref:System.IFormatProvider.GetFormat%2A> bir geri çağırma yöntemi, biçimlendirme yöntemi (gibi <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntemi) aslında özel biçimlendirme yapmaktan sorumlu nesnesini almak için çağırır. Tipik bir uygulaması <xref:System.IFormatProvider.GetFormat%2A> şunları yapar:  
   
-    1.  Belirler olmadığını <xref:System.Type> nesne bir yöntem olarak geçirilen parametreyi temsil eder bir <xref:System.ICustomFormatter> arabirimi.  
+    1. Belirler olmadığını <xref:System.Type> nesne bir yöntem olarak geçirilen parametreyi temsil eder bir <xref:System.ICustomFormatter> arabirimi.  
   
-    2.  Parametresini temsil ediyorsa <xref:System.ICustomFormatter> arabirimi <xref:System.IFormatProvider.GetFormat%2A> uygulayan bir nesne döndürür <xref:System.ICustomFormatter> özel biçimlendirme sağlamaktan sorumluysa arabirimi. Genellikle, özel biçimlendirme nesnenin kendisini döndürür.  
+    2. Parametresini temsil ediyorsa <xref:System.ICustomFormatter> arabirimi <xref:System.IFormatProvider.GetFormat%2A> uygulayan bir nesne döndürür <xref:System.ICustomFormatter> özel biçimlendirme sağlamaktan sorumluysa arabirimi. Genellikle, özel biçimlendirme nesnenin kendisini döndürür.  
   
-    3.  Parametreyi temsil etmez, <xref:System.ICustomFormatter> arabirimi <xref:System.IFormatProvider.GetFormat%2A> döndürür `null`.  
+    3. Parametreyi temsil etmez, <xref:System.ICustomFormatter> arabirimi <xref:System.IFormatProvider.GetFormat%2A> döndürür `null`.  
   
 3. Uygulama <xref:System.ICustomFormatter.Format%2A> yöntemi. Bu yöntemi çağıran <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntemi ve bir sayının dize gösterimini döndürmekten sorumludur. Yöntemi genellikle uygulama aşağıdakileri içerir:  
   
-    1.  İsteğe bağlı olarak, yöntem inceleyerek biçimlendirme hizmetleri sağlamak için de avustralya'dan arama içindir emin `provider` parametresi. Her ikisi de uygulayan nesneler biçimlendirme <xref:System.IFormatProvider> ve <xref:System.ICustomFormatter>, bu testi içerir `provider` geçerli biçimlendirme nesne eşitliği parametresi.  
+    1. İsteğe bağlı olarak, yöntem inceleyerek biçimlendirme hizmetleri sağlamak için de avustralya'dan arama içindir emin `provider` parametresi. Her ikisi de uygulayan nesneler biçimlendirme <xref:System.IFormatProvider> ve <xref:System.ICustomFormatter>, bu testi içerir `provider` geçerli biçimlendirme nesne eşitliği parametresi.  
   
-    2.  Özel biçim belirticileri biçimlendirme nesne desteklemesi gerekip gerekmediğini belirleyin. (Örneğin, bir "N" biçim belirticisi bir ABD telefon numarası çıktısı NANP biçiminde olmalıdır ve bir "ı" ITU-T öneri E.123 biçiminde çıktı gösterebilir gösterebilir.) Yöntem, biçim belirticileri kullandıysanız, özel Biçim belirleyicisi işlemesi gerekir. Yöntemine geçirilen `format` parametresi. Hiçbir tanımlayıcısı mevcutsa, değerini `format` parametresi <xref:System.String.Empty?displayProperty=nameWithType>.  
+    2. Özel biçim belirticileri biçimlendirme nesne desteklemesi gerekip gerekmediğini belirleyin. (Örneğin, bir "N" biçim belirticisi bir ABD telefon numarası çıktısı NANP biçiminde olmalıdır ve bir "ı" ITU-T öneri E.123 biçiminde çıktı gösterebilir gösterebilir.) Yöntem, biçim belirticileri kullandıysanız, özel Biçim belirleyicisi işlemesi gerekir. Yöntemine geçirilen `format` parametresi. Hiçbir tanımlayıcısı mevcutsa, değerini `format` parametresi <xref:System.String.Empty?displayProperty=nameWithType>.  
   
-    3.  Geçirilen sayısal değer yöntemine alma `arg` parametresi. Hangi işlemeleri dize gösterimine dönüştürmek için gerekli olan gerçekleştirin.  
+    3. Geçirilen sayısal değer yöntemine alma `arg` parametresi. Hangi işlemeleri dize gösterimine dönüştürmek için gerekli olan gerçekleştirin.  
   
-    4.  Dize temsilini döndürün `arg` parametresi.  
+    4. Dize temsilini döndürün `arg` parametresi.  
   
 ### <a name="to-use-a-custom-numeric-formatting-object"></a>Özel bir sayısal biçimlendirme nesnesini kullanmak için  
   

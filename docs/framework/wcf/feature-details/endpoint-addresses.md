@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
 ms.openlocfilehash: f59b8403ecb683dafa6963565da46e517b5a2cbc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856641"
 ---
 # <a name="endpoint-addresses"></a>Uç Noktası Adresleri
 Her uç nokta bulun ve uç noktayı tanımlamak için kullanılır, ilişkili bir adresi vardır. Bu adres, öncelikle bir Tekdüzen Kaynak Tanımlayıcısı (uç nokta konumu belirten URI), oluşur. Uç nokta adresini Windows Communication Foundation (WCF) programlama modeli tarafından temsil edilir <xref:System.ServiceModel.EndpointAddress> isteğe bağlı içeren sınıf <xref:System.ServiceModel.EndpointAddress.Identity%2A> bitiş noktası diğer uç noktalar tarafından kimlik doğrulaması sağlayan özelliği, Exchange, iletileri ve isteğe bağlı bir dizi <xref:System.ServiceModel.EndpointAddress.Headers%2A> hizmete erişmek için gereken diğer bir SOAP üstbilgileri tanımlayan özellikleri. İsteğe bağlı üst bilgiler ek sağlayın ve daha ayrıntılı tanımlamak veya hizmet uç noktası ile etkileşime geçmek için adresleme bilgi. Bir uç nokta adresini kablo bir WS-Addressing uç nokta başvurusu (EPR) temsil edilir.  
@@ -19,13 +19,13 @@ Her uç nokta bulun ve uç noktayı tanımlamak için kullanılır, ilişkili bi
 ## <a name="uri-structure-of-an-address"></a>URI bir adresinin yapısı  
  Çoğu taşımalar için URI adresi dört bölümden oluşur. Örneğin, dört bölümden URI'ın `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` aşağıda listelenen:  
   
--   Düzeni: `http:`
+- Düzeni: `http:`
   
--   Makine: `www.fabrikam.com`  
+- Makine: `www.fabrikam.com`  
   
--   (isteğe bağlı) Bağlantı noktası: 322  
+- (isteğe bağlı) Bağlantı noktası: 322  
   
--   Yol: /mathservice.svc/secureEndpoint  
+- Yol: /mathservice.svc/secureEndpoint  
   
 ## <a name="defining-an-address-for-a-service"></a>Bir hizmet için bir adres tanımlama  
  Bir hizmet için uç nokta adresi ya da kesin kod veya bildirimli olarak ile yapılandırma kullanılarak belirtilebilir. Bağlamalarında ve adreslerinde dağıtılan bir hizmette hizmet geliştirilen kullandığı olanlardan genellikle farklı olduğundan uç noktaları kodda tanımlama genellikle pratik değildir. Genel olarak, kod yerine yapılandırma kullanarak hizmet uç noktaları tanımlamak daha yararlı olur. Bağlama tutulması ve adresleme bilgilerini kodunun dışında yeniden derleyin veya uygulama yeniden dağıtmaya gerek kalmadan değiştirmek sağlar.  
@@ -46,9 +46,9 @@ Her uç nokta bulun ve uç noktayı tanımlamak için kullanılır, ilişkili bi
   
  Aşağıdaki örnek, bir IIS bağlaması içinde mevcut olabilecek bileşenleri gösterilmektedir:  
   
--   Bağlama protokolü: HTTP  
+- Bağlama protokolü: HTTP  
   
--   Bağlama bilgileri: IP adresi, bağlantı noktası, ana bilgisayar üstbilgisi  
+- Bağlama bilgileri: IP adresi, bağlantı noktası, ana bilgisayar üstbilgisi  
   
  IIS her şeması için birden çok taban adresi sonuçlanır her site için birden çok bağlamaları belirtebilirsiniz. Öncesinde [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF birden çok adresi için bir şema desteklemiyor ve belirtilmiş olması durumunda, oluşturdu bir <xref:System.ArgumentException> etkinleştirme sırasında.  
   
@@ -100,15 +100,15 @@ Her uç nokta bulun ve uç noktayı tanımlamak için kullanılır, ilişkili bi
 ## <a name="extending-addressing-in-wcf-services"></a>WCF hizmetlerinde adresleme genişletme  
  WCF hizmetleri modeli ele alan varsayılan uç nokta adresini URI aşağıdaki amaçlarla kullanır:  
   
--   Uç nokta için iletileri dinleyen konum hizmeti dinleme adresini belirtmek için  
+- Uç nokta için iletileri dinleyen konum hizmeti dinleme adresini belirtmek için  
   
--   SOAP adresi filtresi belirtmek için bir uç nokta adresi SOAP üst bilgi olarak bekler.  
+- SOAP adresi filtresi belirtmek için bir uç nokta adresi SOAP üst bilgi olarak bekler.  
   
  Değerlerin her biri bu amaçlar için ayrı ayrı yararlı senaryoları kapsıyor adresleme birkaç uzantılarına olanak veren belirtilebilir:  
   
--   SOAP aracıları: bir istemci tarafından gönderilen bir iletinin son hedefine erişmeden önce iletiyi işleyen bir veya daha fazla ek hizmetler erişir. SOAP aracıları, önbelleğe alma, yönlendirme, Yük Dengeleme veya şema doğrulama iletilerinde gibi çeşitli görevler gerçekleştirebilirsiniz. Bu senaryo için ayrı bir fiziksel adresi iletiler göndererek gerçekleştirilir (`via`) aracı yerine yalnızca bir mantıksal adresine hedefleyen (`wsa:To`) ultimate hedef hedefleyen.  
+- SOAP aracıları: bir istemci tarafından gönderilen bir iletinin son hedefine erişmeden önce iletiyi işleyen bir veya daha fazla ek hizmetler erişir. SOAP aracıları, önbelleğe alma, yönlendirme, Yük Dengeleme veya şema doğrulama iletilerinde gibi çeşitli görevler gerçekleştirebilirsiniz. Bu senaryo için ayrı bir fiziksel adresi iletiler göndererek gerçekleştirilir (`via`) aracı yerine yalnızca bir mantıksal adresine hedefleyen (`wsa:To`) ultimate hedef hedefleyen.  
   
--   Dinleme bitiş noktasının adresini özel bir URI ve farklı bir değere ayarlamak, `listenURI` özelliği.  
+- Dinleme bitiş noktasının adresini özel bir URI ve farklı bir değere ayarlamak, `listenURI` özelliği.  
   
  Taşıma adres `via` olduğu bir ileti başlangıçta göndermesi gereken diğer bir uzak adres çekmek konumu tarafından belirtilen belirtir `to` parametresi hizmet olduğu yer. Çoğu Internet senaryoda `via` URI aynıdır <xref:System.ServiceModel.EndpointAddress.Uri%2A> son özelliği `to` hizmetinin adresini. Yalnızca el ile yönlendirme yapmanız gerekir, bu iki adreslerini birbirinden ayırt edecek.  
   
@@ -117,9 +117,9 @@ Her uç nokta bulun ve uç noktayı tanımlamak için kullanılır, ilişkili bi
   
  Özel adres üstbilgileri iki yolla tanımlayabilirsiniz — kod veya yapılandırma kullanarak:  
   
--   Kullanarak kod içinde özel adres üstbilgileri oluşturma <xref:System.ServiceModel.Channels.AddressHeader> sınıfı ve ardından oluşumunu kullanılan bir <xref:System.ServiceModel.EndpointAddress>.  
+- Kullanarak kod içinde özel adres üstbilgileri oluşturma <xref:System.ServiceModel.Channels.AddressHeader> sınıfı ve ardından oluşumunu kullanılan bir <xref:System.ServiceModel.EndpointAddress>.  
   
--   Özel bir yapılandırmada [ \<üstbilgileri >](../../configure-apps/file-schema/wcf/headers.md) altı olarak belirtilen [ \<uç noktası >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) öğesi.  
+- Özel bir yapılandırmada [ \<üstbilgileri >](../../configure-apps/file-schema/wcf/headers.md) altı olarak belirtilen [ \<uç noktası >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) öğesi.  
   
  Dağıtımdan sonra üstbilgileri değiştirmenize izin verdiğinden, yapılandırma kod, genellikle tercih edilir.  
   
@@ -128,9 +128,9 @@ Her uç nokta bulun ve uç noktayı tanımlamak için kullanılır, ilişkili bi
   
  Kod veya yapılandırma kullanarak özel bir dinleme adresi belirtebilirsiniz:  
   
--   Kod içinde ekleyerek bir özel dinleme adresi belirtin. bir <xref:System.ServiceModel.Description.ClientViaBehavior> uç noktanın davranışı koleksiyon sınıfı.  
+- Kod içinde ekleyerek bir özel dinleme adresi belirtin. bir <xref:System.ServiceModel.Description.ClientViaBehavior> uç noktanın davranışı koleksiyon sınıfı.  
   
--   Yapılandırması, bir özel dinleme adresiyle belirtin `ListenUri` hizmetinin özniteliği [ \<uç noktası >](../../configure-apps/file-schema/wcf/endpoint-element.md) öğesi.  
+- Yapılandırması, bir özel dinleme adresiyle belirtin `ListenUri` hizmetinin özniteliği [ \<uç noktası >](../../configure-apps/file-schema/wcf/endpoint-element.md) öğesi.  
   
 ### <a name="custom-soap-address-filter"></a>Özel SOAP adresi filtresi  
  <xref:System.ServiceModel.EndpointAddress.Uri%2A> Birlikte kullanılan <xref:System.ServiceModel.EndpointAddress.Headers%2A> uç noktanın SOAP adresi filtresi tanımlamak için özellik (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Varsayılan olarak, bu filtre gelen iletisine sahip olduğunu doğrular bir `To` uç noktayla eşleşen ileti üst bilgisi kullanıcının URI ve tüm gerekli uç nokta üstbilgileri iletide.  

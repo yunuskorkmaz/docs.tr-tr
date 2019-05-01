@@ -1,18 +1,18 @@
 ---
-title: Varlık başvuruları korunur
+title: Varlık Başvuruları Korunur
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 000a6cae-5972-40d6-bd6c-a9b7d9649b3c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b1c48e42e55025aff0ce1a24a3ef45ddf8005eab
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934543"
 ---
-# <a name="entity-references-are-preserved"></a>Varlık başvuruları korunur
+# <a name="entity-references-are-preserved"></a>Varlık Başvuruları Korunur
 Varlık başvurusu genişletilmiş, ancak korunur, XML belge nesne modeli (DOM) derlemeleri bir **XmlEntityReference** bir varlık başvurusu karşılaştığında düğümü.  
   
  Aşağıdaki XML kullanarak  

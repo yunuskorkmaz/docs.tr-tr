@@ -3,11 +3,11 @@ title: OracleTypes
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
 ms.openlocfilehash: 3762fdaee1312a7cb008386bb1f6b7bf7cb4316e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878429"
 ---
 # <a name="oracletypes"></a>OracleTypes
 Oracle için .NET Framework veri sağlayıcısı, Oracle veri türleriyle çalışmak için kullanabileceğiniz çeşitli yapıları içerir. Bunlar <xref:System.Data.OracleClient.OracleNumber> ve <xref:System.Data.OracleClient.OracleString>.  
@@ -17,9 +17,9 @@ Oracle için .NET Framework veri sağlayıcısı, Oracle veri türleriyle çalı
   
  Aşağıdaki C# örnekleri:  
   
--   Oracle tablosu oluşturun ve ile veri yükleme.  
+- Oracle tablosu oluşturun ve ile veri yükleme.  
   
--   Kullanan bir <xref:System.Data.OracleClient.OracleDataReader> verilere erişmek ve birkaç <xref:System.Data.OracleClient.OracleType> verileri görüntülemek için yapılar.  
+- Kullanan bir <xref:System.Data.OracleClient.OracleDataReader> verilere erişmek ve birkaç <xref:System.Data.OracleClient.OracleType> verileri görüntülemek için yapılar.  
   
 ## <a name="creating-an-oracle-table"></a>Oracle tablosu oluşturma  
  Bu örnek, bir Oracle tablosu oluşturur ve verileri yükler. Bu örnek, bir sonraki örneği çalıştırmadan önce çalıştırmanız gerekir.  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0d9d4336b79b60e69f980b6d5931e2994732f30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792697"
 ---
 # <a name="iclriocompletionmanageroncomplete-method"></a>ICLRIoCompletionManager::OnComplete Yöntemi
 Ortak dil çalışma zamanı (CLR) için bir çağrı kullanılarak yapılan bir g/ç isteğinin durumunu bildirir [Ihostıocompletionmanager::Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) yöntemi.  
@@ -41,11 +41,11 @@ HRESULT OnComplete (
  `dwErrorCode`  
  [in] Bağlama işlemi durumunu gösteren HRESULT değerini.  
   
--   S_OK işleminin başarıyla tamamlandığını gösterir.  
+- S_OK işleminin başarıyla tamamlandığını gösterir.  
   
--   HOST_E_INTERRUPTED, çağrı tamamlanmadan önce sona erdi gösterir.  
+- HOST_E_INTERRUPTED, çağrı tamamlanmadan önce sona erdi gösterir.  
   
--   E_FAIL bilinmeyen, kurtarılamaz, geri dönülemez bir hata oluştuğunu gösterir.  
+- E_FAIL bilinmeyen, kurtarılamaz, geri dönülemez bir hata oluştuğunu gösterir.  
   
  `NumberOfBytesTransferred`  
  [in] G/ç isteğinin işlenmesi sırasında aktarılan bayt sayısı.  

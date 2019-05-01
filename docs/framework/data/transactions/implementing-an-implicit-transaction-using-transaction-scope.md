@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
 ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793685"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>İşlem Kapsamı Kullanarak Örtük İşlem Uygulama
 <xref:System.Transactions.TransactionScope> Sınıfı bir işlem ile etkileşime gerek kalmadan bir işlemde katılan olarak kod bloğu işaretlemek için basit bir yol sağlar. İşlem kapsamı seçebilir ve ortam işlem otomatik olarak yönetir. Kendi kullanım kolaylığı ve verimliliği nedeniyle, kullanmanız önerilir <xref:System.Transactions.TransactionScope> sınıfı bir işlem uygulama geliştirirken.  
@@ -71,11 +71,11 @@ void SomeMethod()
   
  Bir <xref:System.Transactions.TransactionScope> nesnenin üç seçenek vardır:  
   
--   Ortam işlem katılın veya bir mevcut değilse yeni bir tane oluşturun.  
+- Ortam işlem katılın veya bir mevcut değilse yeni bir tane oluşturun.  
   
--   Yeni bir kök kapsam, diğer bir deyişle, yeni bir hareket başlatır ve yeni bir ortam işlem kendi kapsam içinde olması bu işlem olmalıdır.  
+- Yeni bir kök kapsam, diğer bir deyişle, yeni bir hareket başlatır ve yeni bir ortam işlem kendi kapsam içinde olması bu işlem olmalıdır.  
   
--   Bir işlemde hiç katılmak değil. Sonuç olarak ortam hiçbir işlem yok.  
+- Bir işlemde hiç katılmak değil. Sonuç olarak ortam hiçbir işlem yok.  
   
  Kapsamı ile örneği varsa <xref:System.Transactions.TransactionScopeOption.Required>ve bir ortam işlem varsa, bu işlem kapsamı birleştirir. Öte yandan, varsa, ortam hiçbir işlem, ardından kapsam yeni bir işlem oluşturur ve kök kapsam haline gelir. Varsayılan değer budur. Zaman <xref:System.Transactions.TransactionScopeOption.Required> olan kullanıldığında, kapsam içinde kod kök olup farklı davranır gerekmez veya yalnızca ortam işlem katılma. Her iki durumda da aynı şekilde çalışması.  
   

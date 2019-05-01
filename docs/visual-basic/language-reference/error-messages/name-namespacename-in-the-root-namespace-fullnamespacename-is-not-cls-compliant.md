@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
 ms.openlocfilehash: 84706719d151ea8df478f88610df34842f6f8702
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918365"
 ---
 # <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>Adı \<namespacename > kök ad alanındaki \<fullnamespacename > CLS uyumlu değil
 Bir derleme olarak işaretlenmiş `<CLSCompliant(True)>`, ancak bir öğe kök ad alanı adının alt çizgi ile başlar (`_`).  
@@ -29,9 +29,9 @@ Bir derleme olarak işaretlenmiş `<CLSCompliant(True)>`, ancak bir öğe kök a
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   CLS uyumluluğu gerektiriyorsa, böylece nBir öğelerinden bir alt çizgiyle başlayan kök ad alanı adı değiştirin.  
+- CLS uyumluluğu gerektiriyorsa, böylece nBir öğelerinden bir alt çizgiyle başlayan kök ad alanı adı değiştirin.  
   
--   Ad alanı adı değişmeden kalmasını gerektiriyorsa, ardından kaldırın <xref:System.CLSCompliantAttribute> derlemesinden veya olarak işaretlemek `<CLSCompliant(False)>`.  
+- Ad alanı adı değişmeden kalmasını gerektiriyorsa, ardından kaldırın <xref:System.CLSCompliantAttribute> derlemesinden veya olarak işaretlemek `<CLSCompliant(False)>`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

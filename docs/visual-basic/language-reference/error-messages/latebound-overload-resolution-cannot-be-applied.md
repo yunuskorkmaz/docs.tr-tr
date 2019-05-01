@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
 ms.openlocfilehash: 7f2ae3bb0e7c09d966c53fb17b1cbe675dfce8b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921114"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Geç bağlanan aşırı yükleme çözünürlüğü uygulanamaz '\<procedurename >' örnek bir arabirim türü olduğundan
 Derleyici bir aşırı yüklenmiş özellik veya yordamı başvuru çözmeye çalışıyor, ancak başvuru türünde bir bağımsız değişken olduğu için başarısız `Object` ve başvurulan nesne bir arabirim için veri türüne sahip. `Object` Bağımsız değişken başvuru geç bağlama olarak çözümlemek için derleyici zorlar.  
@@ -24,7 +24,7 @@ Derleyici bir aşırı yüklenmiş özellik veya yordamı başvuru çözmeye ça
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Kullanım `CType` bağımsız değişkende bir şekilde `Object` istediğiniz çağırmak için aşırı yükleme imzası tarafından belirtilen tür için.  
+- Kullanım `CType` bağımsız değişkende bir şekilde `Object` istediğiniz çağırmak için aşırı yükleme imzası tarafından belirtilen tür için.  
   
      Bu temel arabirimi başvuran nesnenin korumaz unutmayın. Bu hatayı önlemek için bağımsız değişken dönüştürmeniz gerekir.  
   

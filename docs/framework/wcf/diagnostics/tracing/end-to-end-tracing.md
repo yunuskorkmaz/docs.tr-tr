@@ -3,11 +3,11 @@ title: Uçtan Uca İzleme
 ms.date: 03/30/2017
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
 ms.openlocfilehash: fd2964b39c758e41620fb453ddd8f61a1aa550aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912541"
 ---
 # <a name="end-to-end-tracing"></a>Uçtan Uca İzleme
 Uçtan uca (e2e) izleme neden bir kod yolu başarısız oldu araştırmak için ya da kapasite planlama ve performans analizi için ayrıntılı izleme sağlamak için Windows Communication Foundation (WCF) altyapısındaki kodun yürütülmesini izlemek geliştiricilerin sağlar. Windows Communication Foundation (WCF), bir hatanın nedenini tanılamaya yardımcı olmak için üç bağıntı mekanizmaları sağlar: etkinlikleri, aktarımı ve yayma.  

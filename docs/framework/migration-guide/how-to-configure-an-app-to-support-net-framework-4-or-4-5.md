@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir uygulamayı .NET Framework 4 veya sonraki sürümler destekleyecek şekilde yapılandırma'
+title: 'Nasıl yapılır: Uygulamayı .NET Framework 4 veya sonraki sürümleri destekleyecek şekilde yapılandırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring apps to support .NET Framework
@@ -8,11 +8,11 @@ ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 40c19dc21bb2262ca1f23573cb89f764e4cd2627
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872696"
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>Nasıl yapılır: Destek .NET Framework 4 veya sonraki sürümler için uygulama yapılandırma
 
@@ -73,7 +73,7 @@ Başlamak için ortak dil çalışma zamanı (CLR) barındıran tüm uygulamalar
 
 |App.config dosyası ayarı|3.5 sürümü yüklü bilgisayarda|Sürüm 3.5 ve 4 veya sonraki sürümler yüklü olan bilgisayarda|Sürüm 4 veya sonraki sürümleri yüklü bilgisayarda|
 |-|-|-|-|
-|Hiçbiri|3.5 üzerinde çalışır|3.5 üzerinde çalışır|Kullanıcının doğru sürümü* yüklemesini isteyen hata iletisini görüntüler|
+|Yok.|3.5 üzerinde çalışır|3.5 üzerinde çalışır|Kullanıcının doğru sürümü* yüklemesini isteyen hata iletisini görüntüler|
 |`<supportedRuntime version="v2.0.50727"/>`|3.5 üzerinde çalışır|3.5 üzerinde çalışır|Kullanıcının doğru sürümü* yüklemesini isteyen hata iletisini görüntüler|
 |`<supportedRuntime version="v2.0.50727"/>` <br /> `<supportedRuntime version="v4.0"/>`|3.5 üzerinde çalışır|3.5 üzerinde çalışır|4 veya sonraki sürümleri çalıştıran|
 |`<supportedRuntime version="v4.0"/>` <br /> `<supportedRuntime version="v2.0.50727"/>`|3.5 üzerinde çalışır|4 veya sonraki sürümleri çalıştıran|4 veya sonraki sürümleri çalıştıran|

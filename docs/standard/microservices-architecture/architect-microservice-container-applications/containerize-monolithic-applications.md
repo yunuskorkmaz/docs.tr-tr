@@ -1,17 +1,17 @@
 ---
-title: Tek yapılı uygulamaları kapsayıcıya alma
+title: Tek Yapılı Uygulamaları Kapsayıcıya Alma
 description: Tek yapılı uygulamaları rağmen kapsayıcılı hale getirmek, mikro hizmetler mimarisi tüm avantajlarını elde edemez, hemen dağıtılabilecek dağıtım önemli faydası vardır.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
 ms.openlocfilehash: d1de4c4beb8c60aa543e5c71243d93b83fe52072
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910863"
 ---
-# <a name="containerizing-monolithic-applications"></a>Tek yapılı uygulamaları kapsayıcıya alma
+# <a name="containerizing-monolithic-applications"></a>Tek Yapılı Uygulamaları Kapsayıcıya Alma
 
 Tek ve monolithically dağıtılan web uygulaması veya hizmeti oluşturma ve kapsayıcı olarak dağıtmak isteyebilirsiniz. Uygulama dahili olarak tek parça olmayabilir, ancak birkaç kitaplıklar, bileşenler veya hatta katmanları (uygulama katmanı, etki alanı katmanı, veri erişim katmanı, vb.) yapılandırılmış. Dışarıdan, ancak tek bir kapsayıcıya olur — tek bir işlem, tek bir web uygulaması veya tek bir hizmet.
 

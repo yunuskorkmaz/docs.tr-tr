@@ -9,11 +9,11 @@ helpviewer_keywords:
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
 ms.openlocfilehash: 3d7e44a468388f6d9a8f30d7fea29ec465cd8664
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935518"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Zaman Uyumlu ve Zaman Uyumsuz İşlemler
 Bu konuda, uygulama ve zaman uyumsuz hizmet işlemleri çağırma anlatılmaktadır.  
@@ -27,24 +27,24 @@ Bu konuda, uygulama ve zaman uyumsuz hizmet işlemleri çağırma anlatılmaktad
   
  Hizmet sözleşmesinin bağımsızlığı hizmet veya istemci uygulamadan WCF uygulamalarında zaman uyumsuz yürütme aşağıdaki biçimleri sağlar:  
   
--   İstemciler, zaman uyumsuz olarak bir eş zamanlı ileti alışverişi kullanarak istek/yanıt işlemleri çalıştırabilirsiniz.  
+- İstemciler, zaman uyumsuz olarak bir eş zamanlı ileti alışverişi kullanarak istek/yanıt işlemleri çalıştırabilirsiniz.  
   
--   Hizmetleri, zaman uyumsuz olarak bir eş zamanlı ileti alışverişi kullanarak bir istek/yanıt işlemi uygulayabilir.  
+- Hizmetleri, zaman uyumsuz olarak bir eş zamanlı ileti alışverişi kullanarak bir istek/yanıt işlemi uygulayabilir.  
   
--   Mesaj tek yönlü istemci veya hizmet ne olursa olsun uygulaması olabilir.  
+- Mesaj tek yönlü istemci veya hizmet ne olursa olsun uygulaması olabilir.  
   
 ### <a name="suggested-asynchronous-scenarios"></a>Önerilen zaman uyumsuz senaryolar  
  İşlemi hizmet uygulaması g/ç iş yapmak gibi bir engelleme çağrı yaparsa bir hizmet işlemi uygulamasında zaman uyumsuz bir yaklaşım kullanın. Zaman uyumsuz işlem uygulama olduğunda zaman uyumsuz işlemler ve zaman uyumsuz çağrı yolun mümkün olduğunca uzak onaylamaktan genişletmek için yöntemleri çağırmayı deneyin. Örneğin, bir `BeginOperationTwo()` içinden `BeginOperationOne()`.  
   
--   Zaman uyumsuz bir yaklaşım istemcisinde veya çağıran uygulama aşağıdaki durumlarda kullanın:  
+- Zaman uyumsuz bir yaklaşım istemcisinde veya çağıran uygulama aşağıdaki durumlarda kullanın:  
   
--   Bir orta katman uygulamasından işlemleri çağırdığınız durumunda. (Bu tür senaryolar hakkında daha fazla bilgi için bkz. [orta katman istemci uygulamaları](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
+- Bir orta katman uygulamasından işlemleri çağırdığınız durumunda. (Bu tür senaryolar hakkında daha fazla bilgi için bkz. [orta katman istemci uygulamaları](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
   
--   ASP.NET sayfası içinde işlemleri çağırdığınız, zaman uyumsuz sayfalar kullanın.  
+- ASP.NET sayfası içinde işlemleri çağırdığınız, zaman uyumsuz sayfalar kullanın.  
   
--   Tek iş parçacıklı, Windows Forms veya Windows Presentation Foundation (WPF) gibi herhangi bir uygulamadan işlemleri çağırdığınız durumunda. Olay tabanlı zaman uyumsuz çağırma modeli kullanılırken, sonuç olay yanıt hızını kendiniz birden çok iş parçacığı işlemeye gerek kalmadan uygulamaya ekleme UI iş parçacığı üzerinde oluşturulur.  
+- Tek iş parçacıklı, Windows Forms veya Windows Presentation Foundation (WPF) gibi herhangi bir uygulamadan işlemleri çağırdığınız durumunda. Olay tabanlı zaman uyumsuz çağırma modeli kullanılırken, sonuç olay yanıt hızını kendiniz birden çok iş parçacığı işlemeye gerek kalmadan uygulamaya ekleme UI iş parçacığı üzerinde oluşturulur.  
   
--   Genel olarak, zaman uyumlu ve zaman uyumsuz bir çağrı arasında seçim yapma varsa, zaman uyumsuz çağrı'ı seçin.  
+- Genel olarak, zaman uyumlu ve zaman uyumsuz bir çağrı arasında seçim yapma varsa, zaman uyumsuz çağrı'ı seçin.  
   
 ### <a name="implementing-an-asynchronous-service-operation"></a>Zaman uyumsuz bir hizmet işlemi uygulama  
  Aşağıdaki üç yöntemden birini kullanarak zaman uyumsuz işlemler uygulanabilir:  
@@ -118,11 +118,11 @@ public class AsyncExample
   
  Bir sözleşme işlemi tanımlamak için `X` , yürütüldüğünde zaman uyumsuz olarak istemci uygulamasına nasıl adlandırılır bağımsız olarak:  
   
--   Desenini kullanarak, iki definovat `BeginOperation` ve `EndOperation`.  
+- Desenini kullanarak, iki definovat `BeginOperation` ve `EndOperation`.  
   
--   `BeginOperation` İncludes yöntemi `in` ve `ref` döndürür ve işlem parametreleri bir <xref:System.IAsyncResult> türü.  
+- `BeginOperation` İncludes yöntemi `in` ve `ref` döndürür ve işlem parametreleri bir <xref:System.IAsyncResult> türü.  
   
--   `EndOperation` Yöntemi içeren bir <xref:System.IAsyncResult> parametresi hem de `out` ve `ref` parametreleri ve işlemleri döndürür dönüş türü.  
+- `EndOperation` Yöntemi içeren bir <xref:System.IAsyncResult> parametresi hem de `out` ve `ref` parametreleri ve işlemleri döndürür dönüş türü.  
   
  Örneğin, aşağıdaki yöntemi bakın.  
   

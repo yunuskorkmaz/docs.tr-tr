@@ -10,11 +10,11 @@ ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 46e2e1c327a683782b68069ace2ad6c40bbc856e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868998"
 ---
 # <a name="security-and-remoting-considerations"></a>Güvenlik ve Uzaktan Yönetim Konuları
 Uzaktan iletişimini uygulama etki alanları, işlemleri veya bilgisayarlar arasında çağırma saydam ayarlamanıza olanak sağlar. Ancak, kod erişim güvenlik yığın İlerlemesi (aynı işlemde uygulama etki alanları arasında geçerli) işlem veya makine sınırları geçemez.  

@@ -3,17 +3,17 @@ title: WMI Sınıfı Başvurusu
 ms.date: 03/30/2017
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
 ms.openlocfilehash: 73b36bfc3df917982a2cc9071bdb31f42b3b2dff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915668"
 ---
 # <a name="wmi-class-reference"></a>WMI Sınıfı Başvurusu
-Bu bölüm Windows Communication Foundation (WCF) WMI sağlayıcısı tarafından sunulan tüm WMI sınıfları listeler.  
+Bu bölümde Windows Communication Foundation (WCF) WMI sağlayıcısı tarafından sunulan tüm WMI sınıflarını listelenir.  
   
 ## <a name="accessing-wmi-instances"></a>WMI örnekleri erişme  
- WMI nesnesi Reference içinde listelenen tüm sınıflar doğrudan, hizmet, AppDomain, sözleşme, ServiceAppDomain, ServiceToEndpointAssociation ve uç nokta dışında başlatılamaz. Diğer örneklere erişmek için yukarıda açıklanan üst düzey sınıflar özelliklerini erişebilirsiniz. Örneğin, TransportBindingElement örneği erişebilir örneği -> uç noktasından bağlama BindingElements ->.  
+ WMI Nesne Başvurusu içinde listelenen tüm sınıflar doğrudan, hizmet, AppDomain, sözleşme, ServiceAppDomain, ServiceToEndpointAssociation ve uç nokta dışında oluşturulamaz. Diğer örneklere erişmek için yukarıda açıklanan üst düzey sınıflarının özellikleri erişebilirsiniz. Örneğin, bir TransportBindingElement örneği erişebilir örneği -> uç noktasından bağlama BindingElements ->.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [ActivityTransfer](../../../../../docs/framework/wcf/diagnostics/wmi/activitytransfer.md)  
@@ -24,7 +24,7 @@ Bu bölüm Windows Communication Foundation (WCF) WMI sağlayıcısı tarafında
   
  [AsymmetricSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/asymmetricsecuritybindingelement.md)  
   
- "Davranışı sınıf"  
+ "Davranışı class"  
   
  [BinaryMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/binarymessageencodingbindingelement.md)  
   
@@ -80,7 +80,7 @@ Bu bölüm Windows Communication Foundation (WCF) WMI sağlayıcısı tarafında
   
  [OneWayBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/onewaybindingelement.md)  
   
- "İşlem sınıf"  
+ "İşlem class"  
   
  [OperationBehaviorAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/operationbehaviorattribute.md)  
   

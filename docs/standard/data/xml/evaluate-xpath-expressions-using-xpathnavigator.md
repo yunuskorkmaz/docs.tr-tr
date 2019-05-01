@@ -1,5 +1,5 @@
 ---
-title: XPathNavigator kullanarak XPath ifadelerini değerlendirme
+title: XPathNavigator Kullanarak XPath İfadelerini Değerlendirme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: 2913ccf3-f932-4363-8028-9e2d22ce6093
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b8666aa9cb9f0512c600a77891b16f439c46995a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934427"
 ---
-# <a name="evaluate-xpath-expressions-using-xpathnavigator"></a>XPathNavigator kullanarak XPath ifadelerini değerlendirme
+# <a name="evaluate-xpath-expressions-using-xpathnavigator"></a>XPathNavigator Kullanarak XPath İfadelerini Değerlendirme
 <xref:System.Xml.XPath.XPathNavigator> Sağlar sınıfını <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> bir XPath ifadesini değerlendirme için yöntemi. <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Yöntemi bir XPath ifadesini alır, bu değerlendirir ve W3C XPath türü Boolean, sayı, dize döndürür veya düğüm kümesi temel XPath ifadesinin sonucu üzerinde.  
   
 ## <a name="the-evaluate-method"></a>Yöntemi  

@@ -13,11 +13,11 @@ ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c7c2956a222a47cea36abbc2f21da2d7e2061e09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793165"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Nasıl yapılır: Yansıma Kullanarak Temsilci Bağlama
 Yansıma yüklemek ve derlemeleri çalıştırmak için kullandığınız zaman gibi dil özellikleri kullanamazsınız C# `+=` işleci veya Visual Basic [AddHandler deyimi](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) olayları yeteneklerinizi. Aşağıdaki yordamlar, gerekli tüm türlerin yansıma yoluyla alarak bir olay için varolan bir yöntem denetime nasıl gösterir ve yansıma kullanarak dinamik bir yöntem oluşturma yayma ve en fazla olay bağlama.  
@@ -107,11 +107,11 @@ Yansıma yüklemek ve derlemeleri çalıştırmak için kullandığınız zaman 
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   C# kodu içeren `using` deyimleri (`Imports` Visual Basic'te) derleme için gerekli.  
+- C# kodu içeren `using` deyimleri (`Imports` Visual Basic'te) derleme için gerekli.  
   
--   Hiçbir ek derleme başvuruları, komut satırından derleme için gereklidir. Bu örnek bir konsol uygulaması olduğundan, Visual Studio'da System.Windows.Forms.dll'e bir başvuru eklemelisiniz.  
+- Hiçbir ek derleme başvuruları, komut satırından derleme için gereklidir. Bu örnek bir konsol uygulaması olduğundan, Visual Studio'da System.Windows.Forms.dll'e bir başvuru eklemelisiniz.  
   
--   Csc.exe, vbc.exe veya cl.exe kullanarak komut satırındaki kodu derleyin. Visual Studio'da Kodu derlemek için bir konsol uygulaması projesi şablonu içine koyun.  
+- Csc.exe, vbc.exe veya cl.exe kullanarak komut satırındaki kodu derleyin. Visual Studio'da Kodu derlemek için bir konsol uygulaması projesi şablonu içine koyun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

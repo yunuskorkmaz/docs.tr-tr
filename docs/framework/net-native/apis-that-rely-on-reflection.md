@@ -5,11 +5,11 @@ ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868985"
 ---
 # <a name="apis-that-rely-on-reflection"></a>Yansıma kullanan API'ler
 Bazı durumlarda, kodda yansıma kullanımına açıktır, değildir ve bu nedenle [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri, çalışma zamanında gereken meta verileri korumak değil. Bu konu, bazı ortak API'ler veya, yansıma API'si bir parçası olarak kabul değildir ancak, başarılı bir şekilde yürütmek için yansıma kullanan ortak programlama modellerini kapsar. Kaynak kodunuzu kullanmak, bunlar hakkında bilgi için çalışma zamanı yönergeleri ekleyebilirsiniz (. rd.xml) bu API'lere giden çağrıların değil throw dosyasını bir [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) özel durum ya da diğer bazı özel çalışma zamanında.  
@@ -51,11 +51,11 @@ App1.AppClass`1<System.Int32>.
   
  Başarılı bir şekilde çalıştırmak için bu kodu çeşitli meta veri öğeleri gerektirir:  
   
--   `Browse` yöntem çağırmak istediğinizde türü için meta veriler.  
+- `Browse` yöntem çağırmak istediğinizde türü için meta veriler.  
   
--   `Browse` aramak istediğiniz yöntem için meta veriler.  Genel bir yöntem ise, genel ekleme `Browse` kapsayan türü için meta verileri yöntemi çok içerir.  
+- `Browse` aramak istediğiniz yöntem için meta veriler.  Genel bir yöntem ise, genel ekleme `Browse` kapsayan türü için meta verileri yöntemi çok içerir.  
   
--   Dinamik meta veriler, istediğiniz çağırmak için böylece yansıma çağırma temsilcisi tarafından kaldırılmaz yöntemi [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri. Dinamik meta veriler için yöntem eksikse, şu özel durum oluşan <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> yöntemi çağrılır:  
+- Dinamik meta veriler, istediğiniz çağırmak için böylece yansıma çağırma temsilcisi tarafından kaldırılmaz yöntemi [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri. Dinamik meta veriler için yöntem eksikse, şu özel durum oluşan <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> yöntemi çağrılır:  
   
     ```  
     MakeGenericMethod() cannot create this generic method instantiation because the instantiation was not metadata-enabled: 'App1.Class1.GenMethod<Int32>(Int32)'.  

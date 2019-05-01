@@ -3,11 +3,11 @@ title: WCF ve ASP.NET Web API
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
 ms.openlocfilehash: d805c09bef45932ba006a213343429ae7c9303df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791275"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF ve ASP.NET Web API
 WCF hizmet odaklı uygulamalar oluşturmak için Microsoft'un programlama modelidir. Bu, geliştiricilerin platformlar arasında tümleştirin ve mevcut yatırımlarınızdan ile birlikte çalışmak güvenli, güvenilir, hizmetteki çözümleri oluşturmasına olanak sağlar. [ASP.NET Web API](https://www.asp.net/web-api) istemciler, tarayıcılar ve mobil cihazlar dahil olmak üzere geniş bir yelpazede ulaşan HTTP hizmetlerini oluşturmayı kolaylaştıran bir çerçevedir. ASP.NET Web API'si, .NET Framework üzerinde RESTful uygulamaları geliştirmek için ideal bir platformdur. Bu konuda, hangi teknoloji ihtiyaçlarınızı en iyi karşılayacak karar vermenize yardımcı olacak rehberlik sunulmaktadır.  

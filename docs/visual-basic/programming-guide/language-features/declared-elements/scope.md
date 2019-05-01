@@ -16,11 +16,11 @@ helpviewer_keywords:
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
 ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917845"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic'de Kapsam
 *Kapsam* bildirilen bir öğenin adını nitelendirme veya aracılığıyla kullanılabilir hale getirme olmadan başvurduğu tüm kod kümesidir. bir [Imports deyimi (.NET Namespace ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Bir öğe kapsamı aşağıdaki düzeylerde birine sahip olabilir:  
@@ -37,11 +37,11 @@ ms.locfileid: "58823551"
 ## <a name="specifying-scope-and-defining-variables"></a>Kapsam belirleme ve değişkenleri tanımlama  
  Bildirdiğinizde, bir öğenin kapsamını belirtin. Kapsam aşağıdaki etkenlere bağlıdır:  
   
--   Öğe bildirdiğiniz bölge (blok, yordam, modül, sınıf veya yapının)  
+- Öğe bildirdiğiniz bölge (blok, yordam, modül, sınıf veya yapının)  
   
--   Öğenin bildirimi içeren ad alanı  
+- Öğenin bildirimi içeren ad alanı  
   
--   Öğe için bildirmek erişim düzeyi  
+- Öğe için bildirmek erişim düzeyi  
   
  Aynı ada ancak farklı kapsam değişkenlerle belirlemekten tanımlarken kullanmak dikkat beklenmeyen sonuçlara neden olabilir. Daha fazla bilgi için [bildirilmiş öğelere başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
@@ -51,21 +51,21 @@ ms.locfileid: "58823551"
 ### <a name="block-scope"></a>Blok kapsamı  
  Bir blok başlatma ve sonlandırma aşağıdaki gibi bildirim deyimleri içine alınmış deyimleri kümesidir:  
   
--   `Do` ve `Loop`  
+- `Do` ve `Loop`  
   
--   `For` [`Each`] ve `Next`  
+- `For` [`Each`] ve `Next`  
   
--   `If` ve `End If`  
+- `If` ve `End If`  
   
--   `Select` ve `End Select`  
+- `Select` ve `End Select`  
   
--   `SyncLock` ve `End SyncLock`  
+- `SyncLock` ve `End SyncLock`  
   
--   `Try` ve `End Try`  
+- `Try` ve `End Try`  
   
--   `While` ve `End While`  
+- `While` ve `End While`  
   
--   `With` ve `End With`  
+- `With` ve `End With`  
   
  Bir blok içinde bir değişken bildirirseniz, yalnızca bu blokta kullanabilirsiniz. Aşağıdaki örnekte, tam sayı değişkeni kapsamını `cube` arasında blok `If` ve `End If`, ve artık başvurabilirsiniz `cube` zaman Yürütme bloğunun dışına geçirir.  
   
@@ -127,9 +127,9 @@ Public strMsg As String
 ### <a name="advantages-of-local-variables"></a>Yerel değişkenler avantajları  
  Yerel değişkenler, aşağıdaki nedenlerden dolayı herhangi bir türden geçici hesaplama için iyi bir seçim şunlardır:  
   
--   **Ad çakışması engelleme.** Yerel değişken adları çakışma açık değildir. Örneğin, adında bir değişkene içeren birkaç farklı yordamlar oluşturabilirsiniz `intTemp`. Olduğu sürece her `intTemp` bildirilen yerel değişken olarak, her yordam, yalnızca kendi sürüm tanır, `intTemp`. Herhangi bir yordam, yerel değeri değiştirebilir `intTemp` etkilemeden `intTemp` diğer yordamlar değişkenleri.  
+- **Ad çakışması engelleme.** Yerel değişken adları çakışma açık değildir. Örneğin, adında bir değişkene içeren birkaç farklı yordamlar oluşturabilirsiniz `intTemp`. Olduğu sürece her `intTemp` bildirilen yerel değişken olarak, her yordam, yalnızca kendi sürüm tanır, `intTemp`. Herhangi bir yordam, yerel değeri değiştirebilir `intTemp` etkilemeden `intTemp` diğer yordamlar değişkenleri.  
   
--   **Bellek tüketimi.** Yalnızca kendi yordamı çalışırken yerel değişkenler bellek tüketir. Yordamı çağıran koda geri döndüğünde, kendi bellek serbest bırakılır. Bunun aksine, [paylaşılan](../../../../visual-basic/language-reference/modifiers/shared.md) ve [statik](../../../../visual-basic/language-reference/modifiers/static.md) değişkenleri uygulamanızın çalışmayı kadar bellek kaynaklarının kullanılmasına, bunları yalnızca gerekli olduğunda kullanın. *Örnek değişkenleri* bunları daha az yerel değişkenler verimlidir, ancak büyük olasılıkla daha verimli olmasını sağlayan kendi örneği var olmaya devam ederken bellek `Shared` veya `Static` değişkenleri.  
+- **Bellek tüketimi.** Yalnızca kendi yordamı çalışırken yerel değişkenler bellek tüketir. Yordamı çağıran koda geri döndüğünde, kendi bellek serbest bırakılır. Bunun aksine, [paylaşılan](../../../../visual-basic/language-reference/modifiers/shared.md) ve [statik](../../../../visual-basic/language-reference/modifiers/static.md) değişkenleri uygulamanızın çalışmayı kadar bellek kaynaklarının kullanılmasına, bunları yalnızca gerekli olduğunda kullanın. *Örnek değişkenleri* bunları daha az yerel değişkenler verimlidir, ancak büyük olasılıkla daha verimli olmasını sağlayan kendi örneği var olmaya devam ederken bellek `Shared` veya `Static` değişkenleri.  
   
 ### <a name="minimizing-scope"></a>Kapsam en aza indirme  
  Genel olarak, herhangi bir değişken veya sabit bildirdiğinizde, kapsam olarak dar yapmak alışkanlıktır (blok kapsamı olan en düşük). Bu işlem, bellek korunmasına yardımcı olur ve kodunuzu deneyebileceğinizi hatalı değişkenine başvuran olasılığını en aza indirir. Benzer şekilde, olması için bir değişken bildirmelidir [statik](../../../../visual-basic/language-reference/modifiers/static.md) yalnızca zaman değerini yordam çağrıları arasında korumak gereklidir.  

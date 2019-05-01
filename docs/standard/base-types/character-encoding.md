@@ -15,18 +15,18 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936805"
 ---
 # <a name="character-encoding-in-net"></a>.NET içinde Karakter Kodlaması
 Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bir karakter kodlaması, desteklenen bir karakter kümesindeki her karakteri, o karakteri temsil eden değerle eşleştiren bir sistemdir. Örneğin; Morse kodu, Roma alfabesindeki her karakteri telgraf hattı üzerinden iletilmeye uygun olan bir nokta ve çizgi deseniyle eşleştiren bir karakter kodlamasıdır. Bilgisayarlar için bir karakter kodlaması, desteklenen bir karakter kümesindeki her karakteri, o karakteri temsil eden sayısal bir değerle eşleştirir. Bir karakter kodlaması iki farklı bileşene sahiptir:  
   
--   Bir karakter dizisini sayısal değerler dizisine (baytlara) çeviren bir kodlayıcı.  
+- Bir karakter dizisini sayısal değerler dizisine (baytlara) çeviren bir kodlayıcı.  
   
--   Bir bayt dizisini karakter dizisine çeviren bir kod çözücü.  
+- Bir bayt dizisini karakter dizisine çeviren bir kod çözücü.  
   
  Karakter kodlama, bir kodlayıcının ve kod çözücünün çalışma kurallarını açıklar. Örneğin <xref:System.Text.UTF8Encoding> sınıfı, tek bir Unicode karakterini temsil etmek için bir ile dört arasında bayt kullanan 8 bitlik Unicode Dönüştürme Biçimi (UTF-8) için kodlama ve kod çözme kurallarını açıklar. Kodlama ve kod çözme aynı zamanda doğrulamayı da içerebilir. Örneğin <xref:System.Text.UnicodeEncoding> sınıfı, geçerli yedek çiftleri olduklarından emin olmak için tüm yedekleri denetler. (Bir yedek çifti, ardından U+DC00 ile U+DFFF aralığında bir kod noktasına sahip olan bir karakter gelen U+D800 ile U+DBFF aralığında kod noktasına sahip olan bir karakterden oluşur.)  Bir geri dönüş stratejisi, bir kodlayıcının geçersiz karakterleri veya bir kod çözücünün geçersiz baytları nasıl işleyeceğini belirler.  
   
@@ -37,27 +37,27 @@ Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bi
   
  Bu konu aşağıdaki bölümlerden oluşur:  
   
--   [. NET'te kodlamaları](../../../docs/standard/base-types/character-encoding.md#Encodings)  
+- [. NET'te kodlamaları](../../../docs/standard/base-types/character-encoding.md#Encodings)  
   
--   [Bir kodlama sınıfı seçme](../../../docs/standard/base-types/character-encoding.md#Selecting)  
+- [Bir kodlama sınıfı seçme](../../../docs/standard/base-types/character-encoding.md#Selecting)  
   
--   [Using an Encoding Object](../../../docs/standard/base-types/character-encoding.md#Using)  
+- [Using an Encoding Object](../../../docs/standard/base-types/character-encoding.md#Using)  
   
--   [Bir geri dönüş stratejisini seçme](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
+- [Bir geri dönüş stratejisini seçme](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
   
--   [Özel bir geri dönüş stratejisi uygulamak](../../../docs/standard/base-types/character-encoding.md#Custom)  
+- [Özel bir geri dönüş stratejisi uygulamak](../../../docs/standard/base-types/character-encoding.md#Custom)  
   
 <a name="Encodings"></a>   
 ## <a name="encodings-in-net"></a>. NET'te kodlamaları  
  Tüm karakter kodlama sınıfları, .NET devralmanız <xref:System.Text.Encoding?displayProperty=nameWithType> tüm karakter kodlamalarına ortak olan işlevselliği tanımlayan soyut bir sınıf olan sınıf. .NET içinde uygulanan kodlama nesnelerine tek tek erişmek için aşağıdakileri yapın:  
   
--   Statik özelliklerini kullanın <xref:System.Text.Encoding> nesneleri döndüren bir sınıfı temsil eden standart karakter kodlamalarını (ASCII, UTF-7, UTF-8, UTF-16 ve UTF-32) .NET içinde kullanılabilir. Örneğin, <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> özelliği bir <xref:System.Text.UnicodeEncoding> nesnesini döndürür. Her bir nesne, kodlayamadığı dizeleri ve kodunu çözemediği baytları işlemek için değiştirme geri dönüşünü kullanır. (Daha fazla bilgi için [değiştirme geri dönüşü](../../../docs/standard/base-types/character-encoding.md#Replacement) bölümüne.)  
+- Statik özelliklerini kullanın <xref:System.Text.Encoding> nesneleri döndüren bir sınıfı temsil eden standart karakter kodlamalarını (ASCII, UTF-7, UTF-8, UTF-16 ve UTF-32) .NET içinde kullanılabilir. Örneğin, <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> özelliği bir <xref:System.Text.UnicodeEncoding> nesnesini döndürür. Her bir nesne, kodlayamadığı dizeleri ve kodunu çözemediği baytları işlemek için değiştirme geri dönüşünü kullanır. (Daha fazla bilgi için [değiştirme geri dönüşü](../../../docs/standard/base-types/character-encoding.md#Replacement) bölümüne.)  
   
--   Kodlamanın sınıf oluşturucusunu çağırın. ASCII, UTF-7, UTF-8, UTF-16 ve UTF-32 kodlamalarına ait nesneler bu şekilde örneklenebilir. Varsayılan olarak her nesne, kodlayamadığı dizeleri ve kodunu çözemediği baytları işlemek için değiştirme geri dönüşünü kullanır, ancak bunun yerine bir özel durumun oluşturulmasını da belirtebilirsiniz. (Daha fazla bilgi için [değiştirme geri dönüşü](../../../docs/standard/base-types/character-encoding.md#Replacement) ve [özel durum geri dönüşü](../../../docs/standard/base-types/character-encoding.md#Exception) bölümleri.)  
+- Kodlamanın sınıf oluşturucusunu çağırın. ASCII, UTF-7, UTF-8, UTF-16 ve UTF-32 kodlamalarına ait nesneler bu şekilde örneklenebilir. Varsayılan olarak her nesne, kodlayamadığı dizeleri ve kodunu çözemediği baytları işlemek için değiştirme geri dönüşünü kullanır, ancak bunun yerine bir özel durumun oluşturulmasını da belirtebilirsiniz. (Daha fazla bilgi için [değiştirme geri dönüşü](../../../docs/standard/base-types/character-encoding.md#Replacement) ve [özel durum geri dönüşü](../../../docs/standard/base-types/character-encoding.md#Exception) bölümleri.)  
   
--   <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> oluşturucusunu çağırın ve kodlamayı temsil eden bir tamsayı geçirin. Kodlanamayan dizeleri ve kodu çözülemeyen baytları işlemek için, standart kodlama nesneleri değiştirme geri dönüşünü kullanır ve kod sayfası ile çift bayt karakter kümesi (DBCS) kodlama nesneleri, en uygun geri dönüşü kullanır. (Daha fazla bilgi için [en uygun geri dönüş](../../../docs/standard/base-types/character-encoding.md#BestFit) bölümüne.)  
+- <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> oluşturucusunu çağırın ve kodlamayı temsil eden bir tamsayı geçirin. Kodlanamayan dizeleri ve kodu çözülemeyen baytları işlemek için, standart kodlama nesneleri değiştirme geri dönüşünü kullanır ve kod sayfası ile çift bayt karakter kümesi (DBCS) kodlama nesneleri, en uygun geri dönüşü kullanır. (Daha fazla bilgi için [en uygun geri dönüş](../../../docs/standard/base-types/character-encoding.md#BestFit) bölümüne.)  
   
--   Çağrı <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> herhangi standart, kod sayfası veya DBCS kodlamasını. NET'te kullanılabilir döndüren yöntemi. Aşırı yüklemeler, hem kodlayıcı hem de kod çözücü için bir geri dönüş nesnesi belirtmenizi sağlar.  
+- Çağrı <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> herhangi standart, kod sayfası veya DBCS kodlamasını. NET'te kullanılabilir döndüren yöntemi. Aşırı yüklemeler, hem kodlayıcı hem de kod çözücü için bir geri dönüş nesnesi belirtmenizi sağlar.  
   
 > [!NOTE]
 >  Unicode Standardı, desteklenen tüm betiklerde her karaktere bir kod noktası (bir sayı) ve bir ad atar. Örneğin "A" karakteri, U+0041 kod noktası ile ve "LATIN BÜYÜK HARF A" adıyla temsil edilir. Unicode Dönüştürme Biçimi (UTF) kodlamaları, bu kod noktasını bir veya daha fazla bayt dizisi olarak kodlamanın yollarını tanımlar. Bir Unicode kodlama düzeni, herhangi bir karakter kümesindeki karakterlerin tek bir kodlama içinde temsil edilmesini sağladığından, dünya çapında kullanılmaya hazır uygulama geliştirmeyi basitleştirir. Uygulama geliştiricilerin artık belirli bir dil veya yazı sistemi için karakter oluşturmakta kullanılan kodlama düzenini takip etmesine gerek yoktur ve veriler bozulmadan sistemler arasında uluslararası olarak paylaşılabilir.  
@@ -87,17 +87,17 @@ Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bi
   
  Eğer bir ASCII kodlaması (<xref:System.Text.ASCIIEncoding>) kullanmayı planlıyorsanız, bunun yerine <xref:System.Text.UTF8Encoding>'i seçin. Bu iki kodlama ASCII karakter kümesi için aynıdır, ancak <xref:System.Text.UTF8Encoding> aşağıdaki avantajlara sahiptir:  
   
--   <xref:System.Text.ASCIIEncoding>, yalnızca U+0000 ve U+007F arasındaki Unicode karakterlerini desteklerken, bu bütün Unicode karakterlerini temsil edebilir.  
+- <xref:System.Text.ASCIIEncoding>, yalnızca U+0000 ve U+007F arasındaki Unicode karakterlerini desteklerken, bu bütün Unicode karakterlerini temsil edebilir.  
   
--   Hata algılama ve daha iyi güvenlik sağlar.  
+- Hata algılama ve daha iyi güvenlik sağlar.  
   
--   Mümkün olduğunca hızlı olacak şekilde ayarlanmıştır ve diğer kodlamalardan daha hızlı olmalıdır. Tamamen ASCII olan içerik için bile, <xref:System.Text.UTF8Encoding> ile yapılan işlemler <xref:System.Text.ASCIIEncoding> ile yapılan işlemlerden daha hızlıdır.  
+- Mümkün olduğunca hızlı olacak şekilde ayarlanmıştır ve diğer kodlamalardan daha hızlı olmalıdır. Tamamen ASCII olan içerik için bile, <xref:System.Text.UTF8Encoding> ile yapılan işlemler <xref:System.Text.ASCIIEncoding> ile yapılan işlemlerden daha hızlıdır.  
   
  <xref:System.Text.ASCIIEncoding> kodlamasını yalnızca eski uygulamalar için kullanmayı düşünmelisiniz. Ancak, eski uygulamalar için bile, <xref:System.Text.UTF8Encoding> aşağıdaki nedenlerden dolayı (varsayılan ayarların olduğunu düşünerek) daha iyi bir seçimdir:  
   
--   Eğer uygulamanız tamamen ASCII olmayan içeriğe sahipse ve bunu <xref:System.Text.ASCIIEncoding> ile kodlarsa ASCII olmayan her bir karakter, bir soru işareti (?) olarak kodlanır. Eğer sonra uygulama bu verinin kodunu çözerse, bilgi kaybolur.  
+- Eğer uygulamanız tamamen ASCII olmayan içeriğe sahipse ve bunu <xref:System.Text.ASCIIEncoding> ile kodlarsa ASCII olmayan her bir karakter, bir soru işareti (?) olarak kodlanır. Eğer sonra uygulama bu verinin kodunu çözerse, bilgi kaybolur.  
   
--   Eğer uygulamanız tamamen ASCII olmayan içeriğe sahipse ve bunu <xref:System.Text.UTF8Encoding> ile kodlarsa, ASCII olarak yorumlandığında sonuç anlamsız görünebilir. Ancak ardından uygulama, bu verinin kodunu çözmek için bir UTF-8 kod çözücü kullanırsa veriler, gidiş dönüşü başarıyla tamamlar.  
+- Eğer uygulamanız tamamen ASCII olmayan içeriğe sahipse ve bunu <xref:System.Text.UTF8Encoding> ile kodlarsa, ASCII olarak yorumlandığında sonuç anlamsız görünebilir. Ancak ardından uygulama, bu verinin kodunu çözmek için bir UTF-8 kod çözücü kullanırsa veriler, gidiş dönüşü başarıyla tamamlar.  
   
  Bir web uygulamasında, bir web isteğine karşılık olarak istemciye gönderilen karakterler istemcide kullanılan kodlamayı yansıtmalıdır. Çoğu durumda, metni kullanıcının beklediği kodlamayla görüntülemek için <xref:System.Web.HttpResponse.ContentEncoding%2A?displayProperty=nameWithType> özelliğini <xref:System.Web.HttpRequest.ContentEncoding%2A?displayProperty=nameWithType> özelliği tarafından döndürülen değere ayarlamanız gerekir.  
   
@@ -130,11 +130,11 @@ Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bi
 ## <a name="choosing-a-fallback-strategy"></a>Choosing a Fallback Strategy  
  Bir yöntem, bir karakter için kodlamayı veya kod çözmeyi denediğinde ancak hiçbir eşleme bulunmadığında, başarısız olan eşlemenin nasıl işleneceğini belirleyen bir geri dönüş stratejisi uygulanmalıdır. Üç çeşit geri dönüş stratejisi bulunur:  
   
--   En uygun geri dönüş  
+- En uygun geri dönüş  
   
--   Değiştirme geri dönüşü  
+- Değiştirme geri dönüşü  
   
--   Özel durum geri dönüşü  
+- Özel durum geri dönüşü  
   
 > [!IMPORTANT]
 >  Kodlama işlemlerindeki en yaygın sorunlar, bir Unicode karakteri belirli bir kod sayfası kodlamasıyla eşlenemediğinde ortaya çıkar. Kod çözme işlemlerindeki en yaygın sorunlar, geçersiz bayt dizileri geçerli Unicode karakterlerine çevrilemediğinde ortaya çıkar. Bu nedenlerden dolayı, belirli bir kodlama nesnesinin hangi geri dönüş stratejisini kullandığını bilmeniz gerekir. Mümkün olduğunda, bir kodlama nesnesinin kullandığı geri dönüş stratejisini nesnenin örneğini oluştururken belirtmeniz gerekir.  
@@ -195,9 +195,9 @@ Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bi
   
  <xref:System.Text.EncoderFallbackException> ve <xref:System.Text.DecoderFallbackException> nesneleri, özel durumu oluşturan durum hakkında aşağıdaki bilgileri sağlar:  
   
--   <xref:System.Text.EncoderFallbackException> nesnesi, kodlanamayan karakterin veya karakterlerin bilinmeyen bir temsilci çifti mi (bu durumda yöntem <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A>'i döndürür) yoksa bilinmeyen tek bir karakter mi (bu durumda yöntem `true`'i döndürür) olduğunu belirten bir `false` yöntemini içerir. Yedek çiftindeki karakterler <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> ve <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType> özelliklerinde mevcuttur. Bilinmeyen tek karakter, <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType> özelliğinde mevcuttur. <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> özelliği, kodlanamayan ilk karakterin dizede bulunduğu konumu gösterir.  
+- <xref:System.Text.EncoderFallbackException> nesnesi, kodlanamayan karakterin veya karakterlerin bilinmeyen bir temsilci çifti mi (bu durumda yöntem <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A>'i döndürür) yoksa bilinmeyen tek bir karakter mi (bu durumda yöntem `true`'i döndürür) olduğunu belirten bir `false` yöntemini içerir. Yedek çiftindeki karakterler <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> ve <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType> özelliklerinde mevcuttur. Bilinmeyen tek karakter, <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType> özelliğinde mevcuttur. <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> özelliği, kodlanamayan ilk karakterin dizede bulunduğu konumu gösterir.  
   
--   <xref:System.Text.DecoderFallbackException> nesnesi, kodu çözülemeyen bir bayt dizisini döndüren bir <xref:System.Text.DecoderFallbackException.BytesUnknown%2A> özelliğini içerir. <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=nameWithType> özelliği, bilinmeyen baytların başlangıç konumunu gösterir.  
+- <xref:System.Text.DecoderFallbackException> nesnesi, kodu çözülemeyen bir bayt dizisini döndüren bir <xref:System.Text.DecoderFallbackException.BytesUnknown%2A> özelliğini içerir. <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=nameWithType> özelliği, bilinmeyen baytların başlangıç konumunu gösterir.  
   
  <xref:System.Text.EncoderFallbackException> ve <xref:System.Text.DecoderFallbackException> nesneleri özel durum hakkında yeterli tanılama bilgisi sağlasa da, kodlama veya kod çözme arabelleğine erişim sağlamaz. Bu nedenle bu nesneler, geçersiz verinin kodlama veya kod çözme yönteminde değiştirilmesine veya düzeltilmesine izin vermez.  
   
@@ -205,13 +205,13 @@ Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bi
 ## <a name="implementing-a-custom-fallback-strategy"></a>Implementing a Custom Fallback Strategy  
  Kod sayfaları tarafından dahili olarak uygulanan en uygun eşlemenin yanı sıra .NET bir geri dönüş stratejisi uygulamak için aşağıdaki sınıfları içerir:  
   
--   Kodlama işlemlerinde karakterleri değiştirmek için <xref:System.Text.EncoderReplacementFallback> ve <xref:System.Text.EncoderReplacementFallbackBuffer> kullanın.  
+- Kodlama işlemlerinde karakterleri değiştirmek için <xref:System.Text.EncoderReplacementFallback> ve <xref:System.Text.EncoderReplacementFallbackBuffer> kullanın.  
   
--   Kod çözme işlemlerinde karakterleri değiştirmek için <xref:System.Text.DecoderReplacementFallback> ve <xref:System.Text.DecoderReplacementFallbackBuffer> kullanın.  
+- Kod çözme işlemlerinde karakterleri değiştirmek için <xref:System.Text.DecoderReplacementFallback> ve <xref:System.Text.DecoderReplacementFallbackBuffer> kullanın.  
   
--   Bir karakter kodlanamadığında bir <xref:System.Text.EncoderExceptionFallback> oluşturmak için <xref:System.Text.EncoderExceptionFallbackBuffer> ve <xref:System.Text.EncoderFallbackException> kullanın.  
+- Bir karakter kodlanamadığında bir <xref:System.Text.EncoderExceptionFallback> oluşturmak için <xref:System.Text.EncoderExceptionFallbackBuffer> ve <xref:System.Text.EncoderFallbackException> kullanın.  
   
--   Bir karakterin kodu çözülemediğinde bir <xref:System.Text.DecoderExceptionFallback> oluşturmak için <xref:System.Text.DecoderExceptionFallbackBuffer> ve <xref:System.Text.DecoderFallbackException> kullanın.  
+- Bir karakterin kodu çözülemediğinde bir <xref:System.Text.DecoderExceptionFallback> oluşturmak için <xref:System.Text.DecoderExceptionFallbackBuffer> ve <xref:System.Text.DecoderFallbackException> kullanın.  
   
  Ek olarak, aşağıdaki adımları izleyerek en iyi geri dönüş, değiştirme geri dönüşü veya özel durum geri dönüşü kullanan özel bir çözüm uygulayabilirsiniz:  
   
@@ -226,24 +226,24 @@ Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bi
   
  Bir kodlayıcı veya kod çözücü için özel bir geri dönüş çözümü oluşturduğunuzda, aşağıdaki üyeleri uygulamanız gerekir:  
   
--   En uygun, değiştirme veya özel durum geri dönüşünün tek bir karakterini değiştirmek için döndürebileceği en fazla karakter sayısını döndüren <xref:System.Text.EncoderFallback.MaxCharCount%2A?displayProperty=nameWithType> veya <xref:System.Text.DecoderFallback.MaxCharCount%2A?displayProperty=nameWithType> özelliği. Özel bir özel durum geri dönüşü için, değeri sıfırdır.  
+- En uygun, değiştirme veya özel durum geri dönüşünün tek bir karakterini değiştirmek için döndürebileceği en fazla karakter sayısını döndüren <xref:System.Text.EncoderFallback.MaxCharCount%2A?displayProperty=nameWithType> veya <xref:System.Text.DecoderFallback.MaxCharCount%2A?displayProperty=nameWithType> özelliği. Özel bir özel durum geri dönüşü için, değeri sıfırdır.  
   
--   Özel <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> veya <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> uygulamanızı döndüren <xref:System.Text.EncoderFallbackBuffer> veya <xref:System.Text.DecoderFallbackBuffer> yöntemi. Bu yöntem, kodlayıcı tarafından başarıyla kodlayamadığı ilk karakterle karşılaştığında veya kod çözücü tarafından başarıyla kodunu çözemediği ilk bayt ile karşılaştığında çağırılır.  
+- Özel <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> veya <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> uygulamanızı döndüren <xref:System.Text.EncoderFallbackBuffer> veya <xref:System.Text.DecoderFallbackBuffer> yöntemi. Bu yöntem, kodlayıcı tarafından başarıyla kodlayamadığı ilk karakterle karşılaştığında veya kod çözücü tarafından başarıyla kodunu çözemediği ilk bayt ile karşılaştığında çağırılır.  
   
 ### <a name="deriving-from-encoderfallbackbuffer-or-decoderfallbackbuffer"></a>EncoderFallbackBuffer veya DecoderFallbackBuffer Öğesinden Türetme  
  Özel bir geri dönüş çözümü uygulamak için aynı zamanda, kodlama işlemleri için <xref:System.Text.EncoderFallbackBuffer> sınıfından ve kod çözme işlemleri için <xref:System.Text.DecoderFallbackBuffer> sınıfından devralan bir sınıf oluşturmanız gerekir. Bu sınıfların örnekleri <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A> ve <xref:System.Text.EncoderFallback> sınıflarının <xref:System.Text.DecoderFallback> yöntemi tarafından döndürülür. <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> yöntemi, kodlayıcı tarafından kodlayamadığı ilk karakterle karşılaştığında çağırılır ve <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> yöntemi, kod çözücü tarafından başarıyla kodunu çözemediği bir veya daha fazla bayt ile karşılaştığında çağırılır. <xref:System.Text.EncoderFallbackBuffer> ve <xref:System.Text.DecoderFallbackBuffer> sınıfları geri dönüş uygulamasını sağlar. Her bir örnek, kodlanamayan karakteri veya kodu çözülemeyen bayt dizisini değiştirecek geri dönüş karakterlerini içeren bir arabelleği temsil eder.  
   
  Bir kodlayıcı veya kod çözücü için özel bir geri dönüş çözümü oluşturduğunuzda, aşağıdaki üyeleri uygulamanız gerekir:  
   
--   <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> veya <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> yöntemi. <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType>, kodlayamadığı karakter hakkında geri dönüş arabelleğine bilgi vermek için kodlayıcı tarafından çağrılır. Kodlanacak karakter bir yedek çifti olabileceği için bu yöntem aşırı yüklüdür. Aşırı yüklemelerden birine kodlanacak karakter ve dizedeki dizini geçirilir. İkinci aşırı yüklemeye, dizedeki dizini ile birlikte yüksek ve düşük yedek geçirilir. <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> yöntemi, geri dönüş arabelleğine kodu çözülemeyen baytlar hakkında bilgi vermek için kod çözücü tarafından çağrılır. Bu yönteme, ilk baytın dizini ile birlikte kodunu çözemediği bir bayt dizisi geçirilir. Geri dönüş metodu, eğer geri dönüş arabelleği karakterler için bir en uygun veya değiştirme karakteri veya karakterleri sağlayabiliyorsa `true`'i, aksi halde `false`'i döndürmelidir. Bir özel durum geri dönüşü için, geri dönüş yönteminin bir özel durum oluşturması gerekir.  
+- <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> veya <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> yöntemi. <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType>, kodlayamadığı karakter hakkında geri dönüş arabelleğine bilgi vermek için kodlayıcı tarafından çağrılır. Kodlanacak karakter bir yedek çifti olabileceği için bu yöntem aşırı yüklüdür. Aşırı yüklemelerden birine kodlanacak karakter ve dizedeki dizini geçirilir. İkinci aşırı yüklemeye, dizedeki dizini ile birlikte yüksek ve düşük yedek geçirilir. <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> yöntemi, geri dönüş arabelleğine kodu çözülemeyen baytlar hakkında bilgi vermek için kod çözücü tarafından çağrılır. Bu yönteme, ilk baytın dizini ile birlikte kodunu çözemediği bir bayt dizisi geçirilir. Geri dönüş metodu, eğer geri dönüş arabelleği karakterler için bir en uygun veya değiştirme karakteri veya karakterleri sağlayabiliyorsa `true`'i, aksi halde `false`'i döndürmelidir. Bir özel durum geri dönüşü için, geri dönüş yönteminin bir özel durum oluşturması gerekir.  
   
--   Geri dönüş arabelleğinden sonraki karakteri almak için kodlayıcı veya kod çözücü tarafından tekrar tekrar çağrılan <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> veya <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> yöntemi. Tüm geri dönüş karakterleri döndürüldükten sonra yöntem U+0000'ı döndürmelidir.  
+- Geri dönüş arabelleğinden sonraki karakteri almak için kodlayıcı veya kod çözücü tarafından tekrar tekrar çağrılan <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> veya <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> yöntemi. Tüm geri dönüş karakterleri döndürüldükten sonra yöntem U+0000'ı döndürmelidir.  
   
--   Geri dönüş arabelleğinde kalan karakter sayısını döndüren <xref:System.Text.EncoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> veya <xref:System.Text.DecoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> özelliği.  
+- Geri dönüş arabelleğinde kalan karakter sayısını döndüren <xref:System.Text.EncoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> veya <xref:System.Text.DecoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> özelliği.  
   
--   Geri dönüş arabelleğindeki gereçli konumu önceki karaktere taşıyan <xref:System.Text.EncoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> veya <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> yöntemi.  
+- Geri dönüş arabelleğindeki gereçli konumu önceki karaktere taşıyan <xref:System.Text.EncoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> veya <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> yöntemi.  
   
--   Geri dönüş arabelleğini yeniden başlatan <xref:System.Text.EncoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> veya <xref:System.Text.DecoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> yöntemi.  
+- Geri dönüş arabelleğini yeniden başlatan <xref:System.Text.EncoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> veya <xref:System.Text.DecoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> yöntemi.  
   
  Eğer geri dönüş uygulaması bir en uygun geri dönüş veya değiştirme geri dönüşü ise, <xref:System.Text.EncoderFallbackBuffer> ve <xref:System.Text.DecoderFallbackBuffer> sınıflarından türetilen sınıflar ayrıca iki özel örnek alanı içerir: arabellekteki tam karakter sayısı ve bellekte dönülecek sıradaki karakterin dizini.  
   

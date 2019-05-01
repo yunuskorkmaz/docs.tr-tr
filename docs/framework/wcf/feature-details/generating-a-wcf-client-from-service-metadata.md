@@ -3,22 +3,22 @@ title: Hizmet Meta Verilerinden WCF İstemcisi Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
 ms.openlocfilehash: 5cfbfc1e4be0003b3699f818212fbcd959f3ad91
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856004"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Hizmet Meta Verilerinden WCF İstemcisi Oluşturma
 Bu konuda, meta veri belgelerinden istemci üretmek için Svcutil.exe içinde çeşitli anahtarları kullanmayı açıklar.  
   
  Meta veri belgelerini dayanıklı bir depolama alanında olabilir veya çevrimiçi olarak alınabilir. Çevrimiçi alma WS-MetadataExchange veya Microsoft bulma (ma) protokolü ya da izler. Aynı anda meta verilerini almak için aşağıdaki meta veri isteği svcutil.exe verir:  
   
--   Sağlanan adresi isteğine WS-MetadataExchange (MEX).  
+- Sağlanan adresi isteğine WS-MetadataExchange (MEX).  
   
--   İle sağlanan adresine MEX isteği `/mex` eklenir.  
+- İle sağlanan adresine MEX isteği `/mex` eklenir.  
   
--   DISCO isteği (kullanarak [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) ASP.NET Web hizmetlerinden) için sağlanan adresi.  
+- DISCO isteği (kullanarak [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) ASP.NET Web hizmetlerinden) için sağlanan adresi.  
   
  Hizmetten alınan Web Hizmetleri Açıklama Dili (WSDL) veya ilke dosyasını bağlı olarak istemciye svcutil.exe oluşturur. Kullanıcı asıl adı (UPN) kullanıcı adı ile birleştirerek oluşturulur "\@" ve sonra bir tam etki alanı adı (FQDN) ekleme. Ancak, Active Directory'de kayıtlı kullanıcılar için bu biçimi geçerli değil ve aracının oluşturduğu UPN Kerberos kimlik doğrulaması şu hata iletisi ile neden olan hata: **Oturum açma girişimi başarısız oldu.** Bu sorunu çözmek için el ile aracı oluşturulan istemci dosyasını düzeltin.  
   

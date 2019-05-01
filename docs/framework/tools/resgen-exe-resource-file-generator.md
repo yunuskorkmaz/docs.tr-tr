@@ -18,26 +18,26 @@ ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e2cb07389ad68985362993e76f82e58d2a59e237
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61919704"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Kaynak Dosya Oluşturucu)
 Kaynak Dosya Oluşturucu (Resgen.exe), metin (.txt veya .restext) dosyalarını ve XML tabanlı kaynak biçimi (.resx) dosyalarını, bir çalışma zamanı ikili çalıştırılabilir dosyasına katıştırılabilen veya uydu derlemesi haline getirilebilen ortak dil çalışma zamanı ikili (.resources) dosyalarına dönüştürür. (Bkz [kaynak dosyaları oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
   
  Resgen.exe aşağıdaki görevleri gerçekleştiren genel amaçlı bir kaynak dönüştürme programıdır:  
   
--   .txt veya .restext dosyalarını .resources veya .resx dosyalarına dönüştürür. (.restext dosyalarının biçimi .txt dosyalarının biçimiyle aynıdır. Ancak, .restext uzantısı, kaynak tanımları içeren metin dosyalarını daha kolay belirlemenize yardımcı olur.)  
+- .txt veya .restext dosyalarını .resources veya .resx dosyalarına dönüştürür. (.restext dosyalarının biçimi .txt dosyalarının biçimiyle aynıdır. Ancak, .restext uzantısı, kaynak tanımları içeren metin dosyalarını daha kolay belirlemenize yardımcı olur.)  
   
--   .resources dosyalarını metin veya .resx dosyalarına dönüştürür.  
+- .resources dosyalarını metin veya .resx dosyalarına dönüştürür.  
   
--   .resx dosyalarını metin veya .resources dosyalarına dönüştürür.  
+- .resx dosyalarını metin veya .resources dosyalarına dönüştürür.  
   
--   Dize kaynaklarını bir derlemeden kullanıma uygun bir .resw dosyasına ayıklar bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama.  
+- Dize kaynaklarını bir derlemeden kullanıma uygun bir .resw dosyasına ayıklar bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama.  
   
--   Tek tek adlandırılmış kaynaklara ve çok erişim sağlayan kesin belirlenmiş bir sınıf oluşturur <xref:System.Resources.ResourceManager> örneği.  
+- Tek tek adlandırılmış kaynaklara ve çok erişim sağlayan kesin belirlenmiş bir sınıf oluşturur <xref:System.Resources.ResourceManager> örneği.  
   
  Resgen.exe herhangi bir nedenle başarısız olursa, dönüş değeri –1'dir.  
   
@@ -116,17 +116,17 @@ resgen filename.extension [outputDirectory]
 ## <a name="performing-specific-resgenexe-tasks"></a>Belirli Resgen.exe Görevlerini Gerçekleştirme  
  Resgen.exe'yi çeşitli yollarla kullanabilirsiniz: bir ikili dosyaya dönüştürmek, kaynak dosya biçimleri arasında dönüştürmek için ve sarmalayan bir sınıf oluşturmak için bir metin veya XML tabanlı kaynak dosyasını derlemek için <xref:System.Resources.ResourceManager> işlevselliği ve kaynaklara erişim sağlar. Bu bölüm, her görevle ilgili ayrıntılı bilgi sağlar:  
   
--   [Kaynakları bir ikili dosyaya derleme](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
+- [Kaynakları bir ikili dosyaya derleme](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
   
--   [Kaynak dosya türleri arasında dönüştürme](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
+- [Kaynak dosya türleri arasında dönüştürme](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
   
--   [Derleme veya birden çok dosyayı dönüştürme](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
+- [Derleme veya birden çok dosyayı dönüştürme](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
   
--   [Kaynakları bir .resw dosyasına verme](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
+- [Kaynakları bir .resw dosyasına verme](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
   
--   [Kaynakları koşullu olarak derleme](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
+- [Kaynakları koşullu olarak derleme](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
   
--   [Türü kesin belirlenmiş kaynak sınıfı oluşturma](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
+- [Türü kesin belirlenmiş kaynak sınıfı oluşturma](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
   
 <a name="Compiling"></a>   
 ### <a name="compiling-resources-into-a-binary-file"></a>Kaynakları Bir İkili Dosyaya Derleme  
@@ -170,13 +170,13 @@ resgen Resources.resx Resources.resources
 ### <a name="converting-between-resource-file-types"></a>Kaynak Dosya Türleri Arasında Dönüştürme  
  Metin tabanlı veya XML tabanlı kaynak dosyalarını ikili .resources dosyalarına derlemeye ek olarak, Resgen.exe desteklenen herhangi bir dosya türünü desteklenen herhangi bir başka dosya türüne dönüştürebilir. Başka bir deyişle, aşağıdaki dönüştürmeleri gerçekleştirebilir:  
   
--   .txt ve .restext dosyalarını .resx dosyalarına.  
+- .txt ve .restext dosyalarını .resx dosyalarına.  
   
--   .resx dosyalarını .txt ve .restext dosyalarına.  
+- .resx dosyalarını .txt ve .restext dosyalarına.  
   
--   .resources dosyalarını .txt ve .restext dosyalarına.  
+- .resources dosyalarını .txt ve .restext dosyalarına.  
   
--   .resources dosyalarını .resx dosyalarına.  
+- .resources dosyalarını .resx dosyalarına.  
   
  Sözdizimi, bir önceki bölümde gösterilenle aynıdır.  
   
@@ -315,13 +315,13 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  Kesin belirlenmiş kaynak sınıfı aşağıdaki üyelere sahiptir:  
   
--   Kesin belirlenmiş kaynak sınıfı örneğini oluşturmak için kullanılabilecek, parametresiz bir oluşturucu.  
+- Kesin belirlenmiş kaynak sınıfı örneğini oluşturmak için kullanılabilecek, parametresiz bir oluşturucu.  
   
--   A `static` (C#) veya `Shared` (Visual Basic) ve salt okunur `ResourceManager` döndüren özellik <xref:System.Resources.ResourceManager> kesin olarak belirlenmiş kaynağı yöneten bir örneği.  
+- A `static` (C#) veya `Shared` (Visual Basic) ve salt okunur `ResourceManager` döndüren özellik <xref:System.Resources.ResourceManager> kesin olarak belirlenmiş kaynağı yöneten bir örneği.  
   
--   Statik `Culture` kaynak almak için kullanılan kültürü ayarlamanıza olanak tanıyan özellik. Varsayılan olarak, kendi değerdir `null`, geçerli UI kültürünün kullanıldığı anlamına gelir.  
+- Statik `Culture` kaynak almak için kullanılan kültürü ayarlamanıza olanak tanıyan özellik. Varsayılan olarak, kendi değerdir `null`, geçerli UI kültürünün kullanıldığı anlamına gelir.  
   
--   Bir `static` (C#) veya `Shared` (Visual Basic) ve salt okunur özelliği .resources dosyasındaki her bir kaynak. Özelliğin adı, kaynağının adıdır.  
+- Bir `static` (C#) veya `Shared` (Visual Basic) ve salt okunur özelliği .resources dosyasındaki her bir kaynak. Özelliğin adı, kaynağının adıdır.  
   
  Örneğin, aşağıdaki komut StringResources.resources StringResources.txt adlı bir kaynak dosyasını derler ve adlı bir sınıf oluşturur `StringResources` içinde bir Visual Basic kaynak kod dosyası kaynağa erişmek için kullanılabilecek StringResources.vb adlı Yöneticisi.  
   

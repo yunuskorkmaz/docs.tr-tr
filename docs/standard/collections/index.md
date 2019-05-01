@@ -13,11 +13,11 @@ ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d6b9e3d3f5ebc122e2031dac5999a80445ee03a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909148"
 ---
 # <a name="collections-and-data-structures"></a>Koleksiyonlar ve Veri Yapıları
 Benzer veri genellikle daha verimli bir şekilde depolanır ve bir koleksiyonu olarak yönetilebilir işlenebilir. Kullanabileceğiniz <xref:System.Array?displayProperty=nameWithType> sınıf veya sınıflardan <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, eklemek, gt;System.Collections.Immutable ad alanlarını kaldırın ve ayrı ayrı öğeleri veya koleksiyondaki öğelerin bir aralığını değiştirin.  
@@ -30,17 +30,17 @@ Benzer veri genellikle daha verimli bir şekilde depolanır ve bir koleksiyonu o
 ## <a name="common-collection-features"></a>Genel koleksiyon özellikleri  
  Tüm koleksiyonlar, ekleme, kaldırma veya koleksiyondaki öğeleri bulma yöntemleri sağlar. Ayrıca, tüm koleksiyonlar, doğrudan veya dolaylı olarak uygulamak <xref:System.Collections.ICollection> arabirimi veya <xref:System.Collections.Generic.ICollection%601> arabirimi paylaşmak bu özellikler:  
   
--   **Koleksiyon listeleme olanağı**  
+- **Koleksiyon listeleme olanağı**  
   
      .NET framework koleksiyonları ya da uygulama <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> koleksiyonu aracılığıyla yinelenir etkinleştirmek için. Bir numaralandırıcı, koleksiyondaki her öğe için taşınabilir bir işaretçi olarak düşünülebilir. [Foreach içinde](../../csharp/language-reference/keywords/foreach-in.md) deyimi ve [her biri için... Sonraki deyimi](../../visual-basic/language-reference/statements/for-each-next-statement.md) tarafından kullanıma sunulan Numaralandırıcı kullanın <xref:System.Collections.IEnumerable.GetEnumerator%2A> yöntemi ve numaralandırıcıyı işlemek karmaşıklığı gizle. Ayrıca, herhangi bir koleksiyon uygulayan <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> değerlendirilir bir *sorgulanabilir tür* ve LINQ ile sorgulanabilir. LINQ sorguları, verilere erişmek için genel bir desen sağlar. Genellikle daha kısa süren ve okunabilir standart `foreach` döngüye girer ve filtreleme, sıralama ve Gruplama yetenekler sağlar. LINQ sorguları da performansı artırır. Daha fazla bilgi için [LINQ to Objects'in (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects'in (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), [LINQ sorguları (giriş C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md), ve [temel sorgu işlemleri (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
   
--   **Bir diziye koleksiyon içeriği kopyalama özelliği**  
+- **Bir diziye koleksiyon içeriği kopyalama özelliği**  
   
      Tüm koleksiyonlar kullanarak bir dizi kopyalanabilir **CopyTo** yöntemi; ancak, yeni dizideki öğelerin sırasını içinde numaralandırıcıyı döndürür bunları sırasına dayanan. Sonuç dizisi her zaman sıfır alt sınırı ile boyutludur.  
   
  Ayrıca, çok sayıda koleksiyon sınıfları aşağıdaki özellikleri içerir:  
   
--   **Kapasite ve sayısı özellikleri**  
+- **Kapasite ve sayısı özellikleri**  
   
      Bir koleksiyonun kapasitesi içerebileceği öğe sayısıdır. Bir koleksiyon sayısı gerçekte içerdiği öğeleri sayısıdır. Kapasite sayısı veya her ikisi de bazı koleksiyonları gizleyin.  
   
@@ -48,11 +48,11 @@ Benzer veri genellikle daha verimli bir şekilde depolanır ve bir koleksiyonu o
   
      A <xref:System.Collections.BitArray> bir özel durum kapasitesi sayımına aynıdır, uzunluğu ile aynıdır.  
   
--   **Tutarlı bir alt sınırı**  
+- **Tutarlı bir alt sınırı**  
   
      Bir koleksiyon alt sınırı, ilk öğenin dizinidir. Tümünü dizinlenmiş koleksiyonlarında <xref:System.Collections> ad sahip alt sınırı sıfır, 0-dizinli anlamına gelir. <xref:System.Array> Varsayılan olarak sıfır alt sınırı vardır, ancak bir örneğini oluştururken farklı alt sınırı tanımlanabilir **dizi** kullanarak <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>.  
   
--   **Birden çok iş parçacığından erişimi için eşitleme** (<xref:System.Collections> yalnızca sınıfları).  
+- **Birden çok iş parçacığından erişimi için eşitleme** (<xref:System.Collections> yalnızca sınıfları).  
   
      Genel olmayan koleksiyon türlerini de <xref:System.Collections> ad ile eşitleme bazı iş parçacığı güvenliği sağlar; genellikle aracılığıyla kullanıma <xref:System.Collections.ICollection.SyncRoot%2A> ve <xref:System.Collections.ICollection.IsSynchronized%2A> üyeleri. Bu koleksiyonlara varsayılan iş parçacığı açısından güvenli değildir. Bir koleksiyona ölçeklenebilir ve etkili çok iş parçacıklı erişimi gerekiyorsa, sınıflarda birini kullanın <xref:System.Collections.Concurrent> ad alanı veya bir sabit koleksiyon kullanmayı düşünün. Daha fazla bilgi için [iş parçacığı güvenli koleksiyonları](../../../docs/standard/collections/thread-safe/index.md).  
   

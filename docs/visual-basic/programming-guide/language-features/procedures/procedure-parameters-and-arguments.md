@@ -19,11 +19,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
 ms.openlocfilehash: 80065cabcacdcf44b04fef7bacb978ca9c8077ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791915"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Yordam Parametreleri ve Bağımsız Değişkenler (Visual Basic)
 Çoğu durumda, bir yordam içinde bunu çağrıldıktan koşullar hakkında bazı bilgiler gerekiyor. Yinelenen veya paylaşılan görevleri gerçekleştiren bir yordam her çağrı için farklı bilgileri kullanır. Bu bilgiler, değişkenleri, sabitleri ve onu çağırdığınızda yordama geçirdiğiniz ifadeleri oluşur.  
@@ -49,11 +49,11 @@ ms.locfileid: "58825462"
   
  Çağıran kod gibi bir bağımsız değişkeni, karşılık gelen parametresinin farklı bir veri türü ile sağlamak bekliyor durumunda `Byte` için bir `String` parametresi, aşağıdakilerden birini yapmalısınız:  
   
--   Kaynağı yalnızca bağımsız değişkenler için parametre veri türü genişletmek veri türleriyle;  
+- Kaynağı yalnızca bağımsız değişkenler için parametre veri türü genişletmek veri türleriyle;  
   
--   Ayarlama `Option Strict Off` daraltma dönüştürmelerini örtülü; izin vermek veya  
+- Ayarlama `Option Strict Off` daraltma dönüştürmelerini örtülü; izin vermek veya  
   
--   Dönüştürme anahtar sözcüğü, veri türüne açıkça dönüştürmek için kullanın.  
+- Dönüştürme anahtar sözcüğü, veri türüne açıkça dönüştürmek için kullanın.  
   
 ### <a name="type-parameters"></a>Tür ParameTReleri  
  A *genel yordam* ayrıca bir veya daha fazla tanımlar *tür parametrelerindeki* normal parametrelerini yanı sıra. Çağıran kod, veri türleri için her bir çağrıyı gereksinimlerini karşılayacak hale getirebilirsiniz şekilde yordamı, çağırdığı her zaman geçiş farklı veri türleri genel bir yordam sağlar. Bkz: [Visual Basic'de genel yordamlar](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  

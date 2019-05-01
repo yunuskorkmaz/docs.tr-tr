@@ -7,11 +7,11 @@ helpviewer_keywords:
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
 ms.openlocfilehash: 469074336c8aa49fee1acf871360f8dbc1363247
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914166"
 ---
 # <a name="how-to-create-windows-services"></a>Nasıl yapılır: Windows Hizmetleri Oluşturma
 Bir hizmet oluşturduğu zaman, adlı bir Visual Studio Proje şablonu kullanabilirsiniz **Windows hizmeti**. Bu şablon otomatik olarak işin çoğunu sizin için uygun sınıf ve ad alanları, hizmetler için bir temel sınıftan devralmayı ayarlama başvurarak yapar ve birkaç yöntemleri geçersiz kılan, geçersiz kılmak istediğiniz kullanılma olasılığı.  
@@ -21,11 +21,11 @@ Bir hizmet oluşturduğu zaman, adlı bir Visual Studio Proje şablonu kullanabi
   
  En azından, işlevsel bir hizmet oluşturmak için şunları yapmalısınız:  
   
--   Ayarlama <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> özelliği.  
+- Ayarlama <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> özelliği.  
   
--   Hizmet uygulamanız için gerekli yükleyicileri oluşturun.  
+- Hizmet uygulamanız için gerekli yükleyicileri oluşturun.  
   
--   Geçersiz kılmak ve belirtmek için kod <xref:System.ServiceProcess.ServiceBase.OnStart%2A> ve <xref:System.ServiceProcess.ServiceBase.OnStop%2A> , hizmetinizin davranış yöntemlerini özelleştirmek için yöntemleri.  
+- Geçersiz kılmak ve belirtmek için kod <xref:System.ServiceProcess.ServiceBase.OnStart%2A> ve <xref:System.ServiceProcess.ServiceBase.OnStop%2A> , hizmetinizin davranış yöntemlerini özelleştirmek için yöntemleri.  
   
 ### <a name="to-create-a-windows-service-application"></a>Bir Windows hizmet uygulaması oluşturmak için  
   

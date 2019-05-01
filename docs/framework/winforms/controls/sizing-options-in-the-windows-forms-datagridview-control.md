@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
 ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903168"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Boyutlandırma Seçenekleri
 <xref:System.Windows.Forms.DataGridView> Satırlar, sütunlar ve üst bilgiler birçok farklı oluşum sonucunda boyutunu değiştirebilirsiniz. Aşağıdaki tabloda bu örnekleri gösterilmektedir.  
@@ -46,13 +46,13 @@ ms.locfileid: "59197847"
 ## <a name="resizing-with-the-mouse"></a>Fare ile yeniden boyutlandırma  
  Varsayılan olarak, kullanıcıların satırlar, sütunlar ve hücre değerlerine göre bir otomatik boyutlandırma modunu kullanmayan üstbilgileri boyutlandırabilirsiniz. Kullanıcıların sütun doldurma modu gibi diğer modları ile yeniden boyutlandırmasını önlemek için bir veya daha fazlasını ayarlayın <xref:System.Windows.Forms.DataGridView> özellikleri:  
   
--   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
+- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>  
+- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
  Tek bir satır veya sütun ayarlayarak yeniden boyutlandırmasını kullanıcıları engelleyebilir, <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> özellikleri. Varsayılan olarak, <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> özellik değeri temel <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A> sütunlar için özellik değeri ve <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A> satırlar için özellik değeri. Açıkça <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> için <xref:System.Windows.Forms.DataGridViewTriState.True> veya <xref:System.Windows.Forms.DataGridViewTriState.False>, ancak denetim değerdir, satır veya sütun için belirtilen değer geçersiz kılar. Ayarlama <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> için <xref:System.Windows.Forms.DataGridViewTriState.NotSet> devralma geri yüklemek için.  
   
@@ -74,13 +74,13 @@ ms.locfileid: "59197847"
   
  Üstbilgi ve satırlar ve denetim değeri geçersiz bir sütun için boyutlandırma modunu yapılandırmak için bir veya daha fazlasını ayarlayın <xref:System.Windows.Forms.DataGridView> özellikleri:  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
   
  Denetimin sütun boyutlandırma modunu tek bir sütun için geçersiz kılmak için ayarlanmış kendi <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> dışında bir değere <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>. Bir sütun için boyutlandırma modunu gerçekten tarafından belirlenen kendi <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> özelliği. Bu özelliğin değeri sütunun üzerinde alan <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> özellik değeri o değerin olmadığı sürece <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>, bu durumda denetimin <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> değeri devralınır.  
   
@@ -93,27 +93,27 @@ ms.locfileid: "59197847"
 ## <a name="programmatic-resizing"></a>Programlı olarak yeniden boyutlandırma  
  Otomatik boyutlandırma devre dışı bırakıldığında, tam genişlik veya yükseklik satırları, sütunları veya üst bilgileri aşağıdaki özellikleri aracılığıyla programlı olarak ayarlayabilirsiniz:  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
   
  Ayrıca programlı bir şekilde, satırları, sütunları ve üst bilgileri, aşağıdaki yöntemleri kullanarak içerikleri sığacak şekilde boyutlandırabilirsiniz:  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
   
  Bu yöntemlerin satır, sütun üst bilgileri bir kez yerine veya sürekli olarak yeniden boyutlandırmak için yapılandırma boyutlandırılır. Yeni boyutlar, kırpma olmadan tüm hücre içeriğini görüntülemek için otomatik olarak hesaplanır. Programlı olarak yeniden boyutlandırdığınızda sahip sütun <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> özellik değerlerini <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>, ancak içerik tabanlı hesaplanan sütunların sütunu orantılı olarak ayarlamak için kullanılan <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> özellik değerlerini ve genişlikleri olan gerçekten sütun Denetim kullanılabilir ekran alanının tüm sütunları doldurun, böylece daha sonra bu yeni oranlara göre hesaplanır.  
   

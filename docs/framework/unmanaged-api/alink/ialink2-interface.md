@@ -9,11 +9,11 @@ ms.assetid: fba62a55-36bd-401e-bcd2-5be8e2d34891
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 487f3d7b31e0b7bd09dbaff7b823678118f68092
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789772"
 ---
 # <a name="ialink2-interface"></a>IALink2 Arabirimi
 Destekleyici [Ialink arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) bildirme gibi yeni meta veri arabirimleri üzerinde çalışan yöntemleri tarafından [Imetadataemit2 arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md). Buna ek olarak, özgün Ialink arabirimler üzerinden ek kullanım esneklik sağlayan yöntemler Ialink2 bildirir.  

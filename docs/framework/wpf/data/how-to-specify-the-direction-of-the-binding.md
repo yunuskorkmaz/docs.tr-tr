@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
 ms.openlocfilehash: 4334ed178e7f2ed90928db6b434eb8c9fee77bf7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931488"
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a>Nasıl yapılır: Bağlama Yönünü Belirtme
 Bu örnek, bağlama yalnızca bağlama target (hedef) özelliği, bağlama (kaynak) kaynak özelliği veya hedef özelliği hem kaynak özelliği güncelleştirmeler olup olmadığını belirlemek nasıl gösterir.  
@@ -19,15 +19,15 @@ Bu örnek, bağlama yalnızca bağlama target (hedef) özelliği, bağlama (kayn
 ## <a name="example"></a>Örnek  
  Kullandığınız <xref:System.Windows.Data.Binding.Mode%2A> bağlama yönünü belirtme özelliği. Aşağıdaki numaralandırma listesi bağlama güncelleştirmeleri için mevcut seçenekler gösterilmektedir:  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay> hedef özelliği ya da kaynak özelliği değiştiğinde hedef özelliği veya özelliğini güncelleştirir.  
+- <xref:System.Windows.Data.BindingMode.TwoWay> hedef özelliği ya da kaynak özelliği değiştiğinde hedef özelliği veya özelliğini güncelleştirir.  
   
--   <xref:System.Windows.Data.BindingMode.OneWay> yalnızca kaynak özelliği değiştiğinde hedef özelliğini güncelleştirir.  
+- <xref:System.Windows.Data.BindingMode.OneWay> yalnızca kaynak özelliği değiştiğinde hedef özelliğini güncelleştirir.  
   
--   <xref:System.Windows.Data.BindingMode.OneTime> hedef özelliği yalnızca uygulama başladığında veya güncelleştirmeleri <xref:System.Windows.FrameworkElement.DataContext%2A> bir değişiklik uygulanır.  
+- <xref:System.Windows.Data.BindingMode.OneTime> hedef özelliği yalnızca uygulama başladığında veya güncelleştirmeleri <xref:System.Windows.FrameworkElement.DataContext%2A> bir değişiklik uygulanır.  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource> Hedef özelliği değiştiğinde kaynak özelliğini güncelleştirir.  
+- <xref:System.Windows.Data.BindingMode.OneWayToSource> Hedef özelliği değiştiğinde kaynak özelliğini güncelleştirir.  
   
--   <xref:System.Windows.Data.BindingMode.Default> Varsayılan neden <xref:System.Windows.Data.Binding.Mode%2A> kullanılacak hedef özelliğinin değeri.  
+- <xref:System.Windows.Data.BindingMode.Default> Varsayılan neden <xref:System.Windows.Data.Binding.Mode%2A> kullanılacak hedef özelliğinin değeri.  
   
  Daha fazla bilgi için <xref:System.Windows.Data.BindingMode> sabit listesi.  
   

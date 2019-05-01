@@ -19,11 +19,11 @@ ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08b46d96f9fb950602766639559a375a25747010
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869024"
 ---
 # <a name="using-the-assert-method"></a>Onay Yöntemini Kullanma
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -43,19 +43,19 @@ ms.locfileid: "59073734"
   
  Aşağıdaki gösterimde kullandığınızda neler **Assert**. Aşağıdaki deyimleri derlemeleri A, B, C, E ve F ve P1 ve P1A iki izinleri hakkında doğru olduğunu varsayalım:  
   
--   P1A C sürücüsündeki .txt dosyaları okuma hakkı temsil eder.  
+- P1A C sürücüsündeki .txt dosyaları okuma hakkı temsil eder.  
   
--   P1 C sürücüsündeki tüm dosyaları okuma hakkı temsil eder.  
+- P1 C sürücüsündeki tüm dosyaları okuma hakkı temsil eder.  
   
--   P1A ve P1 olan hem de **FileIOPermission** türleri ve P1A P1 özelliklerinin bir alt kümesidir.  
+- P1A ve P1 olan hem de **FileIOPermission** türleri ve P1A P1 özelliklerinin bir alt kümesidir.  
   
--   Derlemeleri E ve F P1A izin vermiş olmalıdır.  
+- Derlemeleri E ve F P1A izin vermiş olmalıdır.  
   
--   Derleme C P1 izin verildi.  
+- Derleme C P1 izin verildi.  
   
--   A ve B derlemeleri P1 ne P1A izinleri verilmiş.  
+- A ve B derlemeleri P1 ne P1A izinleri verilmiş.  
   
--   Yöntemi bir bir derlemede yer alan, Yöntem B derleme B ve benzeri yer alır.  
+- Yöntemi bir bir derlemede yer alan, Yöntem B derleme B ve benzeri yer alır.  
   
  ![Assert yöntemi derlemeleri gösteren diyagram.](./media/using-the-assert-method/assert-method-assemblies.gif)    
   

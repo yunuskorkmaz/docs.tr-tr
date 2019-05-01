@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İş parçacığı yerel değişkenleriyle bir Parallel.For döngüsü yazma'
+title: 'Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.For Döngüsü Yazma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6ffac3df82268399aa35ff494e462e2b23c3894b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915557"
 ---
-# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Nasıl yapılır: İş parçacığı yerel değişkenleriyle bir Parallel.For döngüsü yazma
+# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.For Döngüsü Yazma
 Bu örnek tarafından oluşturulan her ayrı görev durumda depolanıp thread-local değişkenleri kullanmayı gösterir. bir <xref:System.Threading.Tasks.Parallel.For%2A> döngü. İş parçacığı-yerel verileri kullanarak, çok sayıda paylaşılan durum erişimin eşitleme ek yükü önleyebilirsiniz. Paylaşılan bir kaynağa her yinelemede yazmak, yerine işlem ve tüm yineleme için görev tamamlanana kadar değeri depolar. Paylaşılan kaynak için nihai sonucu bir defa yazın veya başka yönteme geçirin.  
   
 ## <a name="example"></a>Örnek  

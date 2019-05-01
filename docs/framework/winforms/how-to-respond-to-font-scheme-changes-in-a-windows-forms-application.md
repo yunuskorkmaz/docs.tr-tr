@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
 ms.openlocfilehash: 6aad851770fb886de5d5c00b544ac6eac2857e42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801861"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Nasıl yapılır: Bir Windows Forms Uygulamasında Yazı Tipi Şeması Değişikliklerine Yanıt Verme
 Windows işletim sistemlerinde, bir kullanıcı, daha büyük veya küçük varsayılan yazı tipini görünür yapmak için sistem genelinde yazı tipi ayarlarını değiştirebilirsiniz. Bu yazı tipi ayarları değiştirmek, ekranlarda metin okuma için daha büyük türü gerektirir ve görme engelli kullanıcılar için kritik öneme sahiptir. Artırmayı veya yazı tipi düzeni değiştiğinde formun ve içerilen tüm metin boyutunu azaltmak için bu değişiklikler tepki vermek için Windows Forms uygulaması ayarlayabilirsiniz. Yazı tipi boyutlarını değişiklikleri dinamik olarak uyum sağlayacak şekilde formunuza istiyorsanız formunuza kod ekleyebilirsiniz.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
 ms.openlocfilehash: 0eb39f0ecd8fcd12918b38bd77fed2ff32cac1d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800145"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Bir Windows Forms Uygulamasında Kullanıcı Girdisi
 Windows Forms'ta kullanıcı girdisi uygulamaları Windows iletilerini biçiminde gönderilir. Geçersiz kılınabilir yöntemleri bir dizi, form, uygulama bu iletileri işlemek ve düzeyini denetleyebilirsiniz. Bu yöntemler, fare ve klavye mesajlarının aldığınızda, bunlar giriş klavye veya fare hakkında bilgi almak için işlenen olaylar da oluşturur. Çoğu durumda, Windows Forms uygulamaları bu olayları işleyerek tüm kullanıcı girişini işlemek mümkün olacaktır. Diğer durumlarda, bir uygulama belirli bir iletiyi uygulama, form veya denetim alınmadan önce ıntercept iletileri işleyen yöntemi geçersiz kılmanız gerekebilir.  

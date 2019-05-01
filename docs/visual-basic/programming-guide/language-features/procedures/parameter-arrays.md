@@ -11,11 +11,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
 ms.openlocfilehash: 8ea4c77056701b8f61c1ed5a53cf20d98ae913bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791958"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Parametre Dizileri (Visual Basic)
 Genellikle, yordam bildirimi belirtilenden daha fazla bağımsız değişken içeren bir yordamı çağıramaz. Sonsuz sayıda bağımsız değişken gerektiğinde bildirebilirsiniz bir *parametre dizisi*, bir dizi parametre değerlerini kabul etmek bir yordam sağlar. Yordamı tanımlarken parametresi dizideki öğelerin sayısını öğrenmek zorunda değildir. Dizi boyutu, tek tek her yordam çağrısına göre belirlenir.  
@@ -23,22 +23,22 @@ Genellikle, yordam bildirimi belirtilenden daha fazla bağımsız değişken iç
 ## <a name="declaring-a-paramarray"></a>Bir ParamArray bildirme  
  Kullandığınız [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametre listesinde bir parametre dizisi belirtmek için anahtar sözcüğü. Aşağıdaki kurallar geçerlidir:  
   
--   Bir yordam yalnızca bir parametre dizisi tanımlayabilirsiniz ve yordam tanımında son parametre olmalıdır.  
+- Bir yordam yalnızca bir parametre dizisi tanımlayabilirsiniz ve yordam tanımında son parametre olmalıdır.  
   
--   Parametre dizisi değerine göre geçirilmelidir. İyi bir programlama açıkça içerecek şekilde [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) yordam tanımında anahtar sözcüğü.  
+- Parametre dizisi değerine göre geçirilmelidir. İyi bir programlama açıkça içerecek şekilde [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) yordam tanımında anahtar sözcüğü.  
   
--   Parametre dizisi otomatik olarak isteğe bağlıdır. Boş bir tek boyutlu dizi parametresi dizinin öğe türü, varsayılan değerdir.  
+- Parametre dizisi otomatik olarak isteğe bağlıdır. Boş bir tek boyutlu dizi parametresi dizinin öğe türü, varsayılan değerdir.  
   
--   Parametre dizisi önceki tüm parametreler gereklidir. Parametre dizisi, yalnızca isteğe bağlı parametresi olmalıdır.  
+- Parametre dizisi önceki tüm parametreler gereklidir. Parametre dizisi, yalnızca isteğe bağlı parametresi olmalıdır.  
   
 ## <a name="calling-a-paramarray"></a>Bir ParamArray çağırma  
  Bir parametre dizisi tanımlayan bir yordamı çağırdığınızda, bağımsız değişkeni aşağıdaki yollardan birinde belirtebilirsiniz:  
   
--   Hiçbir şey — diğer bir deyişle, atlayabilirsiniz [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) bağımsız değişken. Bu durumda, boş bir dizi yordamına geçirildi. De geçirebilirsiniz [hiçbir şey](../../../../visual-basic/language-reference/nothing.md) aynı etkiye sahip anahtar sözcüğü.  
+- Hiçbir şey — diğer bir deyişle, atlayabilirsiniz [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) bağımsız değişken. Bu durumda, boş bir dizi yordamına geçirildi. De geçirebilirsiniz [hiçbir şey](../../../../visual-basic/language-reference/nothing.md) aynı etkiye sahip anahtar sözcüğü.  
   
--   Rastgele bir sayıdan bağımsız değişkenleri, virgülle ayrılmış listesi. Her bağımsız değişken veri türünü örtük olarak dönüştürülebilir olmalıdır `ParamArray` öğe türü.  
+- Rastgele bir sayıdan bağımsız değişkenleri, virgülle ayrılmış listesi. Her bağımsız değişken veri türünü örtük olarak dönüştürülebilir olmalıdır `ParamArray` öğe türü.  
   
--   Parametre dizinin öğe türü olarak aynı öğe türüne sahip bir dizi.  
+- Parametre dizinin öğe türü olarak aynı öğe türüne sahip bir dizi.  
   
  Her durumda, yordamı içindeki kod öğelerini aynı veri türünde tek boyutlu bir dizi olarak parametre dizisi işler `ParamArray` veri türü.  
   

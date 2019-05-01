@@ -10,11 +10,11 @@ helpviewer_keywords:
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
 ms.openlocfilehash: aa045dd5454819a37ad81c76d97fd3e61e7d0420
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864320"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Otomatik Uygulanan Özellikler (Visual Basic)
 *Otomatik uygulanan Özellikler* hızlı bir şekilde kod yazmak zorunda kalmadan bir sınıfın bir özelliği belirtmenize olanak verir `Get` ve `Set` özelliği. Otomatik uygulanan bir özellik için kod yazdığınızda, Visual Basic Derleyicisi ilişkili oluşturmaya ek olarak özellik değişkeni depolamak için özel bir alan otomatik olarak oluşturur. `Get` ve `Set` yordamları.  
@@ -52,13 +52,13 @@ End Class
   
  Destek alanı ayrıca aşağıdaki özelliklere sahiptir:  
   
--   Her zaman erişim değiştiricisini destek alanı olan `Private`, özelliği bir farklı erişim düzeyi gibi olsa bile `Public`.  
+- Her zaman erişim değiştiricisini destek alanı olan `Private`, özelliği bir farklı erişim düzeyi gibi olsa bile `Public`.  
   
--   Özellik olarak işaretlenmişse `Shared`, yedekleme alanını da paylaşılır.  
+- Özellik olarak işaretlenmişse `Shared`, yedekleme alanını da paylaşılır.  
   
--   Özelliği için belirtilen öznitelikler için destek alanı geçerli değildir.  
+- Özelliği için belirtilen öznitelikler için destek alanı geçerli değildir.  
   
--   Destek alanı, sınıf içindeki kod ve İzleme penceresi gibi hata ayıklama araçları'ndan erişilebilir. Ancak, yedekleme alanını IntelliSense Sözcük tamamlama listesinde göstermez.  
+- Destek alanı, sınıf içindeki kod ve İzleme penceresi gibi hata ayıklama araçları'ndan erişilebilir. Ancak, yedekleme alanını IntelliSense Sözcük tamamlama listesinde göstermez.  
   
 ## <a name="initializing-an-auto-implemented-property"></a>Otomatik uygulanan bir özellik başlatma  
  Bir alanı başlatmak için kullanılan herhangi bir ifade başlatma otomatik olarak uygulanan bir özellik için geçerli değil. Otomatik uygulanan bir özellik başlattığınızda, ifade değerlendirilir ve geçirilen `Set` özelliği için yordamı. Aşağıdaki kod örnekleri başlangıç değerleri içeren bazı otomatik uygulanan özellikler gösterir.  
@@ -78,17 +78,17 @@ End Class
   
  Genişletilmiş özellik tanımı sözdizimleri aşağıdakilerden herhangi biri yapmak istiyorsanız kullanmak zorunda:  
   
--   Kodu `Get` veya `Set` yordamı gelen değerleri doğrulamak için kodu gibi bir özelliğin `Set` yordamı. Örneğin, özellik değeri ayarlamadan önce bir telefon numarasını temsil eden bir dize gerekli rakam sayısını içerdiğini doğrulamak isteyebilirsiniz.  
+- Kodu `Get` veya `Set` yordamı gelen değerleri doğrulamak için kodu gibi bir özelliğin `Set` yordamı. Örneğin, özellik değeri ayarlamadan önce bir telefon numarasını temsil eden bir dize gerekli rakam sayısını içerdiğini doğrulamak isteyebilirsiniz.  
   
--   Belirtmek için farklı erişilebilirlik `Get` ve `Set` yordamı. Örneğin, yapmak isteyebilirsiniz `Set` yordamı `Private` ve `Get` yordamı `Public`.  
+- Belirtmek için farklı erişilebilirlik `Get` ve `Set` yordamı. Örneğin, yapmak isteyebilirsiniz `Set` yordamı `Private` ve `Get` yordamı `Public`.  
   
--   Özellikleri oluşturma `WriteOnly`.  
+- Özellikleri oluşturma `WriteOnly`.  
   
--   Parametreli özelliklerini kullanma (dahil olmak üzere `Default` özellikleri). İçin ek parametreler belirtmek için veya bir özellik için bir parametreyi belirtmek için genişletilmiş bir özellik bildirmelidir `Set` yordamı.  
+- Parametreli özelliklerini kullanma (dahil olmak üzere `Default` özellikleri). İçin ek parametreler belirtmek için veya bir özellik için bir parametreyi belirtmek için genişletilmiş bir özellik bildirmelidir `Set` yordamı.  
   
--   Yedekleme alana bir öznitelik veya destek alanı erişim düzeyini değiştirebilirsiniz.  
+- Yedekleme alana bir öznitelik veya destek alanı erişim düzeyini değiştirebilirsiniz.  
   
--   XML açıklamaları için yedekleme alanı sağlar.  
+- XML açıklamaları için yedekleme alanı sağlar.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>Otomatik uygulanan bir özellik genişletme  
  Otomatik uygulanan bir özellik içeren bir genişletilmiş özelliğe Dönüştür varsa bir `Get` veya `Set` yordamı, Visual Basic Kod Düzenleyicisi oluşturabileceği otomatik olarak `Get` ve `Set` yordamlar ve `End Property`özelliği için deyimi. İmleç bir boş satır şu koyarsanız kod oluşturulur `Property` deyimi, bir `G` (için `Get`) veya bir `S` (için `Set`) ve ENTER tuşuna basın. Visual Basic Kod Düzenleyicisi'ni otomatik olarak oluşturduğu `Get` veya `Set` yordamın sonunda ENTER tuşuna bastığınızda, salt okunur ve salt yazılır özellikler için bir `Property` deyimi.  

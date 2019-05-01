@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
 ms.openlocfilehash: 0443e5b37e637351d6491c37ec443c93636460a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857629"
 ---
 # <a name="contracts"></a>Sözleşmeler
 Bu bölümde Windows Communication Foundation (WCF) sözleşmeleri tanımlaması ve gösterilmektedir. Ne bir uç nokta için dış dünya iletişim kuran bir hizmet sözleşmesi belirler. Daha somut bir düzeyde istek/yanıt gibi tek yönlü ve çift yönlü bir dizi temel ileti exchange desenleri (MEPs) ile düzenlenmiş belirli ileti hakkında bir deyim olduğu. Bir hizmet sözleşmesini ileti alışverişlerinde mantıksal olarak ilişkili bir dizi ise, bir hizmet işlemi bir tek ileti alışverişi olur. Örneğin, bir `Hello` işlemi (arayan Karşılama duyurmaktan biçimde) bir ileti açıkça kabul etmelidir ve olabilir veya (işlemin ilgili bağlı olarak) bir ileti döndürmeyebilir.  
@@ -21,32 +21,32 @@ Bu bölümde Windows Communication Foundation (WCF) sözleşmeleri tanımlaması
 ## <a name="overview"></a>Genel Bakış  
  Bu konu, WCF hizmetleri tasarlama ve uygulama için bir üst düzey kavramsal yönlendirme sağlar. Konuları daha ayrıntılı tasarlama ve uygulama özellikleri hakkında bilgi sağlar. Tasarlama ve uygulama WCF uygulamanızı önce önerilen aldığınız:  
   
--   Anlamak hizmet sözleşmesini ne olduğu, nasıl çalıştığını ve nasıl oluşturacağınızı.  
+- Anlamak hizmet sözleşmesini ne olduğu, nasıl çalıştığını ve nasıl oluşturacağınızı.  
   
--   Sözleşmeler en düşük gereksinimleri durumunu anlamak, çalışma zamanı yapılandırma veya barındırma ortamı değil destekleyebilir.  
+- Sözleşmeler en düşük gereksinimleri durumunu anlamak, çalışma zamanı yapılandırma veya barındırma ortamı değil destekleyebilir.  
   
 ## <a name="service-contracts"></a>Hizmet Sözleşmeleri  
  Bir hizmet sözleşmesini hakkında bilgi sağlayan bir açıklamadır:  
   
--   Bir hizmet işlemlerinde gruplandırmasıdır.  
+- Bir hizmet işlemlerinde gruplandırmasıdır.  
   
--   İşlem iletileri değiş tokuş imzası.  
+- İşlem iletileri değiş tokuş imzası.  
   
--   Bu iletileri veri türleri.  
+- Bu iletileri veri türleri.  
   
--   İşlemleri konumu.  
+- İşlemleri konumu.  
   
--   Başarılı iletişim hizmetiyle desteklemek için kullanılan serileştirme biçimleri ve belirli protokoller.  
+- Başarılı iletişim hizmetiyle desteklemek için kullanılan serileştirme biçimleri ve belirli protokoller.  
   
  Örneğin, bir satın alma siparişi sözleşme olabilir bir `CreateOrder` sipariş bilgileri bir girişi kabul eden bir işlem türleri ve siparişi tanımlayıcısı dahil olmak üzere, başarı veya başarısızlık durumu bilgilerini döndürür. Ayrıca olabilir bir `GetOrderStatus` işlemi, bir siparişi tanımlayıcısı kabul eden ve sipariş durumu bilgilerini döndürür. Bu tür bir hizmet sözleşmesini belirtmeniz gerekir:  
   
--   Satın alma siparişi sözleşme, toplamda `CreateOrder` ve `GetOrderStatus` operations.  
+- Satın alma siparişi sözleşme, toplamda `CreateOrder` ve `GetOrderStatus` operations.  
   
--   İşlemleri belirttiğiniz iletileri giriş ve çıkış iletileri.  
+- İşlemleri belirttiğiniz iletileri giriş ve çıkış iletileri.  
   
--   Bu iletiler gerçekleştirebilirsiniz veriler.  
+- Bu iletiler gerçekleştirebilirsiniz veriler.  
   
--   Kategorik deyimleri hakkında iletişim altyapısı başarıyla iletileri işlemek için gerekli. Örneğin, bu Ayrıntılar arasında olup olmadığını ve hangi güvenlik formları başarılı iletişim kurmak için gereklidir.  
+- Kategorik deyimleri hakkında iletişim altyapısı başarıyla iletileri işlemek için gerekli. Örneğin, bu Ayrıntılar arasında olup olmadığını ve hangi güvenlik formları başarılı iletişim kurmak için gereklidir.  
   
  Bu tür bir uygulama bilgileri (Microsoft olmayan platformlar dahil) diğer platformlarda iletmek için XML hizmet sözleşmelerini herkese açık şekilde standart XML biçimlerde, gibi ifade edilir [Web Hizmetleri Açıklama Dili (WSDL)](https://go.microsoft.com/fwlink/?LinkId=87004) ve [XML Şeması (XSD)](https://go.microsoft.com/fwlink/?LinkId=87005), diğerlerinin yanı sıra. Geliştiriciler için birçok platformda dil belirtiminin anladıkları olduğundan hem dillere birlikte çalışabilirliği etkinleştirmek için tasarlandığından hizmet ile iletişim kurabilen uygulamaları oluşturmak için bu genel sözleşme bilgileriniz kullanabilirsiniz Genel form, biçimleri ve protokolleri hizmetinin desteklediği açıklayarak. WCF bu tür bilgileri nasıl işlediği hakkında daha fazla bilgi için bkz. [meta verileri](../../../../docs/framework/wcf/feature-details/metadata.md).  
   

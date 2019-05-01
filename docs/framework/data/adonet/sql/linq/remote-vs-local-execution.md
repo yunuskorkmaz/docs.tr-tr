@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
 ms.openlocfilehash: 02d0417bc05f8585dc469d365089c8123d395f64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877129"
 ---
 # <a name="remote-vs-local-execution"></a>Uzak ve Yerel Yürütme Karşılaştırması
 Sorgularınızın ya da uzaktan yürütün karar verebilirsiniz (diğer bir deyişle, veritabanı altyapısı veritabanı sorgusu çalıştırır) veya yerel olarak ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yerel önbelleğe karşı sorgu yürütülür).  
@@ -23,18 +23,18 @@ Sorgularınızın ya da uzaktan yürütün karar verebilirsiniz (diğer bir deyi
   
  Veritabanınızı gösteren binlerce satır siparişler varsa, bunların tüm küçük bir alt işleme alınması istemezsiniz. İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], <xref:System.Data.Linq.EntitySet%601> sınıfının Implements <xref:System.Linq.IQueryable> arabirimi. Bu yaklaşım sorgularını uzaktan yürütüldüğünden emin olur. Bu teknik akıştan iki önemli avantajları:  
   
--   Gereksiz verileri alınamadı.  
+- Gereksiz verileri alınamadı.  
   
--   Veritabanı altyapısı tarafından çalıştırılan bir sorgu genellikle büyük verimli veritabanı dizinleri nedeniyle.  
+- Veritabanı altyapısı tarafından çalıştırılan bir sorgu genellikle büyük verimli veritabanı dizinleri nedeniyle.  
   
 ## <a name="local-execution"></a>Yerel Yürütme Karşılaştırması  
  Diğer durumlarda, ilişkili varlık kümesinin tamamını yerel önbellek üzerinde olmasını isteyebilirsiniz. Bu amaçla <xref:System.Data.Linq.EntitySet%601> sağlar <xref:System.Data.Linq.EntitySet%601.Load%2A> tüm üyelerini açıkça yüklemek için gereken yöntemini <xref:System.Data.Linq.EntitySet%601>.  
   
  Varsa bir <xref:System.Data.Linq.EntitySet%601> zaten yüklendiğinde sonraki sorgular yerel olarak çalıştırılır. Bu yaklaşım, iki şekilde yardımcı olur:  
   
--   Tam bir set yerel olarak kullanılması gerekir ya da birden çok kez uzak sorguları ve ilişkili gecikme süreleri önleyebilirsiniz.  
+- Tam bir set yerel olarak kullanılması gerekir ya da birden çok kez uzak sorguları ve ilişkili gecikme süreleri önleyebilirsiniz.  
   
--   Varlık eksiksiz bir varlık seri hale getirilebilir.  
+- Varlık eksiksiz bir varlık seri hale getirilebilir.  
   
  Aşağıdaki kod parçası yerel yürütme gösterilmektedir elde edilebilir:  
   

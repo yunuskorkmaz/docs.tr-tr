@@ -3,30 +3,30 @@ title: complex type
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
 ms.openlocfilehash: 9d63660c441192bbc9ecb48bb3a86030b46461cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880026"
 ---
 # <a name="complex-type"></a>complex type
 A *karmaşık tür* üzerinde zengin, yapısal özellikleri tanımlamak için bir şablon [varlık türleri](../../../../docs/framework/data/adonet/entity-type.md) veya diğer karmaşık türler. Her şablon şunları içerir:  
   
--   Benzersiz bir ad. (Gerekli)  
+- Benzersiz bir ad. (Gerekli)  
   
     > [!NOTE]
     >  Karmaşık bir tür adı aynı ad alanı içinde bir varlık türü adı ile aynı olamaz.  
   
--   Bir veya daha fazla bilgi formu verilerinde [özellikleri](../../../../docs/framework/data/adonet/property.md). (İsteğe bağlı.)  
+- Bir veya daha fazla bilgi formu verilerinde [özellikleri](../../../../docs/framework/data/adonet/property.md). (İsteğe bağlı.)  
   
     > [!NOTE]
     >  Karmaşık bir türün bir özelliği başka bir karmaşık türü olabilir.  
   
  Bir karmaşık türü bir veri yükü formun ilkel tür özellikleri veya diğer karmaşık türler taşıyabilir, bir karmaşık türü bir varlık türüne benzerdir. Ancak, karmaşık türlerden ve varlık türleri arasındaki bazı temel farklar vardır:  
   
--   Karmaşık türler kimliklere sahip değildir ve bu nedenle bağımsız olarak var olamaz. Karmaşık türler yalnızca varlık türleri veya diğer karmaşık türler özellikleri olarak bulunabilir.  
+- Karmaşık türler kimliklere sahip değildir ve bu nedenle bağımsız olarak var olamaz. Karmaşık türler yalnızca varlık türleri veya diğer karmaşık türler özellikleri olarak bulunabilir.  
   
--   Karmaşık türler içinde katılamaz [ilişkilendirmeleri](../../../../docs/framework/data/adonet/association-type.md). Bir ilişkilendirmenin hiçbiri son karmaşık bir tür olabilir ve bu nedenle [Gezinti özellikleri](../../../../docs/framework/data/adonet/navigation-property.md) karmaşık türlerde tanımlanamaz.  
+- Karmaşık türler içinde katılamaz [ilişkilendirmeleri](../../../../docs/framework/data/adonet/association-type.md). Bir ilişkilendirmenin hiçbiri son karmaşık bir tür olabilir ve bu nedenle [Gezinti özellikleri](../../../../docs/framework/data/adonet/navigation-property.md) karmaşık türlerde tanımlanamaz.  
   
 ## <a name="example"></a>Örnek  
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) kavramsal şema tanım dili olarak adlandırılan bir etki alanına özgü dil (DSL) kullanır ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) kavramsal modeller tanımlamak için. Aşağıdaki CSDL bir karmaşık tür adresi, ilkel türü özellikleri ile tanımlar `StreetAddress`, `City`, `StateOrProvince`, `Country`, ve `PostalCode`.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
 ms.openlocfilehash: db39759a804905450e7f8913f45e8ddab39d8416
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784195"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface Deyimi (Visual Basic)
 Bir arabirimin adını bildirir ve arabirimi oluşturan üyelerin tanımlarını sunmaktadır.  
@@ -67,31 +67,31 @@ End Interface
   
 ## <a name="rules"></a>Kurallar  
   
--   **Arabirim iç içe geçirme.** İçindeki başka bir arabirim tanımlayabilirsiniz. Dış arabirimi adlı *arabirimi içeren*, ve iç arabirimi olarak adlandırılan bir *iç içe geçmiş arabirimi*.  
+- **Arabirim iç içe geçirme.** İçindeki başka bir arabirim tanımlayabilirsiniz. Dış arabirimi adlı *arabirimi içeren*, ve iç arabirimi olarak adlandırılan bir *iç içe geçmiş arabirimi*.  
   
--   **Üye bildirimi.** Yalnızca bir arabirimin bir üyesi bir özellik veya yordamı bildirdiğinizde tanımlıyorsanız *imza* bu özellik veya yordamı. Bu öğe türü (özellik ya da yordamın), parametreleri ve parametre türleri ve dönüş türü içerir. Bu nedenle, kod ve gibi Sonlandırıcı deyimler yalnızca bir satırı üye tanımı kullanan `End Function` veya `End Property` bir arabirimde geçerli değildir.  
+- **Üye bildirimi.** Yalnızca bir arabirimin bir üyesi bir özellik veya yordamı bildirdiğinizde tanımlıyorsanız *imza* bu özellik veya yordamı. Bu öğe türü (özellik ya da yordamın), parametreleri ve parametre türleri ve dönüş türü içerir. Bu nedenle, kod ve gibi Sonlandırıcı deyimler yalnızca bir satırı üye tanımı kullanan `End Function` veya `End Property` bir arabirimde geçerli değildir.  
   
      Buna karşılık, bir numaralandırma veya yapısı, veya bir iç içe geçmiş sınıf veya arabirim tanımladığınızda, veri üyeleri dahil etmek gereklidir.  
   
--   **Üye değiştiriciler.** Tüm erişim değiştiricileri modülü üyeleri tanımlarken kullanamaz ya da belirtebilirsiniz [paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md) veya dışında herhangi bir yordam değiştiricisi [aşırı](../../../visual-basic/language-reference/modifiers/overloads.md). Herhangi bir üyesi ile bildirebilirsiniz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md), kullanabileceğiniz [varsayılan](../../../visual-basic/language-reference/modifiers/default.md) bir özellik tanımlarken yanı [salt okunur](../../../visual-basic/language-reference/modifiers/readonly.md) veya [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
+- **Üye değiştiriciler.** Tüm erişim değiştiricileri modülü üyeleri tanımlarken kullanamaz ya da belirtebilirsiniz [paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md) veya dışında herhangi bir yordam değiştiricisi [aşırı](../../../visual-basic/language-reference/modifiers/overloads.md). Herhangi bir üyesi ile bildirebilirsiniz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md), kullanabileceğiniz [varsayılan](../../../visual-basic/language-reference/modifiers/default.md) bir özellik tanımlarken yanı [salt okunur](../../../visual-basic/language-reference/modifiers/readonly.md) veya [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
   
--   **Devralma.** Arabirim kullanıyorsa [devralan deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md), bir veya daha fazla temel arabirimde belirtebilirsiniz. Bunların hepsi aynı ada sahip bir üye tanımlarsanız bile iki ara birimden devralınabilir. Bunu yaparsanız uyguladığı üye belirtmek için uygulanan kodun ad niteliği kullanmanız gerekir.  
+- **Devralma.** Arabirim kullanıyorsa [devralan deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md), bir veya daha fazla temel arabirimde belirtebilirsiniz. Bunların hepsi aynı ada sahip bir üye tanımlarsanız bile iki ara birimden devralınabilir. Bunu yaparsanız uyguladığı üye belirtmek için uygulanan kodun ad niteliği kullanmanız gerekir.  
   
      Bir arabirim daha kısıtlayıcı bir erişim düzeyi olan başka bir arabirimden devralamaz. Örneğin, bir `Public` arabirimi öğesinden özellik devralamaz bir `Friend` arabirimi.  
   
      Bir arabirim, kendi içinde iç içe bir arabirimden devralamaz.  
   
--   **Uygulama.** Bir sınıf kullandığında [uygular](../../../visual-basic/language-reference/statements/implements-clause.md) bu arabirimi uygulayan deyimini arabirimi içinde tanımlanan her üyeyi uygulamalısınız. Ayrıca, her imza uygulama kodunda bu arabirim içinde tanımlanmış karşılık gelen imzası tam olarak eşleşmelidir. Ancak, uygulama kodundaki üyesinin adı arabirim içinde tanımlanmış üye adıyla eşleşmesi yok.  
+- **Uygulama.** Bir sınıf kullandığında [uygular](../../../visual-basic/language-reference/statements/implements-clause.md) bu arabirimi uygulayan deyimini arabirimi içinde tanımlanan her üyeyi uygulamalısınız. Ayrıca, her imza uygulama kodunda bu arabirim içinde tanımlanmış karşılık gelen imzası tam olarak eşleşmelidir. Ancak, uygulama kodundaki üyesinin adı arabirim içinde tanımlanmış üye adıyla eşleşmesi yok.  
   
      Bir sınıf bir yordam uygularken yordamı belirtemezsiniz `Shared`.  
   
--   **Varsayılan özellik.** Bir arabirim en fazla bir özellik olarak belirtebilirsiniz, *varsayılan özellik*, hangi başvurulabilir özellik adını kullanarak olmadan. Böyle bir özellik ile bildirerek belirttiğiniz [varsayılan](../../../visual-basic/language-reference/modifiers/default.md) değiştiricisi.  
+- **Varsayılan özellik.** Bir arabirim en fazla bir özellik olarak belirtebilirsiniz, *varsayılan özellik*, hangi başvurulabilir özellik adını kullanarak olmadan. Böyle bir özellik ile bildirerek belirttiğiniz [varsayılan](../../../visual-basic/language-reference/modifiers/default.md) değiştiricisi.  
   
      Bu durum yalnızca hiçbiri devralırsa bir arabirimi varsayılan bir özelliği tanımlayabilirsiniz anlamına olduğuna dikkat edin.  
   
 ## <a name="behavior"></a>Davranış  
   
--   **Erişim düzeyi.** Örtük olarak tüm arabirim üyelerinin olması [genel](../../../visual-basic/language-reference/modifiers/public.md) erişim. Tüm erişim değiştiricisi üye tanımlarken kullanamazsınız. Ancak, arabirimini uygulayan bir sınıfa uygulanan her üyesi için bir erişim düzeyi bildirebilirsiniz.  
+- **Erişim düzeyi.** Örtük olarak tüm arabirim üyelerinin olması [genel](../../../visual-basic/language-reference/modifiers/public.md) erişim. Tüm erişim değiştiricisi üye tanımlarken kullanamazsınız. Ancak, arabirimini uygulayan bir sınıfa uygulanan her üyesi için bir erişim düzeyi bildirebilirsiniz.  
   
      Bir sınıf örneği bir değişkene atarsanız, üyelerine erişim düzeyini değişkeninin veri türü temel alınan arabirimi veya uygulama sınıfı olmasına göre değişebilir. Aşağıdaki örnek bunu göstermektedir.  
   
@@ -99,11 +99,11 @@ End Interface
   
      Sınıf üyeleri aracılığıyla erişiyorsanız `varAsInterface`, ortak erişime sahip oldukları tüm. Ancak, üyeleri aracılığıyla erişiyorsanız `varAsClass`, `Sub` yordamı `doSomething` özel erişimi vardır.  
   
--   **Kapsam.** Ad alanı, sınıf, yapı veya modül kapsamdadır bir arabirimdir.  
+- **Kapsam.** Ad alanı, sınıf, yapı veya modül kapsamdadır bir arabirimdir.  
   
      Her arabirim üyesini kapsamını tüm arabirimidir.  
   
--   **Yaşam süresi.** Bir arabirim kendisi bir yaşam süresi yok ya da üyelerini yapın. Bir arabirim ve nesnenin ne zaman arabirimini uygulayan bir sınıf sınıfı nesne bir yaşam süresi içinde çalıştığı uygulama içinde olan bir örneği olarak oluşturulur. Daha fazla bilgi için "Ömür" başlığına bakın. [Class deyimi](../../../visual-basic/language-reference/statements/class-statement.md).  
+- **Yaşam süresi.** Bir arabirim kendisi bir yaşam süresi yok ya da üyelerini yapın. Bir arabirim ve nesnenin ne zaman arabirimini uygulayan bir sınıf sınıfı nesne bir yaşam süresi içinde çalıştığı uygulama içinde olan bir örneği olarak oluşturulur. Daha fazla bilgi için "Ömür" başlığına bakın. [Class deyimi](../../../visual-basic/language-reference/statements/class-statement.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte `Interface` adlı bir arabirim tanımlamak için deyimi `thisInterface`, hangi uygulanmalı ile bir `Property` deyimi ve `Function` deyimi.  

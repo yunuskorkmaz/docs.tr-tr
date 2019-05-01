@@ -6,11 +6,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
 ms.openlocfilehash: 79e13e65938252015e43b59a962d40f20963a5df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902674"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Seçim Modları
 Uygulamanızın içinde kullanıcı seçimlerine göre eylemleri gerçekleştirmek için bazen istediğiniz bir <xref:System.Windows.Forms.DataGridView> denetimi. Eylemler bağlı olarak, mümkün olan seçim türlerini sınırlamak isteyebilirsiniz. Örneğin, uygulamanızın seçili olan kaydı için bir rapor yazdırabilir varsayalım. Bu durumda, yapılandırma isteyebilirsiniz <xref:System.Windows.Forms.DataGridView> denetimi bir satır her zaman herhangi bir yere tıklayarak böylece tüm satırı seçer ve bu nedenle aynı anda yalnızca bir satır seçilebilir.  

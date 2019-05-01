@@ -10,11 +10,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
 ms.openlocfilehash: 2b051d22fe3d331626f2e181c008043e576b7526
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908134"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Dizilerle İlgili Sorun Giderme (Visual Basic)
 Bu sayfada dizilerle çalışırken ortaya çıkabilecek bazı yaygın sorunlar listelenir.  
@@ -22,7 +22,7 @@ Bu sayfada dizilerle çalışırken ortaya çıkabilecek bazı yaygın sorunlar 
 ## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Derleme hataları bildirme ve bir dizi başlatma  
  Yanlış anlama bildirme, oluşturma ve dizileri başlatma kurallarını, gelen derleme hataları oluşabilir. Hataların en yaygın nedenleri şunlardır:  
   
--   Sağlama bir [New işleci](../../../../visual-basic/language-reference/operators/new-operator.md) boyutun uzunluğu dizi değişken bildiriminde belirttikten sonra yan tümcesi. Aşağıdaki kod satırları bu türünde geçersiz bildirimi gösterir.  
+- Sağlama bir [New işleci](../../../../visual-basic/language-reference/operators/new-operator.md) boyutun uzunluğu dizi değişken bildiriminde belirttikten sonra yan tümcesi. Aşağıdaki kod satırları bu türünde geçersiz bildirimi gösterir.  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ Bu sayfada dizilerle çalışırken ortaya çıkabilecek bazı yaygın sorunlar 
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
--   Birden çok basit bir dizi en üst düzey dizi boyut uzunlukları belirtme. Aşağıdaki kod satırı, bu tür geçersiz bir bildirimi gösterir.  
+- Birden çok basit bir dizi en üst düzey dizi boyut uzunlukları belirtme. Aşağıdaki kod satırı, bu tür geçersiz bir bildirimi gösterir.  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
--   Atlama `New` öğe değerlerini belirlerken anahtar sözcüğü. Aşağıdaki kod satırı, bu tür geçersiz bir bildirimi gösterir.  
+- Atlama `New` öğe değerlerini belirlerken anahtar sözcüğü. Aşağıdaki kod satırı, bu tür geçersiz bir bildirimi gösterir.  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
--   Sağlama bir `New` yan tümcesi küme ayraçları olmadan (`{}`). Aşağıdaki kod satırları bu türünde geçersiz bildirimi gösterir.  
+- Sağlama bir `New` yan tümcesi küme ayraçları olmadan (`{}`). Aşağıdaki kod satırları bu türünde geçersiz bildirimi gösterir.  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   

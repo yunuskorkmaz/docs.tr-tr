@@ -1,21 +1,21 @@
 ---
-title: XslCompiledTransform sınıfındaki çıkış seçenekleri
+title: XslCompiledTransform Sınıfındaki Çıkış Seçenekleri
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 694d2be51d025ab054caf19e4aa2900216ad5b2e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949714"
 ---
-# <a name="output-options-on-the-xslcompiledtransform-class"></a>XslCompiledTransform sınıfındaki çıkış seçenekleri
+# <a name="output-options-on-the-xslcompiledtransform-class"></a>XslCompiledTransform Sınıfındaki Çıkış Seçenekleri
 Bu konu başlığı altında kullanılabilir XSLT çıkış seçenekleri açıklanır. Stil sayfası veya üzerinde çıkış seçenekleri belirtebilirsiniz <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi.  
   
-## <a name="xsloutput-element"></a>önceliğiyle öğesi  
+## <a name="xsloutput-element"></a>xsl:output Element  
  `xsl:output` Öğesi çıktı seçeneklerini belirtir. Çıktı türü tarafından belirtilen <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi davranışını belirler `xsl:output` seçenekleri.  
   
  Aşağıdaki tabloda bulunan özniteliklerin her biri için davranışını tanımlar. `xsl:output` bir akış çıktı türü olduğunda, öğe veya <xref:System.IO.TextWriter>.  
@@ -28,9 +28,9 @@ Bu konu başlığı altında kullanılabilir XSLT çıkış seçenekleri açıkl
 |atlayın-xml-bildirimi|Desteklenen.|  
 |bağımsız|Desteklenen.|  
 |doctype-genel|Desteklenen.|  
-|Sistem dışı doctype|Desteklenen.|  
-|CDATA bölümü öğeleri|Desteklenen.|  
-|Girinti|Desteklenen.|  
+|doctype sistem|Desteklenen.|  
+|CDATA bölümünün öğeleri|Desteklenen.|  
+|Girintile|Desteklenen.|  
 |medya türü|Desteklenen.|  
   
 #### <a name="sending-output-to-an-xmlwriter"></a>Çıkış için bir XmlWriter gönderme  
@@ -55,7 +55,7 @@ Bu konu başlığı altında kullanılabilir XSLT çıkış seçenekleri açıkl
   
 ## <a name="notes"></a>Notlar  
   
--   Boş etiketleri yazarken, ters eğik çizgi, öğe adı, son karakter arasında bir boşluk yazılır `<myElement />` örneğin. Bu, oluşturulan HTML sayfalarını düzgün görüntülenmesi eski tarayıcılar olanak tanır.  
+- Boş etiketleri yazarken, ters eğik çizgi, öğe adı, son karakter arasında bir boşluk yazılır `<myElement />` örneğin. Bu, oluşturulan HTML sayfalarını düzgün görüntülenmesi eski tarayıcılar olanak tanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

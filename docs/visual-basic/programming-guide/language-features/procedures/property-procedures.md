@@ -14,20 +14,20 @@ helpviewer_keywords:
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
 ms.openlocfilehash: 47e93ee17f160ce5cd701fd0a12ec16b3997ce9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791865"
 ---
 # <a name="property-procedures-visual-basic"></a>Özellik Yordamları (Visual Basic)
 Bir özellik yordamı bir özel özellik bir modül, sınıf veya yapı işleyen Visual Basic deyimleri bir dizisidir. Özellik yordamları olan olarak da bilinen *özellik erişimcileri*.  
   
  Visual Basic için aşağıdaki özellik yordamları sağlar:  
   
--   A `Get` yordamı bir özelliğinin değerini döndürür. Bir ifade özelliğinde eriştiğinde çağrılır.  
+- A `Get` yordamı bir özelliğinin değerini döndürür. Bir ifade özelliğinde eriştiğinde çağrılır.  
   
--   A `Set` yordamı bir özellik içeren bir nesne başvurusu bir değere ayarlar. Özellik için bir değer atadığınızda çağrılır.  
+- A `Set` yordamı bir özellik içeren bir nesne başvurusu bir değere ayarlar. Özellik için bir değer atadığınızda çağrılır.  
   
  Özellik yordamları kullanarak çiftlerinde genellikle tanımlamak `Get` ve `Set` deyimleri, ancak tanımlayabilirsiniz tek başına ya da yordam özellik salt okunur ise ([alma deyimi](../../../../visual-basic/language-reference/statements/get-statement.md)) veya salt yazılır ([ayarlayın Deyimi](../../../../visual-basic/language-reference/statements/set-statement.md)).  
   

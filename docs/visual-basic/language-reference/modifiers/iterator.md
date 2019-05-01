@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
 ms.openlocfilehash: 499949d1f4c20e1f465355bd076ba39f1496779b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920724"
 ---
 # <a name="iterator-visual-basic"></a>Yineleyici (Visual Basic)
 Belirleyen bir işlev veya `Get` erişimcisinin yineleyici olduğunu.  
@@ -34,9 +34,9 @@ Belirleyen bir işlev veya `Get` erişimcisinin yineleyici olduğunu.
 ## <a name="usage"></a>Kullanım  
  `Iterator` Bu bağlamda değiştirici kullanılabilir:  
   
--   [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir yineleyici işlevi gösterir. Yineleyici işleve sahip bir `Yield` içindeki bir [için... Sonraki](../../../visual-basic/language-reference/statements/for-next-statement.md) döngü. Her bir yinelemesini [her](../../../visual-basic/language-reference/statements/for-each-next-statement.md) deyiminin gövdesinde `Main` bir çağrı oluşturur `Power` yineleyici işlevi. Her yineleyici işleve çağrı için sonraki yürütme devam eder `Yield` sıradaki yinelemesi süresince gerçekleşen deyimi `For…Next` döngü.  

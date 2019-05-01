@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control types, Header
 ms.assetid: d2e48891-2dbe-409e-8655-2f753908e29b
 ms.openlocfilehash: 8a7fe7fb8ec3e4b33ff4814859afe7d1d8de9c60
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785274"
 ---
 # <a name="ui-automation-support-for-the-header-control-type"></a>Başlık Denetim Türü İçin UI Otomasyon Desteği
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "59160127"
   
 |Denetim Görünüm|İçerik görünümü|  
 |------------------|------------------|  
-|Üstbilgi<br /><br /> -Headerıtem (1 veya daha fazla)|None|  
+|Üstbilgi<br /><br /> -Headerıtem (1 veya daha fazla)|Yok.|  
   
  Üstbilgi denetimleriyle denetim görünümünde her zaman 1 veya daha fazla alt sahip [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "59160127"
 |<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> özellik değişti olayı.|Gerekli|Yok.|  
 |<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> özellik değişti olayı.|Gerekli|Yok.|  
 |<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> özellik değişti olayı.|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|Gerekli|None|  
+|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|Gerekli|Yok.|  
 |<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|Gerekli|Yok.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.

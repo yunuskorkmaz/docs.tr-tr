@@ -3,11 +3,11 @@ title: Performansla ilgili önemli noktalar (varlık çerçevesi)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
 ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879404"
 ---
 # <a name="performance-considerations-entity-framework"></a>Performansla ilgili önemli noktalar (varlık çerçevesi)
 Bu konu, ADO.NET varlık çerçevesi performans özelliklerini açıklar ve Entity Framework uygulamalarının performansını artırmak için bazı değerlendirmeleri sağlar.  
@@ -55,12 +55,12 @@ Bu konu, ADO.NET varlık çerçevesi performans özelliklerini açıklar ve Enti
 #### <a name="query-complexity"></a>Sorgu karmaşıklığı  
  Çok sayıda veri kaynağına karşı yürütülen veya, büyük miktarda veri döndüren komutlar birleşimlerde gerektiren sorguları, aşağıdaki yollarla performansını etkileyebilir:  
   
--   Basit görünen kavramsal modeline karşı sorgular, veri kaynağına karşı daha karmaşık sorgular yürütülmesine neden olabilir. Varlık çerçevesi kavramsal modeline karşı bir sorgu veri kaynağına karşı eşdeğer bir sorguda çevirir. çünkü bu durum oluşabilir. Tek bir varlık kümesi'nde, veri kaynağında birden fazla tablo kavramsal model eşlendiği veya varlıklar arasında ilişki birleştirme tabloya eşlendiğinde, veri kaynağı sorgusu karşı yürütülen sorgu komutu bir veya daha fazla birleştirme işlemleri gerektirebilir.  
+- Basit görünen kavramsal modeline karşı sorgular, veri kaynağına karşı daha karmaşık sorgular yürütülmesine neden olabilir. Varlık çerçevesi kavramsal modeline karşı bir sorgu veri kaynağına karşı eşdeğer bir sorguda çevirir. çünkü bu durum oluşabilir. Tek bir varlık kümesi'nde, veri kaynağında birden fazla tablo kavramsal model eşlendiği veya varlıklar arasında ilişki birleştirme tabloya eşlendiğinde, veri kaynağı sorgusu karşı yürütülen sorgu komutu bir veya daha fazla birleştirme işlemleri gerektirebilir.  
   
     > [!NOTE]
     >  Kullanım <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> yöntemi <xref:System.Data.Objects.ObjectQuery%601> veya <xref:System.Data.EntityClient.EntityCommand> belirli bir sorgu için veri kaynağına karşı yürütülen komutlar görüntülemek için sınıflar. Daha fazla bilgi için [nasıl yapılır: Store komutlarını görüntülemesine](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896348(v=vs.100)).  
   
--   İç içe geçmiş Entity SQL sorguları sunucuda birleştirmeler oluşturabilir ve çok sayıda satır döndürebilir.  
+- İç içe geçmiş Entity SQL sorguları sunucuda birleştirmeler oluşturabilir ve çok sayıda satır döndürebilir.  
   
      Bir projeksiyon yan tümcesi iç içe bir sorgu örneği verilmiştir:  
   
@@ -72,7 +72,7 @@ Bu konu, ADO.NET varlık çerçevesi performans özelliklerini açıklar ve Enti
   
      Ayrıca, iç içe geçmiş sorgular arasında nesneleri çoğaltma ile tek bir sorgu oluşturmak sorgu işlem hattındaki sorgularını neden. Bu nedenle, tek bir sütun birden çok defa yinelenebilir. SQL Server dahil olmak üzere bazı veritabanlarında, bu sunucu performansı azaltabilir, çok büyük büyümesine TempDB tablo neden olabilir. İç içe geçmiş sorgular yürütme dikkatli olunması.  
   
--   İstemci sonuç kümesinin boyutuna orantılı bir şekilde kaynak kullanan işlemleri gerçekleştiriliyorsa, büyük miktarda veri neden olabilir döndüren sorgular performansı düşebilir. Böyle durumlarda, sorgu tarafından döndürülen veri miktarını sınırlamak düşünmelisiniz. Daha fazla bilgi için [nasıl yapılır: Sonuçlar sayfası sorguyla](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)).  
+- İstemci sonuç kümesinin boyutuna orantılı bir şekilde kaynak kullanan işlemleri gerçekleştiriliyorsa, büyük miktarda veri neden olabilir döndüren sorgular performansı düşebilir. Böyle durumlarda, sorgu tarafından döndürülen veri miktarını sınırlamak düşünmelisiniz. Daha fazla bilgi için [nasıl yapılır: Sonuçlar sayfası sorguyla](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)).  
   
  Entity Framework tarafından otomatik olarak oluşturulan herhangi bir komut açıkça veritabanı geliştirici tarafından yazılan benzer komutları daha karmaşık olabilir. Veri kaynağına karşı yürütülen komutlar kesin denetime ihtiyacınız varsa, bir tablo değerli işlev veya saklı yordam için bir eşleme tanımlama göz önünde bulundurun.  
   
@@ -114,9 +114,9 @@ Bu konu, ADO.NET varlık çerçevesi performans özelliklerini açıklar ve Enti
 ### <a name="distributed-transactions"></a>Dağıtılmış İşlemler  
  Dağıtılmış İşlem Düzenleyicisi (DTC) tarafından yönetilen kaynaklara gerektiren işlem açık bir işlemde DTC gerektirmeyen benzer bir işlem çok daha pahalı olur. DTC yükseltmesine aşağıdaki durumlarda oluşur:  
   
--   Her zaman bir işlem bir SQL Server 2000 veritabanı veya başka bir veri kaynağı ile açık bir işlem DTC için açık işlemleri tanıtın.  
+- Her zaman bir işlem bir SQL Server 2000 veritabanı veya başka bir veri kaynağı ile açık bir işlem DTC için açık işlemleri tanıtın.  
   
--   Bağlantı tarafından yönetilmediği durumlarda SQL Server 2005 yönelik bir işlem olan açık bir işlem [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Bağlantı kapatıldı ve tek bir işlem içinde açılamaz her SQL Server 2005 bir DTC yükseltir. Bu kaynaklanır varsayılan davranışını olduğu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Bu DTC promosyon, SQL Server 2008 kullanılırken gerçekleşmez. SQL Server 2005 kullanırken bu yükseltmeyi önlemek için açıkça açın ve işlem içinde bağlantıyı kapatın. Daha fazla bilgi için [bağlantılarını yönetme ve işlemleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
+- Bağlantı tarafından yönetilmediği durumlarda SQL Server 2005 yönelik bir işlem olan açık bir işlem [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Bağlantı kapatıldı ve tek bir işlem içinde açılamaz her SQL Server 2005 bir DTC yükseltir. Bu kaynaklanır varsayılan davranışını olduğu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Bu DTC promosyon, SQL Server 2008 kullanılırken gerçekleşmez. SQL Server 2005 kullanırken bu yükseltmeyi önlemek için açıkça açın ve işlem içinde bağlantıyı kapatın. Daha fazla bilgi için [bağlantılarını yönetme ve işlemleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
  Açık işlem içindeki bir veya daha fazla işlem çalıştırıldığında kullanılan bir <xref:System.Transactions> işlem. Daha fazla bilgi için [bağlantılarını yönetme ve işlemleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
@@ -147,11 +147,11 @@ Bu konu, ADO.NET varlık çerçevesi performans özelliklerini açıklar ve Enti
 ## <a name="performance-data"></a>Performans Verileri  
  Entity Framework için bazı performans verileri aşağıdaki gönderilerinde yayımlanan [ADO.NET ekibi blogu](https://go.microsoft.com/fwlink/?LinkId=91905):  
   
--   [ADO.NET Entity Framework - 1. Bölüm performansını keşfetme](https://go.microsoft.com/fwlink/?LinkId=123907)  
+- [ADO.NET Entity Framework - 1. Bölüm performansını keşfetme](https://go.microsoft.com/fwlink/?LinkId=123907)  
   
--   [ADO.NET Entity Framework – Bölüm 2 performansını keşfetme](https://go.microsoft.com/fwlink/?LinkId=123909)  
+- [ADO.NET Entity Framework – Bölüm 2 performansını keşfetme](https://go.microsoft.com/fwlink/?LinkId=123909)  
   
--   [ADO.NET Entity Framework performans karşılaştırması](https://go.microsoft.com/fwlink/?LinkID=123913)  
+- [ADO.NET Entity Framework performans karşılaştırması](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

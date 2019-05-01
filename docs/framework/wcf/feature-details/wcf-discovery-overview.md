@@ -3,11 +3,11 @@ title: WCF Keşif Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
 ms.openlocfilehash: cb1eb52e0996a03709a755ff2f148152e2625c58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784260"
 ---
 # <a name="wcf-discovery-overview"></a>WCF Keşif Genel Bakış
 Bulma API'ları dinamik yayını ve Web Hizmetleri için WS bulma protokolünü kullanarak bulma için birleşik bir programlama modeli sağlar. Bu API'leri, kendileri ve yayımlanan hizmetleri bulmak için istemcileri yayımlamak hizmetleri sağlar. Bir hizmet bulunabilirlik yapıldıktan sonra hizmet Duyurunun ileti gönderme yanı sıra dinler ve keşif istekleri'özelliğine sahiptir. Bulunabilirlik Hizmetleri, ağ üzerinde kendi varış duyurmaktan Karışılama iletileri ve kendi kalkış ağdan duyurmaktan Bye iletileri gönderebilir. Bir hizmet bulmak için istemcilerin gönderdiği bir `Probe` hizmet sözleşme türü, anahtar sözcükleri ve ağ üzerinde kapsamı gibi belirli ölçütleri içeren istek. Hizmetleri almak `Probe` istemek ve ölçütlerle eşleşen olup olmadığını belirler. Bir hizmet eşleşirse, göndererek yanıt bir `ProbeMatch` istemcisine hizmetiyle bağlantı kurmak gereken bilgileri ile ileti. İstemciler ayrıca gönderebilir `Resolve` kendi uç nokta adresi değişmiş olan hizmetleri bulmak izin istekleri. Eşleşen Hizmetleri yanıt için `Resolve` göndererek istekleri bir `ResolveMatch` istemcisine ileti.  
@@ -15,11 +15,11 @@ Bulma API'ları dinamik yayını ve Web Hizmetleri için WS bulma protokolünü 
 ## <a name="ad-hoc-and-managed-modes"></a>Geçici ve yönetilen modları  
  Bulma APİ'si, iki farklı modunu destekler: Yönetilen ve geçici. Yönetilen modda kullanılabilir hizmetleri hakkında bilgileri tutan keşif proxy'si olarak adlandırılan bir merkezi sunucu yok. Keşif proxy'si çeşitli şekillerde hizmetlerimizle ilgili bilgi doldurulabilir. Örneğin, hizmetleri keşif proxy'si kadar başlangıç sırasında duyuru iletileri gönderebilir veya bir veritabanını veya yapılandırma dosyasını hangi hizmetlerin kullanılabildiğini belirlemenize proxy veri okuyabilirsiniz. Keşif proxy'si nasıl doldurulur tamamen geliştiricisi kadar kadar. İstemcilerin kullanılabilir hizmetleri hakkında bilgi almak için keşif proxy'si kullanın. Bir istemci arandığında bir hizmet için gönderen bir `Probe` bulma proxy ve proxy ileti bilir hakkında hizmetlerinden herhangi birinin istemci arıyor hizmet eşleşip eşleşmediğini belirler. Keşif proxy gönderir eşleşme varsa bir `ProbeMatch` istemcisine geri yanıt. İstemci sonra proxy sunucudan döndürülen hizmet bilgilerini kullanarak doğrudan hizmet başvurabilirsiniz. Anahtar yönetilen modu arkasındaki bir yetkilisi, Keşif proxy'si tek noktaya yayın şekilde bulma isteği gönderilir ilkesidir. .NET Framework kendi proxy oluşturmanıza olanak tanıyan anahtar bileşenleri içerir. Proxy, istemciler ve hizmetler tarafından birden çok yöntem bulabilirsiniz:  
   
--   Proxy geçici iletilere yanıt verebilir.  
+- Proxy geçici iletilere yanıt verebilir.  
   
--   Proxy bir duyuru başlatma sırasında gönderebilirsiniz.  
+- Proxy bir duyuru başlatma sırasında gönderebilirsiniz.  
   
--   İstemciler ve hizmetler için belirli ve iyi bilinen bir uç aramak için yazılabilir.  
+- İstemciler ve hizmetler için belirli ve iyi bilinen bir uç aramak için yazılabilir.  
   
  Geçici modunda merkezi sunucusu yok. Çok noktaya yayın biçimde hizmet duyuruları ve istemci istekleri gibi tüm bulma iletileri gönderilir. Varsayılan olarak .NET Framework UDP protokolü üzerinden geçici bulma desteği içerir. Bir hizmet başlangıcı'te bir Merhaba duyurudan göndermek için yapılandırılmışsa, örneğin, bu, UDP protokolünü kullanan bir bilinen, çok noktaya yayın adresi gönderir. İstemciler, etkin bir şekilde bu Duyurular için dinleme ve bunları uygun şekilde işlemek zorunda. Bir istemci gönderdiğinde bir `Probe` bir hizmet için ileti çok noktaya yayın protokolü kullanarak ağ üzerinden gönderilir. İsteği aldığında her hizmet ölçütler eşleşip eşleşmediğini belirler `Probe` iletisi ve doğrudan istemciye yanıt veren bir `ProbeMatch` hizmet içinde belirtilen ölçütlerle eşleşmesi durumunda ileti `Probe` ileti.  
   

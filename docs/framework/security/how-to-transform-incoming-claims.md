@@ -7,51 +7,51 @@ ms.openlocfilehash: f836356125f1462f302b7e9f45a841c869c9a690
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940445"
 ---
 # <a name="how-to-transform-incoming-claims"></a>Nasıl yapılır: Gelen Talepleri Dönüştürme
 ## <a name="applies-to"></a>Uygulanan Öğe  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web formları  
+- ASP.NET® Web formları  
   
 ## <a name="summary"></a>Özet  
  Bu yöntem, basit bir talep kullanan ASP.NET Web Forms uygulaması oluşturma ve gelen talepleri dönüştürme için adım adım ayrıntılı yordamları sağlar. Ayrıca, uygulamayı çalıştırdığınızda dönüştürülmüş beyanların sunulduğunu doğrulamak için uygulamayı test etme için yönergeler sağlar.  
   
 ## <a name="contents"></a>İçindekiler  
   
--   Amaçlar  
+- Amaçlar  
   
--   Genel Bakış  
+- Genel Bakış  
   
--   Adımların Özeti  
+- Adımların Özeti  
   
--   1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
+- 1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
   
--   Adım 2 – uygulama talepleri özel bir ClaimsAuthenticationManager kullanarak dönüştürme  
+- Adım 2 – uygulama talepleri özel bir ClaimsAuthenticationManager kullanarak dönüştürme  
   
--   3. Adım – Çözümünüzü Test Etme  
+- 3. Adım – Çözümünüzü Test Etme  
   
 ## <a name="objectives"></a>Amaçlar  
   
--   Bir ASP.NET Web Forms uygulaması talep tabanlı kimlik doğrulaması için yapılandırma  
+- Bir ASP.NET Web Forms uygulaması talep tabanlı kimlik doğrulaması için yapılandırma  
   
--   Bir yönetici rolü talep ekleyerek gelen talepleri dönüştürme  
+- Bir yönetici rolü talep ekleyerek gelen talepleri dönüştürme  
   
--   Düzgün çalışıp çalışmadığını görmek için ASP.NET Web Forms uygulamayı test etme  
+- Düzgün çalışıp çalışmadığını görmek için ASP.NET Web Forms uygulamayı test etme  
   
 ## <a name="overview"></a>Genel Bakış  
  WIF sunan adlı bir sınıf <xref:System.Security.Claims.ClaimsAuthenticationManager> kullanıcıların bir bağlı olan taraf (RP) uygulaması verildikleri önce talep değiştirmesine izin verir. <xref:System.Security.Claims.ClaimsAuthenticationManager> Kimlik doğrulama ve temel uygulama kodu arasındaki ayrımı için kullanışlıdır. Aşağıdaki örnekte, gelen talepleri bir role eklemek gösterilmiştir <xref:System.Security.Claims.ClaimsPrincipal> tarafından RP gerekebilir.  
   
 ## <a name="summary-of-steps"></a>Adımların Özeti  
   
--   1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
+- 1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
   
--   Adım 2 – uygulama talepleri özel bir ClaimsAuthenticationManager kullanarak dönüştürme  
+- Adım 2 – uygulama talepleri özel bir ClaimsAuthenticationManager kullanarak dönüştürme  
   
--   3. Adım – Çözümünüzü Test Etme  
+- 3. Adım – Çözümünüzü Test Etme  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
  Bu adımda, yeni bir ASP.NET Web Forms uygulaması oluşturacaksınız.  

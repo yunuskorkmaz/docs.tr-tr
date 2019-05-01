@@ -5,18 +5,18 @@ f1_keywords:
 - vbrArgument_LengthGTZero1
 ms.assetid: 709bc232-f8fe-4864-9842-e064795da0f5
 ms.openlocfilehash: 94720ceafcd99b699fab5769abc5b70f0f637fba
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790565"
 ---
 # <a name="length-of-argument-argumentname-must-be-greater-than-zero"></a>Bağımsız değişkenin uzunluğu '\<argumentname >' sıfırdan büyük olmalıdır
 Bağımsız değişken eşit veya daha küçük bir değere sahip sıfırdan.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Sıfırdan büyük bir bağımsız değişken sağlayın.  
+- Sıfırdan büyük bir bağımsız değişken sağlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

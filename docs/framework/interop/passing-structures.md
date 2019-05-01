@@ -10,11 +10,11 @@ ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c8e35a09bd3348d5f53c662cf6e0ee9fec733d88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872657"
 ---
 # <a name="passing-structures"></a>Yapıları Geçirme
 Birçok yönetilmeyen işlev, işlev bir parametre olarak yapıları (Visual Basic'te türleri kullanıcı tanımlı) veya yönetilen kod içinde tanımlanan sınıflar üyesi geçirmek için bekler. Yapıları geçirme veya platformu kullanarak yönetilmeyen kod için sınıflar çağırdığınızda, hizalama ve özgün düzeni korumak için ek bilgiler sağlamanız gerekir. Bu konu tanıtır <xref:System.Runtime.InteropServices.StructLayoutAttribute> biçimlendirilmiş türleri tanımlamak için kullanılan öznitelik. Yönetilen yapıları ve sınıfları için tarafından sağlanan bazı öngörülebilir Düzen davranışları aralarından seçim yapabileceğiniz **LayoutKind** sabit listesi.  
@@ -29,11 +29,11 @@ Birçok yönetilmeyen işlev, işlev bir parametre olarak yapıları (Visual Bas
   
  Platform çağırma için bildirimleri tabloda aşağıdaki yönergeleri açıklanmaktadır:  
   
--   Yönetilmeyen işlev hiçbir yöneltme talep ettiğinde, değer tarafından geçirilen yapının kullanın.  
+- Yönetilmeyen işlev hiçbir yöneltme talep ettiğinde, değer tarafından geçirilen yapının kullanın.  
   
--   Başvuru tarafından geçirilen yapının ya da bir yöneltme düzeyi yönetilmeyen işlev talep ettiğinde, değer olarak geçilemez bir sınıfı kullanın.  
+- Başvuru tarafından geçirilen yapının ya da bir yöneltme düzeyi yönetilmeyen işlev talep ettiğinde, değer olarak geçilemez bir sınıfı kullanın.  
   
--   Yönetilmeyen işlev iki, yöneltme düzeyi talep ettiğinde, başvuru tarafından geçirilmediğine bir sınıfı kullanın.  
+- Yönetilmeyen işlev iki, yöneltme düzeyi talep ettiğinde, başvuru tarafından geçirilmediğine bir sınıfı kullanın.  
   
 ## <a name="declaring-and-passing-structures"></a>Bildirme ve yapıları geçirme  
  Aşağıdaki örnek nasıl tanımlanacağını gösterir `Point` ve `Rect` yapıları, yönetilen kod ve geçiş türleri parametre olarak **PtInRect** User32.dll dosyasındaki işlevi. **PtInRect** aşağıdaki yönetilmeyen imzası:  
@@ -180,6 +180,5 @@ public class TestPlatformInvoke
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DLL İşlevini Çağırma](../../../docs/framework/interop/calling-a-dll-function.md)
-- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.FieldOffsetAttribute>

@@ -5,11 +5,11 @@ ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 031ec811315f4a9d9f1f73d34e32236d2cf27729
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866840"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET Native Yansıtma API'si Başvurusu
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] üç yeni özel durum türlerini içerir: [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), ve [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) . Tüm üç özel durum türleri hakkında aşağıdakileri unutmayın:  
@@ -20,9 +20,9 @@ ms.locfileid: "59169084"
  Bu özel durumlar, kodunuzda işleyemez.  
  Bu özel durumlar uygulamanızın ihtiyaç duyduğu ya da bu meta veri eksik olduğunu belirten ( [Missingınteropdataexception](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) ve [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) özel durumlar) veya ilgili uygulama kodu Gerekli uygulama eksik ( [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) özel durum). Bir çalışma zamanı yönergeleri değiştirerek bu özel durum koşullarını düzeltin (. rd.xml) gerekli meta veriler veya uygulama kodu çalışma zamanında kullanılabilir hale getirmek için dosya. Daha fazla bilgi için [çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). İki sorun gidericileri kullanılabilir uygun girişleri ortadan kaldıracak çalışma zamanı yönergeleri dosyanız için tedarik [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) ve [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) özel durumlar:  
   
--   [MissingMetadataException sorun giderici](https://dotnet.github.io/native/troubleshooter/type.html) türleri için.  
+- [MissingMetadataException sorun giderici](https://dotnet.github.io/native/troubleshooter/type.html) türleri için.  
   
--   [MissingMetadataException sorun giderici](https://dotnet.github.io/native/troubleshooter/method.html) yöntemleri için.  
+- [MissingMetadataException sorun giderici](https://dotnet.github.io/native/troubleshooter/method.html) yöntemleri için.  
   
 > [!NOTE]
 >  Bu başvuru için benzersiz olan üç özel durum türlerini belgeleri [!INCLUDE[net_native](../../../includes/net-native-md.md)]. .NET Framework Çekirdek yansıma API'si için başvuru belgeleri için bkz. <xref:System.Reflection>, <xref:System.Reflection.Context> ve <xref:System.Reflection.Emit> ad alanları. .NET Framework Çekirdek birlikte çalışma API'si için başvuru belgeleri için bkz. <xref:System.Runtime.InteropServices>.  

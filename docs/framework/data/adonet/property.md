@@ -3,11 +3,11 @@ title: özellik
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
 ms.openlocfilehash: 71a04f334ec465b0f11cc8f18f2680df651081eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879053"
 ---
 # <a name="property"></a>özellik
 *Özellikleri* temel yapı taşlarıdır [varlık türleri](../../../../docs/framework/data/adonet/entity-type.md) ve [karmaşık türler](../../../../docs/framework/data/adonet/complex-type.md). Bir varlık türü örneği veya karmaşık tür örneği içeren veri özelliklerini ve şekli özelliklerini tanımlayın. Kavramsal modelde özellikleri, bir sınıf üzerinde tanımlanan özelliklere benzer. Bir sınıfındaki özellikleri sınıfı şeklini tanımlamak ve nesneler hakkında bilgi taşımak aynı şekilde, kavramsal model özelliklerinde bir varlık türü şeklini tanımlamak ve varlık türü örnekleri hakkında bilgi taşımak.  
@@ -17,11 +17,11 @@ ms.locfileid: "59181655"
   
  Bir özellik tanımı, şu bilgileri içerir:  
   
--   Bir özellik adı. (Gerekli)  
+- Bir özellik adı. (Gerekli)  
   
--   Özellik türü. (Gerekli)  
+- Özellik türü. (Gerekli)  
   
--   Bir dizi [modelleri](../../../../docs/framework/data/adonet/facet.md). (İsteğe bağlı)  
+- Bir dizi [modelleri](../../../../docs/framework/data/adonet/facet.md). (İsteğe bağlı)  
   
  Bir özellik, temel veri (örneğin, bir dize, tamsayı veya Boolean değeri) veya yapılandırılmış veriler (örneğin, bir karmaşık tür) içerebilir. Temel eleman türü özellikleri, skaler özellikler olarak da adlandırılır. Daha fazla bilgi için [varlık veri modeli: Temel veri türlerinin](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
   

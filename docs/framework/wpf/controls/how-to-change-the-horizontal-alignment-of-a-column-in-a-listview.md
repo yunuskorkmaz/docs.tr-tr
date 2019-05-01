@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ListView controls [WPF], horizontal alignment [WPF]
 ms.assetid: b9573e44-9dad-4d14-939c-7859ca372758
 ms.openlocfilehash: 528a711c1cf7992bb32c0aa4d6e81d71744c9f80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911072"
 ---
 # <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>Nasıl yapılır: ListView İçerisindeki Bir Sütunun Yatay Hizalamasını Değiştirme
 Varsayılan olarak, her bir sütunun içeriğine bir <xref:System.Windows.Controls.ListViewItem> sola hizalanır. Her sütunun hizalamasını sağlayarak değiştirebileceğiniz bir <xref:System.Windows.DataTemplate> ve ayarı <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> içindeki öğe üzerinde özellik <xref:System.Windows.DataTemplate>. Bu konu başlığı altında gösterilir nasıl bir <xref:System.Windows.Controls.ListView> içeriğini varsayılan ve içerisindeki bir sütunun hizalamasını değiştirme göre hizalar bir <xref:System.Windows.Controls.ListView>.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
 ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912580"
 ---
 # <a name="configuring-tracing"></a>İzlemeyi Yapılandırma
 Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve küme izleme düzeylerini kümesi Etkinlik izleme ve uçtan uca izleme bağıntı desteklemek için yayma yaymak için izleme kaynakları yapılandırabilir ve izlemeleri erişmek için izleme dinleyicilerine ayarlama açıklanmaktadır.  
@@ -22,9 +22,9 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve küme izleme düzeyleri
 ## <a name="enabling-tracing"></a>İzlemeyi etkinleştirme  
  Windows Communication Foundation (WCF) aşağıdaki tanılama izleme verilerini çıkarır:  
   
--   Özel durumlar, uyarılar ve diğer önemli işlem yüküyle olayları izlemeler işlem çağrıları gibi uygulamaların tüm bileşenleri arasında işlem kilometre taşları için kod.  
+- Özel durumlar, uyarılar ve diğer önemli işlem yüküyle olayları izlemeler işlem çağrıları gibi uygulamaların tüm bileşenleri arasında işlem kilometre taşları için kod.  
   
--   Windows hata olaylarını izleme özelliği yanlış olduğunda. Bkz: [olay günlüğü](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+- Windows hata olaylarını izleme özelliği yanlış olduğunda. Bkz: [olay günlüğü](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
  WCF izleme üzerine kurulmuştur <xref:System.Diagnostics>. İzlemeyi kullanmak için yapılandırma dosyası veya kod iz kaynakları tanımlamanız gerekir. WCF her WCF derleme için bir izleme kaynağı tanımlar. `System.ServiceModel` İzleme kaynağı en genel WCF izleme kaynağı ve WCF iletişim yığını kullanıcı kodu girme/bırakmak için taşıma girme/bırakarak genelinde işleme kilometre taşları kaydeder. `System.ServiceModel.MessageLogging` İzleme kaynağı sistem üzerinden akan tüm iletileri kaydeder.  
   
@@ -58,19 +58,19 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve küme izleme düzeyleri
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Yapılandırma izleme kaynakları izlemeleri yayma  
  WCF her derleme için bir izleme kaynağı tanımlar. Bir derlemenin içinde oluşturulan izlemeleri, bu kaynak için tanımlanan dinleyicileri tarafından erişilir. Aşağıdaki izleme kaynakları tanımlanır:  
   
--   System.ServiceModel: WCF işlem, herhangi bir zamanda tüm aşamaları oturum yapılandırmasını okuma, bir ileti aktarım işlenir, kullanıcı kodu ve benzeri güvenlik işleme, bir ileti gönderilir.  
+- System.ServiceModel: WCF işlem, herhangi bir zamanda tüm aşamaları oturum yapılandırmasını okuma, bir ileti aktarım işlenir, kullanıcı kodu ve benzeri güvenlik işleme, bir ileti gönderilir.  
   
--   System.ServiceModel.MessageLogging: Sistem üzerinden akan tüm iletileri günlüğe kaydeder.  
+- System.ServiceModel.MessageLogging: Sistem üzerinden akan tüm iletileri günlüğe kaydeder.  
   
--   System.IdentityModel.  
+- System.IdentityModel.  
   
--   System.ServiceModel.Activation.  
+- System.ServiceModel.Activation.  
   
--   System.IO.Log: Ortak günlük File System (CLFS) için .NET Framework arabirimi için günlüğe kaydetme.  
+- System.IO.Log: Ortak günlük File System (CLFS) için .NET Framework arabirimi için günlüğe kaydetme.  
   
--   System.Runtime.Serialization: Nesneleri okumak veya yazılan günlükleri.  
+- System.Runtime.Serialization: Nesneleri okumak veya yazılan günlükleri.  
   
--   CardSpace.  
+- CardSpace.  
   
  Yapılandırma aşağıdaki örnekte gösterildiği gibi her izleme kaynağı aynı (paylaşılan) dinleyici kullanmak için yapılandırabilirsiniz.  
   

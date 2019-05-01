@@ -3,11 +3,11 @@ title: WCF Web HTTP biçimlendirme
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
 ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59331045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935479"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP biçimlendirme
 WCF Web HTTP programlama modeli yanıtına döndürmek bir hizmet işlemi için en iyi biçimi dinamik olarak belirlemenize olanak tanır. Uygun bir biçim belirlemek için iki yöntem desteklenir: otomatik ve açık.  
@@ -125,15 +125,15 @@ public class Service : IService
   
  XML veya JSON dışında biçimleri için destek gerekiyorsa, dönüş türüne sahip olmasını işleminizi tanımlama <xref:System.ServiceModel.Channels.Message>. İşlem kod içinde kullanmak ve oluşturmak için uygun biçimde belirlemek bir <xref:System.ServiceModel.Channels.Message> aşağıdaki yöntemlerden birini kullanarak nesne:  
   
--   `WebOperationContext.CreateAtom10Response`  
+- `WebOperationContext.CreateAtom10Response`  
   
--   `WebOperationContext.CreateJsonResponse`  
+- `WebOperationContext.CreateJsonResponse`  
   
--   `WebOperationContext.CreateStreamResponse`  
+- `WebOperationContext.CreateStreamResponse`  
   
--   `WebOperationContext.CreateTextResponse`  
+- `WebOperationContext.CreateTextResponse`  
   
--   `WebOperationContext.CreateXmlResponse`  
+- `WebOperationContext.CreateXmlResponse`  
   
  Bu yöntemlerin her biri, içerik alır ve bir ileti ile uygun biçimde oluşturur. `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` Yöntemi tercih azalan dosyasındaki istemci tarafından tercih edilen biçimler listesini almak için kullanılabilir. Aşağıdaki örnek nasıl kullanılacağını gösterir `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` biçimini kullanın ve ardından kullanan belirlemek için uygun bir yanıt iletisi oluşturmak için yanıt yöntemi oluşturun.  
   

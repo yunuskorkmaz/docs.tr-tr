@@ -3,11 +3,11 @@ title: Sorun giderme
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
 ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917647"
 ---
 # <a name="troubleshooting"></a>Sorun giderme
 Aşağıdaki bilgiler, karşılaşabileceğiniz bazı sorunları gösterir, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamalar ve aksi takdirde bu sorunların etkisini azaltmak veya önlemek için öneriler sunar.  
@@ -31,9 +31,9 @@ Aşağıdaki bilgiler, karşılaşabileceğiniz bazı sorunları gösterir, [!IN
 ## <a name="cascade-delete"></a>Art arda silme  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] desteklemez veya art arda silme işlemleri tanıyın. Bunu yönelik kısıtlamalar içeren bir tabloda bir satır silmek istiyorsanız, aşağıdakilerden birini yapmalısınız:  
   
--   Ayarlama `ON DELETE CASCADE` veritabanında yabancı anahtar kısıtlaması kuralı.  
+- Ayarlama `ON DELETE CASCADE` veritabanında yabancı anahtar kısıtlaması kuralı.  
   
--   Kendi kodunuzu ilk üst nesnenin silinmesini engelleyen alt nesneleri silmek için kullanın.  
+- Kendi kodunuzu ilk üst nesnenin silinmesini engelleyen alt nesneleri silmek için kullanın.  
   
  Aksi takdirde, bir <xref:System.Data.SqlClient.SqlException> özel durumu oluşturulur.  
   
@@ -42,11 +42,11 @@ Aşağıdaki bilgiler, karşılaşabileceğiniz bazı sorunları gösterir, [!IN
 ## <a name="expression-not-queryable"></a>İfade sorgulanabilir değil  
  "[İfade] ifade sorgulanabilir değil; alırsanız bir derleme başvurunuz mu eksik?" hata, aşağıdakilerden emin olun:  
   
--   Uygulamanızın hedeflediği [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].  
+- Uygulamanızın hedeflediği [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].  
   
--   Bir başvuru sahip `System.Core.dll` ve `System.Data.Linq.dll`.  
+- Bir başvuru sahip `System.Core.dll` ve `System.Data.Linq.dll`.  
   
--   Sahip olduğunuz bir `Imports` (Visual Basic) veya `using` yönergesi (C#) için <xref:System.Linq> ve <xref:System.Data.Linq>.  
+- Sahip olduğunuz bir `Imports` (Visual Basic) veya `using` yönergesi (C#) için <xref:System.Linq> ve <xref:System.Data.Linq>.  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  Hata ayıklama sırasında bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proje, bir varlığın ilişkileri çapraz. Bunun yapılması, bu öğeler önbelleğine getirir ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kendi varlığını haberdar olur. Daha sonra yürütülecek çalışırsanız <xref:System.Data.Linq.Table%601.Attach%2A> veya <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> veya aynı anahtara sahip birden çok satır üretir benzer bir yöntem bir <xref:System.Data.Linq.DuplicateKeyException> oluşturulur.  

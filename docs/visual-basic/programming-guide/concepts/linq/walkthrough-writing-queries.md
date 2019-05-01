@@ -8,11 +8,11 @@ helpviewer_keywords:
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
 ms.openlocfilehash: 8e3d893a21b36868f59d132bd8ba9a6f634cac62
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907614"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>İzlenecek yol: Visual Basic'de sorgu yazma
 Bu izlenecek yol yazmak için Visual Basic dil özellikleri nasıl kullanabileceğinizi gösterir [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sorgu ifadelerinde. İzlenecek yol, sorgu Öğrenci nesnelerin listesini oluşturma, sorgularının nasıl çalıştırılacağını ve bunları değiştirmek nasıl gösterir. Sorguları nesne başlatıcıları, yerel tür çıkarımı ve anonim türler dahil olmak üzere çeşitli özelliklerini bir araya getirin.  
@@ -40,14 +40,14 @@ Bu izlenecek yol yazmak için Visual Basic dil özellikleri nasıl kullanabilece
   
 #### <a name="to-add-the-data-source"></a>Veri kaynağı eklemek için  
   
--   Tanımlayan bir `Student` sınıfı ve sınıf örneklerinin bir listesini oluşturun.  
+- Tanımlayan bir `Student` sınıfı ve sınıf örneklerinin bir listesini oluşturun.  
   
     > [!IMPORTANT]
     >  Tanımlamak için gereken kodu `Student` sınıfı ve kullanılan liste oluşturma izlenecek yolda örnekler sağlanır [nasıl yapılır: Öğe listesi oluşturma](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Buradan kopyalayın ve projenize yapıştırın. Projeyi oluşturduğunuzda görünen kodu yeni kodu değiştirir.  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>Öğrenciler listesine yeni bir öğrenci eklemek için  
   
--   Düzende izleyin `getStudents` başka bir örneğini ekleme yöntemi `Student` listesine sınıfı. Bir öğrenci eklemek için nesne başlatıcıları başlatacaktır. Daha fazla bilgi için [nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+- Düzende izleyin `getStudents` başka bir örneğini ekleme yöntemi `Student` listesine sınıfı. Bir öğrenci eklemek için nesne başlatıcıları başlatacaktır. Daha fazla bilgi için [nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="create-a-query"></a>Sorgu oluşturma  
  Çalıştırıldığında, bu bölüme eklendiğinden sorgu, akademik derece bunları en iyi on koyar Öğrenciler listesini oluşturur. Sorgu tam seçer çünkü `Student` sorgu sonuç türü her zaman nesnedir `IEnumerable(Of Student)`. Ancak, sorgu türü genellikle sorgu tanımlarında belirtilmedi. Bunun yerine, derleyici yerel tür çıkarımı türünü belirlemek için kullanır. Daha fazla bilgi için [yerel tür çıkarımı](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Sorgunun aralık değişkeni `currentStudent`, her bir başvuru olarak hizmet veren `Student` kaynak örneğinde `students`, her bir nesnenin özelliklerini erişim sağlamaya `students`.  

@@ -3,11 +3,11 @@ title: let Bağlamaları
 description: Nasıl kullanacağınızı öğrenin bir F# 'bağlama, bir tanımlayıcı bir değer ya da işlev ile ilişkilendirir let'.
 ms.date: 05/16/2016
 ms.openlocfilehash: 45de82acf6f4423698cd8037266968e023f40dcb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941016"
 ---
 # <a name="let-bindings"></a>let Bağlamaları
 

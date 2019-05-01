@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
 ms.openlocfilehash: 2da4b7483e92b02360bceb886d84a7f729b84dee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800808"
 ---
 # <a name="how-to-resize-windows-forms"></a>Nasıl yapılır: Windows Forms’u Yeniden Boyutlandırma
 Windows formunuzda boyutu birkaç şekilde belirtebilirsiniz. İçin yeni bir değer ayarlayarak hem yüksekliğini hem de formun genişliğine programlama yoluyla değiştirebilirsiniz <xref:System.Windows.Forms.Form.Size%2A> özelliği veya ayarla <xref:System.Windows.Forms.Control.Height%2A> veya <xref:System.Windows.Forms.Control.Width%2A> özellikleri ayrı ayrı. Visual Studio kullanıyorsanız, Windows Forms Tasarımcısı'nı kullanarak boyutunu değiştirebilirsiniz. Ayrıca bkz: [nasıl yapılır: Tasarımcı kullanarak Windows formlarını yeniden boyutlandır](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100)).  
   
 ### <a name="to-resize-a-form-programmatically"></a>Bir form programlı olarak yeniden boyutlandırmak için  
   
--   Form boyutunu çalışma zamanında ayarlayarak tanımlarsanız <xref:System.Windows.Forms.Form.Size%2A> formun özelliği.  
+- Form boyutunu çalışma zamanında ayarlayarak tanımlarsanız <xref:System.Windows.Forms.Form.Size%2A> formun özelliği.  
   
      Aşağıdaki kod örneği, 100 x 100 piksel olarak ayarlayın form boyutunu gösterir.  
   
@@ -39,7 +39,7 @@ Windows formunuzda boyutu birkaç şekilde belirtebilirsiniz. İçin yeni bir de
   
 ### <a name="to-change-form-width-and-height-programmatically"></a>Form genişlik ve yükseklik programlı olarak değiştirmek için  
   
--   Sonra <xref:System.Windows.Forms.Form.Size%2A> olan tanımlanmış formu yükseklik veya genişlik kullanarak değiştirmek <xref:System.Windows.Forms.Control.Width%2A> veya <xref:System.Windows.Forms.Control.Height%2A> özellikleri.  
+- Sonra <xref:System.Windows.Forms.Form.Size%2A> olan tanımlanmış formu yükseklik veya genişlik kullanarak değiştirmek <xref:System.Windows.Forms.Control.Width%2A> veya <xref:System.Windows.Forms.Control.Height%2A> özellikleri.  
   
      Aşağıdaki kod örneği, yüksekliği sabit kalır ancak formun sol kenardan 300 piksel olarak ayarlayın formun genişliğine gösterir.  
   
@@ -75,7 +75,7 @@ Windows formunuzda boyutu birkaç şekilde belirtebilirsiniz. İçin yeni bir de
   
 ### <a name="to-change-form-size-by-increments-programmatically"></a>Form boyutunu artışlarla program aracılığıyla değiştirme  
   
--   Formun boyutunu artırmak için ayarlanmış <xref:System.Drawing.Size.Width%2A> ve <xref:System.Drawing.Size.Height%2A> özellikleri.  
+- Formun boyutunu artırmak için ayarlanmış <xref:System.Drawing.Size.Width%2A> ve <xref:System.Drawing.Size.Height%2A> özellikleri.  
   
      Aşağıdaki kod örneği, geçerli boyuttan daha geniş 200 piksel olarak formun genişliğini gösterir.  
   

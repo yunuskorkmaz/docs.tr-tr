@@ -3,11 +3,11 @@ title: "Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İste
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
 ms.openlocfilehash: 12b3fa03a1f259df8ee8c970463fa9ccee7267fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784273"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma
 Keşif proxy'si uygulama anlatılmaktadır üçüncü üç konuları konudur. Önceki konu [nasıl yapılır: Keşif proxy'sine bir bulunabilir hizmet ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), kendisini keşif proxy'sine bir WCF Hizmeti uygulanır. Bu konu başlığında keşif proxy'si WCF hizmeti bulmak için kullandığı bir WCF istemcisi oluşturma.  
@@ -18,9 +18,9 @@ Keşif proxy'si uygulama anlatılmaktadır üçüncü üç konuları konudur. Ö
   
 2. Aşağıdaki derlemelere başvurular ekleyin:  
   
-    1.  System.ServiceModel  
+    1. System.ServiceModel  
   
-    2.  System.ServiceModel.Discovery  
+    2. System.ServiceModel.Discovery  
   
 3. Proje için bu konunun alt kısmına bulunan GeneratedClient.cs ekleyin.  
   

@@ -3,11 +3,11 @@ title: Klavye Başvurusu
 description: Tüm ilgili bilgilere bağlantılar bulma F# dil anahtar sözcükleri.
 ms.date: 05/16/2016
 ms.openlocfilehash: d55846fe7c8d31454b6bc8684de75546800df7d6
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904104"
 ---
 # <a name="keyword-reference"></a>Klavye Başvurusu
 
@@ -38,7 +38,7 @@ Aşağıdaki tablo tüm gösterir F# kısa açıklamaları ve ilgili daha fazla 
 |`exception`|[Özel Durum İşleme](exception-handling/index.md)<br /><br />[Özel Durum Türleri](exception-handling/exception-types.md)|Bir özel durum türü bildirmek için kullanılır.|
 |`extern`|[Dış İşlevler](functions/external-functions.md)|Bildirilen program öğesi başka bir ikili ya da derleme tanımlanan gösterir.|
 |`false`|[İlkel Türler](primitive-types.md)|Bir Boolean değişmez değer olarak kullanılır.|
-|`finally`|[Özel durumlar: `try...finally` İfadesi](exception-handling/the-try-finally-expression.md)|İle birlikte kullanılan `try` olup özel bir durum oluştuğunda bağımsız olarak yürüten bir kod bloğunu dağıtır.|
+|`finally`|[Özel Durumlar: `try...finally` İfadesi](exception-handling/the-try-finally-expression.md)|İle birlikte kullanılan `try` olup özel bir durum oluştuğunda bağımsız olarak yürüten bir kod bloğunu dağıtır.|
 |`fixed`|[düzeltildi](fixed.md)|"Yığındaki çöp olarak toplanacak olmasını engellemek için bir işaretçi sabitlemek için" kullanılır.|
 |`for`|[Döngüler: `for...to` İfade](loops-for-to-expression.md)<br /><br />[Döngüler: for...in İfadesi](loops-for-in-expression.md)|Döngü yapıları kullanılır.|
 |`fun`|[Lambda Expressions: `fun` Anahtar Sözcüğü](functions/lambda-expressions-the-fun-keyword.md)|Olarak da bilinen anonim İşlevler, lambda ifadeleri kullanılır.|
@@ -77,7 +77,7 @@ Aşağıdaki tablo tüm gösterir F# kısa açıklamaları ve ilgili daha fazla 
 |`then`|[Koşullu ifadeler: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Oluşturucular](members/constructors.md)|Koşullu ifadelerle birlikte kullanılır.<br /><br />Yan etkileri nesne oluşturmayı sonra gerçekleştirmek için de kullanılır.|
 |`to`|[Döngüler: `for...to` İfade](loops-for-to-expression.md)|Kullanılan `for` döngüler aralık belirtmek için.|
 |`true`|[İlkel Türler](primitive-types.md)|Bir Boolean değişmez değer olarak kullanılır.|
-|`try`|[Özel durumlar: Try... with ifadesi](exception-handling/the-try-with-expression.md)<br /><br />[Özel durumlar: Try... finally ifadesi](exception-handling/the-try-finally-expression.md)|Bir özel durum oluşturabilecek bir kod bloğunu tanıtmak için kullanılır. İle birlikte kullanılan `with` veya `finally`.|
+|`try`|[Özel Durumlar: Try... with ifadesi](exception-handling/the-try-with-expression.md)<br /><br />[Özel Durumlar: Try... finally ifadesi](exception-handling/the-try-finally-expression.md)|Bir özel durum oluşturabilecek bir kod bloğunu tanıtmak için kullanılır. İle birlikte kullanılan `with` veya `finally`.|
 |`type`|[F# Türleri](fsharp-types.md)<br /><br />[Sınıflar](classes.md)<br /><br />[Kayıtlar](records.md)<br /><br />[Yapılar](structures.md)<br /><br />[Sabit Listeleri](enumerations.md)<br /><br />[Ayrılmış Birleşimler](discriminated-unions.md)<br /><br />[Tür Kısaltmaları](type-abbreviations.md)<br /><br />[Ölçü Birimleri](units-of-measure.md)|Bir sınıf, kayıt, yapısı, ayrılmış birleşim, numaralandırma türü, ölçü birimi bildirmek veya türü kısaltma için kullanılır.|
 |`upcast`|[Tür Değiştirme ve Dönüştürmeler](casting-and-conversions.md)|Devralma zincirinde daha yüksek bir türe dönüştürmek için kullanılır.|
 |`use`|[Kaynak Yönetimi: `use` Anahtar Sözcüğü](resource-management-the-use-keyword.md)|Yerine kullanılan `let` gerekli değerler için `Dispose` kaynakları serbest bırakmak için çağrılabilir.|
@@ -86,7 +86,7 @@ Aşağıdaki tablo tüm gösterir F# kısa açıklamaları ve ilgili daha fazla 
 |`void`|[İlkel Türler](primitive-types.md)|.NET gösterir `void` türü. Diğer .NET dilleri ile birlikte çalışırken kullanılır.|
 |`when`|[Kısıtlamalar](generics/constraints.md)|Boole koşulları için kullanılan (*olduğunda cf*) desen ve bir genel tür parametresi için bir kısıtlama yan tümcesi dağıtır.|
 |`while`|[Döngüler: `while...do` İfade](loops-while-do-expression.md)|Uvozuje konstruktor cyklu.|
-|`with`|[Eşleşme İfadeleri](match-expressions.md)<br /><br />[Nesne İfadeleri](object-expressions.md)<br /><br />[Kayıt İfadelerini Kopyalama ve Güncelleştirme](copy-and-update-record-expressions.md)<br /><br />[Tür Uzantıları](type-extensions.md)<br /><br />[Özel durumlar: `try...with` İfadesi](exception-handling/the-try-with-expression.md)|İle birlikte kullanılan `match` eşleştirme ifadesi deseninde anahtar sözcüğü. Ayrıca nesne ifadeleri, kayıt kopyalama ifadeleri ve tür uzantıları üye tanımları tanıtmak için ve özel durum işleyicileri tanıtmak için kullanılır.|
+|`with`|[Eşleşme İfadeleri](match-expressions.md)<br /><br />[Nesne İfadeleri](object-expressions.md)<br /><br />[Kayıt İfadelerini Kopyalama ve Güncelleştirme](copy-and-update-record-expressions.md)<br /><br />[Tür Uzantıları](type-extensions.md)<br /><br />[Özel Durumlar: `try...with` İfadesi](exception-handling/the-try-with-expression.md)|İle birlikte kullanılan `match` eşleştirme ifadesi deseninde anahtar sözcüğü. Ayrıca nesne ifadeleri, kayıt kopyalama ifadeleri ve tür uzantıları üye tanımları tanıtmak için ve özel durum işleyicileri tanıtmak için kullanılır.|
 |`yield`|[Diziler](sequences.md)|Bir sıralama ifadesi bir dizi için bir değer üretmek için kullanılır.|
 |`yield!`|[Hesaplama İfadeleri](computation-expressions.md)<br /><br />[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)|Verilen hesaplamayı ifadenin sonucu sonuçları içeren hesaplama ifadesi için bir koleksiyona eklenecek bir hesaplama ifadesinde kullanılır.|
 

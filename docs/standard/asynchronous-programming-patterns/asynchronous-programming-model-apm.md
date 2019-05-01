@@ -14,11 +14,11 @@ ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cff235fe45c75fda51e04d5b0b54bb3ee03051b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61870155"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Zaman Uyumsuz Programlama Modeli (APM)
 Kullanan zaman uyumsuz bir işlem <xref:System.IAsyncResult> tasarım deseni adlı iki yöntem uygulanan `BeginOperationName` ve `EndOperationName` başlar ve zaman uyumsuz işlemi sonlandıran *OperationName* sırasıyla. Örneğin, <xref:System.IO.FileStream> sağlar sınıfını <xref:System.IO.FileStream.BeginRead%2A> ve <xref:System.IO.FileStream.EndRead%2A> bayt bir dosyadan zaman uyumsuz olarak okumak için yöntemleri. Bu yöntemlerin zaman uyumsuz bir sürümüne uygulamak <xref:System.IO.FileStream.Read%2A> yöntemi.  
@@ -55,15 +55,15 @@ Kullanan zaman uyumsuz bir işlem <xref:System.IAsyncResult> tasarım deseni adl
   
  Uygulama geliştiricileri, zaman uyumsuz işlemin sonuçları erişmek için çeşitli tasarım seçenekleri sahiptir. Uygulama işlemi tamamlanırken yürütebilir yönergeleri olup doğru seçim bağlıdır. Zaman uyumsuz işlemin sonuçları alana kadar bir uygulama herhangi bir ek çalışma gerçekleştiremiyorsanız sonuçları kullanılabilir olana kadar uygulamayı engellemeniz gerekir. Zaman uyumsuz işlem tamamlanana kadar engellemek için aşağıdaki yaklaşımlardan birini kullanabilirsiniz:  
   
--   Çağrı `EndOperationName` uygulamanın ana iş parçacığından işlemi kadar uygulamanın yürütülmesini engelleme tamamlanmıştır. Bu teknik gösteren bir örnek için bkz: [zaman uyumsuz bir işlemi sonlandırarak uygulama yürütmesini engelleme](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
+- Çağrı `EndOperationName` uygulamanın ana iş parçacığından işlemi kadar uygulamanın yürütülmesini engelleme tamamlanmıştır. Bu teknik gösteren bir örnek için bkz: [zaman uyumsuz bir işlemi sonlandırarak uygulama yürütmesini engelleme](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
   
--   Kullanım <xref:System.IAsyncResult.AsyncWaitHandle%2A> için bir veya daha fazla işlem tamamlanana kadar uygulamanın yürütülmesini engelleme. Bu teknik gösteren bir örnek için bkz: [engelleme uygulama yürütme kullanarak bir AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
+- Kullanım <xref:System.IAsyncResult.AsyncWaitHandle%2A> için bir veya daha fazla işlem tamamlanana kadar uygulamanın yürütülmesini engelleme. Bu teknik gösteren bir örnek için bkz: [engelleme uygulama yürütme kullanarak bir AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
   
  Zaman uyumsuz işlemi tamamlanırken engellemek için gerekmeyen uygulamalar aşağıdaki yaklaşımlardan birini kullanabilirsiniz:  
   
--   Denetleyerek işlemi tamamlama durumu için yoklama <xref:System.IAsyncResult.IsCompleted%2A> düzenli aralıklarla özelliği ve arama `EndOperationName` işlemi tamamlandığında. Bu teknik gösteren bir örnek için bkz: [zaman uyumsuz bir işlemin durumu için yoklama](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).  
+- Denetleyerek işlemi tamamlama durumu için yoklama <xref:System.IAsyncResult.IsCompleted%2A> düzenli aralıklarla özelliği ve arama `EndOperationName` işlemi tamamlandığında. Bu teknik gösteren bir örnek için bkz: [zaman uyumsuz bir işlemin durumu için yoklama](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).  
   
--   Kullanım bir <xref:System.AsyncCallback> işlemi tamamlandığında çağrılacak bir yöntem belirtmek için temsilci. Bu teknik gösteren bir örnek için bkz: [zaman uyumsuz bir işlemi sonlandırmak için bir AsyncCallback temsilcisi kullanma](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
+- Kullanım bir <xref:System.AsyncCallback> işlemi tamamlandığında çağrılacak bir yöntem belirtmek için temsilci. Bu teknik gösteren bir örnek için bkz: [zaman uyumsuz bir işlemi sonlandırmak için bir AsyncCallback temsilcisi kullanma](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -16,24 +16,24 @@ ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876154"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>İzleme Uygulamaları
 İzleme, çalışırken uygulamanızın yürütmesini izlemek bir yoldur. .NET Framework uygulamanızı izleme ve hata ayıklama araçları, geliştirme ve uygulama geliştirirken hem dağıttıktan sonra bu araçları kullanabilirsiniz ekleyebilirsiniz. Kullanabileceğiniz <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType>, ve <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> hataları ve uygulama yürütme günlükleri, metin dosyaları veya diğer cihazlar daha sonra çözümlemek için ilgili bilgileri kaydetmek için sınıflar.  
   
  Terim *izleme* izlemek veya bir ürünün performans düzeyini ölçün ve hataları tanılamak için bir yeteneği anlamına gelir. Programlamada, bu özelliği eklemek için bir uygulamanın anlamına gelir:  
   
--   **Kod izleme** -çalışma zamanında bir uygulamanın yürütülmesini hakkında bilgi iletileri alma.  
+- **Kod izleme** -çalışma zamanında bir uygulamanın yürütülmesini hakkında bilgi iletileri alma.  
   
--   **Hata ayıklama** - izleme ve geliştirme aşamasındaki bir uygulamada programlama hatalarını düzeltiyor. Daha fazla bilgi için [hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio).  
+- **Hata ayıklama** - izleme ve geliştirme aşamasındaki bir uygulamada programlama hatalarını düzeltiyor. Daha fazla bilgi için [hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio).  
   
--   **Performans sayaçları** -uygulamanızın performansını izlemek bileşenleri. Daha fazla bilgi için [performans sayaçları](../../../docs/framework/debug-trace-profile/performance-counters.md).  
+- **Performans sayaçları** -uygulamanızın performansını izlemek bileşenleri. Daha fazla bilgi için [performans sayaçları](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   
--   **Olay günlükleri** -bileşenleri almak ve uygulamanızın yürütmesini önemli olayları izleyin. Daha fazla bilgi için <xref:System.Diagnostics.EventLog> sınıfı.  
+- **Olay günlükleri** -bileşenleri almak ve uygulamanızın yürütmesini önemli olayları izleyin. Daha fazla bilgi için <xref:System.Diagnostics.EventLog> sınıfı.  
   
  İzleme deyimleri kodunuzda stratejik konumlara yerleştirerek, uygulamada ölçümlü izleme yapma, dağıtılmış uygulamalar için özellikle yararlıdır. İzleme deyimleri kullanarak bir uygulama yalnızca işler kötüye gittiğinde bilgileri görüntülemek için aynı zamanda uygulamanın ne kadar iyi gerçekleştiriyor izlemek için izleyebilirsiniz.  
   
@@ -91,11 +91,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 6. Aşağıdaki yordamlardan birini kullanarak yürütülebilir kod uygulamasına derleyin:  
   
-    -   Kullanım **derleme** menüsü ile birlikte **hata ayıklama** sayfasının **özellik sayfaları** iletişim kutusunda **Çözüm Gezgini**. Bu, Visual Studio'da derleme sırasında kullanın.  
+    - Kullanım **derleme** menüsü ile birlikte **hata ayıklama** sayfasının **özellik sayfaları** iletişim kutusunda **Çözüm Gezgini**. Bu, Visual Studio'da derleme sırasında kullanın.  
   
          \- veya -  
   
-    -   Kullanım **izleme** ve **hata ayıklama** derleme komut satırı yöntemi için derleyici yönergeleri. Daha fazla bilgi için [izleme ve hata ayıklama ile koşullu derleme](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Bu komut satırından derleme yapılırken kullanın.  
+    - Kullanım **izleme** ve **hata ayıklama** derleme komut satırı yöntemi için derleyici yönergeleri. Daha fazla bilgi için [izleme ve hata ayıklama ile koşullu derleme](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Bu komut satırından derleme yapılırken kullanın.  
   
 7. Çalışma zamanı sırasında bir sorun meydana gelirse, uygun bir izleme anahtarı etkinleştirin. Daha fazla bilgi için [izleme anahtarları yapılandırma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   

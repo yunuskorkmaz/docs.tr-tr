@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 6c78d1e1a69dd247b51722cc888f3bdd2de93993
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60118914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664482"
 ---
 ### <a name="product-versioning-changes-in-the-net-framework-46-and-later-versions"></a>.NET Framework 4.6 ve sonraki sürümlerde ürün sürümü oluşturma değişiklikleri
 

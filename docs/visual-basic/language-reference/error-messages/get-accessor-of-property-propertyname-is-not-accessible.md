@@ -8,30 +8,30 @@ helpviewer_keywords:
 - BC31103
 ms.assetid: 3c346c32-7669-4b04-841d-7a9df9cb703e
 ms.openlocfilehash: 8fb78f3c14708c79f1910e202287c25a3b2213b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803057"
 ---
 # <a name="get-accessor-of-property-propertyname-is-not-accessible"></a>' Özelliğinin'get ' erişimcisine '\<propertyname >' erişilebilir değil
 Özelliğin erişimi olmadığında bir özelliğin değerini almak bir deyim çalışır `Get` yordamı.  
   
  Varsa [alma deyimi](../../../visual-basic/language-reference/statements/get-statement.md) ile daha kısıtlayıcı bir erişim düzeyi daha işaretlenmiş kendi [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md), aşağıdaki durumlarda özellik değerini okuma girişimi başarısız olabilir:  
   
--   `Get` Deyimi işaretlenmiş [özel](../../../visual-basic/language-reference/modifiers/private.md) ve çağrıldığı koda bir sınıf veya yapı özelliği tanımlanır dışında.  
+- `Get` Deyimi işaretlenmiş [özel](../../../visual-basic/language-reference/modifiers/private.md) ve çağrıldığı koda bir sınıf veya yapı özelliği tanımlanır dışında.  
   
--   `Get` Deyimi işaretlenmiş [korumalı](../../../visual-basic/language-reference/modifiers/protected.md) ve çağıran kod değil, sınıf veya yapı özelliği tanımlanır, ya da türetilen bir sınıfta değil.  
+- `Get` Deyimi işaretlenmiş [korumalı](../../../visual-basic/language-reference/modifiers/protected.md) ve çağıran kod değil, sınıf veya yapı özelliği tanımlanır, ya da türetilen bir sınıfta değil.  
   
--   `Get` Deyimi işaretlenmiş [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md) ve çağıran kod özelliği tanımlanır derlemede değil.  
+- `Get` Deyimi işaretlenmiş [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md) ve çağıran kod özelliği tanımlanır derlemede değil.  
   
  **Hata Kimliği:** BC31103  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Özellik tanımlama kaynak kodu denetim varsa bildirmeyi göz önünde bulundurun `Get` yordamla aynı erişim düzeyi özelliği olarak.  
+- Özellik tanımlama kaynak kodu denetim varsa bildirmeyi göz önünde bulundurun `Get` yordamla aynı erişim düzeyi özelliği olarak.  
   
--   Özellik tanımlama kaynak kodu denetim sahibi olmadığınız ya da kısıtlamanız gerekir `Get` yordamı erişim düzeyi özelliği kendisini deneyin birden fazla özellik değeri daha iyi erişimi olan bir bölge kodu okuyan deyim taşımak özellik.  
+- Özellik tanımlama kaynak kodu denetim sahibi olmadığınız ya da kısıtlamanız gerekir `Get` yordamı erişim düzeyi özelliği kendisini deneyin birden fazla özellik değeri daha iyi erişimi olan bir bölge kodu okuyan deyim taşımak özellik.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
