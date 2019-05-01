@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff25d2cef52a8c690f895222d69591bc53b3765e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: d9fef3bfb070e5e87dd0f7f78e76af6e6e051967
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677191"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809634"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows sistemlerde büyük nesne yığını
 
@@ -154,9 +154,9 @@ Bu performans sayaçlarını genellikle performans sorunlarını araştırma, iy
 
    Boş disk alanı, LOH dahil olmak üzere bayt cinsinden geçerli boyutu, görüntüler. Bu sayaç her ayırma zaman bir atık toplama sonunda güncelleştirilir.
 
-Performans İzleyicisi (perfmon.exe) performans sayaçlarını aramak için genel bir yoludur. Verdiğiniz işlemleri için ilgi çekici sayaç eklemek için "Sayaç Ekle" kullanın. Şekil 4'te gösterildiği gibi performans sayacı verileri bir günlük dosyasına kaydedebilirsiniz.
+Performans İzleyicisi (perfmon.exe) performans sayaçlarını aramak için genel bir yoludur. Verdiğiniz işlemleri için ilgi çekici sayaç eklemek için "Sayaç Ekle" kullanın. Şekil 4'te gösterildiği gibi performans sayacı verileri bir günlük dosyasına kaydedebilirsiniz:
 
-![Şekil 4: Performans sayaçlarını ekleme.](media/loh/perfcounter.png)\
+![Screenshow performans sayaçlarını eklemeyi gösterir.](media/large-object-heap/add-performance-counter.png)
 Şekil 4: 2. nesil GC sonra LOH
 
 Performans sayaçları da programlı bir şekilde sorgulanabilir. Çoğu kişi, bunları kendi rutin test işleminin bir parçası olarak bu şekilde toplayın. Bunlar normal dışı değerleri sayaçlarla spot, bunlar başka bir yolla araştırmaya yardımcı olması için daha ayrıntılı veri almak için kullanın.
@@ -184,7 +184,8 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 Sonuç aşağıdakine benzer olacaktır:
 
-![Şekil 5: PerfView kullanma ETW olayları İnceleme](media/loh/perfview.png) Şekil 5: PerfView kullanma gösterilen ETW olayları
+![ETW olayları PerfView gösteren ekran görüntüsü.](media/large-object-heap/event-tracing-windows-perfview.png)
+Şekil 5: PerfView kullanma gösterilen ETW olayları
 
 Gördüğünüz gibi tüm GC'ler 2. GC'ye olan ve tüm büyük nesne ayırma bu GC tetiklenen yani AllocLarge tarafından tetiklenir. Bu ayırmalar geçici olduğunu biliyoruz çünkü **LOH hayatta kalma oranı %** sütun %1 söyler.
 
@@ -196,7 +197,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 yaklaşık her 100 bin cinsinden değer ayırmaların harekete geçirilen bir AllocationTick olay toplar. Diğer bir deyişle, her zaman büyük nesne ayrılmış bir olay harekete geçirilir. Ardından, büyük nesnelerin ayrılmış çağrı yığınını gösteren GC yığın ayırma görünümlerden birine göz atabilirsiniz:
 
-![Şekil 6: GC yığın ayırma görünümü](media/loh/perfview2.png)\
+![Yığın Görünümü atık Toplayıcıya gösteren ekran görüntüsü.](media/large-object-heap/garbage-collector-heap.png)
 Şekil 6: GC yığın ayırma görünümü
 
 Gördüğünüz gibi yalnızca büyük nesneleri ayırdığı çok basit bir test budur kendi `Main` yöntemi.

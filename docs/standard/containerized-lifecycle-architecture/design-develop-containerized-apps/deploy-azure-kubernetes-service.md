@@ -1,17 +1,17 @@
 ---
-title: Mikro hizmetler ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcılı uygulamaları yönetme
+title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 description: Azure Kubernetes hizmetini kullanarak bir uygulamayı dağıtmayı öğrenin.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 82a1cf7f3cc367bfb8b8f67a130600815f2a21c4
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006557"
 ---
-# <a name="deploy-to-azure-kubernetes-service-aks"></a>Azure Kubernetes Service'i (AKS) dağıtma
+# <a name="deploy-to-azure-kubernetes-service-aks"></a>Azure Kubernetes Service’e (AKS) Dağıtma
 
 Tercih edilen istemci işletim sisteminizi kullanarak AKS ile etkileşim kurabilir, burada Microsoft Windows ve Windows, Ubuntu Linux katıştırılmış bir sürümü ile nasıl yapılacağını Bash komutları kullanarak göstereceğiz.
 

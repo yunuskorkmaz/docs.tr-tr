@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 857eb737-3602-4d49-bd8b-f70d33ace345
 ms.openlocfilehash: e94cdc38b97f95cfe8a8504733298525c25667df
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011872"
 ---
 # <a name="windows-forms-visual-inheritance"></a>Windows Forms Görsel Devralma
 Bazen, bir proje için bir form benzer şekilde, önceki bir proje içinde oluşturduğunuz bir çağıran karar verebilirsiniz. Veya bir filigran ya da daha sonra yeniden içinde bir proje, özgün form şablonu değişiklikleri içeren her yineleme ile kullanacağınız belirli denetim düzeni gibi ayarları ile temel bir form oluşturmak isteyebilirsiniz. Form devralma, bir taban formunu oluşturmak ve ardından bu türden devralmalıdır ve değişiklik hangi özgün ayarlarına ihtiyacınız korurken sağlar.  

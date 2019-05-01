@@ -1,15 +1,15 @@
 ---
-title: Uygulama gizli dizilerini güvenli bir şekilde geliştirme sırasında depolama
+title: Geliştirme sırasında uygulama gizli dizilerini güvenli bir şekilde depolama
 description: .NET mikro Hizmetleri ve Web uygulamaları - güvenlik ASP.NET Core kullanabileceğiniz seçenekler parolalar, bağlantı dizeleri veya kaynak denetimi, API anahtarlarını anlama gibi uygulama parolalarını depolamak yoksa, "kullanıcı ne yapılacağını anlamak zorunda özellikle Gizli dizileri".
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
 ms.openlocfilehash: fe8e7fa11c9a4f4cae133c2e09f9e4b4dd40a546
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019431"
 ---
 # <a name="store-application-secrets-safely-during-development"></a>Uygulama gizli dizilerini güvenli bir şekilde geliştirme sırasında Store
 

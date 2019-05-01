@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: 24e335b0-984e-4825-8721-0a91b533b7c3
 ms.openlocfilehash: 2f66b996a0e688205d61f5fca476c0335616ee38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032948"
 ---
 # <a name="compute-the-sum-of-values-in-a-numeric-sequence"></a>Sayısal Dizideki Değerlerin Toplamını Hesaplama
 Kullanım <xref:System.Linq.Enumerable.Sum%2A> sıralı sayısal değerlerin toplamını hesaplamak için işleci.  
   
  Aşağıdaki özellikleri Not `Sum` işlecinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
   
--   Standart sorgu işleci Toplama işleci `Sum` sıfıra boş bir dizi veya yalnızca null içeren bir dizi olarak değerlendirilir. İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], SQL semantiği sol değişmez. Bu nedenle, `Sum` yerine null yalnızca null içeren bir dizi veya boş bir dizi için sıfır olarak değerlendirilir.  
+- Standart sorgu işleci Toplama işleci `Sum` sıfıra boş bir dizi veya yalnızca null içeren bir dizi olarak değerlendirilir. İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], SQL semantiği sol değişmez. Bu nedenle, `Sum` yerine null yalnızca null içeren bir dizi veya boş bir dizi için sıfır olarak değerlendirilir.  
   
--   Toplamalar Ara sonuçlar SQL sınırlamalar uygulanır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. 32 bit tamsayı miktarlar toplamı, 64-bit sonuçları kullanarak değil hesaplanır ve taşma için meydana gelebilir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çevirisi `Sum`. Standart sorgu işleci uygulaması karşılık gelen bir bellek içi dizisi taşmaya neden olmaz olsa bile bu olasılığı bulunmaktadır.  
+- Toplamalar Ara sonuçlar SQL sınırlamalar uygulanır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. 32 bit tamsayı miktarlar toplamı, 64-bit sonuçları kullanarak değil hesaplanır ve taşma için meydana gelebilir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çevirisi `Sum`. Standart sorgu işleci uygulaması karşılık gelen bir bellek içi dizisi taşmaya neden olmaz olsa bile bu olasılığı bulunmaktadır.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek tüm siparişleri toplam navlun bulur `Order` tablo.  

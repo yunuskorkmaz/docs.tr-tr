@@ -6,11 +6,11 @@ helpviewer_keywords:
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
 ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053528"
 ---
 # <a name="read-only-dependency-properties"></a>Salt Okunur Bağımlılık Özellikleri
 Bu konuda, var olan salt okunur bağımlılık özellikleri senaryoları ve özel salt okunur bağımlılık özelliği oluşturmaya yönelik teknikleri dahil olmak üzere, salt okunur bağımlılık özellikleri açıklanmaktadır.  
@@ -31,11 +31,11 @@ Bu konuda, var olan salt okunur bağımlılık özellikleri senaryoları ve öze
   
  Salt okunur bağımlılık özelliği oluşturma işleminin açıklanan aynı mıdır [özel bağımlılık özellikleri](custom-dependency-properties.md) ve [bağımlılık özelliği uygulama](how-to-implement-a-dependency-property.md) konuları. Üç önemli farklar vardır:  
   
--   Özelliğinizi aramanızı <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> yöntemi yerine normal <xref:System.Windows.DependencyProperty.Register%2A> özelliği kayıt için yöntemi.  
+- Özelliğinizi aramanızı <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> yöntemi yerine normal <xref:System.Windows.DependencyProperty.Register%2A> özelliği kayıt için yöntemi.  
   
--   Uygularken [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "sarmalayıcı" özelliği sarmalayıcı çok küme uygulaması yoktur, yani tutarsız ortak kapsayıcı için salt okunur durumda, kullanıma emin olun.  
+- Uygularken [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "sarmalayıcı" özelliği sarmalayıcı çok küme uygulaması yoktur, yani tutarsız ortak kapsayıcı için salt okunur durumda, kullanıma emin olun.  
   
--   Salt okunur kaydı tarafından döndürülen nesne <xref:System.Windows.DependencyPropertyKey> yerine <xref:System.Windows.DependencyProperty>. Bu alan üye olarak halen depolamanız gerekir, ancak genellikle, bu tür ortak üye yapacağınız değil.  
+- Salt okunur kaydı tarafından döndürülen nesne <xref:System.Windows.DependencyPropertyKey> yerine <xref:System.Windows.DependencyProperty>. Bu alan üye olarak halen depolamanız gerekir, ancak genellikle, bu tür ortak üye yapacağınız değil.  
   
  Herhangi bir özel alan veya değer yedeklediğiniz Elbette, salt okunur bağımlılık özelliği için istediğinize karar mantığı kullanarak tam olarak yazılabilir. Ancak, özelliği başlangıçta veya çalışma zamanı mantığının parçası olarak ayarlamak için en kolay yolu özellik sisteminin kullanmaktır [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], özellik sistemi atlamak ve doğrudan özel yedekleme alanını ayarlamak yerine. Özellikle, bir imzası yok <xref:System.Windows.DependencyObject.SetValue%2A> türünde bir parametre kabul eden <xref:System.Windows.DependencyPropertyKey>. Nasıl ve nerede, bu değeri içinde uygulama mantığınızın programlanarak nasıl erişim ayarlamak isteyebilirsiniz etkiler <xref:System.Windows.DependencyPropertyKey> bağımlılık özelliği ilk kaydedildiğinde oluşturulur. Sınıf içindeki tüm bu mantığı işlemek, bunu özel bir duruma ya da derlemeyi diğer bölümlerinden ayarlanmış olması gerekiyorsa, bu iç ayarlayabilirsiniz. Bir yaklaşım ise çağrılacak <xref:System.Windows.DependencyObject.SetValue%2A> içinde saklanan özellik değerinin değiştirilmesi gereken bir sınıf örneğini bilgilendiren ilgili bir olayın olay işleyicisi sınıfı. Bağımlılık özellikleri eşleştirilmiş kullanarak birbirine bağlamak için başka bir yaklaşımdır <xref:System.Windows.PropertyChangedCallback> ve <xref:System.Windows.CoerceValueCallback> kayıt sırasında özelliklere meta veri parçası olarak geri çağırmalar.  
   

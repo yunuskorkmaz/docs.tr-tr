@@ -1,5 +1,5 @@
 ---
-title: RepeatButton stilleri ve şablonları
+title: RepeatButton Stilleri ve Şablonları
 ms.date: 03/30/2017
 helpviewer_keywords:
 - RepeatButton [WPF], styles and templates
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - states [WPF], RepeatButton
 ms.assetid: fd340743-f44f-4990-9077-085301469670
 ms.openlocfilehash: 86f212326bc707e4b07b8cab8d9a95d4f6ef8920
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57507318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053322"
 ---
-# <a name="repeatbutton-styles-and-templates"></a>RepeatButton stilleri ve şablonları
+# <a name="repeatbutton-styles-and-templates"></a>RepeatButton Stilleri ve Şablonları
 
 Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.Primitives.RepeatButton> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).
 

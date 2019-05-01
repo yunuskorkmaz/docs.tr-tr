@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
 ms.openlocfilehash: ad5a14ed3baab5b25cb1ed15271474580faaf176
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033156"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Otomatik Test İçin UI Otomasyonunu Kullanma
 > [!NOTE]
@@ -61,15 +61,15 @@ ms.locfileid: "59183982"
 ### <a name="programmatic-access"></a>Programlı erişim  
  Programlı erişim, kod, etkileşim ve geleneksel fare ve klavye tarafından kullanıma sunulan deneyimi aracılığıyla taklit olanağı sağlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] beş bileşene aracılığıyla programlı erişim sağlar:  
   
--   [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ağaç yapısını gezinmeyi kolaylaştıran [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Ağaç hWnd'ın koleksiyonundan yerleşik olarak bulunur. Daha fazla bilgi için [UI Otomasyon ağacına genel bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ağaç yapısını gezinmeyi kolaylaştıran [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Ağaç hWnd'ın koleksiyonundan yerleşik olarak bulunur. Daha fazla bilgi için [UI Otomasyon ağacına genel bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
   
--   Otomasyon öğeleridir bileşenleri tek tek [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Bunlar genellikle bir hWnd daha ayrıntılı olabilir. Daha fazla bilgi için [UI Otomasyon denetim türlerine genel bakış](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md).  
+- Otomasyon öğeleridir bileşenleri tek tek [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Bunlar genellikle bir hWnd daha ayrıntılı olabilir. Daha fazla bilgi için [UI Otomasyon denetim türlerine genel bakış](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md).  
   
--   Otomasyon özellikleri hakkında ayrıntılı bilgi sağlamak [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğeleri. Daha fazla bilgi için [UI Otomasyon özelliklerine genel bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+- Otomasyon özellikleri hakkında ayrıntılı bilgi sağlamak [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğeleri. Daha fazla bilgi için [UI Otomasyon özelliklerine genel bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
   
--   Denetimin işlevsellik belirli bir yönüyle denetim düzenleri tanımlayın. Bunlar, özellik, yöntem, olay ve yapı bilgileri oluşabilir. Daha fazla bilgi için [UI Otomasyon denetim düzenlerine genel bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
+- Denetimin işlevsellik belirli bir yönüyle denetim düzenleri tanımlayın. Bunlar, özellik, yöntem, olay ve yapı bilgileri oluşabilir. Daha fazla bilgi için [UI Otomasyon denetim düzenlerine genel bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
--   Otomasyon olayları, olay bildirimleri ve bilgileri sağlayın. Daha fazla bilgi için [UI Otomasyonu olaylarına genel bakış](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
+- Otomasyon olayları, olay bildirimleri ve bilgileri sağlayın. Daha fazla bilgi için [UI Otomasyonu olaylarına genel bakış](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
 <a name="Key_properties_critical_to_test_automation"></a>   
 ### <a name="key-properties-for-test-automation"></a>Test otomasyonu için anahtar özellikler  
@@ -103,9 +103,9 @@ ms.locfileid: "59183982"
 ## <a name="related-tools-and-technologies"></a>İlgili araçları ve teknolojileri  
  İlgili araçları ve desteği ile otomatikleştirilmiş test teknoloji birçok [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
--   Inspect.exe olduğu bir [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)] toplamak için kullanılan uygulama [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sağlayıcısı ve istemci geliştirme ve hata ayıklama bilgileri. Inspect.exe dahil [!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)].  
+- Inspect.exe olduğu bir [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)] toplamak için kullanılan uygulama [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sağlayıcısı ve istemci geliştirme ve hata ayıklama bilgileri. Inspect.exe dahil [!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)].  
   
--   MSAABridge sunan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bilgileri [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] istemciler. Köprü oluşturma birincil amacı [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] için [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] varolan izin vermektir [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] istemcileri gerçekleştirdiğini herhangi bir çerçeveyi etkileşme yeteneği [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
+- MSAABridge sunan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bilgileri [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] istemciler. Köprü oluşturma birincil amacı [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] için [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] varolan izin vermektir [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] istemcileri gerçekleştirdiğini herhangi bir çerçeveyi etkileşme yeteneği [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
 <a name="Security"></a>   
 ## <a name="security"></a>Güvenlik  

@@ -3,11 +3,11 @@ title: Genel Olmayan ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
 ms.openlocfilehash: 353128d1c313be62222e091c084e5b5e37a92b58
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004919"
 ---
 # <a name="non-generic-foreach"></a>Genel Olmayan ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] kendi araç kutusunda etkinlikler, akış denetimi dahil olmak üzere bir dizi birlikte gelen <xref:System.Activities.Statements.ForEach%601>, üzerinden yineleme olanak tanıyan <xref:System.Collections.Generic.IEnumerable%601> koleksiyonları.  
@@ -97,9 +97,9 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 1. Seçtiğiniz proje, çözümün başlangıç projesi ayarlayın:  
   
-    1.  **CodeTestClient** kod kullanarak etkinliğini kullanma işlemini gösterir.  
+    1. **CodeTestClient** kod kullanarak etkinliğini kullanma işlemini gösterir.  
   
-    2.  **DesignerTestClient** etkinlik Tasarımcısı içinde kullanmayı gösterir.  
+    2. **DesignerTestClient** etkinlik Tasarımcısı içinde kullanmayı gösterir.  
   
 2. Derleme ve projeyi çalıştırın.  
   

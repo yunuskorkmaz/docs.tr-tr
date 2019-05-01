@@ -3,11 +3,11 @@ title: SQL İş Akışı Örnek Deposu
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
 ms.openlocfilehash: 8314781f46d9cd4eddd06f6be95f8e952feef1b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004633"
 ---
 # <a name="sql-workflow-instance-store"></a>SQL İş Akışı Örnek Deposu
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Bir SQL Server 2005 veya SQL Server 2008 veritabanına iş akışı durumlarda hakkındaki durum bilgilerini kalıcı hale getirmek iş akışlarını tanır SQL iş akışı örneği Store ile birlikte gelir. Bu özellik öncelikle biçiminde uygulanan <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Özet türetilen sınıfı <xref:System.Runtime.DurableInstancing.InstanceStore> Kalıcılık framework'ün sınıfı. SQL iş akışı örneği Store özelliği bir somut sürekliliğin uygulanmasını Kalıcılık komutları depoya göndermek için bir ana bilgisayar kullanan bir SQL Kalıcılık sağlayıcısı oluşturur.  
@@ -22,19 +22,19 @@ ms.locfileid: "59086578"
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
--   [SQL İş Akışı Örnek Deposunun Özellikleri](properties-of-sql-workflow-instance-store.md)  
+- [SQL İş Akışı Örnek Deposunun Özellikleri](properties-of-sql-workflow-instance-store.md)  
   
--   [Nasıl yapılır: İş akışları ve iş akışı hizmetleri için SQL kalıcılığını etkinleştirme](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+- [Nasıl yapılır: İş akışları ve iş akışı hizmetleri için SQL kalıcılığını etkinleştirme](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
--   [Örnek Etkinleştirme](instance-activation.md)  
+- [Örnek Etkinleştirme](instance-activation.md)  
   
--   [Sorgu Desteği](support-for-queries.md)  
+- [Sorgu Desteği](support-for-queries.md)  
   
--   [Depo Genişletilebilirliği](store-extensibility.md)  
+- [Depo Genişletilebilirliği](store-extensibility.md)  
   
--   [Güvenlik](security.md)  
+- [Güvenlik](security.md)  
   
--   [SQL Server Kalıcılık Veritabanı](sql-server-persistence-database.md)  
+- [SQL Server Kalıcılık Veritabanı](sql-server-persistence-database.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

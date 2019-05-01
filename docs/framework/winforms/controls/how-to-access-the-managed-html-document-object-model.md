@@ -9,18 +9,18 @@ helpviewer_keywords:
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
 ms.openlocfilehash: 04d5f9e6f128d9b4ed3f07a5faebe06ae4ffdebf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011261"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>Nasıl yapılır: Yönetilen HTML Belgesi Nesne Modeline Erişme
 Yönetilen HTML belgesi nesne modeli (DOM) iki tür uygulamalar arasında erişebilirsiniz:  
   
--   Barındırılan yönetilen bir Windows Forms uygulaması (.exe) <xref:System.Windows.Forms.WebBrowser> denetimi. Bu iki teknoloji, ile tamamlayıcı <xref:System.Windows.Forms.WebBrowser> denetimi için kullanıcı ve belgenin mantıksal yapısını temsil eden HTML DOM sayfa görüntüleme.  
+- Barındırılan yönetilen bir Windows Forms uygulaması (.exe) <xref:System.Windows.Forms.WebBrowser> denetimi. Bu iki teknoloji, ile tamamlayıcı <xref:System.Windows.Forms.WebBrowser> denetimi için kullanıcı ve belgenin mantıksal yapısını temsil eden HTML DOM sayfa görüntüleme.  
   
--   Bir Windows Forms <xref:System.Windows.Forms.UserControl> Internet Explorer içinde barındırılan. Sayfayı temsil eden HTML DOM erişebilir, <xref:System.Windows.Forms.UserControl> belgenin yapısını değiştirebilir veya diğer birçok olası arasında kalıcı iletişim kutuları açmak için barındırılır.  
+- Bir Windows Forms <xref:System.Windows.Forms.UserControl> Internet Explorer içinde barındırılan. Sayfayı temsil eden HTML DOM erişebilir, <xref:System.Windows.Forms.UserControl> belgenin yapısını değiştirebilir veya diğer birçok olası arasında kalıcı iletişim kutuları açmak için barındırılır.  
   
 ### <a name="to-access-dom-from-a-windows-forms-application"></a>DOM bir Windows Forms uygulamasından erişmek için  
   

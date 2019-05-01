@@ -7,11 +7,11 @@ helpviewer_keywords:
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
 ms.openlocfilehash: 745c2174c54ed072f91a6d5eb3b43d5385e96b90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053385"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Denetimlerde Odak için Stil Oluşturma ve FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] klavye odağı aldığında, bir denetimin görünümünü değiştirmek için iki paralel mekanizmaları sağlar. Gibi özellikler için özellik ayarlayıcılarına kullanılacak ilk mekanizmadır <xref:System.Windows.UIElement.IsKeyboardFocused%2A> stil veya denetime uygulanan şablon içinde. Değeri olarak ayrı bir stil sağlamak için ikinci mekanizmadır <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> özelliği; "odak görsel stili" denetimi, üstünde denetimi veya diğer kullanıcı Arabirimi görsel ağacını değiştirmek yerine çizen donatıcı için ayrı bir görsel ağaç oluşturur Bunu değiştirerek öğesi. Bu konuda, bu mekanizmaların her biri uygun olduğu senaryolar açıklanmaktadır.  

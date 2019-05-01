@@ -11,11 +11,11 @@ helpviewer_keywords:
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
 ms.openlocfilehash: 6e361cbe89f4c51f28199b008de817c2d48ef326
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051864"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
 Bir değişken veya özellik okunabildiğini ancak yazılmazsa olduğunu belirtir.  
@@ -24,11 +24,11 @@ Bir değişken veya özellik okunabildiğini ancak yazılmazsa olduğunu belirti
   
 ## <a name="rules"></a>Kurallar  
   
--   **Bildirim bağlamı.** Kullanabileceğiniz `ReadOnly` yalnızca Modül düzeyinde. Bildirim bağlamı başka bir deyişle bir `ReadOnly` öğesi bir sınıf, yapı veya modül olmalıdır ve bir kaynak dosyası, ad alanı ya da yordamın olamaz.  
+- **Bildirim bağlamı.** Kullanabileceğiniz `ReadOnly` yalnızca Modül düzeyinde. Bildirim bağlamı başka bir deyişle bir `ReadOnly` öğesi bir sınıf, yapı veya modül olmalıdır ve bir kaynak dosyası, ad alanı ya da yordamın olamaz.  
   
--   **Birleşik değiştiriciler.** Belirtemezsiniz `ReadOnly` ile birlikte `Static` aynı bildirimde.  
+- **Birleşik değiştiriciler.** Belirtemezsiniz `ReadOnly` ile birlikte `Static` aynı bildirimde.  
   
--   **Bir değer atama.** Kod kullanan bir `ReadOnly` özellik değeri ayarlayamaz. Ancak, temel alınan depolama erişimi olan kod atama veya herhangi bir zamanda değeri değiştirin.  
+- **Bir değer atama.** Kod kullanan bir `ReadOnly` özellik değeri ayarlayamaz. Ancak, temel alınan depolama erişimi olan kod atama veya herhangi bir zamanda değeri değiştirin.  
   
      Bir değer atamak için bir `ReadOnly` yalnızca bildiriminden veya bir sınıf veya yapı içinde tanımlanmış olduğu oluşturucusunun değişken.  
   

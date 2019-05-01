@@ -9,11 +9,11 @@ helpviewer_keywords:
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
 ms.openlocfilehash: 530f6cb8fbe80df3ad374f8ad0e4836be82830a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054334"
 ---
 # <a name="animation-overview"></a>Animasyona Genel bakış
 <a name="introduction"></a>
@@ -27,13 +27,13 @@ ms.locfileid: "59337740"
   
  Bir bilgisayarda animasyonu da benzerdir. Örneğin, çizim görünümü dışında bir dikdörtgen yavaşça kılan bir program gibi çalışabilir.  
   
--   Zamanlayıcı bir program oluşturur.  
+- Zamanlayıcı bir program oluşturur.  
   
--   Program, Zamanlayıcının ne kadar süre geçtiğini görmek için belirlenen aralıklarla denetler.  
+- Program, Zamanlayıcının ne kadar süre geçtiğini görmek için belirlenen aralıklarla denetler.  
   
--   Zamanlayıcı, program denetler her zaman geçerli ne kadar zaman geçti bağlı olarak dikdörtgen opaklık değerini hesaplar.  
+- Zamanlayıcı, program denetler her zaman geçerli ne kadar zaman geçti bağlı olarak dikdörtgen opaklık değerini hesaplar.  
   
--   Program dikdörtgen yeni değerle güncelleştirir ve onu yeniden çizer.  
+- Program dikdörtgen yeni değerle güncelleştirir ve onu yeniden çizer.  
   
  Öncesinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] geliştiriciler gerekiyordu oluşturup kendi zamanlama sistemleri yönetmek veya özel kitaplıkları kullanın. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yönetilen kod kullanıma sunulan bir etkin zamanlama sistemi içerir ve [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve derin bir şekilde tümleşmiş içine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon denetimleri ve diğer grafik nesneleri kolaylaştırır.  
   
@@ -45,11 +45,11 @@ ms.locfileid: "59337740"
   
  Bir özellik animasyon özelliklerini kullanabilmek aşağıdaki üç gereksinimleri karşılaması gerekir:  
   
--   Bağımlılık özelliği olmalıdır.  
+- Bağımlılık özelliği olmalıdır.  
   
--   Devralınan bir sınıfa ait olmalıdır <xref:System.Windows.DependencyObject> ve uygulayan <xref:System.Windows.Media.Animation.IAnimatable> arabirimi.  
+- Devralınan bir sınıfa ait olmalıdır <xref:System.Windows.DependencyObject> ve uygulayan <xref:System.Windows.Media.Animation.IAnimatable> arabirimi.  
   
--   Kullanılabilir uyumlu bir animasyon türü olmalıdır. (Varsa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir sağlamaz kendi oluşturabilirsiniz. Bkz: [özel animasyonlara genel bakış](custom-animations-overview.md).)  
+- Kullanılabilir uyumlu bir animasyon türü olmalıdır. (Varsa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir sağlamaz kendi oluşturabilirsiniz. Bkz: [özel animasyonlara genel bakış](custom-animations-overview.md).)  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sahip çok sayıda nesne içeren <xref:System.Windows.Media.Animation.IAnimatable> özellikleri. Gibi denetimler <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.TabControl>hem de <xref:System.Windows.Controls.Panel> ve <xref:System.Windows.Shapes.Shape> nesneleri devralmanız <xref:System.Windows.DependencyObject>. Bunların özelliklerinin çoğu bağımlılık özelliklerdir.  
   
@@ -183,27 +183,27 @@ ms.locfileid: "59337740"
 ## <a name="animation-types"></a>Animasyon türü  
  Özellik değerlerini animasyonlar oluşturması nedeniyle farklı animasyon türlerinin farklı özellik türleri için mevcut. Alan özelliği oynatmak bir <xref:System.Double>, gibi <xref:System.Windows.FrameworkElement.Width%2A> bir öğe özelliğini kullanın üreten bir animasyon <xref:System.Double> değerleri. Alan özelliği oynatmak bir <xref:System.Windows.Point>, üreten bir animasyon kullanın <xref:System.Windows.Point> değerleri ve benzeri. Farklı özellik türleri sayısı nedeniyle, birçok animasyon sınıfları vardır <xref:System.Windows.Media.Animation> ad alanı. Neyse ki, bunları ayırt kolaylaştırır katı bir adlandırma kuralı izleyin:  
   
--   \<*Tür*> animasyon  
+- \<*Tür*> animasyon  
   
      Bir "From/To/By" veya "temel" animasyon olarak bilinir, bunlar arasında bir başlangıç ve bitiş değeri ya da bir uzaklık değeri ekleyerek başlangıç değerine animasyon ekleme.  
   
-    -   Başlangıç değeri belirtmek için animasyonun başlangıç özelliğini ayarlayın.  
+    - Başlangıç değeri belirtmek için animasyonun başlangıç özelliğini ayarlayın.  
   
-    -   Bitiş değeri belirtmek için animasyonun To özelliğini ayarlayın.  
+    - Bitiş değeri belirtmek için animasyonun To özelliğini ayarlayın.  
   
-    -   Bir uzaklık değeri belirtmek için animasyonun By özelliğini ayarlayın.  
+    - Bir uzaklık değeri belirtmek için animasyonun By özelliğini ayarlayın.  
   
      Kullanmak için en basit olduğundan bu genel bakışta örneklerde bu animasyonları kullanın. FROM/için/göre animasyonlarına u animasyonlarına genel bakış, ayrıntılı açıklanmıştır.  
   
--   \<*Tür*> AnimationUsingKeyFrames  
+- \<*Tür*> AnimationUsingKeyFrames  
   
      Anahtar çerçeve animasyon hedef değerleri herhangi bir sayıda belirtin ve hatta kendi ilişkilendirme yöntemini kontrol gelen/için/göre animasyonlarına daha güçlü özellikler. Bazı türleri yalnızca ana kare animasyonları ile animasyon uygulanabilir. Anahtar çerçeve animasyonları ayrıntılı olarak açıklanmıştır [anahtar-çerçeve animasyonlara genel bakış](key-frame-animations-overview.md).  
   
--   \<*Tür*> AnimationUsingPath  
+- \<*Tür*> AnimationUsingPath  
   
      Yol animasyonları geometrik yol animasyonlu değerler üretmek için kullanmanızı sağlar.  
   
--   \<*Tür*> AnimationBase  
+- \<*Tür*> AnimationBase  
   
      Soyut sınıf, uygularken canlandırır, bir \< *türü*> değeri. Bu sınıf için temel sınıf olarak hizmet veren \< *türü*> animasyon ve \< *türü*> AnimationUsingKeyFrames sınıflar. Yalnızca kendi özel animasyon oluşturmak istiyorsanız doğrudan bu sınıfları ile uğraşmak zorunda. Aksi durumda, bir \< *türü*> animasyon veya ana kare\<*türü*> animasyon.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "59337740"
   
 |Özellik türü|Karşılık gelen (From/To/By) temel animasyon|Karşılık gelen anahtar çerçeve animasyonu|Karşılık gelen yol animasyonu|Kullanım örneği|  
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|  
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|Animasyon <xref:System.Windows.Media.SolidColorBrush.Color%2A> , bir <xref:System.Windows.Media.SolidColorBrush> veya <xref:System.Windows.Media.GradientStop>.|  
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Yok.|Animasyon <xref:System.Windows.Media.SolidColorBrush.Color%2A> , bir <xref:System.Windows.Media.SolidColorBrush> veya <xref:System.Windows.Media.GradientStop>.|  
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Animasyon <xref:System.Windows.FrameworkElement.Width%2A> , bir <xref:System.Windows.Controls.DockPanel> veya <xref:System.Windows.FrameworkElement.Height%2A> , bir <xref:System.Windows.Controls.Button>.|  
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|Animasyon <xref:System.Windows.Media.EllipseGeometry.Center%2A> birini konumlandırmak bir <xref:System.Windows.Media.EllipseGeometry>.|  
 |<xref:System.String>|Yok.|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Yok.|Animasyon <xref:System.Windows.Controls.TextBlock.Text%2A> , bir <xref:System.Windows.Controls.TextBlock> veya <xref:System.Windows.Controls.ContentControl.Content%2A> , bir <xref:System.Windows.Controls.Button>.|  
@@ -264,9 +264,9 @@ ms.locfileid: "59337740"
   
  Bir ad atamak bir <xref:System.Windows.FrameworkElement> bir ad atamaktan farklı bir <xref:System.Windows.Freezable> nesne. Çoğu denetimler ve panolar framework öğeler; Ancak, Fırçalar, Dönüşüm ve geometriler gibi tamamen grafik nesnelerin çoğu freezable nesnelerine uygulanır. Bir tür olup olmadığından emin değilseniz, bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.Freezable>, başvurmak **devralma hiyerarşisi** başvuru belgesini bölümü.  
   
--   Yapmak için bir <xref:System.Windows.FrameworkElement> bir animasyon hedef, ayarlayarak adlandırırsınız kendi <xref:System.Windows.FrameworkElement.Name%2A> özelliği. Kod içinde de kullanmalısınız <xref:System.Windows.FrameworkElement.RegisterName%2A> öğe adı ait olduğu için sayfa ile kaydetmek için yöntemi.  
+- Yapmak için bir <xref:System.Windows.FrameworkElement> bir animasyon hedef, ayarlayarak adlandırırsınız kendi <xref:System.Windows.FrameworkElement.Name%2A> özelliği. Kod içinde de kullanmalısınız <xref:System.Windows.FrameworkElement.RegisterName%2A> öğe adı ait olduğu için sayfa ile kaydetmek için yöntemi.  
   
--   Yapmak için bir <xref:System.Windows.Freezable> içinde bir animasyon hedefi nesnesi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], kullandığınız [x: Name yönergesi](../../xaml-services/x-name-directive.md) bir ad atamak için. Kod içinde yalnızca kullandığınız <xref:System.Windows.FrameworkElement.RegisterName%2A> nesneyi ait olduğu için sayfa ile kaydetmek için yöntemi.  
+- Yapmak için bir <xref:System.Windows.Freezable> içinde bir animasyon hedefi nesnesi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], kullandığınız [x: Name yönergesi](../../xaml-services/x-name-directive.md) bir ad atamak için. Kod içinde yalnızca kullandığınız <xref:System.Windows.FrameworkElement.RegisterName%2A> nesneyi ait olduğu için sayfa ile kaydetmek için yöntemi.  
   
  Aşağıdaki bölümlerde bir öğedeki adlandırma örneği sağlamak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve kod. Adlandırma ve hedefleme hakkında daha ayrıntılı bilgi için bkz. [görsel taslaklara genel bakış](storyboards-overview.md).  
   
@@ -318,11 +318,11 @@ ms.locfileid: "59337740"
 ## <a name="animation-samples"></a>Animasyon örnekleri  
  Aşağıdaki örnekleri uygulamalarınıza animasyon ekleme başlamanıza yardımcı olabilir.  
   
--   [Gelen, için ve göre animasyon hedef değerleri örneği](https://go.microsoft.com/fwlink/?LinkID=159988)  
+- [Gelen, için ve göre animasyon hedef değerleri örneği](https://go.microsoft.com/fwlink/?LinkID=159988)  
   
      Farklı From/To/By ayarları gösterir.  
   
--   [Animasyon zamanlama davranışı örneği](https://go.microsoft.com/fwlink/?LinkID=159970)  
+- [Animasyon zamanlama davranışı örneği](https://go.microsoft.com/fwlink/?LinkID=159970)  
   
      Bir animasyon zamanlama davranışını denetleyebileceğiniz farklı yollarını gösterir. Bu örnek ayrıca gösterir nasıl verilere animasyon hedef değeri bağlayın.  
   

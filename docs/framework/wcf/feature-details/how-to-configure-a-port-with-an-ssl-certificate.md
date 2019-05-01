@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
 ms.openlocfilehash: d709123895f361c1d2268a218b4163c8d195e1b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047972"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Nasıl yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma
 Şirket içinde barındırılan Windows Communication Foundation (WCF) hizmet ile oluşturulurken <xref:System.ServiceModel.WSHttpBinding> sınıfı bu kullanımları aktarım güvenliği, ayrıca bir X.509 sertifikası ile bir bağlantı noktası yapılandırmanız gerekir. Şirket içinde barındırılan bir hizmet oluşturmuyorsanız, hizmetinizi Internet Information Services (IIS) üzerinde barındırabilirsiniz. Daha fazla bilgi için [HTTP aktarım güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
@@ -27,15 +27,15 @@ ms.locfileid: "59345592"
   
  Bu konuda çeşitli yordamları nasıl yapılacağını anlatmaktadır:  
   
--   Bir bilgisayarın geçerli bağlantı noktası yapılandırmasını belirleniyor.  
+- Bir bilgisayarın geçerli bağlantı noktası yapılandırmasını belirleniyor.  
   
--   Bir sertifikanın parmak izi (aşağıdaki iki yordamdan için gerekli) alma.  
+- Bir sertifikanın parmak izi (aşağıdaki iki yordamdan için gerekli) alma.  
   
--   Bir bağlantı noktası yapılandırması için bir SSL sertifikası bağlama.  
+- Bir bağlantı noktası yapılandırması için bir SSL sertifikası bağlama.  
   
--   Bir bağlantı noktası yapılandırması ve istemci sertifikalarını destekleyen bir SSL sertifikası bağlama.  
+- Bir bağlantı noktası yapılandırması ve istemci sertifikalarını destekleyen bir SSL sertifikası bağlama.  
   
--   Bir bağlantı noktası numarasından bir SSL sertifikası siliniyor.  
+- Bir bağlantı noktası numarasından bir SSL sertifikası siliniyor.  
   
  Bilgisayarda depolanan sertifikaları değiştirme yönetici ayrıcalıklarını gerektirdiğini unutmayın.  
   
@@ -71,9 +71,9 @@ ms.locfileid: "59345592"
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    -   **-İ** anahtar söz dizimi olan `IP`:`port` ve bilgisayarın 8012 bağlantı için sertifika ayarlamak için araç bildirir. İsteğe bağlı olarak, sayı önünde dört sıfırları bilgisayarın gerçek IP adresine göre değiştirilebilir.  
+    - **-İ** anahtar söz dizimi olan `IP`:`port` ve bilgisayarın 8012 bağlantı için sertifika ayarlamak için araç bildirir. İsteğe bağlı olarak, sayı önünde dört sıfırları bilgisayarın gerçek IP adresine göre değiştirilebilir.  
   
-    -   **-H** anahtar sertifikanın parmak izini belirtir.  
+    - **-H** anahtar sertifikanın parmak izini belirtir.  
   
 2. İçinde [!INCLUDE[wv](../../../../includes/wv-md.md)], aşağıdaki örnekte gösterildiği gibi Netsh.exe aracını kullanın.  
   
@@ -81,11 +81,11 @@ ms.locfileid: "59345592"
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
     ```  
   
-    -   **Certhash** parametresi, sertifikanın parmak izini belirtir.  
+    - **Certhash** parametresi, sertifikanın parmak izini belirtir.  
   
-    -   **İpport** parametresi, IP adresi ve bağlantı noktasını belirtir ve işlevleri olduğu gibi **-i** açıklanan Httpcfg.exe Aracı'nın anahtarı.  
+    - **İpport** parametresi, IP adresi ve bağlantı noktasını belirtir ve işlevleri olduğu gibi **-i** açıklanan Httpcfg.exe Aracı'nın anahtarı.  
   
-    -   **AppID** parametredir sahip olan uygulamayı tanımlamak için kullanılan bir GUID.  
+    - **AppID** parametredir sahip olan uygulamayı tanımlamak için kullanılan bir GUID.  
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Bir bağlantı noktası numarası için bir SSL sertifikası bağlama ve istemci sertifikalarını desteklemek için  
   

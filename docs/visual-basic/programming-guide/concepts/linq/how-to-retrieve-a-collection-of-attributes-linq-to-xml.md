@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Öznitelikler (LINQ to XML) koleksiyonu alma (Visual B
 ms.date: 07/20/2015
 ms.assetid: a07e9645-b45b-403b-b698-f652f904c7d2
 ms.openlocfilehash: 2e99e561c1d479412c7c5cd2a19563446b872049
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051305"
 ---
 # <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-visual-basic"></a>Nasıl yapılır: Öznitelikler (LINQ to XML) koleksiyonu alma (Visual Basic)
 Bu konu tanıtır <xref:System.Xml.Linq.XElement.Attributes%2A> yöntemi. Bu yöntem, bir öğenin öznitelikleri alır.  

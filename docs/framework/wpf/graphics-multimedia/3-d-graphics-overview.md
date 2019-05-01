@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
 ms.openlocfilehash: 79dc7a3578c395ae8cdf5933e1249441f97071a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053710"
 ---
 # <a name="3-d-graphics-overview"></a>3B Grafiklere Genel Bakış
 <a name="introduction"></a> [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] İşlevselliği [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] çizme, dönüştürme ve biçimlendirme hem işlemsel koddaki 3B grafikler animasyon geliştiricilerin sağlar. Geliştiriciler birleştirebilirsiniz [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] ve [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] zengin denetimler oluşturmak, karmaşık veri çizimleri sağlayın veya kullanıcı geliştirmek için grafik deneyimi bir uygulamanın arabirimi. [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] desteği [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tam özellikli bir oyun geliştirme platformu sağlamak üzere tasarlanmamıştır. Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] işlevselliği [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafik sistemi.  
@@ -86,11 +86,11 @@ Perspektif ve Ortografik projeksiyonlar
   
  Bir modelin yüzeyine özelliklerini tanımlamak için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanan <xref:System.Windows.Media.Media3D.Material> soyut sınıf. Malzeme somut alt sınıflarını bazı modelin yüzeyine görünüm özelliklerini belirlemek ve her bir SolidColorBrush, TileBrush veya VisualBrush geçirebilirsiniz bir fırça özelliğini de sağlar.  
   
--   <xref:System.Windows.Media.Media3D.DiffuseMaterial> Bu modeli aydınlatma artırmadığı farklılaştırır fırça modele uygulanacağını belirler. DiffuseMaterial en kullanarak benzer doğrudan üzerinde fırçalarını kullanma [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] modelleri; ancak shiny olarak ışık yansıtmıyor modeli yüzeyleri yapın.  
+- <xref:System.Windows.Media.Media3D.DiffuseMaterial> Bu modeli aydınlatma artırmadığı farklılaştırır fırça modele uygulanacağını belirler. DiffuseMaterial en kullanarak benzer doğrudan üzerinde fırçalarını kullanma [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] modelleri; ancak shiny olarak ışık yansıtmıyor modeli yüzeyleri yapın.  
   
--   <xref:System.Windows.Media.Media3D.SpecularMaterial> modele modelin yüzeyine gibi davranarak sabit veya parlak, önemli yansıtan yeteneğine fırça uygulanacağını belirtir. İçin bir değer belirterek, doku önerisinde bulunacak bu yansıtıcı kalite veya "nokta" derecesini ayarlayabilirsiniz <xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A> özelliği.  
+- <xref:System.Windows.Media.Media3D.SpecularMaterial> modele modelin yüzeyine gibi davranarak sabit veya parlak, önemli yansıtan yeteneğine fırça uygulanacağını belirtir. İçin bir değer belirterek, doku önerisinde bulunacak bu yansıtıcı kalite veya "nokta" derecesini ayarlayabilirsiniz <xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A> özelliği.  
   
--   <xref:System.Windows.Media.Media3D.EmissiveMaterial> Fırça rengini açık eşit olan model yayma artırmadığı doku uygulanacak belirtmenizi sağlar. Bu model bir ışık yapmaz; Ancak, bunu DiffuseMaterial veya SpecularMaterial dokulu durumunda olduğu kadar temkinli gölgeleme içinde farklı katılacak.  
+- <xref:System.Windows.Media.Media3D.EmissiveMaterial> Fırça rengini açık eşit olan model yayma artırmadığı doku uygulanacak belirtmenizi sağlar. Bu model bir ışık yapmaz; Ancak, bunu DiffuseMaterial veya SpecularMaterial dokulu durumunda olduğu kadar temkinli gölgeleme içinde farklı katılacak.  
   
  Daha iyi performans için biri arka yüzlerini bir <xref:System.Windows.Media.Media3D.GeometryModel3D> (görünümden kamera modelden karşı tarafındaki oldukları için olan bu yüzeyleri) sahnenin başlangıç noktasına tam culled.  Belirtmek için bir <xref:System.Windows.Media.Media3D.Material> düzlem gibi bir modelin arkayüz uygulamak için modelin ayarlamak <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> özelliği.  
   
@@ -111,13 +111,13 @@ Perspektif ve Ortografik projeksiyonlar
   
  Aşağıdaki ışıkları temel sınıfından türetilir <xref:System.Windows.Media.Media3D.Light>:  
   
--   <xref:System.Windows.Media.Media3D.AmbientLight>: Birörnek konumlarına veya yönlendirme bakılmaksızın tüm nesneleri aydınlatma ortam aydınlatması sağlar.  
+- <xref:System.Windows.Media.Media3D.AmbientLight>: Birörnek konumlarına veya yönlendirme bakılmaksızın tüm nesneleri aydınlatma ortam aydınlatması sağlar.  
   
--   <xref:System.Windows.Media.Media3D.DirectionalLight>: Uzak bir ışık kaynağına gibi gösterir.  Yönlü ışık sahip bir <xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A> bir Vector3D, ancak belirtilen konum belirtildi.  
+- <xref:System.Windows.Media.Media3D.DirectionalLight>: Uzak bir ışık kaynağına gibi gösterir.  Yönlü ışık sahip bir <xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A> bir Vector3D, ancak belirtilen konum belirtildi.  
   
--   <xref:System.Windows.Media.Media3D.PointLight>: Yakındaki bir ışık kaynağına gibi gösterir. PointLights bir konuma sahiptir ve söz konusu konumdan açık tür dönüştürme. Sahnedeki nesneler, konumlarını ve ışık göre daha fazla mesafe bağlı olarak ışıklı. <xref:System.Windows.Media.Media3D.PointLightBase> kullanıma sunan bir <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> özelliği dışında modelleri değil ışıklı ışık tarafından bir uzaklığı belirler. PointLight nasıl mesafeli ışığın yoğunluğu azalır belirleyen zayıflama özellikleri de sunar. Işığın zayıflama için sabit, doğrusal veya ikinci dereceden ilişkilendirme belirtebilirsiniz.  
+- <xref:System.Windows.Media.Media3D.PointLight>: Yakındaki bir ışık kaynağına gibi gösterir. PointLights bir konuma sahiptir ve söz konusu konumdan açık tür dönüştürme. Sahnedeki nesneler, konumlarını ve ışık göre daha fazla mesafe bağlı olarak ışıklı. <xref:System.Windows.Media.Media3D.PointLightBase> kullanıma sunan bir <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> özelliği dışında modelleri değil ışıklı ışık tarafından bir uzaklığı belirler. PointLight nasıl mesafeli ışığın yoğunluğu azalır belirleyen zayıflama özellikleri de sunar. Işığın zayıflama için sabit, doğrusal veya ikinci dereceden ilişkilendirme belirtebilirsiniz.  
   
--   <xref:System.Windows.Media.Media3D.SpotLight>: devralınan <xref:System.Windows.Media.Media3D.PointLight>. Projektör gibi PointLight karanl ve hem konumuna ve yönüne sahip. Bunlar belirlediği bir Koni şeklinde alanında açık proje <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> ve <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> derece cinsinden belirtilen özellikleri.  
+- <xref:System.Windows.Media.Media3D.SpotLight>: devralınan <xref:System.Windows.Media.Media3D.PointLight>. Projektör gibi PointLight karanl ve hem konumuna ve yönüne sahip. Bunlar belirlediği bir Koni şeklinde alanında açık proje <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> ve <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> derece cinsinden belirtilen özellikleri.  
   
  Işıklar, <xref:System.Windows.Media.Media3D.Model3D> nesnelerine dönüştürmek ve konumu, renk, yönü ve aralığı dahil olmak üzere açık özelliklerine animasyon uygulamak için.  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
 ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047015"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM Uygulamaları ile Tümleştirme Genel Bakış
 Windows Communication Foundation (WCF), yönetilen kod geliştiriciye bağlantılı uygulamalar oluşturmaya yönelik zengin bir ortam sağlar. Yönetilmeyen COM tabanlı kodunda önemli bir yatırımınız varsa ve geçirmek istiyor musunuz, ancak hala WCF Web Hizmetleri doğrudan mevcut kodunuza WCF hizmet bilinen adını kullanarak tümleştirebilirsiniz. Hizmet bilinen adı, Office VBA, Visual Basic 6.0 veya Visual C++ 6.0 gibi bir geniş aralığı, COM tabanlı geliştirme ortamlarından kullanılabilir.  
@@ -21,11 +21,11 @@ Windows Communication Foundation (WCF), yönetilen kod geliştiriciye bağlantı
   
  Bilinen ad kullanırken diğer WCF istemcileri ortak, adresi, bağlama ve hizmet ile iletişim kurmak için sözleşme uygulamaları belirtin. Sözleşme aşağıdaki yollardan birinde belirtilebilir:  
   
--   Yazılı Sözleşme – Sözleşme, istemci makinede COM görünür türü olarak kaydedilir.  
+- Yazılı Sözleşme – Sözleşme, istemci makinede COM görünür türü olarak kaydedilir.  
   
--   WSDL sözleşme – sözleşmenin bir WSDL Belgesi biçiminde sağlanır.  
+- WSDL sözleşme – sözleşmenin bir WSDL Belgesi biçiminde sağlanır.  
   
--   MEX Sözleşme – Sözleşme, çalışma zamanında bir meta veri değişimi (MEX) uç noktasından alınır.  
+- MEX Sözleşme – Sözleşme, çalışma zamanında bir meta veri değişimi (MEX) uç noktasından alınır.  
   
 ## <a name="parameters-supported-by-the-service-moniker"></a>Hizmet bilinen adı tarafından desteklenen parametreleri  
  Hizmet bilinen adı tarafından desteklenen parametreleri aşağıdaki tabloda gösterilmektedir.  

@@ -3,11 +3,11 @@ title: Veritabanı Erişimi Etkinlikleri
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
 ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005218"
 ---
 # <a name="database-access-activities"></a>Veritabanı Erişimi Etkinlikleri
 Veritabanı erişimi etkinlikleri iş akışı içindeki bir veritabanına erişmek izin verin. Bu etkinliklerin alma veya bilgileri değiştirin ve veritabanlarına erişim ver [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) veritabanına erişmek için.  
@@ -247,7 +247,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 ## <a name="configuring-connection-information"></a>Bağlantı bilgilerini yapılandırma
  Tüm DbActivities aynı yapılandırma parametrelerini paylaşın. İki şekilde yapılandırılabilir:
 
--   `ConnectionString + InvariantName`: ADO.NET sağlayıcısı sabit adı ve bağlantı dizesini ayarlayalım.
+- `ConnectionString + InvariantName`: ADO.NET sağlayıcısı sabit adı ve bağlantı dizesini ayarlayalım.
 
     ```
     Activity dbSelectCount = new DbQueryScalar<DateTime>()
@@ -260,7 +260,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };
     ```
 
--   `ConfigName`: Bağlantı bilgilerini içeren yapılandırma bölümünün adını ayarlayın.
+- `ConfigName`: Bağlantı bilgilerini içeren yapılandırma bölümünün adını ayarlayın.
 
     ```xml
     <connectionStrings>
@@ -270,7 +270,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
       </connectionStrings>
     ```
 
--   Etkinlik:
+- Etkinlik:
 
     ```
     Activity dbSelectCount = new DbQueryScalar<int>()
@@ -287,15 +287,15 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
  Setup.cmd betiği aşağıdakileri SQL komutlarını içeren CreateDb.sql komut dosyasını çağırır:
 
--   DbActivitiesSample adlı bir veritabanı oluşturur.
+- DbActivitiesSample adlı bir veritabanı oluşturur.
 
--   Rolleri tablo oluşturur.
+- Rolleri tablo oluşturur.
 
--   Çalışanlar bir tablo oluşturur.
+- Çalışanlar bir tablo oluşturur.
 
--   Üç kayıt rolleri tabloya ekler.
+- Üç kayıt rolleri tabloya ekler.
 
--   On iki kayıtları çalışanlar tabloya ekler.
+- On iki kayıtları çalışanlar tabloya ekler.
 
 ##### <a name="to-run-setupcmd"></a>Setup.cmd çalıştırmak için
 

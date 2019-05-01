@@ -9,11 +9,11 @@ helpviewer_keywords:
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
 ms.openlocfilehash: 90d0e2f3c6ebab070809a4813c87da3539fd14f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032194"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu olabilir en az yeniden daha etkili kodda bazıları, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama yerine baştan yeniden. Mevcut Windows Forms denetimleri olduğunda en yaygın senaryodur. Bazı durumlarda, bile bu denetimleri için kaynak koduna erişim olmayabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gibi denetimleri barındırma için basit bir yordam sağlar bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama. Örneğin, kullanabileceğiniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çoğu barındırırken, programlama için <xref:System.Windows.Forms.DataGridView> kontrol eder.  
@@ -24,9 +24,9 @@ ms.locfileid: "59337857"
   
  Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
   
--   Windows Forms bileşik denetimini uygulama.  
+- Windows Forms bileşik denetimini uygulama.  
   
--   WPF ana bilgisayar uygulaması oluşturma.  
+- WPF ana bilgisayar uygulaması oluşturma.  
   
  Bu izlenecek yolda gösterilen görevler tam kod listesi için bkz. [bir WPF Örneği'nde Windows Forms bileşik denetimini barındırma](https://go.microsoft.com/fwlink/?LinkID=159999).  
   
@@ -58,32 +58,32 @@ Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
   
  Projenize aşağıdaki sistem DLL'lerini başvuruları olması gerekir. Bu DLL'leri birini varsayılan olarak dahil edilmez, bunları projeye ekleyin.  
   
--   Sistem  
+- Sistem  
   
--   System.Data  
+- System.Data  
   
--   System.Drawing  
+- System.Drawing  
   
--   System.Windows.Forms  
+- System.Windows.Forms  
   
--   System.Xml  
+- System.Xml  
   
 ### <a name="adding-controls-to-the-form"></a>Formu için denetimler ekleme  
  Formu için denetimler eklemek için:  
   
--   Açık `MyControl1` Tasarımcısı'nda.  
+- Açık `MyControl1` Tasarımcısı'nda.  
   
  Beş ekleme <xref:System.Windows.Forms.Label> denetimleri ve bunlara karşılık gelen <xref:System.Windows.Forms.TextBox> denetimleri, boyutu ve formdaki yukarıdaki çizimin olduğu gibi düzenlenir. Örnekte, <xref:System.Windows.Forms.TextBox> denetimleri adlandırılır:  
   
--   `txtName`  
+- `txtName`  
   
--   `txtAddress`  
+- `txtAddress`  
   
--   `txtCity`  
+- `txtCity`  
   
--   `txtState`  
+- `txtState`  
   
--   `txtZip`  
+- `txtZip`  
   
  İki ekleme <xref:System.Windows.Forms.Button> etiketli denetimler **Tamam** ve **iptal**. Bu örnekte düğme adlarıdır `btnOK` ve `btnCancel`sırasıyla.  
   
@@ -159,11 +159,11 @@ Aşağıdaki görüntüde, WPF uygulamasında katıştırılmış denetime dahil
 ### <a name="implementing-the-basic-layout"></a>Temel düzeni uygulama
  [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Ana bilgisayarının içinde MainWindow.xaml uygulama uygulanır. Bu dosyayı içeren [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] düzenini tanımlar ve Windows Forms denetimi barındıran biçimlendirmesi. Uygulamanın üç bölgelere ayrılmıştır:
 
--   **Denetim özelliklerini** paneli denetimden çeşitli özelliklerini değiştirmek için kullanabileceğiniz bir seçenek düğmeleri koleksiyonunu içerir.
+- **Denetim özelliklerini** paneli denetimden çeşitli özelliklerini değiştirmek için kullanabileceğiniz bir seçenek düğmeleri koleksiyonunu içerir.
 
--   **Denetiminden veri** paneli birkaç içerir <xref:System.Windows.Controls.TextBlock> verileri görüntüleyen öğeleri barındırılan denetiminden döndürdü.
+- **Denetiminden veri** paneli birkaç içerir <xref:System.Windows.Controls.TextBlock> verileri görüntüleyen öğeleri barındırılan denetiminden döndürdü.
 
--   Barındırılan denetim.
+- Barındırılan denetim.
 
  Aşağıdaki XAML içinde temel düzen gösterilmektedir. Gerekli biçimlendirme konağa `MyControl1` Bu örnekte atlanmıştır, ancak daha sonra açıklanacaktır.
 
@@ -183,18 +183,18 @@ Aşağıdaki görüntüde, WPF uygulamasında katıştırılmış denetime dahil
 
  XAML içinde iki öğe barındırma işler:
 
--   `WindowsFormsHost` temsil eden <xref:System.Windows.Forms.Integration.WindowsFormsHost> bir Windows Forms denetiminde barındırmanıza olanak sağlayan öğe bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.
+- `WindowsFormsHost` temsil eden <xref:System.Windows.Forms.Integration.WindowsFormsHost> bir Windows Forms denetiminde barındırmanıza olanak sağlayan öğe bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.
 
--   `mcl:MyControl1`, temsil eden `MyControl1`, eklenen <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğenin alt koleksiyonu. Sonuç olarak, bu Windows Forms denetimini bir parçası olarak işlenen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pencere ve uygulama denetimi ile kurabilir.
+- `mcl:MyControl1`, temsil eden `MyControl1`, eklenen <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğenin alt koleksiyonu. Sonuç olarak, bu Windows Forms denetimini bir parçası olarak işlenen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pencere ve uygulama denetimi ile kurabilir.
 
 ### <a name="implementing-the-code-behind-file"></a>Arka plan kod dosyası uygulama
  İşlevselliğini uygular yordam kodu MainWindow.xaml.vb veya MainWindow.xaml.cs, arka plan kod dosyasını içeren [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] önceki bölümde açıklanan. Birincil görevler şunlardır:
 
--   Bir olay işleyici ekleme `MyControl1`'s `OnButtonClick` olay.
+- Bir olay işleyici ekleme `MyControl1`'s `OnButtonClick` olay.
 
--   Çeşitli özelliklerini değiştirerek `MyControl1`seçeneği düğmelerinin koleksiyonunu nasıl ayarlanacağını göre.
+- Çeşitli özelliklerini değiştirerek `MyControl1`seçeneği düğmelerinin koleksiyonunu nasıl ayarlanacağını göre.
 
--   Verileri görüntüleme denetim tarafından toplanır.
+- Verileri görüntüleme denetim tarafından toplanır.
 
 #### <a name="initializing-the-application"></a>Uygulamayı başlatma
  Başlatma kodu pencere için bir olay işleyicisi içindeki <xref:System.Windows.FrameworkElement.Loaded> olay ve denetim için bir olay işleyicisi ekler `OnButtonClick` olay.

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
 ms.openlocfilehash: 885e6bc011041320a3dc7b17d84b2541bf030adf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033468"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Dizideki Öğeleri Döndürme veya Atlama
 Kullanım <xref:System.Linq.Queryable.Take%2A> işleci bir dizideki öğeler, verilen sayıda dönün ve sonra kalanını atlayın.  
@@ -22,9 +22,9 @@ Kullanım <xref:System.Linq.Queryable.Take%2A> işleci bir dizideki öğeler, ve
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çevirir <xref:System.Linq.Queryable.Skip%2A> SQL ile bir alt sorgu kullanarak `NOT EXISTS` yan tümcesi. Bu çeviri aşağıdaki sınırlamalara sahiptir:  
   
--   Bağımsız değişken bir küme olmalıdır. Multisets, sipariş bile desteklenmez.  
+- Bağımsız değişken bir küme olmalıdır. Multisets, sipariş bile desteklenmez.  
   
--   Oluşturulan sorgu, üzerinde temel sorgu için oluşturulan sorgu çok daha karmaşık <xref:System.Linq.Queryable.Skip%2A> uygulanır. Bu karmaşıklığı, performans veya hatta bir zaman aşımı neden olabilir.  
+- Oluşturulan sorgu, üzerinde temel sorgu için oluşturulan sorgu çok daha karmaşık <xref:System.Linq.Queryable.Skip%2A> uygulanır. Bu karmaşıklığı, performans veya hatta bir zaman aşımı neden olabilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte `Take` ilk beş seçilecek `Employees` işe. Koleksiyonun varsayılan olarak sıralanır Not `HireDate`.  

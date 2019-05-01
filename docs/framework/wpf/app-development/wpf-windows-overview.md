@@ -29,11 +29,11 @@ helpviewer_keywords:
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
 ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052735"
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows'a Genel Bakış
 Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar windows aracılığıyla etkileşim. Birincil amacı bir pencere, verileri görselleştiren ve verilerle etkileşimde bulunmak kullanıcıların sağlayan konak içerik sağlamaktır. Tek başına [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları kullanarak kendi windows sağlamak <xref:System.Windows.Window> sınıfı. Bu konu tanıtır <xref:System.Windows.Window> oluşturma ve yönetme windows tek başına uygulamalarda temellerini kapsayan önce.  
@@ -51,29 +51,29 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  *İstemci dışı alan* bir pencerenin tarafından uygulanan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ve aşağıdakiler dahil olmak üzere çoğu windows için ortak olan bir pencere bölümleri içerir:  
   
--   Bir sınırı.  
+- Bir sınırı.  
   
--   Başlık çubuğu.  
+- Başlık çubuğu.  
   
--   Bir simge.  
+- Bir simge.  
   
--   Simge Durumuna Küçült, Ekranı Kapla ve düğmeler geri yükleyin.  
+- Simge Durumuna Küçült, Ekranı Kapla ve düğmeler geri yükleyin.  
   
--   Bir Kapat düğmesi.  
+- Bir Kapat düğmesi.  
   
--   En aza indirmek, kullanıcıların menü öğeleri ile bir sistem menüsünü en üst düzeye çıkarmak, geri yükleme, taşıma, yeniden boyutlandırma ve bir penceresini kapatın.  
+- En aza indirmek, kullanıcıların menü öğeleri ile bir sistem menüsünü en üst düzeye çıkarmak, geri yükleme, taşıma, yeniden boyutlandırma ve bir penceresini kapatın.  
   
  *İstemci alanını* bir pencerenin alanın bir pencerenin istemci olmayan alanda ve geliştiriciler tarafından menü çubukları, araç çubuklarını ve denetimler gibi uygulamaya özgü içerik eklemek için kullanılır.  
   
  İçinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], bir pencere yalıtılan <xref:System.Windows.Window> aşağıdakileri yapmak için kullandığınız sınıfı:  
   
--   Bir pencere görüntüler.  
+- Bir pencere görüntüler.  
   
--   Boyutunu, konumunu ve görünüm penceresinin yapılandırın.  
+- Boyutunu, konumunu ve görünüm penceresinin yapılandırın.  
   
--   Uygulamaya özgü içerik barındırın.  
+- Uygulamaya özgü içerik barındırın.  
   
--   Bir pencere ömrünü yönetmek.  
+- Bir pencere ömrünü yönetmek.  
   
 <a name="DefiningAWindow"></a>   
 ## <a name="implementing-a-window"></a>Pencere uygulama  
@@ -88,11 +88,11 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  Etkinleştirmek için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işaretleme dosyasının ve birlikte çalışması için arka plan kod dosyası, aşağıdakiler gereklidir:  
   
--   Biçimlendirme içinde `Window` öğesi içermelidir `x:Class` özniteliği. Ne zaman uygulama oluşturulduğuna göre varlığını `x:Class` işaretlemede dosyası oluşturulmamasını [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] oluşturmak için bir `partial` türetilen sınıf <xref:System.Windows.Window> ve tarafından belirtilen ada sahip `x:Class` özniteliği. Bu eklenmesini gerektiren bir [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] için ad alanı bildirimi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] şeması ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ). Oluşturulan `partial` sınıfının Implements `InitializeComponent` olaylarını kaydetmek ve işaretlemede uygulanan özellikleri ayarlamak için çağrılan yöntem.  
+- Biçimlendirme içinde `Window` öğesi içermelidir `x:Class` özniteliği. Ne zaman uygulama oluşturulduğuna göre varlığını `x:Class` işaretlemede dosyası oluşturulmamasını [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] oluşturmak için bir `partial` türetilen sınıf <xref:System.Windows.Window> ve tarafından belirtilen ada sahip `x:Class` özniteliği. Bu eklenmesini gerektiren bir [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] için ad alanı bildirimi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] şeması ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ). Oluşturulan `partial` sınıfının Implements `InitializeComponent` olaylarını kaydetmek ve işaretlemede uygulanan özellikleri ayarlamak için çağrılan yöntem.  
   
--   Arka plan, kod sınıfı olmalıdır bir `partial` sınıfı tarafından belirtilen aynı ada sahip `x:Class` biçimlendirme ve bu öznitelikte türetilmesi gereken <xref:System.Windows.Window>. Bu arka plan kod dosyası ile ilişkili olmasını sağlar `partial` uygulama oluşturulduğunda işaretleme dosyasının için oluşturulan sınıf (bkz [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md)).  
+- Arka plan, kod sınıfı olmalıdır bir `partial` sınıfı tarafından belirtilen aynı ada sahip `x:Class` biçimlendirme ve bu öznitelikte türetilmesi gereken <xref:System.Windows.Window>. Bu arka plan kod dosyası ile ilişkili olmasını sağlar `partial` uygulama oluşturulduğunda işaretleme dosyasının için oluşturulan sınıf (bkz [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md)).  
   
--   Arka plan, kod içinde <xref:System.Windows.Window> sınıfı çağıran bir oluşturucu uygulanmalı `InitializeComponent` yöntemi. `InitializeComponent` uygulanan tarafından işaretleme dosyasının üretilmiş `partial` olaylarını kaydetmek ve biçimlendirme içinde tanımlanan özelliklerini ayarlamak için sınıf.  
+- Arka plan, kod içinde <xref:System.Windows.Window> sınıfı çağıran bir oluşturucu uygulanmalı `InitializeComponent` yöntemi. `InitializeComponent` uygulanan tarafından işaretleme dosyasının üretilmiş `partial` olaylarını kaydetmek ve biçimlendirme içinde tanımlanan özelliklerini ayarlamak için sınıf.  
   
 > [!NOTE]
 >  Yeni bir eklediğinizde <xref:System.Windows.Window> kullanarak projenize [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], <xref:System.Windows.Window> biçimlendirme hem de arka plan kod kullanılarak uygulanır ve işaretleme ve arka plan kod dosyaları arasındaki ilişki oluşturmak için gerekli yapılandırmayı içerir burada açıklanmıştır.  
@@ -108,9 +108,9 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
 ## <a name="configuring-a-window-definition-for-msbuild"></a>MSBuild için bir pencere tanımını yapılandırma  
  Pencereniz nasıl uygulayacağınıza nasıl için yapılandırıldığını belirler [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Her ikisini de kullanarak tanımlanan pencere [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işaretleme ve arka plan kod:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Biçimlendirme dosyaları olarak yapılandırılmış [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` öğeleri.  
+- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Biçimlendirme dosyaları olarak yapılandırılmış [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` öğeleri.  
   
--   Arka plan kod dosyaları olarak yapılandırılmış [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` öğeleri.  
+- Arka plan kod dosyaları olarak yapılandırılmış [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` öğeleri.  
   
  Aşağıda gösterilen [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] proje dosyası.  
   
@@ -163,9 +163,9 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
 #### <a name="window-ownership"></a>Pencere sahipliği  
  Kullanılarak açılan bir pencere <xref:System.Windows.Window.Show%2A> yöntemi örtülü bir ilişki oluşturulduğu penceresiyle yok; kullanıcılar, yani herhangi bir pencereye aşağıdaki işlemleri yapabilirsiniz ya da penceresiyle birbirinden, etkileşim kurabilir:  
   
--   Diğer kapsar (windows birine sahip olmadığı sürece, <xref:System.Windows.Window.Topmost%2A> özelliğini `true`).  
+- Diğer kapsar (windows birine sahip olmadığı sürece, <xref:System.Windows.Window.Topmost%2A> özelliğini `true`).  
   
--   , Diğer planı etkilemeden ekranı kaplamış ve geri yüklenen küçültülmesine.  
+- , Diğer planı etkilemeden ekranı kaplamış ve geri yüklenen küçültülmesine.  
   
  Bazı windows bunları açılır penceresi ile bir ilişki gerektirir. Örneğin, bir [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] özelliği windows ve araç pencerelerini, normal davranış kendilerini oluşturan pencerenin kapsar, uygulamayı açmak. Ayrıca, gibi windows her zaman kapatın, en aza indirmek, en üst düzeye çıkarmak ve IPP penceresiyle oluşturuldukları geri yükleme. Bir pencere yaparak tür bir ilişkiye kurulabilir *kendi* başka bir ve ayarlayarak elde <xref:System.Windows.Window.Owner%2A> özelliği *penceresi ait* başvurusuyla *sahibi Pencere*. Bu, aşağıdaki örnekte gösterilir.  
   
@@ -174,9 +174,9 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  Sahipliği kurulduktan sonra:  
   
--   Sahip olunan pencerenin değerini inceleyerek, sahip penceresine başvurabilirsiniz kendi <xref:System.Windows.Window.Owner%2A> özelliği.  
+- Sahip olunan pencerenin değerini inceleyerek, sahip penceresine başvurabilirsiniz kendi <xref:System.Windows.Window.Owner%2A> özelliği.  
   
--   Sahip penceresi sahip değerini inceleyerek windows bulabilir, <xref:System.Windows.Window.OwnedWindows%2A> özelliği.  
+- Sahip penceresi sahip değerini inceleyerek windows bulabilir, <xref:System.Windows.Window.OwnedWindows%2A> özelliği.  
   
 <a name="Preventing"></a>   
 #### <a name="preventing-window-activation"></a>Pencere etkinleştirme önleme  
@@ -184,21 +184,21 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  Uygulamanızın gösterilen etkinleştirilmesi karakteri bir pencere varsa ayarlayabileceğiniz kendi <xref:System.Windows.Window.ShowActivated%2A> özelliğini `false` çağırmadan önce <xref:System.Windows.Window.Show%2A> ilk kez yöntemi. Sonuç olarak:  
   
--   Pencerenin etkin değil.  
+- Pencerenin etkin değil.  
   
--   Pencerenin <xref:System.Windows.Window.Activated> olayı oluşmaz.  
+- Pencerenin <xref:System.Windows.Window.Activated> olayı oluşmaz.  
   
--   Etkin pencere etkin olarak kalır.  
+- Etkin pencere etkin olarak kalır.  
   
  Kullanıcı istemci veya istemci dışı alan tıklayarak etkinleştirir hemen sonra penceresi, ancak etkin hale. Bu durumda:  
   
--   Pencerenin etkin hale gelir.  
+- Pencerenin etkin hale gelir.  
   
--   Pencerenin <xref:System.Windows.Window.Activated> olayı oluşturulur.  
+- Pencerenin <xref:System.Windows.Window.Activated> olayı oluşturulur.  
   
--   Daha önce etkinleştirilmiş penceresi devre dışı bırakılır.  
+- Daha önce etkinleştirilmiş penceresi devre dışı bırakılır.  
   
--   Pencerenin <xref:System.Windows.Window.Deactivated> ve <xref:System.Windows.Window.Activated> olayları daha sonra kullanıcı eylemlerine beklendiği gibi oluşturulur.  
+- Pencerenin <xref:System.Windows.Window.Deactivated> ve <xref:System.Windows.Window.Activated> olayları daha sonra kullanıcı eylemlerine beklendiği gibi oluşturulur.  
   
 <a name="Window_Activation"></a>   
 ### <a name="window-activation"></a>Pencere etkinleştirme  
@@ -227,21 +227,21 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
 ### <a name="closing-a-window"></a>Bir pencereyi kapatma  
  Bir pencere kullanıcı kapattığında sona yakında başlar. Bir pencere aşağıdakiler dahil olmak üzere istemci olmayan alanda öğe kullanarak kapalı olabilir:  
   
--   **Kapat** öğesi **sistem** menüsü.  
+- **Kapat** öğesi **sistem** menüsü.  
   
--   ALT + F4 tuşuna basın.  
+- ALT + F4 tuşuna basın.  
   
--   Tuşuna basarak **Kapat** düğmesi.  
+- Tuşuna basarak **Kapat** düğmesi.  
   
  Bir pencereyi kapatmak için istemci alanını ek mekanizmalarına biri daha fazla ortak şunlardır sağlayabilirsiniz:  
   
--   Bir **çıkış** öğesi **dosya** menüsünde, genellikle ana uygulama windows için.  
+- Bir **çıkış** öğesi **dosya** menüsünde, genellikle ana uygulama windows için.  
   
--   A **Kapat** öğesi **dosya** menüsünde, genellikle ikincil uygulama penceresi.  
+- A **Kapat** öğesi **dosya** menüsünde, genellikle ikincil uygulama penceresi.  
   
--   A **iptal** düğmesi, genellikle kalıcı bir iletişim kutusu.  
+- A **iptal** düğmesi, genellikle kalıcı bir iletişim kutusu.  
   
--   A **Kapat** düğmesi, genellikle modsuz iletişim kutusu.  
+- A **Kapat** düğmesi, genellikle modsuz iletişim kutusu.  
   
  Yanıt olarak özel Bu mekanizmaların birini pencereyi kapatmak için çağırmak gereken <xref:System.Windows.Window.Close%2A> yöntemi. Aşağıdaki örnek seçerek bir pencereyi özelliği uygulayan **çıkış** üzerinde **dosya** menüsü.  
   
@@ -266,13 +266,13 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  Bir pencere açıkça istemci olmayan ve istemci bölümlerinde sağlanan mekanizmaları yoluyla kapatılabilir, ancak pencere örtük olarak davranışını uygulamanın diğer kısımlarını sonucunda kapatılabilir veya [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], aşağıdakiler dahil:  
   
--   Bir kullanıcı oturumu sonlandırdığında veya Windows kapatır.  
+- Bir kullanıcı oturumu sonlandırdığında veya Windows kapatır.  
   
--   Bir pencerenin sahibini kapatır (bkz <xref:System.Windows.Window.Owner%2A>).  
+- Bir pencerenin sahibini kapatır (bkz <xref:System.Windows.Window.Owner%2A>).  
   
--   Ana uygulama penceresi kapatıldığında ve <xref:System.Windows.Application.ShutdownMode%2A> olduğu <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
+- Ana uygulama penceresi kapatıldığında ve <xref:System.Windows.Application.ShutdownMode%2A> olduğu <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
   
--   <xref:System.Windows.Application.Shutdown%2A> çağrılır.  
+- <xref:System.Windows.Application.Shutdown%2A> çağrılır.  
   
 > [!NOTE]
 >  Pencere kapatılır sonra açılamaz.  
@@ -293,11 +293,11 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  İlk konumunu belirtebilirsiniz bir <xref:System.Windows.Window> zaman ilk göründüğü ayarlayarak <xref:System.Windows.Window.WindowStartupLocation%2A> aşağıdakilerden birini özelliğiyle <xref:System.Windows.WindowStartupLocation> sabit listesi değerleri:  
   
--   <xref:System.Windows.WindowStartupLocation.CenterOwner> (varsayılan)  
+- <xref:System.Windows.WindowStartupLocation.CenterOwner> (varsayılan)  
   
--   <xref:System.Windows.WindowStartupLocation.CenterScreen>  
+- <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
--   <xref:System.Windows.WindowStartupLocation.Manual>  
+- <xref:System.Windows.WindowStartupLocation.Manual>  
   
  Başlangıç konumu olarak belirtilmişse <xref:System.Windows.WindowStartupLocation.Manual>ve <xref:System.Windows.Window.Left%2A> ve <xref:System.Windows.Window.Top%2A> değil ayarlandığını, <xref:System.Windows.Window> görünmesini Windows için bir konum ister.  
   
@@ -325,13 +325,13 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  Genişlik ve yükseklik pencerenizin isterseniz penceresi boyutuna en uygun bir boyut için içerik, kullanabileceğiniz <xref:System.Windows.Window.SizeToContent%2A> özelliği aşağıdaki değerlere sahip:  
   
--   <xref:System.Windows.SizeToContent.Manual>. Etki yok (varsayılan).  
+- <xref:System.Windows.SizeToContent.Manual>. Etki yok (varsayılan).  
   
--   <xref:System.Windows.SizeToContent.Width>. Her ikisi de ayarını aynı etkiye sahip içerik genişliği Sığdır <xref:System.Windows.FrameworkElement.MinWidth%2A> ve <xref:System.Windows.FrameworkElement.MaxWidth%2A> içerik genişliğine.  
+- <xref:System.Windows.SizeToContent.Width>. Her ikisi de ayarını aynı etkiye sahip içerik genişliği Sığdır <xref:System.Windows.FrameworkElement.MinWidth%2A> ve <xref:System.Windows.FrameworkElement.MaxWidth%2A> içerik genişliğine.  
   
--   <xref:System.Windows.SizeToContent.Height>. Her ikisi de ayarını aynı etkiye sahip içerik yüksekliği Sığdır <xref:System.Windows.FrameworkElement.MinHeight%2A> ve <xref:System.Windows.FrameworkElement.MaxHeight%2A> yüksekliğine içeriği.  
+- <xref:System.Windows.SizeToContent.Height>. Her ikisi de ayarını aynı etkiye sahip içerik yüksekliği Sığdır <xref:System.Windows.FrameworkElement.MinHeight%2A> ve <xref:System.Windows.FrameworkElement.MaxHeight%2A> yüksekliğine içeriği.  
   
--   <xref:System.Windows.SizeToContent.WidthAndHeight>. İçerik genişliği ve her ikisi de ayarı aynı etkiye sahip yüksekliği Sığdır <xref:System.Windows.FrameworkElement.MinHeight%2A> ve <xref:System.Windows.FrameworkElement.MaxHeight%2A> içeriği ve ayarı hem yüksekliğine <xref:System.Windows.FrameworkElement.MinWidth%2A> ve <xref:System.Windows.FrameworkElement.MaxWidth%2A> içerik genişliğine.  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>. İçerik genişliği ve her ikisi de ayarı aynı etkiye sahip yüksekliği Sığdır <xref:System.Windows.FrameworkElement.MinHeight%2A> ve <xref:System.Windows.FrameworkElement.MaxHeight%2A> içeriği ve ayarı hem yüksekliğine <xref:System.Windows.FrameworkElement.MinWidth%2A> ve <xref:System.Windows.FrameworkElement.MaxWidth%2A> içerik genişliğine.  
   
  Aşağıdaki örnek bir pencere otomatik olarak ilk göründüğü içeriğini, dikey ve yatay olarak, uygun boyutları gösterir.  
   
@@ -381,11 +381,11 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  Bir pencerenin durumunu ayarlanarak yapılandırılabilir kendi <xref:System.Windows.Window.WindowState%2A> aşağıdakilerden biri olabilir özelliği <xref:System.Windows.WindowState> sabit listesi değerleri:  
   
--   <xref:System.Windows.WindowState.Normal> (varsayılan)  
+- <xref:System.Windows.WindowState.Normal> (varsayılan)  
   
--   <xref:System.Windows.WindowState.Maximized>  
+- <xref:System.Windows.WindowState.Maximized>  
   
--   <xref:System.Windows.WindowState.Minimized>  
+- <xref:System.Windows.WindowState.Minimized>  
   
  Aşağıdaki örnek, açıldığında, tam ekran olarak gösterilen bir pencere oluşturma işlemi gösterilmektedir.  
   
@@ -405,13 +405,13 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  Nasıl bir pencereyi yeniden boyutlandırır ayarlayarak yapılandırabilirsiniz, <xref:System.Windows.Window.ResizeMode%2A> aşağıdakilerden biri olabilir özelliği <xref:System.Windows.ResizeMode> sabit listesi değerleri:  
   
--   <xref:System.Windows.ResizeMode.NoResize>  
+- <xref:System.Windows.ResizeMode.NoResize>  
   
--   <xref:System.Windows.ResizeMode.CanMinimize>  
+- <xref:System.Windows.ResizeMode.CanMinimize>  
   
--   <xref:System.Windows.ResizeMode.CanResize> (varsayılan)  
+- <xref:System.Windows.ResizeMode.CanResize> (varsayılan)  
   
--   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
+- <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
  Olduğu gibi <xref:System.Windows.Window.WindowStyle%2A>, yeniden boyutlandırma modunu pencerenin, büyük olasılıkla ondan ayarlarsınız, yani ömrü boyunca değişme olasılığı [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme.  
   
@@ -425,13 +425,13 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  Bir pencere kenarlığını ne tür denetlemek için alır, ayarladığınız kendi <xref:System.Windows.Window.WindowStyle%2A> aşağıdaki değerlerden birini özelliğiyle <xref:System.Windows.WindowStyle> sabit listesi:  
   
--   <xref:System.Windows.WindowStyle.None>  
+- <xref:System.Windows.WindowStyle.None>  
   
--   <xref:System.Windows.WindowStyle.SingleBorderWindow> (varsayılan)  
+- <xref:System.Windows.WindowStyle.SingleBorderWindow> (varsayılan)  
   
--   <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
+- <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
--   <xref:System.Windows.WindowStyle.ToolWindow>  
+- <xref:System.Windows.WindowStyle.ToolWindow>  
   
  Bu pencere stilleri etkisini aşağıdaki resimde gösterilmektedir:  
   

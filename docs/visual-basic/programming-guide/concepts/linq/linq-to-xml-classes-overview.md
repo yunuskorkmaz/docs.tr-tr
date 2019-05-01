@@ -3,11 +3,11 @@ title: LINQ to XML sınıflarına genel bakış (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
 ms.openlocfilehash: bd6990c387da3c687335561d1e13b7ec62fb5b84
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051526"
 ---
 # <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML sınıflarına genel bakış (Visual Basic)
 Bu konu bir listesini sağlar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sınıfları <xref:System.Xml.Linq> ad alanını ve her kısa bir açıklaması.  
@@ -26,9 +26,9 @@ Bu konu bir listesini sağlar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.m
 ### <a name="xcontainer-class"></a>XContainer sınıfı  
  <xref:System.Xml.Linq.XContainer> alt düğümleri olan tüm düğümlere yönelik soyut bir temel sınıf olan. Aşağıdaki sınıflar türetilen <xref:System.Xml.Linq.XContainer> sınıfı:  
   
--   <xref:System.Xml.Linq.XElement>  
+- <xref:System.Xml.Linq.XElement>  
   
--   <xref:System.Xml.Linq.XDocument>  
+- <xref:System.Xml.Linq.XDocument>  
   
 ### <a name="xdeclaration-class"></a>XDeclaration sınıfı  
  <xref:System.Xml.Linq.XDeclaration> bir XML bildirimi temsil eder. Bir XML bildirimi XML sürümü ve bir belge kodlama bildirmek için kullanılır. Ayrıca, bir XML bildirimi XML belgesi tek başına olup olmadığını belirtir. Bir belge tek başına ise, hiçbir dış işaretleme bildirimlerinde, bir dış DTD'nin veya varlıktaki iç alt kümesinden başvurulan dış parametre vardır.  
@@ -55,15 +55,15 @@ Bu konu bir listesini sağlar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.m
 ### <a name="xnode-class"></a>XNode Class  
  <xref:System.Xml.Linq.XNode> bir XML ağacı düğümleri temsil eden bir soyut sınıftır. Aşağıdaki sınıflar türetilen <xref:System.Xml.Linq.XNode> sınıfı:  
   
--   <xref:System.Xml.Linq.XText>  
+- <xref:System.Xml.Linq.XText>  
   
--   <xref:System.Xml.Linq.XContainer>  
+- <xref:System.Xml.Linq.XContainer>  
   
--   <xref:System.Xml.Linq.XComment>  
+- <xref:System.Xml.Linq.XComment>  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>  
+- <xref:System.Xml.Linq.XProcessingInstruction>  
   
--   <xref:System.Xml.Linq.XDocumentType>  
+- <xref:System.Xml.Linq.XDocumentType>  
   
 ### <a name="xnodedocumentordercomparer-class"></a>XNodeDocumentOrderComparer Class  
  <xref:System.Xml.Linq.XNodeDocumentOrderComparer> için kendi belge sırayla düğüm karşılaştırmak için işlevsellik sağlar.  

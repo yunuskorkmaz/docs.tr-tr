@@ -6,11 +6,11 @@ helpviewer_keywords:
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033234"
 ---
 # <a name="accessibility-best-practices"></a>En İyi Erişilebilirlik Uygulamaları
 > [!NOTE]
@@ -78,9 +78,9 @@ ms.locfileid: "59074241"
   
  Uygulamalar, aşağıdaki klavye arabirimleri sağlamalıdır:  
   
--   Kullanıcının, düğmeler, bağlantılar ve liste kutuları gibi etkileşim tüm denetimler için sekmesinde durdurur  
+- Kullanıcının, düğmeler, bağlantılar ve liste kutuları gibi etkileşim tüm denetimler için sekmesinde durdurur  
   
--   mantıksal sekme sırası  
+- mantıksal sekme sırası  
   
 <a name="Show_the_Keyboard_Focus"></a>   
 ### <a name="show-the-keyboard-focus"></a>Klavye odağı Göster  
@@ -90,11 +90,11 @@ ms.locfileid: "59074241"
   
  Uygulamaları klavye odağı ile aşağıdakileri yapmalıdır:  
   
--   bir öğe klavye odağı her zaman olmalıdır  
+- bir öğe klavye odağı her zaman olmalıdır  
   
--   klavye odağı görünür ve açık olmalıdır  
+- klavye odağı görünür ve açık olmalıdır  
   
--   Seçim ve/veya odaklanmış öğelerin görsel olarak vurgulanmış olmalıdır  
+- Seçim ve/veya odaklanmış öğelerin görsel olarak vurgulanmış olmalıdır  
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>   
 ### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>Gezinti standartlar ve güçlü Gezinti düzenlerini desteği  
@@ -102,11 +102,11 @@ ms.locfileid: "59074241"
   
  Uygulamalar, aşağıdaki klavye arabirimleri sağlamalıdır:  
   
--   kısayol tuşları ve tüm komutlar, menüler ve denetimler için altı çizili erişim anahtarları  
+- kısayol tuşları ve tüm komutlar, menüler ve denetimler için altı çizili erişim anahtarları  
   
--   önemli bağlantılar için klavye kısayolları  
+- önemli bağlantılar için klavye kısayolları  
   
--   tüm menü öğeleri, bir erişim anahtarı sahip; Tüm düğmeler Hızlandırıcı tuşları varsa, tüm komutları Hızlandırıcı tuşunu sahiptir.  
+- tüm menü öğeleri, bir erişim anahtarı sahip; Tüm düğmeler Hızlandırıcı tuşları varsa, tüm komutları Hızlandırıcı tuşunu sahiptir.  
   
 <a name="Do_not_let_Mouse_Location_Interfere_with_Keyboard"></a>   
 ### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>Fare bulunmamasını konumu klavye gezintisi ile müdahale  

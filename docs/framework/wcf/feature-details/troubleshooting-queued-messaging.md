@@ -6,8 +6,8 @@ ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050772"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Kuyruğa Alınan İletilerde Sorun Giderme
 Bu bölüm, yaygın sorular ve sorun giderme Yardımı için sıralar kullanarak Windows Communication Foundation (WCF) içerir.  
@@ -29,11 +29,11 @@ Bu bölüm, yaygın sorular ve sorun giderme Yardımı için sıralar kullanarak
   
  **Y:** MSMQ 4.0 ancak içinde olmayan MSMQ 3.0, aşağıdaki özellikler kullanılabilir:  
   
--   Özel eski ileti sırası, yalnızca MSMQ 4.0 desteklenir.  
+- Özel eski ileti sırası, yalnızca MSMQ 4.0 desteklenir.  
   
--   MSMQ 3.0 ve 4.0 zehirli iletilerin farklı şekilde işler.  
+- MSMQ 3.0 ve 4.0 zehirli iletilerin farklı şekilde işler.  
   
--   Yalnızca MSMQ 4.0 uzaktan hizmetteki okuma destekler.  
+- Yalnızca MSMQ 4.0 uzaktan hizmetteki okuma destekler.  
   
  Daha fazla bilgi için [Windows Vista, Windows Server 2003 ve Windows XP sıraya alma özelliği arasındaki farklar](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
@@ -60,19 +60,19 @@ Bu bölüm, yaygın sorular ve sorun giderme Yardımı için sıralar kullanarak
   
  **Y:** Yanıt belirlemek için aşağıdaki denetim listesinde çalışır:  
   
--   İşlem sırası gereksinimleri belirtilen konu ile uyumlu olduğundan emin olun. Aşağıdaki ilkeleri göz önünde bulundurun:  
+- İşlem sırası gereksinimleri belirtilen konu ile uyumlu olduğundan emin olun. Aşağıdaki ilkeleri göz önünde bulundurun:  
   
-    -   Dayanıklı ileti (veri birimleri ve oturumları) Güvenceleri "tam bir kez ile" gönderebilirsiniz (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) yalnızca bir işlem kuyruğu için.  
+    - Dayanıklı ileti (veri birimleri ve oturumları) Güvenceleri "tam bir kez ile" gönderebilirsiniz (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) yalnızca bir işlem kuyruğu için.  
   
-    -   Yalnızca "tam bir kez" Güvenceleri oturumları gönderebilirsiniz.  
+    - Yalnızca "tam bir kez" Güvenceleri oturumları gönderebilirsiniz.  
   
-    -   Bir işlem, bir işlem kuyruktan bir oturumda ileti alma için gereklidir.  
+    - Bir işlem, bir işlem kuyruktan bir oturumda ileti alma için gereklidir.  
   
-    -   Geçici veya kalıcı iletileri (yalnızca veri birimi) ile hiçbir şekilde gönderip alabilir (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) yalnızca bir işlem olmayan kuyruğu için.  
+    - Geçici veya kalıcı iletileri (yalnızca veri birimi) ile hiçbir şekilde gönderip alabilir (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) yalnızca bir işlem olmayan kuyruğu için.  
   
--   Sahipsiz sırayı kontrol edin. İletilerin bulursanız, neden, teslim edilmeyen belirleyin.  
+- Sahipsiz sırayı kontrol edin. İletilerin bulursanız, neden, teslim edilmeyen belirleyin.  
   
--   Giden sıralar bağlantı veya sorunlarını ele alan kontrol edin.  
+- Giden sıralar bağlantı veya sorunlarını ele alan kontrol edin.  
   
  **S:** Özel bir eski ileti sırası belirtilen, ancak ı gönderen uygulamasını başlattığınızda, eski ileti sırası bulunamadı bir özel durum alabilir miyim veya gönderen uygulamaya sahip eski ileti sırası izni yok. Bunun nedeni nedir?  
   
@@ -184,17 +184,17 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **Y:** Bu üç olası nedeni vardır:  
   
--   Etki alanı modunda iseniz, işlem temelli uzaktan alma Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) ağ erişimi gerekmektedir. Bunu kullanarak etkinleştirmek **Bileşenlerini Ekle/Kaldır**.  
+- Etki alanı modunda iseniz, işlem temelli uzaktan alma Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) ağ erişimi gerekmektedir. Bunu kullanarak etkinleştirmek **Bileşenlerini Ekle/Kaldır**.  
   
      ![Etkinleştirme gösteren ekran görüntüsü DTC ağ erişim.](./media/troubleshooting-queued-messaging/enable-distributed-transaction-coordinator-access.jpg)  
   
--   İşlem Yöneticisi ile iletişim kurmak için kimlik doğrulama modunu kontrol edin. Çalışma grubu modunda iseniz, "Gerekli kimlik doğrulaması yok" seçilmesi gerekir. Etki alanı modunda iseniz, "Gerekli karşılıklı kimlik doğrulaması" seçilmelidir.  
+- İşlem Yöneticisi ile iletişim kurmak için kimlik doğrulama modunu kontrol edin. Çalışma grubu modunda iseniz, "Gerekli kimlik doğrulaması yok" seçilmesi gerekir. Etki alanı modunda iseniz, "Gerekli karşılıklı kimlik doğrulaması" seçilmelidir.  
   
      ![XA işlemlerini etkinleştirme](../../../../docs/framework/wcf/feature-details/media/4f3695e0-fb0b-4c5b-afac-75f8860d2bb0.jpg "4f3695e0-fb0b-4c5b-afac-75f8860d2bb0")  
   
--   MSDTC özel durumlar listesinde olduğundan emin olun **Internet Bağlantısı Güvenlik Duvarı** ayarları.  
+- MSDTC özel durumlar listesinde olduğundan emin olun **Internet Bağlantısı Güvenlik Duvarı** ayarları.  
   
--   Kullandığınızdan emin olun [!INCLUDE[wv](../../../../includes/wv-md.md)]. MSMQ üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)] uzaktan hizmetteki okuma destekler. MSMQ önceki Windows sürümleri üzerinde uzaktan hizmetteki okuma desteklemez.  
+- Kullandığınızdan emin olun [!INCLUDE[wv](../../../../includes/wv-md.md)]. MSMQ üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)] uzaktan hizmetteki okuma destekler. MSMQ önceki Windows sürümleri üzerinde uzaktan hizmetteki okuma desteklemez.  
   
  **S:** Kuyruktan okuma hizmeti bir ağ hizmeti olduğunda, örneğin, bir Web ana bilgisayar, bir erişim reddedildi özel neden alıyorum kuyruktan okurken oluşturulur?  
   

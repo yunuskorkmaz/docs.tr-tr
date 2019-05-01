@@ -3,20 +3,20 @@ title: Tabloların Çıkarımını Yapma
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
 ms.openlocfilehash: 2c2a93d413f301dc3006b701e4bc7979a3fa7a1d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034261"
 ---
 # <a name="inferring-tables"></a>Tabloların Çıkarımını Yapma
 İçin bir şema çıkarımını yapma sırasında bir <xref:System.Data.DataSet> tablolar XML öğeleri temsil eden önce bir XML belgesinden ADO.NET belirler. Aşağıdaki XML yapıları için bir tabloyu neden **veri kümesi** şema:  
   
--   Öznitelikleri olan öğeleri  
+- Öznitelikleri olan öğeleri  
   
--   Alt öğelerini  
+- Alt öğelerini  
   
--   Yinelenen öğeleri  
+- Yinelenen öğeleri  
   
 ## <a name="elements-with-attributes"></a>Öznitelikleri olan öğeleri  
  İçinde belirtilen öznitelikler neden olan öğeler tabloları sonuçlandı. Örneğin, aşağıdaki XML göz önünde bulundurun:  

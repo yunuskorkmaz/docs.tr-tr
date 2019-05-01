@@ -10,11 +10,11 @@ helpviewer_keywords:
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
 ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050525"
 ---
 # <a name="determining-object-type-visual-basic"></a>Nesne Türünü Belirleme (Visual Basic)
 Genel nesne değişkenleri (diğer bir deyişle, değişkenleri olarak bildirdiğiniz `Object`) herhangi bir sınıftan nesneleri içerebilir. Türü değişkenlerindeki kullanırken `Object`, nesnenin sınıfına göre farklı eylemlerde gerekebilir; örneğin, bazı nesneler belirli bir özelliği veya yöntemi desteklemiyor olabilir. Visual Basic nesne türü bir nesne değişkenine depolandığını belirleyen iki yol sunar: `TypeName` işlevi ve `TypeOf...Is` işleci.  

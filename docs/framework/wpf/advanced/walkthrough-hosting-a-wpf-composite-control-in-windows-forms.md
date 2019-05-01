@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
 ms.openlocfilehash: 75e60a3a9b39c0dd63a24a1e71c4823e7cb0bd74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052553"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu olabilir mevcut BT'nizi genişletin daha etkili [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ile uygulama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerine baştan yeniden. Sık karşılaşılan bir senaryodur birini eklemek istediğiniz ya da daha fazla denetim ile uygulanan olduğunda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , Windows Forms uygulaması içinde. WPF denetimleri özelleştirme hakkında daha fazla bilgi için bkz. [denetimi özelleştirme](../controls/control-customization.md).  
@@ -20,9 +20,9 @@ ms.locfileid: "59322842"
   
  Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
   
--   WPF bileşik denetimini uygulama.  
+- WPF bileşik denetimini uygulama.  
   
--   Windows Forms ana bilgisayar uygulaması oluşturma.  
+- Windows Forms ana bilgisayar uygulaması oluşturma.  
   
  Bu izlenecek yolda gösterilen görevler tam kod listesi için bkz. [WPF bileşik denetimini Windows Forms örneğinde barındırma](https://go.microsoft.com/fwlink/?LinkID=159996).  
   
@@ -54,13 +54,13 @@ Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
   
  Projenize aşağıdaki sistem DLL'lerini başvuruları olması gerekir. Bu DLL'leri birini varsayılan olarak dahil edilmez, bunları projenize ekleyin.  
   
--   PresentationCore  
+- PresentationCore  
   
--   PresentationFramework  
+- PresentationFramework  
   
--   Sistem  
+- Sistem  
   
--   WindowsBase  
+- WindowsBase  
   
 ### <a name="creating-the-user-interface"></a>Kullanıcı arabirimi oluşturma  
  [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] İle bileşik denetim uygulanan için [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Bileşik Denetim [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] beş oluşur <xref:System.Windows.Controls.TextBox> öğeleri. Her <xref:System.Windows.Controls.TextBox> öğeye sahip bir ilişkili <xref:System.Windows.Controls.TextBlock> etiket olarak hizmet veren öğesi. İki <xref:System.Windows.Controls.Button> altındaki öğeleri **Tamam** ve **iptal**. Kullanıcı ya da düğmesini tıkladığında denetim konağa bilgileri döndürmek için özel bir olay başlatır.  
@@ -139,11 +139,11 @@ namespace MyControls
 #### <a name="initializing-the-control"></a>Denetimi başlatılıyor  
  Aşağıdaki kod, bazı temel görevleri uygular:  
   
--   Özel bir olay bildirir `OnButtonClick`ve onun ilişkili temsilci `MyControlEventHandler`.  
+- Özel bir olay bildirir `OnButtonClick`ve onun ilişkili temsilci `MyControlEventHandler`.  
   
--   Kullanıcının verilerini depolayan çeşitli özel genel değişkenler oluşturur. Bu veriler, ilgili özellikleri aracılığıyla kullanıma sunulur.  
+- Kullanıcının verilerini depolayan çeşitli özel genel değişkenler oluşturur. Bu veriler, ilgili özellikleri aracılığıyla kullanıma sunulur.  
   
--   Bir işleyici uygulayan `Init`, denetim için <xref:System.Windows.FrameworkElement.Loaded> olay. Bu işleyici, MyControl1.xaml içinde tanımlanan değerlerden birisini atayarak genel değişkenleri başlatır. Bunu yapmak için kullandığı <xref:System.Windows.FrameworkElement.Name%2A> tipik bir atanmış <xref:System.Windows.Controls.TextBlock> öğesi `nameLabel`, o öğenin özellik ayarlarına erişmek için.  
+- Bir işleyici uygulayan `Init`, denetim için <xref:System.Windows.FrameworkElement.Loaded> olay. Bu işleyici, MyControl1.xaml içinde tanımlanan değerlerden birisini atayarak genel değişkenleri başlatır. Bunu yapmak için kullandığı <xref:System.Windows.FrameworkElement.Name%2A> tipik bir atanmış <xref:System.Windows.Controls.TextBlock> öğesi `nameLabel`, o öğenin özellik ayarlarına erişmek için.  
   
  Var olan oluşturucu silin ve aşağıdaki kodu ekleyin, `MyControl1` sınıfı.  
   
@@ -152,11 +152,11 @@ namespace MyControls
 #### <a name="handling-the-buttons-click-events"></a>Düğmeleri işleme tıklama olayları  
  Kullanıcı tıklayarak, veri girişi görevin tamamlandığını gösteren **Tamam** düğmesini veya **iptal** düğmesi. Her iki aynı düğmelerini <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay işleyicisi `ButtonClicked`. Her iki düğme bir adı vardır `btnOK` veya `btnCancel`, işleyicinin değerini inceleyerek hangi düğmesine tıklandığını belirleme sağlayan `sender` bağımsız değişken. İşleyici şunları yapar:  
   
--   Oluşturur bir `MyControlEventArgs` verilerini içeren nesne <xref:System.Windows.Controls.TextBox> öğeleri.  
+- Oluşturur bir `MyControlEventArgs` verilerini içeren nesne <xref:System.Windows.Controls.TextBox> öğeleri.  
   
--   Kullanıcı tıkladıysanız **iptal** Ayarlar düğmesini `MyControlEventArgs` nesnenin `IsOK` özelliğini `false`.  
+- Kullanıcı tıkladıysanız **iptal** Ayarlar düğmesini `MyControlEventArgs` nesnenin `IsOK` özelliğini `false`.  
   
--   Başlatır `OnButtonClick` konağa kullanıcı tamamlandıktan ve geçişleri geri toplanan verileri göstermek için olay.  
+- Başlatır `OnButtonClick` konağa kullanıcı tamamlandıktan ve geçişleri geri toplanan verileri göstermek için olay.  
   
  Aşağıdaki kodu ekleyin, `MyControl1` sınıfı, sonra `Init` yöntemi.  
   
@@ -209,15 +209,15 @@ Aşağıdaki resimde, bir Windows Forms uygulamasında barındırılan bir WPF b
   
 4. Aşağıdaki derlemelere başvurular ekleyin.  
   
-    -   PresentationCore  
+    - PresentationCore  
   
-    -   PresentationFramework  
+    - PresentationFramework  
   
-    -   System.Xaml  
+    - System.Xaml  
   
-    -   WindowsBase  
+    - WindowsBase  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
 ### <a name="implementing-the-user-interface-for-the-application"></a>Uygulama için kullanıcı arabirimi uygulama  
  Windows Form uygulaması için kullanıcı Arabirimi ile WPF bileşik denetimini etkileşim kurmak için çeşitli denetimler içerir.  
@@ -296,9 +296,9 @@ Aşağıdaki resimde, bir Windows Forms uygulamasında barındırılan bir WPF b
   
  Kalan iki satırları `Form1_Load` yöntemi, iki denetim olaylarına işleyicileri ekleyin:  
   
--   `OnButtonClick` kullanıcı tıkladığında, bileşik denetim tarafından harekete geçirilen özel bir olaydır **Tamam** veya **iptal** düğmesi. Kullanıcının yanıt almak ve kullanıcının belirttiği herhangi bir veri toplamak için olay işleyin.  
+- `OnButtonClick` kullanıcı tıkladığında, bileşik denetim tarafından harekete geçirilen özel bir olaydır **Tamam** veya **iptal** düğmesi. Kullanıcının yanıt almak ve kullanıcının belirttiği herhangi bir veri toplamak için olay işleyin.  
   
--   <xref:System.Windows.FrameworkElement.Loaded> tarafından oluşturulan standart bir olay bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tam yüklü olduğunda denetim. Olayı, denetim özelliklerini kullanarak birden çok genel değişkenlerini başlatmak üzere örnek gerektiğinden burada kullanılır. Formun anında <xref:System.Windows.Forms.Form.Load> olayı, denetim tam yüklü değil ve bu değerleri hala ayarlanmış olan `null`. Denetimin kadar beklenecek ihtiyacınız <xref:System.Windows.FrameworkElement.Loaded> olay özelliklere erişebilmek için önce gerçekleşir.  
+- <xref:System.Windows.FrameworkElement.Loaded> tarafından oluşturulan standart bir olay bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tam yüklü olduğunda denetim. Olayı, denetim özelliklerini kullanarak birden çok genel değişkenlerini başlatmak üzere örnek gerektiğinden burada kullanılır. Formun anında <xref:System.Windows.Forms.Form.Load> olayı, denetim tam yüklü değil ve bu değerleri hala ayarlanmış olan `null`. Denetimin kadar beklenecek ihtiyacınız <xref:System.Windows.FrameworkElement.Loaded> olay özelliklere erişebilmek için önce gerçekleşir.  
   
  <xref:System.Windows.FrameworkElement.Loaded> Olay işleyicisi, yukarıdaki kodda gösterilmiştir. `OnButtonClick` İşleyicisi, sonraki bölümde ele alınmıştır.  
   

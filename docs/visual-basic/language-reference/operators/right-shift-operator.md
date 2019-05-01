@@ -11,11 +11,11 @@ helpviewer_keywords:
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
 ms.openlocfilehash: 8803dc2e25edde756958a243d429dd30c5c78bcf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053294"
 ---
 # <a name="-operator-visual-basic"></a>>> İşleci (Visual Basic)
 Bir bit desenine aritmetik sağa kaydırma uygular.  
@@ -64,15 +64,15 @@ result = pattern >> amount
   
  Yukarıdaki örnekte sonuçları aşağıdaki gibidir:  
   
--   `result1` 2560 (0000 1010 0000 0000) olan.  
+- `result1` 2560 (0000 1010 0000 0000) olan.  
   
--   `result2` 160 (0000 0000 1010 0000) olur.  
+- `result2` 160 (0000 0000 1010 0000) olur.  
   
--   `result3` 2 (0000 0000 0000 0010)'dir.  
+- `result3` 2 (0000 0000 0000 0010)'dir.  
   
--   `result4` 640 (0000 0010 1000 0000)'dır.  
+- `result4` 640 (0000 0010 1000 0000)'dır.  
   
--   `result5` (sağ ötelenen 15 basamak) 0'dır.  
+- `result5` (sağ ötelenen 15 basamak) 0'dır.  
   
  Değiştirme miktarı için `result4` 18 hesaplanır ve hangi eşittir 2 15.  
   
@@ -82,9 +82,9 @@ result = pattern >> amount
   
  Yukarıdaki örnekte sonuçları aşağıdaki gibidir:  
   
--   `negresult1` -512 (1111 1110 0000 0000) olur.  
+- `negresult1` -512 (1111 1110 0000 0000) olur.  
   
--   `negresult2` -1 (imza biti yayılır) olur.  
+- `negresult2` -1 (imza biti yayılır) olur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

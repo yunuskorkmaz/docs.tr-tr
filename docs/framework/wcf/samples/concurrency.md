@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
 ms.openlocfilehash: 5de918f71f4361af3409c8382781844824747c83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002462"
 ---
 # <a name="concurrency"></a>Eşzamanlılık
 Eşzamanlılık örneği kullanmayı gösterir <xref:System.ServiceModel.ServiceBehaviorAttribute> ile <xref:System.ServiceModel.ConcurrencyMode> sabit listesi bir hizmet örneği sırayla veya aynı anda iletileri işleyen olup olmadığını denetler. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), uygulayan `ICalculator` hizmet sözleşmesi. Bu örnek yeni bir sözleşme tanımlayan `ICalculatorConcurrency`, işlevinden devralan `ICalculator`, hizmet eşzamanlılık durumunu incelemek için iki ek işlemler sağlar. Eş zamanlılık ayarı değiştirerek istemci çalıştırarak davranış değişikliği görebilirsiniz.  
@@ -22,11 +22,11 @@ Eşzamanlılık örneği kullanmayı gösterir <xref:System.ServiceModel.Service
   
  Üç eşzamanlılık modu vardır:  
   
--   `Single`: Her hizmet örneği aynı anda tek bir ileti işler. Varsayılan eşzamanlılık modu budur.  
+- `Single`: Her hizmet örneği aynı anda tek bir ileti işler. Varsayılan eşzamanlılık modu budur.  
   
--   `Multiple`: Her hizmet örneği birden çok iletiyi eş zamanlı olarak işler. Hizmet uygulaması bu eşzamanlılık modu kullanmak için iş parçacığı açısından güvenli olması gerekir.  
+- `Multiple`: Her hizmet örneği birden çok iletiyi eş zamanlı olarak işler. Hizmet uygulaması bu eşzamanlılık modu kullanmak için iş parçacığı açısından güvenli olması gerekir.  
   
--   `Reentrant`: Her hizmet örneği, tek bir ileti işler, ancak desteklemeyeceğini çağrılarını kabul eder. Bunu çağırma yaparken hizmeti yalnızca bu çağrıları kabul eder. ConcurrencyMode için Reentrant gösterilmiştir [ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) örnek.  
+- `Reentrant`: Her hizmet örneği, tek bir ileti işler, ancak desteklemeyeceğini çağrılarını kabul eder. Bunu çağırma yaparken hizmeti yalnızca bu çağrıları kabul eder. ConcurrencyMode için Reentrant gösterilmiştir [ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) örnek.  
   
  Eşzamanlılık kullanımını örneklemesini moduna ilişkilidir. İçinde <xref:System.ServiceModel.InstanceContextMode.PerCall> yeni bir hizmet örneği tarafından işlenen her iletisi depolamasına, eşzamanlılık ilgili değildir, çünkü. İçinde <xref:System.ServiceModel.InstanceContextMode.Single> depolamasına, ya da <xref:System.ServiceModel.ConcurrencyMode.Single> veya <xref:System.ServiceModel.ConcurrencyMode.Multiple> olup olmadığı tek örnekli iletileri sırayla veya aynı anda işler bağlı olarak, ilgili eşzamanlılık. İçinde <xref:System.ServiceModel.InstanceContextMode.PerSession> depolamasına, eşzamanlılık modun herhangi birinde uygun olabilir.  
   

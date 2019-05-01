@@ -3,24 +3,24 @@ title: Tasarımcıyı yeniden barındırma
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
 ms.openlocfilehash: b2a51014e34bf27d6f016db71d2c2eaabb906c6d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005240"
 ---
 # <a name="designer-rehosting"></a>Tasarımcıyı Yeniden Barındırma
 Tasarımcı yeniden barındırma başvuran özel bir uygulama içinde iş akışı tasarım tuvali barındırmak için kullanılan yaygın bir senaryodur. Çoğu kişi bilginiz barındırma kullanılabilen birkaç senaryolar burada iş akışı Tasarımcısı uygulamada gösteren yararlı olabilir ancak Visual Studio uygulamasıdır:  
   
--   (Şu anda etkin durumuna, toplam yürütme süresi veri veya iş akışı örneği ile ilgili diğer bilgileri gibi işlemine ilişkin çalışma zamanı verilerinin yanı sıra işlem görselleştirmek bir son kullanıcı olanak tanır) uygulamalarını izleme.  
+- (Şu anda etkin durumuna, toplam yürütme süresi veri veya iş akışı örneği ile ilgili diğer bilgileri gibi işlemine ilişkin çalışma zamanı verilerinin yanı sıra işlem görselleştirmek bir son kullanıcı olanak tanır) uygulamalarını izleme.  
   
--   Sınırlı bir dizi etkinliği ile işlem özelleştirmek bir kullanıcı izin uygulamalar.  
+- Sınırlı bir dizi etkinliği ile işlem özelleştirmek bir kullanıcı izin uygulamalar.  
   
  Bu tür uygulamaları desteklemek için iş akışı Tasarımcısı .NET Framework içinde birlikte gelen ve barındırma kodunu uygun WPF ile WPF uygulaması içinde veya bir WinForms uygulaması barındırılabilir. Bu örnek gösterir:  
   
--   WF tasarımcısını yeniden barındırma.  
+- WF tasarımcısını yeniden barındırma.  
   
--   Yeniden barındırılan araç ve özellik Kılavuzu de kullanarak.  
+- Yeniden barındırılan araç ve özellik Kılavuzu de kullanarak.  
   
 ## <a name="rehosting-the-designer"></a>Tasarımcısını yeniden barındırma  
  Bu örnek, Tasarımcı içerecek şekilde WPF düzen oluşturma işlemi gösterilmektedir aşağıdaki kılavuz yerleşiminde (araç kutusu kodu ilgili alanı konuları atlanmış) görülür. Tasarımcı ve özellik Kılavuzu içeren kenarlıklarını adlandırma unutmayın.  

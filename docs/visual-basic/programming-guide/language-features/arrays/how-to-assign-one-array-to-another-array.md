@@ -7,41 +7,42 @@ helpviewer_keywords:
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
 ms.openlocfilehash: 78497de3a9aea55320639c55a151a1260a960159
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053684"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Nasıl yapılır: Bir diziyi başka diziye (Visual Basic) atama
-Diziler nesneler olduğundan atama deyimleri diğer nesne türleri gibi kullanabilirsiniz. Bir dizi değişkenini dizi öğeleri ve boyut sayısı ve uzunluk bilgileri oluşturan veri için bir işaretçi tutar ve bu işaretçi atama kopyalar.  
-  
-### <a name="to-assign-one-array-to-another-array"></a>Bir diziyi başka diziye atama için  
-  
-1. İki dizi aynı boyut sayısı (boyut sayısı) ve uyumlu öğe veri türleri olduğundan emin olun.  
-  
-2. Hedef dizi için kaynak dizisi atamak için bir standart atama ifadesi kullanın. Parantezler ile ya da dizi adı izlemeyin.  
-  
-    ```  
-    Dim formArray() As System.Windows.Forms.Form  
-    Dim controlArray() As System.Windows.Forms.Control  
-    controlArray = formArray  
-    ```  
-  
- Bir diziyi başka birine atadığınızda, aşağıdaki kurallar geçerlidir:  
-  
--   **Eşit sıralamalara sahip.** Hedef dizinin boyut (boyut sayısı), kaynak diziden aynı olmalıdır.  
-  
-     Sıralamalara sahip iki dizinin eşitse sağlanan boyutları eşit olması gerekmez. Atama sırasında belirli bir boyut içindeki öğelerin sayısını değiştirebilirsiniz.  
-  
--   **Öğe türleri.** Her iki ya da bir dizi olmalıdır *başvuru türüne* öğelerin veya her iki dizide olmalıdır *değer türü* öğeleri. Daha fazla bilgi için [değer türleri ve başvuru türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
-  
-    -   Her iki dizide değer türü öğeleri varsa öğe veri türleri tam olarak aynı olmalıdır. Bunun tek istisnası, bir dizi atayabilirsiniz olan `Enum` , temel türü bir dizi öğelerine `Enum`.  
-  
-    -   Her iki dizide öğe türü başvurusu varsa, kaynak öğe türü hedef öğenin türünden türetilmesi gerekir. Bu durumda, iki dizi öğeleri olarak aynı devralma ilişkisine sahiptir. Bu adlandırılır *dizi kovaryansı*.  
-  
- Derleyici, veri türleri uyumlu değilse, yukarıdaki kuralları, örneğin ihlal bir hata veya sıralamalara sahip eşit bildirir. Hata işleme kodunuzda ödev denemeden önce diziler uyumlu olduğundan emin olmak için ekleyebilirsiniz. Ayrıca [TryCast işleci](../../../../visual-basic/language-reference/operators/trycast-operator.md) bir özel durum kaçınmak istiyorsanız anahtar sözcüğü.  
-  
+
+Diziler nesneler olduğundan atama deyimleri diğer nesne türleri gibi kullanabilirsiniz. Bir dizi değişkenini dizi öğeleri ve boyut sayısı ve uzunluk bilgileri oluşturan veri için bir işaretçi tutar ve bu işaretçi atama kopyalar.
+
+### <a name="to-assign-one-array-to-another-array"></a>Bir diziyi başka diziye atama için
+
+1. İki dizi aynı boyut sayısı (boyut sayısı) ve uyumlu öğe veri türleri olduğundan emin olun.
+
+2. Hedef dizi için kaynak dizisi atamak için bir standart atama ifadesi kullanın. Parantezler ile ya da dizi adı izlemeyin.
+
+    ```vb
+    Dim formArray() As System.Windows.Forms.Form
+    Dim controlArray() As System.Windows.Forms.Control
+    controlArray = formArray
+    ```
+
+Bir diziyi başka birine atadığınızda, aşağıdaki kurallar geçerlidir:
+
+- **Eşit sıralamalara sahip.** Hedef dizinin boyut (boyut sayısı), kaynak diziden aynı olmalıdır.
+
+  Sıralamalara sahip iki dizinin eşitse sağlanan boyutları eşit olması gerekmez. Atama sırasında belirli bir boyut içindeki öğelerin sayısını değiştirebilirsiniz.
+
+- **Öğe türleri.** Her iki ya da bir dizi olmalıdır *başvuru türüne* öğelerin veya her iki dizide olmalıdır *değer türü* öğeleri. Daha fazla bilgi için [değer türleri ve başvuru türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
+
+  - Her iki dizide değer türü öğeleri varsa öğe veri türleri tam olarak aynı olmalıdır. Bunun tek istisnası, bir dizi atayabilirsiniz olan `Enum` , temel türü bir dizi öğelerine `Enum`.
+
+  - Her iki dizide öğe türü başvurusu varsa, kaynak öğe türü hedef öğenin türünden türetilmesi gerekir. Bu durumda, iki dizi öğeleri olarak aynı devralma ilişkisine sahiptir. Bu adlandırılır *dizi kovaryansı*.
+
+Derleyici, veri türleri uyumlu değilse, yukarıdaki kuralları, örneğin ihlal bir hata veya sıralamalara sahip eşit bildirir. Hata işleme kodunuzda ödev denemeden önce diziler uyumlu olduğundan emin olmak için ekleyebilirsiniz. Ayrıca [TryCast işleci](../../../../visual-basic/language-reference/operators/trycast-operator.md) bir özel durum kaçınmak istiyorsanız anahtar sözcüğü.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

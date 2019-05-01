@@ -14,11 +14,11 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
 ms.openlocfilehash: 975fafebe255d5ff4848fde2c0b0ff08b68d4f7b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020237"
 ---
 # <a name="drawings"></a>Çizimler
 <xref:System.Windows.Media.Drawing> nesnelerini şekil, görüntü veya metin verimli bir şekilde çizmek için kullanılır. Çizimler ile boyarken kullanılan bir <xref:System.Windows.Media.DrawingBrush> veya programlama ile <xref:System.Windows.Media.Visual> nesneleri.  

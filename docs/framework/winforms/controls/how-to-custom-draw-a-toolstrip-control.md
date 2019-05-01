@@ -17,20 +17,20 @@ helpviewer_keywords:
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
 ms.openlocfilehash: 9b3d6b9391971d4c2d012345b96c2ed64d33a998
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052995"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>Nasıl yapılır: Bir ToolStrip Denetimini Özel Olarak Çizme
 <xref:System.Windows.Forms.ToolStrip> Denetiminiz aşağıdaki sınıfları (boyama) işleme ilişkili:  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer> görünümünü ve işletim sisteminizin stili sağlar.  
+- <xref:System.Windows.Forms.ToolStripSystemRenderer> görünümünü ve işletim sisteminizin stili sağlar.  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> Microsoft Office stili ve görünümünü sağlar.  
+- <xref:System.Windows.Forms.ToolStripProfessionalRenderer> Microsoft Office stili ve görünümünü sağlar.  
   
--   <xref:System.Windows.Forms.ToolStripRenderer> diğer iki işleme sınıfları için Özet temel sınıftır.  
+- <xref:System.Windows.Forms.ToolStripRenderer> diğer iki işleme sınıfları için Özet temel sınıftır.  
   
  Özel çizim (özelleştirilmiş çizim da bilinir) için bir <xref:System.Windows.Forms.ToolStrip>, işleyici sınıflardan birini geçersiz kılmak ve bir işleme mantığı yönünü değiştirin.  
   
@@ -38,20 +38,20 @@ ms.locfileid: "59311051"
   
 ### <a name="to-switch-between-the-provided-renderers"></a>Sağlanan Oluşturucu arasında geçiş yapmak için  
   
--   Ayarlama <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> özelliğini <xref:System.Windows.Forms.ToolStripRenderMode> istediğiniz değer.  
+- Ayarlama <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> özelliğini <xref:System.Windows.Forms.ToolStripRenderMode> istediğiniz değer.  
   
      İle <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>, statik <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> uygulamanız için bir işleyici belirler. Diğer değerleri <xref:System.Windows.Forms.ToolStripRenderMode> olan <xref:System.Windows.Forms.ToolStripRenderMode.Custom>, <xref:System.Windows.Forms.ToolStripRenderMode.Professional>, ve <xref:System.Windows.Forms.ToolStripRenderMode.System>.  
   
 ### <a name="to-change-the-microsoft-officestyle-borders-to-straight"></a>Doğrudan Microsoft Office stilinde Kenarlıklar değiştirmek için  
   
--   Geçersiz kılma <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, ancak temel sınıfı çağırmayın.  
+- Geçersiz kılma <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, ancak temel sınıfı çağırmayın.  
   
 > [!NOTE]
 >  Bu yöntem için sürümü <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripSystemRenderer>, ve <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.  
   
 ### <a name="to-change-the-professionalcolortable"></a>ProfessionalColorTable değiştirmek için  
   
--   Geçersiz kılma <xref:System.Windows.Forms.ProfessionalColorTable> ve renkleri değiştirme.  
+- Geçersiz kılma <xref:System.Windows.Forms.ProfessionalColorTable> ve renkleri değiştirme.  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As _  
@@ -115,11 +115,11 @@ ms.locfileid: "59311051"
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a>Microsoft Office renkleri tüm uygulama için devre dışı bırakmak için  
   
--   Ayarlama <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> için `false`.  
+- Ayarlama <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> için `false`.  
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a>Microsoft Office renkleri bir ToolStrip denetimi için devre dışı bırakmak için  
   
--   Aşağıdaki kod örneği için benzer bir kod kullanın.  
+- Aşağıdaki kod örneği için benzer bir kod kullanın.  
   
     ```vb  
     Dim colorTable As ProfessionalColorTable()  

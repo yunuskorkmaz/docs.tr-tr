@@ -8,11 +8,11 @@ helpviewer_keywords:
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
 ms.openlocfilehash: 3f4dbd6dce0957de3451b1f29c3a67ccd6791045
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053671"
 ---
 # <a name="how-to-sort-an-array-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te dizi Sırala
 Bu örnek, bir dizi bildirir `String` adlı nesneleri `zooAnimals`, onu doldurur ve alfabetik olarak sıralar.  
@@ -32,16 +32,16 @@ End Sub
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Mscorlib.dll için erişim ve <xref:System> ad alanı.  
+- Mscorlib.dll için erişim ve <xref:System> ad alanı.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
--   Dizi boş (<xref:System.ArgumentNullException> sınıfı)  
+- Dizi boş (<xref:System.ArgumentNullException> sınıfı)  
   
--   Dizi çok boyutlu (<xref:System.RankException> sınıfı)  
+- Dizi çok boyutlu (<xref:System.RankException> sınıfı)  
   
--   Bir veya daha fazla öğe dizinin uygulamayın <xref:System.IComparable> arabirimi (<xref:System.InvalidOperationException> sınıfı)  
+- Bir veya daha fazla öğe dizinin uygulamayın <xref:System.IComparable> arabirimi (<xref:System.InvalidOperationException> sınıfı)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

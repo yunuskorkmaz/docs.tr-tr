@@ -18,11 +18,11 @@ helpviewer_keywords:
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
 ms.openlocfilehash: 8a21b5e69e8fb3f9781d862bd62b0db92073b1dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053879"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Gönderilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi
 Yönlendirilmiş olay işleyicileri içinde olay verilerini işlenen olayı işaretleyebilirsiniz. Olay işleme rotayı verimli kısaltır. Sınıf işleme yönlendirilmiş olaylar tarafından desteklenen programlama bir kavramdır. İşleyicisi sınıfı sınıfın bir örneği üzerinde herhangi bir örnek işleyici önce çağrılan bir işleyici ile bir sınıf düzeyinde belirli gönderilmiş bir olayı işleme fırsatına sahiptir.  
@@ -57,9 +57,9 @@ Yönlendirilmiş olay işleyicileri içinde olay verilerini işlenen olayı işa
   
  Olay yolu daha ayrıntılı bir düzeyde de bir sınıfın belirli bir örneğinde çalışan potansiyel olarak birden fazla sınıf işleyicileri vardır. Bu olan yönlendirilmiş olaylar için sınıf işleme modeli, her bir sınıf hiyerarşisindeki tüm olası sınıflar sağladığından kaydedin her yönlendirilmiş olay için kendi sınıf işleyicisi. Bir iç deposuna her sınıf işleyicisi eklenir ve sınıf işleyicileri için uygulama olay yolu oluşturulduğunda, tüm olay yol eklenir. Sınıf işleyicileri, en çok türetilen sınıf önce çağrılır ve her art arda gelen taban sınıfından sınıf işleyicileri sonraki çağrılır yol eklenir. Genel olarak, bunlar da ele, zaten işaretlenmiş yönlendirilmiş olaylara yanıt vermesi, sınıf işleyicileri kayıtlı değil. Bu nedenle, işleme mekanizması bu sınıfı bir iki seçenek sağlar:  
   
--   Türetilmiş sınıflar temel sınıf işleyicisi türetilmiş sınıf işleyici süre sonra çağrılacak çünkü işlenen, yönlendirilmiş olay işaretlemez bir işleyici ekleyerek temel sınıftan devralınan sınıf işleme destekleyebilirsiniz.  
+- Türetilmiş sınıflar temel sınıf işleyicisi türetilmiş sınıf işleyici süre sonra çağrılacak çünkü işlenen, yönlendirilmiş olay işaretlemez bir işleyici ekleyerek temel sınıftan devralınan sınıf işleme destekleyebilirsiniz.  
   
--   Türetilen sınıflar, sınıf işaretleyen işlenen yönlendirilmiş olay işleyicisi sınıfı ekleyerek taban sınıfından işleme değiştirebilirsiniz. Hedeflenen temel denetimi Tasarım görünümünü, durumu mantığı, giriş işleme ve komut işleme gibi alanlarda potansiyel olarak değişeceği bu yaklaşımı izleme konusunda dikkatli olmanız gerekir.  
+- Türetilen sınıflar, sınıf işaretleyen işlenen yönlendirilmiş olay işleyicisi sınıfı ekleyerek taban sınıfından işleme değiştirebilirsiniz. Hedeflenen temel denetimi Tasarım görünümünü, durumu mantığı, giriş işleme ve komut işleme gibi alanlarda potansiyel olarak değişeceği bu yaklaşımı izleme konusunda dikkatli olmanız gerekir.  
   
 <a name="Class_Handling_of_Routed_Events"></a>   
 ## <a name="class-handling-of-routed-events-by-control-base-classes"></a>Yönlendirilmiş olaylar denetim temel sınıflar tarafından işlenmesini sınıfı  

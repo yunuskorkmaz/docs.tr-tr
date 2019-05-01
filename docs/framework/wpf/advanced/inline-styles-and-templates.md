@@ -8,11 +8,11 @@ helpviewer_keywords:
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
 ms.openlocfilehash: b566e157e2d4a9e9be21a678541bf5d5341a898c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051019"
 ---
 # <a name="inline-styles-and-templates"></a>Satır İçi Stil ve Şablonları
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sağlar <xref:System.Windows.Style> nesneleri ve şablon nesneleri (<xref:System.Windows.FrameworkTemplate> alt sınıflarını) öğesinin görsel görünümüne kaynakları tanımlamak için bir yol kullanılabilmesi için birden çok kez. Bu nedenle, öznitelikleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] türleri ele <xref:System.Windows.Style> ve <xref:System.Windows.FrameworkTemplate> neredeyse her zaman mevcut stilleri ve şablonları kaynak başvuruları yerine satır içi yenilerini tanımlayın.  
