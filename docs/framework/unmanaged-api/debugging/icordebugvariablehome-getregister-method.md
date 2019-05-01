@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 290647f0e0dcaeae53362762ed7f8e0c2f05a82c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993648"
 ---
-# <a name="icordebugvariablehomegetregister-method"></a><span data-ttu-id="67623-102">ICorDebugVariableHome::GetRegister yöntemi</span><span class="sxs-lookup"><span data-stu-id="67623-102">ICorDebugVariableHome::GetRegister Method</span></span>
-<span data-ttu-id="67623-103">Konum türünde bir değişken içeren bir kayıt alır `VLT_REGISTER`hem de konum türünde bir değişken için temel kaydı `VLT_REGISTER_RELATIVE`.</span><span class="sxs-lookup"><span data-stu-id="67623-103">Gets the register that contains a variable with a location type of `VLT_REGISTER`, and the base register for a variable with a location type of `VLT_REGISTER_RELATIVE`.</span></span>  
+# <a name="icordebugvariablehomegetregister-method"></a><span data-ttu-id="51d76-102">ICorDebugVariableHome::GetRegister yöntemi</span><span class="sxs-lookup"><span data-stu-id="51d76-102">ICorDebugVariableHome::GetRegister Method</span></span>
+<span data-ttu-id="51d76-103">Konum türünde bir değişken içeren bir kayıt alır `VLT_REGISTER`hem de konum türünde bir değişken için temel kaydı `VLT_REGISTER_RELATIVE`.</span><span class="sxs-lookup"><span data-stu-id="51d76-103">Gets the register that contains a variable with a location type of `VLT_REGISTER`, and the base register for a variable with a location type of `VLT_REGISTER_RELATIVE`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="67623-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="67623-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="51d76-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="51d76-104">Syntax</span></span>  
   
 ```  
 HRESULT GetRegister(  
@@ -35,28 +35,28 @@ HRESULT GetRegister(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="67623-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="67623-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="51d76-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="51d76-105">Parameters</span></span>  
  `pRegister`  
- <span data-ttu-id="67623-106">[out] Konum türünde bir değişken için kayıt gösteren bir CorDebugRegister sabit listesi değeri `VLT_REGISTER`hem de konum türünde bir değişken için temel kaydı `VLT_REGISTER_RELATIVE`.</span><span class="sxs-lookup"><span data-stu-id="67623-106">[out] A CorDebugRegister enumeration value  that indicates the register for a variable with a location type of `VLT_REGISTER`, and the base register for a variable with a location type of `VLT_REGISTER_RELATIVE`.</span></span>  
+ <span data-ttu-id="51d76-106">[out] Konum türünde bir değişken için kayıt gösteren bir CorDebugRegister sabit listesi değeri `VLT_REGISTER`hem de konum türünde bir değişken için temel kaydı `VLT_REGISTER_RELATIVE`.</span><span class="sxs-lookup"><span data-stu-id="51d76-106">[out] A CorDebugRegister enumeration value  that indicates the register for a variable with a location type of `VLT_REGISTER`, and the base register for a variable with a location type of `VLT_REGISTER_RELATIVE`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="67623-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="67623-107">Return Value</span></span>  
- <span data-ttu-id="67623-108">Bu yöntem, aşağıdaki değerleri döndürür:</span><span class="sxs-lookup"><span data-stu-id="67623-108">The method returns the following values:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="51d76-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="51d76-107">Return Value</span></span>  
+ <span data-ttu-id="51d76-108">Bu yöntem, aşağıdaki değerleri döndürür:</span><span class="sxs-lookup"><span data-stu-id="51d76-108">The method returns the following values:</span></span>  
   
-|<span data-ttu-id="67623-109">Değer</span><span class="sxs-lookup"><span data-stu-id="67623-109">Value</span></span>|<span data-ttu-id="67623-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="67623-110">Description</span></span>|  
+|<span data-ttu-id="51d76-109">Değer</span><span class="sxs-lookup"><span data-stu-id="51d76-109">Value</span></span>|<span data-ttu-id="51d76-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="51d76-110">Description</span></span>|  
 |-----------|-----------------|  
-|`S_OK`|<span data-ttu-id="67623-111">Değişkeni tarafından belirtilen kayıt defterinde olduğu `pRegister` bağımsız değişken.</span><span class="sxs-lookup"><span data-stu-id="67623-111">The variable is in the register indicated by the `pRegister` argument.</span></span>|  
-|`E_FAIL`|<span data-ttu-id="67623-112">Değişken, bir kayıt veya bir kayıt göreli konumu değil.</span><span class="sxs-lookup"><span data-stu-id="67623-112">The variable is not in a register or a register-relative location.</span></span>|  
+|`S_OK`|<span data-ttu-id="51d76-111">Değişkeni tarafından belirtilen kayıt defterinde olduğu `pRegister` bağımsız değişken.</span><span class="sxs-lookup"><span data-stu-id="51d76-111">The variable is in the register indicated by the `pRegister` argument.</span></span>|  
+|`E_FAIL`|<span data-ttu-id="51d76-112">Değişken, bir kayıt veya bir kayıt göreli konumu değil.</span><span class="sxs-lookup"><span data-stu-id="51d76-112">The variable is not in a register or a register-relative location.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="67623-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="67623-113">Requirements</span></span>  
- <span data-ttu-id="67623-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="67623-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="51d76-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="51d76-113">Requirements</span></span>  
+ <span data-ttu-id="51d76-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="51d76-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="67623-115">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="67623-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="51d76-115">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="51d76-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="67623-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="67623-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="51d76-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="51d76-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="67623-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="67623-117">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="51d76-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="51d76-117">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="67623-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="67623-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="51d76-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="51d76-118">See also</span></span>
 
-- [<span data-ttu-id="67623-119">VariableLocationType Sabit Listesi</span><span class="sxs-lookup"><span data-stu-id="67623-119">VariableLocationType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)
-- [<span data-ttu-id="67623-120">ICorDebugVariableHome Arabirimi</span><span class="sxs-lookup"><span data-stu-id="67623-120">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [<span data-ttu-id="51d76-119">VariableLocationType Sabit Listesi</span><span class="sxs-lookup"><span data-stu-id="51d76-119">VariableLocationType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)
+- [<span data-ttu-id="51d76-120">ICorDebugVariableHome Arabirimi</span><span class="sxs-lookup"><span data-stu-id="51d76-120">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

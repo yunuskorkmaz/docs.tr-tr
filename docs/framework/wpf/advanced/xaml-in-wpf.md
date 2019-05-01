@@ -8,38 +8,38 @@ helpviewer_keywords:
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
 ms.openlocfilehash: 0d04b656492dd934199164920e35bdaaa0663032
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007090"
 ---
-# <a name="xaml-in-wpf"></a><span data-ttu-id="29e28-102">WPF'de XAML</span><span class="sxs-lookup"><span data-stu-id="29e28-102">XAML in WPF</span></span>
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] <span data-ttu-id="29e28-103">programlama bildirim temelli bir uygulama için bir biçimlendirme dilidir.</span><span class="sxs-lookup"><span data-stu-id="29e28-103">is a markup language for declarative application programming.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="29e28-104">aXAML işlemci uygulamasında uygular ve XAML dil desteği sağlar.</span><span class="sxs-lookup"><span data-stu-id="29e28-104">implements aXAML processor implementation, and provides XAML language support.</span></span> <span data-ttu-id="29e28-105">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Türleri, XAML temsili yedekleme gerekli tür sağlayabilirler şekilde uygulanır.</span><span class="sxs-lookup"><span data-stu-id="29e28-105">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] types are implemented such that they can provide the required type backing for a XAML representation.</span></span> <span data-ttu-id="29e28-106">Genel olarak, çoğu oluşturabilirsiniz, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama kullanıcı Arabirimi XAML biçimlendirmede.</span><span class="sxs-lookup"><span data-stu-id="29e28-106">In general, you can create the majority of your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application UI in XAML markup.</span></span>  
+# <a name="xaml-in-wpf"></a><span data-ttu-id="d7a6c-102">WPF'de XAML</span><span class="sxs-lookup"><span data-stu-id="d7a6c-102">XAML in WPF</span></span>
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] <span data-ttu-id="d7a6c-103">programlama bildirim temelli bir uygulama için bir biçimlendirme dilidir.</span><span class="sxs-lookup"><span data-stu-id="d7a6c-103">is a markup language for declarative application programming.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="d7a6c-104">aXAML işlemci uygulamasında uygular ve XAML dil desteği sağlar.</span><span class="sxs-lookup"><span data-stu-id="d7a6c-104">implements aXAML processor implementation, and provides XAML language support.</span></span> <span data-ttu-id="d7a6c-105">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Türleri, XAML temsili yedekleme gerekli tür sağlayabilirler şekilde uygulanır.</span><span class="sxs-lookup"><span data-stu-id="d7a6c-105">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] types are implemented such that they can provide the required type backing for a XAML representation.</span></span> <span data-ttu-id="d7a6c-106">Genel olarak, çoğu oluşturabilirsiniz, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama kullanıcı Arabirimi XAML biçimlendirmede.</span><span class="sxs-lookup"><span data-stu-id="d7a6c-106">In general, you can create the majority of your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application UI in XAML markup.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="29e28-107">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="29e28-107">In This Section</span></span>  
- [<span data-ttu-id="29e28-108">XAML'ye Genel Bakış (WPF)</span><span class="sxs-lookup"><span data-stu-id="29e28-108">XAML Overview (WPF)</span></span>](xaml-overview-wpf.md)  
- [<span data-ttu-id="29e28-109">Ayrıntılı XAML Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="29e28-109">XAML Syntax In Detail</span></span>](xaml-syntax-in-detail.md)  
- [<span data-ttu-id="29e28-110">Arka Plan Kod ve WPF İçindeki XAML</span><span class="sxs-lookup"><span data-stu-id="29e28-110">Code-Behind and XAML in WPF</span></span>](code-behind-and-xaml-in-wpf.md)  
- [<span data-ttu-id="29e28-111">WPF için XAML ve Özel Sınıflar</span><span class="sxs-lookup"><span data-stu-id="29e28-111">XAML and Custom Classes for WPF</span></span>](xaml-and-custom-classes-for-wpf.md)  
- [<span data-ttu-id="29e28-112">İşaretleme Uzantıları ve WPF XAML</span><span class="sxs-lookup"><span data-stu-id="29e28-112">Markup Extensions and WPF XAML</span></span>](markup-extensions-and-wpf-xaml.md)  
- [<span data-ttu-id="29e28-113">WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi</span><span class="sxs-lookup"><span data-stu-id="29e28-113">XAML Namespaces and Namespace Mapping for WPF XAML</span></span>](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
- [<span data-ttu-id="29e28-114">WPF XAML Ad Kapsamları</span><span class="sxs-lookup"><span data-stu-id="29e28-114">WPF XAML Namescopes</span></span>](wpf-xaml-namescopes.md)  
- [<span data-ttu-id="29e28-115">Satır İçi Stil ve Şablonları</span><span class="sxs-lookup"><span data-stu-id="29e28-115">Inline Styles and Templates</span></span>](inline-styles-and-templates.md)  
- [<span data-ttu-id="29e28-116">Boşluk XAML içinde işleme</span><span class="sxs-lookup"><span data-stu-id="29e28-116">White-space Processing in XAML</span></span>](../../xaml-services/whitespace-processing-in-xaml.md)  
- [<span data-ttu-id="29e28-117">TypeConverters ve XAML</span><span class="sxs-lookup"><span data-stu-id="29e28-117">TypeConverters and XAML</span></span>](typeconverters-and-xaml.md)  
- [<span data-ttu-id="29e28-118">XML Karakter Varlıkları ve XAML</span><span class="sxs-lookup"><span data-stu-id="29e28-118">XML Character Entities and XAML</span></span>](../../xaml-services/xml-character-entities-and-xaml.md)  
- [<span data-ttu-id="29e28-119">XAML Namespace (x:) Dil özellikleri</span><span class="sxs-lookup"><span data-stu-id="29e28-119">XAML Namespace (x:) Language Features</span></span>](../../xaml-services/xaml-namespace-x-language-features.md)  
- [<span data-ttu-id="29e28-120">WPF XAML Uzantıları</span><span class="sxs-lookup"><span data-stu-id="29e28-120">WPF XAML Extensions</span></span>](wpf-xaml-extensions.md)  
- [<span data-ttu-id="29e28-121">İşaretleme uyumluluğu (mc:) Dil özellikleri</span><span class="sxs-lookup"><span data-stu-id="29e28-121">Markup Compatibility (mc:) Language Features</span></span>](markup-compatibility-mc-language-features.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d7a6c-107">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="d7a6c-107">In This Section</span></span>  
+ [<span data-ttu-id="d7a6c-108">XAML'ye Genel Bakış (WPF)</span><span class="sxs-lookup"><span data-stu-id="d7a6c-108">XAML Overview (WPF)</span></span>](xaml-overview-wpf.md)  
+ [<span data-ttu-id="d7a6c-109">Ayrıntılı XAML Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d7a6c-109">XAML Syntax In Detail</span></span>](xaml-syntax-in-detail.md)  
+ [<span data-ttu-id="d7a6c-110">Arka Plan Kod ve WPF İçindeki XAML</span><span class="sxs-lookup"><span data-stu-id="d7a6c-110">Code-Behind and XAML in WPF</span></span>](code-behind-and-xaml-in-wpf.md)  
+ [<span data-ttu-id="d7a6c-111">WPF için XAML ve Özel Sınıflar</span><span class="sxs-lookup"><span data-stu-id="d7a6c-111">XAML and Custom Classes for WPF</span></span>](xaml-and-custom-classes-for-wpf.md)  
+ [<span data-ttu-id="d7a6c-112">İşaretleme Uzantıları ve WPF XAML</span><span class="sxs-lookup"><span data-stu-id="d7a6c-112">Markup Extensions and WPF XAML</span></span>](markup-extensions-and-wpf-xaml.md)  
+ [<span data-ttu-id="d7a6c-113">WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi</span><span class="sxs-lookup"><span data-stu-id="d7a6c-113">XAML Namespaces and Namespace Mapping for WPF XAML</span></span>](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
+ [<span data-ttu-id="d7a6c-114">WPF XAML Ad Kapsamları</span><span class="sxs-lookup"><span data-stu-id="d7a6c-114">WPF XAML Namescopes</span></span>](wpf-xaml-namescopes.md)  
+ [<span data-ttu-id="d7a6c-115">Satır İçi Stil ve Şablonları</span><span class="sxs-lookup"><span data-stu-id="d7a6c-115">Inline Styles and Templates</span></span>](inline-styles-and-templates.md)  
+ [<span data-ttu-id="d7a6c-116">Boşluk XAML içinde işleme</span><span class="sxs-lookup"><span data-stu-id="d7a6c-116">White-space Processing in XAML</span></span>](../../xaml-services/whitespace-processing-in-xaml.md)  
+ [<span data-ttu-id="d7a6c-117">TypeConverters ve XAML</span><span class="sxs-lookup"><span data-stu-id="d7a6c-117">TypeConverters and XAML</span></span>](typeconverters-and-xaml.md)  
+ [<span data-ttu-id="d7a6c-118">XML Karakter Varlıkları ve XAML</span><span class="sxs-lookup"><span data-stu-id="d7a6c-118">XML Character Entities and XAML</span></span>](../../xaml-services/xml-character-entities-and-xaml.md)  
+ [<span data-ttu-id="d7a6c-119">XAML Namespace (x:) Dil özellikleri</span><span class="sxs-lookup"><span data-stu-id="d7a6c-119">XAML Namespace (x:) Language Features</span></span>](../../xaml-services/xaml-namespace-x-language-features.md)  
+ [<span data-ttu-id="d7a6c-120">WPF XAML Uzantıları</span><span class="sxs-lookup"><span data-stu-id="d7a6c-120">WPF XAML Extensions</span></span>](wpf-xaml-extensions.md)  
+ [<span data-ttu-id="d7a6c-121">İşaretleme uyumluluğu (mc:) Dil özellikleri</span><span class="sxs-lookup"><span data-stu-id="d7a6c-121">Markup Compatibility (mc:) Language Features</span></span>](markup-compatibility-mc-language-features.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="29e28-122">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="29e28-122">Related Sections</span></span>  
- [<span data-ttu-id="29e28-123">WPF Mimarisi</span><span class="sxs-lookup"><span data-stu-id="29e28-123">WPF Architecture</span></span>](wpf-architecture.md)  
-  [<span data-ttu-id="29e28-124">Temel Öğeler</span><span class="sxs-lookup"><span data-stu-id="29e28-124">Base Elements</span></span>](base-elements.md)  
-  [<span data-ttu-id="29e28-125">Öğe Ağacı ve Serileştirme</span><span class="sxs-lookup"><span data-stu-id="29e28-125">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
-  [<span data-ttu-id="29e28-126">Özellikler</span><span class="sxs-lookup"><span data-stu-id="29e28-126">Properties</span></span>](properties-wpf.md)  
-  [<span data-ttu-id="29e28-127">Olaylar</span><span class="sxs-lookup"><span data-stu-id="29e28-127">Events</span></span>](events-wpf.md)  
-  [<span data-ttu-id="29e28-128">Giriş</span><span class="sxs-lookup"><span data-stu-id="29e28-128">Input</span></span>](input-wpf.md)  
-  [<span data-ttu-id="29e28-129">Kaynaklar</span><span class="sxs-lookup"><span data-stu-id="29e28-129">Resources</span></span>](resources-wpf.md)  
-  [<span data-ttu-id="29e28-130">Stil ve Şablon Oluşturma</span><span class="sxs-lookup"><span data-stu-id="29e28-130">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
-  [<span data-ttu-id="29e28-131">İş Parçacığı Modeli</span><span class="sxs-lookup"><span data-stu-id="29e28-131">Threading Model</span></span>](threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="d7a6c-122">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="d7a6c-122">Related Sections</span></span>  
+ [<span data-ttu-id="d7a6c-123">WPF Mimarisi</span><span class="sxs-lookup"><span data-stu-id="d7a6c-123">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="d7a6c-124">Temel Öğeler</span><span class="sxs-lookup"><span data-stu-id="d7a6c-124">Base Elements</span></span>](base-elements.md)  
+  [<span data-ttu-id="d7a6c-125">Öğe Ağacı ve Serileştirme</span><span class="sxs-lookup"><span data-stu-id="d7a6c-125">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+  [<span data-ttu-id="d7a6c-126">Özellikler</span><span class="sxs-lookup"><span data-stu-id="d7a6c-126">Properties</span></span>](properties-wpf.md)  
+  [<span data-ttu-id="d7a6c-127">Olaylar</span><span class="sxs-lookup"><span data-stu-id="d7a6c-127">Events</span></span>](events-wpf.md)  
+  [<span data-ttu-id="d7a6c-128">Giriş</span><span class="sxs-lookup"><span data-stu-id="d7a6c-128">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="d7a6c-129">Kaynaklar</span><span class="sxs-lookup"><span data-stu-id="d7a6c-129">Resources</span></span>](resources-wpf.md)  
+  [<span data-ttu-id="d7a6c-130">Stil ve Şablon Oluşturma</span><span class="sxs-lookup"><span data-stu-id="d7a6c-130">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
+  [<span data-ttu-id="d7a6c-131">İş Parçacığı Modeli</span><span class="sxs-lookup"><span data-stu-id="d7a6c-131">Threading Model</span></span>](threading-model.md)

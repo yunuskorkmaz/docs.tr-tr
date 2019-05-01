@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 46fd79931e7f2f05b1b17ebca3f8cff28c152ff4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000668"
 ---
-# <a name="icorprofilerinfo2getcontextstaticaddress-method"></a><span data-ttu-id="0595e-102">ICorProfilerInfo2::GetContextStaticAddress Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0595e-102">ICorProfilerInfo2::GetContextStaticAddress Method</span></span>
-<span data-ttu-id="0595e-103">Belirtilen bağlamı kapsamında belirtilen bağlam statik alanı için adresi alır.</span><span class="sxs-lookup"><span data-stu-id="0595e-103">Gets the address for the specified context-static field that is in the scope of the specified context.</span></span>  
+# <a name="icorprofilerinfo2getcontextstaticaddress-method"></a><span data-ttu-id="1a2cb-102">ICorProfilerInfo2::GetContextStaticAddress Yöntemi</span><span class="sxs-lookup"><span data-stu-id="1a2cb-102">ICorProfilerInfo2::GetContextStaticAddress Method</span></span>
+<span data-ttu-id="1a2cb-103">Belirtilen bağlamı kapsamında belirtilen bağlam statik alanı için adresi alır.</span><span class="sxs-lookup"><span data-stu-id="1a2cb-103">Gets the address for the specified context-static field that is in the scope of the specified context.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0595e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0595e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1a2cb-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1a2cb-104">Syntax</span></span>  
   
 ```  
 HRESULT GetContextStaticAddress(  
@@ -37,38 +37,38 @@ HRESULT GetContextStaticAddress(
     [out] void **ppAddress);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0595e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0595e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1a2cb-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1a2cb-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="0595e-106">[in] İstenen içerik statik alanı içeren sınıf kimliği.</span><span class="sxs-lookup"><span data-stu-id="0595e-106">[in] The ID of the class that contains the requested context-static field.</span></span>  
+ <span data-ttu-id="1a2cb-106">[in] İstenen içerik statik alanı içeren sınıf kimliği.</span><span class="sxs-lookup"><span data-stu-id="1a2cb-106">[in] The ID of the class that contains the requested context-static field.</span></span>  
   
  `fieldToken`  
- <span data-ttu-id="0595e-107">[in] İstenen içerik statik alan için meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="0595e-107">[in] The metadata token for the requested context-static field.</span></span>  
+ <span data-ttu-id="1a2cb-107">[in] İstenen içerik statik alan için meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="1a2cb-107">[in] The metadata token for the requested context-static field.</span></span>  
   
  `contextId`  
- <span data-ttu-id="0595e-108">[in] İstenen içerik statik alanı kapsamını olan bağlam kimliği.</span><span class="sxs-lookup"><span data-stu-id="0595e-108">[in] The ID of the context that is the scope for the requested context-static field.</span></span>  
+ <span data-ttu-id="1a2cb-108">[in] İstenen içerik statik alanı kapsamını olan bağlam kimliği.</span><span class="sxs-lookup"><span data-stu-id="1a2cb-108">[in] The ID of the context that is the scope for the requested context-static field.</span></span>  
   
  `ppAddress`  
- <span data-ttu-id="0595e-109">[out] Belirtilen bağlamı içinde statik alanı adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0595e-109">[out] A pointer to the address of the static field that is within the specified context.</span></span>  
+ <span data-ttu-id="1a2cb-109">[out] Belirtilen bağlamı içinde statik alanı adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="1a2cb-109">[out] A pointer to the address of the static field that is within the specified context.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0595e-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0595e-110">Remarks</span></span>  
- <span data-ttu-id="0595e-111">`GetContextStaticAddress` Yöntemi aşağıdakilerden birini döndürebilir:</span><span class="sxs-lookup"><span data-stu-id="0595e-111">The `GetContextStaticAddress` method may return one of the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1a2cb-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1a2cb-110">Remarks</span></span>  
+ <span data-ttu-id="1a2cb-111">`GetContextStaticAddress` Yöntemi aşağıdakilerden birini döndürebilir:</span><span class="sxs-lookup"><span data-stu-id="1a2cb-111">The `GetContextStaticAddress` method may return one of the following:</span></span>  
   
--   <span data-ttu-id="0595e-112">Bir CORPROF_E_DATAINCOMPLETE belirtilen statik alanı belirtilen bağlam bir adres değil atandıysa HRESULT.</span><span class="sxs-lookup"><span data-stu-id="0595e-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
+- <span data-ttu-id="1a2cb-112">Bir CORPROF_E_DATAINCOMPLETE belirtilen statik alanı belirtilen bağlam bir adres değil atandıysa HRESULT.</span><span class="sxs-lookup"><span data-stu-id="1a2cb-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
   
--   <span data-ttu-id="0595e-113">Adresleri nesnelerin çöp koleksiyonu yığınında olabilir.</span><span class="sxs-lookup"><span data-stu-id="0595e-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="0595e-114">Çöp toplamanın ardından, profil oluşturucular geçerli olduğunu varsayın değil için bu adresleri çöp toplamanın ardından geçersiz hale gelebilir.</span><span class="sxs-lookup"><span data-stu-id="0595e-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
+- <span data-ttu-id="1a2cb-113">Adresleri nesnelerin çöp koleksiyonu yığınında olabilir.</span><span class="sxs-lookup"><span data-stu-id="1a2cb-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="1a2cb-114">Çöp toplamanın ardından, profil oluşturucular geçerli olduğunu varsayın değil için bu adresleri çöp toplamanın ardından geçersiz hale gelebilir.</span><span class="sxs-lookup"><span data-stu-id="1a2cb-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
   
- <span data-ttu-id="0595e-115">Bir sınıfın sınıf oluşturucusu tamamlanmadan önce `GetContextStaticAddress` bazı statik alanlar zaten başlatılmış olabilir ancak tüm kendi statik alanları için CORPROF_E_DATAINCOMPLETE döndürür ve çöp toplama nesneleri kök dizini değiştirme.</span><span class="sxs-lookup"><span data-stu-id="0595e-115">Before a class’s class constructor is completed, `GetContextStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
+ <span data-ttu-id="1a2cb-115">Bir sınıfın sınıf oluşturucusu tamamlanmadan önce `GetContextStaticAddress` bazı statik alanlar zaten başlatılmış olabilir ancak tüm kendi statik alanları için CORPROF_E_DATAINCOMPLETE döndürür ve çöp toplama nesneleri kök dizini değiştirme.</span><span class="sxs-lookup"><span data-stu-id="1a2cb-115">Before a class’s class constructor is completed, `GetContextStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0595e-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0595e-116">Requirements</span></span>  
- <span data-ttu-id="0595e-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0595e-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1a2cb-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1a2cb-116">Requirements</span></span>  
+ <span data-ttu-id="1a2cb-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1a2cb-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0595e-118">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0595e-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="1a2cb-118">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1a2cb-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="0595e-119">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0595e-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1a2cb-119">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1a2cb-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0595e-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0595e-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1a2cb-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1a2cb-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0595e-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0595e-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1a2cb-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1a2cb-121">See also</span></span>
 
-- [<span data-ttu-id="0595e-122">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0595e-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="0595e-123">ICorProfilerInfo2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0595e-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="1a2cb-122">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1a2cb-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="1a2cb-123">ICorProfilerInfo2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1a2cb-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

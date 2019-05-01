@@ -18,21 +18,21 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6c6b998bfe2c04d45b332088ad43272c8013e354
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985406"
 ---
-# <a name="icatalogservicesautodone-method"></a><span data-ttu-id="8fb8d-102">ICatalogServices::Autodone Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8fb8d-102">ICatalogServices::Autodone Method</span></span>
-<span data-ttu-id="8fb8d-103">Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="8fb8d-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icatalogservicesautodone-method"></a><span data-ttu-id="75d53-102">ICatalogServices::Autodone Yöntemi</span><span class="sxs-lookup"><span data-stu-id="75d53-102">ICatalogServices::Autodone Method</span></span>
+<span data-ttu-id="75d53-103">Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="75d53-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8fb8d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8fb8d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="75d53-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="75d53-104">Syntax</span></span>  
   
 ```  
 HRESULT Autodone ( );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8fb8d-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8fb8d-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="75d53-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="75d53-105">See also</span></span>
 
-- [<span data-ttu-id="8fb8d-106">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="8fb8d-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="75d53-106">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="75d53-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

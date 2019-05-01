@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6c44f3e369ac64773811a6aea74756783dedd2fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994766"
 ---
-# <a name="icordebugnativeframegetlocalmemoryvalue-method"></a><span data-ttu-id="41c61-102">ICorDebugNativeFrame::GetLocalMemoryValue Metodu</span><span class="sxs-lookup"><span data-stu-id="41c61-102">ICorDebugNativeFrame::GetLocalMemoryValue Method</span></span>
-<span data-ttu-id="41c61-103">Bir bağımsız değişken veya yerel değişken bu yerel çerçeve için belirtilen bellek konumunda depolanan değeri alır.</span><span class="sxs-lookup"><span data-stu-id="41c61-103">Gets the value of an argument or local variable that is stored in the specified memory location for this native frame.</span></span>  
+# <a name="icordebugnativeframegetlocalmemoryvalue-method"></a><span data-ttu-id="db45f-102">ICorDebugNativeFrame::GetLocalMemoryValue Metodu</span><span class="sxs-lookup"><span data-stu-id="db45f-102">ICorDebugNativeFrame::GetLocalMemoryValue Method</span></span>
+<span data-ttu-id="db45f-103">Bir bağımsız değişken veya yerel değişken bu yerel çerçeve için belirtilen bellek konumunda depolanan değeri alır.</span><span class="sxs-lookup"><span data-stu-id="db45f-103">Gets the value of an argument or local variable that is stored in the specified memory location for this native frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="41c61-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="41c61-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="db45f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="db45f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalMemoryValue (  
@@ -38,26 +38,26 @@ HRESULT GetLocalMemoryValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="41c61-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="41c61-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="db45f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="db45f-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="41c61-106">[in] A `CORDB_ADDRESS` değerini içeren bellek konumu belirten bir değer.</span><span class="sxs-lookup"><span data-stu-id="41c61-106">[in] A `CORDB_ADDRESS` value that specifies the memory location containing the value.</span></span>  
+ <span data-ttu-id="db45f-106">[in] A `CORDB_ADDRESS` değerini içeren bellek konumu belirten bir değer.</span><span class="sxs-lookup"><span data-stu-id="db45f-106">[in] A `CORDB_ADDRESS` value that specifies the memory location containing the value.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="41c61-107">[in] Tarafından başvurulan ikili meta veri imzası boyutunu belirten bir tamsayı `pvSigBlob` parametresi.</span><span class="sxs-lookup"><span data-stu-id="41c61-107">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
+ <span data-ttu-id="db45f-107">[in] Tarafından başvurulan ikili meta veri imzası boyutunu belirten bir tamsayı `pvSigBlob` parametresi.</span><span class="sxs-lookup"><span data-stu-id="db45f-107">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="41c61-108">[in] A `PCCOR_SIGNATURE` değerin türü. ikili meta verileri imza işaret eden bir değer.</span><span class="sxs-lookup"><span data-stu-id="41c61-108">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
+ <span data-ttu-id="db45f-108">[in] A `PCCOR_SIGNATURE` değerin türü. ikili meta verileri imza işaret eden bir değer.</span><span class="sxs-lookup"><span data-stu-id="db45f-108">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="41c61-109">[out] Belirtilen bellek konumunda depolanan alınan değeri temsil eden bir "ICorDebugValue" nesnenin adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="41c61-109">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified memory location.</span></span>  
+ <span data-ttu-id="db45f-109">[out] Belirtilen bellek konumunda depolanan alınan değeri temsil eden bir "ICorDebugValue" nesnenin adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="db45f-109">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified memory location.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="41c61-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="41c61-110">Requirements</span></span>  
- <span data-ttu-id="41c61-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="41c61-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="db45f-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="db45f-110">Requirements</span></span>  
+ <span data-ttu-id="db45f-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="db45f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="41c61-112">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="41c61-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="db45f-112">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="db45f-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="41c61-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="41c61-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="db45f-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="db45f-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="41c61-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="41c61-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="db45f-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="db45f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="41c61-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="41c61-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="db45f-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="db45f-115">See also</span></span>

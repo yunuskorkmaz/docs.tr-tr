@@ -7,22 +7,22 @@ helpviewer_keywords:
 - navigation [WPF]
 ms.assetid: f804648e-558c-4f60-8e48-d11f4a23c436
 ms.openlocfilehash: 4d1cfd1388e68ff6a5f8c6a6b209dc38dd2f80d3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981701"
 ---
-# <a name="navigation-how-to-topics"></a><span data-ttu-id="114cd-102">Gezinti ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="114cd-102">Navigation How-to Topics</span></span>
-<span data-ttu-id="114cd-103">Aşağıdaki konular nasıl kullanabileceğinizi gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] gezinme.</span><span class="sxs-lookup"><span data-stu-id="114cd-103">The following topics show how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigation.</span></span>  
+# <a name="navigation-how-to-topics"></a><span data-ttu-id="3a4c3-102">Gezinti ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="3a4c3-102">Navigation How-to Topics</span></span>
+<span data-ttu-id="3a4c3-103">Aşağıdaki konular nasıl kullanabileceğinizi gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] gezinme.</span><span class="sxs-lookup"><span data-stu-id="3a4c3-103">The following topics show how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="114cd-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="114cd-104">In This Section</span></span>  
- [<span data-ttu-id="114cd-105">Sayfa İşlevi Çağırma</span><span class="sxs-lookup"><span data-stu-id="114cd-105">Call a Page Function</span></span>](how-to-call-a-page-function.md)  
-  [<span data-ttu-id="114cd-106">Sayfa İşlevinin Dönüş Değerini Alma</span><span class="sxs-lookup"><span data-stu-id="114cd-106">Get the Return Value of a Page Function</span></span>](how-to-get-the-return-value-of-a-page-function.md)  
-  [<span data-ttu-id="114cd-107">Gezinme Geçmişinde İleriye veya Geriye Doğru Gitme</span><span class="sxs-lookup"><span data-stu-id="114cd-107">Navigate Forward or Back Through Navigation History</span></span>](how-to-navigate-forward-or-back-through-navigation-history.md)  
-  [<span data-ttu-id="114cd-108">Sayfa İşlevinden Geri Dönme</span><span class="sxs-lookup"><span data-stu-id="114cd-108">Return from a Page Function</span></span>](how-to-return-from-a-page-function.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3a4c3-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="3a4c3-104">In This Section</span></span>  
+ [<span data-ttu-id="3a4c3-105">Sayfa İşlevi Çağırma</span><span class="sxs-lookup"><span data-stu-id="3a4c3-105">Call a Page Function</span></span>](how-to-call-a-page-function.md)  
+  [<span data-ttu-id="3a4c3-106">Sayfa İşlevinin Dönüş Değerini Alma</span><span class="sxs-lookup"><span data-stu-id="3a4c3-106">Get the Return Value of a Page Function</span></span>](how-to-get-the-return-value-of-a-page-function.md)  
+  [<span data-ttu-id="3a4c3-107">Gezinme Geçmişinde İleriye veya Geriye Doğru Gitme</span><span class="sxs-lookup"><span data-stu-id="3a4c3-107">Navigate Forward or Back Through Navigation History</span></span>](how-to-navigate-forward-or-back-through-navigation-history.md)  
+  [<span data-ttu-id="3a4c3-108">Sayfa İşlevinden Geri Dönme</span><span class="sxs-lookup"><span data-stu-id="3a4c3-108">Return from a Page Function</span></span>](how-to-return-from-a-page-function.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="114cd-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="114cd-109">Related Sections</span></span>  
- [<span data-ttu-id="114cd-110">Gezintiye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="114cd-110">Navigation Overview</span></span>](navigation-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="3a4c3-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="3a4c3-109">Related Sections</span></span>  
+ [<span data-ttu-id="3a4c3-110">Gezintiye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="3a4c3-110">Navigation Overview</span></span>](navigation-overview.md)  
   
- [<span data-ttu-id="114cd-111">Yapılandırılmış Gezintiye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="114cd-111">Structured Navigation Overview</span></span>](structured-navigation-overview.md)
+ [<span data-ttu-id="3a4c3-111">Yapılandırılmış Gezintiye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="3a4c3-111">Structured Navigation Overview</span></span>](structured-navigation-overview.md)

@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9a88adec508d80a40ec044e5011d3115e197e334
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000551"
 ---
-# <a name="gethashfromassemblyfilew-function"></a><span data-ttu-id="963a8-102">GetHashFromAssemblyFileW İşlevi</span><span class="sxs-lookup"><span data-stu-id="963a8-102">GetHashFromAssemblyFileW Function</span></span>
-<span data-ttu-id="963a8-103">Belirtilen karma algoritması kullanılarak, belirtilen derleme dosyasının bir karmasını alır.</span><span class="sxs-lookup"><span data-stu-id="963a8-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span> <span data-ttu-id="963a8-104">Derleme dosyası yolu bir Unicode dize olarak belirtilmelidir.</span><span class="sxs-lookup"><span data-stu-id="963a8-104">The path to the assembly file must be specified as a Unicode string.</span></span>  
+# <a name="gethashfromassemblyfilew-function"></a><span data-ttu-id="eb497-102">GetHashFromAssemblyFileW İşlevi</span><span class="sxs-lookup"><span data-stu-id="eb497-102">GetHashFromAssemblyFileW Function</span></span>
+<span data-ttu-id="eb497-103">Belirtilen karma algoritması kullanılarak, belirtilen derleme dosyasının bir karmasını alır.</span><span class="sxs-lookup"><span data-stu-id="eb497-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span> <span data-ttu-id="eb497-104">Derleme dosyası yolu bir Unicode dize olarak belirtilmelidir.</span><span class="sxs-lookup"><span data-stu-id="eb497-104">The path to the assembly file must be specified as a Unicode string.</span></span>  
   
- <span data-ttu-id="963a8-105">Bu işlev kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="963a8-105">This function has been deprecated.</span></span> <span data-ttu-id="963a8-106">Kullanım [Iclrstrongname::gethashfromassemblyfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md) yöntemi yerine.</span><span class="sxs-lookup"><span data-stu-id="963a8-106">Use the [ICLRStrongName::GetHashFromAssemblyFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md) method instead.</span></span>  
+ <span data-ttu-id="eb497-105">Bu işlev kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="eb497-105">This function has been deprecated.</span></span> <span data-ttu-id="eb497-106">Kullanım [Iclrstrongname::gethashfromassemblyfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md) yöntemi yerine.</span><span class="sxs-lookup"><span data-stu-id="eb497-106">Use the [ICLRStrongName::GetHashFromAssemblyFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="963a8-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="963a8-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eb497-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="eb497-107">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromAssemblyFileW (  
@@ -40,33 +40,33 @@ HRESULT GetHashFromAssemblyFileW (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="963a8-108">Parametreler</span><span class="sxs-lookup"><span data-stu-id="963a8-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="eb497-108">Parametreler</span><span class="sxs-lookup"><span data-stu-id="eb497-108">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="963a8-109">[in] Karma hale getirilecek dosyanın yolu.</span><span class="sxs-lookup"><span data-stu-id="963a8-109">[in] The path to the file to be hashed.</span></span> <span data-ttu-id="963a8-110">Bu parametre, bir Unicode dize olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="963a8-110">This parameter must be a Unicode string.</span></span>  
+ <span data-ttu-id="eb497-109">[in] Karma hale getirilecek dosyanın yolu.</span><span class="sxs-lookup"><span data-stu-id="eb497-109">[in] The path to the file to be hashed.</span></span> <span data-ttu-id="eb497-110">Bu parametre, bir Unicode dize olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="eb497-110">This parameter must be a Unicode string.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="963a8-111">[out içinde] Sabit karma algoritmasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="963a8-111">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="963a8-112">Sıfır varsayılan karma algoritması için kullanın.</span><span class="sxs-lookup"><span data-stu-id="963a8-112">Use zero for the default hash algorithm.</span></span>  
+ <span data-ttu-id="eb497-111">[out içinde] Sabit karma algoritmasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="eb497-111">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="eb497-112">Sıfır varsayılan karma algoritması için kullanın.</span><span class="sxs-lookup"><span data-stu-id="eb497-112">Use zero for the default hash algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="963a8-113">[out] Döndürülen karma arabellek.</span><span class="sxs-lookup"><span data-stu-id="963a8-113">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="eb497-113">[out] Döndürülen karma arabellek.</span><span class="sxs-lookup"><span data-stu-id="eb497-113">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="963a8-114">[in] İstenen en büyük boyutunu `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="963a8-114">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="eb497-114">[in] İstenen en büyük boyutunu `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="eb497-114">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="963a8-115">[out] Bayt cinsinden boyutu döndürülen `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="963a8-115">[out] The returned size, in bytes, of `pbHash`.</span></span>  
+ <span data-ttu-id="eb497-115">[out] Bayt cinsinden boyutu döndürülen `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="eb497-115">[out] The returned size, in bytes, of `pbHash`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="963a8-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="963a8-116">Requirements</span></span>  
- <span data-ttu-id="963a8-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="963a8-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eb497-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="eb497-116">Requirements</span></span>  
+ <span data-ttu-id="eb497-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eb497-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="963a8-118">**Üst bilgi:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="963a8-118">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="eb497-118">**Üst bilgi:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="eb497-118">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="963a8-119">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="963a8-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="eb497-119">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="eb497-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="963a8-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="963a8-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="eb497-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb497-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="963a8-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="963a8-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eb497-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="eb497-121">See also</span></span>
 
-- [<span data-ttu-id="963a8-122">GetHashFromAssemblyFileW Yöntemi</span><span class="sxs-lookup"><span data-stu-id="963a8-122">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
-- [<span data-ttu-id="963a8-123">GetHashFromAssemblyFile Yöntemi</span><span class="sxs-lookup"><span data-stu-id="963a8-123">GetHashFromAssemblyFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
-- [<span data-ttu-id="963a8-124">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="963a8-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="eb497-122">GetHashFromAssemblyFileW Yöntemi</span><span class="sxs-lookup"><span data-stu-id="eb497-122">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [<span data-ttu-id="eb497-123">GetHashFromAssemblyFile Yöntemi</span><span class="sxs-lookup"><span data-stu-id="eb497-123">GetHashFromAssemblyFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
+- [<span data-ttu-id="eb497-124">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="eb497-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

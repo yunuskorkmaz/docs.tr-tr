@@ -8,16 +8,16 @@ helpviewer_keywords:
 - request-reply contracts [WCF]
 ms.assetid: 2fa710f1-47f4-4598-b063-3ab3bd22ebba
 ms.openlocfilehash: 1ff11b1cae4ec8f6fe886a55cb0add27831048d0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991126"
 ---
-# <a name="request-reply-services"></a><span data-ttu-id="b1d0d-102">İstek-Yanıt Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="b1d0d-102">Request-Reply Services</span></span>
-<span data-ttu-id="b1d0d-103">İstek-yanıt Hizmetleri işlem anlaşması Windows Communication Foundation (WCF) varsayılan türüdür.</span><span class="sxs-lookup"><span data-stu-id="b1d0d-103">Request-reply services are the default type of operation contract in Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="b1d0d-104">İstemcilerin hizmet işlemlerine aramaları yapmak ve hizmetten bir yanıt bekler.</span><span class="sxs-lookup"><span data-stu-id="b1d0d-104">Clients make calls to service operations and wait for a response from the service.</span></span> <span data-ttu-id="b1d0d-105">Bir hizmet işlemi çağrısına ya da zaman uyumlu olarak gerçekleştirebileceğiniz, istemci kadar engeller, hizmet veya çağrısı süreleri bir yanıt alır veya zaman uyumsuz olarak, istemci bir hizmet işlemi çağrıda burada çalışmaya devam eder ve alır başka bir iş parçacığında hizmetinden gelen yanıt.</span><span class="sxs-lookup"><span data-stu-id="b1d0d-105">You can perform calls to a service operation either synchronously, where the client blocks until it receives a response from the service or the call times, or asynchronously, where the client makes a call to the service operation, continues working, and receives the response from the service on another thread.</span></span>  
+# <a name="request-reply-services"></a><span data-ttu-id="0cfac-102">İstek-Yanıt Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="0cfac-102">Request-Reply Services</span></span>
+<span data-ttu-id="0cfac-103">İstek-yanıt Hizmetleri işlem anlaşması Windows Communication Foundation (WCF) varsayılan türüdür.</span><span class="sxs-lookup"><span data-stu-id="0cfac-103">Request-reply services are the default type of operation contract in Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="0cfac-104">İstemcilerin hizmet işlemlerine aramaları yapmak ve hizmetten bir yanıt bekler.</span><span class="sxs-lookup"><span data-stu-id="0cfac-104">Clients make calls to service operations and wait for a response from the service.</span></span> <span data-ttu-id="0cfac-105">Bir hizmet işlemi çağrısına ya da zaman uyumlu olarak gerçekleştirebileceğiniz, istemci kadar engeller, hizmet veya çağrısı süreleri bir yanıt alır veya zaman uyumsuz olarak, istemci bir hizmet işlemi çağrıda burada çalışmaya devam eder ve alır başka bir iş parçacığında hizmetinden gelen yanıt.</span><span class="sxs-lookup"><span data-stu-id="0cfac-105">You can perform calls to a service operation either synchronously, where the client blocks until it receives a response from the service or the call times, or asynchronously, where the client makes a call to the service operation, continues working, and receives the response from the service on another thread.</span></span>  
   
- <span data-ttu-id="b1d0d-106">İstek-yanıt hizmeti sözleşme oluşturmak için hizmet sözleşmesini tanımlama ve uygulama <xref:System.ServiceModel.OperationContractAttribute> aşağıdaki örnek kodda gösterildiği gibi her işlem için sınıf.</span><span class="sxs-lookup"><span data-stu-id="b1d0d-106">To create a request-reply service contract, define your service contract, and apply the <xref:System.ServiceModel.OperationContractAttribute> class to each operation, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="0cfac-106">İstek-yanıt hizmeti sözleşme oluşturmak için hizmet sözleşmesini tanımlama ve uygulama <xref:System.ServiceModel.OperationContractAttribute> aşağıdaki örnek kodda gösterildiği gibi her işlem için sınıf.</span><span class="sxs-lookup"><span data-stu-id="0cfac-106">To create a request-reply service contract, define your service contract, and apply the <xref:System.ServiceModel.OperationContractAttribute> class to each operation, as shown in the following sample code.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -28,9 +28,9 @@ public interface IRequestReplyCalculator
 }  
 ```  
   
- <span data-ttu-id="b1d0d-107">Ayarlamak zorunda değilsiniz <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliğini `false` çünkü bu varsayılan davranışı.</span><span class="sxs-lookup"><span data-stu-id="b1d0d-107">You do not have to set the  <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> property to `false` because this is the default behavior.</span></span>  
+ <span data-ttu-id="0cfac-107">Ayarlamak zorunda değilsiniz <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliğini `false` çünkü bu varsayılan davranışı.</span><span class="sxs-lookup"><span data-stu-id="0cfac-107">You do not have to set the  <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> property to `false` because this is the default behavior.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b1d0d-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b1d0d-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0cfac-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0cfac-108">See also</span></span>
 
-- [<span data-ttu-id="b1d0d-109">Tek Yönlü Hizmetler</span><span class="sxs-lookup"><span data-stu-id="b1d0d-109">One-Way Services</span></span>](../../../../docs/framework/wcf/feature-details/one-way-services.md)
-- [<span data-ttu-id="b1d0d-110">Çift Yönlü Hizmetler</span><span class="sxs-lookup"><span data-stu-id="b1d0d-110">Duplex Services</span></span>](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [<span data-ttu-id="0cfac-109">Tek Yönlü Hizmetler</span><span class="sxs-lookup"><span data-stu-id="0cfac-109">One-Way Services</span></span>](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+- [<span data-ttu-id="0cfac-110">Çift Yönlü Hizmetler</span><span class="sxs-lookup"><span data-stu-id="0cfac-110">Duplex Services</span></span>](../../../../docs/framework/wcf/feature-details/duplex-services.md)

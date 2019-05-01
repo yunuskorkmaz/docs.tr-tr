@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3fe3cbc4bad83496bcc58aaea60e6724b1d1f06c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988903"
 ---
-# <a name="icordebugframecreatestepper-method"></a><span data-ttu-id="0355b-102">ICorDebugFrame::CreateStepper Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0355b-102">ICorDebugFrame::CreateStepper Method</span></span>
-<span data-ttu-id="0355b-103">Hata ayıklayıcının bu Icordebugframe göre Adımlama işlemleri gerçekleştirmek için izin veren Adımlayıcı alır.</span><span class="sxs-lookup"><span data-stu-id="0355b-103">Gets a stepper that allows the debugger to perform stepping operations relative to this ICorDebugFrame.</span></span>  
+# <a name="icordebugframecreatestepper-method"></a><span data-ttu-id="da0d2-102">ICorDebugFrame::CreateStepper Yöntemi</span><span class="sxs-lookup"><span data-stu-id="da0d2-102">ICorDebugFrame::CreateStepper Method</span></span>
+<span data-ttu-id="da0d2-103">Hata ayıklayıcının bu Icordebugframe göre Adımlama işlemleri gerçekleştirmek için izin veren Adımlayıcı alır.</span><span class="sxs-lookup"><span data-stu-id="da0d2-103">Gets a stepper that allows the debugger to perform stepping operations relative to this ICorDebugFrame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0355b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0355b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="da0d2-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="da0d2-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateStepper (  
@@ -35,18 +35,18 @@ HRESULT CreateStepper (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0355b-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0355b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="da0d2-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="da0d2-105">Parameters</span></span>  
  `ppStepper`  
- <span data-ttu-id="0355b-106">[out] Geçerli çerçevesine göre Adımlama işlemleri gerçekleştirmek hata ayıklayıcı izin veren bir ICorDebugStepper nesnesi adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0355b-106">[out] A pointer to the address of an ICorDebugStepper object that allows the debugger to perform stepping operations relative to the current frame.</span></span>  
+ <span data-ttu-id="da0d2-106">[out] Geçerli çerçevesine göre Adımlama işlemleri gerçekleştirmek hata ayıklayıcı izin veren bir ICorDebugStepper nesnesi adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="da0d2-106">[out] A pointer to the address of an ICorDebugStepper object that allows the debugger to perform stepping operations relative to the current frame.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0355b-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0355b-107">Remarks</span></span>  
- <span data-ttu-id="0355b-108">Çerçeve etkin değilse, adımlayıcıdaki nesne adımı tamamlanmadan önce çerçeveye döndürmek genellikle gerekir.</span><span class="sxs-lookup"><span data-stu-id="0355b-108">If the frame is not active, the stepper object will typically have to return to the frame before the step is completed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="da0d2-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="da0d2-107">Remarks</span></span>  
+ <span data-ttu-id="da0d2-108">Çerçeve etkin değilse, adımlayıcıdaki nesne adımı tamamlanmadan önce çerçeveye döndürmek genellikle gerekir.</span><span class="sxs-lookup"><span data-stu-id="da0d2-108">If the frame is not active, the stepper object will typically have to return to the frame before the step is completed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0355b-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0355b-109">Requirements</span></span>  
- <span data-ttu-id="0355b-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0355b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="da0d2-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="da0d2-109">Requirements</span></span>  
+ <span data-ttu-id="da0d2-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="da0d2-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0355b-111">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0355b-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="da0d2-111">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="da0d2-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0355b-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0355b-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="da0d2-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="da0d2-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0355b-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0355b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="da0d2-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="da0d2-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 15b1f6be2dac6bc7566852791ac22e495949521c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992647"
 ---
-# <a name="corserializationtype-enumeration"></a><span data-ttu-id="ea8b0-102">CorSerializationType Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="ea8b0-102">CorSerializationType Enumeration</span></span>
-<span data-ttu-id="ea8b0-103">Ortak dil çalışma zamanı tarafından bir nesne seri nasıl belirtir.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-103">Specifies how an object is serialized by the common language runtime.</span></span>  
+# <a name="corserializationtype-enumeration"></a><span data-ttu-id="c71b8-102">CorSerializationType Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="c71b8-102">CorSerializationType Enumeration</span></span>
+<span data-ttu-id="c71b8-103">Ortak dil çalışma zamanı tarafından bir nesne seri nasıl belirtir.</span><span class="sxs-lookup"><span data-stu-id="c71b8-103">Specifies how an object is serialized by the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ea8b0-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ea8b0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c71b8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c71b8-104">Syntax</span></span>  
   
 ```  
 typedef enum CorSerializationType {  
@@ -55,38 +55,38 @@ typedef enum CorSerializationType {
 } CorSerializationType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ea8b0-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="ea8b0-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c71b8-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="c71b8-105">Members</span></span>  
   
-|<span data-ttu-id="ea8b0-106">Üye</span><span class="sxs-lookup"><span data-stu-id="ea8b0-106">Member</span></span>|<span data-ttu-id="ea8b0-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ea8b0-107">Description</span></span>|  
+|<span data-ttu-id="c71b8-106">Üye</span><span class="sxs-lookup"><span data-stu-id="c71b8-106">Member</span></span>|<span data-ttu-id="c71b8-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c71b8-107">Description</span></span>|  
 |------------|-----------------|  
-|`SERIALIZATION_TYPE_UNDEFINED`|<span data-ttu-id="ea8b0-108">Nesnenin seri hale getirme tanımsızdır.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-108">Serialization of the object is undefined.</span></span>|  
-|`SERIALIZATION_TYPE_BOOLEAN`|<span data-ttu-id="ea8b0-109">Bir Boolean türünde nesne seri hale getirilmiş</span><span class="sxs-lookup"><span data-stu-id="ea8b0-109">Object is serialized as a Boolean type</span></span>|  
-|`SERIALIZATION_TYPE_CHAR`|<span data-ttu-id="ea8b0-110">Nesnesi, bir karakter türü olarak seri hale getirilir.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-110">Object is serialized as a character type.</span></span>|  
-|`SERIALIZATION_TYPE_I1`|<span data-ttu-id="ea8b0-111">İmzalı bir 1 baytlık tamsayı olarak serileştirilmiş nesne.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-111">Object is serialized as a signed 1-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_U1`|<span data-ttu-id="ea8b0-112">Nesne, işaretsiz bir 1 baytlık tamsayı olarak sıralanır.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-112">Object is serialized as an unsigned 1-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_I2`|<span data-ttu-id="ea8b0-113">Nesne bir imzalı 2 baytlık tamsayı olarak sıralanır.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-113">Object is serialized as a signed 2-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_U2`|<span data-ttu-id="ea8b0-114">Nesne, işaretsiz 2 baytlık tamsayı olarak sıralanır.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-114">Object is serialized as an unsigned 2-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_I4`|<span data-ttu-id="ea8b0-115">İmzalı bir 4 baytlık tamsayı olarak serileştirilmiş nesne.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-115">Object is serialized as a signed 4-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_U4`|<span data-ttu-id="ea8b0-116">Nesne, işaretsiz bir 4 baytlık tamsayı olarak sıralanır.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-116">Object is serialized as an unsigned 4-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_I8`|<span data-ttu-id="ea8b0-117">Nesne bir işaretli 8 baytlık tamsayı sıralanır.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-117">Object is serialized as a signed 8-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_U8`|<span data-ttu-id="ea8b0-118">İmzalanmamış 8 baytlık tamsayı olarak serileştirilmiş nesne.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-118">Object is serialized as an unsigned 8-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_R4`|<span data-ttu-id="ea8b0-119">4-bayt kayan nokta serileştirilmiş nesne.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-119">Object is serialized as a 4-byte floating point.</span></span>|  
-|`SERIALIZATION_TYPE_R8`|<span data-ttu-id="ea8b0-120">8-bayt kayan nokta serileştirilmiş nesne.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-120">Object is serialized as an 8-byte floating point.</span></span>|  
-|`SERIALIZATION_TYPE_STRING`|<span data-ttu-id="ea8b0-121">Nesne System.String türünde seri hale getirilir.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-121">Object is serialized as a System.String type.</span></span>|  
-|`SERIALIZATION_TYPE_SZARRAY`|<span data-ttu-id="ea8b0-122">Nesne seri hale getirilmiş bir tek boyutlu, sıfır alt sınırı dizisi.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-122">Object is serialized as a single-dimensional, zero lower-bound array.</span></span>|  
-|`SERIALIZATION_TYPE_TYPE`|<span data-ttu-id="ea8b0-123">Nesne genel bir tür seri hale getirilir.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-123">Object is serialized as a generic type.</span></span>|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|<span data-ttu-id="ea8b0-124">Nesne etiketli bir nesnesi olarak seri hale getirilir.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-124">Object is serialized as a tagged object.</span></span>|  
-|`SERIALIZATION_TYPE_FIELD`|<span data-ttu-id="ea8b0-125">Bir alan olarak serileştirilmiş nesne.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-125">Object is serialized as a field.</span></span>|  
-|`SERIALIZATION_TYPE_PROPERTY`|<span data-ttu-id="ea8b0-126">Nesnenin bir özellik olarak seri hale getirilir.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-126">Object is serialized as a property.</span></span>|  
-|`SERIALIZATION_TYPE_ENUM`|<span data-ttu-id="ea8b0-127">Nesne sabit olarak seri hale getirilir.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-127">Object is serialized as an enumeration.</span></span>|  
+|`SERIALIZATION_TYPE_UNDEFINED`|<span data-ttu-id="c71b8-108">Nesnenin seri hale getirme tanımsızdır.</span><span class="sxs-lookup"><span data-stu-id="c71b8-108">Serialization of the object is undefined.</span></span>|  
+|`SERIALIZATION_TYPE_BOOLEAN`|<span data-ttu-id="c71b8-109">Bir Boolean türünde nesne seri hale getirilmiş</span><span class="sxs-lookup"><span data-stu-id="c71b8-109">Object is serialized as a Boolean type</span></span>|  
+|`SERIALIZATION_TYPE_CHAR`|<span data-ttu-id="c71b8-110">Nesnesi, bir karakter türü olarak seri hale getirilir.</span><span class="sxs-lookup"><span data-stu-id="c71b8-110">Object is serialized as a character type.</span></span>|  
+|`SERIALIZATION_TYPE_I1`|<span data-ttu-id="c71b8-111">İmzalı bir 1 baytlık tamsayı olarak serileştirilmiş nesne.</span><span class="sxs-lookup"><span data-stu-id="c71b8-111">Object is serialized as a signed 1-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_U1`|<span data-ttu-id="c71b8-112">Nesne, işaretsiz bir 1 baytlık tamsayı olarak sıralanır.</span><span class="sxs-lookup"><span data-stu-id="c71b8-112">Object is serialized as an unsigned 1-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_I2`|<span data-ttu-id="c71b8-113">Nesne bir imzalı 2 baytlık tamsayı olarak sıralanır.</span><span class="sxs-lookup"><span data-stu-id="c71b8-113">Object is serialized as a signed 2-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_U2`|<span data-ttu-id="c71b8-114">Nesne, işaretsiz 2 baytlık tamsayı olarak sıralanır.</span><span class="sxs-lookup"><span data-stu-id="c71b8-114">Object is serialized as an unsigned 2-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_I4`|<span data-ttu-id="c71b8-115">İmzalı bir 4 baytlık tamsayı olarak serileştirilmiş nesne.</span><span class="sxs-lookup"><span data-stu-id="c71b8-115">Object is serialized as a signed 4-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_U4`|<span data-ttu-id="c71b8-116">Nesne, işaretsiz bir 4 baytlık tamsayı olarak sıralanır.</span><span class="sxs-lookup"><span data-stu-id="c71b8-116">Object is serialized as an unsigned 4-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_I8`|<span data-ttu-id="c71b8-117">Nesne bir işaretli 8 baytlık tamsayı sıralanır.</span><span class="sxs-lookup"><span data-stu-id="c71b8-117">Object is serialized as a signed 8-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_U8`|<span data-ttu-id="c71b8-118">İmzalanmamış 8 baytlık tamsayı olarak serileştirilmiş nesne.</span><span class="sxs-lookup"><span data-stu-id="c71b8-118">Object is serialized as an unsigned 8-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_R4`|<span data-ttu-id="c71b8-119">4-bayt kayan nokta serileştirilmiş nesne.</span><span class="sxs-lookup"><span data-stu-id="c71b8-119">Object is serialized as a 4-byte floating point.</span></span>|  
+|`SERIALIZATION_TYPE_R8`|<span data-ttu-id="c71b8-120">8-bayt kayan nokta serileştirilmiş nesne.</span><span class="sxs-lookup"><span data-stu-id="c71b8-120">Object is serialized as an 8-byte floating point.</span></span>|  
+|`SERIALIZATION_TYPE_STRING`|<span data-ttu-id="c71b8-121">Nesne System.String türünde seri hale getirilir.</span><span class="sxs-lookup"><span data-stu-id="c71b8-121">Object is serialized as a System.String type.</span></span>|  
+|`SERIALIZATION_TYPE_SZARRAY`|<span data-ttu-id="c71b8-122">Nesne seri hale getirilmiş bir tek boyutlu, sıfır alt sınırı dizisi.</span><span class="sxs-lookup"><span data-stu-id="c71b8-122">Object is serialized as a single-dimensional, zero lower-bound array.</span></span>|  
+|`SERIALIZATION_TYPE_TYPE`|<span data-ttu-id="c71b8-123">Nesne genel bir tür seri hale getirilir.</span><span class="sxs-lookup"><span data-stu-id="c71b8-123">Object is serialized as a generic type.</span></span>|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|<span data-ttu-id="c71b8-124">Nesne etiketli bir nesnesi olarak seri hale getirilir.</span><span class="sxs-lookup"><span data-stu-id="c71b8-124">Object is serialized as a tagged object.</span></span>|  
+|`SERIALIZATION_TYPE_FIELD`|<span data-ttu-id="c71b8-125">Bir alan olarak serileştirilmiş nesne.</span><span class="sxs-lookup"><span data-stu-id="c71b8-125">Object is serialized as a field.</span></span>|  
+|`SERIALIZATION_TYPE_PROPERTY`|<span data-ttu-id="c71b8-126">Nesnenin bir özellik olarak seri hale getirilir.</span><span class="sxs-lookup"><span data-stu-id="c71b8-126">Object is serialized as a property.</span></span>|  
+|`SERIALIZATION_TYPE_ENUM`|<span data-ttu-id="c71b8-127">Nesne sabit olarak seri hale getirilir.</span><span class="sxs-lookup"><span data-stu-id="c71b8-127">Object is serialized as an enumeration.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ea8b0-128">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ea8b0-128">Requirements</span></span>  
- <span data-ttu-id="ea8b0-129">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ea8b0-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c71b8-128">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c71b8-128">Requirements</span></span>  
+ <span data-ttu-id="c71b8-129">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c71b8-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ea8b0-130">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="ea8b0-130">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="c71b8-130">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="c71b8-130">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="ea8b0-131">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ea8b0-131">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c71b8-131">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c71b8-131">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ea8b0-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ea8b0-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c71b8-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c71b8-132">See also</span></span>
 
-- [<span data-ttu-id="ea8b0-133">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="ea8b0-133">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="c71b8-133">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="c71b8-133">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

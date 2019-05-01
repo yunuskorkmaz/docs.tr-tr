@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9000f35e9a8f7ecc6c40cf0ef9c220fc9f4f9c10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985692"
 ---
-# <a name="customdumpitem-structure"></a><span data-ttu-id="3d8a1-102">CustomDumpItem Yapısı</span><span class="sxs-lookup"><span data-stu-id="3d8a1-102">CustomDumpItem Structure</span></span>
-<span data-ttu-id="3d8a1-103">Hata Raporlama özel bir döküm eklenmesi için bir öğe açıklar.</span><span class="sxs-lookup"><span data-stu-id="3d8a1-103">Describes an item to be added to a custom dump in error reporting.</span></span>  
+# <a name="customdumpitem-structure"></a><span data-ttu-id="7f9c4-102">CustomDumpItem Yapısı</span><span class="sxs-lookup"><span data-stu-id="7f9c4-102">CustomDumpItem Structure</span></span>
+<span data-ttu-id="7f9c4-103">Hata Raporlama özel bir döküm eklenmesi için bir öğe açıklar.</span><span class="sxs-lookup"><span data-stu-id="7f9c4-103">Describes an item to be added to a custom dump in error reporting.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3d8a1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3d8a1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7f9c4-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7f9c4-104">Syntax</span></span>  
   
 ```  
 struct {  
@@ -37,25 +37,25 @@ struct {
 } CustomDumpItem;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="3d8a1-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="3d8a1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="7f9c4-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="7f9c4-105">Members</span></span>  
   
-|<span data-ttu-id="3d8a1-106">Üye</span><span class="sxs-lookup"><span data-stu-id="3d8a1-106">Member</span></span>|<span data-ttu-id="3d8a1-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3d8a1-107">Description</span></span>|  
+|<span data-ttu-id="7f9c4-106">Üye</span><span class="sxs-lookup"><span data-stu-id="7f9c4-106">Member</span></span>|<span data-ttu-id="7f9c4-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7f9c4-107">Description</span></span>|  
 |------------|-----------------|  
-|`itemKind`|<span data-ttu-id="3d8a1-108">Bir [Ecustomdumpıtemkind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) eklenecek öğe türünü belirten değer.</span><span class="sxs-lookup"><span data-stu-id="3d8a1-108">An [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) value that indicates the kind of item to be added.</span></span>|  
-|`pReserved`|<span data-ttu-id="3d8a1-109">Şu anda kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="3d8a1-109">Not currently used.</span></span> <span data-ttu-id="3d8a1-110">Birleşime eklenen tüm öğeler işaretçi boyutundan büyük olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="3d8a1-110">Any items added to the union must be no larger than pointer size.</span></span> <span data-ttu-id="3d8a1-111">Varsa bir `struct` olan gerekli, ayrı olarak ayırmak ve kendisine işaret.</span><span class="sxs-lookup"><span data-stu-id="3d8a1-111">If a `struct` is required, you must allocate it separately and point to it.</span></span>|  
+|`itemKind`|<span data-ttu-id="7f9c4-108">Bir [Ecustomdumpıtemkind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) eklenecek öğe türünü belirten değer.</span><span class="sxs-lookup"><span data-stu-id="7f9c4-108">An [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) value that indicates the kind of item to be added.</span></span>|  
+|`pReserved`|<span data-ttu-id="7f9c4-109">Şu anda kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="7f9c4-109">Not currently used.</span></span> <span data-ttu-id="7f9c4-110">Birleşime eklenen tüm öğeler işaretçi boyutundan büyük olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="7f9c4-110">Any items added to the union must be no larger than pointer size.</span></span> <span data-ttu-id="7f9c4-111">Varsa bir `struct` olan gerekli, ayrı olarak ayırmak ve kendisine işaret.</span><span class="sxs-lookup"><span data-stu-id="7f9c4-111">If a `struct` is required, you must allocate it separately and point to it.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3d8a1-112">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="3d8a1-112">Remarks</span></span>  
- <span data-ttu-id="3d8a1-113">[Iclrerrorreportingmanager::begincustomdump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) türünde bir parametre alan `CustomDumpItem`.</span><span class="sxs-lookup"><span data-stu-id="3d8a1-113">[ICLRErrorReportingManager::BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) takes a parameter of type `CustomDumpItem`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7f9c4-112">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7f9c4-112">Remarks</span></span>  
+ <span data-ttu-id="7f9c4-113">[Iclrerrorreportingmanager::begincustomdump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) türünde bir parametre alan `CustomDumpItem`.</span><span class="sxs-lookup"><span data-stu-id="7f9c4-113">[ICLRErrorReportingManager::BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) takes a parameter of type `CustomDumpItem`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3d8a1-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3d8a1-114">Requirements</span></span>  
- <span data-ttu-id="3d8a1-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3d8a1-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7f9c4-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7f9c4-114">Requirements</span></span>  
+ <span data-ttu-id="7f9c4-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7f9c4-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3d8a1-116">**Üst bilgi:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="3d8a1-116">**Header:** MSCorEE.idl</span></span>  
+ <span data-ttu-id="7f9c4-116">**Üst bilgi:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="7f9c4-116">**Header:** MSCorEE.idl</span></span>  
   
- <span data-ttu-id="3d8a1-117">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="3d8a1-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7f9c4-117">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="7f9c4-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3d8a1-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3d8a1-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7f9c4-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7f9c4-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3d8a1-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3d8a1-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7f9c4-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7f9c4-119">See also</span></span>
 
-- [<span data-ttu-id="3d8a1-120">Barındırma Yapıları</span><span class="sxs-lookup"><span data-stu-id="3d8a1-120">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [<span data-ttu-id="7f9c4-120">Barındırma Yapıları</span><span class="sxs-lookup"><span data-stu-id="7f9c4-120">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
