@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1c548ae7f8d605ff84da2046d057e436c8e95721
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796584"
 ---
-# <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a><span data-ttu-id="c5373-102">IHostThreadPoolManager::QueueUserWorkItem Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c5373-102">IHostThreadPoolManager::QueueUserWorkItem Method</span></span>
-<span data-ttu-id="c5373-103">Bir işlev yürütme için sıraya alır ve bu işlev tarafından kullanılan verileri içeren bir nesne belirtir.</span><span class="sxs-lookup"><span data-stu-id="c5373-103">Queues a function for execution, and specifies an object containing data to be used by that function.</span></span> <span data-ttu-id="c5373-104">Bir iş parçacığı kullanılabilir hale geldiğinde işlevi yürütür.</span><span class="sxs-lookup"><span data-stu-id="c5373-104">The function executes when a thread becomes available.</span></span>  
+# <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a><span data-ttu-id="63cb1-102">IHostThreadPoolManager::QueueUserWorkItem Yöntemi</span><span class="sxs-lookup"><span data-stu-id="63cb1-102">IHostThreadPoolManager::QueueUserWorkItem Method</span></span>
+<span data-ttu-id="63cb1-103">Bir işlev yürütme için sıraya alır ve bu işlev tarafından kullanılan verileri içeren bir nesne belirtir.</span><span class="sxs-lookup"><span data-stu-id="63cb1-103">Queues a function for execution, and specifies an object containing data to be used by that function.</span></span> <span data-ttu-id="63cb1-104">Bir iş parçacığı kullanılabilir hale geldiğinde işlevi yürütür.</span><span class="sxs-lookup"><span data-stu-id="63cb1-104">The function executes when a thread becomes available.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c5373-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c5373-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="63cb1-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="63cb1-105">Syntax</span></span>  
   
 ```  
 HRESULT QueueUserWorkItem (  
@@ -37,41 +37,41 @@ HRESULT QueueUserWorkItem (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c5373-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c5373-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="63cb1-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="63cb1-106">Parameters</span></span>  
  `Function`  
- <span data-ttu-id="c5373-107">[in] Yürütülecek bir işlevi temsil eden bir işlev işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="c5373-107">[in] A function pointer that represents the function to execute.</span></span>  
+ <span data-ttu-id="63cb1-107">[in] Yürütülecek bir işlevi temsil eden bir işlev işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="63cb1-107">[in] A function pointer that represents the function to execute.</span></span>  
   
  `Context`  
- <span data-ttu-id="c5373-108">[in] Tarafından kullanılan veri içeren bir nesne `Function`.</span><span class="sxs-lookup"><span data-stu-id="c5373-108">[in] An object that contains data to be used by `Function`.</span></span>  
+ <span data-ttu-id="63cb1-108">[in] Tarafından kullanılan veri içeren bir nesne `Function`.</span><span class="sxs-lookup"><span data-stu-id="63cb1-108">[in] An object that contains data to be used by `Function`.</span></span>  
   
  `Flags`  
- <span data-ttu-id="c5373-109">[in] Bayrakları değerlerden birini, Win32 için tanımlanan `QueueUserWorkItem` yürütme denetleyen yöntemi.</span><span class="sxs-lookup"><span data-stu-id="c5373-109">[in] One of the flags values, as defined for the Win32 `QueueUserWorkItem` method, that control execution.</span></span>  
+ <span data-ttu-id="63cb1-109">[in] Bayrakları değerlerden birini, Win32 için tanımlanan `QueueUserWorkItem` yürütme denetleyen yöntemi.</span><span class="sxs-lookup"><span data-stu-id="63cb1-109">[in] One of the flags values, as defined for the Win32 `QueueUserWorkItem` method, that control execution.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c5373-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="c5373-110">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="63cb1-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="63cb1-110">Return Value</span></span>  
   
-|<span data-ttu-id="c5373-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c5373-111">HRESULT</span></span>|<span data-ttu-id="c5373-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c5373-112">Description</span></span>|  
+|<span data-ttu-id="63cb1-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="63cb1-111">HRESULT</span></span>|<span data-ttu-id="63cb1-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="63cb1-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="c5373-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="c5373-113">S_OK</span></span>|<span data-ttu-id="c5373-114">`QueueUserWorkItem` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="c5373-114">`QueueUserWorkItem` returned successfully.</span></span>|  
-|<span data-ttu-id="c5373-115">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="c5373-115">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="c5373-116">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="c5373-116">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="c5373-117">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="c5373-117">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="c5373-118">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="c5373-118">The call timed out.</span></span>|  
-|<span data-ttu-id="c5373-119">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="c5373-119">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="c5373-120">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="c5373-120">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="c5373-121">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="c5373-121">HOST_E_ABANDONED</span></span>|<span data-ttu-id="c5373-122">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="c5373-122">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="c5373-123">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="c5373-123">E_FAIL</span></span>|<span data-ttu-id="c5373-124">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="c5373-124">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="c5373-125">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="c5373-125">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="c5373-126">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="c5373-126">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="63cb1-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="63cb1-113">S_OK</span></span>|<span data-ttu-id="63cb1-114">`QueueUserWorkItem` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="63cb1-114">`QueueUserWorkItem` returned successfully.</span></span>|  
+|<span data-ttu-id="63cb1-115">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="63cb1-115">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="63cb1-116">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="63cb1-116">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="63cb1-117">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="63cb1-117">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="63cb1-118">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="63cb1-118">The call timed out.</span></span>|  
+|<span data-ttu-id="63cb1-119">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="63cb1-119">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="63cb1-120">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="63cb1-120">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="63cb1-121">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="63cb1-121">HOST_E_ABANDONED</span></span>|<span data-ttu-id="63cb1-122">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="63cb1-122">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="63cb1-123">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="63cb1-123">E_FAIL</span></span>|<span data-ttu-id="63cb1-124">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="63cb1-124">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="63cb1-125">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="63cb1-125">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="63cb1-126">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="63cb1-126">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c5373-127">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c5373-127">Remarks</span></span>  
- <span data-ttu-id="c5373-128">`QueueUserWorkItem` iş parçacığı havuzundaki çalışan iş parçacığı için bir iş öğesini kuyruğa yerleştirir.</span><span class="sxs-lookup"><span data-stu-id="c5373-128">`QueueUserWorkItem` queues a work item to a worker thread in the thread pool.</span></span> <span data-ttu-id="c5373-129">İmza ve parametre türlerinden aynı ada sahip karşılık gelen Win32 işlevini gereksinimlerine aynıdır.</span><span class="sxs-lookup"><span data-stu-id="c5373-129">Its signature and parameter types are identical to those of the corresponding Win32 function, which has the same name.</span></span> <span data-ttu-id="c5373-130">Daha fazla bilgi için Windows Platform belgelerine bakın.</span><span class="sxs-lookup"><span data-stu-id="c5373-130">For more information, see the Windows Platform documentation.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="63cb1-127">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="63cb1-127">Remarks</span></span>  
+ <span data-ttu-id="63cb1-128">`QueueUserWorkItem` iş parçacığı havuzundaki çalışan iş parçacığı için bir iş öğesini kuyruğa yerleştirir.</span><span class="sxs-lookup"><span data-stu-id="63cb1-128">`QueueUserWorkItem` queues a work item to a worker thread in the thread pool.</span></span> <span data-ttu-id="63cb1-129">İmza ve parametre türlerinden aynı ada sahip karşılık gelen Win32 işlevini gereksinimlerine aynıdır.</span><span class="sxs-lookup"><span data-stu-id="63cb1-129">Its signature and parameter types are identical to those of the corresponding Win32 function, which has the same name.</span></span> <span data-ttu-id="63cb1-130">Daha fazla bilgi için Windows Platform belgelerine bakın.</span><span class="sxs-lookup"><span data-stu-id="63cb1-130">For more information, see the Windows Platform documentation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c5373-131">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c5373-131">Requirements</span></span>  
- <span data-ttu-id="c5373-132">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c5373-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="63cb1-131">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="63cb1-131">Requirements</span></span>  
+ <span data-ttu-id="63cb1-132">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="63cb1-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c5373-133">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c5373-133">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="63cb1-133">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="63cb1-133">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c5373-134">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="c5373-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="63cb1-134">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="63cb1-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c5373-135">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c5373-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="63cb1-135">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="63cb1-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c5373-136">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c5373-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="63cb1-136">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="63cb1-136">See also</span></span>
 
 - <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>
 - <xref:System.Threading.ThreadPool>
-- [<span data-ttu-id="c5373-137">IHostThreadPoolManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c5373-137">IHostThreadPoolManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+- [<span data-ttu-id="63cb1-137">IHostThreadPoolManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="63cb1-137">IHostThreadPoolManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
 ms.openlocfilehash: 5be472d0d4f27c7a9acc966e4d6ffbcf9d7a1b0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790838"
 ---
-# <a name="textbox"></a><span data-ttu-id="7cecb-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="7cecb-102">TextBox</span></span>
-<span data-ttu-id="7cecb-103"><xref:System.Windows.Controls.TextBox> Denetimi, temel metin girişi WPF uygulamaları için destek sağlar.</span><span class="sxs-lookup"><span data-stu-id="7cecb-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
+# <a name="textbox"></a><span data-ttu-id="41243-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="41243-102">TextBox</span></span>
+<span data-ttu-id="41243-103"><xref:System.Windows.Controls.TextBox> Denetimi, temel metin girişi WPF uygulamaları için destek sağlar.</span><span class="sxs-lookup"><span data-stu-id="41243-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7cecb-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="7cecb-104">In This Section</span></span>  
- [<span data-ttu-id="7cecb-105">TextBox Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7cecb-105">TextBox Overview</span></span>](textbox-overview.md)  
- [<span data-ttu-id="7cecb-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="7cecb-106">How-to Topics</span></span>](textbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="41243-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="41243-104">In This Section</span></span>  
+ [<span data-ttu-id="41243-105">TextBox Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="41243-105">TextBox Overview</span></span>](textbox-overview.md)  
+ [<span data-ttu-id="41243-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="41243-106">How-to Topics</span></span>](textbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="7cecb-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="7cecb-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="41243-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="41243-107">Reference</span></span>  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -30,7 +30,7 @@ ms.locfileid: "59226977"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a><span data-ttu-id="7cecb-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7cecb-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="41243-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="41243-108">See also</span></span>
 
-- [<span data-ttu-id="7cecb-109">WPF denetimleri Galerisi örneği</span><span class="sxs-lookup"><span data-stu-id="7cecb-109">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)
-- [<span data-ttu-id="7cecb-110">TextBox Stilleri ve Şablonları</span><span class="sxs-lookup"><span data-stu-id="7cecb-110">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)
+- [<span data-ttu-id="41243-109">WPF denetimleri Galerisi örneği</span><span class="sxs-lookup"><span data-stu-id="41243-109">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [<span data-ttu-id="41243-110">TextBox Stilleri ve Şablonları</span><span class="sxs-lookup"><span data-stu-id="41243-110">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)

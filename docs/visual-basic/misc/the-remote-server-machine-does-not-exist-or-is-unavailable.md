@@ -5,19 +5,19 @@ f1_keywords:
 - vbrID462
 ms.assetid: fa2cf36e-2169-42db-8449-6aca579e8303
 ms.openlocfilehash: 9364eeb06b98531256449ed8e7f8abcd24efdf52
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58026636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922258"
 ---
-# <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a><span data-ttu-id="c4ba0-102">Uzak Sunucu makinesi yok veya olduğundan kullanılamıyor (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c4ba0-102">The remote server machine does not exist or is unavailable (Visual Basic)</span></span>
-<span data-ttu-id="c4ba0-103">Kullanılamıyor veya yok, uzak bir sunucuya bağlanmaya çalışıyorsunuz.</span><span class="sxs-lookup"><span data-stu-id="c4ba0-103">You are trying to connect to a remote server that is unavailable or does not exist.</span></span> <span data-ttu-id="c4ba0-104">Kayıp ağ bağlantınızı tarafından bu hataya neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="c4ba0-104">This error may be caused by your network connection being lost.</span></span>  
+# <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a><span data-ttu-id="42181-102">Uzak Sunucu makinesi yok veya olduğundan kullanılamıyor (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="42181-102">The remote server machine does not exist or is unavailable (Visual Basic)</span></span>
+<span data-ttu-id="42181-103">Kullanılamıyor veya yok, uzak bir sunucuya bağlanmaya çalışıyorsunuz.</span><span class="sxs-lookup"><span data-stu-id="42181-103">You are trying to connect to a remote server that is unavailable or does not exist.</span></span> <span data-ttu-id="42181-104">Kayıp ağ bağlantınızı tarafından bu hataya neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="42181-104">This error may be caused by your network connection being lost.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="c4ba0-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="c4ba0-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="42181-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="42181-105">To correct this error</span></span>  
   
--   <span data-ttu-id="c4ba0-106">Ağa yeniden bağlanıp tekrar deneyin.</span><span class="sxs-lookup"><span data-stu-id="c4ba0-106">Reconnect to the network and try again.</span></span>  
+- <span data-ttu-id="42181-106">Ağa yeniden bağlanıp tekrar deneyin.</span><span class="sxs-lookup"><span data-stu-id="42181-106">Reconnect to the network and try again.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c4ba0-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c4ba0-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="42181-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="42181-107">See also</span></span>
 
-- [<span data-ttu-id="c4ba0-108">Hata Türleri</span><span class="sxs-lookup"><span data-stu-id="c4ba0-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="42181-108">Hata Türleri</span><span class="sxs-lookup"><span data-stu-id="42181-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f994dfb2b72eacce0b53ae6f49a8173749dd96f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783012"
 ---
-# <a name="icordebugreferencevaluedereferencestrong-method"></a><span data-ttu-id="d052e-102">ICorDebugReferenceValue::DereferenceStrong Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d052e-102">ICorDebugReferenceValue::DereferenceStrong Method</span></span>
-<span data-ttu-id="d052e-103">`DereferenceStrong` Uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="d052e-103">`DereferenceStrong` is not implemented.</span></span> <span data-ttu-id="d052e-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="d052e-104">Do not call this method.</span></span>  
+# <a name="icordebugreferencevaluedereferencestrong-method"></a><span data-ttu-id="8d4f9-102">ICorDebugReferenceValue::DereferenceStrong Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8d4f9-102">ICorDebugReferenceValue::DereferenceStrong Method</span></span>
+<span data-ttu-id="8d4f9-103">`DereferenceStrong` Uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="8d4f9-103">`DereferenceStrong` is not implemented.</span></span> <span data-ttu-id="8d4f9-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="8d4f9-104">Do not call this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d052e-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d052e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8d4f9-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8d4f9-105">Syntax</span></span>  
   
 ```  
 HRESULT DereferenceStrong (  
@@ -35,11 +35,11 @@ HRESULT DereferenceStrong (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="d052e-106">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d052e-106">Requirements</span></span>  
- <span data-ttu-id="d052e-107">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d052e-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8d4f9-106">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8d4f9-106">Requirements</span></span>  
+ <span data-ttu-id="8d4f9-107">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8d4f9-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d052e-108">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d052e-108">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8d4f9-108">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8d4f9-108">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d052e-109">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d052e-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8d4f9-109">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8d4f9-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d052e-110">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d052e-110">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="8d4f9-110">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8d4f9-110">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

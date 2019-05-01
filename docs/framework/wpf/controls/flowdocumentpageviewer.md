@@ -8,18 +8,18 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
 ms.openlocfilehash: ef041fad1bb9195d9fc6cba172de8c2fdc7507bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911748"
 ---
-# <a name="flowdocumentpageviewer"></a><span data-ttu-id="935e6-102">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="935e6-102">FlowDocumentPageViewer</span></span>
-<span data-ttu-id="935e6-103"><xref:System.Windows.Controls.FlowDocumentPageViewer> Denetim görüntülemek için kullanılan <xref:System.Windows.Documents.FlowDocument> sayfa başına temelinde içerik.</span><span class="sxs-lookup"><span data-stu-id="935e6-103">The <xref:System.Windows.Controls.FlowDocumentPageViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content on a per page basis.</span></span> <span data-ttu-id="935e6-104">İle Karşıtlık <xref:System.Windows.Controls.FlowDocumentScrollViewer>, sunan <xref:System.Windows.Documents.FlowDocument> kaydırma Görüntüleyicisi'nde içerik.</span><span class="sxs-lookup"><span data-stu-id="935e6-104">Contrast with the <xref:System.Windows.Controls.FlowDocumentScrollViewer>, which presents <xref:System.Windows.Documents.FlowDocument> content in a scrolling viewer.</span></span>  
+# <a name="flowdocumentpageviewer"></a><span data-ttu-id="c3692-102">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="c3692-102">FlowDocumentPageViewer</span></span>
+<span data-ttu-id="c3692-103"><xref:System.Windows.Controls.FlowDocumentPageViewer> Denetim görüntülemek için kullanılan <xref:System.Windows.Documents.FlowDocument> sayfa başına temelinde içerik.</span><span class="sxs-lookup"><span data-stu-id="c3692-103">The <xref:System.Windows.Controls.FlowDocumentPageViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content on a per page basis.</span></span> <span data-ttu-id="c3692-104">İle Karşıtlık <xref:System.Windows.Controls.FlowDocumentScrollViewer>, sunan <xref:System.Windows.Documents.FlowDocument> kaydırma Görüntüleyicisi'nde içerik.</span><span class="sxs-lookup"><span data-stu-id="c3692-104">Contrast with the <xref:System.Windows.Controls.FlowDocumentScrollViewer>, which presents <xref:System.Windows.Documents.FlowDocument> content in a scrolling viewer.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="935e6-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="935e6-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3692-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c3692-105">See also</span></span>
 
 - <xref:System.Windows.Documents.FlowDocument>
-- [<span data-ttu-id="935e6-106">Akış Belgesine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="935e6-106">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
-- [<span data-ttu-id="935e6-107">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="935e6-107">How-to Topics</span></span>](../advanced/flow-content-elements-how-to-topics.md)
-- [<span data-ttu-id="935e6-108">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="935e6-108">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
+- [<span data-ttu-id="c3692-106">Akış Belgesine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="c3692-106">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
+- [<span data-ttu-id="c3692-107">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="c3692-107">How-to Topics</span></span>](../advanced/flow-content-elements-how-to-topics.md)
+- [<span data-ttu-id="c3692-108">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="c3692-108">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)

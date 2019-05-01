@@ -9,24 +9,24 @@ helpviewer_keywords:
 - Border control [WPF]
 ms.assetid: 51739f83-b5a2-489b-854b-30607e74a502
 ms.openlocfilehash: 922b4b90f3f8bc74d0465691386fa1a2422c6573
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912477"
 ---
-# <a name="border"></a><span data-ttu-id="67d76-102">Kenarlık</span><span class="sxs-lookup"><span data-stu-id="67d76-102">Border</span></span>
-<span data-ttu-id="67d76-103">Aşağıdaki örnek, dinamik özelliklerini değiştirmek gösterilmiştir <xref:System.Windows.Controls.Border> öğesi.</span><span class="sxs-lookup"><span data-stu-id="67d76-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
+# <a name="border"></a><span data-ttu-id="66550-102">Kenarlık</span><span class="sxs-lookup"><span data-stu-id="66550-102">Border</span></span>
+<span data-ttu-id="66550-103">Aşağıdaki örnek, dinamik özelliklerini değiştirmek gösterilmiştir <xref:System.Windows.Controls.Border> öğesi.</span><span class="sxs-lookup"><span data-stu-id="66550-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="67d76-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="67d76-104">In This Section</span></span>  
- [<span data-ttu-id="67d76-105">BorderThickness Değerine Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="67d76-105">Animate a BorderThickness Value</span></span>](how-to-animate-a-borderthickness-value.md)  
+## <a name="in-this-section"></a><span data-ttu-id="66550-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="66550-104">In This Section</span></span>  
+ [<span data-ttu-id="66550-105">BorderThickness Değerine Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="66550-105">Animate a BorderThickness Value</span></span>](how-to-animate-a-borderthickness-value.md)  
   
-## <a name="reference"></a><span data-ttu-id="67d76-106">Başvuru</span><span class="sxs-lookup"><span data-stu-id="67d76-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="66550-106">Başvuru</span><span class="sxs-lookup"><span data-stu-id="66550-106">Reference</span></span>  
  <xref:System.Windows.Controls.Decorator>  
   
  <xref:System.Windows.Controls.Border>  
   
-## <a name="related-sections"></a><span data-ttu-id="67d76-107">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="67d76-107">Related Sections</span></span>  
- [<span data-ttu-id="67d76-108">Panellere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="67d76-108">Panels Overview</span></span>](panels-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="66550-107">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="66550-107">Related Sections</span></span>  
+ [<span data-ttu-id="66550-108">Panellere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="66550-108">Panels Overview</span></span>](panels-overview.md)  
   
- [<span data-ttu-id="67d76-109">Hizalama, Kenar Boşlukları ve Doldurmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="67d76-109">Alignment, Margins, and Padding Overview</span></span>](../advanced/alignment-margins-and-padding-overview.md)
+ [<span data-ttu-id="66550-109">Hizalama, Kenar Boşlukları ve Doldurmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="66550-109">Alignment, Margins, and Padding Overview</span></span>](../advanced/alignment-margins-and-padding-overview.md)

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - DocumentViewer control [WPF]
 ms.assetid: c21eb322-d6b3-474b-ab05-94527bd1b0fa
 ms.openlocfilehash: cc9031a19cb49736cf039d53d02ff2bc571ff978
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911904"
 ---
-# <a name="documentviewer"></a><span data-ttu-id="f12fc-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="f12fc-102">DocumentViewer</span></span>
-<span data-ttu-id="f12fc-103"><xref:System.Windows.Controls.DocumentViewer> Denetim görüntülemek için kullanılan <xref:System.Windows.Documents.FixedDocument> içeriği (gibi [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] belgeleri) sayfalandırılmış bir biçimde.</span><span class="sxs-lookup"><span data-stu-id="f12fc-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  
+# <a name="documentviewer"></a><span data-ttu-id="cbf65-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="cbf65-102">DocumentViewer</span></span>
+<span data-ttu-id="cbf65-103"><xref:System.Windows.Controls.DocumentViewer> Denetim görüntülemek için kullanılan <xref:System.Windows.Documents.FixedDocument> içeriği (gibi [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] belgeleri) sayfalandırılmış bir biçimde.</span><span class="sxs-lookup"><span data-stu-id="cbf65-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="f12fc-104">Başvuru</span><span class="sxs-lookup"><span data-stu-id="f12fc-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="cbf65-104">Başvuru</span><span class="sxs-lookup"><span data-stu-id="cbf65-104">Reference</span></span>  
  <xref:System.Windows.Controls.DocumentViewer>  
   
  <xref:System.Windows.Documents.FixedDocument>  
   
-## <a name="see-also"></a><span data-ttu-id="f12fc-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f12fc-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cbf65-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cbf65-105">See also</span></span>
 
-- [<span data-ttu-id="f12fc-106">Belgeler</span><span class="sxs-lookup"><span data-stu-id="f12fc-106">Documents</span></span>](../advanced/documents.md)
-- [<span data-ttu-id="f12fc-107">Belge Serileştirme ve Depolama</span><span class="sxs-lookup"><span data-stu-id="f12fc-107">Document Serialization and Storage</span></span>](../advanced/document-serialization-and-storage.md)
-- [<span data-ttu-id="f12fc-108">Yazdırmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="f12fc-108">Printing Overview</span></span>](../advanced/printing-overview.md)
+- [<span data-ttu-id="cbf65-106">Belgeler</span><span class="sxs-lookup"><span data-stu-id="cbf65-106">Documents</span></span>](../advanced/documents.md)
+- [<span data-ttu-id="cbf65-107">Belge Serileştirme ve Depolama</span><span class="sxs-lookup"><span data-stu-id="cbf65-107">Document Serialization and Storage</span></span>](../advanced/document-serialization-and-storage.md)
+- [<span data-ttu-id="cbf65-108">Yazdırmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="cbf65-108">Printing Overview</span></span>](../advanced/printing-overview.md)
