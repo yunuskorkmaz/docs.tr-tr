@@ -5,11 +5,11 @@ helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
 ms.openlocfilehash: 71057ec219f46cb8b51eb9b44d8b93af540d1b01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923285"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Çalışma Zamanını Davranışlarla Yapılandırma ve Genişletme
 Davranışlar, varsayılan davranışı değiştirmek ve incelemek ve doğrulama hizmet yapılandırması veya çalışma zamanı davranışını Windows Communication Foundation (WCF) hizmet ve istemci uygulamalarında özel uzantıları eklemek etkinleştirin. Bu konu, davranış arabirimleri, bunların nasıl uygulanacağını ve bunları hizmet açıklamasında (bir hizmet uygulaması) ya da uç noktası (istemci uygulamasındaki) programlı olarak veya bir yapılandırma dosyasını nasıl ekleneceğini açıklar. Sistem tarafından sağlanan davranışları kullanma hakkında daha fazla bilgi için bkz. [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) ve [istemci çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
@@ -20,11 +20,11 @@ Davranışlar, varsayılan davranışı değiştirmek ve incelemek ve doğrulama
 ### <a name="behavior-methods"></a>Davranış yöntemleri  
  Tüm davranışları sahip bir `AddBindingParameters` yöntemi, bir `ApplyDispatchBehavior` yöntemi, bir `Validate` yöntemi ve bir `ApplyClientBehavior` yöntemi ile bir özel durum: Çünkü <xref:System.ServiceModel.Description.IServiceBehavior> yürütülemiyor bir istemcinin, onu uygulamıyor `ApplyClientBehavior`.  
   
--   Kullanma `AddBindingParameters` değiştirmek veya çalışma zamanı oluşturulduğunda, bunların kullanılması için özel bağlamalar erişebileceği bir koleksiyona özel nesneleri eklemek için yöntemi. Örneğin, bu kanal oluşturulduğuna göre biçimini etkiler koruma gereksinimlerini belirtilen nasıl ancak olmayan kanal geliştirici tarafından bilinir.  
+- Kullanma `AddBindingParameters` değiştirmek veya çalışma zamanı oluşturulduğunda, bunların kullanılması için özel bağlamalar erişebileceği bir koleksiyona özel nesneleri eklemek için yöntemi. Örneğin, bu kanal oluşturulduğuna göre biçimini etkiler koruma gereksinimlerini belirtilen nasıl ancak olmayan kanal geliştirici tarafından bilinir.  
   
--   Kullanım `Validate` yöntemi emin olmak için karşılık gelen çalışma zamanı nesnesi ve açıklama ağaç incelemek için bazı ölçüt kümesine uyan.  
+- Kullanım `Validate` yöntemi emin olmak için karşılık gelen çalışma zamanı nesnesi ve açıklama ağaç incelemek için bazı ölçüt kümesine uyan.  
   
--   Kullanım `ApplyDispatchBehavior` ve `ApplyClientBehavior` açıklama incelemek için yöntemleri ağaç ve çalışma zamanı hizmet veya istemcinin belirli bir kapsam için değiştirin. Genişletme nesneleri de ekleyebilirsiniz.  
+- Kullanım `ApplyDispatchBehavior` ve `ApplyClientBehavior` açıklama incelemek için yöntemleri ağaç ve çalışma zamanı hizmet veya istemcinin belirli bir kapsam için değiştirin. Genişletme nesneleri de ekleyebilirsiniz.  
   
     > [!NOTE]
     >  Bir açıklama ağacı bu yöntemleri bulunmakla yalnızca İnceleme var. Bir açıklama ağaç değiştirilirse, tanımsız bir davranıştır.  
@@ -38,13 +38,13 @@ Davranışlar, varsayılan davranışı değiştirmek ve incelemek ve doğrulama
   
  Wcf'de davranışları dört çeşit vardır:  
   
--   Hizmet davranışları (<xref:System.ServiceModel.Description.IServiceBehavior> türleri) dahil olmak üzere tüm hizmet çalışma zamanı özelleştirmenin <xref:System.ServiceModel.ServiceHostBase>.  
+- Hizmet davranışları (<xref:System.ServiceModel.Description.IServiceBehavior> türleri) dahil olmak üzere tüm hizmet çalışma zamanı özelleştirmenin <xref:System.ServiceModel.ServiceHostBase>.  
   
--   Uç nokta davranışları (<xref:System.ServiceModel.Description.IEndpointBehavior> türleri) hizmet uç noktaları ve bunların ilişkili özelleştirmenin <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> nesneleri.  
+- Uç nokta davranışları (<xref:System.ServiceModel.Description.IEndpointBehavior> türleri) hizmet uç noktaları ve bunların ilişkili özelleştirmenin <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> nesneleri.  
   
--   Sözleşme davranışları (<xref:System.ServiceModel.Description.IContractBehavior> türleri) hem özelleştirmenin <xref:System.ServiceModel.Dispatcher.ClientRuntime> ve <xref:System.ServiceModel.Dispatcher.DispatchRuntime> sırasıyla hizmet ve istemci uygulamalarında sınıfları.  
+- Sözleşme davranışları (<xref:System.ServiceModel.Description.IContractBehavior> türleri) hem özelleştirmenin <xref:System.ServiceModel.Dispatcher.ClientRuntime> ve <xref:System.ServiceModel.Dispatcher.DispatchRuntime> sırasıyla hizmet ve istemci uygulamalarında sınıfları.  
   
--   İşlem davranışları (<xref:System.ServiceModel.Description.IOperationBehavior> türleri) özelleştirmesini etkinleştir <xref:System.ServiceModel.Dispatcher.ClientOperation> ve <xref:System.ServiceModel.Dispatcher.DispatchOperation> yeniden, istemci ve hizmet sınıfları.  
+- İşlem davranışları (<xref:System.ServiceModel.Description.IOperationBehavior> türleri) özelleştirmesini etkinleştir <xref:System.ServiceModel.Dispatcher.ClientOperation> ve <xref:System.ServiceModel.Dispatcher.DispatchOperation> yeniden, istemci ve hizmet sınıfları.  
   
  Bu davranışların çeşitli açıklama nesneleri için uygulama yapılandırma dosyaları kullanılarak özel öznitelikleri uygulayarak veya doğrudan ekleyerek bunları uygun bir açıklama nesne üzerindeki davranışları koleksiyona ekleyebilirsiniz. Hizmet açıklaması veya hizmet uç noktası tanımı nesne çağrılmadan önce eklenen gerekir, ancak <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> üzerinde <xref:System.ServiceModel.ServiceHost> veya <xref:System.ServiceModel.ChannelFactory%601>.  
   

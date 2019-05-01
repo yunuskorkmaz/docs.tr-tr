@@ -1,17 +1,17 @@
 ---
-title: Modern uygulamaları kapsayıcılara göre yol
+title: Kapsayıcıları temel alan modern uygulamalara giden yol
 description: Docker, kapsayıcılar ve mikro hizmet mimarisi BT'ye çözüm olmadığını anlama. Burada karar vermenize yardımcı olacak bazı başvurular bulabilirsiniz.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
 ms.openlocfilehash: 94f7bc27409048ec80a4e485cea4a16d30e7c1e2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922622"
 ---
-# <a name="road-to-modern-applications-based-on-containers"></a>Modern uygulamaları kapsayıcılara göre yol
+# <a name="road-to-modern-applications-based-on-containers"></a>Kapsayıcıları temel alan modern uygulamalara giden yol
 
 Büyük olasılıkla bu kitap yeni uygulamaların geliştirilmesini planlıyorsanız veya, Docker, kapsayıcılar ve mikro hizmetler gibi yeni yaklaşımlar şirketinizdeki kullanarak etkisini değerlendirdiğiniz yönlendirildiğiniz için görüyorsunuz.
 

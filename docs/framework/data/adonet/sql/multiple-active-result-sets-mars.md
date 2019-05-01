@@ -3,11 +3,11 @@ title: Birden Çok Etkin Sonuç Kümesi (MARS)
 ms.date: 03/30/2017
 ms.assetid: c90ef863-bac7-44cf-adc1-f05c36fcf57d
 ms.openlocfilehash: bb00fbfec32a9d64fd6661cd5cdfd06fe3aa7410
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922362"
 ---
 # <a name="multiple-active-result-sets-mars"></a>Birden Çok Etkin Sonuç Kümesi (MARS)
 Birden çok etkin sonuç kümesi (MARS) tek bir bağlantı üzerinde birden çok toplu iş yürütülmesini sağlayan bir özelliktir. Önceki sürümlerde, yalnızca bir toplu iş, tek bir bağlantı karşı bir zamanında yürütülebilir. MARS ile birden çok toplu iş yürütülürken eş zamanlı yürütme işlemlerinin göstermez.  

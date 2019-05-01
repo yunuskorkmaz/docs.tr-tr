@@ -12,11 +12,11 @@ ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eac5f9f6c8b47a6f14898eac2505ecc890015010
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61870051"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Desen Kullanma
 
@@ -101,13 +101,13 @@ var cts = new CancellationTokenSource();
 
  Bu yaklaşım iptali çeşitli avantajları vardır:
 
--   Zaman uyumsuz ve zaman uyumlu işlemler herhangi bir sayıda, aynı iptal belirtecini geçirebilirsiniz.
+- Zaman uyumsuz ve zaman uyumlu işlemler herhangi bir sayıda, aynı iptal belirtecini geçirebilirsiniz.
 
--   Aynı iptal isteği herhangi bir sayıda dinleyicileri hızla.
+- Aynı iptal isteği herhangi bir sayıda dinleyicileri hızla.
 
--   Zaman uyumsuz API geliştiricidir tam denetimi iptal isteğinde ve ne zaman etkili olması.
+- Zaman uyumsuz API geliştiricidir tam denetimi iptal isteğinde ve ne zaman etkili olması.
 
--   API kullanan kod için iptal isteklerini aktarılacaktır zaman uyumsuz çağrılar seçmeli olarak belirleyebilirsiniz.
+- API kullanan kod için iptal isteklerini aktarılacaktır zaman uyumsuz çağrılar seçmeli olarak belirleyebilirsiniz.
 
 ## <a name="monitoring-progress"></a>İlerlemeyi İzleme
  Bazı zaman uyumsuz yöntemler, ilerleme zaman uyumsuz yönteme geçirilen bir ilerleme arabirimi aracılığıyla kullanıma sunar.  Örneğin, metin ve yol boyunca bir dize zaman uyumsuz olarak indiren bir işlev, şimdiye kadarki tamamlanan indirme yüzdesini içeren devam eden güncelleştirmelerin başlatır göz önünde bulundurun.  Böyle bir yöntemi gibi bir Windows Presentation Foundation (WPF) uygulamasında tüketilebilecek:
@@ -247,13 +247,13 @@ catch(Exception exc)
 ### <a name="taskwhenany"></a>Task.WhenAny
  Kullanabileceğiniz <xref:System.Threading.Tasks.Task.WhenAny%2A> zaman uyumsuz olarak birden çok zaman uyumsuz işlemler yalnızca biri için beklemeniz yöntemi temsil görevleri tamamlamak için.  Bu yöntem, dört birincil kullanım örnekleri sunar:
 
--   Yedeklilik: bir işlemi birden çok kez ve birinci (örneğin, tek bir sonuç oluşturan birden çok hisse senedi web Hizmetleri ile irtibat ve hızlı tamamlayan bir seçme) tamamlayan bir seçme.
+- Artıklık:  Birden çok kez bir işlemi gerçekleştirilirken ve ilk (örneğin, tek bir sonuç oluşturan birden çok hisse senedi web Hizmetleri ile irtibat ve hızlı tamamlayan bir seçme) tamamlayan bir seçme.
 
--   Interleaving: birden çok işlem başlatma ve tüm bunları tamamlanması için bekleniyor, ancak tamamlandıkça işlemeden.
+- Gerekecektir:  Birden çok işlem başlatma ve tüm bunları tamamlanması için bekleniyor, ancak tamamlandıkça işlemeden.
 
--   Azaltma: başkalarının tamamlanmış olarak başlamak ek işlem yapılmasına olanak sağlar.  Bu bir araya senaryo uzantısıdır.
+- Azaltma:  Başkalarının tamamlanmış olarak başlamak ek işlem yapılmasına olanak sağlar.  Bu bir araya senaryo uzantısıdır.
 
--   Erken BailOut komutunu: Örneğin, görev t1 tarafından temsil edilen bir işlem içinde gruplandırılabilir bir <xref:System.Threading.Tasks.Task.WhenAny%2A> başka bir görev t2 ve görevle bekleyebilir <xref:System.Threading.Tasks.Task.WhenAny%2A> görev. Görev t2'ın temsil eden bir zaman aşımı veya iptal ya da neden olan bazı bir sinyal <xref:System.Threading.Tasks.Task.WhenAny%2A> t1 tamamlanmadan önce tamamlanması gereken görev.
+- Erken BailOut komutunu:  Örneğin, görev t1 tarafından temsil edilen bir işlem içinde gruplandırılabilir bir <xref:System.Threading.Tasks.Task.WhenAny%2A> başka bir görev t2 ve görevle bekleyebilir <xref:System.Threading.Tasks.Task.WhenAny%2A> görev. Görev t2'ın temsil eden bir zaman aşımı veya iptal ya da neden olan bazı bir sinyal <xref:System.Threading.Tasks.Task.WhenAny%2A> t1 tamamlanmadan önce tamamlanması gereken görev.
 
 #### <a name="redundancy"></a>Yedeklilik
  Bir hisse senedi satın alma konusunda karar istediğiniz bir durum düşünün.  Güvendiğiniz birkaç stok öneri web hizmetleri vardır, ancak günlük yüke bağlı olarak, her hizmet farklı zamanlarda yavaş olduğundan yukarı sonlandırabilirsiniz.  Kullanabileceğiniz <xref:System.Threading.Tasks.Task.WhenAny%2A> yöntemi herhangi bir işlem tamamlandığında bir bildirim almak için:
@@ -290,7 +290,7 @@ while(recommendations.Count > 0)
 }
 ```
 
- Ayrıca, ilk görevi başarıyla tamamlandıktan olsa bile, sonraki görevleri başarısız olabilir.  Bu noktada, özel durumlar başa çıkmak için birkaç seçeneğiniz vardır: Bu durumda kullanabileceğiniz başlatılan tüm görev tamamlanana kadar bekleyebilirsiniz <xref:System.Threading.Tasks.Task.WhenAll%2A> yöntemi veya karar verebilir tüm özel durumları önemli olduğunu ve oturum açmış olmanız gerekir.  Görevler zaman uyumsuz olarak tamamlandığında bir bildirim almak için bu devamlılıklar kullanabilirsiniz:
+ Ayrıca, ilk görevi başarıyla tamamlandıktan olsa bile, sonraki görevleri başarısız olabilir.  Bu noktada, özel durumlar başa çıkmak için birkaç seçeneğiniz vardır:  Bu durumda kullanabileceğiniz başlatılan tüm görev tamamlanana kadar bekleyebilirsiniz <xref:System.Threading.Tasks.Task.WhenAll%2A> yöntemi veya karar verebilir tüm özel durumları önemli olduğunu ve oturum açmış olmanız gerekir.  Görevler zaman uyumsuz olarak tamamlandığında bir bildirim almak için bu devamlılıklar kullanabilirsiniz:
 
 ```csharp
 foreach(Task recommendation in recommendations)

@@ -5,18 +5,18 @@ f1_keywords:
 - vbrNetwork_NetworkNotAvailable
 ms.assetid: 8d2bac12-bc6a-42ae-b28b-80b026dfabce
 ms.openlocfilehash: 10d03ce67776a4d4942c2c9f016a55a70b5a3374
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58023624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922375"
 ---
 # <a name="unable-to-ping-because-a-network-connection-is-not-available"></a>Bir ağ bağlantısı kullanılamadığından ping yapılamıyor
 Ağ bağlantısı kullanılamadığından işlem gerçekleştirilemiyor.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Ağa bağlayın ve işlemi yeniden çalıştırmayı deneyin.  
+- Ağa bağlayın ve işlemi yeniden çalıştırmayı deneyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

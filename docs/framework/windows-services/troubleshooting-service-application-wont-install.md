@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
 author: ghogen
 ms.openlocfilehash: f75a2f33ecde408d2d8e2f2343197ba56c4b8c21
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925105"
 ---
 # <a name="troubleshooting-service-application-wont-install"></a>Sorun Giderme: Hizmet Uygulaması Yüklenmiyor
 Hizmet uygulamanızın doğru şekilde yüklenmezse emin olmak için kontrol <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> Yükleyici bu hizmet için gösterildiği gibi hizmet sınıfı özelliği aynı değere ayarlanır. Değer her iki örnek hizmetinizin doğru bir biçimde yüklenmesi sırayla aynı olmalıdır.  

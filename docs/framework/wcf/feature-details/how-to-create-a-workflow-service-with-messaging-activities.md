@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Olu�
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
 ms.openlocfilehash: f5bb8df5936be1890bf744300daa7ccb68e341e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787844"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma
 Bu konuda, Mesajlaşma etkinlikleri kullanarak basit bir iş akışı hizmeti oluşturma işlemini açıklamaktadır. Bu konu, burada yalnızca Mesajlaşma etkinlikleri hizmet oluşan bir iş akışı hizmeti oluşturma mekanizması üzerinde odaklanır. Gerçek hizmetinde, diğer birçok etkinlik iş akışı içerir. Hizmet, bir dize alır ve dize çağırana döner, Echo adlı bir işlem uygular. Bu konu, ilk iki konuda serisinin yöneliktir. Bir sonraki konu [nasıl yapılır: Bir hizmet bir iş akışı uygulamanın erişim](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) Bu konu başlığında oluşturduğunuz hizmeti çağıran bir iş akışı uygulamasının nasıl oluşturulacağını açıklar.  

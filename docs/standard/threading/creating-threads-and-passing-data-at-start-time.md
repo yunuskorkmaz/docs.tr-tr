@@ -1,5 +1,5 @@
 ---
-title: İş parçacığı oluşturma ve başlatma zamanında veri geçirme
+title: Başlatma zamanında iş parçacığı oluşturma ve veri geçirme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,13 +14,13 @@ ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c231c946897772a6f02cce6eb2d3c4936b72a35e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925443"
 ---
-# <a name="creating-threads-and-passing-data-at-start-time"></a>İş parçacığı oluşturma ve başlatma zamanında veri geçirme
+# <a name="creating-threads-and-passing-data-at-start-time"></a>Başlatma zamanında iş parçacığı oluşturma ve veri geçirme
 
 İşletim sistemi, bir işletim sistemi işlem oluşturulduğunda, özgün tüm uygulama etki alanı da dahil olmak üzere bu işlemde kod yürütmek için bir iş parçacığı ekler. Bu noktadan itibaren uygulama etki alanları oluşturulabilir ve mutlaka yok veya oluşturulan tüm işletim sistemleri iş parçacıkları yok. Yürütülen kod yönetilen kod, bir <xref:System.Threading.Thread> parçacığının geçerli uygulama etki alanında statik alarak elde edilebilir nesnesi <xref:System.Threading.Thread.CurrentThread%2A> türünün özelliği <xref:System.Threading.Thread>. Bu konu, iş parçacığı oluşturma açıklar ve iş parçacığı yordamı için verileri geçirmek için seçenekleri açıklar.  
   

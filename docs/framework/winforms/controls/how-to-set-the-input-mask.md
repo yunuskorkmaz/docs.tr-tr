@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
 ms.openlocfilehash: 06eaf68fef167d63e6f8404dd5049f5445881d24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912879"
 ---
 # <a name="how-to-set-the-input-mask"></a>Nasıl yapılır: Giriş Maskesini Ayarlama
 Maskelenmiş metin kutusu denetimini kabul etme veya reddetme kullanıcı girişi için bir bildirim temelli söz dizimi destekleyen Gelişmiş metin kutusu denetimidir. Maske özelliği ayarlayarak, uygulamanızda herhangi bir özel doğrulama mantığı yazmak zorunda kalmadan izin verilen kullanıcı girişini belirtebilirsiniz. Daha fazla bilgi için Açıklamalar bölümüne bakın. <xref:System.Windows.Forms.MaskedTextBox> sınıfı.  
@@ -34,15 +34,15 @@ Maskelenmiş metin kutusu denetimini kabul etme veya reddetme kullanıcı giriş
   
 1. İçinde **tasarım** görüntülenecek bir <xref:System.Windows.Forms.MaskedTextBox>.  
   
-    1.  Akıllı etiket açmak için tıklayın **MaskedTextBox görevleri** paneli.  
+    1. Akıllı etiket açmak için tıklayın **MaskedTextBox görevleri** paneli.  
   
-    2.  Tıklayın **ayarlamak maskesi**.  
+    2. Tıklayın **ayarlamak maskesi**.  
   
      \- veya -  
   
-    1.  İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> özelliği.  
+    1. İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> özelliği.  
   
-    2.  Özellik değer sütununa üç nokta düğmesine tıklayın.  
+    2. Özellik değer sütununa üç nokta düğmesine tıklayın.  
   
      **Giriş maskesi** iletişim kutusu görüntülenir.  
   

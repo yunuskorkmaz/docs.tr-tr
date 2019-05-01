@@ -4,49 +4,49 @@ ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
 ms.openlocfilehash: 04861b8c3f2673a5cd093be1351928b1da487147
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59335673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940523"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Nasıl yapılır: WIF Kullanarak Talep Kullanan ASP.NET MVC Web Uygulaması Derleme
 ## <a name="applies-to"></a>Uygulanan Öğe  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® MVC  
+- ASP.NET® MVC  
   
 ## <a name="summary"></a>Özet  
  Bu nasıl yapılır basit talep kullanan ASP.NET MVC web uygulaması oluşturmak için adım adım ayrıntılı yordamları sağlar. Ayrıca basit talep kullanan ASP.NET MVC web uygulaması için talep tabanlı kimlik doğrulaması başarılı uygulamasını test etme yönergeleri sağlar. Bu nasıl yapılır bir güvenlik belirteci hizmeti (STS) oluşturmaya yönelik ayrıntılı yönergeler yer almaz ve bir STS'ye zaten yapılandırmış olduğunuz varsayılır.  
   
 ## <a name="contents"></a>İçindekiler  
   
--   Amaçlar  
+- Amaçlar  
   
--   Adımların Özeti  
+- Adımların Özeti  
   
--   1. adım – basit bir ASP.NET MVC uygulaması oluşturma  
+- 1. adım – basit bir ASP.NET MVC uygulaması oluşturma  
   
--   2. adım: ASP.NET MVC uygulaması talep tabanlı kimlik doğrulaması için yapılandırma  
+- 2. adım: ASP.NET MVC uygulaması talep tabanlı kimlik doğrulaması için yapılandırma  
   
--   3. Adım – Çözümünüzü Test Etme  
+- 3. Adım – Çözümünüzü Test Etme  
   
--   İlgili öğeler  
+- İlgili öğeler  
   
 ## <a name="objectives"></a>Amaçlar  
   
--   ASP.NET MVC web uygulaması talep tabanlı kimlik doğrulaması için yapılandırma  
+- ASP.NET MVC web uygulaması talep tabanlı kimlik doğrulaması için yapılandırma  
   
--   Test başarılı talep kullanan ASP.NET MVC web uygulaması  
+- Test başarılı talep kullanan ASP.NET MVC web uygulaması  
   
 ## <a name="summary-of-steps"></a>Adımların Özeti  
   
--   1. adım – basit bir ASP.NET MVC uygulaması oluşturma  
+- 1. adım – basit bir ASP.NET MVC uygulaması oluşturma  
   
--   2. adım: ASP.NET MVC uygulaması talep tabanlı kimlik doğrulaması için yapılandırma  
+- 2. adım: ASP.NET MVC uygulaması talep tabanlı kimlik doğrulaması için yapılandırma  
   
--   3. Adım – Çözümünüzü Test Etme  
+- 3. Adım – Çözümünüzü Test Etme  
   
 ## <a name="step-1--create-simple-aspnet-mvc-application"></a>1. adım – basit bir ASP.NET MVC uygulaması oluşturma  
  Bu adımda, yeni bir ASP.NET MVC uygulaması oluşturacaksınız.  
@@ -218,4 +218,4 @@ ms.locfileid: "59335673"
   
 ## <a name="related-items"></a>İlgili öğeler  
   
--   [Nasıl yapılır: WIF Kullanarak Talep Kullanan ASP.NET Web Forms Uygulaması Derleme](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+- [Nasıl yapılır: WIF kullanarak talep kullanan ASP.NET Web Forms uygulaması derleme](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

@@ -3,28 +3,28 @@ title: İşlem Gerçekleştirme
 ms.date: 03/30/2017
 ms.assetid: effdc8e6-accf-41eb-98a5-431603ba218b
 ms.openlocfilehash: dc032746b265a3e781898beb823be0d1bcf1abea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793672"
 ---
 # <a name="transaction-processing"></a>İşlem Gerçekleştirme
 Bir çevrimiçi bir kitaplığı defterinden satın aldığınızda, bir kitap (kredi biçiminde) karşılığında exchange. Kredi iyi ise, bir dizi ilgili operations defteri alma ve kitaplığı, para alır sağlar. Ancak, tek bir işlemde serisinde exchange sırasında başarısız olursa, tüm exchange başarısız olur. Kitap alma ve kitaplığı, para almaz.  
   
- Exchange Dengeli ve öngörülebilir yapmaktan sorumlu teknolojisi, işlem adı verilir. İşlemler işlem birimindeki tüm işlemleri başarıyla tamamlamak sürece veri yönelimli kaynakları kalıcı olarak güncelleştirilmez emin olun. Tamamen başarılı ya da tamamen başarısız bir birim ilgili işlemlere kümesini birleştirerek hata kurtarma basitleştirmek ve uygulamanızı daha güvenilir hale getirebilirsiniz.  
+ Exchange Dengeli ve tahmin edilebilir yapmaktan sorumlu teknoloji işlem çağrılır. İşlemler işlem birimi içindeki tüm işlemler başarıyla tamamlanamadığını sürece veri yönelimli kaynakları kalıcı olarak güncelleştirilmez emin olun. Tamamen başarılı ya da tamamen başarısız bir birim ilgili işlemlere kümesini birleştirerek hata kurtarma basitleştirmek ve uygulamanızı daha güvenilir hale getirebilirsiniz.  
   
- Hareket işleme sistemleri bilgisayar donanımı ve yazılımı iş yürütmek gerekli rutin işlemleri gerçekleştirir işleme dayalı bir uygulamayı barındıran oluşur. Örnekler yönetme sipariş girişi, uçak ayırmaları, bordro, üretim ve sevkiyat çalışan kayıtları, sistemleri içerir.  
+ İşlem bu sistemlerin bilgisayar donanımı ve yazılımı iş yürütmek gerekli rutin işlemleri gerçekleştiren işleme dayalı bir uygulamayı barındıran oluşur. Yönetme sipariş girişi, havayolu ayırmalarını, bordro, üretim ve teslimat çalışan kayıtları, sistemleri verilebilir.  
   
- Bu bölüm hem işlem hakkında genel bilgiler ve işlemsel uygulamaları ve Microsoft .NET Framework kullanarak kaynak yöneticileri yazma konusunda belirli bilgiler sağlar.  
+ Bu bölümde, işlem hakkında genel bilgiler hem işlem uygulamalar ve Microsoft .NET Framework kullanılarak kaynak yöneticileri yazma hakkında belirli bilgi sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [İşlem Temelleri](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
- Temel işlem terimleri ve kavramları işleme tanıtır.  
+ Hüküm ve kavramlarını temel işlem tanıtır.  
   
  [System.Transactions Tarafından Sağlanan Özellikler](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)  
- Özellikleri System.Transactions işlem uygulamanızı yazmak için nasıl kullanabileceğinizi açıklar.  
+ Nasıl özellikleri içinde System.Transactions işlem uygulamanızı yazmak için kullanabileceğiniz anlatılmaktadır.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Transactions>  
- Kodunuzu işlemlere katılmasına izin sınıflar sağlar. Sınıfları birden fazla dağıtılmış katılımcıları, birden çok aşaması bildirimleri ve kalıcı kayıtlar ile işlemleri destekler.
+ Kodunuzu işlemlere katılmasına izin sınıflar sağlar. Birden çok dağıtılmış katılımcıları, birden çok aşama bildirimi ve kalıcı kayıtlar ile işlemleri sınıfları destekler.

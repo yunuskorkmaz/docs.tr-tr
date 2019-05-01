@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 ms.openlocfilehash: 1d4964cf0379b35c4955bf45d8a7c0fd40477c9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787679"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Nasıl yapılır: Güvenlik Belirteci Hizmeti Oluşturma
 Güvenlik belirteci hizmeti WS-Trust belirtiminde tanımlanan Protokolü uygular. Bu protokol, ileti biçimleri ve ileti verme, yenileme, iptal etme ve doğrulama güvenlik belirteçleri için exchange desenleri tanımlar. Belirli bir güvenlik belirteci hizmeti bir veya daha fazla bu yetenekleri sağlar. Bu konuda en sık karşılaşılan bir senaryodur arar: uygulama belirteci verme.  
@@ -24,61 +24,61 @@ Güvenlik belirteci hizmeti WS-Trust belirtiminde tanımlanan Protokolü uygular
 ### <a name="request-message-structure"></a>İstek iletisi yapısı  
  Sorun istek iletisi yapısı genellikle şu öğelerden oluşur:  
   
--   Bir istek türü URI değeri olan `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`.
+- Bir istek türü URI değeri olan `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`.
   
--   Belirteç türü URI. Güvenlik onaylama işaretleme dili (SAML) 1.1 belirteçler için bu URI değeri `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`.  
+- Belirteç türü URI. Güvenlik onaylama işaretleme dili (SAML) 1.1 belirteçler için bu URI değeri `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`.  
   
--   Verilen belirteçle ilişkili olmasını anahtarında bit sayısını belirten bir anahtar boyutu değer.  
+- Verilen belirteçle ilişkili olmasını anahtarında bit sayısını belirten bir anahtar boyutu değer.  
   
--   Anahtar türü URI. Simetrik anahtarlar için bu URI değeri `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`.  
+- Anahtar türü URI. Simetrik anahtarlar için bu URI değeri `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`.  
   
  Ayrıca, diğer öğeleri birkaç mevcut olabilir:  
   
--   İstemci tarafından sağlanan anahtar malzemesi.  
+- İstemci tarafından sağlanan anahtar malzemesi.  
   
--   Verilen belirteç kullanılacak hedef hizmeti gösteren kapsam bilgileri.  
+- Verilen belirteç kullanılacak hedef hizmeti gösteren kapsam bilgileri.  
   
  Güvenlik belirteci hizmeti bilgileri sorunu istek iletisinde kullanır sorunu yanıt iletisi oluşturur.  
   
 ## <a name="response-message-structure"></a>Yanıt iletisi yapısı  
  Sorunu yanıt iletisi yapısı genellikle şu öğelerden oluşur;  
   
--   Verilen güvenlik belirteci, örneğin, bir SAML 1.1 onayı.  
+- Verilen güvenlik belirteci, örneğin, bir SAML 1.1 onayı.  
   
--   Güvenlik belirteciyle ilişkili düzeltme belirteci. Simetrik anahtarlar için bu genellikle bir şifrelenmiş anahtar malzemesi biçimidir.  
+- Güvenlik belirteciyle ilişkili düzeltme belirteci. Simetrik anahtarlar için bu genellikle bir şifrelenmiş anahtar malzemesi biçimidir.  
   
--   Verilen güvenlik belirteci başvurular. Genellikle, güvenlik belirteci hizmeti verilen belirteç, belirtecin sonraki iletilerinde mevcut olmadığında kullanılabilir istemci ve başka tarafından gönderilen bir sonraki ileti görüntülendiğinde, kullanılabilecek bir başvuru döndürür.  
+- Verilen güvenlik belirteci başvurular. Genellikle, güvenlik belirteci hizmeti verilen belirteç, belirtecin sonraki iletilerinde mevcut olmadığında kullanılabilir istemci ve başka tarafından gönderilen bir sonraki ileti görüntülendiğinde, kullanılabilecek bir başvuru döndürür.  
   
  Ayrıca, diğer öğeleri birkaç mevcut olabilir:  
   
--   Güvenlik belirteci hizmeti tarafından sağlanan anahtar malzemesi.  
+- Güvenlik belirteci hizmeti tarafından sağlanan anahtar malzemesi.  
   
--   Paylaşılan anahtar hesaplamak için gereken algoritma.  
+- Paylaşılan anahtar hesaplamak için gereken algoritma.  
   
--   Verilen belirteç ömrü çalıştırın.  
+- Verilen belirteç ömrü çalıştırın.  
   
 ## <a name="processing-request-messages"></a>İstek iletilerini işleme  
  Güvenlik belirteci hizmeti, istek iletisinin çeşitli parçaları inceleme ve istek karşılayan bir belirteci verebilir sağlayarak sorunu isteği işler. Verilmesi için belirteci oluşturur önce güvenlik belirteci hizmeti aşağıdakileri belirlemelisiniz:  
   
--   İstek verilmesi için bir belirteç için gerçekten bir istektir.  
+- İstek verilmesi için bir belirteç için gerçekten bir istektir.  
   
--   Güvenlik belirteci hizmeti istenen belirteç türünü destekler.  
+- Güvenlik belirteci hizmeti istenen belirteç türünü destekler.  
   
--   İstek sahibinin istekte bulunma yetkisine sahiptir.  
+- İstek sahibinin istekte bulunma yetkisine sahiptir.  
   
--   Güvenlik belirteci hizmeti sahibinin beklentilerini anahtar malzemesi ile ilgili.  
+- Güvenlik belirteci hizmeti sahibinin beklentilerini anahtar malzemesi ile ilgili.  
   
  Bir belirteç oluşturmak, iki önemli parçaları, belirteç imzalamak için hangi anahtar ve paylaşılan anahtar ile şifreleme için hangi anahtarı tanımlamış olursunuz. Belirteç, böylece istemci, hizmeti belirleyebilirsiniz hedef hizmet için belirteç gösterdiğinde belirteç güvendiği bir güvenlik belirteci hizmeti tarafından verilmiş imzalanması gerekir. Anahtar malzemesi hedef hizmeti, anahtar malzemesi şifresini çözebilir yolla şifrelenmiş gerekir.  
   
  SAML onaylama işlemi imzalama oluşturmanız gerekir bir <xref:System.IdentityModel.Tokens.SigningCredentials> örneği. Bu sınıf için oluşturucu aşağıdakileri yapar:  
   
--   A <xref:System.IdentityModel.Tokens.SecurityKey> SAML onaylaması imzalamak için kullanılacak anahtarı.  
+- A <xref:System.IdentityModel.Tokens.SecurityKey> SAML onaylaması imzalamak için kullanılacak anahtarı.  
   
--   Kullanılacak imza algoritmasını tanımlayan bir dize.  
+- Kullanılacak imza algoritmasını tanımlayan bir dize.  
   
--   Kullanmak için bir Özet algoritması tanımlayan bir dize.  
+- Kullanmak için bir Özet algoritması tanımlayan bir dize.  
   
--   İsteğe bağlı olarak, bir <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> onaylama imzalamak için kullanılacak anahtarı tanımlar.  
+- İsteğe bağlı olarak, bir <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> onaylama imzalamak için kullanılacak anahtarı tanımlar.  
   
  [!code-csharp[c_CreateSTS#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#1)]
  [!code-vb[c_CreateSTS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#1)]  

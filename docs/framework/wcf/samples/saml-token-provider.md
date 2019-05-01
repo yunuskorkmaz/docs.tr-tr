@@ -3,32 +3,32 @@ title: SAML Belirteç Sağlayıcı
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
 ms.openlocfilehash: e662d9b84bbc43178946fdadc8ddbec6f6b6e042
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787510"
 ---
 # <a name="saml-token-provider"></a>SAML Belirteç Sağlayıcı
 Bu örnek nasıl özel bir istemci SAML belirteç sağlayıcı uygulanacağını gösterir. Windows Communication Foundation (WCF) bir belirteç sağlayıcısı güvenlik altyapısı için kimlik bilgilerini sağlamak için kullanılır. Belirteç sağlayıcı genel hedef inceler ve böylece ileti güvenlik altyapısı güvenli hale getirebilirsiniz, kimlik bilgileri sorunları uygun. WCF varsayılan kimlik bilgileri Yöneticisi belirteç sağlayıcısı ile birlikte gelir. WCF ayrıca ile birlikte gelir bir [!INCLUDE[infocard](../../../../includes/infocard-md.md)] belirteç sağlayıcısı. Özel belirteç sağlayıcıları, aşağıdaki durumlarda kullanışlıdır:
 
--   Bu belirteci sağlayıcıları ile çalışamaz bir kimlik bilgisi deposu varsa.
+- Bu belirteci sağlayıcıları ile çalışamaz bir kimlik bilgisi deposu varsa.
 
--   Kullanıcı için WCF istemci framework kimlik bilgileri kullandığında ayrıntıları sağladığında noktadan kimlik dönüştürme için kendi özel mekanizması sağlamak istiyorsanız.
+- Kullanıcı için WCF istemci framework kimlik bilgileri kullandığında ayrıntıları sağladığında noktadan kimlik dönüştürme için kendi özel mekanizması sağlamak istiyorsanız.
 
--   Özel belirteç oluşturuluyorsa.
+- Özel belirteç oluşturuluyorsa.
 
  Bu örnek nasıl kullanılacak WCF istemci framework dışında alınan bir SAML belirtecine izin veren özel bir belirteç sağlayıcısını oluşturulacağını gösterir.
 
  Özetlemek gerekirse, bu örnek aşağıdaki gösterir:
 
--   Nasıl bir istemci özel bir belirteç sağlayıcısı ile yapılandırılabilir.
+- Nasıl bir istemci özel bir belirteç sağlayıcısı ile yapılandırılabilir.
 
--   SAML belirteci için özel istemci kimlik bilgilerini nasıl geçirilebilir.
+- SAML belirteci için özel istemci kimlik bilgilerini nasıl geçirilebilir.
 
--   SAML belirteci WCF istemci framework nasıl sağlanmaktadır.
+- SAML belirteci WCF istemci framework nasıl sağlanmaktadır.
 
--   Sunucu, sunucunun X.509 sertifikası kullanarak istemci tarafından nasıl doğrulanır.
+- Sunucu, sunucunun X.509 sertifikası kullanarak istemci tarafından nasıl doğrulanır.
 
  Hizmet, App.config yapılandırma dosyası kullanılarak tanımlanmış hizmet ile iletişim kurmak için iki uç noktalarını kullanıma sunar. Her uç nokta, adres, bağlama ve bir sözleşme oluşur. Bir standart yapılandırılmış bağlama `wsFederationHttpBinding`, ileti güvenliği kullanır. Bir uç nokta düzeltme simetrik anahtar diğer bir asimetrik sağlama anahtarı kullanan bir SAML belirteci kimlik doğrulaması için istemci beklediği sırada kullanan bir SAML belirteci ile kimlik doğrulaması için istemci bekliyor. Hizmet Ayrıca hizmet kullanarak sertifikayı yapılandırır `serviceCredentials` davranışı. `serviceCredentials` Davranışı bir hizmet sertifikası yapılandırmanıza olanak tanır. Bir hizmet sertifikası, hizmet kimlik doğrulaması ve ileti koruma sağlamak için bir istemci tarafından kullanılır. Aşağıdaki yapılandırma, bu konunun sonunda Kurulum yönergelerinde açıklandığı gibi örnek Kurulum sırasında yüklenen "localhost" sertifikanın başvuruyor. `serviceCredentials` Davranışı da SAML belirteçlerini imzalamak için güvenilen sertifikalar yapılandırmanıza olanak tanır. Aşağıdaki yapılandırma sırasında bir örnek yüklü 'Alice' sertifika başvuruyor.
 
@@ -303,7 +303,7 @@ Bu örnek nasıl özel bir istemci SAML belirteç sağlayıcı uygulanacağını
 
  Aşağıda, böylece uygun yapılandırmasında çalıştırılacak değiştirilebilir toplu iş dosyaları farklı bölümlerini kısa bir genel bakış sağlar.
 
--   Sunucu sertifikası oluşturuluyor:
+- Sunucu sertifikası oluşturuluyor:
 
      Setup.bat toplu iş dosyasından aşağıdaki satırları kullanılacak sunucu sertifikası oluşturun. `%SERVER_NAME%` Değişkeni, sunucu adını belirtir. Kendi sunucu adını belirtmek için bu değişkeni değiştirin. Localhost bu toplu iş dosyasında varsayılan değerdir.
 
@@ -319,7 +319,7 @@ Bu örnek nasıl özel bir istemci SAML belirteç sağlayıcı uygulanacağını
     makecert.exe -sr LocalMachine -ss My -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Sunucu sertifikasını istemcinin güvenilen sertifika depolama alanına yükleniyor:
+- Sunucu sertifikasını istemcinin güvenilen sertifika depolama alanına yükleniyor:
 
      İstemci güvenilir kişiler uygulamasına Setup.bat toplu dosya kopyalama sunucu sertifikasının aşağıdaki satırları depolayın. MakeCert.exe tarafından oluşturulan sertifikaları örtük olarak istemci sistemi tarafından güvenilir değildir çünkü bu adım gereklidir. Bir istemci güvenilen kök sertifikayı kök erişim izni verilmiş bir sertifika zaten varsa — örneğin, Microsoft tarafından verilen sertifika — sunucu sertifikasında istemci sertifika deposunun doldurulması, bu adım gerekli değildir.
 
@@ -327,7 +327,7 @@ Bu örnek nasıl özel bir istemci SAML belirteç sağlayıcı uygulanacağını
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
--   Verenin sertifika oluşturuluyor.
+- Verenin sertifika oluşturuluyor.
 
      Setup.bat toplu iş dosyasından aşağıdaki satırları kullanılacak sertifikayı oluşturun. `%USER_NAME%` Değişkeni sertifikayı verenin adını belirtir. Kendi verenin adı belirtmek için bu değişkeni değiştirin. Alice bu toplu iş dosyasında varsayılan değerdir.
 
@@ -343,7 +343,7 @@ Bu örnek nasıl özel bir istemci SAML belirteç sağlayıcı uygulanacağını
     makecert.exe -sr CurrentUser -ss My -a sha1 -n CN=%USER_NAME% -sky exchange -pe
     ```
 
--   Sertifikayı sunucusunun güvenilen sertifika depolama alanına yükleniyor.
+- Sertifikayı sunucusunun güvenilen sertifika depolama alanına yükleniyor.
 
      İstemci güvenilir kişiler uygulamasına Setup.bat toplu dosya kopyalama sunucu sertifikasının aşağıdaki satırları depolayın. MakeCert.exe tarafından oluşturulan sertifikaları örtük olarak istemci sistemi tarafından güvenilir değildir çünkü bu adım gereklidir. Bir istemci güvenilen kök sertifikayı kök erişim izni verilmiş bir sertifika zaten varsa — örneğin, Microsoft tarafından verilen sertifika — sertifikayı ile sunucu sertifika deposuna yerleştirmek, bu adım gerekli değildir.
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 09f3a88d-b132-4505-a8bb-55cbfc6bb55a
 ms.openlocfilehash: 1f0d53d1ec37d200c20ed1b0053b8992cf89c4e0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926470"
 ---
 # <a name="base-elements-how-to-topics"></a>Temel Öğeler ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, dört WPF temel öğelerin nasıl kullanılacağını açıklar: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, ve <xref:System.Windows.FrameworkContentElement>.  

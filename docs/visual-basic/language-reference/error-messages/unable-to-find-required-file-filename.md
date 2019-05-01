@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30655
 ms.assetid: 756db378-e758-48a9-88ff-496bc55bc0b6
 ms.openlocfilehash: 35bddac0ed65499e2eb400639ab5028c6cc6ddcb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787432"
 ---
 # <a name="unable-to-find-required-file-filename"></a>Gerekli bir dosya bulunamadı '\<dosya adı >'
 Visual Studio'nun gerek duyduğu bir dosya eksik veya zarar görmüş.  
@@ -21,7 +21,7 @@ Visual Studio'nun gerek duyduğu bir dosya eksik veya zarar görmüş.
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Visual Studio'yu yeniden yükleyin.  
+- Visual Studio'yu yeniden yükleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

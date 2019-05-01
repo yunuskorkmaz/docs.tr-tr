@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
 ms.openlocfilehash: 17e16cec34b381cdfe46e1066c3219a93c3780e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925352"
 ---
 # <a name="service-application-programming-architecture"></a>Hizmet Uygulaması Programlama Mimarisi
 Windows hizmet uygulamaları öğesinden devralınan bir sınıf temel <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> sınıfı. Bu sınıftaki yöntemleri geçersiz kılın ve işlevselliği için hizmetinizin nasıl davranacağını belirlemek bunları tanımlayın.  
   
  Hizmet oluşturmada yer alan ana sınıfları şunlardır:  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> — Yöntemleri geçersiz kılmak <xref:System.ServiceProcess.ServiceBase> hizmet oluştururken, sınıf ve nasıl sınıf hizmet işlevlerinizi bu devralınan belirlemek için kod tanımlayın.  
+- <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> — Yöntemleri geçersiz kılmak <xref:System.ServiceProcess.ServiceBase> hizmet oluştururken, sınıf ve nasıl sınıf hizmet işlevlerinizi bu devralınan belirlemek için kod tanımlayın.  
   
--   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> ve <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> — yüklemek ve hizmetinizi kaldırmak için bu sınıflar'ı kullanın.  
+- <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> ve <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> — yüklemek ve hizmetinizi kaldırmak için bu sınıflar'ı kullanın.  
   
  Ayrıca, bir sınıf adlı <xref:System.ServiceProcess.ServiceController> hizmeti işlemek için kullanılabilir. Bu sınıf, bir hizmetin oluşturmada yer alan değildir, ancak başlatma ve hizmetini durdurun, komutları ona geçirin ve bir dizi bir numaralandırma döndürmek için kullanılabilir.  
   
@@ -51,7 +51,7 @@ Windows hizmet uygulamaları öğesinden devralınan bir sınıf temel <xref:Sys
   
  Diğer çeşitli özellikler ve ilgilendiğiniz yöntemleri vardır. Bu güncelleştirmeler şunlardır:  
   
--   <xref:System.ServiceProcess.ServiceBase.Run%2A> Metodunda <xref:System.ServiceProcess.ServiceBase> sınıfı. Bu hizmet için ana giriş noktasıdır. Windows hizmet şablonunu kullanarak bir hizmet oluşturduğunuzda, kodun uygulamanızın eklendiği `Main` hizmeti çalıştırmak için yöntemi. Bu kod şu şekilde görünür:  
+- <xref:System.ServiceProcess.ServiceBase.Run%2A> Metodunda <xref:System.ServiceProcess.ServiceBase> sınıfı. Bu hizmet için ana giriş noktasıdır. Windows hizmet şablonunu kullanarak bir hizmet oluşturduğunuzda, kodun uygulamanızın eklendiği `Main` hizmeti çalıştırmak için yöntemi. Bu kod şu şekilde görünür:  
   
      [!code-csharp[VbRadconService#6](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#6)]
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
@@ -59,7 +59,7 @@ Windows hizmet uygulamaları öğesinden devralınan bir sınıf temel <xref:Sys
     > [!NOTE]
     >  Bu örneklerde bu tip bir dizide <xref:System.ServiceProcess.ServiceBase>, hangi uygulamanın içerdiği her bir hizmet eklenebilir ve ardından tüm hizmetlerin birlikte çalıştırılabilir. Yalnızca tek bir hizmet oluşturuyorsanız, ancak, dizinin kullanma ve yalnızca dan devralan yeni bir nesne bildirme tercih edebileceğiniz <xref:System.ServiceProcess.ServiceBase> ve ardından çalıştırın. Bir örnek için bkz [nasıl yapılır: Hizmetleri programlamayla yazma](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
   
--   Bir dizi özellikleri <xref:System.ServiceProcess.ServiceBase> sınıfı. Bu hizmet yöntemleri çağrılabilir belirleyin. Örneğin, <xref:System.ServiceProcess.ServiceBase.CanStop%2A> özelliği `true`, <xref:System.ServiceProcess.ServiceBase.OnStop%2A> hizmetinizdeki yöntemi çağrılabilir. Zaman <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> özelliği `true`, <xref:System.ServiceProcess.ServiceBase.OnPause%2A> ve <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> yöntemler çağrılabilir. Ayarladığınızda bu özelliklerin herhangi birini `true`, daha sonra geçersiz kılma ve ilişkili yöntemleri için işleme tanımlayın.  
+- Bir dizi özellikleri <xref:System.ServiceProcess.ServiceBase> sınıfı. Bu hizmet yöntemleri çağrılabilir belirleyin. Örneğin, <xref:System.ServiceProcess.ServiceBase.CanStop%2A> özelliği `true`, <xref:System.ServiceProcess.ServiceBase.OnStop%2A> hizmetinizdeki yöntemi çağrılabilir. Zaman <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> özelliği `true`, <xref:System.ServiceProcess.ServiceBase.OnPause%2A> ve <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> yöntemler çağrılabilir. Ayarladığınızda bu özelliklerin herhangi birini `true`, daha sonra geçersiz kılma ve ilişkili yöntemleri için işleme tanımlayın.  
   
     > [!NOTE]
     >  En az hizmetiniz geçersiz kılmalısınız <xref:System.ServiceProcess.ServiceBase.OnStart%2A> ve <xref:System.ServiceProcess.ServiceBase.OnStop%2A> yararlı olacak.  

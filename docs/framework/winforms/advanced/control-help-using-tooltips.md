@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 03263f94-e539-440b-a67c-8b9110c96dcd
 ms.openlocfilehash: 8fcf90e76dd0edcb5349984ebb70124400297a1d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935440"
 ---
 # <a name="control-help-using-tooltips"></a>ToolTips Kullanarak Denetim Yardımı
 Kullanabileceğiniz <xref:System.Windows.Forms.ToolTip> kısa bir bileşenini özelleştirilmiş ayrı Windows Forms denetimleri için yardım iletisini. <xref:System.Windows.Forms.ToolTip> Bileşeni, formdaki her denetim için görüntülenen metni belirtir bir özellik sağlar. İle çalışma hakkında daha fazla bilgi için <xref:System.Windows.Forms.ToolTip> bileşen bu şekilde bakın [nasıl yapılır: Denetimler için ToolTips ayarlama bir Windows formunda tasarım zamanında](../controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md). Buna ek olarak, yapılandırabileceğiniz <xref:System.Windows.Forms.ToolTip> böylece gecikme gösterilmeden önce bileşen. Daha fazla bilgi için [nasıl yapılır: Windows Forms ToolTip bileşeninin gecikmesini değiştirme](../controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md).  

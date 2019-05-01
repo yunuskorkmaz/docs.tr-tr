@@ -5,11 +5,11 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
 ms.openlocfilehash: 8629748c37aae8e35bb928c5a8d5a9caa7046942
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785690"
 ---
 # <a name="maximize-wpf-3d-performance"></a>WPF 3B Performansını En Üst Düzeye Çıkarma
 Kullandığınız gibi [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3B denetimleri oluşturmak ve uygulamalarınızda 3B eklemek için performans iyileştirme göz önünde bulundurmanız önemlidir. Bu konu, 3B sınıfları ve bunları kullanırken performans iyileştirme önerileri yanı sıra, uygulamanız için performans etkilerinin sahip özellikler listesini sağlar.  

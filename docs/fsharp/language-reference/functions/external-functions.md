@@ -3,11 +3,11 @@ title: Dış İşlevler
 description: Hakkında bilgi edinin F# yerel kodda işlevleri çağırmak için dil desteği.
 ms.date: 05/16/2016
 ms.openlocfilehash: 86ea78844fb812361233f8360c377465d83be203
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934634"
 ---
 # <a name="external-functions"></a>Dış İşlevler
 

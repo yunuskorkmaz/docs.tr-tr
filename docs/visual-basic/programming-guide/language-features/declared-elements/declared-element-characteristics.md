@@ -14,22 +14,22 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
 ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61830173"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Bildirilen Öğe Özellikleri (Visual Basic)
 A *karakteristik* bildirilen bir öğe kod ile nasıl etkileşim kurabileceğine etkiler o öğenin bir parçasıdır. Bildirilen her öğe bir veya daha fazla ilişkili aşağıdaki özelliklere sahiptir:  
   
--   *Veri türü* — öğesi değerlerini tutabileceği ve bu değerleri nasıl depolar. Daha fazla bilgi için [veri türleri](../../../../visual-basic/language-reference/data-types/index.md).  
+- *Veri türü* — öğesi değerlerini tutabileceği ve bu değerleri nasıl depolar. Daha fazla bilgi için [veri türleri](../../../../visual-basic/language-reference/data-types/index.md).  
   
--   *Yaşam süresi* — süre yürütme sırasında öğe olduğu için kullanılabilir. Daha fazla bilgi için [Visual Basic'de ömür](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+- *Yaşam süresi* — süre yürütme sırasında öğe olduğu için kullanılabilir. Daha fazla bilgi için [Visual Basic'de ömür](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
--   *Kapsam* — adıyla nitelemeden öğesine başvurabilir tüm kod kümesi. Daha fazla bilgi için [nasıl yapılır: Bir değişkenin kapsamını denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+- *Kapsam* — adıyla nitelemeden öğesine başvurabilir tüm kod kümesi. Daha fazla bilgi için [nasıl yapılır: Bir değişkenin kapsamını denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
   
--   *Erişim düzeyi* — iznini sağlamak için kod öğesi kullanın. Daha fazla bilgi için [nasıl yapılır: Bir değişkenin kullanılabilirliğini denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+- *Erişim düzeyi* — iznini sağlamak için kod öğesi kullanın. Daha fazla bilgi için [nasıl yapılır: Bir değişkenin kullanılabilirliğini denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
   
 ## <a name="characteristics-of-the-elements"></a>Öğelerin özellikleri  
  Aşağıdaki tabloda, bildirilen öğeler ve her birine Uygula özellikleri gösterilmektedir.  

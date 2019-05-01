@@ -3,11 +3,11 @@ title: Kapsam ile Keşif Örneği
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
 ms.openlocfilehash: 9ad20e63e00464ed615620b9d0ec83fb90d07444
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789382"
 ---
 # <a name="discovery-with-scopes-sample"></a>Kapsam ile Keşif Örneği
 Bu örnek bulunabilirlik uç noktaları da nasıl kullanılacağını olarak sınıflandırmak için kapsamları kullanmayı gösterir <xref:System.ServiceModel.Discovery.DiscoveryClient> uç noktaları için zaman uyumsuz bir arama gerçekleştirmek için. Hizmette her uç nokta için bulma uç noktası bulma davranışını ekleme ve uç noktasına bir kapsamı ekleme işlemi kullanılarak yanı sıra tarafından bitiş noktası bulunabilirliğini denetleme özelleştirme Bu örnek gösterir. İstemcide, örnek istemcileri nasıl oluşturacağınızı üzerinden giden bir <xref:System.ServiceModel.Discovery.DiscoveryClient> ve ince parametreleri kapsamına ekleyerek kapsamları eklemek için arama <xref:System.ServiceModel.Discovery.FindCriteria>. Ayrıca bu örnek bir sonlandırma ölçütüne ekleyerek istemciler yanıtları nasıl kısıtlayabilirsiniz gösterir.  

@@ -23,61 +23,61 @@ helpviewer_keywords:
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
 ms.openlocfilehash: 8b734b553e0ef4c14e372892e53b1184798390e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792112"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Visual Basic'te Dosya ve Dizin Oluşturma, Silme ve Taşıma
-Bu bölümde oluşturma, silme, taşıma ve dosyaları ve dizinleri Visual Basic'te yeniden adlandırma ile ilişkili görevleri listeler.  
+Bu bölümde, oluşturma, silme, taşıma ve dosya ve dizinleri Visual Basic'te yeniden adlandırma ile ilişkili görevleri listeler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl Yapılır: Belirli Düzendeki Dosyaları Dizine Kopyalama](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
- Bir düzendeki dosyaları belirli dosya adı, yalnızca .txt dosyaları gibi bir dizine kopyalayın gösterir.  
+ [Nasıl yapılır: Belirli bir düzendeki dosyaları dizine kopyalama](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
+ Yalnızca .txt dosyaları gibi belirli dosya adı düzendeki dosyaları dizine kopyalama gösterir.  
   
- [Nasıl Yapılır: Aynı Dizinde Dosya Kopyası Oluşturma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
- Aynı dizinde dosya kopyası oluşturma gösterilmektedir.  
+ [Nasıl yapılır: Aynı dizinde dosya kopyası oluşturma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
+ Aynı dizinde dosya kopyası oluşturma işlemini gösterir.  
   
- [Nasıl Yapılır: Farklı Dizinde Dosya Kopyası Oluşturma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
- Bir dosyayı başka bir dizine kopyalayın gösterir.  
+ [Nasıl yapılır: Farklı dizinde dosya kopyası oluşturma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
+ Bir dosyayı başka bir dizine kopyalamak nasıl gösterir.  
   
- [Nasıl Yapılır: Dosya Oluşturma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
+ [Nasıl yapılır: Bir dosya oluşturun](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
  Bir dosyasının nasıl oluşturulacağı gösterilmektedir.  
   
- [Nasıl Yapılır: Dosya Silme](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
- Bir dosyayı silmek gösterilmiştir.  
+ [Nasıl yapılır: Dosya silme](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
+ Dosya silme işlemini göstermektedir.  
   
- [Nasıl Yapılır: Belirli bir Düzendeki Dosyaları Bulma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
- Yalnızca belirli dosya adı deseni bir dizinde sahip dosyaları listelemek gösterilmiştir.  
+ [Nasıl yapılır: Belirli bir düzendeki dosyaları bulma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
+ Yalnızca belirli dosya adı deseni bir dizinde sahip dosyaları listesinde gösterilmiştir.  
   
- [Nasıl Yapılır: Dosya Taşıma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
- Bir dosyayı farklı bir klasöre taşımak gösterilmiştir.  
+ [Nasıl yapılır: Dosya taşıma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
+ Dosyayı farklı bir klasöre taşımak nasıl gösterir.  
   
- [Nasıl Yapılır: Dosyayı Yeniden Adlandırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
- Bir dosyayı yeniden adlandırmak gösterilmiştir.  
+ [Nasıl yapılır: Dosyayı yeniden adlandırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
+ Dosyayı yeniden adlandırma işlemi gösterilmektedir.  
   
- [Nasıl Yapılır: Bir Dizini Diğerine Kopyalama](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
- Bir dizini başka bir konuma kopyalama gösterilmektedir.  
+ [Nasıl yapılır: Bir dizini diğerine kopyalama](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
+ Bir dizin başka bir konuma kopyalamak nasıl gösterir.  
   
- [Nasıl Yapılır: Dizin Oluşturma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
- Bir dizin oluşturmak gösterilmiştir.  
+ [Nasıl yapılır: Bir dizin oluşturun](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
+ Bir dizin oluşturma işlemini gösterir.  
   
- [Nasıl Yapılır: Belirli bir Desendeki Alt Dizinleri Bulma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
- Kendi adında belirli bir desendeki dizinler listesinde gösterilmiştir.  
+ [Nasıl yapılır: Belirli bir desendeki alt dizinleri bulma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
+ Dizinleri adında belirli bir düzendeki listesinde gösterilmiştir.  
   
- [Nasıl Yapılır: Dizindeki Dosya Koleksiyonunu Alma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)  
- Bir dizindeki dosyaları listelemek gösterilmiştir.  
+ [Nasıl yapılır: Bir dizindeki dosya koleksiyonunu alma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)  
+ Bir dizindeki dosyaları listesinde gösterilmiştir.  
   
- [Nasıl Yapılır: Belgelerim Dizini İçeriğini Alma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
- Nasıl özel dizinlerini okunacağını gösterir.  
+ [Nasıl yapılır: İçeriğini alma Belgelerim dizini](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
+ Özel dizinlerden okuma işlemini gösterir.  
   
- [Nasıl Yapılır: Dosya Yollarını Ayrıştırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
- Nasıl kullanılacağı ortaya `My` dosya yolları birleştirmek için yöntemleri.  
+ [Nasıl yapılır: Dosya yollarını ayrıştırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
+ Nasıl kullanılacağını gösteren `My` dosya yolları birleştirmek için yöntemleri.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- Açıklar `My.Computer.FileSystem` nesne ve üyeleri.  
+ Açıklar `My.Computer.FileSystem` nesne ve üyelerini.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A>  
  Açıklar `CombinePath` yöntemi.  
@@ -113,11 +113,11 @@ Bu bölümde oluşturma, silme, taşıma ve dosyaları ve dizinleri Visual Basic
  Açıklar `RenameFile` yöntemi.  
   
  <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>  
- Açıklar `SpecialDirectories` nesnesi.  
+ Açıklar `SpecialDirectories` nesne.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Dosyalardan Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Dosyaları okuma ile ilişkili görevleri listeler.  
   
  [Dosyalara Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
- Dosyalara yazma ile ilgili görevleri listeler.
+ Dosyalara yazma ile ilgili görevlerini listeler.

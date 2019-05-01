@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Türetilen sınıfların serileştirmek denetimi'
+title: 'Nasıl yapılır: Türetilen Sınıfların Serileştirmesini Denetleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
 ms.openlocfilehash: 12cb3a1fb3311450b8597ef13f1f2efa4adeaf7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922518"
 ---
-# <a name="how-to-control-serialization-of-derived-classes"></a>Nasıl yapılır: Türetilen sınıfların serileştirmek denetimi
+# <a name="how-to-control-serialization-of-derived-classes"></a>Nasıl yapılır: Türetilen Sınıfların Serileştirmesini Denetleme
 Kullanarak **XmlElementAttribute** bir XML öğesi adını değiştirmek için özniteliği nesne seri hale getirme özelleştirmek için tek yolu değil. XML akışı varolan bir sınıftan türetme ve söyleyen özelleştirebilirsiniz <xref:System.Xml.Serialization.XmlSerializer> yeni sınıfı serileştirmek nasıl örneği.  
   
  Örneğin, belirtilen bir `Book` sınıfı, bu sınıftan türetilen ve oluşturma bir `ExpandedBook` birkaç daha fazla özellik sınıf. Ancak, siz talimat vermelisiniz **XmlSerializer** serileştirmek veya seri durumdan türetilmiş bir tür kabul etmek için. Bu oluşturarak yapılabilir bir <xref:System.Xml.Serialization.XmlElementAttribute> örneği ve ayarı kendi **türü** özelliği türetilmiş sınıf türü. Ekleme **XmlElementAttribute** için bir <xref:System.Xml.Serialization.XmlAttributes> örneği. Ardından Ekle **XmlAttributes öznitelikleri olan üyeler** için bir <xref:System.Xml.Serialization.XmlAttributeOverrides> kılınmasını türü ve türetilen sınıf kabul eden üyenin adını belirten örneği. Bu, aşağıdaki örnekte gösterilir.  

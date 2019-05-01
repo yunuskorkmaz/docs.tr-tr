@@ -3,11 +3,11 @@ title: <transport> / <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
 ms.openlocfilehash: 44e334c3313f93a23ca7df15ba377c5568a92397
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788381"
 ---
 # <a name="transport-of-nethttpbinding"></a>\<Aktarım >, \<netHttpBinding >
 HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikleri tanımlar.  
@@ -56,7 +56,7 @@ HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikleri ta
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok.|İleti aktarımı sırasında sağlanmaz.|  
+|None|İleti aktarımı sırasında sağlanmaz.|  
 |Temel|Temel kimlik doğrulaması belirtir.|  
 |Özet|Özet kimlik doğrulaması belirtir.|  
 |NTLM|Mümkün olduğunda ve Windows kimlik doğrulaması başarısız olursa, NTLM kimlik doğrulaması belirtir.|  

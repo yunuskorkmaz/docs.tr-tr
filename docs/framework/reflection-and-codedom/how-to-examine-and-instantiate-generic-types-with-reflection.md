@@ -12,11 +12,11 @@ ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddddc746eb29c526adb8a15fc6ac40acc22954cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793230"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Nasıl yapılır: Yansıma ile Genel Türleri İnceleme ve Örnek Oluşturma
 Genel türler hakkında bilgi tıpkı diğer türler hakkında bilgi elde edilir: inceleme tarafından bir <xref:System.Type> genel türü temsil eden nesne. İlkeye genel bir türün bir listesi olduğunu fark <xref:System.Type> , genel tür parametrelerini temsil eden nesneleri. Bu bölümdeki ilk yordam, genel türler inceler.  
@@ -117,11 +117,11 @@ Genel türler hakkında bilgi tıpkı diğer türler hakkında bilgi elde edilir
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   C# kodu içeren `using` deyimleri (`Imports` Visual Basic'te) derleme için gerekli.  
+- C# kodu içeren `using` deyimleri (`Imports` Visual Basic'te) derleme için gerekli.  
   
--   Hiçbir ek derleme başvurularını gereklidir.  
+- Hiçbir ek derleme başvurularını gereklidir.  
   
--   Csc.exe, vbc.exe veya cl.exe kullanarak komut satırındaki kodu derleyin. Visual Studio'da Kodu derlemek için bir konsol uygulaması projesi şablonu içine koyun.  
+- Csc.exe, vbc.exe veya cl.exe kullanarak komut satırındaki kodu derleyin. Visual Studio'da Kodu derlemek için bir konsol uygulaması projesi şablonu içine koyun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

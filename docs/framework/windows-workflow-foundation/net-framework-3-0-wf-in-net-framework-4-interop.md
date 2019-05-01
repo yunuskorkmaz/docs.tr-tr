@@ -3,11 +3,11 @@ title: .NET Framework 4’te Birlikte Çalışma Etkinliği ile .NET Framework 3
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
 ms.openlocfilehash: 33140ac85cd50140c0aa34d1986365fefc005c78
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934725"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>.NET Framework 4’te Birlikte Çalışma Etkinliği ile .NET Framework 3.0 WF Etkinlikleri Kullanma
 <xref:System.Activities.Statements.Interop> Etkinliği bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] sarmalar (WF 4.5) etkinliği bir [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) etkinlik içinde bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı. 3 WF etkinliği, bir tek yaprak etkinliği veya etkinlikleri ağacının tümünü olabilir. (İptal ve özel durum işleme dahil) yürütme ve sürekliliği [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] etkinlik bağlamında oluşan [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] yürütülmekte olan iş akışı örneği.  
@@ -18,13 +18,13 @@ ms.locfileid: "59329420"
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>Bir WF 3 kullanarak ölçütleri etkinliği ile bir birlikte çalışma etkinliği  
  İçinde başarılı bir şekilde yürütmek 3 WF etkinliği için bir <xref:System.Activities.Statements.Interop> etkinlik, aşağıdaki ölçütleri karşılanması gerekir:  
   
--   WF 3 etkinlik öğesinden türetilmelidir <xref:System.Workflow.ComponentModel.Activity?displayProperty=nameWithType>.  
+- WF 3 etkinlik öğesinden türetilmelidir <xref:System.Workflow.ComponentModel.Activity?displayProperty=nameWithType>.  
   
--   3 WF etkinliği olarak bildirilmelidir `public` ve olamaz `abstract`.  
+- 3 WF etkinliği olarak bildirilmelidir `public` ve olamaz `abstract`.  
   
--   3 WF etkinliği, ortak varsayılan oluşturucuya sahip olmalıdır.  
+- 3 WF etkinliği, ortak varsayılan oluşturucuya sahip olmalıdır.  
   
--   Arabiriminde sınırlamaları nedeniyle, türleri <xref:System.Activities.Statements.Interop> etkinlik destekleyebilir <xref:System.Workflow.Activities.HandleExternalEventActivity> ve <xref:System.Workflow.Activities.CallExternalMethodActivity> oluşturulan iş akışı iletişim etkinlik aracını (WCA.exe) kullanarak kullanılabilir doğrudan kullanılır, ancak türetilmiş etkinlikleri olamaz. Bkz: [Windows Workflow Foundation Araçları](https://go.microsoft.com/fwlink/?LinkId=178889) Ayrıntılar için.  
+- Arabiriminde sınırlamaları nedeniyle, türleri <xref:System.Activities.Statements.Interop> etkinlik destekleyebilir <xref:System.Workflow.Activities.HandleExternalEventActivity> ve <xref:System.Workflow.Activities.CallExternalMethodActivity> oluşturulan iş akışı iletişim etkinlik aracını (WCA.exe) kullanarak kullanılabilir doğrudan kullanılır, ancak türetilmiş etkinlikleri olamaz. Bkz: [Windows Workflow Foundation Araçları](https://go.microsoft.com/fwlink/?LinkId=178889) Ayrıntılar için.  
   
 ## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a>Yapılandırma 3 bir WF etkinliğinin bir birlikte çalışma etkinliği içinde  
  Yapılandırma ve birlikte çalışabilirlik sınırında içine ve dışına bir 3 WF etkinliği veri iletmek için 3 WF etkinlik özelliklerini ve meta veri özelliklerini tarafından kullanıma sunulan <xref:System.Activities.Statements.Interop> etkinlik. WF 3 etkinliğin meta veri özelliklerini (gibi <xref:System.Workflow.ComponentModel.Activity.Name%2A>) aracılığıyla kullanıma <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A> koleksiyonu. WF 3 etkinliğin meta veri özelliklerini değerlerini tanımlamak için kullanılan ad-değer çiftleri koleksiyonu budur. Meta veri özelliği tarafından bağımlılık özelliği için desteklenen bir özelliktir <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata> bayrağı ayarlanır.  

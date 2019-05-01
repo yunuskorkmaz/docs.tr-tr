@@ -27,36 +27,36 @@ ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 04ed4dcaab8d39d8a34cadef8285ea8307f198c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925742"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework'te Tür Dönüştürme
 <a name="top"></a> Her değerin değere, sahip olabileceği olası değerler aralığı ayrılan alan miktarını gibi öznitelikleri tanımlayan ilişkili bir türü vardır ve onun üyeleri kullanılabilir hale getirir. Birçok değer, tek bir türden fazlası olarak ifade edilebilir. Örneğin, 4 değeri bir tamsayı olarak veya bir kayan nokta değeri olarak ifade edilebilir. Tür dönüştürme, eski bir türün değerine eşit olan, yeni türde bir değer oluşturur, fakat özgün nesnenin kimliğini (veya tam değerini) koruması gerekmez.  
   
  .NET Framework, aşağıdaki dönüştürmeleri otomatik olarak destekler:  
   
--   Bir temel sınıf dönüştürme türetilmiş sınıf. Bu, örneğin, herhangi bir sınıf veya yapının örneği için dönüştürülebilir anlamına gelir bir <xref:System.Object> örneği.  Bu dönüştürme atama veya dönüştürme işleci gerektirmez.  
+- Bir temel sınıf dönüştürme türetilmiş sınıf. Bu, örneğin, herhangi bir sınıf veya yapının örneği için dönüştürülebilir anlamına gelir bir <xref:System.Object> örneği.  Bu dönüştürme atama veya dönüştürme işleci gerektirmez.  
   
--   Bir taban sınıftan dönüştürme özgün türetilmiş sınıfa yedekleyin. C# ' ta bu dönüştürme atama işleci gerektirir. Visual Basic'te gerektiren `CType` işleci, `Option Strict` açıktır.  
+- Bir taban sınıftan dönüştürme özgün türetilmiş sınıfa yedekleyin. C# ' ta bu dönüştürme atama işleci gerektirir. Visual Basic'te gerektiren `CType` işleci, `Option Strict` açıktır.  
   
--   Bu arabirimi temsil eden bir arabirim nesne için bir arabirimi uygulayan bir tür dönüştürme. Bu dönüştürme atama veya dönüştürme işleci gerektirmez.  
+- Bu arabirimi temsil eden bir arabirim nesne için bir arabirimi uygulayan bir tür dönüştürme. Bu dönüştürme atama veya dönüştürme işleci gerektirmez.  
   
--   Arabirimi nesneden bir arabirimi uygulayan yeniden orijinal türüne dönüştürme.  C# ' ta bu dönüştürme atama işleci gerektirir. Visual Basic'te gerektiren `CType` işleci, `Option Strict` açıktır.  
+- Arabirimi nesneden bir arabirimi uygulayan yeniden orijinal türüne dönüştürme.  C# ' ta bu dönüştürme atama işleci gerektirir. Visual Basic'te gerektiren `CType` işleci, `Option Strict` açıktır.  
   
  Otomatik dönüştürmeler yanı sıra [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] özel tür dönüştürmeyi destekleyen çeşitli özellikler sağlar. Bunlar aşağıdakileri içerir:  
   
--   `Implicit` Türleri arasında kullanılabilir genişletme dönüştürmelerini tanımlayan işleci. Daha fazla bilgi için [işleçle örtülü dönüştürme](#implicit_conversion_with_the_implicit_operator) bölümü.  
+- `Implicit` Türleri arasında kullanılabilir genişletme dönüştürmelerini tanımlayan işleci. Daha fazla bilgi için [işleçle örtülü dönüştürme](#implicit_conversion_with_the_implicit_operator) bölümü.  
   
--   `Explicit` Türler arasında kullanılabilir daraltma dönüştürmelerini tanımlayan işleci. Daha fazla bilgi için [açık işleçli açık dönüştürme](#explicit_conversion_with_the_explicit_operator) bölümü.  
+- `Explicit` Türler arasında kullanılabilir daraltma dönüştürmelerini tanımlayan işleci. Daha fazla bilgi için [açık işleçli açık dönüştürme](#explicit_conversion_with_the_explicit_operator) bölümü.  
   
--   <xref:System.IConvertible> Temel .NET Framework veri türlerinin her biri için dönüştürmelerini tanımlayan arabirimi. Daha fazla bilgi için [IConvertible arabirimi](#the_iconvertible_interface) bölümü.  
+- <xref:System.IConvertible> Temel .NET Framework veri türlerinin her biri için dönüştürmelerini tanımlayan arabirimi. Daha fazla bilgi için [IConvertible arabirimi](#the_iconvertible_interface) bölümü.  
   
--   <xref:System.Convert> Yöntemleri uygulayan yöntemler kümesi sağlar sınıfını <xref:System.IConvertible> arabirimi. Daha fazla bilgi için [dönüştürme sınıfı](#Convert) bölümü.  
+- <xref:System.Convert> Yöntemleri uygulayan yöntemler kümesi sağlar sınıfını <xref:System.IConvertible> arabirimi. Daha fazla bilgi için [dönüştürme sınıfı](#Convert) bölümü.  
   
--   <xref:System.ComponentModel.TypeConverter> Belirtilen bir türün herhangi bir tür dönüştürme desteklemek için genişletilebilen bir temel sınıf olan sınıf. Daha fazla bilgi için [TypeConverter sınıfı](#the_typeconverter_class) bölümü.  
+- <xref:System.ComponentModel.TypeConverter> Belirtilen bir türün herhangi bir tür dönüştürme desteklemek için genişletilebilen bir temel sınıf olan sınıf. Daha fazla bilgi için [TypeConverter sınıfı](#the_typeconverter_class) bölümü.  
   
 <a name="implicit_conversion_with_the_implicit_operator"></a>   
 ## <a name="implicit-conversion-with-the-implicit-operator"></a>Örtülü İşleçle Örtülü Dönüştürme  
@@ -129,11 +129,11 @@ ms.locfileid: "54659767"
 ## <a name="the-iconvertible-interface"></a>IConvertible Arabirimi  
  Bir ortak dil çalışma zamanı temel türüne, herhangi bir tür dönüştürme desteklemek için [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sağlar <xref:System.IConvertible> arabirimi. Uygulama türünün aşağıdakileri sağlaması gerekir:  
   
--   Döndüren bir yöntem <xref:System.TypeCode> uygulama türü.  
+- Döndüren bir yöntem <xref:System.TypeCode> uygulama türü.  
   
--   Her ortak dil çalışma zamanı temel türüne için uygulama dönüştürme yöntemleri yazın (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, vb.).  
+- Her ortak dil çalışma zamanı temel türüne için uygulama dönüştürme yöntemleri yazın (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, vb.).  
   
--   Uygulama türünün bir örneğini başka bir belirtilen türe dönüştürmek için genelleştirilmiş bir dönüştürme yöntemi. Desteklenmeyen dönüştürmeler throw bir <xref:System.InvalidCastException>.  
+- Uygulama türünün bir örneğini başka bir belirtilen türe dönüştürmek için genelleştirilmiş bir dönüştürme yöntemi. Desteklenmeyen dönüştürmeler throw bir <xref:System.InvalidCastException>.  
   
  Her ortak dil çalışma zamanı temel türüne (diğer bir deyişle, <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.String>, <xref:System.UInt16>, <xref:System.UInt32>, ve <xref:System.UInt64>), hem de <xref:System.DBNull> ve <xref:System.Enum> türleri uygulayan <xref:System.IConvertible> arabirimi. Ancak, bunlar açık arabirim uygulamalarıdır; dönüştürme yöntemi yalnızca yoluyla çağrılabilir bir <xref:System.IConvertible> aşağıdaki örnekte gösterildiği gibi arabirim değişkeni. Bu örnek bir <xref:System.Int32> değerini onun dengi <xref:System.Char> değeri.  
   

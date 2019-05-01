@@ -13,11 +13,11 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
 ms.openlocfilehash: b127c50f3319d4fe7c4890fc3bffb295baa37466
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936675"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod işleci (Visual Basic)
 İki sayıyı böler ve yalnızca kalanı döndürür.  
@@ -70,9 +70,9 @@ End Module
   
  İlgili işleçler şunlardır:  
   
--   [\ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) bölme işleminin tamsayı bölümünü döndürür. Örneğin, ifade `14 \ 4` 3 olarak değerlendirir.  
+- [\ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) bölme işleminin tamsayı bölümünü döndürür. Örneğin, ifade `14 \ 4` 3 olarak değerlendirir.  
   
--   [/ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) bir kayan noktalı sayı olarak kalan dahil olmak üzere tam kalanını döndürür. Örneğin, ifade `14 / 4` 3.5 için değerlendirir.  
+- [/ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) bir kayan noktalı sayı olarak kalan dahil olmak üzere tam kalanını döndürür. Örneğin, ifade `14 / 4` 3.5 için değerlendirir.  
   
 ## <a name="attempted-division-by-zero"></a>Denenen sıfıra bölme  
  Varsa `number2` sıfır olarak davranışını değerlendirilen `Mod` işleci, işlenen veri türüne bağlıdır. Bir tamsayı bölme oluşturur bir <xref:System.DivideByZeroException> özel durum. Kayan nokta bölme döndürür <xref:System.Double.NaN>.  

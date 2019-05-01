@@ -3,11 +3,11 @@ title: (Visual Basic) WordprocessingML belgelerinin şekli
 ms.date: 07/20/2015
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
 ms.openlocfilehash: 265da66329128e610c491c3ff50cec1bca434f6d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786431"
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>(Visual Basic) WordprocessingML belgelerinin şekli
 Bu konu, WordprocessingML belgesinin XML şeklini tanıtır.  

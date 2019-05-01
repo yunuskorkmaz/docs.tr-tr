@@ -8,11 +8,11 @@ helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
 ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785040"
 ---
 # <a name="designing-service-contracts"></a>Hizmet Sözleşmeleri Tasarlama
 Bu konu başlığı altında açıklanır tanımladığınıza göre nasıl tanımlandığını, hangi işlemleri kullanılabilir (ve temel alınan ileti alışverişlerinde etkilerini) hangi hizmet sözleşmeleri, hangi veri türlerini olan yardımcı kullanılan ve diğer sorunları tasarım karşılayan işlemleri Senaryonuz gereksinimleri.  
@@ -24,28 +24,28 @@ Bu konu başlığı altında açıklanır tanımladığınıza göre nasıl tan�
   
  Bu konu, bir hizmet sözleşmesini tasarlarken aşağıdaki karar noktaları açıklar:  
   
--   Sınıf veya arabirim kullanılıp kullanılmayacağını belirtir.  
+- Sınıf veya arabirim kullanılıp kullanılmayacağını belirtir.  
   
--   Değiştirmek istediğiniz veri türlerini belirleme.  
+- Değiştirmek istediğiniz veri türlerini belirleme.  
   
--   Exchange desenleri kullanabilirsiniz türleri.  
+- Exchange desenleri kullanabilirsiniz türleri.  
   
--   Olup açık güvenlik gereksinimleri sözleşmesinin bir parçası olun.  
+- Olup açık güvenlik gereksinimleri sözleşmesinin bir parçası olun.  
   
--   İşlem giriş ve çıkışları için kısıtlamaları.  
+- İşlem giriş ve çıkışları için kısıtlamaları.  
   
 ## <a name="classes-or-interfaces"></a>Sınıf veya arabirim  
  Sınıflar ve arabirimler işlevlerin bir gruplandırma temsil eder ve bu nedenle, her ikisi de bir WCF hizmet sözleşmesini tanımlama için kullanılabilir. Ancak, çünkü bunlar Hizmet sözleşmeleri doğrudan model arabirimleri kullanmanız önerilir. Bir uygulama arabirimler en fazla bir gruplandırma belirli imzalarla yöntemlerin tanımlar. Hizmet sözleşmesi arabirimini uygulayan ve bir WCF Hizmeti uyguladıysanız.  
   
  Yönetilen arabirimleri tüm avantajlarını hizmet sözleşme arayüzlere uygulanır:  
   
--   Hizmet sözleşmesi arabirimleri, diğer hizmet sözleşme arabirimleri herhangi bir sayıda genişletebilirsiniz.  
+- Hizmet sözleşmesi arabirimleri, diğer hizmet sözleşme arabirimleri herhangi bir sayıda genişletebilirsiniz.  
   
--   Tek bir sınıf herhangi bir sayıda hizmet sözleşmeleri, bu hizmet sözleşmesi arabirimleri uygulayarak uygulayabilirsiniz.  
+- Tek bir sınıf herhangi bir sayıda hizmet sözleşmeleri, bu hizmet sözleşmesi arabirimleri uygulayarak uygulayabilirsiniz.  
   
--   Bir hizmet sözleşmesini uygulama, arabirim uygulamasına hizmet sözleşmesi aynı kalırken değiştirerek değiştirebilirsiniz.  
+- Bir hizmet sözleşmesini uygulama, arabirim uygulamasına hizmet sözleşmesi aynı kalırken değiştirerek değiştirebilirsiniz.  
   
--   Hizmetinizin sürümü eski arabirimi ve yeni bir uygulama tarafından kullanabilirsiniz. En yeni sürüme yeni istemcilerden bağlanabilirsiniz buna karşın eski istemciler, özgün sürümüne bağlanır.  
+- Hizmetinizin sürümü eski arabirimi ve yeni bir uygulama tarafından kullanabilirsiniz. En yeni sürüme yeni istemcilerden bağlanabilirsiniz buna karşın eski istemciler, özgün sürümüne bağlanır.  
   
 > [!NOTE]
 >  Diğer hizmet sözleşme arabirimlerden devralınırken adı veya ad alanı gibi işlem özelliklerini geçersiz kılamazsınız. Bunu yapmayı denerseniz, geçerli hizmet sözleşmesi içerisinde yeni bir işlem oluşturun.  
@@ -251,11 +251,11 @@ End Interface
   
  Bu uygulayan bir hizmette `IExplicitProtectionLevelSampleService` sözleşme ve varsayılan bir uç noktaya sahip <xref:System.ServiceModel.WSHttpBinding> (varsayılan <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType>, olduğu <xref:System.ServiceModel.SecurityMode.Message>) şu davranışa sahiptir:  
   
--   `GetString` İşlem iletileri şifrelenir ve imzalanmış.  
+- `GetString` İşlem iletileri şifrelenir ve imzalanmış.  
   
--   `GetInt` İşlemi olarak gönderilen iletileri şifrelenmemiş ve imzalanmamış (diğer bir deyişle, düz) metin.  
+- `GetInt` İşlemi olarak gönderilen iletileri şifrelenmemiş ve imzalanmamış (diğer bir deyişle, düz) metin.  
   
--   `GetGuid` İşlemi <xref:System.Guid?displayProperty=nameWithType> şifrelenmiş ve imzalanmış bir ileti döndürdü.  
+- `GetGuid` İşlemi <xref:System.Guid?displayProperty=nameWithType> şifrelenmiş ve imzalanmış bir ileti döndürdü.  
   
  Koruma düzeyleri ve bunların nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [anlama koruma düzeyi](../../../docs/framework/wcf/understanding-protection-level.md). Güvenlik hakkında daha fazla bilgi için bkz: [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md).  
   

@@ -5,20 +5,20 @@ helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
 ms.openlocfilehash: 54a1c8e06991729ea8556d82d31897c522f6d173
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923246"
 ---
 # <a name="creating-user-defined-bindings"></a>Kullanıcı Tanımlı Bağlamalar Oluşturma
 Sistem tarafından sağlanmayan bağlamaları oluşturmanın birkaç yolu vardır:  
   
--   Temel, özel bir bağlama oluşturma <xref:System.ServiceModel.Channels.CustomBinding> sınıfını bağlama öğeleriyle doldurun bir kapsayıcıdır. Özel bağlama, ardından hizmet uç noktası eklenir. Özel bağlama ya da programlı olarak veya bir uygulama yapılandırma dosyasını oluşturabilirsiniz. Bir uygulama yapılandırma dosyasından bir bağlama öğesi kullanmak için bağlama öğesi genişletmelidir <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Özel bağlamalar hakkında daha fazla bilgi için bkz: [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md) ve <xref:System.ServiceModel.Channels.CustomBinding>.  
+- Temel, özel bir bağlama oluşturma <xref:System.ServiceModel.Channels.CustomBinding> sınıfını bağlama öğeleriyle doldurun bir kapsayıcıdır. Özel bağlama, ardından hizmet uç noktası eklenir. Özel bağlama ya da programlı olarak veya bir uygulama yapılandırma dosyasını oluşturabilirsiniz. Bir uygulama yapılandırma dosyasından bir bağlama öğesi kullanmak için bağlama öğesi genişletmelidir <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Özel bağlamalar hakkında daha fazla bilgi için bkz: [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md) ve <xref:System.ServiceModel.Channels.CustomBinding>.  
   
--   Standart bir bağlama öğesinden türeyen bir sınıf oluşturabilirsiniz. Örneğin, bir sınıf türetebilirsiniz <xref:System.ServiceModel.WSHttpBinding> ve geçersiz kılma <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> bağlama öğeleri almak ve bir özel bağlama öğesi ekleyin veya güvenlik için belirli bir değer oluşturmak için bir yöntem.  
+- Standart bir bağlama öğesinden türeyen bir sınıf oluşturabilirsiniz. Örneğin, bir sınıf türetebilirsiniz <xref:System.ServiceModel.WSHttpBinding> ve geçersiz kılma <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> bağlama öğeleri almak ve bir özel bağlama öğesi ekleyin veya güvenlik için belirli bir değer oluşturmak için bir yöntem.  
   
--   Yeni bir oluşturabilirsiniz <xref:System.ServiceModel.Channels.Binding> tamamen tüm bağlamayı uygulama denetlemek için türü.  
+- Yeni bir oluşturabilirsiniz <xref:System.ServiceModel.Channels.Binding> tamamen tüm bağlamayı uygulama denetlemek için türü.  
   
 ## <a name="the-order-of-binding-elements"></a>Bağlama öğelerinin sırası  
  Her bağlama öğesi gönderirken veya iletileri almak için bir işleme adımını temsil eder. Çalışma zamanında, Kanallar ve dinleyiciler bağlama öğeleri giden ve gelen kanal yığınları oluşturmak gerekli oluşturun.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
 ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929603"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Temel Windows Communication Foundation Kavramları
 Bu belge, Windows Communication Foundation (WCF) mimarisinin üst düzey bir görünümünü sağlar. Temel kavramları ve bunların birbirine nasıl uyduğunu açıklamak için tasarlanmıştır. Basit bir WCF hizmeti ve istemci sürümü oluşturmaya ilişkin öğretici için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md). WCF programlama bilgi edinmek için [temel WCF programlama](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -34,11 +34,11 @@ Bu belge, Windows Communication Foundation (WCF) mimarisinin üst düzey bir gö
   
  Başka bir iletişim yığını öğesinde belirli bir ileti nasıl biçimlendirildiğini belirten kodlama gereklidir. WCF aşağıdaki kodlamalarda sağlar:  
   
--   Metin kodlama, kodlama birlikte çalışabilir.  
+- Metin kodlama, kodlama birlikte çalışabilir.  
   
--   İleti Aktarım en iyi duruma getirme mekanizması (kodlama, için ve bir hizmetten yapılandırılmamış ikili verileri verimli bir şekilde göndermek için birlikte çalışabilen bir yolu olan MTOM).  
+- İleti Aktarım en iyi duruma getirme mekanizması (kodlama, için ve bir hizmetten yapılandırılmamış ikili verileri verimli bir şekilde göndermek için birlikte çalışabilen bir yolu olan MTOM).  
   
--   İkili kodlama verimli aktarım için.  
+- İkili kodlama verimli aktarım için.  
   
  WCF yerleşik uzantı noktaları kullanarak (örneğin, bir sıkıştırma kodlaması) daha kodlama mekanizmaları eklenebilir.  
   

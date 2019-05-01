@@ -23,20 +23,20 @@ ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 73810330c1ec44aa3a5edf47b3062bc2df267008
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792983"
 ---
 # <a name="using-the-codedom"></a>CodeDOM'yi Kullanma
 CodeDOM, kaynak kod öğelerinin birçok ortak türleri temsil eden türler sağlar. Bir nesne grafiğini derlemek için CodeDOM öğelerini kullanarak bir kaynak kod modeli oluşturan bir program tasarlayabilirsiniz. Bu nesne grafiği, desteklenen bir programlama dili için bir CodeDOM kod üreticisi kullanan bir kaynak kodu olarak işlenebilir. CodeDOM, kaynak kodu ikili bir birleştirme dosyasına derlemek için de kullanılabilir.  
   
  CodeDOM bazı yaygın kullanımları şunlardır:  
   
--   Şablonlu kod oluşturma: ASP.NET, XML Web Hizmetleri istemci proxy'leri, kod sihirbazları, tasarımcılar veya diğer kod yayan mekanizmaları için kod oluşturma.  
+- Şablonlu kod oluşturma: ASP.NET, XML Web Hizmetleri istemci proxy'leri, kod sihirbazları, tasarımcılar veya diğer kod yayan mekanizmaları için kod oluşturma.  
   
--   Dinamik derleme: tek veya birden çok dilde kod derlemesini destekleme.  
+- Dinamik derleme: tek veya birden çok dilde kod derlemesini destekleme.  
   
 ## <a name="building-a-codedom-graph"></a>CodeDOM grafiği derleme  
  <xref:System.CodeDom> Ad alanı dil sözdiziminden bağımsız kaynak kodu mantıksal yapısını temsil etmek için sınıflar sağlar.  

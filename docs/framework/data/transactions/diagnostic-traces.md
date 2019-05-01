@@ -1,18 +1,18 @@
 ---
-title: Tanılama izleri
+title: Tanılama İzlemeleri
 ms.date: 03/30/2017
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
 ms.openlocfilehash: 56f79fb9140785188996cc413eca4dd530037ccd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934803"
 ---
-# <a name="diagnostic-traces"></a>Tanılama izleri
-İzlemeler uygulama yürütmesi sırasında oluşturulan belirli iletileri yayımlanmasıyla ' dir. İzleme kullanırken, toplama ve gönderilen iletileri kaydetmek için bir mekanizma olması gerekir. İzleme iletileri dinleyicileri tarafından alınır. Toplamak, depolamak ve izleme iletilerini yönlendirmek için bir dinleyici amacı budur. Dinleyicileri İzleme çıktısı günlüğü, pencere veya metin dosyası gibi uygun bir hedefe yönlendirir.  
+# <a name="diagnostic-traces"></a>Tanılama İzlemeleri
+Uygulama yürütme sırasında oluşturulan özel iletilerinin yayımlama izlemeleri var. İzleme kullanırken, toplama ve gönderilen iletilerin kaydetmek için bir mekanizma olması gerekir. İzleme iletilerini dinleyicileri tarafından alınır. Toplamak, depolamak ve izleme iletilerini yönlendirmek için bir dinleyici amacı olan. Dinleyiciler bir günlük, pencere veya metin dosyası gibi uygun bir hedef izleme çıkışa doğrudan.  
   
- Bu tür bir dinleyici <xref:System.Diagnostics.DefaultTraceListener>, otomatik olarak oluşturulur ve izleme etkinleştirildiğinde başlatıldı. Herhangi bir ek kaynağına yönlendirilmesi için izleme çıktısı istiyorsanız oluşturmalı ve ek izleme dinleyicileri başlatılamıyor. Oluşturduğunuz dinleyicileri ihtiyaçlarınıza uygun olmalıdır. Örneğin, metin kaydı tüm izleme çıktısını isteyebilirsiniz. Bu durumda, tüm çıktı yazdı etkinleştirildiğinde yeni bir metin dosyası için bir dinleyici oluşturun. Diğer yandan, yalnızca uygulama yürütme sırasında çıkış görüntülemek isteyebilirsiniz. Bu durumda, tüm çıkış için bir konsol penceresi yönlendirilmiş bir dinleyici oluşturabilirsiniz. <xref:System.Diagnostics.EventLogTraceListener> İzleme çıktısı için bir olay günlüğüne yönlendirebilir ve <xref:System.Diagnostics.TextWriterTraceListener> İzleme çıktısı bir akışa yazabilirsiniz.  
+ Tür bir dinleyici <xref:System.Diagnostics.DefaultTraceListener>, otomatik olarak oluşturulur ve izleme etkin olduğunda başlatılır. Herhangi bir ek kaynaklar için yönlendirilmesine İzleme çıkışı istiyorsanız, oluşturun ve ek izleme dinleyicileri başlatır. Oluşturduğunuz dinleyicileri ihtiyaçlarınıza uygun olmalıdır. Örneğin, bir metin kayıt tüm izleme çıkış isteyebilirsiniz. Bu durumda, tüm çıktı yazdı etkinleştirildiğinde yeni bir metin dosyası için bir dinleyici oluşturun. Diğer yandan, yalnızca uygulama yürütme sırasında çıkış görüntülemek isteyebilirsiniz. Bu durumda, tüm çıkış için bir konsol penceresi yönlendirilmiş bir dinleyici oluşturabilirsiniz. <xref:System.Diagnostics.EventLogTraceListener> Bir olay günlüğüne izleme çıkış yönlendirebilir ve <xref:System.Diagnostics.TextWriterTraceListener> İzleme çıkışı bir akışa yazabilirsiniz.  
   
 ## <a name="enabling-tracing"></a>İzlemeyi etkinleştirme  
  İşlem sırasında izlemeleri etkinleştirmek için uygulamanızın yapılandırma dosyasını düzenlemeniz gerekir. Bir örnek verilmiştir.  
@@ -33,48 +33,48 @@ ms.locfileid: "33363473"
 </configuration>  
 ```  
   
- <xref:System.Transactions> izlemeler "System.Transactions" adlı kaynak yazılır. Kullanabileceğiniz `add` adını ve kullanmak istediğiniz İzleme dinleyicisi türünü belirtmek için. Bizim örnek yapılandırmada, biz dinleyicisi "tx" adlı ve standart .NET Framework İzleme dinleyicisi eklenen (<xref:System.Diagnostics.XmlWriterTraceListener>) istiyoruz kullanılacak türü. Kullanım `initializeData` günlük dosyasının adı için bu dinleyici ayarlamak için. Buna ek olarak, bir basit dosya adı için tam yol yerine kullanabilirsiniz.  
+ <xref:System.Transactions> izlemeleri "System.Transactions" adlı kaynağına yazılır. Kullanabileceğiniz `add` adını ve kullanmak istediğiniz İzleme dinleyicisi türünü belirtmek için. Bizim örnek yapılandırma, biz dinleyicisi "tx" adlı ve standart .NET Framework İzleme dinleyicisi eklenen (<xref:System.Diagnostics.XmlWriterTraceListener>) olarak kullanılacak istiyoruz türü. Kullanım `initializeData` günlük dosyasının adı için bu dinleyici ayarlamak için. Buna ek olarak, bir basit dosya adı için tam yol yerine kullanabilirsiniz.  
   
- Her izleme ileti türü önem derecesini belirtmek için bir düzeyi atanır. App-etki alanı izleme düzeyi eşit veya daha düşük bir olay türü düzeyini ise, bu mesajı oluşturulur. İzleme düzeyini tarafından denetlenen `switchValue` yapılandırma dosyasında ayarlama. Tanılama izleme iletilerini kaynaklarıyla ilişkili düzeyleri aşağıdaki tabloda tanımlanır.  
+ Her izleme iletisi türü önem derecesini belirtmek için bir düzeyi atanır. App-etki alanı izleme düzeyi eşit veya daha düşük bir olay türü düzeyi ise, bu ileti sonra oluşturulur. İzleme düzeyini tarafından denetlenir `switchValue` yapılandırma dosyasında ayarı. Tanılama izleme iletilerini ile ilişkili olan düzeyleri aşağıdaki tabloda tanımlanır.  
   
 |İzleme düzeyi|Açıklama|  
 |-----------------|-----------------|  
-|Kritik|Aşağıdaki gibi önemli hataları oluştu:<br /><br /> -Kullanıcı işlevindeki bir hemen kaybına neden olabilir bir hata oluştu.<br />-Yönetici işlev kaybı olmaması için işlem yapmanızı gerektiren bir olay.<br />-Kod askıda kalır.<br />-Bu izleme düzeyi, kritik diğer izlemeleri yorumlanması için yeterli içerik de sağlayabilirsiniz. Bu işlemleri için ciddi bir arıza öndeki dizisini tanımasına yardımcı olabilir.|  
+|Kritik|Aşağıdaki gibi önemli hataları oluştu:<br /><br /> -Hemen bir kaybına kullanıcı işlevindeki neden olabilir bir hata oluştu.<br />-İşlevsellik kaybını önlemek amacıyla eyleme geçmek bir yönetici gerektirir bir olay.<br />-Kod kapatır.<br />-Bu izleme düzeyini kritik diğer izlemeleri yorumlanması için yeterli bağlamı da sağlayabilir. Bu işlemleri için ciddi bir arıza öndeki dizisini tanımasına yardımcı olabilir.|  
 |Hata|Bir hata (örneğin, geçersiz yapılandırma veya ağ davranış gibi) kullanıcı işlevselliği kaybına neden.|  
-|Uyarı|Bir koşul bulunduğunu daha sonra bir hata veya kritik hatası (başarısız veya bir sınır yaklaştığı Örneğin, ayırma) neden olabilir. Normal kullanıcı kodundan (örneğin, işlem iptal edildi, zaman aşımı, kimlik doğrulama başarısız oldu) hatalarının işlenmesini de bir uyarı oluşturabilir.|  
-|Bilgiler|İzleme ve tanılama sistem durumu, performans ölçüm veya profil oluşturma için faydalı iletileri üretilir. Bu işlem ve kaydı ömrü gibi olaylar oluşturulmakta veya kaydedilmiş, önemli bir sınır aşma veya önemli miktarda kaynak ayırma bir işlem içerebilir. Bir geliştirici sonra gibi bilgileri kapasite planlama ve performans yönetimi için kullanabilir.|  
+|Uyarı|Bir koşul bulunduğunu daha sonra bir hata veya kritik hatası (başarısız veya bir sınır yaklaştığı Örneğin, ayırma) neden olabilir. Kullanıcı kodu (örneğin, işlem iptal edildi, zaman aşımları, kimlik doğrulaması başarısız oldu) hatalarını normal işlenmesi ayrıca bir uyarı üretir.|  
+|Bilgiler|İzleme ve tanılama sistem durumu, performans ölçüm veya profil oluşturma için faydalı iletileri üretilir. Bunlar, işlem ve liste ömrü gibi olayları oluşturulamaz veya kaydedilmiş, önemli kaynak ayırma veya önemli sınırının kesen bir işlem içerebilir. Bir geliştirici sonra gibi bilgileri kapasite planlama ve performans yönetimi için kullanabilir.|  
   
 ## <a name="trace-codes"></a>İzleme kodları  
- Aşağıdaki tablo tarafından oluşturulan izleme kodlarını listeler <xref:System.Transactions> altyapı. İzleme kodu tanıtıcısı tablosuna dahil olan <xref:System.Diagnostics.EventTypeFilter.EventType%2A> izleme ve içinde yer alan ek veriler için numaralandırma düzeyi **TraceRecord** izleme için. Ayrıca, izleme karşılık gelen izleme düzeyini ayrıca depolanan **TraceRecord**.  
+ Aşağıdaki tablo tarafından oluşturulan izleme kodları listeler <xref:System.Transactions> altyapı. İzleme kodu tanımlayıcısını içerir tabloda <xref:System.Diagnostics.EventTypeFilter.EventType%2A> izleme ve içerdiği ek veriler için numaralandırma düzeyi **TraceRecord** izlemeye. Ayrıca, izleme karşılık gelen izleme düzeyini de depolanan **TraceRecord**.  
   
-|TraceCode|Olay türü|TraceRecord fazladan verileri|  
+|TraceCode|Olay türü|Tracerecord ek verileri|  
 |---------------|---------------|-------------------------------|  
-|TransactionCreated|Bilgi|TransactionTraceId|  
-|TransactionPromoted|Bilgi|Yerel TransactionTraceId, dağıtılmış TransactionTraceId|  
-|EnlistmentCreated|Bilgi|TransactionTraceId, EnlistmentTraceId, EnlistmentType (dayanıklı/volatile) EnlistmentOptions|  
-|EnlistmentCallbackNegative|Uyarı|TransactionTraceId, EnlistmentTraceId,<br /><br /> Geri çağırma (forcerollback/iptal/nin şüpheli işlemi olmadığından)|  
-|TransactionRollbackCalled|Uyarı|TransactionTraceId|  
-|TransactionAborted|Uyarı|TransactionTraceId|  
-|TransactionInDoubt|Uyarı|TransactionTraceId|  
-|TransactionScopeCreated|Bilgi|TransactionScopeResult aşağıdaki olabilir:<br /><br /> -Yeni bir işlem.<br />-İşlem geçirildi.<br />-Bağımlı işlem geçirildi.<br />-Geçerli hareket kullanarak.<br />-İşlem yok.<br /><br /> Yeni geçerli TransactionTraceId|  
-|TransactionScopeDisposed|Bilgi|Kapsamın TransactionTraceId "geçerli işlem beklenen".|  
-|TransactionScopeIncomplete|Uyarı|Kapsamın TransactionTraceId "geçerli işlem beklenen".|  
-|TransactionScopeNestedIncorrectly|Uyarı|Kapsamın TransactionTraceId "geçerli işlem beklenen".|  
-|TransactionScopeCurrentTransactionChanged|Uyarı|Eski geçerli TransactionTraceId, diğer TransactionTraceId|  
-|TransactionScopeTimeout|Uyarı|Kapsamın TransactionTraceId "geçerli işlem beklenen".|  
-|DependentCloneCreated|Bilgi|TransactionTraceId, bağımlı işlem türünü (RollbackIfNotComplete/BlockCommitUntilComplete) oluşturuldu|  
-|DependentCloneComplete|Bilgi|TransactionTraceId|  
+|TransactionCreated|Bilgi|Transactiontraceıd|  
+|TransactionPromoted|Bilgi|Yerel Transactiontraceıd, dağıtılmış Transactiontraceıd|  
+|EnlistmentCreated|Bilgi|Transactiontraceıd, Enlistmenttraceıd, EnlistmentType (dayanıklı/geçici) EnlistmentOptions|  
+|EnlistmentCallbackNegative|Uyarı|Transactiontraceıd, Enlistmenttraceıd,<br /><br /> Geri çağırma (forcerollback/iptal/nin şüpheli işlemi olmadığından)|  
+|TransactionRollbackCalled|Uyarı|Transactiontraceıd|  
+|TransactionAborted|Uyarı|Transactiontraceıd|  
+|TransactionInDoubt|Uyarı|Transactiontraceıd|  
+|TransactionScopeCreated|Bilgi|TransactionScopeResult şu olabilir:<br /><br /> -Yeni bir işlem.<br />-İşlem geçirildi.<br />-Bağımlı işlem geçirildi.<br />-Geçerli işlem kullanıyor.<br />-İşlem yok.<br /><br /> Yeni geçerli Transactiontraceıd|  
+|TransactionScopeDisposed|Bilgi|Transactiontraceıd kapsamın, "geçerli işlem beklenen".|  
+|TransactionScopeIncomplete|Uyarı|Transactiontraceıd kapsamın, "geçerli işlem beklenen".|  
+|TransactionScopeNestedIncorrectly|Uyarı|Transactiontraceıd kapsamın, "geçerli işlem beklenen".|  
+|TransactionScopeCurrentTransactionChanged|Uyarı|Eski geçerli Transactiontraceıd, diğer Transactiontraceıd|  
+|TransactionScopeTimeout|Uyarı|Transactiontraceıd kapsamın, "geçerli işlem beklenen".|  
+|DependentCloneCreated|Bilgi|Transactiontraceıd, bağımlı işlem türü (Rollbackıfnotcomplete/BlockCommitUntilComplete) oluşturuldu|  
+|DependentCloneComplete|Bilgi|Transactiontraceıd|  
 |RecoveryComplete'in|Bilgi|Kaynak Yöneticisi GUID (değerinden tabanı)|  
 |Reenlist|Bilgi|Kaynak Yöneticisi GUID (değerinden tabanı)|  
-|TransactionSerialized|Bilgi|TransactionTraceId.|  
+|TransactionSerialized|Bilgi|Transactiontraceıd.|  
 |TransactionException|Hata|Özel durum iletisi|  
 |InvalidOperationException|Hata|Özel durum iletisi|  
 |InternalError|Kritik|Özel durum iletisi|  
-|TransferEvent||Ne zaman bir işlem serisi veya den yükseltilen bir <xref:System.Transactions> dağıtılmış bir işlem, geçerli etkinlik kimliğini ExecutionContext ve dağıtılmış işlem Kimliğini yazılır.<br /><br /> DTC geri yönetilen koda aradığında, dağıtılmış işlem kimliği olarak ActivityID ExecutionContext içinde geri çağırma süresince ayarlanır.|  
+|TransferEvent||Ne zaman bir işlem seri durumdan veya öğesinden yükseltilmiş bir <xref:System.Transactions> işlem dağıtılmış bir ExecutionContext ve dağıtılmış işlem kimliği geçerli etkinlik kimliği yazılır.<br /><br /> DTC yönetilen koda geri çağırır dağıtılmış işlem kimliği olarak etkinlik kimliği ExecutionContext içinde geri çağırma süresi için ayarlanır.|  
 |ConfiguredDefaultTimeoutAdjusted|Uyarı|Ek veri yok|  
-|TransactionTimeout|Uyarı|İşlemin zaman aşımına uğradı TransactionTraceId.|  
+|TransactionTimeout|Uyarı|Transactiontraceıd işlemin zaman aşımına uğradı.|  
   
- Önceki ek veriler öğelerin her biri için XML Şeması aşağıdaki biçime sahiptir.  
+ Önceki ek veri öğelerinin her biri için XML Şeması aşağıdaki biçime sahiptir.  
   
 ### <a name="transactiontraceidentifier"></a>TransactionTraceIdentifier  
  `<TransactionTraceIdentifier>`  
@@ -134,4 +134,4 @@ ms.locfileid: "33363473"
  `</ResourceManagerId>`  
   
 ## <a name="security-issues-for-tracing"></a>İzleme için güvenlik sorunları  
- Bir yönetici olarak izlemeyi etkinleştirdiğinizde, hassas bilgiler herkes tarafından izlenen bir izleme günlüğü varsayılan olarak yazılmış olabilir. Tüm olası güvenlik tehdidi azaltmak için izleme günlüğü paylaşım ve dosya sistemi erişim izinleri tarafından denetlenen güvenli bir yerde depolamanız gerekir.
+ Yönetici olarak izlemeyi etkinleştirdiğinizde, hassas bilgiler herkes tarafından izlenen bir izleme günlüğü varsayılan olarak yazılmış olabilir. Tüm olası bir güvenlik tehdidi azaltmak için izleme günlüğü paylaşımı ve dosya sistemi erişim izinleri tarafından denetlenen güvenli bir konumda depolamanız gerekir.

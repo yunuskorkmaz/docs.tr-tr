@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
 ms.openlocfilehash: ed5ed56366911c3676c4413711207ac0a8f85765
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925654"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Temel Sorgu İşlemleri (Visual Basic)
 Bu konu, kısa bir giriş sağlar. [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ifadeleri Visual Basic'te ve bazı sorguda gerçekleştirdiğiniz işlemleri tipik türleri. Daha fazla bilgi için aşağıdaki konulara bakın:  
@@ -81,7 +81,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Veri kaynağından birden çok alan seçmek için iki seçeneğiniz vardır:  
   
--   İçinde `Select` yan tümcesi, sonuç dahil etmek istediğiniz alanları belirtin. Derleyici bu alanları olarak kendi özellikleri olan anonim bir tür tanımlar. Daha fazla bilgi için [anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+- İçinde `Select` yan tümcesi, sonuç dahil etmek istediğiniz alanları belirtin. Derleyici bu alanları olarak kendi özellikleri olan anonim bir tür tanımlar. Daha fazla bilgi için [anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
      Aşağıdaki örnekte döndürülen öğeler anonim bir türün örneklerinin olduğundan, türüne adıyla başka bir yerde kodunuzda başvuruda bulunamaz. Derleyici tarafından atanan adı türü için normal Visual Basic kodu içinde geçerli olmayan karakterler içeriyor. Aşağıdaki örnekte, sorgu tarafından döndürülen koleksiyondaki öğelerin `londonCusts4` anonim bir türün örnekleri  
   
@@ -89,7 +89,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      -veya-  
   
--   Adlandırılmış tür sonucuna dahil, oluşturma ve başlatma türün örneklerinin istediğiniz belirli alanları içeren tanımlama `Select` yan tümcesi. Yalnızca bireysel sonuçları döndürülen koleksiyon dışında kullanmanız gerekiyorsa veya yöntem çağrılarını parametreler olarak geçirileceğini gerekiyorsa bu seçeneği kullanın. Türünü `londonCusts5` IEnumerable (Of NamePhone) aşağıdaki örnekte olduğu.  
+- Adlandırılmış tür sonucuna dahil, oluşturma ve başlatma türün örneklerinin istediğiniz belirli alanları içeren tanımlama `Select` yan tümcesi. Yalnızca bireysel sonuçları döndürülen koleksiyon dışında kullanmanız gerekiyorsa veya yöntem çağrılarını parametreler olarak geçirileceğini gerekiyorsa bu seçeneği kullanın. Türünü `londonCusts5` IEnumerable (Of NamePhone) aşağıdaki örnekte olduğu.  
   
      [!code-vb[VbLINQBasicOps#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#7)]  
   

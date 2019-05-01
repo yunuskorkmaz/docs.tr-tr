@@ -3,11 +3,11 @@ title: (Visual Basic) Visual Studio'da bir nesneyi kalıcı kılma
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
 ms.openlocfilehash: 55ad2049003baaed26f4db909ae466aefdd161e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783480"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>İzlenecek yol: (Visual Basic) Visual Studio'da bir nesneyi kalıcı kılma
 Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasarım zamanında olsa da, çalışma zamanında girilen değerleri kaybedilir. Seri hale getirme, bir nesnenin veri değerleri depolamak ve bunları nesnesi örneği başlatıldığında almanıza imkan tanıyan örnekler arasında kalıcı hale getirmek için kullanabilirsiniz.  
@@ -127,7 +127,7 @@ Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasar�
   
 ### <a name="to-mark-a-class-as-serializable"></a>Bir sınıf seri hale getirilebilir olarak işaretlemek için  
   
--   Kredi sınıfı için sınıf bildirimi aşağıdaki gibi değiştirin:  
+- Kredi sınıfı için sınıf bildirimi aşağıdaki gibi değiştirin:  
   
     ```vb  
     <Serializable()>  
@@ -138,7 +138,7 @@ Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasar�
   
 ### <a name="to-prevent-a-member-from-being-serialized"></a>Serileştirilmekte olan bir üye önlemek için  
   
--   Değişiklik bildirimi `PropertyChanged` aşağıdaki gibi olay:  
+- Değişiklik bildirimi `PropertyChanged` aşağıdaki gibi olay:  
   
     ```vb  
     <NonSerialized()>  
@@ -150,7 +150,7 @@ Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasar�
   
 ### <a name="to-add-references-to-namespaces"></a>Ad alanlarına başvurular eklemek için  
   
--   Üstüne aşağıdaki deyimleri ekleyin `Form1` sınıfı:  
+- Üstüne aşağıdaki deyimleri ekleyin `Form1` sınıfı:  
   
     ```vb  
     Imports System.IO  
@@ -197,7 +197,7 @@ Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasar�
   
 ### <a name="to-save-the-data-and-serialize-the-class"></a>Verileri Kaydet ve sınıfı serileştirmek için  
   
--   Aşağıdaki kodu ekleyin `Form1_FormClosing` olay yordam:  
+- Aşağıdaki kodu ekleyin `Form1_FormClosing` olay yordam:  
   
     ```vb  
     Private Sub Form1_FormClosing() Handles MyBase.FormClosing  

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
 ms.openlocfilehash: c1881ffa1c6fca546b086efea59d2263af853949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792177"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>İzlenecek yol: Arka Planda İşlem Çalıştırma
 Sahip olduğunuz işleminin tamamlanması uzun sürer ve kullanıcı arabiriminizde gecikmelere neden istiyor musunuz, kullanabileceğiniz <xref:System.ComponentModel.BackgroundWorker> sınıfı, başka bir iş parçacığı üzerinde işlemi çalıştıramadı.  
@@ -96,9 +96,9 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve kullanıcı arabirimini
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
   
--   Zaman uyumsuz bir işlem devam ederken, ilerleme durumunu raporlayan bir form uygulama. Daha fazla bilgi için [nasıl yapılır: Arka plan işlemi kullanan bir Form uygulama](how-to-implement-a-form-that-uses-a-background-operation.md).  
+- Zaman uyumsuz bir işlem devam ederken, ilerleme durumunu raporlayan bir form uygulama. Daha fazla bilgi için [nasıl yapılır: Arka plan işlemi kullanan bir Form uygulama](how-to-implement-a-form-that-uses-a-background-operation.md).  
   
--   Bileşenler için zaman uyumsuz deseni destekleyen bir sınıf uygulamak. Daha fazla bilgi için [olay tabanlı zaman uyumsuz deseni uygulama](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
+- Bileşenler için zaman uyumsuz deseni destekleyen bir sınıf uygulamak. Daha fazla bilgi için [olay tabanlı zaman uyumsuz deseni uygulama](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

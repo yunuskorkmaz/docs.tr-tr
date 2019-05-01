@@ -3,11 +3,11 @@ title: Benzersiz XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
 ms.openlocfilehash: 650cd6b8b8149529f115f22a11d19178fbd6d302
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785380"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Benzersiz XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
 Bir XML Şeması Tanım Dili (XSD) şemaya içinde **benzersiz** öğe, öğe veya öznitelik benzersizlik kısıtlamasını belirtir. Bir XML şeması bir ilişkisel şemasına çevirme sürecinde, benzersiz bir kısıtlamaya bir öğe veya öznitelik XML şemasında belirtilen UNIQUE kısıtlaması eşlenir <xref:System.Data.DataTable> karşılık gelen <xref:System.Data.DataSet> , oluşturulur.  

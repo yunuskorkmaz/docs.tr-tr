@@ -3,20 +3,20 @@ title: İleti Akışı Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
 ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797494"
 ---
 # <a name="message-flow-overview"></a>İleti Akışı Genel Bakış
 Birbirine bağlı hizmetleri içeren dağıtılmış bir sistemde hizmetler arasında nedensel ilişkilerini belirlemek gereklidir. Kök neden analizi ve izleme, sorun giderme durumu gibi önemli senaryoları desteklemek için bir istek akışının bir parçası olan çeşitli bileşenleri anlamak önemlidir. İzlemeler, .NET Framework 4'te çeşitli hizmetler arasındaki bağıntıyı etkinleştirmek için aşağıdaki özellikler sayesinde desteği ekledik:
 
--   Çözümleme izleme: Yüksek performanslı ve düşük ayrıntı izleme özelliği için olay izleme Windows (ETW) kullanarak.
+- Çözümleme izleme: Yüksek performanslı ve düşük ayrıntı izleme özelliği için olay izleme Windows (ETW) kullanarak.
 
--   WCF/WF Hizmetleri için model uçtan uca etkinlik: Bu özellik, izlemeleri tarafından oluşturulan bağıntısı destekler <xref:System.ServiceModel> ve <xref:System.Workflow.ComponentModel> ad alanları.
+- WCF/WF Hizmetleri için model uçtan uca etkinlik: Bu özellik, izlemeleri tarafından oluşturulan bağıntısı destekler <xref:System.ServiceModel> ve <xref:System.Workflow.ComponentModel> ad alanları.
 
--   ETW İzleme WF için: Bu özellik, iş akışının geçerli durumunu ve ilerlemesini görünürlük sağlamak için WF Hizmetleri tarafından oluşturulan izleme kayıtları kullanır.
+- ETW İzleme WF için: Bu özellik, iş akışının geçerli durumunu ve ilerlemesini görünürlük sağlamak için WF Hizmetleri tarafından oluşturulan izleme kayıtları kullanır.
 
  Bir izleme veya kayıt izleme hatanın günlüğe kaydedilip kaydedilmediğine kod kusurlarını veya yanlış biçimlendirilmiş iletiler bulmak için kullanılabilir. Olay iletisi üst bilgisindeki bağıntı düğümün ActivityID özelliği hataya neden olan etkinliğini belirlemek için kullanılabilir. Etkinlik Kimliğine göre ileti akışı izlemeyi etkinleştirmek için bkz: [ileti akışı izlemeyi yapılandırma](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md). Bu konu, ileti akışı izlemeyi kullanmaya başlama öğreticisinde oluşturulan projedeki etkinleştirme gösterir.
 

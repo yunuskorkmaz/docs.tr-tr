@@ -3,11 +3,11 @@ title: Kimlik Doğrulama için Genişletilmiş Koruma Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
 ms.openlocfilehash: b171644c3869df119f09ee4815a06563c4f2c160
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856732"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Kimlik Doğrulama için Genişletilmiş Koruma Genel Bakış
 Kimlik doğrulama için genişletilmiş koruma, bir saldırganın istemci kimlik bilgileri yakalar ve bunları bir sunucuya yönlendirdiği ortadaki-de-adam (MITM) saldırılarına karşı korumaya yardımcı olur.  
@@ -24,11 +24,11 @@ Kimlik doğrulama için genişletilmiş koruma, bir saldırganın istemci kimlik
   
  Sunucunun aşağıdaki koruma düzeyleri sahip olabilir:  
   
--   Yok. Kanal bağlama doğrulama yapılmaz. Bu güncelleştirilmemiş tüm sunucuların davranıştır.  
+- Yok. Kanal bağlama doğrulama yapılmaz. Bu güncelleştirilmemiş tüm sunucuların davranıştır.  
   
--   Kısmi. Güncelleştirilen tüm istemcilerin, sunucuya kanal bağlama bilgileri sağlamanız gerekir. Güncelleştirilmemiş istemciler, bunu yapmak gerekmez. Bu uygulama uyumluluğu için sağlayan bir ara bir seçenektir.  
+- Kısmi. Güncelleştirilen tüm istemcilerin, sunucuya kanal bağlama bilgileri sağlamanız gerekir. Güncelleştirilmemiş istemciler, bunu yapmak gerekmez. Bu uygulama uyumluluğu için sağlayan bir ara bir seçenektir.  
   
--   Tam. Tüm istemciler, kanal bağlama bilgileri sağlamanız gerekir. Sunucu, bunu yapmayın istemcilerinden kimlik doğrulama istekleri reddeder.  
+- Tam. Tüm istemciler, kanal bağlama bilgileri sağlamanız gerekir. Sunucu, bunu yapmayın istemcilerinden kimlik doğrulama istekleri reddeder.  
   
  Win7 CBT/genişletilmiş koruma örnek daha fazla bilgi için bkz.  
   

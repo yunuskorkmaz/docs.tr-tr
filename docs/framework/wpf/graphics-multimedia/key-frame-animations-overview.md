@@ -7,11 +7,11 @@ helpviewer_keywords:
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
 ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785820"
 ---
 # <a name="key-frame-animations-overview"></a>Anahtar-Çerçeve Animasyonlara Genel Bakış
 Bu konu, anahtar-çerçeve animasyonlara tanıtır. Anahtar-çerçeve animasyonlara ikiden fazla hedef değerleri kullanarak animasyon olanak sağlar ve animasyonun ilişkilendirme metodunu denetleyebilirsiniz.  
@@ -28,11 +28,11 @@ Bu konu, anahtar-çerçeve animasyonlara tanıtır. Anahtar-çerçeve animasyonl
   
  Anahtar çerçeve animasyonu ile animasyon uygulamak için aşağıdaki adımları tamamlayın.  
   
--   Animasyonu bildirin ve belirtin, <xref:System.Windows.Media.Animation.Timeline.Duration%2A>gelen/için/göre animasyon için yaptığınız gibi.  
+- Animasyonu bildirin ve belirtin, <xref:System.Windows.Media.Animation.Timeline.Duration%2A>gelen/için/göre animasyon için yaptığınız gibi.  
   
--   Her bir hedef değer için uygun türde bir anahtar kare oluşturmak için kendi değerini ayarlayın ve <xref:System.Windows.Media.Animation.KeyTime>, animasyonun ekleyin <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> koleksiyonu.  
+- Her bir hedef değer için uygun türde bir anahtar kare oluşturmak için kendi değerini ayarlayın ve <xref:System.Windows.Media.Animation.KeyTime>, animasyonun ekleyin <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> koleksiyonu.  
   
--   From/To/By ile olduğu gibi bir özelliğe animasyon ilişkilendirmek animasyon. Bir görsel taslak kullanarak özelliğe animasyon uygulama hakkında daha fazla bilgi için bkz. [görsel taslaklara genel bakış](storyboards-overview.md).  
+- From/To/By ile olduğu gibi bir özelliğe animasyon ilişkilendirmek animasyon. Bir görsel taslak kullanarak özelliğe animasyon uygulama hakkında daha fazla bilgi için bkz. [görsel taslaklara genel bakış](storyboards-overview.md).  
   
  Aşağıdaki örnekte bir <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> animasyon uygulamak için bir <xref:System.Windows.Shapes.Rectangle> dört farklı konumlara öğesi.  
   
@@ -85,33 +85,33 @@ Bu konu, anahtar-çerçeve animasyonlara tanıtır. Anahtar-çerçeve animasyonl
   
  Belirtmek için bir anahtar kare birincil amacı olan bir <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> ve <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>. Her anahtar çerçeve türü, bu iki özelliği sağlar.  
   
--   <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> Özelliği, anahtar-çerçeve için hedef değer belirtir.  
+- <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> Özelliği, anahtar-çerçeve için hedef değer belirtir.  
   
--   <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> Özelliği belirtir (animasyonun içinde <xref:System.Windows.Media.Animation.Timeline.Duration%2A>) anahtar çerçevesinin <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> ulaşıldı.  
+- <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> Özelliği belirtir (animasyonun içinde <xref:System.Windows.Media.Animation.Timeline.Duration%2A>) anahtar çerçevesinin <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> ulaşıldı.  
   
  Anahtar çerçeveler tarafından tanımlanan sırayla anahtar çerçeve animasyonu başladığında gezinir kendi <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> özellikleri.  
   
--   0 zamanında bir anahtar çerçeve yok ise, animasyon hedef özelliğinin geçerli değeri arasında bir geçiş oluşturur ve <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> ilk anahtar karesine; Aksi takdirde, animasyon değeri olur ilk anahtar çerçevesi değerini çıkışını.  
+- 0 zamanında bir anahtar çerçeve yok ise, animasyon hedef özelliğinin geçerli değeri arasında bir geçiş oluşturur ve <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> ilk anahtar karesine; Aksi takdirde, animasyon değeri olur ilk anahtar çerçevesi değerini çıkışını.  
   
--   Animasyon arasında bir geçiş oluşturur <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> ikinci anahtar çerçevesi tarafından belirtilen ilişkilendirme yöntemini kullanarak ilk ve ikinci anahtar çerçevesi. Geçiş ilk anahtar çerçeve başlar <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> ve ne zaman sona erer ikinci anahtar çerçeve <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> ulaşıldı.  
+- Animasyon arasında bir geçiş oluşturur <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> ikinci anahtar çerçevesi tarafından belirtilen ilişkilendirme yöntemini kullanarak ilk ve ikinci anahtar çerçevesi. Geçiş ilk anahtar çerçeve başlar <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> ve ne zaman sona erer ikinci anahtar çerçeve <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> ulaşıldı.  
   
--   Animasyon, sonraki her anahtar çerçeve ve önceki anahtar çerçevesi arasındaki geçişleri oluşturmaya devam eder.  
+- Animasyon, sonraki her anahtar çerçeve ve önceki anahtar çerçevesi arasındaki geçişleri oluşturmaya devam eder.  
   
--   Son olarak, anahtar çerçeve ile anahtar süresi en büyük değerine animasyon geçişleri, animasyonun değerinden küçük veya ona eşit <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
+- Son olarak, anahtar çerçeve ile anahtar süresi en büyük değerine animasyon geçişleri, animasyonun değerinden küçük veya ona eşit <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
   
  Animasyonun <xref:System.Windows.Media.Animation.Timeline.Duration%2A> olduğu <xref:System.Windows.Duration.Automatic%2A> veya kendi <xref:System.Windows.Media.Animation.Timeline.Duration%2A> son anahtar çerçeve animasyon biter saati eşittir. Aksi halde, animasyonun <xref:System.Windows.Duration> son anahtar çerçeve animasyonu tutar kadar anahtar çerçeve değere sonuna ulaşana anahtar saatten büyük, <xref:System.Windows.Duration>. Anahtar çerçeve animasyonu tüm animasyonlar gibi kullanır, <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> özelliği etkin süresinin sonuna ulaştığında, son değeri tutan olup olmadığını belirlemek için. Daha fazla bilgi için [Zamanlama Davranışlarına Genel Bakış](timing-behaviors-overview.md).  
   
  Aşağıdaki örnekte <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> göstermek için önceki örnekte tanımlanan nesne nasıl <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> ve <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> özellikleri iş.  
   
--   İlk anahtar çerçevesi, hemen animasyonun çıkış değeri 0 olarak ayarlar.  
+- İlk anahtar çerçevesi, hemen animasyonun çıkış değeri 0 olarak ayarlar.  
   
--   İkinci anahtar kare 0'dan için 350 canlandırır. İlk anahtar kare bittikten sonra başlar (zaman = 0 saniye) ve bitiş zamanı 2 saniye çalar, = 0:0:2.  
+- İkinci anahtar kare 0'dan için 350 canlandırır. İlk anahtar kare bittikten sonra başlar (zaman = 0 saniye) ve bitiş zamanı 2 saniye çalar, = 0:0:2.  
   
--   Üçüncü anahtar çerçevesi 50 ' 350 canlandırır. İkinci anahtar çerçevesi bittikten sonra başlar (zaman = 2 saniye) ve bitiş zamanı 5 saniye çalar, = 0:0:7.  
+- Üçüncü anahtar çerçevesi 50 ' 350 canlandırır. İkinci anahtar çerçevesi bittikten sonra başlar (zaman = 2 saniye) ve bitiş zamanı 5 saniye çalar, = 0:0:7.  
   
--   Dördüncü anahtar kare 50'den 200'e canlandırır. Üçüncü bir anahtar kare bittikten sonra başlar (zaman = 7 saniye) ve bitiş zamanı 1 saniye çalar = 0:0:8.  
+- Dördüncü anahtar kare 50'den 200'e canlandırır. Üçüncü bir anahtar kare bittikten sonra başlar (zaman = 7 saniye) ve bitiş zamanı 1 saniye çalar = 0:0:8.  
   
--   Çünkü <xref:System.Windows.Media.Animation.Timeline.Duration%2A> animasyonun özellik, 10 saniye olarak ayarlanmıştır, animasyon, bitmeden önce iki saniye için son değerini korur. zaman = 0:0:10.  
+- Çünkü <xref:System.Windows.Media.Animation.Timeline.Duration%2A> animasyonun özellik, 10 saniye olarak ayarlanmıştır, animasyon, bitmeden önce iki saniye için son değerini korur. zaman = 0:0:10.  
   
  [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
@@ -204,26 +204,26 @@ Anahtar eğrisi denetim noktası kullanma (0.25, 0,5) ve (0,75, 1.0)
 ### <a name="timespan-values"></a>TimeSpan değerleri  
  Kullanmanızı <xref:System.TimeSpan> belirtmek için değerleri bir <xref:System.Windows.Media.Animation.KeyTime>. Değer büyük veya 0'a eşit olmalıdır ve animasyonun süresini küçüktür veya eşittir. Aşağıdaki örnek, bir süresi olan bir animasyon anahtar süreleri saat değeri olarak belirtilen dört anahtar çerçeveler ile 10 saniye ve gösterir.  
   
--   İlk anahtar kare temel değerden ilk 3 bitiş zamanı saniye boyunca 100 canlandırır = 0:0:03.  
+- İlk anahtar kare temel değerden ilk 3 bitiş zamanı saniye boyunca 100 canlandırır = 0:0:03.  
   
--   İkinci anahtar çerçevesi 100 kullanıcıdan 200'e canlandırır. İlk anahtar kare bittikten sonra başlar (zaman = 3 saniye) ve bitiş zamanı 5 saniye çalar, = 0:0:8.  
+- İkinci anahtar çerçevesi 100 kullanıcıdan 200'e canlandırır. İlk anahtar kare bittikten sonra başlar (zaman = 3 saniye) ve bitiş zamanı 5 saniye çalar, = 0:0:8.  
   
--   Üçüncü bir anahtar kare 200'den 500'e canlandırır. İkinci anahtar çerçevesi bittikten sonra başlar (zaman = 8 saniye) ve bitiş zamanı 1 saniye çalar = 0:0:9.  
+- Üçüncü bir anahtar kare 200'den 500'e canlandırır. İkinci anahtar çerçevesi bittikten sonra başlar (zaman = 8 saniye) ve bitiş zamanı 1 saniye çalar = 0:0:9.  
   
--   Dördüncü anahtar kare 500'den 600 olarak canlandırır. Üçüncü bir anahtar kare bittikten sonra başlar (zaman 9 saniye =) ve bitiş zamanı 1 saniye çalar = 0:0:10.  
+- Dördüncü anahtar kare 500'den 600 olarak canlandırır. Üçüncü bir anahtar kare bittikten sonra başlar (zaman 9 saniye =) ve bitiş zamanı 1 saniye çalar = 0:0:10.  
   
  [!code-xaml[keyframes_ovw_snippet#TimeSpanKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#timespankeytimeexample)]  
   
 ### <a name="percentage-values"></a>Yüzde değerleri  
  Anahtar çerçeve animasyonun bazı yüzdesiyle biten bir yüzde değeri belirtir <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], arkasından bir sayı olarak yüzde belirtin `%` simgesi. Kod içinde kullanmanız <xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A> yöntemi ve bir <xref:System.Double> yüzdesini gösteren. Değer büyük veya 0'a eşit olmalıdır ve yüzde 100'değerinden küçük veya buna eşit. Aşağıdaki örnek, bir süresi olan bir animasyon 10 saniye ve yüzde olarak belirtilen anahtar süreleri dört anahtar çerçeveler gösterir.  
   
--   İlk anahtar kare temel değerden ilk 3 bitiş zamanı saniye boyunca 100 canlandırır = 0:0:3.  
+- İlk anahtar kare temel değerden ilk 3 bitiş zamanı saniye boyunca 100 canlandırır = 0:0:3.  
   
--   İkinci anahtar çerçevesi 100 kullanıcıdan 200'e canlandırır. İlk anahtar kare bittikten sonra başlar (zaman = 3 saniye) ve bitiş zamanı 5 saniye çalar, = 0:0:8 (0,8 * 10 = 8).  
+- İkinci anahtar çerçevesi 100 kullanıcıdan 200'e canlandırır. İlk anahtar kare bittikten sonra başlar (zaman = 3 saniye) ve bitiş zamanı 5 saniye çalar, = 0:0:8 (0,8 * 10 = 8).  
   
--   Üçüncü bir anahtar kare 200'den 500'e canlandırır. İkinci anahtar çerçevesi bittikten sonra başlar (zaman = 8 saniye) ve bitiş zamanı 1 saniye çalar = 0:0:9 (0.9 * 10 = 9).  
+- Üçüncü bir anahtar kare 200'den 500'e canlandırır. İkinci anahtar çerçevesi bittikten sonra başlar (zaman = 8 saniye) ve bitiş zamanı 1 saniye çalar = 0:0:9 (0.9 * 10 = 9).  
   
--   Dördüncü anahtar kare 500'den 600 olarak canlandırır. Üçüncü bir anahtar kare bittikten sonra başlar (zaman 9 saniye =) ve bitiş zamanı 1 saniye çalar = 0:0:10 (1 * 10 = 10).  
+- Dördüncü anahtar kare 500'den 600 olarak canlandırır. Üçüncü bir anahtar kare bittikten sonra başlar (zaman 9 saniye =) ve bitiş zamanı 1 saniye çalar = 0:0:10 (1 * 10 = 10).  
   
  [!code-xaml[keyframes_ovw_snippet#PercentageKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  
   
@@ -232,13 +232,13 @@ Anahtar eğrisi denetim noktası kullanma (0.25, 0,5) ve (0,75, 1.0)
   
  A <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> anahtar zaman dilimlerine böler süreden eşit her anahtar çerçeve bitiş zamanı belirlemek için anahtar kare sayısı. Aşağıdaki örnek, 10 saniye süre animasyon gösterir ve anahtar süreleri dört anahtar çerçeveler olarak belirtilen <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>.  
   
--   İlk anahtar kare temel değerden ilk 2,5 bitiş zamanı saniye boyunca 100 canlandırır 0:0:2.5 =.  
+- İlk anahtar kare temel değerden ilk 2,5 bitiş zamanı saniye boyunca 100 canlandırır 0:0:2.5 =.  
   
--   İkinci anahtar çerçevesi 100 kullanıcıdan 200'e canlandırır. İlk anahtar kare bittikten sonra başlar (zaman 2.5 saniye =) ve yaklaşık 2,5 bitiş zamanı saniye çalar, = 0:0:5.  
+- İkinci anahtar çerçevesi 100 kullanıcıdan 200'e canlandırır. İlk anahtar kare bittikten sonra başlar (zaman 2.5 saniye =) ve yaklaşık 2,5 bitiş zamanı saniye çalar, = 0:0:5.  
   
--   Üçüncü bir anahtar kare 200'den 500'e canlandırır. İkinci anahtar çerçevesi bittikten sonra başlar (zaman = 5 saniye) ve bitiş zamanı 2,5 saniye çalar 0:0:7.5 =.  
+- Üçüncü bir anahtar kare 200'den 500'e canlandırır. İkinci anahtar çerçevesi bittikten sonra başlar (zaman = 5 saniye) ve bitiş zamanı 2,5 saniye çalar 0:0:7.5 =.  
   
--   Dördüncü anahtar kare 500'den 600 olarak canlandırır. İkinci anahtar çerçevesi bittikten sonra başlar (zaman = 7.5 saniye) ve bitiş zamanı 2,5 saniye çalar, = 0:0:1.  
+- Dördüncü anahtar kare 500'den 600 olarak canlandırır. İkinci anahtar çerçevesi bittikten sonra başlar (zaman = 7.5 saniye) ve bitiş zamanı 2,5 saniye çalar, = 0:0:1.  
   
  [!code-xaml[keyframes_ovw_snippet#UniformKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  
   
@@ -263,11 +263,11 @@ Anahtar eğrisi denetim noktası kullanma (0.25, 0,5) ve (0,75, 1.0)
   
 2. Animasyonun belirlemek *toplam ilişkilendirme süre*, anahtar çerçeve animasyonu yineleme tamamlamak için gereken toplam süreyi.  
   
-    1.  Animasyonun <xref:System.Windows.Media.Animation.Timeline.Duration%2A> değil <xref:System.Windows.Duration.Automatic%2A> veya <xref:System.Windows.Duration.Forever%2A>, toplam ilişkilendirme zaman animasyonun değeri <xref:System.Windows.Media.Animation.Timeline.Duration%2A> özelliği.  
+    1. Animasyonun <xref:System.Windows.Media.Animation.Timeline.Duration%2A> değil <xref:System.Windows.Duration.Automatic%2A> veya <xref:System.Windows.Duration.Forever%2A>, toplam ilişkilendirme zaman animasyonun değeri <xref:System.Windows.Media.Animation.Timeline.Duration%2A> özelliği.  
   
-    2.  Aksi takdirde, toplam ilişkilendirme en büyük zamandır <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> varsa anahtar çerçeveleri arasında belirtilen değeri.  
+    2. Aksi takdirde, toplam ilişkilendirme en büyük zamandır <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> varsa anahtar çerçeveleri arasında belirtilen değeri.  
   
-    3.  Aksi takdirde, toplam ilişkilendirme süresi 1 saniye arasındadır.  
+    3. Aksi takdirde, toplam ilişkilendirme süresi 1 saniye arasındadır.  
   
 3. Çözümlemek için toplam ilişkilendirme zaman değerini kullanmak <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> değerleri.  
   

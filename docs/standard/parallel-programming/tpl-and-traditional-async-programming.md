@@ -11,30 +11,30 @@ ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908849"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL ve Geleneksel .NET Framework Zaman Uyumsuz Programlama
 .NET Framework, ı/O-bağlı ve hesaplama bağlantılı zaman uyumsuz işlemleri gerçekleştirmek için aşağıdaki iki standart desenler sağlar:  
   
--   Zaman uyumsuz programlama modeli (içinde zaman uyumsuz işlemleri temsil edilir başlangıç/bitiş yöntemlerin bir çifti tarafından gibi APM), <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> ve <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>.  
+- Zaman uyumsuz programlama modeli (içinde zaman uyumsuz işlemleri temsil edilir başlangıç/bitiş yöntemlerin bir çifti tarafından gibi APM), <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> ve <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>.  
   
--   Zaman uyumsuz işlemler adlandırılmış bir yöntemi/olay çifti tarafından gösterilir olay tabanlı zaman uyumsuz desen (EAP) *OperationName*zaman uyumsuz ve *OperationName*, örneğin, tamamlanmış <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> ve <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (.NET Framework 2.0 sürümünde EAP başlamıştır.)  
+- Zaman uyumsuz işlemler adlandırılmış bir yöntemi/olay çifti tarafından gösterilir olay tabanlı zaman uyumsuz desen (EAP) *OperationName*zaman uyumsuz ve *OperationName*, örneğin, tamamlanmış <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> ve <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (.NET Framework 2.0 sürümünde EAP başlamıştır.)  
   
  Görev paralel kitaplığı (TPL), ya da zaman uyumsuz desenleri ile çeşitli yollarla birlikte kullanılabilir. APM hem de EAP işlemlerini görev olarak kitaplığı tüketicilere getirebilir veya APM desenleri kullanıma sunar ancak bunları dahili olarak uygulamak için görev nesnelerinin kullanın. Kullanarak görev nesnelerinin her iki senaryoda kodu basitleştirmek ve aşağıdaki kullanışlı işlevsellik yararlanın:  
   
--   Geri çağırmalar görev başlatıldıktan sonra herhangi bir zamanda görev devamlılıkları biçiminde kaydedin.  
+- Geri çağırmalar görev başlatıldıktan sonra herhangi bir zamanda görev devamlılıkları biçiminde kaydedin.  
   
--   Yanıt olarak yürütülen birden çok işlemleri koordine bir `Begin_` yöntemi kullanarak <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> ve <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> yöntemleri veya <xref:System.Threading.Tasks.Task.WaitAll%2A> yöntemi veya <xref:System.Threading.Tasks.Task.WaitAny%2A> yöntemi.  
+- Yanıt olarak yürütülen birden çok işlemleri koordine bir `Begin_` yöntemi kullanarak <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> ve <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> yöntemleri veya <xref:System.Threading.Tasks.Task.WaitAll%2A> yöntemi veya <xref:System.Threading.Tasks.Task.WaitAny%2A> yöntemi.  
   
--   Aynı görev nesnesi içinde zaman uyumsuz ı/O-bağlı ve hesaplama bağlantılı işlemler kapsüller.  
+- Aynı görev nesnesi içinde zaman uyumsuz ı/O-bağlı ve hesaplama bağlantılı işlemler kapsüller.  
   
--   Görev nesnesi durumunu izleyin.  
+- Görev nesnesi durumunu izleyin.  
   
--   Bir görev nesnesi için bir işlemin durumunu kullanarak sıralama <xref:System.Threading.Tasks.TaskCompletionSource%601>.  
+- Bir görev nesnesi için bir işlemin durumunu kullanarak sıralama <xref:System.Threading.Tasks.TaskCompletionSource%601>.  
   
 ## <a name="wrapping-apm-operations-in-a-task"></a>APM İşlemlerini Bir Görevle Sarma  
  Hem <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> sınıfları ilişkin çeşitli aşırı yükler sağlar <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> olanak tanıyan yöntemler kapsülleyen bir APM başlangıç/bitiş yöntemi çifti birinde <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> örneği. Çeşitli aşırı üç giriş parametreleri için sıfır olan herhangi bir başlangıç/bitiş yöntemi çifti uyum sağlamak.  
@@ -50,13 +50,13 @@ ms.locfileid: "46702952"
   
  İlk parametre bir <xref:System.Func%606> imzası eşleşen temsilci <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> yöntemi. İkinci parametre bir <xref:System.Func%602> alan temsilci bir <xref:System.IAsyncResult> ve döndüren bir `TResult`. Çünkü <xref:System.IO.FileStream.EndRead%2A> bir tamsayı döndürür, derleyici türünü çıkarsar `TResult` olarak <xref:System.Int32> ve görev olarak türünü <xref:System.Threading.Tasks.Task>. Son dört parametre penceresindekilerle aynıdır <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> yöntemi:  
   
--   Dosya verilerini depolamak için arabellek.  
+- Dosya verilerini depolamak için arabellek.  
   
--   Veri yazmaya başlanacak arabellek uzaklığı.  
+- Veri yazmaya başlanacak arabellek uzaklığı.  
   
--   En fazla dosyadan okunan veri miktarı.  
+- En fazla dosyadan okunan veri miktarı.  
   
--   Geri çağırmaya geçirilecek kullanıcı tanımlı Durum verilerini depolayan isteğe bağlı bir nesne.  
+- Geri çağırmaya geçirilecek kullanıcı tanımlı Durum verilerini depolayan isteğe bağlı bir nesne.  
   
 ### <a name="using-continuewith-for-the-callback-functionality"></a>Geri Çağırma İşlevi İçin ContinueWith Kullanma  
  Bayt sayısını değil dosya verilerine erişim gerekiyorsa <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> yöntemi yeterli değildir. Bunun yerine, <xref:System.Threading.Tasks.Task>, olan `Result` özelliği, dosya verilerini içerir. Özgün göreve bir devamlılık ekleyerek bunu yapabilirsiniz. Devamlılığın genellikle tarafından gerçekleştirilen işi yapar <xref:System.AsyncCallback> temsilci. Öncül görev tamamlandıktan ve veri arabelleği dolu olduğunda çağrılır. ( <xref:System.IO.FileStream> Nesnesini döndürmeden önce kapatılması.)  
@@ -104,7 +104,7 @@ ms.locfileid: "46702952"
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- Ek özel durum işleme içerir ve istemci kodundan yöntemi çağırma işlemi gösterilmektedir, daha kapsamlı bir örnek için bkz. [nasıl yapılır: bir görevde EAP desenlerini sarmalama](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
+ Ek özel durum işleme içerir ve istemci kodundan yöntemi çağırma işlemi gösterilmektedir, daha kapsamlı bir örnek için bkz. [nasıl yapılır: Bir görevde EAP desenlerini sarmalama](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
   
  Unutmayın herhangi, görev, tarafından oluşturulan bir <xref:System.Threading.Tasks.TaskCompletionSource%601> bu TaskCompletionSource tarafından başlatılır ve bu nedenle, kullanıcı kodu başlangıç yöntemi bu göreve çağırmamanız gerekir.  
   

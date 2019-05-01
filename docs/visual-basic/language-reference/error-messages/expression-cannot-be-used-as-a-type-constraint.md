@@ -8,28 +8,28 @@ helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
 ms.openlocfilehash: 8dbf510d7c6ee80e2dcd2f9d2552bc870413cbab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801484"
 ---
 # <a name="expression-cannot-be-used-as-a-type-constraint"></a>'\<ifadesi >' tür kısıtlaması olarak kullanılamaz
 Bir kısıtlama listesi geçerli bir tür parametresi kısıtlaması göstermiyor bir ifade içerir.  
   
  Tür parametresi için geçirilen tür bağımsız değişkeni gereksinimlerine kısıtlaması listesini uygular. Herhangi bir bileşimini aşağıdaki gereksinimleri belirtebilirsiniz:  
   
--   Tür bağımsız değişkeni bir veya daha fazla arabirim uygulamalıdır  
+- Tür bağımsız değişkeni bir veya daha fazla arabirim uygulamalıdır  
   
--   Tür bağımsız değişkeni en fazla bir sınıftan devralmalıdır  
+- Tür bağımsız değişkeni en fazla bir sınıftan devralmalıdır  
   
--   Tür bağımsız değişkeni oluşturma kodunu erişip parametresiz bir oluşturucu kullanıma açmalıdır (dahil `New` kısıtlaması)  
+- Tür bağımsız değişkeni oluşturma kodunu erişip parametresiz bir oluşturucu kullanıma açmalıdır (dahil `New` kısıtlaması)  
   
  Kısıtlama listede herhangi bir belirli bir sınıf veya arabirim eklemezseniz, aşağıdakilerden birini belirterek daha genel bir gereksinim uygulayabilir:  
   
--   Tür bağımsız değişkeni bir değer türü olmalıdır (dahil `Structure` kısıtlaması)  
+- Tür bağımsız değişkeni bir değer türü olmalıdır (dahil `Structure` kısıtlaması)  
   
--   Tür bağımsız değişkeninin bir başvuru türü olmalıdır (dahil `Class` kısıtlaması)  
+- Tür bağımsız değişkeninin bir başvuru türü olmalıdır (dahil `Class` kısıtlaması)  
   
  Her ikisini de belirtemezsiniz `Structure` ve `Class` aynı türünde parametre ve bunlardan birini birden çok kez belirtilemez.  
   
@@ -37,11 +37,11 @@ Bir kısıtlama listesi geçerli bir tür parametresi kısıtlaması göstermiyo
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   İfade ve onun öğelerine doğru yazdığınızdan emin olun.  
+- İfade ve onun öğelerine doğru yazdığınızdan emin olun.  
   
--   İfade önceki gereksinimleri listesi için uymuyorsa kısıtlama listesinden kaldırın.  
+- İfade önceki gereksinimleri listesi için uymuyorsa kısıtlama listesinden kaldırın.  
   
--   İfade bir arabirimin veya sınıfın başvuruyorsa, derleyici bu arabirimin veya sınıfın erişimi olduğunu doğrulayın. Adıyla nitelemeniz gerekebilir ve projenize bir başvuru eklemeniz gerekebilir. Daha fazla bilgi için bkz: "Projeler için başvurular" [bildirilmiş öğelere başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+- İfade bir arabirimin veya sınıfın başvuruyorsa, derleyici bu arabirimin veya sınıfın erişimi olduğunu doğrulayın. Adıyla nitelemeniz gerekebilir ve projenize bir başvuru eklemeniz gerekebilir. Daha fazla bilgi için bkz: "Projeler için başvurular" [bildirilmiş öğelere başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

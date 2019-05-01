@@ -7,20 +7,20 @@ helpviewer_keywords:
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
 ms.openlocfilehash: a93402be30cb461ac6a0ed9daa4a684598a85da1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932606"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>İzlenecek yol: Windows Forms Denetimlerindeki Akıllı Etiketleri Kullanarak Ortak Görevleri Gerçekleştirme
 Windows Forms uygulamanız için formlar ve denetimler oluşturmak gibi art arda gerçekleştirir çok sayıda görev vardır. Karşınıza çıkacak sık gerçekleştirilen görevlerin bazıları şunlardır:  
   
--   Ekleyerek veya bir sekme üzerindeki kaldırarak bir <xref:System.Windows.Forms.TabControl>.  
+- Ekleyerek veya bir sekme üzerindeki kaldırarak bir <xref:System.Windows.Forms.TabControl>.  
   
--   Bir denetim için üst yerleştirme.  
+- Bir denetim için üst yerleştirme.  
   
--   Yönünü değiştirme bir <xref:System.Windows.Forms.SplitContainer> denetimi.  
+- Yönünü değiştirme bir <xref:System.Windows.Forms.SplitContainer> denetimi.  
   
  Geliştirme hızlandırmak için pek çok denetimi tasarım zamanında bu tek gibi genel görevleri gerçekleştirmenize olanak tanıyan bağlama duyarlı menüler şunlardır akıllı etiketler sunar. Bu görevleri adlı *akıllı etiket fiilleri*.  
   
@@ -28,11 +28,11 @@ Windows Forms uygulamanız için formlar ve denetimler oluşturmak gibi art arda
   
  Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
   
--   Bir Windows Forms projesi oluşturma  
+- Bir Windows Forms projesi oluşturma  
   
--   Akıllı etiketleri kullanarak  
+- Akıllı etiketleri kullanarak  
   
--   Akıllı etiketler devre dışı bırakma ve etkinleştirme  
+- Akıllı etiketler devre dışı bırakma ve etkinleştirme  
   
  İşlemi tamamladığınızda, bu önemli bir düzen özellikleri tarafından oynadığı rol, bir anlayışa sahip olacaksınız.  
   

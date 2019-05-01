@@ -11,11 +11,11 @@ helpviewer_keywords:
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: c0125e34-cd74-4c35-818c-3e40f462b0a3
 ms.openlocfilehash: 7115c227cb24cf12a50073d0dc587524abf0cbb9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785846"
 ---
 # <a name="how-to-use-a-control-rendering-class"></a>Nasıl yapılır: Denetim İşleme Sınıfı Kullanma
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Forms.ComboBoxRenderer> aşağı açılan okunu bir birleşik giriş kutusu denetimi oluşturmak için sınıf. Örnek oluşan <xref:System.Windows.Forms.Control.OnPaint%2A> basit bir özel denetimin yöntemi. <xref:System.Windows.Forms.ComboBoxRenderer.IsSupported%2A?displayProperty=nameWithType> Özelliği görsel stiller uygulama windows istemci alanında etkin olup olmadığını belirlemek için kullanılır. Görsel stillerin etkin olması durumunda sonra <xref:System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton%2A?displayProperty=nameWithType> yöntemi açılan liste okunu görsel stilde; işleme Aksi takdirde <xref:System.Windows.Forms.ControlPaint.DrawComboButton%2A?displayProperty=nameWithType> yöntemi Klasik Windows stili açılan oka işleme.  
@@ -28,11 +28,11 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Forms.ComboB
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Öğesinden türetilen özel denetim <xref:System.Windows.Forms.Control> sınıfı.  
+- Öğesinden türetilen özel denetim <xref:System.Windows.Forms.Control> sınıfı.  
   
--   A <xref:System.Windows.Forms.Form> özel denetimi barındıran.  
+- A <xref:System.Windows.Forms.Form> özel denetimi barındıran.  
   
--   Başvurular <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, ve <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> ad alanları.  
+- Başvurular <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, ve <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> ad alanları.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

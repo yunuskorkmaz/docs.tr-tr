@@ -10,11 +10,11 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
 ms.openlocfilehash: c23ca51322f57dc13a85c3ea94e0d335dc50ca13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791930"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme (Visual Basic)
 Visual Basic'te bir yordama bağımsız değişken geçirebilirsiniz *değeriyle* veya *başvuruya göre*. Bu olarak bilinir *mekanizması geçirme*, yordamı çağıran koddaki bağımsız temel programlama öğesine değiştirip değiştiremeyeceğini belirler. Yordam bildirimi belirterek her parametre geçirme mekanizması belirler [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) anahtar sözcüğü.  
@@ -22,22 +22,22 @@ Visual Basic'te bir yordama bağımsız değişken geçirebilirsiniz *değeriyle
 ## <a name="distinctions"></a>Farklılıklar  
  Bağımsız değişken bir yordama geçirilirken birbiriyle etkileşim birkaç farklı farklılıklar dikkat:  
   
--   Temel programlama öğesine değiştirilebilir veya değiştirilemez olup  
+- Temel programlama öğesine değiştirilebilir veya değiştirilemez olup  
   
--   Bağımsız değişkenin kendisine değiştirilebilir veya değiştirilemez olup  
+- Bağımsız değişkenin kendisine değiştirilebilir veya değiştirilemez olup  
   
--   Değere göre geçirilen bağımsız değişken olup olmadığını ya da başvuru  
+- Değere göre geçirilen bağımsız değişken olup olmadığını ya da başvuru  
   
--   Bağımsız değişken veri türü bir değer türü veya bir başvuru türü olup  
+- Bağımsız değişken veri türü bir değer türü veya bir başvuru türü olup  
   
  Daha fazla bilgi için [arasındaki farklar değiştirilebilir ve değiştirilemez bağımsız değişkenler](./differences-between-modifiable-and-nonmodifiable-arguments.md) ve [farklar arasında geçen bir bağımsız değişken değer ve başvuru tarafından](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
 ## <a name="choice-of-passing-mechanism"></a>Seçim mekanizması geçirme  
  Her bağımsız değişkeni için dikkatli bir şekilde geçirme mekanizması seçmeniz gerekir.  
   
--   **Koruma**. Arasında iki geçirme mekanizması seçme içinde en önemli değiştirmek için değişkenleri çağırma açığa ölçüttür. Bağımsız değişken geçirme avantajı `ByRef` yordamı bir değer bu bağımsız değişkeni aracılığıyla çağıran koda geri dönebilirsiniz. Bağımsız değişken geçirme avantajı `ByVal` olduğundan, bir değişken yordamı tarafından değiştirilen korur.  
+- **Koruma**. Arasında iki geçirme mekanizması seçme içinde en önemli değiştirmek için değişkenleri çağırma açığa ölçüttür. Bağımsız değişken geçirme avantajı `ByRef` yordamı bir değer bu bağımsız değişkeni aracılığıyla çağıran koda geri dönebilirsiniz. Bağımsız değişken geçirme avantajı `ByVal` olduğundan, bir değişken yordamı tarafından değiştirilen korur.  
   
--   **Performans**. Geçirme mekanizması kodunuzun performansını etkileyebilir olsa da, genellikle anlamsız bir farktır. Bunun tek istisnası, geçirilen bir değer türüdür `ByVal`. Bu durumda, Visual Basic bağımsız değişkeni, tüm veri içeriğini kopyalar. Bu nedenle, bir yapı gibi büyük bir değer türü için onu geçirilmesinin daha etkili olabilir `ByRef`.  
+- **Performans**. Geçirme mekanizması kodunuzun performansını etkileyebilir olsa da, genellikle anlamsız bir farktır. Bunun tek istisnası, geçirilen bir değer türüdür `ByVal`. Bu durumda, Visual Basic bağımsız değişkeni, tüm veri içeriğini kopyalar. Bu nedenle, bir yapı gibi büyük bir değer türü için onu geçirilmesinin daha etkili olabilir `ByRef`.  
   
      Başvuru türleri için yalnızca veri kopyalanan (dört bayt 32-bit platformlarda 64-bit platformlarda sekiz bayt) işaretçisidir. Bu nedenle, türünde bağımsız değişkenler geçirebilirsiniz `String` veya `Object` performans zarar olmadan değere göre.  
   
@@ -50,15 +50,15 @@ Visual Basic'te bir yordama bağımsız değişken geçirebilirsiniz *değeriyle
   
 ## <a name="when-to-pass-an-argument-by-value"></a>Ne zaman bir bağımsız değişken değere göre geçirin.  
   
--   Bağımsız değişken arka plandaki çağıran kod öğesi değiştirilemez bir öğeyse, karşılık gelen parametre bildirmek [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Kod, değiştirilemez öğenin değerini değiştirebilirsiniz.  
+- Bağımsız değişken arka plandaki çağıran kod öğesi değiştirilemez bir öğeyse, karşılık gelen parametre bildirmek [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Kod, değiştirilemez öğenin değerini değiştirebilirsiniz.  
   
--   Temel alınan öğe değiştirilebilir, ancak değeri değiştirebilmesi için yordamı istemiyorsanız, parametre bildirmek `ByVal`. Yalnızca çağıran kod, değer olarak geçilemez değiştirilebilir bir öğenin değerini değiştirebilirsiniz.  
+- Temel alınan öğe değiştirilebilir, ancak değeri değiştirebilmesi için yordamı istemiyorsanız, parametre bildirmek `ByVal`. Yalnızca çağıran kod, değer olarak geçilemez değiştirilebilir bir öğenin değerini değiştirebilirsiniz.  
   
 ## <a name="when-to-pass-an-argument-by-reference"></a>Ne zaman başvuruya göre bağımsız değişken geçirin  
   
--   Yordamı çağıran koddaki temel alınan öğeyi değiştirmek için orijinal gereksinimi varsa, karşılık gelen parametre bildirmek [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  
+- Yordamı çağıran koddaki temel alınan öğeyi değiştirmek için orijinal gereksinimi varsa, karşılık gelen parametre bildirmek [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  
   
--   Temel alınan öğeyi çağıran koddaki yordamı doğru kod yürütmeyi bağlıdır, parametre bildirmek `ByRef`. Değere göre geçirirseniz veya çağırma kodunun kılıyorsa `ByRef` mekanizması bağımsız değişken parantez içine alarak geçirme yordam çağrısı beklenmeyen sonuçlara neden.  
+- Temel alınan öğeyi çağıran koddaki yordamı doğru kod yürütmeyi bağlıdır, parametre bildirmek `ByRef`. Değere göre geçirirseniz veya çağırma kodunun kılıyorsa `ByRef` mekanizması bağımsız değişken parantez içine alarak geçirme yordam çağrısı beklenmeyen sonuçlara neden.  
   
 ## <a name="example"></a>Örnek  
   

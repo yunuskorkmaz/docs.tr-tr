@@ -21,11 +21,11 @@ ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 74469948ffe4045e6d367f1f60b8e66dc2a7810d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793033"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Masaüstü Uygulamalarında Kaynakları Alma
 .NET Framework masaüstü uygulamalarında yerelleştirilmiş kaynaklar ile çalışırken, ideal olarak kaynaklar için varsayılan veya bağımsız kültür ile ana derleme paketi ve her bir dil veya uygulamanızın desteklediği kültür için bir ayrı uydu derleme oluşturma gerekir. Ardından <xref:System.Resources.ResourceManager> adlandırılmış kaynaklara erişmek için sonraki bölümde açıklandığı gibi sınıf. Kaynaklarınızı ana derlemeyi ve uydu derlemeler içinde değil eklemek isterseniz da ikili .resources dosyalarına doğrudan bölümünde açıklandığı gibi erişebilirsiniz [.resources dosyalarındaki kaynaklar alınıyor](#from_file) daha sonra bu makale.  İçindeki kaynakları almak için [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar, [oluşturma ve Windows Store uygulamalarında kaynakları alma](https://go.microsoft.com/fwlink/p/?LinkID=241674) Windows geliştirme Merkezi'nde.  
@@ -34,9 +34,9 @@ ms.locfileid: "59109804"
 ## <a name="retrieving-resources-from-assemblies"></a>Derlemelerden kaynakları alma  
  <xref:System.Resources.ResourceManager> Sınıfı, çalışma zamanında kaynaklara erişim sağlar. Kullandığınız <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> dize kaynakları almak için yöntemi ve <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> veya <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> dize olmayan kaynaklar almak için yöntemi. Her yöntemin iki aşırı yüklemesi vardır:  
   
--   Aşırı yükleme, tek bir parametre kaynağın adını içeren bir dizedir. Yöntemi, o kaynak için geçerli iş parçacığı kültürünü almayı dener. Daha fazla bilgi için <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>, ve <xref:System.Resources.ResourceManager.GetStream%28System.String%29> yöntemleri.  
+- Aşırı yükleme, tek bir parametre kaynağın adını içeren bir dizedir. Yöntemi, o kaynak için geçerli iş parçacığı kültürünü almayı dener. Daha fazla bilgi için <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>, ve <xref:System.Resources.ResourceManager.GetStream%28System.String%29> yöntemleri.  
   
--   İki parametreleri olan bir aşırı yüklemeyi: bir kaynağın adını içeren dize ve bir <xref:System.Globalization.CultureInfo> olan kaynak alınacak kültürü temsil eden nesne. Bir kaynak için kültür bulunamıyor ayarlarsanız, kaynak yöneticisi uygun bir kaynağı almak için geri dönüş kurallarını kullanır. Daha fazla bilgi için <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>, ve <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> yöntemleri.  
+- İki parametreleri olan bir aşırı yüklemeyi: bir kaynağın adını içeren dize ve bir <xref:System.Globalization.CultureInfo> olan kaynak alınacak kültürü temsil eden nesne. Bir kaynak için kültür bulunamıyor ayarlarsanız, kaynak yöneticisi uygun bir kaynağı almak için geri dönüş kurallarını kullanır. Daha fazla bilgi için <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>, ve <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> yöntemleri.  
   
  Kaynak Yöneticisi, uygulamanın kültüre özgü kaynaklar nasıl alacağını denetlemek için kaynak geri dönüş işlemi kullanır. "Kaynak geri dönüş işlemi" bölümünde daha fazla bilgi için bkz. [kaynakları paketleme ve dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Örnekleme hakkında bilgi için bir <xref:System.Resources.ResourceManager> nesne, "ResourceManager nesnesini örnekleme" bölümüne bakın <xref:System.Resources.ResourceManager> sınıf konusuna.  
   

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
 ms.openlocfilehash: a0af2fa8bbe2efb2dc4fb3d1177c4950dcec87cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796779"
 ---
 # <a name="using-secure-sockets-layer"></a>Güvenli Yuva Katmanı Kullanma
 <xref:System.Net> Sınıfları, çeşitli ağ protokolleri için bağlantıyı şifrelemek için Güvenli Yuva Katmanı (SSL) kullanın.  
@@ -60,7 +60,7 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Başvurular **System.Net** ad alanı.  
+- Başvurular **System.Net** ad alanı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

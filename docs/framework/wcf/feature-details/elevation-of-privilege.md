@@ -6,11 +6,11 @@ helpviewer_keywords:
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
 ms.openlocfilehash: fd5829d2dbb1853bf65f1f6e402b918137bd59e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856424"
 ---
 # <a name="elevation-of-privilege"></a>Ayrıcalık Yükseltme
 *Ayrıcalık yükseltme* izinleri bu başlangıçta verilen ötesinde bir saldırgan yetkilendirme vermesine neden olur. Örneğin, bir ayrıcalık kümesi "salt okunur" izinlere sahip bir saldırgan kümesi "okuma ve yazma" eklenecek şekilde yükseltir  
@@ -25,13 +25,13 @@ ms.locfileid: "59099995"
   
  Bir istemci ve sunucu, istemci kimliği arasında bir bağlantı kurulan ne zaman değiştirmez, dışındaki bir durumda: aşağıdaki koşulların tümü doğruysa, WCF istemcisini açtıktan sonra:  
   
--   (Aktarım güvenliği oturumu veya ileti güvenlik oturumu kullanarak) bir güvenlik bağlamı'kurmak için yordamlar geçti (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> özelliği `false` ileti güvenliği veya aktarım güvenliği değil kurabilen durumunda oturumlarının aktarım güvenliği durumda kullanılır. HTTPS gibi aktarım örneğidir).  
+- (Aktarım güvenliği oturumu veya ileti güvenlik oturumu kullanarak) bir güvenlik bağlamı'kurmak için yordamlar geçti (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> özelliği `false` ileti güvenliği veya aktarım güvenliği değil kurabilen durumunda oturumlarının aktarım güvenliği durumda kullanılır. HTTPS gibi aktarım örneğidir).  
   
--   Windows kimlik doğrulaması kullanıyorsunuz.  
+- Windows kimlik doğrulaması kullanıyorsunuz.  
   
--   Kimlik bilgisi açıkça ayarlamayın.  
+- Kimlik bilgisi açıkça ayarlamayın.  
   
--   Hizmet Kimliğine bürünülen güvenlik bağlamı altında arıyoruz.  
+- Hizmet Kimliğine bürünülen güvenlik bağlamı altında arıyoruz.  
   
  Bu koşullar geçerli olduğunda, bir hizmete istemcinin kimliğini doğrulamak için kullanılan kimlik değişiklik yapmış olabilir (bunu başkasının kimliğine bürünülerek gerçekleştirilen kimlik ancak işlem kimliği yerine olmayabilir) WCF istemcisini açıldıktan sonra. Bu, hizmete istemcinin kimliğini doğrulamak için kullanılan Windows kimlik bilgilerini, her ileti ile aktarılan ve kimlik doğrulaması için kullanılan kimlik bilgileri geçerli iş parçacığının Windows kimlikten elde edilen nedeniyle oluşur. İletiye eklenmiş ve bir hizmete istemcinin kimliğini doğrulamak için kullanılan kimlik bilgisi, geçerli iş parçacığının Windows kimliği (örneğin, farklı bir çağıranın kimliğine bürünerek) değişirse, de değişebilir.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "59099995"
   
  Bu ayrıca, aşağıdaki yöntemlerden birini kullanarak özel bağlamalar oluşturma oluşur:  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForCertificateBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForCertificateBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement%2A>  
   
  Bunu azaltmak için yetkilendirme ilkesi, eylem ve süre sonu zamanı her yetkilendirme ilkesinin denetlemelisiniz.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "59099995"
   
  Bu şu durumlarda oluşabilir:  
   
--   İstemci bir X.509 sertifikası kullanarak ileti dijital olarak imzalar ve X.509 sertifikasının iletiye eklemek değil, ancak yerine yalnızca kendi konu anahtarı tanımlayıcısı'nı kullanarak sertifikaya başvurur.  
+- İstemci bir X.509 sertifikası kullanarak ileti dijital olarak imzalar ve X.509 sertifikasının iletiye eklemek değil, ancak yerine yalnızca kendi konu anahtarı tanımlayıcısı'nı kullanarak sertifikaya başvurur.  
   
--   Hizmetin bilgisayarda aynı ortak anahtara sahip iki veya daha fazla sertifika içeriyor, ancak farklı bilgileri içerirler.  
+- Hizmetin bilgisayarda aynı ortak anahtara sahip iki veya daha fazla sertifika içeriyor, ancak farklı bilgileri içerirler.  
   
--   Konu anahtarı tanımlayıcısı eşleşen bir sertifika hizmeti alır, ancak kullanmak için istemci hedeflenen sürüm değil. WCF iletiyi alır ve imzayı doğrular, WCF istenmeyen X.509 sertifika bilgileri istemci beklenen gelen farklı ve potansiyel olarak yükseltilmiş bir talepler kümesi eşlenir.  
+- Konu anahtarı tanımlayıcısı eşleşen bir sertifika hizmeti alır, ancak kullanmak için istemci hedeflenen sürüm değil. WCF iletiyi alır ve imzayı doğrular, WCF istenmeyen X.509 sertifika bilgileri istemci beklenen gelen farklı ve potansiyel olarak yükseltilmiş bir talepler kümesi eşlenir.  
   
  Bunu azaltmak için başvuru X.509 sertifika kullanma gibi başka bir deyişle, <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.  
   

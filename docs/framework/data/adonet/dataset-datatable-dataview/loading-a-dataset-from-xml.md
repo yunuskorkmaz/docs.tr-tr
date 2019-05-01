@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
 ms.openlocfilehash: 0c53e3a15bcbe61db7da1edb31ecd3fd562603f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785469"
 ---
 # <a name="loading-a-dataset-from-xml"></a>XML’den DataSet Yükleme
 Bir ADO.NET içeriğini <xref:System.Data.DataSet> bir XML akışı veya bir belgeden oluşturulabilir. Ayrıca, .NET Framework ile büyük esneklik hangi bilgilerin, XML'den yüklenen sahip olduğunuz ve nasıl önceden şema veya ilişkisel yapısını <xref:System.Data.DataSet> oluşturulur.  

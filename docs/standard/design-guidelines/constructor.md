@@ -1,5 +1,5 @@
 ---
-title: Oluşturucu tasarımı
+title: Oluşturucu Tasarımı
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
 author: KrzysztofCwalina
 ms.openlocfilehash: 68192e3b75a120c73b82c34005d4dee650540bf3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925469"
 ---
-# <a name="constructor-design"></a>Oluşturucu tasarımı
+# <a name="constructor-design"></a>Oluşturucu Tasarımı
 Oluşturucular iki tür vardır: oluşturucular ve örnek oluşturucuları yazın.  
   
  Türü oluşturucuları, statik ve türü kullanılmadan önce CLR tarafından çalıştırılır. Örnek oluşturucuları, bir türün bir örneği oluşturulduğunda çalıştırın.  

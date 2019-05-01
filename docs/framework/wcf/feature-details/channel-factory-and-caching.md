@@ -3,22 +3,22 @@ title: Kanal Fabrikası ve Önbelleğe Alma
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
 ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784312"
 ---
 # <a name="channel-factory-and-caching"></a>Kanal Fabrikası ve Önbelleğe Alma
 WCF istemci uygulamalarının kullanın <xref:System.ServiceModel.ChannelFactory%601> bir WCF Hizmeti ile bir iletişim kanalı oluşturmak için sınıf.  Oluşturma <xref:System.ServiceModel.ChannelFactory%601> örnekleri aşağıdaki işlemleri içerdiğinden bazı ek yük doğurur:  
   
--   Oluşturma <xref:System.ServiceModel.Description.ContractDescription> ağacı  
+- Oluşturma <xref:System.ServiceModel.Description.ContractDescription> ağacı  
   
--   Tüm gerekli CLR Türleri yansıtma  
+- Tüm gerekli CLR Türleri yansıtma  
   
--   Kanal yığını oluşturma  
+- Kanal yığını oluşturma  
   
--   Kaynaklarını atma  
+- Kaynaklarını atma  
   
  WCF bu ek yükü en aza indirmek için bir WCF istemci proxy kullanırken kanal fabrikaları önbelleğe alabilir.  
   

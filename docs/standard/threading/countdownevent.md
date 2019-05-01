@@ -11,11 +11,11 @@ ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d3825ef73a6ec312ff51d1bddf5360f3de6cc69
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926665"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> sonra bekleyen iş parçacıklarının engellemesinin kaldırıldığı bir eşitleme temel öğesi bir belirli sayıda sinyal olur. <xref:System.Threading.CountdownEvent> içinde aksi takdirde kullanılacak senaryolarında için tasarlanmış bir <xref:System.Threading.ManualResetEvent> veya <xref:System.Threading.ManualResetEventSlim> ve el ile olay sinyal önce bir değişkeni azaltır. Örneğin, bir çatal/birleştir senaryosunda yalnızca oluşturabileceğiniz bir <xref:System.Threading.CountdownEvent> 5 sinyal sayısı olan ve sonra Başlangıç beş iş öğeleri iş parçacığı üzerinde havuz ve her iş öğesi arama sahip <xref:System.Threading.CountdownEvent.Signal%2A> tamamlandığında. Her çağrı <xref:System.Threading.CountdownEvent.Signal%2A> sinyal sayısı 1 ile azaltır. Ana iş parçacığı üzerinde çağrı <xref:System.Threading.CountdownEvent.Wait%2A> sinyal sayısı sıfır olana kadar engeller.  
@@ -25,13 +25,13 @@ ms.locfileid: "55758930"
   
  <xref:System.Threading.CountdownEvent> Bu ek özellikler vardır:  
   
--   İptal belirteçleri kullanarak bekleme işlemi iptal edilebilir.  
+- İptal belirteçleri kullanarak bekleme işlemi iptal edilebilir.  
   
--   Örneği oluşturulduktan sonra onun sinyal sayısının artırılması.  
+- Örneği oluşturulduktan sonra onun sinyal sayısının artırılması.  
   
--   Örneği yeniden kullanılabilir sonra <xref:System.Threading.CountdownEvent.Wait%2A> çağırarak döndürdü <xref:System.Threading.CountdownEvent.Reset%2A> yöntemi.  
+- Örneği yeniden kullanılabilir sonra <xref:System.Threading.CountdownEvent.Wait%2A> çağırarak döndürdü <xref:System.Threading.CountdownEvent.Reset%2A> yöntemi.  
   
--   Örnekleri kullanıma bir <xref:System.Threading.WaitHandle> diğer .NET Framework eşitleme API'ları ile tümleştirme gibi <xref:System.Threading.WaitHandle.WaitAll%2A>.  
+- Örnekleri kullanıma bir <xref:System.Threading.WaitHandle> diğer .NET Framework eşitleme API'ları ile tümleştirme gibi <xref:System.Threading.WaitHandle.WaitAll%2A>.  
   
 ## <a name="basic-usage"></a>Temel kullanım  
  Aşağıdaki örnek nasıl kullanılacağını gösterir. bir <xref:System.Threading.CountdownEvent> ile <xref:System.Threading.ThreadPool> iş öğeleri.  

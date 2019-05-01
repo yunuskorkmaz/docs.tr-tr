@@ -3,11 +3,11 @@ title: Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değişti
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
 ms.openlocfilehash: e439edc14183c2ba2bf9af67e177dddb52c43708
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784299"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme
 <xref:System.ServiceModel.Activities.SendMessageChannelCache> Uzantısı düzeyleri, kanal üreteci önbellek ayarlarını paylaşımı önbellek özelleştirmenize olanak sağlar ve ileti göndermek için hizmet uç noktaları kullanarak iş akışları için kanal ayarlarıyla önbelleğe <xref:System.ServiceModel.Activities.Send> Mesajlaşma etkinlikleri. Bu iş akışları genellikle istemci iş akışlarıdır ancak içinde barındırılan iş akışı Hizmetleri ayrıca olabilir bir <xref:System.ServiceModel.WorkflowServiceHost>. Kanal üreteci önbellek içeren önbelleğe alınmış <xref:System.ServiceModel.ChannelFactory%601> nesneleri. Kanal önbellek önbelleğe alınmış kanalları içerir.  
@@ -20,11 +20,11 @@ ms.locfileid: "53127062"
   
  Aşağıdakiler için kullanılabilir düzeyleri paylaşımı farklı bir önbellek, <xref:System.ServiceModel.Activities.Send> etkinlikleri iş akışı ve önerilen kullanımları:  
   
--   **Konak düzeyinde**: Konak paylaşım düzeyi, önbelleğe yalnızca iş akışı hizmeti ana bilgisayarında barındırılan iş akışı örnekleri için kullanılabilir. Bir önbellek, ayrıca iş akışı hizmeti konak işlem genelinde önbelleğinde arasında paylaşılabilir.  
+- **Konak düzeyinde**: Konak paylaşım düzeyi, önbelleğe yalnızca iş akışı hizmeti ana bilgisayarında barındırılan iş akışı örnekleri için kullanılabilir. Bir önbellek, ayrıca iş akışı hizmeti konak işlem genelinde önbelleğinde arasında paylaşılabilir.  
   
--   **Örnek düzeyi**: Önbellek paylaşım düzeyi örneğin ömrü boyunca belirli bir iş akışı örneği için kullanılabilir ancak önbelleği için diğer iş akışı örnekleri kullanılabilir değil.  
+- **Örnek düzeyi**: Önbellek paylaşım düzeyi örneğin ömrü boyunca belirli bir iş akışı örneği için kullanılabilir ancak önbelleği için diğer iş akışı örnekleri kullanılabilir değil.  
   
--   **Önbelleğin**: Bitiş noktaları yapılandırmasında tanımlandığı kullanan bir iş akışı varsa önbelleği varsayılan olarak kapalıdır. Ayrıca, açma güvensiz olabilir çünkü bu durumda kapalı önbellek tutmanız önerilir. Örneğin, farklı bir kimlik (farklı kimlik bilgileri veya kimliğe bürünme kullanma) her gönderme için gereklidir.  
+- **Önbelleğin**: Bitiş noktaları yapılandırmasında tanımlandığı kullanan bir iş akışı varsa önbelleği varsayılan olarak kapalıdır. Ayrıca, açma güvensiz olabilir çünkü bu durumda kapalı önbellek tutmanız önerilir. Örneğin, farklı bir kimlik (farklı kimlik bilgileri veya kimliğe bürünme kullanma) her gönderme için gereklidir.  
   
 ## <a name="changing-the-cache-sharing-level-for-a-client-workflow"></a>Bir istemci iş akışı için paylaşım düzeyi önbellek değiştirme  
  Bir istemci iş akışında paylaşımı önbellek ayarlamak için bir örneğini ekleme <xref:System.ServiceModel.Activities.SendMessageChannelCache> istenen iş akışı örnekleri kümesi için bir genişletme olarak sınıf. Bu, tüm iş akışı örnekleri arasında önbellek paylaşımı ile sonuçlanır. Aşağıdaki kod örnekleri, bu adımların nasıl gerçekleştirileceğini gösterir.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - SolidColorBrush [WPF], animating opacity of
 ms.assetid: d9154354-843f-4713-bad1-35bb0ba6eaeb
 ms.openlocfilehash: e440cf49b8b16051361650f9659dc6006c2e7b56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789252"
 ---
 # <a name="how-to-animate-the-color-or-opacity-of-a-solidcolorbrush"></a>Nasıl yapılır: SolidColorBrush'ın Rengine veya Opaklığına Animasyon Ekleme
 Bu örnek, animasyon ekleme işlemi gösterilmektedir <xref:System.Windows.Media.SolidColorBrush.Color%2A> ve <xref:System.Windows.Media.Brush.Opacity%2A> , bir <xref:System.Windows.Media.SolidColorBrush>.  
@@ -22,11 +22,11 @@ Bu örnek, animasyon ekleme işlemi gösterilmektedir <xref:System.Windows.Media
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, animasyon uygulamak için üç animasyonlarını kullanıp <xref:System.Windows.Media.SolidColorBrush.Color%2A> ve <xref:System.Windows.Media.Brush.Opacity%2A> , bir <xref:System.Windows.Media.SolidColorBrush>.  
   
--   İlk animasyon, bir <xref:System.Windows.Media.Animation.ColorAnimation>, fırça rengi değişir <xref:System.Windows.Media.Colors.Gray%2A> fare dikdörtgen girdiğinde.  
+- İlk animasyon, bir <xref:System.Windows.Media.Animation.ColorAnimation>, fırça rengi değişir <xref:System.Windows.Media.Colors.Gray%2A> fare dikdörtgen girdiğinde.  
   
--   Sonraki animasyon, başka bir <xref:System.Windows.Media.Animation.ColorAnimation>, fırça rengi değişir <xref:System.Windows.Media.Colors.Orange%2A> fare dikdörtgen ayrıldığında.  
+- Sonraki animasyon, başka bir <xref:System.Windows.Media.Animation.ColorAnimation>, fırça rengi değişir <xref:System.Windows.Media.Colors.Orange%2A> fare dikdörtgen ayrıldığında.  
   
--   Son animasyon, bir <xref:System.Windows.Media.Animation.DoubleAnimation>, farenin sol düğmesine basıldığında fırça opaklığını 0.0 değiştirir.  
+- Son animasyon, bir <xref:System.Windows.Media.Animation.DoubleAnimation>, farenin sol düğmesine basıldığında fırça opaklığını 0.0 değiştirir.  
   
  [!code-csharp[brushanimations_snip#SolidColorBrushAnimationExample](~/samples/snippets/csharp/VS_Snippets_Wpf/brushanimations_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushanimationexample)]  
   

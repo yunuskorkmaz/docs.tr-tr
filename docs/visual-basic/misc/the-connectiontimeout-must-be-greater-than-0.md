@@ -5,18 +5,18 @@ f1_keywords:
 - vbrNetwork_BadConnectionTimeout
 ms.assetid: 15ac09a7-47f0-44f3-9e84-5bd10bd07450
 ms.openlocfilehash: 26510832d196aa6418112e3a00d73c7a1d3aef92
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58038781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922778"
 ---
 # <a name="the-connectiontimeout-must-be-greater-than-0"></a>ConnectionTimeout 0'dan büyük olmalıdır
 Karşıya yükleme ve indirme, dosyaları ile [My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network), belirtmelisiniz bir `connectionTimeout` büyüktür `0`.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Tedarik bir `connectionTimeout` 'den daha büyük `0`.  
+- Tedarik bir `connectionTimeout` 'den daha büyük `0`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

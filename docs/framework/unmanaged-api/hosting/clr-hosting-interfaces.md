@@ -9,186 +9,186 @@ ms.assetid: 703b8381-43db-4a4d-9faa-cca39302d922
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03839a2c6e52f9d2dcdd2e0941ff4fdbeb8a3a17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789668"
 ---
 # <a name="clr-hosting-interfaces"></a>CLR Barındırma Arabirimleri
-Bu bölümde yönetilmeyen arabirimler açıklanmaktadır konakları ortak dil çalışma zamanı (CLR) uygulamalarına tümleştirmeleri için kullanabilirsiniz. Bilgi, .NET Framework sürüm 2.0 ve sonraki sürümler için geçerlidir. Bu arabirimleri çalışma zamanı 1.0 ve 1.1 sürümleri içinde mümkün olandan çok daha fazla yönlerini denetlemek konak etkinleştirin ve CLR ve ana bilgisayarın yürütme modeli arasında çok sıkı tümleştirme sağlar.  
+Bu bölümde, yönetilmeyen arabirimler açıklanmaktadır. konaklar, ortak dil çalışma zamanı (CLR) uygulamalarıyla tümleştirmeleri için kullanabilirsiniz. Bilgiler .NET Framework sürüm 2.0 ve sonraki sürümler ile ilgilidir. Bu arabirimler, çalışma zamanı 1.0 ve 1.1 sürümlerinde mümkün olandan çok daha fazla yönlerini denetlemek konak etkinleştirmek ve kadar CLR ve ana bilgisayarın yürütme modeli arasında sıkı bir tümleştirme sağlar.  
   
- .NET Framework sürüm 1.0 ve 1.1'da, barındırma model CLR belirli ayarları yapılandırmak ve olay bildirimlerini almak için bir işlem yüklemek yönetilmeyen bir ana bilgisayar etkin. Ancak, genel olarak, konak ve CLR bağımsız olarak bu işleminde çalıştırılır. .NET Framework sürüm 2.0 ve sonraki sürümler soyutlama yeni katmanları Win32 derlemesindeki türler tarafından şu anda sağlanan kaynakların çoğunu sağlar ve ana bilgisayar yapılandırabilirsiniz işlevler kümesini genişletmek konak olanak tanır.  
+ .NET Framework 1.0 ve 1.1 sürümlerinde, barındırma modeli CLR'yi bir işleme, belirli ayarları yapılandırmak ve olay bildirimlerini almak üzere yüklemek yönetilmeyen bir konak etkin. Ancak, genel olarak, konak ve CLR bağımsız olarak bu işlemde çalışan. .NET Framework sürüm 2.0 ve sonraki sürümlerinde soyutlama yeni katmanları Win32 bütünleştirilmiş kodundaki türler tarafından şu anda sağlanan kaynak sağlayın ve konak yapılandırabileceğiniz özellikler kümesini genişletin konak sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [IActionOnCLREvent Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)  
- Kayıtlı bir olay için bir geri çağırma gerçekleştiren bir yöntem sağlar.  
+ Kayıtlı bir olay için bir geri çağırma işlemini gerçekleştiren bir yöntem sağlar.  
   
  [IApartmentCallback Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-interface.md)  
- Geri aramalar bir grup içinde sağlama yöntemleri sağlar.  
+ Bir grup içinde geri çağırmaları sağlama yöntemleri sağlar.  
   
  [IAppDomainBinding Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-interface.md)  
- Çalışma zamanı yapılandırma ayarlaması için yöntemleri sağlar.  
+ Çalışma zamanı yapılandırma ayarlaması için yöntemler sağlar.  
   
  [ICatalogServices Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-interface.md)  
- Hizmetleri Katalog için yöntemleri sağlar. (Bu arabirim .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.)  
+ Hizmetleri kataloglama için yöntemler sağlar. (Bu arabirim .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.)  
   
  [ICLRAssemblyIdentityManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- CLR derlemeleri hakkında ile konak arasındaki iletişimi destekleyen yöntemler sağlar.  
+ CLR derlemeleri hakkında ile konak arasındaki iletişimi desteklemek için yöntemler sağlar.  
   
  [ICLRAssemblyReferenceList Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
- CLR tarafından ve ana bilgisayar tarafından yüklenen bir derleme listesi yönetir.  
+ CLR tarafından ve konak tarafından yüklenen derlemelerin bir listesini yönetir.  
   
  [ICLRControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- Erişim ve çeşitli yönlerini, CLR yapılandırmak ana bilgisayar için yöntemleri sağlar.  
+ Erişim ve çeşitli yönlerini, CLR yapılandırmak konak için yöntemler sağlar.  
   
  [ICLRDebugManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)  
- Bir dizi görevi bir tanımlayıcı ve kolay bir ad ile ilişkilendirmek bir konak sağlayan yöntemler sağlar.  
+ Bir görev kümesi bir tanımlayıcı ve kolay bir ad ile ilişkilendirmek bir konak olanak tanıyan yöntemler sağlar.  
   
  [ICLRErrorReportingManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
- Hata bildirimi için özel yığın dökümleri yapılandırmak konak sağlayan yöntemler sağlar.  
+ Hata bildirimi için özel bir yığın dökümlerini yapılandırmak konak olanak tanıyan yöntemler sağlar.  
   
  [ICLRGCManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)  
- CLR'ın çöp toplama sistemi ile etkileşim kurmak bir konak sağlayan yöntemler sağlar.  
+ CLR'nin çöp toplama sistemi ile etkileşim kurmak bir konak olanak tanıyan yöntemler sağlar.  
   
  [ICLRHostBindingPolicyManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)  
- Değerlendirmek ve derlemeler için ilke bilgilerini değişiklikleri iletişim kurmak ana bilgisayar için yöntemleri sağlar.  
+ Değerlendirmek ve ilke bilgilerini derlemeler için değişiklikleri iletişim kurmak ana bilgisayar için yöntemler sağlar.  
   
  [ICLRHostProtectionManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)  
- Yönetilen sınıflar, yöntemler, özellikler ve kısmen güvenilen kodu çalıştırma alanların engellemek ana bilgisayarı sağlar.  
+ Yönetilen sınıflar, yöntemler, özellikler ve alanları kısmen güvenilen kod çalıştırılmasını engellemek konak sağlar.  
   
  [ICLRIoCompletionManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)  
- Belirtilen g/ç isteklerin durumunu CLR bilgilendirmek için ana sağlayan bir geri çağırma yöntemi uygular.  
+ CLR belirtilen g/ç istekleri durumunu bildirmek için ana sağlayan bir geri çağırma yöntemi uygular.  
   
  [ICLRMemoryNotificationCallback Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)  
- Win32 için benzer bir yaklaşım kullanarak rapor bellek baskısı koşullarını konağa etkinleştirir `CreateMemoryResourceNotification` işlevi.  
+ Win32 için benzer bir yaklaşım kullanarak rapor bellek baskısı koşullarını sağlayan `CreateMemoryResourceNotification` işlevi.  
   
  [ICLROnEventManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)  
- Kaydolun ve CLR olayları için geri çağırmaları kaydı için ana sağlayan yöntemler sağlar.  
+ Kaydolun ve CLR olayları için geri çağırmaları kaydını silmek konak olanak tanıyan yöntemler sağlar.  
   
  [ICLRPolicyManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- İlke hataları ve zaman aşımları durumunda gerçekleştirilecek eylemleri belirtmek için ana sağlayan yöntemler sağlar.  
+ Hataları ve zaman aşımları durumunda uygulanacak ilke eylemleri belirtmek konak olanak tanıyan yöntemler sağlar.  
   
  [ICLRProbingAssemblyEnum Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md)  
- Oluşturma veya kimliğe anlamak zorunda kalmadan CLR için iç derlemenin kimlik bilgilerini kullanarak bir derleme yoklama kimliklerini almak konak sağlayan yöntemler sağlar.  
+ CLR, iç oluşturmak veya kimliğe anlamanıza gerek kalmadan derlemenin kimlik bilgilerini kullanarak bir derleme araştırma kimliklerini almak konağı etkinleştirme yöntemleri sağlar.  
   
  [ICLRReferenceAssemblyEnum Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-interface.md)  
- Bir dosya veya CLR için iç oluşturun veya bu kimlikleri anlamak zorunda kalmadan derleme kimlik verilerini kullanarak akış tarafından başvurulan derlemeler kümesini işlemek için ana sağlayan yöntemler sağlar.  
+ Bir dosya veya akışı oluşturmak veya kimliklerle anlamanıza gerek kalmadan iç CLR için olan derleme kimlik verilerini kullanarak tarafından başvurulan derlemeler kümesini işlemek için ana olanak tanıyan yöntemler sağlar.  
   
  [ICLRRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  
- Benzer özellikleri sağlayan [Icorruntimehost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md), ana bilgisayar denetim arabirimi ayarlamak için ek bir yöntem ile.  
+ Benzer özellikleri sağlayan [Icorruntimehost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md), ana bilgisayar denetimi arabirimi ayarlamak için ek bir yöntem ile.  
   
  [ICLRSyncManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- Kilitlenmeler, eşitleme uygulamasında algılamak için ve istenen görevler hakkında bilgi almak için ana bilgisayar için yöntemleri sağlar.  
+ İstenilen görevler hakkında bilgi almak ve kilitlenmeleri eşitleme uygulanması algılamak için konak için yöntemler sağlar.  
   
  [ICLRTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- Ana bilgisayar CLR isteklerde veya CLR ilişkili görevle ilgili bildirim sağlamak için sağlayan yöntemler sağlar.  
+ CLR isteklerde veya CLR ilişkili görevle ilgili bildirim sağlamak için konak olanak tanıyan yöntemler sağlar.  
   
  [ICLRTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- CLR yeni bir görev oluşturma, şu anda yürütülen görev almak ve coğrafi dil ve kültür görev için ayarlanmış istemenin konak sağlayan yöntemler sağlar.  
+ CLR yeni bir görev oluşturma, şu anda yürütülmekte olan görevi Al ve coğrafi dil ve kültür görev için açıkça istemek üzere konağın olanak tanıyan yöntemler sağlar.  
   
  [ICLRValidator Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)  
- Taşınabilir yürütülebilir (PE) görüntüler doğrulama ve doğrulama hatalarını raporlama için yöntemleri sağlar.  
+ Taşınabilir yürütülebilir (PE) görüntüleri doğrulanıyor ve doğrulama hatalarını raporlama için yöntemler sağlar.  
   
  [ICorConfiguration Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)  
- CLR yapılandırmak için yöntemleri sağlar.  
+ CLR yapılandırmak için yöntemler sağlar.  
   
  [ICorThreadpool Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)  
  İş parçacığı havuzu erişmek için yöntemler sağlar.  
   
  [IDebuggerInfo Arabirimi](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)  
- Hata ayıklama hizmetlerinin durumu hakkında bilgi almak için yöntemleri sağlar.  
+ Hata Ayıklama Hizmetleri durumuyla ilgili bilgileri almak için yöntemler sağlar.  
   
  [IDebuggerThreadControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)  
- Engelleme hakkında konak bildirme ve hata ayıklama Hizmetleri tarafından iş parçacıklarının kaldırma için yöntemleri sağlar.  
+ Engelleme hakkında konak bildiren ve hata ayıklama Hizmetleri tarafından iş parçacıklarının engellemesinin kaldırılması için yöntemler sağlar.  
   
  [IGCHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)  
- Çöp toplama sistemi hakkında bilgi edinme ve atık toplama bazı yönlerini denetleme yöntemleri sağlar.  
+ Çöp toplama işleminin bazı yönlerini denetleme ve çöp toplama sistemi hakkında bilgi almak için yöntemler sağlar.  
   
  [IGCHost2 Arabirimi](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)  
- Sağlar [SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) atık toplama kesim boyutunu ve en büyük boyutu sıfır atık toplama sistemin nesil değerlere büyük ayarlamak bir konak etkinleştirir yöntemi `DWORD`.  
+ Sağlar [SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) yönteminin çöp toplama kesim boyutunu ve en büyük boyutu çöp toplama sistemin oluşturma sıfır değerleri büyük ayarlamak bir konak tanıyan `DWORD`.  
   
  [IGCHostControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)  
- Sanal bellek sınırları değiştirmek için ana istemek atık toplayıcı sağlayan bir yöntem sağlar.  
+ Çöp toplayıcı sanal bellek sınırlarını değiştirmek için ana istemek sağlayan bir yöntem sağlar.  
   
  [IGCThreadControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)  
- Çöp toplama için engellenmesi iş parçacıklarını zamanlama içinde katılan için yöntemleri sağlar.  
+ Çöp toplama işlemi için normalde engellenecek iş parçacıklarını zamanlama katılım için yöntemler sağlar.  
   
  [IHostAssemblyManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
- CLR veya ana bilgisayar tarafından yüklenmesi gereken derlemeler kümesini belirtmek bir konak sağlayan yöntemler sağlar.  
+ Konak veya CLR tarafından yüklenmesi gereken derlemeler kümesini belirtmek bir konak olanak tanıyan yöntemler sağlar.  
   
  [IHostAssemblyStore Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)  
- Derlemeler ve modüller CLR bağımsız olarak yüklemek bir konak sağlayan yöntemler sağlar.  
+ Derlemeler ve CLR bağımsız olarak modülleri yüklemek bir konak olanak tanıyan yöntemler sağlar.  
   
  [IHostAutoEvent Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)  
- Ana bilgisayar tarafından uygulanan bir otomatik sıfırlama olay gösterimini sağlar.  
+ Otomatik sıfırlama olaya ana bilgisayar tarafından uygulanan bir gösterimini sağlar.  
   
  [IHostControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)  
- Derlemeleri yükleme yapılandırma ve ana bilgisayar destekler hangi barındırma arabirimleri belirlemek için yöntemleri sağlar.  
+ Derlemeleri yüklenmesini yapılandırma ve ana bilgisayar destekler hangi barındırma arabirimleri belirlemek için yöntemler sağlar.  
   
  [IHostCrst Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)  
- İş parçacığı oluşturma için önemli bir bölümü ana bilgisayarın gösterimi olarak görev yapar.  
+ İş parçacığı için kritik bir bölüm konağın gösterimi işlevi görür.  
   
  [IHostGCManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)  
- CLR tarafından uygulanan atık toplama mekanizması olayları ana bildir yöntemleri sağlar.  
+ CLR tarafından uygulanan çöp toplama mekanizması olayların ana bilgisayara bildirmek için yöntemler sağlar.  
   
  [IHostIoCompletionManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)  
- Ana bilgisayar tarafından sağlanan g/ç tamamlama bağlantı noktaları ile etkileşim kurmak CLR sağlayan yöntemler sağlar.  
+ Ana bilgisayar tarafından sağlanan g/ç tamamlama bağlantı noktaları ile etkileşim kurmak CLR olanak tanıyan yöntemler sağlar.  
   
  [IHostMalloc Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)  
- Ana bilgisayar üzerinden öbek hassas ayırmaları istemesini CLR için yöntemleri sağlar.  
+ CLR'nin yığın konağı üzerinden hassas ayırmaları istek için yöntemler sağlar.  
   
  [IHostManualEvent Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)  
  Ana bilgisayarın uygulamasını elle sıfırlama olayı bir gösterimini sağlar.  
   
  [IHostMemoryManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
- Standart Win32 sanal bellek işlevleri kullanmak yerine ana bilgisayar üzerinden sanal bellek istekler yapmasını CLR için yöntemleri sağlar.  
+ Standart Win32 sanal bellek işlevleri kullanmak yerine ana bilgisayar üzerinden sanal bellek isteğinde bulunmak CLR için yöntemler sağlar.  
   
  [IHostPolicyManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
- Durumunda, CLR gerçekleştirdiği işlemleri ana durdurur, zaman aşımı veya hatalar bildiren yöntemleri sağlar.  
+ Ana bilgisayarının durumunda, CLR gerçekleştirdiği işlemleri durdurur, zaman aşımı veya hataları bildirmek için yöntemler sağlar.  
   
  [IHostSecurityContext Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)  
- Ana bilgisayar tarafından uygulanan güvenlik bağlamı bilgilerini korumak CLR sağlar.  
+ Ana bilgisayar tarafından uygulanan güvenlik bağlamını korumak CLR sağlar.  
   
  [IHostSecurityManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
- Erişimi etkinleştir ve şu anda yürütülen iş parçacığı güvenlik bağlamı, üzerinde denetleyen yöntemleri sağlar.  
+ Erişimi etkinleştir ve şu anda çalışan bir iş parçacığı üzerinde güvenlik bağlamını denetlemek için yöntemler sağlar.  
   
  [IHostSemaphore Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)  
- Ana bilgisayar tarafından uygulanan semafor gösterimini sağlar.  
+ Ana bilgisayar tarafından uygulanan semafor bir gösterimini sağlar.  
   
  [IHostSyncManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- Eşitleme temelleri Win32 eşitleme işlevlerini kullanmak yerine ana çağırarak oluşturmak CLR için yöntemleri sağlar.  
+ Eşitleme temellerine Win32 eşitleme işlevleri kullanmak yerine konak çağırarak oluşturmak CLR için yöntemler sağlar.  
   
  [IHostTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- Görevleri yönetmek için konak ile iletişim kurmak CLR sağlayan yöntemler sağlar.  
+ Görevleri yönetmek üzere konaklarla iletişim kurmak CLR olanak tanıyan yöntemler sağlar.  
   
  [IHostTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
- Görevler için standart işletim sistemi iş parçacığı oluşturma veya fiber işlevlerini yerine ana bilgisayar üzerinden çalışmak CLR sağlayan yöntemler sağlar.  
+ Görevleri için standart işletim sistemi iş parçacığı veya fiber işlevlerini yerine ana bilgisayar üzerinden çalışmak CLR olanak tanıyan yöntemler sağlar.  
   
  [IHostThreadPoolManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)  
- İş parçacığı havuzu yapılandırmak için ve iş parçacığı havuzu iş öğelerine kuyruğuna CLR için yöntemleri sağlar.  
+ CLR iş parçacığı havuzu yapılandırmak ve iş parçacığı havuzu iş öğelerine sıraya almak için yöntemler sağlar.  
   
  [IManagedObject Arabirimi](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)  
- Yönetilen bir nesnenin denetleme yöntemleri sağlar.  
+ Yönetilen bir nesnenin denetlemek için yöntemler sağlar.  
   
  "IObjectHandle"  
- Yöneltme açma sıralama değerli nesneleri için bir yöntem sağlar.  
+ Yöneltme açma değere göre sıralama nesneler için bir yöntem sağlar.  
   
  [ITypeName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/itypename-interface.md)  
- Tür adı bilgilerini alma yöntemleri sağlar. (Bu arabirim .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.)  
+ Tür adı bilgileri almak için yöntemler sağlar. (Bu arabirim .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.)  
   
  [ITypeNameBuilder Arabirimi](../../../../docs/framework/unmanaged-api/hosting/itypenamebuilder-interface.md)  
- Tür adı oluşturmak için yöntemleri sağlar. (Bu arabirim .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.)  
+ Bir tür adı oluşturmak için yöntemleri sağlar. (Bu arabirim .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.)  
   
  [ITypeNameFactory Arabirimi](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)  
- Tür adı deconstructing için yöntemleri sağlar. (Bu arabirim .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.)  
+ Bir tür adı ayrıştırma için yöntemler sağlar. (Bu arabirim .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.)  
   
  "IValidator"  
- Taşınabilir yürütülebilir (PE) görüntüler doğrulama ve doğrulama hatalarını raporlama için yöntemleri sağlar.  
+ Taşınabilir yürütülebilir (PE) görüntüleri doğrulanıyor ve doğrulama hatalarını raporlama için yöntemler sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Kullanım Dışı CLR Barındırma Arabirimleri ve Coclass’ları](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
- .NET Framework sürüm 1.0 ve 1.1 sağlanan barındırma arabirimleri açıklayan konuları içerir.  
+ .NET Framework sürüm 1.0 ve 1.1 barındırma arabirimlerini açıklayan konulara içerir.  
   
  [.NET Framework 4 ve 4.5'e Eklenen CLR Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
  Sağlanan barındırma arabirimleri açıklayan konulara içeren [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].

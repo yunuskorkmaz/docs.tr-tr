@@ -15,26 +15,26 @@ helpviewer_keywords:
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
 ms.openlocfilehash: 105a44f90c1c654a21fc8920a149ad63b2dabc99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928731"
 ---
 # <a name="creating-an-ink-input-control"></a>Mürekkep Giriş Denetimi Oluşturma
 Statik olarak mürekkebi işler ve özel bir denetim, dinamik olarak oluşturabilir. Mürekkep "tablet kaleminden flow" ve sonra mürekkep görüntülemek için eklenir, denetime tablet kalem yoluyla panodan yapıştırılan veya bir dosyasından yüklenen görünmesine neden olan bir kullanıcı bir fırça çizer gibi diğer bir deyişle, mürekkebi işler. Mürekkep dinamik olarak işlemek için Denetim kullanmalısınız bir <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Mürekkep statik olarak işlemek için ekran kalemi olay yöntemleri geçersiz kılmanız gerekir (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, ve <xref:System.Windows.UIElement.OnStylusUp%2A>) toplamak için <xref:System.Windows.Input.StylusPoint> veri vuruş oluşturmak ve bunları Ekle bir <xref:System.Windows.Controls.InkPresenter> (denetim üzerinde mürekkep işleyen).  
   
  Bu konu aşağıdaki alt bölümleri içerir:  
   
--   [Nasıl yapılır: Ekran kalemi noktası verileri toplayıp mürekkep vuruşları oluşturma](#CollectingStylusPointDataAndCreatingInkStrokes)  
+- [Nasıl yapılır: Ekran kalemi noktası verileri toplayıp mürekkep vuruşları oluşturma](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [Nasıl yapılır: Denetiminiz fare girişi kabul etmek etkinleştirin](#EnablingYourControlToAcceptInputTromTheMouse)  
+- [Nasıl yapılır: Denetiminiz fare girişi kabul etmek etkinleştirin](#EnablingYourControlToAcceptInputTromTheMouse)  
   
--   [Hepsini birleştirme](#PuttingItTogether)  
+- [Hepsini birleştirme](#PuttingItTogether)  
   
--   [Ek Eklentiler ve DynamicRenderers Kullanma](#UsingAdditionalPluginsAndDynamicRenderers)  
+- [Ek Eklentiler ve DynamicRenderers Kullanma](#UsingAdditionalPluginsAndDynamicRenderers)  
   
--   [Sonuç](#AdvancedInkHandling_Conclusion)  
+- [Sonuç](#AdvancedInkHandling_Conclusion)  
   
 <a name="CollectingStylusPointDataAndCreatingInkStrokes"></a>   
 ## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>Nasıl yapılır: Ekran kalemi noktası verileri toplayıp mürekkep vuruşları oluşturma  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
 ms.openlocfilehash: f29eb628c079f65a520cf5e1ccd8afed549f7cad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787419"
 ---
 # <a name="unable-to-write-to-output-file-filename-error"></a>Çıkış dosyasına yazılamıyor '\<dosya adı >': \<hata >
 Dosya oluşturulurken bir sorun oluştu.  
@@ -21,9 +21,9 @@ Dosya oluşturulurken bir sorun oluştu.
   
  Burada bir dosya özel olarak açılmış yaygın durumlar şunlardır:  
   
--   Uygulama zaten çalışıyor ve dosyalarını kullanarak. Bu sorunu çözmek için uygulamayı çalışır durumda olduğundan emin olun.  
+- Uygulama zaten çalışıyor ve dosyalarını kullanarak. Bu sorunu çözmek için uygulamayı çalışır durumda olduğundan emin olun.  
   
--   Başka bir uygulama, dosya açıldı. Bu sorunu çözmek için başka bir uygulama dosyaları eriştiğinden emin olun. Her zaman uygulama dosyalarınızı erişiyor belirgin değildir; Bu durumda, bilgisayarı yeniden başlatmadan uygulamayı sonlandırmak için en kolay yolu olabilir.  
+- Başka bir uygulama, dosya açıldı. Bu sorunu çözmek için başka bir uygulama dosyaları eriştiğinden emin olun. Her zaman uygulama dosyalarınızı erişiyor belirgin değildir; Bu durumda, bilgisayarı yeniden başlatmadan uygulamayı sonlandırmak için en kolay yolu olabilir.  
   
  Proje çıktı dosyalarını biri bile salt okunur olarak işaretlenmişse, bu özel durum oluşturulur.  
   

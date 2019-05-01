@@ -15,11 +15,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
 ms.openlocfilehash: 497ae11b858b7d164ba3b5607ff2109254a154de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863629"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Nasıl yapılır: Bağımsız değişkeni (Visual Basic) değere göre geçirilecek şekilde zorlama
 Yordam bildirimi geçirme mekanizması belirler. Bir parametre bildirilirse [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic bekliyor karşılık gelen bağımsız değişken başvuru ile geçirilecek. Bu yordam çağıran koddaki bağımsız değişken temel programlama öğenin değerini değiştirmek sağlar. Temel alınan öğe bu tür değişiklik karşı korumak istiyorsanız, geçersiz kılabilirsiniz `ByRef` geçirme mekanizmasında yordamı çağırma bağımsız değişken adı parantez içine alarak. Çağrısında bağımsız değişken listesini çevreleyen parantezler yanı sıra bu parantezler var.  
@@ -28,9 +28,9 @@ Yordam bildirimi geçirme mekanizması belirler. Bir parametre bildirilirse [ByR
   
 ### <a name="to-force-an-argument-to-be-passed-by-value"></a>Bağımsız değişkeni değere göre geçirilecek şekilde zorlama  
   
--   Karşılık gelen parametre bildirilirse `ByVal` yordamda herhangi bir ek adımlar gerekmez. Visual Basic bağımsız değişkeni değere göre geçirilecek zaten bekliyor.  
+- Karşılık gelen parametre bildirilirse `ByVal` yordamda herhangi bir ek adımlar gerekmez. Visual Basic bağımsız değişkeni değere göre geçirilecek zaten bekliyor.  
   
--   Karşılık gelen parametre bildirilirse `ByRef` parantez yordam çağrısı içinde bağımsız değişkeni yordamda alın.  
+- Karşılık gelen parametre bildirilirse `ByRef` parantez yordam çağrısı içinde bağımsız değişkeni yordamda alın.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek geçersiz kılan bir `ByRef` parametre bildirimi. Zorlayan çağrısında `ByVal`, iki düzeyi parantez unutmayın.  

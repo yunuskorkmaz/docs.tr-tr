@@ -8,11 +8,11 @@ helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932801"
 ---
 # <a name="using-message-contracts"></a>İleti Sözleşmeleri Kullanılıyor
 Genellikle Windows Communication Foundation (WCF) uygulamaları oluştururken geliştiriciler serileştirme sorunlarına ve veri yapıları Kapat dikkat ve kendilerini hangi verileri taşınan iletileri yapısı ile uğraşmak zorunda değildir. Bu uygulamalar için parametreleri veya dönüş değerleri için veri sözleşmeleri oluşturma oldukça basittir. (Daha fazla bilgi için [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -244,11 +244,11 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>SOAP üstbilgisi öznitelikleri  
  SOAP standart bir üstbilgi varsa aşağıdaki öznitelikleri tanımlar:  
   
--   `Actor/Role` (`Actor` SOAP 1.1 `Role` SOAP 1.2)  
+- `Actor/Role` (`Actor` SOAP 1.1 `Role` SOAP 1.2)  
   
--   `MustUnderstand`  
+- `MustUnderstand`  
   
--   `Relay`  
+- `Relay`  
   
  `Actor` Veya `Role` öznitelik sağlanan üstbilgisi amaçlanmıştır düğümünün Tekdüzen Kaynak Tanımlayıcısı (URI) belirtir. `MustUnderstand` Özniteliği, üst bilgi işlem düğümü, anlamak olup olmadığını belirtir. `Relay` Özniteliği, aşağı akış düğümlerine geçirilmesine üstbilgi olup olmadığını belirtir. WCF gerçekleştirmez gelen iletiler bu özniteliklerin herhangi bir işleme dışında `MustUnderstand` özniteliği, bu konunun ilerleyen bölümlerindeki "İleti sözleşmesi sürümü oluşturma" bölümünde belirtildiği gibi. Ancak, bu öznitelik aşağıdaki açıklama olduğu gibi gerekli olarak okuyup sağlar.  
   
@@ -323,9 +323,9 @@ public class BankingTransaction
   
  Sürüm üst bilgileri için aşağıdaki kurallar geçerlidir:  
   
--   WCF eksik üst nesne değildir — varsayılan değerlerine karşılık gelen üyeleri bırakılır.  
+- WCF eksik üst nesne değildir — varsayılan değerlerine karşılık gelen üyeleri bırakılır.  
   
--   WCF da beklenmeyen fazladan üst bilgiler yok sayar. Ek üstbilgi varsa bu kuralın tek özel durum olan bir `MustUnderstand` özniteliğini `true` gelen SOAP iletisi — bu durumda, anlaşılması gereken bir üstbilgi işlenemediği için bir özel durum oluşturulur.  
+- WCF da beklenmeyen fazladan üst bilgiler yok sayar. Ek üstbilgi varsa bu kuralın tek özel durum olan bir `MustUnderstand` özniteliğini `true` gelen SOAP iletisi — bu durumda, anlaşılması gereken bir üstbilgi işlenemediği için bir özel durum oluşturulur.  
   
  İleti gövdeleri benzer sürüm kurallara sahiptir — hem eksik hem de ek ileti gövdesi bölümü yok sayılır.  
   
@@ -334,9 +334,9 @@ public class BankingTransaction
   
  Oluşturma veya diğer ileti anlaşması türlerinden devralan bir ileti anlaşması türü kullanarak ileti erişme, aşağıdaki kurallar geçerlidir:  
   
--   İleti üst bilgilerinde devralma hiyerarşisindeki tüm birlikte eksiksiz bir ileti üstbilgileri listesi oluşturmak için toplanır.  
+- İleti üst bilgilerinde devralma hiyerarşisindeki tüm birlikte eksiksiz bir ileti üstbilgileri listesi oluşturmak için toplanır.  
   
--   İleti gövde bölümlerinin devralma hiyerarşisindeki tüm birlikte tam ileti gövdesi oluşturmak için toplanır. Gövde parçalarının normal sıralama kurallara göre sıralanır (tarafından <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> özelliği ve ardından alfabetik), bunun yerine Devralma Hiyerarşisi Hiçbir ilgisi olan. İleti gövdesi bölümleri birden çok devralma ağacını düzeylerinde nerede meydana ileti anlaşma devralma kullanarak kesinlikle önerilmez. Bir temel sınıf ve türetilen sınıf bir üst bilgi veya aynı ada sahip bir gövde bölümü tanımlarsanız, en temel sınıftan üye bu üst bilgi veya gövde bölümü değerini depolamak için kullanılır.  
+- İleti gövde bölümlerinin devralma hiyerarşisindeki tüm birlikte tam ileti gövdesi oluşturmak için toplanır. Gövde parçalarının normal sıralama kurallara göre sıralanır (tarafından <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> özelliği ve ardından alfabetik), bunun yerine Devralma Hiyerarşisi Hiçbir ilgisi olan. İleti gövdesi bölümleri birden çok devralma ağacını düzeylerinde nerede meydana ileti anlaşma devralma kullanarak kesinlikle önerilmez. Bir temel sınıf ve türetilen sınıf bir üst bilgi veya aynı ada sahip bir gövde bölümü tanımlarsanız, en temel sınıftan üye bu üst bilgi veya gövde bölümü değerini depolamak için kullanılır.  
   
  Aşağıdaki kod örneği sınıflarda göz önünde bulundurun.  
   
@@ -361,26 +361,26 @@ public class PatientRecord : PersonRecord
 ## <a name="wsdl-considerations"></a>WSDL konuları  
  Web Hizmetleri Açıklama Dili (WSDL) sözleşmesi ileti sözleşmeleri kullanan bir hizmetten oluştururken, tüm ileti anlaşması özellikleri elde edilen WSDL içinde yansıtılır unutmamak önemlidir. Aşağıdaki noktaları göz önünde bulundurun:  
   
--   WSDL, üst bilgiler bir dizi kavramı hızlı olamaz. İleti üst bilgileri kullanarak bir dizi oluştururken <xref:System.ServiceModel.MessageHeaderArrayAttribute>, dizi yerine yalnızca bir üst bilgi elde edilen WSDL yansıtır.  
+- WSDL, üst bilgiler bir dizi kavramı hızlı olamaz. İleti üst bilgileri kullanarak bir dizi oluştururken <xref:System.ServiceModel.MessageHeaderArrayAttribute>, dizi yerine yalnızca bir üst bilgi elde edilen WSDL yansıtır.  
   
--   Sonuçta elde edilen WSDL belgesinde bazı koruma düzeyi bilgileri yansıtmaz.  
+- Sonuçta elde edilen WSDL belgesinde bazı koruma düzeyi bilgileri yansıtmaz.  
   
--   WSDL içinde oluşturulan ileti türü, ileti anlaşması türü sınıf adı ile aynı ada sahiptir.  
+- WSDL içinde oluşturulan ileti türü, ileti anlaşması türü sınıf adı ile aynı ada sahiptir.  
   
--   Birden çok ileti türü, aynı iletiyi kullanarak sözleşme, birden çok işlemlerinde, WSDL belgesinde üretilir. Sayı "2", "3" ekleyerek ve sonraki kullanımlar için vb. adları benzersiz yapılır. WSDL geri alırken, birden çok ileti anlaşması türleri oluşturulur ve bunların adları hariç olmak üzere aynıdır.  
+- Birden çok ileti türü, aynı iletiyi kullanarak sözleşme, birden çok işlemlerinde, WSDL belgesinde üretilir. Sayı "2", "3" ekleyerek ve sonraki kullanımlar için vb. adları benzersiz yapılır. WSDL geri alırken, birden çok ileti anlaşması türleri oluşturulur ve bunların adları hariç olmak üzere aynıdır.  
   
 ## <a name="soap-encoding-considerations"></a>SOAP değerlendirmeleri kodlama  
  WCF eski SOAP XML stil kodlama kullanmanıza olanak tanır ancak kullanımı önerilmez. Bu stil kullanırken (ayarlayarak `Use` özelliğini `Encoded` üzerinde <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> hizmet sözleşmesi için uygulanan), ek aşağıdaki maddeler geçerlidir:  
   
--   İleti üstbilgilerini desteklenmez; Bu öznitelik anlamına <xref:System.ServiceModel.MessageHeaderAttribute> ve dizisi özniteliği <xref:System.ServiceModel.MessageHeaderArrayAttribute> SOAP kodlamasına ile uyumlu değildir.  
+- İleti üstbilgilerini desteklenmez; Bu öznitelik anlamına <xref:System.ServiceModel.MessageHeaderAttribute> ve dizisi özniteliği <xref:System.ServiceModel.MessageHeaderArrayAttribute> SOAP kodlamasına ile uyumlu değildir.  
   
--   İleti sözleşmesi, diğer bir deyişle, sarmalanmamış ise özellik <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> ayarlanır `false`, ileti anlaşması yalnızca bir gövde bölümü olabilir.  
+- İleti sözleşmesi, diğer bir deyişle, sarmalanmamış ise özellik <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> ayarlanır `false`, ileti anlaşması yalnızca bir gövde bölümü olabilir.  
   
--   İstek ileti anlaşması için sarmalayıcı öğe adı, işlem adı eşleşmelidir. Kullanım `WrapperName` ileti anlaşması için bu özelliği.  
+- İstek ileti anlaşması için sarmalayıcı öğe adı, işlem adı eşleşmelidir. Kullanım `WrapperName` ileti anlaşması için bu özelliği.  
   
--   Yanıt ileti anlaşması için sarmalayıcı öğe adı, 'Response' tarafından ve sonra işlemin adıyla aynı olmalıdır. Kullanım <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> ileti anlaşması için bu özelliği.  
+- Yanıt ileti anlaşması için sarmalayıcı öğe adı, 'Response' tarafından ve sonra işlemin adıyla aynı olmalıdır. Kullanım <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> ileti anlaşması için bu özelliği.  
   
--   SOAP kodlamasına nesne başvuruları korur. Örneğin, aşağıdaki kodu düşünün.  
+- SOAP kodlamasına nesne başvuruları korur. Örneğin, aşağıdaki kodu düşünün.  
   
     ```csharp  
     [MessageContract(WrapperName="updateChangeRecord")]  

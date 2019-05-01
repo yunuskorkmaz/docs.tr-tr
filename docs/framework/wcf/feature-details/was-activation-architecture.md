@@ -3,11 +3,11 @@ title: WAS Etkinleştirme Mimarisi
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
 ms.openlocfilehash: 9c1af21782b377a9fb01cbd05e4fe61f6a69f3ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932723"
 ---
 # <a name="was-activation-architecture"></a>WAS Etkinleştirme Mimarisi
 Bu konuda maddeler halinde listeler ve Windows İşlem Etkinleştirme Hizmeti (WAS olarak da bilinir) bileşenlerinin açıklar.  
@@ -15,15 +15,15 @@ Bu konuda maddeler halinde listeler ve Windows İşlem Etkinleştirme Hizmeti (W
 ## <a name="activation-components"></a>Etkinleştirme bileşenleri  
  OLAN birkaç mimari bileşenden oluşur:  
   
--   Dinleyici bağdaştırıcıları. Belirli ağ protokollerine iletileri almak ve doğru alt işleme gelen iletileri yönlendirmek için WAS ile iletişim kuran Windows Hizmetleri.  
+- Dinleyici bağdaştırıcıları. Belirli ağ protokollerine iletileri almak ve doğru alt işleme gelen iletileri yönlendirmek için WAS ile iletişim kuran Windows Hizmetleri.  
   
--   OLUŞTU. Oluşturulmasını ve alt işlemlerin yaşam süresini yöneten Windows hizmet.  
+- OLUŞTU. Oluşturulmasını ve alt işlemlerin yaşam süresini yöneten Windows hizmet.  
   
--   Genel çalışan işlemi (w3wp.exe) çalıştırılabilir.  
+- Genel çalışan işlemi (w3wp.exe) çalıştırılabilir.  
   
--   Uygulama Yöneticisi. Oluşturulmasını ve ana çalışan uygulamalardan işleyen bir uygulama etki alanları yaşam süresini yönetir.  
+- Uygulama Yöneticisi. Oluşturulmasını ve ana çalışan uygulamalardan işleyen bir uygulama etki alanları yaşam süresini yönetir.  
   
--   Protokol işleyiciler. Çalışan işlem içinde çalıştırın ve bir dinleyici bağdaştırıcıları ile çalışan işlemi arasındaki iletişimi yöneten protokole özgü bileşenler. Protokol işleyiciler iki tür vardır: işlem protokol işleyiciler ve AppDomain protokol işleyiciler.  
+- Protokol işleyiciler. Çalışan işlem içinde çalıştırın ve bir dinleyici bağdaştırıcıları ile çalışan işlemi arasındaki iletişimi yöneten protokole özgü bileşenler. Protokol işleyiciler iki tür vardır: işlem protokol işleyiciler ve AppDomain protokol işleyiciler.  
   
  Zaman WAS bir çalışan işlem örneği etkinleştirir, çalışan işlemin gerekli işlem protokol işleyiciler yükler ve uygulama Yöneticisi uygulamasını barındırmak için bir uygulama etki alanı oluşturmak için kullanır. Uygulama etki alanı, uygulama kodunun yanı sıra ağ protokolleri uygulama iste tarafından kullanılan AppDomain protokol işleyiciler yükler.  
   

@@ -3,11 +3,11 @@ title: Bir genişletme yöntemi (Visual Basic) kullanarak yeniden düzenleme
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
 ms.openlocfilehash: 925ae6b1ae82576a830b06ef11232f7dad9875f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787133"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>Bir genişletme yöntemi (Visual Basic) kullanarak yeniden düzenleme
 Bu örnek önceki örneğe, yapılar [(Visual Basic) paragrafların metnini alma](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), yeniden düzenleme bir genişletme yöntemi uygulanan saf işlev kullanarak dizeleri birleşimi tarafından.  
@@ -241,7 +241,7 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Sonraki örnek, saf işlevler kullanarak başka bir yolla bu kodu yeniden düzenleyin gösterilmektedir:  
   
--   [(Visual Basic) saf işlev kullanarak yeniden düzenleme](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [(Visual Basic) saf işlev kullanarak yeniden düzenleme](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

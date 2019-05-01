@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b3cc158c48e8bb9f833429bbddaa74ed459f1b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61930279"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles Yöntemi
 Numaralandırıcı nesnesi tanıtıcıları için bir işlem olarak alır.  
@@ -46,11 +46,11 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
  `types` Parametresi koleksiyona dahil etmek tanıtıcı türlerine belirtir. `types` Aşağıdaki üç üyeleri olabilir [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) sabit listesi:  
   
--   `CorHandleStrongOnly` (yalnızca tanımlayıcı başvuruları tanıtıcıları).  
+- `CorHandleStrongOnly` (yalnızca tanımlayıcı başvuruları tanıtıcıları).  
   
--   `CorHandleWeakOnly` (yalnızca zayıf başvurular tanıtıcıları).  
+- `CorHandleWeakOnly` (yalnızca zayıf başvurular tanıtıcıları).  
   
--   `CorHandleAll` (tüm tutamaçlar).  
+- `CorHandleAll` (tüm tutamaçlar).  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

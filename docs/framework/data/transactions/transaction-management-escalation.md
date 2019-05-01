@@ -1,38 +1,38 @@
 ---
-title: İşlem yönetimi yükseltme
+title: İşlem Yönetimi Yükseltme
 ms.date: 03/30/2017
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
 ms.openlocfilehash: 2a5592cc9ebf0ddfc49f38da9404c81d11a29cf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793563"
 ---
-# <a name="transaction-management-escalation"></a>İşlem yönetimi yükseltme
-Windows Hizmetleri ve birlikte bir işlem yöneticisi oluşturan modüllerin kümesi barındırır. İşlem yönetimi yükseltme bir işlem İşlem Yöneticisi'nin bileşenleri birinden diğerine geçiş işlemini açıklar.  
+# <a name="transaction-management-escalation"></a>İşlem Yönetimi Yükseltme
+Windows bir Hizmetleri ve birlikte bir işlem yöneticisi oluşturan modülleri kümesini barındırır. İşlem Yönetim yükseltme bir işlem hareket yöneticisinin bileşenlerden biri diğerine geçiş işlemini açıklar.  
   
- <xref:System.Transactions> en fazla tek dayanıklı kaynak ya da birden çok volatile kaynakları içeren bir işlem koordine eden bir işlem yöneticisi bileşeni içerir. İşlem Yöneticisi yalnızca içi uygulama etki alanı çağrıları kullandığından, en iyi performansı verir. Geliştiriciler işlem yöneticisi ile doğrudan etkileşim değil. Bunun yerine, arabirimleri, ortak davranışı ve yardımcı sınıfları tanımlar ortak bir altyapısı tarafından sağlanan <xref:System.Transactions> ad alanı.  
+ <xref:System.Transactions> en çok tek bir kalıcı kaynak veya birden çok geçici kaynakları içeren bir işlem koordinatları bir işlem yöneticisi bileşeni içerir. İşlem Yöneticisi yalnızca içi uygulama etki alanı çağrıları kullandığından, en iyi performansı verir. Geliştiriciler işlem yöneticisi ile doğrudan etkileşimli olarak. Bunun yerine, arabirimleri, ortak davranışını ve yardımcı sınıfları tanımlayan bir ortak altyapısı tarafından sağlanan <xref:System.Transactions> ad alanı.  
   
- İşlem (işlem ve makine sınırları içinde dahil) başka bir uygulama etki alanındaki bir nesneye aynı bilgisayara sağlamak istediğinizde <xref:System.Transactions> altyapı otomatik olarak Microsoft tarafından yönetilecek işlem iletir Dağıtılmış İşlem Düzenleyicisi (MSDTC). Başka bir kalıcı Kaynak Yöneticisi listeleme yükseltme de oluşur. İlerletilen işlemin yükseltilmiş durumundayken kendi tamamlanana kadar yönetilen kalır.  
+ Aynı bilgisayarda işlemin (işlem ve makine sınırlarında dahil) başka bir uygulama etki alanındaki bir nesneye sağlamak istediğinizde <xref:System.Transactions> altyapı, Microsoft tarafından yönetilmek üzere işlem otomatik olarak iletir Dağıtılmış İşlem Düzenleyicisi (MSDTC). Başka bir kalıcı Kaynak Yöneticisi listeleme yükseltme de oluşur. İlerletilmiş işlemi, yükseltilmiş durumunda kendi tamamlanana kadar yönetilen kalır.  
   
- Arasında <xref:System.Transactions> işlem ve MSDTC işlem yükseltilebilir tek aşaması kaydı (PSPE) aracılığıyla kullanılabilir hale getirileceğini işlem aracı bir tür. PSPE olan başka bir önemli yönteminde <xref:System.Transactions> performansını iyileştirme için. Farklı uygulama etki alanı, işlem veya bunlara katılmak için bilgisayarda bulunan uzak dayanıklı bir kaynak sağlayan bir <xref:System.Transactions> bir MSDTC işleminde ilerletilen için bunu neden olmadan işlem. PSPE hakkında daha fazla bilgi için bkz: [kaydetme kaynakları bir işlemde katılımcı olarak](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md).  
+ Arasında <xref:System.Transactions> işlem ve MSDTC işlem Promotable tek aşaması liste (PSPE) aracılığıyla sunulan işlem bir aracı türü yok. PSPE olan başka bir önemli yönteminde <xref:System.Transactions> performansını iyileştirme için. Farklı uygulama etki alanı, işlem veya'na katılmak için bilgisayarda bulunan bir uzak kalıcı kaynak sağlayan bir <xref:System.Transactions> bir MSDTC işlem ilerletilmiş için bu neden olmadan işlem. PSPE hakkında daha fazla bilgi için bkz: [katılımcı bir işlemde kaynakları kaydetme](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md).  
   
 ## <a name="how-escalation-is-initiated"></a>Yükseltme nasıl başlatılır  
- MSDTC ayrı bir işlemde ve işlem arasında gönderilen iletiler MSDTC sonuçlarında harekete yükselen bulunduğundan işlem yükseltme performansını düşürür. Performansı artırmak için gecikme veya MSDTC yükseltme kaçının; Bu nedenle, yükseltme nasıl ve ne zaman başlatılır bilmeniz gerekir.  
+ MSDTC ayrı bir işlemde ve işlem gönderilen iletiler MSDTC sonuçları için bir işlem Etkinleºmesini bulunduğundan işlem yükseltme performans azaltır. Performansı artırmak için gecikme veya MSDTC aktarmayı kaçının; Bu nedenle, nasıl ve ne zaman yükseltme başlatılır bilmeniz gerekir.  
   
- Sürece <xref:System.Transactions> altyapı işleme volatile kaynakları ve tek aşamalı bildirimlerini, sahipliğini işlem saklanır destekleyen en fazla bir dayanıklı kaynak <xref:System.Transactions> altyapı. İşlem Yöneticisi kendisi yalnızca aynı uygulama etki alanında ve (işlem sonucu diske yazma) hangi günlüğü için Canlı gerekli değildir, bu kaynakları avails. Sonuçlanan bir yükseltme <xref:System.Transactions> gerçekleşir MSDTC için işlem sahipliğini aktarma altyapı zaman:  
+ Sürece <xref:System.Transactions> altyapı işler geçici kaynakları ve tek aşamalı bildirimleri, sahipliğini işlem saklanır desteklediği en çok bir kalıcı kaynak <xref:System.Transactions> altyapı. İşlem Yöneticisi yalnızca aynı uygulama etki alanındaki ve (hareketin sonucu yazılırken) hangi günlüğe kaydetme için Canlı gerekli olmadığını kaynakları için kendisini avails. Sonuçlanır bir yükseltme <xref:System.Transactions> MSDTC için işlem sahipliğini aktarma altyapı olur olduğunda:  
   
--   Tek aşamalı bildirimlerini desteklemiyor en az bir dayanıklı kaynak işlemde listeye kayıtlı.  
+- Tek aşamalı bildirimleri desteklemiyor en az bir kalıcı kaynak işleme kayıtlı.  
   
--   Tek aşamalı bildirimlerini desteklemek en az iki dayanıklı kaynakları işlemde kayıtlıdır. Örneğin, tek bir bağlantıyla kaydetme [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] yükseltilmesi bir işlem neden olmaz. Bununla birlikte, her açtığınız ikinci bir bağlantı için bir [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] listeleme, veritabanına neden veritabanı <xref:System.Transactions> altyapı algılar, işlemde ikinci dayanıklı kaynaktır ve bir MSDTC işleminde iletir.  
+- Tek aşamalı bildirimlerini desteklemek en az iki kalıcı kaynak kayıtlı. Örneğin, tek bir bağlantı kaydetme [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] yükseltilecek bir işlem neden olmayacak. Ancak, her açtığınız ikinci bağlantıya bir [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] listeleme veritabanına neden veritabanı <xref:System.Transactions> altyapı algılar, işlem ikinci kalıcı kaynak olan ve bir MSDTC işlem için iletir.  
   
--   "İşlem farklı uygulama etki alanına veya farklı bir işlem sıralama" isteği çağrılır. Örneğin, bir uygulama etki alanı sınırları boyunca işlem nesnesini serileştirme. İşlem nesnesi sıralanmış-tarafından-girişimleri bir uygulama etki alanı sınırı (bile aynı işlemde) üzerinden iletmek için işlem nesnesi serileştirmede sonuçları anlamı değerdir. Alan bir uzak yöntem çağrısı yaparak işlem nesnelerini geçirebilirsiniz bir <xref:System.Transactions.Transaction> gibi bir parametre veya uzak işlemle ilgili hizmet bileşen erişmek deneyebilirsiniz. Bu işlem nesnesini serileştirir ve bir işlem uygulama etki alanı arasında ne zaman seri olarak bağlı olarak, bir yükseltme sonuçlanır. Dağıtılmakta ve yerel işlem yöneticisi artık yeterli değil.  
+- "İşlem farklı uygulama etki alanı ya da farklı bir işlem sıralamakta" bir istek çağrılır. Örneğin, bir uygulama etki alanı sınırları üzerinden işlem nesnesi serileştirme. İşlem nesnesi sıralanmış-tarafından-her türlü girişim, uygulama etki alanı sınırı (hatta aynı işlemde) üzerinden geçmek için işlem nesnesi serileştirmede sonuçları başka bir deyişle değerdir. Alan bir uzak yöntem bir arama yaparak işlem nesneleri geçirebilirsiniz bir <xref:System.Transactions.Transaction> bir parametre veya uzak bir işlem hizmet bileşeni erişmek deneyebilirsiniz. Bu işlem nesnesini serileştirir ve bir uygulama etki bir işlem olduğunda serileştirildiği olarak bir yükseltme sonuçlanır. Bu dağıtılmış ve yerel hareket yöneticisi yeterlidir.  
   
  Aşağıdaki tablo yükseltme sırasında oluşturulan tüm olası özel durumları listeler.  
   
 |Özel durum türü|Koşul|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|Yalıtım düzeyine eşit olan bir işlem İlerlet girişimi <xref:System.Transactions.IsolationLevel.Snapshot>.|  
-|<xref:System.Transactions.TransactionAbortedException>|İşlem Yöneticisi çalışmıyor.|  
+|<xref:System.InvalidOperationException>|Yalıtım düzeyi eşit olan bir işlem İlerlet girişimi <xref:System.Transactions.IsolationLevel.Snapshot>.|  
+|<xref:System.Transactions.TransactionAbortedException>|İşlem Yöneticisi kapalı.|  
 |<xref:System.Transactions.TransactionException>|Yükseltme başarısız olur ve uygulama durduruldu.|

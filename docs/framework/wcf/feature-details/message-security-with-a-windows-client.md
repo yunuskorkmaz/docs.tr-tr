@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
 ms.openlocfilehash: 794a3d8e118cadd2a2752e1bbf85ef930deb2f27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922804"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows İstemcisi ile İleti Güvenliği
 Bu senaryo, bir Windows Communication Foundation (WCF) istemci ve sunucu güvenli ileti güvenlik modunu gösterir. İstemci ve hizmet Windows kimlik bilgilerini kullanarak kimlik doğrulaması yapılır.  
@@ -31,9 +31,9 @@ Bu senaryo, bir Windows Communication Foundation (WCF) istemci ve sunucu güvenl
 ## <a name="service"></a>Hizmet  
  Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:  
   
--   Kod ile yapılandırma kullanarak tek başına bir hizmet oluşturun.  
+- Kod ile yapılandırma kullanarak tek başına bir hizmet oluşturun.  
   
--   Sağlanan Yapılandırması'nı kullanarak bir hizmet oluşturma, ancak tüm uç noktalar tanımlamaz.  
+- Sağlanan Yapılandırması'nı kullanarak bir hizmet oluşturma, ancak tüm uç noktalar tanımlamaz.  
   
 ### <a name="code"></a>Kod  
  Aşağıdaki kod, ileti güvenliği Windows makine ile güvenli bir bağlam kurmak için kullandığı bir hizmet uç noktası oluşturma işlemini gösterir.  
@@ -75,9 +75,9 @@ Bu senaryo, bir Windows Communication Foundation (WCF) istemci ve sunucu güvenl
 ## <a name="client"></a>İstemci  
  Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:  
   
--   Bir tek başına istemci kodu (ve istemci kodu) kullanarak oluşturun.  
+- Bir tek başına istemci kodu (ve istemci kodu) kullanarak oluşturun.  
   
--   Herhangi bir uç nokta adresi tanımlamıyor bir istemci oluşturun. Bunun yerine, yapılandırma adı bağımsız değişkeni olarak alan İstemci Oluşturucu kullanın. Örneğin:  
+- Herhangi bir uç nokta adresi tanımlamıyor bir istemci oluşturun. Bunun yerine, yapılandırma adı bağımsız değişkeni olarak alan İstemci Oluşturucu kullanın. Örneğin:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
 ms.openlocfilehash: 5f058c8e7d480b9145452ae85f186a6ac2ed0d56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803736"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Devralınan üyelerin arasında varsayılan özellik erişimi belirsiz\<defaultpropertyname >' arabiriminin '\<interfacename1 >' ve '\<defaultpropertyname >' arabiriminin '\< interfacename2 >'
 Her biri aynı ada sahip varsayılan bir özelliği bildirir, iki arabirim bir arabirimi devralır. Derleyici, nitelik olmadan bu varsayılan özellik için bir erişim çözümlenemiyor. Aşağıdaki örnek bunu göstermektedir.  
@@ -41,7 +41,7 @@ End Class
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Aynı ada sahip tüm üyeleri devralan kaçının. Yukarıdaki örnekte, `testObj` üyelerinin gerekmez, örneğin `Iface2`, şu şekilde bildirmek:  
+- Aynı ada sahip tüm üyeleri devralan kaçının. Yukarıdaki örnekte, `testObj` üyelerinin gerekmez, örneğin `Iface2`, şu şekilde bildirmek:  
   
     ```  
     Dim testObj As Iface1  
@@ -49,7 +49,7 @@ End Class
   
      -veya-  
   
--   Bir sınıfta devralan arabirim uygular. Ardından, her biri farklı adlara sahip devralınan özellikler uygulayabilirsiniz. Ancak, yalnızca bir tanesi uygulayan sınıfın varsayılan özelliği olabilir. Aşağıdaki örnek bunu göstermektedir.  
+- Bir sınıfta devralan arabirim uygular. Ardından, her biri farklı adlara sahip devralınan özellikler uygulayabilirsiniz. Ancak, yalnızca bir tanesi uygulayan sınıfın varsayılan özelliği olabilir. Aşağıdaki örnek bunu göstermektedir.  
   
     ```  
     Public Class useIface3  

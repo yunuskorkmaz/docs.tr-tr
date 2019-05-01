@@ -6,11 +6,11 @@ helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
 ms.openlocfilehash: 3c6c6b628d208aede8c547dcfa66fc189a26ae01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791514"
 ---
 # <a name="system-provided-bindings"></a>Sistem tarafından sağlanan bağlamalar
 
@@ -61,8 +61,8 @@ WCF ile aşağıdaki bağlamaları gönderin:
 |<xref:System.ServiceModel.WSHttpBinding>|WS|Aktarım, karma (mesaj)|(Hiçbiri) güvenilir oturum, güvenlik oturumu|Evet (hiçbiri)|yok|(Metin) MTOM|Hayır|
 |<xref:System.ServiceModel.WSDualHttpBinding>|WS|(Mesaj) yok|(Güvenilir oturum), güvenlik oturumu|Evet (hiçbiri)|Evet|(Metin) MTOM|Hayır|
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|(, Karma, None ileti)|(Hiçbiri) güvenilir oturum, güvenlik oturumu|Evet (hiçbiri)|Hayır|(Metin) MTOM|Hayır|
-|<xref:System.ServiceModel.NetHttpBinding>|.NET|(Hiçbiri) taşıma, Message, TransportWithMessageCredential, TransportCredentialOnly|Aşağıdaki nota bakın|Hiçbiri|Aşağıdaki nota bakın|(İkili), metin, MTOM|Evet (arabelleğe alındı)|
-|<xref:System.ServiceModel.NetHttpsBinding>|.NET|(Taşıma), TransportWithMessageCredential|Aşağıdaki nota bakın|Hiçbiri|Aşağıdaki nota bakın|(İkili), metin, MTOM|Evet<br />(arabelleğe alındı)|
+|<xref:System.ServiceModel.NetHttpBinding>|.NET|(Hiçbiri) taşıma, Message, TransportWithMessageCredential, TransportCredentialOnly|Aşağıdaki nota bakın|None|Aşağıdaki nota bakın|(İkili), metin, MTOM|Evet (arabelleğe alındı)|
+|<xref:System.ServiceModel.NetHttpsBinding>|.NET|(Taşıma), TransportWithMessageCredential|Aşağıdaki nota bakın|Yok.|Aşağıdaki nota bakın|(İkili), metin, MTOM|Evet<br />(arabelleğe alındı)|
 |<xref:System.ServiceModel.NetTcpBinding>|.NET|(Taşıma), Message, None, karma|(Taşıma), güvenilir oturum, güvenlik oturumu|Evet (hiçbiri)|Evet|İkili|Evet<br />(arabelleğe alındı)|
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|(Taşıma) yok|Hiçbiri (taşıma)|Evet (hiçbiri)|Evet|İkili|Evet<br />(arabelleğe alındı)|
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|İleti (taşıma) yok|(Hiçbiri) taşıma|Hiçbiri (Evet)|Hayır|İkili|Hayır|

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio'da WPF'ye giriş
+title: Visual Studio’da WPF’ye Giriş
 ms.date: 01/26/2018
 helpviewer_keywords:
 - typography [WPF]
@@ -16,13 +16,13 @@ helpviewer_keywords:
 - 3-D rendering [WPF]
 ms.assetid: 582a314e-e23d-4144-b45b-acbbd5579252
 ms.openlocfilehash: d2a0cdb7e49fb584d0824edcefe710313ba21d4a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934686"
 ---
-# <a name="introduction-to-wpf-in-visual-studio"></a>Visual Studio'da WPF'ye giriş
+# <a name="introduction-to-wpf-in-visual-studio"></a>Visual Studio’da WPF’ye Giriş
 Visual Studio'da Windows Presentation Foundation (WPF), satır iş kolu Windows Masaüstü uygulamaları oluşturmak için birleştirilmiş programlama modeli geliştiricilere sağlar.  
   
  [Windows Presentation Foundation ile Masaüstü uygulamaları oluşturun](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  

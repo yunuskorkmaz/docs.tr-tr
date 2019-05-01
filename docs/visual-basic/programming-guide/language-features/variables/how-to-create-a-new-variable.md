@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
 ms.openlocfilehash: ee1e93b4e9819992f17738eb024004a4d66210d1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59332592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938248"
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>Nasıl yapılır: (Visual Basic) yeni değişken oluşturma
 Bir değişken ile oluşturduğunuz bir [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md).  
@@ -63,5 +63,5 @@ Bir değişken ile oluşturduğunuz bir [Dim deyimi](../../../../visual-basic/la
 - [Bildirilen Öğe Özellikleri](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Deyimler](../../../../visual-basic/language-reference/statements/index.md)
-- [Yerel Tür Arabirimi](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Option Infer Deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
 ms.openlocfilehash: fb71fe7abb5f70022e39808369779274eda2a7f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923116"
 ---
 # <a name="manipulating-data"></a>Verileri Düzenleme
 Giriş önce birden çok etkin sonuç kümesi (MARS), geliştiricilerin belirli senaryoları çözmek için birden çok bağlantı veya sunucu tarafı İmleçler'nı kullanmanız gerekiyordu. Birden çok bağlantı bir işlem durumda karşılaştıklarını ek olarak, bağlı bağlantılar (ile **sp_getbindtoken** ve **sp_bindsession**) gerekiyordu. Aşağıdaki senaryolarda, birden çok bağlantı yerine MARS özellikli bir bağlantı kullanmayı göstermektedir.  

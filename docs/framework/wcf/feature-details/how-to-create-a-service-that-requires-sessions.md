@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8a7613ef-0df9-47c3-b8dc-47f42cb1fd8b
 ms.openlocfilehash: 53b6c809103a2a32d544b8317164a5fa3aa81596
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787640"
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>Nasıl yapılır: Oturum Gerektiren Bir Hizmet Oluşturma
 Oturumları, istemcilere hizmet örnekleri arasındaki ilişkilendirmeleri geri çağırmaları ve çok atlamalı güvenlik gibi yararlı özellikleri sağlayan iki veya daha fazla uç noktalar arasında paylaşılan bir durum oluşturur. Windows Communication Foundation (WCF) uygulamalarında oturumları hakkında daha fazla bilgi için bkz. [oturumları kullanarak](../../../../docs/framework/wcf/using-sessions.md).  
@@ -21,11 +21,11 @@ Oturumları, istemcilere hizmet örnekleri arasındaki ilişkilendirmeleri geri 
   
 2. Değiştirme <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> ayarlayarak sözleşme bildiren <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> ya da özelliği:  
   
-    -   <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> Bu sözleşme bir oturumunda çalıştırmanız gerekir  
+    - <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> Bu sözleşme bir oturumunda çalıştırmanız gerekir  
   
-    -   <xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType> Bu sözleşme bir oturumda çalıştırabilirsiniz  
+    - <xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType> Bu sözleşme bir oturumda çalıştırabilirsiniz  
   
-    -   <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> Bu sözleşme oturum içindeki çalıştırmamalıdır durumunda.  
+    - <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> Bu sözleşme oturum içindeki çalıştırmamalıdır durumunda.  
   
 3. Oturumlarının destekleyen bir bağlama kullanmak için hizmet uç noktasını yapılandırın. Aşağıdaki yapılandırma örnek kullanımını gösterir <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>, bir WS destekleyen`-`ReliableMessaging oturumu.  
   

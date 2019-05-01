@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
 ms.openlocfilehash: f3ba6bfd0f83270bc6b9e980fe92f6630c90ad49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785352"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Derlenmiş Sorgular (LINQ to Entities)
 Birden çok kez varlık Çerçevesi'nde yapısal olarak benzer sorguları yürüten bir uygulamanız varsa, sorgu bir kez derleyerek ve birkaç kez farklı parametrelerle yürütme sık performansı artırabilirsiniz. Örneğin, bir uygulama belirli bir şehirdeki tüm müşterileri alma gerekebilir; Şehir, çalışma zamanında bir forma kullanıcı tarafından belirtilir. LINQ to Entities, bu amaç için derlenmiş sorgular kullanmayı destekler.  

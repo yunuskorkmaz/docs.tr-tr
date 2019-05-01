@@ -12,11 +12,11 @@ ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d4088fe35d919cd579ed9f9a6275db8bb88300fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793282"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Nasıl yapılır: CodeDOM Kullanarak XML Belge Dosyası Oluşturma
 CodeDOM, XML belgeleri oluşturan kodu oluşturmak için kullanılabilir. Kod oluşturma ve XML belgeleri çıktısı oluşturan derleyici seçeneğiyle oluşturulan kod derleme XML belge açıklamaları içeren CodeDOM grafik oluşturma işlemi içerir.  
@@ -77,7 +77,7 @@ CodeDOM, XML belgeleri oluşturan kodu oluşturmak için kullanılabilir. Kod ol
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   Bu kod örneği gerektirir `FullTrust` izin kümesinin başarıyla yürütülemedi.  
+- Bu kod örneği gerektirir `FullTrust` izin kümesinin başarıyla yürütülemedi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
 ms.openlocfilehash: 651f08812032aa1c5aacc04fdb3d7f491f12b607
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784013"
 ---
 # <a name="parameter-list-visual-basic"></a>Parametre Listesi (Visual Basic)
 Bir yordam çağrıldığında bu bekliyor parametreleri belirtir. Birden çok parametre, virgüllerle ayrılır. Bir parametre için sözdizimi aşağıdadır.  
@@ -63,23 +63,23 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
   
 ## <a name="rules"></a>Kurallar  
   
--   **Parantezler.** Parametre listesi belirtirseniz, parantez içine almalısınız. Hiçbir parametre varsa, boş bir liste çevreleyen parantezler kullanmaya devam edebilirsiniz. Bu öğe bir yordam olduğunu açıklığa kavuşturan tarafından kodunuzun okunabilirliği geliştirir.  
+- **Parantezler.** Parametre listesi belirtirseniz, parantez içine almalısınız. Hiçbir parametre varsa, boş bir liste çevreleyen parantezler kullanmaya devam edebilirsiniz. Bu öğe bir yordam olduğunu açıklığa kavuşturan tarafından kodunuzun okunabilirliği geliştirir.  
   
--   **İsteğe bağlı parametreler.** Kullanırsanız `Optional` bir parametre değiştiricisi, sonraki tüm parametreler listesinde isteğe bağlı olmalıdır ve kullanılarak bildirilen `Optional` değiştiricisi.  
+- **İsteğe bağlı parametreler.** Kullanırsanız `Optional` bir parametre değiştiricisi, sonraki tüm parametreler listesinde isteğe bağlı olmalıdır ve kullanılarak bildirilen `Optional` değiştiricisi.  
   
      Her isteğe bağlı parametre bildirimi sağlamalısınız `defaultvalue` yan tümcesi.  
   
      Daha fazla bilgi için [isteğe bağlı parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).  
   
--   **Parametre dizileri.** Belirtmelisiniz `ByVal` için bir `ParamArray` parametresi.  
+- **Parametre dizileri.** Belirtmelisiniz `ByVal` için bir `ParamArray` parametresi.  
   
      Her ikisini birden kullanamazsınız `Optional` ve `ParamArray` aynı parametre listesinde.  
   
      Daha fazla bilgi için [parametre dizileri](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
   
--   **Geçirme mekanizması.** Her bağımsız değişken için varsayılan mekanizmasıdır `ByVal`, yordam başka bir deyişle, temel alınan değişken öğesini değiştiremezsiniz. Öğeye bir başvuru türü ise, değiştirin veya nesneyi yeniden atama olsa bile ancak yordamı içeriği veya temel alınan bir nesnenin üyelerine değiştirebilirsiniz.  
+- **Geçirme mekanizması.** Her bağımsız değişken için varsayılan mekanizmasıdır `ByVal`, yordam başka bir deyişle, temel alınan değişken öğesini değiştiremezsiniz. Öğeye bir başvuru türü ise, değiştirin veya nesneyi yeniden atama olsa bile ancak yordamı içeriği veya temel alınan bir nesnenin üyelerine değiştirebilirsiniz.  
   
--   **Parametre adları.** Parametrenin veri türü bir dizi ise izleyin `parametername` parantez tarafından hemen. Parametre adları hakkında daha fazla bilgi için bkz. [bildirilen öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+- **Parametre adları.** Parametrenin veri türü bir dizi ise izleyin `parametername` parantez tarafından hemen. Parametre adları hakkında daha fazla bilgi için bkz. [bildirilen öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte gösterildiği bir `Function` iki parametre tanımlayan yordamı.  

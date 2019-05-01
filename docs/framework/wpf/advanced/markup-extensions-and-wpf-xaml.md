@@ -16,11 +16,11 @@ helpviewer_keywords:
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
 ms.openlocfilehash: 46539f0cfdcc478e2f5e4cd7aecf16ac059e6332
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61804591"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Biçimlendirme Uzantıları ve WPF XAML
 Bu konu, kendi sözdizimi kurallarını, amacı ve bunları altını sınıfı nesne modeli de dahil olmak üzere XAML için biçimlendirme uzantıları kavramı tanıtır. Biçimlendirme uzantıları bir XAML dili ve .NET uygulamasının XAML hizmetleri genel özelliğidir. Bu konuda özellikle kullanılmak üzere WPF XAML biçimlendirme uzantıları ayrıntıları.  
@@ -41,13 +41,13 @@ Bu konu, kendi sözdizimi kurallarını, amacı ve bunları altını sınıfı n
 ## <a name="xaml-defined-markup-extensions"></a>XAML tanımlı biçimlendirme uzantıları  
  Çeşitli biçimlendirme uzantıları, XAML WPF uygulamasına özel değildir ancak bunun yerine iç uygulamaları veya özellikleri XAML dili olarak mevcut. Bu işaretleme uzantıları System.Xaml derleme genel .NET Framework XAML hizmetlerin bir parçası olarak uygulanır ve XAML dil XAML ad alanı içinde. Bu işaretleme Uzantıları yaygın biçimlendirme kullanımı açısından genellikle adlarıyla `x:` kullanım önek. <xref:System.Windows.Markup.MarkupExtension> Temel sınıf (System.Xaml ayrıca tanımlanmıştır) tüm biçimlendirme uzantıları XAML okuyucular ve WPF XAML dahil olmak üzere, XAML yazıcılar desteklenmesi için kullanması gereken desenini sağlar.  
   
--   `x:Type` Kaynakları <xref:System.Type> adlandırılmış bir türün nesnesi. Bu özellik, stilleri ve şablonları içinde en sık kullanıldığı. Ayrıntılar için bkz [x: Type işaretleme uzantısı](../../xaml-services/x-type-markup-extension.md).  
+- `x:Type` Kaynakları <xref:System.Type> adlandırılmış bir türün nesnesi. Bu özellik, stilleri ve şablonları içinde en sık kullanıldığı. Ayrıntılar için bkz [x: Type işaretleme uzantısı](../../xaml-services/x-type-markup-extension.md).  
   
--   `x:Static` statik değer oluşturur. Değerleri, doğrudan bir hedef özelliğin değerinin türü olmayan değer türü kod varlıklardan gelir, ancak bu türe değerlendirilebilir. Ayrıntılar için bkz [x: Static işaretleme uzantısı](../../xaml-services/x-static-markup-extension.md).  
+- `x:Static` statik değer oluşturur. Değerleri, doğrudan bir hedef özelliğin değerinin türü olmayan değer türü kod varlıklardan gelir, ancak bu türe değerlendirilebilir. Ayrıntılar için bkz [x: Static işaretleme uzantısı](../../xaml-services/x-static-markup-extension.md).  
   
--   `x:Null` belirtir `null` bir özellik için bir değer olarak ve öznitelikleri veya özellik öğe değerleri için kullanılabilir. Ayrıntılar için bkz [x: Null işaretleme uzantısı](../../xaml-services/x-null-markup-extension.md).  
+- `x:Null` belirtir `null` bir özellik için bir değer olarak ve öznitelikleri veya özellik öğe değerleri için kullanılabilir. Ayrıntılar için bkz [x: Null işaretleme uzantısı](../../xaml-services/x-null-markup-extension.md).  
   
--   `x:Array` genel XAML sözdizimi, nereye koleksiyonu desteği WPF temel öğeler tarafından sağlanan ve denetim modelleri kasıtlı olarak kullanılmaz çalışmalarını dizilerde oluşturulması için destek sağlar. Ayrıntılar için bkz [x: Array işaretleme uzantısı](../../xaml-services/x-array-markup-extension.md).  
+- `x:Array` genel XAML sözdizimi, nereye koleksiyonu desteği WPF temel öğeler tarafından sağlanan ve denetim modelleri kasıtlı olarak kullanılmaz çalışmalarını dizilerde oluşturulması için destek sağlar. Ayrıntılar için bkz [x: Array işaretleme uzantısı](../../xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
 >  `x:` Önek, XAML dili ön tanımlı bir XAML dosyası veya üretim kök öğesi tipik XAML ad alanı eşlemesi için kullanılır. Örneğin, WPF uygulamaları için Visual Studio şablonları kullanan bir XAML dosyası başlatmak `x:` eşleme. Kendi XAML ad alanı eşlemesi, farklı ön ek belirteç seçebilir, ancak bu belgeleri varsayılan kabul edecek `x:` karşılık olarak, XAML dili için XAML ad alanı tanımlı bir parçası olan bu varlıklar tanımlayan bir yol eşleme WPF için varsayılan ad alanı veya diğer XAML ad alanları için belirli bir framework ilişkili değil.  
@@ -56,19 +56,19 @@ Bu konu, kendi sözdizimi kurallarını, amacı ve bunları altını sınıfı n
 ## <a name="wpf-specific-markup-extensions"></a>WPF özel biçimlendirme uzantıları  
  Kaynak başvurularının destekleyen WPF programlamada kullanılan en yaygın biçimlendirme uzantıları olanlardır (`StaticResource` ve `DynamicResource`) hem de veri bağlamayı destekleyen (`Binding`).  
   
--   `StaticResource` bir değer için bir özellik zaten tanımlı bir kaynak değerini değiştirerek sağlar. A `StaticResource` değerlendirme XAML yükleme zamanında nihai olarak yapılır ve çalışma zamanında nesne grafiğini erişiminiz yok. Ayrıntılar için bkz [StaticResource işaretleme uzantısı](staticresource-markup-extension.md).  
+- `StaticResource` bir değer için bir özellik zaten tanımlı bir kaynak değerini değiştirerek sağlar. A `StaticResource` değerlendirme XAML yükleme zamanında nihai olarak yapılır ve çalışma zamanında nesne grafiğini erişiminiz yok. Ayrıntılar için bkz [StaticResource işaretleme uzantısı](staticresource-markup-extension.md).  
   
--   `DynamicResource` değeri, bu değer bir kaynağa bir çalışma zamanı başvurusu olmasını erteleyerek için bir özellik sağlar. Dinamik kaynak başvuru her zaman böyle bir kaynak erişilir ve çalışma zamanında nesne grafiğini erişimi olan yeni bir arama zorlar. Bu erişim sağlamak `DynamicResource` kavramı WPF özelliği sistemde bağımlılık özellikleri tarafından desteklenir ve ifade değerlendirilir. Bu nedenle yalnızca kullanabilirsiniz `DynamicResource` bir bağımlılık özelliği hedef için. Ayrıntılar için bkz [DynamicResource işaretleme uzantısı](dynamicresource-markup-extension.md).  
+- `DynamicResource` değeri, bu değer bir kaynağa bir çalışma zamanı başvurusu olmasını erteleyerek için bir özellik sağlar. Dinamik kaynak başvuru her zaman böyle bir kaynak erişilir ve çalışma zamanında nesne grafiğini erişimi olan yeni bir arama zorlar. Bu erişim sağlamak `DynamicResource` kavramı WPF özelliği sistemde bağımlılık özellikleri tarafından desteklenir ve ifade değerlendirilir. Bu nedenle yalnızca kullanabilirsiniz `DynamicResource` bir bağımlılık özelliği hedef için. Ayrıntılar için bkz [DynamicResource işaretleme uzantısı](dynamicresource-markup-extension.md).  
   
--   `Binding` sınır değeri üst nesneye çalışma zamanında uygular veri bağlamını kullanarak, bir özellik için veri sağlar. Veri bağlama belirtmek için bir önemli satır içi söz dizimi sağlar çünkü bu işaretleme uzantısı oldukça karmaşıktır. Ayrıntılar için bkz [biçimlendirme uzantısı bağlama](binding-markup-extension.md).  
+- `Binding` sınır değeri üst nesneye çalışma zamanında uygular veri bağlamını kullanarak, bir özellik için veri sağlar. Veri bağlama belirtmek için bir önemli satır içi söz dizimi sağlar çünkü bu işaretleme uzantısı oldukça karmaşıktır. Ayrıntılar için bkz [biçimlendirme uzantısı bağlama](binding-markup-extension.md).  
   
--   `RelativeSource` kaynak bilgileri sağlar bir <xref:System.Windows.Data.Binding> çalışma zamanı nesne ağacındaki birkaç olası ilişkilerin gidebilirsiniz. Bu, çok amaçlı şablonlarında oluşturulan veya kod çevreleyen nesne ağacının tam bilgisi olmadan oluşturulmuş bağlamaları için özelleştirilmiş kaynağını sağlar. Ayrıntılar için bkz [RelativeSource işaretleme uzantısı](relativesource-markupextension.md).  
+- `RelativeSource` kaynak bilgileri sağlar bir <xref:System.Windows.Data.Binding> çalışma zamanı nesne ağacındaki birkaç olası ilişkilerin gidebilirsiniz. Bu, çok amaçlı şablonlarında oluşturulan veya kod çevreleyen nesne ağacının tam bilgisi olmadan oluşturulmuş bağlamaları için özelleştirilmiş kaynağını sağlar. Ayrıntılar için bkz [RelativeSource işaretleme uzantısı](relativesource-markupextension.md).  
   
--   `TemplateBinding` Şablon kullanacağı sınıfının nesne model tanımlı özelliklerinden gelen şablonlu özellikleri için değerleri kullanmak üzere bir denetim şablonu sağlar. Diğer bir deyişle, özelliği şablon tanımı içinden şablonu uygulandıktan sonra yalnızca var olan bir bağlam erişebilirsiniz. Ayrıntılar için bkz [TemplateBinding Markup Extension](templatebinding-markup-extension.md). Pratik kullanımı hakkında daha fazla bilgi için `TemplateBinding`, bkz: [ControlTemplates örneği ile stillendirme](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+- `TemplateBinding` Şablon kullanacağı sınıfının nesne model tanımlı özelliklerinden gelen şablonlu özellikleri için değerleri kullanmak üzere bir denetim şablonu sağlar. Diğer bir deyişle, özelliği şablon tanımı içinden şablonu uygulandıktan sonra yalnızca var olan bir bağlam erişebilirsiniz. Ayrıntılar için bkz [TemplateBinding Markup Extension](templatebinding-markup-extension.md). Pratik kullanımı hakkında daha fazla bilgi için `TemplateBinding`, bkz: [ControlTemplates örneği ile stillendirme](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
--   `ColorConvertedBitmap` göreceli olarak gelişmiş bir görüntü senaryosunu destekler. Ayrıntılar için bkz [ColorConvertedBitmap işaretleme uzantısı](colorconvertedbitmap-markup-extension.md).  
+- `ColorConvertedBitmap` göreceli olarak gelişmiş bir görüntü senaryosunu destekler. Ayrıntılar için bkz [ColorConvertedBitmap işaretleme uzantısı](colorconvertedbitmap-markup-extension.md).  
   
--   `ComponentResourceKey` ve `ThemeDictionary` kaynakları ve özel denetimler ile paketlenmiştir temaları için özellikle kaynak arama özelliklerini destekler. Daha fazla bilgi için [ComponentResourceKey işaretleme uzantısı](componentresourcekey-markup-extension.md), [ThemeDictionary işaretleme uzantısı](themedictionary-markup-extension.md), veya [denetim yazmaya genel bakış](../controls/control-authoring-overview.md).  
+- `ComponentResourceKey` ve `ThemeDictionary` kaynakları ve özel denetimler ile paketlenmiştir temaları için özellikle kaynak arama özelliklerini destekler. Daha fazla bilgi için [ComponentResourceKey işaretleme uzantısı](componentresourcekey-markup-extension.md), [ThemeDictionary işaretleme uzantısı](themedictionary-markup-extension.md), veya [denetim yazmaya genel bakış](../controls/control-authoring-overview.md).  
   
 <a name="StarExtension"></a>   
 ## <a name="extension-classes"></a>* Uzantı sınıfları  
@@ -83,18 +83,18 @@ Bu konu, kendi sözdizimi kurallarını, amacı ve bunları altını sınıfı n
 ### <a name="extension-class-interpretation-of-initialization-text"></a>Uzantı sınıfı yorumu başlatma metin  
  Ad ve küme ayraçları içinde hala işaretleme uzantısı aşağıdaki dize belirteçleri aşağıdaki yollardan biriyle XAML işlemcisi tarafından yorumlanır:  
   
--   Virgül her zaman ayırıcı veya ayrı ayrı belirteçlerin sınırlayıcı temsil eder.  
+- Virgül her zaman ayırıcı veya ayrı ayrı belirteçlerin sınırlayıcı temsil eder.  
   
--   Her belirteç, ayrı ayrı belirteçlerin herhangi bir eşittir işareti içermiyorsa, bir oluşturucu bağımsız değişken olarak kabul edilir. Her Oluşturucu parametresi olarak bu imza tarafından saklanır ve doğru sırada bu imza tarafından beklenen beklenen türde verilmelidir.  
+- Her belirteç, ayrı ayrı belirteçlerin herhangi bir eşittir işareti içermiyorsa, bir oluşturucu bağımsız değişken olarak kabul edilir. Her Oluşturucu parametresi olarak bu imza tarafından saklanır ve doğru sırada bu imza tarafından beklenen beklenen türde verilmelidir.  
   
     > [!NOTE]
     >  XAML işlemci çiftlerinin sayısını bağımsız değişken sayısı ile eşleşen bir oluşturucu çağırmanız gerekir. Özel biçimlendirme uzantısı uyguluyorsanız, bu nedenle, aynı bağımsız değişken sayısı ile birden çok Oluşturucu sağlamaz. Birden fazla biçimlendirme uzantısı Oluşturucusu yoluyla aynı parametre sayısı mevcutsa XAML işlemci nasıl davranacağını davranışını tanımlı değil, ancak XAML işlemci uygulamasında bu durum varsa, kullanımıyla ilgili bir özel durum izni olduğunu tahmin etmeleri gereken İşaretleme uzantısı tür tanımlarını.  
   
--   Tek tek ayrılmış, belirteçleri eşittir işareti içeren ve XAML işlemci için işaretleme uzantısı önce varsayılan oluşturucuyu çağırır. Ardından, her ad = değer çifti işaretleme uzantısı ve bu özelliğe atanacak bir değer var olan bir özellik adı olarak yorumlanır.  
+- Tek tek ayrılmış, belirteçleri eşittir işareti içeren ve XAML işlemci için işaretleme uzantısı önce varsayılan oluşturucuyu çağırır. Ardından, her ad = değer çifti işaretleme uzantısı ve bu özelliğe atanacak bir değer var olan bir özellik adı olarak yorumlanır.  
   
--   Oluşturucu davranış ve davranışı bir işaretleme uzantısı'nda özelliğini arasında paralel bir sonuç ise, hangi davranışın kullandığınız önemli değildir. Kullanmak için daha yaygın bir kullanımdır *özelliği*`=`*değer* çiftleri için birden fazla ayarlanabilir özelliğe yalnızca, biçimlendirme daha bilinçli kolaylaştırır ve, varsa biçimlendirme uzantıları Oluşturucu parametresi yanlışlıkla sırasını değiştirmek olasılığı daha azdır. (Belirttiğinizde özellik = değer çiftleri, bu özelliklerin herhangi bir sırada olabilir.) Ayrıca, bir işaretleme uzantısı ayarlar, ayarlanabilir özelliklerin her biri bir oluşturucu parametresi sağlayan bir garanti yoktur. Örneğin, <xref:System.Windows.Data.Binding> uzantı aracılığıyla ayarlanabilir birçok özelliklere sahip bir işaretleme uzantısı *özelliği*`=`*değer* form, ancak <xref:System.Windows.Data.Binding> yalnızca iki destekler Oluşturucular: varsayılan bir oluşturucu ve bir başlangıç yolunu ayarlar bir.  
+- Oluşturucu davranış ve davranışı bir işaretleme uzantısı'nda özelliğini arasında paralel bir sonuç ise, hangi davranışın kullandığınız önemli değildir. Kullanmak için daha yaygın bir kullanımdır *özelliği*`=`*değer* çiftleri için birden fazla ayarlanabilir özelliğe yalnızca, biçimlendirme daha bilinçli kolaylaştırır ve, varsa biçimlendirme uzantıları Oluşturucu parametresi yanlışlıkla sırasını değiştirmek olasılığı daha azdır. (Belirttiğinizde özellik = değer çiftleri, bu özelliklerin herhangi bir sırada olabilir.) Ayrıca, bir işaretleme uzantısı ayarlar, ayarlanabilir özelliklerin her biri bir oluşturucu parametresi sağlayan bir garanti yoktur. Örneğin, <xref:System.Windows.Data.Binding> uzantı aracılığıyla ayarlanabilir birçok özelliklere sahip bir işaretleme uzantısı *özelliği*`=`*değer* form, ancak <xref:System.Windows.Data.Binding> yalnızca iki destekler Oluşturucular: varsayılan bir oluşturucu ve bir başlangıç yolunu ayarlar bir.  
   
--   Değişmez değer virgül, bir işaretleme uzantısı olmadan escapement geçirilemez.  
+- Değişmez değer virgül, bir işaretleme uzantısı olmadan escapement geçirilemez.  
   
 <a name="EscapeSequences"></a>   
 ## <a name="escape-sequences-and-markup-extensions"></a>Kaçış dizileri ve İşaretleme uzantıları  

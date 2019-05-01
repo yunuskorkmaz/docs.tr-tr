@@ -3,11 +3,11 @@ title: SQL Server'da Saklı Yordam İzinlerini Yönetme
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
 ms.openlocfilehash: 0688157b45892cacb73f858dffb93836da9fc91d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923129"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>SQL Server'da Saklı Yordam İzinlerini Yönetme
 Bir yöntem çok satırlı defense veritabanınızı geçici olarak oluşturma, saklı yordamları ve kullanıcı tanımlı işlevleri kullanarak tüm veri erişim uygulamaktır. Tablolar gibi temel nesneler için tüm izinleri reddetme ve saklı yordamları yürütme izinlerini iptal etme. Bu, geçici verileri ve veritabanı nesnelerinizi bir güvenlik çevresi etkili bir şekilde oluşturur.  
@@ -15,19 +15,19 @@ Bir yöntem çok satırlı defense veritabanınızı geçici olarak oluşturma, 
 ## <a name="stored-procedure-benefits"></a>Saklı yordam avantajları  
  Saklı yordamlar aşağıdaki avantajlara sahiptir:  
   
--   Kullanıcı verileri ve nesneleri geliştiricileri ve Veritabanı yöneticileri amaçladığınız şekilde erişebilmesi için veri mantığını ve iş kuralları kapsüllenmiş.  
+- Kullanıcı verileri ve nesneleri geliştiricileri ve Veritabanı yöneticileri amaçladığınız şekilde erişebilmesi için veri mantığını ve iş kuralları kapsüllenmiş.  
   
--   Tüm kullanıcı girişini doğrulama parametreli saklı yordamları, SQL ekleme saldırılarına karşı korunmanıza kullanılabilir. Dinamik SQL kullanırsanız, Komutlarınızın Parametreleştirme emin olun ve hiçbir zaman doğrudan bir sorgu dizesi parametresi değerleri içerir.  
+- Tüm kullanıcı girişini doğrulama parametreli saklı yordamları, SQL ekleme saldırılarına karşı korunmanıza kullanılabilir. Dinamik SQL kullanırsanız, Komutlarınızın Parametreleştirme emin olun ve hiçbir zaman doğrudan bir sorgu dizesi parametresi değerleri içerir.  
   
--   Geçici sorgular ve veri değişiklikleri izin verilmiyor. Bu, kullanıcıların kötü amaçlı olarak veya yanlışlıkla veri yok etme veya sunucu veya ağ performansı bozacak sorgular yürütme engeller.  
+- Geçici sorgular ve veri değişiklikleri izin verilmiyor. Bu, kullanıcıların kötü amaçlı olarak veya yanlışlıkla veri yok etme veya sunucu veya ağ performansı bozacak sorgular yürütme engeller.  
   
--   Yordam kodunda hataları doğrudan istemci uygulamaları için geçirilen olmadan işlenebilir. Bu, hata iletileri algılama saldırısında yardımcı döndürülmesini önler. Hataları günlüğe kaydetmek ve bunları sunucuda işlemesi.  
+- Yordam kodunda hataları doğrudan istemci uygulamaları için geçirilen olmadan işlenebilir. Bu, hata iletileri algılama saldırısında yardımcı döndürülmesini önler. Hataları günlüğe kaydetmek ve bunları sunucuda işlemesi.  
   
--   Saklı yordamlar kez yazılmış ve birçok uygulama tarafından erişilebilir.  
+- Saklı yordamlar kez yazılmış ve birçok uygulama tarafından erişilebilir.  
   
--   İstemci uygulamaları, temel alınan veri yapıları hakkında bir şey bilmek gerekmez. Saklı yordam kodu değişiklikleri parametre listeleri etkilemez sürece, istemci uygulamalarında bir değişikliğe gerek kalmadan değiştirilebilir ya da veri türleri döndürdü.  
+- İstemci uygulamaları, temel alınan veri yapıları hakkında bir şey bilmek gerekmez. Saklı yordam kodu değişiklikleri parametre listeleri etkilemez sürece, istemci uygulamalarında bir değişikliğe gerek kalmadan değiştirilebilir ya da veri türleri döndürdü.  
   
--   Saklı yordamlar, bir yordam çağrısı birden fazla işlemi birleştirerek ağ trafiğini azaltabilir.  
+- Saklı yordamlar, bir yordam çağrısı birden fazla işlemi birleştirerek ağ trafiğini azaltabilir.  
   
 ## <a name="stored-procedure-execution"></a>Saklı yordam yürütme  
  Yordamları faydalanın-kullanıcılar, veritabanı nesneleri erişmek için açık izniniz gerekmez. böylece veri erişim sağlamak için zincirleme sahipliği depolanır. Birbirine sıralı olarak erişen nesneler aynı kullanıcı tarafından sahip olunan bir sahiplik zinciri bulunmaktadır. Örneğin, diğer saklı yordamlara bir saklı yordam çağırabilir veya bir saklı yordam birden çok tablo erişebilirsiniz. Yürütme zincirindeki tüm nesnelerin aynı bir sahip ve ardından SQL Server yalnızca arayan için yürütme izni denetler, arayanın izinlerin diğer nesneler üzerinde değil. Bu nedenle saklı yordamlar yalnızca yürütme izinleri vermeniz gerekir; iptal etmek ya da temel alınan tablolar üzerindeki tüm izinleri reddetme.  
@@ -35,19 +35,19 @@ Bir yöntem çok satırlı defense veritabanınızı geçici olarak oluşturma, 
 ## <a name="best-practices"></a>En İyi Yöntemler  
  Saklı yordamlar yalnızca yazma yeterince uygulamanızın güvenliğini sağlamak için yeterli değildir. Ayrıca, aşağıdaki olası güvenlik açıkları düşünmeniz gerekir.  
   
--   Veritabanı rolleri verilerine erişebilir olmasını istediğiniz için saklı yordamları ÇALIŞTIRMA izinlerini verin.  
+- Veritabanı rolleri verilerine erişebilir olmasını istediğiniz için saklı yordamları ÇALIŞTIRMA izinlerini verin.  
   
--   İptal etmek ya da temel alınan tablolar için tüm roller ve kullanıcılar veritabanındaki tüm izinleri reddetme dahil olmak üzere `public` rol. Tüm kullanıcılar, gelen genel izinleri devralır. Bu nedenle izinleri reddetme `public` anlamına gelir, yalnızca sahipleri ve `sysadmin` üye erişimi vardır; diğer tüm kullanıcıların izinleri, diğer rol üyelikleri devralınacak mümkün olmayacaktır.  
+- İptal etmek ya da temel alınan tablolar için tüm roller ve kullanıcılar veritabanındaki tüm izinleri reddetme dahil olmak üzere `public` rol. Tüm kullanıcılar, gelen genel izinleri devralır. Bu nedenle izinleri reddetme `public` anlamına gelir, yalnızca sahipleri ve `sysadmin` üye erişimi vardır; diğer tüm kullanıcıların izinleri, diğer rol üyelikleri devralınacak mümkün olmayacaktır.  
   
--   Kullanıcıların rollerini veya eklemeyin `sysadmin` veya `db_owner` rolleri. Sistem yöneticileri ve veritabanı sahipleri, tüm veritabanı nesnelere erişebilir.  
+- Kullanıcıların rollerini veya eklemeyin `sysadmin` veya `db_owner` rolleri. Sistem yöneticileri ve veritabanı sahipleri, tüm veritabanı nesnelere erişebilir.  
   
--   Devre dışı `guest` hesabı. Bu, anonim kullanıcıların veritabanına bağlanmasını engeller. Konuk hesabı yeni veritabanları varsayılan olarak devre dışıdır.  
+- Devre dışı `guest` hesabı. Bu, anonim kullanıcıların veritabanına bağlanmasını engeller. Konuk hesabı yeni veritabanları varsayılan olarak devre dışıdır.  
   
--   Hata işleme ve günlük hatalar uygulayın.  
+- Hata işleme ve günlük hatalar uygulayın.  
   
--   Tüm kullanıcı girişini doğrulama parametreli saklı yordamlar oluşturun. Tüm kullanıcı girişi, güvenilmeyen olarak kabul eder.  
+- Tüm kullanıcı girişini doğrulama parametreli saklı yordamlar oluşturun. Tüm kullanıcı girişi, güvenilmeyen olarak kabul eder.  
   
--   Dinamik SQL yapmaktan kaçının kesinlikle gerekli. Bir dize değeri sınırlandırmak ve sınırlayıcı giriş dizesindeki tüm oluşumlarıyla kaçış için Transact-SQL QUOTENAME() işlevini kullanın.  
+- Dinamik SQL yapmaktan kaçının kesinlikle gerekli. Bir dize değeri sınırlandırmak ve sınırlayıcı giriş dizesindeki tüm oluşumlarıyla kaçış için Transact-SQL QUOTENAME() işlevini kullanın.  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  

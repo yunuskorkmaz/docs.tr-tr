@@ -3,11 +3,11 @@ title: LINQ to DataSet Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
 ms.openlocfilehash: 635f1c17da40095990c238912f9e09ad398e6637
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878598"
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ to DataSet Genel Bakış
 <xref:System.Data.DataSet> Daha yaygın olarak kullanılan bileşenlerden biri [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Anahtar öğesi bağlantısı kesilmiş olan programlama modeli [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] , temel alır ve onu açıkça bu verileri önbelleğe almak için farklı veri kaynaklarından sağlar. Sunu katmanı için <xref:System.Data.DataSet> GUI denetimleri için veri bağlama ile tümleşiktir. Orta katman için ilişkisel veri şeklini korur ve hızlı Basit Sorgu ve hiyerarşi Gezinti hizmetleri içeren bir önbellek sağlar. Bir veritabanı isteklerinde sayısını azaltmak için kullanılan genel bir tekniktir kullanmaktır <xref:System.Data.DataSet> Orta katmanda önbelleğe alma. Örneğin, veri odaklı düşünün [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulaması. Genellikle, uygulama verilerinin büyük bir kısmı sık değişmeyen ve oturumlar veya kullanıcılar arasında yaygındır. Bu verileri, veritabanında istek sayısını azaltan ve kullanıcının etkileşim hızlandırır Web sunucusu üzerindeki bellekte tutulabilir. Başka bir kullanışlı yönüyle <xref:System.Data.DataSet> veri kümelerine bir veya daha fazla veri kaynağından uygulama alanına taşıyacak şekilde olanak tanımasıdır. Uygulama, ilişkisel şeklini korurken verileri bellek içinde daha sonra değiştirebilirsiniz.  

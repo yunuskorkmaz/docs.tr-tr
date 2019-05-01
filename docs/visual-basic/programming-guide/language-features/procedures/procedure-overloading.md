@@ -18,11 +18,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
 ms.openlocfilehash: 6e8d1fa72c60c4fa3d2237ad24c2d1b4891a7bf2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791878"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Yordam Aşırı Yüklemesi (Visual Basic)
 *Aşırı yükleme* bir yordam, birden çok sürümü aynı ada ancak farklı parametre listeleri kullanarak tanımlama anlamına gelir. Aşırı yükleme amacı, ada göre ayırmak zorunda kalmadan bir yordamın birden fazla yakından ilgili sürümünü tanımlamaktır. Parametre listesini değiştirerek bunu yapabilirsiniz.  
@@ -30,39 +30,39 @@ ms.locfileid: "58828244"
 ## <a name="overloading-rules"></a>Kuralları aşırı yükleme  
  Bir yordamı aşırı yükleme, aşağıdaki kurallar geçerlidir:  
   
--   **Aynı ada**. Aşırı yüklenen her sürümü aynı yordam adı kullanmanız gerekir.  
+- **Aynı ada**. Aşırı yüklenen her sürümü aynı yordam adı kullanmanız gerekir.  
   
--   **Farklı imza**. Her Aşırı yüklenen sürümü, diğer aşırı yüklenmiş sürümleri aşağıdaki bakımdan en az birinde farklı olmalıdır:  
+- **Farklı imza**. Her Aşırı yüklenen sürümü, diğer aşırı yüklenmiş sürümleri aşağıdaki bakımdan en az birinde farklı olmalıdır:  
   
-    -   Parametre sayısı  
+    - Parametre sayısı  
   
-    -   Parametre sırası  
+    - Parametre sırası  
   
-    -   Parametrelerinin veri türleri  
+    - Parametrelerinin veri türleri  
   
-    -   Tür parametreleri (için genel bir yordam) sayısı  
+    - Tür parametreleri (için genel bir yordam) sayısı  
   
-    -   Dönüş türü (yalnızca bir dönüşüm işleci)  
+    - Dönüş türü (yalnızca bir dönüşüm işleci)  
   
      Yordam adı ile birlikte önceki öğeler toplu olarak adlandırılır *imza* yordamın. Aşırı yüklenmiş bir yordamı çağırdığınızda, derleyici imzayı tanımının çağrı doğru eşleşip eşleşmediğini kontrol için kullanır.  
   
--   **Öğeleri imzasının parçası**. İmza değişen olmadan bir yordamı aşırı yükleyemez. Özellikle, bir veya daha fazla aşağıdaki öğelerin değişen tarafından yalnızca bir yordamı aşırı yüklenemez:  
+- **Öğeleri imzasının parçası**. İmza değişen olmadan bir yordamı aşırı yükleyemez. Özellikle, bir veya daha fazla aşağıdaki öğelerin değişen tarafından yalnızca bir yordamı aşırı yüklenemez:  
   
-    -   Yordam değiştiricisi anahtar sözcükler gibi `Public`, `Shared`, ve `Static`  
+    - Yordam değiştiricisi anahtar sözcükler gibi `Public`, `Shared`, ve `Static`  
   
-    -   Parametresi veya tür parametresi adları  
+    - Parametresi veya tür parametresi adları  
   
-    -   Tür parametresi kısıtlamaları (için genel bir yordam)  
+    - Tür parametresi kısıtlamaları (için genel bir yordam)  
   
-    -   Parametre değiştiricisi anahtar sözcükler gibi `ByRef` ve `Optional`  
+    - Parametre değiştiricisi anahtar sözcükler gibi `ByRef` ve `Optional`  
   
-    -   Bir değer olup olmadığını döndürür  
+    - Bir değer olup olmadığını döndürür  
   
-    -   (bir dönüşüm işleci dışında) dönüş değerinin veri türü  
+    - (bir dönüşüm işleci dışında) dönüş değerinin veri türü  
   
      Yukarıdaki listede öğeleri imzasının bir parçası değildir. Aşırı yüklü sürümler arasında ayırt etmek için kullanamazsınız olsa da, bunların imzalarını tarafından düzgün bir şekilde ayırt edilen aşırı yüklü sürümler arasında farklılık gösterebilir.  
   
--   **Geç bağlama bağımsız değişkenleri**. Geç bir bağımlı nesne değişkeni aşırı yüklenmiş bir sürüme geçirmek istiyorsanız, uygun bir parametre olarak bildirmeniz gerekir <xref:System.Object>.  
+- **Geç bağlama bağımsız değişkenleri**. Geç bir bağımlı nesne değişkeni aşırı yüklenmiş bir sürüme geçirmek istiyorsanız, uygun bir parametre olarak bildirmeniz gerekir <xref:System.Object>.  
   
 ## <a name="multiple-versions-of-a-procedure"></a>Bir yordamın birden fazla sürümünü  
  Yazdığınız varsayalım bir `Sub` müşteriye adı veya hesap numarası başvurabileceğiniz istediğiniz bir müşterinin bakiyesi ve karşı bir işlem göndermeniz için yordamı. Bunu yapabilmek için iki farklı tanımlayabilirsiniz `Sub` yordamlar, aşağıdaki örnekte olduğu gibi:  

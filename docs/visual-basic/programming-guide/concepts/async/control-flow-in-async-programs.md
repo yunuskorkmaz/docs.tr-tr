@@ -3,11 +3,11 @@ title: Zaman uyumsuz programlarda (Visual Basic) denetim akışı
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
 ms.openlocfilehash: ed993943bcf7341f900c575744a1faa53a4a8a2e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923675"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Zaman uyumsuz programlarda (Visual Basic) denetim akışı
 Yazma ve zaman uyumsuz programları daha kolay kullanarak koruduğunuz `Async` ve `Await` anahtar sözcükleri. Ancak, nasıl programınızı anlamazsanız sonuçlar sizi şaşırtabilir. Bu konu, her zaman denetimi başka bir ve hangi bilgileri bir yöntemden diğerine taşır. göstermek için basit bir zamanuyumsuz program aracılığıyla denetim akışını aktarılır izler.  
@@ -19,9 +19,9 @@ Yazma ve zaman uyumsuz programları daha kolay kullanarak koruduğunuz `Async` v
   
  Aşağıdaki örnek, bir dize olarak belirtilen bir Web sitesinin içeriklerini karşıdan yüklemek ve dizenin uzunluğu görüntülemek için zaman uyumsuz yöntemler kullanır. Örneğin, aşağıdaki iki yöntemi içerir.  
   
--   `startButton_Click`, hangi çağrıları `AccessTheWebAsync` ve sonucu görüntüler.  
+- `startButton_Click`, hangi çağrıları `AccessTheWebAsync` ve sonucu görüntüler.  
   
--   `AccessTheWebAsync`, bir dize olarak bir Web sitesinin içeriklerini karşıdan yükler ve dizenin uzunluğunu döndürür. `AccessTheWebAsync` zaman uyumsuz kullanan <xref:System.Net.Http.HttpClient> yöntemi <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>içeriğini indirmek için.  
+- `AccessTheWebAsync`, bir dize olarak bir Web sitesinin içeriklerini karşıdan yükler ve dizenin uzunluğunu döndürür. `AccessTheWebAsync` zaman uyumsuz kullanan <xref:System.Net.Http.HttpClient> yöntemi <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>içeriğini indirmek için.  
   
  Numaralı ekran satırları, programın nasıl çalıştığını anlamanıza yardımcı olmak ve işaretlenmiş her noktada ne olacağını açıklamak için program boyunca stratejik noktalarda görüntülenir. Görüntü satırları "Bir"ile "altı." olarak etiketlenmiştir Etiketler, programın bu kod satırlarını ulaştığında sırayı temsil eder.  
   

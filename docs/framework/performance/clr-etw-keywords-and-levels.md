@@ -10,11 +10,11 @@ ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788082"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW Anahtar Sözcükleri ve Düzeyler
 <a name="top"></a> Windows (ETW) olayları için olay izleme kategorisi ve düzeyi tarafından filtrelenebilir. Olay [CLR ETW anahtar sözcükleri](#keywords) olayları kategoriye göre filtreleme etkinleştirin; bunlar için çalışma zamanı ve Özet sağlayıcılarını bileşimlerde kullanılır. [Olay düzeyleri](#levels) bayrakları tarafından tanımlanır.  
@@ -25,13 +25,13 @@ ms.locfileid: "59105748"
   
  Anahtar sözcükler aşağıdaki tablolarda açıklanmıştır:  
   
--   [CLR ETW çalışma zamanı anahtar sözcükleri](#runtime)  
+- [CLR ETW çalışma zamanı anahtar sözcükleri](#runtime)  
   
--   [CLR ETW Özet anahtar sözcükleri](#rundown)  
+- [CLR ETW Özet anahtar sözcükleri](#rundown)  
   
--   [Çalışma zamanı sağlayıcısı için Sembol çözümleme için anahtar sözcüğü birleşimleri](#runtime_combo)  
+- [Çalışma zamanı sağlayıcısı için Sembol çözümleme için anahtar sözcüğü birleşimleri](#runtime_combo)  
   
--   [Anahtar sözcüğü birleşimlerini özeti sağlayıcısının sembol çözümleme için](#rundown_combo)  
+- [Anahtar sözcüğü birleşimlerini özeti sağlayıcısının sembol çözümleme için](#rundown_combo)  
   
 <a name="runtime"></a>   
 ### <a name="clr-etw-runtime-keywords"></a>CLR ETW çalışma zamanı anahtar sözcükleri  

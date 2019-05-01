@@ -1,5 +1,5 @@
 ---
-title: XmlNameTable kullanarak nesne karşılaştırma
+title: XmlNameTable Kullanarak Nesne Karşılaştırma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 814f5434dd0473b3b1dd613a2eba14a828c464d9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936714"
 ---
-# <a name="object-comparison-using-xmlnametable"></a>XmlNameTable kullanarak nesne karşılaştırma
+# <a name="object-comparison-using-xmlnametable"></a>XmlNameTable Kullanarak Nesne Karşılaştırma
 **XML belgelerine uymasıdır**, oluşturulduktan sonra bu belge için özel olarak oluşturulan bir ad tablosu sahip. XML belgeye yüklendi veya yeni öğeler veya öznitelikleri oluşturulur, öğeyi ve öznitelik adları içine yerleştirilir **XmlNameTable**. Ayrıca oluşturabileceğiniz bir **XmlDocument** var olan bir **ad tablosu** başka bir belgeden. Zaman **XML belgelerine uymasıdır** alan Oluşturucu ile oluşturulan bir **XmlNameTable** parametresi, belge sahip düğüm adları, ad alanlarını ve önekleri zaten depolanmış erişim  **XmlNameTable**. Adları tabloda depolandıktan sonra ad tablosu nasıl yüklenir bakılmaksızın adları ile adlarının nesne karşılaştırma yerine dize karşılaştırma kullanarak hızlı bir şekilde karşılaştırılabilir. Dizeleri eklenebilir adı kullanarak tablo <xref:System.Xml.NameTable.Add%2A>. Aşağıdaki kod örneği oluşturulan bir ad tablosu ve dize gösterir **MyString** tabloya eklenmekte. Bundan sonra bir **XmlDocument** bu tabloyu ve içindeki öğe ve öznitelik adları kullanılarak oluşturulan **Myfile.xml** var olan ad tablosuna eklenir.  
   
 ```vb  

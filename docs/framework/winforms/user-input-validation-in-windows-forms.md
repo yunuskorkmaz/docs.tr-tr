@@ -8,11 +8,11 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
 ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800132"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows Forms'ta Kullanıcı Girdisi Doğrulama
 Kullanıcıların uygulamanıza veri girerken, uygulamanızın kullandığı önce verilerin geçerli olduğunu doğrulamak isteyebilirsiniz. Belirli metin alanları olmaması, uzunluğu sıfır, bir alan, bir telefon numarası veya diğer türdeki bir biçimlendirilmiş veri biçimlendirilmiş olması veya bir dize bir veritabanının güvenliğini tehlikeye atmak için kullanılabilir tüm güvenli olmayan karakterleri içermemesi gerektirebilir. Windows Forms, uygulamanızdaki girişi doğrulama birçok yol sağlar.  
@@ -27,11 +27,11 @@ Kullanıcıların uygulamanıza veri girerken, uygulamanızın kullandığı ön
 ## <a name="event-driven-validation"></a>Olay temelli doğrulama  
  Doğrulama üzerinde tam programlı denetim istiyorsanız veya karmaşık doğrulama denetimleri gerçekleştirmek gerekirse, çoğu Windows Forms denetimlerinin yerleşik doğrulama olayları kullanmanız gerekir. Serbest biçimli kullanıcı girişi kabul eden her denetimin bir <xref:System.Windows.Forms.Control.Validating> olayı, denetimi veri doğrulama gerekli olduğunda meydana gelir. İçinde <xref:System.Windows.Forms.Control.Validating> olay işleme yöntemindeki kullanıcı çeşitli yollarla girişi doğrulayabilir. Örneğin, bir posta kodu içermesi gereken bir metin kutusu varsa, aşağıdaki yollarla doğrulama gerçekleştirebilirsiniz:  
   
--   Posta kodu, posta kodları belirli bir gruba ait olması gerekir, kullanıcı tarafından girilen verileri doğrulamak için bir girişteki bir dize karşılaştırma gerçekleştirebilirsiniz. Posta kodu {10001, 10002, 10003} kümesinde olması gerekir, örneğin, ardından bir dize karşılaştırma verileri doğrulamak için kullanabilirsiniz.  
+- Posta kodu, posta kodları belirli bir gruba ait olması gerekir, kullanıcı tarafından girilen verileri doğrulamak için bir girişteki bir dize karşılaştırma gerçekleştirebilirsiniz. Posta kodu {10001, 10002, 10003} kümesinde olması gerekir, örneğin, ardından bir dize karşılaştırma verileri doğrulamak için kullanabilirsiniz.  
   
--   Posta kodu belirli bir biçimde olması gerekiyorsa kullanıcı tarafından girilen verileri doğrulamak için normal ifadeler kullanabilirsiniz. Örneğin, form doğrulama için `#####` veya `#####-####`, normal bir ifadeyi kullanabilirsiniz `^(\d{5})(-\d{4})?$`. Form doğrulamak için `A#A #A#`, normal bir ifadeyi kullanabilirsiniz `[A-Z]\d[A-Z] \d[A-Z]\d`. Normal ifadeler hakkında daha fazla bilgi için bkz. [.NET Framework normal ifadelerinde](../../standard/base-types/regular-expressions.md) ve [normal ifade örnekleri](../../standard/base-types/regular-expression-examples.md).  
+- Posta kodu belirli bir biçimde olması gerekiyorsa kullanıcı tarafından girilen verileri doğrulamak için normal ifadeler kullanabilirsiniz. Örneğin, form doğrulama için `#####` veya `#####-####`, normal bir ifadeyi kullanabilirsiniz `^(\d{5})(-\d{4})?$`. Form doğrulamak için `A#A #A#`, normal bir ifadeyi kullanabilirsiniz `[A-Z]\d[A-Z] \d[A-Z]\d`. Normal ifadeler hakkında daha fazla bilgi için bkz. [.NET Framework normal ifadelerinde](../../standard/base-types/regular-expressions.md) ve [normal ifade örnekleri](../../standard/base-types/regular-expression-examples.md).  
   
--   Posta kodu geçerli bir Amerika Birleşik Devletleri posta kodu olması gerekiyorsa, kullanıcı tarafından girilen verileri doğrulamak için bir posta kodu Web hizmeti çağırabilir.  
+- Posta kodu geçerli bir Amerika Birleşik Devletleri posta kodu olması gerekiyorsa, kullanıcı tarafından girilen verileri doğrulamak için bir posta kodu Web hizmeti çağırabilir.  
   
  <xref:System.Windows.Forms.Control.Validating> Olay sağlanmaktadır türünde bir nesne <xref:System.ComponentModel.CancelEventArgs>. Denetimin verilerinin geçersiz olduğunu belirlerseniz, iptal edebilir <xref:System.Windows.Forms.Control.Validating> bu nesnenin ayarlayarak olay <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> özelliğini `true`. Ayarlanmamış olması halinde <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> özelliği, Windows Forms, doğrulama için bu denetim başarılı varsayar ve yükseltmek <xref:System.Windows.Forms.Control.Validated> olay.  
   
@@ -58,11 +58,11 @@ Kullanıcıların uygulamanıza veri girerken, uygulamanızın kullandığı ön
 #### <a name="explicit-validation"></a>Açık doğrulama  
  Açık doğrulama yaklaşımı verileri tek seferde doğrular. Kaydet düğmesine veya sonraki bir bağlantıya tıklayarak gibi ek olarak, kullanıcı eylemine yanıt olarak verileri doğrulayabilirsiniz. Bir kullanıcı eylemi ortaya çıktığında, aşağıdaki yollardan birinde açık doğrulama tetikleyebilirsiniz:  
   
--   Çağrı <xref:System.Windows.Forms.ContainerControl.Validate%2A> odağını kaybetmiş son denetim doğrulamak için.  
+- Çağrı <xref:System.Windows.Forms.ContainerControl.Validate%2A> odağını kaybetmiş son denetim doğrulamak için.  
   
--   Çağrı <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> bir form veya kapsayıcı denetimdeki tüm alt denetimlere doğrulamak için.  
+- Çağrı <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> bir form veya kapsayıcı denetimdeki tüm alt denetimlere doğrulamak için.  
   
--   Denetimlerinde verileri el ile doğrulamak için özel bir yöntem çağrısı.  
+- Denetimlerinde verileri el ile doğrulamak için özel bir yöntem çağrısı.  
   
 #### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Varsayılan örtük doğrulama davranışını Windows Forms denetimleri  
  Farklı Windows Forms denetimleri için varsayılan değerleri farklı olan kendi <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> özelliği. Aşağıdaki tablo, en yaygın denetimler ve değerlerinde gösterir.  
@@ -79,11 +79,11 @@ Kullanıcıların uygulamanıza veri girerken, uygulamanızın kullandığı ön
 ## <a name="closing-the-form-and-overriding-validation"></a>Formu kapatmak ve doğrulama geçersiz kılma  
  Veriler geçersiz olduğundan bir denetim odağı tutar, her zamanki şekilde üst formu kapatmak mümkün değildir:  
   
--   Tıklayarak **Kapat** düğmesi.  
+- Tıklayarak **Kapat** düğmesi.  
   
--   Seçerek **Kapat** içinde **sistem** menüsü.  
+- Seçerek **Kapat** içinde **sistem** menüsü.  
   
--   Çağırarak <xref:System.Windows.Forms.Form.Close%2A> yöntemi programlı olarak.  
+- Çağırarak <xref:System.Windows.Forms.Form.Close%2A> yöntemi programlı olarak.  
   
  Ancak, bazı durumlarda, kullanıcının denetimleri değerleri geçerli olduklarına bakılmaksızın formu kapatmak isteyebilirsiniz. Doğrulama geçersiz kılmasını ve hala formun için bir işleyici oluşturarak geçersiz veri içeriyor. bir formu kapatmak <xref:System.Windows.Forms.Form.Closing> olay. Olayda ayarlamak <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> özelliğini `false`. Bu, formu kapatmak için zorlar. Daha fazla bilgi ve örnek için bkz. <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>.  
   

@@ -4,47 +4,47 @@ ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
 ms.openlocfilehash: 74f15c3ac6e5192ce3565579d515198d3b7e39f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940536"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Nasıl yapılır: WIF Kullanarak Talep Kullanan ASP.NET Web Forms Uygulaması Derleme
 ## <a name="applies-to"></a>Uygulanan Öğe  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web formları  
+- ASP.NET® Web formları  
   
 ## <a name="summary"></a>Özet  
  Bu nasıl yapılır basit talep kullanan ASP.NET Web Forms uygulaması oluşturmak için adım adım ayrıntılı yordamları sağlar. Ayrıca, basit talep kullanan ASP.NET Web Forms uygulaması şirket dışı kimlik doğrulaması başarılı uygulaması için test etme için yönergeler sağlar. Bu nasıl yapılır bir güvenlik belirteci hizmeti (STS) oluşturmaya yönelik ayrıntılı yönergeler yer almaz ve bir STS'ye zaten yapılandırmış olduğunuz varsayılır.  
   
 ## <a name="contents"></a>İçindekiler  
   
--   Amaçlar  
+- Amaçlar  
   
--   Adımların Özeti  
+- Adımların Özeti  
   
--   1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
+- 1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
   
--   2. adım: ASP.NET Web Forms uygulaması talep tabanlı kimlik doğrulaması için yapılandırma  
+- 2. adım: ASP.NET Web Forms uygulaması talep tabanlı kimlik doğrulaması için yapılandırma  
   
--   3. Adım – Çözümünüzü Test Etme  
+- 3. Adım – Çözümünüzü Test Etme  
   
 ## <a name="objectives"></a>Amaçlar  
   
--   ASP.NET Web Forms uygulaması talep tabanlı kimlik doğrulaması için yapılandırma  
+- ASP.NET Web Forms uygulaması talep tabanlı kimlik doğrulaması için yapılandırma  
   
--   Test başarılı talep kullanan ASP.NET Web Forms uygulaması  
+- Test başarılı talep kullanan ASP.NET Web Forms uygulaması  
   
 ## <a name="summary-of-steps"></a>Adımların Özeti  
   
--   1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
+- 1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
   
--   2. adım: ASP.NET Web Forms uygulaması şirket dışı kimlik doğrulaması yapılandırma  
+- 2. adım: ASP.NET Web Forms uygulaması şirket dışı kimlik doğrulaması yapılandırma  
   
--   3. Adım – Çözümünüzü Test Etme  
+- 3. Adım – Çözümünüzü Test Etme  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
  Bu adımda, yeni bir ASP.NET Web Forms uygulaması oluşturacaksınız.  

@@ -8,8 +8,8 @@ ms.openlocfilehash: 4faf42d3be4f76e5908068b1c2f88d7803ae18df
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61871559"
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Azaltma: Özel IMessageFilter.PreFilterMessage uygulamaları
 

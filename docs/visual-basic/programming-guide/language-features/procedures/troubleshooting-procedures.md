@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
 ms.openlocfilehash: 492a7474a38a7e41b7e3b3f59dfa118c30256ea4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791800"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Yordam Sorunlarını Giderme (Visual Basic)
 Bu sayfada yordamlarla çalışırken oluşabilecek bazı yaygın sorunlar listelenir.  
@@ -46,9 +46,9 @@ Bu sayfada yordamlarla çalışırken oluşabilecek bazı yaygın sorunlar liste
 ## <a name="argument-not-being-modified-by-procedure-call"></a>Bağımsız değişken değil değiştirilen yordam çağrısı tarafından  
  Bir yordam çağıran koddaki bağımsız değişken arka plandaki bir programlama öğesi değiştirmeye izin vermek istiyorsanız, başvuruya göre geçmesi gerekir. Ancak geçirdiğiniz değere göre olsa bile bir yordam bir başvuru türü bağımsız değişkeni öğelerine erişebilirsiniz.  
   
--   **Değişken arka plandaki**. Temel alınan değişken öğenin kendisinin değerini değiştirmek yordamı izin vermek için yordam parametre bildirmeniz gerekir [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Geçersiz kılarsınız çünkü Ayrıca, çağıran kodun bağımsız değişken parantez içine almalısınız değil `ByRef` mekanizması geçirme.  
+- **Değişken arka plandaki**. Temel alınan değişken öğenin kendisinin değerini değiştirmek yordamı izin vermek için yordam parametre bildirmeniz gerekir [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Geçersiz kılarsınız çünkü Ayrıca, çağıran kodun bağımsız değişken parantez içine almalısınız değil `ByRef` mekanizması geçirme.  
   
--   **Başvuru türü öğeleri**. Bir parametre bildirirseniz [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), temel alınan değişken öğenin kendisinin yordamı değiştiremezsiniz. Ancak, bağımsız değişken bir başvuru türü ise, değişken değerini değiştiremez olsa bile yordamı işaret ettiği, nesnenin üyeleri değiştirebilir. Örneğin, bir dizi değişken bağımsız değişken ise yordamı için yeni bir dizi atama yapılamaz ancak bir veya daha fazla alt öğeleri değiştirebilirsiniz. Değiştirilen öğeler, temel alınan dizi değişkeni çağıran koddaki yansıtılır.  
+- **Başvuru türü öğeleri**. Bir parametre bildirirseniz [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), temel alınan değişken öğenin kendisinin yordamı değiştiremezsiniz. Ancak, bağımsız değişken bir başvuru türü ise, değişken değerini değiştiremez olsa bile yordamı işaret ettiği, nesnenin üyeleri değiştirebilir. Örneğin, bir dizi değişken bağımsız değişken ise yordamı için yeni bir dizi atama yapılamaz ancak bir veya daha fazla alt öğeleri değiştirebilirsiniz. Değiştirilen öğeler, temel alınan dizi değişkeni çağıran koddaki yansıtılır.  
   
  Aşağıdaki örnek, bir dizi değişkenini değere göre alabilir ve çalışan iki yordamı alt öğelerde tanımlar. Yordam `increase` yalnızca her öğeye ekler. Yordam `replace` yeni bir dizi parametresine atar `a()` ve sonra her öğeye ekler. Ancak, yakaladığından çağıran koddaki temel alınan dizi değişkeni etkilemez çünkü `a()` bildirildiği `ByVal`.  
   
@@ -75,13 +75,13 @@ Bu sayfada yordamlarla çalışırken oluşabilecek bazı yaygın sorunlar liste
   
  Aşağıdaki öğeler, bunlar parametre listesine ait olsa bile yordamın imza bileşenlerinin değildir:  
   
--   Yordam değiştiricisi anahtar sözcükler gibi `Public`, `Shared`, ve `Static`  
+- Yordam değiştiricisi anahtar sözcükler gibi `Public`, `Shared`, ve `Static`  
   
--   Parametre adları  
+- Parametre adları  
   
--   Parametre değiştiricisi anahtar sözcükler gibi `ByRef` ve `Optional`  
+- Parametre değiştiricisi anahtar sözcükler gibi `ByRef` ve `Optional`  
   
--   (bir dönüşüm işleci dışında) dönüş değerinin veri türü  
+- (bir dönüşüm işleci dışında) dönüş değerinin veri türü  
   
  Yalnızca bir veya daha fazla önceki öğelerin değiştirerek bir yordamı aşırı yükleyemez.  
   
@@ -95,11 +95,11 @@ Bu sayfada yordamlarla çalışırken oluşabilecek bazı yaygın sorunlar liste
   
  Hangi aşırı yüklemesini çağırmak istediğinizde belirlediğinizde, aşağıdaki kurallara uymanız dikkat edin:  
   
--   Bağımsız değişkenlerin ve doğru sırada doğru numarayı girin.  
+- Bağımsız değişkenlerin ve doğru sırada doğru numarayı girin.  
   
--   İdeal olarak, değişkenleriniz, aynı veri türleri karşılık gelen parametre olmalıdır. Herhangi bir durumda, her bağımsız değişken veri türünü, karşılık gelen parametre genişlemesi gerekir. Bu bile geçerlidir [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md) kümesine `Off`. Aşırı yükleme, bağımsız değişken listesinde, herhangi bir daraltma dönüşümü bir aşırı gerektiriyorsa, çağrılması için uygun değil.  
+- İdeal olarak, değişkenleriniz, aynı veri türleri karşılık gelen parametre olmalıdır. Herhangi bir durumda, her bağımsız değişken veri türünü, karşılık gelen parametre genişlemesi gerekir. Bu bile geçerlidir [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md) kümesine `Off`. Aşırı yükleme, bağımsız değişken listesinde, herhangi bir daraltma dönüşümü bir aşırı gerektiriyorsa, çağrılması için uygun değil.  
   
--   Genişletme gerektiren bağımsız değişkenleri sağlayın, veri türlerini olabildiğince karşılık gelen parametre veri türleri için mümkün olduğunca yakın olun. İki veya daha fazla aşırı yüklemeler, bağımsız değişken veri türleri kabul ederseniz, derleyici çağrınız genişletme için en az miktarını çağıran aşırı çözümler.  
+- Genişletme gerektiren bağımsız değişkenleri sağlayın, veri türlerini olabildiğince karşılık gelen parametre veri türleri için mümkün olduğunca yakın olun. İki veya daha fazla aşırı yüklemeler, bağımsız değişken veri türleri kabul ederseniz, derleyici çağrınız genişletme için en az miktarını çağıran aşırı çözümler.  
   
  Kullanarak veri türü uyuşmazlığı olasılığını azaltabilirsiniz [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md) değişkenleriniz hazırlanırken dönüştürme anahtar sözcüğü.  
   

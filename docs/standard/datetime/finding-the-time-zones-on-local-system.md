@@ -14,24 +14,24 @@ ms.assetid: 3f63b1bc-9a4b-4bde-84ea-ab028a80d3e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a65798c46b01bb7a702559d685590ecf7a6f2793
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61819762"
 ---
 # <a name="finding-the-time-zones-defined-on-a-local-system"></a>Yerel sistemde tanımlanan saat dilimlerini bulma
 
 <xref:System.TimeZoneInfo> Sınıfı bir public Oluşturucu koymuyor. Sonuç olarak, `new` yeni bir anahtar sözcüğü kullanılamaz <xref:System.TimeZoneInfo> nesne. Bunun yerine, <xref:System.TimeZoneInfo> nesnelerine ait örneklerin kayıt defterinden önceden tanımlanmış saat dilimleri hakkında bilgi almak veya özel bir saat dilimi oluşturma. Bu konuda, bir saat dilimi kayıt defterinde depolanan verilerden örnekleme anlatılmaktadır. Ayrıca, `static` (`shared` Visual Basic'te) özelliklerini <xref:System.TimeZoneInfo> sınıfı yerel saat dilimi ile eşgüdümlü evrensel saat (UTC) ile erişim sağlar.
 
 > [!NOTE]
-> Kayıt defterinde tanımlanmamış saat dilimleri için özel saat dilimi aşırı yüklemelerini çağırarak oluşturabilirsiniz <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> yöntemi. Özel bir saat dilimi oluşturma ele alınmıştır [nasıl yapılır: ayarlama kuralları olmadan saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) ve [nasıl yapılır: ayarlama kuralları ile saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md) konuları. Ayrıca, oluşturabileceğiniz bir <xref:System.TimeZoneInfo> ile seri hale getirilmiş bir dizeden geri nesne <xref:System.TimeZoneInfo.FromSerializedString%2A> yöntemi. Serileştirme ve seri durumdan çıkarılırken bir <xref:System.TimeZoneInfo> nesne ele alınmıştır [nasıl yapılır: saat dilimlerini katıştırılmış kaynağa kaydetme](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) ve [nasıl yapılır: katıştırılmış bir kaynaktan saat dilimlerini geri yükleme](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) konuları.
+> Kayıt defterinde tanımlanmamış saat dilimleri için özel saat dilimi aşırı yüklemelerini çağırarak oluşturabilirsiniz <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> yöntemi. Özel bir saat dilimi oluşturma ele alınmıştır [nasıl yapılır: Ayarlama kuralları olmadan saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) ve [nasıl yapılır: Ayarlama kuralları ile saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md) konuları. Ayrıca, oluşturabileceğiniz bir <xref:System.TimeZoneInfo> ile seri hale getirilmiş bir dizeden geri nesne <xref:System.TimeZoneInfo.FromSerializedString%2A> yöntemi. Serileştirme ve seri durumdan çıkarılırken bir <xref:System.TimeZoneInfo> nesne ele alınmıştır [nasıl yapılır: Saat dilimlerini katıştırılmış kaynağa kaydetme](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) ve [nasıl yapılır: Katıştırılmış bir kaynaktan saat dilimlerini geri yükleme](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) konuları.
 
 ## <a name="accessing-individual-time-zones"></a>Tek tek saat dilimlerini erişme
 
-<xref:System.TimeZoneInfo> Sınıfı UTC saati ile yerel saat dilimini temsil eden iki önceden tanımlanmış saat dilimi nesneleri sağlar. Kullanılabilir olduklarından <xref:System.TimeZoneInfo.Utc%2A> ve <xref:System.TimeZoneInfo.Local%2A> özellikleri, sırasıyla. UTC veya yerel saat dilimlerini erişme ile ilgili yönergeler için bkz: [nasıl yapılır: ön tanımlı UTC ve yerel saat dilimi nesnelerine erişim](../../../docs/standard/datetime/access-utc-and-local.md).
+<xref:System.TimeZoneInfo> Sınıfı UTC saati ile yerel saat dilimini temsil eden iki önceden tanımlanmış saat dilimi nesneleri sağlar. Kullanılabilir olduklarından <xref:System.TimeZoneInfo.Utc%2A> ve <xref:System.TimeZoneInfo.Local%2A> özellikleri, sırasıyla. UTC veya yerel saat dilimlerini erişme ile ilgili yönergeler için bkz: [nasıl yapılır: Ön tanımlı UTC ve yerel saat dilimi nesnelerine erişim](../../../docs/standard/datetime/access-utc-and-local.md).
 
-Ayrıca oluşturabileceğiniz bir <xref:System.TimeZoneInfo> kayıt defterinde tanımlanan tüm saat dilimini temsil eden nesne. Belirli bir saat dilimi nesnesini örnekleme ile ilgili yönergeler için bkz: [nasıl yapılır: bir Timezoneınfo nesnesinin örneğini oluşturma](../../../docs/standard/datetime/instantiate-time-zone-info.md).
+Ayrıca oluşturabileceğiniz bir <xref:System.TimeZoneInfo> kayıt defterinde tanımlanan tüm saat dilimini temsil eden nesne. Belirli bir saat dilimi nesnesini örnekleme ile ilgili yönergeler için bkz: [nasıl yapılır: Bir Timezoneınfo nesnesinin örneğini oluşturma](../../../docs/standard/datetime/instantiate-time-zone-info.md).
 
 ## <a name="time-zone-identifiers"></a>Saat dilimi tanımlayıcıları
 
@@ -41,5 +41,5 @@ Saat dilimi benzersiz olarak tanımlayan bir anahtar alan saat dilimi tanımlay�
 
 - [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)
 - [Nasıl yapılır: Ön tanımlı UTC ve yerel saat dilimi nesnelerine erişim](../../../docs/standard/datetime/access-utc-and-local.md)
-- [Nasıl yapılır: Bir TimeZoneInfo nesnesinin örneğini oluşturma](../../../docs/standard/datetime/instantiate-time-zone-info.md)
+- [Nasıl yapılır: Bir Timezoneınfo nesnesinin örneğini oluşturma](../../../docs/standard/datetime/instantiate-time-zone-info.md)
 - [Saatleri saat dilimleri arasında dönüştürme](../../../docs/standard/datetime/converting-between-time-zones.md)

@@ -3,11 +3,11 @@ title: İç İçe Geçmiş Öğeler için Belirtilen İlişkileri Eşleme
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
 ms.openlocfilehash: 9772f077991c758be65bbb44b9474f1ad341371f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785391"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>İç İçe Geçmiş Öğeler için Belirtilen İlişkileri Eşleme
 Bir şema içerebilir bir **msdata:Relationship** açıkça şemada herhangi iki öğe arasındaki eşlemeyi belirtmek için ek açıklama. Belirtilen iki öğe **msdata:Relationship** şemada iç içe olabilir, ancak olması gerekmez. Eşleme işlemini kullanan **msdata:Relationship** iki sütun arasında birincil anahtarı/yabancı anahtar ilişkisi oluşturmak için şema.  
@@ -54,14 +54,14 @@ Bir şema içerebilir bir **msdata:Relationship** açıkça şemada herhangi iki
   
  Aşağıdaki XML Şeması eşleme işlemi oluşturur <xref:System.Data.DataSet>:  
   
--   Bir **sipariş** ve **OrderDetail** tablo.  
+- Bir **sipariş** ve **OrderDetail** tablo.  
   
     ```  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
--   Arasında bir ilişki **sipariş** ve **OrderDetail** tablolar. **İç içe** özelliği bu ilişki için **True** çünkü **sipariş** ve **OrderDetail** şemada öğelerini iç içe .  
+- Arasında bir ilişki **sipariş** ve **OrderDetail** tablolar. **İç içe** özelliği bu ilişki için **True** çünkü **sipariş** ve **OrderDetail** şemada öğelerini iç içe .  
   
     ```  
     ParentTable: Order  

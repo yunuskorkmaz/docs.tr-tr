@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3c3bebe8eabd4d5fd5faec21e0b0efc408353bc2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796838"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager Arabirimi
 Ortak dil çalışma zamanı (CLR) ana bilgisayar tarafından sağlanan g/ç tamamlama bağlantı noktaları ile etkileşim kurmak için izin vermek için yöntemler sağlar.  

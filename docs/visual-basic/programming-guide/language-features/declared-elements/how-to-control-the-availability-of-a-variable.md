@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
 ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943357"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir değişkenin kullanılabilirliğini denetleme
 Belirterek bir değişkenin kullanılabilirliğini denetleme kendi *erişim düzeyi*. Hangi kod okuma veya değişkenine yazma izni olan erişim düzeyini belirler.  
   
--   *Üye değişkenleri* (Modül düzeyinde ve her türlü yordam dışında tanımlanan) varsayılan görebileceği herhangi bir kod erişebileceği anlamına gelir genel erişim için. Bu, bir erişim değiştiricisidir belirterek değiştirebilirsiniz.  
+- *Üye değişkenleri* (Modül düzeyinde ve her türlü yordam dışında tanımlanan) varsayılan görebileceği herhangi bir kod erişebileceği anlamına gelir genel erişim için. Bu, bir erişim değiştiricisidir belirterek değiştirebilirsiniz.  
   
--   *Yerel değişkenler* (bir yordam içinde tanımlanmıştır) olup genel erişim sahip ancak yalnızca kendi yordamdaki kodu erişebilir. Yerel bir değişken erişim düzeyini değiştiremezsiniz, ancak içerdiği yordamı erişim düzeyini değiştirebilirsiniz.  
+- *Yerel değişkenler* (bir yordam içinde tanımlanmıştır) olup genel erişim sahip ancak yalnızca kendi yordamdaki kodu erişebilir. Yerel bir değişken erişim düzeyini değiştiremezsiniz, ancak içerdiği yordamı erişim düzeyini değiştirebilirsiniz.  
   
  Daha fazla bilgi için [erişim düzeyini Visual Basic'te](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   

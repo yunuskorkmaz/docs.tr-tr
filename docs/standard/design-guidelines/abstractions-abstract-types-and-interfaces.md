@@ -1,5 +1,5 @@
 ---
-title: Soyutlamalar (Soyut türler ve arabirimler)
+title: Soyutlamalar (Soyut Türler ve Arabirimler)
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
 author: KrzysztofCwalina
 ms.openlocfilehash: fcf566c24677630fdbb1fcd0eb7628f830b3be2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789226"
 ---
-# <a name="abstractions-abstract-types-and-interfaces"></a>Soyutlamalar (Soyut türler ve arabirimler)
+# <a name="abstractions-abstract-types-and-interfaces"></a>Soyutlamalar (Soyut Türler ve Arabirimler)
 Bir Özet bir sözleşme açıklar ancak sözleşmenin tam bir uygulamayı sağlamayan bir türdür. Soyutlama genellikle soyut sınıflar veya arabirimleri olarak uygulanır ve bunlar gerekli semantiği sözleşmesi uygulama türlerini açıklayan başvuru belgeleri iyi tanımlanmış bir dizi birlikte gelir. .NET Framework'teki en önemli soyutlama bazıları <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, ve <xref:System.Object>.  
   
  Bir Özet anlaşmasını destekler somut bir türde uygulama ve bu somut bir türde framework API'leri kullanan (üzerinde çalışma ile) kullanılarak çerçeveleri genişletebilirsiniz Özet.  

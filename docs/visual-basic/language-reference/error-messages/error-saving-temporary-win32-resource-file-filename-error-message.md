@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30137
 ms.assetid: 61c23f48-0e06-42fc-be00-5598053c86dd
 ms.openlocfilehash: 578eac69ea36d8320933a2cbeff0a5bed4f24d3e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803267"
 ---
 # <a name="error-saving-temporary-win32-resource-file-filename-error-message"></a>Geçici Win32 kaynak dosyası kaydedilirken hata oluştu '\<dosya adı >': \<hata iletisi >
 Visual Basic Derleyicisi bir bildirime sahip bir derleme oluşturmak için Assembly Linker (Al.exe Alink olarak da bilinir) çağırır. Bağlayıcı, bellek içi kaynağı yazma kullanmak için bir dosya adı alınırken bir hata bildirdi.  

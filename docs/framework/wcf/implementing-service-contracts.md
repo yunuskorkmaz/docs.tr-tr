@@ -5,11 +5,11 @@ helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
 ms.openlocfilehash: 766e0c4d30a4fa0eed9ce154ca932f5371a43211
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928642"
 ---
 # <a name="implementing-service-contracts"></a>Hizmet Sözleşmelerini Uygulama
 Bir veya daha fazla uç noktası istemcilere kullanılabilir olan işlevsellik sunduğu bir sınıf bir hizmettir. Bir hizmet oluşturmak için bir Windows Communication Foundation (WCF) sözleşmesi uygulayan bir sınıf yazın. İki yoldan biriyle bunu yapabilirsiniz. Sözleşme ayrı ayrı arabirim olarak tanımlayabilir ve ardından bu arabirimi uygulayan bir sınıf oluşturun. Alternatif olarak, sınıf ve sözleşme doğrudan yerleştirerek oluşturabileceğiniz <xref:System.ServiceModel.ServiceContractAttribute> sınıfı özniteliği ve <xref:System.ServiceModel.OperationContractAttribute> hizmeti istemcilerine uygun olan yöntemler özniteliği.  

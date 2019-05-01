@@ -10,11 +10,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
 ms.openlocfilehash: e9b572ba40618a72b8db58917008ebd61a23de79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800790"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Windows Forms'ta Fare İşaretçileri
 Fare *işaretçi*, fare ile kullanıcı girişi için ekrandaki bir odak noktası belirten bir bit eşlem olduğundan, bazen bir imleç adlandırılır. Bu konu, Windows Forms'ta fare işaretçisi genel bir bakış sağlar ve bazı değiştirebilir ve fare işaretçisini denetim yolları açıklanmaktadır.  

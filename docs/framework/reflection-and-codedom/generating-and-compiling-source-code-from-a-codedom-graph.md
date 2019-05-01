@@ -29,11 +29,11 @@ ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bfc915287e579374c69636135c4b049184ef6ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793307"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>CodeDOM Grafiğinden Kaynak Kodu Oluşturma ve Derleme
 <xref:System.CodeDom.Compiler> Ad alanı, kaynak kodundan CodeDOM nesne grafikler oluşturma ve derleme desteklenen derleyicileri ile yönetmek için arabirim sağlar. CodeDOM grafiği göre belirli bir programlama dili için kaynak kodunda bir kod sağlayıcısı üretebilir. Türetilen bir sınıf <xref:System.CodeDom.Compiler.CodeDomProvider> oluşturma ve dil sağlayıcısı destekler, kod derleme için yöntemler genellikle sağlayabilir.  

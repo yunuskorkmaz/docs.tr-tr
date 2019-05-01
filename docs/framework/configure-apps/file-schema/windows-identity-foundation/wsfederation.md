@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
 ms.openlocfilehash: 276f552767897729bf58c6a803669f39c96f09e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790474"
 ---
 # <a name="wsfederation"></a>\<wsFederation >
 İçin yapılandırma sağlar <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
@@ -68,7 +68,7 @@ ms.locfileid: "59135141"
 |signOutReply|Pasif WS-Federation protokolü ile oturum kapatma sırasında istemci güvenlik belirteci hizmeti (STS) tarafından yönlendirilmelidir URL'sini belirtir. Wreply parametresi bir WS-Federasyon oturum kapatma isteği ayarlar. İsteğe bağlı. Varsayılan ek parametre isteğinde bulunması belirtir. boş bir dizedir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- None  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

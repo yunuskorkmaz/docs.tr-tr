@@ -3,11 +3,11 @@ title: Keşif İstemcisi Kanalını Kullanma
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
 ms.openlocfilehash: 298cafe34b20a3644f967acf15f831be5b0b90ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932702"
 ---
 # <a name="using-the-discovery-client-channel"></a>Keşif İstemcisi Kanalını Kullanma
 WCF istemci uygulaması yazarken, aradığınız Hizmeti uç nokta adresini bilmeniz gerekir. Çoğu durumda, bir hizmetin uç nokta adresini önceden bilinmiyor veya hizmet adresini zamanla değişir. Keşif istemcisi kanalını aramak istediğiniz hizmet ve istemci kanal bir araştırma isteğinin otomatik olarak gönderir. bir WCF istemci uygulaması yazma sağlar. Bir hizmet yanıt verdiğinde, Keşif istemcisi kanalını araştırma yanıtı hizmeti için uç nokta adresini alır ve hizmeti çağırmak amacıyla kullanır.  

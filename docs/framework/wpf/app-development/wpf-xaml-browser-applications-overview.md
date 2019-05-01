@@ -11,11 +11,11 @@ helpviewer_keywords:
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
 ms.openlocfilehash: 81ae93871fa5e3fc46382ee9a1810808574fb043
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785886"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML Tarayıcı Uygulamalarına Genel Bakış
 <a name="introduction"></a>
@@ -23,15 +23,15 @@ ms.locfileid: "59320138"
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
--   [Yeni bir XAML tarayıcı uygulaması (XBAP) oluşturma](#creating_a_new_xaml_browser_application_xbap)  
+- [Yeni bir XAML tarayıcı uygulaması (XBAP) oluşturma](#creating_a_new_xaml_browser_application_xbap)  
   
--   [Bir XBAP dağıtma](#deploying_a_xbap)  
+- [Bir XBAP dağıtma](#deploying_a_xbap)  
   
--   [Konak Web sayfası ile iletişim kurma](#communicating_with_the_host_web_page)  
+- [Konak Web sayfası ile iletişim kurma](#communicating_with_the_host_web_page)  
   
--   [XBAP güvenlik konuları](#xbap_security_considerations)  
+- [XBAP güvenlik konuları](#xbap_security_considerations)  
   
--   [XBAP başlangıç zamanı performans konuları](#xbap_start_time_performance_considerations)  
+- [XBAP başlangıç zamanı performans konuları](#xbap_start_time_performance_considerations)  
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Yeni bir XAML tarayıcı uygulaması (XBAP) oluşturma  
@@ -131,17 +131,17 @@ ms.locfileid: "59320138"
   
  Kullandığınızda, bir <xref:System.Windows.Controls.WebBrowser> uygulamanızın, WPF denetiminde dahili olarak yerel WebBrowser ActiveX denetimi oluşturur. Uygulamanızı Internet Explorer'ı çalıştıran bir kısmi güven XBAP olduğunda, Internet Explorer işlemi adanmış bir dizi ActiveX denetimi çalıştırır. Bu nedenle, aşağıdaki sınırlamalar geçerlidir:  
   
--   <xref:System.Windows.Controls.WebBrowser> Denetimi, güvenlik kısıtlamaları da dahil olmak üzere konak tarayıcıya benzer bir davranış sağlamalıdır. Bu güvenlik kısıtlamaları bazıları, Internet Explorer güvenlik ayarları denetlenebilir. Daha fazla bilgi için [güvenlik](../security-wpf.md).  
+- <xref:System.Windows.Controls.WebBrowser> Denetimi, güvenlik kısıtlamaları da dahil olmak üzere konak tarayıcıya benzer bir davranış sağlamalıdır. Bu güvenlik kısıtlamaları bazıları, Internet Explorer güvenlik ayarları denetlenebilir. Daha fazla bilgi için [güvenlik](../security-wpf.md).  
   
--   Yüklenen etki alanları arası bir HTML sayfasında bir XBAP olduğunda, bir özel durum oluşturulur.  
+- Yüklenen etki alanları arası bir HTML sayfasında bir XBAP olduğunda, bir özel durum oluşturulur.  
   
--   Wpf'den ayrı bir iş parçacığı üzerinde giriştir <xref:System.Windows.Controls.WebBrowser>, klavye girişi kullanılamaz kesildi ve IME durumu paylaşılmaz.  
+- Wpf'den ayrı bir iş parçacığı üzerinde giriştir <xref:System.Windows.Controls.WebBrowser>, klavye girişi kullanılamaz kesildi ve IME durumu paylaşılmaz.  
   
--   Zamanlama veya gezinti sırasını başka bir iş parçacığında çalıştıran ActiveX denetimi nedeniyle farklı olabilir. Örneğin, bir sayfaya giden her zaman başka gezinme isteği başlatarak iptal edilmedi.  
+- Zamanlama veya gezinti sırasını başka bir iş parçacığında çalıştıran ActiveX denetimi nedeniyle farklı olabilir. Örneğin, bir sayfaya giden her zaman başka gezinme isteği başlatarak iptal edilmedi.  
   
--   WPF uygulaması ayrı bir iş parçacığı olarak çalıştığından özel bir ActiveX denetimi ile iletişim sorunlarla karşılaşabilirsiniz.  
+- WPF uygulaması ayrı bir iş parçacığı olarak çalıştığından özel bir ActiveX denetimi ile iletişim sorunlarla karşılaşabilirsiniz.  
   
--   <xref:System.Windows.Interop.HwndHost.MessageHook> çünkü gerçekleşmedi <xref:System.Windows.Interop.HwndHost> başka bir iş parçacığı veya işlem çalışan bir pencere öğesinin alt sınıfı olamaz.  
+- <xref:System.Windows.Interop.HwndHost.MessageHook> çünkü gerçekleşmedi <xref:System.Windows.Interop.HwndHost> başka bir iş parçacığı veya işlem çalışan bir pencere öğesinin alt sınıfı olamaz.  
   
 ### <a name="creating-a-full-trust-xbap"></a>Tam güven XBAP oluşturma  
  Bir XBAP tam güven gerektirir, bu izni etkinleştirmek için projenizi değiştirebilirsiniz. Aşağıdaki adımlar, tam güven etkinleştirme açıklanmaktadır:  
@@ -152,9 +152,9 @@ ms.locfileid: "59320138"
   
  Bu ayar, aşağıdaki değişiklikleri yapar:  
   
--   Proje dosyasında `<TargetZone>` öğe değeri değiştiğinde `Custom`.  
+- Proje dosyasında `<TargetZone>` öğe değeri değiştiğinde `Custom`.  
   
--   Uygulama bildiriminde (app.manifest) bir `Unrestricted="true"` özniteliği eklenir '<xref:System.Security.PermissionSet> öğesi.  
+- Uygulama bildiriminde (app.manifest) bir `Unrestricted="true"` özniteliği eklenir '<xref:System.Security.PermissionSet> öğesi.  
   
     ```xml
     <PermissionSet class="System.Security.PermissionSet"   

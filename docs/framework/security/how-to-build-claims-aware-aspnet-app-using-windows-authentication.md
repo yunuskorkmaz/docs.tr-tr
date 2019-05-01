@@ -4,41 +4,41 @@ ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
 ms.openlocfilehash: 48b1b4715e9e2613757a981ba692d84ad06a1ec6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940549"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Nasıl yapılır: Windows Kimlik Doğrulaması Kullanarak Talep Kullanan ASP.NET Uygulaması Derleme
 ## <a name="applies-to"></a>Uygulanan Öğe  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web formları  
+- ASP.NET® Web formları  
   
 ## <a name="summary"></a>Özet  
  Bu nasıl yapılır Windows kimlik doğrulaması kullanan basit bir talep kullanan ASP.NET Web Forms uygulaması oluşturmak için adım adım ayrıntılı yordamları sağlar. Ayrıca, kullanıcı Windows kimlik doğrulaması kullanarak oturum açtığında beyanların sunulduğunu doğrulamak için uygulamayı test etme için yönergeler sağlar.  
   
 ## <a name="contents"></a>İçindekiler  
   
--   Amaçlar  
+- Amaçlar  
   
--   Genel Bakış  
+- Genel Bakış  
   
--   Adımların Özeti  
+- Adımların Özeti  
   
--   1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
+- 1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
   
--   2. adım: ASP.NET Web Forms uygulaması Windows kimlik doğrulaması kullanarak talep için yapılandırma  
+- 2. adım: ASP.NET Web Forms uygulaması Windows kimlik doğrulaması kullanarak talep için yapılandırma  
   
--   3. Adım – Çözümünüzü Test Etme  
+- 3. Adım – Çözümünüzü Test Etme  
   
 ## <a name="objectives"></a>Amaçlar  
   
--   Bir ASP.NET Web Forms uygulaması Windows kimlik doğrulaması kullanarak talep için yapılandırma  
+- Bir ASP.NET Web Forms uygulaması Windows kimlik doğrulaması kullanarak talep için yapılandırma  
   
--   Düzgün çalışıp çalışmadığını görmek için ASP.NET Web Forms uygulamayı test etme  
+- Düzgün çalışıp çalışmadığını görmek için ASP.NET Web Forms uygulamayı test etme  
   
 ## <a name="overview"></a>Genel Bakış  
  WIF ve kendi beyana dayalı yetkilendirme, .NET 4.5 içinde Framework ayrılmaz bir parçası dahil edilmiştir. Daha önce bir ASP.NET kullanıcı gelen talepleri istediyseniz, WIF yüklemek için gerekli ve ardından atama asıl nesneleri gibi arabirimleri `Thread.CurrentPrincipal` veya `HttpContext.Current.User`. Artık, talep nesneleri otomatik olarak bu sorumlusu tarafından sunulur.  
@@ -47,11 +47,11 @@ ms.locfileid: "59767974"
   
 ## <a name="summary-of-steps"></a>Adımların Özeti  
   
--   1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
+- 1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
   
--   2. adım: ASP.NET Web Forms uygulaması Windows kimlik doğrulaması kullanarak talep için yapılandırma  
+- 2. adım: ASP.NET Web Forms uygulaması Windows kimlik doğrulaması kullanarak talep için yapılandırma  
   
--   3. Adım – Çözümünüzü Test Etme  
+- 3. Adım – Çözümünüzü Test Etme  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
  Bu adımda, yeni bir ASP.NET Web Forms uygulaması oluşturacaksınız.  

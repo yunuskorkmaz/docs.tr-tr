@@ -14,8 +14,8 @@ ms.openlocfilehash: b836659821b54698b675d48acd4e46466001d654
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937917"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Nasıl yapılır: Doğrusal Gradyan Oluşturma
 GDI +'da yatay, dikey ve Çapraz doğrusal gradyanlar sağlar. Varsayılan olarak, aynı şekilde doğrusal gradyan rengi değişir. Ancak, Tekdüzen olmayan biçimde rengini değiştirir, böylece doğrusal gradyan özelleştirebilirsiniz.  
@@ -35,7 +35,7 @@ Aşağıdaki örnek, bir satır, bir elips ve dikdörtgen Yatay doğrusal gradya
   
 ### <a name="to-use-horizontal-linear-gradients"></a>Yatay doğrusal gradyanlar kullanmak için  
   
--   Donuk kırmızı ve donuk mavi renkle üçüncü ve dördüncü bağımsız değişken olarak, sırasıyla geçirin.  
+- Donuk kırmızı ve donuk mavi renkle üçüncü ve dördüncü bağımsız değişken olarak, sırasıyla geçirin.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
      [!code-vb[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
@@ -60,7 +60,7 @@ Aşağıdaki örnek, bir satır, bir elips ve dikdörtgen Yatay doğrusal gradya
 
 ### <a name="to-customize-linear-gradients"></a>Doğrusal gradyanlar özelleştirmek için  
   
--   Donuk siyah ve donuk kırmızı renkte üçüncü ve dördüncü bağımsız değişken olarak, sırasıyla geçirin.  
+- Donuk siyah ve donuk kırmızı renkte üçüncü ve dördüncü bağımsız değişken olarak, sırasıyla geçirin.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
      [!code-vb[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
@@ -75,7 +75,7 @@ Aşağıdaki örnek, bir satır, bir elips ve dikdörtgen Yatay doğrusal gradya
   
 ### <a name="to-create-diagonal-linear-gradients"></a>Çapraz doğrusal gradyanlar oluşturma  
   
--   Donuk mavi ve donuk yeşil renkte üçüncü ve dördüncü bağımsız değişken olarak, sırasıyla geçirin.  
+- Donuk mavi ve donuk yeşil renkte üçüncü ve dördüncü bağımsız değişken olarak, sırasıyla geçirin.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
      [!code-vb[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
 ms.openlocfilehash: 577a12a0c04e5e3bfbfecb2c45263b684f0ffc17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791007"
 ---
 # <a name="textbox-overview"></a>TextBox Genel Bakışı
 <xref:System.Windows.Controls.TextBox> Sınıfı görüntülemek veya biçimlendirilmemiş metin düzenlemenize olanak sağlar. Yaygın bir <xref:System.Windows.Controls.TextBox> form biçimlendirilmemiş metin düzenleme. Örneğin, kullanıcının adı, telefon numarası için soran bir form vb. kullanırsınız <xref:System.Windows.Controls.TextBox> metin girişi denetimleri. Bu konu tanıtır <xref:System.Windows.Controls.TextBox> sınıfı ve her ikisinde de kullanma örnekleri sağlar [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve C#.  

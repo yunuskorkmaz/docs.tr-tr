@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30306
 ms.assetid: 3c0d9732-ee37-436f-a1df-29d65712f48a
 ms.openlocfilehash: 4dadad63f4321e88b79f2006a9e6b7befa27909a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935349"
 ---
 # <a name="array-subscript-expression-missing"></a>Dizi alt simge ifadesi eksik
 Bir dizi başlatma, bir veya daha fazla dizi sınırlarını tanımlayın alt simgeler bırakır. Örneğin, deyim ifade içerebilir `myArray (5,5,,10)`, üçüncü bir alt simge bırakır.  
@@ -21,7 +21,7 @@ Bir dizi başlatma, bir veya daha fazla dizi sınırlarını tanımlayın alt si
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Eksik alt simge sağlayın.  
+- Eksik alt simge sağlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
 ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793724"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>CommittableTransaction Kullanarak Belirtik İşlem Uygulama
 <xref:System.Transactions.CommittableTransaction> Sınıfı sağlar sınıfını kullanarak bir işlem kullanmak uygulamalar için açık bir yol <xref:System.Transactions.TransactionScope> örtülü olarak sınıf. Birden fazla işlev çağrıları veya birden çok iş parçacığı çağrı aynı işlem kullanmak istediğiniz uygulamalar için yararlıdır. Farklı <xref:System.Transactions.TransactionScope> sınıfı, uygulama yazıcı gerekiyor özellikle çağrılacak <xref:System.Transactions.CommittableTransaction.Commit%2A> ve <xref:System.Transactions.Transaction.Rollback%2A> tamamlama veya işlem iptal için yöntemleri.  
@@ -22,9 +22,9 @@ ms.locfileid: "59105423"
   
  Followings ile çalışırken dikkat etmelisiniz <xref:System.Transactions.CommittableTransaction> sınıfı  
   
--   Oluşturma bir <xref:System.Transactions.CommittableTransaction> işlem ortam işlem ayarlı değil. Özel olarak ayarlayın ve kaynak yöneticileri sağ işlem bağlamında uygun olduğunda çalıştırmak emin olmak için ortam işlem sıfırlamak gerekir. Geçerli ortam hareket ayarlamak için statik ayarlayarak yoludur <xref:System.Transactions.Transaction.Current%2A> özelliği genel <xref:System.Transactions.Transaction> nesne.  
+- Oluşturma bir <xref:System.Transactions.CommittableTransaction> işlem ortam işlem ayarlı değil. Özel olarak ayarlayın ve kaynak yöneticileri sağ işlem bağlamında uygun olduğunda çalıştırmak emin olmak için ortam işlem sıfırlamak gerekir. Geçerli ortam hareket ayarlamak için statik ayarlayarak yoludur <xref:System.Transactions.Transaction.Current%2A> özelliği genel <xref:System.Transactions.Transaction> nesne.  
   
--   Bir <xref:System.Transactions.CommittableTransaction> nesne olamaz yeniden kullanılabilecek. Bir kez bir <xref:System.Transactions.CommittableTransaction> nesne kaydedilmiş veya geri alınmış, bir işlemde yeniden kullanılamaz. Diğer bir deyişle, geçerli ortam işlem bağlamı olarak ayarlanamaz.  
+- Bir <xref:System.Transactions.CommittableTransaction> nesne olamaz yeniden kullanılabilecek. Bir kez bir <xref:System.Transactions.CommittableTransaction> nesne kaydedilmiş veya geri alınmış, bir işlemde yeniden kullanılamaz. Diğer bir deyişle, geçerli ortam işlem bağlamı olarak ayarlanamaz.  
   
 ## <a name="creating-a-committabletransaction"></a>Bir CommittableTransaction oluşturma  
  Aşağıdaki örnek, yeni bir oluşturur <xref:System.Transactions.CommittableTransaction> ve onu kaydeder.  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
 ms.openlocfilehash: 99561490786f3f3569f272138001ea5ad8937410
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792268"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>İzlenecek yol: Bağlantısız Bir Windows Forms DataGridView Denetimi Oluşturma
 Sık veritabanından kaynaklanmayan tablosal verileri görüntülemek isteyebilirsiniz. Örneğin, iki boyutlu bir dizisini içeriğini göstermek isteyebilirsiniz. <xref:System.Windows.Forms.DataGridView> Sınıfı, bir veri kaynağına bağlama olmadan verileri görüntülemek için kolay ve özelleştirilebilir bir yol sağlar. Bu izlenecek yol nasıl doldurulacağını gösterir bir <xref:System.Windows.Forms.DataGridView> denetlemek ve eklenmesini ve "bağlantısız" modda satırların silinmesi yönetin. Varsayılan olarak, kullanıcının yeni bir satır ekleyebilirsiniz. Satır ekleme önleyecek şekilde ayarlanmış <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> özelliği `false`.  
@@ -75,22 +75,22 @@ Sık veritabanından kaynaklanmayan tablosal verileri görüntülemek isteyebili
   
 #### <a name="to-test-the-form"></a>Formu sınamak için  
   
--   Uygulamayı çalıştırmak için F5'e basın.  
+- Uygulamayı çalıştırmak için F5'e basın.  
   
      Göreceğiniz bir <xref:System.Windows.Forms.DataGridView> listelenen şarkıya görüntüleyen denetim `PopulateDataGridView`. Yeni satırları ekleyebilirsiniz **Satır Ekle** düğmesi ve seçili satırları silebilirsiniz **Satır Sil** düğmesi. İlişkisiz <xref:System.Windows.Forms.DataGridView> denetimi veri deposu ve verileri gibi herhangi bir dış kaynak bağımsız bir <xref:System.Data.DataSet> veya bir dizi.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Bu uygulamayı size temel bir anlayış <xref:System.Windows.Forms.DataGridView> denetimin özellikleri. Görünümünü ve davranışını özelleştirebilirsiniz <xref:System.Windows.Forms.DataGridView> çeşitli şekillerde denetimi:  
   
--   Kenarlık ve üstbilgi stilleri değiştirin. Daha fazla bilgi için [nasıl yapılır: Değiştirme kenarlık ve kılavuz çizgi stillerini Windows Forms DataGridView denetiminde](change-the-border-and-gridline-styles-in-the-datagrid.md).  
+- Kenarlık ve üstbilgi stilleri değiştirin. Daha fazla bilgi için [nasıl yapılır: Değiştirme kenarlık ve kılavuz çizgi stillerini Windows Forms DataGridView denetiminde](change-the-border-and-gridline-styles-in-the-datagrid.md).  
   
--   Etkinleştirmek veya kısıtlamak için kullanıcı girişi <xref:System.Windows.Forms.DataGridView> denetimi. Daha fazla bilgi için [nasıl yapılır: Önlemek satır eklemeyi ve silmeyi Windows Forms DataGridView denetiminde](prevent-row-addition-and-deletion-datagridview.md), ve [nasıl yapılır: Sütunları yapma salt okunur Windows Forms DataGridView denetiminde](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
+- Etkinleştirmek veya kısıtlamak için kullanıcı girişi <xref:System.Windows.Forms.DataGridView> denetimi. Daha fazla bilgi için [nasıl yapılır: Önlemek satır eklemeyi ve silmeyi Windows Forms DataGridView denetiminde](prevent-row-addition-and-deletion-datagridview.md), ve [nasıl yapılır: Sütunları yapma salt okunur Windows Forms DataGridView denetiminde](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
   
--   Kullanıcı girişi için veritabanı ile ilgili hataları kontrol edin. Daha fazla bilgi için [izlenecek yol: Windows veri girişi sırasında oluşan hataları ele alma Forms DataGridView denetiminde](handling-errors-that-occur-during-data-entry-in-the-datagrid.md).  
+- Kullanıcı girişi için veritabanı ile ilgili hataları kontrol edin. Daha fazla bilgi için [izlenecek yol: Windows veri girişi sırasında oluşan hataları ele alma Forms DataGridView denetiminde](handling-errors-that-occur-during-data-entry-in-the-datagrid.md).  
   
--   Çok büyük veri kümeleri ile sanal modu kullanarak işleyin. Daha fazla bilgi için [izlenecek yol: Sanal modu uygulama içinde Windows Forms DataGridView denetiminde](implementing-virtual-mode-wf-datagridview-control.md).  
+- Çok büyük veri kümeleri ile sanal modu kullanarak işleyin. Daha fazla bilgi için [izlenecek yol: Sanal modu uygulama içinde Windows Forms DataGridView denetiminde](implementing-virtual-mode-wf-datagridview-control.md).  
   
--   Hücrelerin görünüşünü özelleştirme. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGridView denetiminde hücrelerin görünüşünü özelleştirme](customize-the-appearance-of-cells-in-the-datagrid.md) ve [nasıl yapılır: Windows Forms DataGridView denetimi için varsayılan hücre stillerini ayarlama](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
+- Hücrelerin görünüşünü özelleştirme. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGridView denetiminde hücrelerin görünüşünü özelleştirme](customize-the-appearance-of-cells-in-the-datagrid.md) ve [nasıl yapılır: Windows Forms DataGridView denetimi için varsayılan hücre stillerini ayarlama](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,11 +14,11 @@ ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 061b5aa2208a73f6a53bc5eaee056410256ac6ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61919912"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Yönetim Türü Kesin Belirlenmiş Sınıf Oluşturucu)
 Yönetim Kesin Belirlenmiş Sınıf Üreticisi aracı, belirtilen bir Windows Yönetim Araçları (WMI) sınıfı için erken bağlı yönetilen bir sınıfı hızlı bir şekilde üretmenize olanak tanır. Oluşturulan sınıf, WMI sınıfının bir örneğine erişmek için yazmanız gereken kodu basitleştirir.  
@@ -75,19 +75,19 @@ WMIClass [options]
   
  Bir WMI sınıfı oluşturduğunuzda, aşağıdaki davranışlara dikkat edin:  
   
--   Standart bir genel özelliğin veya yöntemin, varolan bir özellikle veya yöntemle aynı ada sahip olması olanaklıdır. Bu durumda, araç, adlandırma çakışmalarından kaçınmak için, oluşturulan sınıfta özellik veya yöntemin adını değiştirir.  
+- Standart bir genel özelliğin veya yöntemin, varolan bir özellikle veya yöntemle aynı ada sahip olması olanaklıdır. Bu durumda, araç, adlandırma çakışmalarından kaçınmak için, oluşturulan sınıfta özellik veya yöntemin adını değiştirir.  
   
--   Oluşturulan bir sınıftaki bir özellik veya yöntemin adının hedef programlama dilinde bir anahtar sözcük olması olanaklıdır. Bu durumda, araç, adlandırma çakışmalarından kaçınmak için, oluşturulan sınıfta özellik veya yöntemin adını değiştirir.  
+- Oluşturulan bir sınıftaki bir özellik veya yöntemin adının hedef programlama dilinde bir anahtar sözcük olması olanaklıdır. Bu durumda, araç, adlandırma çakışmalarından kaçınmak için, oluşturulan sınıfta özellik veya yöntemin adını değiştirir.  
   
--   WMI'da, niteleyiciler bir sınıfı, örneği, özelliği veya yöntemi tanımlamak için bilgi içeren değiştiricilerdir. WMI kullanan standart niteleyiciler gibi **okuma**, **yazma**, ve **anahtar** oluşturulan bir sınıftaki bir özelliği tanımlamak için. Örneğin, değiştirilen bir özellik bir **okuma** niteleyicisi olan bir özellik tanımlanmıştır **alma** oluşturulan sınıftaki erişimcisi. İşaretlenen bir özelliğin çünkü **okuma** niteleyicisi salt okunur olacak şekilde tasarlanmıştır bir **ayarlamak** erişimcisi tanımlanmaz.  
+- WMI'da, niteleyiciler bir sınıfı, örneği, özelliği veya yöntemi tanımlamak için bilgi içeren değiştiricilerdir. WMI kullanan standart niteleyiciler gibi **okuma**, **yazma**, ve **anahtar** oluşturulan bir sınıftaki bir özelliği tanımlamak için. Örneğin, değiştirilen bir özellik bir **okuma** niteleyicisi olan bir özellik tanımlanmıştır **alma** oluşturulan sınıftaki erişimcisi. İşaretlenen bir özelliğin çünkü **okuma** niteleyicisi salt okunur olacak şekilde tasarlanmıştır bir **ayarlamak** erişimcisi tanımlanmaz.  
   
--   Sayısal bir özellik tarafından değiştirilebilir **değerleri** ve **ValueMaps** niteleyicileri özelliği yalnızca ayarlanabilir belirtmek için izin verilen değerler belirtildi. Bir numaralandırma ile oluşturulan **değerleri** ve **ValueMaps** ve özellik numaralandırmayla eşleştirilir.  
+- Sayısal bir özellik tarafından değiştirilebilir **değerleri** ve **ValueMaps** niteleyicileri özelliği yalnızca ayarlanabilir belirtmek için izin verilen değerler belirtildi. Bir numaralandırma ile oluşturulan **değerleri** ve **ValueMaps** ve özellik numaralandırmayla eşleştirilir.  
   
--   WMI, yalnızca bir örneği olabilecek bir sınıf tanımlamak için singleton terimini kullanır. Bu nedenle, tek bir singleton sınıfı için varsayılan oluşturucu, sınıfı sınıfın tek örneğine hazırlar.  
+- WMI, yalnızca bir örneği olabilecek bir sınıf tanımlamak için singleton terimini kullanır. Bu nedenle, tek bir singleton sınıfı için varsayılan oluşturucu, sınıfı sınıfın tek örneğine hazırlar.  
   
--   Bir WMI sınıfının, nesne olan özellikleri olabilir. Bu tür WMI sınıfı için kesin olarak belirlenmiş bir sınıf ürettiğinizde, gömülü nesne özellikleri türleri için kesin olarak belirlenmiş türler oluşturmayı düşünmelisiniz. Bu, gömülü nesnelere kesin olarak belirlenmiş bir şekilde erişmenize olanak tanır. Üretilen kodun gömülü nesnenin türünü algılayamayacağını unutmayın. Bu durumda, sorunu size bildirmek için, üretilen kodda bir açıklama oluşturulur. Sonra, özelliği üretilen diğer sınıfa yazmak için, üretilen kodu değiştirebilirsiniz.  
+- Bir WMI sınıfının, nesne olan özellikleri olabilir. Bu tür WMI sınıfı için kesin olarak belirlenmiş bir sınıf ürettiğinizde, gömülü nesne özellikleri türleri için kesin olarak belirlenmiş türler oluşturmayı düşünmelisiniz. Bu, gömülü nesnelere kesin olarak belirlenmiş bir şekilde erişmenize olanak tanır. Üretilen kodun gömülü nesnenin türünü algılayamayacağını unutmayın. Bu durumda, sorunu size bildirmek için, üretilen kodda bir açıklama oluşturulur. Sonra, özelliği üretilen diğer sınıfa yazmak için, üretilen kodu değiştirebilirsiniz.  
   
--   WMI'da, CIM_DATETIME veri türünün veri değeri belirli bir tarih ve saati veya bir zaman aralığını gösterebilir. Veri değeri bir tarih ve saat gösterirse, oluşturulan sınıftaki veri türü olan **DateTime**. Veri değeri bir zaman aralığını gösterirse oluşturulan sınıftaki veri türü olan **TimeSpan**.  
+- WMI'da, CIM_DATETIME veri türünün veri değeri belirli bir tarih ve saati veya bir zaman aralığını gösterebilir. Veri değeri bir tarih ve saat gösterirse, oluşturulan sınıftaki veri türü olan **DateTime**. Veri değeri bir zaman aralığını gösterirse oluşturulan sınıftaki veri türü olan **TimeSpan**.  
   
  Alternatif olarak, Visual Studio .NET'te Sunucu Gezgini Yönetim Uzantısı'nı kullanarak, kesin olarak belirlenmiş bir sınıf oluşturabilirsiniz.  
   

@@ -4,6 +4,12 @@ ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: bbb2c4157ba702182056c98c959a60569e8c3d1e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786418"
 ---
 # <a name="windows-forms-configuration-section"></a>Windows Forms Yapılandırma Bölümü
 Windows Forms yapılandırma ayarlarını depolamak bir Windows Forms uygulaması izin ve özelleştirilmiş uygulama ayarları gibi çoklu monitör desteği, yüksek DPI desteği ve diğer ilgili bilgileri Al önceden tanımlanmış yapılandırma ayarları.

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Yoklama ile İptal İsteklerini Dinleme'
+title: 'Nasıl yapılır: Yoklama ile İptal İsteklerini Dinleme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1794b47db87f636cc2ccdf2eecb9e7ca334ae659
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47192881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926028"
 ---
-# <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Nasıl Yapılır: Yoklama ile İptal İsteklerini Dinleme
+# <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Nasıl yapılır: Yoklama ile İptal İsteklerini Dinleme
 Aşağıdaki örnek, kullanıcı kodu çağıran iş parçacığından iptal isteğinde olup olmadığını görmek için düzenli aralıklarla bir iptal belirteci yoklama yollarından biri gösterilmektedir. Bu örnekte <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> türü, ancak aynı düzeni uygular doğrudan tarafından oluşturulan zaman uyumsuz işlemler için <xref:System.Threading.ThreadPool?displayProperty=nameWithType> türü veya <xref:System.Threading.Thread?displayProperty=nameWithType> türü.  
   
 ## <a name="example"></a>Örnek  

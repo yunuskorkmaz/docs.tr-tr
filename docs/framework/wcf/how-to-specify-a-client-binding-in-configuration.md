@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Yapılandırmada İstemci Bağlama Belirtme'
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
 ms.openlocfilehash: 633bb0feeb0f9354bd6ff8ee6637f123d3e3cbf4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928940"
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>Nasıl yapılır: Yapılandırmada İstemci Bağlama Belirtme
 Bu örnekte, bir hesap makinesi hizmetini kullanması için bir istemci konsol uygulaması oluşturulur ve o istemci için bağlama bildirimli olarak yapılandırmasında belirtilen. İstemcisinin eriştiği `CalculatorService`, uygulayan `ICalculator` arabirimi ve hizmet ve Kullan istemci <xref:System.ServiceModel.BasicHttpBinding> sınıfı.  

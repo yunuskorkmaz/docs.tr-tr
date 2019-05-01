@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
 ms.openlocfilehash: 4464100012fe9b3e1f0e8743707b1dc9a477c3d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59205894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787874"
 ---
 # <a name="how-to-create-a-secure-session"></a>Nasıl yapılır: Güvenli Oturum Oluşturma
 Dışında [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) bağlama, sistem tarafından sağlanan bağlamalar Windows Communication Foundation (WCF) otomatik olarak ileti güvenliği etkinleştirildiğinde güvenli oturumlar kullanın.  
@@ -21,7 +21,7 @@ Dışında [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/fil
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a>Sistem tarafından sağlanan bağlamalar birini kullanarak bir hizmeti güvenli oturumlar kullandığını belirtmek için  
   
--   İleti güvenliği destekleyen sistem tarafından sağlanan bir bağlamayı kullanmak için bir hizmet yapılandırın.  
+- İleti güvenliği destekleyen sistem tarafından sağlanan bir bağlamayı kullanmak için bir hizmet yapılandırın.  
   
      Dışında [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) bağlama, sistem tarafından sağlanan bağlamalar ileti güvenliği, WCF otomatik olarak kullanmak için yapılandırılmış zaman güvenli oturumlar kullanır. İleti güvenliği ve ileti güvenliği varsayılan güvenlik mekanizması olup destekleyen sistem tarafından sağlanan bağlamaları aşağıdaki tabloda listelenmektedir.  
   
@@ -58,7 +58,7 @@ Dışında [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/fil
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a>Özel bağlama kullanarak bir hizmeti güvenli oturumlar kullandığını belirtmek için  
   
--   SOAP iletilerini güvenli bir oturum tarafından korunduğunu belirten özel bir bağlama oluşturun.  
+- SOAP iletilerini güvenli bir oturum tarafından korunduğunu belirten özel bir bağlama oluşturun.  
   
      Özel bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Sistem tarafından sağlanan bir bağlamayı özelleştirme](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
   

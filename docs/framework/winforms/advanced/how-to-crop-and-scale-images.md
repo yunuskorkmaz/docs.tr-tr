@@ -9,11 +9,11 @@ helpviewer_keywords:
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
 ms.openlocfilehash: 4257431881565f9160f45795111d374cc680dedd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937585"
 ---
 # <a name="how-to-crop-and-scale-images"></a>Nasıl yapılır: Görüntü Kırpma ve Ölçeklendirme
 <xref:System.Drawing.Graphics> Sınıfı sağlayan çeşitli <xref:System.Drawing.Graphics.DrawImage%2A> bazıları kırpma ve ölçeklendirme görüntüleri için kullanabileceğiniz kaynak ve hedef dikdörtgenin parametreleri olan yöntemleri.  
