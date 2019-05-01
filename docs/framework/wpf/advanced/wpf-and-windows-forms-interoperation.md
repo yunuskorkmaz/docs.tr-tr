@@ -9,11 +9,11 @@ helpviewer_keywords:
 - hybrid control [WPF interoperability]
 ms.assetid: 9e8aa6b6-112c-4579-98d1-c974917df499
 ms.openlocfilehash: 2e3390c3e387e75168958f946472a5a24a4bd440
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053125"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>WPF ve Windows Forms Birlikte Çalışması
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulama arabirimleri oluşturmak için iki farklı mimari sunar. <xref:System.Windows.Forms.Integration?displayProperty=nameWithType> Ad alanı, birlikte çalışabilirlik senaryoları etkinleştiren sınıflar sağlar. Birlikte çalışabilirlik özelliklerini uygulayan iki anahtar sınıf <xref:System.Windows.Forms.Integration.WindowsFormsHost> ve <xref:System.Windows.Forms.Integration.ElementHost>. Bu konuda, birlikte çalışabilirlik hangi senaryolar desteklenir ve hangi senaryolar desteklenmez açıklanmaktadır.  
@@ -25,36 +25,36 @@ ms.locfileid: "59129278"
 ## <a name="hosting-windows-forms-controls-in-wpf"></a>Barındırma Windows Forms denetimlerini düzenleme  
  Aşağıdaki birlikte çalışabilirlik senaryolarında desteklenir, bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimini Windows Forms denetimini barındırır:  
   
--   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bir veya daha fazla denetim barındırabilir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] XAML kullanarak denetler.  
+- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bir veya daha fazla denetim barındırabilir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] XAML kullanarak denetler.  
   
--   Bir veya daha fazla barındırabilir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodla denetler.  
+- Bir veya daha fazla barındırabilir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodla denetler.  
   
--   Barındırabilir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] diğer içeren kapsayıcı denetimler [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrol eder.  
+- Barındırabilir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] diğer içeren kapsayıcı denetimler [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrol eder.  
   
--   İle ana/ayrıntı formu barındırabilir bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ana ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ayrıntıları.  
+- İle ana/ayrıntı formu barındırabilir bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ana ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ayrıntıları.  
   
--   İle ana/ayrıntı formu barındırabilir bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ana ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ayrıntıları.  
+- İle ana/ayrıntı formu barındırabilir bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ana ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ayrıntıları.  
   
--   Bir veya daha fazla barındırabilir [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] kontrol eder.  
+- Bir veya daha fazla barındırabilir [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] kontrol eder.  
   
--   Bir veya daha fazla bileşik denetimler barındırabilir.  
+- Bir veya daha fazla bileşik denetimler barındırabilir.  
   
--   Kullanarak karma denetim barındırabilir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
+- Kullanarak karma denetim barındırabilir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
--   Kod kullanarak karma denetim barındırabilir.  
+- Kod kullanarak karma denetim barındırabilir.  
   
 ### <a name="layout-support"></a>Düzen desteği  
  Bilinen sınırlamalar aşağıdaki listede açıklanmaktadır, <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi çalışır, barındırılan bir tümleştirme [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] içine denetim [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen sistemi.  
   
--   Bazı durumlarda, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri yeniden boyutlandırılamaz ya da yalnızca belirli boyutlara yeniden boyutlandırılabilir. Örneğin, bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> denetimi, denetimin yazı tipi boyutu tarafından tanımlanan yalnızca tek bir yüksekliği destekler. İçinde bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğeler dikey olarak barındırılan uzatabilirsiniz olduğunu varsayan dinamik bir düzen <xref:System.Windows.Forms.ComboBox> beklendiği gibi denetimi uzamaz.  
+- Bazı durumlarda, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri yeniden boyutlandırılamaz ya da yalnızca belirli boyutlara yeniden boyutlandırılabilir. Örneğin, bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> denetimi, denetimin yazı tipi boyutu tarafından tanımlanan yalnızca tek bir yüksekliği destekler. İçinde bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğeler dikey olarak barındırılan uzatabilirsiniz olduğunu varsayan dinamik bir düzen <xref:System.Windows.Forms.ComboBox> beklendiği gibi denetimi uzamaz.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri Döndürülmüş veya dengesiz. Örneğin, 90 derece kullanıcı arabiriminiz döndürürken, barındırılan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri, dik konumlarını koruyacaktır.  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri Döndürülmüş veya dengesiz. Örneğin, 90 derece kullanıcı arabiriminiz döndürürken, barındırılan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri, dik konumlarını koruyacaktır.  
   
--   Çoğu durumda [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimlerin orantılı ölçeklendirme desteklemez. Denetim genel boyutlarını ölçeklendirilmesine rağmen alt denetimler ve denetim bileşen öğeleri beklenen şekilde yeniden boyutlandırılabilir değil. Bu sınırlama her ne kadar iyi bağlıdır [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi, ölçeklendirmeyi destekler.  
+- Çoğu durumda [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimlerin orantılı ölçeklendirme desteklemez. Denetim genel boyutlarını ölçeklendirilmesine rağmen alt denetimler ve denetim bileşen öğeleri beklenen şekilde yeniden boyutlandırılabilir değil. Bu sınırlama her ne kadar iyi bağlıdır [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi, ölçeklendirmeyi destekler.  
   
--   İçinde bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanıcı arabirimi, çakışan davranışı denetlemek için öğelerin z düzenini değiştirebilirsiniz. Barındırılan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi üst kısmındaki her zaman çizilen için ayrı bir HWND çizilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğeleri.  
+- İçinde bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanıcı arabirimi, çakışan davranışı denetlemek için öğelerin z düzenini değiştirebilirsiniz. Barındırılan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi üst kısmındaki her zaman çizilen için ayrı bir HWND çizilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğeleri.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri yazı tipi boyutunu temel alan otomatik ölçeklendirmeyi destekler. İçinde bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yazı tipi boyutunu değiştirme, kullanıcı arabirimi olmayan yeniden boyutlandırma tüm düzeni tek tek öğeleri dinamik olarak yeniden boyutlandırılabilir ancak.  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri yazı tipi boyutunu temel alan otomatik ölçeklendirmeyi destekler. İçinde bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yazı tipi boyutunu değiştirme, kullanıcı arabirimi olmayan yeniden boyutlandırma tüm düzeni tek tek öğeleri dinamik olarak yeniden boyutlandırılabilir ancak.  
   
 ### <a name="ambient-properties"></a>Ortam özellikleri  
  Bazı ortam özelliklerini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetiminiz [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] eşdeğerleri. Bu ortam özellikleri yayılır barındırılan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetler ve bulunan genel özellik olarak kullanıma <xref:System.Windows.Forms.Integration.WindowsFormsHost> denetimi. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Denetimi çevirir her [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çevresel özelliğe kendi [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] eşdeğer.  
@@ -83,21 +83,21 @@ ms.locfileid: "59129278"
 ## <a name="hosting-wpf-controls-in-windows-forms"></a>Windows Forms'ta WPF denetimleri barındırma  
  Aşağıdaki birlikte çalışabilirlik senaryolarında bir Windows Forms denetimi konakları, desteklenen bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimi:  
   
--   Bir veya daha fazla barındırma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kodla denetler.  
+- Bir veya daha fazla barındırma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kodla denetler.  
   
--   Bir özellik sayfasını bir veya daha fazla barındırılan ilişkilendirme [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrol eder.  
+- Bir özellik sayfasını bir veya daha fazla barındırılan ilişkilendirme [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrol eder.  
   
--   Bir veya daha fazla barındırma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formda sayfaları.  
+- Bir veya daha fazla barındırma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formda sayfaları.  
   
--   Başlangıç bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] penceresi.  
+- Başlangıç bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] penceresi.  
   
--   İle ana/ayrıntı formu barındıran bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ana ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ayrıntıları.  
+- İle ana/ayrıntı formu barındıran bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ana ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ayrıntıları.  
   
--   İle ana/ayrıntı formu barındıran bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ana ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ayrıntıları.  
+- İle ana/ayrıntı formu barındıran bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ana ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ayrıntıları.  
   
--   Özel barındırma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrol eder.  
+- Özel barındırma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrol eder.  
   
--   Karma denetimleri barındırma.  
+- Karma denetimleri barındırma.  
   
 ### <a name="ambient-properties"></a>Ortam özellikleri  
  Bazı ortam özelliklerini [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetiminiz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eşdeğerleri. Bu ortam özellikleri yayılır barındırılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetler ve bulunan genel özellik olarak kullanıma <xref:System.Windows.Forms.Integration.ElementHost> denetimi. <xref:System.Windows.Forms.Integration.ElementHost> Denetimi çevirir her [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] çevresel özelliğe kendi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eşdeğer.  

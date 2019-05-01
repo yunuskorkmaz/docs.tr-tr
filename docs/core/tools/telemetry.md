@@ -4,12 +4,12 @@ description: Analiz, hangi verileri toplanır ve nasıl devre dışı bırakmak 
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 3a757daab372b8be8bfe2ee27d910e21fa4e3337
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2ef6ade36092ff5a17b0cc420dc4859409d459ce
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718044"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773845"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET core SDK'sı telemetri
 
@@ -89,12 +89,12 @@ Yayımlanan veriler üç aylık olarak kullanılabilir ve listelenen [.NET Core 
 
 ### <a name="datasets"></a>Veri kümeleri
 
-[2016 - S3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q3.tsv)  
-[2016 - 4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q4.tsv)  
-[2017 - S1](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q1.tsv)  
-[2017 - S2](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)  
-[2017 - S3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q3.tsv)  
-[2017 - 4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q4.tsv)  
+- [2016 - S3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q3.tsv)
+- [2016 - 4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q4.tsv)
+- [2017 - S1](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q1.tsv)
+- [2017 - S2](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)
+- [2017 - S3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q3.tsv)
+- [2017 - 4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q4.tsv)
 
 Ek veri kümeleri, standart bir URL biçimi kullanılarak gönderilir. Değiştirin `<YEAR>` yıl ve Değiştir `<QUARTER>` yılın çeyreği ile (kullanın `1`, `2`, `3`, veya `4`). Dosyaları sekmeyle ayrılmış değerler (*TSV*) biçimi.
 
@@ -102,11 +102,9 @@ Ek veri kümeleri, standart bir URL biçimi kullanılarak gönderilir. Değişti
 
 ## <a name="license"></a>Lisans
 
-Microsoft Dağıtım .NET Core ile lisanslanan [MICROSOFT .NET kitaplığı EULA](https://aka.ms/dotnet-core-eula). Bu lisans telemetri (aşağıda gösterilen) etkinleştirmek için "Veri" bölümü içerir.
+Microsoft Dağıtım .NET Core ile lisanslanan [Microsoft Yazılımı Lisans koşulları: Mirosoft .NET kitaplığı](https://aka.ms/dotnet-core-eula). Veri toplama ve işleme hakkında daha fazla bilgi için "Veri" başlıklı bölüme bakın.
 
 [.NET NuGet paketleri](https://www.nuget.org/profiles/dotnetframework) aynı lisans kullanın, ancak telemetri etkinleştirme (bkz [kapsam](#scope)).
-
-> 2. VERİLER. Yazılım siz ve yazılımı kullanımınız hakkında bilgi toplamak ve bunları Microsoft'a gönderebilir. Microsoft, bu bilgiler, ürünlerimizi ve hizmetlerimizi geliştirmek için kullanabilir. Veri toplama hakkında daha fazla bilgi ve Yardım belgelerine ve gizlilik bildirimine kullanın <http://go.microsoft.com/fwlink/?LinkId=528096>. Bu uygulamalar onay yazılımı kullanımınız çalışır.
 
 ## <a name="disclosure"></a>Açığa çıkması
 

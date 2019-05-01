@@ -8,11 +8,11 @@ helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
 ms.openlocfilehash: f0305807e76ca27e1979aa23bf0797c505fee566
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048250"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF'de Güvenlik için En İyi Uygulamalar
 Aşağıdaki bölümlerde Windows Communication Foundation (WCF) kullanan güvenli uygulamalar oluştururken dikkate alınması gereken en iyi yöntemler listelenmiştir. Güvenlik hakkında daha fazla bilgi için bkz: [güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), ve [meta veriler hakkında güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -26,11 +26,11 @@ Aşağıdaki bölümlerde Windows Communication Foundation (WCF) kullanan güven
 ## <a name="use-x509-certificates-instead-of-ntlm"></a>NTLM yerine sertifikaları kullan X509  
  WCF eşler arası kimlik doğrulaması için iki mekanizma sunar: X509 (eş kanalı tarafından kullanılır) sertifikaları ve burada SSPI anlaşması daha aşağı düşürmeden Kerberos'tan için NTLM Windows kimlik doğrulaması.  Sertifika tabanlı kimlik doğrulaması kullanarak anahtar boyutları 1024 bit veya daha pek çok nedenden dolayı NTLM için tercih edilen:  
   
--   Kullanılabilirlik karşılıklı kimlik doğrulama  
+- Kullanılabilirlik karşılıklı kimlik doğrulama  
   
--   daha güçlü şifreleme algoritmalarının kullanımını ve  
+- daha güçlü şifreleme algoritmalarının kullanımını ve  
   
--   kullanma büyük zorluk X509 iletilen kimlik bilgileri.  
+- kullanma büyük zorluk X509 iletilen kimlik bilgileri.  
    
 ## <a name="always-revert-after-impersonation"></a>Kimliğe bürünme sonra her zaman geri dön  
  İstemcinin kimliğe bürünme sağlayan API'leri kullanırken, özgün kimliğine geri dönülemiyor emin olun. Örneğin kullanırken <xref:System.Security.Principal.WindowsIdentity> ve <xref:System.Security.Principal.WindowsImpersonationContext>, C# kullanın `using` deyimi veya Visual Basic`Using` deyimi, aşağıdaki kodda gösterildiği gibi. <xref:System.Security.Principal.WindowsImpersonationContext> Sınıfının Implements <xref:System.IDisposable> arabirimi ve bu nedenle ortak dil çalışma zamanı (CLR) otomatik olarak özgün kimliğine geri döner kodu ayrıldığında `using` blok.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
 ms.openlocfilehash: 89cb36dba63dccdf7e52b7fcafbe3d9fc2fea1e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053437"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>XamlWriter.Save'in Serileştirme Sınırlamaları
 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A> İçeriğini serileştirmek için kullanılan bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama olarak bir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosya. Ancak, tam olarak ne serileştirildiği, bazı önemli sınırlamaları vardır. Bu sınırlamaların ve bazı genel konular, bu konuda belgelenmiştir.  
@@ -36,8 +36,8 @@ ms.locfileid: "59113288"
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>XamlWriter.Save'in gerçekçi senaryolar  
  Listelenen sınırlamalar burada oldukça, yine de kullanmak için uygun çeşitli senaryolar vardır <xref:System.Windows.Markup.XamlWriter.Save%2A> seri hale getirme.  
   
--   Vektör veya grafik çıktısı: İşlenen alan çıktısı, aynı vektör veya yeniden, grafik yeniden oluşturmak için kullanılabilir.  
+- Vektör veya grafik çıktısı: İşlenen alan çıktısı, aynı vektör veya yeniden, grafik yeniden oluşturmak için kullanılabilir.  
   
--   Zengin metin ve akış belgeleri: Metin ve içindeki tüm öğesi biçimlendirme ve öğeyi kapsama çıktısında korunur. Bu Pano işlevselliği yaklaşık mekanizmaları için yararlı olabilir.  
+- Zengin metin ve akış belgeleri: Metin ve içindeki tüm öğesi biçimlendirme ve öğeyi kapsama çıktısında korunur. Bu Pano işlevselliği yaklaşık mekanizmaları için yararlı olabilir.  
   
--   İş nesnesi veri koruma: Veri, özel öğeler gibi depoladığınız varsa [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri, iş nesnelerinizi temel izleyin sürede [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] özel oluşturucular ve başvuruya göre özellik değerlerini dönüştürme sağlamak gibi kuralları, bu iş nesneleri olabilir Serileştirme yöntemiyle perpetuated.
+- İş nesnesi veri koruma: Veri, özel öğeler gibi depoladığınız varsa [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri, iş nesnelerinizi temel izleyin sürede [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] özel oluşturucular ve başvuruya göre özellik değerlerini dönüştürme sağlamak gibi kuralları, bu iş nesneleri olabilir Serileştirme yöntemiyle perpetuated.

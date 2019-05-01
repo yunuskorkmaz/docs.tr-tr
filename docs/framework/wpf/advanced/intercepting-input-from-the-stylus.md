@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
 ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031258"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Ekran Kaleminden Gelen Girişi Önleme
 <xref:System.Windows.Input.StylusPlugIns> Mimari üzerinde alt düzey denetimi uygulamak için bir mekanizma sağlar <xref:System.Windows.Input.Stylus> giriş ve dijital mürekkep oluşturulmasını <xref:System.Windows.Ink.Stroke> nesneleri. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Sınıfı özel davranış uygulayan ve en iyi performans için ekran kalemi aygıttan gelen veri akışını uygulamak için bir mekanizma sağlar.  
   
  Bu konu aşağıdaki alt bölümleri içerir:  
   
--   [Mimari](#Architecture)  
+- [Mimari](#Architecture)  
   
--   [Ekran kalemi eklentileri uygulama](#ImplementingStylusPlugins)  
+- [Ekran kalemi eklentileri uygulama](#ImplementingStylusPlugins)  
   
--   [Eklentinizin InkCanvas'a ekleme](#AddingYourPluginToAnInkCanvas)  
+- [Eklentinizin InkCanvas'a ekleme](#AddingYourPluginToAnInkCanvas)  
   
--   [Sonuç](#Conclusion)  
+- [Sonuç](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>Mimari  

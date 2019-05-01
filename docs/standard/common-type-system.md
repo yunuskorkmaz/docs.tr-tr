@@ -5,11 +5,11 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
 ms.openlocfilehash: a6704b09a51a509cb7fbd786f9040454f78cc862
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053203"
 ---
 # <a name="common-type-system--common-language-specification"></a>Ortak tür sistemi ve ortak dil belirtimi
 
@@ -21,10 +21,10 @@ En baştan başlamak için bir .NET uygulaması olduğunu unutmayın _dilden_. B
 
 Şeffaf bir şekilde, bunu yapmak için var olan desteklenen tüm türlerini tanımlamak için yaygın bir yolu olacak. Bunun yapılması sorumlu ortak tür sistemi (CTS) nedir budur. Çeşitli şeyler çalışıldı:
 
-*   Diller arası yürütme için bir çerçeve oluşturun.
-*   Bir .NET uygulaması üzerinde çeşitli dillerde uygulama desteklemek için nesne odaklı bir model sağlar.
-*   Türleriyle çalışmak için söz konusu olduğunda, tüm dillerin izlemesi gereken kural kümesini tanımlar.
-*   Uygulama geliştirmesinde kullanılan ilkel temel türler içeren bir kitaplık sağlar (gibi `Boolean`, `Byte`, `Char` vs.)
+* Diller arası yürütme için bir çerçeve oluşturun.
+* Bir .NET uygulaması üzerinde çeşitli dillerde uygulama desteklemek için nesne odaklı bir model sağlar.
+* Türleriyle çalışmak için söz konusu olduğunda, tüm dillerin izlemesi gereken kural kümesini tanımlar.
+* Uygulama geliştirmesinde kullanılan ilkel temel türler içeren bir kitaplık sağlar (gibi `Boolean`, `Byte`, `Char` vs.)
 
 CTS desteklenmesi gereken türleri iki tür tanımlar: başvuru ve değer türleri. Adları için bunların tanımlarının üzerine gelin.
 
@@ -34,11 +34,11 @@ Değer bunun tersini de burada nesneleri değerlerine tarafından temsil edilen 
 
 CTS, her biri kendi belirli semantikler ve kullanım türleri çeşitli kategorileri tanımlar:
 
-*   Sınıflar
-*   Yapılar
-*   Numaralandırmalar
-*   Arabirimler
-*   Temsilciler
+* Sınıflar
+* Yapılar
+* Numaralandırmalar
+* Arabirimler
+* Temsilciler
 
 CTS diğer tüm özellikler gibi geçerli bir tür üyelerini nasıl nedir, erişim değiştiricileri türleri de tanımlar ve devralma çalışır ve benzeri aşırı yükleme. Ne yazık ki giderek ayrıntılı bulunanlardan herhangi biri olarak bunun gibi bir giriş makalesi kapsamı dışında olsa da, başvurabilirsiniz [daha fazla kaynak](#more-resources) bağlantıları bu konuları kapsayan daha kapsamlı bilgi edinmek için son bölümü.
 
@@ -52,5 +52,5 @@ Belgelerde başvurabilirsiniz [daha kaynakları](#more-resources) CLS içinde t�
 
 ## <a name="more-resources"></a>Daha fazla kaynak
 
-*   [Ortak Tür Sistemi](./base-types/common-type-system.md)
-*   [Ortak dil belirtimi](language-independence-and-language-independent-components.md)
+* [Ortak Tür Sistemi](./base-types/common-type-system.md)
+* [Ortak dil belirtimi](language-independence-and-language-independent-components.md)

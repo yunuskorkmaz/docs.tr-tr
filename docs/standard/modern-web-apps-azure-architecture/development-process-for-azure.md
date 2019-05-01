@@ -5,18 +5,18 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
 ms.openlocfilehash: b7a6ae343feae7c28fb7debdc8a6b617872d262f
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019399"
 ---
 # <a name="development-process-for-azure"></a>Azure için geliştirme işlemi
 
 > _"Bulut sayesinde, kişilerin ve küçük ölçekli işletmeler kendi parmağınızı Yasla ve anında kurumsal sınıf Hizmetleri'ni ayarlama."_  
 > _-Roy Stephan_
 
-## <a name="vision"></a>Görsel
+## <a name="vision"></a>Vision
 
 > *İyi tasarlanmış ASP .NET Core uygulamaları Visual Studio veya dotnet CLI ve Visual Studio Code veya tercih ettiğiniz düzenleyiciyi kullanarak dilediğiniz şekilde geliştirin.*
 

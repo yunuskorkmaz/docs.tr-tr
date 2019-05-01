@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: ce495ce01c970fb46cc7e7e374994fd34a7730a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051578"
 ---
 # <a name="changing-case-in-net"></a>. NET'te değiştirme
 Bir kullanıcı girişi kabul eden bir uygulama yazıyorsanız, hiçbir zaman isterse veri girmek için kullanacağı hangi çalışması emin olabilirsiniz. Genellikle, özellikle, bunların kullanıcı arabiriminde görüntülüyorsanız dizeleri tutarlı olarak büyük küçük harfleri istersiniz. Aşağıdaki tabloda, üç durum değiştirme yöntemleri açıklar. İlk iki yöntem bir kültür kabul eden bir aşırı yüklemesini sağlar.  

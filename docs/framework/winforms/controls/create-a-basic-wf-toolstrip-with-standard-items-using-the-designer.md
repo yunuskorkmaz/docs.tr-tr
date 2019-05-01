@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
 ms.openlocfilehash: df6fe22eef338732c14d6f1ff56f25e6d1aa8a2a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59332176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011458"
 ---
 # <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Nasıl yapılır: Tasarımcı kullanarak standart öğelerle temel bir Windows Formları ToolStrip oluşturma
 Aşağıdaki yordam nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Forms.ToolStrip> ve yedi ekleyin <xref:System.Windows.Forms.ToolStripButton> tipik görevleri temsil eden denetimleri.  
@@ -33,5 +33,5 @@ Aşağıdaki yordam nasıl oluşturulacağını gösterir. bir <xref:System.Wind
 - <xref:System.Windows.Forms.ToolStrip>
 - [ToolStrip Denetimine Genel Bakış](toolstrip-control-overview-windows-forms.md)
 - [ToolStrip Denetimi](toolstrip-control-windows-forms.md)
-- [ToolStrip Denetim Mimarisi](toolstrip-control-architecture.md)
-- [ToolStrip Teknoloiji Özeti](toolstrip-technology-summary.md)
+- [ToolStrip Denetim, Mimarisi](toolstrip-control-architecture.md)
+- [ToolStrip Teknoloji Özeti](toolstrip-technology-summary.md)

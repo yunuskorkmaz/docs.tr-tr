@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012123"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>İzleme ve telemetri ile uygulamalarınızı modernleştirme
 
@@ -35,15 +35,15 @@ OMS portalı veya tüm tarayıcılarda çalıştırmak, Azure portalı Log Analy
 
 [Kapsayıcı izleme çözümü](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) Log Analytics yardımcı olarak görüntüleyin ve Docker ve Windows kapsayıcı konaklarınız tek bir konumda yönetin. Çözüm gösterir hangi kapsayıcıları çalıştırmak, hangi kapsayıcı görüntüsü ister çalışıyor ve kapsayıcıları çalıştığı. Kapsayıcılar ile kullanılan komutları dahil olmak üzere ayrıntılı denetim bilgileri görüntüleyebilirsiniz. Kapsayıcılar, Docker veya Windows konak uzaktan görüntülemeye gerek kalmadan merkezi günlükleri, arama ve görüntüleme de giderebilirsiniz. Bir konakta gürültülü ve alıcı aşırı kaynakları olabilecek kapsayıcıları bulabilirsiniz. Ayrıca, merkezileştirilmiş CPU, bellek, depolama ve ağ kullanımını ve kapsayıcılar için performans bilgilerini görüntüleyebilirsiniz. Windows çalıştıran bilgisayarlarda, merkezileştirme ve Windows Server günlüklerinden karşılaştırın Hyper-V ve Docker kapsayıcıları. Çözüm, aşağıdaki kapsayıcı düzenleyicileri destekler:
 
--   Docker Swarm
+- Docker Swarm
 
--   DC/OS
+- DC/OS
 
--   Kubernetes
+- Kubernetes
 
--   Service Fabric
+- Service Fabric
 
--   Red Hat OpenShift
+- Red Hat OpenShift
 
 Şekil 4-11 çeşitli kapsayıcı konakları ve aracıları ve OMS arasındaki ilişkiler gösterilmektedir.
 
@@ -53,45 +53,45 @@ OMS portalı veya tüm tarayıcılarda çalıştırmak, Azure portalı Log Analy
 
 Log Analytics kapsayıcı izleme çözümü kullanabilirsiniz:
 
--   Tek bir konumda tüm kapsayıcı konakları hakkında bilgi.
+- Tek bir konumda tüm kapsayıcı konakları hakkında bilgi.
 
--   Kapsayıcıları olduğunuzu çalıştırmak, hangi görüntüyü çalıştırdıkları ve bunların nereye çalıştırdığınızdan.
+- Kapsayıcıları olduğunuzu çalıştırmak, hangi görüntüyü çalıştırdıkları ve bunların nereye çalıştırdığınızdan.
 
--   Eylemler için bir denetim kaydı kapsayıcılarında bakın.
+- Eylemler için bir denetim kaydı kapsayıcılarında bakın.
 
--   Docker ana bilgisayarları için uzaktan oturum açma olmadan Merkezi günlük arama ve görüntüleme sorunlarını giderin.
+- Docker ana bilgisayarları için uzaktan oturum açma olmadan Merkezi günlük arama ve görüntüleme sorunlarını giderin.
 
--   "Gürültülü komşu" olabilir ve bir konak üzerinde aşırı kaynakları kullanan kapsayıcıları bulun.
+- "Gürültülü komşu" olabilir ve bir konak üzerinde aşırı kaynakları kullanan kapsayıcıları bulun.
 
--   Merkezileştirilmiş CPU, bellek, depolama ve ağ kullanımını ve kapsayıcılar için performans bilgilerini görüntüleyin.
+- Merkezileştirilmiş CPU, bellek, depolama ve ağ kullanımını ve kapsayıcılar için performans bilgilerini görüntüleyin.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Microsoft Azure'da izlemeye genel bakış**
+- **Microsoft Azure'da izlemeye genel bakış**
 
 <https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **Application Insights nedir?**
+- **Application Insights nedir?**
 
 <https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
--   **Log Analytics nedir?**
+- **Log Analytics nedir?**
 
 <https://docs.microsoft.com/azure/log-analytics/log-analytics-overview>
 
--   **Azure İzleyici'de kapsayıcı izleme çözümü**
+- **Azure İzleyici'de kapsayıcı izleme çözümü**
 
 <https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
--   **Azure İzleyicisi'ne genel bakış**
+- **Azure İzleyicisi'ne genel bakış**
 
 <https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **Operations Management Suite (OMS) nedir?**
+- **Operations Management Suite (OMS) nedir?**
 
 <https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
 
--   **Windows Server kapsayıcıları Service fabric'te OMS ile izleme**
+- **Windows Server kapsayıcıları Service fabric'te OMS ile izleme**
 
 <https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 

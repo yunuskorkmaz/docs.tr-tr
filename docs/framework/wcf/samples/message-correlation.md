@@ -3,11 +3,11 @@ title: İleti Bağıntısı
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
 ms.openlocfilehash: ed6fc8f5d16ae2d604cdbdf4659ecfaaa83bfa02
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989774"
 ---
 # <a name="message-correlation"></a>İleti Bağıntısı
 Bu örnek nasıl bir Message Queuing (MSMQ) uygulaması bir MSMQ iletisinin bir Windows Communication Foundation (WCF) hizmetine gönderebilir ve iletileri bir istek/yanıt senaryosunda gönderen ve alıcı uygulamalar arasında nasıl eşleştirilebilir gösterir. Bu örnek MsmqIntegrationBinding bağlama kullanır. Bu durumda, alan hizmet kuyruğa alınmış iletileri gözlemleyin olanak sağlamak için şirket içinde barındırılan bir konsol uygulaması hizmetidir. K  
@@ -275,15 +275,15 @@ static void DisplayOrderStatus()
 
 2. Hizmet ilk olarak çalıştırılırsa, sıranın mevcut olduğundan emin olun kontrol eder. Kuyruk yoksa, bir hizmeti oluşturacaksınız. İlk sırayı oluşturmak için hizmet çalıştırabileceğiniz veya bir MSMQ Kuyruk Yöneticisi ile oluşturabilirsiniz. Windows 2008'de bir kuyruk oluşturmak için aşağıdaki adımları izleyin.
 
-    1.  Visual Studio 2012'de Sunucu Yöneticisi'ni açın.
+    1. Visual Studio 2012'de Sunucu Yöneticisi'ni açın.
 
-    2.  Genişletin **özellikleri** sekmesi.
+    2. Genişletin **özellikleri** sekmesi.
 
-    3.  Sağ **özel ileti kuyrukları**seçip **yeni**, **özel sıra**.
+    3. Sağ **özel ileti kuyrukları**seçip **yeni**, **özel sıra**.
 
-    4.  Denetleme **işlem** kutusu.
+    4. Denetleme **işlem** kutusu.
 
-    5.  Girin `ServiceModelSamplesTransacted` yeni Kuyruğun adı.
+    5. Girin `ServiceModelSamplesTransacted` yeni Kuyruğun adı.
 
 3. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
 

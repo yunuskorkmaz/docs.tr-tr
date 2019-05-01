@@ -3,11 +3,11 @@ title: Sanal Dizin Ayarlama Yönergeleri
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
 ms.openlocfilehash: fdff88026a49989870ee5c47f9a38a65ecad3c80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007558"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Sanal Dizin Ayarlama Yönergeleri
 Windows Communication Foundation (WCF) örnekleri %SystemDrive%\inetpub\wwwroot\servicemodelsamples klasörle eşlendi servicemodelsamples adlı ortak bir sanal dizin paylaşmak için tasarlanmıştır.  
@@ -59,9 +59,9 @@ Windows Communication Foundation (WCF) örnekleri %SystemDrive%\inetpub\wwwroot\
   
 7. Varsayılan olarak, aşağıdaki onay kutularını seçilir:  
   
-    -   **Read**  
+    - **Read**  
   
-    -   **Komut dosyalarını (örn. ASP) Çalıştır**  
+    - **Komut dosyalarını (örn. ASP) Çalıştır**  
   
 8. Tıklayın **sonraki**ve ardından **son** Sihirbazı tamamlayın.  
   
@@ -84,11 +84,11 @@ Windows Communication Foundation (WCF) örnekleri %SystemDrive%\inetpub\wwwroot\
   
 2. Varsayılan olarak, aşağıdaki onay kutularını seçilir:  
   
-    -   **Read**  
+    - **Read**  
   
-    -   **Günlük ziyaret eder.**  
+    - **Günlük ziyaret eder.**  
   
-    -   **Bu kaynağı dizine Ekle**  
+    - **Bu kaynağı dizine Ekle**  
   
 3. Seçin **Dizin tarama** onay kutusu. Bu, dizini dizinin bir hizmetinde hata ayıklarken yardımcı olan Internet Explorer'ı kullanarak erişmenize olanak sağlar.  
   
@@ -130,21 +130,21 @@ Windows Communication Foundation (WCF) örnekleri %SystemDrive%\inetpub\wwwroot\
   
      Bu listede yoksa:  
   
-    1.  Tıklayın **Başlat** ve ardından **Denetim Masası**.  
+    1. Tıklayın **Başlat** ve ardından **Denetim Masası**.  
   
-    2.  Görmüyorsanız, **kullanıcı hesaplarını** simgesini tıklayın **kategori görünümüne geçiş**.  
+    2. Görmüyorsanız, **kullanıcı hesaplarını** simgesini tıklayın **kategori görünümüne geçiş**.  
   
-    3.  Tıklayın **kullanıcı hesaplarını** simgesi.  
+    3. Tıklayın **kullanıcı hesaplarını** simgesi.  
   
-    4.  Altında "veya bir Denetim Masası simgesi seçin" tıklayın **kullanıcı hesaplarını**.  
+    4. Altında "veya bir Denetim Masası simgesi seçin" tıklayın **kullanıcı hesaplarını**.  
   
-    5.  İçinde **kullanıcı hesaplarını** iletişim kutusu, tıklayın **Gelişmiş** sekmesi.  
+    5. İçinde **kullanıcı hesaplarını** iletişim kutusu, tıklayın **Gelişmiş** sekmesi.  
   
-    6.  **Gelişmiş**'e tıklayın.  
+    6. **Gelişmiş**'e tıklayın.  
   
-    7.  İçinde **yerel kullanıcılar ve gruplar** iletişim kutusu, genişletmek için tıklatın **kullanıcılar** klasör.  
+    7. İçinde **yerel kullanıcılar ve gruplar** iletişim kutusu, genişletmek için tıklatın **kullanıcılar** klasör.  
   
-    8.  Sağ bölmede **Internet Konuk hesabı**.  
+    8. Sağ bölmede **Internet Konuk hesabı**.  
   
     9. İçinde **özellikleri** iletişim kutusu, kopyalama Internet Konuk hesabı olarak kullanılan adı. Varsayılan olarak, adı "USR_ bilgisayar adından" ile başlar.  
   
@@ -166,17 +166,17 @@ Windows Communication Foundation (WCF) örnekleri %SystemDrive%\inetpub\wwwroot\
   
      Ağ hizmeti listede yoksa:  
   
-    1.  **Ekle**'yi tıklatın.  
+    1. **Ekle**'yi tıklatın.  
   
-    2.  İçinde **kullanıcıları veya Grupları Seç** iletişim kutusuna bir ters eğik çizgi ardından bilgisayar adı.  
+    2. İçinde **kullanıcıları veya Grupları Seç** iletişim kutusuna bir ters eğik çizgi ardından bilgisayar adı.  
   
-    3.  Tür **hizmet** sonra ters eğik çizgi (boşluksuz).  
+    3. Tür **hizmet** sonra ters eğik çizgi (boşluksuz).  
   
-    4.  Tıklayın **Adları Denetle**.  
+    4. Tıklayın **Adları Denetle**.  
   
-    5.  Birden fazla adı bulunursa seçip **ağ hizmeti** tıklatıp **Tamam**.  
+    5. Birden fazla adı bulunursa seçip **ağ hizmeti** tıklatıp **Tamam**.  
   
-    6.  Tıklayın **Tamam** kapatmak için **kullanıcıları veya Grupları Seç** iletişim kutusu.  
+    6. Tıklayın **Tamam** kapatmak için **kullanıcıları veya Grupları Seç** iletişim kutusu.  
   
 6. IIS 5.1 ile Windows XP SP2 kullanıyorsanız, hem Internet Konuk hesabı hem de ASP.NET listelendiğini kontrol **grup veya kullanıcı adları** kutusu.  
   
@@ -184,11 +184,11 @@ Windows Communication Foundation (WCF) örnekleri %SystemDrive%\inetpub\wwwroot\
   
      ASP.NET parçası olup olmadığını denetlemek için **kullanıcılar** güvenlik grubu:  
   
-    1.  Üzerinde **Başlat** menüsünde tıklatın **Denetim Masası**.  
+    1. Üzerinde **Başlat** menüsünde tıklatın **Denetim Masası**.  
   
-    2.  Tıklayın **kullanıcı hesaplarını** simgesi.  
+    2. Tıklayın **kullanıcı hesaplarını** simgesi.  
   
-    3.  İçinde **grubu** sütun kontrol değeri **ASPNET** "kullanıcıları."  
+    3. İçinde **grubu** sütun kontrol değeri **ASPNET** "kullanıcıları."  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
 ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053099"
 ---
 # <a name="wpf-brushes-overview"></a>WPF Fırçalarına Genel Bakış
 Her şey, ekranda görünen fırça tarafından boyanan çünkü görülebilir. Örneğin, fırça bir düğme ve metin ön bir şeklin arka planı tanımlamak için kullanılır. Bu konu ile Boyama kavramları tanıtır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fırçaları ve örnekler sağlar. Fırçalar boyama etkinleştirme [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] basit, düz renk düzenleri ve görüntü karmaşık kümelerine nesneleri.  
@@ -131,9 +131,9 @@ VisualBrush'ı kullanarak bir dikdörtgen boyanır
 ## <a name="paint-using-predefined-and-system-brushes"></a>Önceden tanımlanmış ve sistem fırçaları ile Boyama  
  Kolaylık olması için Windows Presentation Foundation (WPF), bir dizi önceden tanımlanmış ve sistem nesneleri boyamak için kullanabileceğiniz fırçaları sağlar.  
   
--   Kullanılabilir önceden tanımlanmış Fırçalar listesi için bkz. <xref:System.Windows.Media.Brushes> sınıfı. Önceden tanımlanmış bir fırçanın nasıl kullanılacağını gösteren bir örnek için bkz: [düz renk ile bir alanı boyama](how-to-paint-an-area-with-a-solid-color.md).  
+- Kullanılabilir önceden tanımlanmış Fırçalar listesi için bkz. <xref:System.Windows.Media.Brushes> sınıfı. Önceden tanımlanmış bir fırçanın nasıl kullanılacağını gösteren bir örnek için bkz: [düz renk ile bir alanı boyama](how-to-paint-an-area-with-a-solid-color.md).  
   
--   Kullanılabilir sistem fırçaları listesi için bkz. <xref:System.Windows.SystemColors> sınıfı. Bir örnek için bkz. [sistem fırçası ile bir alanı boyama](how-to-paint-an-area-with-a-system-brush.md).  
+- Kullanılabilir sistem fırçaları listesi için bkz. <xref:System.Windows.SystemColors> sınıfı. Bir örnek için bkz. [sistem fırçası ile bir alanı boyama](how-to-paint-an-area-with-a-system-brush.md).  
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>Ortak Fırça özellikleri  

@@ -6,35 +6,35 @@ dev_langs:
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
 ms.openlocfilehash: b6778522b5757c0ece899f7465d3ab500038fc49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037043"
 ---
 # <a name="serialization"></a>Serileştirme
 Bu konu başlığı altında açıklanır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] seri hale getirme özellikleri. İzleyen paragrafları serileştirme kod oluşturma sırasında tasarım zamanı ve çalışma zamanı serileştirme davranışını ekleme hakkında bilgi sağlayan [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sınıfları.  
   
  Serileştirme kodu aşağıdaki yöntemlerden birini bir tasarım zamanında ekleyebilirsiniz:  
   
--   İçinde [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], değiştirme **serileştirme modunu** özelliğini **tek yönlü**.  
+- İçinde [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], değiştirme **serileştirme modunu** özelliğini **tek yönlü**.  
   
--   SQLMetal komut satırında ekleme **/serialization** seçeneği. Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+- SQLMetal komut satırında ekleme **/serialization** seçeneği. Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Genel Bakış  
  Tarafından oluşturulan kodu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] varsayılan olarak ertelenmiş yükleme özellikleri sağlar. Ertelenen yükleme Orta katmanda çok isteğe bağlı olarak saydam yüklenmesi için uygundur. Ertelenen yükleme veya istenip istenmediğini ertelenmiş yükleniyor seri hale getirici tetikler. ancak, seri hale getirme için sorunlu olmasıdır. Aslında, bir nesne seri olduğunda, tüm giden erteleme yüklenen başvuruları altında geçişli kendi kapatma seri hale getirilir.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Seri hale getirme özelliğini öncelikle iki mekanizma bu sorunu giderir:  
   
--   A <xref:System.Data.Linq.DataContext> geciktirilmiş yüklemeyi kapatma modunu (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>). Daha fazla bilgi için bkz. <xref:System.Data.Linq.DataContext>.  
+- A <xref:System.Data.Linq.DataContext> geciktirilmiş yüklemeyi kapatma modunu (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>). Daha fazla bilgi için bkz. <xref:System.Data.Linq.DataContext>.  
   
--   Oluşturmak için bir kod üretimi anahtar <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> ve <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> oluşturulan varlıkları öznitelikleri. Erteleme yükleme sınıfları serileştirme altında davranışını dahil olmak üzere bu yönü, bu konunun önemli bir konudur.  
+- Oluşturmak için bir kod üretimi anahtar <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> ve <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> oluşturulan varlıkları öznitelikleri. Erteleme yükleme sınıfları serileştirme altında davranışını dahil olmak üzere bu yönü, bu konunun önemli bir konudur.  
   
 ### <a name="definitions"></a>Tanımlar  
   
--   *DataContract seri hale getirici*: Varsayılan olarak .NET Framework 3.0 veya sonraki sürümleri, Windows Communication Framework (WCF) bileşeni tarafından kullanılan serileştirici.  
+- *DataContract seri hale getirici*: Varsayılan olarak .NET Framework 3.0 veya sonraki sürümleri, Windows Communication Framework (WCF) bileşeni tarafından kullanılan serileştirici.  
   
--   *Tek yönlü serileştirme*: (Bir döngü önlemek için) yalnızca bir tek yönlü ilişkilendirme özellik içeren bir sınıf seri hale getirilmiş sürümü. Kural gereği, birincil yabancı anahtar ilişkisi üst tarafındaki özelliği seri hale getirme için işaretlenmiş. Diğer tarafta çift yönlü bir ilişkilendirmeye serileştirilmemiş.  
+- *Tek yönlü serileştirme*: (Bir döngü önlemek için) yalnızca bir tek yönlü ilişkilendirme özellik içeren bir sınıf seri hale getirilmiş sürümü. Kural gereği, birincil yabancı anahtar ilişkisi üst tarafındaki özelliği seri hale getirme için işaretlenmiş. Diğer tarafta çift yönlü bir ilişkilendirmeye serileştirilmemiş.  
   
      Tek yönlü seri hale getirme serileştirme tarafından desteklenen tek tür [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   

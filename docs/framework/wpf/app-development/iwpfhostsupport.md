@@ -5,11 +5,11 @@ helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
 ms.openlocfilehash: 074167111b78edc517dda019465260d0acd54737
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006700"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
 Barındıran uygulamalar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] PresentationHost.exe üzerinden içerik PresentationHost.exe ve konak arasında tümleştirme noktası sağlamak için bu arabirimi uygulayın.  
@@ -19,11 +19,11 @@ Barındıran uygulamalar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlash
   
  Tarafından etkinleştirilen tümleştirme `IWpfHostSupport` için PresentationHost.exe sağlar:  
   
--   Bul ve ana bilgisayar uygulaması, ilgileniyor ham giriş cihazları (İnsan Arabirimi cihazlar) ile kaydedin.  
+- Bul ve ana bilgisayar uygulaması, ilgileniyor ham giriş cihazları (İnsan Arabirimi cihazlar) ile kaydedin.  
   
--   Giriş iletileri ham giriş cihazlar kayıtlı ve uygun iletileri yönlendirmek için ana bilgisayar uygulaması alabilir.  
+- Giriş iletileri ham giriş cihazlar kayıtlı ve uygun iletileri yönlendirmek için ana bilgisayar uygulaması alabilir.  
   
--   Konak uygulama özel ilerleme durumu ve hata kullanıcı arabirimleri için sorgu.  
+- Konak uygulama özel ilerleme durumu ve hata kullanıcı arabirimleri için sorgu.  
   
 > [!NOTE]
 >  Bu API yalnızca hedeflenen ve yerel istemci makinesinde kullanımı desteklenen  

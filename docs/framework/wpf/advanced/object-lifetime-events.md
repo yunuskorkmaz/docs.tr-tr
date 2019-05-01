@@ -25,11 +25,11 @@ helpviewer_keywords:
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
 ms.openlocfilehash: 8ecc3f716061dfd08ac95652d1a9d8e06e26d949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053229"
 ---
 # <a name="object-lifetime-events"></a>Nesne Yaşam Süresi Olayları
 Bu konu, söz konusu açıklar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aşamaları oluşturma, kullanma ve yok etme, bir nesnenin yaşam süresini belirtmek olayları.  
@@ -66,11 +66,11 @@ Bu konu, söz konusu açıklar [!INCLUDE[TLA2#tla_winclient](../../../../include
 ## <a name="lifetime-events-application-model-elements"></a>Yaşam süresi olayları uygulama modeli öğeleri  
  Öğeleri aşağıdaki uygulama model öğeleri için ortak yaşam süresi olayları oluşturma: <xref:System.Windows.Application>, <xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, ve <xref:System.Windows.Controls.Frame>. Bu ortak ömür olayları, belirli bir amaç için uygun olan diğer olayları ile genişletin. Bunlar aşağıdaki konumlarda ayrıntılı ele alınmıştır:  
   
--   <xref:System.Windows.Application>: [Uygulama Yönetimine Genel Bakış](../app-development/application-management-overview.md).  
+- <xref:System.Windows.Application>: [Uygulama Yönetimine Genel Bakış](../app-development/application-management-overview.md).  
   
--   <xref:System.Windows.Window>: [WPF Windows genel bakış](../app-development/wpf-windows-overview.md).  
+- <xref:System.Windows.Window>: [WPF Windows genel bakış](../app-development/wpf-windows-overview.md).  
   
--   <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, ve <xref:System.Windows.Controls.Frame>: [Gezintiye genel bakış](../app-development/navigation-overview.md).  
+- <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, ve <xref:System.Windows.Controls.Frame>: [Gezintiye genel bakış](../app-development/navigation-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
 ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053138"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Windows Forms ve WPF Özelliğini Eşleme
 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] teknolojileri sahip iki özelliği, benzer ancak farklı modeli. *Özellik eşleme* iki mimariler arasında birlikte çalışabilirliği destekler ve aşağıdaki özellikleri sağlar:  
   
--   Barındırılan denetim veya öğeyle ilgili özellik değişiklikleri konak ortamında eşleştirmeyi kolaylaştırır.  
+- Barındırılan denetim veya öğeyle ilgili özellik değişiklikleri konak ortamında eşleştirmeyi kolaylaştırır.  
   
--   Kullanılan en yaygın olarak eşlemek için varsayılan işleme özellikleri sunar.  
+- Kullanılan en yaygın olarak eşlemek için varsayılan işleme özellikleri sunar.  
   
--   Geçersiz kılma veya varsayılan özelliklerini genişletme kolayca kaldırılmasını sağlar.  
+- Geçersiz kılma veya varsayılan özelliklerini genişletme kolayca kaldırılmasını sağlar.  
   
--   Özellik değeri değiştiğinde konak üzerinde otomatik olarak algılandı ve barındırılan denetim veya öğe için çevrilmiş olduğunu sağlar.  
+- Özellik değeri değiştiğinde konak üzerinde otomatik olarak algılandı ve barındırılan denetim veya öğe için çevrilmiş olduğunu sağlar.  
   
 > [!NOTE]
 >  Özellik değiştirme olayları barındırma denetimi veya öğe hiyerarşisine yayılmaz. Yerel bir özelliğin değerini doğrudan ayarı, stiller, devralma, veri bağlama veya özelliğin değerini değiştiren başka mekanizmalar nedeniyle değişmezse özellik çevirisi yapılmaz.  
@@ -54,66 +54,66 @@ ms.locfileid: "59088827"
 ## <a name="updates-to-parent-properties"></a>Üst özellikleri için güncelleştirmeler  
  Çoğu üst özelliklerde yapılan değişiklikler, barındırılan alt denetimin bildirimleri neden. Aşağıdaki liste değerleri değiştiğinde bildirim neden olmaz özellikleri açıklar.  
   
--   <xref:System.Windows.Controls.Control.Background%2A>  
+- <xref:System.Windows.Controls.Control.Background%2A>  
   
--   <xref:System.Windows.FrameworkElement.Cursor%2A>  
+- <xref:System.Windows.FrameworkElement.Cursor%2A>  
   
--   <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
+- <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
   
--   <xref:System.Windows.UIElement.Visibility%2A>  
+- <xref:System.Windows.UIElement.Visibility%2A>  
   
  Örneğin değerini değiştirirseniz, <xref:System.Windows.Controls.Control.Background%2A> özelliği <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi <xref:System.Windows.Forms.Control.BackColor%2A> barındırılan denetim özelliği değiştirmez.  
   
 ## <a name="property-mapping-with-the-elementhost-control"></a>ElementHost Denetimi ile özellik eşlemesi  
  Yerleşik değişiklik bildirimi aşağıdaki özellikleri sağlar. Çağırmayın <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> bu özellikleri eşlerken yöntemi:  
   
--   AutoSize  
+- AutoSize  
   
--   Arka plan rengi  
+- Arka plan rengi  
   
--   BackgroundImage  
+- BackgroundImage  
   
--   BackgroundImageLayout  
+- BackgroundImageLayout  
   
--   BindingContext  
+- BindingContext  
   
--   CausesValidation  
+- CausesValidation  
   
--   ContextMenu  
+- ContextMenu  
   
--   ContextMenuStrip  
+- ContextMenuStrip  
   
--   İmleç  
+- İmleç  
   
--   Dock  
+- Dock  
   
--   Etkin  
+- Etkin  
   
--   Yazı tipi  
+- Yazı tipi  
   
--   ForeColor  
+- ForeColor  
   
--   Konum  
+- Konum  
   
--   Kenar boşluğu  
+- Kenar boşluğu  
   
--   Doldurma  
+- Doldurma  
   
--   Üst öğe  
+- Üst öğe  
   
--   Bölge  
+- Bölge  
   
--   RightToLeft  
+- RightToLeft  
   
--   Boyut  
+- Boyut  
   
--   TabIndex  
+- TabIndex  
   
--   Sekme durağı  
+- Sekme durağı  
   
--   Metin  
+- Metin  
   
--   Görünür  
+- Görünür  
   
  <xref:System.Windows.Forms.Integration.ElementHost> Denetimi varsayılan çevirir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] özelliklerine kendi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eşdeğerleri aşağıdaki çeviri tablosunu kullanarak.  
   

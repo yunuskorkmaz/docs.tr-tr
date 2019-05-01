@@ -3,11 +3,11 @@ title: İleti Denetçileri
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
 ms.openlocfilehash: c9d2c47a816e7fd8c5d219009128ed530564b81b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989826"
 ---
 # <a name="message-inspectors"></a>İleti Denetçileri
 Bu örnek, uygulama ve hizmet ve istemci ileti denetçileri yapılandırma gösterir.  

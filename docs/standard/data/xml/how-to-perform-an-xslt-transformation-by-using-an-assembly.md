@@ -9,18 +9,18 @@ ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dcf869d77882810d063532b2cf0c8139be163b7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62027218"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Nasıl yapılır: Derleme Kullanarak XSLT Dönüşümü Gerçekleştirme
 XSLT derleyicisi (xsltc.exe) XSLT stil sayfalarını derler ve bir derleme oluşturur. Derleme doğrudan geçirilebilir <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemi.  
   
 ### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>XML ve XSLT dosyaları yerel bilgisayarınıza kopyalamak için  
   
--   XSLT dosyasını yerel bilgisayarınıza kopyalayın ve Transform.xsl adlandırın.  
+- XSLT dosyasını yerel bilgisayarınıza kopyalayın ve Transform.xsl adlandırın.  
   
     ```xml  
     <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -87,7 +87,7 @@ XSLT derleyicisi (xsltc.exe) XSLT stil sayfalarını derler ve bir derleme oluş
     </xsl:stylesheet>  
     ```  
   
--   XML dosyasını yerel bilgisayarınıza kopyalayın ve adlandırın `books.xml`.  
+- XML dosyasını yerel bilgisayarınıza kopyalayın ve adlandırın `books.xml`.  
   
     ```xml  
     <?xml version="1.0"?>  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007480"
 ---
 # <a name="ws-transaction-flow"></a>WS İşlem Akışı
 Bu örnek, bir istemci Eşgüdümlü işlem kullanımını gösterir ve WS-Atomic işlem ya da OleTransactions protokolünü kullanarak işlem istemci ve sunucu seçeneklerini akış. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan ancak işlemleri kullanımını göstermek için öznitelikli `TransactionFlowAttribute` ile **TransactionFlowOption** ne derece işlem akışı etkin belirlemek için sabit listesi. Akışlı işlem kapsamında, istenen işlemlerin bir günlük veritabanına yazılır ve istemci işlemi tamamlanmazsa, Eşgüdümlü istemci işlemi tamamlanana kadar - devam ederse Web hizmeti işlemi sağlar ilgili güncelleştirmeleri veritabanına iletilmez.  
@@ -39,13 +39,13 @@ public interface ICalculator
 
  Bu, işlenmek üzere oldukları sırayla operations tanımlar:  
   
--   Bir `Add` işlem isteği akışlı bir işlem içermesi gerekir.  
+- Bir `Add` işlem isteği akışlı bir işlem içermesi gerekir.  
   
--   A `Subtract` işlem isteği akışlı bir işlem içerebilir.  
+- A `Subtract` işlem isteği akışlı bir işlem içerebilir.  
   
--   A `Multiply` işlem isteği açık noktayla ayarı üzerinden akan bir işlem değil içermesi gerekir.  
+- A `Multiply` işlem isteği açık noktayla ayarı üzerinden akan bir işlem değil içermesi gerekir.  
   
--   A `Divide` işlem isteği Java'daki üzerinden akan bir işlem değil içermelidir bir `TransactionFlow` özniteliği.  
+- A `Divide` işlem isteği Java'daki üzerinden akan bir işlem değil içermelidir bir `TransactionFlow` özniteliği.  
   
  İşlem akışını bağlamalarla etkinleştirmek için [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) özelliği etkin uygun işlemi özniteliklerine ek olarak kullanılmalıdır. Bu örnekte, hizmet yapılandırmasının bir TCP uç noktası ve bir meta veri değişimi uç noktası yanı sıra bir HTTP uç noktasını kullanıma sunar. TCP uç noktası ve HTTP uç noktası, hem de aşağıdaki bağlamaları kullanın [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) özelliği etkin.  
   
@@ -182,15 +182,15 @@ Console.WriteLine("Transaction committed");
 
  İşlem çağrıları aşağıdaki gibidir:  
   
--   `Add` Gerekli işlem hizmetine istek akışları ve hizmetin Eylemler istemcinin işlem kapsamında gerçekleşir.  
+- `Add` Gerekli işlem hizmetine istek akışları ve hizmetin Eylemler istemcinin işlem kapsamında gerçekleşir.  
   
--   İlk `Subtract` istek, izin verilen işlem hizmetine de akar ve hizmetin Eylemler istemcinin işlem kapsamında yeniden gerçekleşir.  
+- İlk `Subtract` istek, izin verilen işlem hizmetine de akar ve hizmetin Eylemler istemcinin işlem kapsamında yeniden gerçekleşir.  
   
--   İkinci `Subtract` isteği ile bildirilen yeni bir işlem kapsamı içinde gerçekleştirilir `TransactionScopeOption.Suppress` seçeneği. Bu istemcinin başlangıç dış işlem engeller ve isteğin bir işlem hizmetine akmaz. Bu yaklaşım, bir istemcinin açıkça, çevirme ve gerekli olmadığında, bir işlem hizmetine akan karşı koruma sağlar. Hizmetin Eylemler, yeni ve bağlantısız bir işlem kapsamında gerçekleşir.  
+- İkinci `Subtract` isteği ile bildirilen yeni bir işlem kapsamı içinde gerçekleştirilir `TransactionScopeOption.Suppress` seçeneği. Bu istemcinin başlangıç dış işlem engeller ve isteğin bir işlem hizmetine akmaz. Bu yaklaşım, bir istemcinin açıkça, çevirme ve gerekli olmadığında, bir işlem hizmetine akan karşı koruma sağlar. Hizmetin Eylemler, yeni ve bağlantısız bir işlem kapsamında gerçekleşir.  
   
--   `Multiply` İsteği akan bir işlem hizmetine istemci tanımını üretilmiş çünkü `ICalculator` arabirimi içeren bir <xref:System.ServiceModel.TransactionFlowAttribute> kümesine <xref:System.ServiceModel.TransactionFlowOption> `NotAllowed`.  
+- `Multiply` İsteği akan bir işlem hizmetine istemci tanımını üretilmiş çünkü `ICalculator` arabirimi içeren bir <xref:System.ServiceModel.TransactionFlowAttribute> kümesine <xref:System.ServiceModel.TransactionFlowOption> `NotAllowed`.  
   
--   `Divide` İsteği akan bir işlem hizmetine istemci tanımını yeniden üretilmiş çünkü `ICalculator` arabirimi içermez bir `TransactionFlowAttribute`. Hizmetin Eylemler, yeni ve bağlantısız başka bir işlem kapsamında yeniden gerçekleşir.  
+- `Divide` İsteği akan bir işlem hizmetine istemci tanımını yeniden üretilmiş çünkü `ICalculator` arabirimi içermez bir `TransactionFlowAttribute`. Hizmetin Eylemler, yeni ve bağlantısız başka bir işlem kapsamında yeniden gerçekleşir.  
   
  Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
@@ -238,47 +238,47 @@ Press <ENTER> to terminate the service.
   
 1. Windows Server 2003 veya Windows XP çalıştıran bir hizmeti makinede MSDTC gelen ağ işlemleri bu yönergeleri izleyerek izin verecek şekilde yapılandırın.  
   
-    1.  Gelen **Başlat** menüsünde gidin **Denetim Masası**, ardından **Yönetimsel Araçlar**, ardından **Bileşen Hizmetleri**.  
+    1. Gelen **Başlat** menüsünde gidin **Denetim Masası**, ardından **Yönetimsel Araçlar**, ardından **Bileşen Hizmetleri**.  
   
-    2.  Genişletin **Bileşen Hizmetleri**. Açık **bilgisayarlar** klasör.  
+    2. Genişletin **Bileşen Hizmetleri**. Açık **bilgisayarlar** klasör.  
   
-    3.  Sağ **Bilgisayarım** seçip **özellikleri**.  
+    3. Sağ **Bilgisayarım** seçip **özellikleri**.  
   
-    4.  Üzerinde **MSDTC** sekmesinde **Güvenlik Yapılandırması**.  
+    4. Üzerinde **MSDTC** sekmesinde **Güvenlik Yapılandırması**.  
   
-    5.  Denetleme **ağ DTC erişimi** ve **izin gelen**.  
+    5. Denetleme **ağ DTC erişimi** ve **izin gelen**.  
   
-    6.  Tıklayın **Tamam**, ardından **Evet** MSDTC hizmetini yeniden başlatmak için.  
+    6. Tıklayın **Tamam**, ardından **Evet** MSDTC hizmetini yeniden başlatmak için.  
   
-    7.  İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
+    7. İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
   
 2. Windows Server 2008 veya Windows Vista çalıştıran bir hizmeti makinede MSDTC gelen ağ işlemleri bu yönergeleri izleyerek izin verecek şekilde yapılandırın.  
   
-    1.  Gelen **Başlat** menüsünde gidin **Denetim Masası**, ardından **Yönetimsel Araçlar**, ardından **Bileşen Hizmetleri**.  
+    1. Gelen **Başlat** menüsünde gidin **Denetim Masası**, ardından **Yönetimsel Araçlar**, ardından **Bileşen Hizmetleri**.  
   
-    2.  Genişletin **Bileşen Hizmetleri**. Açık **bilgisayarlar** klasör. Seçin **Dağıtılmış İşlem Düzenleyicisi**.  
+    2. Genişletin **Bileşen Hizmetleri**. Açık **bilgisayarlar** klasör. Seçin **Dağıtılmış İşlem Düzenleyicisi**.  
   
-    3.  Sağ **DTC Düzenleyicisi** seçip **özellikleri**.  
+    3. Sağ **DTC Düzenleyicisi** seçip **özellikleri**.  
   
-    4.  Üzerinde **güvenlik** sekmesinde, onay **ağ DTC erişimi** ve **gelene izin ver**.  
+    4. Üzerinde **güvenlik** sekmesinde, onay **ağ DTC erişimi** ve **gelene izin ver**.  
   
-    5.  Tıklayın **Tamam**, ardından **Evet** MSDTC hizmetini yeniden başlatmak için.  
+    5. Tıklayın **Tamam**, ardından **Evet** MSDTC hizmetini yeniden başlatmak için.  
   
-    6.  İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
+    6. İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
   
 3. İstemci makinesinde MSDTC giden ağ işlemleri izin verecek şekilde yapılandırın:  
   
-    1.  Gelen **Başlat** menüsünde gidin `Control Panel`, ardından **Yönetimsel Araçlar**, ardından **Bileşen Hizmetleri**.  
+    1. Gelen **Başlat** menüsünde gidin `Control Panel`, ardından **Yönetimsel Araçlar**, ardından **Bileşen Hizmetleri**.  
   
-    2.  Sağ **Bilgisayarım** seçip **özellikleri**.  
+    2. Sağ **Bilgisayarım** seçip **özellikleri**.  
   
-    3.  Üzerinde **MSDTC** sekmesinde **Güvenlik Yapılandırması**.  
+    3. Üzerinde **MSDTC** sekmesinde **Güvenlik Yapılandırması**.  
   
-    4.  Denetleme **ağ DTC erişimi** ve **Gidene izin ver**.  
+    4. Denetleme **ağ DTC erişimi** ve **Gidene izin ver**.  
   
-    5.  Tıklayın **Tamam**, ardından **Evet** MSDTC hizmetini yeniden başlatmak için.  
+    5. Tıklayın **Tamam**, ardından **Evet** MSDTC hizmetini yeniden başlatmak için.  
   
-    6.  İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
+    6. İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
 ms.openlocfilehash: 4aa783d6179c72760a12d0259d587b5b38bb9140
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053666"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te dizi değişkeni başlatma
 Bir dizi değişmez değeri ekleyerek bir dizi değişkeni başlatmak bir `New` yan tümcesi ve dizinin başlangıç değerlerini belirterek. Türü belirtin veya dizi değişmez değerlerinin çıkarılan izin verebilirsiniz. Türün gösterilmesi hakkında daha fazla bilgi için bkz: "Doldurma bir dizeyi başlangıç değerleriyle" [diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>Dizi değişmez değeri kullanarak dizi değişkeni başlatmak için  
   
--   Ya da `New` yan tümcesi veya dizi değeri atadığınızda, öğe değerlerini ayraçlar içinde sağlayabilirsiniz (`{}`). Aşağıdaki örnek, bildirmek, oluşturmak ve türünde öğelere sahip bir dizi içeren bir değişkeni başlatmak için birçok yol gösterir. `Char`.  
+- Ya da `New` yan tümcesi veya dizi değeri atadığınızda, öğe değerlerini ayraçlar içinde sağlayabilirsiniz (`{}`). Aşağıdaki örnek, bildirmek, oluşturmak ve türünde öğelere sahip bir dizi içeren bir değişkeni başlatmak için birçok yol gösterir. `Char`.  
   
      [!code-vb[VbVbalrArrays#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#16)]  
   
@@ -29,27 +29,27 @@ Bir dizi değişmez değeri ekleyerek bir dizi değişkeni başlatmak bir `New` 
   
 ### <a name="to-initialize-a-multidimensional-array-variable-by-using-array-literals"></a>Dizi değişmez değerleri kullanarak bir çok boyutlu dizi değişkeni başlatmak için  
   
--   İç içe değerleri küme ayracı (`{}`) içinde yerleştirin. Tümü aynı türde ve uzunluktaki diziler tanım Çıkarsama iç içe geçmiş dizi değişmez değerleri emin olun. Aşağıdaki kod örneği, çeşitli çok boyutlu dizi başlatma örneklerini gösterir.  
+- İç içe değerleri küme ayracı (`{}`) içinde yerleştirin. Tümü aynı türde ve uzunluktaki diziler tanım Çıkarsama iç içe geçmiş dizi değişmez değerleri emin olun. Aşağıdaki kod örneği, çeşitli çok boyutlu dizi başlatma örneklerini gösterir.  
   
      [!code-vb[VbVbalrArrays#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#17)]  
   
--   Açıkça dizi sınırları belirtin ya da bunları bırakın ve derleyicinin dizi sınırlarını dizi değişmez değerlere göre sağlayabilirsiniz. Hem üst sınırları hem de değerleri sağlarsanız, her boyutta, 0 dizininden üst sınıra kadar her öğe için bir değer içermesi gerekir. Aşağıdaki örnek, bildirmek, oluşturmak ve türünde öğelere sahip iki boyutlu bir dizi içeren bir değişkeni başlatmak için birçok yol gösterir. `Short`  
+- Açıkça dizi sınırları belirtin ya da bunları bırakın ve derleyicinin dizi sınırlarını dizi değişmez değerlere göre sağlayabilirsiniz. Hem üst sınırları hem de değerleri sağlarsanız, her boyutta, 0 dizininden üst sınıra kadar her öğe için bir değer içermesi gerekir. Aşağıdaki örnek, bildirmek, oluşturmak ve türünde öğelere sahip iki boyutlu bir dizi içeren bir değişkeni başlatmak için birçok yol gösterir. `Short`  
   
      [!code-vb[VbVbalrArrays#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#18)]  
   
      Her deyim yürütüldükten sonra oluşturulan dize dizinlerine sahip altı tane başlatılmış öğeyi içerir `(0,0)`, `(0,1)`, `(0,2)`, `(1,0)`, `(1,1)`, ve `(1,2)`. Her dizi konumuna değeri içeren `10`.  
   
--   Aşağıdaki örnek, çok boyutlu bir dizi yinelenir. Visual Basic'te yazılmış bir Windows konsol uygulaması içinde içindeki kodu yapıştırın `Sub Main()` yöntemi. Son açıklamalar çıktıyı gösterir.  
+- Aşağıdaki örnek, çok boyutlu bir dizi yinelenir. Visual Basic'te yazılmış bir Windows konsol uygulaması içinde içindeki kodu yapıştırın `Sub Main()` yöntemi. Son açıklamalar çıktıyı gösterir.  
   
      [!code-vb[VbVbalrArrays#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#31)]  
   
 ### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a>Dizi değişmez değerleri kullanarak basit bir dizi değişkeni başlatmak için  
   
--   Nesne değerlerini küme ayraçları içinde (`{}`). Ayrıca düzensiz bir dizi farklı uzunluktaki dizileri belirten dizi değişmezlerini iç içe ancak iç içe geçmiş dizi değişmez değerlerini parantez içine alınmış emin olun (`()`). Parantezler iç içe geçmiş dizi değişmez değerlerinin değerlendirilmesini zorlar ve ortaya çıkan diziler düzensiz dizinin başlangıç değerleri kullanılır. Aşağıdaki kod örneği, iki düzensiz dizi başlatma örneklerini gösterir.  
+- Nesne değerlerini küme ayraçları içinde (`{}`). Ayrıca düzensiz bir dizi farklı uzunluktaki dizileri belirten dizi değişmezlerini iç içe ancak iç içe geçmiş dizi değişmez değerlerini parantez içine alınmış emin olun (`()`). Parantezler iç içe geçmiş dizi değişmez değerlerinin değerlendirilmesini zorlar ve ortaya çıkan diziler düzensiz dizinin başlangıç değerleri kullanılır. Aşağıdaki kod örneği, iki düzensiz dizi başlatma örneklerini gösterir.  
   
      [!code-vb[VbVbalrArrays#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#19)]  
   
--   Aşağıdaki örnek bir düzensiz dizi aracılığıyla yinelenir. Visual Basic'te yazılmış bir Windows konsol uygulaması içinde içindeki kodu yapıştırın `Sub Main()` yöntemi.  Koddaki son açıklamalar çıktıyı gösterir.  
+- Aşağıdaki örnek bir düzensiz dizi aracılığıyla yinelenir. Visual Basic'te yazılmış bir Windows konsol uygulaması içinde içindeki kodu yapıştırın `Sub Main()` yöntemi.  Koddaki son açıklamalar çıktıyı gösterir.  
   
      [!code-vb[VbVbalrArrays#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#32)]  
   

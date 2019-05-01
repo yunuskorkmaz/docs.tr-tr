@@ -9,11 +9,11 @@ ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 57290af1df8d370c928a97aba1622e41a6a33589
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026749"
 ---
 # <a name="xpathnavigator-in-transformations"></a>Dönüşümlerde XPathNavigator
 <xref:System.Xml.XPath.XPathNavigator> Sınıfı veri salt okunur rastgele erişim sağlar ve Genişletilebilir Stil sayfası dili için giriş olarak kullanmak için Dönüşümleri (XSLT) için tasarlanmıştır. Üzerinde uygulanan <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>, ve <xref:System.Xml.XmlDocument>. <xref:System.Xml.XPath.XPathNavigator> XML Path Language (XPath) öneri 5. bölümünde anlatıldığı gibi World Wide Web Consortium (W3C) veri modeline dayanır.  
@@ -57,7 +57,7 @@ ms.locfileid: "46003990"
 </xsl:stylesheet>  
 ```  
   
-## <a name="testxml"></a>Test.XML  
+## <a name="testxml"></a>test.xml  
   
 ```xml  
 <root>Some text</root>  

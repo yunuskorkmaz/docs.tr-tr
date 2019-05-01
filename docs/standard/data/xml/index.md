@@ -6,56 +6,56 @@ ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2e96515240cdbc1cb05c4d58aee6eb2500e0e313
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59171177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62027179"
 ---
 # <a name="xml-documents-and-data"></a>XML Belgeleri ve Verileri
 .NET Framework XML algılayan uygulamaları kolayca oluşturmanıza olanak tanıyan sınıf kapsamlı ve tümleşik kümesi sağlar. Aşağıdaki ad alanındaki sınıflar, ayrıştırma ve XML, bellek, veri doğrulama ve XSLT dönüşümü XML verilerini düzenleme yazma desteği.  
   
--   <xref:System.Xml>  
+- <xref:System.Xml>  
   
--   <xref:System.Xml.XPath>  
+- <xref:System.Xml.XPath>  
   
--   <xref:System.Xml.Xsl>  
+- <xref:System.Xml.Xsl>  
   
--   <xref:System.Xml.Schema>  
+- <xref:System.Xml.Schema>  
   
--   <xref:System.Xml.Linq>  
+- <xref:System.Xml.Linq>  
   
  Tam listesi için "System.Xml" için arama [.NET API browser](https://docs.microsoft.com/dotnet/api/?term=system.xml).  
   
  Bu ad alanındaki sınıflar, World Wide Web Consortium (W3C) önerileri destekler. Örneğin:  
   
--   <xref:System.Xml.XmlDocument?displayProperty=nameWithType> Sınıfının Implements [W3C belge nesne modeli (DOM) Düzey 1 çekirdek](https://www.w3.org/TR/REC-DOM-Level-1/) ve [DOM düzeyi 2 Çekirdek](https://www.w3.org/TR/DOM-Level-2-Core/) öneriler.  
+- <xref:System.Xml.XmlDocument?displayProperty=nameWithType> Sınıfının Implements [W3C belge nesne modeli (DOM) Düzey 1 çekirdek](https://www.w3.org/TR/REC-DOM-Level-1/) ve [DOM düzeyi 2 Çekirdek](https://www.w3.org/TR/DOM-Level-2-Core/) öneriler.  
   
--   <xref:System.Xml.XmlReader?displayProperty=nameWithType> Ve <xref:System.Xml.XmlWriter?displayProperty=nameWithType> destek sınıfları [W3C XML 1.0](https://www.w3.org/TR/2006/REC-xml-20060816/) ve [ad alanları XML](https://www.w3.org/TR/REC-xml-names/) öneriler.  
+- <xref:System.Xml.XmlReader?displayProperty=nameWithType> Ve <xref:System.Xml.XmlWriter?displayProperty=nameWithType> destek sınıfları [W3C XML 1.0](https://www.w3.org/TR/2006/REC-xml-20060816/) ve [ad alanları XML](https://www.w3.org/TR/REC-xml-names/) öneriler.  
   
--   Şemalarda <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> sınıf destek [W3C XML Şeması Kısım 1: Yapıları](https://www.w3.org/TR/xmlschema-1/) ve [XML şema bölümü 2: Veri türleri](https://www.w3.org/TR/xmlschema-2/) öneriler.  
+- Şemalarda <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> sınıf destek [W3C XML Şeması Kısım 1: Yapıları](https://www.w3.org/TR/xmlschema-1/) ve [XML şema bölümü 2: Veri türleri](https://www.w3.org/TR/xmlschema-2/) öneriler.  
   
--   Sınıflar <xref:System.Xml.Xsl?displayProperty=nameWithType> uygun ad alanı desteği XSLT dönüşümleri [W3C XSLT 1.0](https://www.w3.org/TR/xslt) öneri.  
+- Sınıflar <xref:System.Xml.Xsl?displayProperty=nameWithType> uygun ad alanı desteği XSLT dönüşümleri [W3C XSLT 1.0](https://www.w3.org/TR/xslt) öneri.  
   
  .NET Framework XML sınıflarda aşağıdaki avantajları sağlar:  
   
--   **Üretkenlik.** [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) ve [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) XML programla kolaylaştırır ve SQL'e benzeyen bir sorgu deneyimi sağlar.  
+- **Üretkenlik.** [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) ve [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) XML programla kolaylaştırır ve SQL'e benzeyen bir sorgu deneyimi sağlar.  
   
--   **Genişletilebilirlik.** .NET Framework'te XML sınıflarının soyut temel sınıflar ve sanal yöntemleri kullanılarak genişletilebilir. Örneğin, türetilmiş bir sınıf oluşturabilirsiniz <xref:System.Xml.XmlUrlResolver> yerel disk önbellek akışa depolayan sınıf.  
+- **Genişletilebilirlik.** .NET Framework'te XML sınıflarının soyut temel sınıflar ve sanal yöntemleri kullanılarak genişletilebilir. Örneğin, türetilmiş bir sınıf oluşturabilirsiniz <xref:System.Xml.XmlUrlResolver> yerel disk önbellek akışa depolayan sınıf.  
   
--   **Eklenebilir mimari.** .NET Framework bileşenleri, birbirleriyle kullanabilir ve bileşenler arasında verilerin gönderilebilen bir mimari sağlar. Örneğin, bir veri deposu gibi bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesne, ile dönüştürülebilir <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı ve çıktısını ardından olabilir ya da başka bir depoya akış yoluyla veya bir web hizmetinden bir akış olarak döndürdü.  
+- **Eklenebilir mimari.** .NET Framework bileşenleri, birbirleriyle kullanabilir ve bileşenler arasında verilerin gönderilebilen bir mimari sağlar. Örneğin, bir veri deposu gibi bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesne, ile dönüştürülebilir <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı ve çıktısını ardından olabilir ya da başka bir depoya akış yoluyla veya bir web hizmetinden bir akış olarak döndürdü.  
   
--   **Performans.** Daha iyi uygulama performansını için .NET Framework XML sınıflarda bazıları aşağıdaki özelliklere sahip bir akış tabanlı model destekler:  
+- **Performans.** Daha iyi uygulama performansını için .NET Framework XML sınıflarda bazıları aşağıdaki özelliklere sahip bir akış tabanlı model destekler:  
   
-    -   Yalnızca iletme, çekme modeli ayrıştırmak için en az önbelleğe alma (<xref:System.Xml.XmlReader>).  
+    - Yalnızca iletme, çekme modeli ayrıştırmak için en az önbelleğe alma (<xref:System.Xml.XmlReader>).  
   
-    -   Yalnızca iletme doğrulama (<xref:System.Xml.XmlReader>).  
+    - Yalnızca iletme doğrulama (<xref:System.Xml.XmlReader>).  
   
-    -   Tek bir sanal düğüm için düğüm oluşturma belge için rastgele erişim sağlarken en aza indirir, imleç stil Gezinti (<xref:System.Xml.XPath.XPathNavigator>).  
+    - Tek bir sanal düğüm için düğüm oluşturma belge için rastgele erişim sağlarken en aza indirir, imleç stil Gezinti (<xref:System.Xml.XPath.XPathNavigator>).  
   
      Daha iyi performans için XSLT işleme gerektiğinde kullanabileceğiniz <xref:System.Xml.XPath.XPathDocument> bir XPath sorguları ile verimli bir şekilde çalışmak üzere tasarlanmış için iyileştirilmiş, salt okunur depo sınıfını <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı.  
   
--   **ADO.NET ile tümleştirme.** XML sınıfları ve [ADO.NET](../../../../docs/framework/data/adonet/index.md) ilişkisel veriler ve XML bir araya getirmek için sıkı bir şekilde tümleştirilmiştir. <xref:System.Data.DataSet> Sınıfı, bir bellek içi önbelleği bir veritabanından alınan veri. <xref:System.Data.DataSet> Sınıfında okuma ve XML kullanarak yazma olanağı <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> sınıfları, iç ilişkisel şema yapısını XML şemaları (XSD) kalıcı hale getirmek için ve bir XML belgesi şema yapısını çıkarsamak için.  
+- **ADO.NET ile tümleştirme.** XML sınıfları ve [ADO.NET](../../../../docs/framework/data/adonet/index.md) ilişkisel veriler ve XML bir araya getirmek için sıkı bir şekilde tümleştirilmiştir. <xref:System.Data.DataSet> Sınıfı, bir bellek içi önbelleği bir veritabanından alınan veri. <xref:System.Data.DataSet> Sınıfında okuma ve XML kullanarak yazma olanağı <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> sınıfları, iç ilişkisel şema yapısını XML şemaları (XSD) kalıcı hale getirmek için ve bir XML belgesi şema yapısını çıkarsamak için.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [XML İşleme Seçenekleri](../../../../docs/standard/data/xml/xml-processing-options.md)  

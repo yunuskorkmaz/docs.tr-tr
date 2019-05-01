@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: a70aca33d0830f3b23ff985f17c469cb7c4ff35c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62093631"
 ---
 ### <a name="two-way-data-binding-to-a-property-with-a-non-public-setter-is-not-supported"></a>Bir özelliğe genel olmayan ayarlayıcı ile iki yönlü veri bağlama desteklenmiyor
 

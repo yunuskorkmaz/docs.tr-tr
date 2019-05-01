@@ -3,22 +3,22 @@ title: DataSets, DataTables ve DataViews
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
 ms.openlocfilehash: 9c57f75dd94f3fbda74c13a5d5773825051fe416
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034300"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSets, DataTables ve DataViews
 ADO.NET <xref:System.Data.DataSet> içerdiği veri kaynağını bağımsız olarak tutarlı bir ilişkisel programlama modeli sağlayan veri bellekte gösterimidir. A <xref:System.Data.DataSet> sipariş ve tablolar arasındaki ilişkileri yanı sıra, verileri sınırlamak içeren tablolar da dahil olmak üzere veri eksiksiz bir kümesini temsil eder.  
   
  İle çalışmaya ilişkin birkaç şekilde bir <xref:System.Data.DataSet>, hangi uygulanabilir bağımsız olarak veya birlikte. Şunları yapabilirsiniz:  
   
--   Program aracılığıyla oluşturma bir <xref:System.Data.DataTable>, <xref:System.Data.DataRelation>, ve <xref:System.Data.Constraint> içinde bir <xref:System.Data.DataSet> ve tabloları verilerle doldurun.  
+- Program aracılığıyla oluşturma bir <xref:System.Data.DataTable>, <xref:System.Data.DataRelation>, ve <xref:System.Data.Constraint> içinde bir <xref:System.Data.DataSet> ve tabloları verilerle doldurun.  
   
--   Doldurma <xref:System.Data.DataSet> var olan bir ilişkisel veri kaynağı kullanarak veri tabloları içeren bir `DataAdapter`.  
+- Doldurma <xref:System.Data.DataSet> var olan bir ilişkisel veri kaynağı kullanarak veri tabloları içeren bir `DataAdapter`.  
   
--   Yük ve kalıcı <xref:System.Data.DataSet> kullanarak XML içeriği. Daha fazla bilgi için [kullanarak bir veri kümesi XML'de](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
+- Yük ve kalıcı <xref:System.Data.DataSet> kullanarak XML içeriği. Daha fazla bilgi için [kullanarak bir veri kümesi XML'de](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
   
  Türü kesin belirlenmiş <xref:System.Data.DataSet> kullanarak bir XML Web Hizmeti ayrıca taşınabilen. Tasarımını <xref:System.Data.DataSet> XML Web Hizmetleri ile veri taşıma için ideal hale getirir. XML Web Hizmetleri genel bakış için bkz. [XML Web Hizmetleri genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100)). Kullanan bir örnek için bir <xref:System.Data.DataSet> bir XML Web hizmetinden bkz [bir XML Web hizmetinden DataSet kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/consuming-a-dataset-from-an-xml-web-service.md).  
   

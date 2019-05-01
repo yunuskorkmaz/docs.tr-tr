@@ -10,11 +10,11 @@ helpviewer_keywords:
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
 ms.openlocfilehash: 0177533f11b7dfa6c2561f1f519eacf8073bcd45
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59331084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047951"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Nasıl yapılır: X.509 Sertifikalarını WCF için Erişilebilir Hale Getirme
 X.509 sertifikası Windows Communication Foundation (WCF) için erişilebilir hale getirmek için uygulama kodu, sertifika deposu adını ve konumunu belirtmelisiniz. Bazı durumlarda, işlem kimliği X.509 sertifikası ile ilişkili özel anahtarı içeren dosyayı erişimi olmalıdır. Bir sertifika deposunda X.509 sertifikası ile ilişkili özel anahtarı almak için WCF, bunu yapmak için izni olmalıdır. Varsayılan olarak, bir sertifikanın özel anahtarı yalnızca sahibi ve System hesabıyla erişebilirsiniz.  
@@ -23,7 +23,7 @@ X.509 sertifikası Windows Communication Foundation (WCF) için erişilebilir ha
   
 1. X.509 sertifikasıyla ilişkili özel anahtarı içeren dosyayı için okuma erişimi hangi WCF altında çalıştığı hesabın verin.  
   
-    1.  WCF için X.509 sertifikası özel anahtarı için okuma erişimi gerekli olup olmadığını belirler.  
+    1. WCF için X.509 sertifikası özel anahtarı için okuma erişimi gerekli olup olmadığını belirler.  
   
          Aşağıdaki tabloda, özel anahtarı kullanarak bir X.509 sertifikası olduğunda kullanılabilir olmalıdır yoksa ayrıntıları.  
   
@@ -34,14 +34,14 @@ X.509 sertifikası Windows Communication Foundation (WCF) için erişilebilir ha
         |Giden SOAP ileti şifreleme.|Hayır|  
         |Gelen bir SOAP iletisi şifre çözme.|Evet|  
   
-    2.  Sertifikanın depolandığı adı ve sertifika depo konumunu belirleyin.  
+    2. Sertifikanın depolandığı adı ve sertifika depo konumunu belirleyin.  
   
          Sertifika deposuna sertifikanın depolandığı, uygulama kodu veya yapılandırmada belirtilir. Örneğin, aşağıdaki örnekte sertifika bulunan belirtir `CurrentUser` adlı sertifika deposuna `My`.  
   
          [!code-csharp[x509Accessible#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/x509accessible/cs/source.cs#1)]
          [!code-vb[x509Accessible#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/x509accessible/vb/source.vb#1)]  
   
-    3.  Kullanarak, sertifika özel anahtarını bilgisayarda nerede belirlemek [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) aracı.  
+    3. Kullanarak, sertifika özel anahtarını bilgisayarda nerede belirlemek [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) aracı.  
   
          [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) aracı, sertifika deposunun adını, sertifika depo konumunu ve sertifika benzersiz olarak tanımlayan bir şey gerektirir. Aracı sertifikanın konu adı veya parmak izi benzersiz bir tanımlayıcı olarak kabul eder. Bir sertifika parmak izini belirleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir sertifikanın parmak izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
@@ -51,7 +51,7 @@ X.509 sertifikası Windows Communication Foundation (WCF) için erişilebilir ha
         findprivatekey.exe My CurrentUser -t "46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d" -a  
         ```  
   
-    4.  WCF altında çalıştığı hesabı belirleyin.  
+    4. WCF altında çalıştığı hesabı belirleyin.  
   
          Aşağıdaki tabloda, WCF, belirli bir senaryo için çalıştığı hesabı ayrıntıları.  
   
@@ -62,7 +62,7 @@ X.509 sertifikası Windows Communication Foundation (WCF) için erişilebilir ha
         |IIS 6. 0'barındırılan hizmeti ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) veya IIS 7.0 ([!INCLUDE[wv](../../../../includes/wv-md.md)]).|AĞ HİZMETİ|  
         |Hizmet barındırılan IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]).|Denetlenen `<processModel>` Machine.config dosyasında öğe. ASP.NET varsayılan hesaptır.|  
   
-    5.  WCF altında icacls.exe gibi bir araç kullanarak çalıştıran hesaba özel anahtarı içeren dosyayı okuma erişimi verin.  
+    5. WCF altında icacls.exe gibi bir araç kullanarak çalıştıran hesaba özel anahtarı içeren dosyayı okuma erişimi verin.  
   
          Aşağıdaki kod örneği, ağ hizmeti hesabı okuma izni belirtilen dosya için isteğe bağlı erişim denetimi listesini (DACL) düzenler (: R) dosyasına erişim.  
   
@@ -73,5 +73,5 @@ X.509 sertifikası Windows Communication Foundation (WCF) için erişilebilir ha
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)
-- [Nasıl yapılır: Bir Sertifikanın Parmak İzini Alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Nasıl yapılır: Bir sertifikanın parmak izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
 - [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

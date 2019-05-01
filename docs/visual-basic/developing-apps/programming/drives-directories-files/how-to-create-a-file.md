@@ -6,11 +6,11 @@ helpviewer_keywords:
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
 ms.openlocfilehash: a05e73a2096c82c9299e4483bbaf69e560fc2e45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038070"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te dosya oluşturma
 Bu örnek, belirtilen yolu kullanarak boş bir metin dosyası oluşturur <xref:System.IO.File.Create%2A> yönteminde <xref:System.IO.File> sınıfı.  
@@ -26,17 +26,17 @@ Bu örnek, belirtilen yolu kullanarak boş bir metin dosyası oluşturur <xref:S
   
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
--   Yol adı yanlış biçimlendirilmiş. Örneğin, geçersiz karakterler içeriyor veya yalnızca boşluk (<xref:System.ArgumentException>).  
+- Yol adı yanlış biçimlendirilmiş. Örneğin, geçersiz karakterler içeriyor veya yalnızca boşluk (<xref:System.ArgumentException>).  
   
--   Salt okunur yoludur (<xref:System.IO.IOException>).  
+- Salt okunur yoludur (<xref:System.IO.IOException>).  
   
--   Yol adı `Nothing` (<xref:System.ArgumentNullException>).  
+- Yol adı `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Yol adı çok uzun (<xref:System.IO.PathTooLongException>).  
+- Yol adı çok uzun (<xref:System.IO.PathTooLongException>).  
   
--   Yol geçersiz (<xref:System.IO.DirectoryNotFoundException>).  
+- Yol geçersiz (<xref:System.IO.DirectoryNotFoundException>).  
   
--   Yalnızca bir iki nokta üst üste yoludur ":" (<xref:System.NotSupportedException>).  
+- Yalnızca bir iki nokta üst üste yoludur ":" (<xref:System.NotSupportedException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  A <xref:System.Security.SecurityException> kısmi güven düzeyine sahip ortamlarda oluşturulabilir.  

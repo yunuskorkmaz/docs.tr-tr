@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
 ms.openlocfilehash: cb2a172ac4e6a0ce4852f4c7cf7044583d9ab6c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034440"
 ---
 # <a name="copying-dataset-contents"></a>DataSet İçeriklerini Kopyalama
 Bir kopyasını oluşturabilirsiniz bir <xref:System.Data.DataSet> böylece özgün veriler etkilenmeden verileri ile çalışma veya iş verilerin bir alt kümesi ile bir **veri kümesi**. Kopyalama işlemi sırasında bir **veri kümesi**, şunları yapabilirsiniz:  
   
--   Tam bir kopyasını oluşturma **veri kümesi**şema, veri, satır durum bilgilerini ve satır sürümleri dahil olmak üzere.  
+- Tam bir kopyasını oluşturma **veri kümesi**şema, veri, satır durum bilgilerini ve satır sürümleri dahil olmak üzere.  
   
--   Oluşturma bir **veri kümesi** varolan şema içeren **veri kümesi**, ancak yalnızca değiştirilen satırları. Değiştirilmiş tüm satırları döndürür veya belirli bir belirtin **DataRowState**. Satır durumları hakkında daha fazla bilgi için bkz: [satır durumları ve satır sürümleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+- Oluşturma bir **veri kümesi** varolan şema içeren **veri kümesi**, ancak yalnızca değiştirilen satırları. Değiştirilmiş tüm satırları döndürür veya belirli bir belirtin **DataRowState**. Satır durumları hakkında daha fazla bilgi için bkz: [satır durumları ve satır sürümleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
--   Şema veya ilişkisel yapısını kopyası **veri kümesi** yalnızca, tüm satırları kopyalama olmadan. Satırları, varolan içine aktarılabilir <xref:System.Data.DataTable> kullanarak <xref:System.Data.DataTable.ImportRow%2A>.  
+- Şema veya ilişkisel yapısını kopyası **veri kümesi** yalnızca, tüm satırları kopyalama olmadan. Satırları, varolan içine aktarılabilir <xref:System.Data.DataTable> kullanarak <xref:System.Data.DataTable.ImportRow%2A>.  
   
  Tam bir kopyasını oluşturmak için **veri kümesi** hem şema hem de veri içeren, kullanın <xref:System.Data.DataSet.Copy%2A> yöntemi **veri kümesi**. Aşağıdaki kod örneği, tam bir kopyasını oluşturma işlemi gösterilmektedir **veri kümesi**.  
   

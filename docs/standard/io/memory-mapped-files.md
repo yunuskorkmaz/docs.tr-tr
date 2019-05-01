@@ -12,22 +12,22 @@ ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f7bda02e1862740e6a6328835367a6a5e9929033
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026087"
 ---
 # <a name="memory-mapped-files"></a>Bellek Eşlemeli Dosyalar
 Bir bellek işlemeli dosya sanal bellekte bir dosyanın içeriğini içerir. Bu dosya ve bellek alanı eşlemesini okuma ve yazma doğrudan bellek tarafından dosyasını değiştirmek birden çok işlem dahil olmak üzere bir uygulama sağlar. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], yönetilen kod bellek eşlemeli dosyalar açıklandığı gibi aynı şekilde access bellek eşlemeli dosyalar, yerel Windows işlevlerine erişmek için kullanabileceğiniz [Managing Memory-Mapped dosyaları](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)).  
   
  Bellek eşlemeli dosyalar iki tür vardır:  
   
--   Kalıcı bellek eşlemeli dosyalar  
+- Kalıcı bellek eşlemeli dosyalar  
   
      Disk üzerindeki bir kaynak dosyası ile ilişkili olan bellek eşlemeli dosyalar kalıcı dosyalarıdır. Son işlem dosyasıyla çalışma tamamlandığında, veri kaynak dosyanın disk üzerinde kaydedilir. Bu bellek eşlemeli dosyalar, son derece büyük bir kaynak dosyalarıyla çalışmak için uygundur.  
   
--   Kalıcı olmayan bellek eşlemeli dosyalar  
+- Kalıcı olmayan bellek eşlemeli dosyalar  
   
      Kalıcı olmayan bir diskte bir dosyayla ilişkili olmayan bellek eşlemeli dosyalar dosyalarıdır. Son işlem dosyasıyla çalışma tamamlandığında, veriler kaybolur ve dosyayı çöp toplamanın geri kazanılır. Bu dosyalar, işlemler arası iletişim (IPC) için paylaşılan belleği oluşturmak için uygundur.  
   
@@ -64,11 +64,11 @@ Bir bellek işlemeli dosya sanal bellekte bir dosyanın içeriğini içerir. Bu 
 ### <a name="security"></a>Güvenlik  
  Alan aşağıdaki yöntemleri kullanarak bir bellek işlemeli dosya oluşturduğunuzda, erişim hakları uygulayabilirsiniz bir <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> parametre olarak numaralandırması:  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
   
  Kullanarak mevcut bir bellek işlemeli dosya açmak için erişim haklarını belirtebilirsiniz <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A> ele yöntemleri bir <xref:System.IO.MemoryMappedFiles.MemoryMappedFileRights> bir parametre olarak.  
   

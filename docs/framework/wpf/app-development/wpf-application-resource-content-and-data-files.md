@@ -18,20 +18,20 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
 ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032259"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] uygulamalar genellikle gibi yürütülebilir olmayan veriler içeren dosyaları bağımlıdır [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], görüntü, video ve ses. Windows Presentation Foundation (WPF), yapılandırma, belirlemekten ve bu tür bir uygulama verileri dosyaları olarak adlandırılan veri dosyalarını kullanarak özel destek sunar. Bu destek, uygulama verilerini dosya türleri dahil olmak üzere, belirli bir dizi döner:  
   
--   **Kaynak dosyaları**: Bir yürütülebilir veya kitaplık derlenmiş veri dosyalarını [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] derleme.  
+- **Kaynak dosyaları**: Bir yürütülebilir veya kitaplık derlenmiş veri dosyalarını [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] derleme.  
   
--   **İçerik dosyaları**: Yürütülebilir bir dosya ile açık bir ilişkisi olmayan tek başına veri dosyalarını [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] derleme.  
+- **İçerik dosyaları**: Yürütülebilir bir dosya ile açık bir ilişkisi olmayan tek başına veri dosyalarını [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] derleme.  
   
--   **Kaynak dosyaları sitesi**: Yürütülebilir bir dosya ile ilişkisi olmayan tek başına veri dosyalarını [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] derleme.  
+- **Kaynak dosyaları sitesi**: Yürütülebilir bir dosya ile ilişkisi olmayan tek başına veri dosyalarını [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] derleme.  
   
  Kaynak dosyalar ve içerik dosyalarını, derleme zamanında bilinen dosyaları bu üç tür arasında olmak için önemli bir ayrım olduğundan; bir derleme, bunların açık bilgisine sahiptir. Kaynak dosyaları sitesi için ancak, bir derleme bunları olanağıyla, olabilir veya bir paketi aracılığıyla örtük bilgiye [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] başvuru; İkincisi, durum başvurulan site kaynak dosyasının gerçekten var olduğunu garanti yoktur.  
   
@@ -45,11 +45,11 @@ ms.locfileid: "59211934"
   
  Kaynak kullanmanız gerektiği zaman dosyaları:  
   
--   Bütünleştirilmiş kod içine derlenmiş olan sonra kaynak dosyanın içeriği güncelleştirmeniz gerekmez.  
+- Bütünleştirilmiş kod içine derlenmiş olan sonra kaynak dosyanın içeriği güncelleştirmeniz gerekmez.  
   
--   Uygulama dağıtım karmaşıklığı bağımlılıklar sayısını azaltarak basitleştirmek isteyebilirsiniz.  
+- Uygulama dağıtım karmaşıklığı bağımlılıklar sayısını azaltarak basitleştirmek isteyebilirsiniz.  
   
--   Uygulama verileri dosyanızı yerelleştirilebilir olması gerekir (bkz [WPF genelleştirmesi ve yerelleştirmesine genel bakış](../advanced/wpf-globalization-and-localization-overview.md)).  
+- Uygulama verileri dosyanızı yerelleştirilebilir olması gerekir (bkz [WPF genelleştirmesi ve yerelleştirmesine genel bakış](../advanced/wpf-globalization-and-localization-overview.md)).  
   
 > [!NOTE]
 >  Bu bölümde açıklanan kaynak dosyaları kaynak dosyaları açıklanan farklı [XAML kaynakları](../advanced/xaml-resources.md) ve açıklanan gömülü veya bağlantılı kaynakların farklı [uygulama kaynakları yönetme (.NET) ](/visualstudio/ide/managing-application-resources-dotnet).  
@@ -175,13 +175,13 @@ ms.locfileid: "59211934"
 ## <a name="site-of-origin-files"></a>Kaynak dosyaları sitesi  
  Kaynak dosyaları tarafından tanımlanan yanı sıra, dağıtılmış derlemeler ile açık bir ilişkisi olan <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>. Ancak, bir derleme ve ne zaman dahil olmak üzere bir uygulama veri dosyası arasında örtük veya var olmayan bir ilişki ne zaman ya da kurmak isteyebilirsiniz zamanlar vardır:  
   
--   Bir dosya, derleme zamanında yok.  
+- Bir dosya, derleme zamanında yok.  
   
--   Derlemenizin çalışma zamanına kadar gerektirecek hangi dosyaların bilmiyorum.  
+- Derlemenizin çalışma zamanına kadar gerektirecek hangi dosyaların bilmiyorum.  
   
--   Güncelleştirme dosyaları ile ilişkili derleme yeniden derlemeye gerek kalmadan yönetebilmek istiyorsunuz.  
+- Güncelleştirme dosyaları ile ilişkili derleme yeniden derlemeye gerek kalmadan yönetebilmek istiyorsunuz.  
   
--   Ses ve video gibi büyük veri dosyalarını uygulamanızın kullandığı ve kullanıcılar için seçerseniz, bunları indirmek için yalnızca istersiniz.  
+- Ses ve video gibi büyük veri dosyalarını uygulamanızın kullandığı ve kullanıcılar için seçerseniz, bunları indirmek için yalnızca istersiniz.  
   
  Bu tür kullanarak geleneksel dosyaları yüklemek mümkündür [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] düzenleri, file:/// ve http:// düzeni gibi.  
   

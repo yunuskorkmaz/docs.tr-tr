@@ -7,11 +7,11 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
 ms.openlocfilehash: 4212f58c39f63be6ba20c3b79e5d9c98d0615c5e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014212"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>Paketleme ve özel My uzantılarını (Visual Basic) dağıtma
 
@@ -33,7 +33,7 @@ Bir dağıtım paketi için özel bir oluşturmanın ilk adımı `My` bir uzant�
 
 ## <a name="export-a-my-namespace-extension-as-an-item-template"></a>Dışarı aktarma bir öğe şablonu olarak ad alanı uzantısı
 
-İçeren bir kod dosyası oluşturduktan sonra `My` ad alanı uzantısı için kod dosyasını Visual Studio öğesi şablon olarak dışarı aktarabilirsiniz. Bir dosya Visual Studio öğesi şablon olarak dışarı aktarma yönergeleri için bkz [nasıl yapılır: öğe şablonları oluşturma](/visualstudio/ide/how-to-create-item-templates).
+İçeren bir kod dosyası oluşturduktan sonra `My` ad alanı uzantısı için kod dosyasını Visual Studio öğesi şablon olarak dışarı aktarabilirsiniz. Bir dosya Visual Studio öğesi şablon olarak dışarı aktarma yönergeleri için bkz [nasıl yapılır: Öğe şablonları oluşturma](/visualstudio/ide/how-to-create-item-templates).
 
 > [!NOTE]
 > Varsa, `My` ad alanı uzantısı belirli bir derleme üzerinde bir bağımlılık içeriyor, otomatik olarak yüklemek için öğe şablonunu özelleştirebilirsiniz, `My` derlemeye bir başvuru eklendiğinde ad alanı uzantısı. Sonuç olarak, kod dosyasını Visual Studio öğesi şablon olarak dışarı aktardığınızda, bu bütünleştirilmiş kod başvurusu hariç tutmak isteyeceksiniz.

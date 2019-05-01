@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, creating a new form
 ms.assetid: c725559c-803e-4725-80fa-96aba93de29a
 ms.openlocfilehash: 409dd945ebd26d212f62745ce6751f7507641bb2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009064"
 ---
 # <a name="creating-a-new-windows-form"></a>Yeni bir Windows Formu Oluşturma
 Bu konu, ilk Windows Forms uygulamasının nasıl oluşturulacağını açıklayan konulara bağlantılar içerir. Ayrıca, bu bölümdeki konularda, bazı temel sözlük ve bir Windows Forms uygulaması oluşturma işlemini başlattığınızda anlamanız gereken yönergeler sunar. Windows Forms uygulamaları hakkında daha fazla bilgi için bunları, olayları ve olaylarını işleme ve kullanıcı girişini işlemek nasıl kullanabileceğiniz kontrolleri ilgili konu listesine bakın.  

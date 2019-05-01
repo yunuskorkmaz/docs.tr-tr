@@ -15,11 +15,11 @@ helpviewer_keywords:
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
 ms.openlocfilehash: 568927eb4759c214311ad34a5b45e28094dd80be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013536"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic'de İşleç Önceliği
 Çeşitli işlemler bir ifadede, her parça değerlendirilir ve adlı belirlenmiş bir sırayla çözümlenen *İşleç önceliği*.  
@@ -27,13 +27,13 @@ ms.locfileid: "58830038"
 ## <a name="precedence-rules"></a>Öncelik kuralları  
  İfadeleri işleçler birden fazla kategorisinden içeriyorsa, bunlar aşağıdaki kurallara göre değerlendirilir:  
   
--   Aritmetik ve birleştirme işleçleri aşağıdaki bölümde anlatılan öncelik sırasını, ve tüm mantıksal, karşılaştırma büyük önceliğe ve bit düzeyinde işleçler sahiptir.  
+- Aritmetik ve birleştirme işleçleri aşağıdaki bölümde anlatılan öncelik sırasını, ve tüm mantıksal, karşılaştırma büyük önceliğe ve bit düzeyinde işleçler sahiptir.  
   
--   Tüm Karşılaştırma işleçleri eşit önceliğe ve tüm mantıksal ve bit düzeyinde işleçler daha yüksek bir önceliğe ancak aritmetik ve birleştirme işleçleri daha düşük önceliğe sahiptir.  
+- Tüm Karşılaştırma işleçleri eşit önceliğe ve tüm mantıksal ve bit düzeyinde işleçler daha yüksek bir önceliğe ancak aritmetik ve birleştirme işleçleri daha düşük önceliğe sahiptir.  
   
--   Aşağıdaki bölümde anlatılan öncelik sırası mantıksal ve bit düzeyinde işleçler sahiptir ve tüm aritmetik, birleştirme ve Karşılaştırma işleçleri daha düşük önceliğe sahiptir.  
+- Aşağıdaki bölümde anlatılan öncelik sırası mantıksal ve bit düzeyinde işleçler sahiptir ve tüm aritmetik, birleştirme ve Karşılaştırma işleçleri daha düşük önceliğe sahiptir.  
   
--   Eşit önceliğe sahip işleçler soldan sağa doğru değerlendirilir ifadede göründükleri sırayla.  
+- Eşit önceliğe sahip işleçler soldan sağa doğru değerlendirilir ifadede göründükleri sırayla.  
   
 ## <a name="precedence-order"></a>Öncelik sırası  
  İşleçler, öncelik aşağıdaki sırada değerlendirilir:  

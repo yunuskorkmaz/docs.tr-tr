@@ -11,20 +11,20 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
 ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052267"
 ---
 # <a name="dialog-boxes-overview"></a>İletişim Kutularına Genel Bakış
 Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışır ve aracılığıyla bu verileri işlemek için işlevselliği kullanıma sunma ana verileri görüntüler ana pencere sahip [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mekanizmaları menü çubukları, araç çubuklarını ve durum çubukları ister. Önemsiz olmayan bir uygulama, ayrıca aşağıdakileri yapmak için ek windows görüntülenebilir:  
   
--   Belirli bilgiler, kullanıcılara görüntülenir.  
+- Belirli bilgiler, kullanıcılara görüntülenir.  
   
--   Kullanıcılardan bilgi toplayın.  
+- Kullanıcılardan bilgi toplayın.  
   
--   Hem görüntülemek ve bilgi toplayın.  
+- Hem görüntülemek ve bilgi toplayın.  
   
  Windows bu tür olarak da bilinir *iletişim kutuları*, ve iki tür vardır: kalıcı ve kalıcı olmayan.  
   
@@ -122,27 +122,27 @@ Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışı
 #### <a name="configuring-a-modal-dialog-box"></a>Kalıcı bir iletişim kutusu yapılandırma  
  Kullanıcı arabirimi için genel iletişim kutusunda, aşağıdakileri içerir:  
   
--   İstenen veri toplamak için gereken çeşitli denetimler.  
+- İstenen veri toplamak için gereken çeşitli denetimler.  
   
--   Gösteren bir **Tamam** kullanıcılar işlevi için dönüş iletişim kutusunu kapatın ve işleme devam düğmesi.  
+- Gösteren bir **Tamam** kullanıcılar işlevi için dönüş iletişim kutusunu kapatın ve işleme devam düğmesi.  
   
--   Gösteren bir **iptal** düğme iletişim kutusunu kapatın ve daha fazla işleme gelen işlevi durdurmak için kullanıcılar'ı tıklatın.  
+- Gösteren bir **iptal** düğme iletişim kutusunu kapatın ve daha fazla işleme gelen işlevi durdurmak için kullanıcılar'ı tıklatın.  
   
--   Gösteren bir **Kapat** başlık çubuğunda düğme.  
+- Gösteren bir **Kapat** başlık çubuğunda düğme.  
   
--   Bir simge gösteriliyor.  
+- Bir simge gösteriliyor.  
   
--   Gösteren **simge durumuna küçült**, **Ekranı Kapla**, ve **geri** düğmeleri.  
+- Gösteren **simge durumuna küçült**, **Ekranı Kapla**, ve **geri** düğmeleri.  
   
--   Gösteren bir **sistem** menüsünde en aza indirmek, en üst düzeye çıkarmak, geri yükleme ve iletişim kutusunu kapatın.  
+- Gösteren bir **sistem** menüsünde en aza indirmek, en üst düzeye çıkarmak, geri yükleme ve iletişim kutusunu kapatın.  
   
--   Yukarıda ve iletişim kutusu açılır pencerenin ortasına açılıyor.  
+- Yukarıda ve iletişim kutusu açılır pencerenin ortasına açılıyor.  
   
--   İletişim kutuları, mümkün olduğunda iletişim kutusunu önlemek çok küçük ve kullanışlı varsayılan boyutunda kullanıcı sağlamak için hem varsayılan hem de en az ayarlamanız gerekir, böylece yeniden boyutlandırılabilir boyutları sırasıyla olması gerekir.  
+- İletişim kutuları, mümkün olduğunda iletişim kutusunu önlemek çok küçük ve kullanışlı varsayılan boyutunda kullanıcı sağlamak için hem varsayılan hem de en az ayarlamanız gerekir, böylece yeniden boyutlandırılabilir boyutları sırasıyla olması gerekir.  
   
--   ESC tuşuna basarak neden olan bir klavye kısayolu olarak yapılandırılmalıdır **iptal** düğmesine basıldığında. Bu ayarı gerçekleştirilir <xref:System.Windows.Controls.Button.IsCancel%2A> özelliği **iptal** düğmesi `true`.  
+- ESC tuşuna basarak neden olan bir klavye kısayolu olarak yapılandırılmalıdır **iptal** düğmesine basıldığında. Bu ayarı gerçekleştirilir <xref:System.Windows.Controls.Button.IsCancel%2A> özelliği **iptal** düğmesi `true`.  
   
--   ENTER'ı (ya da RETURN) tuşuna basarak neden olan bir klavye kısayolu olarak yapılandırılmalıdır **Tamam** düğmesine basıldığında. Bu ayarı gerçekleştirilir <xref:System.Windows.Controls.Button.IsDefault%2A> özelliği **Tamam** düğmesi `true`.  
+- ENTER'ı (ya da RETURN) tuşuna basarak neden olan bir klavye kısayolu olarak yapılandırılmalıdır **Tamam** düğmesine basıldığında. Bu ayarı gerçekleştirilir <xref:System.Windows.Controls.Button.IsDefault%2A> özelliği **Tamam** düğmesi `true`.  
   
  Aşağıdaki kod, bu yapılandırma gösterilmektedir.  
   
@@ -183,13 +183,13 @@ Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışı
 #### <a name="validating-user-provided-data"></a>Kullanıcı tarafından sağlanan verileri doğrulama  
  Bir iletişim kutusu açılır ve kullanıcının gerekli verileri sağlar, bir iletişim kutusu aşağıdaki nedenlerle sağlanan veriler geçersiz olduğundan emin olmakta sorumludur:  
   
--   Güvenlik açısından bakıldığında, tüm giriş doğrulanması gerekir.  
+- Güvenlik açısından bakıldığında, tüm giriş doğrulanması gerekir.  
   
--   Etki alanına özgü açısından bakıldığında, veri doğrulama, hatalı verilerin olası özel durumlarını oluşturabilir kod tarafından işlenen engeller.  
+- Etki alanına özgü açısından bakıldığında, veri doğrulama, hatalı verilerin olası özel durumlarını oluşturabilir kod tarafından işlenen engeller.  
   
--   Bir kullanıcı deneyimi açısından bakıldığında, bir iletişim kutusu hangi verileri girdikleri geçersiz göstererek kullanıcılara yardımcı olabilirsiniz.  
+- Bir kullanıcı deneyimi açısından bakıldığında, bir iletişim kutusu hangi verileri girdikleri geçersiz göstererek kullanıcılara yardımcı olabilirsiniz.  
   
--   Özellikle uygulama Web Hizmetleri veya sunucu tabanlı veritabanları oluşturulduğunda performans açısından bakıldığında, çok katmanlı bir uygulama içinde veri doğrulama istemci ve uygulama katmanları arasındaki gidiş dönüş sayısını azaltabilir.  
+- Özellikle uygulama Web Hizmetleri veya sunucu tabanlı veritabanları oluşturulduğunda performans açısından bakıldığında, çok katmanlı bir uygulama içinde veri doğrulama istemci ve uygulama katmanları arasındaki gidiş dönüş sayısını azaltabilir.  
   
  İlişkili bir denetiminde doğrulamak için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], size bir doğrulama kuralını tanımlamak ve bağlama ile ilişkilendirmeniz gerekir. Bir doğrulama kuralı öğesinden türetilen özel bir sınıftır <xref:System.Windows.Controls.ValidationRule>. Aşağıdaki örnek, bir doğrulama kuralı gösterir `MarginValidationRule`, ilişkili bir değer hangi denetimleri bir <xref:System.Double> ve belirlenen aralık dahilinde.  
   
@@ -329,11 +329,11 @@ Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışı
 #### <a name="closing-a-modeless-dialog-box"></a>Kalıcı olmayan iletişim kutusunu kapatma  
  Çünkü <xref:System.Windows.Window.DialogResult%2A> , modelsiz bir iletişim sistemiyle kapatılması, ayarlanmış olması gerekmez aşağıdakiler dahil olmak üzere mekanizmalar:  
   
--   Tıklayarak **Kapat** başlık çubuğunda düğme.  
+- Tıklayarak **Kapat** başlık çubuğunda düğme.  
   
--   ALT + F4 tuşuna basın.  
+- ALT + F4 tuşuna basın.  
   
--   Seçme **Kapat** gelen **sistem** menüsü.  
+- Seçme **Kapat** gelen **sistem** menüsü.  
   
  Alternatif olarak, kodunuzu çağırabilirsiniz <xref:System.Windows.Window.Close%2A> olduğunda **Kapat** düğmesine tıklandığında.  
   

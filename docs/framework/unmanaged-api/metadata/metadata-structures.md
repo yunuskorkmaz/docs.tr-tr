@@ -9,27 +9,27 @@ ms.assetid: 3eeaec36-5e1a-4a62-9de3-ea3942f67d04
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2095b6e490612cff5af193b1c1dfcbb6757fc23e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049836"
 ---
 # <a name="metadata-structures"></a>Meta Veri Yapıları
-Bu bölümde API meta veri kullanan yönetilmeyen yapılar açıklanmaktadır.  
+Bu bölümde, meta veri API'si kullanan yönetilmeyen yapıları açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  ASSEMBLYMETADATA  
- Derleme meta verilerini daha sonra kullanmak için depolar.  
+ Daha sonra kullanmak için derleme meta verileri depolar.  
   
  [COR_FIELD_OFFSET Yapısı](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)  
- Belirtilen alanın bir sınıf içinde uzaklık depolar.  
+ Belirtilen alanın bir sınıf içinde bir uzaklık depolar.  
   
  [COR_NATIVE_LINK Yapısı](../../../../docs/framework/unmanaged-api/metadata/cor-native-link-structure.md)  
- Yerel kod bağlamak için kullanılan bilgileri içerir.  
+ Yerel kod bağlantı için kullanılan bilgileri içerir.  
   
  [CVStruct Yapısı](../../../../docs/framework/unmanaged-api/metadata/cvstruct-structure.md)  
- Bir modül veya bileşik görüntü yüklenirken kullanılan bilgileri içerir.  
+ Bir modül veya bileşik görüntü yüklerken kullanılan bilgileri içerir.  
   
  [OSINFO Yapısı](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)  
  İşletim sistemi hakkında bilgiler içerir.  

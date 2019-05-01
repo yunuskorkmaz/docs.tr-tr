@@ -3,11 +3,11 @@ title: Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Pro
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
 ms.openlocfilehash: 2b9d84089cdd987f2e2b1e3d23354505520a80f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052111"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 Windows Communication Foundation (WCF) örnekleri çoğu Internet Information Services (IIS) barındırılan ve genel sanal dizinden çalıştırın. Bu tek seferlik Kurulum yordamı diskte bir klasörü oluşturur; Ayrıca IIS adlı bir sanal dizin ekler **ServiceModelSamples**.
@@ -48,9 +48,9 @@ Windows Communication Foundation (WCF) örnekleri çoğu Internet Information Se
   
 9. Çalıştırma **Setupvroot.bat** toplu iş dosyası. Aşağıdaki adımları gerçekleştirilir:  
   
-    -   Bir sanal dizin ServiceModelSamples adlı IIS içinde oluşturulur.  
+    - Bir sanal dizin ServiceModelSamples adlı IIS içinde oluşturulur.  
   
-    -   Yeni disk dizinler, adlandırılmış %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples ve % SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin oluşturulur.  
+    - Yeni disk dizinler, adlandırılmış %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples ve % SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin oluşturulur.  
   
      Bu dizinler el ile ayarlamak isterseniz bkz [sanal dizin ayarlama yönergeleri](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md). Bu adımda yapılan tüm değişiklikleri geri almak, örneklerini kullanma işlemini tamamladıktan sonra cleanupvroot.bat çalıştırın.  
   
@@ -66,11 +66,11 @@ Windows Communication Foundation (WCF) örnekleri çoğu Internet Information Se
 
 12. Setupcerttool.bat dosyasını çalıştırın. Bu dosya bulunan \<InstallPath > \WF_WCF_Samples\WCF\Setup\ klasör.  Bu betik aşağıdaki görevleri gerçekleştireceksiniz:
 
-    -   Derleme FindPrivateKey aracı.
+    - Derleme FindPrivateKey aracı.
 
-    -   % ProgramFiles%\ServiceModelSampleTools adlı bir dizin oluşturun.
+    - % ProgramFiles%\ServiceModelSampleTools adlı bir dizin oluşturun.
 
-    -   Yeni FindPrivateKey aracı bu dizine kopyalayın.
+    - Yeni FindPrivateKey aracı bu dizine kopyalayın.
 
      Bu araç, sertifikalar kullanmak ve IIS'de barındırılan örnekleri gereklidir.
 

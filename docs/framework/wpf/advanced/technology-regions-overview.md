@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: 911ba1474677f26a773ff63e958ba0ceedbefd0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: 40ec8d033852bba5cb5ccb0739309cfe988a3ce5
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100983"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808394"
 ---
 # <a name="technology-regions-overview"></a>Teknoloji Bölgelerine Genel Bakış
 WPF, Win32 veya DirectX gibi bir uygulamada birden fazla sunu teknolojileri kullanılıyorsa bunların üst düzey bir genel pencere oluşturma alanları paylaşmanız gerekir. Bu konu, sunu ve WPF birlikte çalışabilirlik uygulamanız için giriş etkileyebilir sorunları açıklar.  
@@ -25,23 +25,23 @@ WPF, Win32 veya DirectX gibi bir uygulamada birden fazla sunu teknolojileri kull
 ### <a name="region-examples"></a>Bölge örnekleri  
  Karıştırır bir uygulama aşağıdaki çizimde [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Her bir teknolojiyi piksel kendi ayrı, örtüşmeyen kümesi kullanır ve bölge sorun yok.  
   
- ![Hava sahası sorunları sahip olmayan bir pencere](./media/migrationinteroparchitectarticle01.png "MigrationInteropArchitectArticle01")  
+ ![Win32, DirectX ve WPF karıştırır bir uygulama örneği.](./media/technology-regions-overview/win32-directx-windows-presentation-foundation-application.png)  
   
  Bu uygulama bu üç bölgelerden birini oluşturma girişiminde bir animasyon oluşturmak için fare işaretçisi konumunu kullandığını varsayalım. Hangi teknoloji animasyon için sorumlu olduğu ne olursa olsun, bu teknoloji diğer iki bölgeyi ihlal ediyor. Aşağıdaki çizimde, bir WPF daire bir Win32 bölge işleme girişimi gösterir.  
   
- ![Birlikte çalışabilirlik diyagramı](./media/migrationinteroparchitectarticle02.png "MigrationInteropArchitectArticle02")  
+ ![Bir Win32 bölge bir WPF daire işleme girişimi.](./media/technology-regions-overview/render-windows-presentation-foundation-circle-over-win32-region.png)  
   
  Saydamlık/alfa karıştırma farklı teknolojiler arasında kullanmaya çalışırsanız başka bir ihlal eder.  Aşağıdaki çizimde, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kutusu ihlal [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ve [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] bölgeleri. Çünkü pikseller [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kutusu yarı saydam, bunlar tarafından ortaklaşa ait gerekirdi [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], mümkün değildir.  Bu nedenle başka bir ihlal eder ve oluşturulamıyor.  
   
- ![Birlikte çalışabilirlik diyagramı](./media/migrationinteroparchitectarticle03.png "MigrationInteropArchitectArticle03")  
+ ![Win32 ve DirectX bölgeleri ihlal bir WPF kutusu gösteren diyagram.](./media/technology-regions-overview/windows-foundation-presentation-box-violate-win32-directx-region.png)  
   
  Önceki üç örnek dikdörtgen bölge kullanılan, ancak farklı şekiller mümkündür.  Örneğin, bir bölgede delik olabilir. Aşağıdaki çizimde gösterildiği bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] boyutu budur dikdörtgen delik bölgeyle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] birleştirilmiş bölgeleri.  
   
- ![Birlikte çalışabilirlik diyagramı](./media/migrationinteroparchitectarticle04.png "MigrationInteropArchitectArticle04")  
+ ![Bir dikdörtgen delik Win32 bölgeyle gösteren diyagram.](./media/technology-regions-overview/win32-region-rectangular-hole.png)  
   
  Bölgelerin de tamamen dikdörtgensel olabilir ya da tarafından olmayan herhangi bir şekli bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] HRGN (bölge).  
   
- ![Birlikte çalışabilirlik diyagramı](./media/migrationinteroparchitectarticle05.png "MigrationInteropArchitectArticle05")  
+ ![Dikdörtgen olmayan bir bölge gösteren diyagram.](./media/technology-regions-overview/nonrectangular-win32-region.png)  
   
 ## <a name="transparency-and-top-level-windows"></a>Saydamlık ve üst düzey Windows  
  Windows penceresi Manager'da yalnızca gerçekten işler [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Cwnd'lerden. Bu nedenle, her [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window> olan bir HWND. <xref:System.Windows.Window> HWND için herhangi bir HWND genel kurallara uymanız gerekir. İçinde bu HWND [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kod ne olursa olsun genel yapabilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] destekler. Ancak diğer Cwnd'lerden masaüstü ile etkileşim için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uymalıdır [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ve işleme kurallarına.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Dikdörtgen olmayan windows desteklediği [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]— HRGN'ler dikdörtgen olmayan windows ve piksel başına alpha için katmanlı windows.  
@@ -54,11 +54,11 @@ WPF, Win32 veya DirectX gibi bir uygulamada birden fazla sunu teknolojileri kull
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Katmanlı windows, farklı işletim sistemleri üzerinde farklı özelliklere sahip. Bunun nedeni, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanan [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] işlemek için katmanlı windows öncelikle için tasarlanmış ve [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] işleme değil [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] işleme.  
   
--   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Hızlandırılmış destekleyen donanım üzerinde windows katmanlı [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] ve daha sonra. Donanım hızlandırılmış windows üzerinde katmanlı [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] desteğine gereksiniminiz [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]özellikleri sürümüne bağlıdır. Bu nedenle [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] o makinedeki.  
+- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Hızlandırılmış destekleyen donanım üzerinde windows katmanlı [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] ve daha sonra. Donanım hızlandırılmış windows üzerinde katmanlı [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] desteğine gereksiniminiz [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]özellikleri sürümüne bağlıdır. Bu nedenle [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] o makinedeki.  
   
--   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] saydamlık rengi anahtarları desteklemez çünkü [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] istediğiniz, özellikle Donanım hızlandırmalı işleme olduğu zamanlarda tam renk işlemeyi garanti edemez.  
+- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] saydamlık rengi anahtarları desteklemez çünkü [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] istediğiniz, özellikle Donanım hızlandırmalı işleme olduğu zamanlarda tam renk işlemeyi garanti edemez.  
   
--   Uygulama çalışıyorsa [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], windows üzerinde katmanlanmış [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] yüzeylerinin olduğunda [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] uygulama oluşturur.  (Gerçek işleme dizisi [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] katmanlı pencerenin ardından gizler [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] çizer, ardından [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] katmanlı pencereyi geri alır).  Olmayan[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] katmanlı windows de bu sınırlamaya sahiptir.  
+- Uygulama çalışıyorsa [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], windows üzerinde katmanlanmış [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] yüzeylerinin olduğunda [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] uygulama oluşturur.  (Gerçek işleme dizisi [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] katmanlı pencerenin ardından gizler [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] çizer, ardından [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] katmanlı pencereyi geri alır).  Olmayan[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] katmanlı windows de bu sınırlamaya sahiptir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

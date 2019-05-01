@@ -11,11 +11,11 @@ helpviewer_keywords:
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
 ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051669"
 ---
 # <a name="documents-in-wpf"></a>WPF'deki Belgeler
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] çok çeşitli daha kolay erişilebilen ve önceki nesil içinde salt okunur olacak şekilde tasarlanan yüksek kaliteli içeriğinin oluşturulmasını belge özellikleri sunan [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Gelişmiş Özellikler ve kalite, ek olarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] belge görüntüleme, paketleme ve güvenlik için tümleşik hizmetleri de sağlar. Bu konuda tanıtır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] belge türleri ve belge paketleme.  
@@ -61,11 +61,11 @@ ms.locfileid: "59313963"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Paket mimarisi anahtar teknolojileri sayısı için temel olarak görev alır:  
   
--   [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] belgeler uyumludur [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
+- [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] belgeler uyumludur [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
   
--   "12" Microsoft Office open XML biçimi belgeleri (.docx).  
+- "12" Microsoft Office open XML biçimi belgeleri (.docx).  
   
--   Kendi uygulama tasarımı için özel depolama birimi biçimlendirir.  
+- Kendi uygulama tasarımı için özel depolama birimi biçimlendirir.  
   
  API'sine, temel bir <xref:System.Windows.Xps.Packaging.XpsDocument> depolamak için özel olarak tasarlanmıştır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik belgeleri düzeltildi. Bir <xref:System.Windows.Xps.Packaging.XpsDocument> görüntülenen bir Görüntüleyicisi ' nde açılabilen bir bağımsız birer belge olur bir <xref:System.Windows.Controls.DocumentViewer> için bir yazdırma biriktiricisi yönlendirilen veya doğrudan çıkış denetimi bir [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-uyumlu yazıcı.  
   
@@ -99,11 +99,11 @@ ms.locfileid: "59313963"
 #### <a name="packagerelationships"></a>PackageRelationships  
  A <xref:System.IO.Packaging.PackageRelationship> ("ilişkisi"), paket veya bir paket içindeki ek bilgileri ilişkilendirmek için bir mekanizma sağlar. Ek bilgi bölümü ile gerçek bölümü içeriğini değiştirmeden ilişkilendirebilirsiniz bir paket düzeyinde tesis ilişkidir. Yeni veri doğrudan bölümü içeriğini ekleme genellikle çoğu durumda pratik değildir:  
   
--   Bölümü ve içerik şeması gerçek türü bilinmiyor.  
+- Bölümü ve içerik şeması gerçek türü bilinmiyor.  
   
--   Bilinen olsa bile, içerik şeması yeni bilgi eklemek için bir yol sağlamayabilir.  
+- Bilinen olsa bile, içerik şeması yeni bilgi eklemek için bir yol sağlamayabilir.  
   
--   Bölümü dijital olarak olabilir imzalanmış veya şifrelenmiş, herhangi bir değişiklik çağrısı.  
+- Bölümü dijital olarak olabilir imzalanmış veya şifrelenmiş, herhangi bir değişiklik çağrısı.  
   
  Paket ilişkileri ekleme ve ek bilgileri paketin tamamını veya tek tek bölümleri ile ilişkilendirmek için bulunabilirlik olanağı sağlar. Paket ilişkileri iki birincil işlevleri için kullanılır:  
   
@@ -125,13 +125,13 @@ ms.locfileid: "59313963"
 ## <a name="xps-documents"></a>XPS belgeleri  
  [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] Belge bir veya daha fazla sabit belgeleri yanı sıra tüm kaynakları ve işleme için gerekli bilgileri içeren bir pakettir.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] Ayrıca yerel olan [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] yazdırma biriktiricisi dosya biçimi.  Bir <xref:System.Windows.Xps.Packaging.XpsDocument> standart ZIP kümesinde depolanır ve XML ve ikili bileşenleri, görüntü ve yazı tipi dosyaları gibi bir birleşimini içerebilir. [PackageRelationships](#PackageRelationships) içerik ve tam belgeyi işlemek için gereken kaynaklar arasındaki bağımlılıkları tanımlamak için kullanılır.  <xref:System.Windows.Xps.Packaging.XpsDocument> Tasarım birden fazla kullanımlar destekleyen tek, yüksek kaliteli bir belge çözümü sağlar:  
   
--   Okuma, yazma ve sabit belge içerik ve kaynakları tek, taşınabilir ve kolay dağıtmak dosya olarak depolamak.  
+- Okuma, yazma ve sabit belge içerik ve kaynakları tek, taşınabilir ve kolay dağıtmak dosya olarak depolamak.  
   
--   Belgelerle görüntüleme [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] görüntüleyici uygulaması.  
+- Belgelerle görüntüleme [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] görüntüleyici uygulaması.  
   
--   Yerel yazdırma biriktiricisi belgelerde çıktısı, çıktı biçimi [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  
+- Yerel yazdırma biriktiricisi belgelerde çıktısı, çıktı biçimi [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  
   
--   Yönlendirme belgeleri doğrudan bir [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-uyumlu yazıcı.  
+- Yönlendirme belgeleri doğrudan bir [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-uyumlu yazıcı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
 ms.openlocfilehash: 5f72d6c3273cfda4276383cfe72f90196e5d4340
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037758"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey Biçimlendirme Uzantısı
 Tanımlar ve dış derlemelerden yüklü olan kaynaklar için anahtarları başvurur. Bu, bir açık kaynak sözlüğü bir derlemede veya bir sınıf yerine bir derleme bir hedef türü belirtmek bir kaynak araması sağlar.  
@@ -52,9 +52,9 @@ Tanımlar ve dış derlemelerden yüklü olan kaynaklar için anahtarları başv
 ## <a name="remarks"></a>Açıklamalar  
  Yukarıdaki kullanımları görüldüğü gibi bir {`ComponentResourceKey`} biçimlendirme uzantısı kullanımı, iki yerde bulunur:  
   
--   Denetim yazarı tarafından sağlanan bir tema kaynak sözlüğünün içinde bir anahtar tanımı.  
+- Denetim yazarı tarafından sağlanan bir tema kaynak sözlüğünün içinde bir anahtar tanımı.  
   
--   Derlemeden bir tema kaynak erişimi ne zaman yeniden şablon oluşturma denetimi olan ancak denetimin temalar tarafından sağlanan kaynaklardan gelen özellik değerlerini kullanmak istiyorsunuz.  
+- Derlemeden bir tema kaynak erişimi ne zaman yeniden şablon oluşturma denetimi olan ancak denetimin temalar tarafından sağlanan kaynaklardan gelen özellik değerlerini kullanmak istiyorsunuz.  
   
  Temalarından gelen bileşen kaynakları başvurmak için genellikle kullanmanız önerilir `{DynamicResource}` yerine `{StaticResource}`. Bu kullanımları içinde gösterilir. `{DynamicResource}` kullanıcı tarafından tema değiştirilebilmesi için nedeniyle önerilir. Bir tema desteklemek için denetim yazarının hedefi en yakından eşleşen bileşen kaynak isterseniz, bileşeni kaynak başvurusu'de dinamik olarak etkinleştirmeniz gerekir.  
   

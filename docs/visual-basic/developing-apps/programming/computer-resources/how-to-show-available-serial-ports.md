@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
 ms.openlocfilehash: 57b3a33fecb6128a10ce903fd26724de98acb8c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013965"
 ---
 # <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te kullanılabilir seri bağlantı noktalarını gösterme
 Bu konu nasıl kullanılacağını açıklar `My.Computer.Ports` Visual Basic'te bilgisayarın kullanılabilir seri bağlantı noktalarını göstermek için.  
@@ -31,11 +31,11 @@ Bu konu nasıl kullanılacağını açıklar `My.Computer.Ports` Visual Basic'te
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   System.Windows.Forms.dll'e bir proje başvurusu.  
+- System.Windows.Forms.dll'e bir proje başvurusu.  
   
--   Üye erişimi <xref:System.Windows.Forms> ad alanı. Ekleme bir `Imports` üye adları kodunuzda tamamen niteleyemiyorsanız deyimi. Daha fazla bilgi için [Imports deyimi (.NET Namespace ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Üye erişimi <xref:System.Windows.Forms> ad alanı. Ekleme bir `Imports` üye adları kodunuzda tamamen niteleyemiyorsanız deyimi. Daha fazla bilgi için [Imports deyimi (.NET Namespace ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
--   Formunuza sahip bir <xref:System.Windows.Forms.ListBox> adlı Denetim `ListBox1`.  
+- Formunuza sahip bir <xref:System.Windows.Forms.ListBox> adlı Denetim `ListBox1`.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Kullanmak zorunda değil <xref:System.Windows.Forms.ListBox> kullanılabilir seri bağlantı noktası adlarını görüntülemek için denetim. Bunun yerine kullanabileceğiniz bir <xref:System.Windows.Forms.ComboBox> veya diğer denetim. Kullanıcıdan bir yanıt uygulama gereksinimi yoksa, kullanabileceğiniz bir <xref:System.Windows.Forms.TextBox> bilgileri görüntülemek için denetim.  

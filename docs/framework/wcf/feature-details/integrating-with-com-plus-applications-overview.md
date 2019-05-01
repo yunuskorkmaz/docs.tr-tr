@@ -6,24 +6,24 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
 ms.openlocfilehash: b5294080d0cc76fdb98bc0908f4273dbb011f982
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046924"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ Uygulamaları ile Tümleştirme Genel Bakış
 Windows Communication Foundation (WCF) dağıtılmış uygulamalar oluşturmak için zengin bir ortam sağlar. COM +'da barındırılan bir bileşen tabanlı uygulama mantığı zaten kullanıyorsanız, WCF, yeniden yazmak zorunda kalmadan yerine mevcut mantığınızı genişletmek için de kullanabilirsiniz. Mevcut COM + veya Enterprise Hizmetleri iş mantığı Web Hizmetleri aracılığıyla kullanıma sunmak istediğiniz, ortak bir senaryodur.  
   
  Bir arabirim bir COM + bileşeni üzerinde bir Web hizmeti olarak sunulduğunda belirtimi ve bu hizmetlerin sözleşmesi uygulama başlatma zamanında gerçekleştirilir otomatik bir eşlemesi tarafından belirlenir. Aşağıdaki liste, bu eşleme için kavramsal model gösterir:  
   
--   Bir hizmetin her kullanıma sunulan bir COM sınıfı için tanımlanır.  
+- Bir hizmetin her kullanıma sunulan bir COM sınıfı için tanımlanır.  
   
--   Hizmet sözleşmesini doğrudan yapılandırmasında tanımlı yöntemi dışlama olasılığını ile seçilen bileşenin arabirim tanımı türetilir.  
+- Hizmet sözleşmesini doğrudan yapılandırmasında tanımlı yöntemi dışlama olasılığını ile seçilen bileşenin arabirim tanımı türetilir.  
   
--   Bu sözleşme işlemlerinde doğrudan bileşenin arabirim tanımı yöntemlerde türetilmiştir.  
+- Bu sözleşme işlemlerinde doğrudan bileşenin arabirim tanımı yöntemlerde türetilmiştir.  
   
--   Bu işlemler için parametreleri doğrudan bileşenin yöntemi parametrelerine karşılık gelen COM birlikte çalışabilirlik türden türetilir.  
+- Bu işlemler için parametreleri doğrudan bileşenin yöntemi parametrelerine karşılık gelen COM birlikte çalışabilirlik türden türetilir.  
   
  Varsayılan adresleri ve aktarım bağlama hizmeti, bir hizmet yapılandırma dosyasında sağlanır, ancak bunlar olarak yapılandırılabilen için gereklidir.  
   
@@ -47,19 +47,19 @@ Windows Communication Foundation (WCF) dağıtılmış uygulamalar oluşturmak i
 ## <a name="supported-interfaces"></a>Desteklenen arabirimi  
  Bir Web hizmeti olarak kullanıma sunulabilir arabirimleri türüyle ilgili bazı kısıtlamalar vardır. Aşağıdaki türde arabirimler desteklenmez:  
   
--   Nesne başvuruları - parametreler olarak geçen arabirimleri aşağıdaki sınırlı nesne başvuru yaklaşımı sınırlı nesne başvurusu desteği bölümünde açıklanan.  
+- Nesne başvuruları - parametreler olarak geçen arabirimleri aşağıdaki sınırlı nesne başvuru yaklaşımı sınırlı nesne başvurusu desteği bölümünde açıklanan.  
   
--   Geçiş türleri arabirimleri ile uyumlu olmayan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] COM birlikte çalışabilirlik dönüştürme.  
+- Geçiş türleri arabirimleri ile uyumlu olmayan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] COM birlikte çalışabilirlik dönüştürme.  
   
--   Uygulama havuzu oluşturma COM + tarafından barındırıldığında özelliği etkin olan uygulamalar için arabirim.  
+- Uygulama havuzu oluşturma COM + tarafından barındırıldığında özelliği etkin olan uygulamalar için arabirim.  
   
--   Uygulamaya özel olarak işaretlenmiş bileşenlerin arabirimleri.  
+- Uygulamaya özel olarak işaretlenmiş bileşenlerin arabirimleri.  
   
--   COM + altyapı arabirimleri.  
+- COM + altyapı arabirimleri.  
   
--   Sistem uygulaması arabirimleri.  
+- Sistem uygulaması arabirimleri.  
   
--   Genel derleme önbelleğine eklenmemiş olan Enterprise Hizmetleri bileşenlerin arabirimleri.  
+- Genel derleme önbelleğine eklenmemiş olan Enterprise Hizmetleri bileşenlerin arabirimleri.  
   
 ### <a name="limited-object-reference-support"></a>Sınırlı nesne başvurusu desteği  
  Bir dizi Dağıtılmış COM + bileşenleri nesneleri tarafından başvuru parametreleri, ADO kayıt kümesini nesneyi döndürme gibi kullandığından COM + tümleştirme nesne başvuru parametreleri için sınırlı destek içerir. Uygulayan nesneler için destek sınırlıdır `IPersistStream` COM arabirimi. Bu ADO kayıt kümesini nesneleri içerir ve uygulama özel COM nesneleri için uygulanabilir.  
@@ -76,15 +76,15 @@ Windows Communication Foundation (WCF) dağıtılmış uygulamalar oluşturmak i
 ## <a name="selecting-the-hosting-mode"></a>Barındırma modu seçme  
  COM + Web hizmetlerini barındırma şu modlardan birinde kullanıma sunar:  
   
--   COM +-barındırılan  
+- COM +-barındırılan  
   
      Web hizmeti, uygulamanın adanmış COM + sunucusu işlem içinde (Dllhost.exe) barındırılır. Bu modda uygulama Web hizmeti istekleri almak için önce açıkça başlatılması gerekir. COM + Seçenekleri "Çalıştırma olarak bir NT hizmeti" veya "boştayken bırakabilirsiniz" uygulama ve hizmetlerinin boşta kapatma önlemek için kullanılabilir. Bu mod, hem Web hizmeti hem de sunucu uygulaması için DCOM erişim sağlar.  
   
--   Web barındırılan  
+- Web barındırılan  
   
      Web hizmeti Web sunucusu çalışan işlemi içinde barındırılır. Bu mod, ilk istek alındığında etkin olmasını COM + gerektirmez. Bu istek alındığında uygulamanın etkin değilse, istek işleme önce otomatik olarak etkinleştirilir. Bu mod ayrıca hem Web hizmeti hem de sunucu uygulaması için DCOM erişim sağlar, ancak Web hizmeti istekleri için bir işlem atlama neden olur. Bu genellikle, kimliğe bürünme özelliğini etkinleştirmek istemci gerektirir. WCF'de, bu ile yapılabilir <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> özelliği <xref:System.ServiceModel.Security.WindowsClientCredential> özelliği genel olarak erişilebilen sınıfı <xref:System.ServiceModel.ChannelFactory%601> sınıfı, hem de <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> numaralandırma değeri.  
   
--   Web barındırılan işlem içi  
+- Web barındırılan işlem içi  
   
      Web hizmeti ve COM + uygulama mantığı Web sunucusu çalışan işlemi içinde barındırılır. Bu, Web hizmeti istekleri için bir işlem atlama neden olmadan Web barındırılan modunun Otomatik etkinleştirme sağlar. Olumsuz yönüyse, sunucu uygulaması DCOM üzerinden erişilemez ' dir.  
   

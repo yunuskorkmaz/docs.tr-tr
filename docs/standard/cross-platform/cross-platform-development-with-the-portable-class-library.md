@@ -10,11 +10,11 @@ ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afaa8e118bb21e5c1e4f1c53b1d0d29ca6bb3bf5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055062"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Taşınabilir sınıf kitaplığı ile platformlar arası geliştirme
 
@@ -50,13 +50,13 @@ Taşınabilirlik değerlendirmek istiyorsanız, önce derlemelerinizin Visual St
 
 Türler ve taşınabilir sınıf kitaplığı projesinde kullanılabilir üyeler çeşitli uyumluluk unsurları tarafından zorlanır:
 
--   Bunlar, seçtiğiniz hedef arasında paylaşılabilir olmalıdır.
+- Bunlar, seçtiğiniz hedef arasında paylaşılabilir olmalıdır.
 
--   Bu hedefler arasında benzer şekilde davranmalıdır.
+- Bu hedefler arasında benzer şekilde davranmalıdır.
 
--   Kaldırılma için aday olmamalıdır.
+- Kaldırılma için aday olmamalıdır.
 
--   Özellikle destekleyici üyeler taşınabilir olmadığında bunlar taşınabilir ortamda anlamlı olmalıdırlar.
+- Özellikle destekleyici üyeler taşınabilir olmadığında bunlar taşınabilir ortamda anlamlı olmalıdırlar.
 
 Üye taşınabilir sınıf kitaplığı ve seçili hedeflerinizi destekleniyorsa, projenizdeki ıntellisense'te görünür. Bununla birlikte, bir API taşınabilir Sınıf Kitaplığı'nda desteklenmiyor olabilir, ancak API kullanıp kullanamayacağını bağlıdır hedeflerde, unutmayın seçin.
 
@@ -78,9 +78,9 @@ Bir evrensel Windows uygulaması oluştururken bir taşınabilir sınıf kitapl�
 
 Taşınabilir sınıf kitaplığı derlemesine başvuran bir .NET Framework uygulamasını dağıtırken, bir bağımlılık '.NET Framework'ün doğru versiyonundaki belirtmeniz gerekir. Bu bağımlılığı belirterek, gerekli sürümün uygulamanızla birlikte yüklü olup olmadığını garantiye almış olursunuz.
 
--   ClickOnce dağıtımı ile bir bağımlılık oluşturmak için: içinde **Çözüm Gezgini**, yayımlamak istediğiniz proje için proje düğümünü seçin. (Taşınabilir sınıf kitaplığı projesine başvuran proje budur.) Menü çubuğunda, **proje** > **özellikleri**ve ardından **Yayımla** sekmesi. Üzerinde **Yayımla** sayfasında **önkoşulları**. Önkoşul olarak gerekli .NET Framework sürümünü seçin.
+- ClickOnce dağıtımı ile bir bağımlılık oluşturmak için: İçinde **Çözüm Gezgini**, yayımlamak istediğiniz proje için proje düğümünü seçin. (Taşınabilir sınıf kitaplığı projesine başvuran proje budur.) Menü çubuğunda, **proje** > **özellikleri**ve ardından **Yayımla** sekmesi. Üzerinde **Yayımla** sayfasında **önkoşulları**. Önkoşul olarak gerekli .NET Framework sürümünü seçin.
 
--   Bir kurulum projesi ile bir bağımlılık oluşturmak için: içinde **Çözüm Gezgini**, Kurulum projesini seçin. Menü çubuğunda, **proje** > **özellikleri** > **önkoşulları**. Önkoşul olarak gerekli .NET Framework sürümünü seçin.
+- Bir kurulum projesi ile bir bağımlılık oluşturmak için: İçinde **Çözüm Gezgini**, Kurulum projesini seçin. Menü çubuğunda, **proje** > **özellikleri** > **önkoşulları**. Önkoşul olarak gerekli .NET Framework sürümünü seçin.
 
 .NET Framework uygulamalarını dağıtmak hakkında daha fazla bilgi için bkz. [geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md).
 

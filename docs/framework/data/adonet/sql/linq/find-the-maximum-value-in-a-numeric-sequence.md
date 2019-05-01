@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 70d7c058-0280-4815-a008-6f290093591a
 ms.openlocfilehash: b7a2588b9e5082915dff4d371adff2ad3d232d74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032545"
 ---
 # <a name="find-the-maximum-value-in-a-numeric-sequence"></a>Sayısal Dizideki En Büyük Değeri Bulma
 Kullanım <xref:System.Linq.Enumerable.Max%2A> dizisini sayısal değerler en yüksek değeri bulmak için işleci.  

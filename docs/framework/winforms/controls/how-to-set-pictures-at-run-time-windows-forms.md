@@ -14,18 +14,18 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
 ms.openlocfilehash: 8ed3ba9050a9117a53b5f4f1cccd26381f55ab32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013237"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Nasıl yapılır: (Windows Forms) çalışma zamanında resimleri ayarlama
 Bir Windows Forms tarafından görüntülenen resmi programla ayarlayabilir miyim <xref:System.Windows.Forms.PictureBox> denetimi.  
   
 ### <a name="to-set-a-picture-programmatically"></a>Bir resmi program üzerinden ayarlamak için  
   
--   Ayarlama <xref:System.Windows.Forms.PictureBox.Image%2A> özelliğini kullanarak <xref:System.Drawing.Image.FromFile%2A> yöntemi <xref:System.Drawing.Image> sınıfı.  
+- Ayarlama <xref:System.Windows.Forms.PictureBox.Image%2A> özelliğini kullanarak <xref:System.Drawing.Image.FromFile%2A> yöntemi <xref:System.Drawing.Image> sınıfı.  
   
      Aşağıdaki örnekte, görüntüsünün konumunu ayarlayın Belgelerim klasörünü yoludur. Windows işletim sistemi çalıştırılan bilgisayarların çoğu bu dizin içerdiğini varsayar çünkü bu, gerçekleştirilir. Bu, güvenli bir şekilde uygulamayı çalıştırmak minimum sistem erişim düzeylerine sahip kullanıcılar da sağlar. Aşağıdaki örnekte bir form varsayar bir <xref:System.Windows.Forms.PictureBox> denetim zaten eklendi.  
   
@@ -67,7 +67,7 @@ Bir Windows Forms tarafından görüntülenen resmi programla ayarlayabilir miyi
   
 ### <a name="to-clear-a-graphic"></a>Grafik temizlemek için  
   
--   İlk olarak, görüntü tarafından kullanılan belleği serbest ve grafik temizleyin. Bellek yönetimi, bir sorun olduğunda çöp toplama belleği daha sonra ücretsiz.  
+- İlk olarak, görüntü tarafından kullanılan belleği serbest ve grafik temizleyin. Bellek yönetimi, bir sorun olduğunda çöp toplama belleği daha sonra ücretsiz.  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  

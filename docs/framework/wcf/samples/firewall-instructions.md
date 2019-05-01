@@ -3,20 +3,20 @@ title: Güvenlik Duvarı Yönergeleri
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
 ms.openlocfilehash: f1b576b4e413fa3bae70ef1eb8f8ed768e28e309
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051942"
 ---
 # <a name="firewall-instructions"></a>Güvenlik Duvarı Yönergeleri
 Windows Communication Foundation (WCF) örnekleri çalışması birkaç Güvenlik Duvarı'nda Program veya bağlantı noktalarını etkinleştirmeniz gerekir. Birçok örnekleri 8000-8003 aralığındaki bağlantı noktaları kullanılarak iletişim kurmak ve 9000 bağlantı noktası. Güvenlik Duvarı varsayılan olarak açıktır ve bu bağlantı noktalarına erişimi engeller. Örnekler için güvenlik duvarını etkinleştirmek için gereksinimler ve güvenlik ortamı bağlı olarak aşağıdaki yordamlardan birini tamamlayın:  
   
--   1. seçenek: Etkileşimli olarak çalışırken örnekleri sağlar. Güvenlik duvarı yapılandırmanızı hiçbir öncelikli değişiklik yaparak oluşturmaya ve örnekleri çalıştırmaya başlamak için devam edin. Bir örneği çalıştırdığınızda bir **Windows Güvenlik Uyarısı** iletişim kutusu görüntülenir. Söz konusu örnek program ardından etkileşimli bir engeli listesine eklenebilir. Bu yordamı kullanarak, ardından örnek yeniden başlatmanız gerekebilir.  
+- 1. seçenek: Etkileşimli olarak çalışırken örnekleri sağlar. Güvenlik duvarı yapılandırmanızı hiçbir öncelikli değişiklik yaparak oluşturmaya ve örnekleri çalıştırmaya başlamak için devam edin. Bir örneği çalıştırdığınızda bir **Windows Güvenlik Uyarısı** iletişim kutusu görüntülenir. Söz konusu örnek program ardından etkileşimli bir engeli listesine eklenebilir. Bu yordamı kullanarak, ardından örnek yeniden başlatmanız gerekebilir.  
   
--   2. seçenek: Örnek programları önceden etkinleştirin. Başlangıç **Windows Güvenlik Duvarı'nı Denetim Masası'ndaki** uygulaması ve örnek çalıştırmak için plan programları etkinleştirin. Yürütülebilir dosyalar için program önce oluşturmanız gerekir. Aşağıdaki yordamda ayrıntılı yönergeleri bulabilirsiniz.  
+- 2. seçenek: Örnek programları önceden etkinleştirin. Başlangıç **Windows Güvenlik Duvarı'nı Denetim Masası'ndaki** uygulaması ve örnek çalıştırmak için plan programları etkinleştirin. Yürütülebilir dosyalar için program önce oluşturmanız gerekir. Aşağıdaki yordamda ayrıntılı yönergeleri bulabilirsiniz.  
   
--   Seçenek 3: Önceden bir bağlantı noktası aralığını etkinleştirin. Başlangıç **Windows Güvenlik Duvarı** **Denetim Masası** uygulaması ve etkinleştirme bağlantı noktası 80, 443, 8000 8003 ve örnekleri tarafından kullanılan 9000. Aşağıdaki yordamda ayrıntılı yönergeleri bulabilirsiniz. Bu bağlantı noktaları, yalnızca örnekleri kullanmak tüm programı izin verdiğinden bu diğerlerine göre daha az güvenli bir seçenektir.  
+- Seçenek 3: Önceden bir bağlantı noktası aralığını etkinleştirin. Başlangıç **Windows Güvenlik Duvarı** **Denetim Masası** uygulaması ve etkinleştirme bağlantı noktası 80, 443, 8000 8003 ve örnekleri tarafından kullanılan 9000. Aşağıdaki yordamda ayrıntılı yönergeleri bulabilirsiniz. Bu bağlantı noktaları, yalnızca örnekleri kullanmak tüm programı izin verdiğinden bu diğerlerine göre daha az güvenli bir seçenektir.  
   
  Hangi yordamın emin değilseniz, ilk seçenek seçin. Başka bir satıcıdan bir güvenlik duvarı çalıştırıyorsanız, benzer değişiklikler yapmanız gerekebilir.  
   
@@ -34,9 +34,9 @@ Windows Communication Foundation (WCF) örnekleri çalışması birkaç Güvenli
   
 3. Bir program Windows Güvenlik Duvarı üzerinden izin vermek için aşağıdaki işletim belirli adımlardan birini tamamlayın:  
   
-    -   Windows 7 veya Windows Server 2008 r2 üzerinde tıklayın **bir programı veya özelliği Windows Güvenlik Duvarı üzerinden izin**. Tıklayın **ayarlarını değiştir**, izin **başka bir Program...** .  
+    - Windows 7 veya Windows Server 2008 r2 üzerinde tıklayın **bir programı veya özelliği Windows Güvenlik Duvarı üzerinden izin**. Tıklayın **ayarlarını değiştir**, izin **başka bir Program...** .  
   
-    -   Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)] veya [!INCLUDE[lserver](../../../../includes/lserver-md.md)], tıklayın **bir programın Windows Güvenlik Duvarı üzerinden izin**.  
+    - Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)] veya [!INCLUDE[lserver](../../../../includes/lserver-md.md)], tıklayın **bir programın Windows Güvenlik Duvarı üzerinden izin**.  
   
 4. Üzerinde **özel durumları** sekmesinde **Program Ekle**.  
   
@@ -52,21 +52,21 @@ Windows Communication Foundation (WCF) örnekleri çalışması birkaç Güvenli
   
 2. Windows 7 veya Windows Server 2008 R2, aşağıdaki adımları izleyin.  
   
-    1.  Tıklayın **Gelişmiş ayarlar** Windows Güvenlik Duvarı'nı pencerenin sol sütunda.  
+    1. Tıklayın **Gelişmiş ayarlar** Windows Güvenlik Duvarı'nı pencerenin sol sütunda.  
   
-    2.  Tıklayın **gelen kuralları** sol sütunda.  
+    2. Tıklayın **gelen kuralları** sol sütunda.  
   
-    3.  Tıklayın **yeni kurallar** sağ sütunda.  
+    3. Tıklayın **yeni kurallar** sağ sütunda.  
   
-    4.  Seçin **bağlantı noktası** tıklatıp **sonraki**.  
+    4. Seçin **bağlantı noktası** tıklatıp **sonraki**.  
   
-    5.  Seçin **TCP** girin `8000, 8001, 8002, 8003, 9000, 80, 443` içinde **belirli yerel bağlantı noktaları** alan.  
+    5. Seçin **TCP** girin `8000, 8001, 8002, 8003, 9000, 80, 443` içinde **belirli yerel bağlantı noktaları** alan.  
   
-    6.  **İleri**'ye tıklayın.  
+    6. **İleri**'ye tıklayın.  
   
-    7.  Seçin **bağlantıya izin**, tıklatıp **sonraki** .  
+    7. Seçin **bağlantıya izin**, tıklatıp **sonraki** .  
   
-    8.  Seçin **etki alanı** ve **özel**, tıklatıp **sonraki**.  
+    8. Seçin **etki alanı** ve **özel**, tıklatıp **sonraki**.  
   
     9. Bu kural ad `WCF-WF 4.0 Samples`, tıklatıp **son**.  
   
@@ -74,15 +74,15 @@ Windows Communication Foundation (WCF) örnekleri çalışması birkaç Güvenli
   
 3. Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)] veya [!INCLUDE[lserver](../../../../includes/lserver-md.md)], şu adımları izleyin.  
   
-    1.  Tıklayın **bir programın Windows Güvenlik Duvarı üzerinden izin**.  
+    1. Tıklayın **bir programın Windows Güvenlik Duvarı üzerinden izin**.  
   
-    2.  Üzerinde **özel durumları** sekmesinde **bağlantı noktası Ekle**.  
+    2. Üzerinde **özel durumları** sekmesinde **bağlantı noktası Ekle**.  
   
-    3.  Bir ad girin, 8000 bağlantı noktası numarasını girin ve seçin **TCP** seçeneği.  
+    3. Bir ad girin, 8000 bağlantı noktası numarasını girin ve seçin **TCP** seçeneği.  
   
-    4.  Tıklayın **kapsamını Değiştir** düğmesini seçme **Ağ Bağlantılarım** (alt ağ) yalnızca seçeneğin seçeneğine tıklayıp **Tamam**.  
+    4. Tıklayın **kapsamını Değiştir** düğmesini seçme **Ağ Bağlantılarım** (alt ağ) yalnızca seçeneğin seçeneğine tıklayıp **Tamam**.  
   
-    5.  Bağlantı noktaları için 8001, b ve d adımları yineleyin 8002, 8003, 9000, 80 ve 443.  
+    5. Bağlantı noktaları için 8001, b ve d adımları yineleyin 8002, 8003, 9000, 80 ve 443.  
   
 4. Tıklayın **Tamam** güvenlik duvarı uygulamasını kapatın.  
   

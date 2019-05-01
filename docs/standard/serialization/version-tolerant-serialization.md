@@ -14,18 +14,18 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
 ms.openlocfilehash: c899cfe1015a25adc25fc28ee84d0a37a397defe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028258"
 ---
 # <a name="version-tolerant-serialization"></a>Sürüme dayanıklı serileştirme
 Sonraki uygulamaya bir sürümünden yeniden kullanılabilir olacaktır serializable türler oluşturmak sürüm 1.0 ve 1.1 .NET Framework'ün, sorunlu. Bir tür ek alanlar ekleyerek değiştirilmişse, aşağıdaki sorunları ortaya çıkabilecek:  
   
--   Bir uygulamanın eski sürümleri yeni sürümleri eski türünü seri durumdan çıkarılacak sorulduğunda özel durumlar oluşturan.  
+- Bir uygulamanın eski sürümleri yeni sürümleri eski türünü seri durumdan çıkarılacak sorulduğunda özel durumlar oluşturan.  
   
--   Bir uygulamanın daha yeni sürümleri, bir eksik veri türüyle eski sürümleri işlenirken özel durumlar oluşturan.  
+- Bir uygulamanın daha yeni sürümleri, bir eksik veri türüyle eski sürümleri işlenirken özel durumlar oluşturan.  
   
  Sürüm dengeleyici seri hale getirme (VTS), serializable türler değiştirmek için zamanla kolaylaştırır .NET Framework 2.0 sunulan özellikleri kümesidir. Özellikle hangi sınıflar için VTS özellikleri etkin <xref:System.SerializableAttribute> özniteliği uygulandı, genel türler dahil olmak üzere. VTS türü diğer sürümleriyle uyumluluk bozup olmadan bu sınıflar için yeni alanlar eklemek olanaklı kılar. Çalışan bir örnek uygulama için bkz. [sürüme dayanıklı serileştirme teknolojisi örneği](../../../docs/standard/serialization/version-tolerant-serialization-technology-sample.md).  
   
@@ -36,11 +36,11 @@ Sonraki uygulamaya bir sürümünden yeniden kullanılabilir olacaktır serializ
 ## <a name="feature-list"></a>Özellik listesi  
  Özellik kümesi, aşağıdakileri içerir:  
   
--   Yabancı veya beklenmeyen veri tolerans. Bu türü için eski sürümleri veri göndermek için yeni bir sürümü sağlar.  
+- Yabancı veya beklenmeyen veri tolerans. Bu türü için eski sürümleri veri göndermek için yeni bir sürümü sağlar.  
   
--   İsteğe bağlı veriler eksik tolerans. Bu yeni sürümleri için veri göndermek eski sürümleri sağlar.  
+- İsteğe bağlı veriler eksik tolerans. Bu yeni sürümleri için veri göndermek eski sürümleri sağlar.  
   
--   Serileştirme geri çağırmaları. Bu veri eksik olduğu durumlarda akıllı varsayılan değer ayarı sağlar.  
+- Serileştirme geri çağırmaları. Bu veri eksik olduğu durumlarda akıllı varsayılan değer ayarı sağlar.  
   
  Ayrıca, yeni bir isteğe bağlı alan eklendiğinde bildirmek için bir özellik yok. Bu <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A> özelliği <xref:System.Runtime.Serialization.OptionalFieldAttribute> özniteliği.  
   
@@ -262,23 +262,23 @@ End Class
 ## <a name="best-practices"></a>Önerilen uygulamalar  
  Uygun sürüm davranış sağlamak için bir tür sürümü sürümü değişiklik yapıldığında bu kuralları izleyin:  
   
--   Hiçbir zaman serileştirilmiş bir alan kaldırın.  
+- Hiçbir zaman serileştirilmiş bir alan kaldırın.  
   
--   Hiçbir zaman uygulamak <xref:System.NonSerializedAttribute> öznitelik önceki sürümü alanına uygulanmamış olması durumunda bir alan öznitelik.  
+- Hiçbir zaman uygulamak <xref:System.NonSerializedAttribute> öznitelik önceki sürümü alanına uygulanmamış olması durumunda bir alan öznitelik.  
   
--   Hiçbir zaman adı veya serileştirilmiş bir alan türünü değiştirin.  
+- Hiçbir zaman adı veya serileştirilmiş bir alan türünü değiştirin.  
   
--   Yeni bir seri hale getirilmiş alan eklerken uygulamak **OptionalFieldAttribute** özniteliği.  
+- Yeni bir seri hale getirilmiş alan eklerken uygulamak **OptionalFieldAttribute** özniteliği.  
   
--   Kaldırırken bir **NonSerializedAttribute** alanından (önceki bir sürümde serileştirilebilir değildi) bir öznitelik, Uygula **OptionalFieldAttribute** özniteliği.  
+- Kaldırırken bir **NonSerializedAttribute** alanından (önceki bir sürümde serileştirilebilir değildi) bir öznitelik, Uygula **OptionalFieldAttribute** özniteliği.  
   
--   Tüm isteğe bağlı alanları için serileştirme geri çağırmaları sürece kullanarak anlamlı varsayılanları ayarlamak 0 veya **null** Varsayılanları kabul edilir.  
+- Tüm isteğe bağlı alanları için serileştirme geri çağırmaları sürece kullanarak anlamlı varsayılanları ayarlamak 0 veya **null** Varsayılanları kabul edilir.  
   
  Bir tür gelecekteki serileştirme yapısıyla uyumlu olmasını sağlamak için aşağıdaki yönergeleri izleyin:  
   
--   Her zaman **VersionAdded** özelliği **OptionalFieldAttribute** doğru öznitelik.  
+- Her zaman **VersionAdded** özelliği **OptionalFieldAttribute** doğru öznitelik.  
   
--   Dallı sürüm özen gösterin.  
+- Dallı sürüm özen gösterin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

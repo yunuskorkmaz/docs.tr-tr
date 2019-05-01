@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
 ms.openlocfilehash: d4976b3725d04162ac10242c486f57c4d2598769
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012691"
 ---
 # <a name="panel-control-overview-windows-forms"></a>Panel Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Panel> denetimleri, diğer denetimleri için tanımlanabilen bir gruplama sağlamak için kullanılır. Genellikle, bir form işlevi tarafından alt bölümlere ayırmak için panoları kullanın. Örneğin, bir sipariş formu gibi kullanmak için hangi gece taşıyıcı postalama seçenekleri belirten olabilir. Tüm seçenekleri panelindeki bir gruplandırma kullanıcı mantıksal olarak görsel bir ipucu sağlar. Tasarım sırasında tüm denetimlerin bir kolayca taşınabilir zaman — taşıdığınızda <xref:System.Windows.Forms.Panel> denetlemek, tüm çok kapsanan denetimlerini Taşı. Bir panel içinde gruplanmış denetimleri aracılığıyla erişilebilen, <xref:System.Windows.Forms.Control.Controls%2A> özelliği. Bu özellik bir koleksiyonunu döndürür <xref:System.Windows.Forms.Control> alınan belirli, türüne bu şekilde örnekleri, genellikle bir denetimi cast gerekecektir.  

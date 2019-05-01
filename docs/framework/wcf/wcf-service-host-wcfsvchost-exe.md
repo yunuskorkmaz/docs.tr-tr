@@ -3,11 +3,11 @@ title: WCF Hizmet Ana Bilgisayarı (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
 ms.openlocfilehash: d9a086b3a6ae0ece3b1b45161402ce058e1fb447
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052618"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF Hizmet Ana Bilgisayarı (WcfSvcHost.exe)
 Windows Communication Foundation (WCF) hizmet ana bilgisayarı (WcfSvcHost.exe), Visual Studio hata ayıklayıcıyı otomatik olarak ana bilgisayar ve uyguladıysanız bir hizmeti test etmek için (F5) başlatmak sağlar. Sonra hizmeti bulun ve olası hataları düzeltmek için WCF Test İstemcisi (WcfTestClient.exe) veya kendi istemci kullanarak test edebilirsiniz.  
@@ -72,32 +72,32 @@ Windows Communication Foundation (WCF) hizmet ana bilgisayarı (WcfSvcHost.exe),
   
  **WCF hizmet konağı** ana penceresi iki menüleri içerir:  
   
--   **Dosya**: İçeren **Kapat** ve **çıkış** komutları. Tıkladığınızda **Kapat**, **WCF hizmet konağı** iletişim kutusu kapanır, ancak barındırılan hizmetler devam. Tıkladığınızda **çıkış**, WCF hizmet konağı aynı zamanda kapatılır. Bu, tüm barındırılan hizmetlerin de durdurulur.  
+- **Dosya**: İçeren **Kapat** ve **çıkış** komutları. Tıkladığınızda **Kapat**, **WCF hizmet konağı** iletişim kutusu kapanır, ancak barındırılan hizmetler devam. Tıkladığınızda **çıkış**, WCF hizmet konağı aynı zamanda kapatılır. Bu, tüm barındırılan hizmetlerin de durdurulur.  
   
--   **Yardım**: İçeren **hakkında** sürüm bilgisi içeren komutu. Ayrıca içerdiği **yardımcı** Yardım dosyasını açabilirsiniz komutu.  
+- **Yardım**: İçeren **hakkında** sürüm bilgisi içeren komutu. Ayrıca içerdiği **yardımcı** Yardım dosyasını açabilirsiniz komutu.  
   
  Ana **WCF hizmet konağı** penceresi iki alanları içerir:  
   
--   İlk alan **hizmet**. Tüm hizmetlerin temel bilgileri görüntüleyen bir listesini içerir. Bilgileri içerir:  
+- İlk alan **hizmet**. Tüm hizmetlerin temel bilgileri görüntüleyen bir listesini içerir. Bilgileri içerir:  
   
-    -   **Hizmet**: Tüm hizmetler listelenir.  
+    - **Hizmet**: Tüm hizmetler listelenir.  
   
-    -   **Durum**: Hizmet durumunu listeler. Geçerli değerler şunlardır: "Başlatıldı", "Stopped" ve "Error".  
+    - **Durum**: Hizmet durumunu listeler. Geçerli değerler şunlardır: "Başlatıldı", "Stopped" ve "Error".  
   
-    -   **Meta veri adresi**: Meta veri adresi hizmetleri görüntüler.  
+    - **Meta veri adresi**: Meta veri adresi hizmetleri görüntüler.  
   
--   İkinci alanı **ek bilgi**. Belirli bir hizmet satırı seçildiğinde hizmet durumunu ayrıntılı bir açıklama görüntüler **hizmet** alan. Durum hatası ise, ekrandaki tüm hata iletilerini görüntüleyebilirsiniz.  
+- İkinci alanı **ek bilgi**. Belirli bir hizmet satırı seçildiğinde hizmet durumunu ayrıntılı bir açıklama görüntüler **hizmet** alan. Durum hatası ise, ekrandaki tüm hata iletilerini görüntüleyebilirsiniz.  
   
 ## <a name="stopping-wcf-service-host"></a>WCF hizmet konağı durduruluyor  
  WCF hizmet konağı dört aşağıdaki şekilde kapatabilirsiniz:  
   
--   Visual Studio'da hata ayıklama oturumunu durdurun.  
+- Visual Studio'da hata ayıklama oturumunu durdurun.  
   
--   Seçin **çıkış** gelen **dosya** menüde **WCF hizmet konağı** penceresi.  
+- Seçin **çıkış** gelen **dosya** menüde **WCF hizmet konağı** penceresi.  
   
--   Seçin **çıkış** bağlam menüsünden sistem bildirim alanında WCF hizmet konağı Tepsi simgesi.  
+- Seçin **çıkış** bağlam menüsünden sistem bildirim alanında WCF hizmet konağı Tepsi simgesi.  
   
--   WCF Test istemcisi, kullanılıyorsa çıkın.  
+- WCF Test istemcisi, kullanılıyorsa çıkın.  
   
 ## <a name="using-service-host-without-administrator-privilege"></a>Hizmet ana bilgisayarı yönetici ayrıcalığı kullanma  
  WCF hizmetleri geliştirmek yönetici ayrıcalığı olmayan kullanıcıların etkinleştirmek için bir ACL (erişim denetim listesi) için ad alanı oluşturulan "http://+:8731/Design_Time_Addresses" Visual Studio yüklemesi sırasında. ACL makinede oturum açan tüm etkileşimli kullanıcılar içerir (UI) için ayarlanır. Yöneticiler ekleyin veya bu ACL'SİNDEN kaldırmasına veya ek bağlantı noktalarını açın. Bu ACL kullanıcıların yönetici ayrıcalıkları vermeden WCF hizmet otomatik ana bilgisayarı (wcfSvcHost.exe) kullanmasını sağlar.  

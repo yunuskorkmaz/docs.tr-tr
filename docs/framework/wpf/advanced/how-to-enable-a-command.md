@@ -9,11 +9,11 @@ helpviewer_keywords:
 - commanding [WPF]
 ms.assetid: d8016266-58d9-48f7-8298-a86b7ed49fbd
 ms.openlocfilehash: bf01066a35672e1996f193abc6d76153e5e9dd46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032007"
 ---
 # <a name="how-to-enable-a-command"></a>Nasıl yapılır: Komutu Etkinleştirme
 Aşağıdaki örnek, komut vermeye genel kullanımı gösterilmiştir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  Örnek nasıl ilişkilendirildiğini gösterir. bir <xref:System.Windows.Input.RoutedCommand> için bir <xref:System.Windows.Controls.Button>, oluşturun bir <xref:System.Windows.Input.CommandBinding>ve uygulama olay işleyicileri oluşturma <xref:System.Windows.Input.RoutedCommand>.  Komut vermeye genel ile ilgili daha fazla bilgi için bkz: [komut vermeye genel genel bakış](commanding-overview.md).  

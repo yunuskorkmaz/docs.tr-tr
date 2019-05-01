@@ -6,11 +6,11 @@ helpviewer_keywords:
 - examples [Visual Basic], Char data type
 ms.assetid: 69f94e85-d57c-4ccc-a62a-426e829f5c5e
 ms.openlocfilehash: 1f72cb86ffa38dc929062fab2f5592a781f2de27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054061"
 ---
 # <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>Nasıl yapılır: (Visual Basic) karakter değerleri dizisinden bir dize oluşturma
 Bu örnek, tek tek karakteri "abcd" dize oluşturur.  

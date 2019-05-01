@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
 ms.openlocfilehash: cc38b0f3ded9e3c2a5a4146eb6bb474921d1e19f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012871"
 ---
 # <a name="label-control-overview-windows-forms"></a>Etiket Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Label> denetimleri, metin veya kullanıcı tarafından düzenlenemez resimleri görüntülemek için kullanılır. Form üzerindeki nesneleri tanımlamak için kullanılan — hangi belirli denetim açıklamasını yeterlidir seçeneğine tıkladıysanız, örneğin sağlamak ya da bir çalışma zamanı olay veya işlem uygulamanızda yanıt bilgileri görüntülemek için. Örneğin, metin kutuları, liste kutuları, birleşik giriş kutuları ve benzeri için açıklayıcı bir açıklamalı alt yazı eklemek için etiketleri kullanabilirsiniz. Olaylara yanıt olarak bir etiket tarafından çalışma zamanında görüntülenen metni değişiklikleri kod da yazabilirsiniz. Örneğin, uygulamanızın bir değişiklik işlemek için birkaç dakika sürer, bir işleme durum iletisi bir etikette görüntüleyebilirsiniz.  

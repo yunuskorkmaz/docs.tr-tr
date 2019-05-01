@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 ms.openlocfilehash: e4421cbc40cdccc1dbbaeb459cb12fda0ee407cf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022356"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Birlikte Çalışma'ya Giriş (Visual Basic)
 Bileşen Nesne Modeli (COM) diğer bileşenleri ve uygulamaları barındırmak için işlevselliği kullanıma sunma nesneyi sağlar. COM nesneleri Windows yıllardır programlama için temel kullanımda olsa, Ortak Dil Çalışma Zamanı Modülü (CLR) tasarlanmış uygulamalar birçok avantaj sunar.  
@@ -22,21 +22,21 @@ Bileşen Nesne Modeli (COM) diğer bileşenleri ve uygulamaları barındırmak i
 ## <a name="managed-code-and-data"></a>Yönetilen kod ve veriler  
  Geliştirilmiş kod için [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] olarak adlandırılır *yönetilen kod*ve CLR tarafından kullanılan meta veriler içerir. Tarafından kullanılan veri [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulamaları çağrılır *yönetilen verilerini* ayırma ve belleği geri kazanmak ve tür denetimi gibi verilerle ilgili görevler çalışma zamanı yönettiği için. Varsayılan olarak, Visual Basic .NET yönetilen kod ve veri kullanır ancak yönetilmeyen kod ve COM nesneleri (Bu sayfada daha sonra açıklanmıştır) birlikte çalışma derlemelerini kullanarak verileri erişebilirsiniz.  
   
-## <a name="assemblies"></a>Derlemeleri  
+## <a name="assemblies"></a>Bütünleştirilmiş kodlar  
  Bir derlemenin birincil yapı bloğudur bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulama. Yerleşik, oluşturulan ve dağıtılan bir veya daha fazla dosya içeren bir tek uygulama birim olarak işlevleri koleksiyonudur. Her derleme, derleme bildirimi içerir.  
   
 ## <a name="type-libraries-and-assembly-manifests"></a>Tür kitaplıkları ve derleme bildirimleri  
  Tür kitaplıkları, COM nesneleri, üye adları ve veri türleri gibi özellikleri açıklar. Derleme bildirimleri için de aynı işlevi gerçekleştirmek [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulamalar. Bunlar aşağıdakiler hakkında bilgi içerir:  
   
--   Derleme kimliği, sürüm, kültür ve dijital imza.  
+- Derleme kimliği, sürüm, kültür ve dijital imza.  
   
--   Derleme uygulamasını oluşturan dosyaları.  
+- Derleme uygulamasını oluşturan dosyaları.  
   
--   Türleri ve derlemeyi oluşturan kaynakları. Bu, ondan dışarı içerir.  
+- Türleri ve derlemeyi oluşturan kaynakları. Bu, ondan dışarı içerir.  
   
--   Diğer derlemelerdeki derleme zamanı bağımlılıklarını.  
+- Diğer derlemelerdeki derleme zamanı bağımlılıklarını.  
   
--   Derlemenin düzgün çalışması gereken izinler.  
+- Derlemenin düzgün çalışması gereken izinler.  
   
  Derlemeler ve derleme bildirimleri hakkında daha fazla bilgi için bkz. [.NET derlemeleri](../../../standard/assembly/index.md).  
   
@@ -57,7 +57,7 @@ Bileşen Nesne Modeli (COM) diğer bileşenleri ve uygulamaları barındırmak i
 - [İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 - [Yönetilmeyen Kod ile Birlikte Çalışma](../../../framework/interop/index.md)
 - [Birlikte Çalışabilirlik İle İlgili Sorun Giderme](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
-- [.NET derlemeleri](../../../standard/assembly/index.md)
+- [.NET’te bütünleştirilmiş kodlar](../../../standard/assembly/index.md)
 - [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
 - [Birlikte Çalışma için Hazırlama](../../../framework/interop/interop-marshaling.md)

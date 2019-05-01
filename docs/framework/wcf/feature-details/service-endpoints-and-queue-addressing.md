@@ -3,11 +3,11 @@ title: Hizmet Uç Noktaları ve Kuyruk İşleme
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
 ms.openlocfilehash: 4064b13b00d44f90a372df5364406fb16c1da9fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050395"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Hizmet Uç Noktaları ve Kuyruk İşleme
 Bu konuda, istemciler sıralarından okuyun hizmetleri nasıl karşılayabileceği ve hizmet uç noktaları sıralara nasıl eşleştiği anlatılmaktadır. Aşağıdaki çizimde, bir anımsatıcı Klasik Windows Communication Foundation (WCF) uygulama dağıtımı kuyruğa gösterir.  
@@ -34,11 +34,11 @@ Bu konuda, istemciler sıralarından okuyun hizmetleri nasıl karşılayabilece�
   
  burada:  
   
--   \<*ana bilgisayar adı*> hedef sıra barındıran bilgisayarın adıdır.  
+- \<*ana bilgisayar adı*> hedef sıra barındıran bilgisayarın adıdır.  
   
--   [özel] isteğe bağlıdır. Özel bir kuyruk bir hedef kuyruk işleme olduğunda kullanılır. Bir genel sıra gidermek için özel belirtmemelidir. MSMQ yolları, "$" hiçbir WCF URI biçiminde dikkat edin.  
+- [özel] isteğe bağlıdır. Özel bir kuyruk bir hedef kuyruk işleme olduğunda kullanılır. Bir genel sıra gidermek için özel belirtmemelidir. MSMQ yolları, "$" hiçbir WCF URI biçiminde dikkat edin.  
   
--   \<*Kuyruk adı*> Kuyruğun adı. Kuyruk adı için bir alt kuyruk de başvurabilir. Thus, \<*queue-name*> = \<*name-of-queue*>[;*sub-queue-name*].  
+- \<*Kuyruk adı*> Kuyruğun adı. Kuyruk adı için bir alt kuyruk de başvurabilir. Thus, \<*queue-name*> = \<*name-of-queue*>[;*sub-queue-name*].  
   
  Örnek1: Özel bir sıra bilgisayar abc atadatum.com üzerinde barındırılan PurchaseOrders adreslemek için URI net.msmq://abc.adatum.com/private/PurchaseOrders şeklinde olacaktır.  
   
@@ -51,9 +51,9 @@ Bu konuda, istemciler sıralarından okuyun hizmetleri nasıl karşılayabilece�
 ### <a name="multiple-contracts-in-a-queue"></a>Kuyruktaki birden fazla anlaşma  
  Sıradaki iletilerin farklı sözleşmeler uygulayabilirsiniz. Bu durumda, aşağıdakilerden birini başarıyla okumak ve tüm iletileri işlemek için doğru olduğunu gereklidir:  
   
--   Tüm anlaşmalar uygulayan bir hizmette bir uç noktasını belirtin. Bu önerilen bir yaklaşımdır.  
+- Tüm anlaşmalar uygulayan bir hizmette bir uç noktasını belirtin. Bu önerilen bir yaklaşımdır.  
   
--   Farklı sözleşmeler ile birden fazla uç nokta belirtin, ancak tüm uç noktalar aynı kullandığınızdan emin olun `NetMsmqBinding` nesne. ServiceModel dispatching mantık sonunda farklı uç noktalar sözleşmeye dayalı iletileri XML'deki bağlantıları çoğaltır gönderisi için taşıma kanalı iletileri okuyan bir ileti pompası kullanır. Bir ileti pompası, bir dinleme URI/bağlama çifti oluşturulur. Kuyruk adresi dinleme URI olarak sıraya alınan dinleyici tarafından kullanılır. Aynı bağlama nesnesi bir tek ileti pompası ileti okumak ve ilgili Uç noktalara çoğullamasını için kullanılmasını sağlar, tüm uç noktaları kullanmak zorunda sözleşme temel.  
+- Farklı sözleşmeler ile birden fazla uç nokta belirtin, ancak tüm uç noktalar aynı kullandığınızdan emin olun `NetMsmqBinding` nesne. ServiceModel dispatching mantık sonunda farklı uç noktalar sözleşmeye dayalı iletileri XML'deki bağlantıları çoğaltır gönderisi için taşıma kanalı iletileri okuyan bir ileti pompası kullanır. Bir ileti pompası, bir dinleme URI/bağlama çifti oluşturulur. Kuyruk adresi dinleme URI olarak sıraya alınan dinleyici tarafından kullanılır. Aynı bağlama nesnesi bir tek ileti pompası ileti okumak ve ilgili Uç noktalara çoğullamasını için kullanılmasını sağlar, tüm uç noktaları kullanmak zorunda sözleşme temel.  
   
 ### <a name="srmp-messaging"></a>SRMP Mesajlaşma  
  Daha önce bahsedildiği gibi SRMP Protokolü kuyruk sırası aktarımları için kullanabilirsiniz. Bir HTTP aktarımı iletileri iletim sırası hedef sıra arasındaki ilettiğinde yaygın olarak kullanılır.  

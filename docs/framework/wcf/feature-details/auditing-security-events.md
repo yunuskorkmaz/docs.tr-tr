@@ -5,11 +5,11 @@ helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048280"
 ---
 # <a name="auditing-security-events"></a>Güvenlik Etkinliklerini Denetleme
 Windows Communication Foundation (WCF) ile oluşturulan uygulamalar (başarı, başarısızlık veya her ikisi de) güvenlik olaylarını denetleme özelliği ile oturum açabilirsiniz. Olayları Windows sistem olay günlüğüne yazılır ve Olay Görüntüleyicisi'ni kullanarak incelenebilir.  
@@ -21,9 +21,9 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar (başarı, b
 ## <a name="audit-level-and-behavior"></a>Denetim düzeyi ve davranışı  
  İki düzeyde güvenlik denetimleri mevcuttur:  
   
--   Hizmet, bir çağıranın yetkili yetkilendirme düzeyi.  
+- Hizmet, bir çağıranın yetkili yetkilendirme düzeyi.  
   
--   İleti düzeyi, WCF ileti geçerliliğini denetler ve arayan kimliğini doğrular.  
+- İleti düzeyi, WCF ileti geçerliliğini denetler ve arayan kimliğini doğrular.  
   
  Her ikisi de başarılı veya başarısız olarak da bilinen düzeylerini denetim denetleyebilirsiniz *davranışını denetleme*.  
   

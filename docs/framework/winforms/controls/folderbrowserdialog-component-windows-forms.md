@@ -8,11 +8,11 @@ helpviewer_keywords:
 - directories [Windows Forms], browsing
 ms.assetid: d71a0c5e-898a-4eea-be74-93bdf50d1852
 ms.openlocfilehash: 6359ea9683b9a418b7fe92dacc6140865dd01a11
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011339"
 ---
 # <a name="folderbrowserdialog-component-windows-forms"></a>FolderBrowserDialog Bileşeni (Windows Forms)
 Windows Forms `FolderBrowserDialog` bileşen görüntüler bir arabirim ile kullanıcılar göz atın ve bir klasör seçin veya yeni bir tane oluşturun. Tamamlayan bir olduğu [OpenFileDialog bileşeni](openfiledialog-component-windows-forms.md) dosyalar seçiliyor ve Tarama için kullanılan bileşen.  

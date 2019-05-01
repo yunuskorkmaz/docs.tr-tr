@@ -5,11 +5,11 @@ helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
 ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032064"
 ---
 # <a name="base-elements-overview"></a>Temel Öğelere Genel Bakış
 Sınıflarda yüksek miktarda [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sık başvurulan dört sınıflardan türetilmiş [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] temel öğe sınıfları belgeler. Bu sınıflar <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, ve <xref:System.Windows.FrameworkContentElement>. <xref:System.Windows.DependencyObject> Sınıfı da ilgili, çünkü bu iki genel bir temel sınıf <xref:System.Windows.UIElement> ve <xref:System.Windows.ContentElement>  
@@ -31,49 +31,49 @@ Sınıflarda yüksek miktarda [!INCLUDE[TLA#tla_winclient](../../../../includes/
   
  Türetilen bir sınıf oluşturursanız <xref:System.Windows.DependencyObject>, aşağıdaki işlevleri devralır:  
   
--   <xref:System.Windows.DependencyObject.GetValue%2A> ve <xref:System.Windows.DependencyObject.SetValue%2A> desteği ve genel özellik sistemi desteği.  
+- <xref:System.Windows.DependencyObject.GetValue%2A> ve <xref:System.Windows.DependencyObject.SetValue%2A> desteği ve genel özellik sistemi desteği.  
   
--   Bağımlılık özellikleri bağımlılık özelliklerinin ve uygulanan ekli özelliklerini kullanma olanağı.  
+- Bağımlılık özellikleri bağımlılık özelliklerinin ve uygulanan ekli özelliklerini kullanma olanağı.  
   
  Türetilen bir sınıf oluşturursanız <xref:System.Windows.UIElement>, sağlanan ek olarak, aşağıdaki işlevleri devral <xref:System.Windows.DependencyObject>:  
   
--   Animasyonlu özellik değerlerini temel desteği. Daha fazla bilgi için [animasyona genel bakış](../graphics-multimedia/animation-overview.md).  
+- Animasyonlu özellik değerlerini temel desteği. Daha fazla bilgi için [animasyona genel bakış](../graphics-multimedia/animation-overview.md).  
   
--   Temel giriş olayı desteği ve komut verme desteği. Daha fazla bilgi için [giriş genel bakış](input-overview.md) ve [komut vermeye genel genel bakış](commanding-overview.md).  
+- Temel giriş olayı desteği ve komut verme desteği. Daha fazla bilgi için [giriş genel bakış](input-overview.md) ve [komut vermeye genel genel bakış](commanding-overview.md).  
   
--   Düzen sistemi bilgileri sağlamak için kılınabilen sanal yöntemler.  
+- Düzen sistemi bilgileri sağlamak için kılınabilen sanal yöntemler.  
   
  Türetilen bir sınıf oluşturursanız <xref:System.Windows.FrameworkElement>, sağlanan ek olarak, aşağıdaki işlevleri devral <xref:System.Windows.UIElement>:  
   
--   Stil ve görsel taslak desteği. Daha fazla bilgi için <xref:System.Windows.Style> ve [görsel taslaklara genel bakış](../graphics-multimedia/storyboards-overview.md).  
+- Stil ve görsel taslak desteği. Daha fazla bilgi için <xref:System.Windows.Style> ve [görsel taslaklara genel bakış](../graphics-multimedia/storyboards-overview.md).  
   
--   Veri bağlamayı destekler. Daha fazla bilgi için [Data Binding Overview](../data/data-binding-overview.md).  
+- Veri bağlamayı destekler. Daha fazla bilgi için [Data Binding Overview](../data/data-binding-overview.md).  
   
--   Dinamik kaynak başvuruları için destek. Daha fazla bilgi için [XAML kaynakları](xaml-resources.md).  
+- Dinamik kaynak başvuruları için destek. Daha fazla bilgi için [XAML kaynakları](xaml-resources.md).  
   
--   Özellik değeri devralma desteği ve meta verilerindeki framework Hizmetleri veri bağlama, stil veya Düzen framework uygulamasını gibi özellikleri hakkında rapor koşullar yardımcı diğer bayraklar. Daha fazla bilgi için [çerçeve özelliği meta verileri](framework-property-metadata.md).  
+- Özellik değeri devralma desteği ve meta verilerindeki framework Hizmetleri veri bağlama, stil veya Düzen framework uygulamasını gibi özellikleri hakkında rapor koşullar yardımcı diğer bayraklar. Daha fazla bilgi için [çerçeve özelliği meta verileri](framework-property-metadata.md).  
   
--   Mantıksal ağaç kavramı. Daha fazla bilgi için [WPF içinde ağaçlar](trees-in-wpf.md).  
+- Mantıksal ağaç kavramı. Daha fazla bilgi için [WPF içinde ağaçlar](trees-in-wpf.md).  
   
--   Düzen sistemi pratik WPF çerçeve düzeyi uygulanması için destek dahil olmak üzere bir <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> algılayabilir geçersiz kılma etkisi düzenini özelliklerini değiştirir.  
+- Düzen sistemi pratik WPF çerçeve düzeyi uygulanması için destek dahil olmak üzere bir <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> algılayabilir geçersiz kılma etkisi düzenini özelliklerini değiştirir.  
   
  Türetilen bir sınıf oluşturursanız <xref:System.Windows.ContentElement>, sağlanan ek olarak, aşağıdaki işlevleri devral <xref:System.Windows.DependencyObject>:  
   
--   Animasyon için destek. Daha fazla bilgi için [animasyona genel bakış](../graphics-multimedia/animation-overview.md).  
+- Animasyon için destek. Daha fazla bilgi için [animasyona genel bakış](../graphics-multimedia/animation-overview.md).  
   
--   Temel giriş olayı desteği ve komut verme desteği. Daha fazla bilgi için [giriş genel bakış](input-overview.md) ve [komut vermeye genel genel bakış](commanding-overview.md).  
+- Temel giriş olayı desteği ve komut verme desteği. Daha fazla bilgi için [giriş genel bakış](input-overview.md) ve [komut vermeye genel genel bakış](commanding-overview.md).  
   
  Türetilen bir sınıf oluşturursanız <xref:System.Windows.FrameworkContentElement>, buna ek olarak, tarafından sağlanan şu işlevleri elde edersiniz <xref:System.Windows.ContentElement>:  
   
--   Stil ve görsel taslak desteği. Daha fazla bilgi için <xref:System.Windows.Style> ve [animasyona genel bakış](../graphics-multimedia/animation-overview.md).  
+- Stil ve görsel taslak desteği. Daha fazla bilgi için <xref:System.Windows.Style> ve [animasyona genel bakış](../graphics-multimedia/animation-overview.md).  
   
--   Veri bağlamayı destekler. Daha fazla bilgi için [Data Binding Overview](../data/data-binding-overview.md).  
+- Veri bağlamayı destekler. Daha fazla bilgi için [Data Binding Overview](../data/data-binding-overview.md).  
   
--   Dinamik kaynak başvuruları için destek. Daha fazla bilgi için [XAML kaynakları](xaml-resources.md).  
+- Dinamik kaynak başvuruları için destek. Daha fazla bilgi için [XAML kaynakları](xaml-resources.md).  
   
--   Özellik değeri devralma desteği ve framework Hizmetleri özellikleri hakkında rapor koşullar yardımcı olan diğer bayraklar meta veri bağlama, stil veya Düzen framework uygulamasını ister. Daha fazla bilgi için [çerçeve özelliği meta verileri](framework-property-metadata.md).  
+- Özellik değeri devralma desteği ve framework Hizmetleri özellikleri hakkında rapor koşullar yardımcı olan diğer bayraklar meta veri bağlama, stil veya Düzen framework uygulamasını ister. Daha fazla bilgi için [çerçeve özelliği meta verileri](framework-property-metadata.md).  
   
--   Düzen sistemi değişikliklerine erişim devralmamanızı (gibi <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>). Düzen sistemi uygulamaları kullanılabilir yalnızca <xref:System.Windows.FrameworkElement>. Ancak, bir <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> etkilemek düzen ve içeriği tüm konakları Bu rapor özellikleri değişiklikleri algılayabilir geçersiz kılma.  
+- Düzen sistemi değişikliklerine erişim devralmamanızı (gibi <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>). Düzen sistemi uygulamaları kullanılabilir yalnızca <xref:System.Windows.FrameworkElement>. Ancak, bir <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> etkilemek düzen ve içeriği tüm konakları Bu rapor özellikleri değişiklikleri algılayabilir geçersiz kılma.  
   
  İçerik modelleri, sınıfları çeşitli için belirtilmiştir. İçerik modeli için bir sınıf türetmek için uygun bir sınıf bulmak istiyorsanız dikkate almanız gereken bir olası faktördür. Daha fazla bilgi için [WPF içerik modeli](../controls/wpf-content-model.md).  
   

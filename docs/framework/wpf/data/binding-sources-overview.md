@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
 ms.openlocfilehash: 72ef84cb53c6eff1fc2fb9459b40e780869243a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023786"
 ---
 # <a name="binding-sources-overview"></a>Kaynakların Bağlanmasına Genel Bakış
 Veri bağlamasında, bağlama kaynak nesne verilerden elde nesneye başvurur. Bu konu bağlama kaynağı olarak kullanabileceğiniz nesne türlerini açıklar.  
@@ -42,13 +42,13 @@ Veri bağlamasında, bağlama kaynak nesne verilerden elde nesneye başvurur. Bu
 ### <a name="other-characteristics"></a>Diğer özellikler  
  Dikkat edilecek diğer önemli noktaları listelenmektedir:  
   
--   Nesneyi oluşturmak istiyorsanız [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], sınıfın bir varsayılan oluşturucuya sahip olmalıdır. Bazı [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] diller gibi C#, varsayılan oluşturucu sizin için oluşturulmuş olabilir.  
+- Nesneyi oluşturmak istiyorsanız [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], sınıfın bir varsayılan oluşturucuya sahip olmalıdır. Bazı [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] diller gibi C#, varsayılan oluşturucu sizin için oluşturulmuş olabilir.  
   
--   Özellikleri bağlama kaynak özellikleri bir bağlama için kendi sınıfınızı genel özelliklerini olması gerektiği kullanırsınız. Açıkça tanımlanmış arabirimi özellikleri, bağlama amacıyla erişilemiyor ya da temel uygulaması olmayan korumalı, özel, iç veya sanal özelliklerine erişebilirsiniz.  
+- Özellikleri bağlama kaynak özellikleri bir bağlama için kendi sınıfınızı genel özelliklerini olması gerektiği kullanırsınız. Açıkça tanımlanmış arabirimi özellikleri, bağlama amacıyla erişilemiyor ya da temel uygulaması olmayan korumalı, özel, iç veya sanal özelliklerine erişebilirsiniz.  
   
--   Genel alanlar için bağlanamıyor.  
+- Genel alanlar için bağlanamıyor.  
   
--   Sınıfınız içinde bildirilen özellik türünü bağlamaya geçirilen türüdür. Ancak, sonuçta bağlama tarafından kullanılan tür bağlama hedefi özelliği türüne bağlıdır bağlama kaynak özelliği değil. Türü bir fark varsa, özel özelliğinizi bağlamaya başlangıçta nasıl geçtiğini işlemek üzere bir dönüştürücü yazmak isteyebilirsiniz. Daha fazla bilgi için bkz. <xref:System.Windows.Data.IValueConverter>.  
+- Sınıfınız içinde bildirilen özellik türünü bağlamaya geçirilen türüdür. Ancak, sonuçta bağlama tarafından kullanılan tür bağlama hedefi özelliği türüne bağlıdır bağlama kaynak özelliği değil. Türü bir fark varsa, özel özelliğinizi bağlamaya başlangıçta nasıl geçtiğini işlemek üzere bir dönüştürücü yazmak isteyebilirsiniz. Daha fazla bilgi için bkz. <xref:System.Windows.Data.IValueConverter>.  
   
 <a name="objects"></a>   
 ## <a name="using-entire-objects-as-a-binding-source"></a>Tüm nesneleri bağlama kaynağı kullanma  
@@ -80,11 +80,11 @@ Veri bağlamasında, bağlama kaynak nesne verilerden elde nesneye başvurur. Bu
   
  Bu tablo, veri bağlama izni gereksinimleri hakkında aşağıdaki önemli noktaları açıklar:  
   
--   İçin [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] özellikleri, veri bağlama çalışır bağlama altyapısı yansıma kullanarak bağlama kaynak özelliğine erişmek mümkün olduğu sürece. Aksi takdirde, bağlama altyapısı özelliği bulunamayan bir uyarı verir ve varsa, geri dönüş veya varsayılan değeri kullanır.  
+- İçin [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] özellikleri, veri bağlama çalışır bağlama altyapısı yansıma kullanarak bağlama kaynak özelliğine erişmek mümkün olduğu sürece. Aksi takdirde, bağlama altyapısı özelliği bulunamayan bir uyarı verir ve varsa, geri dönüş veya varsayılan değeri kullanır.  
   
--   Derleme zamanı veya çalışma zamanı tanımlanan dinamik nesnelerdeki özelliklerin bağlayabilirsiniz.  
+- Derleme zamanı veya çalışma zamanı tanımlanan dinamik nesnelerdeki özelliklerin bağlayabilirsiniz.  
   
--   Bağımlılık özellikleri için her zaman bağlayabilirsiniz.  
+- Bağımlılık özellikleri için her zaman bağlayabilirsiniz.  
   
  İzni gereksinimini [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] bağlama benzerdir. Kısmi güven korumalı alanı içinde <xref:System.Windows.Data.XmlDataProvider> başarısız olduğunda, belirtilen veri erişim izni yok.  
   

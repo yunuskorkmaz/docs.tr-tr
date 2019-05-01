@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
 ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050668"
 ---
 # <a name="using-data-contracts"></a>Veri Sözleşmelerini Kullanma
 A *veri anlaşması* hizmet bağlamalarında değiştirilebilmesi için verileri tanımlayan bir istemci arasındaki resmi bir sözleşme. Diğer bir deyişle, iletişim, istemciyi ve hizmeti yalnızca aynı veri sözleşmeleri aynı türleri paylaşılacak gerekmez. Bir veri anlaşması tam olarak, hangi verilerin serileştirilmiş (XML olarak açık) her parametre veya dönüş türü tanımlar değiştirilmek üzere.  
@@ -38,21 +38,21 @@ A *veri anlaşması* hizmet bağlamalarında değiştirilebilmesi için verileri
 ### <a name="notes"></a>Notlar  
  Aşağıdaki notlar, veri sözleşme oluşturmayı göz önünde bulundurulması gerekenlerin sağlayın:  
   
--   <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> Özniteliği ile işaretlenmemiş türleri kullanıldığında yalnızca kabul. Bu, biri ile işaretlenmemiş türlerini içerir <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.SerializableAttribute>, <xref:System.Runtime.Serialization.CollectionDataContractAttribute>, veya <xref:System.Runtime.Serialization.EnumMemberAttribute> öznitelikleri veya diğer herhangi bir yolla seri hale getirilebilir olarak işaretlenmiş (gibi <xref:System.Xml.Serialization.IXmlSerializable>).  
+- <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> Özniteliği ile işaretlenmemiş türleri kullanıldığında yalnızca kabul. Bu, biri ile işaretlenmemiş türlerini içerir <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.SerializableAttribute>, <xref:System.Runtime.Serialization.CollectionDataContractAttribute>, veya <xref:System.Runtime.Serialization.EnumMemberAttribute> öznitelikleri veya diğer herhangi bir yolla seri hale getirilebilir olarak işaretlenmiş (gibi <xref:System.Xml.Serialization.IXmlSerializable>).  
   
--   Uygulayabileceğiniz <xref:System.Runtime.Serialization.DataMemberAttribute> alanlar ve özellikler için özniteliği.  
+- Uygulayabileceğiniz <xref:System.Runtime.Serialization.DataMemberAttribute> alanlar ve özellikler için özniteliği.  
   
--   Üye erişilebilirlik düzeyleri (iç, özel, korumalı veya genel), veri sözleşme herhangi bir şekilde etkilemez.  
+- Üye erişilebilirlik düzeyleri (iç, özel, korumalı veya genel), veri sözleşme herhangi bir şekilde etkilemez.  
   
--   <xref:System.Runtime.Serialization.DataMemberAttribute> Özniteliği, statik üye uygulanırsa yoksayılır.  
+- <xref:System.Runtime.Serialization.DataMemberAttribute> Özniteliği, statik üye uygulanırsa yoksayılır.  
   
--   Serileştirme sırasında özelliği veri üyelerini serileştirilecek özelliklerin değerini almak get özelliği kod adı verilir.  
+- Serileştirme sırasında özelliği veri üyelerini serileştirilecek özelliklerin değerini almak get özelliği kod adı verilir.  
   
--   Seri durumundan çıkarma sırasında başlatılmamış bir nesne ilk, hiçbir oluşturucu türüne çağırmaya gerek kalmadan oluşturulur. Ardından tüm veri üyeleri seri.  
+- Seri durumundan çıkarma sırasında başlatılmamış bir nesne ilk, hiçbir oluşturucu türüne çağırmaya gerek kalmadan oluşturulur. Ardından tüm veri üyeleri seri.  
   
--   Seri durumundan çıkarma sırasında seri durumdan çıkarılmakta olan değerin özelliklerini ayarlamak özellik veri üyeleri için özellik kümesi kod adı verilir.  
+- Seri durumundan çıkarma sırasında seri durumdan çıkarılmakta olan değerin özelliklerini ayarlamak özellik veri üyeleri için özellik kümesi kod adı verilir.  
   
--   Bir veri anlaşması geçerli olması tüm veri üyelerini sıralamak mümkün olmalıdır. Seri hale getirilebilir türler tam bir listesi için bkz. [veri sözleşme seri hale getirici tarafından desteklenen türleri](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+- Bir veri anlaşması geçerli olması tüm veri üyelerini sıralamak mümkün olmalıdır. Seri hale getirilebilir türler tam bir listesi için bkz. [veri sözleşme seri hale getirici tarafından desteklenen türleri](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
      Genel türler, genel olmayan türleri tam olarak aynı şekilde ele alınır. Genel parametreler için özel bir gereksinim vardır. Örneğin, şu tür göz önünde bulundurun.  
   

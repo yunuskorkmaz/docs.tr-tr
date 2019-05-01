@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32005
 ms.assetid: 4039f51b-e0ee-4789-a89b-45d06de06b5d
 ms.openlocfilehash: 85573099ec0a3f8a23c17bdf384c4c105f9157df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055140"
 ---
 # <a name="statement-cannot-end-a-block-outside-of-a-line-if-statement"></a>Deyim, bir satır 'If' deyimi dışında blok sona erdiremez
 Tek satırlı `If` deyimi biri olan virgülle (:) ayırarak çeşitli deyimleri içeren bir `End` deyim için bir denetim bloğu tek satır dışında `If`. Tek satırlı `If` deyimleri kullanmayın `End If` deyimi.  
@@ -21,7 +21,7 @@ Tek satırlı `If` deyimi biri olan virgülle (:) ayırarak çeşitli deyimleri 
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Tek satırlı taşıma `If` içeren denetim bloğu dışında bir deyim `End If` deyimi.  
+- Tek satırlı taşıma `If` içeren denetim bloğu dışında bir deyim `End If` deyimi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

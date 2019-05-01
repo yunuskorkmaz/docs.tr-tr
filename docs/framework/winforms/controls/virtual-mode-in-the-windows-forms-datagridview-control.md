@@ -5,11 +5,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
 ms.openlocfilehash: f284835578221ad1fe859f260e37bb829cd64b2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009142"
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sanal Mod
 Arasındaki etkileşimi yönetebileceğiniz ile sanal modu, <xref:System.Windows.Forms.DataGridView> denetimi ve bir özel veri önbelleği. Sanal modu uygulamak için ayarlanmış <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> özelliğini `true` ve bir veya daha fazla bu konuda açıklanan olayları işler. Genellikle işleyecek en az `CellValueNeeded` değerleri önbellekteki denetimi arama sağlayan bir olay.  

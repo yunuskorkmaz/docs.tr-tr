@@ -13,11 +13,11 @@ helpviewer_keywords:
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
 ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051643"
 ---
 # <a name="drag-and-drop-overview"></a>Sürükleme ve Bırakmaya Genel Bakış
 Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Sürükle ve bırak fare (veya başka bir işaretleme cihazı) bir veya birden çok nesne seçmek için bu nesneleri sürükleyerek üzerinden bazı istenen bırakma hedefi kullanılmasına veri aktarım yöntemi için yaygın olarak başvuruyor [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]ve onları bırakma.  
@@ -41,11 +41,11 @@ Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tl
 ## <a name="data-transfer"></a>Veri Aktarımı  
  Sürükle ve bırak daha genel alanı veri aktarımı'nın bir parçasıdır. Veri aktarımı, sürükle ve bırak ve kopyalama ve yapıştırma işlemlerini içerir. Bir Sürükle ve bırak işlemi, Sistem panosu kullanılarak bir nesne veya başka bir uygulamaya veri aktarımı için kullanılan bir kopyalama ve yapıştırma veya Kes ve Yapıştır işlemi benzerdir. Her iki tür işlemleri gerektirir:  
   
--   Veri sağlayan bir kaynak nesne.  
+- Veri sağlayan bir kaynak nesne.  
   
--   Geçici olarak aktarılan verileri depolamak için bir yol.  
+- Geçici olarak aktarılan verileri depolamak için bir yol.  
   
--   Verileri alan bir hedef nesne.  
+- Verileri alan bir hedef nesne.  
   
  Kopyalama ve yapıştırma işleminde, sistem panosuna geçici olarak aktarılan verileri depolamak için kullanılır; bir Sürükle ve bırak işleminde bir <xref:System.Windows.DataObject> verileri depolamak için kullanılır. Kavramsal olarak, bir veri nesnesi, bir veya daha fazla çiftlerinden oluşan bir <xref:System.Object> gerçek veriler ve karşılık gelen bir veri biçimi tanımlayıcısı içeriyor.  
   
@@ -94,31 +94,31 @@ Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tl
   
  Basit sürükle ve bırak uygulamak için aşağıdaki görevleri tamamlar:  
   
--   Bir sürükleme kaynağı olacak öğe belirleyin. Bir sürükleme kaynağı olabilir bir <xref:System.Windows.UIElement> veya <xref:System.Windows.ContentElement>.  
+- Bir sürükleme kaynağı olacak öğe belirleyin. Bir sürükleme kaynağı olabilir bir <xref:System.Windows.UIElement> veya <xref:System.Windows.ContentElement>.  
   
--   Bir olay işleyicisi, sürükle ve bırak işlemi başlatacak sürükleme kaynağı oluşturun. Genellikle olaydır <xref:System.Windows.UIElement.MouseMove> olay.  
+- Bir olay işleyicisi, sürükle ve bırak işlemi başlatacak sürükleme kaynağı oluşturun. Genellikle olaydır <xref:System.Windows.UIElement.MouseMove> olay.  
   
--   Sürükleme kaynağı olay işleyicisi çağırma <xref:System.Windows.DragDrop.DoDragDrop%2A> sürükle ve bırak işlemi başlatmak için yöntem. İçinde <xref:System.Windows.DragDrop.DoDragDrop%2A> çağrı, sürükleme kaynağı, aktarılacak veriler ve izin verilen efektleri belirtin.  
+- Sürükleme kaynağı olay işleyicisi çağırma <xref:System.Windows.DragDrop.DoDragDrop%2A> sürükle ve bırak işlemi başlatmak için yöntem. İçinde <xref:System.Windows.DragDrop.DoDragDrop%2A> çağrı, sürükleme kaynağı, aktarılacak veriler ve izin verilen efektleri belirtin.  
   
--   Bir bırakma hedefi olacak öğesini belirleyin. Bir bırakma hedefi olarak <xref:System.Windows.UIElement> veya <xref:System.Windows.ContentElement>.  
+- Bir bırakma hedefi olacak öğesini belirleyin. Bir bırakma hedefi olarak <xref:System.Windows.UIElement> veya <xref:System.Windows.ContentElement>.  
   
--   Bırakma hedefi üzerinde ayarlanmış <xref:System.Windows.UIElement.AllowDrop%2A> özelliğini `true`.  
+- Bırakma hedefi üzerinde ayarlanmış <xref:System.Windows.UIElement.AllowDrop%2A> özelliğini `true`.  
   
--   Bırakma hedefi oluşturma bir <xref:System.Windows.DragDrop.Drop> bırakılan veri işlemek için olay işleyicisi.  
+- Bırakma hedefi oluşturma bir <xref:System.Windows.DragDrop.Drop> bırakılan veri işlemek için olay işleyicisi.  
   
--   İçinde <xref:System.Windows.DragDrop.Drop> olay işleyicisi, verileri ayıklamayı <xref:System.Windows.DragEventArgs> kullanarak <xref:System.Windows.DataObject.GetDataPresent%2A> ve <xref:System.Windows.DataObject.GetData%2A> yöntemleri.  
+- İçinde <xref:System.Windows.DragDrop.Drop> olay işleyicisi, verileri ayıklamayı <xref:System.Windows.DragEventArgs> kullanarak <xref:System.Windows.DataObject.GetDataPresent%2A> ve <xref:System.Windows.DataObject.GetData%2A> yöntemleri.  
   
--   İçinde <xref:System.Windows.DragDrop.Drop> olay işleyicisi, istenen sürükle ve bırak işlemi gerçekleştirmek için verileri kullanın.  
+- İçinde <xref:System.Windows.DragDrop.Drop> olay işleyicisi, istenen sürükle ve bırak işlemi gerçekleştirmek için verileri kullanın.  
   
  Sürükle ve bırak uygulamanıza özel bir oluşturarak artırabileceğinizi <xref:System.Windows.DataObject> ve işleme isteğe bağlı kaynak ve bırakma hedefi olayları, aşağıdaki görevleri gösterildiği sürükleyin:  
   
--   Özel veri veya birden çok veri öğeleri aktarmak için oluşturun bir <xref:System.Windows.DataObject> geçirilecek <xref:System.Windows.DragDrop.DoDragDrop%2A> yöntemi.  
+- Özel veri veya birden çok veri öğeleri aktarmak için oluşturun bir <xref:System.Windows.DataObject> geçirilecek <xref:System.Windows.DragDrop.DoDragDrop%2A> yöntemi.  
   
--   Bir sürükleme sırasında ek işlemleri gerçekleştirmek için tanıtıcı <xref:System.Windows.DragDrop.DragEnter>, <xref:System.Windows.DragDrop.DragOver>, ve <xref:System.Windows.DragDrop.DragLeave> bırakma hedefi olayları.  
+- Bir sürükleme sırasında ek işlemleri gerçekleştirmek için tanıtıcı <xref:System.Windows.DragDrop.DragEnter>, <xref:System.Windows.DragDrop.DragOver>, ve <xref:System.Windows.DragDrop.DragLeave> bırakma hedefi olayları.  
   
--   Fare işaretçisi görünümünü değiştirmek için tanıtıcı <xref:System.Windows.DragDrop.GiveFeedback> sürükleme kaynağı olayı.  
+- Fare işaretçisi görünümünü değiştirmek için tanıtıcı <xref:System.Windows.DragDrop.GiveFeedback> sürükleme kaynağı olayı.  
   
--   Sürükle ve bırak işleminin iptal nasıl değiştirileceğini işlemek <xref:System.Windows.DragDrop.QueryContinueDrag> sürükleme kaynağı olayı.  
+- Sürükle ve bırak işleminin iptal nasıl değiştirileceğini işlemek <xref:System.Windows.DragDrop.QueryContinueDrag> sürükleme kaynağı olayı.  
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>Sürükle ve bırak örnek  
@@ -129,13 +129,13 @@ Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tl
 ### <a name="enabling-an-element-to-be-a-drag-source"></a>Bir sürükleme kaynağı olarak bir öğeyi etkinleştirme  
  Bir sürükleme kaynağı olan bir nesne için sorumludur:  
   
--   Bir sürükleme oluştuğunda tanımlayıcı.  
+- Bir sürükleme oluştuğunda tanımlayıcı.  
   
--   Sürükle ve bırak işlemi başlatılıyor.  
+- Sürükle ve bırak işlemi başlatılıyor.  
   
--   Verilerin aktarılması için tanımlayıcı.  
+- Verilerin aktarılması için tanımlayıcı.  
   
--   Sürükle ve bırak işlemi aktarılan veriler için izin verilen efektleri belirtme.  
+- Sürükle ve bırak işlemi aktarılan veriler için izin verilen efektleri belirtme.  
   
  Sürükleme kaynağı, kullanıcıya izin verilen eylemleri ile ilgili geri bildirim de verebilir (taşıyın, kopyalayın, none) ve sürükleme sırasında ESC tuşuna basarak gibi ek kullanıcı girişini dayalı sürükle ve bırak işlemini iptal edebilirsiniz.  
   
@@ -146,11 +146,11 @@ Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tl
   
  İçine <xref:System.Windows.UIElement.MouseMove> olay işleyicisi, çağrı <xref:System.Windows.DragDrop.DoDragDrop%2A> sürükle ve bırak işlemi başlatmak için yöntem. <xref:System.Windows.DragDrop.DoDragDrop%2A> Yöntemi üç parametreleri alır:  
   
--   `dragSource` – Aktarılan verileri kaynak bağımlılık nesnesi bir başvuru; Bu genellikle kaynağıdır <xref:System.Windows.UIElement.MouseMove> olay.  
+- `dragSource` – Aktarılan verileri kaynak bağımlılık nesnesi bir başvuru; Bu genellikle kaynağıdır <xref:System.Windows.UIElement.MouseMove> olay.  
   
--   `data` -İçinde sarmalanmış aktarılan verileri içeren bir nesne bir <xref:System.Windows.DataObject>.  
+- `data` -İçinde sarmalanmış aktarılan verileri içeren bir nesne bir <xref:System.Windows.DataObject>.  
   
--   `allowedEffects` -Biri <xref:System.Windows.DragDropEffects> sürükle ve bırak işlemi izin verilen etkilerini belirten numaralandırma değerlerinden.  
+- `allowedEffects` -Biri <xref:System.Windows.DragDropEffects> sürükle ve bırak işlemi izin verilen etkilerini belirten numaralandırma değerlerinden.  
   
  Herhangi bir seri hale getirilebilir nesne geçirilebilir `data` parametresi. Varsa, verileri önceden sarmalanmamış bir <xref:System.Windows.DataObject>, bunu otomatik olarak yeni bir sarmalanır <xref:System.Windows.DataObject>. Birden çok veri öğelerini geçirmek için oluşturmalısınız <xref:System.Windows.DataObject> kendiniz ve geçirin <xref:System.Windows.DragDrop.DoDragDrop%2A> yöntemi. Daha fazla bilgi için [veri ve veri nesneleri](data-and-data-objects.md).  
   
@@ -171,13 +171,13 @@ Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tl
 ### <a name="enabling-an-element-to-be-a-drop-target"></a>Bir bırakma hedefi olarak bir öğeyi etkinleştirme  
  Bir bırakma hedefi olan nesne için sorumludur:  
   
--   Geçerli bırakma hedefi olduğunu belirleme.  
+- Geçerli bırakma hedefi olduğunu belirleme.  
   
--   Hedef sürüklediğinde Sürükle kaynağına yanıt.  
+- Hedef sürüklediğinde Sürükle kaynağına yanıt.  
   
--   Aktarılan veriler alabileceği bir biçimde olup olmadığını denetleyerek.  
+- Aktarılan veriler alabileceği bir biçimde olup olmadığını denetleyerek.  
   
--   Bırakılan veri işleme.  
+- Bırakılan veri işleme.  
   
  Bir bırakma hedefi bir öğedir, ayarladığınız belirtmek için kendi <xref:System.Windows.UIElement.AllowDrop%2A> özelliğini `true`. Bırakma hedefi olayları, sonra bunları işleyebilmesi öğede gerçekleştirilecektir. Bir Sürükle ve bırak işlemi sırasında bırakma hedefi üzerinde aşağıdaki olaylar dizisi gerçekleşir:  
   

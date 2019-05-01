@@ -10,34 +10,34 @@ helpviewer_keywords:
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
 ms.openlocfilehash: 6485aa9f2094b734f796ff38a33f4e0d3434e004
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053112"
 ---
 # <a name="table-overview"></a>Tabloya Genel Bakış
 <xref:System.Windows.Documents.Table> ızgara tabanlı akış belge içeriği sunumunu destekleyen bir blok düzeyinde öğesidir. Bu öğenin esnekliğini çok kullanışlı hale getirir, ancak aynı zamanda, anlamak ve doğru bir şekilde kullanmak için daha karmaşık hale getirir.  
   
  Bu konuda aşağıdaki bölümleri içerir.  
   
--   [Tablo Temelleri](#table_basics)  
+- [Tablo Temelleri](#table_basics)  
   
--   [Nasıl tablo farklı sonra kılavuz var mı?](#table_vs_Grid)  
+- [Nasıl tablo farklı sonra kılavuz var mı?](#table_vs_Grid)  
   
--   [Temel tablo yapısı](#basic_table_structure)  
+- [Temel tablo yapısı](#basic_table_structure)  
   
--   [Tablo kapsama](#table_containment)  
+- [Tablo kapsama](#table_containment)  
   
--   [Satır grupları](#row_groupings)  
+- [Satır grupları](#row_groupings)  
   
--   [Arka plan işleme önceliği](#rendering_precedence)  
+- [Arka plan işleme önceliği](#rendering_precedence)  
   
--   [Satırları veya sütunları yayma](#spanning_rows_or_columns)  
+- [Satırları veya sütunları yayma](#spanning_rows_or_columns)  
   
--   [Kod içeren bir tablo oluşturma](#building_a_table_with_code)  
+- [Kod içeren bir tablo oluşturma](#building_a_table_with_code)  
   
--   [İlgili konular] 
+- [İlgili konular] 
   
 <a name="table_basics"></a>   
 ## <a name="table-basics"></a>Tablo Temelleri  
@@ -50,15 +50,15 @@ ms.locfileid: "59317668"
 ### <a name="basic-table-structure"></a>Temel tablo yapısı  
  <xref:System.Windows.Documents.Table> sütunlardan oluşan bir kılavuz tabanlı sunu sağlar (tarafından temsil edilen <xref:System.Windows.Documents.TableColumn> öğeleri) ve satır (tarafından temsil edilen <xref:System.Windows.Documents.TableRow> öğeleri). <xref:System.Windows.Documents.TableColumn> Öğe içerik barındırmayan; Bunlar yalnızca sütunları ve sütun özelliklerini tanımlayın. <xref:System.Windows.Documents.TableRow> öğeleri barındırılan, içinde bir <xref:System.Windows.Documents.TableRowGroup> tablosundaki satırları bir gruplandırmasını tanımlar. <xref:System.Windows.Documents.TableCell> Tablo tarafından sunulan gerçek içeriği içeren, öğeleri, barındırılan, içinde bir <xref:System.Windows.Documents.TableRow> öğesi. <xref:System.Windows.Documents.TableCell> yalnızca türetilen öğeler içerebilir <xref:System.Windows.Documents.Block>.  Geçerli alt öğeleri için bir <xref:System.Windows.Documents.TableCell> içerir.  
   
--   <xref:System.Windows.Documents.BlockUIContainer>  
+- <xref:System.Windows.Documents.BlockUIContainer>  
   
--   <xref:System.Windows.Documents.List>  
+- <xref:System.Windows.Documents.List>  
   
--   <xref:System.Windows.Documents.Paragraph>  
+- <xref:System.Windows.Documents.Paragraph>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Table>  
+- <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.TableCell> öğe metin içeriği doğrudan barındıramazsınız. Akış için kapsama kuralları hakkında daha fazla bilgi için gibi içerik öğeler <xref:System.Windows.Documents.TableCell>, bkz: [akış belgesine genel bakış](flow-document-overview.md).  
@@ -78,19 +78,19 @@ ms.locfileid: "59317668"
 ### <a name="table-containment"></a>Tablo kapsama  
  <xref:System.Windows.Documents.Table> öğesinden türetilen <xref:System.Windows.Documents.Block> öğesi için genel kurallar aynılarını ve <xref:System.Windows.Documents.Block> düzey öğeleri.  A <xref:System.Windows.Documents.Table> öğesi yer almalıdır herhangi aşağıdaki öğeleri biri:  
   
--   <xref:System.Windows.Documents.FlowDocument>  
+- <xref:System.Windows.Documents.FlowDocument>  
   
--   <xref:System.Windows.Documents.TableCell>  
+- <xref:System.Windows.Documents.TableCell>  
   
--   <xref:System.Windows.Controls.ListBoxItem>  
+- <xref:System.Windows.Controls.ListBoxItem>  
   
--   <xref:System.Windows.Controls.ListViewItem>  
+- <xref:System.Windows.Controls.ListViewItem>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Floater>  
+- <xref:System.Windows.Documents.Floater>  
   
--   <xref:System.Windows.Documents.Figure>  
+- <xref:System.Windows.Documents.Figure>  
   
 <a name="row_groupings"></a>   
 ### <a name="row-groupings"></a>Satır grupları  

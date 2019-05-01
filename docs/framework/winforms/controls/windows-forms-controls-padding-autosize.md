@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
 ms.openlocfilehash: 230c7cb80ce6b8a29f7334ed0f8d297fd829faf9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009090"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>İzlenecek yol: Doldurma, Kenar Boşlukları ve AutoSize Özelliği ile Windows Forms Denetimlerini Düzenleme
 Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek öncelik taşır. **Windows Form Tasarımcısı** , bunu gerçekleştirmek için çok sayıda düzen araçları sağlar. En önemli üç olan <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, ve <xref:System.Windows.Forms.Control.AutoSize%2A> tüm Windows Forms denetimleri var olan özellikleri.  
@@ -37,13 +37,13 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
   
  Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
   
--   Bir Windows Forms projesi oluşturma  
+- Bir Windows Forms projesi oluşturma  
   
--   İçin Denetim kenar boşluklarını ayarlama  
+- İçin Denetim kenar boşluklarını ayarlama  
   
--   Doldurma için denetimleri ayarlama  
+- Doldurma için denetimleri ayarlama  
   
--   Denetimleri otomatik boyutlandırma  
+- Denetimleri otomatik boyutlandırma  
   
  İşlemi tamamladığınızda, bu önemli bir düzen özellikleri tarafından oynadığı rol, bir anlayışa sahip olacaksınız.  
   
@@ -53,7 +53,7 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yolu tamamlamak için şunlar gerekir:  
   
--   Oluşturma ve Windows Forms application projesi Visual Studio'nun yüklü bilgisayarda çalıştırmak için yeterli izinleri yok.  
+- Oluşturma ve Windows Forms application projesi Visual Studio'nun yüklü bilgisayarda çalıştırmak için yeterli izinleri yok.  
   
 ## <a name="creating-the-project"></a>Projeyi Oluşturma  
  İlk adım projeyi oluşturmak ve formu ayarlamaktır.  
@@ -178,11 +178,11 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Windows Forms uygulamalarındaki denetimleri düzenleme için birçok diğer düzen özelliği vardır. Deneyebilecekleriniz bazı birleşimleri şunlardır:  
   
--   Form kullanarak bir derleme bir <xref:System.Windows.Forms.TableLayoutPanel> denetimi. Ayrıntılar için bkz [izlenecek yol: TableLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md). Değerini değiştirmeyi deneyin <xref:System.Windows.Forms.TableLayoutPanel> denetimin <xref:System.Windows.Forms.Control.Padding%2A> özelliğinin yanı sıra <xref:System.Windows.Forms.Control.Margin%2A> , alt denetimlerini özelliği.  
+- Form kullanarak bir derleme bir <xref:System.Windows.Forms.TableLayoutPanel> denetimi. Ayrıntılar için bkz [izlenecek yol: TableLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md). Değerini değiştirmeyi deneyin <xref:System.Windows.Forms.TableLayoutPanel> denetimin <xref:System.Windows.Forms.Control.Padding%2A> özelliğinin yanı sıra <xref:System.Windows.Forms.Control.Margin%2A> , alt denetimlerini özelliği.  
   
--   Kullanarak aynı denemeyi deneyin bir <xref:System.Windows.Forms.FlowLayoutPanel> denetimi. Ayrıntılar için bkz [izlenecek yol: FlowLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
+- Kullanarak aynı denemeyi deneyin bir <xref:System.Windows.Forms.FlowLayoutPanel> denetimi. Ayrıntılar için bkz [izlenecek yol: FlowLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
--   Alt denetimleri yerleştirme ile deneme bir <xref:System.Windows.Forms.Panel> denetimi. <xref:System.Windows.Forms.Control.Padding%2A> Özelliği, daha fazla genel gerçekleştirme <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> özelliğini karşılamak kendinizi bu durumun bir alt denetimin koyarak geçerli olup olmadığını bir <xref:System.Windows.Forms.Panel> denetimi ve alt denetim ayarı <xref:System.Windows.Forms.Control.Dock%2A> özelliğini<xref:System.Windows.Forms.DockStyle.Fill>. Ayarlama <xref:System.Windows.Forms.Panel> denetimin <xref:System.Windows.Forms.Control.Padding%2A> özelliğini çeşitli değerleri ve Not etkisi.  
+- Alt denetimleri yerleştirme ile deneme bir <xref:System.Windows.Forms.Panel> denetimi. <xref:System.Windows.Forms.Control.Padding%2A> Özelliği, daha fazla genel gerçekleştirme <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> özelliğini karşılamak kendinizi bu durumun bir alt denetimin koyarak geçerli olup olmadığını bir <xref:System.Windows.Forms.Panel> denetimi ve alt denetim ayarı <xref:System.Windows.Forms.Control.Dock%2A> özelliğini<xref:System.Windows.Forms.DockStyle.Fill>. Ayarlama <xref:System.Windows.Forms.Panel> denetimin <xref:System.Windows.Forms.Control.Padding%2A> özelliğini çeşitli değerleri ve Not etkisi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

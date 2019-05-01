@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40042
 ms.assetid: 1d6eae29-4ad3-4434-bde4-a53b6051adf5
 ms.openlocfilehash: 39054fb6bf82a344cb38613164cb42968aa632f7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051552"
 ---
 # <a name="type-of-optional-value-for-optional-parameter-parametername-is-not-cls-compliant"></a>İsteğe bağlı parametre için isteğe bağlı değerin türü \<parametername > CLS uyumlu değil
 Bir yordam olarak işaretlenmiş `<CLSCompliant(True)>` bildirir, ancak bir [isteğe bağlı](../../../visual-basic/language-reference/modifiers/optional.md) parametresi ile uyumlu olmayan bir türün varsayılan değeri.  
@@ -21,13 +21,13 @@ Bir yordam olarak işaretlenmiş `<CLSCompliant(True)>` bildirir, ancak bir [ist
   
  Aşağıdaki Visual Basic veri türleri CLS uyumlu değildir:  
   
--   [SByte Veri Türü](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+- [SByte Veri Türü](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
--   [UInteger Veri Türü](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+- [UInteger Veri Türü](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
   
--   [ULong Veri Türü](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+- [ULong Veri Türü](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
   
--   [UShort Veri Türü](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+- [UShort Veri Türü](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
  Uyguladığınızda <xref:System.CLSCompliantAttribute> özniteliği özniteliğin ayarladığınız bir programlama öğesine `isCompliant` ya da parametre `True` veya `False` uyumluluk veya uyumsuzluk belirtmek için. Bu parametre için varsayılan yok ve bir değer sağlamanız gerekir.  
   
@@ -39,8 +39,8 @@ Bir yordam olarak işaretlenmiş `<CLSCompliant(True)>` bildirir, ancak bir [ist
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   İsteğe bağlı parametre isteyenler bu tür bir varsayılan değerine sahip olmalıdır, kaldırmanız <xref:System.CLSCompliantAttribute>. Yordamı, CLS uyumlu olamaz.  
+- İsteğe bağlı parametre isteyenler bu tür bir varsayılan değerine sahip olmalıdır, kaldırmanız <xref:System.CLSCompliantAttribute>. Yordamı, CLS uyumlu olamaz.  
   
--   Yordamı CLS uyumlu olması gerekiyorsa, bu varsayılan değer türü en yakın CLS uyumlu türüne değiştirin. Örneğin, içinde yerine, `UInteger` kullanmanız mümkün olabilir `Integer` 2.147.483.647 yukarıda değer aralığı gerekmiyorsa. Genişletilmiş aralık gerekiyorsa, değiştirebileceğiniz `UInteger` ile `Long`.  
+- Yordamı CLS uyumlu olması gerekiyorsa, bu varsayılan değer türü en yakın CLS uyumlu türüne değiştirin. Örneğin, içinde yerine, `UInteger` kullanmanız mümkün olabilir `Integer` 2.147.483.647 yukarıda değer aralığı gerekmiyorsa. Genişletilmiş aralık gerekiyorsa, değiştirebileceğiniz `UInteger` ile `Long`.  
   
--   Otomasyon ve COM nesneleri ile arabirim, bazı türleri farklı veri genişliği kıyasla olduğunu aklınızda bulundurun [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Örneğin, `int` 16 bit diğer ortamlarda genellikle olur. Böyle bir bileşenin bir 16 bitlik tamsayı kabul ediyorsanız, olarak bildirin `Short` yerine `Integer` Yönetilen Visual Basic kodunuzda.
+- Otomasyon ve COM nesneleri ile arabirim, bazı türleri farklı veri genişliği kıyasla olduğunu aklınızda bulundurun [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Örneğin, `int` 16 bit diğer ortamlarda genellikle olur. Böyle bir bileşenin bir 16 bitlik tamsayı kabul ediyorsanız, olarak bildirin `Short` yerine `Integer` Yönetilen Visual Basic kodunuzda.

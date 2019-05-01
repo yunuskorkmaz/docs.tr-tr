@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
 ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050707"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma
 Kuyruğa alınmış iletiler teslim başarısız olabilir. Bu başarısız iletileri teslim edilemeyen kuyrukta kaydedilir. Ağ hataları, silinen bir kuyruk, dolu bir sıra, kimlik doğrulama hatası veya zamanında sunmak için bir hata gibi nedenlerle başarısız teslim neden olabilir.  
@@ -30,18 +30,18 @@ Kuyruğa alınmış iletiler teslim başarısız olabilir. Bu başarısız ileti
   
  Bağlama aşağıdaki eski ileti sırası özelliklere sahiptir:  
   
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
   
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
 ## <a name="reading-messages-from-the-dead-letter-queue"></a>Teslim edilemeyen kuyruktan iletileri okuma  
  Geçerliliğini yitirmiş kuyruk iletileri okuyan bir uygulaması aşağıdaki küçük farklılıklar dışında bir uygulama kuyruktan okuyan bir WCF Hizmeti benzer:  
   
--   Bir sistem işlem eski ileti sırası iletileri okumak için Tekdüzen Kaynak Tanımlayıcısı (URI) biçiminde olmalıdır: net.msmq://localhost/system$; DeadXact.  
+- Bir sistem işlem eski ileti sırası iletileri okumak için Tekdüzen Kaynak Tanımlayıcısı (URI) biçiminde olmalıdır: net.msmq://localhost/system$; DeadXact.  
   
--   Bir sistem işlem olmayan eski ileti sırası iletileri okumak için URI biçiminde olmalıdır: net.msmq://localhost/system$; teslim edilemeyen iletiler.  
+- Bir sistem işlem olmayan eski ileti sırası iletileri okumak için URI biçiminde olmalıdır: net.msmq://localhost/system$; teslim edilemeyen iletiler.  
   
--   Özel teslim edilemeyen kuyruktan iletileri okumak için URI form: net.msmq://localhost/private/ olmalıdır\<*özel dlq adı*> Burada *özel dlq adı* özel adı eski ileti sırası.  
+- Özel teslim edilemeyen kuyruktan iletileri okumak için URI form: net.msmq://localhost/private/ olmalıdır\<*özel dlq adı*> Burada *özel dlq adı* özel adı eski ileti sırası.  
   
  Adresi kuyruklara hakkında daha fazla bilgi için bkz. [hizmet uç noktaları ve kuyruk işleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   

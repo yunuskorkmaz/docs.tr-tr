@@ -3,11 +3,11 @@ title: WCF Bilinen Adını COM İstemcileri ile Kullanma
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
 ms.openlocfilehash: 14907dd3df66478e8f84b7735a84dd500855448b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051617"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>WCF Bilinen Adını COM İstemcileri ile Kullanma
 Bu örnek, Windows Communication Foundation (WCF) hizmet bilinen adını COM tabanlı geliştirme ortamlarına uygulamaları (Office VBA) için Microsoft Office Visual Basic veya Visual Basic 6.0 gibi Web Hizmetleri Tümleştirme için nasıl kullanılacağını gösterir. Bu örnek bir Windows komut dosyası ana bilgisayarı istemci (.vbs) destekleyen bir istemci kitaplığı (.dll) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmet hesap makinesi hizmetidir ve COM istemcisi matematik işlemlerini çağıran — ekleme, çıkarma, çarpma ve bölme — hizmet. İleti kutusu windows istemci etkinliği görülebilir.  
@@ -43,11 +43,11 @@ public interface ICalculator
   
  Örneği için bilinen ad kullanarak üç alternatif yaklaşımlar gösterir:  
   
--   Yazılı Sözleşme – Sözleşme, istemci bilgisayarda bir COM görünür türü olarak kaydedilir.  
+- Yazılı Sözleşme – Sözleşme, istemci bilgisayarda bir COM görünür türü olarak kaydedilir.  
   
--   WSDL sözleşme – sözleşmenin bir WSDL Belgesi biçiminde sağlanır.  
+- WSDL sözleşme – sözleşmenin bir WSDL Belgesi biçiminde sağlanır.  
   
--   Çalışma zamanında bir meta veri değişimi (MEX) uç noktasından metadata Exchange Sözleşme – Sözleşme alınır.  
+- Çalışma zamanında bir meta veri değişimi (MEX) uç noktasından metadata Exchange Sözleşme – Sözleşme alınır.  
   
 ## <a name="typed-contract"></a>Yazılı sözleşme  
  Bilinen ad yazılı sözleşme ile kullanma için hizmet sözleşmesi için uygun şekilde öznitelikli türleri com ile kayıtlı olması gerekir İlk olarak, bir istemci kullanarak oluşturulmalıdır [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Türü belirtilmiş bir proxy oluşturmak için istemci dizininde bir komut isteminden aşağıdaki komutu çalıştırın.  
@@ -87,11 +87,11 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
   
  Bilinen ad tarafından kullanılan parametreleri belirtin:  
   
--   Hizmet uç noktası adresi.  
+- Hizmet uç noktası adresi.  
   
--   İstemci uç noktasına bağlanmak için kullanması gereken bağlama. İstemci yapılandırma dosyalarında özel bağlamalar tanımlanabilir, ancak bu durumda, sistem tarafından tanımlanan wsHttpBinding kullanılır. Windows Script Host ile kullanım için özel bağlama Cscript.exe aynı dizine Cscript.exe.config dosyasında tanımlanır.  
+- İstemci uç noktasına bağlanmak için kullanması gereken bağlama. İstemci yapılandırma dosyalarında özel bağlamalar tanımlanabilir, ancak bu durumda, sistem tarafından tanımlanan wsHttpBinding kullanılır. Windows Script Host ile kullanım için özel bağlama Cscript.exe aynı dizine Cscript.exe.config dosyasında tanımlanır.  
   
--   Uç noktada desteklenen sözleşme türü. Bu, oluşturulan ve yukarıda kayıtlı türüdür. Visual Basic komut dosyası türü kesin belirlenmiş bir COM ortam sağlamadığından, sözleşme için bir tanımlayıcı belirtilmelidir. Bu GUID `interfaceID` CalcProxy.tlb hangi görüntülenebilir OLE/COM Nesne Görüntüleyicisi'ni (OleView.exe) gibi COM araçlarını kullanarak. Kesin tür belirtilmiş Office VBA veya Visual Basic 6.0 gibi ortamları için açık bir tür kitaplığı başvuru ekleme ve ardından proxy nesnesinin türü bildirmek yerine sözleşme parametresi kullanılabilir. Bu da istemci uygulama geliştirme sırasında IntelliSense desteği sunar.  
+- Uç noktada desteklenen sözleşme türü. Bu, oluşturulan ve yukarıda kayıtlı türüdür. Visual Basic komut dosyası türü kesin belirlenmiş bir COM ortam sağlamadığından, sözleşme için bir tanımlayıcı belirtilmelidir. Bu GUID `interfaceID` CalcProxy.tlb hangi görüntülenebilir OLE/COM Nesne Görüntüleyicisi'ni (OleView.exe) gibi COM araçlarını kullanarak. Kesin tür belirtilmiş Office VBA veya Visual Basic 6.0 gibi ortamları için açık bir tür kitaplığı başvuru ekleme ve ardından proxy nesnesinin türü bildirmek yerine sözleşme parametresi kullanılabilir. Bu da istemci uygulama geliştirme sırasında IntelliSense desteği sunar.  
   
  Hizmet bilinen adı proxy örneğiyle çağrılamadığından istemci uygulama, hizmet bilinen adı altyapısında karşılık gelen hizmet işlemleri çağırma sonuçları proxy yöntemleri çağırabilir.  
   
@@ -127,13 +127,13 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
   
  Bilinen ad tarafından kullanılan parametreleri belirtin:  
   
--   Hizmet uç noktası adresi.  
+- Hizmet uç noktası adresi.  
   
--   İstemci bu uç nokta ve bu bağlama tanımlandığı ad alanı ile bağlanmak için kullanması gereken bağlama. Bu durumda, `wsHttpBinding_ICalculator` kullanılır.  
+- İstemci bu uç nokta ve bu bağlama tanımlandığı ad alanı ile bağlanmak için kullanması gereken bağlama. Bu durumda, `wsHttpBinding_ICalculator` kullanılır.  
   
--   Sözleşme tanımlayan bir WSDL. Bu durumda serviceWsdl.xml dosyadan okunan dize budur.  
+- Sözleşme tanımlayan bir WSDL. Bu durumda serviceWsdl.xml dosyadan okunan dize budur.  
   
--   Sözleşme ad alanı ve adı. WSDL birden fazla sözleşme içeriyor olabileceğinden, bu kimliği gereklidir.  
+- Sözleşme ad alanı ve adı. WSDL birden fazla sözleşme içeriyor olabileceğinden, bu kimliği gereklidir.  
   
     > [!NOTE]
     >  Varsayılan olarak, her ad alanı için ayrı bir WSDL dosyası WCF hizmetleri oluşturun, kullanın. Bu, WSDL içeri aktarma yapısı kullanımı ile bağlantılıdır. Tek bir WSDL tanımı ad beklediği için bu örnekte gösterildiği gibi hizmeti ya da tek bir ad kullanmalısınız veya ayrı dosyaları el ile birleştirilmesi gerekir.  
@@ -165,13 +165,13 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
   
  Bilinen ad tarafından kullanılan parametreleri belirtin:  
   
--   Hizmet meta veri değişimi uç noktası adresi.  
+- Hizmet meta veri değişimi uç noktası adresi.  
   
--   Hizmet uç noktası adresi.  
+- Hizmet uç noktası adresi.  
   
--   İstemci bu uç nokta ve bu bağlama tanımlandığı ad alanı ile bağlanmak için kullanması gereken bağlama. Bu durumda, `wsHttpBinding_ICalculator` kullanılır.  
+- İstemci bu uç nokta ve bu bağlama tanımlandığı ad alanı ile bağlanmak için kullanması gereken bağlama. Bu durumda, `wsHttpBinding_ICalculator` kullanılır.  
   
--   Sözleşme ad alanı ve adı. WSDL birden fazla sözleşme içeriyor olabileceğinden, bu kimliği gereklidir.  
+- Sözleşme ad alanı ve adı. WSDL birden fazla sözleşme içeriyor olabileceğinden, bu kimliği gereklidir.  
   
  Hizmet bilinen adı proxy örneğiyle çağrılamadığından istemci uygulama, hizmet bilinen adı altyapısında karşılık gelen hizmet işlemleri çağırma sonuçları proxy yöntemleri çağırabilir.  
   
@@ -235,4 +235,4 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 #### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için  
   
--   Güvenlik nedenleriyle, sanal dizin tanımını ve örneklerle tamamladığınızda Kurulumu adımları verilen izinler kaldırın.  
+- Güvenlik nedenleriyle, sanal dizin tanımını ve örneklerle tamamladığınızda Kurulumu adımları verilen izinler kaldırın.  

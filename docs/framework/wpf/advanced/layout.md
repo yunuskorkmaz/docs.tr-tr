@@ -10,30 +10,30 @@ helpviewer_keywords:
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
 ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054373"
 ---
 # <a name="layout"></a>Düzen
 Bu konu başlığı altında açıklanır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] düzen sistemi. Düzen hesaplamalar nasıl ve ne zaman ortaya anlamak, kullanıcı arabirimi oluşturmak için gerekli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
--   [Sınırlayıcı kutular öğesi](#LayoutSystem_BoundingBox)  
+- [Sınırlayıcı kutular öğesi](#LayoutSystem_BoundingBox)  
   
--   [Düzen sistemi](#LayoutSystem_Overview)  
+- [Düzen sistemi](#LayoutSystem_Overview)  
   
--   [Ölçme ve alt öğeleri düzenleme](#LayoutSystem_Measure_Arrange)  
+- [Ölçme ve alt öğeleri düzenleme](#LayoutSystem_Measure_Arrange)  
   
--   [Panel öğeleri ve özel düzen davranışları](#LayoutSystem_PanelsCustom)  
+- [Panel öğeleri ve özel düzen davranışları](#LayoutSystem_PanelsCustom)  
   
--   [Düzen performansla ilgili önemli noktalar](#LayoutSystem_Performance)  
+- [Düzen performansla ilgili önemli noktalar](#LayoutSystem_Performance)  
   
--   [Alt piksel işleme ve düzeni yuvarlama](#LayoutSystem_LayoutRounding)  
+- [Alt piksel işleme ve düzeni yuvarlama](#LayoutSystem_LayoutRounding)  
   
--   [Yenilikler](#LayoutSystem_whatsnext)  
+- [Yenilikler](#LayoutSystem_whatsnext)  
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>Sınırlayıcı kutular öğesi  
@@ -120,19 +120,19 @@ Bu konu başlığı altında açıklanır [!INCLUDE[TLA#tla_winclient](../../../
 ## <a name="layout-performance-considerations"></a>Düzen performansla ilgili önemli noktalar  
  Düzen yinelemeli bir işlemdir. Her bir alt öğesinde bir <xref:System.Windows.Controls.Panel.Children%2A> koleksiyon her düzen sistemi çağrılması sırasında işlenen. Gerekli olmadığı durumlarda sonuç olarak, düzen sistemi tetikleme kaçınılmalıdır. Aşağıdaki konular daha iyi performans elde etmenize yardımcı olabilir.  
   
--   Hangi özellik değeri değiştiğinde bir özyinelemeli güncelleştirme düzen sistemi tarafından zorlar dikkat edin.  
+- Hangi özellik değeri değiştiğinde bir özyinelemeli güncelleştirme düzen sistemi tarafından zorlar dikkat edin.  
   
      Bağımlılık özellikleri değerleri başlatılacak düzen sistemi neden olabilir, Genel Bayrak ile işaretlenir. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> ve <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> yararlı ipuçları için hangi özelliğinin değeri değiştiğinde bir özyinelemeli zorlayacak güncelleştirme tarafından düzen sistemi sağlar. Genel olarak, bir öğenin sınırlayıcı kutusunun boyutunu etkileyen herhangi bir özellik olmalıdır bir <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> bayrağı true olarak ayarlanmış. Daha fazla bilgi için [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md).  
   
--   Mümkün olduğunda, kullanmak bir <xref:System.Windows.UIElement.RenderTransform%2A> yerine bir <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
+- Mümkün olduğunda, kullanmak bir <xref:System.Windows.UIElement.RenderTransform%2A> yerine bir <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
      A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> içeriğini etkilemek için çok kullanışlı bir yol olabilir bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Dönüştürme etkisini diğer öğeleri konumunu etkileyen gerekmez, ancak bunu kullanmak en iyisidir bir <xref:System.Windows.UIElement.RenderTransform%2A> bunun yerine, çünkü <xref:System.Windows.UIElement.RenderTransform%2A> düzen sistemi çağrılmaz. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> dönüştürmenin uygular ve için etkilenen öğenin yeni konumu dikkate almak için özyinelemeli Düzen güncelleştirmenin yapılmasını sağlar.  
   
--   Gereksiz çağrılar önlemek <xref:System.Windows.UIElement.UpdateLayout%2A>.  
+- Gereksiz çağrılar önlemek <xref:System.Windows.UIElement.UpdateLayout%2A>.  
   
      <xref:System.Windows.UIElement.UpdateLayout%2A> Yöntemi özyinelemeli düzeni güncelleştirme zorlar ve sık gerekli değildir. Tam bir güncelleştirme gerekli olduğundan emin değilseniz, sizin için bu yöntemi çağırmak için Düzen sistemi kullanır.  
   
--   Büyük bir çalışırken <xref:System.Windows.Controls.Panel.Children%2A> koleksiyonu kullanmayı bir <xref:System.Windows.Controls.VirtualizingStackPanel> yerine normal <xref:System.Windows.Controls.StackPanel>.  
+- Büyük bir çalışırken <xref:System.Windows.Controls.Panel.Children%2A> koleksiyonu kullanmayı bir <xref:System.Windows.Controls.VirtualizingStackPanel> yerine normal <xref:System.Windows.Controls.StackPanel>.  
   
      Alt koleksiyon sanallaştırma tarafından <xref:System.Windows.Controls.VirtualizingStackPanel> yalnızca üst görünüm penceresinin içinde olan bellekte nesneleri tutar. Sonuç olarak, çoğu senaryoda performansı önemli ölçüde geliştirilmiştir.  
   

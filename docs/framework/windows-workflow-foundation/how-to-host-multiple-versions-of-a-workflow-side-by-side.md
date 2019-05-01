@@ -5,66 +5,69 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 4fc4565db58d008f52bc047d26118fc849648770
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 061a8c7b73903b763de27e614e9b3067777afe58
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329459"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809456"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Nasıl yapılır: İş Akışının Birden Fazla Sürümünü Yan Yana Barındırma
+
 `WorkflowIdentity` Bu bilgiler bir kalıcı iş akışı örneğiyle ilişkili olmasını yanı sıra, bir adı ve sürümü, bir iş akışı tanımıyla ilişkilendirilecek iş akışı uygulama geliştiricileri için bir yol sağlar. Bu kimlik bilgileri birden çok iş akışı tanımı sürümünün yan yana yürütme gibi senaryoları etkinleştirmek için iş akışı uygulama geliştiricileri tarafından kullanılabilir ve dinamik güncelleştirme gibi diğer işlevleri için temel sağlar. Bu adım öğreticide nasıl kullanılacağını gösteren `WorkflowIdentity` aynı anda birden çok iş akışı sürümünü barındırmak için.
 
 > [!NOTE]
->  Tamamlanmış bir sürümünü indirin veya videosu öğreticinin görüntülemek için bkz: [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).  
-  
-## <a name="in-this-topic"></a>Bu konuda  
- Öğreticinin bu adımında `WriteLine` ek bilgiler ve yeni bir iş akışındaki etkinlikler değiştirildiğinde `WriteLine` etkinlik eklenir. Özgün iş akışı derleme kopyası depolanır ve aynı anda hem özgün hem de güncelleştirilmiş iş akışı çalışması için ana bilgisayar uygulaması güncelleştirilir.  
-  
--   [NumberGuessWorkflowActivities projenin bir kopyasını oluşturmak için](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
-  
--   [İş akışları güncelleştirmek için](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
-  
-    -   [Durum makinesi iş akışını güncelleştirme](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
-  
-    -   [Akış Çizelgesi iş akışını güncelleştirme](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
-  
-    -   [Sıralı iş akışını güncelleştirme](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
-  
--   [Önceki iş akışı sürümünün içerecek şekilde WorkflowVersionMap güncelleştirmek için](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
-  
--   [Derleme ve uygulamayı çalıştırmak için](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
-  
-> [!NOTE]
->  Bu konu başlığındaki adımları uygulayarak önce uygulamayı çalıştırmak, her türden çeşitli iş akışlarını başlatmak ve her biri için bir veya iki tahmin yapma. Bu adım ve aşağıdaki adımı kalıcı bu iş akışları kullanılan [nasıl yapılır: Bir çalışan iş akışı örneğinin tanımını güncelleştirme](how-to-update-the-definition-of-a-running-workflow-instance.md).
+> Tamamlanmış bir sürümünü indirin veya videosu öğreticinin görüntülemek için bkz: [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).
+
+## <a name="in-this-topic"></a>Bu konuda
+
+Öğreticinin bu adımında `WriteLine` ek bilgiler ve yeni bir iş akışındaki etkinlikler değiştirildiğinde `WriteLine` etkinlik eklenir. Özgün iş akışı derleme kopyası depolanır ve aynı anda hem özgün hem de güncelleştirilmiş iş akışı çalışması için ana bilgisayar uygulaması güncelleştirilir.
+
+- [NumberGuessWorkflowActivities projenin bir kopyasını oluşturmak için](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)
+
+- [İş akışları güncelleştirmek için](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)
+
+    - [Durum makinesi iş akışını güncelleştirme](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
+
+    - [Akış Çizelgesi iş akışını güncelleştirme](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
+
+    - [Sıralı iş akışını güncelleştirme](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
+
+- [Önceki iş akışı sürümünün içerecek şekilde WorkflowVersionMap güncelleştirmek için](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)
+
+- [Derleme ve uygulamayı çalıştırmak için](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)
 
 > [!NOTE]
->  Başlarken Öğreticisi her adımda, önceki adımları bağlıdır. Önceki adımları tamamlanmadıysa öğreticinin tamamlanmış bir sürümünü indirebilirsiniz [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).  
-  
-### <a name="BKMK_BackupCopy"></a> NumberGuessWorkflowActivities projenin bir kopyasını oluşturmak için  
-  
-1. Açık **WF45GettingStartedTutorial** çözüm açık değilse Visual Studio 2012.  
-  
-2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
-  
-3. Kapat **WF45GettingStartedTutorial** çözüm.  
-  
-4. Windows Gezgini'ni açın ve öğretici çözüm dosyası ve proje klasörleri bulunduğu klasöre gidin.  
-  
-5. Adlı yeni bir klasör oluşturun **PreviousVersions** aynı klasörde **NumberGuessWorkflowHost** ve **NumberGuessWorkflowActivities**. Bu klasör, sonraki öğretici adımlarda kullanılan iş akışları farklı sürümlerini içeren derlemeler kapsamak için kullanılır.  
-  
-6. Gidin **NumberGuessWorkflowActivities\bin\debug** klasörü (veya **bin\release** proje ayarlarınıza bağlı olarak). Kopyalama **NumberGuessWorkflowActivities.dll** yapıştırın **PreviousVersions** klasör.  
-  
-7. Yeniden adlandırma **NumberGuessWorkflowActivities.dll** içinde **PreviousVersions** klasörüne **NumberGuessWorkflowActivities_v1.dll**.  
-  
+> Bu konu başlığındaki adımları uygulayarak önce uygulamayı çalıştırmak, her türden çeşitli iş akışlarını başlatmak ve her biri için bir veya iki tahmin yapma. Bu adım ve aşağıdaki adımı kalıcı bu iş akışları kullanılan [nasıl yapılır: Bir çalışan iş akışı örneğinin tanımını güncelleştirme](how-to-update-the-definition-of-a-running-workflow-instance.md).
+
+> [!NOTE]
+> Başlarken Öğreticisi her adımda, önceki adımları bağlıdır. Önceki adımları tamamlanmadıysa öğreticinin tamamlanmış bir sürümünü indirebilirsiniz [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).
+
+### <a name="BKMK_BackupCopy"></a> NumberGuessWorkflowActivities projenin bir kopyasını oluşturmak için
+
+1. Açık **WF45GettingStartedTutorial** çözüm açık değilse Visual Studio 2012.
+
+2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
+
+3. Kapat **WF45GettingStartedTutorial** çözüm.
+
+4. Windows Gezgini'ni açın ve öğretici çözüm dosyası ve proje klasörleri bulunduğu klasöre gidin.
+
+5. Adlı yeni bir klasör oluşturun **PreviousVersions** aynı klasörde **NumberGuessWorkflowHost** ve **NumberGuessWorkflowActivities**. Bu klasör, sonraki öğretici adımlarda kullanılan iş akışları farklı sürümlerini içeren derlemeler kapsamak için kullanılır.
+
+6. Gidin **NumberGuessWorkflowActivities\bin\debug** klasörü (veya **bin\release** proje ayarlarınıza bağlı olarak). Kopyalama **NumberGuessWorkflowActivities.dll** yapıştırın **PreviousVersions** klasör.
+
+7. Yeniden adlandırma **NumberGuessWorkflowActivities.dll** içinde **PreviousVersions** klasörüne **NumberGuessWorkflowActivities_v1.dll**.
+
     > [!NOTE]
-    >  Bu konu başlığındaki adımları iş akışları birden çok sürümünü kapsamak için kullanılmış olan derlemeleri yönetmek için bir yol gösterir. Güçlü derlemelerini adlandırma ve bunları genel derleme önbelleğinde kaydetme gibi diğer yöntemleri de kullanılabilir.
+    > Bu konu başlığındaki adımları iş akışları birden çok sürümünü kapsamak için kullanılmış olan derlemeleri yönetmek için bir yol gösterir. Güçlü derlemelerini adlandırma ve bunları genel derleme önbelleğinde kaydetme gibi diğer yöntemleri de kullanılabilir.
 
 8. Adlı yeni bir klasör oluşturun **NumberGuessWorkflowActivities_du** aynı klasörde **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**ve yeni eklenen **PreviousVersions** klasörünü ve tüm dosyaları ve alt klasörlerdeki kopyalayın **NumberGuessWorkflowActivities** yeni klasöre  **NumberGuessWorkflowActivities_du** klasör. Bu yedekleme kopyası proje etkinliklerinin ilk sürümü için kullanılan [nasıl yapılır: Bir çalışan iş akışı örneğinin tanımını güncelleştirme](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
 9. Yeniden açın **WF45GettingStartedTutorial** çözümü Visual Studio 2012.
 
 ### <a name="BKMK_UpdateWorkflows"></a> İş akışları güncelleştirmek için
+
  Bu bölümde, iş akışı tanımları güncelleştirilir. İki `WriteLine` güncelleştirilmiş ve yeni bir kullanıcının tahmin geri bildirimde bulunun etkinlikleri `WriteLine` etkinlik sayısını tahmin sonra oyun hakkında ek bilgi sağlayan eklenir.
 
 #### <a name="BKMK_UpdateStateMachine"></a> Durum makinesi iş akışını güncelleştirme
@@ -278,7 +281,7 @@ ms.locfileid: "59329459"
     map.Add(SequentialNumberGuessIdentity, new SequentialNumberGuessWorkflow());
     ```
 
-     İş akışları sözlüğüne geçerli sürümleri kullanan iş akışı tanımları başlatan kodu güncelleştirilmesi gerekmez, projenizde başvurulan geçerli sürümleri, kodu ekler.
+    İş akışları sözlüğüne geçerli sürümleri kullanan iş akışı tanımları başlatan kodu güncelleştirilmesi gerekmez, projenizde başvurulan geçerli sürümleri, kodu ekler.
 
 5. Aşağıdaki kod oluşturucuda geçerli sürümler sözlüğe ekler koddan sonra ekleyin.
 
@@ -324,7 +327,7 @@ ms.locfileid: "59329459"
     };
     ```
 
-     Bu iş akışı kimlikleri, karşılık gelen iş akışı tanımları ilk sürümleri ile ilişkilidir.
+    Bu iş akışı kimlikleri, karşılık gelen iş akışı tanımları ilk sürümleri ile ilişkilidir.
 
 6. Ardından, iş akışı tanımları'nin ilk sürümünden içeren derlemeyi yüklemek ve oluşturun ve karşılık gelen iş akışı tanımları sözlüğüne ekleyin.
 
@@ -366,7 +369,7 @@ ms.locfileid: "59329459"
         v1Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);
     ```
 
-     Aşağıdaki örnek, tam listesi için güncelleştirilmiş `WorkflowVersionMap` sınıfı.
+    Aşağıdaki örnek, tam listesi için güncelleştirilmiş `WorkflowVersionMap` sınıfı.
 
     ```vb
     Public Module WorkflowVersionMap
@@ -555,29 +558,35 @@ ms.locfileid: "59329459"
 
 2. Tıklayarak yeni bir iş akışının başlatılacağı **yeni oyun**. İş akışı sürümü altında durum penceresi görüntülenir ve güncelleştirilmiş sürümü ilişkili yansıtır `WorkflowIdentity`. Not `InstanceId` tamamlandığında, iş akışı için izleme dosyayı görüntülemek ve oyun tamamlanana kadar tahmin girin. Kullanıcının tahmin güncelleştirmeleri temel durum penceresinde görüntülenen bilgileri nasıl görüntüleneceğini unutmayın `WriteLine` etkinlikler.
 
- **Lütfen 1 ile 10 arasında bir sayı girin**  
-**5 çok yüksektir.**  
-**Lütfen 1 ile 10 arasında bir sayı girin**  
-**3 çok yüksektir.**  
-**Lütfen 1 ile 10 arasında bir sayı girin**  
-**1 çok düşüktür.**  
-**Lütfen 1 ile 10 arasında bir sayı girin**  
-**Tebrikler, sayı 4 kapatır tahmin.**  
+    ```
+    Please enter a number between 1 and 10
+    5 is too high.
+    Please enter a number between 1 and 10
+    3 is too high.
+    Please enter a number between 1 and 10
+    1 is too low.
+    Please enter a number between 1 and 10
+    Congratulations, you guessed the number in 4 turns.
+    ```
 
     > [!NOTE]
-    >  Güncelleştirilmiş metinden `WriteLine` etkinlikleri görüntülenir, son çıktısını `WriteLine` bu konudaki eklendi etkinlik değil. Durum penceresi tarafından güncelleştirildiğinden olan `PersistableIdle` işleyici. İş akışı tamamlandıktan ve son etkinlikten sonra boşta geçmez, çünkü `PersistableIdle` işleyici çağrılmaz. Ancak, durum penceresi tarafından benzer bir ileti görüntülenir `Completed` işleyici. İçin isterseniz, kod eklenemedi `Completed` ından cümleler ayıklamak için işleyici `StringWriter` ve durum penceresi için görüntüleyin.
+    > Güncelleştirilmiş metinden `WriteLine` etkinlikleri görüntülenir, son çıktısını `WriteLine` bu konudaki eklendi etkinlik değil. Durum penceresi tarafından güncelleştirildiğinden olan `PersistableIdle` işleyici. İş akışı tamamlandıktan ve son etkinlikten sonra boşta geçmez, çünkü `PersistableIdle` işleyici çağrılmaz. Ancak, durum penceresi tarafından benzer bir ileti görüntülenir `Completed` işleyici. İçin isterseniz, kod eklenemedi `Completed` ından cümleler ayıklamak için işleyici `StringWriter` ve durum penceresi için görüntüleyin.
 
 3. Windows Gezgini'ni açın ve gidin **NumberGuessWorkflowHost\bin\debug** klasörü (veya **bin\release** proje ayarlarınıza bağlı olarak) karşılık gelen Not Defteri'ni kullanarak izleme dosyasını açın Tamamlanan iş akışı için. Not yapmadıysanız `InstanceId`, doğru izleme dosyası kullanarak tanımlayabilirsiniz **değiştirilme tarihi** Windows Explorer'da bilgileri.
 
- **Lütfen 1 ile 10 arasında bir sayı girin**
-**5 çok yüksek.** 
- **Lütfen 1 ile 10 arasında bir sayı girin**
-**3, çok yüksek.** 
- **Lütfen 1 ile 10 arasında bir sayı girin**
-**1. çok düşük.** 
- **Lütfen 1 ile 10 arasında bir sayı girin**
-**2 doğru. Bu 4 kapatır tahmin.**      Güncelleştirilmiş `WriteLine` çıkış çıktısını dahil olmak üzere izleme dosyası içinde yer alan `WriteLine` bu konudaki eklendi.
+    ```
+    Please enter a number between 1 and 10
+    5 is too high.
+    Please enter a number between 1 and 10
+    3 is too high.
+    Please enter a number between 1 and 10
+    1 is too low.
+    Please enter a number between 1 and 10
+    2 is correct. You guessed it in 4 turns.
+    ```
+
+    Güncelleştirilmiş `WriteLine` çıkış çıktısını dahil olmak üzere izleme dosyası içinde yer alan `WriteLine` bu konudaki eklendi.
 
 4. Sayı tahmin eden uygulamaya geri geçin ve güncelleştirme yapılmadan önce başlatıldı iş akışları birini seçin. Seçili durumdaki iş akışı sürümü durum penceresi görüntülenir sürüm bilgilerine bakarak belirleyebilirsiniz. Tahminler girin ve eşleşme güncelleştirme durumu Not `WriteLine` etkinliği önceki bir sürümünden çıktı ve kullanıcının tahmin içermez. Bu iş akışları sahip olmayan bir önceki iş akışı tanımı kullanıyorsunuz çünkü `WriteLine` güncelleştirmeleri.
 
-     Sonraki adımda [nasıl yapılır: Çalışan iş akışı örneğinin tanımını güncelleştirme](how-to-update-the-definition-of-a-running-workflow-instance.md), çalışan `v1` iş akışı örnekleri yeni işlevselliği içerdikleri için güncelleştirilmiş `v2` örnekleri.
+    Sonraki adımda [nasıl yapılır: Çalışan iş akışı örneğinin tanımını güncelleştirme](how-to-update-the-definition-of-a-running-workflow-instance.md), çalışan `v1` iş akışı örnekleri yeni işlevselliği içerdikleri için güncelleştirilmiş `v2` örnekleri.

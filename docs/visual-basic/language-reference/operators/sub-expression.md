@@ -7,11 +7,11 @@ helpviewer_keywords:
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
 ms.openlocfilehash: 5b26a091dc8eb7415702c3c2853a569324def7d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013510"
 ---
 # <a name="sub-expression-visual-basic"></a>Alt İfade (Visual Basic)
 Parametreleri ve kodu tanımlayan bir alt yordam lambda ifadesi bildirir.  
@@ -40,17 +40,17 @@ End Sub
 ## <a name="lambda-expression-syntax"></a>Lambda İfadesi Sözdizimi  
  Bir lambda ifadesi söz dizimi, standart bir alt yordam benzer. Farklar aşağıdaki gibidir:  
   
--   Bir lambda ifadesi, bir adı yok.  
+- Bir lambda ifadesi, bir adı yok.  
   
--   Bir lambda ifadesi bir değiştirici gibi olamaz `Overloads` veya `Overrides`.  
+- Bir lambda ifadesi bir değiştirici gibi olamaz `Overloads` veya `Overrides`.  
   
--   Tek satırlı lambda ifadesinin gövdesi bir deyim, bir ifade olmalıdır. Gövde, bir alt yordam çağrısı, ancak bir işlev yordam çağrısı değil, oluşabilir.  
+- Tek satırlı lambda ifadesinin gövdesi bir deyim, bir ifade olmalıdır. Gövde, bir alt yordam çağrısı, ancak bir işlev yordam çağrısı değil, oluşabilir.  
   
--   Bir lambda ifadesinde veri türleri veya tüm parametreleri anlaşılmalıdır tüm parametre ya da belirtmelisiniz.  
+- Bir lambda ifadesinde veri türleri veya tüm parametreleri anlaşılmalıdır tüm parametre ya da belirtmelisiniz.  
   
--   İsteğe bağlı ve `ParamArray` parametreleri lambda ifadelerine izin verilmez.  
+- İsteğe bağlı ve `ParamArray` parametreleri lambda ifadelerine izin verilmez.  
   
--   Genel Parametreler lambda ifadelerine izin verilmez.  
+- Genel Parametreler lambda ifadelerine izin verilmez.  
   
 ## <a name="example"></a>Örnek  
  Bir değer konsola yazar bir lambda ifadesi örneği verilmiştir. Bu örnek, hem tek satır ve çok satırlı lambda ifadesi sözdizimi bir alt yordam gösterir. Daha fazla örnek için bkz. [Lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  

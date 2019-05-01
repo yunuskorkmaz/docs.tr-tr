@@ -1,17 +1,17 @@
 ---
-title: .NET mikro Hizmetleri ve web uygulamalarında yetkilendirme hakkında
+title: .NET mikro hizmet ve web uygulamalarında yetkilendirme hakkında
 description: .NET mikro Hizmetleri ve Web uygulamaları - güvenlik, ASP.NET Core uygulamaları - rol tabanlı ve ilke tabanlı ana yetkilendirme seçeneklerine genel bakış edinin.
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
 ms.openlocfilehash: 36cd8eaf7ffe78a29762398044dc1803adc1b200
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019509"
 ---
-# <a name="about-authorization-in-net-microservices-and-web-applications"></a>.NET mikro Hizmetleri ve web uygulamalarında yetkilendirme hakkında
+# <a name="about-authorization-in-net-microservices-and-web-applications"></a>.NET mikro hizmet ve web uygulamalarında yetkilendirme hakkında
 
 Kimlik doğrulamasından sonra ASP.NET Core Web API'lerine erişim yetkisi vermek gerekir. Bu işlem, bazı kimliği doğrulanmış kullanıcılar tarafından kullanılabilir, ancak çok tüm API'leri yapmak bir hizmet sağlar. [Yetkilendirme](/aspnet/core/security/authorization/introduction) kullanıcıların rollere göre Bitti veya talep veya diğer buluşsal yöntemler inceleyerek içerebilir özel ilkesini temel alarak.
 

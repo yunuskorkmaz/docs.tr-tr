@@ -6,44 +6,44 @@ helpviewer_keywords:
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
 ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020315"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>WPF Sürüm 4.5'te Yenilikler
 <a name="introduction"></a> Bu konu, yeni ve geliştirilmiş özellikleri hakkında bilgi içerir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sürüm 4.5.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
--   [Şerit denetimi](#ribbon_control)  
+- [Şerit denetimi](#ribbon_control)  
   
--   [Gruplandırılmış veri kümelerini büyük görüntüleme performansı geliştirildi](#grouped_virtualization)  
+- [Gruplandırılmış veri kümelerini büyük görüntüleme performansı geliştirildi](#grouped_virtualization)  
   
--   [VirtualizingPanel için yeni özellikler](#VirtualizingPanel)  
+- [VirtualizingPanel için yeni özellikler](#VirtualizingPanel)  
   
--   [Statik özellikler bağlama](#static_properties)  
+- [Statik özellikler bağlama](#static_properties)  
   
--   [Koleksiyonlar üzerinde olmayan UI iş parçacığı erişme](#xthread_access)  
+- [Koleksiyonlar üzerinde olmayan UI iş parçacığı erişme](#xthread_access)  
   
--   [Zaman uyumlu ve zaman uyumsuz olarak verileri doğrulama](#INotifyDataErrorInfo)  
+- [Zaman uyumlu ve zaman uyumsuz olarak verileri doğrulama](#INotifyDataErrorInfo)  
   
--   [Veri bağlama kaynağı otomatik olarak güncelleştiriliyor](#delay)  
+- [Veri bağlama kaynağı otomatik olarak güncelleştiriliyor](#delay)  
   
--   [Bu uygulama ICustomTypeProvider türlerine bağlama](#ICustomTypeProvider)  
+- [Bu uygulama ICustomTypeProvider türlerine bağlama](#ICustomTypeProvider)  
   
--   [Bir bağlama ifadesinden veri bağlama bilgileri alınıyor](#binding_state)  
+- [Bir bağlama ifadesinden veri bağlama bilgileri alınıyor](#binding_state)  
   
--   [İçin geçerli bir DataContext nesne denetleniyor](#DisconnectedSource)  
+- [İçin geçerli bir DataContext nesne denetleniyor](#DisconnectedSource)  
   
--   [(Canlı şekillendirme) veri değerleri değiştikçe verileri yeniden konumlandırma](#live_shaping)  
+- [(Canlı şekillendirme) veri değerleri değiştikçe verileri yeniden konumlandırma](#live_shaping)  
   
--   [Bir olay zayıf bir başvuru oluşturmak için gelişmiş destek](#weak_event_pattern)  
+- [Bir olay zayıf bir başvuru oluşturmak için gelişmiş destek](#weak_event_pattern)  
   
--   [Dispatcher sınıfı için yeni yöntemler](#async)  
+- [Dispatcher sınıfı için yeni yöntemler](#async)  
   
--   [Olaylar için biçimlendirme uzantıları](#events_markup_extenions)  
+- [Olaylar için biçimlendirme uzantıları](#events_markup_extenions)  
   
 <a name="ribbon_control"></a>   
 ## <a name="ribbon-control"></a>Şerit denetimi  
@@ -64,9 +64,9 @@ ms.locfileid: "59325832"
 ## <a name="binding-to-static-properties"></a>Statik özellikler bağlama  
  Statik özelliklere veri bağlama kaynağı olarak kullanabilirsiniz. Statik bir olayı oluşturulursa özelliğinin değeri değiştiğinde veri bağlama altyapısı tanır.  Örneğin, sınıf `SomeClass` adlı statik bir özellik tanımlar `MyProperty`, `SomeClass` olduğu statik bir olayı tanımlayabilir arandığında değerini `MyProperty` değişiklikler.  Statik olay aşağıdaki imzalar birini kullanabilirsiniz.  
   
--   `public static event EventHandler MyPropertyChanged;`  
+- `public static event EventHandler MyPropertyChanged;`  
   
--   `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
+- `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
   
  Bu durumda, sınıf adlı statik bir olay sunan Not *PropertyName* `Changed` Geçiren <xref:System.EventArgs> için olay işleyicisi.  İkinci durumda, sınıf adlı statik bir olay sunan `StaticPropertyChanged` Geçiren <xref:System.ComponentModel.PropertyChangedEventArgs> için olay işleyicisi. Özellik değişikliği bildirimleri her iki yöntemi kullanarak yükseltmek statik özelliği uygulayan bir sınıf seçebilirsiniz.  
   

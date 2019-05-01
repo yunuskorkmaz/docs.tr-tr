@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
 ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048055"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows Kimlik Doğrulama Hatalarını Ayıklama
 Windows kimlik doğrulaması, bir güvenlik mekanizması olarak kullanırken, Güvenlik Desteği Sağlayıcısı Arabirimi (SSPI), güvenlik işlemlerini işler. SSPI katmanında güvenlik hatası meydana geldiğinde, Windows Communication Foundation (WCF) tarafından takip edilir. Bu konu, çerçeve ve hataları tanılamak üzere soruları sağlar.  
@@ -45,13 +45,13 @@ Windows kimlik doğrulaması, bir güvenlik mekanizması olarak kullanırken, G�
   
  Özellikle, dört hesap türleri şunlardır:  
   
--   Yerel kullanıcı: Yalnızca makine kullanıcı profili. Örneğin: `MachineName\Administrator` veya `MachineName\ProfileName`.  
+- Yerel kullanıcı: Yalnızca makine kullanıcı profili. Örneğin: `MachineName\Administrator` veya `MachineName\ProfileName`.  
   
--   Yerel sistemi: Bir etki alanına katılmamış bir makinede yerleşik hesap sistem.  
+- Yerel sistemi: Bir etki alanına katılmamış bir makinede yerleşik hesap sistem.  
   
--   Etki alanı kullanıcısı: Bir Windows etki alanı kullanıcı hesabı. Örneğin: `DomainName\ProfileName`  
+- Etki alanı kullanıcısı: Bir Windows etki alanı kullanıcı hesabı. Örneğin: `DomainName\ProfileName`  
   
--   Makine etki alanı: Makine kimliğini bir Windows etki alanına katılmış bir makinede çalışan bir işlem. Örneğin: `MachineName\Network Service`  
+- Makine etki alanı: Makine kimliğini bir Windows etki alanına katılmış bir makinede çalışan bir işlem. Örneğin: `MachineName\Network Service`  
   
 > [!NOTE]
 >  Hizmet kimlik bilgisi yakalanan olduğunda <xref:System.ServiceModel.ICommunicationObject.Open%2A> yöntemi <xref:System.ServiceModel.ServiceHost> sınıfı çağrılır. İstemci kimlik bilgilerini okuma her istemciye bir ileti gönderir.  
@@ -85,15 +85,15 @@ Windows kimlik doğrulaması, bir güvenlik mekanizması olarak kullanırken, G�
   
 2. SSPI anlaşması gerektirir:  
   
-    1.  Standart bağlamaları kullanıyorsanız `NegotiateServiceCredential` özelliğini `true`.  
+    1. Standart bağlamaları kullanıyorsanız `NegotiateServiceCredential` özelliğini `true`.  
   
-    2.  Özel bağlamalar kullanıyorsanız `AuthenticationMode` özniteliği `Security` öğesine `SspiNegotiated`.  
+    2. Özel bağlamalar kullanıyorsanız `AuthenticationMode` özniteliği `Security` öğesine `SspiNegotiated`.  
   
 3. Kerberos, NTLM kullanımını engelleyerek kullanmak için SSPI anlaşması gerektirir:  
   
-    1.  Bu kodda, aşağıdaki deyimi yapın: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
+    1. Bu kodda, aşağıdaki deyimi yapın: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
-    2.  Veya yapılandırma dosyasında ayarlayarak bunu yapabilirsiniz `allowNtlm` özniteliğini `false`. Bu öznitelik bulunan [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
+    2. Veya yapılandırma dosyasında ayarlayarak bunu yapabilirsiniz `allowNtlm` özniteliğini `false`. Bu öznitelik bulunan [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
   
 ### <a name="ntlm-protocol"></a>NTLM protokolü  
   

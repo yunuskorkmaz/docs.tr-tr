@@ -3,11 +3,11 @@ title: Windows Communication Foundation için Internet Information Services 7.0'
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
 ms.openlocfilehash: 53ba48d47d30bd94ae5544920041cd430526223b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039773"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Windows Communication Foundation için Internet Information Services 7.0'ı Yapılandırma
 
@@ -22,11 +22,11 @@ Internet Information Services (IIS) 7.0 seçmeli olarak gerekli olan bileşenler
 
  Bu özellik aşağıdaki alt bileşenlere sahiptir:
 
--   .NET ortamı
+- .NET ortamı
 
--   Yapılandırma API'leri
+- Yapılandırma API'leri
 
--   İşlem modeli
+- İşlem modeli
 
  Yalnızca kök düğümünü WAS, seçerseniz **işlem modeli** alt düğümünde, varsayılan olarak denetlenir. Bir Web sunucusu desteği olduğundan bu yükleme işlemine yalnızca WAS, yüklemekte olduğunuz olduğunu lütfen unutmayın.
 

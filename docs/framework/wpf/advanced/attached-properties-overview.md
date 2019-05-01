@@ -8,11 +8,11 @@ helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
 ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032246"
 ---
 # <a name="attached-properties-overview"></a>Ekli Özelliklere Genel Bakış
 
@@ -46,11 +46,11 @@ Ayrıca, XAML içinde ekli özelliği biçimlendirme içinde ayarlanan bir özni
 
 Ekli özellikler herhangi bir nesnede ayarlanabilir olsa da, bu otomatik olarak özelliğini ayarlayarak somut bir sonuç üretmek ya da değeri hiç olmadığı kadar başka bir nesne tarafından kullanılacak anlamına gelmez. Genellikle, böylece çok çeşitli olası sınıf Hiyerarşiler veya mantıksal ilişkileri gelen nesneleri tanımlayan ekli özellik türü, her rapor ortak bilgileri iliştirilmiş özellikler yöneliktir. Ekli özellik genellikle tanımlayan tür aşağıdakilerden birini bu modeller aşağıdaki gibidir:
 
--   Ekli özellik tanımlayan tür ekli özellik değerlerini ayarlar öğelerin üst öğesi olabilir şekilde tasarlanmıştır. Türü ardından alt nesneleri bazı nesne ağaç yapısı karşı İç mantık aracılığıyla yinelenir, değerlerini alır ve bu değerleri bir şekilde davranır.
+- Ekli özellik tanımlayan tür ekli özellik değerlerini ayarlar öğelerin üst öğesi olabilir şekilde tasarlanmıştır. Türü ardından alt nesneleri bazı nesne ağaç yapısı karşı İç mantık aracılığıyla yinelenir, değerlerini alır ve bu değerleri bir şekilde davranır.
 
--   Ekli özellik tanımlayan tür çeşitli olası üst öğe ve içerik modelleri için alt öğesi kullanılır.
+- Ekli özellik tanımlayan tür çeşitli olası üst öğe ve içerik modelleri için alt öğesi kullanılır.
 
--   Ekli özellik tanımlayan türü, bir hizmeti temsil eder. Diğer türleri ekli özellik değerlerini ayarlayın. Ardından, özelliğinin öğe service bağlamında değerlendirilir, ekli özellik değerleri hizmet sınıfı, dahili mantığını elde edilir.
+- Ekli özellik tanımlayan türü, bir hizmeti temsil eder. Diğer türleri ekli özellik değerlerini ayarlayın. Ardından, özelliğinin öğe service bağlamında değerlendirilir, ekli özellik değerleri hizmet sınıfı, dahili mantığını elde edilir.
 
 ### <a name="an-example-of-a-parent-defined-attached-property"></a>Üst tanımlı ekli özellik örneği
 
@@ -102,9 +102,9 @@ Bildirerek, ekli özellik bir bağımlılık özelliği olarak tanımlayan bir `
 
 `public static object GetPropertyName(object target)`
 
--   `target` Nesnesi, uygulamanızdaki daha belirli bir tür olarak belirtilebilir. Örneğin, <xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType> yöntemi türleri parametre olarak <xref:System.Windows.UIElement>, ekli özellik yalnızca üzerinde ayarlanmış olması da amaçlandığından <xref:System.Windows.UIElement> örnekleri.
+- `target` Nesnesi, uygulamanızdaki daha belirli bir tür olarak belirtilebilir. Örneğin, <xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType> yöntemi türleri parametre olarak <xref:System.Windows.UIElement>, ekli özellik yalnızca üzerinde ayarlanmış olması da amaçlandığından <xref:System.Windows.UIElement> örnekleri.
 
--   Dönüş değeri, uygulamanızda daha belirli bir tür olarak belirtilebilir. Örneğin, <xref:System.Windows.Controls.DockPanel.GetDock%2A> yöntemi türleri olarak <xref:System.Windows.Controls.Dock>, değeri yalnızca, sabit listesine ayarlanabilir.
+- Dönüş değeri, uygulamanızda daha belirli bir tür olarak belirtilebilir. Örneğin, <xref:System.Windows.Controls.DockPanel.GetDock%2A> yöntemi türleri olarak <xref:System.Windows.Controls.Dock>, değeri yalnızca, sabit listesine ayarlanabilir.
 
 #### <a name="the-set-accessor"></a>Set erişimcileri
 
@@ -112,9 +112,9 @@ Bildirerek, ekli özellik bir bağımlılık özelliği olarak tanımlayan bir `
 
 `public static void SetPropertyName(object target, object value)`
 
--   `target` Nesnesi, uygulamanızdaki daha belirli bir tür olarak belirtilebilir. Örneğin, <xref:System.Windows.Controls.DockPanel.SetDock%2A> yöntemi türleri olarak <xref:System.Windows.UIElement>, ekli özellik yalnızca üzerinde ayarlanmış olması da amaçlandığından <xref:System.Windows.UIElement> örnekleri.
+- `target` Nesnesi, uygulamanızdaki daha belirli bir tür olarak belirtilebilir. Örneğin, <xref:System.Windows.Controls.DockPanel.SetDock%2A> yöntemi türleri olarak <xref:System.Windows.UIElement>, ekli özellik yalnızca üzerinde ayarlanmış olması da amaçlandığından <xref:System.Windows.UIElement> örnekleri.
 
--   `value` Nesnesi, uygulamanızdaki daha belirli bir tür olarak belirtilebilir. Örneğin, <xref:System.Windows.Controls.DockPanel.SetDock%2A> yöntemi türleri olarak <xref:System.Windows.Controls.Dock>, değeri yalnızca, sabit listesine ayarlanabilir. Bu yöntem değeri, ekli özellik biçimlendirmede ekli özellik kullanımı karşılaştığında XAML yükleyicisinden gelen giriş olduğunu unutmayın. Söz konusu giriş biçimlendirmede XAML öznitelik değeri olarak belirtilen değerdir. Bu nedenle olmalıdır tür dönüştürme, değeri seri hale getirici veya kullanın, türü için işaretleme uzantısı desteği sağlayacak şekilde uygun türde (olan sonuç olarak bir dize) öznitelik değerinden oluşturulabilir.
+- `value` Nesnesi, uygulamanızdaki daha belirli bir tür olarak belirtilebilir. Örneğin, <xref:System.Windows.Controls.DockPanel.SetDock%2A> yöntemi türleri olarak <xref:System.Windows.Controls.Dock>, değeri yalnızca, sabit listesine ayarlanabilir. Bu yöntem değeri, ekli özellik biçimlendirmede ekli özellik kullanımı karşılaştığında XAML yükleyicisinden gelen giriş olduğunu unutmayın. Söz konusu giriş biçimlendirmede XAML öznitelik değeri olarak belirtilen değerdir. Bu nedenle olmalıdır tür dönüştürme, değeri seri hale getirici veya kullanın, türü için işaretleme uzantısı desteği sağlayacak şekilde uygun türde (olan sonuç olarak bir dize) öznitelik değerinden oluşturulabilir.
 
 Aşağıdaki örnek, bağımlılık özelliği kayıt gösterir (kullanarak <xref:System.Windows.DependencyProperty.RegisterAttached%2A> yöntemi), hem de **Get_PropertyName_** ve **Set_PropertyName_** erişimcileri. Örnekte, ekli özellik addır `IsBubbleSource`. Bu nedenle, erişimcileri adlandırılmalıdır `GetIsBubbleSource` ve `SetIsBubbleSource`.
 
@@ -125,21 +125,21 @@ Aşağıdaki örnek, bağımlılık özelliği kayıt gösterir (kullanarak <xre
 
 WPF tanımlar birkaç [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] yansıma işlemleri ve yansıma ve özellik bilgileri tasarımcıları gibi tipik kullanıcıların iliştirilmiş özellikler hakkında bilgi sağlamak için yöneliktir. Ekli özellikler sınırsız kapsam türü olduğundan, tasarımcılar genel XAML kullanan bir belirli teknoloji uygulama içinde tanımlanan tüm ekli özellikler listesini zorlamayı kullanıcılarla önlemek için bir yol gerekir. [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] İliştirilmiş özellikler nerede ekli özelliğe gösterilip gösterilemeyeceğini Özellikler penceresinde durumlarda kapsam için kullanılabilir, WPF tanımlar. Bu öznitelikler için kendi özel ekli özellikler uygulamayı düşünebilirsiniz. Amaç ve sözdizimi [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] uygun başvuru sayfalarına açıklanmıştır:
 
--   <xref:System.Windows.AttachedPropertyBrowsableAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute>
 
 ## Ekli özellikler hakkında daha fazla öğrenme <a name="more"></a>
 
--   Ekli özelliği oluşturma hakkında daha fazla bilgi için bkz. [iliştirilmiş özellik](how-to-register-an-attached-property.md).
+- Ekli özelliği oluşturma hakkında daha fazla bilgi için bkz. [iliştirilmiş özellik](how-to-register-an-attached-property.md).
 
--   Daha fazla Gelişmiş bağımlılık özellikleri için kullanım senaryoları ve iliştirilmiş özellikler için bkz [özel bağımlılık özellikleri](custom-dependency-properties.md).
+- Daha fazla Gelişmiş bağımlılık özellikleri için kullanım senaryoları ve iliştirilmiş özellikler için bkz [özel bağımlılık özellikleri](custom-dependency-properties.md).
 
--   Ayrıca bir özelliği ekli özelliği ve bağımlılık özelliği olarak kaydedebilirsiniz, ancak hala "sarmalayıcı" uygulamaları sunarsınız. Bu durumda, özellik, bu öğe üzerinde ayarlanabilir veya XAML aracılığıyla herhangi bir öğe üzerinde özellik sözdizimi bağlı. Bir özellik hem standart hem de bağlı kullanımlar için uygun bir senaryoyla örneğidir <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
+- Ayrıca bir özelliği ekli özelliği ve bağımlılık özelliği olarak kaydedebilirsiniz, ancak hala "sarmalayıcı" uygulamaları sunarsınız. Bu durumda, özellik, bu öğe üzerinde ayarlanabilir veya XAML aracılığıyla herhangi bir öğe üzerinde özellik sözdizimi bağlı. Bir özellik hem standart hem de bağlı kullanımlar için uygun bir senaryoyla örneğidir <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

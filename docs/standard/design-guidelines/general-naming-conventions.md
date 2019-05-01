@@ -1,5 +1,5 @@
 ---
-title: Genel adlandırma kuralları
+title: Genel Adlandırma Kuralları
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: KrzysztofCwalina
 ms.openlocfilehash: ae1b7ce83f6698cef470aabf07a12d89042ab8a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026399"
 ---
-# <a name="general-naming-conventions"></a>Genel adlandırma kuralları
+# <a name="general-naming-conventions"></a>Genel Adlandırma Kuralları
 Bu bölümde, sözcük seçimi için ilgili genel adlandırma kuralları kısaltmalar ve kısaltmalar ve öneriler hakkında dile özgü adlarını kullanmaktan kaçınmak kullanma hakkında yönergeler açıklanmaktadır.  
   
 ## <a name="word-choice"></a>Sözcük seçimi  
@@ -72,7 +72,7 @@ Bu bölümde, sözcük seçimi için ilgili genel adlandırma kuralları kısalt
 |**double**|**çift**|**double**|**çift**|  
 |**bool**|**Boole değeri**|**bool**|**Boole değeri**|  
 |**char**|**Char**|**wchar_t**|**Char**|  
-|**string**|**dize**|**dize**|**dize**|  
+|**string**|**Dize**|**Dize**|**Dize**|  
 |**object**|**Nesne**|**Nesne**|**Nesne**|  
   
  **✓ DO** gibi ortak bir ad kullanın `value` veya `item`, tür adı bir tanımlayıcı bir anlam anlamı yoktur ve parametresinin türü önemli olmadığında nadir durumlarda yinelenen yerine.  

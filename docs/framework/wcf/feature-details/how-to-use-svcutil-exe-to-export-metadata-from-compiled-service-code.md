@@ -3,20 +3,20 @@ title: 'Nasıl yapılır: Meta Verileri Derlenmiş Hizmet Kodundan Dışarı Akt
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
 ms.openlocfilehash: 5b905b6943127d483e001749c263242550ab28ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047344"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Nasıl yapılır: Meta Verileri Derlenmiş Hizmet Kodundan Dışarı Aktarmak için Svcutil.exe Kullanma
 Svcutil.exe gibi meta veri hizmetleri, sözleşmeler ve derlenmiş derlemelerde veri türlerini dışarı aktarabilirsiniz:  
   
--   Tüm meta verilerini aktarmak için Svcutil.exe, kullanarak bir derleme kümesi için hizmet sözleşmelerini derlenmiş girdi parametresi olarak derlemelerini belirtin. Bu varsayılan davranıştır.  
+- Tüm meta verilerini aktarmak için Svcutil.exe, kullanarak bir derleme kümesi için hizmet sözleşmelerini derlenmiş girdi parametresi olarak derlemelerini belirtin. Bu varsayılan davranıştır.  
   
--   Svcutil.exe kullanılarak derlenmiş bir hizmet için meta verileri dışarı aktarmak için hizmet derleme veya derlemeler giriş parametrelerini belirtin. Kullanmalısınız `/serviceName` vermek istediğiniz hizmetin yapılandırma adını belirtmek için seçeneği. Svcutil.exe yapılandırma dosyası için belirtilen çalıştırılabilir derlemesinin otomatik olarak yükler.  
+- Svcutil.exe kullanılarak derlenmiş bir hizmet için meta verileri dışarı aktarmak için hizmet derleme veya derlemeler giriş parametrelerini belirtin. Kullanmalısınız `/serviceName` vermek istediğiniz hizmetin yapılandırma adını belirtmek için seçeneği. Svcutil.exe yapılandırma dosyası için belirtilen çalıştırılabilir derlemesinin otomatik olarak yükler.  
   
--   Bir derleme kümesi içindeki tüm veri anlaşması türleri dışarı aktarmak için kullanın `/dataContractOnly` seçeneği.  
+- Bir derleme kümesi içindeki tüm veri anlaşması türleri dışarı aktarmak için kullanın `/dataContractOnly` seçeneği.  
   
 > [!NOTE]
 >  Kullanım `/reference` herhangi bir bağımlı derleme için dosya yollarını belirtmek için seçeneği.  

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
 ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020276"
 ---
 # <a name="animation-tips-and-tricks"></a>Animasyon İpuçları ve Püf Noktaları
 İçinde animasyon ile çalışırken [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], birkaç ipucu vardır ve animasyonlarınızın püf noktaları daha iyi performans ve yükünden kurtarın.  
@@ -41,11 +41,11 @@ ms.locfileid: "59295958"
   
  İçin bir <xref:System.Windows.Media.Animation.Timeline> değişiklikleri yansıtacak şekilde kendi saat yeniden ve önceden oluşturulmuş saati değiştirmek için kullanılması gerekir. Saatleri sizin için otomatik olarak yeniden oluşturulmaz. Zaman Çizelgesi değişiklikleri uygulamak için birkaç yolu şunlardır:  
   
--   Zaman Çizelgesi veya ait bir <xref:System.Windows.Media.Animation.Storyboard>, bunu görsel taslak kullanarak uygulayarak değişiklikleri yansıtacak yapabileceğiniz bir <xref:System.Windows.Media.Animation.BeginStoryboard> veya <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> yöntemi. Bu, yan etkisi, ayrıca animasyon yeniden vardır. Kod içinde kullanabileceğiniz <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> back önceki konumuna film şeridi ilerlemek için yöntemi.  
+- Zaman Çizelgesi veya ait bir <xref:System.Windows.Media.Animation.Storyboard>, bunu görsel taslak kullanarak uygulayarak değişiklikleri yansıtacak yapabileceğiniz bir <xref:System.Windows.Media.Animation.BeginStoryboard> veya <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> yöntemi. Bu, yan etkisi, ayrıca animasyon yeniden vardır. Kod içinde kullanabileceğiniz <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> back önceki konumuna film şeridi ilerlemek için yöntemi.  
   
--   Animasyonun bir özellik kullanarak doğrudan uyguladıysanız <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> yöntemi, çağrı <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> yeniden yöntemi ve değiştirilmiş animasyonu geçirin.  
+- Animasyonun bir özellik kullanarak doğrudan uyguladıysanız <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> yöntemi, çağrı <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> yeniden yöntemi ve değiştirilmiş animasyonu geçirin.  
   
--   Doğrudan saat düzeyinde çalışıyorsanız ve saatler yeni bir uygulama oluşturup bunları oluşturulan saatler önceki kümesini değiştirmek için kullanabilirsiniz.  
+- Doğrudan saat düzeyinde çalışıyorsanız ve saatler yeni bir uygulama oluşturup bunları oluşturulan saatler önceki kümesini değiştirmek için kullanabilirsiniz.  
   
  Zaman çizelgeleri ve saatler hakkında daha fazla bilgi için bkz: [animasyon ve zamanlama sistemine genel bakış](animation-and-timing-system-overview.md).  
   
@@ -105,13 +105,13 @@ ms.locfileid: "59295958"
   
  Bir animasyonu kaldırmak için farklı yolu vardır. Aşağıdaki teknikler ait animasyonları kaldırmak için kullanılan bir <xref:System.Windows.Media.Animation.Storyboard>.  
   
--   Kaldırmak için bir <xref:System.Windows.Media.Animation.Storyboard> bir olay tetikleyicisi ile başlattığınız için bkz: [nasıl yapılır: Film şeridini kaldırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90)).  
+- Kaldırmak için bir <xref:System.Windows.Media.Animation.Storyboard> bir olay tetikleyicisi ile başlattığınız için bkz: [nasıl yapılır: Film şeridini kaldırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90)).  
   
--   Kaldırmak için kodu kullanmak için bir <xref:System.Windows.Media.Animation.Storyboard>, bkz: <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> yöntemi.  
+- Kaldırmak için kodu kullanmak için bir <xref:System.Windows.Media.Animation.Storyboard>, bkz: <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> yöntemi.  
   
  Sonraki yöntem, animasyon nasıl başlatıldığından bağımsız olarak kullanılabilir.  
   
--   Belirli bir özellikten animasyonları kaldırmak için <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> yöntemi. İlk parametre olarak, animasyon uygulanan bir özellik belirtin ve `null` ikinci olarak. Bu, tüm animasyon saatleri özelliği kaldırır.  
+- Belirli bir özellikten animasyonları kaldırmak için <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> yöntemi. İlk parametre olarak, animasyon uygulanan bir özellik belirtin ve `null` ikinci olarak. Bu, tüm animasyon saatleri özelliği kaldırır.  
   
  Özelliklerine animasyon uygulamak için farklı yollar hakkında daha fazla bilgi için bkz. [özellik Animasyon Tekniklerine Genel Bakış](property-animation-techniques-overview.md).  
   
@@ -120,9 +120,9 @@ ms.locfileid: "59295958"
   
  Çok sayıda kullanarak saatler uyguladığınızda, performans sorunlarını önlemek için <xref:System.Windows.Media.Animation.HandoffBehavior.Compose>, tamamlandıktan sonra animasyonlu özelliğinden çıktısından saatler kaldırmanız gerekir. Bir saat kaldırmak için birkaç yol vardır.  
   
--   Tüm saatler bir özelliği kaldırmak için <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> veya <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> yöntemi animasyonlu nesne. İlk parametre olarak, animasyon uygulanan bir özellik belirtin ve `null` ikinci olarak. Bu, tüm animasyon saatleri özelliği kaldırır.  
+- Tüm saatler bir özelliği kaldırmak için <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> veya <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> yöntemi animasyonlu nesne. İlk parametre olarak, animasyon uygulanan bir özellik belirtin ve `null` ikinci olarak. Bu, tüm animasyon saatleri özelliği kaldırır.  
   
--   Belirli bir kaldırmak için <xref:System.Windows.Media.Animation.AnimationClock> saatler listesinden kullanmak <xref:System.Windows.Media.Animation.Clock.Controller%2A> özelliği <xref:System.Windows.Media.Animation.AnimationClock> almak için bir <xref:System.Windows.Media.Animation.ClockController>, ardından çağırın <xref:System.Windows.Media.Animation.ClockController.Remove%2A> yöntemi <xref:System.Windows.Media.Animation.ClockController>. Bu genellikle yapılabilir <xref:System.Windows.Media.Animation.Clock.Completed> bir saat için olay işleyicisi. Not yalnızca kök saatler tarafından denetlenebilir bir <xref:System.Windows.Media.Animation.ClockController>; <xref:System.Windows.Media.Animation.Clock.Controller%2A> alt saat özelliği döndürür `null`. Ayrıca <xref:System.Windows.Media.Animation.Clock.Completed> saatin geçerlilik süresi sonsuz ise olay çağrılmayacak.  Bu durumda, ne zaman çağrılacağını belirlemek kullanıcı gerekir <xref:System.Windows.Media.Animation.ClockController.Remove%2A>.  
+- Belirli bir kaldırmak için <xref:System.Windows.Media.Animation.AnimationClock> saatler listesinden kullanmak <xref:System.Windows.Media.Animation.Clock.Controller%2A> özelliği <xref:System.Windows.Media.Animation.AnimationClock> almak için bir <xref:System.Windows.Media.Animation.ClockController>, ardından çağırın <xref:System.Windows.Media.Animation.ClockController.Remove%2A> yöntemi <xref:System.Windows.Media.Animation.ClockController>. Bu genellikle yapılabilir <xref:System.Windows.Media.Animation.Clock.Completed> bir saat için olay işleyicisi. Not yalnızca kök saatler tarafından denetlenebilir bir <xref:System.Windows.Media.Animation.ClockController>; <xref:System.Windows.Media.Animation.Clock.Controller%2A> alt saat özelliği döndürür `null`. Ayrıca <xref:System.Windows.Media.Animation.Clock.Completed> saatin geçerlilik süresi sonsuz ise olay çağrılmayacak.  Bu durumda, ne zaman çağrılacağını belirlemek kullanıcı gerekir <xref:System.Windows.Media.Animation.ClockController.Remove%2A>.  
   
  Uzun ömürlü nesnelerine animasyon için öncelikle bir sorun budur.  Bir nesnenin çöp olarak toplanacak olduğunda, kendi saatler da kesilir ve atık olarak toplanmış.  
   

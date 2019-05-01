@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Button control [WPF]
 ms.assetid: a9d8f5a5-c98c-463e-808a-5a4e63173098
 ms.openlocfilehash: 277338ae11090fa3701135cd0ac761da0a887255
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051890"
 ---
 # <a name="button"></a>Düğme
 A <xref:System.Windows.Controls.Button> denetim fare, klavye, ekran kalemi, veya başka bir giriş cihazı ve harekete geçirirse kullanıcı girişine tepki verdiğini bir <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay. A <xref:System.Windows.Controls.Button> bir temel bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] metin gibi basit içerik içerebilir ve resimler gibi karmaşık içerik de içerebilir bileşeni ve <xref:System.Windows.Controls.Panel> kontrol eder.  

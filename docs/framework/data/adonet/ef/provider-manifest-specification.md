@@ -3,11 +3,11 @@ title: Sağlayıcı Bildirimi Belirtimi
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034014"
 ---
 # <a name="provider-manifest-specification"></a>Sağlayıcı Bildirimi Belirtimi
 Bu bölümde, nasıl bir veri deposu sağlayıcısı türleri ve işlevleri veri deposunda destekleyebileceğini açıklanmaktadır.  
@@ -45,18 +45,18 @@ Bu bölümde, nasıl bir veri deposu sağlayıcısı türleri ve işlevleri veri
   
  İki bölüme sahip bir XML dosyası yazma:  
   
--   "EDM karşılığı" deposu tür veya işlev açısından ifade sağlayıcısı türlerinin listesi. Store türlerin karşılığı EDM türleri vardır. Store işlevlerin karşılık gelen EDM işlevleri vardır. Örneğin, bir SQL Server türü varchar, ancak karşılık gelen EDM türü dize.  
+- "EDM karşılığı" deposu tür veya işlev açısından ifade sağlayıcısı türlerinin listesi. Store türlerin karşılığı EDM türleri vardır. Store işlevlerin karşılık gelen EDM işlevleri vardır. Örneğin, bir SQL Server türü varchar, ancak karşılık gelen EDM türü dize.  
   
--   Burada parametre ve dönüş türleri'EDM koşullarını ifade edilir sağlayıcısı tarafından desteklenen işlevlerin listesi.  
+- Burada parametre ve dönüş türleri'EDM koşullarını ifade edilir sağlayıcısı tarafından desteklenen işlevlerin listesi.  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>Asimetrik tür eşlemesine sahip bir sağlayıcı yazma  
  Ne zaman, bir veri deposu sağlayıcısı için yazma [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], bazı türleri sağlayıcısı EDM türü eşlemesinden farklı için eşleme sağlayıcısı için EDM türü. Örneğin, nvarchar(4000) için EDM PrimitiveTypeKind.String(MaxLength=4000) eşleştirir. sırasında nvarchar(4000) sağlayıcısı için sınırsız EDM PrimitiveTypeKind.String eşlenebilir.  
   
  İki bölüme sahip bir XML dosyası yazma:  
   
--   Sağlayıcı türlerinin bir listesini EDM terimleriyle ifade edilen ve her iki yön için eşleme tanımlayın: EDM sağlayıcısı ve sağlayıcı EDM.  
+- Sağlayıcı türlerinin bir listesini EDM terimleriyle ifade edilen ve her iki yön için eşleme tanımlayın: EDM sağlayıcısı ve sağlayıcı EDM.  
   
--   Burada parametre ve dönüş türleri'EDM koşullarını ifade edilir sağlayıcısı tarafından desteklenen işlevlerin listesi.  
+- Burada parametre ve dönüş türleri'EDM koşullarını ifade edilir sağlayıcısı tarafından desteklenen işlevlerin listesi.  
   
 ## <a name="provider-manifest-discoverability"></a>Sağlayıcı bildirimi bulunabilirlik  
  Bildirim dolaylı olarak varlık Hizmetleri (örneğin, araçları veya sorgu) birçok bileşen türleri tarafından kullanılır ancak daha fazla veri kullanımı meta verileri tarafından doğrudan kullanılabilir meta veri yükleyici depolayın.  

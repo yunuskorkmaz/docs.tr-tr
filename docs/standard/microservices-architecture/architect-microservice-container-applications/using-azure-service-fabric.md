@@ -1,17 +1,17 @@
 ---
-title: Azure Service Fabric kullanma
+title: Azure Service Fabric Kullanma
 description: Yalnızca Bu kapsayıcıları düzenlemek için kullanmanın yanı sıra kullanabileceğiniz hangi Azure Service Fabric uygulama modellerini anlayın.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
 ms.openlocfilehash: b29be05f5ab353ddfae0d23211efaf57979d0604
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025796"
 ---
-# <a name="using-azure-service-fabric"></a>Azure Service Fabric kullanma
+# <a name="using-azure-service-fabric"></a>Azure Service Fabric Kullanma
 
 Azure Service Fabric, Microsoft'un geçiş stili genellikle tek parçalı, kutusu ürünleri, hizmetleri sunmak için teslim öğesinden gelen çıkan. Service Fabric yapı ve büyük hizmetlerini uygun ölçekte, Azure SQL veritabanı, Azure Cosmos DB, Azure Service Bus veya Cortana'nın arka ucu gibi işletim deneyimini şeklinde. Bunu daha da fazla Hizmetleri benimsenen gibi platform zaman içinde gelişerek. Önemlisi, yalnızca Azure aynı zamanda tek başına Windows Server dağıtımlarındaki çalıştırmak Service Fabric vardı.
 

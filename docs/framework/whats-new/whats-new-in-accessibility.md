@@ -13,8 +13,8 @@ ms.openlocfilehash: afd4b77529f64852e77926b7fecc0e15033e7735
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052709"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Erişilebilirlik .NET Framework'teki yenilikler
 

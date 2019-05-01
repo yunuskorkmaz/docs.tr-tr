@@ -1,5 +1,5 @@
 ---
-title: XPath sorguları ve ad alanları
+title: XPath Sorguları ve Ad Alanları
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5f35725f5e1a08f2fcb1d6bc87765f50308c963f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026790"
 ---
-# <a name="xpath-queries-and-namespaces"></a>XPath sorguları ve ad alanları
+# <a name="xpath-queries-and-namespaces"></a>XPath Sorguları ve Ad Alanları
 XPath sorguları, XML belgesinde ad alanlarının farkındayız ve ad alanı öneklerini öğe ve öznitelik adları nitelemek için kullanabilirsiniz. Ad alanı öneki öğe ve öznitelik adlarını niteleme yalnızca belirli bir ad alanına ait düğümleri bir XPath sorgusu tarafından döndürülen düğümleri sınırlar.  
   
  Örneğin, ön eki `books` eşleyen ad alanına `http://www.contoso.com/books`, ardından aşağıdaki XPath sorgusu `/books:books/books:book` yalnızca seçer `book` ad alanındaki öğeler `http://www.contoso.com/books`.  
@@ -25,17 +25,17 @@ XPath sorguları, XML belgesinde ad alanlarının farkındayız ve ad alanı ön
   
  <xref:System.Xml.XmlNamespaceManager> Sorguda aşağıdaki yollardan biriyle her nesne kullanılabilir.  
   
--   <xref:System.Xml.XmlNamespaceManager> Nesnedir varolan ile ilişkili <xref:System.Xml.XPath.XPathExpression> kullanarak nesne <xref:System.Xml.XPath.XPathExpression.SetContext%2A> yöntemi <xref:System.Xml.XPath.XPathExpression> nesne. Ayrıca yeni bir derleme <xref:System.Xml.XPath.XPathExpression> 'using static nesne <xref:System.Xml.XPath.XPathExpression.Compile%2A> yöntemi XPath ifadesi temsil eden bir dize alır ve bir <xref:System.Xml.XmlNamespaceManager> nesnesi parametrelerini ve yeni bir döndürür olarak <xref:System.Xml.XPath.XPathExpression> nesne.  
+- <xref:System.Xml.XmlNamespaceManager> Nesnedir varolan ile ilişkili <xref:System.Xml.XPath.XPathExpression> kullanarak nesne <xref:System.Xml.XPath.XPathExpression.SetContext%2A> yöntemi <xref:System.Xml.XPath.XPathExpression> nesne. Ayrıca yeni bir derleme <xref:System.Xml.XPath.XPathExpression> 'using static nesne <xref:System.Xml.XPath.XPathExpression.Compile%2A> yöntemi XPath ifadesi temsil eden bir dize alır ve bir <xref:System.Xml.XmlNamespaceManager> nesnesi parametrelerini ve yeni bir döndürür olarak <xref:System.Xml.XPath.XPathExpression> nesne.  
   
--   <xref:System.Xml.XmlNamespaceManager> Nesnesinin kendisi bir kabul etmek için parametre olarak geçirilir <xref:System.Xml.XPath.XPathNavigator> sınıfı XPath ifadesi temsil eden bir dize ile birlikte yöntemi.  
+- <xref:System.Xml.XmlNamespaceManager> Nesnesinin kendisi bir kabul etmek için parametre olarak geçirilir <xref:System.Xml.XPath.XPathNavigator> sınıfı XPath ifadesi temsil eden bir dize ile birlikte yöntemi.  
   
  Yöntemleri şunlardır <xref:System.Xml.XPath.XPathNavigator> kabul eden bir nesne sınıfı türetilen <xref:System.Xml.IXmlNamespaceResolver> arabirimi bir parametre olarak.  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
 ### <a name="the-default-namespace"></a>Varsayılan Namespace  
  Aşağıdaki XML belgesinde varsayılan ad alanı ön eki boş bildirmek için kullanılan `http://www.contoso.com/books` ad alanı.  

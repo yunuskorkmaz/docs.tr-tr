@@ -3,11 +3,11 @@ title: Geçiş konuları (varlık çerçevesi)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
 ms.openlocfilehash: b6224dcf883daef7b35ef50b7556fc568e433a46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034040"
 ---
 # <a name="migration-considerations-entity-framework"></a>Geçiş konuları (varlık çerçevesi)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework, var olan bir uygulama için çeşitli avantajlar sağlar. Çoğu biri veri kaynağındaki şemasından uygulama tarafından kullanılan veri yapılarını ayırmak için kavramsal bir modeli kullanma olanağı Bu avantajlar önemlidir. Bu depolama modelinin veya uygulamaya telafi değişiklik yapmadan veri kaynağına kendisini gelecekteki değişikliklere kolayca yapmanıza olanak sağlar. Kullanmanın avantajları hakkında daha fazla bilgi için [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], bkz: [Entity Framework'e Genel Bakış](../../../../../docs/framework/data/adonet/ef/overview.md) ve [varlık veri modeli](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -17,13 +17,13 @@ ms.locfileid: "59310427"
 ## <a name="general-migration-considerations"></a>Genel geçiş konuları  
  Herhangi bir uygulama için geçiş yaptığınızda, aşağıdaki maddeler geçerlidir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]:  
   
--   Kullanan tüm uygulamaları [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 3.5 SP1 sürümünden itibaren geçirilebilir Entity Framework için Entity Framework veri sağlayıcısı uygulama tarafından kullanılan veri kaynağı için desteklediği sürece.  
+- Kullanan tüm uygulamaları [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 3.5 SP1 sürümünden itibaren geçirilebilir Entity Framework için Entity Framework veri sağlayıcısı uygulama tarafından kullanılan veri kaynağı için desteklediği sürece.  
   
--   Entity Framework sağlayıcının destekler olsa bile Entity Framework Veri kaynağı sağlayıcı tüm işlevleri desteklemiyor olabilir.  
+- Entity Framework sağlayıcının destekler olsa bile Entity Framework Veri kaynağı sağlayıcı tüm işlevleri desteklemiyor olabilir.  
   
--   Büyük veya karmaşık uygulama için tek seferde tüm uygulama Entity Framework geçirme gerekmez. Ancak, veri kaynağı, varlık çerçevesi kullanmayan uygulamayı herhangi bir bölümünü hala değiştirilmelidir.  
+- Büyük veya karmaşık uygulama için tek seferde tüm uygulama Entity Framework geçirme gerekmez. Ancak, veri kaynağı, varlık çerçevesi kullanmayan uygulamayı herhangi bir bölümünü hala değiştirilmelidir.  
   
--   Entity Framework tarafından kullanılan veri sağlayıcısına bağlantı uygulamanızın diğer bölümleriyle çünkü paylaşılabilir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] kullanan [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] veri kaynağına erişmek için veri sağlayıcı. Örneğin, SqlClient sağlayıcısı, SQL Server veritabanına erişmek için Entity Framework tarafından kullanılır. Daha fazla bilgi için [Entity Framework için EntityClient sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
+- Entity Framework tarafından kullanılan veri sağlayıcısına bağlantı uygulamanızın diğer bölümleriyle çünkü paylaşılabilir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] kullanan [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] veri kaynağına erişmek için veri sağlayıcı. Örneğin, SqlClient sağlayıcısı, SQL Server veritabanına erişmek için Entity Framework tarafından kullanılır. Daha fazla bilgi için [Entity Framework için EntityClient sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="common-migration-tasks"></a>Sık karşılaşılan geçiş görevleri  
  Mevcut bir uygulamasına geçirmek için yol [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama türü ve mevcut veri erişim stratejisi bağlıdır. Mevcut bir uygulamasına geçirirken ancak, her zaman aşağıdaki görevleri gerçekleştirmeniz [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  

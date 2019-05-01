@@ -3,11 +3,11 @@ title: SQL Server ve ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.openlocfilehash: f30d9d715a2d94deee788f92cfc8eed0cba706de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033897"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server ve ADO.NET
 Bu bölümde, özellikler ve SQL Server için .NET Framework veri sağlayıcısı özgü davranışları açıklanmaktadır (<xref:System.Data.SqlClient>).  

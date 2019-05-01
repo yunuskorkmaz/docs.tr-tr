@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
 ms.openlocfilehash: fa707ed9c409a2e6933629a658bfe650b43f3233
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032012"
 ---
 # <a name="advanced-text-formatting"></a>Gelişmiş Metin Biçimlendirme
 Windows Presentation Foundation (WPF) sağlayan bir dizi güçlü [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] uygulamanızda metin dahil etmek için. Düzen ve [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], gibi <xref:System.Windows.Controls.TextBlock>, en yaygın sağlar ve genel metin sunu öğelerini kullanın. Çizim [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], gibi <xref:System.Windows.Media.GlyphRunDrawing> ve <xref:System.Windows.Media.FormattedText>, biçimlendirilmiş metin çizimlerini dahil etmek için bir yol sağlar. En gelişmiş düzeyde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir Genişletilebilir metin biçimlendirme metin sunum, metin Depolama Yönetimi, çalıştırma metin biçimlendirme yönetim ve katıştırılmış nesne yönetimi gibi her yönüyle denetlemek için altyapı sağlar.  
@@ -55,11 +55,11 @@ Windows Presentation Foundation (WPF) sağlayan bir dizi güçlü [!INCLUDE[TLA#
   
  Metin depolama sanallaştırma işlemek için metin deposu nesnesinden türetilmesi <xref:System.Windows.Media.TextFormatting.TextSource>. <xref:System.Windows.Media.TextFormatting.TextSource> metin biçimlendirici metin çalıştırmaları metin Mağazası'ndan almak için kullandığı yöntem tanımlar. <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> metin biçimlendirici tarafından metnini almak için kullanılan yöntem satırı biçimlendirmede kullanılan çalıştığı yerdir. Çağrı <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> metin biçimlendirici tarafından aşağıdaki koşullardan biri gerçekleşene kadar sürekli olarak gerçekleştirilir:  
   
--   A <xref:System.Windows.Media.TextFormatting.TextEndOfLine> veya bir alt döndürülür.  
+- A <xref:System.Windows.Media.TextFormatting.TextEndOfLine> veya bir alt döndürülür.  
   
--   Metin çalıştırmaları birikmiş genişliğini aşıyor veya metin Biçimlendiricinin için yapılan metin biçimlendirici oluşturmak için bir çağrı ya da belirtilen en fazla çizgi genişliği <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> yöntemi.  
+- Metin çalıştırmaları birikmiş genişliğini aşıyor veya metin Biçimlendiricinin için yapılan metin biçimlendirici oluşturmak için bir çağrı ya da belirtilen en fazla çizgi genişliği <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> yöntemi.  
   
--   A [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] "CF", "LF" veya "CRLF" gibi yeni satır sırası döndürülür.  
+- A [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] "CF", "LF" veya "CRLF" gibi yeni satır sırası döndürülür.  
   
 <a name="section4"></a>   
 ## <a name="providing-text-runs"></a>Metin çalıştırmaları sağlama  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c14080e3ac128a6a7fbb48586f59d8a5ea4105f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049342"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver İşlevi
 Bir tür kitaplığı yükler ve sağlanan kullanan [Itypelibresolver arabirimi](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) tüm dahili olarak başvurulan tür kitaplıkları çözümlenecek.  
@@ -43,11 +43,11 @@ HRESULT LoadTypeLibWithResolver(
  `regkind`  
  [in] A [REGKIND numaralandırma](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) nasıl bir tür kitaplığı kaydedilmemiş denetleyen bayrak. Olası değerleri şunlardır:  
   
--   `REGKIND_DEFAULT`: Varsayılan kayıt davranışı kullanın.  
+- `REGKIND_DEFAULT`: Varsayılan kayıt davranışı kullanın.  
   
--   `REGKIND_REGISTER`: Bu tür kitaplığına kaydedin.  
+- `REGKIND_REGISTER`: Bu tür kitaplığına kaydedin.  
   
--   `REGKIND_NONE`: Bu tür kitaplığı kaydetmeyin.  
+- `REGKIND_NONE`: Bu tür kitaplığı kaydetmeyin.  
   
  `pTlbResolver`  
  [in] Uygulanmasına yönelik bir işaretçi [Itypelibresolver arabirimi](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).  

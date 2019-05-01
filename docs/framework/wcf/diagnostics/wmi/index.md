@@ -3,11 +3,11 @@ title: Tanılama için Windows Yönetim İzlemesini Kullanma
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
 ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048293"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Tanılama için Windows Yönetim İzlemesini Kullanma
 Windows Communication Foundation (WCF) hizmetinin çalışma zamanında bir WCF Windows Yönetim Araçları (WMI) sağlayıcısı aracılığıyla denetleme verileri kullanıma sunar.  
@@ -112,13 +112,13 @@ Windows Communication Foundation (WCF) hizmetinin çalışma zamanında bir WCF 
   
      Bu PowerShell Betiği, "kök/servicemodel" WMI ad alanına yerleşik kullanıcı grubu erişimi vermek için Güvenlik Tanımlayıcısı Tanım Dili (SDDL) kullanır. Aşağıdaki EDL'ler belirtir:  
   
-    -   Yerleşik yönetici (BA) - erişim zaten var.  
+    - Yerleşik yönetici (BA) - erişim zaten var.  
   
-    -   Ağ Hizmeti (NS) - zaten erişebiliyordu.  
+    - Ağ Hizmeti (NS) - zaten erişebiliyordu.  
   
-    -   Yerel Sistem (LS) - erişim zaten var.  
+    - Yerel Sistem (LS) - erişim zaten var.  
   
-    -   Yerleşik kullanıcılar - erişim izni vermek için bir grup.  
+    - Yerleşik kullanıcılar - erişim izni vermek için bir grup.  
   
 #### <a name="to-grant-provider-registration-access"></a>Sağlayıcı vermek için kayıt erişim  
   

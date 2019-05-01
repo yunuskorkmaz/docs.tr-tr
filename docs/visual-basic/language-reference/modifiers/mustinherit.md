@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
 ms.openlocfilehash: 0bda03d3c01356317fbcc56d44199ff4f9484b5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053944"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 Bir sınıf yalnızca temel sınıf olarak kullanılabilir ve doğrudan bir nesne oluşturamazsınız belirtir.  
@@ -29,9 +29,9 @@ Bir sınıf yalnızca temel sınıf olarak kullanılabilir ve doğrudan bir nesn
   
 ## <a name="rules"></a>Kurallar  
   
--   **Bildirim bağlamı.** Kullanabileceğiniz `MustInherit` yalnızca bir `Class` deyimi.  
+- **Bildirim bağlamı.** Kullanabileceğiniz `MustInherit` yalnızca bir `Class` deyimi.  
   
--   **Birleşik değiştiriciler.** Belirtemezsiniz `MustInherit` ile birlikte `NotInheritable` aynı bildirimde.  
+- **Birleşik değiştiriciler.** Belirtemezsiniz `MustInherit` ile birlikte `NotInheritable` aynı bildirimde.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, zorla devralma ve geçersiz kılma zorlanmış gösterir. Temel sınıf `shape` bir değişkeni tanımlar `acrossLine`. Sınıfları `circle` ve `square` öğesinden türetilen `shape`. Bunlar tanımını devral `acrossLine`, ancak işlev tanımlamanız gerekir `area` Bu hesaplamayı şekli her tür için farklı olduğu için.  

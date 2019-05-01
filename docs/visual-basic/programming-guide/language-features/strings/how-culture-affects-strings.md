@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
 ms.openlocfilehash: d3c7ae9da9c18e53da393928e34dcfbf04fc891c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024696"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Kültürün Visual Basic'de Dizeleri Etkilemesi
 Bu Yardım sayfası kültür bilgilerini Visual Basic dize dönüştürme ve karşılaştırma gerçekleştirmek için nasıl kullandığını açıklar.  
@@ -29,9 +29,9 @@ Bu Yardım sayfası kültür bilgilerini Visual Basic dize dönüştürme ve kar
   
  `Str` (Sayıları dizeleri dönüştürür) ve `Val` (sayıları dizeleri dönüştürür) işlevleri dizeleri ve numaralar arasında dönüştürme yaparken uygulamanın kültür bilgilerini kullanmaz. Bunun yerine, bunlar yalnızca nokta (.) geçerli bir ondalık ayırıcı olarak tanır. Bu işlevlerin duyarlıymış algılayan analogues şunlardır:  
   
--   **Geçerli kültürü kullanan dönüştürme.** `CStr` Ve `Format` işlevleri bir sayıyı bir dizeye dönüştürür ve `CDbl` ve `CInt` işlevler bir dizeyi sayıya dönüştürme.  
+- **Geçerli kültürü kullanan dönüştürme.** `CStr` Ve `Format` işlevleri bir sayıyı bir dizeye dönüştürür ve `CDbl` ve `CInt` işlevler bir dizeyi sayıya dönüştürme.  
   
--   **Belirli bir kültür kullanan dönüştürme.** Her sayı nesnesi olan bir `ToString(IFormatProvider)` bir sayıyı bir dizeye dönüştürür yöntemi ve bir `Parse(String, IFormatProvider)` yönteminin bir dizeyi sayıya dönüştürür. Örneğin, `Double` sağlayan türü <xref:System.Double.ToString%28System.IFormatProvider%29> ve <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> yöntemleri.  
+- **Belirli bir kültür kullanan dönüştürme.** Her sayı nesnesi olan bir `ToString(IFormatProvider)` bir sayıyı bir dizeye dönüştürür yöntemi ve bir `Parse(String, IFormatProvider)` yönteminin bir dizeyi sayıya dönüştürür. Örneğin, `Double` sağlayan türü <xref:System.Double.ToString%28System.IFormatProvider%29> ve <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> yöntemleri.  
   
  Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Conversion.Str%2A> ve <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
@@ -52,9 +52,9 @@ Bu Yardım sayfası kültür bilgilerini Visual Basic dize dönüştürme ve kar
 ## <a name="comparing-strings"></a>Dizeleri Karşılaştırma  
  Dize karşılaştırmaları gerekmesi iki önemli durumlar vardır:  
   
--   **Kullanıcıya görüntülenecek veri sıralama.** Uygun şekilde dizeleri sıralamak için geçerli kültürü temel alarak işlemler kullanın.  
+- **Kullanıcıya görüntülenecek veri sıralama.** Uygun şekilde dizeleri sıralamak için geçerli kültürü temel alarak işlemler kullanın.  
   
--   **İki uygulama iç dizeleri (genellikle. Güvenlik amaçları için) tam olarak eşleşip eşleşmediğini belirleyin.** Geçerli kültürü dikkate işlemlerini kullanın.  
+- **İki uygulama iç dizeleri (genellikle. Güvenlik amaçları için) tam olarak eşleşip eşleşmediğini belirleyin.** Geçerli kültürü dikkate işlemlerini kullanın.  
   
  Visual Basic ile karşılaştırma her iki türdeki gerçekleştirebileceğiniz <xref:Microsoft.VisualBasic.Strings.StrComp%2A> işlevi. İsteğe bağlı belirtin `Compare` karşılaştırma türünü denetlemek için bağımsız değişken: `Text` çoğu girdi ve çıktı `Binary` tam eşleşme belirlemek için.  
   

@@ -3,11 +3,11 @@ title: SQL-CLR Tür Eşlemesi
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037706"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR Tür Eşlemesi
 LINQ to SQL'de, ilişkisel veritabanı veri modeli, kendi seçtiğiniz programlama dilinde ifade nesne modeli eşlenir. Uygulama çalışırken, LINQ to SQL nesne modeli dil ile tümleşik sorgu SQL'e çevirir ve bunları yürütme için veritabanı gönderir. Veritabanı sonuçları döndürdüğünde, LINQ to SQL geri kendi programlama dilinde çalışabileceğiniz nesneleri sonuçları çevirir.  
@@ -16,23 +16,23 @@ LINQ to SQL'de, ilişkisel veritabanı veri modeli, kendi seçtiğiniz programla
   
  Bu konu, aşağıdaki noktaları açıklar:  
   
--   [Varsayılan tür eşlemesi](#DefaultTypeMapping)  
+- [Varsayılan tür eşlemesi](#DefaultTypeMapping)  
   
--   [Çalışma zamanı davranışını matris eşleme türü](#BehaviorMatrix)  
+- [Çalışma zamanı davranışını matris eşleme türü](#BehaviorMatrix)  
   
--   [CLR ve SQL yürütmesi arasındaki davranış farklılıkları](#BehaviorDiffs)  
+- [CLR ve SQL yürütmesi arasındaki davranış farklılıkları](#BehaviorDiffs)  
   
--   [Enum eşleme](#EnumMapping)  
+- [Enum eşleme](#EnumMapping)  
   
--   [Sayısal eşleme](#NumericMapping)  
+- [Sayısal eşleme](#NumericMapping)  
   
--   [Metin ve XML eşleme](#TextMapping)  
+- [Metin ve XML eşleme](#TextMapping)  
   
--   [Tarih ve saat eşleme](#DateMapping)  
+- [Tarih ve saat eşleme](#DateMapping)  
   
--   [İkili eşleme](#BinaryMapping)  
+- [İkili eşleme](#BinaryMapping)  
   
--   [Çeşitli eşleme](#MiscMapping)  
+- [Çeşitli eşleme](#MiscMapping)  
   
 <a name="DefaultTypeMapping"></a>   
 ## <a name="default-type-mapping"></a>Varsayılan tür eşlemesi  
@@ -58,21 +58,21 @@ LINQ to SQL'de, ilişkisel veritabanı veri modeli, kendi seçtiğiniz programla
   
  Örneğin, bazı CLR ve SQL Server arasındaki davranış farklılıkları şunlardır:  
   
--   Bazı veri türleri, SQL Server CLR içinde veri eşdeğer türü farklı sıralar. Örneğin, SQL Server veri türü `UNIQUEIDENTIFIER` CLR veri türünde farklı sıralı <xref:System.Guid?displayProperty=nameWithType>.  
+- Bazı veri türleri, SQL Server CLR içinde veri eşdeğer türü farklı sıralar. Örneğin, SQL Server veri türü `UNIQUEIDENTIFIER` CLR veri türünde farklı sıralı <xref:System.Guid?displayProperty=nameWithType>.  
   
--   SQL Server CLR farklı bazı dize karşılaştırma işlemleri gerçekleştirir. SQL Server harmanlama ayarları sunucuda dizesi karşılaştırma davranışı bağlıdır. Daha fazla bilgi için [harmanlamaları ile çalışma](https://go.microsoft.com/fwlink/?LinkId=115330) Microsoft SQL Server Books Online.  
+- SQL Server CLR farklı bazı dize karşılaştırma işlemleri gerçekleştirir. SQL Server harmanlama ayarları sunucuda dizesi karşılaştırma davranışı bağlıdır. Daha fazla bilgi için [harmanlamaları ile çalışma](https://go.microsoft.com/fwlink/?LinkId=115330) Microsoft SQL Server Books Online.  
   
--   SQL Server CLR daha eşlenen bazı işlevler için farklı değerler döndürebilecek. Örneğin, SQL Server yalnızca sondaki boşluk farklıysa eşit olacak şekilde iki dizeyi varsaydığı eşitlik işlevleri değişir; CLR bunları eşit olmaması göz önünde bulundurur ise.  
+- SQL Server CLR daha eşlenen bazı işlevler için farklı değerler döndürebilecek. Örneğin, SQL Server yalnızca sondaki boşluk farklıysa eşit olacak şekilde iki dizeyi varsaydığı eşitlik işlevleri değişir; CLR bunları eşit olmaması göz önünde bulundurur ise.  
   
 <a name="EnumMapping"></a>   
 ## <a name="enum-mapping"></a>Enum eşleme  
  LINQ to SQL destekleyen CLR eşleme <xref:System.Enum?displayProperty=nameWithType> iki yolla SQL Server türlerine türü:  
   
--   SQL sayısal türler için eşleme (`TINYINT`, `SMALLINT`, `INT`, `BIGINT`)  
+- SQL sayısal türler için eşleme (`TINYINT`, `SMALLINT`, `INT`, `BIGINT`)  
   
      Bir CLR eşlediğinizde <xref:System.Enum?displayProperty=nameWithType> türü SQL sayısal tür için CLR temel tamsayı değerini harita <xref:System.Enum?displayProperty=nameWithType> için SQL Server veritabanı sütununun değeri. Örneğin, bir <xref:System.Enum?displayProperty=nameWithType> adlı `DaysOfWeek` adlı bir üyeyi içeren `Tue` bir arka plandaki tamsayı değeriyle 3, 3'ün bir veritabanı değere üyenin eşler.  
   
--   SQL metin türleriyle eşleme (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`)  
+- SQL metin türleriyle eşleme (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`)  
   
      Bir CLR eşlediğinizde <xref:System.Enum?displayProperty=nameWithType> SQL metin türü, SQL veritabanı değer türüne CLR adlarına eşlenen <xref:System.Enum?displayProperty=nameWithType> üyeleri. Örneğin, bir <xref:System.Enum?displayProperty=nameWithType> adlı `DaysOfWeek` adlı bir üyeyi içeren `Tue` arka plandaki tamsayı değerini 3 ile bu üye veritabanı değerine eşleyen `Tue`.  
   
@@ -154,13 +154,13 @@ LINQ to SQL'de, ilişkisel veritabanı veri modeli, kendi seçtiğiniz programla
 ### <a name="xml-types"></a>XML türleri  
  SQL Server `XML` veri türü olan Microsoft SQL Server 2005'te başlangıç kullanılabilir. SQL Server eşleyebilirsiniz `XML` veri türü için <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XDocument>, veya <xref:System.String>. Sütun içine okunamayan parçalarını depolar, <xref:System.Xml.Linq.XElement>, sütuna eşlenmiş olmalıdır <xref:System.String> çalışma zamanı hataları önlemek için. Eşlenmesi gerekir XML parçalarının <xref:System.String> şunları içerir:  
   
--   Bir dizisi XML öğesi  
+- Bir dizisi XML öğesi  
   
--   Öznitelikler  
+- Öznitelikler  
   
--   Ortak tanımlayıcıları (PI)  
+- Ortak tanımlayıcıları (PI)  
   
--   Açıklamalar  
+- Açıklamalar  
   
  Olsa da <xref:System.Xml.Linq.XElement> ve <xref:System.Xml.Linq.XDocument> gösterildiği gibi SQL Server [türü eşleme çalıştırma zamanı davranışını matris](#BehaviorMatrix), <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> yöntemi olan bu tür için varsayılan SQL Server türü eşleme yok.  
   

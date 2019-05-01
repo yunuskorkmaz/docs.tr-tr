@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
 ms.openlocfilehash: 4071f7f08c2b25a2ec551832f57a2b9a7facc91d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037095"
 ---
 # <a name="commanding-overview"></a>Komut Vermeye Genel Bakış
 <a name="introduction"></a> Komut vermeye genel olan bir giriş mekanizmasında [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] cihaz girişi daha fazla anlam düzeyinde işleme giriş sağlar. Komut örneklerindendir **kopyalama**, **Kes**, ve **Yapıştır** operations birçok uygulama üzerinde bulunamadı.  
@@ -27,15 +27,15 @@ ms.locfileid: "59139041"
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
--   [Komutları nelerdir?](#commands_at_10000_feet)  
+- [Komutları nelerdir?](#commands_at_10000_feet)  
   
--   [WPF basit komut örneği](#simple_command)  
+- [WPF basit komut örneği](#simple_command)  
   
--   [WPF komut vermeye genel dört ana kavramlar](#Four_main_Concepts)  
+- [WPF komut vermeye genel dört ana kavramlar](#Four_main_Concepts)  
   
--   [Komut kitaplığı](#Command_Library)  
+- [Komut kitaplığı](#Command_Library)  
   
--   [Özel komutlar oluşturma](#creating_commands)  
+- [Özel komutlar oluşturma](#creating_commands)  
   
 <a name="commands_at_10000_feet"></a>   
 ## <a name="what-are-commands"></a>Komutları nelerdir?  
@@ -60,13 +60,13 @@ ms.locfileid: "59139041"
 ## <a name="four-main-concepts-in-wpf-commanding"></a>WPF komut vermeye genel dört ana kavramlar  
  Yönlendirilmiş komut modelde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dört ana kavrama bölünebilir: komut, komut kaynağı, komut hedefinde ve komut bağlama:  
   
--   *Komut* yürütülecek eylem.  
+- *Komut* yürütülecek eylem.  
   
--   *Komut kaynak* komutu çağıran nesnesidir.  
+- *Komut kaynak* komutu çağıran nesnesidir.  
   
--   *Komut hedefi* komutu üzerinde yürütülmekte olan nesnesidir.  
+- *Komut hedefi* komutu üzerinde yürütülmekte olan nesnesidir.  
   
--   *Komutu bağlama* komutu komut mantığını eşleştiren nesnesidir.  
+- *Komutu bağlama* komutu komut mantığını eşleştiren nesnesidir.  
   
  Önceki örnekte, <xref:System.Windows.Input.ApplicationCommands.Paste%2A> komuttur komut <xref:System.Windows.Controls.MenuItem> komut kaynak <xref:System.Windows.Controls.TextBox> komut hedefi ve komut bağlama tarafından sağlanan <xref:System.Windows.Controls.TextBox> denetimi.  Her zaman böyle olmadığını hatalarının ayıklanabileceğini belirtmekte yarar, <xref:System.Windows.Input.CommandBinding> komut hedef sınıf denetimi tarafından sağlanır.  Oldukça sık <xref:System.Windows.Input.CommandBinding> uygulama geliştiricisi tarafından oluşturulan veya <xref:System.Windows.Input.CommandBinding> komut hedefinin bir üst düğüme bağlı.  
   
@@ -88,11 +88,11 @@ ms.locfileid: "59139041"
   
  <xref:System.Windows.Input.ICommandSource> üç özellik sunar: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>, ve <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>:  
   
--   <xref:System.Windows.Input.ICommandSource.Command%2A> Komut kaynak çağrıldığında yürütülecek komutudur.  
+- <xref:System.Windows.Input.ICommandSource.Command%2A> Komut kaynak çağrıldığında yürütülecek komutudur.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> Komutun yürütüleceği üzerinde nesnedir.  Uygulamasında hatalarının ayıklanabileceğini belirtmekte yarar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> özelliği <xref:System.Windows.Input.ICommandSource> yalnızca uygun olduğunda <xref:System.Windows.Input.ICommand> olduğu bir <xref:System.Windows.Input.RoutedCommand>.  Varsa <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> üzerinde ayarlanmış bir <xref:System.Windows.Input.ICommandSource> ve karşılık gelen komutun değil bir <xref:System.Windows.Input.RoutedCommand>, komut hedefinde yok sayılır. Varsa <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> ayarlanmazsa klavye odağı öğeyle komut hedefi olacaktır.  
+- <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> Komutun yürütüleceği üzerinde nesnedir.  Uygulamasında hatalarının ayıklanabileceğini belirtmekte yarar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> özelliği <xref:System.Windows.Input.ICommandSource> yalnızca uygun olduğunda <xref:System.Windows.Input.ICommand> olduğu bir <xref:System.Windows.Input.RoutedCommand>.  Varsa <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> üzerinde ayarlanmış bir <xref:System.Windows.Input.ICommandSource> ve karşılık gelen komutun değil bir <xref:System.Windows.Input.RoutedCommand>, komut hedefinde yok sayılır. Varsa <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> ayarlanmazsa klavye odağı öğeyle komut hedefi olacaktır.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> bir kullanıcı tanımlı veri türü bilgilerini işleyicilerine geçirmek için kullanılan komut uygular.  
+- <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> bir kullanıcı tanımlı veri türü bilgilerini işleyicilerine geçirmek için kullanılan komut uygular.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uygulayan sınıflar <xref:System.Windows.Input.ICommandSource> olan <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Documents.Hyperlink>, ve <xref:System.Windows.Input.InputBinding>.  <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem>, ve <xref:System.Windows.Documents.Hyperlink> komutu tıklandığında ve bir çağırma <xref:System.Windows.Input.InputBinding> komutu çağırır olduğunda <xref:System.Windows.Input.InputGesture> ilişkili ile bunu gerçekleştirilir.  
   

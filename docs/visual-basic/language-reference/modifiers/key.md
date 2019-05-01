@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
 ms.openlocfilehash: e13a773f0b585a5c8803a77c7aaad441d90dfe75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053957"
 ---
 # <a name="key-visual-basic"></a>Anahtar (Visual Basic)
 `Key` Anahtar sözcüğü anonim türler, özellikler için davranışını belirtmenize imkan tanır. Anonim tür örnekleri veya bir karma kod değerleri hesaplama arasındaki testlerinde anahtar özellikleri arttıkça, yalnızca özellikleri belirleyin. Anahtar özelliklerin değerlerini değiştirilemez.  

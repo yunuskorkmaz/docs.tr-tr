@@ -1,5 +1,5 @@
 ---
-title: 'Komut dosyası blokları msxsl: Script kullanan'
+title: msxsl:script Kullanan Betik Blokları
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b45b8ebe048a5917019349ea3a6a357b7e90a9c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62027010"
 ---
-# <a name="script-blocks-using-msxslscript"></a>Komut dosyası blokları msxsl: Script kullanan
+# <a name="script-blocks-using-msxslscript"></a>msxsl:script Kullanan Betik Blokları
 <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı kullanarak katıştırılmış betikleri destekler `msxsl:script` öğesi. Stil sayfası yüklendiğinde, herhangi bir tanımlı işlevlere kod belge nesne modeli (CodeDOM) tarafından derlenmiş Microsoft Ara dili (MSIL) ve çalışma zamanı sırasında yürütülür. Katıştırılmış betik bloğundan oluşturulan derleme, stil sayfası için oluşturulan derlemesinden ayrıdır.  
   
 ## <a name="enable-xslt-script"></a>XSLT betik etkinleştir  
@@ -68,14 +68,14 @@ ms.locfileid: "54565650"
 ### <a name="importing-namespaces-and-assemblies"></a>Ad alanları ve derlemeler alınıyor  
  <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı önceden belirler, derlemeleri ve varsayılan olarak tarafından desteklenen ad alanları kümesi `msxsl:script` öğesi. Ancak, sınıflar ve üyeler derlemenin ve ad alanındaki içeri aktararak önceden tanımlanmış listede olmayan bir ad alanına ait kullanabilirsiniz `msxsl:script` blok.  
   
-#### <a name="assemblies"></a>Derlemeleri  
+#### <a name="assemblies"></a>Bütünleştirilmiş kodlar  
  Varsayılan olarak aşağıdaki iki derlemelerini başvurulan:  
   
--   System.dll  
+- System.dll  
   
--   System.Xml.dll  
+- System.Xml.dll  
   
--   (Komut dosyası dili VB olduğunda) Microsoft.VisualBasic.dll içinde  
+- (Komut dosyası dili VB olduğunda) Microsoft.VisualBasic.dll içinde  
   
  Ek bütünleştirilmiş kodları kullanarak içeri aktarabilirsiniz `msxsl:assembly` öğesi. Bu, stil sayfası derlendiğinde derleme içerir. `msxsl:assembly` Öğesinin aşağıdaki tanımı:  
   
@@ -94,21 +94,21 @@ ms.locfileid: "54565650"
 #### <a name="namespaces"></a>Ad Alanları  
  Aşağıdaki ad alanları, varsayılan olarak dahil edilmiştir:  
   
--   Sistem  
+- Sistem  
   
--   System.Collection  
+- System.Collection  
   
--   System.Text  
+- System.Text  
   
--   System.Text.RegularExpressions  
+- System.Text.RegularExpressions  
   
--   System.Xml  
+- System.Xml  
   
--   System.Xml.Xsl  
+- System.Xml.Xsl  
   
--   System.Xml.XPath  
+- System.Xml.XPath  
   
--   (Komut dosyası dili VB olduğunda) Microsoft.VisualBasic  
+- (Komut dosyası dili VB olduğunda) Microsoft.VisualBasic  
   
  Ek ad alanlarını kullanma için destek ekleyebilirsiniz `namespace` özniteliği. Öznitelik değeri, ad alanının adıdır.  
   

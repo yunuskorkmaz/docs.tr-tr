@@ -1,5 +1,5 @@
 ---
-title: Ağ uygulamaları için önbellek yönetimi
+title: Ağ Uygulamaları için Önbellek Yönetimi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - cache [.NET Framework], network applications
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
 ms.openlocfilehash: 265b4e451ebb76dbabe0d3e0df065504a3891f32
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033169"
 ---
-# <a name="cache-management-for-network-applications"></a>Ağ uygulamaları için önbellek yönetimi
+# <a name="cache-management-for-network-applications"></a>Ağ Uygulamaları için Önbellek Yönetimi
 Bu konu ve alt ilgili konuları kullanılarak elde edilen kaynaklar için önbelleğe alma açıklayan <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest>, ve <xref:System.Net.FtpWebRequest> sınıfları.  
   
  Geçici depolama bir uygulama tarafından istenen kaynak, bir önbellek sağlar. Bir uygulama birden çok kez aynı kaynak isterse, kaynak sunucudan yeniden isteme yükünden önbellekten döndürülebilir. Önbelleğe alma işlemi, istenen kaynak almak için gereken süreyi azaltarak uygulama performansı artırabilir. Önbelleğe alma sunucuya sayısını azaltarak ağ trafiğini de azaltabilir. Önbelleğe alma performansını artırır, ancak kaynak döndürülen riskini artırır. eski önbelleğe alma kullanımda değilse, sunucu tarafından gönderilen kaynak aynı değil, yani bir uygulamadır.  

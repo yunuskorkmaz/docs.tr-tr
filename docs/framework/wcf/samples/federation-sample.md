@@ -3,11 +3,11 @@ title: Federasyon Örneği
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
 ms.openlocfilehash: bc2c28300d9bfc3c30388f8d13e05a23a9f37287
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051918"
 ---
 # <a name="federation-sample"></a>Federasyon Örneği
 Bu örnek, Federasyon güvenlik gösterir.  
@@ -17,13 +17,13 @@ Bu örnek, Federasyon güvenlik gösterir.
   
  Senaryo 4 parçalarını oluşur:  
   
--   Hizmet Kitaplığı  
+- Hizmet Kitaplığı  
   
--   STS kitaplığı  
+- STS kitaplığı  
   
--   STS HomeRealm  
+- STS HomeRealm  
   
--   İstemci Kitaplığı  
+- İstemci Kitaplığı  
   
  İki işlem kitaplığı hizmet destekler `BrowseBooks` ve `BuyBook`. Anonim erişime izin veren `BrowseBooks` işlemi, ancak erişim için kimliği doğrulanmış erişim gerektiren `BuyBooks` işlemi. Kimlik doğrulama Kitaplığı'nı STS tarafından verilen belirteci alır. Kitaplığı STS kullanarak istemcileri kitaplığı hizmeti için yapılandırma dosyasını işaret `wsFederationHttpBinding`.  
   

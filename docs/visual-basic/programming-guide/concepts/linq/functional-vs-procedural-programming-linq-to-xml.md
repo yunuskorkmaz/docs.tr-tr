@@ -3,30 +3,30 @@ title: İşlevsel ve Yordam programlama karşılaştırması (LINQ to XML) (Visu
 ms.date: 07/20/2015
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
 ms.openlocfilehash: 892c6b7113fe1efdb8e855749c86ac5f9da8cbe4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028401"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>İşlevsel ve Yordam programlama karşılaştırması (LINQ to XML) (Visual Basic)
 XML uygulama çeşitli türleri şunlardır:  
   
--   Bazı uygulamalar kaynak XML belgelerini alın ve kaynak belgeleri değerinden farklı bir şekil olan yeni XML belgeleri oluşturmak.  
+- Bazı uygulamalar kaynak XML belgelerini alın ve kaynak belgeleri değerinden farklı bir şekil olan yeni XML belgeleri oluşturmak.  
   
--   Bazı uygulamalar kaynak XML belgelerini alın ve sonuç belgeleri, HTML veya CSV metin dosyaları gibi tamamen farklı bir biçimde üretmek.  
+- Bazı uygulamalar kaynak XML belgelerini alın ve sonuç belgeleri, HTML veya CSV metin dosyaları gibi tamamen farklı bir biçimde üretmek.  
   
--   Bazı uygulamalar kaynak XML belgelerini alın ve kayıtları bir veritabanına Ekle.  
+- Bazı uygulamalar kaynak XML belgelerini alın ve kayıtları bir veritabanına Ekle.  
   
--   Bazı uygulamalar, bir veritabanı gibi başka bir kaynaktan veri almak ve XML belgeleri oluşturun.  
+- Bazı uygulamalar, bir veritabanı gibi başka bir kaynaktan veri almak ve XML belgeleri oluşturun.  
   
  Bu XML uygulama türleri tümünün değildir, ancak bir temsilci uygulamak için bir XML Programcı olan işlevselliği türleri kümesini şunlardır.  
   
  Tüm bu tür uygulamalar, bir geliştirici alabilir ve karşıt iki yaklaşım vardır:  
   
--   Bildirim temelli bir yaklaşım kullanarak işlevsel oluşturma.  
+- Bildirim temelli bir yaklaşım kullanarak işlevsel oluşturma.  
   
--   Yordam kodu kullanarak bellek içi XML ağacı değişikliği.  
+- Yordam kodu kullanarak bellek içi XML ağacı değişikliği.  
   
  LINQ to XML her iki yaklaşım destekler.  
   

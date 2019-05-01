@@ -3,11 +3,11 @@ title: Kurumsal Hizmetler İşlemsel Bileşenlerini Tümleştirme
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
 ms.openlocfilehash: 33e09eab1d7ad24dc234cfff21e352611e0b2ef9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047041"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Kurumsal Hizmetler İşlemsel Bileşenlerini Tümleştirme
 Windows Communication Foundation (WCF) Hizmetleri ile Kurumsal tümleştirme için otomatik bir mekanizma sağlar (bkz [COM + uygulamaları ile tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Ancak, dahili olarak Enterprise Hizmetleri içinde bulunan işlem bileşenleri kullanan hizmetleri geliştirmek için esneklik isteyebilirsiniz. WCF işlem özellik oluşturulduğundan <xref:System.Transactions> altyapı, Kurumsal Services'ı WCF ile tümleştirme sürecini arasında birlikte çalışabilirlik belirtmek için aynı <xref:System.Transactions> ve kurumsal açıklandığı gibi hizmetleri [Kurumsal Hizmetler ve COM + işlemleri ile birlikte çalışabilirlik](https://go.microsoft.com/fwlink/?LinkId=94949).  
@@ -17,9 +17,9 @@ Windows Communication Foundation (WCF) Hizmetleri ile Kurumsal tümleştirme iç
 ## <a name="integrating-enterprise-services-with-a-service-operation"></a>Kurumsal Hizmetler bir hizmet işlemi ile tümleştirme  
  Aşağıdaki kod, oluşturan, izin verilen işlem akışı ile bir işlem gösterir bir <xref:System.Transactions.TransactionScope> ile <xref:System.Transactions.EnterpriseServicesInteropOption.Full> seçeneği. Bu senaryoda aşağıdaki koşullar geçerlidir:  
   
--   İstemci bir işlem olursa Enterprise hizmetleri bileşeni için arama da dahil olmak üzere bu işlemi bu işlemin kapsamı içinde yürütülür. Kullanarak <xref:System.Transactions.EnterpriseServicesInteropOption.Full> işlem ile eşitlendiğini sağlar <xref:System.EnterpriseServices> anlamına gelir için ortam işlem bağlamı <xref:System.Transactions> ve <xref:System.EnterpriseServices> aynıdır.  
+- İstemci bir işlem olursa Enterprise hizmetleri bileşeni için arama da dahil olmak üzere bu işlemi bu işlemin kapsamı içinde yürütülür. Kullanarak <xref:System.Transactions.EnterpriseServicesInteropOption.Full> işlem ile eşitlendiğini sağlar <xref:System.EnterpriseServices> anlamına gelir için ortam işlem bağlamı <xref:System.Transactions> ve <xref:System.EnterpriseServices> aynıdır.  
   
--   İstemci bir işlem geçmeyen varsa, <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> için `true` işlemi için yeni bir işlem kapsamı oluşturur. Benzer şekilde, kullanarak <xref:System.Transactions.EnterpriseServicesInteropOption.Full> işlemin işlem içinde kullanılan işlem ile aynı olmasını sağlar <xref:System.EnterpriseServices> bileşenin bağlamı.  
+- İstemci bir işlem geçmeyen varsa, <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> için `true` işlemi için yeni bir işlem kapsamı oluşturur. Benzer şekilde, kullanarak <xref:System.Transactions.EnterpriseServicesInteropOption.Full> işlemin işlem içinde kullanılan işlem ile aynı olmasını sağlar <xref:System.EnterpriseServices> bileşenin bağlamı.  
   
  Herhangi bir ek yöntem çağrılarını da aynı işlemin işlem kapsamında oluşur.  
   

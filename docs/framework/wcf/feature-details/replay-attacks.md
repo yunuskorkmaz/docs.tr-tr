@@ -3,11 +3,11 @@ title: Yeniden Yürütme Saldırıları
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
 ms.openlocfilehash: fefcb533cedb5405736ecda70c6879ebe00b8b49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991152"
 ---
 # <a name="replay-attacks"></a>Yeniden Yürütme Saldırıları
 A *tekrarlama saldırı* bir saldırgan, iki taraflar arasında iletileri akışını kopyalar ve bir veya daha fazla taraflar akışa başlayarak yeniden oynatılır oluşur. Saldırı bilgisayarların akış azaltılabilir sürece, sonuçta hatalı sonuçları, bir öğenin yedekli siparişler gibi çeşitli yasal iletileri olarak işleyin.  
@@ -17,11 +17,11 @@ A *tekrarlama saldırı* bir saldırgan, iki taraflar arasında iletileri akış
   
  Yansıma saldırıları WCF service model imzalı ileti kimliği, istek iletilerini ekler ve bir imzalı bekliyor çünkü varsayılan olarak azaltılabilir `relates-to` üstbilgisi yanıt iletileri. Sonuç olarak, isteğine yanıt olarak yürütülemez. Güvenli, güvenilir, ileti (RM) senaryolarında, çünkü yansıma saldırıları azaltıldığından:  
   
--   Oluşturma sırası yanıt iletisi şemaları ve Oluşturma sırası farklıdır.  
+- Oluşturma sırası yanıt iletisi şemaları ve Oluşturma sırası farklıdır.  
   
--   İstemci bu türden iletilere anlayamıyor çünkü tek yönlü sıraları için istemcinin gönderdiği sırası iletileri yeniden yürütülemez.  
+- İstemci bu türden iletilere anlayamıyor çünkü tek yönlü sıraları için istemcinin gönderdiği sırası iletileri yeniden yürütülemez.  
   
--   Çift yönlü dizileri için iki sıranın kimlikleri benzersiz olmalıdır. Bu nedenle, bir giden dizisi iletisi (tüm dizisi üstbilgileri gövdeleri, çok oturum açtığınızı) geri gelen sırası iletiyi yürütülemez.  
+- Çift yönlü dizileri için iki sıranın kimlikleri benzersiz olmalıdır. Bu nedenle, bir giden dizisi iletisi (tüm dizisi üstbilgileri gövdeleri, çok oturum açtığınızı) geri gelen sırası iletiyi yürütülemez.  
   
  Yansıma saldırılarına yalnızca bağlamaları WS-Addressing olmadan olanlardır: simetrik anahtar tabanlı güvenliği kullanın-devre dışı WS Addressing ve özel bağlamalar. <xref:System.ServiceModel.BasicHttpBinding> Kullanılmıyor WS-Addressing varsayılan olarak yapar, ancak bunları simetrik anahtar tabanlı güvenlik, bu saldırısına açık olmasını sağlayan bir yolla kullanmaz.  
   
@@ -32,9 +32,9 @@ A *tekrarlama saldırı* bir saldırgan, iki taraflar arasında iletileri akış
   
  Risk azaltma işlemleri şunlardır:  
   
--   İleti modu güvenlik durum bilgisi olan güvenlik bağlamı belirteçleri (ile veya etkin güvenli konuşma olmadan) kullanın. Daha fazla bilgi için [nasıl yapılır: Bir güvenlik bağlamı oluşturmak için güvenli bir oturum belirteci](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+- İleti modu güvenlik durum bilgisi olan güvenlik bağlamı belirteçleri (ile veya etkin güvenli konuşma olmadan) kullanın. Daha fazla bilgi için [nasıl yapılır: Bir güvenlik bağlamı oluşturmak için güvenli bir oturum belirteci](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
--   Hizmetini aktarım düzeyi güvenlik kullanacak şekilde yapılandırın.  
+- Hizmetini aktarım düzeyi güvenlik kullanacak şekilde yapılandırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

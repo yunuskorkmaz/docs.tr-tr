@@ -22,11 +22,11 @@ helpviewer_keywords:
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
 ms.openlocfilehash: dba2f8b07134560abd77832293ce2a81e55e4875
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053450"
 ---
 # <a name="imaging-overview"></a>Görüntülemeye Genel Bakış
 Bu konuda tanıtır [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] geliştiricilerin görüntülemek, dönüştürme ve görüntü biçimlendirme sağlar.  
@@ -37,19 +37,19 @@ Bu konuda tanıtır [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-
   
  Erişmenin iki yöntemi vardır [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], bir yönetilen bileşen ve yönetilmeyen bir bileşen. Yönetilmeyen bileşeni aşağıdaki özellikleri sağlar.  
   
--   Yeni veya özel görüntü biçimleri için genişletilebilirlik modeli.  
+- Yeni veya özel görüntü biçimleri için genişletilebilirlik modeli.  
   
--   Geliştirilmiş performans ve güvenlik dahil olmak üzere yerel görüntü biçimleri [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)], [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)], [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)], [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)], [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)], [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)]ve simge (.ico).  
+- Geliştirilmiş performans ve güvenlik dahil olmak üzere yerel görüntü biçimleri [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)], [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)], [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)], [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)], [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)], [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)]ve simge (.ico).  
   
--   Yüksek bit derinliği görüntü veri koruma (32 bit / piksel) kanal başına 8 bit.  
+- Yüksek bit derinliği görüntü veri koruma (32 bit / piksel) kanal başına 8 bit.  
   
--   Geri dönüşlü resim ölçeklendirmeyi, kırpma ve döndürme.  
+- Geri dönüşlü resim ölçeklendirmeyi, kırpma ve döndürme.  
   
--   Basitleştirilmiş renk yönetimi.  
+- Basitleştirilmiş renk yönetimi.  
   
--   Dosya içinde özel meta verileri desteği.  
+- Dosya içinde özel meta verileri desteği.  
   
--   Yönetilmeyen altyapı diğer görüntüleri sorunsuz tümleştirme sağlamak üzere yönetilen bileşen yararlanan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] gibi özellikleri [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], animasyon ve grafik. Yönetilen bileşen yeni görüntü biçimlerinde otomatik olarak tanınmasını sağlayan Windows Presentation Foundation (WPF) görüntü codec genişletilebilirlik modeli de faydalanır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar.  
+- Yönetilmeyen altyapı diğer görüntüleri sorunsuz tümleştirme sağlamak üzere yönetilen bileşen yararlanan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] gibi özellikleri [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], animasyon ve grafik. Yönetilen bileşen yeni görüntü biçimlerinde otomatik olarak tanınmasını sağlayan Windows Presentation Foundation (WPF) görüntü codec genişletilebilirlik modeli de faydalanır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar.  
   
  Çoğu yönetilen [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] bulunan <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> ad alanı, birkaç önemli tür rağmen gibi <xref:System.Windows.Media.ImageBrush> ve <xref:System.Windows.Media.ImageDrawing> bulunan <xref:System.Windows.Media?displayProperty=nameWithType> ad alanı ve <xref:System.Windows.Controls.Image> içindeyeralıyor<xref:System.Windows.Controls?displayProperty=nameWithType> ad alanı.  
   
@@ -132,13 +132,13 @@ Bu konuda tanıtır [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-
 #### <a name="stretching-images"></a>Görüntüleri uzatma  
  <xref:System.Windows.Controls.Image.Stretch%2A> Özellik denetler görüntü kapsayıcısının dolduracak şekilde nasıl genişletilir. <xref:System.Windows.Controls.Image.Stretch%2A> Özelliği tarafından tanımlanan aşağıdaki değerleri kabul eder <xref:System.Windows.Media.Stretch> sabit listesi:  
   
--   <xref:System.Windows.Media.Stretch.None>: Görüntü çıkış alanı dolduracak şekilde uzatılır değil. Görüntü çıkış alanından daha büyük ise, görüntünün ne uymayan kırpma çıkış alanına çizilir.  
+- <xref:System.Windows.Media.Stretch.None>: Görüntü çıkış alanı dolduracak şekilde uzatılır değil. Görüntü çıkış alanından daha büyük ise, görüntünün ne uymayan kırpma çıkış alanına çizilir.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: Çıkış alanı sığacak şekilde ölçeklendirilir. Görüntü yüksekliğini ve genişliğini bağımsız olarak ölçeklenir olduğundan, özgün resmin en boy oranını korunmayabilir. Diğer bir deyişle, görüntünün çıkış kapsayıcısı tamamen doldurmak için karışmış olabilir.  
+- <xref:System.Windows.Media.Stretch.Fill>: Çıkış alanı sığacak şekilde ölçeklendirilir. Görüntü yüksekliğini ve genişliğini bağımsız olarak ölçeklenir olduğundan, özgün resmin en boy oranını korunmayabilir. Diğer bir deyişle, görüntünün çıkış kapsayıcısı tamamen doldurmak için karışmış olabilir.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: Görüntü, çıkış alanına tamamen sığacak şekilde ölçeklendirilir. Görüntünün en boy oranı korunur.  
+- <xref:System.Windows.Media.Stretch.Uniform>: Görüntü, çıkış alanına tamamen sığacak şekilde ölçeklendirilir. Görüntünün en boy oranı korunur.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: Görüntü, görüntünün özgün en boy oranını koruyarak tamamen çıkış alanı dolduracak şekilde ölçeklendirilir.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: Görüntü, görüntünün özgün en boy oranını koruyarak tamamen çıkış alanı dolduracak şekilde ölçeklendirilir.  
   
  Aşağıdaki örnek, her bir kullanılabilir uygular <xref:System.Windows.Media.Stretch> sabit listeleri için bir <xref:System.Windows.Controls.Image>.  
   

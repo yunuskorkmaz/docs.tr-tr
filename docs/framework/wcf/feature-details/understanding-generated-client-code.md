@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
 ms.openlocfilehash: 226b77d1c638ec4f8505140332ad35d4029ef0b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050694"
 ---
 # <a name="understanding-generated-client-code"></a>Oluşturulmuş İstemci Kodlarını Anlama
 [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) istemci uygulamaları oluşturmak istemci kodu ve kullanmak için bir istemci uygulama yapılandırma dosyası oluşturur. Bu konu, standart hizmet sözleşme senaryoları için tura oluşturulan kod örnekleri sağlar. Oluşturulan kod kullanarak bir istemci uygulaması oluşturma hakkında daha fazla bilgi için bkz. [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md).  
@@ -20,15 +20,15 @@ ms.locfileid: "59189166"
   
  Svcutil.exe oluşturulan tür bilgilerini değiştiren seçenek bir sayı olduğundan, bu konuda tüm senaryoları ele almaz. Ancak, oluşturulan kod bulma standart aşağıdaki görevleri içerir:  
   
--   Hizmet sözleşmesi arabirimler tanımlama.  
+- Hizmet sözleşmesi arabirimler tanımlama.  
   
--   WCF istemci sınıfı tanımlayıcı.  
+- WCF istemci sınıfı tanımlayıcı.  
   
--   Veri türleri tanımlama.  
+- Veri türleri tanımlama.  
   
--   Geri çağırma sözleşmeleri çift yönlü hizmetler için tanımlayıcı.  
+- Geri çağırma sözleşmeleri çift yönlü hizmetler için tanımlayıcı.  
   
--   Yardımcısı hizmet sözleşme kanal arabirimi tanımlama.  
+- Yardımcısı hizmet sözleşme kanal arabirimi tanımlama.  
   
 ### <a name="finding-service-contract-interfaces"></a>Bulma hizmeti sözleşmesi arabirimleri  
  Hizmet sözleşmeleri model arabirimleri bulmak için arama ile işaretlenmiş arabirimleri için <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> özniteliği. Genellikle bu öznitelik nedeniyle diğer öznitelikleri varlığını okuma hızlı ve öznitelikte açık özellikleri bulmak zor olabilir. Hizmet sözleşmesi ve istemci sözleşme arabirimlerinden iki farklı tür olduğunu unutmayın. Aşağıdaki kod örneği, özgün hizmet sözleşmesini gösterir.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
 ms.openlocfilehash: 0c85564503f3c83e436044cd92ee3014945f1ef3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051877"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
 Bir veya daha fazla bildirilmiş programlama öğesine hiçbir erişim kısıtlamasına sahip olmadığını belirtir.  
@@ -25,15 +25,15 @@ Bir veya daha fazla bildirilmiş programlama öğesine hiçbir erişim kısıtla
   
 ## <a name="rules"></a>Kurallar  
   
--   **Bildirim bağlamı.** Kullanabileceğiniz `Public` yalnızca düzeyinde modülü, arabirim veya ad alanı. Bildirim bağlamı başka bir deyişle bir `Public` öğesi bir kaynak dosyası, ad alanı, arabirim, modül, sınıf veya yapı olmalıdır ve bir yordam olamaz.  
+- **Bildirim bağlamı.** Kullanabileceğiniz `Public` yalnızca düzeyinde modülü, arabirim veya ad alanı. Bildirim bağlamı başka bir deyişle bir `Public` öğesi bir kaynak dosyası, ad alanı, arabirim, modül, sınıf veya yapı olmalıdır ve bir yordam olamaz.  
   
 ## <a name="behavior"></a>Davranış  
   
--   **Erişim düzeyi.** Bir modül, sınıf veya yapı erişebilen tüm kod erişip kendi `Public` öğeleri.  
+- **Erişim düzeyi.** Bir modül, sınıf veya yapı erişebilen tüm kod erişip kendi `Public` öğeleri.  
   
--   **Varsayılan erişim.** Yerel değişkenleri ve ortak erişimi için bir yordam varsayılan içinde herhangi bir erişim değiştiricileri üzerlerinde kullanamazsınız.  
+- **Varsayılan erişim.** Yerel değişkenleri ve ortak erişimi için bir yordam varsayılan içinde herhangi bir erişim değiştiricileri üzerlerinde kullanamazsınız.  
   
--   **Erişim değiştiricileri.** Erişim düzeyini sağlayacaklarını anahtar sözcükleri adlı *erişim değiştiricilerine*. Erişim değiştiricileri bir karşılaştırması için bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+- **Erişim değiştiricileri.** Erişim düzeyini sağlayacaklarını anahtar sözcükleri adlı *erişim değiştiricilerine*. Erişim değiştiricileri bir karşılaştırması için bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  `Public` Bu bağlamda değiştirici kullanılabilir:  
   

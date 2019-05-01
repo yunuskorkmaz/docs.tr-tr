@@ -8,11 +8,11 @@ helpviewer_keywords:
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
 ms.openlocfilehash: 71c454edc6a124f732f1e6b56e25c28671fa11b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053177"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF ve Win32 Birlikte Çalışması
 Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kod. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu olabilir bazı kodu yeniden kullanmak daha etkili.  
@@ -21,9 +21,9 @@ Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](.
 ## <a name="wpf-and-win32-interoperation-basics"></a>WPF ve Win32 birlikte çalışabilirlik temelleri  
  Arasında birlikte çalışma için iki temel teknik vardır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kod.  
   
--   Konak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresi. Bu teknikte Gelişmiş grafik yeteneklerini kullanabilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] standart framework içindeki [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] pencere ve uygulama.  
+- Konak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresi. Bu teknikte Gelişmiş grafik yeteneklerini kullanabilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] standart framework içindeki [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] pencere ve uygulama.  
   
--   Konak bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği. Bu teknik ile var olan bir özel kullanabilirsiniz [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] denetim diğer bağlamında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik ve sınırları arasında verileri geçirebilirsiniz.  
+- Konak bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği. Bu teknik ile var olan bir özel kullanabilirsiniz [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] denetim diğer bağlamında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik ve sınırları arasında verileri geçirebilirsiniz.  
   
  Bu tekniklerin, bu konudaki kavramsal olarak sunulmuştur. Daha fazla kod odaklı bir gösterim barındırma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içinde [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], bkz: [izlenecek yol: Win32'de WPF barındırma](walkthrough-hosting-wpf-content-in-win32.md). Daha fazla kod odaklı bir gösterim barındırma [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bkz: [izlenecek yol: WPF içinde Win32 denetimini barındırma](walkthrough-hosting-a-win32-control-in-wpf.md).  
   
@@ -33,13 +33,13 @@ Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](.
   
  Bir proje düzeyi komplikasyon olduğundan, derlenemez [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyalarınızı bir [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] proje.  Bunu düzeltmek için birçok proje bölme teknikler vardır.  
   
--   Bir C# tüm içeren DLL oluşturma, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olarak derlenmiş bir bütünleştirilmiş kod sayfaları ve ardından, [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] yürütülebilir dosya içeren [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] başvuru olarak.  
+- Bir C# tüm içeren DLL oluşturma, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olarak derlenmiş bir bütünleştirilmiş kod sayfaları ve ardından, [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] yürütülebilir dosya içeren [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] başvuru olarak.  
   
--   C# için yürütülebilir oluşturma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik ve bu başvuru bir [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] içeren [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] içeriği.  
+- C# için yürütülebilir oluşturma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik ve bu başvuru bir [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] içeren [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] içeriği.  
   
--   Kullanım <xref:System.Windows.Markup.XamlReader.Load%2A> herhangi yüklenecek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] derleme yerine çalışma zamanında, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+- Kullanım <xref:System.Windows.Markup.XamlReader.Load%2A> herhangi yüklenecek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] derleme yerine çalışma zamanında, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
--   Kullanmayın [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] hiç ve tüm yazma, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğe ağacı oluşturma kodunda <xref:System.Windows.Application>.  
+- Kullanmayın [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] hiç ve tüm yazma, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğe ağacı oluşturma kodunda <xref:System.Windows.Application>.  
   
  Hangi yaklaşımın sizin için en uygun kullanın.  
   
@@ -68,13 +68,13 @@ Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](.
   
 5. İşleyici (veya işleyici çağıran bir işlev içinde), aşağıdakileri yapın:  
   
-    1.  Yeni bir <xref:System.Windows.Interop.HwndSource> HWND üst pencere nesnesi olarak kendi `parent` parametresi.  
+    1. Yeni bir <xref:System.Windows.Interop.HwndSource> HWND üst pencere nesnesi olarak kendi `parent` parametresi.  
   
-    2.  Öğesinin bir örneğini oluşturur, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik sınıfı.  
+    2. Öğesinin bir örneğini oluşturur, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik sınıfı.  
   
-    3.  Bir başvuru atama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik nesnesine <xref:System.Windows.Interop.HwndSource> nesne <xref:System.Windows.Interop.HwndSource.RootVisual%2A> özelliği.  
+    3. Bir başvuru atama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik nesnesine <xref:System.Windows.Interop.HwndSource> nesne <xref:System.Windows.Interop.HwndSource.RootVisual%2A> özelliği.  
   
-    4.  <xref:System.Windows.Interop.HwndSource> Nesne <xref:System.Windows.Interop.HwndSource.Handle%2A> özelliği, pencere işleyicisi (HWND) içerir. Uygulamanızın yönetilmeyen parçası kullanabileceğiniz bir HWND almak için cast `Handle.ToPointer()` HWND için.  
+    4. <xref:System.Windows.Interop.HwndSource> Nesne <xref:System.Windows.Interop.HwndSource.Handle%2A> özelliği, pencere işleyicisi (HWND) içerir. Uygulamanızın yönetilmeyen parçası kullanabileceğiniz bir HWND almak için cast `Handle.ToPointer()` HWND için.  
   
 6. Bir başvuru tutan bir statik alan içeren bir yönetilen sınıf uygulamak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik nesne. Bu sınıf, bir başvuru almak sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik nesneden, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kod, ancak daha da önemlisi, engeller, <xref:System.Windows.Interop.HwndSource> engeller yanlışlıkla çöp olarak toplanacak.  
   
@@ -103,11 +103,11 @@ Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](.
   
 6. Denetim bildirimleri gibi işlem seçilen pencere iletileri. İki yaklaşım vardır. Seçtiğiniz kolaylık programlama büyük ölçüde olursa olsun, bu nedenle her iki için ileti akışına, aynı erişim sağlar.  
   
-    -   Uygulama ileti kılacağınızı içindeki tüm iletileri (yalnızca kapatma iletiler) için işleme <xref:System.Windows.Interop.HwndHost> yöntemi <xref:System.Windows.Interop.HwndHost.WndProc%2A>.  
+    - Uygulama ileti kılacağınızı içindeki tüm iletileri (yalnızca kapatma iletiler) için işleme <xref:System.Windows.Interop.HwndHost> yöntemi <xref:System.Windows.Interop.HwndHost.WndProc%2A>.  
   
-    -   Barındırma sahip [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğesi işleyerek iletileri işleyecek <xref:System.Windows.Interop.HwndHost.MessageHook> olay. Bu olay, barındırılan pencere ana pencere yordamına gönderilen her ileti için tetiklenir.  
+    - Barındırma sahip [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğesi işleyerek iletileri işleyecek <xref:System.Windows.Interop.HwndHost.MessageHook> olay. Bu olay, barındırılan pencere ana pencere yordamına gönderilen her ileti için tetiklenir.  
   
-    -   İşlem kullanımı dışında windows iletilerini işleme koyamıyoruz <xref:System.Windows.Interop.HwndHost.WndProc%2A>.  
+    - İşlem kullanımı dışında windows iletilerini işleme koyamıyoruz <xref:System.Windows.Interop.HwndHost.WndProc%2A>.  
   
 7. Platform kullanarak barındırılan pencere ile iletişim kurmak yönetilmeyen çağırmak için Çağır `SendMessage` işlevi.  
   
@@ -120,35 +120,35 @@ Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](.
   
 #### <a name="notable-differences-in-output-behavior"></a>Çıkış davranış önemli farklılıkları  
   
--   <xref:System.Windows.FrameworkElement>, olduğu <xref:System.Windows.Interop.HwndHost> temel sınıfı, kullanıcı Arabirimi değişiklikleri yaptığından oldukça az özelliği vardır. Bu gibi özellikleri içeren <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>, üst öğe olarak bu öğe içindeki öğe düzenini değiştirir. Ancak, bu özelliklerin çoğu, olabildiğince eşlenmedi [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] eşdeğerleri olsa da bu tür eşdeğerleri mevcut olmayabilir. Bu özelliklerin çok fazla ve anlamlarını pratik olmasını eşlemeleri için çok işleme teknoloji özgüdür. Bu nedenle, gibi özellikleri ayarlamak <xref:System.Windows.FrameworkElement.FlowDirection%2A> üzerinde <xref:System.Windows.Interop.HwndHost> hiçbir etkisi olmaz.  
+- <xref:System.Windows.FrameworkElement>, olduğu <xref:System.Windows.Interop.HwndHost> temel sınıfı, kullanıcı Arabirimi değişiklikleri yaptığından oldukça az özelliği vardır. Bu gibi özellikleri içeren <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>, üst öğe olarak bu öğe içindeki öğe düzenini değiştirir. Ancak, bu özelliklerin çoğu, olabildiğince eşlenmedi [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] eşdeğerleri olsa da bu tür eşdeğerleri mevcut olmayabilir. Bu özelliklerin çok fazla ve anlamlarını pratik olmasını eşlemeleri için çok işleme teknoloji özgüdür. Bu nedenle, gibi özellikleri ayarlamak <xref:System.Windows.FrameworkElement.FlowDirection%2A> üzerinde <xref:System.Windows.Interop.HwndHost> hiçbir etkisi olmaz.  
   
--   <xref:System.Windows.Interop.HwndHost> etkilenen bir dönüştürme işlemi tarafından döndürülen, ölçeklenen, dengesiz veya aksi olamaz.  
+- <xref:System.Windows.Interop.HwndHost> etkilenen bir dönüştürme işlemi tarafından döndürülen, ölçeklenen, dengesiz veya aksi olamaz.  
   
--   <xref:System.Windows.Interop.HwndHost> desteklemediği <xref:System.Windows.UIElement.Opacity%2A> (alfa karıştırma) özelliği. İçindeki içerik varsa <xref:System.Windows.Interop.HwndHost> gerçekleştirir <xref:System.Drawing> kendisi bir ihlali değil, alfa bilgileri de yer operations ancak <xref:System.Windows.Interop.HwndHost> bütün yalnızca opaklık desteklediği 1.0 (% 100) =.  
+- <xref:System.Windows.Interop.HwndHost> desteklemediği <xref:System.Windows.UIElement.Opacity%2A> (alfa karıştırma) özelliği. İçindeki içerik varsa <xref:System.Windows.Interop.HwndHost> gerçekleştirir <xref:System.Drawing> kendisi bir ihlali değil, alfa bilgileri de yer operations ancak <xref:System.Windows.Interop.HwndHost> bütün yalnızca opaklık desteklediği 1.0 (% 100) =.  
   
--   <xref:System.Windows.Interop.HwndHost> diğer en üstünde görünür [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aynı üst düzey pencere öğeleri. Ancak, bir <xref:System.Windows.Controls.ToolTip> veya <xref:System.Windows.Controls.ContextMenu> oluşturulan menü ayrı bir üst düzey penceresi ve bu nedenle doğru ile davranış göstereceği <xref:System.Windows.Interop.HwndHost>.  
+- <xref:System.Windows.Interop.HwndHost> diğer en üstünde görünür [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aynı üst düzey pencere öğeleri. Ancak, bir <xref:System.Windows.Controls.ToolTip> veya <xref:System.Windows.Controls.ContextMenu> oluşturulan menü ayrı bir üst düzey penceresi ve bu nedenle doğru ile davranış göstereceği <xref:System.Windows.Interop.HwndHost>.  
   
--   <xref:System.Windows.Interop.HwndHost> kırpma bölgesini üst uymaz <xref:System.Windows.UIElement>. Put denerseniz, bu büyük olasılıkla bir sorundur bir <xref:System.Windows.Interop.HwndHost> sınıf kayan bir bölge içinde veya <xref:System.Windows.Controls.Canvas>.  
+- <xref:System.Windows.Interop.HwndHost> kırpma bölgesini üst uymaz <xref:System.Windows.UIElement>. Put denerseniz, bu büyük olasılıkla bir sorundur bir <xref:System.Windows.Interop.HwndHost> sınıf kayan bir bölge içinde veya <xref:System.Windows.Controls.Canvas>.  
   
 #### <a name="notable-differences-in-input-behavior"></a>Giriş davranış önemli farklılıkları  
   
--   İçinde giriş cihazları kapsamlı sırada genel <xref:System.Windows.Interop.HwndHost> barındırılan [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] bölge giriş olayları Git doğrudan [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  
+- İçinde giriş cihazları kapsamlı sırada genel <xref:System.Windows.Interop.HwndHost> barındırılan [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] bölge giriş olayları Git doğrudan [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  
   
--   Üzerine Fare üzerindeyken <xref:System.Windows.Interop.HwndHost>, uygulamanızın ROM'u [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fare olayları ve değerini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliği <xref:System.Windows.UIElement.IsMouseOver%2A> olacaktır `false`.  
+- Üzerine Fare üzerindeyken <xref:System.Windows.Interop.HwndHost>, uygulamanızın ROM'u [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fare olayları ve değerini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliği <xref:System.Windows.UIElement.IsMouseOver%2A> olacaktır `false`.  
   
--   Sırada <xref:System.Windows.Interop.HwndHost> klavye girintisine sahip uygulamanızı değil alırsınız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] klavye olayları ve değerini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliği <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A> olacaktır `false`.  
+- Sırada <xref:System.Windows.Interop.HwndHost> klavye girintisine sahip uygulamanızı değil alırsınız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] klavye olayları ve değerini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliği <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A> olacaktır `false`.  
   
--   Zaman içinde olduğunu <xref:System.Windows.Interop.HwndHost> ve içindeki başka bir denetim değişiklikleri <xref:System.Windows.Interop.HwndHost>, uygulamanızın değil alırsınız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olayları <xref:System.Windows.UIElement.GotFocus> veya <xref:System.Windows.UIElement.LostFocus>.  
+- Zaman içinde olduğunu <xref:System.Windows.Interop.HwndHost> ve içindeki başka bir denetim değişiklikleri <xref:System.Windows.Interop.HwndHost>, uygulamanızın değil alırsınız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olayları <xref:System.Windows.UIElement.GotFocus> veya <xref:System.Windows.UIElement.LostFocus>.  
   
--   Ekran kalemi özellikleri ve olayları benzer ve kalemi üzerinden üzerindeyken bilgi bildirmeyen ilgili <xref:System.Windows.Interop.HwndHost>.  
+- Ekran kalemi özellikleri ve olayları benzer ve kalemi üzerinden üzerindeyken bilgi bildirmeyen ilgili <xref:System.Windows.Interop.HwndHost>.  
   
 <a name="tabbing_mnemonics_accelerators"></a>   
 ## <a name="tabbing-mnemonics-and-accelerators"></a>Sekme, anımsatıcıları ve Hızlandırıcıları  
  <xref:System.Windows.Interop.IKeyboardInputSink> Ve <xref:System.Windows.Interop.IKeyboardInputSite> arabirimleri karma sorunsuz klavye deneyimi oluşturmak izin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulamalar:  
   
--   Arasında sekmeyle gitmeyi [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bileşenleri  
+- Arasında sekmeyle gitmeyi [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bileşenleri  
   
--   Anımsatıcıları ve odak WPF bileşeni içinde olduğunda ve bir Win32 bileşeni içinde olduğunda, hem de çalışan Hızlandırıcılar.  
+- Anımsatıcıları ve odak WPF bileşeni içinde olduğunda ve bir Win32 bileşeni içinde olduğunda, hem de çalışan Hızlandırıcılar.  
   
  <xref:System.Windows.Interop.HwndHost> Ve <xref:System.Windows.Interop.HwndSource> sınıflarının her ikisi de uygulamaları sağlamak <xref:System.Windows.Interop.IKeyboardInputSink>, ancak bunlar, daha Gelişmiş senaryolar için istediğiniz tüm giriş iletileri işleyen değil. Kullanmak istediğiniz klavye davranışı elde etmek için uygun yöntemleri geçersiz kılın.  
   

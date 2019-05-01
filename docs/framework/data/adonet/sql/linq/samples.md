@@ -3,11 +3,11 @@ title: Örnekler
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
 ms.openlocfilehash: d06fe74280b713130142d6d7a881c97849598ce4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033416"
 ---
 # <a name="samples"></a>Örnekler
 Bu konu bağlantılar içeren Visual Basic ve C# çözümler sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] örnek kodu.  
@@ -21,11 +21,11 @@ Bu konu bağlantılar içeren Visual Basic ve C# çözümler sağlar [!INCLUDE[v
   
  Ek örneklerini bulmak için bu adımları [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kodlarınızı ve uygulamalarınızı:  
   
--   Microsoft docs'ta belirli sorunları arayın.  
+- Microsoft docs'ta belirli sorunları arayın.  
   
--   Katılmak [LINQ Forumu](https://go.microsoft.com/fwlink/?LinkId=76488), uzmanlarıyla ayrıntılı daha karmaşık konuları burada tartışabilir miyiz.  
+- Katılmak [LINQ Forumu](https://go.microsoft.com/fwlink/?LinkId=76488), uzmanlarıyla ayrıntılı daha karmaşık konuları burada tartışabilir miyiz.  
   
--   Ayrıntılı Teknik İnceleme incelemek [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] teknolojisi, Visual Basic ve C# kod örnekleri ile tamamlandı. Daha fazla bilgi için [LINQ to SQL: ilişkisel verileri için sorgu .NET Language-Integrated](https://go.microsoft.com/fwlink/?LinkId=93205).  
+- Ayrıntılı Teknik İnceleme incelemek [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] teknolojisi, Visual Basic ve C# kod örnekleri ile tamamlandı. Daha fazla bilgi için [LINQ to SQL: ilişkisel verileri için sorgu .NET Language-Integrated](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

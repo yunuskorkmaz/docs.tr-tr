@@ -3,11 +3,11 @@ title: MSMQ 4.0'da Zehirli İleti İşleme
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
 ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052098"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0'da Zehirli İleti İşleme
 Bu örnek, zehirli ileti bir hizmet olarak işleme gerçekleştirmek nasıl gösterir. Bu örnek dayanır [işlem temelli MSMQ bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) örnek. Bu örnekte `netMsmqBinding`. Hizmeti, sıraya alınan iletileri alma hizmeti gözlemleyin sağlamak için bir şirket içinde barındırılan bir konsol uygulamasıdır.
@@ -27,13 +27,13 @@ Bu örnek, zehirli ileti bir hizmet olarak işleme gerçekleştirmek nasıl gös
 
  İleti zarar olarak işaretlendikten sonra ileti ile ayarlarına göre dağıtılır <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> sabit listesi. Olası değerler yinelemek için:
 
--   Hata (varsayılan): Hata dinleyicisi ve ayrıca hizmet ana bilgisayarı için.
+- Hata (varsayılan): Hata dinleyicisi ve ayrıca hizmet ana bilgisayarı için.
 
--   Açılır: İleti bırakmak.
+- Açılır: İleti bırakmak.
 
--   Taşı: Zehirli ileti alt kuyruğa ileti taşımak için. Bu değer yalnızca kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Taşı: Zehirli ileti alt kuyruğa ileti taşımak için. Bu değer yalnızca kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
--   Reddetme: İletiyi gönderenin eski ileti sırası geri gönderme, ileti reddetmek için. Bu değer yalnızca kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Reddetme: İletiyi gönderenin eski ileti sırası geri gönderme, ileti reddetmek için. Bu değer yalnızca kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
  Örnek kullanmayı gösterir `Move` zehirli ileti için değerlendirme. `Move` zehirli alt kuyruğuna Taşı iletiyi neden olur.
 
@@ -277,15 +277,15 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 2. Hizmet ilk olarak çalıştırılırsa, sıranın mevcut olduğundan emin olun kontrol eder. Kuyruk yoksa, bir hizmeti oluşturacaksınız. İlk sırayı oluşturmak için hizmet çalıştırabileceğiniz veya bir MSMQ Kuyruk Yöneticisi ile oluşturabilirsiniz. Windows 2008'de bir kuyruk oluşturmak için aşağıdaki adımları izleyin.
 
-    1.  Visual Studio 2012'de Sunucu Yöneticisi'ni açın.
+    1. Visual Studio 2012'de Sunucu Yöneticisi'ni açın.
 
-    2.  Genişletin **özellikleri** sekmesi.
+    2. Genişletin **özellikleri** sekmesi.
 
-    3.  Sağ **özel ileti kuyrukları**seçip **yeni**, **özel sıra**.
+    3. Sağ **özel ileti kuyrukları**seçip **yeni**, **özel sıra**.
 
-    4.  Denetleme **işlem** kutusu.
+    4. Denetleme **işlem** kutusu.
 
-    5.  Girin `ServiceModelSamplesTransacted` yeni Kuyruğun adı.
+    5. Girin `ServiceModelSamplesTransacted` yeni Kuyruğun adı.
 
 3. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
 

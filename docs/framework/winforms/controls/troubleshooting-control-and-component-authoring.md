@@ -12,26 +12,26 @@ helpviewer_keywords:
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
 ms.openlocfilehash: 3ae8a889bf69913d234e31804335ddb08560c30c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009220"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Denetim ve Bileşen Yazmada Sorun Giderme
 Bu konu, bileşenlerin ve denetimlerin geliştirme ortaya çıkan aşağıdaki ortak sorunları listeler. Daha fazla bilgi için [bileşenler ile programlama](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
--   Denetimi araç kutusuna eklenemiyor  
+- Denetimi araç kutusuna eklenemiyor  
   
--   Windows Forms kullanıcı denetimi veya bileşen hataları ayıklanamıyor  
+- Windows Forms kullanıcı denetimi veya bileşen hataları ayıklanamıyor  
   
--   İki kez devralınan denetim veya bileşen olay tetiklenir  
+- İki kez devralınan denetim veya bileşen olay tetiklenir  
   
--   Tasarım zamanı hata: "Bileşeni oluşturulamadı. '*bileşen adı*'"  
+- Tasarım zamanı hata: "Bileşeni oluşturulamadı. '*bileşen adı*'"  
   
--   STAThreadAttribute  
+- STAThreadAttribute  
   
--   Bileşen simgesi Araç Kutusu'nda görünmez  
+- Bileşen simgesi Araç Kutusu'nda görünmez  
   
 ## <a name="cannot-add-control-to-toolbox"></a>Denetimi araç kutusuna eklenemiyor  
  Başka bir proje tarafından oluşturulan özel bir denetim veya üçüncü taraf denetime eklemek isteyip istemediğimi **araç kutusu**, bunu el ile yapmanız gerekir. Geçerli proje denetim veya bileşen içeriyorsa, içinde görünmelidir **araç kutusu** otomatik olarak. Daha fazla bilgi için [izlenecek yol: Otomatik olarak araç kutusunu özel bileşenlerle doldurma](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
@@ -42,11 +42,11 @@ Bu konu, bileşenlerin ve denetimlerin geliştirme ortaya çıkan aşağıdaki o
   
 2. İçinde **araç kutusu öğelerini Seç** iletişim kutusunda, bileşen ekleyin:  
   
-    -   Bir .NET Framework bileşeni veya denetimi eklemek istiyorsanız, tıklayın **.NET Framework bileşenlerini** sekmesi.  
+    - Bir .NET Framework bileşeni veya denetimi eklemek istiyorsanız, tıklayın **.NET Framework bileşenlerini** sekmesi.  
   
          – veya –  
   
-    -   Bir COM bileşeni ya da ActiveX denetiminden eklemek istiyorsanız, tıklayın **COM bileşenlerini** sekmesi.  
+    - Bir COM bileşeni ya da ActiveX denetiminden eklemek istiyorsanız, tıklayın **COM bileşenlerini** sekmesi.  
   
 3. Denetim iletişim kutusunda listede yoksa seçilir ve ardından onaylamak **Tamam**.  
   
@@ -54,15 +54,15 @@ Bu konu, bileşenlerin ve denetimlerin geliştirme ortaya çıkan aşağıdaki o
   
 4. Denetim iletişim kutusunda listede yoksa, şunları yapın:  
   
-    1.  Tıklayın **Gözat** düğmesi.  
+    1. Tıklayın **Gözat** düğmesi.  
   
-    2.  Denetim içeren .dll dosyasını içeren klasöre göz atın.  
+    2. Denetim içeren .dll dosyasını içeren klasöre göz atın.  
   
-    3.  .Dll dosyasını seçin ve tıklayın **açık**.  
+    3. .Dll dosyasını seçin ve tıklayın **açık**.  
   
          Denetim iletişim kutusunda görüntülenir.  
   
-    4.  Denetiminiz seçilir ve ardından onaylamak **Tamam**.  
+    4. Denetiminiz seçilir ve ardından onaylamak **Tamam**.  
   
          Denetim eklenir **araç kutusu**.  
   

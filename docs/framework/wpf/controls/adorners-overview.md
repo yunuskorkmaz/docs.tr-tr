@@ -8,11 +8,11 @@ helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
 ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019093"
 ---
 # <a name="adorners-overview"></a>Donatıcılara Genel Bakış
 Donatıcıları, özel bir tür <xref:System.Windows.FrameworkElement>görsel ipuçları kullanıcıya sağlamak için kullanılır. Diğer kullanımının yanı sıra donatıcıları işlevsel tanıtıcıları öğeleri ekleyin ya da bir denetimi hakkındaki durum bilgilerini sağlamak için kullanılabilir.  
@@ -23,13 +23,13 @@ Donatıcıları, özel bir tür <xref:System.Windows.FrameworkElement>görsel ip
   
  Donatıcılar için ortak uygulamalar şunlardır:  
   
--   İşlev tanıtıcıları ekleyerek bir <xref:System.Windows.UIElement> öğeyi (yeniden boyutlandırma, döndürme, yeniden konumlandırma, vb.) bir şekilde işlemek bir kullanıcı etkinleştirin.  
+- İşlev tanıtıcıları ekleyerek bir <xref:System.Windows.UIElement> öğeyi (yeniden boyutlandırma, döndürme, yeniden konumlandırma, vb.) bir şekilde işlemek bir kullanıcı etkinleştirin.  
   
--   Çeşitli durumları göstermek için görsel geri bildirim sağlamak veya çeşitli olaylara yanıt vermek.  
+- Çeşitli durumları göstermek için görsel geri bildirim sağlamak veya çeşitli olaylara yanıt vermek.  
   
--   Görsel süslemeleri yer paylaşımı üzerindeki bir <xref:System.Windows.UIElement>.  
+- Görsel süslemeleri yer paylaşımı üzerindeki bir <xref:System.Windows.UIElement>.  
   
--   Görsel olarak maskelemek veya bölümünü veya tümünü geçersiz bir <xref:System.Windows.UIElement>.  
+- Görsel olarak maskelemek veya bölümünü veya tümünü geçersiz bir <xref:System.Windows.UIElement>.  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] görsel öğeler donatmak için temel çerçeveyi sağlar. Aşağıdaki tabloda, nesneleri ve bunların amacı donatmak olduğunda kullanılan birincil türlerini listeler. Çeşitli kullanım örnekleri izleyin.  
   

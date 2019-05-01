@@ -10,11 +10,11 @@ helpviewer_keywords:
 - examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
 ms.openlocfilehash: 3202bdb2c4274e6d3127537b7cae661ba6e63a35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052514"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>Uygulamadan Günlüğe Bilgi Kaydetme (Visual Basic)
 Bu bölümde, uygulama kullanımından bilgileri günlüğe kaydetmek nasıl kapsayan konuları içerir `My.Application.Log` veya `My.Log` nesne ve uygulamanın günlüğe kaydetme özellikleri genişletme.  

@@ -3,11 +3,11 @@ title: Desteklenmeyen Senaryolar
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050759"
 ---
 # <a name="unsupported-scenarios"></a>Desteklenmeyen Senaryolar
 Çeşitli nedenlerden dolayı Windows Communication Foundation (WCF) bazı belirli güvenlik senaryoları desteklemez. Örneğin, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition SSPI veya Kerberos kimlik doğrulama protokolleri uygulamaz ve bu nedenle WCF hizmet Windows kimlik doğrulaması ile bu platform üzerinde çalıştırılmasını desteklemez. Kullanıcı adı/parola ve HTTP/HTTPS tümleşik kimlik doğrulaması gibi diğer kimlik doğrulama mekanizmaları, WCF, Windows XP Home Edition altında çalışırken desteklenir.  
@@ -20,13 +20,13 @@ ms.locfileid: "59178782"
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP ve etkin güvenli bağlam belirteci tanımlama bilgisi  
  WCF kimliğe bürünme desteklemez ve bir <xref:System.InvalidOperationException> aşağıdaki koşulların oluşturulur:  
   
--   İşletim sistemi [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- İşletim sistemi [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Bir Windows kimliği kimlik doğrulama modu sonuçları.  
+- Bir Windows kimliği kimlik doğrulama modu sonuçları.  
   
--   <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> Özelliği <xref:System.ServiceModel.OperationBehaviorAttribute> ayarlanır <xref:System.ServiceModel.ImpersonationOption.Required>.  
+- <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> Özelliği <xref:System.ServiceModel.OperationBehaviorAttribute> ayarlanır <xref:System.ServiceModel.ImpersonationOption.Required>.  
   
--   Bir durum tabanlı güvenlik bağlamı belirteci (SCT) oluşturulur (oluşturma, varsayılan olarak devre dışıdır).  
+- Bir durum tabanlı güvenlik bağlamı belirteci (SCT) oluşturulur (oluşturma, varsayılan olarak devre dışıdır).  
   
  Durum tabanlı SCT yalnızca özel bir bağlama kullanarak oluşturulabilir. Daha fazla bilgi için [nasıl yapılır: Bir güvenlik bağlamı oluşturmak için güvenli bir oturum belirteci](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) Bir güvenlik bağlama öğesi oluşturarak, kod içinde belirtecinin etkinleştirilip etkinleştirilmediğini (ya da <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> veya <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) kullanarak <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> veya <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> yöntemi ve ayarı `requireCancellation` parametresi `false`. Parametresi SCT önbelleğe almayı gösterir. Değerini `false` durum tabanlı SCT özelliği sağlar.  
   
@@ -68,18 +68,18 @@ ms.locfileid: "59178782"
   
  Bir sertifika KSP kullanıp kullanmadığını bildirmek için olası iki yolu vardır:  
   
--   Yapmak bir `p/invoke` , `CertGetCertificateContextProperty`ve incelemek `dwProvType` döndürülen üzerinde `CertGetCertificateContextProperty`.  
+- Yapmak bir `p/invoke` , `CertGetCertificateContextProperty`ve incelemek `dwProvType` döndürülen üzerinde `CertGetCertificateContextProperty`.  
   
--   Kullanım `certutil` sertifikaları'nı sorgulamak için komut satırından komutu. Daha fazla bilgi için [sertifikalarının sorunlarını gidermek için Certutil görevleri](https://go.microsoft.com/fwlink/?LinkId=120056).  
+- Kullanım `certutil` sertifikaları'nı sorgulamak için komut satırından komutu. Daha fazla bilgi için [sertifikalarının sorunlarını gidermek için Certutil görevleri](https://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>ASP.NET kimliğe bürünme ve ASP.NET uyumluluk kullanarak gerekliyse ileti güvenlik başarısız  
  İstemci kimlik doğrulaması, oluşmasını engellediğinden WCF ayarları aşağıdaki birleşimi desteklemez:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Kimliğe bürünme etkinleştirilir. Bu Web.config dosyasında ayarlayarak yapılır `impersonate` özniteliği <`identity`> öğesine `true`.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Kimliğe bürünme etkinleştirilir. Bu Web.config dosyasında ayarlayarak yapılır `impersonate` özniteliği <`identity`> öğesine `true`.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Uyumluluk modu etkin ayarlayarak `aspNetCompatibilityEnabled` özniteliği [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) için `true`.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Uyumluluk modu etkin ayarlayarak `aspNetCompatibilityEnabled` özniteliği [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) için `true`.  
   
--   İleti modu güvenliği kullanılır.  
+- İleti modu güvenliği kullanılır.  
   
  Devre dışı bırakmak için geçici olduğu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uyumluluk modu. Veya [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uyumluluk modu gereklidir, devre dışı bırakma [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kimliğe bürünme özelliğini ve WCF tarafından sağlanan kimliğe bürünme özelliğini kullanın. Daha fazla bilgi için [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   

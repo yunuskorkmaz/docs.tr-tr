@@ -3,11 +3,11 @@ title: Özel Durum İşleme
 description: Özel durum olarak işlemeyi temel bilgileri öğrenmek F# ve özel durum ifadeler ve İşlevler işleme bağlantılarını bulabilirsiniz.
 ms.date: 05/16/2016
 ms.openlocfilehash: 187236ca380c7de0b3714160f6c3703f8fb93d5a
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025099"
 ---
 # <a name="exception-handling"></a>Özel Durum İşleme
 
@@ -23,8 +23,8 @@ Yığın geriye doğru izlenirken, herhangi bir kod Ayrıca, çalışma zamanın
 |Başlık|Açıklama|
 |-----|-----------|
 |[Özel Durum Türleri](exception-types.md)|Bir özel durum türü bildirmek açıklar.|
-|[Özel durumlar: `try...with` İfadesi](the-try-with-expression.md)|Özel durum işleme destekleyen dil yapısı açıklar.|
-|[Özel durumlar: `try...finally` İfadesi](the-try-finally-expression.md)|Bir özel durum oluştuğunda yığının geriye doğru izler gibi temizleme kodu yürütme olanak tanıyan dil yapısı açıklar.|
+|[Özel Durumlar: `try...with` İfadesi](the-try-with-expression.md)|Özel durum işleme destekleyen dil yapısı açıklar.|
+|[Özel Durumlar: `try...finally` İfadesi](the-try-finally-expression.md)|Bir özel durum oluştuğunda yığının geriye doğru izler gibi temizleme kodu yürütme olanak tanıyan dil yapısı açıklar.|
 |[Özel durumlar: `raise` işlevi](the-raise-Function.md)|Bir özel durum nesnesi oluşturmak nasıl açıklar.|
-|[Özel durumlar: `failwith` İşlevi](the-failwith-function.md)|Genel oluşturmayı açıklar F# özel durum.|
-|[Özel durumlar: `invalidArg` İşlevi](the-invalidArg-function.md)|Geçersiz bağımsız değişken özel oluşturmayı açıklar.|
+|[Özel Durumlar: `failwith` İşlevi](the-failwith-function.md)|Genel oluşturmayı açıklar F# özel durum.|
+|[Özel Durumlar: `invalidArg` İşlevi](the-invalidArg-function.md)|Geçersiz bağımsız değişken özel oluşturmayı açıklar.|

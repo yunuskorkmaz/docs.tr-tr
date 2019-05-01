@@ -6,22 +6,22 @@ dev_langs:
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
 ms.openlocfilehash: d9b1c1242fe2686a66e41b777f904a71898159ea
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050655"
 ---
 # <a name="using-the-message-class"></a>İleti Sınıfını Kullanma
 <xref:System.ServiceModel.Channels.Message> Sınıfı, temel Windows Communication Foundation (WCF). İstemciler ve hizmetler arasındaki tüm iletişim sonuçta sonuçlanır <xref:System.ServiceModel.Channels.Message> örnekleri için gönderilen ve alınan.  
   
  Genellikle ile etkileşime değil <xref:System.ServiceModel.Channels.Message> doğrudan sınıf. Bunun yerine, veri sözleşmeleri, ileti sözleşmeleri ve işlem sözleşmeleri gibi WCF service model yapıları, gelen ve giden iletileri tanımlamak için kullanılır. Ancak, bazı Gelişmiş senaryolar program kullanarak <xref:System.ServiceModel.Channels.Message> doğrudan sınıf. Örneğin, kullanmak isteyebilirsiniz <xref:System.ServiceModel.Channels.Message> sınıfı:  
   
--   Seri hale getirme yerine (örneğin, bir dosyanın disk üzerinde doğrudan bir ileti oluşturma) giden ileti içeriği oluşturma alternatif bir yolu gerektiğinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri.  
+- Seri hale getirme yerine (örneğin, bir dosyanın disk üzerinde doğrudan bir ileti oluşturma) giden ileti içeriği oluşturma alternatif bir yolu gerektiğinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri.  
   
--   Bir alternatif bir yolu içine seri durumdan çıkarılırken yerine (örneğin, ham XML içeriği XSLT dönüştürmesi uygulamak istediğinizde) gelen ileti içeriği kullanma gerektiğinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri.  
+- Bir alternatif bir yolu içine seri durumdan çıkarılırken yerine (örneğin, ham XML içeriği XSLT dönüştürmesi uygulamak istediğinizde) gelen ileti içeriği kullanma gerektiğinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri.  
   
--   İleti içeriği ne olursa olsun genel bir şekilde iletilerle dağıtılacak gerektiğinde (örneğin, yönlendirme veya yönlendirici, yük dengeleyici veya bir yayımlama oluştururken iletirken-sistem abone).  
+- İleti içeriği ne olursa olsun genel bir şekilde iletilerle dağıtılacak gerektiğinde (örneğin, yönlendirme veya yönlendirici, yük dengeleyici veya bir yayımlama oluştururken iletirken-sistem abone).  
   
  Kullanmadan önce <xref:System.ServiceModel.Channels.Message> sınıfı, WCF veri aktarımı mimaride planladığınızdan [veri aktarımı mimarisine genel bakış](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
   
@@ -30,11 +30,11 @@ ms.locfileid: "58409607"
 ## <a name="using-the-message-class-in-operations"></a>İşlemlerinde ileti sınıfını kullanma  
  Kullanabileceğiniz <xref:System.ServiceModel.Channels.Message> sınıfının giriş parametresi olarak bir işlem, bir işlem veya her ikisi de dönüş değeri. Varsa <xref:System.ServiceModel.Channels.Message> kullanılan herhangi bir işlem, aşağıdaki kısıtlamalar uygulanır:  
   
--   İşlemi içeremez `out` veya `ref` parametreleri.  
+- İşlemi içeremez `out` veya `ref` parametreleri.  
   
--   Olamaz birden fazla `input` parametresi. Parametre varsa, ileti ya da ileti anlaşması türü olmalıdır.  
+- Olamaz birden fazla `input` parametresi. Parametre varsa, ileti ya da ileti anlaşması türü olmalıdır.  
   
--   Dönüş türü olmalıdır `void`, `Message`, ya da sözleşme türü bir ileti.  
+- Dönüş türü olmalıdır `void`, `Message`, ya da sözleşme türü bir ileti.  
   
  Aşağıdaki kod örneği, geçerli işlem anlaşması içeriyor.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "58409607"
 ## <a name="extracting-message-body-data"></a>İleti gövde verilerini ayıklama  
  `Message` Sınıfı, kendi gövdesinden bilgilerini ayıklama birçok yolu destekler. Bunlar aşağıdaki kategoride sınıflandırılabilir:  
   
--   Tek seferde bir XML yazıcısı için yazılan tüm ileti gövdesi alınıyor. Bu olarak adlandırılır *bir iletiyi yazmanın*.  
+- Tek seferde bir XML yazıcısı için yazılan tüm ileti gövdesi alınıyor. Bu olarak adlandırılır *bir iletiyi yazmanın*.  
   
--   Bir XML okuyucusu ileti gövdesi alınıyor. Bu, gerektiği gibi ileti gövdesi parça--parça daha sonra erişimi sağlar. Bu olarak adlandırılır *bir ileti okuma*.  
+- Bir XML okuyucusu ileti gövdesi alınıyor. Bu, gerektiği gibi ileti gövdesi parça--parça daha sonra erişimi sağlar. Bu olarak adlandırılır *bir ileti okuma*.  
   
--   Bir bellek içi arabellek için kendi gövdesi de dahil olmak üzere tüm ileti kopyalanabilir <xref:System.ServiceModel.Channels.MessageBuffer> türü. Bu olarak adlandırılır *bir ileti kopyalama*.  
+- Bir bellek içi arabellek için kendi gövdesi de dahil olmak üzere tüm ileti kopyalanabilir <xref:System.ServiceModel.Channels.MessageBuffer> türü. Bu olarak adlandırılır *bir ileti kopyalama*.  
   
  Gövdesi erişebileceğiniz bir `Message` erişilme bağımsız olarak yalnızca bir kez,. İleti nesnesi olan bir `State` özelliği başlangıçta oluşturuldu olarak ayarlanır. Önceki listede açıklanan üç erişim yöntemlerine durumu yazılan, okuma ve kopyalanan, sırasıyla ayarlayın. Ayrıca, bir `Close` yöntemi ayarlayabilirsiniz durumunu Kapalı olarak iletinin gövde içeriği artık gerekli olduğunda. İleti gövdesi, yalnızca Created durumunda erişilebilir ve durumu değiştikten sonra oluşturulan duruma geri dönmek için bir yolu yoktur.  
   
@@ -96,9 +96,9 @@ ms.locfileid: "58409607"
   
  İki ek yardımcı yöntemler belirli SOAP başlangıç öğesi etiketleri yazın. Bu yöntemler, ileti gövdesi erişim sağlanır ve bunların kadar ileti durumu değişmez. Bu güncelleştirmeler şunlardır:  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A> Örneğin, başlangıç body öğesi Yazar `<soap:Body>`.  
+- <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A> Örneğin, başlangıç body öğesi Yazar `<soap:Body>`.  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A> Örneğin, başlangıç Zarf öğesine Yazar `<soap:Envelope>`.  
+- <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A> Örneğin, başlangıç Zarf öğesine Yazar `<soap:Envelope>`.  
   
  Karşılık gelen son öğe etiketlerini yazmak için çağrı `WriteEndElement` karşılık gelen XML yazıcısı. Bu yöntemleri doğrudan nadiren çağrılır.  
   
@@ -138,15 +138,15 @@ ms.locfileid: "58409607"
 ## <a name="accessing-other-message-parts"></a>Diğer ileti bölümlerini erişme  
  İleti gövdesi içeriğini dışında hakkında bilgilere erişmek için çeşitli özellikler sağlanır. Ancak, ileti kapatıldıktan sonra bu çağrılamaz:  
   
--   <xref:System.ServiceModel.Channels.Message.Headers%2A> Özelliğini ileti üstbilgilerini temsil eder. Bu konunun ilerleyen bölümlerindeki "Başlıklarında ile çalışma" bölümüne bakın.  
+- <xref:System.ServiceModel.Channels.Message.Headers%2A> Özelliğini ileti üstbilgilerini temsil eder. Bu konunun ilerleyen bölümlerindeki "Başlıklarında ile çalışma" bölümüne bakın.  
   
--   <xref:System.ServiceModel.Channels.Message.Properties%2A> Özelliğini iletiye eklenmiş adlandırılmış veri ileti gönderildiğinde genellikle yayılan değil parçalarıdır ileti özelliklerini temsil eder. Bu konunun ilerleyen bölümlerindeki "Özellikler ile çalışma" bölümüne bakın.  
+- <xref:System.ServiceModel.Channels.Message.Properties%2A> Özelliğini iletiye eklenmiş adlandırılmış veri ileti gönderildiğinde genellikle yayılan değil parçalarıdır ileti özelliklerini temsil eder. Bu konunun ilerleyen bölümlerindeki "Özellikler ile çalışma" bölümüne bakın.  
   
--   <xref:System.ServiceModel.Channels.Message.Version%2A> Özelliği belirten iletiyle ilişkili SOAP ve WS-Addressing sürümü veya `None` SOAP devre dışı.  
+- <xref:System.ServiceModel.Channels.Message.Version%2A> Özelliği belirten iletiyle ilişkili SOAP ve WS-Addressing sürümü veya `None` SOAP devre dışı.  
   
--   <xref:System.ServiceModel.Channels.Message.IsFault%2A> Özelliği döndürür `true` ileti bir SOAP hatası iletisi ise.  
+- <xref:System.ServiceModel.Channels.Message.IsFault%2A> Özelliği döndürür `true` ileti bir SOAP hatası iletisi ise.  
   
--   <xref:System.ServiceModel.Channels.Message.IsEmpty%2A> Özelliği döndürür `true` ileti boşsa.  
+- <xref:System.ServiceModel.Channels.Message.IsEmpty%2A> Özelliği döndürür `true` ileti boşsa.  
   
  Kullanabileceğiniz <xref:System.ServiceModel.Channels.Message.GetBodyAttribute%28System.String%2CSystem.String%29> gövdesi sarmalayıcı öğe üzerinde belirli bir özniteliği erişim yöntemi (örneğin, `<soap:Body>`) belirli bir ad ve ad alanı tarafından tanımlanan. Böyle bir öznitelik bulunamazsa `null` döndürülür. Bu yöntem yalnızca çağrılabilir `Message` (ileti gövdesi yok henüz eriştiğini olduğunda) Created durumunda olmadığı.  
   

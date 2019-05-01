@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
 ms.openlocfilehash: b0d24027f00c4ab4ba49f4948a9f5488a2eff3fd
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054412"
 ---
 # <a name="integer-data-type-visual-basic"></a>Tamsayı veri türü (Visual Basic)
 Değer olarak -2.147.483.648 ile 2.147.483.647 arasında değişen imzalı 32 bitlik (4 bayt) tamsayıları tutar.  
@@ -67,13 +67,13 @@ Dim number = &H_035826I
 
 ## <a name="programming-tips"></a>Programlama ipuçları
 
--   **Birlikte çalışabilirlik değerlendirmeleri.** Otomasyon ve COM nesneleri gibi .NET Framework için yazılmaz bileşenleriyle arabirim olmadığını unutmayın `Integer` diğer ortamlarda farklı veri genişliği (16 bit) sahiptir. Bir 16 bit bağımsız değişkeni böyle bir bileşene geçiriyorsanız, olarak bildirin `Short` yerine `Integer` yeni Visual Basic kod.  
+- **Birlikte çalışabilirlik değerlendirmeleri.** Otomasyon ve COM nesneleri gibi .NET Framework için yazılmaz bileşenleriyle arabirim olmadığını unutmayın `Integer` diğer ortamlarda farklı veri genişliği (16 bit) sahiptir. Bir 16 bit bağımsız değişkeni böyle bir bileşene geçiriyorsanız, olarak bildirin `Short` yerine `Integer` yeni Visual Basic kod.  
   
--   **Genişletme.** `Integer` Widens veri türü için `Long`, `Decimal`, `Single`, veya `Double`. Yani dönüştürebilirsiniz `Integer` karşılaşmadan bu türlerden herhangi birine bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
+- **Genişletme.** `Integer` Widens veri türü için `Long`, `Decimal`, `Single`, veya `Double`. Yani dönüştürebilirsiniz `Integer` karşılaşmadan bu türlerden herhangi birine bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
   
--   **Tür karakterleri.** Değişmez değer türü karakterinin `I` sabit değerine zorlar `Integer` veri türü. Tanımlayıcı türü karakteri ekleme `%` herhangi bir tanımlayıcı zorlar `Integer`.  
+- **Tür karakterleri.** Değişmez değer türü karakterinin `I` sabit değerine zorlar `Integer` veri türü. Tanımlayıcı türü karakteri ekleme `%` herhangi bir tanımlayıcı zorlar `Integer`.  
   
--   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Int32?displayProperty=nameWithType> yapısı.  
+- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Int32?displayProperty=nameWithType> yapısı.  
   
 ## <a name="range"></a>Aralık
 

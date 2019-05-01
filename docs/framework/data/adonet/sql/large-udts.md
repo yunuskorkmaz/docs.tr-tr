@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
 ms.openlocfilehash: 015ce896e49b3a6a932c36db867271b4ac4c64c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033871"
 ---
 # <a name="large-udts"></a>Büyük UDT’ler
 Kullanıcı tanımlı türler(UDT) ortak dil çalışma zamanı (CLR) nesneleri bir SQL Server veritabanında depolayarak sunucunun skalar türü sistemini genişletmek bir geliştirici izin verin. Udt'ler birden çok öğe içerebilir ve davranışlar, tek bir SQL Server sistem veri türünü oluşur geleneksel diğer veri türleri farklı olabilir.  
@@ -22,7 +22,7 @@ Kullanıcı tanımlı türler(UDT) ortak dil çalışma zamanı (CLR) nesneleri 
   
  Kullanıcı tanımlı türler için kapsamlı belgeler için SQL Server Books Online'nın sürümü kullandığınız SQL Server sürümü için bkz.  
   
- **SQL Server Çevrimiçi Kitaplar**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 1. [Kullanıcı Tanımlı CLR Türleri](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
@@ -49,21 +49,21 @@ Kullanıcı tanımlı türler(UDT) ortak dil çalışma zamanı (CLR) nesneleri 
   
  Aşağıdaki yöntemlerden birini <xref:System.Data.SqlClient.SqlDataReader> döndüreceği bir <xref:System.Data.SqlTypes.SqlBinary> bir UDT yerine zaman `Type System Version` SQL Server 2005'e ayarlanır:  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
   
  Aşağıdaki yöntemlerden bir dizi döndürür `Byte[]` bir UDT yerine zaman `Type System Version` SQL Server 2005'e ayarlanır:  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetValues%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetValues%2A>  
   
  Hiçbir dönüştürme ADO.NET geçerli sürümü için yapılan unutmayın.  
   

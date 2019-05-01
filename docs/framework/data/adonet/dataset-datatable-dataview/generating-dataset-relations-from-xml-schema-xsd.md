@@ -3,20 +3,20 @@ title: XML Şemasından (XSD) DataSet İlişkileri Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
 ms.openlocfilehash: 29c0e9ee96c376c6da392692febccbbae3c6a33f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034326"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>XML Şemasından (XSD) DataSet İlişkileri Oluşturma
 İçinde bir <xref:System.Data.DataSet>, bir üst-alt ilişkisi oluşturarak iki veya daha fazla sütunu arasında bir ilişki oluşturur. Göstermek için üç yol vardır bir **veri kümesi** ilişkisi içinde bir XML Şeması Tanım Dili (XSD) şeması:  
   
--   Karmaşık iç içe geçmiş türler belirtin.  
+- Karmaşık iç içe geçmiş türler belirtin.  
   
--   Kullanım **msdata:Relationship** ek açıklama.  
+- Kullanım **msdata:Relationship** ek açıklama.  
   
--   Belirtin bir **xs:keyref** olmadan **msdata:ConstraintOnly** ek açıklama.  
+- Belirtin bir **xs:keyref** olmadan **msdata:ConstraintOnly** ek açıklama.  
   
 ## <a name="nested-complex-types"></a>Karmaşık iç içe geçmiş türler  
  İç içe geçmiş bir karmaşık tür tanımlarını bir şemadaki öğelerin üst-alt ilişkileri gösterir. Aşağıdaki XML Şeması parçası gösteren **OrderDetail** bir alt öğesidir **sipariş** öğesi.  

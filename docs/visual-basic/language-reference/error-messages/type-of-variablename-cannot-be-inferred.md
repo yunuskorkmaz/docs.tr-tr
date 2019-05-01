@@ -8,20 +8,20 @@ helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
 ms.openlocfilehash: e90e881546c12df2c8b19ff03a4d4c7304c4596c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052683"
 ---
 # <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Tür '\<variablename >' döngü sınırları ve step değişkeni aynı türe genişletmek değil çıkarsanamıyor
 Yazdığınız bir `For...Next` döngü içinde derleyici olamaz Infer döngü denetim değişkeni için bir veri türü aşağıdaki koşulların geçerli olması için:  
   
--   Döngü denetim değişkeni veri türü ile belirtilmemiş bir `As` yan tümcesi.  
+- Döngü denetim değişkeni veri türü ile belirtilmemiş bir `As` yan tümcesi.  
   
--   Döngü sınırları ve step değişkeni en az iki veri türü içeriyor.  
+- Döngü sınırları ve step değişkeni en az iki veri türü içeriyor.  
   
--   Veri türleri arasında standart dönüştürme yok.  
+- Veri türleri arasında standart dönüştürme yok.  
   
  Bu nedenle, derleyici bir döngü denetim değişkeni veri türü çıkarsanamıyor.  
   
@@ -42,7 +42,7 @@ Dim n = 20
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Döngü sınırları ve step değişkeni gerektiğinde türlerini değiştirin, böylece en az bir tanesi, diğerleri için genişletmek bir türdür. Önceki örnekte türünü değiştirme `stepVar` için `Integer`.  
+- Döngü sınırları ve step değişkeni gerektiğinde türlerini değiştirin, böylece en az bir tanesi, diğerleri için genişletmek bir türdür. Önceki örnekte türünü değiştirme `stepVar` için `Integer`.  
   
     ```  
     Dim stepVar = 1  
@@ -54,7 +54,7 @@ Dim n = 20
     Dim stepVar As Integer = 1  
     ```  
   
--   Döngü sınırları ve step değişkeni uygun türe dönüştürmek için açık dönüştürme işlevlerini kullanın. Önceki örnekte, geçerli `Val` işlevi `stepVar`.  
+- Döngü sınırları ve step değişkeni uygun türe dönüştürmek için açık dönüştürme işlevlerini kullanın. Önceki örnekte, geçerli `Val` işlevi `stepVar`.  
   
     ```  
     For i = 1 To 10 Step Val(stepVar)  

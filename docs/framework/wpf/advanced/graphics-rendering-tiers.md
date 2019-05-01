@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
 ms.openlocfilehash: d5924ff9336bc6e93022caf1b85d5fd98f7a617d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051591"
 ---
 # <a name="graphics-rendering-tiers"></a>Grafik İşleme Katmanları
 İşleme katmanı bir grafik donanım özelliği ve çalıştıran bir cihaz için performans düzeyi tanımlayan bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.  
@@ -22,23 +22,23 @@ ms.locfileid: "59197392"
 ## <a name="graphics-hardware"></a>Grafik donanımı  
  En çok katmanı işleme düzeyleri etkileyen grafik donanımının özellikleri şunlardır:  
   
--   **Video RAM** birleştirme grafik için kullanılan arabellek sayısı ve boyutu grafik donanımının video bellek miktarı belirler.  
+- **Video RAM** birleştirme grafik için kullanılan arabellek sayısı ve boyutu grafik donanımının video bellek miktarı belirler.  
   
--   **Piksel gölgelendirici** piksel gölgelendirici efektleri piksel başına temelinde hesaplar işlevi bir grafik olduğundan. Görüntülenen grafiklerin çözümleme bağlı olarak, her görüntü çerçevesi için işlenmesi gereken birkaç milyon piksel olabilir.  
+- **Piksel gölgelendirici** piksel gölgelendirici efektleri piksel başına temelinde hesaplar işlevi bir grafik olduğundan. Görüntülenen grafiklerin çözümleme bağlı olarak, her görüntü çerçevesi için işlenmesi gereken birkaç milyon piksel olabilir.  
   
--   **Köşe gölgelendirici** köşe gölgelendiricisi olan nesnenin köşe verileri matematiksel işlemler gerçekleştiren işlevi bir grafik.  
+- **Köşe gölgelendirici** köşe gölgelendiricisi olan nesnenin köşe verileri matematiksel işlemler gerçekleştiren işlevi bir grafik.  
   
--   **Çoklu doku desteği** bir 3B grafik nesnede karıştırma işlemi sırasında iki veya daha fazla farklı dokular uygulama özelliği başvurduğu çoklu doku desteği. Çoklu doku desteği derecesini grafik donanımının çoklu doku birimleri sayısına göre belirlenir.  
+- **Çoklu doku desteği** bir 3B grafik nesnede karıştırma işlemi sırasında iki veya daha fazla farklı dokular uygulama özelliği başvurduğu çoklu doku desteği. Çoklu doku desteği derecesini grafik donanımının çoklu doku birimleri sayısına göre belirlenir.  
   
 <a name="rendering_tier_definitions"></a>   
 ## <a name="rendering-tier-definitions"></a>Katman tanımları oluşturma  
  İşleme yeteneğini grafik donanımının özelliklerini belirlemek bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Sistem üç işleme katmanları tanımlar:  
   
--   **Katman 0 işleme** donanım grafik ivmesi. Tüm grafik özellikleri yazılım hızlandırma kullanın. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Sürüm düzeyi sürüm 9.0 azdır.  
+- **Katman 0 işleme** donanım grafik ivmesi. Tüm grafik özellikleri yazılım hızlandırma kullanın. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Sürüm düzeyi sürüm 9.0 azdır.  
   
--   **Katman 1 işleme** grafik donanım hızlandırmayı bazı grafik özellikleri kullanın. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Sürüm düzeyi 9.0 sürümüne eşit veya daha büyük.  
+- **Katman 1 işleme** grafik donanım hızlandırmayı bazı grafik özellikleri kullanın. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Sürüm düzeyi 9.0 sürümüne eşit veya daha büyük.  
   
--   **Katman 2 işleme** grafik donanım hızlandırmayı çoğu grafik özellikleri kullanın. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Sürüm düzeyi 9.0 sürümüne eşit veya daha büyük.  
+- **Katman 2 işleme** grafik donanım hızlandırmayı çoğu grafik özellikleri kullanın. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Sürüm düzeyi 9.0 sürümüne eşit veya daha büyük.  
   
  <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType> Özelliği uygulama çalışma zamanı oluşturma katmanında almanızı sağlar. İşleme katmanı, cihazın belirli Donanım hızlandırmalı grafik özellikleri destekleyip desteklemediğini belirlemek için kullanın. Uygulamanızı, daha sonra çalışma zamanında cihaz tarafından desteklenen işleme katmanına bağlı olarak farklı kod yollarını alabilir.  
   

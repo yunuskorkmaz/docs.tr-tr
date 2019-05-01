@@ -1,18 +1,18 @@
 ---
-title: Belgeye katıştırılmış stil sayfası yönergeleri
+title: Belgeye Katıştırılmış Stil Sayfası Yönergeleri
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 65987c5e29d593758b21259d6367202c882df2de
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026945"
 ---
-# <a name="style-sheet-directives-embedded-in-a-document"></a>Belgeye katıştırılmış stil sayfası yönergeleri
+# <a name="style-sheet-directives-embedded-in-a-document"></a>Belgeye Katıştırılmış Stil Sayfası Yönergeleri
 
 Bazen, var olan XML stil sayfası yönergesi içeren `<?xml:stylesheet?>`. Microsoft Internet Explorer alternatif olarak bu kabul `<?xml-stylesheet?>` söz dizimi. XML verilerini içerdiğinde bir `<?xml:stylesheet?>` yönerge, aşağıdaki veriler gösterildiği gibi XML belge nesne modeli (DOM) içine bu verileri yüklemeye çalışırken bir özel durum oluşturur.
 

@@ -3,11 +3,11 @@ title: LINQ to XML ile DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
 ms.openlocfilehash: 282df577808342a52a70f419b2a7559752103a0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051500"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML ile DOM (Visual Basic)
 Bu bölümde arasındaki bazı temel farklar açıklanmaktadır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ve geçerli hakim XML programlama API, W3C belge nesne modeli (DOM).  
@@ -79,11 +79,11 @@ Dim contacts = _
 ## <a name="working-directly-with-xml-elements"></a>Doğrudan XML öğeleri ile çalışma  
  XML ile program, birincil odak noktası genellikle XML öğeleri ve belki de öznitelikleri olur. İçinde [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], doğrudan XML öğeleri ve öznitelikleri ile çalışabilirsiniz. Örneğin, aşağıdakileri yapabilirsiniz:  
   
--   XML öğeleri, bir belge nesnesi kullanmadan oluşturun. Bu XML ağaçlarını parçalarını ile çalışacak şekilde olduğunda programlama kolaylaştırır.  
+- XML öğeleri, bir belge nesnesi kullanmadan oluşturun. Bu XML ağaçlarını parçalarını ile çalışacak şekilde olduğunda programlama kolaylaştırır.  
   
--   Yük `T:System.Xml.Linq.XElement` doğrudan XML dosyasından nesneleri.  
+- Yük `T:System.Xml.Linq.XElement` doğrudan XML dosyasından nesneleri.  
   
--   Seri hale getirme `T:System.Xml.Linq.XElement` nesneleri bir dosyaya veya bir akış.  
+- Seri hale getirme `T:System.Xml.Linq.XElement` nesneleri bir dosyaya veya bir akış.  
   
  W3C XML belgesi için XML ağacı mantıksal kapsayıcı olarak kullanılır DOM karşılaştırın. DOM'da, XML düğüm öğeleri ve öznitelikleri dahil olmak üzere, bir XML belgesi bağlamında oluşturulması gerekir. DOM'da bir name öğesi oluşturmak için kodun bir parçasını şu şekildedir:  
   

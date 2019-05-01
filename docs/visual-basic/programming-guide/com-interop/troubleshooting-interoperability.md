@@ -17,11 +17,11 @@ helpviewer_keywords:
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022304"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Birlikte Çalışabilirlik İle İlgili Sorun Giderme (Visual Basic)
 Ne zaman, birlikte çalışmak COM ve yönetilen kodu arasında [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], bir veya daha fazla aşağıdaki yaygın sorunların karşılaşabilirsiniz.  
@@ -100,11 +100,11 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ## <a name="vbconinteroperabilitymarshalinganchor10"></a> ActiveX denetimi sorunları  
  Visual Basic 6.0 ile çalışan çoğu ActiveX denetimlerini, Visual Basic .NET ile sorun çalışır. Kapsayıcı denetimleri veya görsel olarak diğer denetimleri içeren denetimleri ana özel durumları olan. Visual Studio ile doğru şekilde çalışmaz eski denetimleri bazı örnekleri aşağıdaki gibidir:  
   
--   Microsoft Forms 2.0 çerçeve denetimi  
+- Microsoft Forms 2.0 çerçeve denetimi  
   
--   Yukarı-Aşağı denetimi olarak da bilinen döndürme denetimi  
+- Yukarı-Aşağı denetimi olarak da bilinen döndürme denetimi  
   
--   Sheridan sekme denetimi  
+- Sheridan sekme denetimi  
   
  Desteklenmeyen ActiveX denetimi sorunları için yalnızca birkaç geçici çözümler vardır. Özgün kaynak kodunun sahibi sizseniz, mevcut denetimleri için Visual Studio geçirebilirsiniz. Aksi takdirde, güncelleştirilmiş yazılım satıcıları ile kontrol edebilirsiniz. NET uyumlu sürümlerini değiştirmek için denetim ActiveX denetimlerini desteklenmiyor.  
   

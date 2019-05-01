@@ -1,5 +1,5 @@
 ---
-title: Sık karşılaşılan tasarım desenleri
+title: Ortak Tasarım Desenleri
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,13 +8,13 @@ helpviewer_keywords:
 ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
 author: KrzysztofCwalina
 ms.openlocfilehash: d0b16530863b009010383c8739c9512738dfdffd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026477"
 ---
-# <a name="common-design-patterns"></a>Sık karşılaşılan tasarım desenleri
+# <a name="common-design-patterns"></a>Ortak Tasarım Desenleri
 Çok sayıda yazılım desenleri, deseni diller ve desenler çok geniş konusunu ele kötü modelleri kitaplar vardır. Bu nedenle, bu bölümde, yönergeleri ve .NET Framework API'ları tasarımında sık kullanılan desenleri çok sınırlı bir dizi ilgili tartışma sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  

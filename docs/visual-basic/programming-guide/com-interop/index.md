@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022421"
 ---
 # <a name="com-interop-visual-basic"></a>COM Birlikte Çalışma (Visual Basic)
 Bileşen Nesne Modeli (COM) diğer bileşenleri ve uygulamaları barındırmak için işlevselliği göstermek bir nesne sağlar. Günümüzün yazılımlarının çoğunu, COM nesnelerini içerir. .NET derlemeleri yeni uygulamalar için en iyi seçenek olsa da, bazen COM nesnelerini kullanmak istemiyorsunuz gerekebilir. Bu bölümde bazı oluşturma ve Visual Basic ile COM nesneleri kullanma ile ilgili sorunlar ele alınmaktadır.  
@@ -19,7 +19,7 @@ Bileşen Nesne Modeli (COM) diğer bileşenleri ve uygulamaları barındırmak i
  [COM Birlikte Çalışma'ya Giriş](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  COM birlikte çalışabilirlik genel bir bakış sağlar.  
   
- [Nasıl yapılır: Visual Basic'den COM nesnelerine başvuru](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
+ [Nasıl yapılır: Visual Basic başvurusu COM nesneleri](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
  Tür kitaplıkları olan COM nesneleri başvuruları eklemek nasıl etkinleştireceğinizi de açıklar.  
   
  [Nasıl yapılır: ActiveX Denetimleriyle Çalışma](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
 ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051175"
 ---
 # <a name="option-strict-statement"></a>Option Strict Deyimi
 Örtük veri türü dönüşümünü sadece genişletme dönüştürmeleri için sınırlar, geç bağlamaya izin vermiyor ve örtük sonuçlanan yazmaya izin vermeyen bir `Object` türü.  
@@ -37,11 +37,11 @@ Option Strict { On | Off }
 ## <a name="remarks"></a>Açıklamalar  
  Zaman `Option Strict On` veya `Option Strict` görünür bir dosyada, aşağıdaki durumlar neden bir derleme zamanı hatası:  
   
--   Örtük daraltma dönüşümleri  
+- Örtük daraltma dönüşümleri  
   
--   Geç bağlama  
+- Geç bağlama  
   
--   Örtük sonuçlanan yazarak bir `Object` türü  
+- Örtük sonuçlanan yazarak bir `Object` türü  
   
 > [!NOTE]
 >  Üzerinde ayarlanmış uyarı yapılandırmalarında [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), bir derleme zamanı hatasına neden olan üç koşulları karşılık gelen üç seçenek vardır. Bu ayarları nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [IDE'de uyarı yapılandırmaları ayarlamak için](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions) bu konuda.  
@@ -52,11 +52,11 @@ Option Strict { On | Off }
   
  Ayarladığınızda `Option Strict` için `On`, Visual Basic veri türleri için tüm programlama öğeleri belirtildiğinden emin denetler. Veri türleri açıkça belirtilen veya yerel tür çıkarımı kullanılarak belirtilen. Tüm programlama öğeleriniz için veri türlerini belirtme, aşağıdaki nedenlerden dolayı önerilir:  
   
--   Bu değişkenler ve parametreler için IntelliSense desteği sağlar. Bu kod yazarken özelliklerini ve diğer üyeleri görmenizi sağlar.  
+- Bu değişkenler ve parametreler için IntelliSense desteği sağlar. Bu kod yazarken özelliklerini ve diğer üyeleri görmenizi sağlar.  
   
--   Ancak, tür denetimi gerçekleştirmek derleyiciyi etkinleştirir. Tür denetimini çalışma zamanında tür dönüştürme hataları nedeniyle başarısız olabilir deyimleri bulmanıza yardımcı olur. Ayrıca, bu yöntemleri desteği olmayan nesneler üzerinde yöntemlere yapılan çağrılar da tanımlar.  
+- Ancak, tür denetimi gerçekleştirmek derleyiciyi etkinleştirir. Tür denetimini çalışma zamanında tür dönüştürme hataları nedeniyle başarısız olabilir deyimleri bulmanıza yardımcı olur. Ayrıca, bu yöntemleri desteği olmayan nesneler üzerinde yöntemlere yapılan çağrılar da tanımlar.  
   
--   Onu kod yürütmeyi hızlandırır. Bunun bir nedeni olduğundan bir programlama öğesi için bir veri türü belirtmezseniz, Visual Basic Derleyicisi, atamasını `Object` türü. Derlenmiş kod arasında ileri ve geri dönüştürmek sahip olabileceği `Object` ve diğer veri türleri, performansı azaltır.  
+- Onu kod yürütmeyi hızlandırır. Bunun bir nedeni olduğundan bir programlama öğesi için bir veri türü belirtmezseniz, Visual Basic Derleyicisi, atamasını `Object` türü. Derlenmiş kod arasında ileri ve geri dönüştürmek sahip olabileceği `Object` ve diğer veri türleri, performansı azaltır.  
   
 ## <a name="implicit-narrowing-conversion-errors"></a>Daraltma örtük dönüştürme hataları  
  Bir daraltma dönüştürmesi olan bir örtük veri türü dönüştürme olduğunda daraltma örtük dönüştürme hataları oluşur.  
@@ -65,15 +65,15 @@ Option Strict { On | Off }
   
  Hatalara neden olabilir. dönüştürme ifadelerinde oluşan örtük dönüşümler içerir. Daha fazla bilgi için aşağıdaki konulara bakın:  
   
--   [+ İşleci](../../../visual-basic/language-reference/operators/addition-operator.md)  
+- [+ İşleci](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
--   [+= İşleci](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+- [+= İşleci](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
--   [\ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+- [\ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [/ = İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+- [/ = İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
--   [Char Veri Türü](../../../visual-basic/language-reference/data-types/char-data-type.md)  
+- [Char Veri Türü](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
  Ne zaman, birleştirme dizeleri kullanarak [& işleci](../../../visual-basic/language-reference/operators/concatenation-operator.md), dizelere tüm dönüştürmeleri genişletme olması kabul edilir. Bir daraltma örtük dönüştürme hatası, olsa bile bu dönüştürmeleri oluşturmaz şekilde `Option Strict` açıktır.  
   
@@ -116,11 +116,11 @@ Option Strict { On | Off }
 ### <a name="conditions"></a> IDE'de uyarı yapılandırmaları ayarlamak için  
  Kullanırken [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) yerine bir `Option Strict` deyimi, hatalara neden olan koşulları üzerinde ek denetim vardır. **Uyarı yapılandırmaları** bölümünü **derle sayfası** karşılık gelen bir derleme zamanı hatasına neden olan üç koşulları ayarlarına sahip olduğunda `Option Strict` açıktır. Bu ayarlar şunlardır:  
   
--   **Örtük dönüştürme**  
+- **Örtük dönüştürme**  
   
--   **Geç bağlama; Çağrı çalışma zamanında başarısız olabilir**  
+- **Geç bağlama; Çağrı çalışma zamanında başarısız olabilir**  
   
--   **Örtük tür; Nesne varsayıldı**  
+- **Örtük tür; Nesne varsayıldı**  
   
  Ayarladığınızda **Option Strict** için **üzerinde**, bu uyarı yapılandırma ayarlarını üç kümesine **hata**. Ayarladığınızda **Option Strict** için **kapalı**, tüm üç ayarları kümesine **hiçbiri**.  
   

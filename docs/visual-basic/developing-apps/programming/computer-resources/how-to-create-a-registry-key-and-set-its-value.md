@@ -12,11 +12,11 @@ helpviewer_keywords:
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
 ms.openlocfilehash: 0cadff8b44c60041e2664b1d3b70830209014301
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014030"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Nasıl yapılır: Bir kayıt defteri anahtarı oluşturun ve Visual Basic'te değerini ayarlama
 `CreateSubKey` Yöntemi `My.Computer.Registry` nesnesi, bir kayıt defteri anahtarı oluşturmak için kullanılabilir.  
@@ -25,7 +25,7 @@ ms.locfileid: "59312625"
   
 #### <a name="to-create-a-registry-key"></a>Bir kayıt defteri anahtarı oluşturma  
   
--   Kullanım `CreateSubKey` , anahtarın adını yanı sıra anahtarı altındaki yerleştirmek için hive'ı belirtme yöntemi. Parametre `Subkey` büyük küçük harfe duyarlı değildir. Bu örnek, kayıt defteri anahtarı oluşturur `MyTestKey` HKEY_CURRENT_USER altında.  
+- Kullanım `CreateSubKey` , anahtarın adını yanı sıra anahtarı altındaki yerleştirmek için hive'ı belirtme yöntemi. Parametre `Subkey` büyük küçük harfe duyarlı değildir. Bu örnek, kayıt defteri anahtarı oluşturur `MyTestKey` HKEY_CURRENT_USER altında.  
   
      [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
@@ -57,15 +57,15 @@ ms.locfileid: "59312625"
   
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
--   Anahtar adı `Nothing` (<xref:System.ArgumentNullException>).  
+- Anahtar adı `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Kullanıcının kayıt defteri anahtarlarını oluşturma izni yok (<xref:System.Security.SecurityException>).  
+- Kullanıcının kayıt defteri anahtarlarını oluşturma izni yok (<xref:System.Security.SecurityException>).  
   
--   Anahtar adı 255 karakter sınırını aşıyor (<xref:System.ArgumentException>).  
+- Anahtar adı 255 karakter sınırını aşıyor (<xref:System.ArgumentException>).  
   
--   Anahtar kapalı (<xref:System.IO.IOException>).  
+- Anahtar kapalı (<xref:System.IO.IOException>).  
   
--   Kayıt defteri anahtarı salt okunurdur (<xref:System.UnauthorizedAccessException>).  
+- Kayıt defteri anahtarı salt okunurdur (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Bu işlemi çalıştırmak için ayrıcalık düzeyi verilen tarafından derlemeyi <xref:System.Security.Permissions.RegistryPermission> sınıfı. Kısmi güven bağlamda çalıştırıyorsanız, işlem yetersiz ayrıcalıklar nedeniyle bir özel durum fırlatabilir. Benzer şekilde, kullanıcı oluşturma veya ayarlarına yazma için doğru ACL'leri olması gerekir. Örneğin, kod erişim güvenlik izni olan yerel bir uygulama işletim sistemi izniniz olmayabilir. Daha fazla bilgi için [kod erişimi güvenliği Temelleri](../../../../framework/misc/code-access-security-basics.md).  

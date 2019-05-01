@@ -3,11 +3,11 @@ title: 'Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
 ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032740"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik
 WSE 3.0 TCP birlikte çalışabilirlik aktarım örnek bir TCP çift yönlü oturumu özel bir Windows Communication Foundation (WCF) aktarım olarak uygulamak nasıl gösterir. Kanal katmanını genişletilmesinde arabirimine dağıtılan var olan sistemlerle kablo üzerinden nasıl kullanabileceğinizi gösterir. Aşağıdaki adımlar bu özel WCF taşıma yapı işlemini gösterir:  
@@ -43,16 +43,16 @@ WSE 3.0 TCP birlikte çalışabilirlik aktarım örnek bir TCP çift yönlü otu
   
  Temel `WseTcpDuplexSessionChannel` bağlanmış bir yuva aldığını varsayar. Temel sınıf yuva kapatma işler. Yuva kapatma ile arabirim üç yer vardır:  
   
--   OnAbort--yuva ungracefully kapatın (sabit kapanış).  
+- OnAbort--yuva ungracefully kapatın (sabit kapanış).  
   
--   [Begin üzerinde] yakın--yuva düzgün biçimde kapatılamadı (yazılım Kapat).  
+- [Begin üzerinde] yakın--yuva düzgün biçimde kapatılamadı (yazılım Kapat).  
   
--   oturumu. CloseOutputSession--kapatma giden veri akışı (yarı Kapat).  
+- oturumu. CloseOutputSession--kapatma giden veri akışı (yarı Kapat).  
   
 ## <a name="channel-factory"></a>Kanal Fabrikası  
  TCP aktarımı yazma sonraki adımı uygulaması oluşturmaktır <xref:System.ServiceModel.Channels.IChannelFactory> istemci kanallar için.  
   
--   `WseTcpChannelFactory` öğesinden türetilen <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<da IDuplexSessionChannel öğelerini >. Geçersiz kılan bir factory, `OnCreateChannel` istemci kanalları oluşturmak için.  
+- `WseTcpChannelFactory` öğesinden türetilen <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<da IDuplexSessionChannel öğelerini >. Geçersiz kılan bir factory, `OnCreateChannel` istemci kanalları oluşturmak için.  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -62,11 +62,11 @@ WSE 3.0 TCP birlikte çalışabilirlik aktarım örnek bir TCP çift yönlü otu
   
  `}`  
   
--   `ClientWseTcpDuplexSessionChannel` mantıksal tabanda ekler `WseTcpDuplexSessionChannel` bir TCP sunucusuna bağlanmak için `channel.Open` zaman. Önce aşağıdaki kodda gösterildiği gibi bir IP adresine çözümlenen adıdır.  
+- `ClientWseTcpDuplexSessionChannel` mantıksal tabanda ekler `WseTcpDuplexSessionChannel` bir TCP sunucusuna bağlanmak için `channel.Open` zaman. Önce aşağıdaki kodda gösterildiği gibi bir IP adresine çözümlenen adıdır.  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
--   Ardından ana bilgisayar adı, döngü içinde ilk kullanılabilir IP adresi aşağıdaki kodda gösterildiği gibi bağlıdır.  
+- Ardından ana bilgisayar adı, döngü içinde ilk kullanılabilir IP adresi aşağıdaki kodda gösterildiği gibi bağlıdır.  
   
  `IPAddress address = hostEntry.AddressList[i];`  
   
@@ -74,12 +74,12 @@ WSE 3.0 TCP birlikte çalışabilirlik aktarım örnek bir TCP çift yönlü otu
   
  `socket.Connect(new IPEndPoint(address, port));`  
   
--   Kanal sözleşmesinin bir parçası, etki alanına özgü özel durumların, gibi sarmalanır `SocketException` içinde <xref:System.ServiceModel.CommunicationException>.  
+- Kanal sözleşmesinin bir parçası, etki alanına özgü özel durumların, gibi sarmalanır `SocketException` içinde <xref:System.ServiceModel.CommunicationException>.  
   
 ## <a name="channel-listener"></a>Kanal dinleyicisi  
  TCP aktarımı yazma sonraki adımı uygulaması oluşturmaktır <xref:System.ServiceModel.Channels.IChannelListener> sunucuya kanalların kabul etmek için.  
   
--   `WseTcpChannelListener` öğesinden türetilen <xref:System.ServiceModel.Channels.ChannelListenerBase> \<da IDuplexSessionChannel öğelerini > ve [Begin] ve [Begin] açık geçersiz kılmalar kapatmak için Dinleme yuvası ömrünü denetleyin. Açıldığında, yuva IP_ANY üzerinde dinleyecek şekilde oluşturulur. IPv6 için de dinlemek için ikinci bir yuva daha gelişmiş uygulamalar oluşturabilirsiniz. Ayrıca ana bilgisayar adı belirtilmesi için IP adresine izin verebilirsiniz.  
+- `WseTcpChannelListener` öğesinden türetilen <xref:System.ServiceModel.Channels.ChannelListenerBase> \<da IDuplexSessionChannel öğelerini > ve [Begin] ve [Begin] açık geçersiz kılmalar kapatmak için Dinleme yuvası ömrünü denetleyin. Açıldığında, yuva IP_ANY üzerinde dinleyecek şekilde oluşturulur. IPv6 için de dinlemek için ikinci bir yuva daha gelişmiş uygulamalar oluşturabilirsiniz. Ayrıca ana bilgisayar adı belirtilmesi için IP adresine izin verebilirsiniz.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -179,18 +179,18 @@ Symbols:
   
 1. Yüklemeden sonra `TcpSyncStockService` örnek, aşağıdakileri yapın:  
   
-    1.  Açık `TcpSyncStockService` Visual Studio'daki (TcpSyncStockService örnek ile WSE 3.0 yüklü olduğunu unutmayın. Bu örnek'ın kod parçası değildir).  
+    1. Açık `TcpSyncStockService` Visual Studio'daki (TcpSyncStockService örnek ile WSE 3.0 yüklü olduğunu unutmayın. Bu örnek'ın kod parçası değildir).  
   
-    2.  StockService projeyi başlangıç projesi olarak ayarlayın.  
+    2. StockService projeyi başlangıç projesi olarak ayarlayın.  
   
-    3.  StockService.cs StockService projesi ve [ilke] özniteliği yorum açmak `StockService` sınıfı. Bu örnekteki güvenlik devre dışı bırakır. WCF WSE 3.0 güvenli uç noktaları ile çalışabilirler, ancak güvenlik özel TCP taşımasında odaklanmış Bu örneği tutmak için devre dışı bırakıldı.  
+    3. StockService.cs StockService projesi ve [ilke] özniteliği yorum açmak `StockService` sınıfı. Bu örnekteki güvenlik devre dışı bırakır. WCF WSE 3.0 güvenli uç noktaları ile çalışabilirler, ancak güvenlik özel TCP taşımasında odaklanmış Bu örneği tutmak için devre dışı bırakıldı.  
   
-    4.  Başlatmak için F5 tuşuna basın `TcpSyncStockService`. Hizmetini yeni bir konsol penceresi başlatır.  
+    4. Başlatmak için F5 tuşuna basın `TcpSyncStockService`. Hizmetini yeni bir konsol penceresi başlatır.  
   
-    5.  Bu TCP taşıma örneği Visual Studio'da açın.  
+    5. Bu TCP taşıma örneği Visual Studio'da açın.  
   
-    6.  Makine adı çalışan eşleştirilecek TestCode.cs "ana bilgisayar adı" değişkeninde güncelleştirme `TcpSyncStockService`.  
+    6. Makine adı çalışan eşleştirilecek TestCode.cs "ana bilgisayar adı" değişkeninde güncelleştirme `TcpSyncStockService`.  
   
-    7.  TCP aktarımı örneği başlatmak için F5 tuşuna basın.  
+    7. TCP aktarımı örneği başlatmak için F5 tuşuna basın.  
   
-    8.  TCP aktarımı test istemcisinin yeni bir konsolda başlatır. İstemci, hisse senedi fiyatlarını hizmetten ister ve ardından sonuçları, konsol penceresinde görüntüler.  
+    8. TCP aktarımı test istemcisinin yeni bir konsolda başlatır. İstemci, hisse senedi fiyatlarını hizmetten ister ve ardından sonuçları, konsol penceresinde görüntüler.  

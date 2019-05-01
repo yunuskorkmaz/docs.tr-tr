@@ -3,11 +3,11 @@ title: LINQ to SQL’de Güvenlik
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
 ms.openlocfilehash: 6af073a86b0feaba2fdcd9facd9474bb334096e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037004"
 ---
 # <a name="security-in-linq-to-sql"></a>LINQ to SQL’de Güvenlik
 Bir veritabanına bağlanırken her zaman güvenlik riskleri bulunur. LINQ to SQL SQL Server'daki verilerle çalışmak için bazı yeni yollar içerebilir ancak herhangi bir ek güvenlik mekanizması sağlamaz.  
@@ -25,13 +25,13 @@ Bir veritabanına bağlanırken her zaman güvenlik riskleri bulunur. LINQ to SQ
   
  Bağlantı dizesinde tümleşik güvenlik olmaması durumunda, bir düz metin parola gerekli olacaktır. Artan düzende risk, bağlantı dizenizi güvenli hale getirmek için en iyi yolu aşağıdaki gibidir:  
   
--   Tümleşik Güvenlik'i kullanın.  
+- Tümleşik Güvenlik'i kullanın.  
   
--   Bağlantı dizeleri parolalarla güvenliğini sağlama ve bağlantı dizeleri etrafında geçirme en aza indirmek.  
+- Bağlantı dizeleri parolalarla güvenliğini sağlama ve bağlantı dizeleri etrafında geçirme en aza indirmek.  
   
--   Kullanım bir <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> süresi maruz kalma riskinizi sınırlar bu yana bir bağlantı dizesi yerine sınıfı. LINQ to SQL <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> sınıfı kullanarak oluşturulabilir bir <xref:System.Data.SqlClient.SqlConnection>.  
+- Kullanım bir <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> süresi maruz kalma riskinizi sınırlar bu yana bir bağlantı dizesi yerine sınıfı. LINQ to SQL <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> sınıfı kullanarak oluşturulabilir bir <xref:System.Data.SqlClient.SqlConnection>.  
   
--   Yaşam süreleri en aza indirmek ve noktaya tüm bağlantı dizeleri için dokunun.  
+- Yaşam süreleri en aza indirmek ve noktaya tüm bağlantı dizeleri için dokunun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

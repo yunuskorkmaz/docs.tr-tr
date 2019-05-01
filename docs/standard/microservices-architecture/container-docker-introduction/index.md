@@ -1,17 +1,17 @@
 ---
-title: Kapsayıcılar ve Docker'a giriş
+title: Kapsayıcılar ve Docker’a Giriş
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Kapsayıcılar ve Docker'a giriş
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
 ms.openlocfilehash: cf86640456af03d4c44f537fe1ff3282521f2200
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025515"
 ---
-# <a name="introduction-to-containers-and-docker"></a>Kapsayıcılar ve Docker'a giriş
+# <a name="introduction-to-containers-and-docker"></a>Kapsayıcılar ve Docker’a Giriş
 
 Kapsayıcı içinde bir uygulama veya hizmeti ve bağımlılıklarını yapılandırmasıyla (dağıtım bildirim dosyaları soyutlanır) bir arada bir kapsayıcı görüntüsü paketlenmiş yazılım geliştirme için bir yaklaşımdır. Kapsayıcılı uygulama, bir birim olarak test edilmiş ve bir kapsayıcı görüntü örneğinin konak işletim sistemi (OS) olarak dağıtılır.
 

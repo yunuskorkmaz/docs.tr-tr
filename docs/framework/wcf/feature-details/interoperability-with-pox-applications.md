@@ -3,11 +3,11 @@ title: POX uygulamaları ile birlikte çalışabilirlik
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
 ms.openlocfilehash: b7fdb4e16bce52025515ced065d0f48cffb7fa3f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046898"
 ---
 # <a name="interoperability-with-pox-applications"></a>POX uygulamaları ile birlikte çalışabilirlik
 

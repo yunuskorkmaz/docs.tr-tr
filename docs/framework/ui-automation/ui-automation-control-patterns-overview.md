@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 ms.openlocfilehash: fc07cc23498b2079aba41dfa57c26b88944d6a8d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033091"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI Otomasyon Denetim Düzenlerine Genel Bakış
 > [!NOTE]
@@ -27,11 +27,11 @@ ms.locfileid: "59126366"
 ## <a name="ui-automation-control-pattern-components"></a>UI Otomasyon denetim düzeni bileşenleri  
  Yöntemleri, özellikleri, olayları ve ayrı bir denetimde kullanılabilen işlevler tanımlamak için gerekli ilişkileri denetim düzenleri desteği.  
   
--   Öğenin yapısı içinde bir UI Otomasyonu öğesi ve kendi üst, alt ve eşdüzey arasındaki ilişkiyi açıklar [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç.  
+- Öğenin yapısı içinde bir UI Otomasyonu öğesi ve kendi üst, alt ve eşdüzey arasındaki ilişkiyi açıklar [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç.  
   
--   Yöntemler, denetimi işlemek UI Otomasyon istemcileri sağlar.  
+- Yöntemler, denetimi işlemek UI Otomasyon istemcileri sağlar.  
   
--   Özellikler ve olaylar denetim deseninin işlevleri hakkında bilgi yanı sıra denetim durumu hakkında bilgi sağlar.  
+- Özellikler ve olaylar denetim deseninin işlevleri hakkında bilgi yanı sıra denetim durumu hakkında bilgi sağlar.  
   
  Denetim desenlerini ilişkili [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] arabirimleri ile ilgili olarak [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] nesneleri. İçinde [!INCLUDE[TLA2#tla_com](../../../includes/tla2sharptla-com-md.md)], hangi arabirimlerin isteyin ve ardından o arabirimlerin erişim işlevine bir nesne sorgulayabilirsiniz. İçinde [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], UI Otomasyon istemcileri, isteğe bağlı olarak hangi denetimin destekler desenler bir denetim isteyin ve denetim özellikleri, yöntemleri, olay ve yapıları tarafından desteklenen denetim düzenleri ortaya aracılığıyla etkileşim. Örneğin, bir çok satırlı düzenleme kutusu için UI Otomasyon sağlayıcıları uygulamak <xref:System.Windows.Automation.Provider.IScrollProvider>. Ne zaman bir istemci bilir, bir <xref:System.Windows.Automation.AutomationElement> destekler <xref:System.Windows.Automation.ScrollPattern> denetim düzeni, özellikleri, yöntemleri ve olayları bu denetim düzeni tarafından kullanıma sunulan denetimi işlemek veya denetimi ile ilgili bilgilere erişmek için kullanabilirsiniz.  
   

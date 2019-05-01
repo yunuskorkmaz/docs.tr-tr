@@ -1,5 +1,5 @@
 ---
-title: XML ve SOAP serileştirme
+title: XML ve SOAP Serileştirme
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SOAP, XML serialization
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
 ms.openlocfilehash: d9dc68d8e7eced031af404aaec20784573c9930a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028245"
 ---
-# <a name="xml-and-soap-serialization"></a>XML ve SOAP serileştirme
+# <a name="xml-and-soap-serialization"></a>XML ve SOAP Serileştirme
 
 XML serileştirme dönüştürür (serileştiren) ortak alanları ve bir nesne veya özelliklerini parametre ve dönüş değerleri yöntemlere, belirli bir XML Şeması Tanım Dili (XSD) belge uyan bir XML akışı. XML serileştirme ortak özellikler ve bir seri biçiminde (Bu durumda, XML) depolama veya taşıma için dönüştürülür alanları kesin türü belirtilmiş sınıflarıyla sonuçlanır.
 

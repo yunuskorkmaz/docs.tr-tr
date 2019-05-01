@@ -1,17 +1,17 @@
 ---
-title: .NET Core için Docker kapsayıcıları ne zaman
+title: Docker kapsayıcıları için ne zaman .NET Core seçilmelidir?
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | .NET Core için Docker kapsayıcıları ne zaman
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
 ms.openlocfilehash: b2ede45afee93e8d87a22b2b489eb2a230e04e7d
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019600"
 ---
-# <a name="when-to-choose-net-core-for-docker-containers"></a>.NET Core için Docker kapsayıcıları ne zaman
+# <a name="when-to-choose-net-core-for-docker-containers"></a>Docker kapsayıcıları için ne zaman .NET Core seçilmelidir?
 
 .NET Core modüler ve hafif yapısını kapsayıcılar için mükemmel bir hale getirir. Bir kapsayıcı başlatma dağıtırken, .NET Framework ile .NET Core çok daha küçük bir görüntüsüdür. Buna karşılık, .NET Framework için bir kapsayıcı kullanmak için görüntünüzü Windows Nano sunucu veya .NET Core için kullandığınız Linux görüntüleri daha çok daha ağır Windows Server Core görüntüyü temel gerekir.
 

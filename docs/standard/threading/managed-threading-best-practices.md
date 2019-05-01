@@ -13,11 +13,11 @@ ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 907e85d2622ea07ddbb61092f439583ed72e0c50
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62015076"
 ---
 # <a name="managed-threading-best-practices"></a>Yönetilen iş parçacığı oluşturma en iyi yöntemleri
 Çoklu iş parçacığı kullanımı dikkatli programlama gerektirir. Çoğu görevler için istediğiniz karmaşıklık yürütme için sıraya alma istekleri tarafından iş parçacığı havuzu iş parçacıkları tarafından azaltabilirsiniz. Birden çok iş parçacığı çalışması koordine veya işleme iş parçacıkları bu blok gibi durumlarda daha zor, bu konuda ele alır.  
@@ -86,21 +86,21 @@ Kullanım <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> 
 ## <a name="general-recommendations"></a>Genel öneriler  
  Birden çok iş parçacığı kullanırken aşağıdaki yönergeleri göz önünde bulundurun:  
   
--   Kullanmayın <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> diğer iş parçacıklarını sonlandırma için. Çağırma **iptal** iş parçacığı, hangi iş parçacığı noktası bilmeden, işleme ulaştığını bir özel durum yakındır başka bir iş parçacığında olduğu.  
+- Kullanmayın <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> diğer iş parçacıklarını sonlandırma için. Çağırma **iptal** iş parçacığı, hangi iş parçacığı noktası bilmeden, işleme ulaştığını bir özel durum yakındır başka bir iş parçacığında olduğu.  
   
--   Kullanmayın <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> ve <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType> birden çok iş parçacığı etkinliklerini eşitlenecek. Kullanma <xref:System.Threading.Mutex>, <xref:System.Threading.ManualResetEvent>, <xref:System.Threading.AutoResetEvent>, ve <xref:System.Threading.Monitor>.  
+- Kullanmayın <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> ve <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType> birden çok iş parçacığı etkinliklerini eşitlenecek. Kullanma <xref:System.Threading.Mutex>, <xref:System.Threading.ManualResetEvent>, <xref:System.Threading.AutoResetEvent>, ve <xref:System.Threading.Monitor>.  
   
--   Programınızdan (örneğin, olayları kullanarak) ana çalışan iş parçacıklarının yürütülmesini denetlemek yok. Bunun yerine, çalışan iş parçacıkları iş kullanılabilir hale gelene kadar bekleyen, yürütme ve işiniz bittiğinde, programınız diğer bölümlerini bildiren sorumlu olacak şekilde, programınız tasarlayın. İş parçacıklarını engellemez iş parçacığı havuzu iş parçacıkları kullanmayı düşünün. <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> Burada blok çalışan iş parçacıkları durumlarda yararlı olur.  
+- Programınızdan (örneğin, olayları kullanarak) ana çalışan iş parçacıklarının yürütülmesini denetlemek yok. Bunun yerine, çalışan iş parçacıkları iş kullanılabilir hale gelene kadar bekleyen, yürütme ve işiniz bittiğinde, programınız diğer bölümlerini bildiren sorumlu olacak şekilde, programınız tasarlayın. İş parçacıklarını engellemez iş parçacığı havuzu iş parçacıkları kullanmayı düşünün. <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> Burada blok çalışan iş parçacıkları durumlarda yararlı olur.  
   
--   Türleri kilit nesneler olarak kullanmayın. Diğer bir deyişle, kod gibi önlemek `lock(typeof(X))` C# veya `SyncLock(GetType(X))` Visual Basic veya kullanımını <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> ile <xref:System.Type> nesneleri. Verilen tür için yalnızca bir örneği var. <xref:System.Type?displayProperty=nameWithType> her uygulama etki alanı. Bir kilidi almak tür genel ise, kendi dışındaki kod kilitleri üzerinde kilitlenmeler için önde gelen alabilir. Ek sorunlar için bkz: [güvenilirlik en iyi yöntemleri](../../../docs/framework/performance/reliability-best-practices.md).  
+- Türleri kilit nesneler olarak kullanmayın. Diğer bir deyişle, kod gibi önlemek `lock(typeof(X))` C# veya `SyncLock(GetType(X))` Visual Basic veya kullanımını <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> ile <xref:System.Type> nesneleri. Verilen tür için yalnızca bir örneği var. <xref:System.Type?displayProperty=nameWithType> her uygulama etki alanı. Bir kilidi almak tür genel ise, kendi dışındaki kod kilitleri üzerinde kilitlenmeler için önde gelen alabilir. Ek sorunlar için bkz: [güvenilirlik en iyi yöntemleri](../../../docs/framework/performance/reliability-best-practices.md).  
   
--   Örneğin örneklerinde kilitleme dikkatli `lock(this)` C# veya `SyncLock(Me)` Visual Basic'te. Diğer kod uygulamanızın türü için dış nesne üzerinde bir kilit alırsa, kilitlenmeleri oluşabilir.  
+- Örneğin örneklerinde kilitleme dikkatli `lock(this)` C# veya `SyncLock(Me)` Visual Basic'te. Diğer kod uygulamanızın türü için dış nesne üzerinde bir kilit alırsa, kilitlenmeleri oluşabilir.  
   
--   İzleyici olsa da iş parçacığı bir özel durum oluşursa bile bir izleyici her zaman geçtiğini bir iş parçacığı bu izleyiciyi bırakır emin olun. C# [kilit](~/docs/csharp/language-reference/keywords/lock-statement.md) deyimi ve Visual Basic [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) deyimi sağlamak bu davranışı otomatik olarak kullanan bir **son** emin olmak için blok <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> olduğu çağrılır. Garanti edemez, **çıkış** çağrılır, kullanılacak tasarımınızı değiştirmeyi göz önünde bulundurun **Mutex**. Bir mutex, şu anda sahip iş parçacığı sonlandığında otomatik olarak yayımlanır.  
+- İzleyici olsa da iş parçacığı bir özel durum oluşursa bile bir izleyici her zaman geçtiğini bir iş parçacığı bu izleyiciyi bırakır emin olun. C# [kilit](~/docs/csharp/language-reference/keywords/lock-statement.md) deyimi ve Visual Basic [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) deyimi sağlamak bu davranışı otomatik olarak kullanan bir **son** emin olmak için blok <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> olduğu çağrılır. Garanti edemez, **çıkış** çağrılır, kullanılacak tasarımınızı değiştirmeyi göz önünde bulundurun **Mutex**. Bir mutex, şu anda sahip iş parçacığı sonlandığında otomatik olarak yayımlanır.  
   
--   Birden çok iş parçacığı farklı kaynakları gerektiren görevler için kullanabilir ve tek bir kaynak için birden çok iş parçacığı atamaktan kaçının. Örneğin, g/ç ile ilgili herhangi bir görev kendi iş parçacığı, çünkü iş parçacığı g/ç işlemleri sırasında engelleyin ve bu nedenle diğer iş parçacıklarını yürütmek izin kalmamasını fayda sağlar. Kullanıcı girişi adanmış bir iş parçacığından yarar başka bir kaynaktır. Tek işlemcili bir bilgisayarda, yoğun hesaplama içeren bir görev ve g/ç gerektiren görevleri kullanıcı girişi ile bir arada, ancak birden fazla hesaplama açısından yoğun görevleri birbiriyle azaltması.  
+- Birden çok iş parçacığı farklı kaynakları gerektiren görevler için kullanabilir ve tek bir kaynak için birden çok iş parçacığı atamaktan kaçının. Örneğin, g/ç ile ilgili herhangi bir görev kendi iş parçacığı, çünkü iş parçacığı g/ç işlemleri sırasında engelleyin ve bu nedenle diğer iş parçacıklarını yürütmek izin kalmamasını fayda sağlar. Kullanıcı girişi adanmış bir iş parçacığından yarar başka bir kaynaktır. Tek işlemcili bir bilgisayarda, yoğun hesaplama içeren bir görev ve g/ç gerektiren görevleri kullanıcı girişi ile bir arada, ancak birden fazla hesaplama açısından yoğun görevleri birbiriyle azaltması.  
   
--   Yöntemlerini kullanmayı <xref:System.Threading.Interlocked> sınıf yerine basit durum değişiklikleri için `lock` deyimi (`SyncLock` Visual Basic'te). `lock` Deyimi, iyi bir genel amaçlı araçtır ancak <xref:System.Threading.Interlocked> sınıfı atomik güncelleştirmeleri için daha iyi performans sağlar. Dahili olarak, hiçbir Çekişme varsa tek kilit önek yürütür. Kod gözden geçirmeleri, kod, aşağıdaki örneklerde gösterildiği gibi izleyin. İlk örnekte, bir durum değişkeninin artırılır:  
+- Yöntemlerini kullanmayı <xref:System.Threading.Interlocked> sınıf yerine basit durum değişiklikleri için `lock` deyimi (`SyncLock` Visual Basic'te). `lock` Deyimi, iyi bir genel amaçlı araçtır ancak <xref:System.Threading.Interlocked> sınıfı atomik güncelleştirmeleri için daha iyi performans sağlar. Dahili olarak, hiçbir Çekişme varsa tek kilit önek yürütür. Kod gözden geçirmeleri, kod, aşağıdaki örneklerde gösterildiği gibi izleyin. İlk örnekte, bir durum değişkeninin artırılır:  
   
     ```vb  
     SyncLock lockObject  
@@ -169,13 +169,13 @@ Kullanım <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> 
 ## <a name="recommendations-for-class-libraries"></a>Sınıf kitaplıkları için öneriler  
  Sınıf kitaplıkları için tasarlarken aşağıdaki yönergeleri göz önünde bulundurun çoklu iş parçacığı kullanımı:  
   
--   Eşitleme için gereken mümkün olduğunda kaçının. Bu, özellikle yoğun olarak kullanılan kod için geçerlidir. Örneğin, bir algoritma yerine bir yarış durumu tolere bunu ortadan kaldırmak için ayarlanmış. Gereksiz eşitleme performansı azaltır ve kilitlenmeler ve yarış durumları olasılığını oluşturur.  
+- Eşitleme için gereken mümkün olduğunda kaçının. Bu, özellikle yoğun olarak kullanılan kod için geçerlidir. Örneğin, bir algoritma yerine bir yarış durumu tolere bunu ortadan kaldırmak için ayarlanmış. Gereksiz eşitleme performansı azaltır ve kilitlenmeler ve yarış durumları olasılığını oluşturur.  
   
--   Statik veri olun (`Shared` Visual Basic'te) varsayılan olarak güvenli iş parçacığı.  
+- Statik veri olun (`Shared` Visual Basic'te) varsayılan olarak güvenli iş parçacığı.  
   
--   Örnek veri iş parçacığı, varsayılan olarak güvenli yapmayın. İş parçacığı açısından güvenli kod oluşturmak için kilit ekleme performansınızın, kilit çakışması artırır ve kilitlenmeleri gerçekleşmesi için olasılığını oluşturur. Ortak uygulama modellerini aynı anda yalnızca bir iş parçacığının iş parçacığı güvenliği gereksinimini en aza indirir, kullanıcı kodu yürütür. Bu nedenle, .NET Framework sınıf kitaplıkları, varsayılan olarak güvenli iş parçacığı değildir.  
+- Örnek veri iş parçacığı, varsayılan olarak güvenli yapmayın. İş parçacığı açısından güvenli kod oluşturmak için kilit ekleme performansınızın, kilit çakışması artırır ve kilitlenmeleri gerçekleşmesi için olasılığını oluşturur. Ortak uygulama modellerini aynı anda yalnızca bir iş parçacığının iş parçacığı güvenliği gereksinimini en aza indirir, kullanıcı kodu yürütür. Bu nedenle, .NET Framework sınıf kitaplıkları, varsayılan olarak güvenli iş parçacığı değildir.  
   
--   Statik durumu alter statik yöntemler sağlayan kaçının. Senaryoları sunucusu, birden çok iş parçacığı aynı anda kod yürütebilir anlamına gelir statik durumu istekler arasında paylaşılır. Bu hataların iş parçacığı oluşturma olasılığını açar. İstekler genelinde paylaşılmaz örnekleri içine veri kapsülleyen bir tasarım desenini kullanarak göz önünde bulundurun. Ayrıca, statik veri eşitlenmişse durumu alter statik yöntemler arasındaki çağrıların kilitlenmeleri veya performansını olumsuz yönde etkileyen yedekli eşitleme neden olabilir.  
+- Statik durumu alter statik yöntemler sağlayan kaçının. Senaryoları sunucusu, birden çok iş parçacığı aynı anda kod yürütebilir anlamına gelir statik durumu istekler arasında paylaşılır. Bu hataların iş parçacığı oluşturma olasılığını açar. İstekler genelinde paylaşılmaz örnekleri içine veri kapsülleyen bir tasarım desenini kullanarak göz önünde bulundurun. Ayrıca, statik veri eşitlenmişse durumu alter statik yöntemler arasındaki çağrıların kilitlenmeleri veya performansını olumsuz yönde etkileyen yedekli eşitleme neden olabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

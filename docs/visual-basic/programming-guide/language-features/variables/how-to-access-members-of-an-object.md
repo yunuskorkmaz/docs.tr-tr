@@ -6,11 +6,11 @@ helpviewer_keywords:
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
 ms.openlocfilehash: de00e428cc3d9d7a5688e853b0ff4295fec5b3e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052137"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Nasıl yapılır: Erişim üyeleri bir nesnenin (Visual Basic)
 Bir nesneye başvuruda bulunan bir nesne değişkeni varsa, genellikle o nesnenin yöntemler, özellikler, alanlar ve olaylar gibi üyeleri birlikte çalışmak istediğiniz. Örneğin, bir kez oluşturduğunuz yeni bir <xref:System.Windows.Forms.Form> nesne ayarlamak isteyebilirsiniz, <xref:System.Windows.Forms.Control.Text%2A> özelliği veya çağrı kendi <xref:System.Windows.Forms.Control.Focus%2A> yöntemi.  
@@ -20,7 +20,7 @@ Bir nesneye başvuruda bulunan bir nesne değişkeni varsa, genellikle o nesneni
   
 #### <a name="to-access-members-of-an-object"></a>Bir nesnenin üyelerine erişmek için  
   
--   Üye erişimi işlecini kullanın (`.`) üye adı arasındaki nesne değişkeni adı.  
+- Üye erişimi işlecini kullanın (`.`) üye adı arasındaki nesne değişkeni adı.  
   
     ```  
     currentText = newForm.Text  

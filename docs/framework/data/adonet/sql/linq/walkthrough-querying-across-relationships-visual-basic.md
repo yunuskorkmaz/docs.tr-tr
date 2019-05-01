@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
 ms.openlocfilehash: abd4941697639ec7bdda545b1ead8d57091e9e7f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038447"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>İzlenecek yol: İlişkilerde Sorgulama (Visual Basic)
 Bu izlenecek yolda kullanımını gösteren [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *ilişkilendirmeleri* veritabanında yabancı anahtar ilişkileri göstermek için.  
@@ -24,18 +24,18 @@ Bu izlenecek yolda kullanımını gösteren [!INCLUDE[vbtecdlinq](../../../../..
 ## <a name="overview"></a>Genel Bakış  
  Bu kılavuzda üç ana görevden oluşur:  
   
--   Northwind örnek veritabanındaki Siparişler tablosunu temsil edecek bir varlık sınıfı ekleniyor.  
+- Northwind örnek veritabanındaki Siparişler tablosunu temsil edecek bir varlık sınıfı ekleniyor.  
   
--   Ek açıklamalar ekleme `Customer` sınıfı arasındaki ilişkiyi geliştirmek için `Customer` ve `Order` sınıfları.  
+- Ek açıklamalar ekleme `Customer` sınıfı arasındaki ilişkiyi geliştirmek için `Customer` ve `Order` sınıfları.  
   
--   Oluşturma ve alma işlemini test etmek için bir sorgu çalıştırma `Order` kullanarak bilgi `Customer` sınıfı.  
+- Oluşturma ve alma işlemini test etmek için bir sorgu çalıştırma `Order` kullanarak bilgi `Customer` sınıfı.  
   
 ## <a name="mapping-relationships-across-tables"></a>Tablolar arasındaki ilişkileri eşleme  
  Sonra `Customer` sınıf tanımını, oluşturma `Order` bildiren aşağıdaki kodu içeren varlık sınıf tanımı `Orders.Customer` yabancı anahtar olarak ilişkili `Customers.CustomerID`.  
   
 #### <a name="to-add-the-order-entity-class"></a>Sipariş varlık sınıfı eklemek için  
   
--   Sonra aşağıdaki kodu yazın veya yapıştırın `Customer` sınıfı:  
+- Sonra aşağıdaki kodu yazın veya yapıştırın `Customer` sınıfı:  
   
      [!code-vb[DLinqWalk2VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#1)]  
   
@@ -44,7 +44,7 @@ Bu izlenecek yolda kullanımını gösteren [!INCLUDE[vbtecdlinq](../../../../..
   
 #### <a name="to-annotate-the-customer-class"></a>Müşteri sınıf ek açıklama eklemek için  
   
--   İçine aşağıdaki kodu yazın veya yapıştırın `Customer` sınıfı:  
+- İçine aşağıdaki kodu yazın veya yapıştırın `Customer` sınıfı:  
   
      [!code-vb[DLinqWalk2VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#2)]  
   

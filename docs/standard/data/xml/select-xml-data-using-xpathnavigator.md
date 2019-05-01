@@ -1,5 +1,5 @@
 ---
-title: XPathNavigator kullanarak XML verileri seçme
+title: XPathNavigator Kullanarak XML Verileri Seçme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: c268c49e-32b9-4171-b782-dcb7b065fa73
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5a7aebc98627a079d08870b59e4a848a51dbfaaf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026971"
 ---
-# <a name="select-xml-data-using-xpathnavigator"></a>XPathNavigator kullanarak XML verileri seçme
+# <a name="select-xml-data-using-xpathnavigator"></a>XPathNavigator Kullanarak XML Verileri Seçme
 <xref:System.Xml.XPath.XPathNavigator> Sınıfı bir dizi içinde düğümü seçmek için kullanılan yöntemler kümesi sağlar bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> bir XPath ifadesi kullanarak nesne. Sonra seçili düğümleri kümesini yineleyebilirsiniz.  
   
 ## <a name="xpathnavigator-selection-methods"></a>XPathNavigator seçimi yöntemleri  
@@ -24,9 +24,9 @@ ms.locfileid: "54520119"
 ### <a name="selecting-nodes-using-xpath-expressions"></a>XPath ifadeleri kullanarak düğümleri seçme  
  Bir dizi bir XPath ifadesi kullanarak düğümü seçmek için aşağıdaki seçimi yöntemlerden birini kullanın.  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
  Çağrıldığında, bu yöntemler serbestçe kullanarak gidebilirsiniz düğümleri kümesini döndürür. bir <xref:System.Xml.XPath.XPathNodeIterator> nesnesi veya bir <xref:System.Xml.XPath.XPathNavigator> söz konusu olduğunda tek bir Seçili düğüm nesnesi.  
   

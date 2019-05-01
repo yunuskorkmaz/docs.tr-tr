@@ -3,22 +3,22 @@ title: Windows Süreç Etkinleştirme Hizmetini Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
 ms.openlocfilehash: a4c331465087c6910cb67a71d2153e08f82a6cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039708"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Windows Süreç Etkinleştirme Hizmetini Windows Communication Foundation ile Kullanmak için Yapılandırma
 Bu konu, Windows İşlem Etkinleştirme Hizmeti (WAS olarak da bilinir) ' için gerekli adımları açıklar. [!INCLUDE[wv](../../../../includes/wv-md.md)] Windows Communication Foundation (WCF) barındırmak için HTTP üzerinden iletişim kurmazlar Hizmetleri protokolleri ağ. Aşağıdaki bölümlerde, bu yapılandırmanın adımları özetlemektedir:  
   
--   Yükleme (veya yüklenmesini onaylayın) gerekli WCF etkinleştirme bileşenlerini.  
+- Yükleme (veya yüklenmesini onaylayın) gerekli WCF etkinleştirme bileşenlerini.  
   
--   Kullanmak istediğiniz ağ protokolü bağlamaları ile WAS site oluşturma veya mevcut bir site için yeni bir protokol bağlama ekleyin.  
+- Kullanmak istediğiniz ağ protokolü bağlamaları ile WAS site oluşturma veya mevcut bir site için yeni bir protokol bağlama ekleyin.  
   
--   Hizmetlerinizi barındırmak ve bu uygulamayı gerekli ağ protokolleri kullanmak üzere etkinleştirmek için bir uygulama oluşturun.  
+- Hizmetlerinizi barındırmak ve bu uygulamayı gerekli ağ protokolleri kullanmak üzere etkinleştirmek için bir uygulama oluşturun.  
   
--   HTTP olmayan uç noktasını kullanıma sunar bir WCF Hizmeti oluşturun.  
+- HTTP olmayan uç noktasını kullanıma sunar bir WCF Hizmeti oluşturun.  
   
 ## <a name="configuring-a-site-with-non-http-bindings"></a>Bir Site ile HTTP olmayan bağlamaları yapılandırma  
  Bir HTTP olmayan bağlama WAS ile kullanmak için bir site bağlaması için WAS yapılandırma eklenmesi gerekir. WAS yapılandırma mağazada %windir%\system32\inetsrv\config dizininde bulunan applicationHost.config dosyasıdır. Bu yapılandırma deposu WAS ve IIS 7.0 tarafından paylaşılır.  

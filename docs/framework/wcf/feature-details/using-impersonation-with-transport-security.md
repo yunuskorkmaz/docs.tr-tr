@@ -3,11 +3,11 @@ title: Taşıma Güvenliği ile Kimliğe Bürünme Kullanma
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
 ms.openlocfilehash: 6209007b60effe5403caf3db8855f029d0c47a0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050681"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Taşıma Güvenliği ile Kimliğe Bürünme Kullanma
 *Kimliğe bürünme* istemci kimliğini almak için bir sunucu uygulaması özelliğidir. Kimliğe bürünme, kaynaklara erişimi doğrularken kullanmak üzere hizmetlerin yaygındır. Bir hizmet hesabı kullanarak sunucu uygulaması çalışır ancak server istemci bağlantısı kabul ettiğinde, istemcinin kimlik bilgilerini kullanarak erişim denetimleri gerçekleştirilmesi, istemci kimliğine bürünür. Aktarım güvenliği hem de kimlik bilgilerini geçirerek ve bu kimlik bilgilerini kullanarak güvenli hale getirmek için bir mekanizma ' dir. Aktarım güvenliği ile kimliğe bürünme özelliğini Windows Communication Foundation (WCF) kullanarak bu konuda açıklanmaktadır. İleti güveliği kullanarak kimliğe bürünme hakkında daha fazla bilgi için bkz. [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -17,7 +17,7 @@ ms.locfileid: "59151443"
   
 |Kimliğe bürünme düzeyi|Açıklama|  
 |-------------------------|-----------------|  
-|None|Sunucu uygulaması istemci kimliğine bürünme çalışmaz.|  
+|Yok.|Sunucu uygulaması istemci kimliğine bürünme çalışmaz.|  
 |Anonim|Sunucu uygulaması istemci kimlik bilgilerine yönelik erişim denetimleri gerçekleştirebilirsiniz, ancak istemcinin kimliği hakkında hiçbir bilgi almaz. Bu kimliğe bürünme düzeyi yalnızca adlandırılmış kanallar gibi makinede iletişim için anlamlıdır. Kullanarak `Anonymous` ile bir uzak bağlantı tanımlayın kimliğe bürünme düzeyini yükseltir.|  
 |Tanımlayın|Sunucu uygulaması istemci kimliğini bilir ve istemcinin kimlik bilgilerine yönelik erişim doğrulama yapabilirsiniz, ancak istemci kimliğine bürünülemedi. Tanımlamak WCF SSPI kimlik bilgileri ile farklı kimliğe bürünme düzeyi belirteç sağlayıcısı sağlamadığı sürece kullanılan varsayılan kimliğe bürünme düzeyi.|  
 |Impersonate|Sunucu uygulaması istemci erişim denetimlerini biçimlendirebilir server makinesinde kaynaklarına erişim sağlayabilir. Sunucu uygulaması başkasının kimliğine bürünülerek gerçekleştirilen belirteç ağ kimlik bilgilerine sahip olmadığından, istemcinin kimliğini kullanarak uzak makinelerde kaynaklarına erişemiyor|  
@@ -33,24 +33,24 @@ ms.locfileid: "59151443"
 ### <a name="named-pipe-transport"></a>Adlandırılmış kanal taşıma  
  Aşağıdaki öğeler, adlandırılmış kanal taşıma ile kullanılır:  
   
--   Adlandırılmış kanal taşıma yalnızca yerel makinede kullanıma yöneliktir. Wcf'de adlandırılmış kanal taşıma, makineler arası bağlantılara açıkça izin vermiyor.  
+- Adlandırılmış kanal taşıma yalnızca yerel makinede kullanıma yöneliktir. Wcf'de adlandırılmış kanal taşıma, makineler arası bağlantılara açıkça izin vermiyor.  
   
--   Adlandırılmış Kanallar ile kullanılamaz `Impersonate` veya `Delegate` kimliğe bürünme düzeyi. Adlandırılmış kanal Bu kimliğe bürünme düzeylerinde makinede garanti zorunlu kılamaz.  
+- Adlandırılmış Kanallar ile kullanılamaz `Impersonate` veya `Delegate` kimliğe bürünme düzeyi. Adlandırılmış kanal Bu kimliğe bürünme düzeylerinde makinede garanti zorunlu kılamaz.  
   
  Adlandırılmış kanallar hakkında daha fazla bilgi için bkz: [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ### <a name="http-transport"></a>HTTP taşıma  
  HTTP taşıma kullanan bağlamaları (<xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.BasicHttpBinding>) açıklandığı gibi çeşitli kimlik doğrulama şeması desteği [anlama HTTP kimlik doğrulaması](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md). Kimliğe bürünme düzeyi desteklenen kimlik doğrulama şemasını temel bağlıdır. Aşağıdaki öğeler ile HTTP aktarımı kullanılır:  
   
--   `Anonymous` Kimliğe bürünme kimlik doğrulama düzeni yoksayar.  
+- `Anonymous` Kimliğe bürünme kimlik doğrulama düzeni yoksayar.  
   
--   `Basic` Kimlik doğrulama düzeni destekler yalnızca `Delegate` düzeyi. Tüm alt kimliğe bürünme düzeyi yükseltilir.  
+- `Basic` Kimlik doğrulama düzeni destekler yalnızca `Delegate` düzeyi. Tüm alt kimliğe bürünme düzeyi yükseltilir.  
   
--   `Digest` Kimlik doğrulama düzeni destekler yalnızca `Impersonate` ve `Delegate` düzeyleri.  
+- `Digest` Kimlik doğrulama düzeni destekler yalnızca `Impersonate` ve `Delegate` düzeyleri.  
   
--   `NTLM` Seçilebilir kimlik doğrulama şemasıyla doğrudan veya anlaşma, üzerinden destekler yalnızca `Delegate` yerel makinede düzeyi.  
+- `NTLM` Seçilebilir kimlik doğrulama şemasıyla doğrudan veya anlaşma, üzerinden destekler yalnızca `Delegate` yerel makinede düzeyi.  
   
--   Yalnızca anlaşma seçilebilir, Kerberos kimlik doğrulama düzeni, herhangi bir desteklenen kimliğe bürünme düzeyi ile kullanılabilir.  
+- Yalnızca anlaşma seçilebilir, Kerberos kimlik doğrulama düzeni, herhangi bir desteklenen kimliğe bürünme düzeyi ile kullanılabilir.  
   
  HTTP taşıma hakkında daha fazla bilgi için bkz. [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   

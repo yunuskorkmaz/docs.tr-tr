@@ -1,15 +1,15 @@
 ---
-title: Bir mikro hizmet Basitleştirilmiş CQRS ve DDD desenlerini uygulama
+title: Bir mikro hizmete CQRS ve DDD desenlerini uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | CQRS ve DDD desenlerini arasındaki genel ilişki anlayın.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
 ms.openlocfilehash: ef3260143c91c2500becd7c8c1a6cd0b81dbf3d2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020107"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Bir mikro hizmet Basitleştirilmiş CQRS ve DDD desenlerini uygulama
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
 ms.openlocfilehash: 3cf9d133aee5a2c3d93c1a464c96fdaebcf230f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018392"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>İzlenecek yol: Microsoft Expression Blend Kullanarak Düğme Oluşturma
 Bu izlenecek yol, oluşturma işleminde size yol gösterir bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Microsoft Expression Blend kullanarak özelleştirilmiş düğmesi.  
@@ -117,17 +117,17 @@ Bu izlenecek yol, oluşturma işleminde size yol gösterir bir [!INCLUDE[TLA2#tl
   
 10. **Cam gibi ara glassCube olun:** Ayarlama <xref:System.Windows.Shapes.Shape.Fill%2A> % 75 opak ve rengini beyaz ve saydam arasında 6 yaklaşık olarak eşit diğerleri doğrusal gradyan aralıklı aralıkları kullanarak glassy arama konumu. Gradyan duraklarının ayarlamak gerekenler budur:  
   
-    -   Gradyan durağını 1: % 75'ini alfa değerine sahip beyaz  
+    - Gradyan durağını 1: % 75'ini alfa değerine sahip beyaz  
   
-    -   Gradyan durağını 2: Geçirgen  
+    - Gradyan durağını 2: Geçirgen  
   
-    -   Gradyan durağını 3: % 75'ini alfa değerine sahip beyaz  
+    - Gradyan durağını 3: % 75'ini alfa değerine sahip beyaz  
   
-    -   Gradyan durağını 4: Geçirgen  
+    - Gradyan durağını 4: Geçirgen  
   
-    -   Gradyan durağını 5: % 75'ini alfa değerine sahip beyaz  
+    - Gradyan durağını 5: % 75'ini alfa değerine sahip beyaz  
   
-    -   Gradyan durağını 6: Geçirgen  
+    - Gradyan durağını 6: Geçirgen  
   
      Bu, "dalgalı" Acil Durum görünümünü oluşturur.  
   
@@ -173,9 +173,9 @@ Bu izlenecek yol, oluşturma işleminde size yol gösterir bir [!INCLUDE[TLA2#tl
   
 6. **Özellik tetikleyicisi için IsFocused oluşturun:** Olarak için aynı yordamı kullanarak <xref:System.Windows.UIElement.IsMouseOver%2A> (Bu bölümün ilk adımı bakın), başka bir özellik tetikleyicisi için oluşturma <xref:System.Windows.UIElement.IsFocused%2A> özelliği. Sırada **tetikleyici kayıt açıktır**, aşağıdaki eylemleri tetikleyiciyi ekleyin:  
   
-    -   **glassCube** alır bir <xref:System.Windows.UIElement.Opacity%2A> % 100.  
+    - **glassCube** alır bir <xref:System.Windows.UIElement.Opacity%2A> % 100.  
   
-    -   **outerRectangle** alır bir <xref:System.Windows.Shapes.Shape.Stroke%2A> özel ifade değeri, "{DynamicResource {x: Static SystemColors.HighlightBrushKey}}".  
+    - **outerRectangle** alır bir <xref:System.Windows.Shapes.Shape.Stroke%2A> özel ifade değeri, "{DynamicResource {x: Static SystemColors.HighlightBrushKey}}".  
   
  Bu kılavuzdaki son adım olarak düğmeye animasyon ekleyeceğiz. Animasyonlarına olaylar tarafından tetiklenen — özellikle <xref:System.Windows.UIElement.MouseEnter> ve <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayları.  
   
@@ -208,19 +208,19 @@ Bu izlenecek yol, oluşturma işleminde size yol gösterir bir [!INCLUDE[TLA2#tl
   
 5. **Başka bir olay tetikleyicisi oluşturmak ve farklı bir animasyon ilişkilendirin:** Daha fazla bir animasyon ekleyelim. İçin önceki olay tetikleyicisi animasyon oluşturmak için kullanılan benzer bir yordamı kullanın:  
   
-    1.  Kullanarak yeni bir olay tetikleyicisi oluşturmak <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.  
+    1. Kullanarak yeni bir olay tetikleyicisi oluşturmak <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.  
   
-    2.  Yeni bir zaman çizelgesi ile ilişkilendirmek <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.  
+    2. Yeni bir zaman çizelgesi ile ilişkilendirmek <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.  
   
      ![Yeni bir zaman çizelgesi oluşturma](./media/custom-button-blend-clickeventtrigger1.png "custom_button_blend_ClickEventTrigger1")  
   
-    1.  Bu zaman çizelgesi için iki ana kare, 0.0 saniye, diğeri ikinci 0,3 saniye oluşturun.  
+    1. Bu zaman çizelgesi için iki ana kare, 0.0 saniye, diğeri ikinci 0,3 saniye oluşturun.  
   
-    2.  İle vurgulanmış 0,3 saniye, ayarlanan **dönüştürme açı döndürme** 360 derece için.  
+    2. İle vurgulanmış 0,3 saniye, ayarlanan **dönüştürme açı döndürme** 360 derece için.  
   
      ![Döndürme dönüşümü oluşturmak nasıl](./media/custom-button-blend-rotatetransform.gif "custom_button_blend_RotateTransform")  
   
-    1.  Uygulamayı çalıştırmak için F5'e basın. Düğmesine tıklayın. Cam katman etrafında dönerek dikkat edin.  
+    1. Uygulamayı çalıştırmak için F5'e basın. Düğmesine tıklayın. Cam katman etrafında dönerek dikkat edin.  
   
 ## <a name="conclusion"></a>Sonuç  
  Özelleştirilmiş bir düğme tamamladınız. Bu uygulamadaki tüm düğmelerin uygulandığı bir düğme şablonunu kullanarak yaptığınız. Şablon düzenleme modunda bırakırsanız (Aşağıdaki şekle bakın) ve daha fazla düğme oluşturmak, arayın ve özel düğmenizin gibi yerine varsayılan düğme gibi davranan görürsünüz.  
@@ -237,15 +237,15 @@ Bu izlenecek yol, oluşturma işleminde size yol gösterir bir [!INCLUDE[TLA2#tl
   
  Conclusion, bir düğme şablonunu özelleştirme sürecinde, Microsoft Expression Blend içinde aşağıdakileri gerçekleştirmeyi öğrendiniz:  
   
--   Bir denetimin görünümünü özelleştirebilirsiniz.  
+- Bir denetimin görünümünü özelleştirebilirsiniz.  
   
--   Özellik tetikleyicileri ayarlayın. Özellik tetikleyicileri, çoğu nesneler üzerinde tam denetim kullanılabildiğinden çok yararlı olur.  
+- Özellik tetikleyicileri ayarlayın. Özellik tetikleyicileri, çoğu nesneler üzerinde tam denetim kullanılabildiğinden çok yararlı olur.  
   
--   Olay tetikleyicileri ayarlayın. Çoğu nesneler üzerinde tam denetim kullanılabildiğinden olay tetikleyicilerini çok yararlı olur.  
+- Olay tetikleyicileri ayarlayın. Çoğu nesneler üzerinde tam denetim kullanılabildiğinden olay tetikleyicilerini çok yararlı olur.  
   
--   Animasyonlar oluşturun.  
+- Animasyonlar oluşturun.  
   
--   Çeşitli: gradyan, oluşturun, BitmapEffects ekleyin, dönüşümler kullanma ve nesnelerin temel özelliklerini ayarlayın.  
+- Çeşitli: gradyan, oluşturun, BitmapEffects ekleyin, dönüşümler kullanma ve nesnelerin temel özelliklerini ayarlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

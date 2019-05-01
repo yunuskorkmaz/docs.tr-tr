@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
 ms.openlocfilehash: 7db435e45ddc55346af5ea5fdbcce611173c774b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053541"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML Sözdizimi
 <xref:System.Windows.PropertyPath> Nesne destekleyen karmaşık bir satır içi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ele çeşitli özelliklerini ayarlamak için söz dizimi <xref:System.Windows.PropertyPath> değerlerine türü. Bu konu belgeleri <xref:System.Windows.PropertyPath> bağlama ve animasyon sözdizimleri için uygulanan sözdizimi.  
@@ -69,11 +69,11 @@ ms.locfileid: "59122921"
   
  Parantezler belirtmek bu özellik bir <xref:System.Windows.PropertyPath> kısmi bir nitelik kullanılarak oluşturulması. Bir XML ad alanı, uygun bir eşleme türüyle bulmak için kullanabilirsiniz. `ownerType` Aramaları türleri bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemciye sahip erişimi ile <xref:System.Windows.Markup.XmlnsDefinitionAttribute> her derlemede bildirimleri. Çoğu uygulama için eşlenmiş varsayılan XML ad alanına sahip [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] ad alanı öneki genellikle yalnızca özel türleri için gerekli olan ya da aksi takdirde, ad alanı dışında türleri.  `propertyName` Mevcut bir özelliğin adını çözülmesi gerekir `ownerType`. Bu sözdizimi, genellikle aşağıdaki durumlarından biri kullanılır:  
   
--   Belirtilen yolun [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bir stil veya belirtilen bir hedef türü olmayan şablon olmasıdır. Tam bir kullanım olmayan stil, şablon olmayan durumlarda özelliği bir tür değil bir örneğinde var olduğundan genellikle Bunun dışındaki durumlarda geçerli değil.  
+- Belirtilen yolun [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bir stil veya belirtilen bir hedef türü olmayan şablon olmasıdır. Tam bir kullanım olmayan stil, şablon olmayan durumlarda özelliği bir tür değil bir örneğinde var olduğundan genellikle Bunun dışındaki durumlarda geçerli değil.  
   
--   Ekli özelliği özelliğidir.  
+- Ekli özelliği özelliğidir.  
   
--   Statik bir özellik için bağlama.  
+- Statik bir özellik için bağlama.  
   
  Özelliği görsel taslak hedefi olarak kullanım için belirtilen `propertyName` olmalıdır bir <xref:System.Windows.DependencyProperty>.  
   
@@ -118,19 +118,19 @@ or
 ### <a name="escapes-for-property-path-strings"></a>Özellik yolu dizeleri için kaçış karakterleri  
  Belirli iş nesneleri için bir kaçış dizisi özelliği yol dizesi düzgün ayrıştırılabilmesi için burada gerektiren bir durumla karşılaşabilirsiniz. Bu karakterlerden biri çok benzer adlandırma etkileşimi sorunlar genellikle iş nesnesi tanımlamak için kullanılan dillerde olduğundan kaçış gerek nadir olmalıdır.  
   
--   Oluşturucular ([]) sonraki karakteri inceltme işareti (^) atlar.  
+- Oluşturucular ([]) sonraki karakteri inceltme işareti (^) atlar.  
   
--   (XML varlıkları kullanarak), XML dil tanımına özel belirli karakter kaçış gerekir. Kullanım `&` karakteri kaçırmak için "&". Kullanım `>` bitiş etiketi kaçış ">".  
+- (XML varlıkları kullanarak), XML dil tanımına özel belirli karakter kaçış gerekir. Kullanım `&` karakteri kaçırmak için "&". Kullanım `>` bitiş etiketi kaçış ">".  
   
--   Kaçış gerekir (ters eğik çizgi kullanarak `\`) WPF XAML ayrıştırıcı davranışını bir işaretleme uzantısı işlenirken özel karakter.  
+- Kaçış gerekir (ters eğik çizgi kullanarak `\`) WPF XAML ayrıştırıcı davranışını bir işaretleme uzantısı işlenirken özel karakter.  
   
-    -   Ters eğik çizgi (`\`) kaçış karakteri.  
+    - Ters eğik çizgi (`\`) kaçış karakteri.  
   
-    -   Eşittir işareti (`=`) özellik adı, özellik değerinden ayırır.  
+    - Eşittir işareti (`=`) özellik adı, özellik değerinden ayırır.  
   
-    -   Virgül (`,`) özellikleri ayırır.  
+    - Virgül (`,`) özellikleri ayırır.  
   
-    -   Sağ büyük ayraç (`}`) bir işaretleme uzantısı sonudur.  
+    - Sağ büyük ayraç (`}`) bir işaretleme uzantısı sonudur.  
   
 > [!NOTE]
 >  Teknik olarak bu çıkışları iş bir görsel taslak özellik yolu için Ayrıca, ancak genellikle varolan WPF nesneleri için nesne modellerini geçiş yapıyorsanız ve kaçış gereksiz olmalıdır.  

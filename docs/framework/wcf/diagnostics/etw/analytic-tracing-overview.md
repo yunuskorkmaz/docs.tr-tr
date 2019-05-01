@@ -5,11 +5,11 @@ helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
 ms.openlocfilehash: 9918f07d9c26c1779a1eedfbc423c31e61659334
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44070127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048749"
 ---
 # <a name="analytic-tracing-overview"></a>Çözümleme İzleme Genel Bakış
 Analitik izleme [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] yüksek performanslı ve düşük ayrıntı izleme özelliği için olay izleme Windows (ETW üstünde) ayarlayın. ETW çekirdek izleme işlemlerinin ek yükü büyük ölçüde azaltmak için düzeyinde çalışır. Verimli bir şekilde kullanıcı ve çekirdek modu olaylarını arabelleğe alır ve dinamik günlük kaydını etkinleştirme hizmetin yeniden başlatılması gerekmeden sağlar. Sonraki günlükleri yayılan ve alınan olay izleme verileri mevcut değil.  
@@ -46,5 +46,5 @@ Analitik izleme [!INCLUDE[netfx_current_long](../../../../../includes/netfx-curr
 ### <a name="message-flow-tracing"></a>İleti akışı izlemeyi  
  İleti akışı izlemeyi etkinleştirme hakkında daha fazla bilgi için bkz. [ileti akışı izlemeyi yapılandırma](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
   
-### <a name="keywords"></a>Anahtar Sözcükler  
+### <a name="keywords"></a>anahtar sözcükler  
  İzleme İletileri Filtrele ve hangi bileşeninin tanımlamak için kullanılan anahtar sözcükler [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] olay yayılır. Daha fazla bilgi için [dinamik olarak etkinleştirme analitik izleme](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).

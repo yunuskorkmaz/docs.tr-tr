@@ -3,17 +3,17 @@ title: Entity SQL Başvurusu
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
 ms.openlocfilehash: 9b666b83674cb2374409e321a2b715e9910bdd0e
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034274"
 ---
 # <a name="entity-sql-reference"></a>Entity SQL Başvurusu
 
 Bu bölüm, Entity SQL Başvurusu makaleler içerir. Bu makalede özetler ve varlık SQL işleçleri kategorilere göre gruplandırır.
 
-## <a name="arithmetic-operators"></a>Aritmetik işleçler
+## <a name="arithmetic-operators"></a>Aritmetik İşleçler
 
 Aritmetik işleçler iki deyim bir veya daha fazla sayısal veri türleri üzerinde matematik işlemleri gerçekleştirir. Entity SQL aritmetik işleçleri aşağıdaki tabloda listelenmektedir:
 

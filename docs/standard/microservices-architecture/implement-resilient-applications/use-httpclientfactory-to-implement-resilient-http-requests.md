@@ -1,17 +1,17 @@
 ---
-title: Kullanım HttpClientFactory dayanıklı HTTP isteklerini uygulamak için
+title: Dayanıklı HTTP isteklerini uygulamak için HttpClientFactory kullanma
 description: .NET Core 2.1 itibaren kullanılabilir olan HttpClientFactory oluşturmak için kullanmayı öğrenin `HttpClient` örnekleri, uygulamalarınızda kullanabileceğiniz kolaylaştırır.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
 ms.openlocfilehash: a55181e787b5c94e13d3945a5d97a12fed61e927
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020224"
 ---
-# <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Kullanım HttpClientFactory dayanıklı HTTP isteklerini uygulamak için
+# <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Dayanıklı HTTP isteklerini uygulamak için HttpClientFactory kullanma
 
 `HttpClientFactory` .NET Core 2.1 itibaren kullanılabilir kendine özgü tarzı olan bir factory oluşturmak için <xref:System.Net.Http.HttpClient> uygulamalarınızda kullanılacak örnekleri.
 

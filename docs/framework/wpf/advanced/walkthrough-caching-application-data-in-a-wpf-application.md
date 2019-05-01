@@ -10,11 +10,11 @@ helpviewer_keywords:
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
 ms.openlocfilehash: 1d00c222dabf446c7c102307c3b904d3f1ff4bca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007285"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma
 Önbelleğe alma, verileri hızlı erişim için bellekte depolamanızı sağlar. Verileri yeniden erişildiğinde uygulamaları özgün kaynaktan almak yerine önbellekten veri alabilirsiniz. Bu, performansı ve ölçeklenebilirliği artırabilir. Ayrıca, önbelleğe alma, veri kaynağının geçici olarak devre dışı olduğunda yaptığı veri yok.
@@ -28,24 +28,24 @@ ms.locfileid: "59314405"
 
  Bu kılavuzda gösterilen görevler aşağıdakileri içerir:
 
--   WPF uygulama projesi oluşturma.
+- WPF uygulama projesi oluşturma.
 
--   Bir başvuru eklemeyi [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].
+- Bir başvuru eklemeyi [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].
 
--   Bir önbelleği başlatılıyor.
+- Bir önbelleği başlatılıyor.
 
--   Bir metin dosyasının içeriğini içeren bir önbellek girişi ekleniyor.
+- Bir metin dosyasının içeriğini içeren bir önbellek girişi ekleniyor.
 
--   Önbellek girişi için bir çıkarma İlkesi sağlama.
+- Önbellek girişi için bir çıkarma İlkesi sağlama.
 
--   Önbelleğe alınan dosya yolunu izleme ve önbellek örneği hakkında bilgilendirmek için izlenen öğe değiştirir.
+- Önbelleğe alınan dosya yolunu izleme ve önbellek örneği hakkında bilgilendirmek için izlenen öğe değiştirir.
 
 ## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için şunlar gerekir:
 
--   Microsoft Visual Studio 2010.
+- Microsoft Visual Studio 2010.
 
--   Az miktarda metin içeren bir metin dosyası. (Metin dosyasının içeriğini bir ileti kutusunda görüntülenir.) Bu kılavuzda gösterilen kodu aşağıdaki dosyasıyla çalıştığınız varsayılır:
+- Az miktarda metin içeren bir metin dosyası. (Metin dosyasının içeriğini bir ileti kutusunda görüntülenir.) Bu kılavuzda gösterilen kodu aşağıdaki dosyasıyla çalıştığınız varsayılır:
 
      `c:\cache\cacheText.txt`
 
@@ -109,9 +109,9 @@ ms.locfileid: "59314405"
 
 7. Aşağıdaki adımları izleyerek önbelleğe alma derlemesine bir başvuru ekleyin:
 
-    1.  İçinde **Çözüm Gezgini**, proje adına sağ tıklayın ve ardından **Başvuru Ekle**.
+    1. İçinde **Çözüm Gezgini**, proje adına sağ tıklayın ve ardından **Başvuru Ekle**.
 
-    2.  Seçin **.NET** sekmesinde `System.Runtime.Caching`ve ardından **Tamam**.
+    2. Seçin **.NET** sekmesinde `System.Runtime.Caching`ve ardından **Tamam**.
 
 #### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>' % S'hedef .NET Framework'ü Visual C# projesinde değiştirmek için
 
@@ -125,9 +125,9 @@ ms.locfileid: "59314405"
 
 4. Aşağıdaki adımları izleyerek önbelleğe alma derlemesine bir başvuru ekleyin:
 
-    1.  Sağ **başvuruları** klasörünü ve ardından **Başvuru Ekle**.
+    1. Sağ **başvuruları** klasörünü ve ardından **Başvuru Ekle**.
 
-    2.  Seçin **.NET** sekmesinde `System.Runtime.Caching`ve ardından **Tamam**.
+    2. Seçin **.NET** sekmesinde `System.Runtime.Caching`ve ardından **Tamam**.
 
 ## <a name="adding-a-button-to-the-wpf-window"></a>WPF penceresine bir düğme ekleme
  Ardından bir düğme denetimi ekleyin ve düğmenin için bir olay işleyicisi oluşturun `Click` olay. Düğmeye tıkladığınızda, metin dosyasının içeriğini önbelleğe alınan görüntülenir ve bu nedenle, daha sonra kod ekleyeceksiniz.
@@ -143,13 +143,13 @@ ms.locfileid: "59314405"
 ## <a name="initializing-the-cache-and-caching-an-entry"></a>Önbellek başlatılıyor ve bir giriş önbelleğe alma
  Sonra aşağıdaki görevleri gerçekleştirmek için kod ekleyeceksiniz:
 
--   Önbellek sınıfının bir örneğini oluşturun — diğer bir deyişle, yeni bir örneğini <xref:System.Runtime.Caching.MemoryCache> nesne.
+- Önbellek sınıfının bir örneğini oluşturun — diğer bir deyişle, yeni bir örneğini <xref:System.Runtime.Caching.MemoryCache> nesne.
 
--   Önbellek kullandığını belirtirseniz bir <xref:System.Runtime.Caching.HostFileChangeMonitor> metin dosyasındaki değişiklikleri izlemek için nesne.
+- Önbellek kullandığını belirtirseniz bir <xref:System.Runtime.Caching.HostFileChangeMonitor> metin dosyasındaki değişiklikleri izlemek için nesne.
 
--   Metin dosyası okuma ve içeriğinin bir önbellek girdisi önbelleğe alır.
+- Metin dosyası okuma ve içeriğinin bir önbellek girdisi önbelleğe alır.
 
--   Önbelleğe alınan metin dosyasının içeriğini görüntüler.
+- Önbelleğe alınan metin dosyasının içeriğini görüntüler.
 
 #### <a name="to-create-the-cache-object"></a>Önbellek nesnesi oluşturmak için
 

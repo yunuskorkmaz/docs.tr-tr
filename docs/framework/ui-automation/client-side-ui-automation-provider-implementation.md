@@ -7,11 +7,11 @@ helpviewer_keywords:
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
 ms.openlocfilehash: e68cf69830aef88f46ff2e288c5aad548db39bdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032389"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>İstemci Tarafı UI Otomasyon Sağlayıcıyı Uygulama
 > [!NOTE]
@@ -39,13 +39,13 @@ ms.locfileid: "59224475"
   
  İstemcinin kendi kodda uygulanmış sağlayıcıları kullanarak kayıtlı <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>. Bu yöntem, bir dizi bağımsız değişken olarak alır <xref:System.Windows.Automation.ClientSideProviderDescription> yapıları, her biri aşağıdaki özellikleri belirtir:  
   
--   Sağlayıcı nesnesini oluşturan bir geri çağırma işlevi.  
+- Sağlayıcı nesnesini oluşturan bir geri çağırma işlevi.  
   
--   Sağlayıcı hizmet denetim sınıfı adı.  
+- Sağlayıcı hizmet denetim sınıfı adı.  
   
--   Sağlayıcı hizmet edeceği (genellikle yürütülebilir dosyanın tam ad) uygulama görüntü adı.  
+- Sağlayıcı hizmet edeceği (genellikle yürütülebilir dosyanın tam ad) uygulama görüntü adı.  
   
--   Sınıf adı hedef uygulamada bulunan pencere sınıfları karşı nasıl eşleşen belirleyen bayrakları.  
+- Sınıf adı hedef uygulamada bulunan pencere sınıfları karşı nasıl eşleşen belirleyen bayrakları.  
   
  Son iki parametreler isteğe bağlıdır. Farklı uygulamalar için farklı sağlayıcıları kullanmak istediğinde, istemci hedef uygulama görüntü adını belirtebilirsiniz. Örneğin, istemci için bir sağlayıcı kullanabilirsiniz bir [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] liste görünümü denetimi daha önceden başka bir bilinen uygulamada benzer bir denetim için birden çok görünüm düzeni ve başka destekleyen bilinen bir uygulama.  
   
