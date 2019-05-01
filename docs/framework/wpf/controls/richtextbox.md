@@ -8,21 +8,21 @@ helpviewer_keywords:
 - RichTextBox control [WPF]
 ms.assetid: a177374d-ee54-4d00-aaae-c983481cae9b
 ms.openlocfilehash: f1e4257804b6ce77eeb1bed7b984e90e90cc2752
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971073"
 ---
-# <a name="richtextbox"></a><span data-ttu-id="4127f-102">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="4127f-102">RichTextBox</span></span>
-<span data-ttu-id="4127f-103"><xref:System.Windows.Controls.RichTextBox> Kes ve Yapıştır, zengin belge sunumu ve içerik seçimi gibi özellikleri için yerleşik destek ile düzenleme denetimi öğe tanımlar.</span><span class="sxs-lookup"><span data-stu-id="4127f-103">The <xref:System.Windows.Controls.RichTextBox> element defines an editing control with built-in support for features such as cut and paste, rich document presentation, and content selection.</span></span>  
+# <a name="richtextbox"></a><span data-ttu-id="3b73b-102">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="3b73b-102">RichTextBox</span></span>
+<span data-ttu-id="3b73b-103"><xref:System.Windows.Controls.RichTextBox> Kes ve Yapıştır, zengin belge sunumu ve içerik seçimi gibi özellikleri için yerleşik destek ile düzenleme denetimi öğe tanımlar.</span><span class="sxs-lookup"><span data-stu-id="3b73b-103">The <xref:System.Windows.Controls.RichTextBox> element defines an editing control with built-in support for features such as cut and paste, rich document presentation, and content selection.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4127f-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="4127f-104">In This Section</span></span>  
- [<span data-ttu-id="4127f-105">RichTextBox Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="4127f-105">RichTextBox Overview</span></span>](richtextbox-overview.md)  
- [<span data-ttu-id="4127f-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="4127f-106">How-to Topics</span></span>](richtextbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3b73b-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="3b73b-104">In This Section</span></span>  
+ [<span data-ttu-id="3b73b-105">RichTextBox Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="3b73b-105">RichTextBox Overview</span></span>](richtextbox-overview.md)  
+ [<span data-ttu-id="3b73b-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="3b73b-106">How-to Topics</span></span>](richtextbox-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="4127f-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4127f-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3b73b-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3b73b-107">See also</span></span>
 
 - <xref:System.Windows.Controls.TextBox>
-- [<span data-ttu-id="4127f-108">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="4127f-108">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
-- [<span data-ttu-id="4127f-109">Akış Belgesine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="4127f-109">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
+- [<span data-ttu-id="3b73b-108">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="3b73b-108">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
+- [<span data-ttu-id="3b73b-109">Akış Belgesine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="3b73b-109">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
