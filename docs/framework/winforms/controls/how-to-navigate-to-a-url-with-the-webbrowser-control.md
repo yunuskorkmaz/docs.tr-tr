@@ -13,18 +13,18 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
 ms.openlocfilehash: a174b6ae60f87e91e6f97e8fa7f8ad3892ef017a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913477"
 ---
-# <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a><span data-ttu-id="efdd6-102">Nasıl yapılır: WebBrowser Denetimi ile URL'ye Gitme</span><span class="sxs-lookup"><span data-stu-id="efdd6-102">How to: Navigate to a URL with the WebBrowser Control</span></span>
-<span data-ttu-id="efdd6-103">Aşağıdaki kod örneğinde nasıl gidileceğini gösteren <xref:System.Windows.Forms.WebBrowser> belirli bir URL'ye denetimi.</span><span class="sxs-lookup"><span data-stu-id="efdd6-103">The following code example demonstrates how to navigate the <xref:System.Windows.Forms.WebBrowser> control to a specific URL.</span></span>  
+# <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a><span data-ttu-id="c6000-102">Nasıl yapılır: WebBrowser Denetimi ile URL'ye Gitme</span><span class="sxs-lookup"><span data-stu-id="c6000-102">How to: Navigate to a URL with the WebBrowser Control</span></span>
+<span data-ttu-id="c6000-103">Aşağıdaki kod örneğinde nasıl gidileceğini gösteren <xref:System.Windows.Forms.WebBrowser> belirli bir URL'ye denetimi.</span><span class="sxs-lookup"><span data-stu-id="c6000-103">The following code example demonstrates how to navigate the <xref:System.Windows.Forms.WebBrowser> control to a specific URL.</span></span>  
   
- <span data-ttu-id="efdd6-104">Yeni belge tam yüklü olduğunda belirlemek için tanıtıcı <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> olay.</span><span class="sxs-lookup"><span data-stu-id="efdd6-104">To determine when the new document is fully loaded, handle the <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event.</span></span> <span data-ttu-id="efdd6-105">Bu olay bir gösterimi için bkz. [nasıl yapılır: WebBrowser denetimi ile yazdırma](how-to-print-with-a-webbrowser-control.md).</span><span class="sxs-lookup"><span data-stu-id="efdd6-105">For a demonstration of this event, see [How to: Print with a WebBrowser Control](how-to-print-with-a-webbrowser-control.md).</span></span>  
+ <span data-ttu-id="c6000-104">Yeni belge tam yüklü olduğunda belirlemek için tanıtıcı <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> olay.</span><span class="sxs-lookup"><span data-stu-id="c6000-104">To determine when the new document is fully loaded, handle the <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event.</span></span> <span data-ttu-id="c6000-105">Bu olay bir gösterimi için bkz. [nasıl yapılır: WebBrowser denetimi ile yazdırma](how-to-print-with-a-webbrowser-control.md).</span><span class="sxs-lookup"><span data-stu-id="c6000-105">For a demonstration of this event, see [How to: Print with a WebBrowser Control](how-to-print-with-a-webbrowser-control.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="efdd6-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="efdd6-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c6000-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="c6000-106">Example</span></span>  
   
 ```vb  
 Me.webBrowser1.Navigate("http://www.microsoft.com")  
@@ -34,18 +34,18 @@ Me.webBrowser1.Navigate("http://www.microsoft.com")
 this.webBrowser1.Navigate("http://www.microsoft.com");  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="efdd6-107">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="efdd6-107">Compiling the Code</span></span>  
- <span data-ttu-id="efdd6-108">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="efdd6-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="c6000-107">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="c6000-107">Compiling the Code</span></span>  
+ <span data-ttu-id="c6000-108">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="c6000-108">This example requires:</span></span>  
   
--   <span data-ttu-id="efdd6-109">A <xref:System.Windows.Forms.WebBrowser> adlı Denetim `webBrowser1`.</span><span class="sxs-lookup"><span data-stu-id="efdd6-109">A <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1`.</span></span>  
+- <span data-ttu-id="c6000-109">A <xref:System.Windows.Forms.WebBrowser> adlı Denetim `webBrowser1`.</span><span class="sxs-lookup"><span data-stu-id="c6000-109">A <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1`.</span></span>  
   
--   <span data-ttu-id="efdd6-110">Başvurular `System` ve `System.Windows.Forms` derlemeler.</span><span class="sxs-lookup"><span data-stu-id="efdd6-110">References to the `System` and `System.Windows.Forms` assemblies.</span></span>  
+- <span data-ttu-id="c6000-110">Başvurular `System` ve `System.Windows.Forms` derlemeler.</span><span class="sxs-lookup"><span data-stu-id="c6000-110">References to the `System` and `System.Windows.Forms` assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="efdd6-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="efdd6-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c6000-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c6000-111">See also</span></span>
 
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.DocumentCompleted?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.WebBrowser.Navigated?displayProperty=nameWithType>
-- [<span data-ttu-id="efdd6-112">WebBrowser Denetimi</span><span class="sxs-lookup"><span data-stu-id="efdd6-112">WebBrowser Control</span></span>](webbrowser-control-windows-forms.md)
-- [<span data-ttu-id="efdd6-113">Nasıl yapılır: WebBrowser denetimi ile yazdırma</span><span class="sxs-lookup"><span data-stu-id="efdd6-113">How to: Print with a WebBrowser Control</span></span>](how-to-print-with-a-webbrowser-control.md)
+- [<span data-ttu-id="c6000-112">WebBrowser Denetimi</span><span class="sxs-lookup"><span data-stu-id="c6000-112">WebBrowser Control</span></span>](webbrowser-control-windows-forms.md)
+- [<span data-ttu-id="c6000-113">Nasıl yapılır: WebBrowser denetimi ile yazdırma</span><span class="sxs-lookup"><span data-stu-id="c6000-113">How to: Print with a WebBrowser Control</span></span>](how-to-print-with-a-webbrowser-control.md)

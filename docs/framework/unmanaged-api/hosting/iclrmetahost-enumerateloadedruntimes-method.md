@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b0e1213128f5728f17225fbf6906d877dc64e86d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61919301"
 ---
-# <a name="iclrmetahostenumerateloadedruntimes-method"></a><span data-ttu-id="13ad4-102">ICLRMetaHost::EnumerateLoadedRuntimes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="13ad4-102">ICLRMetaHost::EnumerateLoadedRuntimes Method</span></span>
-<span data-ttu-id="13ad4-103">İçeren geçerli bir sabit listesini döndürür [Iclrruntimeınfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) yüklenen verilen bir işlem içinde ortak dil çalışma zamanı (CLR) her sürümü için arabirim işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="13ad4-103">Returns an enumeration that includes a valid [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface pointer for each version of the common language runtime (CLR) that is loaded in a given process.</span></span> <span data-ttu-id="13ad4-104">Bu yöntem yerine geçer [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="13ad4-104">This method supersedes the [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) function.</span></span>  
+# <a name="iclrmetahostenumerateloadedruntimes-method"></a><span data-ttu-id="1b98d-102">ICLRMetaHost::EnumerateLoadedRuntimes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="1b98d-102">ICLRMetaHost::EnumerateLoadedRuntimes Method</span></span>
+<span data-ttu-id="1b98d-103">İçeren geçerli bir sabit listesini döndürür [Iclrruntimeınfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) yüklenen verilen bir işlem içinde ortak dil çalışma zamanı (CLR) her sürümü için arabirim işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="1b98d-103">Returns an enumeration that includes a valid [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface pointer for each version of the common language runtime (CLR) that is loaded in a given process.</span></span> <span data-ttu-id="1b98d-104">Bu yöntem yerine geçer [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="1b98d-104">This method supersedes the [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="13ad4-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="13ad4-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1b98d-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1b98d-105">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateLoadedRuntimes (  
@@ -36,34 +36,34 @@ HRESULT EnumerateLoadedRuntimes (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="13ad4-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="13ad4-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1b98d-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1b98d-106">Parameters</span></span>  
  `hndProcess`  
- <span data-ttu-id="13ad4-107">[in] Yüklenen çalışma zamanlarını incelemek için işlem tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="13ad4-107">[in] The handle of the process to inspect for loaded runtimes.</span></span>  
+ <span data-ttu-id="1b98d-107">[in] Yüklenen çalışma zamanlarını incelemek için işlem tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="1b98d-107">[in] The handle of the process to inspect for loaded runtimes.</span></span>  
   
  `ppEnumerator`  
- <span data-ttu-id="13ad4-108">[out] Bir <xref:Microsoft.VisualStudio.OLE.Interop.IEnumUnknown> numaralandırması [Iclrruntimeınfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) işlemi tarafından yüklenen her CLR karşılık gelen arabirimleri.</span><span class="sxs-lookup"><span data-stu-id="13ad4-108">[out] An <xref:Microsoft.VisualStudio.OLE.Interop.IEnumUnknown> enumeration of [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaces corresponding to each CLR that is loaded by the process.</span></span>  
+ <span data-ttu-id="1b98d-108">[out] Bir <xref:Microsoft.VisualStudio.OLE.Interop.IEnumUnknown> numaralandırması [Iclrruntimeınfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) işlemi tarafından yüklenen her CLR karşılık gelen arabirimleri.</span><span class="sxs-lookup"><span data-stu-id="1b98d-108">[out] An <xref:Microsoft.VisualStudio.OLE.Interop.IEnumUnknown> enumeration of [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaces corresponding to each CLR that is loaded by the process.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="13ad4-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="13ad4-109">Return Value</span></span>  
- <span data-ttu-id="13ad4-110">Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.</span><span class="sxs-lookup"><span data-stu-id="13ad4-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1b98d-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="1b98d-109">Return Value</span></span>  
+ <span data-ttu-id="1b98d-110">Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.</span><span class="sxs-lookup"><span data-stu-id="1b98d-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="13ad4-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="13ad4-111">HRESULT</span></span>|<span data-ttu-id="13ad4-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="13ad4-112">Description</span></span>|  
+|<span data-ttu-id="1b98d-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1b98d-111">HRESULT</span></span>|<span data-ttu-id="1b98d-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1b98d-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="13ad4-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="13ad4-113">S_OK</span></span>|<span data-ttu-id="13ad4-114">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="13ad4-114">The method completed successfully.</span></span>|  
-|<span data-ttu-id="13ad4-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="13ad4-115">E_POINTER</span></span>|<span data-ttu-id="13ad4-116">`ppEnumerator` NULL olur.</span><span class="sxs-lookup"><span data-stu-id="13ad4-116">`ppEnumerator` is null.</span></span>|  
+|<span data-ttu-id="1b98d-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="1b98d-113">S_OK</span></span>|<span data-ttu-id="1b98d-114">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="1b98d-114">The method completed successfully.</span></span>|  
+|<span data-ttu-id="1b98d-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="1b98d-115">E_POINTER</span></span>|<span data-ttu-id="1b98d-116">`ppEnumerator` NULL olur.</span><span class="sxs-lookup"><span data-stu-id="1b98d-116">`ppEnumerator` is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="13ad4-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="13ad4-117">Remarks</span></span>  
- <span data-ttu-id="13ad4-118">Kullanım dışı bırakılan işlevler ile gibi yüklenmiş olsa bile bu listeleri yüklenen tüm çalışma zamanları, yöntemdir [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md).</span><span class="sxs-lookup"><span data-stu-id="13ad4-118">This method is lists all loaded runtimes, even if they were loaded with deprecated functions such as [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1b98d-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1b98d-117">Remarks</span></span>  
+ <span data-ttu-id="1b98d-118">Kullanım dışı bırakılan işlevler ile gibi yüklenmiş olsa bile bu listeleri yüklenen tüm çalışma zamanları, yöntemdir [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md).</span><span class="sxs-lookup"><span data-stu-id="1b98d-118">This method is lists all loaded runtimes, even if they were loaded with deprecated functions such as [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="13ad4-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="13ad4-119">Requirements</span></span>  
- <span data-ttu-id="13ad4-120">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="13ad4-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1b98d-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1b98d-119">Requirements</span></span>  
+ <span data-ttu-id="1b98d-120">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1b98d-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="13ad4-121">**Üst bilgi:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="13ad4-121">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="1b98d-121">**Üst bilgi:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="1b98d-121">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="13ad4-122">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="13ad4-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="1b98d-122">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="1b98d-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="13ad4-123">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="13ad4-123">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="1b98d-123">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1b98d-123">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="13ad4-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="13ad4-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1b98d-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1b98d-124">See also</span></span>
 
-- [<span data-ttu-id="13ad4-125">ICLRMetaHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="13ad4-125">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
-- [<span data-ttu-id="13ad4-126">Barındırma</span><span class="sxs-lookup"><span data-stu-id="13ad4-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="1b98d-125">ICLRMetaHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1b98d-125">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [<span data-ttu-id="1b98d-126">Barındırma</span><span class="sxs-lookup"><span data-stu-id="1b98d-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

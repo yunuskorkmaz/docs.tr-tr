@@ -8,24 +8,24 @@ helpviewer_keywords:
 - ListView controls [WPF], using
 ms.assetid: 49dfef1a-dddf-4fc6-a511-6d5f925a4781
 ms.openlocfilehash: 734b5265c1d25e4538c40f5a43bff220d675eedb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932586"
 ---
-# <a name="listview-overviews"></a><span data-ttu-id="5ccf0-102">ListView'a Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="5ccf0-102">ListView Overviews</span></span>
-<span data-ttu-id="5ccf0-103">Bu bölümdeki konular, nasıl kullanabileceğinizi gösteren bir <xref:System.Windows.Controls.ListView> denetimi.</span><span class="sxs-lookup"><span data-stu-id="5ccf0-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  
+# <a name="listview-overviews"></a><span data-ttu-id="a0bc4-102">ListView'a Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="a0bc4-102">ListView Overviews</span></span>
+<span data-ttu-id="a0bc4-103">Bu bölümdeki konular, nasıl kullanabileceğinizi gösteren bir <xref:System.Windows.Controls.ListView> denetimi.</span><span class="sxs-lookup"><span data-stu-id="a0bc4-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5ccf0-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="5ccf0-104">In This Section</span></span>  
- [<span data-ttu-id="5ccf0-105">ListView Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="5ccf0-105">ListView Overview</span></span>](listview-overview.md)  
- [<span data-ttu-id="5ccf0-106">GridView Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="5ccf0-106">GridView Overview</span></span>](gridview-overview.md)  
- [<span data-ttu-id="5ccf0-107">GridView Sütun Üst Bilgi Stil ve Şablonlarına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="5ccf0-107">GridView Column Header Styles and Templates Overview</span></span>](gridview-column-header-styles-and-templates-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a0bc4-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="a0bc4-104">In This Section</span></span>  
+ [<span data-ttu-id="a0bc4-105">ListView Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="a0bc4-105">ListView Overview</span></span>](listview-overview.md)  
+ [<span data-ttu-id="a0bc4-106">GridView Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="a0bc4-106">GridView Overview</span></span>](gridview-overview.md)  
+ [<span data-ttu-id="a0bc4-107">GridView Sütun Üst Bilgi Stil ve Şablonlarına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="a0bc4-107">GridView Column Header Styles and Templates Overview</span></span>](gridview-column-header-styles-and-templates-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="5ccf0-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="5ccf0-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a0bc4-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="a0bc4-108">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   
  <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="5ccf0-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="5ccf0-109">Related Sections</span></span>  
- [<span data-ttu-id="5ccf0-110">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="5ccf0-110">How-to Topics</span></span>](listview-how-to-topics.md)
+## <a name="related-sections"></a><span data-ttu-id="a0bc4-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="a0bc4-109">Related Sections</span></span>  
+ [<span data-ttu-id="a0bc4-110">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="a0bc4-110">How-to Topics</span></span>](listview-how-to-topics.md)

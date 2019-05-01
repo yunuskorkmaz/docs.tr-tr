@@ -7,57 +7,57 @@ helpviewer_keywords:
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
 ms.openlocfilehash: b7bfcb0f2034145822922126fe61efea8d8ef269
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793932"
 ---
-# <a name="-libpath"></a><span data-ttu-id="8ef96-102">-LIBPATH</span><span class="sxs-lookup"><span data-stu-id="8ef96-102">-libpath</span></span>
-<span data-ttu-id="8ef96-103">Başvurulan bütünleştirilmiş kodların konumunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="8ef96-103">Specifies the location of referenced assemblies.</span></span>  
+# <a name="-libpath"></a><span data-ttu-id="9ac25-102">-LIBPATH</span><span class="sxs-lookup"><span data-stu-id="9ac25-102">-libpath</span></span>
+<span data-ttu-id="9ac25-103">Başvurulan bütünleştirilmiş kodların konumunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="9ac25-103">Specifies the location of referenced assemblies.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8ef96-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8ef96-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9ac25-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9ac25-104">Syntax</span></span>  
   
 ```  
 -libpath:dirList  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="8ef96-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="8ef96-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="9ac25-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="9ac25-105">Arguments</span></span>  
   
-|<span data-ttu-id="8ef96-106">Terim</span><span class="sxs-lookup"><span data-stu-id="8ef96-106">Term</span></span>|<span data-ttu-id="8ef96-107">Tanım</span><span class="sxs-lookup"><span data-stu-id="8ef96-107">Definition</span></span>|  
+|<span data-ttu-id="9ac25-106">Terim</span><span class="sxs-lookup"><span data-stu-id="9ac25-106">Term</span></span>|<span data-ttu-id="9ac25-107">Tanım</span><span class="sxs-lookup"><span data-stu-id="9ac25-107">Definition</span></span>|  
 |---|---|  
-|`dirList`|<span data-ttu-id="8ef96-108">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="8ef96-108">Required.</span></span> <span data-ttu-id="8ef96-109">Sahipse başvurulan bir derleme aramak derleyicinin dizinlerin noktalı virgülle ayrılmış listesi bulunamadı veya geçerli çalışma dizinine (içinden, derleyiciyi çağırdığınız dizin) veya ortak dil çalışma zamanının sistem dizini.</span><span class="sxs-lookup"><span data-stu-id="8ef96-109">Semicolon-delimited list of directories for the compiler to look in if a referenced assembly is not found in either the current working directory (the directory from which you are invoking the compiler) or the common language runtime's system directory.</span></span> <span data-ttu-id="8ef96-110">Dizin adı boşluk içeriyorsa adı tırnak içine alın. ("").</span><span class="sxs-lookup"><span data-stu-id="8ef96-110">If the directory name contains a space, enclose the name in quotation marks (" ").</span></span>|  
+|`dirList`|<span data-ttu-id="9ac25-108">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="9ac25-108">Required.</span></span> <span data-ttu-id="9ac25-109">Sahipse başvurulan bir derleme aramak derleyicinin dizinlerin noktalı virgülle ayrılmış listesi bulunamadı veya geçerli çalışma dizinine (içinden, derleyiciyi çağırdığınız dizin) veya ortak dil çalışma zamanının sistem dizini.</span><span class="sxs-lookup"><span data-stu-id="9ac25-109">Semicolon-delimited list of directories for the compiler to look in if a referenced assembly is not found in either the current working directory (the directory from which you are invoking the compiler) or the common language runtime's system directory.</span></span> <span data-ttu-id="9ac25-110">Dizin adı boşluk içeriyorsa adı tırnak içine alın. ("").</span><span class="sxs-lookup"><span data-stu-id="9ac25-110">If the directory name contains a space, enclose the name in quotation marks (" ").</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8ef96-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8ef96-111">Remarks</span></span>  
- <span data-ttu-id="8ef96-112">`-libpath` Seçeneği tarafından başvurulan derlemelerin konumunu belirten [-başvuru](../../../visual-basic/reference/command-line-compiler/reference.md) seçeneği.</span><span class="sxs-lookup"><span data-stu-id="8ef96-112">The `-libpath` option specifies the location of assemblies referenced by the [-reference](../../../visual-basic/reference/command-line-compiler/reference.md) option.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9ac25-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9ac25-111">Remarks</span></span>  
+ <span data-ttu-id="9ac25-112">`-libpath` Seçeneği tarafından başvurulan derlemelerin konumunu belirten [-başvuru](../../../visual-basic/reference/command-line-compiler/reference.md) seçeneği.</span><span class="sxs-lookup"><span data-stu-id="9ac25-112">The `-libpath` option specifies the location of assemblies referenced by the [-reference](../../../visual-basic/reference/command-line-compiler/reference.md) option.</span></span>  
   
- <span data-ttu-id="8ef96-113">Derleyici şu sıralamadaki tam olmayan bütünleştirilmiş kod başvuruları arar:</span><span class="sxs-lookup"><span data-stu-id="8ef96-113">The compiler searches for assembly references that are not fully qualified in the following order:</span></span>  
+ <span data-ttu-id="9ac25-113">Derleyici şu sıralamadaki tam olmayan bütünleştirilmiş kod başvuruları arar:</span><span class="sxs-lookup"><span data-stu-id="9ac25-113">The compiler searches for assembly references that are not fully qualified in the following order:</span></span>  
   
-1. <span data-ttu-id="8ef96-114">Geçerli çalışma dizini.</span><span class="sxs-lookup"><span data-stu-id="8ef96-114">Current working directory.</span></span> <span data-ttu-id="8ef96-115">Bu, derleyicinin çağırıldığı dizinidir.</span><span class="sxs-lookup"><span data-stu-id="8ef96-115">This is the directory from which the compiler is invoked.</span></span>  
+1. <span data-ttu-id="9ac25-114">Geçerli çalışma dizini.</span><span class="sxs-lookup"><span data-stu-id="9ac25-114">Current working directory.</span></span> <span data-ttu-id="9ac25-115">Bu, derleyicinin çağırıldığı dizinidir.</span><span class="sxs-lookup"><span data-stu-id="9ac25-115">This is the directory from which the compiler is invoked.</span></span>  
   
-2. <span data-ttu-id="8ef96-116">Ortak dil çalışma zamanı sistem dizini.</span><span class="sxs-lookup"><span data-stu-id="8ef96-116">The common language runtime system directory.</span></span>  
+2. <span data-ttu-id="9ac25-116">Ortak dil çalışma zamanı sistem dizini.</span><span class="sxs-lookup"><span data-stu-id="9ac25-116">The common language runtime system directory.</span></span>  
   
-3. <span data-ttu-id="8ef96-117">Tarafından belirtilen dizinlerde `/libpath`.</span><span class="sxs-lookup"><span data-stu-id="8ef96-117">Directories specified by `/libpath`.</span></span>  
+3. <span data-ttu-id="9ac25-117">Tarafından belirtilen dizinlerde `/libpath`.</span><span class="sxs-lookup"><span data-stu-id="9ac25-117">Directories specified by `/libpath`.</span></span>  
   
-4. <span data-ttu-id="8ef96-118">LIB ortam değişkeni tarafından belirtilen dizinler.</span><span class="sxs-lookup"><span data-stu-id="8ef96-118">Directories specified by the LIB environment variable.</span></span>  
+4. <span data-ttu-id="9ac25-118">LIB ortam değişkeni tarafından belirtilen dizinler.</span><span class="sxs-lookup"><span data-stu-id="9ac25-118">Directories specified by the LIB environment variable.</span></span>  
   
- <span data-ttu-id="8ef96-119">`-libpath` Eklenebilir; belirtme seçeneği, birden çok kez önceki tüm değerlere ekler.</span><span class="sxs-lookup"><span data-stu-id="8ef96-119">The `-libpath` option is additive; specifying it more than once appends to any prior values.</span></span>  
+ <span data-ttu-id="9ac25-119">`-libpath` Eklenebilir; belirtme seçeneği, birden çok kez önceki tüm değerlere ekler.</span><span class="sxs-lookup"><span data-stu-id="9ac25-119">The `-libpath` option is additive; specifying it more than once appends to any prior values.</span></span>  
   
- <span data-ttu-id="8ef96-120">Kullanım `-reference` bir bütünleştirilmiş kod başvurusu belirtmek için.</span><span class="sxs-lookup"><span data-stu-id="8ef96-120">Use `-reference` to specify an assembly reference.</span></span>  
+ <span data-ttu-id="9ac25-120">Kullanım `-reference` bir bütünleştirilmiş kod başvurusu belirtmek için.</span><span class="sxs-lookup"><span data-stu-id="9ac25-120">Use `-reference` to specify an assembly reference.</span></span>  
   
-|<span data-ttu-id="8ef96-121">/ Libpath Visual Studio'da ayarlamak için tümleşik geliştirme ortamı</span><span class="sxs-lookup"><span data-stu-id="8ef96-121">To set /libpath in the Visual Studio integrated development environment</span></span>|  
+|<span data-ttu-id="9ac25-121">/ Libpath Visual Studio'da ayarlamak için tümleşik geliştirme ortamı</span><span class="sxs-lookup"><span data-stu-id="9ac25-121">To set /libpath in the Visual Studio integrated development environment</span></span>|  
 |---|  
-|<span data-ttu-id="8ef96-122">1.  Seçili bir projeyi **Çözüm Gezgini**.</span><span class="sxs-lookup"><span data-stu-id="8ef96-122">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="8ef96-123">Üzerinde **proje** menüsünü tıklatın **özellikleri**.</span><span class="sxs-lookup"><span data-stu-id="8ef96-123">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="8ef96-124">2.  Tıklayın **başvuruları** sekmesi.</span><span class="sxs-lookup"><span data-stu-id="8ef96-124">2.  Click the **References** tab.</span></span><br /><span data-ttu-id="8ef96-125">3.  Tıklayın **başvuru yolları...**  düğmesi.</span><span class="sxs-lookup"><span data-stu-id="8ef96-125">3.  Click the **Reference Paths...** button.</span></span><br /><span data-ttu-id="8ef96-126">4.  İçinde **başvuru yolları** iletişim kutusunda, dizin adı girin **klasör:** kutusu.</span><span class="sxs-lookup"><span data-stu-id="8ef96-126">4.  In the **Reference Paths** dialog box, enter the directory name in the **Folder:** box.</span></span><br /><span data-ttu-id="8ef96-127">5.  Tıklayın **klasörü Ekle**.</span><span class="sxs-lookup"><span data-stu-id="8ef96-127">5.  Click **Add Folder**.</span></span>|  
+|<span data-ttu-id="9ac25-122">1.  Seçili bir projeyi **Çözüm Gezgini**.</span><span class="sxs-lookup"><span data-stu-id="9ac25-122">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="9ac25-123">Üzerinde **proje** menüsünü tıklatın **özellikleri**.</span><span class="sxs-lookup"><span data-stu-id="9ac25-123">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="9ac25-124">2.  Tıklayın **başvuruları** sekmesi.</span><span class="sxs-lookup"><span data-stu-id="9ac25-124">2.  Click the **References** tab.</span></span><br /><span data-ttu-id="9ac25-125">3.  Tıklayın **başvuru yolları...**  düğmesi.</span><span class="sxs-lookup"><span data-stu-id="9ac25-125">3.  Click the **Reference Paths...** button.</span></span><br /><span data-ttu-id="9ac25-126">4.  İçinde **başvuru yolları** iletişim kutusunda, dizin adı girin **klasör:** kutusu.</span><span class="sxs-lookup"><span data-stu-id="9ac25-126">4.  In the **Reference Paths** dialog box, enter the directory name in the **Folder:** box.</span></span><br /><span data-ttu-id="9ac25-127">5.  Tıklayın **klasörü Ekle**.</span><span class="sxs-lookup"><span data-stu-id="9ac25-127">5.  Click **Add Folder**.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="8ef96-128">Örnek</span><span class="sxs-lookup"><span data-stu-id="8ef96-128">Example</span></span>  
- <span data-ttu-id="8ef96-129">Aşağıdaki kod derlenir `T2.vb` bir .exe dosyası oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="8ef96-129">The following code compiles `T2.vb` to create an .exe file.</span></span> <span data-ttu-id="8ef96-130">Derleyici, derleme başvuruları için çalışma dizininde, C: sürücüsünün kök dizinindeki ve C: sürücüsünde yeni derlemeler dizininde arar.</span><span class="sxs-lookup"><span data-stu-id="8ef96-130">The compiler looks in the working directory, in the root directory of the C: drive, and in the New Assemblies directory of the C: drive for assembly references.</span></span>  
+## <a name="example"></a><span data-ttu-id="9ac25-128">Örnek</span><span class="sxs-lookup"><span data-stu-id="9ac25-128">Example</span></span>  
+ <span data-ttu-id="9ac25-129">Aşağıdaki kod derlenir `T2.vb` bir .exe dosyası oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="9ac25-129">The following code compiles `T2.vb` to create an .exe file.</span></span> <span data-ttu-id="9ac25-130">Derleyici, derleme başvuruları için çalışma dizininde, C: sürücüsünün kök dizinindeki ve C: sürücüsünde yeni derlemeler dizininde arar.</span><span class="sxs-lookup"><span data-stu-id="9ac25-130">The compiler looks in the working directory, in the root directory of the C: drive, and in the New Assemblies directory of the C: drive for assembly references.</span></span>  
   
 ```console  
 vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8ef96-131">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8ef96-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9ac25-131">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9ac25-131">See also</span></span>
 
-- [<span data-ttu-id="8ef96-132">.NET’te bütünleştirilmiş kodlar</span><span class="sxs-lookup"><span data-stu-id="8ef96-132">Assemblies in .NET</span></span>](../../../standard/assembly/index.md)
-- [<span data-ttu-id="8ef96-133">Visual Basic komut satırı derleyicisi</span><span class="sxs-lookup"><span data-stu-id="8ef96-133">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="8ef96-134">Örnek Derleme Komut Satırları</span><span class="sxs-lookup"><span data-stu-id="8ef96-134">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="9ac25-132">.NET’te bütünleştirilmiş kodlar</span><span class="sxs-lookup"><span data-stu-id="9ac25-132">Assemblies in .NET</span></span>](../../../standard/assembly/index.md)
+- [<span data-ttu-id="9ac25-133">Visual Basic komut satırı derleyicisi</span><span class="sxs-lookup"><span data-stu-id="9ac25-133">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="9ac25-134">Örnek Derleme Komut Satırları</span><span class="sxs-lookup"><span data-stu-id="9ac25-134">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

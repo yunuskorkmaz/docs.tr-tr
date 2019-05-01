@@ -3,23 +3,23 @@ title: Dilim (F#)
 description: Varolan dilimleri kullanma hakkında bilgi edinin F# veri türleri ve diğer veri türleri için kendi dilim tanımlama.
 ms.date: 01/22/2019
 ms.openlocfilehash: 1d8bb029ad18c8853ab58888959967ed279fb368
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926011"
 ---
-# <a name="slices"></a><span data-ttu-id="4ddff-103">Dilimler</span><span class="sxs-lookup"><span data-stu-id="4ddff-103">Slices</span></span>
+# <a name="slices"></a><span data-ttu-id="b9502-103">Dilimler</span><span class="sxs-lookup"><span data-stu-id="b9502-103">Slices</span></span>
 
-<span data-ttu-id="4ddff-104">İçinde F#, bir dilim bir veri türü bir alt kümesidir.</span><span class="sxs-lookup"><span data-stu-id="4ddff-104">In F#, a slice is a subset of a data type.</span></span> <span data-ttu-id="4ddff-105">Bir veri türünden bir dilim yararlanabilmeniz için veri türü ya da tanımlamanız gerekir bir `GetSlice` yöntemi veya bir [türü uzantısı](type-extensions.md) diğer bir deyişle kapsamda.</span><span class="sxs-lookup"><span data-stu-id="4ddff-105">To be able to take a slice from a data type, the data type must either define a `GetSlice` method or in a [type extension](type-extensions.md) that is in scope.</span></span> <span data-ttu-id="4ddff-106">Bu makalede, mevcut dilimleri gerçekleştirilecek açıklanmaktadır F# türlerini ve nasıl kendi ölçümünüzü tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="4ddff-106">This article explains how to take slices from existing F# types and how to define your own.</span></span>
+<span data-ttu-id="b9502-104">İçinde F#, bir dilim bir veri türü bir alt kümesidir.</span><span class="sxs-lookup"><span data-stu-id="b9502-104">In F#, a slice is a subset of a data type.</span></span> <span data-ttu-id="b9502-105">Bir veri türünden bir dilim yararlanabilmeniz için veri türü ya da tanımlamanız gerekir bir `GetSlice` yöntemi veya bir [türü uzantısı](type-extensions.md) diğer bir deyişle kapsamda.</span><span class="sxs-lookup"><span data-stu-id="b9502-105">To be able to take a slice from a data type, the data type must either define a `GetSlice` method or in a [type extension](type-extensions.md) that is in scope.</span></span> <span data-ttu-id="b9502-106">Bu makalede, mevcut dilimleri gerçekleştirilecek açıklanmaktadır F# türlerini ve nasıl kendi ölçümünüzü tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="b9502-106">This article explains how to take slices from existing F# types and how to define your own.</span></span>
 
-<span data-ttu-id="4ddff-107">Dilimler benzer [dizin oluşturucular](members/indexed-properties.md), ancak temel alınan veri yapısından tek bir değer sonuçlanmıyor yerine, bunlar birden fazla yield.</span><span class="sxs-lookup"><span data-stu-id="4ddff-107">Slices are similar to [indexers](members/indexed-properties.md), but instead of yielding a single value from the underlying data structure, they yield multiple ones.</span></span>
+<span data-ttu-id="b9502-107">Dilimler benzer [dizin oluşturucular](members/indexed-properties.md), ancak temel alınan veri yapısından tek bir değer sonuçlanmıyor yerine, bunlar birden fazla yield.</span><span class="sxs-lookup"><span data-stu-id="b9502-107">Slices are similar to [indexers](members/indexed-properties.md), but instead of yielding a single value from the underlying data structure, they yield multiple ones.</span></span>
 
-<span data-ttu-id="4ddff-108">F#şu anda dizeleri, listeler, diziler ve 2B bir dizi dilimleme iç desteği yok.</span><span class="sxs-lookup"><span data-stu-id="4ddff-108">F# currently has intrinsic support for slicing strings, lists, arrays, and 2D arrays.</span></span>
+<span data-ttu-id="b9502-108">F#şu anda dizeleri, listeler, diziler ve 2B bir dizi dilimleme iç desteği yok.</span><span class="sxs-lookup"><span data-stu-id="b9502-108">F# currently has intrinsic support for slicing strings, lists, arrays, and 2D arrays.</span></span>
 
-## <a name="basic-slicing-with-f-lists-and-arrays"></a><span data-ttu-id="4ddff-109">İle temel dilimleme F# listeler ve diziler</span><span class="sxs-lookup"><span data-stu-id="4ddff-109">Basic slicing with F# lists and arrays</span></span>
+## <a name="basic-slicing-with-f-lists-and-arrays"></a><span data-ttu-id="b9502-109">İle temel dilimleme F# listeler ve diziler</span><span class="sxs-lookup"><span data-stu-id="b9502-109">Basic slicing with F# lists and arrays</span></span>
 
-<span data-ttu-id="4ddff-110">Dilimlenmiş en yaygın veri türleridir F# listeler ve diziler.</span><span class="sxs-lookup"><span data-stu-id="4ddff-110">The most common data types that are sliced are F# lists and arrays.</span></span> <span data-ttu-id="4ddff-111">Aşağıdaki örnek, bu listeleri ile bunu nasıl yapacağınızı gösterir:</span><span class="sxs-lookup"><span data-stu-id="4ddff-111">The following example demonstrates how to do this with lists:</span></span>
+<span data-ttu-id="b9502-110">Dilimlenmiş en yaygın veri türleridir F# listeler ve diziler.</span><span class="sxs-lookup"><span data-stu-id="b9502-110">The most common data types that are sliced are F# lists and arrays.</span></span> <span data-ttu-id="b9502-111">Aşağıdaki örnek, bu listeleri ile bunu nasıl yapacağınızı gösterir:</span><span class="sxs-lookup"><span data-stu-id="b9502-111">The following example demonstrates how to do this with lists:</span></span>
 
 ```fsharp
 // Generate a list of 100 integers
@@ -38,7 +38,7 @@ let unboundedEnd = fullList.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-<span data-ttu-id="4ddff-112">Dizi dilimleme listeleri yalnızca dilimleme gibi verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="4ddff-112">Slicing arrays is just like slicing lists:</span></span>
+<span data-ttu-id="b9502-112">Dizi dilimleme listeleri yalnızca dilimleme gibi verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="b9502-112">Slicing arrays is just like slicing lists:</span></span>
 
 ```fsharp
 // Generate an array of 100 integers
@@ -57,11 +57,11 @@ let unboundedEnd = fullArray.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-## <a name="slicing-multidimensional-arrays"></a><span data-ttu-id="4ddff-113">Dilimleme çok boyutlu diziler</span><span class="sxs-lookup"><span data-stu-id="4ddff-113">Slicing multidimensional arrays</span></span>
+## <a name="slicing-multidimensional-arrays"></a><span data-ttu-id="b9502-113">Dilimleme çok boyutlu diziler</span><span class="sxs-lookup"><span data-stu-id="b9502-113">Slicing multidimensional arrays</span></span>
 
-<span data-ttu-id="4ddff-114">F#çok boyutlu dizilerde destekler F# çekirdek kitaplığı.</span><span class="sxs-lookup"><span data-stu-id="4ddff-114">F# supports multidimensional arrays in the F# core library.</span></span> <span data-ttu-id="4ddff-115">Tek boyutlu dizilerle gibi çok boyutlu diziler dilimleri da yararlı olabilir.</span><span class="sxs-lookup"><span data-stu-id="4ddff-115">As with one-dimensional arrays, slices of multidimensional arrays can also be useful.</span></span> <span data-ttu-id="4ddff-116">Ancak, belirli satırları ve sütunları dilimleri yararlanabilmeniz ek boyutlar sunulmasıyla biraz farklı bir sözdizimi zorunlu kılar.</span><span class="sxs-lookup"><span data-stu-id="4ddff-116">However, the introduction of additional dimensions mandates a slightly different syntax so that you can take slices of specific rows and columns.</span></span>
+<span data-ttu-id="b9502-114">F#çok boyutlu dizilerde destekler F# çekirdek kitaplığı.</span><span class="sxs-lookup"><span data-stu-id="b9502-114">F# supports multidimensional arrays in the F# core library.</span></span> <span data-ttu-id="b9502-115">Tek boyutlu dizilerle gibi çok boyutlu diziler dilimleri da yararlı olabilir.</span><span class="sxs-lookup"><span data-stu-id="b9502-115">As with one-dimensional arrays, slices of multidimensional arrays can also be useful.</span></span> <span data-ttu-id="b9502-116">Ancak, belirli satırları ve sütunları dilimleri yararlanabilmeniz ek boyutlar sunulmasıyla biraz farklı bir sözdizimi zorunlu kılar.</span><span class="sxs-lookup"><span data-stu-id="b9502-116">However, the introduction of additional dimensions mandates a slightly different syntax so that you can take slices of specific rows and columns.</span></span>
 
-<span data-ttu-id="4ddff-117">Aşağıdaki örnekler, 2B bir dizi dilimleme göstermektedir:</span><span class="sxs-lookup"><span data-stu-id="4ddff-117">The following examples demonstrate how to slice a 2D array:</span></span>
+<span data-ttu-id="b9502-117">Aşağıdaki örnekler, 2B bir dizi dilimleme göstermektedir:</span><span class="sxs-lookup"><span data-stu-id="b9502-117">The following examples demonstrate how to slice a 2D array:</span></span>
 
 ```fsharp
 // Generate a 3x3 2D matrix
@@ -89,13 +89,13 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-<span data-ttu-id="4ddff-118">F# Çekirdek kitaplığı tanımlamıyor `GetSlice`3B diziler için.</span><span class="sxs-lookup"><span data-stu-id="4ddff-118">The F# core library does not define `GetSlice`for 3D arrays.</span></span> <span data-ttu-id="4ddff-119">Bu veya daha fazla boyutlarının diğer diziler dilim istiyorsanız tanımlamalıdır `GetSlice` üye kendiniz.</span><span class="sxs-lookup"><span data-stu-id="4ddff-119">If you wish to slice those or other arrays of more dimensions, you must define the `GetSlice` member yourself.</span></span>
+<span data-ttu-id="b9502-118">F# Çekirdek kitaplığı tanımlamıyor `GetSlice`3B diziler için.</span><span class="sxs-lookup"><span data-stu-id="b9502-118">The F# core library does not define `GetSlice`for 3D arrays.</span></span> <span data-ttu-id="b9502-119">Bu veya daha fazla boyutlarının diğer diziler dilim istiyorsanız tanımlamalıdır `GetSlice` üye kendiniz.</span><span class="sxs-lookup"><span data-stu-id="b9502-119">If you wish to slice those or other arrays of more dimensions, you must define the `GetSlice` member yourself.</span></span>
 
-## <a name="defining-slices-for-other-data-structures"></a><span data-ttu-id="4ddff-120">Diğer veri yapılarını dilimleri tanımlama</span><span class="sxs-lookup"><span data-stu-id="4ddff-120">Defining slices for other data structures</span></span>
+## <a name="defining-slices-for-other-data-structures"></a><span data-ttu-id="b9502-120">Diğer veri yapılarını dilimleri tanımlama</span><span class="sxs-lookup"><span data-stu-id="b9502-120">Defining slices for other data structures</span></span>
 
-<span data-ttu-id="4ddff-121">F# Çekirdek kitaplığı dilimler sınırlı sayıda türleri için tanımlar.</span><span class="sxs-lookup"><span data-stu-id="4ddff-121">The F# core library defines slices for a limited set of types.</span></span> <span data-ttu-id="4ddff-122">Daha fazla veri türleri için dilim tanımlamak istiyorsanız, tür tanımını kendisi veya bir tür uzantısında bunu yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="4ddff-122">If you wish to define slices for more data types, you can do so either in the type definition itself or in a type extension.</span></span>
+<span data-ttu-id="b9502-121">F# Çekirdek kitaplığı dilimler sınırlı sayıda türleri için tanımlar.</span><span class="sxs-lookup"><span data-stu-id="b9502-121">The F# core library defines slices for a limited set of types.</span></span> <span data-ttu-id="b9502-122">Daha fazla veri türleri için dilim tanımlamak istiyorsanız, tür tanımını kendisi veya bir tür uzantısında bunu yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b9502-122">If you wish to define slices for more data types, you can do so either in the type definition itself or in a type extension.</span></span>
 
-<span data-ttu-id="4ddff-123">Örneğin, işte dilimleri nasıl tanımlayabilir <xref:System.ArraySegment%601> sınıfı için uygun veri işlemesine izin vermek için:</span><span class="sxs-lookup"><span data-stu-id="4ddff-123">For example, here's how you might define slices for the <xref:System.ArraySegment%601> class to allow for convenient data manipulation:</span></span>
+<span data-ttu-id="b9502-123">Örneğin, işte dilimleri nasıl tanımlayabilir <xref:System.ArraySegment%601> sınıfı için uygun veri işlemesine izin vermek için:</span><span class="sxs-lookup"><span data-stu-id="b9502-123">For example, here's how you might define slices for the <xref:System.ArraySegment%601> class to allow for convenient data manipulation:</span></span>
 
 ```fsharp
 open System
@@ -110,9 +110,9 @@ let arr = ArraySegment [| 1 .. 10 |]
 let slice = arr.[2..5] //[ 3; 4; 5]
 ```
 
-### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a><span data-ttu-id="4ddff-124">Satır içi kullanım gerekli değilse, kutulama önlemek için kullanın</span><span class="sxs-lookup"><span data-stu-id="4ddff-124">Use inlining to avoid boxing if it is necessary</span></span>
+### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a><span data-ttu-id="b9502-124">Satır içi kullanım gerekli değilse, kutulama önlemek için kullanın</span><span class="sxs-lookup"><span data-stu-id="b9502-124">Use inlining to avoid boxing if it is necessary</span></span>
 
-<span data-ttu-id="4ddff-125">Aslında bir yapı türü dilimleri tanımlıyorsanız, öneririz, `inline` `GetSlice` üyesi.</span><span class="sxs-lookup"><span data-stu-id="4ddff-125">If you are defining slices for a type that is actually a struct, we recommend that you `inline` the `GetSlice` member.</span></span> <span data-ttu-id="4ddff-126">F# Derleyici dilimleme sonucunda herhangi bir yığın ayırma önleme isteğe bağlı bağımsız değişkenler yerine iyileştirir.</span><span class="sxs-lookup"><span data-stu-id="4ddff-126">The F# compiler optimizes away the optional arguments, avoiding any heap allocations as a result of slicing.</span></span> <span data-ttu-id="4ddff-127">Bu yapılar gibi dilimleme için kritik öneme <xref:System.Span%601> yığınında ayrılamaz.</span><span class="sxs-lookup"><span data-stu-id="4ddff-127">This is critically important for slicing constructs such as <xref:System.Span%601> that cannot be allocated on the heap.</span></span>
+<span data-ttu-id="b9502-125">Aslında bir yapı türü dilimleri tanımlıyorsanız, öneririz, `inline` `GetSlice` üyesi.</span><span class="sxs-lookup"><span data-stu-id="b9502-125">If you are defining slices for a type that is actually a struct, we recommend that you `inline` the `GetSlice` member.</span></span> <span data-ttu-id="b9502-126">F# Derleyici dilimleme sonucunda herhangi bir yığın ayırma önleme isteğe bağlı bağımsız değişkenler yerine iyileştirir.</span><span class="sxs-lookup"><span data-stu-id="b9502-126">The F# compiler optimizes away the optional arguments, avoiding any heap allocations as a result of slicing.</span></span> <span data-ttu-id="b9502-127">Bu yapılar gibi dilimleme için kritik öneme <xref:System.Span%601> yığınında ayrılamaz.</span><span class="sxs-lookup"><span data-stu-id="b9502-127">This is critically important for slicing constructs such as <xref:System.Span%601> that cannot be allocated on the heap.</span></span>
 
 ```fsharp
 open System
@@ -135,6 +135,6 @@ printSpan sp.[0..3] // [|1; 2; 3|]
 printSpan sp.[1..2] // |2; 3|]
 ```
 
-## <a name="see-also"></a><span data-ttu-id="4ddff-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4ddff-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b9502-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b9502-128">See also</span></span>
 
-- [<span data-ttu-id="4ddff-129">Dizini oluşturulan özellikler</span><span class="sxs-lookup"><span data-stu-id="4ddff-129">Indexed properties</span></span>](members/indexed-properties.md)
+- [<span data-ttu-id="b9502-129">Dizini oluşturulan özellikler</span><span class="sxs-lookup"><span data-stu-id="b9502-129">Indexed properties</span></span>](members/indexed-properties.md)

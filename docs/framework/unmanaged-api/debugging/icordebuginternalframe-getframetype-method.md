@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a0b6f0550bad534379b562c3df9da9ab917f5270
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946360"
 ---
-# <a name="icordebuginternalframegetframetype-method"></a><span data-ttu-id="dae58-102">ICorDebugInternalFrame::GetFrameType Yöntemi</span><span class="sxs-lookup"><span data-stu-id="dae58-102">ICorDebugInternalFrame::GetFrameType Method</span></span>
-<span data-ttu-id="dae58-103">Bu iç çerçeve türünü alır.</span><span class="sxs-lookup"><span data-stu-id="dae58-103">Gets the type of this internal frame.</span></span>  
+# <a name="icordebuginternalframegetframetype-method"></a><span data-ttu-id="c6d76-102">ICorDebugInternalFrame::GetFrameType Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c6d76-102">ICorDebugInternalFrame::GetFrameType Method</span></span>
+<span data-ttu-id="c6d76-103">Bu iç çerçeve türünü alır.</span><span class="sxs-lookup"><span data-stu-id="c6d76-103">Gets the type of this internal frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dae58-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="dae58-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c6d76-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c6d76-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFrameType (  
@@ -35,18 +35,18 @@ HRESULT GetFrameType (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="dae58-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="dae58-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c6d76-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c6d76-105">Parameters</span></span>  
  `pType`  
- <span data-ttu-id="dae58-106">[out] Bu tarafından temsil edilen iç çerçeve türünü belirten Cordebugınternalframetype sabit bir değere bir işaretçi `ICorDebugInternalFrame` nesne.</span><span class="sxs-lookup"><span data-stu-id="dae58-106">[out] A pointer to a value of the CorDebugInternalFrameType enumeration that indicates the type of internal frame represented by this `ICorDebugInternalFrame` object.</span></span>  
+ <span data-ttu-id="c6d76-106">[out] Bu tarafından temsil edilen iç çerçeve türünü belirten Cordebugınternalframetype sabit bir değere bir işaretçi `ICorDebugInternalFrame` nesne.</span><span class="sxs-lookup"><span data-stu-id="c6d76-106">[out] A pointer to a value of the CorDebugInternalFrameType enumeration that indicates the type of internal frame represented by this `ICorDebugInternalFrame` object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="dae58-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="dae58-107">Remarks</span></span>  
- <span data-ttu-id="dae58-108">İç çerçeve türü hiçbir zaman STUBFRAME_NONE olmaz.</span><span class="sxs-lookup"><span data-stu-id="dae58-108">The internal frame type will never be STUBFRAME_NONE.</span></span> <span data-ttu-id="dae58-109">Düzgün bir şekilde hata ayıklayıcıları tanınmayan iç çerçeve türleri yok saymanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="dae58-109">Debuggers should gracefully ignore unrecognized internal frame types.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c6d76-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c6d76-107">Remarks</span></span>  
+ <span data-ttu-id="c6d76-108">İç çerçeve türü hiçbir zaman STUBFRAME_NONE olmaz.</span><span class="sxs-lookup"><span data-stu-id="c6d76-108">The internal frame type will never be STUBFRAME_NONE.</span></span> <span data-ttu-id="c6d76-109">Düzgün bir şekilde hata ayıklayıcıları tanınmayan iç çerçeve türleri yok saymanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="c6d76-109">Debuggers should gracefully ignore unrecognized internal frame types.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dae58-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="dae58-110">Requirements</span></span>  
- <span data-ttu-id="dae58-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dae58-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c6d76-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c6d76-110">Requirements</span></span>  
+ <span data-ttu-id="c6d76-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c6d76-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dae58-112">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dae58-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c6d76-112">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c6d76-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="dae58-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dae58-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c6d76-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c6d76-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="dae58-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dae58-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="c6d76-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6d76-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

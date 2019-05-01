@@ -18,18 +18,18 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7d50f7488c2b231ea66c12cc4903469d9e2337fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905651"
 ---
-# <a name="iceegenaddsectionreloc-method"></a><span data-ttu-id="b84cc-102">ICeeGen::AddSectionReloc Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b84cc-102">ICeeGen::AddSectionReloc Method</span></span>
-<span data-ttu-id="b84cc-103">Kod tabanına .reloc yönergesi ekler.</span><span class="sxs-lookup"><span data-stu-id="b84cc-103">Adds a .reloc instruction to the code base.</span></span>  
+# <a name="iceegenaddsectionreloc-method"></a><span data-ttu-id="6ac24-102">ICeeGen::AddSectionReloc Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6ac24-102">ICeeGen::AddSectionReloc Method</span></span>
+<span data-ttu-id="6ac24-103">Kod tabanına .reloc yönergesi ekler.</span><span class="sxs-lookup"><span data-stu-id="6ac24-103">Adds a .reloc instruction to the code base.</span></span>  
   
- <span data-ttu-id="b84cc-104">Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="b84cc-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="6ac24-104">Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="6ac24-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b84cc-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b84cc-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6ac24-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6ac24-105">Syntax</span></span>  
   
 ```  
 HRESULT AddSectionReloc (  
@@ -40,28 +40,28 @@ HRESULT AddSectionReloc (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b84cc-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b84cc-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6ac24-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6ac24-106">Parameters</span></span>  
  `section`  
- <span data-ttu-id="b84cc-107">[in] Bellek içi kod .reloc yönerge eklenecek bölümünün.</span><span class="sxs-lookup"><span data-stu-id="b84cc-107">[in] The section of in-memory code to which to add a .reloc instruction.</span></span>  
+ <span data-ttu-id="6ac24-107">[in] Bellek içi kod .reloc yönerge eklenecek bölümünün.</span><span class="sxs-lookup"><span data-stu-id="6ac24-107">[in] The section of in-memory code to which to add a .reloc instruction.</span></span>  
   
  `offset`  
- <span data-ttu-id="b84cc-108">[in] Bölümün uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="b84cc-108">[in] The offset of the section.</span></span>  
+ <span data-ttu-id="6ac24-108">[in] Bölümün uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="6ac24-108">[in] The offset of the section.</span></span>  
   
  `relativeTo`  
- <span data-ttu-id="b84cc-109">[in] Bölümüne `offset` ifade eder.</span><span class="sxs-lookup"><span data-stu-id="b84cc-109">[in] The section to which `offset` refers.</span></span>  
+ <span data-ttu-id="6ac24-109">[in] Bölümüne `offset` ifade eder.</span><span class="sxs-lookup"><span data-stu-id="6ac24-109">[in] The section to which `offset` refers.</span></span>  
   
  `relocType`  
- <span data-ttu-id="b84cc-110">[in] Aşağıdakilerden birini [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) eklemek için .reloc yönerge türünü belirten değer.</span><span class="sxs-lookup"><span data-stu-id="b84cc-110">[in] One of the [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) values, indicating the kind of .reloc instruction to add.</span></span>  
+ <span data-ttu-id="6ac24-110">[in] Aşağıdakilerden birini [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) eklemek için .reloc yönerge türünü belirten değer.</span><span class="sxs-lookup"><span data-stu-id="6ac24-110">[in] One of the [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) values, indicating the kind of .reloc instruction to add.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b84cc-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b84cc-111">Requirements</span></span>  
- <span data-ttu-id="b84cc-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b84cc-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6ac24-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6ac24-111">Requirements</span></span>  
+ <span data-ttu-id="6ac24-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6ac24-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b84cc-113">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="b84cc-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6ac24-113">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="6ac24-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b84cc-114">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="b84cc-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="6ac24-114">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="6ac24-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b84cc-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b84cc-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6ac24-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6ac24-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b84cc-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b84cc-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6ac24-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6ac24-116">See also</span></span>
 
-- [<span data-ttu-id="b84cc-117">ICeeGen Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b84cc-117">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="6ac24-117">ICeeGen Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6ac24-117">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

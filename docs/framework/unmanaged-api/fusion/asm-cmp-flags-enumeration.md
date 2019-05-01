@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9a37355365f337527bbc9254cae6e6f3d3f2f604
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914764"
 ---
-# <a name="asmcmpflags-enumeration"></a><span data-ttu-id="cb4b2-102">ASM_CMP_FLAGS Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="cb4b2-102">ASM_CMP_FLAGS Enumeration</span></span>
-<span data-ttu-id="cb4b2-103">Sürüm, yapı, kültür, imza ve tarafından Karşılaştırılacak iki derlemelerin benzeri belirten [Iassemblyname::ısequal](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="cb4b2-103">Indicates the version, build, culture, signature, and so on, of two assemblies to be compared by the [IAssemblyName::IsEqual](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) method.</span></span>  
+# <a name="asmcmpflags-enumeration"></a><span data-ttu-id="f9e10-102">ASM_CMP_FLAGS Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="f9e10-102">ASM_CMP_FLAGS Enumeration</span></span>
+<span data-ttu-id="f9e10-103">Sürüm, yapı, kültür, imza ve tarafından Karşılaştırılacak iki derlemelerin benzeri belirten [Iassemblyname::ısequal](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="f9e10-103">Indicates the version, build, culture, signature, and so on, of two assemblies to be compared by the [IAssemblyName::IsEqual](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb4b2-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cb4b2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f9e10-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f9e10-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -67,16 +67,16 @@ typedef enum {
 } ASM_CMP_FLAGS;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="cb4b2-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cb4b2-105">Requirements</span></span>  
- <span data-ttu-id="cb4b2-106">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cb4b2-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f9e10-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f9e10-105">Requirements</span></span>  
+ <span data-ttu-id="f9e10-106">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f9e10-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cb4b2-107">**Üst bilgi:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="cb4b2-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="f9e10-107">**Üst bilgi:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="f9e10-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="cb4b2-108">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="cb4b2-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f9e10-108">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="f9e10-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="cb4b2-109">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb4b2-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f9e10-109">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9e10-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb4b2-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cb4b2-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f9e10-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f9e10-110">See also</span></span>
 
-- [<span data-ttu-id="cb4b2-111">IAssemblyName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cb4b2-111">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [<span data-ttu-id="cb4b2-112">Fusion Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="cb4b2-112">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [<span data-ttu-id="f9e10-111">IAssemblyName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f9e10-111">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="f9e10-112">Fusion Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="f9e10-112">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
