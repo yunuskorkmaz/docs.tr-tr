@@ -3,12 +3,12 @@ title: Güvenli ve verimli yazma C# kod
 description: Son geliştirmeler C# dil performansını daha önce güvenli olmayan kod ile ilişkili doğrulanabilir bir güvenli kod yazmak etkinleştirin.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: d363e357d3749bb2014456c0064c4de7dd7f1acb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 259ce0b9405dfd74adf51a9cc046ffe3f08d242f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706045"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753893"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Güvenli ve verimli yazma C# kod
 
@@ -180,6 +180,8 @@ Bunun yerine, uzaklık hesaplama sabit yapısı kullanıyorsa `ReadonlyPoint3D`,
 [!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
 Üyeleri çağırdığınızda derleyici daha verimli kod oluşturur bir `readonly struct`: `this` Başvuru, alıcı bir kopyasını yerine, her zaman bir `in` parametresine geçirilen başvuruyla üye yöntemi. Bu iyileştirme kaydeder kullandığınızda kopyalama bir `readonly struct` olarak bir `in` bağımsız değişken.
+
+Boş değer atanabilir değer türü olarak geçirmeniz değil bir `in` bağımsız değişken. <xref:System.Nullable%601> Türü salt okunur yapı bildirilmedi. Anlamına gelir derleyici herhangi bir boş değer atanabilen değer türü bağımsız değişken için savunma kopya oluşturması gerektiğini kullanarak bir yönteme geçirilen `in` parametreyi bildirimde değiştiricisi.
 
 Kullanarak performans farklarını gösteren bir örnek program gördüğünüz [Benchmark.net](https://www.nuget.org/packages/BenchmarkDotNet/) de bizim [örnekleri depomuzdan](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) GitHub üzerinde. Değere ve başvuruya göre değişmez bir yapı geçirme ile değere ve başvuruya göre değişebilir yapı geçirme ile karşılaştırır. Hızlı Başvuru ile geçişi ve sabit yapı kullanılır.
 

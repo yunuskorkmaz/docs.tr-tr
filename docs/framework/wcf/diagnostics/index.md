@@ -9,12 +9,12 @@ helpviewer_keywords:
 - administration [WCF]
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
-ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5df95c6b5f91cd4f36bd03c1bd291f7a44025ee9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797533"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600082"
 ---
 # <a name="administration-and-diagnostics"></a>Yönetim ve Tanılama
 Windows Communication Foundation (WCF) zengin bir uygulamanın ömrü farklı aşamalarında izlemenize yardımcı olacak işlevler sunar. Örneğin, yapılandırma, hizmetler ve istemcileri dağıtımı ayarlamak için kullanabilirsiniz. WCF performans sayaçları, uygulamanızın performansını ölçmek amacıyla büyük bir kümesini içerir. WCF ayrıca İnceleme veri hizmetinin çalışma zamanında WCF Windows Yönetim Araçları (WMI) sağlayıcısı üzerinden kullanıma sunar. Uygulama bir hatayla karşılaştığında veya hatalı davranan başlatır, önemli şey gerçekleşip gerçekleşmediğini görmek için olay günlüğünü kullanabilirsiniz. İleti günlüğe kaydetme ve izleme gerçekleşmesini için uçtan uca, uygulamanızda hangi olayların olduğunu görmek için kullanabilirsiniz. Bu özellikler, geliştiricilerin ve BT uzmanlarının düzgün çalışmıyorsa, bir WCF uygulamada sorun gidermek için yardımcı olur.  

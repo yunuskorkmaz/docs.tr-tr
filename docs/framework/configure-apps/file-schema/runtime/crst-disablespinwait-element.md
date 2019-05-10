@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cde26250db0b3d11c51a18b7ebd378953ae0958
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f89f0558c11e229fef2ca3cd619e3c033f12c858
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704836"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754667"
 ---
 # <a name="crstdisablespinwait-element"></a>\<Crst_DisableSpinWait > öğesi
 
-Döndürme-waıtıng contended olduğunda önemli bir bölümü için devre dışı bırakılıp bırakılmayacağını belirtir. \ 
+Döndürme-waıtıng contended olduğunda önemli bir bölümü için devre dışı bırakılıp bırakılmayacağını belirtir.  
   
  \<Yapılandırma >  
 \<çalışma zamanı >  
@@ -36,14 +36,14 @@ Döndürme-waıtıng contended olduğunda önemli bir bölümü için devre dı�
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**Etkin**|Bunlar contended olduğunda döndürme-waıtıng kritik bölümler için etkinleştirilip etkinleştirilmeyeceğini belirtir.|  
+|**Etkin**|Döndürme-contended kritik bölümlere bekleniyor devre dışı bırakılıp bırakılmadığını belirtir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|1.|Döndürme bekleme etkinleştirilir.|  
-|0|Döndürme bekleyen devre dışı bırakıldı. Varsayılan değer budur.|  
+|1.|Kritik bir bölüm alınamıyor, döndürme bekleyen devre dışı bırakın.|  
+|0|Kritik bir bölüm alınamıyor, döndürme bekleyen devre dışı bırakmayın. Varsayılan değer budur.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  

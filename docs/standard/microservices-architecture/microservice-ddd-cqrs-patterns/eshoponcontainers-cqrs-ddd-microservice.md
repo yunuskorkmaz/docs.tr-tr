@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fc8c27c25fb6d07207586eb65d5ac9cc543bcc1a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6e39b0ce48e7caf755054eb558ab0c99b0ec76e8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61818007"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755077"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Bir DDD mikro hizmetine CQRS ve CQS yaklaşımları uygulama
 
@@ -19,7 +19,7 @@ Bu desen ve burada önemli olan nokta, sorguları eşgüçlüdür olduğu: bir s
 
 Bu nedenle, etki alanı modeli işlem mantığı "Yazar daha" sıralama mikro hizmetler aynı veritabanı kullanıyor olsa bile farklı "Okuma" veri modelini kullanabilirsiniz. Bu nedenle, Basitleştirilmiş bir CQRS yaklaşım budur.
 
-Öte yandan, işlemleri ve veri güncelleştirmeleri tetiklemek, komutları, sistemin durumunu değiştirin. Komutları ile ne zaman dikkatli olmanız gerekir. karmaşıklığı ve durmaksızın değişen iş kuralları ile ilgili. Burada bir daha iyi Modellenen sistem olacak şekilde DDD teknikleri uygulamak istediğiniz.
+Öte yandan, işlemleri ve veri güncelleştirmeleri tetiklemek, komutları, sistemin durumunu değiştirin. Komutları ile ne zaman dikkatli olmanız gerekir. karmaşıklığı ve durmaksızın değişen iş kuralları ile ilgili. Bir daha iyi Modellenen sistem olacak şekilde DDD teknikleri uygulamak istediğiniz budur.
 
 Bu kılavuzda sunulan DDD deseni Evrensel uygulanmamalıdır. Bunlar, tasarımınızı kısıtlamalar sunar. Bu kısıtlamaları, özellikle de komutlar ve sistem durumunu değiştiren diğer kodun zaman içinde daha yüksek kalite gibi avantajlar sağlar. Ancak, bu kısıtlamaları okuma ve veri sorgulama için daha az avantajlarla karmaşıklık ekleyin.
 

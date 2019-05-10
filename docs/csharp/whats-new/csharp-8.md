@@ -2,12 +2,12 @@
 title: İçindeki yenilikler C# 8.0 - C# Kılavuzu
 description: Uygulamasında kullanılabilen yeni özellikleri genel bakış C# 8.0. Bu makalede, preview 2'ile güncel durumda.
 ms.date: 02/12/2019
-ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 16723894d87526972b692a098a57ef3726b252dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675539"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754368"
 ---
 # <a name="whats-new-in-c-80"></a>İçindeki yenilikler C# 8.0
 
@@ -321,7 +321,7 @@ Zaman uyumsuz akışlar kendiniz müşterilerimize öğreticide deneyebilirsiniz
 
 Aralıkları ve dizinlerini sağlayan bir kısa sözdizimleri bir dizi içinde alt aralıklara belirtmek için <xref:System.Span%601>, veya <xref:System.ReadOnlySpan%601>.
 
-Dizin belirtebilirsiniz **sonundan**. Belirttiğiniz **sonundan** kullanarak `^` işleci. Bilginiz `array[2]` öğe "başından itibaren 2" anlamına gelir. Şimdi, `array[^2]` öğe "2 sonundan" anlamına gelir. Dizin `^0` "Bitiş" ya da son öğeyi izleyen dizini anlamına gelir.
+Dizin belirtebilirsiniz **sonundan** kullanarak `^` dizini önce karakter. Sondan dizin kuraldan başlatır, `0..^0` tüm aralığını belirtir. Tüm dizi numaralandırmak için başlangıç *ilk öğede*ve, olana kadar devam *son öğeden önceki*. Davranışını düşünün `MoveNext` bir numaralandırıcı metodunda: numaralandırma son öğeyi başarılı olduğunda false döndürür. Dizin `^0` "Bitiş" anlamına gelir `array[array.Length]`, ya da son öğeyi izleyen dizin. Bilginiz `array[2]` öğe "başından itibaren 2" anlamına gelir. Şimdi, `array[^2]` öğe "2 sonundan" anlamına gelir. 
 
 Belirtebileceğiniz bir **aralığı** ile **aralık işleci**: `..`. Örneğin, `0..^0` dizi aralığının tamamı belirtir: 0'ın başından itibaren en fazla, ancak son 0 dahil değil. İki işlenenden "Başlangıç" veya "sonuna" kullanabilir. Ayrıca, iki işlenenden atlanabilir. Varsayılanlar `0` başlangıç dizini ve `^0` son dizini.
 
@@ -340,7 +340,7 @@ var words = new string[]
     "the",      // 6                   ^3
     "lazy",     // 7                   ^2
     "dog"       // 8                   ^1
-};
+};              // 9 (or words.Length) ^0
 ```
 
 Her öğenin dizini "Başlat" ve "Kimden"son kavramı güçlendirir ve aralığın sonunu fiyatlara aralıktır. "Başlangıç" tüm dizinin ilk öğedir. Tüm dizi "End" *geçmiş* son öğe.
@@ -383,3 +383,5 @@ Aralık içinde sonra kullanılabilir `[` ve `]` karakter:
 ```csharp
 var text = words[phrase];
 ```
+
+Üzerinde öğreticide dizinleri ve aralıkları hakkında daha fazla keşfedebilirsiniz [dizinleri ve aralıkları](../tutorials/ranges-indexes.md).

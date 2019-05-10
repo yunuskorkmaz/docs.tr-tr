@@ -1,17 +1,21 @@
 ---
 title: DotNet temizleme komutu
 description: Dotnet temiz komut geçerli dizinde temizler.
-ms.date: 12/04/2018
-ms.openlocfilehash: a25b7930794795e3dff5051a8ca1dd1b9c261dfd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.date: 04/14/2019
+ms.openlocfilehash: 3e735c02c9be9b6f51a8cdf048c18eff34f838cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665221"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754129"
 ---
 # <a name="dotnet-clean"></a>DotNet Temizle
 
+**Bu konu için geçerlidir: ✓** .NET Core SDK'sı 1.x ve sonraki sürümler
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Ad
 
@@ -20,7 +24,7 @@ ms.locfileid: "61665221"
 ## <a name="synopsis"></a>Synopsis
 
 ```
-dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
@@ -30,9 +34,9 @@ dotnet clean [-h|--help]
 
 ## <a name="arguments"></a>Arguments
 
-`PROJECT`
+`PROJECT | SOLUTION`
 
-Temizlemek için MSBuild proje. Bir proje dosyası belirtilmezse, MSBuild ile biten bir dosya uzantısına sahip bir dosya için geçerli çalışma dizini arar *proj* ve bu dosyayı kullanır.
+MSBuild proje veya çözüm temizlenemedi. Bir proje veya çözüm dosyası belirtilmezse, MSBuild ile biten bir dosya uzantısına sahip bir dosya için geçerli çalışma dizini arar *proj* veya *sln*ve bu dosyayı kullanır.
 
 ## <a name="options"></a>Seçenekler
 
@@ -48,9 +52,13 @@ Temizlemek için MSBuild proje. Bir proje dosyası belirtilmezse, MSBuild ile bi
 
   Komut için kısa bir Yardım yazdırır.
 
+* **`--interactive`**
+
+  Durdurmak ve kullanıcı girişi ya da eylem için beklemek için komutu sağlar. Örneğin, kimlik doğrulamasını tamamlamak için. .NET Core SDK 3.0 bu yana kullanılabilir.
+
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Dizini, derleme çıktılarını yerleştirilir. Belirtin `-f|--framework <FRAMEWORK>` çerçeve proje oluşturulduğunda belirttiyseniz çıkış dizini anahtarıyla geçin.
+  Temizlemek için derleme yapıtları içeren dizin. Belirtin `-f|--framework <FRAMEWORK>` çerçeve proje oluşturulduğunda belirttiyseniz çıkış dizini anahtarıyla geçin.
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -58,7 +66,7 @@ Temizlemek için MSBuild proje. Bir proje dosyası belirtilmezse, MSBuild ile bi
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Komutun ayrıntı düzeyini ayarlar. İzin verilen düzeyleri q [uiet], m [en az sıfır], [ormal] n, d [ayrıntılı] ve tanı [tanısı] ' dir.
+  MSBuild ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`. Varsayılan, `normal` değeridir.
 
 ## <a name="examples"></a>Örnekler
 

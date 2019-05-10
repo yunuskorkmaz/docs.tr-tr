@@ -5,11 +5,11 @@ helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
 ms.openlocfilehash: 72b9799d1f5ba7efa37d5f8f2a633e6806a58607
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63808086"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755731"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>My Özellikleri Proje Türüne Nasıl Bağımlıdır (Visual Basic)
 `My` yalnızca belirli proje türü tarafından gerekli nesneleri gösterir. Örneğin, `My.Forms` nesnesi olan bir Windows Forms uygulamasında kullanılabilir, ancak bir konsol uygulaması kullanılabilir değil. Bu konuda açıklayan `My` nesneleri farklı proje türlerinde kullanılabilir.  

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: dc817fdb9684f794efc6599444e80be1ef7f9654
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 94c266c3e44f87d8c8503bcf15789723116460df
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660137"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753818"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Aritmetik işleçler (C# Başvurusu)
 
@@ -163,23 +163,6 @@ Ayrıca `+` dize birleştirme ve temsilci birleşimi için işleç. Daha fazla b
 
 Ayrıca `-` temsilci kaldırma işleci. Daha fazla bilgi için [ `-` işleci](subtraction-operator.md) makalesi.
 
-## <a name="operator-precedence-and-associativity"></a>İşleç önceliği ve ilişkiselliği
-
-Aşağıdaki liste, en yüksek öncelikten en düşük başlangıç aritmetik işleçler sıralar:
-
-- Sonek artırma `x++` ve azaltma `x--` işleçleri
-- Önek artırma `++x` ve azaltma `--x` ve birli `+` ve `-` işleçleri
-- Çarpma `*`, `/`, ve `%` işleçleri
-- Eklenebilir `+` ve `-` işleçleri
-
-İkili aritmetik işleçler ilişkilendirilebilir. Diğer bir deyişle, aynı öncelik düzeyine sahip işleçler, soldan sağa doğru değerlendirilir.
-
-Parantez kullanın `()`, İşleç önceliği ve ilişkilendirilebilirlik tarafından dayatılan Değerlendirme sırasını değiştirmek için.
-
-[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
-
-Tam listesi için C# işleçler, öncelik düzeyine göre sıralanmış bkz [ C# işleçleri](index.md).
-
 ## <a name="compound-assignment"></a>Bileşik atama
 
 İkili işleç için `op`, formun bir bileşik atama ifadesi
@@ -205,6 +188,23 @@ Nedeniyle [sayısal promosyonlar](~/_csharplang/spec/expressions.md#numeric-prom
 [!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
 Ayrıca `+=` ve `-=` abone ve aboneliği iptal edin işleçleri [olayları](../keywords/event.md). Daha fazla bilgi için [nasıl yapılır: abone olma ve aboneliği olaylardan](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+
+## <a name="operator-precedence-and-associativity"></a>İşleç önceliği ve ilişkiselliği
+
+Aşağıdaki liste, en yüksek öncelikten en düşük başlangıç aritmetik işleçler sıralar:
+
+- Sonek artırma `x++` ve azaltma `x--` işleçleri
+- Önek artırma `++x` ve azaltma `--x` ve birli `+` ve `-` işleçleri
+- Çarpma `*`, `/`, ve `%` işleçleri
+- Eklenebilir `+` ve `-` işleçleri
+
+İkili aritmetik işleçler ilişkilendirilebilir. Diğer bir deyişle, aynı öncelik düzeyine sahip işleçler, soldan sağa doğru değerlendirilir.
+
+Parantez kullanın `()`, İşleç önceliği ve ilişkilendirilebilirlik tarafından dayatılan Değerlendirme sırasını değiştirmek için.
+
+[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
+
+Tam listesi için C# işleçler, öncelik düzeyine göre sıralanmış bkz [ C# işleçleri](index.md).
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>Aritmetik Taşma ve sıfıra bölme
 

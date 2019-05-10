@@ -2,12 +2,12 @@
 title: Özel Durum ve Hataları İşleme
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f2042bac30ee84530c0da9c30193919dfb99a608
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991425"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654990"
 ---
 # <a name="handling-exceptions-and-faults"></a>Özel Durum ve Hataları İşleme
 Özel durumlar, yerel hizmet veya istemci uygulamaları içindeki hataları iletişim kurmak için kullanılır. Hataları, diğer taraftan, hataları hizmet sınırları arasında olduğu gibi sunucudan istemciye ya da tam tersi iletişim kurmak için kullanılır. Hataları ek olarak, taşıma kanalları çoğunlukla aktarım özgü mekanizmaları aktarım düzeyi hataları iletişim kurmak için kullanır. Örneğin, HTTP aktarımı 404 gibi durum kodları (bir hata geri göndermek için uç nokta yok) bir mevcut olmayan uç nokta URL'si iletişim kurmak için kullanır. Bu belgenin özel kanal yazarları için rehberlik üç bölüm oluşur. İlk bölüm ne zaman ve nasıl tanımlamak ve özel durumlar rehberlik sağlar. İkinci bölüm oluşturma ve hataları kullanma yönergeleri sağlar. Özel kanal kullanıcısı çalışan uygulamaları giderilmesine yardımcı olmak için izleme bilgisi sağlamak üzere nasıl üçüncü bölümünde açıklanmaktadır.  

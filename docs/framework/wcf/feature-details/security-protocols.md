@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-ms.openlocfilehash: 5adacbc0332d104d025ea1b888b580d34fee804e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9993a7ecb61d9a45d88162fdef488e79b155540c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749429"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586851"
 ---
 # <a name="security-protocols"></a>Güvenlik Protokolleri
 Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksinimlerini Mesajlaşma kapsayan Web Hizmetleri güvenlik mekanizmaları sağlar. Bu bölümde Windows Communication Foundation (WCF) ayrıntılarını açıklar (uygulanan <xref:System.ServiceModel.Channels.SecurityBindingElement>) güvenlik protokollerini aşağıdaki Web Hizmetleri için.  
@@ -47,18 +47,18 @@ Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksi
 |KerberosOverTransport|Windows|X509|Taşıma|  
 |IssuedTokenOverTransport|Federasyon|X509|Taşıma|  
 |SspiNegotiatedOverTransport|Windows SSPI anlaşması|Windows SSPI anlaşması|Taşıma|  
-|AnonymousForCertificate|Yok.|X509|İleti|  
-|UserNameForCertificate|Kullanıcı adı/parola|X509|İleti|  
-|MutualCertificate|X509|X509|İleti|  
-|MutualCertificateDuplex|X509|X509|İleti|  
-|IssuedTokenForCertificate|Federasyon|X509|İleti|  
-|Kerberos|Windows|Windows|İleti|  
-|IssuedToken|Federasyon|Federasyon|İleti|  
-|SspiNegotiated|Windows SSPI anlaşması|Windows SSPI anlaşması|İleti|  
-|AnonymousForSslNegotiated|Yok.|X509, TLS-Nego|İleti|  
-|UserNameForSslNegotiated|Kullanıcı adı/parola|X509, TLS-Nego|İleti|  
-|MutualSslNegotiated|X509|X509, TLS-Nego|İleti|  
-|IssuedTokenForSslNegotiated|Federasyon|X509, TLS-Nego|İleti|  
+|AnonymousForCertificate|None|X509|`Message`|  
+|UserNameForCertificate|Kullanıcı adı/parola|X509|`Message`|  
+|MutualCertificate|X509|X509|`Message`|  
+|MutualCertificateDuplex|X509|X509|`Message`|  
+|IssuedTokenForCertificate|Federasyon|X509|`Message`|  
+|Kerberos|Windows|Windows|`Message`|  
+|IssuedToken|Federasyon|Federasyon|`Message`|  
+|SspiNegotiated|Windows SSPI anlaşması|Windows SSPI anlaşması|`Message`|  
+|AnonymousForSslNegotiated|Yok.|X509, TLS-Nego|`Message`|  
+|UserNameForSslNegotiated|Kullanıcı adı/parola|X509, TLS-Nego|`Message`|  
+|MutualSslNegotiated|X509|X509, TLS-Nego|`Message`|  
+|IssuedTokenForSslNegotiated|Federasyon|X509, TLS-Nego|`Message`|  
   
  Bu tür bir kimlik doğrulama modları kullanarak uç noktaları, WS-SecurityPolicy (WS-SP) kullanarak kendi güvenlik gereksinimleri ifade edebilir. Bu belge, güvenlik üstbilgi ve her kimlik doğrulama modu için altyapı iletileri yapısını açıklar ve ilkeleri ve iletileri örneklerini sağlar.  
   

@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 3d3d52c9b29e743f676951ec8261ada39078fb27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 16aa1cd43db0b10c4617b4fa92783c75a4ba5303
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973542"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755210"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -27,9 +27,9 @@ ms.locfileid: "61973542"
 
 ## <a name="net-implementation-support"></a>.NET uygulama desteği
 
-Aşağıdaki tabloda her .NET Standard sürümünü destekleyen en düşük platform sürümleri listelenmiştir.
+Aşağıdaki tabloda **minimum** her .NET Standard sürümünü destekleyen bir platform sürümleri. Listelenen bir platformun sonraki sürümlerinde karşılık gelen .NET Standard sürümünü desteklediğini anlamına gelir. Örneğin, .NET Core 2.2 .NET Standard 2.0 ve önceki destekler.
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
 
 .NET platformlarını hedefleyebilen Standard'ın en yüksek sürümü bulmak için aşağıdaki adımları uygulayın:
 

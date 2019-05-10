@@ -1,17 +1,21 @@
 ---
 title: DotNet oluşturma komutu
 description: Dotnet bir projeyi ve tüm bağımlılıklarını komut derlemeleri oluşturun.
-ms.date: 12/04/2018
-ms.openlocfilehash: 6a701ee371221c780a878e64b996df95f709371f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.date: 04/24/2019
+ms.openlocfilehash: 2e58bace8055ba793bf7a6ca3a51eb20aa689768
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665279"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755223"
 ---
 # <a name="dotnet-build"></a>DotNet derleme
 
+**Bu makale için geçerlidir: ✓** .NET Core SDK'sı 1.x ve sonraki sürümler
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Ad
 
@@ -19,25 +23,12 @@ ms.locfileid: "61665279"
 
 ## <a name="synopsis"></a>Synopsis
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
-dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
-    [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
+    [--no-incremental] [--nologo] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
-
-```
-dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
-    [-r|--runtime] [-v|--verbosity] [--version-suffix]
-
-dotnet build [-h|--help]
-```
-
----
 
 ## <a name="description"></a>Açıklama
 
@@ -75,8 +66,6 @@ Derleme için proje veya çözüm dosyası. Bir proje veya çözüm dosyası bel
 
 ## <a name="options"></a>Seçenekler
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 * **`-c|--configuration {Debug|Release}`**
 
   Derleme yapılandırmasını tanımlar. Varsayılan değer `Debug` şeklindedir.
@@ -87,11 +76,15 @@ Derleme için proje veya çözüm dosyası. Bir proje veya çözüm dosyası bel
 
 * **`--force`**
 
-  Son geri yükleme başarılı olduysa bile çözülmesi için tüm bağımlılıkların zorlar. Bu bayrak belirten aynıdır silme *project.assets.json* dosya.
+  Son geri yükleme başarılı olduysa bile çözülmesi için tüm bağımlılıkların zorlar. Bu bayrak belirten aynıdır silme *project.assets.json* dosya. .NET Core 2.0 SDK'sı bu yana kullanılabilir.
 
 * **`-h|--help`**
 
   Komut için kısa bir Yardım yazdırır.
+
+* **`--interactive`**
+
+  Durdurmak ve kullanıcı girişi ya da eylem için beklemek için komutu sağlar. Örneğin, kimlik doğrulamasını tamamlamak için. .NET Core SDK 3.0 bu yana kullanılabilir.
 
 * **`--no-dependencies`**
 
@@ -101,9 +94,13 @@ Derleme için proje veya çözüm dosyası. Bir proje veya çözüm dosyası bel
 
   Derleme Artımlı derleme için güvensiz olarak işaretler. Bu bayrak, Artımlı derlemeyi devre dışı bırakır ve temiz bir projenin bağımlılık grafiği yeniden zorlar.
 
+* **`--no-logo`**
+
+  Başlangıç başlığını veya telif hakkı iletisini görüntülemez. .NET Core SDK 3.0 bu yana kullanılabilir.
+
 * **`--no-restore`**
 
-  Örtük bir geri yükleme derleme sırasında yürütülmez.
+  Örtük bir geri yükleme derleme sırasında yürütülmez. .NET Core 2.0 SDK'sı bu yana kullanılabilir.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -115,51 +112,11 @@ Derleme için proje veya çözüm dosyası. Bir proje veya çözüm dosyası bel
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.
+  MSBuild ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`. Varsayılan, `minimal` değeridir.
 
 * **`--version-suffix <VERSION_SUFFIX>`**
 
-  Sürüm soneki için bir yıldız işareti tanımlar (`*`) proje dosyasının sürümü alanında. NuGet'ın sürümü yönergeleri biçimdedir.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
-
-* **`-c|--configuration {Debug|Release}`**
-
-  Derleme yapılandırmasını tanımlar. Varsayılan değer `Debug` şeklindedir.
-
-* **`-f|--framework <FRAMEWORK>`**
-
-  Özel bir derleme [framework](../../standard/frameworks.md). Framework tanımlanmalıdır [proje dosyası](csproj.md).
-
-* **`-h|--help`**
-
-  Komut için kısa bir Yardım yazdırır.
-
-* **`--no-dependencies`**
-
-  Projeden projeye (P2P) başvurularını yoksayar ve yalnızca belirtilen kök projeyi oluşturur.
-
-* **`--no-incremental`**
-
-  Derleme Artımlı derleme için güvensiz olarak işaretler. Bu bayrak, Artımlı derlemeyi devre dışı bırakır ve temiz bir projenin bağımlılık grafiği yeniden zorlar.
-
-* **`-o|--output <OUTPUT_DIRECTORY>`**
-
-  Yerleşik ikili dosyaların yerleştirileceği dizin. Tanımlamanız gereken `--framework` bu seçeneği belirttiğinizde.
-
-* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
-
-  Hedef çalışma zamanı belirtir. Çalışma zamanı tanımlayıcılarının (RID'ler) bir listesi için bkz. [RID Kataloğu](../rid-catalog.md).
-
-* **`-v|--verbosity <LEVEL>`**
-
-  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.
-
-* **`--version-suffix <VERSION_SUFFIX>`**
-
-  Sürüm soneki için bir yıldız işareti tanımlar (`*`) proje dosyasının sürümü alanında. NuGet'ın sürümü yönergeleri biçimdedir.
-
----
+  Ayarlar `$(VersionSuffix)` proje derlenirken kullanılacak özellik. Bu, yalnızca çalışır `$(Version)` özelliği ayarlanmamış. Ardından, `$(Version)` ayarlanır `$(VersionPrefix)` birlikte `$(VersionSuffix)`kısa çizgiyle ayrılmış.
 
 ## <a name="examples"></a>Örnekler
 
@@ -175,10 +132,10 @@ Derleme için proje veya çözüm dosyası. Bir proje veya çözüm dosyası bel
   dotnet build --configuration Release
   ```
 
-* Bir proje ve bağımlılıkları (Bu örnekte, Ubuntu 16.04) belirli bir çalışma zamanı için derleme:
+* Bir proje ve bağımlılıkları (Bu örnekte, Ubuntu 18.04) belirli bir çalışma zamanı için derleme:
 
   ```console
-  dotnet build --runtime ubuntu.16.04-x64
+  dotnet build --runtime ubuntu.18.04-x64
   ```
 
 * Projeyi oluşturmak ve geri yükleme işlemi sırasında (.NET Core 2.0 SDK'sını ve sonraki sürümler) belirtilen NuGet paket kaynağı kullanın:

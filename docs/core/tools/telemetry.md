@@ -4,12 +4,12 @@ description: Analiz, hangi verileri toplanır ve nasıl devre dışı bırakmak 
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 2ef6ade36092ff5a17b0cc420dc4859409d459ce
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.openlocfilehash: 82410863c81faa95edfb120c95ec6bc186ed1328
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63773845"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751682"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET core SDK'sı telemetri
 
