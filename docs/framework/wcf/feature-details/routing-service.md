@@ -2,12 +2,12 @@
 title: Yönlendirme Hizmeti
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: 905c84d801a27e588e2c539f987d6280aae7b994
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 511802012a90413a11612406f584c2e2909fe06e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991062"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603716"
 ---
 # <a name="routing-service"></a>Yönlendirme Hizmeti
 Yönlendirme hizmeti bir ileti yönlendirici işlevi gören genel bir SOAP aracıdır. Yönlendirme hizmeti temel işlevlerini iletisini üst bilgi veya ileti gövdesi içindeki bir değere göre bir istemci uç noktası iletilmesi bir ileti veren ileti içeriği temel iletileri yönlendirmek yeteneğidir.  

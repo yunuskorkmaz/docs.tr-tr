@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a517dc4e143b561a17bb3715b69be393bee2b21e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61596784"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585021"
 ---
 # <a name="batching-messages-in-a-transaction"></a>Bir İşlemde Toplu İleti İşleme
 Sıraya alınan uygulamaları, doğruluk ve iletilerin güvenilir teslim emin olmak için işlem kullanır. İşlem, ancak pahalı işlemlerdir ve ileti aktarım hızı önemli ölçüde azaltabilir. İleti işleme hızı artırmak için bir yol, okuma ve tek bir işlemde birden çok iletiyi bir uygulamaya sahip olmaktır. Performans ve kurtarma dengedir: toplu ileti sayısı arttıkça, bu nedenle gerekli işlemler geri alınacak olursa kurtarma iş yapar. Toplu işlem ve oturumları ileti işleme arasındaki farka dikkat edin önemlidir. A *oturumu* tek bir uygulama tarafından işlenen ve tek bir birim olarak kabul edilen ilgili iletiler bir gruplandırmasıdır. Oturumları ilgili iletiler grubunu birlikte işlenmesi gereken genel olarak kullanılır. Buna örnek olarak çevrimiçi bir alışveriş Web sitesidir. *Toplu* ilgisi olmayan iletileri arttıkça aktarım hızı ileti şekilde, birden fazla işlemek için kullanılır. Oturumlar hakkında daha fazla bilgi için bkz. [gruplandırma kuyruğa alınan iletileri bir oturumda](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Toplu iletiler de tek bir uygulama tarafından işlenen ve tek bir birim olarak kabul edilen, ancak toplu işlem iletileri arasında hiçbir ilişkisi olabilir. Bir işlemde toplu ileti işleme uygulamanın nasıl çalıştığını değişmez bir optimizasyondur.  
