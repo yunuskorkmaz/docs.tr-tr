@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-ms.openlocfilehash: 54d66a60d20a6add4c2b4a160f87b58b5a1d00e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e55e561fa20a3740d352537958681b0a66fc381e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920893"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592038"
 ---
-# <a name="methods-of-systemnullableof-t-cannot-be-used-as-operands-of-the-addressof-operator"></a><span data-ttu-id="f2f0d-102">'System.Nullable(Of T)' yöntemleri 'AddressOf' işlecinin işlenenleri olarak kullanılamaz</span><span class="sxs-lookup"><span data-stu-id="f2f0d-102">Methods of 'System.Nullable(Of T)' cannot be used as operands of the 'AddressOf' operator</span></span>
-<span data-ttu-id="f2f0d-103">Bir ifade kullanıyor `AddressOf` işleci, bir yordamı temsil eden bir işlenen <xref:System.Nullable%601> yapısı.</span><span class="sxs-lookup"><span data-stu-id="f2f0d-103">A statement uses the `AddressOf` operator with an operand that represents a procedure of the <xref:System.Nullable%601> structure.</span></span>  
+# <a name="methods-of-systemnullableof-t-cannot-be-used-as-operands-of-the-addressof-operator"></a><span data-ttu-id="826d7-102">'System.Nullable(Of T)' yöntemleri 'AddressOf' işlecinin işlenenleri olarak kullanılamaz</span><span class="sxs-lookup"><span data-stu-id="826d7-102">Methods of 'System.Nullable(Of T)' cannot be used as operands of the 'AddressOf' operator</span></span>
+<span data-ttu-id="826d7-103">Bir ifade kullanıyor `AddressOf` işleci, bir yordamı temsil eden bir işlenen <xref:System.Nullable%601> yapısı.</span><span class="sxs-lookup"><span data-stu-id="826d7-103">A statement uses the `AddressOf` operator with an operand that represents a procedure of the <xref:System.Nullable%601> structure.</span></span>  
   
- <span data-ttu-id="f2f0d-104">**Hata Kimliği:** BC32126</span><span class="sxs-lookup"><span data-stu-id="f2f0d-104">**Error ID:** BC32126</span></span>  
+ <span data-ttu-id="826d7-104">**Hata Kimliği:** BC32126</span><span class="sxs-lookup"><span data-stu-id="826d7-104">**Error ID:** BC32126</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f2f0d-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="f2f0d-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="826d7-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="826d7-105">To correct this error</span></span>  
   
-- <span data-ttu-id="f2f0d-106">Yordam adı yerine `AddressOf` yan tümcesi bir üyesi değil bir işlenen <xref:System.Nullable%601>.</span><span class="sxs-lookup"><span data-stu-id="f2f0d-106">Replace the procedure name in the `AddressOf` clause with an operand that is not a member of <xref:System.Nullable%601>.</span></span>  
+- <span data-ttu-id="826d7-106">Yordam adı yerine `AddressOf` yan tümcesi bir üyesi değil bir işlenen <xref:System.Nullable%601>.</span><span class="sxs-lookup"><span data-stu-id="826d7-106">Replace the procedure name in the `AddressOf` clause with an operand that is not a member of <xref:System.Nullable%601>.</span></span>  
   
-- <span data-ttu-id="f2f0d-107">Yazma yöntemi saran bir sınıf <xref:System.Nullable%601> kullanmak istediğiniz.</span><span class="sxs-lookup"><span data-stu-id="f2f0d-107">Write a class that wraps the method of <xref:System.Nullable%601> that you want to use.</span></span> <span data-ttu-id="f2f0d-108">Aşağıdaki örnekte, `NullableWrapper` sınıf adlı yeni bir yöntem tanımlar `GetValueOrDefault`.</span><span class="sxs-lookup"><span data-stu-id="f2f0d-108">In the following example, the `NullableWrapper` class defines a new method named `GetValueOrDefault`.</span></span> <span data-ttu-id="f2f0d-109">Bu yeni yöntemi üyesi olmadığından <xref:System.Nullable%601>, için uygulanabilir `nullInstance`, bir bağımsız değişken oluşturmak için boş değer atanabilir bir tür örneği `AddressOf`.</span><span class="sxs-lookup"><span data-stu-id="f2f0d-109">Because this new method is not a member of <xref:System.Nullable%601>, it can be applied to `nullInstance`, an instance of a nullable type, to form an argument for `AddressOf`.</span></span>  
+- <span data-ttu-id="826d7-107">Yazma yöntemi saran bir sınıf <xref:System.Nullable%601> kullanmak istediğiniz.</span><span class="sxs-lookup"><span data-stu-id="826d7-107">Write a class that wraps the method of <xref:System.Nullable%601> that you want to use.</span></span> <span data-ttu-id="826d7-108">Aşağıdaki örnekte, `NullableWrapper` sınıf adlı yeni bir yöntem tanımlar `GetValueOrDefault`.</span><span class="sxs-lookup"><span data-stu-id="826d7-108">In the following example, the `NullableWrapper` class defines a new method named `GetValueOrDefault`.</span></span> <span data-ttu-id="826d7-109">Bu yeni yöntemi üyesi olmadığından <xref:System.Nullable%601>, için uygulanabilir `nullInstance`, bir bağımsız değişken oluşturmak için boş değer atanabilir bir tür örneği `AddressOf`.</span><span class="sxs-lookup"><span data-stu-id="826d7-109">Because this new method is not a member of <xref:System.Nullable%601>, it can be applied to `nullInstance`, an instance of a nullable type, to form an argument for `AddressOf`.</span></span>  
   
 ```vb  
 Module Module1  
@@ -61,9 +61,9 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f2f0d-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f2f0d-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="826d7-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="826d7-110">See also</span></span>
 
 - <xref:System.Nullable%601>
-- [<span data-ttu-id="f2f0d-111">AddressOf İşleci</span><span class="sxs-lookup"><span data-stu-id="f2f0d-111">AddressOf Operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [<span data-ttu-id="f2f0d-112">Boş Değer Atanabilen Değer Türleri</span><span class="sxs-lookup"><span data-stu-id="f2f0d-112">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [<span data-ttu-id="f2f0d-113">Visual Basic'de genel türler</span><span class="sxs-lookup"><span data-stu-id="f2f0d-113">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [<span data-ttu-id="826d7-111">AddressOf İşleci</span><span class="sxs-lookup"><span data-stu-id="826d7-111">AddressOf Operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [<span data-ttu-id="826d7-112">Boş Değer Atanabilen Değer Türleri</span><span class="sxs-lookup"><span data-stu-id="826d7-112">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [<span data-ttu-id="826d7-113">Visual Basic'de genel türler</span><span class="sxs-lookup"><span data-stu-id="826d7-113">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

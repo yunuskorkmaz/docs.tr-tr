@@ -14,78 +14,76 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 0768f811653543b3370310ccc0b59890273baf52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49bf927085d29b60c1d9cf5d61df3894495349db
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011092"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65210420"
 ---
-# <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a><span data-ttu-id="20491-102">Nasıl yapılır: Windows Forms’a Kullanıcı Arabirimi Olmadan Denetimler Ekleme</span><span class="sxs-lookup"><span data-stu-id="20491-102">How to: Add Controls Without a User Interface to Windows Forms</span></span>
-<span data-ttu-id="20491-103">Görsel olmayan denetim (veya bileşen) uygulamanıza işlevsellik sağlar.</span><span class="sxs-lookup"><span data-stu-id="20491-103">A nonvisual control (or component) provides functionality to your application.</span></span> <span data-ttu-id="20491-104">Diğer denetimleri farklı bileşenleri bir kullanıcı arabirimi kullanıcıya sağlamaz ve bu nedenle Windows Form Tasarımcısı yüzeyine görüntülenmesi gerekmez.</span><span class="sxs-lookup"><span data-stu-id="20491-104">Unlike other controls, components do not provide a user interface to the user and thus do not need to be displayed on the Windows Forms Designer surface.</span></span> <span data-ttu-id="20491-105">Bir forma bir bileşen eklendiğinde Windows Form Tasarımcısı yeniden boyutlandırılabilir Tepsisi tüm bileşenleri görüntülendiği formun alt kısmındaki görüntüler.</span><span class="sxs-lookup"><span data-stu-id="20491-105">When a component is added to a form, the Windows Forms Designer displays a resizable tray at the bottom of the form where all components are displayed.</span></span> <span data-ttu-id="20491-106">Bir denetim, bileşen tepsisine eklendikten sonra bileşeni seçebilir ve herhangi bir form denetiminde olduğu gibi özelliklerini ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="20491-106">Once a control has been added to the component tray, you can select the component and set its properties as you would any other control on the form.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="20491-107">Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="20491-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="20491-108">Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü.</span><span class="sxs-lookup"><span data-stu-id="20491-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="20491-109">Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="20491-109">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
-  
-### <a name="to-add-a-component-to-a-windows-form"></a><span data-ttu-id="20491-110">Bir Windows forma bir bileşen eklemek için</span><span class="sxs-lookup"><span data-stu-id="20491-110">To add a component to a Windows Form</span></span>  
-  
-1. <span data-ttu-id="20491-111">Formu açın.</span><span class="sxs-lookup"><span data-stu-id="20491-111">Open the form.</span></span> <span data-ttu-id="20491-112">Ayrıntılar için bkz [nasıl yapılır: Tasarımcıda Windows formlarını görüntüleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="20491-112">For details, see [How to: Display Windows Forms in the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span></span>  
-  
-2. <span data-ttu-id="20491-113">İçinde **araç kutusu**bir bileşene tıklayın ve formunuza sürükleyin.</span><span class="sxs-lookup"><span data-stu-id="20491-113">In the **Toolbox**, click a component and drag it to your form.</span></span>  
-  
-     <span data-ttu-id="20491-114">Bileşen, bileşen tepsisinde görünür.</span><span class="sxs-lookup"><span data-stu-id="20491-114">Your component appears in the component tray.</span></span>  
-  
- <span data-ttu-id="20491-115">Ayrıca, bileşenler çalışma zamanında bir forma eklenebilir.</span><span class="sxs-lookup"><span data-stu-id="20491-115">Furthermore, components can be added to a form at run time.</span></span> <span data-ttu-id="20491-116">Özellikle bileşenleri farklı bir kullanıcı arabirimi denetimleri bir görsel ifade olmadığı için yaygın bir senaryo budur.</span><span class="sxs-lookup"><span data-stu-id="20491-116">This is a common scenario, especially because components do not have a visual expression, unlike controls that have a user interface.</span></span> <span data-ttu-id="20491-117">Aşağıdaki örnekte bir <xref:System.Windows.Forms.Timer> bileşen çalışma zamanında eklenir.</span><span class="sxs-lookup"><span data-stu-id="20491-117">In the example below, a <xref:System.Windows.Forms.Timer> component is added at run time.</span></span> <span data-ttu-id="20491-118">(Visual Studio birkaç farklı zamanlayıcılar içerdiğine dikkat edin; bu durumda, bir Windows Forms kullanın <xref:System.Windows.Forms.Timer> bileşeni.</span><span class="sxs-lookup"><span data-stu-id="20491-118">(Note that Visual Studio contains a number of different timers; in this case, use a Windows Forms <xref:System.Windows.Forms.Timer> component.</span></span> <span data-ttu-id="20491-119">Visual Studio'da farklı zamanlayıcılar hakkında daha fazla bilgi için bkz. [sunucu tabanlı zamanlayıcılar giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).)</span><span class="sxs-lookup"><span data-stu-id="20491-119">For more information about the different timers in Visual Studio, see [Introduction to Server-Based Timers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).)</span></span>  
-  
-> [!CAUTION]
->  <span data-ttu-id="20491-120">Bileşenler genellikle etkili bir şekilde çalışması bileşeni için ayarlanmalıdır denetime özgü özelikleri sahiptir.</span><span class="sxs-lookup"><span data-stu-id="20491-120">Components often have control-specific properties that must be set for the component to function effectively.</span></span> <span data-ttu-id="20491-121">Durumunda, <xref:System.Windows.Forms.Timer> aşağıdaki bileşen, ayarladığınız `Interval` özelliği.</span><span class="sxs-lookup"><span data-stu-id="20491-121">In the case of the <xref:System.Windows.Forms.Timer> component below, you set the `Interval` property.</span></span> <span data-ttu-id="20491-122">Bileşenlerin özellikleri söz konusu bileşen için gerekli olarak ayarlayın, projenize eklerken emin olun.</span><span class="sxs-lookup"><span data-stu-id="20491-122">Be sure, when adding components to your project, that you set the properties necessary for that component.</span></span>  
-  
-#### <a name="to-add-a-component-to-a-windows-form-programmatically"></a><span data-ttu-id="20491-123">Bir Windows forma programsal olarak bir bileşen eklemek için</span><span class="sxs-lookup"><span data-stu-id="20491-123">To add a component to a Windows Form programmatically</span></span>  
-  
-1. <span data-ttu-id="20491-124">Bir örneğini oluşturmak <xref:System.Windows.Forms.Timer> kod sınıfı.</span><span class="sxs-lookup"><span data-stu-id="20491-124">Create an instance of the <xref:System.Windows.Forms.Timer> class in code.</span></span>  
-  
-2. <span data-ttu-id="20491-125">Ayarlama `Interval` Zamanlayıcının işaretleri arasındaki süreyi belirlemek için özellik.</span><span class="sxs-lookup"><span data-stu-id="20491-125">Set the `Interval` property to determine the time between ticks of the timer.</span></span>  
-  
-3. <span data-ttu-id="20491-126">Bileşeniniz için gerekli diğer özellikleri yapılandırın.</span><span class="sxs-lookup"><span data-stu-id="20491-126">Configure any other necessary properties for your component.</span></span>  
-  
-     <span data-ttu-id="20491-127">Aşağıdaki kod oluşturma işlemini gösterir. bir <xref:System.Windows.Forms.Timer> ile kendi `Interval` özellik kümesi.</span><span class="sxs-lookup"><span data-stu-id="20491-127">The following code shows the creation of a <xref:System.Windows.Forms.Timer> with its `Interval` property set.</span></span>  
-  
-    ```vb  
-    Public Sub CreateTimer()  
-       Dim timerKeepTrack As New System.Windows.Forms.Timer  
-       timerKeepTrack.Interval = 1000  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    public void createTimer()  
-    {  
-       System.Windows.Forms.Timer timerKeepTrack = new  
-           System.Windows.Forms.Timer();  
-       timerKeepTrack.Interval = 1000;  
-    }  
-    ```  
-  
-    ```cpp  
-    public:  
-       void createTimer()  
-       {  
-          System::Windows::Forms::Timer^ timerKeepTrack = gcnew  
-             System::Windows::Forms::Timer();  
-          timerKeepTrack->Interval = 1000;  
-       }  
-    ```  
-  
-    > [!IMPORTANT]
-    >  <span data-ttu-id="20491-128">Yerel bir güvenlik riski ağ üzerinden bilgisayarınıza kötü amaçlı bir UserControl başvurarak doğurabilir.</span><span class="sxs-lookup"><span data-stu-id="20491-128">You might expose your local computer to a security risk through the network by referencing a malicious UserControl.</span></span> <span data-ttu-id="20491-129">Bu, yalnızca, yanlışlıkla bunu projenize ekleyerek ardından zararlı olabilecek özel bir denetim oluşturulamaz kötü amaçlı bir kişinin söz konusu olduğunda önemli hale gelir.</span><span class="sxs-lookup"><span data-stu-id="20491-129">This would only be a concern in the case of a malicious person creating a damaging custom control, followed by you mistakenly adding it to your project.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="20491-130">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="20491-130">See also</span></span>
+# <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a><span data-ttu-id="6634e-102">Nasıl yapılır: Windows Forms’a Kullanıcı Arabirimi Olmadan Denetimler Ekleme</span><span class="sxs-lookup"><span data-stu-id="6634e-102">How to: Add Controls Without a User Interface to Windows Forms</span></span>
 
-- [<span data-ttu-id="20491-131">Windows Forms Denetimleri</span><span class="sxs-lookup"><span data-stu-id="20491-131">Windows Forms Controls</span></span>](index.md)
-- [<span data-ttu-id="20491-132">Nasıl yapılır: Windows Forms'a denetimler ekleme</span><span class="sxs-lookup"><span data-stu-id="20491-132">How to: Add Controls to Windows Forms</span></span>](how-to-add-controls-to-windows-forms.md)
-- [<span data-ttu-id="20491-133">Nasıl yapılır: Windows Forms'a ActiveX denetimleri ekleme</span><span class="sxs-lookup"><span data-stu-id="20491-133">How to: Add ActiveX Controls to Windows Forms</span></span>](how-to-add-activex-controls-to-windows-forms.md)
-- [<span data-ttu-id="20491-134">Nasıl yapılır: Windows Forms arasında denetimleri kopyalama</span><span class="sxs-lookup"><span data-stu-id="20491-134">How to: Copy Controls Between Windows Forms</span></span>](how-to-copy-controls-between-windows-forms.md)
-- [<span data-ttu-id="20491-135">Windows Forms’a Denetimler Yerleştirme</span><span class="sxs-lookup"><span data-stu-id="20491-135">Putting Controls on Windows Forms</span></span>](putting-controls-on-windows-forms.md)
-- [<span data-ttu-id="20491-136">Ayrı Windows Forms Denetimlerini Etiketleme ve Kısayollarını Sunma</span><span class="sxs-lookup"><span data-stu-id="20491-136">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [<span data-ttu-id="20491-137">Windows Forms'da Kullanılacak Denetimler</span><span class="sxs-lookup"><span data-stu-id="20491-137">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
-- [<span data-ttu-id="20491-138">İşleve Göre Windows Forms Denetimleri</span><span class="sxs-lookup"><span data-stu-id="20491-138">Windows Forms Controls by Function</span></span>](windows-forms-controls-by-function.md)
+<span data-ttu-id="6634e-103">Görsel olmayan denetim (veya bileşen) uygulamanıza işlevsellik sağlar.</span><span class="sxs-lookup"><span data-stu-id="6634e-103">A nonvisual control (or component) provides functionality to your application.</span></span> <span data-ttu-id="6634e-104">Diğer denetimleri farklı bileşenleri bir kullanıcı arabirimi kullanıcıya sağlamaz ve bu nedenle Windows Form Tasarımcısı yüzeyine görüntülenmesi gerekmez.</span><span class="sxs-lookup"><span data-stu-id="6634e-104">Unlike other controls, components do not provide a user interface to the user and thus do not need to be displayed on the Windows Forms Designer surface.</span></span> <span data-ttu-id="6634e-105">Bir forma bir bileşen eklendiğinde Windows Form Tasarımcısı yeniden boyutlandırılabilir Tepsisi tüm bileşenleri görüntülendiği formun alt kısmındaki görüntüler.</span><span class="sxs-lookup"><span data-stu-id="6634e-105">When a component is added to a form, the Windows Forms Designer displays a resizable tray at the bottom of the form where all components are displayed.</span></span> <span data-ttu-id="6634e-106">Bir denetim, bileşen tepsisine eklendikten sonra bileşeni seçebilir ve herhangi bir form denetiminde olduğu gibi özelliklerini ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="6634e-106">Once a control has been added to the component tray, you can select the component and set its properties as you would any other control on the form.</span></span>
+
+## <a name="add-a-component-to-a-windows-form"></a><span data-ttu-id="6634e-107">Bir Windows forma bir bileşen ekleyin</span><span class="sxs-lookup"><span data-stu-id="6634e-107">Add a component to a Windows Form</span></span>
+
+1. <span data-ttu-id="6634e-108">Form, Visual Studio'da açın.</span><span class="sxs-lookup"><span data-stu-id="6634e-108">Open the form in Visual Studio.</span></span> <span data-ttu-id="6634e-109">Ayrıntılar için bkz [nasıl yapılır: Tasarımcıda Windows formlarını görüntüleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="6634e-109">For details, see [How to: Display Windows Forms in the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span></span>
+
+2. <span data-ttu-id="6634e-110">İçinde **araç kutusu**bir bileşene tıklayın ve formunuza sürükleyin.</span><span class="sxs-lookup"><span data-stu-id="6634e-110">In the **Toolbox**, click a component and drag it to your form.</span></span>
+
+     <span data-ttu-id="6634e-111">Bileşen, bileşen tepsisinde görünür.</span><span class="sxs-lookup"><span data-stu-id="6634e-111">Your component appears in the component tray.</span></span>
+
+<span data-ttu-id="6634e-112">Ayrıca, bileşenler çalışma zamanında bir forma eklenebilir.</span><span class="sxs-lookup"><span data-stu-id="6634e-112">Furthermore, components can be added to a form at run time.</span></span> <span data-ttu-id="6634e-113">Özellikle bileşenleri farklı bir kullanıcı arabirimi denetimleri bir görsel ifade olmadığı için yaygın bir senaryo budur.</span><span class="sxs-lookup"><span data-stu-id="6634e-113">This is a common scenario, especially because components do not have a visual expression, unlike controls that have a user interface.</span></span> <span data-ttu-id="6634e-114">Aşağıdaki örnekte bir <xref:System.Windows.Forms.Timer> bileşen çalışma zamanında eklenir.</span><span class="sxs-lookup"><span data-stu-id="6634e-114">In the example below, a <xref:System.Windows.Forms.Timer> component is added at run time.</span></span> <span data-ttu-id="6634e-115">(Visual Studio birkaç farklı zamanlayıcılar içerdiğine dikkat edin; bu durumda, bir Windows Forms kullanın <xref:System.Windows.Forms.Timer> bileşeni.</span><span class="sxs-lookup"><span data-stu-id="6634e-115">(Note that Visual Studio contains a number of different timers; in this case, use a Windows Forms <xref:System.Windows.Forms.Timer> component.</span></span> <span data-ttu-id="6634e-116">Visual Studio'da farklı zamanlayıcılar hakkında daha fazla bilgi için bkz. [sunucu tabanlı zamanlayıcılar giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).)</span><span class="sxs-lookup"><span data-stu-id="6634e-116">For more information about the different timers in Visual Studio, see [Introduction to Server-Based Timers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).)</span></span>
+
+> [!CAUTION]
+> <span data-ttu-id="6634e-117">Bileşenler genellikle etkili bir şekilde çalışması bileşeni için ayarlanmalıdır denetime özgü özelikleri sahiptir.</span><span class="sxs-lookup"><span data-stu-id="6634e-117">Components often have control-specific properties that must be set for the component to function effectively.</span></span> <span data-ttu-id="6634e-118">Durumunda, <xref:System.Windows.Forms.Timer> aşağıdaki bileşen, ayarladığınız `Interval` özelliği.</span><span class="sxs-lookup"><span data-stu-id="6634e-118">In the case of the <xref:System.Windows.Forms.Timer> component below, you set the `Interval` property.</span></span> <span data-ttu-id="6634e-119">Bileşenlerin özellikleri söz konusu bileşen için gerekli olarak ayarlayın, projenize eklerken emin olun.</span><span class="sxs-lookup"><span data-stu-id="6634e-119">Be sure, when adding components to your project, that you set the properties necessary for that component.</span></span>
+
+## <a name="add-a-component-to-a-windows-form-programmatically"></a><span data-ttu-id="6634e-120">Bir bileşen program aracılığıyla bir Windows forma ekleme</span><span class="sxs-lookup"><span data-stu-id="6634e-120">Add a component to a Windows Form programmatically</span></span>
+
+1. <span data-ttu-id="6634e-121">Bir örneğini oluşturmak <xref:System.Windows.Forms.Timer> kod sınıfı.</span><span class="sxs-lookup"><span data-stu-id="6634e-121">Create an instance of the <xref:System.Windows.Forms.Timer> class in code.</span></span>
+
+2. <span data-ttu-id="6634e-122">Ayarlama `Interval` Zamanlayıcının işaretleri arasındaki süreyi belirlemek için özellik.</span><span class="sxs-lookup"><span data-stu-id="6634e-122">Set the `Interval` property to determine the time between ticks of the timer.</span></span>
+
+3. <span data-ttu-id="6634e-123">Bileşeniniz için gerekli diğer özellikleri yapılandırın.</span><span class="sxs-lookup"><span data-stu-id="6634e-123">Configure any other necessary properties for your component.</span></span>
+
+     <span data-ttu-id="6634e-124">Aşağıdaki kod oluşturma işlemini gösterir. bir <xref:System.Windows.Forms.Timer> ile kendi `Interval` özellik kümesi.</span><span class="sxs-lookup"><span data-stu-id="6634e-124">The following code shows the creation of a <xref:System.Windows.Forms.Timer> with its `Interval` property set.</span></span>
+
+    ```vb
+    Public Sub CreateTimer()
+       Dim timerKeepTrack As New System.Windows.Forms.Timer
+       timerKeepTrack.Interval = 1000
+    End Sub
+    ```
+
+    ```csharp
+    public void createTimer()
+    {
+       System.Windows.Forms.Timer timerKeepTrack = new
+           System.Windows.Forms.Timer();
+       timerKeepTrack.Interval = 1000;
+    }
+    ```
+
+    ```cpp
+    public:
+       void createTimer()
+       {
+          System::Windows::Forms::Timer^ timerKeepTrack = gcnew
+             System::Windows::Forms::Timer();
+          timerKeepTrack->Interval = 1000;
+       }
+    ```
+
+    > [!IMPORTANT]
+    > <span data-ttu-id="6634e-125">Yerel bir güvenlik riski ağ üzerinden bilgisayarınıza kötü amaçlı bir UserControl başvurarak doğurabilir.</span><span class="sxs-lookup"><span data-stu-id="6634e-125">You might expose your local computer to a security risk through the network by referencing a malicious UserControl.</span></span> <span data-ttu-id="6634e-126">Bu, yalnızca, yanlışlıkla bunu projenize ekleyerek ardından zararlı olabilecek özel bir denetim oluşturulamaz kötü amaçlı bir kişinin söz konusu olduğunda önemli hale gelir.</span><span class="sxs-lookup"><span data-stu-id="6634e-126">This would only be a concern in the case of a malicious person creating a damaging custom control, followed by you mistakenly adding it to your project.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="6634e-127">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6634e-127">See also</span></span>
+
+- [<span data-ttu-id="6634e-128">Windows Forms Denetimleri</span><span class="sxs-lookup"><span data-stu-id="6634e-128">Windows Forms Controls</span></span>](index.md)
+- [<span data-ttu-id="6634e-129">Nasıl yapılır: Windows Forms'a denetimler ekleme</span><span class="sxs-lookup"><span data-stu-id="6634e-129">How to: Add Controls to Windows Forms</span></span>](how-to-add-controls-to-windows-forms.md)
+- [<span data-ttu-id="6634e-130">Nasıl yapılır: Windows Forms'a ActiveX denetimleri ekleme</span><span class="sxs-lookup"><span data-stu-id="6634e-130">How to: Add ActiveX Controls to Windows Forms</span></span>](how-to-add-activex-controls-to-windows-forms.md)
+- [<span data-ttu-id="6634e-131">Nasıl yapılır: Windows Forms arasında denetimleri kopyalama</span><span class="sxs-lookup"><span data-stu-id="6634e-131">How to: Copy Controls Between Windows Forms</span></span>](how-to-copy-controls-between-windows-forms.md)
+- [<span data-ttu-id="6634e-132">Windows Forms’a Denetimler Yerleştirme</span><span class="sxs-lookup"><span data-stu-id="6634e-132">Putting Controls on Windows Forms</span></span>](putting-controls-on-windows-forms.md)
+- [<span data-ttu-id="6634e-133">Ayrı Windows Forms Denetimlerini Etiketleme ve Kısayollarını Sunma</span><span class="sxs-lookup"><span data-stu-id="6634e-133">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [<span data-ttu-id="6634e-134">Windows Forms'da Kullanılacak Denetimler</span><span class="sxs-lookup"><span data-stu-id="6634e-134">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="6634e-135">İşleve Göre Windows Forms Denetimleri</span><span class="sxs-lookup"><span data-stu-id="6634e-135">Windows Forms Controls by Function</span></span>](windows-forms-controls-by-function.md)
