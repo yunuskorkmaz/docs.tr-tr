@@ -2,12 +2,12 @@
 title: Hizmet Hata Ayıklama Davranışı
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
-ms.openlocfilehash: bfed164093e10c070b24832cf5a3be362ad3bc56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2f2eefb01e66efddea05116f640a60defe78de1b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007922"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664714"
 ---
 # <a name="service-debug-behavior"></a>Hizmet Hata Ayıklama Davranışı
 Bu örnek, hizmet hata ayıklama davranışı ayarları nasıl yapılandırılabileceğini göstermektedir. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), uygulayan `ICalculator` hizmet sözleşmesi. Bu örnek, hizmet hata ayıklama davranışı yapılandırma dosyasında açıkça tanımlar. Bunu de kesin kod içinde yapılabilir.  

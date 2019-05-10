@@ -2,12 +2,12 @@
 title: İleti Kuyruğa Alma Yükleme (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 64736f8f0a34a53658dd2838738a3d36b3891d2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 813de350c3fd32bb4698384d6b770af8a0913739
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954953"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648339"
 ---
 # <a name="installing-message-queuing-msmq"></a>İleti Kuyruğa Alma Yükleme (MSMQ)
 Aşağıdaki yordamlar, Message Queuing 4.0 ve Message Queuing 3.0 nasıl yükleneceğini gösterir.  

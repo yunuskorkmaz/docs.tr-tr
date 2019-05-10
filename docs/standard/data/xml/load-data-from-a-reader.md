@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 55756092f086de47c4b2acb8f147ca3ab231abe1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e4b789a23b790757ce2dfaa82b6eaec7fdaf3cb3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650212"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647876"
 ---
 # <a name="load-data-from-a-reader"></a>Okuyucudan Veri Yükleme
 Bir XML belgesi kullanarak yüklü ise <xref:System.Xml.XmlDocument.Load%2A> yöntemi ve parametre olarak bir <xref:System.Xml.XmlReader>, diğer biçimlerinden veri yükleme davranışını karşılaştırıldığında ortaya çıkan davranış farkları vardır. Okuyucu, başlangıç durumunda ise <xref:System.Xml.XmlDocument.Load%2A> okuyucudan tüm içeriğini tüketir ve XML belge nesne modeli (DOM) tüm verileri okuyucu oluşturur.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40dc7abd8adffef04535f6492be14bf6463ca30d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 01c82f2867097b98b04727592cf72c29712075ba
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017973"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664538"
 ---
 # <a name="when-to-use-generic-collections"></a>Genel Koleksiyonları Ne Zaman Kullanılacağı
 Bir koleksiyon temel türünden türetilmesi ve türe özgü üyeleri uygulamak zorunda kalmadan tür güvenliği avantaj elde edin çünkü genel koleksiyonları kullanarak genellikle önerilir. Genel koleksiyon türleri aynı zamanda genellikle gerçekleştirmek jenerik olmayan koleksiyon türleri ve karşılık gelen daha iyi (ve daha iyi türleri, türetilen temel jenerik olmayan koleksiyon türleri) koleksiyon öğelerine olduğunda değer türleri, genel türler ile olduğundan öğeler kutu gerek yoktur.  

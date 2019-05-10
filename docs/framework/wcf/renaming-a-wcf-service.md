@@ -2,12 +2,12 @@
 title: Bir WCF Hizmetini Yeniden Adlandırma
 ms.date: 03/30/2017
 ms.assetid: 14235a65-b1c5-409d-b6cc-a979acd54bbd
-ms.openlocfilehash: a215523b92757e3bde1dae2e50de22169020e870
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8cb86621972423f55bfa18c60c1d4eb60cacb205
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955148"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651053"
 ---
 # <a name="renaming-a-wcf-service"></a>Bir WCF Hizmetini Yeniden Adlandırma
 Bu konuda, bir Windows Communication Foundation (WCF) hizmeti nasıl yeniden adlandırabilirsiniz açıklanmaktadır.  

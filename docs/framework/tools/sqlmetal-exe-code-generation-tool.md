@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 80e0bcd341f9059fc6787756f8e743aedc5dc43e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e91859d4aa6e30877bfdae5da9063a1e2a6b3b44
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61919808"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647259"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Kod Üretme Aracı)
 SqlMetal komut satırı aracı için kod ve eşleme üretir [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] bileşeninin [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Bu konunun ilerisinde görünen seçenekleri uygulayarak, SqlMetal'den aşağıdakileri içeren çeşitli farklı eylemler gerçekleştirmesini isteyebilirsiniz:  

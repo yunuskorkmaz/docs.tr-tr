@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 469074336c8aa49fee1acf871360f8dbc1363247
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 124e8a0dff18f02c178b56167cd12faa1fc97992
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914166"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649406"
 ---
 # <a name="how-to-create-windows-services"></a>Nasıl yapılır: Windows Hizmetleri Oluşturma
 Bir hizmet oluşturduğu zaman, adlı bir Visual Studio Proje şablonu kullanabilirsiniz **Windows hizmeti**. Bu şablon otomatik olarak işin çoğunu sizin için uygun sınıf ve ad alanları, hizmetler için bir temel sınıftan devralmayı ayarlama başvurarak yapar ve birkaç yöntemleri geçersiz kılan, geçersiz kılmak istediğiniz kullanılma olasılığı.  

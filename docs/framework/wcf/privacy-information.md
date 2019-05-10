@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: e506908299109f94be6d190017b381fe7b4ee044
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: aaa12ca65257be2f06c84f8ff3be926ea92b0dbb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033000"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651065"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation Gizlilik Bilgileri
 Microsoft, son kullanıcılar gizlilik korumayı taahhüt eder. Sürüm 3.0, Windows Communication Foundation (WCF) kullanarak bir uygulamayı derlerken, uygulamanızı kullanıcılarınıza gizlilik etkileyebilir. Örneğin, uygulamanızın açıkça kullanıcı bilgilerini toplayabilir veya istek veya Web sitenize Internet üzerinden bilgi göndermek olabilir. Uygulamanızda Microsoft teknolojisini eklemek, bu teknoloji gizlilik etkileyebilecek kendi davranışını olabilir. Sizin veya son kullanıcı seçmediğiniz sürece farklı bize göndermek WCF bilgileri Microsoft'a uygulamanızdan göndermez.  

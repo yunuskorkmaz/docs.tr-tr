@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16fc9b24c91ba8d8a55596335d03f8fadf47910e
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
-ms.translationtype: HT
+ms.openlocfilehash: b0e34785fce3cd88bfe4fe4b075ba34b8d22bff4
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910689"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469644"
 ---
 # <a name="how-to-create-com-wrappers"></a>Nasıl yapılır: COM Sarmalayıcıları Oluşturma
 
@@ -38,7 +38,7 @@ Visual Studio 2005'te, projenize bir başvuru olarak COM sarmalayıcı ekleyebil
 
      İçinde **Çözüm Gezgini**, projenizi başvurular klasörüne COM bileşeninin eklendiğine dikkat edin.
 
-Artık, COM nesnesi erişmek için kod yazabilirsiniz. Nesne gibi ile bildirerek başlayın bir `Imports` bildirimi [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] veya `Using` bildirimi [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)].
+Artık, COM nesnesi erişmek için kod yazabilirsiniz. Nesne gibi ile bildirerek başlayın bir `Imports` Visual Basic için ifade veya `Using` bildirimi C#.
 
 > [!NOTE]
 > Program için Microsoft Office bileşenleri istiyorsanız, önce yükleme [Microsoft Office birincil birlikte çalışma derlemeleri](https://go.microsoft.com/fwlink/?LinkId=50479) (PIA) gelen Microsoft Download Center. 4. adımda Nesne Kitaplığı gibi yüklemek istediğiniz Office ürün için kullanılabilen en son sürümünü seçin **Microsoft Word 11.0 Nesne Kitaplığı**.  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 48a2609a1931e55d24d98cd2b336fc16c520c948
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864350"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649644"
 ---
 # <a name="extension-methods-visual-basic"></a>Uzantı Yöntemleri (Visual Basic)
 Genişletme yöntemleri, geliştiricilerin zaten yeni bir türetilmiş tür oluşturmadan tanımlanan veri türlerine özel işlevsellik eklemek sağlar. Genişletme yöntemleri mevcut türü bir örnek yöntemi gibi çağrılabilen bir yöntem yazmaktır mümkün kılar.  

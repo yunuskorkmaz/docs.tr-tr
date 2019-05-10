@@ -2,12 +2,12 @@
 title: Disk belleği (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: ba4f334d-03e5-4a7b-9d42-628f4639b9a2
-ms.openlocfilehash: dd6653c00c72697fa5e8ae896968ec2a9f09ae82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dcde0b74bb3ec845dba4ddfe0a5e389e46bd1c8a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760226"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641760"
 ---
 # <a name="paging-entity-sql"></a>Disk belleği (varlık SQL)
 Fiziksel disk belleği kullanarak gerçekleştirilebilir [atla](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) ve [sınırı](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) alt yan tümceleri içinde [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) yan tümcesi. Belirleyici fiziksel disk belleği gerçekleştirmek için atla ve sınırı kullanmanız gerekir. Yalnızca sonuç satır sayısı bir belirleyici olmayan şekilde kısıtlamak istiyorsanız, kullanması gereken [üst](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md). TOP ve SKIP/LIMIT birbirini dışlar.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ink data [WPF], adding custom data
 - InkCanvas [WPF], displaying
 ms.assetid: f02aac6f-3436-4f7c-b6ea-0452cba5332c
-ms.openlocfilehash: c524e30943a21426e2e5e8fe6ae009999924fead
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7c59a205df5358daec101339cc6a308c8e38a9d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777058"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64640863"
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>Nasıl yapılır: Mürekkep Verisine Özel Veri Ekleme
 Mürekkep mürekkep seri hale getirilmiş biçimi (ISF) kaydedildiğinde, kaydedilecek mürekkep özel veri ekleyebilirsiniz.  Özel verileri kaydedebilirsiniz <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection>, veya <xref:System.Windows.Ink.Stroke>.  Üç nesneler üzerinde özel veri kaydedebilme verileri kaydetmek için en iyi yeri karar verme olanağı sağlar.  Üç özel verilere erişmek ve depolamak için benzer yöntemler kullanın.  

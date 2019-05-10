@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: ca6b028ef20095d6faeb125151772eedf1500fa0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5ceda5b9c89fdd1770c6573b132c449997fb62b7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038733"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638627"
 ---
 # <a name="internet-unsecured-client-and-service"></a>İnternet Güvenli Olmayan Hizmet ve İstemci
 Aşağıdaki çizimde, bir genel, güvenli olmayan Windows Communication Foundation (WCF) istemci ve hizmet örneği gösterilmektedir:  
@@ -19,7 +19,7 @@ Aşağıdaki çizimde, bir genel, güvenli olmayan Windows Communication Foundat
   
 |Özelliği|Açıklama|  
 |--------------------|-----------------|  
-|Güvenlik modu|None|  
+|Güvenlik modu|Yok.|  
 |Taşıma|HTTP|  
 |Bağlama|<xref:System.ServiceModel.BasicHttpBinding> kodda veya [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) yapılandırma öğesi.|  
 |Birlikte Çalışabilirlik|Mevcut Web hizmeti istemcileri ve Hizmetleri ile|  

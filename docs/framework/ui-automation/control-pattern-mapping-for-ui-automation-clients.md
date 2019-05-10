@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: 829df66f49d5df5f5c8cf8d2b6cfa74f0a2172dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 78274e2a5597291adcdafccf759b826f54a264ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609899"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647194"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI Otomasyon İstemcileri İçin Denetim Düzeni Eşleştirmesi
 > [!NOTE]
@@ -34,41 +34,41 @@ ms.locfileid: "61609899"
   
 |Denetim türü|Desteklenir|Koşullu destek|Desteklenmez|  
 |------------------|---------------|-------------------------|-------------------|  
-|Düğme|Yok.|Çağırma, Değiştir, Genişlet ve Daralt|Yok.|  
+|Düğme|None|Çağırma, Değiştir, Genişlet ve Daralt|Yok.|  
 |Takvim|Kılavuz, tablo|Seçim, kaydırma|Değer|  
-|Onay kutusu|İki Durumlu Düğme|Yok.|None|  
+|Onay kutusu|İki Durumlu Düğme|Yok.|Yok.|  
 |Birleşik Giriş Kutusu|Genişlet ve Daralt|Seçim, değer|Kaydırma|  
-|Veri Kılavuzu|Kılavuz|Kaydır, seçimi, tablo|Yok.|  
-|Veri Öğesi|Seçim Öğesi|Daraltma, kılavuz öğesi, kaydırma öğesi, tablo, geçiş, değer'ı genişletin.|Yok.|  
-|Belge|Metin|Kaydırma, değer|Yok.|  
-|Düzenle|Yok.|Aralık değeri, bir metin değeri|Yok.|  
-|Grup|Yok.|Genişlet ve Daralt|Yok.|  
-|Üstbilgi|Yok.|Dönüştürme|Yok.|  
+|Veri Kılavuzu|Kılavuz|Kaydır, seçimi, tablo|None|  
+|Veri Öğesi|Seçim Öğesi|Daraltma, kılavuz öğesi, kaydırma öğesi, tablo, geçiş, değer'ı genişletin.|None|  
+|Belge|Metin|Kaydırma, değer|None|  
+|Düzenle|None|Aralık değeri, bir metin değeri|Yok.|  
+|Grup|None|Genişlet ve Daralt|Yok.|  
+|Üstbilgi|Yok.|Dönüştürme|None|  
 |Üstbilgi Öğesi|None|Dönüştürme, çağırma|Yok.|  
 |Köprü|Çağır|Değer|Yok.|  
 |Görüntü|Yok.|Kılavuz öğesi, Tablo öğesi|Seçim öğesi çağırma|  
 |List|Yok.|Kılavuz, birden çok görünüm Kaydır, seçimi|Tablo|  
-|Liste öğesi|Seçim Öğesi|Genişlet ve Daralt, kılavuz öğesi çağırmak, kaydırma öğesi, Değiştir, değer|Yok.|  
-|Menü|None|Yok.|None|  
-|Menü Çubuğu|None|Dönüştürme Daralt, Dock'ı genişletin|Yok.|  
-|Menü Öğesi|None|Genişlet ve Daralt, seçim öğesi geçiş çağırma|Yok.|  
-|Bölme|None|Dock. Kaydırma, dönüştürme|Pencere|  
-|İlerleme Çubuğu|Yok.|Aralık değeri|None|  
-|Radyo Düğmesi|Seçim Öğesi|Yok.|İki Durumlu Düğme|  
-|Kaydırma Çubuğu|Yok.|Aralık Değeri|Kaydırma|  
-|Ayırıcı|Yok.|Yok.|Yok.|  
+|Liste öğesi|Seçim Öğesi|Genişlet ve Daralt, kılavuz öğesi çağırmak, kaydırma öğesi, Değiştir, değer|None|  
+|Menü|Yok.|Yok.|Yok.|  
+|Menü Çubuğu|Yok.|Dönüştürme Daralt, Dock'ı genişletin|Yok.|  
+|Menü Öğesi|Yok.|Genişlet ve Daralt, seçim öğesi geçiş çağırma|None|  
+|Bölme|Yok.|Dock. Kaydırma, dönüştürme|Pencere|  
+|İlerleme Çubuğu|None|Aralık değeri|Yok.|  
+|Radyo Düğmesi|Seçim Öğesi|None|İki Durumlu Düğme|  
+|Kaydırma Çubuğu|None|Aralık Değeri|Kaydırma|  
+|Ayırıcı|Yok.|Yok.|None|  
 |Kaydırıcı|None|Aralık değeri, seçim, değeri|Yok.|  
-|Değer Değiştirici|None|Aralık değeri, seçim, değeri|Yok.|  
+|Değer Değiştirici|Yok.|Aralık değeri, seçim, değeri|Yok.|  
 |Bölünmüş Düğme|Çağırma, Genişlet ve Daralt|None|None|  
-|Durum Çubuğu|None|Kılavuz|None|  
+|Durum Çubuğu|Yok.|Kılavuz|None|  
 |Tab|Seçim|Kaydırma|Yok.|  
 |Sekme Öğesi|Seçim Öğesi|Yok.|Çağır|  
 |Tablo|Kılavuz, kılavuz öğesi, tablo, Tablo öğesi|Yok.|Yok.|  
-|Metin|None|Kılavuz öğesi, Tablo öğesi metni|Değer|  
-|Parmak|Dönüştürme|Yok.|Yok.|  
-|Başlık Çubuğu|None|Yok.|Yok.|  
-|Araç çubuğu|None|Yerleştirme, genişletme daraltma, dönüştürme|None|  
-|Araç İpucu|None|Pencere metni|Yok.|  
+|Metin|Yok.|Kılavuz öğesi, Tablo öğesi metni|Değer|  
+|Parmak|Dönüştürme|None|Yok.|  
+|Başlık Çubuğu|Yok.|Yok.|None|  
+|Araç çubuğu|Yok.|Yerleştirme, genişletme daraltma, dönüştürme|None|  
+|Araç İpucu|None|Pencere metni|None|  
 |Ağaç|Yok.|Kaydır, seçimi|Yok.|  
 |Ağaç Öğesi|Genişlet ve Daralt|Kaydırma öğesi seçim öğesi, geçiş çağırma|None|  
 |Pencere|Dönüştürme, penceresi|Dock|Yok.|  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: aa045dd5454819a37ad81c76d97fd3e61e7d0420
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4577609c78271ac91e011b20ef6a8b4066072428
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864320"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649667"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Otomatik Uygulanan Özellikler (Visual Basic)
 *Otomatik uygulanan Özellikler* hızlı bir şekilde kod yazmak zorunda kalmadan bir sınıfın bir özelliği belirtmenize olanak verir `Get` ve `Set` özelliği. Otomatik uygulanan bir özellik için kod yazdığınızda, Visual Basic Derleyicisi ilişkili oluşturmaya ek olarak özellik değişkeni depolamak için özel bir alan otomatik olarak oluşturur. `Get` ve `Set` yordamları.  

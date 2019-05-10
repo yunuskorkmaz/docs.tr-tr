@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Selection Item control pattern
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
-ms.openlocfilehash: 00a2dae818091c20649deae79c093a61b6e93732
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b1d5a0b11510a123d5fbebd656c1fdcd338870e7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61983261"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649484"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>UI Otomasyon SelectionItem Denetim Düzeni Uygulama
 > [!NOTE]
@@ -34,8 +34,8 @@ ms.locfileid: "61983261"
 |Gerekli üyeleri|Üye türü|Notlar|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Özellik|Yok.|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Özellik|None|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Yöntem|None|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Yöntem|Yok.|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Olay|Bir kapsayıcı seçim önemli ölçüde değişti ve daha fazla gönderilmesi gerekir harekete geçirilen <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> ve <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> olayı <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> sabiti izin verir.|  
   
 - Sonucu bir <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>e <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>, veya bir <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> tek bir seçili öğe bir <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> oluşmalıdır; Aksi takdirde Gönder <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent> /  <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> uygun şekilde.  

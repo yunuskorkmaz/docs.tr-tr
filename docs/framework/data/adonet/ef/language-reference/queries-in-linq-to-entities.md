@@ -2,12 +2,12 @@
 title: LINQ to Entities Sorguları
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: 0e005939c8168606c7f58467f11115666cf1ef24
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d9aeb90fa62b859c45094c28ca72ae5b4b48db5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760265"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641496"
 ---
 # <a name="queries-in-linq-to-entities"></a>LINQ to Entities Sorguları
 Bir sorgu, verileri bir veri kaynağından alır bir ifadedir. Sorgular genellikle ilişkisel veritabanları için SQL ve XML için XQuery gibi bir özel sorgu dilinde ifade edilir. Bu nedenle, geliştiriciler, her veri kaynağı veya veri biçimi, bunlar sorgu türü için yeni bir sorgu dili öğrenmek zorunda kalmışlardır. Dil ile tümleşik sorgu (LINQ), çeşitli veri kaynakları ve biçimler arasında verilerle çalışmak için daha basit ve tutarlı bir modeli sunar. Bir LINQ Sorgu her zaman nesneleri programlama ile çalışırsınız.  

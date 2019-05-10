@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], font styles
 - data grids [Windows Forms], color styles
 ms.assetid: 588f2c57-d963-41b1-9c1d-d02d71818113
-ms.openlocfilehash: 737a4b943125245a2916bbf6b24b8abdffa8e371
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ad2426ed9643fd46927c4f8b6373fedbec372d38
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912905"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638102"
 ---
 # <a name="how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Yazı Tipi ve Renk Stillerini Ayarlama
 Hücreleri görsel görünümünü belirtebilirsiniz bir <xref:System.Windows.Forms.DataGridView> denetim özelliklerini ayarlayarak <xref:System.Windows.Forms.DataGridViewCellStyle> sınıfı. Bu sınıfın örnekleri çeşitli özelliklerinden alabilirsiniz <xref:System.Windows.Forms.DataGridView> sınıf ve bunun yardımcı sınıfları veya örneği <xref:System.Windows.Forms.DataGridViewCellStyle> atama bu özellikler için nesneleri.  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: a974df5d2305b88946981d0d258a8088b23d3fc3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 91bde92e2184c90b14838a09a89a6d261447f139
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766616"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662606"
 ---
 # <a name="xml-comment-exception-must-have-a-cref-attribute"></a>XML açıklama özel durumunda 'cref' özniteliği olmalıdır
 \<Özel durum > etiketi yöntemi tarafından oluşturulan özel durumları belge için bir yol sağlar. Gerekli `cref` öznitelik belgeleri Oluşturucu tarafından denetlenir bir üyenin adını belirtir. Üye varsa, kurallı öğe adı belgeleri dosyasına çevrilir.  

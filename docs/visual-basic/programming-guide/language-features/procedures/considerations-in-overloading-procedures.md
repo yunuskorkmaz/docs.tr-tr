@@ -25,12 +25,12 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: f14cc28960af28530bda9a78c1309dea10c18b8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b5a26a8b68a2f786213aa49f30247d692b3de2f7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864357"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649655"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Yordamları Aşırı Yüklemeye İlişkin Düşünceler (Visual Basic)
 Bir yordamı aşırı yükleme, farklı bir kullanmalısınız *imza* aşırı yüklü her sürüm için. Bu, genellikle her sürüm başka bir parametre listesi belirtmelisiniz anlamına gelir. Daha fazla bilgi için bkz: "Farklı imza" [yordam aşırı yüklemesi](./procedure-overloading.md).  

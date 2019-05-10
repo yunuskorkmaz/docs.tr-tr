@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 053df7eeba10938f1d1d749e856f64d179d471d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811514"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664672"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Normal İfade Dili - Hızlı Başvuru
  Normal bir ifade, normal ifade motorunun giriş metninde eşleştirmeyi denediği bir desendir. Bir desen, bir veya daha çok karakter sabitinden, işleçlerden veya yapılardan oluşur.  Kısa bir giriş için bkz. [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md).  
