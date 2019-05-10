@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e053a04ba0587a4eca166fa710bc465094feca80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b352c35a327ed4736a1f41816d3f15c1a0f559f5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62015130"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644815"
 ---
 # <a name="managed-threading-basics"></a>Yönetilen iş parçacığı oluşturma temelleri
 
@@ -42,9 +42,6 @@ Bu bölümün ilk beş konular, yönetilen iş parçacığı kullanılacağını
   
  [Windows'ta Yönetilen ve Yönetilmeyen İş Parçacığı Oluşturma](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
  Yönetilen ve yönetilmeyen iş parçacığı oluşturma arasındaki ilişkiyi açıklar, Windows API iş parçacığı için yönetilen eşdeğerlerini listeler ve COM apartmanlar ve yönetilen iş parçacıklarını etkileşimi açıklanır.  
-  
- [Thread.Suspend, Atık Toplama ve Güvenli Noktalar](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
- İş parçacığını askıya alma ve atık toplama açıklar.  
   
  [İş parçacığı yerel deposu: İş parçacığı göreli statik alanları ve veri yuvaları](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  İş parçacığı göreli depolama mekanizmalarını açıklar.  

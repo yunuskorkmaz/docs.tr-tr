@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc4d8fdc39153f227e8344ea1da52a0dba2688d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bd0611cc8a6d257192b389b023c4dcda8f1b7ec3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955967"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634417"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Normal İfade Davranışının Ayrıntıları
 .NET Framework normal ifade altyapısı, Perl, Python, Emacs ve Ukazovat tarafından kullanılan gibi geleneksel bir belirleyici olmayan sonlu Otomasyon (NFA) altyapısı içeren bir geri izlemenin normal ifade Eşleştiricisi ' dir. Bu ondan daha hızlı, ancak daha sınırlı, saf normal ifade belirleyici sonlu Otomasyon (DFA) alt awk, egrep veya lex bulunanlar gibi ayırır. Bu ayrıca, standart, ancak daha yavaş ayıran POSIX NFAs. Aşağıdaki bölümde üç normal ifade altyapısı ve geleneksel bir NFA Altyapısı'nı kullanarak .NET Framework normal ifadelerinde neden uygulanan açıklanmaktadır.  

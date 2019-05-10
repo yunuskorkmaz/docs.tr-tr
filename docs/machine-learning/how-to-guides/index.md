@@ -1,16 +1,16 @@
 ---
-title: .NET makine öğrenimi nasıl yapılır kılavuzlarından - ML.NET
+title: ML.NET nasıl yapılır kılavuzları
 description: Özel yapay ZEKA çözümleri oluşturma ve Machine Learning .NET uygulamalarınızı tümleştirmeye yardımcı olmak üzere belirli görevlerin nasıl yapılacağını öğrenin.
 ms.custom: seodec18
 ms.date: 03/01/2019
-ms.openlocfilehash: c8d1258629f777cd8bced47e4b956c9cf100a682
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 83188e65ccd02e6928cb4b87577105a75ee96245
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650407"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649142"
 ---
-# <a name="net-machine-learning-how-to-guides---mlnet"></a>.NET makine öğrenimi nasıl yapılır kılavuzlarından - ML.NET
+# <a name="net-machine-learning-how-to-guides"></a>.NET makine öğrenimi ile ilgili nasıl yapılır kılavuzları 
 
 ML.NET Kılavuzu bölümüne nasıl hızlı sık sorulan soruların yanıtlarını bulabilirsiniz. Bazı durumlarda, makaleler bulmayı kolaylaştırmak için birden çok bölümlerinde listelenen.
 

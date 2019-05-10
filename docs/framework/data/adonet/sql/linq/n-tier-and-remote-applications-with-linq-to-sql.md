@@ -2,12 +2,12 @@
 title: LINQ to SQL ile N Katmanı ve Uzak Uygulamalar
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
-ms.openlocfilehash: 7741368896b0bf5a2508d9b727fad386cce6177d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 31f06fd5e840c51c0133d22078d79cd4f945c369
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794504"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660912"
 ---
 # <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>LINQ to SQL ile N Katmanı ve Uzak Uygulamalar
 Kullanan n katmanlı veya çok katmanlı uygulamaları oluşturabileceğiniz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Genellikle, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veri bağlamı, varlık sınıfları ve sorgu oluşturma mantığı bulunur Orta katmanda veri erişim katmanı (DAL). İş mantığı ve kalıcı olmayan herhangi bir veri tamamen kısmi sınıflar ve yöntemler varlıkları ve veri bağlamı uygulanabilir veya ayrı sınıflarda uygulanabilir.

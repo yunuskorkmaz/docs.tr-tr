@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: aeb14bddf98adf53a52c8897994bd0fb6fa498ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bb486dc210bc2d03be6400e9fe5c80b2a7c1de8e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61983482"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659863"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>UI Otomasyon RangeValue Denetim Düzeni Uygulama
 > [!NOTE]
@@ -37,12 +37,12 @@ Değerin türü tamsayı ve Minimum ve maksimum özellik değerlerini olduğu bi
   
 |Gerekli üye|Üye türü|Notlar|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Özellik|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Özellik|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Özellik|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Özellik|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Özellik|Yok.|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Özellik|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Özellik|None|  
 |<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Yöntemler|Yok.|  
   
  Bu denetim düzeni, ilişkili olay vardır.  
