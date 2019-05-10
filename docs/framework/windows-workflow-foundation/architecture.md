@@ -2,12 +2,12 @@
 title: Windows Workflow Mimarisi
 ms.date: 03/30/2017
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
-ms.openlocfilehash: 5d6e1ead9184bfb61eb466389671ca2e74264ae3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d341ebd354d5324c5ad71436837cb85737f46c08
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945931"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64605890"
 ---
 # <a name="windows-workflow-architecture"></a>Windows Workflow Mimarisi
 Windows Workflow Foundation (WF) etkileşimli uzun süre çalışan uygulamalar geliştirmek için Özet düzeyine başlatır. İş birimleri etkinlikleri kapsüllenir. Etkinlikleri olanakları sağlayan akış denetimi, özel durum işleme, hata yayma, durumu verilerini, yüklenmesi ve kaldırılması bellek, izleme ve işlem akışı devam eden iş akışı kalıcılığı için bir ortamda çalıştırın.  

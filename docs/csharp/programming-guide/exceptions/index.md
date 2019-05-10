@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: dfbdcf29e0fc003f9478e6f691957b67574d5233
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 34357ac313e20c5bab5505984f92ea06df80a5c2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680669"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595410"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Özel Durumlar ve Özel Durum İşleme (C# Programlama Kılavuzu)
 C# dil özel durum özelliklerin help işleme ile bir program çalışırken oluşan beklenmeyen veya olağanüstü durumlara ilgilenir. Özel durum işleme kullanan `try`, `catch`, ve `finally` başarılı olmayabilir eylemleri denemek için bunu yapmak için ve daha sonra kaynakları temizlemek için makul karar verdiğinizde, hataları işlemek için anahtar sözcükler. Özel durumlar, .NET Framework veya herhangi bir üçüncü taraf kitaplıklar tarafından veya uygulama kodu tarafından ortak dil çalışma zamanı tarafından (CLR) oluşturulabilir. Özel durumlar kullanılarak oluşturulan `throw` anahtar sözcüğü.  

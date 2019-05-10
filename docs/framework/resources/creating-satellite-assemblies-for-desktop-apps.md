@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1aecd8e6dcec73ba4dc45d4bf8f365503888687e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 843b61257229bb3bf8c3852554f19c34dccc7496
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793059"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592356"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Masaüstü Uygulamaları için Uydu Derlemeleri Oluşturma
 Kaynak dosyaları, yerelleştirilmiş uygulamalar olarak merkezi bir rol oynar. Bunlar, bir uygulama kullanıcının kendi dil ve kültür dizeler, görüntüler ve diğer verileri görüntüler ve kullanıcının kendi dil veya kültür için kaynaklar kullanılamıyorsa, alternatif veri sağlamak için etkinleştirin. .NET Framework, bulun ve yerelleştirilmiş kaynakları almak için bir hub-and-spoke modelini kullanır. Yerelleştirilemeyen yürütülebilir kod ve nötr olarak adlandırılan tek bir kültür için kaynakları içeren ana derleme hub'ı olan veya varsayılan kültür. Geri dönüş kültürü uygulamanın varsayılan kültürüdür; hiçbir yerelleştirilmiş kaynaklar kullanılabilir olduğunda kullanılır. Kullandığınız <xref:System.Resources.NeutralResourcesLanguageAttribute> kültürü uygulamanın varsayılan kültürünü belirtmek için özniteliği. Her bir uçtaki tek bir yerelleştirilmiş kültür için kaynaklar içeriyor ancak hiçbir kod içermiyor bir uydu derlemeye bağlanır. Uydu derlemeleri ana derlemenin parçası olmadığından, kolayca güncelleştirmek veya uygulamanın ana derlemesini değiştirmeden belirli bir kültüre karşılık gelen kaynakları değiştirin.  

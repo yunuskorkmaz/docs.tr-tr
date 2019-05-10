@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 78fc498b0689026fb74ec0c422948c1879495560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9cff13cabb0cd496ee4e628664e4b92bd9e60808
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954830"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063730"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Nasıl yapılır: Tek Bir Rengi Dönüştürmek için Renk Matrisi Kullanma
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sağlar <xref:System.Drawing.Image> ve <xref:System.Drawing.Bitmap> depolamak ve bu görüntüleri düzenleme için sınıflar. <xref:System.Drawing.Image> ve <xref:System.Drawing.Bitmap> 32 bit bir sayı nesneleri depolamak her piksel rengi: 8 bitlik her kırmızı, yeşil, mavi ve alfa için. Her biri dört bileşen, 0 ile hiçbir yoğunluğu ve tam bir yoğunluğu temsil eden 255 temsil eden 0 ile 255 arasında bir sayıdır. Alfa bileşeni rengini, saydamlığını belirtir: 0 tamamen saydamdır ve tam opak 255'tir.  
@@ -32,13 +32,13 @@ ms.locfileid: "61954830"
   
  Aşağıdaki matris çarpım dönüşümleri çiftinin listelenen sırayla gerçekleştirir.  
   
- ![Yeniden renklendirme](./media/recoloring01.gif "recoloring01")  
+ ![Bir dönüştürme çarpma matrisi ekran görüntüsü.](./media/how-to-use-a-color-matrix-to-transform-a-single-color/multiplication-color-matrix.gif)
   
  Renk Matrisi öğelerini (sıfır tabanlı) satır ve ardından sütun tarafından dizine eklenir. Örneğin, üçüncü sütunda matris M ve beşinci satır girişi M [4] [2] belirtilir.  
   
  5 × 5 kimlik matrisi (aşağıda gösterilmiştir) üzerinde çapraz 1s ve her yerde başka 0s sahiptir. Bir renk vektör tarafından kimlik matrisi çarpın, renk vektör değiştirmez. Bir renk dönüştürme matrisini oluşturmak için bir kimlik matris başlatmak ve istenen dönüşümü üretir küçük bir değişiklik yapmak için yoludur.  
   
- ![Yeniden renklendirme](./media/recoloring02.gif "recoloring02")  
+ ![5 x 5 kimlik matrisi renk dönüştürme için ekran görüntüsü.](./media/how-to-use-a-color-matrix-to-transform-a-single-color/5x5-identity-matrix-color-transformation.gif)  
   
  Matrisler ve dönüşümleri daha ayrıntılı bir açıklaması için bkz. [koordinat sistemleri ve dönüştürmeler](coordinate-systems-and-transformations.md).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "61954830"
   
  Aşağıdaki çizimde, sol taraftaki özgün görüntü ve dönüştürülen görüntü sağ tarafta gösterir.  
   
- ![Renkleri](./media/colortrans1.png "colortrans1")  
+ ![Sol ve sağ taraftaki Fuşya kare mor bir kare.](./media/how-to-use-a-color-matrix-to-transform-a-single-color/color-transformation.png)  
   
  Aşağıdaki örnek kodda, yeniden renklendirme gerçekleştirmek için aşağıdaki adımları kullanır:  
   

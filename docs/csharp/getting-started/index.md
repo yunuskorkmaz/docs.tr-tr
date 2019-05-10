@@ -8,16 +8,16 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 5c502c3832ca9afc30599d47d0890fae168fa998
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c97a5b843d27258f58d654d35420a262d5b741a
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668958"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062963"
 ---
 # <a name="get-started-with-c"></a>C ile çalışmaya başlama\#
 
-Bu bölümde kısa, hızlı bir şekilde olanak tanıyan basit öğreticiler C# ve .NET Core kullanarak uygulama oluşturun. Visual Studio 2017 ve Visual Studio Code için başlangıç konuları var. hazırlanıyoruz. Bu makaleler, bazı bir programlama deneyimi varsayılır. Kullandığınız programlama için yeni çalışırsanız bizim [giriş C# ](../tutorials/intro-to-csharp/index.md) etkileşimli öğreticiler.
+Bu bölümde kısa, hızlı bir şekilde olanak tanıyan basit öğreticiler C# ve .NET Core kullanarak uygulama oluşturun. Visual Studio 2017 ve Visual Studio Code için başlangıç konuları var. hazırlanıyoruz. Bu makaleler, bazı bir programlama deneyimi varsayılır. Programlama konusunda yeniyseniz, deneyin bizim [giriş C# ](../tutorials/intro-to-csharp/index.md) etkileşimli öğreticiler.
 
 Aşağıdaki konular da mevcuttur:
 

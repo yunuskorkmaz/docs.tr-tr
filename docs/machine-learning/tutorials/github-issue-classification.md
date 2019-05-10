@@ -1,39 +1,28 @@
 ---
-title: Bir GitHub sorunu sınıflı sınıflandırma senaryosunda ML.NET kullanın
+title: GitHub sorunları - sınıflı sınıflandırma sınıflandırma
 description: ML.NET bir çok sınıflı sınıflandırma senaryosunda GitHub sorunları için belirli bir alanla atamak sınıflandırmak için nasıl kullanılacağını keşfedin.
-ms.date: 03/12/2019
+ms.date: 05/02/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e25f044247064db26e4e1e74590d6f4970fe4477
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a4122d0cdfe6531275fabf94743882a82f2a13c1
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019132"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063532"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Öğretici: ML.NET bir çok sınıflı sınıflandırma senaryosunda GitHub sorunları sınıflandırmak için kullanın.
 
-Bu örnek öğretici ML.NET kullanarak bir .NET Core konsol uygulaması kullanarak aracılığıyla bir GitHub sorunu sınıflandırıcı oluşturma gösterilmektedir C# Visual Studio 2017'de.
+Bu örnek öğretici ML.NET sınıflandırır ve bir .NET Core konsol uygulaması kullanarak aracılığıyla bir GitHub sorunu alan etiketini tahmin modeli eğitmek için bir GitHub sorunu sınıflandırıcı oluşturma kullanmayı göstermektedir C# Visual Studio'da.
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
-> * Sorunu anlama
-> * Uygun makine öğrenimi algoritması seçin
 > * Verilerinizi hazırlama
 > * Verileri dönüştürme
 > * Modeli eğitme
 > * Modeli değerlendirme
 > * Eğitilen modeli tahmin edin
 > * Dağıtma ve yüklenen modeliyle tahmin edin
-
-> [!NOTE]
-> Bu konu şu anda Önizleme aşamasında olan ML.NET ifade eder ve malzeme değişiklik gösterebilir. Daha fazla bilgi için ziyaret [ML.NET giriş](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
-
-Bu öğretici ve ilgili örnek şu anda kullandığınız **ML.NET sürüm 0.11**. Daha fazla bilgi için bkz: adresindeki sürüm notlarını [dotnet/machinelearning github deposunu](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
-
-## <a name="github-issue-sample-overview"></a>GitHub sorunu örneğine genel bakış
-
-Örnek ML.NET sınıflandırır ve bir GitHub sorunu alan etiketini tahmin eden bir model eğitip için kullanan bir konsol uygulamasıdır. Ayrıca, kalite analizi için ikinci bir veri kümesi modeliyle değerlendirir. Çıkış veri kümeleri dotnet/corefx'te GitHub deposundan ' dir.
 
 Bu öğreticide kaynak kodunu bulabilirsiniz [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) depo.
 
@@ -43,74 +32,6 @@ Bu öğreticide kaynak kodunu bulabilirsiniz [dotnet/samples](https://github.com
 
 * [Github sorunlar sekmeyle dosyası (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv).
 * [Github sorunları sekmeyle dosyası (issues_test.tsv) test](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv).
-
-## <a name="machine-learning-workflow"></a>Machine learning iş akışı
-
-Bu öğreticide, bir makine öğrenimi düzenli bir şekilde taşımak işlem sağlayan bir iş akışı izler.
-
-İş akışı aşamalar aşağıdaki gibidir:
-
-1. **Sorunu anlama**
-2. **Verilerinizi hazırlama**
-   * **Verileri yükleme**
-   * **Özellikler (verilerinizi dönüştürmek) ayıklayın**
-3. **Derleme ve eğitme** 
-   * **Modeli eğitme**
-   * **Modeli değerlendirme**
-4. **Model dağıtma**
-   * **Tahmin modelini kullanın**
-
-### <a name="understand-the-problem"></a>Sorunu anlama
-
-Öncelikle, oluşturmak ve modeli eğitmek destekleyebileceği bölümleri aşağı kesmek için sorunu anlamak gerekir. Problemi parçalamak, tahmin edin ve sonuçları değerlendirin olanak tanır.
-
-Sorun Bu öğretici için hangi alan gelen GitHub sorunları bunları öncelik belirleme ve planlama için doğru etiket için ait öğrenmektir.
-
-İçin aşağıdaki bölümleri problemi bölünebilir:
-
-* sorun başlık metni
-* Sorun açıklaması metni
-* model eğitim verileri için bir alan değeri
-* bir tahmin edilen alan değeri değerlendirmek ve işletimsel olarak kullanın
-
-Ardından gerek **belirlemek** alanı Görev Seçimi öğrenme makineyle yardımcı olur.
-
-## <a name="select-the-appropriate-machine-learning-algorithm"></a>Uygun makine öğrenimi algoritması seçin
-
-Bu sorun aşağıdaki gerçekleri bildirin:
-
-Eğitim verileri:
-
-GitHub sorunları birçok alanda etiketli (**alan**) aşağıdaki örneklerde gösterildiği gibi:
-
-* alan System.Numerics
-* System.Xml alanı
-* alan altyapı
-* alan System.Linq
-* alan System.IO
-
-Tahmin **alan** yeni GitHub sorunu aşağıdaki örneklerde olduğu gibi böyle:
-
-* Debug.Assert Contract.Assert vs
-* System.Xml içinde alanları salt okunur yapın
-
-Sınıflandırma makine öğrenimi algoritmasının bu senaryo için idealdir.
-
-### <a name="about-the-classification-learning-algorithm"></a>Sınıflandırma öğrenme algoritmasını hakkında
-
-Sınıflandırma olan verileri kullanan bir machine learning algoritmasını **belirlemek** kategori, tür veya bir öğe veya veri satırı sınıfı. Örneğin, sınıflandırma için kullanabilirsiniz:
-
-* Artı veya eksi olarak duyguları tanımlayın.
-* E-posta klasörünüzü veya iyi istenmeyen sınıflandırın.
-* Bir hastanın Laboratuvar örnek cancerous olup olmadığını belirler.
-* Müşteriler, kendi eğilimini yanıt satış kampanyaya göre kategorilere ayırın.
-
-Sınıflandırma öğrenme algoritmasını kullanım durumları olan sık aşağıdaki türlerden biri:
-
-* İkili: ya da A veya b
-* Veya çoklu sınıflar: tek bir model kullanarak tahmin edilebilmesi birden çok kategori.
-
-Bu sorun türü için birden çok kategoriden (veya çoklu sınıflar) sorun kategorisi tahmininizde olabileceği algoritması, öğrenme veya çoklu sınıflar sınıflandırması yalnızca iki yerine kullanın (ikili).
 
 ## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 
@@ -128,7 +49,7 @@ Bu sorun türü için birden çok kategoriden (veya çoklu sınıflar) sorun kat
 
 4. Yükleme **Microsoft.ML NuGet paketini**:
 
-    Çözüm Gezgini'nde seçin ve proje üzerinde sağ **NuGet paketlerini Yönet**. Paket kaynağı olarak "nuget.org" seçin, Gözat sekmesini seçin, arama **Microsoft.ML**, bu paket listesinde seçip **yükleme** düğmesi. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** düğmesini **lisans kabulü** iletişim varsa, listelenen paketlerin lisans koşullarını kabul etmiş olursunuz.
+    Çözüm Gezgini'nde seçin ve proje üzerinde sağ **NuGet paketlerini Yönet**. Paket kaynağı olarak "nuget.org" seçin, Gözat sekmesini seçin, arama **Microsoft.ML**seçin **v 1.0.0** paketini listede bulun ve seçin **yükleme** düğmesi. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** düğmesini **lisans kabulü** iletişim varsa, listelenen paketlerin lisans koşullarını kabul etmiş olursunuz.
 
 ### <a name="prepare-your-data"></a>Verilerinizi hazırlama
 
@@ -142,15 +63,14 @@ Aşağıdaki ek ekleyin `using` üst tarafına deyimlerini *Program.cs* dosyası
 
 [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddUsings)]
 
-Yolları kısa bir süre önce indirilen dosyaları ve genel değişkenleri tutmak için üç genel alanlar oluşturmak `MLContext`,`DataView`, `PredictionEngine`, ve `TextLoader`:
+Yolları kısa bir süre önce indirilen dosyaları ve genel değişkenleri tutmak için üç genel alanlar oluşturmak `MLContext`,`DataView`, ve `PredictionEngine`:
 
 * `_trainDataPath` Yolun modeli eğitmek için kullanılan veri kümesine sahiptir.
 * `_testDataPath` Yolun model değerlendirmek için kullanılan veri kümesine sahiptir.
 * `_modelPath` eğitilen modelin kaydedildiği yolu vardır.
 * `_mlContext` olan <xref:Microsoft.ML.MLContext> , işlem bağlamı sağlar.
-* `_trainingDataView` olan <xref:Microsoft.Data.DataView.IDataView> eğitim veri kümesi işlemek için kullanılır.
+* `_trainingDataView` olan <xref:Microsoft.ML.IDataView> eğitim veri kümesi işlemek için kullanılır.
 * `_predEngine` olan <xref:Microsoft.ML.PredictionEngine%602> tek Tahminler elde etmek için kullanılır.
-* `_reader` olan <xref:Microsoft.ML.Data.TextLoader> yüklemek ve veri kümeleri dönüştürmek için kullanılır.
 
 Aşağıdaki kod satırı hemen üstündeki ekleyin `Main` yöntemi bu yollar ve diğer değişkenlerini belirtmek için:
 
@@ -170,16 +90,20 @@ Varolan sınıf tanımına kaldırın ve iki sınıf olan aşağıdaki kodu ekle
 
 [!code-csharp[DeclareGlobalVariables](~/samples/machine-learning/tutorials/GitHubIssueClassification/GitHubIssueData.cs#DeclareTypes)]
 
+`label` Tahmin etmek istediğiniz sütun. Tanımlanan `Features` etiketi tahmin modelini size girişleri.
+
+Kullanım [LoadColumnAttribute](xref:Microsoft.ML.Data.LoadColumnAttribute) veri kümesinde kaynak sütunları dizin belirtmek için.
+
 `GitHubIssue` Giriş veri kümesi sınıfı ve aşağıdaki <xref:System.String> alanlar:
 
-* `ID` GitHub sorun kimliği için bir değer içeriyor
-* `Area` için bir değer içeren `Area` etiketi
-* `Title` GitHub sorunu başlık içerir
-* `Description` GitHub sorun açıklaması içerir
+* İlk sütun `ID` (GitHub sorunu kimliği)
+* ikinci sütunda `Area` (eğitim tahmin)
+* üçüncü sütunda `Title` (GitHub sorun başlığı) sanal makinede ilk `feature` tahmin etmek için kullanılan `Area`
+* Dördüncü sütun `Description` ikinci `feature` tahmin etmek için kullanılan `Area`
 
-`IssuePrediction` eğitilen modelin sonra sınıf tahmin için kullanılır. Tek bir sahip `string` (`Area`) ve bir `PredictedLabel` `ColumnName` özniteliği. `Label` Oluşturup modeli ya da onun da model değerlendirmek için ikinci bir veri kümesi ile kullanılan eğitmek için kullanılır. `PredictedLabel` Tahmin ve değerlendirme sırasında kullanılır. Değerlendirme, bir giriş eğitim verileri, tahmin edilen değerleri ve modeli ile kullanılır.
+`IssuePrediction` eğitilen modelin sonra sınıf tahmin için kullanılır. Tek bir sahip `string` (`Area`) ve bir `PredictedLabel` `ColumnName` özniteliği.  `PredictedLabel` Tahmin ve değerlendirme sırasında kullanılır. Değerlendirme, bir giriş eğitim verileri, tahmin edilen değerleri ve modeli ile kullanılır.
 
-ML.NET modeliyle oluştururken oluşturarak başlayın bir <xref:Microsoft.ML.MLContext>. `MLContext` kavramsal olarak kullanarak karşılaştırılabilir `DbContext` Entity Framework. Ortam, özel durum izleme ve günlüğe kaydetme için kullanılabilecek ML işiniz için bir bağlam sağlar.
+Tüm ML.NET işlemleri başlangıç süresi [MLContext](xref:Microsoft.ML.MLContext) sınıfı. Başlatma `mlContext` modeli oluşturma iş akışı nesneleri arasında paylaşılabilir bir yeni ML.NET ortamı oluşturur. Bu, kavramsal olarak, benzer `DBContext` içinde `Entity Framework`.
 
 ### <a name="initialize-variables-in-main"></a>Ana değişkenleri başlatma
 
@@ -189,26 +113,13 @@ Başlatma `_mlContext` yeni bir örneğini genel değişkenin `MLContext` ile ra
 
 ## <a name="load-the-data"></a>Verileri yükleme
 
-Ardından, başlatma `_trainingDataView` <xref:Microsoft.Data.DataView.IDataView> genel değişken ve ile veri yükleme `_trainDataPath` parametresi.
-
- Giriş ve çıkış olarak [ `Transforms` ](../basic-concepts-model-training-in-mldotnet.md#transformer), `DataView` için karşılaştırılabilir temel veri işlem hattı türü `IEnumerable` için `LINQ`.
-
-ML.NET içinde veri benzer bir `SQL view`. Bu, gevşek değerlendirilen, şema ve heterojen olur. Nesne, işlem hattını ilk kısmı ve verileri yükler. Bu öğreticide, bir veri kümesi sorunu başlıklarını, açıklamaları ve karşılık gelen alan GitHub etiketi ile yükler. `DataView` Oluşturup modeli eğitmek için kullanılır.
-
-Önceden oluşturduğunuz beri `GitHubIssue` veri modeli türüyle eşleşen veri kümesi şeması, başlatma, eşleme ve veri kümesi bir kod satırının içine yükleniyor birleştirebilirsiniz.
-
-Kullanarak verileri yüklemek `MLContext.Data.LoadFromTextFile` için sarmalayıcı [LoadFromTextFile yöntemi](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Döndürür bir <xref:Microsoft.Data.DataView.IDataView> veri kümesi şema çıkarsar `GitHubIssue` veri türü model ve veri kümesi başlık kullanır. 
-
-Oluşturduğunuz zaman veri şemasını önceden tanımlanmış `GitHubIssue` sınıfı. Şemanızı için:
-
-* İlk sütun `ID` (GitHub sorunu kimliği)
-* ikinci sütunda `Area` (eğitim tahmin)
-* üçüncü sütunda `Title` (GitHub sorun başlığı) sanal makinede ilk [özellik](../resources/glossary.md##feature) tahmin etmek için kullanılan `Area`
-* Dördüncü sütun `Description` tahmin etmek için kullanılan ikinci özelliğidir `Area`
+ML.NET kullanan [IDataView sınıfı](xref:Microsoft.ML.IDataView) sayısal ya da metin tablosal verileri açıklamak esnek ve verimli bir yolu olarak. `IDataView` iki metin dosyalarını yükleyebilir veya gerçek zamanlı olarak (örneğin, SQL veritabanı veya günlük dosyaları).
 
 Başlatma ve yüklemek için `_trainingDataView` ardışık düzeni için kullanmak için genel değişkeni sonra aşağıdaki kodu ekleyin `mlContext` başlatma:
 
 [!code-csharp[LoadTrainData](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#LoadTrainData)]
+
+[LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) veri şemasını tanımlar ve dosyayı okur. Veri yolu değişkenlerinde alır ve döndürür bir `IDataView`.
 
 Sonraki kod satırı olarak ekleyin `Main` yöntemi:
 
@@ -230,24 +141,15 @@ public static IEstimator<ITransformer> ProcessData()
 
 ## <a name="extract-features-and-transform-the-data"></a>Özellikleri ayıklayın ve verileri dönüştürme
 
-Ön işleme ve verileri temizleme bir veri kümesi, machine learning için etkili bir şekilde kullanılmadan önce gerçekleşen önemli görevlerdir. Ham veriler genellikle gürültülü ve güvenilmeyen ve değerleri eksik olabilir. Veri modelleme görevleri olmadan kullanarak yanıltıcı sonuçlara neden olabilir.
-
-ML. NET dönüştürme işlem hatları oluşturma özel `transforms`eğitim veya test etmeden önce verilerinizi uygulanan kümesi. Veri Dönüşümleri birincil amacı olan [özellik kazandırma sayesinde](../resources/glossary.md#feature-engineering). Makine öğrenimi algoritmaları anlamak [özellikleri tespit](../resources/glossary.md#feature) metinsel verilerimizi ML algoritmalarınızı tanıyacak bir biçime dönüştürmek için sonraki adım, bu nedenle veri. Bu biçim bir [sayısal vektör](../resources/glossary.md#numerical-feature-vector).
-
-Sonraki adımlarda sütunlara adlarıyla tanımlanan diyoruz `GitHubIssue` sınıfı.
-
-Model eğitim ve diğer değerleri varsayılan olarak, hesaplanan zaman **etiket** sütun tahmin için doğru değerleri olarak değerlendirilir. Alan GitHub etiketi tahmin etmek istediğimiz bir `GitHubIssue`, kopyalama `Area` sütuna **etiket** sütun. Bunu yapmak için kullanın `MLContext.Transforms.Conversion.MapValueToKey`, bu değer için bir sarmalayıcı <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A> dönüştürme sınıfı.  `MapValueToKey` Döndürür bir <xref:Microsoft.ML.Data.EstimatorChain%601> bir işlem hattı etkin olacak. Bu ad `pipeline` eğitmen için ardından ekleyeceği şekilde `EstimatorChain`. Sonraki kod satırı ekleyin:
+Alan GitHub etiketi tahmin etmek istediğiniz gibi bir `GitHubIssue`, kullanın [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) dönüştürmek için yöntemi `Area` sayısal bir anahtar türü sütununa `Label` sütun (sınıflandırma algoritmalarda kabul bir biçimi ) ve yeni veri kümesi bir sütun olarak ekleyin:
 
 [!code-csharp[MapValueToKey](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#MapValueToKey)]
 
- Featurizing farklı değerler her sütun için farklı sayısal anahtar değerleri atar ve makine öğrenme algoritmasına tarafından kullanılır. Ardından, arama `mlContext.Transforms.Text.FeaturizeText` hangi featurizes metni (`Title` ve `Description`) sayısal bir vektör her adlı sütuna `TitleFeaturized` ve `DescriptionFeaturized`. Aşağıdaki kod ile işlem hattı her iki sütun için özellik kazandırma sayesinde ekleyin:
+Ardından, arama `mlContext.Transforms.Text.FeaturizeText` metin dönüştürür (`Title` ve `Description`) sayısal bir vektör her adlı sütuna `TitleFeaturized` ve `DescriptionFeaturized`. Aşağıdaki kod ile işlem hattı her iki sütun için özellik kazandırma sayesinde ekleyin:
 
 [!code-csharp[FeaturizeText](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#FeaturizeText)]
 
->[!WARNING]
-> ML.NET sürüm 0.10 dönüştürme parametreleri sırası değişti. Bu, kullanıma alma hatası, yapı kadar. Dönüşümlerin parametre adları, önceki kod parçacığında gösterildiği gibi kullanın.
-
-Veri hazırlama son adımda tüm özellik sütunlara birleştirir **özellikleri** sütun kullanarak `Concatenate` dönüştürme sınıfı. Varsayılan olarak, bir öğrenme algoritması yalnızca özelliklerinden işler **özellikleri** sütun. Aşağıdaki kod ile işlem hattı için bu dönüşümü ekleyin:
+Veri hazırlama son adımda tüm özellik sütunlara birleştirir **özellikleri** sütun kullanarak [Concatenate()](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) yöntemi. Varsayılan olarak, bir öğrenme algoritması yalnızca özelliklerinden işler **özellikleri** sütun. Aşağıdaki kod ile işlem hattı için bu dönüşümü ekleyin:
 
 [!code-csharp[Concatenate](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Concatenate)]
 
@@ -275,7 +177,6 @@ Aşağıdaki çağrısı ekleyin `BuildAndTrainModel`yöntemi sonraki kod satır
 * Eğitim algoritması sınıfı oluşturur.
 * Modeli eğitir.
 * Eğitim verilerini temel alarak alan tahmin eder.
-* Modele kaydeder bir `.zip` dosya.
 * Model döndürür.
 
 Oluşturma `BuildAndTrainModel` yöntemi hemen sonrasına `Main` yöntemi, aşağıdaki kodu kullanarak:
@@ -287,25 +188,30 @@ public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingData
 }
 ```
 
-İki parametre BuildAndTrainModel yönteme geçirilen dikkat edin; bir `IDataView` eğitim veri kümesi için (`trainingDataView`) ve <xref:Microsoft.ML.Data.EstimatorChain%601> ProcessData içinde oluşturulan işleme işlem hattının (`pipeline`).
+### <a name="about-the-classification-task"></a>Sınıflandırma görevi hakkında
 
- İlk satırı olarak aşağıdaki kodu ekleyin `BuildAndTrainModel` yöntemi:
+Sınıflandırma olan verileri kullanan bir makine öğrenimi görev **belirlemek** kategori, tür veya bir öğe veya veri satırı sınıfı ve sık sık aşağıdaki türlerden biridir:
 
-### <a name="choose-a-learning-algorithm"></a>Bir öğrenme algoritması seçin
+* İkili: ya da A veya b
+* Veya çoklu sınıflar: tek bir model kullanarak tahmin edilebilmesi birden çok kategori.
 
-Öğrenme algoritmasını eklemek için çağrı `mlContext.MulticlassClassification.Trainers.StochasticDualCoordinateAscent` döndüren sarmalayıcı yöntemini bir <xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer> nesne.  `SdcaMultiClassTrainer` Eklenir `pipeline` ve özellikleri tespit `Title` ve `Description` (`Features`) ve `Label` giriş geçmiş verilerden bilgi edinmek için parametreleri. Ayrıca okunabilir özgün durumuna döndürülecek değer etiketi eşlemek gerekir. Aşağıdaki kod ile bu eylemlerin her ikisini birden yapın:
+Bu sorun türü için birden çok kategoriden (veya çoklu sınıflar) sorun kategorisi tahmininizde olabileceği algoritması, öğrenme veya çoklu sınıflar sınıflandırması yalnızca iki yerine kullanın (ikili).
+
+Machine learning algoritmasını kod ilk satırı olarak aşağıdakileri ekleyerek veri dönüştürme tanımlarını ekleme `BuildAndTrainModel()`:
 
 [!code-csharp[AddTrainer](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddTrainer)]
 
+[SdcaMaximumEntropy](xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer) sınıflı sınıflandırma eğitim algoritmasıdır. Bu eklenen `pipeline` ve özellikleri tespit `Title` ve `Description` (`Features`) ve `Label` giriş geçmiş verilerden bilgi edinmek için parametreleri.
+
 ### <a name="train-the-model"></a>Modeli eğitme
 
-Modeli eğitme <xref:Microsoft.ML.Data.TransformerChain%601>bağlı olarak yüklenen ve dönüştürülen bir veri kümesi. Tahmin tanımlandıktan sonra kullanarak modelinize eğitme <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A> zaten yüklenmiş eğitim verilerini sağlayarak. Bu yöntem, tahminler elde etmek için kullanılacak bir modelini döndürür. `trainingPipeline.Fit()` işlem hattı eğitir ve döndürür bir `Transformer` göre `DataView` geçirildi. Denemeyi kadar yürütülmez `.Fit()` yöntemi çalışır.
-
-Aşağıdaki kodu ekleyin `BuildAndTrainModel` yöntemi:
+Modele uygun `splitTrainSet` veri ve sonraki kod satırı olarak aşağıdakileri ekleyerek eğitilen model dönüş `BuildAndTrainModel()` yöntemi:
 
 [!code-csharp[TrainModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#TrainModel)]
 
-Sırada `model` olduğu bir `transformer` ortak bir üretim senaryosu, tek tek örnekleri tahminler elde etmek için bir gereksinim, birçok veri satırı üzerinde çalışır. <xref:Microsoft.ML.PredictionEngine%602> Öğesinden döndürülen bir sarmalayıcı olan `CreatePredictionEngine` yöntemi. Oluşturmak için aşağıdaki kodu ekleyelim `PredictionEngine` sonraki satırı olarak `BuildAndTrainModel` yöntemi:
+`Fit()`Yöntemi, veri dönüştürme ve eğitim uygulayarak modelinizi eğitir.
+
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) geçirin ve ardından verileri tek bir örneğini tahmin gerçekleştirin izin veren bir kolaylık API, bir özelliktir. Bu sonraki satırı olarak ekleyin `BuildAndTrainModel()` yöntemi:
 
 [!code-csharp[CreatePredictionEngine1](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine1)]
 
@@ -315,7 +221,7 @@ Eğitilen modelin tahmine test etmek için bir GitHub sorunu Ekle `Predict` bir 
 
 [!code-csharp[CreateTestIssue1](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreateTestIssue1)]
 
-Bu tahmin etmek için kullanabileceğiniz `Area` sorun verileri tek bir örneğini etiketi. Bir öngörü almak için kullanın <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> verileri. Giriş verilerini bir dizedir ve özellik kazandırma sayesinde modeli içerir. İşlem hattınızı, eğitim ve tahmin sırasında eşitlenmiş. Özellikle tahminler elde etmek için ön işleme/özellik kazandırma sayesinde kod yazmak zorunda olmadığı ve aynı API batch ve tek seferlik Öngörüler üstlenir.
+Kullanım [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) işlevi tahmin verilerinin tek bir satırda yapar:
 
 [!code-csharp[Predict](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Predict)]
 
@@ -353,13 +259,13 @@ Yeni yönteme bir çağrı ekleyin `Main` yöntemi, sağda altında `BuildAndTra
 
 [!code-csharp[CallEvaluate](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CallEvaluate)]
 
-Eğitim veri kümesi ile daha önce yaptığınız gibi eşleme başlatma birleştirin ve sınama veri kümesi bir kod satırının içine yükleniyor. Bu veri kümesi kalite kontrolü kullanarak modeli değerlendirebilir. Aşağıdaki kodu ekleyin `Evaluate` yöntemi:
+Aşağıdaki kodu ekleyerek eğitim veri kümesi ile daha önce yaptığınız gibi test veri kümesini yüklemek `Evaluate` yöntemi:
 
 [!code-csharp[LoadTestDataset](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#LoadTestDataset)]
 
-`MulticlassClassificationContext.Evaluate` İçin bir sarmalayıcı olan <xref:Microsoft.ML.MulticlassClassificationCatalog.Evaluate%2A> belirtilen veri kümesi kullanan model için Kalite Ölçümleri hesaplar yöntemi. Döndürür bir <xref:Microsoft.ML.Data.MultiClassClassifierMetrics> sınıflı sınıflandırma değerlendiricisi tarafından hesaplanan toplam ölçümleri içeren nesne.
+[Evaluate()](xref:Microsoft.ML.MulticlassClassificationCatalog.Evaluate%2A) yöntemi, belirtilen veri kümesi kullanan model için Kalite Ölçümleri hesaplar. Döndürür bir <xref:Microsoft.ML.Data.MulticlassClassificationMetrics> sınıflı sınıflandırma değerlendiricisi tarafından hesaplanan toplam ölçümleri içeren nesne.
 Model kalitesini belirlemek için ölçümleri görüntülemek için bunları ilk almanız gerekir.
-Kullanımına dikkat edin `Transform` machine Learning yöntemi `_trainedModel` özellikleri giriş ve tahmin döndürmek için genel değişkeni (dönüştürücü). Aşağıdaki kodu ekleyin `Evaluate` yöntemi sonraki satır olarak:
+Kullanımına dikkat edin [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) machine Learning yöntemi `_trainedModel` genel değişkeni (bir [ITransformer](xref:Microsoft.ML.ITransformer)) özellikleri giriş ve tahmin döndürmek için. Aşağıdaki kodu ekleyin `Evaluate` yöntemi sonraki satır olarak:
 
 [!code-csharp[Evaluate](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Evaluate)]
 
@@ -379,38 +285,7 @@ Aşağıdaki ölçümler sınıflı sınıflandırma için değerlendirilir:
 
 [!code-csharp[DisplayMetrics](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#DisplayMetrics)]
 
-### <a name="save-the-trained-and-evaluated-model"></a>Eğitilen ve değerlendirilen modeli kaydedin
-
-Bu noktada, türünde bir modeli kullandığınız <xref:Microsoft.ML.Data.TransformerChain%601> , tümleştirilebilir, mevcut veya yeni .NET uygulamalarınızın hiçbirine. Eğitilen model bir .zip dosyası olarak kaydetmek için çağırmak için aşağıdaki kodu ekleyin. `SaveModelAsFile` yöntemi olarak bir sonraki satırda `BuildAndTrainModel`:
-
-[!code-csharp[CallSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CallSaveModel)]
-
-## <a name="save-the-model-as-a-zip-file"></a>Bir .zip dosyası olarak modeli kaydedin
-
-Oluşturma `SaveModelAsFile` yöntemi hemen sonrasına `Evaluate` yöntemi, aşağıdaki kodu kullanarak:
-
-```csharp
-private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
-{
-
-}
-```
-
-`SaveModelAsFile` Yöntemi aşağıdaki görevleri yürütür:
-
-* Model bir .zip dosyası olarak kaydeder.
-
-Ardından, yeniden kullanılabilir ve diğer uygulamalarda kullanılan model kaydetmek için bir yöntem oluşturun. `ITransformer` Sahip bir <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)> alır yöntemi `_modelPath` genel alan ve <xref:System.IO.Stream>. Model zip dosyası olarak kaydetmek için oluşturacağınız `FileStream` çağırmadan önce hemen `SaveTo` yöntemi. Aşağıdaki kodu ekleyin `SaveModelAsFile` yöntemi sonraki satır olarak:
-
-[!code-csharp[SaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SaveModel)]
-
-Bir konsol iletisi ile yazarak dosyasının nerede yazılmıştır görüntüleyebilir `_modelPath`, aşağıdaki kodu kullanarak:
-
-```csharp
-Console.WriteLine("The model is saved to {0}", _modelPath);
-```
-
-## <a name="deploy-and-predict-with-a-loaded-model"></a>Dağıtma ve yüklenen modeliyle tahmin edin
+## <a name="deploy-and-predict-with-a-model"></a>Dağıtma ve bir modeli tahmin edin
 
 Yeni yönteme bir çağrı ekleyin `Main` yöntemi, sağda altında `Evaluate` yöntemi çağrısı, aşağıdaki kodu kullanarak:
 
@@ -432,17 +307,15 @@ private static void PredictIssue()
 * Bir araya getirir, verileri ve raporlama için Öngörüler test edin.
 * Tahmin edilen sonuçları görüntüler.
 
-İlk olarak, aşağıdaki kod ile daha önce kaydettiğiniz model yüklenemiyor:
-
-[!code-csharp[LoadModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#LoadModel)]
-
 Eğitilen modelin tahmine test etmek için bir GitHub sorunu Ekle `Predict` bir örneğini oluşturarak yöntemi `GitHubIssue`:
 
 [!code-csharp[AddTestIssue](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddTestIssue)]
 
+Daha önce yaptığınız gibi oluşturun bir `PredictionEngine` aşağıdaki kod örneği:
+
 [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine)]
   
-Bir modeliniz olduğuna göre tek bir GitHub sorunu veri örneğini alan GitHub etiketini tahmin etmek için kullanabilirsiniz. Bir öngörü almak için kullanın <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> verileri. Giriş verilerini bir dizedir ve özellik kazandırma sayesinde modeli içerir. İşlem hattınızı, eğitim ve tahmin sırasında eşitlenmiş. Özellikle tahminler elde etmek için ön işleme/özellik kazandırma sayesinde kod yazmak zorunda olmadığı ve aynı API batch ve tek seferlik Öngörüler üstlenir. Aşağıdaki kodu ekleyin `PredictIssue` yöntemi tahminler elde etmek için:
+Kullanım `PredictionEngine` alan GitHub etiketi için aşağıdaki kodu ekleyerek tahmin etmek için `PredictIssue` yöntemi tahmin için:
 
 [!code-csharp[PredictIssue](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#PredictIssue)]
 
@@ -458,14 +331,13 @@ Sonuçlar aşağıdakine benzer olmalıdır. İşlem hattı işlediği gibi ilet
 
 ```console
 =============== Single Prediction just-trained-model - Result: area-System.Net ===============
-The model is saved to C:\Users\johalex\dotnet-samples\samples\machine-learning\tutorials\GitHubIssueClassification\bin\Debug\netcoreapp2.0\..\..\..\Models\model.zip
 *************************************************************************************************************
 *       Metrics for Multi-class Classification model - Test Data
 *------------------------------------------------------------------------------------------------------------
-*       MicroAccuracy:    0.74
-*       MacroAccuracy:    0.687
-*       LogLoss:          .932
-*       LogLossReduction: 63.852
+*       MicroAccuracy:    0.738
+*       MacroAccuracy:    0.668
+*       LogLoss:          .919
+*       LogLossReduction: .643
 *************************************************************************************************************
 =============== Single Prediction - Result: area-System.Data ===============
 ```
@@ -476,8 +348,6 @@ Tebrikler! Bir machine learning modeli sınıflandırmak ve bir alan etiketini b
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
-> * Sorunu anlama
-> * Uygun makine öğrenimi algoritması seçin
 > * Verilerinizi hazırlama
 > * Verileri dönüştürme
 > * Modeli eğitme

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c0fcf9bd1c1e8df19458f681497b77348279915
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3dec3cea200f388a904296542776a02d838b3e19
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914848"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063861"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework'teki yenilikler
 
@@ -35,7 +35,7 @@ Bu makalede, önemli yeni özellikler ve geliştirmeler aşağıdaki .NET Framew
 Bu makale, her yeni özellik hakkında kapsamlı bilgi sağlamaz ve değiştirilebilir. .NET Framework hakkında genel bilgi için bkz. [Başlarken](../get-started/index.md). Desteklenen platformlar için bkz: [sistem gereksinimleri](~/docs/framework/get-started/system-requirements.md). Yükleme yönergeleri ve indirme bağlantıları [Yükleme Kılavuzu](../install/guide-for-developers.md).
 
 > [!NOTE]
-> .NET framwork takımındaki özellikleri ile NuGet platform desteğini artırmak ve değişmez koleksiyonlar ve SIMD etkin vektör türlerinin gibi yeni işlevleri tanıtmak için bant dışı da serbest bırakır. Daha fazla bilgi için [ek sınıf kitaplıkları ve API'ler](../additional-apis/index.md) ve [.NET Framework ve bant dışı yayınlar](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md). Bkz: bir [NuGet paketlerini tam listesi](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/) .NET Framework veya abone [veri akışımıza](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).
+> .NET Framwork takımındaki özellikleri ile NuGet platform desteğini artırmak ve değişmez koleksiyonlar ve SIMD etkin vektör türlerinin gibi yeni işlevleri tanıtmak için bant dışı da serbest bırakır. Daha fazla bilgi için [ek sınıf kitaplıkları ve API'ler](../additional-apis/index.md) ve [.NET Framework ve bant dışı yayınlar](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md). Bkz: bir [NuGet paketlerini tam listesi](https://www.nuget.org/profiles/dotnetframework) .NET Framework için.
 
 <a name="v48" />
 

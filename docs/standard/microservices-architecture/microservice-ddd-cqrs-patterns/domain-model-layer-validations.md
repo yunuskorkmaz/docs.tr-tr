@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: ae1252f4544f184a5f63ef02ba898da9b4373e17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75d227c0cc3d5ae20614d816b528d93709ccdfcf
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020003"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063013"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Etki alanı model katmanında doğrulamaları tasarlama
 
@@ -81,7 +81,7 @@ Etki alanındaki ertelenmiş doğrulamaları uğraşmanız çeşitli yaklaşıml
 
 ### <a name="two-step-validation"></a>İki aşamalı doğrulama
 
-Ayrıca, iki aşamalı doğrulama göz önünde bulundurun. Alan düzeyindeki doğrulama komut veri aktarımı nesneleri (Dto) ve etki alanı düzeyinde doğrulama varlıklarınızı içinde kullanabilirsiniz. Sonuç nesnesi yerine özel durumlar doğrulama hatalarla uğraşmak daha kolay hale getirmek için döndürerek bunu yapabilirsiniz.
+Ayrıca, iki aşamalı doğrulama göz önünde bulundurun. Alan düzeyindeki doğrulama komut veri aktarımı nesneleri (Dto) ve etki alanı düzeyinde doğrulama varlıklarınızı içinde kullanabilirsiniz. Doğrulama hataları ile ilgili daha kolay hale getirmek için özel durumlar yerine bir sonuç nesnesi döndürerek bunu yapabilirsiniz.
 
 Alan doğrulama ile veri ek açıklamaları kullanarak, örneğin, doğrulama tanımı yinelenen değil. Yürütme hem sunucu tarafı ve istemci tarafı Dto'lar söz konusu olduğunda yine de olabilir (komutlar ve Viewmodel'lar, örneği için).
 

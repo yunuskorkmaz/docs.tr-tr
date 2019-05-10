@@ -2,12 +2,12 @@
 title: Sunucu tarafı davranışı uygulamak için eylemleri kullanma
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23a01b7221fcfcbfc3cceb82123c68879eba98a3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875259"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063167"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Sunucu tarafı davranışı uygulamak için eylemleri kullanma
 
@@ -46,7 +46,7 @@ OData eylemleri bağlı bir OData hizmetinden bir kaynağı görevi gören bir d
   
 3. GetResult() kullanılarak alınabilir herhangi depolama Invoke() sonuçlar sağlar. böylece  
   
- Parametre belirteçleri geçirilebilir. Veri hizmeti sağlayıcısı (hazırlama) dönüştürmeniz gerekebilir Durum buysa, kaynakları temsil eden belirteçleri ile çalışan gerçek eyleme dağıtmadan önce bu belirteçleri gerçek Kaynakları Yazmayı mümkün olduğundan bu değildir. Parametre sıraya sonra böylelikle eylemi çağrıldığında oluşan değişiklikleri kaynağa kaydedilmiş ve üzerine yazılma disk düzenlenebilir bir durumda olması gerekir.  
+ Parametre belirteçleri geçirilebilir. Veri hizmeti sağlayıcısı (hazırlama) dönüştürmeniz gerekebilir Durum buysa, kaynakları temsil eden belirteçleri ile çalışan gerçek eyleme dağıtmadan önce bu belirteçleri gerçek Kaynakları Yazmayı mümkün olduğundan bu değildir. Parametre sıralanmış sonra böylelikle eylemi çağrıldığında oluşan değişiklikleri kaynağa kaydedilmiş ve üzerine yazılma disk düzenlenebilir bir durumda olması gerekir.  
   
  Bu arabirim, iki yöntem gerektirir: Çağırma ve GetResult. Çağırma eylemin davranışı ve GetResult döndürür uygulayan temsilci eylem sonucunu çağırır.  
   

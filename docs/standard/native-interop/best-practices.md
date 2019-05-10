@@ -4,12 +4,12 @@ description: . NET'te yerel bileşenleriyle arabirim için en iyi uygulamaları 
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 6702d469abf317b3b1f545ce79b980e8581ab5f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09b25ed10958142f8eead6761f18bccbe2645448
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973608"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063088"
 ---
 # <a name="native-interoperability-best-practices"></a>Yerel birlikte çalışabilirliği en iyi uygulamalar
 
@@ -44,7 +44,7 @@ Ne zaman karakter Unicode veya bağımsız değişken olarak açıkça işaretle
 
 **❌ SAĞLAMADIĞI** kullanın `[Out] string` parametreleri. Dize değeri ile tarafından geçirilen parametreler `[Out]` dize interned bir dize ise, öznitelik çalışma zamanı kararlılığını. Belgelerindeki dize kopyası kullanımı hakkında daha fazla bilgi <xref:System.String.Intern%2A?displayProperty=nameWithType>.
 
-**❌ KAÇININ** `StringBuilder` parametreleri. `StringBuilder` taşıma *her zaman* yerel arabellek kopyasını oluşturur. Bu nedenle, son derece verimsiz olabilir. Bir dize alır bir Windows API'si çağırma tipik bir senaryo uygulayın:
+**❌ KAÇININ** `StringBuilder` parametreleri. `StringBuilder` hazırlama *her zaman* yerel arabellek kopyasını oluşturur. Bu nedenle, son derece verimsiz olabilir. Bir dize alır bir Windows API'si çağırma tipik bir senaryo uygulayın:
 
 1. Bir SB (yönetilen kapasite ayırır) istenen kapasite oluşturma **{1}**
 2. Çağır
@@ -61,7 +61,7 @@ Varsa, *yapmak* kullanın `StringBuilder`, bir son sorunu olan kapasite uğramad
 
 **✔️ DÜŞÜNÜN** kullanarak `char[]`s bir `ArrayPool`.
 
-Dize taşıma hakkında daha fazla bilgi için bkz: [dizeler için varsayılan taşıma](../../framework/interop/default-marshaling-for-strings.md) ve [dize taşıma özelleştirme](customize-parameter-marshalling.md#customizing-string-parameters).
+Dize sıralama ile ilgili daha fazla bilgi için bkz: [dizeler için varsayılan hazırlama](../../framework/interop/default-marshaling-for-strings.md) ve [dize sıralama özelleştirme](customize-parameter-marshaling.md#customizing-string-parameters).
 
 > __Windows özel__  
 > İçin `[Out]` CLR dizeleri kullanacağı `CoTaskMemFree` boş dizeler için varsayılan veya `SysStringFree` olarak işaretlenmiş dizeler `UnmanagedType.BSTR`.  
@@ -73,7 +73,7 @@ Dize taşıma hakkında daha fazla bilgi için bkz: [dizeler için varsayılan t
 
 ## <a name="boolean-parameters-and-fields"></a>Boole parametreler ve alanlar
 
-Boole değerlerini uğraşmanız kolaydır. Varsayılan olarak, bir .NET `bool` için bir Windows sıraya `BOOL`, bir 4 baytlık değer olduğu. Ancak, `_Bool`, ve `bool` türleri C ve C++'ta bir *tek* bayt. Bu sabit yarı dönüş değeri, hangi yalnızca atılacak olarak hataları izlemek için açabilir *potansiyel olarak* sonucu değiştirin. .NET taşıma hakkında bilgi için daha fazla bilgi için `bool` C veya C++ değerlere `bool` türleri, şirket belgelerine bakın [Boole alanı taşıma özelleştirme](customize-struct-marshalling.md#customizing-boolean-field-marshalling).
+Boole değerlerini uğraşmanız kolaydır. Varsayılan olarak, bir .NET `bool` için bir Windows sıralanmış `BOOL`, bir 4 baytlık değer olduğu. Ancak, `_Bool`, ve `bool` türleri C ve C++'ta bir *tek* bayt. Bu sabit yarı dönüş değeri, hangi yalnızca atılacak olarak hataları izlemek için açabilir *potansiyel olarak* sonucu değiştirin. .NET hazırlama hakkında bilgi için daha fazla bilgi için `bool` C değerleri veya C++ `bool` türleri, şirket belgelerine bakın [Boole alanı hazırlama özelleştirme](customize-struct-marshaling.md#customizing-boolean-field-marshaling).
 
 ## <a name="guids"></a>GUID'ler
 
@@ -87,7 +87,7 @@ GUID'ler, dosyalardaki imzaları doğrudan kullanılabilir. Birçok Windows apı
 
 ## <a name="blittable-types"></a>Blok halinde kopyalanabilir türler
 
-Blittable türleri aynı bit düzeyinde gösterimine sahip yönetilen ve yerel kodda türleridir. Bu nedenle bunlar için ve yerel koddan sıraya için başka bir biçime dönüştürülüp gerekmez ve bu performansı artırmak amacıyla, tercih edilen olmalıdır.
+Blittable türleri aynı bit düzeyinde gösterimine sahip yönetilen ve yerel kodda türleridir. Bu nedenle bunlar için ve yerel koddan sıralanması başka bir biçime dönüştürülüp gerekmez ve bu performansı artırmak amacıyla, tercih edilen olmalıdır.
 
 **Blittable türleri:**
 
@@ -126,7 +126,7 @@ Sabitlenmiş oluşturulmaya çalışılırken tarafından bir türü blok halind
 Daha fazla bilgi için bkz.:
 
 - [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](../../framework/interop/blittable-and-non-blittable-types.md)  
-- [Türü taşıma](type-marshalling.md)
+- [Sıralama türü](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>Canlı tutma yönetilen nesneler
 
@@ -210,7 +210,7 @@ Bir Windows `PVOID` C olduğu `void*` olarak sıralanabilir `IntPtr` veya `UIntP
 
 Yönetilen yapıları yığında oluşturulur ve yöntem dönene kadar kaldırılmaz. Ardından tanımı gereği, bunlar "Sabitlenen" (atık toplama tarafından taşınması gerekmez). Yerel kod geçerli yönteminin sonuna işaretçiyi kullanmaz, blok içinde güvenli olmayan kod adresi kısaca alabilir.
 
-Blok halinde kopyalanabilir, yalnızca doğrudan düzenleme katmanı tarafından kullanılabilmesi için çok daha yüksek performanslı birimleridir. Yapılar blittable yapmayı denerseniz (örneğin, kaçının `bool`). Daha fazla bilgi için [türlerse](#blittable-types) bölümü.
+Blok halinde kopyalanabilir, yalnızca doğrudan hazırlama katmanı tarafından kullanılabilmesi için çok daha yüksek performanslı birimleridir. Yapılar blittable yapmayı denerseniz (örneğin, kaçının `bool`). Daha fazla bilgi için [türlerse](#blittable-types) bölümü.
 
 *Varsa* blittable struct, kullanın `sizeof()` yerine `Marshal.SizeOf<MyStruct>()` daha iyi performans için. Yukarıda belirtildiği gibi bir sabitlenmiş oluşturulmaya çalışılırken tarafından türü blittable olduğunu doğrulayabilirsiniz `GCHandle`. Türü bir dize değilse veya kabul blittable, `GCHandle.Alloc` oluşturmaz bir `ArgumentException`.
 
@@ -245,4 +245,4 @@ internal unsafe struct SYSTEM_PROCESS_INFORMATION
 }
 ```
 
-Ancak, bazı tuzakları sabit arabellekler ile vardır. Yerinde dizi kullanıma birden çok ayrı ayrı alanlara genişletilmesi gerekir kopyalanamaz türler, sabit arabellekleri doğru sıraya gerekmez. Bir sabit arabellek alanı içeren bir yapı kopyalanamaz yapı birimi içinde iç içe ek olarak, .NET Framework ve .NET Core 3.0 önce sabit arabellek alanı doğru yerel kod için sıraya gerekmez.
+Ancak, bazı tuzakları sabit arabellekler ile vardır. Yerinde dizi kullanıma birden çok ayrı ayrı alanlara genişletilmesi gerekir kopyalanamaz türler, sabit arabellekleri doğru sıralanması olmaz. Bir sabit arabellek alanı içeren bir yapı kopyalanamaz yapı birimi içinde iç içe ek olarak, .NET Framework ve .NET Core 3.0 önce sabit arabellek alanı doğru yerel kod olarak sıralanması olmaz.

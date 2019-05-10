@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 075396ae070be5312fa7afe29e8bdf5fa81a3817
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fed5e00de83e8280681909c9b0649e7aa6ac0766
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914400"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64605915"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework'teki eski üyeler
 
@@ -93,7 +93,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="mscorlib"></a>   
 ### <a name="assembly-mscorlibdll"></a>Derleme: mscorlib.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Win32.Registry?displayProperty=nameWithType>|<xref:Microsoft.Win32.Registry.DynData>|<xref:Microsoft.Win32.Registry.DynData> Kayıt defteri anahtarı yalnızca çalışır CLR tarafından artık desteklenmeyen Win9x üzerinde. NT tabanlı işletim sistemleri üzerinde <xref:Microsoft.Win32.Registry.PerformanceData?displayProperty=nameWithType> kayıt defteri anahtarı veya <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.PerformanceData%2A?displayProperty=nameWithType> kayıt proxy'si yerine.|  
 |<xref:System.Activator?displayProperty=nameWithType>|<xref:System.Activator.CreateInstance%28System.AppDomain%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|Korumalı alan için kanıt kullanan yöntemleri artık kullanılmayan ve .NET Framework'ün sonraki bir sürümde kaldırılacak. Bir aşırı yüklemesini kullanmanız <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> değil alır bir <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> parametresi.|  
@@ -259,7 +259,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="PresentationCore"></a>   
 ### <a name="assembly-presentationcoredll"></a>Derleme: PresentationCore.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.Windows.UIElement?displayProperty=nameWithType>|<xref:System.Windows.UIElement.BitmapEffect%2A>|Bit eşlem efektleri kullanım dışı ve artık işlevi var. Kullanmayı <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType> bunun yerine uygun olduğunda.|  
 |<xref:System.Windows.UIElement?displayProperty=nameWithType>|<xref:System.Windows.UIElement.BitmapEffectInput%2A>|Bit eşlem efektleri kullanım dışı ve artık işlevi var. Kullanmayı <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType> bunun yerine uygun olduğunda.|  
@@ -294,7 +294,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="PresFW"></a>   
 ### <a name="assembly-presentationframeworkdll"></a>Derleme: PresentationFramework.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.Windows.Data.BindingListCollectionView?displayProperty=nameWithType>|<xref:System.Windows.Data.CollectionView.OnBeginChangeLogging%2A>|Değiştirilen <xref:System.Windows.Data.CollectionView.OnAllowsCrossThreadChangesChanged%2A?displayProperty=nameWithType>.|  
 |<xref:System.Windows.Data.CollectionView?displayProperty=nameWithType>|<xref:System.Windows.Data.CollectionView.ClearChangeLog%2A>|Değiştirilen <xref:System.Windows.Data.CollectionView.ClearPendingChanges%2A?displayProperty=nameWithType>.|  
@@ -304,7 +304,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="Act"></a>   
 ### <a name="assembly-systemactivitiesdll"></a>Derleme: System.Activities.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=nameWithType>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.Xaml.IXamlLineInfo%2CSystem.IO.TextReader%29>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> Bu oluşturucu kullanmayın. Kullanım <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29?displayProperty=nameWithType> veya <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29?displayProperty=nameWithType> yerine.|  
 |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=nameWithType>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.IO.TextReader%29?displayProperty=nameWithType>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> Bu oluşturucu kullanmayın. Kullanım <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29?displayProperty=nameWithType> veya <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29?displayProperty=nameWithType> yerine.|  
@@ -312,7 +312,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="ActPres"></a>   
 ### <a name="assembly-systemactivitiespresentationdll"></a>Derleme: System.Activities.Presentation.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.Activities.Presentation.DragDropHelper?displayProperty=nameWithType>|<xref:System.Activities.Presentation.DragDropHelper.DoDragMove%28System.Activities.Presentation.WorkflowViewElement%2CSystem.Windows.Point%29>|Bu yöntem, birden çok öğe sürükleyerek desteklemiyor.|  
 |<xref:System.Activities.Presentation.DragDropHelper?displayProperty=nameWithType>|<xref:System.Activities.Presentation.DragDropHelper.GetCompositeView%28System.Windows.DragEventArgs%29>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> Bu yöntem, birden çok öğe sürükleyerek desteklemiyor. Bunun yerine <xref:System.Activities.Presentation.DragDropHelper.GetCompositeView%28System.Activities.Presentation.WorkflowViewElement%29> kullanın.|  
@@ -327,7 +327,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="core"></a>   
 ### <a name="assembly-systemcoredll"></a>Derleme: System.Core.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords?displayProperty=nameWithType>|<xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords.CorrelationHint>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> Yanlış değer; kullanma <xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords.CorrelationHint2> yerine.|  
 |<xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>|<xref:System.Linq.ParallelEnumerable.Concat%60%601%28System.Linq.ParallelQuery%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%600%7D%29>|İkili işleç ikinci veri kaynağının türü olmalıdır <xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType> yerine <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Bu sorunu gidermek için kullanmak <xref:System.Linq.ParallelEnumerable.AsParallel%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> doğru veri kaynağına dönüştürmek için genişletme yöntemi <xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType>.|  
@@ -370,7 +370,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="data"></a>   
 ### <a name="assembly-systemdatadll"></a>Derleme: System.Data.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute.%23ctor%2A>|<xref:System.Data.DataSysDescriptionAttribute> kullanım dışıdır.|  
 |<xref:System.Data.Common.DataAdapter?displayProperty=nameWithType>|<xref:System.Data.Common.DataAdapter.CloneInternals%2A>|<xref:System.Data.Common.DataAdapter.CloneInternals%2A> kullanım dışıdır. Kullanım <xref:System.Data.Common.DataAdapter.%23ctor%28System.Data.Common.DataAdapter%29> Oluşturucusu.|  
@@ -392,7 +392,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="entity"></a>   
 ### <a name="assembly-systemdataentitydll"></a>Derleme: System.Data.Entity.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.Data.Metadata.Edm.AssociationSetEnd?displayProperty=nameWithType>|<xref:System.Data.Metadata.Edm.AssociationSetEnd.Role%2A>|Bu özellik kullanımdan, kullanım kaldırılıyor <xref:System.Data.Metadata.Edm.AssociationSetEnd.Name%2A?displayProperty=nameWithType> özelliği bunun yerine.|  
 |<xref:System.Data.Metadata.Edm.MetadataWorkspace?displayProperty=nameWithType>|<xref:System.Data.Metadata.Edm.MetadataWorkspace.GetRequiredOriginalValueMembers%2A>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> Bunun yerine <xref:System.Data.Metadata.Edm.MetadataWorkspace.GetRelevantMembersForUpdate%2A?displayProperty=nameWithType> kullanın.|  
@@ -402,7 +402,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="oracleclient"></a>   
 ### <a name="assembly-systemdataoracleclientdll"></a>Derleme: System.Data.OracleClient.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.Data.OracleClient.OracleParameter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleParameter.Precision%2A>|<xref:System.Data.OracleClient.OracleParameter.Precision%2A> kullanım dışıdır. Kullanım <xref:System.Math?displayProperty=nameWithType> bir ondalık Duyarlığı açıkça ayarlamak için sınıflar.|  
 |<xref:System.Data.OracleClient.OracleParameter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleParameter.Scale%2A>|<xref:System.Data.OracleClient.OracleParameter.Scale%2A> kullanım dışıdır. Kullanım <xref:System.Math?displayProperty=nameWithType> açıkça bir ondalık ölçek kümesi için sınıflar.|  
@@ -411,7 +411,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="design"></a>   
 ### <a name="assembly-systemdesigndll"></a>Derleme: System.Design.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.ComponentModel.Design.ComponentDesigner?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.ComponentDesigner.InitializeNonDefault%2A>|Bu yöntem kullanım dışıdır. Bunun yerine <xref:System.ComponentModel.Design.ComponentDesigner.InitializeExistingComponent%2A?displayProperty=nameWithType> kullanın.|  
 |<xref:System.ComponentModel.Design.ComponentDesigner?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.ComponentDesigner.OnSetComponentDefaults%2A>|Bu yöntem kullanım dışıdır. Bunun yerine <xref:System.ComponentModel.Design.ComponentDesigner.InitializeNewComponent%2A?displayProperty=nameWithType> kullanın.|  
@@ -464,7 +464,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="system"></a>   
 ### <a name="assembly-systemdll"></a>Derleme: System.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:Microsoft.CSharp.CSharpCodeProvider?displayProperty=nameWithType>|<xref:Microsoft.CSharp.CSharpCodeProvider.CreateCompiler%2A>|Çağıranlar kullanmamanız <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> arabirim ve bunun yerine doğrudan üzerinde yöntemleri kullanmalıdır <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> sınıfı.|  
 |<xref:Microsoft.CSharp.CSharpCodeProvider?displayProperty=nameWithType>|<xref:Microsoft.CSharp.CSharpCodeProvider.CreateGenerator%2A>|Çağıranlar kullanmamanız <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=nameWithType> arabirim ve bunun yerine doğrudan üzerinde yöntemleri kullanmalıdır <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> sınıfı.|  
@@ -576,7 +576,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="drawing"></a>   
 ### <a name="assembly-systemdrawingdll"></a>Derleme: System.Drawing.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.Drawing.FontFamily?displayProperty=nameWithType>|<xref:System.Drawing.FontFamily.GetFamilies%2A>|Kullanmayın <xref:System.Drawing.FontFamily.GetFamilies%2A> yöntemi; kullanım <xref:System.Drawing.FontFamily.Families%2A?displayProperty=nameWithType> özelliği bunun yerine.|  
 |<xref:System.Drawing.Imaging.EncoderParameter?displayProperty=nameWithType>|<xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> Bu oluşturucu kullanımdan kaldırılmıştır. Kullanım <xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Drawing.Imaging.EncoderParameterValueType%2CSystem.IntPtr%29>.|  
@@ -584,7 +584,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="messaging"></a>   
 ### <a name="assembly-systemmessagingdll"></a>Derleme: System.Messaging.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.Messaging.MessageQueue?displayProperty=nameWithType>|<xref:System.Messaging.MessageQueue.GetEnumerator%2A>|Bu yöntem döndürür bir <xref:System.Messaging.MessageEnumerator?displayProperty=nameWithType> uygulayan <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=nameWithType> yöntemlerin ailesi yanlış. Bunun yerine <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=nameWithType> kullanın.|  
 |<xref:System.Messaging.MessageQueue?displayProperty=nameWithType>|<xref:System.Messaging.MessageQueue.GetMessageEnumerator%2A>|Bu yöntem döndürür bir <xref:System.Messaging.MessageEnumerator?displayProperty=nameWithType> uygulayan <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=nameWithType> yöntemlerin ailesi yanlış. Bunun yerine <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=nameWithType> kullanın.|  
@@ -592,7 +592,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="servicemodel"></a>   
 ### <a name="assembly-systemservicemodeldll"></a>Derleme: System.ServiceModel.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> Bu özellik kullanımdan kalkmıştır. HTTP etkinleştirme <xref:System.Net.CookieContainer>, kullanın <xref:System.ServiceModel.HttpBindingBase.AllowCookies%2A?displayProperty=nameWithType> özelliği bunun yerine.|  
 |<xref:System.ServiceModel.Configuration.BindingsSection?displayProperty=nameWithType>|<xref:System.ServiceModel.Configuration.BindingsSection.NetPeerTcpBinding%2A>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> Eş kanal özelliği kullanımdan kalkmıştır ve gelecekte kaldırılacaktır.|  
@@ -604,7 +604,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="smDisc"></a>   
 ### <a name="assembly-systemservicemodeldiscoverydll"></a>Derleme: System.ServiceModel.Discovery.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint?displayProperty=nameWithType>|<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.TransportSettings%2A>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.TransportSettings%2A> Özellik artık kullanılmıyor. Kullanmayı <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=nameWithType> aktarma özellikleri ayarlamak için.|  
 |<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint?displayProperty=nameWithType>|<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A> Özellik artık kullanılmıyor. Kullanmayı <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=nameWithType> aktarma özellikleri ayarlamak için.|  
@@ -612,14 +612,14 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="datavisualization"></a>   
 ### <a name="assembly-systemwebdatavisualizationdll"></a>Derleme: System.Web.DataVisualization.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.Web.UI.DataVisualization.Charting.Chart?displayProperty=nameWithType>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A> kullanım dışıdır. Araştırma <xref:System.Web.UI.Control.ViewState%2A?displayProperty=nameWithType> yerine.|  
   
 <a name="web"></a>   
 ### <a name="assembly-systemwebdll"></a>Derleme: System.Web.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetAppConfig%2A>|Önerilen alternatif <xref:System.Web.Configuration.WebConfigurationManager.GetWebApplicationSection%2A?displayProperty=nameWithType> , System.Web.dll.|  
 |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetConfig%2A>|Önerilen alternatif <xref:System.Web.HttpContext.GetSection%2A?displayProperty=nameWithType> , System.Web.dll.|  
@@ -654,14 +654,14 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="dynamicdata"></a>   
 ### <a name="assembly-systemwebdynamicdatadll"></a>Derleme: System.Web.DynamicData.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.Web.DynamicData.DynamicDataExtensions?displayProperty=nameWithType>|<xref:System.Web.DynamicData.DynamicDataExtensions.EnablePersistedSelection%2A>|Kullanım `EnablePersistedSelection` gibi bir veri bağlama denetimi özelliği <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> veya <xref:System.Web.UI.WebControls.ListView?displayProperty=nameWithType>.|  
   
 <a name="extensions"></a>   
 ### <a name="assembly-systemwebextensionsdll"></a>Derleme: System.Web.Extensions.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.Web.UI.CompositeScriptReference?displayProperty=nameWithType>|<xref:System.Web.UI.CompositeScriptReference.IsFromSystemWebExtensions%2A>|Kullanım <xref:System.Web.UI.CompositeScriptReference.IsAjaxFrameworkScript%2A?displayProperty=nameWithType>.|  
 |<xref:System.Web.UI.ScriptManager?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptManager.ScriptPath%2A>|Bu özellik kullanımdan kalkmıştır. Ayarlama [ `System.Web.UI.ScriptReference.Path` ](xref:System.Web.UI.ScriptReferenceBase.Path%2A) her özelliği <xref:System.Web.UI.ScriptReference?displayProperty=nameWithType> yerine.|  
@@ -675,7 +675,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="services"></a>   
 ### <a name="assembly-systemwebservicesdll"></a>Derleme: System.Web.Services.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.Web.Services.Discovery.DiscoveryClientProtocol?displayProperty=nameWithType>|<xref:System.Web.Services.Discovery.DiscoveryClientProtocol.LoadExternals%2A>|Bu yöntem'gelecek bir sürümünde kaldırılacak. Yöntem çağrısı, artık kaynak bulma için gerekli değildir.|  
 |<xref:System.Web.Services.Protocols.SoapHeaderAttribute?displayProperty=nameWithType>|<xref:System.Web.Services.Protocols.SoapHeaderAttribute.Required%2A>|Bu özellik,'gelecek bir sürümünde kaldırılacak. Belirli bir SOAP ileti üstbilgisinde varlığını artık zorlanmamaktadır.|  
@@ -683,7 +683,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="forms"></a>   
 ### <a name="assembly-systemwindowsformsdll"></a>Derleme: System.Windows.Forms.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.Windows.Forms.AccessibleStates?displayProperty=nameWithType>|<xref:System.Windows.Forms.AccessibleStates.Valid>|Bu sabit listesi değeri kullanım dışıdır. Bir şey eklenmemiştir.|  
 |<xref:System.Windows.Forms.ComboBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ComboBox.AddItemsCore%2A>|Bu yöntem kullanım dışıdır. Bir şey eklenmemiştir.|  
@@ -700,7 +700,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="xaml"></a>   
 ### <a name="assembly-systemxamldll"></a>Derleme: System.Xaml.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=nameWithType>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.ExpressionType%2A>|Bu XAML ayrıştırıcı tarafından kullanılmaz. Bkz. <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>.|  
 |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=nameWithType>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%2CSystem.Type%29>|`expressionType` Bağımsız değişkeni, XAML ayrıştırıcı tarafından kullanılmaz. Beklenen dönüş türü belirtmek için kullanın <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%29?displayProperty=nameWithType>. İfade türleri için özel işleme belirtmek için kullanın <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>.|  
@@ -708,7 +708,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="xml"></a>   
 ### <a name="assembly-systemxmldll"></a>Derleme: System.Xml.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.Xml.ValidationType?displayProperty=nameWithType>|<xref:System.Xml.ValidationType.Auto>|Doğrulama türü olarak belirtilmelidir <xref:System.Xml.ValidationType.DTD?displayProperty=nameWithType> veya <xref:System.Xml.ValidationType.Schema?displayProperty=nameWithType>.|  
 |<xref:System.Xml.ValidationType?displayProperty=nameWithType>|<xref:System.Xml.ValidationType.XDR>|XDR doğrulaması aracılığıyla <xref:System.Xml.XmlValidatingReader?displayProperty=nameWithType> geçersiz.|  
@@ -738,14 +738,14 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="isymwrapper"></a>   
 ### <a name="assembly-isymwrapperdll"></a>Derleme: ISymWrapper.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:System.Diagnostics.SymbolStore.SymBinder?displayProperty=nameWithType>|<xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.Int32%2CSystem.String%2CSystem.String%29>|Önerilen alternatif <xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.IntPtr%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType>. <xref:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader%2A?displayProperty=nameWithType> olarak içeri Aktarıcı arabirim işaretçisi alır bir <xref:System.IntPtr?displayProperty=nameWithType> yerine bir <xref:System.Int32?displayProperty=nameWithType>ve bu nedenle hem 32-bit hem de 64-bit mimarilerde çalışır.|  
   
 <a name="conversion"></a>   
 ### <a name="assembly-microsoftbuildconversionv40dll"></a>Derleme: Microsoft.Build.Conversion.v4.0.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=nameWithType>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%28Microsoft.Build.BuildEngine.ProjectLoadSettings%29>|Kullanım parametresiz <xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert> yerine aşırı yükleme.|  
 |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=nameWithType>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%28System.String%29>|Kullanım parametresiz <xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert> yerine aşırı yükleme.|  
@@ -755,7 +755,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="engine"></a>   
 ### <a name="assembly-microsoftbuildenginedll"></a>Derleme: Microsoft.Build.Engine.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|<xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>|Ayar önlemek <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>. Yalnızca .NET Framework konumda çağırıyorsanız, <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>, başka bir eylem gerekmiyor. Aksi takdirde, araç takımları bunun yerine kayıt defteri veya yapılandırma dosyası veya öğeleri ekleyerek motorun tanımlayın <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=nameWithType>özel kullanmasını <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>.|  
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|<xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28System.String%29>|Yalnızca .NET Framework konumda çağırıyorsanız, <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>, parametresiz değiştirmeniz yeterlidir <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=nameWithType> Oluşturucusu. Aksi takdirde, özel araç takımları kayıt defteri veya yapılandırma dosyasında tanımlayabilir, ya da öğeleri ekleyebilir motorun <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=nameWithType>. Ya da kullanmak <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=nameWithType> veya <xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28Microsoft.Build.BuildEngine.ToolsetDefinitionLocations%29?displayProperty=nameWithType> Oluşturucusu yerine.|  
@@ -763,28 +763,28 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 <a name="BuildFW"></a>   
 ### <a name="assembly-microsoftbuildframeworkdll"></a>Derleme: Microsoft.Build.Framework.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.Framework.XamlTypes.ContentType?displayProperty=nameWithType>|<xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemGroupName%2A>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> Bu üye kullanımı bir derleyici hatası oluşturur.<br /><br /> Kullanım <xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemType%2A?displayProperty=nameWithType> özelliği bunun yerine.|  
   
 <a name="BuildUtil4"></a>   
 ### <a name="assembly-microsoftbuildutilitiesv40dll"></a>Derleme: Microsoft.Build.Utilities.v4.0.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.Utilities.ToolTask?displayProperty=nameWithType>|<xref:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride%2A>|Kullanım <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A?displayProperty=nameWithType> özelliği.|  
   
 <a name="data_entity_tasks"></a>   
 ### <a name="assembly-microsoftdataentitybuildtasksdll"></a>Derleme: Microsoft.Data.Entity.Build.Tasks.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |`Microsoft.Data.Entity.Build.Tasks.EntityDeploy`|`EntityDataModelEmbeddedResources`|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> Yalnızca sürüm 3.5 geriye dönük uyumluluk için kullanılır.|  
   
 <a name="visualbasic"></a>   
 ### <a name="assembly-microsoftvisualbasicdll"></a>Derleme: Microsoft.VisualBasic.dll  
   
-|Tür|Üye|İleti|  
+|Tür|Üye|`Message`|  
 |----------|------------|-------------|  
 |<xref:Microsoft.VisualBasic.FileSystem?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.FileSystem.FilePut%28System.Object%2CSystem.Object%2CSystem.Object%29>|Bu üye kullanım dışıdır. Kullanım <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A?displayProperty=nameWithType> yazılacak <xref:System.Object> türleri ya da coerce `FileNumber` ve `RecordNumber` için <xref:System.Int32> nesne olmayan türleri yazma.|  
 |<xref:Microsoft.VisualBasic.CompilerServices.Conversions?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.CompilerServices.Conversions.FallbackUserDefinedConversion%2A>|Bu üye kullanımı bir derleyici hatası oluşturur.<br /><br /> Bu yöntemi kullanmayın.|  

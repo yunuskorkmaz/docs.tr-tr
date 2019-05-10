@@ -3,16 +3,16 @@ title: Hello World .NET Core uygulamanızı Visual Studio 2017 ile hata ayıklam
 description: C# veya Visual Basic, Visual Studio 2017 ile yazılmış bir Hello World uygulamasında hata ayıklama hakkında bilgi edinin.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c6a9fe46e29addf53319adf2351af3a7af05119
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61648209"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063080"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Hata ayıklama, C# veya Visual Studio 2017'yi kullanarak Visual Basic .NET Core Merhaba Dünya uygulaması
 
-Şu ana kadar adımları izlediğinizden [bir C# Merhaba Dünya uygulaması ile Visual Studio 2017'de .NET Core derleme](with-visual-studio.md) veya [bir Visual Studio 2017'de .NET Core ile Visual Basic Merhaba Dünya uygulaması derleme](vb-with-visual-studio.md) oluşturmak için ve basit bir konsol uygulaması çalıştırın. Yazılan ve uygulamanızın derlenmiş sonra test başlayabilirsiniz. Visual Studio test etme ve uygulamanızı sorun giderme kullanabileceğiniz araçları hata ayıklama kapsamlı içerir.
+Şu ana kadar adımları izlediğinizden [bir C# Merhaba Dünya uygulaması ile Visual Studio 2017'de .NET Core derleme](with-visual-studio.md) veya [bir Visual Studio 2017'de .NET Core ile Visual Basic Merhaba Dünya uygulaması derleme](vb-with-visual-studio.md) oluşturmak için ve basit bir konsol uygulaması çalıştırın. Yazılan ve uygulamanızın derlenmiş sonra test başlayabilirsiniz. Visual Studio test etme ve uygulamanızı sorun giderme kullanabileceğiniz araçları hata ayıklama kapsamlı içerir. 
 
 ## <a name="debugging-in-debug-mode"></a>Hata ayıklama modunda hata ayıklama
 

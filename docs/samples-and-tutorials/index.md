@@ -4,12 +4,12 @@ description: .NET Core, ASP.NET Core için örnekler ve öğreticiler hakkında 
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: b9d047cf0e9a1f917f2376a5128b7d1bf70084af
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61950858"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063355"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET örnekler ve öğreticiler
 
@@ -60,6 +60,10 @@ Bu örnek ifade ağaçları kullanma tarafından çözülen sorunlar çoğunu g�
 **LINQ örnekleri**
 
 Bu bir dizi örnek, dil tümleşik sorgu (LINQ) özelliklerin çoğunu gösterir. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/core/linq/csharp) dotnet/samples deposuna github'da mevcuttur.
+
+** Yönetilen COM sunucusu örnek **
+
+[COM sunucusu](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) örnek, bir yönetilen COM sunucusunda ve nasıl, küresel olarak kaydedilebilir oluşturulmasını gösterir.
 
 **Microsoft Office PIA örneği**
 

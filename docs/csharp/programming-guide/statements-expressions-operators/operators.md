@@ -1,18 +1,18 @@
 ---
 title: Operators - C# Programlama Kılavuzu
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 04/30/2019
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 109298a7945a6b76b35970b7b9c42e159bad8f90
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fd10999066f599d819ef188e09028c64c6a5e9e6
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61709867"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064049"
 ---
 # <a name="operators-c-programming-guide"></a>İşleçler (C# Programlama Kılavuzu)
 
@@ -26,108 +26,19 @@ C# ' ta, bir *işleci* uygulanan bir program öğesi için bir veya daha fazla o
   
  [!code-csharp[csProgGuideStatements#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#6)]  
   
-## <a name="operators-evaluation-and-operator-precedence"></a>İşleçler, değerlendirme ve İşleç önceliği
+Bir işlenen, herhangi bir uzunlukta koddan oluşan geçerli bir ifade olabilir ve herhangi bir sayıda alt ifade içerebilir. Birden çok işleç içeren bir ifadede, işleçlerin uygulanma sırası tarafından belirlenir *İşleç önceliği*, *ilişkilendirilebilirliği*ve parantezler.  
 
- Bir işlenen, herhangi bir uzunlukta koddan oluşan geçerli bir ifade olabilir ve herhangi bir sayıda alt ifade içerebilir. Birden çok işleç içeren bir ifadede, işleçlerin uygulanma sırası tarafından belirlenir *İşleç önceliği*, *ilişkilendirilebilirliği*ve parantezler.  
+## <a name="operator-precedence"></a>İşleç önceliği
   
- Her işleç tanımlanmış bir önceliğe sahiptir. Farklı öncelik düzeyleri olan birden çok işleç içeren bir ifadede, işleçlerin önceliği, işleçlerin değerlendirilme sırasını belirler. Örneğin, aşağıdaki deyim 3 atar `n1`.  
-  
- `n1 = 11 - 2 * 4;`  
-  
- Çarpma çıkarmaya göre öncelikli olduğundan, önce çarpma yürütülür.  
-  
- Aşağıdaki tablo, yaptıkları işleme dayalı olarak, işleçleri kategorilere ayırır. Kategoriler, öncelik sırasına göre listelenir.  
-  
- **Birincil operatörler**  
-  
-|İfade|Açıklama|  
-|----------------|-----------------|  
-|x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|Üye erişimi<br /><br /> Koşullu üye erişimi|  
-|f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|Yöntem ve temsilci çağırma|  
-|bir[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)<br /><br /> a?[x]|Dizi ve dizinleyici erişimi<br /><br /> Koşullu dizi ve dizinleyici erişimi|  
-|x[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)|Artırım sonrası|  
-|x[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)|Azaltım sonrası|  
-|[Yeni](../../../csharp/language-reference/keywords/new-operator.md) T(...)|Nesne ve temsilci oluşturma|  
-|`new` T(...) {...}|Başlatıcı ile nesne oluşturma. Bkz: [nesne ve koleksiyon başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).|  
-|`new` {...}|Anonim nesne başlatıcı. Bkz: [anonim türler](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).|  
-|`new` T [...]|Dizi oluşturma. Bkz: [diziler](../../../csharp/programming-guide/arrays/index.md).|  
-|[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)|T için System.Type nesnesi elde etme|  
-|[işaretli](../../../csharp/language-reference/keywords/checked.md)(x)|İşaretli bağlamında ifade değerlendirme|  
-|[denetlenmeyen](../../../csharp/language-reference/keywords/unchecked.md)(x)|İşaretlenmemiş bağlamında ifade değerlendirme|  
-|[Varsayılan](../../../csharp/language-reference/keywords/default.md) (T)|T türü varsayılan değerini elde etme|  
-|[Temsilci](../../../csharp/language-reference/keywords/delegate.md) {}|Anonim işlevi (anonim yöntemi)|  
-  
- **Birli işleçler**  
-  
-|İfade|Açıklama|  
-|----------------|-----------------|  
-|[+](../../../csharp/language-reference/operators/addition-operator.md)x|Kimlik|  
-|[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Olumsuzlama|  
-|[\!](../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)x|Mantıksal olumsuzlama|  
-|[~](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#bitwise-complement-operator-)x|Bitwise olumsuzlama|  
-|[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|Artırım öncesi|  
-|[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|Azaltım öncesi|  
-|[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|x'i açıkça T türüne dönüştürme|  
-  
- **Çarpma işleçleri**  
-  
-|İfade|Açıklama|  
-|----------------|-----------------|  
-|[*](../../../csharp/language-reference/operators/arithmetic-operators.md#multiplication-operator-)|Çarpma|  
-|[/](../../../csharp/language-reference/operators/arithmetic-operators.md#division-operator-)|Bölme|  
-|[%](../../../csharp/language-reference/operators/arithmetic-operators.md#remainder-operator-)|Kalan|  
-  
- **Toplama işleçleri**  
-  
-|İfade|Açıklama|  
-|----------------|-----------------|  
-|x [ + ](../../../csharp/language-reference/operators/addition-operator.md) y|Toplama, dize bitiştirme, temsilci birleşimi|  
-|x [ - ](../../../csharp/language-reference/operators/subtraction-operator.md) y|Çıkarma, temsilci kaldırma|  
-  
- **Kaydırma işleçleri**  
-  
-|İfade|Açıklama|
-|----------------|-----------------|
-|x [ < \< ](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#left-shift-operator-) y|Sola kaydırma|
-|x [ >> ](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#right-shift-operator-) y|Sağa kaydırma|
-  
- **İlişkisel ve tür işleçleri**  
-  
-|İfade|Açıklama|  
-|----------------|-----------------|  
-|x [ \< ](../../../csharp/language-reference/operators/less-than-operator.md) y|Küçüktür|  
-|x [ > ](../../../csharp/language-reference/operators/greater-than-operator.md) y|Büyüktür|  
-|x [ \< = ](../../../csharp/language-reference/operators/less-than-equal-operator.md) y|Küçük veya eşittir|  
-|x [ >= ](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y|Büyük veya eşittir|  
-|x [olduğu](../../../csharp/language-reference/keywords/is.md) T|x bir T ise doğru döndür, tersi durumda yanlış döndür|  
-|x [olarak](../../../csharp/language-reference/keywords/as.md) T|T olarak yazdırılan x döndür ya da T değilse null döndür|  
-  
- **Eşitlik İşleçleri**  
-  
-|İfade|Açıklama|  
-|----------------|-----------------|  
-|x [ == ](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|Eşittir|  
-|x [! =](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Eşit değildir|  
-  
- **Mantıksal, koşullu ve Null işleçleri**  
-  
-|Kategori|İfade|Açıklama|
-|--------------|----------------|-----------------|
-|Mantıksal VE|`x & y`|[Tamsayı bitwise ve](../../language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-), [Boolean mantıksal ve](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-)|
-|Mantıksal XOR|`x ^ y`|[Tamsayı bitwise XOR](../../language-reference/operators/bitwise-and-shift-operators.md#logical-exclusive-or-operator-), [Boolean mantıksal XOR](../../language-reference/operators/boolean-logical-operators.md#logical-exclusive-or-operator-)|
-|Mantıksal VEYA|`x | y`|[Tamsayı bitwise OR](../../language-reference/operators/bitwise-and-shift-operators.md#logical-or-operator-), [Boolean mantıksal veya](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-)|
-|Koşullu VE|x [ && ](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|Yalnızca x doğruysa y değerlendirilir|
-|Koşullu VEYA|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|Yalnızca x yanlışsa y değerlendirilir|
-|Null birleşim|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) y|x null ise y olarak değerlendirilir, tersi durumda x olarak değerlendirilir|
-|Koşullu|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y: z|x doğruysa Y olarak değerlendirilir, x yanlışsa z olarak değerlendirilir|
-  
- **Atama ve anonim işleçleri**  
-  
-|İfade|Açıklama|
-|----------------|-----------------|
-|[=](../../../csharp/language-reference/operators/assignment-operator.md)|Atama|
-|x iş= y|Bileşen atama Bu işleçleri destekler: [ += ](../../../csharp/language-reference/operators/addition-assignment-operator.md), [ -= ](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [ *= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [ /= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [ %= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment) , [&=](../../../csharp/language-reference/operators/boolean-logical-operators.md#compound-assignment), [&#124;=](../../../csharp/language-reference/operators/boolean-logical-operators.md#compound-assignment), [^=](../../../csharp/language-reference/operators/boolean-logical-operators.md#compound-assignment), [<\<=](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#compound-assignment), [>>=](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#compound-assignment)|
-|(T x) [ => ](../../../csharp/language-reference/operators/lambda-operator.md) y|Anonim işlevi (lambda ifadesi)|
+Her işleç tanımlanmış bir önceliğe sahiptir. Farklı öncelik düzeyleri olan birden çok işleç içeren bir ifadede, işleçlerin önceliği, işleçlerin değerlendirilme sırasını belirler. Örneğin, aşağıdaki deyim 3 atar `n1`:
+
+```csharp
+n1 = 11 - 2 * 4;
+```
+
+Çarpma çıkarmaya göre öncelikli olduğundan, önce çarpma yürütülür.
+
+Tam listesi için C# işleçler, öncelik düzeyine göre sıralanmış bkz [ C# işleçleri](../../language-reference/operators/index.md).
   
 ## <a name="associativity"></a>İlişkilendirilebilirlik
 
@@ -169,13 +80,11 @@ a = (b = c);
   
 ## <a name="operator-overloading"></a>İşleç aşırı yüklemesi
 
- Özel sınıflar ve yapılar için işleçlerin davranışını değiştirebilirsiniz. Bu işlem olarak adlandırılır *İşleç aşırı yüklemesi*. Daha fazla bilgi için [fazla yüklenebilir işleçler](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) ve [işleci](../../../csharp/language-reference/keywords/operator.md) anahtar sözcüğü makalesi.  
-  
-## <a name="related-sections"></a>İlgili bölümler
-
- Daha fazla bilgi için [işleç anahtar sözcükleri](../../../csharp/language-reference/keywords/operator-keywords.md) ve [C# işleçleri](../../../csharp/language-reference/operators/index.md).  
+Özel sınıflar ve yapılar için belirli işleçlerin davranışını tanımlayabilirsiniz. Bu işlem olarak adlandırılır *İşleç aşırı yüklemesi*. Daha fazla bilgi için [fazla yüklenebilir işleçler](overloadable-operators.md) ve [işleci](../../language-reference/keywords/operator.md) anahtar sözcüğü makalesi.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Deyimler, İfadeler ve İşleçler](../../../csharp/programming-guide/statements-expressions-operators/index.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Deyimler, İfadeler ve İşleçler](index.md)
+- [C# İşleçleri](../../language-reference/operators/index.md)
+- [İşleç Anahtar Sözcükleri](../../language-reference/keywords/operator-keywords.md)

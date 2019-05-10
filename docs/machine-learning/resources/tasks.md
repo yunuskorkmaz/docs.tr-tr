@@ -1,15 +1,15 @@
 ---
-title: Makine öğrenimi görevlerini - ML.NET
+title: Makine öğrenimi görevleri
 description: Farklı makine öğrenimi görevlerini ve ML.NET içinde desteklenen ilişkili görevleri keşfedin.
 ms.custom: seodec18
-ms.date: 04/12/2019
+ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: bfed9cf12f8d539c4327549e5305415ce096e022
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ed6361fdcbca11c100ee5cae4ca76e152ddfba11
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019110"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063537"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET Machine learning görevleri
 
@@ -28,22 +28,36 @@ A [denetimli makine öğrenimi](glossary.md#supervised-machine-learning) veri ö
 
 Daha fazla bilgi için [ikili sınıflandırma](https://en.wikipedia.org/wiki/Binary_classification) wikipedia makalesi.
 
-### <a name="binary-classification-training-algorithms"></a>İkili sınıflandırma eğitim algoritmaları
+### <a name="binary-classification-trainers"></a>İkili sınıflandırma Eğitmenler
 
 Aşağıdaki algoritmaları kullanarak bir ikili sınıflandırma modelinde eğitebilirsiniz:
 
 * <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.PriorTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer> 
+* <xref:Microsoft.ML.Trainers.PriorTrainer> 
+* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
+
+### <a name="binary-classification-inputs-and-outputs"></a>İkili sınıflandırma girişler ve çıkışlar
+
+İkili sınıflandırma ile en iyi sonuçlar için eğitim verileri (yani eşit sayıda pozitif ve negatif eğitim verilerini) dengelenmelidir. Eksik ve değerleri eğitim önce yapılmalıdır.
+
+Sütun verileri giriş etiket olmalıdır <xref:System.Boolean>.
+Giriş özellikleri sütun verileri bir sabit boyutlu vektör olmalıdır <xref:System.Single>.
+
+Bu Eğitmenler çıkarır aşağıdaki sütunlar:
+
+| Çıkış sütununun adı | Sütun türü | Açıklama|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Model tarafından hesaplanan ham puan|
+| `PredictedLabel` | <xref:System.Boolean> | Puan oturum açma göre tahmin edilen etiketi. Negatif bir puan eşlendiği `false` ve pozitif bir puan eşlendiği `true`.|
 
 ## <a name="multiclass-classification"></a>Sınıflı sınıflandırma
 
@@ -58,17 +72,29 @@ Daha fazla bilgi için [sınıflı sınıflandırma](https://en.wikipedia.org/wi
 >[!NOTE]
 >Herhangi bir vs tüm yükseltmeleri [ikili sınıflandırma learner](#binary-classification) çok sınıflı veri kümelerinde yapacak. Daha fazla bilgi [Vikipedi] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest).
 
-### <a name="multiclass-classification-training-algorithms"></a>Çok sınıflı sınıflandırma eğitim algoritmaları
+### <a name="multiclass-classification-trainers"></a>Sınıflı sınıflandırma Eğitmenler
 
 Aşağıdaki eğitim algoritmalarını kullanarak bir çok sınıflı sınıflandırma modeli eğitmek:
 
-* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
+* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer> 
+
+### <a name="multiclass-classification-inputs-and-outputs"></a>Sınıflı sınıflandırma girişler ve çıkışlar
+
+Sütun verileri giriş etiket olmalıdır [anahtar](xref:Microsoft.ML.Data.KeyDataViewType) türü.
+Sabit boyutlu vektörü özellik sütunu olmalıdır <xref:System.Single>.
+
+Bu eğitmen aşağıdaki verir:
+
+| Çıkış adı | Tür | Açıklama|
+| -- | -- | -- |
+| `Score` | Vektörü <xref:System.Single> | Tüm sınıflar puanları. Daha yüksek değere ilişkili sınıfına denk için daha yüksek olasılık anlamına gelir. İ öğedeki en büyük değeri varsa, tahmin edilen etiket dizini i olacaktır. Sıfır tabanlı dizin i olduğuna dikkat edin. |
+| `PredictedLabel` | [anahtar](xref:Microsoft.ML.Data.KeyDataViewType) türü | Tahmin edilen etiketin dizini. Varsa değerini i, gerçek etiket anahtarı değerli giriş etiket türü i. kategorisinde olacaktır. |
 
 ## <a name="regression"></a>Regresyon
 
@@ -78,19 +104,29 @@ A [denetimli makine öğrenimi](glossary.md#supervised-machine-learning) ilgili 
 * Geçmiş verileri ve geçerli pazar eğilimlerine göre gelecekteki hisse senedi fiyatlarını tahmin etme.
 * Bütçelerini reklam üzerinde temel bir ürün satışları tahmin etme.
 
-### <a name="regression-training-algorithms"></a>Regresyon eğitim algoritmaları
+### <a name="regression-trainers"></a>Regresyon Eğitmenler
 
 Aşağıdaki algoritmaları kullanarak bir regresyon modeli eğitmek:
 
+* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.OlsTrainer>
+* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer> 
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.OlsTrainer>
-* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
+
+### <a name="regression-inputs-and-outputs"></a>Regresyon girişler ve çıkışlar
+
+Sütun verileri giriş etiket olmalıdır <xref:System.Single>.
+
+Bu görev için Eğitmenler aşağıdaki çıkışı:
+
+| Çıkış adı | Tür | Açıklama|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Model tarafından tahmin ham puan |
 
 ## <a name="clustering"></a>Kümeleme
 
@@ -100,11 +136,22 @@ Bir [Denetimsiz machine learning](glossary.md#unsupervised-machine-learning) ben
 * Müşteri kesimleri ve demografik bilgilere bağlı hedeflenen reklam kampanyaları oluşturmanıza yardımcı olmak için tanımlayıcı.
 * Üretim ölçümleri temel alarak envanteri halinde kategorilere ayrılması.
 
-### <a name="clustering-training-algorithms"></a>Kümeleme eğitim algoritmaları
+### <a name="clustering-trainer"></a>Eğitmen kümeleme
 
 Aşağıdaki algoritması kullanarak bir kümeleme modeli eğitmek:
 
-* <xref:Microsoft.ML.Trainers.KMeansTrainer>
+* <xref:Microsoft.ML.Trainers.KMeansTrainer> 
+
+### <a name="clustering-inputs-and-outputs"></a>Giriş ve çıkışları kümeleme
+
+Giriş özellikleri veri olmalıdır <xref:System.Single>. Hiçbir etiket gereklidir.
+
+Bu eğitmen aşağıdaki verir:
+
+| Çıkış adı | Tür | Açıklama|
+| -- | -- | -- |
+| `Score` | vektörü <xref:System.Single> | Tüm kümeler centriods için belirli bir veri noktasının uzaklıkları |
+| `PredictedLabel` | [anahtar](xref:Microsoft.ML.Data.KeyDataViewType) türü | Model tarafından tahmin edilen en yakın kümenin dizini. |
 
 ## <a name="anomaly-detection"></a>Anomali algılama
 
@@ -121,11 +168,21 @@ Anomali algılama machine learning'de birçok önemli görevleri kapsar:
 
 Anomalileri tanımına göre nadir olayları olduğundan, temsili bir örnek model için kullanılacak veri toplamak zor olabilir. Bu kategoride bulunan algoritmaları özellikle imbalanced veri kümelerini kullanarak oluşturma ve eğitim modeli çekirdek sorunları gidermek üzere tasarlanmıştır.
 
-### <a name="anomaly-detection-training-algorithms"></a>Anomali algılama eğitim algoritmaları
+### <a name="anomaly-detection-trainer"></a>Anomali algılama Eğitmen
 
 Aşağıdaki algoritması kullanarak bir anomali algılama modeli eğitmek:
 
 * <xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>
+
+### <a name="anomaly-detection-inputs-and-outputs"></a>Anomali algılama giriş ve çıkışları
+
+Giriş özellikleri sabit boyutlu bir vektör olmalıdır <xref:System.Single>.
+
+Bu eğitmen aşağıdaki verir:
+
+| Çıkış adı | Tür | Açıklama|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Anomali algılama modeli tarafından hesaplanan negatif olmayan, sınırsız puanı |
 
 ## <a name="ranking"></a>Derecelendirme
 
@@ -135,8 +192,20 @@ Derecelendirme görev derecelendiricisini etiketli örnekleri bir dizi oluşturu
 
 Aşağıdaki algoritmaları ile bir derecelendirme modeli eğitmek:
 
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer> 
+
+### <a name="ranking-input-and-outputs"></a>Sıralama giriş ve çıkışları
+
+Giriş etiketi veri türü olmalıdır [anahtarı](xref:Microsoft.ML.Data.KeyDataViewType) türü veya <xref:System.Single>. Etiketin değeri, ilgi düzeyi yüksek değerler daha yüksek bir ilgi yeri belirtmek, belirler. Etiket ise bir [anahtar](xref:Microsoft.ML.Data.KeyDataViewType) küçük dizini az ilgili olduğu anahtar dizini ilgi düzeyi değeri ise yazın. Etiket ise bir <xref:System.Single>, daha yüksek bir ilgi düzeyi daha büyük değerler belirtin.
+
+Özellik verileri bir sabit boyutlu vektör olmalıdır <xref:System.Single> ve Grup sütunu giriş satır olmalıdır [anahtar](xref:Microsoft.ML.Data.KeyDataViewType) türü.
+
+Bu eğitmen aşağıdaki verir:
+
+| Çıkış adı | Tür | Açıklama|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Tahmin belirlemek için model tarafından hesaplanan sınırsız puanı |
 
 ## <a name="recommendation"></a>Öneri
 

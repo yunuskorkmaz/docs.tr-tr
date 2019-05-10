@@ -2,12 +2,12 @@
 title: LINQ to SQL Kullanmaya İlişkin Tipik Adımlar
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0c472fcac0e664e17c1869ba7ffc61ed2b802e8e
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876986"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063008"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>LINQ to SQL Kullanmaya İlişkin Tipik Adımlar
 Uygulamak için bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulama, bu konunun ilerleyen bölümlerinde açıklanan adımları izleyin. Çok adımlı isteğe bağlı olduğunu unutmayın. Varsayılan durumunda, nesne modelini kullanabilirsiniz çok mümkündür.  
@@ -55,7 +55,7 @@ Uygulamak için bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-
 ## <a name="using-the-object-model"></a>Nesne modelini kullanma  
  Aşağıdaki çizimde, iki katmanlı senaryoda Geliştirici ve verileri arasındaki ilişkiyi gösterir. Diğer senaryolar için bkz: [N katmanı ve uzak uygulamalarla LINQ-SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md).  
   
- ![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")  
+ ![LINQ nesne modelini gösteren ekran görüntüsü.](./media/the-linq-to-sql-object-model/linq-object-model-two-tier.png)  
   
  Nesne modeliniz olduğuna göre bilgi istekleri tanımlamak ve bu modeli içinde veri işleme. Nesneleri ve özellikleri, nesne modelinde ve satırları ve sütunları veritabanının açısından değil düşündüğünüz. Veritabanı ile doğrudan ilgili değildir.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: 91f622b9eecdd1aec8b9361493095e92a851988e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8695e94797c297154db9597c6e9938ed9aecfef
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761849"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063024"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Visual Basic'de LINQ - XML Dönüşümüne Genel Bakış
 Visual Basic için destek sağlar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML sabit değerleri ve XML eksen özellikleri. Bu, Visual Basic kodunuzda XML ile çalışmak için tanıdık, kullanışlı bir söz dizimi kullanmanıza olanak sağlar. *XML değişmez değerleri* kodunuzda doğrudan XML dahil olanak sağlar. *XML eksen özellikleri* erişim alt düğümleri, alt düğümleri ve bir XML değişmez değeri özniteliklerini etkinleştirin. Daha fazla bilgi için [XML değişmez değerlerine genel bakış](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) ve [Visual Basic'te erişme XML](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
@@ -20,7 +20,7 @@ Visual Basic için destek sağlar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-
 > [!NOTE]
 >  Bir ASP.NET sayfasında bildirime dayalı kodda XML sabit değerleri ve XML eksen özellikleri desteklenmez. Visual Basic XML özelliklerini kullanmak için bir arka plan kod sayfası, ASP.NET uygulamasının kodunuzu yerleştirin.  
   
- ![video bağlantısı](../../../../visual-basic/programming-guide/language-features/xml/media/playvideo.gif "PlayVideo") ilgili video gösterimi için bkz. [bunu nasıl kullanmaya başlayabilirim LINQ to XML ile?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml) ve [nasıl yaparım Excel kullanarak LINQ to XML elektronik tablolar oluşturabilir?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml).  
+ [Yürüt düğmesi](./media/overview-of-linq-to-xml/play-video-icon-example.gif) ilgili video gösterimi için bkz. [bunu nasıl kullanmaya başlayabilirim LINQ to XML ile?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml) ve [nasıl yaparım Excel kullanarak LINQ to XML elektronik tablolar oluşturabilir?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml).   
   
 ## <a name="creating-xml"></a>XML oluşturma  
  Visual Basic'de XML ağaçlarını oluşturmanın iki yolu vardır. XML değişmez değer kodda doğrudan bildirebilirsiniz veya kullanabilirsiniz [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ağacı oluşturmak için API'ler. Her iki işlem XML ağacının son yapısını yansıtmak için kodu etkinleştirin. Örneğin, aşağıdaki kod örneği bir XML öğesi oluşturur:  

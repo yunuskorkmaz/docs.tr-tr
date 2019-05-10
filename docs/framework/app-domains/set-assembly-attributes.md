@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 638ea8c1f01c62075fc4399cada282128e07422d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705460"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607553"
 ---
 # <a name="setting-assembly-attributes"></a>Derleme Özniteliklerini Ayarlama
 Derleme özniteliklerinin bir derlemeyle ilgili bilgi sağlayan değerlerdir. Öznitelik bilgileri aşağıdaki kümelere ayrılmıştır:  

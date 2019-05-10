@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | Azur
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: cda4c002c73e2dd0db1b2d5d1fa8bc76903c5c62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d328f92ef5e64ee5d92b71472a5e32e2f5d007fd
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019496"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063241"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Azure barındırma önerileri için ASP.NET Core web uygulamaları
 
@@ -26,11 +26,9 @@ Web uygulamaları ile barındırılabilir:
 
 - Kapsayıcılar
 
-- Azure Service Fabric
-
 - Sanal makineler (VM)
 
-Bu App Service Web Apps için önerilen çoğu senaryo için yaklaşımdır. Mikro hizmet mimarileri için bir kapsayıcı tabanlı bir yaklaşım veya Service Fabric göz önünde bulundurun. Uygulamanızı çalıştıran makineler hakkında daha fazla denetime ihtiyacınız varsa, Azure sanal makineler göz önünde bulundurun.
+Bu App Service Web Apps için önerilen çoğu senaryo için yaklaşımdır. Mikro hizmet mimarileri için kapsayıcı tabanlı bir yaklaşımda göz önünde bulundurun. Uygulamanızı çalıştıran makineler hakkında daha fazla denetime ihtiyacınız varsa, Azure sanal makineler göz önünde bulundurun.
 
 ### <a name="app-service-web-apps"></a>App Service Web Apps
 
@@ -45,6 +43,8 @@ App Service Web Apps, web uygulamalarını barındırmak için en iyi duruma get
 - Güvenlik ve uyumluluk.
 
 - Visual Studio tümleştirmesi.
+
+- Linux ve Windows kapsayıcıları desteği [kapsayıcılar için Web App](https://azure.microsoft.com/en-us/services/app-service/containers/).
 
 Azure App Service, çoğu web uygulaması için en iyi seçenektir. Dağıtım ve yönetim süreçleri platform ile tümleştirilmiştir, siteler hızla yüksek trafik yüklerinin altından kalkacak şekilde ölçeklendirilebilir ve yerleşik Yük Dengeleme ve trafik Yöneticisi yüksek kullanılabilirlik sağlar. Bir çevrimiçi geçiş aracı ile kolayca Azure App Service için var olan siteler, Web uygulamaları Galerisi'nden açık kaynaklı uygulama kullanma veya çerçevesi ve tercih ettiğiniz araçları kullanarak yeni bir site oluşturmak taşıyabilirsiniz. WebJobs özelliği, App Service web uygulamanıza işleme arka plan işinin eklemenizi kolaylaştırır.
 
@@ -61,30 +61,9 @@ AKS, karmaşıklığı ve azure'a SORUMLULUĞUN çoğunu devrederek bir Kubernet
 
 AKS kümenizde düğümleri yönetimi işlemleri Azure ile artık birçok el ile Küme yükseltme gibi görevleri gerekir. Azure Bu kritik bakım görevlerini sizin için gerçekleştirdiğinden, AKS doğrudan erişim sağlamaz (gibi SSH ile) kümeye.
 
-### <a name="azure-service-fabric"></a>Azure Service Fabric
-
-Yeni bir uygulama oluşturuyor ya da bir mikro hizmet mimarisi kullanan mevcut bir uygulamayı yeniden yazma, Service Fabric iyi bir seçimdir. Paylaşılan makine havuzu üzerinde çalışan, uygulamalar küçükten başlayabilir ve yüzlerce veya binlerce makineye gerektiği gibi makineyle muazzam bir ölçeğe uygun şekilde büyütüldüğünü görürsünüz. Durum bilgisi olan hizmetler uygulama durumunu tutarlı ve güvenilir bir şekilde depolamak kolaylaştırır ve Service Fabric otomatik olarak hizmet bölümleme, ölçeklendirme ve kullanılabilirlik sizin yerinize yönetir. Service Fabric .NET (OWIN) ve ASP.NET Core Webapı açık Web arabirimine sahip de destekler. App Service ile karşılaştırıldığında Service Fabric ayrıca daha fazla denetime veya doğrudan erişim için temel alınan altyapı sağlar. Siz sunucularınıza uzaktan bağlanabilir veya sunucu başlatma görevleri yapılandırabilirsiniz.
-
 ### <a name="azure-virtual-machines"></a>Azure sanal makineleri
 
-App Service veya Service Fabric çalıştırmak için önemli değişiklikler gerektirecek bir var olan bir uygulamanız varsa, buluta geçirme basitleştirmek için sanal makineleri seçebilirsiniz. Ancak, doğru yapılandırmak, güvenliğini sağlamak ve bakımını yapmak Vm'leri gerektirir çok daha fazla zaman ve IT uzmanlığı için Azure App Service ve Service Fabric karşılaştırması. Azure sanal makineleri düşünüyorsanız, düzeltme eki uygulama, güncelleştirme ve VM ortamınızı yönetmek için gereken sürekli bir bakım çabası dikkate emin olun. Azure sanal makineleri olan altyapı (Iaas), hizmet olarak App Service ve Service Fabric PaaS çalışırken.
-
-#### <a name="feature-comparison"></a>Özellik karşılaştırması
-
-| Özellik                                                                                    | App Service | Kapsayıcılar (AKS) | Service Fabric | Sanal makine |
-| ------------------------------------------------------------------------------------------ | ----------- | ---------------- | -------------- | --------------- |
-| Neredeyse anında dağıtım                                                                    | X           | X                | X              |                 |
-| Yeniden dağıtmadan daha büyük makinelere ölçeklendirme                                               | X           | X                | X              |                 |
-| Örnekleri içeriği ve yapılandırmayı paylaşır; yeniden dağıtın veya ölçeklendirme RECONFIGURE gerek | X           | X                | X              |                 |
-| Birden çok dağıtım ortamı (üretim, hazırlama)                                     | X           | X                | X              |                 |
-| Otomatik işletim sistemi güncelleştirme yönetimi                                                             | X           | X                |                |                 |
-| Sorunsuz 32/64 bit platformlar arasında geçiş yapma                                             | X           | X                |                |                 |
-| Git ve FTP ile kod dağıtma                                                                  | X           | X                |                | X               |
-| WebDeploy ile kod dağıtma                                                                 | X           | X                |                | X               |
-| TFS ile kod dağıtma                                                                       | X           | X                | X              | X               |
-| Barındırma web veya çok katmanlı mimarinin web hizmet katmanı                                    | X           | X                | X              | X               |
-| Service Bus, depolama, SQL veritabanı gibi Azure hizmetlerine erişim                              | X           | X                | X              | X               |
-| Herhangi bir özel MSI'yi yükleme                                                                     |             | X                | X              | X               |
+App Service'te çalıştırılacak önemli değişiklikler gerektirecek bir var olan bir uygulamanız varsa, buluta geçirme basitleştirmek için sanal makineleri seçebilirsiniz. Ancak, doğru şekilde yapılandırma, güvenlik altına alma ve Vm'leri koruma çok daha fazla zaman ve Azure App Service ile karşılaştırıldığında IT uzmanlığı gerektirir. Azure sanal makineleri düşünüyorsanız, düzeltme eki uygulama, güncelleştirme ve VM ortamınızı yönetmek için gereken sürekli bir bakım çabası dikkate emin olun. Azure sanal makineleri olan altyapı (Iaas), hizmet olarak App Service PaaS olsa da. Kapsayıcılar için Web App'e bir Windows kapsayıcı olarak uygulamanızın dağıtılacağı senaryonuz için uygun bir seçenek olup da dikkate almanız gerekir.
 
 ## <a name="logical-processes"></a>Mantıksal işlemleri
 
@@ -121,8 +100,8 @@ Uygulamanızın gereksinimlerini mimarisinin belirleyen unsurlar olmalıdır. Bi
 - Web Apps overview\
   <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
-- Azure App Service, sanal makineler, Service Fabric ve Cloud Services comparison\
-  <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
+- Containers\ için Web App
+  <https://azure.microsoft.com/en-us/services/app-service/containers/>
 
 - Azure Kubernetes Service'i (AKS) giriş \
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>

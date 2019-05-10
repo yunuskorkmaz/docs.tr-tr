@@ -3,12 +3,12 @@ title: Standart .NET olay desenleri
 description: .NET olay desenleri ve abone standart olay kaynakları oluşturmak ve kodunuzun içinde standart olayları işleme hakkında daha fazla bilgi edinin.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 11755b4754b15070869adf12d5be409af99035d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd1ead318529d1afc5b27ff8710cebcaae9b7bc3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646637"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062960"
 ---
 # <a name="standard-net-event-patterns"></a>Standart .NET olay desenleri
 
@@ -55,7 +55,7 @@ En basit yolu, sınıfa olaya eklemek için önceki örnekte olduğu gibi genel 
 
 [!code-csharp[DeclareEvent](../../samples/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
 
-Hatalı nesne yönelimli bir uygulama olarak görünebilir bir ortak alan bildirme görülüyor. Özellikleri veya yöntemleri aracılığıyla veri erişimi korumak istiyorsunuz. Bunu yaparken, böylece olay nesneleri yalnızca güvenli şekilde erişilebilir hatalı bir uygulama, derleyici tarafından oluşturulan kodu sarmalayıcıları oluşturma gibi arayın. Yalnızca kullanılabilir işlemleri bir alan benzeri olayı işleyicisi ekleyin:
+Hatalı nesne yönelimli bir uygulama olarak görünebilir bir ortak alan bildirme görülüyor. Özellikleri veya yöntemleri aracılığıyla veri erişimi korumak istiyorsunuz. Bu, hatalı bir uygulama gibi görünebilir, ancak derleyici tarafından oluşturulan kodu olay nesneleri yalnızca güvenli şekilde erişilebilir olacak şekilde sarmalayıcıları oluşturma. Yalnızca kullanılabilir işlemleri bir alan benzeri olayı işleyicisi ekleyin:
 
 [!code-csharp[DeclareEventHandler](../../samples/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
 

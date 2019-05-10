@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 1a954b41-7173-40bc-8544-d430f209b1e5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58adf0251fdc7427f493e8bf9947c081bfccd2a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 44b102cf160dcc4b3f188451d42d3b8dbefa5d1f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698830"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590192"
 ---
 # <a name="node-set-navigation-using-xpathnavigator"></a>XPathNavigator Kullanarak Düğüm Kümesinde Gezinme
 Düğümler üzerinden gezinebileceğiniz bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> düğüm kümesi gezinme yöntemlerinden biri kullanılarak nesne <xref:System.Xml.XPath.XPathNavigator> sınıfı. Tüm düğümleri veya seçili bir dizi seçimi yöntemlerini biri tarafından döndürülen düğümü üzerinden gidebilirsiniz <xref:System.Xml.XPath.XPathNavigator> sınıfı.  

@@ -2,12 +2,12 @@
 title: Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: dd00b72396fe40a7577fabd5704a240f91d1e268
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5a15024c0d2308da8cf2cc0d72d79c9f585f2912
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051773"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606010"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı WCF tarafından oluşturulan tanılama izlemeleri analiz etmenize yardımcı olur. Hizmet izleme görüntüleyicisini kolayca birleştirmek, görüntülemek ve böylece tanılama onarın ve WCF hizmet sorunları doğrula izleme günlüğü iletileri filtrelemek için bir yol sağlar.  
@@ -62,11 +62,11 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Açma ve WCF izleme dosyalarını görüntüleme  
  Hizmet izleme görüntüleyicisini üç dosya türlerini destekler:  
   
--   WCF izleme dosyası (.svcLog)  
+- WCF izleme dosyası (.svcLog)  
   
--   Olay dosyası (.etl) izleme  
+- Olay dosyası (.etl) izleme  
   
--   Koyu izleme dosyası  
+- Koyu izleme dosyası  
   
  Hizmet izleme görüntüleyicisini, tüm desteklenen izleme dosyasını açın, ekleyin ve ek izleme dosyaları, tümleştirme veya açın ve izleme dosyaları bir grup aynı anda birleştirme sağlar.  
   
@@ -106,9 +106,9 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
   
  Projeleri yönetmeye yönelik iki yolu vardır:  
   
--   İçinde **dosya** menüsünü açabilir, kaydedin ve kapatın projeleri.  
+- İçinde **dosya** menüsünü açabilir, kaydedin ve kapatın projeleri.  
   
--   İçinde **proje** sekmesi, dosyaları bir projeye ekleyebilirsiniz.  
+- İçinde **proje** sekmesi, dosyaları bir projeye ekleyebilirsiniz.  
   
 ### <a name="viewing-wcf-traces"></a>WCF izlemeleri görüntüleme  
  WCF Etkinlik izleme biçimini kullanarak izlemeleri yayar. Etkinlik izleme modelinde, tek tek izlemeleri etkinliklerde amaçlarına göre gruplandırılır. Mantıksal denetim akışı etkinlikleri arasında aktarılır. Örneğin, bir uygulamanın kullanım ömrü, süresince birçok "iletisi gönder etkinliği" görünür ve kaybolur. İzlemeleri ve etkinlikleri ve hizmet izleme görüntüleyicisini kullanıcı arabiriminin çok görüntüleme ile ilgili daha fazla bilgi için bkz: [ilişkilendirilmiş izlemeleri görüntülemek ve sorun giderme için hizmet izleme görüntüleyicisini kullanarak](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
@@ -116,13 +116,13 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
 #### <a name="switching-to-different-views"></a>Geçiş için farklı görünümleri  
  Hizmet izleme görüntüleyicisini aşağıdaki farklı görünümler sağlar. Görüntüleyici'nin sol bölmede sekme olarak gösterilen ve yanından erişilebilen **görünümü** menüsü.  
   
--   Etkinliği Görüntüle  
+- Etkinliği Görüntüle  
   
--   Proje görünümü  
+- Proje görünümü  
   
--   İleti görünümü  
+- İleti görünümü  
   
--   Graf Görünümü  
+- Graf Görünümü  
   
 ##### <a name="activity-view"></a>Etkinliği Görüntüle  
  İzleme dosyaları açılmadı sonra etkinliklerine gruplandırılmış ve görüntülenen izlemeleri görebilirsiniz **etkinlik** sol bölmesindeki görünümü.  
@@ -144,9 +144,12 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
   
 ##### <a name="project-view"></a>Proje görünümü  
  Bu görünüm, geçerli projede izleme dosyaları yönetmenizi sağlar. Daha fazla ayrıntı için proje yönetimi bölümüne bakın.  
-  
+
+##### <a name="message-view"></a>İleti görünümü
+ Bu görünüm sağlar tüm ileti günlüğünü görüntülemek için izlemeler, eylem, tarih, işlem, aktivitesi dahil ve/için ve ilişkili ileti günlüğü izlemenin ayrıntılarına Git. İleti akışının daha kolay gezinme için ileti günlük izlemelerini Hranice, işlem/iş parçacığı veya gönderme ve alma göre gruplandırabilirsiniz.
+ 
 ##### <a name="graph-view"></a>Graf Görünümü  
- Hizmet izleme görüntüleyicisini en güçlü özelliklerinden biri **grafik** görünümü, belirli bir etkinlik izleme verilerini grafik biçiminde görüntüler. Grafik formun veri bunlar arasında hareket ettikçe tarafınızdaki yürütülmesi olayları ve birden çok etkinlik birbiriyle görmenizi sağlar.  
+ Bu görünüm belirli bir etkinlik izleme verilerini grafik biçiminde görüntüler. Grafik formun veri bunlar arasında hareket ettikçe tarafınızdaki yürütülmesi olayları ve birden çok etkinlik birbiriyle görmenizi sağlar.  
   
  Geçiş yapmak **grafik** görüntülemek için bir etkinlik seçin **etkinlik** görüntülemek ve **etkinlik** sekmesini veya bir ileti günlüğü izlemede **ileti**Görünümü. Birden çok izleme dosyaları yüklenir ve birden fazla dosya izlemelerinden etkinlik içerir, tüm ilgili izlemeleri Grafik Görünümü'nde görünür. Etkinlikleri ve ileti günlük izlemelerini çift ayrıca müşteri adayları, **grafik** görünümü.  
   
@@ -192,9 +195,9 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
 ###### <a name="options"></a>Seçenekler  
  İki seçenekler arasından seçim yapabilirsiniz **seçeneği** graf görünümünü menüsünde.  
   
--   İşaretlenmediğinde, grafik etkinliği sınır izlemelerinde yoksay etkinlik sınır izlemeleri göster.  
+- İşaretlenmediğinde, grafik etkinliği sınır izlemelerinde yoksay etkinlik sınır izlemeleri göster.  
   
--   Hangi işaretlenmediğinde ileti izlemeleri dışında ayrıntılı düzeyi izlemeleri yoksay olmayan ileti ayrıntılı izleme, gösterir. Çoğu durumda, ayrıntılı düzeyi izlemeleri analiz için küçük büyük/küçük harf önemlidir. Ayrıntılı düzeyi izlemeleri analiz edin ve yalnızca üzerinde daha önemli izlemeler odaklanmayı tercih istemediğinizde bu seçenek yararlı olur.  
+- Hangi işaretlenmediğinde ileti izlemeleri dışında ayrıntılı düzeyi izlemeleri yoksay olmayan ileti ayrıntılı izleme, gösterir. Çoğu durumda, ayrıntılı düzeyi izlemeleri analiz için küçük büyük/küçük harf önemlidir. Ayrıntılı düzeyi izlemeleri analiz edin ve yalnızca üzerinde daha önemli izlemeler odaklanmayı tercih istemediğinizde bu seçenek yararlı olur.  
   
 ###### <a name="layout-mode"></a>Düzen modu  
  Görüntüleyici iki Düzen modu vardır: **İşlem** ve **iş parçacığı**. Bu ayar, en büyük kuruluş birimi tanımlar. Düzen modu varsayılan **işlem**, etkinlik grafiğinde işlemler tarafından gruplandırılır anlamına gelir.  
@@ -222,22 +225,22 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
 ### <a name="filtering-wcf-traces"></a>Filtreleme WCF izlemeleri  
  İzleme analizi kolaylaştırmak için bunları aşağıdaki şekillerde filtreleyebilirsiniz:  
   
--   Filtre araç önceden tanımlanmış ve özel filtreler erişim sağlar. Aracılığıyla etkinleştirilebilir **görünümü** menüsü.  
+- Filtre araç önceden tanımlanmış ve özel filtreler erişim sağlar. Aracılığıyla etkinleştirilebilir **görünümü** menüsü.  
   
--   Önceden tanımlanmış filtre Görüntüleyicisi, seçmeli olarak WCF izlemeleri bölümlerini filtrelemek için kullanılabilir. Varsayılan olarak, tüm altyapı izlemeleri geçmesine izin verecek şekilde ayarlanır. Bu filtre ayarlarını tanımlanan **filtreleme seçeneklerini** alt menüsü altında **görünümü** menüsü.  
+- Önceden tanımlanmış filtre Görüntüleyicisi, seçmeli olarak WCF izlemeleri bölümlerini filtrelemek için kullanılabilir. Varsayılan olarak, tüm altyapı izlemeleri geçmesine izin verecek şekilde ayarlanır. Bu filtre ayarlarını tanımlanan **filtreleme seçeneklerini** alt menüsü altında **görünümü** menüsü.  
   
--   Özel için XPath filtrelerinde kullanıcılar filtreleme üzerinde tam denetim verir. İçinde tanımlanabilir **özel filtre** altında **görünümü** menüsü.  
+- Özel için XPath filtrelerinde kullanıcılar filtreleme üzerinde tam denetim verir. İçinde tanımlanabilir **özel filtre** altında **görünümü** menüsü.  
   
  Tüm filtreleri geçen izlemeleri görüntülenir.  
   
 #### <a name="using-the-filter-toolbar"></a>Filtre araç çubuğunu kullanma  
  Filtre araç çubuğu araç üst kısmında görünür. Mevcut değilse, bunu etkinleştirebilir **görünümü** menüsü. Çubuğundaki üç bileşenden oluşur:  
   
--   Aramak: **Aranacak** filtre işlemi aramak için konu tanımlar. Örneğin, yayılan tüm izlemeler X işlem bağlamında bulmak istiyorsanız, bu alanı X ayarlayın ve **arama içinde** 'İşlem adı' alanı. Bir tarih saat seçici denetimi zamana bağlı filtre olduğunda bu alanı değişiklikleri seçilidir.  
+- Aramak: **Aranacak** filtre işlemi aramak için konu tanımlar. Örneğin, yayılan tüm izlemeler X işlem bağlamında bulmak istiyorsanız, bu alanı X ayarlayın ve **arama içinde** 'İşlem adı' alanı. Bir tarih saat seçici denetimi zamana bağlı filtre olduğunda bu alanı değişiklikleri seçilidir.  
   
--   Arama: Bu alan uygulanacak filtrenin türünü tanımlar.  
+- Arama: Bu alan uygulanacak filtrenin türünü tanımlar.  
   
--   Düzeyi: Düzeyi ayarı filtre tarafından izin verilen minimum izleme düzeyini tanımlar. Örneğin, hata ve düzeyi ayarlama, yalnızca kritik düzey ve hata izlemeleri görüntülenir. Bu filtre, Ara ve arama tarafından belirtilen ölçütleri ile birleştirir.  
+- Düzeyi: Düzeyi ayarı filtre tarafından izin verilen minimum izleme düzeyini tanımlar. Örneğin, hata ve düzeyi ayarlama, yalnızca kritik düzey ve hata izlemeleri görüntülenir. Bu filtre, Ara ve arama tarafından belirtilen ölçütleri ile birleştirir.  
   
  **Artık filtre** düğmesi filtre işlemi başlatır. Bazı filtreler, özellikle de büyük bir veri kümesine uygulandığında, tamamlanması uzun sürebilir. Tuşlarına basarak filtre işlemi iptal edebilirsiniz **Durdur** durum çubuğunda görünen bir düğme **işlemleri** menüsü.  
   
@@ -321,27 +324,27 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
 ### <a name="finding-data"></a>Bulma verileri  
  Görüntüleyici verileri bulmak için aşağıdaki yöntemleri sağlar:  
   
--   Bul araç, en yaygın Bul seçenekleri bir hızlı erişim sağlar.  
+- Bul araç, en yaygın Bul seçenekleri bir hızlı erişim sağlar.  
   
--   Daha fazla bulma seçenekleri Bul iletişim kutusu sağlar. Aracılığıyla erişilebilir **Düzenle** menüsünden veya kısa anahtar Ctrl + f  
+- Daha fazla bulma seçenekleri Bul iletişim kutusu sağlar. Aracılığıyla erişilebilir **Düzenle** menüsünden veya kısa anahtar Ctrl + f  
   
  Bul araç Görüntüleyicisi üst kısmında görünür. Mevcut değilse, bunu etkinleştirebilir **görünümü** menüsü. Çubuk iki bileşenden oluşur:  
   
--   Aranan: Arama anahtar sözcüğü girmenizi sağlar.  
+- Aranan: Arama anahtar sözcüğü girmenizi sağlar.  
   
--   Konum: Arama kapsamı girmenizi sağlar. Tüm etkinliklerde veya yalnızca geçerli etkinliği aramak seçebilirsiniz.  
+- Konum: Arama kapsamı girmenizi sağlar. Tüm etkinliklerde veya yalnızca geçerli etkinliği aramak seçebilirsiniz.  
   
  Bul iletişim kutusu iki ek seçenekler sağlar:  
   
--   Hedef bulun:  
+- Hedef bulun:  
   
-    -   "Ham günlük veri" seçeneği, anahtar sözcüğü tüm ham verileri kullanarak arar.  
+    - "Ham günlük veri" seçeneği, anahtar sözcüğü tüm ham verileri kullanarak arar.  
   
-    -   "XML metni" ve "XML özniteliği" seçenekleri yalnızca XML öğeleri arayın.  
+    - "XML metni" ve "XML özniteliği" seçenekleri yalnızca XML öğeleri arayın.  
   
-    -   "İleti günlüğe" seçeneği, anahtar sözcüğü yalnızca iletileri arar.  
+    - "İleti günlüğe" seçeneği, anahtar sözcüğü yalnızca iletileri arar.  
   
--   Kök etkinlik yoksay: Arama "000000000000" etkinlik izlemelerinde yok sayar. Kök etkinlik aktarımları çoğu, izleme, binlerce sahip olduğunda bu büyük izleme dosyaları performansını artırır.  
+- Kök etkinlik yoksay: Arama "000000000000" etkinlik izlemelerinde yok sayar. Kök etkinlik aktarımları çoğu, izleme, binlerce sahip olduğunda bu büyük izleme dosyaları performansını artırır.  
   
 ### <a name="navigating-traces"></a>İzlemeleri gezinme  
  Uygulama çalışma zamanı sırasında izlemeleri adım adım kayıtlı olduğundan izlemeleri gezinme, uygulamanızda hata ayıklamak için yardımcı olabilir. Hizmet izleme görüntüleyicisini izlemelerinde gitmek için çeşitli yollar sağlar.  
@@ -349,9 +352,9 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
 #### <a name="step-forward-or-backward"></a>İleriye veya geriye doğru adım  
  Her izleme bir programda kod satırı olarak düşünün, İleri Adımlama "Adımlama" içinde Visual Studio tümleşik geliştirme ortamı (IDE) için benzer. Aynı zamanda geri izlemelerinde geçebilirsiniz, farktır. İleri Adımlama, sonraki etkinliği izlemede geçme anlamına gelir.  
   
--   İleri adım atın: Kullanım **etkinlik** menüsünden veya "F10" tuşuna basın. Ok tuşu "kapalı" izleme bölmesinde kullanabilirsiniz.  
+- İleri adım atın: Kullanım **etkinlik** menüsünden veya "F10" tuşuna basın. Ok tuşu "kapalı" izleme bölmesinde kullanabilirsiniz.  
   
--   Geriye dönük. adım: Kullanım **etkinlik** menüsünden veya "F9" tuşuna basın. Ok tuşu "yukarı" izleme bölmesinde kullanabilirsiniz.  
+- Geriye dönük. adım: Kullanım **etkinlik** menüsünden veya "F9" tuşuna basın. Ok tuşu "yukarı" izleme bölmesinde kullanabilirsiniz.  
   
 > [!NOTE]
 >  WCF iletileri etkinlik makineler span kimlikleri gerçekleştirebilirsiniz çünkü bu, farklı bir işlemde veya hatta farklı bir bilgisayara gerçekleşen bir etkinliğin alabilir.  
@@ -363,9 +366,9 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
   
  Aktarım izlemek için iki yolu vardır: klavye veya fare tarafından:  
   
--   Fare tarafından: İzleme bölmesinde aktarım izleme çift tıklayın.  
+- Fare tarafından: İzleme bölmesinde aktarım izleme çift tıklayın.  
   
--   Klavye tarafından: Aktarım izleme seçin ve "Transfer izleyin", **etkinlik** menüsünden veya "F11" tuşuna basın.  
+- Klavye tarafından: Aktarım izleme seçin ve "Transfer izleyin", **etkinlik** menüsünden veya "F11" tuşuna basın.  
   
 > [!NOTE]
 >  Etkinlik B, etkinlik A aktarırken geri etkinlik a etkinlik B aktarır kadar birçok durumda, etkinlik bekler Bu, etkinlik, etkinlik B etkin bir şekilde izleme dönemi boyunca günlüğe bir izleme yok olduğu anlamına gelir. Ancak, aynı zamanda etkinlik beklememeyi ve günlük izlemeleri devam mümkündür. Etkinlik B geri etkinlik a aktarmaz olanağı da sağlar Bu nedenle, etkinlik aktarımları hala işlev çağrıları bu bağlamdaki farklıdır. Aktarımları Etkinlik Grafiği görünümü'nde daha iyi anlayabilirsiniz.  
@@ -373,9 +376,9 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
 #### <a name="jump-to-next-or-previous-transfer"></a>Sonraki veya önceki aktarımı atla  
  Birden çok etkinlik seçildiğinde, geçerli etkinliği ya da seçili etkinlikler çözümlerken, hızlı bir şekilde aktarır, etkinlikleri bulmak isteyebilirsiniz. "Aktarmak sonraki atlama", sonraki aktarım izleme etkinliğini bulundurmanıza olanak tanır. Aktarım izleme bulduktan sonra sonraki etkinliği içine Adımlama için "aktarımı İzle"'ı kullanabilirsiniz.  
   
--   Sonraki aktarımı atla: Kullanım **etkinlik** menüsünden veya "Ctrl + F10" tuşuna basın.  
+- Sonraki aktarımı atla: Kullanım **etkinlik** menüsünden veya "Ctrl + F10" tuşuna basın.  
   
--   Önceki aktarımı atla: Kullanım **etkinlik** menüsünden veya "Ctrl + F9" tuşuna basın.  
+- Önceki aktarımı atla: Kullanım **etkinlik** menüsünden veya "Ctrl + F9" tuşuna basın.  
   
 #### <a name="navigate-in-graph-view"></a>Graf görünümü içinde gezinme  
  Etkinlik ve izleme bölmesinde gezinme hatalarının ayıklanmasına benzer olsa da, kullanarak **grafik** görünümü çok daha iyi bir deneyim gezinti sağlar. Daha fazla bilgi için "Grafik görünümü" bölümüne bakın.  

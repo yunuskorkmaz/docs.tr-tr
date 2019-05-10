@@ -4,12 +4,12 @@ description: . NET'te P/Invoke aracılığıyla yerel işlevleri çağırma hakk
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: d1da6be56e14f72e17cf8fc9ba343ce148fe0931
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ed1eb69a418317bbee2502418cc2521a68b65542
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973517"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063210"
 ---
 # <a name="platform-invoke-pinvoke"></a>Platform Çağırma (P/Invoke)
 
@@ -178,7 +178,7 @@ namespace PInvokeSamples
 
     // The native callback takes a pointer to a struct. The below class
     // represents that struct in managed code. You can find more information
-    // about this in the section on marshalling below.
+    // about this in the section on marshaling below.
     [StructLayout(LayoutKind.Sequential)]
     public class StatClass
     {
@@ -254,7 +254,7 @@ namespace PInvokeSamples
 }
 ```
 
-Yönetilen türler verilen her iki durumda da, parametre ve önceki örneklerin her ikisi de parametrelere bağlıdır. Çalışma zamanı "doğru şeyi" mu ve bunları kendi eşdeğerleri diğer tarafındaki işler. Nasıl türleri için yerel kodda sayfamızı üzerinde sıraya hakkında bilgi edinin [türü taşıma](type-marshalling.md).
+Yönetilen türler verilen her iki durumda da, parametre ve önceki örneklerin her ikisi de parametrelere bağlıdır. Çalışma zamanı "doğru şeyi" mu ve bunları kendi eşdeğerleri diğer tarafındaki işler. Nasıl türleri için yerel kodda sayfamızı üzerinde sıralanmış hakkında bilgi edinin [türü hazırlama](type-marshaling.md).
 
 ## <a name="more-resources"></a>Daha fazla kaynak
 

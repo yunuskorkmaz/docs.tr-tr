@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8731e90a66c20f06e8afcd7458349cbc0b93484
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d7608ed964313774b806ba6f1bb4d8f0d322c361
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674967"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592773"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>İntranet Uygulamalarını Tam Güvende Çalıştırma
 .NET Framework sürüm 3.5 ile başlayarak Service Pack 1 (SP1), uygulamaları ve bunların kitaplık derlemeleri tam güven derlemeleri bir ağ paylaşımından çalıştırılabilir. <xref:System.Security.SecurityZone.MyComputer> Bölge kanıt, intranet üzerindeki paylaşımdan yüklenen derlemeler için otomatik olarak eklenir. Bu bulgu aynı bilgisayarda bulunabilir bütünleştirilmiş (genellikle tam güven olduğu) kümesini vermek bu derlemeler sağlar. Bu işlev, ClickOnce uygulamaları veya bir konak üzerinde çalışmak üzere tasarlanmış uygulamalar için geçerli değildir.  

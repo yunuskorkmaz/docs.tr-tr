@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f7770db59c346f0981dd89a9995f11e41d17a1d
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052007"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063485"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Nasıl yapılır: TextBox Metni Kaynağı Güncelleştirdiğinde Denetleme
 Bu konu nasıl kullanılacağını açıklar <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> zamanlamasını bağlama kaynağı güncelleştirmeleri denetlemek için özellik. Konu kullanır <xref:System.Windows.Controls.TextBox> örnek olarak denetimi.  
@@ -28,7 +28,7 @@ Bu konu nasıl kullanılacağını açıklar <xref:System.Windows.Data.Binding.U
   
  Sonuç olarak, <xref:System.Windows.Controls.TextBlock> (kaynak değiştiğinden dolayı) kullanıcının girdiği metin olarak aynı metni gösterir <xref:System.Windows.Controls.TextBox>tarafından örnek aşağıdaki ekran görüntüsünde gösterildiği gibi:  
   
- ![Basit veri bağlama örnek ekran](./media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
+ ![Basit veri bağlama gösteren ekran görüntüsü.](./media/how-to-control-when-the-textbox-text-updates-the-source/data-binding-simple-binding-sample.png)  
   
  Bir iletişim kutusu veya kullanıcı tarafından düzenlenebilir bir forma sahip ve kullanıcı alanları düzenleme bitti ve "Tamam" a tıklayarak kadar kaynak güncelleştirmelerinin erteleneceği istediğiniz, ayarlayabileceğiniz <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> bağlamalarınızı için değerini <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, aşağıdaki örnekte olduğu gibi:  
   

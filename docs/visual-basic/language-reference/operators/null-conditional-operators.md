@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: b83435b8448b53eca63aac0519e9eed2f7dfa9f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4815fe7ad337634cfb56127fbd24a47a37fdd74b
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028697"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062937"
 ---
 # <a name="-and--null-conditional-operators-visual-basic"></a>?. ve? () null koşullu işleçleri (Visual Basic)
 
@@ -37,6 +37,24 @@ Dim length As Integer
 If customers IsNot Nothing Then
    length = customers.Length
 End If
+```
+
+Bazen bu nesne üzerinde bir Boolean üye değere göre null olabilir bir nesne üzerinde bir işlem yapması gerekebilir (ister Boolean özelliği `IsAllowedFreeShipping` aşağıdaki örnekte):
+
+```vb
+  Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
+  
+  If customer IsNot Nothing AndAlso customer.IsAllowedFreeShipping Then
+   ApplyFreeShippingToOrders(customer)
+  End If
+```
+
+Kodunuzu kısaltın ve el ile aşağıdaki gibi null koşullu işleci kullanarak null iade etmekten kaçının:
+
+```vb
+ Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
+ 
+ If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
 ```
 
 Null koşullu işleçleri short-circuiting.  Koşullu üye erişimi ve dizin işlemlerini zincirinin tek bir işlemde döndürürse `Nothing`, kalan zincirinin yürütmeyi durdurur.  Aşağıdaki örnekte, `C(E)` değilse değerlendirilmez `A`, `B`, veya `C` değerlendiren `Nothing`.

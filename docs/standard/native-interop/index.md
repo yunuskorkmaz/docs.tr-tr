@@ -4,12 +4,12 @@ description: . NET'te yerel bileşenleriyle arabirim öğrenin.
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 29aacc9210b4103f379b7776c36fc3c29b9e6dec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b01ea9c17db6da32755309d9c1c2359cecaa1155
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973569"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062717"
 ---
 # <a name="native-interoperability"></a>Native ile birlikte çalışma
 
@@ -29,5 +29,5 @@ Neden yerel kod içine çağırmak istiyorsunuz birkaç nedeni vardır:
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Platform Çağırma (P/Invoke)](pinvoke.md)
-- [Tür hazırlama](type-marshalling.md)
+- [Sıralama türü](type-marshaling.md)
 - [Yerel birlikte çalışabilirliği en iyi uygulamalar](best-practices.md)

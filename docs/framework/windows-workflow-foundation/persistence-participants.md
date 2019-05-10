@@ -2,12 +2,12 @@
 title: Kalıcılık Katılımcıları
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 73799fd66dd619d2573a1d334a6dbd23a9ff5b4e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672659"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592142"
 ---
 # <a name="persistence-participants"></a>Kalıcılık Katılımcıları
 Kalıcılık Katılımcısı bir uygulama ana bilgisayarı tarafından tetiklenen bir Kalıcılık işlemi (kaydetme veya yük) katılabilir. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] İki soyut sınıf ile birlikte gelen **PersistenceParticipant** ve **PersistenceIOParticipant**, hangi Kalıcılık Katılımcısı oluşturma için kullanabilirsiniz. Kalıcılık Katılımcısı bu sınıflardan birine türetilen, ilgilenilen yöntemlerini uygular ve sonra sınıfa bir örneğini ekler <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> koleksiyonunda <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Uygulama konağı, bir iş akışı örneği kalıcı olduğunda bu tür iş akışı uzantılar için Ara ve uygun zamanlarda Kalıcılık katılımcıları uygun yöntemleri çağırmak olabilir.  

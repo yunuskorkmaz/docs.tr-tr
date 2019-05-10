@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e942b3f6f6572c05d42a0267f98e6c876a113616
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 728f360d2e8f93ebdf2b17fec39477b95ed11357
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909629"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063287"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Bellek\<T > ve aralık\<T > kullanım yönergeleri
 
@@ -86,7 +86,7 @@ Bu kod:
 
 - `Main` Yöntemi başvuru tutan <xref:System.Buffers.IMemoryOwner%601> örneği, bu nedenle `Main` yöntemi arabellek sahibidir.
 
-- `WriteInt32ToBuffer` Ve `DisplayBufferToConsole` yöntemleri kabul xref:System.Memory%601 > Genel API olarak. Bu nedenle, arabellek tüketicilerinin altındadır. Ve bunların yalnızca birini tüketicilerimizin birer güncelleştirir.
+- `WriteInt32ToBuffer` Ve `DisplayBufferToConsole` yöntemleri kabul <xref:System.Memory%601> Genel API olarak. Bu nedenle, arabellek tüketicilerinin altındadır. Ve bunların yalnızca birini tüketicilerimizin birer güncelleştirir.
 
 Ancak `WriteInt32ToBuffer` yöntemi bir değer arabelleğe yazmak için tasarlanmıştır `DisplayBufferToConsole` yöntemi değildir. Bunu yansıtmak için onu türünde bir bağımsız değişken kabul ettiğini <xref:System.ReadOnlyMemory%601>. Hakkında daha fazla bilgi için <xref:System.ReadOnlyMemory%601>, bkz: [Kural 2: ReadOnlySpan kullanın\<T > ya da ReadOnlyMemory\<T > salt okunur arabellek olması gerekiyorsa](#rule-2).
 
@@ -110,13 +110,13 @@ Bir bellek bloğuna sahip olduğu ancak bazıları çalışan belirli bellek blo
 
 - Bir bileşen başka bir bileşen üzerinde arabellekteki verileri bozmasına işlemde çalıştığından aynı anda bir arabellek üzerinde çalışılacak mümkündür.
 
-- Yığın ayırma yapısını while <xref:System.Span%601> performansı en iyi duruma getirir ve yapar <xref:System.Span%601> Ayrıca, bir bellek bloğu üzerinde çalışmak tercih edilen türünü konuları <xref:System.Span%601> bazı önemli kısıtlamaları kısıtlamaları. Ne zaman kullanılacağını bilmek önemlidir bir <xref:System.Span%601> ve ne zaman kullanılacağı <xref:System.Memory%601>.
+- Yığın ayırma yapısını while <xref:System.Span%601> performansı en iyi duruma getirir ve yapar <xref:System.Span%601> Ayrıca, bir bellek bloğu üzerinde çalışmak tercih edilen türünü konuları <xref:System.Span%601> bazı önemli kısıtlamaları. Ne zaman kullanılacağını bilmek önemlidir bir <xref:System.Span%601> ve ne zaman kullanılacağı <xref:System.Memory%601>.
 
 Aşağıdakiler önerilerimizle başarıyla kullanmak için <xref:System.Memory%601> ve ilgili türleri. Geçerli Kılavuzu unutmayın <xref:System.Memory%601> ve <xref:System.Span%601> için de geçerlidir <xref:System.ReadOnlyMemory%601> ve <xref:System.ReadOnlySpan%601> sürece biz açıkça aksi unutmayın.
 
 **Kural #1: Aralık için zaman uyumlu bir API kullanmak\<T > bellek yerine\<T > mümkünse bir parametre olarak.**
 
-<xref:System.Span%601> Daha fazla yönlüdür <xref:System.Memory%601> ve çok çeşitli bitişik bellek arabelleği temsil edebilir. <xref:System.Span%601> Ayrıca performans teklifler daha iyi <xref:System.Memory%601>>. Son olarak, kullanabileceğiniz <xref:System.Memory%601.Span?displayProperty=nameWithType> dönüştürmek için özellik bir <xref:System.Memory%601> için örnek bir <xref:System.Span%601>, aralık ancak\<T > - to - bellek\<T > dönüştürme mümkün değil. Bunu, Arayanların varsa bir <xref:System.Memory%601> örneği, bunlar yapabileceksiniz yöntemlerinizi ile çağrılacak <xref:System.Span%601> parametreleri yine de.
+<xref:System.Span%601> Daha fazla yönlüdür <xref:System.Memory%601> ve çok çeşitli bitişik bellek arabelleği temsil edebilir. <xref:System.Span%601> Ayrıca performans teklifler daha iyi <xref:System.Memory%601>. Son olarak, kullanabileceğiniz <xref:System.Memory%601.Span?displayProperty=nameWithType> dönüştürmek için özellik bir <xref:System.Memory%601> için örnek bir <xref:System.Span%601>, aralık ancak\<T > - to - bellek\<T > dönüştürme mümkün değil. Bunu, Arayanların varsa bir <xref:System.Memory%601> örneği, bunlar yapabileceksiniz yöntemlerinizi ile çağrılacak <xref:System.Span%601> parametreleri yine de.
 
 Türünde bir parametre kullanarak <xref:System.Span%601> tür yerine <xref:System.Memory%601> de doğru kullanan bir yöntem uygulaması yazma yardımcı olur. Derleme zamanı denetimleri, arabellek, yöntemin kira (daha sonra bu) ötesinde erişmeye çalıştığınız değil emin olmak için otomatik olarak alırsınız.
 
@@ -246,7 +246,7 @@ Sahipliğini aktaran herhangi bir bileşeni <xref:System.Buffers.IMemoryOwner%60
 
 **Kural #9: Bir zaman uyumlu p/Invoke yöntemi sarmalama, API'nizi yayılma kabul etmelidir\<T > parametre olarak.**
 
-Kural 1 göre <xref:System.Span%601> genellikle zaman uyumlu API'leri için kullanılacak doğru türüdür. Sabitleyebilmeniz için <xref:System.Span%601> \<T > aracılığıyla örnekler [ `fixed` ](~/docs/csharp/language-reference/keywords/fixed-statement.md) aşağıdaki örnekteki gibi anahtar sözcüğü.
+Kural 1 göre <xref:System.Span%601> genellikle zaman uyumlu API'leri için kullanılacak doğru türüdür. Sabitleyebilmeniz için <xref:System.Span%601> aracılığıyla örnekler [ `fixed` ](~/docs/csharp/language-reference/keywords/fixed-statement.md) aşağıdaki örnekteki gibi anahtar sözcüğü.
 
 ```csharp
 using System.Runtime.InteropServices;

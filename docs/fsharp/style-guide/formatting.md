@@ -2,12 +2,12 @@
 title: F#kod biçimlendirme yönergeleri
 description: Biçimlendirme kuralları bilgi F# kod.
 ms.date: 02/08/2019
-ms.openlocfilehash: 259d4bb2147d1fc8bc5d35d7ff2e3c34ec2185d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce07bd800984ec082a522bc62cb487f786fa0510
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902596"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063598"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#kod biçimlendirme yönergeleri
 
@@ -86,6 +86,46 @@ type MyFun = int -> int -> string
 
 // Bad
 type MyFunBad = int->int->string
+```
+
+### <a name="surround-function-arguments-with-white-space"></a>İşlev bağımsız değişkenleri boşluk ile çevreleyen
+
+Bir işlev tanımlarken, her bağımsız değişken beyaz boşluk kullanın.
+
+```fsharp
+// OK
+let myFun (a: decimal) b c = a + b + c
+
+// Bad
+let myFunBad (a:decimal)(b)c = a + b + c
+```
+
+### <a name="type-annotations"></a>Tür ek açıklamaları
+
+#### <a name="right-pad-function-argument-type-annotations"></a>Sağ paneli işlevi bağımsız değişkeni tür ek açıklamaları
+
+Tür ek açıklamaları değişkenleriyle tanımlarken, sonra boşluk kullanmak `:` sembol:
+
+```fsharp
+// OK
+let complexFunction (a: int) (b: int) c = a + b + c
+
+// Bad
+let complexFunctionBad (a :int) (b :int) (c:int) = a + b + c
+```
+
+#### <a name="surround-return-type-annotations-with-white-space"></a>Surround dönüş türü ek açıklamaları boşluk ile
+
+Bir let bağlı işlev veya değer türü ek açıklaması içinde (dönüş türü bir işlev söz konusu olduğunda), önce ve sonra boşluk kullanmak `:` sembol:
+
+```fsharp
+// OK
+let expensiveToCompute : int = 0 // Type annotation for let-bound value
+let myFun (a: decimal) b c : decimal = a + b + c // Type annotation for the return type of a function
+// Bad
+let expensiveToComputeBad1:int = 1
+let expensiveToComputeBad2 :int = 2
+let myFunBad (a: decimal) b c:decimal = a + b + c
 ```
 
 ## <a name="formatting-blank-lines"></a>Boş satırlar biçimlendirme

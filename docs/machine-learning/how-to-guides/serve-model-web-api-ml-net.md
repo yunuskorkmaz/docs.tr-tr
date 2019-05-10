@@ -1,36 +1,36 @@
 ---
-title: Machine Learning modeli ASP.NET Core Web API hizmet
+title: Bir ASP.NET Core Web API'si, model dağıtma
 description: ML.NET yaklaşım analizi, makine öğrenme modelinin ASP.NET Core Web API'si kullanarak internet üzerinden hizmet
-ms.date: 03/05/2019
+ms.date: 05/03/2019
+author: luisquintanilla
+ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 53b7c4bf90a1f7179af4137fcdc1d4bb8a214aae
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.openlocfilehash: c78e58dbec6b2ba3065fc46c4d4fd65abdcd37cd
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63807983"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063477"
 ---
-# <a name="how-to-serve-machine-learning-model-through-aspnet-core-web-api"></a>Nasıl yapılır: Machine Learning modeli ASP.NET Core Web API'si aracılığıyla hizmet
+# <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Bir ASP.NET Core Web API'si, model dağıtma
 
-Bu nasıl yapılır, önceden oluşturulmuş ML.NET makine öğrenme modeli kullanarak bir ASP.NET Core Web API'si Web hizmet işlemi gösterilmektedir. Bunun yapılması kullanıcıların tahmin amacıyla standart HTTP yöntemleri aracılığıyla API'sine erişim sağlar.
+Bir ASP.NET Core Web API'si kullanarak web üzerinde önceden eğitilen ML.NET makine öğrenme modeli hizmet öğrenin. Bir modeli bir web API'si sunan standart HTTP yöntemleri aracılığıyla Öngörüler sağlar.
 
 > [!NOTE]
-> Bu konu şu anda Önizleme aşamasında olan ML.NET ifade eder ve malzeme değişiklik gösterebilir. Daha fazla bilgi için ziyaret [ML.NET giriş](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
-
-Bu nasıl yapılır ve ilgili örnek şu anda kullandığınızdan **ML.NET sürüm 0.10**. Daha fazla bilgi için bkz: adresindeki sürüm notlarını [dotnet/machinelearning github deposunu](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
+> `PredictionEnginePool` Hizmet uzantısı, şu anda Önizleme aşamasındadır.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 - [Visual Studio 2017 15.6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) yüklü ".NET Core çoklu platform geliştirme" iş yüküyle birlikte sağlanır.
 - PowerShell.
-- Önceden eğitilmiş model.
-    - Kullanım [ML.NET yaklaşım analizi Öğreticisi](../tutorials/sentiment-analysis.md) kendi modeli derler.
-    - Bu indirme [önceden eğitilmiş yaklaşım analizi, machine learning modeli](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
+- Önceden eğitilmiş model. Kullanım [ML.NET yaklaşım analizi Öğreticisi](../tutorials/sentiment-analysis.md) kendi modelinizi oluşturun veya bunu indirmek üzere [önceden eğitilmiş yaklaşım analizi, machine learning modeli](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
 
 ## <a name="create-aspnet-core-web-api-project"></a>ASP.NET Core Web API projesi oluşturma
 
 1. Visual Studio 2017'yi açın. Seçin **Dosya > Yeni > Proje** menü çubuğundan. Yeni Proje iletişim kutusunda, seçmek **Visual C#**  düğümünü ve ardından **Web** düğümü. Ardından **ASP.NET Core Web uygulaması** proje şablonu. İçinde **adı** metin kutusuna "SentimentAnalysisWebAPI" yazın ve ardından **Tamam** düğmesi.
+
 1. ASP.NET Core projeleri farklı türde görüntüler penceresinde seçin **API** ve select **Tamam** düğmesi.
+
 1. Adlı bir dizin oluşturmak *MLModels* projenizde, önceden oluşturulmuş makine öğrenimi modeli dosyaları kaydetmek için:
 
     Çözüm Gezgini'nde projenize sağ tıklayın ve Ekle > Yeni bir klasör. "MLModels" yazın ve Enter tuşuna basın.
@@ -39,12 +39,16 @@ Bu nasıl yapılır ve ilgili örnek şu anda kullandığınızdan **ML.NET sür
 
     Çözüm Gezgini'nde seçin ve proje üzerinde sağ **NuGet paketlerini Yönet**. Paket kaynağı olarak "nuget.org" seçin, Gözat sekmesini seçin, arama **Microsoft.ML**, listesinde o paketi seçin ve Yükle düğmesini seçin. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** için lisans şartlarını kabul ediyorsanız lisans kabulü iletişim kutusunda düğmesi listelenen paketler.
 
+1. Yükleme **Microsoft.Extensions.ML Nuget paketini**:
+
+    Çözüm Gezgini'nde seçin ve proje üzerinde sağ **NuGet paketlerini Yönet**. Paket kaynağı olarak "nuget.org" seçin, Gözat sekmesini seçin, arama **Microsoft.Extensions.ML**, listesinde o paketi seçin ve Yükle düğmesini seçin. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** için lisans şartlarını kabul ediyorsanız lisans kabulü iletişim kutusunda düğmesi listelenen paketler.
+
 ### <a name="add-model-to-aspnet-core-web-api-project"></a>Model için ASP.NET Core Web API projesi Ekle
 
 1. Önceden oluşturulmuş modelinizi kopyalama *MLModels* dizini
 1. Çözüm Gezgini'nde, model zip dosyasını sağ tıklayın ve Özellikler'i seçin. Gelişmiş altında kopyalama çıkış dizinine kopyalanacak yeniyse değiştirin.
 
-## <a name="build-data-models"></a>Veri modelleri oluşturabilir
+## <a name="create-data-models"></a>Veri modelleri oluşturma
 
 Girdi verilerini ve tahminler elde etmek için bazı sınıflar oluşturmanız gerekir. Yeni bir sınıf, projenize ekleyin:
 
@@ -56,22 +60,20 @@ Girdi verilerini ve tahminler elde etmek için bazı sınıflar oluşturmanız g
 3. İçinde **Yeni Öğe Ekle** iletişim kutusunda **sınıfı** değiştirip **adı** alanı *SentimentData.cs*. Ardından, **Ekle** düğmesi. *SentimentData.cs* dosyası Kod Düzenleyicisi'nde açılır. Aşağıdaki using deyimini üstüne *SentimentData.cs*:
 
     ```csharp
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
     using Microsoft.ML.Data;
     ```
-
+    
     Varolan sınıf tanımına kaldırmak ve aşağıdaki kodu ekleyin **SentimentData.cs** dosyası:
-
+    
     ```csharp
     public class SentimentData
     {
         [LoadColumn(0)]
-        public bool Label { get; set; }
+        public string SentimentText;
+
         [LoadColumn(1)]
-        public string Text { get; set; }
+        [ColumnName("Label")]
+        public bool Sentiment;
     }
     ```
 
@@ -79,77 +81,63 @@ Girdi verilerini ve tahminler elde etmek için bazı sınıflar oluşturmanız g
 5. İçinde **Yeni Öğe Ekle** iletişim kutusunda **sınıfı** değiştirip **adı** alanı *SentimentPrediction.cs*. Ardından Ekle düğmesini seçin. *SentimentPrediction.cs* dosyası Kod Düzenleyicisi'nde açılır. Aşağıdaki using deyimini üstüne *SentimentPrediction.cs*:
 
     ```csharp
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
     using Microsoft.ML.Data;
     ```
-
+    
     Varolan sınıf tanımına kaldırmak ve aşağıdaki kodu ekleyin *SentimentPrediction.cs* dosyası:
-
+    
     ```csharp
-    public class SentimentPrediction
+    public class SentimentPrediction : SentimentData
     {
+
         [ColumnName("PredictedLabel")]
         public bool Prediction { get; set; }
+
+        public float Probability { get; set; }
+
+        public float Score { get; set; }
     }
     ```
 
-## <a name="register-predictionengine-for-use-in-application"></a>Uygulama kullanım PredictionEngine kaydolun
+    `SentimentPrediction` devralınan `SentimentData`. Bu, özgün veri görmeyi kolaylaştırır `SentimentText` modeli tarafından oluşturulan çıktı birlikte özelliği. 
 
-Tek bir tahminde bulunmak için kullanabileceğiniz `PredictionEngine`. Kullanmak için `PredictionEngine` uygulamanızdaki her zaman gerekli oluşturmak olacaktır. Bu durumda, dikkate alınması gereken bir en iyi ASP.NET Core bağımlılık ekleme yöntemidir.
+## <a name="register-predictionenginepool-for-use-in-the-application"></a>Uygulama kullanım PredictionEnginePool kaydolun
 
-Hakkında bilgi edinmek istiyorsanız aşağıdaki bağlantıda daha fazla bilgi sağlar. [bağımlılık ekleme](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
+Tek bir tahminde bulunmak için kullanmak [ `PredictionEngine` ](xref:Microsoft.ML.PredictionEngine%602). Kullanmak için [ `PredictionEngine` ](xref:Microsoft.ML.PredictionEngine%602) gerektiğinde uygulamanızı oluşturmanız gerekir. Bu durumda, dikkate alınması gereken bir en iyi bağımlılık ekleme yöntemidir.
+
+Hakkında bilgi edinmek istiyorsanız aşağıdaki bağlantıda daha fazla bilgi sağlar. [ASP.NET Core bağımlılık ekleme](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
 
 1. Açık *Startup.cs* sınıfı ve aşağıdaki using deyimini dosyanın en üstüne:
 
     ```csharp
-    using System.IO;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.ML;
-    using Microsoft.ML.Core.Data;
+    using Microsoft.Extensions.ML;
     using SentimentAnalysisWebAPI.DataModels;
     ```
 
-2. Aşağıdaki kod satırlarını ekleme *Createservicereplicalisteners()* yöntemi:
+2. Aşağıdaki kodu ekleyin *Createservicereplicalisteners()* yöntemi:
 
     ```csharp
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-        services.AddScoped<MLContext>();
-        services.AddScoped<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
-        {
-            MLContext mlContext = ctx.GetRequiredService<MLContext>();
-            string modelFilePathName = "MLModels/sentiment_model.zip";
-
-            //Load model from file
-            ITransformer model;
-            using (var stream = File.OpenRead(modelFilePathName))
-            {
-                model = mlContext.Model.Load(stream);
-            }
-
-            // Return prediction engine
-            return model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
-        });
+        services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
+            .FromFile("MLModels/sentiment_model.zip");
     }
     ```
 
-> [!WARNING]
-> `PredictionEngine` iş parçacığı açısından güvenli değildir. Nesne oluşturulurken maliyeti sınırlayabilirsiniz bir hizmet ömrü sağlayarak yoludur *kapsamındaki*. *Kapsamlı* nesneleri, ancak farklı bir istek içinde aynı istekler arasında. Hakkında daha fazla bilgi edinmek için aşağıdaki bağlantıyı ziyaret edin [hizmet yaşam süreleri](/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1#service-lifetimes).
-
 Yüksek düzeyde, bu kod nesneleri ve otomatik yerine el ile yapmanıza gerek kalmadan uygulama tarafından istendiğinde hizmetlerini başlatır.
 
-## <a name="create-predict-controller"></a>Oluşturma denetleyicisi tahmin edin
+> [!WARNING]
+> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) iş parçacığı açısından güvenli değildir. Performansı artırmak ve iş parçacığı güvenliği için kullanmak `PredictionEnginePool` oluşturan hizmeti bir [ `ObjectPool` ](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) , `PredictionEngine` nesneleri uygulama kullanımı. Hakkında daha fazla bilgi edinmek için şu blog gönderisini okuyun [oluşturma ve kullanma `PredictionEngine` nesne ASP.NET Core havuzlarında](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/).  
 
-Gelen HTTP isteklerini işlemek için bir denetleyici oluşturmanız gerekir.
+## <a name="create-predict-controller"></a>Predıct denetleyicisi oluşturma
+
+Gelen HTTP isteklerini işlemek için bir denetleyici oluşturun.
 
 1. Çözüm Gezgini'nde sağ *denetleyicileri* dizin ve ardından **Ekle > denetleyicisi**.
 1. İçinde **Yeni Öğe Ekle** iletişim kutusunda **boş API denetleyicisi** seçip **Ekle**.
@@ -158,63 +146,59 @@ Gelen HTTP isteklerini işlemek için bir denetleyici oluşturmanız gerekir.
     ```csharp
     using System;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.ML;
     using SentimentAnalysisWebAPI.DataModels;
-    using Microsoft.ML;
     ```
 
     Varolan sınıf tanımına kaldırmak ve aşağıdaki kodu ekleyin *PredictController.cs* dosyası:
-
+    
     ```csharp
     public class PredictController : ControllerBase
     {
+        private readonly PredictionEnginePool<SentimentData, SentimentPrediction> _predictionEnginePool;
 
-        private readonly PredictionEngine<SentimentData,SentimentPrediction> _predictionEngine;
-
-        public PredictController(PredictionEngine<SentimentData, SentimentPrediction> predictionEngine)
+        public PredictController(PredictionEnginePool<SentimentData,SentimentPrediction> predictionEnginePool)
         {
-            _predictionEngine = predictionEngine; //Define prediction engine
+            _predictionEnginePool = predictionEnginePool;
         }
 
         [HttpPost]
-        public ActionResult<string> Post([FromBody]SentimentData input)
+        public ActionResult<string> Post([FromBody] SentimentData input)
         {
             if(!ModelState.IsValid)
             {
                 return BadRequest();
             }
 
-            // Make a prediction
-            SentimentPrediction prediction = _predictionEngine.Predict(input);
+            SentimentPrediction prediction = _predictionEnginePool.Predict(input);
 
-            //If prediction is true then it is toxic. If it is false, the it is not.
-            string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+            string sentiment = Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative";
 
-            return Ok(isToxic);
+            return Ok(sentiment);
         }
-
     }
     ```
 
-Bu atama `PredictionEngine` bağımlılık ekleme erişmenizi denetleyicinin oluşturucusuna geçirerek. Ardından, bu denetleyicinin POST yönteminde `PredictionEngine` tahminlerde bulunabilir ve başarılı olursa sonuçları kullanıcıya geri döndürmek için kullanılır.
+Bu kod atar `PredictionEnginePool` bağımlılık ekleme erişmenizi denetleyicinin oluşturucusuna geçirerek. Ardından, `Predict` denetleyicinin `Post` yöntemi kullanan `PredictionEnginePool` tahminlerde bulunabilir ve başarılı olursa sonuçları kullanıcıya geri döndürmek için.
 
-## <a name="test-web-api-locally"></a>Web API'si yerel olarak test etme
+## <a name="test-web-api-locally"></a>Yerel olarak test web API'si
 
 Her şeyi ayarlandıktan sonra uygulama test etme vakti.
 
 1. Uygulamayı çalıştırın.
 1. PowerShell'i açın ve bağlantı noktası, bağlantı noktası olduğu aşağıdaki kodu girin. uygulamanızı dinlediği.
 
-```powershell
-Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{Text="This is a very rude movie"} | ConvertTo-Json) -ContentType "application/json"
-```
+    ```powershell
+    Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{Text="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
+    ```
 
-Başarılı olursa çıktı aşağıdaki metne benzer görünmelidir:
+    Başarılı olursa çıktı aşağıdaki metne benzer görünmelidir:
+    
+    ```powershell
+    Negative
+    ```
 
-```powershell
-Toxic
-```
-
-Tebrikler! Ayrıca, bir ASP.NET Core API'si kullanarak internet üzerinden tahminlerde bulunmak üzere modelinizi başarıyla hizmet vermektedir.
+Tebrikler! Ayrıca, bir ASP.NET Core Web API'si kullanarak internet üzerinden tahminlerde bulunmak üzere modelinizi başarıyla hizmet vermektedir.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 

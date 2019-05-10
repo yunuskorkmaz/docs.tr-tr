@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15a441ea7b0b16c83c590289d04cf0c10623fb85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6065e06fa4fb51cd0cd746a1619f8a611f2fc30b
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032763"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064091"
 ---
 # <a name="specifying-an-entry-point"></a>Giriş Noktası Belirtme
 Bir giriş noktası, bir işlevin bir DLL içindeki konumunu tanımlar. Yönetilen bir proje içinde, bir hedef işlevin özgün adı veya sıra giriş noktası, birlikte çalışabilirlik sınırında bu işlevi tanımlar. Ayrıca, işlemi etkin şekilde yeniden adlandırarak giriş noktasını farklı bir adla eşleyebilirsiniz.  
@@ -34,10 +34,8 @@ Bir giriş noktası, bir işlevin bir DLL içindeki konumunu tanımlar. Yönetil
  Visual Basic kullanan **işlevi** anahtar sözcüğünü **Declare** ayarlamak için ifade <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> alan. Aşağıdaki örnek, temel bir bildirimi gösterir.  
   
 ```vb
-Imports System
-
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Function MessageBox Lib "user32.dll" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
         ByVal lpCaption As String,
@@ -48,10 +46,8 @@ End Class
  Değiştirebilirsiniz **MessageBox** giriş noktasıyla **MsgBox** ekleyerek **diğer** aşağıdaki örnekte gösterildiği gibi tanımınızı, anahtar sözcük. Her iki örnek **otomatik** anahtar sözcüğü giriş noktasının karakter kümesi sürümünü belirtme ihtiyacını ortadan kaldırır. Bir karakter seçme hakkında daha fazla bilgi için bkz: [bir karakter kümesi belirtme](../../../docs/framework/interop/specifying-a-character-set.md).  
   
 ```vb
-Imports System
-
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function MsgBox _
+Friend Class NativeMethods
+    Friend Declare Auto Function MsgBox _
         Lib "user32.dll" Alias "MessageBox" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
@@ -76,7 +72,7 @@ End Class
 using System;
 using System.Runtime.InteropServices;
 
-internal static class WindowsAPI
+internal static class NativeMethods
 {
     [DllImport("user32.dll", EntryPoint = "MessageBoxA")]
     internal static extern int MessageBox(
