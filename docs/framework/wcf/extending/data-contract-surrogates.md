@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7b1e8585755bbbff900bd621d8bc3a25fd23961c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858032"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587500"
 ---
 # <a name="data-contract-surrogates"></a>Veri Sözleşmesi Yedekleri
 Veri anlaşması *vekil* veri anlaşması modeli üzerinde oluşturulmuş, Gelişmiş bir özelliktir. Bu özellik türü özelleştirme ve kullanıcılar nasıl bir tür, seri durumdan çıkarılmış veya öngörülen meta verileri içine serileştirilmiş değiştirmek istediğiniz durumlarda değiştirme için kullanılmak üzere tasarlanmıştır. Bir veri anlaşması türü, alanlar ve özellikler ile işaretlenmemiş için belirtilmemiş bazı senaryolar, bir vekil nerede kullanılabilir olduğunda <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği veya kullanıcılar şema farklılıkları dinamik olarak oluşturmak istediğiniz.  

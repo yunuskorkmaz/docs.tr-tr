@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: ee633e2488611417f72a9d51ab6b0fe2d9ddfa27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174115"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583560"
 ---
 # <a name="code-access-security-and-adonet"></a>Kod Erişimi Güvenliği ve ADO.NET
 .NET Framework, rol tabanlı güvenlik yanı sıra kod erişimi güvenliği (CAS), ikisi için de ortak dil çalışma (CLR) tarafından sağlanan bir ortak altyapısı kullanılarak uygulanan sunar. Yönetilmeyen kod dünyasında, çoğu uygulama sorumlusu ve kullanıcı izinleriyle çalıştırın. Sonuç olarak, bilgisayar sistemlerini kötü amaçlı, gizliliği bozulmuş ve özel veri olabilir veya yazılım hatası doldurulmuş yükseltilmiş ayrıcalıklara sahip bir kullanıcı tarafından çalıştırılır.  
@@ -27,11 +27,11 @@ ms.locfileid: "59174115"
   
  Kod erişim izinleri üç tür vardır:  
   
--   `Code access permissions` öğesinden türetilen <xref:System.Security.CodeAccessPermission> sınıfı. Dosyaları ve ortam değişkenleri gibi korumalı kaynaklara erişmek için ve yönetilmeyen koda erişme gibi korumalı işlemlerini gerçekleştirmek için izinler gereklidir.  
+- `Code access permissions` öğesinden türetilen <xref:System.Security.CodeAccessPermission> sınıfı. Dosyaları ve ortam değişkenleri gibi korumalı kaynaklara erişmek için ve yönetilmeyen koda erişme gibi korumalı işlemlerini gerçekleştirmek için izinler gereklidir.  
   
--   `Identity permissions` bir derlemeyi tanımlamak özelliklerini temsil eder. Bir derleme, bir dijital imza gibi öğeleri içerebilir veya kod geldiği kanıta göre izinleri verilir. Kimlik izinleri de türetilen <xref:System.Security.CodeAccessPermission> temel sınıfı.  
+- `Identity permissions` bir derlemeyi tanımlamak özelliklerini temsil eder. Bir derleme, bir dijital imza gibi öğeleri içerebilir veya kod geldiği kanıta göre izinleri verilir. Kimlik izinleri de türetilen <xref:System.Security.CodeAccessPermission> temel sınıfı.  
   
--   `Role-based security permissions` sorumlu belirli bir kimliğe sahip olup belirtilen bir rol üyesi üzerinde temel alır. <xref:System.Security.Permissions.PrincipalPermission> Sınıfı, hem bildirim temelli ve buyurgan izin denetimleri etkin sorumlunun karşı olanak tanır.  
+- `Role-based security permissions` sorumlu belirli bir kimliğe sahip olup belirtilen bir rol üyesi üzerinde temel alır. <xref:System.Security.Permissions.PrincipalPermission> Sınıfı, hem bildirim temelli ve buyurgan izin denetimleri etkin sorumlunun karşı olanak tanır.  
   
  Kod bir kaynağa veya bir işlemi gerçekleştirmek için yetkili olup olmadığını belirlemek için çalışma zamanının güvenlik sistemi her arayanın talep izin verilen izinler karşılaştırma çağrı yığını erişir. Çağrı yığınındaki herhangi bir çağırıcı talep edilen iznine sahip değilse bir <xref:System.Security.SecurityException> oluşturulur ve erişimi reddetti.  
   

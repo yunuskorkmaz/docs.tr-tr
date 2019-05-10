@@ -2,12 +2,12 @@
 title: Kimlik Bilgisi Türü Seçme
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 20c070e9351219a649735ac404231cf6f265d814
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748817"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586124"
 ---
 # <a name="selecting-a-credential-type"></a>Kimlik Bilgisi Türü Seçme
 *Kimlik bilgileri* Windows Communication Foundation (WCF) kullanan bir talep kimliği veya özellikleri kurmak için verilerdir. Örneğin, bir passport bir devlet kurumu sorunlarını ülke veya bölgenizde Vatandaşlık kanıtlamak için bir kimlik bilgisi ' dir. WCF'de, kullanıcı adı belirteçleri ve X.509 sertifikaları gibi birçok forms kimlik bilgilerini alabilir. Bu konuda, kimlik bilgileri, WCF'de nasıl kullanılacağını ve nasıl seçileceğini, uygulamanız için doğru kimlik bilgisi anlatılmaktadır.  
@@ -38,7 +38,7 @@ ms.locfileid: "61748817"
   
 |Ayar|Açıklama|  
 |-------------|-----------------|  
-|None|İstemci mevcut bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
+|Yok.|İstemci mevcut bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
 |Windows|SOAP ileti alışverişlerinde bir Windows kimlik bilgileri ile oluşturulan güvenlik bağlamı altında gerçekleşmesini sağlar.|  
 |Kullanıcı adı|Bir kullanıcı adı kimlik bilgisi ile istemcinin kimliğinin doğrulanmasını gerektiren hizmet sağlar. WCF ile kullanıcı adlarını, imza oluşturma veya verileri şifreleme gibi şifreleme işlemleri izin vermediğini unutmayın. WCF aktarma kullanıcı adı kimlik bilgilerini kullanarak güvenli sağlar.|  
 |Sertifika|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir X.509 sertifikası.|  

@@ -2,12 +2,12 @@
 title: SQL Server'da Veritabanları Arası Erişimi Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 70b4b7b55311bfc5dba1b537a603e0d15d7f3d9b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ef018566c5d3881d2f9b77dad932712d1fb11841
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877701"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583694"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>SQL Server'da Veritabanları Arası Erişimi Etkinleştirme
 Veritabanları arası sahiplik zinciri, başka bir veritabanındaki nesneleri bir yordamda bir veritabanına bağlı olduğunda gerçekleşir. Tüm nesne sahipleri için aynı oturum açma hesabı eşlenmiş bir kesintisiz sahiplik zinciri gerektirir veritabanları arası sahiplik zinciri tek bir veritabanı içinde sahiplik zinciri olarak aynı şekilde çalışır. Kaynak nesne kaynak veritabanında ve hedef nesnelerin hedef veritabanları aynı oturum açma hesabı sahip olur, SQL Server hedef nesneleri izinlerini kontrol etmez.  

@@ -2,12 +2,12 @@
 title: Yapılandırma ve Meta Veri Desteği
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: abc9177fcc7b338a365d61721b63041ddcd68ab9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 74dab4528ae11b60fc930a826962b71595073a7f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858370"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587720"
 ---
 # <a name="configuration-and-metadata-support"></a>Yapılandırma ve Meta Veri Desteği
 Bu konu, bağlamalar ve bağlama öğeleri yapılandırma ve meta veri desteğini etkinleştirmek açıklar.  
