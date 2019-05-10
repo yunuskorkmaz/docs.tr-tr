@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 07c13d22235f1198188d26122c137db1d91e64e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 50eb1bc1588602bf562efc31b0f4dd01bc29cad0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755889"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593322"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>İzlenecek yol: Özel günlük dinleyicileri (Visual Basic) oluşturma
 Bu kılavuzda, özel günlük dinleyiciyi oluşturun ve çıkışına dinleyecek şekilde yapılandırma gösterilmiştir `My.Application.Log` nesne.  

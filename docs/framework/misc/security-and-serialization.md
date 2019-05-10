@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e4deadc175bd4cc3635a6c8d8d8b80100b5a9938
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c275e7179daf0dfdf2dda8bf364a4682565f28a6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868842"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596726"
 ---
 # <a name="security-and-serialization"></a>Güvenlik ve Serileştirme
 Serileştirme bakın veya erişilemez Aksi durumda olacak nesne örneği verileri değiştirmek başka bir kod izin vermek için özel bir izin serileştirme gerçekleştiren kod gereklidir: <xref:System.Security.Permissions.SecurityPermission> ile <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> bayrağı belirtilmiş. Varsayılan ilkesi altında çok Internet karşıdan bu izin verilmez veya intranet kodu; yalnızca yerel bilgisayarda kod bu izin verilir.  

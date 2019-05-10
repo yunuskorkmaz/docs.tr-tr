@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 76fd6ad954b2cf004c6fdfcf51ef0c619e8c3892
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787861"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662778"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma
 Windows Communication Foundation (WCF) yapılandırılabilir, ancak tam esneklik sağlamaz, WCF destekleyen tüm güvenlik seçeneklerini yapılandırırken birçok sistem tarafından sağlanan bağlamalar içerir. Bu konu, tek tek bağlama öğelerini doğrudan özel bağlama oluşturma işlemini gösterir ve böyle bir bağlamanın oluştururken belirttiğiniz güvenlik ayarlarından bazıları vurgular. Özel bağlamalar oluşturma hakkında daha fazla bilgi için bkz. [bağlamaları genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md).  
@@ -61,7 +61,7 @@ Windows Communication Foundation (WCF) yapılandırılabilir, ancak tam esneklik
 |||OneWayBindingElement|||  
 |||SSL veya Windows StreamSecurityBindingElement öğesini|SSL veya Windows StreamSecurityBindingElement öğesini|SSL veya Windows StreamSecurityBindingElement öğesini|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
-|İleti|http|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement (kimlik doğrulama modu SecureConversation =)|  
+|`Message`|http|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement (kimlik doğrulama modu SecureConversation =)|  
 |||||CompositeDuplexBindingElement|  
 |||OneWayBindingElement||OneWayBindingElement|  
 |||HttpTransportBindingElement|HttpTransportBindingElement|HttpTransportBindingElement|  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: 4e0831a045da5eb5798d10aeb977981ecae20040
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f823d9e80eb644487eab1ed84345dd8bdc10efc2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61869678"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600938"
 ---
 # <a name="value-types-and-reference-types"></a>Değer Türleri ve Başvuru Türleri
 Visual Basic'de Veri türleri sınıflandırmalarına göre uygulanır. Visual Basic veri türleri, belirli bir tür değişkeninin kendi verilerini veya verileri için bir işaretçi depolar göre sınıflandırılabilir. Kendi verilerini depolayan ise bir *değer türü*; başka bir yerde olduğu bellekteki verileri için bir işaretçi tutan bir *başvuru türüne*.  

@@ -2,12 +2,12 @@
 title: Veri kaynağı için LINQ Querying1 etkinleştirme
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: d3faeb15c5c8deedec3c3347c6317cac872224f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4d7922c5dbe4f6185777dba4f33662eb2e4aee61
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668425"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597154"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>LINQ Sorgusu için Veri Kaynağı Etkinleştirme
 Genişletmenin çeşitli yolları vardır [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgulanmasını herhangi bir veri kaynağı etkinleştirmek için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] deseni. Veri kaynağı örneğin bir veri yapısı, Web hizmeti, dosya sistemi veya veritabanı olabilir. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Kolaylaştırır istemcilerin bir veri kaynağı için sorgu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgulamanın etkin olduğu, sözdizimi ve sorgu düzeni değişmediği. Yöntemler [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Genişletilebilir bu veri kaynakları şunları içerir:  

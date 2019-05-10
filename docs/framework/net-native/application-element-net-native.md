@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c346b23bd49abaabde9cc4adfdeb134c4267cbf8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868619"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64657192"
 ---
 # <a name="application-element-net-native"></a>\<Uygulama > öğesi (.NET yerel)
 Birçok farklı uygulama türleri ve olan meta verilerini yansıma çalışma zamanında kullanılabilir ve tüm program öğeleri bir uygulama çalışma zamanı yansıma ilkenin uygulanacağı tür üyeleri için kapsayıcı görevi görür.  

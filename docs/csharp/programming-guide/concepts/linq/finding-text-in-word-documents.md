@@ -2,12 +2,12 @@
 title: (C#) Word belgelerinde metin bulma
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 59d224307808edefbbb7e7ffc848f40fbe2880ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d421916335f4cf163a449bc7b0c7c7bb30179a5c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702340"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596626"
 ---
 # <a name="finding-text-in-word-documents-c"></a>(C#) Word belgelerinde metin bulma
 Bu konu faydalı bir şey için önceki sorguları genişletir: bir dizenin tüm örnekleri belgede bulun.  

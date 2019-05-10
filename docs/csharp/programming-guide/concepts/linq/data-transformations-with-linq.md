@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 5928478518b0bc1eb498381567d52d5ddba4d8b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5a0c4b0d672e3fd9cfe1528e16070cf1dcbabd69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702444"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597652"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ ile Veri Dönüştürmeler (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] yalnızca veri alma hakkında değil. Veri dönüştürme için de güçlü bir araçtır. Kullanarak bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu, giriş ve yeni bir çıkış dizisi oluşturmak için birçok şekilde değiştirme gibi bir kaynak sırası kullanabilirsiniz. Öğeleri sıralama ve gruplandırma değiştirmeden dizisi kendisini değiştirebilirsiniz. Ancak belki de en güçlü özelliğidir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgulardır yeni türleri oluşturma olanağı. Bu, gerçekleştirilir [seçin](../../../../csharp/language-reference/keywords/select-clause.md) yan tümcesi. Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:  

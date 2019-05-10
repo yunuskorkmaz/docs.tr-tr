@@ -9,12 +9,12 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: 3635729705520518d4c950f8a79da7d1249285bf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b947109f99d94b0ecb1d798835c311f2374e96fc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61751078"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601022"
 ---
 # <a name="structures-and-classes-visual-basic"></a>Yapılar ve Sınıflar (Visual Basic)
 Visual Basic, yapılar ve sınıflar, her iki varlık aynı özelliklerin çoğunu destekler sonucuyla sözdizimi birleştirir. Ancak, ayrıca önemli farklar vardır yapılar ve sınıflar arasında.  

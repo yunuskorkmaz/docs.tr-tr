@@ -2,12 +2,12 @@
 title: Kavramlar ve terimler (işlevsel dönüşüm) (C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: 83c2f531f5747047c60ddbcedabc0747641d80c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 878ecdbbc4155ca5ca145480ae610701eed9a0c8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668386"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597820"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Kavramlar ve terimler (işlevsel dönüşüm) (C#)
 Bu konu, saf işlevsel dönüşümlere terimleri ve kavramları tanıtır. Veri dönüştürme işlevsel dönüşüm yaklaşım genellikle programa daha ifadesel ve daha kolay hata ayıklaması ve bakımı daha geleneksel, zorunlu programlama daha hızlı kod üretir.  

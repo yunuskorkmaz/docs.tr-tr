@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 76976f1599ecbbaf7405d7941f66aa2c5f955565
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031258"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598949"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Ekran Kaleminden Gelen Girişi Önleme
 <xref:System.Windows.Input.StylusPlugIns> Mimari üzerinde alt düzey denetimi uygulamak için bir mekanizma sağlar <xref:System.Windows.Input.Stylus> giriş ve dijital mürekkep oluşturulmasını <xref:System.Windows.Ink.Stroke> nesneleri. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Sınıfı özel davranış uygulayan ve en iyi performans için ekran kalemi aygıttan gelen veri akışını uygulamak için bir mekanizma sağlar.  

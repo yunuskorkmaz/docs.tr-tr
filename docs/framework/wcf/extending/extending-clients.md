@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-ms.openlocfilehash: 99b4dd5e4acfce8bea4d3c2cae3a53152585675d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 48e6177e7098f8131d2a0fd62bda9c505fa8bcc9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857941"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662810"
 ---
 # <a name="extending-clients"></a>İstemcileri Genişletme
 Bir arama uygulamasında hizmet modeli katmanını içine giden iletiler için yöntem çağrılarına uygulama kodunda çevirme, bunları temel alınan kanallara gönderme, geri dönüş değerlerine dönüştürür ve out Parametreleri sonuçları çevirme sorumludur uygulama kodu ve sonuçları çağırana geri döndürülüyor. Hizmet modeli uzantıları değiştirebilir veya yürütme veya iletişim davranışı ve istemci veya dağıtıcı işlevi, özel davranışlar, ileti ve parametre durdurma ve diğer genişletilebilirlik işlevlerini içeren özellikler uygular.  

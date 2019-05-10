@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d96de43d258e4a7ff925e0c5b1702727e67d737
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 805e1cc7d1def74a2a3e7b28afd052be1c4836c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754524"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596832"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Nasıl yapılır: İz Kaynakları Oluşturma ve Başlatma
 <xref:System.Diagnostics.TraceSource> Sınıfı uygulamalar tarafından uygulamayla ilişkilendirilebilecek izlemeler üretmek için kullanılır. <xref:System.Diagnostics.TraceSource> kolayca izleme olayları, izleme verilerini ve sorunu bilgilendirme izlemeleri izin veren izleme yöntemleri sağlar. İşlevinin İzleme çıktısı <xref:System.Diagnostics.TraceSource> oluşturulabilir ve ile veya yapılandırma dosyalarının kullanımını olmadan başlatıldı. Bu konu, her iki seçenek için yönergeler sağlar. Ancak, çalışma zamanında iz kaynakları tarafından üretilen İzlerin yeniden yapılandırılmasını kolaylaştırmak amacıyla yapılandırma dosyalarını kullanmanızı öneririz.  

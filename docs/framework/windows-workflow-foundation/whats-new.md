@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-ms.openlocfilehash: 5ab1419a29dd77ac276681bb49dc529fc05d5b15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5c08ec3f5618abc601c17cf0d32d583bf21db683
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669556"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656107"
 ---
 # <a name="whats-new-in-windows-workflow-foundation"></a>Windows Workflow Foundation’daki Yenilikler
 Windows Workflow Foundation (WF) [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] birkaç geliştirme paradigmalarını önceki sürümlerden değiştirir. İş akışları oluşturup, yürütme, korumak ve çok sayıda yeni işlevler uygulamak daha kolaydır. En son sürümü kullanmak için .NET 3.0 ve .NET 3.5 iş akışı uygulamalarını geçirme hakkında daha fazla bilgi için bkz. [geçiş kılavuzuna](migration-guidance.md).  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4104ddba1942f9cb9bd860d53dc54968de5af891
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 23a05279615a589bca7bb61507caf8dcc3630020
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643000"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648694"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Tür Kitaplığını Derleme Olarak İçeri Aktarma
 COM tür tanımları, genellikle bir tür kitaplığı içinde yer alır. Buna karşılık, CLS uyumlu derleyiciler türü meta verileri bir derleme oluşturur. İki tür bilgi kaynakları oldukça farklıdır. Bu konu, bir tür kitaplığından meta verileri oluşturma teknikleri açıklar. Elde edilen derlemeyi birlikte çalışma derlemesi adı verilir ve içerdiği tür bilgilerini COM türlerini kullanmak .NET Framework uygulamaları etkinleştirir.  
