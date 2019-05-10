@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bf874f9422db0038a421d5f61ce18d8af8ec401e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949272"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616306"
 ---
 # <a name="loader-etw-events"></a>Yükleyici ETW Olayları
 <a name="top"></a> Bu olaylar, yükleme ve kaldırma uygulama etki alanları, derlemeler ve modüller için ilgili bilgileri toplayın.  

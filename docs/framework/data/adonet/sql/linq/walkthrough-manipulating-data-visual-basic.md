@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 0b013cff36fc9063f30aaa4356e9e8249dd960d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 0dd70eb5d3b3ad56a8597ce0658a296a03d5f4a7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306501"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64618057"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>İzlenecek yol: Verileri Düzenleme (Visual Basic)
 Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] senaryo ekleme, değiştirme ve bir veritabanındaki verileri siliniyor. Örnek Northwind veritabanının bir kopyasını bir müşteri eklemek, bir müşterinin adını değiştirin ve sipariş silmek için kullanın.  
@@ -21,13 +21,13 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yol aşağıdakileri gerektirir:  
   
--   Bu izlenecek yol, dosyaları tutmak için ayrılmış bir klasör ("c:\linqtest2") kullanır. İzlenecek yol başlamadan önce bu klasörü oluşturun.  
+- Bu izlenecek yol, dosyaları tutmak için ayrılmış bir klasör ("c:\linqtest2") kullanır. İzlenecek yol başlamadan önce bu klasörü oluşturun.  
   
--   Northwind örnek veritabanı.  
+- Northwind örnek veritabanı.  
   
      Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Yükleme sitesinden indirebilirsiniz. Yönergeler için [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Veritabanı indirdikten sonra northwnd.mdf dosya c:\linqtest2 klasöre kopyalayın.  
   
--   Northwind veritabanından oluşturulan Visual Basic kod dosyası.  
+- Northwind veritabanından oluşturulan Visual Basic kod dosyası.  
   
      Bu dosyayı kullanarak oluşturabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] veya SQLMetal aracı. Bu izlenecek yol, şu komut satırıyla SQLMetal Aracı'nı kullanarak yazılmıştır:  
   
@@ -38,17 +38,17 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
 ## <a name="overview"></a>Genel Bakış  
  Bu kılavuz altı ana görevden oluşur:  
   
--   Oluşturma [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio'daki çözüm.  
+- Oluşturma [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio'daki çözüm.  
   
--   Veritabanı kod dosyası projeye ekleniyor.  
+- Veritabanı kod dosyası projeye ekleniyor.  
   
--   Yeni bir müşteri nesnesi oluşturuluyor.  
+- Yeni bir müşteri nesnesi oluşturuluyor.  
   
--   Bir müşteri kişi adını değiştirme.  
+- Bir müşteri kişi adını değiştirme.  
   
--   Bir sipariş siliniyor.  
+- Bir sipariş siliniyor.  
   
--   Bu değişiklikler Northwind veritabanına gönderiliyor.  
+- Bu değişiklikler Northwind veritabanına gönderiliyor.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Bir LINQ to SQL çözümü oluşturma  
  Bu ilk görevde oluşturduğunuz derlemek ve çalıştırmak için gerekli başvuruları içeren bir Visual Studio çözümü bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proje.  
@@ -136,7 +136,7 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-change-the-name-of-a-customer"></a>Bir müşteri adını değiştirmek için  
   
--   Yukarıdaki aşağıdaki kodu ekleyin `Console.ReadLine()`:  
+- Yukarıdaki aşağıdaki kodu ekleyin `Console.ReadLine()`:  
   
      [!code-vb[DLinqWalk3VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#4)]  
   
@@ -147,7 +147,7 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-delete-a-row"></a>Bir satırı silmek için  
   
--   Aşağıdaki kodu ekleyin hemen üzerinde `Console.ReadLine()`:  
+- Aşağıdaki kodu ekleyin hemen üzerinde `Console.ReadLine()`:  
   
      [!code-vb[DLinqWalk3VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#5)]  
   

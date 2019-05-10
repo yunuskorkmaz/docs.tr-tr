@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b9d6a4e2bb6b7e5c750ff7dad92934c4337c0083
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006412"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64605944"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme
 Windows Communication Foundation (WCF) uygulamaları, SOAP hatası nesneleri ve SOAP hatası nesneleri yönetilen özel durum nesnelere yönetilen özel durum nesneleri eşleyerek hata durumları işleyin. Bu bölümdeki konular, hata ortaya çıkarmak için sözleşmeler tasarlamak nasıl özel SOAP hataları olarak koşulları, bu tür hataları hizmeti uygulamasının bir parçası olarak döndürülecek nasıl ve istemciler bu tür hataları nasıl catch tartışın.  

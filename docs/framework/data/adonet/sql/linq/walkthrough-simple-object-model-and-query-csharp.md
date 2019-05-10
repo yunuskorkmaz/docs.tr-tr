@@ -2,12 +2,12 @@
 title: 'İzlenecek yol: Basit Nesne Modeli ve Sorgu (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: dc56f1e7886a1a1391d94b512ba5c91ca8c9092a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: dd4ba42247a8305b14d859a5b49da4c11cfc18bc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309465"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617979"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>İzlenecek yol: Basit Nesne Modeli ve Sorgu (C#)
 Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en düşük karmaşıklık bir senaryodur. Örnek Northwind veritabanındaki Müşteriler tablosunu modeller bir varlık sınıfı oluşturur. Ardından, Londra'da buluna listesi müşteriler için basit bir sorgu oluşturur.  
@@ -20,24 +20,24 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 ## <a name="prerequisites"></a>Önkoşullar  
   
--   Bu izlenecek yol, dosyaları tutmak için ayrılmış bir klasör ("c:\linqtest5") kullanır. İzlenecek yol başlamadan önce bu klasörü oluşturun.  
+- Bu izlenecek yol, dosyaları tutmak için ayrılmış bir klasör ("c:\linqtest5") kullanır. İzlenecek yol başlamadan önce bu klasörü oluşturun.  
   
--   Bu izlenecek yol, Northwind örnek veritabanıyla kurulan gerektirir. Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Yükleme sitesinden indirebilirsiniz. Yönergeler için [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Veritabanı indirdikten sonra dosyayı c:\linqtest5 klasöre kopyalayın.  
+- Bu izlenecek yol, Northwind örnek veritabanıyla kurulan gerektirir. Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Yükleme sitesinden indirebilirsiniz. Yönergeler için [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Veritabanı indirdikten sonra dosyayı c:\linqtest5 klasöre kopyalayın.  
   
 ## <a name="overview"></a>Genel Bakış  
  Bu kılavuz altı ana görevden oluşur:  
   
--   Oluşturma bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio'daki çözüm.  
+- Oluşturma bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio'daki çözüm.  
   
--   Bir sınıf, bir veritabanı tablosuna eşleme.  
+- Bir sınıf, bir veritabanı tablosuna eşleme.  
   
--   Veritabanı sütunlarını gösteren sınıf özelliklerini belirleme.  
+- Veritabanı sütunlarını gösteren sınıf özelliklerini belirleme.  
   
--   Northwind veritabanına bir bağlantı belirtme.  
+- Northwind veritabanına bir bağlantı belirtme.  
   
--   Veritabanına karşı çalıştırmak için basit bir sorgu oluşturma.  
+- Veritabanına karşı çalıştırmak için basit bir sorgu oluşturma.  
   
--   Sorguyu yürüten ve sonuçları gözleme.  
+- Sorguyu yürüten ve sonuçları gözleme.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Bir LINQ to SQL çözümü oluşturma  
  Bu ilk görevde oluşturduğunuz derlemek ve çalıştırmak için gerekli başvuruları içeren bir Visual Studio çözümü bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proje.  
@@ -76,22 +76,22 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-create-an-entity-class-and-map-it-to-a-database-table"></a>Bir varlık sınıfı oluşturun ve bir veritabanı tablosuna eşlemek için  
   
--   Hemen Yukarıdaki program.cs'ye aşağıdaki kodu yapıştırın veya yazın `Program` sınıf bildiriminin:  
+- Hemen Yukarıdaki program.cs'ye aşağıdaki kodu yapıştırın veya yazın `Program` sınıf bildiriminin:  
   
      [!code-csharp[DLinqWalk1CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#2)]  
   
 ## <a name="designating-properties-on-the-class-to-represent-database-columns"></a>Veritabanı sütunlarını gösteren sınıf özelliklerini belirleme  
  Bu adımda, çeşitli görevleri gerçekleştirirsiniz.  
   
--   Kullandığınız <xref:System.Data.Linq.Mapping.ColumnAttribute> belirtmek için özniteliği `CustomerID` ve `City` sınıf özellikleri varlığı temsil eden bir veritabanı tablosundaki sütun olarak.  
+- Kullandığınız <xref:System.Data.Linq.Mapping.ColumnAttribute> belirtmek için özniteliği `CustomerID` ve `City` sınıf özellikleri varlığı temsil eden bir veritabanı tablosundaki sütun olarak.  
   
--   Belirlediğiniz `CustomerID` veritabanı birincil anahtar sütunu temsil eden olarak özelliği.  
+- Belirlediğiniz `CustomerID` veritabanı birincil anahtar sütunu temsil eden olarak özelliği.  
   
--   Belirlediğiniz `_CustomerID` ve `_City` özel depolama alanları. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sonra depolayabilir ve iş mantığı içerebilecek ortak erişimciler kullanmak yerine doğrudan değerleri alabilirsiniz.  
+- Belirlediğiniz `_CustomerID` ve `_City` özel depolama alanları. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sonra depolayabilir ve iş mantığı içerebilecek ortak erişimciler kullanmak yerine doğrudan değerleri alabilirsiniz.  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>İki veritabanı sütun özellikleri temsil etmek için  
   
--   İçin küme ayraçlarının içindeki Program.cs'ye aşağıdaki kodu yapıştırın veya yazın `Customer` sınıfı.  
+- İçin küme ayraçlarının içindeki Program.cs'ye aşağıdaki kodu yapıştırın veya yazın `Customer` sınıfı.  
   
      [!code-csharp[DLinqWalk1CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#3)]  
   
@@ -102,7 +102,7 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-specify-the-database-connection"></a>Veritabanı bağlantısını belirtmek için  
   
--   İçine aşağıdaki kodu yazın veya yapıştırın `Main` yöntemi.  
+- İçine aşağıdaki kodu yazın veya yapıştırın `Main` yöntemi.  
   
      Unutmayın `northwnd.mdf` linqtest5 klasörü içinde dosya varsayılır. Daha fazla bilgi için bu kılavuzda daha önce açıklanan Önkoşullar bölümüne bakın.  
   
@@ -115,7 +115,7 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-create-a-simple-query"></a>Basit bir sorgu oluşturmak için  
   
--   İçine aşağıdaki kodu yazın veya yapıştırın `Main` sonrasına `Table<Customer>` bildirimi.  
+- İçine aşağıdaki kodu yazın veya yapıştırın `Main` sonrasına `Table<Customer>` bildirimi.  
   
      [!code-csharp[DLinqWalk1ACS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#5)]  
   

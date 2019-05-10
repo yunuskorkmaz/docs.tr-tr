@@ -2,12 +2,12 @@
 title: SOAP ve HTTP Uç Noktaları
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c07391ccd1f8db6e5d2cb6e0c24fc06152d7517f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007826"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617516"
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP ve HTTP Uç Noktaları
 Bu örnek nasıl rcp tabanlı bir hizmet ekleme ve SOAP hem Web WCF programlama modeli kullanarak "Düz eski XML" (POX) biçiminde kullanıma gösterir. Bkz: [temel HTTP hizmeti](../../../../docs/framework/wcf/samples/basic-http-service.md) hizmeti için HTTP bağlama hakkında daha fazla ayrıntı için örnek. Bu örnek aynı hizmeti SOAP ve farklı bağlamaları kullanarak HTTP üzerinden açığa çıkarmak için ilgili ayrıntıları ele alınmaktadır.  

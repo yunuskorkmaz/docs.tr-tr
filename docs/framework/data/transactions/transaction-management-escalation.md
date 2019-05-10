@@ -2,12 +2,12 @@
 title: İşlem Yönetimi Yükseltme
 ms.date: 03/30/2017
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-ms.openlocfilehash: 2a5592cc9ebf0ddfc49f38da9404c81d11a29cf8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1e40244e1f6b5ffd7b52584a5da121d1203f8376
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793563"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630564"
 ---
 # <a name="transaction-management-escalation"></a>İşlem Yönetimi Yükseltme
 Windows bir Hizmetleri ve birlikte bir işlem yöneticisi oluşturan modülleri kümesini barındırır. İşlem Yönetim yükseltme bir işlem hareket yöneticisinin bileşenlerden biri diğerine geçiş işlemini açıklar.  
