@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 5f058c8e7d480b9145452ae85f186a6ac2ed0d56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 99d5dc2e0f8389f8c9e90786c4d9d0fa037eb828
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803736"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651426"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a><span data-ttu-id="e76e4-102">Devralınan üyelerin arasında varsayılan özellik erişimi belirsiz\<defaultpropertyname >' arabiriminin '\<interfacename1 >' ve '\<defaultpropertyname >' arabiriminin '\< interfacename2 >'</span><span class="sxs-lookup"><span data-stu-id="e76e4-102">Default property access is ambiguous between the inherited interface members '\<defaultpropertyname>' of interface '\<interfacename1>' and '\<defaultpropertyname>' of interface '\<interfacename2>'</span></span>
-<span data-ttu-id="e76e4-103">Her biri aynı ada sahip varsayılan bir özelliği bildirir, iki arabirim bir arabirimi devralır.</span><span class="sxs-lookup"><span data-stu-id="e76e4-103">An interface inherits from two interfaces, each of which declares a default property with the same name.</span></span> <span data-ttu-id="e76e4-104">Derleyici, nitelik olmadan bu varsayılan özellik için bir erişim çözümlenemiyor.</span><span class="sxs-lookup"><span data-stu-id="e76e4-104">The compiler cannot resolve an access to this default property without qualification.</span></span> <span data-ttu-id="e76e4-105">Aşağıdaki örnek bunu göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="e76e4-105">The following example illustrates this.</span></span>  
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a><span data-ttu-id="e1cd1-102">Devralınan üyelerin arasında varsayılan özellik erişimi belirsiz\<defaultpropertyname >' arabiriminin '\<interfacename1 >' ve '\<defaultpropertyname >' arabiriminin '\< interfacename2 >'</span><span class="sxs-lookup"><span data-stu-id="e1cd1-102">Default property access is ambiguous between the inherited interface members '\<defaultpropertyname>' of interface '\<interfacename1>' and '\<defaultpropertyname>' of interface '\<interfacename2>'</span></span>
+<span data-ttu-id="e1cd1-103">Her biri aynı ada sahip varsayılan bir özelliği bildirir, iki arabirim bir arabirimi devralır.</span><span class="sxs-lookup"><span data-stu-id="e1cd1-103">An interface inherits from two interfaces, each of which declares a default property with the same name.</span></span> <span data-ttu-id="e1cd1-104">Derleyici, nitelik olmadan bu varsayılan özellik için bir erişim çözümlenemiyor.</span><span class="sxs-lookup"><span data-stu-id="e1cd1-104">The compiler cannot resolve an access to this default property without qualification.</span></span> <span data-ttu-id="e1cd1-105">Aşağıdaki örnek bunu göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="e1cd1-105">The following example illustrates this.</span></span>  
   
 ```  
 Public Interface Iface1  
@@ -35,21 +35,21 @@ Public Class testClass
 End Class  
 ```  
   
- <span data-ttu-id="e76e4-106">Belirttiğinizde `testObj(1)`, derleyici varsayılan özelliğine çözümlemeye çalışır.</span><span class="sxs-lookup"><span data-stu-id="e76e4-106">When you specify `testObj(1)`, the compiler tries to resolve it to the default property.</span></span> <span data-ttu-id="e76e4-107">Ancak, iki olası varsayılan özellik devralınan arabirimi vardır nedeniyle, derleyicinin bu hatayı sinyalleri için.</span><span class="sxs-lookup"><span data-stu-id="e76e4-107">However, there are two possible default properties because of the inherited interfaces, so the compiler signals this error.</span></span>  
+ <span data-ttu-id="e1cd1-106">Belirttiğinizde `testObj(1)`, derleyici varsayılan özelliğine çözümlemeye çalışır.</span><span class="sxs-lookup"><span data-stu-id="e1cd1-106">When you specify `testObj(1)`, the compiler tries to resolve it to the default property.</span></span> <span data-ttu-id="e1cd1-107">Ancak, iki olası varsayılan özellik devralınan arabirimi vardır nedeniyle, derleyicinin bu hatayı sinyalleri için.</span><span class="sxs-lookup"><span data-stu-id="e1cd1-107">However, there are two possible default properties because of the inherited interfaces, so the compiler signals this error.</span></span>  
   
- <span data-ttu-id="e76e4-108">**Hata Kimliği:** BC30686</span><span class="sxs-lookup"><span data-stu-id="e76e4-108">**Error ID:** BC30686</span></span>  
+ <span data-ttu-id="e1cd1-108">**Hata Kimliği:** BC30686</span><span class="sxs-lookup"><span data-stu-id="e1cd1-108">**Error ID:** BC30686</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="e76e4-109">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="e76e4-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e1cd1-109">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="e1cd1-109">To correct this error</span></span>  
   
-- <span data-ttu-id="e76e4-110">Aynı ada sahip tüm üyeleri devralan kaçının.</span><span class="sxs-lookup"><span data-stu-id="e76e4-110">Avoid inheriting any members with the same name.</span></span> <span data-ttu-id="e76e4-111">Yukarıdaki örnekte, `testObj` üyelerinin gerekmez, örneğin `Iface2`, şu şekilde bildirmek:</span><span class="sxs-lookup"><span data-stu-id="e76e4-111">In the preceding example, if `testObj` does not need any of the members of, say, `Iface2`, then declare it as follows:</span></span>  
+- <span data-ttu-id="e1cd1-110">Aynı ada sahip tüm üyeleri devralan kaçının.</span><span class="sxs-lookup"><span data-stu-id="e1cd1-110">Avoid inheriting any members with the same name.</span></span> <span data-ttu-id="e1cd1-111">Yukarıdaki örnekte, `testObj` üyelerinin gerekmez, örneğin `Iface2`, şu şekilde bildirmek:</span><span class="sxs-lookup"><span data-stu-id="e1cd1-111">In the preceding example, if `testObj` does not need any of the members of, say, `Iface2`, then declare it as follows:</span></span>  
   
     ```  
     Dim testObj As Iface1  
     ```  
   
-     <span data-ttu-id="e76e4-112">-veya-</span><span class="sxs-lookup"><span data-stu-id="e76e4-112">-or-</span></span>  
+     <span data-ttu-id="e1cd1-112">-veya-</span><span class="sxs-lookup"><span data-stu-id="e1cd1-112">-or-</span></span>  
   
-- <span data-ttu-id="e76e4-113">Bir sınıfta devralan arabirim uygular.</span><span class="sxs-lookup"><span data-stu-id="e76e4-113">Implement the inheriting interface in a class.</span></span> <span data-ttu-id="e76e4-114">Ardından, her biri farklı adlara sahip devralınan özellikler uygulayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e76e4-114">Then you can implement each of the inherited properties with different names.</span></span> <span data-ttu-id="e76e4-115">Ancak, yalnızca bir tanesi uygulayan sınıfın varsayılan özelliği olabilir.</span><span class="sxs-lookup"><span data-stu-id="e76e4-115">However, only one of them can be the default property of the implementing class.</span></span> <span data-ttu-id="e76e4-116">Aşağıdaki örnek bunu göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="e76e4-116">The following example illustrates this.</span></span>  
+- <span data-ttu-id="e1cd1-113">Bir sınıfta devralan arabirim uygular.</span><span class="sxs-lookup"><span data-stu-id="e1cd1-113">Implement the inheriting interface in a class.</span></span> <span data-ttu-id="e1cd1-114">Ardından, her biri farklı adlara sahip devralınan özellikler uygulayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e1cd1-114">Then you can implement each of the inherited properties with different names.</span></span> <span data-ttu-id="e1cd1-115">Ancak, yalnızca bir tanesi uygulayan sınıfın varsayılan özelliği olabilir.</span><span class="sxs-lookup"><span data-stu-id="e1cd1-115">However, only one of them can be the default property of the implementing class.</span></span> <span data-ttu-id="e1cd1-116">Aşağıdaki örnek bunu göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="e1cd1-116">The following example illustrates this.</span></span>  
   
     ```  
     Public Class useIface3  
@@ -63,6 +63,6 @@ End Class
     End Class  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="e76e4-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e76e4-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e1cd1-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e1cd1-117">See also</span></span>
 
-- [<span data-ttu-id="e76e4-118">Arabirimler</span><span class="sxs-lookup"><span data-stu-id="e76e4-118">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [<span data-ttu-id="e1cd1-118">Arabirimler</span><span class="sxs-lookup"><span data-stu-id="e1cd1-118">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
