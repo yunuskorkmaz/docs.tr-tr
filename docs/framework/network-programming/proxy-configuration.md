@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: c6b3808a2d73070cc07b31eb0fca7ca9d6af8cdb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 328f67c5afe22f336aa6337903b6569fb6ecc359
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641963"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623054"
 ---
 # <a name="proxy-configuration"></a>Ara Sunucu Yapılandırma
 Bir proxy sunucu kaynakları için istemci isteklerini işler. Bir proxy önbelleğinden istenen kaynak döndürebilen veya kaynağının bulunduğu sunucu isteği iletir. Proxy, uzak sunucuya gönderilen istek sayısını azaltarak ağ performansını iyileştirebilir. Proxy'leri, kaynaklara erişimi kısıtlamak için de kullanılabilir.  

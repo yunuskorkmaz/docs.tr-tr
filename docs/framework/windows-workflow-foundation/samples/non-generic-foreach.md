@@ -2,12 +2,12 @@
 title: Genel Olmayan ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 353128d1c313be62222e091c084e5b5e37a92b58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 46db1d455bcbdd28e02d3cddfe0c9248b4abd91c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004919"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620851"
 ---
 # <a name="non-generic-foreach"></a>Genel Olmayan ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] kendi araç kutusunda etkinlikler, akış denetimi dahil olmak üzere bir dizi birlikte gelen <xref:System.Activities.Statements.ForEach%601>, üzerinden yineleme olanak tanıyan <xref:System.Collections.Generic.IEnumerable%601> koleksiyonları.  
@@ -67,7 +67,7 @@ Activity sampleUsage =
    };  
 ```  
   
-|Koşul|İleti|Önem Derecesi|Özel Durum Türü|  
+|Koşul|`Message`|Önem Derecesi|Özel Durum Türü|  
 |---------------|-------------|--------------|--------------------|  
 |Değeri. `null`|Povinný argument 'Değerleri' için değer sağlanmadı.|Hata|<xref:System.InvalidOperationException>|  
   

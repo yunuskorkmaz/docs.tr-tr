@@ -2,12 +2,12 @@
 title: Güvenlik Duvarı Yönergeleri
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: f1b576b4e413fa3bae70ef1eb8f8ed768e28e309
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 06e5ba64ab0ec3558e4c773c9cb21f961384e0c9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051942"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650050"
 ---
 # <a name="firewall-instructions"></a>Güvenlik Duvarı Yönergeleri
 Windows Communication Foundation (WCF) örnekleri çalışması birkaç Güvenlik Duvarı'nda Program veya bağlantı noktalarını etkinleştirmeniz gerekir. Birçok örnekleri 8000-8003 aralığındaki bağlantı noktaları kullanılarak iletişim kurmak ve 9000 bağlantı noktası. Güvenlik Duvarı varsayılan olarak açıktır ve bu bağlantı noktalarına erişimi engeller. Örnekler için güvenlik duvarını etkinleştirmek için gereksinimler ve güvenlik ortamı bağlı olarak aşağıdaki yordamlardan birini tamamlayın:  

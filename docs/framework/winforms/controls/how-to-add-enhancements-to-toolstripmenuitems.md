@@ -24,54 +24,54 @@ helpviewer_keywords:
 - images [Windows Forms], adding to menus
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-ms.openlocfilehash: 458347df7e17aabc1e9e21d66ad1b5a96200fe28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 2aa2315667b34ac448ac34cd29402e39d59e79dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198562"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624092"
 ---
 # <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Nasıl yapılır: ToolStripMenuItems'e Geliştirmeler Ekleme
 Kitaplığın kullanılabilirliğini geliştirebilirsiniz <xref:System.Windows.Forms.MenuStrip> ve <xref:System.Windows.Forms.ContextMenuStrip> aşağıdaki yollarla denetimler:  
   
--   Cetvel bir kelime işleme uygulaması kenar boşluğu görüntülenip görüntülenmeyeceğini gibi bir özellik üzerinde açık olup olmadığını belirlemek için ya da hangi dosyaların listesini dosyasında itibariyle gösterilen, bu tür belirtmek için onay işaretleri ekleme bir **penceresi** menüsü.  
+- Cetvel bir kelime işleme uygulaması kenar boşluğu görüntülenip görüntülenmeyeceğini gibi bir özellik üzerinde açık olup olmadığını belirlemek için ya da hangi dosyaların listesini dosyasında itibariyle gösterilen, bu tür belirtmek için onay işaretleri ekleme bir **penceresi** menüsü.  
   
--   Görsel olarak menü komutları temsil eden görüntüleri ekleyin.  
+- Görsel olarak menü komutları temsil eden görüntüleri ekleyin.  
   
--   Komutları gerçekleştirmek için fare bir klavye alternatif sağlamak için bir kısayol tuşları görüntüleme. Örneğin, CTRL + C tuşlarına basarak gerçekleştirir **kopyalama** komutu.  
+- Komutları gerçekleştirmek için fare bir klavye alternatif sağlamak için bir kısayol tuşları görüntüleme. Örneğin, CTRL + C tuşlarına basarak gerçekleştirir **kopyalama** komutu.  
   
--   Menü gezinme için fare bir klavye alternatif sağlamak için erişim anahtarlarını görüntüleme. Örneğin, ALT + F tuşlarına seçer **dosya** menüsü.  
+- Menü gezinme için fare bir klavye alternatif sağlamak için erişim anahtarlarını görüntüleme. Örneğin, ALT + F tuşlarına seçer **dosya** menüsü.  
   
--   İlgili komutları gruplamak ve menüler daha okunaklı hale getirmek için ayırıcı çubukları gösterme.  
+- İlgili komutları gruplamak ve menüler daha okunaklı hale getirmek için ayırıcı çubukları gösterme.  
   
 ### <a name="to-display-a-check-mark-on-a-menu-command"></a>Bir onay işareti menü komutunun görüntülemek için  
   
--   Ayarlama, <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> özelliğini `true`.  
+- Ayarlama, <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> özelliğini `true`.  
   
      Bu ayrıca ayarlar <xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A> özelliğini `true`. Menü komutunu seçili değişir bakılmaksızın varsayılan olarak işaretli görünmesini istiyorsanız, bu yordamı kullanın.  
   
 ### <a name="to-display-a-check-mark-that-changes-state-with-each-click"></a>Onay işareti her bir tıklamayla durum değişikliklerini görüntülemek için  
   
--   Menü komut kümesi <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> özelliğini `true`.  
+- Menü komut kümesi <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> özelliğini `true`.  
   
 ### <a name="to-add-an-image-to-a-menu-command"></a>Bir görüntü için bir menü komutu eklemek için  
   
--   Menü komut kümesi <xref:System.Windows.Forms.ToolStripItem.Image%2A> özelliğini görüntünün adı. Varsa <xref:System.Windows.Forms.ToolStripItemDisplayStyle> özelliği bu menü komutunun <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> veya <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>, görüntünün görüntülenemiyor.  
+- Menü komut kümesi <xref:System.Windows.Forms.ToolStripItem.Image%2A> özelliğini görüntünün adı. Varsa <xref:System.Windows.Forms.ToolStripItemDisplayStyle> özelliği bu menü komutunun <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> veya <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>, görüntünün görüntülenemiyor.  
   
 > [!NOTE]
 >  Görüntü boşluğunu, bu nedenle seçerseniz bir onay işareti da gösterebilirsiniz. Ayrıca, ayarlayabilirsiniz <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> görüntüye özelliği `true`, ve görüntü taranmış bir kenarlık ile çalışma zamanında görünür.  
   
 ### <a name="to-display-a-shortcut-key-for-a-menu-command"></a>Bir menü komutu için bir kısayol tuşu görüntülemek için  
   
--   Menü komut kümesi <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A> istenen klavye birleşimi için CTRL + O gibi özelliğini **açık** menü komutu ve kümesi <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> özelliğini `true`.  
+- Menü komut kümesi <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A> istenen klavye birleşimi için CTRL + O gibi özelliğini **açık** menü komutu ve kümesi <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> özelliğini `true`.  
   
 ### <a name="to-display-custom-shortcut-keys-for-a-menu-command"></a>Bir menü komutu özel kısayol tuşları görüntülemek için  
   
--   Menü komut kümesi <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> CTRL + SHIFT + O yerine SHIFT + CTRL + O ve ayarlama gibi istediğiniz klavye birleşimi özelliğini <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> özelliğini `true`.  
+- Menü komut kümesi <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> CTRL + SHIFT + O yerine SHIFT + CTRL + O ve ayarlama gibi istediğiniz klavye birleşimi özelliğini <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> özelliğini `true`.  
   
 ### <a name="to-display-an-access-key-for-a-menu-command"></a>Bir menü komutu için bir erişim anahtarı görüntülemek için  
   
--   Ayarladığınızda <xref:System.Windows.Forms.ToolStripItem.Text%2A> menü komutu için özellik girin ve işareti (&) istediğiniz erişim anahtarı olarak altı çizili harfi önce. Örneğin, yazmaya `&Open` olarak <xref:System.Windows.Forms.ToolStripItem.Text%2A> bir menü öğesinin özelliği olarak görünür bir menü komutu sonuçlanır <u>O</u>kalem.
+- Ayarladığınızda <xref:System.Windows.Forms.ToolStripItem.Text%2A> menü komutu için özellik girin ve işareti (&) istediğiniz erişim anahtarı olarak altı çizili harfi önce. Örneğin, yazmaya `&Open` olarak <xref:System.Windows.Forms.ToolStripItem.Text%2A> bir menü öğesinin özelliği olarak görünür bir menü komutu sonuçlanır <u>O</u>kalem.
   
      Bu komutu gitmek için odaklanmak için ALT tuşuna basın <xref:System.Windows.Forms.MenuStrip>ve menü adının erişim tuşuna basın. Menüyü açılır ve erişim anahtarları ile öğeleri gösteren, yalnızca menü komutunu seçmek için erişim anahtarı tuşuna basmanız gerekir.  
   
@@ -80,7 +80,7 @@ Kitaplığın kullanılabilirliğini geliştirebilirsiniz <xref:System.Windows.F
   
 ### <a name="to-display-a-separator-bar-between-menu-commands"></a>Menü komutları arasında bir ayırıcı çubuk görüntülemek için  
   
--   Tanımladıktan sonra <xref:System.Windows.Forms.MenuStrip> ve onu içerecek, öğeleri kullanım <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> veya <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> menü komutları ekleme yöntemi ve <xref:System.Windows.Forms.ToolStripSeparator> için denetimleri <xref:System.Windows.Forms.MenuStrip> istediğiniz sırayla.  
+- Tanımladıktan sonra <xref:System.Windows.Forms.MenuStrip> ve onu içerecek, öğeleri kullanım <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> veya <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> menü komutları ekleme yöntemi ve <xref:System.Windows.Forms.ToolStripSeparator> için denetimleri <xref:System.Windows.Forms.MenuStrip> istediğiniz sırayla.  
   
     ```vb  
     ' This code adds a top-level File menu to the MenuStrip.  

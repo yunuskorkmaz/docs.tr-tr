@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-ms.openlocfilehash: da35f209b632bdf9e4ab2298239a505df69d6048
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0e9003f22c488ec35f7cc9c7be7f72c7fb8241df
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982637"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622773"
 ---
 # <a name="xshared-attribute"></a>x:Shared Özniteliği
 Ayarlandığında `false`, böylece tüm istekler için aynı örneğini paylaşmak yerine, her istek için yeni bir örneği oluşturma isteği öznitelikli kaynağı için WPF kaynak alma davranışını değiştirir.  

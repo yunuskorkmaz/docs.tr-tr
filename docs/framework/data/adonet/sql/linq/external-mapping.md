@@ -2,12 +2,12 @@
 title: Dış Eşleme
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 4b493279307f61847b72048c5bfa9dc14a38fe29
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0b6ced31f5534bd040917ecc5d241d54d9bee95f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037901"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619719"
 ---
 # <a name="external-mapping"></a>Dış Eşleme
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekleyen *dış eşleme*, bir işlem olarak, ayrı bir XML dosyasına, nesne modeli ile veritabanı veri modeli arasında eşleme belirtmek için kullanın. Bir dış eşleme dosyası kullanmanın avantajları şunlardır:  

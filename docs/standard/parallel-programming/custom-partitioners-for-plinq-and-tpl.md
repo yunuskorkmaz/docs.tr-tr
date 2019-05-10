@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73c745fbbdb66777b50478623d969c125f92474b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d08be327d4c6bf6dd1add3c7ea40ed491619a9ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973426"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625612"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ ve TPL için Özel Bölümleyiciler
 Bir işlem bir veri kaynağı üzerinde paralel hale getirmek için gerekli adımlar için biri *bölüm* birden çok iş parçacığı tarafından erişilebilen eşzamanlı olarak birden çok bölümlere kaynak. PLINQ ve görev paralel kitaplığı (TPL), paralel sorgu yazdığınızda şeffaf bir şekilde çalışması varsayılan bölümleyicilerin sağlayın veya <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngü. Daha Gelişmiş senaryolar için kendi bölümleyici takabilirsiniz.  

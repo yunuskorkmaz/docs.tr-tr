@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b753fcffbdaa1cc9ba960a774077457dd0263e0a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007402"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621368"
 ---
 # <a name="the-ink-threading-model"></a>Mürekkep İş Parçacığı Modeli
 Tablet PC üzerinde mürekkep avantajları, çok yazma gibi normal Kalem ve kağıt hissettiği biridir.  Bunu gerçekleştirmek için tablet kalem, fare yapar ve kullanıcı yazdıkça mürekkebi işler daha çok daha yüksek bir hızda girdi verilerini toplar.  Uygulamanın kullanıcı arabirimini (UI) iş parçacığı engellenmiş olur çünkü Kalem verileri ve işleme mürekkebi toplama için yeterli değil.  Bunu çözmek için bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama kullanıcı mürekkep yazdığında iki ek iş parçacığı kullanır.  

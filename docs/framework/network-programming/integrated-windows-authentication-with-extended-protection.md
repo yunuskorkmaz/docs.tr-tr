@@ -2,12 +2,12 @@
 title: Genişletilmiş Koruma ile Tümleşik Windows Kimlik Doğrulaması
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 672737471c7c73e7ddd03d26d00d30cff3e23ec4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642392"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647403"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Genişletilmiş Koruma ile Tümleşik Windows Kimlik Doğrulaması
 Geliştirmeler, tümleşik Windows kimlik doğrulaması tarafından işlenir etkileyen yapıldı <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, ve ilgili sınıflar <xref:System.Net> ve ilgili ad alanları. Güvenliği geliştirmek genişletilmiş koruma için destek eklendi.  

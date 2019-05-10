@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74acea566e4b0e407e86cb67d3f521f18c2d68af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fad8a73c41379cac7523db6266951b8abab26e27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643068"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626289"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Nasıl yapılır: Yönetilen Kodu DCOM’dan WCF’ye Geçirme
 Windows Communication Foundation (WCF) önerilen ve güvenli Dağıtılmış Bileşen Nesne Modeli (DCOM) üzerinden sunucular ve istemciler dağıtılmış bir ortamda arasındaki çağrıların yönetilen kod için seçimdir. Bu makale nasıl kod DCOM'dan WCF'ye aşağıdaki senaryolar için geçirme için.  
   
--   Uzak Hizmet, bir nesneyi değere göre istemciye döndürür.  
+- Uzak Hizmet, bir nesneyi değere göre istemciye döndürür.  
   
--   İstemci bir nesneyi değere göre uzak hizmetine gönderir.  
+- İstemci bir nesneyi değere göre uzak hizmetine gönderir.  
   
--   Uzak Hizmet, bir nesne başvuru tarafından istemciye döndürür.  
+- Uzak Hizmet, bir nesne başvuru tarafından istemciye döndürür.  
   
  Güvenlik nedeniyle, bir nesne başvuruya göre istemciden hizmete gönderme WCF'de izin verilmez. İstemci ve sunucu arasında sürekli bir konuşma gerektiren bir senaryo, bir çift yönlü hizmet kullanarak WCF'de gerçekleştirilebilir.  Çift yönlü hizmetler hakkında daha fazla bilgi için bkz: [çift yönlü Hizmetler](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 462c8141b84fc8bdda673a45a7841e015b174a32
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938950"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647985"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static İşaretleme Uzantısı
 Tanımlanan herhangi bir statik değere göre kod varlığa başvuran bir [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– uyumlu şekilde. Başvurulan statik özelliği, XAML içinde bir özelliğinin değeri sağlamak için kullanılabilir.  

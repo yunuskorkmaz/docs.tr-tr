@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0252259d92f08a0f871167fc7930818bab542cc5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967095"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626791"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Forms Tarafından Desteklenen Veri Kaynakları
 Geleneksel olarak, veri bağlama uygulamalarda, veritabanlarında depolanan verilerin yararlanmak için kullanıldı. Belirli en düşük gereksinimleri karşılanmadığı sürece Windows Forms veri bağlama ile veritabanları ve bunun yanı sıra diğer yapıları, diziler ve Koleksiyonlar gibi verileri verilere erişebilir.  

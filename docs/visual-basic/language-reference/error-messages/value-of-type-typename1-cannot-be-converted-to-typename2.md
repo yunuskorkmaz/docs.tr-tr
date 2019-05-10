@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: 5f313a43bc3a2f983dabbd45477d120fdb80d063
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 027cccc9ad406d5bc2fd686ddeb4c674dc8f3c90
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766811"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621196"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>Türünün değeri '\<typename1 >' olarak değiştirilemez '\<typename2 >'
 Türünün değeri '\<typename1 >' olarak değiştirilemez '\<typename2 >'. Derleme bir proje başvurusu olan bir dosya başvurusunun karışması tür uyuşmazlığı olabilir '\<assemblyname >'. Dosya başvurusu değiştirmeyi deneyin '\<DosyaYolu >' projesinde '\<projectname1 >' proje başvurusu ile '\<projectname2 >'.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca42512daa35d7efd7296c277a575bf131749ad2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 531b9b6ae62b34f78f13ff6cd1784a2823584ed6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795061"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620779"
 ---
 # <a name="cancellation-in-managed-threads"></a>Yönetilen İş Parçacıklarında İptal
 İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework, ortak iptali zaman uyumsuz veya uzun süre çalışan zaman uyumlu işlemler için birleşik bir modeli kullanır. Bu model, bir iptal belirteci adlı basit bir nesne üzerinde temel alır. Yeni iş parçacıkları veya görevleri oluşturarak iptal edilebilir işlemleri, bir veya daha fazla örneğin çağıran nesnesi belirteç her işlem için iletir. Tek işlemler, diğer işlemler için belirteç kopyalarını sırayla geçirebilirsiniz. Bazı daha sonraki bir zamanda belirteci oluşturan nesnesini bu işlemler neler yaptıklarını durdurma isteği için kullanabilirsiniz. İstekte bulunan nesne yalnızca iptal isteği gönderebilir ve her dinleyici isteği fark ve uygun ve hızlı bir şekilde yanıt sorumludur.  

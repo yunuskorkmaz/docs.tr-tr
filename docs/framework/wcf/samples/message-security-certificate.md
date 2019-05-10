@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: b5a36d39e6e38f121bf3155c822681fb198f0850
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: be9913c5109f86bf54e69beb58c53c4ddc3fd28e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006427"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664872"
 ---
 # <a name="message-security-certificate"></a>İleti Güvenliği Sertifikası
 Bu örnek, istemci için X.509 v3 sertifikası kimlik doğrulaması ile WS-güvenlik kullanan ve sunucunun X.509 v3 sertifikası kullanılarak kimlik doğrulaması gerektiren bir uygulamanın nasıl uygulanacağını gösterir. Bu örnek, tüm uygulama iletileri istemci ve sunucu arasındaki imzalanacak ve şifrelenecek şekilde varsayılan ayarları kullanır. Bu örnek dayanır [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) ve bir istemci konsol programı ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı oluşur. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.  

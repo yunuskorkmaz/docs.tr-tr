@@ -11,12 +11,12 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-ms.openlocfilehash: 09a445da068f0141b9526e0228df8be0105498c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e6af8d6410c4e383990bdaa27f97cc698be71719
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776551"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649196"
 ---
 # <a name="how-to-clone-a-printer"></a>Nasıl yapılır: Yazıcı Kopyalama
 Çoğu işletmenin belirli bir noktada aynı modelin birden çok yazıcılar satın alacak. Genellikle, bunların tümü neredeyse aynı yapılandırma ayarlarıyla yüklenir. Her yazıcı yükleme alabilir ve hataya açık alanlardır. <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> Ad alanı ve <xref:System.Printing.PrintServer.InstallPrintQueue%2A> Microsoft .NET Framework ile sunulan sınıfı mevcut bir yazdırma kuyruğundan klonlanır ek yazdırma sıralarını herhangi bir sayıda anında yükleneceği mümkün kılar.  

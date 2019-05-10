@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: 0d8428487c3c320a634914b99219e23befb70d55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bd1a52f1ce0f656af79928a20e3badc73661e89a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773028"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64635299"
 ---
 # <a name="how-to-enable-streaming"></a>Nasıl yapılır: Akışı Etkinleştirme
 Windows Communication Foundation (WCF) iletilerini arabelleğe alınan ya da akış aktarımları kullanarak gönderebilirsiniz. Bir alıcı okumadan önce varsayılan arabelleğe alınan aktarım modunda bir ileti tamamen teslim edilmelidir. Aktarım modunu akışında alıcı tamamen teslim edilmeden önce iletiyi işlemeye başlayabilirsiniz. Akış modunda iletilen bilgiler uzun ve seri olarak işlenebilecek yararlı olur. Akış modunda de, ileti tamamen arabelleğe çok büyük olduğunda yararlıdır.  

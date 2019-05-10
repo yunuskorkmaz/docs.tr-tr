@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1e1f67440377db95a5e0896b8fd31b1ab720b188
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981883"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630646"
 ---
 # <a name="textelement-content-model-overview"></a>TextElement İçerik Modeline Genel Bakış
 Bu içerik modeline genel bakış desteklenen içeriğini açıklayan bir <xref:System.Windows.Documents.TextElement>. <xref:System.Windows.Documents.Paragraph> Sınıfı, bir tür <xref:System.Windows.Documents.TextElement>. İçerik modeli, diğer hangi nesneleri/öğeleri bulunabilir açıklar. Bu genel bakışta öğesinden türetilen nesneler için kullanılan içerik modeli özetler <xref:System.Windows.Documents.TextElement>. Daha fazla bilgi için [akış belgesine genel bakış](flow-document-overview.md).  

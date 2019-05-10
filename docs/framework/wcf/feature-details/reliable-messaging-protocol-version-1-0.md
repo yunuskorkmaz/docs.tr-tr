@@ -2,12 +2,12 @@
 title: Güvenilir Mesajlaşma Protokolü sürüm 1.0
 ms.date: 03/30/2017
 ms.assetid: a5509a5c-de24-4bc2-9a48-19138055dcce
-ms.openlocfilehash: 02a0815f62999c27507ed5e1610f090e944c135a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 857bbbf9ffa1311c38cfc007e0cdc6bde06d6284
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946711"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617572"
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Güvenilir Mesajlaşma Protokolü sürüm 1.0
 WS-Reliable Mesajlaşma için bu konuda Windows Communication Foundation (WCF) uygulama ayrıntılarını kapsayan Şubat 2005 (sürüm 1.0) Protokolü HTTP aktarımı kullanarak birlikte çalışma için gerekli. WCF WS-Reliable Mesajlaşma kısıtlamaları ve bu konuda açıklanan açıklamalar izler. İle başlayarak WS-ReliableMessaging sürüm 1.0 protokolü uygulandığını unutmayın [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  

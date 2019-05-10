@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-ms.openlocfilehash: 63885e0467f79f140678ffcaa6737f40a8fa7f6f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d38d7db33b44f22cf9e8f714581cce1d271ce96
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609766"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622982"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>UI Otomasyon Kılavuz Denetim Düzenini Uygulama
 > [!NOTE]
@@ -25,22 +25,22 @@ ms.locfileid: "61609766"
 ## <a name="implementation-guidelines-and-conventions"></a>Uygulama yönergeleri ve kuralları  
  Kılavuz denetim düzeni uygularken aşağıdaki yönergeler ve kuralları dikkat edin:  
   
--   Sol üst (veya üst sağ hücresi yerel ayara bağlı olarak) (0, 0) koordinatlarına sahip kılavuz koordinatları sıfır tabanlıdır.  
+- Sol üst (veya üst sağ hücresi yerel ayara bağlı olarak) (0, 0) koordinatlarına sahip kılavuz koordinatları sıfır tabanlıdır.  
   
--   Bir hücreyi boşsa, UI Otomasyon öğesi hala desteklemek için döndürülmelidir <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> hücre için özellik. Alt öğeleri kılavuzunda düzenini düzensiz bir diziye benzer olduğunda bu mümkündür (aşağıdaki örneğe bakın).  
+- Bir hücreyi boşsa, UI Otomasyon öğesi hala desteklemek için döndürülmelidir <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> hücre için özellik. Alt öğeleri kılavuzunda düzenini düzensiz bir diziye benzer olduğunda bu mümkündür (aşağıdaki örneğe bakın).  
   
  ![Windows Explorer görünümü gösteren düzensiz düzeni. ](../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
 Boş koordinatları ile bir kılavuz denetimi örneği  
   
--   Tek bir öğe içeren bir kılavuz uygulamak için hala gereklidir <xref:System.Windows.Automation.Provider.IGridProvider> , mantıksal olarak bir kılavuz olarak kabul edilir. Kurucularýn kılavuzunda alt öğe sayısı.  
+- Tek bir öğe içeren bir kılavuz uygulamak için hala gereklidir <xref:System.Windows.Automation.Provider.IGridProvider> , mantıksal olarak bir kılavuz olarak kabul edilir. Kurucularýn kılavuzunda alt öğe sayısı.  
   
--   Gizli satırları ve sütunları, sağlayıcı uygulaması bağlı olarak yüklenemeyen içinde [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı ve bu nedenle yansıtılır <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> ve <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> özellikleri. Gizli satırları ve sütunları henüz yüklenmedi, bunlar sayılıp değil.  
+- Gizli satırları ve sütunları, sağlayıcı uygulaması bağlı olarak yüklenemeyen içinde [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı ve bu nedenle yansıtılır <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> ve <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> özellikleri. Gizli satırları ve sütunları henüz yüklenmedi, bunlar sayılıp değil.  
   
--   <xref:System.Windows.Automation.Provider.IGridProvider> bir kılavuzun etkin işleme etkinleştirmez; <xref:System.Windows.Automation.Provider.ITransformProvider> bu işlevselliği etkinleştirmek için uygulanması gerekir.  
+- <xref:System.Windows.Automation.Provider.IGridProvider> bir kılavuzun etkin işleme etkinleştirmez; <xref:System.Windows.Automation.Provider.ITransformProvider> bu işlevselliği etkinleştirmek için uygulanması gerekir.  
   
--   Kullanım bir <xref:System.Windows.Automation.StructureChangedEventHandler> kılavuzuna eklenmiş, kaldırılmış, birleştirilmiş veya hücre gibi yapısal veya düzen değişiklikleri dinlemek için.  
+- Kullanım bir <xref:System.Windows.Automation.StructureChangedEventHandler> kılavuzuna eklenmiş, kaldırılmış, birleştirilmiş veya hücre gibi yapısal veya düzen değişiklikleri dinlemek için.  
   
--   Kullanım bir <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> geçişi öğeleri veya hücre bir kılavuzun aracılığıyla izlemek için.  
+- Kullanım bir <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> geçişi öğeleri veya hücre bir kılavuzun aracılığıyla izlemek için.  
   
 <a name="Required_Members_for_IGridProvider"></a>   
 ## <a name="required-members-for-igridprovider"></a>Gerekli üyeleri IGridProvider için  

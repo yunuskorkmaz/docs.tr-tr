@@ -8,12 +8,12 @@ helpviewer_keywords:
 - keyed collections [Windows Forms]
 - collections [Windows Forms], accessing with keys
 ms.assetid: b9b79b8b-d9bf-4f8c-b9d6-9578bc3219d3
-ms.openlocfilehash: fdd3a56ab9a267990bb0e832c0d4cc2af9334034
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 47bd0ff4eb649b4b32113a984f4aa99cd4afc0f1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801835"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665273"
 ---
 # <a name="how-to-access-keyed-collections-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta Anahtarlanmış Koleksiyonlara Erişim
 - Anahtara göre tek tek koleksiyon öğelerine erişebilirsiniz. Bu işlev, genellikle Windows Forms uygulamaları tarafından kullanılan birçok koleksiyon sınıfları için eklendi. Aşağıdaki listede sahip erişilebilir anahtarlanmış koleksiyonlar koleksiyon sınıfları bazıları gösterilmektedir:  

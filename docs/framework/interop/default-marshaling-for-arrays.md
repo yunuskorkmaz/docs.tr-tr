@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3eb5c9686f54bcaacef8d593f0ace4804d4ae60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1f29420038276739623c534656a94e13080637c6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643445"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626361"
 ---
 # <a name="default-marshaling-for-arrays"></a>Diziler için Varsayılan Sıralama
 Tamamen yönetilen kod oluşan bir uygulamada, ortak dil çalışma zamanı dizi türleri olarak In/Out parametresi geçirir. Buna karşılık, birlikte çalışma sıralayıcısı parametreleri olduğu gibi bir dizi varsayılan olarak geçirir.  
