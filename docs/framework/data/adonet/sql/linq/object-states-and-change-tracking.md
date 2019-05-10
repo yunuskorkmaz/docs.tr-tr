@@ -2,12 +2,12 @@
 title: Nesne Durumları ve Değişiklik İzleme
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 704c5271f71c3709bbf48cf6a5af0a60828e6244
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794400"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610090"
 ---
 # <a name="object-states-and-change-tracking"></a>Nesne Durumları ve Değişiklik İzleme
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesneler her zaman katılan bazı *durumu*. Örneğin, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yeni bir nesne oluşturur nesne `Unchanged` durumu. Kendiniz oluşturduğunuz yeni bir nesne için bilinmeyen <xref:System.Data.Linq.DataContext> ve `Untracked` durumu. Başarılı yürütülmesinin <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, bilinen tüm nesneleri [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bulunan `Unchanged` durumu. (Tek özel durumu başarıyla bulunan veritabanından silinmiş olanlar tarafından temsil edilen `Deleted` durum ve kullanılamaz durumda uygulamasındaki <xref:System.Data.Linq.DataContext> örneği.)  

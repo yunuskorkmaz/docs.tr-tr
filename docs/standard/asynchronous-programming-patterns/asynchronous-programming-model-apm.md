@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cff235fe45c75fda51e04d5b0b54bb3ee03051b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 16e500a645df2b58fb2d2fd402120556922d1800
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61870155"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628953"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Zaman Uyumsuz Programlama Modeli (APM)
 Kullanan zaman uyumsuz bir işlem <xref:System.IAsyncResult> tasarım deseni adlı iki yöntem uygulanan `BeginOperationName` ve `EndOperationName` başlar ve zaman uyumsuz işlemi sonlandıran *OperationName* sırasıyla. Örneğin, <xref:System.IO.FileStream> sağlar sınıfını <xref:System.IO.FileStream.BeginRead%2A> ve <xref:System.IO.FileStream.EndRead%2A> bayt bir dosyadan zaman uyumsuz olarak okumak için yöntemleri. Bu yöntemlerin zaman uyumsuz bir sürümüne uygulamak <xref:System.IO.FileStream.Read%2A> yöntemi.  

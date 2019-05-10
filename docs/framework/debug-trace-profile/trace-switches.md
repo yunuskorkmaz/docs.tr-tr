@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85a1a017197826717280f53995ed98f26f1d80bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 16ef27b7d1a36121976cbb026f81984a8b84d1fe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873866"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614331"
 ---
 # <a name="trace-switches"></a>İzleme Anahtarları
 İzleme anahtarları etkinleştirmek, devre dışı bırakın ve İzleme çıkışı filtrelemek olanak sağlar. Bunlar, mevcut kodunuzu ve .config dosyası aracılığıyla harici olarak yapılandırılabilir nesnelerdir. .NET Framework içinde sağlanan izleme anahtarlarını üç tür vardır: <xref:System.Diagnostics.BooleanSwitch> sınıfı <xref:System.Diagnostics.TraceSwitch> sınıfı ve <xref:System.Diagnostics.SourceSwitch> sınıfı. <xref:System.Diagnostics.BooleanSwitch> Bir iki durumlu izleme deyimleri çeşitli devre dışı bırakma veya etkinleştirme anahtarı, sınıf görevi görür. <xref:System.Diagnostics.TraceSwitch> Ve <xref:System.Diagnostics.SourceSwitch> sınıfları belirli izleme düzeyi için bir izleme anahtarı etkinleştirmenize izin böylece <xref:System.Diagnostics.Trace> veya <xref:System.Diagnostics.TraceSource> düzeyi ve altındaki tüm düzeyleri için belirtilen iletileri görüntülenir. Geçiş devre dışı bırakırsanız, izleme iletileri görüntülenmez. Bu sınıflar türetilen Özet (**MustInherit**) sınıfı **anahtar**gibi bir kullanıcı tarafından geliştirilen anahtar gerekir.  
@@ -49,7 +49,7 @@ ms.locfileid: "61873866"
   
 |Enum değeri|Tamsayı değeri|Görüntülenen ileti türü (veya belirtilen çıkış hedefine yazılmış)|  
 |----------------------|-------------------|---------------------------------------------------------------------------|  
-|Kapalı|0|None|  
+|Kapalı|0|Yok.|  
 |Hata|1.|Yalnızca hata iletileri|  
 |Uyarı|2|Uyarı iletileri ve hata iletileri|  
 |Bilgi|3|Bilgilendirme iletileri, uyarı iletileri ve hata iletileri|  

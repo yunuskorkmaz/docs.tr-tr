@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: a2d0ef1e70c88133d5f9c3d2ffe8dafa4983cfd9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e4d05d803cccf9a76c6229903cb1d322a42b11e6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904558"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613031"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation nedir?
 Windows Communication Foundation (WCF) hizmet odaklı uygulamalar oluşturmaya yönelik bir çerçevedir. WCF kullanarak, verileri zaman uyumsuz ileti olarak bir hizmetin uç noktasından diğerine gönderebilirsiniz. Hizmet uç noktası, IIS tarafından barındırılan sürekli olarak kullanılabilir bir hizmetin parçası veya barındırılan bir uygulamada bir hizmet olabilir. Bir uç nokta, bir istemci bir hizmet uç noktasından verileri isteyen bir hizmet olabilir. İletileri bir tek karakter ya da XML olarak gönderilen word kadar basit veya bir ikili veri akışı gibi karmaşık olabilir. Bazı örnek senaryolar şunlardır:

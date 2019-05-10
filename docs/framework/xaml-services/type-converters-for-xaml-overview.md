@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: 7a5ec731eacda8017c307a0ffa8ec282da78c40f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cf9eda484d184b9be70a02bac7ced5b85a2dd211
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025463"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617214"
 ---
 # <a name="type-converters-for-xaml-overview"></a>XAML Tür Dönüştürücülerine Genel Bakış
 XAML biçimlendirmede bir dizeden belirli nesneleri bir nesne grafiğinin dönüştürür bir nesne yazıcısı için tür dönüştürücüleri tedarik mantığı. .NET Framework XAML hizmetlerinde tür dönüştürücüsünü türetildiği bir sınıf olmalıdır <xref:System.ComponentModel.TypeConverter>. Bazı dönüştürücüler ayrıca XAML kaydetme yolu desteklemek ve Serileştirme biçimlendirme dizesi forma bir nesneyi serileştirmek için kullanılan. Bu konu nasıl ve ne zaman XAML içinde tür dönüştürücüleri çağrılır ve, metot geçersiz kılmaları uygulama önerileri sağlar açıklar <xref:System.ComponentModel.TypeConverter>.  

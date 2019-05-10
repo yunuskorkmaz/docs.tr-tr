@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-ms.openlocfilehash: 8de87e17d1baedccfe18bfded3ccab7ab59f0a09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9641b6906bc2acaa525aed6df57f189d39317d35
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012483"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614669"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Windows Forms Denetimini İşleme
 İşleme görsel bir temsili bir kullanıcının ekranda oluşturma işlemini gösterir. Windows Forms kullanan [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (yeni Windows grafik kitaplığının) işleme için. Erişim sağlayan bir yönetilen sınıflar [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bulunan <xref:System.Drawing?displayProperty=nameWithType> ad alanı ve bunun alt ad boşlukları.  

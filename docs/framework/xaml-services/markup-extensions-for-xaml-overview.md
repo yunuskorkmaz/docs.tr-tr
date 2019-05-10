@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ce626d9b75f2061ff024fa25ce005f952301603e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971918"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617254"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML Biçimlendirme Uzantılarına Genel Bakış
 Biçimlendirme uzantıları, basit bir tür ya da özel bir XAML türü bir değer almak için bir XAML tekniğidir. Öznitelik kullanımı için biçimlendirme uzantıları açılış kaşlı ayracından bilinen karakter dizisini kullanın. `{` işaretleme uzantısı kapsamı ve bir kapanış küme ayracını girmek için `}` çıkmak için. .NET Framework XAML hizmetlerinde kullanırken bazı System.Xaml derlemesinden önceden tanımlanmış XAML dil biçimlendirme uzantıları kullanabilirsiniz. Alt sınıfı ayrıca <xref:System.Windows.Markup.MarkupExtension> sınıfı System.Xaml içinde tanımlanan ve kendi biçimlendirme uzantılarını tanımlayın. Veya zaten bu çerçeve başvurduğunuz, belirli bir framework tarafından tanımlanan biçimlendirme uzantıları kullanabilirsiniz.  

@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: WCF REST Programlama Modeli Kullanarak Rastgele Verileri Kabul Eden Bir Hizmet Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: d7da3a5c6dd4f04c4d902dab9c2dff40413ddd20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a1c30491f6c5b0a91f93a6f26417f9dc2b996a48
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857342"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614792"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Nasıl yapılır: WCF REST Programlama Modeli Kullanarak Rastgele Verileri Kabul Eden Bir Hizmet Oluşturma
 Bazen geliştiriciler, veri hizmeti işleminden döndürülen nasıl tam denetimi olmalıdır. Bir hizmet işlemi, verileri bir biçimde byWCF desteklenmiyor döndürmelidir olduğunda bu durum geçerlidir. Bu konuda, rastgele verileri alan bir hizmet oluşturmak için WCF REST programlama modeli kullanarak anlatılmaktadır.  

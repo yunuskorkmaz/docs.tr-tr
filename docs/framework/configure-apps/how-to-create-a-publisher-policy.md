@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b37b00cfbeee10f217d1dbe1c754c50b65e31de9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344669"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625862"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Nasıl yapılır: Yayımcı İlkesi Oluşturma
 Derleme satıcıları, uygulamaları yükseltilen derlemeye bir yayımcı ilkesi dosyası dahil ederek bir derlemenin daha yeni bir sürümünü kullanacağını durumu. Yayımcı ilkesi dosyası, derleme yeniden yönlendirmesini ve kod temel ayarları belirtir ve bir uygulama yapılandırma dosyası aynı biçimi kullanır. Yayımcı ilkesi dosyası bir bütünleştirilmiş kod içine derlenmiş ve genel bütünleştirilmiş kod önbelleğine yerleştirilmesi.  
@@ -57,15 +57,15 @@ Derleme satıcıları, uygulamaları yükseltilen derlemeye bir yayımcı ilkesi
   
      Bu komutta:  
   
-    -   *PublisherPolicyFile* bağımsız yayımcı ilkesi dosyası adıdır.  
+    - *PublisherPolicyFile* bağımsız yayımcı ilkesi dosyası adıdır.  
   
-    -   *PublisherPolicyAssemblyFile* bağımsız değişkeni, bu komutu sonuçları yayımcı ilke derlemesi adıdır. Derleme dosya adı biçimi izlemelidir:  
+    - *PublisherPolicyAssemblyFile* bağımsız değişkeni, bu komutu sonuçları yayımcı ilke derlemesi adıdır. Derleme dosya adı biçimi izlemelidir:  
   
          **ilke.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
-    -   *KeyPairFile* bağımsız değişkeni anahtar çiftini içeren dosyanın adıdır. Derleme ve yayımcı ilke derlemesi aynı anahtar çifti ile oturum açması gerekir.  
+    - *KeyPairFile* bağımsız değişkeni anahtar çiftini içeren dosyanın adıdır. Derleme ve yayımcı ilke derlemesi aynı anahtar çifti ile oturum açması gerekir.  
   
-    -   *ProcessorArchitecture* bağımsız değişkeni bir işlemciye özel derleme tarafından hedeflenen platformun tanımlar.  
+    - *ProcessorArchitecture* bağımsız değişkeni bir işlemciye özel derleme tarafından hedeflenen platformun tanımlar.  
   
         > [!NOTE]
         >  Belirli bir işlemci mimarisini hedefleyen olanağı, .NET Framework 2.0 sürümünde yenidir.  

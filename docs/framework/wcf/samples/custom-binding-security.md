@@ -2,12 +2,12 @@
 title: Özel Bağlama Güvenliği
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 1ff83d95dae06b787f8bc7ec8e1bf0f45c226532
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 71bc3d463330b893e8b415892a9bdcc2dae88a2b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943942"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616035"
 ---
 # <a name="custom-binding-security"></a>Özel Bağlama Güvenliği
 Bu örnek, özel bir bağlama kullanarak güvenlik yapılandırma işlemi gösterilmektedir. Bu, özel bağlama güvenli aktarım birlikte ileti düzeyi güvenliği etkinleştirmek için nasıl kullanılacağını gösterir. Bu hizmet ve istemci arasında ileti aktarmaya güvenli aktarım gereklidir ve iletileri ileti düzeyi üzerinde aynı anda güvenli olmalıdır yararlı olur. Bu yapılandırma, sistem tarafından sağlanan bağlamalar tarafından desteklenmiyor.

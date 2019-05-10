@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image codecs [Windows Forms], listing
 - image decoders [Windows Forms], listing
 ms.assetid: 11417191-8c95-40ca-8024-779e61706fb6
-ms.openlocfilehash: c92b8010def2f77f859ee0bd9cdb1ed51dd15f27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 961862d6212b7e76812fc222d3a99f08528d9a16
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723049"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626902"
 ---
 # <a name="how-to-list-installed-decoders"></a>Nasıl yapılır: Yüklenen Kod Çözücüleri Listeleme
 Uygulamanızın belirli resim dosyası biçimi erişip erişemeyeceğini belirlemek için görüntü kod çözücüleri bir bilgisayarda kullanılabilir listesinde isteyebilirsiniz. <xref:System.Drawing.Imaging.ImageCodecInfo> Sağlar sınıfını <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> statik yöntemler hangi görüntü kod çözücüleri kullanılabilir belirleyebilirsiniz. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> bir dizi döndürür <xref:System.Drawing.Imaging.ImageCodecInfo> nesneleri.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 031ec811315f4a9d9f1f73d34e32236d2cf27729
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1d44df3d0869bb1822cf4f509ed3e8b6dc57c57b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866840"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614890"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET Native Yansıtma API'si Başvurusu
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] üç yeni özel durum türlerini içerir: [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), ve [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) . Tüm üç özel durum türleri hakkında aşağıdakileri unutmayın:  

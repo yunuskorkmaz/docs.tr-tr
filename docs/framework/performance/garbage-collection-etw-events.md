@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f9bf0e309ec8c77d4b1d6afbf111e7eeae629ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e5e10a1dc1ad3230213a20b850741a6ec0468294
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61722945"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616431"
 ---
 # <a name="garbage-collection-etw-events"></a>Çöp Toplama ETW Olayları
 <a name="top"></a> Bu olaylar, çöp toplama hakkında bilgi toplayın. Bunlar Tanılama'da yardımcı olur ve hata ayıklama, çöp toplama kaç kez belirleme de dahil olmak üzere gerçekleştirildiyse, ne kadar bellek çöp toplama ve benzeri sırasında bırakılmış.  

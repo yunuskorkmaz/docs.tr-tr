@@ -2,12 +2,12 @@
 title: WCF Hizmet Ana Bilgisayarı (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: d9a086b3a6ae0ece3b1b45161402ce058e1fb447
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7174cac4c07d9011ad4c0744ff7ad6550d832d8b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052618"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613251"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF Hizmet Ana Bilgisayarı (WcfSvcHost.exe)
 Windows Communication Foundation (WCF) hizmet ana bilgisayarı (WcfSvcHost.exe), Visual Studio hata ayıklayıcıyı otomatik olarak ana bilgisayar ve uyguladıysanız bir hizmeti test etmek için (F5) başlatmak sağlar. Sonra hizmeti bulun ve olası hataları düzeltmek için WCF Test İstemcisi (WcfTestClient.exe) veya kendi istemci kullanarak test edebilirsiniz.  

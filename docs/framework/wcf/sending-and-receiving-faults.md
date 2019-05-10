@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f093229af96cba679959fa052bd6b5809d347f4b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949610"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606024"
 ---
 # <a name="sending-and-receiving-faults"></a>Hataları Gönderme ve Alma
 SOAP hatalarının hata durum bilgisini bir hizmetten istemci ve hizmet için bir istemciden çift yönlü durumda birlikte çalışabilen bir biçimde aktarın. Genellikle hizmet özel hata içeriği tanımlar ve hangi işlemlerin döndürülmeleri belirtir. (Daha fazla bilgi için [tanımlama ve belirtme hatası](../../../docs/framework/wcf/defining-and-specifying-faults.md).) Bu konu nasıl bir hizmet ya da çift yönlü istemci bu hataları karşılık gelen hata koşulu olduğunda ve bir istemci nasıl gönderebilir açıklar veya hizmet uygulaması bu hataların işler. Hata işleme Windows Communication Foundation (WCF) uygulamalarında genel bakış için bkz. [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

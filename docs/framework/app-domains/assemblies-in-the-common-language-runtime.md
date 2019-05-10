@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eefd3773d26fe71741668a9df366f041ba0ae0a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a91890435b1c2b5b955875f52de86249c2ee79df
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675591"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607817"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Ortak Dil Çalışma Zamanındaki Derlemeler
 .NET Framework uygulamalarının yapı taşları olan derlemeler dağıtım, sürüm denetimi, yeniden kullanma, aktivasyon kapsamı ve güvenlik izinlerinin de temel birimlerini oluşturur. Bir derleme, birlikte çalışacak ve mantıksal bir işlevsellik birimi oluşturacak biçimde oluşturulan bir tür ve kaynakların bir derlemesidir. Bir derleme, ortak dil çalışma zamanına tür uygulamalarına dikkat etmesi için gerekli bilgileri sunar. Çalışma zamanı için, bir derleme bağlamı dışında bir tür yoktur.  

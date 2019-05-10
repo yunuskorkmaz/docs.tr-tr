@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e033ba4b3b98367452b355363058adc7f1a5887
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 081548f9004d2fedf4d49845d3f44d4609fa508e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643029"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626300"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>Nasıl yapılır: COM'dan .NET Türlerine Başvurma
 Bakış açısıyla, istemci ve sunucu kodu, COM ve .NET Framework arasındaki farklar büyük ölçüde görünmez. Microsoft Visual Basic istemciler, bir .NET nesnesini sözdizimi, özelliklerini ve nesne yöntemleri ve tam olarak bunu herhangi bir COM nesnesi gibi alanlar nesne tarayıcısında görüntüleyebilirsiniz.  

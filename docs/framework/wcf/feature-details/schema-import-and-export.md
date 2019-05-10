@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-ms.openlocfilehash: 9f13f9d95c40b964c5eb416c590a5d603d714bac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 43b9ca115f3eeae7a28d8ed8a0642ad6e5439bd8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991022"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603700"
 ---
 # <a name="schema-import-and-export"></a>Şema İçeri ve Dışarı Aktarma
 Windows Communication Foundation (WCF) içeren yeni bir serileştirme motoruna <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` Arasında çevirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri ve XML (her iki yönde). Serileştirici kendisini ek olarak, WCF, ilişkili şema içeri ve dışarı aktarma mekanizması şema içerir. *Şema* seri hale getirici üretir veya seri durumdan çıkarıcı erişip XML şeklini resmi, kesin ve makine tarafından okunabilir bir açıklaması. WCF World Wide Web Consortium (W3C) XML Şeması Tanım Dili (XSD) çok sayıda üçüncü taraf platformlarıyla çalışabilen yaygın olarak, şema gösterimi olarak kullanır.  

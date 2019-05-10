@@ -2,12 +2,12 @@
 title: 'Taşıma: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 8d72ab5c7d8c461cd2ce4d4003d449ac9fe7e807
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 12981e970706c5fc1d954c237309f12c85320c75
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007727"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617380"
 ---
 # <a name="transport-udp"></a>Taşıma: UDP
 UDP taşıma örnek nasıl uygulanacağı UDP tek noktaya yayın ve çok noktaya yayın özel bir Windows Communication Foundation (WCF) aktarım olarak gösterir. Örnek kanal çerçevesi kullanarak ve en iyi yöntemleri WCF özel taşıma WCF'de, oluşturmak için önerilen yordamı açıklar. Özel bir taşıma oluşturmak için adımları aşağıdaki gibidir:  

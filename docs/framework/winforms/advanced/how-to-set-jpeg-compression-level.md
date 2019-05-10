@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: de9dce1b3c15070fda268c430ce5da641efef6f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1b325c0cb8fe9da4b198d19164c73af9b1609973
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003892"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626133"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Nasıl yapılır: JPEG Sıkıştırma Düzeyini Ayarlama
 Dosya boyutu en aza indirmek ve yazılımınızın kalitesini iyileştirmek için diske görüntüyü kaydederken görüntü parametrelerini değiştirmek isteyebilirsiniz. Bir JPEG görüntüsünü kalitesini, sıkıştırma düzeyi değiştirerek ayarlayabilirsiniz. Bir JPEG görüntüsünü kaydettiğinizde sıkıştırma düzeyini belirtmek için oluşturmalısınız bir <xref:System.Drawing.Imaging.EncoderParameters> nesne ve geçirin <xref:System.Drawing.Image.Save%2A> yöntemi <xref:System.Drawing.Image> sınıfı. Başlatma <xref:System.Drawing.Imaging.EncoderParameters> BT'nin aşağıdakilerden birini oluşturan bir dizi bu nesne <xref:System.Drawing.Imaging.EncoderParameter>. Oluştururken <xref:System.Drawing.Imaging.EncoderParameter>, belirtin <xref:System.Drawing.Imaging.Encoder.Quality> Kodlayıcısı ve istenen sıkıştırma düzeyi.  

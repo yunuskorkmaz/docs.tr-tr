@@ -2,12 +2,12 @@
 title: Windows Communication Foundation'dan İleti Kuyruğuna
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 1551ab407049e871a9275d148b1c84dc2791ccad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e0c4fa3e3f475b2d0996885d8eda91faabc9ba93
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007545"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625784"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation'dan İleti Kuyruğuna
 Bu örnek, bir Windows Communication Foundation (WCF) uygulaması bir Message Queuing (MSMQ) uygulaması için bir ileti nasıl gönderebileceğiniz gösterilir. Hizmeti, sıraya alınan iletileri alma hizmeti gözlemleyin sağlamak için bir şirket içinde barındırılan bir konsol uygulamasıdır. Hizmet ve istemci aynı anda çalıştırılması gerekmez.

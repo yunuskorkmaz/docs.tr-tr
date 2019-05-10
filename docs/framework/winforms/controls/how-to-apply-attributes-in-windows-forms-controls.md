@@ -9,12 +9,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: e86277c06e515b28bada3331cf4fd63e536319a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 720172e9fcb13837b527d72176a35d366d83c948
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053008"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64612823"
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Nasıl yapılır: Windows Forms Denetiminde Öznitelikleri Uygulama
 Bileşen ve Denetim doğru tasarım ortamı ile etkileşimli ve düzgün çalışma zamanında yürüten geliştirmek için öznitelikleri doğru sınıflar ve üyeler uygulama gerekir.  

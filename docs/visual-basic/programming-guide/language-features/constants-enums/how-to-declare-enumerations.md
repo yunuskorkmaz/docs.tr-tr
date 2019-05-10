@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: f168d6d9cd6970353e75fa35a7e52cc7156fda72
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c74b75adf0f56dd198375cb1ff24656d39ec074c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907653"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610573"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Nasıl yapılır: Numaralandırmalar (Visual Basic) bildirme
 Numaralandırma ile oluşturma `Enum` bir sınıf veya modül bildirimleri bölümünde bildirimi. Bir yöntem içinde bir listelemeyi bildiremezsiniz. Uygun erişim düzeyini belirtmek için kullanın `Private`, `Protected`, `Friend`, veya `Public`.  

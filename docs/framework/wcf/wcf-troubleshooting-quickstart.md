@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6d631d51cc4f40b5be91b6579039a8b8dffa3dee
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780828"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613209"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF Sorun Giderme Hızlı Başlangıç
 Bu konuda, birkaç müşteriler içine geliştirme WCF istemcileri ve Hizmetleri çalıştırdığınız bilinen sorunlar listelenmektedir. Çalıştırmakta olduğunuz sorun bu listede değilse, hizmetiniz için izleme yapılandırma öneririz. Bu işlem bir izleme dosyası oluşturur izleme dosyası Görüntüleyici ile birlikte görüntülemek ve bu özel durumları hakkında ayrıntılı bilgi almak hizmet içinde oluşabilecek. İzlemeyi yapılandırma hakkında daha fazla bilgi için bkz: [İzlemeyi Yapılandırma](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). İzleme dosyası Görüntüleyici hakkında daha fazla bilgi için bkz: [Hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  

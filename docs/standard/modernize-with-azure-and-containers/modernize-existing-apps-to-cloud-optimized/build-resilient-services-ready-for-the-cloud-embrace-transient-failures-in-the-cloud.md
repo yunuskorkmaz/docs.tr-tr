@@ -4,12 +4,12 @@ description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalar
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7af5e189ea930f9eac8aadab2ba1497f43f8d2b1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811843"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614521"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Bulut için hazır olan dayanıklı hizmetler derleme: Buluttaki geçici hataları benimseme
 

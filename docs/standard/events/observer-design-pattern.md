@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b022c70f7ed1707e27de7cac6ce08c53ee0878d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a89739b92d64e8774080d82f9e39af24c269223e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770389"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615169"
 ---
 # <a name="observer-design-pattern"></a>Gözlemci Tasarım Deseni
 Gözlemci tasarım deseni ile kaydolun ve bir sağlayıcıdan bildirimleri almak abone sağlar. Anında iletme tabanlı bildirim gerektiren her senaryo için uygundur. Deseni tanımlayan bir *sağlayıcısı* (olarak da bilinen bir *konu* veya *observable*) ve sıfır, bir veya daha fazla *gözlemciler*. Gözlemciler sağlayıcıya Kaydol ve önceden tanımlı bir koşul olduğunda, olayı veya durumu değişikliği, sağlayıcı tüm gözlemciler kendi yöntemlerini çağıran bir tarafından otomatik olarak bildirir. oluşur. Bu yöntem çağrısında sağlayıcı gözlemciler için geçerli durum bilgilerini de sağlayabilirsiniz. .NET Framework'teki genel uygulayarak gözlemci tasarım deseni uygulanan <xref:System.IObservable%601?displayProperty=nameWithType> ve <xref:System.IObserver%601?displayProperty=nameWithType> arabirimleri. Genel tür parametresi bildirimi bilgi sağlayan türünü temsil eder.  

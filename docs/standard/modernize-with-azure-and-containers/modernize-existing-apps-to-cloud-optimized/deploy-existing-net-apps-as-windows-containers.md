@@ -4,12 +4,12 @@ description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalar
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: ad0da9f7f0412c14b5362e3f631a7aa4af1f8260
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0bdab6d8aaaaa9bdddb9e9d55df8bb4850bc2b81
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61812066"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614471"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 

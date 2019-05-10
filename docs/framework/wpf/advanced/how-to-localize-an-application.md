@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: d08f991204b2d74899cbd1aee82c0cc23e175dd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8f1251195fdb21ac57030056abc7b5657edb49fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298324"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614617"
 ---
 # <a name="how-to-localize-an-application"></a>Nasıl yapılır: Bir Uygulamayı Yerelleştirme
 Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşturulacağını açıklar.  
@@ -91,21 +91,21 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
   
 4. LocBaml çalıştırdığınızda belirtebileceğiniz seçenekleri aşağıdaki gibidir:  
   
-    -   **Ayrıştırma** veya **-p:** BAML, kaynaklar ayrıştırır veya [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] .csv ya da .txt dosyası oluşturmak için dosyaları.  
+    - **Ayrıştırma** veya **-p:** BAML, kaynaklar ayrıştırır veya [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] .csv ya da .txt dosyası oluşturmak için dosyaları.  
   
-    -   **oluşturma** veya **-g:** Yerelleştirilmiş bir ikili dosya çevrilmiş bir dosyayı kullanarak oluşturur.  
+    - **oluşturma** veya **-g:** Yerelleştirilmiş bir ikili dosya çevrilmiş bir dosyayı kullanarak oluşturur.  
   
-    -   **Çıkış** veya **-o** {*filedirectory*] **:** Çıkış dosyası adı.  
+    - **Çıkış** veya **-o** {*filedirectory*] **:** Çıkış dosyası adı.  
   
-    -   **kültür** veya **- cul** {*kültür*] **:** Çıkış bütünleştirilmiş kodları yerel ayarı.  
+    - **kültür** veya **- cul** {*kültür*] **:** Çıkış bütünleştirilmiş kodları yerel ayarı.  
   
-    -   **Çeviri** veya **- trans** {*translation.csv*] **:** Çevrilmiş veya yerelleştirilmiş dosyası.  
+    - **Çeviri** veya **- trans** {*translation.csv*] **:** Çevrilmiş veya yerelleştirilmiş dosyası.  
   
-    -   **asmpath** veya **- asmpath:** {*filedirectory*] **:** Varsa, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kodu özel denetimler içeren, siz sağlamalısınız **asmpath** özel denetim derleme.  
+    - **asmpath** veya **- asmpath:** {*filedirectory*] **:** Varsa, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kodu özel denetimler içeren, siz sağlamalısınız **asmpath** özel denetim derleme.  
   
-    -   **nologo:** Hiçbir logo veya telif hakkı bilgilerini görüntüler.  
+    - **nologo:** Hiçbir logo veya telif hakkı bilgilerini görüntüler.  
   
-    -   **ayrıntılı:** Ayrıntılı modu bilgileri görüntüler.  
+    - **ayrıntılı:** Ayrıntılı modu bilgileri görüntüler.  
   
     > [!NOTE]
     >  Seçeneklerin bir listesi Aracı çalıştırırken gerekiyorsa, yazın **LocBaml.exe'yi** ve ENTER tuşuna basın.  
@@ -133,19 +133,19 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
 
    Yedi alanlar şunlardır:  
   
-   1.  **BAML adı**. Kaynak dili uydu derlemeye göre BAML kaynağının adı.  
+   1. **BAML adı**. Kaynak dili uydu derlemeye göre BAML kaynağının adı.  
   
-   2.  **Kaynak anahtarı**. Yerelleştirilmiş kaynak tanımlayıcısı.  
+   2. **Kaynak anahtarı**. Yerelleştirilmiş kaynak tanımlayıcısı.  
   
-   3.  **Kategori**. Değer türü. Bkz: [Yerelleştirme öznitelikleri ve Yorumlar](localization-attributes-and-comments.md).  
+   3. **Kategori**. Değer türü. Bkz: [Yerelleştirme öznitelikleri ve Yorumlar](localization-attributes-and-comments.md).  
   
-   4.  **Okunabilirlik**. Olup değeri bir yerelleştiriciye tarafından okunabilir. Bkz: [Yerelleştirme öznitelikleri ve Yorumlar](localization-attributes-and-comments.md).  
+   4. **Okunabilirlik**. Olup değeri bir yerelleştiriciye tarafından okunabilir. Bkz: [Yerelleştirme öznitelikleri ve Yorumlar](localization-attributes-and-comments.md).  
   
-   5.  **Modifiability'e göre**. Olup değeri bir yerelleştiriciye tarafından değiştirilebilir. Bkz: [Yerelleştirme öznitelikleri ve Yorumlar](localization-attributes-and-comments.md).  
+   5. **Modifiability'e göre**. Olup değeri bir yerelleştiriciye tarafından değiştirilebilir. Bkz: [Yerelleştirme öznitelikleri ve Yorumlar](localization-attributes-and-comments.md).  
   
-   6.  **Açıklamalar**. Ek açıklama değeri nasıl yerelleştirilmiş belirlemeye yardımcı olması için değeri. Bkz: [Yerelleştirme öznitelikleri ve Yorumlar](localization-attributes-and-comments.md).  
+   6. **Açıklamalar**. Ek açıklama değeri nasıl yerelleştirilmiş belirlemeye yardımcı olması için değeri. Bkz: [Yerelleştirme öznitelikleri ve Yorumlar](localization-attributes-and-comments.md).  
   
-   7.  **Değer**. İstenen kültüre Çevrilecek metin değeri.  
+   7. **Değer**. İstenen kültüre Çevrilecek metin değeri.  
   
    Aşağıdaki tabloda, bu alanlar .csv dosyasını ayrılmış değerleri nasıl eşleştiği gösterilmektedir:  
   
@@ -188,9 +188,9 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
   
 7. Yeni bir uydu derleme test etmek için uygulamanızı altında çalıştırılacağı kültürü değiştirmeniz gerekir. Bunu iki yoldan biriyle yapabilirsiniz:  
   
-    -   İşletim sisteminizin bölgesel ayarları değiştirin (**Başlat** &#124; **Denetim Masası** &#124; **bölge ve Dil Seçenekleri**).  
+    - İşletim sisteminizin bölgesel ayarları değiştirin (**Başlat** &#124; **Denetim Masası** &#124; **bölge ve Dil Seçenekleri**).  
   
-    -   Uygulamanızda, App.xaml.cs için aşağıdaki kodu ekleyin:  
+    - Uygulamanızda, App.xaml.cs için aşağıdaki kodu ekleyin:  
   
    [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
    [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
@@ -199,11 +199,11 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
 <a name="Some_Tips_for_Using_LocBaml"></a>   
 ## <a name="some-tips-for-using-locbaml"></a>LocBaml kullanmaya yönelik bazı ipuçları  
   
--   Özel denetimler tanımlayabilirsiniz tüm bağımlı derlemeler LocBaml yerel dizine kopyalanır veya GAC içine yüklenmelidir. Okuduğunda API yerelleştirme bağımlı derleme erişimi olması gerektiğinden bu gereklidir [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)].  
+- Özel denetimler tanımlayabilirsiniz tüm bağımlı derlemeler LocBaml yerel dizine kopyalanır veya GAC içine yüklenmelidir. Okuduğunda API yerelleştirme bağımlı derleme erişimi olması gerektiğinden bu gereklidir [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)].  
   
--   Ana derleme imzalanmışsa, aynı zamanda oluşturulan kaynak DLL yüklenecek sırayla imzalanması gerekir.  
+- Ana derleme imzalanmışsa, aynı zamanda oluşturulan kaynak DLL yüklenecek sırayla imzalanması gerekir.  
   
--   Yerelleştirilmiş kaynak sürümü DLL ana derleme ile eşitlenmesi gerekir.  
+- Yerelleştirilmiş kaynak sürümü DLL ana derleme ile eşitlenmesi gerekir.  
   
 <a name="Whats_Next"></a>   
 ## <a name="whats-next"></a>Yenilikler  

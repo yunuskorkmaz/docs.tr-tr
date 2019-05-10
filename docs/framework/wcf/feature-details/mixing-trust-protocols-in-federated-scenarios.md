@@ -2,12 +2,12 @@
 title: Federe Senaryolarda Güven Protokollerini Karıştırma
 ms.date: 03/30/2017
 ms.assetid: d7b5fee9-2246-4b09-b8d7-9e63cb817279
-ms.openlocfilehash: ce5c3a1875d84d98068dcc78d8346a88bc0b28f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 18f486b9de83db48e186bb3856aff6cc6ccb56b1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046698"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606504"
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>Federe Senaryolarda Güven Protokollerini Karıştırma
 Aynı güven sürümüne sahip değilseniz, Federasyon istemcileri bir güvenlik belirteci hizmeti (STS) bir hizmet ile iletişim kurmak senaryolar olabilir. WSDL içerebilir hizmeti bir `RequestSecurityTokenTemplate` STS farklı sürümlerine, WS-Trust öğelerle onaylama. Bu gibi durumlarda, alınan WS-Trust öğeleri bir Windows Communication Foundation (WCF) istemci dönüştürür `RequestSecurityTokenTemplate` eşleştirilecek sürüm STS güven. WCF eşleşmeyen güven sürümleri yalnızca standart bağlamaları için işler. WCF tarafından tanınan tüm standart algoritma parametreleriyle standart bağlama'nın bir parçasıdır. Bu konuda, STS ile hizmet arasındaki farklı güven ayarlarla WCF davranışı açıklanmaktadır.  

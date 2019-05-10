@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 526805dff9fc59ed317a38b2512c8a97a711227a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 69ee0743f7b0c64efbfd8a75e8dc463d79323d4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026672"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615307"
 ---
 # <a name="xslt-security-considerations"></a>XSLT Güvenlik Konuları
 XSLT dili, güç ve esneklik büyük ölçüde size özellikleri zengin sahiptir. Bu, dış kaynaklar tarafından kullanışlı olsa da yararlanılabilir birçok özellik içerir. XSLT güvenli bir şekilde kullanmak için XSLT kullanma ortaya çıkan güvenlik sorunlarını ve bu riskleri azaltmak için uygulayabileceğiniz temel stratejiler türlerini anlamanız gerekir.  

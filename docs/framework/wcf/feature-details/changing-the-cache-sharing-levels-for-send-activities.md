@@ -2,12 +2,12 @@
 title: Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: e439edc14183c2ba2bf9af67e177dddb52c43708
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1561d053dc04bbea18f4d6cb43399c2c625d5da1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784299"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614856"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme
 <xref:System.ServiceModel.Activities.SendMessageChannelCache> Uzantısı düzeyleri, kanal üreteci önbellek ayarlarını paylaşımı önbellek özelleştirmenize olanak sağlar ve ileti göndermek için hizmet uç noktaları kullanarak iş akışları için kanal ayarlarıyla önbelleğe <xref:System.ServiceModel.Activities.Send> Mesajlaşma etkinlikleri. Bu iş akışları genellikle istemci iş akışlarıdır ancak içinde barındırılan iş akışı Hizmetleri ayrıca olabilir bir <xref:System.ServiceModel.WorkflowServiceHost>. Kanal üreteci önbellek içeren önbelleğe alınmış <xref:System.ServiceModel.ChannelFactory%601> nesneleri. Kanal önbellek önbelleğe alınmış kanalları içerir.  

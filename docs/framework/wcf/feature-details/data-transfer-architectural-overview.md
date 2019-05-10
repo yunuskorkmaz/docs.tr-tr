@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 401803229c54a2b38af08c0418b9efd4c64d9d60
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856613"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627039"
 ---
 # <a name="data-transfer-architectural-overview"></a>Veri Aktarımı Mimarisi Genel Bakış
 Windows Communication Foundation (WCF), bir Mesajlaşma altyapısı düşünülebilir. Bu iletileri almak, bunları işlemek ve bunları başka bir eylem için kullanıcı kodu için gönderme veya kullanıcı kodu tarafından verilen veri iletileri oluşturmak ve bunları bir hedefe sunun. İleri düzey geliştiriciler için tasarlanmıştır, bu konu, iletileri ve içerdiği veri işleme mimarisini açıklar. Veri göndermek ve almak nasıl daha basit, görev odaklı görünümü için bkz: [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
