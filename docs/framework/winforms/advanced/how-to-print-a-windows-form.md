@@ -10,35 +10,35 @@ helpviewer_keywords:
 - printing a form
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
-ms.openlocfilehash: 85fb12028687578b76e0f16061deb9b9a4de70e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 68dbad807e79f16bdc3cbdd3f55c62c3d6c854e9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003983"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621300"
 ---
-# <a name="how-to-print-a-windows-form"></a><span data-ttu-id="f470c-102">Nasıl yapılır: Bir Windows Formunu Yazdırma</span><span class="sxs-lookup"><span data-stu-id="f470c-102">How to: Print a Windows Form</span></span>
-<span data-ttu-id="f470c-103">Geliştirme sürecinin bir parçası olarak, genellikle Windows formunuza bir kopyasını yazdırmak isteyeceksiniz.</span><span class="sxs-lookup"><span data-stu-id="f470c-103">As part of the development process, you typically will want to print a copy of your Windows Form.</span></span> <span data-ttu-id="f470c-104">Aşağıdaki kod örneği kullanarak geçerli forma bir kopyasını yazdırmak gösterilmektedir <xref:System.Drawing.Graphics.CopyFromScreen%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="f470c-104">The following code example shows how to print a copy of the current form by using the <xref:System.Drawing.Graphics.CopyFromScreen%2A> method.</span></span>  
+# <a name="how-to-print-a-windows-form"></a><span data-ttu-id="bb38f-102">Nasıl yapılır: Bir Windows Formunu Yazdırma</span><span class="sxs-lookup"><span data-stu-id="bb38f-102">How to: Print a Windows Form</span></span>
+<span data-ttu-id="bb38f-103">Geliştirme sürecinin bir parçası olarak, genellikle Windows formunuza bir kopyasını yazdırmak isteyeceksiniz.</span><span class="sxs-lookup"><span data-stu-id="bb38f-103">As part of the development process, you typically will want to print a copy of your Windows Form.</span></span> <span data-ttu-id="bb38f-104">Aşağıdaki kod örneği kullanarak geçerli forma bir kopyasını yazdırmak gösterilmektedir <xref:System.Drawing.Graphics.CopyFromScreen%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="bb38f-104">The following code example shows how to print a copy of the current form by using the <xref:System.Drawing.Graphics.CopyFromScreen%2A> method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f470c-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="f470c-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="bb38f-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="bb38f-105">Example</span></span>  
  [!code-csharp[System.Drawing.Graphics.CopyFromScreen#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.Graphics.CopyFromScreen#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f470c-106">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="f470c-106">Compiling the Code</span></span>  
- <span data-ttu-id="f470c-107">İçeren tam bir kod örneğini budur bir `Main` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="f470c-107">This is a complete code example that contains a `Main` method.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="bb38f-106">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="bb38f-106">Compiling the Code</span></span>  
+ <span data-ttu-id="bb38f-107">İçeren tam bir kod örneğini budur bir `Main` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="bb38f-107">This is a complete code example that contains a `Main` method.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="f470c-108">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="f470c-108">Robust Programming</span></span>  
- <span data-ttu-id="f470c-109">Aşağıdaki koşullar özel bir duruma neden olabilir:</span><span class="sxs-lookup"><span data-stu-id="f470c-109">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="bb38f-108">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="bb38f-108">Robust Programming</span></span>  
+ <span data-ttu-id="bb38f-109">Aşağıdaki koşullar özel bir duruma neden olabilir:</span><span class="sxs-lookup"><span data-stu-id="bb38f-109">The following conditions may cause an exception:</span></span>  
   
-- <span data-ttu-id="f470c-110">Yazıcı erişmek için izniniz yok.</span><span class="sxs-lookup"><span data-stu-id="f470c-110">You do not have permission to access the printer.</span></span>  
+- <span data-ttu-id="bb38f-110">Yazıcı erişmek için izniniz yok.</span><span class="sxs-lookup"><span data-stu-id="bb38f-110">You do not have permission to access the printer.</span></span>  
   
-- <span data-ttu-id="f470c-111">Yüklü yazıcı yok yoktur.</span><span class="sxs-lookup"><span data-stu-id="f470c-111">There is no printer installed.</span></span>  
+- <span data-ttu-id="bb38f-111">Yüklü yazıcı yok yoktur.</span><span class="sxs-lookup"><span data-stu-id="bb38f-111">There is no printer installed.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="f470c-112">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="f470c-112">.NET Framework Security</span></span>  
- <span data-ttu-id="f470c-113">Bu kod örneği çalıştırmak için bilgisayarınızda kullandığınız yazıcıya erişim izni olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="f470c-113">In order to run this code example, you must have permission to access the printer you use with your computer.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="bb38f-112">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="bb38f-112">.NET Framework Security</span></span>  
+ <span data-ttu-id="bb38f-113">Bu kod örneği çalıştırmak için bilgisayarınızda kullandığınız yazıcıya erişim izni olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="bb38f-113">In order to run this code example, you must have permission to access the printer you use with your computer.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f470c-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f470c-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bb38f-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bb38f-114">See also</span></span>
 
 - <xref:System.Drawing.Printing.PrintDocument>
-- [<span data-ttu-id="f470c-115">Nasıl yapılır: GDI + ile görüntü işleme</span><span class="sxs-lookup"><span data-stu-id="f470c-115">How to: Render Images with GDI+</span></span>](how-to-render-images-with-gdi.md)
-- [<span data-ttu-id="f470c-116">Nasıl yapılır: Windows Forms'ta grafik yazdırma</span><span class="sxs-lookup"><span data-stu-id="f470c-116">How to: Print Graphics in Windows Forms</span></span>](how-to-print-graphics-in-windows-forms.md)
+- [<span data-ttu-id="bb38f-115">Nasıl yapılır: GDI + ile görüntü işleme</span><span class="sxs-lookup"><span data-stu-id="bb38f-115">How to: Render Images with GDI+</span></span>](how-to-render-images-with-gdi.md)
+- [<span data-ttu-id="bb38f-116">Nasıl yapılır: Windows Forms'ta grafik yazdırma</span><span class="sxs-lookup"><span data-stu-id="bb38f-116">How to: Print Graphics in Windows Forms</span></span>](how-to-print-graphics-in-windows-forms.md)

@@ -1,0 +1,23 @@
+- name: Apache Spark için .NET Kılavuzu
+  href: index.yml
+- name: Genel Bakış
+  expanded: true
+  items:
+    - name: Apache Spark için .NET nedir?
+      href: what-is-apache-spark-dotnet.md
+- name: Öğreticiler
+  items:
+    - name: Kullanmaya başlayın
+      href: tutorials/get-started.md
+- name: Başvuru
+  items:
+    - name: API Başvurusu
+      href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'
+- name: Kaynaklar
+  items:
+    - name: Kaynaklara genel bakış
+      href: resources/index.md
+    - name: GitHub
+      href: 'https://github.com/dotnet/spark'
+    - name: Stack Overflow
+      href: 'https://stackoverflow.com/questions/tagged/spark-dotnet'
