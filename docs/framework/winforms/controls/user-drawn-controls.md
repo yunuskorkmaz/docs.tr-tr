@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bd7ce150e4dc0ecfe53f92ec8b557459f1e14e3a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947959"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651562"
 ---
 # <a name="user-drawn-controls"></a>Kullanıcı Çizimli Denetimler
 .NET Framework kolayca kendi denetimleri geliştirme olanağı sağlar. Standart denetimler kodla birlikte ilişkili bir dizi olan bir kullanıcı denetimi oluşturabilir veya sıfırdan kendi denetiminizi yukarı tasarlayabilirsiniz. Devralma, varolan bir denetimden devralan bir denetim oluşturma ve doğal işlevselliği eklemek için bile kullanabilirsiniz. Hangi yaklaşımı kullanın, .NET Framework özel bir grafik arabirim için oluşturduğunuz herhangi bir denetimi çizmek için işlevsellik sağlar.  

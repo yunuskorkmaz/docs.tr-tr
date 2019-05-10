@@ -7,12 +7,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], types
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
-ms.openlocfilehash: 5dc734997917af7ec4a20a6c12ae04825507c7ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9416fc3efabc3fef6b678a3aa3ddef048eed5e2f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011547"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648232"
 ---
 # <a name="control-type-recommendations"></a>Denetim Türü Önerileri
 Geliştirin ve yeni denetimler uygulamak için güç .NET Framework sağlar. Alışık olduğunuz kullanıcı denetimine ek olarak, artık kendi boyama gerçekleştirmek ve devralma yoluyla mevcut denetimleri genişletmek bile mümkün olmayan özel denetimler yazabiliyor de bulabilirsiniz. Denetimi oluşturmak için hangi tür zorlanabilirsiniz. Bu bölümde içinden denetimlerin çeşitli türler arasında devralma işlemi yapabileceğini ve projeniz için seçmek için türü ile ilgili dikkat edilmesi gerekenler verir farklar vurgulanmaktadır.  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: 3ad34864e162f8f62fed3754bdbcd39c75f7b3f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9fa484f0a74d900bd6f0365f2ce71fd32e1422db
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672828"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623186"
 ---
 # <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te birden çok biçimli metin dosyalarını okuma
 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> Nesneyi kolayca ve verimli bir şekilde günlükleri gibi yapılandırılmış metin dosyalarını ayrıştırmak için bir yol sağlar. Birden çok biçimli bir dosya kullanarak işleyebilir `PeekChars` dosyasını ayrıştırma gibi her satırın biçimini belirlemek için yöntemi.  

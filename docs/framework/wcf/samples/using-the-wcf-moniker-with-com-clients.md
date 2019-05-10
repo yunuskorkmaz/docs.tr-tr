@@ -2,12 +2,12 @@
 title: WCF Bilinen Adını COM İstemcileri ile Kullanma
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 14907dd3df66478e8f84b7735a84dd500855448b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 827ea3295bc052f7272eeff241ece10caf5a9704
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051617"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624248"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>WCF Bilinen Adını COM İstemcileri ile Kullanma
 Bu örnek, Windows Communication Foundation (WCF) hizmet bilinen adını COM tabanlı geliştirme ortamlarına uygulamaları (Office VBA) için Microsoft Office Visual Basic veya Visual Basic 6.0 gibi Web Hizmetleri Tümleştirme için nasıl kullanılacağını gösterir. Bu örnek bir Windows komut dosyası ana bilgisayarı istemci (.vbs) destekleyen bir istemci kitaplığı (.dll) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmet hesap makinesi hizmetidir ve COM istemcisi matematik işlemlerini çağıran — ekleme, çıkarma, çarpma ve bölme — hizmet. İleti kutusu windows istemci etkinliği görülebilir.  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
-ms.openlocfilehash: e0852536a86dd415334f95a47ceb800ed2c591ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a719b3f1cbd972e79d057730ac1d89e5d91d97e5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924026"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664317"
 ---
 # <a name="type-of-parameter-parametername-is-not-cls-compliant"></a>Parametrenin türü '\<parametername >' CLS uyumlu değil
 Bir yordam olarak işaretlenmiş `<CLSCompliant(True)>` ancak bir parametre olarak işaretlenmiş bir tür ile bildirir `<CLSCompliant(False)>`işaret konulmadıysa veya uyumlu olmayan bir tür olduğu için uygun değil.  

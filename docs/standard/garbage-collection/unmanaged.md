@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e32d2d4424d05b95af1eda400974da3293b8499
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ae5d27be18a57bfafe5bb9fcf9424d708d643e3b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969110"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622866"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Yönetilmeyen Kaynakları Temizleme
 Uygulamanızın oluşturduğu nesnelerin çoğu için üzerinde güvenebilirsiniz. Bellek yönetimi işlemede NET'in çöp toplayıcı. Ancak, yönetilmeyen kaynaklar içeren nesneler oluşturduğunuzda, uygulamanızda kullanmayı bitirdiğinizde, bu kaynakları açıkça serbest bırakmanız gerekir. En sık karşılaşılan yönetilmeyen kaynak türleri, dosyalar, pencereler, ağ bağlantıları veya veritabanı bağlantıları gibi işletim sistemi kaynaklarını saran nesnelerdir. Çöp toplayıcı yönetilmeyen bir kaynağı kapsülleyen bir nesnenin kullanım ömrünü izleyebilir olsa da, yönetilmeyen kaynağı nasıl serbest bırakacağını ve temizleyeceğini bilmez.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: bf2a7188456097ac227039e4d902a14eb182664c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 367527fd638f6855077caf8ff5911edb333dfcbf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758281"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648775"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Nasıl yapılır: Daraltma ve gizleme (Visual Basic) kod bölümlerini
 `#Region` Yönergesi daraltma ve gizleme Visual Basic dosyalarında kod bölümlerini olanak sağlar. `#Region` Yönergesi Visual Studio Kod Düzenleyicisi'ni kullanırken genişletebileceğiniz kodu veya daralt bloğunu belirtmenize olanak sağlar. Kod seçmeli olarak gizleyebilme yeteneği dosyalarınızı daha yönetilebilir ve okunması kolay hale getirir. Daha fazla bilgi için [anahat](/visualstudio/ide/outlining).  

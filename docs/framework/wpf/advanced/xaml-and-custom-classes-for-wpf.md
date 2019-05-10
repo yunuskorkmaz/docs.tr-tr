@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: e71946ec06eb1b4c75f30084dfdb863d8e3b093e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2f59e7479c856de9b00592d570ca89d2539b0ec4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759940"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662228"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF için XAML ve Özel Sınıflar
 XAML içinde uygulandığı şekilde [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] çerçevelerini destekleyen özel bir sınıf veya yapı, tüm tanımlama yeteneği [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] dil ve ardından erişim kullanarak XAML biçimlendirmesi. Bir karışımını kullanabilirsiniz [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-tanımlanan türleri ve aynı biçimlendirme dosyasında özel türlerinizi genellikle XAML ad alanı öneki özel türleri eşleyerek. Bu konuda, özel bir sınıf bir XAML öğesi olarak kullanılabilir olması için karşılaması gereken gereksinimleri anlatılmaktadır.  

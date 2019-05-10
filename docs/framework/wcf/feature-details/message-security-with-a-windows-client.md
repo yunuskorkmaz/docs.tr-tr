@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: 794a3d8e118cadd2a2752e1bbf85ef930deb2f27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 36193090349f5b8ddb07ee7c3c6c663621cc6d06
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922804"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637846"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows İstemcisi ile İleti Güvenliği
 Bu senaryo, bir Windows Communication Foundation (WCF) istemci ve sunucu güvenli ileti güvenlik modunu gösterir. İstemci ve hizmet Windows kimlik bilgilerini kullanarak kimlik doğrulaması yapılır.  
@@ -19,7 +19,7 @@ Bu senaryo, bir Windows Communication Foundation (WCF) istemci ve sunucu güvenl
   
 |Özelliği|Açıklama|  
 |--------------------|-----------------|  
-|Güvenlik modu|İleti|  
+|Güvenlik modu|`Message`|  
 |Birlikte Çalışabilirlik|Yalnızca WCF|  
 |Kimlik doğrulaması (sunucu)|İstemci ve sunucu, karşılıklı kimlik doğrulaması|  
 |Kimlik doğrulaması (istemci)|İstemci ve sunucu, karşılıklı kimlik doğrulaması|  

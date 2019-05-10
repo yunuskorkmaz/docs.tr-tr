@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 553868ae82501e479acadd04b3d5e4447bcea36e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 430041f5f4315c5ad20cd2495f01a6f776f239c7
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867151"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469699"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Nesne Ömrü: Nesneler nasıl oluşturulur ve yok (Visual Basic)
 Bir sınıf, bir nesne örneği kullanılarak oluşturulan `New` anahtar sözcüğü. Bunlar kullanılmadan önce başlatma görevleri genellikle yeni nesneler üzerinde gerçekleştirilmelidir. Genel başlangıç görevleri, veritabanlarına bağlanma ve kayıt defteri anahtarlarının okumanızı dosyalarını açma içerir. Visual Basic denetimleri adı verilen yordamları kullanarak yeni nesnelerin başlatılmasını *oluşturucular* (başlatma denetime izin veren özel yöntemleri).  
@@ -38,7 +38,7 @@ Bir sınıf, bir nesne örneği kullanılarak oluşturulan `New` anahtar sözcü
  Oluşturucular ve Yıkıcılar oluşturulmasını ve nesnelerin yok edilmesi denetler. `Sub New` Ve `Sub Finalize` Visual Basic'de yordamlar başlatmak ve nesneleri yok; bunlar değiştirir `Class_Initialize` ve `Class_Terminate` Visual Basic 6.0 ve önceki sürümlerinde kullanılan yöntemleri.  
   
 ### <a name="sub-new"></a>Yeni alt  
- `Sub New` Sonra yalnızca bir sınıf oluşturulduğunda Oluşturucu çalıştırabilirsiniz. Dışında herhangi bir yere açıkça çağrılamaz ilk satırında başka bir oluşturucunun aynı sınıftaki veya türetilmiş sınıftan kod. Ayrıca, kodda `Sub New` yöntemi bir sınıftaki herhangi bir kod önce her zaman çalışır. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] ve sonraki sürümler örtülü olarak oluşturma bir `Sub New` oluşturucusu olmayan açıkça tanımlarsanız çalışma zamanında bir `Sub New` yordamı için bir sınıf.  
+ `Sub New` Sonra yalnızca bir sınıf oluşturulduğunda Oluşturucu çalıştırabilirsiniz. Dışında herhangi bir yere açıkça çağrılamaz ilk satırında başka bir oluşturucunun aynı sınıftaki veya türetilmiş sınıftan kod. Ayrıca, kodda `Sub New` yöntemi bir sınıftaki herhangi bir kod önce her zaman çalışır. Visual Basic ve sonraki sürümleri, örtülü olarak oluşturma bir `Sub New` oluşturucusu olmayan açıkça tanımlarsanız çalışma zamanında bir `Sub New` yordamı için bir sınıf.  
   
  Bir sınıf için oluşturucu oluşturmak için adlandırılmış bir yordam oluşturma `Sub New` sınıf tanımında herhangi bir yerde. Parametreli bir kurucu oluşturmak için bağımsız değişken adları ve veri türlerini belirtin `Sub New` gibi aşağıdaki kodda gösterildiği gibi diğer her türlü yordam bağımsız değişkenleri belirtmeniz gerekir:  
   
@@ -60,7 +60,7 @@ Bir sınıf, bir nesne örneği kullanılarak oluşturulan `New` anahtar sözcü
   
  `Finalize` Yok Edicisi olan yalnızca ait sınıftaki veya türetilmiş sınıflar adlandırılan Korumalı bir yöntem. Sistem çağrıları `Finalize` otomatik olarak ne zaman bir nesnesi yok edildiğinde, böylece değil açıkça çağırmalıdır `Finalize` öğesinden türetilmiş bir sınıfın dışında `Finalize` uygulaması.  
   
- Farklı `Class_Terminate`, bir nesne için hiçbir şey ayarlanır hemen sonra yürütür, genellikle nesnenin kapsamı ne zaman kaybeder ve Visual Basic çağırdığında arasında bir gecikme olur `Finalize` yıkıcı. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] ve sonraki sürümler için ikinci bir yok edici, tür izin <xref:System.IDisposable.Dispose%2A>, hangi açıkça çağrılabilir kaynakları hemen serbest bırakmak istediğiniz zaman.  
+ Farklı `Class_Terminate`, bir nesne için hiçbir şey ayarlanır hemen sonra yürütür, genellikle nesnenin kapsamı ne zaman kaybeder ve Visual Basic çağırdığında arasında bir gecikme olur `Finalize` yıkıcı. Visual Basic ve sonraki sürümler izin yok Edicisi, ikinci bir tür için <xref:System.IDisposable.Dispose%2A>, hangi açıkça çağrılabilir kaynakları hemen serbest bırakmak istediğiniz zaman.  
   
 > [!NOTE]
 >  A `Finalize` yok Edicisi, uygulama tarafından işlenemezler ve uygulamanın sonlandırılmasına neden olabilir çünkü özel durum, oluşturmamalıdır.  

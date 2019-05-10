@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 12296fbd503a7e9f1866f407964a5e223d1afadd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857798"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650326"
 ---
 # <a name="bindings-and-security"></a>Bağlamalar ve Güvenlik
 Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağlamalar program WCF uygulamaları için hızlı bir yol sunar. Bunun tek istisnası, etkin bir varsayılan güvenlik düzeni tüm bağlamaları vardır. Bu konuda güvenlik ihtiyaçları için doğru bağlama seçmenize yardımcı olur.  
@@ -183,7 +183,7 @@ Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağla
 |Ayar|Özellikler|  
 |-------------|--------------|  
 |Taşıma|Sunucu kimlik doğrulaması<br /><br /> İstemci kimlik doğrulaması<br /><br /> Noktadan noktaya güvenlik<br /><br /> Birlikte Çalışabilirlik<br /><br /> Donanım hızlandırma<br /><br /> Yüksek aktarım hızı<br /><br /> Güvenli güvenlik duvarı<br /><br /> Yüksek gecikmeli uygulamalar<br /><br /> Birden çok atlama arasında yeniden şifreleme|  
-|İleti|Sunucu kimlik doğrulaması<br /><br /> İstemci kimlik doğrulaması<br /><br /> Baştan sona güvenlik<br /><br /> Birlikte Çalışabilirlik<br /><br /> Zengin talep<br /><br /> Federasyon<br /><br /> Çok faktörlü kimlik doğrulaması<br /><br /> Özel belirteçler<br /><br /> Notary/zaman damgası hizmeti<br /><br /> Yüksek gecikmeli uygulamalar<br /><br /> İleti imzası kalıcılığı|  
+|`Message`|Sunucu kimlik doğrulaması<br /><br /> İstemci kimlik doğrulaması<br /><br /> Baştan sona güvenlik<br /><br /> Birlikte Çalışabilirlik<br /><br /> Zengin talep<br /><br /> Federasyon<br /><br /> Çok faktörlü kimlik doğrulaması<br /><br /> Özel belirteçler<br /><br /> Notary/zaman damgası hizmeti<br /><br /> Yüksek gecikmeli uygulamalar<br /><br /> İleti imzası kalıcılığı|  
 |TransportWithMessageCredential|Sunucu kimlik doğrulaması<br /><br /> İstemci kimlik doğrulaması<br /><br /> Noktadan noktaya güvenlik<br /><br /> Birlikte Çalışabilirlik<br /><br /> Donanım hızlandırma<br /><br /> Yüksek aktarım hızı<br /><br /> Zengin istemci talep<br /><br /> Federasyon<br /><br /> Çok faktörlü kimlik doğrulaması<br /><br /> Özel belirteçler<br /><br /> Güvenli güvenlik duvarı<br /><br /> Yüksek gecikmeli uygulamalar<br /><br /> Birden çok atlama arasında yeniden şifreleme|  
   
  Aşağıdaki tabloda, çeşitli modu ayarları destekleyen bağlamaları listelenmektedir. Tablo Hizmeti uç noktanızı oluşturmak için kullanılacak bir bağlamayı seçin.  

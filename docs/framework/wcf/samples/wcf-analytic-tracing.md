@@ -2,12 +2,12 @@
 title: WCF Analiz İzleme
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 95a4335ef41240e8cc85c06b7997c12d98800b1d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723361"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624242"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF Analiz İzleme
 Bu örnek ETW Windows Communication Foundation (WCF) Yazar analitik izlemeleri akışının içine kendi izleme olaylarını ekleme gösterir [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Analitik izlemeleri, yüksek performans cezası ödeme yapmadan hizmetlerinizi görünürlük elde etmek kolay hale getirmek için yöneliktir. Bu örnek nasıl kullanılacağını gösterir <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API WCF hizmetleri ile tümleştirme yazma olayları.  

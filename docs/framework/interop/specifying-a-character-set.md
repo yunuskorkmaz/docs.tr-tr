@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2950078e85ec2a29382192d90244df5014164420
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: e0f732eb7b6ee77cb6b16130fc41655922127c3b
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063106"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469684"
 ---
 # <a name="specifying-a-character-set"></a>Karakter Kümesi Belirtme
 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Alan denetimleri dize sıralama ve platform çağırma DLL'de bulur işlev adlarını nasıl belirler. Bu konuda, hem davranışları açıklanmaktadır.  
@@ -43,7 +43,7 @@ ms.locfileid: "65063106"
   
 - Ad eşleştirme  
   
-     Zaman <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> alandır `true`, varsayılan olarak olduğu gibi [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], platform çağırma yalnızca belirttiğiniz ad arar. Örneğin, belirtirseniz **MessageBox**, platform çağırma arar **MessageBox** ve tam yazım bulamadığında başarısız olur.  
+     Zaman <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> alandır `true`, varsayılan olarak Visual Basic'te olduğu gibi platform çağırma yalnızca belirttiğiniz ad arar. Örneğin, belirtirseniz **MessageBox**, platform çağırma arar **MessageBox** ve tam yazım bulamadığında başarısız olur.  
   
      Zaman `ExactSpelling` alandır `false`, C++'da varsayılan olarak ve C#, platform çağırma unmangled diğer arar ilk (**MessageBox**), ardından karıştırılmış adı (**MessageBoxA**) unmangled diğer bulunamaması durumunda. ANSI adı eşleştirme davranışı Unicode adıyla eşleşen davranış farklı olduğuna dikkat edin.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65063106"
   
 - Ad eşleştirme  
   
-     Zaman `ExactSpelling` alandır `true`, varsayılan olarak olduğu gibi [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], platform çağırma yalnızca belirttiğiniz ad arar. Örneğin, belirtirseniz **MessageBox**, platform çağırma arar **MessageBox** ve tam yazım bulamazsanız başarısız olur.  
+     Zaman `ExactSpelling` alandır `true`, varsayılan olarak Visual Basic'te olduğu gibi platform çağırma yalnızca belirttiğiniz ad arar. Örneğin, belirtirseniz **MessageBox**, platform çağırma arar **MessageBox** ve tam yazım bulamazsanız başarısız olur.  
   
      Zaman `ExactSpelling` alandır `false`, C++'da varsayılan olarak ve C#, platform çağırma karıştırılmış ad arar ilk (**MessageBoxW**), ardından unmangled diğer ad (**MessageBox**) karıştırılmış adı bulunmazsa. Unicode adı eşleştirme davranışı ANSI adıyla eşleşen davranış farklı olduğuna dikkat edin.  
   

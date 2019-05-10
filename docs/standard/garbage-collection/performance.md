@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: da29bd6bc53b59f1f20e2272a8293b49e230bff0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026191"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622882"
 ---
 # <a name="garbage-collection-and-performance"></a>Çöp Toplama ve Performans
 <a name="top"></a> Bu konu, atık toplama ve bellek kullanımı ile ilgili sorunları açıklar. Yönetilen yığınla ilgili sorunları ele alır ve çöp toplamanın uygulamalarınız üzerindeki etkisinin nasıl en aza indirgenebileceğini açıklar. Her başlıkta, problemleri araştırmak için kullanabileceğiniz prosedürlerin bağlantıları yer alır.  

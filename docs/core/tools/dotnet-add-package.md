@@ -1,17 +1,21 @@
 ---
 title: DotNet paketi komut ekleme
 description: "'Dotnet, paket Ekle' komutunu bir projeye bir NuGet paketi başvuru eklemek için uygun bir seçenek sağlar."
-ms.date: 12/04/2018
-ms.openlocfilehash: 159b208feafb82e267629ea47dcef02d6b575055
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.date: 04/24/2019
+ms.openlocfilehash: 79059e062368fc9c4b6b8cb31740fdf13ea2b9ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665422"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751403"
 ---
 # <a name="dotnet-add-package"></a>DotNet paketi ekleme
 
+**Bu makale için geçerlidir: ✓** .NET Core SDK'sı 1.x ve sonraki sürümler
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Ad
 
@@ -78,11 +82,11 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 * **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  Pakette belirtilen dizine geri yükler.
+  Dizin paketleri geri yükleneceği yeri.
 
 * **`-s|--source <SOURCE>`**
 
-  Geri yükleme işlemi sırasında belirli bir NuGet paket kaynağı kullanır.
+  Geri yükleme işlemi sırasında kullanmak için NuGet paket kaynağı.
 
 * **`-v|--version <VERSION>`**
 

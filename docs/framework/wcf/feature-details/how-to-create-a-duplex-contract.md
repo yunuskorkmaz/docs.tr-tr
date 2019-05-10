@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-ms.openlocfilehash: c00e5d8e50de89d3d4d346ccddc50282f24735b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: c603694bca82cfc5852c875946f18f9782209e48
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332137"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638771"
 ---
 # <a name="how-to-create-a-duplex-contract"></a>Nasıl yapılır: Çift Yönlü Sözleşme Oluşturma
 Bu konu, çift yönlü Sözleşme (iki yönlü) kullanan yöntemleri oluşturmak için temel adımları gösterir. Çift yönlü sözleşme, istemciler ve sunucular ya da diğer çağrıları başlatabilir, böylece birbiriyle bağımsız olarak iletişim kurmasına izin verir. Çift yönlü sözleşme Windows Communication Foundation (WCF) Hizmetleri için kullanılabilir üç ileti modelinden biridir. Diğer iki ileti desenleri olan tek yönlü ve istek-yanıt. Çift yönlü sözleşme, istemci ve sunucu arasında iki yönlü sözleşmeler oluşur ve yöntem çağrıları bağıntılı gerekli değildir. Bu tür bir sözleşme hizmetiniz daha fazla bilgi için istemci sorgu veya olay istemci üzerinde açıkça kullanın. Bir istemci uygulaması için çift yönlü sözleşme oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Çift yönlü sözleşme ile hizmetlere erişme](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Çalışma örnek için bkz: [çift yönlü](../../../../docs/framework/wcf/samples/duplex.md) örnek.  
@@ -61,11 +61,11 @@ Bu konu, çift yönlü Sözleşme (iki yönlü) kullanan yöntemleri oluşturmak
  [!code-csharp[S_WS_DualHttp#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#5)]
  [!code-vb[S_WS_DualHttp#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_ws_dualhttp/vb/service.vb#5)]  
   
--   Uygulama <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> öznitelikleri, Web Hizmetleri Açıklama Dili (WSDL) hizmet sözleşme tanımları otomatik olarak oluşturulmasını sağlar.  
+- Uygulama <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> öznitelikleri, Web Hizmetleri Açıklama Dili (WSDL) hizmet sözleşme tanımları otomatik olarak oluşturulmasını sağlar.  
   
--   Kullanım [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WSDL belgesi (isteğe bağlı) kodu ve bir istemci yapılandırması alınamıyor.  
+- Kullanım [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WSDL belgesi (isteğe bağlı) kodu ve bir istemci yapılandırması alınamıyor.  
   
--   Çift yönlü hizmetler gösterme uç noktalarını güvenli hale getirilmelidir. Bir hizmeti çift yönlü bir ileti aldığında yanıt göndermesi yerini belirlemek için gelen bu iletide ReplyTo bakar. Ardından kanal güvenli değildir, güvenilmeyen bir istemci bir hedef makine, hizmet reddi için önde gelen bir hedef makinenin ReplyTo içeren kötü amaçlı bir ileti gönderebilir. Normal istek-yanıt iletileri, bu bir sorun ReplyTo göz ardı edilir ve yanıt üzerinde özgün iletinin geldiği kanal üzerinde gönderilen değildir.  
+- Çift yönlü hizmetler gösterme uç noktalarını güvenli hale getirilmelidir. Bir hizmeti çift yönlü bir ileti aldığında yanıt göndermesi yerini belirlemek için gelen bu iletide ReplyTo bakar. Ardından kanal güvenli değildir, güvenilmeyen bir istemci bir hedef makine, hizmet reddi için önde gelen bir hedef makinenin ReplyTo içeren kötü amaçlı bir ileti gönderebilir. Normal istek-yanıt iletileri, bu bir sorun ReplyTo göz ardı edilir ve yanıt üzerinde özgün iletinin geldiği kanal üzerinde gönderilen değildir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

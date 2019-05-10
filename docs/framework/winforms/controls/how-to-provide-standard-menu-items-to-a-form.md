@@ -9,12 +9,12 @@ helpviewer_keywords:
 - menu items [Windows Forms], standard
 - ToolStrip control [Windows Forms]
 ms.assetid: 75db9126-e70c-4e81-921d-b83c0a4a9f50
-ms.openlocfilehash: bb101c57cfb453e0419357741c5cf42dc29221b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 530e4185b065c9483f112146c496860f2c8a52c1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913204"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662328"
 ---
 # <a name="how-to-provide-standard-menu-items-to-a-form"></a>Nasıl yapılır: Bir Forma Standart Menü Öğeleri Sağlama
 Formlarınızla için standart bir menü sağlayabilir <xref:System.Windows.Forms.MenuStrip> denetimi.  

@@ -2,12 +2,12 @@
 title: DependentTransaction ile Eşzamanlılığı Yönetme
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: b06470ed76c15208f019874db8573d0ed4778d33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 62cbb8825171628b29a5519ca9e3ae31c2058a03
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793646"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662957"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>DependentTransaction ile Eşzamanlılığı Yönetme
 <xref:System.Transactions.Transaction> Nesnesi kullanılarak oluşturulan <xref:System.Transactions.Transaction.DependentClone%2A> yöntemi. Tek amacı, bazı bir kod (örneğin, bir iş parçacığı) parçalarını hala iş üzerinde işlem gerçekleştirirken işlem tamamlanamaz garanti sağlamaktır. Kopyalanan işlemin içinde çalışmanın tam ve yürütülemediğinden hazır olduğunda hareket kullanarak Oluşturucusu bildirebilir <xref:System.Transactions.DependentTransaction.Complete%2A> yöntemi. Bu nedenle, tutarlılık ve veri doğruluğunu saklayabilir.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 27818d5e1779cd6e10e11830f91a20a3e638639a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ce6dd2fcf913c16e4da68dec35ea3ccd8e90a948
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933789"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665778"
 ---
 # <a name="security-and-user-input"></a>Güvenlik ve Kullanıcı Girdisi
 Herhangi türde bir girdi (veriler bir Web isteği veya URL, bir Microsoft Windows Forms uygulaması ve benzeri denetimleri için giriş), bu verileri diğer kod çağırmak için doğrudan parametre olarak sıklıkla kullanılır çünkü kod olumsuz yönde etkileyebilir kullanıcı verileri. Bu durum kötü amaçlı kod kodunuzu garip parametrelerle çağırılıyor benzerdir ve aynı önlemler dikkat edilmelidir. Kullanıcı Giriş potansiyel olarak güvenilmeyen veri izlemek için hiçbir yığın çerçevesi olduğundan güvenli hale getirmek için gerçekten daha zor olabilir.  

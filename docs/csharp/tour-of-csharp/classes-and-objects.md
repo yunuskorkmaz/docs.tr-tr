@@ -3,12 +3,12 @@ title: Sınıflar ve nesneler C# -Turu C# dil
 description: Yeni C#? Bu sınıflar, nesneleri ve devralma bakış okuyun
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 36def74888f67dfa216cea7c093d80724e452c7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 681ed03661bf54dcb1e7e70735a53a553763c95c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706591"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750392"
 ---
 # <a name="classes-and-objects"></a>Sınıflar ve nesneler
 
@@ -230,7 +230,7 @@ C# örneği hem de statik oluşturucular destekler. Bir *örnek oluşturucusu* u
 
 Bir oluşturucu dönüş türü ve kapsayan sınıfı aynı ada sahip bir yöntemi gibi bildirilir. Statik değiştirici Oluşturucu bildirimi içeriyorsa, bir statik Oluşturucu bildirir. Aksi takdirde, bir örnek oluşturucusu bildirir.
 
-Örnek oluşturucuları aşırı yüklenebilir ve isteğe bağlı parametreler olabilir. Örneğin, `MyList<T>` sınıfı bildirir, bir parametre ve süren iki örnek oluşturucuları bir `int` parametresi. Örnek oluşturucuları kullanarak çağrılır `new` işleci. Aşağıdaki deyimleri iki ayırma `MyList<string>` Oluşturucusu kullanarak örneği `MyList` sınıfı ile ve isteğe bağlı bağımsız değişken olmadan.
+Örnek oluşturucuları aşırı yüklenebilir ve isteğe bağlı parametreler olabilir. Örneğin, `MyList<T>` sınıfı bir tek bir örnek oluşturucusu isteğe bağlı bildirir `int` parametresi. Örnek oluşturucuları kullanarak çağrılır `new` işleci. Aşağıdaki deyimleri iki ayırma `MyList<string>` Oluşturucusu kullanarak örneği `MyList` sınıfı ile ve isteğe bağlı bağımsız değişken olmadan.
 
 [!code-csharp[ListExample1](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]
 

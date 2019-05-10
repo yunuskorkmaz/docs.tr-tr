@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873242"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469711"
 ---
 # <a name="interop-marshaling"></a>Birlikte Çalışma Hazırlama
 <a name="top"></a> Birlikte çalışma hazırlama veri çağrıları sırasında yönetilen ve yönetilmeyen bellek arasında yöntem bağımsız değişkenleri ve dönüş değerleri nasıl geçirilir yönetir. Birlikte çalışma hazırlama ortak dil çalışma zamanının sıralama hizmeti tarafından gerçekleştirilen bir çalışma zamanı etkinliğidir.  
@@ -71,7 +71,7 @@ ms.locfileid: "61873242"
  Yönetilen sunucu dışa aktarmayı planlıyorsanız, COM istemcisi sunucusunun Grup belirlediğini unutmayın. MTA içinde başlatılan bir COM istemcisi tarafından yönetilen bir sunucu, iş parçacığı güvenliği emin olmanız gerekir.  
   
 ### <a name="managed-clients-and-com-servers"></a>Yönetilen istemcilerin ve COM sunucuları  
- MTA yönetilen istemci apartmanlar için varsayılan ayardır; Ancak, .NET istemci uygulama türü, varsayılan ayarı değiştirebilirsiniz. Örneğin, bir [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] istemci grup ayardır STA. Kullanabileceğiniz <xref:System.STAThreadAttribute?displayProperty=nameWithType>, <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> özelliği veya <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> incelemek ve yönetilen bir istemci grubu ayarını değiştirmek için özellik.  
+ MTA yönetilen istemci apartmanlar için varsayılan ayardır; Ancak, .NET istemci uygulama türü, varsayılan ayarı değiştirebilirsiniz. Örneğin, bir Visual Basic istemci Grup STA. ayardır Kullanabileceğiniz <xref:System.STAThreadAttribute?displayProperty=nameWithType>, <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> özelliği veya <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> incelemek ve yönetilen bir istemci grubu ayarını değiştirmek için özellik.  
   
  Bileşen yazarı, bir COM sunucusunun iş parçacığı benzeşimini ayarlar. Aşağıdaki tablo, .NET istemcileri ve COM sunucuları için Grup ayarları birleşimleri gösterir. Ayrıca, birleşimler için gereksinimleri hazırlama ortaya çıkan gösterir.  
   

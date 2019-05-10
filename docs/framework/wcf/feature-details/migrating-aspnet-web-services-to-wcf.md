@@ -2,12 +2,12 @@
 title: ASP.NET Web Hizmetlerini WCF'ye Taşıma
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
-ms.openlocfilehash: 703088cdaae69d90d71fb950912538ea0662229b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8102b91ba14b75ec9cbd2a683b68c3723a77aed0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948102"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649433"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>ASP.NET Web Hizmetlerini WCF'ye Taşıma
 ASP.NET barındırma Hizmetleri Internet Information Services (IIS) içinde olanakları yanı sıra Web hizmetleri oluşturmak için .NET Framework sınıf kitaplıkları ve araçları sağlar. .NET Framework sınıf kitaplıkları, araçları ve Web Hizmetleri tarafından kullanılan dahil olmak üzere herhangi bir protokol kullanarak iletişim kurmak için barındırma özellikleri yazılım varlıkları etkinleştirmek için Windows Communication Foundation (WCF) sağlar.  ASP.NET Web hizmetlerini WCF'ye taşıma, yeni özellikler ve geliştirmeler için WCF özgü avantajlarından yararlanmak uygulamalarınızı sağlar.  

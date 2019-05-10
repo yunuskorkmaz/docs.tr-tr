@@ -2,12 +2,12 @@
 title: İşlem Biçimlendirici ve İşlem Seçici
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 45b489aeb88f57fe442cef9ffed1a2ee079b75e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 94daefbc05bf69cf7fa03c5ce4c2988f3b7db91a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989696"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664791"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>İşlem Biçimlendirici ve İşlem Seçici
 Bu örnek ileti verilerini ne WCF bekliyor farklı bir biçimde izin vermek için Windows Communication Foundation (WCF) genişletilebilirlik noktaları'nın nasıl kullanılabileceğini gösterir. Varsayılan olarak, WCF biçimlendiricileri altında dahil edilecek yöntem parametreleri beklediğiniz `soap:body` öğesi. Örnek uygulama, bunun yerine bir HTTP GET sorgu dizesi parametresi verileri ayrıştırır ve bu verileri kullanarak yöntemleri çağıran bir özel işlem biçimlendirici gösterir.  

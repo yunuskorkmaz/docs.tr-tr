@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 829bdda3f3302d8d3c41e704dc8caf88720d1ebc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932801"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637590"
 ---
 # <a name="using-message-contracts"></a>İleti Sözleşmeleri Kullanılıyor
 Genellikle Windows Communication Foundation (WCF) uygulamaları oluştururken geliştiriciler serileştirme sorunlarına ve veri yapıları Kapat dikkat ve kendilerini hangi verileri taşınan iletileri yapısı ile uğraşmak zorunda değildir. Bu uygulamalar için parametreleri veya dönüş değerleri için veri sözleşmeleri oluşturma oldukça basittir. (Daha fazla bilgi için [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  

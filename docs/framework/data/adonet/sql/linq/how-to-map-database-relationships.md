@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5a20253e7164dabc22529d2238e9e85610d83706
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033728"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624709"
 ---
 # <a name="how-to-map-database-relationships"></a>Nasıl yapılır: Veritabanı İlişkilerini Eşleme
 Her zaman aynı olacak herhangi bir veri ilişkileri varlık sınıfınızda özelliğine başvuruyor şifreleyebilirsiniz. Northwind örnek veritabanındaki gibi müşteriler genellikle, sipariş olduğundan her zaman bir ilişki yoktur modelinde müşterilerin ve siparişlerinin arasında.  

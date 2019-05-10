@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: 4ae2366552426af0107c8d7a35bb5368fe30c8a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9236080d50638bc38bbdd3ddaf8aabf9e675e43f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791969"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639123"
 ---
 # <a name="optional-parameters-visual-basic"></a>İsteğe Bağlı Parametreler (Visual Basic)
 Bir yordam parametresinin isteğe bağlı olduğunu ve yordam çağrıldığında bu parametre için hiçbir bağımsız değişken sağlanmaması gerektiğini belirtebilirsiniz. *İsteğe bağlı parametreler* tarafından belirtilen `Optional` yordam tanımında anahtar sözcüğü. Aşağıdaki kurallar geçerlidir:  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e932b3af0b952fa88d33df453917cb11c3ceed33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d2b8866d3a1922988518dfe2857c98d4725cc464
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908862"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664554"
 ---
 # <a name="sorted-collection-types"></a>Sıralanmış Koleksiyon Türleri
 <xref:System.Collections.SortedList?displayProperty=nameWithType> Sınıfı <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> genel bir sınıf ve <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> genel sınıf benzer <xref:System.Collections.Hashtable> sınıfı ve <xref:System.Collections.Generic.Dictionary%602> genel sınıf içeren uyguladıkları <xref:System.Collections.IDictionary> arabirimi ancak korumak, anahtara göre sıralama öğeleri sıralama ve O(1) ekleme ve alma karma tablosu özellik yoktur. Üç sınıfları yaygın olarak kullanılan çeşitli özellikler vardır:  

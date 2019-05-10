@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 73e984193f87b20e0e00d8ab92a7c0fd67f7968f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a5e3e96ce8c8bb3304c8abcc93a881998382c6ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046586"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638005"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Kullaıcı Adı İstemcisi ile İleti Güvenliği
 Aşağıdaki çizimde, bir Windows Communication Foundation (WCF) hizmet ve istemci ileti düzeyi güvenliği kullanılarak güvenli gösterir. Hizmet bir X.509 sertifikası ile doğrulanır. İstemci, bir kullanıcı adı ve parolasını kullanarak kimliğini doğrular.  
@@ -21,7 +21,7 @@ Aşağıdaki çizimde, bir Windows Communication Foundation (WCF) hizmet ve iste
   
 |Özelliği|Açıklama|  
 |--------------------|-----------------|  
-|Güvenlik modu|İleti|  
+|Güvenlik modu|`Message`|  
 |Birlikte Çalışabilirlik|Windows Communication Foundation (WCF) yalnızca|  
 |Kimlik doğrulaması (sunucu)|İlk anlaşma sunucu kimlik doğrulaması gerektirir|  
 |Kimlik doğrulaması (istemci)|Kullanıcı adı/parola|  

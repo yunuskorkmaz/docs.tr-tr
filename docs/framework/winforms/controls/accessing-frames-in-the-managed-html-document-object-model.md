@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: 9b2719ca000ab86b9ca40f9e78af46cbf598d16e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9a02a912c170bfc4d997f1d8a0fe4f4d5bedb147
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640542"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665803"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Yönetilen HTML Belgesi Nesne Modelindeki Çerçevelere Erişme
 Bazı HTML belgeleri tanesi oluşur *çerçeveler*, ya da kendi ayrı HTML belgeleri içerebileceği windows. Çerçeveleri kullanarak diğer çerçeveler sürekli içeriklerini değiştirme sırasında bir veya daha fazla parça sayfanın bir gezinti çubuğu gibi statik kalır HTML sayfaları oluşturmak kolaylaştırır.  

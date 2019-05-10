@@ -9,12 +9,12 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-ms.openlocfilehash: 6b178ac6b93205afebb1bea45f1b7e94826cb670
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 41f8ec79eecf47e9caeb5bf1411e17211c32a410
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002176"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663291"
 ---
 # <a name="storyboards-overview"></a>Görsel Taslaklara Genel Bakış
 Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animation.Storyboard> animasyonların ve düzenleme nesneleri. Etkileşimli olarak nasıl işleneceğini açıklar <xref:System.Windows.Media.Animation.Storyboard> nesneleri ve söz dizimi hedefleyen dolaylı özelliği tanımlar.  
