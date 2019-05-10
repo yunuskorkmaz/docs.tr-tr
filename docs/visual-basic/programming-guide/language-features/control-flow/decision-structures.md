@@ -9,12 +9,12 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f8b653b941c5959036256cde097a41f8c6251c7a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907016"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601239"
 ---
 # <a name="decision-structures-visual-basic"></a>Karar Yapıları (Visual Basic)
 Visual Basic koşulları test etmeye ve test sonuçlarına bağlı olarak farklı işlemler gerçekleştirmek olanak sağlar. True veya false, bir ifadenin çeşitli değerleri için veya bir deyimler serisini çalıştırdığınızda oluşturulan çeşitli özel durumlar için olan bir koşul için test edebilirsiniz.  

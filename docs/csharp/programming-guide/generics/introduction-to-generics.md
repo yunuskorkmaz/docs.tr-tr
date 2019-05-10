@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], about generics
 ms.assetid: a1ad761e-42f7-41dd-a62f-452a2de26b9d
-ms.openlocfilehash: d09cc686e934f722193cb4671d25671f7f4ef5f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0d7ecb7f7fd0bb0985234cdc2cf8d37b53323c86
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61679797"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595483"
 ---
 # <a name="introduction-to-generics-c-programming-guide"></a>Genel Türlere Giriş (C# Programlama Kılavuzu)
 Genel sınıflar ve yöntemler çalışmalarında, tür güvenliği ve verimlilik genel olmayan karşılıkları edilemez bir şekilde birleştirin. Genel türler, koleksiyonlar ve bunlar üzerinde çalışan yöntemleri ile sık kullanılır. .NET Framework sınıf kitaplığı 2.0 sürümünü sağlayan yeni bir ad alanı <xref:System.Collections.Generic>, birkaç yeni genel tabanlı koleksiyon sınıflarını içerir. Tüm .NET Framework 2.0 ve daha sonra kullanmak yeni genel koleksiyon sınıfları yerine eski genel olmayan ortaklarınıza gibi hedefleyen uygulamalar, önerilen <xref:System.Collections.ArrayList>. Daha fazla bilgi için [.NET içindeki genel türler](../../../standard/generics/index.md).  

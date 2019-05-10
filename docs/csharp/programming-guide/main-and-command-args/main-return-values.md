@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: f515268af13ef95b8b6d9a79f71c49d5d4a98d05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1e4c03985908f6e49d5ce001cdc9c1472f5a6d44
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710946"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595595"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Ana() dönüş değerleri (C# programlama Kılavuzu)
 
@@ -22,7 +22,7 @@ Ayrıca döndürebilir bir `int`:
 
  [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-Döndürülen değeri `Main` döndüren kullanılmıyor `void` için biraz daha basit kod sağlar. Ancak, bir tamsayı döndüren diğer programları veya yürütülebilir dosya çağırma betikleri için durum bilgisi iletişim kurmak programın sağlar. Dönüş değeri `Main` işlemi için çıkış kodu olarak kabul edilir. Aşağıdaki örnek, dönüş değeri nasıl gösterir `Main` erişilebilir.
+Döndürülen değeri `Main` döndüren kullanılmıyor `void` için biraz daha basit kod sağlar. Ancak, bir tamsayı döndüren diğer programları veya yürütülebilir dosya çağırma betikleri için durum bilgisi iletişim kurmak programın sağlar. Dönüş değeri `Main` işlemi için çıkış kodu olarak kabul edilir. Varsa `void` öğesinden döndürülen `Main` çıkış kodu örtük olarak olacaktır `0`. Aşağıdaki örnek, dönüş değeri nasıl gösterir `Main` erişilebilir.
 
 ## <a name="example"></a>Örnek
 

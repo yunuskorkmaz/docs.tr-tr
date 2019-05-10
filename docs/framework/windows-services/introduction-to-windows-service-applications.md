@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: a98528a4bae1a22352096958cfec2350b21ddf8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c69210c3d8f35ccab4375cfe7e49e2de147f2289
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008700"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599881"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows Hizmet Uygulamalarına Giriş
 Eski adıyla NT Hizmetleri olarak bilinen Microsoft Windows Hizmetleri kendi Windows oturumlarında çalışan uzun süreli yürütülebilir uygulamalar oluşturmanıza olanak sağlar. Bu hizmetler, bilgisayar önyükleme yaptığında, otomatik olarak başlatılabilir duraklatılabilir ve yeniden başlatılabilir ve herhangi bir kullanıcı arabirimi gösterme. Bu özellikler Hizmetleri sunucusunda veya aynı bilgisayarda çalışan diğer kullanıcılarla engellemeyen uzun süreli işlevselliğe gereksinim duyduğunuzda kullanım için ideal hale getirir. Ayrıca, hizmetleri veya varsayılan bilgisayar hesabından oturum açan kullanıcıdan farklı bir belirli kullanıcı hesabının güvenlik bağlamında da çalıştırabilirsiniz. Hizmetleri ve Windows oturumları hakkında daha fazla bilgi için Windows SDK belgelerine bakın.  

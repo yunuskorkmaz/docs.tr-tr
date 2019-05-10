@@ -7,12 +7,12 @@ helpviewer_keywords:
 - descendent axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: aabfa258-4112-4e7e-bab9-403f96072ef7
-ms.openlocfilehash: bfbf849bd296f639f03580346e4a9c52ce000abd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 008fd599e527ad4a8d483d2468a57ece1d2b4bdc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934816"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598592"
 ---
 # <a name="how-to-access-xml-descendant-elements-visual-basic"></a>Nasıl yapılır: Erişim XML bağımlı öğelerine (Visual Basic)
 Bu örnek, bir descendant axis özelliği bir XML öğesi altında yer alır ve belirtilen ada sahip olan tüm XML öğelerine erişmek için nasıl kullanılacağını gösterir. Özellikle, kullandığı `Value` özelliğini koleksiyondaki ilk öğenin değerini alma `name` descendant axis özelliği döndürür. `name` Descendant axis özelliği adlı tüm öğeleri alır `name` içerdiği `contacts` nesne. Bu örnekte ayrıca `phone` adlı tüm alt öğeleri erişmeye descendant axis özelliği `phone` içerdiği `contacts` nesne.  

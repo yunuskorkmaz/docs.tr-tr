@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Dinamik sorgular derlemek için ifade ağaçları kullanma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: dec9d84f7fa37f859e307f2a653464608684bc88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c3c65770af11518f6ac86e0fecd47b56f78cff59
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668529"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597972"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Nasıl yapılır: Dinamik sorgular derlemek için ifade ağaçları kullanma (C#)
 LINQ içinde uygulama veri kaynaklarını hedefleyen yapılandırılmış sorguların temsil etmek için ifade ağaçları kullanılan <xref:System.Linq.IQueryable%601>. Örneğin, LINQ sağlayıcı uygulayan <xref:System.Linq.IQueryable%601> ilişkisel veri deposu sorgulamak için arabirim. C# derleyicisi gibi veri kaynakları, çalışma zamanında bir ifade ağacı oluşturan koda hedef sorguları derler. Sorgu sağlayıcısına geçiş ifadesi ağaç veri yapısı ve veri kaynağı için uygun bir sorgu dili küçültmesini.  

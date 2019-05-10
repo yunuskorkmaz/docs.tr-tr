@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 6689eb36-c471-469f-a82d-099ab8197b25
-ms.openlocfilehash: cd1b0db5305c7879d89cfdfff6cd458d6dea14f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3c00166e471b7c6d69bd7f6fc3bda87b651d7d46
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973036"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598663"
 ---
 # <a name="how-to-access-xml-child-elements-visual-basic"></a>Nasıl yapılır: Erişim XML alt öğelerine (Visual Basic)
 Bu örnek belirtilen ada sahip bir XML öğesi tüm XML alt öğelerine erişmek için axis özelliği bir alt kullanmayı gösterir. Özellikle, kullandığı <xref:System.Xml.Linq.XElement.Value%2A> özelliğini koleksiyondaki ilk öğenin değerini alma `name` alt eksen özelliğini döndürür. `name` Child axis özelliği adlı tüm alt öğe alır `phone` içinde `contact` nesne. Bu örnekte ayrıca `phone` adlı tüm alt öğelere erişmek için alt axis özelliği `phone` içerdiği `contact` nesne.  

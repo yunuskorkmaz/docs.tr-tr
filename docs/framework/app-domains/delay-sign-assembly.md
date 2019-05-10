@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc955ca892a8a0e5d15710b76a6a1c798ad4ecf5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 31c43607a710316696a9765feb6f36b7676f906f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705733"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593639"
 ---
 # <a name="delay-signing-an-assembly"></a>Derleme İmzalamayı Geciktirme
 Bir kuruluş geliştiricileri her gün için erişimi yoktur yakından korumalı bir anahtar çifti olabilir. Genellikle ortak anahtarı mevcut ancak özel anahtarına erişime yalnızca birkaç kişilerle sınırlıdır. Derlemeleri tanımlayıcı adlarla geliştirirken, her derleme başvuruları tanımlayıcı adlı hedef derlemeye hedef derleme tanımlayıcı bir ad vermek için kullanılan ortak anahtar belirtecini içerir. Bu ortak anahtarı geliştirme sürecinde kullanılabilir olmasını gerektirir.  

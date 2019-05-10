@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: İfade ağaçlarını yürütme (C#)'
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: bed37d8d96837062831f4a3017df8a3633446bf0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 034a391a21e685a6ceb8342bb1738ff34381cebb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668932"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598050"
 ---
 # <a name="how-to-execute-expression-trees-c"></a>Nasıl yapılır: İfade ağaçlarını yürütme (C#)
 Bu konu nasıl bir ifade ağacı çalıştırılacağını gösterir. İfade ağacı yürütülürken bir değer döndürebilir veya sadece bir yöntemi gibi bir eylem gerçekleştirebilir.  

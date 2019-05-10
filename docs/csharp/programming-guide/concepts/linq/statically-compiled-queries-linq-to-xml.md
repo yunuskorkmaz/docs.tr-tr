@@ -2,12 +2,12 @@
 title: Sorgular (LINQ to XML)'statik olarak derlenmiş (C#)
 ms.date: 07/20/2015
 ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
-ms.openlocfilehash: 842f8c1c2fa07e1658992e94e5163222f38f80ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 543c49f8cd95dce5a4fd510984233b3b64e5164e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61681084"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595380"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>Sorgular (LINQ to XML)'statik olarak derlenmiş (C#)
 En önemli performans birini avantajlar LINQ, XML olarak <xref:System.Xml.XmlDocument>, XPath sorguları çalışma zamanında yorumlanacağını ancak LINQ to XML sorgularında statik olduğunu, derlenir. Bu özellik için LINQ to XML, yararlanmak için ek adımlar gerçekleştirmeniz gerekmez, ancak iki teknolojiyi arasında seçim yaparken, aradaki farkı kavramak yararlıdır yerleşik olarak bulunur. Bu konu, farkı açıklar.  
