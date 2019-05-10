@@ -7,27 +7,25 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: 262487eabb3f0ab27efe8bc7fdb31a822ed07823
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a184312b1df7c0736fa9c6b6ef787451add0465e
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010975"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211802"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Nasıl yapılır: Windows Forms’da Birden Çok Denetimi Hizalama
-Windows tabanlı uygulamanızın kullanıcı arabirimini (UI) düzenini standart hale getirmek için tek bir komutla denetim gruplarını konumlandırabilirsiniz.  
-  
-> [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-align-multiple-controls-on-a-form"></a>Form üzerindeki birden çok denetimi hizalama  
-  
-1. Getirin istediğiniz denetimleri içeren formu açın **Windows Form Tasarımcısı**.  
-  
-2. Böylece seçtiğiniz ilk denetim, diğer hizalanmalıdır birincil denetim hizalamak için istediğiniz denetimleri seçin.  
-  
-3. Üzerinde **biçimi** menüsünde **Hizala**ve ardından yedi seçenekleri birine tıklayın.  
-  
+
+Windows tabanlı uygulamanızın kullanıcı arabirimini (UI) düzenini standart hale getirmek için tek bir komutla denetim gruplarını konumlandırabilirsiniz.
+
+### <a name="to-align-multiple-controls-on-a-form"></a>Form üzerindeki birden çok denetimi hizalama
+
+1. Visual Studio'da getirin istediğiniz denetimleri içeren formu açın **Windows Form Tasarımcısı**.
+
+2. Böylece seçtiğiniz ilk denetim, diğer hizalanmalıdır birincil denetim hizalamak için istediğiniz denetimleri seçin.
+
+3. Üzerinde **biçimi** menüsünde **Hizala**ve ardından yedi seçenekleri birine tıklayın.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Windows Forms Denetimleri](index.md)

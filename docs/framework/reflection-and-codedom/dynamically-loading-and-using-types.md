@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51e34d8eed40481de47dfd217392e95a11a412d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 085b89de8180a216288e8f547af5b73eaf004457
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61983937"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469673"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Dinamik Olarak Yükleme ve Türleri Kullanma
-Yansıma, dil derleyiciler tarafından kullanılan altyapı sağlar [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] ve JScript örtük geç bağlama uygulamak için. Bağlama benzersiz olarak belirtilen bir türe karşılık gelen bildirimi (uygulama) bulma işlemidir. Bu işlem, çalışma zamanında değil derleme zamanında oluştuğunda, geç bağlama olarak adlandırılır. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] örtük geç bağlama kodunuzda kullanmanıza olanak tanır; Visual Basic Derleyicisi, nesnenin türü elde etmek için yansıma kullanan bir yardımcı yöntem çağırır. Yardımcı yöntemine geçirilen bağımsız değişkenler, çalışma zamanında çağrılacak uygun yöntemi neden. Bu bağımsız değişkenler (nesne) örneği yöntemi, çağrılan yöntemi (dize) ve çağrılan yöntemi (nesne dizisini) geçirilen bağımsız değişkenler adını çağırmak için açıktır.  
+Yansıma, dil derleyiciler tarafından örtük geç bağlama uygulamak için kullanılan bir altyapı sağlar. Bağlama benzersiz olarak belirtilen bir türe karşılık gelen bildirimi (uygulama) bulma işlemidir. Bu işlem, çalışma zamanında değil derleme zamanında oluştuğunda, geç bağlama olarak adlandırılır. Visual Basic kodunuzda örtük geç bağlama kullanmanıza olanak tanır; Visual Basic Derleyicisi, nesnenin türü elde etmek için yansıma kullanan bir yardımcı yöntem çağırır. Yardımcı yöntemine geçirilen bağımsız değişkenler, çalışma zamanında çağrılacak uygun yöntemi neden. Bu bağımsız değişkenler (nesne) örneği yöntemi, çağrılan yöntemi (dize) ve çağrılan yöntemi (nesne dizisini) geçirilen bağımsız değişkenler adını çağırmak için açıktır.  
   
  Aşağıdaki örnekte, Visual Basic Derleyicisi yansıma örtük olarak türü derleme zamanında bilinen değil bir nesne üzerinde bir yöntemi çağırmak için kullanır. A **HelloWorld** sınıfında bir **PrintHello** "Hello geçirilir bazı metin ile birleştirilmiş World" out yazdırır yöntemi **PrintHello** yöntemi. **PrintHello** Bu örnekte adlı bir yöntem olan aslında bir <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>; Visual Basic kodunu verir **PrintHello** (helloObj) nesne türü derleme biliniyorsa olarak çağrılacak yöntemi saat (erken bağlama) yerine, çalışma zamanı (geç bağlama).  
   

@@ -3,12 +3,12 @@ title: C# dize ilişkilendirme
 description: Dize ilişkilendirme ile C# dilinde bir sonuç dizesi olarak biçimlendirilmiş bir ifade sonuçları eklemeyi öğrenin.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 5a66ba9215579a459b543a24ece338ffbbfd9aea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 068a30bdcb96140787a38e9ae52f9c62d8a57c96
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675682"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063238"
 ---
 # <a name="string-interpolation-in-c"></a>C'de dize ilişkilendirme\#
 
@@ -30,9 +30,7 @@ Bir dize ilişkilendirilmiş dize sabit değeri belirlemek için onunla önüne 
 {<interpolatedExpression>}
 ```
 
-Derleme zamanında bir aradeğerlendirme dizesinde tipik olarak dönüştürülür bir <xref:System.String.Format%2A?displayProperty=nameWithType> yöntem çağrısı. Tüm özelliklerine getiren [bileşik biçimlendirme dizesi](../../standard/base-types/composite-formatting.md) özelliği de ara değerli dizeler ile kullanmak için de kullanılabilir.
-
-Derleyici yerine bir <xref:System.String.Format%2A?displayProperty=nameWithType> için <xref:System.String.Concat%2A?displayProperty=nameWithType> çözümlenen davranışı için birleştirme eşdeğeri yoksa.
+İlişkilendirilmiş dizeler destekleyen tüm özelliklerine [bileşik biçimlendirme dizesi](../../standard/base-types/composite-formatting.md) özelliği. Getiren bunları kullanımını daha okunabilir bir alternatif <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemi.
 
 ## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>İlişkilendirilmiş ifade için bir biçim dizesi belirtme
 

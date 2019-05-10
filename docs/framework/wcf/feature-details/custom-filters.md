@@ -2,12 +2,12 @@
 title: Özel Filtreler
 ms.date: 03/30/2017
 ms.assetid: 97cf247d-be0a-4057-bba9-3be5c45029d5
-ms.openlocfilehash: 4140a944ed195e1defc1a0677d8e26ff4ff85beb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9ef94d95737fb743af56f411bcc0f39ceea679a0
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857226"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912682"
 ---
 # <a name="custom-filters"></a>Özel Filtreler
 Özel Filtreler sistem tarafından sağlanan ileti filtreleri kullanarak elde edemiyor eşleşen mantığı tanımlamanızı sağlar. Örneğin, bir özel ileti öğesi karma hale getirir ve ardından filtrenin doğru döndürme zorunluluğu olup olmadığını belirlemek için değer inceler özel filtre ya da yanlış oluşturabilirsiniz.  

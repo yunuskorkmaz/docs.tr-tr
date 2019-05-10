@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2411b69dac6ef8945336a4c4e014cbf6687f702a
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873241"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469721"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Sınıflar, Yapılar ve Birleşimleri Hazırlama
 .NET Framework sınıfları ve yapıları benzerdir. Hem alanlar, özellikler ve olaylar olabilir. Bunlar, ayrıca statik ve statik olmayan yöntemleri olabilir. Bir önemli fark, yapılar değer türüdür ve sınıflar, başvuru türleridir ' dir.  
@@ -266,7 +266,7 @@ typedef struct _MYSTRSTRUCT2
   
  `MyStruct` Sınıfı içeren bir dize nesnesi ANSI karakter. <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> Alanı ANSI biçimini belirtir. `MyUnsafeStruct`, bir yapı olduğunu içeren bir <xref:System.IntPtr> türü bir dize yerine.  
   
- `LibWrap` Sınıfı içeren Aşırı yüklenen `TestOutArrayOfStructs` prototip yöntemi. İle bir yöntem parametresi olarak bir işaretçiyi bildirir, sınıf işaretlenmelidir `unsafe` anahtar sözcüğü. Çünkü [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] güvenli olmayan kod, aşırı yüklenmiş yöntemin güvenli olmayan değiştirici kullanamazsınız ve `MyUnsafeStruct` yapısı gereksizdir.  
+ `LibWrap` Sınıfı içeren Aşırı yüklenen `TestOutArrayOfStructs` prototip yöntemi. İle bir yöntem parametresi olarak bir işaretçiyi bildirir, sınıf işaretlenmelidir `unsafe` anahtar sözcüğü. Visual Basic güvenli olmayan kod, aşırı yüklenmiş yöntemin güvenli olmayan değiştirici kullandığından ve `MyUnsafeStruct` yapısı gereksizdir.  
   
  `App` Sınıfının Implements `UsingMarshaling` dizi geçirmek için gerekli tüm görevleri gerçekleştiren yöntemi. Dizi ile işaretlenmiş `out` (`ByRef` Visual Basic'te) verileri göstermek için anahtar sözcüğü, çağırana çağrılan geçirir. Aşağıdaki uygulama kullanan <xref:System.Runtime.InteropServices.Marshal> sınıfı yöntemleri:  
   
@@ -276,7 +276,7 @@ typedef struct _MYSTRSTRUCT2
   
 - <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> dizi için ayrılmış belleği serbest bırakmak için.  
   
- Daha önce belirtildiği gibi C# güvenli olmayan koda izin verir ve [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] desteklemez. İçinde C# örneği `UsingUnsafePointer` işaretçileri yerine kullanan alternatif bir yöntem uygulamasıdır <xref:System.Runtime.InteropServices.Marshal> geçirmek için sınıfı yeniden diziyi içeren `MyUnsafeStruct` yapısı.  
+ Daha önce belirtildiği gibi C# güvenli olmayan kod ve Visual Basic desteklemez sağlar. İçinde C# örneği `UsingUnsafePointer` işaretçileri yerine kullanan alternatif bir yöntem uygulamasıdır <xref:System.Runtime.InteropServices.Marshal> geçirmek için sınıfı yeniden diziyi içeren `MyUnsafeStruct` yapısı.  
   
 ### <a name="declaring-prototypes"></a>Prototipleri Bildirme  
  [!code-cpp[Conceptual.Interop.Marshaling#20](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/outarrayofstructs.cpp#20)]

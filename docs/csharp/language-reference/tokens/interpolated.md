@@ -2,7 +2,7 @@
 title: $ - dize ilişkilendirme - C# başvurusu
 ms.custom: seodec18
 description: Dize ilişkilendirme, daha geleneksel dize bileşik biçimlendirme dizesi çıkış biçimine daha okunabilir ve kullanışlı bir söz dizimi sağlar.
-ms.date: 03/26/2018
+ms.date: 04/29/2019
 f1_keywords:
 - $_CSharpKeyword
 - $
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 716f6ee2c9eb09abcbd4ada16954315ed4a56c02
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61659923"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65210424"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - dize ilişkilendirme (C# Başvurusu)
 
@@ -26,7 +26,7 @@ ms.locfileid: "61659923"
 
 Dize ilişkilendirme, biçimlendirilmiş dize değerinden oluşturmak için daha okunabilir ve kullanışlı bir söz dizimi sağlar bir [bileşik biçimlendirme dizesi](../../../standard/base-types/composite-formatting.md) özelliği. Aşağıdaki örnek, aynı çıktı oluşturmak için her iki özellik kullanır:
 
-[!code-csharp-interactive[compare with composite formatting](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#1)]
+[!code-csharp-interactive[compare with composite formatting](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#1)]
 
 ## <a name="structure-of-an-interpolated-string"></a>Bir aradeğerlendirme dizesinde yapısı
 
@@ -48,7 +48,7 @@ Köşeli parantezler içindeki öğeler isteğe bağlıdır. Aşağıdaki tablo 
 
 Aşağıdaki örnek, yukarıda açıklanan isteğe bağlı bir biçimlendirme bileşenleri kullanır:
 
-[!code-csharp-interactive[specify alignment and format string](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#2)]
+[!code-csharp-interactive[specify alignment and format string](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#2)]
 
 ## <a name="special-characters"></a>Özel karakterler
 
@@ -58,7 +58,7 @@ Bir küme ayracı, dahil etmek için "{" veya "}", bir aradeğerlendirme dizesin
 
 Aşağıdaki örnek, sonuç dizesinde ayraç ekleme ve bir ilişkilendirilmiş ifadede koşullu bir işleç kullanma işlemini gösterir:
 
-[!code-csharp-interactive[example with ternary conditional operator](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
+[!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
 Verbatim ilişkilendirilmiş bir dize ile başlayan `$` karakteri ve ardından `@` karakter. Harfi harfine dizeler hakkında daha fazla bilgi için bkz: [dize](../keywords/string.md) ve [tam tanımlayıcı](verbatim.md) konuları.
 
@@ -83,11 +83,21 @@ Bir aradeğerlendirme dizesinde üç örtük dönüştürmelerine vardır:
 
 Aşağıdaki örnek örtük olarak dönüştürülmesine kullanır <xref:System.FormattableString> kültüre özgü sonuç dizeleri oluşturmak için:
 
-[!code-csharp-interactive[create culture-specific result strings](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
+[!code-csharp-interactive[create culture-specific result strings](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-Dize ilişkilendirme için yeni başlıyorsanız bkz [dize ilişkilendirme, C# ](../../tutorials/exploration/interpolated-strings.yml) etkileşimli öğretici. Ya da deneyebilirsiniz [dize ilişkilendirme, C# ](../../tutorials/string-interpolation.md) makinenizde yerel olarak öğretici.
+Dize ilişkilendirme için yeni başlıyorsanız bkz [dize ilişkilendirme, C# ](../../tutorials/exploration/interpolated-strings.yml) etkileşimli öğretici. Ayrıca başka denetleyebilirsiniz [dize ilişkilendirme, C# ](../../tutorials/string-interpolation.md) Ara değerli dizeler biçimlendirilmiş dizeler üretmek için nasıl kullanılacağını gösteren öğretici.
+
+## <a name="compilation-of-interpolated-strings"></a>Derleme Ara değerli dizeler
+
+İlişkilendirilmiş dize türündeyse `string`, tipik olarak dönüştürülür bir <xref:System.String.Format%2A?displayProperty=nameWithType> yöntem çağrısı. Derleyici değiştirebilir <xref:System.String.Format%2A?displayProperty=nameWithType> ile <xref:System.String.Concat%2A?displayProperty=nameWithType> çözümlenen davranışı için birleştirme eşdeğeri yoksa.
+
+İlişkilendirilmiş dize türündeyse <xref:System.IFormattable> veya <xref:System.FormattableString>, derleyici bir çağrı oluşturur <xref:System.Runtime.CompilerServices.FormattableStringFactory.Create%2A?displayProperty=nameWithType> yöntemi.
+
+## <a name="c-language-specification"></a>C# dili belirtimi
+
+Daha fazla bilgi için [Ara değerli dizeler](~/_csharplang/spec/expressions.md#interpolated-strings) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

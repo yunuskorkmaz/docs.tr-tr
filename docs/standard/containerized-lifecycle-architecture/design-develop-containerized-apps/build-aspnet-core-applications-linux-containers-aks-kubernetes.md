@@ -1,17 +1,17 @@
 ---
-title: AKS/Kubernetes kümeler halinde Linux kapsayıcıları olarak dağıtılan bir ASP.NET Core 2.1 uygulamaları oluşturun
+title: AKS/Kubernetes kümeler halinde Linux kapsayıcıları olarak dağıtılan bir ASP.NET Core 2.2 uygulamalar oluşturun
 description: Microsoft Platformu ve Araçları ile Kapsayıcı Docker Uygulaması Yaşam Döngüsü
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/25/2019
-ms.openlocfilehash: c6d778d345466b1b852d06bc01ce40ccfdebf964
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 28d2f557e4434ef7e5c2c3f8d17d6d3d6a80ce2a
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052761"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452779"
 ---
-# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Linux kapsayıcıları olarak dağıtılan bir AKS/Kubernetes orchestrator içinde ASP.NET Core 2.1 uygulamaları oluşturun
+# <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Linux kapsayıcıları olarak dağıtılan bir AKS/Kubernetes orchestrator içinde ASP.NET Core 2.2 uygulamalar oluşturun
 
 Azure Kubernetes Hizmetleri (AKS), kapsayıcı dağıtımı ve Yönetimi basitleştirin Azure'nın yönetilen Kubernetes düzenlemeleri hizmetleridir.
 
@@ -23,13 +23,13 @@ AKS ana özellikleri şunlardır:
 - Kullanıcı yapılandırılabilir ölçeklendirme
 - Hem geliştiriciler hem de küme operatörleri için basit bir kullanıcı deneyimi.
 
-Aşağıdaki örnekte bir AKS kümesi, azure'da geliştirme yapıldığı sırada dağıtır ve Linux üzerinde çalışan bir ASP.NET Core 2.1 uygulama oluşturulmasını keşfedin Visual Studio 2017'yi kullanarak.
+Aşağıdaki örnekler, Linux üzerinde çalışan ve geliştirme işlemi sırasında bir AKS kümesi, azure'da dağıtır bir ASP.NET Core 2.2 uygulama oluşturulmasını keşfedin. Visual Studio 2017'yi kullanarak.
 
-## <a name="creating-the-aspnet-core-21-project-using-visual-studio-2017"></a>Visual Studio 2017'yi kullanarak ASP.NET Core 2.1 projesi oluşturma
+## <a name="creating-the-aspnet-core-22-project-using-visual-studio-2017"></a>Visual Studio 2017'yi kullanarak ASP.NET Core 2.2 projesi oluşturma
 
 ASP.NET Core, Microsoft ve GitHub üzerinde .NET topluluk tarafından korunan bir genel amaçlı bir geliştirme platformudur. Bu Windows, macOS ve Linux'ta destekleyen platformlar arası ve cihaz, Bulut ve katıştırılmış IOT senaryoları için kullanılabilir.
 
-Bu örnek, örnek oluşturmak için ek bilgisine ihtiyacınız yoktur, bir Visual Studio Web API şablonu temel alan basit bir proje kullanır. Bir ASP.NET Core 2.1 teknolojisini kullanarak REST API'sini küçük bir proje çalıştırmak için tüm öğeleri içeren bir standart şablonu kullanarak proje oluşturmak yeterlidir.
+Bu örnek, örnek oluşturmak için ek bilgisine ihtiyacınız yoktur, bir Visual Studio Web API şablonu temel alan basit bir proje kullanır. Bir ASP.NET Core 2.2 teknolojisini kullanarak REST API'sini küçük bir proje çalıştırmak için tüm öğeleri içeren bir standart şablonu kullanarak proje oluşturmak yeterlidir.
 
 ![Yeni Proje penceresinin Visual Studio kullanarak ASP.NET Core Web uygulaması seçme ekleyin.](media/create-aspnet-core-application.png)
 
@@ -39,13 +39,13 @@ Visual Studio'da örnek proje oluşturmak için seçin **dosya** > **yeni** > **
 
 Visual Studio web projeleri için şablonları listeler. Bizim örneğimizde, seçin **API** bir ASP.NET Web API uygulaması oluşturmak için.
 
-Çerçeve ASP.NET Core 2.1 seçtiğinizden emin olun. .NET core 2.1 Visual Studio 2017'ın son sürümünde bulunan ve otomatik olarak yüklenir ve Visual Studio 2017'yi yüklediğinizde sizin için yapılandırılır.
+Çerçeve ASP.NET Core 2.2 seçtiğinizden emin olun. .NET core 2.2 en son Visual Studio 2017 sürümünde bulunan ve otomatik olarak yüklenir ve Visual Studio 2017'yi yüklediğinizde sizin için yapılandırılır.
 
 ![API seçeneği belirlenmiş bir ASP.NET Core Web uygulaması türünü seçmek için visual Studio iletişim.](media/create-web-api-application.png)
 
-**Şekil 4-37**. ASP.NET CORE 2.1 seçme ve Web API proje türü
+**Şekil 4-37**. ASP.NET CORE 2.2 seçme ve Web API proje türü
 
-.NET Core herhangi bir önceki sürümü varsa, indirin ve 2.1 sürümü <https://www.microsoft.com/net/download/core#/sdk>.
+.NET Core herhangi bir önceki sürümü varsa, indirin ve yükleyin 2.2 sürümünden <https://www.microsoft.com/net/download/core#/sdk>.
 
 Docker desteği projeyi oluştururken ekleyebilir veya daha sonra bu nedenle, "projenizin herhangi bir zamanda docker kapsayıcılarında çalıştırın". Proje oluşturulduktan sonra Docker desteği eklemek için Çözüm Gezgini'nde proje düğümüne sağ tıklayın ve seçin **Ekle** > **Docker desteği** bağlam menüsünde.
 
@@ -59,7 +59,7 @@ Docker destek eklemeyi tamamlamak için Windows veya Linux seçebilirsiniz. Bu �
 
 **Şekil 4-39**. Linux kapsayıcıları seçme.
 
-Bu basit adımları uygulayarak bir Linux kapsayıcısı üzerinde çalışan ASP.NET Core 2.1 uygulamanızı sahip.
+Bu basit adımları uygulayarak bir Linux kapsayıcısı üzerinde çalışan ASP.NET Core 2.2 uygulamanızı sahip.
 
 Gördüğünüz gibi Visual Studio 2017 ile Docker arasında tümleştirme için geliştirici üretkenliği tamamen yönlendirilmiş demektir.
 
@@ -125,6 +125,12 @@ docker tag mssampleaksapplication:latest mssampleacr.azurecr.io/mssampleaksappli
 
 ### <a name="push-the-image-into-the-azure-acr"></a>Azure ACR görüntü gönderme
 
+Azure Container Registry'ye oturum açın
+
+```console
+az acr login --name mssampleacr
+```
+
 Aşağıdaki komutu kullanarak Azure ACR görüntüyü gönderin:
 
 ```console
@@ -158,7 +164,7 @@ spec:
         app: mssample-kub-app
     spec:
       containers:
-        - mane: mssample-services-app
+        - name: mssample-services-app
           image: mssampleacr.azurecr.io/mssampleaksapplication:v1
           ports:
             - containerPort: 80

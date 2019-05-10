@@ -2,12 +2,12 @@
 title: entity set
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-ms.openlocfilehash: 7fcaa2cb9bac02271940a712d4d044df25d7d4cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: da70d25790918340e92df83b1c2c704c5dc54226
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033962"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599630"
 ---
 # <a name="entity-set"></a>entity set
 Bir *varlık kümesi* için mantıksal bir kapsayıcıdır örneklerini bir [varlık türü](../../../../docs/framework/data/adonet/entity-type.md) ve bu varlık türünden türetilmiş herhangi bir tür örneği. (Türetilen türleri hakkında daha fazla bilgi için bkz. [varlık veri modeli: Devralma](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) Bir varlık türü ve bir varlık kümesi arasındaki ilişki, satır ve ilişkisel bir veritabanındaki bir tablo arasındaki ilişkiyi benzerdir: Bir satır gibi bir varlık türü, veri yapısını açıklar ve bir tablo gibi belirli bir yapının örneği bir varlık kümesini içerir. Bir varlık kümesindeki bir veri yapısı modelleme değil; verilerin yapısını açıklamaz. Bir veri deposuna eşlenebilir bunun yerine, bir varlık kümesindeki bir yapısı (örneğin, ortak dil çalışma zamanı veya bir SQL Server veritabanı) barındıran veya depolama ortamı için Grup varlık türü örneklerine sağlar.  

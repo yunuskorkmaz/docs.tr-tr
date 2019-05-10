@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 3e05e18225b198e9e34b4b96717cc813dab836c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d3b77a506186166c9ad76490ef47f8759c704eb
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710114"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452724"
 ---
 # <a name="namespaces-c-programming-guide"></a>Ad Alanları (C# Programlama Kılavuzu)
 
@@ -48,12 +48,11 @@ Ad alanları, aşağıdaki özelliklere sahiptir:
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- [C# Programlama Kılavuzu](../index.md)
 - [Ad Alanlarını Kullanma](using-namespaces.md)
 - [Nasıl yapılır: Genel Namespace diğer adlarını kullanma](how-to-use-the-global-namespace-alias.md)
 - [Nasıl yapılır: Kullanım My Namespace](how-to-use-the-my-namespace.md)
-- [C# Programlama Kılavuzu](../index.md)
 - [Tanımlayıcı adları](../inside-a-program/identifier-names.md)
 - [Ad Alanı Anahtar Sözcükleri](../../language-reference/keywords/namespace-keywords.md)
 - [using Yönergesi](../../language-reference/keywords/using-directive.md)
 - [:: İşleç](../../language-reference/operators/namespace-alias-qualifer.md)
-- [. İşleç](../../language-reference/operators/member-access-operator.md)
