@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code
 - programming [Visual Basic], Visual Basic coding conventions
 ms.assetid: dd9be76f-6944-4e78-ad72-0b6084a3fc13
-ms.openlocfilehash: b79e339ebe81a7228a02837e5c0c23c80a8132e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9dbe8fe977b2aa11573ab7a1ac1d79be0b5204af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916948"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624328"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>Program Yapısı ve Kod Kuralları (Visual Basic)
 Bu bölümde tipik Visual Basic program yapısı sunar, basit bir Visual Basic program, "Hello, World" sağlar ve Visual Basic kod kurallarını açıklar. Kod kuralları bir programın mantığı değil, ancak fiziksel yapısı ve görünüm odaklanan önerilerdir. Bunların izlenmesi kodunuzun okuyun, anlamak ve bakımını kolaylaştırır. Kod kuralları, diğerlerinin yanı sıra şunları içerebilir:  

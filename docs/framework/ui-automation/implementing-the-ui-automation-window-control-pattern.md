@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: 4f11f82b628ac020cbda70d65adf7813291c60a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 07b17ae1ed89c84bac4ac40e9934a0d36fda357f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645766"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625834"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>UI Otomasyonu Pencere Denetim Düzenini Uygulama
 > [!NOTE]
@@ -41,15 +41,15 @@ ms.locfileid: "61645766"
   
 |Gerekli üye|Üye türü|Notlar|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Özellik|None|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Özellik|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Özellik|Yok.|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Özellik|Yok.|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Özellik|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Özellik|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Özellik|None|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Yöntem|Yok.|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Yöntem|Yok.|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Yöntem|Yok.|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Yöntem|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Yöntem|None|  
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Olay|Yok.|  
 |<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Olay|Yok.|  
 |<xref:System.Windows.Automation.WindowInteractionState>|Olay|Olması garanti edilmez <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  

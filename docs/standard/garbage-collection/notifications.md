@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10f947fc44e69368e30614e0b41eaf7c73fb6563
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cc4850ff87d9ea827e86a16ee6b3a6953c1e3552
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026204"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622701"
 ---
 # <a name="garbage-collection-notifications"></a>Çöp Toplama Bildirimleri
 Bazı durumlarda, ortak dil çalışma zamanı tarafından tam çöp toplama (diğer bir deyişle, 2. nesil koleksiyonu) performansını olumsuz yönde etkileyebilir. Bu, özellikle büyük hacimlerde istekleri işleyebilir sunucuları ile ilgili bir sorun olabilir. Bu durumda, uzun bir çöp toplama, istek zaman aşımı neden olabilir. Tam koleksiyonu bir kritik süre içinde oluşmasını önlemek için tam çöp toplama işleminin yaklaşmakta olduğunun ve eylem iş yükünü başka bir sunucu örneğine yeniden yönlendirmek için bildirim alabilirsiniz. Koşuluyla isteklerini işlemek geçerli sunucu örneği gerekmez, ayrıca koleksiyon kendiniz zorlarsınız.  

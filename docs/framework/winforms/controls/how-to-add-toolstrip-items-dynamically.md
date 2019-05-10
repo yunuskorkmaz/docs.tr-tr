@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items dynamically
 - ToolStrip control [Windows Forms]
 ms.assetid: 0e8dea56-5f46-408b-914d-7e360341a234
-ms.openlocfilehash: d84b62005554479d227778f513e72594322791a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9426c7cb3251dbbd95727b78c57be7a0b71556e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124936"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624022"
 ---
 # <a name="how-to-add-toolstrip-items-dynamically"></a>Nasıl yapılır: Dinamik Olarak ToolStrip Öğeleri Ekleme
 Dinamik olarak menü öğesi koleksiyonu doldurmak bir <xref:System.Windows.Forms.ToolStrip> menü ne zaman açıldığını kontrol.  
@@ -32,7 +32,7 @@ Dinamik olarak menü öğesi koleksiyonu doldurmak bir <xref:System.Windows.Form
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular.  
+- System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular.  
   
  Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   

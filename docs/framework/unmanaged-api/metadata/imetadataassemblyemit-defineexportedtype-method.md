@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e89fda72371f197efeeeef8f31ec396c334cfcb2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5702fac139ba602828bb8722a1e3e25d6f1c58f6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122037"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625433"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType Yöntemi
 Oluşturur bir `ExportedType` yapısı meta verilerini içeren, belirtilen dışarı türü ve ilişkili meta veri belirteci döndürür.  
@@ -46,13 +46,13 @@ HRESULT DefineExportedType (
  `tkImplementation`  
  [in] Dışarı aktarılan tür burada uygulanan belirten bir belirteç. Geçerli değerler ve bunların ilişkili anlamları vardır:  
   
--   `mdFile` Bu derleme içinde farklı bir dosya türü uygulanır.  
+- `mdFile` Bu derleme içinde farklı bir dosya türü uygulanır.  
   
--   `mdAssemblyRef` Türü farklı bir derlemede uygulanır.  
+- `mdAssemblyRef` Türü farklı bir derlemede uygulanır.  
   
--   `mdExportedTYpe` Tür, başka bir tür içinde yer alıyor.  
+- `mdExportedTYpe` Tür, başka bir tür içinde yer alıyor.  
   
--   `mdFileNil` Türü, bildirim olarak aynı dosya ve iç içe geçmiş bir tür değil.  
+- `mdFileNil` Türü, bildirim olarak aynı dosya ve iç içe geçmiş bir tür değil.  
   
  `tkTypeDef`  
  [in] Bir belirteci meta veri dışarı aktarılmasına izin türünü belirtir. İçinde bu değer girilir `TypeDef` tablo dosyanızda türün uyguladığı ve yalnızca bu dosya bu derlemede olduğunda geçerlidir.  

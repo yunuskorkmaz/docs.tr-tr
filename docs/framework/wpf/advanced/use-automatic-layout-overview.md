@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 5df6d39bef137bd4005316eac252ca0952df5e7f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a9f04f6da4dc4024f4c9ece19f045eb8e3775e6a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098786"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620879"
 ---
 # <a name="use-automatic-layout-overview"></a>Otomatik Düzen Kullanımına Genel Bakış
 Bu konu nasıl yazılacağı konusunda geliştiriciler için yönergeler tanıtır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yerelleştirilebilir uygulamalarla [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. Geçmişte, zaman alıcı bir işlem bir kullanıcı Arabirimi yerelleştirmesi oluştu. Kullanıcı Arabirimi için uyarlandığı her bir dilin piksel piksel ayarlama gereklidir. Doğru tasarıma ve doğru kodlama standartları ile Bugün [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] yerelleştiriciler yeniden boyutlandırma ve yeniden konumlandırma yapmak için daha az olması oluşturulabilir. Daha kolay yeniden boyutlandırılan ve konumlandırılabilir uygulamalar yazma yaklaşım otomatik düzen olarak adlandırılır ve kullanarak gerçekleştirilebilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama tasarım.  
@@ -19,15 +19,15 @@ Bu konu nasıl yazılacağı konusunda geliştiriciler için yönergeler tanıt�
 ## <a name="advantages-of-using-automatic-layout"></a>Otomatik Düzen kullanmanın avantajları  
  Çünkü [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Sunumda güçlü ve esnek, farklı dillerde gereksinimlerine uyacak şekilde ayarlanmış bir uygulamada düzen öğelerini olanağı sağlar. Aşağıdaki liste bazı otomatik düzen avantajları işaret eder.  
 
--   Kullanıcı Arabirimi, herhangi bir dilde de görüntüler.  
+- Kullanıcı Arabirimi, herhangi bir dilde de görüntüler.  
 
--   Metin çevrildikten sonra konumunu ve boyutunu denetimleri yeniden ayarlama gereksinimini azaltır.  
+- Metin çevrildikten sonra konumunu ve boyutunu denetimleri yeniden ayarlama gereksinimini azaltır.  
   
--   Pencere boyutu yeniden ayarlama gereksinimini azaltır.  
+- Pencere boyutu yeniden ayarlama gereksinimini azaltır.  
 
--   UI düzeni, herhangi bir dilde düzgün bir şekilde işler.  
+- UI düzeni, herhangi bir dilde düzgün bir şekilde işler.  
 
--   Yerelleştirme, dize çevirisinden biraz daha fazla noktasına azaltılabilir.  
+- Yerelleştirme, dize çevirisinden biraz daha fazla noktasına azaltılabilir.  
   
 <a name="autolayout_controls"></a>   
 ## <a name="automatic-layout-and-controls"></a>Otomatik Düzen ve denetimler  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33aaf09e284db5c818eb0ff3917533cce5e70ad7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 201dbc759b619f65599e09c78c14b96d17395952
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811663"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620706"
 ---
 # <a name="net-regular-expressions"></a>.NET normal ifadeler
 Normal ifadeler, metin işleme için güçlü, esnek ve verimli bir yöntem sunar. Normal ifadelerin kapsamlı desen eşleştirme gösterimi hızlı bir şekilde büyük miktarlarda metini belirli karakter desenlerini bulmak için ayrıştırılacak sağlar; önceden tanımlı bir desenle (örneğin bir e-posta adresi); eşleştiğinden emin olmak için metin doğrulamak için ayıklamak için Düzenle, Değiştir veya metin alt dizeleri silin; ve bir rapor oluşturmak için ayıklanan dizeleri bir koleksiyona eklemek için. Dizeler üzerinde çalışan veya büyük metin bloklarını ayrıştıran uygulamalar için normal ifadeler vazgeçilmez bir araçtır.  

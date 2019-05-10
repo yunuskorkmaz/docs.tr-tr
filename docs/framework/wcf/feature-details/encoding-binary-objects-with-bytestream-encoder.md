@@ -2,12 +2,12 @@
 title: ByteStream Kodlayıcı ile İkili Nesneler Kodlama
 ms.date: 03/30/2017
 ms.assetid: 020ee981-c889-4b12-a3ea-91823ef46444
-ms.openlocfilehash: 9619fdf6979833c30159e1ea02b3f8d6b98a6629
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 09a919e11971f81bc76dca0e45a7eb0e70ef749e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856511"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626935"
 ---
 # <a name="encoding-binary-objects-with-bytestream-encoder"></a>ByteStream Kodlayıcı ile İkili Nesneler Kodlama
 Gönderme ve alma ham ikili verileri Windows Communication Foundation (WCF) ile yapılandırılmış kullanarak <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>.  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b967e6441ae3f3d43e5a6276cfcf79e3c44f74cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873177"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613969"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Çalışma Zamanının Derlemelerin Konumunu Bulması
 .NET Framework uygulamanızı başarıyla dağıtmak için ortak dil çalışma zamanının nasıl bulur ve uygulamanızı oluşturan derlemeleri bağlar anlamanız gerekir. Varsayılan olarak, çalışma zamanı tamamen aynı sürümünün uygulamanın derlendiği bir derleme ile bağlamak çalışır. Bu varsayılan davranışı yapılandırma dosyası ayarlarının tarafından geçersiz kılınabilir.  
