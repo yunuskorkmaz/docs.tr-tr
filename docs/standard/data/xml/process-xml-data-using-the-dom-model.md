@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 56b6e9c7-ed82-4a65-a647-7be32c83bcc8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c59d84148aae35794410f5f7237cef96ab5b7560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d34d22d8329f0bc26c1e29653137211bf300d324
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933672"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647816"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a>DOM Modelini Kullanarak XML Verilerini İşleme
 XML belge nesne modeli (DOM) XML verileri standart bir nesneler kümesini değerlendirir ve XML verilerini bellek içinde işleme kullanılır. `System.Xml` Ad alanı XML belgeleri, parçalar, düğüm veya düğüm kümeleri programlı bir gösterimini sağlar. World Wide Web Consortium (W3C) DOM düzey 1 çekirdek ve DOM düzeyi 2 Çekirdek önerileri temel alır.  

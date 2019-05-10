@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: 50df0e0710c1f722d4e769ad89b653f6a8d5e394
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c922c2bc7908803f2215cd4dac108cc3c523ce28
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642288"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647309"
 ---
 # <a name="ipv6-addressing"></a>IPv6 Adresleme
 Internet Protokolü sürüm 6 (IPv6), 128 bit uzunluğunda adresleridir. Kullanılabilir adresler Internet'in topolojisini yansıtmak Yönlendirme etki alanları bir hiyerarşiye alt bölümlere ayırmak için bu tür bir geniş adres alanı bir neden olmasıdır. Başka bir nedeni, cihazları ağa bağlanan adreslerini ağ bağdaştırıcıları (veya arabirimleri) eşlemektir. IPv6 adresleri ağ arabirimi düzeyinde olduğunu ve ayrıca otomatik yapılandırma özellikleri, düşük düzeyinde gidermek için doğal bir özellik sunar.  

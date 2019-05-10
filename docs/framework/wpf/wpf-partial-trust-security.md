@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 98377a48b1ffe1ffabd72d0b42de4ed3da3ef93a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696599"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642934"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF Kısmi Güven Güvenliği
 <a name="introduction"></a> Genel olarak, Internet uygulamaları kötü amaçlı hasarı önlemek için kritik sistem kaynaklarına doğrudan erişimini sınırlı olmalıdır. Varsayılan olarak, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] ve istemci tarafı komut dosyası dilleri önemli sistem kaynaklarına erişmek mümkün değildir. Windows Presentation Foundation (WPF) tarayıcıda tutulan uygulamalar tarayıcıdan başlatılabilir çünkü kısıtlamaları benzer bir kümesi için uygun olmalıdır. Bu kısıtlamalar uygulamak [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] hem de bağımlı [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] ve [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (bkz [WPF güvenlik stratejisi - Platform güvenliği](wpf-security-strategy-platform-security.md)). Varsayılan olarak, tarayıcıda tutulan uygulamalar Internet bölgesine istek [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] Internet, yerel intranet veya yerel bilgisayarda başlatılan fark etmeksizin izin kümesi. Şey tam izinler kümesini değerinden ile çalışan uygulamalar kısmi güven ile çalıştırılması söylenir.  
