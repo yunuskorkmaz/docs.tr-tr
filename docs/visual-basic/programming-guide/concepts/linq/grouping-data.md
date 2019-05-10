@@ -3,30 +3,30 @@ title: Gruplandırma veri (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
 ms.openlocfilehash: b5a6a3795e02e0638b81824701ad0cbacbcca91a
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63808130"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754467"
 ---
-# <a name="grouping-data-visual-basic"></a><span data-ttu-id="feb52-102">Gruplandırma veri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="feb52-102">Grouping Data (Visual Basic)</span></span>
-<span data-ttu-id="feb52-103">Gruplandırma, böylece ortak bir özniteliği her gruptaki öğe paylaştırmak gruplar halinde veri yerleştirme işlemi için ifade eder.</span><span class="sxs-lookup"><span data-stu-id="feb52-103">Grouping refers to the operation of putting data into groups so that the elements in each group share a common attribute.</span></span>  
+# <a name="grouping-data-visual-basic"></a><span data-ttu-id="6059f-102">Gruplandırma veri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6059f-102">Grouping Data (Visual Basic)</span></span>
+<span data-ttu-id="6059f-103">Gruplandırma, böylece ortak bir özniteliği her gruptaki öğe paylaştırmak gruplar halinde veri yerleştirme işlemi için ifade eder.</span><span class="sxs-lookup"><span data-stu-id="6059f-103">Grouping refers to the operation of putting data into groups so that the elements in each group share a common attribute.</span></span>  
   
- <span data-ttu-id="feb52-104">Aşağıdaki çizimde, bir karakter dizisi gruplandırma sonuçlarını gösterir.</span><span class="sxs-lookup"><span data-stu-id="feb52-104">The following illustration shows the results of grouping a sequence of characters.</span></span> <span data-ttu-id="feb52-105">Her grup için anahtar karakterdir.</span><span class="sxs-lookup"><span data-stu-id="feb52-105">The key for each group is the character.</span></span>  
+ <span data-ttu-id="6059f-104">Aşağıdaki çizimde, bir karakter dizisi gruplandırma sonuçlarını gösterir.</span><span class="sxs-lookup"><span data-stu-id="6059f-104">The following illustration shows the results of grouping a sequence of characters.</span></span> <span data-ttu-id="6059f-105">Her grup için anahtar karakterdir.</span><span class="sxs-lookup"><span data-stu-id="6059f-105">The key for each group is the character.</span></span>  
   
  ![LINQ gruplandırma işleminde gösteren diyagram.](./media/grouping-data/linq-group-operation.png)  
   
- <span data-ttu-id="feb52-107">Veri öğeleri gruplayın standart sorgu işleci yöntemleri aşağıdaki bölümünde listelenir.</span><span class="sxs-lookup"><span data-stu-id="feb52-107">The standard query operator methods that group data elements are listed in the following section.</span></span>  
+ <span data-ttu-id="6059f-107">Veri öğeleri gruplayın standart sorgu işleci yöntemleri aşağıdaki bölümünde listelenir.</span><span class="sxs-lookup"><span data-stu-id="6059f-107">The standard query operator methods that group data elements are listed in the following section.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="feb52-108">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="feb52-108">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="6059f-108">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="6059f-108">Methods</span></span>  
   
-|<span data-ttu-id="feb52-109">Yöntem adı</span><span class="sxs-lookup"><span data-stu-id="feb52-109">Method Name</span></span>|<span data-ttu-id="feb52-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="feb52-110">Description</span></span>|<span data-ttu-id="feb52-111">Visual Basic sorgu ifade sözdizimi</span><span class="sxs-lookup"><span data-stu-id="feb52-111">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="feb52-112">Daha fazla bilgi</span><span class="sxs-lookup"><span data-stu-id="feb52-112">More Information</span></span>|  
+|<span data-ttu-id="6059f-109">Yöntem adı</span><span class="sxs-lookup"><span data-stu-id="6059f-109">Method Name</span></span>|<span data-ttu-id="6059f-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6059f-110">Description</span></span>|<span data-ttu-id="6059f-111">Visual Basic sorgu ifade sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6059f-111">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="6059f-112">Daha fazla bilgi</span><span class="sxs-lookup"><span data-stu-id="6059f-112">More Information</span></span>|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|<span data-ttu-id="feb52-113">Gruplandırma ölçütü</span><span class="sxs-lookup"><span data-stu-id="feb52-113">GroupBy</span></span>|<span data-ttu-id="feb52-114">Sık kullanılan bir özniteliği paylaşan öğeleri gruplandırır.</span><span class="sxs-lookup"><span data-stu-id="feb52-114">Groups elements that share a common attribute.</span></span> <span data-ttu-id="feb52-115">Her grubu tarafından temsil edilen bir <xref:System.Linq.IGrouping%602> nesne.</span><span class="sxs-lookup"><span data-stu-id="feb52-115">Each group is represented by an <xref:System.Linq.IGrouping%602> object.</span></span>|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="feb52-116">ToLookup</span><span class="sxs-lookup"><span data-stu-id="feb52-116">ToLookup</span></span>|<span data-ttu-id="feb52-117">İçine bir öğe ekler; bir <xref:System.Linq.Lookup%602> (bire çok bir sözlük) tabanlı bir anahtar Seçici işlevdir.</span><span class="sxs-lookup"><span data-stu-id="feb52-117">Inserts elements into a <xref:System.Linq.Lookup%602> (a one-to-many dictionary) based on a key selector function.</span></span>|<span data-ttu-id="feb52-118">Geçerli değildir.</span><span class="sxs-lookup"><span data-stu-id="feb52-118">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="6059f-113">Gruplandırma ölçütü</span><span class="sxs-lookup"><span data-stu-id="6059f-113">GroupBy</span></span>|<span data-ttu-id="6059f-114">Sık kullanılan bir özniteliği paylaşan öğeleri gruplandırır.</span><span class="sxs-lookup"><span data-stu-id="6059f-114">Groups elements that share a common attribute.</span></span> <span data-ttu-id="6059f-115">Her grubu tarafından temsil edilen bir <xref:System.Linq.IGrouping%602> nesne.</span><span class="sxs-lookup"><span data-stu-id="6059f-115">Each group is represented by an <xref:System.Linq.IGrouping%602> object.</span></span>|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="6059f-116">ToLookup</span><span class="sxs-lookup"><span data-stu-id="6059f-116">ToLookup</span></span>|<span data-ttu-id="6059f-117">İçine bir öğe ekler; bir <xref:System.Linq.Lookup%602> (bire çok bir sözlük) tabanlı bir anahtar Seçici işlevdir.</span><span class="sxs-lookup"><span data-stu-id="6059f-117">Inserts elements into a <xref:System.Linq.Lookup%602> (a one-to-many dictionary) based on a key selector function.</span></span>|<span data-ttu-id="6059f-118">Geçerli değildir.</span><span class="sxs-lookup"><span data-stu-id="6059f-118">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-example"></a><span data-ttu-id="feb52-119">Sorgu ifade sözdizimi örneği</span><span class="sxs-lookup"><span data-stu-id="feb52-119">Query Expression Syntax Example</span></span>  
- <span data-ttu-id="feb52-120">Aşağıdaki kod örneğinde `Group By` yan tümcesi bir liste çift veya tek sayı olup olmadıkları göre grup dizisidir.</span><span class="sxs-lookup"><span data-stu-id="feb52-120">The following code example uses the `Group By` clause to group integers in a list according to whether they are even or odd.</span></span>  
+## <a name="query-expression-syntax-example"></a><span data-ttu-id="6059f-119">Sorgu ifade sözdizimi örneği</span><span class="sxs-lookup"><span data-stu-id="6059f-119">Query Expression Syntax Example</span></span>  
+ <span data-ttu-id="6059f-120">Aşağıdaki kod örneğinde `Group By` yan tümcesi bir liste çift veya tek sayı olup olmadıkları göre grup dizisidir.</span><span class="sxs-lookup"><span data-stu-id="6059f-120">The following code example uses the `Group By` clause to group integers in a list according to whether they are even or odd.</span></span>  
   
 ```vb  
 Dim numbers As New System.Collections.Generic.List(Of Integer)(  
@@ -63,10 +63,10 @@ MsgBox(sb.ToString())
 ' 208  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="feb52-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="feb52-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6059f-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6059f-121">See also</span></span>
 
 - <xref:System.Linq>
-- [<span data-ttu-id="feb52-122">Standart sorgu işleçlerine genel bakış (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="feb52-122">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [<span data-ttu-id="feb52-123">Group By Yan Tümcesi</span><span class="sxs-lookup"><span data-stu-id="feb52-123">Group By Clause</span></span>](../../../../visual-basic/language-reference/queries/group-by-clause.md)
-- [<span data-ttu-id="feb52-124">Nasıl yapılır: Grup dosyalarını uzantısı (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="feb52-124">How to: Group Files by Extension (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
-- [<span data-ttu-id="feb52-125">Nasıl yapılır: Gruplar (LINQ) (Visual Basic) kullanarak bir dosyayı birden çok dosyaya bölme</span><span class="sxs-lookup"><span data-stu-id="feb52-125">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [<span data-ttu-id="6059f-122">Standart sorgu işleçlerine genel bakış (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6059f-122">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [<span data-ttu-id="6059f-123">Group By Yan Tümcesi</span><span class="sxs-lookup"><span data-stu-id="6059f-123">Group By Clause</span></span>](../../../../visual-basic/language-reference/queries/group-by-clause.md)
+- [<span data-ttu-id="6059f-124">Nasıl yapılır: Grup dosyalarını uzantısı (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6059f-124">How to: Group Files by Extension (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [<span data-ttu-id="6059f-125">Nasıl yapılır: Gruplar (LINQ) (Visual Basic) kullanarak bir dosyayı birden çok dosyaya bölme</span><span class="sxs-lookup"><span data-stu-id="6059f-125">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

@@ -6,43 +6,43 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 6a990dbf26ac1a6bdc642442b9f4b75c05ee9635
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 87a7b16d3e096f6a5bf05475ccc7c43862324ae3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703042"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583360"
 ---
-# <a name="static-constructors-c-programming-guide"></a><span data-ttu-id="97737-102">Statik Oluşturucular (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="97737-102">Static Constructors (C# Programming Guide)</span></span>
-<span data-ttu-id="97737-103">Statik Oluşturucu herhangi başlatmak için kullanılan [statik](../../../csharp/language-reference/keywords/static.md) verileri veya yalnızca bir kez gerçekleştirilmesi gereken belirli bir eylemi gerçekleştirmek için.</span><span class="sxs-lookup"><span data-stu-id="97737-103">A static constructor is used to initialize any [static](../../../csharp/language-reference/keywords/static.md) data, or to perform a particular action that needs to be performed once only.</span></span> <span data-ttu-id="97737-104">İlk örneği oluşturulduğunda veya herhangi bir statik üye başvurulan önce otomatik olarak adlandırılır.</span><span class="sxs-lookup"><span data-stu-id="97737-104">It is called automatically before the first instance is created or any static members are referenced.</span></span>  
+# <a name="static-constructors-c-programming-guide"></a><span data-ttu-id="88476-102">Statik Oluşturucular (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="88476-102">Static Constructors (C# Programming Guide)</span></span>
+<span data-ttu-id="88476-103">Statik Oluşturucu herhangi başlatmak için kullanılan [statik](../../../csharp/language-reference/keywords/static.md) verileri veya yalnızca bir kez gerçekleştirilmesi gereken belirli bir eylemi gerçekleştirmek için.</span><span class="sxs-lookup"><span data-stu-id="88476-103">A static constructor is used to initialize any [static](../../../csharp/language-reference/keywords/static.md) data, or to perform a particular action that needs to be performed once only.</span></span> <span data-ttu-id="88476-104">İlk örneği oluşturulduğunda veya herhangi bir statik üye başvurulan önce otomatik olarak adlandırılır.</span><span class="sxs-lookup"><span data-stu-id="88476-104">It is called automatically before the first instance is created or any static members are referenced.</span></span>  
   
  [!code-csharp[csProgGuideObjects#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#14)]  
   
- <span data-ttu-id="97737-105">Statik Oluşturucular, aşağıdaki özelliklere sahiptir:</span><span class="sxs-lookup"><span data-stu-id="97737-105">Static constructors have the following properties:</span></span>  
+ <span data-ttu-id="88476-105">Statik Oluşturucular, aşağıdaki özelliklere sahiptir:</span><span class="sxs-lookup"><span data-stu-id="88476-105">Static constructors have the following properties:</span></span>  
   
-- <span data-ttu-id="97737-106">Statik Oluşturucu erişim değiştiricileri alın veya parametreleri desteklemez.</span><span class="sxs-lookup"><span data-stu-id="97737-106">A static constructor does not take access modifiers or have parameters.</span></span>  
+- <span data-ttu-id="88476-106">Statik Oluşturucu erişim değiştiricileri alın veya parametreleri desteklemez.</span><span class="sxs-lookup"><span data-stu-id="88476-106">A static constructor does not take access modifiers or have parameters.</span></span>  
   
-- <span data-ttu-id="97737-107">Statik Oluşturucu otomatik olarak başlatmak için çağırılır [sınıfı](../../../csharp/language-reference/keywords/class.md) önce ilk örneği oluşturulduğunda veya herhangi bir statik üye başvurulur.</span><span class="sxs-lookup"><span data-stu-id="97737-107">A static constructor is called automatically to initialize the [class](../../../csharp/language-reference/keywords/class.md) before the first instance is created or any static members are referenced.</span></span>  
+- <span data-ttu-id="88476-107">Statik Oluşturucu otomatik olarak başlatmak için çağırılır [sınıfı](../../../csharp/language-reference/keywords/class.md) önce ilk örneği oluşturulduğunda veya herhangi bir statik üye başvurulur.</span><span class="sxs-lookup"><span data-stu-id="88476-107">A static constructor is called automatically to initialize the [class](../../../csharp/language-reference/keywords/class.md) before the first instance is created or any static members are referenced.</span></span>  
   
-- <span data-ttu-id="97737-108">Statik Oluşturucu doğrudan çağrılamaz.</span><span class="sxs-lookup"><span data-stu-id="97737-108">A static constructor cannot be called directly.</span></span>  
+- <span data-ttu-id="88476-108">Statik Oluşturucu doğrudan çağrılamaz.</span><span class="sxs-lookup"><span data-stu-id="88476-108">A static constructor cannot be called directly.</span></span>  
   
-- <span data-ttu-id="97737-109">Kullanıcının statik Oluşturucu programa ne zaman çalıştırılır üzerinde denetimi yoktur.</span><span class="sxs-lookup"><span data-stu-id="97737-109">The user has no control on when the static constructor is executed in the program.</span></span>  
+- <span data-ttu-id="88476-109">Kullanıcının statik Oluşturucu programa ne zaman çalıştırılır üzerinde denetimi yoktur.</span><span class="sxs-lookup"><span data-stu-id="88476-109">The user has no control on when the static constructor is executed in the program.</span></span>  
   
-- <span data-ttu-id="97737-110">Tipik bir kullanımı statik Oluşturucular, sınıf, bir günlük dosyası kullanarak ve oluşturucu girişleri bu dosyaya yazmak için kullanılan andır.</span><span class="sxs-lookup"><span data-stu-id="97737-110">A typical use of static constructors is when the class is using a log file and the constructor is used to write entries to this file.</span></span>  
+- <span data-ttu-id="88476-110">Tipik bir kullanımı statik Oluşturucular, sınıf, bir günlük dosyası kullanarak ve oluşturucu girişleri bu dosyaya yazmak için kullanılan andır.</span><span class="sxs-lookup"><span data-stu-id="88476-110">A typical use of static constructors is when the class is using a log file and the constructor is used to write entries to this file.</span></span>  
   
-- <span data-ttu-id="97737-111">Statik oluşturucular da yararlı Oluşturucu çağırabilir, yönetilmeyen kod için sarmalayıcı sınıflar oluşturma `LoadLibrary` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="97737-111">Static constructors are also useful when creating wrapper classes for unmanaged code, when the constructor can call the `LoadLibrary` method.</span></span>  
+- <span data-ttu-id="88476-111">Statik oluşturucular da yararlı Oluşturucu çağırabilir, yönetilmeyen kod için sarmalayıcı sınıflar oluşturma `LoadLibrary` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="88476-111">Static constructors are also useful when creating wrapper classes for unmanaged code, when the constructor can call the `LoadLibrary` method.</span></span>  
   
-- <span data-ttu-id="97737-112">Statik Oluşturucu bir özel durum oluşturursa, çalışma zamanı, ikinci kez çağırmayacaktır ve türü, programınızın çalıştığı uygulama etki alanı ömrü boyunca başlatılmamış kalır.</span><span class="sxs-lookup"><span data-stu-id="97737-112">If a static constructor throws an exception, the runtime will not invoke it a second time, and the type will remain uninitialized for the lifetime of the application domain in which your program is running.</span></span>  
+- <span data-ttu-id="88476-112">Statik Oluşturucu bir özel durum oluşturursa, çalışma zamanı, ikinci kez çağırmayacaktır ve türü, programınızın çalıştığı uygulama etki alanı ömrü boyunca başlatılmamış kalır.</span><span class="sxs-lookup"><span data-stu-id="88476-112">If a static constructor throws an exception, the runtime will not invoke it a second time, and the type will remain uninitialized for the lifetime of the application domain in which your program is running.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="97737-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="97737-113">Example</span></span>  
- <span data-ttu-id="97737-114">Bu örnekte, sınıf `Bus` bir statik Oluşturucusu vardır.</span><span class="sxs-lookup"><span data-stu-id="97737-114">In this example, class `Bus` has a static constructor.</span></span> <span data-ttu-id="97737-115">Zaman ilk örneğinin `Bus` oluşturulur (`bus1`), sınıf için statik Oluşturucu çağrılır.</span><span class="sxs-lookup"><span data-stu-id="97737-115">When the first instance of `Bus` is created (`bus1`), the static constructor is invoked to initialize the class.</span></span> <span data-ttu-id="97737-116">Statik Oluşturucu yalnızca bir kez olsa bile iki örneği çalıştığından örnek çıktısı doğrular `Bus` oluşturulur, ve örnek oluşturucu döngülerinden önce çalışır.</span><span class="sxs-lookup"><span data-stu-id="97737-116">The sample output verifies that the static constructor runs only one time, even though two instances of `Bus` are created, and that it runs before the instance constructor runs.</span></span>  
+## <a name="example"></a><span data-ttu-id="88476-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="88476-113">Example</span></span>  
+ <span data-ttu-id="88476-114">Bu örnekte, sınıf `Bus` bir statik Oluşturucusu vardır.</span><span class="sxs-lookup"><span data-stu-id="88476-114">In this example, class `Bus` has a static constructor.</span></span> <span data-ttu-id="88476-115">Zaman ilk örneğinin `Bus` oluşturulur (`bus1`), sınıf için statik Oluşturucu çağrılır.</span><span class="sxs-lookup"><span data-stu-id="88476-115">When the first instance of `Bus` is created (`bus1`), the static constructor is invoked to initialize the class.</span></span> <span data-ttu-id="88476-116">Statik Oluşturucu yalnızca bir kez olsa bile iki örneği çalıştığından örnek çıktısı doğrular `Bus` oluşturulur, ve örnek oluşturucu döngülerinden önce çalışır.</span><span class="sxs-lookup"><span data-stu-id="88476-116">The sample output verifies that the static constructor runs only one time, even though two instances of `Bus` are created, and that it runs before the instance constructor runs.</span></span>  
   
  [!code-csharp[csProgGuideObjects#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#15)]  
   
-## <a name="see-also"></a><span data-ttu-id="97737-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="97737-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="88476-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="88476-117">See also</span></span>
 
-- [<span data-ttu-id="97737-118">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="97737-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="97737-119">Sınıflar ve Yapılar</span><span class="sxs-lookup"><span data-stu-id="97737-119">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [<span data-ttu-id="97737-120">Oluşturucular</span><span class="sxs-lookup"><span data-stu-id="97737-120">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)
-- [<span data-ttu-id="97737-121">Statik Sınıflar ve Statik Sınıf Üyeleri</span><span class="sxs-lookup"><span data-stu-id="97737-121">Static Classes and Static Class Members</span></span>](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
-- [<span data-ttu-id="97737-122">Sonlandırıcılar</span><span class="sxs-lookup"><span data-stu-id="97737-122">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [<span data-ttu-id="88476-118">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="88476-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="88476-119">Sınıflar ve Yapılar</span><span class="sxs-lookup"><span data-stu-id="88476-119">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [<span data-ttu-id="88476-120">Oluşturucular</span><span class="sxs-lookup"><span data-stu-id="88476-120">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [<span data-ttu-id="88476-121">Statik Sınıflar ve Statik Sınıf Üyeleri</span><span class="sxs-lookup"><span data-stu-id="88476-121">Static Classes and Static Class Members</span></span>](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
+- [<span data-ttu-id="88476-122">Sonlandırıcılar</span><span class="sxs-lookup"><span data-stu-id="88476-122">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63d4b885b6968b800bc965a9be1ec6b795a42220
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8cdc59228ff9913be808d3909ca3fe9e38a7c72f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771507"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584316"
 ---
-# <a name="iclrstrongnamestrongnamecompareassemblies-method"></a><span data-ttu-id="1cb8f-102">ICLRStrongName::StrongNameCompareAssemblies Yöntemi</span><span class="sxs-lookup"><span data-stu-id="1cb8f-102">ICLRStrongName::StrongNameCompareAssemblies Method</span></span>
-<span data-ttu-id="1cb8f-103">İki derlemenin yalnızca tanımlayıcı ad imzaları tarafından farklı olup olmadığını belirler.</span><span class="sxs-lookup"><span data-stu-id="1cb8f-103">Determines whether two assemblies differ only by their strong name signatures.</span></span>  
+# <a name="iclrstrongnamestrongnamecompareassemblies-method"></a><span data-ttu-id="fc11d-102">ICLRStrongName::StrongNameCompareAssemblies Yöntemi</span><span class="sxs-lookup"><span data-stu-id="fc11d-102">ICLRStrongName::StrongNameCompareAssemblies Method</span></span>
+<span data-ttu-id="fc11d-103">İki derlemenin yalnızca tanımlayıcı ad imzaları tarafından farklı olup olmadığını belirler.</span><span class="sxs-lookup"><span data-stu-id="fc11d-103">Determines whether two assemblies differ only by their strong name signatures.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1cb8f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1cb8f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fc11d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="fc11d-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameCompareAssemblies (  
@@ -37,37 +37,37 @@ HRESULT StrongNameCompareAssemblies (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1cb8f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1cb8f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fc11d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="fc11d-105">Parameters</span></span>  
  `wszAssembly1`  
- <span data-ttu-id="1cb8f-106">[in] İlk bütünleştirilmiş kod yolu.</span><span class="sxs-lookup"><span data-stu-id="1cb8f-106">[in] The path to the first assembly.</span></span>  
+ <span data-ttu-id="fc11d-106">[in] İlk bütünleştirilmiş kod yolu.</span><span class="sxs-lookup"><span data-stu-id="fc11d-106">[in] The path to the first assembly.</span></span>  
   
  `wszAssembly2`  
- <span data-ttu-id="1cb8f-107">[in] İkinci bütünleştirilmiş kod yolu.</span><span class="sxs-lookup"><span data-stu-id="1cb8f-107">[in] The path to the second assembly.</span></span>  
+ <span data-ttu-id="fc11d-107">[in] İkinci bütünleştirilmiş kod yolu.</span><span class="sxs-lookup"><span data-stu-id="fc11d-107">[in] The path to the second assembly.</span></span>  
   
  `pdwResult`  
- <span data-ttu-id="1cb8f-108">[out] Aşağıdaki değerlerden biri:</span><span class="sxs-lookup"><span data-stu-id="1cb8f-108">[out] One of the following values:</span></span>  
+ <span data-ttu-id="fc11d-108">[out] Aşağıdaki değerlerden biri:</span><span class="sxs-lookup"><span data-stu-id="fc11d-108">[out] One of the following values:</span></span>  
   
-- <span data-ttu-id="1cb8f-109">`SN_CMP_DIFFERENT` (0) - derlemeleri farklı veri içerdiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="1cb8f-109">`SN_CMP_DIFFERENT` (0) - Specifies that the assemblies contain different data.</span></span>  
+- <span data-ttu-id="fc11d-109">`SN_CMP_DIFFERENT` (0) - derlemeleri farklı veri içerdiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="fc11d-109">`SN_CMP_DIFFERENT` (0) - Specifies that the assemblies contain different data.</span></span>  
   
-- <span data-ttu-id="1cb8f-110">`SN_CMP_IDENTICAL` (1) - derlemeleri tam olarak aynı kendi imzaları ve sağlama toplamı dahil olmak üzere olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="1cb8f-110">`SN_CMP_IDENTICAL` (1) - Specifies that the assemblies are exactly the same, including their signatures and checksum.</span></span>  
+- <span data-ttu-id="fc11d-110">`SN_CMP_IDENTICAL` (1) - derlemeleri tam olarak aynı kendi imzaları ve sağlama toplamı dahil olmak üzere olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="fc11d-110">`SN_CMP_IDENTICAL` (1) - Specifies that the assemblies are exactly the same, including their signatures and checksum.</span></span>  
   
-- <span data-ttu-id="1cb8f-111">`SN_CMP_SIGONLY` (2) - derlemeler yalnızca imza ve sağlama toplamı farklı olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="1cb8f-111">`SN_CMP_SIGONLY` (2) - Specifies that the assemblies differ only by signature and checksum.</span></span>  
+- <span data-ttu-id="fc11d-111">`SN_CMP_SIGONLY` (2) - derlemeler yalnızca imza ve sağlama toplamı farklı olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="fc11d-111">`SN_CMP_SIGONLY` (2) - Specifies that the assemblies differ only by signature and checksum.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1cb8f-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="1cb8f-112">Return Value</span></span>  
- <span data-ttu-id="1cb8f-113">`S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="1cb8f-113">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="fc11d-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="fc11d-112">Return Value</span></span>  
+ <span data-ttu-id="fc11d-113">`S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="fc11d-113">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1cb8f-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1cb8f-114">Requirements</span></span>  
- <span data-ttu-id="1cb8f-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1cb8f-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fc11d-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="fc11d-114">Requirements</span></span>  
+ <span data-ttu-id="fc11d-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fc11d-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1cb8f-116">**Üst bilgi:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="1cb8f-116">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="fc11d-116">**Üst bilgi:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="fc11d-116">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="1cb8f-117">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="1cb8f-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="fc11d-117">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="fc11d-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1cb8f-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1cb8f-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="fc11d-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fc11d-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1cb8f-119">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1cb8f-119">Remarks</span></span>  
- <span data-ttu-id="1cb8f-120">Bir derlemenin tanımlayıcı ad imzası, derlemenin metin adı, sürüm, kültür ve ortak anahtar belirteci oluşur.</span><span class="sxs-lookup"><span data-stu-id="1cb8f-120">The strong name signature of an assembly consists of the assembly's text name, version, culture, and public key token.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fc11d-119">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="fc11d-119">Remarks</span></span>  
+ <span data-ttu-id="fc11d-120">Bir derlemenin tanımlayıcı ad imzası, derlemenin metin adı, sürüm, kültür ve ortak anahtar belirteci oluşur.</span><span class="sxs-lookup"><span data-stu-id="fc11d-120">The strong name signature of an assembly consists of the assembly's text name, version, culture, and public key token.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1cb8f-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1cb8f-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fc11d-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fc11d-121">See also</span></span>
 
-- [<span data-ttu-id="1cb8f-122">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1cb8f-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="fc11d-122">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="fc11d-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
