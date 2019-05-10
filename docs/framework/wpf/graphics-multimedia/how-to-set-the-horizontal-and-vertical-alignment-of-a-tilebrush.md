@@ -10,12 +10,12 @@ helpviewer_keywords:
 - aligning [WPF], TileBrushes
 - horizontal alignment of Tilebrushes [WPF]
 ms.assetid: 65ae89bd-9246-4c9e-bde4-2fb991d4060d
-ms.openlocfilehash: ddef63bba7fce1bfb8d50b4f2dbaaddfa76709ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e3bfb2b209e40c435c3a321c874dfbd7a9a2fd50
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651329"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912367"
 ---
 # <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Nasıl yapılır: TileBrush Yatay ve Dikey Hizalamasını Ayarlama
 Bu örnek, bir döşeme içindeki içeriği yatay ve dikey hizalamasını denetlemek nasıl gösterir. Yatay ve dikey hizalamasını denetlemek için bir <xref:System.Windows.Media.TileBrush>, kullanma, <xref:System.Windows.Media.TileBrush.AlignmentX%2A> ve <xref:System.Windows.Media.TileBrush.AlignmentY%2A> özellikleri.  

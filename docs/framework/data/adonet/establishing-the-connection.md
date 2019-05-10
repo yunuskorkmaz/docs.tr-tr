@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: 7f8cca02e673339e892c16e0de99e20accdfd404
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 50cf5011376576d371dba558a602187201395bd0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667112"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599595"
 ---
 # <a name="establishing-the-connection"></a>Bağlantı Kurma
 Microsoft SQL Server'a bağlanmak için <xref:System.Data.SqlClient.SqlConnection> SQL Server için .NET Framework veri sağlayıcısı nesnesi. Bir OLE DB veri kaynağına bağlanmak için <xref:System.Data.OleDb.OleDbConnection> nesnesini OLE DB için .NET Framework veri sağlayıcısı. Bir ODBC veri kaynağına bağlanmak için <xref:System.Data.Odbc.OdbcConnection> ODBC için .NET Framework veri sağlayıcısı nesnesi. Bir Oracle veri kaynağına bağlanmak için <xref:System.Data.OracleClient.OracleConnection> Oracle için .NET Framework veri sağlayıcısı nesnesi. Güvenli bir şekilde depolamak ve bağlantı dizelerini almak için bkz. [bağlantı bilgilerini koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md).  

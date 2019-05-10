@@ -7,12 +7,12 @@ helpviewer_keywords:
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: 268d40e8d6eb5f5f2a82a5ce3a3346179c886c14
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d3e0740a472f74116712e737e49f86d4202dea5
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710348"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452796"
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Nasıl yapılır: Genel Namespace diğer adlarını kullanma (C# Programlama Kılavuzu)
 Genel bir üyeye erişme olanağı [ad alanı](../../../csharp/language-reference/keywords/namespace.md) üye aynı ada sahip başka bir varlık tarafından gizlenmiş olabilir durumlarda faydalıdır.  
@@ -50,6 +50,5 @@ Genel bir üyeye erişme olanağı [ad alanı](../../../csharp/language-referenc
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [Ad Alanları](../../../csharp/programming-guide/namespaces/index.md)
-- [. İşleç](../../../csharp/language-reference/operators/member-access-operator.md)
 - [:: İşleç](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

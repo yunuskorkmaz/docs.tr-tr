@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ceffef8e911bb3e49e0d6526328523667a462b61
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776265"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912451"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Nasıl yapılır: Sorunlu Yazdırma İşini Tanımlama
 Ağ yöneticileri genellikle şikayetlerinin değil veya yavaş yazdırma, yazdırma işlerini ilgili olarak kullanıcılardan alan. Zengin, kullanıma sunulan yazdırma işi Özellikler [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] hızlı bir uzaktan tanılama yazdırma işi gerçekleştirmek için Microsoft .NET Framework'ü bir yol sağlar.  

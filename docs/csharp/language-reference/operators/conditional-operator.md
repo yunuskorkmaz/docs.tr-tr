@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 53a867e46b02793df5ad5bd9ca5ef676d0653a2a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a40dd4addfaf8a505cf334876192f0b2ccf66a09
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660066"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452402"
 ---
 # <a name="-operator-c-reference"></a>?: İşleci (C# Başvurusu)
 
@@ -43,9 +43,9 @@ olarak değerlendirilir
 a ? b : (c ? d : e)
 ```
 
-Bu işleç nasıl değerlendirir unutmayın için kullanabileceğiniz yararlı bir anımsatıcı cihaz sorarak şöyledir:
+Bu işleç nasıl değerlendirir unutmayın için kullanabileceğiniz bir anımsatıcı cihaz isteyin olmaktır:
 
-```
+```text
 is this condition true ? yes : no
 ```
 
@@ -95,6 +95,6 @@ Daha fazla bilgi için [koşullu işleç](~/_csharplang/spec/expressions.md#cond
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# İşleçleri](index.md)
 - [if-else deyimi](../keywords/if-else.md)
-- [?. and ?[] İşleçleri](null-conditional-operators.md)
+- [?. and ?[] İşleçleri](member-access-operators.md#null-conditional-operators--and-)
 - [?? İşleç](null-coalescing-operator.md)
 - [ref anahtar sözcüğü](../keywords/ref.md)

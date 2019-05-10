@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30269
 ms.assetid: 39489621-6617-4e5c-9b24-c2faf8273891
-ms.openlocfilehash: fe8d1d8e11e25bcd79894ed82a57dd06748c3d68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b884220053bbcec633c964a41892bc8df42f41c7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920906"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64602435"
 ---
 # <a name="methodname-has-multiple-definitions-with-identical-signatures"></a>'\<yöntemAdı >' aynı imzaya sahip birden fazla tanım var
 A `Function` veya `Sub` yordam bildirimi, bir önceki bildirimi olarak aynı yordamı adı ve bağımsız değişken listesi kullanır. Olası nedenlerinden biri, özgün bir yordamı aşırı yükleme girişiminde olmasıdır. Aşırı yüklenmiş yordamları farklı bağımsız değişken listeleri olması gerekir.  

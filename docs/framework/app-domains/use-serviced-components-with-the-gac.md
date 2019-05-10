@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 3423e5d9-234c-4571-8161-e35f6d130128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bb09f827726f759383598d18fb80657a7e2ff04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a014058feb2ccb5187081fc63fb9c6eb6ac53d41
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674915"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607564"
 ---
 # <a name="using-serviced-components-with-the-global-assembly-cache"></a>Genel Derleme Önbelleği ile Hizmet Verilen Bileşenleri Kullanma
 Hizmet verilen bileşenlerin (yönetilen kod COM + bileşenleri) genel derleme önbelleğinde koymanız gerekir. Bazı senaryolarda, COM + Hizmetleri ve ortak dil çalışma zamanı genel derleme önbelleğinde olmayan hizmet verilen bileşenleri işleyebilir; Diğer senaryolarda yapamazlar. Aşağıdaki senaryolar bu göstermektedir:  

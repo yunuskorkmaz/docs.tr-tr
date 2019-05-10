@@ -5,12 +5,12 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f0385280cf01502a5b2786541c3d959fca24d239
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703341"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912458"
 ---
 # <a name="framework-property-metadata"></a>Çerçeve Özelliği Meta Verileri
 Çerçeve özelliği meta verileri seçenekleri nesne öğelerini WPF framework düzeyde olduğu kabul özelliklerinin raporlanır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] mimarisi. Genel olarak, işleme, veri bağlama gibi özelliklerin WPF çerçeve düzeyi atamasını gerektirir ve özellik sistemi daraltmalar tarafından işlenmesini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sunu [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] ve yürütülebilir dosyalar. Çerçeve özelliği meta verileri, belirli bir öğe özelliklerinin özelliğe özgü özellikleri belirlemek için bu sistemler tarafından sorgulanır.  

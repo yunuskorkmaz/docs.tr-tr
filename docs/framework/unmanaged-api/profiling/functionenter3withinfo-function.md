@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16e086f54865307e116a9e522b2fbadee8502249
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1ec24952b91f5d959c1ac0bb50e2bbe4b94002b3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598954"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586807"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo İşlevi
 Denetim bir işleve geçirilen profil oluşturucu bildirir ve geçirilebilir bir tanıtıcı sağlar [Icorprofilerınfo3::getfunctionenter3ınfo metodu](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) yığın çerçeve ve işlev bağımsız değişkenlerini almak için.  
