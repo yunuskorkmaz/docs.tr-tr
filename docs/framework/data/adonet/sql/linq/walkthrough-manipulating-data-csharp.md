@@ -2,165 +2,165 @@
 title: 'İzlenecek yol: Verileri Düzenleme (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 5418bdbdeee162bbc8c0abcb11fd39f2cc82ce73
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 7bac370ae8dc260ca4b665fd51680a80fd9846fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59330785"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64618034"
 ---
-# <a name="walkthrough-manipulating-data-c"></a><span data-ttu-id="ed6b5-102">İzlenecek yol: Verileri Düzenleme (C#)</span><span class="sxs-lookup"><span data-stu-id="ed6b5-102">Walkthrough: Manipulating Data (C#)</span></span>
-<span data-ttu-id="ed6b5-103">Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] senaryo ekleme, değiştirme ve bir veritabanındaki verileri siliniyor.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-103">This walkthrough provides a fundamental end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenario for adding, modifying, and deleting data in a database.</span></span> <span data-ttu-id="ed6b5-104">Örnek Northwind veritabanının bir kopyasını bir müşteri eklemek, bir müşterinin adını değiştirin ve sipariş silmek için kullanın.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-104">You will use a copy of the sample Northwind database to add a customer, change the name of a customer, and delete an order.</span></span>  
+# <a name="walkthrough-manipulating-data-c"></a><span data-ttu-id="28eff-102">İzlenecek yol: Verileri Düzenleme (C#)</span><span class="sxs-lookup"><span data-stu-id="28eff-102">Walkthrough: Manipulating Data (C#)</span></span>
+<span data-ttu-id="28eff-103">Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] senaryo ekleme, değiştirme ve bir veritabanındaki verileri siliniyor.</span><span class="sxs-lookup"><span data-stu-id="28eff-103">This walkthrough provides a fundamental end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenario for adding, modifying, and deleting data in a database.</span></span> <span data-ttu-id="28eff-104">Örnek Northwind veritabanının bir kopyasını bir müşteri eklemek, bir müşterinin adını değiştirin ve sipariş silmek için kullanın.</span><span class="sxs-lookup"><span data-stu-id="28eff-104">You will use a copy of the sample Northwind database to add a customer, change the name of a customer, and delete an order.</span></span>  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
- <span data-ttu-id="ed6b5-105">Bu izlenecek yol, Visual kullanılarak yazılmış olduğundan C# geliştirme ayarları.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-105">This walkthrough was written by using Visual C# Development Settings.</span></span>  
+ <span data-ttu-id="28eff-105">Bu izlenecek yol, Visual kullanılarak yazılmış olduğundan C# geliştirme ayarları.</span><span class="sxs-lookup"><span data-stu-id="28eff-105">This walkthrough was written by using Visual C# Development Settings.</span></span>  
   
-## <a name="prerequisites"></a><span data-ttu-id="ed6b5-106">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="ed6b5-106">Prerequisites</span></span>  
- <span data-ttu-id="ed6b5-107">Bu izlenecek yol aşağıdakileri gerektirir:</span><span class="sxs-lookup"><span data-stu-id="ed6b5-107">This walkthrough requires the following:</span></span>  
+## <a name="prerequisites"></a><span data-ttu-id="28eff-106">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="28eff-106">Prerequisites</span></span>  
+ <span data-ttu-id="28eff-107">Bu izlenecek yol aşağıdakileri gerektirir:</span><span class="sxs-lookup"><span data-stu-id="28eff-107">This walkthrough requires the following:</span></span>  
   
--   <span data-ttu-id="ed6b5-108">Bu izlenecek yol, dosyaları tutmak için ayrılmış bir klasör ("c:\linqtest6") kullanır.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-108">This walkthrough uses a dedicated folder ("c:\linqtest6") to hold files.</span></span> <span data-ttu-id="ed6b5-109">İzlenecek yol başlamadan önce bu klasörü oluşturun.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-109">Create this folder before you begin the walkthrough.</span></span>  
+- <span data-ttu-id="28eff-108">Bu izlenecek yol, dosyaları tutmak için ayrılmış bir klasör ("c:\linqtest6") kullanır.</span><span class="sxs-lookup"><span data-stu-id="28eff-108">This walkthrough uses a dedicated folder ("c:\linqtest6") to hold files.</span></span> <span data-ttu-id="28eff-109">İzlenecek yol başlamadan önce bu klasörü oluşturun.</span><span class="sxs-lookup"><span data-stu-id="28eff-109">Create this folder before you begin the walkthrough.</span></span>  
   
--   <span data-ttu-id="ed6b5-110">Northwind örnek veritabanı.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-110">The Northwind sample database.</span></span>  
+- <span data-ttu-id="28eff-110">Northwind örnek veritabanı.</span><span class="sxs-lookup"><span data-stu-id="28eff-110">The Northwind sample database.</span></span>  
   
-     <span data-ttu-id="ed6b5-111">Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Yükleme sitesinden indirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-111">If you do not have this database on your development computer, you can download it from the Microsoft download site.</span></span> <span data-ttu-id="ed6b5-112">Yönergeler için [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span><span class="sxs-lookup"><span data-stu-id="ed6b5-112">For instructions, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span></span> <span data-ttu-id="ed6b5-113">Veritabanı indirdikten sonra northwnd.mdf dosya c:\linqtest6 klasöre kopyalayın.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-113">After you have downloaded the database, copy the northwnd.mdf file to the c:\linqtest6 folder.</span></span>  
+     <span data-ttu-id="28eff-111">Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Yükleme sitesinden indirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="28eff-111">If you do not have this database on your development computer, you can download it from the Microsoft download site.</span></span> <span data-ttu-id="28eff-112">Yönergeler için [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span><span class="sxs-lookup"><span data-stu-id="28eff-112">For instructions, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span></span> <span data-ttu-id="28eff-113">Veritabanı indirdikten sonra northwnd.mdf dosya c:\linqtest6 klasöre kopyalayın.</span><span class="sxs-lookup"><span data-stu-id="28eff-113">After you have downloaded the database, copy the northwnd.mdf file to the c:\linqtest6 folder.</span></span>  
   
--   <span data-ttu-id="ed6b5-114">A C# Northwind veritabanından oluşturulan kod dosyası.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-114">A C# code file generated from the Northwind database.</span></span>  
+- <span data-ttu-id="28eff-114">A C# Northwind veritabanından oluşturulan kod dosyası.</span><span class="sxs-lookup"><span data-stu-id="28eff-114">A C# code file generated from the Northwind database.</span></span>  
   
-     <span data-ttu-id="ed6b5-115">Bu dosyayı kullanarak oluşturabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] veya SQLMetal aracı.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-115">You can generate this file by using either the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] or the SQLMetal tool.</span></span> <span data-ttu-id="ed6b5-116">Bu izlenecek yol, şu komut satırıyla SQLMetal Aracı'nı kullanarak yazılmıştır:</span><span class="sxs-lookup"><span data-stu-id="ed6b5-116">This walkthrough was written by using the SQLMetal tool with the following command line:</span></span>  
+     <span data-ttu-id="28eff-115">Bu dosyayı kullanarak oluşturabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] veya SQLMetal aracı.</span><span class="sxs-lookup"><span data-stu-id="28eff-115">You can generate this file by using either the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] or the SQLMetal tool.</span></span> <span data-ttu-id="28eff-116">Bu izlenecek yol, şu komut satırıyla SQLMetal Aracı'nı kullanarak yazılmıştır:</span><span class="sxs-lookup"><span data-stu-id="28eff-116">This walkthrough was written by using the SQLMetal tool with the following command line:</span></span>  
   
-     **<span data-ttu-id="ed6b5-117">sqlmetal /code:"c:\linqtest6\northwind.cs" /language:csharp "C:\linqtest6\northwnd.mdf" / pluralize</span><span class="sxs-lookup"><span data-stu-id="ed6b5-117">sqlmetal /code:"c:\linqtest6\northwind.cs" /language:csharp "C:\linqtest6\northwnd.mdf" /pluralize</span></span>**  
+     <span data-ttu-id="28eff-117">**sqlmetal /code:"c:\linqtest6\northwind.cs" /language:csharp "C:\linqtest6\northwnd.mdf" /pluralize**</span><span class="sxs-lookup"><span data-stu-id="28eff-117">**sqlmetal /code:"c:\linqtest6\northwind.cs" /language:csharp "C:\linqtest6\northwnd.mdf" /pluralize**</span></span>  
   
-     <span data-ttu-id="ed6b5-118">Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="ed6b5-118">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
+     <span data-ttu-id="28eff-118">Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="28eff-118">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
   
-## <a name="overview"></a><span data-ttu-id="ed6b5-119">Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="ed6b5-119">Overview</span></span>  
- <span data-ttu-id="ed6b5-120">Bu kılavuz altı ana görevden oluşur:</span><span class="sxs-lookup"><span data-stu-id="ed6b5-120">This walkthrough consists of six main tasks:</span></span>  
+## <a name="overview"></a><span data-ttu-id="28eff-119">Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="28eff-119">Overview</span></span>  
+ <span data-ttu-id="28eff-120">Bu kılavuz altı ana görevden oluşur:</span><span class="sxs-lookup"><span data-stu-id="28eff-120">This walkthrough consists of six main tasks:</span></span>  
   
--   <span data-ttu-id="ed6b5-121">Oluşturma [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio'daki çözüm.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-121">Creating the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solution in Visual Studio.</span></span>  
+- <span data-ttu-id="28eff-121">Oluşturma [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio'daki çözüm.</span><span class="sxs-lookup"><span data-stu-id="28eff-121">Creating the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solution in Visual Studio.</span></span>  
   
--   <span data-ttu-id="ed6b5-122">Veritabanı kod dosyası projeye ekleniyor.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-122">Adding the database code file to the project.</span></span>  
+- <span data-ttu-id="28eff-122">Veritabanı kod dosyası projeye ekleniyor.</span><span class="sxs-lookup"><span data-stu-id="28eff-122">Adding the database code file to the project.</span></span>  
   
--   <span data-ttu-id="ed6b5-123">Yeni bir müşteri nesnesi oluşturuluyor.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-123">Creating a new customer object.</span></span>  
+- <span data-ttu-id="28eff-123">Yeni bir müşteri nesnesi oluşturuluyor.</span><span class="sxs-lookup"><span data-stu-id="28eff-123">Creating a new customer object.</span></span>  
   
--   <span data-ttu-id="ed6b5-124">Bir müşteri kişi adını değiştirme.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-124">Modifying the contact name of a customer.</span></span>  
+- <span data-ttu-id="28eff-124">Bir müşteri kişi adını değiştirme.</span><span class="sxs-lookup"><span data-stu-id="28eff-124">Modifying the contact name of a customer.</span></span>  
   
--   <span data-ttu-id="ed6b5-125">Bir sipariş siliniyor.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-125">Deleting an order.</span></span>  
+- <span data-ttu-id="28eff-125">Bir sipariş siliniyor.</span><span class="sxs-lookup"><span data-stu-id="28eff-125">Deleting an order.</span></span>  
   
--   <span data-ttu-id="ed6b5-126">Bu değişiklikler Northwind veritabanına gönderiliyor.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-126">Submitting these changes to the Northwind database.</span></span>  
+- <span data-ttu-id="28eff-126">Bu değişiklikler Northwind veritabanına gönderiliyor.</span><span class="sxs-lookup"><span data-stu-id="28eff-126">Submitting these changes to the Northwind database.</span></span>  
   
-## <a name="creating-a-linq-to-sql-solution"></a><span data-ttu-id="ed6b5-127">Bir LINQ to SQL çözümü oluşturma</span><span class="sxs-lookup"><span data-stu-id="ed6b5-127">Creating a LINQ to SQL Solution</span></span>  
- <span data-ttu-id="ed6b5-128">Bu ilk görevde oluşturduğunuz derlemek ve çalıştırmak için gerekli başvuruları içeren bir Visual Studio çözümü bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proje.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-128">In this first task, you create a Visual Studio solution that contains the necessary references to build and run a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] project.</span></span>  
+## <a name="creating-a-linq-to-sql-solution"></a><span data-ttu-id="28eff-127">Bir LINQ to SQL çözümü oluşturma</span><span class="sxs-lookup"><span data-stu-id="28eff-127">Creating a LINQ to SQL Solution</span></span>  
+ <span data-ttu-id="28eff-128">Bu ilk görevde oluşturduğunuz derlemek ve çalıştırmak için gerekli başvuruları içeren bir Visual Studio çözümü bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proje.</span><span class="sxs-lookup"><span data-stu-id="28eff-128">In this first task, you create a Visual Studio solution that contains the necessary references to build and run a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] project.</span></span>  
   
-#### <a name="to-create-a-linq-to-sql-solution"></a><span data-ttu-id="ed6b5-129">Bir LINQ to SQL çözümü oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="ed6b5-129">To create a LINQ to SQL solution</span></span>  
+#### <a name="to-create-a-linq-to-sql-solution"></a><span data-ttu-id="28eff-129">Bir LINQ to SQL çözümü oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="28eff-129">To create a LINQ to SQL solution</span></span>  
   
-1. <span data-ttu-id="ed6b5-130">Visual Studio'da **dosya** menüsünde **yeni**ve ardından **proje**.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-130">On the Visual Studio **File** menu, point to **New**, and then click **Project**.</span></span>  
+1. <span data-ttu-id="28eff-130">Visual Studio'da **dosya** menüsünde **yeni**ve ardından **proje**.</span><span class="sxs-lookup"><span data-stu-id="28eff-130">On the Visual Studio **File** menu, point to **New**, and then click **Project**.</span></span>  
   
-2. <span data-ttu-id="ed6b5-131">İçinde **proje türleri** bölmesinde **yeni proje** iletişim kutusu, tıklayın **Visual C#** .</span><span class="sxs-lookup"><span data-stu-id="ed6b5-131">In the **Project types** pane in the **New Project** dialog box, click **Visual C#**.</span></span>  
+2. <span data-ttu-id="28eff-131">İçinde **proje türleri** bölmesinde **yeni proje** iletişim kutusu, tıklayın **Visual C#** .</span><span class="sxs-lookup"><span data-stu-id="28eff-131">In the **Project types** pane in the **New Project** dialog box, click **Visual C#**.</span></span>  
   
-3. <span data-ttu-id="ed6b5-132">İçinde **şablonları** bölmesinde tıklayın **konsol uygulaması**.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-132">In the **Templates** pane, click **Console Application**.</span></span>  
+3. <span data-ttu-id="28eff-132">İçinde **şablonları** bölmesinde tıklayın **konsol uygulaması**.</span><span class="sxs-lookup"><span data-stu-id="28eff-132">In the **Templates** pane, click **Console Application**.</span></span>  
   
-4. <span data-ttu-id="ed6b5-133">İçinde **adı** kutusuna **LinqDataManipulationApp**.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-133">In the **Name** box, type **LinqDataManipulationApp**.</span></span>  
+4. <span data-ttu-id="28eff-133">İçinde **adı** kutusuna **LinqDataManipulationApp**.</span><span class="sxs-lookup"><span data-stu-id="28eff-133">In the **Name** box, type **LinqDataManipulationApp**.</span></span>  
   
-5. <span data-ttu-id="ed6b5-134">İçinde **konumu** kutusunda, proje dosyalarını depolamak istediğiniz doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-134">In the **Location** box, verify where you want to store your project files.</span></span>  
+5. <span data-ttu-id="28eff-134">İçinde **konumu** kutusunda, proje dosyalarını depolamak istediğiniz doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="28eff-134">In the **Location** box, verify where you want to store your project files.</span></span>  
   
-6. <span data-ttu-id="ed6b5-135">**Tamam**'ı tıklatın.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-135">Click **OK**.</span></span>  
+6. <span data-ttu-id="28eff-135">**Tamam**'ı tıklatın.</span><span class="sxs-lookup"><span data-stu-id="28eff-135">Click **OK**.</span></span>  
   
-## <a name="adding-linq-references-and-directives"></a><span data-ttu-id="ed6b5-136">LINQ başvuruları ve yönergeleri ekleme</span><span class="sxs-lookup"><span data-stu-id="ed6b5-136">Adding LINQ References and Directives</span></span>  
- <span data-ttu-id="ed6b5-137">Bu izlenecek yol, projenizdeki varsayılan olarak yüklü olmayabilir derlemeleri kullanır.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-137">This walkthrough uses assemblies that might not be installed by default in your project.</span></span> <span data-ttu-id="ed6b5-138">Projenize bir başvuru olarak System.Data.Linq listede yoksa, aşağıdaki adımlarda açıklandığı gibi ekleyin:</span><span class="sxs-lookup"><span data-stu-id="ed6b5-138">If System.Data.Linq is not listed as a reference in your project, add it, as explained in the following steps:</span></span>  
+## <a name="adding-linq-references-and-directives"></a><span data-ttu-id="28eff-136">LINQ başvuruları ve yönergeleri ekleme</span><span class="sxs-lookup"><span data-stu-id="28eff-136">Adding LINQ References and Directives</span></span>  
+ <span data-ttu-id="28eff-137">Bu izlenecek yol, projenizdeki varsayılan olarak yüklü olmayabilir derlemeleri kullanır.</span><span class="sxs-lookup"><span data-stu-id="28eff-137">This walkthrough uses assemblies that might not be installed by default in your project.</span></span> <span data-ttu-id="28eff-138">Projenize bir başvuru olarak System.Data.Linq listede yoksa, aşağıdaki adımlarda açıklandığı gibi ekleyin:</span><span class="sxs-lookup"><span data-stu-id="28eff-138">If System.Data.Linq is not listed as a reference in your project, add it, as explained in the following steps:</span></span>  
   
-#### <a name="to-add-systemdatalinq"></a><span data-ttu-id="ed6b5-139">System.Data.Linq eklemek için</span><span class="sxs-lookup"><span data-stu-id="ed6b5-139">To add System.Data.Linq</span></span>  
+#### <a name="to-add-systemdatalinq"></a><span data-ttu-id="28eff-139">System.Data.Linq eklemek için</span><span class="sxs-lookup"><span data-stu-id="28eff-139">To add System.Data.Linq</span></span>  
   
-1. <span data-ttu-id="ed6b5-140">İçinde **Çözüm Gezgini**, sağ **başvuruları**ve ardından **Başvuru Ekle**.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-140">In **Solution Explorer**, right-click **References**, and then click **Add Reference**.</span></span>  
+1. <span data-ttu-id="28eff-140">İçinde **Çözüm Gezgini**, sağ **başvuruları**ve ardından **Başvuru Ekle**.</span><span class="sxs-lookup"><span data-stu-id="28eff-140">In **Solution Explorer**, right-click **References**, and then click **Add Reference**.</span></span>  
   
-2. <span data-ttu-id="ed6b5-141">İçinde **Başvuru Ekle** iletişim kutusu, tıklayın **.NET**System.Data.Linq derleme tıklayın ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-141">In the **Add Reference** dialog box, click **.NET**, click the System.Data.Linq assembly, and then click **OK**.</span></span>  
+2. <span data-ttu-id="28eff-141">İçinde **Başvuru Ekle** iletişim kutusu, tıklayın **.NET**System.Data.Linq derleme tıklayın ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="28eff-141">In the **Add Reference** dialog box, click **.NET**, click the System.Data.Linq assembly, and then click **OK**.</span></span>  
   
-     <span data-ttu-id="ed6b5-142">Derleme, projeye eklenir.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-142">The assembly is added to the project.</span></span>  
+     <span data-ttu-id="28eff-142">Derleme, projeye eklenir.</span><span class="sxs-lookup"><span data-stu-id="28eff-142">The assembly is added to the project.</span></span>  
   
-3. <span data-ttu-id="ed6b5-143">Aşağıdaki yönergeler, Program.cs dosyasının en üstüne ekleyin:</span><span class="sxs-lookup"><span data-stu-id="ed6b5-143">Add the following directives at the top of Program.cs:</span></span>  
+3. <span data-ttu-id="28eff-143">Aşağıdaki yönergeler, Program.cs dosyasının en üstüne ekleyin:</span><span class="sxs-lookup"><span data-stu-id="28eff-143">Add the following directives at the top of Program.cs:</span></span>  
   
      [!code-csharp[DLinqWalk3CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#1)]  
   
-## <a name="adding-the-northwind-code-file-to-the-project"></a><span data-ttu-id="ed6b5-144">Northwind kod dosyası projeye ekleniyor</span><span class="sxs-lookup"><span data-stu-id="ed6b5-144">Adding the Northwind Code File to the Project</span></span>  
- <span data-ttu-id="ed6b5-145">Bu adımları, Northwind örnek veritabanındaki bir kod dosyası oluşturmak için SQLMetal Aracı'nı kullandığınızı varsayar.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-145">These steps assume that you have used the SQLMetal tool to generate a code file from the Northwind sample database.</span></span> <span data-ttu-id="ed6b5-146">Daha fazla bilgi için bu kılavuzda daha önce açıklanan Önkoşullar bölümüne bakın.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-146">For more information, see the Prerequisites section earlier in this walkthrough.</span></span>  
+## <a name="adding-the-northwind-code-file-to-the-project"></a><span data-ttu-id="28eff-144">Northwind kod dosyası projeye ekleniyor</span><span class="sxs-lookup"><span data-stu-id="28eff-144">Adding the Northwind Code File to the Project</span></span>  
+ <span data-ttu-id="28eff-145">Bu adımları, Northwind örnek veritabanındaki bir kod dosyası oluşturmak için SQLMetal Aracı'nı kullandığınızı varsayar.</span><span class="sxs-lookup"><span data-stu-id="28eff-145">These steps assume that you have used the SQLMetal tool to generate a code file from the Northwind sample database.</span></span> <span data-ttu-id="28eff-146">Daha fazla bilgi için bu kılavuzda daha önce açıklanan Önkoşullar bölümüne bakın.</span><span class="sxs-lookup"><span data-stu-id="28eff-146">For more information, see the Prerequisites section earlier in this walkthrough.</span></span>  
   
-#### <a name="to-add-the-northwind-code-file-to-the-project"></a><span data-ttu-id="ed6b5-147">Northwind kod dosyası projeye eklemek için</span><span class="sxs-lookup"><span data-stu-id="ed6b5-147">To add the northwind code file to the project</span></span>  
+#### <a name="to-add-the-northwind-code-file-to-the-project"></a><span data-ttu-id="28eff-147">Northwind kod dosyası projeye eklemek için</span><span class="sxs-lookup"><span data-stu-id="28eff-147">To add the northwind code file to the project</span></span>  
   
-1. <span data-ttu-id="ed6b5-148">Üzerinde **proje** menüsünde tıklatın **varolan öğeyi Ekle**.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-148">On the **Project** menu, click **Add Existing Item**.</span></span>  
+1. <span data-ttu-id="28eff-148">Üzerinde **proje** menüsünde tıklatın **varolan öğeyi Ekle**.</span><span class="sxs-lookup"><span data-stu-id="28eff-148">On the **Project** menu, click **Add Existing Item**.</span></span>  
   
-2. <span data-ttu-id="ed6b5-149">İçinde **varolan öğeyi Ekle** iletişim kutusu için c:\linqtest6\northwind.cs gidin ve ardından **Ekle**.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-149">In the **Add Existing Item** dialog box, navigate to c:\linqtest6\northwind.cs, and then click **Add**.</span></span>  
+2. <span data-ttu-id="28eff-149">İçinde **varolan öğeyi Ekle** iletişim kutusu için c:\linqtest6\northwind.cs gidin ve ardından **Ekle**.</span><span class="sxs-lookup"><span data-stu-id="28eff-149">In the **Add Existing Item** dialog box, navigate to c:\linqtest6\northwind.cs, and then click **Add**.</span></span>  
   
-     <span data-ttu-id="ed6b5-150">Northwind.cs dosya projeye eklenir.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-150">The northwind.cs file is added to the project.</span></span>  
+     <span data-ttu-id="28eff-150">Northwind.cs dosya projeye eklenir.</span><span class="sxs-lookup"><span data-stu-id="28eff-150">The northwind.cs file is added to the project.</span></span>  
   
-## <a name="setting-up-the-database-connection"></a><span data-ttu-id="ed6b5-151">Veritabanı bağlantısı kurma</span><span class="sxs-lookup"><span data-stu-id="ed6b5-151">Setting Up the Database Connection</span></span>  
- <span data-ttu-id="ed6b5-152">İlk olarak, veritabanı bağlantınızı test edin.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-152">First, test your connection to the database.</span></span> <span data-ttu-id="ed6b5-153">Özellikle veritabanı Northwnd, hiçbir i olduğunu unutmayın. karakter.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-153">Note especially that the database, Northwnd, has no i character.</span></span> <span data-ttu-id="ed6b5-154">Sonraki adımlarda hatalar oluşturur, Northwind kısmi sınıf nasıl yazıldığını belirlemek için northwind.cs dosyasını gözden geçirin.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-154">If you generate errors in the next steps, review the northwind.cs file to determine how the Northwind partial class is spelled.</span></span>  
+## <a name="setting-up-the-database-connection"></a><span data-ttu-id="28eff-151">Veritabanı bağlantısı kurma</span><span class="sxs-lookup"><span data-stu-id="28eff-151">Setting Up the Database Connection</span></span>  
+ <span data-ttu-id="28eff-152">İlk olarak, veritabanı bağlantınızı test edin.</span><span class="sxs-lookup"><span data-stu-id="28eff-152">First, test your connection to the database.</span></span> <span data-ttu-id="28eff-153">Özellikle veritabanı Northwnd, hiçbir i olduğunu unutmayın. karakter.</span><span class="sxs-lookup"><span data-stu-id="28eff-153">Note especially that the database, Northwnd, has no i character.</span></span> <span data-ttu-id="28eff-154">Sonraki adımlarda hatalar oluşturur, Northwind kısmi sınıf nasıl yazıldığını belirlemek için northwind.cs dosyasını gözden geçirin.</span><span class="sxs-lookup"><span data-stu-id="28eff-154">If you generate errors in the next steps, review the northwind.cs file to determine how the Northwind partial class is spelled.</span></span>  
   
-#### <a name="to-set-up-and-test-the-database-connection"></a><span data-ttu-id="ed6b5-155">Veritabanı bağlantısını test etmek ve ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="ed6b5-155">To set up and test the database connection</span></span>  
+#### <a name="to-set-up-and-test-the-database-connection"></a><span data-ttu-id="28eff-155">Veritabanı bağlantısını test etmek ve ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="28eff-155">To set up and test the database connection</span></span>  
   
-1. <span data-ttu-id="ed6b5-156">İçine aşağıdaki kodu yazın veya yapıştırın `Main` Program sınıfına yöntemi:</span><span class="sxs-lookup"><span data-stu-id="ed6b5-156">Type or paste the following code into the `Main` method in the Program class:</span></span>  
+1. <span data-ttu-id="28eff-156">İçine aşağıdaki kodu yazın veya yapıştırın `Main` Program sınıfına yöntemi:</span><span class="sxs-lookup"><span data-stu-id="28eff-156">Type or paste the following code into the `Main` method in the Program class:</span></span>  
   
      [!code-csharp[DLinqWalk3CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#2)]  
   
-2. <span data-ttu-id="ed6b5-157">Bu noktada uygulamayı test etmek için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-157">Press F5 to test the application at this point.</span></span>  
+2. <span data-ttu-id="28eff-157">Bu noktada uygulamayı test etmek için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="28eff-157">Press F5 to test the application at this point.</span></span>  
   
-     <span data-ttu-id="ed6b5-158">A **konsol** penceresi açılır.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-158">A **Console** window opens.</span></span>  
+     <span data-ttu-id="28eff-158">A **konsol** penceresi açılır.</span><span class="sxs-lookup"><span data-stu-id="28eff-158">A **Console** window opens.</span></span>  
   
-     <span data-ttu-id="ed6b5-159">Enter tuşuna basarak uygulamayı kapatabilirsiniz **konsol** penceresinde veya tıklayarak **hata ayıklamayı Durdur** Visual Studio **hata ayıklama** menüsü.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-159">You can close the application by pressing Enter in the **Console** window, or by clicking **Stop Debugging** on the Visual Studio **Debug** menu.</span></span>  
+     <span data-ttu-id="28eff-159">Enter tuşuna basarak uygulamayı kapatabilirsiniz **konsol** penceresinde veya tıklayarak **hata ayıklamayı Durdur** Visual Studio **hata ayıklama** menüsü.</span><span class="sxs-lookup"><span data-stu-id="28eff-159">You can close the application by pressing Enter in the **Console** window, or by clicking **Stop Debugging** on the Visual Studio **Debug** menu.</span></span>  
   
-## <a name="creating-a-new-entity"></a><span data-ttu-id="ed6b5-160">Yeni varlık oluşturma</span><span class="sxs-lookup"><span data-stu-id="ed6b5-160">Creating a New Entity</span></span>  
- <span data-ttu-id="ed6b5-161">Yeni bir varlık oluştururken oldukça basittir.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-161">Creating a new entity is straightforward.</span></span> <span data-ttu-id="ed6b5-162">Nesneleri oluşturabilirsiniz (gibi `Customer`) kullanarak `new` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-162">You can create objects (such as `Customer`) by using the `new` keyword.</span></span>  
+## <a name="creating-a-new-entity"></a><span data-ttu-id="28eff-160">Yeni varlık oluşturma</span><span class="sxs-lookup"><span data-stu-id="28eff-160">Creating a New Entity</span></span>  
+ <span data-ttu-id="28eff-161">Yeni bir varlık oluştururken oldukça basittir.</span><span class="sxs-lookup"><span data-stu-id="28eff-161">Creating a new entity is straightforward.</span></span> <span data-ttu-id="28eff-162">Nesneleri oluşturabilirsiniz (gibi `Customer`) kullanarak `new` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="28eff-162">You can create objects (such as `Customer`) by using the `new` keyword.</span></span>  
   
- <span data-ttu-id="ed6b5-163">Bu ve aşağıdaki bölümler, yalnızca yerel önbelleğe değişiklikler yaparsınız.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-163">In this and the following sections, you are making changes only to the local cache.</span></span> <span data-ttu-id="ed6b5-164">Çağırana kadar hiçbir değişiklik veritabanına gönderilmez <xref:System.Data.Linq.DataContext.SubmitChanges%2A> Bu izlenecek yolun sonuna doğru.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-164">No changes are sent to the database until you call <xref:System.Data.Linq.DataContext.SubmitChanges%2A> toward the end of this walkthrough.</span></span>  
+ <span data-ttu-id="28eff-163">Bu ve aşağıdaki bölümler, yalnızca yerel önbelleğe değişiklikler yaparsınız.</span><span class="sxs-lookup"><span data-stu-id="28eff-163">In this and the following sections, you are making changes only to the local cache.</span></span> <span data-ttu-id="28eff-164">Çağırana kadar hiçbir değişiklik veritabanına gönderilmez <xref:System.Data.Linq.DataContext.SubmitChanges%2A> Bu izlenecek yolun sonuna doğru.</span><span class="sxs-lookup"><span data-stu-id="28eff-164">No changes are sent to the database until you call <xref:System.Data.Linq.DataContext.SubmitChanges%2A> toward the end of this walkthrough.</span></span>  
   
-#### <a name="to-add-a-new-customer-entity-object"></a><span data-ttu-id="ed6b5-165">Yeni bir müşteri varlığı nesne eklemek için</span><span class="sxs-lookup"><span data-stu-id="ed6b5-165">To add a new Customer entity object</span></span>  
+#### <a name="to-add-a-new-customer-entity-object"></a><span data-ttu-id="28eff-165">Yeni bir müşteri varlığı nesne eklemek için</span><span class="sxs-lookup"><span data-stu-id="28eff-165">To add a new Customer entity object</span></span>  
   
-1. <span data-ttu-id="ed6b5-166">Yeni bir `Customer` önce aşağıdaki kodu ekleyerek `Console.ReadLine();` içinde `Main` yöntemi:</span><span class="sxs-lookup"><span data-stu-id="ed6b5-166">Create a new `Customer` by adding the following code before `Console.ReadLine();` in the `Main` method:</span></span>  
+1. <span data-ttu-id="28eff-166">Yeni bir `Customer` önce aşağıdaki kodu ekleyerek `Console.ReadLine();` içinde `Main` yöntemi:</span><span class="sxs-lookup"><span data-stu-id="28eff-166">Create a new `Customer` by adding the following code before `Console.ReadLine();` in the `Main` method:</span></span>  
   
      [!code-csharp[DLinqWalk3CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#3)]  
   
-2. <span data-ttu-id="ed6b5-167">Çözüm hata ayıklamak için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-167">Press F5 to debug the solution.</span></span>  
+2. <span data-ttu-id="28eff-167">Çözüm hata ayıklamak için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="28eff-167">Press F5 to debug the solution.</span></span>  
   
-3. <span data-ttu-id="ed6b5-168">Enter tuşuna basarak **konsol** penceresi hata ayıklamayı durdurmak ve gözden geçirme devam etmek için.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-168">Press Enter in the **Console** window to stop debugging and continue the walkthrough.</span></span>  
+3. <span data-ttu-id="28eff-168">Enter tuşuna basarak **konsol** penceresi hata ayıklamayı durdurmak ve gözden geçirme devam etmek için.</span><span class="sxs-lookup"><span data-stu-id="28eff-168">Press Enter in the **Console** window to stop debugging and continue the walkthrough.</span></span>  
   
-## <a name="updating-an-entity"></a><span data-ttu-id="ed6b5-169">Bir varlığı güncelleştirmek</span><span class="sxs-lookup"><span data-stu-id="ed6b5-169">Updating an Entity</span></span>  
- <span data-ttu-id="ed6b5-170">Aşağıdaki adımlarda, alacak bir `Customer` nesne ve onun özelliklerden birini değiştirin.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-170">In the following steps, you will retrieve a `Customer` object and modify one of its properties.</span></span>  
+## <a name="updating-an-entity"></a><span data-ttu-id="28eff-169">Bir varlığı güncelleştirmek</span><span class="sxs-lookup"><span data-stu-id="28eff-169">Updating an Entity</span></span>  
+ <span data-ttu-id="28eff-170">Aşağıdaki adımlarda, alacak bir `Customer` nesne ve onun özelliklerden birini değiştirin.</span><span class="sxs-lookup"><span data-stu-id="28eff-170">In the following steps, you will retrieve a `Customer` object and modify one of its properties.</span></span>  
   
-#### <a name="to-change-the-name-of-a-customer"></a><span data-ttu-id="ed6b5-171">Bir müşteri adını değiştirmek için</span><span class="sxs-lookup"><span data-stu-id="ed6b5-171">To change the name of a Customer</span></span>  
+#### <a name="to-change-the-name-of-a-customer"></a><span data-ttu-id="28eff-171">Bir müşteri adını değiştirmek için</span><span class="sxs-lookup"><span data-stu-id="28eff-171">To change the name of a Customer</span></span>  
   
--   <span data-ttu-id="ed6b5-172">Yukarıdaki aşağıdaki kodu ekleyin `Console.ReadLine();`:</span><span class="sxs-lookup"><span data-stu-id="ed6b5-172">Add the following code above `Console.ReadLine();`:</span></span>  
+- <span data-ttu-id="28eff-172">Yukarıdaki aşağıdaki kodu ekleyin `Console.ReadLine();`:</span><span class="sxs-lookup"><span data-stu-id="28eff-172">Add the following code above `Console.ReadLine();`:</span></span>  
   
      [!code-csharp[DLinqWalk3CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#4)]  
   
-## <a name="deleting-an-entity"></a><span data-ttu-id="ed6b5-173">Bir varlığı silme</span><span class="sxs-lookup"><span data-stu-id="ed6b5-173">Deleting an Entity</span></span>  
- <span data-ttu-id="ed6b5-174">Aynı müşteri nesnesini kullanarak, ilk sırada silebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-174">Using the same customer object, you can delete the first order.</span></span>  
+## <a name="deleting-an-entity"></a><span data-ttu-id="28eff-173">Bir varlığı silme</span><span class="sxs-lookup"><span data-stu-id="28eff-173">Deleting an Entity</span></span>  
+ <span data-ttu-id="28eff-174">Aynı müşteri nesnesini kullanarak, ilk sırada silebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="28eff-174">Using the same customer object, you can delete the first order.</span></span>  
   
- <span data-ttu-id="ed6b5-175">Aşağıdaki kod ilişkileri sever gösterilmektedir satırlar ve veritabanından satır silme arasında.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-175">The following code demonstrates how to sever relationships between rows, and how to delete a row from the database.</span></span> <span data-ttu-id="ed6b5-176">Önce aşağıdaki kodu ekleyin `Console.ReadLine` nesnelerin nasıl silinebilir görmek için:</span><span class="sxs-lookup"><span data-stu-id="ed6b5-176">Add the following code before `Console.ReadLine` to see how objects can be deleted:</span></span>  
+ <span data-ttu-id="28eff-175">Aşağıdaki kod ilişkileri sever gösterilmektedir satırlar ve veritabanından satır silme arasında.</span><span class="sxs-lookup"><span data-stu-id="28eff-175">The following code demonstrates how to sever relationships between rows, and how to delete a row from the database.</span></span> <span data-ttu-id="28eff-176">Önce aşağıdaki kodu ekleyin `Console.ReadLine` nesnelerin nasıl silinebilir görmek için:</span><span class="sxs-lookup"><span data-stu-id="28eff-176">Add the following code before `Console.ReadLine` to see how objects can be deleted:</span></span>  
   
-#### <a name="to-delete-a-row"></a><span data-ttu-id="ed6b5-177">Bir satırı silmek için</span><span class="sxs-lookup"><span data-stu-id="ed6b5-177">To delete a row</span></span>  
+#### <a name="to-delete-a-row"></a><span data-ttu-id="28eff-177">Bir satırı silmek için</span><span class="sxs-lookup"><span data-stu-id="28eff-177">To delete a row</span></span>  
   
--   <span data-ttu-id="ed6b5-178">Aşağıdaki kodu ekleyin hemen üzerinde `Console.ReadLine();`:</span><span class="sxs-lookup"><span data-stu-id="ed6b5-178">Add the following code just above `Console.ReadLine();`:</span></span>  
+- <span data-ttu-id="28eff-178">Aşağıdaki kodu ekleyin hemen üzerinde `Console.ReadLine();`:</span><span class="sxs-lookup"><span data-stu-id="28eff-178">Add the following code just above `Console.ReadLine();`:</span></span>  
   
      [!code-csharp[DLinqWalk3CS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#5)]  
   
-## <a name="submitting-changes-to-the-database"></a><span data-ttu-id="ed6b5-179">Veritabanına değişiklikleri gönderme</span><span class="sxs-lookup"><span data-stu-id="ed6b5-179">Submitting Changes to the Database</span></span>  
- <span data-ttu-id="ed6b5-180">Oluşturmak için gereken son güncelleştirme ve silme nesneleri, aslında veritabanına değişiklikleri göndermek için adımdır.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-180">The final step required for creating, updating, and deleting objects, is to actually submit the changes to the database.</span></span> <span data-ttu-id="ed6b5-181">Bu adım olmadan yaptığınız değişiklikleri yalnızca yerel ve sorgu sonuçlarında görünmez.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-181">Without this step, your changes are only local and will not appear in query results.</span></span>  
+## <a name="submitting-changes-to-the-database"></a><span data-ttu-id="28eff-179">Veritabanına değişiklikleri gönderme</span><span class="sxs-lookup"><span data-stu-id="28eff-179">Submitting Changes to the Database</span></span>  
+ <span data-ttu-id="28eff-180">Oluşturmak için gereken son güncelleştirme ve silme nesneleri, aslında veritabanına değişiklikleri göndermek için adımdır.</span><span class="sxs-lookup"><span data-stu-id="28eff-180">The final step required for creating, updating, and deleting objects, is to actually submit the changes to the database.</span></span> <span data-ttu-id="28eff-181">Bu adım olmadan yaptığınız değişiklikleri yalnızca yerel ve sorgu sonuçlarında görünmez.</span><span class="sxs-lookup"><span data-stu-id="28eff-181">Without this step, your changes are only local and will not appear in query results.</span></span>  
   
-#### <a name="to-submit-changes-to-the-database"></a><span data-ttu-id="ed6b5-182">Değişiklikleri veritabanına göndermek için</span><span class="sxs-lookup"><span data-stu-id="ed6b5-182">To submit changes to the database</span></span>  
+#### <a name="to-submit-changes-to-the-database"></a><span data-ttu-id="28eff-182">Değişiklikleri veritabanına göndermek için</span><span class="sxs-lookup"><span data-stu-id="28eff-182">To submit changes to the database</span></span>  
   
-1. <span data-ttu-id="ed6b5-183">Aşağıdaki kod hemen üstüne INSERT `Console.ReadLine`:</span><span class="sxs-lookup"><span data-stu-id="ed6b5-183">Insert the following code just above `Console.ReadLine`:</span></span>  
+1. <span data-ttu-id="28eff-183">Aşağıdaki kod hemen üstüne INSERT `Console.ReadLine`:</span><span class="sxs-lookup"><span data-stu-id="28eff-183">Insert the following code just above `Console.ReadLine`:</span></span>  
   
      [!code-csharp[DLinqWalk3CS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#6)]  
   
-2. <span data-ttu-id="ed6b5-184">Aşağıdaki kodu ekleyin (sonra `SubmitChanges`) göstermek için önce ve etkileri değişiklikleri gönderdikten sonra:</span><span class="sxs-lookup"><span data-stu-id="ed6b5-184">Insert the following code (after `SubmitChanges`) to show the before and after effects of submitting the changes:</span></span>  
+2. <span data-ttu-id="28eff-184">Aşağıdaki kodu ekleyin (sonra `SubmitChanges`) göstermek için önce ve etkileri değişiklikleri gönderdikten sonra:</span><span class="sxs-lookup"><span data-stu-id="28eff-184">Insert the following code (after `SubmitChanges`) to show the before and after effects of submitting the changes:</span></span>  
   
      [!code-csharp[DLinqWalk3CS#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#7)]  
   
-3. <span data-ttu-id="ed6b5-185">Çözüm hata ayıklamak için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-185">Press F5 to debug the solution.</span></span>  
+3. <span data-ttu-id="28eff-185">Çözüm hata ayıklamak için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="28eff-185">Press F5 to debug the solution.</span></span>  
   
-4. <span data-ttu-id="ed6b5-186">Enter tuşuna basarak **konsol** uygulamayı kapatmak için penceresi.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-186">Press Enter in the **Console** window to close the application.</span></span>  
+4. <span data-ttu-id="28eff-186">Enter tuşuna basarak **konsol** uygulamayı kapatmak için penceresi.</span><span class="sxs-lookup"><span data-stu-id="28eff-186">Press Enter in the **Console** window to close the application.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ed6b5-187">Değişiklikleri göndererek yeni müşteri ekledikten sonra bu çözüm yürütülemez olduğu gibi yeniden.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-187">After you have added the new customer by submitting the changes, you cannot execute this solution again as is.</span></span> <span data-ttu-id="ed6b5-188">Çözümü yeniden çalıştırmak için Müşteri Kimliği ve müşteri eklenecek adını değiştirin.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-188">To execute the solution again, change the name of the customer and customer ID to be added.</span></span>  
+>  <span data-ttu-id="28eff-187">Değişiklikleri göndererek yeni müşteri ekledikten sonra bu çözüm yürütülemez olduğu gibi yeniden.</span><span class="sxs-lookup"><span data-stu-id="28eff-187">After you have added the new customer by submitting the changes, you cannot execute this solution again as is.</span></span> <span data-ttu-id="28eff-188">Çözümü yeniden çalıştırmak için Müşteri Kimliği ve müşteri eklenecek adını değiştirin.</span><span class="sxs-lookup"><span data-stu-id="28eff-188">To execute the solution again, change the name of the customer and customer ID to be added.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ed6b5-189">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ed6b5-189">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="28eff-189">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="28eff-189">See also</span></span>
 
-- [<span data-ttu-id="ed6b5-190">İzlenecek Yollarla Öğrenme</span><span class="sxs-lookup"><span data-stu-id="ed6b5-190">Learning by Walkthroughs</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [<span data-ttu-id="28eff-190">İzlenecek Yollarla Öğrenme</span><span class="sxs-lookup"><span data-stu-id="28eff-190">Learning by Walkthroughs</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
