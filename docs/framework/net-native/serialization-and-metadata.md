@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c82d32fe5b1e62a19ff5e2920c5943f1303b2d64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3e7a8e6509cea5f9035e3b8544aa37aa99681822
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599484"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650323"
 ---
 # <a name="serialization-and-metadata"></a>Serileştirme ve Meta Veriler
 Uygulamanızı serileştirir ve nesneleri seri durumdan çıkarır, girişler için çalışma zamanı yönergeleri eklemeniz gerekebilir (. rd.xml) dosyasını gerekli meta verileri çalışma zamanında mevcut olduğundan emin olun. Seri hale getiricileri genişletme iki kategorisi vardır ve her çalışma zamanı yönergeleri dosyanızda farklı işleme gerektirir:  

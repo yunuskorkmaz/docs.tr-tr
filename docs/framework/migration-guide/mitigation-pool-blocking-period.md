@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f97650099aed0be7e1983f759cd0f38fc568f857
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f4f51cf554c60a2ff8ed319faa95397d2a0bb48b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875114"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623959"
 ---
 # <a name="mitigation-pool-blocking-period"></a>Azaltma: Havuz engelleme süresi
 Azure SQL veritabanlarına bağlantı için süre engelleme bağlantı havuzu kaldırıldı.  

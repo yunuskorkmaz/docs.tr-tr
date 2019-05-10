@@ -4,12 +4,12 @@ description: Bu öğreticide, elde edilen Web sitesi açıklamaları duyarlılı
 ms.date: 04/18/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 317590e2623dc4962eb83cab696d19363bc0d5eb
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: 1989a11a2f06ce4d713d6c3ecc70de0da606604e
+ms.sourcegitcommit: 438824ff21f77c4301c6ba8a89a106114aa27bc8
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063391"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65462226"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Öğretici: ML.NET ikili sınıflandırma ile Web sitesi yorumların düşüncelerini çözümleme
 
@@ -41,7 +41,7 @@ Bu öğreticide kaynak kodunu bulabilirsiniz [dotnet/samples](https://github.com
 
 3. Yükleme **Microsoft.ML NuGet paketini**:
 
-    Çözüm Gezgini'nde seçin ve proje üzerinde sağ **NuGet paketlerini Yönet**. Paket kaynağı olarak "nuget.org" seçin ve ardından **Gözat** sekmesi. Arama **Microsoft.ML**, seçin ve ardından paketi **yükleme** düğmesi. Kuruluma devam etmek için kabul ederek, seçtiğiniz paket için lisans koşulları.
+    Çözüm Gezgini'nde seçin ve proje üzerinde sağ **NuGet paketlerini Yönet**. Paket kaynağı olarak "nuget.org" seçin ve ardından **Gözat** sekmesi. Arama **Microsoft.ML**, seçin ve ardından paketi **yükleme** düğmesi. Kuruluma devam etmek için kabul ederek, seçtiğiniz paket için lisans koşulları. İçin de aynısını yapın **Microsoft.ML.FastTree** NuGet paketi.
 
 ## <a name="prepare-your-data"></a>Verilerinizi hazırlama
 

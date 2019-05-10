@@ -5,12 +5,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: b86797018e1471590fd4c89848921e696afbc819
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2bc3e19968362993528c166ca6ec7a7fbbec1993
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672438"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623208"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te dosyayı yeniden adlandırma
 Kullanım `RenameFile` yöntemi `My.Computer.FileSystem` geçerli konumu, dosya adı ve yeni dosya adı sağlayarak bir dosyayı yeniden adlandırmak için nesne. Bu yöntem, bir dosyayı taşımak için kullanılamaz; kullanma `MoveFile` yöntemi taşımak ve dosyayı yeniden adlandırın.  

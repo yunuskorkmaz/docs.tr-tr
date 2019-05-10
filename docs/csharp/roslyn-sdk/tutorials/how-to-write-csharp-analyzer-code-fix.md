@@ -3,12 +3,12 @@ title: 'Öğretici: İlk Çözümleyicisi ve kod düzeltmenizi yazın'
 description: Bu öğretici bir çözümleyici oluşturmak için adım adım yönergeler sağlar ve kod düzeltmesi .NET derleyici SDK'sı (Roslyn API'leri) kullanarak.
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 7e3d1ac3a1ef692a1b7f1980fd00f95b04a8d047
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a4280741650b41174f93c4403008ee3522adbe6
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706772"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452696"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Öğretici: İlk Çözümleyicisi ve kod düzeltmenizi yazın
 
@@ -195,7 +195,7 @@ Açık **MakeConstCodeFixProvider.cs** şablon tarafından eklenen dosya.  Bu ko
 
 Ardından, silmek `MakeUppercaseAsync` yöntemi. Artık geçerlidir.
 
-Tüm kod düzeltmeleri türetilmesi <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider>. Bunların tümü geçersiz kılma <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)?displayProperty=nameWithType> kullanılabilir kod düzeltmeleri bildirmek için. İçinde `RegisterCodeFixesAsync`, değiştirmek için aradığınız üst düğüm türü bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> tanılama eşleştirmek için:
+Tüm kod düzeltme sağlayıcıları türetilmesi <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider>. Bunların tümü geçersiz kılma <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)?displayProperty=nameWithType> kullanılabilir kod düzeltmeleri bildirmek için. İçinde `RegisterCodeFixesAsync`, değiştirmek için aradığınız üst düğüm türü bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> tanılama eşleştirmek için:
 
 [!code-csharp[Find local declaration node](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FindDeclarationNode  "Find the local declaration node that raised the diagnostic")]
 

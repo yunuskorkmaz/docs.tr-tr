@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 45b123e7b0db4832a1629f8ec0224729ff20f689
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032482"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623454"
 ---
 # <a name="handling-null-values"></a>Null Değerleri İşleme
 Bir sütundaki değer bilinmeyen veya eksik olduğunda, ilişkisel bir veritabanındaki bir null değer kullanılır. Bir null, boş bir dize (karakter veya tarih/saat veri türleri için) ya da sıfır değeri (sayısal veri türleri için) olur. Tüm null değerlere tutarlı bir şekilde işlenir böylece ANSI SQL 92 belirtimi boş tüm veri türleri için aynı olması gerektiğini belirtir. <xref:System.Data.SqlTypes> Uygulayarak ad alanı null bir semantik sağlar <xref:System.Data.SqlTypes.INullable> arabirimi. Her veri türlerini <xref:System.Data.SqlTypes> kendi `IsNull` özelliği ve `Null` veri türü örneğine atanabilir değer.  

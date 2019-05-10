@@ -2,12 +2,12 @@
 title: İleti Bağıntısı
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: ed6fc8f5d16ae2d604cdbdf4659ecfaaa83bfa02
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 630afb728726fb81bbefa2f2cd34b9481b788f6f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989774"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663411"
 ---
 # <a name="message-correlation"></a>İleti Bağıntısı
 Bu örnek nasıl bir Message Queuing (MSMQ) uygulaması bir MSMQ iletisinin bir Windows Communication Foundation (WCF) hizmetine gönderebilir ve iletileri bir istek/yanıt senaryosunda gönderen ve alıcı uygulamalar arasında nasıl eşleştirilebilir gösterir. Bu örnek MsmqIntegrationBinding bağlama kullanır. Bu durumda, alan hizmet kuyruğa alınmış iletileri gözlemleyin olanak sağlamak için şirket içinde barındırılan bir konsol uygulaması hizmetidir. K  

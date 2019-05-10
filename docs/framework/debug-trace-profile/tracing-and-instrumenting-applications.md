@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad2c41cc99422217b9f85acbd32f91ac78a9a7c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 84af29aa169710f8de86c383429bf391fbc20bd3
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614235"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469526"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>İzleme Uygulamaları
 İzleme, çalışırken uygulamanızın yürütmesini izlemek bir yoldur. .NET Framework uygulamanızı izleme ve hata ayıklama araçları, geliştirme ve uygulama geliştirirken hem dağıttıktan sonra bu araçları kullanabilirsiniz ekleyebilirsiniz. Kullanabileceğiniz <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType>, ve <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> hataları ve uygulama yürütme günlükleri, metin dosyaları veya diğer cihazlar daha sonra çözümlemek için ilgili bilgileri kaydetmek için sınıflar.  
@@ -134,7 +134,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Kendi dinleyici uygulayarak özel sonuçlara neden olabilir. Özel İzleme dinleyicisi, örneğin, iletileri için bir ileti kutusu görüntülemek veya iletileri bir tabloya eklenecek bir veritabanına bağlanın. Tüm özel dinleyicileri yukarıda belirtilen altı yöntemleri desteklemelidir. Geliştirici tarafından tanımlanan dinleyicileri oluşturma ile ilgili daha fazla bilgi için bkz: <xref:System.Diagnostics.TraceListener> .NET Framework başvurusu.  
   
 > [!NOTE]
->  İçinde [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], **Debug.Write**, **Debug.WriteIf**, **Debug.WriteLine**, ve **Debug.WriteLineIf** yöntemleri değiştirildi **Debug.Print** Visual Basic'in önceki sürümlerde kullanılabilir olan yöntem.  
+>  Visual Basic'te **Debug.Write**, **Debug.WriteIf**, **Debug.WriteLine**, ve **Debug.WriteLineIf** yöntemleri değiştirildi **Debug.Print** Visual Basic'in önceki sürümlerde kullanılabilir olan yöntem.  
   
  **Yazma** ve **WriteLine** yöntemleri her zaman sizin belirttiğiniz metni yazın. **Assert**, **Writeıf**, ve **Writelineıf** belirtilen metin yazmadan olup olmadığını denetleyen bir Boole bağımsız değişkeni gerektirir; ifadenin olmasıdurumunda,yalnızcabelirtilenmetinyazma**true** (için **Writeıf** ve **Writelineıf**), veya **false** (için **Assert**). **Başarısız** yöntemi, belirtilen metnin her zaman yazar. Daha fazla bilgi için [nasıl yapılır: Uygulama koduna izleme deyimleri ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md) ve .NET Framework başvurusu.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f92519ca1f960961f95722bce5c8e1f3b4419292
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757085"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662193"
 ---
 # <a name="xaml-resources"></a>XAML Kaynakları
 Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir nesnedir. Fırçalar ve stilleri kaynakları örnekleridir. Bu genel bakışta, kaynakları kullanmayı açıklar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Ayrıca oluşturabilir ve kod kullanarak veya birbirinin yerine kod arasında kaynaklarına erişin ve [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Daha fazla bilgi için [kaynaklar ve kod](resources-and-code.md).  

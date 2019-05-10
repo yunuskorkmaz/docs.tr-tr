@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 874501ac6dc4ea0ea1c0c97cdd2b802dfdb6bbb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6939efa608f4887dfdb00abe8292bec841929440
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811725"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664636"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standart Tarih ve Saat Biçim Dizeleri
 Standart tarih ve saat biçimi dizesi tek biçim belirleyici bir tarih ve saat değerinin metin gösterimini tanımlamak için kullanır. Beyaz boşluk da dahil olmak üzere birden fazla karakter içeren bir tarih ve saat biçim dizesi, özel bir tarih ve saat biçimi dizesi yorumlanır; Daha fazla bilgi için [özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Standart veya özel bir biçim dizesi iki şekilde kullanılabilir:  
@@ -85,7 +85,7 @@ Standart tarih ve saat biçim dizeleri ile her ikisini de kullanılabilir <xref:
   
 |Standart biçim dizeleri|DateTimeFormatInfo.InvariantInfo özelliği tarafından tanımı|Özel biçim dizesi|  
 |----------------------------|----------------------------------------------------------|--------------------------|  
-|"O" veya "o"|Yok.|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|  
+|"O" veya "o"|None|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|  
 |"R" ya da "r"|<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|ddd, dd MMM yyyy HH':'mm':'ss 'GMT'|  
 |"s"|<xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A>|yyyy'-'MM'-'dd'T'HH':'mm':'ss|  
 |"u"|<xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>|yyyy'-'MM'-'dd HH':'mm':'ss'Z'|  

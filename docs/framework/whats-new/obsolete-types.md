@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4b10ff681f7300412fd2f6a1e310989fcc3b31c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 304c2ed354c2b3bfe6333550810dde6c779f2e21
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914452"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663437"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework'teki eski türler
 <a name="introduction"></a> Bu makaledeki tablolar, artık kullanılmayan türler listesinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], derleme tarafından düzenlenmiş. Eski türler ve önerilen alternatifleri her derlemede bir listesini görmek için aşağıdaki bağlantıları kullanın. Bu tür geçersiz olduğundan, tüm üyeleri de artık kullanılmıyor. .NET Framework Sınıf Kitaplığı'nda ek eski üyeler listesi için bkz. [eski üyeler](obsolete-members.md).
@@ -77,7 +77,7 @@ ms.locfileid: "61914452"
 <a name="mscorlib"></a>
 ### <a name="assembly-mscorlibdll"></a>Derleme: mscorlib.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:System.ExecutionEngineException?displayProperty=nameWithType>|Bu tür, daha önce çalışma zamanında belirtilmeyen önemli bir hata gösterilir. Bu tür Kullanımdan kalktı için çalışma zamanı, artık bu özel durum oluşturur.|
 |<xref:System.Collections.CaseInsensitiveHashCodeProvider?displayProperty=nameWithType>|Lütfen kullanın <xref:System.StringComparer?displayProperty=nameWithType> yerine.|
@@ -142,7 +142,7 @@ ms.locfileid: "61914452"
 <a name="Core"></a>
 ### <a name="assembly-systemcoredll"></a>Derleme: System.Core.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:System.Runtime.CompilerServices.ExecutionScope?displayProperty=nameWithType>|Bu türün kullanımı bir derleyici hatası oluşturur.<br /><br /> Bu tür kullanmayın.|
 
@@ -151,7 +151,7 @@ ms.locfileid: "61914452"
 <a name="data"></a>
 ### <a name="assembly-systemdatadll"></a>Derleme: System.Data.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute> kullanım dışıdır.|
 |<xref:System.Data.PropertyAttributes?displayProperty=nameWithType>|<xref:System.Data.PropertyAttributes> kullanım dışıdır.|
@@ -163,7 +163,7 @@ ms.locfileid: "61914452"
 <a name="oracleclient"></a>
 ### <a name="assembly-systemdataoracleclientdll"></a>Derleme: System.Data.OracleClient.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleClientFactory> kullanım dışıdır.|
 |<xref:System.Data.OracleClient.OracleCommand?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommand> kullanım dışıdır.|
@@ -179,7 +179,7 @@ ms.locfileid: "61914452"
 <a name="design"></a>
 ### <a name="assembly-systemdesigndll"></a>Derleme: System.Design.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|Bu sınıf kullanım dışıdır. Bunun yerine <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType> kullanın.|
 |<xref:System.Web.UI.Design.DataBindingCollectionConverter?displayProperty=nameWithType>|Bu türün kullanılması önerilmez çünkü DataBindings düzenleme aracılığıyla başlatılan bir <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType> özellik kılavuzunda yerine.|
@@ -201,7 +201,7 @@ ms.locfileid: "61914452"
 <a name="system"></a>
 ### <a name="assembly-systemdll"></a>Derleme: System.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=nameWithType>|Bu arabirimi kullanım dışıdır. Ekleme bir <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=nameWithType> türünü işleyecek şekilde <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=nameWithType> yerine.|
 |<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=nameWithType>|Kullanım <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=nameWithType> bunun yerine yeni ayarları modeli ile çalışmak üzere.|
@@ -216,7 +216,7 @@ ms.locfileid: "61914452"
 <a name="enterpriseservices"></a>
 ### <a name="assembly-systementerpriseservicesdll"></a>Derleme: System.EnterpriseServices.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:System.EnterpriseServices.RegistrationHelperTx?displayProperty=nameWithType>|<xref:System.EnterpriseServices.RegistrationHelperTx> Sınıfı kullanımdan kaldırıldı.|
 
@@ -225,7 +225,7 @@ ms.locfileid: "61914452"
 <a name="net"></a>
 ### <a name="assembly-systemnetdll"></a>Derleme: System.Net.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:System.Net.INetworkProgress?displayProperty=nameWithType>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> Bu türün kullanımı bir derleyici hatası oluşturur.<br /><br /> Bu API, .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.|
 |<xref:System.Net.IUnsafeWebRequestCreate?displayProperty=nameWithType>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> Bu türün kullanımı bir derleyici hatası oluşturur.<br /><br /> Bu API, .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.|
@@ -242,7 +242,7 @@ ms.locfileid: "61914452"
 <a name="servicemodel"></a>
 ### <a name="assembly-systemservicemodeldll"></a>Derleme: System.ServiceModel.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:System.ServiceModel.NetPeerTcpBinding?displayProperty=nameWithType>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> Eş kanal özelliği kullanımdan kalkmıştır ve gelecekte kaldırılacaktır.|
 |<xref:System.ServiceModel.Channels.HttpCookieContainerBindingElement?displayProperty=nameWithType>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> Bu tür Kullanımdan kalktı. HTTP etkinleştirme <xref:System.Net.CookieContainer>, kullanın `AllowCookies` özelliğini Http bağlaması üzerindeki veya <xref:System.ServiceModel.Channels.HttpTransportBindingElement>.|
@@ -258,7 +258,7 @@ ms.locfileid: "61914452"
 <a name="web"></a>
 ### <a name="assembly-systemwebdll"></a>Derleme: System.Web.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:System.Web.Configuration.PassportAuthentication?displayProperty=nameWithType>|Bu tür Kullanımdan kalktı. Passport kimlik doğrulaması ürünü artık desteklenmez ve yerini almıştır [Microsoft Account](https://go.microsoft.com/fwlink/?LinkId=733413)|
 |<xref:System.Web.Mail.MailAttachment?displayProperty=nameWithType>|Önerilen alternatif <xref:System.Net.Mail.Attachment?displayProperty=nameWithType>.|
@@ -279,7 +279,7 @@ ms.locfileid: "61914452"
 <a name="mobile"></a>
 ### <a name="assembly-systemwebmobiledll"></a>Derleme: System.Web.Mobile.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:System.Web.Mobile.CookielessData?displayProperty=nameWithType>|System.Web.Mobile.dll derleme kullanım dışı bırakıldı ve artık kullanılmamalıdır. ASP.NET Mobil uygulamaları geliştirme hakkında daha fazla bilgi için bkz: [kaydettiğinde için ASP.NET](https://go.microsoft.com/fwlink/?LinkId=157231).|
 |<xref:System.Web.Mobile.DeviceFilterElement?displayProperty=nameWithType>|System.Web.Mobile.dll derleme kullanım dışı bırakıldı ve artık kullanılmamalıdır. ASP.NET Mobil uygulamaları geliştirme hakkında daha fazla bilgi için bkz: [kaydettiğinde için ASP.NET](https://go.microsoft.com/fwlink/?LinkId=157231).|
@@ -479,7 +479,7 @@ ms.locfileid: "61914452"
 <a name="workflow_activities"></a>
 ### <a name="assembly-systemworkflowactivitiesdll"></a>Derleme: System.Workflow.Activities.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |Tüm türlerin <xref:System.Workflow.Activities?displayProperty=nameWithType> ad alanı|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri kullanım dışı bırakılmıştır. Bunun yerine, Lütfen yeni türleri kullanın <xref:System.Activities>.\*.|
 |<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=nameWithType>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri kullanım dışı bırakılmıştır. Bunun yerine, Lütfen yeni türleri kullanın <xref:System.Activities>.\*.|
@@ -492,7 +492,7 @@ ms.locfileid: "61914452"
 <a name="workflow_componentmodel"></a>
 ### <a name="assembly-systemworkflowcomponentmodeldll"></a>Derleme: System.Workflow.ComponentModel.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |Tüm türlerin <xref:System.Workflow.ComponentModel> ad alanı dışında <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> ve <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri kullanım dışı bırakılmıştır. Bunun yerine, Lütfen yeni türleri kullanın <xref:System.Activities>.\*.|
 |Tüm türlerin <xref:System.Workflow.ComponentModel.Compiler> ad alanı dışında <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> ve <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri kullanım dışı bırakılmıştır. Bunun yerine, Lütfen yeni türleri kullanın <xref:System.Activities>.\*.|
@@ -510,7 +510,7 @@ ms.locfileid: "61914452"
 <a name="workflow_runtime"></a>
 ### <a name="assembly-systemworkflowruntimedll"></a>Derleme: System.Workflow.Runtime.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:System.Activities.Statements.Interop>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br />Workflow Foundation 3.0 türleri kullanım dışı bırakılmıştır. Bunun yerine, Workflow 4.0 türlerinden kullanın <xref:System.Activities>.\*.|
 |<xref:System.Activities.Tracking.InteropTrackingRecord>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br />Workflow Foundation 3.0 türleri kullanım dışı bırakılmıştır. Bunun yerine, Workflow 4.0 türlerinden kullanın <xref:System.Activities>.\*.|
@@ -525,7 +525,7 @@ ms.locfileid: "61914452"
 <a name="workflowservices"></a>
 ### <a name="assembly-systemworkflowservicesdll"></a>Derleme: System.WorkflowServices.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:System.ServiceModel.WorkflowServiceHost?displayProperty=nameWithType>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> WF 3 türleri kullanım dışı bırakılmıştır. Bunun yerine, Lütfen yeni WF 4 türleri kullanın <xref:System.Activities>.\*.|
 |<xref:System.ServiceModel.Activation.WorkflowServiceHostFactory?displayProperty=nameWithType>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> WF 3 türleri kullanım dışı bırakılmıştır. Bunun yerine, Lütfen yeni WF 4 türleri kullanın <xref:System.Activities>.\*.|
@@ -554,7 +554,7 @@ ms.locfileid: "61914452"
 <a name="xaml"></a>
 ### <a name="assembly-systemxamldll"></a>Derleme: System.Xaml.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute?displayProperty=nameWithType>|Bu, XAML ayrıştırıcı tarafından kullanılmaz. Lütfen bakmak <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>.|
 
@@ -563,7 +563,7 @@ ms.locfileid: "61914452"
 <a name="xml"></a>
 ### <a name="assembly-systemxmldll"></a>Derleme: System.Xml.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:System.Xml.IApplicationResourceStreamResolver?displayProperty=nameWithType>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> Bu türün kullanımı bir derleyici hatası oluşturur.<br /><br /> Bu API, .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.|
 |<xref:System.Xml.Schema.XmlSchemaCollection?displayProperty=nameWithType>|Kullanım <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> şema derleme ve onaylama.|
@@ -576,7 +576,7 @@ ms.locfileid: "61914452"
 <a name="WindowsBase"></a>
 ### <a name="assembly-windowsbasedll"></a>Derleme: WindowsBase.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType> kullanım dışıdır. Bu arabirim artık kullanımda.|
 
@@ -595,7 +595,7 @@ ms.locfileid: "61914452"
 <a name="Engine"></a>
 ### <a name="assembly-microsoftbuildenginedll"></a>Derleme: Microsoft.Build.Engine.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|Bu sınıf kullanım dışıdır. Lütfen kullanın <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> gelen *Microsoft.Build* derleme yerine.|
 |<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|Bu sınıf kullanım dışıdır. Lütfen kullanın <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> gelen *Microsoft.Build* derleme yerine.|
@@ -605,7 +605,7 @@ ms.locfileid: "61914452"
 <a name="jscript"></a>
 ### <a name="assembly-microsoftjscriptdll"></a>Derleme: Microsoft.JScript.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:Microsoft.JScript.Vsa.BaseVsaEngine?displayProperty=nameWithType>|Bu tür, Visual Studio 2005'te kullanım dışı bırakıldı; Bu özellik için hiçbir değişiklik yoktur. Lütfen bkz <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> Yardım belgeleri.|
 |<xref:Microsoft.JScript.Vsa.BaseVsaSite?displayProperty=nameWithType>|Bu tür, Visual Studio 2005'te kullanım dışı bırakıldı; Bu özellik için hiçbir değişiklik yoktur. Lütfen bkz <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> Yardım belgeleri.|
@@ -633,7 +633,7 @@ ms.locfileid: "61914452"
 
 Visual Basic 6'dan geçiş hakkında daha fazla bilgi için bkz: [Visual Basic 6.0 Kaynak Merkezi](https://docs.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation).
   
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray?displayProperty=nameWithType>|Bu üye kullanılmıyor.|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray?displayProperty=nameWithType>|Bu üye kullanılmıyor.|
@@ -708,7 +708,7 @@ Visual Basic 6'dan geçiş hakkında daha fazla bilgi için bkz: [Visual Basic 6
 <a name="VBCompatData"></a>
 ### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>Derleme: Microsoft.VisualBasic.Compatibility.Data.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.ADODC?displayProperty=nameWithType>|Bu üye kullanılmıyor.|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.ADODC.BOFActionEnum?displayProperty=nameWithType>|Bu üye kullanılmıyor.|
@@ -765,7 +765,7 @@ Visual Basic 6'dan geçiş hakkında daha fazla bilgi için bkz: [Visual Basic 6
 <a name="visualc"></a>
 ### <a name="assembly-microsoftvisualcdll"></a>Derleme: Microsoft.VisualC.dll
 
-|Tür|İleti|
+|Tür|`Message`|
 |----------|-------------|
 |<xref:Microsoft.VisualC.DebugInfoInPDBAttribute?displayProperty=nameWithType>|Microsoft.VisualC.dll eski bir derleme ve yalnızca geriye dönük uyumluluk bulunmaktadır.|
 |<xref:Microsoft.VisualC.DecoratedNameAttribute?displayProperty=nameWithType>|Microsoft.VisualC.dll eski bir derleme ve yalnızca geriye dönük uyumluluk bulunmaktadır.|

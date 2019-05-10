@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: 286b56cddc18589b936a7f053a12ed44c81a32b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 31ae91958dbc02a2f64945af896b4a2408224d05
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072980"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624030"
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Nasıl yapılır: Windows Forms ImageList Bileşeni ile Resim Ekleme veya Kaldırma
 Windows Forms <xref:System.Windows.Forms.ImageList> bir denetimle ilişkili önce bileşeni ile görüntü genellikle doldurulur. Ancak, ekleyin ve görüntü listesi denetimi ile ilişkilendirdikten sonra görüntüleri kaldırın.  
@@ -28,7 +28,7 @@ Windows Forms <xref:System.Windows.Forms.ImageList> bir denetimle ilişkili önc
   
 ### <a name="to-add-images-programmatically"></a>Görüntüleri programsal olarak eklemek için  
   
--   Kullanım <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> görüntü listenin yöntemi <xref:System.Windows.Forms.ImageList.Images%2A> özelliği.  
+- Kullanım <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> görüntü listenin yöntemi <xref:System.Windows.Forms.ImageList.Images%2A> özelliği.  
   
      Aşağıdaki kod örneğinde yolunu ayarlamak için görüntü konumunu **Belgelerim** klasör. Bu konum, Windows işletim sistemi çalıştırılan bilgisayarların çoğu bu klasör içerdiğini varsayar çünkü kullanılır. Bu konumu seçme, güvenli bir şekilde uygulamayı çalıştırmak minimum sistem erişim düzeyleri daha fazla kullanıcı sağlar. Aşağıdaki kod örneği, bir form olmasını gerektirir bir <xref:System.Windows.Forms.ImageList> denetim zaten eklendi.  
   
@@ -76,7 +76,7 @@ Windows Forms <xref:System.Windows.Forms.ImageList> bir denetimle ilişkili önc
   
 ### <a name="to-add-images-with-a-key-value"></a>Bir anahtar değeri ile görüntü eklemek için.  
   
--   Birini <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> görüntü listenin yöntemlerinin <xref:System.Windows.Forms.ImageList.Images%2A> bir anahtar değeri alan özelliği.  
+- Birini <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> görüntü listenin yöntemlerinin <xref:System.Windows.Forms.ImageList.Images%2A> bir anahtar değeri alan özelliği.  
   
      Aşağıdaki kod örneğinde yolunu ayarlamak için görüntü konumunu **Belgelerim** klasör. Bu konum, Windows işletim sistemi çalıştırılan bilgisayarların çoğu bu klasör içerdiğini varsayar çünkü kullanılır. Bu konumu seçme, güvenli bir şekilde uygulamayı çalıştırmak minimum sistem erişim düzeyleri daha fazla kullanıcı sağlar. Aşağıdaki kod örneği, bir form olmasını gerektirir bir <xref:System.Windows.Forms.ImageList> denetim zaten eklendi.  
   
@@ -107,7 +107,7 @@ public void addImage()
   
 ### <a name="to-remove-all-images-programmatically"></a>Tüm görüntüleri programlı bir şekilde kaldırmak için  
   
--   Kullanım <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> tek bir görüntü kaldırmak için yöntemi  
+- Kullanım <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> tek bir görüntü kaldırmak için yöntemi  
   
      , - veya -  
   
@@ -129,7 +129,7 @@ imageList1.Images.Clear();
   
 ### <a name="to-remove-images-by-key"></a>Anahtara göre görüntülerini kaldırmak için  
   
--   Kullanım <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> anahtara göre tek bir görüntü kaldırmak için yöntemi.  
+- Kullanım <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> anahtara göre tek bir görüntü kaldırmak için yöntemi.  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  

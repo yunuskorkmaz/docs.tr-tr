@@ -2,12 +2,12 @@
 title: Eş Adları ve PNRP Kimlikleri
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: e7e92519bede478a5e26a88a56236f987c93c441
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8cdd5151d029436d11c78806cf7673861cc0d8a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642129"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623118"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Eş Adları ve PNRP Kimlikleri
 Bir eş ad, bir bilgisayar, bir kullanıcı, Grup, bir hizmet veya bir IPv6 adresine çözülebilir bir eş ile ilişkili herhangi bir şey olabilir, iletişim için bir uç nokta temsil eder. Eş Adı Çözümleme Protokolü (PNRP), bulut üyelerini tanımlamak için kullanılan bir PNRP kimliği, oluşturulması için istatistiksel olarak benzersiz eş adını alır.  

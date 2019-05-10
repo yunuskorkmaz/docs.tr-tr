@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: bb87879fdf584a439e09839bf4321b85e7dd6a43
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f4857d410b16c3bbcb2129cec0d753a1c3d7a726
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602456"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469492"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Visual Basic Uygulama Modelini Genişletme
 Uygulama modeli için geçersiz kılarak işlevler ekleyebilirsiniz `Overridable` üyeleri <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> sınıfı. Bu teknik, uygulama modeli davranışını özelleştirip uygulama başlatıldığında ve kapanırken kendi yöntemlere yapılan çağrılar ekleyin sağlar.  
@@ -76,10 +76,10 @@ Uygulama modeli için geçersiz kılarak işlevler ekleyebilirsiniz `Overridable
   
  Uygulamanın tek örnekli bir uygulamadır ve uygulamanın zaten çalışıyor, uygulamanın sonraki örneği çağrıları <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A> yöntemi özgün örneğinde uygulama ve ardından çıkış yapar.  
  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> Oluşturucu çağrıları <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> belirlemek için uygulamanın formları kullanmak için hangi metin işleme altyapısı için özellik. Varsayılan olarak, <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> özelliği döndürür `False`, GDI metin işleme altyapısı kullanılması gerektiğini belirten, varsayılan değer olan içinde [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]. Geçersiz kılabilirsiniz <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> dönmesini `True`, GDI +'da metin işleme altyapısı kullanılmasını gösteren Visual Basic .NET 2002 ve Visual Basic .NET 2003'te varsayılan değerdir.  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> Oluşturucu çağrıları <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> belirlemek için uygulamanın formları kullanmak için hangi metin işleme altyapısı için özellik. Varsayılan olarak, <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> özelliği döndürür `False`, GDI metin işleme altyapısı kullanılması gerektiğini belirten, varsayılan değer olan Visual Basic 2005 ve sonraki sürümler. Geçersiz kılabilirsiniz <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> dönmesini `True`, GDI +'da metin işleme altyapısı kullanılmasını gösteren Visual Basic .NET 2002 ve Visual Basic .NET 2003'te varsayılan değerdir.  
   
 ## <a name="configuring-the-application"></a>Uygulamayı yapılandırma  
- Visual Basic uygulama modeli, bir parçası olarak <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> sınıfı uygulamayı yapılandırma korumalı özellikler sağlar. Bu özellikleri uygulayan sınıfın oluşturucusunda ayarlanması gerekir.  
+ Visual Basic uygulama modeli, bir parçası olarak <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> sınıfı uygulamayı yapılandırma korumalı özellikler sağlar. Bu özellikleri uygulayan sınıfın oluşturucusunda ayarlanması gerekir.  
   
  Varsayılan Windows Forms projesinde **Proje Tasarımcısı** Tasarımcı ayarlarla özelliklerini ayarlamak için kod oluşturur. Özellikler, yalnızca uygulama başlatılırken kullanılır; Uygulama başlatıldıktan sonra bunları ayar etkisizdir.  
   

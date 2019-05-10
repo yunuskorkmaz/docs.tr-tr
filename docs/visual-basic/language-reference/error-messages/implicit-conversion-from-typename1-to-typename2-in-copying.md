@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: 7b02659d96b08c592b25ddf3ef1f99114c3ee269
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7ac0e7961e1a039e505c85a35c7c31353ed6578e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013835"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661984"
 ---
 # <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>Arasında örtük dönüşüm '\<typename1 >' için '\<typename2 >' 'ByRef' parametresinin değeri kopyalarken '\<parametername >' eşleşen bağımsız değişkene geri dönün.
 Bir yordam adlı bir [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) , karşılık gelen parametre farklı bir tür bağımsız değişkeni.  

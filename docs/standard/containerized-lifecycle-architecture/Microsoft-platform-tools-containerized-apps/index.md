@@ -4,12 +4,12 @@ description: Docker uygulama yaşam döngüsü desteklemek için Microsoft'un te
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 8536703a520434c0e393c5f46005c2ac02d5d849
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cdaac06ffd907783c7ebe9b62ecd726158a02484
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934673"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664389"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Microsoft Platformu ve araçları kapsayıcılı uygulamalar için giriş
 
@@ -31,7 +31,7 @@ Tablo 3-1 kapsayıcılı Docker uygulamaları için Microsoft DevOps amacınıza
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Docker uygulamaları için Platform   | • Microsoft Visual Studio ve Visual Studio Code<br /> • .NET<br /> • Microsoft Azure kapsayıcı hizmeti<br /> • Azure Service Fabric<br /> • Azure kapsayıcı kayıt defteri<br /> | • Herhangi bir kod Düzenleyicisi (örneğin, Sublime)<br /> • Herhangi bir dile (Node.js, Java, Go, vb.)<br /> • Herhangi bir orchestrator ve Zamanlayıcı<br /> • Any Docker registry<br /> |
 | Docker uygulamaları için DevOps     | • Azure DevOps Hizmetleri<br /> • Microsoft Team Foundation Server<br /> • Azure kapsayıcı hizmeti<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion, vs.<br /> • Jenkins, Chef, Puppet, hız, CircleCI, Travis CI, vs.<br /> • Şirket içi Docker Datacenter, Docker Swarm, Mesos DC/OS, Kubernetes, vs.<br /> |
-| Yönetim ve izleme  | • Operations Management Suite<br /> • Uygulama öngörüleri<br /> | • Marathon, Chronos, vb.<br />
+| Yönetim ve izleme  | • Azure izleme | • Marathon, Chronos, vb.<br />|
 
 Microsoft Platformu ve kapsayıcılı Docker uygulamaları için Araçlar Tablo 3-1'de tanımlandığı gibi aşağıdaki bileşenler oluşturan:
 

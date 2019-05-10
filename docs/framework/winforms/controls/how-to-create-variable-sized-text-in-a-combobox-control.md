@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: 9155893b3d47707e0e55ee33e30d7998654f9e93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1fa9b04063d8f606f674cc54190dad5a669adbeb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965522"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666416"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Nasıl yapılır: ComboBox Denetiminde Değişken Boyutlu Metin Oluşturma
 Bu örnek özel çizim metin gösterir bir <xref:System.Windows.Forms.ComboBox> denetimi. Bir öğenin belirli bir ölçütü karşıladığında bir büyük yazı tipiyle çizilmiş ve kırmızı açık.  

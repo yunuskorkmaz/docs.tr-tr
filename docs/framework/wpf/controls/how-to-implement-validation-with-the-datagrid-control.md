@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6175e60b1dbdbdb31500f484da24b0f94990b2d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770883"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663336"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Nasıl yapılır: DataGrid Denetimi ile Doğrulama Uygulama
 <xref:System.Windows.Controls.DataGrid> Denetimi hücre ve satır düzeyinde doğrulama yapmanıza olanak sağlar. Bir kullanıcı bir değer güncelleştirdiğinde hücre düzeyinde doğrulama ile tek bir bağımlı veri nesnesinin özelliklerini doğrulayın. Bir kullanıcı bir satır için değişiklikleri onayladığında ile satır düzeyinde doğrulama, tüm veri nesnelerini doğrulayın. Ayrıca, doğrulama hataları için özelleştirilmiş görsel geri bildirim sağlamak veya varsayılan görsel geri bildirim kullanabilirsiniz, <xref:System.Windows.Controls.DataGrid> denetim sağlar.  

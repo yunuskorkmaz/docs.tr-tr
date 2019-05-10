@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: e6f8ed3b893319e771eb0af96da7a58a7fad5c9b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ff820256a27ce455b8eda0c4e7192bc26a3199c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954276"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663222"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları
 Tür dönüştürücülerinde ve İşaretleme uzantılarında Nesne grafiği bileşenleri oluşturmak için XAML türü sistemleri ve XAML yazarları kullanan iki tekniklerdir. Farklı bazı özellikleri paylaşır olsa da, tür dönüştürücüleri ve İşaretleme uzantılarında XAML düğümü akışı temsil edilir. Bu belgede kümesi, tür dönüştürücüleri, biçimlendirme uzantılarını ve benzer yapıları bazen topluca için değer dönüştürücüler adlandırılır.  

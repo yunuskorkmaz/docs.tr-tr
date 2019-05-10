@@ -4,12 +4,12 @@ description: Bu öğreticide, bir .NET Core uygulamasını Docker ile kapsayıc�
 ms.date: 04/10/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: fcbac0e0d17d2481d42e715a7f2790586e31d085
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7d5fd3da9170ecd33f7a1b6b6d048c174472d541
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614277"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750578"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Öğretici: Kapsayıcılı bir .NET Core uygulaması
 
@@ -412,3 +412,4 @@ Kullanım `docker images` yüklü görüntülerin listesini görmek için komutu
 * [ASP.NET Core mikro hizmet öğreticisini deneyin.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
 * [Kapsayıcıları destekleyen Azure Hizmetleri gözden geçirin.](https://azure.microsoft.com/en-us/overview/containers/)
 * [Dockerfile komutlarının hakkında okuyun.](https://docs.docker.com/engine/reference/builder/)
+* [Visual Studio kapsayıcı araçları keşfedin](/visualstudio/containers/overview)

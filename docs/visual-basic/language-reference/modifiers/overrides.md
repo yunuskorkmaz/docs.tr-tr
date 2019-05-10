@@ -13,54 +13,53 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: 9eb19bf5e89b12a32cae28b2c087570acc10f3ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7fff91d993743574d13030aa3d5cc1e462e76838
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920580"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751033"
 ---
 # <a name="overrides-visual-basic"></a>Geçersiz Kılmalar (Visual Basic)
-Bir özelliğin ya da yordamın bir aynı adlı bir özellik ya da bir temel sınıftan devralınan yordamın kıldığını belirtir.  
-  
-## <a name="remarks"></a>Açıklamalar  
-  
-## <a name="rules"></a>Kurallar  
-  
--   **Bildirim bağlamı.** Kullanabileceğiniz `Overrides` yalnızca bir özellik veya yordamı bildirim deyiminde.  
-  
--   **Birleşik değiştiriciler.** Belirtemezsiniz `Overrides` ile birlikte `Shadows` veya `Shared` aynı bildirimde. Bir geçersiz kılma öğesi örtük olarak geçersiz kılınabilir olduğundan birleştiremezsiniz `Overridable` ile `Overrides`.  
-  
--   **Eşleşen imzalar.** Bu bildirim imzası tam olarak eşleşmelidir *imza* özellik ya da onu geçersiz kılar yordamı. Başka bir deyişle, aynı sırayla, aynı veri türleriyle parametreleri aynı sayıda parametre listeleri olmalıdır.  
-  
-     İmza ek olarak, geçersiz kılma bildirimi de tam olarak şu eşleşmelidir:  
-  
-    -   Erişim düzeyi  
-  
-    -   Dönüş türü, varsa  
-  
--   **Genel imzalar.** Genel bir yordam için imza türü parametre sayısını içerir. Bu nedenle, geçersiz kılma bildirimi de bu açısından temel sınıftaki sürümün eşleşmesi gerekir.  
-  
--   **Ek eşleştirme.** Temel sınıftaki sürümün imzası eşleşen ek olarak, bu bildirimi Ayrıca, şu açılardan eşleşmesi gerekir:  
-  
-    -   Erişim düzeyi değiştirici (gibi [genel](../../../visual-basic/language-reference/modifiers/public.md))  
-  
-    -   Her parametre mekanizması geçirme ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))  
-  
-    -   Genel bir yordam üzerinde her tür parametresi kısıtlaması listeler  
-  
--   **Gölgeleme ve geçersiz kılma.** Devralınan bir öğe hem gölgeleme ve geçersiz kılma bulunabileceğini, ancak iki yaklaşım arasında önemli farklar vardır. Daha fazla bilgi için [Visual Basic'de gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
-  
- Kullanırsanız `Overrides`, derleyicinin dolaylı olarak ekler `Overloads` kitaplığınızı API'leri ile çalışmak üzere C# daha kolay.  
-  
- `Overrides` Bu bağlamda değiştirici kullanılabilir:  
-  
- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
-  
- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
-  
- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
-  
+
+Bir özelliğin ya da yordamın bir aynı adlı bir özellik ya da bir temel sınıftan devralınan yordamın kıldığını belirtir.
+
+## <a name="rules"></a>Kurallar
+
+- **Bildirim bağlamı.** Kullanabileceğiniz `Overrides` yalnızca bir özellik veya yordamı bildirim deyiminde.
+
+- **Birleşik değiştiriciler.** Belirtemezsiniz `Overrides` ile birlikte `Shadows` veya `Shared` aynı bildirimde. Bir geçersiz kılma öğesi örtük olarak geçersiz kılınabilir olduğundan birleştiremezsiniz `Overridable` ile `Overrides`.
+
+- **Eşleşen imzalar.** Bu bildirim imzası tam olarak eşleşmelidir *imza* özellik ya da onu geçersiz kılar yordamı. Başka bir deyişle, aynı sırayla, aynı veri türleriyle parametreleri aynı sayıda parametre listeleri olmalıdır.
+
+  İmza ek olarak, geçersiz kılma bildirimi de tam olarak şu eşleşmelidir:
+
+  - Erişim düzeyi
+
+  - Dönüş türü, varsa
+
+- **Genel imzalar.** Genel bir yordam için imza türü parametre sayısını içerir. Bu nedenle, geçersiz kılma bildirimi de bu açısından temel sınıftaki sürümün eşleşmesi gerekir.
+
+- **Ek eşleştirme.** Temel sınıftaki sürümün imzası eşleşen ek olarak, bu bildirimi Ayrıca, şu açılardan eşleşmesi gerekir:
+
+  - Erişim düzeyi değiştirici (gibi [genel](../../../visual-basic/language-reference/modifiers/public.md))
+
+  - Her parametre mekanizması geçirme ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))
+
+  - Genel bir yordam üzerinde her tür parametresi kısıtlaması listeler
+
+- **Gölgeleme ve geçersiz kılma.** Devralınan bir öğe hem gölgeleme ve geçersiz kılma bulunabileceğini, ancak iki yaklaşım arasında önemli farklar vardır. Daha fazla bilgi için [Visual Basic'de gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+
+Kullanırsanız `Overrides`, derleyicinin dolaylı olarak ekler `Overloads` kitaplığınızı API'leri ile çalışmak üzere C# daha kolay.
+
+`Overrides` Bu bağlamda değiştirici kullanılabilir:
+
+- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
+
+- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
+
+- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)

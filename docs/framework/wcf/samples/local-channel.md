@@ -2,12 +2,12 @@
 title: Yerel Kanal
 ms.date: 03/30/2017
 ms.assetid: fa1917a4-f701-4e82-a439-14a16282c7cc
-ms.openlocfilehash: 1711909ada4756dd2723f62160eef0ad12c03174
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 11f3e4fe07ffa285f72ba8fd92224a3ba78d238b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989839"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656030"
 ---
 # <a name="local-channel"></a>Yerel Kanal
 Yerel kanal aynı uygulama etki alanı içinde iletişim kurmak için kullanılan bir Windows Communication Foundation (WCF) aktarım kanalıdır. Burada aynı uygulama etki alanında çalışan istemci ve hizmet ve ek yükü tipik WCF kanalı yığınının (seri hale getirme ve seri durumundan çıkarma iletilerinin) kaçınılmalıdır senaryoları için kullanışlıdır.  

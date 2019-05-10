@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d361b0c471402c097dfac799eb58ef08209d4343
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795592"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664363"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Windows üzerinde Visual Studio 2017'de Docker araçları kullanın
 
@@ -79,7 +79,7 @@ Aşağıdaki tabloda, bu seçenekleri ayarlamak nasıl karar vermenize yardımc�
 | Otomatik olarak proje yükünde gerekli Docker görüntülerini çekme | Açık | Docker Compose | Proje yüklenirken performansı artırmak için Visual Studio Docker çekme işlemi arka planda böylece kodunuzu çalıştırmak hazır olduğunuzda, görüntü zaten yüklenene veya yükleme sürecinde başlar. Yalnızca projeler yükleniyor ve kod gözatma ise, ihtiyacınız olmayan kapsayıcı görüntülerini yüklenmesini önlemek için kapatabilirsiniz. |
 | Kapsayıcıları arka planda otomatik olarak Başlat | Açık | Docker Compose | Yeniden performansı artırmak için Visual Studio kapsayıcı ile birim başlatmalar, derleme ve kapsayıcı çalıştırma için hazır oluşturur. Kapsayıcı oluşturulduğunda denetlemek istiyorsanız, kapatır. |
 | KILL çözümdeki kapsayıcıları otomatik olarak Kapat | Açık | Docker Compose | Kapsayıcıları çözümünüzün çözümün kapatılması veya Visual Studio kapatıldıktan sonra çalışmaya devam etmesini istiyorsanız kapatır. |
-| İçin localhost SSL sertifikasına güvenme istemi yapma | Kapalı | ASP.NET Core 2.1 projeleri | Localhost SSL sertifikasına güvenilir değilse, bu onay kutusu işaretli değilse, projenizi her çalıştırdığınızda Visual Studio ister. |
+| İçin localhost SSL sertifikasına güvenme istemi yapma | Kapalı | 2.2 ASP.NET Core projeleri | Localhost SSL sertifikasına güvenilir değilse, bu onay kutusu işaretli değilse, projenizi her çalıştırdığınızda Visual Studio ister. |
 
 > [!WARNING]
 > Ardından localhost SSL sertifikasına güvenilmiyor ve isteyen bastırmak için kutuyu işaretleyin, HTTPS isteklerine uygulamanızı veya hizmetinizi çalışma zamanında başarısız olabilir. Bu durumda, onay kutusunu temizleyin **sorma** onay kutusunu projenizi çalıştırmak ve güven isteminde gösterir.

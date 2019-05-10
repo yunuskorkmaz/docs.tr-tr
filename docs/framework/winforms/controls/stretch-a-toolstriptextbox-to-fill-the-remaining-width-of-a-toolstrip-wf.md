@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], stretching in ToolStrip control [Windows Forms]
 - ToolStrip control [Windows Forms], stretching a text box
 ms.assetid: 0e610fbf-85fe-414c-900c-9704a5dd5cc6
-ms.openlocfilehash: 707fd2e470a9be1d61d2878eeff845b3cad270db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7a9fd703206caadf2d9c63d92567f8b1c3b51e61
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971931"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751425"
 ---
 # <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>Nasıl yapılır: Bir toolstrip'nin kalan genişliğini (Windows Forms) doldurmak için
 Ayarladığınızda <xref:System.Windows.Forms.ToolStrip.Stretch%2A> özelliği bir <xref:System.Windows.Forms.ToolStrip> denetimini `true`, denetimi uçtan uca, kapsayıcı doldurur ve kapsayıcısı boyutlandırdığında yeniden boyutlandırır. Bu yapılandırmada, bir öğesi denetiminde gibi esnetme yararlı bir <xref:System.Windows.Forms.ToolStripTextBox>kullanılabilir alanı dolduracak şekilde ve denetim boyutlandırdığında yeniden boyutlandırabilirsiniz. Görünümünü ve davranışını Microsoft® Internet Explorer Adres çubuğuna benzer elde etmek istiyorsanız bu uzatma gibi yararlı olur.  

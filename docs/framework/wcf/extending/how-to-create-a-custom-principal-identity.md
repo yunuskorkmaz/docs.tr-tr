@@ -10,12 +10,12 @@ helpviewer_keywords:
 - PrincipalPermissionMode
 - PrincipalPermissionAttribute
 ms.assetid: c4845fca-0ed9-4adf-bbdc-10812be69b61
-ms.openlocfilehash: 9b8b18f6c66fdb8f2446d3ddc5c584c5bad44ef3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 324537ac018086669abccc21235f9a9359b413cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767279"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662844"
 ---
 # <a name="how-to-create-a-custom-principal-identity"></a>Nasıl yapılır: Özel Sorumlu Kimliği Oluşturma
 <xref:System.Security.Permissions.PrincipalPermissionAttribute> Hizmet yöntemleri erişimi denetleme, bildirim temelli bir yoludur. Bu öznitelik kullanırken <xref:System.ServiceModel.Description.PrincipalPermissionMode> numaralandırma yetkilendirme denetimleri gerçekleştirmek için modu belirtir. Bu modu ayarlandığında <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom>, özel bir belirtmesini sağlayan <xref:System.Security.Principal.IPrincipal> sınıfı tarafından döndürülen <xref:System.Threading.Thread.CurrentPrincipal%2A> özelliği. Bu konuda senaryoyu gösteren zaman <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom> özel yetkilendirme ilkesi ve özel bir kural ile birlikte kullanılır.  

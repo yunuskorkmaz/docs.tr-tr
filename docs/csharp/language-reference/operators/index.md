@@ -1,6 +1,6 @@
 ---
 title: C# işleçleri
-ms.date: 04/04/2018
+ms.date: 04/30/2019
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
@@ -18,34 +18,34 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: f4267caeb6301950b9f6a8b9545a47b9f48e7920
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fbbc0a5accf021df0675192deb040476bc97968d
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689820"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452378"
 ---
 # <a name="c-operators"></a>C# işleçleri
 
-C# (matematik, dizin oluşturma, işlev çağrısı, vb.) bir ifadede gerçekleştirilecek işlemleri belirten simgelerdir birçok işleçleri sağlar. Yapabilecekleriniz [aşırı](../../programming-guide/statements-expressions-operators/overloadable-operators.md) işleçlerinin çoğu kullanıcı tanımlı bir türe başvurulduğunda anlamının değiştirin.
+C#birkaç yerleşik türleri tarafından desteklenen önceden tanımlı operatörler sağlar. Örneğin, [aritmetik işleçler](arithmetic-operators.md) yerleşik sayısal türler, işlenenlerin aritmetik işlemler gerçekleştirme ve [Boolean mantıksal işleçler](boolean-logical-operators.md) mantıksal işlemleri ile [bool ](../keywords/bool.md) işlenen.
 
-Tamsayı türlerinde işlemler (gibi `==`, `!=`, `<`, `>`, `&`, `|`) genellikle numaralandırma üzerinde izin verilir (`enum`) türleri.
+Kullanıcı tanımlı bir tür o türündeki işlenenler için karşılık gelen davranışını tanımlamak için belirli işleçleri aşırı yüklenebilir. Daha fazla bilgi için [işleci](../keywords/operator.md) anahtar sözcüğü makalesi.
 
-Aşağıdaki bölümlerde, en yüksek önceliğe düşüğe başlayarak C# işleçleri listeler. Her bölüm içerisindeki işleçler aynı öncelik düzeyine paylaşın.
+Aşağıdaki bölümlerde liste C# en yüksek önceliğe düşüğe başlayarak işleçleri. Her bölüm içerisindeki işleçler aynı öncelik düzeyine paylaşın.
 
 ## <a name="primary-operators"></a>Birincil operatörler
 
 En yüksek öncelik işleçleri şunlardır.
 
-[x.y](member-access-operator.md) – üye erişimi.
+[x.y](member-access-operators.md#member-access-operator-) – üye erişimi.
 
-[x? y](null-conditional-operators.md) – null koşullu üye erişimi. Döndürür `null` sol işlenen değerlendirilirse `null`.
+[x? y](member-access-operators.md#null-conditional-operators--and-) – null koşullu üye erişimi. Döndürür `null` sol işlenen değerlendirilirse `null`.
 
-[x? [y] ](null-conditional-operators.md) -null koşullu dizin erişim. Döndürür `null` sol işlenen değerlendirilirse `null`.
+[x? [y] ](member-access-operators.md#null-conditional-operators--and-) - koşullu dizi öğesi null veya dizin oluşturucu erişim yazın. Döndürür `null` sol işlenen değerlendirilirse `null`.
 
-[f(x)](invocation-operator.md) – işlev çağırma.
+[f(x)](member-access-operators.md#invocation-operator-) – yöntem çağrısı veya temsilci çağırma.
 
-[bir&#91;x&#93; ](index-operator.md) – toplama nesnesi dizin oluşturma.
+[bir&#91;x&#93; ](member-access-operators.md#indexer-operator-) – dizi öğesi veya dizin oluşturucu erişim yazın.
 
 [x ++](arithmetic-operators.md#increment-operator-) – sonek artırma. X değerini döndürür ve ardından depolama konumu büyük bir x değeri ile güncelleştirir (genellikle 1 tamsayı ekler).
 
@@ -61,9 +61,13 @@ En yüksek öncelik işleçleri şunlardır.
 
 [Default(T)](../../programming-guide/statements-expressions-operators/default-value-expressions.md) – t türü varsayılan değerini üretir
 
+[nameof](../keywords/nameof.md) -değişken, tür veya üyenin bir sabit dize olarak basit (nitelenmemiş) adını alır.
+
 [Temsilci](../../programming-guide/statements-expressions-operators/anonymous-methods.md) – bildirir ve temsilci örneği döndürür.
 
 [sizeof](../keywords/sizeof.md) -türü işlenen bayt cinsinden boyutunu döndürür.
+
+[stackalloc](../keywords/stackalloc.md) -bir yığında bellek bloğu ayırır.
 
 [->](dereference-operator.md) – Birleştirilmiş üye erişimi ile işaretçiye başvuruluyor.
 
@@ -125,13 +129,13 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 
 Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahip.
 
-[x \< y](less-than-operator.md) – (x, y değerinden ise true) küçüktür.
+[x \< y](comparison-operators.md#less-than-operator-) – (x, y değerinden ise true) küçüktür.
 
-[x > y](greater-than-operator.md) – büyük (x, y büyükse true).
+[x > y](comparison-operators.md#greater-than-operator-) – büyük (x, y büyükse true).
 
-[x \<y =](less-than-equal-operator.md) – küçük veya eşittir.
+[x \<y =](comparison-operators.md#less-than-or-equal-operator-) – küçük veya eşittir.
 
-[x > y =](greater-than-equal-operator.md) – büyüktür veya eşittir.
+[x > y =](comparison-operators.md#greater-than-or-equal-operator-) – büyüktür veya eşittir.
 
 [olan](../keywords/is.md) – uyumluluk yazın. Değerlendirilen sol işlenen sağ işlenen (statik türü) belirtilen türe dönüştürülebilir ise true döndürür.
 
@@ -187,7 +191,7 @@ Bu işleç, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde d
 
 [t? x: y](conditional-operator.md) – test `t` true, ardından değerlendirilip döndürülecek değerlendirir `x`; Aksi takdirde, değerlendirilip döndürülecek `y`.
 
-## <a name="assignment-and-lambda-operators"></a>Atama ve Lambda işleçleri
+## <a name="assignment-and-lambda-operators"></a>Atama ve lambda işleçleri
 
 Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahip.
 

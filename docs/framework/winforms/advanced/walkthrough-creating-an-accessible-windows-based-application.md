@@ -6,27 +6,27 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c324e4956d6db29e4de12bd7639a69daaf65d872
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747554"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665924"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>İzlenecek yol: Erişilebilir bir Windows Tabanlı Uygulama Oluşturma
 Erişilebilir bir uygulama oluşturma, önemli iş etkileri vardır. Birçok hükümetler yazılım satın alma için erişilebilirlik düzenlemeleri vardır. Windows için sertifikalıdır logosu erişilebilirlik gereksinimlerini içerir. ABD tek başına kaç tanesinin potansiyel müşteriler, tahmini bir 30 milyon yaşayanlar yazılım erişilebilirliğini tarafından etkilenir.  
   
  Bu izlenecek yol, Windows için sertifikalıdır logosu beş erişilebilirlik gereksinimlerini ele alınacaktır. Bu gereksinimlerine göre erişilebilir bir uygulama olacaktır:  
   
--   Denetim Masası boyutu, renk, yazı tipi desteği ve giriş ayarları. Kullanıcı Denetim Masası ayarları değiştiğinde menü çubuğunda, başlık çubuğu, kenarlık ve durum çubuğu tüm kendilerini boyutlandırılır. Bu uygulamada hiçbir ek değişiklikler denetimlerde veya kod gerekir.  
+- Denetim Masası boyutu, renk, yazı tipi desteği ve giriş ayarları. Kullanıcı Denetim Masası ayarları değiştiğinde menü çubuğunda, başlık çubuğu, kenarlık ve durum çubuğu tüm kendilerini boyutlandırılır. Bu uygulamada hiçbir ek değişiklikler denetimlerde veya kod gerekir.  
   
--   Yüksek Karşıtlık modunu destekler.  
+- Yüksek Karşıtlık modunu destekler.  
   
--   Tüm özellikleri belgelenmiş klavye erişim sağlar.  
+- Tüm özellikleri belgelenmiş klavye erişim sağlar.  
   
--   Klavye odağı konumunu görsel olarak hem de programsal olarak kullanıma sunar.  
+- Klavye odağı konumunu görsel olarak hem de programsal olarak kullanıma sunar.  
   
--   Tek başına sesle önemli bilgileri iletmek kaçının.  
+- Tek başına sesle önemli bilgileri iletmek kaçının.  
   
  Daha fazla bilgi için [erişilebilir uygulamalar tasarlama için kaynaklar](/visualstudio/ide/reference/resources-for-designing-accessible-applications).  
   
@@ -41,29 +41,29 @@ Erişilebilir bir uygulama oluşturma, önemli iş etkileri vardır. Birçok hü
   
 #### <a name="to-begin-making-the-application"></a>Uygulama yapmaya başlamak için  
   
--   Visual Basic veya Visual içinde yeni bir Windows uygulaması oluşturma C#. Projeyi adlandırın **PizzaOrder**. (Ayrıntılar için bkz. [oluşturma yeni çözümler ve projeler](/visualstudio/ide/creating-solutions-and-projects).)  
+- Visual Basic veya Visual içinde yeni bir Windows uygulaması oluşturma C#. Projeyi adlandırın **PizzaOrder**. (Ayrıntılar için bkz. [oluşturma yeni çözümler ve projeler](/visualstudio/ide/creating-solutions-and-projects).)  
   
 ## <a name="adding-the-controls-to-the-form"></a>Formu için denetimler ekleme  
  Forma denetim ekleme, erişilebilir bir uygulama yapmak için aşağıdaki yönergeleri dikkate alın:  
   
--   Ayarlama <xref:System.Windows.Forms.Control.AccessibleDescription%2A> ve <xref:System.Windows.Forms.Control.AccessibleName%2A> özellikleri. Bu örnekte, varsayılan ayarı <xref:System.Windows.Forms.Control.AccessibleRole%2A> yeterlidir. Erişilebilirlik özellikleri hakkında daha fazla bilgi için bkz. [bir Windows formundaki denetimler için erişilebilirlik bilgileri sağlama](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
+- Ayarlama <xref:System.Windows.Forms.Control.AccessibleDescription%2A> ve <xref:System.Windows.Forms.Control.AccessibleName%2A> özellikleri. Bu örnekte, varsayılan ayarı <xref:System.Windows.Forms.Control.AccessibleRole%2A> yeterlidir. Erişilebilirlik özellikleri hakkında daha fazla bilgi için bkz. [bir Windows formundaki denetimler için erişilebilirlik bilgileri sağlama](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
   
--   10 noktalarına ya da daha büyük yazı tipi boyutunu ayarlayın.  
+- 10 noktalarına ya da daha büyük yazı tipi boyutunu ayarlayın.  
   
     > [!NOTE]
     >  Başlattığınızda 10 form yazı tipi boyutunu ayarlayın, tüm denetimler için form daha sonradan eklenen bir yazı tipi boyutu 10 yüklemeniz gerekir.  
   
--   Hemen bir TextBox denetimi tanımlayan herhangi bir etiket denetimi TextBox denetimi içinde sekme sırası önündeki emin olun.  
+- Hemen bir TextBox denetimi tanımlayan herhangi bir etiket denetimi TextBox denetimi içinde sekme sırası önündeki emin olun.  
   
--   "&" Karakteri kullanarak bir erişim anahtarı ekleme <xref:System.Windows.Forms.Control.Text%2A> gitmek istediğiniz kullanıcı denetiminin özelliği.  
+- "&" Karakteri kullanarak bir erişim anahtarı ekleme <xref:System.Windows.Forms.Control.Text%2A> gitmek istediğiniz kullanıcı denetiminin özelliği.  
   
--   "&" Karakteri kullanarak bir erişim anahtarı ekleme <xref:System.Windows.Forms.Control.Text%2A> önündeki kullanıcı gitmek isteyebilirsiniz bir denetim etiketinin özelliği. Etiketlerin ayarlamak <xref:System.Windows.Forms.Label.UseMnemonic%2A> özelliğini `true`, böylece kullanıcı erişim tuşuna bastığında odağını sekme sırasında sonraki denetime ayarlanır.  
+- "&" Karakteri kullanarak bir erişim anahtarı ekleme <xref:System.Windows.Forms.Control.Text%2A> önündeki kullanıcı gitmek isteyebilirsiniz bir denetim etiketinin özelliği. Etiketlerin ayarlamak <xref:System.Windows.Forms.Label.UseMnemonic%2A> özelliğini `true`, böylece kullanıcı erişim tuşuna bastığında odağını sekme sırasında sonraki denetime ayarlanır.  
   
--   Tüm menü öğeleri için erişim anahtarları ekleyin.  
+- Tüm menü öğeleri için erişim anahtarları ekleyin.  
   
 #### <a name="to-make-your-windows-application-accessible"></a>Windows uygulamanızı erişilebilir hale getirmek için  
   
--   Formu için denetimler ekleme ve aşağıda açıklandığı gibi özellikleri ayarlayın. Form üzerinde denetimleri düzenlemek nasıl bir model için tablonun sonuna resmi görürsünüz.  
+- Formu için denetimler ekleme ve aşağıda açıklandığı gibi özellikleri ayarlayın. Form üzerinde denetimleri düzenlemek nasıl bir model için tablonun sonuna resmi görürsünüz.  
   
     |Nesne|Özellik|Değer|  
     |------------|--------------|-----------|  
@@ -137,20 +137,20 @@ Erişilebilir bir uygulama oluşturma, önemli iş etkileri vardır. Birçok hü
     |MenuItem|Ad|exitApp|  
     ||Metin|Çı &|
     
-      Formunuza, aşağıdaki görüntüde aşağıdakine benzer:
+      Your form will look something like the following image:
     
-      ![Ad metin, boyut ve toppings seçimi pizza sipariş formla.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+      ![The pizza order form with a name textbox, and size and toppings selection.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
 
 ## <a name="supporting-high-contrast-mode"></a>Yüksek Karşıtlık modunu kullanmak destekleme  
  Yüksek Karşıtlık modunu kullanmak, karşıt renklerden ve görme engelli kullanıcılar için yararlı olan yazı tipi boyutlarını kullanarak okunabilirliğini artırır bir Windows sistemi ayarıdır. <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> Özelliği, yüksek karşıtlık modunu ayarlanmış olup olmadığını belirlemek için sağlanır.  
   
  SystemInformation.HighContrast ise `true`, uygulamanın gerekir:  
   
--   Sistem renk düzenini kullanarak tüm kullanıcı arabirimi öğeleri görüntüleme  
+- Sistem renk düzenini kullanarak tüm kullanıcı arabirimi öğeleri görüntüleme  
   
--   Görsel ipuçları tarafından iletmek veya ses renk ilettiği tüm bilgileri. Kırmızı bir yazı tipi kullanarak belirli bir liste öğelerini vurgulanır, böylece kullanıcı öğeler vurgulanmıştır bir renk olmayan işaret gibi de kalın yazı ekleyebilirsiniz.  
+- Görsel ipuçları tarafından iletmek veya ses renk ilettiği tüm bilgileri. Kırmızı bir yazı tipi kullanarak belirli bir liste öğelerini vurgulanır, böylece kullanıcı öğeler vurgulanmıştır bir renk olmayan işaret gibi de kalın yazı ekleyebilirsiniz.  
   
--   Herhangi bir görüntü veya metin arkasında desen atla  
+- Herhangi bir görüntü veya metin arkasında desen atla  
   
  Uygulama ayarını denetlesin <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> uygulamanın ne zaman başlar ve sistem olaya yanıt <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>. <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> Olayı her değeri <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> değişiklikler.  
   

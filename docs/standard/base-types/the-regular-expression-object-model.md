@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1dc0570bedb1e7dbe02994b7df943609a42ca092
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ea31dc154d5df2b0058af4c04035d096d5e850c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770441"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664670"
 ---
 # <a name="the-regular-expression-object-model"></a>Normal İfade Nesnesi Modeli
 <a name="introduction"></a> Bu konuda, .NET normal ifadeleriyle çalışan kullanılan nesne modelini açıklar. Aşağıdaki bölümleri içerir:  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: 0d68846938aba809a7a3a6f7d27f185bb90a39cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ab8660ff0cf02956e760132f5aad69e359913950
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920685"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661094"
 ---
 # <a name="overloads-visual-basic"></a>Aşırı Yüklemeler (Visual Basic)
 Bir özelliğin ya da yordamın bir veya daha fazla var olan özellikler veya aynı ada sahip yordamları gizlediğini belirtir.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c07747c5100f6f7b7ee80b2e7e39d22362698e4
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.openlocfilehash: d39d4dfd5413b95300b70f27437bd27ca2d67a20
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63807839"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452391"
 ---
 # <a name="default-marshaling-for-strings"></a>Dizeler için Varsayılan Hazırlama
 
@@ -234,7 +234,7 @@ Bazı durumlarda, sabit uzunluklu karakteri arabellek yönetilebilmesini yöneti
 
 Çözüm geçirmektir bir <xref:System.Text.StringBuilder> arabellek yerine bağımsız değişken olarak bir <xref:System.String>. A `StringBuilder` başvurusu ve kapasitesini aşmadığından sağlanan Aranan tarafından değiştirilen `StringBuilder`. Sabit uzunluk için de yeniden başlatılabilir. Örneğin, başlatma, bir `StringBuilder` kapasitesi arabelleğe `N`, Sıralayıcı bir arabellek boyutunu sağlar (`N`+ 1) karakter. Yönetilmeyen dize bir null Sonlandırıcı çalışırken sahip olgu + 1 hesaplar `StringBuilder` desteklemez.
 
-Örneğin, Windows [ `GetWindowText` ](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) API işlevi (tanımlanan *Windows.h*) arayan işlev Yazar pencerenin metin sabit uzunluklu karakteri arabellek geçmesini gerektirir. `LpString` işaret boyutu arayana ayrılan arabelleğe `nMaxCount`. Çağıranın arabellek ayırmak ve ayarlamak için beklenen `nMaxCount` bağımsız değişkeni için ayrılan arabelleğin boyutu. Aşağıdaki örnekte gösterildiği `GetWindowText` işlevi bildiriminde tanımlanan *Windows.h*.
+Örneğin, Windows [ `GetWindowText` ](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) API işlevi (tanımlanan *winuser.h*) arayan işlev Yazar pencerenin metin sabit uzunluklu karakteri arabellek geçmesini gerektirir. `LpString` işaret boyutu arayana ayrılan arabelleğe `nMaxCount`. Çağıranın arabellek ayırmak ve ayarlamak için beklenen `nMaxCount` bağımsız değişkeni için ayrılan arabelleğin boyutu. Aşağıdaki örnekte gösterildiği `GetWindowText` işlevi bildiriminde tanımlanan *winuser.h*.
 
 ```cpp
 int GetWindowText(
@@ -247,7 +247,11 @@ int GetWindowText(
 A `StringBuilder` başvurusu ve kapasitesini aşmadığından sağlanan Aranan tarafından değiştirilen `StringBuilder`. Aşağıdaki kod örneğinde nasıl `StringBuilder` sabit uzunluk için başlatılabilir.
 
 ```csharp
-internal static class WindowsAPI
+using System;
+using System.Runtime.InteropServices;
+using System.Text;
+
+internal static class NativeMethods
 {
     [DllImport("User32.dll")]
     internal static extern void GetWindowText(IntPtr hWnd, StringBuilder lpString, int nMaxCount);
@@ -259,15 +263,17 @@ public class Window
     public String GetText()
     {
         StringBuilder sb = new StringBuilder(256);
-        WindowsAPI.GetWindowText(h, sb, sb.Capacity + 1);
+        NativeMethods.GetWindowText(h, sb, sb.Capacity + 1);
         return sb.ToString();
     }
 }
 ```
 
 ```vb
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Sub GetWindowText Lib "User32.dll" _
+Imports System.Text
+
+Friend Class NativeMethods
+    Friend Declare Auto Sub GetWindowText Lib "User32.dll" _
         (hWnd As IntPtr, lpString As StringBuilder, nMaxCount As Integer)
 End Class
 
@@ -275,7 +281,7 @@ Public Class Window
     Friend h As IntPtr ' Friend handle to Window.
     Public Function GetText() As String
         Dim sb As New StringBuilder(256)
-        WindowsAPI.GetWindowText(h, sb, sb.Capacity + 1)
+        NativeMethods.GetWindowText(h, sb, sb.Capacity + 1)
         Return sb.ToString()
    End Function
 End Class
