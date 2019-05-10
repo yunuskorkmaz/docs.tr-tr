@@ -3,12 +3,12 @@ title: .NET Core kullanarak bir REST istemcisi oluşturma
 description: Bu öğretici, .NET Core ve C# dili özellikleri sayısı öğretir.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 332e47d9a02f48c53bbad272477768fa4c0367f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6e3371a72810b30f804169be4025360aa10c477
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61676007"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063878"
 ---
 # <a name="rest-client"></a>REST istemcisi
 
@@ -36,11 +36,10 @@ Sık kullandığınız Kod Düzenleyicisi'ni yüklemeniz gerekir. Aşağıdaki t
 
 ## <a name="create-the-application"></a>Uygulama oluşturma
 
-İlk adım, yeni bir uygulama oluşturmaktır. Bir komut istemi açın ve uygulamanız için yeni bir dizin oluşturun. Bu, geçerli bir dizin oluşturun. Komut türü `dotnet new console` komut isteminde. Bu, temel bir "Hello World" uygulaması için başlangıç dosyaları oluşturur.
+İlk adım, yeni bir uygulama oluşturmaktır. Bir komut istemi açın ve uygulamanız için yeni bir dizin oluşturun. Bu, geçerli bir dizin oluşturun. Komut türü `dotnet new console` komut isteminde. Bu, temel bir "Hello World" uygulaması için başlangıç dosyaları oluşturur. Bu yeni bir proje olduğundan, ilk çalıştırma .NET Core Framework'ün indirin, geliştirme sertifikası yüklenir ve eksik bağımlılıklar geri yüklemek için NuGet paket yöneticisini çalıştırın böylece bağımlılıkları hiçbiri yerde değil.
 
-Bir değişiklik yapmadan başlamadan önce basit bir Hello World uygulamasını çalıştırmak için adımlara Bahsedelim. Uygulamayı oluşturduktan sonra yazın `dotnet restore` ([bkz. Not](#dotnet-restore-note)) komut isteminde. Bu komut, NuGet paket geri yükleme işlemi çalıştırır. NuGet, .NET paket yöneticisidir. Bu komut tüm projeniz için eksik bağımlılıkların indirir. Bu yeni bir proje olduğundan, ilk çalıştırma .NET Core framework yükleyecek şekilde bağımlılıkları hiçbiri yerde değil. Bu ilk adımdan sonra yalnızca çalıştırmanız gerekir `dotnet restore` ([bkz. Not](#dotnet-restore-note)) yeni bağımlı paketler eklediğinizde, veya herhangi birini bağımlılıklarınızı sürümlerini güncelleştirin.
-
-Paketleri geri yükledikten sonra çalıştırmanız `dotnet build`. Bu yapı altyapısının yürütür ve uygulamanızı oluşturur. Son olarak, yürüttüğünüz `dotnet run` uygulamanızı çalıştırmak için.
+Bir değişiklik yapmadan başlamadan önce yazın `dotnet run` ([bkz. Not](#dotnet-restore-note)) uygulamanızı çalıştırmak için komut isteminde. `dotnet run` otomatik olarak gerçekleştirir `dotnet restore` ortamınızı bağımlılıkları eksikse. Ayrıca gerçekleştirir `dotnet build` uygulamanız yeniden oluşturulması gerekiyorsa.
+İlk Kurulumdan sonra yalnızca çalıştırmanız gerekir `dotnet restore` veya `dotnet build` projeniz için anlamlı olduğunda kolaylaştırır.
 
 ## <a name="adding-new-dependencies"></a>Yeni bağımlılıkları ekleme
 
@@ -62,7 +61,7 @@ Bu satırın hemen sonra aşağıdakileri ekleyin:
 
 Çoğu kod düzenleyicilerinden, bu kitaplıkların farklı sürümleri için tamamlama sağlayacaktır. Genellikle, eklediğiniz herhangi bir paket en son sürümünü kullanmak isteyeceksiniz. Ancak, tüm paketlerin sürümlerinin eşleştiğinden ve .NET Core uygulaması framework sürümü de eşleştiğinden emin olmak önemlidir.
 
-Bu değişiklikleri yaptıktan sonra çalıştırmalısınız `dotnet restore` ([bkz. Not](#dotnet-restore-note)) yeniden böylece paket sisteminize yüklenir.
+Bu değişiklikleri yaptıktan sonra yürütme `dotnet restore` ([bkz. Not](#dotnet-restore-note)) paketi sisteminizde yüklü olduğunu.
 
 ## <a name="making-web-requests"></a>Web istekleri yapma
 

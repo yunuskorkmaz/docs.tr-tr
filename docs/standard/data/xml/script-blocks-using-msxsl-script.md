@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b45b8ebe048a5917019349ea3a6a357b7e90a9c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 32c76ae4556467759dad111b47e3ad8f6cf6df92
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62027010"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589974"
 ---
 # <a name="script-blocks-using-msxslscript"></a>msxsl:script Kullanan Betik Blokları
 <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı kullanarak katıştırılmış betikleri destekler `msxsl:script` öğesi. Stil sayfası yüklendiğinde, herhangi bir tanımlı işlevlere kod belge nesne modeli (CodeDOM) tarafından derlenmiş Microsoft Ara dili (MSIL) ve çalışma zamanı sırasında yürütülür. Katıştırılmış betik bloğundan oluşturulan derleme, stil sayfası için oluşturulan derlemesinden ayrıdır.  

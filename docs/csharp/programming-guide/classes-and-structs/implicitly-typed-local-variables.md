@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 9c6f7ae5d7a579abead2a62f8fdc7c63e5c53328
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 72114233044fbf0e9910048343806eb542ed7ea5
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646377"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063749"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Örtük olarak yazılan yerel değişkenler (C# Programlama Kılavuzu)
 
@@ -68,6 +68,20 @@ Türü örtük olarak belirlenmiş değişken bildirimleri için aşağıdaki k�
 - Aynı deyimde birden fazla örtük olarak yazılan değişkenler başlatılamaz.
 
 - Adlı bir tür ise `var` kapsam içinde olan sonra `var` anahtar sözcüğü bu tür adı için çözümler ve bir örtük olarak belirlenmiş yerel değişken bildirimi bir parçası olarak kabul edilmez.
+
+İle örtülü yazma `var` anahtar sözcüğü yalnızca uygulanabilir yerel yöntemi kapsamda değişkenlere. Örtülü yazma sınıf alanlar için kullanılabilir değil C# derleyici kodu işlendi olarak mantıksal paradox karşılaştığınız: derleyici alanın türünü bilmeniz gerekir, ancak atama ifadesi analiz kadar türü belirlenemiyor ve ifade türü bilmeden değerlendirilemez. Aşağıdaki kodu göz önünde bulundurun:
+
+```csharp
+private var bookTitles;
+```
+
+`bookTitles` bir sınıf alanı türü verilen `var`. Hesaplanacak ifade yok alana sahip olduğundan, derleyicinin hangi türünün çıkarsanması mümkün değildir `bookTitles` olduğu varsayılır. Ayrıca, (için yerel bir değişken gibi), bir ifade için alan ekleme da yeterli değil:
+
+```csharp
+private var bookTitles = new List<string>();
+```
+
+Derleyici, alanlar, kod derleme sırasında karşılaştığında, ilişkili tüm ifadeleri işlenmeden önce her alanın türünü kaydeder. Derleyici ayrıştırmaya çalışırken aynı paradox karşılaştığında `bookTitles`: alan türünü bilmeniz gerekir, ancak derleyicinin normalde belirler `var`'s türe göre çözümleme ifade türü önceden bilmeden mümkün değildir.
 
 İlginizi çekebilecek `var` da yararlı sorgu ifadeleri tam olarak yapılandırılmış sorgu değişkeni türünü olduğu saptamak zor olabilir. Bu gruplandırma ve sıralama işlemleri ile ortaya çıkabilir.
 

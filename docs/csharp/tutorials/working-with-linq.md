@@ -3,12 +3,12 @@ title: LINQ ile çalışma
 description: Bu öğreticide LINQ ile dizileri oluşturmak, yöntemleri kullanmak için LINQ sorguları yazma ve eager ve geç değerlendirme arasında ayrım öğretir.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: d6dbe158c5f9b474dbd2cc61982ab8e23e584ec7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 702770650533b0549e414a1de87acf17d77af4e3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675614"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063224"
 ---
 # <a name="working-with-linq"></a>LINQ ile çalışma
 
@@ -51,7 +51,7 @@ using System.Linq;
 
 Bu üç satır varsa (`using` deyimleri) olmayan dosyasının en üstüne programımız derlenmez.
 
-Tüm ihtiyacınız olacak başvuruları sahip olduğunuza göre bir deste nelerden göz önünde bulundurun. Genellikle, bir deste oyun dört cins varsa ve her seri On üç değerleri. Normalde, oluşturmayı düşünebilirsiniz bir `Card` uygulamalarımızın sağ kapalı sınıf ve koleksiyonu doldurma `Card` el ile nesneleri. LINQ ile ilgilenen bir deste oluştururken, her zamanki gibi daha kısa olabilir. Oluşturmak yerine bir `Card` sınıfı, paketleri ve sıralamalar, sırasıyla temsil etmek için iki dizileri oluşturabilirsiniz. Gerçekten basit bir çift oluşturacaksınız [ *yineleyici yöntemleri* ](../iterators.md#enumeration-sources-with-iterator-methods) cins olarak ve derecelerini oluşturacağını <xref:System.Collections.Generic.IEnumerable%601>s dize:
+Tüm ihtiyacınız olacak başvuruları sahip olduğunuza göre bir deste nelerden göz önünde bulundurun. Genellikle, bir deste oyun dört cins varsa ve her seri On üç değerleri. Normalde, oluşturmayı düşünebilirsiniz bir `Card` uygulamalarımızın sağ kapalı sınıf ve koleksiyonu doldurma `Card` el ile nesneleri. LINQ ile ilgilenen bir deste oluştururken, her zamanki gibi daha kısa olabilir. Oluşturmak yerine bir `Card` sınıfı iki diziyi cins ve sıralamalar, sırasıyla göstermek için oluşturabilir. Gerçekten basit bir çift oluşturacaksınız [ *yineleyici yöntemleri* ](../iterators.md#enumeration-sources-with-iterator-methods) cins olarak ve derecelerini oluşturacağını <xref:System.Collections.Generic.IEnumerable%601>s dize:
 
 ```csharp
 // Program.cs

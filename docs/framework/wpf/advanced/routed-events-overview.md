@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7712ed02d20d692842267464a645bfc93ca8fd73
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982377"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063888"
 ---
 # <a name="routed-events-overview"></a>Gönderilmiş Olaylara Genel Bakış
 Bu konuda yönlendirilmiş olaylar kavramını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Konu yönlendirilmiş olaylar terminolojisini, açıklar yönlendirilmiş olaylar öğe ağacındaki yönlendirilir nasıl nasıl işleyeceğinizi özetler ve kendi özel gönderilmiş olay oluşturma kullanıma sunar.
@@ -197,10 +197,9 @@ Bu konuda yönlendirilmiş olaylar kavramını açıklar [!INCLUDE[TLA#tla_wincl
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çiftler halinde gelen giriş olayları, böylece bir fare düğmesine basma gibi bir giriş tek kullanıcı eyleminden sırayla çiftinin her iki yönlendirilmiş olaylar oluşturacak uygulanır. İlk olarak, tünel olayı tetiklenir ve yolunu dolaşır. Ardından tırmanma olay tetiklenir ve yolunu dolaşır. İki olay tam anlamıyla çünkü aynı olay verileri örneği paylaşma <xref:System.Windows.UIElement.RaiseEvent%2A> tırmanma olayı oluşturan uygulayan sınıfa yöntem çağrısında tünel olayı olay verileri dinler ve yeni oluşturulan olay içinde kullanır. Dinleyicileri tünel olay işleyicileri ile işlenen yönlendirilmiş olay işaretlemek için ilk şansınız vardır (sınıf işleyicileri ilk olarak, daha sonra örnek işleyiciler). Tünel yol boyunca bir öğe yönlendirilmiş olay işlenmiş olarak işaretlenmiş, tırmanma olayı için olay zaten işlenmiş veriler gönderilir ve tipik işleyicileri için giriş olayları tırmanma eşdeğer bağlı çağrılmaz. Dışa doğru olması için işlenen tırmanma olay değil bile yükseltildikten gibi olacaktır. Bu işleme davranışını giriş olayları veya bileşik parçalarının yerine, son denetim tarafından bildirilecek giriş olaylarını odak tabanlı tüm isabet sınaması göre isteyebileceğiniz denetim birleştirme için kullanışlıdır. Son denetim öğesi kök dizininde birleştirme yakındır ve bu nedenle ilk ve belki de bir "yönlendirilmiş olay denetimi yedekler kodun bir parçası bir daha özel denetim olayı ile değiştirmek için" tünel olayı işleme fırsatına sınıfına sahip sınıf.  
   
- Giriş olayı works işlemesinin nasıl bir çizim, aşağıdaki giriş olayı örneği göz önünde bulundurun. Aşağıdaki ağaç çizimde gösterilen `leaf element #2` kaynağı hem de bir `PreviewMouseDown` ve ardından bir `MouseDown` olay.  
+ Giriş olayı works işlemesinin nasıl bir çizim, aşağıdaki giriş olayı örneği göz önünde bulundurun. Aşağıdaki ağaç çizimde gösterilen `leaf element #2` kaynağı hem de bir `PreviewMouseDown` ve ardından bir `MouseDown` olay:  
   
- ![Olay yönlendirme diyagramı](./media/wcsdkcoreinputevents.png "wcsdkCoreInputEvents")  
-Giriş olayı Tırmanma ve tünel oluşturma  
+ ![Olay yönlendirme diyagramı](./media/routed-events-overview/input-event-routing.png)  
   
  Olay işleme sırası aşağıdaki gibidir:  
   

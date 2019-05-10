@@ -3,14 +3,14 @@ title: .NET için Hoş Geldiniz
 description: Teknoloji .NET ailesi ile çalışmaya başlama.
 author: mairaw
 ms.author: mairaw
-ms.date: 04/02/2019
+ms.date: 05/06/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 4d4edc146efa12fc29c2c7e65727bf5a5b664eb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6aad2d145d31d4799d274aa1b0c8738e91906ae
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767587"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063157"
 ---
 # <a name="welcome-to-net"></a>.NET için Hoş Geldiniz
 
@@ -51,6 +51,7 @@ Bu belge, platformlar ve diller arasında .NET kapsamını ele alır. .NET ve a�
 - [F# Kılavuzu](fsharp/index.md)
 - [Visual Basic Kılavuzu](visual-basic/index.md)
 - [ML.NET Kılavuzu](machine-learning/index.yml)
+- [Apache Spark için .NET](spark/index.yml)
 
 Ayrıca, göz atabilirsiniz [.NET API Başvurusu](/dotnet/api).
 

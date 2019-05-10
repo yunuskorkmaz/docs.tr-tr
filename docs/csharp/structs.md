@@ -3,12 +3,12 @@ title: Yapılar - C# Kılavuzu
 description: Yapı türü ve bunları nasıl oluşturacağınız hakkında bilgi edinin
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 6fcd30907880be9159b3cc2e3ab10659ddec248b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fbaa7fcc26009fe3117784b411941d30af0ba3c5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706461"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608016"
 ---
 # <a name="structs"></a>Yapılar
 A *yapı* bir değer türüdür. Bir yapı oluşturulduğunda yapının atanmış olduğu değişken yapının gerçek verilerini tutar. Struct için yeni bir değişken atandığında kopyalanır. Bu nedenle yeni değişken ve özgün değişken aynı verilerin iki ayrı kopyasını içerir. Bir kopyaya yapılan değişiklikler diğer kopyayı etkilemez.

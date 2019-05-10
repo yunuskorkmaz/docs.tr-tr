@@ -1,21 +1,21 @@
 ---
-title: Bir film öneri senaryosunda ML.NET kullanın
-description: ML.NET filmler kullanıcılara önermek için bir öneri senaryoda kullanma keşfedin.
+title: 'Öğretici: Bir film öneren oluşturun'
+description: Bu öğreticide bir .NET Core konsol uygulaması içinde bir film öneren ML.NET ile derleme gösterilmektedir. Adımları C# ve Visual Studio 2019.
 author: briacht
 ms.author: johalex
-ms.date: 03/08/2019
+ms.date: 05/06/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: bdc49f42e520f11ef63de873f0d30d11ba4b2366
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5d459d8b28298250f3b815e33ff4d85ac54f79c2
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960699"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063375"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>Öğretici: Bir film öneren ML.NET ile oluşturma
 
-Bu örnek öğretici ML.NET kullanarak bir .NET Core konsol uygulaması kullanarak aracılığıyla bir film öneren gösterir C# Visual Studio 2017'de.
+Bu öğreticide bir .NET Core konsol uygulaması içinde bir film öneren ML.NET ile derleme gösterilmektedir. Adımları C# ve Visual Studio 2019.
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
@@ -24,11 +24,6 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > * Yapı ve model eğitme
 > * Bir modeli değerlendirme
 > * Dağıtma ve bir modeli kullanma
-
-> [!NOTE]
-> Bu konu şu anda Önizleme aşamasında olan ML.NET ifade eder ve malzeme değişiklik gösterebilir. Daha fazla bilgi için ziyaret [ML.NET giriş](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
-
-Bu öğretici ve ilgili örnek şu anda kullandığınız **ML.NET sürüm 0.11**. Daha fazla bilgi için bkz: adresindeki sürüm notlarını [dotnet/machinelearning GitHub deposunu](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Bu öğreticide kaynak kodunu bulabilirsiniz [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) depo.
 
@@ -61,10 +56,7 @@ Göreviniz yanı sıra diğer ML.NET görev gerçekleştirmek için aşağıdaki
 
 3. Yükleme **Microsoft.ML** ve **Microsoft.ML.Recommender** NuGet paketleri:
 
-    İçinde **Çözüm Gezgini**, projeye sağ tıklayıp seçin **NuGet paketlerini Yönet**. Paket kaynağı, seçin "nuget.org" seçin **Gözat** sekmesinde, arama **Microsoft.ML**, listesinde o paketi seçin ve seçin **yükleme** düğmesi. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** düğmesini **lisans kabulü** iletişim varsa, listelenen paketlerin lisans koşullarını kabul etmiş olursunuz. Bu adımı yineleyin **Microsoft.ML.Recommender**.
-
-    > [!NOTE]
-    > Bu öğreticide **Microsoft.ML v0.11.0** ve **Microsoft.ML.Recommender v0.11.0**.
+    İçinde **Çözüm Gezgini**, projeye sağ tıklayıp seçin **NuGet paketlerini Yönet**. Paket kaynağı, seçin "nuget.org" seçin **Gözat** sekmesinde, arama **Microsoft.ML**seçin **1.0.0** paketini listede bulun ve seçin  **Yükleme** düğmesi. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** düğmesini **lisans kabulü** iletişim varsa, listelenen paketlerin lisans koşullarını kabul etmiş olursunuz. Bu adımı yineleyin **Microsoft.ML.Recommender v0.12.0**.
 
 4. Aşağıdaki `using` en üstündeki deyimleri, *Program.cs* dosyası:
 
@@ -175,7 +167,7 @@ Sonraki iki kod satırlarını olarak aşağıdakileri ekleyin `Main()` çağrı
 
 ## <a name="build-and-train-your-model"></a>Derleme ve modelinizi eğitin
 
-ML.NET içinde üç ana kavramı vardır: [Veri](../basic-concepts-model-training-in-mldotnet.md#data), [dönüştürücüler](../basic-concepts-model-training-in-mldotnet.md#transformer), ve [Estimators](../basic-concepts-model-training-in-mldotnet.md#estimator).
+ML.NET içinde üç ana kavramı vardır: [Veri](../resources/glossary.md#data), [dönüştürücüler](../resources/glossary.md#transformer), ve [Estimators](../resources/glossary.md#estimator).
 
 Makine öğrenimi eğitim algoritmalar, verileri belirli bir biçimde gerektirir. `Transformers` tablosal veri uyumlu bir biçime dönüştürmek için kullanılır.
 

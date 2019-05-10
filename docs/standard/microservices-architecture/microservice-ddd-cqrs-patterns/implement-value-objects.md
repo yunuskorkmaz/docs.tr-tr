@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 64ffd600468124439986b0d1949dc048ef245c78
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd165ac2511476a5041e7d09126647546c632ba6
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019795"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063079"
 ---
 # <a name="implement-value-objects"></a>Değer nesneleri uygulama
 
@@ -324,7 +324,7 @@ public class Address
 - **Karmaşık türler ve/veya değer nesneleri**. EF Core GitHub deposunda (sorunlar sekmesinden) tartışma \
   <https://github.com/aspnet/EntityFramework/issues/246>
 
-- **ValueObject.cs.** Temel değer nesne sınıfında eShopOnContainers.* * \
+- **ValueObject.cs.** Temel değerin nesne sınıfı hizmetine. \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs>
 
 - **Sınıf adresi.** Örnek değer hizmetine nesne sınıfı. \

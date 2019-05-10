@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b3a2432deb1e956060ab3615db01821658f8782
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 664debd5432273cc25871f85d5d3c23f4c32dd6e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61959256"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589831"
 ---
 # <a name="xml-document-object-model-dom"></a>XML Belge Nesne Modeli (DOM)
 XML belge nesne modeli (DOM) sınıfı, bir XML belgesi bir bellek içi gösterimidir. DOM programlı olarak okuma, işleme ve XML belgesi değiştirmenize olanak sağlar. **XmlReader** sınıfı ayrıca XML okur; ancak, önbelleğe alınmamış yalnızca iletme, salt okunur erişim sağlar. Bu özniteliğin değerini veya bir öğeyi veya özelliği ekleyin ve düğümleri kaldırma içeriği düzenlemek için hiçbir özellikleri olduğu anlamına gelir **XmlReader**. DOM sunucunun birincil işlevi olduğu düzenleme Gerçek XML verilerini bir dosya veya başka bir nesneden gelen doğrusal bir biçimde depolanır ancak ortak ve yapılandırılmış biçimde XML verilerini bellek içinde temsil edilen adıdır. XML veri verilmiştir.  

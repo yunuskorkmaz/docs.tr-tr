@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdd43f7079563be6b1377f743a84625429ba4f16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 97e2e54c534b30c3c514c9102ded0050fc154b75
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61958957"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589797"
 ---
 # <a name="xml-schema-object-model-overview"></a>XML Şema Nesne Modeline (SOM) Genel Bakış
 Microsoft .NET Framework içinde şema nesne modeli (SOM) oluşturmak, düzenlemek ve şemaları program aracılığıyla doğrulama olanak tanıyan zengin bir API'dir. SOM XML Şeması belgeleri benzer şekilde XML belgelerinde belge nesne modeli (DOM) çalıştığı şekilde çalışır. XML şema belgeleri, SOM yüklenen geçerliliğini şemaya uygun diğer XML belgeleri ve yapısı hakkında daha fazla anlam ifade geçerli XML dosyalarıdır.  
