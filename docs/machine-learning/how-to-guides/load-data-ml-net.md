@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: ML.NET veri yükleme'
+title: Veri yükleme
 description: Veri dosyası ve ML.NET akış verileri yükleme
-ms.date: 04/03/2019
+ms.date: 05/03/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 7702c626aa79c7b661638df5a5f0f90f821b32f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6edcc92b610e2e1f5e21c371b9f0aefd0b216d31
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650394"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063641"
 ---
-# <a name="how-to-learn-how-to-load-data-from-file-and-real-time-sources-in-mlnet"></a>Nasıl yapılır: Dosya ve gerçek zamanlı ML.NET kaynaklarında veri yüklemek hakkında bilgi edinin
+# <a name="load-data-from-file-and-in-memory-sources"></a>Dosya ve bellek içi kaynaklardan veri yükleme
 
 Bu nasıl yapılır ML.NET içinde veri işleme ve eğitim için yükleme işlemini göstermektedir. Verileri özgün dosyaları veya gerçek zamanlı / akış veri kaynakları depolanır.
 

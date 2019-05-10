@@ -10,12 +10,12 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-ms.openlocfilehash: ad7b8737a63028e533cadfa6db56b063eb943f22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a906db44a548361df2822efa24d1dd1849cb5a24
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954940"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063732"
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>Nasıl yapılır: Bir Şekli Bir Resimle Döşeme
 Dikdörtgen görüntüleri yalnızca kutucukları birbirinin yanına bir katı kapsayacak şekilde yerleştirilebilir gibi diğer yanındaki (döşeme) bir şekil doldurmak için yerleştirilebilir. Bir şeklin içinin döşeme için bir doku fırça kullanın. Oluşturduğunuzda bir <xref:System.Drawing.TextureBrush> nesnesi oluşturucusuna geçirmeniz bağımsız değişkenlerden biri olan bir <xref:System.Drawing.Image> nesne. Bir şeklin içinin boyamak için doku fırça kullandığınızda, bu görüntüyü yinelenen kopyalarını şekli doldurulur.  
@@ -26,11 +26,11 @@ Dikdörtgen görüntüleri yalnızca kutucukları birbirinin yanına bir katı k
   
 - Bu örnek, bir 200 × 200 dikdörtgen kutucuğa 75 × 75 aşağıda kullanır.  
   
- ![Döşeme 1](./media/tile1.gif "tile1")  
+ ![Kırmızı bir ev ve bir ağaç gösteren kutucuk resim.](./media/how-to-tile-a-shape-with-an-image/rectangle-tile-200x200.gif)  
   
 - Aşağıdaki çizim dikdörtgeni görüntünün ile nasıl döşenir gösterir. Tüm kutucuklar aynı yönü gerektiğini unutmayın; hiçbir çevirme yoktur.  
   
- ![Döşeme 2](./media/tile2.gif "tile2")  
+ ![İçin tüm kutucuklar aynı yönlendirmeyi kullanarak görüntüyle döşenmiş bir dikdörtgen.](./media/how-to-tile-a-shape-with-an-image/rectangle-tiled-image-no-flip.gif)  
   
  [!code-csharp[System.Drawing.UsingABrush#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.UsingABrush#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#31)]  
@@ -39,7 +39,7 @@ Dikdörtgen görüntüleri yalnızca kutucukları birbirinin yanına bir katı k
   
 - Bu örnek, bir 200 × 200 dikdörtgen doldurmak için 75 × 75 görüntünün aynısını kullanır. Görüntüyü yatay olarak çevrilip çevrilmediği gerçekleştirilmeye ayarlayın. Aşağıdaki çizim dikdörtgeni görüntünün ile nasıl döşenir gösterir. Belirli bir satırda sonraki bir kutucuğunuz taşırken, görüntüyü yatay olarak çevrilmiş unutmayın.  
   
- ![Döşeme 3](./media/tile3.gif "tile3")  
+ ![Görüntüyü yatay olarak çevrilmiş döşenmiş bir dikdörtgen.](./media/how-to-tile-a-shape-with-an-image/rectangle-tiled-image-horizontal-flip.gif)  
   
  [!code-csharp[System.Drawing.UsingABrush#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.UsingABrush#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#32)]  
@@ -55,7 +55,7 @@ Dikdörtgen görüntüleri yalnızca kutucukları birbirinin yanına bir katı k
   
 - Bu örnek, bir 200 × 200 dikdörtgen kutucuğa 75 × 75 görüntünün aynısını kullanır. Görüntüyü yatay ve dikey olarak çevrilip çevrilmediği gerçekleştirilmeye ayarlayın. Aşağıdaki çizim dikdörtgeni görüntünün tarafından nasıl döşenir gösterir. Belirli bir satıra gelecek bir kutucuğunuz gitme, görüntüyü yatay olarak çevrilmiş ve sonraki belirli bir sütundaki bir kutucuğunuz taşırken, görüntüyü dikey olarak çevrilmiş unutmayın.  
   
- ![Döşeme 5](./media/tile5.gif "tile5")  
+ ![Yatay ve dikey olarak çevrilmiş görüntüsüyle döşenmiş bir dikdörtgen.](./media/how-to-tile-a-shape-with-an-image/rectangle-tiled-image-horizontal-vertical-flip.gif)  
   
  [!code-csharp[System.Drawing.UsingABrush#34](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#34)]
  [!code-vb[System.Drawing.UsingABrush#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  

@@ -1,15 +1,15 @@
 ---
-title: TensorFlow ile bir ML.NET özel görüntü sınıflandırıcı oluşturma
+title: 'Öğretici: TensorFlow ile bir ML.NET özel görüntü sınıflandırıcı oluşturma'
 description: Önceden eğitilmiş bir TensorFlow modeli yeniden kullanarak görüntüleri sınıflandırmak için senaryo bir TensorFlow aktarımlı ML.NET özel görüntü sınıflandırıcıda oluşturma keşfedin.
-ms.date: 04/05/2019
+ms.date: 05/06/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9b9ac1f1f15b4003a19a3d30d6cadf3e86946376
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f7fddc2d6c60a719090af36b7fe91919bfbd115c
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019285"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063623"
 ---
 # <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>Öğretici: TensorFlow ile bir ML.NET özel görüntü sınıflandırıcı oluşturma
 
@@ -25,11 +25,6 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > * Yeniden kullanmak ve önceden eğitilmiş bir modeli ayarlama
 > * Resimleri sınıflandırma
 
-> [!NOTE]
-> Bu konu şu anda Önizleme aşamasında olan ML.NET ifade eder ve malzeme değişiklik gösterebilir. Daha fazla bilgi için ziyaret [ML.NET giriş](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
-
-Bu öğretici ve ilgili örnek şu anda kullandığınız **ML.NET sürüm 0.10**. Daha fazla bilgi için bkz: adresindeki sürüm notlarını [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) GitHub deposu.
-
 ## <a name="image-classification-sample-overview"></a>Görüntü sınıflandırma örneğine genel bakış
 
 Örnek görüntüleri küçük bir eğitim veri miktarı ile sınıflandırmak için önceden eğitilmiş bir modeli yeniden kullanarak bir görüntü sınıflandırıcı oluşturma için ML.NET kullanan bir konsol uygulamasıdır.
@@ -40,9 +35,9 @@ Bu öğreticide kaynak kodunu bulabilirsiniz [dotnet/samples](https://github.com
 
 * [Visual Studio 2017 15.6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) yüklü ".NET Core çoklu platform geliştirme" iş yüküyle birlikte sağlanır.
 
-* Microsoft.ML 0.10.0 Nuget paketi
-* Microsoft.ML.ImageAnalytics 0.10.0 Nuget paketi
-* Microsoft.ML.TensorFlow 0.10.0 Nuget paketi
+* Microsoft.ML 1.0.0 Nuget paketi
+* Microsoft.ML.ImageAnalytics 1.0.0 Nuget paketi
+* Microsoft.ML.TensorFlow 0.12.0 Nuget paketi
 
 * [Öğretici varlıklar dizin. ZIP dosyası](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
 
@@ -127,14 +122,11 @@ Eğitim ve test görüntüleri bir ZIP dosyası indireceksiniz varlıklar klasö
 
 ### <a name="create-a-project"></a>Proje oluşturma
 
-1. Visual Studio 2017'yi açın. Seçin **dosya** > **yeni** > **proje** menü çubuğundan. İçinde **yeni proje** iletişim kutusunda **Visual C#** düğümünü ve ardından **.NET Core** düğümü. Ardından **konsol uygulaması (.NET Core)** proje şablonu. İçinde **adı** metin kutusuna "TransferLearningTF" yazın ve ardından **Tamam** düğmesi.
+1. Oluşturma bir **.NET Core konsol uygulaması** "TransferLearningTF" denir.
 
 2. Yükleme **Microsoft.ML NuGet paketini**:
 
-    Çözüm Gezgini'nde seçin ve proje üzerinde sağ **NuGet paketlerini Yönet**. Paket kaynağı olarak "nuget.org" seçin, Gözat sekmesini seçin, arama **Microsoft.ML**. Tıklayarak **sürüm** açılan listesinde, select **0.10.0** paketini listede bulun ve seçin **yükleme** düğmesi. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** düğmesini **lisans kabulü** iletişim varsa, listelenen paketlerin lisans koşullarını kabul etmiş olursunuz. Bu adımı yineleyin **Microsoft.ML.ImageAnalytics v0.10.0** ve **Microsoft.ML.TensorFlow v0.10.0**.
-
-  > [!NOTE]
-  > Bu öğreticide **Microsoft.ML v0.10.0**, **Microsoft.ML.ImageAnalytics v0.10.0**, ve **Microsoft.ML.TensorFlow v0.10.0**.
+    Çözüm Gezgini'nde seçin ve proje üzerinde sağ **NuGet paketlerini Yönet**. Paket kaynağı olarak "nuget.org" seçin, Gözat sekmesini seçin, arama **Microsoft.ML**. Tıklayarak **sürüm** açılan listesinde, select **1.0.0** paketini listede bulun ve seçin **yükleme** düğmesi. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** düğmesini **lisans kabulü** iletişim varsa, listelenen paketlerin lisans koşullarını kabul etmiş olursunuz. Bu adımı yineleyin **Microsoft.ML.ImageAnalytics v1.0.0** ve **Microsoft.ML.TensorFlow v0.12.0**.
 
 ### <a name="prepare-your-data"></a>Verilerinizi hazırlama
 
@@ -228,31 +220,26 @@ Yeni modelde birkaç varsayılan parametre olarak geçirmenize gerek yok. Aşağ
 
 ### <a name="create-a-display-utility-method"></a>Görüntü yardımcı programı yöntemi oluşturma
 
-Daha fazla kez ve görüntü verileri ve ilgili Öngörüler yinelenen kodu istemiyorsanız eşleştirme ve görüntü. Eşleştirme ve görüntü ve tahmin sonuçlarını görüntüleyen işlemek için bir görüntü yardımcı programı yöntemi oluşturun.
+Görüntü verilerini ve ilgili Öngörüler birden çok kez görüntüleyeceksiniz olduğundan, görüntü ve tahmin sonuçlarını görüntüleyen işlemek için bir görüntü yardımcı programı yöntemi oluşturun.
 
-`PairAndDisplayResults()` Yöntemi aşağıdaki görevleri yürütür:
+`DisplayResults()` Yöntemi aşağıdaki görevleri yürütür:
 
-* Veri ve raporlama için Öngörüler birleştirir.
 * Tahmin edilen sonuçları görüntüler.
 
-Oluşturma `PairAndDisplayResults()` yöntemi hemen sonrasına `InceptionSettings` yapısı, aşağıdaki kodu kullanarak:
+Oluşturma `DisplayResults()` yöntemi hemen sonrasına `InceptionSettings` yapısı, aşağıdaki kodu kullanarak:
 
 ```csharp
-private static void PairAndDisplayResults(IEnumerable<ImageNetData> imageData, IEnumerable<ImageNetPrediction> imagePredictionData)
+private static void DisplayResults(IEnumerable<ImagePrediction> imagePredictionData)
 {
 
 }
 ```
 
-Tahmin edilen sonuçlarını görüntülemeden önce birleştirme `imageData` ve `imagePrediction` özgün birlikte görmek için `Image Path` tahmin edilen kategori ile. Aşağıdaki kod <xref:System.Linq.Enumerable.Zip%2A?displayProperty=nameWithType> yöntemini gerçekleşen, sağlamak için bu nedenle ilk satırı olarak bu ekleyin `PairAndDisplayResults()` yöntemi:
-
-[!code-csharp[BuildImagePredictionPairs](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#BuildImagePredictionPairs)]
-
-Birleştirilmiş göre `imageData` ve `imageData` bir sınıf kullanarak sonuçları görüntüleyebilirsiniz <xref:System.Console.WriteLine?displayProperty=nameWithType> yöntemi:
+`Transform()` Doldurulmuş yöntemi `ImagePath` içinde `ImagePrediction` tahmin edilen alanların yanı sıra. ML.NET işlem ilerledikçe, her bileşen sütunları ekler ve bu sonuçları görüntülemek üzere kolaylaştırır:
 
 [!code-csharp[DisplayPredictions](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayPredictions)]
 
-Sizi ararız `PairAndDisplayResults()` sonraki iki yöntemle yöntemi.
+Sizi ararız `DisplayResults()` iki görüntü sınıflandırma yöntemleri yöntemi.
 
 ### <a name="create-a-tsv-file-utility-method"></a>.Tsv dosya yardımcı program metodu oluştur
 
@@ -274,7 +261,7 @@ public static IEnumerable<ImageData> ReadFromTsv(string file, string folder)
 Aşağıdaki kod aracılığıyla ayrıştırır `tags.tsv` dosya yolu için resim dosya adı eklemek için dosya `ImagePath` özelliği ve yükler ve `Label` içine bir `ImageData` nesne. İlk satırı olarak ekleyin `ReadFromTsv()` yöntemi.  Tahmin sonuçlarını görüntülemek için tam dosya yolunu ihtiyacınız vardır.
 
 [!code-csharp[ReadFromTsv](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReadFromTsv)]
-ML.NET içinde üç ana kavramı vardır: [Veri](../basic-concepts-model-training-in-mldotnet.md#data), [dönüştürücüler](../basic-concepts-model-training-in-mldotnet.md#transformer), ve [Estimators](../basic-concepts-model-training-in-mldotnet.md#estimator).
+ML.NET içinde üç ana kavramı vardır: [Veri](../resources/glossary.md#data), [dönüştürücüler](../resources/glossary.md#transformer), ve [Estimators](../resources/glossary.md#estimator).
 
 ## <a name="reuse-and-tune-pre-trained-model"></a>Yeniden kullanmak ve önceden eğitilmiş bir modeli ayarlama
 
@@ -290,12 +277,12 @@ Aşağıdaki çağrısı ekleyin `ReuseAndTuneInceptionModel()`yöntemi sonraki 
 * (Çağırma sayısı) tabanlarını modeli.
 * Model sonuçlarını görüntüler.
 * Model değerlendirir.
-* Model kaydeder.
+* Model döndürür.
 
-Oluşturma `ReuseAndTuneInceptionModel()` yöntemi hemen sonrasına `InceptionSettings` yapısı ve hemen önce `PairAndDisplayResults()` yöntemi, aşağıdaki kodu kullanarak:
+Oluşturma `ReuseAndTuneInceptionModel()` yöntemi hemen sonrasına `InceptionSettings` yapısı ve hemen önce `DisplayResults()` yöntemi, aşağıdaki kodu kullanarak:
 
 ```csharp
-public static void ReuseAndTuneInceptionModel(MLContext mlContext, string dataLocation, string imagesFolder, string inputModelLocation, string outputModelLocation)
+public static ITransformer ReuseAndTuneInceptionModel(MLContext mlContext, string dataLocation, string imagesFolder, string inputModelLocation, string outputModelLocation)
 {
 
 }
@@ -303,9 +290,9 @@ public static void ReuseAndTuneInceptionModel(MLContext mlContext, string dataLo
 
 ### <a name="load-the-data"></a>Verileri yükleme
 
-ML.NET verilerinde olarak temsil edilir bir [IDataView sınıfı](xref:Microsoft.Data.DataView.IDataView). `IDataView` Sekmeli veriler (sayısal ve metin) açıklayan bir esnek ve verimli yoludur. Veri yüklenebilir bir metin dosyasından veya gerçek zamanlı olarak (örneğin, SQL veritabanı veya günlük dosyaları) için bir `IDataView` nesne.
+ML.NET verilerinde olarak temsil edilir bir [IDataView sınıfı](xref:Microsoft.ML.IDataView). `IDataView` Sekmeli veriler (sayısal ve metin) açıklayan bir esnek ve verimli yoludur. Veri yüklenebilir bir metin dosyasından veya gerçek zamanlı olarak (örneğin, SQL veritabanı veya günlük dosyaları) için bir `IDataView` nesne.
 
-Kullanarak verileri yüklemek `MLContext.Data.ReadFromTextFile` sarmalayıcı. Sonraki satırda olarak aşağıdaki kodu ekleyin `ReuseAndTuneInceptionModel()` yöntemi:
+Kullanarak verileri yüklemek `MLContext.Data.LoadFromTextFile` sarmalayıcı. Sonraki satırda olarak aşağıdaki kodu ekleyin `ReuseAndTuneInceptionModel()` yöntemi:
 
 [!code-csharp[LoadData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadData "Load the data")]
 
@@ -322,14 +309,14 @@ Eğitim ve değerlendirme sonra ile tahmin **etiket** sütun değerleri. Öncede
 Resim estimator kullanan önceden eğitilmiş işleme [derin sinir Network(DNN)](https://en.wikipedia.org/wiki/Deep_learning#Deep_neural_networks) featurizers özelliği ayıklama için. Derin sinir ağları ile ilgilenirken, beklenen ağ biçimi görüntülerin uyarlayın. Modelin beklenen biçime görüntü verilerini almak için kullandığınız görüntü dönüşümlerden nedeni budur:
 
 1. `LoadImages`Dönüştürme görüntü bit eşlem türü olarak belleğe yüklenir.
-2. `Resize` Dönüştürme olarak önceden eğitilmiş model tanımlı girdi görüntüsü genişliği ve yüksekliği görüntüleri yeniden boyutlandırır.
-3. `ImagePixelExtractingEstimator` Dönüştürme giriş görüntülerden piksel ayıklar ve bunları sayısal vektörü dönüştürür.
+2. `ResizeImages` Dönüştürme olarak önceden eğitilmiş model tanımlı girdi görüntüsü genişliği ve yüksekliği görüntüleri yeniden boyutlandırır.
+3. `ExtractPixels` Dönüştürme giriş görüntülerden piksel ayıklar ve bunları sayısal vektörü dönüştürür.
 
 Bu görüntü dönüşümler sonraki kod satırı ekleyin:
 
 [!code-csharp[ImageTransforms](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ImageTransforms)]
 
-`TensorFlowTransform` Ayıklar belirtilen çıkış ( `Inception model`ait görüntü özellikleri `softmax2_pre_activation`) ve önceden eğitilmiş kullanarak bir veri kümesi puanlar `TensorFlow` modeli.
+`LoadTensorFlowModel` İzin veren bir kolaylık yöntemi `TensorFlow` kez yüklenmesi için model ve ardından oluşturan `TensorFlowEstimator` kullanarak `ScoreTensorFlowModel`. `ScoreTensorFlowModel` Ayıklar belirtilen çıkış ( `Inception model`ait görüntü özellikleri `softmax2_pre_activation`) ve önceden eğitilmiş kullanarak bir veri kümesi puanlar `TensorFlow` modeli.
 
 `softmax2_pre_activation` model, görüntüleri sınıfı belirleyen ile ait olduğu yardımcı olur. `softmax2_pre_activation` Görüntü kategorilerin her birine ve tüm bu olasılıklar olasılığını döndürür, en fazla 1 eklemeniz gerekir. Bu görüntü tek bir kategoriye ait olacak aşağıdaki örnekte gösterildiği gibi varsayılır:
 
@@ -345,7 +332,7 @@ Append `TensorFlowTransform` için `estimator` aşağıdaki kod satırını ile:
 
 ### <a name="choose-a-training-algorithm"></a>Eğitim algoritması seçin
 
-Eğitim algoritması eklemek için çağrı `mlContext.MulticlassClassification.Trainers.LogisticRegression()` sarmalayıcı yöntemi.  `LogisticRegression` Eklenir `estimator` ve yeni görüntü özelliklerini kabul eder (`softmax2_pre_activation`) ve `Label` giriş geçmiş verilerden bilgi edinmek için parametreleri.  Eğitmeni ile aşağıdaki kodu ekleyin:
+Eğitim algoritması eklemek için çağrı `mlContext.MulticlassClassification.Trainers.LbfgsMaximumEntropy()` sarmalayıcı yöntemi.  [LbfgsMaximumEntropy](xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer) eklenir `estimator` ve yeni görüntü özelliklerini kabul eder (`softmax2_pre_activation`) ve `Label` giriş geçmiş verilerden bilgi edinmek için parametreleri.  Eğitmeni ile aşağıdaki kodu ekleyin:
 
 [!code-csharp[AddTrainer](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#AddTrainer)]
 
@@ -353,7 +340,7 @@ Harita gerekir `predictedlabel` için `predictedlabelvalue`:
 
 [!code-csharp[MapValueToKey2](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#MapValueToKey2)]
 
-`Fit()` Yöntemine sağlanan bir eğitim veri kümesi modelinizi eğitir. Yürütülmeden `Estimator` verileri dönüştürme ve eğitim ve uygulama tanımlarını döndürür geri olan eğitilen model bir `Transformer`. Modele uygun `Train` veri ve sonraki kod satırı olarak aşağıdakileri ekleyerek eğitilen model dönüş `ReuseAndTuneInceptionModel()` yöntemi:
+`Fit()` Yöntemi, veri dönüştürme ve eğitim uygulayarak modelinizi eğitir. Eğitim veri kümesi modeline uygun ve sonraki kod satırı olarak aşağıdakileri ekleyerek eğitilen model dönüş `ReuseAndTuneInceptionModel()` yöntemi:
 
 [!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#TrainModel)]
 
@@ -365,15 +352,15 @@ Görüntü veri ve öngörü dönüştürme `DataViews` içine kesin türü beli
 
 [!code-csharp[EnumerateDataViews](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#EnumerateDataViews)]
 
-Çağrı `PairAndDisplayResults()` eşleştirin ve verilerinizi ve Öngörüler sonraki satırı olarak görüntülemek için yöntem `ReuseAndTuneInceptionModel()` yöntemi:
+Çağrı `DisplayResults()` veriler ve Öngörüler sonraki satırda görüntülenecek yöntemi `ReuseAndTuneInceptionModel()` yöntemi:
 
-[!code-csharp[CallPairAndDisplayResults1](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallPairAndDisplayResults1)]
+[!code-csharp[CallDisplayResults1](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallDisplayResults1)]
 
 Ayarlanırsa, tahmin sonra [Evaluate()](xref:Microsoft.ML.RecommendationCatalog.Evaluate%2A) yöntemi:
 
 * Model değerlendirir (tahmin edilen değeri ile gerçek veri kümesini karşılaştırır `Labels`).
 
-* Model performansı ölçümlerini döndürür. 
+* Model performansı ölçümlerini döndürür.
 
 Aşağıdaki kodu ekleyin `ReuseAndTuneInceptionModel()` yöntemi sonraki satır olarak:
 
@@ -389,9 +376,9 @@ Aşağıdaki ölçümler için görüntü sınıflandırması değerlendirilir:
 
 [!code-csharp[DisplayMetrics](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayMetrics)]
 
-`mlContext.Model.Save` eğitilen model diğer .NET uygulamalarında tahminlerde bulunmak için kullanılabilecek bir .zip dosyası olarak ("varlıklar/çıkışları" klasöründe farklı olarak) kaydeder. Aşağıdaki kodu ekleyin `ReuseAndTuneInceptionModel()` yöntemi sonraki satır olarak:
+ Sonraki satır olarak eğitilen model döndürmek için aşağıdaki kodu ekleyin:
 
-[!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#SaveModel)]
+[!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReturnModel)]
 
 ## <a name="classify-images-with-a-loaded-model"></a>Yüklenen bir model ile görüntü sınıflandırma
 
@@ -401,34 +388,29 @@ Aşağıdaki çağrısı ekleyin `ClassifyImages()` yöntemi sonraki kod satır�
 
 `ClassifyImages()` Yöntemi aşağıdaki görevleri yürütür:
 
-* Modeli yükler.
 * Okur. TSV dosyasına `IEnumerable`.
 * Test verileri temel alan görüntü sınıflandırmaları tahmin eder.
 
 Oluşturma `ClassifyImages()` yöntemi hemen sonrasına `ReuseAndTuneInceptionModel()` yöntemi ve hemen önce `PairAndDisplayResults()` yöntemi, aşağıdaki kodu kullanarak:
 
 ```csharp
-public static void ClassifyImages(MLContext mlContext, string dataLocation, string imagesFolder, string outputModelLocation)
+public static void ClassifyImages(MLContext mlContext, string dataLocation, string imagesFolder, string outputModelLocation, ITransformer model)
 {
 
 }
 ```
 
-İlk olarak, aşağıdaki kod ile daha önce kaydettiğiniz model yüklenemiyor:
-
-[!code-csharp[LoadModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadModel)]
-
-Çağrı `ReadFromTsv()` yöntemi oluşturmak için bir `IEnumerable<ImageData>` her biri için tam yolu içeren sınıf `ImagePath`. Bu dosya yolu, veri ve öngörü sonuçlarınızı eşleştirmeye ihtiyacınız vardır. Dönüştürmeniz gerekir `IEnumerable<ImageData>` sınıfının bir `IDataView` tahmin etmek için kullanacağınız. Sonraki iki satırlar halinde aşağıdaki kodu ekleyin `ClassifyImages()` yöntemi:
+İlk olarak, çağrı `ReadFromTsv()` yöntemi oluşturmak için bir `IEnumerable<ImageData>` her biri için tam yolu içeren sınıf `ImagePath`. Bu dosya yolu, veri ve öngörü sonuçlarınızı eşleştirmeye ihtiyacınız vardır. Dönüştürmeniz gerekir `IEnumerable<ImageData>` sınıfının bir `IDataView` tahmin etmek için kullanacağınız. Sonraki iki satırlar halinde aşağıdaki kodu ekleyin `ClassifyImages()` yöntemi:
 
 [!code-csharp[ReadFromTSV](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReadFromTSV)]
 
-Eğitim resmi verilerle daha önce yaptığınız gibi test görüntü kullanarak verileri kategori tahmin [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) yöntemi. Aşağıdaki kodu ekleyin `ClassifyImages()` yöntemi tahminler elde etmek için ve dönüştürmek için `predictions` `IDataView` içine bir `IEnumerable` eşleştirme ve görüntüleme için:
+Eğitim resmi verilerle daha önce yaptığınız gibi test görüntü kullanarak verileri kategori tahmin [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) modelin yönteme içinde. Aşağıdaki kodu ekleyin `ClassifyImages()` yöntemi tahminler elde etmek için ve dönüştürmek için `predictions` `IDataView` içine bir `IEnumerable` eşleştirme ve görüntüleme için:
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#Predict)]
 
-Eşleştirebilir ve Öngörüler ve test görüntü verilerini görüntülemek için çağırmak için aşağıdaki kodu ekleyin. `PairAndDisplayResults()` sonraki satırı olarak daha önce oluşturduğunuz yöntemi `ClassifyImages()` yöntemi:
+Eşleştirebilir ve Öngörüler ve test görüntü verilerini görüntülemek için çağırmak için aşağıdaki kodu ekleyin. `DisplayResults()` sonraki satırı olarak daha önce oluşturduğunuz yöntemi `ClassifyImages()` yöntemi:
 
-[!code-csharp[CallPairAndDisplayResults2](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallPairAndDisplayResults2)]
+[!code-csharp[CallDisplayResults2](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallDisplayResults2)]
 
 ## <a name="classify-a-single-image-with-a-loaded-model"></a>Yüklenen bir model ile tek bir görüntü sınıflandırma
 
@@ -436,26 +418,21 @@ Aşağıdaki çağrısı ekleyin `ClassifySingleImage()` yöntemi sonraki kod sa
 
 [!code-csharp[CallClassifySingleImage](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallClassifySingleImage)]
 
-`ClassifyImages()` Yöntemi aşağıdaki görevleri yürütür:
+`ClassifySingleImage()` Yöntemi aşağıdaki görevleri yürütür:
 
-* Modeli yükler.
 * Yükleri bir `ImageData` örneği.
 * Test verileri temel alan görüntü sınıflandırması tahmin eder.
 
 Oluşturma `ClassifySingleImage()` yöntemi hemen sonrasına `ClassifyImages()` yöntemi ve hemen önce `PairAndDisplayResults()` yöntemi, aşağıdaki kodu kullanarak:
 
 ```csharp
-public static void ClassifySingleImage(MLContext mlContext, string imagePath, string outputModelLocation)
+public static void ClassifySingleImage(MLContext mlContext, string imagePath, string outputModelLocation, ITransformer model)
 {
 
 }
 ```
 
-İlk olarak, aşağıdaki kod ile daha önce kaydettiğiniz model yüklenemiyor:
-
-[!code-csharp[LoadModel2](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadModel2)]
-
-Oluşturma bir `ImageData` tek tam yol ve görüntü dosya adı içeren sınıf `ImagePath`. Sonraki satırları olarak aşağıdaki kodu ekleyin `ClassifySingleImage()` yöntemi:
+İlk olarak, oluşturun bir `ImageData` tek tam yol ve görüntü dosya adı içeren sınıf `ImagePath`. Sonraki satırları olarak aşağıdaki kodu ekleyin `ClassifySingleImage()` yöntemi:
 
 [!code-csharp[LoadImageData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadImageData)]
 
@@ -484,19 +461,15 @@ Image: toaster2.png predicted as: appliance with score: 0.9800823
 =============== Classification metrics ===============
 LogLoss is: 0.0228266745633507
 PerClassLogLoss is: 0.0277501705149937 , 0.0186303530571291 , 0.0217359128952187
-=============== Save model to local file ===============
-Model saved: C:\Tutorials\TransferLearningTF\bin\Debug\netcoreapp2.2\assets\outputs\imageClassifier.zip
-=============== Loading model ===============
-Model loaded: C:\Tutorials\TransferLearningTF\bin\Debug\netcoreapp2.2\assets\outputs\imageClassifier.zip
 =============== Making classifications ===============
 Image: broccoli.png predicted as: food with score: 0.905548
 Image: pizza3.jpg predicted as: food with score: 0.9709008
 Image: teddy6.jpg predicted as: toy with score: 0.9750155
-=============== Loading model ===============
-Model loaded: C:\Tutorials\TransferLearningTF\bin\Debug\netcoreapp2.2\assets\outputs\imageClassifier.zip
 =============== Making single image classification ===============
 Image: toaster3.jpg predicted as: appliance with score: 0.9625379
-Press any key to continue . . .
+
+C:\Program Files\dotnet\dotnet.exe (process 4304) exited with code 0.
+Press any key to close this window . . .
 ```
 
 Tebrikler! Şimdi başarıyla bir makine öğrenme modelinin görüntü sınıflandırması için önceden eğitilmiş yeniden kullanarak derlediğiniz `TensorFlow` ML.NET içindeki model.

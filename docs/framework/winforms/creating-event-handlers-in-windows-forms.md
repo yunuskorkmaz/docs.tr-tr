@@ -8,38 +8,40 @@ helpviewer_keywords:
 - events [Windows Forms], event handlers
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
-ms.openlocfilehash: f969769725ae099ddf477fd11efb03277a555fa6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 329060e0c53178a9320be9a7cdff492d69917782
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967108"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211241"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Windows Forms'ta Olay İşleyicileri Oluşturma
-Bir olay işleyicisi, hangi eylemlerin bir ileti kuyruğu bir ileti alır ya da kullanıcı bir düğmeyi tıkladığında gibi bir olay meydana gerçekleştirilen belirler, kodunuzda bir yordamdır. Bir olay oluştuğunda, olay işleyicisi veya etkinliğin işleyicisi yürütülür. Olaylar için birden fazla işleyici atanabilir ve belirli olayları işleyen yöntemleri dinamik olarak değiştirilebilir. Windows Form Tasarımcısı, olay işleyicileri oluşturma için de kullanabilirsiniz.  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
- [Olaylara Genel Bakış](events-overview-windows-forms.md)  
- Olay modeli ve temsilciler rolünü açıklar.  
-  
- [Olay İşleyicilerine Genel Bakış](event-handlers-overview-windows-forms.md)  
- Olayların nasıl işleneceğini açıklar.  
-  
- [Nasıl yapılır: Windows Forms için çalışma zamanında olay işleyicileri oluşturma](how-to-create-event-handlers-at-run-time-for-windows-forms.md)  
- Dinamik olarak sistem veya kullanıcı olaylarına yanıt için yönergeler sağlar.  
-  
- [Nasıl yapılır: Windows Forms'ta tek olay işleyicisine birden fazla olay bağlama](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)  
- Olaylar ile birden çok denetim aynı işlevselliği atamak için yönergeler sağlar.  
-  
- [Windows Forms'ta Olayların Sırası](order-of-events-in-windows-forms.md)  
- Windows Forms denetimlerinde olay oluşturulan sırasını anlatır.  
-  
- [Nasıl yapılır: Tasarımcıyı kullanarak olay işleyicileri oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100))  
- Olay işleyicilerini oluşturma Windows Form Tasarımcısı'nı kullanmayı açıklar.  
-  
-## <a name="related-sections"></a>İlgili Bölümler  
- [Olaylar](../../standard/events/index.md)  
- Kullanarak olaylar oluşturma ve işleme hakkında konulara bağlantılar sağlar [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
-  
- [Basic'de devralınmış olay işleyicileri Visual Basic sorunlarını giderme](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  
+
+Bir olay işleyicisi, hangi eylemlerin bir ileti kuyruğu bir ileti alır ya da kullanıcı bir düğmeyi tıkladığında gibi bir olay meydana gerçekleştirilen belirler, kodunuzda bir yordamdır. Bir olay oluştuğunda, olay işleyicisi veya etkinliğin işleyicisi yürütülür. Olaylar için birden fazla işleyici atanabilir ve belirli olayları işleyen yöntemleri dinamik olarak değiştirilebilir. Olay işleyicilerini oluşturma Visual Studio'da Windows Form Tasarımcısı ' de kullanabilirsiniz.
+
+## <a name="in-this-section"></a>Bu Bölümde
+
+ [Olaylara genel bakış](events-overview-windows-forms.md)\
+ Olay modeli ve temsilciler rolünü açıklar.
+
+ [Olay işleyicilerine genel bakış](event-handlers-overview-windows-forms.md)\
+ Olayların nasıl işleneceğini açıklar.
+
+ [Nasıl yapılır: Windows Forms için çalışma zamanında olay işleyicileri oluşturma](how-to-create-event-handlers-at-run-time-for-windows-forms.md)\
+ Dinamik olarak sistem veya kullanıcı olaylarına yanıt için yönergeler sağlar.
+
+ [Nasıl yapılır: Windows Forms'ta tek olay işleyicisine birden fazla olay bağlama](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)\
+ Olaylar ile birden çok denetim aynı işlevselliği atamak için yönergeler sağlar.
+
+ [Windows Forms'ta olayların sırası](order-of-events-in-windows-forms.md)\
+ Windows Forms denetimlerinde olay oluşturulan sırasını anlatır.
+
+ [Nasıl yapılır: Tasarımcıyı kullanarak olay işleyicileri oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)) olay işleyicilerini oluşturma Windows Form Tasarımcısı'nı kullanmayı açıklar.
+
+## <a name="related-sections"></a>İlgili Bölümler
+
+ [Olayları](../../standard/events/index.md)\
+ Kullanarak olaylar oluşturma ve işleme hakkında konulara bağlantılar sağlar [!INCLUDE [dnprdnshort](../../../includes/dnprdnshort-md.md)\].
+
+ [Basic'de devralınmış olay işleyicileri Visual Basic sorunlarını giderme](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)\
  Devralınan bileşenler olay işleyicileri ile oluşabilecek genel sorunları listeler.

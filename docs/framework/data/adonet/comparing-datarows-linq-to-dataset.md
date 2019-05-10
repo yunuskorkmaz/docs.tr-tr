@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
-ms.openlocfilehash: 2b45a4629474c394c8e49c41a7a98fc1181e124b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0903aac366426e8b4d271ae4bfaa54c79a198e5c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077179"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583746"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>(LINQ to DataSet) DataRow karşılaştırma
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] eşit olup olmadığını görmek için kaynak öğeleri karşılaştırmak için çeşitli küme işleci tanımlar. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Aşağıdaki işleçler kümesi sağlar:  
   
--   <xref:System.Linq.Enumerable.Distinct%2A>  
+- <xref:System.Linq.Enumerable.Distinct%2A>  
   
--   <xref:System.Linq.Enumerable.Union%2A>  
+- <xref:System.Linq.Enumerable.Union%2A>  
   
--   <xref:System.Linq.Enumerable.Intersect%2A>  
+- <xref:System.Linq.Enumerable.Intersect%2A>  
   
--   <xref:System.Linq.Enumerable.Except%2A>  
+- <xref:System.Linq.Enumerable.Except%2A>  
   
  Bu işleçler çağırarak kaynak öğeleri karşılaştırma <xref:System.Collections.Generic.IEqualityComparer%601.GetHashCode%2A> ve <xref:System.Collections.Generic.IEqualityComparer%601.Equals%2A> öğelerinin her koleksiyonu yöntemleri. Durumunda, bir <xref:System.Data.DataRow>, genellikle ayarlama işlemleri için ideal davranışı sekmeli veriler üzerinde değil, bir başvuru karşılaştırması, bu işleçler gerçekleştirin. Ayarlama işlemleri için genellikle öğe değerlerini eşit olup olmadığı ve öğesi başvuruları belirlemek istersiniz. Bu nedenle, <xref:System.Data.DataRowComparer> sınıfı eklendi [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Bu sınıf, satır değerlerini karşılaştırmak için kullanılabilir.  
   

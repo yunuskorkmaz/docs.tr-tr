@@ -2,12 +2,12 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: 97197926db0b44f1ad36e2eba6ab6bec42eced33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a01300024f89a0a189045d80622121f7db739a39
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943929"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912404"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 ConfigurationCodeGenerator yapılandırma sistemi için özel kanal uygulamaları göstermek için kullanabileceğiniz bir araçtır. Bu, kanalınızı yalnızca bunlar sistem tarafından sağlanan gibi bağlama yapılandırırsınız .config dosyasını kullanarak yapılandırmak, kullanıcıların, özel bir kanal sağlar `NetTcpBinding` veya özel bir bağlama kullanarak `TcpTransportBindingElement`.  

@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: DBML ve Dış Eşleme Dosyalarını Doğrulama'
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 83a26f22495c849aa00143ca36b63fa147120c28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 9e80f41e05fb78b7a6c1ef9ce47ef611cfe3e57d
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310245"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910634"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Nasıl yapılır: DBML ve Dış Eşleme Dosyalarını Doğrulama
 Dış eşleme dosyalarını ve değişiklik .dbml dosyalarını, karşılık gelen şema tanımlarının karşı doğrulanmalıdır. Bu konu, doğrulama işlemini uygulamak için Visual Studio kullanıcılarıyla adımları sağlar.  
@@ -30,9 +30,9 @@ Dış eşleme dosyalarını ve değişiklik .dbml dosyalarını, karşılık gel
   
 5. Amacınıza uygun şema tanımı unutmayın.  
   
-    -   Bir .dbml dosyası doğrulamak için şema tanımı DbmlSchema.xsd olur. Daha fazla bilgi için [LINQ to SQL'de kod oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+    - Bir .dbml dosyası doğrulamak için şema tanımı DbmlSchema.xsd olur. Daha fazla bilgi için [LINQ to SQL'de kod oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
-    -   Dış XML eşleme dosyası doğrulamak için şema tanımı LinqToSqlMapping.xsd olur. Daha fazla bilgi için [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+    - Dış XML eşleme dosyası doğrulamak için şema tanımı LinqToSqlMapping.xsd olur. Daha fazla bilgi için [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 6. İçinde **kullanım** açılır kutusunu açın ve ardından tıklatıp istediğiniz şema tanımı satırın sütun **Bu şemayı kullan**.  
   
@@ -51,9 +51,9 @@ Dış eşleme dosyalarını ve değişiklik .dbml dosyalarını, karşılık gel
   
 1. Bu konunun önceki kısımlarında açıklandığı gibi şema tanımını içerdiğinden Yardım konusu bulun.  
   
-    -   .DBML dosyalar için bkz: [LINQ to SQL'de kod oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+    - .DBML dosyalar için bkz: [LINQ to SQL'de kod oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
-    -   Dış eşleme dosyaları için bkz: [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+    - Dış eşleme dosyaları için bkz: [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 2. Tıklayın **kopyalama kod** kod dosyası panoya kopyalamak için.  
   

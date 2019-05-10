@@ -2,12 +2,12 @@
 title: C# zaman uyumsuz programlama
 description: Genel bir bakış C# await, görev ve görev kullanarak zaman uyumsuz, zaman uyumsuz programlama için dil desteği<T>
 ms.date: 03/18/2019
-ms.openlocfilehash: dc85fd4fb30278dc39c75c88d5fd23c1f1633366
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 350ccdeeb31e318ca0c1a8158691f58bf5208efb
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668685"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064111"
 ---
 # <a name="the-task-asynchronous-programming-model-in-c"></a>Görev zaman uyumsuz programlama modeli C\#
 
@@ -22,7 +22,7 @@ Bu söz dizimi amacı olan: kod, bir dizi ifadeleri gibi okumaktadır, ancak dı
 1. Bildirim için ezmesi ve Başınızı ekleyin.
 1. Bir cam Portakal suyu, dök.
 
-Deneyimi Aşçılık varsa, bu yönergeleri yürütülür **zaman uyumsuz olarak**. Örneğin sucuklu için kaydırma hazırlanıyor Başlat sonra bacon başlatın. İçinde toaster ekmek put sonra Örneğin sucuklu başlatın. İşlemin her adımında bir görev başlatın ardından dikkatinizi dinlediğiniz için hazır olan görevleri açmak.
+Deneyimi Aşçılık ile varsa, bu yönergeleri yürütülür **zaman uyumsuz olarak**. Örneğin sucuklu için kaydırma hazırlanıyor Başlat sonra bacon başlatın. İçinde toaster ekmek put sonra Örneğin sucuklu başlatın. İşlemin her adımında bir görev başlatın ardından dikkatinizi dinlediğiniz için hazır olan görevleri açmak.
 
 Kahvaltı Aşçılık, paralel olmayan zaman uyumsuz iş iyi bir örnektir. Bu görevleri tek bir kişi (veya iş parçacığı) işleyebilir. Kahvaltı benzerliği devam, tek bir kişi kahvaltı zaman uyumsuz olarak ilk tamamlanmadan önce sonraki görev başlatarak yapabilirsiniz. Birisi izliyor olup olmadığını Aşçılık ilerler. Örneğin sucuklu için kaydırma hazırlanıyor başlar başlamaz, bacon frying başlayabilirsiniz. Bir kez bacon başladığında, ekmek toaster koyabilirsiniz.
 

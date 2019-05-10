@@ -3,14 +3,14 @@ title: .NET API Çözümleyicisi
 description: .NET API Çözümleyicisi kullanım dışı API ve platform uyumluluğu sorunları algılayın nasıl yardımcı olabileceğini öğrenin.
 author: oliag
 ms.author: mairaw
-ms.date: 05/31/2018
+ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 84dd0717725f3538f9c9b2e3b5573f1385e549ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 892fb5cc9fba3434b0884c88b97f784d58093303
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947464"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063353"
 ---
 # <a name="net-api-analyzer"></a>.NET API Çözümleyicisi
 
@@ -23,7 +23,7 @@ API Çözümleyicisi bir NuGet paketi olarak gelir [Microsoft.DotNet.Analyzers.C
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* Visual Studio 2017 veya Visual Studio için Mac (tüm sürümler).
+* Visual Studio 2017 ve sonraki sürümleri ya da (tüm sürümler) Mac için Visual Studio.
 
 ## <a name="discovering-deprecated-apis"></a>Kullanım dışı API'lerini keşfetme
 
@@ -98,6 +98,7 @@ Hedef framework ve işletim sistemi da koşullu olarak derleyebilirsiniz, ancak 
 * .NET Standard oluşturan API'si kullanımı <xref:System.PlatformNotSupportedException> (PC001).
 * Bir .NET standart .NET Framework 4.6.1 (PC002) üzerinde bulunmayan API kullanımı.
 * UWP (PC003) mevcut olmayan bir yerel API kullanımı.
+* Kullanım Delegate.BeginInvoke ve EndInvoke API'leri (PC004).
 * Kullanım dışı (DEXXXX) işaretlenmiş bir API kullanımı.
 
 ## <a name="ci-machine"></a>CI makine

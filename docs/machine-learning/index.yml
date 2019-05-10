@@ -5,17 +5,17 @@ metadata:
   document_id: na
   title: 'ML.NET belgeleri - öğreticiler, API Başvurusu'
   meta.description: 'Learn how to use ML.NET, an open-source and cross-platform machine learning framework you can use to build custom machine learning solutions and integrate them into .NET applications. Incorporate AI into your apps using the .NET skills you already have and without leaving .NET.'
-  ms.prod: dotnet
-  ms.tech: machine-learning
-  ms.tgt_pltfrm: na
-  ms.devlang: na
   ms.topic: landing-page
-  ms.date: 05/05/2019
+  ms.date: 04/18/2019
   ms.author: cgronlun
   author: cjgronlund
 abstract:
   description: 'ML.NET, özel makine öğrenimi çözümleri oluşturma ve bunları .NET uygulamalarınızı tümleştirmek için bir açık kaynaklı ve platformlar arası machine learning çerçevesi kullanmayı öğrenin. Öğreticiler, kod örnekleri, API Başvurusu ve diğer belgeler, nasıl gösterir.'
 sections:
+  - title: Başlarken
+    items:
+      - type: paragraph
+        text: Bir machine learning uygulama ML.NET ile nasıl oluşturulduğunu öğrenmek için <a href="/dotnet/machine-learning/how-does-mldotnet-work">ML.NET nedir ve nasıl onu çalışır</a>? Veya ekleyerek başlayın <b>Microsoft.ML</b> uygulamanıza nuget paketi.
   - title: Adım adım öğreticiler
     items:
       - type: paragraph
@@ -25,14 +25,17 @@ sections:
         items:
           - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis">İkili sınıflandırma kullanarak düşüncelerini çözümleme</a>
           - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">GitHub sorunları sınıflı sınıflandırma kullanarak kategorilere ayırma</a></li>
-          - html: <a href="/dotnet/machine-learning/tutorials/taxi-fare">NYC taksi fares regresssion kullanarak tahmin etme</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/taxi-fare">NYC taksi fares regresyon kullanarak tahmin etme</a>
           - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">Satmanın Kümelemesi kullanarak özelliklerine göre kategorilere ayırın</a>
           - html: <a href="/dotnet/machine-learning/tutorials/movie-recommmendation">Bir film öneren matris factorization ile oluşturma</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">Özel görüntü sınıflandırıcı TensorFlow ile oluşturma</a>
   - title: Başvuru ve kaynaklar
     items:
+      - type: paragraph
+        text: 'ML.NET API iki paket vardır: yayın bileşenleri ve önizleme bileşenleri. API Sürüm veri işleme, ikili Sınıflandırma, çok sınıflı Sınıflandırma, regresyon, anomali algılama ve derecelendirme, model kaydetme ve yükleme ve çok daha fazlası için algoritmalar için bileşenler içerir! API Önizleme işleme, öneri görevlerin yanı sıra, zaman serisi verileri işlemek için bileşenleri için algoritmalar ONNX ve TensorFlow modeli içerir.'
       - type: list
         style: unordered
         items:
           - html: <a href="/dotnet/api/?view=ml-dotnet">ML.NET API</a>
+          - html: <a href="/dotnet/api/?view=ml-dotnet-preview">ML.NET Önizleme API</a>
           - html: '<a href="https://github.com/dotnet/machinelearning-samples/blob/master/README.md">ML.NET örnekleri: C#veF#</a>'

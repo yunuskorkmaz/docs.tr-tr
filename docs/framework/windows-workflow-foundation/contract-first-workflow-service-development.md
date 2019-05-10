@@ -2,12 +2,12 @@
 title: İlk İş Akışı Hizmet Geliştirme Anlaşmasını Yapma
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: c326f91bc8673180db755a91ab080bcf0ba72052
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2fcc0054a3e4c9dd2152344617c8506c9ce6b0d7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774211"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587627"
 ---
 # <a name="contract-first-workflow-service-development"></a>İlk İş Akışı Hizmet Geliştirme Anlaşmasını Yapma
 İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF) özelliklerini daha iyi bir web hizmetleri ve iş akışları sözleşme öncelikli iş akışı geliştirme biçiminde arasında tümleştirme. Sözleşme öncelikli iş akışı geliştirme aracı, kod sözleşmede ilk tasarlamak sağlar. Araç ardından otomatik olarak bir etkinlik şablonu sözleşme işlemleri için araç kutusunda oluşturur. Bu konu nasıl etkinlikleri ve bir iş akışı hizmeti özelliklerinde harita hizmet sözleşme öznitelikleri için genel bir bakış sağlar. Bir sözleşme öncelikli iş akışı hizmeti oluşturma adım adım örnek için bkz. [nasıl yapılır: Mevcut bir hizmet anlaşmasını kullanan iş akışı hizmeti oluşturma](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
