@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: 32ff0adca9d35e6b5439ae06be85414924dac2e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a73a66313e7ca540711838c4d147d6bd163ec8d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801302"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625563"
 ---
-# <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a><span data-ttu-id="bd1ee-102">İkili bir 'If' ifadesindeki ilk işlenen boş değer atanabilir veya bir başvuru türü olmalıdır</span><span class="sxs-lookup"><span data-stu-id="bd1ee-102">First operand in a binary 'If' expression must be nullable or a reference type</span></span>
-<span data-ttu-id="bd1ee-103">Bir `If` ifadesi, iki veya üç bağımsız değişken alabilir.</span><span class="sxs-lookup"><span data-stu-id="bd1ee-103">An `If` expression can take either two or three arguments.</span></span> <span data-ttu-id="bd1ee-104">Yalnızca iki bağımsız değişken gönderdiğinizde, ilk bağımsız değişkeninin bir başvuru türüyle veya null yapılabilir bir tür olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="bd1ee-104">When you send only two arguments, the first argument must be a reference type or a nullable type.</span></span> <span data-ttu-id="bd1ee-105">İlk bağımsız değişken için bir şey dışında değerlendirilirse `Nothing`, bu değer döndürülür.</span><span class="sxs-lookup"><span data-stu-id="bd1ee-105">If the first argument evaluates to anything other than `Nothing`, its value is returned.</span></span> <span data-ttu-id="bd1ee-106">İlk bağımsız değişken değerlendirilirse `Nothing`, ikinci bağımsız değişken değerlendirilir ve döndürdü.</span><span class="sxs-lookup"><span data-stu-id="bd1ee-106">If the first argument evaluates to `Nothing`, the second argument is evaluated and returned.</span></span>  
+# <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a><span data-ttu-id="e931a-102">İkili bir 'If' ifadesindeki ilk işlenen boş değer atanabilir veya bir başvuru türü olmalıdır</span><span class="sxs-lookup"><span data-stu-id="e931a-102">First operand in a binary 'If' expression must be nullable or a reference type</span></span>
+<span data-ttu-id="e931a-103">Bir `If` ifadesi, iki veya üç bağımsız değişken alabilir.</span><span class="sxs-lookup"><span data-stu-id="e931a-103">An `If` expression can take either two or three arguments.</span></span> <span data-ttu-id="e931a-104">Yalnızca iki bağımsız değişken gönderdiğinizde, ilk bağımsız değişkeninin bir başvuru türüyle veya null yapılabilir bir tür olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="e931a-104">When you send only two arguments, the first argument must be a reference type or a nullable type.</span></span> <span data-ttu-id="e931a-105">İlk bağımsız değişken için bir şey dışında değerlendirilirse `Nothing`, bu değer döndürülür.</span><span class="sxs-lookup"><span data-stu-id="e931a-105">If the first argument evaluates to anything other than `Nothing`, its value is returned.</span></span> <span data-ttu-id="e931a-106">İlk bağımsız değişken değerlendirilirse `Nothing`, ikinci bağımsız değişken değerlendirilir ve döndürdü.</span><span class="sxs-lookup"><span data-stu-id="e931a-106">If the first argument evaluates to `Nothing`, the second argument is evaluated and returned.</span></span>  
   
- <span data-ttu-id="bd1ee-107">Örneğin, aşağıdaki kod iki tane `If` üç bağımsız değişken biri diğeri iki bağımsız değişkenler ile ifadeler.</span><span class="sxs-lookup"><span data-stu-id="bd1ee-107">For example, the following code contains two `If` expressions, one with three arguments and one with two arguments.</span></span> <span data-ttu-id="bd1ee-108">İfadeler, hesaplar ve aynı değeri döndürür.</span><span class="sxs-lookup"><span data-stu-id="bd1ee-108">The expressions calculate and return the same value.</span></span>  
+ <span data-ttu-id="e931a-107">Örneğin, aşağıdaki kod iki tane `If` üç bağımsız değişken biri diğeri iki bağımsız değişkenler ile ifadeler.</span><span class="sxs-lookup"><span data-stu-id="e931a-107">For example, the following code contains two `If` expressions, one with three arguments and one with two arguments.</span></span> <span data-ttu-id="e931a-108">İfadeler, hesaplar ve aynı değeri döndürür.</span><span class="sxs-lookup"><span data-stu-id="e931a-108">The expressions calculate and return the same value.</span></span>  
   
 ```vb  
 ' firstChoice is a nullable value type.  
@@ -29,7 +29,7 @@ Console.WriteLine(If(firstChoice IsNot Nothing, firstChoice, secondChoice))
 Console.WriteLine(If(firstChoice, secondChoice))  
 ```  
   
- <span data-ttu-id="bd1ee-109">Aşağıdaki ifadeler bu hataya neden:</span><span class="sxs-lookup"><span data-stu-id="bd1ee-109">The following expressions cause this error:</span></span>  
+ <span data-ttu-id="e931a-109">Aşağıdaki ifadeler bu hataya neden:</span><span class="sxs-lookup"><span data-stu-id="e931a-109">The following expressions cause this error:</span></span>  
   
 ```vb  
 Dim choice1 = 4  
@@ -42,19 +42,19 @@ Dim booleanVar = True
 'Console.WriteLine(If(booleanVar, "Test returns True."))  
 ```  
   
- <span data-ttu-id="bd1ee-110">**Hata Kimliği:** BC33107</span><span class="sxs-lookup"><span data-stu-id="bd1ee-110">**Error ID:** BC33107</span></span>  
+ <span data-ttu-id="e931a-110">**Hata Kimliği:** BC33107</span><span class="sxs-lookup"><span data-stu-id="e931a-110">**Error ID:** BC33107</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="bd1ee-111">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="bd1ee-111">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e931a-111">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="e931a-111">To correct this error</span></span>  
   
-- <span data-ttu-id="bd1ee-112">Kod değiştiremiyorsanız, ilk bağımsız değişken bir boş değer atanabilir tür veya başvuru türü olması için üç bağımsız değişken bir dönüştürme göz önünde bulundurun `If` ifade veya bir `If...Then...Else` deyimi.</span><span class="sxs-lookup"><span data-stu-id="bd1ee-112">If you cannot change the code so that the first argument is a nullable type or reference type, consider converting to a three-argument `If` expression, or to an `If...Then...Else` statement.</span></span>  
+- <span data-ttu-id="e931a-112">Kod değiştiremiyorsanız, ilk bağımsız değişken bir boş değer atanabilir tür veya başvuru türü olması için üç bağımsız değişken bir dönüştürme göz önünde bulundurun `If` ifade veya bir `If...Then...Else` deyimi.</span><span class="sxs-lookup"><span data-stu-id="e931a-112">If you cannot change the code so that the first argument is a nullable type or reference type, consider converting to a three-argument `If` expression, or to an `If...Then...Else` statement.</span></span>  
   
 ```vb  
 Console.WriteLine(If(choice1 < choice2, 1, 2))  
 Console.WriteLine(If(booleanVar, "Test returns True.", "Test returns False."))  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bd1ee-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bd1ee-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e931a-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e931a-113">See also</span></span>
 
-- [<span data-ttu-id="bd1ee-114">If İşleci</span><span class="sxs-lookup"><span data-stu-id="bd1ee-114">If Operator</span></span>](../../../visual-basic/language-reference/operators/if-operator.md)
-- [<span data-ttu-id="bd1ee-115">If...Then...Else Deyimi</span><span class="sxs-lookup"><span data-stu-id="bd1ee-115">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [<span data-ttu-id="bd1ee-116">Boş Değer Atanabilen Değer Türleri</span><span class="sxs-lookup"><span data-stu-id="bd1ee-116">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [<span data-ttu-id="e931a-114">If İşleci</span><span class="sxs-lookup"><span data-stu-id="e931a-114">If Operator</span></span>](../../../visual-basic/language-reference/operators/if-operator.md)
+- [<span data-ttu-id="e931a-115">If...Then...Else Deyimi</span><span class="sxs-lookup"><span data-stu-id="e931a-115">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [<span data-ttu-id="e931a-116">Boş Değer Atanabilen Değer Türleri</span><span class="sxs-lookup"><span data-stu-id="e931a-116">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
