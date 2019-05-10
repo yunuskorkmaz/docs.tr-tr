@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: 65a1e34d5b078c49bf59c2d9787812940c9a7494
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b3d0f5c77ebf8527e4854d4edf12d6fa8a4b5f0c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340405"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614636"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Nasıl yapılır: ContextMenuOpening Olayını İşleme
 <xref:System.Windows.FrameworkElement.ContextMenuOpening> Olay ya da bir var olan bağlam menüsü önceki görüntülemek veya ayarlayarak görüntülenen menüyü bastırmak için ayarlamak için bir uygulama işlenebilir <xref:System.Windows.RoutedEventArgs.Handled%2A> özelliğini `true` içinde olay verileri. Ayar tipik nedeni <xref:System.Windows.RoutedEventArgs.Handled%2A> için `true` olay menü tamamen yeni ile değiştirilecek verilerdir <xref:System.Windows.Controls.ContextMenu> işlemi iptal ediliyor ve yeni bir açık başlatma bazen gerektiren, nesne. İçin işleyiciler yazarsanız <xref:System.Windows.FrameworkElement.ContextMenuOpening> olay olmanız gerekir zamanlama sorunları arasında farkında bir <xref:System.Windows.Controls.ContextMenu> denetimi ve açma ve genel denetimlerin bağlam menülerini konumlandırma sorumlu hizmeti. Bu konuda çeşitli bağlam menüsü açma senaryoları için kod yöntemlerden bazıları gösterilmektedir ve burada zamanlama sorunu devreye bir durumu gösterir.  
   
  İşleme için birkaç senaryo mevcuttur <xref:System.Windows.FrameworkElement.ContextMenuOpening> olay:  
   
--   Görüntü önce menü öğelerini ayarlanıyor.  
+- Görüntü önce menü öğelerini ayarlanıyor.  
   
--   Önce görünen tüm menü değiştiriliyor.  
+- Önce görünen tüm menü değiştiriliyor.  
   
--   Tamamen var olan herhangi bir bağlam menüsü gizleme ve hiçbir bağlam menüsünü görüntüleme.  
+- Tamamen var olan herhangi bir bağlam menüsü gizleme ve hiçbir bağlam menüsünü görüntüleme.  
   
 ## <a name="example"></a>Örnek  
   

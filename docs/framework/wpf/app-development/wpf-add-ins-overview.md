@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 93fa26927a6afc9d9f7a96198abeef6f45fc35b4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971320"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651911"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF Eklentilerine Genel Bakış
 <a name="Introduction"></a> .NET Framework, geliştiricilerin eklentiyi genişletilebilirlik destekleyen uygulamalar oluşturmak için kullanabileceğiniz bir eklenti modeli içerir. Bu eklenti modeli ile tümleştirin ve uygulama işlevselliğini genişleten eklentileri oluşturulmasına izin verir. Bazı senaryolarda uygulamalar eklenti tarafından sağlanan kullanıcı arabirimlerini görüntülemek de gerekir. Bu konuda, WPF bu senaryolar, mimarisi, aboneliğin avantajları ve kısıtlamalarını arkasında etkinleştirmek için .NET Framework eklenti modeli nasıl artırmaktadır gösterilmektedir.  

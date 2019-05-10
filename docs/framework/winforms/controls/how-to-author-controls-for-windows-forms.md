@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 844d165cef05e46d25960f113af3bf99dd35e14f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8adc9644f987166729c43b79a6891960978341dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340340"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64612722"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Nasıl yapılır: Windows Forms için Denetimler Yazma
 Bir denetimin kullanıcı ve program arasındaki grafik bağlantısını temsil eder. Bir denetim sağlamak veya verileri işlemek, kullanıcı girişi kabul edebilir, olaylara yanıt vermesi veya herhangi bir sayıda kullanıcı ve uygulama bağlanma diğer işlevlerini gerçekleştirmek. Bir denetimi bir bileşen aslında bir grafik arabirimine sahip olduğundan, bir bileşen mu, yanı sıra kullanıcı etkileşimi sağlamak herhangi bir işlevini hizmet verebilir. Denetimler belirli bir amaca hizmet eder oluşturulur ve denetimleri yazma başka bir programlama görevdir. Aklınızda yazma işleminin hızlandırılmasının denetimine genel bakış aşağıdaki adımları temsil eder. Bağlantılar tek tek adımlara ek bilgi sağlar.  
@@ -25,13 +25,13 @@ Bir denetimin kullanıcı ve program arasındaki grafik bağlantısını temsil 
   
 1. Denetim gerçekleştirmek istediğiniz veya bu kısım belirlemek uygulamanızda yürütülür. Dikkate alınması gereken faktörler şunlardır:  
   
-    -   Ne tür bir grafik arabirim ihtiyacınız var?  
+    - Ne tür bir grafik arabirim ihtiyacınız var?  
   
-    -   Bu denetimin hangi belirli kullanıcı etkileşimlerine kullanacak mı?  
+    - Bu denetimin hangi belirli kullanıcı etkileşimlerine kullanacak mı?  
   
-    -   İhtiyacınız olan işlevleri, mevcut tüm denetimler tarafından sağlanır?  
+    - İhtiyacınız olan işlevleri, mevcut tüm denetimler tarafından sağlanır?  
   
-    -   Çeşitli Windows Forms denetimleri bir araya getirerek ihtiyacınız olan işlevleri alabilir miyim?  
+    - Çeşitli Windows Forms denetimleri bir araya getirerek ihtiyacınız olan işlevleri alabilir miyim?  
   
 2. Denetim için nesne modeli gerekiyorsa, nasıl işlevselliği nesne modeli dağıtılan ve işlevselliği denetim ve tüm alt nesnelerinin arasında yukarı bölmek belirler. Bir nesne modeli, karmaşık bir denetimi planlama veya çeşitli işlevler dahil etmek istiyorsanız yararlı olabilir.  
   

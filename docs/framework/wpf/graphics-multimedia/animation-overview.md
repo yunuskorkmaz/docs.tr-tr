@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 530f6cb8fbe80df3ad374f8ad0e4836be82830a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e8717ca50f7275e2739be4d4ee5d677e081d552d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054334"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615985"
 ---
 # <a name="animation-overview"></a>Animasyona Genel bakış
 <a name="introduction"></a>
@@ -213,10 +213,10 @@ ms.locfileid: "62054334"
   
 |Özellik türü|Karşılık gelen (From/To/By) temel animasyon|Karşılık gelen anahtar çerçeve animasyonu|Karşılık gelen yol animasyonu|Kullanım örneği|  
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|  
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Yok.|Animasyon <xref:System.Windows.Media.SolidColorBrush.Color%2A> , bir <xref:System.Windows.Media.SolidColorBrush> veya <xref:System.Windows.Media.GradientStop>.|  
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|Animasyon <xref:System.Windows.Media.SolidColorBrush.Color%2A> , bir <xref:System.Windows.Media.SolidColorBrush> veya <xref:System.Windows.Media.GradientStop>.|  
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Animasyon <xref:System.Windows.FrameworkElement.Width%2A> , bir <xref:System.Windows.Controls.DockPanel> veya <xref:System.Windows.FrameworkElement.Height%2A> , bir <xref:System.Windows.Controls.Button>.|  
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|Animasyon <xref:System.Windows.Media.EllipseGeometry.Center%2A> birini konumlandırmak bir <xref:System.Windows.Media.EllipseGeometry>.|  
-|<xref:System.String>|Yok.|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Yok.|Animasyon <xref:System.Windows.Controls.TextBlock.Text%2A> , bir <xref:System.Windows.Controls.TextBlock> veya <xref:System.Windows.Controls.ContentControl.Content%2A> , bir <xref:System.Windows.Controls.Button>.|  
+|<xref:System.String>|Yok.|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|None|Animasyon <xref:System.Windows.Controls.TextBlock.Text%2A> , bir <xref:System.Windows.Controls.TextBlock> veya <xref:System.Windows.Controls.ContentControl.Content%2A> , bir <xref:System.Windows.Controls.Button>.|  
   
 <a name="animationsaretimelines"></a>   
 ### <a name="animations-are-timelines"></a>Animasyon zaman çizelgeleri olan  

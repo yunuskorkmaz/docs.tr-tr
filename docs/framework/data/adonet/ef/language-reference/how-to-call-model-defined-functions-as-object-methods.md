@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 53ec7122a3601a2da53513f25a546a08c2aa4307
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774614"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64631562"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Nasıl yapılır: Model Tanımlı İşlevleri Nesne Yöntemleri Olarak Çağırma
 Bu konu, bir yöntem olarak model tanımlı bir işlevi çağırmak açıklar bir <xref:System.Data.Objects.ObjectContext> nesne veya özel bir sınıf üzerinde bir statik yöntem olarak. A *model tanımlı işlev* kavramsal modelde tanımlı bir işlev değil. Bu konudaki yordamlar, bunları Entities sorgularında LINQ çağırmak yerine doğrudan bu işlevleri çağırmak nasıl açıklar. LINQ to Entities sorgularında çağırma model tanımlı işlevleri hakkında daha fazla bilgi için bkz: [nasıl yapılır: Sorgularda model tanımlı işlevler çağırma](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  

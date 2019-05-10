@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4d1d5602ff224c1c8f3e0948fc93c9200b9661e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8e2b6ca8ef04ad6ff637a59f03f3b4cf04cb06ad
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026815"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615360"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator Gönderim Temelli Doğrulaması
 <xref:System.Xml.Schema.XmlSchemaValidator> Sınıfı XML şemaları XML verileriyle gönderim temelli bir şekilde doğrulamak için verimli, yüksek performanslı bir mekanizma sağlar. Örneğin, <xref:System.Xml.Schema.XmlSchemaValidator> sınıfı doğrulama bir XML okuyucusu kullanarak belgeyi daha sonra ayrıştırma ve bir XML belgesi olarak seri hale getirmek zorunda kalmadan bir XML bilgi kümesi yerinde doğrulamanıza olanak verir.  

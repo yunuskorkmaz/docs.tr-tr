@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4c1d07e2469a36c4b8e1ef7b8d90a80a3530ae3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 719e24652ea40d601523e32ecbdb58ce5d4fa645
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787978"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616591"
 ---
 # <a name="constrained-execution-regions"></a>Kısıtlı Yürütme Bölgeleri
 Kısıtlı yürütme bölge (CER) güvenilir yönetilen kod yazmak için bir mekanizma bir parçasıdır. Bir CER alanında kod tamamen yürütülmesini engelleyen bant dışı özel durumları atma gelen ortak dil çalışma zamanı (CLR) kısıtlı bir alan tanımlar. Bu bölge içinde kullanıcı kodu bant dışı özel durumları atma neden olan kod yürütülmesini sınırlıdır. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Yöntemi hemen gelmelidir bir `try` blok ve işaretleri `catch`, `finally`, ve `fault` kısıtlı yürütme bölgeleri olarak engeller. Kısıtlı bölge işaretlenmiş bir kez kod yalnızca diğer güçlü bir güvenilirlik sözleşmeleri koduyla çağırmanız gerekir ve kod ayırmak veya gerekir kod hatalarını işlemek için hazırlanan sürece hazırlıksız ya da güvenilir olmayan yöntemleri sanal çağrı yapmak. İçinde bir CER yürütülmekte olan kod için CLR gecikmeler iş parçacığını durdurur.  

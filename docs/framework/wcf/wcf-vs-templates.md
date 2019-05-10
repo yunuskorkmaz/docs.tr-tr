@@ -2,12 +2,12 @@
 title: WCF Visual Studio Şablonları
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: b0cca0cd585a45b795db4d573659e0d19ecd78dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2e192e671d37e096e4199b295d4f533194ab89b6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780672"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613227"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio Şablonları
 Windows Communication Foundation (WCF) Visual Studio önceden tanımlanmış proje ve öğe şablonlarını Visual Studio'da WCF hizmetleri ve kapsayıcı uygulamaları hızlıca oluşturmak için kullanabileceğiniz şablonlardır.  

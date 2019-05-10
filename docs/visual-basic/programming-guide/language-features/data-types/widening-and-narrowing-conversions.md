@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: 9f1a71e8e2e3e4ebb9b412be74b5ea8702eb164f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 98702f2fb8f912b9503f3ccdad74e61ef097f617
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61827164"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600887"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Genişletme ve Daraltma Dönüşümleri (Visual Basic)
 Önemli bir tür dönüştürme ile dönüştürmenin sonucu hedef veri türü aralık içinde olup olmadığını noktadır.  

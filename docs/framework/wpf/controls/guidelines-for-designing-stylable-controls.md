@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 756cc821b1a9fe20741e390a1fe6e84d12cc6363
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 99644be4a275c1de7f4b89ca23368a26a8b76f5b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009974"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614535"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Stillenebilir Denetimleri Tasarlama Yönergeleri
 Bu belgede bir kolayca Stillenebilir olmasını düşündüğünüz bir denetim tasarlarken dikkate alınması gereken en iyi yöntemler ve şablonu özetler. Biz bu en iyi deneme yanılma çok fazla dizi tema denetim stilleri yerleşik çalışırken gelen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetim kümesi. Başarılı bir stil stilini olduğu kadar bir işlev bir iyi tasarlanmış bir nesne modelinin olduğunu öğrendik. Bu belgenin hedef kitlesi denetim, stil yazarı yazarıdır.  

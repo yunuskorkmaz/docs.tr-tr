@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 839772fac51ab006d03875920360824a73b033e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c37480f18c100d66e78e851439bd15e2ecfdd381
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770402"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615187"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Gözlemci Tasarım Deseni En İyi Yöntemleri
 Gözlemci tasarım deseni, .NET Framework'teki arabirimleri kümesi uygulanır. <xref:System.IObservable%601?displayProperty=nameWithType> Arabirimi temsil eder, aynı zamanda sağlamaktan sorumlu olan veri sağlayıcısı bir <xref:System.IDisposable> bildirim aboneliği gözlemciler sağlayan uygulama. <xref:System.IObserver%601?displayProperty=nameWithType> Arabiriminin gözlemcisi temsil eder. Bu konu, geliştiricilerin bu arabirimleri kullanarak gözlemci tasarım deseni uygularken izlemelidir en iyi uygulamaları açıklar.  
