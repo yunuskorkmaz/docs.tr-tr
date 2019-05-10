@@ -6,38 +6,233 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 12/31/2018
-ms.openlocfilehash: 086be4649f4e7e27ff98df6f26d08856683865c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.date: 05/06/2019
+ms.openlocfilehash: 8d6ff6bc55384281119600f2323212441c1815e9
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664824"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452473"
 ---
-# <a name="whats-new-in-net-core-30-preview-2"></a><span data-ttu-id="2989f-103">.NET Core 3.0 (Önizleme 2) yenilikler</span><span class="sxs-lookup"><span data-stu-id="2989f-103">What's new in .NET Core 3.0 (Preview 2)</span></span>
+# <a name="whats-new-in-net-core-30-preview-5"></a><span data-ttu-id="bccc1-103">.NET Core 3.0 (Preview 5) yenilikler</span><span class="sxs-lookup"><span data-stu-id="bccc1-103">What's new in .NET Core 3.0 (Preview 5)</span></span>
 
-<span data-ttu-id="2989f-104">Bu makalede, .NET Core 3.0 (Önizleme 2) Yenilikler açıklanır.</span><span class="sxs-lookup"><span data-stu-id="2989f-104">This article describes what is new in .NET Core 3.0 (preview 2).</span></span> <span data-ttu-id="2989f-105">Büyük iyileştirmeler Windows Masaüstü uygulamaları (yalnızca Windows) için destek biridir.</span><span class="sxs-lookup"><span data-stu-id="2989f-105">One of the biggest enhancements is support for Windows desktop applications (Windows only).</span></span> <span data-ttu-id="2989f-106">Windows Masaüstü adlı bir .NET Core 3.0 SDK'sı bileşeni yararlanarak, Windows Presentation Foundation (WPF) uygulamaları ve Windows Forms bağlantı noktası.</span><span class="sxs-lookup"><span data-stu-id="2989f-106">By utilizing a .NET Core 3.0 SDK component called Windows Desktop, you can port your Windows Forms and Windows Presentation Foundation (WPF) applications.</span></span> <span data-ttu-id="2989f-107">Gerekirse Windows Masaüstü bileşen yalnızca desteklenen ve Windows üzerinde dahil.</span><span class="sxs-lookup"><span data-stu-id="2989f-107">To be clear, the Windows Desktop component is only supported and included on Windows.</span></span> <span data-ttu-id="2989f-108">Daha fazla bilgi için konudaki [Windows Masaüstü](#windows-desktop) aşağıda.</span><span class="sxs-lookup"><span data-stu-id="2989f-108">For more information, see the section [Windows desktop](#windows-desktop) below.</span></span>
+<span data-ttu-id="bccc1-104">Bu makalede, .NET Core 3.0 içinde yeni (Önizleme 5) Yenilikler açıklanır.</span><span class="sxs-lookup"><span data-stu-id="bccc1-104">This article describes what is new in .NET Core 3.0 (through preview 5).</span></span> <span data-ttu-id="bccc1-105">Büyük iyileştirmeler Windows Masaüstü uygulamaları (yalnızca Windows) için destek biridir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-105">One of the biggest enhancements is support for Windows desktop applications (Windows only).</span></span> <span data-ttu-id="bccc1-106">Windows Masaüstü .NET Core 3.0 SDK'sı bileşenini kullanarak, Windows Forms ve Windows Presentation Foundation (WPF), uygulamalarınızın bağlantı noktası.</span><span class="sxs-lookup"><span data-stu-id="bccc1-106">By using the .NET Core 3.0 SDK component Windows Desktop, you can port your Windows Forms and Windows Presentation Foundation (WPF) applications.</span></span> <span data-ttu-id="bccc1-107">Gerekirse Windows Masaüstü bileşen yalnızca desteklenen ve Windows üzerinde dahil.</span><span class="sxs-lookup"><span data-stu-id="bccc1-107">To be clear, the Windows Desktop component is only supported and included on Windows.</span></span> <span data-ttu-id="bccc1-108">Daha fazla bilgi için [Windows Masaüstü](#windows-desktop) bu makalenin devamındaki bölümü.</span><span class="sxs-lookup"><span data-stu-id="bccc1-108">For more information, see the [Windows desktop](#windows-desktop) section later in this article.</span></span>
 
-<span data-ttu-id="2989f-109">.NET core 3.0 için destek ekler C# 8.0.</span><span class="sxs-lookup"><span data-stu-id="2989f-109">.NET Core 3.0 adds support for C# 8.0.</span></span>
+<span data-ttu-id="bccc1-109">.NET core 3.0 için destek ekler C# 8.0.</span><span class="sxs-lookup"><span data-stu-id="bccc1-109">.NET Core 3.0 adds support for C# 8.0.</span></span> <span data-ttu-id="bccc1-110">OmniSharp uzantısıyla Visual Studio 2019 güncelleştirme 1 Preview veya VSCode en son sürümünü kullanmanız önerilir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-110">It's highly recommended that you use the latest release of Visual Studio 2019 Update 1 Preview or VSCode with the OmniSharp extension.</span></span>
 
-<span data-ttu-id="2989f-110">[İndirin ve .NET Core 3.0 Önizleme 2 ile çalışmaya başlama](https://aka.ms/netcore3download) şu anda Windows, Mac ve Linux üzerinde.</span><span class="sxs-lookup"><span data-stu-id="2989f-110">[Download and get started with .NET Core 3.0 Preview 2](https://aka.ms/netcore3download) right now on Windows, Mac and Linux.</span></span> <span data-ttu-id="2989f-111">Yayın içinde tüm ayrıntılarını görebilirsiniz [.NET Core 3.0 Preview 2 sürüm notları](https://aka.ms/netcore3releasenotes).</span><span class="sxs-lookup"><span data-stu-id="2989f-111">You can see complete details of the release in the [.NET Core 3.0 Preview 2 release notes](https://aka.ms/netcore3releasenotes).</span></span>
+<span data-ttu-id="bccc1-111">[İndirin ve .NET Core 3.0 Preview 5 ile çalışmaya başlama](https://aka.ms/netcore3download) şu anda Windows, Mac ve Linux üzerinde.</span><span class="sxs-lookup"><span data-stu-id="bccc1-111">[Download and get started with .NET Core 3.0 Preview 5](https://aka.ms/netcore3download) right now on Windows, Mac, and Linux.</span></span>
 
-<span data-ttu-id="2989f-112">Her sürümü ile yayımlanmış olan hakkında daha fazla bilgi için aşağıdaki duyuruları bakın:</span><span class="sxs-lookup"><span data-stu-id="2989f-112">For more information about what was released with each version, see the following announcements:</span></span>
+<span data-ttu-id="bccc1-112">Her önizleme sürümü hakkında daha fazla bilgi için aşağıdaki duyuruları bakın:</span><span class="sxs-lookup"><span data-stu-id="bccc1-112">For more information about each preview release, see the following announcements:</span></span>
 
-- [<span data-ttu-id="2989f-113">.NET core 3.0 Önizleme 1 Duyurusu</span><span class="sxs-lookup"><span data-stu-id="2989f-113">.NET Core 3.0 Preview 1 announcement</span></span>](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
-- [<span data-ttu-id="2989f-114">.NET core 3.0 Önizleme 2 Duyurusu</span><span class="sxs-lookup"><span data-stu-id="2989f-114">.NET Core 3.0 Preview 2 announcement</span></span>](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
+- [<span data-ttu-id="bccc1-113">.NET core 3.0 Preview 5 Duyurusu</span><span class="sxs-lookup"><span data-stu-id="bccc1-113">.NET Core 3.0 Preview 5 announcement</span></span>](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
+- [<span data-ttu-id="bccc1-114">.NET core 3.0 Önizleme 4 Duyurusu</span><span class="sxs-lookup"><span data-stu-id="bccc1-114">.NET Core 3.0 Preview 4 announcement</span></span>](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
+- [<span data-ttu-id="bccc1-115">.NET core 3.0 Preview 3 Duyurusu</span><span class="sxs-lookup"><span data-stu-id="bccc1-115">.NET Core 3.0 Preview 3 announcement</span></span>](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-3/)
+- [<span data-ttu-id="bccc1-116">.NET core 3.0 Önizleme 2 Duyurusu</span><span class="sxs-lookup"><span data-stu-id="bccc1-116">.NET Core 3.0 Preview 2 announcement</span></span>](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
+- [<span data-ttu-id="bccc1-117">.NET core 3.0 Önizleme 1 Duyurusu</span><span class="sxs-lookup"><span data-stu-id="bccc1-117">.NET Core 3.0 Preview 1 announcement</span></span>](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
 
-## <a name="c-8"></a><span data-ttu-id="2989f-115">C# 8</span><span class="sxs-lookup"><span data-stu-id="2989f-115">C# 8</span></span>
+## <a name="net-core-sdk-windows-installer"></a><span data-ttu-id="bccc1-118">.NET core SDK'sı, Windows Yükleyicisi</span><span class="sxs-lookup"><span data-stu-id="bccc1-118">.NET Core SDK Windows Installer</span></span>
 
-<span data-ttu-id="2989f-116">.NET core 3.0 destekleyen C# 8 ve .NET Core 3.0 Önizleme 2'den itibaren bu yeni özellikleri destekler.</span><span class="sxs-lookup"><span data-stu-id="2989f-116">.NET Core 3.0 supports C# 8, and as of .NET Core 3.0 Preview 2, supports these new features.</span></span> <span data-ttu-id="2989f-117">Hakkında daha fazla bilgi için C# 8.0 özellikler, aşağıdaki blog gönderilerine bakın:</span><span class="sxs-lookup"><span data-stu-id="2989f-117">For more information about C# 8.0 features, see the following blog posts:</span></span>
+<span data-ttu-id="bccc1-119">MSI yükleyicisini Windows için .NET Core 3. 0'ile başlayan değişti.</span><span class="sxs-lookup"><span data-stu-id="bccc1-119">The MSI installer for Windows has changed starting with .NET Core 3.0.</span></span> <span data-ttu-id="bccc1-120">SDK'sı yükleyicileri artık yerinde SDK bant dışı yayınlar yükseltir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-120">The SDK installers will now upgrade SDK feature-band releases in place.</span></span> <span data-ttu-id="bccc1-121">Özellik bantları tanımlanmış *yüzlerce* içindeki gruplara *düzeltme eki* sürüm numarasının bölümü.</span><span class="sxs-lookup"><span data-stu-id="bccc1-121">Feature bands are defined in the *hundreds* groups in the *patch* section of the version number.</span></span> <span data-ttu-id="bccc1-122">Örneğin, **3.0. \* 101**\* ve **3.0. \* 201**\* sırasında iki farklı özellik bantları sürümlerinde olan **3.0. \* 101**\* ve **3.0. \* 199**\* bulunan aynı özellik bant.</span><span class="sxs-lookup"><span data-stu-id="bccc1-122">For example, **3.0.\*101**\* and **3.0.\*201**\* are versions in two different feature bands while **3.0.\*101**\* and **3.0.\*199**\* are in the same feature band.</span></span> <span data-ttu-id="bccc1-123">Ve ne zaman .NET Core SDK'sı **3.0. \* 101**\* olan .NET Core SDK'sı yüklü **3.0. \* 100**\* varsa makineden kaldırılacak.</span><span class="sxs-lookup"><span data-stu-id="bccc1-123">And, when .NET Core SDK **3.0.\*101**\* is installed, .NET Core SDK **3.0.\*100**\* will be removed from the machine if it exists.</span></span> <span data-ttu-id="bccc1-124">.NET Core SDK'sı **3.0. \* 200**\* aynı makinede, .NET Core SDK'sı yüklü **3.0. \* 101**\* kaldırılmaz.</span><span class="sxs-lookup"><span data-stu-id="bccc1-124">When .NET Core SDK **3.0.\*200**\* is installed on the same machine, .NET Core SDK **3.0.\*101**\* won't be removed.</span></span>
 
-- [<span data-ttu-id="2989f-118">Desenler ile daha fazlasını yapın C# 8.0</span><span class="sxs-lookup"><span data-stu-id="2989f-118">Do more with patterns in C# 8.0</span></span>](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
-- [<span data-ttu-id="2989f-119">Ele C# 8.0 bir döngü için</span><span class="sxs-lookup"><span data-stu-id="2989f-119">Take C# 8.0 for a spin</span></span>](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
-- [<span data-ttu-id="2989f-120">Building C# 8.0</span><span class="sxs-lookup"><span data-stu-id="2989f-120">Building C# 8.0</span></span>](https://devblogs.microsoft.com/dotnet/building-c-8-0/)
+<span data-ttu-id="bccc1-125">Sürüm oluşturma hakkında daha fazla bilgi için bkz. [nasıl .NET Core tutulan genel bakış](../versions/index.md).</span><span class="sxs-lookup"><span data-stu-id="bccc1-125">For more information about versioning, see [Overview of how .NET Core is versioned](../versions/index.md).</span></span>
 
-### <a name="ranges-and-indices"></a><span data-ttu-id="2989f-121">Aralıkları ve dizinler</span><span class="sxs-lookup"><span data-stu-id="2989f-121">Ranges and indices</span></span>
+## <a name="c-80-preview"></a><span data-ttu-id="bccc1-126">C#8.0 Önizleme</span><span class="sxs-lookup"><span data-stu-id="bccc1-126">C# 8.0 preview</span></span>
 
-<span data-ttu-id="2989f-122">Yeni `Index` türü, dizin oluşturma işlemi için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="2989f-122">The new `Index` type can be used for indexing.</span></span> <span data-ttu-id="2989f-123">Birinden oluşturabileceğiniz bir `int` baştan ya da öneki sayar `^` işleci (C#) sonundan sayar:</span><span class="sxs-lookup"><span data-stu-id="2989f-123">You can create one from an `int` that counts from the beginning, or with a prefix `^` operator (C#) that counts from the end:</span></span>
+<span data-ttu-id="bccc1-127">.NET core 3.0 destekleyen C# 8 önizleme.</span><span class="sxs-lookup"><span data-stu-id="bccc1-127">.NET Core 3.0 supports C# 8 preview.</span></span> <span data-ttu-id="bccc1-128">Hakkında daha fazla bilgi için C# 8.0 özellikler bkz [yenilikler C# 8.0](../../csharp/whats-new/csharp-8.md).</span><span class="sxs-lookup"><span data-stu-id="bccc1-128">For more information about C# 8.0 features, see [What's new in C# 8.0](../../csharp/whats-new/csharp-8.md).</span></span>
+
+## <a name="net-standard-21"></a><span data-ttu-id="bccc1-129">.NET standard 2.1</span><span class="sxs-lookup"><span data-stu-id="bccc1-129">.NET Standard 2.1</span></span>
+
+<span data-ttu-id="bccc1-130">.NET Core 3.0 desteklemesine rağmen **.NET standart 2.1**, varsayılan `dotnet new classlib` şablon hedefleyen bir proje oluşturur **.NET Standard 2.0**.</span><span class="sxs-lookup"><span data-stu-id="bccc1-130">Even though .NET Core 3.0 supports **.NET Standard 2.1**, the default `dotnet new classlib` template generates a project that targets **.NET Standard 2.0**.</span></span> <span data-ttu-id="bccc1-131">Hedef **.NET standart 2.1**, proje dosyanızı düzenleyin ve değiştirin `TargetFramework` özelliğini `netstandard2.1`:</span><span class="sxs-lookup"><span data-stu-id="bccc1-131">To target **.NET Standard 2.1**, edit your project file and change the `TargetFramework` property to `netstandard2.1`:</span></span>
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+ 
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+ 
+</Project>
+```
+
+<span data-ttu-id="bccc1-132">Visual Studio kullanıyorsanız, Visual Studio 2017'yi desteklemediğinden Visual Studio 2019 gereken **.NET standart 2.1** veya **.NET Core 3.0**.</span><span class="sxs-lookup"><span data-stu-id="bccc1-132">If you're using Visual Studio, you need Visual Studio 2019, as Visual Studio 2017 doesn't support **.NET Standard 2.1** or **.NET Core 3.0**.</span></span> <span data-ttu-id="bccc1-133">Kullanmanızı öneririz [Visual Studio 2019 güncelleştirme 1 Preview](https://visualstudio.microsoft.com/vs/preview/).</span><span class="sxs-lookup"><span data-stu-id="bccc1-133">We highly recommend that you use [Visual Studio 2019 Update 1 Preview](https://visualstudio.microsoft.com/vs/preview/).</span></span>
+
+## <a name="improved-net-core-version-apis"></a><span data-ttu-id="bccc1-134">Geliştirilmiş .NET Core sürümü API'leri</span><span class="sxs-lookup"><span data-stu-id="bccc1-134">Improved .NET Core Version APIs</span></span>
+
+<span data-ttu-id="bccc1-135">.NET Core 3.0 API'leri bilgileri dönüş artık .NET Core ile sağlanan sürüm başlangıç beklediğiniz.</span><span class="sxs-lookup"><span data-stu-id="bccc1-135">Starting with .NET Core 3.0, the version APIs provided with .NET Core now return the information you expect.</span></span> <span data-ttu-id="bccc1-136">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="bccc1-136">For example:</span></span>
+
+```csharp
+System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");
+
+// Old result
+//   Environment.Version: 4.0.30319.42000
+//
+// New result
+//   Environment.Version: 3.0.0
+```
+
+```csharp
+System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription}");
+
+// Old result
+//   RuntimeInformation.FrameworkDescription: .NET Core 4.6.27415.71
+//
+// New result
+//   RuntimeInformation.FrameworkDescription: .NET Core 3.0.0-preview4-27615-11
+```
+
+> [!WARNING]
+> <span data-ttu-id="bccc1-137">Yeni değişiklik.</span><span class="sxs-lookup"><span data-stu-id="bccc1-137">Breaking change.</span></span> <span data-ttu-id="bccc1-138">Sürüm oluşturma düzeni değiştirdiği için teknik bir değişiklik budur.</span><span class="sxs-lookup"><span data-stu-id="bccc1-138">This is technically a breaking change because the versioning scheme has changed.</span></span>
+
+## <a name="net-platform-dependent-intrinsics"></a><span data-ttu-id="bccc1-139">.NET platform bağımlı iç bilgileri</span><span class="sxs-lookup"><span data-stu-id="bccc1-139">.NET Platform-Dependent Intrinsics</span></span>
+
+<span data-ttu-id="bccc1-140">Gibi belirli performans odaklı CPU yönergeleri için erişime izin API'ler eklenmiştir **SIMD** veya **Bit işleme yönerge** ayarlar.</span><span class="sxs-lookup"><span data-stu-id="bccc1-140">APIs have been added that allow access to certain perf-oriented CPU instructions, such as the **SIMD** or **Bit Manipulation instruction** sets.</span></span> <span data-ttu-id="bccc1-141">Bu yönergeler, verileri verimli bir şekilde paralel işleme gibi bazı senaryolarda, önemli performans geliştirmeleri elde etmeye yardımcı olabilir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-141">These instructions can help achieve significant performance improvements in certain scenarios, such as processing data efficiently in parallel.</span></span> 
+
+<span data-ttu-id="bccc1-142">Uygun olan yerlerde, performansı artırmak için bu yönergeleri kullanarak .NET kitaplıklarına başlamıştır.</span><span class="sxs-lookup"><span data-stu-id="bccc1-142">Where appropriate, the .NET libraries have begun using these instructions to improve performance.</span></span>
+
+<span data-ttu-id="bccc1-143">Daha fazla bilgi için [.NET platformu bağımlı yapı içleri](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md).</span><span class="sxs-lookup"><span data-stu-id="bccc1-143">For more information, see [.NET Platform Dependent Intrinsics](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md).</span></span>
+
+## <a name="default-executables"></a><span data-ttu-id="bccc1-144">Varsayılan yürütülebilir dosyalar</span><span class="sxs-lookup"><span data-stu-id="bccc1-144">Default executables</span></span>
+
+<span data-ttu-id="bccc1-145">.NET core şimdi yapılar [framework bağımlı yürütülebilir dosyaları](../deploying/index.md#framework-dependent-executables-fde) varsayılan olarak.</span><span class="sxs-lookup"><span data-stu-id="bccc1-145">.NET Core now builds [framework-dependent executables](../deploying/index.md#framework-dependent-executables-fde) by default.</span></span> <span data-ttu-id="bccc1-146">Bu davranış, .NET Core genel olarak yüklenmiş bir sürümünü kullanan uygulamalar için yeni bir özelliktir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-146">This behavior is new for applications that use a globally installed version of .NET Core.</span></span> <span data-ttu-id="bccc1-147">Daha önce yalnızca [müstakil dağıtımları](../deploying/index.md#self-contained-deployments-scd) yürütülebilir bir dosya oluşturur.</span><span class="sxs-lookup"><span data-stu-id="bccc1-147">Previously, only [self-contained deployments](../deploying/index.md#self-contained-deployments-scd) would produce an executable.</span></span>
+
+<span data-ttu-id="bccc1-148">Sırasında `dotnet build` veya `dotnet publish`, kullandığınız SDK platform ve ortam ile eşleşen bir yürütülebilir dosya oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="bccc1-148">During `dotnet build` or `dotnet publish`, an executable is created that matches the environment and platform of the SDK you're using.</span></span> <span data-ttu-id="bccc1-149">Diğer yerel yürütülebilir dosyalar gibi olduğu gibi bu yürütülebilir dosyaları ile aynı şey geçerli olacaktır:</span><span class="sxs-lookup"><span data-stu-id="bccc1-149">You can expect the same things with these executables as you would other native executables, such as:</span></span>
+
+* <span data-ttu-id="bccc1-150">Yürütülebilir dosya üzerine çift tıklayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="bccc1-150">You can double-click on the executable.</span></span>
+* <span data-ttu-id="bccc1-151">Doğrudan bir komut isteminden uygulama başlatma gibi `myapp.exe` Windows, şirket ve `./myapp` Linux ve Macos'ta.</span><span class="sxs-lookup"><span data-stu-id="bccc1-151">You can launch the application from a command prompt directly, such as `myapp.exe` on Windows, and `./myapp` on Linux and macOS.</span></span>
+
+## <a name="single-file-executables"></a><span data-ttu-id="bccc1-152">Tek Dosyalı yürütülebilir dosyalar</span><span class="sxs-lookup"><span data-stu-id="bccc1-152">Single-file executables</span></span>
+
+<span data-ttu-id="bccc1-153">`dotnet publish` Komutu, platforma özgü tek dosyalı yürütülebilir dosyanın içine uygulamanızı paketleme destekler.</span><span class="sxs-lookup"><span data-stu-id="bccc1-153">The `dotnet publish` command supports packaging your app into a platform-specific single-file executable.</span></span> <span data-ttu-id="bccc1-154">Yürütülebilir dosya, kendiliğinden ve uygulamanızı çalıştırmak için gereken tüm bağımlılıkları (yerel dahil) içerir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-154">The executable is self-extracting and contains all dependencies (including native) that are required to run your app.</span></span> <span data-ttu-id="bccc1-155">Uygulamayı ilk kez çalıştırdığınızda, uygulama üzerinde uygulama tabanlı bir dizine ayıklanır ad ve tanımlayıcı oluşturun.</span><span class="sxs-lookup"><span data-stu-id="bccc1-155">When the app is first run, the application is extracted to a directory based on the app name and build identifier.</span></span> <span data-ttu-id="bccc1-156">Uygulamayı yeniden çalıştırdığınızda başlangıç daha hızlıdır.</span><span class="sxs-lookup"><span data-stu-id="bccc1-156">Startup is faster when the application is run again.</span></span> <span data-ttu-id="bccc1-157">Uygulamanın yeni bir sürüm kullanılmadığı sürece kendisini ikinci kez ayıklamak gerekmez.</span><span class="sxs-lookup"><span data-stu-id="bccc1-157">The application doesn't need to extract itself a second time unless a new version was used.</span></span>
+
+<span data-ttu-id="bccc1-158">Tek dosyalı bir yürütülebilir dosya yayımlamayı ayarlamak `PublishSingleFile` projenizdeki veya komut satırı ile `dotnet publish` komutu:</span><span class="sxs-lookup"><span data-stu-id="bccc1-158">To publish a single-file executable, set the `PublishSingleFile` in your project or on the command line with the `dotnet publish` command:</span></span>
+
+```console
+dotnet publish -r win10-x64 /p:PublishSingleFile=true
+```
+
+<span data-ttu-id="bccc1-159">Tek dosya yayımlama hakkında daha fazla bilgi için bkz. [tek dosyalı bundler tasarım belge](https://github.com/dotnet/designs/blob/master/accepted/single-file/design.md).</span><span class="sxs-lookup"><span data-stu-id="bccc1-159">For more information about single-file publishing, see the [single-file bundler design document](https://github.com/dotnet/designs/blob/master/accepted/single-file/design.md).</span></span>
+
+## <a name="tiered-compilation"></a><span data-ttu-id="bccc1-160">Katmanlı derleme</span><span class="sxs-lookup"><span data-stu-id="bccc1-160">Tiered compilation</span></span>
+
+<span data-ttu-id="bccc1-161">[Katmanlı derleme](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) .NET Core 3.0 ile varsayılan olarak (TC) etkin.</span><span class="sxs-lookup"><span data-stu-id="bccc1-161">[Tiered compilation](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC) is on by default with .NET Core 3.0.</span></span> <span data-ttu-id="bccc1-162">Bu özellik daha Desenlerinizi daha iyi performans için tam zamanında (JIT) derleyici kullanmak çalışma zamanı sağlar.</span><span class="sxs-lookup"><span data-stu-id="bccc1-162">This feature enables the runtime to more adaptively use the Just-In-Time (JIT) compiler to get better performance.</span></span>
+
+<span data-ttu-id="bccc1-163">TC ana Avantajı (re-) jitting yöntemleriyle daha yavaş ancak-daha hızlı kod üretmek için ya da daha yüksek-kalite-ancak-yavaş kod üretmek için etkinleştirmektir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-163">The main benefit of TC is to enable (re-)jitting methods with slower-but-faster to produce code or higher-quality-but-slower to produce code.</span></span> <span data-ttu-id="bccc1-164">Bu, çeşitli aşamaları boyunca yürütmesinin kararlı bir duruma başlatmanın geçebileceği bir uygulamanın performansını artırmaya yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="bccc1-164">This helps increase performance of an application as it goes through various stages of execution, from startup through steady-state.</span></span> <span data-ttu-id="bccc1-165">Bu, burada her yöntem derlendiğinde TC olmayan yaklaşım ile karşılaştırır, kararlı durum için başlatma performansını güçlü eğilimi nedeniyle bir tek yolu (aynı yüksek kaliteli katmanı).</span><span class="sxs-lookup"><span data-stu-id="bccc1-165">This contrasts with the non-TC approach, where every method is compiled a single way (the same as the high-quality tier), which is biased to steady-state over startup performance.</span></span>
+
+<span data-ttu-id="bccc1-166">Hızlı JIT (katman 0 jıtted kodu) etkinleştirmek için proje dosyanızda bu ayarı kullanın:</span><span class="sxs-lookup"><span data-stu-id="bccc1-166">To enable Quick JIT (tier 0 jitted code), use this setting in your project file:</span></span>
+
+```xml
+<PropertyGroup>
+  <TieredCompilationQuickJit>true</TieredCompilationQuickJit>
+</PropertyGroup>
+```
+
+<span data-ttu-id="bccc1-167">TC tamamen devre dışı bırakmak için proje dosyanızda bu ayarı kullanın:</span><span class="sxs-lookup"><span data-stu-id="bccc1-167">To disable TC completely, use this setting in your project file:</span></span>
+
+```xml
+<TieredCompilation>false</TieredCompilation>
+```
+
+## <a name="build-copies-dependencies"></a><span data-ttu-id="bccc1-168">Derleme bağımlılıkları kopyalar.</span><span class="sxs-lookup"><span data-stu-id="bccc1-168">Build copies dependencies</span></span>
+
+<span data-ttu-id="bccc1-169">`dotnet build` Komutu artık kopyalar NuGet bağımlılıklarını uygulamanız için NuGet önbellekten için derleme çıktısı klasörü.</span><span class="sxs-lookup"><span data-stu-id="bccc1-169">The `dotnet build` command now copies NuGet dependencies for your application from the NuGet cache to the build output folder.</span></span> <span data-ttu-id="bccc1-170">Daha önce bağımlılıkları parçası olarak yalnızca kopyalanan `dotnet publish`.</span><span class="sxs-lookup"><span data-stu-id="bccc1-170">Previously, dependencies were only copied as part of `dotnet publish`.</span></span>
+
+<span data-ttu-id="bccc1-171">Yayımlama, yayınlama, bağlama ve razor sayfası hala gerektirir gibi bazı işlemler vardır.</span><span class="sxs-lookup"><span data-stu-id="bccc1-171">There are some operations, like linking and razor page publishing that will still require publishing.</span></span>
+
+## <a name="local-tools"></a><span data-ttu-id="bccc1-172">Yerel Araçlar</span><span class="sxs-lookup"><span data-stu-id="bccc1-172">Local tools</span></span>
+
+<span data-ttu-id="bccc1-173">.NET core 3.0 yerel araçlar sunar.</span><span class="sxs-lookup"><span data-stu-id="bccc1-173">.NET Core 3.0 introduces local tools.</span></span> <span data-ttu-id="bccc1-174">Yerel Araçlar benzer [genel Araçları](../tools/global-tools.md) ancak disk üzerindeki belirli bir konum ile ilişkilidir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-174">Local tools are similar to [global tools](../tools/global-tools.md) but are associated with a particular location on disk.</span></span> <span data-ttu-id="bccc1-175">Yerel araçları, küresel olarak kullanılabilir değildir ve NuGet paketleri olarak dağıtılır.</span><span class="sxs-lookup"><span data-stu-id="bccc1-175">Local tools aren't available globally and are distributed as NuGet packages.</span></span>
+
+> [!WARNING]
+> <span data-ttu-id="bccc1-176">Çalıştırma gibi .NET Core 3.0 Önizleme 1 ' yerel Araçlar çalıştıysanız `dotnet tool restore` veya `dotnet tool install`, yerel Araçlar önbellek klasörünü silin.</span><span class="sxs-lookup"><span data-stu-id="bccc1-176">If you tried local tools in .NET Core 3.0 Preview 1, such as running `dotnet tool restore` or `dotnet tool install`, delete the local tools cache folder.</span></span> <span data-ttu-id="bccc1-177">Aksi takdirde, yerel Araçlar üzerinde daha yeni bir sürüm çalışmaz.</span><span class="sxs-lookup"><span data-stu-id="bccc1-177">Otherwise, local tools won't work on any newer release.</span></span> <span data-ttu-id="bccc1-178">Bu klasör şu konumdadır:</span><span class="sxs-lookup"><span data-stu-id="bccc1-178">This folder is located at:</span></span>
+>
+> <span data-ttu-id="bccc1-179">MacOS, Linux: `rm -r $HOME/.dotnet/toolResolverCache`</span><span class="sxs-lookup"><span data-stu-id="bccc1-179">On macOS, Linux: `rm -r $HOME/.dotnet/toolResolverCache`</span></span>
+>
+> <span data-ttu-id="bccc1-180">Windows üzerinde: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`</span><span class="sxs-lookup"><span data-stu-id="bccc1-180">On Windows: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`</span></span>
+
+<span data-ttu-id="bccc1-181">Yerel Araçlar kullanan bir bildirim dosyası adına `dotnet-tools.json` geçerli dizininizde.</span><span class="sxs-lookup"><span data-stu-id="bccc1-181">Local tools rely on a manifest file name `dotnet-tools.json` in your current directory.</span></span> <span data-ttu-id="bccc1-182">Bu bildirim dosyası, bu klasörü ve altındaki kullanılabilir olması için Araçlar tanımlar.</span><span class="sxs-lookup"><span data-stu-id="bccc1-182">This manifest file defines the tools to be available at that folder and below.</span></span> <span data-ttu-id="bccc1-183">Bildirim dosyası ile kodunuzu çalışır herkes geri yükleme ve böylelikle aynı araçlarını kullanın emin olmak için kodunuzla dağıtabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="bccc1-183">You can distribute the manifest file with your code to ensure that anyone who works with your code can restore and use the same tools.</span></span>
+
+<span data-ttu-id="bccc1-184">Hem genel hem de yerel araçları için çalışma zamanı'nın uyumlu bir sürümü gereklidir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-184">For both global and local tools, a compatible version of the runtime is required.</span></span> <span data-ttu-id="bccc1-185">Birçok araç NuGet.org üzerinde şu anda .NET Core çalışma zamanı 2.1 hedefleyin.</span><span class="sxs-lookup"><span data-stu-id="bccc1-185">Many tools currently on NuGet.org target .NET Core Runtime 2.1.</span></span> <span data-ttu-id="bccc1-186">Bu araçlar genel veya yerel olarak yüklemek için yükleme yine [NET Core 2.1 çalışma zamanı](https://dotnet.microsoft.com/download/dotnet-core/2.1).</span><span class="sxs-lookup"><span data-stu-id="bccc1-186">To install these tools globally or locally, you would still need to install the [NET Core 2.1 Runtime](https://dotnet.microsoft.com/download/dotnet-core/2.1).</span></span>
+
+## <a name="major-version-roll-forward"></a><span data-ttu-id="bccc1-187">Ana sürüm ileri sarma</span><span class="sxs-lookup"><span data-stu-id="bccc1-187">Major-version Roll Forward</span></span>
+
+<span data-ttu-id="bccc1-188">.NET core 3.0, .NET Core için en son ana sürüm ileriye işlem gerçekleştirilebilmesi için uygulamanızı sağlayan bir Tercihli özellik sunmaktadır.</span><span class="sxs-lookup"><span data-stu-id="bccc1-188">.NET Core 3.0 introduces an opt-in feature that allows your app to roll forward to the latest major version of .NET Core.</span></span> <span data-ttu-id="bccc1-189">Ayrıca, yeni bir ayar ileri sarma uygulamanıza nasıl uygulanacağını denetlemek için eklendi.</span><span class="sxs-lookup"><span data-stu-id="bccc1-189">Additionally, a new setting has been added to control how roll forward is applied to your app.</span></span> <span data-ttu-id="bccc1-190">Bunu aşağıdaki yöntemlerle yapılandırılabilir:</span><span class="sxs-lookup"><span data-stu-id="bccc1-190">This can be configured in the following ways:</span></span>
+
+- <span data-ttu-id="bccc1-191">Proje dosyası özelliği: `RollForward`</span><span class="sxs-lookup"><span data-stu-id="bccc1-191">Project file property: `RollForward`</span></span>
+- <span data-ttu-id="bccc1-192">Çalışma zamanı yapılandırma dosyası özelliği: `rollForward`</span><span class="sxs-lookup"><span data-stu-id="bccc1-192">Runtime configuration file property: `rollForward`</span></span>
+- <span data-ttu-id="bccc1-193">Ortam değişkeni: `DOTNET_ROLL_FORWARD`</span><span class="sxs-lookup"><span data-stu-id="bccc1-193">Environment variable: `DOTNET_ROLL_FORWARD`</span></span>
+- <span data-ttu-id="bccc1-194">Komut satırı bağımsız değişkeni: `--roll-forward`</span><span class="sxs-lookup"><span data-stu-id="bccc1-194">Command-line argument: `--roll-forward`</span></span>
+
+<span data-ttu-id="bccc1-195">Aşağıdaki değerlerden biri belirtilmelidir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-195">One of the following values must be specified.</span></span> <span data-ttu-id="bccc1-196">Ayar atlanırsa **küçük** varsayılandır.</span><span class="sxs-lookup"><span data-stu-id="bccc1-196">If the setting is omitted, **Minor** is the default.</span></span>
+
+- <span data-ttu-id="bccc1-197">**LatestPatch**\\</span><span class="sxs-lookup"><span data-stu-id="bccc1-197">**LatestPatch**\\</span></span>
+<span data-ttu-id="bccc1-198">İleriye işlem gerçekleştirilebilmesi için en yüksek düzeltme eki sürümü.</span><span class="sxs-lookup"><span data-stu-id="bccc1-198">Roll forward to the highest patch version.</span></span> <span data-ttu-id="bccc1-199">Bu, alt sürüm ileri sarma devre dışı bırakır.</span><span class="sxs-lookup"><span data-stu-id="bccc1-199">This disables minor version roll forward.</span></span>
+- <span data-ttu-id="bccc1-200">**Küçük**\\</span><span class="sxs-lookup"><span data-stu-id="bccc1-200">**Minor**\\</span></span>
+<span data-ttu-id="bccc1-201">En düşük daha alt sürümü için İleri istenen alt sürümü eksik sarabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="bccc1-201">Roll forward to the lowest higher minor version, if requested minor version is missing.</span></span> <span data-ttu-id="bccc1-202">İstenen alt sürümü varsa, ardından **LatestPatch** İlkesi kullanılır.</span><span class="sxs-lookup"><span data-stu-id="bccc1-202">If the requested minor version is present, then the **LatestPatch** policy is used.</span></span>
+- <span data-ttu-id="bccc1-203">**Büyük**\\</span><span class="sxs-lookup"><span data-stu-id="bccc1-203">**Major**\\</span></span>
+<span data-ttu-id="bccc1-204">İstenen sürümle eksik olması durumunda yüksek ana sürüm en düşük ve en düşük alt sürüm İleri sarmanın.</span><span class="sxs-lookup"><span data-stu-id="bccc1-204">Roll forward to lowest higher major version, and lowest minor version, if requested major version is missing.</span></span> <span data-ttu-id="bccc1-205">İstenen ana sürüm varsa, ardından **küçük** İlkesi kullanılır.</span><span class="sxs-lookup"><span data-stu-id="bccc1-205">If the requested major version is present, then the **Minor** policy is used.</span></span>
+- <span data-ttu-id="bccc1-206">**LatestMinor**\\</span><span class="sxs-lookup"><span data-stu-id="bccc1-206">**LatestMinor**\\</span></span>
+<span data-ttu-id="bccc1-207">İstenen alt sürümü mevcut olsa bile, İleri en yüksek ikincil sürümüne geri almak.</span><span class="sxs-lookup"><span data-stu-id="bccc1-207">Roll forward to highest minor version, even if requested minor version is present.</span></span> <span data-ttu-id="bccc1-208">Bileşeni için barındırma senaryolarında yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-208">Intended for component hosting scenarios.</span></span>
+- <span data-ttu-id="bccc1-209">**latestMajor**\\</span><span class="sxs-lookup"><span data-stu-id="bccc1-209">**LatestMajor**\\</span></span>
+<span data-ttu-id="bccc1-210">İstenen ana olsa bile iletmek için en büyük ve en yüksek ikincil sürüm döndürün.</span><span class="sxs-lookup"><span data-stu-id="bccc1-210">Roll forward to highest major and highest minor version, even if requested major is present.</span></span> <span data-ttu-id="bccc1-211">Bileşeni için barındırma senaryolarında yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-211">Intended for component hosting scenarios.</span></span>
+- <span data-ttu-id="bccc1-212">**Devre dışı bırak**\\</span><span class="sxs-lookup"><span data-stu-id="bccc1-212">**Disable**\\</span></span>
+<span data-ttu-id="bccc1-213">İleri sarmanın yok.</span><span class="sxs-lookup"><span data-stu-id="bccc1-213">Don't roll forward.</span></span> <span data-ttu-id="bccc1-214">Yalnızca belirtilen sürüme bağlayın.</span><span class="sxs-lookup"><span data-stu-id="bccc1-214">Only bind to specified version.</span></span> <span data-ttu-id="bccc1-215">Bu ilke, en son düzeltme eklerini İleri sarmanın özelliği devre dışı bırakır çünkü genel kullanım için önerilmez.</span><span class="sxs-lookup"><span data-stu-id="bccc1-215">This policy isn't recommended for general use because it disables the ability to roll forward to the latest patches.</span></span> <span data-ttu-id="bccc1-216">Bu değer, yalnızca test etmek için önerilir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-216">This value is only recommended for testing.</span></span>
+
+<span data-ttu-id="bccc1-217">Yanında **devre dışı** ayarlama, tüm ayarlarını yüksek kullanılabilir bir düzeltme eki sürümü kullanır.</span><span class="sxs-lookup"><span data-stu-id="bccc1-217">Besides the **Disable** setting, all settings will use the highest available patch version.</span></span>
+
+## <a name="windows-desktop"></a><span data-ttu-id="bccc1-218">Windows masaüstü</span><span class="sxs-lookup"><span data-stu-id="bccc1-218">Windows desktop</span></span>
+
+<span data-ttu-id="bccc1-219">.NET core 3.0, Windows Presentation Foundation (WPF) ve Windows Forms kullanılarak Windows Masaüstü uygulamaları destekler.</span><span class="sxs-lookup"><span data-stu-id="bccc1-219">.NET Core 3.0 supports Windows desktop applications using Windows Presentation Foundation (WPF) and Windows Forms.</span></span> <span data-ttu-id="bccc1-220">Bu çerçeveler ile modern denetimleri ve Windows kullanıcı Arabirimi XAML kitaplığından (WinUI) Fluent stil kullanarak da destekler [XAML Adaları](/windows/uwp/xaml-platform/xaml-host-controls).</span><span class="sxs-lookup"><span data-stu-id="bccc1-220">These frameworks also support using modern controls and Fluent styling from the Windows UI XAML Library (WinUI) via [XAML islands](/windows/uwp/xaml-platform/xaml-host-controls).</span></span>
+
+<span data-ttu-id="bccc1-221">Windows Masaüstü bileşen Windows parçasıdır .NET Core 3.0 SDK.</span><span class="sxs-lookup"><span data-stu-id="bccc1-221">The Windows Desktop component is part of the Windows .NET Core 3.0 SDK.</span></span>
+
+<span data-ttu-id="bccc1-222">Şunlarla birlikte yeni bir Windows Forms ve WPF uygulaması oluşturabilirsiniz `dotnet` komutları:</span><span class="sxs-lookup"><span data-stu-id="bccc1-222">You can create a new WPF or Windows Forms app with the following `dotnet` commands:</span></span>
+
+```console
+dotnet new wpf
+dotnet new winforms
+```
+
+<span data-ttu-id="bccc1-223">Visual Studio 2019 ekler **yeni proje** .NET Core 3.0, Windows Forms ve WPF şablonları.</span><span class="sxs-lookup"><span data-stu-id="bccc1-223">Visual Studio 2019 adds **New Project** templates for .NET Core 3.0 Windows Forms and WPF.</span></span>
+
+<span data-ttu-id="bccc1-224">Mevcut bir .NET Framework uygulaması bağlantı noktası hakkında daha fazla bilgi için bkz. [bağlantı noktası WPF projeleri](../porting/wpf.md) ve [bağlantı noktası Windows Forms projeleri](../porting/winforms.md).</span><span class="sxs-lookup"><span data-stu-id="bccc1-224">For more information about how to port an existing .NET Framework application, see [Port WPF projects](../porting/wpf.md) and [Port Windows Forms projects](../porting/winforms.md).</span></span>
+
+## <a name="com-callable-components---windows-desktop"></a><span data-ttu-id="bccc1-225">COM çağrılabilir bileşenleri - Windows Masaüstü</span><span class="sxs-lookup"><span data-stu-id="bccc1-225">COM-callable components - Windows Desktop</span></span>
+
+<span data-ttu-id="bccc1-226">Windows üzerinde COM-yönetilen çağrılabilir bileşenler oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="bccc1-226">On Windows, you can now create COM-callable managed components.</span></span> <span data-ttu-id="bccc1-227">Bu özellik, .NET Core ile COM Eklentisi modelleri kullanın ve .NET Framework ile eşlik sağlamak önemlidir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-227">This capability is critical to use .NET Core with COM add-in models and also to provide parity with .NET Framework.</span></span>
+
+<span data-ttu-id="bccc1-228">.NET Framework aksine burada *mscoree.dll* kullanılan COM sunucusu olarak yerel Başlatıcısı DLL'ye .NET Core ekleyeceksiniz *bin* , COM bileşeni oluşturma sırasında dizin.</span><span class="sxs-lookup"><span data-stu-id="bccc1-228">Unlike .NET Framework where the *mscoree.dll* was used as the COM server, .NET Core will add a native launcher dll to the *bin* directory when you build your COM component.</span></span>
+
+<span data-ttu-id="bccc1-229">Bir COM bileşeni oluşturma ve bunu kullanma örneği için bkz: [COM tanıtım](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo).</span><span class="sxs-lookup"><span data-stu-id="bccc1-229">For an example of how to create a COM component and consume it, see the [COM Demo](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo).</span></span>
+
+## <a name="msix-deployment---windows-desktop"></a><span data-ttu-id="bccc1-230">MSIX dağıtım - Windows Masaüstü</span><span class="sxs-lookup"><span data-stu-id="bccc1-230">MSIX Deployment - Windows Desktop</span></span>
+
+<span data-ttu-id="bccc1-231">[MSIX](https://docs.microsoft.com/windows/msix/) yeni bir Windows uygulama paketi biçimi.</span><span class="sxs-lookup"><span data-stu-id="bccc1-231">[MSIX](https://docs.microsoft.com/windows/msix/) is a new Windows application package format.</span></span> <span data-ttu-id="bccc1-232">.NET Core 3.0 Windows 10 Masaüstü uygulamaları dağıtmak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-232">It can be used to deploy .NET Core 3.0 desktop applications to Windows 10.</span></span>
+
+<span data-ttu-id="bccc1-233">[Windows uygulaması paketleme projesi](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), Visual Studio 2019 bulunan MSIX paketlerle oluşturmanıza olanak tanır [müstakil](../deploying/index.md#self-contained-deployments-scd) .NET Core uygulamaları.</span><span class="sxs-lookup"><span data-stu-id="bccc1-233">The [Windows Application Packaging Project](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), available in Visual Studio 2019, allows you to create MSIX packages with [self-contained](../deploying/index.md#self-contained-deployments-scd) .NET Core applications.</span></span>
+
+<span data-ttu-id="bccc1-234">.NET Core proje dosyası içinde desteklenen çalışma zamanları belirtmelisiniz `<RuntimeIdentifiers>` özelliği:</span><span class="sxs-lookup"><span data-stu-id="bccc1-234">The .NET Core project file must specify the supported runtimes in the `<RuntimeIdentifiers>` property:</span></span>
+
+```xml
+<RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
+```
+
+## <a name="winforms-highdpi"></a><span data-ttu-id="bccc1-235">WinForms HighDPI</span><span class="sxs-lookup"><span data-stu-id="bccc1-235">WinForms HighDPI</span></span>
+
+<span data-ttu-id="bccc1-236">.NET core Windows Forms uygulamaları, yüksek DPI moduyla ayarlayabilirsiniz <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="bccc1-236">.NET Core Windows Forms applications can set High DPI mode with <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType>.</span></span> <span data-ttu-id="bccc1-237">`SetHighDpiMode` Yöntemini ayarlar karşılık gelen yüksek DPI modu ayarı gibi diğer yollarla ayarlanmadığı sürece `App.Manifest` veya P/Invoke önce `Application.Run`.</span><span class="sxs-lookup"><span data-stu-id="bccc1-237">The `SetHighDpiMode` method sets the corresponding High DPI mode unless the setting has been set by other means like `App.Manifest` or P/Invoke before `Application.Run`.</span></span>
+
+<span data-ttu-id="bccc1-238">Olası `highDpiMode` değerler olarak ifade edilen <xref:System.Windows.Forms.HighDpiMode?displayProperty=nameWithType> enum şunlardır:</span><span class="sxs-lookup"><span data-stu-id="bccc1-238">The possible `highDpiMode` values, as expressed by the <xref:System.Windows.Forms.HighDpiMode?displayProperty=nameWithType> enum are:</span></span>
+
+* `DpiUnaware`
+* `SystemAware`
+* `PerMonitor`
+* `PerMonitorV2`
+* `DpiUnawareGdiScaled`
+
+<span data-ttu-id="bccc1-239">Yüksek DPI modları hakkında daha fazla bilgi için bkz. [Windows üzerinde yüksek DPI Masaüstü uygulama geliştirme](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows).</span><span class="sxs-lookup"><span data-stu-id="bccc1-239">For more information about High DPI modes, see [High DPI Desktop Application Development on Windows](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows).</span></span>
+
+### <a name="ranges-and-indices"></a><span data-ttu-id="bccc1-240">Aralıkları ve dizinler</span><span class="sxs-lookup"><span data-stu-id="bccc1-240">Ranges and indices</span></span>
+
+<span data-ttu-id="bccc1-241">Yeni <xref:System.Index?displayProperty=nameWithType> türü, dizin oluşturma işlemi için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-241">The new <xref:System.Index?displayProperty=nameWithType> type can be used for indexing.</span></span> <span data-ttu-id="bccc1-242">Birinden oluşturabileceğiniz bir `int` baştan ya da öneki sayar `^` işleci (C#) sonundan sayar:</span><span class="sxs-lookup"><span data-stu-id="bccc1-242">You can create one from an `int` that counts from the beginning, or with a prefix `^` operator (C#) that counts from the end:</span></span>
 
 ```csharp
 Index i1 = 3;  // number 3 from beginning
@@ -46,755 +241,220 @@ int[] a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 Console.WriteLine($"{a[i1]}, {a[i2]}"); // "3, 6"
 ```
 
-<span data-ttu-id="2989f-124">Ayrıca bir `Range` oluşan iki tür `Index` bir başlangıç ve bitiş için bir değer ve ile yazılmış bir `x..y` aralık ifade (C#).</span><span class="sxs-lookup"><span data-stu-id="2989f-124">There is also a `Range` type, which consists of two `Index` values, one for the start and one for the end, and can be written with a `x..y` range expression (C#).</span></span> <span data-ttu-id="2989f-125">Ardından ile dizinleyebilirsiniz bir `Range` dilim oluşturmak için:</span><span class="sxs-lookup"><span data-stu-id="2989f-125">You can then index with a `Range` in order to produce a slice:</span></span>
+<span data-ttu-id="bccc1-243">Ayrıca <xref:System.Range?displayProperty=nameWithType> oluşan iki tür `Index` bir başlangıç ve bitiş için bir değer ve ile yazılmış bir `x..y` aralık ifade (C#).</span><span class="sxs-lookup"><span data-stu-id="bccc1-243">There's also the <xref:System.Range?displayProperty=nameWithType> type, which consists of two `Index` values, one for the start and one for the end, and can be written with a `x..y` range expression (C#).</span></span> <span data-ttu-id="bccc1-244">Ardından ile dizinleyebilirsiniz bir `Range`, dilim oluşturur:</span><span class="sxs-lookup"><span data-stu-id="bccc1-244">You can then index with a `Range`, which produces a slice:</span></span>
 
 ```csharp
 var slice = a[i1..i2]; // { 3, 4, 5 }
 ```
 
-### <a name="async-streams"></a><span data-ttu-id="2989f-126">Zaman uyumsuz akışlar</span><span class="sxs-lookup"><span data-stu-id="2989f-126">Async streams</span></span>
+<span data-ttu-id="bccc1-245">Daha fazla bilgi için [aralıkları ve dizinlerini öğretici](../../csharp/tutorials/ranges-indexes.md).</span><span class="sxs-lookup"><span data-stu-id="bccc1-245">For more information, see the [ranges and indices tutorial](../../csharp/tutorials/ranges-indexes.md).</span></span>
 
-<span data-ttu-id="2989f-127">`IAsyncEnumerable<T>` Türüdür, yeni bir zaman uyumsuz sürümü `IEnumerable<T>`.</span><span class="sxs-lookup"><span data-stu-id="2989f-127">The `IAsyncEnumerable<T>` type is a new asynchronous version of `IEnumerable<T>`.</span></span> <span data-ttu-id="2989f-128">Dil sayesinde `await foreach` üzerinden `IAsyncEnumerable<T>` öğeleri kullanma ve `yield return` öğeleri oluşturmak için onlara.</span><span class="sxs-lookup"><span data-stu-id="2989f-128">The language lets you `await foreach` over `IAsyncEnumerable<T>` to consume their elements, and use `yield return` to them to produce elements.</span></span>
+### <a name="async-streams"></a><span data-ttu-id="bccc1-246">Zaman uyumsuz akışlar</span><span class="sxs-lookup"><span data-stu-id="bccc1-246">Async streams</span></span>
 
-<span data-ttu-id="2989f-129">Aşağıdaki örnek, hem üretim hem de zaman uyumsuz akışlar kullanımını gösterir.</span><span class="sxs-lookup"><span data-stu-id="2989f-129">The following example demonstrates both production and consumption of async streams.</span></span> <span data-ttu-id="2989f-130">`foreach` Deyimi, async ve kendisini kullanan `yield return` arayanlar için zaman uyumsuz bir akış oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="2989f-130">The `foreach` statement is async and itself uses `yield return` to produce an async stream for callers.</span></span> <span data-ttu-id="2989f-131">Bu düzen (kullanarak `yield return`) zaman uyumsuz akışlar oluşturmayı için önerilen modelidir.</span><span class="sxs-lookup"><span data-stu-id="2989f-131">This pattern (using `yield return`) is the recommended model for producing async streams.</span></span>
+<span data-ttu-id="bccc1-247"><xref:System.Collections.Generic.IAsyncEnumerable%601> Türüdür, yeni bir zaman uyumsuz sürümü <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="bccc1-247">The <xref:System.Collections.Generic.IAsyncEnumerable%601> type is a new asynchronous version of <xref:System.Collections.Generic.IEnumerable%601>.</span></span> <span data-ttu-id="bccc1-248">Dil sayesinde `await foreach` üzerinden `IAsyncEnumerable<T>` öğeleri kullanma ve `yield return` öğeleri oluşturmak için onlara.</span><span class="sxs-lookup"><span data-stu-id="bccc1-248">The language lets you `await foreach` over `IAsyncEnumerable<T>` to consume their elements, and use `yield return` to them to produce elements.</span></span>
+
+<span data-ttu-id="bccc1-249">Aşağıdaki örnek, hem üretim hem de zaman uyumsuz akışlar kullanımını gösterir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-249">The following example demonstrates both production and consumption of async streams.</span></span> <span data-ttu-id="bccc1-250">`foreach` Deyimi, async ve kendisini kullanan `yield return` arayanlar için zaman uyumsuz bir akış oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="bccc1-250">The `foreach` statement is async and itself uses `yield return` to produce an async stream for callers.</span></span> <span data-ttu-id="bccc1-251">Bu düzen (kullanarak `yield return`) zaman uyumsuz akışlar oluşturmayı için önerilen modelidir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-251">This pattern (using `yield return`) is the recommended model for producing async streams.</span></span>
 
 ```csharp
 async IAsyncEnumerable<int> GetBigResultsAsync()
 {
     await foreach (var result in GetResultsAsync())
     {
-        if (result > 20) yield return result;
+        if (result > 20) yield return result; 
     }
 }
 ```
 
-<span data-ttu-id="2989f-132">İmkanına yanı sıra `await foreach`, zaman uyumsuz yineleyiciler, örneğin, döndüren bir yineleyicinin oluşturabilirsiniz bir `IAsyncEnumerable/IAsyncEnumerator` her ikisini yapabilirsiniz `await` ve `yield` içinde.</span><span class="sxs-lookup"><span data-stu-id="2989f-132">In addition to being able to `await foreach`, you can also create async iterators, for example, an iterator that returns an `IAsyncEnumerable/IAsyncEnumerator` that you can both `await` and `yield` in.</span></span> <span data-ttu-id="2989f-133">Çıkarılması gereken nesneler için kullanabileceğiniz `IAsyncDisposable`, çeşitli BCL türleri uygulayan, gibi `Stream` ve `Timer`.</span><span class="sxs-lookup"><span data-stu-id="2989f-133">For objects that need to be disposed, you can use `IAsyncDisposable`, which various BCL types implement, such as `Stream` and `Timer`.</span></span>
+<span data-ttu-id="bccc1-252">İmkanına yanı sıra `await foreach`, zaman uyumsuz yineleyiciler, örneğin, döndüren bir yineleyicinin oluşturabilirsiniz bir `IAsyncEnumerable/IAsyncEnumerator` her ikisini yapabilirsiniz `await` ve `yield` içinde.</span><span class="sxs-lookup"><span data-stu-id="bccc1-252">In addition to being able to `await foreach`, you can also create async iterators, for example, an iterator that returns an `IAsyncEnumerable/IAsyncEnumerator` that you can both `await` and `yield` in.</span></span> <span data-ttu-id="bccc1-253">Çıkarılması gereken nesneler için kullanabileceğiniz `IAsyncDisposable`, çeşitli BCL türleri uygulayan, gibi `Stream` ve `Timer`.</span><span class="sxs-lookup"><span data-stu-id="bccc1-253">For objects that need to be disposed, you can use `IAsyncDisposable`, which various BCL types implement, such as `Stream` and `Timer`.</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="2989f-134">Zaman uyumsuz akışlar ile ya da Visual Studio 2019 geliştirmek istiyorsanız kullanmak için .NET Core 3.0 Önizleme 2 veya en son önizlemesi ihtiyacınız [ C# Visual Studio Code uzantısı](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5).</span><span class="sxs-lookup"><span data-stu-id="2989f-134">You need .NET Core 3.0 Preview 2 to use async streams if you want to develop with either Visual Studio 2019 or the latest preview of the [C# extension for Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5).</span></span> <span data-ttu-id="2989f-135">Komut satırından .NET Core 3.0 Önizleme 2 kullanıyorsanız, daha sonra her şeyin beklendiği gibi çalışır.</span><span class="sxs-lookup"><span data-stu-id="2989f-135">If you are using .NET Core 3.0 Preview 2 at the command line, then everything will work as expected.</span></span>
+<span data-ttu-id="bccc1-254">Daha fazla bilgi için [zaman uyumsuz akışlar öğretici](../../csharp/tutorials/generate-consume-asynchronous-stream.md).</span><span class="sxs-lookup"><span data-stu-id="bccc1-254">For more information, see the [async streams tutorial](../../csharp/tutorials/generate-consume-asynchronous-stream.md).</span></span>
 
-### <a name="using-declarations"></a><span data-ttu-id="2989f-136">Bildirimi kullanarak</span><span class="sxs-lookup"><span data-stu-id="2989f-136">Using Declarations</span></span>
+## <a name="ieee-floating-point-improvements"></a><span data-ttu-id="bccc1-255">IEEE kayan nokta geliştirmeleri</span><span class="sxs-lookup"><span data-stu-id="bccc1-255">IEEE Floating-point improvements</span></span>
 
-<span data-ttu-id="2989f-137">*Bildirimi kullanarak* nesnenizin emin olmak için yeni bir yolunu düzgün bir şekilde elden olan.</span><span class="sxs-lookup"><span data-stu-id="2989f-137">*Using declarations* are a new way to ensure your object is properly disposed.</span></span> <span data-ttu-id="2989f-138">A *using bildirimi* kapsamda devam ederken nesne etkin tutar.</span><span class="sxs-lookup"><span data-stu-id="2989f-138">A *using declaration* keeps the object alive while it is still in scope.</span></span> <span data-ttu-id="2989f-139">Nesne kapsam dışına sunulduktan sonra otomatik olarak kapatılır.</span><span class="sxs-lookup"><span data-stu-id="2989f-139">Once the object becomes out of scope, it is automatically disposed.</span></span> <span data-ttu-id="2989f-140">Bu iç içe geçmiş azaltır *using deyimlerini* ve kodunuzu daha temiz yapın.</span><span class="sxs-lookup"><span data-stu-id="2989f-140">This will reduce nested *using statements* and make your code cleaner.</span></span>
+<span data-ttu-id="bccc1-256">Kayan nokta API'leri güncelleştiriliyor uymak için [IEEE 754-2008 düzeltme](https://en.wikipedia.org/wiki/IEEE_754-2008_revision).</span><span class="sxs-lookup"><span data-stu-id="bccc1-256">Floating point APIs are being updated to comply with [IEEE 754-2008 revision](https://en.wikipedia.org/wiki/IEEE_754-2008_revision).</span></span> <span data-ttu-id="bccc1-257">Tüm kullanıma sunmak için bu değişikliklerin amacı olan **gerekli** işlemleri ve davranışsal IEEE belirtimi ile uyumlu olduğunuzdan emin olun. Kayan nokta iyileştirmeleri hakkında daha fazla bilgi için bkz. [Floating-Point ayrıştırma ve biçimlendirme geliştirmeleri .NET Core 3. 0'ı](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) blog gönderisi.</span><span class="sxs-lookup"><span data-stu-id="bccc1-257">The goal of these changes is to expose all **required** operations and ensure that they're behaviorally compliant with the IEEE spec. For more information about floating-point improvements, see the [Floating-Point Parsing and Formatting improvements in .NET Core 3.0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) blog post.</span></span>
 
-```csharp
-static void Main(string[] args)
-{
-    using var options = Parse(args);
-    if (options["verbose"]) { WriteLine("Logging..."); }
+<span data-ttu-id="bccc1-258">Ayrıştırma ve biçimlendirme düzeltmeleri içerir:</span><span class="sxs-lookup"><span data-stu-id="bccc1-258">Parsing and formatting fixes include:</span></span>
 
-} // options disposed here
-```
+* <span data-ttu-id="bccc1-259">Doğru ayrıştırma ve herhangi bir uzunluktaki girişleri yuvarlar.</span><span class="sxs-lookup"><span data-stu-id="bccc1-259">Correctly parse and round inputs of any length.</span></span>
+* <span data-ttu-id="bccc1-260">Doğru ayrıştırma ve negatif sıfır biçimlendirin.</span><span class="sxs-lookup"><span data-stu-id="bccc1-260">Correctly parse and format negative zero.</span></span>
+* <span data-ttu-id="bccc1-261">Düzgün ayrıştırılamadı `Infinity` ve `NaN` büyük küçük harf duyarsız bir denetimi yapmak ve isteğe bağlı bir önceki izin vererek `+` uygunsa.</span><span class="sxs-lookup"><span data-stu-id="bccc1-261">Correctly parse `Infinity` and `NaN` by doing a case-insensitive check and allowing an optional preceding `+` where applicable.</span></span>
 
-### <a name="switch-expressions"></a><span data-ttu-id="2989f-141">Anahtar ifadeler</span><span class="sxs-lookup"><span data-stu-id="2989f-141">Switch Expressions</span></span>
+<span data-ttu-id="bccc1-262">Yeni <xref:System.Math?displayProperty=nameWithType> API'leri içerir:</span><span class="sxs-lookup"><span data-stu-id="bccc1-262">New <xref:System.Math?displayProperty=nameWithType> APIs include:</span></span>
 
-<span data-ttu-id="2989f-142">*Anahtar ifadeleri* daha net bir şekilde yöntemlerinden biri olan bir *geçiş deyimi* olduğundan bir ifade, ancak bir değer döndürür.</span><span class="sxs-lookup"><span data-stu-id="2989f-142">*Switch expressions* are a cleaner way of doing a *switch statement* but, since it's an expression, returns a value.</span></span> <span data-ttu-id="2989f-143">*Anahtar ifadeler* desen eşleştirme ile de tamamen tümleşiktir ve atma deseni kullanın `_`temsil etmek için `default` değeri.</span><span class="sxs-lookup"><span data-stu-id="2989f-143">*Switch expressions* are also fully integrated with pattern matching, and use the discard pattern, `_`, to represent the `default` value.</span></span>
+* <span data-ttu-id="bccc1-263"><xref:System.Math.BitIncrement(System.Double)> ve <xref:System.Math.BitDecrement(System.Double)>\\</span><span class="sxs-lookup"><span data-stu-id="bccc1-263"><xref:System.Math.BitIncrement(System.Double)> and <xref:System.Math.BitDecrement(System.Double)>\\</span></span>
+<span data-ttu-id="bccc1-264">Karşılık gelen `nextUp` ve `nextDown` IEEE operations.</span><span class="sxs-lookup"><span data-stu-id="bccc1-264">Corresponds to the `nextUp` and `nextDown` IEEE operations.</span></span> <span data-ttu-id="bccc1-265">Karşılaştıran en küçük kayan noktalı sayı (sırasıyla) giriş'den küçük veya büyük döndürürler.</span><span class="sxs-lookup"><span data-stu-id="bccc1-265">They return the smallest floating-point number that compares greater or lesser than the input (respectively).</span></span> <span data-ttu-id="bccc1-266">Örneğin, `Math.BitIncrement(0.0)` döndürecekti `double.Epsilon`.</span><span class="sxs-lookup"><span data-stu-id="bccc1-266">For example, `Math.BitIncrement(0.0)` would return `double.Epsilon`.</span></span>
 
-<span data-ttu-id="2989f-144">Sözdizimi gördüğünüz *anahtar ifadeleri* aşağıdaki örnekte:</span><span class="sxs-lookup"><span data-stu-id="2989f-144">You can see the syntax for *switch expressions* in the following example:</span></span>
+* <span data-ttu-id="bccc1-267"><xref:System.Math.MaxMagnitude(System.Double,System.Double)> ve <xref:System.Math.MinMagnitude(System.Double,System.Double)>\\</span><span class="sxs-lookup"><span data-stu-id="bccc1-267"><xref:System.Math.MaxMagnitude(System.Double,System.Double)> and <xref:System.Math.MinMagnitude(System.Double,System.Double)>\\</span></span>
+<span data-ttu-id="bccc1-268">Karşılık gelen `maxNumMag` ve `minNumMag` IEEE işlemleri, bunlar döndürür (sırasıyla) büyük ya da büyüklük açısından iki girişe daha düşük olan değer.</span><span class="sxs-lookup"><span data-stu-id="bccc1-268">Corresponds to the `maxNumMag` and `minNumMag` IEEE operations, they return the value that is greater or lesser in magnitude of the two inputs (respectively).</span></span> <span data-ttu-id="bccc1-269">Örneğin, `Math.MaxMagnitude(2.0, -3.0)` döndürecekti `-3.0`.</span><span class="sxs-lookup"><span data-stu-id="bccc1-269">For example, `Math.MaxMagnitude(2.0, -3.0)` would return `-3.0`.</span></span>
 
-```csharp
-static string Display(object o) => o switch
-{
-    Point { X: 0, Y: 0 }         => "origin",
-    Point { X: var x, Y: var y } => $"({x}, {y})",
-    _                            => "unknown"
-};
-```
+* <xref:System.Math.ILogB(System.Double)>\
+<span data-ttu-id="bccc1-270">Karşılık gelen `logB` bir tamsayı değeri döndüren IEEE işlemi, giriş parametresinin tamsayı 2 tabanında günlük döndürür.</span><span class="sxs-lookup"><span data-stu-id="bccc1-270">Corresponds to the `logB` IEEE operation that returns an integral value, it returns the integral base-2 log of the input parameter.</span></span> <span data-ttu-id="bccc1-271">Bu yöntem etkili bir şekilde aynıdır `floor(log2(x))`, ancak en az yuvarlama hatası işler bitti.</span><span class="sxs-lookup"><span data-stu-id="bccc1-271">This method is effectively the same as `floor(log2(x))`, but done with minimal rounding error.</span></span>
 
-<span data-ttu-id="2989f-145">Bu örnekte yürütme sırasında iki deseni vardır.</span><span class="sxs-lookup"><span data-stu-id="2989f-145">There are two patterns at play in this example.</span></span> <span data-ttu-id="2989f-146">`o` ilk ile eşleşen `Point` *türü deseni* ve ardından *özelliği desenini* içinde *{kaşlı ayraçlar}*.</span><span class="sxs-lookup"><span data-stu-id="2989f-146">`o` first matches with the `Point` *type pattern* and then with the *property pattern* inside the *{curly braces}*.</span></span> <span data-ttu-id="2989f-147">`_` Açıklar `discard pattern`, aynı olduğu `default` için *switch ifadeleri*.</span><span class="sxs-lookup"><span data-stu-id="2989f-147">The `_` describes the `discard pattern`, which is the same as `default` for *switch statements*.</span></span>
+* <xref:System.Math.ScaleB(System.Double,System.Int32)>\
+<span data-ttu-id="bccc1-272">Karşılık gelen `scaleB` bir tamsayı değeri alan IEEE işlemi döndürür etkili bir şekilde `x * pow(2, n)`, yuvarlama en az bir hata ile tamamlandı ancak.</span><span class="sxs-lookup"><span data-stu-id="bccc1-272">Corresponds to the `scaleB` IEEE operation that takes an integral value, it returns effectively `x * pow(2, n)`, but is done with minimal rounding error.</span></span>
 
-<span data-ttu-id="2989f-148">Desenleri yakalar amacınızla testleri için uygulayan yordam kodu yerine bildirim temelli bir kod yazmanızı sağlar.</span><span class="sxs-lookup"><span data-stu-id="2989f-148">Patterns enable you to write declarative code that captures your intent instead of procedural code that implements tests for it.</span></span> <span data-ttu-id="2989f-149">Derleyici bence Bu yordam kodu uygulamak için sorumlu olur ve doğru şekilde her zaman yapmak için sağlanır.</span><span class="sxs-lookup"><span data-stu-id="2989f-149">The compiler becomes responsible for implementing that boring procedural code and is guaranteed to always do it correctly.</span></span>
+* <xref:System.Math.Log2(System.Double)>\
+<span data-ttu-id="bccc1-273">Karşılık gelen `log2` IEEE işlemi 2 tabanlı logaritmasını döndürür.</span><span class="sxs-lookup"><span data-stu-id="bccc1-273">Corresponds to the `log2` IEEE operation, it returns the base-2 logarithm.</span></span> <span data-ttu-id="bccc1-274">Yuvarlama hata en aza indirir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-274">It minimizes rounding error.</span></span>
 
-<span data-ttu-id="2989f-150">Hala olacaktır burada *switch ifadeleri* daha iyi bir seçim olacaktır *anahtar ifadeleri* ve desenleri, her iki sözdizimi stilleri ile kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="2989f-150">There will still be cases where *switch statements* will be a better choice than *switch expressions* and patterns can be used with both syntax styles.</span></span>
+* <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
+<span data-ttu-id="bccc1-275">Karşılık gelen `fma` IEEE işlem gerçekleştirdiği bir çarpım Çarp.</span><span class="sxs-lookup"><span data-stu-id="bccc1-275">Corresponds to the `fma` IEEE operation, it performs a fused multiply add.</span></span> <span data-ttu-id="bccc1-276">Diğer bir deyişle, mevcut `(x * y) + z` tek bir işlem olarak, var-tarafından yuvarlama hata en aza indirir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-276">That is, it does `(x * y) + z` as a single operation, there-by minimizing the rounding error.</span></span> <span data-ttu-id="bccc1-277">Örnek verilebilir `FusedMultiplyAdd(1e308, 2.0, -1e308)` döndüren `1e308`.</span><span class="sxs-lookup"><span data-stu-id="bccc1-277">An example would be `FusedMultiplyAdd(1e308, 2.0, -1e308)` which returns `1e308`.</span></span> <span data-ttu-id="bccc1-278">Normal `(1e308 * 2.0) - 1e308` döndürür `double.PositiveInfinity`.</span><span class="sxs-lookup"><span data-stu-id="bccc1-278">The regular `(1e308 * 2.0) - 1e308` returns `double.PositiveInfinity`.</span></span>
 
-<span data-ttu-id="2989f-151">Daha fazla bilgi için [desenleri ile daha fazlasını yapın C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/).</span><span class="sxs-lookup"><span data-stu-id="2989f-151">For more information, see [Do more with patterns in C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/).</span></span>
+* <xref:System.Math.CopySign(System.Double,System.Double)>\
+<span data-ttu-id="bccc1-279">Karşılık gelen `copySign` IEEE işlemi değerini döndürür `x`, ancak işaretini `y`.</span><span class="sxs-lookup"><span data-stu-id="bccc1-279">Corresponds to the `copySign` IEEE operation, it returns the value of `x`, but with the sign of `y`.</span></span>
 
-## <a name="ieee-floating-point-improvements"></a><span data-ttu-id="2989f-152">IEEE kayan nokta geliştirmeleri</span><span class="sxs-lookup"><span data-stu-id="2989f-152">IEEE Floating-point improvements</span></span>
+## <a name="fast-built-in-json-support"></a><span data-ttu-id="bccc1-280">Hızlı yerleşik JSON desteği</span><span class="sxs-lookup"><span data-stu-id="bccc1-280">Fast built-in JSON support</span></span>
 
-<span data-ttu-id="2989f-153">Kayan nokta API'leri olan uymak için güncelleştirilme sürecindedir [IEEE 754-2008 düzeltme](https://en.wikipedia.org/wiki/IEEE_754-2008_revision).</span><span class="sxs-lookup"><span data-stu-id="2989f-153">Floating point APIs are in the process of being updated to comply with [IEEE 754-2008 revision](https://en.wikipedia.org/wiki/IEEE_754-2008_revision).</span></span> <span data-ttu-id="2989f-154">Bu değişikliklerin amacı, davranışsal IEEE belirtimi ile uyumlu olduklarından emin olun ve tüm "required" işlemlerinin açığa sağlamaktır.</span><span class="sxs-lookup"><span data-stu-id="2989f-154">The goal of these changes is to expose all "required" operations and ensure that they are behaviorally compliant with the IEEE spec.</span></span>
+<span data-ttu-id="bccc1-281">.NET kullanıcıları büyük ölçüde üzerinde yararlandı [ **Json.NET** ](https://www.newtonsoft.com/json) ve iyi seçenekleri olmaya devam diğer popüler JSON kitaplıkları.</span><span class="sxs-lookup"><span data-stu-id="bccc1-281">.NET users have largely relied on [**Json.NET**](https://www.newtonsoft.com/json) and other popular JSON libraries, which continue to be good choices.</span></span> <span data-ttu-id="bccc1-282">**Json.NET** UTF-16 başlık altında olduğu temel veri türü, .NET dizeleri kullanır.</span><span class="sxs-lookup"><span data-stu-id="bccc1-282">**Json.NET** uses .NET strings as its base datatype, which is UTF-16 under the hood.</span></span>
 
-<span data-ttu-id="2989f-155">Ayrıştırma ve biçimlendirme düzeltmeleri:</span><span class="sxs-lookup"><span data-stu-id="2989f-155">Parsing and formatting fixes:</span></span>
+<span data-ttu-id="bccc1-283">Yeni yerleşik JSON desteği, yüksek performanslı, düşük ayırma ve temel `Span<byte>`.</span><span class="sxs-lookup"><span data-stu-id="bccc1-283">The new built-in JSON support is high-performance, low allocation, and based on `Span<byte>`.</span></span> <span data-ttu-id="bccc1-284">.NET Core 3.0 için yeni ana JSON ile ilgili üç eklenmiştir <xref:System.Text.Json?displayProperty=nameWithType> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="bccc1-284">Three new main JSON-related types have been added to .NET Core 3.0 the <xref:System.Text.Json?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="bccc1-285">Bu tür olmayan *henüz* düz eski CLR nesnesi (POCO) serileştirme ve seri durumundan çıkarma destekler.</span><span class="sxs-lookup"><span data-stu-id="bccc1-285">These types don't *yet* support plain old CLR object (POCO) serialization and deserialization.</span></span>
 
-* <span data-ttu-id="2989f-156">Doğru ayrıştırma ve herhangi bir uzunluktaki girişleri yuvarlar.</span><span class="sxs-lookup"><span data-stu-id="2989f-156">Correctly parse and round inputs of any length.</span></span>
-* <span data-ttu-id="2989f-157">Doğru ayrıştırma ve negatif sıfır biçimlendirin.</span><span class="sxs-lookup"><span data-stu-id="2989f-157">Correctly parse and format negative zero.</span></span>
-* <span data-ttu-id="2989f-158">Büyük küçük harf duyarsız bir denetimi gerçekleştirmek ve isteğe bağlı bir önceki vererek sonsuzluk ve NaN düzgün ayrıştırılamadı `+` uygunsa.</span><span class="sxs-lookup"><span data-stu-id="2989f-158">Correctly parse Infinity and NaN by performing a case-insensitive check and allowing an optional preceding `+` where applicable.</span></span>
+### <a name="utf8jsonreader"></a><span data-ttu-id="bccc1-286">Utf8JsonReader</span><span class="sxs-lookup"><span data-stu-id="bccc1-286">Utf8JsonReader</span></span>
 
-<span data-ttu-id="2989f-159">Yeni matematik API'ye sahiptir:</span><span class="sxs-lookup"><span data-stu-id="2989f-159">New Math APIs have:</span></span>
+<span data-ttu-id="bccc1-287"><xref:System.Text.Json.Utf8JsonReader?displayProperty=nameWithType> yüksek performanslı, düşük ayırma, yalnızca iletme Okuyucu için UTF-8 kodlamalı JSON metin okuma, bir `ReadOnlySpan<byte>`.</span><span class="sxs-lookup"><span data-stu-id="bccc1-287"><xref:System.Text.Json.Utf8JsonReader?displayProperty=nameWithType> is a high-performance, low allocation, forward-only reader for UTF-8 encoded JSON text, read from a `ReadOnlySpan<byte>`.</span></span> <span data-ttu-id="bccc1-288">`Utf8JsonReader` Özel çözümleyiciler ve deserializers oluşturmak için kullanılan bir temel, alt düzey türüdür.</span><span class="sxs-lookup"><span data-stu-id="bccc1-288">The `Utf8JsonReader` is a foundational, low-level type, that can be used to build custom parsers and deserializers.</span></span> <span data-ttu-id="bccc1-289">Kullanarak yeni bir JSON yükü okuma `Utf8JsonReader` reader'ı kullanarak daha hızlı bir şekilde x 2 **Json.NET**.</span><span class="sxs-lookup"><span data-stu-id="bccc1-289">Reading through a JSON payload using the new `Utf8JsonReader` is 2x faster than using the reader from **Json.NET**.</span></span> <span data-ttu-id="bccc1-290">JSON belirteçleri (UTF-16) dizeler olarak actualize gerekene kadar tahsis etmez.</span><span class="sxs-lookup"><span data-stu-id="bccc1-290">It doesn't allocate until you need to actualize JSON tokens as (UTF-16) strings.</span></span>
 
-* `BitIncrement/BitDecrement`\
-<span data-ttu-id="2989f-160">Karşılık gelen `nextUp` ve `nextDown` IEEE operations.</span><span class="sxs-lookup"><span data-stu-id="2989f-160">Corresponds to the `nextUp` and `nextDown` IEEE operations.</span></span> <span data-ttu-id="2989f-161">Karşılaştıran en küçük kayan noktalı sayı (sırasıyla) giriş'den küçük veya büyük döndürürler.</span><span class="sxs-lookup"><span data-stu-id="2989f-161">They return the smallest floating-point number that compares greater or lesser than the input (respectively).</span></span> <span data-ttu-id="2989f-162">Örneğin, `Math.BitIncrement(0.0)` döndürecekti `double.Epsilon`.</span><span class="sxs-lookup"><span data-stu-id="2989f-162">For example, `Math.BitIncrement(0.0)` would return `double.Epsilon`.</span></span>
+<span data-ttu-id="bccc1-291">İşte bir örnek üzerinden okuma [ **launch.json** ](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) Visual Studio Code tarafından oluşturulan dosya:</span><span class="sxs-lookup"><span data-stu-id="bccc1-291">Here is an example of reading through the [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) file created by Visual Studio Code:</span></span>
 
-* `MaxMagnitude/MinMagnitude`\
-<span data-ttu-id="2989f-163">Karşılık gelen `maxNumMag` ve `minNumMag` IEEE işlemleri, bunlar döndürür (sırasıyla) büyük ya da büyüklük açısından iki girişe daha düşük olan değer.</span><span class="sxs-lookup"><span data-stu-id="2989f-163">Corresponds to the `maxNumMag` and `minNumMag` IEEE operations, they return the value that is greater or lesser in magnitude of the two inputs (respectively).</span></span> <span data-ttu-id="2989f-164">Örneğin, `Math.MaxMagnitude(2.0, -3.0)` döndürecekti `-3.0`.</span><span class="sxs-lookup"><span data-stu-id="2989f-164">For example, `Math.MaxMagnitude(2.0, -3.0)` would return `-3.0`.</span></span>
+[!CODE-csharp[Utf8JsonReader](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#PrintJson)]
 
-* `ILogB`\
-<span data-ttu-id="2989f-165">Karşılık gelen `logB` bir tamsayı değeri döndüren IEEE işlemi giriş parametresinin tamsayı 2 tabanında günlük döndürür.</span><span class="sxs-lookup"><span data-stu-id="2989f-165">Corresponds to the `logB` IEEE operation which returns an integral value, it returns the integral base-2 log of the input parameter.</span></span> <span data-ttu-id="2989f-166">Bu etkili bir şekilde aynıdır `floor(log2(x))`, ancak en az yuvarlama hatası işler bitti.</span><span class="sxs-lookup"><span data-stu-id="2989f-166">This is effectively the same as `floor(log2(x))`, but done with minimal rounding error.</span></span>
+[!CODE-csharp[Utf8JsonReader](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#PrintJsonCall)]
 
-* `ScaleB`\
-<span data-ttu-id="2989f-167">Karşılık gelen `scaleB` bir tamsayı değeri alan IEEE işlemi döndürür etkili bir şekilde `x * pow(2, n)`, yuvarlama en az bir hata ile tamamlandı ancak.</span><span class="sxs-lookup"><span data-stu-id="2989f-167">Corresponds to the `scaleB` IEEE operation which takes an integral value, it returns effectively `x * pow(2, n)`, but is done with minimal rounding error.</span></span>
+### <a name="utf8jsonwriter"></a><span data-ttu-id="bccc1-292">Utf8JsonWriter</span><span class="sxs-lookup"><span data-stu-id="bccc1-292">Utf8JsonWriter</span></span>
 
-* `Log2`\
-<span data-ttu-id="2989f-168">Karşılık gelen `log2` IEEE işlemi 2 tabanlı logaritmasını döndürür.</span><span class="sxs-lookup"><span data-stu-id="2989f-168">Corresponds to the `log2` IEEE operation, it returns the base-2 logarithm.</span></span> <span data-ttu-id="2989f-169">Yuvarlama hata en aza indirir.</span><span class="sxs-lookup"><span data-stu-id="2989f-169">It minimizes rounding error.</span></span>
+<span data-ttu-id="bccc1-293"><xref:System.Text.Json.Utf8JsonWriter?displayProperty=nameWithType> bir yüksek performanslı, genel .NET türleri JSON metni yalnızca iletme UTF-8 olarak kodlanmış biçimde yazmak ister önbelleğe alınmamış, sağlar `String`, `Int32`, ve `DateTime`.</span><span class="sxs-lookup"><span data-stu-id="bccc1-293"><xref:System.Text.Json.Utf8JsonWriter?displayProperty=nameWithType> provides a high-performance, non-cached, forward-only way to write UTF-8 encoded JSON text from common .NET types like `String`, `Int32`, and `DateTime`.</span></span> <span data-ttu-id="bccc1-294">Okuyucu gibi yazıcı özel seri hale getiricileri genişletme oluşturmak için kullanılan bir temel, alt düzey türüdür.</span><span class="sxs-lookup"><span data-stu-id="bccc1-294">Like the reader, the writer is a foundational, low-level type, that can be used to build custom serializers.</span></span> <span data-ttu-id="bccc1-295">Kullanarak yeni bir JSON yükünü yazmayı `Utf8JsonWriter` yazıcıdan kullanarak daha hızlı % 30-80'idir **Json.NET** ve tahsis etmez.</span><span class="sxs-lookup"><span data-stu-id="bccc1-295">Writing a JSON payload using the new `Utf8JsonWriter` is 30-80% faster than using the writer from **Json.NET** and doesn't allocate.</span></span>
 
-* `FusedMultiplyAdd`\
-<span data-ttu-id="2989f-170">Karşılık gelen `fma` IEEE işlem gerçekleştirdiği bir çarpım Çarp.</span><span class="sxs-lookup"><span data-stu-id="2989f-170">Corresponds to the `fma` IEEE operation, it performs a fused multiply add.</span></span> <span data-ttu-id="2989f-171">Diğer bir deyişle, mevcut `(x * y) + z` tek bir işlem olarak, var-tarafından yuvarlama hata en aza indirir.</span><span class="sxs-lookup"><span data-stu-id="2989f-171">That is, it does `(x * y) + z` as a single operation, there-by minimizing the rounding error.</span></span> <span data-ttu-id="2989f-172">Örnek verilebilir `FusedMultiplyAdd(1e308, 2.0, -1e308)` döndüren `1e308`.</span><span class="sxs-lookup"><span data-stu-id="2989f-172">An example would be `FusedMultiplyAdd(1e308, 2.0, -1e308)` which returns `1e308`.</span></span> <span data-ttu-id="2989f-173">Normal `(1e308 * 2.0) - 1e308` döndürür `double.PositiveInfinity`.</span><span class="sxs-lookup"><span data-stu-id="2989f-173">The regular `(1e308 * 2.0) - 1e308` returns `double.PositiveInfinity`.</span></span>
+### <a name="jsondocument"></a><span data-ttu-id="bccc1-296">JsonDocument</span><span class="sxs-lookup"><span data-stu-id="bccc1-296">JsonDocument</span></span>
 
-* `CopySign`\
-<span data-ttu-id="2989f-174">Karşılık gelen `copySign` IEEE işlemi değerini döndürür `x`, ancak işaretini `y`.</span><span class="sxs-lookup"><span data-stu-id="2989f-174">Corresponds to the `copySign` IEEE operation, it returns the value of `x`, but with the sign of `y`.</span></span>
+<span data-ttu-id="bccc1-297"><xref:System.Text.Json.JsonDocument?displayProperty=nameWithType> üst kısmındaki yerleşik `Utf8JsonReader`.</span><span class="sxs-lookup"><span data-stu-id="bccc1-297"><xref:System.Text.Json.JsonDocument?displayProperty=nameWithType> is built on top of the `Utf8JsonReader`.</span></span> <span data-ttu-id="bccc1-298">`JsonDocument` JSON verilerini ayrıştırma ve bir salt okunur belge nesne modeli (DOM), derleme olanağı, rastgele erişim ve numaralandırma desteklemek için sorgulanabilir sağlar.</span><span class="sxs-lookup"><span data-stu-id="bccc1-298">The `JsonDocument` provides the ability to parse JSON data and build a read-only Document Object Model (DOM) that can be queried to support random access and enumeration.</span></span> <span data-ttu-id="bccc1-299">Verileri oluşturan JSON öğeleri aracılığıyla erişilebilir <xref:System.Text.Json.JsonElement> tarafından sunulan tür `JsonDocument` adlı bir özellik olarak `RootElement`.</span><span class="sxs-lookup"><span data-stu-id="bccc1-299">The JSON elements that compose the data can be accessed via the <xref:System.Text.Json.JsonElement> type that is exposed by the `JsonDocument` as a property called `RootElement`.</span></span> <span data-ttu-id="bccc1-300">`JsonElement` Ortak .NET türlerine JSON metnine dönüştürmek için API'leri ile birlikte JSON dizi ve nesne numaralandırıcıları içerir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-300">The `JsonElement` contains the JSON array and object enumerators along with APIs to convert JSON text to common .NET types.</span></span> <span data-ttu-id="bccc1-301">Tipik bir JSON yükü ayrıştırma ve tüm kullanarak üyelerine erişilmesi `JsonDocument` 2-3 x daha hızlı bir şekilde **Json.NET** makul boyutlu veriler için biraz ayırmaları ile (yani, < 1 MB).</span><span class="sxs-lookup"><span data-stu-id="bccc1-301">Parsing a typical JSON payload and accessing all its members using the `JsonDocument` is 2-3x faster than **Json.NET** with little allocations for data that is reasonably sized (that is, < 1 MB).</span></span>
 
-## <a name="net-platform-dependent-intrinsics"></a><span data-ttu-id="2989f-175">.NET platform bağımlı iç bilgileri</span><span class="sxs-lookup"><span data-stu-id="2989f-175">.NET Platform Dependent Intrinsics</span></span>
+<span data-ttu-id="bccc1-302">İşte bir örnek kullanımı `JsonDocument` ve `JsonElement` başlangıç noktası olarak kullanılabilir:</span><span class="sxs-lookup"><span data-stu-id="bccc1-302">Here is a sample usage of the `JsonDocument` and `JsonElement` that can be used as a starting point:</span></span>
 
-<span data-ttu-id="2989f-176">Gibi belirli performans odaklı CPU yönergeleri için erişime izin API'ler eklenmiştir **SIMD** veya **Bit işleme yönerge** ayarlar.</span><span class="sxs-lookup"><span data-stu-id="2989f-176">APIs have been added that allow access to certain perf-oriented CPU instructions, such as the **SIMD** or **Bit Manipulation instruction** sets.</span></span> <span data-ttu-id="2989f-177">Bu yönergeler, verileri verimli bir şekilde paralel işleme gibi bazı senaryolarda büyük performans geliştirmeleri elde etmeye yardımcı olabilir.</span><span class="sxs-lookup"><span data-stu-id="2989f-177">These instructions can help achieve big performance improvements in certain scenarios, such as processing data efficiently in parallel.</span></span> <span data-ttu-id="2989f-178">Kullanılacak API'ler programlarınızın gösterme ek olarak, performansı artırmak için bu yönergeleri kullanarak .NET kitaplıklarına başlamıştır.</span><span class="sxs-lookup"><span data-stu-id="2989f-178">In addition to exposing the APIs for your programs to use, the .NET libraries have begun using these instructions to improve performance.</span></span>
+<span data-ttu-id="bccc1-303">İşte bir C# 8.0 örneği aracılığıyla okuma [ **launch.json** ](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) Visual Studio Code tarafından oluşturulan dosya:</span><span class="sxs-lookup"><span data-stu-id="bccc1-303">Here is a C# 8.0 example of reading through the [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) file created by Visual Studio Code:</span></span>
 
-<span data-ttu-id="2989f-179">Aşağıdaki CoreCLR Pr'ler birkaç uygulama veya kullanımı aracılığıyla iç bilgileri gösterir:</span><span class="sxs-lookup"><span data-stu-id="2989f-179">The following CoreCLR PRs demonstrate a few of the intrinsics, either via implementation or use:</span></span>
+[!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJson)]
 
-* [<span data-ttu-id="2989f-180">Basit SSE2 donanım iç uygulama</span><span class="sxs-lookup"><span data-stu-id="2989f-180">Implement simple SSE2 hardware intrinsics</span></span>](https://github.com/dotnet/coreclr/pull/15585)
-* [<span data-ttu-id="2989f-181">SSE donanım iç uygulama</span><span class="sxs-lookup"><span data-stu-id="2989f-181">Implement the SSE hardware intrinsics</span></span>](https://github.com/dotnet/coreclr/pull/15538)
-* [<span data-ttu-id="2989f-182">Arm64 temel donanım iç bilgileri</span><span class="sxs-lookup"><span data-stu-id="2989f-182">Arm64 Base HW Intrinsics</span></span>](https://github.com/dotnet/coreclr/pull/16822)
-* [<span data-ttu-id="2989f-183">Bul için TZCNT ve LZCNT kullanma {ilk | En son} bulunamadı {bayt | Char}</span><span class="sxs-lookup"><span data-stu-id="2989f-183">Use TZCNT and LZCNT for Locate{First|Last}Found{Byte|Char}</span></span>](https://github.com/dotnet/coreclr/pull/21073)
+[!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJsonCall)]
 
-<span data-ttu-id="2989f-184">Daha fazla bilgi için [.NET platformu bağımlı yapı içleri](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md), Microsoft, yonga satıcılar veya tüm diğer şirket veya tek yongası/tanımlamak bu donanım altyapısını tanımlamak için bir yaklaşım tanımlar .NET kodu için sunulan API'ler.</span><span class="sxs-lookup"><span data-stu-id="2989f-184">For more information, see [.NET Platform Dependent Intrinsics](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md), which defines an approach for defining this hardware infrastructure, allowing Microsoft, chip vendors, or any other company or individual to define hardware/chip APIs that should be exposed to .NET code.</span></span>
+### <a name="jsonserializer"></a><span data-ttu-id="bccc1-304">JsonSerializer</span><span class="sxs-lookup"><span data-stu-id="bccc1-304">JsonSerializer</span></span>
 
-## <a name="default-executables"></a><span data-ttu-id="2989f-185">Varsayılan yürütülebilir dosyalar</span><span class="sxs-lookup"><span data-stu-id="2989f-185">Default executables</span></span>
+<span data-ttu-id="bccc1-305"><xref:System.Text.Json.Serialization.JsonSerializer?displayProperty=nameWithType> üst kısmındaki yerleşik <xref:System.Text.Json.Utf8JsonReader> ve <xref:System.Text.Json.Utf8JsonWriter> JSON belgeleri ve parçaları çalışırken hızlı düşük bellek serileştirme seçeneği sağlamak.</span><span class="sxs-lookup"><span data-stu-id="bccc1-305"><xref:System.Text.Json.Serialization.JsonSerializer?displayProperty=nameWithType> is built on top of <xref:System.Text.Json.Utf8JsonReader> and <xref:System.Text.Json.Utf8JsonWriter> to provide a fast low-memory serialization option when working with JSON documents and fragments.</span></span>
 
-<span data-ttu-id="2989f-186">.NET core artık derler [framework bağımlı yürütülebilir dosyaları](../deploying/index.md#framework-dependent-executables-fde) varsayılan olarak.</span><span class="sxs-lookup"><span data-stu-id="2989f-186">.NET Core will now build [framework-dependent executables](../deploying/index.md#framework-dependent-executables-fde) by default.</span></span> <span data-ttu-id="2989f-187">.NET Core genel olarak yüklenmiş bir sürümünü kullanan uygulamalar için yeni bir özelliktir.</span><span class="sxs-lookup"><span data-stu-id="2989f-187">This is new for applications that use a globally installed version of .NET Core.</span></span> <span data-ttu-id="2989f-188">Şimdiye kadar yalnızca [müstakil dağıtımları](../deploying/index.md#self-contained-deployments-scd) yürütülebilir bir dosya oluşturur.</span><span class="sxs-lookup"><span data-stu-id="2989f-188">Until now, only [self-contained deployments](../deploying/index.md#self-contained-deployments-scd) would produce an executable.</span></span>
+<span data-ttu-id="bccc1-306">İNCELEME: https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md bu makaleye bağlantı örneği</span><span class="sxs-lookup"><span data-stu-id="bccc1-306">EXAMINE: https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md for an example to port to this article</span></span>
 
-<span data-ttu-id="2989f-189">Sırasında `dotnet build` veya `dotnet publish`, kullanmakta olduğunuz SDK platform ve ortam ile eşleşen sağlanan yürütülebilir bir dosya oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="2989f-189">During `dotnet build` or `dotnet publish`, an executable is created provided that matches the environment and platform of the SDK you are using.</span></span> <span data-ttu-id="2989f-190">Diğer yerel yürütülebilir dosyalar gibi olduğu gibi bu yürütülebilir dosyaları ile aynı şey geçerli olacaktır:</span><span class="sxs-lookup"><span data-stu-id="2989f-190">You can expect the same things with these executables as you would other native executables, such as:</span></span>
+<span data-ttu-id="bccc1-307">Bir nesne json'a serileştirilirken bir örnek aşağıda verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="bccc1-307">Here is an example of serializing an object to JSON:</span></span>
 
-* <span data-ttu-id="2989f-191">Yürütülebilir dosya üzerine çift tıklayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2989f-191">You can double-click on the executable.</span></span>
-* <span data-ttu-id="2989f-192">Doğrudan bir komut isteminden uygulama başlatma gibi `myapp.exe` Windows, şirket ve `./myapp` Linux ve Macos'ta.</span><span class="sxs-lookup"><span data-stu-id="2989f-192">You can launch the application from a command prompt directly, such as `myapp.exe` on Windows, and `./myapp` on Linux and macOS.</span></span>
+[!CODE-csharp[JsonSerializer](~/samples/snippets/core/whats-new/whats-new-in-30/cs/JSON.cs#JsonSerialize)]
 
-## <a name="build-copies-dependencies"></a><span data-ttu-id="2989f-193">Derleme bağımlılıkları kopyalar.</span><span class="sxs-lookup"><span data-stu-id="2989f-193">Build copies dependencies</span></span>
+<span data-ttu-id="bccc1-308">Bir nesne için bir JSON dizesini seri durumdan çıkarılırken bir örnek aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-308">Here is an example of deserializing a JSON string to an object.</span></span> <span data-ttu-id="bccc1-309">Önceki örnek tarafından oluşturulanla JSON dizesi kullanabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="bccc1-309">You can use the JSON string produced by the previous example:</span></span>
 
-<span data-ttu-id="2989f-194">`dotnet build` artık uygulamanız için NuGet bağımlılıklarını NuGet önbellekten yapı çıktı klasörüne kopyalar.</span><span class="sxs-lookup"><span data-stu-id="2989f-194">`dotnet build` now copies NuGet dependencies for your application from the NuGet cache to the build output folder.</span></span> <span data-ttu-id="2989f-195">Daha önce bağımlılıkları parçası olarak yalnızca kopyalanan `dotnet publish`.</span><span class="sxs-lookup"><span data-stu-id="2989f-195">Previously, dependencies were only copied as part of `dotnet publish`.</span></span>
+[!CODE-csharp[JsonDeserializer](~/samples/snippets/core/whats-new/whats-new-in-30/cs/JSON.cs#JsonDeserialize)]
 
-<span data-ttu-id="2989f-196">Yayımlama, yayınlama, bağlama ve razor sayfası hala gerektirir gibi bazı işlemler vardır.</span><span class="sxs-lookup"><span data-stu-id="2989f-196">There are some operations, like linking and razor page publishing that will still require publishing.</span></span>
+## <a name="interop-improvements"></a><span data-ttu-id="bccc1-310">Birlikte çalışma geliştirmeleri</span><span class="sxs-lookup"><span data-stu-id="bccc1-310">Interop improvements</span></span>
 
-## <a name="local-dotnet-tools"></a><span data-ttu-id="2989f-197">Yerel dotnet araçları</span><span class="sxs-lookup"><span data-stu-id="2989f-197">Local dotnet tools</span></span>
+<span data-ttu-id="bccc1-311">.NET core 3.0 yerel API Interop artırır.</span><span class="sxs-lookup"><span data-stu-id="bccc1-311">.NET Core 3.0 improves native API interop.</span></span>
 
-> [!WARNING]
-> <span data-ttu-id="2989f-198">.NET Core 3.0 Önizleme 2 ile .NET Core 3.0 Önizleme 1 ila yerel .NET Core Araçları'nda bir değişiklik yoktu.</span><span class="sxs-lookup"><span data-stu-id="2989f-198">There was a change in .NET Core Local Tools between .NET Core 3.0 Preview 1 and .NET Core 3.0 Preview 2.</span></span>  <span data-ttu-id="2989f-199">Yerel araçları Preview 1'çıkış gibi bir komut çalıştırarak çalıştığınız varsa `dotnet tool restore` veya `dotnet tool install`, yerel araçları Önizleme 2'de doğru çalışmadan önce yerel Araçlar önbellek klasörünü silin gerekir.</span><span class="sxs-lookup"><span data-stu-id="2989f-199">If you tried out local tools in Preview 1 by running a command like `dotnet tool restore` or `dotnet tool install`, you need to delete your local tools cache folder before local tools will work correctly in Preview 2.</span></span> <span data-ttu-id="2989f-200">Bu klasör şu konumdadır:</span><span class="sxs-lookup"><span data-stu-id="2989f-200">This folder is located at:</span></span>
->
-> <span data-ttu-id="2989f-201">Mac, Linux: `rm -r $HOME/.dotnet/toolResolverCache`</span><span class="sxs-lookup"><span data-stu-id="2989f-201">On mac, Linux: `rm -r $HOME/.dotnet/toolResolverCache`</span></span>
->
-> <span data-ttu-id="2989f-202">Windows üzerinde: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`</span><span class="sxs-lookup"><span data-stu-id="2989f-202">On Windows: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`</span></span>
->
-> <span data-ttu-id="2989f-203">Bu klasör silmezseniz, hata alırsınız.</span><span class="sxs-lookup"><span data-stu-id="2989f-203">If you do not delete this folder, you will receive an error.</span></span>
+### <a name="type-nativelibrary"></a><span data-ttu-id="bccc1-312">Tür: NativeLibrary</span><span class="sxs-lookup"><span data-stu-id="bccc1-312">Type: NativeLibrary</span></span>
 
-<span data-ttu-id="2989f-204">.NET Core 2.1 genel araçları destekleniyorsa, .NET Core 3.0 artık yerel araçlara sahiptir.</span><span class="sxs-lookup"><span data-stu-id="2989f-204">While .NET Core 2.1 supported global tools, .NET Core 3.0 now has local tools.</span></span> <span data-ttu-id="2989f-205">Yerel Araçlar genel araçları benzerdir, ancak disk üzerindeki belirli bir konum ile ilişkilidir.</span><span class="sxs-lookup"><span data-stu-id="2989f-205">Local tools are similar to global tools but are associated with a particular location on disk.</span></span> <span data-ttu-id="2989f-206">Bu, proje başına ve havuz başına araçlar sağlar.</span><span class="sxs-lookup"><span data-stu-id="2989f-206">This enables per-project and per-repository tooling.</span></span> <span data-ttu-id="2989f-207">Yerel olarak yüklü herhangi bir aracı genel olarak kullanılabilir değil.</span><span class="sxs-lookup"><span data-stu-id="2989f-207">Any tool installed locally isn't available globally.</span></span> <span data-ttu-id="2989f-208">Araçlar NuGet paketleri olarak dağıtılır.</span><span class="sxs-lookup"><span data-stu-id="2989f-208">Tools are distributed as NuGet packages.</span></span>
+<span data-ttu-id="bccc1-313"><xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType> (.NET Core P/Invoke olarak aynı yük mantığı kullanarak) yerel bir kitaplığı yüklemeye yönelik bir kapsülleme sağlar ve ilgili yardımcı işlevleri gibi sağlayarak `getSymbol`.</span><span class="sxs-lookup"><span data-stu-id="bccc1-313"><xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType> provides an encapsulation for loading a native library (using the same load logic as .NET Core P/Invoke) and providing the relevant helper functions such as `getSymbol`.</span></span> <span data-ttu-id="bccc1-314">Kod örneği için bkz: [DLLMap tanıtım](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin).</span><span class="sxs-lookup"><span data-stu-id="bccc1-314">For a code example, see the [DLLMap Demo](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin).</span></span>
 
-<span data-ttu-id="2989f-209">Yerel Araçlar kullanan bir bildirim dosyası adına `dotnet-tools.json` geçerli dizininizde.</span><span class="sxs-lookup"><span data-stu-id="2989f-209">Local tools rely on a manifest file name `dotnet-tools.json` in your current directory.</span></span> <span data-ttu-id="2989f-210">Bu bildirim dosyası, bu klasörü ve altındaki kullanılabilir olması için Araçlar tanımlar.</span><span class="sxs-lookup"><span data-stu-id="2989f-210">This manifest file defines the tools to be available at that folder and below.</span></span> <span data-ttu-id="2989f-211">Bu bildirim dosyası, depo kökünde oluşturarak, herkesin kodunuzu kopyalama geri yükleyebilir ve başarıyla kodunuzla çalışmak için gereken araçları kullanmanız emin olun.</span><span class="sxs-lookup"><span data-stu-id="2989f-211">By creating this manifest file at the root of your repository, you ensure anyone cloning your code can restore and use the tools that are needed to successfully work with your code.</span></span>
+### <a name="windows-native-interop"></a><span data-ttu-id="bccc1-315">Windows yerel birlikte çalışabilirliği</span><span class="sxs-lookup"><span data-stu-id="bccc1-315">Windows Native Interop</span></span>
 
-<span data-ttu-id="2989f-212">Oluşturmak için bir `dotnet-tools.json` bildirim dosyası, kullanın:</span><span class="sxs-lookup"><span data-stu-id="2989f-212">To create a `dotnet-tools.json` manifest file, use:</span></span>
+<span data-ttu-id="bccc1-316">Windows formunda düz C API'leri, COM ve WinRT zengin yerel bir API sunar.</span><span class="sxs-lookup"><span data-stu-id="bccc1-316">Windows offers a rich native API in the form of flat C APIs, COM, and WinRT.</span></span> <span data-ttu-id="bccc1-317">.NET Core destekler while **P/Invoke**, .NET Core 3.0 yeteneği ekler **COM API işlemi** ve **WinRT API'lar etkinleştirme**.</span><span class="sxs-lookup"><span data-stu-id="bccc1-317">While .NET Core supports **P/Invoke**, .NET Core 3.0 adds the ability to **CoCreate COM APIs** and **Activate WinRT APIs**.</span></span> <span data-ttu-id="bccc1-318">Kod örneği için bkz: [Excel Demo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).</span><span class="sxs-lookup"><span data-stu-id="bccc1-318">For a code example, see the [Excel Demo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).</span></span>
 
-```console
-dotnet new tool-manifest
-```
+## <a name="http2-support"></a><span data-ttu-id="bccc1-319">HTTP/2 desteği</span><span class="sxs-lookup"><span data-stu-id="bccc1-319">HTTP/2 support</span></span>
 
-<span data-ttu-id="2989f-213">Yeni bir aracı ile yerel bildirimi ekleyin:</span><span class="sxs-lookup"><span data-stu-id="2989f-213">Add a new tool to the local manifest with:</span></span>
+<span data-ttu-id="bccc1-320"><xref:System.Net.Http.HttpClient?displayProperty=nameWithType> HTTP/2 protokolüne türünü destekler.</span><span class="sxs-lookup"><span data-stu-id="bccc1-320">The <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> type supports the HTTP/2 protocol.</span></span> <span data-ttu-id="bccc1-321">Destek şu anda devre dışıdır, ancak çağırarak açılabilir `AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);` kullanmadan önce <xref:System.Net.Http.HttpClient>.</span><span class="sxs-lookup"><span data-stu-id="bccc1-321">Support is currently disabled but can be turned on by calling `AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);` before you use <xref:System.Net.Http.HttpClient>.</span></span> <span data-ttu-id="bccc1-322">HTTP/2 desteği ayarlayarak da etkinleştirebilirsiniz `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT` ortam değişkenine `true` uygulamanızı çalıştırmadan önce.</span><span class="sxs-lookup"><span data-stu-id="bccc1-322">You can also enable HTTP/2 support by setting the `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT` environment variable to `true` before you run your app.</span></span>
 
-```console
-dotnet tool install <packageId>
-```
+<span data-ttu-id="bccc1-323">HTTP/2 etkinleştirilirse, HTTP protokolü sürümünü TLS/ALPN gerçekleştirilir ve sunucu kullanılacağını seçerse, yalnızca HTTP/2 kullanılır.</span><span class="sxs-lookup"><span data-stu-id="bccc1-323">If HTTP/2 is enabled, the HTTP protocol version will be negotiated via TLS/ALPN, and HTTP/2 will only be used if the server selects to use it.</span></span>
 
-<span data-ttu-id="2989f-214">Ayrıca, yerel bildirimi ile araçları listeleyebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="2989f-214">You can also list the tools in the local manifest with:</span></span>
+## <a name="tls-13--openssl-111-on-linux"></a><span data-ttu-id="bccc1-324">TLS 1.3 & Linux'ta OpenSSL 1.1.1</span><span class="sxs-lookup"><span data-stu-id="bccc1-324">TLS 1.3 & OpenSSL 1.1.1 on Linux</span></span>
 
-```console
-dotnet tool list
-```
+<span data-ttu-id="bccc1-325">.NET core artık avantajlarından yararlanır [OpenSSL 1.1.1 TLS 1.3 desteği](https://www.openssl.org/blog/blog/2018/09/11/release111/), verilen ortamda kullanılabilir olduğunda.</span><span class="sxs-lookup"><span data-stu-id="bccc1-325">.NET Core now takes advantage of [TLS 1.3 support in OpenSSL 1.1.1](https://www.openssl.org/blog/blog/2018/09/11/release111/), when it's available in a given environment.</span></span> <span data-ttu-id="bccc1-326">1.3 TLS ile:</span><span class="sxs-lookup"><span data-stu-id="bccc1-326">With TLS 1.3:</span></span>
 
-<span data-ttu-id="2989f-215">Genel olarak hangi araçları yüklü olduğunu görmek için bu seçeneği kullanın:</span><span class="sxs-lookup"><span data-stu-id="2989f-215">To see what tools are installed globally, use:</span></span>
+* <span data-ttu-id="bccc1-327">Defa bağlantı azaltılmış gidiş dönüş istemci ve sunucu arasında gerekli ile geliştirildi.</span><span class="sxs-lookup"><span data-stu-id="bccc1-327">Connection times are improved with reduced round trips required between the client and server.</span></span>
+* <span data-ttu-id="bccc1-328">Geliştirilmiş güvenlik çeşitli eski ve güvenli şifreleme algoritmaları kaldırılmasını nedeniyle.</span><span class="sxs-lookup"><span data-stu-id="bccc1-328">Improved security because of the removal of various obsolete and insecure cryptographic algorithms.</span></span>
 
-```console
-dotnet tool list -g
-```
-
-<span data-ttu-id="2989f-216">Yerel Araçlar bildirim, dosya kullanılabilir, ancak bildiriminde tanımlanan araçları yüklü değil, otomatik olarak indirip bu araçları yüklemek için aşağıdaki komutu kullanın:</span><span class="sxs-lookup"><span data-stu-id="2989f-216">When the local tools manifest file is available, but the tools defined in the manifest have not been installed, use the following command to automatically download and install those tools:</span></span>
-
-```console
-dotnet tool restore
-```
-
-<span data-ttu-id="2989f-217">Yerel bir aracı ile aşağıdaki komutu çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="2989f-217">Run a local tool with the following command:</span></span>
-
-```console
-dotnet tool run <tool-command-name>
-```
-
-<span data-ttu-id="2989f-218">Dotnet, yerel aracı çalıştırdığınızda, bir bildirim geçerli dizin yapısını arar.</span><span class="sxs-lookup"><span data-stu-id="2989f-218">When a local tool is run, dotnet searches for a manifest up the current directory structure.</span></span> <span data-ttu-id="2989f-219">Bir aracı bildirim dosyası bulunduğunda, için istenen aracı aranır.</span><span class="sxs-lookup"><span data-stu-id="2989f-219">When a tool manifest file is found, it is searched for the requested tool.</span></span> <span data-ttu-id="2989f-220">Aracı bildirimi, ancak önbellek bulunursa, kullanıcı hata alır ve çalıştırmaya gerek duymadığı `dotnet tool restore`.</span><span class="sxs-lookup"><span data-stu-id="2989f-220">If the tool is found in the manifest, but not the cache, the user receives an error and needs to run `dotnet tool restore`.</span></span>
-
-<span data-ttu-id="2989f-221">Bir aracı yerel aracı bildirim dosyasından kaldırmak için aşağıdaki komutu çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="2989f-221">To remove a tool from the local tool manifest file, run the following command:</span></span>
-
-```console
-dotnet tool uninstall <packageId>
-```
-
-<span data-ttu-id="2989f-222">Aracı bildirim dosyasını elle düzenlemeye – izin vermek için deposuyla çalışmak için gerekli sürümü güncelleştirmek için bunu tasarlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="2989f-222">The tool manifest file is designed to allow hand editing – which you might do to update the required version for working with the repository.</span></span> <span data-ttu-id="2989f-223">İşte bir örnek `dotnet-tools.json` dosyası:</span><span class="sxs-lookup"><span data-stu-id="2989f-223">Here is an example `dotnet-tools.json` file:</span></span>
-
-```json
-{
-  "version": 1,
-  "isRoot": true,
-  "tools": {
-    "dotnetsay": {
-      "version": "2.1.4",
-      "commands": [
-        "dotnetsay"
-      ]
-    },
-    "t-rex": {
-      "version": "1.0.103",
-      "commands": [
-        "t-rex"
-      ]
-    }
-  }
-}
-```
-
-<span data-ttu-id="2989f-224">Hem genel hem de yerel araçları için çalışma zamanı'nın uyumlu bir sürümü gereklidir.</span><span class="sxs-lookup"><span data-stu-id="2989f-224">For both global and local tools, a compatible version of the runtime is required.</span></span> <span data-ttu-id="2989f-225">Birçok araç NuGet.org üzerinde şu anda .NET Core çalışma zamanı 2.1 hedefleyin.</span><span class="sxs-lookup"><span data-stu-id="2989f-225">Many tools currently on NuGet.org target .NET Core Runtime 2.1.</span></span> <span data-ttu-id="2989f-226">Bu genel olarak veya yerel olarak yüklemek için yükleme yine [NET Core 2.1 çalışma zamanı](https://dotnet.microsoft.com/download/dotnet-core/2.1).</span><span class="sxs-lookup"><span data-stu-id="2989f-226">To install those globally or locally, you would still need to install the [NET Core 2.1 Runtime](https://dotnet.microsoft.com/download/dotnet-core/2.1).</span></span>
-
-## <a name="windows-desktop"></a><span data-ttu-id="2989f-227">Windows masaüstü</span><span class="sxs-lookup"><span data-stu-id="2989f-227">Windows desktop</span></span>
-
-<span data-ttu-id="2989f-228">.NET Core 3.0 Önizleme 1'den başlayarak, WPF ve Windows Forms kullanılarak Windows Masaüstü uygulamaları oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2989f-228">Starting with .NET Core 3.0 Preview 1, you can build Windows desktop applications using WPF and Windows Forms.</span></span> <span data-ttu-id="2989f-229">Bu çerçeveler ile modern denetimleri ve Windows kullanıcı Arabirimi XAML kitaplığından (WinUI) Fluent stil kullanarak da destekler [XAML Adaları](/windows/uwp/xaml-platform/xaml-host-controls).</span><span class="sxs-lookup"><span data-stu-id="2989f-229">These frameworks also support using modern controls and Fluent styling from the Windows UI XAML Library (WinUI) via [XAML islands](/windows/uwp/xaml-platform/xaml-host-controls).</span></span>
-
-<span data-ttu-id="2989f-230">Windows Masaüstü bileşen Windows parçasıdır .NET Core 3.0 SDK.</span><span class="sxs-lookup"><span data-stu-id="2989f-230">The Windows Desktop component is part of the Windows .NET Core 3.0 SDK.</span></span>
-
-<span data-ttu-id="2989f-231">Şunlarla birlikte yeni bir Windows Forms ve WPF uygulaması oluşturabilirsiniz `dotnet` komutları:</span><span class="sxs-lookup"><span data-stu-id="2989f-231">You can create a new WPF or Windows Forms app with the following `dotnet` commands:</span></span>
-
-```console
-dotnet new wpf
-dotnet new winforms
-```
-
-<span data-ttu-id="2989f-232">Visual Studio 2019 ekler **yeni proje** .NET Core 3.0, Windows Forms ve WPF şablonları.</span><span class="sxs-lookup"><span data-stu-id="2989f-232">Visual Studio 2019 adds **New Project** templates for .NET Core 3.0 Windows Forms and WPF.</span></span> <span data-ttu-id="2989f-233">Tasarımcılar henüz yine de desteklenir.</span><span class="sxs-lookup"><span data-stu-id="2989f-233">Designers are still not yet supported.</span></span> <span data-ttu-id="2989f-234">Ve açmak, başlatmak ve Visual Studio 2019 bu projelerde hata ayıklama.</span><span class="sxs-lookup"><span data-stu-id="2989f-234">And you can open, launch, and debug these projects in Visual Studio 2019.</span></span>
-
-<span data-ttu-id="2989f-235">Visual Studio 2017 15.9 yeteneği ekler [.NET Core önizlemelerini etkinleştir](https://devblogs.microsoft.com/dotnet/net-core-tooling-update-for-visual-studio-2017-version-15-9/), ancak bu özelliği etkinleştirmek gereken ve desteklenen bir senaryo değildir.</span><span class="sxs-lookup"><span data-stu-id="2989f-235">Visual Studio 2017 15.9 adds the ability to [enable .NET Core previews](https://devblogs.microsoft.com/dotnet/net-core-tooling-update-for-visual-studio-2017-version-15-9/), but you need to turn that feature on, and it's not a supported scenario.</span></span>
-
-<span data-ttu-id="2989f-236">Yeni Proje birkaç eklemelerle mevcut .NET Core projeleri ile aynıdır.</span><span class="sxs-lookup"><span data-stu-id="2989f-236">The new projects are the same as existing .NET Core projects, with a couple additions.</span></span> <span data-ttu-id="2989f-237">Temel .NET Core konsol projesi ve temel bir Windows Forms ve WPF projesi bir karşılaştırması aşağıdadır.</span><span class="sxs-lookup"><span data-stu-id="2989f-237">Here is the comparison of the basic .NET Core console project and a basic Windows Forms and WPF project.</span></span>
-
-<span data-ttu-id="2989f-238">Bir .NET Core konsol projesi kullandığından `Microsoft.NET.Sdk` SDK ve .NET Core 3.0 üzerinden üzerinde bir bağımlılık bildirir `netcoreapp3.0` hedef çerçeve.</span><span class="sxs-lookup"><span data-stu-id="2989f-238">In a .NET Core console project, the project uses the `Microsoft.NET.Sdk` SDK and declares a dependency on .NET Core 3.0 via the `netcoreapp3.0` target framework.</span></span> <span data-ttu-id="2989f-239">Bir Windows masaüstü uygulaması oluşturmak için kullanın `Microsoft.NET.Sdk.WindowsDesktop` SDK ve kullanmak için hangi UI çerçevesi seçin:</span><span class="sxs-lookup"><span data-stu-id="2989f-239">To create a Windows Desktop app, use the `Microsoft.NET.Sdk.WindowsDesktop` SDK and choose which UI framework to use:</span></span>
-
-```diff
--<Project Sdk="Microsoft.NET.Sdk">
-+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
-+   <UseWPF>true</UseWPF>
-  </PropertyGroup>
-</Project>
-```
-
-<span data-ttu-id="2989f-240">Windows Forms, WPF seçmek için ayarlanmış `UseWindowsForms` yerine `UseWPF`:</span><span class="sxs-lookup"><span data-stu-id="2989f-240">To choose Windows Forms over WPF, set `UseWindowsForms` instead of `UseWPF`:</span></span>
-
-```diff
-<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
--   <UseWPF>true</UseWPF>
-+   <UseWindowsForms>true</UseWindowsForms>
-  </PropertyGroup>
-</Project>
-```
-
-<span data-ttu-id="2989f-241">Her ikisi de `UseWPF` ve `UseWindowsForms` ayarlanabilir `true` uygulama için bir Windows Forms iletişim kutusu, bir WPF denetimi barındırmayla örnek her iki çerçeveleri kullanıyorsa.</span><span class="sxs-lookup"><span data-stu-id="2989f-241">Both `UseWPF` and `UseWindowsForms` can be set to `true` if the app uses both frameworks, for example when a Windows Forms dialog is hosting a WPF control.</span></span>
-
-<span data-ttu-id="2989f-242">Geri bildiriminizi Lütfen paylaşım [dotnet/winforms](https://github.com/dotnet/winforms/issues), [dotnet/wpf](https://github.com/dotnet/wpf/issues) ve [dotnet/core](https://github.com/dotnet/core/issues) depolar.</span><span class="sxs-lookup"><span data-stu-id="2989f-242">Please share your feedback on the [dotnet/winforms](https://github.com/dotnet/winforms/issues),  [dotnet/wpf](https://github.com/dotnet/wpf/issues) and [dotnet/core](https://github.com/dotnet/core/issues) repos.</span></span>
-
-## <a name="msix-deployment-for-windows-desktop"></a><span data-ttu-id="2989f-243">Windows Masaüstü için MSIX dağıtım</span><span class="sxs-lookup"><span data-stu-id="2989f-243">MSIX Deployment for Windows Desktop</span></span>
-
-<span data-ttu-id="2989f-244">[MSIX](https://docs.microsoft.com/windows/msix/) yeni bir Windows uygulama paketi biçimi.</span><span class="sxs-lookup"><span data-stu-id="2989f-244">[MSIX](https://docs.microsoft.com/windows/msix/) is a new Windows app package format.</span></span> <span data-ttu-id="2989f-245">.NET Core 3.0 Windows 10 Masaüstü uygulamaları dağıtmak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="2989f-245">It can be used to deploy .NET Core 3.0 desktop applications to Windows 10.</span></span>
-
-<span data-ttu-id="2989f-246">[Windows uygulaması paketleme projesi](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), Visual Studio 2019 bulunan MSIX paketlerle oluşturmanıza olanak tanır [müstakil](../deploying/index.md#self-contained-deployments-scd) .NET Core uygulamaları.</span><span class="sxs-lookup"><span data-stu-id="2989f-246">The [Windows Application Packaging Project](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), available in Visual Studio 2019, allows you to create MSIX packages with [self-contained](../deploying/index.md#self-contained-deployments-scd) .NET Core applications.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="2989f-247">.NET Core proje dosyası içinde desteklenen çalışma zamanları belirtmelisiniz `<RuntimeIdentifiers>` özelliği:</span><span class="sxs-lookup"><span data-stu-id="2989f-247">The .NET Core project file must specify the supported runtimes in the `<RuntimeIdentifiers>` property:</span></span>
->
-> ```xml
-> <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
-> ```
-
-## <a name="fast-built-in-json-support"></a><span data-ttu-id="2989f-248">Hızlı yerleşik JSON desteği</span><span class="sxs-lookup"><span data-stu-id="2989f-248">Fast built-in JSON support</span></span>
-
-<span data-ttu-id="2989f-249">.NET ekosisteminin yararlandı [ **Json.NET** ](https://www.newtonsoft.com/json) ve iyi seçenekleri olmaya devam diğer popüler JSON kitaplıkları.</span><span class="sxs-lookup"><span data-stu-id="2989f-249">The .NET ecosystem has relied on [**Json.NET**](https://www.newtonsoft.com/json) and other popular JSON libraries, which continue to be good choices.</span></span> <span data-ttu-id="2989f-250">**Json.NET** UTF-16 başlık altında olan kendi taban datatype .NET dizeleri kullanır.</span><span class="sxs-lookup"><span data-stu-id="2989f-250">**Json.NET** uses .NET strings as its base datatype, which are UTF-16 under the hood.</span></span>
-
-<span data-ttu-id="2989f-251">Yeni yerleşik JSON desteği, yüksek performanslı, düşük ayırma ve temel `Span<byte>`.</span><span class="sxs-lookup"><span data-stu-id="2989f-251">The new built-in JSON support is high-performance, low allocation, and based on `Span<byte>`.</span></span> <span data-ttu-id="2989f-252">.NET Core 3.0 için yeni ana JSON ile ilgili üç eklenmiştir `System.Text.Json` ad alanı.</span><span class="sxs-lookup"><span data-stu-id="2989f-252">Three new main JSON-related types have been added to .NET Core 3.0 the `System.Text.Json` namespace.</span></span>
-
-### <a name="utf8jsonreader"></a><span data-ttu-id="2989f-253">Utf8JsonReader</span><span class="sxs-lookup"><span data-stu-id="2989f-253">Utf8JsonReader</span></span>
-
-<span data-ttu-id="2989f-254">`System.Text.Json.Utf8JsonReader` yüksek performanslı, düşük ayırma, yalnızca iletme Okuyucu için UTF-8 kodlamalı JSON metin okuma, bir `ReadOnlySpan<byte>`.</span><span class="sxs-lookup"><span data-stu-id="2989f-254">`System.Text.Json.Utf8JsonReader` is a high-performance, low allocation, forward-only reader for UTF-8 encoded JSON text, read from a `ReadOnlySpan<byte>`.</span></span> <span data-ttu-id="2989f-255">`Utf8JsonReader` Özel çözümleyiciler ve deserializers oluşturmak için kullanılan bir temel, alt düzey, türüdür.</span><span class="sxs-lookup"><span data-stu-id="2989f-255">The `Utf8JsonReader` is a foundational, low-level type, that can be leveraged to build custom parsers and deserializers.</span></span> <span data-ttu-id="2989f-256">Kullanarak yeni bir JSON yükü okuma `Utf8JsonReader` reader'ı kullanarak daha hızlı bir şekilde x 2 **Json.NET**.</span><span class="sxs-lookup"><span data-stu-id="2989f-256">Reading through a JSON payload using the new `Utf8JsonReader` is 2x faster than using the reader from **Json.NET**.</span></span> <span data-ttu-id="2989f-257">JSON belirteçleri (UTF-16) dizeler olarak actualize gerekene kadar bırakmaz.</span><span class="sxs-lookup"><span data-stu-id="2989f-257">It does not allocate until you need to actualize JSON tokens as (UTF-16) strings.</span></span>
-
-<span data-ttu-id="2989f-258">Bu yeni API'yi aşağıdaki bileşenleri içerir:</span><span class="sxs-lookup"><span data-stu-id="2989f-258">This new API will include the following components:</span></span>
-
-* <span data-ttu-id="2989f-259">Önizleme 1'de: JSON Okuyucu (sıralı erişim)</span><span class="sxs-lookup"><span data-stu-id="2989f-259">In Preview 1: JSON reader (sequential access)</span></span>
-* <span data-ttu-id="2989f-260">Sonraki yakında: JSON yazıcısı, DOM (rastgele erişim) poco serileştirici poco seri durumdan çıkarıcının</span><span class="sxs-lookup"><span data-stu-id="2989f-260">Coming next: JSON writer, DOM (random access), poco serializer, poco deserializer</span></span>
-
-<span data-ttu-id="2989f-261">Temel bir okuyucu döngü için işte `Utf8JsonReader` başlangıç noktası olarak kullanılabilir:</span><span class="sxs-lookup"><span data-stu-id="2989f-261">Here is the basic reader loop for the `Utf8JsonReader` that can be used as a starting point:</span></span>
-
-```csharp
-using System.Text.Json;
-
-public static void Utf8JsonReaderLoop(ReadOnlySpan<byte> dataUtf8)
-{
-    var json = new Utf8JsonReader(dataUtf8, isFinalBlock: true, state: default);
-
-    while (json.Read())
-    {
-        JsonTokenType tokenType = json.TokenType;
-        ReadOnlySpan<byte> valueSpan = json.ValueSpan;
-        switch (tokenType)
-        {
-            case JsonTokenType.StartObject:
-            case JsonTokenType.EndObject:
-                break;
-            case JsonTokenType.StartArray:
-            case JsonTokenType.EndArray:
-                break;
-            case JsonTokenType.PropertyName:
-                break;
-            case JsonTokenType.String:
-                string valueString = json.GetStringValue();
-                break;
-            case JsonTokenType.Number:
-                if (!json.TryGetInt32Value(out int valueInteger))
-                {
-                    throw new FormatException();
-                }
-                break;
-            case JsonTokenType.True:
-            case JsonTokenType.False:
-                bool valueBool = json.GetBooleanValue();
-                break;
-            case JsonTokenType.Null:
-                break;
-            default:
-                throw new ArgumentException();
-        }
-    }
-
-    dataUtf8 = dataUtf8.Slice((int)json.BytesConsumed);
-    JsonReaderState state = json.CurrentState;
-}
-```
-
-### <a name="utf8jsonwriter"></a><span data-ttu-id="2989f-262">Utf8JsonWriter</span><span class="sxs-lookup"><span data-stu-id="2989f-262">Utf8JsonWriter</span></span>
-
-<span data-ttu-id="2989f-263">`System.Text.Json.Utf8JsonWriter` bir yüksek performanslı, genel .NET türleri JSON metni yalnızca iletme UTF-8 olarak kodlanmış biçimde yazmak ister önbelleğe alınmamış, sağlar `String`, `Int32`, ve `DateTime`.</span><span class="sxs-lookup"><span data-stu-id="2989f-263">`System.Text.Json.Utf8JsonWriter` provides a high-performance, non-cached, forward-only way to write UTF-8 encoded JSON text from common .NET types like `String`, `Int32`, and `DateTime`.</span></span> <span data-ttu-id="2989f-264">Okuyucu gibi özel seri hale getiricileri genişletme oluşturmak için kullanılan bir temel, alt düzey türü, yazardır.</span><span class="sxs-lookup"><span data-stu-id="2989f-264">Like the reader, the writer is a foundational, low-level type, that can be leveraged to build custom serializers.</span></span> <span data-ttu-id="2989f-265">Kullanarak yeni bir JSON yükünü yazmayı `Utf8JsonWriter` yazıcıdan kullanarak daha hızlı % 30-80'idir **Json.NET** ve ayrılamadı.</span><span class="sxs-lookup"><span data-stu-id="2989f-265">Writing a JSON payload using the new `Utf8JsonWriter` is 30-80% faster than using the writer from **Json.NET** and does not allocate.</span></span>
-
-<span data-ttu-id="2989f-266">İşte bir örnek kullanımı `Utf8JsonWriter` başlangıç noktası olarak kullanılabilir:</span><span class="sxs-lookup"><span data-stu-id="2989f-266">Here is a sample usage of the `Utf8JsonWriter` that can be used as a starting point:</span></span>
-
-```csharp
-static int WriteJson(IBufferWriter<byte> output, long[] extraData)
-{
-    var json = new Utf8JsonWriter(output, state: default);
-
-    json.WriteStartObject();
-
-    json.WriteNumber("age", 15, escape: false);
-    json.WriteString("date", DateTime.Now);
-    json.WriteString("first", "John");
-    json.WriteString("last", "Smith");
-
-    json.WriteStartArray("phoneNumbers", escape: false);
-    json.WriteStringValue("425-000-1212", escape: false);
-    json.WriteStringValue("425-000-1213");
-    json.WriteEndArray();
-
-    json.WriteStartObject("address");
-    json.WriteString("street", "1 Microsoft Way");
-    json.WriteString("city", "Redmond");
-    json.WriteNumber("zip", 98052);
-    json.WriteEndObject();
-
-    json.WriteStartArray("ExtraArray");
-    for (var i = 0; i < extraData.Length; i++)
-    {
-        json.WriteNumberValue(extraData[i]);
-    }
-    json.WriteEndArray();
-
-    json.WriteEndObject();
-
-    json.Flush(isFinalBlock: true);
-
-    return (int)json.BytesWritten;
-}
-```
-
-<span data-ttu-id="2989f-267">`Utf8JsonWriter` Kabul `IBufferWriter<byte>` zaman uyumlu olarak json verilerini yazmak için çıkış konumunu ve çağıran olarak gibi somut bir uygulama sunmak amacıyla gerekir.</span><span class="sxs-lookup"><span data-stu-id="2989f-267">The `Utf8JsonWriter` accepts `IBufferWriter<byte>` as the output location to synchronously write the json data into, and you as the caller need to provide a concrete implementation.</span></span> <span data-ttu-id="2989f-268">Platform şu anda bu arabirimi uygulaması içermez.</span><span class="sxs-lookup"><span data-stu-id="2989f-268">The platform does not currently include an implementation of this interface.</span></span> <span data-ttu-id="2989f-269">Bir örneği `IBufferWriter<byte>`, bkz: <https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35>.</span><span class="sxs-lookup"><span data-stu-id="2989f-269">For an example of `IBufferWriter<byte>`, see <https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35>.</span></span>
-
-### <a name="jsondocument"></a><span data-ttu-id="2989f-270">JsonDocument</span><span class="sxs-lookup"><span data-stu-id="2989f-270">JsonDocument</span></span>
-
-<span data-ttu-id="2989f-271">`System.Text.Json.JsonDocument` üst kısmındaki yerleşik `Utf8JsonReader`.</span><span class="sxs-lookup"><span data-stu-id="2989f-271">`System.Text.Json.JsonDocument` is built on top of the `Utf8JsonReader`.</span></span> <span data-ttu-id="2989f-272">`JsonDocument` JSON verilerini ayrıştırma ve bir salt okunur belge nesne modeli (DOM), derleme olanağı, rastgele erişim ve numaralandırma desteklemek için sorgulanabilir sağlar.</span><span class="sxs-lookup"><span data-stu-id="2989f-272">The `JsonDocument` provides the ability to parse JSON data and build a read-only Document Object Model (DOM) that can be queried to support random access and enumeration.</span></span> <span data-ttu-id="2989f-273">Verileri oluşturan JSON öğeleri aracılığıyla erişilebilir `JsonElement` tarafından sunulan tür `JsonDocument` adlı bir özellik olarak `RootElement`.</span><span class="sxs-lookup"><span data-stu-id="2989f-273">The JSON elements that compose the data can be accessed via the `JsonElement` type which is exposed by the `JsonDocument` as a property called `RootElement`.</span></span> <span data-ttu-id="2989f-274">`JsonElement` Ortak .NET türlerine JSON metnine dönüştürmek için API'leri ile birlikte JSON dizi ve nesne numaralandırıcıları içerir.</span><span class="sxs-lookup"><span data-stu-id="2989f-274">The `JsonElement` contains the JSON array and object enumerators along with APIs to convert JSON text to common .NET types.</span></span> <span data-ttu-id="2989f-275">Tipik bir JSON yükü ayrıştırma ve tüm kullanarak üyelerine erişilmesi `JsonDocument` 2-3 x daha hızlı bir şekilde **Json.NET** çok az ayırmaları ile verileri (örneğin < 1 MB) makul bir şekilde boyutlandırılmış için.</span><span class="sxs-lookup"><span data-stu-id="2989f-275">Parsing a typical JSON payload and accessing all its members using the `JsonDocument` is 2-3x faster than **Json.NET** with very little allocations for data that is reasonably sized (i.e. < 1 MB).</span></span>
-
-<span data-ttu-id="2989f-276">İşte bir örnek kullanımı `JsonDocument` ve `JsonElement` başlangıç noktası olarak kullanılabilir:</span><span class="sxs-lookup"><span data-stu-id="2989f-276">Here is a sample usage of the `JsonDocument` and `JsonElement` that can be used as a starting point:</span></span>
-
-```csharp
-static double ParseJson()
-{
-    const string json = " [ { \"name\": \"John\" }, [ \"425-000-1212\", 15 ], { \"grades\": [ 90, 80, 100, 75 ] } ]";
-
-    double average = -1;
-
-    using (JsonDocument doc = JsonDocument.Parse(json))
-    {
-        JsonElement root = doc.RootElement;
-        JsonElement info = root[1];
-
-        string phoneNumber = info[0].GetString();
-        int age = info[1].GetInt32();
-
-        JsonElement grades = root[2].GetProperty("grades");
-
-        double sum = 0;
-        foreach (JsonElement grade in grades.EnumerateArray())
-        {
-            sum += grade.GetInt32();
-        }
-
-        int numberOfCourses = grades.GetArrayLength();
-        average = sum / numberOfCourses;
-    }
-
-    return average;
-}
-```
-
-## <a name="assembly-unloadability"></a><span data-ttu-id="2989f-277">Derleme Unloadability</span><span class="sxs-lookup"><span data-stu-id="2989f-277">Assembly Unloadability</span></span>
-
-<span data-ttu-id="2989f-278">Derleme unloadability, yeni bir özellik olan `AssemblyLoadContext`.</span><span class="sxs-lookup"><span data-stu-id="2989f-278">Assembly unloadability is a new capability of `AssemblyLoadContext`.</span></span> <span data-ttu-id="2989f-279">Bu yeni özellik, yalnızca birkaç yeni API'ler ile kullanıma sunulan bir API açısından büyük ölçüde saydamdır.</span><span class="sxs-lookup"><span data-stu-id="2989f-279">This new feature is largely transparent from an API perspective, exposed with just a few new APIs.</span></span> <span data-ttu-id="2989f-280">Bu, örneklenen türü statik alanları ve derlemenin kendisini tüm bellek serbest bırakma kaldırılacak bir yükleyici bağlamı sağlar.</span><span class="sxs-lookup"><span data-stu-id="2989f-280">It enables a loader context to be unloaded, releasing all memory for instantiated types, static fields and for the assembly itself.</span></span> <span data-ttu-id="2989f-281">Bir uygulama, yükleme ve bu mekanizma aracılığıyla derlemeler sonsuza kadar bir bellek sızıntısı almadan kaldırma başlatabilmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="2989f-281">An application should be able to load and unload assemblies via this mechanism forever without experiencing a memory leak.</span></span>
-
-<span data-ttu-id="2989f-282">Bu yeni özellik, benzer senaryoları için kullanılabilir:</span><span class="sxs-lookup"><span data-stu-id="2989f-282">This new capability can be used for scenarios similar to:</span></span>
-
-* <span data-ttu-id="2989f-283">Yükleme ve kaldırma dinamik eklenti gerekli olduğu senaryolar eklentisi.</span><span class="sxs-lookup"><span data-stu-id="2989f-283">Plugin scenarios where dynamic plugin loading and unloading is required.</span></span>
-* <span data-ttu-id="2989f-284">Dinamik derleme, çalışan ve sonra kodu temizleme.</span><span class="sxs-lookup"><span data-stu-id="2989f-284">Dynamically compiling, running and then flushing code.</span></span> <span data-ttu-id="2989f-285">Web siteleri, komut dosyası motorları, vb. için kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="2989f-285">Useful for web sites, scripting engines, etc.</span></span>
-* <span data-ttu-id="2989f-286">Derlemeler için iç denetim (gibi ReflectionOnlyLoad), ancak Yükleniyor [MetadataLoadContext](#type-metadataloadcontext) (Önizleme 1'de yayımlanan) daha iyi bir seçenek çoğu durumda olacaktır.</span><span class="sxs-lookup"><span data-stu-id="2989f-286">Loading assemblies for introspection (like ReflectionOnlyLoad), although [MetadataLoadContext](#type-metadataloadcontext) (released in Preview 1) will be a better choice in many cases.</span></span>
-
-<span data-ttu-id="2989f-287">Daha fazla bilgi için [kullanarak Unloadability](https://github.com/dotnet/coreclr/pull/22221) belge.</span><span class="sxs-lookup"><span data-stu-id="2989f-287">For more information, see the [Using Unloadability](https://github.com/dotnet/coreclr/pull/22221) document.</span></span>
-
-<span data-ttu-id="2989f-288">Derleme kaldırılması, yönetilen nesneleri bir yükleyici bağlamı dışında tüm başvurularını anladım ve yönetilen emin olmak için önemli dikkat gerektirir.</span><span class="sxs-lookup"><span data-stu-id="2989f-288">Assembly unloading requires significant care to ensure that all references to managed objects from outside a loader context are understood and managed.</span></span> <span data-ttu-id="2989f-289">Yükleyici bağlamı kaldırılacak istendiğinde herhangi bir dış başvuruları yükleyici bağlamı yalnızca kendisine tutarlı olmasını başvurulmayan verilmiş olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="2989f-289">When the loader context is requested to be unloaded, any outside references need to have been unreferenced so that the loader context is self-consistent only to itself.</span></span>
-
-<span data-ttu-id="2989f-290">Derleme unloadability .NET Framework'teki uygulama, .NET Core ile desteklenmeyen etki alanları (uygulama etki alanları) tarafından sağlandı.</span><span class="sxs-lookup"><span data-stu-id="2989f-290">Assembly unloadability was provided in the .NET Framework by Application Domains (AppDomains), which are not supported with .NET Core.</span></span> <span data-ttu-id="2989f-291">Uygulama etki alanları, hem avantajları ve sınırlamaları yeni Bu modele kıyasla vardı.</span><span class="sxs-lookup"><span data-stu-id="2989f-291">AppDomains had both benefits and limitations compared to this new model.</span></span> <span data-ttu-id="2989f-292">Uygulama etki alanları için karşılaştırıldığında daha esnek ve yüksek performanslı olmasını bu yeni yükleyici model göz önünde bulundurun.</span><span class="sxs-lookup"><span data-stu-id="2989f-292">Consider this new loader model to be more flexible and higher performant when compared to AppDomains.</span></span>
-
-## <a name="windows-native-interop"></a><span data-ttu-id="2989f-293">Windows yerel birlikte çalışabilirliği</span><span class="sxs-lookup"><span data-stu-id="2989f-293">Windows Native Interop</span></span>
-
-<span data-ttu-id="2989f-294">Windows formunda düz C API'leri, COM ve WinRT zengin bir yerel API sunar.</span><span class="sxs-lookup"><span data-stu-id="2989f-294">Windows offers a rich native API, in the form of flat C APIs, COM, and WinRT.</span></span> <span data-ttu-id="2989f-295">.NET Core 1.0 sürümünden itibaren **P/Invoke** destek içerir.</span><span class="sxs-lookup"><span data-stu-id="2989f-295">Since .NET Core 1.0, **P/Invoke** has been supported.</span></span> <span data-ttu-id="2989f-296">Özelliği artık .NET Core 3.0 ile desteği **COM API işlemi** ve **etkinleştirme WinRT API'lar** eklendi.</span><span class="sxs-lookup"><span data-stu-id="2989f-296">Now with .NET Core 3.0, support for the ability to **CoCreate COM APIs** and **Activate WinRT APIs** has been added.</span></span>
-
-<span data-ttu-id="2989f-297">COM ile kullanma örneği gördüğünüz [Excel Demo kaynak kodu](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).</span><span class="sxs-lookup"><span data-stu-id="2989f-297">You can see an example of using COM with the [Excel Demo source code](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).</span></span>
-
-## <a name="type-sequencereader"></a><span data-ttu-id="2989f-298">Tür: SequenceReader</span><span class="sxs-lookup"><span data-stu-id="2989f-298">Type: SequenceReader</span></span>
-
-<span data-ttu-id="2989f-299">.NET Core 3. 0'da, `System.Buffers.SequenceReader` Okuyucu için olarak kullanılabilecek eklendi `ReadOnlySequence<T>`.</span><span class="sxs-lookup"><span data-stu-id="2989f-299">In .NET Core 3.0, `System.Buffers.SequenceReader` has been added which can be used as a reader for `ReadOnlySequence<T>`.</span></span> <span data-ttu-id="2989f-300">Hızlı, yüksek performanslı, böylece düşük ayırma çözümlenmesi `System.IO.Pipelines` birden çok yedekleme arabellekler çapraz veri.</span><span class="sxs-lookup"><span data-stu-id="2989f-300">This allows easy, high performance, low allocation parsing of `System.IO.Pipelines` data that can cross multiple backing buffers.</span></span>
-
-<span data-ttu-id="2989f-301">Aşağıdaki örnek bir girişi sonu `Sequence` geçerli içine `CR/LF` satırları ayrılmış:</span><span class="sxs-lookup"><span data-stu-id="2989f-301">The following example breaks an input `Sequence` into valid `CR/LF` delimited lines:</span></span>
-
-```csharp
-private static ReadOnlySpan<byte> CRLF => new byte[] { (byte)'\r', (byte)'\n' };
-
-public static void ReadLines(ReadOnlySequence<byte> sequence)
-{
-    SequenceReader<byte> reader = new SequenceReader<byte>(sequence);
-
-    while (!reader.End)
-    {
-        if (!reader.TryReadToAny(out ReadOnlySpan<byte> line, CRLF, advancePastDelimiter:false))
-        {
-            // Couldn't find another delimiter
-            // ...
-        }
-
-        if (!reader.IsNext(CRLF, advancePast: true))
-        {
-            // Not a good CR/LF pair
-            // ...
-        }
-
-        // line is valid, process
-        ProcessLine(line);
-    }
-}
-```
-
-## <a name="type-metadataloadcontext"></a><span data-ttu-id="2989f-302">Tür: MetadataLoadContext</span><span class="sxs-lookup"><span data-stu-id="2989f-302">Type: MetadataLoadContext</span></span>
-
-<span data-ttu-id="2989f-303">`MetadataLoadContext` Türü okuma derleme sağlayan eklenmiş yapanın uygulama etki alanı etkilemeden meta verileri.</span><span class="sxs-lookup"><span data-stu-id="2989f-303">The `MetadataLoadContext` type has been added that enables reading assembly metadata without affecting the caller’s application domain.</span></span> <span data-ttu-id="2989f-304">Derlemeleri farklı mimariler ve geçerli çalışma zamanı ortamı daha platformlar için oluşturulmuş derlemeler de dahil olmak üzere veriler olarak okunur.</span><span class="sxs-lookup"><span data-stu-id="2989f-304">Assemblies are read as data, including assemblies built for different architectures and platforms than the current runtime environment.</span></span> <span data-ttu-id="2989f-305">`MetadataLoadContext` ile çakışıyor <xref:System.Reflection.Assembly.ReflectionOnlyLoad*>, hangi, yalnızca .NET Framework içinde kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="2989f-305">`MetadataLoadContext` overlaps with the <xref:System.Reflection.Assembly.ReflectionOnlyLoad*>, which is only available in the .NET Framework.</span></span>
-
-<span data-ttu-id="2989f-306">`MetdataLoadContext` kullanılabilir [System.Reflection.MetadataLoadContext paket](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext).</span><span class="sxs-lookup"><span data-stu-id="2989f-306">`MetdataLoadContext` is available in the [System.Reflection.MetadataLoadContext package](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext).</span></span> <span data-ttu-id="2989f-307">.NET Standard 2.0 bir pakettir.</span><span class="sxs-lookup"><span data-stu-id="2989f-307">It is a .NET Standard 2.0 package.</span></span>
-
-<span data-ttu-id="2989f-308">`MetadataLoadContext` Benzer olan API'leri gösterir <xref:System.Runtime.Loader.AssemblyLoadContext> yazın, ancak bu türüne göre değil.</span><span class="sxs-lookup"><span data-stu-id="2989f-308">The `MetadataLoadContext` exposes APIs similar to the <xref:System.Runtime.Loader.AssemblyLoadContext> type, but is not based on that type.</span></span> <span data-ttu-id="2989f-309">Benzer şekilde <xref:System.Runtime.Loader.AssemblyLoadContext>, `MetadataLoadContext` evreni yükleniyor yalıtılmış bir derlemenin içinden yükleme derlemelerini etkinleştirir.</span><span class="sxs-lookup"><span data-stu-id="2989f-309">Much like <xref:System.Runtime.Loader.AssemblyLoadContext>, the `MetadataLoadContext` enables loading assemblies within an isolated assembly loading universe.</span></span> <span data-ttu-id="2989f-310">`MetdataLoadContext` API'leri dönüş <xref:System.Reflection.Assembly> bilinen yansıma API'leri kullanımını etkinleştirme nesneleri.</span><span class="sxs-lookup"><span data-stu-id="2989f-310">`MetdataLoadContext` APIs return <xref:System.Reflection.Assembly> objects, enabling the use of familiar reflection APIs.</span></span> <span data-ttu-id="2989f-311">Yürütme API'leri gibi odaklı [MethodBase.Invoke](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/src/System/Reflection/TypeLoading/Methods/RoMethod.cs#L127), izin verilmeyen ve InvalidOperationException oluşturur.</span><span class="sxs-lookup"><span data-stu-id="2989f-311">Execution-oriented APIs, such as [MethodBase.Invoke](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/src/System/Reflection/TypeLoading/Methods/RoMethod.cs#L127), are not allowed and will throw InvalidOperationException.</span></span>
-
-<span data-ttu-id="2989f-312">Aşağıdaki örnek, belirli bir arabirimi uygulayan bir derlemede somut tür bulmak gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="2989f-312">The following sample demonstrates how to find concrete types in an assembly that implements a given interface:</span></span>
-
-```csharp
-var paths = new string[] {@"C:\myapp\mscorlib.dll", @"C:\myapp\myapp.dll"};
-var resolver = new PathAssemblyResolver(paths);
-using (var lc = new MetadataLoadContext(resolver))
-{
-    Assembly a = lc.LoadFromAssemblyName("myapp");
-    Type myInterface = a.GetType("MyApp.IPluginInterface");
-    foreach (Type t in a.GetTypes())
-    {
-        if (t.IsClass && myInterface.IsAssignableFrom(t))
-            Console.WriteLine($"Class {t.FullName} implements IPluginInterface");
-    }
-}
-```
-
-<span data-ttu-id="2989f-313">Senaryolar için `MetadataLoadContext` tasarım zamanı özellikleri, araçları, derleme zamanı ve çalışma zamanı açık'li veri olarak bir derleme kümesi inceleyin ve tüm dosya kilitleri olması gereken özellikleri ve İnceleme sonra serbest bırakılan bellek gerçekleştirilir.</span><span class="sxs-lookup"><span data-stu-id="2989f-313">Scenarios for `MetadataLoadContext` include design-time features, build-time tooling, and runtime light-up features that need to inspect a set of assemblies as data and have all file locks and memory freed after inspection is performed.</span></span>
-
-<span data-ttu-id="2989f-314">`MetadataLoadContext` Çözümleyici sınıfı geçirilen yapıcısına sahiptir.</span><span class="sxs-lookup"><span data-stu-id="2989f-314">The `MetadataLoadContext` has a resolver class passed to its constructor.</span></span> <span data-ttu-id="2989f-315">Çözümleyici'nin iş yüklenmesidir bir `Assembly` verilen kendi `AssemblyName`.</span><span class="sxs-lookup"><span data-stu-id="2989f-315">The resolver's job is to load an `Assembly` given its `AssemblyName`.</span></span> <span data-ttu-id="2989f-316">Özet çözümleyici sınıfı türetilen `MetadataAssemblyResolver` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="2989f-316">The resolver class derives from the abstract `MetadataAssemblyResolver` class.</span></span> <span data-ttu-id="2989f-317">Yol tabanlı senaryoları için çözümleyici uygulaması ile sağlanan `PathAssemblyResolver`.</span><span class="sxs-lookup"><span data-stu-id="2989f-317">An implementation of the resolver for path-based scenarios is provided with `PathAssemblyResolver`.</span></span>
-
-<span data-ttu-id="2989f-318">[MetadataLoadContext testleri](https://github.com/dotnet/corefx/tree/master/src/System.Reflection.MetadataLoadContext/tests/src/Tests) birçok kullanım durumları gösterir.</span><span class="sxs-lookup"><span data-stu-id="2989f-318">The [MetadataLoadContext tests](https://github.com/dotnet/corefx/tree/master/src/System.Reflection.MetadataLoadContext/tests/src/Tests) demonstrate many use cases.</span></span> <span data-ttu-id="2989f-319">[Derleme testleri](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/tests/src/Tests/Assembly/AssemblyTests.cs) başlatmak için iyi bir yerdir.</span><span class="sxs-lookup"><span data-stu-id="2989f-319">The [Assembly tests](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/tests/src/Tests/Assembly/AssemblyTests.cs) are a good place to start.</span></span>
-
-## <a name="tls-13--openssl-111-on-linux"></a><span data-ttu-id="2989f-320">TLS 1.3 & Linux'ta OpenSSL 1.1.1</span><span class="sxs-lookup"><span data-stu-id="2989f-320">TLS 1.3 & OpenSSL 1.1.1 on Linux</span></span>
-
-<span data-ttu-id="2989f-321">.NET core artık avantajlarından yararlanın [OpenSSL 1.1.1 TLS 1.3 desteği](https://www.openssl.org/blog/blog/2018/09/11/release111/), verilen ortamda kullanılabilir olduğunda.</span><span class="sxs-lookup"><span data-stu-id="2989f-321">.NET Core will now take advantage of [TLS 1.3 support in OpenSSL 1.1.1](https://www.openssl.org/blog/blog/2018/09/11/release111/), when it is available in a given environment.</span></span> <span data-ttu-id="2989f-322">Her TLS 1,3 birden çok avantaj vardır [OpenSSL takım](https://www.openssl.org/blog/blog/2018/09/11/release111/):</span><span class="sxs-lookup"><span data-stu-id="2989f-322">There are multiple benefits of TLS 1.3, per the [OpenSSL team](https://www.openssl.org/blog/blog/2018/09/11/release111/):</span></span>
-
-* <span data-ttu-id="2989f-323">Geliştirilmiş bağlantı süreleri nedeniyle bir azalma istemci ve sunucu arasında gerekli gidiş dönüş sayısı.</span><span class="sxs-lookup"><span data-stu-id="2989f-323">Improved connection times due to a reduction in the number of round trips required between the client and server.</span></span>
-
-* <span data-ttu-id="2989f-324">Geliştirilmiş güvenlik çeşitli eski ve güvenli şifreleme algoritmaları kaldırılmasını ve daha fazla bağlantı el sıkışması şifrelenmesi nedeniyle.</span><span class="sxs-lookup"><span data-stu-id="2989f-324">Improved security due to the removal of various obsolete and insecure cryptographic algorithms and encryption of more of the connection handshake.</span></span>
-
-<span data-ttu-id="2989f-325">.NET core 3.0 Önizleme 1 yararlanarak özellikli **OpenSSL 1.1.1**, **OpenSSL 1.1.0**, veya **OpenSSL 1.0.2** (ne olursa olsun bulunan en iyi, bir Linux sisteminde sürümüdür).</span><span class="sxs-lookup"><span data-stu-id="2989f-325">.NET Core 3.0 Preview 1 is capable of utilizing **OpenSSL 1.1.1**, **OpenSSL 1.1.0**, or **OpenSSL 1.0.2** (whatever the best version found is, on a Linux system).</span></span>  <span data-ttu-id="2989f-326">Zaman **OpenSSL 1.1.1** olduğu SslStream ve HttpClient türleri kullanılabilir kullanacağı **TLS 1.3** kullanırken `SslProtocols.None` (sistem varsayılan protokol), istemci ve sunucu desteği varsayılarak**TLS 1.3**.</span><span class="sxs-lookup"><span data-stu-id="2989f-326">When **OpenSSL 1.1.1** is available the SslStream and HttpClient types will use **TLS 1.3** when using `SslProtocols.None` (system default protocols), assuming both the client and server support **TLS 1.3**.</span></span>
-
-<span data-ttu-id="2989f-327">.NET Core 3.0 Önizleme 1 Ubuntu 18.10 bağlanmak için aşağıdaki örnekte gösterilmiştir <https://www.cloudflare.com>:</span><span class="sxs-lookup"><span data-stu-id="2989f-327">The following sample demonstrates .NET Core 3.0 Preview 1 on Ubuntu 18.10 connecting to <https://www.cloudflare.com>:</span></span>
-
-```csharp
-using System;
-using System.Net.Security;
-using System.Net.Sockets;
-using System.Threading.Tasks;
-
-namespace tlstest
-{
-    class Program
-    {
-        static async Task Main()
-        {
-            using (TcpClient tcpClient = new TcpClient())
-            {
-                string targetHost = "www.cloudflare.com";
-
-                await tcpClient.ConnectAsync(targetHost, 443);
-
-                using (SslStream sslStream = new SslStream(tcpClient.GetStream()))
-                {
-                    await sslStream.AuthenticateAsClientAsync(targetHost);
-                    await Console.Out.WriteLineAsync($"Connected to {targetHost} with {sslStream.SslProtocol}");
-                }
-            }
-        }
-    }
-}
-```
-
-```console
-user@comp-ubuntu1810:~/tlstest$ dotnet run
-Connected to www.cloudflare.com with Tls13
-user@comp-ubuntu1810:~/tlstest$ openssl version
-OpenSSL 1.1.1  11 Sep 2018
-```
+<span data-ttu-id="bccc1-329">Kullanılabilir olduğunda, .NET Core 3.0 kullanan **OpenSSL 1.1.1**, **OpenSSL 1.1.0**, veya **OpenSSL 1.0.2** bir Linux sisteminde.</span><span class="sxs-lookup"><span data-stu-id="bccc1-329">When available, .NET Core 3.0 uses **OpenSSL 1.1.1**, **OpenSSL 1.1.0**, or **OpenSSL 1.0.2** on a Linux system.</span></span> <span data-ttu-id="bccc1-330">Zaman **OpenSSL 1.1.1** kullanılabilir, her ikisi de <xref:System.Net.Security.SslStream?displayProperty=nameWithType> ve <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> türleri kullanırsınız **TLS 1.3** (istemci ve sunucu desteği varsayılarak **TLS 1.3**).</span><span class="sxs-lookup"><span data-stu-id="bccc1-330">When **OpenSSL 1.1.1** is available, both <xref:System.Net.Security.SslStream?displayProperty=nameWithType> and <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> types will use **TLS 1.3** (assuming both the client and server support **TLS 1.3**).</span></span>
 
 >[!IMPORTANT]
-><span data-ttu-id="2989f-328">Windows ve macOS henüz desteklemediği **TLS 1.3**.</span><span class="sxs-lookup"><span data-stu-id="2989f-328">Windows and macOS do not yet support **TLS 1.3**.</span></span> <span data-ttu-id="2989f-329">.NET core 3.0 destekleyeceği **TLS 1.3** desteği kullanılabilir olduğunda bu işletim sistemlerinde.</span><span class="sxs-lookup"><span data-stu-id="2989f-329">.NET Core 3.0 will support **TLS 1.3** on these operating systems when support becomes available.</span></span>
+><span data-ttu-id="bccc1-331">Windows ve macOS henüz desteklemediği **TLS 1.3**.</span><span class="sxs-lookup"><span data-stu-id="bccc1-331">Windows and macOS do not yet support **TLS 1.3**.</span></span> <span data-ttu-id="bccc1-332">.NET core 3.0 destekleyeceği **TLS 1.3** desteği kullanılabilir olduğunda bu işletim sistemlerinde.</span><span class="sxs-lookup"><span data-stu-id="bccc1-332">.NET Core 3.0 will support **TLS 1.3** on these operating systems when support becomes available.</span></span>
 
-## <a name="cryptography"></a><span data-ttu-id="2989f-330">Şifreleme</span><span class="sxs-lookup"><span data-stu-id="2989f-330">Cryptography</span></span>
+<span data-ttu-id="bccc1-333">Aşağıdaki C# 8.0 örnek gösterir Ubuntu bağlanma 18.10 üzerinde .NET Core 3.0 <https://www.cloudflare.com>:</span><span class="sxs-lookup"><span data-stu-id="bccc1-333">The following C# 8.0 example demonstrates .NET Core 3.0 on Ubuntu 18.10 connecting to <https://www.cloudflare.com>:</span></span>
 
-<span data-ttu-id="2989f-331">İçin destek eklenmiştir **AES GCM** ve **AES-CCM** aracılığıyla uygulanan şifrelemeleri, `System.Security.Cryptography.AesGcm` ve `System.Security.Cryptography.AesCcm`.</span><span class="sxs-lookup"><span data-stu-id="2989f-331">Support has been added for **AES-GCM** and **AES-CCM** ciphers, implemented via `System.Security.Cryptography.AesGcm` and `System.Security.Cryptography.AesCcm`.</span></span> <span data-ttu-id="2989f-332">Her ikisi de bu algoritmalar olan [ilişkilendirme veri (AEAD) algoritmaları ile kimliği doğrulanmış şifreleme](https://en.wikipedia.org/wiki/Authenticated_encryption)ve .NET Core için eklenen ilk kimliği doğrulanmış şifreleme (AE) algoritmaları.</span><span class="sxs-lookup"><span data-stu-id="2989f-332">These algorithms are both [Authenticated Encryption with Association Data (AEAD) algorithms](https://en.wikipedia.org/wiki/Authenticated_encryption), and the first Authenticated Encryption (AE) algorithms added to .NET Core.</span></span>
+[!CODE-csharp[TLSExample](~/samples/snippets/core/whats-new/whats-new-in-30/cs/TLS.cs#TLS)]
 
-<span data-ttu-id="2989f-333">Aşağıdaki kodu **AesGcm** şifrelemek ve rastgele verilerin şifresini çözmek için şifre.</span><span class="sxs-lookup"><span data-stu-id="2989f-333">The following code demonstrates using **AesGcm** cipher to encrypt and decrypt random data.</span></span>
+## <a name="cryptography-ciphers"></a><span data-ttu-id="bccc1-334">Şifreleme şifrelemeleri</span><span class="sxs-lookup"><span data-stu-id="bccc1-334">Cryptography ciphers</span></span>
 
-<span data-ttu-id="2989f-334">Kodu **AesCcm** (sınıf değişken adları farklı olacaktır yalnızca) neredeyse aynı görünür.</span><span class="sxs-lookup"><span data-stu-id="2989f-334">The code for **AesCcm** would look almost identical (only the class variable names would be different).</span></span>
+<span data-ttu-id="bccc1-335">.NET 3.0 için destek ekler **AES GCM** ve **AES-CCM** ile uygulanan şifrelemeleri, <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> ve <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType> sırasıyla.</span><span class="sxs-lookup"><span data-stu-id="bccc1-335">.NET 3.0 adds support for **AES-GCM** and **AES-CCM** ciphers, implemented with <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> and <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType> respectively.</span></span> <span data-ttu-id="bccc1-336">Her ikisi de bu algoritmalar olan [ilişkilendirme veri (AEAD) algoritmaları ile kimliği doğrulanmış şifreleme](https://en.wikipedia.org/wiki/Authenticated_encryption).</span><span class="sxs-lookup"><span data-stu-id="bccc1-336">These algorithms are both [Authenticated Encryption with Association Data (AEAD) algorithms](https://en.wikipedia.org/wiki/Authenticated_encryption).</span></span>
 
-```csharp
-// key should be: pre-known, derived, or transported via another channel, such as RSA encryption
-byte[] key = new byte[16];
-RandomNumberGenerator.Fill(key);
+<span data-ttu-id="bccc1-337">Aşağıdaki kodu `AesGcm` şifrelemek ve rastgele verilerin şifresini çözmek için şifre.</span><span class="sxs-lookup"><span data-stu-id="bccc1-337">The following code demonstrates using `AesGcm` cipher to encrypt and decrypt random data.</span></span>
 
-byte[] nonce = new byte[12];
-RandomNumberGenerator.Fill(nonce);
+[!CODE-csharp[AesGcm](~/samples/snippets/core/whats-new/whats-new-in-30/cs/Cipher.cs#AesGcm)]
 
-// normally this would be your data
-byte[] dataToEncrypt = new byte[1234];
-byte[] associatedData = new byte[333];
-RandomNumberGenerator.Fill(dataToEncrypt);
-RandomNumberGenerator.Fill(associatedData);
+## <a name="cryptographic-key-importexport"></a><span data-ttu-id="bccc1-338">Şifreleme anahtarı içeri/dışarı aktarma</span><span class="sxs-lookup"><span data-stu-id="bccc1-338">Cryptographic Key Import/Export</span></span>
 
-// these will be filled during the encryption
-byte[] tag = new byte[16];
-byte[] ciphertext = new byte[dataToEncrypt.Length];
+<span data-ttu-id="bccc1-339">.NET core 3.0 standart biçimlerinden asimetrik ortak ve özel anahtarı dışarı aktarma ve içeri aktarma destekler.</span><span class="sxs-lookup"><span data-stu-id="bccc1-339">.NET Core 3.0 supports the import and export of asymmetric public and private keys from standard formats.</span></span> <span data-ttu-id="bccc1-340">X.509 sertifikası kullanmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="bccc1-340">You don't need to use an X.509 certificate.</span></span>
 
-using (AesGcm aesGcm = new AesGcm(key))
-{
-    aesGcm.Encrypt(nonce, dataToEncrypt, ciphertext, tag, associatedData);
-}
+<span data-ttu-id="bccc1-341">Tüm anahtar türleri gibi *RSA*, *DSA*, *ECDsa*, ve *ECDiffieHellman*, aşağıdaki biçimlerde destekler:</span><span class="sxs-lookup"><span data-stu-id="bccc1-341">All key types, such as *RSA*, *DSA*, *ECDsa*, and *ECDiffieHellman*, support the following formats:</span></span>
 
-// tag, nonce, ciphertext, associatedData should be sent to the other part
+* <span data-ttu-id="bccc1-342">**Ortak anahtar**</span><span class="sxs-lookup"><span data-stu-id="bccc1-342">**Public Key**</span></span>
+  * <span data-ttu-id="bccc1-343">X.509 SubjectPublicKeyInfo</span><span class="sxs-lookup"><span data-stu-id="bccc1-343">X.509 SubjectPublicKeyInfo</span></span>
 
-byte[] decryptedData = new byte[ciphertext.Length];
+* <span data-ttu-id="bccc1-344">**özel anahtar**</span><span class="sxs-lookup"><span data-stu-id="bccc1-344">**Private key**</span></span>
+  * <span data-ttu-id="bccc1-345">PKCS #8 PrivateKeyInfo</span><span class="sxs-lookup"><span data-stu-id="bccc1-345">PKCS#8 PrivateKeyInfo</span></span>
+  * <span data-ttu-id="bccc1-346">PKCS #8 EncryptedPrivateKeyInfo</span><span class="sxs-lookup"><span data-stu-id="bccc1-346">PKCS#8 EncryptedPrivateKeyInfo</span></span>
 
-using (AesGcm aesGcm = new AesGcm(key))
-{
-    aesGcm.Decrypt(nonce, ciphertext, tag, decryptedData, associatedData);
-}
+<span data-ttu-id="bccc1-347">RSA desteği de anahtarları:</span><span class="sxs-lookup"><span data-stu-id="bccc1-347">RSA keys also support:</span></span>
 
-// do something with the data
-// this should always print that data is the same
-Console.WriteLine($"AES-GCM: Decrypted data is{(dataToEncrypt.SequenceEqual(decryptedData) ? "the same as" : "different than")} original data.");
-```
+* <span data-ttu-id="bccc1-348">**Ortak anahtar**</span><span class="sxs-lookup"><span data-stu-id="bccc1-348">**Public Key**</span></span>
+  * <span data-ttu-id="bccc1-349">PKCS#1 RSAPublicKey</span><span class="sxs-lookup"><span data-stu-id="bccc1-349">PKCS#1 RSAPublicKey</span></span>
 
-## <a name="cryptographic-key-importexport"></a><span data-ttu-id="2989f-335">Şifreleme anahtarı içeri/dışarı aktarma</span><span class="sxs-lookup"><span data-stu-id="2989f-335">Cryptographic Key Import/Export</span></span>
+* <span data-ttu-id="bccc1-350">**özel anahtar**</span><span class="sxs-lookup"><span data-stu-id="bccc1-350">**Private key**</span></span>
+  * <span data-ttu-id="bccc1-351">PKCS #1 RSAPrivateKey</span><span class="sxs-lookup"><span data-stu-id="bccc1-351">PKCS#1 RSAPrivateKey</span></span>
 
-<span data-ttu-id="2989f-336">.NET core 3.0 Önizleme 1 içeri ve dışarı aktarmayı asimetrik ortak ve özel anahtarlar standart biçimlerinden bir X.509 sertifikası kullanmak zorunda kalmadan destekler.</span><span class="sxs-lookup"><span data-stu-id="2989f-336">.NET Core 3.0 Preview 1 supports the import and export of asymmetric public and private keys from standard formats, without needing to use an X.509 certificate.</span></span>
+<span data-ttu-id="bccc1-352">Dışarı aktarma yöntemleri DER ile kodlanmış ikili verileri oluşturmak ve içeri aktarma metotları aynı beklerler.</span><span class="sxs-lookup"><span data-stu-id="bccc1-352">The export methods produce DER-encoded binary data, and the import methods expect the same.</span></span> <span data-ttu-id="bccc1-353">Bir anahtar metin dostu PEM biçiminde depolanır, çağırana base64 gerekir-içerik alma yöntemini çağırmadan önce kod çözme.</span><span class="sxs-lookup"><span data-stu-id="bccc1-353">If a key is stored in the text-friendly PEM format, the caller will need to base64-decode the content before calling an import method.</span></span>
 
-<span data-ttu-id="2989f-337">Tüm anahtar türleri (RSA, DSA, ECDsa, ECDiffieHellman) desteği **X.509 SubjectPublicKeyInfo** biçimi için ortak anahtarları ve **PKCS #8 PrivateKeyInfo** ve **PKCS #8 EncryptedPrivateKeyInfo**  biçimleri özel anahtarlar için.</span><span class="sxs-lookup"><span data-stu-id="2989f-337">All key types (RSA, DSA, ECDsa, ECDiffieHellman) support the **X.509 SubjectPublicKeyInfo** format for public keys, and the **PKCS#8 PrivateKeyInfo** and **PKCS#8 EncryptedPrivateKeyInfo** formats for private keys.</span></span> <span data-ttu-id="2989f-338">RSA ayrıca destekler **PKCS #1 RSAPublicKey** ve **PKCS #1 RSAPrivateKey**.</span><span class="sxs-lookup"><span data-stu-id="2989f-338">RSA additionally supports **PKCS#1 RSAPublicKey** and **PKCS#1 RSAPrivateKey**.</span></span> <span data-ttu-id="2989f-339">Tüm verme yöntemleri DER ile kodlanmış ikili verileri oluşturmak ve içeri aktarma metotları aynı beklerler.</span><span class="sxs-lookup"><span data-stu-id="2989f-339">The export methods all produce DER-encoded binary data, and the import methods expect the same.</span></span> <span data-ttu-id="2989f-340">Bir anahtar metin dostu PEM biçiminde depolanır, çağırana base64 gerekir-içerik alma yöntemini çağırmadan önce kod çözme.</span><span class="sxs-lookup"><span data-stu-id="2989f-340">If a key is stored in the text-friendly PEM format, the caller will need to base64-decode the content before calling an import method.</span></span>
+[!CODE-csharp[RSA](~/samples/snippets/core/whats-new/whats-new-in-30/cs/RSA.cs#Rsa)]
 
-```csharp
-using System;
-using System.IO;
-using System.Security.Cryptography;
+<span data-ttu-id="bccc1-354">**PKCS #8** dosyaları inceledi ile <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo?displayProperty=nameWithType> ve **PFX/PKCS #12** dosyaları inceledi ile <xref:System.Security.Cryptography.Pkcs.Pkcs12Info?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="bccc1-354">**PKCS#8** files can be inspected with <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo?displayProperty=nameWithType> and **PFX/PKCS#12** files can be inspected with <xref:System.Security.Cryptography.Pkcs.Pkcs12Info?displayProperty=nameWithType>.</span></span> <span data-ttu-id="bccc1-355">**PFX/PKCS #12** dosyalar işlenebilir <xref:System.Security.Cryptography.Pkcs.Pkcs12Builder?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="bccc1-355">**PFX/PKCS#12** files can be manipulated with <xref:System.Security.Cryptography.Pkcs.Pkcs12Builder?displayProperty=nameWithType>.</span></span>
 
-namespace rsakeyprint
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            using (RSA rsa = RSA.Create())
-            {
-                byte[] keyBytes = File.ReadAllBytes(args[0]);
-                rsa.ImportRSAPrivateKey(keyBytes, out int bytesRead);
+## <a name="serialport-for-linux"></a><span data-ttu-id="bccc1-356">Linux için çevirmek için SerialPort</span><span class="sxs-lookup"><span data-stu-id="bccc1-356">SerialPort for Linux</span></span>
 
-                Console.WriteLine($"Read {bytesRead} bytes, {keyBytes.Length-bytesRead} extra byte(s) in file.");
-                RSAParameters rsaParameters = rsa.ExportParameters(true);
-                Console.WriteLine(BitConverter.ToString(rsaParameters.D));
-            }
-        }
-    }
-}
-```
+<span data-ttu-id="bccc1-357">.NET core 3.0 destekleyen <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> Linux üzerinde.</span><span class="sxs-lookup"><span data-stu-id="bccc1-357">.NET Core 3.0 supports <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> on Linux.</span></span>
 
-```console
-user@comp-ubuntu1810:~/rsakeyprint$ echo Making a small key to save on screen space.
-Making a small key to save on screen space.
-user@comp-ubuntu1810:~/rsakeyprint$ openssl genrsa 768 | openssl rsa -outform der -out rsa.key
-Generating RSA private key, 768 bit long modulus (2 primes)
-..+++++++
-........+++++++
-e is 65537 (0x010001)
-writing RSA key
-user@comp-ubuntu1810:~/rsakeyprint$ dotnet run rsa.key
-Read 461 bytes, 0 extra byte(s) in file.
-0F-D0-82-34-F8-13-38-4A-7F-C7-52-4A-F6-93-F8-FB-6D-98-7A-6A-04-3B-BC-35-8C-7D-AC-A5-A3-6E-AD-C1-66-30-81-2C-2A-DE-DA-60-03-6A-2C-D9-76-15-7F-61-97-57-
-79-E1-6E-45-62-C3-83-04-97-CB-32-EF-C5-17-5F-99-60-92-AE-B6-34-6F-30-06-03-AC-BF-15-24-43-84-EB-83-60-EF-4D-3B-BD-D9-5D-56-26-F0-51-CE-F1
-user@comp-ubuntu1810:~/rsakeyprint$ openssl rsa -in rsa.key -inform der -text -noout | grep -A7 private
-privateExponent:
-    0f:d0:82:34:f8:13:38:4a:7f:c7:52:4a:f6:93:f8:
-    fb:6d:98:7a:6a:04:3b:bc:35:8c:7d:ac:a5:a3:6e:
-    ad:c1:66:30:81:2c:2a:de:da:60:03:6a:2c:d9:76:
-    15:7f:61:97:57:79:e1:6e:45:62:c3:83:04:97:cb:
-    32:ef:c5:17:5f:99:60:92:ae:b6:34:6f:30:06:03:
-    ac:bf:15:24:43:84:eb:83:60:ef:4d:3b:bd:d9:5d:
-    56:26:f0:51:ce:f1
-```
+<span data-ttu-id="bccc1-358">Daha önce yalnızca kullanarak desteklenen .NET Core `SerialPort` Windows üzerinde.</span><span class="sxs-lookup"><span data-stu-id="bccc1-358">Previously, .NET Core only supported using `SerialPort` on Windows.</span></span>
 
-<span data-ttu-id="2989f-341">PKCS #8 dosya inceledi ile `System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="2989f-341">PKCS#8 files can be inspected with the `System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo` class.</span></span>
+## <a name="docker-and-cgroup-memory-limits"></a><span data-ttu-id="bccc1-359">Docker ve cgroup bellek sınırları</span><span class="sxs-lookup"><span data-stu-id="bccc1-359">Docker and cgroup memory Limits</span></span>
 
-<span data-ttu-id="2989f-342">PFX/PKCS #12 dosyaları inceledi ve ile yönetilebilir `System.Security.Cryptography.Pkcs.Pkcs12Info` ve `System.Security.Cryptography.Pkcs.Pkcs12Builder`sırasıyla.</span><span class="sxs-lookup"><span data-stu-id="2989f-342">PFX/PKCS#12 files can be inspected and manipulated with `System.Security.Cryptography.Pkcs.Pkcs12Info` and `System.Security.Cryptography.Pkcs.Pkcs12Builder`, respectively.</span></span>
+<span data-ttu-id="bccc1-360">Preview 3'ten itibaren Docker ile Linux üzerinde .NET Core 3.0 çalıştıran daha iyi cgroup bellek sınırlarını ile çalışır.</span><span class="sxs-lookup"><span data-stu-id="bccc1-360">Starting with Preview 3, running .NET Core 3.0 on Linux with Docker works better with cgroup memory limits.</span></span> <span data-ttu-id="bccc1-361">Bellek sınırları, Docker kapsayıcısı gibi çalışan `docker run -m`, .NET Core nasıl davranacağını değiştirir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-361">Running a Docker container with memory limits, such as with `docker run -m`, changes how .NET Core behaves.</span></span>
 
-## <a name="serialport-for-linux"></a><span data-ttu-id="2989f-343">Linux için çevirmek için SerialPort</span><span class="sxs-lookup"><span data-stu-id="2989f-343">SerialPort for Linux</span></span>
+* <span data-ttu-id="bccc1-362">Varsayılan çöp toplayıcı (GC) yığın boyutu: en fazla 20 mb veya bellek sınırı kapsayıcı üzerindeki %75.</span><span class="sxs-lookup"><span data-stu-id="bccc1-362">Default Garbage Collector (GC) heap size: maximum of 20 mb or 75% of the memory limit on the container.</span></span>
+* <span data-ttu-id="bccc1-363">Açık boyut bir mutlak sayı veya cgroup sınırı yüzdesi ayarlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="bccc1-363">Explicit size can be set as an absolute number or percentage of cgroup limit.</span></span>
+* <span data-ttu-id="bccc1-364">GC yığınında başına en az ayrılmış kesim boyutu 16 mb'tır.</span><span class="sxs-lookup"><span data-stu-id="bccc1-364">Minimum reserved segment size per GC heap is 16 mb.</span></span> <span data-ttu-id="bccc1-365">Bu boyut makinelerde oluşturulan yığınlar sayısını azaltır.</span><span class="sxs-lookup"><span data-stu-id="bccc1-365">This size reduces the number of heaps that are created on machines.</span></span>
 
-<span data-ttu-id="2989f-344">.NET core 3.0 destekler <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> Linux üzerinde.</span><span class="sxs-lookup"><span data-stu-id="2989f-344">.NET Core 3.0 now supports <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> on Linux.</span></span>
+## <a name="smaller-garbage-collection-heap-sizes"></a><span data-ttu-id="bccc1-366">Küçük çöp toplama, öbek boyutları</span><span class="sxs-lookup"><span data-stu-id="bccc1-366">Smaller Garbage Collection heap sizes</span></span>
 
-<span data-ttu-id="2989f-345">Daha önce yalnızca kullanarak desteklenen .NET Core `SerialPort` Windows türü.</span><span class="sxs-lookup"><span data-stu-id="2989f-345">Previously, .NET Core only supported using the `SerialPort` type on Windows.</span></span>
+<span data-ttu-id="bccc1-367">.NET Core kullanarak daha az bellek kaynaklanan Atık toplayıcısının varsayılan öbek boyutu azaltıldı.</span><span class="sxs-lookup"><span data-stu-id="bccc1-367">The Garbage Collector's default heap size has been reduced resulting in .NET Core using less memory.</span></span> <span data-ttu-id="bccc1-368">Bu değişiklik, daha iyi modern işlemci önbellek boyutu nesil 0 ayırma bütçeyle ile uyumludur.</span><span class="sxs-lookup"><span data-stu-id="bccc1-368">This change better aligns with the generation 0 allocation budget with modern processor cache sizes.</span></span>
 
-## <a name="more-bcl-improvements"></a><span data-ttu-id="2989f-346">Daha fazla BCL geliştirmeleri</span><span class="sxs-lookup"><span data-stu-id="2989f-346">More BCL Improvements</span></span>
+## <a name="garbage-collection-large-page-support"></a><span data-ttu-id="bccc1-369">Çöp toplama büyük sayfa desteği</span><span class="sxs-lookup"><span data-stu-id="bccc1-369">Garbage Collection Large Page support</span></span>
 
-<span data-ttu-id="2989f-347">`Span<T>`, `Memory<T>`, Ve .NET Core 2.1 içinde tanıtılan ilgili türleri de .NET Core 3.0 için iyileştirilmiş.</span><span class="sxs-lookup"><span data-stu-id="2989f-347">The `Span<T>`, `Memory<T>`, and related types that were introduced in .NET Core 2.1, have been optimized in .NET Core 3.0.</span></span> <span data-ttu-id="2989f-348">Sık kullanılan işlemler gibi yapı span, dilimleme, ayrıştırma ve biçimlendirme artık daha iyi gerçekleştirin.</span><span class="sxs-lookup"><span data-stu-id="2989f-348">Common operations such as span construction, slicing, parsing, and formatting now perform better.</span></span>
+<span data-ttu-id="bccc1-370">Büyük sayfaları (diğer adıyla büyük Linux üzerinde), işletim sisteminin bu büyük sayfalar isteyen uygulama performansını artırmak için yerel sayfa boyutundan büyük (genellikle 4 K) bellek bölümlerinin oluşturmak mümkün olduğu bir özelliğidir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-370">Large Pages (also known as Huge Pages on Linux) is a feature where the operating system is able to establish memory regions larger than the native page size (often 4K) to improve performance of the application requesting these large pages.</span></span>
 
-<span data-ttu-id="2989f-349">Ayrıca, türleri ister `String` anahtarlarla olarak kullanıldığında daha verimli hale getirmek için altında--kapak geliştirmeleri gördünüz `Dictionary<TKey, TValue>` ve diğer koleksiyonları.</span><span class="sxs-lookup"><span data-stu-id="2989f-349">Additionally, types like `String` have seen under-the-cover improvements to make them more efficient when used as keys with `Dictionary<TKey, TValue>` and other collections.</span></span> <span data-ttu-id="2989f-350">Kod değişikliği olmadan bu iyileştirmeleri yararlanmak için gereklidir.</span><span class="sxs-lookup"><span data-stu-id="2989f-350">No code changes are required to benefit from these improvements.</span></span>
+<span data-ttu-id="bccc1-371">Çöp toplayıcı ile artık yapılandırılabilir **GCLargePages** Tercihli özellik ayarlanması büyük sayfalarında Windows ayırmak seçin.</span><span class="sxs-lookup"><span data-stu-id="bccc1-371">The Garbage Collector can now be configured with the **GCLargePages** setting as an opt-in feature to choose to allocate large pages on Windows.</span></span>
 
-<span data-ttu-id="2989f-351">Aşağıdaki geliştirmeler de .NET Core 3 Önizleme 1'de yenidir:</span><span class="sxs-lookup"><span data-stu-id="2989f-351">The following improvements are also new in .NET Core 3 Preview 1:</span></span>
+## <a name="gpio-support-for-raspberry-pi"></a><span data-ttu-id="bccc1-372">Raspberry Pi GPIO'yu desteği</span><span class="sxs-lookup"><span data-stu-id="bccc1-372">GPIO Support for Raspberry Pi</span></span>
 
-* <span data-ttu-id="2989f-352">HttpClient için yerleşik Brotli desteği</span><span class="sxs-lookup"><span data-stu-id="2989f-352">Brotli support built in to HttpClient</span></span>
-* <span data-ttu-id="2989f-353">ThreadPool.UnsafeQueueWorkItem(IThreadPoolWorkItem)</span><span class="sxs-lookup"><span data-stu-id="2989f-353">ThreadPool.UnsafeQueueWorkItem(IThreadPoolWorkItem)</span></span>
-* <span data-ttu-id="2989f-354">Unsafe.Unbox</span><span class="sxs-lookup"><span data-stu-id="2989f-354">Unsafe.Unbox</span></span>
-* <span data-ttu-id="2989f-355">CancellationToken.Unregister</span><span class="sxs-lookup"><span data-stu-id="2989f-355">CancellationToken.Unregister</span></span>
-* <span data-ttu-id="2989f-356">Karmaşık aritmetik işleçler</span><span class="sxs-lookup"><span data-stu-id="2989f-356">Complex arithmetic operators</span></span>
-* <span data-ttu-id="2989f-357">TCP için yuva API'leri Canlı</span><span class="sxs-lookup"><span data-stu-id="2989f-357">Socket APIs for TCP keep alive</span></span>
-* <span data-ttu-id="2989f-358">StringBuilder.GetChunks</span><span class="sxs-lookup"><span data-stu-id="2989f-358">StringBuilder.GetChunks</span></span>
-* <span data-ttu-id="2989f-359">Ayrıştırma IPEndPoint</span><span class="sxs-lookup"><span data-stu-id="2989f-359">IPEndPoint parsing</span></span>
-* <span data-ttu-id="2989f-360">RandomNumberGenerator.GetInt32</span><span class="sxs-lookup"><span data-stu-id="2989f-360">RandomNumberGenerator.GetInt32</span></span>
+<span data-ttu-id="bccc1-373">İki paket GPIO'yu programlama için kullanabileceğiniz NuGet yayımlanmış olan:</span><span class="sxs-lookup"><span data-stu-id="bccc1-373">Two packages have been released to NuGet that you can use for GPIO programming:</span></span>
 
-## <a name="tiered-compilation"></a><span data-ttu-id="2989f-361">Katmanlı derleme</span><span class="sxs-lookup"><span data-stu-id="2989f-361">Tiered compilation</span></span>
+* [<span data-ttu-id="bccc1-374">System.Device.Gpio</span><span class="sxs-lookup"><span data-stu-id="bccc1-374">System.Device.Gpio</span></span>](https://www.nuget.org/packages/System.Device.Gpio)
+* [<span data-ttu-id="bccc1-375">Iot.Device.Bindings</span><span class="sxs-lookup"><span data-stu-id="bccc1-375">Iot.Device.Bindings</span></span>](https://www.nuget.org/packages/Iot.Device.Bindings)
 
-<span data-ttu-id="2989f-362">[Katmanlı derleme](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) .NET Core 3.0 ile varsayılan olarak açıktır.</span><span class="sxs-lookup"><span data-stu-id="2989f-362">[Tiered compilation](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) is on by default with .NET Core 3.0.</span></span> <span data-ttu-id="2989f-363">Daha fazla Desenlerinizi başlangıçta hem de daha iyi performans almak ve aktarım hızını en üst düzeye çıkarmak için tam zamanında (JIT) derleyici kullanmak çalışma zamanı sağlayan bir özelliktir.</span><span class="sxs-lookup"><span data-stu-id="2989f-363">It is a feature that enables the runtime to more adaptively use the Just-In-Time (JIT) compiler to get better performance, both at startup and to maximize throughput.</span></span>
+<span data-ttu-id="bccc1-376">API'leri için GPIO paketleri dahil *GPIO'yu*, *SPI*, *I2C*, ve *PWM* cihazlar.</span><span class="sxs-lookup"><span data-stu-id="bccc1-376">The GPIO packages include APIs for *GPIO*, *SPI*, *I2C*, and *PWM* devices.</span></span> <span data-ttu-id="bccc1-377">IOT bağlamaları paketi, cihaz bağlamaları içerir.</span><span class="sxs-lookup"><span data-stu-id="bccc1-377">The IoT bindings package includes device bindings.</span></span> <span data-ttu-id="bccc1-378">Daha fazla bilgi için [cihazları GitHub deposunu](https://github.com/dotnet/iot/blob/master/src/devices/).</span><span class="sxs-lookup"><span data-stu-id="bccc1-378">For more information, see the [devices GitHub repo](https://github.com/dotnet/iot/blob/master/src/devices/).</span></span>
 
-<span data-ttu-id="2989f-364">Bu özellik bir Tercihli özellik olarak eklenmiştir [.NET Core 2.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-1/) ve varsayılan olarak etkinleştirildi [.NET Core 2.2 Önizleme 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/).</span><span class="sxs-lookup"><span data-stu-id="2989f-364">This feature was added as an opt-in feature in [.NET Core 2.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-1/) and then was enabled by default in [.NET Core 2.2 Preview 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/).</span></span> <span data-ttu-id="2989f-365">Daha sonra yeniden oturum .NET Core 2.2 sürüm geri çevirmek için döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="2989f-365">Subsequently, it has been reverted back to opt in with the .NET Core 2.2 release.</span></span>
+## <a name="arm64-linux-support"></a><span data-ttu-id="bccc1-379">ARM64 Linux desteği</span><span class="sxs-lookup"><span data-stu-id="bccc1-379">ARM64 Linux support</span></span>
 
-## <a name="arm64-linux-support"></a><span data-ttu-id="2989f-366">ARM64 Linux desteği</span><span class="sxs-lookup"><span data-stu-id="2989f-366">ARM64 Linux support</span></span>
+<span data-ttu-id="bccc1-380">.NET core 3.0 Linux ARM64 için desteği ekler.</span><span class="sxs-lookup"><span data-stu-id="bccc1-380">.NET Core 3.0 adds support for ARM64 for Linux.</span></span> <span data-ttu-id="bccc1-381">ARM64 için birincil kullanım durumu şu anda IOT senaryoları ile aşamasındadır.</span><span class="sxs-lookup"><span data-stu-id="bccc1-381">The primary use case for ARM64 is currently with IoT scenarios.</span></span> <span data-ttu-id="bccc1-382">Daha fazla bilgi için [.NET Core ARM64 durumu](https://github.com/dotnet/announcements/issues/82).</span><span class="sxs-lookup"><span data-stu-id="bccc1-382">For more information, see [.NET Core ARM64 Status](https://github.com/dotnet/announcements/issues/82).</span></span>
 
-<span data-ttu-id="2989f-367">Destek için Linux ARM64 için eklendi.</span><span class="sxs-lookup"><span data-stu-id="2989f-367">Support has been added for ARM64 for Linux.</span></span> <span data-ttu-id="2989f-368">ARM64 için birincil kullanım durumu şu anda IOT senaryoları ile aşamasındadır.</span><span class="sxs-lookup"><span data-stu-id="2989f-368">The primary use case for ARM64 is currently with IoT scenarios.</span></span>
+<span data-ttu-id="bccc1-383">[ARM64 üzerinde .NET Core için docker görüntülerini](https://hub.docker.com/r/microsoft/dotnet/) kullanılabilir Alpine, Debian ve Ubuntu.</span><span class="sxs-lookup"><span data-stu-id="bccc1-383">[Docker images for .NET Core on ARM64](https://hub.docker.com/r/microsoft/dotnet/) are available for Alpine, Debian, and Ubuntu.</span></span>
 
-<span data-ttu-id="2989f-369">Alpine, Debian ve Ubuntu [ARM64 için .NET Core için Docker görüntüleri kullanılabilir](https://hub.docker.com/r/microsoft/dotnet/).</span><span class="sxs-lookup"><span data-stu-id="2989f-369">Alpine, Debian and Ubuntu [Docker images are available for .NET Core for ARM64](https://hub.docker.com/r/microsoft/dotnet/).</span></span>
-
-<span data-ttu-id="2989f-370">Lütfen denetleyin [.NET Core ARM64 durumu](https://github.com/dotnet/announcements/issues/82) daha fazla bilgi için.</span><span class="sxs-lookup"><span data-stu-id="2989f-370">Please check [.NET Core ARM64 Status](https://github.com/dotnet/announcements/issues/82) for more information.</span></span>
-
->[!NOTE]
-> <span data-ttu-id="2989f-371">**ARM64** Windows Destek işlemi henüz kullanılamıyor.</span><span class="sxs-lookup"><span data-stu-id="2989f-371">**ARM64** Windows support isn't yet available.</span></span>
-
-## <a name="install-net-core-30-previews-on-linux-with-snap"></a><span data-ttu-id="2989f-372">Ek ile Linux üzerinde .NET Core 3.0 önizlemeleri yükleme</span><span class="sxs-lookup"><span data-stu-id="2989f-372">Install .NET Core 3.0 Previews on Linux with Snap</span></span>
-
-<span data-ttu-id="2989f-373">Ek, tercih edilen yoludur yükleyin ve .NET Core önizlemeler deneyin [ek destekleyen Linux dağıtımları](https://docs.snapcraft.io/installing-snapd/6735).</span><span class="sxs-lookup"><span data-stu-id="2989f-373">Snap is the preferred way to install and try .NET Core previews on [Linux distributions that support Snap](https://docs.snapcraft.io/installing-snapd/6735).</span></span>
-
-<span data-ttu-id="2989f-374">Sisteminizde ek yapılandırdıktan sonra yüklemek için aşağıdaki komutu çalıştırın [.NET Core SDK 3.0 Önizleme SDK'sı](https://snapcraft.io/dotnet-sdk).</span><span class="sxs-lookup"><span data-stu-id="2989f-374">After configuring Snap on your system, run the following command to install the [.NET Core SDK 3.0 Preview SDK](https://snapcraft.io/dotnet-sdk).</span></span>
-
-```console
-sudo snap install dotnet-sdk --beta --classic
-```
-
-<span data-ttu-id="2989f-375">Ek paket yüklü kullanarak .NET Core, varsayılan .NET Core komut olduğunda `dotnet-sdk.dotnet`tam olarak `dotnet`.</span><span class="sxs-lookup"><span data-stu-id="2989f-375">When .NET Core in installed using the Snap package, the default .NET Core command is `dotnet-sdk.dotnet`, as opposed to just `dotnet`.</span></span> <span data-ttu-id="2989f-376">Namespaced komutun etkinleştirmiş olabilirsiniz genel olarak yüklenmiş bir .NET Core sürümle çakışmayacağı avantajdır.</span><span class="sxs-lookup"><span data-stu-id="2989f-376">The benefit of the namespaced command is that it will not conflict with a globally installed .NET Core version you may have.</span></span> <span data-ttu-id="2989f-377">Bu komut için diğer adlı olarak `dotnet` ile:</span><span class="sxs-lookup"><span data-stu-id="2989f-377">This command can be aliased to `dotnet` with:</span></span>
-
-```console
-sudo snap alias dotnet-sdk.dotnet dotnet
-```
-
-<span data-ttu-id="2989f-378">Bazı dağıtımlarda, SSL sertifikası erişimi etkinleştirmek için ek bir adım gerektirir.</span><span class="sxs-lookup"><span data-stu-id="2989f-378">Some distros require an additional step to enable access to the SSL certificate.</span></span> <span data-ttu-id="2989f-379">Bkz. bizim [Linux Kurulumu](https://github.com/dotnet/core/blob/master/Documentation/linux-setup.md) Ayrıntılar için.</span><span class="sxs-lookup"><span data-stu-id="2989f-379">See our [Linux Setup](https://github.com/dotnet/core/blob/master/Documentation/linux-setup.md) for details.</span></span>
-
-## <a name="gpio-support-for-raspberry-pi"></a><span data-ttu-id="2989f-380">Raspberry Pi GPIO'yu desteği</span><span class="sxs-lookup"><span data-stu-id="2989f-380">GPIO Support for Raspberry Pi</span></span>
-
-<span data-ttu-id="2989f-381">İki yeni paket için GPIO programlama için kullanabileceğiniz NuGet yayımlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="2989f-381">Two new packages have been released to NuGet that you can use for GPIO programming.</span></span>
-
-* [<span data-ttu-id="2989f-382">System.Device.Gpio</span><span class="sxs-lookup"><span data-stu-id="2989f-382">System.Device.Gpio</span></span>](https://www.nuget.org/packages/System.Device.Gpio/0.1.0-prerelease.19078.2)
-* [<span data-ttu-id="2989f-383">Iot.Device.Bindings</span><span class="sxs-lookup"><span data-stu-id="2989f-383">Iot.Device.Bindings</span></span>](https://www.nuget.org/packages/Iot.Device.Bindings/0.1.0-prerelease.19078.2)
-
-<span data-ttu-id="2989f-384">Bir GPIO'yu paketleri GPIO, SPI, I2C ve PWM cihazlar için APIleri içerir.</span><span class="sxs-lookup"><span data-stu-id="2989f-384">The GPIO Packages includes APIs for GPIO, SPI, I2C and PWM devices.</span></span> <span data-ttu-id="2989f-385">IOT bağlamaları paketi içerir [cihaz bağlamaları](https://github.com/dotnet/iot/blob/master/src/devices/README.md) çeşitli yongaları ve algılayıcılar, aynı anda [dotnet/IOT-src/cihazlar](https://github.com/dotnet/iot/tree/master/src/devices).</span><span class="sxs-lookup"><span data-stu-id="2989f-385">The IoT bindings package includes [device bindings](https://github.com/dotnet/iot/blob/master/src/devices/README.md) for various chips and sensors, the same ones available at [dotnet/iot - src/devices](https://github.com/dotnet/iot/tree/master/src/devices).</span></span>
-
-<span data-ttu-id="2989f-386">Güncelleştirilmiş seri bağlantı noktası .NET Core 3.0 Preview 1 kapsamında duyurulan API'leri bu paketlerin bir parçası değildir ancak mevcut .NET Core platformu bir parçası olarak.</span><span class="sxs-lookup"><span data-stu-id="2989f-386">The updated serial port APIs that were announced as part of .NET Core 3.0 Preview 1 are not part of these packages but are available as part of the .NET Core platform.</span></span>
-
-## <a name="platform-support"></a><span data-ttu-id="2989f-387">Platform Desteği</span><span class="sxs-lookup"><span data-stu-id="2989f-387">Platform Support</span></span>
-
-<span data-ttu-id="2989f-388">.NET core 3 aşağıdaki işletim sistemlerinde desteklenir:</span><span class="sxs-lookup"><span data-stu-id="2989f-388">.NET Core 3 will be supported on the following operating systems:</span></span>
-
-* <span data-ttu-id="2989f-389">Windows İstemcisi: 7, 8.1, 10 (1607+)</span><span class="sxs-lookup"><span data-stu-id="2989f-389">Windows Client: 7, 8.1, 10 (1607+)</span></span>
-* <span data-ttu-id="2989f-390">Windows Server için: 2012 R2 SP1+</span><span class="sxs-lookup"><span data-stu-id="2989f-390">Windows Server: 2012 R2 SP1+</span></span>
-* <span data-ttu-id="2989f-391">macOS: 10.12+</span><span class="sxs-lookup"><span data-stu-id="2989f-391">macOS: 10.12+</span></span>
-* <span data-ttu-id="2989f-392">RHEL: 6+</span><span class="sxs-lookup"><span data-stu-id="2989f-392">RHEL: 6+</span></span>
-* <span data-ttu-id="2989f-393">Fedora: 26+</span><span class="sxs-lookup"><span data-stu-id="2989f-393">Fedora: 26+</span></span>
-* <span data-ttu-id="2989f-394">Ubuntu: 16.04+</span><span class="sxs-lookup"><span data-stu-id="2989f-394">Ubuntu: 16.04+</span></span>
-* <span data-ttu-id="2989f-395">Debian: 9+</span><span class="sxs-lookup"><span data-stu-id="2989f-395">Debian: 9+</span></span>
-* <span data-ttu-id="2989f-396">SLES: 12+</span><span class="sxs-lookup"><span data-stu-id="2989f-396">SLES: 12+</span></span>
-* <span data-ttu-id="2989f-397">openSUSE: 42.3+</span><span class="sxs-lookup"><span data-stu-id="2989f-397">openSUSE: 42.3+</span></span>
-* <span data-ttu-id="2989f-398">Alpine: 3.8+</span><span class="sxs-lookup"><span data-stu-id="2989f-398">Alpine: 3.8+</span></span>
-
-<span data-ttu-id="2989f-399">Yonga desteği aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="2989f-399">Chip support follows:</span></span>
-
-* <span data-ttu-id="2989f-400">Windows, macOS ve Linux'ta x64</span><span class="sxs-lookup"><span data-stu-id="2989f-400">x64 on Windows, macOS, and Linux</span></span>
-* <span data-ttu-id="2989f-401">Windows üzerinde x86</span><span class="sxs-lookup"><span data-stu-id="2989f-401">x86 on Windows</span></span>
-* <span data-ttu-id="2989f-402">Windows ve Linux'ta ARM32</span><span class="sxs-lookup"><span data-stu-id="2989f-402">ARM32 on Windows and Linux</span></span>
-* <span data-ttu-id="2989f-403">Linux üzerinde ARM64</span><span class="sxs-lookup"><span data-stu-id="2989f-403">ARM64 on Linux</span></span>
-
-<span data-ttu-id="2989f-404">Linux için ARM32 Debian 9 + ve Ubuntu 16.04 + desteklenir.</span><span class="sxs-lookup"><span data-stu-id="2989f-404">For Linux, ARM32 is supported on Debian 9+ and Ubuntu 16.04+.</span></span> <span data-ttu-id="2989f-405">ARM64 için bunu ARM32 Alpine 3.8 eklenmesi ile aynıdır.</span><span class="sxs-lookup"><span data-stu-id="2989f-405">For ARM64, it is the same as ARM32 with the addition of Alpine 3.8.</span></span> <span data-ttu-id="2989f-406">Bunlar X64 için desteklenmediğinden bu distro'lara aynı sürümleridir.</span><span class="sxs-lookup"><span data-stu-id="2989f-406">These are the same versions of those distros as is supported for X64.</span></span>
-
-<span data-ttu-id="2989f-407">.NET Core 3.0 için docker görüntüleri kullanılabilir [microsoft/dotnet Docker hub'da](https://hub.docker.com/r/microsoft/dotnet/).</span><span class="sxs-lookup"><span data-stu-id="2989f-407">Docker images for .NET Core 3.0 are available at [microsoft/dotnet on Docker Hub](https://hub.docker.com/r/microsoft/dotnet/).</span></span> <span data-ttu-id="2989f-408">Microsoft şu anda kullandığı sürecinde [Microsoft kapsayıcı kayıt defteri (MCR)](https://cloudblogs.microsoft.com/opensource/2019/01/17/improved-discovery-experience-microsoft-containers-docker-hub/) ve son .NET Core 3.0 görüntüleri için MCR yalnızca yayımlanacak beklenmektedir.</span><span class="sxs-lookup"><span data-stu-id="2989f-408">Microsoft is currently in the process of adopting [Microsoft Container Registry (MCR)](https://cloudblogs.microsoft.com/opensource/2019/01/17/improved-discovery-experience-microsoft-containers-docker-hub/) and it is expected that the final .NET Core 3.0 images will only be published to MCR.</span></span>
+> [!NOTE]
+> <span data-ttu-id="bccc1-384">**ARM64** Windows Destek işlemi henüz kullanılamıyor.</span><span class="sxs-lookup"><span data-stu-id="bccc1-384">**ARM64** Windows support isn't yet available.</span></span>
