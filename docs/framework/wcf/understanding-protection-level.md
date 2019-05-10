@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 07937e243e4d43102c93c11973b60842b7e750ce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791436"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645197"
 ---
 # <a name="understanding-protection-level"></a>Koruma Düzeylerini Anlama
 `ProtectionLevel` Özelliği bulunan birçok farklı sınıflarında gibi <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> sınıfları. Özellik, bir ileti bölümü (veya tam) nasıl korunduğunu denetler. Bu konuda, Windows Communication Foundation (WCF) özelliği ve nasıl çalıştığı açıklanmaktadır.  

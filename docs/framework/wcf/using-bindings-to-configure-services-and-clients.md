@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 3b4f00617418d5f84a0da5d0e531e1f671b58bb1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0f01fefc46cbc2cddaef9b025d59db8e2f734d9f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791384"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645135"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma
 Bağlamaları bir uç noktaya bağlanmak için gereken iletişim ayrıntılarını belirtin nesneleridir. Daha açık belirtmek gerekirse bağlamaları taşımaları, kablo biçimleri (ileti kodlama) ve ilgili uç nokta veya istemci kanal için kullanılacak protokolleri ayrıntılarını tanımlayarak istemci veya hizmet çalışma zamanı oluşturmak için kullanılan yapılandırma bilgilerini içerir. Çalışan bir Windows Communication Foundation (WCF) hizmet oluşturmak için her hizmet uç noktasında bir bağlama gerektirir. Bu konuda, belirli bir bağlama için bir uç nokta nasıl belirtildiğine bağlamaları nedir ve nasıl tanımlandığı açıklanmaktadır.  

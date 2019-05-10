@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML Schema Definition tool
 - serialization, XML Schema Definition tool
 ms.assetid: 3c03f855-f931-47ff-bbc6-50c0367a16e4
-ms.openlocfilehash: 4c950d84cc95c20c2ae85340a2987ea51bed9570
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e855d3fdee5e8f37af8eaa362ecfdeea6e054bf6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028297"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645025"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>XML Şema Tanımı Aracı ve XML Serileştirme
 XML şema tanımı Aracı ([XML şema tanımı Aracı (XSD.exe'nin)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) yanı sıra .NET Framework Araçları Windows® Yazılım Geliştirme Seti (SDK), bir parçası olarak yüklenir. Aracı, öncelikle iki amaçları için tasarlanmıştır:  

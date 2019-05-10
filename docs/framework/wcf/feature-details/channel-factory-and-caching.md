@@ -2,12 +2,12 @@
 title: Kanal Fabrikası ve Önbelleğe Alma
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 94b3cb22c76a215944d044db0f4392005e49f2ad
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784312"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645412"
 ---
 # <a name="channel-factory-and-caching"></a>Kanal Fabrikası ve Önbelleğe Alma
 WCF istemci uygulamalarının kullanın <xref:System.ServiceModel.ChannelFactory%601> bir WCF Hizmeti ile bir iletişim kanalı oluşturmak için sınıf.  Oluşturma <xref:System.ServiceModel.ChannelFactory%601> örnekleri aşağıdaki işlemleri içerdiğinden bazı ek yük doğurur:  

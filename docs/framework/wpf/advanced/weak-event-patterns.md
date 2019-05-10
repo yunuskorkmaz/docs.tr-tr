@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 92d0a61c2bbf9cc668b969c3e1420914b9f9f150
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669371"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650778"
 ---
 # <a name="weak-event-patterns"></a>Zayıf Olay Desenleri
 Uygulamalar, olay kaynaklarına bağlı işleyicileri işleyicinin kaynağına bağlı dinleyici nesne ile koordinasyon halinde edilmeyeceği olduğunu mümkündür. Bu durum, bellek sızıntılarının neden olabilir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] belirli olaylar için adanmış yönetici sınıfı sağlayarak ve bu olayın dinleyicileri üzerinde arabirimi uygulama bu sorunu gidermek için kullanılabilecek bir tasarım desenini tanıtır. Bu tasarım deseni olarak bilinen *zayıf olay deseni*.  

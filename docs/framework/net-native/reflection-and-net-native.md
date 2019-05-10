@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c92d71c9862dfbdace4de2e30cf48ace7becfd0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5cb2d983427c51d8d96de7b73c2dca8f7877425e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866976"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651853"
 ---
 # <a name="reflection-and-net-native"></a>Yansıma ve .NET Yerel
 .NET Framework'te yansıma API'si azaltılarak geliştirme destekleyen yönetilen. Yansıma, uygulama nesneleri incelemek, inceleme bulunan nesneler üzerinde yöntemleri çağırmak, çalışma zamanında yeni türler oluşturmak sağlar ve birçok diğer dinamik kod senaryolarını destekler. Serileştirme ve serisini kaldırma kalıcı yapılabilir ve daha sonra geri bir nesnenin alan değerlerini tanır de destekler. Tüm bu senaryolar için kullanılabilir meta verileri temel alarak yerel kod oluşturmak için .NET Framework just-ın-time (JIT) derleyici gerektirir.  

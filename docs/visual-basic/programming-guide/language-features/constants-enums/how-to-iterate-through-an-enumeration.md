@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [Visual Basic], iterating
 - ListBox control [Windows Forms], populating from an enumeration
 ms.assetid: e5aa10eb-cfcd-4a3b-8e76-f06b8f2002be
-ms.openlocfilehash: 63597145e96b04affc5f0e80e05a56b3fdf27278
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c3fd7e6f7e8e4fcabf279975f7ffc2d848679396
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907042"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645244"
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de numaralandırma yoluyla yineleme yapma
 Numaralandırmalar ilgili sabitlerinin kümeleri ile birlikte çalışır ve adları ile sabit değerleri ilişkilendirmek için kullanışlı bir yol sağlar. Sabit listesi yoluyla yineleme yapmak için bir dizi kullanarak taşıyabilirsiniz <xref:System.Enum.GetValues%2A> yöntemi. Bir listeleme kullanarak aracılığıyla da yineleme bir `For...Each` deyimini kullanarak <xref:System.Enum.GetNames%2A> veya <xref:System.Enum.GetValues%2A> dize veya sayısal değeri ayıklamak için yöntemi.  
