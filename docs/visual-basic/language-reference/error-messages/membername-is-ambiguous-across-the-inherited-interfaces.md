@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: 4415608bcfca63b43b3d9ebf17ce622ccd418775
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 71f8cb96c9981bbfc55236ea815fa5f5cb0e8aaf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921010"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622671"
 ---
-# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a><span data-ttu-id="7e1c7-102">'\<membername >' devralınan arabirimleri arasında belirsiz\<interfacename1 >' ve '\<interfacename2 >'</span><span class="sxs-lookup"><span data-stu-id="7e1c7-102">'\<membername>' is ambiguous across the inherited interfaces '\<interfacename1>' and '\<interfacename2>'</span></span>
-<span data-ttu-id="7e1c7-103">Arabirimi aynı ada sahip iki veya daha fazla üyesi birden çok arabirimlerinden devralır.</span><span class="sxs-lookup"><span data-stu-id="7e1c7-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
+# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a><span data-ttu-id="7a998-102">'\<membername >' devralınan arabirimleri arasında belirsiz\<interfacename1 >' ve '\<interfacename2 >'</span><span class="sxs-lookup"><span data-stu-id="7a998-102">'\<membername>' is ambiguous across the inherited interfaces '\<interfacename1>' and '\<interfacename2>'</span></span>
+<span data-ttu-id="7a998-103">Arabirimi aynı ada sahip iki veya daha fazla üyesi birden çok arabirimlerinden devralır.</span><span class="sxs-lookup"><span data-stu-id="7a998-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
   
- <span data-ttu-id="7e1c7-104">**Hata Kimliği:** BC30685</span><span class="sxs-lookup"><span data-stu-id="7e1c7-104">**Error ID:** BC30685</span></span>  
+ <span data-ttu-id="7a998-104">**Hata Kimliği:** BC30685</span><span class="sxs-lookup"><span data-stu-id="7a998-104">**Error ID:** BC30685</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="7e1c7-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="7e1c7-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7a998-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="7a998-105">To correct this error</span></span>  
   
-- <span data-ttu-id="7e1c7-106">Kullanmak istediğiniz temel arabirim değerine dönüştürme; Örneğin:</span><span class="sxs-lookup"><span data-stu-id="7e1c7-106">Cast the value to the base interface that you want to use; for example:</span></span>  
+- <span data-ttu-id="7a998-106">Kullanmak istediğiniz temel arabirim değerine dönüştürme; Örneğin:</span><span class="sxs-lookup"><span data-stu-id="7a998-106">Cast the value to the base interface that you want to use; for example:</span></span>  
   
     ```  
     Interface Left  
@@ -46,6 +46,6 @@ ms.locfileid: "61921010"
     End Module  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="7e1c7-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7e1c7-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7a998-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7a998-107">See also</span></span>
 
-- [<span data-ttu-id="7e1c7-108">Arabirimler</span><span class="sxs-lookup"><span data-stu-id="7e1c7-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [<span data-ttu-id="7a998-108">Arabirimler</span><span class="sxs-lookup"><span data-stu-id="7a998-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
