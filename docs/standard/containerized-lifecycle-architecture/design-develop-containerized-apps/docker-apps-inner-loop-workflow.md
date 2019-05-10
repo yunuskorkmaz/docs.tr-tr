@@ -4,12 +4,12 @@ description: Docker uygulamaları geliştirmek için "İç döngü" iş akışı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dda75e120b0f17a591fadc22944c78d1174ca156
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050577"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664372"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker uygulamaları için iç döngü geliştirme iş akışı
 
@@ -21,11 +21,11 @@ Tüm DevOps kapsayan dış döngü iş akışı tetiklemeden önce döngüsü, t
 
 Bu bileşenler kapsayıcı veya bir Docker görüntüsü örneğini içerir:
 
--   Bir işletim sistemi seçimi (örneğin, bir Linux dağıtımı veya Windows)
+- Bir işletim sistemi seçimi (örneğin, bir Linux dağıtımı veya Windows)
 
 - Geliştirici (örneğin, uygulama ikili değerleri) tarafından eklenen dosyaları
 
--   (Örneğin, ortam ayarlarını ve bağımlılıklarını) yapılandırma
+- (Örneğin, ortam ayarlarını ve bağımlılıklarını) yapılandırma
 
 - Docker ile çalıştırmak için hangi işlemleri için yönergeler
 
@@ -115,7 +115,7 @@ DockerFile'bir .NET Core kapsayıcı için bir örnek verilmiştir:
 
 ```Dockerfile
 # Base Docker image to use  
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.1
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
   
 # Set the Working Directory and files to be copied to the image  
 ARG source  
@@ -129,7 +129,7 @@ EXPOSE 80
 ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 ```
 
-Bu durumda, görüntü resmi ASP.NET Core Docker görüntü (Linux ve Windows için çok arch), satır başına 2.1 sürümünü dayalı `FROM mcr.microsoft.com/dotnet/core/aspnet:2.1`. (Bu konu hakkında daha fazla bilgi için bkz. [ASP.NET Core, Docker görüntüsü](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) sayfası ve [.NET Core, Docker görüntüsü](https://hub.docker.com/_/microsoft-dotnet-core/) sayfası).
+Bu durumda, görüntü resmi ASP.NET Core Docker görüntü (Linux ve Windows için çok arch), satır başına 2.2 sürümünü dayalı `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2`. (Bu konu hakkında daha fazla bilgi için bkz. [ASP.NET Core, Docker görüntüsü](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) sayfası ve [.NET Core, Docker görüntüsü](https://hub.docker.com/_/microsoft-dotnet-core/) sayfası).
 
 DockerFile içinde Docker çalışma zamanında (örneğin, bağlantı noktası 80) kullanan TCP bağlantı noktası dinleyecek şekilde bildirebilirsiniz.
 

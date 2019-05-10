@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b64b0dd843f408f9a6d064aff935f8d18b3dbddd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 57934742e378df9bf77938e8c6b3b49cb25e6ecf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947075"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647751"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler
 .NET Framework dilden bağımsızdır ' dir. Bu bir geliştirici olarak, birinde gibi .NET Framework hedefleyen birçok dilde geliştirebileceğiniz anlamına gelir C#, C++/CLI, Eiffel, F#, IronPython, Ironruby, PowerBuilder, Visual Basic, Visual COBOL ve Windows PowerShell. Türler ve üyeler sınıf kitaplıkları, bunlar ilk olarak yazılmış içinde dili bilmek zorunda kalmadan ve herhangi bir özgün dil kuralları izlemeye gerek kalmadan olmadan .NET Framework için geliştirilen erişebilirsiniz. Bileşen geliştiricisiyseniz, diline bakılmaksızın herhangi bir .NET Framework uygulama tarafından bileşeniniz erişilebilir.  

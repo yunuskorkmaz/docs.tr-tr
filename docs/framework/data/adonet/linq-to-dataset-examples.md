@@ -2,12 +2,12 @@
 title: LINQ to DataSet Örnekleri
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: 07ad4a993187c91babb74fae9d05f17b66c2098b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 484b4fcf39ef70fd0ec23c86b320d7f57f4f3eb5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033949"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645940"
 ---
 # <a name="linq-to-dataset-examples"></a>LINQ to DataSet Örnekleri
 Bu bölümde, standart sorgu işleçlerini kullanan DataSet programlama örnekleri için LINQ sağlar. <xref:System.Data.DataSet> Bu örneklerde kullanılan kullanarak doldurulur `FillDataSet` yöntemi içinde belirtilen [verileri bir DataSet içine Yükleniyor](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Daha fazla bilgi için [standart sorgu işleçlerine genel bakış (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) veya [standart sorgu işleçlerine genel bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  

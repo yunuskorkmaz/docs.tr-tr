@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a26999b25cf2d060c1c29f378518c3fac255cad4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008208"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64636704"
 ---
 # <a name="path-markup-syntax"></a>Yol Biçimlendirme Sözdizimi
 Yolları açıklanmıştır [şekiller ve temel çizimlere WPF genel bakışında](shapes-and-basic-drawing-in-wpf-overview.md) ve [geometrisi](geometry-overview.md), ancak bu konuda yol belirtmek için kullanabileceğiniz güçlü ve karmaşık mini dil ayrıntılı olarak açıklanmaktadır. geometriler daha sıkı bir şekilde kullanarak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  

@@ -2,12 +2,12 @@
 title: WCF Keşif Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: cb1eb52e0996a03709a755ff2f148152e2625c58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 80cecec2143d78d9dee13e9071b6ebb5a4b1bdb0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784260"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662503"
 ---
 # <a name="wcf-discovery-overview"></a>WCF Keşif Genel Bakış
 Bulma API'ları dinamik yayını ve Web Hizmetleri için WS bulma protokolünü kullanarak bulma için birleşik bir programlama modeli sağlar. Bu API'leri, kendileri ve yayımlanan hizmetleri bulmak için istemcileri yayımlamak hizmetleri sağlar. Bir hizmet bulunabilirlik yapıldıktan sonra hizmet Duyurunun ileti gönderme yanı sıra dinler ve keşif istekleri'özelliğine sahiptir. Bulunabilirlik Hizmetleri, ağ üzerinde kendi varış duyurmaktan Karışılama iletileri ve kendi kalkış ağdan duyurmaktan Bye iletileri gönderebilir. Bir hizmet bulmak için istemcilerin gönderdiği bir `Probe` hizmet sözleşme türü, anahtar sözcükleri ve ağ üzerinde kapsamı gibi belirli ölçütleri içeren istek. Hizmetleri almak `Probe` istemek ve ölçütlerle eşleşen olup olmadığını belirler. Bir hizmet eşleşirse, göndererek yanıt bir `ProbeMatch` istemcisine hizmetiyle bağlantı kurmak gereken bilgileri ile ileti. İstemciler ayrıca gönderebilir `Resolve` kendi uç nokta adresi değişmiş olan hizmetleri bulmak izin istekleri. Eşleşen Hizmetleri yanıt için `Resolve` göndererek istekleri bir `ResolveMatch` istemcisine ileti.  

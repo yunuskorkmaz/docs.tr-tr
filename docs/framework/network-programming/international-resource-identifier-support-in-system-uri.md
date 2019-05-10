@@ -2,12 +2,12 @@
 title: System.Uri’de Uluslararası Kaynak Tanımlayıcı Desteği
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-ms.openlocfilehash: 589c49859592cba55cb5110fe65fdc49e451f478
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f78fff250aae177b5f0360e77a1c41a2f2bb0527
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642366"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647345"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>System.Uri’de Uluslararası Kaynak Tanımlayıcı Desteği
 <xref:System.Uri?displayProperty=nameWithType> Uluslararası kaynak tanımlayıcı (IRI) ve Uluslararası yapılan etki alanı adı (IDN) desteği sayesinde, sınıf genişletilmişse. Bu iyileştirmeler, .NET Framework 3.5, 3.0 SP1 ve 2.0 SP1'i kullanılabilir.  

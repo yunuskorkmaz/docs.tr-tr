@@ -2,12 +2,12 @@
 title: Sorgu planını önbelleğe alma (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9b809962e11ee74a99f736769b47bf3052af5e8a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613670"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641460"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Sorgu planını önbelleğe alma (varlık SQL)
 Her bir sorgu yürütme girişimi yapıldığında, sorgu işlem hattındaki tam sorgu zaten derlenmiş ve kullanılabilir olup olmadığını görmek için sorgu planı önbelleği arar. Bu durumda, yeni bir tane oluşturmak yerine önbellekteki plan kullanır. Sorgu planı önbellekte bir eşleşme bulunmazsa, sorgu derlenmiş ve önbelleğe alınır. Bir sorgu tarafından tanımlanan kendi [!INCLUDE[esql](../../../../../../includes/esql-md.md)] metin ve parametre koleksiyonu (adlarını ve türlerini). Tüm metin karşılaştırmalar büyük/küçük harfe duyarlıdır.  

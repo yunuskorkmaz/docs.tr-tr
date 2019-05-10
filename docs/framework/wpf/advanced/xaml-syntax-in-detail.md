@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 45c3ef319e374c9944c06e2f88e3812b675bf527
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981376"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662179"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ayrıntılı XAML Sözdizimi
 Bu konuda, XAML söz dizimi öğeleri tanımlamak için kullanılan terimleri tanımlar. Bu terimler sık kalanında bu belge, WPF belgeler için her ikisi de özellikle ve XAML veya XAML dil desteğini System.Xaml düzeyinde Etkin temel XAML kavramları kullanan diğer çerçeveler için kullanılır. Bu konu başlığı altında bu konu başlığı altında tanıtılan temel terminoloji genişletir. [XAML genel bakış (WPF)](xaml-overview-wpf.md).  

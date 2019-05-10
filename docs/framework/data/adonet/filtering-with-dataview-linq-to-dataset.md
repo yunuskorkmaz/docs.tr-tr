@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: 41e099cdca4f02231fd4b1cc8bce2c4b1e511c71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b41b95ba06f031dc45c0267432d0d6afb7f3a7d9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878832"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645683"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>(LINQ to DataSet) DataView ile filtreleme
 Ardından bir UI denetimine üzerinden bir istemciye verileri sunmak ve belirli ölçütleri kullanarak veri filtreleme olanağı, veri bağlama, önemli bir yönüdür. <xref:System.Data.DataView> verileri filtreleme ve toplantı belirli filtre ölçütlerini veri satırları kümelerine döndürmek için birçok yol sağlar. Dize tabanlı yanı sıra filtreleme yetenekleri <xref:System.Data.DataView> kullanma olanağı da sağlar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeleri filtreleme ölçütlerine. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeler, dize tabanlı filtreleme daha çok daha karmaşık ve güçlü filtreleme işlemleri için izin verin.  
