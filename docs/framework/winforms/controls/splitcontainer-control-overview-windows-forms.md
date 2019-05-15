@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6dcdbde480c1900ea488c6db3cc320b20f9f182
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971996"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591491"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.SplitContainer> denetim düşünülebilir bileşik; taşınabilir bir çubukla ayırarak iki bölme. Çubuğu üzerine fare işaretçisi olduğunda, işaretçi şekli çubuğu taşınabilir olduğunu göstermek için değiştirir.  
   
 > [!IMPORTANT]
->  İçinde **araç kutusu**, <xref:System.Windows.Forms.SplitContainer> denetim değiştirir <xref:System.Windows.Forms.Splitter> Visual Studio'nun önceki sürümünde var olan denetim. <xref:System.Windows.Forms.SplitContainer> Denetimidir üzerinden çok tercih edilen <xref:System.Windows.Forms.Splitter> denetimi. <xref:System.Windows.Forms.Splitter> Sınıfı dahil hala [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] var olan uygulamalarla uyumluluk için kullanmanızı önemle öneririz, ancak <xref:System.Windows.Forms.SplitContainer> denetimi yeni projeler için.  
+>  İçinde **araç kutusu**, <xref:System.Windows.Forms.SplitContainer> denetim değiştirir <xref:System.Windows.Forms.Splitter> Visual Studio'nun önceki sürümünde var olan denetim. <xref:System.Windows.Forms.SplitContainer> Denetimidir üzerinden çok tercih edilen <xref:System.Windows.Forms.Splitter> denetimi. <xref:System.Windows.Forms.Splitter> Sınıfı hala var olan uygulamalarla uyumluluk için .NET Framework dahil, ancak kullanmanızı önemle öneririz <xref:System.Windows.Forms.SplitContainer> denetimi yeni projeler için.  
   
  İle <xref:System.Windows.Forms.SplitContainer> denetim, karmaşık kullanıcı arabirimleri oluşturabilirsiniz; genellikle, hangi nesneler diğer panelinde gösterilir bir bölmede bir seçim belirler. Bu düzenleme, görüntüleme ve gözatma bilgilerinin oldukça etkilidir. İki panel sağlar sahip alanlarda bilgi toplamak ve çubuğuna ya da "ayırıcı," paneller yeniden boyutlandırmak kullanıcılar için kolay kılar.  
   

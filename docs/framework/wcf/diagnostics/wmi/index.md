@@ -2,12 +2,12 @@
 title: Tanılama için Windows Yönetim İzlemesini Kullanma
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 47aece36368be12a2a63283367e95dcaa64ef484
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ecc5c754a51a8e1a52797dfd0af0891704eaad1f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662462"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591246"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Tanılama için Windows Yönetim İzlemesini Kullanma
 Windows Communication Foundation (WCF) hizmetinin çalışma zamanında bir WCF Windows Yönetim Araçları (WMI) sağlayıcısı aracılığıyla denetleme verileri kullanıma sunar.  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) hizmetinin çalışma zamanında bir WCF 
  Bu yapılandırma girişi WMI arabirimini kullanıma sunar. Yönetim uygulamaları artık bu arabirimi üzerinden bağlanabilir ve Yönetim Araçları uygulamanın erişim.  
   
 ## <a name="accessing-wmi-data"></a>WMI verilerine erişme  
- WMI verilerini birçok farklı şekilde erişilebilir. Microsoft, betikleri, Visual Basic uygulamaları, C++ uygulamaları için WMI API'lerini sağlar ve [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Daha fazla bilgi için [WMI kullanarak](https://go.microsoft.com/fwlink/?LinkId=95183).  
+ WMI verilerini birçok farklı şekilde erişilebilir. Microsoft Visual Basic uygulamaları, betikleri için WMI API'lerini sağlar C++ uygulamaları ve .NET Framework. Daha fazla bilgi için [WMI kullanarak](https://go.microsoft.com/fwlink/?LinkId=95183).  
   
 > [!CAUTION]
 >  WMI veri programlı olarak erişmek için sağlanan yöntemleri .NET Framework kullanırsanız, tür yöntemler bağlantı kurulduğunda özel durumlar oluşturabilecek farkında olmalıdır. Oluşumu sırasında bağlantı kurulmaz <xref:System.Management.ManagementObject> örneği, ancak ilk istek gerçek veri değişimi ilgili. Bu nedenle, kullanması gereken bir `try..catch` olası özel durumları yakalama bloğu.  

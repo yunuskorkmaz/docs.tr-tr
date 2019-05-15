@@ -2,12 +2,12 @@
 title: Birlikte Çalışabilirlik ve Tümleştirme
 ms.date: 03/30/2017
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-ms.openlocfilehash: 5a50a8ebece72a0f2f8dc95fd87e73bef5db3195
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2410c52e99f3498d8dbd6ec66a5abe0e169f4b91
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61919158"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591231"
 ---
 # <a name="interoperability-and-integration"></a>Birlikte Çalışabilirlik ve Tümleştirme
 Bu bölüm, birlikte çalışabilirlik ve tümleştirme ile Windows Communication Foundation (WCF) kapsar.  
@@ -23,7 +23,7 @@ Bu bölüm, birlikte çalışabilirlik ve tümleştirme ile Windows Communicatio
  WCF hizmetlerini çağırmak COM uygulamaları için çeşitli yöntemler anlatılmaktadır.  
   
  [.NET Uzaktan İletişim Uygulamalarını WCF'ye Taşıma](../../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)  
- WCF ile nasıl kullanılabileceğini anlatan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uzaktan iletişim.  
+ WCF ile .NET Framework uzaktan nasıl kullanılabileceğini anlatmaktadır.  
   
  [Web Services Enhancements 3.0 ile Birlikte Çalışabilme](../../../../docs/framework/wcf/feature-details/interoperability-with-web-services-enhancements-3-0.md)  
  WCF Web Services Enhancements (WSE) 3.0 uygulanan Web Hizmetleri ile nasıl kullanılabileceğini açıklar.  

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: d3981be7977b56af0b60f9796519b78dc9ac5db3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4902cd8ab97771f75e5421a9de7ed1150a7443a8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640514"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586594"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows Forms'ta otomatik ölçeklendirme
 
-Otomatik ölçeklendirme sağlar bir form ve diğer denetimler ile belirli bir ekran çözünürlüğü veya sistem yazı tipi, tek bir makinede farklı ekran çözünürlüğü veya sistem yazı tipi olan başka bir makinede uygun şekilde görüntülenmesi için tasarlanmıştır. Form, garantiler ve denetimlerini akıllıca yerel windows ve diğer uygulamaları hem kullanıcıların hem de diğer geliştiriciler makinelere tutarlı olması için yeniden boyutlandırılır. Destek [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] otomatik ölçeklendirme ve görsel stiller sağlar [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] bir tutarlı her kullanıcının makinede yerel Windows uygulamaları karşılaştırıldığında genel görünüme korumak için uygulamalar.
+Otomatik ölçeklendirme sağlar bir form ve diğer denetimler ile belirli bir ekran çözünürlüğü veya sistem yazı tipi, tek bir makinede farklı ekran çözünürlüğü veya sistem yazı tipi olan başka bir makinede uygun şekilde görüntülenmesi için tasarlanmıştır. Form, garantiler ve denetimlerini akıllıca yerel windows ve diğer uygulamaları hem kullanıcıların hem de diğer geliştiriciler makinelere tutarlı olması için yeniden boyutlandırılır. .NET Framework uygulamaları bir tutarlı her kullanıcının makinede yerel Windows uygulamaları karşılaştırıldığında genel görünüme korumak otomatik ölçeklendirme ve görsel stilleri için .NET Framework'ün destek sağlar.
 
-Çoğunlukla, otomatik ölçeklendirme beklendiği gibi çalıştığını [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 ve sonraki sürümleri. Ancak, yazı tipi şeması değişikliklerine sorunlu olabilir. Bu sorunu gidermek nasıl bir örnek için bkz [nasıl yapılır: Bir Windows Forms uygulamasında yazı tipi şeması değişikliklerine yanıt verme](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
+Çoğunlukla, olarak otomatik ölçeklendirme çalışır, 2.0 ve sonraki sürümlerinde .NET Framework sürümü için bekleniyor. Ancak, yazı tipi şeması değişikliklerine sorunlu olabilir. Bu sorunu gidermek nasıl bir örnek için bkz [nasıl yapılır: Bir Windows Forms uygulamasında yazı tipi şeması değişikliklerine yanıt verme](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
 
 ## <a name="need-for-automatic-scaling"></a>Otomatik ölçeklendirmeye yönelik gereksinimi
 
@@ -24,11 +24,11 @@ Otomatik ölçeklendirme, olmadan bir uygulamanın bir ekran çözünürlüğü 
 
 Bir uygulama belirli bir ekran çözünürlüğünü için tasarlanmış benzer bir durum meydana gelir. En yaygın ekran çözünürlüğünü 96 nokta / inç (DPI), % 100 ekran ölçeklendirmeyi eşittir, ancak daha yüksek çözünürlüklü destekleyen kaynağının % 125, %150, % 200 olan (sırasıyla eşit hangi 120, 144 ve 192 DPI) ve üzeri daha yaygın hale gelmektedir. Bir uygulama düzeltmesi bir çözüm için tasarlanmış özellikle bir grafik tabanlı bir başka bir çözünürlükte çalıştırdığınızda çok büyük veya çok küçük görünür.
 
-Otomatik ölçeklendirme çözümleme görüntülemek veya form ve alt denetimlerine göre göreli yazı tipi boyutu boyutlandırarak otomatik olarak bu sorunları düzeltmek çalışmaktadır. Windows işletim sistemi, iletişim kutularını göreli bir iletişim kutusu birimleri adlı bir ölçü birimini kullanarak otomatik ölçeklendirmeyi destekler. Bir iletişim birim sistem yazı tipini alır ve piksel ilişkisini olabilir ancak Win32 SDK işlevi belirlenen `GetDialogBaseUnits`. Bir kullanıcı Windows tarafından kullanılan tema değiştiğinde tüm iletişim kutularının otomatik olarak uygun şekilde ayarlanır. Ayrıca, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ya da varsayılan sistem yazı tipi veya ekran çözünürlüğü göre otomatik ölçeklendirmeyi destekler. İsteğe bağlı olarak, otomatik ölçeklendirme bir uygulamayı devre dışı bırakılabilir.
+Otomatik ölçeklendirme çözümleme görüntülemek veya form ve alt denetimlerine göre göreli yazı tipi boyutu boyutlandırarak otomatik olarak bu sorunları düzeltmek çalışmaktadır. Windows işletim sistemi, iletişim kutularını göreli bir iletişim kutusu birimleri adlı bir ölçü birimini kullanarak otomatik ölçeklendirmeyi destekler. Bir iletişim birim sistem yazı tipini alır ve piksel ilişkisini olabilir ancak Win32 SDK işlevi belirlenen `GetDialogBaseUnits`. Bir kullanıcı Windows tarafından kullanılan tema değiştiğinde tüm iletişim kutularının otomatik olarak uygun şekilde ayarlanır. Ayrıca, .NET Framework ya da varsayılan sistem yazı tipi veya ekran çözünürlüğü göre otomatik ölçeklendirmeyi destekler. İsteğe bağlı olarak, otomatik ölçeklendirme bir uygulamayı devre dışı bırakılabilir.
 
 ## <a name="original-support-for-automatic-scaling"></a>Otomatik ölçeklendirme özgün desteği
 
-1.0 ve 1.1 sürümleri [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Win32 SDK değeri tarafından temsil edilen kullanıcı Arabirimi için kullanılan Windows varsayılan yazı tipi bağımlı olduğu basit bir şekilde otomatik ölçeklendirme desteklenen **DEFAULT_GUI_FONT**. Görüntü çözünürlüğü değiştiğinde bu yazı tipini genellikle yalnızca değiştirilir. Otomatik ölçeklendirme uygulamak için aşağıdaki mekanizmayı kullanılmıştır:
+Sürüm 1.0 ve 1.1 .NET Framework desteklenen otomatik Win32 SDK değeri tarafından temsil edilen kullanıcı Arabirimi için kullanılan Windows varsayılan yazı tipi bağımlı olduğu basit bir şekilde ölçeklendirme **DEFAULT_GUI_FONT**. Görüntü çözünürlüğü değiştiğinde bu yazı tipini genellikle yalnızca değiştirilir. Otomatik ölçeklendirme uygulamak için aşağıdaki mekanizmayı kullanılmıştır:
 
 1. Tasarım zamanında <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> Geliştirici makinesinde varsayılan sistem yazı tipi genişliği ve yüksekliği için (artık kullanım dışı) özelliği ayarlı.
 
@@ -46,18 +46,18 @@ Bu mekanizma birçok amaç için yeterli ederken aşağıdaki sınırlamalarınd
 
 - Makine çözümlerinin aynı olsaydı formlar ve onların alt denetimler yalnızca aynı anda birden fazla geliştirici tarafından tasarlanabilir. Benzer şekilde, ayrıca formun devralma üst formla ilişkili çözüm bağımlı hale.
 
-- İle sunulan yeni düzen yöneticileri ile uyumlu değil [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sürüm 2.0 gibi <xref:System.Windows.Forms.FlowLayoutPanel> ve <xref:System.Windows.Forms.TableLayoutPanel>.
+- Yeni düzen yöneticileri gibi .NET Framework sürüm 2.0 ile sunulan uyumlu değil <xref:System.Windows.Forms.FlowLayoutPanel> ve <xref:System.Windows.Forms.TableLayoutPanel>.
 
 - Uyumluluk için gerekli olan ekran çözünürlüğünü doğrudan göre ölçeklendirme desteklememektedir [!INCLUDE[compact](../../../includes/compact-md.md)].
 
-Bu mekanizma de korunur ancak [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sürüm 2.0 geriye dönük uyumluluğu korumak için sonraki bölümde açıklandığı daha sağlam ölçeklendirme mekanizması tarafından değiştirilmiştir. Sonuç olarak <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>ve belirli <xref:System.Windows.Forms.Control.Scale%2A> aşırı eski olarak işaretlendi.
+Bu mekanizma .NET geriye dönük uyumluluğu korumak için Framework 2.0 sürümünde korunur ancak sonraki bölümde açıklandığı daha sağlam ölçeklendirme mekanizması tarafından değiştirilmiştir. Sonuç olarak <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>ve belirli <xref:System.Windows.Forms.Control.Scale%2A> aşırı eski olarak işaretlendi.
 
 > [!NOTE]
-> Eski kod yükselttiğinizde bu üyeleri başvuruları güvenli bir şekilde silebilirsiniz [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sürüm 2.0.
+> Kodunuzu eski .NET Framework sürüm 2.0 yükselttiğinizde bu üyeleri başvuruları güvenli bir şekilde silebilirsiniz.
 
 ## <a name="current-support-for-automatic-scaling"></a>Otomatik ölçeklendirme için geçerli destek
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Sürüm 2.0, Windows Forms otomatik ölçeklendirme, aşağıdaki değişiklikleri sunarak önceki kısıtlamalardan surmounts:
+.NET Framework sürüm 2.0, Windows Forms otomatik ölçeklendirme, aşağıdaki değişiklikleri sunarak önceki kısıtlamalardan surmounts:
 
 - Ölçeklendirme için temel destek taşındı <xref:System.Windows.Forms.ContainerControl> Tekdüzen ölçeklendirme desteği, formları, yerel bileşik denetimler ve kullanıcı denetimleri tüm alması için bunları sınıfı. Yeni üyeler <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> ve <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> sürümüne eklenmiştir.
 

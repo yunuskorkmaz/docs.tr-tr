@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1602479d4986109ffe89a87250297ee5687930ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcc294f09172eb2029f92d2c05821837aa10c35f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62027192"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591507"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform Sınıfında İsteğe Bağlı Davranışların Uygulanması
 
@@ -19,7 +19,7 @@ ms.locfileid: "62027192"
 
 İsteğe bağlı davranışların olarak listelenen davranışlar açıklanmıştır [World Wide Web Consortium (W3C) XSLT Dönüşümleri (XSLT) sürüm 1.0 öneri](https://www.w3.org/TR/1999/REC-xslt-19991116), hangi uygulama sağlayıcısı birkaç olası birini seçer, bir durumu işlemek için bir yol olarak seçenekleri. Örneğin, Bölüm 7.3 oluşturma işleme yönergeleri, W3C önerisi bir hata durumunda içeriğinin örnekleme 'un `xsl:processing-instruction` metin düğümleri dışındaki düğümlerde oluşturur. Bazı sorunlar için W3C hangi karar yapılmalıdır işlemci hatadan kurtarmayı karar verirse, söyler. 7.3 bölümde verilen sorun için uygulama bu hatadan düğümleri ve içeriklerini yoksayarak kurtarabilirsiniz W3C diyor.
 
-Bu nedenle, her W3C tarafından izin verilen isteğe bağlı davranışları için aşağıdaki tabloda isteğe bağlı davranışların uygulanması için uygulanan listeler [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulaması <xref:System.Xml.Xsl.XslTransform> sınıfı ve hangi W3C XSLT 1.0 öneri de bölümünde bu sorunu ele alınmıştır.
+Bu nedenle, her W3C tarafından izin verilen isteğe bağlı davranışları için aşağıdaki tabloda isteğe bağlı davranışların uygulanması için .NET Framework uygulamasını uygulanan listeler <xref:System.Xml.Xsl.XslTransform> sınıfı ve hangi W3C XSLT 1.0 öneri de bölümünde bu sorunu ele alınmıştır.
 
 |Sorun|Davranış|Bölüm|
 |-------------|--------------|-------------|

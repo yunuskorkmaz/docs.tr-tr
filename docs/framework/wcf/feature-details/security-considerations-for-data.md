@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 13e596ea64fc62ed6280e74636243619178ce069
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4114c974da9c108f641aebdb69f32fb3b0c484c9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990892"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591524"
 ---
 # <a name="security-considerations-for-data"></a>Veriler için Güvenlik Konuları
 
@@ -28,7 +28,7 @@ Bir Windows Communication Foundation (WCF) altyapı basamak sayısı, kullanıc�
 
 Hiçbir güvenlik açıklarını bulunduğundan emin olmak için bir kod yazar sorumluluğundadır. Örneğin, oluşturursanız, bir veri anlaşması türü Tamsayı türünde ve içinde bir veri üyesi özelliği ile `set` erişimci uygulama özellik değerine göre bir dizi ayırmak, bir kötü amaçlı, hizmet reddi saldırısı olasılığını kullanıma sunma ileti, bu veri üyesi için son derece büyük bir değer içeriyor. Genel olarak, herhangi bir ayırma göre gelen verileri veya kullanıcı tarafından sağlanan kodu işleme (özellikle uzun işleme küçük bir gelen veri miktarına göre neden olabilir) uzun kaçının. Kullanıcı tarafından sağlanan kod güvenlik analizi gerçekleştirirken, tüm hata koşulları (burada özel durumlar diğer bir deyişle, tüm kod dallarını) de dikkate alınması gereken emin olun.
 
-Son kullanıcı tarafından sağlanan kod örneği, hizmet uygulamanız için her bir işlem içinde kodudur. Hizmet uygulamanızın güvenlik sizin sorumluluğunuzdur. Yanlışlıkla hizmet reddi güvenlik açıklarına neden olabilir, güvenli olmayan işlem uygulamaları oluşturmak kolay bir işlemdir. Örneğin, o dizeyi bir dize alır ve müşterilerin listesini veritabanından adını döndürür. bir işlem başlatır. Büyük bir veritabanı ile çalışıyorsanız ve yalnızca tek bir harftir geçirilen bir dize ise, kodunuzun tüm hizmetin başarısız olmasına neden olan tüm kullanılabilir belleği daha büyük bir ileti oluşturma girişiminde bulunabilir. (Bir <xref:System.OutOfMemoryException> içinde kurtarılamaz [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ve her zaman, uygulamanızın sonlandırılmasıyla sonuçlanır.)
+Son kullanıcı tarafından sağlanan kod örneği, hizmet uygulamanız için her bir işlem içinde kodudur. Hizmet uygulamanızın güvenlik sizin sorumluluğunuzdur. Yanlışlıkla hizmet reddi güvenlik açıklarına neden olabilir, güvenli olmayan işlem uygulamaları oluşturmak kolay bir işlemdir. Örneğin, o dizeyi bir dize alır ve müşterilerin listesini veritabanından adını döndürür. bir işlem başlatır. Büyük bir veritabanı ile çalışıyorsanız ve yalnızca tek bir harftir geçirilen bir dize ise, kodunuzun tüm hizmetin başarısız olmasına neden olan tüm kullanılabilir belleği daha büyük bir ileti oluşturma girişiminde bulunabilir. (Bir <xref:System.OutOfMemoryException> .NET Framework'teki kurtarılabilir değil ve her zaman, uygulamanızın sonlandırılmasıyla sonuçlanır.)
 
 Kötü amaçlı bir kodun için çeşitli genişletilebilirlik noktaları takılı emin olmanız gerekir. Bu kısmen güvenilen derlemelerden türleriyle ilgili ya da kısmen güvenilen kod tarafından kullanılabilir bileşenleri oluşturma kısmi güven altında çalışırken özellikle geçerlidir. Daha fazla bilgi için "Kısmi güven tehditleri" bir sonraki bölüme bakın.
 
@@ -54,7 +54,7 @@ Aşağıdaki noktaları göz önünde bulundurun:
 
 Hizmet reddi saldırılarını kullanarak kotalar genellikle azalır. Bir sınır aşıldığında, bir <xref:System.ServiceModel.QuotaExceededException> özel durumu normal olarak oluşturulur. Kotası olmadan, sonuçta kötü amaçlı bir ileti erişilmek üzere tüm kullanılabilir bellek neden bir <xref:System.OutOfMemoryException> özel durum ya da erişilebilmesi için kullanılabilir tüm yığınları içinde elde edilen bir <xref:System.StackOverflowException>.
 
-Kota aşıldı senaryo kurtarılamaz.; çalışan bir hizmette, aldıysanız, o anda işlenmekte olan ileti atılır ve hizmet çalışmaya devam eder ve daha fazla iletileri işler. Bellek yetersiz ve yığın taşması senaryoları, ancak herhangi bir yerindeki kurtarılabilir değildir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; bu tür özel durumların karşılaşırsa, hizmet sonlandırır.
+Kota aşıldı senaryo kurtarılamaz.; çalışan bir hizmette, aldıysanız, o anda işlenmekte olan ileti atılır ve hizmet çalışmaya devam eder ve daha fazla iletileri işler. Bellek yetersiz ve yığın taşması senaryoları, ancak herhangi bir .NET Framework kurtarılabilir değildir; Bu tür özel durumların karşılaşırsa, hizmet sonlandırır.
 
 Wcf'de kotaları tüm ön ayırması içermeyen. Örneğin, varsa <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> kota (çeşitli sınıflarında bulunur), 128 KB olarak ayarlanır, 128 KB, her ileti için otomatik olarak tahsis edilen gelmez. Ayrılan gerçek gerçek gelen ileti boyutuna bağlıdır.
 
@@ -274,7 +274,7 @@ Bu durum, aşağıdaki noktaları farkına varmadan tarafından önlenebilir:
 
 - Veri sözleşmesi türleri hangi özellik ayarlayıcı çağrılmalıdır belirli bir sıraya üzerinde yararlanmayı tasarlamayın.
 
-- Eski türleri ile işaretlenen kullanarak ilgileniriz <xref:System.SerializableAttribute> özniteliği. Çoğu ile çalışmak üzere tasarlanmış [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uzaktan iletişim için güvenilir verilerle kullanın. Varolan türleri bu özniteliği ile işaretlenmiş ile durum güvenlik düşünülerek tasarlanmıştır değil.
+- Eski türleri ile işaretlenen kullanarak ilgileniriz <xref:System.SerializableAttribute> özniteliği. Çoğu .NET Framework uzaktan iletişim kullanmak güvenilir verilerle çalışmak için tasarlanmıştır. Varolan türleri bu özniteliği ile işaretlenmiş ile durum güvenlik düşünülerek tasarlanmıştır değil.
 
 - Güvenmeyin <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> durumu güvenliği açısından kadar veri sağlamak için özniteliği. Verileri her zaman olabilir `null`, `zero`, veya `invalid`.
 
@@ -282,7 +282,7 @@ Bu durum, aşağıdaki noktaları farkına varmadan tarafından önlenebilir:
 
 ### <a name="using-the-netdatacontractserializer-securely"></a>NetDataContractSerializer güvenli bir şekilde kullanma
 
-<xref:System.Runtime.Serialization.NetDataContractSerializer> Türlerine sıkı eşleştirme kullanan bir seri hale getirme altyapısı. Bu benzer <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Diğer bir deyişle, okuyarak örneklemek için tür belirler [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] gelen veri derlemesi ve tür adı. WCF bir parçası olmasına rağmen bu serileştirme motoruna takma, sağlanan bir yolu yoktur; özel kod için yazılmış olmalıdır. `NetDataContractSerializer` Geçiş dışında öncelikli olarak kolaylaştırmak için sağlanan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] WCF için uzaktan iletişim. Daha fazla bilgi için bkz ilgili bölümde [serileştirme ve seri durumundan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
+<xref:System.Runtime.Serialization.NetDataContractSerializer> Türlerine sıkı eşleştirme kullanan bir seri hale getirme altyapısı. Bu benzer <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Diğer bir deyişle, .NET Framework derlemesi ve tür adı, gelen verileri okuyarak örneklemek için tür belirler. WCF bir parçası olmasına rağmen bu serileştirme motoruna takma, sağlanan bir yolu yoktur; özel kod için yazılmış olmalıdır. `NetDataContractSerializer` Öncelikle .NET Framework remoting wcf'ye geçiş kolaylaştırmak için sağlanır. Daha fazla bilgi için bkz ilgili bölümde [serileştirme ve seri durumundan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
 
 İleti, her türlü yüklenebilir, işaret edebilir çünkü <xref:System.Runtime.Serialization.NetDataContractSerializer> mekanizması doğası gereği güvenli değil ve yalnızca güvenilir verilerle kullanılmalıdır. Güvenli yalnızca güvenli türler yüklemeye izin veren bir güvenli, tür sınırlaması türü bağlayıcı yazarak hale mümkündür (kullanarak <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> özelliği).
 

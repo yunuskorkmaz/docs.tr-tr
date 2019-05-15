@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 369559feca4edab6de587a3494588973e0c2e1b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f79b244f35bfe006b1f83f2689fe5fafcca4e6fd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937481"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592036"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Nasıl yapılır: Veri Akışı Bloğu Veri Aldığında İşlem Gerçekleştirme
 *Yürütme veri akışı bloğu* veri aldıklarında çağrı bir kullanıcı tarafından sağlanan temsilci türleri. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>, Ve <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> yürütme veri akışı bloğu türleri sınıflardır. Kullanabileceğiniz `delegate` anahtar sözcüğü (`Sub` Visual Basic'te), <xref:System.Action%601>, <xref:System.Func%602>, ya da bir iş işlevi bir yürütme veri akışı bloğuna sağladığınızda bir lambda ifadesi. Bu belgenin nasıl kullanılacağını açıklar <xref:System.Func%602> ve lambda ifadeleri, yürütme blokları eylemi gerçekleştirmek için.  
@@ -32,17 +32,6 @@ ms.locfileid: "61937481"
  Bir lambda ifadesi sağlamasına karşın bir <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> nesnesi, bu örnekte <xref:System.Func%602> kullanmak başka bir kod etkinleştirmek için `CountBytes` yöntemi. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> Nesnesi, gerçekleştirilmesi gereken iş bu görevin özgüdür ve başka bir koddan yararlı olabilir olmadığından bir lambda ifadesi kullanır. Lambda ifadeleri görev paralel Kitaplığı'nda nasıl çalıştığı hakkında daha fazla bilgi için bkz. [PLINQ ve TPL'deki Lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
  Temsilci türlerinin özeti bölümü içinde [veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) belge sağlayabileceğiniz temsilci türleri özetlenmektedir <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, ve <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> nesneleri. Tablo de temsilci türünün zaman uyumlu veya zaman uyumsuz olarak çalışıp çalışmayacağını belirtir.  
-  
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Örnek kodu kopyalayın ve bir Visual Studio projesine yapıştırın veya adlı bir dosyaya yapıştırın `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` Visual Basic için), ve ardından Geliştirici komut istemi penceresi Visual Studio için aşağıdaki komutu çalıştırın.  
-  
- Visual C#  
-  
- **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.cs**  
-  
- Visual Basic  
-  
- **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.vb**  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Bu örnek, bir temsilci türü sağlar <xref:System.Func%602> için <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> eşzamanlı olarak veri akışı bloğu görevini gerçekleştirmek için nesne. Zaman uyumsuz olarak davranacak şekilde veri akışı bloğu etkinleştirmek için bir temsilci türü sağlar <xref:System.Func%601> veri akışı bloğu için. Bir veri akışı bloğu zaman uyumsuz olarak davranır, ancak veri akışı bloğu görevini olduğundan döndürülen <xref:System.Threading.Tasks.Task%601> nesne biter. Aşağıdaki örnek `CountBytes` yöntemi ve kullanımları [zaman uyumsuz](~/docs/csharp/language-reference/keywords/async.md) ve [await](~/docs/csharp/language-reference/keywords/await.md) işleçleri ([zaman uyumsuz](~/docs/visual-basic/language-reference/modifiers/async.md) ve [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) içinde Zaman uyumsuz olarak sağlanan dosyadaki sıfır bayt toplam sayısını hesaplamak için visual Basic). <xref:System.IO.FileStream.ReadAsync%2A> Yöntemi dosya okuma işlemi zaman uyumsuz olarak gerçekleştirir.  

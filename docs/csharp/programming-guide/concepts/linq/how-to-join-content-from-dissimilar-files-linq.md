@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Dosyalardan içerik (LINQ) katılın (C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: ca340e82e33d9b3ec212f69cb73efafb3c6abc0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd7287abce7fca803dd87d23f1f58151cf4ec2f5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701937"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585757"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Nasıl yapılır: Dosyalardan içerik (LINQ) katılın (C#)
 
@@ -124,14 +124,6 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="compiling-the-code"></a>Kod derleme
-
-Oluşturun ve aşağıdaki seçeneklerden birini hedefleyen bir proje derleme:
-
-- .NET framework sürüm 3.5 System.Core.dll öğesine başvuru ile.
-- .NET framework sürüm 4.0 veya üzeri.
-- .NET core sürüm 1.0 veya üzeri.
-  
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ ve dizeler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

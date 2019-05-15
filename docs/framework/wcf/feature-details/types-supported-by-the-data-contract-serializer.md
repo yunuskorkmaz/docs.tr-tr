@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-ms.openlocfilehash: 364d3924d9db2c85959c1e41011c6d659823774c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b98b6b3da08ba7a0a37e0c26f58dd4d3ef115b1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614822"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592210"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler
 Windows Communication Foundation (WCF) kullanan <xref:System.Runtime.Serialization.DataContractSerializer> XML verileri dönüştürmek için ve XML geri verisine dönüştüremedi, varsayılan seri hale getirme altyapısı olarak. <xref:System.Runtime.Serialization.DataContractSerializer> Seri hale getirmek için tasarlanan *veri anlaşması* türleri. Ancak, bir örtük veri anlaşması sahip olduğu düşünülebilir birçok diğer türleri destekler. Seri hale getirilebilir türlerin tam listesi verilmiştir:  
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) kullanan <xref:System.Runtime.Serializati
     > [!NOTE]
     >  Diğer ilkel türler, aksine <xref:System.DateTimeOffset> varsayılan olarak bilinen bir tür değil. Daha fazla bilgi için [veri sözleşme bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)).  
   
-- Türleri ile işaretlenen <xref:System.SerializableAttribute> özniteliği. Dahil birçok türü [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] temel sınıf kitaplığı bu kategoriye ayrılır. <xref:System.Runtime.Serialization.DataContractSerializer> Tam .NET Framework uzaktan iletişim tarafından kullanılan bu serileştirme programlama modelini destekler <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>, desteği dahil olmak üzere <xref:System.Runtime.Serialization.ISerializable> arabirimi.  
+- Türleri ile işaretlenen <xref:System.SerializableAttribute> özniteliği. .NET Framework temel sınıf kitaplığı'nda dahil birçok türü, bu kategoriye girer. <xref:System.Runtime.Serialization.DataContractSerializer> Tam .NET Framework uzaktan iletişim tarafından kullanılan bu serileştirme programlama modelini destekler <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>, desteği dahil olmak üzere <xref:System.Runtime.Serialization.ISerializable> arabirimi.  
   
 - Ham XML veya temsil eden türleri temsil eden türleri [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] ilişkisel veriler. <xref:System.Xml.XmlElement> Ve dizi <xref:System.Xml.XmlNode> türleri, doğrudan XML temsil eden bir yol desteklenir. Ayrıca, uygulayan türleri <xref:System.Xml.Serialization.IXmlSerializable> arabirimi desteklenir, ilgili dahil olmak üzere <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> özniteliği ve <xref:System.Xml.Linq.XDocument> ve <xref:System.Xml.Linq.XElement> türleri. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataTable> Türü ve <xref:System.Data.DataSet> türü (yazılan türetilmiş sınıflarının yanı sıra) tüm uygulama <xref:System.Xml.Serialization.IXmlSerializable> arabirim ve bu nedenle bu kategoriye uygun. Daha fazla bilgi için [XML ve ADO.NET türleri veri anlaşmalarında](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).  
   

@@ -9,25 +9,25 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: f0d5c4e48d8a44c2e39942cbe76acbb5ef44ea7d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ff305a6b22918681561ed7262a7377dbdf7aadc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944007"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591518"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Dosya Sistemi ve .NET Framework Dosyası G/Ç ile İlgili Temel Bilgiler (Visual Basic)
 
 Sınıflar <xref:System.IO> ad alanı, sürücüler, dosyalar ve dizinler ile çalışmak için kullanılır.
 
-<xref:System.IO> Ad alanı içerir <xref:System.IO.File> ve <xref:System.IO.Directory> sağlayan sınıflar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] dosyalar ve dizinler yöneten işlevselliği. Nedeni bu nesnelerin yöntemleri statik veya paylaşılan üyeler, bunları doğrudan sınıfının bir örneğini ilk oluşturma olmadan kullanabilirsiniz. Bu sınıf ile ilişkili olan <xref:System.IO.FileInfo> ve <xref:System.IO.DirectoryInfo> kullanıcıları için tanıdık gelecektir sınıflarını `My` özelliği. Bu sınıfların kullanmak için tam adları nitelemeniz veya gerekir uygun ad alanlarını dahil ederek içeri aktarma `Imports` başında bir deyim etkilenen kod. Daha fazla bilgi için [Imports deyimi (.NET Namespace ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).
+<xref:System.IO> Ad alanı içerir <xref:System.IO.File> ve <xref:System.IO.Directory> dosyalar ve dizinler yöneten .NET Framework işlevselliği sağlayan sınıflar. Nedeni bu nesnelerin yöntemleri statik veya paylaşılan üyeler, bunları doğrudan sınıfının bir örneğini ilk oluşturma olmadan kullanabilirsiniz. Bu sınıf ile ilişkili olan <xref:System.IO.FileInfo> ve <xref:System.IO.DirectoryInfo> kullanıcıları için tanıdık gelecektir sınıflarını `My` özelliği. Bu sınıfların kullanmak için tam adları nitelemeniz veya gerekir uygun ad alanlarını dahil ederek içeri aktarma `Imports` başında bir deyim etkilenen kod. Daha fazla bilgi için [Imports deyimi (.NET Namespace ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).
 
 > [!NOTE]
-> Bu diğer konulara bölümünde kullanım `My.Computer.FileSystem` yerine nesne `System.IO` sürücüsü, dosyalar ve dizinler ile çalışmak için sınıflar. `My.Computer.FileSystem` Nesne öncelikle Visual Basic programlarda kullanmak için tasarlanmıştır. `System.IO` sınıflar, destekleyen herhangi bir dilde kullanıma yöneliktir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], Visual Basic dahil.
+> Bu diğer konulara bölümünde kullanım `My.Computer.FileSystem` yerine nesne `System.IO` sürücüsü, dosyalar ve dizinler ile çalışmak için sınıflar. `My.Computer.FileSystem` Nesne öncelikle Visual Basic programlarda kullanmak için tasarlanmıştır. `System.IO` sınıflar, Visual Basic dahil olmak üzere .NET Framework'ü destekleyen herhangi bir dilde kullanmak içindir.
 
 ## <a name="definition-of-a-stream"></a>Bir Stream tanımı
 
-[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Okuma ve dosyalara yazma desteklemek üzere akışları kullanır. Bir akışı, sahip olduğu bir başlangıç ve bitiş tarihi ve burada stream'de geçerli konum bir imleç gösterir bitişik veri tek boyutlu bir dizi olarak düşünebilirsiniz.
+.NET Framework akışları okuma ve dosyalara yazma desteklemek için kullanır. Bir akışı, sahip olduğu bir başlangıç ve bitiş tarihi ve burada stream'de geçerli konum bir imleç gösterir bitişik veri tek boyutlu bir dizi olarak düşünebilirsiniz.
 
 ![İmleç akışında geçerli konumunu gösterir.](./media/basics-of-net-framework-file-io-and-the-file-system/filestream-cursor-position.gif)
 
@@ -45,7 +45,7 @@ Daha fazla bilgi için [oluşturma akışları](../../../../standard/io/composin
 
 ## <a name="types-of-streams"></a>Akış türleri
 
-İçinde [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], bir akış tarafından temsil edilen <xref:System.IO.Stream> diğer akışlar için soyut sınıf forms sınıfı. Bir örneğini doğrudan oluşturamazsınız <xref:System.IO.Stream> sınıfı, ancak bunu uygulayan sınıflardan birini kullanmanız gerekir.
+.NET Framework, bir akış tarafından temsil edilen <xref:System.IO.Stream> diğer akışlar için soyut sınıf forms sınıfı. Bir örneğini doğrudan oluşturamazsınız <xref:System.IO.Stream> sınıfı, ancak bunu uygulayan sınıflardan birini kullanmanız gerekir.
 
 Birçok tür akış vardır, ancak dosya giriş/çıkış ile (g/ç) çalışma amacıyla, en önemli türleri <xref:System.IO.FileStream> okuma ve dosyalara yazmak için bir yol sağlayan bir sınıf ve <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> dosyaları oluşturmak için bir yol sağlar sınıfını ve Yalıtılmış Depolama dizinleri. Dosya g/ç ile çalışırken kullanılabilir diğer akışlar şunlardır:
 
@@ -84,7 +84,7 @@ Aşağıdaki tabloda dosya erişimi ile dosya öznitelikleri arasındaki görevl
 
 ## <a name="file-permissions"></a>Dosya izinleri
 
-İle dosyalara ve dizinlere erişimi denetleme yapılabilir <xref:System.Security.Permissions.FileIOPermission> sınıfı. Bu, varsayılan özel bir yerel kullanıcı hesabı bağlamında çalıştırma kapsamında oluşturulan ASPNET adlı Web Forms ile çalışan geliştiriciler için özellikle önemlidir olabilir [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] ve [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yüklemeleri. Bu tür bir uygulama isteklerini erişimi, bir kaynağa ASPNET kullanıcı hesabının izinlerini kullanıcı, bir Web uygulamasından bir dosyaya yazma gibi eylemleri gerçekleştirmesini önleyebilen sınırlıdır. Daha fazla bilgi için bkz. <xref:System.Security.Permissions.FileIOPermission>.
+İle dosyalara ve dizinlere erişimi denetleme yapılabilir <xref:System.Security.Permissions.FileIOPermission> sınıfı. Bu, ASP.NET ve .NET Framework yüklemeleri bir parçası olarak oluşturulan ASPNET adlı özel bir yerel kullanıcı hesabı bağlamında çalıştırma varsayılan Web Forms ile çalışan geliştiriciler için özellikle önemli olabilir. Bu tür bir uygulama isteklerini erişimi, bir kaynağa ASPNET kullanıcı hesabının izinlerini kullanıcı, bir Web uygulamasından bir dosyaya yazma gibi eylemleri gerçekleştirmesini önleyebilen sınırlıdır. Daha fazla bilgi için bkz. <xref:System.Security.Permissions.FileIOPermission>.
 
 ## <a name="isolated-file-storage"></a>Yalıtılmış dosya depolama
 

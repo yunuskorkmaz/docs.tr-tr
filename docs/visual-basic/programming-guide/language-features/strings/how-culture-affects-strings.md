@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: c498ae0a9d39240e715e6ba66e57c5e1d3ebbfbc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7301d52cf2c55394f731a8b7af5427e5fa66ba88
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610424"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591953"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Kültürün Visual Basic'de Dizeleri Etkilemesi
 Bu Yardım sayfası kültür bilgilerini Visual Basic dize dönüştürme ve karşılaştırma gerçekleştirmek için nasıl kullandığını açıklar.  
@@ -38,7 +38,7 @@ Bu Yardım sayfası kültür bilgilerini Visual Basic dize dönüştürme ve kar
 ## <a name="using-a-specific-culture"></a>Belirli bir kültür kullanarak  
  Bir Web hizmeti için (bir dize olarak biçimlendirilmiş) bir tarih gönderen bir uygulama geliştiriyorsanız düşünün. Bu durumda, uygulamanızın belirli bir kültür dize dönüştürme için kullanmanız gerekir. Nedenini anlamak için tarihin kullanmanın sonucu göz önünde bulundurun. <xref:System.DateTime.ToString> yöntemi: Uygulamanız 4 Temmuz 2005 tarihi biçimlendirmek için bu yöntem kullanıp kullanmadığını döndürür "4/7/2005 12:00:00 AM" Amerika Birleşik Devletleri İngilizce (en-US) kültür ile çalıştırdığınızda, ancak döndürür "04.07.2005 00:00:00" Almanca (de-DE) kültür ile çalıştırdığınızda.  
   
- Belirli bir kültür biçiminde bir dize dönüştürme yapmak gerektiğinde, kullanmanız gereken `CultureInfo` yerleşiktir sınıfı [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Yeni bir oluşturabilirsiniz `CultureInfo` kültürün adını geçirerek belirli bir kültür için nesne <xref:System.Globalization.CultureInfo.%23ctor%2A> Oluşturucusu. Desteklenen kültürü adların listelenme <xref:System.Globalization.CultureInfo> sınıfı Yardım sayfası.  
+ Belirli bir kültür biçiminde bir dize dönüştürme yapmak gerektiğinde, kullanmanız gereken `CultureInfo` .NET Framework'e yerleşik sınıfı. Yeni bir oluşturabilirsiniz `CultureInfo` kültürün adını geçirerek belirli bir kültür için nesne <xref:System.Globalization.CultureInfo.%23ctor%2A> Oluşturucusu. Desteklenen kültürü adların listelenme <xref:System.Globalization.CultureInfo> sınıfı Yardım sayfası.  
   
  Alternatif olarak, örneği alabilirsiniz *sabit kültür* gelen <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> özelliği. Sabit kültürü İngilizce kültürü temel alan, ancak bazı farklar vardır. Örneğin, sabit kültür, 24 saatlik bir 12 saatlik düzende yerine belirtir.  
   
@@ -62,7 +62,7 @@ Bu Yardım sayfası kültür bilgilerini Visual Basic dize dönüştürme ve kar
   
  [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
- Ayrıca [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] iş ortağı `StrComp` işlevi <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntemi. Temel dize sınıfının statik, aşırı yüklenmiş bir yöntem budur. Aşağıdaki örnekte, bu yöntem nasıl kullanıldığı gösterilmektedir:  
+ .NET Framework iş ortağı ayrıca kullanabileceğiniz `StrComp` işlevi <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntemi. Temel dize sınıfının statik, aşırı yüklenmiş bir yöntem budur. Aşağıdaki örnekte, bu yöntem nasıl kullanıldığı gösterilmektedir:  
   
  [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   

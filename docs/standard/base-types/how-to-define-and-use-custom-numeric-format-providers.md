@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37c9140db390c55c9cab4e8a3203287d2dd12725
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b3898caa90c695ae681c2d9b20abbba57a2a9f61
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634232"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590477"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Nasıl yapılır: Özel Sayısal Biçim Sağlayıcıları Tanımlama ve Kullanma
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Sayısal değerlerin dize gösterimini üzerinde kapsamlı denetim verir. Bu, sayısal değerlerin biçimini özelleştirmek için aşağıdaki özellikleri destekler:  
+.NET Framework, sayısal değerlerin dize gösterimini üzerinde kapsamlı denetim sağlar. Bu, sayısal değerlerin biçimini özelleştirmek için aşağıdaki özellikleri destekler:  
   
 - Standart sayısal biçim dizeleri, sayı, dize gösterimine dönüştürmek için önceden tanımlanmış birtakım biçimleri sağlar. Herhangi bir sayısal biçimlendirme yöntemi, aşağıdaki gibi kullanabilirsiniz <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, olan bir `format` parametresi. Ayrıntılar için bkz [standart sayısal biçim dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
@@ -33,7 +33,7 @@ ms.locfileid: "64634232"
   
 - Özel <xref:System.Globalization.CultureInfo> veya <xref:System.Globalization.NumberFormatInfo> simgeleri tanımlamak ve biçimlendirme sayısal değerlerinin dize temsillerini görüntülenmesinde kullanılan desenleri, nesneleri. Herhangi bir sayısal biçimlendirme yöntemi, aşağıdaki gibi kullanabilirsiniz <xref:System.Int32.ToString%2A>, olan bir `provider` parametresi. Genellikle, `provider` parametresi kültüre özgü biçimlendirme belirtmek için kullanılır.  
   
- Bazı durumlarda (örneğin, bir uygulama biçimlendirilmiş hesap numarası, bir kimlik numarası veya posta kodu görüntüle gerekir) aşağıdaki üç tekniklerden uygun değildir. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Ayrıca ne bir biçimlendirme nesnesi tanımlamanızı sağlayan bir <xref:System.Globalization.CultureInfo> ya da bir <xref:System.Globalization.NumberFormatInfo> sayısal bir değer nasıl biçimlendirildiğini belirlemek için nesne. Bu konu, böyle bir nesnenin uygulamak için adım adım yönergeler sağlar ve telefon numaraları biçimlendiren bir örnek sağlar.  
+ Bazı durumlarda (örneğin, bir uygulama biçimlendirilmiş hesap numarası, bir kimlik numarası veya posta kodu görüntüle gerekir) aşağıdaki üç tekniklerden uygun değildir. .NET Framework ayrıca ne bir biçimlendirme nesnesi tanımlamanızı sağlayan bir <xref:System.Globalization.CultureInfo> ya da bir <xref:System.Globalization.NumberFormatInfo> sayısal bir değer nasıl biçimlendirildiğini belirlemek için nesne. Bu konu, böyle bir nesnenin uygulamak için adım adım yönergeler sağlar ve telefon numaraları biçimlendiren bir örnek sağlar.  
   
 ### <a name="to-define-a-custom-format-provider"></a>Bir özel biçim sağlayıcısı tanımlamak için  
   
@@ -87,9 +87,6 @@ ms.locfileid: "64634232"
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
  Bu örnekte, yöntem uygulayan <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> bir geri çağırma yöntemi olarak hizmet vermeye yönelik <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntemi. Bu nedenle, inceler `formatProvider` parametresi geçerli bir başvuru içerip içermediğini belirlemek için `TelephoneFormatter` nesne. Ancak, yöntem doğrudan koddan çağrılabilir. Bu durumda, kullanabileceğiniz `formatProvider` sağlamak için parametre bir <xref:System.Globalization.CultureInfo> veya <xref:System.Globalization.NumberFormatInfo> kültüre özgü biçimlendirme bilgileri sağlayan nesne.  
-  
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Kodu, csc.exe veya vb.exe kullanarak komut satırında derleyin. Visual Studio'da Kodu derlemek için bir konsol uygulaması projesi şablonu içine koyun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

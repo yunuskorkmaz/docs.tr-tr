@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: b0758cf1381b5a6e24067fdd64288d0f7e2b0d5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7458caee29d576d8a9d38f01027c106d39a1daf2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637163"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591927"
 ---
 # <a name="guide-to-the-documentation"></a>Belgeler için Kılavuz
 Sağlanan Windows Communication Foundation (WCF) belgeler hakkında yönergeler aşağıda verilmiştir. Bağlantılı belgeleri başlangıç noktaları belirli ilgi alanlarına ve uzmanlık düzeylerine göre gruplandırılmış önerilir.  
@@ -46,7 +46,7 @@ Sağlanan Windows Communication Foundation (WCF) belgeler hakkında yönergeler 
   
 - ASP.NET istemcileri ile iletişim kuran bir hizmet oluşturmak için bkz: [nasıl yapılır: WCF hizmetini ASP.NET Web hizmeti istemcileriyle birlikte çalışmak için yapılandırma](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md).  
   
-- İle tümleştirme [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] remoting içinde açıklanan [.NET uzaktan iletişim uygulamalarını wcf'ye geçirme](../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md).  
+- .NET Framework uzaktan iletişimi ile tümleştirme içinde açıklanan [.NET uzaktan iletişim uygulamalarını wcf'ye geçirme](../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md).  
   
 - Varolan bir COM + uygulaması bir WCF hizmeti veya istemci ile tümleştirmek için bkz: [COM + uygulamaları ile tümleştirme genel bakış](../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md).  
   

@@ -2,12 +2,12 @@
 title: Seri Hale Getirilebilir Türler
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: df00623ba45b356561d4d80d970fdf36ee6a377f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0913d523e93505934b1cf231284e356baba5ded3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586144"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591666"
 ---
 # <a name="serializable-types"></a>Seri Hale Getirilebilir Türler
 Varsayılan olarak, <xref:System.Runtime.Serialization.DataContractSerializer> tüm herkese görünür türler seri hale getirir. Tüm ortak okuma/yazma özellikleri ve türünde alanlar serileştirilir.  
@@ -36,7 +36,7 @@ Varsayılan olarak, <xref:System.Runtime.Serialization.DataContractSerializer> t
 - "Seri hale getirme işlemi Genel üyeler, özellikler veya alanlar için geri çevirmek için", geçerli <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> özniteliği bu üye için.  
   
 ## <a name="inheritance"></a>Devralma  
- İşaretsiz türleri (olmadan türleri <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği) bu özniteliği olan türlerinden devraldığına; ancak tersi izin verilmez: öznitelik türleriyle işaretsiz türlerden devralamaz. Bu kural öncelikle'nın önceki sürümlerinde yazılan kod ile geriye dönük uyumluluk sağlamak için zorunlu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ İşaretsiz türleri (olmadan türleri <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği) bu özniteliği olan türlerinden devraldığına; ancak tersi izin verilmez: öznitelik türleriyle işaretsiz türlerden devralamaz. Bu kural, öncelikli olarak .NET Framework'ün önceki sürümlerinde yazılan kod ile geriye dönük uyumluluk sağlamak için zorlanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

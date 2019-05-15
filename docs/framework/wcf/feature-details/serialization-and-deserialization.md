@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: cf68834c5612ed51fb3e6c0ed18667cbc13482bc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 87788906cfbf5b230c3b976395d9a40c655ae41a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586213"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591654"
 ---
 # <a name="serialization-and-deserialization"></a>Seri Hale Getirme ve Seri Durumdan Çıkarma
-Windows Communication Foundation (WCF) içeren yeni bir serileştirme motoruna <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> Arasında çevirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri ve her iki yönde de XML. Bu konu, seri hale getirici nasıl çalıştığını açıklar.  
+Windows Communication Foundation (WCF) içeren yeni bir serileştirme motoruna <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> .NET Framework nesneleri ve XML arasında her iki yönde çevirir. Bu konu, seri hale getirici nasıl çalıştığını açıklar.  
   
- Serileştirilirken [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri seri hale getirici anlayan serileştirme programlama modellerini, yeni dahil olmak üzere çeşitli *veri anlaşması* modeli. Desteklenen türler tam bir listesi için bkz. [veri sözleşme seri hale getirici tarafından desteklenen türleri](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Veri sözleşmeleri giriş için bkz: [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ .NET Framework nesneleri serileştirmek, seri hale getirici serileştirme programlama modellerini, yeni dahil olmak üzere çeşitli anlayan *veri anlaşması* modeli. Desteklenen türler tam bir listesi için bkz. [veri sözleşme seri hale getirici tarafından desteklenen türleri](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Veri sözleşmeleri giriş için bkz: [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  XML seri durumdan çıkarılırken zaman serileştiriciyi kullanır <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> sınıfları. Ayrıca destekler <xref:System.Xml.XmlDictionaryReader> ve <xref:System.Xml.XmlDictionaryWriter> sınıfları üretmek etkinleştirmek için en iyi duruma getirilmiş XML biçimi ne zaman WCF ikili XML kullanılarak gibi bazı durumlarda.  
   
- WCF özel seri hale getirici, ayrıca içerir <xref:System.Runtime.Serialization.NetDataContractSerializer>. <xref:System.Runtime.Serialization.NetDataContractSerializer> Benzer <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> seri hale getiricileri genişletme de verir çünkü [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] adları serileştirilmiş veriler bir parçası olarak yazın. Aynı türler seri hale getirme ve seri durumdan çıkarılırken uçları paylaşıldığında kullanılır. Hem <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.NetDataContractSerializer> ortak temel sınıfından türetilir <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
+ WCF özel seri hale getirici, ayrıca içerir <xref:System.Runtime.Serialization.NetDataContractSerializer>. <xref:System.Runtime.Serialization.NetDataContractSerializer> Benzer <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> seri hale getiricileri genişletme da serileştirilmiş veriler bir parçası olarak .NET Framework tür adları yayan olduğundan. Aynı türler seri hale getirme ve seri durumdan çıkarılırken uçları paylaşıldığında kullanılır. Hem <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.NetDataContractSerializer> ortak temel sınıfından türetilir <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
   
 > [!WARNING]
 >  <xref:System.Runtime.Serialization.DataContractSerializer> XML varlıklar olarak 20 aşağıda bir onaltılık değer ile denetim karakterlerini içeren bir dize serileştirir. Bu tür veriler için bir WCF Hizmeti gönderirken bu olmayan WCF istemcisi ile ilgili bir sorun neden olabilir.  
@@ -226,7 +226,7 @@ Windows Communication Foundation (WCF) içeren yeni bir serileştirme motoruna <
  Bu sarmalayıcı öğe adı denetimi devre dışı bırakmak için bir yolu yoktur; Bazı aşırı yüklemeleri `ReadObject` yöntemi ele Boole parametresi `verifyObjectName`, Hosted `true` varsayılan olarak. Ayarlandığında `false`, sarmalayıcı öğe ad alanı ve ad yok sayılır. Bu, daha önce açıklanan adım adım serileştirme mekanizması kullanılarak yazılmıştır XML okumak için kullanışlıdır.  
   
 ## <a name="using-the-netdatacontractserializer"></a>NetDataContractSerializer kullanma  
- Arasındaki birincil fark `DataContractSerializer` ve <xref:System.Runtime.Serialization.NetDataContractSerializer> olan `DataContractSerializer` veri sözleşmesi adları kullanır `NetDataContractSerializer` tam çıkarır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] serileştirilmiş XML derlemesi ve tür adları. Bu, tam aynı türlerini serileştirme ve seri durumundan çıkarma uç noktaları arasında paylaşılması gerektiği anlamına gelir. Bu bilinen türler mekanizması ile gerekli olmadığı anlamına gelir `NetDataContractSerializer` seri durumdan için tam türlerinden her zaman bildiği.  
+ Arasındaki birincil fark `DataContractSerializer` ve <xref:System.Runtime.Serialization.NetDataContractSerializer> olan `DataContractSerializer` veri sözleşmesi adları kullanır `NetDataContractSerializer` serileştirilmiş XML'de tam .NET Framework derlemesi ve tür adları çıkarır. Bu, tam aynı türlerini serileştirme ve seri durumundan çıkarma uç noktaları arasında paylaşılması gerektiği anlamına gelir. Bu bilinen türler mekanizması ile gerekli olmadığı anlamına gelir `NetDataContractSerializer` seri durumdan için tam türlerinden her zaman bildiği.  
   
  Ancak, bazı sorunlar oluşabilir:  
   
@@ -234,11 +234,11 @@ Windows Communication Foundation (WCF) içeren yeni bir serileştirme motoruna <
   
 - Sürüm oluşturma. Tam tür ve derleme adları XML'de ciddi bir şekilde kullanarak nasıl türleri tutulan olabileceğini kısıtlar. Aşağıdakiler değiştirilemez: ad, ad alanları, derleme adları ve derleme sürümlerini yazın. Ayarı <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> özellik ya da Oluşturucu parametresini <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> varsayılan değeri yerine <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> derleme sürüm değişikliklerini, ancak genel parametre türleri sağlar.  
   
-- Birlikte çalışabilirlik. Çünkü [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tür ve derleme adları dahil edilir XML'de platformları dışında [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] elde edilen verilere erişemez.  
+- Birlikte çalışabilirlik. XML dosyasında .NET Framework türü ve derleme adları dahil edildiğinden, .NET Framework dışındaki platformları elde edilen verilere erişemez.  
   
 - Performans. Tür ve derleme yazma önemli ölçüde artar elde edilen XML boyutu adları.  
   
- Bu mekanizma, ikili veya SOAP serileştirme tarafından kullanılan benzer [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uzaktan iletişim (özellikle <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>).  
+ Bu mekanizma ikili veya .NET Framework uzaktan iletişim tarafından kullanılan SOAP serileştirme benzer (özellikle <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>).  
   
  Kullanarak `NetDataContractSerializer` kullanmaya benzer `DataContractSerializer`, aşağıdaki farklarla birlikte:  
   
@@ -258,7 +258,7 @@ Windows Communication Foundation (WCF) içeren yeni bir serileştirme motoruna <
   
  XML, biçimleri `NetDataContractSerializer` ve `DataContractSerializer` kullanmak normalde uyumlu değildir. Diğer bir deyişle, bu seri hale getiricileri genişletme biri ile seri hale getirmek ve diğer seri durumdan çalışılıyor desteklenen bir senaryo değildir.  
   
- Ayrıca, `NetDataContractSerializer` tam çıktısının [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Nesne grafiği her düğüm için tür ve derleme adı. Bu, yalnızca belirsiz olduğu için bu bilgileri çıkarır. Diğer bir deyişle, kök nesne düzeyinde ve çok biçimli herhangi bir servis talebi için çıkarır.  
+ Ayrıca, `NetDataContractSerializer` tam .NET Framework tür ve derleme adı Nesne grafiği her düğüm için çıkış yok. Bu, yalnızca belirsiz olduğu için bu bilgileri çıkarır. Diğer bir deyişle, kök nesne düzeyinde ve çok biçimli herhangi bir servis talebi için çıkarır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
