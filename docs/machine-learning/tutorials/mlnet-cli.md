@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: d7c4c774667e87fee2f71046aa0f91bfad7c6f3e
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: feddafdd6becd676f4d18aa94bdfae50f02abc6e
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65066279"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557953"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>CLI kullanarak bir ikili dosya sınıflandırıcı otomatik oluştur
 
@@ -94,12 +94,12 @@ ML.NET CLI bir komut istemi (Windows, Mac veya Linux) kaliteli ML.NET modelleri 
 
     CLI, benzer çıktıyı görürsünüz:
 
+    <!-- markdownlint-disable MD023 -->
     # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
     ![ML.NET CLI otomatik-PowerShell eğitme](./media/mlnet-cli/mlnet-auto-train-binary-classification-powershell.gif)
 
     # <a name="macos-bashtabmacosbash"></a>[macOS Bash](#tab/macosbash)
-
 
     ![ML.NET CLI otomatik-PowerShell eğitme](./media/mlnet-cli/mlnet-auto-train-binary-classification-bash.gif)
 

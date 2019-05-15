@@ -2,12 +2,12 @@
 title: Kuyruklar ve Güvenilir Oturumlar
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-ms.openlocfilehash: d6b1e62e2b0f91856867128c2c0695ab0bdf1c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7a60e6f92f6875b6fb446d29abc7d858bfdefe73
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643525"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557162"
 ---
 # <a name="queues-and-reliable-sessions"></a>Kuyruklar ve Güvenilir Oturumlar
 Kuyruklar ve güvenilir oturumlar güvenilir Mesajlaşma uygulayan Windows Communication Foundation (WCF) özellikleridir. Bu bölümdeki konular, WCF güvenilir Mesajlaşma ele alınmaktadır.  
@@ -31,7 +31,7 @@ Kuyruklar ve güvenilir oturumlar güvenilir Mesajlaşma uygulayan Windows Commu
   
  Güvenilir oturumlar, düşük gecikmeli güvenilir ileti aktarımları sağlar. SOAP iletileri için herhangi bir ara sunucuları veya aracılar üzerinde sağlarlar, hangi TCP eşdeğer IP köprüleri paketleri için sağlar. Güvenilir oturumlar hakkında daha fazla bilgi için bkz: [güvenilir oturumlar](../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
-### <a name="queues"></a>Kuyruklar  
+## <a name="queues"></a>Kuyruklar  
  Wcf'de kuyruklar, kaynaklar ve hedefler, yüksek gecikme süresi arasında iletileri ve ayırma hem güvenilir aktarımları sağlar. WCF kuyruğa alınan iletişim, Message Queuing en üstünde (MSMQ olarak da bilinir) oluşturulur.  
   
  MSMQ bir NT hizmeti olarak çalışan Windows ile bir seçenek olarak sevk edilir. İletim kaynak adına iletim kuyruktaki iletileri yakalar ve bir hedef kuyruğa gönderir. Hedef iletileri istediğinde hedef sıra adına daha sonra gönderim için hedef iletileri kabul eder. Böylece iletiler iletim kaybolmaz MSMQ sırası yöneticilerini güvenilir ileti aktarım protokolü kullanır. Protokol, yerel veya SOAP tabanlı gibi Soap güvenilir Mesajlaşma Protokolü (SRMP) olabilir.  

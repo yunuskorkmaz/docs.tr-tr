@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - ToolStripContentPanel [Windows Forms], adding controls
 ms.assetid: fa410960-bf1a-42fc-80e8-f2e27fb3dbb8
-ms.openlocfilehash: 4fbc97502431b681a77d58a112344287f582ff0f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 99b6b8615a16715caaf95109cfbba3ba389946fa
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624133"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591363"
 ---
 # <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a>Nasıl yapılır: ToolStripContentPanel'ine Denetim Ekleme
 Bir veya daha fazla denetim için program aracılığıyla ekleyebilirsiniz bir <xref:System.Windows.Forms.ToolStripContentPanel>.  
@@ -27,8 +27,6 @@ Bir veya daha fazla denetim için program aracılığıyla ekleyebilirsiniz bir 
  Bu kod örneği gerektirir:  
   
 - Sistem, System.Data ve System.Windows.Forms öğelerini derlemelerine başvurular.  
-  
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
