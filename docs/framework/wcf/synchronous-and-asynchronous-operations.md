@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 3f76d51ce5cc167e71e2f3f5e7944dae2e3265d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c2e6a955a151e0e11bcf189085dc24e7815fb747
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645190"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582735"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Zaman Uyumlu ve Zaman Uyumsuz İşlemler
 Bu konuda, uygulama ve zaman uyumsuz hizmet işlemleri çağırma anlatılmaktadır.  
@@ -110,7 +110,7 @@ public class AsyncExample
  Olay tabanlı zaman uyumsuz desen hakkında daha fazla bilgi için bkz: [The Event-Based zaman uyumsuz desen](https://go.microsoft.com/fwlink/?LinkId=232515).  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>IAsyncResult zaman uyumsuz desen  
- Bir zaman uyumsuz bir biçimde kullanarak bir hizmet işlemi uygulanabilir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zaman uyumsuz desen programlama ve İşaretleme `<Begin>` yöntemiyle <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> özelliğini `true`. Bu durumda, zaman uyumsuz işlemi eşzamanlı bir işlem olarak aynı formda meta verilerinde gösterilir: Bir istek iletisi ve ilişkili yanıt iletisi ile tek bir işlem olarak kullanıma sunulur. İstemci programlama modelleri ardından seçeneğiniz vardır. Hizmet çağrıldığında bir istek-yanıt iletisi exchange gerçekleşmeden sürece, bu düzen eşzamanlı bir işlem veya zaman uyumsuz bir olarak gösterebilir.  
+ .NET Framework zaman uyumsuz programlama deseni kullanılarak ve İşaretleme zaman uyumsuz olarak bir hizmet işlemi uygulanabilir `<Begin>` yöntemiyle <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> özelliğini `true`. Bu durumda, zaman uyumsuz işlemi eşzamanlı bir işlem olarak aynı formda meta verilerinde gösterilir: Bir istek iletisi ve ilişkili yanıt iletisi ile tek bir işlem olarak kullanıma sunulur. İstemci programlama modelleri ardından seçeneğiniz vardır. Hizmet çağrıldığında bir istek-yanıt iletisi exchange gerçekleşmeden sürece, bu düzen eşzamanlı bir işlem veya zaman uyumsuz bir olarak gösterebilir.  
   
  Genel olarak, sistemleri ile zaman uyumsuz yapısı, bir bağımlılık iş parçacıklarında almamalıdır.  En güvenilir veri geçirme işlemi gönderme işleminin çeşitli aşamaları için uzantıları kullanmak için yoludur.  
   

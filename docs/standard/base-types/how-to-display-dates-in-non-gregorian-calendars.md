@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1928980f24f08e0379639090cab8d2ac7ba014e4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ea8b47e7d5c794ea1b33eaaae52a3f8250f80a82
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634007"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588829"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Nasıl yapılır: Miladi Olmayan Takvimlerde Tarihleri Görüntüleme
 <xref:System.DateTime> Ve <xref:System.DateTimeOffset> türleri Gregoryen takvim kendi varsayılan takvim olarak kullanın. Bu, tarih ve saat değerinin çağırma anlamına gelir `ToString` yöntemi, o tarih dize gösterimini görüntüler ve saat, tarih ve saat olsa bile Gregoryen takvimindeki başka bir takvimi kullanılarak oluşturuldu. Bu tarih ve saat değeri ile Fars takvimiyle oluşturmak için iki farklı şekilde kullanır, ancak yine de bu tarih ve saat değerleri Gregoryen takvimindeki görüntüler çağırdığında, aşağıdaki örnekte gösterilmiştir <xref:System.DateTime.ToString%2A> yöntemi. Bu örnek, belirli bir takvimde tarihi görüntülemek için iki yaygın olarak kullanılan ama yanlış teknikleri yansıtır.  
@@ -84,11 +84,6 @@ ms.locfileid: "64634007"
 - `DisplayDate`, iki parametre geçirilen aşırı yüklenmiş bir genel yöntem: ya bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> değeri tarafından temsil edilen takvimde ifade `CalendarUtility` ; nesne ve biçimlendirme kuralları kullanılacak kültürü. İçinde bir tarih dize gösterimini döndürme davranışını olup biçimlendirme kuralları kullanılacak kültürü tarafından hedef takvimin desteklenen bağlıdır.  
   
  Oluşturmak için kullanılan takvim bakılmaksızın bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> değeri bu örnekte, değer genellikle bir Gregoryen tarihi olarak ifade edilir. Bunun nedeni, <xref:System.DateTime> ve <xref:System.DateTimeOffset> türleri herhangi bir takvim bilgi korumak değil. Dahili olarak, bu yana gece yarısı, 1 Ocak 0001 geçen tıklarının sayısını temsil edilir. Bu sayının yorumu Takvim üzerinde bağlıdır. Çoğu kültürde için varsayılan takvim Gregoryen takvim ' dir.  
-  
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek, bir System.Core.dll başvurusu gerektirir.  
-  
- Kodu, csc.exe veya vb.exe kullanarak komut satırında derleyin. Visual Studio'da Kodu derlemek için bir konsol uygulaması projesi şablonu içine koyun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

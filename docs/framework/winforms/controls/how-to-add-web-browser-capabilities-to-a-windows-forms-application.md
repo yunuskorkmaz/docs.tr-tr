@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 - Windows Forms, adding Web browser functionality
 ms.assetid: 3871f072-b57a-435b-9976-e5da28df04a7
-ms.openlocfilehash: c091d9473bb7c3540453cb5763052f45f61b61f0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 60b544c630fc5c7c876293b27a5c5e159e57a797
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624000"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588884"
 ---
 # <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>Nasıl yapılır: Bir Windows Forms Uygulamasına Web Tarayıcısı Yetenekleri Ekleme
 İle <xref:System.Windows.Forms.WebBrowser> denetimi, Web tarayıcısı işlevselliği uygulamanıza ekleyebilirsiniz. Denetim varsayılan olarak bir Web tarayıcısı gibi çalışır. Bir başlangıç URL'si ayarlayarak yükledikten sonra <xref:System.Windows.Forms.WebBrowser.Url%2A> özelliği köprüleri tıklatarak veya gezinme geçmişinde İleri ve geri taşımak için klavye kısayollarını kullanarak gidebilirsiniz. Varsayılan olarak, ek tarayıcısı işlevselliği sağ kısayol menüsünden erişebilirsiniz. Yeni belgeler, denetimin bırakarak da açabilirsiniz. <xref:System.Windows.Forms.WebBrowser> Denetimi ayrıca çeşitli özellikleri, yöntemleri ve Internet Explorer'da bulunanlar benzer kullanıcı arabirimi özellikleri uygulamak için kullanabileceğiniz olaylar vardır.  
@@ -33,8 +33,6 @@ ms.locfileid: "64624000"
  Bu örnek gerektirir:  
   
 - Başvurular `System`, `System.Drawing`, ve `System.Windows.Forms` derlemeler.  
-  
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

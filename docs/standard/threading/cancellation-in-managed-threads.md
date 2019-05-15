@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 531b9b6ae62b34f78f13ff6cd1784a2823584ed6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0776db4d045a8e52521859b9126583558bc5b51
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620779"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586378"
 ---
 # <a name="cancellation-in-managed-threads"></a>Yönetilen İş Parçacıklarında İptal
 İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework, ortak iptali zaman uyumsuz veya uzun süre çalışan zaman uyumlu işlemler için birleşik bir modeli kullanır. Bu model, bir iptal belirteci adlı basit bir nesne üzerinde temel alır. Yeni iş parçacıkları veya görevleri oluşturarak iptal edilebilir işlemleri, bir veya daha fazla örneğin çağıran nesnesi belirteç her işlem için iletir. Tek işlemler, diğer işlemler için belirteç kopyalarını sırayla geçirebilirsiniz. Bazı daha sonraki bir zamanda belirteci oluşturan nesnesini bu işlemler neler yaptıklarını durdurma isteği için kullanabilirsiniz. İstekte bulunan nesne yalnızca iptal isteği gönderebilir ve her dinleyici isteği fark ve uygun ve hızlı bir şekilde yanıt sorumludur.  
@@ -60,7 +60,7 @@ ms.locfileid: "64620779"
 |<xref:System.Threading.CancellationToken>|Basit değer türü, bir veya daha fazla dinleyici, genellikle bir yöntem parametresi olarak geçirildi. Dinleyicileri izleme değerini `IsCancellationRequested` yoklama, geri çağırma ve bekleme tanıtıcısı tarafından belirteç özelliği.|  
 |<xref:System.OperationCanceledException>|Bu özel durumun oluşturucusunu aşırı kabul bir <xref:System.Threading.CancellationToken> bir parametre olarak. Dinleyicileri isteğe bağlı olarak iptal nedeni doğrulamak ve diğerlerinin bir iptal isteğine yanıt verdi bildirmek için bu durum oluşturabilir.|  
   
- Yeni iptal etme modeli içinde tümleşik olarak [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] çeşitli türlerde. En önemli olanlardır <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> ve <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>. Bu yeni iptal etme modeli için tüm yeni kitaplık ve uygulama kodu kullanmanızı öneririz.  
+ Yeni iptal etme modeli, birden fazla .NET Framework içine tümleştirilmiştir. En önemli olanlardır <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> ve <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>. Bu yeni iptal etme modeli için tüm yeni kitaplık ve uygulama kodu kullanmanızı öneririz.  
   
 ## <a name="code-example"></a>Kod Örneği  
  Aşağıdaki örnekte, istekte bulunan nesneyi oluşturur bir <xref:System.Threading.CancellationTokenSource> nesne ve geçişleri kendi <xref:System.Threading.CancellationTokenSource.Token%2A> iptal edilebilir işleme özelliği. İsteği aldığında işlemi değerini izler <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> yoklama belirteç özelliği. Değer olduğunda `true`, uygun herhangi bir şekilde dinleyicinin sonlandırabilirsiniz. Bu örnekte, yöntem yalnızca, çoğu durumda gerekli olduğu çıkar.  

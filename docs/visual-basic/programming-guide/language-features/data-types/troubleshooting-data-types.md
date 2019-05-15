@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 851be5bdf4a3adced724dc2df33657a84226270d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 837022cf1675097af5ebce63441cad1ce63eaabb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906964"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591105"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Veri Türleri Sorunlarını Giderme (Visual Basic)
 Bu sayfada, iç veri türlerinde işlemler gerçekleştirdiğinizde oluşabilecek bazı yaygın sorunlar listelenir.  
@@ -66,7 +66,7 @@ Bu sayfada, iç veri türlerinde işlemler gerçekleştirdiğinizde oluşabilece
  Bildirmek yeterli olmadığını göz önünde bulundurun `decimalRemainder` olarak `Decimal`. Değişmez değerler için derleyiciyi `Decimal`, veya kullandıkları `Double` varsayılan olarak ve `decimalRemainder` aynı yanlış değere alır `doubleRemainder`.  
   
 ## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Boole türü sayısal tür için doğru bir şekilde dönüştürmez  
- [Boole veri türü](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) değerlerini, sayı olarak depolanmaz ve depolanan değerler sayıya eşdeğer olması amaçlanmamıştır. Önceki sürümleriyle uyumluluk için Visual Basic dönüşüm anahtar sözcükleri sağlar ([CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`, vb.) arasında dönüştürmek için `Boolean` ve sayısal türler. Ancak, diğer diller bazen bu dönüştürmeleri gibi farklı şekilde gerçekleştirmek [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yöntemleri.  
+ [Boole veri türü](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) değerlerini, sayı olarak depolanmaz ve depolanan değerler sayıya eşdeğer olması amaçlanmamıştır. Önceki sürümleriyle uyumluluk için Visual Basic dönüşüm anahtar sözcükleri sağlar ([CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`, vb.) arasında dönüştürmek için `Boolean` ve sayısal türler. .NET Framework yöntemlerini gibi ancak diğer diller bazen bu dönüştürmeleri farklı gerçekleştirin.  
   
  Hiçbir zaman eşdeğer sayısal değerler için dayanan kod yazmanız gerekir `True` ve `False`. Mümkün olduğunda, kullanımını sınırlamanız gerekir `Boolean` kendisi için tasarlanan mantıksal değerleri değişkenlere. Karışık gerekir, `Boolean` ve sayısal değerler, seçtiğiniz dönüştürme yöntemi anladığınızdan emin olun.  
   
@@ -96,7 +96,7 @@ Bu sayfada, iç veri türlerinde işlemler gerçekleştirdiğinizde oluşabilece
 ## <a name="string-conversion-fails-at-run-time"></a>Çalışma zamanı sırasında dize dönüştürme başarısız  
  [Dize veri türü](../../../../visual-basic/language-reference/data-types/string-data-type.md) çok az sayıda dönüştürmelerine katılır. `String` yalnızca kendisine widens ve `Object`ve yalnızca `Char` ve `Char()` (bir `Char` array) için genişletmek `String`. Bunun nedeni, `String` değişkenleri ve sabitleri diğer veri türleri bulunamaz değerleri içerebilir.  
   
- Tür denetleme ne zaman geçiş ([Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) olan `On`, derleyicinin tüm örtük daraltma dönüştürmelerini izin vermiyor. Bu, ilgili olanlar içerir `String`. Kodunuzu dönüşüm anahtar sözcükleri gibi kullanmaya devam edebilirsiniz `CStr` ve [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md), hangi doğrudan [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] dönüştürme denemek için.  
+ Tür denetleme ne zaman geçiş ([Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) olan `On`, derleyicinin tüm örtük daraltma dönüştürmelerini izin vermiyor. Bu, ilgili olanlar içerir `String`. Kodunuzu dönüşüm anahtar sözcükleri gibi kullanmaya devam edebilirsiniz `CStr` ve [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md), dönüştürme denemek için .NET Framework'ü doğrudan.  
   
 > [!NOTE]
 >  Öğeleri dönüştürmelerinde daraltmaya dönüştürme hatası gizlenen bir `For Each…Next` döngü denetim değişkeni koleksiyonu. Daha fazla bilgi ve örnekler için "Daraltma dönüştürmeleri" bölümüne bakın. [her biri için... Sonraki deyimi](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  

@@ -2,16 +2,16 @@
 title: Bir iş akışından - WF akışlarını OData kullanma
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: aec23667e7388d6bc31d122617795ff5dfdefa5f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7d5230bb15474d63b2381d3906e07e48ac0134d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946074"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592987"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Bir iş akışından OData tüketen akışları
 
-WCF Veri Hizmetleri'nin bir bileşeni olan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] göstermek ve temsili durum aktarımı (REST) semantiği kullanarak Web veya intranet üzerinden verileri kullanmak için açık veri Protokolü (OData) kullanan hizmetler oluşturmanıza olanak sağlar. OData veri tarafından bir URI'leri adreslenebilir kaynakları olarak kullanıma sunar. HTTP isteği göndermesini ve OData akışına işlem herhangi bir uygulama bir veri hizmeti döndürdüğünü bir OData tabanlı bir veri hizmeti ile etkileşim kurabilir. Ayrıca, WCF Veri Hizmetleri OData Akışları'tükettiğinizde daha zengin bir programlama deneyimi sağlayan istemci kütüphaneleri içerir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] uygulamalar. Bu konu, bir iş akışında istemci kitaplıkları kullanarak olmadan ve genel bakış kullanan bir OData akışı sağlar.
+WCF Veri Hizmetleri, temsili durum aktarımı (REST) semantiği kullanarak Web veya intranet üzerinden verileri kullanır ve açık veri Protokolü (OData) kullanan hizmetler oluşturmanıza olanak sağlayan .NET Framework'ün bir bileşenidir. OData veri tarafından bir URI'leri adreslenebilir kaynakları olarak kullanıma sunar. HTTP isteği göndermesini ve OData akışına işlem herhangi bir uygulama bir veri hizmeti döndürdüğünü bir OData tabanlı bir veri hizmeti ile etkileşim kurabilir. Ayrıca, WCF Veri Hizmetleri OData akışları .NET Framework uygulamalarından tükettiğinizde daha zengin bir programlama deneyimi sağlayan istemci kütüphaneleri içerir. Bu konu, bir iş akışında istemci kitaplıkları kullanarak olmadan ve genel bakış kullanan bir OData akışı sağlar.
 
 ## <a name="using-the-sample-northwind-odata-service"></a>Örnek Northwind OData hizmetini kullanma
 
@@ -19,7 +19,7 @@ Veri hizmeti bulunan Northwind örnek bu konudaki örneklerde [ http://services.
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>İstemci kitaplıkları kullanarak kullanan bir OData akışı
 
-WCF Veri Hizmetleri, daha kolay bir OData akışına gelen kullanmasına olanak sağlayan istemci kütüphaneleri içerir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ve istemci uygulamaları. Bu kitaplıklar, HTTP iletileri gönderip basitleştirir. Bunlar ayrıca varlık verilerini temsil eden CLR nesneleri iletisi yüküne çevir. İstemci kitaplıkları iki çekirdek sınıfı özelliği <xref:System.Data.Services.Client.DataServiceContext> ve <xref:System.Data.Services.Client.DataServiceQuery%601>. Bu sınıflar, bir veri hizmetini sorgulama ve CLR nesne olarak döndürülen varlığı verilerle çalışmak etkinleştirin. Bu bölüm, istemci kitaplıkları kullanan bir etkinlik oluşturma için iki yaklaşım kapsar.
+WCF Veri Hizmetleri, daha kolay bir OData akışına .NET Framework ve istemci uygulamalardan kullanmasına olanak sağlayan istemci kütüphaneleri içerir. Bu kitaplıklar, HTTP iletileri gönderip basitleştirir. Bunlar ayrıca varlık verilerini temsil eden CLR nesneleri iletisi yüküne çevir. İstemci kitaplıkları iki çekirdek sınıfı özelliği <xref:System.Data.Services.Client.DataServiceContext> ve <xref:System.Data.Services.Client.DataServiceQuery%601>. Bu sınıflar, bir veri hizmetini sorgulama ve CLR nesne olarak döndürülen varlığı verilerle çalışmak etkinleştirin. Bu bölüm, istemci kitaplıkları kullanan bir etkinlik oluşturma için iki yaklaşım kapsar.
 
 ### <a name="adding-a-service-reference-to-the-wcf-data-service"></a>WCF veri hizmetine hizmet başvurusu ekleme
 
@@ -34,7 +34,7 @@ Hizmet tarafından hem de hiçbir hizmet işlemleri olduğunu unutmayın **Hizme
 
 ### <a name="using-asynchronous-methods"></a>Zaman uyumsuz metotlar kullanma
 
-WCF Veri Hizmetleri zaman uyumsuz olarak erişen öneririz Web üzerinden kaynaklara erişirken oluşabilecek olası gecikme sorunlarını gidermek için. Zaman uyumsuz yöntemleri çağırma sorgular için WCF Veri Hizmetleri istemci kitaplıkları içerir ve Windows Workflow Foundation (WF) sağlayan <xref:System.Activities.AsyncCodeActivity> sınıfı zaman uyumsuz etkinlikler yazma için. <xref:System.Activities.AsyncCodeActivity> türetilmiş etkinlik yararlanmak için yazılabilir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zaman uyumsuz yöntemler veya zaman uyumsuz olarak yürütülecek kodu olan sınıfları bir yönteme yerleştirin ve temsilci kullanılarak çağrılır. Bu bölümde, iki örnek bir <xref:System.Activities.AsyncCodeActivity> türetilmiş etkinlik; bir WCF Veri Hizmetleri istemci kitaplıkları, zaman uyumsuz yöntemleri kullanır ve bir temsilci kullanan bir.
+WCF Veri Hizmetleri zaman uyumsuz olarak erişen öneririz Web üzerinden kaynaklara erişirken oluşabilecek olası gecikme sorunlarını gidermek için. Zaman uyumsuz yöntemleri çağırma sorgular için WCF Veri Hizmetleri istemci kitaplıkları içerir ve Windows Workflow Foundation (WF) sağlayan <xref:System.Activities.AsyncCodeActivity> sınıfı zaman uyumsuz etkinlikler yazma için. <xref:System.Activities.AsyncCodeActivity> zaman uyumsuz yöntemler olan .NET Framework sınıfları yararlanmak için türetilmiş etkinlikleri yazılabilir veya zaman uyumsuz olarak yürütülecek kodu bir yönteme yerleştirin ve temsilci kullanılarak çağrılır. Bu bölümde, iki örnek bir <xref:System.Activities.AsyncCodeActivity> türetilmiş etkinlik; bir WCF Veri Hizmetleri istemci kitaplıkları, zaman uyumsuz yöntemleri kullanır ve bir temsilci kullanan bir.
 
 > [!NOTE]
 > Daha fazla bilgi için [zaman uyumsuz işlemler (WCF Data Services)](../data/wcf/asynchronous-operations-wcf-data-services.md) ve [zaman uyumsuz etkinlikler oluşturma](creating-asynchronous-activities-in-wf.md).
@@ -72,7 +72,7 @@ Sorgu tarafından döndürülen verilerin herhangi bir ek işlem gerekiyorsa, bu
 
 ### <a name="using-a-delegate"></a>Bir temsilcisi kullanma
 
-Ek olarak, zaman uyumsuz yöntemini çağıran bir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sınıfı, bir <xref:System.Activities.AsyncCodeActivity>-tabanlı etkinliği de tanımlayabilirsiniz zaman uyumsuz mantık yöntemlerinden biri. Bu yöntem etkinlik içinde bir temsilci kullanarak belirtilen <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> geçersiz kılar. Yöntem döndürüldüğünde etkinliğin çalışma zamanı çağırır <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> geçersiz kılar. OData hizmetine bir iş akışından çağrılırken, bu yöntem hizmetini sorgulama ve herhangi bir ek işleme sağlamak için kullanılabilir.
+Ek olarak, bir .NET Framework sınıfı zaman uyumsuz yöntemini çağıran bir <xref:System.Activities.AsyncCodeActivity>-tabanlı etkinliği de tanımlayabilirsiniz zaman uyumsuz mantık yöntemlerinden biri. Bu yöntem etkinlik içinde bir temsilci kullanarak belirtilen <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> geçersiz kılar. Yöntem döndürüldüğünde etkinliğin çalışma zamanı çağırır <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> geçersiz kılar. OData hizmetine bir iş akışından çağrılırken, bu yöntem hizmetini sorgulama ve herhangi bir ek işleme sağlamak için kullanılabilir.
 
 Aşağıdaki örnekte, bir `ListCustomers` etkinlik tanımlanır. Bu etkinlik örnek Northwind verileri hizmeti sorgular ve döndüren bir `List<Customer>` Northwind veritabanındaki müşteriler içerir. Zaman uyumsuz işler tarafından gerçekleştirilen `GetCustomers` yöntemi. Bu yöntem, tüm müşteriler için hizmetini sorgular ve içine kopyalar bir `List<Customer>`. Ardından sonuçları disk belleği, görmek için denetler. Bu nedenle, bu hizmet için sonraki sonuç sayfasını sorgular, bunları listeye ekler ve tüm müşteri verileri alınamadı kadar devam eder.
 

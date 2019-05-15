@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], updating
 - BindingSource component [Windows Forms], examples
 ms.assetid: bd8bd9b2-af8a-4f11-a3d5-54eecbe2400b
-ms.openlocfilehash: e3ee6fd0f90840a8af3322e5ed66c0f7885211ae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b3f3c53a74fa00c4e2c674fe6270a22e6e8cef5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614696"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591464"
 ---
 # <a name="how-to-reflect-data-source-updates-in-a-windows-forms-control-with-the-bindingsource"></a>Nasıl yapılır: BindingSource ile Windows Forms Denetiminde Veri Kaynağı Güncelleştirmelerini Yansıtma
 Verilere bağlı denetimler kullandığınızda, bazen veri kaynağındaki değişiklikleri veri kaynağına listesi değişti olayları oluşturmaz, yanıtlamak zorunda değilsiniz. Kullandığınızda, <xref:System.Windows.Forms.BindingSource> bileşen veri kaynağınızın bir Windows Forms denetimine bağlamak için veri kaynağınızın çağırarak değişti denetim bildirebilir <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> yöntemi.  
@@ -33,8 +33,6 @@ Verilere bağlı denetimler kullandığınızda, bazen veri kaynağındaki deği
  Bu örnek gerektirir:  
   
 - Sistem, System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular.  
-  
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

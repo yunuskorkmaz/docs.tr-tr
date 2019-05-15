@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: e4d05d803cccf9a76c6229903cb1d322a42b11e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e51b93d53e1ad65b2f19f81de8833e83bfb18c1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613031"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582768"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation nedir?
 Windows Communication Foundation (WCF) hizmet odaklı uygulamalar oluşturmaya yönelik bir çerçevedir. WCF kullanarak, verileri zaman uyumsuz ileti olarak bir hizmetin uç noktasından diğerine gönderebilirsiniz. Hizmet uç noktası, IIS tarafından barındırılan sürekli olarak kullanılabilir bir hizmetin parçası veya barındırılan bir uygulamada bir hizmet olabilir. Bir uç nokta, bir istemci bir hizmet uç noktasından verileri isteyen bir hizmet olabilir. İletileri bir tek karakter ya da XML olarak gönderilen word kadar basit veya bir ikili veri akışı gibi karmaşık olabilir. Bazı örnek senaryolar şunlardır:
@@ -52,7 +52,7 @@ WCF aşağıdaki özellikleri içerir. Daha fazla bilgi için [WCF özellik ayr�
 
 - **Veri Anlaşmaları**
 
-     WCF kullanarak inşa edildiğinden [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], ayrıca kod dostu uygulamak istediğiniz sözleşmeleri sağlama yöntemleri içerir. Sözleşmeler Evrensel tür veri anlaşması biridir. Visual C# veya Visual Basic kullanarak hizmetinizin kod gibi esas olarak, verileri işlemek için en kolay yolu, veri varlığına ait özelliklere sahip bir veri varlığı temsil eden sınıflar oluşturmaktır. Bu kolay bir şekilde verilerle çalışmaya yönelik kapsamlı bir sistem WCF içerir. Verileri temsil eden sınıfları oluşturduktan sonra hizmetinizin tasarladığınız veri türleriyle uyumlu istemcilerin meta verileri otomatik olarak oluşturur. Daha fazla bilgi için [kullanarak veri sözleşmeleri](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+     .NET Framework kullanarak WCF oluşturulduğundan, ayrıca kod dostu uygulamak istediğiniz sözleşmeleri sağlama yöntemleri içerir. Sözleşmeler Evrensel tür veri anlaşması biridir. Visual C# veya Visual Basic kullanarak hizmetinizin kod gibi esas olarak, verileri işlemek için en kolay yolu, veri varlığına ait özelliklere sahip bir veri varlığı temsil eden sınıflar oluşturmaktır. Bu kolay bir şekilde verilerle çalışmaya yönelik kapsamlı bir sistem WCF içerir. Verileri temsil eden sınıfları oluşturduktan sonra hizmetinizin tasarladığınız veri türleriyle uyumlu istemcilerin meta verileri otomatik olarak oluşturur. Daha fazla bilgi için [kullanarak veri sözleşmeleri](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 
 - **Güvenlik**
 

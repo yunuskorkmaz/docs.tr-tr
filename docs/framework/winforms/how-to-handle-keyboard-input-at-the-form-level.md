@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms, handling keyboard input
 - keyboards [Windows Forms], form-level input
 ms.assetid: d7f8b390-dc91-42d2-ae0f-2ffa388127ad
-ms.openlocfilehash: 8e346c5b69c507307d459f6246e26a6a96bb9e24
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c10852273eeb3caea01f448e4cbef571f20769bd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591303"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592051"
 ---
 # <a name="how-to-handle-keyboard-input-at-the-form-level"></a>Nasıl yapılır: Klavye Girdisini Form Düzeyinde İşleme
 Windows Forms Denetim iletileri ulaşmadan önce klavye iletileri form düzeyinde işleme yeteneği sağlar. Bu konu, bu görevi nasıl gerçekleştireceğinizi gösterir.  
@@ -40,8 +40,6 @@ Windows Forms Denetim iletileri ulaşmadan önce klavye iletileri form düzeyind
   
 - Sistem, System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular.  
   
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
-
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bir Windows Forms Uygulamasında Klavye Girdisi](keyboard-input-in-a-windows-forms-application.md)

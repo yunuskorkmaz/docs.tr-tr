@@ -8,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 29c36bd0494879b66674cf3a3c404fdaf3908f59
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d7f50952a485c09e74462f3ad731d710b8f9198
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61679225"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584266"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Nasıl yapılır: Wave dosyasını oynatmak için Platform çağırma kullanma (C# Programlama Kılavuzu)
 Aşağıdaki C# kod örneği platform kullanılması gösterilmektedir Windows işletim sisteminde ses wave dosyasını oynatmak için hizmetlerini çağırma.  
@@ -29,8 +29,6 @@ Aşağıdaki C# kod örneği platform kullanılması gösterilmektedir Windows i
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
-### <a name="to-compile-the-code"></a>Kodu derlemek için  
-  
 1. Visual Studio'da yeni bir C# Windows uygulaması projesi oluşturun ve adlandırın **WinSound**.  
   
 2. Yukarıdaki kodu kopyalayabilir ve üzerinde içeriğini yapıştırın `Form1.cs` dosya.  
@@ -40,9 +38,6 @@ Aşağıdaki C# kod örneği platform kullanılması gösterilmektedir Windows i
      [!code-csharp[csProgGuideInterop#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#4)]  
   
 4. Derleyin ve kod çalıştırın.  
-  
-## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Daha fazla bilgi için [.NET içinde güvenlik](../../../standard/security/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

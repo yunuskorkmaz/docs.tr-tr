@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Sütun değerleri bir CSV metinde dosyasında (LINQ) işlem (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 0a1b42bf941fa65f053be4931ddfbbbdf1223a48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07fb81b474bd967d73dc9ff6a08e0c67e6ec0122
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668204"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585811"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Nasıl yapılır: Sütun değerleri bir CSV metinde dosyasında (LINQ) işlem (C#)
 Bu örnek bir .csv dosyası sütunlarda gibi toplam, ortalama, Min ve Max toplama hesaplamalar gerçekleştirmek nasıl gösterir. Burada gösterilen örnek ilkeleri diğer yapılandırılmış metin türü için uygulanabilir.  
@@ -159,7 +159,7 @@ class SumColumns
  Sorgu kullanarak çalışır <xref:System.String.Split%2A> her metin satırının bir dizisine dönüştürmek için yöntemi. Her dizi öğesi bir sütunu temsil eder. Son olarak, her sütundaki metin sayısal gösterimine dönüştürülür. Bağımsız değişkende dosyanızı sekmeyle ayrılmış bir dosya ise, yalnızca güncelleştirme `Split` yönteme `\t`.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
+ Oluşturma bir C# konsol uygulama projesi ile `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

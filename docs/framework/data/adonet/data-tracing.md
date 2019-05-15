@@ -2,12 +2,12 @@
 title: ADO.NET’te Veri İzleme
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: 8f9388d084e9e598e43c0f871b21d05c053e77ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df49fc7a5f7c437132a4dc24ed7f18492d9e7647
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608014"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583773"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET’te Veri İzleme
 
@@ -31,7 +31,7 @@ Ayarlama ve ADO.NET yönetilen izlemeyi yapılandırma hakkında daha fazla bilg
 
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Genişletilmiş olaylar günlüğünde tanılama bilgilerine erişme
 
-İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SQL Server için veri sağlayıcısı, veri erişim izleme ([veri erişimini izlemeye](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) daha kolay gelen bağlantı hataları gibi tanılama bilgileri ile istemci olayları ilişkilendirmek daha kolay hale getirmek için güncelleştirildi sunucunun bağlantı halka arabelleği ve uygulama performans bilgilerini genişletilmiş olaylar günlüğünde. Genişletilmiş olay günlüğünü okuma hakkında daha fazla bilgi için bkz: [görünümü olay oturumu verileri](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).
+SQL Server için .NET Framework veri sağlayıcısı veri erişim izleme ([veri erişimini izlemeye](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) daha kolay gelen bağlantı hataları gibi tanılama bilgileri ile istemci olayları ilişkilendirmek daha kolay hale getirmek için güncelleştirildi sunucunun bağlantı halka arabelleği ve uygulama performans bilgilerini genişletilmiş olaylar günlüğünde. Genişletilmiş olay günlüğünü okuma hakkında daha fazla bilgi için bkz: [görünümü olay oturumu verileri](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).
 
 Bağlantı işlemleri için bir istemci ADO.NET gönderir bağlantı kimliği. Bağlantı başarısız olursa bağlantı halka arabelleği erişebilirsiniz ([bağlantı halka arabelleği ile SQL Server 2008'deki bağlantı sorunlarını giderme](https://go.microsoft.com/fwlink/?LinkId=207752)) ve bulma `ClientConnectionID` alan ve tanı bilgilerini almak bağlantı hatası. İstemci bağlantı kimlikleri, bir hata oluşursa halka arabelleği günlüğe kaydedilir. (Oturum açma öncesi paket göndermeden önce bir bağlantı başarısız olursa, istemci bağlantı kimliği üretilmez.) İstemci bağlantı kimliği 16 baytlık bir GUID'dir. İstemci bağlantısı da bulabilirsiniz genişletilmiş olaylar hedef çıkışında kimliği `client_connection_id` eylemi için olayları bir genişletilmiş olaylar oturumunda eklenir. Veri erişim izlemeyi etkinleştirebilir ve bağlantı komutu yeniden çalıştırın ve gözlemleyin `ClientConnectionID` daha fazla istemci sürücü tanılama yardıma ihtiyacınız varsa veri erişimi izleme alan.
 

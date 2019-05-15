@@ -2,12 +2,12 @@
 title: LINQ to XML genel bakış (C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 0ae7b226f4fef0aeec895b0b908711a6edb13728
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2394151d855d75b418616d9fa1a6f69b08cdef86
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701572"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585745"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML genel bakış (C#)
 
@@ -23,7 +23,7 @@ Profesyonel Geliştiriciler [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)
 
 ## <a name="what-is-linq-to-xml"></a>LINQ to XML nedir?
 
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML ile içinden çalışmanızı sağlayan bir LINQ-etkin, bellek içi XML programlama arabirimi olan [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] programlama.
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] .NET Framework XML'de çalışmanızı sağlayan bir LINQ-etkin, bellek içi XML programlama arabirimi programlama dilleri.
 
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML belgesi belleğe getirdiği belge nesne modeli (DOM) gibi olmamasıdır. Sorgulamak ve belgeyi değiştirmesine ve değiştirdikten sonra bir dosyaya kaydedebilir veya bu seri hale getirmek ve Internet üzerinden gönder. Ancak, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] DOM farklıdır: Açık ağırlığı olan yeni bir nesne modeli sağlar ve çalışmak, daha kolay ve dil özelliklerinden alan C#.
 

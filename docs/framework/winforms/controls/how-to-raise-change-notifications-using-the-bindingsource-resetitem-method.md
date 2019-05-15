@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], detecting changes
 - change notifications
 ms.assetid: ab8b4096-37ff-4e30-aabc-de79a2f2e972
-ms.openlocfilehash: bb5c05d22dd9fa47f4d1abe46acccdee19dfa38e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 39beb5c7162fb01a51360330216687c158ff433c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662308"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583718"
 ---
 # <a name="how-to-raise-change-notifications-using-the-bindingsource-resetitem-method"></a>Nasıl yapılır: BindingSource ve ResetItem Yöntemini Kullanarak Değişiklik Bildirimleri Verme
 Öğeleri değiştirildi, eklendiğinde veya bazı veri kaynakları, denetimler için değişiklik bildirimleri geçirmeyin. İle <xref:System.Windows.Forms.BindingSource> bileşeni gibi veri kaynaklarına bağlamak ve bir değişiklik bildirimi kodunuzdan Yükselt.  
@@ -33,8 +33,6 @@ ms.locfileid: "64662308"
  Bu örnek gerektirir:  
   
 - Sistem, System.Data System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
-  
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

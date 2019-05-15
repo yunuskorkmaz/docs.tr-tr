@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
-ms.openlocfilehash: a719b3f1cbd972e79d057730ac1d89e5d91d97e5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e7cf058ef5e6b007a39213aa0ca5748a3b77458a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664317"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590648"
 ---
 # <a name="type-of-parameter-parametername-is-not-cls-compliant"></a>Parametrenin türü '\<parametername >' CLS uyumlu değil
 Bir yordam olarak işaretlenmiş `<CLSCompliant(True)>` ancak bir parametre olarak işaretlenmiş bir tür ile bildirir `<CLSCompliant(False)>`işaret konulmadıysa veya uyumlu olmayan bir tür olduğu için uygun değil.  
@@ -43,4 +43,4 @@ Bir yordam olarak işaretlenmiş `<CLSCompliant(True)>` ancak bir parametre olar
   
 - Yordamı CLS uyumlu olması gerekiyorsa, bu parametrenin türü en yakın CLS uyumlu türüne değiştirin. Örneğin, içinde yerine, `UInteger` kullanmanız mümkün olabilir `Integer` 2.147.483.647 yukarıda değer aralığı gerekmiyorsa. Genişletilmiş aralık gerekiyorsa, değiştirebileceğiniz `UInteger` ile `Long`.  
   
-- Otomasyon ve COM nesneleri ile arabirim, bazı türleri farklı veri genişliği kıyasla olduğunu aklınızda bulundurun [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Örneğin, `int` 16 bit diğer ortamlarda genellikle olur. Böyle bir bileşenin bir 16 bitlik tamsayı kabul ediyorsanız, olarak bildirin `Short` yerine `Integer` Yönetilen Visual Basic kodunuzda.
+- Otomasyon ve COM nesneleri ile arabirim, .NET Framework'teki bazı türleri değerinden farklı veri genişliği olduğunu aklınızda bulundurun. Örneğin, `int` 16 bit diğer ortamlarda genellikle olur. Böyle bir bileşenin bir 16 bitlik tamsayı kabul ediyorsanız, olarak bildirin `Short` yerine `Integer` Yönetilen Visual Basic kodunuzda.

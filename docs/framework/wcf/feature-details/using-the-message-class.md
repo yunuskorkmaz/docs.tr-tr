@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-ms.openlocfilehash: 00b64bdd3795cf282847a3bbaa0940f76faa1c2e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1db509d8f1c672bf51cac7f1ca6b1af91b34fa4d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637522"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591270"
 ---
 # <a name="using-the-message-class"></a>İleti Sınıfını Kullanma
 <xref:System.ServiceModel.Channels.Message> Sınıfı, temel Windows Communication Foundation (WCF). İstemciler ve hizmetler arasındaki tüm iletişim sonuçta sonuçlanır <xref:System.ServiceModel.Channels.Message> örnekleri için gönderilen ve alınan.  
   
  Genellikle ile etkileşime değil <xref:System.ServiceModel.Channels.Message> doğrudan sınıf. Bunun yerine, veri sözleşmeleri, ileti sözleşmeleri ve işlem sözleşmeleri gibi WCF service model yapıları, gelen ve giden iletileri tanımlamak için kullanılır. Ancak, bazı Gelişmiş senaryolar program kullanarak <xref:System.ServiceModel.Channels.Message> doğrudan sınıf. Örneğin, kullanmak isteyebilirsiniz <xref:System.ServiceModel.Channels.Message> sınıfı:  
   
-- Seri hale getirme yerine (örneğin, bir dosyanın disk üzerinde doğrudan bir ileti oluşturma) giden ileti içeriği oluşturma alternatif bir yolu gerektiğinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri.  
+- .NET Framework nesneleri serileştirmek yerine (örneğin, bir dosyanın disk üzerinde doğrudan bir ileti oluşturma) giden ileti içeriği oluşturma alternatif bir yolu gerektiğinde.  
   
-- Bir alternatif bir yolu içine seri durumdan çıkarılırken yerine (örneğin, ham XML içeriği XSLT dönüştürmesi uygulamak istediğinizde) gelen ileti içeriği kullanma gerektiğinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri.  
+- .NET Framework nesneleri seri durumdan çıkarılırken yerine (örneğin, ham XML içeriği XSLT dönüştürmesi uygulamak istediğinizde) gelen ileti içeriği kullanma alternatif bir yolu gerektiğinde.  
   
 - İleti içeriği ne olursa olsun genel bir şekilde iletilerle dağıtılacak gerektiğinde (örneğin, yönlendirme veya yönlendirici, yük dengeleyici veya bir yayımlama oluştururken iletirken-sistem abone).  
   

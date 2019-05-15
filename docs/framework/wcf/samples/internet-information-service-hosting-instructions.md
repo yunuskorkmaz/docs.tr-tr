@@ -2,12 +2,12 @@
 title: Internet Information Service Barındırma Yönergeleri
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
-ms.openlocfilehash: a537f37132e5014901d415cd96bc72a55ae0b750
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92ee270426dbb7fdd166964c1b10e37f280e28f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600258"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591884"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Internet Information Service Barındırma Yönergeleri
 Internet Information Services (IIS) tarafından barındırılan örnekleri çalıştırmak için IIS doğru bir şekilde yüklendiğinden ve çalıştığından emin olmanız gerekir.  
@@ -163,7 +163,7 @@ Internet Information Services (IIS) tarafından barındırılan örnekleri çal�
 4. "Hello World" metni ile bir Web sayfasında görünmesi gerekir.  
   
 > [!NOTE]
->  Her seferinde yeni bir sürümünü yüklemek [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], aspnet_isapi bir Web hizmeti uzantısı IIS yeniden kaydetmeniz gerekir. Bunu yapmak için sorunu `aspnet_regiis –I –enable` komutu.  
+>  .NET Framework, yeni bir sürümünü yüklemek her zaman, aspnet_isapi bir Web hizmeti uzantısı IIS yeniden kaydetmeniz gerekir. Bunu yapmak için sorunu `aspnet_regiis –I –enable` komutu.  
   
 ## <a name="sample-code"></a>Örnek Kod  
   

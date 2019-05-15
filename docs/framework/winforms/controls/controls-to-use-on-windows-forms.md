@@ -5,22 +5,22 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: a05ddd714e85491d29aa5de574b4cdc36165c224
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 3d8e6d37a5c27eac6af303819fb50b28acd225c6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469523"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589046"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows Forms'ta Kullanılacak Denetimler
 Denetimleri Windows formlarında kullanılan bileşenler ve alfabetik bir listesi verilmiştir. Bu bölümde yer alan Windows Forms denetimleri ek olarak, Windows Forms ActiveX ve özel denetimler ekleyebilirsiniz. İhtiyacınız olan denetimi burada listelenen bulamazsanız, kendi oluşturabilirsiniz. Ayrıntılar için bkz [tasarım zamanında Windows Forms denetimleri geliştirme](developing-windows-forms-controls-at-design-time.md). Denetim seçme hakkında daha fazla bilgi için bkz ihtiyacınız [işleve göre Windows Forms denetimleri](windows-forms-controls-by-function.md).  
   
 > [!NOTE]
->  Visual Basic denetimleri sınıfları tarafından sağlanan temel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+>  Visual Basic denetimleri sınıfları .NET Framework tarafından sağlanan temel alır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [İşleve Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)  
- Listelenmekte ve açıklanmaktadır göre Windows Forms denetimleri [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ Listeler ve .NET Framework tabanlı Windows Forms denetimlerini açıklar.  
   
  [Yerleşik Sahip Çizimi Destekli Denetimler](controls-with-built-in-owner-drawing-support.md)  
  Alter özellikleri aracılığıyla mevcut olmayan bir denetimin görünümünü yönlerini açıklar.  
@@ -168,7 +168,7 @@ Denetimleri Windows formlarında kullanılan bileşenler ve alfabetik bir listes
  Yerleşik denetimi yeniden boyutlandırma izin verir.  
   
  [Ayırıcı Denetimi](splitter-control-windows-forms.md)  
- Yerleşik denetimi yeniden boyutlandırma izin verir ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sürümü 1.x).  
+ Yerleşik denetimi yeniden boyutlandırma izin verir (.NET Framework sürümü 1.x).  
   
  [StatusBar Denetimi](statusbar-control-windows-forms.md)  
  Durum bilgilerini görüntüler, odaklanmış denetimle ilişkili. Ancak <xref:System.Windows.Forms.StatusStrip> değiştirir ve genişleten <xref:System.Windows.Forms.StatusBar> önceki sürümlerinde, denetimin <xref:System.Windows.Forms.StatusBar> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  

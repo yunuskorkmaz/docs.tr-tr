@@ -6,15 +6,15 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: cd0fae0c7d99491f21e5e1fb265e4aabafaa63c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b599906082cabceeb8d97ec737b6fa39fed6825
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667616"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584402"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ ve Genel Türler (C#)
-[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Sorgu'nün 2.0 sürümünde tanıtılan genel türler dayanır [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Sorguları yazmaya başlamadan önce bir ayrıntılı bilgilere genel türler gerekmez. Ancak, iki temel kavramları anlamak isteyebilirsiniz:  
+[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] .NET Framework'ün 2.0 sürümünde tanıtılan genel türlerde sorguları temel alır. Sorguları yazmaya başlamadan önce bir ayrıntılı bilgilere genel türler gerekmez. Ancak, iki temel kavramları anlamak isteyebilirsiniz:  
   
 1. Oluşturduğunuzda, bir genel koleksiyon sınıfının bir örneği gibi <xref:System.Collections.Generic.List%601>, "T" listenin tutulacağı nesne türüyle değiştirin. Örneğin, bir dize listesi olarak ifade edilir `List<string>`ve listesini `Customer` nesneleri olarak ifade edilir `List<Customer>`. Genel liste türü kesin olarak belirtilmiş ve öğeleri olarak depolayan koleksiyonlar üzerinden birçok avantaj sunar <xref:System.Object>. Eklemeyi denerseniz bir `Customer` için bir `List<string>`, derleme sırasında bir hata alırsınız. Çalışma zamanı tür atama gerçekleştirmek olmadığı için kullanımı kolay genel koleksiyonlar var.  
   

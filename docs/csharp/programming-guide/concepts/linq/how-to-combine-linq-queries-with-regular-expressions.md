@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Normal ifadelerle LINQ sorgularını birleştirme (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: e9aa8378fb6b4bbfbfca280e1a9fc73adc108d81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21c05b0134fda5011ecaf14f296e5a5172cf3bf5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668178"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585905"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Nasıl yapılır: Normal ifadelerle LINQ sorgularını birleştirme (C#)
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Text.RegularExpressions.Regex> daha karmaşık metin dizelerini eşleştirme için normal bir ifade oluşturmak için sınıf. LINQ Sorgu tam olarak normal ifade ile arama ve sonuçlar şekil için istediğiniz dosyaları filtre kolaylaştırır.  
@@ -96,7 +96,7 @@ class QueryWithRegEx
  Ayrıca Sorgulayabileceğiniz Not <xref:System.Text.RegularExpressions.MatchCollection> tarafından döndürülen nesne gibi bir `RegEx` arama. Bu örnekte, sonuçları yalnızca her bir eşleşme değeri oluşturulur. Ancak, aynı zamanda filtreleme, sıralama ve gruplandırma bu koleksiyon üzerinde her türlü gerçekleştirmek için LINQ kullanılacak mümkündür. Çünkü <xref:System.Text.RegularExpressions.MatchCollection> genel olmayan <xref:System.Collections.IEnumerable> koleksiyonuna sahip sorgudaki Aralık değişkeninin türünü açıkça durumuna.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
+ Oluşturma bir C# konsol uygulama projesi ile `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

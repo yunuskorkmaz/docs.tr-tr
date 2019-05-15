@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3009bf9eb24c44cedc4021f3d09f1707ae2e40d8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 862a224c696ebafb23b30add7c8e8d66e1846b4c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593600"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584476"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Nasıl yapılır: İlk Fırsat Özel Durum Bildirimleri Alma
 <xref:System.AppDomain.FirstChanceException> Olayı <xref:System.AppDomain> sınıfı bir özel durum bir bildirim almanızı sağlar, önce ortak dil çalışma zamanı için özel durum işleyicileri aramaya başladı.
@@ -97,10 +97,6 @@ ms.locfileid: "64593600"
 
  [!code-csharp[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#1)]
  [!code-vb[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#1)]
-
-## <a name="compiling-the-code"></a>Kod Derleniyor
-
-- Bu örnek, bir komut satırı uygulamasıdır. Derlemek ve Visual Studio'da bu kodu çalıştırmak için C# kodu ekleyin. `Console.ReadLine();` (Visual Basic'te `Console.ReadLine()`) sonunda `Main()`komut penceresi çıktısı okuyabilirsiniz önce kapatılmasını önlemek için.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sounds [Windows Forms], loading on separate threads
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
-ms.openlocfilehash: 3901166bb8d84f776eb24305a4c648ae0b6ca181
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f533d82fcca07a2b64bdbbfb160a7b2a23ce540
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649315"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592377"
 ---
 # <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Nasıl yapılır: Bir Windows Form içinde Zaman Uyumsuz Ses Yükleme
 Aşağıdaki kod örneği, zaman uyumsuz olarak bir ses bir URL'den yükler ve ardından yeni bir iş parçacığında yürütülür.  
@@ -29,8 +29,6 @@ Aşağıdaki kod örneği, zaman uyumsuz olarak bir ses bir URL'den yükler ve a
 - Sistem ve System.Windows.Forms öğelerini derlemelerine başvurular.  
   
 - Dosya adı yerine `"http://www.tailspintoys.com/sounds/stop.wav"` ile geçerli bir dosya adı.  
-  
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Dosya işlemleri uygun özel durum işleme bloğu alınmalıdır.  

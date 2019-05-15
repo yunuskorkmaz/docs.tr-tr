@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e491b9bf-741a-4296-9f51-76c25ddf6a82
-ms.openlocfilehash: 6423959ed5036cc8ab2a88bb7273ef7aa95c8958
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04353361f8356b1d2b2aa3b930bb9b5ab88b9c0b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037771"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583682"
 ---
 # <a name="how-to-directly-execute-sql-queries"></a>Nasıl yapılır: Doğrudan SQL Sorguları Yürütme
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] parametrelenmiş SQL sorgularını (metin biçiminde) içine yazma sorguları çevirir ve bunları SQL server için işlem gönderir.  
   
- Uygulamanızı yerel olarak kullanılabilir yöntemleri çeşitli SQL yürütülemiyor. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Bu yerel yöntemlerin eşdeğer işlemlere ve SQL ortamı içinde kullanılabilen işlevleri dönüştürmeye çalışıyor. Birçok yöntem ve işleçlerde [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] SQL komutları doğrudan çevirileri yerleşik türlerine sahip. Bazı kullanılabilir olan işlevleri üretilebilir. Üretilemeyebilir o çalışma zamanı özel durumlarını oluşturur. Daha fazla bilgi için [SQL-CLR tür eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+ Uygulamanızı yerel olarak kullanılabilir yöntemleri çeşitli SQL yürütülemiyor. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Bu yerel yöntemlerin eşdeğer işlemlere ve SQL ortamı içinde kullanılabilen işlevleri dönüştürmeye çalışıyor. Birçok yöntem ve .NET Framework yerleşik türleri işleçlerini SQL komutları doğrudan Çeviriler var. Bazı kullanılabilir olan işlevleri üretilebilir. Üretilemeyebilir o çalışma zamanı özel durumlarını oluşturur. Daha fazla bilgi için [SQL-CLR tür eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
  Durumlarda burada bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorgu için özel bir görev yetersiz, kullanabileceğiniz <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> bir SQL sorgusu Yürüt ve sonra sorgu sonucu doğrudan nesnelerine dönüştürmek için yöntem.  
   

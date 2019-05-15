@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f02cbac83bd1e849c30f6c732395335464e6e4e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874243"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582818"
 ---
 # <a name="runtime-profiling"></a>Çalışma Zamanı Profili Oluşturma
 Profil oluşturma tüm geliştirme ve dağıtım senaryosunda performans verilerini toplama yöntemidir. Bu bölüm, geliştiriciler ve uygulama performansı hakkında bilgi toplamak isteyen sistem yöneticilerine yöneliktir.  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>Performans İzleyicisi'ni (Perfmon.exe) kullanarak performans izleme  
- Performans İzleyicisi'ni kullanmanız için kolay bir araçtır, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] uygulama. Performans İzleyicisi'ni, grafik ile ortak dil çalışma zamanı yüklü olan .NET Framework performans sayaçlarını bulunan verileri temsil eder ve [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Bu sayaçlar, just-ın-time (JIT) derleyici performans için bellek yönetimi kadar her şeyi izlemek için kullanılabilir. Bunlar, kaynaklar hakkında uygulamanız tarafından kullanılan, uygulamanızın performansını dolaylı bir ölçü olan söyleyin. Uygulamanız dahili olarak nasıl çalıştığını anlamak için bu sayaçlar kullanın.  
+ Performans İzleyicisi'ni, .NET Framework uygulamanızın profilini kullanmak için kolay bir araçtır. Performans İzleyicisi'ni, grafik ile ortak dil çalışma zamanı yüklü olan .NET Framework performans sayaçlarını bulunan verileri temsil eder ve [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Bu sayaçlar, just-ın-time (JIT) derleyici performans için bellek yönetimi kadar her şeyi izlemek için kullanılabilir. Bunlar, kaynaklar hakkında uygulamanız tarafından kullanılan, uygulamanızın performansını dolaylı bir ölçü olan söyleyin. Uygulamanız dahili olarak nasıl çalıştığını anlamak için bu sayaçlar kullanın.  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>Windows Vista ve sonraki sürümler Perfmon.exe çalıştırmak için  
   
@@ -57,7 +57,7 @@ Profil oluşturma tüm geliştirme ve dağıtım senaryosunda performans veriler
 >  Üretileceği sistemlerde [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] olan yüklü, Performans İzleyicisi'ni verileri performans sayaçları için bazı kategorilerde gibi görüntülemeyebilir **Data .NET CLR** ve **.NET CLR ağ**, için kullanılarak geliştirilen uygulamaları [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]. Bu durumda, Performans İzleyicisi'ni ekleyerek bu verileri görüntülemek için yapılandırabileceğiniz [ \<forcePerformanceCounterUniqueSharedMemoryReads >](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) uygulamanın yapılandırma dosyası öğesi.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Okuma ve performans sayaçları program aracılığıyla oluşturma  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Performans konsolunda kullanılabilir durumda aynı performans bilgileri programlı olarak erişmek için kullanabileceğiniz sınıflar sağlar. Bu sınıflar, özel performans Sayaçlarınızı oluşturma işlemleri de kullanabilirsiniz. Aşağıdaki tablo bazı performans izleme sağlanan sınıfları açıklar [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ .NET Framework Performans konsolunda kullanılabilir durumda aynı performans bilgileri programlı olarak erişmek için kullanabileceğiniz sınıflar sağlar. Bu sınıflar, özel performans Sayaçlarınızı oluşturma işlemleri de kullanabilirsiniz. Aşağıdaki tabloda bazı performans izleme .NET Framework içinde sağlanan sınıfları açıklar.  
   
 |örneği|Açıklama|  
 |-----------|-----------------|  

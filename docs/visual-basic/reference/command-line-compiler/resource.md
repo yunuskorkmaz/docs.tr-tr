@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -res compiler option [Visual Basic]
 - resource compiler option [Visual Basic]
 ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
-ms.openlocfilehash: 46122eaa7ca54679c9a52b939f9100c9a0747e7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d7da572ecc8d7d20917eaa244eefbcd7abe61f0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61639090"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589517"
 ---
 # <a name="-resource-visual-basic"></a>-Kaynak (Visual Basic)
 Yönetilen kaynak bir derlemeye gömer.  
@@ -37,7 +37,7 @@ Yönetilen kaynak bir derlemeye gömer.
 ## <a name="remarks"></a>Açıklamalar  
  Kullanım `-linkresource` kaynak dosyası çıkış dosyasına koymadan bir kaynak bir derlemeye bağlanır.  
   
- Varsa `filename` olduğu bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] , örneğin, göre oluşturulmuş kaynak dosyası [Resgen.exe (kaynak dosya oluşturucu)](../../../framework/tools/resgen-exe-resource-file-generator.md) veya geliştirme ortamında üyelerle erişilebileceğini <xref:System.Resources> (bkz: adalanı<xref:System.Resources.ResourceManager> daha fazla bilgi için). Çalışma zamanında diğer kaynaklara erişmek için aşağıdaki yöntemlerden birini kullanın: <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>, <xref:System.Reflection.Assembly.GetManifestResourceNames%2A>, veya <xref:System.Reflection.Assembly.GetManifestResourceStream%2A>.  
+ Varsa `filename` , örneğin, tarafından oluşturulmuş bir .NET Framework kaynak dosyası [Resgen.exe (kaynak dosya oluşturucu)](../../../framework/tools/resgen-exe-resource-file-generator.md) veya geliştirme ortamında üyelerle erişilebileceğini <xref:System.Resources> (bkz: adalanı<xref:System.Resources.ResourceManager> daha fazla bilgi için). Çalışma zamanında diğer kaynaklara erişmek için aşağıdaki yöntemlerden birini kullanın: <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>, <xref:System.Reflection.Assembly.GetManifestResourceNames%2A>, veya <xref:System.Reflection.Assembly.GetManifestResourceStream%2A>.  
   
  Kısa formunu da `-resource` olduğu `-res`.  
   

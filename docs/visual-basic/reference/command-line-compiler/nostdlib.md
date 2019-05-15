@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [Visual Basic]
 - /nostdlib compiler option [Visual Basic]
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
-ms.openlocfilehash: 4f3dc61a6e78b0fb2135d4132c53e7efc22447a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c3c70b24de5163ca004b41a21017205a19d9730
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789057"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583369"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 Standart kitaplıkları otomatik olarak başvuruda bulunmamaya derleyici neden olur.  
@@ -23,7 +23,7 @@ Standart kitaplıkları otomatik olarak başvuruda bulunmamaya derleyici neden o
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-nostdlib` Seçeneği System.dll derleme otomatik başvuruyu kaldırır ve derleyici nezahrnovat dosyayı okumasını önler. Yaygın olarak kullanılan Vbc.exe dosyasıyla aynı dizinde bulunan nezahrnovat dosyasını başvuran [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] derlemeler ve içeri aktarmalar `System` ve `Microsoft.VisualBasic` ad alanları.  
+ `-nostdlib` Seçeneği System.dll derleme otomatik başvuruyu kaldırır ve derleyici nezahrnovat dosyayı okumasını önler. Vbc.exe dosyasıyla aynı dizinde bulunan nezahrnovat dosyasını yaygın olarak kullanılan .NET Framework derlemeleri atıfta bulunan ve içeri aktarır `System` ve `Microsoft.VisualBasic` ad alanları.  
   
 > [!NOTE]
 >  Mscorlib.dll'nin ve Microsoft.VisualBasic.dll'nin derlemeler her zaman başvurulur.  

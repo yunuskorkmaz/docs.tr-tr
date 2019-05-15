@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 8092289d6adc6a017999d14dc7439323a7fc0d37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a0da874c74562822d521d4a44782d9372cd62f90
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750999"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588658"
 ---
 # <a name="structured-navigation-overview"></a>Yapılandırılmış Gezintiye Genel Bakış
 Tarafından barındırılan içerik bir [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, veya bir <xref:System.Windows.Navigation.NavigationWindow> paketi tarafından tanımlanan sayfaların oluşan [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] ve için köprüler tarafından gitme. Sayfalar ve, bunlar, köprüler tarafından tanımlandığı şekilde gezinilebilir yolları yapısını gezinti topolojisi bilinir. Böyle bir topoloji, çeşitli uygulama türleri, belgeler içinde gezinmek, uygun. Bu tür uygulamalar için kullanıcı bir sayfadan başka bir sayfaya ya da sayfa diğer ilgili hiçbir şeyi bilmenize gerek olmadan gidebilirsiniz.  
@@ -70,7 +70,7 @@ Tarafından barındırılan içerik bir [!INCLUDE[TLA#tla_xbap](../../../../incl
   
  Bildirimi bir <xref:System.Windows.Navigation.PageFunction%601> bildirimi için benzer bir <xref:System.Windows.Controls.Page> ek olarak, tür bağımsız değişkenleri. Kod örnekte görebileceğiniz gibi tür bağımsız değişkenlerini içinde her ikisi de belirtilirse [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme kullanarak `x:TypeArguments` özniteliği ve kod arka plan, standart genel tür bağımsız değişkeni söz dizimini kullanarak.  
   
- Yalnızca kullanmak zorunda değilsiniz [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tür bağımsız değişkenleri olarak sınıflar. A <xref:System.Windows.Navigation.PageFunction%601> özel bir tür olarak soyutlanır etki alanına özgü verileri toplamak için çağrılabilir. Aşağıdaki kod özel bir tür için tür bağımsız değişkeni olarak kullanma işlemini gösterir. bir <xref:System.Windows.Navigation.PageFunction%601>.  
+ Tür bağımsız değişkeni olarak yalnızca .NET Framework sınıflarını kullanmak zorunda değilsiniz. A <xref:System.Windows.Navigation.PageFunction%601> özel bir tür olarak soyutlanır etki alanına özgü verileri toplamak için çağrılabilir. Aşağıdaki kod özel bir tür için tür bağımsız değişkeni olarak kullanma işlemini gösterir. bir <xref:System.Windows.Navigation.PageFunction%601>.  
   
  [!code-csharp[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomType.cs#customtypecode1)]
  [!code-vb[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomType.vb#customtypecode1)]  

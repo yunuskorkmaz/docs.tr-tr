@@ -2,18 +2,18 @@
 title: ADO.NET Mimarisi
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: e85100733e20b69cf6b8c52c58d250be869971cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2e91077287c051d871eb61f83ec77b7baf90b2d8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592634"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584570"
 ---
 # <a name="adonet-architecture"></a>ADO.NET Mimarisi
 Geleneksel veri işleme öncelikli olarak bağlantı tabanlı, iki katmanlı modeli üzerinde yararlandı. Veri işleme, çok katmanlı mimariler giderek kullanır gibi programcılar kendi uygulamaları için daha iyi ölçeklenebilirlik sağlamak için bağlantısı kesik bir yaklaşıma geçirirsiniz.  
   
 ## <a name="adonet-components"></a>ADO.NET bileşenleri  
- İki ana bileşenden [!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)] erişme ve verileri yönlendirmek için [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcıları ve <xref:System.Data.DataSet>.  
+ İki ana bileşenden [!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)] erişme ve verileri düzenleme .NET Framework veri sağlayıcıları için ve <xref:System.Data.DataSet>.  
   
 ### <a name="net-framework-data-providers"></a>.NET Framework Veri Sağlayıcıları  
  .NET Framework veri sağlayıcıları açıkça veri işleme ve verileri hızlı, yalnızca iletme, salt okunur erişim için tasarlanmış bileşenlerdir. `Connection` Nesnesi, bir veri kaynağına bağlantı sağlar. `Command` Nesne verileri döndürür, verileri değiştirme, saklı yordamları çalıştırmak ve gönderme veya parametre bilgilerini almak için veritabanı komutları erişim sağlar. `DataReader` Veri kaynağından veri yüksek performanslı akışını sağlar. Son olarak, `DataAdapter` arasında köprü sağlar `DataSet` nesnesi ve veri kaynağı. `DataAdapter` Kullanan `Command` veri kaynağında hem yük SQL komutları yürütme nesnelere `DataSet` verilerle ve verilerde yapılan değişiklikleri mutabık kılma `DataSet` veri kaynağına geri. Daha fazla bilgi için [.NET Framework veri sağlayıcıları](../../../../docs/framework/data/adonet/data-providers.md) ve [alınıyor ve ADO.NET veri değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md).  
@@ -21,7 +21,7 @@ Geleneksel veri işleme öncelikli olarak bağlantı tabanlı, iki katmanlı mod
 ### <a name="the-dataset"></a>Veri kümesi  
  ADO.NET `DataSet` açıkça herhangi bir veri kaynağını bağımsız veri erişimi için tasarlanmıştır. Sonuç olarak, birden çok ile kullanılabilir ve farklı veri kaynakları, XML verileri ile kullanılan veya uygulamaya yerel verileri yönetmek için kullanılamaz. `DataSet` İçeren bir koleksiyon bir veya daha fazla <xref:System.Data.DataTable> satırları ve sütunları veri ve birincil anahtar, yabancı anahtar kısıtlaması ve ilişki hakkında bilgi verileri oluşan nesneler `DataTable` nesneleri. Daha fazla bilgi için [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md).  
   
- Aşağıdaki diyagramda arasındaki ilişkiyi gösterir. bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı ve `DataSet`.  
+ Aşağıdaki diyagramda bir .NET Framework veri sağlayıcısı arasındaki ilişkiyi gösterir ve `DataSet`.  
   
  ![ADO.Net grafik](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 ADO.NET mimarisi  
@@ -52,9 +52,9 @@ ADO.NET mimarisi
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Veri Hizmetleri Web veya intranet üzerinde dağıtmak için kullanılır. Veri varlıkları ve ilişkileri varlık veri modeli belirtimlere göre olarak yapılandırılmıştır. Bu modelde dağıtılan standart HTTP protokolü tarafından adreslenebilir verilerdir. Daha fazla bilgi için [WCF Veri Hizmetleri 4.5](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="xml-and-adonet"></a>XML ve ADO.NET  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] veri bağlantısı kesilmiş erişim sağlamak için XML gücünden yararlanır. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] tasarlanmış el yakından XML sınıfları ile olan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; her ikisi de tek bir mimari bileşenleridir.  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] veri bağlantısı kesilmiş erişim sağlamak için XML gücünden yararlanır. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] tasarlanmış el yakından .NET Framework'te XML sınıflarla oluştu; her ikisi de tek bir mimari bileşenleridir.  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] ve XML sınıflarda [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , yakınsama `DataSet` nesne. `DataSet` Bir dosya veya bir XML akışı olup, bir XML kaynaktan gelen veriler ile doldurulabilir. `DataSet` World-Wide Web Consortium (W3C) XML Şeması Tanım Dili (XSD) şemaya, veri kaynağı ne olursa olsun, şema içerir uyumlu XML olarak yazılmış `DataSet`. Yerel seri hale getirme biçimi nedeniyle `DataSet` XML, yapmadan katmanlar arasında verileri taşımak için mükemmel bir ortamdır `DataSet` uzak veri ve şema bağlamı için bir en iyi seçim için ve XML Web hizmeti. Daha fazla bilgi için [XML belgeleri ve verileri](../../../../docs/standard/data/xml/index.md).  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] ve .NET Framework XML sınıflarda, yakınsama `DataSet` nesne. `DataSet` Bir dosya veya bir XML akışı olup, bir XML kaynaktan gelen veriler ile doldurulabilir. `DataSet` World-Wide Web Consortium (W3C) XML Şeması Tanım Dili (XSD) şemaya, veri kaynağı ne olursa olsun, şema içerir uyumlu XML olarak yazılmış `DataSet`. Yerel seri hale getirme biçimi nedeniyle `DataSet` XML, yapmadan katmanlar arasında verileri taşımak için mükemmel bir ortamdır `DataSet` uzak veri ve şema bağlamı için bir en iyi seçim için ve XML Web hizmeti. Daha fazla bilgi için [XML belgeleri ve verileri](../../../../docs/standard/data/xml/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

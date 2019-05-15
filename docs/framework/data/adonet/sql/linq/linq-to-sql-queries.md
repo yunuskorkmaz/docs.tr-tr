@@ -2,12 +2,12 @@
 title: LINQ to SQL Sorguları
 ms.date: 03/30/2017
 ms.assetid: f4897aaa-7f44-4c20-a471-b948c2971aae
-ms.openlocfilehash: 49106502dc58eef36ea0c910c627c9cf397f419e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6142a1c4713010a75ed8413b935678fce92e40be
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902882"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583662"
 ---
 # <a name="linq-to-sql-queries"></a>LINQ to SQL Sorguları
 Tanımladığınız [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yaptığınız gibi aynı sözdizimini kullanarak sorguları [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]. Tek fark, sorgularınızdaki başvurulan nesneler öğeleri veritabanındaki eşlendiğine ' dir. Daha fazla bilgi için [(C#) LINQ sorgularına giriş](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
@@ -15,7 +15,7 @@ Tanımladığınız [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eşdeğer SQL sorguları yazma sorguları çevirir ve işlem sunucusuna gönderir. Özellikle, uygulamanızın kullandığı [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] API istek sorgu yürütme için. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Sağlayıcısı ardından sorgu SQL metne dönüştürür ve temsilciler ADO sağlayıcısına yürütme. ADO sağlayıcı olarak sorgu sonuçlarını döndürür bir `DataReader`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Sağlayıcısı ADO sonuçları çeviren bir <xref:System.Linq.IQueryable> kullanıcı nesneleri koleksiyonu.  
   
 > [!NOTE]
->  Birçok yöntem ve işleçlerde [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] yerleşik türler için SQL doğrudan çevirileri sahip. Bu, [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] çeviremez çalışma zamanı özel durumlarını oluşturur. Daha fazla bilgi için [SQL-CLR tür eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+>  Birçok yöntem ve .NET Framework yerleşik türleri işleçlerini SQL için doğrudan Çeviriler var. Bu, [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] çeviremez çalışma zamanı özel durumlarını oluşturur. Daha fazla bilgi için [SQL-CLR tür eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
  Aşağıdaki tabloda benzerlik gösterir ve arasındaki farklar [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorgu öğeleri.  
   

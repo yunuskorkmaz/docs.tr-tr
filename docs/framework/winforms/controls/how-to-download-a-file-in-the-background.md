@@ -14,12 +14,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
-ms.openlocfilehash: 1d62bbac8550a5e632760e196463285e4c9a14ce
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ed7d5593a29726412f5ea75812cf5a6d800ee77a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651763"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591713"
 ---
 # <a name="how-to-download-a-file-in-the-background"></a>Nasıl yapılır: Arka Planda Dosya İndirme
 Dosya indirme genel bir görevdir ve genellikle ayrı bir iş parçacığı üzerinde olası zaman bu işlemin çalıştırılması yararlı olur. Kullanım <xref:System.ComponentModel.BackgroundWorker> çok az kod ile bu görevi gerçekleştirmek için bileşen.  
@@ -59,8 +59,6 @@ Dosya indirme genel bir görevdir ve genellikle ayrı bir iş parçacığı üze
  Bu örnek gerektirir:  
   
 - System.Drawing System.Windows.Forms ve System.Xml derlemesine ilişkin başvurular.  
-  
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Her zaman denetleyin <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> özelliğinde, <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> erişmeye çalışmadan önce olay işleyicisi <xref:System.ComponentModel.RunWorkerCompletedEventArgs.Result%2A?displayProperty=nameWithType> özelliği veya tarafından etkilenmiş herhangi bir nesne <xref:System.ComponentModel.BackgroundWorker.DoWork> olay işleyicisi.  

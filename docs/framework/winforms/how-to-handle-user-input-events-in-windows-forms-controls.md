@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, user input
 - user input [Windows Forms], Windows Forms controls
 ms.assetid: 3de74dcf-fae3-42d0-92b5-bc04a61a6888
-ms.openlocfilehash: cffcdbbaa988033352b08834e52d603fbebfa870
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ae230f22c929be39ea00eafe378c6910c4a9d35f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591604"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592089"
 ---
 # <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>Nasıl yapılır: Windows Forms Denetimlerinde Kullanıcı Girdi Olaylarını İşleme
 Bu örnek, çoğu klavye, fare, odak ve bir Windows Forms denetiminde oluşabilecek doğrulama olayların nasıl ele alınacağını gösterir. Adlı metin kutusunda `TextBoxInput` odaklı ve her olay hakkında bilgiler adlı metin kutusuna yazılan olayları alır `TextBoxOutput` olaylar oluştuğunda sırada. Uygulama onay kutularını, rapora hangi olayları filtrelemek için kullanılan bir dizi de içerir.  
@@ -28,8 +28,6 @@ Bu örnek, çoğu klavye, fare, odak ve bir Windows Forms denetiminde oluşabile
  Bu örnek gerektirir:  
   
 - Sistem, System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular.  
-  
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

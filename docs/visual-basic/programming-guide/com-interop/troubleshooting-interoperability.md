@@ -16,18 +16,18 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: af28ba1a167415a59b8e2a4db860497122a5c2c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 60a61dfa7302611800c0b808a31a386e46304756
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624810"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592155"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Birlikte Çalışabilirlik İle İlgili Sorun Giderme (Visual Basic)
-Ne zaman, birlikte çalışmak COM ve yönetilen kodu arasında [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], bir veya daha fazla aşağıdaki yaygın sorunların karşılaşabilirsiniz.  
+COM ve .NET Framework'ün yönetilen kod birlikte çalışmak, bir veya daha fazla aşağıdaki yaygın sorunların karşılaşabilirsiniz.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor1"></a> Birlikte çalışma hazırlama  
- Bazen, olmayan veri türlerini kullanmak zorunda kalabilirsiniz parçası [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Birlikte çalışma bütünleştirilmiş kodları COM nesneleri için işin çoğunu işlemek, ancak yönetilen nesneleri com'a kullanılan veri türlerini denetlemek olabilir Örneğin, sınıf kitaplıkları yapılarda belirtmelisiniz `BStr` yönetilmeyen Visual Basic 6.0 ve önceki sürümleri ile oluşturulan COM nesnelerini gönderilen dizelerde türü. Bu gibi durumlarda, kullandığınız <xref:System.Runtime.InteropServices.MarshalAsAttribute> neden yönetilmeyen tür açığa yönetilen türler için öznitelik.  
+ Bazen, .NET Framework'ün bir parçası olmayan veri türlerini kullanmak zorunda kalabilirsiniz. Birlikte çalışma bütünleştirilmiş kodları COM nesneleri için işin çoğunu işlemek, ancak yönetilen nesneleri com'a kullanılan veri türlerini denetlemek olabilir Örneğin, sınıf kitaplıkları yapılarda belirtmelisiniz `BStr` yönetilmeyen Visual Basic 6.0 ve önceki sürümleri ile oluşturulan COM nesnelerini gönderilen dizelerde türü. Bu gibi durumlarda, kullandığınız <xref:System.Runtime.InteropServices.MarshalAsAttribute> neden yönetilmeyen tür açığa yönetilen türler için öznitelik.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor2"></a> Sabit uzunluklu dizeler yönetilmeyen koda dışarı aktarma  
  Visual Basic 6.0 ve önceki sürümlerinde, sonlandırma boş karakteri olmadan bayt dizisi olarak dizeleri için COM nesneleri dışarı aktarılır. Diğer dilleri ile uyumluluk için Visual Basic .NET dizeleri dışarı aktarılırken bir sonlandırma karakter içerir. Bu uyumsuzluk yönelik en iyi yolu bir sonlandırma karakter dizileri eksik dizeleri dışa aktarılmamasıdır `Byte` veya `Char`.  
@@ -55,7 +55,7 @@ Ne zaman, birlikte çalışmak COM ve yönetilen kodu arasında [!INCLUDE[dnprdn
  Standart derlemelerde sınıflardan farklı olarak, COM sınıfları birlikte çalışma derlemelerini bir arabirim hem COM sınıfı temsil eden bir sınıf olarak kullanıma sunulur. Arabirim adı, COM sınıfı için aynıdır. Birlikte çalışma sınıfın adını, özgün COM sınıfı aynıdır, ancak "Class" sözcüğüyle eklenir. Örneğin, bir COM nesnesi için bir birlikte çalışma derlemesine bir başvuru içeren bir proje olduğunu varsayalım. COM sınıfı adlandırılmışsa `MyComClass`, IntelliSense ve Nesne Tarayıcısı adlı bir arabirim göster `MyComClass` ve adlı bir sınıf `MyComClassClass`.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor6"></a> Bir .NET Framework sınıf örneklerini oluşturma  
- Genellikle, örneğini oluşturduğunuz bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kullanarak `New` deyimi ile bir sınıf adı. Birlikte çalışma derlemesi tarafından temsil edilen bir COM sınıfı sahip olduğu kullandığınız bir `New` deyimi bir arabirime sahip. COM sınıfı ile kullanmadığınız sürece bir `Inherits` deyimi, bir sınıf yaptığınız gibi arabirimini kullanabilirsiniz. Aşağıdaki kod nasıl oluşturulacağını gösterir. bir `Command` Microsoft ActiveX veri nesneleri 2.8 kitaplığı COM nesnesine bir başvuru sahip olan bir projeyi nesnesinde:  
+ Genellikle, .NET Framework kullanarak sınıfı bir örneğini oluşturduğunuz `New` deyimi ile bir sınıf adı. Birlikte çalışma derlemesi tarafından temsil edilen bir COM sınıfı sahip olduğu kullandığınız bir `New` deyimi bir arabirime sahip. COM sınıfı ile kullanmadığınız sürece bir `Inherits` deyimi, bir sınıf yaptığınız gibi arabirimini kullanabilirsiniz. Aşağıdaki kod nasıl oluşturulacağını gösterir. bir `Command` Microsoft ActiveX veri nesneleri 2.8 kitaplığı COM nesnesine bir başvuru sahip olan bir projeyi nesnesinde:  
   
  [!code-vb[VbVbalrInterop#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#20)]  
   
@@ -67,7 +67,7 @@ Ne zaman, birlikte çalışmak COM ve yönetilen kodu arasında [!INCLUDE[dnprdn
 >  Birlikte çalışma bütünleştirilmiş kodları COM sınıfları temsil eden arabirimler örtük olarak uygulayın. Kullanılacak denememelisiniz `Implements` deyimi bu arabirimleri ya da hata uygulamak için neden olur.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor7"></a> Veri türleri için parametreler ve dönüş değerleri  
- Standart derlemeler üyelerinin farklı olarak, özgün nesne bildirimde kullanılan farklı veri türleri birlikte çalışma derlemesi üyeleri olabilir. Birlikte çalışma derlemelerini uyumlu ortak dil çalışma zamanı türleri için örtük olarak COM türlerini dönüştürülse de her iki çalışma zamanı hataları önlemek için kullanılan veri türlerine dikkat. Örneğin, Visual Basic 6.0 ve önceki sürümlerinde, türü değerlerinin oluşturulan COM nesnelerinde `Integer` varsayar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] eşdeğer türü `Short`. Kullanmadan önce içeri aktarılan üye özellikleri incelemek için Nesne Tarayıcısı kullanmanız önerilir.  
+ Standart derlemeler üyelerinin farklı olarak, özgün nesne bildirimde kullanılan farklı veri türleri birlikte çalışma derlemesi üyeleri olabilir. Birlikte çalışma derlemelerini uyumlu ortak dil çalışma zamanı türleri için örtük olarak COM türlerini dönüştürülse de her iki çalışma zamanı hataları önlemek için kullanılan veri türlerine dikkat. Örneğin, Visual Basic 6.0 ve önceki sürümlerinde, türü değerlerinin oluşturulan COM nesnelerinde `Integer` .NET Framework eşdeğeri türü varsayar `Short`. Kullanmadan önce içeri aktarılan üye özellikleri incelemek için Nesne Tarayıcısı kullanmanız önerilir.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor8"></a> Modül düzeyi COM yöntemleri  
  Bir COM sınıfı kullanmanın bir örneğini oluşturarak çoğu COM nesneleri kullanılan `New` anahtar sözcüğü ve ardından nesnenin yöntemleri çağırma. Bu kuralın tek özel durum içeren bir COM nesneleri içerir `AppObj` veya `GlobalMultiUse` COM sınıfları. Bu tür sınıflar, Visual Basic .NET sınıflarını Modül düzeyinde yöntemleri benzer. Örtük olarak Visual Basic 6.0 ve önceki sürümleri bu tür nesnelerin örneklerini, kendi yöntemlerini çağıran ilk kez oluşturun. Örneğin, Visual Basic 6. 0'çağrısı ve Microsoft DAO 3.6 Nesne Kitaplığı için başvuru ekleyebileceğiniz `DBEngine` örneği ilk oluşturmadan yöntemi:  

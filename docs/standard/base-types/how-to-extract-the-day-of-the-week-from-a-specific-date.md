@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8012d2898e9722d1cfb93f5c9dcacce291fe6e78
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 55bdf4cf589bd912dbfc85777542150696aaa436
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633895"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589781"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Nasıl yapılır: Belirli bir Tarihten Haftanın Gününü Çıkarma
 .NET Framework sıralı için belirli bir tarihten haftanın gününü belirlemek için ve belirli bir tarih için yerelleştirilmiş gün adını görüntülemek için kolaylaştırır. Belirli bir tarihe kadar karşılık gelen haftanın gününü gösteren numaralandırılmış değer kullanılabilir <xref:System.DateTime.DayOfWeek%2A> veya <xref:System.DateTimeOffset.DayOfWeek%2A> özelliği. Buna karşılık, haftanın günü adı alınırken tarih ve saat değerinin gibi bir biçimlendirme yöntemi çağırarak gerçekleştirilebilen bir biçimlendirme işlemdir `ToString` yöntemi veya <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemi. Bu konu, bunlar biçimlendirme işlemleri gerçekleştirmeyi gösterir.  
@@ -85,7 +85,7 @@ ms.locfileid: "64633895"
  [!code-csharp[Formatting.Howto.WeekdayName#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/example6.cs#6)]
  [!code-vb[Formatting.Howto.WeekdayName#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/example6.vb#6)]  
   
- Tek tek dillerin yineleme veya tarafından sağlanan işlevselliği tamamlayan işlevselliği sağlayabilir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Örneğin, Visual Basic böyle iki işlevin içerir:  
+ Tek tek dillerin yineleme veya .NET Framework tarafından sağlanan işlevselliği tamamlayan işlevler sağlayabilir. Örneğin, Visual Basic böyle iki işlevin içerir:  
   
 - `Weekday`, belirli bir tarihten haftanın gününü gösteren bir sayı döndürür. Oysa sıralı değeri, biri için haftanın ilk gününü dikkate <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> özelliği sıfır olarak değerlendirir.  
   

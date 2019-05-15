@@ -2,12 +2,12 @@
 title: Entity Framework için EntityClient Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: b8de4e36351a93858104a99045c5aeecce9d2997
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 268608c82070e60007bc09f97a775918e0d950f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607080"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583701"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework için EntityClient Sağlayıcısı
 EntityClient sağlayıcısı kavramsal modelde tanımlanan veri erişimi için Entity Framework uygulamaları tarafından kullanılan veri sağlayıcıdır. Kavramsal modeller hakkında daha fazla bilgi için bkz. [modelleme ve eşleme](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). EntityClient, diğer .NET Framework veri sağlayıcıları, veri kaynağına erişmek için kullanır. Örneğin, EntityClient .NET Framework veri sağlayıcısı (SqlClient) SQL Server için SQL Server veritabanına erişirken kullanır. SqlClient sağlayıcısı hakkında daha fazla bilgi için bkz: [Entity Framework için SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). EntityClient sağlayıcı uygulanan <xref:System.Data.EntityClient> ad alanı.  
@@ -32,7 +32,7 @@ cmd.CommandText = @"SELECT VALUE p
 ```
   
 ## <a name="executing-queries"></a>Sorgular yürütme  
- Bir sorgu yürütüldüğünde, ayrıştırılmış ve kurallı komut ağacına dönüştürülür. Tüm sonraki işleme, komut ağacı üzerinde gerçekleştirilir. Komut ağacı olduğu anlamına gelir iletişimin <xref:System.Data.EntityClient> ve arka plandaki [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı gibi <xref:System.Data.SqlClient>.  
+ Bir sorgu yürütüldüğünde, ayrıştırılmış ve kurallı komut ağacına dönüştürülür. Tüm sonraki işleme, komut ağacı üzerinde gerçekleştirilir. Komut ağacı olduğu anlamına gelir iletişimin <xref:System.Data.EntityClient> ve temel alınan .NET Framework veri sağlayıcısı gibi <xref:System.Data.SqlClient>.  
   
  <xref:System.Data.EntityClient.EntityDataReader> Çalıştırma sonuçlarını gösteren bir <xref:System.Data.EntityClient.EntityCommand> kavramsal modeline karşı. Döndüren komutu yürütmek için <xref:System.Data.EntityClient.EntityDataReader>, çağrı <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>. <xref:System.Data.EntityClient.EntityDataReader> Uygulayan <xref:System.Data.IExtendedDataRecord> sonuçları zengin açıklamak için yapılandırılmış.  
   

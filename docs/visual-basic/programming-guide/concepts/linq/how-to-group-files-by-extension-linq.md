@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Grup dosyalarını uzantısı (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: e40101e7de01d403c5bc55a0d4e68f776ddfc0c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f36be784641d45aaae447097ae2bebb5fd650034
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778085"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593484"
 ---
 # <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Nasıl yapılır: Grup dosyalarını uzantısı (LINQ) (Visual Basic)
 Bu örnek, LINQ Gelişmiş gruplandırma ve sıralama dosya veya klasörleri listelerde işlemleri gerçekleştirmek için nasıl kullanılabileceğini gösterir. Ayrıca bir konsol penceresinde çıktıyı kullanarak sayfa nasıl gösterir <xref:System.Linq.Enumerable.Skip%2A> ve <xref:System.Linq.Enumerable.Take%2A> yöntemleri.  
@@ -94,7 +94,7 @@ End Module
  Bu program çıktısı, yerel dosya sistemi ve hangi ayrıntılarını bağlı olarak uzun `startFolder` ayarlanır. Tüm sonuçları izlenmesini etkinleştirmek için bu örnekte sonuç gösterilmiştir. Aynı teknikleri, Windows ve Web uygulamaları için uygulanabilir. Bir iç içe bir grup içindeki öğeler kod sayfaları çünkü dikkat `For Each` döngü gereklidir. Bazı ilave bir mantık geçerli konumu listesinde işlem ve disk belleği durdurmak ve programdan çıkmak kullanıcının etkinleştirmek için de mevcuttur. Bu durumda, disk belleği sorgu özgün sorgunun önbelleğe alınan sonuçları karşı çalıştırılır. LINQ to SQL gibi diğer bağlamlarda bu önbelleğe alma gerekli değildir.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya daha yüksek bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve bir `Imports` System.Linq ad alanı bildirimi.  
+VB.NET konsol uygulama projesi oluşturmak bir `Imports` System.Linq ad alanı bildirimi.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parent-child tables [Windows Forms], displaying on Windows Forms
 - master-details lists [Windows Forms], creating
 ms.assetid: 99f6e876-3f7f-4139-9063-e36587c95b02
-ms.openlocfilehash: 47e8b358bf847bc021b9d95392bfce28fa7ba06f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 16f23fac53cee5f6c007df6046e73cb7d9e1fbca
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648184"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589207"
 ---
 # <a name="how-to-create-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Nasıl yapılır: İki Windows Forms DataGridView Denetimi Kullanarak Ana/Ayrıntı Formu Oluşturma
 Aşağıdaki kod örneği iki kullanarak ana/ayrıntı formu oluşturur <xref:System.Windows.Forms.DataGridView> denetimleri bağlı iki <xref:System.Windows.Forms.BindingSource> bileşenleri. Veri kaynağı bir <xref:System.Data.DataSet> içeren `Customers` ve `Orders` ile birlikte SQL Server Northwind örnek veritabanındaki tablolar bir <xref:System.Data.DataRelation> aracılığıyla iki ilişkili `CustomerID` sütun.  
@@ -31,8 +31,6 @@ Aşağıdaki kod örneği iki kullanarak ana/ayrıntı formu oluşturur <xref:Sy
  Bu örnek gerektirir:  
   
  Sistem, System.Data, System.Windows.Forms ve System.XML derlemesine ilişkin başvurular.  
-  
-- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Depolama bağlantı dizesi içinde bir parola gibi hassas bilgileri, uygulamanızın güvenliğini etkileyebilir. Windows Kimlik Doğrulaması (tümleşik güvenlik olarak da bilinir) kullanılarak bir veritabanına erişimi denetlemek için daha güvenli bir yoldur. Daha fazla bilgi için [bağlantı bilgilerini koruma](../../data/adonet/protecting-connection-information.md).  

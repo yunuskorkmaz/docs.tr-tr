@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae6d16bda7a2cd6f2367129b737ec79d8193ebf9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70c73de068e067501cd4b1e5f80f85639e790ee2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903792"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586382"
 ---
 # <a name="how-to-let-users-resolve-ambiguous-times"></a>Nasıl yapılır: Kullanıcıların belirsiz saatleri çözmelerine izin verme
 
@@ -53,8 +53,6 @@ Bu örnekte, yerel saat dilimi için tüm başvuruları aracılığıyla yapıla
 ## <a name="compiling-the-code"></a>Kod derleme
 
 Bu örnek gerektirir:
-
-* Projeye System.Core.dll öğesine başvuru eklenmesi gerektiğini.
 
 * Olduğunu <xref:System> ad alanı içeri aktarılacak `using` deyimi (C# kodunda gereklidir).
 

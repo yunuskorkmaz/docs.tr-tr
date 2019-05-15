@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms, localization
 - localization [Windows Forms], Windows Forms layout
 ms.assetid: d13eff2d-701c-4b6e-8838-3885cbfb7223
-ms.openlocfilehash: 74c6a51dd4ed74dbd149a3f54fad07bcd15f7d27
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 642eea482c875e9754352aca142db0f0fc87c7b2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623651"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591896"
 ---
 # <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a>Nasıl yapılır: Yerelleştirmeye İyi Cevap Veren Bir Windows Forms Düzeni Tasarlama
 Çalıştırılmaya hazır olduğunu form oluşturmaya uluslararası pazarlar için geliştirme hızını büyük ölçüde yerelleştirilmiş. Kullanabileceğiniz <xref:System.Windows.Forms.TableLayoutPanel> denetim değişiklikleri nedeniyle denetimleri yeniden boyutlandırma sırasında düzgün bir şekilde yanıt düzenleri uygulamak için kendi <xref:System.Windows.Forms.Control.Text%2A> özellik değerleri.  
@@ -51,8 +51,6 @@ ms.locfileid: "64623651"
  Bu örnek gerektirir:  
   
 - Sistem, System.Data System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
-  
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

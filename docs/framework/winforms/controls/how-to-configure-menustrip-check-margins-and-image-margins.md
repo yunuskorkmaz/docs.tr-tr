@@ -9,12 +9,12 @@ helpviewer_keywords:
 - menus [Windows Forms], setting margins
 - MenuStrip control [Windows Forms], configuring check and image margins
 ms.assetid: 45a9075d-4bea-4ce2-9b2c-7619aa39f8ce
-ms.openlocfilehash: 5db4b3546b6c15af916d53b1a53c347174f1f30b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fa099012fa77daacd1f428e64abd662ee1738f84
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643124"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586599"
 ---
 # <a name="how-to-configure-menustrip-check-margins-and-image-margins"></a>Nasıl yapılır: MenuStrip Denetim Kenar Boşluklarını ve Görüntü Kenar Boşluklarını Yapılandırma
 Özelleştirebileceğiniz bir <xref:System.Windows.Forms.MenuStrip> ayarlayarak <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> ve <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> çeşitli birleşimlerini özellikleri.  
@@ -29,8 +29,6 @@ ms.locfileid: "64643124"
  Bu örnek gerektirir:  
   
 - Sistem, System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular.  
-  
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

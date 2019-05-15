@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: 3244f9560467de7a63b22d279a3fd277fd14876c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd152d19567806cf1cc7b1b38d9a3c0e47d2a960
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609731"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591688"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Nasıl yapılır: Windows Forms ListView Denetiminde Döşeme Görünümünü Etkinleştirme
 Döşeme görünümü özelliği ile <xref:System.Windows.Forms.ListView> denetimi, grafik ve metinsel bilgileri arasında görsel bir denge sağlayabilir. Kutucuk görünümde bir öğe için görüntülenen metin tabanlı bilgiler tanımlanan ayrıntı görünümü için sütun bilgileri ile aynıdır. Kutucuk görünümü gruplandırma veya ekleme işareti özellikleri ile birlikte çalışır <xref:System.Windows.Forms.ListView> denetimi.  
@@ -55,8 +55,6 @@ Döşeme görünümü özelliği ile <xref:System.Windows.Forms.ListView> deneti
 - Sistem ve System.Windows.Forms öğelerini derlemelerine başvurular.  
   
 - Bir simge dosyası yürütülebilir dosyayla aynı dizinde book.ico adı.  
-  
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

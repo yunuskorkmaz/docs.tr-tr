@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: (LINQ) (Visual Basic) bir dizedeki karakterleri sorgulama'
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-ms.openlocfilehash: 3f460f635c581eef5655c5707e3dd356e7986d74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fba5d8ca6c0c060c76b1ecf4f66434ce0884e733
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644392"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593310"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>Nasıl yapılır: (LINQ) (Visual Basic) bir dizedeki karakterleri sorgulama
 Çünkü <xref:System.String> sınıfın uyguladığı genel <xref:System.Collections.Generic.IEnumerable%601> arabirimi, bir karakter dizisi herhangi bir dize sorgulanabilir. Ancak, bu yaygın bir LINQ kullanımı değildir. İşlem eşleştirme karmaşık deseni için kullanmak <xref:System.Text.RegularExpressions.Regex> sınıfı.  
@@ -55,7 +55,7 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya daha yüksek bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve bir `Imports` System.Linq ad alanı bildirimi.  
+VB.NET konsol uygulama projesi oluşturmak bir `Imports` System.Linq ad alanı bildirimi.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

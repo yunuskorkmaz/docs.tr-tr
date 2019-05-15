@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], resizing cells
 - grids [Windows Forms], resizing cells to fit content
 ms.assetid: 63d770dc-b3f5-462b-901a-3125b2753792
-ms.openlocfilehash: 8c95d60ba36275ec4d0e263f97bc28a559c1f38e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e076d26f733716967996f7f809abf0b9f946ef5a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654463"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590486"
 ---
 # <a name="how-to-programmatically-resize-cells-to-fit-content-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde İçeriği Sığdıracak Şekilde Hücreleri Programlı Olarak Yeniden Boyutlandırma
 Kullanabileceğiniz <xref:System.Windows.Forms.DataGridView> denetim kesmeden tüm değerleri görüntüledikleri böylece satırlar, sütunlar ve üst bilgileri yeniden boyutlandırmak için yöntemleri. Yeniden boyutlandırmak için bu yöntemleri kullanabilirsiniz <xref:System.Windows.Forms.DataGridView> bazen ettiğiniz öğeleri. Alternatif olarak, içeriği her değiştiğinde bu öğeleri otomatik olarak yeniden boyutlandırmak için denetimi yapılandırabilirsiniz. Ancak, büyük veri kümeleri ve verilerinizi sık değiştiği ile çalışırken bu verimsiz olabilir. Daha fazla bilgi için [Windows Forms DataGridView denetimindeki boyutlandırma seçenekleri](sizing-options-in-the-windows-forms-datagridview-control.md).  
@@ -34,8 +34,6 @@ Kullanabileceğiniz <xref:System.Windows.Forms.DataGridView> denetim kesmeden t�
  Bu örnek gerektirir:  
   
 - Sistem, System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
-  
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 4ff415adf57bf72cb4da6d405f652a4a50c19041
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b59f9a1895b06cbc102afdceccb373a22ddafc1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033377"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583512"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server ile System.Transactions Tümleştirmesi
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Sürüm 2.0 kullanılmaya aracılığıyla erişilebilen bir işlem framework <xref:System.Transactions> ad alanı. Bu çerçeve işlemleri, tamamen tümleşik bir şekilde kullanıma sunan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]de dahil olmak üzere [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+Erişilebilir bir işlem framework .NET Framework sürüm 2.0 kullanılmaya <xref:System.Transactions> ad alanı. Bu çerçeve işlemleri .NET Framework, tamamen tümleşik bir şekilde kullanıma sunan dahil olmak üzere [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  Programlanabilirlik geliştirmeleri yanı sıra <xref:System.Transactions> ve [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] işlemleri ile çalışırken en iyi duruma getirme koordine etmek için birlikte çalışabilir. Otomatik olarak tam olarak dağıtılmış bir işlem gerekli olarak yükseltilebilir basit bir (yerel) işlem bir promotable işlemdir.  
   
  İle başlayarak [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 <xref:System.Data.SqlClient> SQL Server ile çalışırken promotable işlemleri destekler. Bir promotable işlem eklenen çağırmadığı işlemlerinin ek yükü dağıtılmış işlem ek yükü gerekli olmadığı sürece. Promotable işlemleri otomatik olarak yapılır ve geliştiriciden herhangi bir müdahalesi gerektirir.  
   
- Promotable işlemleri bulunan ve yalnızca kullandığınız zaman [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SQL Server için veri sağlayıcısı (`SqlClient`) SQL Server ile.  
+ Promotable işlemleri bulunan ve yalnızca SQL Server için .NET Framework Veri Sağlayıcısı'nı kullandığınızda (`SqlClient`) SQL Server ile.  
   
 ## <a name="creating-promotable-transactions"></a>Promotable işlemleri oluşturma  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SQL Server için sağlayıcısı sınıfları aracılığıyla işlenir promotable işlemler için destek sağlar [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> ad alanı. Promotable işlemleri, gerekli olana kadar bir dağıtılmış işlem oluşturma erteleyerek dağıtılmış işlemler iyileştirin. Yalnızca biri resource manager gerekliyse, hiçbir dağıtılmış işlem gerçekleşir.  
+ SQL Server için .NET Framework sağlayıcısı, .NET Framework sınıfları aracılığıyla işlenir promotable işlemler için destek sağlar. <xref:System.Transactions> ad alanı. Promotable işlemleri, gerekli olana kadar bir dağıtılmış işlem oluşturma erteleyerek dağıtılmış işlemler iyileştirin. Yalnızca biri resource manager gerekliyse, hiçbir dağıtılmış işlem gerçekleşir.  
   
 > [!NOTE]
 >  Kısmen güvenilen bir senaryoda <xref:System.Transactions.DistributedTransactionPermission> dağıtılmış bir işlem için bir işlem yükseltildiğinde gereklidir.  

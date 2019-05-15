@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 125c577710ed9c2b8a53e367cd22924a3ccb483c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc40d7e10243f63040d7e4ad457aac0f9122b6ad
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615117"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590790"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms Uygulaması Temelleri (Visual Basic)
 Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel olarak çalışan Windows Forms uygulamaları oluşturmak için olanağıdır. Visual Studio, Windows formları kullanarak uygulama ve kullanıcı arabirimi oluşturmak için kullanabilirsiniz. Bir Windows Forms uygulaması sınıflardan geliştirilmiştir <xref:System.Windows.Forms> ad alanı.  
@@ -25,7 +25,7 @@ Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel o
 - [Windows hizmet uygulamaları](../../../framework/windows-services/index.md). Windows Hizmetleri oluşturma işlemleri açıklanmaktadır konuları listeler.  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>Yapı zengin, etkileşimli kullanıcı arabirimleri  
- Windows Forms akıllı istemci bileşeni olan [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], dosya sistemine yazma ve okuma gibi ortak uygulama görevleri sağlayan yönetilen kitaplığı kümesi. Visual Studio gibi bir geliştirme ortamı kullanarak, bir ağ üzerinden uzak bilgisayarlarla iletişim bilgilerini görüntülemek ve kullanıcıların giriş istek Windows Forms uygulamaları oluşturabilirsiniz.  
+ Windows Forms, .NET Framework, bir dizi dosya sistemine yazma ve okuma gibi ortak uygulama görevleri sağlayan yönetilen, akıllı istemci bileşenidir. Visual Studio gibi bir geliştirme ortamı kullanarak, bir ağ üzerinden uzak bilgisayarlarla iletişim bilgilerini görüntülemek ve kullanıcıların giriş istek Windows Forms uygulamaları oluşturabilirsiniz.  
   
  Windows Forms'ta bir form üzerinde kullanıcıya bilgi göstermek bir görsel bir yüzeydir. Yaygın olarak formlarında denetimleri yerleştirme ve fare tıklamasına veya tuş basışlarını gibi kullanıcı eylemlerini yanıtlarını geliştirmeye göre Windows Forms uygulamaları oluşturun. A *denetimi* veri girişi kabul eder ya da veri görüntüleyen bir ayrık bir kullanıcı arabirimi (UI) öğesidir.  
   
@@ -86,7 +86,7 @@ Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel o
 |İle güvenliği yönetme [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Nasıl yapılır: ClickOnce Güvenlik Ayarlarını Etkinleştirme](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>Diğer denetimler ve özellikleri  
- Windows Forms'ta olun uygulayan ortak görevleri hızlı ve kolay, iletişim kutuları oluşturma, yazdırma, Yardım ve belgeler ekleme ve uygulamanızı birden çok dilde yerelleştirme desteği gibi diğer birçok özellik vardır. Ayrıca, Windows Forms sağlam güvenlik sistemine bağlıdır [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], böylece müşterilerinize daha güvenli uygulamaları yayınlayın.  
+ Windows Forms'ta olun uygulayan ortak görevleri hızlı ve kolay, iletişim kutuları oluşturma, yazdırma, Yardım ve belgeler ekleme ve uygulamanızı birden çok dilde yerelleştirme desteği gibi diğer birçok özellik vardır. Ayrıca, Windows Forms, müşterilerinize daha güvenli uygulamalar yayımlamayı etkinleştirme .NET Framework'ün sağlam güvenlik sistemi kullanır.  
   
  Bu özellikleri kullanmaya hakkında adım adım bilgiler için aşağıdaki Yardım konularına bakın:  
   

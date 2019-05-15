@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 8deb151572b8a83396e4204378783304b66216c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c9442635bb193c13ca30fd1e271631a43b33e55
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648137"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589024"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid Denetimine Genel Bakış (Windows Forms)
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.locfileid: "64648137"
   
  <xref:System.Windows.Forms.DataGrid> Bir kullanıcı arabirimi için bir veri kümesi, ilgili tabloları ve zengin biçimlendirme ve düzenleme özellikleri arasında gezinmeyi sağlayabilir.  
   
- Veri işleme ve görüntü ayrı işlevler şunlardır: Veri güncelleştirmelerini, Windows Forms veri bağlama mimarisi ve göre işlenir ancak kullanıcı arabirimi denetim işleme [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcıları. Bu nedenle, aynı veri kaynağına bağlı birden çok denetimin eşitlenmiş durumda kalır.  
+ Veri işleme ve görüntü ayrı işlevler şunlardır: Veri güncelleştirmeleri, Windows Forms veri bağlama mimarisi ve .NET Framework veri sağlayıcıları tarafından işlenir ancak kullanıcı arabirimi denetimi gerçekleştirir. Bu nedenle, aynı veri kaynağına bağlı birden çok denetimin eşitlenmiş durumda kalır.  
   
 > [!NOTE]
 >  Visual Basic 6.0 DataGrid denetiminde biliyorsanız, bazı önemli farklılıklar Windows Forms bulabilirsiniz <xref:System.Windows.Forms.DataGrid> denetimi.  

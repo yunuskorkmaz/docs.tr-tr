@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 19506d051442dc841a28c14f212addf66af71cf5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 50e8d24698bd8451b90da05ffe52b473a13b3a20
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750820"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583614"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>.NET Framework istemci uygulaması oluşturma (WCF Veri Hizmetleri Hızlı Başlangıç)
 
@@ -84,7 +84,7 @@ Bu, WCF Veri Hizmetleri Hızlı Başlangıç Son görevdir. Bu görevde, bir kon
 
 Bulunan örnek Northwind OData akışındaki erişen istemci uygulaması başarıyla oluşturdunuz. WCF Veri Hizmetleri hızlı başlangıç ayrıca tamamladınız!
 
-Gelen OData erişme hakkında daha fazla bilgi akışına bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulaması, bakın [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).
+Bir .NET Framework uygulamasından bir OData erişme hakkında daha fazla bilgi akışı için bkz: [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

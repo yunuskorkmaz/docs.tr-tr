@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: 344f9856c1f3b1483bfda6f36a7e025ff2e5c78d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f9eb45e9b96ccb97938c7396d177ccedbea329e6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593435"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590373"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sütun Doldurma Modu
 Sütun doldurma modu içinde <xref:System.Windows.Forms.DataGridView> denetimi, böylece bunlar kullanılabilir görüntüleme alanının genişliğini dolgu sütunlarını otomatik olarak yeniden boyutlandırır. Denetimi dışında her bir sütunun genişliğini eşit tutmak gerekli veya daha büyük olduğunda yatay kaydırma çubuğunun görüntülemez, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> özellik değeri.  
@@ -59,8 +59,6 @@ Sütun doldurma modu içinde <xref:System.Windows.Forms.DataGridView> denetimi, 
  Bu örnek gerektirir:  
   
 - Sistem, System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
-  
-- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

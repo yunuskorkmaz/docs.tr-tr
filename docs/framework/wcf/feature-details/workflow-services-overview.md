@@ -2,12 +2,12 @@
 title: İş akışı hizmetlerine genel bakış - WCF
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: 1461ef545c4b31f84e62d82453320179d9aa74e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d5f8636bec57cee1cb72c2796fc4bafc6b9c044
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050343"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590078"
 ---
 # <a name="workflow-services-overview"></a>İş akışı hizmetlerine genel bakış
 
@@ -48,7 +48,7 @@ WCF tanımlayan iki MSMQ tabanlı bağlamalar <xref:System.ServiceModel.NetMsmqB
 
 WCF hizmetlerinde olduğu gibi iş akışı hizmetleri barındırılması gerekir. WCF hizmetleri kullanma <xref:System.ServiceModel.ServiceHost> sınıfı hizmetlerini barındırmak ve iş akışı hizmetleri kullanım <xref:System.ServiceModel.Activities.WorkflowServiceHost> hizmetlerini barındırmak için. WCF hizmetlerinde olduğu gibi çeşitli şekillerde örneğin iş akışı hizmetleri barındırılabilir:
 
-- Yönetilen bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulama.
+- Yönetilen bir .NET Framework uygulamasında.
 
 - Internet Information Services (IIS).
 
@@ -56,7 +56,7 @@ WCF hizmetlerinde olduğu gibi iş akışı hizmetleri barındırılması gereki
 
 - Yönetilen bir Windows hizmetinde.
 
-Yönetilen bir barındırılan iş akışı Hizmetleri [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulama veya yönetilen bir Windows hizmet örneği oluşturma <xref:System.ServiceModel.Activities.WorkflowServiceHost> sınıfı ve bir örneğini geçirin <xref:System.ServiceModel.Activities.WorkflowService> içinde iş akışı tanımını içeren <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> özelliği. Mesajlaşma etkinlikleri içeren bir iş akışı tanımı, bir iş akışı hizmeti kullanıma sunulur.
+Yönetilen bir .NET Framework uygulamasında barındırılan iş akışı hizmetleri veya yönetilen bir Windows hizmet örneği oluşturma <xref:System.ServiceModel.Activities.WorkflowServiceHost> sınıfı ve bir örneğini geçirin <xref:System.ServiceModel.Activities.WorkflowService> içinde iş akışı tanımını içeren <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> özelliği. Mesajlaşma etkinlikleri içeren bir iş akışı tanımı, bir iş akışı hizmeti kullanıma sunulur.
 
 Bir iş akışı hizmetinde IIS ya da WAS barındırmak için sanal bir dizine iş akışı hizmet tanımını içeren .xamlx dosyası yerleştirin. Varsayılan uç nokta (kullanarak <xref:System.ServiceModel.BasicHttpBinding>) olan otomatik olarak oluşturulan daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md). Bir Web.config dosyası, ayrıca kendi uç noktalarınız belirtmek için sanal dizin yerleştirebilirsiniz. İş akışı tanımınızı bir derlemede ise sanal dizin ve iş akışı derleme App_Code dizinindeki .svc dosya yerleştirebilirsiniz. .Svc dosyası, hizmet barındırma ortamı fabrikası ve iş akışı hizmeti uygulayan sınıf belirtmeniz gerekir. Aşağıdaki örnek, hizmet barındırma ortamı fabrikası belirtin ve iş akışı hizmeti uygulayan bir sınıf belirtmek gösterilmektedir.
 

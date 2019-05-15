@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, hosting ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-ms.openlocfilehash: 9b037dfbb3a82b8df4c91468eeb8b2dea24e2a37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b604502e0fea591460f30cae28b64ff1703da65
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625417"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589440"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Bir Windows Formunda bir ActiveX Denetimi Barındırmayla İlgili Konular
 Windows Forms ana bilgisayar Windows Forms denetimleri için optimize edilmiştir ancak ActiveX denetimlerini kullanmaya devam edebilirsiniz. ActiveX denetimlerini kullanan bir uygulamayı planlarken, aşağıdaki konuları göz önünde bulundurun:  
@@ -26,7 +26,7 @@ Windows Forms ana bilgisayar Windows Forms denetimleri için optimize edilmişti
     >  ActiveX çalışma denetimi bir COM birlikte çalışma sarmalayıcısı kullanımı gerektirir. Daha fazla bilgi için [Visual Basic ve Visual C# COM birlikte çalışabilirlik](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
     > [!NOTE]
-    >  ActiveX denetiminin bir üyesinin adı içinde tanımlanan bir adla eşleşirse [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], ActiveX denetim içeri Aktarıcı üye adı ile ön ek sonra **Ctl** oluşturduğunda, <xref:System.Windows.Forms.AxHost> türetilmiş sınıf. Örneğin, ActiveX denetiminizin adlı bir üyesi varsa **Düzen**, yeniden adlandırıldığında **CtlLayout** AxHost türetilen sınıfında çünkü **Düzen** olay içinde tanımlanmıştır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+    >  ActiveX denetiminin bir üyesinin adı .NET Framework'te tanımlanan bir adla eşleşen sonra ActiveX denetim içeri Aktarıcı üye adı ile ön ek **Ctl** oluşturduğunda, <xref:System.Windows.Forms.AxHost> türetilmiş sınıf. Örneğin, ActiveX denetiminizin adlı bir üyesi varsa **Düzen**, yeniden adlandırıldığında **CtlLayout** AxHost türetilen sınıfında çünkü **Düzen** olay içinde tanımlanır. NET Framework.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

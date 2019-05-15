@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Dosyaları (LINQ) uzantıya göre gruplama (C#)'
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: bad4df9009a40cede04438063b2d30916d0e68b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b8cb30396a93f5f878c091c4aad3cab9db3f2d4
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667905"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584305"
 ---
 # <a name="how-to-group-files-by-extension-linq-c"></a>Nasıl yapılır: Dosyaları (LINQ) uzantıya göre gruplama (C#)
 Bu örnek, LINQ Gelişmiş gruplandırma ve sıralama dosya veya klasörleri listelerde işlemleri gerçekleştirmek için nasıl kullanılabileceğini gösterir. Ayrıca bir konsol penceresinde çıktıyı kullanarak sayfa nasıl gösterir <xref:System.Linq.Enumerable.Skip%2A> ve <xref:System.Linq.Enumerable.Take%2A> yöntemleri.  
@@ -105,7 +105,7 @@ class GroupByExtension
  Bu program çıktısı, yerel dosya sistemi ve hangi ayrıntılarını bağlı olarak uzun `startFolder` ayarlanır. Tüm sonuçları izlenmesini etkinleştirmek için bu örnekte sonuç gösterilmiştir. Aynı teknikleri, Windows ve Web uygulamaları için uygulanabilir. Bir iç içe bir grup içindeki öğeler kod sayfaları çünkü dikkat `foreach` döngü gereklidir. Bazı ilave bir mantık geçerli konumu listesinde işlem ve disk belleği durdurmak ve programdan çıkmak kullanıcının etkinleştirmek için de mevcuttur. Bu durumda, disk belleği sorgu özgün sorgunun önbelleğe alınan sonuçları karşı çalıştırılır. LINQ to SQL gibi diğer bağlamlarda bu önbelleğe alma gerekli değildir.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
+ Oluşturma bir C# konsol uygulama projesi ile `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

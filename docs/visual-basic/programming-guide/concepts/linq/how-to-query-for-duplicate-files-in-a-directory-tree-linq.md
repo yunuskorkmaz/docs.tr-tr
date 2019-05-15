@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Sorgu (LINQ) (Visual Basic) bir dizin ağacında yineleyen dosyalar için'
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-ms.openlocfilehash: 81955b18755f41a582aed7768c709c8e77cffba6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 192f279a74cfbbd35e67d8f166a3d35248409459
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024345"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586340"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>Nasıl yapılır: Sorgu (LINQ) (Visual Basic) bir dizin ağacında yineleyen dosyalar için
 Bazen aynı ada sahip dosyaları birden fazla klasöründe bulunabilir. Örneğin, Visual Studio yükleme klasörü altında çeşitli klasörleri readme.htm dosyasına sahip. Bu örnekte, böyle yinelenen dosya adları belirtilen kök klasörü altında sorgulamak gösterilmektedir. İkinci örnek boyutu için dosyaları sorgulama işlemini gösterir ve ayrıca oluşturma kez Eşleştir.  
@@ -101,7 +101,7 @@ End Module
  İlk sorgu, bir eşleşme belirlemek için basit bir anahtarı kullanır; Bu, aynı ada sahip olan ancak içerikleri farklı olabilir. dosyaları bulur. İkinci sorgu, üç özelliklerini karşı eşleşecek şekilde bir bileşik anahtarı kullanır. <xref:System.IO.FileInfo> nesne. Bu sorgu ortamınızdakilerle benzer veya aynı içerik ve aynı ada sahip dosyaları bulmak çok daha yüksektir.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya daha yüksek bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve bir `Imports` System.Linq ad alanı bildirimi.  
+VB.NET konsol uygulama projesi oluşturmak bir `Imports` System.Linq ad alanı bildirimi.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

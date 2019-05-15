@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: (LINQ) bir dizedeki karakterleri sorgulama (C#)'
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: 0c577fc2dc2ae07574580f819a6fb51336107dfb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b31dfb4c9fb7f7efc439a1703f13aafca3053e6a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702041"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584447"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Nasıl yapılır: (LINQ) bir dizedeki karakterleri sorgulama (C#)
 Çünkü <xref:System.String> sınıfın uyguladığı genel <xref:System.Collections.Generic.IEnumerable%601> arabirimi, bir karakter dizisi herhangi bir dize sorgulanabilir. Ancak, bu yaygın bir LINQ kullanımı değildir. İşlem eşleştirme karmaşık deseni için kullanmak <xref:System.Text.RegularExpressions.Regex> sınıfı.  
@@ -55,7 +55,7 @@ class QueryAString
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
+ Oluşturma bir C# konsol uygulama projesi ile `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

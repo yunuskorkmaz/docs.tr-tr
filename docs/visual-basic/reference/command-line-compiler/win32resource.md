@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32resource compiler option [Visual Basic]
 - win32resource compiler option [Visual Basic]
 ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
-ms.openlocfilehash: 9351e9f6bcb7660dac2c49667ca8db6d578eff7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8f9c9aac87fd71b61a5413386582ae660efd903
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774770"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593079"
 ---
 # <a name="-win32resource"></a>-win32resource
 Bir Win32 kaynak dosyası çıkış dosyasına ekler.  
@@ -34,7 +34,7 @@ Bir Win32 kaynak dosyası çıkış dosyasına ekler.
   
  Bir Win32 kaynağı sürümü içerebilir veya yardımcı olan bit eşlem (simge) bilgileri, uygulamanızda tanımlamak **dosya Gezgini**. Siz belirtmezseniz `-win32resource`, derleyici derleme sürümünü temel alan sürüm bilgisi oluşturur. `-win32resource` Ve `-win32icon` seçenekleri karşılıklı olarak birbirini dışlar.  
   
- Bkz: [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) başvurmak için bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kaynak dosyası veya [-kaynak (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) eklemek için bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kaynak dosyası.  
+ Bkz: [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) bir .NET Framework kaynak dosyası başvurmak veya [-kaynak (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) bir .NET Framework kaynak dosyası eklemek için.  
   
 > [!NOTE]
 >  `-win32resource` Seçeneği, Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derleme yapılırken kullanılabilir.  

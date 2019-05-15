@@ -8,15 +8,15 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: 8ff2a3a4e9249b324dac9b244cab68ae8f8e1cab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df234ecaf25243dbdf2d6552942ca86001d4a6fe
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624833"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592181"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Nasıl yapılır: Visual Basic başvurusu COM nesneleri
-Visual Basic'te tür kitaplıklarını sahip bir COM nesnelerine başvuru ekleme birlikte çalışma derlemesi oluşturulması için COM kitaplığı gerektirir. COM nesnesinin üyeleri için başvurular birlikte çalışma derlemesine yönlendirilir ve ardından gerçek COM nesneye iletilir. COM nesnesi alınan yanıtları birlikte çalışma derlemesine yönlendirilir ve iletilmesi, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulama.  
+Visual Basic'te tür kitaplıklarını sahip bir COM nesnelerine başvuru ekleme birlikte çalışma derlemesi oluşturulması için COM kitaplığı gerektirir. COM nesnesinin üyeleri için başvurular birlikte çalışma derlemesine yönlendirilir ve ardından gerçek COM nesneye iletilir. COM nesnesi alınan yanıtları birlikte çalışma derlemesine yönlendirilir ve .NET Framework uygulamanızı iletilir.  
   
  Tür bilgilerini COM nesnesi için bir .NET derlemesine gömerek birlikte çalışma derlemesi kullanmadan bir COM nesnesi başvuruda bulunabilir. Tür bilgilerini katıştırma için ayarlanmış `Embed Interop Types` özelliğini `True` için COM nesnesine başvuru. Komut satırı derleyicisini kullanarak derlemek kullanırsanız `/link` COM kitaplığı başvurmak için seçeneği. Daha fazla bilgi için [/Link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
   

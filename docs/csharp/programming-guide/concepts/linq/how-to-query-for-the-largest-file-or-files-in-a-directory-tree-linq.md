@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: En büyük dosya veya dosyalar sorgu (LINQ) bir dizin ağacındaki (C#)'
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: 134183da58b490635284699de2f1721dda5422dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0ff1b5cb4e9563e64b95b9cbcc338f15771cbcab
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597067"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585863"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Nasıl yapılır: En büyük dosya veya dosyalar sorgu (LINQ) bir dizin ağacındaki (C#)
 Bu örnek dosyanın bayt cinsinden boyutu ile ilgili beş sorguları gösterir:  
@@ -143,8 +143,8 @@ class QueryBySize
  Burada bir dosya silindi başka bir iş parçacığında bu yana zaman dönemi içindeki durumda gerçekleştirilecektir olası özel kullanmak bayt cinsinden boyutunu almak için ayrı bir yöntem için sorguyu çağırır <xref:System.IO.FileInfo> nesne oluşturulduğu çağrısında`GetFiles`. Bile aracılığıyla <xref:System.IO.FileInfo> nesnesi zaten oluşturuldu, özel durum ortaya çıkabilir çünkü bir <xref:System.IO.FileInfo> nesne yenilemek çalışır, <xref:System.IO.FileInfo.Length%2A> erişilen özelliği ilk kez en geçerli boyutunu bayt cinsinden kullanarak özellik. Bu işlem bir try-catch bloğunda sorgu dışında koyarak, biz yan etkilere neden olabilecek sorguları işlemlerinde önleme kural izleyin. Genel olarak, çok dikkatli özel durumlar, tüketildiğinde uygulama bilinmeyen bir durumda kaldı değil emin olmak için özenli olunması gerekir.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
-  
+Oluşturma bir C# konsol uygulama projesi ile `using` System.Linq ve System.IO ad alanları için yönergeleri.
+ 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to Objects'in (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: a31a35257921c6dec6229b5cc3222ee3119c325e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 47002ffaee33be66e2cc99ac1a01896d4656885c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625389"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591816"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Nasıl yapılır: DHTML Koduyla İstemci Uygulaması Kodu Arasında İki Yönlü İletişim Gerçekleştirme
 Kullanabileceğiniz <xref:System.Windows.Forms.WebBrowser> denetimi mevcut dinamik HTML (DHTML) Web uygulama kodu Windows Forms istemci uygulamalarınıza ekleyin. Bu, önemli geliştirme süresini DHTML tabanlı denetimler oluşturma yatırım yapmış ve mevcut kodu yeniden yazmak zorunda kalmadan Windows formlarının zengin kullanıcı arabirimi özelliklerinden yararlanan istediğinizde kullanışlıdır.  
@@ -104,8 +104,6 @@ Kullanabileceğiniz <xref:System.Windows.Forms.WebBrowser> denetimi mevcut dinam
  Bu kod gerektirir:  
   
 - Sistem ve System.Windows.Forms öğelerini derlemelerine başvurular.  
-  
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

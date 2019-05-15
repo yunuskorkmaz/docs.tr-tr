@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddd8b0e7965ca734865e83373af2f7ee45d62c05
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6381747bc998f73b374442fcb15e025ca15795d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633447"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589530"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Nasıl yapılır: Dizelerin Geçerli E-Posta Biçiminde Olduğunu Doğrulama
 Aşağıdaki örnek, bir dize geçerli bir e-posta biçiminde olduğunu doğrulamak için normal bir ifade kullanır.  
@@ -72,36 +72,12 @@ Aşağıdaki örnek, bir dize geçerli bir e-posta biçiminde olduğunu doğrula
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  `IsValidEmail` Ve `DomainMapper` yöntemleri bir normal ifade yardımcı program yöntemleri kitaplıkta dahil edilebilir ya da bunlar özel statik veya uygulama sınıfında örnek yöntemler olarak eklenebilir.  
   
- Bir normal ifade kitaplığında eklemek için ya da kopyalayın kodu bir Visual Studio sınıf kitaplığı projesine yapıştırın veya kopyalayın ve bir metin dosyasına yapıştırın ve aşağıdakine benzer bir komut ile komut satırından derleme (varsayarak kaynak kodunun adı  RegexUtilities.cs veya RegexUtilities.vb dosyasıdır:  
-  
-```csharp  
-csc /t:library RegexUtilities.cs  
-```  
-  
-```vb  
-vbc /t:library RegexUtilities.vb  
-```  
-  
  Ayrıca <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> bu normal ifade bir normal ifade kitaplığında dahil etmek için yöntemi.  
   
  Bir normal ifade kitaplığında kullanılıyorsa aşağıdaki gibi kod kullanarak bunları çağırabilirsiniz:  
   
  [!code-csharp[RegularExpressions.Examples.Email#8](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#8)]
  [!code-vb[RegularExpressions.Examples.Email#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#8)]  
-  
- E-posta doğrulama normal ifade içeren RegexUtilities.dll adlı bir sınıf kitaplığı oluşturduğunuz varsayıldığında, bu örnekte, aşağıdaki yollardan biriyle derleyebilirsiniz:  
-  
-- Görsel bir konsol uygulaması oluşturma ve projenize bir başvuru RegexUtilities.dll ekleyerek Studio'da.  
-  
-- Kopyalama ve kaynak kodu bir metin dosyasına kopyalayıp yapıştırarak aşağıdakine benzer bir komut ile derleme komut satırından (kaynak kodu dosyasının adını Example.cs veya Example.vb olduğunu varsayarak:  
-  
-    ```csharp  
-    csc Example.cs /r:RegexUtilities.dll  
-    ```  
-  
-    ```vb  
-    vbc Example.vb /r:RegexUtilities.dll  
-    ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

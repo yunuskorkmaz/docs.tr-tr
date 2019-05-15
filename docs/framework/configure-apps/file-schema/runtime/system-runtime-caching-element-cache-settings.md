@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da059e1be7c685eba7792045abf4ffa691525d2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03a17e8f30c15e98a350ef558cc1cb6ddf65cade
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701482"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584514"
 ---
 # <a name="systemruntimecaching-element-cache-settings"></a>\<System.Runtime.Caching > öğesi (önbellek ayarları)
 Bellekteki varsayılan yapılandırmasını sağlar <xref:System.Runtime.Caching.ObjectCache> uygulaması aracılığıyla `memoryCache` yapılandırma dosyasında giriş.  
@@ -45,7 +45,7 @@ Bellekteki varsayılan yapılandırmasını sağlar <xref:System.Runtime.Caching
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Yapılandırma >](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Her yapılandırma dosyasında ortak dil çalışma zamanı tarafından kullanılan kök öğesini belirtir ve [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] uygulamalar.|  
+|[\<Yapılandırma >](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Her yapılandırma dosyasında ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğesini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu ad alanındaki sınıflar üzerinde ASP.NET, ancak bir bağımlılık benzer önbelleğe alma özelliklerini kullanabilmeniz için bir yol sağlar `System.Web` derleme. Daha fazla bilgi için [.NET Framework uygulamalarında önbelleğe alma](../../../../../docs/framework/performance/caching-in-net-framework-applications.md).  

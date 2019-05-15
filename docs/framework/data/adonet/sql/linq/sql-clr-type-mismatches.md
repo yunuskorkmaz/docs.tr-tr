@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 13d8d68140b68652b5e059ae9fb106f32142f698
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e51d999d5fcaf8180b4ea5189a3db9b6143a57db
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876869"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582726"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR Tür Uyumsuzlukları
 
@@ -39,7 +39,7 @@ Aşağıdaki türleri makul ortaklarınıza yok.
   - **TimeSpan**. Bu tür iki arasındaki farkı temsil eder `DateTime` değerleri ve gelmiyor `timestamp` SQL Server. CLR <xref:System.TimeSpan?displayProperty=nameWithType> SQL Server'a da eşleyebilir `TIME` bazı durumlarda türü. SQL Server `TIME` türü 24 saatten az pozitif değerleri temsil etmek için yalnızca tasarlanmıştır. CLR <xref:System.TimeSpan> kadar büyük aralığı yok.
 
   > [!NOTE]
-  > SQL Server'a özgü [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] türlerini <xref:System.Data.SqlTypes> bu Karşılaştırmada dahil edilmez.
+  > SQL Server'a özgü .NET Framework türleri içinde <xref:System.Data.SqlTypes> bu Karşılaştırmada dahil edilmez.
 
 - SQL Server'da uyuşmazlığı:
 
@@ -167,7 +167,7 @@ Benzer şekilde, sıralama türü sistem arasında önemli ölçüde farklı ola
 
   - Gevşek bir çeviri `AND` / `OR` işleçleri, beklenmeyen hatalar neden C# ifade değerlendirme birinci işlenenin sonucuna göre ikinci işlenenin değerlendirmeye kullanır.
 
-- `Round()` işlev farklı semantiğe sahip [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] ve T-SQL.
+- `Round()` işlev, T-SQL ve .NET Framework'te farklı semantiğe sahip.
 
 - Dizeler için başlangıç dizini 1'de SQL CLR içinde 0 nesnesidir. Bu nedenle, dizin olan herhangi bir işlev dizin çeviri gerekir.
 
@@ -194,7 +194,7 @@ Benzer şekilde, sıralama türü sistem arasında önemli ölçüde farklı ola
 [!code-csharp[DLinqMismatch#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#5)]
 [!code-vb[DLinqMismatch#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#5)]
 
-- SQL simetrik aritmetiği gerçekleştirir çalışırken yuvarlama [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] kullandığı banker yuvarlama. Bilgi Bankası makalesi 196652 ek ayrıntılar için bkz.
+- .NET Framework banker yuvarlaması kullanırken SQL simetrik aritmetik yuvarlama işlemi gerçekleştirir. Bilgi Bankası makalesi 196652 ek ayrıntılar için bkz.
 
 - Ortak yerel ayarlar için varsayılan SQL karakter dize karşılaştırmaları duyarsızdır. Visual Basic hem de C#, bunlar büyük küçük harfe duyarlıdır. Örneğin, `s == "Food"` (`s = "Food"` Visual Basic'te) ve `s == "Food"` ise farklı sonuçlar verecek `s` olduğu `food`.
 

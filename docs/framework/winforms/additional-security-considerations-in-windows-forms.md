@@ -7,15 +7,15 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: a101b5838b843f0130d16aab6eb199c7a54ca6b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3049b56589b2cd7f5e6cab462955a67289315b35
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669322"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588766"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows Forms'ta Ek Güvenlik Konuları
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] güvenlik ayarları, uygulamanızın farklı bir kısmi güven ortamında yerel bilgisayarınızda çalıştırılmasına neden olabilir. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Dosya sistemi, ağ ve diğer özelliklerin yanı sıra yönetilmeyen API gibi önemli yerel kaynaklara erişimi kısıtlar. Güvenlik ayarları, Microsoft Windows API veya güvenlik sistemi tarafından doğrulanan diğer API'lerini çağırma özelliği etkiler. Güvenlik dahil dosya ve veri erişimini ve yazdırma uygulamanızın diğer yönlerini de etkiler. Kısmi güven ortamında dosya ve veri erişimi hakkında daha fazla bilgi için bkz. [daha fazla güvenli dosya ve veri erişimi Windows Forms'ta](more-secure-file-and-data-access-in-windows-forms.md). Kısmi güven ortamında yazdırma hakkında daha fazla bilgi için bkz. [daha güvenli yazdırma Windows Forms'ta](more-secure-printing-in-windows-forms.md).  
+.NET framework güvenlik ayarları, uygulamanızın farklı bir kısmi güven ortamında yerel bilgisayarınızda çalıştırılmasına neden olabilir. .NET Framework, dosya sistemi, ağ ve diğer özelliklerin yanı sıra yönetilmeyen API gibi önemli yerel kaynaklara erişimi kısıtlar. Güvenlik ayarları, Microsoft Windows API veya güvenlik sistemi tarafından doğrulanan diğer API'lerini çağırma özelliği etkiler. Güvenlik dahil dosya ve veri erişimini ve yazdırma uygulamanızın diğer yönlerini de etkiler. Kısmi güven ortamında dosya ve veri erişimi hakkında daha fazla bilgi için bkz. [daha fazla güvenli dosya ve veri erişimi Windows Forms'ta](more-secure-file-and-data-access-in-windows-forms.md). Kısmi güven ortamında yazdırma hakkında daha fazla bilgi için bkz. [daha güvenli yazdırma Windows Forms'ta](more-secure-printing-in-windows-forms.md).  
   
  Aşağıdaki bölümlerde, panoyla çalışma, pencere işleyin ve kısmi güven ortamında çalışan uygulamalardan Windows API çağırmak nasıl açıklanmaktadır.  
   

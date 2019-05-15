@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: f51878ed0a0f0e888074d170686b94f086c6d376
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f67733b89d2bde652449e2338362868fdb84bcf3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612940"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592945"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Nasıl yapılır: FlowLayoutPanel Denetiminde Alt Denetimleri Sabitleme ve Yerleştirme
 <xref:System.Windows.Forms.FlowLayoutPanel> Denetim destekler <xref:System.Windows.Forms.Control.Anchor%2A> ve <xref:System.Windows.Forms.Control.Dock%2A> kendi alt denetimlerindeki özellikler.  
@@ -57,8 +57,6 @@ ms.locfileid: "64612940"
  Bu örnek gerektirir:  
   
 - Sistem, System.Data System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
-  
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -3,15 +3,15 @@ title: 'Öğretici: Regresyon algoritması kullanarak fiyatlarını tahmin etme'
 description: Bu öğreticide, özellikle fiyatlarını tahmin etmek için New York City taksi fares ML.NET kullanarak bir regresyon modeli derler gösterilmektedir.
 author: jralexander
 ms.author: johalex
-ms.date: 05/06/2019
+ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e46ab2ed9cace9d0769034356db425604f0ea06f
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 6fda4e35d6f52b264002a7fc91da3e5f7256fc11
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063395"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557790"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-model-with-mlnet"></a>Öğretici: ML.NET ile bir regresyon modeli kullanarak fiyatlarını tahmin etme
 
@@ -127,7 +127,7 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 ## <a name="load-and-transform-data"></a>Veri yükleme ve dönüştürme
 
-ML.NET kullanan [IDataView sınıfı](xref:Microsoft.ML.IDataView) sayısal ya da metin tablosal verileri açıklamak esnek ve verimli bir yolu olarak. `IDataView` iki metin dosyalarını yükleyebilir veya gerçek zamanlı olarak (örneğin, SQL veritabanı veya günlük dosyaları). İlk satırı olarak aşağıdaki kodu ekleyin `LoadData()` yöntemi:
+ML.NET kullanan [IDataView sınıfı](xref:Microsoft.ML.IDataView) sayısal ya da metin tablosal verileri açıklamak esnek ve verimli bir yolu olarak. `IDataView` iki metin dosyalarını yükleyebilir veya gerçek zamanlı olarak (örneğin, SQL veritabanı veya günlük dosyaları). İlk satırı olarak aşağıdaki kodu ekleyin `Train()` yöntemi:
 
 [!code-csharp[LoadTrainData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#6 "loading training dataset")]
 

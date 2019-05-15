@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 18674a5410cd411ff78e2d3f768b02687cd13f6d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b618d0c153501885fe8c42a04d0723eaa5bcd9af
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637349"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586243"
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer Sınıfını Kullanma
 Windows Communication Foundation (WCF), istemciler ve hizmetler, serileştirme adlı bir işlem arasında aktarılır XML içinde uygulamanızda veri kapatmak için iki farklı bir seri hale getirme teknolojilerini kullanabilirsiniz.  
@@ -30,12 +30,12 @@ Windows Communication Foundation (WCF), istemciler ve hizmetler, serileştirme a
   
 - Birçok genel koleksiyon türleri dahil birçok ortak koleksiyon türleri.  
   
- Birçok [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri ikinci iki kategoriye ayrılır ve bu nedenle seri hale getirilebilir. Diziler seri hale getirilebilir türlerin seri hale getirilebilir. Tam bir listesi için bkz. [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
+ Çoğu .NET Framework türleri, ikinci iki kategoriye ayrılır ve bu nedenle seri hale getirilebilir. Diziler seri hale getirilebilir türlerin seri hale getirilebilir. Tam bir listesi için bkz. [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
   
  <xref:System.Runtime.Serialization.DataContractSerializer>, Sözleşmesi türleri veri ile birlikte kullanılan, yeni WCF hizmetleri yazmak için önerilen yoldur. Daha fazla bilgi için [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>XmlSerializer sınıfını kullanma zamanı  
- WCF da destekler <xref:System.Xml.Serialization.XmlSerializer> sınıfı. <xref:System.Xml.Serialization.XmlSerializer> Sınıf WCF'ye benzersiz değil. Aynı seri hale getirme altyapısı olan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri kullanın. <xref:System.Xml.Serialization.XmlSerializer> Sınıf türleri çok dar kümesini destekler <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı, ancak daha fazla denetim elde edilen XML üzerinden sağlar ve XML Şeması Tanım Dili (XSD) standart fazlasını destekler. Ayrıca serializable türler üzerinde herhangi bir bildirim temelli özniteliği gerektirmez. XML seri hale getirme konusunda daha fazla bilgi için bkz. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] belgeleri. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı veri anlaşması türleri desteklemez.  
+ WCF da destekler <xref:System.Xml.Serialization.XmlSerializer> sınıfı. <xref:System.Xml.Serialization.XmlSerializer> Sınıf WCF'ye benzersiz değil. Aynı seri hale getirme altyapısı olan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri kullanın. <xref:System.Xml.Serialization.XmlSerializer> Sınıf türleri çok dar kümesini destekler <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı, ancak daha fazla denetim elde edilen XML üzerinden sağlar ve XML Şeması Tanım Dili (XSD) standart fazlasını destekler. Ayrıca serializable türler üzerinde herhangi bir bildirim temelli özniteliği gerektirmez. Daha fazla bilgi için .NET Framework belgelerinin XML serileştirme bölümüne bakın. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı veri anlaşması türleri desteklemez.  
   
  Svcutil.exe kullanırken veya **hizmet Başvurusu Ekle** üçüncü taraf bir hizmet için istemci kodu oluşturma veya üçüncü taraf şema, uygun bir seri hale getirici erişmek için Visual Studio özelliği otomatik olarak seçilir. Şema ile uyumlu değilse <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Xml.Serialization.XmlSerializer> seçilir.  
   

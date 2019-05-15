@@ -2,15 +2,15 @@
 title: Ad alanları (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 83991c21-60db-4af9-aca3-b416f6cae98e
-ms.openlocfilehash: bef2fa96ce090a600155d68ecc3daea55b675840
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7bcd7a72df8afbd598a15ccd9a259ed11b5b9ef7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760447"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583815"
 ---
 # <a name="namespaces-entity-sql"></a>Ad alanları (varlık SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] Tür adları, varlık kümelerini, İşlevler ve benzeri gibi genel tanımlayıcı ad çakışmalarını önlemek için ad alanları tanıtır. Ad alanı desteği [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ad alanı desteği benzer [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] Tür adları, varlık kümelerini, İşlevler ve benzeri gibi genel tanımlayıcı ad çakışmalarını önlemek için ad alanları tanıtır. Ad alanı desteği [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ad alanı .NET Framework desteği benzer.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] İki form USING yan tümcesinin sağlar: tam ad alanları (burada daha kısa bir diğer ad sağlanan ad alanı için) ve nitelenmemiş ad alanları, aşağıdaki örnekte gösterildiği gibi:  
   
@@ -30,7 +30,7 @@ WHERE p IS OF (NamespaceName.Employee)
 ```  
   
 ## <a name="differences-from-the-net-framework"></a>.NET Framework arasındaki farklar  
- İçinde [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)], kısmen nitelenmiş ad alanları kullanabilirsiniz. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Bu izin vermez.  
+ .NET Framework'de kısmen nitelenmiş ad alanları kullanabilirsiniz. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Bu izin vermez.  
   
 ## <a name="adonet-usage"></a>ADO.NET kullanımı  
  Sorgular ADO.NET ifade <xref:System.Data.Common.DbCommand> nesneleri. <xref:System.Data.Common.DbCommand> nesneler üzerinde oluşturulabilir <xref:System.Data.Common.DbConnection> nesneleri. Ad alanları bir parçası olarak da belirtilebilir <xref:System.Data.Common.DbCommand> ve <xref:System.Data.Common.DbConnection> nesneleri. Varsa [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir tanımlayıcısı çözümlenemiyor sorgunun kendisi içinde dış ad alanları (benzer kurallar temelinde) araştırıldığı.  

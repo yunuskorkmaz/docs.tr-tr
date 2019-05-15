@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: 82d75559260292476d81e4440280efb46bfd86c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7adbf9a98b25b237ee49d2689154e903d8fc0b5a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613017"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586179"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Nasıl yapılır: TableLayoutPanel Denetiminde Alt Denetimleri Sabitleme ve Yerleştirme
 <xref:System.Windows.Forms.TableLayoutPanel> Denetim destekler <xref:System.Windows.Forms.Control.Anchor%2A> ve <xref:System.Windows.Forms.Control.Dock%2A> kendi alt denetimlerindeki özellikler.  
@@ -81,8 +81,6 @@ ms.locfileid: "64613017"
  Bu örnek gerektirir:  
   
 - Sistem, System.Data System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
-  
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

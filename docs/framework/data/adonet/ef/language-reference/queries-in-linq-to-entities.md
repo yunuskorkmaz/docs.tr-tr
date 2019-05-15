@@ -2,12 +2,12 @@
 title: LINQ to Entities Sorguları
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: d9aeb90fa62b859c45094c28ca72ae5b4b48db5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e8a3ce26c25bf8350460844110470d3a167c70ce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641496"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584616"
 ---
 # <a name="queries-in-linq-to-entities"></a>LINQ to Entities Sorguları
 Bir sorgu, verileri bir veri kaynağından alır bir ifadedir. Sorgular genellikle ilişkisel veritabanları için SQL ve XML için XQuery gibi bir özel sorgu dilinde ifade edilir. Bu nedenle, geliştiriciler, her veri kaynağı veya veri biçimi, bunlar sorgu türü için yeni bir sorgu dili öğrenmek zorunda kalmışlardır. Dil ile tümleşik sorgu (LINQ), çeşitli veri kaynakları ve biçimler arasında verilerle çalışmak için daha basit ve tutarlı bir modeli sunar. Bir LINQ Sorgu her zaman nesneleri programlama ile çalışırsınız.  
@@ -19,7 +19,7 @@ Bir sorgu, verileri bir veri kaynağından alır bir ifadedir. Sorgular genellik
  Sorgu, veri kaynağından almak istediğiniz bilgi tam olarak belirtin. Bir sorgu, ayrıca nasıl bu bilgileri sıralanmış, gruplandırılmış ve döndürülmeden önce şeklinde belirtebilirsiniz. LINQ içinde bir sorgu bir değişkende depolanır. Sorgu değerler döndürürse, sorgu değişkeni sorgulanabilir tür olmalıdır. Bu sorgu değişkeni hiç eylem almaması ve veri döndürmemesidir; yalnızca, sorgu bilgileri depolar. Bir sorguyu oluşturduktan sonra herhangi bir veri almak için bu sorguyu yürütmeniz gerekir.  
   
 ## <a name="query-syntax"></a>Sorgu söz dizimi  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular iki farklı sözdizimini oluşan: sorgu ifadesi söz dizimi ve metot tabanlı sorgu söz dizimi. Sorgu ifadesi söz dizimi, C# 3.0 ve Visual Basic 9.0 yenidir ve yan tümceleri Transact-SQL veya XQuery benzer bir bildirim temelli söz yazılan bir dizi oluşur. Ancak, [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] ortak dil çalışma zamanı (CLR), sorgu ifade sözdizimi kendisini okuyamıyor. Bu nedenle, derleme zamanında sorgu ifadeleri CLR anlayan bir şey için çevrilmiş: yöntemi çağırır. Bu yöntemleri olarak bilinen *standart sorgu işleçleri*. Bir geliştirici olarak, doğrudan sorgu söz dizimi yerine yöntem sözdizimi kullanarak çağırma seçeneğiniz vardır. Daha fazla bilgi için [sorgu sözdizimi ve yöntem sözdizimi LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
+ [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular iki farklı sözdizimini oluşan: sorgu ifadesi söz dizimi ve metot tabanlı sorgu söz dizimi. Sorgu ifadesi söz dizimi, C# 3.0 ve Visual Basic 9.0 yenidir ve yan tümceleri Transact-SQL veya XQuery benzer bir bildirim temelli söz yazılan bir dizi oluşur. Ancak, .NET Framework ortak dil çalışma zamanı (CLR) sorgu ifade sözdizimi kendisini okunamıyor. Bu nedenle, derleme zamanında sorgu ifadeleri CLR anlayan bir şey için çevrilmiş: yöntemi çağırır. Bu yöntemleri olarak bilinen *standart sorgu işleçleri*. Bir geliştirici olarak, doğrudan sorgu söz dizimi yerine yöntem sözdizimi kullanarak çağırma seçeneğiniz vardır. Daha fazla bilgi için [sorgu sözdizimi ve yöntem sözdizimi LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ### <a name="query-expression-syntax"></a>Sorgu ifadesi söz dizimi  
  Sorgu ifadeleri bir bildirim temelli bir sorgu söz dizimi var. Sorgular, Transact-SQL'e benzer biçimlendirilmiş üst düzey bir dilde yazmak bir geliştirici bu söz dizimi sağlar. Sorgu ifadesi söz dizimi kullanarak daha karmaşık filtreleme, sıralama ve gruplandırma işlemleri olabildiğince az kodla veri kaynaklarında gerçekleştirebilirsiniz. Daha fazla bilgi için [temel sorgu işlemleri (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md). Sorgu ifadesi söz dizimi kullanmayı gösteren örnekler için aşağıdaki konulara bakın:  

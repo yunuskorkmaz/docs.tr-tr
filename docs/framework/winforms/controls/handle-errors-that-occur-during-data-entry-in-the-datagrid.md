@@ -11,12 +11,12 @@ helpviewer_keywords:
 - data entry [Windows Forms], error handling
 - error handling [Windows Forms], data entry
 ms.assetid: 9004e72f-fdec-4264-a37d-2c99764efc13
-ms.openlocfilehash: 07c8cb2e3440d56ddf9f9baca11b658bf4f04394
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6297eaea93caea5d19af9740d2b5a1066507ff15
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624187"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592064"
 ---
 # <a name="how-to-handle-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetimine Veri Girişi Sırasında Oluşan Hataları Ele Alma
 Aşağıdaki kod örneğinde nasıl kullanılacağını gösterir <xref:System.Windows.Forms.DataGridView> rapor veri girişi sırasında oluşan hataları kullanıcı denetimi.  
@@ -31,8 +31,6 @@ Aşağıdaki kod örneğinde nasıl kullanılacağını gösterir <xref:System.W
  Bu örnek gerektirir:  
   
 - Sistem, System.Data, System.Windows.Forms ve System.XML derlemesine ilişkin başvurular.  
-  
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Depolama bağlantı dizesi içinde bir parola gibi hassas bilgileri, uygulamanızın güvenliğini etkileyebilir. Windows Kimlik Doğrulaması (tümleşik güvenlik olarak da bilinir) kullanılarak bir veritabanına erişimi denetlemek için daha güvenli bir yoldur. Daha fazla bilgi için [bağlantı bilgilerini koruma](../../data/adonet/protecting-connection-information.md).  

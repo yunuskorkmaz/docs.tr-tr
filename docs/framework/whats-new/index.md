@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dec3cea200f388a904296542776a02d838b3e19
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 0c4a4ba28116965db1d4dfdef3cdfb0496aad123
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063861"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557933"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework'teki yenilikler
 
@@ -115,6 +115,17 @@ Sistem durumu uç noktasını ortaya çıkarır ve WCF hizmet durumu bilgilerini
      healthBehavior = new ServiceHealthBehavior();
   }
    host.Description.Behaviors.Add(healthBehavior);
+  ```
+
+  ```vb
+  Dim host As New ServiceHost(GetType(Service1),
+              New Uri("http://contoso:81/Service1"))
+  Dim healthBehavior As ServiceHealthBehavior = 
+     host.Description.Behaviors.Find(Of ServiceHealthBehavior)()
+  If healthBehavior Is Nothing Then
+     healthBehavior = New ServiceHealthBehavior()
+  End If
+  host.Description.Behaviors.Add(healthBehavior) 
   ```
 
 - Bir yapılandırma dosyası kullanarak. Örneğin:
@@ -551,6 +562,15 @@ public class StaticResourceResolvedEventArgs : EventArgs
 }
 ```
 
+```vb
+Public Class StaticResourceResolvedEvcentArgs : Inherits EventArgs
+   Public ReadOnly Property TargetObject As Object
+   Public ReadOnly Property TargetProperty As Object
+   Public ReadOnly Property ResourceDictionary As ResourceDictionary
+   Public ReadOnly Property ResourceKey As Object
+End Class
+```
+
 Olayı değil oluşturulur (ve kendi `add` erişimci göz ardı edilir) sürece <xref:System.Windows.Diagnostics.VisualDiagnostics> etkinleştirilir ve [ `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` ](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A)  ortam değişkeninin ayarlı.
 
 #### <a name="clickonce"></a>ClickOnce
@@ -840,6 +860,13 @@ public interface ISessionStateModule : IHttpModule {
     void ReleaseSessionState(HttpContext context);
     Task ReleaseSessionStateAsync(HttpContext context);
 }
+```
+
+```vb
+Public Interface ISessionStateModule : Inherits IHttpModule
+   Sub ReleaseSessionState(context As HttpContext)
+   Function ReleaseSessionStateAsync(context As HttpContext) As Task
+End Interface
 ```
 
  Ayrıca, <xref:System.Web.SessionState.SessionStateUtility> sınıfı içeren iki yeni yöntem <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly%2A> ve <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired%2A>, zaman uyumsuz işlemleri desteklemek için kullanılabilir.
@@ -1515,6 +1542,10 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
         AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", true);
         ```
 
+        ```vb
+        AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", True)
+        ```
+
          Bir tüketici anahtarı değeri belirtmiş ve uygun şekilde hareket üzerinde sonra kitaplık denetlemeniz gerekir.
 
         ```csharp
@@ -1526,15 +1557,31 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
            // A false value implies the latest behavior.
         }
 
-           // The library can use the value of shouldThrow to throw exceptions or not.
-           if (shouldThrow)
-           {
-              // old code
-           }
-           else {
-              // new code
-           }
+        // The library can use the value of shouldThrow to throw exceptions or not.
+        if (shouldThrow)
+        {
+           // old code
         }
+        else 
+        {
+           // new code
+        }
+        ```
+
+        ```vb
+        If Not AppContext.TryGetSwitch("Switch.AmazingLib.ThrowOnException", shouldThrow) Then
+           ' This is the case where the switch value was not set by the application.
+           ' The library can choose to get the value of shouldThrow by other means.
+           ' If no overrides nor default values are specified, the value should be 'false'.
+           ' A false value implies the latest behavior.
+        End If
+
+        ' The library can use the value of shouldThrow to throw exceptions or not.
+        If shouldThrow Then
+           ' old code
+        Else 
+           ' new code
+        End If
         ```
 
          Bir kitaplığı tarafından kullanıma sunulan resmi bir sözleşme olduğundan anahtarlar için tutarlı bir biçim kullanmak yararlıdır. İki belirgin biçimler şunlardır:
@@ -1781,6 +1828,14 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
                                               IPromotableSinglePhaseNotification promotableNotification,
                                               ISinglePhaseNotification enlistmentNotification,
                                               EnlistmentOptions enlistmentOptions)
+    ```
+
+    ```vb
+    <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name:="FullTrust")>
+    public Function PromoteAndEnlistDurable(GresourceManagerIdentifier As Guid,
+                                            promotableNotification As IPromotableSinglePhaseNotification,
+                                            enlistmentNotification As ISinglePhaseNotification,
+                                            enlistmentOptions As EnlistmentOptions) As Enlistment
     ```
 
      Yöntemi tarafından önceden oluşturulmuş bir liste tarafından kullanılabilir <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> yanıt olarak <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> yöntemi. Bunu ister `System.Transactions` işlem için bir MSDTC işlem yükseltmek ve "kalıcı bir liste promotable liste dönüştürmek için". Bu yöntem başarıyla tamamlandıktan sonra <xref:System.Transactions.IPromotableSinglePhaseNotification> arabirimi artık başvuru tarafından `System.Transactions`, ve gelecekteki tüm bildirimleri sağlanan ulaşır <xref:System.Transactions.ISinglePhaseNotification> arabirimi. Söz konusu liste, işlem günlüğü ve kurtarma destekleyen bir kalıcı liste davranmalıdır. Başvurmak <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType> Ayrıntılar için. Ayrıca, liste desteklemelidir <xref:System.Transactions.ISinglePhaseNotification>.  Bu yöntem için *yalnızca* işlenirken çağrılabilir bir <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> çağırın. Bu durumda değilse bir <xref:System.Transactions.TransactionException> özel durumu oluşturulur.

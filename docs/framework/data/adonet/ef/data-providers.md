@@ -2,22 +2,22 @@
 title: Entity Framework Veri Sağlayıcıları
 ms.date: 03/30/2017
 ms.assetid: 5252e639-ff11-4818-82e7-07221ed6ae23
-ms.openlocfilehash: 897afcd606a9b9b6c3b316d03dd5cb8e2adedbc0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c81508324da6040754cc64c6456420d59fe40512
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606750"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584600"
 ---
 # <a name="entity-framework-data-providers"></a>Entity Framework Veri Sağlayıcıları
 Bu bölümde destekleyen veri sağlayıcıları bilgi [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Entity Framework için EntityClient Sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)  
- EntityClient veri sağlayıcısını açıklar. Bu sağlayıcı kurallı komut ağacına bir veri modeline karşı sorgular dönüştürür. Komut ağacı ardından tarafından tüketilebilecek bir [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] için veri sağlayıcısı [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+ EntityClient veri sağlayıcısını açıklar. Bu sağlayıcı kurallı komut ağacına bir veri modeline karşı sorgular dönüştürür. Komut ağacı sonra bir .NET Framework veri sağlayıcısı tarafından tüketilebilecek [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
  [Entity Framework için SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
- Açıklar [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] destekleyen veri sağlayıcısı [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] bir SQL Server veritabanı ile kullanmak için.  
+ Destekleyen .NET Framework veri sağlayıcısını açıklar [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] bir SQL Server veritabanı ile kullanmak için.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Entity Framework (SQL Server Compact)](https://go.microsoft.com/fwlink/?LinkId=135638)  

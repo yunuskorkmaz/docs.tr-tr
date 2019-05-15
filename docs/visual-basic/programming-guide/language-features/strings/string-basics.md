@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 9d2d3c82f5512bc1e37e3b05086fbd364ee12298
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f1f6b98d7db510373f2729fab2a6e0ad993ea086
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938339"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591387"
 ---
 # <a name="string-basics-in-visual-basic"></a>Visual Basic'de Dize Temelleri
 `String` Veri türünü temsil eden bir karakter dizisi (her sırayla örneğini temsil eden `Char` veri türü). Bu konu Visual Basic'de dizeleri temel kavramları tanıtır.  
@@ -50,7 +50,7 @@ World]]></xml>.Value
 ```  
   
 ## <a name="characters-in-strings"></a>Dizelerdeki karakterleri  
- Bir dize, bir dizi olarak düşünülebilir `Char` değerleri ve `String` türü diziler tarafından izin verilen işlemeleri benzer bir dizesine birçok işlemeleri gerçekleştirme olanak tanıyan yerleşik işlevleri vardır. İçindeki tüm dizi gibi [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], sıfır tabanlı diziler şunlardır. Bir dize içinde belirli bir karakter bakabilirsiniz `Chars` özelliği bir karakter dizesi içinde göründüğü konumu erişmek için bir yol sağlar. Örneğin:  
+ Bir dize, bir dizi olarak düşünülebilir `Char` değerleri ve `String` türü diziler tarafından izin verilen işlemeleri benzer bir dizesine birçok işlemeleri gerçekleştirme olanak tanıyan yerleşik işlevleri vardır. .NET Framework'teki tüm dizi gibi sıfır tabanlı diziler şunlardır. Bir dize içinde belirli bir karakter bakabilirsiniz `Chars` özelliği bir karakter dizesi içinde göründüğü konumu erişmek için bir yol sağlar. Örneğin:  
   
  [!code-vb[VbVbalrStrings#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#67)]  
   

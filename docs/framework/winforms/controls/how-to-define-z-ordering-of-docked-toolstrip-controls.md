@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], specifying z-order
 - z-order
 ms.assetid: 8b595429-ba9f-46af-9c55-3d5cc53f7fff
-ms.openlocfilehash: b7643c9599ceeba08cbe9f5580739043f6d89edc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 514c9dd1c91adcadf6f5d383ba734886dec3151d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666332"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591911"
 ---
 # <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>Nasıl yapılır: Yerleştirilmiş ToolStrip Denetimlerinin Z Sıralamasını Tanımlama
 Konumuna bir <xref:System.Windows.Forms.ToolStrip> denetimi doğru şekilde yerleştirme ile denetim doğru formun z düzeninde hizalamanız gerekir.  
@@ -39,8 +39,6 @@ Konumuna bir <xref:System.Windows.Forms.ToolStrip> denetimi doğru şekilde yerl
  Bu örnek gerektirir:  
   
 - System.Windows.Forms System.Design ve System.Drawing derlemelerine başvurular.  
-  
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 94faeebb-d2bc-45d6-86d7-96a42661b43d
-ms.openlocfilehash: 93cf9844a1c5b9d6eb052c94c2309cbff1f4ad56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ab088e3f34f3f03be2073864a440006259fe5679
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612383"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591336"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>Nasıl yapılır: Windows Forms Denetimini Bir Türe Bağlama
 Verilerle etkileşimde bulunmak denetimleri oluştururken, bazı durumlarda, bir nesne yerine bir tür bir denetimin bağlanması gerekli bulacaksınız. Bu durum, ne zaman veri kullanılamıyor olabilir, ancak bir türün ortak arabirim bilgilerini görüntülemek, verilere bağlı denetimler hala gerekir özellikle, tasarım zamanında ortaya çıkar. Örneğin, bağlama bir <xref:System.Windows.Forms.DataGridView> denetlemek için bir Web hizmeti tarafından kullanıma sunulan bir nesne ve istediğiniz <xref:System.Windows.Forms.DataGridView> sütunlarını tasarım zamanında bir özel tür adlarını üyesiyle etiket denetimi.  
@@ -31,8 +31,6 @@ Verilerle etkileşimde bulunmak denetimleri oluştururken, bazı durumlarda, bir
  Bu örnek gerektirir:  
   
 - Sistem ve System.Windows.Forms öğelerini derlemelerine başvurular.  
-  
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

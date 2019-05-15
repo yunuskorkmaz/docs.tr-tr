@@ -2,15 +2,15 @@
 title: JSON Seri Hale Getirme
 ms.date: 03/30/2017
 ms.assetid: 3c2c4747-7510-4bdf-b4fe-64f98428ef4a
-ms.openlocfilehash: bb38005c02e9b3e850282d2a81c2e17143657025
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c44dd71c3903e5c4d3d37b89881896c65c664262
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989865"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591871"
 ---
 # <a name="json-serialization"></a>JSON Seri Hale Getirme
-Bu örnek nasıl kullanılacağını gösterir <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> JavaScript nesne gösterimi (JSON) biçimindeki verileri seri hale getrime ve için. Bu serileştirme motoruna JSON verilerini örneğine dönüştürür [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türler ve JSON verilerini içine geri. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> aynı türlerini destekleyen <xref:System.Runtime.Serialization.DataContractSerializer>. JSON veri biçimi zaman uyumsuz JavaScript ve XML (AJAX) yazma sırasında özellikle yararlı olur-Web uygulamaları stili. AJAX desteği Windows Communication Foundation (WCF) ScriptManager denetimi aracılığıyla ASP.NET AJAX ile kullanım için optimize edilmiştir. ASP.NET AJAX ile Windows Communication Foundation (WCF) kullanma örnekleri için bkz: [AJAX örnekleri](ajax.md).  
+Bu örnek nasıl kullanılacağını gösterir <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> JavaScript nesne gösterimi (JSON) biçimindeki verileri seri hale getrime ve için. Bu seri hale getirme altyapısı, .NET Framework türleri örneklerini ve geri JSON verilerini JSON verileri dönüştürür. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> aynı türlerini destekleyen <xref:System.Runtime.Serialization.DataContractSerializer>. JSON veri biçimi zaman uyumsuz JavaScript ve XML (AJAX) yazma sırasında özellikle yararlı olur-Web uygulamaları stili. AJAX desteği Windows Communication Foundation (WCF) ScriptManager denetimi aracılığıyla ASP.NET AJAX ile kullanım için optimize edilmiştir. ASP.NET AJAX ile Windows Communication Foundation (WCF) kullanma örnekleri için bkz: [AJAX örnekleri](ajax.md).  
   
 > [!NOTE]
 >  Bu örnek için Kurulum yordamı ve derleme yönergeleri Bu konunun sonunda yer alır.  

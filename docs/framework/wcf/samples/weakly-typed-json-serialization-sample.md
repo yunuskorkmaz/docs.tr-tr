@@ -2,12 +2,12 @@
 title: Zayıf yazılmış JSON Seri Hale Getirme Örneği
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9be679b26e395e8fed0938567184a2e5d4a8f07
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006362"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589218"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Zayıf yazılmış JSON Seri Hale Getirme Örneği
 Verilen kablo biçimini veya kablo biçimini geri bir kullanıcı tanımlı türe seri durumdan çıkarılırken bir kullanıcı tanımlı türe serileştirilirken verilen kullanıcı tanımlı tür hem hizmet hem de istemcinin kullanılabilir olması gerekir. Genellikle bunu gerçekleştirmek için <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği, bu kullanıcı tarafından tanımlanan türlerine uygulandığında ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelik üyeleri için uygulanır. Bu mekanizma da JavaScript nesne gösterimi (JSON) nesneler ile çalışma konusunda açıklandığı gibi uygulanır [nasıl yapılır: JSON verileri seri hale getrime ve](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
@@ -58,7 +58,7 @@ Verilen kablo biçimini veya kablo biçimini geri bir kullanıcı tanımlı tür
   
  Bu, özellikle istemcinin JSON nesnesinin birden fazla türünü işleyecek şekilde olduğunda hantal olabilir.  
   
- `JsonObject` Bu örnek tarafından sağlanan türü seri durumdan çıkarılmış JSON nesnesi zayıf yazılmış bir gösterimini sunar. `JsonObject` JSON nesneleri arasındaki doğal eşleme kullanır ve [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sözlükleri ve JSON dizileri arasında eşleme ve [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dizileri. Aşağıdaki kodda gösterildiği `JsonObject` türü.  
+ `JsonObject` Bu örnek tarafından sağlanan türü seri durumdan çıkarılmış JSON nesnesi zayıf yazılmış bir gösterimini sunar. `JsonObject` JSON nesneleri ve .NET Framework sözlüklerinde doğal eşlemesini ve JSON dizileri ve .NET Framework diziler arasındaki eşlemeyi kullanır. Aşağıdaki kodda gösterildiği `JsonObject` türü.  
   
 ```  
 // Instantiation of JsonObject json omitted  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 05e61a33005cd0458c5bcdde758f3b1a9cc3869c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 429e019d87800c9487f73ebf37c4d7870835b323
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637261"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591941"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Temel Windows Communication Foundation Kavramları
 Bu belge, Windows Communication Foundation (WCF) mimarisinin üst düzey bir görünümünü sağlar. Temel kavramları ve bunların birbirine nasıl uyduğunu açıklamak için tasarlanmıştır. Basit bir WCF hizmeti ve istemci sürümü oluşturmaya ilişkin öğretici için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md). WCF programlama bilgi edinmek için [temel WCF programlama](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -126,7 +126,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Bir bağlama öğesi, somut bir uygulama. Bağlama yapılandırmasını temsil eder ve bu yapılandırma ile ilişkili uygulama kanalıdır. Bu nedenle, her bir bağlama öğesi ile ilişkili bir kanal yoktur. Kanal bağlama somut uygulaması oluşturmak için birbirinin yığın: kanal yığını.  
   
  WCF istemcisi  
- Yöntemler olarak hizmet işlemini kullanıma sunar bir istemci uygulaması yapısı (içinde [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Visual Basic veya Visual C# gibi tercih ettiğiniz dil programlama). Herhangi bir uygulama, bir hizmeti barındıran bir uygulama da dahil olmak üzere bir WCF istemcisi barındırabilirsiniz. Bu nedenle, başka bir hizmetler WCF istemcileri içeren bir hizmet oluşturmak mümkündür.  
+ Yöntemler olarak hizmet işlemini kullanıma sunar bir istemci uygulaması yapısı (Visual Basic veya Visual gibi tercih ettiğiniz dil programlama .NET Framework'teki C#). Herhangi bir uygulama, bir hizmeti barındıran bir uygulama da dahil olmak üzere bir WCF istemcisi barındırabilirsiniz. Bu nedenle, başka bir hizmetler WCF istemcileri içeren bir hizmet oluşturmak mümkündür.  
   
  Bir WCF istemcisi kullanarak otomatik olarak oluşturulabilir [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ve meta verilerini yayımlayan bir çalışan hizmeti işaret.  
   

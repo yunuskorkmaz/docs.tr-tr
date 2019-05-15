@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 894895331c2444a8e52a09e3de9d5a47daa87e5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cc7a0991ae308f1c61026e946021d22da9a4bc3b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644167"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583546"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework Geliştirme Kılavuzu
 Bu bölümde, oluşturma, yapılandırma, hata ayıklama, güvenli ve .NET Framework uygulamalarınızı dağıtma açıklanmaktadır. Bölüm ayrıca dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek yönetimi ve iş parçacığı gibi teknoloji alanları hakkında bilgi sağlar.  
@@ -67,7 +67,7 @@ Bu bölümde, oluşturma, yapılandırma, hata ayıklama, güvenli ve .NET Frame
  
 ## <a name="reference"></a>Başvuru  
  [.NET framework sınıf kitaplığı](/dotnet/api/?view=netframework-4.7)  
- Sözdizimi, kod örnekleri ve kullanım bilgilerini bulunan her sınıf için sağladığı [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ad alanları.  
+ Sözdizimi, kod örnekleri ve .NET Framework isim uzaylarında bulunan her sınıf için kullanım bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Başlarken](../../docs/framework/get-started/index.md)  

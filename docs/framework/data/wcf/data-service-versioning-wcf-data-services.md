@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: 283d3a0a0350823be8c0680dd24e04999b040363
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fd3be8a60048b10bbd94ac5b3bfadaee954943ef
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641124"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583590"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Veri Hizmeti sürümü oluşturma (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Veri Hizmetleri oluşturun, böylece istemciler URI'lerini kullanarak kaynakları, bir veri modelini temel olarak veri erişim sağlar. OData hizmet işlemleri tanımı da destekler. İlk dağıtım ve potansiyel olarak kendi ömürlerine sırasında birkaç kez sonra çeşitli iş gereksinimlerini, bilgi teknolojisi gereksinimlerini değiştirme gibi nedenlerle, değiştirilecek veya diğer sorunları gidermek için şu veri hizmetlerini gerekebilir. Mevcut bir veri hizmetine değişiklik yaptığınızda olup verilerinizi yeni bir sürümü tanımlamak dikkate almanız gereken hizmet ve istemci uygulamalarınız üzerindeki etkiyi en aza indirmek en iyi nasıl. Bu konu, ne zaman ve nasıl bir veri hizmeti, yeni bir sürümünü oluşturmak yönergeler sağlar. WCF Veri Hizmetleri bir exchange istemcileri ve farklı sürümlerini OData protokolünü destekleyen veri hizmetleri arasında nasıl işlediğini açıklar.
@@ -60,7 +60,7 @@ ms.locfileid: "64641124"
 
  Bir uygulama bir veri hizmetine erişmek için WCF Veri Hizmetleri istemci kitaplıkları kullandığında, kitaplıkları otomatik olarak bu üstbilgileri OData ve uygulamanızda kullanılan özelliklere sürümüne bağlı olarak doğru değerleri ayarlayın. Varsayılan olarak, WCF Veri Hizmetleri istenen işlem destekleyen en düşük protokol sürümü kullanır.
 
- Aşağıdaki tabloda sürümleri ayrıntıları [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ve [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] WCF Veri Hizmetleri OData protokolünü belirli sürümlerini desteği içerir.
+ .NET Framework sürümleri aşağıdaki tabloda Ayrıntılar ve [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] WCF Veri Hizmetleri OData protokolünü belirli sürümlerini desteği içerir.
 
 |OData protokolü sürümü|Sunulan destek...|
 |-----------------------------------------------------------------------------------|----------------------------|

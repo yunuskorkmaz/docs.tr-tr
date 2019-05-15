@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 883eb60197b79e0ddebf5e48438c81e29f609549
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19f1cc3708d2d552da3d94bc6b490ebaa2ece657
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591704"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586158"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Nasıl yapılır: Dinamik Yöntemleri Tanımlama ve Yürütme
 Aşağıdaki yordamlar tanımlama ve basit bir dinamik yöntem ve bir sınıfın bir örneğine bağlı olarak dinamik bir yöntem yürütme işlemini göstermektedir. Dinamik yöntemler hakkında daha fazla bilgi için bkz. <xref:System.Reflection.Emit.DynamicMethod> sınıfı ve [yansıma yayma dinamik yöntem senaryoları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
@@ -113,14 +113,6 @@ Aşağıdaki yordamlar tanımlama ve basit bir dinamik yöntem ve bir sınıfın
  [!code-cpp[DynamicMethodHowTo#1](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#1)]
  [!code-csharp[DynamicMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#1)]
  [!code-vb[DynamicMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#1)]  
-  
-## <a name="compiling-the-code"></a>Kod Derleniyor  
-  
-- C# kodu içeren `using` deyimleri (`Imports` Visual Basic'te) derleme için gerekli.  
-  
-- Hiçbir ek derleme başvurularını gereklidir.  
-  
-- Csc.exe, vbc.exe veya cl.exe kullanarak komut satırındaki kodu derleyin. Visual Studio'da Kodu derlemek için bir konsol uygulaması projesi şablonu içine koyun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

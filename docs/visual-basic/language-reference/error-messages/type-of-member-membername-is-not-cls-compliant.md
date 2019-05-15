@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: 03962a3004b975dec86099307346aa5cc8829020
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6f66617774dccff4450cce42904126acf5c3769
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664281"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590677"
 ---
 # <a name="type-of-member-membername-is-not-cls-compliant"></a>Üye türü '\<membername >' CLS uyumlu değil
-Bu üye olmadığı için belirtilen veri türü parçası [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS). Bu, bileşen içinde bir hata olmadığından [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ve Visual Basic desteği bu veri türü. Ancak, başka bir bileşen kesinlikle CLS uyumlu bir kod halinde yazılmış bu veri türünü desteklemiyor olabilir. Böyle bir bileşene başarıyla bileşeniniz ile etkileşim kurmak mümkün olmayabilir.  
+Bu üye olmadığı için belirtilen veri türü parçası [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS). Bu veri türü .NET Framework ve Visual Basic desteklediğinden, bir hata, bileşen içinde değil. Ancak, başka bir bileşen kesinlikle CLS uyumlu bir kod halinde yazılmış bu veri türünü desteklemiyor olabilir. Böyle bir bileşene başarıyla bileşeniniz ile etkileşim kurmak mümkün olmayabilir.  
   
  Aşağıdaki Visual Basic veri türleri CLS uyumlu değildir:  
   
@@ -33,13 +33,13 @@ Bu üye olmadığı için belirtilen veri türü parçası [dil bağımsızlığ
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Bileşeniniz yalnızca diğer arabirimleri varsa [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] bileşenler veya yoksa diğer bileşenlerle arabirimi değil, herhangi bir ayarı değiştirmek gerekmez.  
+- Bileşeniniz yalnızca diğer .NET Framework bileşenlerini arabirimleri ya da diğer bileşenlerle arabirimi değil, herhangi bir ayarı değiştirmek gerekmez.  
   
-- Bir bileşen için yazılmış değil ile arabirim, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]belgelerinden destekleyip bu veri türü veya belirlemek her iki ile yansıma mümkün olabilir. Aşması durumunda, değişikliği gerekmez.  
+- .NET Framework için yazılmaz bir bileşeni ile arabirim, bu veri türünü destekleyip desteklemediğini, yansıma aracılığıyla ya da belge, belirlemek mümkün olabilir. Aşması durumunda, değişikliği gerekmez.  
   
 - Bu veri türü desteklemeyen bir bileşen ile arabirim, en yakın CLS uyumlu türü ile değiştirmeniz gerekir. Örneğin, içinde yerine, `UInteger` kullanmanız mümkün olabilir `Integer` 2.147.483.647 yukarıda değer aralığı gerekmiyorsa. Genişletilmiş aralık gerekiyorsa, değiştirebileceğiniz `UInteger` ile `Long`.  
   
-- Otomasyon ve COM nesneleri ile arabirim, bazı türleri farklı veri genişliği kıyasla olduğunu aklınızda bulundurun [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Örneğin, `uint` 16 bit diğer ortamlarda genellikle olur. Bir 16 bit bağımsız değişkeni böyle bir bileşene geçiriyorsanız, olarak bildirin `UShort` yerine `UInteger` Yönetilen Visual Basic kodunuzda.  
+- Otomasyon ve COM nesneleri ile arabirim, .NET Framework'teki bazı türleri değerinden farklı veri genişliği olduğunu aklınızda bulundurun. Örneğin, `uint` 16 bit diğer ortamlarda genellikle olur. Bir 16 bit bağımsız değişkeni böyle bir bileşene geçiriyorsanız, olarak bildirin `UShort` yerine `UInteger` Yönetilen Visual Basic kodunuzda.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

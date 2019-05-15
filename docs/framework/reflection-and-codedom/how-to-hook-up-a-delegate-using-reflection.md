@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bc4b4df6829f5b86dff400c5cd7cbd3d86f5507
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a4640e776cc76ef56227858f6a4aa04e77ecbbdc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591540"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586009"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Nasıl yapılır: Yansıma Kullanarak Temsilci Bağlama
 Yansıma yüklemek ve derlemeleri çalıştırmak için kullandığınız zaman gibi dil özellikleri kullanamazsınız C# `+=` işleci veya Visual Basic [AddHandler deyimi](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) olayları yeteneklerinizi. Aşağıdaki yordamlar, gerekli tüm türlerin yansıma yoluyla alarak bir olay için varolan bir yöntem denetime nasıl gösterir ve yansıma kullanarak dinamik bir yöntem oluşturma yayma ve en fazla olay bağlama.  
@@ -104,14 +104,6 @@ Yansıma yüklemek ve derlemeleri çalıştırmak için kullandığınız zaman 
  [!code-cpp[HookUpDelegate#1](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#1)]
  [!code-csharp[HookUpDelegate#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#1)]
  [!code-vb[HookUpDelegate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#1)]  
-  
-## <a name="compiling-the-code"></a>Kod Derleniyor  
-  
-- C# kodu içeren `using` deyimleri (`Imports` Visual Basic'te) derleme için gerekli.  
-  
-- Hiçbir ek derleme başvuruları, komut satırından derleme için gereklidir. Bu örnek bir konsol uygulaması olduğundan, Visual Studio'da System.Windows.Forms.dll'e bir başvuru eklemelisiniz.  
-  
-- Csc.exe, vbc.exe veya cl.exe kullanarak komut satırındaki kodu derleyin. Visual Studio'da Kodu derlemek için bir konsol uygulaması projesi şablonu içine koyun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94ac21dfdf58e8aa1b629604792ad2f0f57c60d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 50750b23af9e9cfca79b0f7db9d272e8e24971ab
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650420"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591407"
 ---
 # <a name="creating-new-strings-in-net"></a>. NET'te yeni dizeler oluşturma
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Basit atama kullanılarak oluşturulması dizeleri sağlar ve ayrıca çok sayıda farklı parametreler kullanarak dize oluşturma desteklemek için bir sınıf oluşturucu aşırı yüklemeleri. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Ayrıca, çeşitli yöntemler sunar <xref:System.String?displayProperty=nameWithType> yeni dize Oluştur sınıfı nesnelerini bir araya getirerek birkaç dizeleri, dize, veya nesneleri.  
+.NET Framework kullanarak basit atama oluşturulacak dizeleri sağlar ve ayrıca çok sayıda farklı parametreler kullanarak dize oluşturma desteklemek için bir sınıf oluşturucusu aşırı. .NET Framework içindeki çeşitli yöntemler de sağlar. <xref:System.String?displayProperty=nameWithType> yeni dize Oluştur sınıfı nesnelerini bir araya getirerek birkaç dizeleri, dize, veya nesneleri.  
   
 ## <a name="creating-strings-using-assignment"></a>Atama kullanarak dize oluşturma  
  Yeni bir oluşturmanın en kolay yolu <xref:System.String> nesnedir yalnızca bir dize sabit atamak için bir <xref:System.String> nesne.  

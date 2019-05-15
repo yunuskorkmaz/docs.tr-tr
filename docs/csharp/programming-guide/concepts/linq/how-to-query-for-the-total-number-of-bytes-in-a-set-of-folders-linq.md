@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Sorgu (LINQ) klasör kümesi bayt toplam sayısı (C#)'
 ms.date: 07/20/2015
 ms.assetid: a01bd1d4-133c-4ca2-aa4e-e93e81d6076c
-ms.openlocfilehash: 52f428bcf427065b80e91c4d299c5d8fd9f32972
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04eed82041dc3c0818b0205f5198abe6e9eb228e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667814"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585683"
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>Nasıl yapılır: Sorgu (LINQ) klasör kümesi bayt toplam sayısı (C#)
 Bu örnek belirtilen bir klasördeki tüm dosyaları ve tüm alt klasörleri tarafından kullanılan bayt toplam sayısını almak nasıl gösterir.  
@@ -74,7 +74,7 @@ class QuerySize
  Sorgu dosya uzunluğu elde etmek için ayrı bir yöntemi için çağırır. Dosya başka bir iş parçacığında sonra silinmişse, oluşturulur ve olası özel kullanmak için bunu yapar <xref:System.IO.FileInfo> nesne oluşturulduğu çağrısında `GetFiles`. Olsa bile <xref:System.IO.FileInfo> nesnesi zaten oluşturuldu, özel durum ortaya çıkabilir çünkü bir <xref:System.IO.FileInfo> nesne yenilemek çalışır, <xref:System.IO.FileInfo.Length%2A> özelliği ile erişilen özelliği ilk kez en güncel uzunluğu. Bir try-catch bloğunda sorgu dışında bu işlemi koyarak kod yan etkilere neden olabilecek sorguları işlemlerinde önleme kuralı izler. Genel olarak, bir uygulama bilinmeyen bir durumda kaldı değil emin olmak için özel durumlar tükettiğinizde çok dikkatli olunmalıdır.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
+Oluşturma bir C# konsol uygulama projesi ile `using` System.Linq ve System.IO ad alanları için yönergeleri.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

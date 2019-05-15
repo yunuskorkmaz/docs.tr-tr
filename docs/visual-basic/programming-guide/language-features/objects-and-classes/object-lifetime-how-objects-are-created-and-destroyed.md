@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 430041f5f4315c5ad20cd2495f01a6f776f239c7
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: a63134b966fe6e6cd0cd40f69ac04a7cd986513d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469699"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591535"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Nesne Ömrü: Nesneler nasıl oluşturulur ve yok (Visual Basic)
 Bir sınıf, bir nesne örneği kullanılarak oluşturulan `New` anahtar sözcüğü. Bunlar kullanılmadan önce başlatma görevleri genellikle yeni nesneler üzerinde gerçekleştirilmelidir. Genel başlangıç görevleri, veritabanlarına bağlanma ve kayıt defteri anahtarlarının okumanızı dosyalarını açma içerir. Visual Basic denetimleri adı verilen yordamları kullanarak yeni nesnelerin başlatılmasını *oluşturucular* (başlatma denetime izin veren özel yöntemleri).  
@@ -140,7 +140,7 @@ End Sub
  Türetilmiş bir sınıf temel sınıfın kılmamak <xref:System.IDisposable.Dispose%2A> ve `Finalize` yöntemleri. Bu yöntemler temel sınıfın uygulaması türetilen sınıfın bir örneğinden bu yöntemler çağrıldığında, türetilmiş sınıfın geçersiz çağrı `Dispose(disposing)` yöntemi.  
   
 ## <a name="garbage-collection-and-the-finalize-destructor"></a>Çöp toplama ve Finalize yıkıcısı  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Kullanan *izleme başvurusu atık toplama* sistem düzenli aralıklarla kullanılmayan kaynaklar serbest bırakılacaksa. Visual Basic 6.0 ve önceki sürümlerinde kullanılan adlı farklı bir sistem *başvuru sayımı* kaynakları yönetmek için. Her iki sistem otomatik olarak aynı işlevi gerçekleştirir ancak bazı önemli farklar vardır.  
+ .NET Framework kullanan *izleme başvurusu atık toplama* sistem düzenli aralıklarla kullanılmayan kaynaklar serbest bırakılacaksa. Visual Basic 6.0 ve önceki sürümlerinde kullanılan adlı farklı bir sistem *başvuru sayımı* kaynakları yönetmek için. Her iki sistem otomatik olarak aynı işlevi gerçekleştirir ancak bazı önemli farklar vardır.  
   
  Sistem belirlediğinde bu tür nesneler artık gerekmeyen CLR düzenli aralıklarla nesnelerini yok eder. Sistem kaynakları arz ve daha az sıklıkta Aksi durumda olduğunda nesneleri daha hızlı serbest bırakılır. Nesnenin kapsamı ne zaman kaybeder ve ne zaman CLR sürümleri arasındaki gecikmeyi aksine Visual Basic 6.0 ve önceki sürümlerinde, nesnelerle, tam olarak ne zaman nesne yok edileceği belirlenemiyor, anlamına gelir. Böyle bir durumda, nesneler olduğu söylenir ve *belirleyici ömrü*. Unutmamanız sürece çoğu durumda, belirleyici ömrü uygulamaları nasıl yazdığınız değiştirmez `Finalize` yıkıcı bir nesne kapsam kaybettiğinde hemen çalışmayabilir.  
   

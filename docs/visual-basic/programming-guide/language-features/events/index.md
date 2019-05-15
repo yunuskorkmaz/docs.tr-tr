@@ -5,12 +5,12 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 5986923b10700b1795886c24343a4b45e6bff46e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76d074d2870a2d7efa62516b5868cdd7faaacd79
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616697"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586711"
 ---
 # <a name="events-visual-basic"></a>Olaylar (Visual Basic)
 Yordamları gerçekte bir sırayla yürütülen bir dizi olarak Visual Studio projesi görselleştirme ancak çoğu aktivita typu EventDriven programlarıdır — yani, yürütmenin akışını adlı dış oluşumları tarafından belirlenir *olayları*.  
@@ -104,6 +104,6 @@ Yordamları gerçekte bir sırayla yürütülen bir dizi olarak Visual Studio pr
 |[Nasıl yapılır: Engellemekten Kaçınacak şekilde özel olayları bildirme](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Zaman uyumsuz olarak çağrılacak kendi olay işleyicileri izin veren özel bir olayı tanımlamak nasıl gösterir.|  
 |[Nasıl yapılır: Bellekten kazanacak şekilde özel olayları bildirme](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Bellek olayı işlendiğinde kullanan özel bir olayı tanımlamak nasıl gösterir.|  
 |[Basic'de devralınmış olay işleyicileri Visual Basic sorunlarını giderme](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Devralınan bileşenler olay işleyicileri ile ortaya çıkan ortak sorunları listeler.|  
-|[Olaylar](../../../../standard/events/index.md)|İçindeki olay modeli genel bakış sağlar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
+|[Olaylar](../../../../standard/events/index.md)|.NET Framework içindeki olay modeli için genel bir bakış sağlar.|  
 |[Windows Forms'ta Olay İşleyicileri Oluşturma](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Windows Forms nesneleri ile ilişkili olayları ile nasıl çalışılacağını açıklar.|  
 |[Temsilciler](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Visual Basic'te temsilciler genel bir bakış sağlar.|

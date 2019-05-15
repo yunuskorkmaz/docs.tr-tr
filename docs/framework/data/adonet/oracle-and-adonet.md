@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: ce92705d22edfc832e894dd2feaafcd11088bf26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8668ee115a3babbdf1ef549a418187d2c5e26b8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772027"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583413"
 ---
 # <a name="oracle-and-adonet"></a>Oracle ve ADO.NET
 > [!NOTE]
 >  Türlerinde <xref:System.Data.OracleClient> kullanım dışı bırakılmıştır. Türleri geçerli sürümü of.NET Framework içinde desteklenen kalır, ancak gelecekteki bir sürümde kaldırılacak. Microsoft, üçüncü taraf Oracle sağlayıcısı kullanmanızı önerir.  
   
- Bu bölümde, özellikleri ve özel davranışları açıklanmaktadır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] için Oracle veri sağlayıcısı.  
+ Bu bölümde, özellikler ve Oracle için .NET Framework veri sağlayıcısı özgü davranışları açıklanmaktadır.  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] İçin Oracle veri sağlayıcısı, Oracle istemci yazılımı tarafından sağlanan Oracle Çağrı Arabirimi (OCI) kullanarak bir Oracle veritabanına erişim sağlar. Veri sağlayıcısı işlevselliğini benzer olacak şekilde tasarlanan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SQL Server, OLE DB ve ODBC veri sağlayıcıları.  
+ Oracle için .NET Framework veri sağlayıcısı, Oracle istemci yazılımı tarafından sağlanan Oracle Çağrı Arabirimi (OCI) kullanarak bir Oracle veritabanına erişim sağlar. Veri sağlayıcısı işlevselliği, SQL Server, OLE DB ve ODBC için .NET Framework veri sağlayıcıları benzer olacak şekilde tasarlanmıştır.  
   
- Kullanılacak [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Oracle için veri sağlayıcısı, bir uygulama başvurmalıdır <xref:System.Data.OracleClient> gösterildiği gibi ad alanı:  
+ Oracle için .NET Framework veri sağlayıcısı kullanmak için bir uygulama başvurmalıdır <xref:System.Data.OracleClient> gösterildiği gibi ad alanı:  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -38,7 +38,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Sistem Gereksinimleri](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
- Kullanmak için gereksinimleri anlatılmaktadır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] için Oracle veri sağlayıcısı ve bir dizi, kullanırken dikkat edilmesi gereken sorunlar açıklanır.  
+ Oracle için .NET Framework veri sağlayıcısı kullanma gereksinimleri ve bir dizi kullanırken dikkat etmeniz gereken sorunları açıklar.  
   
  [Oracle BFILE](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  Açıklar <xref:System.Data.OracleClient.OracleBFile> Oracle BDOSYA veri türü ile çalışmak için kullanılan sınıf.  

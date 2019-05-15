@@ -6,16 +6,16 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 28fde47721e6354612ffec557da25c6d3bb775e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd2efcd28a8349ef07873adb5eaa69784e61d482
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672399"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585946"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# Diline ve.NET Framework'e Giriş
 
-C#, geliştiricilerin üzerinde çalışan güvenli ve sağlam uygulamalar oluşturmasına olanak sağlayan bir şık ve tür kullanımı uyumlu nesne yönelimli dildir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Windows istemci uygulamaları, XML Web Hizmetleri, dağıtılmış bileşenler, istemci-sunucu uygulamaları, veritabanı uygulamaları ve çok daha fazlasını oluşturmak için C# kullanabilirsiniz. Visual C# sağlar C# diline dayalı uygulamalar geliştirmek daha kolay hale getirmek için Gelişmiş kod düzenleyici, uygun kullanıcı arabirimi tasarımcıları, tümleşik hata ayıklayıcı ve birçok diğer aracı ve [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+C#.NET Framework üzerinde çalışan güvenli ve sağlam uygulamalar oluşturmalarını sağlayan bir şık ve tür kullanımı uyumlu nesne yönelimli dildir. Windows istemci uygulamaları, XML Web Hizmetleri, dağıtılmış bileşenler, istemci-sunucu uygulamaları, veritabanı uygulamaları ve çok daha fazlasını oluşturmak için C# kullanabilirsiniz. Görsel C# üzerinde uygulama geliştirmeyi kolaylaştırmak için Gelişmiş kod düzenleyici, uygun kullanıcı arabirimi tasarımcıları, tümleşik hata ayıklayıcı ve birçok diğer aracı sağlar C# dili ve .NET Framework.  
   
 > [!NOTE]
 > Visual C# belgeleri, temel programlama kavramlarını bir anlayışa sahip olduğunuzu varsayar. Tam bir acemiyseniz Web'de kullanılabilir olan keşfedin Visual C# Express, isteyebilirsiniz. Ayrıca kitaplardan ve Web kaynaklar hakkında pratik programlama becerilerini öğrenmek için C# yararlanabilirsiniz.  
@@ -52,7 +52,7 @@ C#, geliştiricilerin üzerinde çalışan güvenli ve sağlam uygulamalar oluş
 
 ## <a name="net-framework-platform-architecture"></a>.NET framework Platform mimarisi
 
- C# programları çalıştırmak [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], ortak dil çalışma zamanı (CLR) ve birleşik bir sınıf kitaplıkları kümesinin sanal yürütme sistemi içeren Windows ayrılmaz bir bileşeni olarak adlandırılır. CLR ticari Microsoft tarafından ortak dil altyapısı (CLI), yürütme ve diller ve kitaplıkların birlikte sorunsuz çalıştığı geliştirme ortamları oluşturmak için temel olan uluslararası bir standart uygulamasıdır.  
+ C#.NET Framework, ortak dil çalışma zamanı (CLR) ve birleşik bir sınıf kitaplıkları kümesinin adlı bir sanal yürütme sistemi içeren Windows ayrılmaz bir bileşeni programları çalıştırın. CLR ticari Microsoft tarafından ortak dil altyapısı (CLI), yürütme ve diller ve kitaplıkların birlikte sorunsuz çalıştığı geliştirme ortamları oluşturmak için temel olan uluslararası bir standart uygulamasıdır.  
   
  C# dilinde yazılan kaynak kodu CLI belirtimine uyan bir ara dil (IL) derlenir. IL kodu ve bit eşlemler ve dizeler gibi kaynaklar genellikle .exe veya .dll uzantılı derleme adında çalıştırılabilir bir dosyada diskte depolanır. Bir derleme, derlemenin türleri, sürümü, kültürü ve güvenlik gereksinimleri hakkında bilgi sağlayan bir bildirim içerir.  
   
@@ -60,9 +60,9 @@ C#, geliştiricilerin üzerinde çalışan güvenli ve sağlam uygulamalar oluş
   
  ![C&#35; kaynak kodu için makine yürütme](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
   
- Diller arası çalışabilirlik özelliğidir anahtar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. C# derleyicisi tarafından üretilen IL kodu ortak tür belirtimi (CTS) uygun olduğundan, C# kaynağından oluşturulan IL kodu Visual Basic, Visual C++ ya da 20'den fazla diğer CTS-uyumlu dilin herhangi birini .NET sürümlerinden oluşturulan kod ile etkileşim kurabilir. Tek bir derleme farklı .NET dillerinde yazılmış birçok modülü içerebilir ve yalnızca bunlar aynı dilde yazılmışlar gibi türleri birbirlerine başvurabilir.  
+ Dil birlikte çalışabilirliği, .NET Framework'ün önemli bir özelliktir. C# derleyicisi tarafından üretilen IL kodu ortak tür belirtimi (CTS) uygun olduğundan, C# kaynağından oluşturulan IL kodu Visual Basic, Visual C++ ya da 20'den fazla diğer CTS-uyumlu dilin herhangi birini .NET sürümlerinden oluşturulan kod ile etkileşim kurabilir. Tek bir derleme farklı .NET dillerinde yazılmış birçok modülü içerebilir ve yalnızca bunlar aynı dilde yazılmışlar gibi türleri birbirlerine başvurabilir.  
   
- Çalıştırma zamanı hizmetlerine ek olarak [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ayrıca sağlayan çok çeşitli kullanışlı işlevsellik her şey için dosya giriş ve çıkış dize düzenlemesi XML ad alanları olarak düzenlenmiş 4000'den fazla sınıfları oluşan kapsamlı bir kitaplık içerir. , Windows Forms denetimlerine ayrıştırılıyor. Tipik C# uygulaması kullanan [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ortak "tesisatı" işlerini kapsamlı bir şekilde işlemek için sınıf kitaplığı.  
+ Çalıştırma zamanı hizmetlerine ek olarak, .NET Framework ayrıca sağlayan çok çeşitli kullanışlı işlevsellik her şey için dosya giriş ve çıkış dize düzenlemesi XML ad alanları olarak düzenlenmiş 4000'den fazla sınıfları oluşan kapsamlı bir kitaplık içerir. , Windows Forms denetimlerine ayrıştırılıyor. Tipik C# uygulama .NET Framework sınıf kitaplığı kapsamlı bir şekilde ortak "tesisatı" işlerini ele almak için kullanır.  
   
  .NET Framework hakkında daha fazla bilgi için bkz. [Microsoft .NET Framework'ün genel bakış](../../framework/get-started/overview.md).  
   

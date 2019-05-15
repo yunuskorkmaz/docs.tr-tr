@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: 6ff9aa23fb6d7dee5c245ed174318f6589e7d245
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 440e583b55765d680ee72f8574f929e335e10cdb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624311"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590637"
 ---
 # <a name="-bugreport"></a>-bugreport
 Bir hata raporu dosyası oluştururken kullanabileceğiniz bir dosya oluşturur.  
@@ -46,7 +46,7 @@ Bir hata raporu dosyası oluştururken kullanabileceğiniz bir dosya oluşturur.
  Tüm kaynak kodu dosyalarının bir kopyasını dahil olduğundan `file`, kısa olası programına (şüphelenilen) kod hatasını yeniden oluşturmak isteyebilirsiniz.  
   
 > [!IMPORTANT]
->  `-bugreport` Seçenek olası duyarlı bilgileri içeren bir dosya oluşturur. Bu, geçerli zamanı, derleyici sürümü içerir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] sürümü, işletim sistemi sürümü, kullanıcı adı, hangi derleyici çalıştırıldığı, tüm kaynak kodu ve herhangi bir ikili biçimini başvurulan derleme komut satırı bağımsız değişkenleri. Bu seçenek, bir sunucu tarafı derlenmesi için Web.config dosyasında komut satırı seçenekleri belirterek erişilebilir bir [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] uygulama. Bunu önlemek için sunucuda önleyen kullanıcıların Machine.config dosyasının değiştirin.  
+>  `-bugreport` Seçenek olası duyarlı bilgileri içeren bir dosya oluşturur. Bu geçerli zaman, derleyici sürümü, .NET Framework sürümü, işletim sistemi sürümü, kullanıcı adı, komut satırı bağımsız değişkenleri ile derleyici çalıştırıldığı, tüm kaynak kodu ve herhangi başvurulan bütünleştirilmiş kodun ikili biçimini içerir. Bu seçenek, bir sunucu tarafı derleme bir ASP.NET uygulaması için Web.config dosyasında komut satırı seçeneklerini belirleyerek erişilebilir. Bunu önlemek için sunucuda önleyen kullanıcıların Machine.config dosyasının değiştirin.  
   
  Bu seçeneği ile kullandıysanız `-errorreport:prompt`, `-errorreport:queue`, veya `-errorreport:send`, ve bir iç derleyici hata bilgileri uygulamanızın karşılaştığı `file` Microsoft Corporation gönderilir. Bu bilgiler, Microsoft mühendisleri hatanın nedenini belirlemenize yardımcı olur ve Visual Basic'in sonraki sürümüne artırmanıza yardımcı olabilir. Varsayılan olarak, hiçbir bilgi Microsoft'a gönderilmez. Ancak, derleme yaparken bir uygulama kullanarak `-errorreport:queue`, varsayılan olarak etkindir, bu uygulama, hata raporlarını toplar. Ardından, bilgisayarın yönetici oturum açtığında, hata raporlama sistem yönetici oturum açma işleminden sonra gerçekleşen tüm hata raporlarını Microsoft'a iletecek şekilde sağlayan bir açılır pencere görüntüler.  
   

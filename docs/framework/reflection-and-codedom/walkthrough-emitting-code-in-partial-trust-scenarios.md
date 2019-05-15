@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54a6a1cda604cb9cdeecd9587af81dbdb810965c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f461490529f626cfc442d817840b9c2e64df4c19
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592448"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585916"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>İzlenecek yol: Kısmi Güven Senaryolarında Kod Yayma
 Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak bazı özellikler kısmen güvenilen kodda özel izinler gerektirir. Ayrıca, yansıma yayılımı, güvenlikli saydam derlemeler tarafından kısmi güven ile kullanılmak üzere tasarlanmış bir özelliği, anonim olarak barındırılan dinamik yöntemler vardır.  
@@ -77,12 +77,12 @@ Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak baz
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
   
-     Son parametresi <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> yöntemi aşırı yükleme uygulama etki alanının izin kümeleri yerine tam güven verilmesi için bir derleme kümesi belirtmenize imkan tanır. Belirtmek zorunda değilsiniz [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] bu derlemeler genel derleme önbelleğinde olduğundan, uygulamanızın kullandığı derlemeler. Genel derleme önbelleğindeki derlemelere her zaman tamamen güvenilirdir. Bu parametre, genel derleme önbelleğinde olmayan tanımlayıcı adlı derlemeleri belirtmek için kullanabilirsiniz.  
+     Son parametresi <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> yöntemi aşırı yükleme uygulama etki alanının izin kümeleri yerine tam güven verilmesi için bir derleme kümesi belirtmenize imkan tanır. Bu derlemeler genel derleme önbelleğinde olduğundan, uygulamanızın kullandığı, .NET Framework derlemeleri belirtmek zorunda değildir. Genel derleme önbelleğindeki derlemelere her zaman tamamen güvenilirdir. Bu parametre, genel derleme önbelleğinde olmayan tanımlayıcı adlı derlemeleri belirtmek için kullanabilirsiniz.  
   
 ### <a name="adding-restrictedmemberaccess-to-sandboxed-domains"></a>Etki alanlarına RestrictedMemberAccess ekleme  
  Ana bilgisayar uygulamalarını güven düzeyleri eşittir veya daha az kodu yayan derlemenin güven düzeyine sahip derlemelerdeki özel verilere erişmesini sağlamak anonim olarak barındırılan dinamik yöntemler izin verebilirsiniz. Just-ın-time (JIT) görünürlük denetimlerini atlamak bu kısıtlı özelliği etkinleştirmek için ana bilgisayar uygulaması ekler. bir <xref:System.Security.Permissions.ReflectionPermission> nesnesi ile <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> izin kümesi (RMA) bayrak.  
   
- Örneğin, böylece bir Internet uygulaması kendi derlemelerindeki özel verilere erişen kodu yayar bir konak Internet uygulamaları Internet izinlerinin yanı sıra RMA, verebilir. Erişim eşit veya daha düşük güven derlemeleri için sınırlı olduğundan, bir Internet uygulaması tamamen güvenilir derlemelerinin üyelerine gibi erişemiyor [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] derlemeler.  
+ Örneğin, böylece bir Internet uygulaması kendi derlemelerindeki özel verilere erişen kodu yayar bir konak Internet uygulamaları Internet izinlerinin yanı sıra RMA, verebilir. Erişim eşit veya daha düşük güven derlemeleri için sınırlı olduğundan, bir Internet uygulaması .NET Framework derlemeleri gibi tamamen güvenilir derlemelerinin üyelerine erişemez.  
   
 > [!NOTE]
 >  Anonim olarak barındırılan dinamik yöntemler oluşturulduğunda ayrıcalık yükselmesini engellemek için yayan derleme için yığın bilgileri dahil edilir. Yöntem çağrıldığında, yığın bilgisi denetlenir. Bu nedenle, tam olarak güvenilen koddan çağrılan anonim olarak barındırılan dinamik bir yöntem yayan derlemenin güven düzeyine hala sınırlıdır.  
@@ -169,7 +169,7 @@ Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak baz
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
   
-     Anonim olarak barındırılan dinamik yöntemin sadece güven düzeyine eşit veya daha az yayan derlemenin güven düzeyine sahip derlemeler içerisindeki özel verilere erişebilirsiniz kısıtlaması yoktur. Örneğin, dinamik yöntem Internet güveni ile yürütülüyorsa, aynı zamanda Internet güveni ile yürütülen diğer derlemelerdeki özel verilere erişebilirsiniz, ancak özel verilerine erişemez [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] derlemeler. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] derlemeleri genel derleme önbelleğinde yüklü ve her zaman tamamen güvenilirdir.  
+     Anonim olarak barındırılan dinamik yöntemin sadece güven düzeyine eşit veya daha az yayan derlemenin güven düzeyine sahip derlemeler içerisindeki özel verilere erişebilirsiniz kısıtlaması yoktur. Örneğin, dinamik yöntem Internet güveni ile yürütülüyorsa, aynı zamanda Internet güveni ile yürütülen diğer derlemelerdeki özel verilere erişebilirsiniz, ancak .NET Framework derlemelerinin özel verilerine erişemez. .NET framework derlemeleri genel derleme önbelleğinde yüklü ve her zaman tamamen güvenilirdir.  
   
      Anonim olarak barındırılan dinamik yöntemler bu kısıtlı özelliği yalnızca ana uygulama verirse, JIT görünürlük denetimlerini atlamak için kullanabileceğiniz <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> bayrağı. Yöntem çağrıldığında bu izin için talep yapılır.  
   

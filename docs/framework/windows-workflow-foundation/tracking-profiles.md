@@ -2,12 +2,12 @@
 title: İzleme Profilleri
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c934ec9fd0524506577ab4457a2ec194d4d0cba7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699685"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589941"
 ---
 # <a name="tracking-profiles"></a>İzleme Profilleri
 
@@ -17,7 +17,7 @@ ms.locfileid: "61699685"
 
 İzleme profilleri, bir iş akışı örneği için izleme bilgileri yayıldığını belirtmek için kullanılır. Ardından profil belirtilmezse, tüm izleme olaylar gönderilir. Bir profili belirtilirse, profilde belirtilen izleme olaylarını yayılan. Çok genel bir profili yazabilirsiniz izleme gereksinimlerinize bağlı olarak, bir iş akışı üzerinde üst düzey durum değişikliklerini küçük bir kümesi için abone olur. Buna karşılık, elde edilen ayarlanmış olayları ayrıntılı yürütme akışı daha sonra yeniden oluşturmak için zengin bir çok ayrıntılı profili oluşturabilirsiniz.
 
-İzleme profilleri standart içindeki XML öğeleri olarak kendilerini bildirim [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] yapılandırma dosyası veya belirtilen kod. Aşağıdaki örnek, bir [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] abone olmak izleme katılımcı izin veren bir yapılandırma dosyası profilinde izleme `Started` ve `Completed` iş akışı olayları.
+İzleme profilleri, bir standart .NET Framework yapılandırma dosyası içinde XML öğeleri olarak kendilerini bildirim veya kodda belirtilen. Aşağıdaki örnek, bir [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] abone olmak izleme katılımcı izin veren bir yapılandırma dosyası profilinde izleme `Started` ve `Completed` iş akışı olayları.
 
 ```xml
 <system.serviceModel>

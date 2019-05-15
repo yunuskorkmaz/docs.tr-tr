@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 28253a46e8da48cfc2812d7f3fef1a2dd3d1cf87
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 98d697aa7f4fa839b41509244993ced195730fdb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599850"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585933"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Statik Sınıflar ve Statik Sınıf Üyeleri (C# Programlama Kılavuzu)
 A [statik](../../../csharp/language-reference/keywords/static.md) sınıfı, temel bir statik olmayan sınıf ile aynı, ancak bir fark vardır: bir statik sınıfın örneği oluşturulamıyor. Diğer bir deyişle, kullanamazsınız [yeni](../../../csharp/language-reference/keywords/new.md) sınıf türünde bir değişken oluşturmak için anahtar sözcüğü. Hiçbir örnek değişken olduğundan, bir statik sınıf üyeleri sınıf adı'ı kullanarak erişir. Örneğin, bir statik sınıflar varsa adlı `UtilityClass` adlı genel statik bir yöntemi olan `MethodA`, aşağıdaki örnekte gösterildiği gibi yöntemi çağırın:  
@@ -37,7 +37,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 // 3  
 ```  
   
- Tüm sınıf türleri ile olduğu gibi bir statik sınıf için tür bilgileri tarafından yüklenir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ortak dil çalışma zamanı (CLR) sınıfı başvuran program yüklendiğinde. Program, tam olarak ne zaman sınıfı yüklenen belirtemezsiniz. Ancak, yüklenecek ve başlatılmış kendi alanlarına ve sınıf programınızı ilk kez başvuruluyor önce çağırılır, statik Oluşturucu sağlanır. Statik Oluşturucu yalnızca bir kez çağrılır ve statik sınıf programınızı bulunduğu uygulama etki alanı ömrü boyunca bellekte kalır.  
+ Tüm sınıf türleri ile olduğu gibi bir statik sınıf için tür bilgisi sınıfı başvuran program yüklendiğinde .NET Framework ortak dil çalışma zamanı tarafından (CLR) yüklenir. Program, tam olarak ne zaman sınıfı yüklenen belirtemezsiniz. Ancak, yüklenecek ve başlatılmış kendi alanlarına ve sınıf programınızı ilk kez başvuruluyor önce çağırılır, statik Oluşturucu sağlanır. Statik Oluşturucu yalnızca bir kez çağrılır ve statik sınıf programınızı bulunduğu uygulama etki alanı ömrü boyunca bellekte kalır.  
   
 > [!NOTE]
 >  Oluşturulacak kendisi yalnızca bir örneğini izin veren bir statik olmayan sınıf oluşturmak için bkz [C# uygulama Singleton](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29).  
