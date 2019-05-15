@@ -4,12 +4,12 @@ description: ML.NET machine learning modeli için algoritma seçme hakkında bil
 author: natke
 ms.topic: overview
 ms.date: 04/20/1029
-ms.openlocfilehash: 3fd515a1d150ea51214b55f882726c4ba76bd6d1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: d1c637437a7b285f2b66b597d616fcf39248697f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65066186"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557771"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>ML.NET algoritma seçme
 
@@ -81,8 +81,8 @@ Aşağıdaki eğitmenler, bir çok sınıflı trainer ikili bir eğitmen oluştu
 
 |Algoritması|Özellikler|Eğitmenler|
 |---------|----------|--------|
-|Bir tüm karşılaştırması|Bu çok sınıflı sınıflandırıcı Bu sınıf diğer tüm sınıflarından ayırt eden her sınıf için bir ikili dosya sınıflandırıcı eğitir. Ölçek kümesinde sınıfları kategorilere ayırmak için sayısıyla sınırlıdır|[OneVersusAllTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
-|İkili eşlenmesiyle|Bu çok sınıflı sınıflandırıcı sınıflarının her çifti üzerinde bir ikili bir sınıflandırma algoritmasıdır eğitir. Her iki sınıf birleşimi eğitim gibi ölçek sınıfları sayısıyla sınırlıdır.|[PairwiseCouplingTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
+|Bir tüm karşılaştırması|Bu çok sınıflı sınıflandırıcı Bu sınıf diğer tüm sınıflarından ayırt eden her sınıf için bir ikili dosya sınıflandırıcı eğitir. Ölçek kümesinde sınıfları kategorilere ayırmak için sayısıyla sınırlıdır|[OneVersusAllTrainer\<BinaryClassificationTrainer >](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
+|İkili eşlenmesiyle|Bu çok sınıflı sınıflandırıcı sınıflarının her çifti üzerinde bir ikili bir sınıflandırma algoritmasıdır eğitir. Her iki sınıf birleşimi eğitim gibi ölçek sınıfları sayısıyla sınırlıdır.|[PairwiseCouplingTrainer\<BinaryClassificationTrainer >](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
 
 ## <a name="k-means"></a>K-ortalamaları
 
@@ -107,4 +107,3 @@ Aşağıdaki eğitmenler, bir çok sınıflı trainer ikili bir eğitmen oluştu
 |Özellikler|Eğitmenler|
 |----------|--------|
 |Bu ikili sınıflandırma trainer diğer Eğitmenler performansının taban çizgisi için kullanın. Etkili olması için diğer Eğitmenler ölçümlerini önceki Eğitmeni daha iyi olmalıdır. |<xref:Microsoft.ML.Trainers.PriorTrainer>|
-

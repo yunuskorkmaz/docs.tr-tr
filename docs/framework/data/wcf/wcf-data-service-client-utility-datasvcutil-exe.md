@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: 06bf058fe51c59b6619a296ab3d6093224ab8937
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf812f45e4a4090becd8dfafe035d39d1d851860
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660524"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583653"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF Veri Hizmeti İstemci Yardımcı Programı (DataSvcUtil.exe)
 
@@ -25,7 +25,7 @@ DataSvcUtil.exe kullanan WCF Veri Hizmetleri tarafından sağlanan bir komut sat
 
 Daha fazla bilgi için [nasıl yapılır: El ile istemci veri hizmeti sınıfları oluşturma](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).
 
-DataSvcUtil.exe aracına [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dizin. Çoğu durumda, bu bulunan *C:\Windows\Microsoft.NET\Framework\v4.0*. 64-bit sistemler için bu bulunan *C:\Windows\Microsoft.NET\Framework64\v4.0*. Visual Studio için geliştirici Komut İstemi'nden DataSvcUtil.exe Aracı'nı da erişebilirsiniz.
+DataSvcUtil.exe aracı .NET Framework dizinine yüklenir. Çoğu durumda, bu bulunan *C:\Windows\Microsoft.NET\Framework\v4.0*. 64-bit sistemler için bu bulunan *C:\Windows\Microsoft.NET\Framework64\v4.0*. Visual Studio için geliştirici Komut İstemi'nden DataSvcUtil.exe Aracı'nı da erişebilirsiniz.
 
 ## <a name="syntax"></a>Sözdizimi
 

@@ -1,18 +1,18 @@
 ---
-title: Eğitme ve modeli değerlendirme
+title: Modeli eğitme ve değerlendirme
 description: Eğitme ve değerlendirme ML.NET, makine öğrenimi modelleri hakkında bilgi edinin
 ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 2abb17aad6091cd6a5f0b6f82835011d01b40153
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 3a3f1f672ed078754162dc377cf5c239d206b715
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063632"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557847"
 ---
-# <a name="train-and-evaluate-a-model"></a>Eğitme ve modeli değerlendirme
+# <a name="train-and-evaluate-a-model"></a>Modeli eğitme ve değerlendirme
 
 Makine öğrenimi modellerini Derleme ve öğrenilen parametreleri Ayıkla ML.NET performansı ölçmek öğrenin. Bu örnek bir regresyon modeli eğitir olsa da, diğer algoritmalar çoğunu kavramları uygulanabilir.
 
@@ -145,7 +145,7 @@ var trainedModel = sdcaEstimator.Fit(transformedTrainingData);
 
 ## <a name="extract-model-parameters"></a>Model parametreleri Ayıkla
 
-Eğitilen modelin sonra öğrenilen ayıklamak [ `ModelParameters` ](xref:Microsoft.ML.Trainers.ModelParametersBase`1) İnceleme ya da yeniden eğitim için. [ `LinearRegressionModelParameters` ](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) Eğilim ve öğrenilen katsayıları veya eğitim modeli ağırlıkları sağlayın. 
+Eğitilen modelin sonra öğrenilen ayıklamak [ `ModelParameters` ](xref:Microsoft.ML.Trainers.ModelParametersBase%601) İnceleme ya da yeniden eğitim için. [ `LinearRegressionModelParameters` ](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) Eğilim ve öğrenilen katsayıları veya eğitim modeli ağırlıkları sağlayın. 
 
 ```csharp
 var trainedModelParameters = trainedModel.Model as LinearRegressionModelParameters;

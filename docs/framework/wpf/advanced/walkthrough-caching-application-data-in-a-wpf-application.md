@@ -9,22 +9,22 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 65dfe906276912b5f6dc8d49af6a2662e3a09157
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630780"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591198"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma
 Önbelleğe alma, verileri hızlı erişim için bellekte depolamanızı sağlar. Verileri yeniden erişildiğinde uygulamaları özgün kaynaktan almak yerine önbellekten veri alabilirsiniz. Bu, performansı ve ölçeklenebilirliği artırabilir. Ayrıca, önbelleğe alma, veri kaynağının geçici olarak devre dışı olduğunda yaptığı veri yok.
 
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Önbelleğe almayı kullanmanızı sağlar sınıfını sağlar [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulamalar. Bu sınıfların bulunan <xref:System.Runtime.Caching> ad alanı.
+ .NET Framework, .NET Framework uygulamalarında önbelleğe almayı kullanmak üzere olanak tanıyan sınıflar sağlar. Bu sınıfların bulunan <xref:System.Runtime.Caching> ad alanı.
 
 > [!NOTE]
->  <xref:System.Runtime.Caching> Ad alanı yeni [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Bu ad alanı yaptığı önbelleğe alma, tüm kullanılabilir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulamalar. Önceki sürümlerinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], önbelleğe yalnızca <xref:System.Web> ad alanı ve bu nedenle ASP.NET sınıfları bir bağımlılık gerekli.
+>  <xref:System.Runtime.Caching> Ad alanı yeni [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Bu ad alanı yaptığı önbelleğe alma, tüm .NET Framework uygulamaları için kullanılabilir. Önceki .NET Framework sürümlerinde, önbelleğe yalnızca <xref:System.Web> ad alanı ve bu nedenle ASP.NET sınıfları bir bağımlılık gerekli.
 
- Bu izlenecek yol, kullanılabilir önbellek işlevini nasıl kullanacağınızı gösterir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] parçası olarak bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama. Bu izlenecek yolda, bir metin dosyasının içeriğini önbelleğe alın.
+ Bu izlenecek yol kapsamında .NET Framework içinde kullanılabilir olan önbelleğe alma işlevini nasıl kullanacağınızı gösterir bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama. Bu izlenecek yolda, bir metin dosyasının içeriğini önbelleğe alın.
 
  Bu kılavuzda gösterilen görevler aşağıdakileri içerir:
 
@@ -67,7 +67,7 @@ ms.locfileid: "64630780"
 4. İçinde **yeni proje** iletişim kutusunda **WPF uygulaması**.
 
     > [!NOTE]
-    >  Görmüyorsanız, **WPF uygulaması** şablon sürümünü hedefleme emin [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , WPF destekler. İçinde **yeni proje** iletişim kutusunda [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] listeden.
+    >  Görmüyorsanız, **WPF uygulaması** şablonu, WPF destekleyen .NET Framework sürümü hedefleme emin olun. İçinde **yeni proje** iletişim kutusunda [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] listeden.
 
 5. İçinde **adı** metin kutusunda, projeniz için bir ad girin. Örneğin, girdiğiniz **WPFCaching**.
 

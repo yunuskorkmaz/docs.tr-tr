@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77740f86265db86c998af25e6e9ed4c20a7014e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c21a1303cd67f5f5de42241f4d5ada929e68bf2c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61910318"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589893"
 ---
 # <a name="commonly-used-collection-types"></a>Çok Kullanılan Koleksiyon Türleri
 Koleksiyon, karma tabloları, kuyrukları, yığınları, paketleri, sözlük ve listeler gibi veri koleksiyonlarının ortak çeşitlemeleri türleridir.  
@@ -36,10 +36,10 @@ Koleksiyon, karma tabloları, kuyrukları, yığınları, paketleri, sözlük ve
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Koleksiyonlar ve Veri Yapıları](../../../docs/standard/collections/index.md)|Bulunan çeşitli koleksiyon türlerini açıklar [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]yığınlar, kuyruklar, listeler, diziler ve sözlükleri dahil olmak üzere.|  
+|[Koleksiyonlar ve Veri Yapıları](../../../docs/standard/collections/index.md)|Yığınlar, kuyruklar, listeler, diziler ve sözlükleri dahil olmak üzere .NET Framework'te bulunan çeşitli koleksiyon türlerini açıklar.|  
 |[Hashtable ve Sözlük Koleksiyon Türleri](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Karma tabanlı sözlük jenerik ve jenerik olmayan türleri özelliklerini açıklar.|  
 |[Sıralanmış Koleksiyon Türleri](../../../docs/standard/collections/sorted-collection-types.md)|Listeler ve kümeleri için sıralama işlevselliği sağlayan sınıflar açıklanmaktadır.|  
-|[Genel Türler](../../../docs/standard/generics/index.md)|Genel koleksiyonlar, temsilciler ve arabirimler tarafından sağlanan dahil olmak üzere genel türler özelliğini açıklar [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Özellik belgelerine bağlantılar sağlar C#, Visual Basic ve Visual C++ ve reflection gibi destek teknolojileri için.|  
+|[Genel Türler](../../../docs/standard/generics/index.md)|Genel koleksiyonlar, temsilciler ve arabirimler .NET Framework tarafından sağlanan dahil olmak üzere genel türler özelliğini açıklar. Özellik belgelerine bağlantılar sağlar C#, Visual Basic ve Visual C++ ve reflection gibi destek teknolojileri için.|  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Collections?displayProperty=nameWithType>  

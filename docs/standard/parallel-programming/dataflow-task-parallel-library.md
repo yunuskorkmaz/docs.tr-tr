@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a58211226b93c8fde9fa4240e04a245fb83a00d0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7058e7857c03a2fc82a3d978ef7c8066a9e272bc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629032"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589660"
 ---
 # <a name="dataflow-task-parallel-library"></a>Veri Akışı (Görev Paralel Kitaplığı)
 <a name="top"></a> Görev paralel kitaplığı (TPL) eşzamanlılık kullanan uygulamaların sağlamlığını artırmak için veri akışı bileşenleri sağlar. Bu veri kışı bileşenlerine toplu olarak ifade edilir *TPL veri akışı Kitaplığı*. Bu veri akışı modeli, büyük parçalı veri akışı ve ardışık düzen oluşturma görevleri için işlem içi ileti geçirme sağlayarak aktör temelli programlamayı teşvik eder. Veri akışı bileşenleri türleri ve TPL zamanlama altyapısı oluşturmak ve tümleştirin C#, Visual Basic ve F# zaman uyumsuz programlama için dil desteği. Bu veri akışı bileşenleri, birbirleriyle zaman uyumsuz olarak iletişim kurması gereken birden fazla işleminiz varsa veya verileri elde ettikçe işlemek istiyorsanız kullanışlıdır. Örneğin, web kamerasından gelen görüntü verilerini işleyen bir uygulamayı düşünün. Veri akışı modelini kullanarak, uygulama görüntü karelerini kullanılabilir oldukça işleyebilir. Uygulama görüntü karelerini geliştirir, örneğin ışık düzeltme veya kırmızı göz azaltma gerçekleştirerek oluşturabileceğiniz bir *işlem hattı* veri akışı bileşenleri. Ardışık düzenin her aşaması, görüntüyü dönüştürmek için TPL tarafından sağlanan işlevsellik gibi daha büyük parçalı paralellik işlevlerini kullanabilir.  
@@ -282,4 +282,4 @@ ms.locfileid: "64629032"
 |[Nasıl yapılır: Bir veri akışı bloğunda Görev Zamanlayıcısı belirtme](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)|Uygulamanızda veri akışı kullandığınızda belirli bir görev zamanlayıcının nasıl ilişkilendirildiğini gösterir.|  
 |[İzlenecek yol: Verimliliği artırmak için BatchBlock ve Batchedjoinblock'u kullanma](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md)|Veritabanı ekleme işlemlerinin verimini artırmak için <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> sınıfının; uygulama veritabanından okurken hem sonuçları hem de oluşan özel durumları yakalamak içinse <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> sınıfının nasıl kullanıldığını açıklar.|  
 |[İzlenecek yol: Özel veri akışı blok türü oluşturma](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md)|Özel davranış uygulayan bir veri akışı bloğu türünü oluşturmanın iki yolunu gösterir.|  
-|[Görev Paralel Kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] uygulamalarında paralel ve eşzamanlı programlamayı basitleştiren bir kitaplık olan TPL'yi tanıtır.|
+|[Görev Paralel Kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Paralel ve eşzamanlı .NET Framework uygulamalarında programlama basitleştiren bir kitaplık olan TPL'yi tanıtır.|

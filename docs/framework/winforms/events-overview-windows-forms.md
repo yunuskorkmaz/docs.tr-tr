@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: ab4a52409e1d24c053184cf65a5e11f735ad89b9
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 3adc2891579cafff9c8aeb3e918ae74c6f3ad8a5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211493"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591015"
 ---
 # <a name="events-overview-windows-forms"></a>Olaylara Genel Bakış (Windows Forms)
 Bir olay yanıt verebilirsiniz bir eylem veya "handle" kodunu içerir. Olaylar, fareyle tıklamak veya bir tuşuna basmak gibi bir kullanıcı eylemi tarafından oluşturulabilir; Program kodu tarafından; veya sistemi.
@@ -29,7 +29,7 @@ Bir olay yanıt verebilirsiniz bir eylem veya "handle" kodunu içerir. Olaylar, 
  Bir olay yükseltilip tüketileceğini hakkında daha fazla bilgi için bkz. [olayları](../../standard/events/index.md).
 
 ## <a name="delegates-and-their-role"></a>Temsilciler ve kendi rolleri
- Temsilcileri, bir sınıf içinde yaygın olarak kullanılan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] olay işleme mekanizmalarını oluşturulacak. Temsilciler kabaca günleriyle işlev işaretçilerine, yaygın olarak kullanılan [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] ve diğer nesne yönelimli programlama dili. İşlev işaretçileri, ancak nesne yönelimli, tür kullanımı uyumlu ve güvenli temsilciler. Ayrıca, burada bir işlev işaretçisi yalnızca belirli bir işleve bir başvuru içerir bir temsilci bir nesneye bir başvuru oluşur ve nesnesi içinde bir veya daha fazla yöntemlere başvuruyor.
+ Temsilciler .NET Framework içinde olay işleme mekanizmalarını oluşturmak için kullanılan sınıflardır. Temsilciler kabaca günleriyle işlev işaretçilerine, yaygın olarak kullanılan [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] ve diğer nesne yönelimli programlama dili. İşlev işaretçileri, ancak nesne yönelimli, tür kullanımı uyumlu ve güvenli temsilciler. Ayrıca, burada bir işlev işaretçisi yalnızca belirli bir işleve bir başvuru içerir bir temsilci bir nesneye bir başvuru oluşur ve nesnesi içinde bir veya daha fazla yöntemlere başvuruyor.
 
  Bu olay modeli kullanan *Temsilciler* bunları işlemek için kullanılan yöntemleri için olaylar bağlamak için. Temsilci işleyicisi yöntemi belirterek olay bildirimi için kaydetmek diğer sınıflar sağlar. Olay gerçekleştiğinde temsilci ilişkili yöntemi çağırır. Temsilcileri tanımlama hakkında daha fazla bilgi için bkz. [olayları](../../standard/events/index.md).
 

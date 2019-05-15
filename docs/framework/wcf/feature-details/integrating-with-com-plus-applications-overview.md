@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: fbe27403920d8c85665e585ca461602131574038
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fbe1617aa8ade89258bb7f4b46180b5e18805e3a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638647"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590543"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ Uygulamaları ile Tümleştirme Genel Bakış
 Windows Communication Foundation (WCF) dağıtılmış uygulamalar oluşturmak için zengin bir ortam sağlar. COM +'da barındırılan bir bileşen tabanlı uygulama mantığı zaten kullanıyorsanız, WCF, yeniden yazmak zorunda kalmadan yerine mevcut mantığınızı genişletmek için de kullanabilirsiniz. Mevcut COM + veya Enterprise Hizmetleri iş mantığı Web Hizmetleri aracılığıyla kullanıma sunmak istediğiniz, ortak bir senaryodur.  
@@ -49,7 +49,7 @@ Windows Communication Foundation (WCF) dağıtılmış uygulamalar oluşturmak i
   
 - Nesne başvuruları - parametreler olarak geçen arabirimleri aşağıdaki sınırlı nesne başvuru yaklaşımı sınırlı nesne başvurusu desteği bölümünde açıklanan.  
   
-- Geçiş türleri arabirimleri ile uyumlu olmayan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] COM birlikte çalışabilirlik dönüştürme.  
+- Geçiş türleri, arabirimleri, .NET Framework COM birlikte çalışabilirlik dönüştürmeler ile uyumlu değildir.  
   
 - Uygulama havuzu oluşturma COM + tarafından barındırıldığında özelliği etkin olan uygulamalar için arabirim.  
   
