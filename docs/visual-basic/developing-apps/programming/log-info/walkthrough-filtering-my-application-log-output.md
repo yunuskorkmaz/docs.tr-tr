@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: e32f36a0490a198078f8357f3603c91cc50cb3b8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 00e9eeb3227ceef54f899129847bfb74a370c51c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647088"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591277"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>İzlenecek yol: (Visual Basic) My.Application.Log çıktısını filtreleme
 Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir `My.Application.Log` hangi bilgilerin gelen geçirilen denetlemek için nesne `Log` nesnesine dinleyicileri ve hangi bilgilerin dinleyicileri tarafından yazılır. Yapılandırma bilgileri uygulamanın yapılandırma dosyasında depolandığından uygulama oluşturduktan sonra bile günlüğe kaydetme davranışını değiştirebilirsiniz.  
@@ -135,7 +135,7 @@ Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir
 9. Değiştirin `value` geri "bilgileri için" özniteliği.  
   
     > [!NOTE]
-    >  `DefaultSwitch` Anahtarı ayarı yalnızca `My.Application.Log`. Değiştirme nasıl [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> ve <xref:System.Diagnostics.Debug?displayProperty=nameWithType> sınıfları davranır.  
+    >  `DefaultSwitch` Anahtarı ayarı yalnızca `My.Application.Log`. Değiştirme nasıl .NET Framework <xref:System.Diagnostics.Trace?displayProperty=nameWithType> ve <xref:System.Diagnostics.Debug?displayProperty=nameWithType> sınıfları davranır.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Tek tek My.Application.Log dinleyicileri için filtreleme  
  Önceki örnekte, tüm filtreleme değiştirmek gösterilmektedir `My.Application.Log` çıktı. Bu örnek, tek tek günlük bir dinleyici nasıl filtreleme yapılacağını gösterir. Varsayılan olarak, bir uygulama iki dinleyici, yazma uygulamanın hata ayıklama çıkışını ve günlük dosyasına sahiptir.  

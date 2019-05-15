@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: 47e7f94fff4c76b3af7f07b1e023b545eed24953
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f130c4de45f81dfb21c8c87c9e24d22cd4276ce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659627"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586733"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Visual Basic'te Bileşenler Oluşturma ve Kullanma
-A *bileşen* uygulayan bir sınıf <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> arabirimi ya da uygulayan bir sınıftan türetilen doğrudan veya dolaylı olarak <xref:System.ComponentModel.IComponent>. A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yeniden kullanılabilir, diğer nesnelerle etkileşim kurabilir ve dış kaynaklara ve tasarım zamanı desteği üzerinde denetim sağlayan bir nesne bir bileşendir.  
+A *bileşen* uygulayan bir sınıf <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> arabirimi ya da uygulayan bir sınıftan türetilen doğrudan veya dolaylı olarak <xref:System.ComponentModel.IComponent>. .NET Framework bileşenini yeniden kullanılabilir, diğer nesnelerle etkileşim kurabilir ve dış kaynaklara ve tasarım zamanı desteği üzerinde denetim sağlayan bir nesnedir.  
   
- Bileşenlerin önemli bir özelliği, bir bileşen olan bir sınıf için Visual Studio tümleşik geliştirme ortamında kullanılabilir anlamına gelir designable, olmasıdır. Bir bileşen araç çubuğu, sürüklenen formunuza bırakılan ve tasarım yüzeyinde yönetilebilir. Temel bileşenler için tasarım zamanı desteği bildirimi yerleşik olarak [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]; bileşen Geliştirici temel tasarım zamanı işlevselliği yararlanmak için herhangi bir ek çalışma yapmasına gerek yoktur.  
+ Bileşenlerin önemli bir özelliği, bir bileşen olan bir sınıf için Visual Studio tümleşik geliştirme ortamında kullanılabilir anlamına gelir designable, olmasıdır. Bir bileşen araç çubuğu, sürüklenen formunuza bırakılan ve tasarım yüzeyinde yönetilebilir. .NET Framework'e bileşenleri için temel tasarım zamanı desteği yerleşik olarak dikkat edin. bir bileşen geliştirici, temel tasarım zamanı işlevselliği yararlanmak için ek bir iş yapmak yok.  
   
  A *denetimi* bileşene, her ikisi de designable gibi benzer. Ancak, bir bileşenin sağlamadığı durumdayken bir kullanıcı arabirimi bir denetim sağlar. Bir denetim temel denetim sınıflarının birinden türetilmelidir: <xref:System.Windows.Forms.Control> veya <xref:System.Web.UI.Control>.  
   

@@ -2,12 +2,12 @@
 title: Zehirli İleti İşleme
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 1a7ab0afa982508f07256f090a13692174b5fb0b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b1f01714d2b4587659682661c05b341d0f50254e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638419"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592857"
 ---
 # <a name="poison-message-handling"></a>Zehirli İleti İşleme
 A *zehirli ileti* uygulama teslim denemesi üst sınırını aşan bir ileti. Kuyruk tabanlı bir uygulama hataları nedeniyle bir ileti işleyemediğinde bu durum ortaya çıkabilir. Güvenilirlik taleplerini karşılamak üzere kuyruğa alınan bir uygulamayı bir işlem altında iletileri alır. İletinin yeni bir işlem altında yeniden kuyruğa alınan iletinin alındığı işlem iptal ediliyor iletinin kuyrukta bırakır, böylece. Durdurulacak işlemin neden olan sorun düzeltilmezse alıcı uygulama alma ve teslim denemesi sayısı aşıldı kadar aynı iletiyi iptal ediliyor. döngü ve zehirli ileti sonuçları tıkanıp.  
@@ -52,7 +52,7 @@ A *zehirli ileti* uygulama teslim denemesi üst sınırını aşan bir ileti. Ku
   
  WCF iki standart sıraya alınan bağlamalarını sunar:  
   
-- <xref:System.ServiceModel.NetMsmqBinding>. A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] diğer WCF uç noktaları ile kuyruğa tabanlı iletişim gerçekleştirmek için uygun bağlama.  
+- <xref:System.ServiceModel.NetMsmqBinding>. Kuyruk tabanlı iletişim diğer WCF uç noktaları ile gerçekleştirmek için uygun bir .NET Framework bağlama.  
   
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Message Queuing var olan uygulamalarla iletişim kurmak için uygun olan bir bağlama.  
   

@@ -2,12 +2,12 @@
 title: ADO.NET’teki Yenilikler
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 76ded71e7fa5ece382d0b0947eefa05682dc0f8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b54f7ab6505f86d0447654f21b197644d68254c0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673111"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583440"
 ---
 # <a name="whats-new-in-adonet"></a>ADO.NET’teki Yenilikler
 
@@ -15,7 +15,7 @@ Aşağıdaki özellikleri yeni [!INCLUDE[vstecado](../../../../includes/vstecado
 
 ## <a name="sqlclient-data-provider"></a>SqlClient veri sağlayıcısı
 
-Aşağıdaki özellikleri yeni [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SQL Server için veri sağlayıcısı [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:
+Yeni SQL Server için .NET Framework Veri Sağlayıcısı'nda aşağıdaki özellikler [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:
 
 - ConnectRetryCount ve ConnectRetryInterval bağlantı dizesi anahtar sözcükleri (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) boşta kalan bağlantı dayanıklılığı özelliğini denetlemenize olanak tanır.
 

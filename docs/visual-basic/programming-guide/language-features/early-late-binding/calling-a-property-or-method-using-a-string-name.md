@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: e267c0c4d1d3e8f986348863d933c984f686b33b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92430f23b3d4d6237d0b6ec606ce2cb9b945f6f8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973348"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590037"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Bir Dize Adı Kullanarak Bir Özelliği veya Yöntemi Çağırma (Visual Basic)
 Çoğu durumda, tasarım zamanında bir nesnenin yöntemleri ve özellikleri keşfedin ve bunları işlemek için kod yazın. Ancak, bazı durumlarda, bir nesnenin özellikleri ve yöntemleri hakkında önceden bilmeyebilir veya yalnızca bir son kullanıcının özelliklerini belirtin veya çalışma zamanında bir yöntem yürütülemez etkinleştirme esnekliğine isteyebilirsiniz.  
@@ -31,7 +31,7 @@ ms.locfileid: "61973348"
   
  İlk bağımsız değişken *nesne*, üzerinde işlem yapmak istediğiniz nesne adını alır. *ProcedureName* çağrılacak yöntem veya özellik yordamın adını içeren bir dize bağımsız değişkeni alır. *; CallType &* çağrılacak yordamı türünü temsil eden sabit bağımsız değişkeni alır: bir yöntem (`Microsoft.VisualBasic.CallType.Method`), bir özelliğin okuma (`Microsoft.VisualBasic.CallType.Get`), veya bir özellik kümesi (`Microsoft.VisualBasic.CallType.Set`). *Bağımsız değişkenleri* isteğe bağlı bağımsız değişken alan bir dizi türü `Object` yordam herhangi bir bağımsız değişken içeren.  
   
- Kullanabileceğiniz `CallByName` sınıflarıyla geçerli çözümünüzden, ancak çoğunlukla COM nesneleri erişmek için kullanılan veya nesnelerin [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] derlemeler.  
+ Kullanabileceğiniz `CallByName` sınıflarıyla geçerli çözümünüzden, ancak çoğunlukla COM nesneleri veya nesneler .NET Framework derlemeleri erişmek için kullanılır.  
   
  Adlı bir sınıf içeren bir bütünleştirilmiş kod Başvurusu Ekle varsayalım `MathClass`, adlı yeni bir işlev olan `SquareRoot`aşağıdaki kodda gösterildiği gibi:  
   

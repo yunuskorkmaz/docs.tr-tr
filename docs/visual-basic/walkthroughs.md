@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47c79b8d716be6c247be3ec66c9ef00fbc021973
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021160"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586276"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic Dili İzlenecek Yolu
 İzlenecek yollar, bunları ürün veya belirli bir özellik alanı hakkında öğrenmeye başlayın için iyi bir yer sağlar ortak senaryolar için adım adım yönergeler sağlar.  
@@ -72,7 +72,7 @@ ms.locfileid: "62021160"
  Dosya, bir dosya içinde bir dize için arama hakkında bilgi belirlemek ve bir dosyaya yazmak için Visual Basic işlevleri nasıl yapılacağı açıklanır.  
   
  [.NET Framework yöntemlerini kullanarak dosyaları düzenleme](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Nasıl kullanılacağını gösteren [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yöntemleri bir dosya ile ilgili bilgileri belirlemek için bir dize bir dosyada arayın ve dosyaya yazma.  
+ Dosya, bir dosya içinde bir dize için arama hakkında bilgi belirlemek ve bir dosyaya yazmak için .NET Framework yöntemlerini nasıl yapılacağı açıklanır.  
   
  [Visual Basic'te bir nesneyi kalıcı kılma](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Basit bir nesne oluşturmak ve verileri bir dosyaya kalıcı hale getirmek nasıl gösterir.  

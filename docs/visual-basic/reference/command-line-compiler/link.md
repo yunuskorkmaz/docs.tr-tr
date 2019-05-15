@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 2064c21d3ec0cd29ed5c41a2f4ba2fd8870926b0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b13d8266d0702d831a0f5ebb3a9586864fe22ccb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618211"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586536"
 ---
 # <a name="-link-visual-basic"></a>-bağlantı (Visual Basic)
 Derleyici COM tür bilgilerini belirli derlemelerde şu anda derleme proje kullanılabilir hale getirmek neden olur.  
@@ -55,7 +55,7 @@ Derleyici COM tür bilgilerini belirli derlemelerde şu anda derleme proje kulla
   
  Kullanım [- LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md) için bir veya daha fazla, derleme başvuruları bulunduğu dizini belirtin.  
   
- Gibi [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) derleyici seçeneği `-link` derleyici seçeneği başvuru sık kullanılan nezahrnovat yanıt dosyası kullanan [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] derlemeler. Kullanma [- noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) nezahrnovat dosyasını kullanmak için derleyicinin istemiyorsanız derleyici seçeneği.  
+ Gibi [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) derleyici seçeneği `-link` derleyici seçeneği, sık kullanılan .NET Framework derlemelerine başvuran nezahrnovat yanıt dosyası kullanır. Kullanma [- noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) nezahrnovat dosyasını kullanmak için derleyicinin istemiyorsanız derleyici seçeneği.  
   
  Kısa formunu da `-link` olduğu `-l`.  
   

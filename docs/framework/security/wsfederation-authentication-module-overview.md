@@ -3,12 +3,12 @@ title: WSFederation Kimlik Doğrulaması Modülüne Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: f4dc63272c47dc0cd9eaa15986e4369d9d689b64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 63090efdf97066b4a276880d4f4be0f843de6800
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592362"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586046"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation Kimlik Doğrulaması Modülüne Genel Bakış
 Windows Identity Foundation (WIF), ASP.NET uygulamalarında WS-Federated kimlik doğrulama Modülü (WS-FAM) aracılığıyla şirket dışı kimlik doğrulaması için destek içerir. Bu konu nasıl Federasyon kimlik doğrulaması çalışır ve nasıl kullanılacağını anlamanıza yardımcı olur.  
@@ -44,7 +44,7 @@ Windows Identity Foundation (WIF), ASP.NET uygulamalarında WS-Federated kimlik 
  WS-FAM işlevselliğini de özelleştirmenize olanak tanıyan çeşitli olayları da başlatır. bir [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulama.  
   
 ### <a name="how-the-ws-fam-works"></a>WS-FAM nasıl çalışır?  
- WS-FAM uygulanan <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> sınıfı. Genellikle, WS-FAM HTTP ardışık düzen ekleyin, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] RP uygulaması. Kimliği doğrulanmamış bir kullanıcı korunan bir kaynağa erişmeyi denediğinde, RP "401 yetkilendirme reddedildi" HTTP yanıtı döndürür. WS-FAM alması rotasyonunun yerine bu yanıtı yakalar ve ardından bu kullanıcının belirtilen STS'ye yönlendirir. STS WS-FAM yeniden kesen bir güvenlik belirteci verir. WS-FAM bir örneğini oluşturmak için bu belirteci kullanır <xref:System.Security.Claims.ClaimsPrincipal> kimliği doğrulanmış kullanıcı için sağlayan normal [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] çalışması için yetkilendirme mekanizmalarını.  
+ WS-FAM uygulanan <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> sınıfı. Genellikle, WS-FAM HTTP ardışık düzen ekleyin, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] RP uygulaması. Kimliği doğrulanmamış bir kullanıcı korunan bir kaynağa erişmeyi denediğinde, RP "401 yetkilendirme reddedildi" HTTP yanıtı döndürür. WS-FAM alması rotasyonunun yerine bu yanıtı yakalar ve ardından bu kullanıcının belirtilen STS'ye yönlendirir. STS WS-FAM yeniden kesen bir güvenlik belirteci verir. WS-FAM bir örneğini oluşturmak için bu belirteci kullanır <xref:System.Security.Claims.ClaimsPrincipal> kimliği doğrulanmış kullanıcı için çalışması normal .NET Framework yetkilendirme mekanizmaları sağlar.  
   
  HTTP durum bilgisiz olduğundan, kullanıcının başka bir korumalı kaynağa erişmeye çalışan her zaman tüm bu işlem yinelenen önlemek için bir yol ihtiyacımız var. Burada <xref:System.IdentityModel.Services.SessionAuthenticationModule> halinde sunulur. STS, kullanıcı için bir güvenlik belirteci verdiğinde <xref:System.IdentityModel.Services.SessionAuthenticationModule> aynı zamanda kullanıcı için bir oturum güvenlik belirteci oluşturur ve bir tanımlama bilgisinde koyar. Sonraki isteklerde <xref:System.IdentityModel.Services.SessionAuthenticationModule> bu tanımlama bilgisi durdurur ve kullanıcının yeniden oluşturmak için kullandığı <xref:System.Security.Claims.ClaimsPrincipal>.  
   

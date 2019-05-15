@@ -6,16 +6,16 @@ helpviewer_keywords:
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: 6e8b4eba40cc1872cb289ca120679bb951f2652a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e45f8eafa696c61f917e333c665380c454401e0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022390"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589007"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework Uygulamalarında COM Birlikte Çalışabilirliği (Visual Basic)
 
-COM nesneleri ve .NET Framework nesneleri aynı uygulamada kullanmak istediğinizde, nesneleri bellekte nasıl mevcut farklar adresi gerekir. .NET Framework nesnesi yönetilen bellekte bulunur; ortak dil çalışma zamanı tarafından denetlenen bellek — ve gerektiğinde çalışma zamanı tarafından taşınmış olabilir. Bir COM nesnesi yönetilmeyen bellekte bulunan ve başka bir bellek konumuna taşımak için beklenmiyor. Visual Studio ve [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] araçları bu etkileşimi denetlemek için yönetilen ve yönetilmeyen bileşenler sağlar. Yönetilen kodu hakkında daha fazla bilgi için bkz. [ortak dil çalışma zamanı](../../../standard/clr.md).
+COM nesneleri ve .NET Framework nesneleri aynı uygulamada kullanmak istediğinizde, nesneleri bellekte nasıl mevcut farklar adresi gerekir. .NET Framework nesnesi yönetilen bellekte bulunur; ortak dil çalışma zamanı tarafından denetlenen bellek — ve gerektiğinde çalışma zamanı tarafından taşınmış olabilir. Bir COM nesnesi yönetilmeyen bellekte bulunan ve başka bir bellek konumuna taşımak için beklenmiyor. Visual Studio ve .NET Framework, bu yönetilen ve yönetilmeyen bileşenler etkileşimi denetlemek için araçlar sağlar. Yönetilen kodu hakkında daha fazla bilgi için bkz. [ortak dil çalışma zamanı](../../../standard/clr.md).
 
 .NET uygulamalarında COM nesneleri kullanmanın yanı sıra, ayrıca Visual Basic nesneleri, com ile yönetilmeyen koddan erişilebilir geliştirmek için kullanmak istediğiniz
 
