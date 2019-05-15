@@ -2,15 +2,15 @@
 title: LINQ - SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: 532813f68c0996337ce3bed8172a826425db1ec0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef95a7cebb527b01c15d124227664823fcbbaa23
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902609"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582772"
 ---
 # <a name="linq-to-sql"></a>LINQ - SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir bileşeni olan [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] ilişkisel verileri nesne gibi yönetmek için çalışma zamanı altyapısı sağlayan sürüm 3.5.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .NET Framework sürüm 3.5 ilişkisel verileri nesne gibi yönetmek için çalışma zamanı altyapısı sağlayan bir bileşendir.  
   
 > [!NOTE]
 >  İlişkisel veri koleksiyonunu iki boyutlu tablo görünür (*ilişkileri* veya *düz dosyaları*), burada ortak sütunları tabloların birbirleriyle. Kullanılacak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] temel ilkelerini ilişkisel veritabanlarının bazı konusunda etkili bir şekilde olması gerekir.  

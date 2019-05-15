@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a8792698d78b37fa42721f0ad82c0e0d3f7c8dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8170dd2e2941be3a73f7a4fd8c37d4fb2ef96235
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622803"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592241"
 ---
 # <a name="generics-in-net"></a>.NET içindeki Genel Türler
 
@@ -119,7 +119,7 @@ ms.locfileid: "64622803"
   
  Bazı sınırlamalar genel türlerin yararları şunlardır:  
   
-- Genel türler türetilmiş çoğu temel sınıftan gibi <xref:System.MarshalByRefObject> (ve sınırlamalar genel tür parametreleri gibi temel sınıflarından türetilen gerektirecek şekilde kullanılabilecek <xref:System.MarshalByRefObject>). Ancak, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] bağlam bağlı Genel türleri desteklemez. Genel bir tür türetildiğinde <xref:System.ContextBoundObject>, ancak nedenleri yazın, örneği oluşturulmaya çalışılırken bir <xref:System.TypeLoadException>.  
+- Genel türler türetilmiş çoğu temel sınıftan gibi <xref:System.MarshalByRefObject> (ve sınırlamalar genel tür parametreleri gibi temel sınıflarından türetilen gerektirecek şekilde kullanılabilecek <xref:System.MarshalByRefObject>). Ancak, .NET Framework bağlam bağlı Genel türleri desteklemez. Genel bir tür türetildiğinde <xref:System.ContextBoundObject>, ancak nedenleri yazın, örneği oluşturulmaya çalışılırken bir <xref:System.TypeLoadException>.  
   
 - Numaralandırmalar, genel tür parametrelerine sahip olamaz. (Örneğin, Visual Basic, C# veya C++ kullanarak tanımlanan genel tür içinde iç içe) bir sabit listesi yalnızca bu arada genel olabilir. Daha fazla bilgi için bkz: "Numaralandırmalar" [ortak tür sistemi](../../../docs/standard/base-types/common-type-system.md).  
   

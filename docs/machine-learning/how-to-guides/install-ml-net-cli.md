@@ -3,12 +3,12 @@ title: ML.NET komut satırı arabirimi (CLI) aracı yükleme
 description: Genel bakış ve ML.NET komut satırı arabirimi (CLI) aracı yükleme.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 869c443d519557c9d3976676047e63a4a072d2d3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 9560aa846a1aefabadbd7d4faf8bd306ba72e0de
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65066237"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557867"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET komut satırı arabirimi (CLI) aracı yükleme
 
@@ -56,10 +56,10 @@ Aşağıdaki komutu yazarak yüklemenin başarılı olduğunu doğrulayabilirsin
 
 ## <a name="install-a-specific-release-version"></a>Belirli bir sürümünü yükleyin
 
-Yayın öncesi bir sürümü ya da aracının belirli bir sürümü yüklemeye çalışıyorsanız, sürüm numarası şu biçimi kullanarak belirtebilirsiniz:
+Yayın öncesi bir sürümü ya da aracının belirli bir sürümü yüklemeye çalıştığınız varsa, belirtebilmeniz için [framework](../../standard/frameworks.md) aşağıdaki biçimi kullanarak:
 
 ```console
-> dotnet tool install -g <package-name> --version <version-number>
+> dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 Aşağıdaki komutu yazarak paketi düzgün şekilde yüklendiğinden de göz atabilirsiniz:

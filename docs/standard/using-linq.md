@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 52b92048fa845725ce46740e36b96ed55af67c30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 941bfa624bfcc05457714b2f342054bbebfdf908
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644728"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557895"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (dil ile tümleşik sorgu)
 
@@ -97,7 +97,7 @@ var filteredItems = from item in myItems
 
 API sözdizimi sorgu söz dizimi yapmak için yalnızca daha kısa bir yol değil mi?
 
-Hayır. Sorgu söz dizimi için izin verir **izin** tanıtır ve sonraki ifade parçalarını de kullanmayı ifadesi, kapsamı içinde bir değişken bağlamasına izin veren yan tümcesi. Aynı kodu yeniden oluştururken yalnızca API söz dizimi ile yapılabilir, ancak büyük olasılıkla okunması zor olan kodlara neden.
+Hayır. Sorgu söz dizimi için kullanılmasına **izin** tanıtır ve sonraki ifade parçalarını de kullanmayı ifadesi, kapsamı içinde bir değişken bağlamasına izin veren yan tümcesi. Aynı kodu yeniden oluştururken yalnızca API söz dizimi ile yapılabilir, ancak büyük olasılıkla okunması zor olan kodlara neden.
 
 Soru sorun bu şekilde **yalnızca sorgu söz dizimi kullanmalısınız?**
 

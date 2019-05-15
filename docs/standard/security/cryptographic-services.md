@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2ca5c26b7e5b830ee8dccffb452b8509c8b0d1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f070419fb8cdca178369bee12545dd1a0d89ea47
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795310"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592740"
 ---
 # <a name="cryptographic-services"></a>Şifreleme Hizmetleri
 
@@ -112,7 +112,7 @@ Gizli anahtar şifreleme bir dezavantajı, iki taraf bir anahtar ve IV anlaşıl
 
 Alice ve Bob güvenli bir kanal üzerinden iletişim kurmak isteyen iki tarafın olduğu varsayılırsa, bunlar gizli anahtar şifreleme gibi kullanabilirsiniz: Alice ve Bob belirli bir algoritma (örneğin, AES) bir özel anahtar ve IV ile kullanmayı kabul etmiş olursunuz. Alice, bir ileti oluşturur ve ileti göndermek, ağ akışı (belki de bir adlandırılmış kanal veya ağ e-posta) oluşturur. Ardından, Filiz anahtar ve IV kullanarak metni şifreler ve IV ve şifreli ileti Bob için intranet üzerinden gönderir. Bob, şifrelenmiş metni alır ve IV kullanarak şifresini çözer ve daha önce anahtarı üzerinde anlaşılan. İletim yakalanırsa kendisinin anahtar bilmediğinden, dinleyiciyi özgün iletinin kurtaramazsınız. Bu senaryoda, yalnızca anahtar gizli kalmalıdır. Bir gerçek dünya senaryosunda, Alice veya Bob gizli bir anahtar oluşturur ve gizli (simetrik) anahtar diğer tarafa devretmek için (asimetrik) ortak anahtar şifrelemesi kullanır. Ortak anahtar şifrelemesi hakkında daha fazla bilgi için sonraki bölüme bakın.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Gizli anahtar şifreleme algoritmalarını uygulayan aşağıdaki sınıfları sağlar:
+.NET Framework, gizli anahtar şifreleme algoritmalarını uygulayan aşağıdaki sınıfları sağlar:
 
 - <xref:System.Security.Cryptography.AesManaged> (sürümünde [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]).
 
@@ -154,7 +154,7 @@ Aşağıdaki listede, ortak anahtar ve gizli anahtar şifreleme algoritmaları a
 
 - Ortak anahtar algoritmaları gizli anahtar algoritmaları ile karşılaştırıldığında çok yavaş ve büyük miktarlarda verileri şifrelemek için tasarlanmamıştır. Ortak anahtar algoritmaları, yalnızca çok küçük miktarlarda veri aktarmak için kullanışlıdır. Genellikle, ortak anahtar şifreleme anahtarı ve gizli anahtar algoritması tarafından kullanılacak IV şifrelemek için kullanılır. Anahtar ve IV aktarıldıktan sonra gizli anahtar şifreleme oturumunun kalanı için kullanılır.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Ortak anahtar şifreleme algoritmalarını uygulayan aşağıdaki sınıfları sağlar:
+.NET Framework, ortak anahtar şifreleme algoritmalarını uygulayan aşağıdaki sınıfları sağlar:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -185,7 +185,7 @@ Bir iletinin dijital olarak imzalamak için ortak anahtar şifrelemesi'ni kullan
 > [!NOTE]
 > Gönderenin ortak anahtar genel bilgi ve genellikle dijital imza biçiminde dahil olduğundan bir imza herkes tarafından doğrulanabilir. Bu yöntem, ileti gizliliği saklamaz; İletinin gizli olması de şifrelenmelidir.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Dijital imza algoritmalarını uygulayan aşağıdaki sınıfları sağlar:
+.NET Framework, dijital imza algoritmalarını uygulayan aşağıdaki sınıfları sağlar:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -223,7 +223,7 @@ Karma algoritmaları küçük ikili değerler karma değerleri olarak bilinen bi
 
 Düz metin olarak aktarılan olduğundan Alice'in iletileri okumasını önceki yöntemlerden hiçbiri birisi engeller. Tam güvenlik genellikle (İleti imzalama) dijital imzalar ve şifreleme gerektirir.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Karma algoritmaları uygulayan aşağıdaki sınıfları sağlar:
+.NET Framework, karma algoritmaları uygulayan aşağıdaki sınıflar sağlar:
 
 - <xref:System.Security.Cryptography.HMACSHA1>.
 
@@ -256,7 +256,7 @@ Düz metin olarak aktarılan olduğundan Alice'in iletileri okumasını önceki 
 
 ## <a name="random-number-generation"></a>Rastgele sayı oluşturma
 
-Rastgele sayı oluşturma birçok şifreleme işlemleri için tam sayı. Örneğin, şifreleme anahtarlarını, böylece bunları yeniden uygulanamaz olarak rastgele olmanız gerekir. Şifreleme rastgele sayı üreteçlerinin ile daha iyi bir olasılığını tahmin etmek için uyuşmazlığa neden çıktı oluşturmak gerekir yarısı. Bu nedenle, sonraki çıktı bit tahmin etme, herhangi bir yöntemi rasgele tahmin daha iyi gerçekleştirmemelisiniz. Sınıflarda [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] rastgele sayı üreteçlerinin şifreleme anahtarları oluşturmak için kullanın.
+Rastgele sayı oluşturma birçok şifreleme işlemleri için tam sayı. Örneğin, şifreleme anahtarlarını, böylece bunları yeniden uygulanamaz olarak rastgele olmanız gerekir. Şifreleme rastgele sayı üreteçlerinin ile daha iyi bir olasılığını tahmin etmek için uyuşmazlığa neden çıktı oluşturmak gerekir yarısı. Bu nedenle, sonraki çıktı bit tahmin etme, herhangi bir yöntemi rasgele tahmin daha iyi gerçekleştirmemelisiniz. .NET Framework içindeki sınıflar, rastgele sayı üreteçlerinin şifreleme anahtarları oluşturmak için kullanın.
 
 <xref:System.Security.Cryptography.RNGCryptoServiceProvider> Bir rasgele sayı üreteci algoritması uygulaması bir sınıftır.
 

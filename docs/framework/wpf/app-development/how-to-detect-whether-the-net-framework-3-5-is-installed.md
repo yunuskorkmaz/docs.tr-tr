@@ -7,18 +7,18 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: af2428ece79803953b8c90431d905824dd18fec8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c373d9fd5934be98735cd814dafb35ed81fddfe
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947868"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592633"
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Nasıl yapılır: .NET Framework 3.5'in Yüklü Olup Olmadığını Algılama
 Yöneticiler Windows Presentation Foundation (WPF) uygulamaları hedefleyen bir sistemde dağıtmadan önce [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], bunlar ilk olduğunu onaylaması gerekir [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] çalışma zamanının. Bu konu, yazılan bir betik sağlar. Yöneticiler belirlemek için kullanabileceğiniz HTML/JavaScript içinde olup olmadığını [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] bir sistemde mevcut.  
   
 > [!NOTE]
->  Yükleme, dağıtma ve algılama hakkında daha ayrıntılı bilgi için [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], bkz: [geliştiriciler için .NET Framework yükleme](../../install/guide-for-developers.md).  
+>  Yükleme hakkında daha ayrıntılı bilgi için bkz: dağıtma ve .NET Framework'ü algılama [geliştiriciler için .NET Framework yükleme](../../install/guide-for-developers.md).  
   
 ## <a name="example"></a>Örnek  
  Zaman [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] olan yüklü MSI ".NET CLR" ve sürüm numarasını UserAgent dizesi olarak ekler. Aşağıdaki örnek, basit bir HTML sayfasında yerleşik bir komut dosyası gösterir. Komut dosyası belirlemek için UserAgent dizesi arar olmadığını [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] yüklenir ve arama sonuçlarını temel bir durum iletisi görüntüler.  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: b97ce0e4ce32e272ff884240b566c1c1c0e0d271
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4dbccfc881e777309394aed9711a93b8a25315be
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614656"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592612"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Denetimleri Görsel Stilde İşleme
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Görsel stilleri kullanarak bunları destekleyen işletim sistemlerinde arabirimi (UI) öğeleri işleme denetimleri ve diğer Windows kullanıcı için destek sağlar. Bu konuda destek çeşitli düzeylerde anlatılmaktadır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] işleme denetimleri ve diğer UI öğeleri ile işletim sisteminin geçerli görsel stili.  
+.NET Framework, bunları destekleyen işletim sistemlerinde görsel stilleri kullanarak arabirimi (UI) öğeleri işleme denetimleri ve diğer Windows kullanıcı için destek sağlar. Bu konuda, işleme denetimler ve diğer kullanıcı Arabirimi öğeleri için .NET Framework desteği çeşitli düzeylerde işletim sisteminin geçerli görsel stil ile anlatılmaktadır.  
   
 ## <a name="rendering-classes-for-common-controls"></a>Ortak denetimleri için işleme sınıfları  
  Bir denetim oluşturma kullanıcı arabirimi denetimi çizim ifade eder. <xref:System.Windows.Forms?displayProperty=nameWithType> Ad alanı sağlar <xref:System.Windows.Forms.ControlPaint> bazı yaygın işlemeye sınıfı Windows Forms denetimleri. Ancak, bu sınıf, tutarlı bir kullanıcı Arabirimi deneyimi çizim özel denetimleri görsel stilde uygulamalarında etkinleştirildiğinde sürdürülmesi zor zorlaştırabilir Klasik Windows stilde denetimler çizer.  
@@ -61,7 +61,7 @@ ms.locfileid: "64614656"
  Kullanma hakkında daha fazla bilgi için <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> ve <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, bkz: [nasıl yapılır: Bir görsel stilde öğe işleme](how-to-render-a-visual-style-element.md).  
   
 ## <a name="enabling-visual-styles"></a>Görsel stilleri etkinleştirme  
- Yazılmış bir uygulama için görsel stilleri etkinleştirmek için [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sürüm 1.0, programcılar ComCtl32.dll sürüm 6 veya sonraki denetimlerini çizmek için kullanılacak belirten bir uygulama bildirimi içermelidir. İle oluşturulan uygulamalar [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sürüm 1.1 veya üstünün kullanabileceğiniz <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi <xref:System.Windows.Forms.Application> sınıfı.  
+ .NET Framework sürüm 1.0 için yazılmış bir uygulama için görsel stilleri etkinleştirmek için programcılar ComCtl32.dll sürüm 6 veya sonraki denetimlerini çizmek için kullanılacak belirten bir uygulama bildirimi eklemeniz gerekir. .NET Framework sürüm 1.1 veya üzeri ile oluşturulan uygulamalar kullanabilir <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi <xref:System.Windows.Forms.Application> sınıfı.  
   
 ## <a name="checking-for-visual-styles-support"></a>Görsel stil desteğini denetleme  
  <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> Özelliği <xref:System.Windows.Forms.Application> sınıfı, geçerli uygulama denetimleri görsel stilde çizim olup olmadığını belirtir. Özel denetim boyama, değerini kontrol edebilirsiniz <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> denetiminiz ile veya olmadan görsel stilleri işlemeyeceğini belirlemek için. Aşağıdaki tablo için bulunması gereken dört koşulları listeler <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> döndürülecek `true`.  

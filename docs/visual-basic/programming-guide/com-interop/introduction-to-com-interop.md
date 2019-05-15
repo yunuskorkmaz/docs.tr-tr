@@ -5,28 +5,28 @@ helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: 1eebdf4bee09f2a568092f275b57416c3def9ebc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5eb862d75f8870da40af4cd817fa32a3d2781f38
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624824"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592726"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Birlikte Çalışma'ya Giriş (Visual Basic)
 Bileşen Nesne Modeli (COM) diğer bileşenleri ve uygulamaları barındırmak için işlevselliği kullanıma sunma nesneyi sağlar. COM nesneleri Windows yıllardır programlama için temel kullanımda olsa, Ortak Dil Çalışma Zamanı Modülü (CLR) tasarlanmış uygulamalar birçok avantaj sunar.  
   
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulamalar bu COM ile geliştirilen sonunda değiştirir O zamana kadar kullanabilir veya Visual Studio kullanarak COM nesneleri oluşturmak gerekebilir. COM birlikte çalışabilirlik veya *COM birlikte çalışma*, var olan COM nesneleri için geçişi sırasında kullanmanıza olanak tanır [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kendi hızınızda.  
+ .NET framework uygulamaları sonunda bu COM ile geliştirilen değiştirir O zamana kadar kullanabilir veya Visual Studio kullanarak COM nesneleri oluşturmak gerekebilir. COM birlikte çalışabilirlik veya *COM birlikte çalışma*, var olan COM nesneleri .NET Framework kendi hızınızda geçişi sırasında kullanmanıza olanak tanır.  
   
- Kullanarak [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] COM bileşenleri oluşturmak için Kayıtsız COM birlikte çalışma kullanabilirsiniz. Bu, birden fazla sürümünün bir bilgisayarda yüklü ve son kullanıcılar, XCOPY veya FTP uygulamanızı bilgisayarlarında uygun bir dizine kopyalamak için burada çalıştırılabilir kullanma olanak tanır, hangi DLL sürümü etkin denetlemenize olanak tanır. Daha fazla bilgi için [Registration-Free COM birlikte çalışma](../../../framework/interop/registration-free-com-interop.md).  
+ COM bileşenleri oluşturmak için .NET Framework kullanarak Kayıtsız COM birlikte çalışma kullanabilirsiniz. Bu, birden fazla sürümünün bir bilgisayarda yüklü ve son kullanıcılar, XCOPY veya FTP uygulamanızı bilgisayarlarında uygun bir dizine kopyalamak için burada çalıştırılabilir kullanma olanak tanır, hangi DLL sürümü etkin denetlemenize olanak tanır. Daha fazla bilgi için [Registration-Free COM birlikte çalışma](../../../framework/interop/registration-free-com-interop.md).  
   
 ## <a name="managed-code-and-data"></a>Yönetilen kod ve veriler  
- Geliştirilmiş kod için [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] olarak adlandırılır *yönetilen kod*ve CLR tarafından kullanılan meta veriler içerir. Tarafından kullanılan veri [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulamaları çağrılır *yönetilen verilerini* ayırma ve belleği geri kazanmak ve tür denetimi gibi verilerle ilgili görevler çalışma zamanı yönettiği için. Varsayılan olarak, Visual Basic .NET yönetilen kod ve veri kullanır ancak yönetilmeyen kod ve COM nesneleri (Bu sayfada daha sonra açıklanmıştır) birlikte çalışma derlemelerini kullanarak verileri erişebilirsiniz.  
+ Kod, .NET Framework olarak adlandırılır için geliştirilen *yönetilen kod*ve CLR tarafından kullanılan meta veriler içerir. .NET Framework uygulamaları tarafından kullanılan veri çağrılır *yönetilen verilerini* ayırma ve belleği geri kazanmak ve tür denetimi gibi verilerle ilgili görevler çalışma zamanı yönettiği için. Varsayılan olarak, Visual Basic .NET yönetilen kod ve veri kullanır ancak yönetilmeyen kod ve COM nesneleri (Bu sayfada daha sonra açıklanmıştır) birlikte çalışma derlemelerini kullanarak verileri erişebilirsiniz.  
   
 ## <a name="assemblies"></a>Bütünleştirilmiş kodlar  
- Bir derlemenin birincil yapı bloğudur bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulama. Yerleşik, oluşturulan ve dağıtılan bir veya daha fazla dosya içeren bir tek uygulama birim olarak işlevleri koleksiyonudur. Her derleme, derleme bildirimi içerir.  
+ Bir derleme, bir .NET Framework uygulamasının birincil yapı taşıdır. Yerleşik, oluşturulan ve dağıtılan bir veya daha fazla dosya içeren bir tek uygulama birim olarak işlevleri koleksiyonudur. Her derleme, derleme bildirimi içerir.  
   
 ## <a name="type-libraries-and-assembly-manifests"></a>Tür kitaplıkları ve derleme bildirimleri  
- Tür kitaplıkları, COM nesneleri, üye adları ve veri türleri gibi özellikleri açıklar. Derleme bildirimleri için de aynı işlevi gerçekleştirmek [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulamalar. Bunlar aşağıdakiler hakkında bilgi içerir:  
+ Tür kitaplıkları, COM nesneleri, üye adları ve veri türleri gibi özellikleri açıklar. Derleme bildirimleri, .NET Framework uygulamaları için aynı işlevi gerçekleştirir. Bunlar aşağıdakiler hakkında bilgi içerir:  
   
 - Derleme kimliği, sürüm, kültür ve dijital imza.  
   
@@ -41,15 +41,15 @@ Bileşen Nesne Modeli (COM) diğer bileşenleri ve uygulamaları barındırmak i
  Derlemeler ve derleme bildirimleri hakkında daha fazla bilgi için bkz. [.NET derlemeleri](../../../standard/assembly/index.md).  
   
 ### <a name="importing-and-exporting-type-libraries"></a>İçeri ve dışarı aktarma tür kitaplıkları  
- Visual Studio bir tür kitaplığından bilgileri içeri aktarmanıza olanak sağlayan, Tlbimp gibi bir yardımcı içeren bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulama. Tlbexp yardımcı programını kullanarak derlemelerden tür kitaplıkları oluşturabilirsiniz.  
+ Visual Studio, bir yardımcı programı, bilgileri bir .NET Framework uygulamasına bir tür kitaplığından içeri aktarmanıza olanak sağlar, Tlbimp içerir. Tlbexp yardımcı programını kullanarak derlemelerden tür kitaplıkları oluşturabilirsiniz.  
   
  Tlbimp ve Tlbexp hakkında daha fazla bilgi için bkz: [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md) ve [Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](../../../framework/tools/tlbexp-exe-type-library-exporter.md).  
   
 ## <a name="interop-assemblies"></a>Birlikte çalışma derlemeleri  
- Birlikte çalışma derlemeleri [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yönetilen ve yönetilmeyen arasında köprü derlemeleri kod, eşleme COM Nesne üyeleri eşdeğerine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yönetilen üyeler. Birlikte çalışma derlemelerini Visual Basic .NET tarafından oluşturulan çoğu, birlikte çalışabilirlik hazırlama gibi COM nesneleri ile çalışma ayrıntılarını işler.  
+ Birlikte çalışma bütünleştirilmiş kodlarını arasında köprü yönetilen .NET Framework derlemelerine olan ve yönetilmeyen kod, COM Nesne üyeleri eşdeğeri .NET Framework eşleme üyeleri yönetilir. Birlikte çalışma derlemelerini Visual Basic .NET tarafından oluşturulan çoğu, birlikte çalışabilirlik hazırlama gibi COM nesneleri ile çalışma ayrıntılarını işler.  
   
 ## <a name="interoperability-marshaling"></a>Birlikte çalışabilirlik hazırlama  
- Tüm [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulamaları, nesnelerin kullandığı programlama diline bakılmaksızın birlikte çalışabilirliği sağlamak genel türleri kümesini paylaşır. Parametreler ve dönüş değerleri COM nesnelerinin bazen yönetilen kod içinde kullanılan farklı veri türleri kullanın. *Birlikte çalışabilirlik hazırlama* ve COM nesneleri dışarı taşırken paketleme parametreler ve dönüş değerleri eşdeğeri veri türlerini işlemidir. Daha fazla bilgi için [birlikte çalışma hazırlama](../../../framework/interop/interop-marshaling.md).  
+ Tüm .NET Framework uygulamaları, nesnelerin kullanılan programlama diline bakılmaksızın birlikte çalışabilirliği sağlayan ortak türler bir kümesini paylaşır. Parametreler ve dönüş değerleri COM nesnelerinin bazen yönetilen kod içinde kullanılan farklı veri türleri kullanın. *Birlikte çalışabilirlik hazırlama* ve COM nesneleri dışarı taşırken paketleme parametreler ve dönüş değerleri eşdeğeri veri türlerini işlemidir. Daha fazla bilgi için [birlikte çalışma hazırlama](../../../framework/interop/interop-marshaling.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

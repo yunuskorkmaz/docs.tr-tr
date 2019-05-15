@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 Performansı
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 4351955eeed722cfd10db79b9dbe5ec6692ed2ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 701e05301e82537aa6119ab3ec894483daee41f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592156"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592540"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 Performansı
 
@@ -18,7 +18,7 @@ ms.locfileid: "64592156"
 ## <a name="terminology"></a>Terminoloji
  Sürümü [!INCLUDE[wf1](../../../includes/wf1-md.md)] sunulan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] için bu konunun geri kalanı için WF4 anılacaktır.  [!INCLUDE[wf1](../../../includes/wf1-md.md)] .NET 3. 0 ' kullanıma sunulmuştur ve birkaç küçük düzeltmeden sahipti [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1. [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] Workflow Foundation sürümü başvurulabilir WF3 bu konunun geri kalanı için. WF3 gönderildiği [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] yan yana WF4 ile. WF3 yapılara WF4 geçirme hakkında daha fazla bilgi için bkz: [Windows Workflow Foundation 4 Geçiş Kılavuzu](https://go.microsoft.com/fwlink/?LinkID=153313)
 
- Windows Communication Foundation (WCF) hizmet yönelimli uygulamalar oluşturmak için Microsoft'un programlama modelidir. İlk .NET 3.0 WF3 birlikte bir parçası olarak kullanıma sunulmuştur ve artık'in temel bileşenlerinden biri olan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].
+ Windows Communication Foundation (WCF) hizmet yönelimli uygulamalar oluşturmak için Microsoft'un programlama modelidir. Daha önce .NET 3. 0 ' WF3 birlikte bir parçası olarak kullanıma sunulmuştur ve şimdi .NET Framework'in temel bileşenlerinden biri.
 
  Windows Server AppFabric oluşturun, ölçek ve Web uygulamaları ve IIS'de çalışan bileşik uygulamaları yönetmek kolaylaştıran tümleşik teknoloji kümesidir. Hizmetleri ve iş akışlarını yönetme ve izleme araçları sağlar. Daha fazla bilgi için [Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
 
@@ -401,7 +401,7 @@ public class Workflow1 : Activity
 
  WF3 SQL tabanlı izleme hizmeti ile birlikte gelir.  Bu hizmet, toplu ve toplu olmayan modda çalışabilir.  Toplu olmayan modda, izleme olayları doğrudan veritabanına yazılır.  Toplu iş modunda izleme olaylarını, iş akışı örneği durumu olarak aynı toplu iş içine toplanır.  Toplu iş modu iş akışı tasarım yelpazedeki en iyi performansı vardır.  Ancak, toplu işleme olumsuz bir etkisi olmadan kalıcı birçok etkinlik iş akışı çalıştırır ve bu etkinlikler izlenir olabilir.  Bu genellikle Döngülerde olacağını ve bu senaryonun olmaması için en iyi bir Kalıcılık noktası içerecek şekilde büyük döngüler tasarlamak için yoludur.  Her maliyetleri ve bir bakiye ile gündeme önemlidir bir döngüye Kalıcılık noktası ile tanışın de performansı olumsuz yönde etkileyebilir.
 
- WF4 hizmet İzleme SQL ile birlikte gönderilmeyen.  İzleme bilgilerini bir SQL veritabanı'na kayıt daha iyi bir uygulama sunucusundan işlenen yerine yerleşik [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Bu nedenle SQL izleme artık AppFabric tarafından işlenir.  Kullanıma hazır izleme sağlayıcısı WF4 olay izleme için Windows (ETW üzerinde) temel alır.
+ WF4 hizmet İzleme SQL ile birlikte gönderilmeyen.  İzleme bilgilerini bir SQL veritabanı'na kayıt daha iyi bir uygulama sunucusundan işlenen yerine .NET Framework'e yerleşik. Bu nedenle SQL izleme artık AppFabric tarafından işlenir.  Kullanıma hazır izleme sağlayıcısı WF4 olay izleme için Windows (ETW üzerinde) temel alır.
 
  ETW, Windows içinde oluşturulmuş bir çekirdek düzeyinde ve düşük gecikmeli olay sistemidir.  Bu, aslında bir tüketici olduğunda yalnızca için olay izleme cezası uygulanmaya mümkün kılan bir sağlayıcı/tüketici modeli kullanır.  İşlemci, disk, bellek ve ağ kullanımı gibi çekirdek olayları yanı sıra birçok uygulama ETW de yararlanın.  Olayları, uygulama için özelleştirilebilir, ETW olayları, performans sayaçları daha güçlü.  Bir olay iş akışı kimliği ya da bir bilgi iletisidir gibi metin içerebilir.  Ayrıca, belirli bir alt olayların kullanan tüm olayları yakalamak daha az performans etkisine sahip olur, böylece olayları bit maskesi ile ayrılır.
 

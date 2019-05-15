@@ -1,18 +1,18 @@
 ---
-title: Bir modeli yeniden eğitme
+title: Modeli yeniden eğitme
 description: Bilgi ML.NET modelinde nasıl yeniden eğitme
 ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 552698c02a7846db588822fa68d094dece160ea0
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2f8f8c035166612aabede8a512485bdf296c5655
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063558"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557912"
 ---
-# <a name="re-train-a-model"></a>Bir modeli yeniden eğitme
+# <a name="re-train-a-model"></a>Modeli yeniden eğitme
 
 Bir machine learning modeli ML.NET olarak yeniden eğitme hakkında bilgi edinin.
 
@@ -51,7 +51,7 @@ ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchem
 
 ## <a name="extract-pre-trained-model-parameters"></a>Önceden eğitilmiş model parametreleri Ayıkla
 
-Modele yüklendiğinde erişerek öğrenilen model parametreleri Ayıkla [ `Model` ](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) önceden eğitilmiş modelin özelliği. Önceden eğitilmiş model doğrusal regresyon modeli kullanılarak eğitilmiş [ `OnlineGradientDescentTrainer` ](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) oluşturan bir[ `RegressionPredictionTransformer` ](xref:Microsoft.ML.Data.RegressionPredictionTransformer`1) , çıkarır [ `LinearRegressionModelParameters` ](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters). Bu doğrusal regresyon modeli parametreleri öğrenilen sapması ve ağırlıklarını veya modelin katsayılarını içerir. Bu değerler, yeni yeniden eğitim modeli için bir başlangıç noktası olarak kullanılır.
+Modele yüklendiğinde erişerek öğrenilen model parametreleri Ayıkla [ `Model` ](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) önceden eğitilmiş modelin özelliği. Önceden eğitilmiş model doğrusal regresyon modeli kullanılarak eğitilmiş [ `OnlineGradientDescentTrainer` ](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) oluşturan bir[ `RegressionPredictionTransformer` ](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) , çıkarır [ `LinearRegressionModelParameters` ](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters). Bu doğrusal regresyon modeli parametreleri öğrenilen sapması ve ağırlıklarını veya modelin katsayılarını içerir. Bu değerler, yeni yeniden eğitim modeli için bir başlangıç noktası olarak kullanılır.
 
 ```csharp
 // Extract trained model parameters

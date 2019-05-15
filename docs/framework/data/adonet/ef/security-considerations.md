@@ -2,15 +2,15 @@
 title: Güvenlik konuları (varlık çerçevesi)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 14d07fcb1d97a4e71747d6517f63fbc4108493da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5a985cfcd4834efd7bbab04d30c86787dfb90955
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641178"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583504"
 ---
 # <a name="security-considerations-entity-framework"></a>Güvenlik konuları (varlık çerçevesi)
-Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konuları açıklanmaktadır. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamalar. Güvenli oluşturmaya yönelik önerileri de izlemelidir [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] uygulamalar. Daha fazla bilgi için [güvenliğine genel bakış](../../../../../docs/framework/data/adonet/security-overview.md).  
+Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konuları açıklanmaktadır. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamalar. Güvenli .NET Framework uygulamaları oluşturmaya yönelik önerileri de izlemelidir. Daha fazla bilgi için [güvenliğine genel bakış](../../../../../docs/framework/data/adonet/security-overview.md).  
   
 ## <a name="general-security-considerations"></a>Genel güvenlik konuları  
  Aşağıdaki güvenlik hususlarını kullanan tüm uygulamalar için uygulama [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
@@ -63,7 +63,7 @@ Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konu
  Bir veri kaynağı Yöneticisi, kullanıcılara yalnızca gerekli izinleri vermeniz gerekir. Olsa da [!INCLUDE[esql](../../../../../includes/esql-md.md)] değil gibi INSERT, UPDATE veya DELETE, kullanıcıların verileri değiştirme desteği DML deyimleri veri kaynağına bağlantı erişmeye devam edebilirsiniz yapar. Kötü niyetli bir kullanıcı, veri kaynağının dillerinde DML deyimleri yürütmek için bu bağlantıyı kullanabilirsiniz.  
   
 #### <a name="run-applications-with-the-minimum-permissions"></a>En düşük izinlere sahip uygulamalar çalıştırın.  
- Yönetilen uygulama tam güven iznine çalışmasına izin verdiğinizde [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] bilgisayarınıza uygulamanın erişimi kısıtlamaz. Bu bir güvenlik açığı, uygulamanızdaki tüm sisteminin güvenliğini bozmasına gerek sağlayabilir. Kod erişimi güvenliği ve başka bir güvenlik mekanizması kullanmayı [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)], kısmi güven izinleri kullanarak ve en düşük işlev uygulamasını etkinleştirmek için gereken izinler kümesini ile uygulamaları çalıştırmanız gerekir. Aşağıdaki kod erişim izinleri olan en düşük izinleri, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama gereksinimlerine göre:  
+ Bir yönetilen bir uygulamanın tam güven iznine çalışmasına izin verdiğinizde, .NET Framework bilgisayarınıza uygulamanın erişimi kısıtlamaz. Bu bir güvenlik açığı, uygulamanızdaki tüm sisteminin güvenliğini bozmasına gerek sağlayabilir. .NET Framework kod erişim güvenliği ve başka bir güvenlik mekanizması kullanmak için uygulamalar kısmi güven izinleri kullanarak ve en düşük işlev uygulamasını etkinleştirmek için gereken izinler kümesini ile çalıştırmanız gerekir. Aşağıdaki kod erişim izinleri olan en düşük izinleri, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama gereksinimlerine göre:  
   
 - <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> belirtilen meta veri dosyaları açmaya veya <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> meta veri dosyaları için bir dizin aranacak.  
   

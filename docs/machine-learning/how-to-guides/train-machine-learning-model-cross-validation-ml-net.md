@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: a15dfbfcd563cf9df9c25779a5854a9f556523d1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: a06711ca83ea545adc7292cf6d8173f006fdb94d
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65066165"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557832"
 ---
 # <a name="train-and-evaluate-a-machine-learning-model-using-cross-validation"></a>Eğitme ve değerlendirme çapraz doğrulama kullanarak makine öğrenme modeli
 
@@ -91,7 +91,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 1. Her modelin performans kullanarak değerlendirilir [ `Evaluate` ](xref:Microsoft.ML.RegressionCatalog.Evaluate*) sınama veri kümesi üzerinde yöntemi. 
 1. Model, ölçümlerle birlikte modellerinin her biri için döndürülür.
 
-Sonuç depolanan `cvResults` koleksiyonudur [ `CrossValidationResult` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult`1) nesneleri. Bu nesne eğitilen model yanı sıra erişilebilir her iki formu olan ölçümler içerir [ `Model` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult`1.Model) ve [ `Metrics` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult`1.Metrics) özellikleri sırasıyla. Bu örnekte `Model` özelliği türüdür [ `ITransformer` ](xref:Microsoft.ML.ITransformer) ve `Metrics` özelliği türüdür [ `RegressionMetrics` ](xref:Microsoft.ML.Data.RegressionMetrics). 
+Sonuç depolanan `cvResults` koleksiyonudur [ `CrossValidationResult` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) nesneleri. Bu nesne eğitilen model yanı sıra erişilebilir her iki formu olan ölçümler içerir [ `Model` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) ve [ `Metrics` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) özellikleri sırasıyla. Bu örnekte `Model` özelliği türüdür [ `ITransformer` ](xref:Microsoft.ML.ITransformer) ve `Metrics` özelliği türüdür [ `RegressionMetrics` ](xref:Microsoft.ML.Data.RegressionMetrics). 
 
 ## <a name="extract-metrics"></a>Ölçümleri ayıklayın
 

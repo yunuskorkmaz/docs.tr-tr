@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 9c8ccf2404c4d8fd6e71f7aa41445c3d26ef5da7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 813ee167fdc09c7c7ea12f5f09602230e711d362
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601078"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593389"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic'de Genel Türler (Visual Basic)
 A *genel tür* uyum sağlayan çeşitli veri türleri için aynı işlevi gerçekleştirmek için tek bir programlama öğesi. Bir genel sınıf ya da yordamın tanımladığınızda, kendisi için bu işlevi gerçekleştirmek isteyebileceğiniz her veri türü için ayrı bir sürüm tanımlamak zorunda değildir.  
@@ -76,7 +76,7 @@ A *genel tür* uyum sağlayan çeşitli veri türleri için aynı işlevi gerçe
  Daha eksiksiz bir örnek için bkz: [nasıl yapılır: Farklı veri türlerinde aynı işlevselliği sağlayabilen bir sınıf tanımlama](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Uygun programlama öğeleri  
- Tanımlayabilir ve Genel sınıflar, yapılar, arabirimler, yordamları ve temsilciler kullanın. Unutmayın [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] birkaç genel sınıflar, yapılar ve yaygın olarak kullanılan genel öğelerini temsil eden bir arabirim tanımlar. <xref:System.Collections.Generic?displayProperty=nameWithType> Sözlükleri, listeler, kuyruklar ve Yığınlar ad alanı sağlar. Genel öğeniz tanımlamadan önce bunu zaten kullanılabilir olup olmadığını <xref:System.Collections.Generic?displayProperty=nameWithType>.  
+ Tanımlayabilir ve Genel sınıflar, yapılar, arabirimler, yordamları ve temsilciler kullanın. .NET Framework birkaç genel sınıflar, yapılar ve yaygın olarak kullanılan genel öğeleri temsil eden arabirimler tanımladığını unutmayın. <xref:System.Collections.Generic?displayProperty=nameWithType> Sözlükleri, listeler, kuyruklar ve Yığınlar ad alanı sağlar. Genel öğeniz tanımlamadan önce bunu zaten kullanılabilir olup olmadığını <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
  Yordamları türler değildir, ancak tanımlama ve genel yordamları kullanın. Bkz: [Visual Basic'de genel yordamlar](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   

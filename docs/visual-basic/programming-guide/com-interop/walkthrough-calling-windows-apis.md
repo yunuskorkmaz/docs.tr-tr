@@ -11,21 +11,21 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70914d63773c6a94ad92cf6301a8e2bc1368e7a1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022408"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592717"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>İzlenecek yol: Windows API'ları çağırma (Visual Basic)
 Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplıklarını (DLL'ler) apı'lerdir. Bunları kendi eşdeğer yordamları yazmak zor olduğunda görevleri gerçekleştirmek için kullanın. Örneğin, Windows adlı bir işlev sağlar `FlashWindowEx` olanak tanıyan bir uygulama için başlık çubuğu arasında açık ve koyu gri alternatif olun.  
   
  Windows API'leri, kodunuzda kullanmanın avantajı, onlarca zaten yazılır kullanışlı işlevi ve kullanılacak bekleme içerdiklerinden, geliştirme süresini kaydedebilirsiniz ' dir. Olumsuz yönüyse, Windows API ile ve unforgiving işler kötüye gittiğinde çalışmaya zor olabilir ' dir.  
   
- Windows API'leri, özel bir kategorinin birlikte çalışabilirlik temsil eder. Windows API'ları, yönetilen kod kullanmayın, yerleşik tür kitaplıklarına ve Visual Studio ile kullanılan farklı veri türlerini kullanma izniniz yok. Bu farklar nedeniyle ve Windows API'leri COM nesneleri, Windows API'ları ile birlikte çalışabilirlik olmadığından ve [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] platformunu kullanarak gerçekleştirilen çağırmak, veya PInvoke. Platform çağırma etkinleştirir DLL'lerde uygulanan yönetilmeyen işlevleri çağırmak için kod yönetilen bir hizmettir. Daha fazla bilgi için [yönetilmeyen DLL işlevlerini kullanma](../../../framework/interop/consuming-unmanaged-dll-functions.md). Visual Basic'te PInvoke kullanarak kullanabilirsiniz `Declare` deyimi veya uygulama `DllImport` özniteliği için boş bir yordam.  
+ Windows API'leri, özel bir kategorinin birlikte çalışabilirlik temsil eder. Windows API'ları, yönetilen kod kullanmayın, yerleşik tür kitaplıklarına ve Visual Studio ile kullanılan farklı veri türlerini kullanma izniniz yok. Nedeniyle bu farklılıklar ve Windows API'leri COM nesneleri, Windows API'ları ile birlikte çalışabilirlik değildir ve .NET Framework kullanılarak gerçekleştirilen platform çağırma, veya PInvoke. Platform çağırma etkinleştirir DLL'lerde uygulanan yönetilmeyen işlevleri çağırmak için kod yönetilen bir hizmettir. Daha fazla bilgi için [yönetilmeyen DLL işlevlerini kullanma](../../../framework/interop/consuming-unmanaged-dll-functions.md). Visual Basic'te PInvoke kullanarak kullanabilirsiniz `Declare` deyimi veya uygulama `DllImport` özniteliği için boş bir yordam.  
   
- Windows API çağrıları, Visual Basic programlama geçmişte önemli bir parçası olan, ancak Visual Basic .NET ile nadiren gereklidir. Mümkün olduğunda, yönetilen koddan kullanması gereken [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] görevleri yerine Windows API çağrıları gerçekleştirmek için. Bu izlenecek yolda hangi kullanarak bu durumlar için bilgiler sağlar Windows API'leri gereklidir.  
+ Windows API çağrıları, Visual Basic programlama geçmişte önemli bir parçası olan, ancak Visual Basic .NET ile nadiren gereklidir. Mümkün olduğunda, Windows API çağrıları yerine görevleri gerçekleştirmek için .NET Framework yönetilen koddan kullanmanız gerekir. Bu izlenecek yolda hangi kullanarak bu durumlar için bilgiler sağlar Windows API'leri gereklidir.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

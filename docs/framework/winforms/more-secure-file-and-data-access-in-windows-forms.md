@@ -13,15 +13,15 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 557c3296310a7eb3922a6c18b7b3de19ffac953c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c161cc27bd45f8f29e4d48c572d26d3c153b8f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802095"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592673"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Kaynakları ve veri korumaya yardımcı olmak için izinleri kullanır. Burada, uygulamanızın Okuma veya veri yazma uygulamaya verilen izinler bağlıdır. Uygulamanızı bir kısmi güven ortamında çalıştığında, verilerinize erişimi olmayabilir veya verilere erişme şeklini değiştirmek gerekebilir.  
+.NET Framework kaynakları ve veri korumaya yardımcı olmak için izinleri kullanır. Burada, uygulamanızın Okuma veya veri yazma uygulamaya verilen izinler bağlıdır. Uygulamanızı bir kısmi güven ortamında çalıştığında, verilerinize erişimi olmayabilir veya verilere erişme şeklini değiştirmek gerekebilir.  
   
  Bir güvenlik kısıtlaması karşılaştığınızda, iki seçeneğiniz vardır: (Bu verilmiş uygulamanıza varsayılarak) izin onay veya kısmi güvende çalışması için yazılmış özelliğinin bir sürümü kullanın. Aşağıdaki bölümlerde, dosya, veritabanı ve kayıt defteri erişimini, kısmi güven ortamında çalışan uygulamalar ile nasıl çalışılacağı açıklanmaktadır.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "61802095"
 >  Varsayılan olarak, oluşturma araçları [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] dağıtımları varsayılan bu dağıtımları isteyen tam güven için çalıştıkları bilgisayarlardan. Kısmi güvende çalışan ek güvenlik avantajları istediğiniz karar verirseniz, bu varsayılan olarak Visual Studio veya birini değiştirmeli [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] araçlarını (Mage.exe veya MageUI.exe). Windows Forms güvenliği hakkında ve uygulamanız için uygun güven düzeyinin nasıl belirleneceği hakkında daha fazla bilgi için bkz: [Windows Forms'ta Güvenliğe genel bakış](security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Dosya erişimi  
- <xref:System.Security.Permissions.FileIOPermission> Sınıf içindeki dosya ve klasör erişimi denetler [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Varsayılan olarak, güvenlik sistemi yok yetkisi <xref:System.Security.Permissions.FileIOPermission> kısmi güven ortamlara yerel intranet ve Internet bölgelerinden gibi. Ancak, uygulamanızın tasarımını değiştirmek ya da dosyalara erişmek için farklı yöntemler kullanın dosya erişimi gerektiren bir uygulamayı hala bu ortamlarda çalışabilir. Varsayılan olarak, yerel intranet bölgesine aynı site erişimi ve, geri, kaynak siteye bağlanmak ve kendi yükleme dizininden okumak için aynı dizin erişim hakkı verilir. Varsayılan olarak, Internet bölgesi yalnızca verilir, kaynak siteye geri hakkı.  
+ <xref:System.Security.Permissions.FileIOPermission> Sınıf .NET Framework içindeki dosya ve klasör erişimi denetler. Varsayılan olarak, güvenlik sistemi yok yetkisi <xref:System.Security.Permissions.FileIOPermission> kısmi güven ortamlara yerel intranet ve Internet bölgelerinden gibi. Ancak, uygulamanızın tasarımını değiştirmek ya da dosyalara erişmek için farklı yöntemler kullanın dosya erişimi gerektiren bir uygulamayı hala bu ortamlarda çalışabilir. Varsayılan olarak, yerel intranet bölgesine aynı site erişimi ve, geri, kaynak siteye bağlanmak ve kendi yükleme dizininden okumak için aynı dizin erişim hakkı verilir. Varsayılan olarak, Internet bölgesi yalnızca verilir, kaynak siteye geri hakkı.  
   
 ### <a name="user-specified-files"></a>Kullanıcı tarafından belirtilen dosyaları  
  Tek yönlü dağıtılacak dosya erişimi olmaması ile kullanarak belirli dosya bilgileri sağlamak için kullanıcıdan istemek için izindir <xref:System.Windows.Forms.OpenFileDialog> veya <xref:System.Windows.Forms.SaveFileDialog> sınıfı. Bu kullanıcı etkileşimi uygulama erişemeyeceği özel dosyalarını yüklemek veya önemli dosyaların üzerine yazıp, bazı güvence sağlar. <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> Ve <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> okuma ve yazma dosya erişimi için kullanıcı tarafından belirtilen dosyanın dosya akışı açarak yöntemleri sağlar. Ayrıca yöntemler dosyanın yolu anlaşılması güç tarafından kullanıcının dosyayı koruma yardımcı olur.  
@@ -47,7 +47,7 @@ ms.locfileid: "61802095"
 > [!NOTE]
 >  Belirli bir izin kadar istenen değil <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> yöntemi gerçekten çağrılır.  
   
- Dosya iletişim kutusu görüntülemek için izni tüm üyeleri için uygulama tam erişim vermez <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog>, ve <xref:System.Windows.Forms.SaveFileDialog> sınıfları. Her bir yöntemi çağırmak için gereken tam izinler görmek için bu yönteme yönelik referans konusuna [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sınıf kitaplığı belgeleri.  
+ Dosya iletişim kutusu görüntülemek için izni tüm üyeleri için uygulama tam erişim vermez <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog>, ve <xref:System.Windows.Forms.SaveFileDialog> sınıfları. Her bir yöntemi çağırmak için gereken tam izinler için bu yöntem .NET Framework sınıf kitaplığı belgelerindeki yönelik referans konusuna bakın.  
   
  Aşağıdaki kod örneğinde <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> yöntemi, bir kullanıcı tarafından belirtilen dosyaya açmak için bir <xref:System.Windows.Forms.RichTextBox> denetimi. Örnek gerektirir <xref:System.Security.Permissions.FileDialogPermission> ve ilişkili <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> numaralandırma değeri. Örnek üstesinden nasıl gelineceğini gösterir <xref:System.Security.SecurityException> belirlemek için olup olmadığını kaydetme özelliğini devre dışı bırakılmalıdır. Bu örnekte gerektiren, <xref:System.Windows.Forms.Form> sahip bir <xref:System.Windows.Forms.Button> adlı Denetim `ButtonOpen`ve <xref:System.Windows.Forms.RichTextBox> adlı Denetim `RtfBoxMain`.  
   

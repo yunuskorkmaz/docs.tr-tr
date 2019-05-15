@@ -6,15 +6,15 @@ helpviewer_keywords:
 - user interface
 - user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00e359e7c2440b6d88f2c42fd0267fc1f12b7bb7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801185"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583431"
 ---
 # <a name="windows-forms"></a>Windows Forms
-Formları, uygulamanızın temel birim olduğundan, işlevi ve tasarım bazı düşünce vermek önemlidir. Sonuçta bir kullanıcı arabirimi oluşturmak için denetimleri ile verileri işlemek için kod, bir geliştirici olarak geliştirmek, boş bir maskeleme görüntüsü biçimidir. Bu nedenle, Visual Studio ile yazılmış bir zengin denetiminin yanı sıra bir tümleşik geliştirme ortamı (IDE) kod yazmada yardımcı olmak üzere sağlar [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Bu denetimlerin işlevleri, kodunuzu tamamlarken, olarak kolayca ve hızla, ihtiyacınız olan çözümleri geliştirin.  
+Formları, uygulamanızın temel birim olduğundan, işlevi ve tasarım bazı düşünce vermek önemlidir. Sonuçta bir kullanıcı arabirimi oluşturmak için denetimleri ile verileri işlemek için kod, bir geliştirici olarak geliştirmek, boş bir maskeleme görüntüsü biçimidir. Bu nedenle, Visual Studio, .NET Framework ile yazılmış bir zengin denetiminin yanı sıra bir tümleşik geliştirme ortamı (IDE) kod yazmada yardımcı olmak için sağlar. Bu denetimlerin işlevleri, kodunuzu tamamlarken, olarak kolayca ve hızla, ihtiyacınız olan çözümleri geliştirin.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Windows Forms'a Başlarken](getting-started-with-windows-forms.md)  

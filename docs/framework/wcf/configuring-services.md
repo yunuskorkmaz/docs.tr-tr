@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 81727adbf985986a71cc9f9e2d42a1de0cb1fd76
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8ac62809b1269ae810f026c003c7611b3ec548c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608544"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593320"
 ---
 # <a name="configuring-wcf-services"></a>WCF hizmetlerini yapılandırma
 
@@ -22,7 +22,7 @@ Tasarlanmış ve hizmet sözleşmeniz uygulanan sonra hizmetinizin yapılandırm
  İle başlayarak [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF, WCF yapılandırma gereksinimleri basitleştiren yeni bir varsayılan yapılandırma modeli ile birlikte gelir. Belirli bir hizmet için herhangi bir WCF yapılandırma sağlamazsanız, çalışma zamanı varsayılan uç noktaları, bağlamalar ve davranışları ile otomatik olarak hizmetinizi yapılandırır.  
   
  [Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- Yapılandırılabilir kullanarak bir Windows Communication Foundation (WCF) hizmetidir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] yapılandırma teknoloji. En yaygın olarak, XML öğeleri, bir WCF hizmetini barındıran Internet Information Services (IIS) sitesi için Web.config dosyasına eklenir. Öğeleri, uç nokta adresleri (hizmetiyle iletişim kurmak için kullanılan gerçek adresleri) gibi ayrıntılarını değiştirmek makine tarafından makine olarak sağlar.  
+ .NET Framework yapılandırma teknolojisi kullanılarak yapılandırılabilir bir Windows Communication Foundation (WCF) hizmetidir. En yaygın olarak, XML öğeleri, bir WCF hizmetini barındıran Internet Information Services (IIS) sitesi için Web.config dosyasına eklenir. Öğeleri, uç nokta adresleri (hizmetiyle iletişim kurmak için kullanılan gerçek adresleri) gibi ayrıntılarını değiştirmek makine tarafından makine olarak sağlar.  
   
  [Bağlamalar](../../../docs/framework/wcf/bindings.md)  
  Ayrıca, WCF, hızlı bir şekilde nasıl bir istemci ve hizmet iletişim kurmak için aktarımlar, güvenlik ve kodlamaları kullanılan ileti gibi en temel özellikler seçmenizi sağlayacak bağlamaları biçiminde birçok sistem tarafından sağlanan genel yapılandırmaları içerir.  

@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: e8a3011828fd3b3f7aaaa062e837570c86f4fd65
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 240b68f901f819313fcae7aab0474abd5535c30d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626847"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592314"
 ---
 # <a name="data-binding-and-windows-forms"></a>Veri Bağlama ve Windows Forms
 Windows Forms'ta yalnızca geleneksel veri kaynaklarına da bağlayabilirsiniz, ancak Ayrıca verileri içeren neredeyse her yapı için. Çalışma zamanında hesaplamak, bir dosyadan okunan veya diğer denetimlerin değerleri türetilen değerler dizisi bağlayabilirsiniz.  
   
- Ayrıca, herhangi bir denetime herhangi bir özelliği veri kaynağına da bağlayabilirsiniz. Geleneksel veri bağlamasında, genellikle görüntü özelliği bağlamak — Örneğin, <xref:System.Windows.Forms.Control.Text%2A> özelliği bir <xref:System.Windows.Forms.TextBox> denetim — veri kaynağı. İle [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], ayrıca diğer özelliklerini de bağlama aracılığıyla ayarlama seçeneğiniz de vardır. Bağlama, aşağıdaki görevleri gerçekleştirmek için kullanabilirsiniz:  
+ Ayrıca, herhangi bir denetime herhangi bir özelliği veri kaynağına da bağlayabilirsiniz. Geleneksel veri bağlamasında, genellikle görüntü özelliği bağlamak — Örneğin, <xref:System.Windows.Forms.Control.Text%2A> özelliği bir <xref:System.Windows.Forms.TextBox> denetim — veri kaynağı. .NET Framework ile aynı zamanda diğer özelliklerini de bağlama aracılığıyla ayarlama seçeneğiniz vardır. Bağlama, aşağıdaki görevleri gerçekleştirmek için kullanabilirsiniz:  
   
 - Grafiği bir görüntü denetiminin ayarlanıyor.  
   

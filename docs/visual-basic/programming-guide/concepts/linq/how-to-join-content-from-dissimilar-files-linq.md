@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Dosyalardan içerik (LINQ) (Visual Basic) katılın'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 91337e6a20329cbf3d4d6f0d30a2d604e80474a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ac91ffaf914a8b799ad1124e9361595d482366b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778072"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593494"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Nasıl yapılır: Dosyalardan içerik (LINQ) (Visual Basic) katılın
 
@@ -120,14 +120,6 @@ End Class
 ' 12 total names in list 
 ```  
 
-## <a name="compiling-the-code"></a>Kod derleme
-
-Oluşturun ve aşağıdaki seçeneklerden birini hedefleyen bir proje derleme:
-
-- .NET framework sürüm 3.5 System.Core.dll öğesine başvuru ile.
-- .NET framework sürüm 4.0 veya üzeri.
-- .NET core sürüm 1.0 veya üzeri.
-  
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

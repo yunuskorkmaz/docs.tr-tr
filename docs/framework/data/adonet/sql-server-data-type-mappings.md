@@ -2,17 +2,17 @@
 title: SQL Server Veri Türü Eşlemeleri
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: f90f44666fa5843ccf9bd1cd9ccb5c20b812f494
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04a3bbd9ba18b30a24b425888cce78597deb068a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664096"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583728"
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server Veri Türü Eşlemeleri
 Farklı tür sistemlerde, SQL Server ve .NET Framework'ü temel alır. Örneğin, .NET Framework <xref:System.Decimal> yapıya sahip 28, en fazla ölçeğini ise SQL Server ondalık ve sayısal veri türleri 38, en fazla bir ölçeğe sahip. Verileri okurken ve yazarken, veri bütünlüğünün sürdürülmesi <xref:System.Data.SqlClient.SqlDataReader> kullanıma sunan SQL Server'a özel yazılan nesnelerin döndüren erişimci metotlarını <xref:System.Data.SqlTypes> .NET Framework döndüren erişimci metotlarını yanı sıra türleri. SQL Server türleri hem .NET Framework türleri de temsil edilir numaralandırmalardan <xref:System.Data.DbType> ve <xref:System.Data.SqlDbType> belirtirken kullanabileceğiniz sınıflarını <xref:System.Data.SqlClient.SqlParameter> veri türleri.  
   
- Aşağıdaki tabloda gösterilen gösterilmektedir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türü <xref:System.Data.DbType> ve <xref:System.Data.SqlDbType> erişimci yöntemlerini ve numaralandırmaları <xref:System.Data.SqlClient.SqlDataReader>.  
+ Aşağıdaki tabloda gösterilen bir .NET Framework türü gösterir <xref:System.Data.DbType> ve <xref:System.Data.SqlDbType> erişimci yöntemlerini ve numaralandırmaları <xref:System.Data.SqlClient.SqlDataReader>.  
   
 |SQL Server veritabanı altyapısı türü|.NET Framework türü|SqlDbType numaralandırma|Erişimci SqlDataReader SqlTypes yazılan|DbType numaralandırması|Erişimci SqlDataReader DbType yazılan|  
 |-------------------------------------|-------------------------|---------------------------|-------------------------------------------|------------------------|-----------------------------------------|  
@@ -22,7 +22,7 @@ Farklı tür sistemlerde, SQL Server ve .NET Framework'ü temel alır. Örneğin
 |char|Dize<br /><br /> Char]|<xref:System.Data.SqlDbType.Char>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.AnsiStringFixedLength>,<br /><br /> <xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
 |Tarih <sup>1</sup><br /><br /> (SQL Server 2008 ve üzeri)|DateTime|<xref:System.Data.SqlDbType.Date> <sup>1</sup>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlDateTime%2A>|<xref:System.Data.DbType.Date> <sup>1</sup>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |datetime|DateTime|<xref:System.Data.SqlDbType.DateTime>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlDateTime%2A>|<xref:System.Data.DbType.DateTime>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
-|datetime2<br /><br /> (SQL Server 2008 ve üzeri)|DateTime|<xref:System.Data.SqlDbType.DateTime2>|Yok.|<xref:System.Data.DbType.DateTime2>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
+|datetime2<br /><br /> (SQL Server 2008 ve üzeri)|DateTime|<xref:System.Data.SqlDbType.DateTime2>|None|<xref:System.Data.DbType.DateTime2>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |Datetimeoffset<br /><br /> (SQL Server 2008 ve üzeri)|DateTimeOffset|<xref:System.Data.SqlDbType.DateTimeOffset>|yok|<xref:System.Data.DbType.DateTimeOffset>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTimeOffset%2A>|  
 |decimal|Ondalık|<xref:System.Data.SqlDbType.Decimal>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A>|<xref:System.Data.DbType.Decimal>|<xref:System.Data.SqlClient.SqlDataReader.GetDecimal%2A>|  
 |FILESTREAM özniteliğini (varbinary(max))|Byte[]|<xref:System.Data.SqlDbType.VarBinary>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A>|<xref:System.Data.DbType.Binary>|<xref:System.Data.SqlClient.SqlDataReader.GetBytes%2A>|  

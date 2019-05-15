@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5214ee83ab3009c3d2bb1360f46b39831c37c2ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b890ac02d54a9092bf2ad24e31367ef1d487c01f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664621"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593501"
 ---
 # <a name="net-class-library-overview"></a>.NET sınıf kitaplığına genel bakış
 
@@ -70,7 +70,7 @@ ms.locfileid: "64664621"
 
  .NET türlerini bir hiyerarşi connotes nokta sözdizimini adlandırma şeması kullanır. Aranan edilebilmeleri ve daha kolay başvuru için bu tekniği ilgili türleri ad alanında gruplandırır. Tam adının ilk bölümü — en sağdaki nokta kadar — ad uzayı adıdır. Ad son kısmını tür adıdır. Örneğin, `System.Collections.Generic.List<T>` temsil `List<T>` ait olduğu tür `System.Collections.Generic` ad alanı. Türlerinde <xref:System.Collections.Generic> genel koleksiyonlar ile çalışma için kullanılabilir.  
   
- Bu adlandırma şeması genişletme kitaplığı geliştiriciler için kolaylaştıran [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] türlerinin hiyerarşik gruplar oluşturup bunları bilgilendirici tutarlı bir şekilde adlandırın. Ayrıca tam adına göre kesin bir şekilde tanımlanması türleri sağlar (diğer bir deyişle, kendi ad alanı ve türü adına göre), tür adı çakışmaları önler. Aşağıdaki kural adlarını kendi ad alanları için oluştururken kullanılacak kitaplığı geliştiriciler bekleniyor:  
+ Bu adlandırma şeması türlerini hiyerarşik grupları oluşturun ve bunları bilgilendirici tutarlı bir şekilde adı için .NET Framework'ü genişleterek kitaplığı geliştiriciler için kolaylaştırır. Ayrıca tam adına göre kesin bir şekilde tanımlanması türleri sağlar (diğer bir deyişle, kendi ad alanı ve türü adına göre), tür adı çakışmaları önler. Aşağıdaki kural adlarını kendi ad alanları için oluştururken kullanılacak kitaplığı geliştiriciler bekleniyor:  
   
  *CompanyName*. *TechnologyName*  
   

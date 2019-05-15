@@ -3,12 +3,12 @@ title: Dizinleri ve aralıkları kullanarak veri aralıklarını keşfedin
 description: Gelişmiş Bu öğretici, bir sıralı veri kümesinin dilimlerini incelemek için dizinler ve aralıkları kullanarak verileri araştırmak için öğretir.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 64fae4581e265d4f70b8356d5c651b4fdaca3fe9
-ms.sourcegitcommit: dd3b897feb5c4ac39732bb165848e37a344b0765
+ms.openlocfilehash: 118d3c9ccad98ec02195c2b5e26a2ca203990adf
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/25/2019
-ms.locfileid: "64431495"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557181"
 ---
 # <a name="indices-and-ranges"></a>Dizinleri ve aralıkları
 
@@ -23,9 +23,13 @@ Bu öğreticide şunları öğrenirsiniz nasıl yapılır:
 
 ## <a name="language-support-for-indices-and-ranges"></a>Dizinleri ve aralıkları için dil desteği
 
-Dizin belirtebilirsiniz **sonundan** kullanarak `^` dizini önce karakter. Sondan dizin kuraldan başlatır, `0..^0` tüm aralığını belirtir. Tüm dizi numaralandırmak için başlangıç *ilk öğede*ve, olana kadar devam *son öğeden önceki*. Davranışını düşünün `MoveNext` bir numaralandırıcı metodunda: numaralandırma son öğeyi başarılı olduğunda false döndürür. Dizin `^0` "Bitiş" anlamına gelir `array[array.Length]`, ya da son öğeyi izleyen dizin. Bilginiz `array[2]` öğe "başından itibaren 2" anlamına gelir. Şimdi, `array[^2]` öğe "2 sonundan" anlamına gelir. 
+Bu dil desteği, iki yeni türler ve iki yeni işleç kullanır.
+- <xref:System.Index?displayProperty=nameWithType> Dizin bir dizisi temsil eder.
+- `^` İşleci bir dizin dizinin sonuna göreli olduğunu belirtir.
+- <xref:System.Range?displayProperty=nameWithType> bir dizi alt aralığını temsil eder.
+- Aralık işleci (`..`), belirten başlangıç ve bitiş aralığının işlenenleri.
 
-Belirtebileceğiniz bir **aralığı** ile **aralık işleci**: `..`. Örneğin, `0..^0` dizi aralığının tamamı belirtir: 0'ın başından itibaren en fazla, ancak son 0 dahil değil. İki işlenenden "Başlangıç" veya "sonuna" kullanabilir. Ayrıca, iki işlenenden atlanabilir. Varsayılanlar `0` başlangıç dizini ve `^0` son dizini.
+Dizinler için kuralları başlayalım. Bir dizi göz önünde bulundurun `sequence`. `0` Dizin aynıdır `sequence[0]`. `^0` Dizin aynıdır `sequence[sequence.Length]`. Unutmayın `sequence[^0]` gibi bir özel durum `sequence[sequence.Length]` yapar. Herhangi bir sayı için `n`, dizin `^n` aynı `sequence[sequence.Length - n]`.
 
 ```csharp-interactive
 string[] words = new string[]
@@ -43,11 +47,11 @@ string[] words = new string[]
 };              // 9 (or words.Length) ^0
 ```
 
-Her öğenin dizini "Başlat" ve "Kimden"son kavramı güçlendirir ve aralığın sonunu fiyatlara aralıktır. "Başlangıç" tüm dizinin ilk öğedir. Tüm dizi "End" *geçmiş* son öğe.
-
 Son sözcüğü alabilirsiniz `^1` dizini. Başlatma altına aşağıdaki kodu ekleyin:
 
 [!code-csharp[LastIndex](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastIndex)]
+
+Bir aralığı belirtir *Başlat* ve *son* aralığının. Aralıkları özel anlamı *son* aralığında yer almaz. Aralığın `[0..^0]` gibi tüm aralığını temsil eden `[0..sequence.Length]` tüm aralığını temsil eder. 
 
 Aşağıdaki kod, bir alt aralığı sözcükler "Hızlı", "brown" ile ve "fox" oluşturur. İçerdiği `words[1]` aracılığıyla `words[3]`. Öğe `words[4]` aralığında değil. Aynı yönteme aşağıdaki kodu ekleyin. Kopyala ve etkileşimli pencerenin alt kısmında yapıştırın.
 
@@ -64,11 +68,6 @@ Aşağıdaki örnekler, açık olan başında, sonunda ya da her ikisi için bit
 Aralıkları veya dizinler değişkenleri olarak bildirebilirsiniz. Değişkeni içinde sonra kullanılabilir `[` ve `]` karakter:
 
 [!code-csharp[IndexRangeTypes](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_RangeIndexTypes)]
-
-Önceki örneklerde, daha fazla açıklama gerektiren iki tasarım kararları göster:
-
-- Aralıkları *özel*, yani son dizinindeki öğeyi aralığında değil.
-- Dizin `^0` olduğu *son* koleksiyonun değil *son öğeyi* koleksiyondaki.
 
 Aşağıdaki örnek Bu seçeneklere nedenlerle çoğunu gösterir. Değiştirme `x`, `y`, ve `z` farklı birleşimlerini denemek için. Kullanımı, denemeler, nerede değerleri `x` olduğu küçüktür `y`, ve `y` olduğu küçüktür `z` geçerli birleşimleri için. İçinde yeni bir yöntem aşağıdaki kodu ekleyin. Farklı birleşimleri deneyin:
 

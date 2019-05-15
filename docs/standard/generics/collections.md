@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec3f8fb16245318cab8706a2ed136e51f3dc31db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa6cd032ecf3a35c1dc32d9907218c9b6efd4bcc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026173"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592272"
 ---
 # <a name="generic-collections-in-net"></a>.NET’te Genel Koleksiyonlar
 
@@ -44,7 +44,7 @@ ms.locfileid: "62026173"
   
  <xref:System.ArraySegment%601> Genel yapısı, herhangi bir türde tek boyutlu, sıfır tabanlı bir dizi içinde öğe aralığını sınırlandırmak için bir yol sağlar. Genel tür parametresi, dizi öğelerinin türüdür.  
   
- <xref:System.EventHandler%601> Genel temsilci ortadan kaldırır, olay tarafından kullanılan olay işleme desen izliyorsa, olayları işlemek için bir temsilci türü bildirmek için gereken [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Örneğin, oluşturduğunuz düşünün bir `MyEventArgs` sınıfından türetilen <xref:System.EventArgs>, olay verilerini tutacak. Ardından, olay şu şekilde bildirebilirsiniz:  
+ <xref:System.EventHandler%601> Genel temsilci .NET Framework tarafından kullanılan olay işleme Düzen etkinliğiniz izliyorsa, olayları işlemek için bir temsilci türü bildirmek için gereken ortadan kaldırır. Örneğin, oluşturduğunuz düşünün bir `MyEventArgs` sınıfından türetilen <xref:System.EventArgs>, olay verilerini tutacak. Ardından, olay şu şekilde bildirebilirsiniz:  
   
  [!code-cpp[Conceptual.Generics.Overview#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Generics.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source2.cs#7)]

@@ -3,12 +3,12 @@ title: ML API ML.NET kullanmayı otomatik
 description: ML API ML.NET otomatik oluşturma işlemi model otomatikleştirir ve dağıtım için hazır bir model oluşturur. Otomatik makine öğrenimi görevlerini yapılandırmak için kullanabileceğiniz seçenekleri öğrenin.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 23410a11f94ab6052ab64bd8968f0ed127441898
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: b05b6ed7c66062b28aaf634913a9598602b62498
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65066180"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557873"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Machine learning API ML.NET kullanmayı otomatik
 
@@ -42,17 +42,22 @@ Bir deney oluşturmadan önce makine öğrenme problemi çözmek istediğiniz t�
 Deneme ayarları için belirlenen ML görev türü oluşturun:
 
 * İkili sınıflandırma
-```csharp
-var experimentSettings = new BinaryExperimentSettings();
-```
+
+  ```csharp
+  var experimentSettings = new BinaryExperimentSettings();
+  ```
+
 * Sınıflı sınıflandırma
-```csharp
-var experimentSettings = new MulticlassExperimentSettings();
-```
+
+  ```csharp
+  var experimentSettings = new MulticlassExperimentSettings();
+  ```
+
 * Regresyon
-```csharp
-var experimentSettings = new RegressionExperimentSettings();
-```
+
+  ```csharp
+  var experimentSettings = new RegressionExperimentSettings();
+  ```
 
 ## <a name="configure-experiment-settings"></a>Deneme ayarlarını yapılandırma
 
