@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 4a0dcce0-c27b-4199-baa8-ee4528da6a56
-ms.openlocfilehash: f958fe9355e8c4e3701996cb33e48bd3e2bd759f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a4a2e857e90dda640588cd05396922f55d0bd573
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921296"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589349"
 ---
 # <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>Microsoft.Win32 Ad Alanını Kullanarak Kayıt Defterini Okuma ve Yazma (Visual Basic)
-Ancak `My.Computer.Registry` gereksinimlerinizi temel kayıt defteri karşı programlama yaparken kapsamalıdır, ayrıca <xref:Microsoft.Win32.Registry> ve <xref:Microsoft.Win32.RegistryKey> sınıfları <xref:Microsoft.Win32> ad [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+Ancak `My.Computer.Registry` gereksinimlerinizi temel kayıt defteri karşı programlama yaparken kapsamalıdır, ayrıca <xref:Microsoft.Win32.Registry> ve <xref:Microsoft.Win32.RegistryKey> sınıfları <xref:Microsoft.Win32> ad alanı .NET Framework'ün.  
   
 ## <a name="keys-in-the-registry-class"></a>Kayıt defteri sınıfı anahtarları  
  <xref:Microsoft.Win32.Registry> Sınıfı alt anahtarları ve değerlerini erişmek için kullanılan temel kayıt defteri anahtarlarını sağlar. Temel anahtarları salt okunurdur. Aşağıdaki tabloda listelenmiş ve açıklar tarafından kullanıma sunulan yedi anahtarları <xref:Microsoft.Win32.Registry> sınıfı.  

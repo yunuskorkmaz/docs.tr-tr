@@ -4,12 +4,12 @@
     - name: Sabit Boyutlu Arabellekler
       href: fixed-size-buffers.md
     - name: İşaretçi türleri
-      href: pointer-types.md
       items:
+        - name: Genel Bakış
+          href: pointer-types.md
         - name: İşaretçi Dönüştürmeler
           href: pointer-conversions.md
         - name: İşaretçi İfadeleri
-          href: pointer-expressions.md
           items:
             - name: 'Nasıl yapılır: İşaretçi Değişkeninin Değerini Edinme'
               href: how-to-obtain-the-value-of-a-pointer-variable.md
@@ -20,7 +20,6 @@
             - name: 'Nasıl yapılır: İşaretçiyle bir Dizi Öğesine Erişme'
               href: how-to-access-an-array-element-with-a-pointer.md
             - name: İşaretçileri İşleme
-              href: manipulating-pointers.md
               items:
                 - name: 'Nasıl yapılır: İşaretçileri Artırma ve Azaltma'
                   href: how-to-increment-and-decrement-pointers.md

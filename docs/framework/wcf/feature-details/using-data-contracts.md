@@ -9,18 +9,18 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-ms.openlocfilehash: 0f33bdc006c6b965ba60257637f3cef182555d7d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3fd22cc0842c51b331905369915bd055235680c4
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637716"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592196"
 ---
 # <a name="using-data-contracts"></a>Veri Sözleşmelerini Kullanma
 A *veri anlaşması* hizmet bağlamalarında değiştirilebilmesi için verileri tanımlayan bir istemci arasındaki resmi bir sözleşme. Diğer bir deyişle, iletişim, istemciyi ve hizmeti yalnızca aynı veri sözleşmeleri aynı türleri paylaşılacak gerekmez. Bir veri anlaşması tam olarak, hangi verilerin serileştirilmiş (XML olarak açık) her parametre veya dönüş türü tanımlar değiştirilmek üzere.  
   
 ## <a name="data-contract-basics"></a>Veri sözleşmesi temelleri  
- Windows Communication Foundation (WCF) veri sözleşmesi serileştiricisi tarafından varsayılan olarak adlandırılan bir serileştirme motoruna (XML gelen ve giden dönüştürmeniz) verileri seri hale getrime ve için kullanır. Tüm [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tam sayılar ve dizeler gibi ilkel türler ve bunun yanı sıra bazı türleri gibi temel olarak kabul <xref:System.DateTime> ve <xref:System.Xml.XmlElement>, hiçbir bir hazırlık ile seri hale getirilebilir ve varsayılan veri sözleşmeleri sahip olarak kabul edilir. Birçok [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri, mevcut veri sözleşmeleri de vardır. Seri hale getirilebilir türler tam bir listesi için bkz. [veri sözleşme seri hale getirici tarafından desteklenen türleri](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Windows Communication Foundation (WCF) veri sözleşmesi serileştiricisi tarafından varsayılan olarak adlandırılan bir serileştirme motoruna (XML gelen ve giden dönüştürmeniz) verileri seri hale getrime ve için kullanır. Tam sayılar ve dizeler gibi tüm .NET Framework ilkel türler ve bunun yanı sıra bazı türleri gibi temel olarak kabul <xref:System.DateTime> ve <xref:System.Xml.XmlElement>, hiçbir bir hazırlık ile seri hale getirilebilir ve varsayılan veri sözleşmeleri sahip olarak kabul edilir. Çoğu .NET Framework türleri, ayrıca mevcut veri sözleşmelerine sahiptir. Seri hale getirilebilir türler tam bir listesi için bkz. [veri sözleşme seri hale getirici tarafından desteklenen türleri](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
  Oluşturduğunuz yeni karmaşık türler seri hale getirilebilir olması için tanımlanmış bir veri sözleşmesi olması gerekir. Varsayılan olarak, <xref:System.Runtime.Serialization.DataContractSerializer> veri anlaşması algılar ve herkese görünür türlü serileştirir. Tüm ortak okuma/yazma özellikleri ve türünde alanlar serileştirilir. Kullanarak kullanıma serileştirmesi üyelerinden seçebilirsiniz <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>. Kullanarak bir veri anlaşması da açıkça oluşturabilirsiniz <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelikleri. Bu normalde uygulayarak yapılır <xref:System.Runtime.Serialization.DataContractAttribute> öznitelik türü için. Bu öznitelik, sınıflar, yapılar ve numaralandırmalar için uygulanabilir. <xref:System.Runtime.Serialization.DataMemberAttribute> Öznitelik her üyesine, olduğunu belirtmek için veri anlaşması türü sonra uygulanmalıdır bir *veri üyesi*, diğer bir deyişle, seri hale getirilmesi. Daha fazla bilgi için [Serializable türler](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   

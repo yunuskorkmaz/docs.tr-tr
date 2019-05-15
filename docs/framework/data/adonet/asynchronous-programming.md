@@ -1,17 +1,17 @@
 ---
-title: Zaman uyumsuz programlama
+title: Zaman Uyumsuz Programlama
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: b13ff7f67e7a62e071a27a77e72b7844dcb74d73
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: c41a231959536f4bd558fcd3e94d0d58c2375021
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846135"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584500"
 ---
-# <a name="asynchronous-programming"></a>Zaman uyumsuz programlama
+# <a name="asynchronous-programming"></a>Zaman Uyumsuz Programlama
 
-Bu konu içinde zaman uyumsuz programlama için desteği açıklamaktadır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] için SQL Server (SqlClient) veri sunulan zaman uyumsuz programlama işlevselliği desteklemek için yapılan geliştirmeleri dahil olmak üzere sağlayıcı [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+Bu konuda sunulan zaman uyumsuz programlama işlevselliği desteklemek için yapılan geliştirmeleri dahil olmak üzere zaman uyumsuz programlama için .NET Framework veri sağlayıcısı SQL Server (SqlClient) için destek açıklanır [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
 
 ## <a name="legacy-asynchronous-programming"></a>Eski zaman uyumsuz programlama
 

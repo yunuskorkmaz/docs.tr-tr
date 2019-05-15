@@ -2,17 +2,17 @@
 title: OLE DB Veri Türü Eşlemeleri
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 09fab7c5df99ffdb0aef6d32a8ad5ca1ed446d42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5c4b7264b9f8abb842fff3295d53ed8ab626671
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772066"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584523"
 ---
 # <a name="ole-db-data-type-mappings"></a>OLE DB Veri Türü Eşlemeleri
-Aşağıdaki tabloda gösterilen gösterilmektedir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türü için .NET Framework veri sağlayıcısı ADO ve OLE DB veri türlerinden (<xref:System.Data.OleDb>). Türü belirlenmiş erişimci yöntemlerini <xref:System.Data.OleDb.OleDbDataReader> da listelenir.  
+Aşağıdaki tabloda, ADO ve OLE DB için .NET Framework Veri Sağlayıcısı'ndan veri türleri için çıkarsanan .NET Framework türü gösterilmektedir. (<xref:System.Data.OleDb>). Türü belirlenmiş erişimci yöntemlerini <xref:System.Data.OleDb.OleDbDataReader> da listelenir.  
   
-|ADO türü|OLE DB türü|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Türü|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türü belirlenmiş erişimcisi|  
+|ADO türü|OLE DB türü|.NET Framework türü|.NET framework erişimci yazılan|  
 |--------------|-----------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |adBigInt|DBTYPE_I8|Int64|GetInt64()|  
 |adBinary|DBTYPE_BYTES|Byte[]|GetBytes()|  

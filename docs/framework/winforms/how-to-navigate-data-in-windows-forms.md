@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 452aacab4580a3b07168daa6b7c03740dc98620b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801718"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583737"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Nasıl yapılır: Windows Forms Verilerinde Gezinme
 Bir Windows uygulamasında bağlamak için bir veri kaynağındaki kayıtları gezinmek için en kolay yolu olan bir <xref:System.Windows.Forms.BindingSource> veri kaynağı ve ardından bağlama denetimlerini bileşen <xref:System.Windows.Forms.BindingSource>. Daha sonra üzerinde yerleşik gezinti yöntemi kullanabilirsiniz <xref:System.Windows.Forms.BindingSource> böyle bir <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> ve <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Bu yöntemleri kullanarak ayarlamak <xref:System.Windows.Forms.BindingSource.Position%2A> ve <xref:System.Windows.Forms.BindingSource.Current%2A> özelliklerini <xref:System.Windows.Forms.BindingSource> uygun şekilde. Ayrıca bir öğeyi bulmak ve ayarlayarak geçerli öğesi olarak ayarla <xref:System.Windows.Forms.BindingSource.Position%2A> özelliği.  
@@ -26,7 +26,7 @@ Bir Windows uygulamasında bağlamak için bir veri kaynağındaki kayıtları g
 1. Ayarlama <xref:System.Windows.Forms.BindingSource.Position%2A> özelliği <xref:System.Windows.Forms.BindingSource> ilişkili verilerinizin kayıt konumuna gidin. Kullanarak aşağıdaki örnekte gösterildiği <xref:System.Windows.Forms.BindingSource.MoveNext%2A> yöntemi <xref:System.Windows.Forms.BindingSource> Artım yapılacağını <xref:System.Windows.Forms.BindingSource.Position%2A> özelliği olduğunda `nextButton` tıklandığında. <xref:System.Windows.Forms.BindingSource> İlişkili olduğu `Customers` tablosunu bir veri kümesinin `Northwind`.  
   
     > [!NOTE]
-    >  Ayarı <xref:System.Windows.Forms.BindingSource.Position%2A> ilk veya son kaydını dışında bir değere neden bir hata olarak [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] konum listesi sınırları dışında bir değere ayarlamak izin vermez. Uygulamanızda ilk veya son kaydını ilerlemiş olup olmadığını bilmek önemlidir, veri öğesi sayısı aşarsanız olup olmadığını sınamak için mantığı içerir.  
+    >  Ayar <xref:System.Windows.Forms.BindingSource.Position%2A> ilk veya son kaydını dışında bir değere neden bir hata, .NET Framework konum listesi sınırları dışında bir değere ayarlayın izin vermeyecek şekilde. Uygulamanızda ilk veya son kaydını ilerlemiş olup olmadığını bilmek önemlidir, veri öğesi sayısı aşarsanız olup olmadığını sınamak için mantığı içerir.  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.NavigatingData#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  

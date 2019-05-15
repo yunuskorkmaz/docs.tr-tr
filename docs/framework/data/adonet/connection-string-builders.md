@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 17ef057fccbea48da698e0ecfa5c789e125adbb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8788c97842d157e09f7058411db43f86c66769cd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034547"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583808"
 ---
 # <a name="connection-string-builders"></a>Bağlantı Dizesi Oluşturucular
-Önceki sürümlerinde [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], derleme zamanı yanlış bir anahtar sözcüğü çalışma zamanında oluşturulan birleştirilmiş dizeyi değerleri oluşmadı ile bağlantı dizeleri denetimi bir <xref:System.ArgumentException>. Her biri [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcıları geçerli bağlantı dizelerini zor yapıldığında el ile oluşturmak yapılan bağlantı dizesi anahtar için farklı bir sözdizimi desteklenir. Bu sorunu gidermek için [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 sunulan her yeni bağlantı dizesi oluşturucular [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı. Her veri sağlayıcısının devralan bir türü kesin belirlenmiş bağlantı dizesi Oluşturucusu sınıfı içeren <xref:System.Data.Common.DbConnectionStringBuilder>. Aşağıdaki tabloda [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcıları ve bunların ilişkili bağlantı dizesi Oluşturucusu sınıfları.  
+Önceki sürümlerinde [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], derleme zamanı yanlış bir anahtar sözcüğü çalışma zamanında oluşturulan birleştirilmiş dizeyi değerleri oluşmadı ile bağlantı dizeleri denetimi bir <xref:System.ArgumentException>. Her .NET Framework veri sağlayıcıları oluşturma geçerli bağlantı dizelerini zor yapıldıysa elle yapılan bağlantı dizesi anahtar için farklı bir sözdizimi desteklenmiyor. Bu sorunu gidermek için [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 sunulan her .NET Framework veri sağlayıcısı için yeni bir bağlantı dizesi oluşturucular. Her veri sağlayıcısının devralan bir türü kesin belirlenmiş bağlantı dizesi Oluşturucusu sınıfı içeren <xref:System.Data.Common.DbConnectionStringBuilder>. .NET Framework veri sağlayıcıları ve bunların ilişkili bağlantı dizesi Oluşturucusu sınıfları aşağıdaki tabloda listelenmektedir.  
   
 |Sağlayıcı|ConnectionStringBuilder sınıfı|  
 |--------------|-----------------------------------|  

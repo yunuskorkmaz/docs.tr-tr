@@ -2,12 +2,12 @@
 title: WMI Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 519f63f8dfc558a83a98ca44f74e926beb81c190
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd1cb5f580ba182516f94f10c809cfa649365045
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007506"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589403"
 ---
 # <a name="wmi-provider"></a>WMI Sağlayıcısı
 Bu örnek, WCF yerleşik Windows Yönetim Araçları (WMI) sağlayıcısını kullanarak çalışma zamanında Windows Communication Foundation (WCF) hizmetlerden veri toplamak nasıl gösterir. Ayrıca, bu örnek, bir kullanıcı tanımlı WMI nesnesi için bir hizmet eklemek nasıl gösterir. Örnek için WMI sağlayıcısını etkinleştirir [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve veri toplamaya gösterilmiştir `ICalculator` zamanında hizmet.  
@@ -32,7 +32,7 @@ Bu örnek, WCF yerleşik Windows Yönetim Araçları (WMI) sağlayıcısını ku
  WMI nesnelerini bir hizmete ekleme yerleşik WMI sağlayıcısı bilgileriyle birlikte kullanıcı tarafından tanımlanan bilgileri açığa çıkarmak mümkün kılar. Bu, Installutil.exe uygulamayı kullanarak hizmet şeması için WMI yayımlayarak gerçekleştirilir. Bunun yanı sıra daha fazla ayrıntı için yönergeler konunun sonunda kurulum yönergelerini bulunabilir.  
   
 ## <a name="accessing-wmi-information"></a>WMI bilgilerine erişme  
- WMI verilerini birçok farklı yolu erişilebilir. Microsoft, betikleri, Visual Basic uygulamaları, C++ uygulamaları için WMI API'lerini sağlar ve [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi).  
+ WMI verilerini birçok farklı yolu erişilebilir. Microsoft Visual Basic uygulamaları, betikleri için WMI API'lerini sağlar C++ uygulamaları ve .NET Framework (https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi).  
   
  Bu örnek iki Java betiklerini kullanır: biri yanı sıra bazı kendi özellikleri ve kullanıcı tanımlı WMI verilerini görüntülemek için ikinci bir bilgisayar üzerinde çalışan hizmetleri listeleme. Betik, WMI sağlayıcısı bir bağlantı açar, verilerini ayrıştırır ve toplanan verileri görüntüler.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 665fdd3d19008e7725983ea621a64514238639ce
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: de44f0c416de798fb42fba93e30ec6aa6ed0208d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599954"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585999"
 ---
 # <a name="objects-c-programming-guide"></a>Nesneler (C# Programlama Kılavuzu)
 Bir sınıf veya yapı tanımı türü neler yapabileceğinizi belirten gibi plandır. Bir temel olarak ayrılmış ve şema göre yapılandırılmış bir bellek bloğunu nesnedir. Bir program, aynı sınıfın birçok nesne oluşturabilir. Nesne örneği olarak da adlandırılır ve adlandırılmış bir değişkeni veya bir dizi veya koleksiyon depolanabilir. İstemci kodu yöntemleri çağırın ve nesneyi genel özelliklerine erişmek için bu değişkenleri kullanır koda karşılık gelir. Bir nesne yönelimli dil C# gibi bir programın normal dinamik olarak etkileşim sahip birden çok nesne oluşur.  
@@ -30,7 +30,7 @@ Bir sınıf veya yapı tanımı türü neler yapabileceğinizi belirten gibi pla
   
  [!code-csharp[csProgGuideStatements#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#31)]  
   
- Hem bellek `p1` ve `p2` iş parçacığı yığında ayrılır. Bu bellek tür veya yöntem içinde bildirildiği birlikte geri kazanılır. Yapılar atamada neden kopyalanır nedenlerinden biri budur. Nesne tüm başvuruları kapsam dışına sahiplikten aksine, bir sınıf örneği için ayrılan bellek (otomatik olarak geri kazanılan çöp olarak toplanacak) ortak dil çalışma zamanı tarafından andır. C++'ta gibi bir sınıf nesnesi belirleyici yok etmek mümkün değildir. Çöp toplama hakkında daha fazla bilgi için [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], bkz: [çöp toplama](../../../standard/garbage-collection/index.md).  
+ Hem bellek `p1` ve `p2` iş parçacığı yığında ayrılır. Bu bellek tür veya yöntem içinde bildirildiği birlikte geri kazanılır. Yapılar atamada neden kopyalanır nedenlerinden biri budur. Nesne tüm başvuruları kapsam dışına sahiplikten aksine, bir sınıf örneği için ayrılan bellek (otomatik olarak geri kazanılan çöp olarak toplanacak) ortak dil çalışma zamanı tarafından andır. C++'ta gibi bir sınıf nesnesi belirleyici yok etmek mümkün değildir. .NET Framework'te çöp toplama hakkında daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).  
   
 > [!NOTE]
 >  Ayırmayı ve ayırmayı kaldırma yönetilen yığında bellek ortak dil çalışma zamanı yüksek oranda iyileştirilmiş. Çoğu durumda bir sınıf örneği yığında bir struct örneği ayırma karşı yığınındaki ayırma performans maliyeti, önemli bir fark yoktur.  

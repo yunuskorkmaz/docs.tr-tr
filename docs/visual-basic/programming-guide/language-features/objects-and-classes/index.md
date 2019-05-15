@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: ec5825dacaf67ee2544302f4f95a1b341ecf1bf7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 216de8f70e0ad6856bf5d708347a7e5f852fe4c6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753622"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591573"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Nesneler ve sınıflar Visual Basic'te
 
@@ -176,7 +176,7 @@ Sınıflar ve modüller de üyeleri için farklı kapsamlar kullanın. Bir sın�
 
 Nesneler, değişkenler ve yordamlar bildirmek ve daha sonra gerektiğinde bunları yeniden olanak tanır. Örneğin, yazım denetleyicisi uygulama eklemek istiyorsanız, tüm değişkenleri tanımlayın ve yazım denetimi işlevselliği sağlamak için işlevleri destekler. Yazım sınıf olarak oluşturursanız, ardından onu diğer uygulamalarda derlenmiş derlemesine bir başvuru ekleyerek tekrar kullanabilirsiniz. Üstelik başka birisi zaten geliştirmiştir bir yazım denetleyicisi sınıfını kullanarak bazı iş kendiniz kaydetmek mümkün olabilir.
 
-[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Pek çok kullanımı için uygun olan bileşenleri örnekleri sağlar. Aşağıdaki örnekte <xref:System.TimeZone> sınıfını <xref:System> ad alanı. <xref:System.TimeZone> Geçerli bilgisayar sisteminin saat dilimi hakkında bilgi almanıza olanak tanıyan üyeleri sağlar.
+.NET Framework, pek çok kullanımı için uygun olan bileşenleri örnekleri sağlar. Aşağıdaki örnekte <xref:System.TimeZone> sınıfını <xref:System> ad alanı. <xref:System.TimeZone> Geçerli bilgisayar sisteminin saat dilimi hakkında bilgi almanıza olanak tanıyan üyeleri sağlar.
 
 ```vb
 Public Sub examineTimeZone()
