@@ -5,12 +5,12 @@ helpviewer_keywords:
 - language reference
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: af8d2c99015304507b2b3361a8a851d125c14a81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5142fb9f4b5cd49bb35b58fdd92e4fb84b8ecc03
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968343"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593063"
 ---
 # <a name="reference-visual-basic"></a>Başvuru (Visual Basic)
 Bu bölüm, Visual Basic programlamanın çeşitli yönleri hakkında başvuru bilgileri için bağlantılar sağlar.  
@@ -23,7 +23,7 @@ Bu bölüm, Visual Basic programlamanın çeşitli yönleri hakkında başvuru b
  Visual Studio IDE içinden programları derleme bir alternatif sağlayan komut satırı derleyicisi hakkındaki bilgilere bağlantılar sağlar.  
   
  [.NET Framework Başvuru Bilgisi](../../visual-basic/reference/net-framework-reference-information.md)  
- İle çalışma hakkındaki bilgilere bağlantılar sağlar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] sınıf kitaplığı.  
+ .NET Framework sınıf kitaplığı ile çalışma hakkındaki bilgilere bağlantılar sağlar.  
   
  [Visual Basic Dil Belirtimi](../../visual-basic/reference/language-specification/index.md)  
  Dilin tüm yönleri hakkında ayrıntılı bilgi içeren eksiksiz Visual Basic dil belirtimi bağlantılar sağlar.  

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: ce019e97e54781976736dd5bd6e6d7e134322f65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2eb6d8f8bb7886e4615438e463aeea3c3825662
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916870"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582636"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Veri hizmetini (WCF Veri Hizmetleri) sorgulama
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığı sağlar, tanıdık karşı kullanarak bir veri hizmeti sorguları yürütmek [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] programlama desenleri, dil ile tümleşik sorgu (LINQ) kullanımı dahil olmak üzere. İstemci Kitaplığı istemcide bir örneği olarak tanımlanan bir sorgu çevirir <xref:System.Data.Services.Client.DataServiceQuery%601> sınıfına bir HTTP GET isteği iletisi. Kitaplığı yanıt iletisini alır ve istemci veri hizmeti sınıfları örneğine çevirir. Bu sınıflar tarafından izlenen <xref:System.Data.Services.Client.DataServiceContext> hangi <xref:System.Data.Services.Client.DataServiceQuery%601> ait.
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığı programlama desenleri, dil ile tümleşik sorgu (LINQ) kullanımı dahil olmak üzere alışık olduğunuz .NET Framework kullanarak bir veri hizmeti sorguları yürütme olanak sağlar. İstemci Kitaplığı istemcide bir örneği olarak tanımlanan bir sorgu çevirir <xref:System.Data.Services.Client.DataServiceQuery%601> sınıfına bir HTTP GET isteği iletisi. Kitaplığı yanıt iletisini alır ve istemci veri hizmeti sınıfları örneğine çevirir. Bu sınıflar tarafından izlenen <xref:System.Data.Services.Client.DataServiceContext> hangi <xref:System.Data.Services.Client.DataServiceQuery%601> ait.
 
 ## <a name="data-service-queries"></a>Veri Hizmeti sorguları
 
 <xref:System.Data.Services.Client.DataServiceQuery%601> Genel bir sınıf, sıfır veya daha fazla varlık türü örneklerinin bir koleksiyonunu döndüren bir sorgu temsil eder. Veri Hizmeti sorgusuna her zaman var olan bir veri hizmeti bağlamına ait. Bu bağlam oluşturma ve sorgu yürütmek için gerekli olan hizmet URI'si ve meta veri bilgilerini korur.
 
-Kullanırken **hizmet Başvurusu Ekle** bir veri hizmetine eklemek için iletişim bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-tabanlı bir istemci uygulaması, bir varlık kapsayıcı sınıfı devralınan oluşturulur <xref:System.Data.Services.Client.DataServiceContext> sınıfı. Bu sınıf döndüren türü belirlenmiş özellikler içeren <xref:System.Data.Services.Client.DataServiceQuery%601> örnekleri. Verileri kullanıma sunan hizmet her varlık kümesi için bir özellik yoktur. Bu özellikler bir türü belirtilmiş bir örneğini oluşturmak kolaylaştırır <xref:System.Data.Services.Client.DataServiceQuery%601>.
+Kullanırken **hizmet Başvurusu Ekle** bir varlık kapsayıcı sınıfı, bir .NET Framework tabanlı bir istemci uygulama bir veri hizmeti eklemek için iletişim devralınan oluşturulur <xref:System.Data.Services.Client.DataServiceContext> sınıfı. Bu sınıf döndüren türü belirlenmiş özellikler içeren <xref:System.Data.Services.Client.DataServiceQuery%601> örnekleri. Verileri kullanıma sunan hizmet her varlık kümesi için bir özellik yoktur. Bu özellikler bir türü belirtilmiş bir örneğini oluşturmak kolaylaştırır <xref:System.Data.Services.Client.DataServiceQuery%601>.
 
 Bir sorgu, aşağıdaki senaryolarda çalıştırılır:
 

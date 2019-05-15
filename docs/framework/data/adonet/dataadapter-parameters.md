@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: b8284f45d769f018655ee35a5f0b067703963634
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0cdca872e9e76b7491dc571209292a692a06d8f8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034495"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583748"
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter Parametreleri
 <xref:System.Data.Common.DbDataAdapter> Verileri almak ve verileri için veri kaynağını güncelleştirmek için kullanılan dört özelliklere sahiptir: <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> özelliği veri kaynağından; veri döndürür ve <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> , <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, ve <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> özellikleri yönetmek için kullanılır veri kaynağındaki değişiklikleri. `SelectCommand` Özelliği çağırmadan önce ayarlanmalıdır `Fill` yöntemi `DataAdapter`. `InsertCommand`, `UpdateCommand`, Veya `DeleteCommand` özelliklerini ayarlamak, önce `Update` yöntemi `DataAdapter` , hangi değişiklikleri verilerde yapılan bağlı olarak adlandırılır <xref:System.Data.DataTable>. Satırlar eklenir, örneğin, `InsertCommand` çağırmadan önce ayarlanmalıdır `Update`. Zaman `Update` eklenen, güncelleştirilen veya silinen satır işleme `DataAdapter` ilgili kullanan `Command` eylemi işlemek için özellik. Değiştirilen satır hakkında güncel bilgiler geçirildiğinde `Command` nesnesi aracılığıyla `Parameters` koleksiyonu.  
@@ -39,7 +39,7 @@ parameter.SourceVersion = DataRowVersion.Original
  `Add` Yöntemi `Parameters` koleksiyon parametresi adını veri türü boyutu (türüne varsa) ve adını alır <xref:System.Data.Common.DbParameter.SourceColumn%2A> gelen `DataTable`. Dikkat <xref:System.Data.Common.DbParameter.SourceVersion%2A> , `@CustomerID` parametrenin ayarlanmış `Original`. Bu tanımlayıcı sütun veya sütunlar değerini değiştirilmişse, veri kaynağı olarak var olan satır güncelleştirilir garanti eder, değiştirilmiş <xref:System.Data.DataRow>. Bu durumda, `Original` satır değeri, geçerli değerin veri kaynağında eşleşir ve `Current` satır değeri, güncelleştirilmiş değeri içerecektir. `SourceVersion` İçin `@CompanyName` parametre ayarlı değil ve varsayılan olarak kullandığı `Current` satır değeri.  
   
 > [!NOTE]
->  Her ikisi için de `Fill` işlemlerini `DataAdapter` ve `Get` yöntemlerinin `DataReader`, [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türü döndürüldüğü türünden çıkarılan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı. Çıkarsanan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri ve Microsoft SQL Server, OLE DB ve ODBC veri türleri için erişimci metotlarını bölümünde açıklanmıştır [ADO.NET'te veri türü eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).  
+>  Her ikisi için de `Fill` işlemlerini `DataAdapter` ve `Get` yöntemlerinin `DataReader`, .NET Framework türü .NET Framework Veri Sağlayıcısı'ndan döndürülen tür gösterilir. Çıkarsanan .NET Framework türlerini ve Microsoft SQL Server, OLE DB ve ODBC veri türleri için erişimci metotlarını açıklanan [ADO.NET'te veri türü eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).  
   
 ## <a name="parametersourcecolumn-parametersourceversion"></a>Parameter.SourceColumn, Parameter.SourceVersion  
  `SourceColumn` Ve `SourceVersion` bağımsız değişken olarak geçirilebilir `Parameter` oluşturucu veya varolan özellikleri kümesi `Parameter`. `SourceColumn` Adıdır <xref:System.Data.DataColumn> gelen <xref:System.Data.DataRow> nerede değerini `Parameter` alınır. `SourceVersion` Belirtir `DataRow` sürümü, `DataAdapter` değerini almak için kullanır.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8898f76971b6088fa8ca831961ea7f12e1ab4e6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909280"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588838"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView Denetimi Teknoloji Özeti (Windows Forms)
 Bu konu hakkında bilgiler için özetlenmiştir `DataGridView` denetimi ve kullanımını destekleyen sınıflar.  
@@ -29,7 +29,7 @@ Bu konu hakkında bilgiler için özetlenmiştir `DataGridView` denetimi ve kull
  `BindingSource`  
   
 ## <a name="background"></a>Arka Plan  
- Kullanıcı Arabirimi (UI) tasarımcıları sık, kullanıcılara tablosal verileri görüntülemek gerekli bulur. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Verileri bir tablo veya kılavuz göstermek için birçok yol sağlar. `DataGridView` Denetimi bu teknoloji Windows Forms uygulamaları için en son evrimini temsil eder.  
+ Kullanıcı Arabirimi (UI) tasarımcıları sık, kullanıcılara tablosal verileri görüntülemek gerekli bulur. .NET Framework, verileri bir tablo veya kılavuz göstermek için birçok yol sağlar. `DataGridView` Denetimi bu teknoloji Windows Forms uygulamaları için en son evrimini temsil eder.  
   
  `DataGridView` Denetimi, bir veri deposundan veri satırı görüntüleyebilirsiniz. Birçok veri depolarının türleri desteklenir. Veri deposu, tek boyutlu bir dizi gibi basit, yazılmamış veri tutabilir veya türü belirtilmiş veri gibi tutabilen bir <xref:System.Data.DataSet>. Daha fazla bilgi için [nasıl yapılır: Veri bağlama Windows Forms DataGridView denetiminde](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   

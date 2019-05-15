@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 8e793fc130252caf91d9b1c15b41beba1cc8ae1f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f8d399859e4f861158ab74db9ed410aec280dbe2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587608"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586679"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Veri Sözleşmelerinde Numaralandırma Türleri
 Numaralandırmalar veri sözleşme modelindeki ifade edilebilir. Bu konuda bir programlama modeli açıklayan birkaç örneklerle size yol gösterir.  
@@ -39,7 +39,7 @@ Numaralandırmalar veri sözleşme modelindeki ifade edilebilir. Bu konuda bir p
   
  Örneğin, kullanabileceğiniz `CarConditionEnum` Gönderen tarafında ve `CarConditionWithNumbers` alıcı tarafında. Gönderen tarafı için "1" değeri kullansa `Used` ve alma tarafı kullandığı değer "20" XML gösterimi `<condition>Used</condition>` iki tarafı için.  
   
- Veri sözleşmesi içerisinde bulunan için uygulamanız gereken <xref:System.Runtime.Serialization.EnumMemberAttribute> özniteliği. İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], aynı zamanda tüm sabit listesi için varsayılan değer olan bir sabit listesi özel değeri 0 (sıfır) her zaman uygulayabilirsiniz. Ancak, bu özel sıfır değeri ile işaretlenmediği sürece serileştirilemiyor bile <xref:System.Runtime.Serialization.EnumMemberAttribute> özniteliği.  
+ Veri sözleşmesi içerisinde bulunan için uygulamanız gereken <xref:System.Runtime.Serialization.EnumMemberAttribute> özniteliği. .NET Framework'teki özel değeri 0 (sıfır) her zaman aynı zamanda tüm sabit listesi için varsayılan değer olan bir sabit listesi uygulayabilirsiniz. Ancak, bu özel sıfır değeri ile işaretlenmediği sürece serileştirilemiyor bile <xref:System.Runtime.Serialization.EnumMemberAttribute> özniteliği.  
   
  Bu iki istisna mevcuttur:  
   

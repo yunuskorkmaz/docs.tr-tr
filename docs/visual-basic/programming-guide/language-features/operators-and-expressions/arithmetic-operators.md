@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 9f1d77ac27def556d94fac12dbde2f36d5b139de
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a1854e35e32a31dbf531e6705a7968434dd02e44
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649755"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593248"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic'de Aritmetik İşleçler
 Aritmetik işleçler değişmez değerleri, değişkenleri, diğer ifadeler, işlevi ve özellik çağrılarını ve sabitleri tarafından temsil edilen sayısal değerleri hesaplama ilgili alışık olduğunuz aritmetik işlemleri çoğunu gerçekleştirmek için kullanılır. Ayrıca aritmetik sınıflandırılmış işlenenden tek bit düzeyinde işlem ve bunların bit düzenleri sola veya sağa kaydırma bit kaydırma işleçleri şunlardır.  
@@ -51,7 +51,7 @@ Aritmetik işleçler değişmez değerleri, değişkenleri, diğer ifadeler, iş
  [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
 ### <a name="attempted-division-by-zero"></a>Denenen sıfıra bölme  
- Sıfıra bölme, söz konusu veri türlerine bağlı olarak farklı sonuçlar sahiptir. İntegral bulunduğu (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] oluşturur bir <xref:System.DivideByZeroException> özel durum. Bölme işlemleri, `Decimal` veya `Single` veri türü [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ayrıca oluşturur bir <xref:System.DivideByZeroException> özel durum.  
+ Sıfıra bölme, söz konusu veri türlerine bağlı olarak farklı sonuçlar sahiptir. İntegral bulunduğu (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), .NET Framework oluşturur bir <xref:System.DivideByZeroException> özel durum. Bölme işlemleri, `Decimal` veya `Single` veri türü, .NET Framework ayrıca oluşturur bir <xref:System.DivideByZeroException> özel durum.  
   
  Kayan nokta bölümler ilgili olarak `Double` veri türü, hiçbir özel durum ve sonucu temsil eden sınıf üyesidir <xref:System.Double.NaN>, <xref:System.Double.PositiveInfinity>, veya <xref:System.Double.NegativeInfinity>bölünen bağlı olarak. Aşağıdaki tabloda özetlenmiştir bölmek çalışılırken çeşitli sonuçlarını bir `Double` sıfır değeri.  
   

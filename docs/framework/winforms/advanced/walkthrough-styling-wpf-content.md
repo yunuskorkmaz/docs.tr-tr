@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: d815311a89ba09ade7e3092ca4eeab67cbe20bd0
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: b689bb7299d541708db7ae786bff62a1007608e5
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211253"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557885"
 ---
 # <a name="walkthrough-style-wpf-content"></a>İzlenecek yol: WPF içeriği için stil
 
@@ -58,15 +58,15 @@ Farklı görünümünü ve davranışını değiştirmek için bir WPF denetimi 
 
 1. Açık `Form1` Windows Forms Tasarımcısı'nda.
 
-2. İçinde **araç kutusu**, çift `UserControl1` bir örneğini oluşturmak için `UserControl1` form üzerinde.
+1. İçinde **araç kutusu**, çift `UserControl1` bir örneğini oluşturmak için `UserControl1` form üzerinde.
 
      Örneği `UserControl1` yeni bir barındırılan <xref:System.Windows.Forms.Integration.ElementHost> adlı Denetim `elementHost1`.
 
-3. Akıllı etiket panelinde `elementHost1`, tıklayın **barındırılan içerik Düzenle** aşağı açılan listeden.
+1. Akıllı etiket panelinde `elementHost1`, tıklayın **barındırılan içerik Düzenle** aşağı açılan listeden.
 
      `UserControl1` açılır [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
 
-4. XAML Görünümü'nde, aşağıdaki XAML sonra Ekle `<UserControl>` etiketiyle.
+1. XAML Görünümü'nde, aşağıdaki XAML sonra Ekle `<UserControl>` etiketiyle.
 
      Bu XAML gradyan karşıt gradyan kenarlıklı oluşturur. Denetim tıklandığında gradyanlar basılan düğme görünümünü oluşturmak için değiştirilir. Daha fazla bilgi için [stil ve şablon oluşturma](../../wpf/controls/styling-and-templating.md).
 
@@ -118,7 +118,7 @@ Farklı görünümünü ve davranışını değiştirmek için bir WPF denetimi 
    </UserControl.Resources>
    ```
 
-4. Uygulama `SimpleButton` aşağıdaki XAML içinde ekleyerek iptal düğmesi için önceki adımda tanımlanan stil `<Button>` İptal düğmesinin etiketi.
+1. Uygulama `SimpleButton` aşağıdaki XAML içinde ekleyerek iptal düğmesi için önceki adımda tanımlanan stil `<Button>` İptal düğmesinin etiketi.
 
    ```xaml
    Style="{StaticResource SimpleButton}
@@ -131,15 +131,15 @@ Farklı görünümünü ve davranışını değiştirmek için bir WPF denetimi 
                 Style="{StaticResource SimpleButton}">Cancel</Button>
    ```
 
-5. Projeyi oluşturun.
+1. Projeyi oluşturun.
 
-6. Açık `Form1` Windows Forms Tasarımcısı'nda.
+1. Açık `Form1` Windows Forms Tasarımcısı'nda.
 
-7. Düğme denetimine yeni stil uygulanır.
+1. Düğme denetimine yeni stil uygulanır.
 
-8. Gelen **hata ayıklama** menüsünde **hata ayıklamayı Başlat** uygulamayı çalıştırın.
+1. Gelen **hata ayıklama** menüsünde **hata ayıklamayı Başlat** uygulamayı çalıştırın.
 
-9. Tamam ve İptal düğmeleri tıklatabilir ve farkları görüntüleyin.
+1. Tamam ve İptal düğmeleri tıklatabilir ve farkları görüntüleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

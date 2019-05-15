@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 0fca02ab2dcb507c1129f18f31a25c7809fc9710
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 616599e15c0d3d4c2177622d6820269bcff3ea39
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917962"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592805"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Bildirilmiş Öğelere Başvurular (Visual Basic)
 Kodunuz için bildirilen bir öğe başvurduğunda, Visual Basic Derleyicisi, adı uygun bildirimi, başvuru adı eşleşir. Aynı ada sahip birden fazla öğe bildirilmişse, bu öğeleri tarafından başvurulan olan denetleyebilirsiniz *uygun* adı.  
@@ -152,7 +152,7 @@ End Module
 ## <a name="references-to-projects"></a>Proje başvuruları  
  Kullanılacak [genel](../../../../visual-basic/language-reference/modifiers/public.md) başka bir projede tanımlanan öğeleri, ilk ayarlamalısınız bir *başvuru* projenin derleme veya tür kitaplığına. Bir başvuru ayarlamak için tıklayın **Başvuru Ekle** üzerinde **proje** menü veya kullanım [/Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) derleyici komut satırı seçeneği.  
   
- Örneğin, XML nesne modeli kullanabilirsiniz [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Bir başvuru ayarlamanız <xref:System.Xml> ad alanı, bildirme ve herhangi bir alt sınıfı gibi kullanma <xref:System.Xml.XmlDocument>. Aşağıdaki örnekte <xref:System.Xml.XmlDocument>.  
+ Örneğin, .NET Framework'ün XML nesne modeli kullanabilirsiniz. Bir başvuru ayarlamanız <xref:System.Xml> ad alanı, bildirme ve herhangi bir alt sınıfı gibi kullanma <xref:System.Xml.XmlDocument>. Aşağıdaki örnekte <xref:System.Xml.XmlDocument>.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  

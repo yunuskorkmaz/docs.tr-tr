@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: fc8e55d8f3824ca11c575479863491d7f949efa3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 02f3224a8069fd091833bb09744389592c769818
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665859"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592507"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Windows Forms ve Yönetilmeyen Uygulamalara Genel Bakış
 Windows Forms uygulamaları ve denetimleri bazı uyarılar ile yönetilmeyen uygulamalar ile çalışabilirler. Aşağıdaki bölümlerde, Windows Forms uygulamalarının ve denetimlerinin destekleyen ve destekledikleri değil, senaryolar ve yapılandırmaları açıklanmaktadır.  
@@ -47,7 +47,7 @@ Windows Forms uygulamaları ve denetimleri bazı uyarılar ile yönetilmeyen uyg
  Bir uygulamanın ileti döngüsü bir iş parçacığının ileti kuyruktan iletileri alır bir program iç döngü bunları çevirir ve bunları daha sonra işlenmek üzere uygulamaya gönderir. Bir Windows formu için ileti döngüsü, Visual Basic 6.0 uygulamalarını ve MFC uygulamaları gibi eski uygulamaları sağlayan ileti döngüleri aynı mimarisine sahip değil. Windows Form beklediğinden ileti döngüsü için gönderilen pencere iletileri farklı şekilde ele alınabilir. Bu nedenle, beklenmeyen davranış oluşabilir. Bazı tuş bileşimlerini çalışmayabilir, bazı fare etkinlik çalışmayabilir veya bazı olaylar beklendiği gibi oluşturulabilir değil.  
   
 ## <a name="resolving-interoperability-issues"></a>Birlikte çalışabilirlik sorunlarını çözme  
- Üzerinde formunu görüntüleyerek bu sorunları çözebilir bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] kullanılarak oluşturulan ileti döngüsü <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> yöntemi.  
+ Kullanılarak oluşturulmuş bir .NET Framework ileti döngüsü üzerinde formunu görüntüleyerek bu sorunları çözebilir <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> yöntemi.  
   
  Bir COM istemci uygulamasından doğru şekilde bir Windows Form çalışmasını sağlamak için bir Windows Forms ileti döngüsü üzerinde çalıştırmanız gerekir. Bunu yapmak için aşağıdaki yaklaşımlardan birini kullanın:  
   

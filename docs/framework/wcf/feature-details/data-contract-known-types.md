@@ -9,12 +9,12 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 01257847956f22c895b00c6055ec1cdd1e89eaf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dc297bd35d7bfdb25fc50135b8e684e1b9452cb2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627083"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592577"
 ---
 # <a name="data-contract-known-types"></a>Veri Sözleşmesi Bilinen Türler
 <xref:System.Runtime.Serialization.KnownTypeAttribute> Sınıfı, öncelikli seri durumundan çıkarma sırasında göz önünde bulundurmanız için dahil edilmesi gereken türleri belirtmenize olanak verir. Çalışan bir örnek için bkz. [bilinen türleri](../../../../docs/framework/wcf/samples/known-types.md) örnek.  
@@ -27,7 +27,7 @@ ms.locfileid: "64627083"
   
 - İletilecek bilgiler için bildirilen türü <xref:System.Object>. Her tür öğesinden devralındığından <xref:System.Object>ve bunu önceden hangi tür gerçekten gönderilen bilinmesi olamaz, alan uç noktası önceden aktarılan veriler için veri anlaşması belirlenemiyor. Bu, ilk öğenin bir özel durumdur: Varsayılan olarak oluşturulan bir boş veri anlaşması her veri anlaşması türetildiği <xref:System.Object>.  
   
-- Dahil bazı türleri [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri, önceki üç kategoriden birinde yer üyelerin sahiptir. Örneğin, <xref:System.Collections.Hashtable> kullanan <xref:System.Object> karma tablosundan gerçek nesneleri depolamak için. Bu türler seri hale getirme, alma tarafı önceden bu üyeler için veri anlaşması belirlenemiyor.  
+- .NET Framework türleri dahil, bazı türleri önceki üç kategoriden birinde olan üyeleri var. Örneğin, <xref:System.Collections.Hashtable> kullanan <xref:System.Object> karma tablosundan gerçek nesneleri depolamak için. Bu türler seri hale getirme, alma tarafı önceden bu üyeler için veri anlaşması belirlenemiyor.  
   
 ## <a name="the-knowntypeattribute-class"></a>KnownTypeAttribute sınıfı  
  Veri alma bir bitiş noktasına ulaştığında, bir ortak dil çalışma zamanı (CLR) türünün bir örneğine verileri seri durumdan WCF çalıştırma zamanı çalışır. İlk verileri belirlemek için gelen ileti anlaşması iletinin içeriğini uygun olması inceleyerek seri durumundan çıkarma için örneği türü seçilir. Seri durumundan çıkarma altyapısı ardından ileti içeriği ile uyumlu bir veri anlaşması uygulayan bir CLR türü bulmaya çalışır. Bu işlem sırasında seri durumundan çıkarma altyapısı sağlayan aday türleri "bilinen türleri." seri kaldırıcı'nın kümesi olarak adlandırılır  

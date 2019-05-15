@@ -4,16 +4,16 @@ description: ML.NET içinde desteklenen özellik Mühendisliği bileşenleri ke�
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: d3261f88a8e52c71f8ddf4d3d5c90b2e2b22b620
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ea06e19b4651017079a6ae57136f033e0ce981c
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636544"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65558023"
 ---
 # <a name="data-transformations"></a>Veri Dönüşümleri
 
-Veri Dönüşümleri, model yönetimi için veri hazırlamak için kullanılır. Bu kılavuzun dönüştürmeleri uygulayan sınıf döndüren [IEstimator](xref:Microsoft.ML.IEstimator`1) arabirimi. Veri Dönüşümleri birbirine zincirlenebilir. Her dönüştürme hem bekliyor ve belirli türlerin ve bağlantılı başvuru belgelerinde belirtilen biçimden veri üretir.
+Veri Dönüşümleri, model yönetimi için veri hazırlamak için kullanılır. Bu kılavuzun dönüştürmeleri uygulayan sınıf döndüren [IEstimator](xref:Microsoft.ML.IEstimator%601) arabirimi. Veri Dönüşümleri birbirine zincirlenebilir. Her dönüştürme hem bekliyor ve belirli türlerin ve bağlantılı başvuru belgelerinde belirtilen biçimden veri üretir.
 
 Bazı veri dönüşümleri kendi parametrelerini hesaplamak için eğitim verilerini gerektirir. Örneğin: <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> transformer, ortalama ve eğitim verilerini sırasında varyansını hesaplar `Fit()` işlemi, bu parametreleri kullanır `Transform()` işlemi. 
 

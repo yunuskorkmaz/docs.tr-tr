@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83905c97f37a0e49f6219da47e2f640ecfb8edfb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: face995dbd5ba4b0b12e80bcef10a90b46c093ff
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61901736"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586416"
 ---
 # <a name="how-to-create-time-zones-with-adjustment-rules"></a>Nasıl yapılır: Ayarlama kuralları ile saat dilimleri oluşturma
 
@@ -85,8 +85,6 @@ Dizi oluşturma <xref:System.TimeZoneInfo.AdjustmentRule> kullanmak için nesnel
 ## <a name="compiling-the-code"></a>Kod derleme
 
 Bu örnek gerektirir:
-
-* Projeye System.Core.dll öğesine başvuru eklenmesi gerektiğini.
 
 * Şu ad alanlarından alınan olduğunu:
 

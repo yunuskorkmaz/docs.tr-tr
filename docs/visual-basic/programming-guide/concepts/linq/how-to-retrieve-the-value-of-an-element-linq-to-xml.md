@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Bir öğe (LINQ to XML) değerini alma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-ms.openlocfilehash: 490e98134497836e0751e48949d4dceda41bcbf3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a52ebf437b8c1254b3a8c30558e14a254bb1fe5d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61851922"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592496"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>Nasıl yapılır: Bir öğe (LINQ to XML) değerini alma (Visual Basic)
 Bu konuda, öğelerin değerini alma gösterilmektedir. Bunu yapmak için iki ana yolu vardır. Dönüştürülecek bir yolu olan bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XAttribute> istenen türe. Açık dönüştürme işleci öğe veya öznitelik içeriğini belirtilen türe dönüştürür ve değişkeninize atar. Alternatif olarak, <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> özelliği veya <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> özelliği.  
@@ -67,7 +67,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>Örnek  
- Bazen varolduğundan emin değilseniz olsa bile, bir öğenin değeri alınmaya çalışıldı. Bu durumda, atadığınızda Integer öğesi null yapılabilir bir tür (ya da `string` veya boş değer atanabilir türleri [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]), öğe atanmış mevcut değilse değişkeni ayarlamanız yeterlidir `Nothing`. Aşağıdaki kodu öğesi olabilir ya da mevcut, atama kullanımı çok daha kolay olduğunu gösteriyor <xref:System.Xml.Linq.XElement.Value%2A> özelliği.  
+ Bazen varolduğundan emin değilseniz olsa bile, bir öğenin değeri alınmaya çalışıldı. Bu durumda, atadığınızda Integer öğesi null yapılabilir bir tür (ya da `string` veya boş değer atanabilir türler .NET Framework), öğe atanmış mevcut değilse değişkeni ayarlamanız yeterlidir `Nothing`. Aşağıdaki kodu öğesi olabilir ya da mevcut, atama kullanımı çok daha kolay olduğunu gösteriyor <xref:System.Xml.Linq.XElement.Value%2A> özelliği.  
   
 ```vb  
 Dim root As XElement = <Root>  

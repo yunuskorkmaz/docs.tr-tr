@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: 98702f2fb8f912b9503f3ccdad74e61ef097f617
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e2dbbd63be07a19c6e05c7ec8f94bdcd8f50c902
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600887"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586309"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Genişletme ve Daraltma Dönüşümleri (Visual Basic)
 Önemli bir tür dönüştürme ile dönüştürmenin sonucu hedef veri türü aralık içinde olup olmadığını noktadır.  
@@ -93,7 +93,7 @@ ms.locfileid: "64600887"
   
 - <xref:System.OverflowException> — (sadece integral türleri) dönüştürülen değer hedef türü için çok büyük ise  
   
- Bir sınıf veya yapı tanımlıyorsa bir [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md) , sınıf veya yapı, gelen veya dönüştürme işleci olarak görev yapacak, `CType` , uygun gördüğü herhangi bir özel durum oluşturabilir. Ayrıca, `CType` Visual Basic işlevleri deniyor olabilir veya [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yöntemleri sırayla çeşitli özel durumlar oluşturabilir.  
+ Bir sınıf veya yapı tanımlıyorsa bir [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md) , sınıf veya yapı, gelen veya dönüştürme işleci olarak görev yapacak, `CType` , uygun gördüğü herhangi bir özel durum oluşturabilir. Ayrıca, `CType` Visual Basic işlevleri veya hangi sırayla çeşitli özel durumlar oluşturabilir ve .NET Framework yöntemlerini çağırabilirsiniz.  
   
 ## <a name="changes-during-reference-type-conversions"></a>Başvuru türü dönüşümleri sırasında değişiklikleri  
  Dönüştürme bir *başvuru türüne* yalnızca işaretçi değerine kopyalar. Değer ne kopyalanamaz ya da herhangi bir şekilde değiştirildi. İşaretçi tutan değişken veri türünü değiştirmek için gereken tek şey var. Aşağıdaki örnekte, veri türü temel sınıfı için türetilen bir sınıftan dönüştürülür, ancak her iki değişken için artık işaret nesnesi değiştirilmez.  

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - current instance [Visual Basic], Me keyword
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
-ms.openlocfilehash: a8df6e48fd5bce9bb28d8aef7e031f36741ad0ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3eca756429c5fec8f324a17350844b59baf9ccf7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050486"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586259"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic'de Me, My, MyBase ve MyClass
 `Me`, `My`, `MyBase`, ve `MyClass` Visual Basic'te adlarının benzer ancak farklı amaçlara sahip. Bu konuda bunları ayırt etmek için bunların her biri açıklanmaktadır.  
@@ -50,7 +50,7 @@ ChangeFormColor(Me)
 ```  
   
 ## <a name="my"></a>Benim  
- `My` Özelliği için çok sayıda kolay ve sezgisel erişim sunar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] sınıfları, bilgisayar, uygulama, ayarları, kaynakları ve benzeri ile etkileşim kurmak Visual Basic kullanıcı etkinleştirme.  
+ `My` Özellik .NET Framework sınıfları, bilgisayar, uygulama, ayarları, kaynakları ve benzeri ile etkileşim kurmak Visual Basic kullanıcı etkinleştirme sayısını kolay ve sezgisel erişim sağlar.  
   
 ## <a name="mybase"></a>MyBase  
  `MyBase` Anahtar sözcüğü davranacağını gibi geçerli bir sınıf örneğinin temel sınıfına başvuran bir nesne değişkeni. `MyBase` yaygın olarak geçersiz kılınan ya da türetilen bir sınıfta gölgeli bir temel sınıf üyelerinin erişmek için kullanılır. `MyBase.New` bir temel sınıf oluşturucusu bir türetilmiş sınıf oluşturucusunda açıkça çağırmak için kullanılır.  

@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: (Visual Basic) komut satırını kullanarak derlemeler oluşturma ve kullanma'
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-ms.openlocfilehash: d58109dfbb03b752f4a46f895fa1093e4f37df71
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a30d4b3ea203a8b4d3ba621fc7b0310477ddf10d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624777"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592690"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Nasıl yapılır: (Visual Basic) komut satırını kullanarak derlemeler oluşturma ve kullanma
 Bir derleme veya dinamik bağlantı kitaplığı (DLL), programınız için çalışma zamanında bağlıdır. Oluşturma ve bir DLL kullanarak göstermek için aşağıdaki senaryoyu göz önünde bulundurun:  
@@ -97,25 +97,6 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
  Programı çalıştırmak için iki sayı, aşağıdaki gibi yazın, bir EXE dosyasının adını girin:  
   
  `TestCode 1234 5678`  
-  
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Dosyayı oluşturmak için `MathLibrary.DLL`, iki dosya derleme `Add` ve `Mult` şu komut satırını kullanarak.  
-  
-```console  
-vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
-```  
-  
- [-Target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) derleyici seçeneği, derleyicinin çıktısını bir EXE dosyası yerine bir DLL söyler. [-Out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) dosya adından önce gelen derleyici seçeneği, DLL dosya adı belirtmek için kullanılır. Aksi halde, derleyici ilk dosyayı kullanır (`Add.vb`) olarak DLL'in adı.  
-  
- Yürütülebilir dosyayı oluşturmak için `TestCode.exe`, şu komut satırını kullanın:  
-  
-```console  
-vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  
-```  
-  
- **-Out** derleyici seçeneği, derleyiciye bir EXE dosyası çıkış ve çıktı dosyası adını belirtir (`TestCode.exe`). Bu derleyici seçeneğini isteğe bağlıdır. [-Başvuru (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) derleyici seçeneği, DLL dosyasının veya bu programın kullandığı dosyaları belirtir.  
-  
- Komut satırından oluşturma hakkında daha fazla bilgi için bkz ve [komut satırından derleme](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

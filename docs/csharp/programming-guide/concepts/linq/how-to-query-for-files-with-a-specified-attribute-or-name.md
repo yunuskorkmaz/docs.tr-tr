@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Belirtilen öznitelik veya ada sahip dosyaları sorgulama (C#)'
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: e600899251fe08884088275307f4311f3b9787cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 94642ff500cb065ffcb28d6099c3f9f50d43d124
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702028"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584327"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Nasıl yapılır: Belirtilen öznitelik veya ada sahip dosyaları sorgulama (C#)
 Bu örnek nasıl (örneğin, ".txt") belirtilen dosya adı uzantısına sahip tüm dosyaları bulmak belirtilen dizin ağacında gösterir. Ayrıca oluşturma saatini temel alan ağacında ya da yeni veya eski dosyayı iade işlemini de gösterir.  
@@ -64,7 +64,7 @@ class FindFileByExtension
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
+  Oluşturma bir C# konsol uygulama projesi ile `using` System.Linq ve System.IO ad alanları için yönergeleri.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

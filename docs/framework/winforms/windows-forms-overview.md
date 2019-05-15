@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 5eee8b4b046bd4d3f9c71b692f4bac3dd6bcea2c
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: e9d117b272cea8ebb96dc579fa1d8faf65d42c45
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211776"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583466"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms'a genel bakış
 
@@ -22,7 +22,7 @@ Aşağıdaki genel akıllı istemci uygulamaları, Windows Forms programlama ve 
 
 ### <a name="build-rich-interactive-user-interfaces"></a>Zengin, etkileşimli kullanıcı arabirimleri oluşturun
 
- Windows Forms için bir akıllı istemci teknolojisidir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], dosya sistemine yazma ve okuma gibi ortak uygulama görevleri basitleştirmek yönetilen kitaplığı kümesi. Visual Studio gibi bir geliştirme ortamı kullandığınızda, bir ağ üzerinden uzak bilgisayarlarla iletişim bilgilerini görüntülemek ve kullanıcıların giriş istek Windows Forms akıllı istemci uygulamaları oluşturabilirsiniz.
+ Windows Forms, .NET Framework, dosya sistemine yazma ve okuma gibi ortak uygulama görevleri basitleştirmek yönetilen kitaplıkları kümesi için bir akıllı istemci teknolojisidir. Visual Studio gibi bir geliştirme ortamı kullandığınızda, bir ağ üzerinden uzak bilgisayarlarla iletişim bilgilerini görüntülemek ve kullanıcıların giriş istek Windows Forms akıllı istemci uygulamaları oluşturabilirsiniz.
 
  Windows Forms'ta bir *form* üzerinde görüntü bilgileri kullanıcıya görsel bir yüzeydir. Normalde formlarına denetimler ekleme ve fare tıklamasına veya tuş basışlarını gibi kullanıcı eylemlerini yanıtlarını geliştirmeye göre Windows Forms uygulamaları oluşturun. A *denetimi* veri girişi kabul eder ya da veri görüntüleyen bir ayrık bir kullanıcı arabirimi (UI) öğesidir.
 
@@ -90,7 +90,7 @@ Tam bir giriş için [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)
 
 ### <a name="other-controls-and-features"></a>Diğer denetimler ve özellikleri
 
-Windows Forms'ta olun uygulayan ortak görevleri hızlı ve kolay, iletişim kutuları oluşturma, yazdırma, Yardım ve belgeler ekleme ve uygulamanızı birden çok dilde yerelleştirme desteği gibi diğer birçok özellik vardır. Ayrıca, Windows Forms sağlam güvenlik sistemine bağlıdır [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Bu sistem ile müşterilerinize daha güvenli uygulamalar serbest bırakabilirsiniz.
+Windows Forms'ta olun uygulayan ortak görevleri hızlı ve kolay, iletişim kutuları oluşturma, yazdırma, Yardım ve belgeler ekleme ve uygulamanızı birden çok dilde yerelleştirme desteği gibi diğer birçok özellik vardır. Ayrıca, Windows Forms, .NET Framework'ün sağlam güvenlik sistemine bağlıdır. Bu sistem ile müşterilerinize daha güvenli uygulamalar serbest bırakabilirsiniz.
 
 #### <a name="implement-other-controls-and-features"></a>Diğer denetimler ve özellikleri uygulama
 

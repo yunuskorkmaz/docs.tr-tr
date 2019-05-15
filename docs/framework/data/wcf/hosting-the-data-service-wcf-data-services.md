@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: bca11c0c1828513077985aa11553ec5c0ad52a27
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 4886103f7f0246eaacd12c3f12d50a055e650959
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910797"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582678"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Veri hizmetini (WCF Veri Hizmetleri) barındırma
 WCF veri hizmetlerini kullanarak, verileri olarak kullanıma sunan bir hizmet oluşturabilmeniz için bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış. Bu veri hizmeti öğesinden devralınan bir sınıf olarak tanımlanan <xref:System.Data.Services.DataService%601>. Bu sınıf, OData gerektirdiği yanıt iletilerini istek iletilerini işlemek ve güncelleştirmeleri veri kaynağına karşı gerçekleştirmek için gereken işlevleri sağlar. Ancak, bir veri hizmeti bağlamak ve bir ağ yuvayı için gelen HTTP istek dinleyemedi. Bu gerekli işlevselliği için veri hizmetini barındıran bir bileşende kullanır.
@@ -58,7 +58,7 @@ Kullanırken **Yeni Öğe Ekle** iletişim Aracı'nı bir ASP.NET uygulamasında
  Bir veri hizmeti bir WCF hizmeti gibi davranan olduğundan, veri hizmeti ile tümleşir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ve WCF Web programlama modelini kullanır. Daha fazla bilgi için [WCF hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) ve [WCF Web HTTP programlama modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
 
 ## <a name="self-hosted-wcf-services"></a>Şirket içinde barındırılan WCF hizmetleri
- WCF uygulaması içerir olduğundan, bir veri hizmetine bir WCF hizmeti olarak kendi kendine barındırma WCF veri hizmetleri destekler. Bir hizmet, tüm şirket içinde barındırılan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bir konsol uygulaması gibi uygulama. <xref:System.Data.Services.DataServiceHost> Öğesinden devralan sınıf <xref:System.ServiceModel.Web.WebServiceHost>, belirli bir adresten veri hizmeti örneklemek için kullanılır.
+ WCF uygulaması içerir olduğundan, bir veri hizmetine bir WCF hizmeti olarak kendi kendine barındırma WCF veri hizmetleri destekler. Bir hizmeti bir konsol uygulaması gibi herhangi bir .NET Framework uygulamasında, şirket içinde barındırılan olabilir. <xref:System.Data.Services.DataServiceHost> Öğesinden devralan sınıf <xref:System.ServiceModel.Web.WebServiceHost>, belirli bir adresten veri hizmeti örneklemek için kullanılır.
 
  Bu, dağıtmak ve hizmette sorun gidermek kolaylaştırabilir çünkü kendi kendine barındırma geliştirme ve test için kullanılabilir. Ancak, bu tür barındırma tarafından sağlanan Gelişmiş barındırma ve yönetim özellikleri sağlamaz [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] veya Internet Information Services (IIS) tarafından. Daha fazla bilgi için [yönetilen bir uygulamada barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).
 

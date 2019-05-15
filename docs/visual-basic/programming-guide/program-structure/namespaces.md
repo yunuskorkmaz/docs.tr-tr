@@ -16,24 +16,24 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 792741dc4df7b65ddef124615032c06a7ff1bcb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbd8d901f018d95b8a1f5c81c813853838c4a4cd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050473"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586291"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic'de Ad Alanları
 Ad alanları, bir derlemede tanımlanan nesneler düzenleyin. Derlemeleri diğer ad alanlarında sırayla içerebilen birden çok ad alanları içerebilir. Ad alanları belirsizlik önlemek ve büyük nesne grupları gibi sınıf kitaplıkları kullanırken başvuruları basitleştirin.  
   
- Örneğin, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] tanımlar <xref:System.Windows.Forms.ListBox> sınıfını <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanı. Aşağıdaki kod parçası, bu sınıfın tam adını kullanarak bir değişken bildirmek gösterilmektedir:  
+ Örneğin, .NET Framework tanımlar <xref:System.Windows.Forms.ListBox> sınıfını <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanı. Aşağıdaki kod parçası, bu sınıfın tam adını kullanarak bir değişken bildirmek gösterilmektedir:  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>Ad çakışmalarını önleme  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ad alanları olarak da adlandırılan bir sorun gidermek *ad alanı kirliliği*, başka bir kitaplık benzer adlarında kullanımı, bir sınıf kitaplığı geliştiricisi belgelemenin içinde. Bu çakışmaları var olan bileşenleri ile adlandırılan *adı Çarpışmaları*.  
+ .NET framework ad alanları olarak da adlandırılan bir sorun gidermek *ad alanı kirliliği*, başka bir kitaplık benzer adlarında kullanımı, bir sınıf kitaplığı geliştiricisi belgelemenin içinde. Bu çakışmaları var olan bileşenleri ile adlandırılan *adı Çarpışmaları*.  
   
- Örneğin, adında yeni bir sınıf oluşturursanız `ListBox`, nitelik olmadan proje içinde kullanabilirsiniz. Ancak, kullanmak istiyorsanız [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> sınıfı aynı projede benzersiz başvuru yapmak için tam nitelikli bir başvuru kullanmanız gerekir. Başvuru benzersiz değilse, Visual Basic adı belirsiz bildiren bir hata üretir. Aşağıdaki kod örneği, bu nesneleri bildirmek gösterilmektedir:  
+ Örneğin, adında yeni bir sınıf oluşturursanız `ListBox`, nitelik olmadan proje içinde kullanabilirsiniz. Ancak, .NET Framework kullanmak istiyorsanız <xref:System.Windows.Forms.ListBox> sınıfı aynı projede benzersiz başvuru yapmak için tam nitelikli bir başvuru kullanmanız gerekir. Başvuru benzersiz değilse, Visual Basic adı belirsiz bildiren bir hata üretir. Aşağıdaki kod örneği, bu nesneleri bildirmek gösterilmektedir:  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   

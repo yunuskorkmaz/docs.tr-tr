@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: ba943a54fdfc71dc1eb2ee2ce9548dfb86070712
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a41eac3d5b51936ebbae8d9e3dcf623da676bce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657054"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583510"
 ---
 # <a name="frequently-asked-questions"></a>Sıkça Sorulan Sorular
 Aşağıdaki bölümlerde, uyguladığınızda karşılaşabileceğiniz bazı yaygın sorunlar yanıt [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -168,7 +168,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="aptca"></a>APTCA  
  S. System.Data.Linq kısmen güvenilen kod tarafından kullanılmak üzere işaretlenmiş mi?  
   
- A. Evet, bunlar arasında System.Data.Linq.dll derlemenin olduğunu [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] simgesiyle işaretli derlemeler <xref:System.Security.AllowPartiallyTrustedCallersAttribute> özniteliği. Bu işaretleme, derlemelerde olmadan [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] yalnızca tam olarak güvenilen kod tarafından kullanılmak üzere tasarlanmıştır.  
+ A. Evet, System.Data.Linq.dll ile işaretlenmiş bu .NET Framework derlemeleri arasında derlemesidir <xref:System.Security.AllowPartiallyTrustedCallersAttribute> özniteliği. Bu işaretleme olmadan, yalnızca tam olarak güvenilen kod tarafından kullanım için .NET Framework derlemeleri amacını taşımaktadır.  
   
  Asıl senaryoda [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kısmen izin vererek çağıranlar etkinleştirmek için güvenilen için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Web uygulamalarından erişilecek derleme burada *güven* Orta bir yapılandırmadır.  
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7609c88b088b9386201f5ac5725d16f4c5f11071
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6adbe4e5c82d5f886fcffd5ab272a337c377395
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591375"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586118"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Yansıma Yaymadaki Güvenlik Sorunları
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Ara dil (MSIL), her biri kendi güvenlik sorunları Microsoft yaymak için üç yol sunar:  
+.NET Framework, Microsoft Ara dilini (MSIL), her biri kendi güvenlik sorunları yaymak için üç yol sunar:  
   
 - [Dinamik derlemeler](#Dynamic_Assemblies)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "64591375"
  Dinamik kod üretebilirsiniz yönteminden bağımsız olarak, oluşturulan kod yürütme, türleri ve yöntemleri oluşturulan kod tarafından gereken tüm izinleri gerektirir.  
   
 > [!NOTE]
->  Kodu yansıtarak ve kod yayan için gerekli izinler başarılı sürümleri ile değiştirilmiştir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Bkz: [sürüm bilgisi](#Version_Information), bu konunun devamındaki.  
+>  Kodu yansıtarak ve kod yayan için gerekli izinler, .NET Framework sürümleri başarılı ile değişti. Bkz: [sürüm bilgisi](#Version_Information), bu konunun devamındaki.  
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>Dinamik derlemeler  
@@ -141,17 +141,17 @@ ms.locfileid: "64591375"
 ## <a name="version-information"></a>Sürüm Bilgileri  
  İle başlayarak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], makine genelindeki güvenlik ilkesi ortadan ve güvenlik saydamlık varsayılan zorlama mekanizması haline gelir. Bkz: [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
   
- İle başlayarak [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> bayrağı olduğunda artık gerekli dinamik derlemeler ve dinamik yöntemleri yayma. Bu bayrak, tüm önceki sürümlerinde gereklidir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ İle başlayarak [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> bayrağı olduğunda artık gerekli dinamik derlemeler ve dinamik yöntemleri yayma. .NET Framework'ün tüm önceki sürümlerinde bu bayrağı gereklidir.  
   
 > [!NOTE]
->  <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> bayrak varsayılan olarak dahil `FullTrust` ve `LocalIntranet` adlandırılmış izin kümelerine, ancak içinde olmayan `Internet` izin kümesi. Bu nedenle,'ün önceki sürümlerinde [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], yalnızca yürütür varsa, Internet izinleri olan bir kitaplık kullanılabilir bir <xref:System.Security.PermissionSet.Assert%2A> için <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Kodlama hataları güvenlik açıklarına neden olabileceğinden tür kitaplıkların dikkatli bir güvenlik incelemesinden geçmesi gerekir. [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] Çünkü kod oluşturma herhangi bir güvenlik talebi verme doğası gereği ayrıcalıklı bir işlem değil olmadan kısmi güvenlik senaryolarına yayılmasını sağlar. Diğer bir deyişle, oluşturulan kod, yayan derlemenin daha fazla izne sahiptir. Böylece, güvenliği saydam kod yayan ve ihtiyacını kaldırır kitaplıkları <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, güvenli bir kitaplık yazma görevini basitleştirir.  
+>  <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> bayrak varsayılan olarak dahil `FullTrust` ve `LocalIntranet` adlandırılmış izin kümelerine, ancak içinde olmayan `Internet` izin kümesi. Yalnızca yürütür, bu nedenle, önceki .NET Framework sürümlerinde, bir kitaplık Internet izinlerle kullanılabilir bir <xref:System.Security.PermissionSet.Assert%2A> için <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Kodlama hataları güvenlik açıklarına neden olabileceğinden tür kitaplıkların dikkatli bir güvenlik incelemesinden geçmesi gerekir. [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] Çünkü kod oluşturma herhangi bir güvenlik talebi verme doğası gereği ayrıcalıklı bir işlem değil olmadan kısmi güvenlik senaryolarına yayılmasını sağlar. Diğer bir deyişle, oluşturulan kod, yayan derlemenin daha fazla izne sahiptir. Böylece, güvenliği saydam kod yayan ve ihtiyacını kaldırır kitaplıkları <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, güvenli bir kitaplık yazma görevini basitleştirir.  
   
- Ayrıca, [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] tanıtır <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> ortakdeğil türlere ve üye kısmen güvenilen dinamik yöntemleri erişmek için bayrak. Önceki sürümlerini [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] gerektiren <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> bayrak ortak olmayan türler ve üyeler erişen dinamik yöntemler için; bu kısmen güvenilen koda hiçbir zaman verilen bir izni.  
+ Ayrıca, [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] tanıtır <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> ortakdeğil türlere ve üye kısmen güvenilen dinamik yöntemleri erişmek için bayrak. .NET Framework'ün önceki sürümlerini gerektirir <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> bayrak ortak olmayan türler ve üyeler erişen dinamik yöntemler için; bu kısmen güvenilen koda hiçbir zaman verilen bir izni.  
   
  Son olarak, [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] anonim olarak barındırılan yöntemleri tanıtır.  
   
 ### <a name="obtaining-information-on-types-and-members"></a>Türler ve üyeler hakkında bilgi edinme  
- İle başlayarak [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], ortak olmayan türler ve üyeler hakkında bilgi edinmek için hiçbir izinleri gereklidir. Yansıma yayma dinamik yöntemler için gereken bilgileri elde etmek için kullanılır. Örneğin, <xref:System.Reflection.MethodInfo> nesneleri, yöntem çağrılarını yaymak için kullanılır. Önceki sürümlerini [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] gerektiren <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> bayrağı. Daha fazla bilgi için [yansımayla ilgili güvenlik konuları](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  
+ İle başlayarak [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], ortak olmayan türler ve üyeler hakkında bilgi edinmek için hiçbir izinleri gereklidir. Yansıma yayma dinamik yöntemler için gereken bilgileri elde etmek için kullanılır. Örneğin, <xref:System.Reflection.MethodInfo> nesneleri, yöntem çağrılarını yaymak için kullanılır. .NET Framework'ün önceki sürümlerini gerektirir <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> bayrağı. Daha fazla bilgi için [yansımayla ilgili güvenlik konuları](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: c9cb40cb318bd044cb9204ba2ed384b41b475d57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625773"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592773"
 ---
 # <a name="application-settings-architecture"></a>Uygulama Ayarları Mimarisi
 Bu konuda, uygulama ayarları mimarisi nasıl çalıştığını açıklanır ve mimarinin gruplandırılmış ayarları ve ayarları anahtarları gibi gelişmiş özellikleri keşfediyor.  
@@ -44,7 +44,7 @@ Bu konuda, uygulama ayarları mimarisi nasıl çalıştığını açıklanır ve
 ## <a name="settings-persistence"></a>Kalıcılık ayarları  
  <xref:System.Configuration.ApplicationSettingsBase> Sınıfı değil kendisine kalıcı veya yük ayarları; bu iş öğesinden türetilen bir sınıf ayar sağlayıcısı düşer <xref:System.Configuration.SettingsProvider>. Türetilen bir sınıfı varsa <xref:System.Configuration.ApplicationSettingsBase> aracılığıyla bir ayar sağlayıcısı belirtmiyor <xref:System.Configuration.SettingsProviderAttribute>, ardından varsayılan sağlayıcı <xref:System.Configuration.LocalFileSettingsProvider>, kullanılır.  
   
- İle yayımlanan yapılandırma sistemi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] statik uygulama yapılandırma verileri yerel bilgisayarın machine.config dosyasının veya içinde sağlama destekleyen bir `app.`ile dağıttığınız exe.config dosyası Uygulamanızı. <xref:System.Configuration.LocalFileSettingsProvider> Sınıfı bu yerel destek aşağıdaki yollarla genişletir:  
+ .NET Framework ile yayımlanan yapılandırma sistemi destekler yerel bilgisayarın machine.config dosyasının veya içinde statik uygulama yapılandırma verileri sağlayan bir `app.`ile dağıttığınız exe.config dosyası Uygulamanızı. <xref:System.Configuration.LocalFileSettingsProvider> Sınıfı bu yerel destek aşağıdaki yollarla genişletir:  
   
 - Uygulama kapsamlı ayarlar ya da bir machine.config dosyasına depolanabilir veya `app.`exe.config dosyaları. Machine.config her zaman salt okunur, çalışırken `app`. exe.config uygulamalarının çoğu için güvenlik konuları salt okunur tarafından kısıtlanan.  
   

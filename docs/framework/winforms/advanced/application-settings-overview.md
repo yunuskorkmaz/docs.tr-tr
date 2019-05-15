@@ -8,19 +8,19 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49c7ceb431e9ab59b47e3b8b912e2881aeeef6c2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972428"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583559"
 ---
 # <a name="application-settings-overview"></a>Uygulama Ayarlarına Genel Bakış
 Bu konuda, oluşturmak ve uygulamanız ve kullanıcılarınız adına ayar verileri depolamak nasıl ele alınmaktadır.  
   
  Windows Forms uygulaması ayarları özelliğini oluşturulacağı, depolanacağı ve özel uygulama ve istemci bilgisayarda kullanıcı tercihlerini korumak daha kolay hale getirir. İle Windows Forms uygulama ayarları, yalnızca veritabanı bağlantı dizeleri gibi uygulama verilerini, aynı zamanda kullanıcı uygulama tercihleri gibi kullanıcıya özgü verileri depolayabilirsiniz. Visual Studio veya özel yönetilmiş kod kullanarak, yeni ayarları oluşturabilir, bunları okuyun ve bunları disk formlarınızı özellikleri bağlamak ve yükleme ve kaydetme önce veri ayarlarını doğrulayın.  
   
- Uygulama ayarları geliştiricilerin özel çok az kod kullanarak, uygulama durumunu kaydetmeyi etkinleştirir ve önceki sürümlerinde dinamik özelliklerin yerini [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Uygulama ayarları, salt okunur, geç bağlanan ve daha fazla özel programlama gerektiren Dinamik özellikler üzerinde birçok geliştirme içerir. Dinamik özellik sınıfları görevlendirdiğimiz [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], ancak bunlar yalnızca ölçülü kaynak uygulama ayarları sınıfları sarmalamak Kabuk sınıfları.  
+ Uygulama ayarları, geliştiricilerin özel çok az kod kullanarak, uygulama durumunu kaydetmeyi etkinleştirir ve bir .NET Framework'ün önceki sürümlerinde Dinamik özellikler yerini alır. Uygulama ayarları, salt okunur, geç bağlanan ve daha fazla özel programlama gerektiren Dinamik özellikler üzerinde birçok geliştirme içerir. Dinamik özellik sınıfları görevlendirdiğimiz [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], ancak bunlar yalnızca ölçülü kaynak uygulama ayarları sınıfları sarmalamak Kabuk sınıfları.  
   
 ## <a name="what-are-application-settings"></a>Uygulama ayarları nelerdir?  
  Windows Forms uygulamalarınızı genellikle uygulamayı çalıştıran için kritik olan ancak doğrudan uygulama kodu dahil etmek istemediğiniz veri gerektirir. Uygulamanız bir Web hizmeti veya veritabanı sunucusu kullanıyorsa, böylece bunu gelecekte yeniden derleme olmadan değiştirebilirsiniz, ayrı bir dosyada bu bilgileri depolamak isteyebilirsiniz. Benzer şekilde, geçerli kullanıcıya özgü verileri depolamak, uygulamalarınızın gerektirebilir. Çoğu uygulama, örneğin, uygulamanın görünümünü ve davranışını özelleştirin kullanıcı tercihlerini sahip.  
@@ -34,7 +34,7 @@ Bu konuda, oluşturmak ve uygulamanız ve kullanıcılarınız adına ayar veril
  Özel denetimler de kaydedebilir kendi ayarlarını uygulayarak <xref:System.Configuration.IPersistComponentSettings> kullanıma sunan arabirim <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> yöntemi. Windows Forms <xref:System.Windows.Forms.ToolStrip> denetimi araç çubukları ve araç çubuğu öğelerini uygulama oturumları arasında konumunu kaydetmek için bu arabirimi uygular. Özel denetimler ve uygulama ayarları hakkında daha fazla bilgi için bkz. [özel denetimler için uygulama ayarları](application-settings-for-custom-controls.md).  
   
 ## <a name="limitations-of-application-settings"></a>Uygulama ayarları sınırlamaları  
- Uygulama ayarları barındıran yönetilmeyen bir uygulamada kullanamazsınız [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Visual Studio eklentileri, C++ için Microsoft Office, Internet Explorer veya Microsoft Outlook eklentileri ve projelerinde barındırma denetimi olarak, bu tür ortamlarda ayarları çalışmaz.  
+ .NET Framework barındıran yönetilmeyen bir uygulamada uygulama ayarları kullanamazsınız. Visual Studio eklentileri, C++ için Microsoft Office, Internet Explorer veya Microsoft Outlook eklentileri ve projelerinde barındırma denetimi olarak, bu tür ortamlarda ayarları çalışmaz.  
   
  Windows Forms'ta bazı özellikler şu anda bağlanılamıyor. En önemli örnek <xref:System.Windows.Forms.Form.ClientSize%2A> özelliği, bu özelliği için bağlama olarak neden öngörülemeyen davranışlara çalışma zamanında. Genellikle kaydetme ve bu ayarları yüklenirken bu sorunların çözüm çalışabilir programlı olarak.  
   

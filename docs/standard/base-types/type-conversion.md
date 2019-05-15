@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea32efaad24f171b7d5ebfa457834b35edbddf4c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 519b92cd24d75dd8e98fc28dbce3701c521a041d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664607"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593513"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework'te Tür Dönüştürme
 <a name="top"></a> Her değerin değere, sahip olabileceği olası değerler aralığı ayrılan alan miktarını gibi öznitelikleri tanımlayan ilişkili bir türü vardır ve onun üyeleri kullanılabilir hale getirir. Birçok değer, tek bir türden fazlası olarak ifade edilebilir. Örneğin, 4 değeri bir tamsayı olarak veya bir kayan nokta değeri olarak ifade edilebilir. Tür dönüştürme, eski bir türün değerine eşit olan, yeni türde bir değer oluşturur, fakat özgün nesnenin kimliğini (veya tam değerini) koruması gerekmez.  
@@ -46,7 +46,7 @@ ms.locfileid: "64664607"
   
 - Arabirimi nesneden bir arabirimi uygulayan yeniden orijinal türüne dönüştürme.  C# ' ta bu dönüştürme atama işleci gerektirir. Visual Basic'te gerektiren `CType` işleci, `Option Strict` açıktır.  
   
- Otomatik dönüştürmeler yanı sıra [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] özel tür dönüştürmeyi destekleyen çeşitli özellikler sağlar. Bunlar aşağıdakileri içerir:  
+ Otomatik dönüştürmeler ek olarak, .NET Framework özel tür dönüştürmeyi destekleyen çeşitli özellikler sağlar. Bunlar aşağıdakileri içerir:  
   
 - `Implicit` Türleri arasında kullanılabilir genişletme dönüştürmelerini tanımlayan işleci. Daha fazla bilgi için [işleçle örtülü dönüştürme](#implicit_conversion_with_the_implicit_operator) bölümü.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "64664607"
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> büyüktür <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> büyüktür <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
   
- Bu tür daraltma dönüştürmelerini işlemek için [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] türleri tanımlamak sağlayan bir `Explicit` işleci. Bireysel dil derleyicileri daha sonra kendi sözdizimlerini veya üyesi kullanarak bu işleci uygulamak <xref:System.Convert> sınıf dönüştürme yapmak için çağrılabilir. (Hakkında daha fazla bilgi için <xref:System.Convert> sınıfı [dönüştürme sınıfı](#Convert) bu konunun devamındaki.) Bu çıkış aralık büyük olasılıkla tam sayı değerlerine açıkça dönüştürülmesini işlemek için dil özelliklerinin kullanımı aşağıdaki örnekte <xref:System.Int32> değerleri.  
+ Bu tür daraltma dönüştürmelerini işlemek için .NET Framework türleri tanımlamak sağlayan bir `Explicit` işleci. Bireysel dil derleyicileri daha sonra kendi sözdizimlerini veya üyesi kullanarak bu işleci uygulamak <xref:System.Convert> sınıf dönüştürme yapmak için çağrılabilir. (Hakkında daha fazla bilgi için <xref:System.Convert> sınıfı [dönüştürme sınıfı](#Convert) bu konunun devamındaki.) Bu çıkış aralık büyük olasılıkla tam sayı değerlerine açıkça dönüştürülmesini işlemek için dil özelliklerinin kullanımı aşağıdaki örnekte <xref:System.Int32> değerleri.  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -127,7 +127,7 @@ ms.locfileid: "64664607"
   
 <a name="the_iconvertible_interface"></a>   
 ## <a name="the-iconvertible-interface"></a>IConvertible Arabirimi  
- Bir ortak dil çalışma zamanı temel türüne, herhangi bir tür dönüştürme desteklemek için [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sağlar <xref:System.IConvertible> arabirimi. Uygulama türünün aşağıdakileri sağlaması gerekir:  
+ Herhangi bir tür bir ortak dil çalışma zamanı temel türüne dönüştürülmesini desteklemek için .NET Framework sağlar <xref:System.IConvertible> arabirimi. Uygulama türünün aşağıdakileri sağlaması gerekir:  
   
 - Döndüren bir yöntem <xref:System.TypeCode> uygulama türü.  
   
@@ -143,9 +143,9 @@ ms.locfileid: "64664607"
  Dönüştürme yöntemini, uygulama türünde değil, kendi arabiriminde çağırma gereksinimi, açık arabirim uygulamalarını görece pahalılaştırır. Bunun yerine, uygun üyesini çağırmanızı öneririz <xref:System.Convert> ortak dil çalışma zamanı temel türleri arasında dönüştürme için sınıf. Daha fazla bilgi için sonraki bölüme bakın [dönüştürme sınıfı](#Convert).  
   
 > [!NOTE]
->  Ek olarak <xref:System.IConvertible> arabirimi ve <xref:System.Convert> sınıfı tarafından sağlanan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], bireysel diller de dönüştürmeleri uygulamak için yollar sağlayabilir. Örneğin, C# atama işleçleri kullanır; Visual Basic derleyici tarafından uygulanan dönüştürme işlevlerini gibi kullanır `CType`, `CInt`, ve `DirectCast`.  
+>  Ek olarak <xref:System.IConvertible> arabirimi ve <xref:System.Convert> .NET Framework tarafından bireysel diller de dönüştürmeleri uygulamak için yollar sağlayabilir sağlanan sınıfı. Örneğin, C# atama işleçleri kullanır; Visual Basic derleyici tarafından uygulanan dönüştürme işlevlerini gibi kullanır `CType`, `CInt`, ve `DirectCast`.  
   
- Çoğunlukla, <xref:System.IConvertible> arabirimi içinde temel türler arasında dönüştürmeyi desteklemek için tasarlanan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Ancak, arabirim, o türün diğer özel türlere dönüştürülmesini desteklemek için özel bir tür tarafından da uygulanabilir. Daha fazla bilgi için konudaki [ChangeType yöntemiyle özel dönüştürmeler](#ChangeType) bu konuda.  
+ Çoğunlukla, <xref:System.IConvertible> arabirimi .NET Framework içinde temel türler arasında dönüştürme destekleyecek şekilde tasarlanmıştır. Ancak, arabirim, o türün diğer özel türlere dönüştürülmesini desteklemek için özel bir tür tarafından da uygulanabilir. Daha fazla bilgi için konudaki [ChangeType yöntemiyle özel dönüştürmeler](#ChangeType) bu konuda.  
   
  [Başa dön](#top)  
   

@@ -2,20 +2,17 @@
 title: Makine öğrenimi sözlüğü
 description: Özel Modellerinizi ML.NET oluştururken, yararlı olan önemli makine öğrenimi terimleri sözlüğü.
 ms.custom: seodec18
-ms.date: 03/05/2019
-ms.openlocfilehash: a3f94f2dedbe620c4d5c2bed2af99471572a91e5
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.date: 05/09/2019
+ms.openlocfilehash: 7d098dc9d3dc6cb7bb08b5689b50afff01ba1d7f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063677"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557976"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Machine learning önemli terimler sözlüğü
 
 Özel Modellerinizi ML.NET oluştururken, yararlı olan önemli makine öğrenimi terimleri derlenmesini listesidir.
-
-> [!NOTE]
-> Bu belge, şu anda Önizleme aşamasında olan ML.NET ifade eder. Malzeme değişiklik gösterebilir. Daha fazla bilgi için [ML.NET giriş](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
 ## <a name="accuracy"></a>Doğruluğu
 
@@ -56,7 +53,7 @@ Uygulama öğrenimi herhangi bir makineye merkezi verilerdir. ML.NET içinde ver
 
 ## <a name="estimator"></a>Tahmin aracı
 
-Bir sınıfta uygulayan ML.NET <xref:Microsoft.ML.IEstimator`1> arabirimi.
+Bir sınıfta uygulayan ML.NET <xref:Microsoft.ML.IEstimator%601> arabirimi.
 
 Bir tahmin dönüşümünün (veri hazırlama dönüştürme ve machine learning modeli eğitimi dönüştürme) bir özelliğidir. Estimators bir işlem hattı dönüşümlerinin birbirine zincirlenebilir. Bir tahmin veya estimators işlem hattı parametrelerinin öğrenilen olduğunda <xref:Microsoft.ML.IEstimator`1.Fit*> çağrılır. Sonucu <xref:Microsoft.ML.IEstimator`1.Fit*> olduğu bir [Transformer](#transformer).
 

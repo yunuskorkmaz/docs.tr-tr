@@ -2,12 +2,12 @@
 title: FILESTREAM Verileri
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 1dea5d1e2f40c44e8f24bdbc9742288429d9933a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8521a9de3037ae759b0b0ea5bcbe84830f8629e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032493"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582715"
 ---
 # <a name="filestream-data"></a>FILESTREAM Verileri
 
@@ -20,7 +20,7 @@ FILESTREAM özniteliğine VARBINARY(max) sütun belirterek SQL Server'ın yerel 
 
 ## <a name="sqlclient-support-for-filestream"></a>FILESTREAM için SqlClient desteği
 
-[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] SQL Server için veri sağlayıcısı <xref:System.Data.SqlClient>, FILESTREAM kullanarak veri yazma ve okuma destekler <xref:System.Data.SqlTypes.SqlFileStream> sınıfı içinde tanımlanan <xref:System.Data.SqlTypes> ad alanı. `SqlFileStream` devralınan <xref:System.IO.Stream> veri akışları için yazma ve okuma için yöntemler sağlar sınıfını. Bir akıştan okuma bayt dizisi gibi bir veri yapısı içine akıştan verileri aktarır. Yazma, verileri veri yapısından bir akışa aktarır.
+SQL Server için .NET Framework veri sağlayıcısı <xref:System.Data.SqlClient>, FILESTREAM kullanarak veri yazma ve okuma destekler <xref:System.Data.SqlTypes.SqlFileStream> sınıfı içinde tanımlanan <xref:System.Data.SqlTypes> ad alanı. `SqlFileStream` devralınan <xref:System.IO.Stream> veri akışları için yazma ve okuma için yöntemler sağlar sınıfını. Bir akıştan okuma bayt dizisi gibi bir veri yapısı içine akıştan verileri aktarır. Yazma, verileri veri yapısından bir akışa aktarır.
 
 ### <a name="creating-the-sql-server-table"></a>SQL Server tablo oluşturma
 

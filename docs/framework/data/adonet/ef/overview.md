@@ -2,18 +2,18 @@
 title: Entity Framework’e Genel Bakış
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8c870c1990da9b86515dc933716cd628f63eb0a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034066"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583838"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework'e Genel Bakış
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ADO.NET'te veri yönelimli yazılım uygulamaları geliştirilmesini destekleyen teknoloji kümesidir. Mimarların ve geliştiricilerin veri odaklı uygulamaları çok farklı olan iki hedeflerini gerçekleştirmek üzere gereken işlerinin. Varlıklar, ilişkileri ve iş sorunlarını çözmeye mantığını modeli gerekir ve veri depolayıp almak için kullanılan bir veri altyapıları ile de çalışmalıdır. Veriler, her biri kendi protokolleri birden çok depolama sistemi kapsayabilir; tek bir depolama sistemi ile çalışma, hatta uygulamalar, verimli ve sürdürülebilir uygulama kod yazmayı gereksinimleriyle karşılaştırarak depolama sisteminin gereksinimlerini dengelemeniz gerekir.
 
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Geliştiricilerinin kendilerini temel alınan veritabanı tabloları ve bu verilerin depolandığı sütunları ile uğraşmak zorunda kalmadan etki alanına özgü nesneler ve müşteriler ve Müşteri adresleri gibi özellikler formundaki verilerle çalışmasını sağlayan . İle [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], kullanıcıların verileri ile işlem ve oluşturabilmesi ve veri odaklı uygulamaları geleneksel uygulamalardan daha az kod korumak, geliştiricilerin daha yüksek bir soyutlama düzeyinde çalışabilir. Çünkü [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] bir bileşeni olan [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)], [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamaları herhangi bir bilgisayar üzerinde çalıştırabilirsiniz [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 3.5 SP1 sürümünden itibaren yüklenir.
+[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Geliştiricilerinin kendilerini temel alınan veritabanı tabloları ve bu verilerin depolandığı sütunları ile uğraşmak zorunda kalmadan etki alanına özgü nesneler ve müşteriler ve Müşteri adresleri gibi özellikler formundaki verilerle çalışmasını sağlayan . İle [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], kullanıcıların verileri ile işlem ve oluşturabilmesi ve veri odaklı uygulamaları geleneksel uygulamalardan daha az kod korumak, geliştiricilerin daha yüksek bir soyutlama düzeyinde çalışabilir. Çünkü [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] bir bileşendir .NET Framework'ün [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamaları, .NET Framework 3.5 SP1 sürümünden itibaren yüklü olduğu herhangi bir bilgisayarda çalıştırabilirsiniz.
 
 ## <a name="give-life-to-models"></a>Modellere hayat verin
  Bir uygulama veya hizmet oluşturmaya uygulamaya veya hizmete üç parçalara ayrılması olduğunda çalışmalarını uzun süredir davam ve ortak tasarım yaklaşımı: etki alanı modeli, mantıksal bir model ve fiziksel bir model. Etki alanı modeli, varlıklar ve ilişkiler modellenmiş bir sistemde tanımlar. Varlıklar ve ilişkiler yabancı anahtar kısıtlamaları olan tablolar halinde bir ilişkisel veritabanına yönelik mantıksal modelin normalleştirir. Fiziksel model bölümleme ve dizin oluşturma gibi depolama ayrıntıları belirterek belirli veri altyapısı özelliklerini ele alır.

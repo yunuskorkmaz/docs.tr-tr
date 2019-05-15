@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 02b1b0f6215f7d26974a8e1e58fbefbb5d159cf7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 29b030708f2174b55386b13931f1088d15f4eb4f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669696"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582702"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)
 
@@ -107,7 +107,7 @@ Bir hizmetin BasicHttpContextBinding uç noktası ile *Svcutil.exe* ile bir Basi
 |/serializer:Auto|Otomatik olarak seri hale getirici'ı seçin. Bu işlem, veri sözleşme seri hale getirici kullanmayı dener ve bu başarısız olursa XmlSerializer kullanır.<br /><br /> Kısa biçim: `/ser`|
 |/serializer:DataContractSerializer|Serileştirme ve seri durumundan çıkarma için veri sözleşmesi serileştiricisi kullanan veri türlerini oluşturur.<br /><br /> Kısa biçim: `/ser:DataContractSerializer`|
 |/serializer:XmlSerializer|Kullanan türleri oluşturur <xref:System.Xml.Serialization.XmlSerializer> serileştirme ve seri durumundan çıkarma için.<br /><br /> Kısa biçim: `/ser:XmlSerializer`|
-|/targetClientVersion|Hangi sürümünü belirtin [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] uygulamasını hedefleme. Geçerli değerler `Version30` ve `Version35`. Varsayılan değer `Version30` şeklindedir.<br /><br /> Kısa biçim: `/tcv`<br /><br /> `Version30`: Kullanma `/tcv:Version30` kullanan istemciler için kod üretiyorsanız [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)].<br /><br /> `Version35`: Kullanma `/tcv:Version35` kullanan istemciler için kod üretiyorsanız [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Kullanırken `/tcv:Version35` ile `/async` geçin, olay tabanlı ve geri çağırma/temsilci tabanlı zaman uyumsuz yöntemler oluşturulur. Ayrıca, veri kümeleri için LINQ özellikli destekler ve <xref:System.DateTimeOffset> etkinleştirilir.|
+|/targetClientVersion|Uygulamanın hangi .NET Framework sürümünü hedefliyor belirtin. Geçerli değerler `Version30` ve `Version35`. Varsayılan değer `Version30` şeklindedir.<br /><br /> Kısa biçim: `/tcv`<br /><br /> `Version30`: Kullanma `/tcv:Version30` kullanan istemciler için kod üretiyorsanız [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)].<br /><br /> `Version35`: Kullanma `/tcv:Version35` kullanan istemciler için kod üretiyorsanız [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Kullanırken `/tcv:Version35` ile `/async` geçin, olay tabanlı ve geri çağırma/temsilci tabanlı zaman uyumsuz yöntemler oluşturulur. Ayrıca, veri kümeleri için LINQ özellikli destekler ve <xref:System.DateTimeOffset> etkinleştirilir.|
 |/ Sarmalanan|Sarmalanan parametrelerle Belge stilinde belgesi-değişmez değeri için özel büyük/küçük harf kullanılıp kullanılmadığını denetler. Kullanım **/ sarmalanmış** anahtarı ile [Service Model meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) normal büyük/küçük harf belirlemek için aracı.|
 
 > [!NOTE]

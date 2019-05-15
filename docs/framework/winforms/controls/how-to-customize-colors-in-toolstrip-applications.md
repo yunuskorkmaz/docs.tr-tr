@@ -9,12 +9,12 @@ helpviewer_keywords:
 - colors [Windows Forms], customizing in ToolStrip controls [Windows Forms]
 - ToolStrip control [Windows Forms], custom colors
 ms.assetid: e2752fe2-1afb-489e-ab96-b7805acd96bc
-ms.openlocfilehash: 971fc8478e6ff2b5745a950daa2f04bfc8d00322
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6719156d0ab6d1e53cd0bd8f16f306577589fb40
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666390"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592837"
 ---
 # <a name="how-to-customize-colors-in-toolstrip-applications"></a>Nasıl yapılır: ToolStrip Uygulamalarında Renkleri Özelleştirme
 Görünümünü özelleştirebilirsiniz, <xref:System.Windows.Forms.ToolStrip> kullanarak <xref:System.Windows.Forms.ToolStripProfessionalRenderer> özelleştirilmiş renklerini kullanmak için sınıf.  
@@ -29,8 +29,6 @@ Görünümünü özelleştirebilirsiniz, <xref:System.Windows.Forms.ToolStrip> k
  Bu örnek gerektirir:  
   
 - System.Windows.Forms System.Design ve System.Drawing derlemelerine başvurular.  
-  
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

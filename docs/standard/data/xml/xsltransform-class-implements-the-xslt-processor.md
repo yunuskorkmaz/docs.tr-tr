@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05812d7bdda33f6fa06a6aae7129d1dc73144e37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aadb478b507cdd5d2828a2d224fbca1dc32b21b3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751903"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586456"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>XslTransform Sınıfı XSLT İşlemcisini Uygular
 
 > [!NOTE]
 > <xref:System.Xml.Xsl.XslTransform> Sınıftır eski [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Genişletilebilir Stil Sayfası Dil Dönüşümleri (XSLT) dönüştürmeleri için kullanarak gerçekleştirebileceğiniz <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı. Bkz: [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [geçirme gelen XslTransform sınıfı](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) daha fazla bilgi için.
 
-<xref:System.Xml.Xsl.XslTransform> XSLT Dönüşümleri (XSLT) sürüm 1.0 öneri uygulayan bir XSLT işlemci bir sınıftır. <xref:System.Xml.Xsl.XslTransform.Load%2A> Yöntemi bulur ve stil sayfalarını okur ve <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi, belirtilen kaynak belge dönüştürür. Uygulayan herhangi bir depolama <xref:System.Xml.XPath.IXPathNavigable> arabirimi, kaynak belge için kullanılabilir <xref:System.Xml.Xsl.XslTransform>. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Şu anda uygulayan <xref:System.Xml.XPath.IXPathNavigable> üzerinde arabirim <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument>ve <xref:System.Xml.XPath.XPathDocument>, bunların tümü, bir dönüştürme için giriş kaynağı belge olarak kullanılabilir.
+<xref:System.Xml.Xsl.XslTransform> XSLT Dönüşümleri (XSLT) sürüm 1.0 öneri uygulayan bir XSLT işlemci bir sınıftır. <xref:System.Xml.Xsl.XslTransform.Load%2A> Yöntemi bulur ve stil sayfalarını okur ve <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi, belirtilen kaynak belge dönüştürür. Uygulayan herhangi bir depolama <xref:System.Xml.XPath.IXPathNavigable> arabirimi, kaynak belge için kullanılabilir <xref:System.Xml.Xsl.XslTransform>. .NET Framework şu anda uygulayan <xref:System.Xml.XPath.IXPathNavigable> üzerinde arabirim <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument>ve <xref:System.Xml.XPath.XPathDocument>, bunların tümü, bir dönüştürme için giriş kaynağı belge olarak kullanılabilir.
 
-<xref:System.Xml.Xsl.XslTransform> Nesnesine [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aşağıdaki ad alanıyla tanımlı XSLT 1.0 belirtimi yalnızca destekler:
+<xref:System.Xml.Xsl.XslTransform> Nesnesi .NET Framework, aşağıdaki ad alanıyla tanımlı XSLT 1.0 belirtimi yalnızca destekler:
 
 ```xml
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
@@ -213,7 +213,7 @@ print_root.xsl
 
 ## <a name="migration-of-xslt-from-net-framework-version-10-to-net-framework-version-11"></a>.NET Framework sürüm 1.1 .NET Framework sürüm 1.0 XSLT geçişi
 
-Aşağıdaki tabloda, artık kullanılmayan gösterilmektedir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sürüm 1.0 yöntemleri ve yeni [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sürüm 1.1 yöntemleri <xref:System.Xml.Xsl.XslTransform.Load%2A> yöntemi. Yeni yöntemleri kanıt belirterek izinleri stil sayfası sınırlamanıza olanak sağlar.
+Aşağıdaki tabloda eski .NET Framework sürüm 1.0 yöntemleri ve yeni .NET Framework sürüm 1.1 yöntemleri için gösterilmektedir <xref:System.Xml.Xsl.XslTransform.Load%2A> yöntemi. Yeni yöntemleri kanıt belirterek izinleri stil sayfası sınırlamanıza olanak sağlar.
 
 |Eski .NET Framework sürüm 1.0 yük yöntemler|Değiştirme .NET Framework sürüm 1.1 yükleme yöntemleri|
 |------------------------------------------------------|---------------------------------------------------------|
@@ -235,7 +235,7 @@ Aşağıdaki tabloda eski ve yeni yöntemleri gösterilmektedir <xref:System.Xml
 |Void dönüştürme (IXPathNavigable giriş, XsltArgumentList args, Stream çıkış)|Void (IXPathNavigable giriş, XsltArgumentList args, Stream çıkış, XmlResolver Çözümleyicisi) dönüştürme|
 |Void dönüştürme (dize giriş, dize çıkış);|Void dönüştürme (dize giriş, dize çıktısı, XmlResolver Çözümleyicisi);|
 
-<xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> İçinde özellik kullanılmıyor [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sürüm 1.1. Bunun yerine, yeni kullanın <xref:System.Xml.Xsl.XslTransform.Transform%2A> yeniden yüklemeleri hangi bir <xref:System.Xml.XmlResolver> nesne.
+<xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> .NET Framework sürüm 1.1 özellik kullanılmıyor. Bunun yerine, yeni kullanın <xref:System.Xml.Xsl.XslTransform.Transform%2A> yeniden yüklemeleri hangi bir <xref:System.Xml.XmlResolver> nesne.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

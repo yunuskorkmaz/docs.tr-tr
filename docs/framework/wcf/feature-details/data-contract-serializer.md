@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, data
 - DataContractSerializer
 ms.assetid: 3d64837e-0a0c-4cc8-90ff-a5c6f313c63a
-ms.openlocfilehash: eba12a38ee852dcdc08f27bc9e3cb02332fd7071
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1c773fbe90e7a45ea2a2718f9bde0aa9e9b67d6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857109"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592569"
 ---
 # <a name="data-contract-serializer"></a>Veri Sözleşmesi Seri Hale Getirici
 Windows Communication Foundation (WCF) altyapısını kullanan <xref:System.Runtime.Serialization.DataContractSerializer> olarak varsayılan seri hale getirici sınıfı. Bu bölümdeki konular, tek başına bir serileştirici kullanmak için daha fazla ayrıntı sağlar.  
@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF) altyapısını kullanan <xref:System.Runt
  Nasıl kullanılacağını ayrıntıları <xref:System.Runtime.Serialization.DataContractSerializer> nesne grafiklerini serileştirme ve seri durumdan XML sınıfı nesnelerini belgeleri.  
   
  [Şema İçeri ve Dışarı Aktarma](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
- Bir XML Şeması Tanım Dili (XSD) şema oluşturmak nasıl açıklar bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sınıfı ya da bir XSD şema belgesinden kodu oluşturma.  
+ Bir .NET Framework sınıfından bir XML Şeması Tanım Dili (XSD) şemaya oluşturmayı ya da bir XSD şema belgesinden kod oluşturmayı açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

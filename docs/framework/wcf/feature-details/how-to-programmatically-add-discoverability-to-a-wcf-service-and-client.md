@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de227e8df895dd4c031aadce16102559c43e47ce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761552"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586618"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme
 Bu konuda, bir Windows Communication Foundation (WCF) hizmeti bulunabilir hale açıklanmaktadır. Dayanır [barındırma](https://go.microsoft.com/fwlink/?LinkId=145523) örnek.  
@@ -16,7 +16,7 @@ Bu konuda, bir Windows Communication Foundation (WCF) hizmeti bulunabilir hale a
   
 1. Barındırma çözümü Visual Studio 2012'de açın. Örnek TechnologySamples\Basic\Service\Hosting\SelfHost dizininde bulunur.  
   
-2. Bir başvuru ekleyin `System.ServiceModel.Discovery.dll` hizmet projesi için. "Sistemi. hata mesajını görebilirsiniz. ServiceModel.Discovery.dll veya bağımlılıklarından biri daha sonraki bir sürümü gerektirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] belirtilenden projede... " Bu iletiyi görürseniz, Çözüm Gezgini'nde projeye sağ tıklayıp seçin **özellikleri**. İçinde **proje özellikleri** penceresinde emin **hedef Framework'ü** olan [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2. Bir başvuru ekleyin `System.ServiceModel.Discovery.dll` hizmet projesi için. "Sistemi. hata mesajını görebilirsiniz. ServiceModel.Discovery.dll veya bağımlılıklarından biri, projede belirtilen bir .NET Framework'ün sonraki bir sürümü gerektirir" Bu iletiyi görürseniz, Çözüm Gezgini'nde projeye sağ tıklayıp seçin **özellikleri**. İçinde **proje özellikleri** penceresinde emin **hedef Framework'ü** olan [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
 3. Adını da dosyasını açın ve aşağıdakileri ekleyin `using` deyimi.  
   

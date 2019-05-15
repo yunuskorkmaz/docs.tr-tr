@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034560"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583832"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Yapılandırma parametreleri ve parametre veri türleri
 
@@ -33,7 +33,7 @@ Parametreleri eklerken, sağlamalısınız bir <xref:System.Data.ParameterDirect
 
 ## <a name="working-with-parameter-placeholders"></a>Parametre yer tutucuları ile çalışma
 
-Parametre yer tutucuları sözdizimi veri kaynağına bağlıdır. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Veri sağlayıcıları başa adlandırma ve parametreleri ve parametre yer tutucuları farklı belirtme. Bu sözdizimi, aşağıdaki tabloda açıklandığı gibi belirli veri kaynağına özelleştirilir.
+Parametre yer tutucuları sözdizimi veri kaynağına bağlıdır. .NET Framework veri sağlayıcıları adlandırma ve parametreleri ve parametre yer tutucuları farklı belirterek işleyin. Bu sözdizimi, aşağıdaki tabloda açıklandığı gibi belirli veri kaynağına özelleştirilir.
 
 |Veri sağlayıcısı|Parametre adlandırma söz dizimi|
 |-------------------|-----------------------------|
@@ -44,9 +44,9 @@ Parametre yer tutucuları sözdizimi veri kaynağına bağlıdır. [!INCLUDE[dnp
 
 ## <a name="specifying-parameter-data-types"></a>Parametre veri türlerini belirtme
 
-Bir parametrenin veri türü için belirli [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı. Değerini dönüştürür türünü belirterek `Parameter` için [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri kaynağına değer geçirmeden önce veri sağlayıcısı türü. Türünü de belirtebilirsiniz bir `Parameter` ayarlayarak genel bir şekilde `DbType` özelliği `Parameter` belirli bir nesneye <xref:System.Data.DbType>.
+Bir parametrenin veri türü .NET Framework veri sağlayıcısı için özeldir. Değerini dönüştürür türünü belirterek `Parameter` veri kaynağına değer geçirmeden önce .NET Framework veri sağlayıcısı türü. Türünü de belirtebilirsiniz bir `Parameter` ayarlayarak genel bir şekilde `DbType` özelliği `Parameter` belirli bir nesneye <xref:System.Data.DbType>.
 
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Veri sağlayıcı türünü bir `Parameter` gelen çıkarılan nesne [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tür `Value` , `Parameter` nesnesi veya `DbType` , `Parameter` nesne. Aşağıdaki tabloda gösterilen gösterilmektedir `Parameter` türüne dayalı olarak geçirilen nesnede `Parameter` değer veya belirtilen `DbType`.
+.NET Framework veri sağlayıcısı türü bir `Parameter` nesne .NET Framework türünden çıkarılan `Value` , `Parameter` nesnesi veya `DbType` , `Parameter` nesne. Aşağıdaki tabloda gösterilen gösterilmektedir `Parameter` türüne dayalı olarak geçirilen nesnede `Parameter` değer veya belirtilen `DbType`.
 
 |.NET Framework türü|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
@@ -60,7 +60,7 @@ Bir parametrenin veri türü için belirli [!INCLUDE[dnprdnshort](../../../../in
 |<xref:System.Double>|Çift|Float|çift|çift|Çift|
 |<xref:System.Single>|Tek|Gerçek|Tek|Gerçek|Float|
 |<xref:System.Guid>|Guid|Benzersiz tanımlayıcı|Guid|Benzersiz tanımlayıcı|Ham|
-|<xref:System.Int16>|Int16|Tamsayı|Tamsayı|Tamsayı|Int16|
+|<xref:System.Int16>|Int16|Smallint|Smallint|Smallint|Int16|
 |<xref:System.Int32>|Int32|int|int|int|Int32|
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Sayı|
 |<xref:System.Object>|Nesne|Değişken|Değişken|Nesneden bir OdbcType çıkarımını yapma desteklenmiyor.|Blob|
@@ -101,7 +101,7 @@ Saklı yordamlar, veri odaklı uygulamalarda birçok avantaj sunar. Saklı yorda
 > [!NOTE]
 > Parametreleri deyimleri kullanarak sunucu üzerinde yürütülen `sp_executesql,` için sorgu planı yeniden izin verir. Yerel işaretçiler veya değişkenleri `sp_executesql` batch çağıran toplu görünür değildir `sp_executesql`. Veritabanı bağlamında son için yalnızca en son değişiklikleri `sp_executesql` deyimi. Daha fazla bilgi için [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
 
-Parametrelerle kullanırken bir <xref:System.Data.SqlClient.SqlCommand> bir SQL Server çalıştırmak için saklı yordamı, eklenen parametrelerinin adları <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> koleksiyonu içinde saklı yordam parametre işaretlerinin adları aynı olmalıdır. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SQL Server için veri sağlayıcısı desteklemiyor soru işareti (?) yer tutucu parametreleri geçirmek için bir SQL deyimi veya saklı yordam için. Bu parametreleri saklı yordamda adlandırılmış parametreler olarak değerlendirir ve parametre işaretçileri eşleştirmek için arar. Örneğin, `CustOrderHist` saklı yordam adlı bir parametre kullanarak tanımlanan `@CustomerID`. Kodunuzu saklı yordamı yürütüldüğünde, ayrıca adlı bir parametre kullanmalısınız `@CustomerID`.
+Parametrelerle kullanırken bir <xref:System.Data.SqlClient.SqlCommand> bir SQL Server çalıştırmak için saklı yordamı, eklenen parametrelerinin adları <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> koleksiyonu içinde saklı yordam parametre işaretlerinin adları aynı olmalıdır. SQL Server için .NET Framework veri sağlayıcısı, bir SQL deyimi veya saklı yordam parametreleri geçirmek için soru işareti (?) yer tutucu desteklemez. Bu parametreleri saklı yordamda adlandırılmış parametreler olarak değerlendirir ve parametre işaretçileri eşleştirmek için arar. Örneğin, `CustOrderHist` saklı yordam adlı bir parametre kullanarak tanımlanan `@CustomerID`. Kodunuzu saklı yordamı yürütüldüğünde, ayrıca adlı bir parametre kullanmalısınız `@CustomerID`.
 
 ```sql
 CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
@@ -119,9 +119,9 @@ Bu örnek bir SQL Server saklı yordam çağırmak nasıl gösterir `Northwind` 
 
 ## <a name="using-parameters-with-an-oledbcommand-or-odbccommand"></a>Bir OleDbCommand ya da OdbcCommand parametrelerini kullanma
 
-Parametrelerle kullanırken bir <xref:System.Data.OleDb.OleDbCommand> veya <xref:System.Data.Odbc.OdbcCommand>, eklenen parametrelerinin sırasını `Parameters` koleksiyonu, depolanmış yordamınızdaki tanımlanan parametrelerin sırasını eşleşmesi gerekir. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] OLE DB için veri sağlayıcısı ve [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ODBC için veri sağlayıcısı parametreleri saklı yordam, yer tutucu olarak kabul et ve parametre değerlerini sırayla uygulayın. Ayrıca, eklenen ilk parametre değeri parametreleri olmalıdır döndürür `Parameters` koleksiyonu.
+Parametrelerle kullanırken bir <xref:System.Data.OleDb.OleDbCommand> veya <xref:System.Data.Odbc.OdbcCommand>, eklenen parametrelerinin sırasını `Parameters` koleksiyonu, depolanmış yordamınızdaki tanımlanan parametrelerin sırasını eşleşmesi gerekir. OLE DB için .NET Framework veri sağlayıcısı ve ODBC için .NET Framework veri sağlayıcısı parametreleri saklı yordam, yer tutucu olarak davran ve parametre değerlerini sırayla uygulayın. Ayrıca, eklenen ilk parametre değeri parametreleri olmalıdır döndürür `Parameters` koleksiyonu.
 
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] OLE DB için veri sağlayıcısı ve [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ODBC için veri sağlayıcısı desteklemez adlandırılmış parametreler için bir SQL deyimi veya saklı yordam parametreleri geçirmek için. Bu durumda, aşağıdaki örnekte olduğu gibi soru işareti (?) yer tutucu kullanmanız gerekir.
+OLE DB için .NET Framework veri sağlayıcısı ve ODBC için .NET Framework veri sağlayıcısı için bir SQL deyimi veya saklı yordam parametreleri geçirmek için adlandırılmış parametreleri desteklemez. Bu durumda, aşağıdaki örnekte olduğu gibi soru işareti (?) yer tutucu kullanmanız gerekir.
 
 ```sql
 SELECT * FROM Customers WHERE CustomerID = ?

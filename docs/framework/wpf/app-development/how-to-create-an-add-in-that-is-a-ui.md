@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: e12769eca2d3c963e2d7a19e50c67814bcff3152
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0464d87aef3d4e88d9340af2ac1db93c13ba26e2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625367"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592654"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Nasıl yapılır: UI Olan Eklenti Oluşturma
 Bu örnek, bir Windows Presentation Foundation (WPF tek başına uygulama tarafından barındırılan WPF) olan bir eklenti oluşturma işlemi gösterilmektedir.  
@@ -81,7 +81,7 @@ Bu örnek, bir Windows Presentation Foundation (WPF tek başına uygulama taraf�
   
 <a name="HostApp"></a>   
 ## <a name="implementing-the-host-application"></a>Konak uygulamanın uygulama  
- Konak tarafı bağdaştırıcısı ile oluşturulan ana görünümünde, ana bilgisayar uygulaması kullanabileceğiniz [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] işlem hattı açıp eklentiyi bir ana bilgisayar görünümü elde eklenti modeli. Aşağıdaki kodda adımları gösterilmektedir.  
+ Konak tarafı bağdaştırıcısı ve oluşturulan ana görünümünde işlem hattını açıp eklentiyi bir ana bilgisayar görünümü elde konak uygulama .NET Framework eklenti modeli kullanabilirsiniz. Aşağıdaki kodda adımları gösterilmektedir.  
 
  Konak uygulamanın tipik .NET Framework eklenti modeli kodu örtük olarak ana bilgisayar uygulamasına ana görünümünde döndüren, eklentiyi etkinleştirmek için kullanır. Konak uygulama sonradan ana görünümünde görüntüler (olduğu bir <xref:System.Windows.Controls.UserControl>) gelen bir <xref:System.Windows.Controls.Grid>.  
   

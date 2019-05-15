@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: efd9711f93478b1ecc2ded7b57fa45f38286eeb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ab05db770f312a362e26f17df684f6f4f49c0eb3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651220"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586742"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>XML Dosyasını İşleme (Visual Basic)
-Derleyici, kodunuzda belgeleri oluşturmak için etiketli her yapı için bir kimlik dizesi oluşturur. (Kodunuzu etiketleme hakkında daha fazla bilgi için bkz: [XML açıklama etiketleri](../../../visual-basic/language-reference/xmldoc/index.md).) Kimlik dizesi yapısını benzersiz olarak tanımlar. XML dosyasını işleme programları, karşılık gelen belirlemek için kimlik dizesi kullanabilirsiniz [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] meta verileri/yansıma öğesi.  
+Derleyici, kodunuzda belgeleri oluşturmak için etiketli her yapı için bir kimlik dizesi oluşturur. (Kodunuzu etiketleme hakkında daha fazla bilgi için bkz: [XML açıklama etiketleri](../../../visual-basic/language-reference/xmldoc/index.md).) Kimlik dizesi yapısını benzersiz olarak tanımlar. XML dosyasını işleme programları kimlik dizesi, karşılık gelen .NET Framework meta verileri/yansıma öğeyi tanımlamak için kullanabilirsiniz.  
   
  XML dosyası kodunuzu hiyerarşik bir gösterimini değil; Düz listeyle her öğe için oluşturulan bir kimliği var.  
   
@@ -34,7 +34,7 @@ Derleyici, kodunuzda belgeleri oluşturmak için etiketli her yapı için bir ki
   
 - İkinci bölümü `String` tam nitelikli ad alanı kökünde başlangıç öğesi adıdır. Öğesi, kendi kapsayan türleri ve ad alanı adı noktalarla ayrılmış. Öğenin adını nokta içeriyorsa, sayı işaretiyle değiştirilir (#). Öğe adını doğrudan sayı işareti olduğunu kabul edilir. Örneğin, tam olarak nitelenmiş adını `String` Oluşturucusu olacak `System.String.#ctor`.  
   
-- Yöntemi için bağımsız değişken varsa özellikleri ve yöntemleri, parantez içindeki bağımsız değişken listesini takip eder. Hiçbir bağımsız değişken varsa, hiçbir parantez yok. Bağımsız değişkenlerin virgülle ayrılır. Her bağımsız değişkeni kodlama doğrudan nasıl içinde kodlanır izleyen bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] imzası.  
+- Yöntemi için bağımsız değişken varsa özellikleri ve yöntemleri, parantez içindeki bağımsız değişken listesini takip eder. Hiçbir bağımsız değişken varsa, hiçbir parantez yok. Bağımsız değişkenlerin virgülle ayrılır. Her bağımsız değişken kodlama, doğrudan bir .NET Framework imzada nasıl kodlandığını izler.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod nasıl kimliği için bir sınıf dizeleri gösterir ve üyelerini oluşturulur.  

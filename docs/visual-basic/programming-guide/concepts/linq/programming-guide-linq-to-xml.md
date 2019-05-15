@@ -2,18 +2,18 @@
 title: Programlama Kılavuzu (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
-ms.openlocfilehash: 608ed431009c033de39cc38748bcbf173cf47cd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf8dbaf5991d1991267ad31125029298cffcfcd3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785586"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592916"
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>Programlama Kılavuzu (LINQ to XML) (Visual Basic)
 Bu bölümde ile programlama hakkında kavramsal bilgiler ve nasıl yapılır bilgileri [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="who-should-read-this-documentation"></a>Bu belge kimler içindir  
- Zaten Visual Basic ve temel bazı yönlerini anlamanıza geliştiriciler bu belgeleri hedefler [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+ Bu belge, Visual Basic ve .NET Framework temel bazı yönlerini zaten anlayan geliştiriciler hedefler.  
   
  Bu belgenin amacı sağlamaktır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kullanımı kolay geliştiriciler tüm türleri için. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML programlama kolaylaştırır. Bunu kullanmak için uzman bir geliştirici olması gerekmez.  
   

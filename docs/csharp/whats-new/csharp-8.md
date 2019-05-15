@@ -1,18 +1,20 @@
 ---
 title: İçindeki yenilikler C# 8.0 - C# Kılavuzu
-description: Uygulamasında kullanılabilen yeni özellikleri genel bakış C# 8.0. Bu makalede, preview 2'ile güncel durumda.
+description: Uygulamasında kullanılabilen yeni özellikleri genel bakış C# 8.0. Bu makalede, preview 5 ile güncel durumda.
 ms.date: 02/12/2019
-ms.openlocfilehash: 16723894d87526972b692a098a57ef3726b252dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd4aca99a19134ed3ffff859c9c9554d4d480816
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754368"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557143"
 ---
 # <a name="whats-new-in-c-80"></a>İçindeki yenilikler C# 8.0
 
-İçin birçok geliştirme vardır C# Önizleme 2 ile deneyebileceğiniz dili. Preview 2 sürümünde eklenen yeni özellikleri şunlardır:
+İçin birçok geliştirme vardır C# zaten deneyebileceğiniz dili. 
 
+- [Salt okunur üyeler](#readonly-members)
+- [Varsayılan arabirim üyeleri](#default-interface-members)
 - [Desen eşleştirme geliştirmeleri](#more-patterns-in-more-places):
   * [Anahtar ifadeler](#switch-expressions)
   * [Özellik desenleri](#property-patterns)
@@ -21,17 +23,67 @@ ms.locfileid: "64754368"
 - [Bildirimi kullanarak](#using-declarations)
 - [Statik yerel işlevler](#static-local-functions)
 - [Atılabilir başvuru yapı birimleri](#disposable-ref-structs)
-
-Aşağıdaki dil özellikleri ilk göründüğü C# 8.0 Önizleme 1:
-
 - [Boş değer atanabilir başvuru türleri](#nullable-reference-types)
 - [Zaman uyumsuz akışlar](#asynchronous-streams)
 - [Dizinleri ve aralıkları](#indices-and-ranges)
 
 > [!NOTE]
-> Bu makale için en son güncelleştirildiği C# 8.0 Önizleme 2.
+> Bu makale için en son güncelleştirildiği C# 8.0 Önizleme 5.
 
 Bu makalenin geri kalanında bu özelliklere kısaca açıklanmaktadır. Ayrıntılı makaleleri kullanılabiliyorsa, bu öğreticileri ve genel bakışlar bağlantılar verilmiştir.
+
+## <a name="readonly-members"></a>Salt okunur üyeler
+
+Uygulayabileceğiniz `readonly` değiştiricisi bir yapının herhangi bir üyesi. Üyenin durumu değiştirmez gösterir. Uygulama daha fazla ayrıntılı `readonly` değiştiriciyi bir `struct` bildirimi.  Aşağıdaki değişebilir yapısı göz önünde bulundurun:
+
+```csharp
+public struct Point
+{
+    public double X { get; set; }
+    public double Y { get; set; }
+    public double Distance => Math.Sqrt(X * X + Y * Y);
+
+    public override string ToString() =>
+        $"({X}, {Y}) is {Distance} from the origin";
+}
+```
+
+Çoğu yapılar gibi `ToString()` yöntemi durumu değiştirmez. Ekleyerek olduğunu gösterebilecek `readonly` değiştiricisi bildirimine `ToString()`:
+
+```csharp
+public readonly override string ToString() =>
+    $"({X}, {Y}) is {Distance} from the origin";
+```
+
+Yukarıdaki değişikliği bir derleyici uyarısı oluşturur çünkü `ToString` erişen `Distance` işaret konulmadıysa özelliği `readonly`:
+
+```console
+warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
+```
+
+Savunma kopyası oluşturmak gerektiğinde derleyici sizi uyarır.  `Distance` Özelliği ekleyerek bu uyarıyı giderebilmemiz durumunu değiştirmez `readonly` bildirimine değiştiricisi:
+
+```csharp
+public readonly double Distance => Math.Sqrt(X * X + Y * Y);
+```
+
+Dikkat `readonly` değiştiricisi salt okunur bir özellik gereklidir. Derleyici varsayılmaz `get` bildirmeniz gerekir; erişimcileri durumu değiştirmeyin `readonly` açıkça. Derleyici kuralını uygulamak, `readonly` üyeleri durumu değiştirmeyin. Kaldırdığınız sürece aşağıdaki yöntemi derlemeyecektir `readonly` değiştiricisi:
+
+```csharp
+public readonly void Translate(int xOffset, int yOffset)
+{
+    X += xOffset;
+    Y += yOffset;
+}
+```
+
+Bu özellik, derleyici onu zorla ve en iyi duruma getirme, amacına olun tasarım amacınızla belirtmenizi sağlar.
+
+## <a name="default-interface-members"></a>Varsayılan arabirim üyeleri
+
+Artık üyeleri arabirimler ve bu üyeler için bir uygulama sağlayın. Bu dil özelliği kaynak ya da o arabirimin mevcut uygulamaları ile ikili uyumluluk bozup olmadan yöntemleri sonraki sürümlerinde bir arabirim eklemek API yazarlar sağlar. Mevcut uygulamaları *devral* varsayılan uygulaması. Bu özellik ayrıca sağlar C# hedef Android API'leri veya benzer özellikleri destekleyen Swift ile çalışmak için. Varsayılan arabirim üyeleri, ayrıca bir "Nitelikler" dil özelliğe benzer senaryolara olanak tanır.
+
+Varsayılan arabirim üyeleri birçok senaryoları ve Dil öğelerini etkiler. İlk öğreticimize kapsayan [bir arabirimi varsayılan uygulamaları ile güncelleştiriliyor](../tutorials/default-interface-members-versions.md). Diğer öğreticiler ve başvuru güncelleştirmeleri genel yayın süreliğine geliyor.
 
 ## <a name="more-patterns-in-more-places"></a>Daha fazla yerde daha fazla desenleri
 
@@ -321,9 +373,15 @@ Zaman uyumsuz akışlar kendiniz müşterilerimize öğreticide deneyebilirsiniz
 
 Aralıkları ve dizinlerini sağlayan bir kısa sözdizimleri bir dizi içinde alt aralıklara belirtmek için <xref:System.Span%601>, veya <xref:System.ReadOnlySpan%601>.
 
-Dizin belirtebilirsiniz **sonundan** kullanarak `^` dizini önce karakter. Sondan dizin kuraldan başlatır, `0..^0` tüm aralığını belirtir. Tüm dizi numaralandırmak için başlangıç *ilk öğede*ve, olana kadar devam *son öğeden önceki*. Davranışını düşünün `MoveNext` bir numaralandırıcı metodunda: numaralandırma son öğeyi başarılı olduğunda false döndürür. Dizin `^0` "Bitiş" anlamına gelir `array[array.Length]`, ya da son öğeyi izleyen dizin. Bilginiz `array[2]` öğe "başından itibaren 2" anlamına gelir. Şimdi, `array[^2]` öğe "2 sonundan" anlamına gelir. 
+Bu dil desteği, iki yeni türler ve iki yeni işleç kullanır.
+- <xref:System.Index?displayProperty=nameWithType> Dizin bir dizisi temsil eder.
+- `^` İşleci bir dizin sonuna göreli olduğunu belirtir.
+- <xref:System.Range?displayProperty=nameWithType> bir dizi alt aralığını temsil eder.
+- Aralık işleci (`..`) başlangıç belirtir ve bir aralığın işlenen olduğu.
 
-Belirtebileceğiniz bir **aralığı** ile **aralık işleci**: `..`. Örneğin, `0..^0` dizi aralığının tamamı belirtir: 0'ın başından itibaren en fazla, ancak son 0 dahil değil. İki işlenenden "Başlangıç" veya "sonuna" kullanabilir. Ayrıca, iki işlenenden atlanabilir. Varsayılanlar `0` başlangıç dizini ve `^0` son dizini.
+Dizinler için kuralları başlayalım. Bir dizi göz önünde bulundurun `sequence`. `0` Dizin aynıdır `sequence[0]`. `^0` Dizin aynıdır `sequence[sequence.Length]`. Unutmayın `sequence[^0]` gibi bir özel durum `sequence[sequence.Length]` yapar. Herhangi bir sayı için `n`, dizin `^n` aynı `sequence.Length - n`.
+
+Bir aralığı belirtir *Başlat* ve *son* aralığının. Aralıkları özel anlamı *son* aralığında yer almaz. Aralığın `[0..^0]` gibi tüm aralığını temsil eden `[0..sequence.Length]` tüm aralığını temsil eder. 
 
 Bazı örneklere bakalım. Aşağıdaki dizinin başından ve sonundan dizinini ile açıklanan göz önünde bulundurun:
 
@@ -342,8 +400,6 @@ var words = new string[]
     "dog"       // 8                   ^1
 };              // 9 (or words.Length) ^0
 ```
-
-Her öğenin dizini "Başlat" ve "Kimden"son kavramı güçlendirir ve aralığın sonunu fiyatlara aralıktır. "Başlangıç" tüm dizinin ilk öğedir. Tüm dizi "End" *geçmiş* son öğe.
 
 Son sözcüğü alabilirsiniz `^1` dizini:
 

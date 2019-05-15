@@ -2,12 +2,12 @@
 title: EDM Oluşturucu (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 7f06b393cd7e7ccf3d3637d6fb46eb6d983d943a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9c75cd7589b1c5fb28112a22390acf90f46e465
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607677"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584584"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM Oluşturucu (EdmGen.exe)
 
@@ -21,7 +21,7 @@ EdmGen.exe ile çalışmak için kullanılan bir komut satırı aracı olan [!IN
 
 - Mevcut bir model için önceden üretilmiş görünümleri içeren bir C# veya Visual Basic kod dosyası oluşturur. Daha fazla bilgi için [nasıl yapılır: Sorgu performansını artırmak için önceden görünümlerin](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100)).
 
-EdmGen.exe aracına [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] dizin. Çoğu durumda bu C:\windows\Microsoft.NET\Framework\v4.0 içinde bulunur. 64-bit sistemler için bu C:\windows\Microsoft.NET\Framework64\v4.0 içinde bulunur. EdmGen.exe aracı Visual Studio Komut İstemi'nden de erişebilirsiniz (tıklayın **Başlat**, işaret **tüm programlar**, işaret **Microsoft Visual Studio 2010**, işaret **Visual Studio Araçları**ve ardından **Visual Studio 2010 Komut İstemi**).
+EdmGen.exe aracı .NET Framework dizinine yüklenir. Çoğu durumda bu C:\windows\Microsoft.NET\Framework\v4.0 içinde bulunur. 64-bit sistemler için bu C:\windows\Microsoft.NET\Framework64\v4.0 içinde bulunur. EdmGen.exe aracı Visual Studio Komut İstemi'nden de erişebilirsiniz (tıklayın **Başlat**, işaret **tüm programlar**, işaret **Microsoft Visual Studio 2010**, işaret **Visual Studio Araçları**ve ardından **Visual Studio 2010 Komut İstemi**).
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,7 +46,7 @@ EdmGen.exe aracını kullanırken, şu modlardan birini belirtmeniz gerekir.
 |Seçenek|Açıklama|
 |------------|-----------------|
 |`/p[roject]:`\<dize >|Proje adını belirtir. Proje adı varsayılan olarak ayarlamak, model ve eşleme dosyaları, nesne kaynak dosyasının adını ve görünümü nesil kaynak dosyasının adını adını ad alanı için kullanılır. Varlık kapsayıcı adı kümesine \<Proje > bağlamı.|
-|`/prov[ider]:`\<dize >|Adını [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] depolama modeli (.ssdl) dosyası oluşturmak için kullanılacak veri sağlayıcısı. Varsayılan sağlayıcıdır [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] SQL Server için veri sağlayıcısı (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|
+|`/prov[ider]:`\<dize >|Depolama modeli (.ssdl) dosyası oluşturmak için kullanılacak .NET Framework veri sağlayıcısı adı. SQL Server için .NET Framework veri sağlayıcısı varsayılan sağlayıcıdır (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|
 |`/c[onnectionstring]:`\<bağlantı dizesi >|Veri kaynağına bağlanmak için kullanılan dizeyi belirtir.|
 |`/incsdl:`\<Dosya >|.csdl dosya veya dizin .csdl dosyaların nerede olduğunu belirtir. Birden çok dizini veya .csdl dosyaları belirtmek için bu bağımsız değişken birden çok kez belirtilebilir. Birden çok dizini belirten sınıflar oluşturmak için kullanışlı olabilir (`/mode:EntityClassGeneration`) veya görünümleri (`/mode:ViewGeneration`) kavramsal model çeşitli dosyalar arasında bölüneceğini zaman. Birden çok modeli doğrulamak istediğiniz zaman da yararlı olabilir (`/mode:ValidateArtifacts`).|
 |`/refcsdl:`\<Dosya >|Ek .csdl dosya veya dosyalar kaynak .csdl dosyadaki tüm başvuruları çözümlemek için kullanılan belirtir. (Kaynak .csdl dosyası değil, tarafından belirtilen dosya `/incsdl` seçeneği). `/refcsdl` Dosyası kaynak .csdl dosyası bağımlı olduğu türleri içerir. Bu bağımsız değişken birden çok kez belirtilebilir.|

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: a205682bb15b5d25ba0a2df895533d3443a41409
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2394a23ddd59d09ce53c78fc4486fc5bae9e8516
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663464"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583366"
 ---
 # <a name="-reference-visual-basic"></a>-başvuru (Visual Basic)
 Derleyicinin tür bilgilerini belirli derlemelerde şu anda derleme proje kullanılabilir hale getirmek neden olur.  
@@ -46,7 +46,7 @@ Derleyicinin tür bilgilerini belirli derlemelerde şu anda derleme proje kullan
   
  Derleyicinin derlemede (modül değil) bir türü tanıması, türü çözümlemeye zorlanması gerekir. Bunu yapmak nasıl ilişkin bir örnek, bir türün örneğini tanımlamaktır. Yollar, derleyici bir derlemede bulunan tür adlarını çözmek kullanılabilir. Örneğin, bir derleme içinde bulunan bir türden devralıyorsanız, tür adı ardından derleyiciye bildiği.  
   
- Başvuru sık kullanılan nezahrnovat yanıt dosyası [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] derlemeleri, varsayılan olarak kullanılır. Kullanma `-noconfig` derleyici nezahrnovat kullanmak istemiyorsanız.  
+ Yaygın olarak kullanılan .NET Framework derlemelerine başvuran, nezahrnovat yanıt dosyası varsayılan olarak kullanılır. Kullanma `-noconfig` derleyici nezahrnovat kullanmak istemiyorsanız.  
   
  Kısa formunu da `-reference` olduğu `/r`.  
   

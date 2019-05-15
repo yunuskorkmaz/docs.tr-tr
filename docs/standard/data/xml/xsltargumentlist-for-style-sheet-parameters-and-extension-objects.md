@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3afbffcbbaa5e8398a9ab10c762e60305cfc164b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 11cf0b694d75836ad903edeafc79a55ec4612b45
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615224"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586471"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>Stil Sayfası Parametreleri ve Genişletme Nesneleri için XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> Sınıfı içeren Genişletilebilir Stil Sayfası Dil Dönüşümleri (XSLT) parametreleri ve XSLT genişletme nesneleri için. Yöntemlere geçirilen zaman <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi, bu parametreleri ve genişletme nesneleri stil sayfası içinden çağrılan.  
@@ -36,7 +36,7 @@ ms.locfileid: "64615224"
 ## <a name="xslt-style-sheet-parameters"></a>XSLT stil sayfası parametreleri  
  XSLT parametreleri eklenir <xref:System.Xml.Xsl.XsltArgumentList> kullanarak <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> yöntemi. Bir tam adı ve ad alanı Tekdüzen Kaynak Tanımlayıcısı (URI), o anda parametresi nesnesi ile ilişkilendirilmiş.  
   
- Parametre nesnesine bir World Wide Web Consortium (W3C) türüne karşılık gelmelidir. Aşağıdaki tabloda karşılık gelen W3C türleri, eşdeğer gösterir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sınıfları (tür) ve W3C türün bir XML yolu dil (XPath) türü veya XSLT türü olup.  
+ Parametre nesnesine bir World Wide Web Consortium (W3C) türüne karşılık gelmelidir. Eşdeğeri .NET Framework sınıfları (tür), aşağıdaki tablo W3C türleri karşılık gelen gösterir ve W3C türün bir XML yolu dil (XPath) türü veya XSLT türü olup.  
   
 |W3C türü|Eşdeğeri .NET Framework sınıfı (tür)|XPath türü veya XSLT türü|  
 |--------------|----------------------------------------------|-----------------------------|  

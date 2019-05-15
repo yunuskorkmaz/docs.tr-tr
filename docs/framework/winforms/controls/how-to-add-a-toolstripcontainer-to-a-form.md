@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], adding to Windows Forms
 ms.assetid: d0f55095-a833-453e-be5a-644906d75d54
-ms.openlocfilehash: 6b35baac09ac47a25cc55877b2c94628f1b57111
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3d69bc6ed0cf23da8315ae95565300d151069d51
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624068"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582580"
 ---
 # <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>Nasıl yapılır: Forma ToolStripContainer Ekleme
 Program aracılığıyla ekleyebilirsiniz bir <xref:System.Windows.Forms.ToolStripContainer> bir Windows forma ve denetimleri ile doldurabilirsiniz.  
@@ -29,8 +29,6 @@ Program aracılığıyla ekleyebilirsiniz bir <xref:System.Windows.Forms.ToolStr
  Bu kod örneği gerektirir:  
   
 - System.Drawing System.Text ve System.Windows.Forms derlemelere başvuruları.  
-  
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

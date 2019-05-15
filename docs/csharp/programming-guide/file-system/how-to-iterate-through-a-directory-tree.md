@@ -6,18 +6,18 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 29f52728f0bfa9e78253fc2b39583e89f53198d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 070b409a7d1cc755451414d24ca2fa6002638dc0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710816"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585812"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Nasıl yapılır: Bir dizin ağacı ile yineleme (C# Programlama Kılavuzu)
 Her iç içe geçmiş alt dizinde bir belirtilen kök klasöre herhangi derinliği her dosyaya erişmek deyimi "dizin ağacı yineleme" anlamına gelir. Mutlaka her dosyayı açmak gerekmez. Yalnızca dosya veya alt dizini olarak adını alabilirsiniz bir `string`, veya biçiminde ek bilgi almak bir <xref:System.IO.FileInfo?displayProperty=nameWithType> veya <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> nesne.  
   
 > [!NOTE]
->  Windows koşulları "dizin" ve "klasörü" birbirinin yerine kullanılır. Çoğu belgelerini ve kullanıcı arabirimi metinlerini "klasörü" terimini kullanır ancak [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] class kitaplığını kullanan "directory" terimi  
+>  Windows koşulları "dizin" ve "klasörü" birbirinin yerine kullanılır. Çoğu belgelerini ve kullanıcı arabirimi metinlerini "klasörü" terimini kullanır, ancak .NET Framework sınıf kitaplığı "directory" terimini kullanır.  
   
  En basit örnekte, bildiğiniz belirli bir belirtilen kökü altındaki tüm dizinleri erişim izinlerine sahip olduğunuz kullanabileceğiniz `System.IO.SearchOption.AllDirectories` bayrağı. Bu bayrak, belirtilen desenle eşleşen tüm iç içe geçmiş alt döndürür. Aşağıdaki örnek, bu bayrak kullanma işlemini gösterir.  
   

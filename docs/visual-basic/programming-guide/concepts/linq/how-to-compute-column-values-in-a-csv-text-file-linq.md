@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: İşlem sütun değerleri bir CSV metinde dosyasında (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: b226d981dd0cd61789e88ab06e602dd619f3f6c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21f4e6445824a6664b5eaa7ff793ee925aa06cef
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855029"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592995"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Nasıl yapılır: İşlem sütun değerleri bir CSV metinde dosyasında (LINQ) (Visual Basic)
 Bu örnek bir .csv dosyası sütunlarda gibi toplam, ortalama, Min ve Max toplama hesaplamalar gerçekleştirmek nasıl gösterir. Burada gösterilen örnek ilkeleri diğer yapılandırılmış metin türü için uygulanabilir.  
@@ -143,7 +143,7 @@ End Class
  Sorgu kullanarak çalışır <xref:System.String.Split%2A> her metin satırının bir dizisine dönüştürmek için yöntemi. Her dizi öğesi bir sütunu temsil eder. Son olarak, her sütundaki metin sayısal gösterimine dönüştürülür. Bağımsız değişkende dosyanızı sekmeyle ayrılmış bir dosya ise, yalnızca güncelleştirme `Split` yönteme `\t`.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya daha yüksek bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve bir `Imports` System.Linq ad alanı bildirimi.  
+VB.NET konsol uygulama projesi oluşturmak bir `Imports` System.Linq ad alanı bildirimi.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
