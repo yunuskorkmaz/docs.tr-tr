@@ -1,15 +1,13 @@
 ---
 title: Etki alanı olayları. Tasarım ve uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Kapsamlı bir görünüm toplamları arasında iletişim kurmak için bir anahtar kavram etki alanı olayların alın.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 353e50de65f21930ebe0bef9e239e1e333403676
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1990fefb10016596739ea4f3d55d7c7de92faca0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020055"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644559"
 ---
 # <a name="domain-events-design-and-implementation"></a>Etki alanı olayları: tasarım ve uygulama
 

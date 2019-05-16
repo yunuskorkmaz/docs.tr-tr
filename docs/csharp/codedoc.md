@@ -3,12 +3,12 @@ title: XML açıklamalarıyla kodunuzu belgeleme
 description: XML belgeleri yorumları ile kodunuzu belgeleme ve derleme zamanında XML belge dosyası oluşturma hakkında bilgi edinin.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 956598d7c8193f70e094fcb578c041b8972b9b0c
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 17a6beabf7e8a917c461dae4d92f1cfbb0d9de71
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063117"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633731"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>XML açıklamalarıyla kodunuzu belgeleme
 
@@ -222,5 +222,5 @@ Kod belgeleme çeşitli nedenlerle önerilir. Aşağıda bazı en iyi yöntemler
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML belgeleri yorumları (C# programlama Kılavuzu)](programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML belgeleri yorumları (C# programlama Kılavuzu)](programming-guide/xmldoc/index.md)
 - [Belge açıklamaları (C# programlama Kılavuzu) için önerilen etiketler](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

@@ -1,15 +1,13 @@
 ---
 title: Web API’si kullanarak mikro hizmet uygulama katmanını uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Bağımlılık ekleme ve Dünyası desenleri ve Web API'sini uygulama katmanı, uygulama ayrıntılarını anlayın.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 376b4eca99ed60a54831aa37099108692d8bac6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8447cfcd3155a873d61ee9287f58774392c279d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761278"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640804"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API'si kullanarak mikro hizmet uygulama katmanı
 
