@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 51c32bafba80e452ca785cb49932cb49793ace6c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d793f83d4587c84e6b48b5de5250d70042686f66
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699463"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65669083"
 ---
-<span data-ttu-id="e1f3a-101">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e1f3a-101">Windows Forms</span></span>
+<span data-ttu-id="fc793-101">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fc793-101">Windows Forms</span></span>

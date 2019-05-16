@@ -2,18 +2,18 @@
 title: Sonuçlar
 description: Nasıl kullanacağınızı öğrenin F# hataya dayanıklı kod yazmanıza yardımcı olmak için 'Result' yazın.
 ms.date: 04/24/2017
-ms.openlocfilehash: 8b419412b406018a21f2c23103c8193fec8766f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36f60df8a2991c1d318e4921af6c9e89a0156918
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770519"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645316"
 ---
-# <a name="results"></a><span data-ttu-id="f1084-103">Sonuçlar</span><span class="sxs-lookup"><span data-stu-id="f1084-103">Results</span></span>
+# <a name="results"></a><span data-ttu-id="70cfb-103">Sonuçlar</span><span class="sxs-lookup"><span data-stu-id="70cfb-103">Results</span></span>
 
-<span data-ttu-id="f1084-104">İle başlayarak F# 4.1, var olan bir `Result<'T,'TFailure>` kullanılıp kullanılamayacağı hataya dayanıklı kod yazmak için kullanabileceğiniz türü.</span><span class="sxs-lookup"><span data-stu-id="f1084-104">Starting with F# 4.1, there is a `Result<'T,'TFailure>` type which you can use for writing error-tolerant code which can be composed.</span></span>
+<span data-ttu-id="70cfb-104">İle başlayarak F# 4.1, var olan bir `Result<'T,'TFailure>` kullanılıp kullanılamayacağı hataya dayanıklı kod yazmak için kullanabileceğiniz türü.</span><span class="sxs-lookup"><span data-stu-id="70cfb-104">Starting with F# 4.1, there is a `Result<'T,'TFailure>` type which you can use for writing error-tolerant code which can be composed.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="f1084-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f1084-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="70cfb-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="70cfb-105">Syntax</span></span>
 
 ```fsharp
 // The definition of Result in FSharp.Core
@@ -25,11 +25,11 @@ type Result<'T,'TError> =
     | Error of ErrorValue:'TError
 ```
 
-## <a name="remarks"></a><span data-ttu-id="f1084-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f1084-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="70cfb-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="70cfb-106">Remarks</span></span>
 
-<span data-ttu-id="f1084-107">Sonuç türü olduğuna dikkat edin bir [ayırt edici birleşim](discriminated-unions.md#struct-discriminated-unions), hangi içinde başka bir özellik sunulmuştur F# 4.1.</span><span class="sxs-lookup"><span data-stu-id="f1084-107">Note that the result type is a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions), which is another feature introduced in F# 4.1.</span></span>  <span data-ttu-id="f1084-108">Yapısal eşitlik semantiği burada geçerli olur.</span><span class="sxs-lookup"><span data-stu-id="f1084-108">Structural equality semantics apply here.</span></span>
+<span data-ttu-id="70cfb-107">Sonuç türü olduğuna dikkat edin bir [ayırt edici birleşim](discriminated-unions.md#struct-discriminated-unions), hangi içinde başka bir özellik sunulmuştur F# 4.1.</span><span class="sxs-lookup"><span data-stu-id="70cfb-107">Note that the result type is a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions), which is another feature introduced in F# 4.1.</span></span>  <span data-ttu-id="70cfb-108">Yapısal eşitlik semantiği burada geçerli olur.</span><span class="sxs-lookup"><span data-stu-id="70cfb-108">Structural equality semantics apply here.</span></span>
 
-<span data-ttu-id="f1084-109">`Result` Türü genellikle birli hata genellikle olarak adlandırılan işleme, kullanılan [demiryolu yönelimli programlama](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) içinde F# topluluğu.</span><span class="sxs-lookup"><span data-stu-id="f1084-109">The `Result` type is typically used in monadic error-handling, which is often referred to as [Railway-oriented Programming](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) within the F# community.</span></span>  <span data-ttu-id="f1084-110">Aşağıdaki basit örnekte, bu yaklaşım gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="f1084-110">The following trivial example demonstrates this approach.</span></span>
+<span data-ttu-id="70cfb-109">`Result` Türü genellikle birli hata genellikle olarak adlandırılan işleme, kullanılan [demiryolu yönelimli programlama](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) içinde F# topluluğu.</span><span class="sxs-lookup"><span data-stu-id="70cfb-109">The `Result` type is typically used in monadic error-handling, which is often referred to as [Railway-oriented Programming](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) within the F# community.</span></span>  <span data-ttu-id="70cfb-110">Aşağıdaki basit örnekte, bu yaklaşım gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="70cfb-110">The following trivial example demonstrates this approach.</span></span>
 
 ```fsharp
 // Define a simple type which has fields that can be validated
@@ -80,9 +80,9 @@ let test() =
 test()
 ```
 
-<span data-ttu-id="f1084-111">Gördüğünüz gibi çeşitli doğrulama işlevleri tümünü döndürülecek zorlarsanız zincir oldukça kolay bir `Result`.</span><span class="sxs-lookup"><span data-stu-id="f1084-111">As you can see, it's quite easy to chain together various validation functions if you force them all to return a `Result`.</span></span>  <span data-ttu-id="f1084-112">Böyle bir işlevsellik olması gerektiği gibi birleştirilebilir küçük parçalara bölmeniz olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="f1084-112">This lets you break up functionality like this into small pieces which are as composable as you need them to be.</span></span>  <span data-ttu-id="f1084-113">Bu da eklenen değerine sahip *zorlamayı* kullanımını [desen eşleştirme](pattern-matching.md) doğrulama turu sonunda, hangi sırayla zorlar daha yüksek bir program doğruluk derecesi.</span><span class="sxs-lookup"><span data-stu-id="f1084-113">This also has the added value of *enforcing* the use of [pattern matching](pattern-matching.md) at the end of a round of validation, which in turns enforces a higher degree of program correctness.</span></span>
+<span data-ttu-id="70cfb-111">Gördüğünüz gibi çeşitli doğrulama işlevleri tümünü döndürülecek zorlarsanız zincir oldukça kolay bir `Result`.</span><span class="sxs-lookup"><span data-stu-id="70cfb-111">As you can see, it's quite easy to chain together various validation functions if you force them all to return a `Result`.</span></span>  <span data-ttu-id="70cfb-112">Böyle bir işlevsellik olması gerektiği gibi birleştirilebilir küçük parçalara bölmeniz olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="70cfb-112">This lets you break up functionality like this into small pieces which are as composable as you need them to be.</span></span>  <span data-ttu-id="70cfb-113">Bu da eklenen değerine sahip *zorlamayı* kullanımını [desen eşleştirme](pattern-matching.md) doğrulama turu sonunda, hangi sırayla zorlar daha yüksek bir program doğruluk derecesi.</span><span class="sxs-lookup"><span data-stu-id="70cfb-113">This also has the added value of *enforcing* the use of [pattern matching](pattern-matching.md) at the end of a round of validation, which in turns enforces a higher degree of program correctness.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f1084-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f1084-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="70cfb-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="70cfb-114">See also</span></span>
 
-- [<span data-ttu-id="f1084-115">Ayrılmış Birleşimler</span><span class="sxs-lookup"><span data-stu-id="f1084-115">Discriminated Unions</span></span>](discriminated-unions.md)
-- [<span data-ttu-id="f1084-116">Desen Eşleştirme</span><span class="sxs-lookup"><span data-stu-id="f1084-116">Pattern Matching</span></span>](pattern-matching.md)
+- [<span data-ttu-id="70cfb-115">Ayrılmış Birleşimler</span><span class="sxs-lookup"><span data-stu-id="70cfb-115">Discriminated Unions</span></span>](discriminated-unions.md)
+- [<span data-ttu-id="70cfb-116">Desen Eşleştirme</span><span class="sxs-lookup"><span data-stu-id="70cfb-116">Pattern Matching</span></span>](pattern-matching.md)
