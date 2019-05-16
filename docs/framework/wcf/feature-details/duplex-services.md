@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: a8197dfc877842be824a5b10c742ef4fb7792858
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5fef151fe9149e2693ee217e7be642427162322d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592755"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636277"
 ---
 # <a name="duplex-services"></a>Çift Yönlü Hizmetler
 
@@ -87,7 +87,7 @@ Aşağıdaki örnek kod, uç nokta adresi yapılandırmada istemci belirtmek nas
 ```
 
 > [!WARNING]
-> Bir hizmet veya istemcinin, kanal kapandığında çift yönlü modeli otomatik olarak algılamaz. Bu nedenle istemci beklenmedik şekilde sonlandırılırsa, varsayılan olarak hizmet değil bildirilir veya hizmet beklenmedik şekilde sona ererse, istemci olmayan bildirilir. Bu nedenle seçerseniz birbirine bildirmek için kendi protokolü, istemciler ve hizmetler uygulayabilirsiniz. Hata işleme hakkında daha fazla bilgi için bkz. [WCF hata işleme](../wcf-error-handling.md)
+> Bir hizmet veya istemcinin, kanal kapandığında çift yönlü modeli otomatik olarak algılamaz. Bu nedenle istemci beklenmedik şekilde sonlandırılırsa, varsayılan olarak hizmet değil bildirilir veya hizmet beklenmedik şekilde sona ererse, istemci olmayan bildirilir. Kesilirse, bir hizmeti kullanırsanız <xref:System.ServiceModel.CommunicationException> özel durumu oluşturulur. Bu nedenle seçerseniz birbirine bildirmek için kendi protokolü, istemciler ve hizmetler uygulayabilirsiniz. Hata işleme hakkında daha fazla bilgi için bkz. [WCF hata işleme](../wcf-error-handling.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

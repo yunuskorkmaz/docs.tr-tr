@@ -6,12 +6,12 @@ helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: e5010c7e9f3550c79c86c6cab4579a0fb15eef10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dde621395f407cd64e047ddfe8c6539e976b3061
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660885"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633020"
 ---
 # <a name="query-keywords-c-reference"></a>Sorgu anahtar sözcükleri (C# Başvurusu)
 
@@ -21,7 +21,7 @@ Bu bölüm, sorgu ifadelerinde kullanılan bağlamsal anahtar sözcükler içeri
 
 |Yan Tümce|Açıklama|
 |------------|-----------------|
-|[Kaynak](from-clause.md)|Bir veri kaynağı ve bir aralık değişkenine (bir yineleme değişkeni için benzer şekilde) belirtir.|
+|[from](from-clause.md)|Bir veri kaynağı ve bir aralık değişkenine (bir yineleme değişkeni için benzer şekilde) belirtir.|
 |[Burada](where-clause.md)|İşleçler ve mantıksal AND tarafından ayrılmış bir veya daha fazla Boole ifadesine göre öğeleri filtreler kaynağı ( `&&` veya <code>&#124;&#124;</code> ).|
 |[Seçin](select-clause.md)|Sorgu yürütüldüğünde, döndürülen dizideki öğelerin sahip şekli ve türünü belirtir.|
 |[Grup](group-clause.md)|Belirtilen anahtar değere göre gruplar sorgu sonuçları.|

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - pointers [C#], increment and decrement
 - pointer expressions [C#], increment and decrement
 ms.assetid: 1b8b9281-44ee-485a-9045-3db38a4b4b89
-ms.openlocfilehash: 358decb73666d5a5ef7c0fa828168d90d2c22c1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 040437bc8cbab4ba12f243434bdea7798711ce8a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61677977"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635155"
 ---
 # <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>Nasıl yapılır: işaretçileri artırma ve azaltma (C# Programlama Kılavuzu)
 
@@ -48,9 +48,8 @@ p--;
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [İşaretçi İfadeleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
 - [C# İşleçleri](../../../csharp/language-reference/operators/index.md)
-- [İşaretçileri İşleme](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)
+- [İşaretçileri İşleme](../../../csharp/programming-guide/unsafe-code-pointers/how-to-increment-and-decrement-pointers.md)
 - [İşaretçi türleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Türler](../../../csharp/language-reference/keywords/types.md)
 - [unsafe](../../../csharp/language-reference/keywords/unsafe.md)

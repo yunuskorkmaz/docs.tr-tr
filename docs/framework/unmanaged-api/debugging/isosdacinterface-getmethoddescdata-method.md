@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 4e32facc65162c4deb853cd507a00126e5f786e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cdbf662c664d6c87b2fa17bcb10d735b0f573dd2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914881"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632311"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface::GetMethodDescData yöntemi
 
@@ -69,7 +69,7 @@ Sağlanan yöntem parçasıdır `ISOSDacInterface` arabirim ve sanal yöntem tab
 
 **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
 **Üst bilgi:** Yok.  
-**Kitaplığı:** Yok.  
+**Kitaplığı:** None  
 **.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.

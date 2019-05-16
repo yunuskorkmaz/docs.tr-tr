@@ -3,12 +3,12 @@ title: ML API ML.NET kullanmayı otomatik
 description: ML API ML.NET otomatik oluşturma işlemi model otomatikleştirir ve dağıtım için hazır bir model oluşturur. Otomatik makine öğrenimi görevlerini yapılandırmak için kullanabileceğiniz seçenekleri öğrenin.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b05b6ed7c66062b28aaf634913a9598602b62498
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 21bf594ba70e8c466cba757ca4dcfe39ddfa4d1e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557873"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641232"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Machine learning API ML.NET kullanmayı otomatik
 
@@ -19,7 +19,7 @@ Otomatik machine learning (AutoML), machine learning için verileri uygulamaya i
 
 ## <a name="load-data"></a>Veri yükleme
 
-Bir veri kümesine veri yüklemeyi destekliyor otomatik makine bir [IDataView](https://docs.microsoft.com/dotnet/api/microsoft.ml.idataview?view=ml-dotnet). Veriler, virgülle ayrılmış değer (TSV) dosyaları ve virgülle ayrılmış değer (CSV) dosya biçiminde olabilir.
+Bir veri kümesine veri yüklemeyi destekliyor otomatik makine bir [IDataView](xref:Microsoft.ML.IDataView). Veriler, virgülle ayrılmış değer (TSV) dosyaları ve virgülle ayrılmış değer (CSV) dosya biçiminde olabilir.
 
 Örnek:
 
@@ -61,7 +61,7 @@ Deneme ayarları için belirlenen ML görev türü oluşturun:
 
 ## <a name="configure-experiment-settings"></a>Deneme ayarlarını yapılandırma
 
-Denemeleri, yüksek oranda yapılandırılabilir özelliktedir. Bkz: [AutoML API belgeleri](https://docs.microsoft.com/dotnet/api/microsoft.ml.auto?view=ml-dotnet) yapılandırma ayarlarının tam listesi için.
+Denemeleri, yüksek oranda yapılandırılabilir özelliktedir. Bkz: [AutoML API belgeleri](https://docs.microsoft.com/dotnet/api/?view=automl-dotnet) yapılandırma ayarlarının tam listesi için.
 
 Bazı örnekler:
 
@@ -104,15 +104,15 @@ Bazı örnekler:
     ```
 
 ML görev başına desteklenen Eğitmenler listesini aşağıdaki karşılık gelen bağlantıda bulunabilir:
-* [İkili sınıflandırma algoritmaları desteklenir.](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.binaryclassificationtrainer?view=automl-dotnet)
-* [Sınıflı sınıflandırma algoritmaları desteklenir.](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.multiclassclassificationtrainer?view=automl-dotnet)
-* [Desteklenen regresyon algoritmaları](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.regressiontrainer?view=automl-dotnet)
+* [İkili sınıflandırma algoritmaları desteklenir.](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.binaryclassificationtrainer?view=automl-dotnet)
+* [Sınıflı sınıflandırma algoritmaları desteklenir.](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.multiclassclassificationtrainer?view=automl-dotnet)
+* [Desteklenen regresyon algoritmaları](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.regressiontrainer?view=automl-dotnet)
 
 ## <a name="optimizing-metric"></a>Ölçüm en iyi duruma getirme
 
 Yukarıdaki örnekte gösterildiği gibi en iyi duruma getirme ölçüm modeli eğitimi sırasında en iyi duruma getirilmesi ölçüm belirler. Seçebileceğiniz en iyi duruma getirme ölçüm seçtiğiniz görev türüne göre belirlenir. Ölçümlerin bir listesi aşağıda verilmiştir.
 
-|[İkili sınıflandırma](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.binaryclassificationmetric?view=automl-dotnet) | [Sınıflı sınıflandırma](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.multiclassclassificationmetric?view=automl-dotnet) | [Regresyon](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.regressionmetric?view=automl-dotnet)
+|[İkili sınıflandırma](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.binaryclassificationmetric?view=automl-dotnet) | [Sınıflı sınıflandırma](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.multiclassclassificationmetric?view=automl-dotnet) | [Regresyon](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.regressionmetric?view=automl-dotnet)
 |-- |-- |--
 |Doğruluğu| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
@@ -210,11 +210,11 @@ Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}
 ```
 
 ML görev başına kullanılabilen tüm ölçümler şunlardır:
-* [İkili sınıflandırma ölçümleri](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.binaryclassificationmetric?view=automl-dotnet
+* [İkili sınıflandırma ölçümleri](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.binaryclassificationmetric?view=automl-dotnet
 )
-* [Sınıflı sınıflandırma ölçümleri](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.multiclassclassificationmetric?view=automl-dotnet
+* [Sınıflı sınıflandırma ölçümleri](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.multiclassclassificationmetric?view=automl-dotnet
 )
-* [Regresyon ölçümleri](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.regressionmetric?view=automl-dotnet
+* [Regresyon ölçümleri](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.regressionmetric?view=automl-dotnet
 )
 
 ## <a name="see-also"></a>Ayrıca bkz.

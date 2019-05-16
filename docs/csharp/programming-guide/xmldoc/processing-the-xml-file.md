@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 5b643b9f736169bb4450bb357cc35fee35e155c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f40e14163850716204584f5d5651a08715b80241
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61708086"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634776"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>XML Dosyasını İşleme (C# Programlama Kılavuzu)
 
@@ -87,4 +87,4 @@ Aşağıdaki örnekler nasıl kimliği için bir sınıf dizeleri ve üyelerini 
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [/ doc (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/index.md)

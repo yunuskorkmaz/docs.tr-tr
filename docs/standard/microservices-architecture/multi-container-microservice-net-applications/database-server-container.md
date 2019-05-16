@@ -1,15 +1,13 @@
 ---
 title: Kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Bir kapsayıcı olarak çalışan bir veritabanı sunucusu mi kullanıyorsunuz? yalnızca geliştirme için! Nedenini anlamak.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: c993f962d84ca3fc859ab704489300192536ee74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5fd92a28a09cab041225c4c817a10f5ecfedc038
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760772"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639738"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma
 

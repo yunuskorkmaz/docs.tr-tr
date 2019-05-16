@@ -1,15 +1,13 @@
 ---
 title: DDD odaklı bir mikro hizmet tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | DDD odaklı sıralama mikro hizmet ve uygulama katmanları tasarımını anlayın.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5c56e497ffb6466840d034458daaebf9fe0c8f03
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 303f8909d12dddef93b20604a00b9ea8e8493ee5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020094"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639666"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>DDD odaklı bir mikro hizmet tasarlama
 

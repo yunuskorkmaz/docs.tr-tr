@@ -1,15 +1,13 @@
 ---
 title: Polly üstel geri alma ile HTTP çağrı yeniden denemelerini uygulama
 description: Polly ile HttpClientFactory HTTP hatalarını işlemek nasıl öğrenin.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: c68c36b4d485a9e7aa337051ccd7682161300c09
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: f9f7c60792527c6bdba9a63b31e3dcbec2963da9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062998"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644572"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory ve Polly üstel geri alma ile HTTP çağrı yeniden uygulayın
 

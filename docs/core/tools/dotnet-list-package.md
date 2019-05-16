@@ -2,12 +2,12 @@
 title: DotNet Listele paket komutu
 description: "'Dotnet paket listeleme' komutu, bir proje veya çözüm için paket referanslarını listelemek için uygun bir seçenek sağlar."
 ms.date: 04/09/2019
-ms.openlocfilehash: bc38b94201f85ed4b22e11722ef5cabcb6fbf040
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88ef3302a955eadc4167384312e4eb721dd496fb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665081"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631765"
 ---
 # <a name="dotnet-list-package"></a>DotNet paket listeleme
 

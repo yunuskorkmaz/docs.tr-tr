@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1a074991c66f7919a2b883cdbb86456c7926cedb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f3f60f9752b9bd36d76387102c202d88b39c3ca
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973543"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671680"
 ---
 | .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|
@@ -24,7 +24,7 @@ ms.locfileid: "61973543"
 - Sütunlar .NET Standard sürümleri temsil eder. Her üst bilgi hücresini hangi API'ler .NET Standard'ın bu sürümünde eklenen gösteren bir belgeye bir bağlantıdır.
 - Satırları, farklı .NET uygulamalarını temsil eder.
 - Her hücredeki sürüm numarasını gösterir *minimum* , .NET Standard sürümünü hedeflemek için ihtiyaç duyacağınız uygulama sürümü.
-- Etkileşimli bir tablo için bkz: [.NET Standard sürümleri](https://immo.landwerth.net/netstandard-versions/#).
+- Etkileşimli bir tablo için bkz: [.NET Standard sürümleri](https://dotnet.microsoft.com/platform/dotnet-standard#versions).
 
 [1.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.0.md
 [1.1]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.1.md

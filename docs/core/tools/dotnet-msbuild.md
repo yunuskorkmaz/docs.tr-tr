@@ -2,12 +2,12 @@
 title: DotNet msbuild komut
 description: Dotnet msbuild komut MSBuild komut satırını erişim sağlar.
 ms.date: 12/03/2018
-ms.openlocfilehash: f025b5b92e57c7b804b9bdd59c8b4a4a806796da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 983fae6f4ecf875da0b155a668009984b5df50de
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61648704"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632025"
 ---
 # <a name="dotnet-msbuild"></a>DotNet msbuild
 

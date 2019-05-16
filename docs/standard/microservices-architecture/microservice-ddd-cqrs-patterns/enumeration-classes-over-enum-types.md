@@ -1,15 +1,13 @@
 ---
 title: Sabit listesi türleri yerine Sabit Listesi sınıfları kullanma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Temizle nasıl numaralandırma sınıflar, numaralandırmalar yerine, ikincisi bazı sınırlamalar çözmenin bir yolu kullanabilirsiniz.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: d2d4b191ed4cb8f2f8b9b0a34fe99e65d4596a72
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02d5fcef580f71b6f8c4af6d88095e24b0bd3462
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61818020"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644472"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Sabit listesi türleri yerine sabit listesi sınıfları kullanma
 

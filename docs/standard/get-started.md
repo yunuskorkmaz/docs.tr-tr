@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 05/01/2017
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: 825d7d950726c4f416624653704a51fb405325e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 50667465d25dc034b7f229716cbf327fb5f54977
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683229"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644677"
 ---
 # <a name="get-started"></a>Başlarken
 
@@ -31,6 +31,6 @@ ms.locfileid: "61683229"
 
 * [.NET Core öğreticilerini](../core/tutorials/index.md) ayrıntı çeşitli şekillerde kullanarak, işletim sistemi ve tercih ettiğiniz araçları .NET Core ile başlayabilirsiniz.
 
-## <a name="get-started-using-docker-on-net-framework"></a>.NET Framework üzerinde Docker kullanmaya başlama
+## <a name="get-started-using-net-core-on-docker"></a>Docker üzerinde .NET Core kullanmaya başlama
 
-[.NET Framework üzerinde docker](../framework/docker/index.md) .NET Framework Windows Docker kapsayıcılarında nasıl kullanabileceğinizi gösterir.
+[.NET ve Docker'a giriş](../core/docker/intro-net-docker.md) .NET Core Windows Docker kapsayıcılarında nasıl kullanabileceğinizi gösterir.

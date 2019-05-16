@@ -1,15 +1,13 @@
 ---
 title: Her mikro hizmet için etki alanı modeli sınırlarını tanımlama
 description: Ses Mimarisi elde etmek için büyük bir uygulama mikro hizmetler halinde bölümleme essence keşfedin.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 9142c5abbbd3839caac377876ba54258cdf916b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa903e13b20be1084fad60e6fb7bbb1c61403deb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689768"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644401"
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Her mikro hizmet etki alanı modeli sınırlarını tanımlama
 

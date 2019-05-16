@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: 9352718371226279f0a468913040e48cbeed984d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 332fd7499a9948bb9ab418a3ab8b6c40ad0bcb85
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61708127"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634809"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref Özniteliği (C# Programlama Kılavuzu)
 `cref` Bir XML belgeleri etiketi özniteliğinde "kod başvurusu" anlamına gelir Bu etiket iç metni bir kod öğe türü, yöntemi veya özelliği belirtir. Gibi belgeleri Araçları [DocFX](https://dotnet.github.io/docfx/) ve [Sandcastle](https://github.com/EWSoftware/SHFB) kullanın `cref` köprüler burada türe veya üyeye belgelenen sayfasına otomatik olarak oluşturmak için öznitelikleri.  
@@ -121,5 +121,5 @@ ms.locfileid: "61708127"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/index.md)
 - [Belge Açıklamaları için Önerilen Etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

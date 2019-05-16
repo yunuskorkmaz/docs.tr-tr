@@ -1,15 +1,13 @@
 ---
 title: Azure Service Fabric Kullanma
 description: Yalnızca Bu kapsayıcıları düzenlemek için kullanmanın yanı sıra kullanabileceğiniz hangi Azure Service Fabric uygulama modellerini anlayın.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: b29be05f5ab353ddfae0d23211efaf57979d0604
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c629b473a429b64243b5756c96fef6585c939b7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025796"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644524"
 ---
 # <a name="using-azure-service-fabric"></a>Azure Service Fabric Kullanma
 

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: 91be48aa2ca64b152af3dc3f33c713bf4adac0c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 872406fdf012ed3b8326789f6664cb3396d59a84
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61709100"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635161"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>İşaretçi Dönüşümleri (C# Programlama Kılavuzu)
 Aşağıdaki tablo, önceden tanımlanmış örtük işaretçi dönüşümleri gösterir. Örtük dönüştürmeleri yöntemi çağırma ve atama deyimleri dahil olmak üzere birçok durumda oluşabilir.  
@@ -42,7 +42,6 @@ Aşağıdaki tablo, önceden tanımlanmış örtük işaretçi dönüşümleri g
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [İşaretçi İfadeleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
 - [İşaretçi türleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Türler](../../../csharp/language-reference/keywords/types.md)
 - [unsafe](../../../csharp/language-reference/keywords/unsafe.md)

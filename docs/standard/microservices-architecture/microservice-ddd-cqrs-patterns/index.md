@@ -1,15 +1,13 @@
 ---
 title: Bir Mikro Hizmetteki İş Karmaşıklığını DDD ve CQRS Desenleriyle Giderme
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Nasıl başa çıkabileceğiniz DDD ve CQRS desenleriyle uygulama karmaşık iş senaryolarını anlama
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: f17acd6765de96bf8cec28c4e212733822fa0b73
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d311641e2ac73205c04c3f1147b54991585ce851
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019769"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639805"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Başa çıkmaya iş karmaşıklığını DDD ve CQRS desenleriyle bir mikro hizmetteki
 

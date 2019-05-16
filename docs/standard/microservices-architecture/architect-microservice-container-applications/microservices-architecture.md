@@ -1,15 +1,13 @@
 ---
 title: Mikro hizmetler mimarisi
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | 30.000 ayak mikro hizmet mimarisini görüntüleyin.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 10d00ddc6255e6897bed3e826becff9aa8397e4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3cf2a94140042d3cf76b5b63fe4e98638c56dbfe
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025606"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644869"
 ---
 # <a name="microservices-architecture"></a>Mikro hizmetler mimarisi
 

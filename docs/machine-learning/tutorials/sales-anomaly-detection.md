@@ -4,12 +4,12 @@ description: ML.NET ürün satış anomali algılama senaryoda anomali ani veril
 ms.date: 05/06/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b0dbd8793e2be3973c37f0f78bc0ddd61b6bfea7
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 39e812facccfa75d1643704f8960a387a70c94bc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65066192"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641142"
 ---
 # <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>Öğretici: ML.NET ürün satış anomali algılama için kullanın. 
 

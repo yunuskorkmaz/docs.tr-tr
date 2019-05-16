@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 384d0ac9f36f9ef9daba851f52d577d97248cd67
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 926e47c277c8649627482a8036ca3704be142f33
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665620"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631875"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Birim testi F# dotnet testi ve NUnit kullanarak .NET core'da kitaplıkları
 

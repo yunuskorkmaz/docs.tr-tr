@@ -1,15 +1,13 @@
 ---
 title: Zaman uyumsuz ileti tabanlı iletişim
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Mikro hizmetler birbirlerinden da sonuçta eşitlenmekte olan sırasında bağımsız tutmak için en iyi yolu, çünkü zaman uyumsuz ileti tabanlı iletişim mikro hizmetler mimarisinde önemli bir kavramdır.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 105daed3bca03571caea92fdbd1d6c6f56b24fef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65bd0cd2b316fe7011ad8e878852547ee5949f09
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909668"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641374"
 ---
 # <a name="asynchronous-message-based-communication"></a>Zaman uyumsuz ileti tabanlı iletişim
 

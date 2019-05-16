@@ -2,12 +2,12 @@
 title: 'Özel durumlar: Failwith işlevi'
 description: Nasıl 'failwith' işlevi oluşturur öğrenin bir F# özel durum.
 ms.date: 05/16/2016
-ms.openlocfilehash: 05d385ddfc98a910779a6f59949a7187c38f0812
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08107966ddc2f55625347deb92d224b286df7761
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772690"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641943"
 ---
 # <a name="exceptions-the-failwith-function"></a>Özel durumlar: Failwith işlevi
 

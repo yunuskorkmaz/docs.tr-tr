@@ -2,12 +2,12 @@
 title: SendMail Özel Etkinliği
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 3bbb16fd99d5d7de4183b26030c0afe65ebc90cd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d760f95b8e98bae52341296b90008e72d5c47d1f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617308"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637666"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail Özel Etkinliği
 Bu örnek, türetilen özel etkinlik oluşturma işlemini gösterir <xref:System.Activities.AsyncCodeActivity> bir iş akışı uygulaması içinde kullanmak için SMTP kullanarak posta göndermek için. Özel Etkinlik özelliklerini kullanan <xref:System.Net.Mail.SmtpClient> zaman uyumsuz olarak e-posta gönderin ve kimlik doğrulaması içeren e-posta göndermek için. Test modu, belirteç değiştirme, dosya şablonları ve test bırakma yolu gibi bazı son kullanıcı özellikler de sağlar.  

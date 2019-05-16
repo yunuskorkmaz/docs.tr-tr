@@ -1,15 +1,13 @@
 ---
 title: Anahtar paketleri
 description: Mikro hizmet mimarisi, avantajları ve dezavantajları, tasarım DDD desenlerini gibi kullanırken ilgili üst düzey sorunları hızlı bir bakış için önemli dersler .NET mikro Hizmetleri mimariden kapsayıcılı .NET uygulamaları için Kılavuzu/e-kitabı edinin ve geliştirme, yanı sıra dayanıklılık, güvenlik ve düzenleyicileri kullanımı.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 90babf9a32d1e139216cbc8eb1c629401b8e83e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b8b7be9b3903c64221cba7c6abdb1e38f5d944f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020185"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639695"
 ---
 # <a name="key-takeaways"></a>Önemli dersler
 

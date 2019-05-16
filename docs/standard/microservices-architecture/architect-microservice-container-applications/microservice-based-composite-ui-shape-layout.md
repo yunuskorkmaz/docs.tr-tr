@@ -1,15 +1,13 @@
 ---
 title: Üzerinde mikro hizmet tabanlı bileşik kullanıcı Arabirimi oluşturma
 description: Mikro hizmet mimarisi, yalnızca arka uç için değil. Ön uç kullanarak bir Özet Görünüm elde edin.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 8a2cdf2569f4333dc3ba71b3492d21197ff006ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55cb2a8096cc8122c94cae50af4384e9392868cf
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025697"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644588"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Üzerinde mikro hizmet tabanlı bileşik kullanıcı Arabirimi oluşturma
 

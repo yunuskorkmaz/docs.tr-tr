@@ -2,12 +2,12 @@
 title: DotNet yapı sunucu komutu
 description: Dotnet yapı sunucu komut, bir derleme tarafından başlatılan sunucularıyla etkileşim kurar.
 ms.date: 04/24/2019
-ms.openlocfilehash: 491ac37e7f75f930423b3c7e43e3c090ec1ed07d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fa663bc045e8abfc3375a0226be7d16331b49740
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754280"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632093"
 ---
 # <a name="dotnet-build-server"></a>DotNet yapı sunucu
 

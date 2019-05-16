@@ -1,15 +1,13 @@
 ---
 title: Docker kapsayıcıları için ne zaman .NET Core seçilmelidir?
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | .NET Core için Docker kapsayıcıları ne zaman
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: b2ede45afee93e8d87a22b2b489eb2a230e04e7d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 54ed1b4bbb16352b8c99204383f85ffb25d62be7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019600"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644368"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Docker kapsayıcıları için ne zaman .NET Core seçilmelidir?
 

@@ -4,12 +4,12 @@ description: Analiz için bilgileri, hangi verileri toplanır ve bunu devre dı�
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 49ebd6c9e1b77c85d891b8c9fb8cbd5c66b478a9
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 36f4af48615e2e3247f8e21343d0a00519ba1c0a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65066159"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645018"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI tarafından telemetri toplama
 
@@ -42,15 +42,17 @@ Ayarlayarak telemetri özelliği iyileştirilmiş `DOTNET_CLI_TELEMETRY_OPTOUT` 
 
 Bu özellik aşağıdaki verileri toplar:
 
-- Hangi komutları gibi çağırılır `auto-train`
+- Hangi komut, gibi çağrıldı `auto-train`
+- Komut satırı parametresi adları kullanılır (yani "veri kümesi adı, etiket sütun adı, ml görev, çıkış yolu, araştırma zaman sınırı, ayrıntı düzeyi")
 - Karma MAC adresi: bir şifreleme açısından (SHA256) anonim ve benzersiz bir kimliği bir makine için
 - Zaman damgası bir çağırma
-- Yalnızca coğrafi konumunu belirlemek için kullanılan üç sekizli IP adresi
+- Yalnızca coğrafi konumunu belirlemek için kullanılan üç sekizli IP adresini (IP adresi değil tam)
 - Kullanılan tüm bağımsız değişkenler/parametreler adı. Dizeleri gibi müşteri'nin değerlerini değil
+- Karma veri kümesi dosya adı
+- Veri kümesi dosyası boyut demetinde
 - İşletim sistemi ve sürümü
-- --Ml görev parametresinin değeri: Gibi kategorik değerler `regression`, `binary-classification`, ve `multiclass-classification`
-- [Logaritmik yuvarlanır](https://en.wikipedia.org/wiki/Rounding#Rounding_to_a_specified_power) dataset dosya boyutu (en yakın 2 power)
-- `ExitCode` komutu
+- --Görev parametresinin değeri: Gibi kategorik değerler `regression`, `binary-classification`, ve `multiclass-classification`
+- ML.NET CLI sürümü (yani 0.3.27703.4)
 
 Veriler güvenli bir şekilde kullanarak Microsoft sunucularına gönderilir [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) kısıtlı erişim'in altında tutulması ve katı güvenlik denetimleri güvenli altında kullanılan teknoloji [Azure depolama](https://azure.microsoft.com/services/storage/) sistemler.
 

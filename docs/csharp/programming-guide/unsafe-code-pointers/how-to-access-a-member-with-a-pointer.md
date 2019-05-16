@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], member access
 ms.assetid: 1e998498-8c85-4a78-8ce2-4d8c20f08342
-ms.openlocfilehash: 9762b9e2487c30b81b7ef6ae22827b64e3cb02e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0ca4a0b2189ee652ad1d9c2b63690306a651df4
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61677738"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635072"
 ---
 # <a name="how-to-access-a-member-with-a-pointer-c-programming-guide"></a>Nasıl yapılır: işaretçiyle bir üyeye erişme (C# Programlama Kılavuzu)
 Güvenli olmayan bir bağlamda bildirilen bir yapının bir üyesine erişmek için üye erişimi işleci aşağıdaki örnekte gösterildiği gibi kullanabileceğiniz `p` işaretçisidir bir [yapı](../../../csharp/language-reference/keywords/struct.md) üye içeren `x`.  
@@ -33,7 +33,6 @@ p -> x = 25; //member access operator ->
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [İşaretçi İfadeleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
 - [İşaretçi türleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Türler](../../../csharp/language-reference/keywords/types.md)
 - [unsafe](../../../csharp/language-reference/keywords/unsafe.md)

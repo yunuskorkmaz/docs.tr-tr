@@ -1,15 +1,13 @@
 ---
 title: Dayanıklı Uygulamalar Uygulama
 description: Dayanıklılık, mikro hizmetler mimarisinde bir temel kavramlar hakkında bilgi edinin. Geçici hatalar meydana gelir çünkü düzgün bir şekilde işlemek nasıl bilmeniz gerekir.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: 00724509ba6e027ef73f72bfb6f85b8ec0aa9d25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 766349e72389f848b0a741b020707cc7acf3410d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61977723"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639852"
 ---
 # <a name="implement-resilient-applications"></a>Dayanıklı uygulamalar uygulama
 

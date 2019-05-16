@@ -2,12 +2,12 @@
 title: Dizeler
 description: Bilgi nasıl F# 'string' türü sabit metin Unicode karakter dizisi olarak temsil eder.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5b55b0c87b6636346677b973e093e7bcba324e98
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2fda4d936abab5bc3f4653613991a7f5471d81d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755356"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642079"
 ---
 # <a name="strings"></a>Dizeler
 

@@ -1,15 +1,13 @@
 ---
 title: Docker uygulamaları için geliştirme iş akışı
 description: Docker tabanlı uygulamalar geliştirmek için iş akışının ayrıntılarını anlayın. Adım adım başlar ve dockerfile'ları iyileştirmek ve Visual Studio kullanırken kullanılabilir Basitleştirilmiş akışıyla sonlandırmak üzere bazı ayrıntıları alın.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 3d2a57c7dda722bcc39895b41c35a3a29ddd17e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34d2a90cb5208736b1b414e25ac3e627929f45a0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751460"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644486"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 

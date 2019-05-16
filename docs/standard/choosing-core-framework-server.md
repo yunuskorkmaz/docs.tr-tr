@@ -4,12 +4,12 @@ description: Hangi .NET uygulamasının üzerinde. NET'te bir sunucu uygulaması
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 03d008230d263853e322bb582706e2dbd3a11eec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3034f77fe8ee136011a523f6882ffa09ed2758d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772612"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641144"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim
 
@@ -108,6 +108,6 @@ Resmi yol haritası yanı sıra .NET Core için unity'nin için diğer çerçeve
 - [Hedef çerçeveler](frameworks.md)
 - [.NET Core Kılavuzu](../core/index.md)
 - [.NET Core ile .NET Framework'ten taşıma](../core/porting/index.md)
-- [Docker Üzerinde .NET Framework Kılavuzu](../framework/docker/index.md)
+- [.NET ve Docker’a Giriş](../core/docker/intro-net-docker.md)
 - [.NET bileşenleri'ne genel bakış](components.md)
 - [.NET mikro Hizmetleri. Kapsayıcılı .NET Uygulamaları Mimarisi](microservices-architecture/index.md)

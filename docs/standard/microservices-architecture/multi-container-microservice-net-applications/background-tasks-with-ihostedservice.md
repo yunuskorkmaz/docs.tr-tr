@@ -1,15 +1,13 @@
 ---
 title: Ihostedservice ve BackgroundService sınıfı ile mikro hizmetler içindeki arka plan görevlerini uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | .NET Core mikro hizmetler arka plan görevleri uygulamak için Ihostedservice ve BackgroundService kullanılacak yeni seçeneklerini anlayın.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 9203404c0b623570c2b089087b7ce5d676bba376
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 958253a3b8ba9f30807f19dd72a6a363ec7e7af2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062983"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644251"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Ihostedservice ve BackgroundService sınıfı ile mikro hizmetler içindeki arka plan görevlerini uygulama
 

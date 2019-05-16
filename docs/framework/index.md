@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6e21d2514ad357c906885750d9320575bdb75b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d93dea42dbb854d8d52bd5cf3e54d1ce0d892d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643939"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635524"
 ---
 # <a name="net-framework-guide"></a>.NET Framework Kılavuzu
 
@@ -28,7 +28,7 @@ ms.locfileid: "61643939"
 
 Kullanıcılara ve geliştiricilere yönelik .NET Framework'e Genel bir giriş için bkz: [Başlarken](./get-started/index.md). Mimarisi ve .NET Framework'ün temel özelliklerine bir giriş için bkz [genel bakış](./get-started/overview.md).
 
-.NET Framework ve Docker ile kullanılan [Windows kapsayıcıları](/virtualization/windowscontainers/about/). Bkz: [dağıtma .NET Framework uygulamaları ile Docker](./docker/index.md) uygulamalarınızı Docker kapsayıcılarında çalıştırmak hakkında bilgi edinmek için.
+.NET Framework ve Docker ile kullanılan [Windows kapsayıcıları](/virtualization/windowscontainers/about/).
 
 ## <a name="installation"></a>Yükleme
 
@@ -51,9 +51,6 @@ Kaynaklar ve .NET Framework yükleme ve sorun giderme hakkında rehberlik sağla
 
 * [Geçiş Kılavuzu](./migration-guide/index.md)  
 Kaynaklar ve uygulamanızı .NET Framework'ün yeni bir sürüme geçiş yapıyorsanız, dikkate almanız gereken değişikliklerin bir listesini sağlar.
-
-* [Docker Üzerinde .NET Framework Kılavuzu](./docker/index.md)  
-Windows kapsayıcıları kullanarak Docker ile .NET Framework uygulamaları çalıştırmak için kaynaklar sağlar.
 
 * [Geliştirme Kılavuzu](./development-guide.md)  
 Dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek yönetimi ve iş parçacığı oluşturma hakkında uygulama ve bilgilerinizi oluşturma, yapılandırma, hatasını ayıklama, güvenliğini sağlama ve dağıtma gibi, uygulama geliştirmesine yönelik tüm temel teknoloji alanları ve görevleri için kılavuz sağlar.

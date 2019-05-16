@@ -1,15 +1,13 @@
 ---
 title: İzleme ve telemetri ile uygulamalarınızı modernleştirme
 description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | İzleme ve telemetri ile uygulamalarınızı modernleştirin
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: a8135031d2879ff377881d246c532573a2149fe7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 94196365e6ed93839b28ed3b375e75a9119ae12d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611651"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643688"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>İzleme ve telemetri ile uygulamalarınızı modernleştirme
 

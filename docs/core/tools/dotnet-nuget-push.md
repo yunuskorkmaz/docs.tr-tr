@@ -3,12 +3,12 @@ title: DotNet nuget anında iletme komutu
 description: Dotnet nuget anında iletme komutu sunucuya bir paket gönderir ve belgeyi yayımlar.
 author: karann-msft
 ms.date: 12/04/2018
-ms.openlocfilehash: 9f38fb29ef5b802a5b7091dd1e9659c653cf04d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7382cb93da3d7ed68f5731b3996c735c3f1461e4
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61648652"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631707"
 ---
 # <a name="dotnet-nuget-push"></a>DotNet nuget anında iletme
 

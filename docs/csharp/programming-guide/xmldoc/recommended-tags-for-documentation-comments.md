@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: a6d07b6c288ebbe24c9cf5c531ef333946855f82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 963be5273389ebbdb3458d41b0658de0d94bb2cd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675851"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634805"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>Belge Açıklamaları için Önerilen Etiketler (C# Programlama Kılavuzu)
 C# Derleyici, kodunuzda belge açıklamaları işler ve bunları adı belirttiğiniz bir dosyasında XML olarak biçimlendirir **/doc** komut satırı seçeneği. Son belgeleri derleyici tarafından üretilen dosyaya dayalı oluşturmak için özel bir araç oluşturabilir, veya gibi bir araç kullanın [DocFX](https://dotnet.github.io/docfx/) veya [Sandcastle](https://github.com/EWSoftware/SHFB).  
@@ -47,4 +47,4 @@ C# Derleyici, kodunuzda belge açıklamaları işler ve bunları adı belirttiğ
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [/ doc (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/index.md)

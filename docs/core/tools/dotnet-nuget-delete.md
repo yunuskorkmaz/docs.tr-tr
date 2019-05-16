@@ -3,12 +3,12 @@ title: DotNet nuget delete komutu
 description: Dotnet-nuget-delete komutu siler veya sunucu bir paketten unlists.
 author: karann-msft
 ms.date: 12/04/2018
-ms.openlocfilehash: a657fa273ca6b5229a1713fbcaf003217a59fd7f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1362413aa6458674518d68340634741994b34a3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61648684"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632054"
 ---
 # <a name="dotnet-nuget-delete"></a>DotNet nuget Sil
 

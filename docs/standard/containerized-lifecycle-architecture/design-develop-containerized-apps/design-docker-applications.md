@@ -1,15 +1,13 @@
 ---
 title: Docker uygulamaları tasarlama
 description: Mikro hizmet mimarisi için kapsamlı bir kılavuz başvuru, bir konu olduğu için burada bulabilirsiniz, bu kılavuzda ayrıntılı değil.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1d49f7509c0a12edfe375486429147e8fd240b2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 535b6cefb7371014527032972ec27ebfe4b67ebc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799352"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644649"
 ---
 # <a name="design-docker-applications"></a>Docker uygulamaları tasarlama
 

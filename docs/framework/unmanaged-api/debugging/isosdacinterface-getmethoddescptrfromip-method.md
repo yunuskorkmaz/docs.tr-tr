@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 82c4531ac16e8b4bf7ac45bc01eb7128b9507ab5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c92b112262aa2bede03bddc1396947b5fdfd6286
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922765"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629999"
 ---
 # <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>ISOSDacInterface::GetMethodDescPtrFromIP yöntemi
 
@@ -53,7 +53,7 @@ Sağlanan yöntem parçasıdır [ `ISOSDacInterface` arabirimi](isosdacinterface
 
 **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
 **Üst bilgi:** Yok.  
-**Kitaplığı:** Yok.  
+**Kitaplığı:** None  
 **.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.

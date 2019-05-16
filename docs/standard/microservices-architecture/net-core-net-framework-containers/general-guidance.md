@@ -1,15 +1,13 @@
 ---
 title: Genel rehber
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Genel rehberlik
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: b75bede39f524ea55c77bdb94cd4f2ef94f4d06b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0981cb16d5aa2036391caba0cf6ad3ac5c44ed6f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589817"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644141"
 ---
 # <a name="general-guidance"></a>Genel rehber
 
