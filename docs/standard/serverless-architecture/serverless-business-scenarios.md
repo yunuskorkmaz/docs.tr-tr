@@ -4,12 +4,12 @@ description: Mobil arka uçlar ve ETL işlem hatları için gelen görüntü iş
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 177fb1d7f79a0067ab185e520778b593d4b8eaf6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: adc4e1f3249cd72c423430ad4cb5dbb8eea8baf9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017268"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638822"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Sunucusuz iş senaryoları ve kullanım örnekleri
 

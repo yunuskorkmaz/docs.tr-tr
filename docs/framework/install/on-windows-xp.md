@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 401073d29ca0a0bb0b1511e65cd1bad31e1bbceb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a92286d23b5adee268b4635fbbdec0f5c052e1db
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643809"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636456"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Windows XP ve Windows Server 2003’te .NET Framework Yükleme
 
@@ -21,7 +21,7 @@ ms.locfileid: "61643809"
 
 ![Bu uygulama başlatılamadı](./media/this-application-could-not-be-started.png)
 
-Bu yönergeler ihtiyacınız .NET Framework sürümlerini yüklemenize yardımcı olur. [.NET Framework 4.8]https://github.com/Microsoft/dotnet/tree/master/releases/net48) en son sürüm. Windows XP ve Windows Server 2003'te desteklenmiyor. İle birlikte gelir [Windows 10 güncelleştirme 2019](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update).
+Bu yönergeler ihtiyacınız .NET Framework sürümlerini yüklemenize yardımcı olur. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) en son sürüm. Windows XP ve Windows Server 2003'te desteklenmiyor. İle birlikte gelir [Windows 10 güncelleştirme 2019](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update).
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 

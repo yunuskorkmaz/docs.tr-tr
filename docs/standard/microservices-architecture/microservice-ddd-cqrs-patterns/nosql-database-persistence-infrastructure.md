@@ -1,15 +1,13 @@
 ---
 title: NoSQL veritabanlarını bir kalıcılık altyapısı olarak kullanma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Genel ve Azure Cosmos DB NoSql veritabanlarının kullanımını özellikle kalıcılığı uygulamak için bir seçenek olarak anlayın.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 851068b511106157a759a0600c404b4d1154e5ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 023904319651ec91000ff036850c773f66d1a267
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761083"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644463"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>NoSQL veritabanlarını bir Kalıcılık altyapısı olarak kullanma
 

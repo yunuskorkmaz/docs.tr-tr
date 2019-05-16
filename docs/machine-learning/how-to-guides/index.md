@@ -3,12 +3,12 @@ title: ML.NET nasıl yapılır kılavuzları
 description: Özel yapay ZEKA çözümleri oluşturma ve Machine Learning .NET uygulamalarınızı tümleştirmeye yardımcı olmak üzere belirli görevlerin nasıl yapılacağını öğrenin.
 ms.custom: seodec18
 ms.date: 03/01/2019
-ms.openlocfilehash: 83188e65ccd02e6928cb4b87577105a75ee96245
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c16adf6bf85aec1aef51751c6d4fe8c7f0f3c9f4
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649142"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645040"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>.NET makine öğrenimi ile ilgili nasıl yapılır kılavuzları 
 

@@ -2,12 +2,12 @@
 title: Yöntemler
 description: 'Bilgi nasıl bir F# yöntemdir: kullanıma sunmak ve davranışı nesnelerin ve türleri ve işlevleri uygulamak için kullanılan bir türü ile ilişkili bir işlev.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 03150cc67f79bfde58cf27e4a9d4dfa9e9ff3f55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b661a3ff7fa9a7704f5a31570acb62deaac2fcf
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666501"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641764"
 ---
 # <a name="methods"></a>Yöntemler
 

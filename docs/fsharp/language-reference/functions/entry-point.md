@@ -2,12 +2,12 @@
 title: Girdi Noktası
 description: Giriş noktası kümesine öğrenin bir F# yürütme resmi olarak başladığı bir yürütülebilir dosyası olarak derlenmiş bir program.
 ms.date: 05/16/2016
-ms.openlocfilehash: 915ab17b9a4fc7fd4d0ae344cb273b1d348a02f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7aedda5834fb224507bfcecd4688978efa26547
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996833"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645448"
 ---
 # <a name="entry-point"></a>Girdi Noktası
 

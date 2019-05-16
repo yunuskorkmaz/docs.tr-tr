@@ -2,12 +2,12 @@
 title: Zaman Uyumsuz İş Akışları
 description: Desteği hakkında bilgi edinin F# programlama diğer iş yürütme engellemeden yürütülen zaman uyumsuz olarak hesaplamalar gerçekleştirmek için dili.
 ms.date: 05/16/2016
-ms.openlocfilehash: 7643a26469ee6a6cf15940f90611fd430beef42e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87d4c927be89bbb404a087091eed8c4cae167f0f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703549"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645509"
 ---
 # <a name="asynchronous-workflows"></a>Zaman Uyumsuz İş Akışları
 

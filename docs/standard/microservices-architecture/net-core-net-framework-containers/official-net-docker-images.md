@@ -1,15 +1,13 @@
 ---
 title: Resmi .NET Docker görüntüleri
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Resmi .NET Docker görüntüleri
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 8babdfa91eeb903faac06af8b15e3f09aad98f2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b184e8f3606da8448a06a1cad90688958ecbce3a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019522"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644324"
 ---
 # <a name="official-net-docker-images"></a>Resmi .NET Docker görüntüleri
 

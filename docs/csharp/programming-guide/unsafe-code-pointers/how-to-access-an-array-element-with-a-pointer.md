@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], array access
 ms.assetid: 6c46f2af-a730-4855-8638-f136d9abaa12
-ms.openlocfilehash: 7b2991776ca032aa53111187a061835725cfe223
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1538068f3ba37a7637e7dc3913e9511d4380daf
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61708885"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635184"
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>Nasıl yapılır: işaretçiyle bir dizi öğesine erişme (C# Programlama Kılavuzu)
 
@@ -44,8 +44,6 @@ Dikkat ifade `charPointer[i]` ifadesine eşdeğerdir `*(charPointer + i)`, ve ik
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [İşaretçi İfadeleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
-- [İşaretçi türleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Türler](../../../csharp/language-reference/keywords/types.md)
 - [unsafe](../../../csharp/language-reference/keywords/unsafe.md)
 - [fixed Deyimi](../../../csharp/language-reference/keywords/fixed-statement.md)

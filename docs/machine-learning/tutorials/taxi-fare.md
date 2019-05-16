@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 6fda4e35d6f52b264002a7fc91da3e5f7256fc11
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: a61b0eb316f61e888933aefa2c91a9f76c6e1c53
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557790"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641200"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-model-with-mlnet"></a>Öğretici: ML.NET ile bir regresyon modeli kullanarak fiyatlarını tahmin etme
 
@@ -38,7 +38,7 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 
 1. Yükleme **Microsoft.ML** NuGet paketi:
 
-    İçinde **Çözüm Gezgini**, projeye sağ tıklayıp seçin **NuGet paketlerini Yönet**. Paket kaynağı, seçin "nuget.org" seçin **Gözat** sekmesinde, arama **Microsoft.ML**, listeden bir paket seçin ve seçin **yükleme** düğmesi. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** düğmesini **lisans kabulü** iletişim varsa, listelenen paketlerin lisans koşullarını kabul etmiş olursunuz.
+    İçinde **Çözüm Gezgini**, projeye sağ tıklayıp seçin **NuGet paketlerini Yönet**. Paket kaynağı, seçin "nuget.org" seçin **Gözat** sekmesinde, arama **Microsoft.ML**, listeden bir paket seçin ve seçin **yükleme** düğmesi. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** düğmesini **lisans kabulü** iletişim varsa, listelenen paketlerin lisans koşullarını kabul etmiş olursunuz. İçin de aynısını yapın **Microsoft.ML.FastTree** Nuget paketi.
 
 ## <a name="prepare-and-understand-the-data"></a>Hazırlama ve verileri anlama
 

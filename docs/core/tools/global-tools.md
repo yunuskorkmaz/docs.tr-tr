@@ -4,12 +4,12 @@ description: .NET Core genel araçları nedir ve bunlar için kullanılabilen .N
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 3bbf1e7953482dc07f05570443cf640a9fab6258
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 29499d28629e483d66e25b8ecdbd5817effba439
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647752"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631735"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET core Araçları Genel genel bakış
 

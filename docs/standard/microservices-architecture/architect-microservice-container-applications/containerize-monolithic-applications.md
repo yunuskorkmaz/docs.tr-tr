@@ -1,15 +1,13 @@
 ---
 title: Tek Yapılı Uygulamaları Kapsayıcıya Alma
 description: Tek yapılı uygulamaları rağmen kapsayıcılı hale getirmek, mikro hizmetler mimarisi tüm avantajlarını elde edemez, hemen dağıtılabilecek dağıtım önemli faydası vardır.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: d1de4c4beb8c60aa543e5c71243d93b83fe52072
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 061afe86e0d38f058becde2b3afdb45b4428517a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61910863"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640822"
 ---
 # <a name="containerizing-monolithic-applications"></a>Tek Yapılı Uygulamaları Kapsayıcıya Alma
 

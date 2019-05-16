@@ -2,12 +2,12 @@
 title: Ölçü Birimleri
 description: Nasıl kayan nokta edinin ve oturum açtığınızı tamsayı değerleri F# genellikle uzunluğu, ses ve yığın belirtmek için kullanılan ölçü birimlerini ilişkili.
 ms.date: 05/16/2016
-ms.openlocfilehash: 935dbff3545f92736ce8c51de86a168429dc194f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 217ef67912625c0a4b187a7ee13a739de811cfcb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982546"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641642"
 ---
 # <a name="units-of-measure"></a>Ölçü Birimleri
 

@@ -3,12 +3,12 @@ title: Global.JSON genel bakış
 description: .NET Core SDK'sı sürümü, .NET Core CLI komutlarını çalıştırırken ayarlanacak global.json dosyasını kullanmayı öğrenin.
 ms.date: 12/03/2018
 ms.custom: updateeachrelease, seodec18
-ms.openlocfilehash: e0f929a049812cac6f62e5218629c9b0add83de8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3d90e39401ece8d106d89a7533b7c1e1e4433cd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647973"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632393"
 ---
 # <a name="globaljson-overview"></a>Global.JSON genel bakış
 

@@ -1,16 +1,14 @@
 ---
 title: Windows üzerinde Docker için Visual Studio Araçları
 description: Visual Studio 2017 sürüm 15.7 ve üzeri Docker araçları tanışın.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: d361b0c471402c097dfac799eb58ef08209d4343
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2b6fdc33f9cf850cf9e52fca4a1a9754cd412567
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664363"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644692"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Windows üzerinde Visual Studio 2017'de Docker araçları kullanın
 

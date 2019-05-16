@@ -1,15 +1,13 @@
 ---
 title: Mikro hizmet mimarisinde iletişim
 description: Zaman uyumlu ve zaman uyumsuz yöntemler etkilerini anlama, mikro hizmetler iletişimin farklı yolları keşfedin.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 364bd4eb82907fcf0fbcc850eca839f676a2dbf8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f7a65ef53d401a8533f82168db5a412d5ac9756
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909506"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644331"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Mikro hizmet mimarisinde iletişim
 

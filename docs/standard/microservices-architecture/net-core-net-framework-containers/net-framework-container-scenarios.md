@@ -1,15 +1,13 @@
 ---
 title: Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | .NET Framework Docker kapsayıcıları için ne zaman
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 012eecbef669ada64392c43b92e8053873956210
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a31344173c82ddd461d2ff2901caeec7be43ebaa
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650710"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638874"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
 
@@ -59,8 +57,7 @@ Bu arada, herhangi bir platform veya Azure hizmeti yine de .NET Core API istemci
 - **.NET Core ile .NET Framework'ten taşıma**  
     [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
-- **Docker Üzerinde .NET Framework Kılavuzu**  
-    [https://docs.microsoft.com/dotnet/framework/docker/](../../../framework/docker/index.md)
+- **.NET core üzerinde Docker Kılavuzu** [https://docs.microsoft.com/dotnet/core/docker/intro-net-docker](../../../core/docker/intro-net-docker.md)
 
 - **.NET bileşenleri'ne genel bakış**  
     [https://docs.microsoft.com/dotnet/standard/components](../../components.md)

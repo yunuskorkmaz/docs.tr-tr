@@ -1,15 +1,13 @@
 ---
 title: Mikro hizmet başına veri hakimiyeti
 description: Mikro hizmet başına veri hakimiyeti mikro kay noktası biridir. Her mikro hizmet kendi veritabanında hiçbir diğer paylaşım sahibi tek olması gerekir. Elbette bir mikro hizmet tüm örnekleri aynı yüksek kullanılabilirlik veritabanına bağlanın.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 1b0b1fbb72f759eb337c0c1a9c465cc4088d8eff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ccb12451cd7cd44938e09d171eb29e614786f469
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909720"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644448"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Mikro hizmet başına veri hakimiyeti
 
