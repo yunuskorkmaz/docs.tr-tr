@@ -17,10 +17,10 @@ ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 053df7eeba10938f1d1d749e856f64d179d471d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 05/15/2019
 ms.locfileid: "64664672"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Normal İfade Dili - Hızlı Başvuru
@@ -158,7 +158,7 @@ ms.locfileid: "64664672"
 |`${` *Adı* `}`|Adlandırılmış grubuyla eşleştirilen alt dizenin yerini alır *adı*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|  
 |`$$`|Değişmez değerli bir "$" işaretinin yerini alır.|`\b(\d+)\s?USD`|`$$$1`|`"103 USD"`|`"$103"`|  
 |`$&`|Tam eşleşmenin bir kopyasının yerini alır.|`\$?\d*\.?\d+`|`**$&**`|`"$1.30"`|`"**$1.30**"`|  
-|``$` ``| Önce eşleşmenin Giriş dizesinin tüm metnini değiştirir. |`B+`|``$` ``|`"AABBCC"`|`"AAAACC"`|  
+|``$` ``|Eşleşmeden önce giriş dizesi metninin tamamının yerini alır.|`B+`|``$` ``|`"AABBCC"`|`"AAAACC"`|  
 |`$'`|Eşleşmeden sonra giriş dizesi metninin tamamının yerini alır.|`B+`|`$'`|`"AABBCC"`|`"AACCCC"`|  
 |`$+`|Yakalanan son grubun yerini alır.|`B+(C+)`|`$+`|`"AABBCCDD"`|`"AACCDD"`|  
 |`$_`|Giriş dizesinin tamamının yerini alır.|`B+`|`$_`|`"AABBCC"`|`"AAAABBCCCC"`|  
