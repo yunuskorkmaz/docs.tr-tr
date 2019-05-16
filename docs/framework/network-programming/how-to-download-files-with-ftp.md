@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 892548b8-954a-4f6a-9bca-2ae620c3700f
-ms.openlocfilehash: 4e000aa149a9a02e6f12e9b184d9c43a065b673f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0941d42de71029be9aab2fdbc69f8434fb73e2d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642652"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632982"
 ---
-# <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="d3086-103">Nasıl yapılır: FTP ile dosyaları indirme</span><span class="sxs-lookup"><span data-stu-id="d3086-103">How to: Download files with FTP</span></span>
+# <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="1ffbd-103">Nasıl yapılır: FTP ile dosyaları indirme</span><span class="sxs-lookup"><span data-stu-id="1ffbd-103">How to: Download files with FTP</span></span>
 
-<span data-ttu-id="d3086-104">Bu örnek, bir FTP sunucusundan dosya indirme işlemi gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="d3086-104">This sample shows how to download a file from an FTP server.</span></span>
+<span data-ttu-id="1ffbd-104">Bu örnek, bir FTP sunucusundan dosya indirme işlemi gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="1ffbd-104">This sample shows how to download a file from an FTP server.</span></span>
 
-## <a name="example"></a><span data-ttu-id="d3086-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="d3086-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="1ffbd-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="1ffbd-105">Example</span></span>
 
 ```csharp
 using System;

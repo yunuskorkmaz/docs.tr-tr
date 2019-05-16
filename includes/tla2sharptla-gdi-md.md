@@ -1,1 +1,9 @@
-<span data-ttu-id="31c90-101">GDI</span><span class="sxs-lookup"><span data-stu-id="31c90-101">GDI</span></span>
+---
+ms.openlocfilehash: e480f53702525ef9f51868574ca248ef9ee54948
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65669471"
+---
+<span data-ttu-id="aa9f9-101">GDI</span><span class="sxs-lookup"><span data-stu-id="aa9f9-101">GDI</span></span>

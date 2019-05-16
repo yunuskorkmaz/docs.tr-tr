@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: f5c956dad3ecf70baf50c2932481a060ea3add7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 042ba65453d3e5360fde312a930dc504a8930158
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700710"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672388"
 ---
-<span data-ttu-id="b8262-101">grafik kullanıcı arabirimi (GUI)</span><span class="sxs-lookup"><span data-stu-id="b8262-101">graphical user interface (GUI)</span></span>
+<span data-ttu-id="03c35-101">grafik kullanıcı arabirimi (GUI)</span><span class="sxs-lookup"><span data-stu-id="03c35-101">graphical user interface (GUI)</span></span>
