@@ -1,1 +1,0 @@
-Platform Başlatma Hizmetleri (PInvoke)
