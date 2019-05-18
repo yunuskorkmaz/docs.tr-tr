@@ -1,1 +1,0 @@
-<span data-ttu-id="e3a9d-101">Windows°7 işletim sistemi</span><span class="sxs-lookup"><span data-stu-id="e3a9d-101">Windows°7 operating system</span></span>
