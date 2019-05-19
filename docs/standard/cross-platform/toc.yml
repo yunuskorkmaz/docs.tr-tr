@@ -11,5 +11,3 @@
       href: support-for-windows-store-apps-and-windows-runtime.md
     - name: URI'yı Windows Çalışma Zamanı'na Geçirme
       href: passing-a-uri-to-the-windows-runtime.md
-    - name: WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) Yöntemi
-      href: windowsruntimestreamextensions-asrandomaccessstream-method.md
