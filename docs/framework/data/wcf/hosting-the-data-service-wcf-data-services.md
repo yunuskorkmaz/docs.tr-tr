@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: 4886103f7f0246eaacd12c3f12d50a055e650959
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c240a76ea54d57456ff13fee7a48981354f669de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582678"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881281"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Veri hizmetini (WCF Veri Hizmetleri) barındırma
 WCF veri hizmetlerini kullanarak, verileri olarak kullanıma sunan bir hizmet oluşturabilmeniz için bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış. Bu veri hizmeti öğesinden devralınan bir sınıf olarak tanımlanan <xref:System.Data.Services.DataService%601>. Bu sınıf, OData gerektirdiği yanıt iletilerini istek iletilerini işlemek ve güncelleştirmeleri veri kaynağına karşı gerçekleştirmek için gereken işlevleri sağlar. Ancak, bir veri hizmeti bağlamak ve bir ağ yuvayı için gelen HTTP istek dinleyemedi. Bu gerekli işlevselliği için veri hizmetini barındıran bir bileşende kullanır.
@@ -28,9 +28,9 @@ WCF veri hizmetlerini kullanarak, verileri olarak kullanıma sunan bir hizmet ol
 
 - Veri hizmeti adına yanıtı gönderir.
 
- Veri hizmetini barındıran basitleştirmek için WCF Veri Hizmetleri Windows Communication Foundation (WCF) ile tümleştirmek için tasarlanmıştır. Veri Hizmeti ana bilgisayar olarak hizmet veren bir varsayılan WCF uygulaması veri hizmetinin sağladığı bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama. Bu nedenle, aşağıdaki yollardan birinde bir veri hizmeti barındırabilirsiniz:
+ Veri hizmetini barındıran basitleştirmek için WCF Veri Hizmetleri Windows Communication Foundation (WCF) ile tümleştirmek için tasarlanmıştır. Veri Hizmeti, bir ASP.NET uygulamasında veri hizmet ana bilgisayarı olarak hizmet veren bir varsayılan WCF uygulamasını sağlar. Bu nedenle, aşağıdaki yollardan birinde bir veri hizmeti barındırabilirsiniz:
 
-- İçinde bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama.
+- Bir ASP.NET uygulamasında.
 
 - Yönetilen bir uygulamada, şirket içinde barındırılan WCF hizmetleri destekler.
 
@@ -55,12 +55,12 @@ Kullanırken **Yeni Öğe Ekle** iletişim Aracı'nı bir ASP.NET uygulamasında
  [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
  [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
- Bir veri hizmeti bir WCF hizmeti gibi davranan olduğundan, veri hizmeti ile tümleşir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ve WCF Web programlama modelini kullanır. Daha fazla bilgi için [WCF hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) ve [WCF Web HTTP programlama modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
+ Bir veri hizmeti bir WCF hizmeti gibi davranan olduğundan, veri hizmeti ASP.NET ile tümleşir ve WCF Web programlama modelini kullanır. Daha fazla bilgi için [WCF hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) ve [WCF Web HTTP programlama modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
 
 ## <a name="self-hosted-wcf-services"></a>Şirket içinde barındırılan WCF hizmetleri
  WCF uygulaması içerir olduğundan, bir veri hizmetine bir WCF hizmeti olarak kendi kendine barındırma WCF veri hizmetleri destekler. Bir hizmeti bir konsol uygulaması gibi herhangi bir .NET Framework uygulamasında, şirket içinde barındırılan olabilir. <xref:System.Data.Services.DataServiceHost> Öğesinden devralan sınıf <xref:System.ServiceModel.Web.WebServiceHost>, belirli bir adresten veri hizmeti örneklemek için kullanılır.
 
- Bu, dağıtmak ve hizmette sorun gidermek kolaylaştırabilir çünkü kendi kendine barındırma geliştirme ve test için kullanılabilir. Ancak, bu tür barındırma tarafından sağlanan Gelişmiş barındırma ve yönetim özellikleri sağlamaz [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] veya Internet Information Services (IIS) tarafından. Daha fazla bilgi için [yönetilen bir uygulamada barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).
+ Bu, dağıtmak ve hizmette sorun gidermek kolaylaştırabilir çünkü kendi kendine barındırma geliştirme ve test için kullanılabilir. Ancak, bu tür barındırma Gelişmiş barındırma ve yönetim özelliklerine ASP.NET veya Internet Information Services (IIS) tarafından sağlanan sağlamaz. Daha fazla bilgi için [yönetilen bir uygulamada barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).
 
 ## <a name="defining-a-custom-data-service-host"></a>Bir özel veri hizmeti ana bilgisayarı tanımlama
  WCF konak uygulama çok kısıtlayıcı olduğu durumlarda, veri hizmeti için özel bir ana bilgisayar da tanımlayabilirsiniz. Uygulayan sınıfa <xref:System.Data.Services.IDataServiceHost> arabirimi kullanılabilir ağ ana bilgisayarı için bir veri hizmeti. Özel bir ana bilgisayar uygulamalıdır <xref:System.Data.Services.IDataServiceHost> arabirim ve veri hizmeti ana bilgisayarının aşağıdaki temel sorumluluklarını işleyebilir:

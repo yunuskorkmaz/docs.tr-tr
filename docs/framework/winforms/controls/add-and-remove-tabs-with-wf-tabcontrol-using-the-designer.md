@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-ms.openlocfilehash: 10550416a75592133b69c2807f1da2cca25e8707
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 560bb35bf9685abbc40bc7b87a4490752c546ea4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665838"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880643"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms TabControl ile Sekme Ekleme ve Kaldırma
 Yerleştirdiğinizde bir <xref:System.Windows.Forms.TabControl> denetim formunuzda, iki sekme varsayılan olarak içerir. Ekleyebilir veya tasarımcı kullanarak sekme kaldırın.  
@@ -29,7 +29,7 @@ Yerleştirdiğinizde bir <xref:System.Windows.Forms.TabControl> denetim formunuz
   
      -veya-  
   
-     İçinde **özellikleri** penceresinde tıklayın **üç nokta** düğmesine (![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png "vbEllipsesButton")) yanındaki <xref:System.Windows.Forms.TabControl.TabPages%2A> açmak için özellik **TabPage Koleksiyonu Düzenleyicisi**. Tıklayın **Ekle** veya **Kaldır** düğmesi.  
+     İçinde **özellikleri** penceresinde tıklayın **üç nokta** düğmesine (![Visual Studio Özellikler penceresinde üç nokta düğmesini (…)](./media/visual-studio-ellipsis-button.png)) yanındaki <xref:System.Windows.Forms.TabControl.TabPages%2A> özelliği açmak için **TabPage Koleksiyonu Düzenleyicisi**. Tıklayın **Ekle** veya **Kaldır** düğmesi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

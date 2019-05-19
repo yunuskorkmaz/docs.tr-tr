@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 0de2cc0434087797b9411075a98cc11dd598ed81
-  ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+  ms.openlocfilehash: 8ee13ec60f0504982c33ecc61940b731d320d2de
+  ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/23/2019
-  ms.locfileid: "61675669"
+  ms.lasthandoff: 05/19/2019
+  ms.locfileid: "65880558"
 items:
 - durationInMinutes: 1
   content: >
@@ -38,7 +38,7 @@ items:
     ```
 
 
-    Yalnızca bir dize listesi oluşturduğunuz, üç adları bu listeye eklenmesine ve tamamı büyük harf adları kullanıma yazdırılır. Önceki öğreticilerde listede döngü öğrendiniz kavramları kullanıyorsunuz.
+    Dizeleri listesini oluşturduğunuz, üç adları bu listeye eklenmesine ve tamamı büyük harf adları kullanıma yazdırılır. Önceki öğreticilerde listede döngü öğrendiniz kavramları kullanıyorsunuz.
 
 
     Görünen adları için kodu kullanır [dize ilişkilendirme](../../language-reference/tokens/interpolated.md) özelliği. Ne zaman önünde bir `string` ile `$` karakter dizesi bildiriminde C# kod ekleme. Gerçek dize, C# kodu ürettiği değeri ile değiştirir. Bu örnekte, onu değiştirir `{name.ToUpper()}` her addaki aradığınız çünkü harfleri büyük olacak şekilde dönüştürülmüş <xref:System.String.ToUpper%2A?displayProperty=nameWithType> yöntemi.
@@ -56,7 +56,7 @@ items:
     Kullanan oluşturduğunuz koleksiyonda <xref:System.Collections.Generic.List%601> türü. Bu tür, öğelerin sıralarının depolar. Açılı ayraçlar arasındaki öğelerin türünü belirtin.
 
 
-    Bu önemli bir özelliği <xref:System.Collections.Generic.List%601> türüdür bunu büyüyebilen veya küçülebilen, ekleme veya öğeleri kaldırma olanak sağlar. Zaten yazdığınız kodun altına aşağıdaki kodu ekleyin:
+    Bu önemli bir özelliği <xref:System.Collections.Generic.List%601> türüdür bunu büyüyebilen veya küçülebilen, ekleme veya öğeleri kaldırma olanak sağlar. İçeriği görüntülediğiniz sonra içeriği değiştirerek sonuçlarını görebilirsiniz. (İçeriği yazdırır döngü) zaten yazdığınız kodun altına aşağıdaki kodu ekleyin:
 
 
     ```csharp
@@ -78,7 +78,7 @@ items:
     ```
 
 
-    Listenin sonuna iki daha fazla ad ekledik. Ayrıca bir de kaldırdınız.
+    Listenin sonuna iki daha fazla ad ekledik. Ayrıca bir de kaldırdınız. Bu kod bloğu çıkışı başlangıç içeriğini gösterir, ardından boş bir satır ve yeni içeriği yazdırır.
 
 
     <xref:System.Collections.Generic.List%601> Tek tek öğeler tarafından başvuruda sayesinde **dizin** de. Kullanarak öğeleri erişim `[` ve `]` belirteçleri. Neleri yazmış olduğunuz ve deneyin altına aşağıdaki kodu ekleyin:
@@ -152,7 +152,7 @@ items:
 - title: Diğer türleri listesi
   durationInMinutes: 5
   content: >
-    Kullanmakta olduğunuz `string` şimdiye listelerindeki türü. Olalım bir <xref:System.Collections.Generic.List%601> kullanarak farklı bir tür. Bir dizi sayının oluşturalım. Şu ana kadar yazdığınız kodu silin ve bununla değiştirin:
+    Kullanmakta olduğunuz `string` şimdiye listelerindeki türü. Olalım bir <xref:System.Collections.Generic.List%601> kullanarak farklı bir tür. Bir dizi sayının oluşturalım. Şu ana kadar yazdığınız kodu silin ve aşağıdaki kodla değiştirin:
 
 
     ```csharp
@@ -162,7 +162,7 @@ items:
     ```
 
 
-    Tamsayı listesi oluşturur ve ilk iki tamsayı 1 değerine ayarlar. İlk iki değerlerini bunlar bir *Fibonacci dizisi*, bir sayı dizisi üzerinde. Önceki iki sayının toplamı gerçekleştirerek sonraki her Fibonacci numarası bulunamadı. Bu kodu ekleyin:
+    Tamsayı listesi oluşturur ve ilk iki tamsayı 1 değerine ayarlar. *Fibonacci dizisi*, sayı, bir dizi iki 1s ile başlar. Önceki iki sayının toplamı gerçekleştirerek sonraki her Fibonacci numarası bulunamadı. Bu kodu ekleyin:
 
 
     ```csharp
@@ -230,7 +230,7 @@ items:
     Liste etkileşimli öğreticisini tamamladınız. Son giriş olan C# etkileşimli öğretici. Ziyaret ettiğiniz [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) .NET Core SDK'sını indirmek için makinenizde bir proje oluşturun ve kodlama tutun. "Öğrenme tut" adımı makinenizde projeleri derlemek için bu öğreticileri geri getirir.
 
 
-    Daha fazla bilgi edinebilirsiniz [.NET koleksiyonları](../../../standard/collections/index.md) aşağıdaki konularda yer:
+    Daha fazla bilgi edinebilirsiniz [.NET koleksiyonları](../../../standard/collections/index.md) için aşağıdaki makalelere bakın:
 
     - [Bir koleksiyon türü seçme](../../../standard/collections/selecting-a-collection-class.md)
 

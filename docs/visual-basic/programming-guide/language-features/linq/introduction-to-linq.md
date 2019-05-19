@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: d9af75474f6b0aec2bdf6aa2f550c280209f91e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a5fbc28a470415312540fff0acc969f939410b5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633491"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875538"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic'de LINQ'e Giriş
 Dil ile tümleşik sorgu (LINQ), Visual Basic sorgu özellikleri ekler ve her tür veri ile çalışırken, basit ve güçlü özellikler sağlar. Bir sorguyu işlenmek üzere bir veritabanına göndermek veya her arama yaptığınız veri türü için farklı sorgu sözdizimiyle çalışmak yerine LINQ sorguları Visual Basic dilinin bir parçası olarak tanıtır. Veri türünden bağımsız olarak birleştirilmiş sözdizimi kullanır.  
@@ -43,7 +43,7 @@ Dil ile tümleşik sorgu (LINQ), Visual Basic sorgu özellikleri ekler ve her t�
 |Nesnelere LINQ|LINQ to Objects sağlayıcısı, bellek içi koleksiyonlarda ve dizilerde sorgu olanak tanır. Bir nesne destekliyorsa <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601> arabirimi, LINQ to Objects sağlayıcısı sorgulamanız için bunu etkinleştirir.<br /><br /> LINQ to Objects sağlayıcısı içeri aktararak etkinleştirebilirsiniz <xref:System.Linq> tüm Visual Basic projeleri için varsayılan olarak içeri aktarılan ad alanı.<br /><br /> LINQ to Objects sağlayıcısı hakkında daha fazla bilgi için bkz: [LINQ to Objects'in](../../concepts/linq/linq-to-objects.md).|  
 |LINQ - SQL|SQL sağlayıcı için LINQ sorgusu ve SQL Server veritabanındaki verileri değiştirmenize olanak sağlar. Bu, bir uygulama tablolar ve bir veritabanındaki nesneler için nesne modeli eşlemek kolaylaştırır.<br /><br /> Visual Basic Object Relational Designer (O/R Tasarımcısı) dahil ederek LINQ to SQL ile çalışmak daha kolay hale getirir. Bu tasarımcı, bir uygulamada veritabanındaki nesnelerle eşleşen bir nesne modeli oluşturmak için kullanılır. O/R Tasarımcısı ayrıca depolanan yordamları eşlemek üzere işlevsellik sağlar ve yaramaz <xref:System.Data.Linq.DataContext> veritabanı ile iletişimi yönetir ve iyimser eşzamanlılık denetimlerinin durumunu depolar nesnesidir.<br /><br /> LINQ to SQL sağlayıcısı hakkında daha fazla bilgi için bkz: [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Nesne İlişkisel Tasarımcısı hakkında daha fazla bilgi için bkz. [LINQ to SQL araçlarını Visual Studio'da](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
 |LINQ - XML|XML sağlayıcı için LINQ, XML sorgulamanıza ve değiştirmenize olanak sağlar. Bellek içi XML değiştirebilir veya, XML gelen ve XML kaydetmek için bir dosya yükleyebilirsiniz.<br /><br /> Ayrıca, XML sağlayıcı için LINQ, XML değişmez değerleri ve Visual Basic kodunuzda doğrudan XML yazmanıza olanak tanıyan XML eksen özellikleri sağlar. Daha fazla bilgi için [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
-|LINQ - DataSet|DataSet sağlayıcı için LINQ Sorgu ve güncelleştirme verilerde sağlayan bir [!INCLUDE[vstecado](~/includes/vstecado-md.md)] veri kümesi. LINQ basitleştirin ve sorgulama, toplama ve veri kümenizde verileri güncelleştirme, özelliklerini genişletmek için veri kümelerini kullanan uygulamaları ekleyebilirsiniz.<br /><br /> Daha fazla bilgi için [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
+|LINQ - DataSet|DataSet sağlayıcı için LINQ Sorgu ve ADO.NET veri kümesindeki veriler güncelleştirmenize olanak sağlar. LINQ basitleştirin ve sorgulama, toplama ve veri kümenizde verileri güncelleştirme, özelliklerini genişletmek için veri kümelerini kullanan uygulamaları ekleyebilirsiniz.<br /><br /> Daha fazla bilgi için [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
 ## <a name="structure-of-a-linq-query"></a>LINQ sorgusunun yapısı  
  Bir LINQ sorgusu sık olarak adlandırılan bir *sorgu ifadesi*, veri kaynaklarını ve sorgu için yineleme değişkenlerini tanımlayan sorgu yan tümcelerinin bileşiminden oluşur. Bir sorgu ifadesinde, kaynak verilere uygulanacak sıralama, filtreleme, gruplama ve katılma veya hesaplamalar için yönergeleri de içerebilir. Sorgu ifadesi sözdizimi SQL sözdizimine benzer ancak; Bu nedenle, söz dizimi çoğunu tanıdık gelebilir.  

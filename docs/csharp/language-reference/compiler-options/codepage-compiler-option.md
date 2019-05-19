@@ -8,12 +8,12 @@ helpviewer_keywords:
 - codepage compiler option [C#]
 - -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
-ms.openlocfilehash: 7cbd3ec1b2d134106c6c9429341f5603444dac27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59dc1abc3f678a4cf15543c11f9f200ff318ce8f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662991"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876921"
 ---
 # <a name="-codepage-c-compiler-options"></a>-codepage (C# Derleyici Seçenekleri)
 Bu seçenek, gerekli sayfa sistemi için geçerli varsayılan kod sayfası değilse derleme sırasında kullanılacak hangi kod sayfasını belirtir.  
@@ -29,10 +29,8 @@ Bu seçenek, gerekli sayfa sistemi için geçerli varsayılan kod sayfası deği
  Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasını kimliği.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bilgisayarınızda varsayılan kod sayfası kullanılacak oluşturulmayan bir veya daha fazla kaynak kodu dosyaları derleme yaparsanız, kullanabileceğiniz **- kod sayfası** hangi kod sayfası kullanılması gerektiğini belirtmek için seçeneği. **-codepage** derlemenizdeki tüm kaynak kodu dosyaları için geçerlidir.  
-  
- Kaynak kodu dosyaları bilgisayarınızda geçerli olan kod sayfası ile oluşturulan veya kaynak kodu dosyaları UNICODE veya UTF-8 ile oluşturulduysa, kullanılmıyor ihtiyacınız varsa **- kod sayfası**.  
-  
+ Derleyici, tüm kaynak dosyaları UTF-8 yorumlamak ilk kez deneyecek. Kaynak kod dosyalarınızı bir UTF-8'den başka bir kodlama içinde olan ve 7 bit ASCII karakterleri dışında karakterler kullanırsanız kullanın **- kod sayfası** hangi kod sayfası kullanılması gerektiğini belirtmek için seçeneği. **-codepage** derlemenizdeki tüm kaynak kodu dosyaları için geçerlidir.  
+    
  Bkz: [desteklendiğinin](/windows/desktop/api/winnls/nf-winnls-getcpinfo) nasıl hangi kodun bulunacağı hakkında bilgi için sisteminizde sayfaları desteklenir.  
   
  Bu derleyici seçeneğini Visual Studio'da kullanılamıyor ve program aracılığıyla değiştirilemez.  

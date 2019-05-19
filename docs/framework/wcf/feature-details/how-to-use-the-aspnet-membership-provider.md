@@ -6,21 +6,21 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: 8011b026e857dd6e5815ef7da00c1c33db8b5b4d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61324bbc5ea07dd19e23589bfc90f9ea44a6b331
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038720"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880179"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Nasıl yapılır: ASP.NET Üyelik Sağlayıcısını Kullanma
-[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Üyelik sağlayıcısı sağlayan bir özelliktir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] geliştiricilerin benzersiz kullanıcı adı ve parola birleşimlerini oluşturmak için kullanıcıların Web siteleri oluşturun. Bu özelliği sayesinde, herhangi bir kullanıcı sitesine sahip bir hesabı oluşturabilir ve site ve Hizmetleri özel erişim için oturum açın. Kullanıcıların hesaplarını bir Windows etki alanına sahip olmasını gerektiren Windows Güvenlik aksine budur. Bunun yerine, kendi kimlik bilgilerini (kullanıcı adı/parola birleşimini) karşılayan herhangi bir kullanıcı, site ve hizmetlerini kullanabilirsiniz.  
+ASP.NET üyelik sağlayıcısı benzersiz kullanıcı adı ve parola birleşimlerini oluşturmak için kullanıcıların Web siteleri oluşturmak ASP.NET geliştiricilerinin sağlayan bir özelliktir. Bu özelliği sayesinde, herhangi bir kullanıcı sitesine sahip bir hesabı oluşturabilir ve site ve Hizmetleri özel erişim için oturum açın. Kullanıcıların hesaplarını bir Windows etki alanına sahip olmasını gerektiren Windows Güvenlik aksine budur. Bunun yerine, kendi kimlik bilgilerini (kullanıcı adı/parola birleşimini) karşılayan herhangi bir kullanıcı, site ve hizmetlerini kullanabilirsiniz.  
   
- Örnek bir uygulama için bkz: [üyelik ve rol sağlayıcısı](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Kullanma hakkında bilgi için [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rol sağlayıcı özelliği bkz [nasıl yapılır: ASP.NET rol sağlayıcısını bir hizmetle kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
+ Örnek bir uygulama için bkz: [üyelik ve rol sağlayıcısı](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). ASP.NET rol sağlayıcısını özelliğini kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: ASP.NET rol sağlayıcısını bir hizmetle kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
  Üyelik özelliği, kullanıcı bilgilerini depolamak için SQL Server veritabanı kullanma gerektirir. Bu özellik ayrıca parolasını unutmuş kullanıcılar soru sormak için yöntemler içerir.  
   
- Windows Communication Foundation (WCF) geliştiriciler güvenlik amacıyla bu özelliklerden yararlanabilirsiniz. Bir WCF uygulamaya entegre edildiğinde, kullanıcılar WCF istemci uygulaması için bir kullanıcı adı/parola birleşimini sağlamanız gerekir. WCF hizmetine veri aktarmak için kullanıcı adı/parola kimlik bilgileri gibi destekleyen bir bağlama kullanın <xref:System.ServiceModel.WSHttpBinding> (yapılandırmada [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) ve istemci kimlik bilgisi türü içinayarlayın`UserName`. Hizmet WCF güvenlik kullanıcı adı ve parolasına dayalı kullanıcının kimliğini doğrular ve ayrıca tarafından belirtilen rol atar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rol.  
+ Windows Communication Foundation (WCF) geliştiriciler güvenlik amacıyla bu özelliklerden yararlanabilirsiniz. Bir WCF uygulamaya entegre edildiğinde, kullanıcılar WCF istemci uygulaması için bir kullanıcı adı/parola birleşimini sağlamanız gerekir. WCF hizmetine veri aktarmak için kullanıcı adı/parola kimlik bilgileri gibi destekleyen bir bağlama kullanın <xref:System.ServiceModel.WSHttpBinding> (yapılandırmada [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) ve istemci kimlik bilgisi türü içinayarlayın`UserName`. Hizmet WCF güvenlik kullanıcı adı ve parolasına dayalı kullanıcının kimliğini doğrular ve ayrıca ASP.NET rol tarafından belirtilen rolü atar.  
   
 > [!NOTE]
 >  WCF kullanıcı adı/parola birleşimleri veritabanıyla veya diğer kullanıcı bilgilerini doldurmak için bir yöntem sağlamaz.  
@@ -98,7 +98,7 @@ ms.locfileid: "62038720"
 6. Ayarlama `userNamePasswordValidationMode` özniteliğini `MembershipProvider`.  
   
     > [!IMPORTANT]
-    >  Varsa `userNamePasswordValidationMode` değeri ayarlanmazsa, WCF, Windows kimlik doğrulaması yerine kullanan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] üyelik sağlayıcısı.  
+    >  Varsa `userNamePasswordValidationMode` değeri ayarlanmazsa, WCF, Windows kimlik doğrulaması yerine ASP.NET üyelik sağlayıcısını kullanır.  
   
 7. Ayarlama `membershipProviderName` özniteliği için (Bu konunun ilk yordamındaki sağlayıcı eklerken belirtilir) sağlayıcısının adı. Aşağıdaki örnekte gösterildiği `<serviceCredentials>` bu noktaya parça.  
   

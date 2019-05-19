@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 7fb3398ec325cd8b483ef7a222c8dd392a4e72b7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d1635d0eccf0886577eafe2ab11126093defac2b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656004"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875987"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Hizmet Çalışma Zamanı Davranışını Belirtme
 Bir hizmet sözleşmesini tasarladıktan sonra ([Hizmet sözleşmeleri tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)) ve hizmet sözleşmeniz ([hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)) işlemi davranışını yapılandırabilirsiniz. Hizmet çalışma zamanı. Bu konu, sistem tarafından sağlanan hizmet ve işlem davranışları açıklar ve yeni davranışlar oluşturma hakkında daha fazla bilgi bulmak nereye açıklar. Bazı davranışları öznitelik olarak uygulanır, ancak çoğu uygulama yapılandırma dosyası kullanılarak uygulanır veya programlama yoluyla. Hizmet uygulamanızın yapılandırma hakkında daha fazla bilgi için bkz. [Hizmetleri'ni Yapılandırma](../../../docs/framework/wcf/configuring-services.md).  
@@ -77,7 +77,7 @@ Bir hizmet sözleşmesini tasarladıktan sonra ([Hizmet sözleşmeleri tasarlama
 ### <a name="service-behaviors"></a>Hizmet davranışları  
  Aşağıdaki davranışları hizmetleri üzerinde çalışır.  
   
-- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Bu hizmet çalıştırılabilir olup olmadığını belirtmek için bir WCF Hizmeti uygulanan [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uyumluluk modu.  
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Bir WCF hizmetini ASP.NET uyumluluk modunda bu hizmetin çalışıp çalışmayacağını göstermek için uygulanır.  
   
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Hizmet istemci talep nasıl yetkilendirir denetler.  
   

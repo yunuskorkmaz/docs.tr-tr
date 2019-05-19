@@ -2,12 +2,12 @@
 title: Özellikler
 description: Hakkında bilgi edinin C# hesaplanan değerler, geç değerlendirme doğrulama özellikleri içeren, özellikler, ve özellik bildirimleri değiştirildi.
 ms.date: 04/25/2018
-ms.openlocfilehash: d4fa7b6117bec63c41318dd4bcc3850ce55a5907
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8b6955da1f36673962339785b0bfb012343acf8
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675786"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878275"
 ---
 # <a name="properties"></a>Özellikler
 
@@ -140,7 +140,7 @@ Gerek duyduğunuz özellik erişimcisinde kod yazmak için son bir senaryo deste
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-`?.` İşleci çağrıldığında *null koşullu işleci*. İşlecin sağ tarafındaki değerlendirmeden önce bir null başvuru için denetler. Hiçbir abonelere varsa olan sonuç `PropertyChanged` değil olay, olayı için kodu yürütün. Throw bir `NullReferenceException` bu durumda bu olmadan denetleyin. Daha fazla bilgi için bkz. [`events`](delegates-events.md). Bu örnek ayrıca yeni kullanır `nameof` özelliği adı sembolünden kendi metin gösterimine dönüştürmek için işleci.
+`?.` İşleci çağrıldığında *null koşullu işleci*. İşlecin sağ tarafındaki değerlendirmeden önce bir null başvuru için denetler. Hiçbir abonelere varsa olan sonuç `PropertyChanged` değil olay, olayı için kodu yürütün. Throw bir `NullReferenceException` bu durumda bu olmadan denetleyin. Daha fazla bilgi için bkz. [`events`](events-overview.md). Bu örnek ayrıca yeni kullanır `nameof` özelliği adı sembolünden kendi metin gösterimine dönüştürmek için işleci.
 Kullanarak `nameof` Burada, yanlış yazmış özelliğin adını hataları azaltabilir.
 
 Uygulama yeniden <xref:System.ComponentModel.INotifyPropertyChanged> nerede yazabilirsiniz kod ihtiyacınız senaryolarını desteklemek üzere erişenler bir servis talebi örneğidir.

@@ -2,12 +2,12 @@
 title: Entity Framework’e Genel Bakış
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: d63e60c90e71593821c38830bc11d767e582619a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c79055adc2be12a5806fe5e8ff129b6ecd3d76f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634266"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880028"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework'e Genel Bakış
 
@@ -49,7 +49,7 @@ Birden fazla yalnızca başka bir nesne ilişkisel eşleme çözümü [!INCLUDE[
 
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Doğrudan kavramsal modeldeki varlıklar ile çalışır ve destekleyen SQL depolamadan bağımsız SQL diyalektiği [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] kavramları. [!INCLUDE[esql](../../../../../includes/esql-md.md)] hem nesne sorguları ve EntityClient sağlayıcısı ile yürütülen sorguları ile kullanılır. Daha fazla bilgi için [Entity SQL'e genel bakış](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
 
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] EntityClient veri sağlayıcısı içerir. Bu sağlayıcı bağlantıları yönetir, veri kaynağına özgü sorgulara varlık sorguları çevirir ve döndüren bir veri okuyucu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] varlık veri nesnelerini gerçekleştirmek için kullanır. Nesne gerçekleştirme gerekli olmadığı durumlarda, EntityClient sağlayıcısı de gibi standart kullanılabilir [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] etkinleştirerek uygulamaları çalıştırmak veri sağlayıcısı [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgular ve döndürülen salt okunur veri okuyucu kullanma. Daha fazla bilgi için [Entity Framework için EntityClient sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
+[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] EntityClient veri sağlayıcısı içerir. Bu sağlayıcı bağlantıları yönetir, veri kaynağına özgü sorgulara varlık sorguları çevirir ve döndüren bir veri okuyucu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] varlık veri nesnelerini gerçekleştirmek için kullanır. Nesne gerçekleştirme gerekli olmadığı durumlarda, EntityClient sağlayıcısı de standart bir ADO.NET veri sağlayıcısı gibi çalıştırmak uygulamaları sağlayarak kullanılabilir [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgular ve döndürülen salt okunur veri okuyucu kullanma. Daha fazla bilgi için [Entity Framework için EntityClient sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
 
 Aşağıdaki diyagramda gösterilmektedir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verilerine erişmek için Mimari:
 
@@ -59,7 +59,7 @@ Aşağıdaki diyagramda gösterilmektedir [!INCLUDE[adonet_ef](../../../../../in
 
 ## <a name="data-providers"></a>Veri sağlayıcıları
 
-`EntityClient` Sağlayıcısı genişletir [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] verilerini kavramsal varlıklar ve ilişkiler açısından erişerek sağlayıcı modeli. Kullanan sorguları yürüten [!INCLUDE[esql](../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../includes/esql-md.md)] sağlayan temel alınan sorgu dili sağlar `EntityClient` veritabanıyla iletişim kurmak için. Daha fazla bilgi için [Entity Framework için EntityClient sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
+`EntityClient` Sağlayıcısı, veri bakımından kavramsal varlıklar ve ilişkiler erişerek ADO.NET sağlayıcısı modeli genişletir. Kullanan sorguları yürüten [!INCLUDE[esql](../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../includes/esql-md.md)] sağlayan temel alınan sorgu dili sağlar `EntityClient` veritabanıyla iletişim kurmak için. Daha fazla bilgi için [Entity Framework için EntityClient sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Bir güncel SqlClient verileri kurallı komut ağaçlarını destekleyen sağlayıcı içerir. Daha fazla bilgi için [Entity Framework için SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md).
 

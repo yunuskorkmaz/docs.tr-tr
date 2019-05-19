@@ -2,12 +2,12 @@
 title: İşe Alma İşlemi
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 87e49613214a6a608bd8e22dc9470250c90e220a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 685798ceab5e14169af6bdf16ce30a0f6548dc8c
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622480"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881907"
 ---
 # <a name="hiring-process"></a>İşe Alma İşlemi
 Bu örnek nasıl uygulanacağını Mesajlaşma etkinlikleri ve iş akışı hizmetlerinde barındırılan iki iş akışlarını kullanarak bir iş sürecini gösterir. Bu iş akışları Contoso, Inc. adlı kurgusal bir şirkette BT altyapısını bir parçasıdır  
@@ -126,7 +126,7 @@ Bu örnek nasıl uygulanacağını Mesajlaşma etkinlikleri ve iş akışı hizm
 |Dayanıklı zamanlayıcılar|`ResumeRequestService` dayanıklı süreölçer işi bir uyarı yayınlayarak süresini tanımlamak için kullanır (zaman aşımı süresi sona erdiğinde, işi gönderme kapalı).|ResumeRequestService|  
 |İşlemler|<xref:System.Activities.Statements.TransactionScope> (yeni bir özgeçmiş alındığında) içinde birkaç etkinliği yürütülmesi veri tutarlılığını sağlamak için kullanılır.|ResumeRequestService|  
 |İşlemler|Özel Kalıcılık Katılımcısı (`HiringRequestPersistenceParticipant`) ve özel izleme katılımcı (`HistoryFileTrackingParticipant`) aynı işlem kullanın.|HiringRequestService|  
-|Kullanarak [!INCLUDE[wf1](../../../../includes/wf1-md.md)] içinde [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulamalar.|İş akışları iki erişilir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulamalar.|InternalClient / CareersWebSite|  
+|Kullanarak [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ASP.NET uygulamalarında.|İş akışları, iki ASP.NET uygulamalarından erişilir.|InternalClient / CareersWebSite|  
   
 ## <a name="data-storage"></a>Veri depolama  
  Verileri, adlı bir SQL Server veritabanında depolandığı `ContosoHR` (Bu veritabanını oluşturmak için betik bulunan `DbSetup` klasörü). İş akışı örnekleri olarak adlandırılan bir SQL Server veritabanında depolanan `InstanceStore` (örnek deposu oluşturma komut dosyaları parçası olan [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] dağıtım).  

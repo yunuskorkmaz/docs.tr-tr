@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-ms.openlocfilehash: 1b98b6b3da08ba7a0a37e0c26f58dd4d3ef115b1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2fc33d3cfcbcb00e69728b73edf4a03f0dbab77e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592210"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878619"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler
 Windows Communication Foundation (WCF) kullanan <xref:System.Runtime.Serialization.DataContractSerializer> XML verileri dönüştürmek için ve XML geri verisine dönüştüremedi, varsayılan seri hale getirme altyapısı olarak. <xref:System.Runtime.Serialization.DataContractSerializer> Seri hale getirmek için tasarlanan *veri anlaşması* türleri. Ancak, bir örtük veri anlaşması sahip olduğu düşünülebilir birçok diğer türleri destekler. Seri hale getirilebilir türlerin tam listesi verilmiştir:  
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF) kullanan <xref:System.Runtime.Serializati
   
 - Türleri ile işaretlenen <xref:System.SerializableAttribute> özniteliği. .NET Framework temel sınıf kitaplığı'nda dahil birçok türü, bu kategoriye girer. <xref:System.Runtime.Serialization.DataContractSerializer> Tam .NET Framework uzaktan iletişim tarafından kullanılan bu serileştirme programlama modelini destekler <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>, desteği dahil olmak üzere <xref:System.Runtime.Serialization.ISerializable> arabirimi.  
   
-- Ham XML veya temsil eden türleri temsil eden türleri [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] ilişkisel veriler. <xref:System.Xml.XmlElement> Ve dizi <xref:System.Xml.XmlNode> türleri, doğrudan XML temsil eden bir yol desteklenir. Ayrıca, uygulayan türleri <xref:System.Xml.Serialization.IXmlSerializable> arabirimi desteklenir, ilgili dahil olmak üzere <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> özniteliği ve <xref:System.Xml.Linq.XDocument> ve <xref:System.Xml.Linq.XElement> türleri. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataTable> Türü ve <xref:System.Data.DataSet> türü (yazılan türetilmiş sınıflarının yanı sıra) tüm uygulama <xref:System.Xml.Serialization.IXmlSerializable> arabirim ve bu nedenle bu kategoriye uygun. Daha fazla bilgi için [XML ve ADO.NET türleri veri anlaşmalarında](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).  
+- Ham XML veya ADO.NET ilişkisel verileri temsil eden türleri temsil eden tür. <xref:System.Xml.XmlElement> Ve dizi <xref:System.Xml.XmlNode> türleri, doğrudan XML temsil eden bir yol desteklenir. Ayrıca, uygulayan türleri <xref:System.Xml.Serialization.IXmlSerializable> arabirimi desteklenir, ilgili dahil olmak üzere <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> özniteliği ve <xref:System.Xml.Linq.XDocument> ve <xref:System.Xml.Linq.XElement> türleri. ADO.NET<xref:System.Data.DataTable> türü ve <xref:System.Data.DataSet> türü (yazılan türetilmiş sınıflarının yanı sıra) tüm uygulama <xref:System.Xml.Serialization.IXmlSerializable> arabirim ve bu nedenle bu kategoriye uygun. Daha fazla bilgi için [XML ve ADO.NET türleri veri anlaşmalarında](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).  
   
 ## <a name="limitations-of-using-certain-types-in-partial-trust-mode"></a>Kısmi belirli türlerini kullanma sınırlamaları güven modu  
  Kısıtlamaların listesi belirli türlerini kısmi güven modu senaryolarda kullanırken verilmiştir:  
@@ -63,7 +63,7 @@ Windows Communication Foundation (WCF) kullanan <xref:System.Runtime.Serializati
   
 - Yapılar ve sınıflar hem desteklenir.  
   
-- <xref:System.Runtime.Serialization.DataContractSerializer> Tarafından kullanılan programlama modelini desteklemiyor <xref:System.Xml.Serialization.XmlSerializer> ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri. Özellikle, gibi öznitelikleri desteklemiyor <xref:System.Xml.Serialization.XmlElementAttribute> ve <xref:System.Xml.Serialization.XmlAttributeAttribute>. Bu programlama modeli desteğini etkinleştirmek için WCF kullanmaya geçiş gerekir <xref:System.Xml.Serialization.XmlSerializer> yerine <xref:System.Runtime.Serialization.DataContractSerializer>.  
+- <xref:System.Runtime.Serialization.DataContractSerializer> Tarafından kullanılan programlama modelini desteklemiyor <xref:System.Xml.Serialization.XmlSerializer> ve ASP.NET Web Hizmetleri. Özellikle, gibi öznitelikleri desteklemiyor <xref:System.Xml.Serialization.XmlElementAttribute> ve <xref:System.Xml.Serialization.XmlAttributeAttribute>. Bu programlama modeli desteğini etkinleştirmek için WCF kullanmaya geçiş gerekir <xref:System.Xml.Serialization.XmlSerializer> yerine <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 - <xref:System.DBNull> Türü özel bir şekilde kabul edilir. Singleton türüdür ve seri durumundan çıkarma sırasında seri durumdan çıkarıcı tekil kısıtlaması uyar ve tüm işaret `DBNull` tekil örneğini başvuruları. Çünkü `DBNull` gerektirmesi seri hale getirilebilir bir tür olduğunda <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> izni.  
   

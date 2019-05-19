@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: a8668ee115a3babbdf1ef549a418187d2c5e26b8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 012a5b55d052f5f06da5c152da79f4676b2bff4e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583413"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877956"
 ---
 # <a name="oracle-and-adonet"></a>Oracle ve ADO.NET
 > [!NOTE]
@@ -63,7 +63,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- Güvenli kodlama uygulamalarını kullanırken tanımlar [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+ Güvenli kodlama yöntemleri ADO.NET kullanırken açıklar.  
   
  [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  Oluşturma ve kullanma işlemini açıklamaktadır `DataSets`, belirlenmiş `DataSets`, `DataTables`, ve `DataViews`.  
@@ -75,7 +75,7 @@ csc /r:System.Data.OracleClient.dll
  Özellikler ve SQL Server'a özel işlevler ile nasıl çalışılacağını açıklar.  
   
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- Sağlayıcı-bağımsız kod yazmaya olanak tanıyan genel sınıfları açıklar [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+ ADO.NET sağlayıcısı-bağımsız kod yazmanıza izin genel sınıfları açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

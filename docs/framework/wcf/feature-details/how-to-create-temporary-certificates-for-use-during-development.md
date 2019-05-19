@@ -5,12 +5,12 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: d45f18b0b8fe4e0cc9667091e166c80691faa2d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4223ee8c8790ad4d0ae2275b347c4f974eeb4158
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773301"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877970"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Nasıl yapılır: Geliştirme Sırasında Kullanmak için Geçici Sertifikalar Oluşturma
 
@@ -28,16 +28,16 @@ Güvenli hizmet veya Windows Communication Foundation (WCF) kullanan istemci gel
 Aşağıdaki komut, "RootCA" geçerli kullanıcının kişisel depoda bir konu adıyla otomatik olarak imzalanan bir sertifika oluşturur.
 
 ```powershell
-PS $rootCert = New-SelfSignedCertificate -CertStoreLocation cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("1.3.6.1.4.1.311.21.10={text}1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2")
+$rootCert = New-SelfSignedCertificate -CertStoreLocation cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2") -KeyUsage CertSign,DigitalSignature
 ```
 
 Böylece daha sonraki bir adımda gerekli yerlerde için aktarılabilen sertifikayı bir PFX dosyasına aktarmak ihtiyacımız var. Özel anahtara sahip bir sertifika verilirken korunması için bir parola gereklidir. Biz Parolayı Kaydet bir `SecureString` ve [dışarı aktarma-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) sertifikayı bir PFX dosyasına ilişkili özel anahtarla dışarı aktarmak için cmdlet'ini. Biz CRT kullanarak dosyanın içine de yalnızca ortak sertifikayı kaydetmek [sertifika verme](/powershell/module/pkiclient/export-certificate) cmdlet'i.
 
 ```powershell
-PS [System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
-PS [String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootcert.Thumbprint)"
-PS Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootcertPassword
-PS Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
+[System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
+[String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootcert.Thumbprint)"
+Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootcertPassword
+Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 ```
 
 ## <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>Kök yetkilisi sertifikası tarafından imzalanmış yeni bir sertifika oluşturmak için
@@ -45,15 +45,15 @@ PS Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 Aşağıdaki komut tarafından imzalanmış bir sertifika oluşturur `RootCA` "SignedByRootCA verenin özel anahtarı kullanarak", bir konu adına sahip.
 
 ```powershell
-PS $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
+$testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
 ```
 
 Benzer şekilde, biz imzalı sertifikanın özel anahtara sahip bir PFX dosyası ve ortak anahtarı yalnızca bir CRT dosyasına kaydedin.
 
 ```powershell
-PS [String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
-PS Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootcertPassword
-PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
+[String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
+Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootcertPassword
+Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 ```
 
 ## <a name="installing-a-certificate-in-the-trusted-root-certification-authorities-store"></a>Güvenilen kök sertifika yetkilileri Store sertifika yükleme

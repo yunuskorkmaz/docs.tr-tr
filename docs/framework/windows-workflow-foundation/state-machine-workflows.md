@@ -2,12 +2,12 @@
 title: Durum Makinesi İş Akışları
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: d7f6f2686399d8eabbbc70de11697f3aca61fc8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d3c6f4f815f16ec4878b9aa70bd3a69c862d7800
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665324"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876116"
 ---
 # <a name="state-machine-workflows"></a>Durum Makinesi İş Akışları
 Bir Durum makinesi programlar geliştirmek için iyi bilinen bir örnektir. <xref:System.Activities.Statements.StateMachine> Etkinliği ile birlikte <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, ve diğer etkinlikleri Durum makinesi iş akışı programlar oluşturmak için kullanılabilir. Bu konu, durum makine iş akışları oluşturmaya genel bir bakış sağlar.  
@@ -23,14 +23,14 @@ Bir Durum makinesi programlar geliştirmek için iyi bilinen bir örnektir. <xre
   
  Bir Durum makinesi iş akışı oluşturmak için durumları eklenir bir <xref:System.Activities.Statements.StateMachine> etkinlik ve geçişleri kullanılır durumlar arasında akışını denetleme. Aşağıdaki ekran görüntüsünde, gelen [başlangıç Öğreticisi](getting-started-tutorial.md) adım [nasıl yapılır: Bir Durum makinesi iş akışı oluşturma](how-to-create-a-state-machine-workflow.md), üç durumları ve geçişleri üç olan bir Durum makinesi iş akışı gösterilmektedir. **Hedef başlatmak** ilk durumudur ve iş akışındaki ilk duruma temsil eder. Bu satırın içinden baştaki tarafından belirlenen **Başlat** düğümü. Son durum iş akışında adlı **FinalState**ve iş akışı tamamlandığında noktasını temsil eder.  
   
- ![Durum makinesi iş akışı tamamlandı](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![Tamamlanan Durum makinesi iş akışı gösteren şekil.](./media/state-machine-workflows/complete-state-machine-workflow.jpg)  
   
  Bir Durum makinesi iş akışı, bir ve yalnızca bir ilk durumu ve en az bir son duruma sahip olmalıdır. Son durum değil. her durum, en az bir geçiş olması gerekir. Aşağıdaki bölümlerde, oluşturma ve durumları ve geçişleri yapılandırma kapsar.  
   
 ## <a name="creating-and-configuring-states"></a>Oluşturma ve durumları yapılandırma  
  A <xref:System.Activities.Statements.State> içinde bir Durum makinesi olabilir bir durumu temsil eder. Eklemek için bir <xref:System.Activities.Statements.State> bir iş akışına sürükleyin **durumu** etkinlik Tasarımcısı'ndan **Durum makinesi** bölümünü **araç kutusu** üzerine bırakın bir <xref:System.Activities.Statements.StateMachine> Etkinlik [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] yüzeyi.  
   
- ![WF4 Durum makine etkinlikleri](./media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
+ ![Araç kutusu Durum makinesi bölümünün ekran görüntüsü.](./media/state-machine-workflows/state-machine-section-toolbox.jpg)  
   
  Bir durum olarak yapılandırmak için **ilk durumu**, durumu sağ tıklayıp **başlangıç durumuna ayarla**. Geçerli bir ilk durumu olmadan varsa, ek olarak, ilk durumuna bir çizgi sürükleyerek belirlenebilir **Başlat** istenen duruma iş akışının üst düğüm. Olduğunda bir <xref:System.Activities.Statements.StateMachine> etkinlik iş akışı Tasarımcısı bırakılan, adlandırılmış bir ilk durumu ile önceden yapılandırılmış **State1**. Bir Durum makinesi iş akışı bir ve yalnızca bir ilk duruma sahip olmalıdır.  
   

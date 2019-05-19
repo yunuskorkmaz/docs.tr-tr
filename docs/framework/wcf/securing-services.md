@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4ac823b5419d845437ef8e89f5123adafda0c5a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949870"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881356"
 ---
 # <a name="securing-services"></a>Hizmetleri Güvenli Hale Getirme
 Bir Windows Communication Foundation (WCF) hizmetinin güvenlik iki birincil gereksinimlerini oluşur: güvenlik ve yetkilendirme aktarın. (Üçüncü bir gereksinim, güvenlik olaylarının denetlenmesini açıklanan [denetim](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Kısaca, aktarım güvenliği (hem hizmet hem de istemci kimlik doğrulama) kimlik gizliliği (ileti şifreleme) ve bütünlüğü (dijital oynama algılamak imzalama) içerir. Yetkilendirme, kaynaklarına, örneğin, bir dosyayı okumak yalnızca ayrıcalıklı kullanıcıların erişim denetimidir. WCF özelliklerini kullanarak, iki birincil gereksinimlerini kolayca uygulanır.  
@@ -50,7 +50,7 @@ Bir Windows Communication Foundation (WCF) hizmetinin güvenlik iki birincil ger
  Internet üzerindeki güvenlik intranet güvenlik gereksinimleri aynıdır oluşur. Hizmet gerçekliği kanıtlamak için kimlik bilgilerini sunmak gereken ve istemcileri için hizmet kimliklerini kanıtlamak gerekir. Bir istemcinin kimliği kanıtlanmış sonra hizmet istemci ne kadar kaynaklarına erişimi denetleyebilirsiniz. Ancak, Internet heterojen yapısı nedeniyle, sunulan kimlik bilgilerinin bir Windows etki alanında kullanılanlardan farklı. Bilet kimlik bilgileri, İnternet'e sahip bir etki alanı kullanıcı kimlik doğrulaması bir Kerberos denetleyicisi işleme ise hizmet ve istemcileri kimlik sunmak için çeşitli yollar birini kullanır. Bu konunun amacı, ancak Internet üzerinden erişilebilir bir WCF hizmeti oluşturma olanak tanıyan ortak bir yaklaşım sunmak için olabilir.  
   
 ### <a name="using-iis-and-aspnet"></a>IIS ve ASP.NET kullanarak  
- Bu sorunları çözmek için gereksinimleri Internet güvenliği ve mekanizmaları yeni değildir. IIS, Microsoft'un Web sunucusu için Internet ve bu sorunları gidermeye birçok güvenlik özelliği vardır; Ayrıca, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] WCF hizmetleri kullanarak güvenlik özellikleri içerir. Bu güvenlik özelliklerinden yararlanmak için IIS üzerinde bir WCF Hizmeti barındırma.  
+ Bu sorunları çözmek için gereksinimleri Internet güvenliği ve mekanizmaları yeni değildir. IIS, Microsoft'un Web sunucusu için Internet ve bu sorunları gidermeye birçok güvenlik özelliği vardır; Ayrıca, ASP.NET, WCF hizmetleri kullanarak güvenlik özellikleri içerir. Bu güvenlik özelliklerinden yararlanmak için IIS üzerinde bir WCF Hizmeti barındırma.  
   
 #### <a name="using-aspnet-membership-and-role-providers"></a>ASP.NET üyelik ve rol sağlayıcıları kullanma  
  ASP.NET üyelik ve rol sağlayıcısı içerir. Sağlayıcı, ayrıca, her çağıranın erişim ayrıcalıkları belirtmenizi sağlar çağıranlar kimlik doğrulaması için kullanıcı adı/parola çiftlerinin bir veritabanı hizmetidir. WCF ile önceden varolan bir üyelik ve rol sağlayıcısını yapılandırma yoluyla kolayca kullanabilirsiniz. Bu gösteren örnek bir uygulama için bkz. [üyelik ve rol sağlayıcısı](../../../docs/framework/wcf/samples/membership-and-role-provider.md) örnek.  

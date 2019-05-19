@@ -12,16 +12,16 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 1609fbd8cbb24d6f2c10fbc3a235f01a451eb0fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 591b76ca6b5cd3a9180487c79293d5fc3b7991af
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754068"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882338"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Veri Bağlama ile İlgili Arabirimler
 
-İle [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], uygulamanızı ve birlikte çalıştığınız veri bağlama gereksinimlerine uyacak şekilde birçok farklı veri yapılarını oluşturabilirsiniz. Kendi sınıflarınızı sağlayan veya tüketen Windows Forms verilerinde oluşturmak isteyebilirsiniz. Bu nesneler, temel veri bağlamanın dışında veri için yapılan değişikliklerin yapılandırılmış bir geri alma için tasarım zamanı desteği, hata denetimi, değişiklik bildirimi veya hatta destek sağlamaya işlevselliği ve karmaşıklığı, çeşitli izin düzeyleriyle sunabilir.
+ADO.NET ile uygulamanız ve çalıştığınız veri bağlama gereksinimlerine uyacak şekilde birçok farklı veri yapılarını oluşturabilirsiniz. Kendi sınıflarınızı sağlayan veya tüketen Windows Forms verilerinde oluşturmak isteyebilirsiniz. Bu nesneler, temel veri bağlamanın dışında veri için yapılan değişikliklerin yapılandırılmış bir geri alma için tasarım zamanı desteği, hata denetimi, değişiklik bildirimi veya hatta destek sağlamaya işlevselliği ve karmaşıklığı, çeşitli izin düzeyleriyle sunabilir.
 
 ## <a name="consumers-of-data-binding-interfaces"></a>Veri bağlama arabirimleri tüketicilerinin
 
@@ -82,7 +82,7 @@ Windows Forms denetimleri tarafından kullanılması için aşağıdaki arabirim
 
 - <xref:System.Collections.IEnumerable> Arabirimi
 
-  Uygulayan bir sınıf <xref:System.Collections.IEnumerable> arabirimi tarafından tüketilen genellikle [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Bu arabirim için Windows Forms desteği aracılığıyla, yalnızca <xref:System.Windows.Forms.BindingSource> bileşeni.
+  Uygulayan bir sınıf <xref:System.Collections.IEnumerable> arabirimi genellikle ASP.NET tarafından kullanılan. Bu arabirim için Windows Forms desteği aracılığıyla, yalnızca <xref:System.Windows.Forms.BindingSource> bileşeni.
 
   > [!NOTE]
   > <xref:System.Windows.Forms.BindingSource> Bileşeni tüm kopyalar <xref:System.Collections.IEnumerable> bağlama amacıyla için ayrı bir liste öğeleri.

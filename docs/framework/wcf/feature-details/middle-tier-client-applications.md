@@ -2,18 +2,18 @@
 title: Orta Katman İstemci Uygulamaları
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: c7934f6d0d34992db229244373b5a170180f51e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b1ba177c365bb6913679ed2a217e66d7a0d522b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649451"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877466"
 ---
 # <a name="middle-tier-client-applications"></a>Orta Katman İstemci Uygulamaları
 Bu konu, Windows Communication Foundation (WCF) kullanan Orta katman istemci uygulamaları için belirli çeşitli sorunlar ele alınmıştır.  
   
 ## <a name="increasing-middle-tier-client-performance"></a>Orta katman istemci performansını artırma  
- Kullanarak Web Hizmetleri gibi önceki iletişimi teknolojilerine kıyasla [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], bir WCF istemcisi örneği oluşturulmasını WCF zengin özellik kümesi nedeniyle daha karmaşık olabilir. Örneğin, bir <xref:System.ServiceModel.ChannelFactory%601> nesnesinin açıldığı güvenli bir oturum hizmetiyle istemci örneği için başlangıç süresini artıran bir yordam oluşturabilirsiniz. WCF istemcisini çeşitli çağrılar yapar ve ardından kapatır genellikle, bu ek özellik yetenekleri istemci uygulamaları önemli ölçüde etkilemez.  
+ ASP.NET kullanarak Web Hizmetleri gibi önceki iletişimi teknolojilerine kıyasla bir WCF istemcisi örneği oluşturulmasını WCF zengin özellik kümesi nedeniyle daha karmaşık olabilir. Örneğin, bir <xref:System.ServiceModel.ChannelFactory%601> nesnesinin açıldığı güvenli bir oturum hizmetiyle istemci örneği için başlangıç süresini artıran bir yordam oluşturabilirsiniz. WCF istemcisini çeşitli çağrılar yapar ve ardından kapatır genellikle, bu ek özellik yetenekleri istemci uygulamaları önemli ölçüde etkilemez.  
   
  Orta katman istemci uygulamaları, ancak birçok WCF istemci nesne hızlı bir şekilde oluşturabilir ve, sonuç olarak, artan başlatma gereksinimleri karşılaşırsınız. Hizmetleri çağırırken orta katman uygulamalarının performansını artırmak için iki ana yaklaşım vardır:  
   

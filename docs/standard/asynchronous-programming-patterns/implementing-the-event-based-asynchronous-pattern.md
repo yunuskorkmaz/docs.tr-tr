@@ -17,17 +17,17 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 41303bf548502fe319cbcfb8a152179863902817
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 55ae6467ca6e7f688bcb7b3fc797050a33074963
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623576"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882521"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Deseni Uygulama
 Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanız uygulayarak zaman uyumsuz işlevleri vererek göz önünde bulundurun [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
- Olay tabanlı zaman uyumsuz desen, zaman uyumsuz özellikler sahip bir sınıf paketlemek için standartlaştırılmış bir yol sağlar. Yardımcı sınıfları ile uygulanması durumunda ister <xref:System.ComponentModel.AsyncOperationManager>, sınıfınızın herhangi bir uygulama modeli altında düzgün çalışması dahil olmak üzere [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], konsol uygulamaları ve Windows Forms uygulamaları.  
+ Olay tabanlı zaman uyumsuz desen, zaman uyumsuz özellikler sahip bir sınıf paketlemek için standartlaştırılmış bir yol sağlar. Yardımcı sınıfları ile uygulanması durumunda ister <xref:System.ComponentModel.AsyncOperationManager>, sınıfınıza ASP.NET dahil olmak üzere doğru şekilde tüm uygulama modeli altında çalışması konsol uygulamaları ve Windows Forms uygulamaları.  
   
  Olay tabanlı zaman uyumsuz desen uygulayan bir örnek için bkz: [nasıl yapılır: Olay tabanlı zaman uyumsuz deseni destekleyen bir bileşeni uygulama](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   

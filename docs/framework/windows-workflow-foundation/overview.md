@@ -2,12 +2,12 @@
 title: Windows Workflow’a Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: bb714e5e5e4c1fe009ffa775efb456ebcc65c218
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 285ab75f7f67bbb9ffa18367eff126c04227f193
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592565"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876150"
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow’a Genel Bakış
 Bir iş akışı olarak adlandırılan elemental birimler kümesidir *etkinlikleri* gerçek hayattaki bir işleme açıklayan model olarak depolanır. İş akışları yürütme düzenini ve kısa veya uzun süren iş parçaları arasındaki bağımlı ilişkileri açıklamak için bir yol sağlar. Bu iş modeliyle baştan geçirir ve etkinlikleri sistem işlevlerini veya kişiler tarafından yürütülmesi gerekir.  
@@ -23,7 +23,7 @@ Bir iş akışı olarak adlandırılan elemental birimler kümesidir *etkinlikle
   
  Bu sınıfların her birini olarak temsil edilen temel etkinlik çalışma zamanı saran bir <xref:System.Activities.ActivityInstance> Etkinlik yürütme sorumludur. Birkaç da olabilir <xref:System.Activities.ActivityInstance> eşzamanlı olarak çalışan bir uygulama etki alanı içindeki nesneleri.  
   
- Önceki üç konak etkileşimi nesnelerin her biri, bir iş akışı program olarak başvurulan etkinliklerin ağacından oluşturulur. Bu tür veya sarmalayan bir özel konak kullanarak <xref:System.Activities.ActivityInstance>, iş akışı konsol uygulamaları dahil olmak üzere herhangi bir Windows işlem içinde yürütülebilir form tabanlı uygulamalar, Windows Hizmetleri [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web siteleri ve Windows Communication Foundation () WCF) Hizmetleri.  
+ Önceki üç konak etkileşimi nesnelerin her biri, bir iş akışı program olarak başvurulan etkinliklerin ağacından oluşturulur. Bu tür veya sarmalayan bir özel konak kullanarak <xref:System.Activities.ActivityInstance>, iş akışı konsol uygulamaları, form tabanlı uygulamalar, Windows Hizmetleri, ASP.NET Web siteleri ve Windows Communication Foundation (WCF) dahil olmak üzere herhangi bir Windows işlem içinde yürütülebilir Hizmetler.  
   
  ![İş akışı ana bilgisayarı işlemi bileşenlerde](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 Ana bilgisayar işlemdeki iş akışı bileşenleri  

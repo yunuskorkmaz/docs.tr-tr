@@ -2,18 +2,18 @@
 title: Entity Framework için EntityClient Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: 268608c82070e60007bc09f97a775918e0d950f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 17f18753cc64bce5901c9f57181a8c08733f0cfc
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583701"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878799"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework için EntityClient Sağlayıcısı
 EntityClient sağlayıcısı kavramsal modelde tanımlanan veri erişimi için Entity Framework uygulamaları tarafından kullanılan veri sağlayıcıdır. Kavramsal modeller hakkında daha fazla bilgi için bkz. [modelleme ve eşleme](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). EntityClient, diğer .NET Framework veri sağlayıcıları, veri kaynağına erişmek için kullanır. Örneğin, EntityClient .NET Framework veri sağlayıcısı (SqlClient) SQL Server için SQL Server veritabanına erişirken kullanır. SqlClient sağlayıcısı hakkında daha fazla bilgi için bkz: [Entity Framework için SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). EntityClient sağlayıcı uygulanan <xref:System.Data.EntityClient> ad alanı.  
   
 ## <a name="managing-connections"></a>Bağlantıları Yönetme  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Üzerinde depolama özel yapılar [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] sağlayarak veri sağlayıcıları bir <xref:System.Data.EntityClient.EntityConnection> ilişkisel veritabanı ve temel alınan veri sağlayıcısı. Oluşturmak için bir <xref:System.Data.EntityClient.EntityConnection> nesnesi, bir dizi gerekli model ve eşleme ve ayrıca depolama özgü veri sağlayıcı adı ve bağlantı dizesi içeren bir meta veri başvurusu gerekir. Sonra <xref:System.Data.EntityClient.EntityConnection> olduğu yerde varlıkları kavramsal model oluşturulan sınıfların aracılığıyla erişilebilir.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Sağlayarak depolamaya özgü ADO.NET veri sağlayıcıları üstünde oluşturur bir <xref:System.Data.EntityClient.EntityConnection> ilişkisel veritabanı ve temel alınan veri sağlayıcısı. Oluşturmak için bir <xref:System.Data.EntityClient.EntityConnection> nesnesi, bir dizi gerekli model ve eşleme ve ayrıca depolama özgü veri sağlayıcı adı ve bağlantı dizesi içeren bir meta veri başvurusu gerekir. Sonra <xref:System.Data.EntityClient.EntityConnection> olduğu yerde varlıkları kavramsal model oluşturulan sınıfların aracılığıyla erişilebilir.  
   
  App.config dosyasında bir bağlantı dizesi belirtebilirsiniz.  
   

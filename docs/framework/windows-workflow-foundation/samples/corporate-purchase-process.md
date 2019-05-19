@@ -2,17 +2,17 @@
 title: Şirket Satın Alma İşlemi
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: eaf77fc8b1697d0e337d8c4823ca2184cb9c545c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83290245dd203d4bb63c96e94ca6bdafee4ecffb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665932"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876166"
 ---
 # <a name="corporate-purchase-process"></a>Şirket Satın Alma İşlemi
 Bu örnek çok basit bir istek teklifleri (RFP) tabanlı satın alma işlemi için en iyi otomatik öneri seçimiyle oluşturma işlemini gösterir. Bunu birleştirir <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, ve <xref:System.Activities.Statements.ForEach%601> ve işlemini temsil eden bir iş akışı oluşturmak için özel bir etkinlik.
 
- Bu örnek içeren bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] farklı katılımcı (olarak, özgün istek sahibine veya belirli bir satıcının) işlemiyle etkileşim sağlayan istemci uygulaması.
+ Bu örnek, farklı katılımcı (olarak, özgün istek sahibine veya belirli bir satıcının) işlemiyle etkileşim izin veren ASP.NET istemci uygulaması içerir.
 
 ## <a name="requirements"></a>Gereksinimler
 
@@ -36,7 +36,7 @@ Bu örnek çok basit bir istek teklifleri (RFP) tabanlı satın alma işlemi iç
 
 - İzleme.
 
-- Barındırma [!INCLUDE[wf1](../../../../includes/wf1-md.md)] farklı istemcileri ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulamaları ve WinForms uygulamaları).
+- Barındırma [!INCLUDE[wf1](../../../../includes/wf1-md.md)] farklı istemcileri (ASP.NET Web uygulamaları ve WinForms uygulamaları).
 
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
@@ -82,7 +82,7 @@ Bu örnek çok basit bir istek teklifleri (RFP) tabanlı satın alma işlemi iç
 |-------------|-----------------|  
 |Common|' % S'işlemi (istek teklifi, satıcı ve satıcı teklifi) içinde kullanılan varlık nesnesi.|  
 |WfDefinition|İşlem tanımı (olarak bir [!INCLUDE[wf1](../../../../includes/wf1-md.md)] programı) ve ana bilgisayar (`PurchaseProcessHost`) oluşturma ve satın alma işlemi iş akışı örneği kullanmak için istemci uygulamaları tarafından kullanılır.|  
-|WebClient|Bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oluşturmak ve satın alma işlemi durumlarda katılmak kullanıcılara istemci uygulaması. Özel olarak oluşturulmuş bir konak, bir iş akışı altyapısı ile etkileşim kurmak için kullanır.|  
+|WebClient|Kullanıcılara oluşturmak ve satın alma işlemi durumlarda katılmak ASP.NET istemci uygulaması. Özel olarak oluşturulmuş bir konak, bir iş akışı altyapısı ile etkileşim kurmak için kullanır.|  
 |WinFormsClient|Kullanıcılara oluşturmak ve satın alma işlemi durumlarda katılmak bir Windows Forms istemci uygulaması. Özel olarak oluşturulmuş bir konak, bir iş akışı altyapısı ile etkileşim kurmak için kullanır.|  
   
 ### <a name="wfdefinition"></a>WfDefinition  

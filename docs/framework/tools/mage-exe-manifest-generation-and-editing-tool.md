@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: be05b9d502f44fe68dff21da7fe01016b6ed73c2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2109c764d0143a843f75fc0c14cc0d09550efd85
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633249"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877568"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Bildirim Üretme ve Düzenleme Aracı)
 
-Bildirim oluşturma ve düzenleme aracı (*Mage.exe*) oluşturma ve düzenleme uygulama ve dağıtım bildirimlerini destekleyen bir komut satırı aracıdır. Bir komut satırı aracı olarak *Mage.exe* hem toplu betiklerden hem de dahil diğer Windows tabanlı uygulamalardan çalıştırılabilir [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulamalar.
+Bildirim oluşturma ve düzenleme aracı (*Mage.exe*) oluşturma ve düzenleme uygulama ve dağıtım bildirimlerini destekleyen bir komut satırı aracıdır. Bir komut satırı aracı olarak *Mage.exe* hem toplu betiklerden hem de ASP.NET uygulamaları dahil diğer Windows tabanlı uygulamalardan çalıştırılabilir.
 
 Ayrıca *MageUI.exe*, bir grafik uygulaması yerine *Mage.exe*. Daha fazla bilgi için [MageUI.exe (bildirim üretme ve düzenleme aracı, grafik istemci)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
 

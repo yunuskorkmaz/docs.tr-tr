@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: 509aa0b03dbbb370384fb83e0d8e5471fc2cb819
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 495200b2617a1c0c299998ad5fb5276398236cca
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011105"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880898"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak bir ToolBar Denetimine Düğme Ekleme
 > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "62011105"
   
 1. Seçin <xref:System.Windows.Forms.ToolBar> denetimi.  
   
-2. İçinde **özellikleri** penceresinde tıklayın <xref:System.Windows.Forms.ToolBar.Buttons%2A> özelliğini seçin ve **üç nokta** (![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png " vbEllipsesButton")) açmak için düğmeyi **ToolBarButton Koleksiyonu Düzenleyicisi**.  
+2.  İçinde **özellikleri** penceresinde tıklayın <xref:System.Windows.Forms.ToolBar.Buttons%2A> özelliğini seçin ve **üç nokta** (![Visual Studio'nun Özellikler penceresinde üç nokta düğmesini (…).](./media/visual-studio-ellipsis-button.png)) açmak için düğmeyi **ToolBarButton Koleksiyonu Düzenleyicisi**.  
   
 3. Kullanım **Ekle** ve **Kaldır** düğmeleri ekleme ve kaldırma düğmelerden <xref:System.Windows.Forms.ToolBar> denetimi.  
   

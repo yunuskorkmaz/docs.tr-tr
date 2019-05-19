@@ -2,20 +2,20 @@
 title: ADO.NET’te Yan Yana Yürütme
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 377af3c72b0a9a8eb26c8713d98f114803f08356
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d20d8e81d76284509d6fe733e4f283a9ab39cb00
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583626"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877090"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET’te Yan Yana Yürütme
 .NET Framework'te yan yana yürütme bir uygulamayı .NET Framework'ün, yalnızca uygulamayı en iyi duruma derlenen sürümünü kullanarak birden çok sürümü olan bir bilgisayarda yürütme olanağıdır. Yan yana yürütme yapılandırma hakkında ayrıntılı bilgi için bkz: [yan yana yürütme](../../../../docs/framework/deployment/side-by-side-execution.md).  
   
- .NET Framework'ün bir sürümünü kullanarak derlenmiş bir uygulamanın farklı bir .NET Framework sürümünde çalıştırabilirsiniz. Ancak, .NET Framework'ün yüklü her sürüm için uygulamanın bir sürümünü derlemek ve ayrı olarak çalıştırmanız önerilir. Her iki durumda da, değişikliklerin farkında olmalısınız [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] ileriye dönük ya da geriye dönük uyumluluk, uygulamanızın etkileyebilir sürümler arasında.  
+ .NET Framework'ün bir sürümünü kullanarak derlenmiş bir uygulamanın farklı bir .NET Framework sürümünde çalıştırabilirsiniz. Ancak, .NET Framework'ün yüklü her sürüm için uygulamanın bir sürümünü derlemek ve ayrı olarak çalıştırmanız önerilir. Her iki durumda da ileriye dönük ya da geriye dönük uyumluluk, uygulamanızın etkileyebilir sürümler arasında ADO.NET'te değişikliklerin farkında olmalıdır.  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>İleriye dönük ve geriye dönük uyumluluk  
- İleriye dönük uyumluluk, bir uygulamanın bir .NET Framework'ün önceki sürümüyle derlenmiş, ancak hala başarılı bir şekilde bir sonraki .NET Framework sürümünde çalışır anlamına gelir. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] .NET Framework sürüm 1.1 yazılan sonraki sürümler ile ileri doğru uyumlu kodudur.  
+ İleriye dönük uyumluluk, bir uygulamanın bir .NET Framework'ün önceki sürümüyle derlenmiş, ancak hala başarılı bir şekilde bir sonraki .NET Framework sürümünde çalışır anlamına gelir. .NET Framework sürüm 1.1 yazılan ADO.NET sonraki sürümler ile ileri doğru uyumlu kodudur.  
   
  Geriye dönük uyumluluk, bir uygulamanın daha yeni bir .NET Framework sürümü için derlenmiş, ancak herhangi bir işlev kaybı olmadan .NET Framework'ün önceki sürümlerinde çalışmaya devam eder anlamına gelir. Elbette, bu durumda yeni bir .NET Framework sürümünde sunulan özellikler için olmayacaktır.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "65583626"
   
  Ancak, .NET Framework sürüm 2.0 ile başlayarak, tüm .NET Framework veri sağlayıcıları kısmen güvenilen bölgelerde kullanılabilir. Ayrıca, .NET Framework sürüm 1.1 .NET Framework veri sağlayıcıları için yeni bir güvenlik özelliği eklendi. Bu özellik, hangi bağlantı dizeleri, belirli güvenlik bölgesinde kullanılabilir sınırlamanıza olanak sağlar. Belirli güvenlik bölgesi için boş parola kullanımını devre dışı bırakabilirsiniz. Daha fazla bilgi için [kod erişimi güvenliği ve ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md).  
   
- .NET Framework'ün her yükleme ayrı bir Security.config dosya olduğundan, güvenlik ayarları ile uyumluluk sorunu vardır. Ancak, uygulamanız ek güvenlik özellikleri hakkındaki bağlı olup [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] .NET Framework sürüm 1.1 ve üzeri dahil, size bir sürüm 1.0 sistemine dağıtmayı mümkün olmayacaktır.  
+ .NET Framework'ün her yükleme ayrı bir Security.config dosya olduğundan, güvenlik ayarları ile uyumluluk sorunu vardır. Uygulamanızın ADO.NET içinde .NET Framework sürüm 1.1 ve sonraki sürümlerinde ek güvenlik özelliklerine bağlıdır, ancak, bir sürüm 1.0 sistemine dağıtmayı mümkün olmayacaktır.  
   
 ## <a name="sqlcommand-execution"></a>SqlCommand yürütme  
  .NET Framework sürüm 1.1 ile biçimini başlatılıyor, <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> komutları yürütür veri kaynağı değiştirildi.  

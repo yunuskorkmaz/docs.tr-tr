@@ -2,12 +2,12 @@
 title: ADO.NET Mimarisi
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 2e91077287c051d871eb61f83ec77b7baf90b2d8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 13f65d0a2daf3b477a9b29c4de84fb359c946201
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584570"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877240"
 ---
 # <a name="adonet-architecture"></a>ADO.NET Mimarisi
 Geleneksel veri işleme öncelikli olarak bağlantı tabanlı, iki katmanlı modeli üzerinde yararlandı. Veri işleme, çok katmanlı mimariler giderek kullanır gibi programcılar kendi uygulamaları için daha iyi ölçeklenebilirlik sağlamak için bağlantısı kesik bir yaklaşıma geçirirsiniz.  
@@ -52,9 +52,9 @@ ADO.NET mimarisi
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Veri Hizmetleri Web veya intranet üzerinde dağıtmak için kullanılır. Veri varlıkları ve ilişkileri varlık veri modeli belirtimlere göre olarak yapılandırılmıştır. Bu modelde dağıtılan standart HTTP protokolü tarafından adreslenebilir verilerdir. Daha fazla bilgi için [WCF Veri Hizmetleri 4.5](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="xml-and-adonet"></a>XML ve ADO.NET  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] veri bağlantısı kesilmiş erişim sağlamak için XML gücünden yararlanır. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] tasarlanmış el yakından .NET Framework'te XML sınıflarla oluştu; her ikisi de tek bir mimari bileşenleridir.  
+ ADO.NET veri bağlantısı kesilmiş erişim sağlamak için XML gücünden yararlanır. ADO.NET tasarlanmış el yakından .NET Framework'te XML sınıflarla oluştu; her ikisi de tek bir mimari bileşenleridir.  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] ve .NET Framework XML sınıflarda, yakınsama `DataSet` nesne. `DataSet` Bir dosya veya bir XML akışı olup, bir XML kaynaktan gelen veriler ile doldurulabilir. `DataSet` World-Wide Web Consortium (W3C) XML Şeması Tanım Dili (XSD) şemaya, veri kaynağı ne olursa olsun, şema içerir uyumlu XML olarak yazılmış `DataSet`. Yerel seri hale getirme biçimi nedeniyle `DataSet` XML, yapmadan katmanlar arasında verileri taşımak için mükemmel bir ortamdır `DataSet` uzak veri ve şema bağlamı için bir en iyi seçim için ve XML Web hizmeti. Daha fazla bilgi için [XML belgeleri ve verileri](../../../../docs/standard/data/xml/index.md).  
+ ADO.NET ve .NET Framework XML sınıflarda yakınsama içinde `DataSet` nesne. `DataSet` Bir dosya veya bir XML akışı olup, bir XML kaynaktan gelen veriler ile doldurulabilir. `DataSet` World-Wide Web Consortium (W3C) XML Şeması Tanım Dili (XSD) şemaya, veri kaynağı ne olursa olsun, şema içerir uyumlu XML olarak yazılmış `DataSet`. Yerel seri hale getirme biçimi nedeniyle `DataSet` XML, yapmadan katmanlar arasında verileri taşımak için mükemmel bir ortamdır `DataSet` uzak veri ve şema bağlamı için bir en iyi seçim için ve XML Web hizmeti. Daha fazla bilgi için [XML belgeleri ve verileri](../../../../docs/standard/data/xml/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

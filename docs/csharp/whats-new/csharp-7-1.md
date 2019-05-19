@@ -2,12 +2,12 @@
 title: İçindeki yenilikler C# 7.1
 description: İçinde yeni özelliklere genel bakış C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b7bd96e428f990b2db91a4cfd45da01dc133aac
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675565"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881541"
 ---
 # <a name="whats-new-in-c-71"></a>İçindeki yenilikler C# 7.1
 
@@ -26,7 +26,7 @@ Bu sürümdeki yeni diz özellikleri şunlardır:
 * [Genel tür parametrelerinde desen](#pattern-matching-on-generic-type-parameters)
   - Genel tür parametresi türü olan değişkenlerde deseni eşleşme ifadeleri kullanabilirsiniz.
 
-Son olarak, derleyici iki seçeneğe sahiptir `/refout` ve `/refonly` denetleyen [başvuru bütünleştirilmiş kod oluşturmayı](#reference-assembly-generation).
+Son olarak, derleyici iki seçeneğe sahiptir `-refout` ve `-refonly` denetleyen [başvuru bütünleştirilmiş kod oluşturmayı](#reference-assembly-generation).
 
 Bir nokta sürümde en son özellikleri kullanmak için yapmanız [derleyici dil sürüm yapılandırma](../language-reference/configure-language-version.md) ve sürüm seçin.
 
@@ -109,5 +109,5 @@ var pair = (count, label); // element names are "count" and "label"
 
 ## <a name="reference-assembly-generation"></a>Başvuru derleme oluşturma
 
-Oluşturan iki yeni derleyici seçenek *yalnızca başvuru derlemeleri*: [/refout](../language-reference/compiler-options/refout-compiler-option.md) ve [/refonly](../language-reference/compiler-options/refonly-compiler-option.md).
+Oluşturan iki yeni derleyici seçenek *yalnızca başvuru derlemeleri*: [- refonly](../language-reference/compiler-options/refout-compiler-option.md) ve [- refonly](../language-reference/compiler-options/refonly-compiler-option.md).
 Bağlantısı verilen makalelerden Bu seçenekler ve daha ayrıntılı başvuru bütünleştirilmiş kodları açıklanmaktadır.

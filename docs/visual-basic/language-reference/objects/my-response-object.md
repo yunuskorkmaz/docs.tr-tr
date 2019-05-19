@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
-ms.openlocfilehash: 2f72f493d99c1e0b0469150c041649486e5ed124
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e49a3b5732ee1a3626666ce06e366c4940eca05
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794998"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881969"
 ---
 # <a name="myresponse-object"></a>My.Response Nesnesi
 Alır <xref:System.Web.HttpResponse> ilişkili nesne <xref:System.Web.UI.Page>. Bu nesne, HTTP yanıt verilerini istemciye göndermenize olanak sağlar ve bu yanıt hakkında bilgiler içerir.  
@@ -20,7 +20,7 @@ Alır <xref:System.Web.HttpResponse> ilişkili nesne <xref:System.Web.UI.Page>. 
 ## <a name="remarks"></a>Açıklamalar  
  `My.Response` Nesnesini içeren geçerli <xref:System.Web.HttpResponse> sayfası ile ilişkili nesne.  
   
- `My.Response` Nesne için kullanılabilir, yalnızca [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] uygulamalar.  
+ `My.Response` Nesne, yalnızca ASP.NET uygulamaları için kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, üst bilgi koleksiyondan alır `My.Request` nesne ve kullandığı `My.Response` ASP.NET sayfasına yazılacak nesne.  

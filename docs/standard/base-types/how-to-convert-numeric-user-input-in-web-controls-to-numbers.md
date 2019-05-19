@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29141cb43d914dd3781e9307b6a553361152a645
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5af942b5e7576c13ff7be8d11c0009fd0c4f7462
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634170"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882478"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Nasıl yapılır: Web Denetimlerindeki Sayısal Kullanıcı Girişlerini Sayıya Dönüştürme
 Kullanıcıların dünyanın herhangi bir Web sayfası görüntülenebileceğinden sayısal verileri girebilirsiniz bir <xref:System.Web.UI.WebControls.TextBox> neredeyse sınırsız sayıda biçimleri denetimi. Sonuç olarak, yerel ve Web sayfasının kullanıcı kültürü belirlemek çok önemlidir. Kullanıcı girişini ayrıştırmasına, daha sonra kullanıcının yerel ayar ve kültür tarafından tanımlanan biçimlendirme kurallarını uygulayabilirsiniz.  
@@ -58,7 +58,7 @@ Kullanıcıların dünyanın herhangi bir Web sayfası görüntülenebileceğind
  Kodunuzu ya da çağırabilir `Parse` veya `TryParse` kullanıcının girişinin sayısal türün yöntemi dönüştürülür. Parse yöntemi yinelenen çağrıları tek bir ayrıştırma işleminde gerekli olabilir. Sonuç olarak, `TryParse` yöntemi daha iyidir, çünkü bu döndürür `false` bir ayrıştırma işlemi başarısız olursa. Buna karşılık, tarafından oluşturulabilir yinelenen bir özel durum işleme `Parse` yöntemi, bir Web uygulamasındaki çok pahalı bir teklifi olabilir.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Kodu derlemek için dosyaya kopyalayın bir [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] olan tüm mevcut kodlar değiştirir. Bu nedenle arka plan kod sayfası. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web sayfası aşağıdaki denetimleri içermelidir:  
+ Kodu derlemek için tüm mevcut kodlar değiştirir, böylece bir ASP.NET arka plan kod sayfasına kopyalayın. ASP.NET Web sayfası aşağıdaki denetimleri içermesi gerekir:  
   
 - A <xref:System.Web.UI.WebControls.Label> kodda başvurulmuyor denetimi. Ayarlama, <xref:System.Web.UI.WebControls.TextBox.Text%2A> özelliğini "bir sayı girin:".  
   
@@ -66,7 +66,7 @@ Kullanıcıların dünyanın herhangi bir Web sayfası görüntülenebileceğind
   
 - A <xref:System.Web.UI.WebControls.Button> adlı Denetim `OKButton`. Ayarlama, <xref:System.Web.UI.WebControls.Button.Text%2A> özelliği için "Tamam".  
   
- Sınıfın adını değiştirmek `NumericUserInput` tarafından tanımlanan sınıfı adını `Inherits` özniteliği [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sayfanın `Page` yönergesi. Adını değiştirmek `NumericInput` nesnesi tarafından tanımlanan adına başvuru `id` özniteliği [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sayfanın `form` etiketi.  
+ Sınıfın adını değiştirmek `NumericUserInput` tarafından tanımlanan sınıfı adını `Inherits` ASP.NET sayfa özniteliği `Page` yönergesi. Adını değiştirmek `NumericInput` nesnesi tarafından tanımlanan adına başvuru `id` ASP.NET sayfa özniteliği `form` etiketi.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  HTML akışına betik ekleme gelen bir kullanıcı önlemek için kullanıcı girişi hiçbir zaman doğrudan ve sunucu yanıtında yansıtılması gerekir. Bunun yerine, bunu kullanarak kodlanması gereken <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> yöntemi.  

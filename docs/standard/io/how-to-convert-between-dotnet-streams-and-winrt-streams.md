@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0cf5b621be7532239b67bfe970302f27eca3ea2a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22cf168c660349bda16c59aec4824e3283430807
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61752053"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877933"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Nasıl yapılır: .NET Framework ve Windows çalışma zamanı arasında akışları (yalnızca Windows) dönüştürme
 
@@ -51,7 +51,7 @@ Bir .NET Framework akışından bir Windows çalışma zamanı akışına dönü
   
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsOutputStream%2A?displayProperty=nameWithType> Windows çalışma zamanı'ndaki bir çıkış akışına UWP uygulamaları için .NET içinde yönetilen bir akışa dönüştürür.
   
-- [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) UWP uygulamaları için yönetilen bir akışı .NET içinde Windows çalışma zamanı okuma veya yazma için kullanabileceğiniz bir rastgele erişim akışına dönüştürür.
+- <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A?displayProperty=nameWithType> UWP uygulamaları için yönetilen bir akışı .NET içinde Windows çalışma zamanı okuma veya yazma için kullanabileceğiniz bir rastgele erişim akışına dönüştürür.
 
 .NET Framework akışını bir Windows çalışma zamanı akışına dönüştürdüğünüzde, dönüştürülen akışın yetenekleri özgün akışa bağlı. Örneğin, özgün akışını hem okuma hem yazma destekliyorsa ve çağırmanızı <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A?displayProperty=nameWithType> ve akışı dönüştürmek için döndürülen türdür bir `IRandomAccessStream`. `IRandomAccessStream` uygulayan `IInputStream` ve `IOutputStream`ve okuma ve yazmayı destekler.
 
@@ -59,7 +59,7 @@ Bir .NET Framework akışından bir Windows çalışma zamanı akışına dönü
 
 ## <a name="example-convert-net-framework-to-windows-runtime-random-access-stream"></a>Örnek: .NET Framework Windows çalışma zamanı rastgele erişim akışına dönüştürür.
 
-Bir .NET Framework akışından bir Windows çalışma zamanı rastgele erişim akışına dönüştürmek için kullanın [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) aşağıdaki örnekte gösterildiği gibi yöntemi:
+Bir .NET Framework akışından bir Windows çalışma zamanı rastgele erişim akışına dönüştürmek için kullanın <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A> aşağıdaki örnekte gösterildiği gibi yöntemi:
 
 > [!IMPORTANT]
 > Kullanmakta olduğunuz .NET Framework akışının aramayı desteklediğinden emin olun veya yapan bir akışa kopyalayın. Kullanabileceğiniz <xref:System.IO.Stream.CanSeek%2A?displayProperty=nameWithType> bunu belirlemek için özellik.

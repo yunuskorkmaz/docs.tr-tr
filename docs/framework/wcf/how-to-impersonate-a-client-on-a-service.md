@@ -9,18 +9,18 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-ms.openlocfilehash: d58f25f279bf2baa1caa7744cea94b909f48866f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e6e0597f40f32df17d435cb959b246b3b7872fa
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002072"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881094"
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Nasıl yapılır: Bir Hizmette İstemci Kimliğine Bürünme
 Bir Windows Communication Foundation (WCF) hizmette istemci kimliğine bürünme istemci adına eylem gerçekleştirmek hizmet sağlar. Erişim tabi eylemleri için Denetim listesi (ACL), dizinleri ve dosyaları bir makinede erişim veya bir SQL Server veritabanına erişimi gibi ACL onay istemci kullanıcı hesabıdır karşı denetler. Bu konuda, bir istemcinin kimliğe bürünme düzeyi ayarlamak bir istemci bir Windows etki alanında etkinleştirmek için gerekli temel adımlar gösterilmektedir. Bu çalışma örneği için bkz [istemci kimliğine bürünme](../../../docs/framework/wcf/samples/impersonating-the-client.md). İstemci kimliğine bürünme hakkında daha fazla bilgi için bkz: [temsilcilik ve kimliğe bürünme](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 > [!NOTE]
->  Ne zaman aynı bilgisayarda çalışan istemci ve hizmet ve istemci bir sistem hesabı altında çalışıyor (diğer bir deyişle, `Local System` veya `Network Service`), durum bilgisi olan güvenlik bağlamı belirteçleri ile güvenli bir oturum kurulduktan sonra istemci veritabanının özellikleri alınamaz. Böylece hesap varsayılan olarak taklit edilebileceğini bir WinForms ya da konsol uygulamasının genellikle şu anda oturum açmış hesap altında çalışır. Ancak, istemci olduğunda bir [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sayfası ve bu sayfayı barındırılan [!INCLUDE[iis601](../../../includes/iis601-md.md)] veya IIS 7.0 ve ardından istemci altında çalıştırmak `Network Service` varsayılan hesabı. Tüm güvenli oturumlar destekleyen sistem tarafından sağlanan bağlamaları, varsayılan olarak durum bilgisi olmayan bir güvenlik bağlamı belirteci kullanın. Ancak, istemci bir [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sayfası ve durum bilgisi olan güvenlik bağlamı belirteçleriyle güvenli oturumlar kullanılıyorsa, istemci veritabanının özellikleri alınamaz. Durum bilgisi olan güvenlik bağlamı belirteçleri güvenli bir oturumda kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir güvenlik bağlamı oluşturmak için güvenli bir oturum belirteci](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Ne zaman aynı bilgisayarda çalışan istemci ve hizmet ve istemci bir sistem hesabı altında çalışıyor (diğer bir deyişle, `Local System` veya `Network Service`), durum bilgisi olan güvenlik bağlamı belirteçleri ile güvenli bir oturum kurulduktan sonra istemci veritabanının özellikleri alınamaz. Böylece hesap varsayılan olarak taklit edilebileceğini bir WinForms ya da konsol uygulamasının genellikle şu anda oturum açmış hesap altında çalışır. Ancak, ne zaman istemci ASP.NET sayfası ve bu sayfanın içinde barındırılan [!INCLUDE[iis601](../../../includes/iis601-md.md)] veya IIS 7.0 ve ardından istemci altında çalıştırın `Network Service` varsayılan hesabı. Tüm güvenli oturumlar destekleyen sistem tarafından sağlanan bağlamaları, varsayılan olarak durum bilgisi olmayan bir güvenlik bağlamı belirteci kullanın. Ancak, bir ASP.NET sayfasına istemci ise ve durum bilgisi olan güvenlik bağlamı belirteçleriyle güvenli oturumlar kullanılır, istemci veritabanının özellikleri alınamaz. Durum bilgisi olan güvenlik bağlamı belirteçleri güvenli bir oturumda kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir güvenlik bağlamı oluşturmak için güvenli bir oturum belirteci](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 ### <a name="to-enable-impersonation-of-a-client-from-a-cached-windows-token-on-a-service"></a>Kimliğe bürünme, bir istemcinin bir hizmette önbelleğe alınmış bir Windows belirteçten etkinleştirmek için  
   

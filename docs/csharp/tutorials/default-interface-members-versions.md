@@ -3,16 +3,16 @@ title: Arabirimleri varsayılan arabirim üyeleri kullanarak güvenli bir şekil
 description: Gelişmiş Bu öğretici, nasıl güvenli bir şekilde yeni özellikler mevcut arabirimi tanımları için tüm sınıfları ve bu arabirimi uygulayan yapıları bozmadan ekleyebileceğinizi açıklar.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: ded3704428282b8f9f0542e938137585a07802b4
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 2daa40ead5902454c6d45390233e1491fe6d369b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65453174"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877913"
 ---
-# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-8"></a>Öğretici: Varsayılan arabirim üyeleri ile arabirimleri güncelleştirme C# 8
+# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Öğretici: Varsayılan arabirim üyeleri ile arabirimleri güncelleştirme C# 8.0
 
-Başlayarak C# 8'de .NET Core 3.0 bir arabirim üyesi bildirdiğinizde uygulaması tanımlayabilirsiniz. Güvenli bir şekilde serbest ve innumerable istemciler tarafından kullanılan bir arabirim üyeleri eklemek için en yaygın senaryodur bakın.
+İle başlayarak C# 8.0 üzerinde .NET Core 3.0 tanımlayabilirsiniz uygulaması bir arabirim üyesi bildirdiğinizde. Güvenli bir şekilde serbest ve innumerable istemciler tarafından kullanılan bir arabirim üyeleri eklemek için en yaygın senaryodur bakın.
 
 Bu öğreticide şunları öğrenirsiniz nasıl yapılır:
 
@@ -23,7 +23,7 @@ Bu öğreticide şunları öğrenirsiniz nasıl yapılır:
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-.NET Core çalıştırmak için makinenizi ayarlamak ihtiyacınız olacak dahil olmak üzere C# 8.0 Önizleme derleyici. C# 8 preview derleyici sürümünden itibaren kullanılabilir [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), veya en son [.NET Core 3.0 Önizleme SDK'sı](https://dotnet.microsoft.com/download/dotnet-core/3.0). .NET Core 3.0 Önizleme 4 sürümlerinde kullanılabilir varsayılan arabirimi üyeleridir.
+.NET Core çalıştırmak için makinenizi ayarlamak ihtiyacınız olacak dahil olmak üzere C# 8.0 Önizleme derleyici. C# 8.0 Önizleme derleyici sürümünden itibaren kullanılabilir [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), veya en son [.NET Core 3.0 Önizleme SDK'sı](https://dotnet.microsoft.com/download/dotnet-core/3.0). .NET Core 3.0 Önizleme 4 sürümlerinde kullanılabilir varsayılan arabirimi üyeleridir.
 
 ## <a name="scenario-overview"></a>Senaryoya genel bakış
 

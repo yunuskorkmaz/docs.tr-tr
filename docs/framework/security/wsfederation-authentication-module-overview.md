@@ -3,12 +3,12 @@ title: WSFederation Kimlik Doğrulaması Modülüne Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 63090efdf97066b4a276880d4f4be0f843de6800
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0bd6c7432f79894c9e31952b72f3426fc88f9d03
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586046"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877202"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation Kimlik Doğrulaması Modülüne Genel Bakış
 Windows Identity Foundation (WIF), ASP.NET uygulamalarında WS-Federated kimlik doğrulama Modülü (WS-FAM) aracılığıyla şirket dışı kimlik doğrulaması için destek içerir. Bu konu nasıl Federasyon kimlik doğrulaması çalışır ve nasıl kullanılacağını anlamanıza yardımcı olur.  
@@ -31,7 +31,7 @@ Windows Identity Foundation (WIF), ASP.NET uygulamalarında WS-Federated kimlik 
 6. RP istemcinin talep güvenlik belirteci ayıklar ve bir yetkilendirme kararı verir.  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>ASP.NET ile Federasyon kimlik doğrulama modülünü kullanma  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> Federe kimlik doğrulaması eklemenize olanak sağlayan bir HTTP modülü (WS-FAM) olan bir [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulama. Federe kimlik doğrulaması, iş mantığı yazmaya odaklanmasına olanak tanır ve STS tarafından işlenen kimlik doğrulama mantığı sağlar.  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) ASP.NET uygulaması için Federasyon kimlik doğrulaması eklemenize olanak sağlayan bir HTTP modülüdür. Federe kimlik doğrulaması, iş mantığı yazmaya odaklanmasına olanak tanır ve STS tarafından işlenen kimlik doğrulama mantığı sağlar.  
   
  STS doğrulanmamış istekleri yönlendirilmesi gerektiğini belirtmek için WS FAM yapılandırırsınız. WIF iki yolla bir kullanıcının kimliğini sağlar:  
   
@@ -41,10 +41,10 @@ Windows Identity Foundation (WIF), ASP.NET uygulamalarında WS-Federated kimlik 
   
  Pasif yeniden yönlendirme tüm iletişimin (genellikle bir tarayıcı) istemciden yanıt/yeniden yönlendirme aracılığıyla gerçekleştirilir. WS-FAM burada izler kimliği doğrulanmamış için kullanıcı istekleri ve kullanıcıların yönlendirir, uygulamanızın HTTP ardışık düzenine eklemek, STS'ye belirtin.  
   
- WS-FAM işlevselliğini de özelleştirmenize olanak tanıyan çeşitli olayları da başlatır. bir [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulama.  
+ WS-FAM işlevlerini bir ASP.NET uygulamasında özelleştirmenize olanak tanıyan çeşitli olayları da başlatır.  
   
 ### <a name="how-the-ws-fam-works"></a>WS-FAM nasıl çalışır?  
- WS-FAM uygulanan <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> sınıfı. Genellikle, WS-FAM HTTP ardışık düzen ekleyin, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] RP uygulaması. Kimliği doğrulanmamış bir kullanıcı korunan bir kaynağa erişmeyi denediğinde, RP "401 yetkilendirme reddedildi" HTTP yanıtı döndürür. WS-FAM alması rotasyonunun yerine bu yanıtı yakalar ve ardından bu kullanıcının belirtilen STS'ye yönlendirir. STS WS-FAM yeniden kesen bir güvenlik belirteci verir. WS-FAM bir örneğini oluşturmak için bu belirteci kullanır <xref:System.Security.Claims.ClaimsPrincipal> kimliği doğrulanmış kullanıcı için çalışması normal .NET Framework yetkilendirme mekanizmaları sağlar.  
+ WS-FAM uygulanan <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> sınıfı. Genellikle, WS-FAM ASP.NET RP uygulamanızın HTTP ardışık düzen ekleyin. Kimliği doğrulanmamış bir kullanıcı korunan bir kaynağa erişmeyi denediğinde, RP "401 yetkilendirme reddedildi" HTTP yanıtı döndürür. WS-FAM alması rotasyonunun yerine bu yanıtı yakalar ve ardından bu kullanıcının belirtilen STS'ye yönlendirir. STS WS-FAM yeniden kesen bir güvenlik belirteci verir. WS-FAM bir örneğini oluşturmak için bu belirteci kullanır <xref:System.Security.Claims.ClaimsPrincipal> kimliği doğrulanmış kullanıcı için çalışması normal .NET Framework yetkilendirme mekanizmaları sağlar.  
   
  HTTP durum bilgisiz olduğundan, kullanıcının başka bir korumalı kaynağa erişmeye çalışan her zaman tüm bu işlem yinelenen önlemek için bir yol ihtiyacımız var. Burada <xref:System.IdentityModel.Services.SessionAuthenticationModule> halinde sunulur. STS, kullanıcı için bir güvenlik belirteci verdiğinde <xref:System.IdentityModel.Services.SessionAuthenticationModule> aynı zamanda kullanıcı için bir oturum güvenlik belirteci oluşturur ve bir tanımlama bilgisinde koyar. Sonraki isteklerde <xref:System.IdentityModel.Services.SessionAuthenticationModule> bu tanımlama bilgisi durdurur ve kullanıcının yeniden oluşturmak için kullandığı <xref:System.Security.Claims.ClaimsPrincipal>.  
   
@@ -61,7 +61,7 @@ Windows Identity Foundation (WIF), ASP.NET uygulamalarında WS-Federated kimlik 
  ![Oturum açma gösteren SAM zamanlama diyagram&#45;denetimleri kullanarak](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
 ### <a name="events"></a>Olaylar  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule>ve kendi üst sınıfı <xref:System.IdentityModel.Services.HttpModuleBase>, bir HTTP isteğinin işlenmesi çeşitli aşamalarında olayları tetikleyebilir. Bu olayları işleyebilir `global.asax` dosyası, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulama.  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule>ve kendi üst sınıfı <xref:System.IdentityModel.Services.HttpModuleBase>, bir HTTP isteğinin işlenmesi çeşitli aşamalarında olayları tetikleyebilir. Bu olayları işleyebilir `global.asax` ASP.NET uygulamanızın dosya.  
   
 - ASP.NET altyapısının modülün çağırır <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> yöntemi modülü başlatılamadı.  
   

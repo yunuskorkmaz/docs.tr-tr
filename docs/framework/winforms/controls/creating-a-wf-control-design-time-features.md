@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 9f290629e50d7d791119298059277ba73d8e73eb
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 4d741beffa5649d1d1593ba3dbb7a1918b669b80
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211212"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882308"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>İzlenecek yol: Visual Studio Tasarım-Zamanı Özellikleri'nden Faydalanan Windows Forms Denetimi Oluşturma
 
@@ -59,7 +59,7 @@ Bu kılavuzda gösterilen görevler aşağıdakileri içerir:
 
 İşlemi tamamladığınızda, özel denetiminizi aşağıdaki gibi görünür:
 
-![Olası MarqueeControl yerleşimi](./media/demomarqueecontrol.gif "DemoMarqueeControl")
+![Metin ve başlatma ve durdurma düğmeleri belirten kayan gösteren uygulama.](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
 Tam kod listesi için bkz: [nasıl yapılır: Tasarım zamanı özelliklerinden faydalanan Windows Forms denetimi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).
 
@@ -178,7 +178,7 @@ using MarqueeControlLibrary;
 
 2. "MarqueeControlLibrary özellik sayfaları" iletişim kutusunda **hata ayıklama** sayfası.
 
-3. İçinde **başlatma eylemi** bölümünden **harici Program Başlat**. Artık Visual Studio, ayrı bir örneğini hata ayıklama şekilde üç nokta simgesine tıklayın (![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png "vbEllipsesButton")) Visual Studio IDE için Gözat düğmesini. Devenv.exe yürütülebilir dosya adıdır ve varsayılan bir konuma yüklediyseniz, %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe yoludur.
+3. İçinde **başlatma eylemi** bölümünden **harici Program Başlat**. Artık Visual Studio, ayrı bir örneğini hata ayıklama şekilde üç nokta simgesine tıklayın (![Visual Studio Özellikler penceresinde üç nokta düğmesini (…)](./media/visual-studio-ellipsis-button.png)) Visual Studio IDE için Gözat düğmesini. Devenv.exe yürütülebilir dosya adıdır ve varsayılan bir konuma yüklediyseniz, %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe yoludur.
 
 4. İletişim kutusunu kapatmak için Tamam'a tıklayın.
 

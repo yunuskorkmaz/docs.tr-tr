@@ -5,16 +5,16 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: e9b2c1077cf3323a7d5b69bee6dff7e6f9611818
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 78286cde925a4583a3610ce100d23e16adcefe49
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634150"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878081"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Nasıl yapılır: Bir ADO.NET varlık çerçevesi veri kaynağı (WCF Veri Hizmetleri) kullanarak veri hizmeti oluşturma
 
-WCF Veri Hizmetleri, varlık verilerini bir veri hizmeti kullanıma sunar. Bu varlık verilerini tarafından sağlanan [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] veri kaynağı, ilişkisel bir veritabanı olduğunda. Bu konu nasıl oluşturulacağını gösterir bir [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-tabanlı veri modeli varolan bir veritabanını temel alan ve yeni bir veri hizmeti oluşturmak için bu veri modeli kullanan bir Visual Studio Web uygulaması.
+WCF Veri Hizmetleri, varlık verilerini bir veri hizmeti kullanıma sunar. Bu varlık verilerini ADO.NET tarafından sağlanan[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] veri kaynağı, ilişkisel bir veritabanı olduğunda. Bu konu nasıl oluşturulacağını gösterir bir [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-tabanlı veri modeli varolan bir veritabanını temel alan ve yeni bir veri hizmeti oluşturmak için bu veri modeli kullanan bir Visual Studio Web uygulaması.
 
 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Oluşturabilen bir komut satırı aracı da sağlar bir [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Visual Studio Proje dışındaki model. Daha fazla bilgi için [nasıl yapılır: Model ve eşleme dosyalarını üretmek için Edmgen.exe'yi kullanın](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).
 
@@ -53,7 +53,7 @@ WCF Veri Hizmetleri, varlık verilerini bir veri hizmeti kullanıma sunar. Bu va
 
 2. İçinde **Model tarayıcı**, modelin sağ tıklayın, **özellikleri**ve sonra varlık kapsayıcısının adı not edin.
 
-3. İçinde **Çözüm Gezgini**, adına sağ tıklayın, [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proje ve ardından **Ekle** > **yeni öğe**.
+3. İçinde **Çözüm Gezgini**ASP.NET projenizin adına sağ tıklayın ve ardından **Ekle** > **yeni öğe**.
 
 4. İçinde **Yeni Öğe Ekle** iletişim kutusunda **WCF veri hizmeti** şablonunda **Web** kategorisi.
 

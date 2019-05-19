@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9341ff8bfb2aec4eb7274d444fca4497fa66f210
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046638"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875576"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme
 Yetkilendirme hangi varlıkları değiştirmek, görüntülemek veya aksi halde bir bilgisayar kaynağına erişmek için izne sahip belirleme işlemidir. Örneğin, bir iş ortamında, yalnızca Yöneticiler çalışanlarına dosyalara erişmek için izin. Windows Communication Foundation (WCF), Yetkilendirme işlemi gerçekleştirmek için iki mekanizmayı destekler. İlk mekanizması, var olan ortak dil çalışma zamanı (CLR) yapıları kullanarak Yetkilendirme denetlemenize olanak tanıyor. İkinci olarak bilinen bir beyana dayalı modelidir *kimlik modeli*. WCF gelen istenmeyen iletilere talep oluşturmak için kimlik modeli kullanır; Kimlik modeli sınıfları için özel yetkilendirme düzenleri yeni talep türlerini destekleyecek şekilde genişletilebilir. Bu konuda özelliğini kullanan en önemli sınıflar listesini yanı sıra, başlıca programlama kavramları kimlik modeli özelliğinin genel bir bakış sunulmaktadır.  
@@ -90,11 +90,12 @@ Yetkilendirme hangi varlıkları değiştirmek, görüntülemek veya aksi halde 
   
  Aşağıdaki şekilde, bir talepler kümesi, sertifikayı veren talepler, talep kümesine verenini olarak sistem sırayla sahip başka bir dizi sahip olduğu üç talep kümesi örneği gösterilmektedir. Bu nedenle, talep kümesi derinliklerde bir hiyerarşi oluşturur.  
   
- ![Talep ve yetkilendirmeyi yönetme](../../../../docs/framework/wcf/feature-details/media/claimshierarchy.gif "claimshierarchy")  
+ ![Hiyerarşi içinde talep kümesi.](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
- Birden çok talep kümesi, aynı talep kümesine, aşağıdaki resimde gösterildiği gibi veren olabilir.  
+ Aynı talep kümesine, aşağıdaki resimde gösterildiği gibi veren birden çok talep kümesi içerebilir:
+ 
   
- ![Talep ve yetkilendirmeyi yönetme](../../../../docs/framework/wcf/feature-details/media/multiplesetsofclaims.gif "multiplesetsofclaims")  
+ ![Birden fazla aynı verme ile talep kümesini talep.](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   
  Kendi veren bir talep kümesi dışında kimlik modeli bir döngü oluşturmak talep kümeleri için herhangi bir destek sağlamaz. Bu nedenle talep kümesi A kendisi bir talep kümesi tarafından verilmiş olan talep kümesi tarafından B, burada verilen bir durumla hiçbir zaman ortaya çıkabilir. Ayrıca, kimlik modeli birden çok verenler talep kümeleri için herhangi bir destek sağlamaz. Ardından belirli bir talep kümesi iki veya daha fazla veren dağıtmalı, her aynı talepleri içeren, ancak farklı verenler sahip birden çok talep kümesi kullanmanız gerekir.  
   

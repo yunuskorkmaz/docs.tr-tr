@@ -2,12 +2,12 @@
 title: UDP Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 158aa804a796f30e7450bda2fadc256ca3579579
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 127516b79bcb15406bfade09bc1309e55aac3dcf
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623728"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880999"
 ---
 # <a name="udp-activation"></a>UDP Etkinleştirme
 Bu örnek dayanır [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örnek. Bunu genişleten [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Windows İşlem Etkinleştirme Hizmeti (WAS) kullanarak işlem etkinleştirmeyi desteklemek için örnek.  
@@ -75,7 +75,7 @@ Bu örnek dayanır [taşıma: UDP](../../../../docs/framework/wcf/samples/transp
   
 #### <a name="to-set-up-this-sample"></a>Bu örneğini kurmak için  
   
-1. Yükleme [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aşağıdaki komutu kullanarak 4.0.  
+1. ASP.NET 4. 0 aşağıdaki komutu kullanarak yükleyin.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  

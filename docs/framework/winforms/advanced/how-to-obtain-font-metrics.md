@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: 438be2ffbff5c4f88ccfef4cad63dbfc71d132d5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75177b609f14d335aa57aba77d647827f50a8692
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648263"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881844"
 ---
 # <a name="how-to-obtain-font-metrics"></a>Nasıl yapılır: Yazı Tipi Ölçümleri Alma
 <xref:System.Drawing.FontFamily> Sınıfı belirli ailesi/stil birleşimi için çeşitli ölçümleri alma aşağıdaki yöntemleri sağlar:  
@@ -28,22 +28,22 @@ ms.locfileid: "64648263"
   
  Bu yöntem tarafından döndürülen sayılara boyutu ve belirli bir ölçü bağımsız oldukları yazı tipi tasarım birimlerinde olduğundan <xref:System.Drawing.Font> nesne.  
   
- Aşağıdaki çizim, çeşitli ölçümleri gösterir.  
+ Aşağıda çeşitli ölçümler gösterilmektedir:
   
- ![Yazı tipleri metin](./media/fontstext7a.png "fontstext7A")  
+ ![Yazı tipi ölçümleri gösterimi: ascent iniş ve satır aralığı.](./media/how-to-obtain-font-metrics/various-font-metrics.png)  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, Normal stili Arial yazı tipi ailesinin ölçümleri görüntüler. Kod ayrıca oluşturur bir <xref:System.Drawing.Font> (Arial ailesinde göre) nesne boyutu 16 piksel ve görüntüler (piksel cinsinden) için belirli ölçümleri <xref:System.Drawing.Font> nesne.  
   
- Örnek kodun çıktısı aşağıdaki çizimde gösterilmektedir.  
+ Örnek kodun çıktısı aşağıdaki çizimde gösterilmektedir:
   
- ![Yazı tipleri metin](./media/csfontstext8.png "csFontsText8")  
+ ![Örnek kod çıkışı Arial yazı tipi ölçümleri.](./media/how-to-obtain-font-metrics/example-output-code-arial-font.png)  
   
  Önceki çizimde çıkış ilk iki satırlık unutmayın. <xref:System.Drawing.Font> Nesne döndürür, 16, boyutunu ve <xref:System.Drawing.FontFamily> 2.048 bir em yüksekliğini nesnesini döndürür. Bu iki sayı (16 ve 2.048) yazı tipi tasarım birimleri ve (Bu durum piksel cinsinden) birimleri arasında dönüştürme için önemli olduğu <xref:System.Drawing.Font> nesne.  
   
  Örneğin, ascent tasarım birimlerinden piksel olarak şu şekilde dönüştürebilirsiniz:  
   
- ![Yazı tipleri metin](./media/fontstext9.png "FontsText9")  
+ ![Tasarım birimlerinden dönüştürme piksel gösteren formül](./media/how-to-obtain-font-metrics/convert-font-units-example.png)  
   
  Aşağıdaki kod konumlandırır metni dikey olarak ayarlayarak <xref:System.Drawing.PointF.Y%2A> veri üyesi bir <xref:System.Drawing.PointF> nesne. Y koordinatını artırılana `font.Height` her yeni satır metin için. <xref:System.Drawing.Font.Height%2A> Özelliği bir <xref:System.Drawing.Font> nesnesini döndürür (piksel cinsinden) satır aralığı için o belirli <xref:System.Drawing.Font> nesne. Bu örnekte, bir sayı tarafından döndürülen <xref:System.Drawing.Font.Height%2A> 19 olduğu. Bu satır aralığı ölçüm piksel dönüştürerek elde edilen (bir tamsayıya yuvarlanır) numarasıyla aynı olduğunu unutmayın.  
   

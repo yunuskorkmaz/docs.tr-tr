@@ -2,12 +2,12 @@
 title: Arka Plan Bilgileri
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: dfa1d06b9df7da86fe529c69d7fb01fcc58ccc87
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c64b720f893c907b0570e886f0a4d81bb19d09a9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592432"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878701"
 ---
 # <a name="background-information"></a>Arka Plan Bilgileri
 Kavramlar ve yordamlar kullanma hakkında temel kavramların ötesine genişletmek için bu bölümdeki konular, ilgilidir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -22,7 +22,7 @@ Kavramlar ve yordamlar kullanma hakkında temel kavramların ötesine genişletm
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [ADO.NET ve LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
- İlişkiyi açıklar [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ ADO.NET arasındaki ilişkiyi açıklar ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [LINQ to SQL Kaynak Kodunu Analiz Etme](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)  
  Nasıl analiz edileceğini açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] oluşturma ve kaynak kodu Northwind örnek veritabanından görüntüleyerek eşleme.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 638e8177060c489a7469f80adde68cb9ba266365
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583832"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879962"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Yapılandırma parametreleri ve parametre veri türleri
 
@@ -96,7 +96,7 @@ Daha fazla bilgi için [CommandBuilders ile komut oluşturma](generating-command
 
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>SqlCommand ve bir saklı yordam parametreleri kullanma
 
-Saklı yordamlar, veri odaklı uygulamalarda birçok avantaj sunar. Saklı yordamları kullanarak, veritabanı işlemleri tek bir komutta kapsüllenmiş, en iyi performans için iyileştirilmiş ve ek güvenlik ile Gelişmiş. Bir saklı yordam parametre bağımsız değişkenler kullanarak bir SQL deyimi, ardından saklı yordam adı geçirerek de <xref:System.Data.Common.DbCommand.Parameters%2A> koleksiyonunu [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.Common.DbCommand> nesne, daha açık saklı tanımlamanıza imkan tanır yordam parametreleri ve çıkış parametreleri erişmek ve dönüş değerleri için.
+Saklı yordamlar, veri odaklı uygulamalarda birçok avantaj sunar. Saklı yordamları kullanarak, veritabanı işlemleri tek bir komutta kapsüllenmiş, en iyi performans için iyileştirilmiş ve ek güvenlik ile Gelişmiş. Bir saklı yordam parametre bağımsız değişkenler kullanarak bir SQL deyimi, ardından saklı yordam adı geçirerek de <xref:System.Data.Common.DbCommand.Parameters%2A> ADO.NET koleksiyonunu <xref:System.Data.Common.DbCommand> nesne, daha açık saklı yordam tanımlamanıza imkan tanır parametreleri ve çıkış parametreleri erişmek ve dönüş değerleri için.
 
 > [!NOTE]
 > Parametreleri deyimleri kullanarak sunucu üzerinde yürütülen `sp_executesql,` için sorgu planı yeniden izin verir. Yerel işaretçiler veya değişkenleri `sp_executesql` batch çağıran toplu görünür değildir `sp_executesql`. Veritabanı bağlamında son için yalnızca en son değişiklikleri `sp_executesql` deyimi. Daha fazla bilgi için [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).

@@ -15,12 +15,12 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6bb41ad3743e19ae3f6ded48dd491542926010d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4c50cdf93d8cfcefeffd35290d26dfa432a241e1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633883"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882484"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Nasıl yapılır: Web Kullanıcılarına Yerelleştirilmiş Tarih ve Saat Bilgilerini Görüntüleme
 Bir Web sayfası dünyanın herhangi bir yere görüntülenebileceğinden ayrıştırma ve biçimlendirme tarih ve saat değerlerini işlemleri (genellikle Web sunucusunun yerel kültür biçiminde) bir varsayılan biçimi üzerinde doğrulamamalısınız kullanıcıyla etkileşim kurulurken. Bunun yerine, işlemek tarih ve saat dizeleri giriş kullanıcı tarafından Web forms, tercih edilen kullanıcının kültürü kullanarak dizeleri çözümlenmelidir. Benzer şekilde, tarih ve saat verileri kullanıcıya kullanıcının kültürü için uygun bir biçimde görüntülenmesi gerekir. Bu konuda, bunun nasıl yapılacağı gösterilmektedir.  
@@ -98,7 +98,7 @@ Bir Web sayfası dünyanın herhangi bir yere görüntülenebileceğinden ayrı�
  Kodunuzu ya da çağırabilir <xref:System.DateTime.Parse%2A> veya <xref:System.DateTime.TryParse%2A> kullanıcının bir tarihin dize gösterimine dönüştürmek ve süresi için yöntemi bir <xref:System.DateTime> değeri. Parse yöntemi yinelenen çağrıları tek bir ayrıştırma işleminde gerekli olabilir. Sonuç olarak, <xref:System.DateTime.TryParse%2A> yöntemi olduğundan daha iyi döndürür `false` bir ayrıştırma işlemi başarısız olursa. Buna karşılık, tarafından oluşturulabilir yinelenen bir özel durum işleme <xref:System.DateTime.Parse%2A> yöntemi, bir Web uygulamasındaki çok pahalı bir teklifi olabilir.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Kodu derlemek için oluşturun bir [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] arka plan kod olmadan Web sayfası. Tüm mevcut kodlar değiştirir, böylece örnek Web sayfasına kopyalayın. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web sayfası aşağıdaki denetimleri içermelidir:  
+ Kodu derlemek için arka plan kod olmadan bir ASP.NET Web sayfası oluşturun. Tüm mevcut kodlar değiştirir, böylece örnek Web sayfasına kopyalayın. ASP.NET Web sayfası aşağıdaki denetimleri içermesi gerekir:  
   
 - A <xref:System.Web.UI.WebControls.Label> kodda başvurulmuyor denetimi. Ayarlama, <xref:System.Web.UI.WebControls.TextBox.Text%2A> özelliğini "bir sayı girin:".  
   

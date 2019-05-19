@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: fbbc0a5accf021df0675192deb040476bc97968d
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 07ef96862c04b8245d8365c3d3b419d227e824c4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452378"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876945"
 ---
 # <a name="c-operators"></a>C# işleçleri
 
@@ -69,7 +69,7 @@ En yüksek öncelik işleçleri şunlardır.
 
 [stackalloc](../keywords/stackalloc.md) -bir yığında bellek bloğu ayırır.
 
-[->](dereference-operator.md) – Birleştirilmiş üye erişimi ile işaretçiye başvuruluyor.
+[->](pointer-related-operators.md#pointer-member-access-operator--) – İşaretçi yöneltmesi birleştirilmiş üye erişimi ile.
 
 ## <a name="unary-operators"></a>Birli işleçler
 
@@ -91,9 +91,9 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 
 [await](../keywords/await.md) – bekler bir `Task`.
 
-[& x](and-operator.md) – adresidir.
+[& x](pointer-related-operators.md#address-of-operator-) : değişkenin adresini.
 
-[* x](multiplication-operator.md) – başvurusunu kaldırma.
+[* x](pointer-related-operators.md#pointer-indirection-operator-) – işaretçi yöneltmesi veya başvuru.
 
 [true işleci](../keywords/true-false-operators.md) -döndürür [bool](../keywords/bool.md) değer `true` işleneni kesinlikle doğru olduğunu belirtmek için.
 

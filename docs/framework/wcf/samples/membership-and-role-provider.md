@@ -2,15 +2,15 @@
 title: Üyelik ve Rol Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 73084bb766274d6eab497555e82e029f94be0359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c172402f95b137117941381fd4803b8b6e4a5d61
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638383"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876741"
 ---
 # <a name="membership-and-role-provider"></a>Üyelik ve Rol Sağlayıcısı
-Üyelik ve rol sağlayıcısı örnek, bir hizmetin nasıl kullanabileceğinizi gösterir. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kimliğini doğrulama ve yetkilendirme istemciler için üyelik ve rol sağlayıcıları.  
+Üyelik ve rol sağlayıcısı örnek, bir hizmetin kimliğini doğrulamak ve istemcilere yetki vermek için ASP.NET üyelik ve rol sağlayıcıları nasıl kullanabileceğinizi gösterir.  
   
  Bu örnekte, istemci bir konsol uygulaması (.exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
   
@@ -21,11 +21,11 @@ ms.locfileid: "64638383"
   
 - Bir istemci, kullanıcı adı parola birleşimi kullanarak kimlik doğrulaması yapabilirsiniz.  
   
-- Sunucu, istemci kimlik bilgileri karşı doğrulayabilir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] üyelik sağlayıcısı.  
+- Sunucu, istemci kimlik bilgileri ASP.NET üyelik sağlayıcısını karşı doğrulayabilir.  
   
 - Sunucu, sunucunun X.509 sertifikası kullanılarak doğrulanabilir.  
   
-- Sunucunun kimliği doğrulanmış istemciyi bir role kullanarak eşleyebilirsiniz [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rol sağlayıcısı.  
+- Sunucu ASP.NET rol sağlayıcıyı kullanarak rol atama kimliği doğrulanmış istemciyi eşleyebilirsiniz.  
   
 - Sunucu kullanabilir `PrincipalPermissionAttribute` erişimi denetlemek için hizmet tarafından sunulan belirli yöntem.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "64638383"
 </system.web>  
 ```  
   
- Hizmet, Web.config yapılandırma dosyası kullanılarak tanımlanmış hizmet ile iletişim kurmak için tek bir uç noktayı kullanıma sunar. Uç nokta, adres, bağlama ve bir sözleşme oluşur. Bir standart yapılandırılmış bağlama `wsHttpBinding`, bunun varsayılan Windows kimlik doğrulaması için kullanılacak. Bu örnek, standart ayarlar `wsHttpBinding` kullanıcı adı kimlik doğrulaması kullanmak için. Sunucu sertifikası hizmet kimlik doğrulaması için kullanılacak olan davranışını belirtir. Sunucu sertifikası için aynı değeri içermelidir `SubjectName` olarak `findValue` özniteliğini [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) yapılandırma öğesi. Buna ek olarak söz konusu kimlik doğrulamasını davranışı belirtir kullanıcı adı parola çiftleri tarafından gerçekleştirilir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] üyelik sağlayıcısı ve rol eşlemesi tarafından gerçekleştirilir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] iki sağlayıcıları için tanımlanan adlar belirterek rol sağlayıcısı.  
+ Hizmet, Web.config yapılandırma dosyası kullanılarak tanımlanmış hizmet ile iletişim kurmak için tek bir uç noktayı kullanıma sunar. Uç nokta, adres, bağlama ve bir sözleşme oluşur. Bir standart yapılandırılmış bağlama `wsHttpBinding`, bunun varsayılan Windows kimlik doğrulaması için kullanılacak. Bu örnek, standart ayarlar `wsHttpBinding` kullanıcı adı kimlik doğrulaması kullanmak için. Sunucu sertifikası hizmet kimlik doğrulaması için kullanılacak olan davranışını belirtir. Sunucu sertifikası için aynı değeri içermelidir `SubjectName` olarak `findValue` özniteliğini [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) yapılandırma öğesi. Buna ek olarak ASP.NET üyelik sağlayıcısı tarafından gerçekleştirilen kimlik doğrulama kullanıcı adı parola çiftleri ve rol eşleme iki sağlayıcıları için tanımlanan adlar belirterek ASP.NET rol sağlayıcıyı tarafından gerçekleştirilen davranışını belirtir.  
   
 ```xml  
 <system.serviceModel>  
@@ -123,10 +123,10 @@ ms.locfileid: "64638383"
 2. Yapılandırdığınızdan emin olun [ASP.NET uygulama hizmetleri veritabanına](https://go.microsoft.com/fwlink/?LinkId=94997).  
   
     > [!NOTE]
-    >  SQL Server Express Edition çalıştırıyorsanız, sunucu adıdır. \SQLEXPRESS. Bu sunucu yapılandırırken kullanılmalıdır [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama hizmetleri veritabanına de Web.config bağlantı dizesi olduğu gibi.  
+    >  SQL Server Express Edition çalıştırıyorsanız, sunucu adıdır. \SQLEXPRESS. Bu sunucu, ASP.NET uygulama hizmetleri veritabanına de Web.config bağlantı dizesi olduğu gibi yapılandırırken kullanılmalıdır.  
   
     > [!NOTE]
-    >  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Çalışan işlem hesabı, bu adımda oluşturulan veritabanı üzerinde izinleri olmalıdır. Bunu yapmak için SQL Server Management Studio ve sqlcmd yardımcı programını kullanın.  
+    >  ASP.NET çalışan işlem hesabı, bu adımda oluşturulan veritabanı üzerinde izinleri olmalıdır. Bunu yapmak için SQL Server Management Studio ve sqlcmd yardımcı programını kullanın.  
   
 3. Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için aşağıdaki yönergeleri kullanın.  
   

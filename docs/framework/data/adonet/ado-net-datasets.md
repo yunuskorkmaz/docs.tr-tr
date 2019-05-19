@@ -2,15 +2,15 @@
 title: ADO.NET Veri Kümeleri
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 50e8e8f5e4b3ee2f5a41cb9dad11b5e701135d9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 29aba76731c4170c8af3c913a06e78e89ce3a08d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607595"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877221"
 ---
 # <a name="adonet-datasets"></a>ADO.NET Veri Kümeleri
-<xref:System.Data.DataSet> Dağıtılmış veri senaryoları ile bağlantı kesildi, nesne Destek Merkezi [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. **Veri kümesi** bir veri kaynağını bağımsız olarak tutarlı bir ilişkisel programlama modeli sağlayan veri bellekte gösterimidir. Birden çok ile kullanılabilir ve farklı veri kaynakları, XML verileriyle veya uygulamaya yerel verileri yönetmek için. **Veri kümesi** ilgili tabloları, kısıtlamalar ve tablolar arasındaki ilişkiler dahil eksiksiz bir kümesini temsil eder. Aşağıdaki çizimde gösterildiği **veri kümesi** nesne modeli.  
+<xref:System.Data.DataSet> Dağıtılmış ADO.NET ile veri senaryoları bağlantı kesildi, Destek Merkezi nesnedir. **Veri kümesi** bir veri kaynağını bağımsız olarak tutarlı bir ilişkisel programlama modeli sağlayan veri bellekte gösterimidir. Birden çok ile kullanılabilir ve farklı veri kaynakları, XML verileriyle veya uygulamaya yerel verileri yönetmek için. **Veri kümesi** ilgili tabloları, kısıtlamalar ve tablolar arasındaki ilişkiler dahil eksiksiz bir kümesini temsil eder. Aşağıdaki çizimde gösterildiği **veri kümesi** nesne modeli.  
   
  ![ADO.Net grafik](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 Veri kümesi nesne modeli  
@@ -20,7 +20,7 @@ Veri kümesi nesne modeli
  **Veri kümesi** ayrıca kalıcı hale getirmek ve XML içeriği ve şeması XML Şeması Tanım Dili (XSD) şemaya olarak yeniden yükleyin. Daha fazla bilgi için [kullanarak bir veri kümesi XML'de](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
   
 ## <a name="the-datatablecollection"></a>DataRow  
- Bir [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] **veri kümesi** sıfır veya daha fazla tablo ile temsil edilen bir koleksiyon içeren <xref:System.Data.DataTable> nesneleri. <xref:System.Data.DataTableCollection> Tüm içeren **DataTable** nesneler bir **veri kümesi**.  
+ Bir ADO.NET **veri kümesi** sıfır veya daha fazla tablo ile temsil edilen bir koleksiyon içeren <xref:System.Data.DataTable> nesneleri. <xref:System.Data.DataTableCollection> Tüm içeren **DataTable** nesneler bir **veri kümesi**.  
   
  A **DataTable** tanımlanan <xref:System.Data> ad alanı ve bellekte verilerin tek bir tabloyu temsil eder. Tarafından temsil edilen sütunlar koleksiyonu içeren bir <xref:System.Data.DataColumnCollection>ve kısıtlamalar tarafından temsil edilen bir <xref:System.Data.ConstraintCollection>, tablonun şeması birlikte tanımlayan. A **DataTable** tarafından temsil edilen bir koleksiyonu içerir <xref:System.Data.DataRowCollection>, tablodaki verileri içerir. Geçerli durumuna yanı sıra bir <xref:System.Data.DataRow> satır içinde depolanan değerleri yapılan değişiklikleri belirlemek için her iki, geçerli ve orijinal sürümler korur.  
   

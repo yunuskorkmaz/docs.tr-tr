@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 8b709de728726b7695b987c48574d2a70a1bc27e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef38bacfd129033aab41f5f516b96b95fac7913f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765680"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880003"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Geliştirme ve WCF veri hizmetlerini dağıtma
 
@@ -38,18 +38,18 @@ Bu konu, Visual Studio kullanarak, öncelikli olarak geliştirme ve Veri Hizmetl
 
 ### <a name="choose-a-development-web-server"></a>Bir geliştirme Web sunucusu seçin
 
-Olarak WCF veri hizmeti geliştirirken bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama veya [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Visual Studio 2015 kullanarak Web sitesi geliştirme sırasında veri hizmetinin çalıştırılacağı Web sunucularını bir seçenek vardır. Aşağıdaki Web sunucuları, test ve hata ayıklama yerel bilgisayarda veri hizmetlerinizin daha kolay hale getirmek için Visual Studio ile tümleştirin.
+Visual Studio 2015'i kullanarak bir ASP.NET uygulaması veya ASP.NET Web sitesi WCF veri hizmeti geliştirdiğinizde, geliştirme sırasında veri hizmetinin çalıştırılacağı Web sunucularını vardır. Aşağıdaki Web sunucuları, test ve hata ayıklama yerel bilgisayarda veri hizmetlerinizin daha kolay hale getirmek için Visual Studio ile tümleştirin.
 
 1. **Yerel IIS sunucusu**
 
-     Bir veri hizmeti oluşturduğunuzda olduğu bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama veya [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Internet Information Services (IIS) çalıştıran Web sitesini öneririz geliştirin ve veri hizmetinizi yerel bilgisayarda IIS'yi kullanarak test edin. IIS üzerinde veri hizmetinin çalıştırılması, hata ayıklama sırasında HTTP isteklerinin izlenmesini kolaylaştırır. Bu, IIS tarafından dosyalara, veritabanlarına ve veri hizmeti tarafından gerekli kılınan diğer kaynaklara erişmek için gereken hakları önceden belirlemenizi de sağlar. Veri hizmetinizi IIS üzerinde çalıştırmak için size gereken sağlar hem IIS hem de Windows Communication Foundation (WCF) yüklü ve düzgün yapılandırıldığından emin ve dosya sistemi ve veritabanlarında IIS hesaplarına erişim izin verin. Daha fazla bilgi için [nasıl yapılır: IIS üzerinde çalışan bir WCF veri hizmeti geliştirme](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
+     Bir ASP.NET uygulamasını veya Internet Information Services (IIS) üzerinde çalışan ASP.NET Web sitesi olan bir veri hizmeti oluşturduğunuzda, geliştirme ve veri hizmetinizi yerel bilgisayarda IIS'yi kullanarak test öneririz. IIS üzerinde veri hizmetinin çalıştırılması, hata ayıklama sırasında HTTP isteklerinin izlenmesini kolaylaştırır. Bu, IIS tarafından dosyalara, veritabanlarına ve veri hizmeti tarafından gerekli kılınan diğer kaynaklara erişmek için gereken hakları önceden belirlemenizi de sağlar. Veri hizmetinizi IIS üzerinde çalıştırmak için size gereken sağlar hem IIS hem de Windows Communication Foundation (WCF) yüklü ve düzgün yapılandırıldığından emin ve dosya sistemi ve veritabanlarında IIS hesaplarına erişim izin verin. Daha fazla bilgi için [nasıl yapılır: IIS üzerinde çalışan bir WCF veri hizmeti geliştirme](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
 
     > [!NOTE]
     > Visual Studio geliştirme ortamının yerel IIS sunucusunu yapılandırmasını etkinleştirmek için yönetici haklarıyla çalıştırmanız gerekir.
 
 2. **Visual Studio geliştirme sunucusu**
 
-     Visual Studio içeren yerleşik bir Web sunucusu, Visual Studio geliştirme sunucusu için varsayılan Web sunucu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projeleri. Bu Web sunucusu, çalışacak şekilde tasarlanmıştır [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] geliştirme sırasında yerel bilgisayarda projeleri. [WCF Veri Hizmetleri Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) Visual Studio geliştirme sunucusu içinde çalışan bir veri hizmeti oluşturulacağını gösterir.
+     Visual Studio, bir yerleşik Web sunucusu Visual Studio geliştirme ASP.NET projeleri için varsayılan Web sunucusu, içerir. Bu Web sunucusu, ASP.NET projeleri, geliştirme sırasında yerel bilgisayarda çalıştırmak için tasarlanmıştır. [WCF Veri Hizmetleri Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) Visual Studio geliştirme sunucusu içinde çalışan bir veri hizmeti oluşturulacağını gösterir.
 
      Veri hizmeti geliştirmek için Visual Studio geliştirme sunucusu kullanırken aşağıdaki sınırlamaları bilmeniz gerekir:
 
@@ -82,9 +82,9 @@ Bir veri hizmeti geliştirirken, aşağıdakileri dikkate almanız gerekir:
 
 - Veri hizmetinde hata ayıklarken veri hizmetinden normal işlem sırasında bir hata hakkında daha fazla bilgi almak isteyebilirsiniz. Ayarlayarak veri hizmetinden ek hata bilgileri alabilirsiniz <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> özelliğinde <xref:System.Data.Services.DataServiceConfiguration> için `true` ayarlayarak <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> özelliği <xref:System.ServiceModel.Description.ServiceDebugBehavior> verihizmetisınıfındakiözniteliği`true`. Daha fazla bilgi için gönderiye bakın [hata ayıklama WCF Veri Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=201868). WCF HTTP ileti katmanında oluşturulan özel durumları görüntülemek için izlemeyi de etkinleştirebilirsiniz. Daha fazla bilgi için [yapılandırma izleme](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).
 
-- Bir veri hizmeti genellikle olarak geliştirilen bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama projesi, ancak da oluşturabilir, veri hizmeti olarak bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Visual Studio'da Web sitesi projesi. İki proje türü arasındaki farklar hakkında daha fazla bilgi için bkz: [Web Application Projects versus Web sitesi projeleri Visual Studio'da](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
+- Bir veri hizmeti genellikle bir ASP.NET uygulama projesi olarak geliştirilir, ancak Ayrıca, veri hizmeti Visual Studio'daki bir ASP.NET Web sitesi projesi olarak oluşturun. İki proje türü arasındaki farklar hakkında daha fazla bilgi için bkz: [Web Application Projects versus Web sitesi projeleri Visual Studio'da](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
 
-- Kullanarak bir veri hizmeti oluşturduğunuzda **Yeni Öğe Ekle** iletişim kutusu Visual Studio'da veri hizmeti tarafından barındırılan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] IIS'de. Sırada [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ve IIS veri hizmeti için varsayılan ana bilgisayarda, diğer barındırma seçenekleri desteklenir. Daha fazla bilgi için [veri hizmetini barındıran](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).
+- Kullanarak bir veri hizmeti oluşturduğunuzda **Yeni Öğe Ekle** Visual Studio'da veri hizmeti iletişim kutusu, ASP.NET'i IIS'ye tarafından barındırılır. ASP.NET ve IIS veri hizmeti için varsayılan ana bilgisayar olsa diğer barındırma seçenekleri desteklenir. Daha fazla bilgi için [veri hizmetini barındıran](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).
 
 ## <a name="deploy-wcf-data-services"></a>WCF veri hizmetlerini dağıtma
 
@@ -92,7 +92,7 @@ WCF Veri Hizmeti, veri hizmetini barındıran işlemi seçmede esneklik sağlar.
 
 - **IIS barındırılan Web sunucusu**
 
-    Ne zaman bir veri hizmeti geliştirilen olarak bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proje, bir IIS Web sunucusuna standardını kullanarak dağıtılabileceğini [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dağıtım işlemleri.  Visual Studio için aşağıdaki dağıtım teknolojileri sağlar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]türüne bağlı olarak, [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dağıttığınız veri hizmetini barındıran bir proje.
+    Bir veri hizmeti, bir ASP.NET projesi olarak geliştirilir, bunu bir IIS Web sunucusuna standart ASP.NET dağıtım işlemleri kullanılarak dağıtılabilir.  Visual Studio, ASP.NET'in dağıttığınız veri hizmetini barındıran ASP.NET proje türünü bağlı olarak aşağıdaki dağıtım teknolojileri sağlar.
 
   - **ASP.NET Web uygulamaları için dağıtım teknolojileri**
 
@@ -108,7 +108,7 @@ WCF Veri Hizmeti, veri hizmetini barındıran işlemi seçmede esneklik sağlar.
 
     - [İzlenecek yol: XCOPY kullanarak bir ASP.NET Web uygulaması dağıtma](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
 
-     Dağıtım seçenekleri hakkında daha fazla bilgi için bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulaması, bakın [Visual Studio ve ASP.NET Web dağıtımı genel bakış](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110)).
+     Bir ASP.NET uygulaması için dağıtım seçenekleri hakkında daha fazla bilgi için bkz. [Visual Studio ve ASP.NET Web dağıtımı genel bakış](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110)).
 
     > [!TIP]
     > Veri hizmetini IIS'ye dağıtmayı denemeden önce, IIS çalıştıran Web sunucusuna dağıtımı test ettiğinizden emin olun. Daha fazla bilgi için [nasıl yapılır: IIS üzerinde çalışan bir WCF veri hizmeti geliştirme](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
@@ -121,7 +121,7 @@ WCF Veri Hizmeti, veri hizmetini barındıran işlemi seçmede esneklik sağlar.
 
 Bir veri hizmetini dağıtırken, aşağıdakileri dikkate almanız gerekir:
 
-- Kullanan bir veri hizmeti dağıtırken [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] bir SQL Server veritabanına erişmek için sağlayıcı veri yapılarını, verileri yaymak gerekebilir veya her ikisi de verilerinizi dağıtım hizmet. Visual Studio otomatik olarak hedef veritabanında Bunu yapmak için betikler (.sql dosyaları) oluşturma ve bu betikleri Web Dağıtım paketine dahil edilebilir bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama. Daha fazla bilgi için [nasıl yapılır: Bir Web uygulaması projesi ile bir veritabanı dağıtma](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)). İçin bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web sitesi, bunu yapabilirsiniz kullanarak **Database Publishing Wizard** Visual Studio'da. Daha fazla bilgi için [bir SQL veritabanı yayımlama](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
+- Kullanan bir veri hizmeti dağıtırken [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] bir SQL Server veritabanına erişmek için sağlayıcı veri yapılarını, verileri yaymak gerekebilir veya her ikisi de verilerinizi dağıtım hizmet. Visual Studio otomatik olarak hedef veritabanında Bunu yapmak için betikler (.sql dosyaları) oluşturabilir ve bu betikleri ASP.NET uygulamasının Web Dağıtım paketine dahil edilebilir. Daha fazla bilgi için [nasıl yapılır: Bir Web uygulaması projesi ile bir veritabanı dağıtma](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)). Bir ASP.NET Web sitesi için kullanarak bunu yapabilirsiniz **Database Publishing Wizard** Visual Studio'da. Daha fazla bilgi için [bir SQL veritabanı yayımlama](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
 - WCF Veri Hizmetleri temel bir WCF uygulaması içerdiğinden, Windows Server üzerinde çalışan IIS'ye Dağıtılmış veri hizmetini izlemek için Windows Server Appfabric'i kullanabilirsiniz. Veri hizmetini izlemek için Windows Server AppFabric kullanma hakkında daha fazla bilgi için gönderiye bakın [Windows Server AppFabric ile WCF veri hizmetlerini izleme](https://go.microsoft.com/fwlink/?LinkID=202005).
 

@@ -2,12 +2,12 @@
 title: Oturumlar, Örnek Oluşturma ve Eşzamanlılık
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 52c9ed5d672ea05fec3333c9fece8b693143d6f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 74b9971fa9267ef6156b27261c61d3e998d01883
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586117"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877327"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Oturumlar, Örnek Oluşturma ve Eşzamanlılık
 A *oturumu* iki uç nokta arasında gönderilen tüm iletilerin bir ilişki olduğunu. *Örnek oluşturma* hizmeti kullanıcı tanımlı nesneler ve onların ilgili ömrünü denetlemek için başvuran <xref:System.ServiceModel.InstanceContext> nesneleri. *Eşzamanlılık* içinde çalışan iş parçacıklarının sayısını denetlemek için verilen bir terimdir bir <xref:System.ServiceModel.InstanceContext> aynı anda.  
@@ -27,13 +27,13 @@ A *oturumu* iki uç nokta arasında gönderilen tüm iletilerin bir ilişki oldu
   
 - Bir WCF oturum ile ilişkili hiçbir genel veri deposu bulunmaktadır.  
   
- Alışkın olduğunuz <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> sınıfını [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulamalar ve işlevselliği sağlar, bu tür bir oturum ve WCF oturumları arasında aşağıdaki değişiklikler fark edebilirsiniz:  
+ Alışkın olduğunuz <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> ASP.NET uygulamalarında sınıfı ve işlevselliği sağlar, bu tür bir oturum ve WCF oturumları arasında aşağıdaki değişiklikler fark edebilirsiniz:  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturumlarının her zaman sunucu-başlatılır.  
+- ASP.NET oturumları her zaman sunucu-başlatılır.  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturumlarının örtük olarak sırasız.  
+- ASP.NET oturum örtük olarak sırasız.  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturumları istekler genelinde bir genel veri depolama mekanizmasını sağlar.  
+- ASP.NET oturumları istekler genelinde bir genel veri depolama mekanizmasını sağlar.  
   
  Oturumları, istemci uygulamaları ve hizmet uygulamaları farklı şekillerde etkileşim kurun. İstemci uygulamaları oturumlarını başlatmak ve ardından almak ve oturumunda gönderilen iletileri işlemek. Hizmet uygulamaları oturumlarını ek davranış eklemek için bir genişletilebilirlik noktası olarak kullanabilirsiniz. Bu doğrudan birlikte çalışarak yapılır <xref:System.ServiceModel.InstanceContext> veya özel örnek içerik sağlayıcısı uygulaması.  
   

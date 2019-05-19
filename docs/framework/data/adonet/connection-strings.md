@@ -2,12 +2,12 @@
 title: ADO.NET bağlantı dizeleri
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 1197335f3ba2a09b6e7303d31bc32383d1fd3436
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b7cb0ab061da8364a9fecc3868ba9aaf7501577
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032772"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881156"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET bağlantı dizeleri
 
@@ -17,24 +17,32 @@ Bir bağlantı dizesi, bir veri kaynağı için veri sağlayıcısı'ndan bir pa
 
 Bir bağlantı dizesi anahtar/değer parametresi çiftleri noktalı virgülle ayrılmış bir listesi verilmiştir:
 
-    keyword1=value; keyword2=value;
+```
+keyword1=value; keyword2=value;
+```
 
 Anahtar sözcükler, büyük küçük harfe duyarlı değildir. Değerleri, ancak veri kaynağına bağlı olarak duyarlı olabilir. Hem anahtar hem de değerleri içerebilir [boşluk karakterleri](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Baştaki ve sondaki boşluk anahtar sözcükleri yok sayıldı ve tırnak işareti olmayan değerler.
 
 Bir değer virgül içeriyorsa [Unicode denetim karakterlerini](https://en.wikipedia.org/wiki/Unicode_control_characters), veya baştaki veya sondaki boşlukları, bunu tek veya çift tırnak içine alınmalıdır. Örneğin:
 
-    Keyword=" whitespace  ";
-    Keyword='special;character';
+```
+Keyword=" whitespace  ";
+Keyword='special;character';
+```
 
 Kapsayan karakter kendisini kapsayan değeri içinde gerçekleşmeyebilir. Bu nedenle, tek tırnak işareti içeren bir değeri yalnızca çift tırnak işareti bulunan ve tersi içine alınabilir:
 
-    Keyword='double"quotation;mark';
-    Keyword="single'quotation;mark";
+```
+Keyword='double"quotation;mark';
+Keyword="single'quotation;mark";
+```
 
 Aşağıdaki bağlantı dizelerinin geçerli olduğu şekilde eşittir işareti yanı sıra, tırnak işaretleri kaçış, gerek yoktur:
 
-    Keyword=no "escaping" 'required';
-    Keyword=a=b=c
+```
+Keyword=no "escaping" 'required';
+Keyword=a=b=c
+```
 
 Sonraki noktalı virgül veya dizenin sonuna kadar her değer okunur olduğundan, ikinci örnek değer `a=b=c`, ve son noktalı virgül isteğe bağlıdır.
 

@@ -2,12 +2,12 @@
 title: Yeniden Barındırılan İş Akışı Tasarımcısında Yeni Workflow Foundation 4.5 Özellikleri Desteği
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8807506866ef0f5d73065958f1102460ebcc5e9f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669839"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876473"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Yeniden Barındırılan İş Akışı Tasarımcısında Yeni Workflow Foundation 4.5 Özellikleri Desteği
 Windows Workflow Foundation (WF) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] iş akışı Tasarımcısı deneyimine yönelik bazı geliştirmeler dahil olmak üzere birçok yeni özellikler eklendi. Bu konuda ayrıntıları: hangi bu özellikleri yeniden barındırılan tasarımcıda desteklendiği ve hangilerinin şu anda desteklenmiyor.
@@ -37,25 +37,25 @@ Windows Workflow Foundation (WF) [!INCLUDE[net_v45](../../../includes/net-v45-md
 
  Aşağıdaki ekran görüntüsünde, değişken ve bağımsız değişken Tasarımcı bağlam menüsünü gösterir.
 
- ![Değişken ve bağımsız değişken Tasarımcı bağlam menüsü](./media/designercontextmenu.png "DesignerContextMenu")
+ ![Değişken ve bağımsız değişken Tasarımcı bağlam menüsü](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>Otomatik-çevrelemeyi dizisi
  Bir iş akışı veya belirli bir kapsayıcı etkinlikleri (gibi <xref:System.Activities.Statements.NoPersistScope>) yalnızca tek bir gövde etkinlik içerebilir, ikinci etkinlik ekleme, geliştirici ilk etkinliği silin, eklemek gerekli bir <xref:System.Activities.Statements.Sequence> etkinlik ve ardından her iki etkinlik için ekleme sıralı etkinlik. İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], ikinci bir etkinlik Tasarımcı yüzeyine eklerken bir `Sequence` etkinlik otomatik olarak oluşturulacak hem etkinlikleri sarmalamak için. Bu özellik, yeniden barındırılan tasarımcıda desteklenir.
 
  Aşağıdaki ekran görüntüsü gösterildiği bir `WriteLine` etkinliğinde `Body` , bir `NoPersistScope`.
 
- ![Otomatik&#45;çevreleyen bırakma konumu](./media/autosurround1.png "AutoSurround1")
+ ![WriteLine etkinlik NoPersistScope etkinliği gövdesi.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-write-line-activity.png)
 
  Aşağıdaki ekran görüntüsünde otomatik olarak oluşturulan gösterilmektedir `Sequence` etkinliğinde `Body` ikinci zaman `WriteLine` ilk düştü.
 
- ![Sıralı etkinlik otomatik olarak oluşturulan](./media/autosurround2.png "AutoSurround2")
+ ![Otomatik olarak oluşturulan bir sıralı bir NoPersistScope gövdesinde.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-sequence-activity.png)
 
 ### <a name="pan-mode"></a>PAN modu
  Büyük bir iş akışı Tasarımcısı'nda daha kolay gezinme için kaydırma modu, kaydırma çubuklarını gerek kalmadan yerine geliştiricinin iş akışının görünür bölümünün taşımak için tıklayın ve sürükleyin izin vererek etkinleştirilebilir. PAN modunu etkinleştirmek için tasarımcının sağ alt köşesindeki düğmesidir. Bu özellik, yeniden barındırılan tasarımcıda desteklenir.
 
  Aşağıdaki ekran görüntüsünde, iş akışı Tasarımcısı alt sağ köşesinde bulunan pan düğmesini gösterir.
 
- ![İş Akışı Tasarımcısı'nda PAN düğmesi](./media/panbutton.png "PanButton")
+ ![İş Akışı Tasarımcısı'nda pan düğmesi.](./media/wf-features-in-the-rehosted-workflow-designer/pan-button-workflow-designer.png)
 
  Orta fare düğmesine veya Ara çubuğuna iş akışı Tasarımcısı kaydırmak için de kullanılabilir.
 
@@ -69,7 +69,7 @@ Windows Workflow Foundation (WF) [!INCLUDE[net_v45](../../../includes/net-v45-md
 
  Aşağıdaki ekran görüntüsünde tamamlanan iş akışından [başlangıç Öğreticisi](getting-started-tutorial.md) sıralı bir iş akışı ile ana hat görünümü gösterilir.
 
- ![Anahat iş akışı Tasarımcısı'nda görünümü](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+ ![Visual Studio'da sıralı bir iş akışı ile ana hat görünümünün ekran görüntüsü](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Daha fazla denetim görünürlüğünü Kabuk çubuğu ve üstbilgi öğeleri
  Yeniden barındırılan tasarımcıda, bazı standart kullanıcı Arabirimi denetimleri için belirli bir iş akışı anlamı olmayabilir ve kapalı olabilir. İçinde [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], bu özelleştirme yalnızca Tasarımcısı'nın altındaki Kabuk çubuğu tarafından desteklenir. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], kabuk üstbilgi öğeleri Tasarımcı üst kısmındaki görünürlüğünü ayarlayarak ayarlanabilir <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> uygun <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> değeri.
@@ -79,18 +79,18 @@ Windows Workflow Foundation (WF) [!INCLUDE[net_v45](../../../includes/net-v45-md
 
  Aşağıdaki ekran görüntüsünde bir etkinlik araç kutusundan sürüklendiğinde görünür hale gelmiş eki noktalarını gösterir.
 
- ![Otomatik bağlanma noktalarını gösteren akış çizelgesi başlangıç düğümü](./media/autoconnect1.png "Autoconnect1")
+ ![Akış başlangıç düğümü gösteren otomatik bağlanma noktası](./media/wf-features-in-the-rehosted-workflow-designer/auto-connect-points-start-node.png)
 
  Etkinlikler de akış düğüm ve düğüm iki düğüm arasındaki otomatik olarak eklemek üzere durumları arasında bağlantılar sürüklenebilen. Aşağıdaki ekran görüntüsünde vurgulanan bağlantı satırı burada etkinlikler araç kutusundan sürüklediğiniz ve olması bırakılan gösterir.
 
- ![Otomatik&#45;etkinlikleri silmek için tanıtıcı eklemek](./media/autoinsert.png "Autoinsert")
+ ![Etkinlikleri silmek için tanıtıcı otomatik Ekle](./media/wf-features-in-the-rehosted-workflow-designer/auto-insert-connecting-line.png)
 
  Otomatik olarak bağlanabilir ve otomatik ekleme, yeniden barındırılan tasarımcıda desteklenir.
 
 ### <a name="designer-annotations"></a>Tasarımcı ek açıklamaları
  Daha büyük iş akışları geliştirme kolaylaştırmak için tasarımcı tasarım süreci izlemenize yardımcı olması için ekleme ek açıklamalarını destekler. Ek açıklama, etkinlikleri, durumları, akış düğümleri, değişkenler ve bağımsız değişkenler eklenebilir. Aşağıdaki ekran görüntüsünde, ek açıklamalar tasarımcıya eklemek için kullanılan bağlam menüsünü gösterir.
 
- ![Ek açıklama bağlam menüsü](./media/annotationdialog.png "annotationdialog")
+ ![Gösterimler ekleme menüsü gösteren ekran görüntüsü.](./media/wf-features-in-the-rehosted-workflow-designer/designer-annotations-context-menu.png)
 
  Tasarımcı ek açıklamaları yeniden barındırılan tasarımcıda desteklenir.
 
@@ -134,7 +134,7 @@ Windows Workflow Foundation (WF) [!INCLUDE[net_v45](../../../includes/net-v45-md
   
  Aşağıdaki ekran görüntüsünde tamamlanan durum makine iş akışından gösterilmektedir [başlangıç Öğreticisi](getting-started-tutorial.md) adım [nasıl yapılır: Bir Durum makinesi iş akışı oluşturmak](how-to-create-a-state-machine-workflow.md).  
   
- ![Durum makinesi iş akışı tamamlandı](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![Tamamlanan Durum makinesi iş akışı gösteren şekil.](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
   
  Durum makine iş akışları oluşturma hakkında daha fazla bilgi için bkz. [durum makine iş akışları](state-machine-workflows.md). Durum makinesi iş akışı yeniden barındırılan tasarımcıda desteklenir.  
   

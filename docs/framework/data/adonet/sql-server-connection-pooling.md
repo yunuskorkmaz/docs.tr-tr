@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 566a7905ac2eda17046595bcccc868e44f6a1e9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5165f3ec1ef41e3fb0dd053c112610183197108a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664118"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877440"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server Bağlantı Havuzu (ADO.NET)
 Veritabanı sunucusuna bağlanması, zaman birkaç adımdan oluşur. Bir yuva ya da bir adlandırılmış kanal gibi fiziksel bir kanal, sunucu ile ilk el sıkışma gerçekleşmelidir, oluşturulmalıdır bağlantı dizesi bilgilerini ayrıştırıldığında, bağlantı sunucu tarafından doğrulanması, denetimleri kaydetme için çalıştırılması gerekir Geçerli işlem ve benzeri.  
   
- Uygulamada, çoğu uygulama, bağlantıları için yalnızca bir veya birkaç farklı yapılandırmaları kullanın. Bu uygulama yürütme sırasında aynı bağlantı fazla sürekli açık kapalı ve anlamına gelir. Bağlantılar, açma maliyetini en aza indirmek için [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] adında bir iyileştirme teknik kullanır *bağlantı havuzu*.  
+ Uygulamada, çoğu uygulama, bağlantıları için yalnızca bir veya birkaç farklı yapılandırmaları kullanın. Bu uygulama yürütme sırasında aynı bağlantı fazla sürekli açık kapalı ve anlamına gelir. ADO.NET bağlantı açmayı maliyetini en aza indirmek için adı verilen bir iyileştirme teknik kullanır *bağlantı havuzu*.  
   
  Bağlantı havuzu yeni bir bağlantı açılmalıdır sayısını azaltır. *Havuzlayıcı* fiziksel bağlantı sahipliğini tutar. Bağlantılar, bir dizi her verilen bağlantı yapılandırması etkin bağlantı etkin tutulan bağlantıyı destekliyorsa tutarak yönetir. Her bir kullanıcı çağırır `Open` bir bağlantıda kullanılabilir bir bağlantı havuzundaki havuzlayıcı arar. Havuza alınmış bir bağlantı varsa, bunu yeni bir bağlantı açmak yerine çağırana döndürür. Uygulama çağırdığında `Close` bağlantıda havuzlayıcı kapatma yerine etkin bağlantılar havuza alınmış kümesini döndürür. Bağlantı havuza döndüğünde, sonraki yüklenmek hazır olduğunda `Open` çağırın.  
   
- Yalnızca bağlantıları aynı yapılandırmaya sahip bir havuzda toplanabilir mi. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] aynı zamanda, her yapılandırma için birkaç havuzu tutar. Tümleşik güvenlik kullanıldığında bağlantıları bağlantı dizesi ve Windows Identity havuzlarına ayrılır. Bağlantılar, ayrıca tabanlı olup, bir kayıtlı üzerinde havuza eklenir. Kullanırken <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>, <xref:System.Data.SqlClient.SqlCredential> örneği bağlantı havuzunu etkiler. Farklı örnekleri <xref:System.Data.SqlClient.SqlCredential> kullanıcı kimliği ve parola aynı olsa bile, farklı bağlantı havuzları kullanır.  
+ Yalnızca bağlantıları aynı yapılandırmaya sahip bir havuzda toplanabilir mi. ADO.NET, aynı zamanda, her yapılandırma için birkaç havuzu tutar. Tümleşik güvenlik kullanıldığında bağlantıları bağlantı dizesi ve Windows Identity havuzlarına ayrılır. Bağlantılar, ayrıca tabanlı olup, bir kayıtlı üzerinde havuza eklenir. Kullanırken <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>, <xref:System.Data.SqlClient.SqlCredential> örneği bağlantı havuzunu etkiler. Farklı örnekleri <xref:System.Data.SqlClient.SqlCredential> kullanıcı kimliği ve parola aynı olsa bile, farklı bağlantı havuzları kullanır.  
   
- Bağlantı havuzu performans ve ölçeklenebilirlik, uygulamanızın önemli ölçüde artırabilirsiniz. Varsayılan olarak, bağlantı havuzu etkin [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Açıkça devre dışı sürece açılır ve uygulamanızda kapalı havuzlayıcı bağlantıları iyileştirir. Ayrıca, bağlantı havuzu davranışını denetlemek için çeşitli bağlantı dizesi değiştiriciler sağlayabilirsiniz. Daha fazla bilgi için bu konunun ilerleyen bölümlerinde "Denetleme bağlantı havuzu ile bağlantı dizesi anahtar sözcükler" konusuna bakın.  
+ Bağlantı havuzu performans ve ölçeklenebilirlik, uygulamanızın önemli ölçüde artırabilirsiniz. Varsayılan olarak, ADO.NET bağlantı havuzu etkinleştirilir. Açıkça devre dışı sürece açılır ve uygulamanızda kapalı havuzlayıcı bağlantıları iyileştirir. Ayrıca, bağlantı havuzu davranışını denetlemek için çeşitli bağlantı dizesi değiştiriciler sağlayabilirsiniz. Daha fazla bilgi için bu konunun ilerleyen bölümlerinde "Denetleme bağlantı havuzu ile bağlantı dizesi anahtar sözcükler" konusuna bakın.  
   
 > [!NOTE]
 >  Bağlantı havuzu etkin olduğunda ve bir zaman aşımı hatası veya başka bir oturum açma hata oluşursa bir özel durum ve sonraki bağlantı denemelerinde sonraki beş saniye boyunca "engelleme süresi" başarısız olur. Uygulama engelleme süresi içinde bağlanmaya çalışırsa, ilk özel durum yeniden oluşturulur. Bir engelleme süresi sona erdikten sonra sonraki hatalar iki kez önceki engelleme süresi en fazla bir dakika kadar sürece yeni bir engelleme nokta olarak mı neden olur.  
@@ -80,7 +80,7 @@ Bağlantı kapatma ve açma ile ilgili olaylar hakkında daha fazla bilgi için 
  Bağlantı kayboldu bir sunucuya varsa, bu bağlantı, bağlantı havuzlayıcı değil kesilen bağlantı algıladı ve geçersiz olarak işaretlenmiş olsa bile havuzdan kurulabilir. Bağlantı hala geçerli olup olmadığını denetleyerek ek yükü ortadan kaldırır gerçekleşmesi için sunucuya başka bir gidiş dönüş neden olarak bir havuzlayıcı sahip avantajları olduğundan durum budur. Bu durumda, bağlantıyı kullanmak için yapılan ilk girişim bağlantı yazıyordunuz ve bir özel durum algılar.  
   
 ## <a name="clearing-the-pool"></a>Havuz temizleme  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 kullanılmaya havuzu temizlemek için iki yeni yöntem: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> ve <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` bağlantı havuzları için belirli bir sağlayıcı, temizler ve `ClearPool` belirli bir bağlantı ile ilişkili bağlantı havuzu temizler. Çağrı zamanında kullanılan bağlantılar varsa, uygun şekilde işaretlenir. Kapatıldığında, havuza geri döner yerine atılır.  
+ ADO.NET 2.0 kullanılmaya havuzu temizlemek için iki yeni yöntem: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> ve <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` bağlantı havuzları için belirli bir sağlayıcı, temizler ve `ClearPool` belirli bir bağlantı ile ilişkili bağlantı havuzu temizler. Çağrı zamanında kullanılan bağlantılar varsa, uygun şekilde işaretlenir. Kapatıldığında, havuza geri döner yerine atılır.  
   
 ## <a name="transaction-support"></a>İşlem Desteği  
  Bağlantı havuzu ve da atanan göre işlem bağlamı çizilir. Sürece `Enlist=false` belirtilen bağlantı dizesinde bağlantı havuzu sağlar bağlantı kayıtlı olduğundan emin olarak <xref:System.Transactions.Transaction.Current%2A> bağlamı. Ne zaman bir bağlantı kapatıldı ve kayıtlı bir havuzla döndürülen `System.Transactions` işlem, bu kenara sonraki Bu bağlantı havuzunun aynı istek şekilde `System.Transactions` işlem varsa aynı bağlantıyı döndürür. Böyle bir talep verilir ve havuza alınmış bağlantı kullanılabilir bir bağlantı havuzunun işlem temelli olmayan bölümünden çizilmiş ve kayıtlı. Bağlantı yok ya da havuzun alanında bulunan kullanılabilir değilse yeni bir bağlantı oluşturulur ve kayıtlı.  

@@ -2,12 +2,12 @@
 title: Desteklenen dağıtım senaryoları - WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: f1a95e5448d2cc8f1ac472c3b1735f58460e2be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639151"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881055"
 ---
 # <a name="supported-deployment-scenarios"></a>Desteklenen dağıtım senaryoları
 
@@ -27,7 +27,7 @@ Bu izin kümeleri, desteklenen özellikler hakkında daha fazla bilgi için bkz:
 
 ## <a name="partial-trust-on-the-server"></a>Sunucu üzerinde kısmi güven
 
-Birçok ticari sağlayıcılardan biri [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulama barındırma hizmetleri, sunucuları üzerinde çalışan uygulamaları çalıştırmak olan uyumluluğunu doğrulamıştır [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Medium Trust izin kümesi. WCF hizmetleri, bu ortamlarda çalıştırabilirsiniz, kullandıkları sağlanan <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, veya <xref:System.ServiceModel.WSHttpBinding> aktarım düzeyi güvenlik ile.
+Barındırma hizmetleri, ASP.NET Web uygulamasının birçok ticari sağlayıcısı zorunlu kılabilir, kendi sunucuları üzerinde çalışan uygulamaları çalıştırmak [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Medium Trust izin kümesi. WCF hizmetleri, bu ortamlarda çalıştırabilirsiniz, kullandıkları sağlanan <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, veya <xref:System.ServiceModel.WSHttpBinding> aktarım düzeyi güvenlik ile.
 
 WCF hizmetlerini barındırma ortamları Medium Trust ile çalışan istemci isteklerine yanıt diğer sunuculara yönelik iletiler göndererek orta katman hizmet olarak da işlev görebilir. Uygulama barındırma ortamı uygun izni vermiştir, orta katman senaryoları sunucuda desteklenir <xref:System.Net.WebPermission> istedikleri sunucuya giden isteklerde.
 

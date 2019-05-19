@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 19571f3102039176ed4d8fab46a7f8229cbfecbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eff4ee3cb8502645d3b6d9a8986c9c410fe73f1a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875543"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877587"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Akış sağlayıcısı (WCF Data Services)
 
@@ -88,7 +88,7 @@ Bir veri hizmeti oluşturma hakkında genel bilgi için bkz. [veri hizmeti yapı
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Büyük ikili akışlar barındırma ortamında etkinleştirme
 
-Bir veri hizmeti oluşturduğunuzda, bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulaması, Windows Communication Foundation (WCF) HTTP protokolü uygulamasını sağlamak amacıyla kullanılır. Varsayılan olarak, WCF HTTP iletileri yalnızca 65 K bayt boyutunu sınırlar. Büyük ikili veri akışı için ve veri hizmetinden kullanabilmek için Web uygulaması büyük ikili dosyaları etkinleştirmek ve aktarım için akışları kullanmak için yapılandırmanız gerekir. Bunu yapmak için aşağıdaki ekleyin `<configuration />` uygulamanın Web.config dosyasının öğe:
+Bir ASP.NET Web uygulamasında veri hizmeti oluşturduğunuzda, Windows Communication Foundation (WCF) HTTP protokolü uygulamasını sağlamak için kullanılır. Varsayılan olarak, WCF HTTP iletileri yalnızca 65 K bayt boyutunu sınırlar. Büyük ikili veri akışı için ve veri hizmetinden kullanabilmek için Web uygulaması büyük ikili dosyaları etkinleştirmek ve aktarım için akışları kullanmak için yapılandırmanız gerekir. Bunu yapmak için aşağıdaki ekleyin `<configuration />` uygulamanın Web.config dosyasının öğe:
 
 > [!NOTE]
 > Kullanmanız gereken bir <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> istek ve yanıt iletilerindeki ikili veri akışı ve WCF tarafından arabelleğe değil emin olmak için aktarım modu.
@@ -125,7 +125,7 @@ Akış sağlayıcısı uyguladığınızda ve ortam kaynaklarına eriştiğinizd
 
 - Uyguladığınızda <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>, veya <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> yöntemlerini kullanmanız gerekir eTag ve sağlanan içerik türü değerleri yöntem parametreleri. ETag veya Content-Type üst bilgilerinde ayarlı değil, <xref:System.Data.Services.Providers.IDataServiceStreamProvider> sağlayıcısı uygulaması.
 
-- Varsayılan olarak, istemci bir öbekli HTTP Transfer-Encoding kullanarak büyük ikili akışlar gönderir. Çünkü [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] geliştirme sunucusu, bu tür kodlamayı desteklemez, büyük ikili akışlar kabul etmesi gereken bir akış veri hizmeti barındırmak için bu Web sunucusu kullanamazsınız. Daha fazla bilgi için [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] geliştirme sunucusu bkz [ASP.NET Web projeleri için Visual Studio'daki Web sunucuları](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
+- Varsayılan olarak, istemci bir öbekli HTTP Transfer-Encoding kullanarak büyük ikili akışlar gönderir. ASP.NET geliştirme sunucusu bu tür kodlamayı desteklemediği için büyük ikili akışlar kabul etmesi gereken bir akış veri hizmeti barındırmak için bu Web sunucusu kullanamazsınız. ASP.NET Geliştirme Sunucusu hakkında daha fazla bilgi için bkz. [ASP.NET Web projeleri için Visual Studio'daki Web sunucuları](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
 
 <a name="versioning"></a>
 

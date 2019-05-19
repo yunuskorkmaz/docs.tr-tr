@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: aaa12ca65257be2f06c84f8ff3be926ea92b0dbb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6da9e2a91fe8156c0631aa77594e3ed47d32cb8b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651065"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882183"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation Gizlilik Bilgileri
 Microsoft, son kullanıcılar gizlilik korumayı taahhüt eder. Sürüm 3.0, Windows Communication Foundation (WCF) kullanarak bir uygulamayı derlerken, uygulamanızı kullanıcılarınıza gizlilik etkileyebilir. Örneğin, uygulamanızın açıkça kullanıcı bilgilerini toplayabilir veya istek veya Web sitenize Internet üzerinden bilgi göndermek olabilir. Uygulamanızda Microsoft teknolojisini eklemek, bu teknoloji gizlilik etkileyebilecek kendi davranışını olabilir. Sizin veya son kullanıcı seçmediğiniz sürece farklı bize göndermek WCF bilgileri Microsoft'a uygulamanızdan göndermez.  
@@ -29,7 +29,7 @@ Microsoft, son kullanıcılar gizlilik korumayı taahhüt eder. Sürüm 3.0, Win
  WCF ileti katmanı herhangi bir kişisel bilgi yerel makineye yazmaz. Bir hizmet geliştirici (örneğin, bir kişinin adını kullanarak bir uç nokta adı veya göre uç noktanın Web kişisel bilgiler dahil olmak üzere bu tür bilgiler sunan bir hizmet oluşturduysanız ancak bunu kişisel bilgileri ağ düzeyinde yay Açıklama Dili ancak istemcilerin WSDL erişmek için https kullanmasını gerektirmeyen Hizmetleri). Ayrıca, bir geliştirici çalıştırıyorsa [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) kişisel bilgiler, Aracı'nın çıkış kullanıma sunduğu bir uç nokta aracı, bu bilgileri içerebilir ve çıktı dosyasına yazılır yerel sabit disk.  
   
 ## <a name="hosting"></a>Barındırma  
- Wcf'de barındırma özellik uygulamalarını isteğe bağlı olarak Başlat veya birden çok uygulama arasında bağlantı noktası paylaşma olanağı sağlar. WCF uygulaması, Internet Information Services (IIS), benzer şekilde barındırılabilir [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
+ Wcf'de barındırma özellik uygulamalarını isteğe bağlı olarak Başlat veya birden çok uygulama arasında bağlantı noktası paylaşma olanağı sağlar. WCF uygulaması, Internet Information Services (IIS), ASP.NET ile benzer barındırılabilir.  
   
  Barındırma belirli bilgilere ağda kullanıma sunmuyor ve makinede verileri korumaz.  
   
@@ -47,7 +47,7 @@ Microsoft, son kullanıcılar gizlilik korumayı taahhüt eder. Sürüm 3.0, Win
 |Veri|Depolama|  
 |----------|-------------|  
 |Kullanıcı adı, X.509 sertifikaları, Kerberos belirteçleri ve kimlik bilgilerini başvurular gibi sunu kimlik.|Windows kimlik bilgisi yönetimi mekanizmalarını Windows sertifika deposu gibi.|  
-|Kullanıcı adları ve parolalar gibi kullanıcı üyelik bilgileri.|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Üyelik sağlayıcısı.|  
+|Kullanıcı adları ve parolalar gibi kullanıcı üyelik bilgileri.|ASP.NET üyelik sağlayıcıları.|  
 |İstemci hizmetinin kimliğini doğrulamak için kullanılan hizmet kimlik bilgilerini.|Hizmet uç noktası adresi.|  
 |Arayan bilgileri.|Denetim günlükleri.|  
   

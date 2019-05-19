@@ -2,12 +2,12 @@
 title: ADO.NET’e Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a47a2734e68b4c00aab077191d5257386cd6602
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607368"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877206"
 ---
 # <a name="adonet-overview"></a>ADO.NET’e Genel Bakış
 ADO.NET veri kaynağına OLE DB ve ODBC kullanıma sunulan ve SQL Server ve XML gibi veri kaynaklarına tutarlı erişimi sağlar. Veri paylaşımı tüketici uygulamaları, ADO.NET, bu veri kaynağına bağlanın ve almak, işlemek ve içerdikleri verileri güncelleştirmek için kullanabilirsiniz.  
@@ -46,7 +46,7 @@ ADO.NET veri kaynağına OLE DB ve ODBC kullanıma sunulan ve SQL Server ve XML 
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [ADO.NET’teki Yenilikler](../../../../docs/framework/data/adonet/whats-new.md)  
- Yeni özellikleri tanıtır [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+ ADO.NET yeni özellikleri tanıtır.  
   
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  Güvenli kodlama yöntemleri ADO.NET kullanırken açıklar.  

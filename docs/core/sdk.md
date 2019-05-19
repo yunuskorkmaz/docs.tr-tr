@@ -1,30 +1,39 @@
 ---
-title: .NET core SDK'ya genel bakış
+title: .NET core SDK'sı genel bakış
 description: Kitaplıklar ve araçlar .NET Core projeleri oluşturmak için kullanılan bir dizi olan .NET Core SDK hakkında bilgi edinin.
-ms.date: 06/20/2016
+ms.date: 05/13/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: 0b63de92dbee318326f670175ff6824a8c056784
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ed9d51b337af8edc251a4f3b02c31b72b76ba33d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631884"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877980"
 ---
-# <a name="net-core-sdk-overview"></a>.NET core SDK'ya genel bakış
+# <a name="net-core-sdk-overview"></a>.NET core SDK'sı genel bakış
 
-.NET core Yazılım Geliştirme Seti (SDK), kitaplıklar ve Araçlar, geliştiricilerin, .NET Core uygulamaları ve kitaplıkları oluşturmak kümesidir. Geliştiriciler, büyük olasılıkla alacağı paketidir. 
+.NET core Yazılım Geliştirme Seti (SDK), kitaplıklar ve Araçlar, geliştiricilerin, .NET Core uygulamaları ve kitaplıkları oluşturmak kümesidir. Bu, oluşturmak ve uygulamaları çalıştırmak için kullanılan aşağıdaki bileşenleri içerir:
 
-Bunu, aşağıdaki bileşenleri içerir:
-
-1. Uygulamalar oluşturmak amacıyla kullanılan .NET Core komut satırı araçları
-2. .NET uygulamaları hem de sağlayan çekirdek (kitaplıkları ve çalışma zamanı) oluşturulan ve çalıştırma
-3. `dotnet` Çalıştırmak için sürücü [CLI komutları](tools/index.md) çalışan uygulamaların yanı sıra
+- .NET Core CLI araçları.
+- .NET core kitaplıkları ve çalışma zamanı.
+- `dotnet` [Sürücü](/tools/index.md#driver).
 
 ## <a name="acquiring-the-net-core-sdk"></a>.NET Core SDK'sını edinme
-Herhangi bir araç olduğu gibi ile ilk şey araçlarını makinenize almaktır. Senaryonuza bağlı olarak, yerel yükleyicilerden ya da SDK'sını yükleyin veya yükleme Kabuk betiği kullanmak için kullanabilirsiniz.
 
-Yerel yükleyicilerden öncelikle geliştiricinin makineler için yöneliktir. SDK'sı, desteklenen her platformun yerel yükleme mekanizması, örneğin Windows üzerinde Ubuntu veya MSI paketleri DEB paketleri kullanılarak dağıtılır. Bu yükleyicilerden yükleyecek ve ortamı kullanıcının yüklendikten hemen sonra SDK'yı kullanmak gereken şekilde ayarlayın. Ancak, bunlar ayrıca makine üzerinde yönetim ayrıcalıkları gerektirir. Yükleme talimatlarına görüntüleyebileceğiniz [.NET Core Yükleme Kılavuzu](https://aka.ms/dotnetcoregs).
+Herhangi bir araç olduğu gibi ile ilk şey araçlarını makinenize almaktır. Senaryonuza bağlı olarak, aşağıdaki yöntemlerden birini kullanarak SDK'sını yükleyebilirsiniz:
 
-Yükleme betikleri, diğer taraftan, yönetici ayrıcalıklarına gerek yoktur. Ancak, bunlar da herhangi bir önkoşulu makineye yükleyeceğiniz değil; Tüm Önkoşullar el ile yüklemeniz gerekir. Komut dosyaları çoğunlukla derleme sunucularında veya yönetici ayrıcalıkları (yukarıdaki önkoşulları uyarı unutmayın) olmadan araçları yüklemek istediğiniz zaman ayarlamak için yöneliktir. Daha fazla bilgi bulabilirsiniz [yükleme komut dosyası başvuru konusu](tools/dotnet-install-script.md). Nasıl CI yapı sunucunuzda SDK'sını ayarlama konusunda ilgileniyorsanız göz atın [SDK CI sunucularıyla](tools/using-ci-with-cli.md) belge.
+- Yerel yükleyicilerden kullanın.
+- Yükleme Kabuk betiği kullanın.
 
-Varsayılan olarak, bir "yan yana" (SxS) şekilde SDK'yı yükler. Bu CLI araçları birden çok sürümünü tek bir makinede herhangi bir belirli zamanda çalıştırılabileceği anlamına gelir. Doğru sürümü kullanılma daha ayrıntılı olarak açıklanan [sürücü bölüm](tools/index.md#driver) konunun .NET Core komut satırı araçları.
+Yerel yükleyicilerden öncelikle geliştiricinin makineler için yöneliktir. SDK'sı, Windows üzerinde Ubuntu veya MSI paketleri DEB paketleri gibi desteklenen her platformun yerel yükleme mekanizması kullanılarak dağıtılır. Bu yükleyicilerden yükleyin ve ortamı kullanıcının yüklendikten hemen sonra SDK'yı kullanmak gereken şekilde ayarlayın. Ancak, bunlar ayrıca makine üzerinde yönetim ayrıcalıkları gerektirir. SDK'yı yüklemek için bulabilirsiniz [.NET indirir](https://dotnet.microsoft.com/download) sayfası.
+
+Yükleme betikleri, diğer yandan yönetici ayrıcalıkları gerektirmez. Ancak, bunlar da herhangi bir önkoşulu makinede yüklemeyin; Tüm Önkoşullar el ile yüklemeniz gerekir. Komut dosyaları çoğunlukla derleme sunucularında veya yönetici ayrıcalıkları (yukarıdaki önkoşulları uyarı unutmayın) olmadan araçları yüklemek istediğiniz zaman ayarlamak için yöneliktir. Daha fazla bilgi bulabilirsiniz [betik başvurusu yükleme](tools/dotnet-install-script.md) makalesi. CI yapı sunucunuz üzerindeki SDK'yı kurma ilginizi çekiyorsa bkz [kullanarak .NET Core SDK'sı ve araçları, sürekli tümleştirme (CI)](tools/using-ci-with-cli.md) makalesi.
+
+Varsayılan olarak, SDK'sı CLI araçları birden çok sürümünü tek bir makinede herhangi bir belirli zamanda çalıştırılabileceği anlamına gelir "yan yana" (SxS) şekilde yüklenir. CLI komutlarını çalıştırırken sürüm nasıl çekilen daha ayrıntılı olarak açıklanan [kullanılacak .NET Core sürümünü seçin](/versions/selection.md) makalesi.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [.NET Core CLI](tools/index.md)
+- [.NET core sürüm genel bakış](/versions/index.md)
+- [SDK ve .NET Core çalışma zamanı'nı kaldırma](versions/remove-runtime-sdk-versions.md)
+- [Kullanılacak .NET Core sürümünü seçin](/versions/selection.md)

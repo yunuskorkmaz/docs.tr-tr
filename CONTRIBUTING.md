@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1b12e614c59785a066ad34e5320a205961f7dd49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21266130bd44d45d03f85cdeee9480b7a9944b55
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607767"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876941"
 ---
 # <a name="contributing"></a>Katkıda bulunan
 
@@ -65,14 +65,16 @@ Uygun Markdown söz dizimini takip ettiğinizden emin olun. Daha fazla bilgi iç
 
 ### <a name="example-structure"></a>Örnek yapısı
 
-    docs
-      /about
-      /core
-        /porting
-          porting-overview.md
-          /media
-            /porting-overview
-                portability_report.png
+```
+docs
+  /about
+  /core
+    /porting
+      porting-overview.md
+      /media
+        /porting-overview
+            portability_report.png
+```
 
 **4. adım:** Bir çekme isteği (PR) için kendi dalınızdaki gönderme `dotnet/docs/master`.
 

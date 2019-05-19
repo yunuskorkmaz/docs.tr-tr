@@ -2,12 +2,12 @@
 title: .NET 4.5 içinde Windows Workflow Foundation’daki Yenilikler
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: a76ec56cf6ac5260f00031bc815b32b1e10804a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6be2e3bd64fd93fab8af792bb92c3c0238a7ecde
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61671424"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876627"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 içinde Windows Workflow Foundation’daki Yenilikler
 
@@ -118,7 +118,7 @@ Hızlı Bul tasarımcının üzerinde gerçekleştirilen <xref:System.Activities
 
 Aşağıdaki ekran görüntüsünde, değişken ve bağımsız değişken Tasarımcı bağlam menüsünü gösterir.
 
-![Değişken ve bağımsız değişken Tasarımcı bağlam menüsü](./media/designercontextmenu.png "DesignerContextMenu")
+![Değişken ve bağımsız değişken Tasarımcı bağlam menüsü](./media/whats-new-in-wf-in-dotnet/designer-context-menu.png)
 
 ### <a name="BKMK_AutoSurround"></a> Otomatik-çevrelemeyi dizisi
 
@@ -126,11 +126,11 @@ Bir iş akışı veya belirli bir kapsayıcı etkinlikleri (gibi <xref:System.Ac
 
 Aşağıdaki ekran görüntüsü gösterildiği bir `WriteLine` etkinliğinde `Body` , bir `NoPersistScope`.
 
-![Otomatik&#45;çevreleyen bırakma konumu](./media/autosurround1.png "AutoSurround1")
+![WriteLine etkinlik NoPersistScope etkinliği gövdesi.](./media/whats-new-in-wf-in-dotnet/auto-surround-write-line-activity.png)
 
 Aşağıdaki ekran görüntüsünde otomatik olarak oluşturulan gösterilmektedir `Sequence` etkinliğinde `Body` ikinci zaman `WriteLine` ilk düştü.
 
-![Sıralı etkinlik otomatik olarak oluşturulan](./media/autosurround2.png "AutoSurround2")
+![Otomatik olarak oluşturulan bir sıralı bir NoPersistScope gövdesinde.](./media/whats-new-in-wf-in-dotnet/auto-surround-sequence-activity.png)
 
 ### <a name="BKMK_PanMode"></a> PAN modu
 
@@ -138,7 +138,7 @@ Büyük bir iş akışı Tasarımcısı'nda daha kolay gezinme için kaydırma m
 
 Aşağıdaki ekran görüntüsünde, iş akışı Tasarımcısı alt sağ köşesinde bulunan pan düğmesini gösterir.
 
-![İş Akışı Tasarımcısı'nda PAN düğmesi](./media/panbutton.png "PanButton")
+![İş Akışı Tasarımcısı'nda pan düğmesi.](./media/whats-new-in-wf-in-dotnet/pan-button-workflow-designer.png)
 
 Orta fare düğmesine veya Ara çubuğuna iş akışı Tasarımcısı kaydırmak için de kullanılabilir.
 
@@ -154,7 +154,7 @@ Hiyerarşik iş akışları gidin daha kolay hale getirmek için bir iş akış�
 
 Aşağıdaki ekran görüntüsünde tamamlanan iş akışından [başlangıç Öğreticisi](getting-started-tutorial.md) sıralı bir iş akışı ile ana hat görünümü gösterilir.
 
-![Anahat iş akışı Tasarımcısı'nda görünümü](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+![Visual Studio'da sıralı bir iş akışı ile ana hat görünümünün ekran görüntüsü.](./media/whats-new-in-wf-in-dotnet/outline-view-in-workflow-designer.jpg)
 
 ### <a name="BKMK_CSharpExpressions"></a> C# ifadeleri
 
@@ -174,17 +174,17 @@ Yeniden barındırılan tasarımcıda, bazı standart kullanıcı Arabirimi dene
 
 Aşağıdaki ekran görüntüsünde bir etkinlik araç kutusundan sürüklendiğinde görünür hale gelmiş eki noktalarını gösterir.
 
-![Otomatik bağlanma noktalarını gösteren akış çizelgesi başlangıç düğümü](./media/autoconnect1.png "Autoconnect1")
+![Akış başlangıç düğümü gösteren otomatik bağlanma noktası](./media/whats-new-in-wf-in-dotnet/auto-connect-points-start-node.png)
 
 Etkinlikler de akış düğüm ve düğüm iki düğüm arasındaki otomatik olarak eklemek üzere durumları arasında bağlantılar sürüklenebilen. Aşağıdaki ekran görüntüsünde vurgulanan bağlantı satırı burada etkinlikler araç kutusundan sürüklediğiniz ve olması bırakılan gösterir.
 
-![Otomatik&#45;etkinlikleri silmek için tanıtıcı eklemek](./media/autoinsert.png "Autoinsert")
+![Etkinlikleri silmek için tanıtıcı otomatik Ekle](./media/whats-new-in-wf-in-dotnet/auto-insert-connecting-line.png)
 
 ### <a name="BKMK_Annotations"></a> Tasarımcı ek açıklamaları
 
 Daha büyük iş akışları geliştirme kolaylaştırmak için tasarımcı tasarım süreci izlemenize yardımcı olması için ekleme ek açıklamalarını destekler. Ek açıklama, etkinlikleri, durumları, akış düğümleri, değişkenler ve bağımsız değişkenler eklenebilir. Aşağıdaki ekran görüntüsünde, ek açıklamalar tasarımcıya eklemek için kullanılan bağlam menüsünü gösterir.
 
-![Ek açıklama bağlam menüsü](./media/annotationdialog.png "annotationdialog")
+![Ek açıklama eklemek için menü gösteren ekran görüntüsü.](./media/whats-new-in-wf-in-dotnet/designer-annotations-context-menu.png)
 
 ### <a name="debugging-states"></a>Hata ayıklama durumları
 
@@ -232,7 +232,7 @@ Durum makinesi iş akışları, .NET Framework 4, sürüm 4.0.1'in parçası ola
 
 Aşağıdaki ekran görüntüsünde tamamlanan durum makine iş akışından gösterilmektedir [başlangıç Öğreticisi](getting-started-tutorial.md) adım [nasıl yapılır: Bir Durum makinesi iş akışı oluşturmak](how-to-create-a-state-machine-workflow.md).
 
-![Durum makinesi iş akışı tamamlandı](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
+![Tamamlanan Durum makinesi iş akışı gösteren şekil.](./media/whats-new-in-wf-in-dotnet/complete-state-machine-workflow.jpg)
 
 Durum makine iş akışları oluşturma hakkında daha fazla bilgi için bkz. [durum makine iş akışları](state-machine-workflows.md).
 

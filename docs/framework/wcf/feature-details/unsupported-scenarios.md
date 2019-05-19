@@ -2,12 +2,12 @@
 title: Desteklenmeyen Senaryolar
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 48ed292b3bb22ae4966680805a74b40b249d8a32
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637751"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878729"
 ---
 # <a name="unsupported-scenarios"></a>Desteklenmeyen Senaryolar
 Çeşitli nedenlerden dolayı Windows Communication Foundation (WCF) bazı belirli güvenlik senaryoları desteklemez. Örneğin, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition SSPI veya Kerberos kimlik doğrulama protokolleri uygulamaz ve bu nedenle WCF hizmet Windows kimlik doğrulaması ile bu platform üzerinde çalıştırılmasını desteklemez. Kullanıcı adı/parola ve HTTP/HTTPS tümleşik kimlik doğrulaması gibi diğer kimlik doğrulama mekanizmaları, WCF, Windows XP Home Edition altında çalışırken desteklenir.  
@@ -36,7 +36,7 @@ ms.locfileid: "64637751"
 >  Yukarıdaki gereksinimlerine özgüdür. Örneğin, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> yer alan bir Windows kimliği, ancak bir SCT belirlemez bir bağlama öğesi oluşturur. Bu nedenle, kendisiyle kullanabilirsiniz `Required` seçeneğini [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ### <a name="possible-aspnet-conflict"></a>Olası bir ASP.NET çakışma  
- WCF ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] her ikisini de etkinleştirmek veya kimliğe bürünme devre dışı bırakabilirsiniz. Zaman [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] barındıran bir WCF uygulaması, WCF arasında bir çakışma mevcut olabilir ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] yapılandırma ayarları. Çakışma olması durumunda, WCF ayarı, sürece önceliklidir <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> özelliği <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, bu durumda [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kimliğe bürünme ayarı öncelik kazanır.  
+ WCF ve ASP.NET hem etkinleştirebilir veya kimliğe bürünme devre dışı bırakın. ASP.NET WCF uygulaması barındırdığında, WCF ve ASP.NET yapılandırma ayarları arasında bir çakışma bulunabilir. Çakışma olması durumunda, WCF ayarı, sürece önceliklidir <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> özelliği <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, bu durumda ASP.NET kimliğe bürünme ayarı öncelik alır.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Derleme yüklerini altında kimliğe bürünme başarısız olabilir  
  Başkasının kimliğine bürünülerek gerçekleştirilen bağlamı bir derlemeyi yüklemek için erişim haklarına sahip değil ve ilk kez ise ortak dil çalışma zamanı (CLR), AppDomain için derlemeyi yüklenmeye çalışılıyor <xref:System.AppDomain> hatası önbelleğe alır. Bu derleme (veya derlemeleri) yüklemek için sonraki denemeler başarısız, bile kimliğe bürünme ve bile geri döndürdükten sonra dönüştürülen içerik derlemesini yüklemek için erişim haklarına sahiptir. Kullanıcı bağlamı değiştirildikten sonra CLR yük yeniden denemez olmasıdır. Hatadan kurtarmak için uygulama etki alanını yeniden başlatmanız gerekir.  
@@ -75,13 +75,13 @@ ms.locfileid: "64637751"
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>ASP.NET kimliğe bürünme ve ASP.NET uyumluluk kullanarak gerekliyse ileti güvenlik başarısız  
  İstemci kimlik doğrulaması, oluşmasını engellediğinden WCF ayarları aşağıdaki birleşimi desteklemez:  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Kimliğe bürünme etkinleştirilir. Bu Web.config dosyasında ayarlayarak yapılır `impersonate` özniteliği <`identity`> öğesine `true`.  
+- ASP.NET kimliğe bürünme etkinleştirilir. Bu Web.config dosyasında ayarlayarak yapılır `impersonate` özniteliği <`identity`> öğesine `true`.  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Uyumluluk modu etkin ayarlayarak `aspNetCompatibilityEnabled` özniteliği [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) için `true`.  
+- ASP.NET uyumluluk modunun etkin ayarlayarak `aspNetCompatibilityEnabled` özniteliği [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) için `true`.  
   
 - İleti modu güvenliği kullanılır.  
   
- Devre dışı bırakmak için geçici olduğu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uyumluluk modu. Veya [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uyumluluk modu gereklidir, devre dışı bırakma [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kimliğe bürünme özelliğini ve WCF tarafından sağlanan kimliğe bürünme özelliğini kullanın. Daha fazla bilgi için [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Geçici çözüm ASP.NET Uyumluluk modunu devre dışı bırakmak sağlamaktır. Veya ASP.NET uyumluluk modunun gerekiyorsa, ASP.NET kimliğe bürünme özelliğini devre dışı bırakma ve WCF tarafından sağlanan kimliğe bürünme özelliğini kullanın. Daha fazla bilgi için [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="ipv6-literal-address-failure"></a>IPv6 adresi değişmez değer hatası  
  Hizmet ve istemci aynı makinede olan ve değişmez değer IPv6 adresleri hizmeti için kullanılan güvenlik istekleri başarısız.  

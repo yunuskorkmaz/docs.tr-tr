@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: fddb59fc32feabf708e209ac4a5e78a14585fa66
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0c11937f1a0300c4a376657d423ef348a844f700
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637539"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880651"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGrid Denetimini Biçimlendirme
 
@@ -79,7 +79,7 @@ ms.locfileid: "65637539"
 
 1. Seçin <xref:System.Windows.Forms.DataGrid> formunuzdaki denetimi.
 
-2. İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.DataGrid.TableStyles%2A> özelliği ve tıklatın **üç nokta** (![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png " vbEllipsesButton")) düğmesi.
+2.  İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.DataGrid.TableStyles%2A> özelliği ve tıklatın **üç nokta** (![Visual Studio'nun Özellikler penceresinde üç nokta düğmesini (…).](./media/visual-studio-ellipsis-button.png)) düğmesi.
 
 3. İçinde **DataGridTableStyle Koleksiyonu Düzenleyicisi** iletişim kutusu, tıklayın **Ekle** tablo stili koleksiyona eklenecek.
 
@@ -89,7 +89,7 @@ ms.locfileid: "65637539"
 
      Eşleme adı, hangi tablo stili ile hangi tabloyu kullanılması gerektiğini belirtmek için kullanılır.
 
-5. İçinde **DataGridTableStyle Koleksiyonu Düzenleyicisi**seçin <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> özelliği ve üç nokta düğmesini (![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png "vbEllipsesButton ")).
+5.  İçinde **DataGridTableStyle Koleksiyonu Düzenleyicisi**seçin <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> özelliği ve üç nokta düğmesini (![Visual Studio'nun Özellikler penceresinde üç nokta düğmesini (…).](./media/visual-studio-ellipsis-button.png)).
 
 6. İçinde **DataGridColumnStyle Koleksiyonu Düzenleyicisi** iletişim kutusunda, oluşturduğunuz tablo stili sütun stil ekleyin.
 

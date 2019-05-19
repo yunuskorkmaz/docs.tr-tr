@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: ec215517cd667a6333137d0c7e51fe2ac58f5bcf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36e5602f0a0b872a4aa6cdac64b49b1d1c708795
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61688530"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877521"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma sağlama toplamı (C# Başvurusu)
-Hata ayıklamaya yardımcı olmak kaynak dosyalar için sağlama toplamları oluşturur [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] sayfaları.  
+ASP.NET sayfaları hatalarını ayıklamaya yardımcı olmak kaynak dosyalar için sağlama toplamları oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,9 +36,9 @@ Hata ayıklamaya yardımcı olmak kaynak dosyalar için sağlama toplamları olu
 ## <a name="remarks"></a>Açıklamalar  
  Visual Studio hata ayıklayıcı her zaman doğru kaynak bulduğu emin olmak için bir sağlama toplamı kullanır. Derleyici, bir kaynak dosyası için sağlama toplamını hesaplar ve ardından program veritabanı (PDB) dosyası çıktıyı yayar. Hata ayıklayıcı, PDB sonra kaynak dosyasını hesaplar sağlama toplamı karşılaştırma için kullanır.  
   
- Bu çözüm için çalışmaz [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] .aspx dosyası yerine üretilen kaynak dosyası için hesaplanan sağlama toplamı olduğu için proje. Bu sorunu gidermek için `#pragma checksum` sağlama desteği sağlayan [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] sayfaları.  
+ Bu çözüm, .aspx dosyası yerine üretilen kaynak dosyası için hesaplanan sağlama toplamı olduğu için ASP.NET projeleri için çalışmaz. Bu sorunu gidermek için `#pragma checksum` ASP.NET sayfaları için sağlama toplamı desteği sağlar.  
   
- Oluştururken bir [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] projesini Visual C# içinde oluşturulan kaynak dosyayı içeren içinden kaynak oluşturulduğunda .aspx dosyası, bir sağlama toplamı. Derleyici, daha sonra bu bilgileri PDB dosyasına yazar.  
+ Görselde bir ASP.NET projesi oluşturduğunuzda, C#, üretilen kaynak dosyası içinden kaynak oluşturulduğunda .aspx dosyası, bir sağlama toplamı içeriyor. Derleyici, daha sonra bu bilgileri PDB dosyasına yazar.  
   
  Derleyici Hayır karşılaşırsa `#pragma checksum` dosyasındaki yönergesi, sağlama toplamını hesaplar ve değeri PDB dosyasına yazar.  
   

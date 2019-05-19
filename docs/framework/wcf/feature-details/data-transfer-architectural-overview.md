@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 6b6e77dea17d71b74c2c06534fd3a941e3e867a8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 83fd5ab1cfe7f48999dd2765405f58543eeb743a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592561"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882213"
 ---
 # <a name="data-transfer-architectural-overview"></a>Veri Aktarımı Mimarisi Genel Bakış
 Windows Communication Foundation (WCF), bir Mesajlaşma altyapısı düşünülebilir. Bu iletileri almak, bunları işlemek ve bunları başka bir eylem için kullanıcı kodu için gönderme veya kullanıcı kodu tarafından verilen veri iletileri oluşturmak ve bunları bir hedefe sunun. İleri düzey geliştiriciler için tasarlanmıştır, bu konu, iletileri ve içerdiği veri işleme mimarisini açıklar. Veri göndermek ve almak nasıl daha basit, görev odaklı görünümü için bkz: [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -268,7 +268,7 @@ Windows Communication Foundation (WCF), bir Mesajlaşma altyapısı düşünüle
   
  WCF serileştirme ve seri durumdan çıkarılırken parametreleri ve message bölümleri için "kullanıma hazır" iki seri hale getirme teknolojilerini destekler: <xref:System.Runtime.Serialization.DataContractSerializer> ve `XmlSerializer`. Ayrıca, özel seri hale getiricileri genişletme yazabilirsiniz. Ancak, WCF diğer bölümlerini (genel gibi `GetBody` yöntemi veya SOAP serileştirme hata) yalnızca kullanmak için kısıtlı olabilir <xref:System.Runtime.Serialization.XmlObjectSerializer> alt sınıfları (<xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.NetDataContractSerializer>, ama <xref:System.Xml.Serialization.XmlSerializer>), ya da yalnızca kullanılacak kodlanmış olabilir <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- `XmlSerializer` Serileştirme motoruna kullanılan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri. `DataContractSerializer` Yeni veri sözleşme programlama modelini anlayan yeni seri hale getirme altyapısı. `DataContractSerializer` Varsayılan seçenek ve kullanma seçimi `XmlSerializer` kullanarak bir işlem başına temel yapılabilir <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> özniteliği.  
+ `XmlSerializer` Olan serileştirme motoruna ASP.NET Web hizmetlerini kullandı. `DataContractSerializer` Yeni veri sözleşme programlama modelini anlayan yeni seri hale getirme altyapısı. `DataContractSerializer` Varsayılan seçenek ve kullanma seçimi `XmlSerializer` kullanarak bir işlem başına temel yapılabilir <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> özniteliği.  
   
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> ve <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> işlem davranışları için ileti biçimlendiriciler takma için sorumlu olan `DataContractSerializer` ve `XmlSerializer`sırasıyla. <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> Davranışı ile türetilen seri hale getirici gerçekten çalışabilir <xref:System.Runtime.Serialization.XmlObjectSerializer>de dahil olmak üzere <xref:System.Runtime.Serialization.NetDataContractSerializer> (tek başına serileştirme kullanarak ayrıntılı açıklanmıştır). Davranış birini çağırır `CreateSerializer` serileştiriciyi almak için sanal bir yöntem aşırı yüklemeleri. Farklı bir serileştirici takmak için yeni bir oluşturma <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> alt sınıf ve geçersiz kılma `CreateSerializer` aşırı yüklemeleri.  
   

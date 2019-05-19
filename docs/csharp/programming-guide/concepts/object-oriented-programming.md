@@ -2,12 +2,12 @@
 title: Nesne odaklı programlama (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: a7a3ce1b33d040b337087dfede90b58906c95cbd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2adb1ac24aa625c89fcafe074fe65189aa3767c7
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710972"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880701"
 ---
 # <a name="object-oriented-programming-c"></a>Nesne odaklı programlama (C#)
 
@@ -25,17 +25,17 @@ Bu bölüm aşağıdaki kavramları açıklar:
 
   - [Sınıf üyeleri](#Members)
 
-        [Properties and Fields](#Properties)
+    - [Özellikler ve alanları](#Properties)
 
-        [Methods](#Methods)
+    - [Yöntemler](#Methods)
 
-        [Constructors](#Constructors)
+    - [Oluşturucular](#Constructors)
 
-        [Finalizers](#Finalizers)
+    - [Sonlandırıcılar](#Finalizers)
 
-        [Events](#Events)
+    - [Olaylar](#Events)
 
-        [Nested Classes](#NestedClasses)
+    - [İç içe geçmiş sınıflar](#NestedClasses)
 
   - [Erişim değiştiricileri ve erişim düzeyleri](#AccessModifiers)
 

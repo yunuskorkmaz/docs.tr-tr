@@ -2,12 +2,12 @@
 title: Bir mikro hizmete CQRS ve DDD desenlerini uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | CQRS ve DDD desenlerini arasındaki genel ilişki anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: bdb3f4a87f48a27a7b46b1297a9237af01ffb6b6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a5df8ce495b308df63af47ef1ec2ed26be2b5e37
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639817"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875898"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Bir mikro hizmet Basitleştirilmiş CQRS ve DDD desenlerini uygulama
 
@@ -19,7 +19,7 @@ CQRS için veri okuma ve yazma modelleri ayıran bir mimari modelidir. İlgili d
 
 CQS olan basit bir kavram — aynı nesneye yöntemlerinde hakkındadır sorguları veya komutları oluşturuluyor. Her bir yöntemin durumunu döndürür veya durumu, ancak ikisini birden değiştirdiği. Hatta tek depo düzeni nesne CQS ile uyumlu. Temel bir ilke CQS CQRS için kabul edilebilir.
 
-[Komut ve sorgu sorumluluğu ayrımı (CQRS)](https://martinfowler.com/bliki/CQRS.html) Greg Young tarafından sunulan ve UDI Dahan ve başkaları tarafından kesinlikle yükseltildi. Daha ayrıntılı rağmen CQS ilkesine temel alır. Komutlar ve olayları ve isteğe bağlı olarak zaman uyumsuz iletiler alan bir deseni kabul edilebilir. Çoğu durumda okuma (sorgular) için yazma işlemleri (güncelleştirmeler) için farklı bir fiziksel veritabanı sahip gibi daha gelişmiş senaryoları CQRS ilgilidir. Ayrıca, daha fazla sistem gereksinimleri bir CQRS sistem uygulayabilir [olay kaynağını belirleme (ES)](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/) güncelleştirmeleri veritabanınız için bu nedenle yalnızca depoladığınız olayları geçerli durumu verilerini depolamak yerine etki alanı modeli içinde. Ancak, bu kılavuzda kullanılan yaklaşım değildir; sorguları komutlardan yalnızca ayırma oluşan basit CQRS yaklaşımı kullanıyoruz.
+[Komut ve sorgu sorumluluğu ayrımı (CQRS)](https://martinfowler.com/bliki/CQRS.html) Greg Young tarafından sunulan ve UDI Dahan ve başkaları tarafından kesinlikle yükseltildi. Daha ayrıntılı rağmen CQS ilkesine temel alır. Komutlar ve olayları ve isteğe bağlı olarak zaman uyumsuz iletiler alan bir deseni kabul edilebilir. Çoğu durumda okuma (sorgular) için yazma işlemleri (güncelleştirmeler) için farklı bir fiziksel veritabanı sahip gibi daha gelişmiş senaryoları CQRS ilgilidir. Ayrıca, daha fazla sistem gereksinimleri bir CQRS sistem uygulayabilir [olay kaynağını belirleme (ES)](https://martinfowler.com/eaaDev/EventSourcing.html) güncelleştirmeleri veritabanınız için bu nedenle yalnızca depoladığınız olayları geçerli durumu verilerini depolamak yerine etki alanı modeli içinde. Ancak, bu kılavuzda kullanılan yaklaşım değildir; sorguları komutlardan yalnızca ayırma oluşan basit CQRS yaklaşımı kullanıyoruz.
 
 CQRS ayrımı yönüyle bir katmandaki sorgu işlemleri ve başka bir katmanda komutları gruplandırma tarafından sağlanır. Her katmanın kendi veri modelinin (Not dediğimiz modeli, farklı bir veritabanı gerekmez) ve kendi birleşim desenleri ve teknolojiler kullanılarak oluşturulmuştur. Daha da önemlisi, iki katman aynı katmandaki veya (mikro hizmet sıralama) örnekte olduğu gibi bu kılavuzda kullanılan mikro içinde olabilir. Veya en iyi duruma getirilmiş edilebilmeleri ve ayrı olarak başka bir etkilemeden ölçeği böylece bunlar farklı mikro hizmetler ve işlemlerde uygulanabilir.
 
@@ -32,6 +32,11 @@ Bu tür bir hizmeti hizmetine başvuru uygulamadaki sıralama mikro hizmet örne
 **Şekil 7-2**. CQRS ve DDD tabanlı mikro hizmet Basitleştirilmiş
 
 Uygulama katmanı Web API'si olabilir. Önemli tasarım burada mikro hizmet sorguları ve Viewmodel'lar (özellikle istemci uygulamaları için oluşturulan veri modelleri) bölündü komutlarını, etki alanı modeli ve CQRS modelinin aşağıdaki işlemleri yönüdür. Bu yaklaşım sorguları sınırlamaları ve kısıtlamalar sonraki bölümlerde açıklandığı gibi işlemleri ve güncelleştirmeler için anlamlı yalnızca DDD deseni geldiğini bağımsız olarak korur.
+
+## <a name="additional-resources"></a>Ek kaynaklar
+
+ - **Greg Young. Bir olay kaynağı sistem sürümü oluşturma** (ücretsiz çevrimiçi e-kitabı okuyun) \
+   <https://leanpub.com/esversioning/read>
 
 >[!div class="step-by-step"]
 >[Önceki](index.md)

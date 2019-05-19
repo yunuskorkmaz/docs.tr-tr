@@ -1,6 +1,6 @@
 ---
 title: C# foreach deyimi
-ms.date: 06/29/2018
+ms.date: 05/17/2019
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 417a8cefbc9bc7544ae1156992e6e6c549fb828f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7a1508db23f60cac487e0171c3db7756bc228fd2
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661636"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880532"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, (C# Başvurusu)
 
@@ -26,6 +26,8 @@ ms.locfileid: "61661636"
 C# 7.3, ile başlayarak Numaralandırıcı `Current` özelliği döndürür bir [başvuru dönüş değeri](ref.md#reference-return-values) (`ref T` burada `T` koleksiyon öğesi türü), yineleme değişkeni ile bildirebilirsiniz `ref` veya `ref readonly` değiştiricisi.
 
 Herhangi bir anda işaret içinde `foreach` deyim bloğunu kullanarak döngü dışında bozabilir [sonu](break.md) deyimi veya bir sonraki yinelemesine kullanarak adım [devam](continue.md) deyimi. Ayrıca çıkış bir `foreach` tarafından döngü [goto](goto.md), [dönüş](return.md), veya [throw](throw.md) deyimleri.
+
+Varsa `foreach` deyimi uygulanan `null`, <xref:System.NullReferenceException> oluşturulur. Kaynak koleksiyonunu `foreach` boş deyim gövdesi `foreach` döngü değil yürütülen ve atlandı.
 
 ## <a name="examples"></a>Örnekler
 

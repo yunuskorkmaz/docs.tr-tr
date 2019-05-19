@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: ace4b1c32ac30c54b56e2adbbbbf6af0450a4740
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b28a8a8fc2d75f80a14447008c850de63e4e04b3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651536"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882428"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Yeni Kayıtlar için Satır Kullanma
 Kullandığınızda, bir <xref:System.Windows.Forms.DataGridView> uygulamanızdaki verileri düzenlemek için genellikle, kullanıcılarınızın veri deposuna veri yeni satır ekleme olanağı sağlayacak istersiniz. <xref:System.Windows.Forms.DataGridView> Denetimi, bir satır yeni kayıtlar için her zaman son satır gösterilen sağlayarak bu işlevselliği destekler. Kendi satır üst bilgisi olarak bir yıldız işareti (*) simgesiyle işaretlenir. Aşağıdaki bölümlerde yeni kayıtlar için satır programla etkin olduğunda dikkate almanız gereken şeylerden bazıları açıklanmaktadır.  
@@ -47,7 +47,7 @@ Kullandığınızda, bir <xref:System.Windows.Forms.DataGridView> uygulamanızda
 ## <a name="sorting"></a>Sıralama  
  Bağlantısız modda, yeni kayıtlar her zaman sonuna eklenecek <xref:System.Windows.Forms.DataGridView> kullanıcı içeriğini sıralanmış olsa bile <xref:System.Windows.Forms.DataGridView>. Kullanıcı sıralama satır doğru konuma sıralamak için yeniden uygulamanız gerekir; Bu benzer, davranıştır <xref:System.Windows.Forms.ListView> denetimi.  
   
- Veri ilişkili ve sanal modda bir sıralama uygulandığında ekleme davranışını ve veri modelinin uygulamasına bağımlı olacaktır. İçin [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], satırın doğru konumda hemen sıralanır.  
+ Veri ilişkili ve sanal modda bir sıralama uygulandığında ekleme davranışını ve veri modelinin uygulamasına bağımlı olacaktır. ADO.NET için satırın doğru konumda hemen sıralanır.  
   
 ## <a name="other-notes-on-the-row-for-new-records"></a>Yeni kayıtlar için satır ilgili diğer notlar  
  Ayarlayamazsınız <xref:System.Windows.Forms.DataGridViewRow.Visible%2A> özelliği için bu satırın `false`. Bir <xref:System.InvalidOperationException> bu denenirse tetiklenir.  

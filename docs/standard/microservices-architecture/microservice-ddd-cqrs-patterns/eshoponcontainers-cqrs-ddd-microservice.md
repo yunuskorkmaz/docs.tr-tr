@@ -2,12 +2,12 @@
 title: eShopOnContainers üzerinde bir DDD mikro hizmetine CQRS ve CQS yaklaşımları uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Sıralama mikro hizmetine CQRS uygulanan şekilde anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: a688f6e4050ca56c482510bc13880c8b29b11072
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0380e759595e8a159e89f858a5ced4dacfa4e9b4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639561"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875905"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Bir DDD mikro hizmetine CQRS ve CQS yaklaşımları uygulama
 
@@ -44,20 +44,11 @@ Yalnızca bir uygulama mimari: Sistem veya uçtan uca uygulama mimarisi (örneğ
 - **Martin Fowler. CQRS** \
   <https://martinfowler.com/bliki/CQRS.html>
 
-- **Greg Young. CQS vs. CQRS** \
-  <http://codebetter.com/gregyoung/2009/08/13/command-query-separation/>
-
 - **Greg Young. CQRS belgeleri** \
-  [https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
-
-- **Greg Young. CQRS, görev tabanlı kullanıcı arabirimleri ve olay kaynağını belirleme** \
-  <http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/>
+  <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf>
 
 - **UDI Dahan. Açıklanan CQRS** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
-
-- **Olay kaynak belirleme (ES)** \
-  <http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/>
 
 >[!div class="step-by-step"]
 >[Önceki](apply-simplified-microservice-cqrs-ddd-patterns.md)

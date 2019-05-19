@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: 8b220e0d6b7e6ab5a7b6d964d1910eaafb63d2d9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: bca12c1dd8c79a5ae17e4a9b7b75d3c7b302fb89
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633929"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875868"
 ---
 # <a name="unsafe-c-reference"></a>unsafe (C# Başvurusu)
 
@@ -43,7 +43,7 @@ unsafe
 }
 ```
 
-Güvenli olmayan kod olarak derlemek için belirtmelisiniz [/ unsafe](../compiler-options/unsafe-compiler-option.md) derleyici seçeneği. Güvenli olmayan kod ortak dil çalışma zamanı tarafından doğrulanabilir değil.
+Güvenli olmayan kod olarak derlemek için belirtmelisiniz [ `-unsafe` ](../compiler-options/unsafe-compiler-option.md) derleyici seçeneği. Güvenli olmayan kod ortak dil çalışma zamanı tarafından doğrulanabilir değil.
 
 ## <a name="example"></a>Örnek
 

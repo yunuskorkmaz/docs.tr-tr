@@ -2,12 +2,12 @@
 title: MTOM Kodlama
 ms.date: 03/30/2017
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
-ms.openlocfilehash: abca7810e9d414808ddc195b95de05922edb6238
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fda14ec04515f36467bbaa5077d904866e3d8013
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756032"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876370"
 ---
 # <a name="mtom-encoding"></a>MTOM Kodlama
 Bu örnek, bir WSHttpBinding kodlamasını ileti aktarım en iyi duruma getirme mekanizması (MTOM) kullanımını gösterir. MTOM ham bayt, büyük ikili eklerle SOAP iletilerini ileten bir izin vermek için daha küçük iletileri mekanizmadır.  
@@ -68,7 +68,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1. Yükleme [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aşağıdaki komutu kullanarak 4.0.  
+1. ASP.NET 4. 0 aşağıdaki komutu kullanarak yükleyin.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  

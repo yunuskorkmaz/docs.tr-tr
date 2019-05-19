@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: aea2715211ad03b763aae9cadc32e97d0e06d09e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 26e1fd4231964be5448229a6b3c7d90c0ba64499
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628839"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882509"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler
 Olay tabanlı zaman uyumsuz desen sınıflarda, alışık olduğunuz olay ile zaman uyumsuz davranış ve semantiği temsilci etkili bir yol sağlar. Olay tabanlı zaman uyumsuz desen uygulamak için bazı belirli davranış gereksinimini takip etmeniz gerekir. Aşağıdaki bölümlerde, gereksinimleri ve olay-tabanlı zaman uyumsuz deseni izleyen bir sınıf uygularken dikkate almanız gereken yönergeler açıklanmaktadır.  
@@ -118,7 +118,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - Zaman uyumsuz işlemde oluşur ve değerini özel durumları yakalama <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> özelliği, özel duruma bakın.  
   
 ### <a name="threading-and-contexts"></a>Parçacıkları ve bağlamları  
- Sınıfınıza doğru çalışması için istemcinin olay işleyicileri doğru iş parçacığı veya belirli bir uygulama modeli için bağlam çağrılır kritik dahil olmak üzere [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] ve Windows Forms uygulamaları. İki önemli yardımcı sınıfları, zaman uyumsuz sınıfınızın herhangi bir uygulama modeli altında düzgün şekilde davranan emin olmak için sağlanır: <xref:System.ComponentModel.AsyncOperation> ve <xref:System.ComponentModel.AsyncOperationManager>.  
+ Sınıfınıza doğru çalışması için istemcinin olay işleyicileri doğru iş parçacığı veya ASP.NET ve Windows Forms uygulamaları dahil olmak üzere belirli uygulama modeli için bağlam çağrılır önemlidir. İki önemli yardımcı sınıfları, zaman uyumsuz sınıfınızın herhangi bir uygulama modeli altında düzgün şekilde davranan emin olmak için sağlanır: <xref:System.ComponentModel.AsyncOperation> ve <xref:System.ComponentModel.AsyncOperationManager>.  
   
  <xref:System.ComponentModel.AsyncOperationManager> bir yöntem sağlar <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, döndüren bir <xref:System.ComponentModel.AsyncOperation>. <em>MethodName</em>**zaman uyumsuz** yöntem çağrılarını <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> ve sınıfınız döndürülen kullanan <xref:System.ComponentModel.AsyncOperation> zaman uyumsuz görev ömrünü izlemek için.  
   

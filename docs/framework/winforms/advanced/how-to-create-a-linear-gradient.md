@@ -10,12 +10,12 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 953a1944073a8cb5b19ef072e2a523baec3a5605
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e55d27b454579268658192ae56daa52e0b28bb83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650001"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876071"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Nasıl yapılır: Doğrusal Gradyan Oluşturma
 GDI +'da yatay, dikey ve Çapraz doğrusal gradyanlar sağlar. Varsayılan olarak, aynı şekilde doğrusal gradyan rengi değişir. Ancak, Tekdüzen olmayan biçimde rengini değiştirir, böylece doğrusal gradyan özelleştirebilirsiniz.  
@@ -31,9 +31,9 @@ Aşağıdaki örnek, bir satır, bir elips ve dikdörtgen Yatay doğrusal gradya
   
  Aşağıdaki çizimde, çizgi, elips ve dikdörtgen gösterilir. Yatay koordinat 200 arttıkça renk gradyanı kendisini tekrarlar olduğunu unutmayın.  
   
- ![Doğrusal gradyan](./media/cslineargradient1.png "cslineargradient1")  
+ ![Bir satır, bir elips ve dikdörtgen bir renk gradyanı ile doldurulur.](./media/how-to-create-a-linear-gradient/gradient-line-ellipse-rectangle.png)  
   
-### <a name="to-use-horizontal-linear-gradients"></a>Yatay doğrusal gradyanlar kullanmak için  
+## <a name="to-use-horizontal-linear-gradients"></a>Yatay doğrusal gradyanlar kullanmak için  
   
 - Donuk kırmızı ve donuk mavi renkle üçüncü ve dördüncü bağımsız değişken olarak, sırasıyla geçirin.  
   
@@ -56,9 +56,9 @@ Aşağıdaki örnek, bir satır, bir elips ve dikdörtgen Yatay doğrusal gradya
   
  Aşağıdaki çizimde, sonuçta elde edilen elips ve dikdörtgen gösterilir.  
   
- ![Doğrusal gradyan](./media/cslineargradient2.png "cslineargradient2")  
+ ![Elips ve dikdörtgen bir yatay renk gradyanı ile doldurulur.](./media/how-to-create-a-linear-gradient/gradient-ellipse-rectangle.png)  
 
-### <a name="to-customize-linear-gradients"></a>Doğrusal gradyanlar özelleştirmek için  
+## <a name="to-customize-linear-gradients"></a>Doğrusal gradyanlar özelleştirmek için  
   
 - Donuk siyah ve donuk kırmızı renkte üçüncü ve dördüncü bağımsız değişken olarak, sırasıyla geçirin.  
   
@@ -71,9 +71,9 @@ Aşağıdaki örnek, bir satır, bir elips ve dikdörtgen Yatay doğrusal gradya
   
  Aşağıdaki çizim, satır ve üç nokta gösterir. Not geçerken elips değişiklikleri rengi kademeli olarak satırında aracılığıyla geçirme satırına paralel (0, 0) ve (200, 100).  
   
- ![Doğrusal gradyan](./media/cslineargradient3.png "cslineargradient3")  
+ ![Bir satır, bir elips çapraz renk gradyan ile doldurulur.](./media/how-to-create-a-linear-gradient/gradient-line-ellipse.png)  
   
-### <a name="to-create-diagonal-linear-gradients"></a>Çapraz doğrusal gradyanlar oluşturma  
+## <a name="to-create-diagonal-linear-gradients"></a>Çapraz doğrusal gradyanlar oluşturma  
   
 - Donuk mavi ve donuk yeşil renkte üçüncü ve dördüncü bağımsız değişken olarak, sırasıyla geçirin.  
   

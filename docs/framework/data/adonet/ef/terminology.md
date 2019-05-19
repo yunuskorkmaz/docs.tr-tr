@@ -2,12 +2,12 @@
 title: Entity Framework Terimleri
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 9272740bef21dbe8b28bd6e58354a342fb799002
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f78545102823b19cc65b100f2b270ae71c1bd077
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583539"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877478"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework Terimleri
 Bu konu, sık başvurulan terimlerini tanımlar [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] belgeleri. Ek bilgileri kullanılabildiği ilgili konulara bağlantılar sağlanmaktadır.  
@@ -30,7 +30,7 @@ Bu konu, sık başvurulan terimlerini tanımlar [!INCLUDE[adonet_ef](../../../..
 |.edmx dosyası|Kavramsal modelde (CSDL), depolama modelinde (SSDL) ve bunları (MSL) arasındaki eşlemeleri içeren bir XML dosyası. .Edmx dosyasını tarafından oluşturulan [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] araçları. Daha fazla bilgi için [.edmx dosyasını genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).|  
 |end|İlişkilendirmesine katılan bir varlık.<br /><br /> Daha fazla bilgi için [son öğe (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl) ve [ilişkilendirme end](../../../../../docs/framework/data/adonet/association-end.md).|  
 |varlık|Bir kavram, bir veri türü tanımlandığı bir uygulama etki alanı.<br /><br /> Daha fazla bilgi için [EntityType öğesi (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl) ve [varlık türü](../../../../../docs/framework/data/adonet/entity-type.md).|  
-|EntityClient|Depolamadan bağımsız [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] sınıflar gibi içeren veri sağlayıcısı `EntityConnection`, `EntityCommand`, ve `EntityDataReader`. Çalışan [!INCLUDE[esql](../../../../../includes/esql-md.md)] ve belirli depolama alanına bağlanan [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] veri sağlayıcıları gibi `SqlClient`.<br /><br /> Daha fazla bilgi için [Entity Framework için EntityClient sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).|  
+|EntityClient|Sınıflar gibi içeren depolama bağımsız bir ADO.NET veri sağlayıcısının `EntityConnection`, `EntityCommand`, ve `EntityDataReader`. Çalışan [!INCLUDE[esql](../../../../../includes/esql-md.md)] ve depolama belirli ADO.NET veri sağlayıcıları için aşağıdaki gibi bağlanır `SqlClient`.<br /><br /> Daha fazla bilgi için [Entity Framework için EntityClient sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).|  
 |entity container|Varlık setleri ve ilişki Setleri, belirtilen bir ad alanında uygulanacak belirtir.<br /><br /> Daha fazla bilgi için [EntityContainer öğesi (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitycontainer-element-csdl) ve [varlık kapsayıcısı](../../../../../docs/framework/data/adonet/entity-container.md).|  
 |Varlık Veri Modeli (EDM)|Varlıklar ve ilişkiler, saklı hâli bağımsız olarak, veri yapısını açıklayan kavramları kümesi.<br /><br /> Daha fazla bilgi için [varlık veri modeli](../../../../../docs/framework/data/adonet/entity-data-model.md).|  
 |Varlık Çerçevesi|Geliştiricilerin veri kaynaklarındaki mantıksal şemalarla eşleşen kavramsal modellerle çalışmak sağlayarak veri yönelimli yazılım uygulamalarının geliştirilmesini destekleyen teknoloji kümesi.<br /><br /> Daha fazla bilgi için [Entity Framework'e Genel Bakış](../../../../../docs/framework/data/adonet/ef/overview.md).|  

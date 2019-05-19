@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: cf99979e2ea3a47247a5df4b6e0ececab6abe8ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4db6d7e13bfc4a0e2705c210820db511a60e09de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645525"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877349"
 ---
 # <a name="securing-wcf-data-services"></a>WCF Veri Hizmetlerinin Güvenliğini Sağlama
 Bu konuda, geliştirme, dağıtma ve WCF Veri Hizmetleri ve uygulamaları, açık veri Protokolü (OData) destekleyen, erişim Hizmetleri'ni çalıştırmak için belirli güvenlik konuları açıklanmaktadır. Güvenli .NET Framework uygulamaları oluşturmaya yönelik önerileri de izlemelidir.  
@@ -55,7 +55,7 @@ context.Credentials = _
  Veri hizmeti oturum açma kimlik bilgilerini gerektirdiğinde belirtilemez kullanarak bir <xref:System.Net.NetworkCredential> nesne, beyana dayalı belirteç veya kimlik bilgisi gibi el ile üst bilgileri HTTP isteğinde genellikle ayarlamalısınız `Authorization` ve `Cookie` üstbilgileri. Bu tür bir kimlik doğrulama senaryosu hakkında daha fazla bilgi için blog gönderisine bakın [ OData ve kimlik doğrulaması – 3. Kısım-istemci tarafı kancaları](https://devblogs.microsoft.com/odata/odata-and-authentication-part-3-clientside-hooks/). İstek iletisinde HTTP üstbilgilerini ayarlama örneği için bkz: [nasıl yapılır: İstemci isteğinde üst bilgileri ayarlama](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md).  
   
 ## <a name="impersonation"></a>Kimliğe bürünme  
- Genellikle veri hizmeti, veri hizmetini barındıran çalışan işleminin kimlik bilgilerini kullanarak sunucudaki veya veritabanındaki dosyalar gibi gerekli kaynaklara erişir. Kimliğe bürünme kullanılırken [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulamaları isteği yapan kullanıcının Windows kimliğiyle (kullanıcı hesabı) yürütebilir. Kimliğe bürünme, genel olarak kullanıcının kimliğini doğrulamak için IIS'den yararlanan uygulamalarda kullanılır ve gerekli kaynaklara erişmek için bu ilkenin kimlik bilgileri kullanılır. Daha fazla bilgi için [ASP.NET kimliğe bürünme](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)).  
+ Genellikle veri hizmeti, veri hizmetini barındıran çalışan işleminin kimlik bilgilerini kullanarak sunucudaki veya veritabanındaki dosyalar gibi gerekli kaynaklara erişir. Kimliğe bürünme kullanılırken, ASP.NET uygulamaları isteği yapan kullanıcının Windows kimliğiyle (kullanıcı hesabı) yürütebilir. Kimliğe bürünme, genel olarak kullanıcının kimliğini doğrulamak için IIS'den yararlanan uygulamalarda kullanılır ve gerekli kaynaklara erişmek için bu ilkenin kimlik bilgileri kullanılır. Daha fazla bilgi için [ASP.NET kimliğe bürünme](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)).  
   
 ## <a name="configuring-data-service-authorization"></a>Veri Hizmeti Yetkilendirmesini Yapılandırma  
  Yetkilendirme, uygulama kaynaklarının daha önce başarılı olan bir kimlik doğrulama temel alınarak belirlenen bir ilkeye veya işleme erişimini sağlamaktır. Genel bir uygulama olarak, yeterli hakları yalnızca istemci uygulamaları tarafından gerekli kılınan işlemleri gerçekleştirmek için veri hizmetinin kullanıcılarına vermeniz gerekir.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: ceffef8e911bb3e49e0d6526328523667a462b61
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: c9da2e1daff23ef9ba39d8b5d53cb3be67f35a27
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912451"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878216"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Nasıl yapılır: Sorunlu Yazdırma İşini Tanımlama
 Ağ yöneticileri genellikle şikayetlerinin değil veya yavaş yazdırma, yazdırma işlerini ilgili olarak kullanıcılardan alan. Zengin, kullanıma sunulan yazdırma işi Özellikler [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] hızlı bir uzaktan tanılama yazdırma işi gerçekleştirmek için Microsoft .NET Framework'ü bir yol sağlar.  
@@ -59,7 +59,7 @@ Ağ yöneticileri genellikle şikayetlerinin değil veya yavaş yazdırma, yazd�
  [!code-csharp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#identifyanddiagnoseproblematicjob)]
  [!code-vb[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#identifyanddiagnoseproblematicjob)]  
   
- Bayraklarını kullanarak yazdırma işinin durumunu denetlemek için <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> özelliği, ilgili her bayrağı ayarlanmış olup olmadığını görmek için denetleyin. Bir bit bit bayrakları kümesi içinde ayarlanmış olup olmadığını görmek için standart bayrakları kümesini tek bir işlenen ve diğer bayrağını kendisini olarak bir mantıksal AND işlemini gerçekleştirmek için yoludur. En fazla bayrağı ayarlayın, mantıksal sonucunu bir bit varsa ve bu yana aynı söz konusu bit ayarlanır. Bunu veya olduğunu bulmak için yalnızca sonuç mantıksal AND bayrağı ile karşılaştırın. Daha fazla bilgi için <xref:System.Printing.PrintJobStatus>, [& işleci (C# başvuru)](~/docs/csharp/language-reference/operators/and-operator.md), ve <xref:System.FlagsAttribute>.  
+ Bayraklarını kullanarak yazdırma işinin durumunu denetlemek için <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> özelliği, ilgili her bayrağı ayarlanmış olup olmadığını görmek için denetleyin. Bir bit bit bayrakları kümesi içinde ayarlanmış olup olmadığını görmek için standart bayrakları kümesini tek bir işlenen ve diğer bayrağını kendisini olarak bir mantıksal AND işlemini gerçekleştirmek için yoludur. En fazla bayrağı ayarlayın, mantıksal sonucunu bir bit varsa ve bu yana aynı söz konusu bit ayarlanır. Bunu veya olduğunu bulmak için yalnızca sonuç mantıksal AND bayrağı ile karşılaştırın. Daha fazla bilgi için <xref:System.Printing.PrintJobStatus>, [& işleci (C# başvuru)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-), ve <xref:System.FlagsAttribute>.  
   
  Biti ayarlanmış, her bir öznitelik için kod, bu rapor, konsol ekranına ve bazen yanıt için bir yol önerir. ( **HandlePausedJob** iş veya sıra duraklatılmışsa çağrılan yöntem aşağıda ele alınmıştır.)  
   
@@ -87,6 +87,6 @@ Ağ yöneticileri genellikle şikayetlerinin değil veya yavaş yazdırma, yazd�
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [& İşleci (C# Başvurusu)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& İşleci (C# Başvurusu)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
 - [WPF'deki Belgeler](documents-in-wpf.md)
 - [Yazdırmaya Genel Bakış](printing-overview.md)

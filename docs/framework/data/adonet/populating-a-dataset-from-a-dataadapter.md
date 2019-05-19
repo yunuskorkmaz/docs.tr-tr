@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-ms.openlocfilehash: c49e810b830ecb7327f400d9ef183f4db9c7d736
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 88905f0ef735aef742c0279ac86b640d8a9b9b0e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584561"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877372"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>DataAdapter’dan bir DataSet Doldurma
-[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet> Sağlayan bir tutarlı ilişkisel programlama modeli bağımsız veri kaynağının veri bellekte gösterimidir. `DataSet` Tablolar, kısıtlamalar ve tablolar arasındaki ilişkileri içeren verileri eksiksiz bir kümesini temsil eder. Çünkü `DataSet` veri kaynağını, bağımsız bir `DataSet` uygulamaya yerel veri ve birden çok veri kaynaklarından alınan verileri içerebilir. Mevcut veri kaynaklarıyla etkileşim aracılığıyla denetlenir `DataAdapter`.  
+ADO.NET <xref:System.Data.DataSet> sağlayan bir tutarlı ilişkisel programlama modeli bağımsız veri kaynağının veri bellekte gösterimidir. `DataSet` Tablolar, kısıtlamalar ve tablolar arasındaki ilişkileri içeren verileri eksiksiz bir kümesini temsil eder. Çünkü `DataSet` veri kaynağını, bağımsız bir `DataSet` uygulamaya yerel veri ve birden çok veri kaynaklarından alınan verileri içerebilir. Mevcut veri kaynaklarıyla etkileşim aracılığıyla denetlenir `DataAdapter`.  
   
  `SelectCommand` Özelliği `DataAdapter` olduğu bir `Command` nesnesini, veri kaynağından veri alır. `InsertCommand`, `UpdateCommand`, Ve `DeleteCommand` özelliklerini `DataAdapter` olan `Command` verilerde yapılan değişiklikleri göre veri kaynağındaki verileri güncellemelerini yönetmelerini nesneleri `DataSet`. Bu özellikleri daha ayrıntılı olarak ele alınmaktadır [güncelleştirme veri kaynaklarını DataAdapters ile](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
   
@@ -120,7 +120,7 @@ foreach (DataRow pRow in customerOrders.Tables["Customers"].Rows)
 ## <a name="sql-server-decimal-type"></a>SQL Server ondalık türü  
  Varsayılan olarak, `DataSet` .NET Framework veri türleri kullanarak verileri depolar. Çoğu uygulama için bu veri kaynağı bilgilerini kullanışlı bir gösterimini sağlar. Ancak, veri kaynağındaki veri türü bir SQL Server ondalık veya sayısal veri türü olduğunda bu gösterim bir soruna neden olabilir. .NET Framework `decimal` veri türü 28 önemli basamaklarının maksimum sağlar ancak SQL Server `decimal` veri türü 38 basamak sağlar. Varsa `SqlDataAdapter` sırasında belirler bir `Fill` işlemi, bir SQL Server'ın duyarlık `decimal` alan 28 karakterden daha büyük, geçerli satır eklenmez `DataTable`. Bunun yerine `FillError` bir olay oluşursa, kesinlik kaybı oluşur ve uygun şekilde yanıt olup olmadığını belirlemenize olanak sağlar. Hakkında daha fazla bilgi için `FillError` olay bkz [DataAdapter olaylarını işleme](../../../../docs/framework/data/adonet/handling-dataadapter-events.md). SQL Server'ı almak için `decimal` değeri, ayrıca kullanabileceğiniz bir <xref:System.Data.SqlClient.SqlDataReader> nesne ve çağrı <xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A> yöntemi.  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] tanıtılan 2.0 için gelişmiş destek <xref:System.Data.SqlTypes> içinde `DataSet`. Daha fazla bilgi için [SqlTypes ve DataSet](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md).  
+ ADO.NET sunulan 2.0 için gelişmiş destek <xref:System.Data.SqlTypes> içinde `DataSet`. Daha fazla bilgi için [SqlTypes ve DataSet](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md).  
   
 ## <a name="ole-db-chapters"></a>OLE DB bölüm  
  Hiyerarşik satır kümeleri ya da bölümlerini (OLE DB türü `DBTYPE_HCHAPTER`, ADO türü `adChapter`) içeriğini doldurmak için kullanılan bir `DataSet`. Zaman <xref:System.Data.OleDb.OleDbDataAdapter> sırasında bölümlere sütun karşılaştığında bir `Fill` işlemi, bir `DataTable` bölümlere sütunun oluşturulur ve bu tablo, bölüm satırları ve sütunları ile doldurulur. Hem üst tablo adını hem de bölümlere sütun adı biçiminde kullanılarak bölümlere sütun adlı için oluşturulan tabloyu "*ParentTableNameChapteredColumnName*". Bir tablo zaten varsa `DataSet` bölümlere sütunun adı ile eşleşen, geçerli tablonun bölüm verilerle doldurulur. Varolan tablodaki bir sütun bölümde bulunan eşleşen hiçbir sütun yoksa, yeni bir sütun eklenir.  

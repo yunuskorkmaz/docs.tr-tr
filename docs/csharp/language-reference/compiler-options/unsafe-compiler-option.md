@@ -7,15 +7,16 @@ helpviewer_keywords:
 - -unsafe compiler option [C#]
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
-ms.openlocfilehash: 4cfd7c82bc2cbf816164b235642c0647eeb7e5b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 146299fda103567b111c66400c17edf36addd843
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662328"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877989"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe (C# Derleyici Seçenekleri)
-**-Unsafe** derleyici seçeneği verir kullanan kod [güvenli](../../../csharp/language-reference/keywords/unsafe.md) derlemek için anahtar sözcüğü.  
+
+**-Unsafe** derleyici seçeneği verir kullanan kod [güvenli](../keywords/unsafe.md) derlemek için anahtar sözcüğü.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,8 +24,9 @@ ms.locfileid: "61662328"
 -unsafe  
 ```  
   
-## <a name="remarks"></a>Açıklamalar  
- Güvenli olmayan kod hakkında daha fazla bilgi için bkz: [güvenli olmayan kod ve işaretçiler](../../../csharp/programming-guide/unsafe-code-pointers/index.md).  
+## <a name="remarks"></a>Açıklamalar
+
+Güvenli olmayan kod hakkında daha fazla bilgi için bkz: [güvenli olmayan kod ve işaretçiler](../../programming-guide/unsafe-code-pointers/index.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
@@ -46,8 +48,9 @@ Projesi için .csproj dosyasını açın ve aşağıdaki öğeleri ekleyin:
 
  Bu derleyici seçeneğini program üzerinden ayarlamak hakkında daha fazla bilgi için bkz. <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>.  
   
-## <a name="example"></a>Örnek  
- Derleme `in.cs` güvenli olmayan modu:  
+## <a name="example"></a>Örnek
+
+Derleme `in.cs` güvenli olmayan modu:  
   
 ```console  
 csc -unsafe in.cs  
@@ -55,5 +58,5 @@ csc -unsafe in.cs
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
+- [C# Derleyici Seçenekleri](index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

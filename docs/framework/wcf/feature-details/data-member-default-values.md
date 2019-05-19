@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: fb9ad627df640e56b5250a2fdd15f5ac0d52df79
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: af8fff9d034f8dea4ce9f24a2bda042b5b9708a9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592596"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881262"
 ---
 # <a name="data-member-default-values"></a>Veri Üyesi Varsayılan Değerler
 .NET Framework türleri bir kavramı *varsayılan değerler*. Örneğin, varsayılan değer: bir başvuru türü için `null`, ve isteğe bağlı olarak bir tamsayı türü için sıfır ise. Seri hale getirilmiş verilerden veri üyesi varsayılan değerine ayarlandığında atlamak için zaman zaman istenen bir durumdur. Varsayılan değer üyesine sahip olduğundan, gerçek bir değer seri hale yok; Bu, bir performans avantajı vardır.  
@@ -54,7 +54,7 @@ ms.locfileid: "65592596"
   
 - Şemada kullanılacak gerçek varsayılan değeri yok. Bu, uygun şekilde eksik bir öğesini yorumlamak için en fazla alıcı uç noktadır.  
   
- Şema içeri aktarma, <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> otomatik olarak ayarlanırsa `false` bahsedilen WCF özgü açıklama daha önce algılanır. Ayrıca ayarlanmış `false` olan başvuru türleri için `nillable` özelliğini `false` tüketildiğinde sık gerçekleşen belirli bir birlikte çalışabilirlik senaryolarını desteklemek üzere [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri.  
+ Şema içeri aktarma, <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> otomatik olarak ayarlanırsa `false` bahsedilen WCF özgü açıklama daha önce algılanır. Ayrıca ayarlanmış `false` olan başvuru türleri için `nillable` özelliğini `false` ASP.NET Web Hizmetleri tüketirken sık gerçekleşen belirli bir birlikte çalışabilirlik senaryoları desteklemek için.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

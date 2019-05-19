@@ -2,12 +2,12 @@
 title: Güvenlik konuları (varlık çerçevesi)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 5a985cfcd4834efd7bbab04d30c86787dfb90955
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 47dbf800852e149f541c512e90a8bafef2077672
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583504"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879928"
 ---
 # <a name="security-considerations-entity-framework"></a>Güvenlik konuları (varlık çerçevesi)
 Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konuları açıklanmaktadır. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamalar. Güvenli .NET Framework uygulamaları oluşturmaya yönelik önerileri de izlemelidir. Daha fazla bilgi için [güvenliğine genel bakış](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -141,22 +141,23 @@ Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konu
  Erişim yöntemleri ve özellikleri bir <xref:System.Data.Objects.ObjectContext> bir try-catch bloğu içinde. Özel durumları yakalama engeller girişleri gösterme gelen işlenmeyen özel durumları <xref:System.Data.Objects.ObjectStateManager> veya model bilgileri (örneğin, tablo adları) kullanıcılar için uygulamanızın.  
   
 ## <a name="security-considerations-for-aspnet-applications"></a>ASP.NET uygulamaları için güvenlik konuları  
- Aşağıdaki yolları ile çalışırken düşünülmesi gereken [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] uygulamalar.  
+
+ASP.NET uygulamalarında yolları ile çalışırken aşağıdakileri dikkate almanız gerekir.  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>Ana yolu denetimleri gerçekleştirir olup olmadığını doğrulayın.  
- Zaman `|DataDirectory|` (kanal sembolleri alınmış) değiştirme dizesi kullanılır, [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] çözümlenen yol desteklediğini doğrular. Örneğin, "..." arkasında izin verilmiyor `DataDirectory`. Web uygulaması kök işleci çözmek için aynı denetlemenin (`~`) barındırma işlemi tarafından gerçekleştirilen [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]. IIS bu denetimi gerçekleştirir; Bununla birlikte, IIS dışında konakları çözümlenen yol desteklendiğini doğrulayın değil. Dağıttığınız konak davranışı bilmeniz gereken bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama.  
+ Zaman `|DataDirectory|` (kanal sembolleri alınmış) değiştirme dizesi kullanılır, ADO.NET doğrular çözümlenen yol desteklenir. Örneğin, "..." arkasında izin verilmiyor `DataDirectory`. Web uygulaması kök işleci çözmek için aynı denetlemenin (`~`) ASP.NET barındırma işlemi tarafından gerçekleştirilir. IIS bu denetimi gerçekleştirir; Bununla birlikte, IIS dışında konakları çözümlenen yol desteklendiğini doğrulayın değil. Dağıttığınız konak davranışı bilmeniz gereken bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama.  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>Çözümlenen yol adları hakkında varsayımlar yapmayın.  
  Olsa da değerlere kök işleci (`~`) ve `DataDirectory` değiştirme dizesi Çözümle kalmalıdır sabit uygulamanın çalışma zamanı sırasında [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ana bilgisayarın bu değerleri değiştirme kısıtlamaz.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>Dağıtımdan önce yol uzunluğu doğrulayın.  
- Dağıtmadan önce bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama emin olmanız gerekir, kök işleci (~) değerlerini ve `DataDirectory` değiştirme dizesi yol uzunluğu işletim sisteminde sınırlarını aşan değil. [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] veri sağlayıcıları yol uzunluğu geçerli sınırlar içinde olduğundan emin olun değil.  
+ Dağıtmadan önce bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama emin olmanız gerekir, kök işleci (~) değerlerini ve `DataDirectory` değiştirme dizesi yol uzunluğu işletim sisteminde sınırlarını aşan değil. ADO.NET veri sağlayıcıları yol uzunluğu geçerli sınırlar içinde olduğundan emin olun değil.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>ADO.NET meta veriler için güvenlik konuları  
  Aşağıdaki güvenlik konuları oluşturma ve model ve eşleme dosyalarını çalışma uygulayın.  
   
 #### <a name="do-not-expose-sensitive-information-through-logging"></a>Günlüğe kaydetme üzerinden hassas bilgiler açığa çıkarmayın.  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] meta veri hizmet bileşenleri herhangi bir özel bilgi oturum açmayın. Erişim kısıtlamaları nedeniyle döndürülen sonuç yoksa, veritabanı yönetim sistemleri ve dosya sistemleri, hassas bilgiler içerebilir bir özel durum oluşturma yerine sıfır sonuçların döndürülmesi gerekir.  
+ADO.NET meta verileri hizmet bileşenleri herhangi bir özel bilgi oturum açmayın. Erişim kısıtlamaları nedeniyle döndürülen sonuç yoksa, veritabanı yönetim sistemleri ve dosya sistemleri, hassas bilgiler içerebilir bir özel durum oluşturma yerine sıfır sonuçların döndürülmesi gerekir.  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Güvenilir olmayan kaynaklardan gelen MetadataWorkspace nesneleri kabul etmez.  
  Uygulamaları kabul örneklerini <xref:System.Data.Metadata.Edm.MetadataWorkspace> güvenilmeyen kaynaklardan sınıfı. Bunun yerine, açıkça oluşturmak ve gerekir bu tür bir kaynaktan bir çalışma alanı doldurun.  

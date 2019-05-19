@@ -2,12 +2,12 @@
 title: WCF barındırma örnekleri
 ms.date: 03/30/2017
 ms.assetid: 8a6ec5d4-d191-49cc-bb0f-a07639dc60d4
-ms.openlocfilehash: a2b6767ac85a45587f68e0175cb80487baa640c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ea382af4ed7b5d36c199a0a916756cbb935e753
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968122"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876961"
 ---
 # <a name="hosting"></a>Barındırma
 Bu bölüm, Windows Communication Foundation (WCF) hizmetlerini barındıran gösteren örnekler içerir.  
@@ -20,7 +20,7 @@ Bu bölüm, Windows Communication Foundation (WCF) hizmetlerini barındıran gö
  Sınıflarda barındırma katmanın tümleştirmesiyle gösterir <xref:System.Web.Routing> ad alanı.  
   
  [ASP.NET Uyumluluğu](../../../../docs/framework/wcf/samples/aspnet-compatibility.md)  
- Nasıl etkinleştirileceğini göstermektedir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] WCF uyumluluk modunda.  
+ Wcf'de ASP.NET Uyumluluk modunu etkinleştirmek nasıl gösterir.  
   
  [Satır İçi Kod Kullanarak IIS Barındırma](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
  Internet Information Services (IIS) tarafından barındırılan bir hizmet ekleme işlemi gösterilmektedir hizmet kodu bulunduğu satır içi .svc dosyasında ve isteğe bağlı olarak derlenir.  

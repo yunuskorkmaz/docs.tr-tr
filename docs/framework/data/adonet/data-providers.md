@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 9fead8a5d54fba7232831bba349f27b7eed4657b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d343f7be3e26575ee9a1e9ccae9f17314db10ac5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583792"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882110"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework Veri Sağlayıcıları
 .NET Framework veri sağlayıcısı, bir veritabanına bağlanma, komutları çalıştırarak ve sonuçları almak için kullanılır. Sonuçları ya da doğrudan yerleştirilen işlenen bir <xref:System.Data.DataSet> gerektiğinde kullanıcıya birden çok kaynaktan veri ile birleştirilmiş veya katmanları arasında düğümlerde açığa için. .NET framework veri sağlayıcıları basit, kod ve veri kaynağı arasındaki en az bir katmanda işlevselliği ödün vermeden performansı artırma oluşturma.  
@@ -74,7 +74,7 @@ using System.Data.SqlClient;
 ## <a name="net-framework-data-provider-for-ole-db"></a>OLE DB için .NET framework veri sağlayıcısı  
  OLE DB (OleDb) için .NET Framework veri sağlayıcısı, veri erişimi için yerel OLE DB aracılığıyla COM birlikte çalışma kullanır. OLE DB için .NET Framework veri sağlayıcısı, hem yerel hem de dağıtılmış işlemleri destekler. Dağıtılmış işlemler için .NET Framework veri sağlayıcısı için OLE DB, varsayılan olarak, otomatik olarak bir işlemde kaydeder ve Windows bileşeni hizmetlerinden işlem ayrıntılarını alır. Daha fazla bilgi için [işlemler ve eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
   
- Aşağıdaki tablo ile test edilmiştir sağlayıcılarını gösterir [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+ ADO.NET ile test edilmiştir sağlayıcıları aşağıdaki tabloda gösterilmektedir.  
   
 |Sürücü|Sağlayıcı|  
 |------------|--------------|  
@@ -83,11 +83,11 @@ using System.Data.SqlClient;
 |Microsoft.Jet.OLEDB.4.0|Microsoft Jet OLE DB sağlayıcısı|  
   
 > [!NOTE]
->  Çok iş parçacıklı uygulamalar için veri kaynağı olarak erişim (Jet) veritabanı gibi kullanarak [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulamaları önerilmez. Veri kaynağı olarak Jet kullanmalıdır, bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama fark [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulamaları bir Access veritabanına bağlanmak, bağlantı sorunlarını karşılaşabilir.  
+>  ASP.NET uygulamaları gibi çok iş parçacıklı uygulamalar için veri kaynağı olarak (Jet) Access veritabanı kullanarak önerilmez. Bir ASP.NET uygulaması için Jet veri kaynağı olarak kullanmanız gerekirse, bir Access veritabanına bağlanmak, ASP.NET uygulamaları bağlantı sorunları olarak sınırlamasıyla farkında olun.  
   
  OLE DB için .NET Framework veri sağlayıcısı, OLE DB sürüm 2.5 arabirimlerini desteklemiyor. OLE DB OLE DB 2.5 arabirimleri için destek gerektiren sağlayıcıları OLE DB için .NET Framework Veri Sağlayıcısı ile düzgün şekilde çalışmaz. Bu, Exchange ve Internet yayımlama için Microsoft OLE DB sağlayıcısı için Microsoft OLE DB sağlayıcısı içerir.  
   
- OLE DB için .NET Framework veri sağlayıcısı, OLE DB sağlayıcısı için ODBC (MSDASQL) ile çalışmaz. Bir ODBC veri kaynağı kullanarak erişmeye [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], ODBC için .NET Framework veri sağlayıcısı kullanın.  
+ OLE DB için .NET Framework veri sağlayıcısı, OLE DB sağlayıcısı için ODBC (MSDASQL) ile çalışmaz. ADO.NET kullanarak bir ODBC veri kaynağına erişmek için ODBC için .NET Framework Veri Sağlayıcısı'nı kullanın.  
   
  OLE DB sınıfları için .NET framework veri sağlayıcısı yerleştirilir <xref:System.Data.OleDb> ad alanı. Aşağıdaki kod örneğinde nasıl ekleneceği gösterilmiştir `System.Data.OleDb` uygulamalarınızda ad alanı.  
   
@@ -102,7 +102,7 @@ using System.Data.OleDb;
 ## <a name="net-framework-data-provider-for-odbc"></a>ODBC için .NET framework veri sağlayıcısı  
  ODBC (Odbc) için .NET Framework veri sağlayıcısı, veri erişimi etkinleştirmek için yerel bir ODBC Sürücü Yöneticisi'ni (DM) kullanır. ODBC veri sağlayıcısı, hem yerel hem de dağıtılmış işlemleri destekler. Dağıtılmış işlemler için varsayılan olarak, ODBC veri sağlayıcısı otomatik olarak bir işlemde kaydeder ve Windows bileşeni hizmetlerinden işlem ayrıntılarını alır. Daha fazla bilgi için [işlemler ve eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
   
- Aşağıdaki tablo ile test ODBC sürücüleri gösterir [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+ Aşağıdaki tabloda, ADO.NET ile test ODBC sürücüleri gösterir.  
   
 |Sürücü|  
 |------------|  

@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: fc0bfec95e625c1433636fbe5e0fdb6cc1112b14
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c19aa7200cfc938a1de7b788a58ba18f76634d9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645152"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881468"
 ---
 # <a name="using-sessions"></a>Oturumları Kullanma
-Windows Communication Foundation (WCF) uygulamaları bir *oturumu* iletiler grubunu bir konuşma ile ilişkilendirir. WCF oturumları bulunan oturum nesnesi değerinden farklı [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulamaları, farklı davranışları desteklemek ve farklı yollarla denetlenir. Bu konuda WCF'de oturumları sağlayan özellikleri açıklar uygulamaları ve bunların nasıl kullanıldığı.  
+Windows Communication Foundation (WCF) uygulamaları bir *oturumu* iletiler grubunu bir konuşma ile ilişkilendirir. WCF oturumları ASP.NET uygulamalarında oturum nesnesi farklıysa, farklı davranışları desteklemek ve farklı yollarla denetlenir. Bu konuda WCF'de oturumları sağlayan özellikleri açıklar uygulamaları ve bunların nasıl kullanıldığı.  
   
 ## <a name="sessions-in-windows-communication-foundation-applications"></a>Windows Communication Foundation uygulamalarında oturumları  
  Bir oturum gerektiren bir hizmet sözleşmesi belirler, bu sözleşme tüm çağrıları (çağrıları destekleyen diğer bir deyişle, temel alınan ileti alışverişlerinde) aynı konuşmada bir parçası olmalıdır belirtme. Bir sözleşme oturumları sağlar ancak bir gerektirmez, istemcilerin bağlanabileceği ya da bir oturumu belirtirse veya bir oturumu yok. Sona ererse ve ileti bir özel durum aynı kanalı gönderilir.  
@@ -30,13 +30,13 @@ Windows Communication Foundation (WCF) uygulamaları bir *oturumu* iletiler grub
   
 - Bir WCF oturum ile ilişkili hiçbir genel veri deposu bulunmaktadır.  
   
- Alışkın olduğunuz <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> sınıfını [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulamalar ve işlevselliği sağlar, bu tür bir oturum ve WCF oturumları arasında aşağıdaki değişiklikler fark edebilirsiniz:  
+ Alışkın olduğunuz <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> ASP.NET uygulamalarında sınıfı ve işlevselliği sağlar, bu tür bir oturum ve WCF oturumları arasında aşağıdaki değişiklikler fark edebilirsiniz:  
   
-- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] oturumlarının her zaman sunucu-başlatılır.  
+- ASP.NET oturumları her zaman sunucu-başlatılır.  
   
-- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] oturumlarının örtük olarak sırasız.  
+- ASP.NET oturum örtük olarak sırasız.  
   
-- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] oturumları istekler genelinde bir genel veri depolama mekanizmasını sağlar.  
+- ASP.NET oturumları istekler genelinde bir genel veri depolama mekanizmasını sağlar.  
   
  Bu konuda açıklanmaktadır:  
   

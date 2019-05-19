@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a049bbe22d29f02acbc7889bb5d5010ec44f9d15
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592773"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876217"
 ---
 # <a name="application-settings-architecture"></a>Uygulama Ayarları Mimarisi
 Bu konuda, uygulama ayarları mimarisi nasıl çalıştığını açıklanır ve mimarinin gruplandırılmış ayarları ve ayarları anahtarları gibi gelişmiş özellikleri keşfediyor.  
@@ -22,7 +22,7 @@ Bu konuda, uygulama ayarları mimarisi nasıl çalıştığını açıklanır ve
  Bir uygulamada barındırıldığında kendi ayarlarını kalıcı hale getirmek özel bileşenler sağlayan arabirimler sağlanır. Ayarları anahtarları kullanarak bileşenleri bileşenin birden çok örnek için ayarları ayrı kalmasını sağlayabilirsiniz.  
   
 ## <a name="defining-settings"></a>Ayarları tanımlama  
- Uygulama ayarları mimarisi içinde her ikisi de kullanılan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ve Windows Forms ve her iki ortamlar genelinde paylaşılan, temel sınıfların bir sayı içerir. En önemlisi <xref:System.Configuration.SettingsBase>, koleksiyonu aracılığıyla ayarlarına erişim sağlar ve yükleme ve kaydetme ayarları için alt düzey yöntemler sağlar. Her ortamın kendi sınıfından türetilen uygulayan <xref:System.Configuration.SettingsBase> bu ortam için ek ayarlar işlevselliği sağlamak için. Windows Forms tabanlı bir uygulama, tüm uygulama ayarları türetilen bir sınıfta tanımlanmalıdır <xref:System.Configuration.ApplicationSettingsBase> temel sınıf için aşağıdaki işlevsellik ekleyen sınıfı:  
+ Uygulama ayarları mimarisi, hem ASP.NET hem de Windows Formları içinde kullanılır ve her iki ortamlar genelinde paylaşılan, temel sınıfların bir sayı içerir. En önemlisi <xref:System.Configuration.SettingsBase>, koleksiyonu aracılığıyla ayarlarına erişim sağlar ve yükleme ve kaydetme ayarları için alt düzey yöntemler sağlar. Her ortamın kendi sınıfından türetilen uygulayan <xref:System.Configuration.SettingsBase> bu ortam için ek ayarlar işlevselliği sağlamak için. Windows Forms tabanlı bir uygulama, tüm uygulama ayarları türetilen bir sınıfta tanımlanmalıdır <xref:System.Configuration.ApplicationSettingsBase> temel sınıf için aşağıdaki işlevsellik ekleyen sınıfı:  
   
 - Üst düzey yükleme ve kaydetme işlemleri  
   

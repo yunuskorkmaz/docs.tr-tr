@@ -2,12 +2,12 @@
 title: Birlikte Çalışabilirlik ve Tümleştirme
 ms.date: 03/30/2017
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-ms.openlocfilehash: 2410c52e99f3498d8dbd6ec66a5abe0e169f4b91
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8b4113d7545ab4e478b49c07681298d9ee942309
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591231"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875971"
 ---
 # <a name="interoperability-and-integration"></a>Birlikte Çalışabilirlik ve Tümleştirme
 Bu bölüm, birlikte çalışabilirlik ve tümleştirme ile Windows Communication Foundation (WCF) kapsar.  
@@ -32,16 +32,16 @@ Bu bölüm, birlikte çalışabilirlik ve tümleştirme ile Windows Communicatio
  WSE 3.0 Web hizmetine bir WCF hizmeti için geçişi işlemi açıklanmaktadır.  
   
  [ASP.NET Web Hizmetleri ile Birlikte Çalışabilirlik](../../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)  
- WCF ile nasıl çalışabilirler açıklar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri.  
+ WCF ile ASP.NET Web hizmetlerini nasıl çalışabilirler açıklar.  
   
  [ASP.NET Web Hizmetlerini WCF'ye Taşıma](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- Azure'a nasıl geçirileceği açıklanmaktadır bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web hizmetine bir WCF hizmeti.  
+ Bir WCF hizmeti için bir ASP.NET Web hizmeti geçişi işlemi açıklanmaktadır.  
   
  [ASP.NET Web Hizmetlerini WCF'ye Taşıma](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- Azure'a nasıl geçirileceği açıklanmaktadır bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web hizmetine bir WCF hizmeti.  
+ Bir WCF hizmeti için bir ASP.NET Web hizmeti geçişi işlemi açıklanmaktadır.  
   
  [ASP.NET Web Hizmetlerini WCF'ye Taşıma](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- Azure'a nasıl geçirileceği açıklanmaktadır bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web hizmetine bir WCF hizmeti.  
+ Bir WCF hizmeti için bir ASP.NET Web hizmeti geçişi işlemi açıklanmaktadır.  
   
  [POX Uygulamaları ile Birlikte Çalışabilirlik](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md)  
  WCF hizmetleri hem "Düz eski XML" (POX) iletileri kullanan istemciler nasıl sağladığını açıklar.  

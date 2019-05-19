@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 1897116389aaa1b4c953612364c7302e9ca2f35a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f686c20a9afd981405e32854fcc594abac78c85c
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584458"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882037"
 ---
 # <a name="local-transactions"></a>Yerel İşlemler
-İşlemlerde [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] , böylece bunlar iş tek bir birim olarak yürütmek için birden çok görevleri birbirine bağlayın istediğinizde kullanılır. Örneğin, bir uygulama iki görevleri gerçekleştirir düşünün. İlk olarak bir tablo ile sipariş bilgilerini güncelleştirir. İkinci olarak, Envanter bilgilerini içeren bir tablo güncelleştirir, öğeleri borçlandırarak sıralı. Her iki görev başarısız olursa, her iki güncelleştirmeleri geri alınır.  
+ADO.NET'te işlemler, böylece bunlar iş tek bir birim olarak yürütmek için birden çok görevleri birbirine bağlayın istediğinizde kullanılır. Örneğin, bir uygulama iki görevleri gerçekleştirir düşünün. İlk olarak bir tablo ile sipariş bilgilerini güncelleştirir. İkinci olarak, Envanter bilgilerini içeren bir tablo güncelleştirir, öğeleri borçlandırarak sıralı. Her iki görev başarısız olursa, her iki güncelleştirmeleri geri alınır.  
   
 ## <a name="determining-the-transaction-type"></a>İşlem türünü belirleme  
  Bir işlem tek aşamalı işlem ve veritabanı tarafından doğrudan gerçekleştirilir, yerel bir işlem olarak kabul edilir. Bir işlem, işlem İzleyici tarafından düzenlenir ve işlem çözümlemesi için (örneğin, iki aşamalı tamamlama) emniyet mekanizmaları kullanan dağıtılmış bir işlem olarak kabul edilir.  
@@ -24,7 +24,7 @@ ms.locfileid: "65584458"
 > Sunucuda gerçekleştirildiğinde hareketleri en etkili olur. Kapsamlı açık işlemleri kullanımını sağlayan bir SQL Server veritabanı ile çalışıyorsanız, bunları BEGIN TRANSACTION Transact-SQL deyimini kullanarak saklı yordam yazma göz önünde bulundurun.
   
 ## <a name="performing-a-transaction-using-a-single-connection"></a>Tek bir bağlantı kullanarak işlem gerçekleştirme  
- İçinde [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], ile işlemleri denetleme `Connection` nesne. Yerel bir işlem ile başlatabilir `BeginTransaction` yöntemi. İşlem başlamıştır sonra bu işlem ile bir komut listeleme `Transaction` özelliği bir `Command` nesne. Daha sonra tamamlama veya başarı veya hata işlem bileşenlerinin göre veri kaynağında yapılan değişiklikleri geri alma.  
+ ADO.NET ile işlemleri denetleme `Connection` nesne. Yerel bir işlem ile başlatabilir `BeginTransaction` yöntemi. İşlem başlamıştır sonra bu işlem ile bir komut listeleme `Transaction` özelliği bir `Command` nesne. Daha sonra tamamlama veya başarı veya hata işlem bileşenlerinin göre veri kaynağında yapılan değişiklikleri geri alma.  
   
 > [!NOTE]
 >  `EnlistDistributedTransaction` Yöntemi yerel bir işlem için kullanılmamalıdır.  
@@ -42,7 +42,7 @@ ms.locfileid: "65584458"
   
 4. Çağrı <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> yöntemi <xref:System.Data.SqlClient.SqlTransaction> , işlemi tamamlamak için nesne veya çağrı <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> işlemi sonlandırmak için yöntemi. Bağlantı kapalı veya önce ya da elden <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> veya <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> yöntem yürütüldüğünde, işlem geri alındı.  
   
- İşlem mantığı kullanılarak aşağıdaki kod örneğinde gösterilmiştir [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] Microsoft SQL Server.  
+ Aşağıdaki kod örneği, Microsoft SQL Server ile ADO.NET kullanarak işlem mantığı gösterir.  
   
  [!code-csharp[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/CS/source.cs#1)]
  [!code-vb[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/VB/source.vb#1)]  

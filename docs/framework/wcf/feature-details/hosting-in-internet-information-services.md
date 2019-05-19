@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 4d522fb377fd117800ef4d7d754d513a3d919a35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d881a75e95bc3c3eef1df651b380210ff51ea3ce
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656042"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877514"
 ---
 # <a name="hosting-in-internet-information-services"></a>Internet Information Services'te Barındırma
-Windows Communication Foundation (WCF) hizmetlerini barındırmak için bir seçenek, içinde bir Internet Information Services (IIS) uygulamasıdır. Bu barındırma modeli tarafından kullanılan bir Modeli'ne benzer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ve ASP.NET Web hizmeti (ASMX) Web Hizmetleri.  
+Windows Communication Foundation (WCF) hizmetlerini barındırmak için bir seçenek, içinde bir Internet Information Services (IIS) uygulamasıdır. Bu barındırma modeli, ASP.NET ve ASP.NET Web Hizmetleri (ASMX) Web Hizmetleri tarafından kullanılan modeline benzerdir.  
   
 ## <a name="versions-of-iis"></a>IIS sürümleri  
  WCF aşağıdaki işletim sistemlerinde aşağıdaki sürümlerinden birinde IIS üzerinde barındırılabilir:  
@@ -28,11 +28,11 @@ Windows Communication Foundation (WCF) hizmetlerini barındırmak için bir seç
 ## <a name="benefits-of-iis-hosting"></a>IIS barındırma avantajları  
  WCF hizmetlerinde IIS barındırma birçok faydası vardır:  
   
-- IIS barındırılan WCF hizmetleri dağıtılır ve tüm diğer IIS uygulamasının gibi yönetilen türü de dahil olmak üzere [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulamalar ve ASMX.  
+- IIS barındırılan WCF hizmetleri dağıtılır ve başka türde ASP.NET uygulamalarını ve ASMX dahil olmak üzere, IIS uygulama gibi yönetilir.  
   
 - IIS işlem etkinleştirme, sistem durumu yönetimi ve barındırılan uygulamaların güvenilirliğini artırmak için özellikler geri dönüştürme sağlar.  
   
-- Gibi [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], WCF hizmetleri barındırılan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] yararlanabilirsiniz [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] birden çok uygulamanın bulunduğu geliştirilmiş sunucu yoğunluğu ve ölçeklenebilirlik için ortak bir çalışan işlemindeki paylaşılan barındırma modeli.  
+- ASP.NET gibi birden çok uygulama geliştirilmiş sunucu yoğunluğu ve ölçeklenebilirlik için ortak bir çalışan işlemi bulunduğu ASP.NET'te barındırılan WCF hizmetleri ASP.NET paylaşılan barındırma modeli avantajlarından yararlanabilirsiniz.  
   
 - IIS barındırılan WCF hizmetleri kullanma aynı dinamik derleme modelde [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)], geliştirme basitleştirir ve dağıtım, barındırılan hizmetler.  
   
@@ -43,7 +43,7 @@ Windows Communication Foundation (WCF) hizmetlerini barındırmak için bir seç
   
 - IIS, ASP.NET, WCF ve WCF HTTP etkinleştirmesi bileşeni düzgün yüklü ve kayıtlı olan emin olun.  
   
-- Yeni bir IIS uygulama oluşturun veya mevcut bir yeniden [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama.  
+- Yeni bir IIS uygulama oluşturun veya mevcut bir ASP.NET uygulamasını yeniden kullanabilirsiniz.  
   
 - Bir WCF hizmeti için .svc dosyası oluşturun.  
   
@@ -54,7 +54,7 @@ Windows Communication Foundation (WCF) hizmetlerini barındırmak için bir seç
  Bu görevlerin her biri için bkz [Internet Information Services-Hosted bir WCF Hizmeti dağıtma](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   
 ## <a name="wcf-services-and-aspnet"></a>WCF Hizmetleri ve ASP.NET  
- WCF hizmetleri olabilir ya da yan yana ile barındırılan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] veya [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uyumluluk Hizmetleri tarafından sağlanan özelliklerden tam anlamıyla gerçekleştirebileceğiniz modu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulaması platformu. Bu özellikler için bkz [WCF hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
+ WCF hizmetleri olabilir ya da yan yana ASP.NET veya ASP.NET uyumluluk Hizmetleri ASP.NET Web uygulaması platform tarafından sağlanan özelliklerden tam anlamıyla gerçekleştirebileceğiniz modunda barındırılan. Bu özellikler için bkz [WCF hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

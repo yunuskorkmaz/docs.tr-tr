@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: b618d0c153501885fe8c42a04d0723eaa5bcd9af
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3a0c8bd90c2a8f4ffc2e7a6d8831f306637915e6
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586243"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877375"
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer Sınıfını Kullanma
 Windows Communication Foundation (WCF), istemciler ve hizmetler, serileştirme adlı bir işlem arasında aktarılır XML içinde uygulamanızda veri kapatmak için iki farklı bir seri hale getirme teknolojilerini kullanabilirsiniz.  
@@ -35,14 +35,14 @@ Windows Communication Foundation (WCF), istemciler ve hizmetler, serileştirme a
  <xref:System.Runtime.Serialization.DataContractSerializer>, Sözleşmesi türleri veri ile birlikte kullanılan, yeni WCF hizmetleri yazmak için önerilen yoldur. Daha fazla bilgi için [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>XmlSerializer sınıfını kullanma zamanı  
- WCF da destekler <xref:System.Xml.Serialization.XmlSerializer> sınıfı. <xref:System.Xml.Serialization.XmlSerializer> Sınıf WCF'ye benzersiz değil. Aynı seri hale getirme altyapısı olan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri kullanın. <xref:System.Xml.Serialization.XmlSerializer> Sınıf türleri çok dar kümesini destekler <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı, ancak daha fazla denetim elde edilen XML üzerinden sağlar ve XML Şeması Tanım Dili (XSD) standart fazlasını destekler. Ayrıca serializable türler üzerinde herhangi bir bildirim temelli özniteliği gerektirmez. Daha fazla bilgi için .NET Framework belgelerinin XML serileştirme bölümüne bakın. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı veri anlaşması türleri desteklemez.  
+ WCF da destekler <xref:System.Xml.Serialization.XmlSerializer> sınıfı. <xref:System.Xml.Serialization.XmlSerializer> Sınıf WCF'ye benzersiz değil. ASP.NET Web hizmetlerini kullanan aynı serileştirme motoruna var. <xref:System.Xml.Serialization.XmlSerializer> Sınıf türleri çok dar kümesini destekler <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı, ancak daha fazla denetim elde edilen XML üzerinden sağlar ve XML Şeması Tanım Dili (XSD) standart fazlasını destekler. Ayrıca serializable türler üzerinde herhangi bir bildirim temelli özniteliği gerektirmez. Daha fazla bilgi için .NET Framework belgelerinin XML serileştirme bölümüne bakın. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı veri anlaşması türleri desteklemez.  
   
  Svcutil.exe kullanırken veya **hizmet Başvurusu Ekle** üçüncü taraf bir hizmet için istemci kodu oluşturma veya üçüncü taraf şema, uygun bir seri hale getirici erişmek için Visual Studio özelliği otomatik olarak seçilir. Şema ile uyumlu değilse <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Xml.Serialization.XmlSerializer> seçilir.  
   
 ## <a name="manually-switching-to-the-xmlserializer"></a>XmlSerializer için el ile geçiş  
  Bazen, el ile geçiş gerekebilir <xref:System.Xml.Serialization.XmlSerializer>. Bu, örneğin, aşağıdaki durumlarda gerçekleşir:  
   
-- Bir uygulamadan geçirilirken [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web hizmetlerini WCF'ye taşıma, varolan, yeniden kullanmak isteyebilirsiniz <xref:System.Xml.Serialization.XmlSerializer>-yeni veri oluşturmak yerine uyumlu türlerde sözleşme türü.  
+- Bir uygulamayı ASP.NET Web hizmetlerinden WCF'ye geçirme, varolan, yeniden kullanmak isteyebilirsiniz <xref:System.Xml.Serialization.XmlSerializer>-yeni veri oluşturmak yerine uyumlu türlerde sözleşme türü.  
   
 - İletilerinde görünen XML üzerinde kesin denetim önemlidir, ancak bir Web Hizmetleri Açıklama Dili (WSDL) belgesi kullanılabilir değil. Örneğin, bir belirli standart için uyumlu olan türleri ile bir hizmeti oluştururken, yayımlanan şema olan DataContractSerializer ile uyumlu değildir.  
   

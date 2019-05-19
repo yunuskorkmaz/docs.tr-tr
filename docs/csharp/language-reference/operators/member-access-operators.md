@@ -24,14 +24,14 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 2c5f569b0ad68132e07b009ec9968c766bb965f5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a76c2855196b229918ee0a6a7d2a4dc66d87d059
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633509"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881040"
 ---
-# <a name="member-access-operators"></a>Üye erişimi işleçleri
+# <a name="member-access-operators-c-reference"></a>Üye erişim işleçleri (C# Başvurusu)
 
 Bir tür üyesi erişirken aşağıdaki işleçleri kullanabilirsiniz:
 
@@ -88,7 +88,7 @@ Dizin oluşturucular hakkında daha fazla bilgi için bkz: [dizin oluşturucular
 
 ### <a name="other-usages-of-"></a>[] İfadesinin diğer kullanımları
 
-İşaretçi öğe erişimi hakkında daha fazla bilgi için bkz. [nasıl yapılır: işaretçiyle bir dizi öğesine erişme](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).
+İşaretçi öğe erişimi hakkında daha fazla bilgi için bkz [işaretçi öğesine erişme [] işleci](pointer-related-operators.md#pointer-element-access-operator-) bölümünü [işaretçi işleçleri ilgili](pointer-related-operators.md) makalesi.
 
 Köşeli ayraçlar belirtmek için de [öznitelikleri](../../programming-guide/concepts/attributes/index.md):
 

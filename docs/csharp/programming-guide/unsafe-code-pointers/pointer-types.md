@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: bd44bf9e8b3c68b7fb5e45bb7e0aa14e329a5f0e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7f04cfbac72008332a429c4e0ad8bd3f4e60cc83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635125"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880325"
 ---
 # <a name="pointer-types-c-programming-guide"></a>İşaretçi türleri (C# Programlama Kılavuzu)
 
@@ -75,19 +75,21 @@ Aşağıdaki tabloda, güvenli olmayan bir bağlamda işaretçiler üzerinde iş
 
 |İşleç/Deyim|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|
 |-------------------------|---------|
-|*|İşaretçi yöneltmesi gerçekleştirir.|
-|->|Bir yapının bir üyesine bir işaretçi yoluyla erişir.|
-|[]|Bir işaretçiyi dizine ekler.|
+|`*`|İşaretçi yöneltmesi gerçekleştirir.|
+|`->`|Bir yapının bir üyesine bir işaretçi yoluyla erişir.|
+|`[]`|Bir işaretçiyi dizine ekler.|
 |`&`|Bir değişkenin adresini alır.|
-|++ ve --|İşaretçileri artırır ve azaltır.|
-|+ ve -|İşaretçi aritmetiği gerçekleştirir.|
-|==,! =, \<, >, \<= ve > =|İşaretçileri karşılaştırır.|
-|`stackalloc`|Yığında bellek ayırır.|
-|`fixed` Deyimi|Adresinin bulunamaması için bir değişkeni geçici olarak sabitler.|
+|`++` ve `--`|İşaretçileri artırır ve azaltır.|
+|`+` ve `-`|İşaretçi aritmetiği gerçekleştirir.|
+|`==`, `!=`, `<`, `>`, `<=`, ve `>=`|İşaretçileri karşılaştırır.|
+|[`stackalloc` İşleci](../../language-reference/keywords/stackalloc.md)|Yığında bellek ayırır.|
+|[`fixed` Deyimi](../../language-reference/keywords/fixed-statement.md)|Adresinin bulunamaması için bir değişkeni geçici olarak sabitler.|
 
-## <a name="c-language-specification"></a>C# Dil Belirtimi
+İşaretçi hakkında daha fazla bilgi için bkz: ilgili işleçleri [işaretçi işleçleri ilgili](../../language-reference/operators/pointer-related-operators.md).
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+## <a name="c-language-specification"></a>C# dili belirtimi
+
+Daha fazla bilgi için [işaretçi türleri](~/_csharplang/spec/unsafe-code.md#pointer-types) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -96,6 +98,3 @@ Aşağıdaki tabloda, güvenli olmayan bir bağlamda işaretçiler üzerinde iş
 - [İşaretçi Dönüştürmeler](pointer-conversions.md)
 - [Türler](../../language-reference/keywords/types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
-- [fixed Deyimi](../../language-reference/keywords/fixed-statement.md)
-- [stackalloc](../../language-reference/keywords/stackalloc.md)
-- [Kutulama ve Kutudan Çıkarma](../types/boxing-and-unboxing.md)

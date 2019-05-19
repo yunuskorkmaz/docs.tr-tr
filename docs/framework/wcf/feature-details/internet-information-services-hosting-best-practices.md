@@ -2,12 +2,12 @@
 title: Internet Information Services Barındırma En İyi Uygulamaları
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: a4312a9affc1103f613f3f8ffd9a14696f9d4bcc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85b8efadca03de71fd98b0f0d1bf5aeb47fe76be
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972620"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878599"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Internet Information Services Barındırma En İyi Uygulamaları
 Bu konuda, Windows Communication Foundation (WCF) hizmetlerini barındırmak için bazı en iyi uygulamalar açıklanmaktadır.  
@@ -40,7 +40,7 @@ Bu konuda, Windows Communication Foundation (WCF) hizmetlerini barındırmak iç
  IIS Web sitesi bağlamalarının IIS Microsoft Yönetim Konsolu (MMC) ek bileşenini kullanarak yapılandırabilirsiniz.  
   
 ## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>Derlemeleri geçici klasörde diğer hesaplardan farklı kullanıcı bağlamı içinde çalışan uygulama havuzları üzerine  
- Uygulama havuzları farklı kullanıcı bağlamı içinde çalışan diğer hesapların geçici derlemelerden üzerine yazılamaz emin olmak için [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dosyaları klasörü, farklı kimlikler kullanın ve farklı uygulamalara yönelik geçici klasör. Örneğin, iki sanal uygulamaları /Application1 varsa ve / Uygulama2 dizinlerini, iki uygulama havuzları, A ve B ile iki farklı kimlikler oluşturabilirsiniz. Uygulama havuzu bir uygulama havuzu B çalıştırabilirsiniz (kullanıcı2) başka bir kullanıcı kimliği altında bir kullanıcı kimliği (kullanıcı1) çalışmasına ve /Application1 kullanmayın ve /Application2 b kullanmak için yapılandırma  
+ Uygulama havuzları farklı kullanıcı bağlamı içinde çalışan diğer hesapları geçici dosyaları ASP.NET klasörde derlemelerden üzerine yazılamaz emin olmak için farklı uygulamalar için farklı kimliklere ve geçici klasör kullanın. Örneğin, iki sanal uygulamaları /Application1 varsa ve / Uygulama2 dizinlerini, iki uygulama havuzları, A ve B ile iki farklı kimlikler oluşturabilirsiniz. Uygulama havuzu bir uygulama havuzu B çalıştırabilirsiniz (kullanıcı2) başka bir kullanıcı kimliği altında bir kullanıcı kimliği (kullanıcı1) çalışmasına ve /Application1 kullanmayın ve /Application2 b kullanmak için yapılandırma  
   
  Web.config dosyasında kullanarak geçici klasörü yapılandırabilirsiniz \< system.web/compilation/@tempFolder>. /Application1, "c:\tempForUser1" olabilir ve Uygulama2 dizinlerini için "c:\tempForUser2" olabilir. Bu klasörleri iki kimlikleri için karşılık gelen yazma izni verin.  
   

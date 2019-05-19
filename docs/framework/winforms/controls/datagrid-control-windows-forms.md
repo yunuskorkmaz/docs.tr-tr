@@ -8,18 +8,18 @@ helpviewer_keywords:
 - displaying data [Windows Forms], on forms
 - data [Windows Forms], displaying on Windows Forms
 ms.assetid: 1d9d5683-43d2-42dd-b6c3-e43f4cf0de99
-ms.openlocfilehash: 5f8fcd21802c52d61d354c5ba85d665bd17237db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a69605901eef7366c7a9ff9930e5f4ec6cece23
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011391"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878769"
 ---
 # <a name="datagrid-control-windows-forms"></a>DataGrid Denetimi (Windows Forms)
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevsellik ekler `DataGrid` denetler; ancak, `DataGrid` denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Windows Forms `DataGrid` denetim için bir kullanıcı arabirimi sağlar [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] tablosal verileri görüntüleme ve etkinleştirme veri kümeleri, veri kaynağına güncelleştirir.  
+ Windows Forms `DataGrid` denetim tablosal verileri görüntüleme ve etkinleştirme güncelleştirmeleri veri kaynağına ADO.NET veri kümeleri, bir kullanıcı arabirimi sağlar.  
   
  Zaman `DataGrid` denetimi, geçerli bir veri kaynağı için ayarlandığında, sütunları ve satırları şeklindeki veri temel oluşturma, denetim otomatik olarak doldurulur. `DataGrid` Denetimi, tek bir tablo veya tablo kümesini arasındaki hiyerarşik ilişkileri görüntülemek için kullanılabilir.  
   
@@ -34,10 +34,10 @@ ms.locfileid: "62011391"
  Tablolar ve sütunlar ekleme işlemi açıklanmaktadır `DataGrid` programlı olarak denetleme.  
   
  [Nasıl yapılır: Windows Forms DataGrid denetimi Tasarımcısı'nı kullanarak bir veri kaynağına bağlama](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)  
- Nasıl bağlanacağını açıklayan bir [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] veri kümesine `DataGrid` Tasarımcısı'nı kullanarak denetim.  
+ Bir ADO.NET veri kümesi için bağlama işlemini açıklamaktadır `DataGrid` Tasarımcısı'nı kullanarak denetim.  
   
  [Nasıl yapılır: Windows Forms DataGrid denetimini veri kaynağına bağlama](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
- Nasıl bağlanacağını açıklayan bir [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] veri kümesine `DataGrid` denetimi.  
+ Bir ADO.NET veri kümesi için bağlama işlemini açıklamaktadır `DataGrid` denetimi.  
   
  [Nasıl yapılır: Windows Forms DataGrid denetiminde çalışma zamanında görüntülenen verileri değiştirme](change-displayed-data-at-run-time-wf-datagrid-control.md)  
  Program verilerin nasıl değiştirilebileceğini açıklar `DataGrid` denetimi.  

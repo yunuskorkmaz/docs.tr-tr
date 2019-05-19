@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 6d631d51cc4f40b5be91b6579039a8b8dffa3dee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 53e164bfdc27d99073cc893f98f332366091a753
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613209"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881291"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF Sorun Giderme Hızlı Başlangıç
 Bu konuda, birkaç müşteriler içine geliştirme WCF istemcileri ve Hizmetleri çalıştırdığınız bilinen sorunlar listelenmektedir. Çalıştırmakta olduğunuz sorun bu listede değilse, hizmetiniz için izleme yapılandırma öneririz. Bu işlem bir izleme dosyası oluşturur izleme dosyası Görüntüleyici ile birlikte görüntülemek ve bu özel durumları hakkında ayrıntılı bilgi almak hizmet içinde oluşabilecek. İzlemeyi yapılandırma hakkında daha fazla bilgi için bkz: [İzlemeyi Yapılandırma](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). İzleme dosyası Görüntüleyici hakkında daha fazla bilgi için bkz: [Hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -194,7 +194,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q10"></a>   
 ## <a name="what-is-the-base-address-how-does-it-relate-to-an-endpoint-address"></a>Taban adresi nedir? Bu uç nokta adresi için nasıl ilişkilidir?  
- Kök adresidir temel adres bir <xref:System.ServiceModel.ServiceHost> sınıfı. Varsayılan olarak eklerseniz, bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> konak yayımlar tüm uç noktaları HTTP temel adresi yanı sıra, meta veri davranışı için sağlanan tüm göreli adres alınır için Web Hizmetleri Açıklama Dili (WSDL), hizmet yapılandırmasını sınıfı Ayrıca "? wsdl". Alışkın olduğunuz [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] ve IIS temel adres sanal dizin ile eşdeğer.  
+ Kök adresidir temel adres bir <xref:System.ServiceModel.ServiceHost> sınıfı. Varsayılan olarak eklerseniz, bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> konak yayımlar tüm uç noktaları HTTP temel adresi yanı sıra, meta veri davranışı için sağlanan tüm göreli adres alınır için Web Hizmetleri Açıklama Dili (WSDL), hizmet yapılandırmasını sınıfı Ayrıca "? wsdl". ASP.NET ve IIS ile ilgili bilgi sahibi olduğunuz, temel adres sanal dizin ile eşdeğerdir.  
   
 ## <a name="sharing-a-port-between-a-service-endpoint-and-a-mex-endpoint-using-the-nettcpbinding"></a>Hizmet uç noktası ve NetTcpBinding kullanarak bir mex uç arasında bir bağlantı noktası paylaşımı  
  Net.tcp://MyServer bir hizmet için temel adresini belirtirseniz: 8080/Hizmetim ve aşağıdaki uç noktaların ekleyin:  

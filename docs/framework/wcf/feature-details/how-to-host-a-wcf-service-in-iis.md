@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: f106ce1bca67f8b88df0835496eea0b3297ac946
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9ff82d58f08d8c040984b37422a7048b9d4361d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000837"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878646"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Nasıl yapılır: IIS'de WCF Hizmeti Barındırma
 Bu konuda, Internet Information Services (IIS) barındırılan Windows Communication Foundation (WCF) hizmet oluşturmak için gerekli temel adımlar açıklanmaktadır. Bu konuda, IIS ile ilgili bilgi sahibi olduğunuz ve IIS uygulamaları oluşturmak ve yönetmek için IIS Yönetim Aracı'nı kullanmayı öğrenmenize varsayılır. IIS hakkında daha fazla bilgi için bkz. [Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449). Bir WCF Hizmeti IIS ortamında çalışır gibi işlem geri dönüştürme, IIS özellikleri tüm avantajlarından yararlanır, kapatma, sistem durumu izleme işlemi ve ileti tabanlı etkinleştirme boş. Bu barındırma seçeneği IIS düzgün şekilde yapılandırılmasını gerektirir, ancak uygulamanın bir parçası herhangi bir barındırma kod yazılmasını gerektirmez. Yalnızca bir HTTP aktarımı ile IIS barındırma kullanabilirsiniz.  
   
- Hakkında daha fazla bilgi için WCF ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] etkileşim kurmak için bkz: [WCF hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). Güvenlik yapılandırma hakkında daha fazla bilgi için bkz. [güvenlik](../../../../docs/framework/wcf/feature-details/security.md).  
+ WCF ve ASP.NET arasındaki etkileşim hakkında daha fazla bilgi için bkz. [WCF hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). Güvenlik yapılandırma hakkında daha fazla bilgi için bkz. [güvenlik](../../../../docs/framework/wcf/feature-details/security.md).  
   
  Bu örnekte kaynak kopyası için bkz: [IIS kullanarak satır içi kod barındırma](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md).  
   
@@ -23,7 +23,7 @@ Bu konuda, Internet Information Services (IIS) barındırılan Windows Communica
   
 1. IIS yüklü ve bilgisayarınızda çalışmakta olduğunu doğrulayın. Yükleme ve IIS yapılandırma hakkında daha fazla bilgi için bkz: [yükleme ve IIS 7.0 yapılandırma](https://go.microsoft.com/fwlink/?LinkID=132128)  
   
-2. "IISHostedCalcService" adlı uygulama dosyalarınızı için yeni bir klasör oluşturun, emin [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] klasörünün içeriğini erişimi vardır ve bu uygulamada bulunan fiziksel olarak yeni bir IIS uygulama oluşturmak için IIS Yönetim Aracı'nı kullanın Dizin. Uygulamanın directory kullan "IISHostedCalc" için bir diğer ad oluştururken.  
+2. "IISHostedCalcService" adlı uygulama dosyalarınızı için yeni bir klasör oluşturun, ASP.NET klasörünün içeriğini erişimi olduğundan emin olun ve bu uygulama dizininde bulunan fiziksel olarak yeni bir IIS uygulama oluşturmak için IIS Yönetim Aracı'nı kullanın. Uygulamanın directory kullan "IISHostedCalc" için bir diğer ad oluştururken.  
   
 3. Uygulama dizininde, "service.svc" adlı yeni bir dosya oluşturun. Aşağıdakileri ekleyerek bu dosyayı Düzenle @ServiceHost öğesi.  
   

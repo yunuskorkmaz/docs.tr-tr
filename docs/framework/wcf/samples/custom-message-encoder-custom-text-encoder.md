@@ -2,12 +2,12 @@
 title: 'Özel İleti Kodlayıcısı: Özel metin Kodlayıcı - WCF'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: a1523c854bbae09b2ac5cb0565962b394ec9b70e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8cbdb9e2a17eb006b589fe42fe6adf62ce37d340
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003086"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878392"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Özel İleti Kodlayıcısı: Özel Metin Kodlayıcısı
 
@@ -36,7 +36,7 @@ Bu örnek, Windows Communication Foundation (WCF) kullanarak bir özel metin ile
 
 ## <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma
 
-1. Yükleme [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aşağıdaki komutu kullanarak 4.0.
+1. ASP.NET 4. 0 aşağıdaki komutu kullanarak yükleyin.
 
     ```
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable

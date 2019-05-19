@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cc88106a54a00b4b12e5043da7961791a98102c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79cfc607e20d921c7ae942cb9755eee4264336eb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780022"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877053"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio için geliştirici komut istemi
 
@@ -38,7 +38,7 @@ Visual Studio ve ek Sdk'lara yüklediğiniz sürümüne bağlı olarak birden ç
 
 ### <a name="in-windows-81"></a>Windows 8.1 içinde
 
-1. Git **Başlat** ekranında Windows logosu tuşuna basarak ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") klavyenizde örneğin.
+1. Git **Başlat** ekranında Windows logosu tuşuna basarak ![klavyedeki Windows logo tuşu.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) Örneğin, bir klavyenizdeki.
 
 2. Üzerinde **Başlat** tuşuna basın, ekran **Ctrl**+**sekmesini** açmak için **uygulamaları** listelemek ve enter `V`. Bu, tüm yüklü Visual Studio Komut İstemi'ni içeren bir liste getirir.
 
@@ -46,9 +46,9 @@ Visual Studio ve ek Sdk'lara yüklediğiniz sürümüne bağlı olarak birden ç
 
 ### <a name="in-windows-8"></a>Windows 8'de
 
-1. Git **Başlat** ekranında Windows logosu tuşuna basarak ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") klavyenizde örneğin.
+1. Git **Başlat** ekranında Windows logosu tuşuna basarak ![klavyedeki Windows logo tuşu.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) Örneğin, bir klavyenizdeki.
 
-2. Üzerinde **Başlat** ekranında, Windows logosu tuşuna ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") `+ Z`.
+2. Üzerinde **Başlat** ekranında, Windows logosu tuşuna ![klavyedeki Windows logo tuşu.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) `+ Z`.
 
 3. Seçin **uygulamaları görüntüle** ekranın altındaki simgesini ve ardından girin `V`. Bu, tüm yüklü Visual Studio Komut İstemi'ni içeren bir liste getirir.
 

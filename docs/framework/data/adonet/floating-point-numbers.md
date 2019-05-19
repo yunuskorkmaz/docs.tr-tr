@@ -2,15 +2,15 @@
 title: Kayan Noktalı Sayılar
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: 209e53e41495603f4ad559a74bdc87033f6a92a5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d1c033d7999fa403aaf18fccb765da178cba169a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583677"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882042"
 ---
 # <a name="floating-point-numbers"></a>Kayan Noktalı Sayılar
-Bu konuda kayan nokta sayıları ile çalışırken, geliştiricilerin sık karşılaştığınız sorunları bazıları açıklanmaktadır [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Bu sorunları şekilde bilgisayarları kayan nokta sayıları depolamak ve gibi belirli bir sağlayıcıya özgü olmayan neden olduğu <xref:System.Data.SqlClient> veya <xref:System.Data.OracleClient>.  
+Bu konuda ADO.NET'te kayan nokta sayıları ile çalışırken, geliştiricilerin sık karşılaştığınız sorunları bazılarını açıklar. Bu sorunları şekilde bilgisayarları kayan nokta sayıları depolamak ve gibi belirli bir sağlayıcıya özgü olmayan neden olduğu <xref:System.Data.SqlClient> veya <xref:System.Data.OracleClient>.  
   
  Kayan nokta sayıları genellikle tam bir ikili gösterim gerekmez. Bunun yerine, bilgisayar sayısı yaklaşık olarak depolar. Farklı zamanlarda farklı sayıda ikili basamak sayıyı temsil etmek için kullanılabilir. Kayan zaman noktası numarası, başka bir gösterimiyse, bu sayının en az anlamlı basamaklarında bir gösterimden dönüştürülür biraz farklılık gösterebilir. Dönüştürme, genellikle numarası bir türden diğerine başka bir türe dönüştürüldüğüne oluşur. Değişim dönüştürme türleri veya veritabanı değerlerini temsil eden türleri arasında bir veritabanı içinde oluşup oluşmadığını gerçekleşir. Bu değişiklikler nedeniyle, mantıksal olarak eşit olacaktır sayıları farklı değerlere sahip neden, en az önemli basamak değişiklikler olabilir. Duyarlık sayısı basamak sayısı, beklenenden daha küçük veya çok büyük olabilir. Sayı, dize olarak biçimlendirilmiş, beklenen değerle gösterilmeyebilir.  
   

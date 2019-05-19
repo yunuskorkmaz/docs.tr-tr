@@ -11,12 +11,12 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 311889d70a5dd9b30f4151c453d489edf77b92e0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: da2576696b514dca882636125cfb3e31a82d7f6e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591636"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878196"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Nasıl yapılır: Uzaktan Yazıcıların Durumunu Araştırma
 Orta ve büyük şirketler belirli bir zamanda en nedeniyle bir kağıt sıkıştı çalışma veya kağıt veya diğer bazı sorunlu durum dışında olan birden çok yazıcılar olabilir. Zengin, kullanıma sunulan yazıcı Özellikler [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] hızlı yazıcıların durumunu araştırma gerçekleştirmek için Microsoft .NET Framework'ü bir yol sağlar.  
@@ -51,7 +51,7 @@ Orta ve büyük şirketler belirli bir zamanda en nedeniyle bir kağıt sıkış
  [!code-csharp[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#surveyqueues)]
  [!code-vb[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#surveyqueues)]  
   
- Bayraklarını kullanarak yazıcı durumunu denetlemek için <xref:System.Printing.PrintQueue.QueueStatus%2A> özelliği, ilgili her bayrağı ayarlanmış olup olmadığını görmek için denetleyin. Bir bit bit bayrakları kümesi içinde ayarlanmış olup olmadığını görmek için standart bayrakları kümesini tek bir işlenen ve diğer bayrağını kendisini olarak bir mantıksal AND işlemini gerçekleştirmek için yoludur. En fazla bayrağı ayarlayın, mantıksal sonucunu bir bit varsa ve bu yana aynı söz konusu bit ayarlanır. Bunu veya olduğunu bulmak için yalnızca sonuç mantıksal AND bayrağı ile karşılaştırın. Daha fazla bilgi için <xref:System.Printing.PrintQueueStatus>, [& işleci (C# başvuru)](~/docs/csharp/language-reference/operators/and-operator.md), ve <xref:System.FlagsAttribute>.  
+ Bayraklarını kullanarak yazıcı durumunu denetlemek için <xref:System.Printing.PrintQueue.QueueStatus%2A> özelliği, ilgili her bayrağı ayarlanmış olup olmadığını görmek için denetleyin. Bir bit bit bayrakları kümesi içinde ayarlanmış olup olmadığını görmek için standart bayrakları kümesini tek bir işlenen ve diğer bayrağını kendisini olarak bir mantıksal AND işlemini gerçekleştirmek için yoludur. En fazla bayrağı ayarlayın, mantıksal sonucunu bir bit varsa ve bu yana aynı söz konusu bit ayarlanır. Bunu veya olduğunu bulmak için yalnızca sonuç mantıksal AND bayrağı ile karşılaştırın. Daha fazla bilgi için <xref:System.Printing.PrintQueueStatus>, [& işleci (C# başvuru)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-), ve <xref:System.FlagsAttribute>.  
   
  Kod biti ayarlanmış her öznitelik için bir bildirim kullanıcıya sunulan raporun son hali ekler. ( **ReportAvailabilityAtThisTime** kod sonunda çağrılan yöntem aşağıda ele alınmıştır.)  
   
@@ -85,6 +85,6 @@ Orta ve büyük şirketler belirli bir zamanda en nedeniyle bir kağıt sıkış
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.EnumeratedPrintQueueTypes>
 - <xref:System.Printing.PrintQueue>
-- [& İşleci (C# Başvurusu)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& İşleci (C# Başvurusu)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
 - [WPF'deki Belgeler](documents-in-wpf.md)
 - [Yazdırmaya Genel Bakış](printing-overview.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: c9215d1072060c4272c7d61056d51297dd997197
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 08e85828451ba6c66b13ff31e3d6c106871b8154
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645749"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875880"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms'a genel bakış
 
@@ -66,7 +66,7 @@ Bu özelliklerin nasıl kullanılacağını hakkında adım adım bilgiler için
 |Açıklama|Yardım konusu|
 |-----------------|----------------|
 |Kullanarak <xref:System.Windows.Forms.BindingSource> bileşeni|[Nasıl yapılır: BindingSource bileşeniyle Tasarımcı kullanarak Windows Forms denetimleri bağlama](./controls/bind-wf-controls-with-the-bindingsource.md)|
-|Çalışma [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] veri kaynakları|[Nasıl yapılır: Windows ile ADO.NET verilerini sıralama ve filtreleme Forms BindingSource bileşeni](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|ADO.NET veri kaynaklarıyla çalışma|[Nasıl yapılır: Windows ile ADO.NET verilerini sıralama ve filtreleme Forms BindingSource bileşeni](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Veri Kaynakları penceresini kullanma|[Visual Studio'da verilere Windows Forms denetimleri bağlama](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
 |Uygulama ayarlarını kullanma|[Nasıl yapılır: Uygulama ayarları oluşturma](./advanced/how-to-create-application-settings.md)|
 

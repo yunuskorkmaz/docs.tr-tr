@@ -11,12 +11,12 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: c8321f98b25026e32e7c69f7029f2c589d0567f7
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 1f1412f03f912c0142b08d5ad8581e421252cfb3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211594"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882355"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>İzlenecek yol: DesignerSerializationVisibilityAttribute ile Standart Türler Koleksiyonlarının Seri Hale Getirilmesi
 
@@ -66,7 +66,7 @@ Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
 
 8. Tuşuna **F5** projeyi oluşturun ve denetim Çalıştır **UserControl Test kapsayıcısı**.
 
-9. Bulma `Strings` özelliğinde <xref:System.Windows.Forms.PropertyGrid> , **UserControl Test kapsayıcısı**. Tıklayın `Strings` özelliği, sonra üç nokta simgesine tıklayın (![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png "vbEllipsesButton")) açmak için düğmeyi **Dize Koleksiyonu Düzenleyicisi**.
+9. Bulma `Strings` özelliğinde <xref:System.Windows.Forms.PropertyGrid> , **UserControl Test kapsayıcısı**. Tıklayın `Strings` özelliği, sonra üç nokta simgesine tıklayın (![Visual Studio Özellikler penceresinde üç nokta düğmesini (…)](./media/visual-studio-ellipsis-button.png)) açmak için düğmeyi **Dize Koleksiyonu Düzenleyicisi**.
 
 10. Birkaç dizeleri girin **Dize Koleksiyonu Düzenleyicisi**. Tuşlarına basarak ayırarak **Enter** her bir dizenin sonunda anahtar. Tıklayın **Tamam** dizeleri girmeyi tamamladığınızda.
 
@@ -85,7 +85,7 @@ Serileştirme davranışını test için bir form üzerinde yerleştirmek ve kol
 
 3. Bir yerde bir `SerializationDemoControl` formunuzdaki.
 
-4. Bulma `Strings` özelliğinde **özellikleri** penceresi. Tıklayın `Strings` özelliği, sonra üç nokta simgesine tıklayın (![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png "vbEllipsesButton")) açmak için düğmeyi **Dize Koleksiyonu Düzenleyicisi**.
+4. Bulma `Strings` özelliğinde **özellikleri** penceresi. Tıklayın `Strings` özelliği, sonra üç nokta simgesine tıklayın (![Visual Studio Özellikler penceresinde üç nokta düğmesini (…)](./media/visual-studio-ellipsis-button.png)) açmak için düğmeyi **Dize Koleksiyonu Düzenleyicisi**.
 
 5. Birkaç dizelerde yazın **Dize Koleksiyonu Düzenleyicisi**. Bunları, her bir dizenin sonunda ENTER tuşuna basarak ayırın. Tıklayın **Tamam** dizeleri girmeyi tamamladığınızda.
 

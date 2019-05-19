@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 9b59f9a1895b06cbc102afdceccb373a22ddafc1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 09fcf3f1a7e58a4bd8c2c6b0d25c24f32ea5ec5e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583512"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880587"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server ile System.Transactions Tümleştirmesi
-Erişilebilir bir işlem framework .NET Framework sürüm 2.0 kullanılmaya <xref:System.Transactions> ad alanı. Bu çerçeve işlemleri .NET Framework, tamamen tümleşik bir şekilde kullanıma sunan dahil olmak üzere [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+Erişilebilir bir işlem framework .NET Framework sürüm 2.0 kullanılmaya <xref:System.Transactions> ad alanı. Bu çerçeve, işlem ADO.NET dahil olan .NET Framework içinde tamamen tümleşik bir şekilde kullanıma sunar.  
   
- Programlanabilirlik geliştirmeleri yanı sıra <xref:System.Transactions> ve [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] işlemleri ile çalışırken en iyi duruma getirme koordine etmek için birlikte çalışabilir. Otomatik olarak tam olarak dağıtılmış bir işlem gerekli olarak yükseltilebilir basit bir (yerel) işlem bir promotable işlemdir.  
+ Programlanabilirlik geliştirmeleri yanı sıra <xref:System.Transactions> ve ADO.NET birlikte çalışabilir işlemleri ile çalışırken en iyi duruma getirme koordine etmek için. Otomatik olarak tam olarak dağıtılmış bir işlem gerekli olarak yükseltilebilir basit bir (yerel) işlem bir promotable işlemdir.  
   
- İle başlayarak [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 <xref:System.Data.SqlClient> SQL Server ile çalışırken promotable işlemleri destekler. Bir promotable işlem eklenen çağırmadığı işlemlerinin ek yükü dağıtılmış işlem ek yükü gerekli olmadığı sürece. Promotable işlemleri otomatik olarak yapılır ve geliştiriciden herhangi bir müdahalesi gerektirir.  
+ ADO.NET 2.0 ile başlayarak <xref:System.Data.SqlClient> SQL Server ile çalışırken promotable işlemleri destekler. Bir promotable işlem eklenen çağırmadığı işlemlerinin ek yükü dağıtılmış işlem ek yükü gerekli olmadığı sürece. Promotable işlemleri otomatik olarak yapılır ve geliştiriciden herhangi bir müdahalesi gerektirir.  
   
  Promotable işlemleri bulunan ve yalnızca SQL Server için .NET Framework Veri Sağlayıcısı'nı kullandığınızda (`SqlClient`) SQL Server ile.  
   

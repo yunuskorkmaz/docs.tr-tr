@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 0252259d92f08a0f871167fc7930818bab542cc5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6782261953fb5df94498deefb261407a2f0ba33a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626791"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882393"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Forms Tarafından Desteklenen Veri Kaynakları
 Geleneksel olarak, veri bağlama uygulamalarda, veritabanlarında depolanan verilerin yararlanmak için kullanıldı. Belirli en düşük gereksinimleri karşılanmadığı sürece Windows Forms veri bağlama ile veritabanları ve bunun yanı sıra diğer yapıları, diziler ve Koleksiyonlar gibi verileri verilere erişebilir.  
@@ -44,12 +44,12 @@ Geleneksel olarak, veri bağlama uygulamalarda, veritabanlarında depolanan veri
  <xref:System.Collections.IEnumerable>  
  Windows Forms denetimleri yalnızca destekleyen veri kaynaklarına bağlanabilir <xref:System.Collections.IEnumerable> aracılığıyla bağlıysa arabirim bir <xref:System.Windows.Forms.BindingSource> bileşeni.  
   
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] veri nesneleri  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] bağlama için uygun olan veri yapıları sayısı sağlar. Her karmaşıklığı ve Gelişmiş algoritmaların içinde değişir.  
+ ADO.NET veri nesneleri  
+ ADO.NET veri yapılarını bağlama için uygun bir dizi sağlar. Her karmaşıklığı ve Gelişmiş algoritmaların içinde değişir.  
   
 - <xref:System.Data.DataColumn>. A <xref:System.Data.DataColumn> temel yapı bloğu olduğu bir <xref:System.Data.DataTable>bu sütun sayısı bir tablo oluşturur. Her <xref:System.Data.DataColumn> sahip bir <xref:System.Data.DataColumn.DataType%2A> veri sütununu ayrı tutma (örneğin, otomobiller açıklayan bir tablodaki bir otomobilin yap) türünü belirleyen özelliği. Basit bir denetim bağlamak (aşağıdaki gibi bir <xref:System.Windows.Forms.TextBox> denetimin <xref:System.Windows.Forms.Control.Text%2A> özelliği) bir sütuna veri tablosu içinde.  
   
-- <xref:System.Data.DataTable>. A <xref:System.Data.DataTable> satırları ve sütunları içeren bir tablo olarak gösterimidir [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Veri tablosu içeren iki koleksiyona: <xref:System.Data.DataColumn>, (Bu sonuç olarak bu tabloya girilen veri türlerini belirlemek) belirli bir tabloda veri sütunlarını temsil eden ve <xref:System.Data.DataRow>, bir tablodaki veri satırlarının temsil eden. Karmaşık bir denetim için bir veri tablosunda yer alan bilgileri bağlamak (bağlama gibi <xref:System.Windows.Forms.DataGridView> veri tablosu denetimi). Ancak, bağladığınızda için bir <xref:System.Data.DataTable>, gerçekten bağlama tablonun varsayılan görünüme olan.  
+- <xref:System.Data.DataTable>. A <xref:System.Data.DataTable> satırları ve sütunları, ADO.NET ile bir tablo gösterimidir. Veri tablosu içeren iki koleksiyona: <xref:System.Data.DataColumn>, (Bu sonuç olarak bu tabloya girilen veri türlerini belirlemek) belirli bir tabloda veri sütunlarını temsil eden ve <xref:System.Data.DataRow>, bir tablodaki veri satırlarının temsil eden. Karmaşık bir denetim için bir veri tablosunda yer alan bilgileri bağlamak (bağlama gibi <xref:System.Windows.Forms.DataGridView> veri tablosu denetimi). Ancak, bağladığınızda için bir <xref:System.Data.DataTable>, gerçekten bağlama tablonun varsayılan görünüme olan.  
   
 - <xref:System.Data.DataView>. A <xref:System.Data.DataView> filtre veya sıralanmış bir tek veri tablo özelleştirilmiş bir görünümüdür. Veri Görünümü "snapshot" karmaşık veriye bağlı denetimler tarafından kullanılan verilerdir. Basit-bağlama veya veri görünümündeki verileri karmaşık bağlamak ancak bir sabit "resim" temiz ve güncelleştirme veri kaynağı yerine veri bağlama unutmayın.  
   

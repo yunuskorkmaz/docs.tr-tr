@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 4a41eac3d5b51936ebbae8d9e3dcf623da676bce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 05ba633415f782d5edea7028c1b82b8031428576
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583510"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878248"
 ---
 # <a name="frequently-asked-questions"></a>Sıkça Sorulan Sorular
 Aşağıdaki bölümlerde, uyguladığınızda karşılaşabileceğiniz bazı yaygın sorunlar yanıt [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -185,7 +185,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  A. Örneklerini yeniden denemeyin <xref:System.Data.Linq.DataContext>. Her <xref:System.Data.Linq.DataContext> tek bir belirli düzenleme/sorgu oturum için (kimlik önbellek dahil) durumu korur. Veritabanının mevcut durumuna göre yeni örnekler elde etmek için yeni bir kullanın <xref:System.Data.Linq.DataContext>.  
   
- Temel alınan kullanmaya devam edebilirsiniz [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] bağlantı havuzu. Daha fazla bilgi için [SQL Server Connection Pooling (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Temel alınan ADO.NET bağlantı havuzu kullanmaya devam edebilirsiniz. Daha fazla bilgi için [SQL Server Connection Pooling (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ## <a name="second-datacontext-is-not-updated"></a>İkinci DataContext güncelleştirilmemiş  
  S. Bir örneği kullandım <xref:System.Data.Linq.DataContext> değerleri veritabanında depolamak için. Ancak, ikinci bir <xref:System.Data.Linq.DataContext> aynı veritabanında güncelleştirilmiş değerleri yansıtmaz. İkinci <xref:System.Data.Linq.DataContext> örneği gibi görünüyor önbelleğe alınan değer döndürmek için.  

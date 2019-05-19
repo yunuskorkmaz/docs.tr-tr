@@ -1,14 +1,14 @@
 ---
-title: Azure Blob Depolama kullanmaya başlamaF#
+title: F# kullanarak Azure Blob depolama kullanmaya başlama
 description: Azure Blob Depolama ile bulutta yapılandırılmamış veri Store.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d020c2cd9a11db1cd4b7a60113e1be03655f763
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982520"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880043"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F kullanarak Azure Blob depolamayı kullanmaya başlama\#
 
@@ -196,8 +196,8 @@ Daha fazla bilgi için [Microsoft Azure Depolama'da eşzamanlılığı yönetme]
 
 Her blob Azure depolamadaki bir kapsayıcıda yer almalıdır. Kapsayıcı, blob adının bir kısmını oluşturur. Örneğin, `mydata` Bu örnek blob Urı'lerinde kapsayıcısında adıdır:
 
-    https://storagesample.blob.core.windows.net/mydata/blob1.txt
-    https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
+- https://storagesample.blob.core.windows.net/mydata/blob1.txt
+- https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
 
 Bir kapsayıcı adı, geçerli bir DNS adı, aşağıdaki adlandırma kurallarına uygun olmalıdır:
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 9f72d6d560f82d7d80036f07ec865d78a4ab9955
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d36c51a3346d7d2c2aa4b7b526d590770463826e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606408"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882453"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>İzlenecek yol: TableLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme
 Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içeriği boyutu değiştikçe uygun şekilde düzenler bir düzene sahip bir form gerektirir. Ne zaman dinamik bir düzen gerekir ve işlemek istemediğiniz <xref:System.Windows.Forms.Control.Layout> açıkça kodunuzda olayları, Düzen panelini kullanma göz önünde bulundurun.  
@@ -95,7 +95,7 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
   
 1. Seçin <xref:System.Windows.Forms.TableLayoutPanel> denetim **Windows Form Tasarımcısı**.  
   
-2. İçinde **özellikleri** açık pencerelerin <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> üç nokta simgesine tıklayarak, koleksiyon (![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png "vbEllipsesButton")) düğmesi yanındaki **sütunları** girişi.  
+2.  İçinde **özellikleri** açık pencerelerin <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> üç nokta simgesine tıklayarak, koleksiyon (![Visual Studio Özellikler penceresinde üç nokta düğmesini (…)](./media/visual-studio-ellipsis-button.png)) düğmesinin yanındaki  **Sütunları** girişi.  
   
 3. İlk sütunu seçin ve değeri değiştirin, <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> özelliğini <xref:System.Windows.Forms.SizeType.AutoSize>. Tıklayın **Tamam** değişikliği kabul etmek için. İlk sütun genişliğini uyacak şekilde azalır Not <xref:System.Windows.Forms.Button> denetimi. Ayrıca, bir sütunun genişliğini yeniden boyutlandırılabilir olmadığını unutmayın.  
   

@@ -18,17 +18,17 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: bc19ee687b26025d3da4d66888902395b863f046
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6c35398d54b91c9aa595ffdcde56004e59b7693
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628925"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882499"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama
 Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanız uygulayarak zaman uyumsuz işlevleri vererek göz önünde bulundurun [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
- Bu izlenecek yol, olay tabanlı zaman uyumsuz desen uygulayan bir bileşen oluşturma işlemini gösterir. Yardımcı sınıflarından kullanılarak uygulanır <xref:System.ComponentModel?displayProperty=nameWithType> bileşen herhangi bir uygulama modeli altında düzgün çalıştığını sağlar, ad alanı dahil olmak üzere [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], konsol uygulamaları ve Windows Forms uygulamaları. Bu bileşen ayrıca designable ile bir <xref:System.Windows.Forms.PropertyGrid> denetimi ve kendi özel tasarımcılar.  
+ Bu izlenecek yol, olay tabanlı zaman uyumsuz desen uygulayan bir bileşen oluşturma işlemini gösterir. Yardımcı sınıflarından kullanılarak uygulanır <xref:System.ComponentModel?displayProperty=nameWithType> ad alanı bileşeni ASP.NET ve konsol uygulamaları ve Windows Forms uygulamaları dahil olmak üzere tüm uygulama modeli altında düzgün şekilde çalışmasını sağlar. Bu bileşen ayrıca designable ile bir <xref:System.Windows.Forms.PropertyGrid> denetimi ve kendi özel tasarımcılar.  
   
  Aracılığıyla işiniz asal sayıları zaman uyumsuz olarak hesaplayan bir uygulamaya sahip olursunuz. Uygulamanızın ana kullanıcı arabirimi (UI) iş parçacığı ve her asal sayı hesaplaması için bir iş parçacığı olacaktır. Büyük bir sayı olup olmadığını test olsa da asal belirgin bir süre alabilir, ana UI iş parçacığı tarafından bu gecikme durdurulmaz ve form hesaplama sırasında hızlı yanıt veren olacaktır. Eş zamanlı olarak ve seçmeli olarak istediğiniz gibi çok sayıda hesaplama hesaplamalar iptal olarak çalıştırmak mümkün olacaktır.  
   

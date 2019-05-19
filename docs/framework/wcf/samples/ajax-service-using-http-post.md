@@ -2,15 +2,15 @@
 title: HTTP POST Kullanan AJAX Hizmeti
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-ms.openlocfilehash: 2bc1722056af4fc71f5f93d92ecd12accd99548f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2fb98e38956719608517caa0e7eeaebd14df8d95
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002852"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882145"
 ---
 # <a name="ajax-service-using-http-post"></a>HTTP POST Kullanan AJAX Hizmeti
-Bu örnek oluşturmak için Windows Communication Foundation (WCF) kullanmayı gösteren bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] HTTP POST kullanan zaman uyumsuz JavaScript ve XML (AJAX) hizmet. Bir AJAX temel JavaScript kodunu bir Web tarayıcısı istemcisini kullanarak erişebileceğiniz bir hizmettir. Bu örnek yapılar [temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md) örnek; iki örnek arasındaki tek fark, HTTP POST HTTP GET yerine kullanılmasıdır.  
+Bu örnek, Windows Communication Foundation (WCF) HTTP POST kullanan bir ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) bir hizmet oluşturmak için nasıl kullanılacağını gösterir. Bir AJAX temel JavaScript kodunu bir Web tarayıcısı istemcisini kullanarak erişebileceğiniz bir hizmettir. Bu örnek yapılar [temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md) örnek; iki örnek arasındaki tek fark, HTTP POST HTTP GET yerine kullanılmasıdır.  
   
  AJAX desteği Windows Communication Foundation (WCF) ASP.NET AJAX ile kullanım için optimize `ScriptManager` denetimi. ASP.NET AJAX ile WCF kullanan bir örnek için bkz: [Ajax örnekleri](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
   

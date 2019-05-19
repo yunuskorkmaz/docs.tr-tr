@@ -6,12 +6,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 87a7b16d3e096f6a5bf05475ccc7c43862324ae3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 110d83caad0c588fa899a4129897784e9c74aab8
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583360"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881910"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Statik Oluşturucular (C# Programlama Kılavuzu)
 Statik Oluşturucu herhangi başlatmak için kullanılan [statik](../../../csharp/language-reference/keywords/static.md) verileri veya yalnızca bir kez gerçekleştirilmesi gereken belirli bir eylemi gerçekleştirmek için. İlk örneği oluşturulduğunda veya herhangi bir statik üye başvurulan önce otomatik olarak adlandırılır.  
@@ -22,7 +22,7 @@ Statik Oluşturucu herhangi başlatmak için kullanılan [statik](../../../cshar
   
 - Statik Oluşturucu erişim değiştiricileri alın veya parametreleri desteklemez.  
   
-- Statik Oluşturucu otomatik olarak başlatmak için çağırılır [sınıfı](../../../csharp/language-reference/keywords/class.md) önce ilk örneği oluşturulduğunda veya herhangi bir statik üye başvurulur.  
+- Statik Oluşturucu otomatik olarak başlatmak için çağırılır [sınıfı](../../../csharp/language-reference/keywords/class.md) önce ilk örneği oluşturulduğunda veya herhangi bir statik üye başvurulur. Bir türün statik Oluşturucusu bir olay ya da temsilci atanmış statik bir yöntemi çağrıldığında ve değil atandığı zaman çağrıldığını unutmayın.
   
 - Statik Oluşturucu doğrudan çağrılamaz.  
   

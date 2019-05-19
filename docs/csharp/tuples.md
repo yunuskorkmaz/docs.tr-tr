@@ -3,12 +3,12 @@ title: Tanımlama grubu türleri - C# Kılavuzu
 description: C# adsız ve adlandırılmış bir tanımlama grubu türleri hakkında bilgi edinin
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: d9d3424e1e59e7b33a098537738a0a1f6af27d74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4000228507bf7925083147ddd49dd10914ef2449
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706435"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882057"
 ---
 # <a name="c-tuple-types"></a>C# demet türleri
 
@@ -109,7 +109,7 @@ Son olarak, diziler, iç içe geçmiş bir tanımlama grubu içerebilir. Tanıml
 
 [!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
 
-Eşitlik (ya da eşitsizlik) için iki diziler karşılaştırmak için bir derleme zamanı hata farklı şekiller zaman sahiptirler. Kazanılan derleyici ' iç içe geçmiş bir tanımlama grubu herhangi bir ayrıştırma bunları karşılaştırmak için çalışır.
+Eşitlik (ya da eşitsizlik) için iki diziler karşılaştırmak için bir derleme zamanı hata farklı şekiller zaman sahiptirler. Derleyici iç içe geçmiş bir tanımlama grubu herhangi bir ayrıştırma bunları karşılaştırmak için deneme olmaz.
 
 ## <a name="assignment-and-tuples"></a>Atama ve diziler
 

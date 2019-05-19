@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: 161edd2cb3afeb6ba8b10455a1c3a2c43b90dac1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8852a3daa3cd3891d5053cc1fffe19fa310125de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949675"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880714"
 ---
 # <a name="objects-visual-basic"></a>Nesneler (Visual Basic)
 Bu konu, bu belge, Visual Basic çalışma zamanı nesneleri ve tablolar, üye yordamları, özellikleri ve olayları içeren diğer konulara bağlantılar sağlar.  
@@ -37,9 +37,9 @@ Bu konu, bu belge, Visual Basic çalışma zamanı nesneleri ve tablolar, üye y
 |`My.Computer.Registry` (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)|Özellikler ve kayıt defterini düzenlemek için yöntemler sağlar.|  
 |[My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)|Her Windows formunu örneğini erişmeye yönelik özellikler geçerli projedeki bildirilen sağlar.|  
 |`My.Log` (<xref:Microsoft.VisualBasic.Logging.AspLog>)|Bir özellik ve Web uygulamaları için uygulamanın günlük dinleyicileri için olay ve özel durum bilgilerini yazma yöntemleri sağlar.|  
-|[My.Request Nesnesi](../../../visual-basic/language-reference/objects/my-request-object.md)|Alır <xref:System.Web.HttpRequest> istenen sayfa nesnesi. `My.Request` Nesnesi geçerli HTTP isteğiyle ilgili bilgileri içerir.<br /><br /> `My.Request` Yalnızca nesne kullanılabilir [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] uygulamalar.|  
+|[My.Request Nesnesi](../../../visual-basic/language-reference/objects/my-request-object.md)|Alır <xref:System.Web.HttpRequest> istenen sayfa nesnesi. `My.Request` Nesnesi geçerli HTTP isteğiyle ilgili bilgileri içerir.<br /><br /> `My.Request` Nesne yalnızca ASP.NET uygulamaları için kullanılabilir.|  
 |[My.Resources Nesnesi](../../../visual-basic/language-reference/objects/my-resources-object.md)|Bir uygulamanın kaynaklara erişmek için özellikler ve sınıfları sağlar.|  
-|[My.Response Nesnesi](../../../visual-basic/language-reference/objects/my-response-object.md)|Alır <xref:System.Web.HttpResponse> ile ilişkili nesne <xref:System.Web.UI.Page>. Bu nesne, HTTP yanıt verilerini istemciye göndermenize olanak sağlar ve bu yanıt hakkında bilgiler içerir.<br /><br /> `My.Response` Yalnızca nesne kullanılabilir [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] uygulamalar.|  
+|[My.Response Nesnesi](../../../visual-basic/language-reference/objects/my-response-object.md)|Alır <xref:System.Web.HttpResponse> ile ilişkili nesne <xref:System.Web.UI.Page>. Bu nesne, HTTP yanıt verilerini istemciye göndermenize olanak sağlar ve bu yanıt hakkında bilgiler içerir.<br /><br /> `My.Response` Nesne yalnızca ASP.NET uygulamaları için kullanılabilir.|  
 |[My.Settings Nesnesi](../../../visual-basic/language-reference/objects/my-settings-object.md)|Özellikler ve uygulama ayarlarına erişme için yöntemler sağlar.|  
 |`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|Geçerli kullanıcı ile ilgili bilgilere erişim sağlar.|  
 |[My.WebServices Nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)|Oluşturma ve erişme geçerli proje tarafından başvurulan her Web hizmeti tek bir örneği için özellikleri sağlar.|  

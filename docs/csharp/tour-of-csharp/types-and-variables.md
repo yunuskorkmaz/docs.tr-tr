@@ -3,12 +3,12 @@ title: C#Türler ve değişkenler - Turu C# dil
 description: Türleri tanımlama ve değişkenleri bildirme hakkında bilgi edininC#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: ae44dd273a2460e5718adc7324fae324e3de5bba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5623b4a1e85508ea7206df2c73b7aaffcbc3fbb1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675747"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881975"
 ---
 # <a name="types-and-variables"></a>Türler ve değişkenler
 
@@ -23,8 +23,8 @@ Genel bir bakış verilmiştir C#'s tür sistemi.
     * İmzalı tam sayı: `sbyte`, `short`, `int`, `long`
     * İşaretsiz integral: `byte`, `ushort`, `uint`, `ulong`
     * Unicode karakter sayısı: `char`
-    * IEEE kayan nokta: `float`, `double`
-    * Yüksek duyarlıklı ondalık: `decimal`
+    * İkili IEEE kayan nokta: `float`, `double`
+    * Yüksek duyarlıklı ondalık kayan nokta: `decimal`
     * Boole: `bool`
   - [Numaralandırma türleri][EnumTypes]
     * Formun kullanıcı tanımlı türler `enum E {...}`
@@ -55,33 +55,11 @@ Genel bir bakış verilmiştir C#'s tür sistemi.
 [DelegateTypes]: ../language-reference/keywords/delegate.md
 [ArrayTypes]: ../programming-guide/arrays/index.md
 
-Sekiz integral türleri, 8-bit, 16-bit, 32-bit ve 64-bit işaretli veya işaretsiz form değerleri için destek sağlar.
-
-İki kayan nokta türleri `float` ve `double`, 32-bit tek duyarlıklı ve 64-bit çift duyarlıklı IEC 60559 biçimleri, sırasıyla kullanılarak temsil edilir.
-
-`decimal` Türüdür finansal ve parasal hesaplamalar için uygun bir 128-bit veri türü.
+Sayısal türleri hakkında daha fazla bilgi için bkz. [tam sayı türleri tablosu](../language-reference/keywords/integral-types-table.md) ve [kayan nokta türleri tablosu](../language-reference/keywords/floating-point-types-table.md).
 
 C#ın `bool` türü Boolean değerlerini temsil edecek şekilde kullanılır — ya da değerler `true` veya `false`.
 
 Karakter ve dize işleme C# dilinde Unicode kodlaması kullanır. `char` Türünü bir UTF-16 kod birimini temsil eder ve `string` türü UTF-16 kod birimlerini dizisini temsil eder.
-
-Bu özetler C#ait sayısal türler.
-
-* İmzalı tam sayı
-  - `sbyte`:  8 bit, -128 ile 127 arasındadır
-  - `short`: 16 bit ile 32.767 -32.768 arasındadır
-  - `int`  : 32 bit, aralık 2,147,483,648 ila 2,147,483,647
-  - `long` : 64 bit,-9,223,372,036,854,775,808 9.223.372.036.854.775.807 ile arasındadır
-* İşaretsiz tamsayı
-  - `byte`   :  8 bit, 0 ile 255 arasında
-  - `ushort` : 16 bit, 0 ile 65.535 arasında
-  - `uint`   : 32 bit ve aralığı 0'dan 4.294.967.295'e kadar
-  - `ulong`  : 64 bit, aralığı 0-18,446,744,073,709,551,615
-* Kayan nokta
-  - `float`  : 32 bit aralığı 1.5 × 10'dan<sup>-45</sup> 3.4 × 10<sup>38</sup>, 7 basamaklı duyarlık
-  - `double` : 64 bit aralığı 5.0 × 10'dan<sup>-324</sup> 1.7 × 10<sup>308</sup>, 15 basamaklı duyarlık
-* Ondalık
-  - `decimal` : 128 bit aralığı olan en az-7.9 × 10<sup>-28</sup> 7,9 × 10<sup>28</sup>, en az 28 basamaklı duyarlık ile
 
 C# programları kullanım *tür bildirimleri* yeni türler oluşturmak için. Bir tür bildirimi, adı ve yeni türün üyeleri belirtir. Beş C#'s türleri kategorilerini kullanıcı tanımlanabilir: Sınıf türleri, yapı türleri, arabirim türleri, sabit listesi türleri ve temsilci türleri.
 
