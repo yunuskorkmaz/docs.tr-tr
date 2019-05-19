@@ -5,7 +5,5 @@
       href: command-line-arguments.md
     - name: 'Nasıl yapılır: Komut Satırı Bağımsız Değişkenlerini Görüntüleme'
       href: how-to-display-command-line-arguments.md
-    - name: 'Nasıl yapılır: foreach Kullanarak Komut Satırı Bağımsız Değişkenlerine Erişme'
-      href: how-to-access-command-line-arguments-using-foreach.md
     - name: Ana() Dönüş Değerleri
       href: main-return-values.md
