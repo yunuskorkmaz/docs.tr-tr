@@ -8,21 +8,21 @@ helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-ms.openlocfilehash: 53b4a3e3848c1aa92bfa9fbd80bb031125257fc2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1a960d39319beee1c3c257fcd3ade207de11010
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922726"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881137"
 ---
-# <a name="how-to-deserialize-an-object"></a><span data-ttu-id="0c89a-102">Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma</span><span class="sxs-lookup"><span data-stu-id="0c89a-102">How to: Deserialize an Object</span></span>
-<span data-ttu-id="0c89a-103">Bir nesnenin serisini olduğunda, taşıma biçimi bir akış veya dosya nesnesi oluşturacak olup olmadığını belirler.</span><span class="sxs-lookup"><span data-stu-id="0c89a-103">When you deserialize an object, the transport format determines whether you will create a stream or file object.</span></span> <span data-ttu-id="0c89a-104">Taşıma biçimi belirlendikten sonra çağırabilirsiniz <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> veya <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> , gerekli olarak yöntemler.</span><span class="sxs-lookup"><span data-stu-id="0c89a-104">After the transport format is determined, you can call the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> or <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> methods, as required.</span></span>  
+# <a name="how-to-deserialize-an-object"></a><span data-ttu-id="0c30c-102">Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma</span><span class="sxs-lookup"><span data-stu-id="0c30c-102">How to: Deserialize an Object</span></span>
+<span data-ttu-id="0c30c-103">Bir nesnenin serisini olduğunda, taşıma biçimi bir akış veya dosya nesnesi oluşturacak olup olmadığını belirler.</span><span class="sxs-lookup"><span data-stu-id="0c30c-103">When you deserialize an object, the transport format determines whether you will create a stream or file object.</span></span> <span data-ttu-id="0c30c-104">Taşıma biçimi belirlendikten sonra çağırabilirsiniz <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> veya <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> , gerekli olarak yöntemler.</span><span class="sxs-lookup"><span data-stu-id="0c30c-104">After the transport format is determined, you can call the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> or <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> methods, as required.</span></span>  
   
-### <a name="to-deserialize-an-object"></a><span data-ttu-id="0c89a-105">Bir nesnenin serisini kaldırmak için</span><span class="sxs-lookup"><span data-stu-id="0c89a-105">To deserialize an object</span></span>  
+### <a name="to-deserialize-an-object"></a><span data-ttu-id="0c30c-105">Bir nesnenin serisini kaldırmak için</span><span class="sxs-lookup"><span data-stu-id="0c30c-105">To deserialize an object</span></span>  
   
-1. <span data-ttu-id="0c89a-106">Oluşturmak bir <xref:System.Xml.Serialization.XmlSerializer> seri durumdan çıkarılacak nesne türü kullanarak.</span><span class="sxs-lookup"><span data-stu-id="0c89a-106">Construct a <xref:System.Xml.Serialization.XmlSerializer> using the type of the object to deserialize.</span></span>  
+1. <span data-ttu-id="0c30c-106">Oluşturmak bir <xref:System.Xml.Serialization.XmlSerializer> seri durumdan çıkarılacak nesne türü kullanarak.</span><span class="sxs-lookup"><span data-stu-id="0c30c-106">Construct a <xref:System.Xml.Serialization.XmlSerializer> using the type of the object to deserialize.</span></span>  
   
-2. <span data-ttu-id="0c89a-107">Arama <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> nesnenin bir kopyasını oluşturmak için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="0c89a-107">Call the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method to produce a replica of the object.</span></span> <span data-ttu-id="0c89a-108">Seri durumdan çıkarmak olduğunda döndürülen nesne özgün türü (Bu aynı zamanda bir akışa seri durumdan olsa da) bir dosyaya nesne seri durumdan çıkarır aşağıdaki örnekte gösterildiği gibi dönüştürmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="0c89a-108">When deserializing, you must cast the returned object to the type of the original, as shown in the following example, which deserializes the object into a file (although it could also be deserialized into a stream).</span></span>  
+2. <span data-ttu-id="0c30c-107">Arama <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> nesnenin bir kopyasını oluşturmak için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="0c30c-107">Call the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method to produce a replica of the object.</span></span> <span data-ttu-id="0c30c-108">Seri durumdan çıkarmak olduğunda döndürülen nesne özgün türü (Bu da bir akıştan seri durumdan rağmen) dosyadan nesne seri durumdan çıkarır aşağıdaki örnekte gösterildiği gibi dönüştürmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="0c30c-108">When deserializing, you must cast the returned object to the type of the original, as shown in the following example, which deserializes the object from a file (although it could also be deserialized from a stream).</span></span>  
   
     ```vb  
     Dim myObject As MySerializableClass  
@@ -51,7 +51,7 @@ ms.locfileid: "61922726"
     mySerializer.Deserialize(myFileStream)  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="0c89a-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0c89a-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0c30c-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0c30c-109">See also</span></span>
 
-- [<span data-ttu-id="0c89a-110">XML Serileştirmeye Giriş</span><span class="sxs-lookup"><span data-stu-id="0c89a-110">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [<span data-ttu-id="0c89a-111">Nasıl yapılır: Bir nesneyi serileştirmek</span><span class="sxs-lookup"><span data-stu-id="0c89a-111">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [<span data-ttu-id="0c30c-110">XML Serileştirmeye Giriş</span><span class="sxs-lookup"><span data-stu-id="0c30c-110">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [<span data-ttu-id="0c30c-111">Nasıl yapılır: Bir nesneyi serileştirmek</span><span class="sxs-lookup"><span data-stu-id="0c30c-111">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)
