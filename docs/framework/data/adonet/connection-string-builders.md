@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 8788c97842d157e09f7058411db43f86c66769cd
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f0510b9e3f31686e22532f21989cb95905522286
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583808"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879889"
 ---
 # <a name="connection-string-builders"></a>Bağlantı Dizesi Oluşturucular
-Önceki sürümlerinde [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], derleme zamanı yanlış bir anahtar sözcüğü çalışma zamanında oluşturulan birleştirilmiş dizeyi değerleri oluşmadı ile bağlantı dizeleri denetimi bir <xref:System.ArgumentException>. Her .NET Framework veri sağlayıcıları oluşturma geçerli bağlantı dizelerini zor yapıldıysa elle yapılan bağlantı dizesi anahtar için farklı bir sözdizimi desteklenmiyor. Bu sorunu gidermek için [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 sunulan her .NET Framework veri sağlayıcısı için yeni bir bağlantı dizesi oluşturucular. Her veri sağlayıcısının devralan bir türü kesin belirlenmiş bağlantı dizesi Oluşturucusu sınıfı içeren <xref:System.Data.Common.DbConnectionStringBuilder>. .NET Framework veri sağlayıcıları ve bunların ilişkili bağlantı dizesi Oluşturucusu sınıfları aşağıdaki tabloda listelenmektedir.  
+Yanlış bir anahtar sözcüğü çalışma zamanında oluşturulan ADO.NET önceki sürümlerinde, derleme zamanı bitişik dize değerleri ile bağlantı dizeleri denetimi, gerçekleşmeyen bir <xref:System.ArgumentException>. Her .NET Framework veri sağlayıcıları oluşturma geçerli bağlantı dizelerini zor yapıldıysa elle yapılan bağlantı dizesi anahtar için farklı bir sözdizimi desteklenmiyor. Bu sorunu gidermek için her .NET Framework veri sağlayıcısı için yeni bir bağlantı dizesi oluşturucular ADO.NET 2.0 kullanılmaya başlandı. Her veri sağlayıcısının devralan bir türü kesin belirlenmiş bağlantı dizesi Oluşturucusu sınıfı içeren <xref:System.Data.Common.DbConnectionStringBuilder>. .NET Framework veri sağlayıcıları ve bunların ilişkili bağlantı dizesi Oluşturucusu sınıfları aşağıdaki tabloda listelenmektedir.  
   
 |Sağlayıcı|ConnectionStringBuilder sınıfı|  
 |--------------|-----------------------------------|  

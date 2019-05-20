@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: f424e4ef62f42da9065aa6ff846e8bd2c7a42a4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8c7d65f593f2ba5c21625835a0be7a77a44afb5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625807"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881114"
 ---
 # <a name="working-with-certificates"></a>Sertifikalarla Çalışma
 Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijital sertifikalar sık iletileri dijital olarak imzala istemcilere ve sunuculara kimlik doğrulaması ve şifreleme için kullanılır. Bu konuda kısaca X.509 dijital sertifika özellikleri ve bunların WCF'de nasıl kullanılacağını açıklar ve WCF ve sertifikaları kullanarak yaygın görevlerin nasıl yerine getirileceğini gösteren ya da, bu kavramları daha açıklayan konulara bağlantılar içerir.  
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijita
 ## <a name="certificate-stores"></a>Sertifika depoları  
  Sertifika deposunda bulunamadı. Daha fazla alt depolarına bölünür iki ana depo konum yok. Bilgisayarda yöneticiyseniz MMC ek bileşenini aracını kullanarak her iki ana depoları görüntüleyebilirsiniz. Yönetici olmayan kullanıcılar, yalnızca geçerli kullanıcı deposu görüntüleyebilirsiniz.  
   
-- **Yerel makine deposuna**. Bu gibi makine işlemler tarafından erişilen sertifikaları içeren [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. İstemcilerin sunucuya kimlik doğrulaması sertifikalarını depolamak için bu konumu kullanır.  
+- **Yerel makine deposuna**. Bu, ASP.NET gibi makine işlemler tarafından erişilen sertifikaları içerir. İstemcilerin sunucuya kimlik doğrulaması sertifikalarını depolamak için bu konumu kullanır.  
   
 - **Geçerli kullanıcı deposu**. Etkileşimli uygulamalar genellikle bilgisayarın geçerli kullanıcı için sertifikalar buraya yerleştirin. Bir istemci uygulaması oluşturuyorsanız, genellikle bir kullanıcı bir hizmete kimlik doğrulaması sertifikaları yerleştirdiğiniz budur.  
   
@@ -52,7 +52,7 @@ Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijita
 - Hizmet veya istemcinin bir kullanıcı hesabı altında çalışan bir uygulama ise, ardından kullanın **geçerli kullanıcının** depolayın.  
   
 ### <a name="accessing-stores"></a>Depoları erişme  
- Depoları, bir bilgisayardaki klasörler gibi erişim denetim listeleri (ACL'ler) korunur. Internet Information Services (IIS) tarafından barındırılan hizmet oluşturulurken [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] işlemini çalıştıran altında [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hesabı. Hesabı sertifikaları içeren depoya erişimine sahip olmalıdır, bir hizmeti kullanır. Ana mağazaların her biri varsayılan erişim listesi ile korunuyor, ancak liste değiştirilebilir. Bir mağazaya erişmek için ayrı bir rol oluşturursanız, bu rolü erişim izni vermeniz gerekir. WinHttpCertConfig.exe aracını kullanarak erişimi listesini değiştirme konusunda bilgi almak için bkz: [nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). IIS ile istemci sertifikaları kullanma hakkında daha fazla bilgi için bkz. [nasıl bir ASP.NET Web uygulaması kimlik doğrulaması için bir istemci sertifikasını kullanarak bir Web hizmeti çağırmak amacıyla](https://go.microsoft.com/fwlink/?LinkId=88914).  
+ Depoları, bir bilgisayardaki klasörler gibi erişim denetim listeleri (ACL'ler) korunur. Internet Information Services (IIS) tarafından barındırılan hizmet oluşturulurken ASP.NET işlemi ASP.NET hesabı altında çalışır. Hesabı sertifikaları içeren depoya erişimine sahip olmalıdır, bir hizmeti kullanır. Ana mağazaların her biri varsayılan erişim listesi ile korunuyor, ancak liste değiştirilebilir. Bir mağazaya erişmek için ayrı bir rol oluşturursanız, bu rolü erişim izni vermeniz gerekir. WinHttpCertConfig.exe aracını kullanarak erişimi listesini değiştirme konusunda bilgi almak için bkz: [nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). IIS ile istemci sertifikaları kullanma hakkında daha fazla bilgi için bkz. [nasıl bir ASP.NET Web uygulaması kimlik doğrulaması için bir istemci sertifikasını kullanarak bir Web hizmeti çağırmak amacıyla](https://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Güven zinciri ve sertifika yetkilileri  
  Sertifikalar, bir hiyerarşideki her bir sertifika sertifikayı veren CA'ya burada bağlı oluşturulur. Bu CA'ın sertifikasını bağlantıdır. CA'ın ardından bağlantıları özgün CA'ın sertifika veren CA sertifikası. Kök CA sertifikasını ulaşılana kadar bu işlem tekrarlanır. Kök CA sertifikasını kendiliğinden güveniliyor.  
