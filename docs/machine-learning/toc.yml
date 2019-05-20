@@ -9,15 +9,15 @@
   items:
     - name: Genel Bakış
       href: tutorials/index.md
-    - name: Yaklaşım analizi (ikili sınıflandırma)
+    - name: Yaklaşımı analiz etme (ikili sınıflandırma)
       href: tutorials/sentiment-analysis.md
-    - name: Sorun sınıflandırması (çok sınıflı sınıflandırma)
+    - name: Destek sorunlarını kategorilere ayırma (çok sınıflı sınıflandırma)
       href: tutorials/github-issue-classification.md
-    - name: Fiyat tahmini (gerileme)
+    - name: Fiyatları tahmin etme (regresyon)
       href: tutorials/taxi-fare.md
-    - name: Süsen çiçekleri (kümeleme)
+    - name: Süsen çiçeklerini kategorilere ayırma (k-ortalamalar kümesi)
       href: tutorials/iris-clustering.md
-    - name: Film önerisi (öneri)
+    - name: Film önerici (matrisi çarpanlarına ayırma)
       href: tutorials/movie-recommmendation.md
     - name: Görüntü Sınıflandırması (öğrenme aktarımı)
       href: tutorials/image-classification.md

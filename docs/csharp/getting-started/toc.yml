@@ -1,5 +1,6 @@
 - name: Başlarken
-  href: index.md
   items:
+    - name: Bu kılavuz nasıl kullanılır?
+      href: index.md
     - name: 'C# Diline ve.NET Framework’e Giriş'
       href: introduction-to-the-csharp-language-and-the-net-framework.md

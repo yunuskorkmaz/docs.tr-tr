@@ -496,11 +496,13 @@
     - name: Başlarken
       href: csharp/getting-started/
     - name: Öğreticiler
-      href: csharp/tutorials/index.md
       items:
-        - name: 'C# diline giriş'
-          href: csharp/tutorials/intro-to-csharp/index.md
+        - name: Genel Bakış
+          href: csharp/tutorials/index.md
+        - name: 'C# ile programlamaya giriş'
           items:
+            - name: İlk dersinizi seçme
+              href: csharp/tutorials/intro-to-csharp/index.md
             - name: Merhaba dünya
               href: csharp/tutorials/intro-to-csharp/hello-world.yml
             - name: 'C# numaraları'
@@ -510,8 +512,9 @@
             - name: Liste koleksiyonları
               href: csharp/tutorials/intro-to-csharp/list-collection.yml
             - name: Yerel ortamınızda çalışma
-              href: csharp/tutorials/intro-to-csharp/local-environment.md
               items:
+                - name: Ortamınızı ayarlama
+                  href: csharp/tutorials/intro-to-csharp/local-environment.md
                 - name: 'C# numaraları'
                   href: csharp/tutorials/intro-to-csharp/numbers-in-csharp-local.md
                 - name: Dal ve döngüler
@@ -609,7 +612,6 @@
         - name: Yineleyiciler
           href: csharp/iterators.md
         - name: Temsilciler ve olaylar
-          href: csharp/delegates-events.md
           items:
             - name: Temsilcilere Giriş
               href: csharp/delegates-overview.md
@@ -636,8 +638,9 @@
         - name: 'Güvenli, verimli kod yazma'
           href: csharp/write-safe-efficient-code.md
         - name: İfade Ağaçları
-          href: csharp/expression-trees.md
           items:
+            - name: İfade ağaçlarına giriş
+              href: csharp/expression-trees.md
             - name: İfade Ağaçları Açıklaması
               href: csharp/expression-trees-explained.md
             - name: İfade Ağaçlarını Destekleyen Çerçeve Türleri
@@ -659,8 +662,9 @@
         - name: Sürüm Oluşturma
           href: csharp/versioning.md
     - name: 'C# Kullanımı Hakkındaki Konular'
-      href: csharp/how-to/index.md
       items:
+        - name: Konu dizini
+          href: csharp/how-to/index.md
         - name: '`String.Split` kullanarak dizeleri ayrıştırma'
           href: csharp/how-to/parse-strings-using-split.md
         - name: Dizeleri birleştirme

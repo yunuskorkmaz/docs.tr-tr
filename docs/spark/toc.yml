@@ -9,6 +9,12 @@
   items:
     - name: Kullanmaya başlayın
       href: tutorials/get-started.md
+    - name: Azure HDInsight’a dağıtma
+      href: tutorials/hdinsight-deployment.md
+    - name: AWS EMR Spark’a dağıtma
+      href: tutorials/amazon-emr-spark-deployment.md
+    - name: Databricks’e dağıtma
+      href: tutorials/databricks-deployment.md
 - name: Başvuru
   items:
     - name: API Başvurusu
