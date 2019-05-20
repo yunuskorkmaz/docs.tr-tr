@@ -2,12 +2,12 @@
 title: Etki alanı olayları. Tasarım ve uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Kapsamlı bir görünüm toplamları arasında iletişim kurmak için bir anahtar kavram etki alanı olayların alın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 1990fefb10016596739ea4f3d55d7c7de92faca0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5f7084ef638a1d04e0050eab447cb8903c973f45
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644559"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875935"
 ---
 # <a name="domain-events-design-and-implementation"></a>Etki alanı olayları: tasarım ve uygulama
 
@@ -345,7 +345,7 @@ Belirtildiği gibi açıkça yan etkilerini, etki alanınızda değişiklikleri 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 - **Greg Young. Bir etki alanı olayı nedir?** \
-  <http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/>
+  <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf#page=25>
 
 - **Jan Stenberg. Etki alanı olayları ve nihai tutarlılık** \
   <https://www.infoq.com/news/2015/09/domain-events-consistency>
