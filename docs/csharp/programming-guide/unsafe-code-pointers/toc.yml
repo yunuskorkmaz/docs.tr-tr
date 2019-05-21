@@ -1,4 +1,4 @@
-- name: Güvenli Olmayan Kod ve İşaretçiler
+- name: Güvenli olmayan kod ve işaretçiler
   href: index.md
   items:
     - name: Sabit Boyutlu Arabellekler
@@ -9,23 +9,5 @@
           href: pointer-types.md
         - name: İşaretçi Dönüştürmeler
           href: pointer-conversions.md
-        - name: İşaretçi İfadeleri
-          items:
-            - name: 'Nasıl yapılır: İşaretçi Değişkeninin Değerini Edinme'
-              href: how-to-obtain-the-value-of-a-pointer-variable.md
-            - name: 'Nasıl yapılır: Değişkenin Adresini Edinme'
-              href: how-to-obtain-the-address-of-a-variable.md
-            - name: 'Nasıl yapılır: İşaretçiyle bir Üyeye Erişme'
-              href: how-to-access-a-member-with-a-pointer.md
-            - name: 'Nasıl yapılır: İşaretçiyle bir Dizi Öğesine Erişme'
-              href: how-to-access-an-array-element-with-a-pointer.md
-            - name: İşaretçileri İşleme
-              items:
-                - name: 'Nasıl yapılır: İşaretçileri Artırma ve Azaltma'
-                  href: how-to-increment-and-decrement-pointers.md
-                - name: İşaretçilerde Aritmetik İşlemler
-                  href: arithmetic-operations-on-pointers.md
-                - name: İşaretçi Karşılaştırması
-                  href: pointer-comparison.md
         - name: 'Nasıl yapılır: Bayt Dizisine Kopyalamak için İşaretçiler Kullanma'
           href: how-to-use-pointers-to-copy-an-array-of-bytes.md
