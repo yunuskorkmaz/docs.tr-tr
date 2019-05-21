@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: 1e42e2726b54464d479398c023c3e7caecf9b054
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df55b4fa107f3630cd259b755e0aaacdee4904ef
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753045"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960095"
 ---
 # <a name="elevation-of-privilege"></a>Ayrıcalık Yükseltme
 *Ayrıcalık yükseltme* izinleri bu başlangıçta verilen ötesinde bir saldırgan yetkilendirme vermesine neden olur. Örneğin, bir ayrıcalık kümesi "salt okunur" izinlere sahip bir saldırgan kümesi "okuma ve yazma" eklenecek şekilde yükseltir  
@@ -21,7 +21,7 @@ ms.locfileid: "64753045"
  <xref:System.IdentityModel.Tokens.SamlAssertion> Sınıfı bir SAML belirtecine ve varsayılan içinde bulunan dijital imzayı doğrular <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> SAML belirteçlerini geçerli olduğunda X.509 sertifikası tarafından imzalanması gerektiren <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> , <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> içinsetsınıfı<xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. `ChainTrust` tek başına modu SAML belirteci veren güvenilir olup olmadığını belirlemek için yeterli değil. Daha ayrıntılı bir güven modeli olabilir ya da gerektiren hizmetler verilen belirteç kimlik doğrulaması tarafından üretilen talep kümelerinin veren denetlemek veya X.509 doğrulama ayarlarını kullanmak için yetkilendirme ve zorlama ilkelerini kullanmak <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> kümesini sınırlamak için İmzalama sertifikaları izin verilir. Daha fazla bilgi için [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) ve [Federasyon ve verilen belirteçler](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>Bir güvenlik bağlamı olmadan geçiş kimliği  
- Aşağıdaki yalnızca geçerli [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+ Yalnızca WinFX için geçerlidir.  
   
  Bir istemci ve sunucu, istemci kimliği arasında bir bağlantı kurulan ne zaman değiştirmez, dışındaki bir durumda: aşağıdaki koşulların tümü doğruysa, WCF istemcisini açtıktan sonra:  
   

@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: feddafdd6becd676f4d18aa94bdfae50f02abc6e
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 2679df0317fede9fa5f3885831c65bd87a14981a
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557953"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960405"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>CLI kullanarak bir ikili dosya sınıflandırıcı otomatik oluştur
 
@@ -142,12 +142,12 @@ Numaralandırılmış bu varlıkları öğreticinin aşağıdaki adımlarda aç�
 
     ![VS çözüm CLI tarafından oluşturulan](./media/mlnet-cli/generated-csharp-solution-detailed.png)
 
-    - Oluşturulan **sınıf kitaplığı** serileştirilmiş ML model ve veri sınıfları içeren, olan bir şey doğrudan kullanabilirsiniz, son kullanıcı uygulamanızda bile, sınıf kitaplığı doğrudan başvuruda (veya tercih ettiğiniz gibi kod taşıyarak).
+    - Oluşturulan **sınıf kitaplığı** serileştirilmiş ML model (.zip dosyası) ve veri sınıfları (veri modelleri) içeren, olan bir şey doğrudan kullanabilirsiniz, son kullanıcı uygulamanızda bile, sınıf kitaplığı doğrudan başvuruda (veya taşıma yazarken kodu tercih eder).
     - Oluşturulan **konsol uygulaması** gözden geçirmeniz gerekir ve genellikle daha sonra 'Puanlama code' yeniden yürütme kodunu içerir (ML model tahminler elde etmeye çalışan kodu), basit kod (yalnızca birkaç satır), son kullanıcıya taşıyarak Tahminde bulunmak istediğiniz uygulama. 
 
-1. Açık **Observation.cs** ve **Prediction.cs** sınıf dosyaları içinde sınıf kitaplığı projesi. Bu sınıfların 'veri sınıfları' veya verileri tutmak için kullanılan POCO sınıflar olduğunu görürsünüz. 'Ortak kod' olan ancak onlarca veya sütunları hatta yüzlerce veri kümeniz varsa, kullanışlı olması oluşturulmuş. 
-    - `SampleObservation` Sınıfı, veri kümesinden okurken kullanılır. 
-    - `SamplePrediction` Sınıfı veya
+1. Açık **ModelInput.cs** ve **ModelOutput.cs** sınıf dosyaları içinde sınıf kitaplığı projesi. Bu sınıfların 'veri sınıfları' veya verileri tutmak için kullanılan POCO sınıflar olduğunu görürsünüz. 'Ortak kod' olan ancak onlarca veya sütunları hatta yüzlerce veri kümeniz varsa, kullanışlı olması oluşturulmuş. 
+    - `ModelInput` Sınıfı, veri kümesinden okurken kullanılır. 
+    - `ModelOutput` Sınıfı (tahmin veriler) tahmin sonucu elde etmek için kullanılır.
 
 1. Program.cs dosyasını açın ve kodu keşfedin. Yalnızca birkaç satır içinde çalıştırmayı ve örnek tahminde bulunmak mümkün.
 
@@ -160,13 +160,13 @@ Numaralandırılmış bu varlıkları öğreticinin aşağıdaki adımlarda aç�
         //ModelBuilder.CreateModel();
 
         ITransformer mlModel = mlContext.Model.Load(MODEL_FILEPATH, out DataViewSchema inputSchema);
-        var predEngine = mlContext.Model.CreatePredictionEngine<SampleObservation, SamplePrediction>(mlModel);
+        var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
 
         // Create sample data to do a single prediction with it 
-        SampleObservation sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
+        ModelInput sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
 
         // Try a single prediction
-        SamplePrediction predictionResult = predEngine.Predict(sampleData);
+        ModelOutput predictionResult = predEngine.Predict(sampleData);
 
         Console.WriteLine($"Single Prediction --> Actual value: {sampleData.Label} | Predicted value: {predictionResult.Prediction}");
     }
@@ -178,14 +178,14 @@ Numaralandırılmış bu varlıkları öğreticinin aşağıdaki adımlarda aç�
 
 - Kod üçüncü satırında model serileştirilmiş modeli yüklenemiyor. ZIP dosyasıyla `mlContext.Model.Load()` modelin yolunu sağlayarak API. ZIP dosyası.
 
-- Dördüncü yüklediğiniz kod satırında oluşturun `PredictionEngine` nesnesi ile `mlContext.Model.CreatePredictionEngine<TObservation, TPrediction>()` API. Gereksinim duyduğunuz `PredictionEngine` verilerin (Bu durumda, tek bir parça, yaklaşım tahmin etmek için metin), tek bir örnek hedefleyen bir tahminde bulunmak istediğiniz her nesne.
+- Dördüncü yüklediğiniz kod satırında oluşturun `PredictionEngine` nesnesi ile `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` API. Gereksinim duyduğunuz `PredictionEngine` verilerin (Bu durumda, tek bir parça, yaklaşım tahmin etmek için metin), tek bir örnek hedefleyen bir tahminde bulunmak istediğiniz her nesne.
 
 - Beşinci kod satırının, oluşturduğunuz olan *tek örnek verileri* işleve çağrı yaparak tahmin için kullanılacak `CreateSingleDataSample()`. Bu işlev kastettiğinizi bilemez ne tür bir örnek verileri kullanmak için CLI aracı olduğundan, ilk satır kümesinin yüklüyor. Ancak, bu durumda, geçerli uygulaması yerine kendi 'sabit kodlanmış' veri oluşturabilirsiniz `CreateSingleDataSample()` güncelleştirerek bu işlevini uygulama bu basit kod işlevi:
 
     ```csharp
-    private static SampleObservation CreateSingleDataSample()
+    private static ModelInput CreateSingleDataSample()
     {
-        SampleObservation sampleForPrediction = new SampleObservation() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
+        ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
         return sampleForPrediction;
     }
     ```
@@ -219,7 +219,7 @@ Numaralandırılmış bu varlıkları öğreticinin aşağıdaki adımlarda aç�
 
 Benzer 'ML model Puanlama kod' için model, son kullanıcı uygulama ve marka Öngörüler çalıştırma kullanabilirsiniz. 
 
-Örneğin, doğrudan bu kodu herhangi bir Windows masaüstü uygulaması için gibi taşıyabilirsiniz **WPP** ve **WinForms** ve konsol uygulamasında bitti dedik daha modeli aynı şekilde çalıştırın.
+Örneğin, doğrudan bu kodu herhangi bir Windows masaüstü uygulaması için gibi taşıyabilirsiniz **WPF** ve **WinForms** ve konsol uygulamasında bitti dedik daha modeli aynı şekilde çalıştırın.
 
 Ancak, bu ML model çalıştırmak için kod satırlarını uygulama yolu (yani, önbellek model .zip dosyası ve bir kez yük) hale getirilmiştir ve özellikle uygulamanızın gibi ölçeklenebilir olması gerekiyorsa her istek, bunları oluşturmak yerine tekil nesneleri bir web uygulaması veya aşağıdaki bölümünde anlatıldığı gibi dağıtılmış bir hizmet.
 

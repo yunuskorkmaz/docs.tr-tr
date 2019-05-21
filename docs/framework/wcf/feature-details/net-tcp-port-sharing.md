@@ -5,12 +5,12 @@ helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: f40afe25bbc3238ec773ee1ee19673d4d5a3ef1d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8eb0a2a5b8b6edad17477e1fd65f72b540a8a674
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603950"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960042"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP Bağlantı Noktası Paylaşımı
 Windows Communication Foundation (WCF), yüksek performanslı iletişim için yeni TCP tabanlı ağ protokolü (net.tcp://) sağlar. WCF da yeni bir sistem bileşeni olan birden çok kullanıcı süreçler arasında paylaşılacak net.tcp bağlantı noktası sağlayan Net.TCP bağlantı noktası paylaşma hizmeti tanıtılmaktadır.  
@@ -38,7 +38,7 @@ Windows Communication Foundation (WCF), yüksek performanslı iletişim için ye
  Açılır net.tcp:// bağlantı noktası kullanan bir WCF hizmeti, WCF TCP taşıma altyapısını doğrudan bir TCP yuva uygulama işleminde açılmaz. Bunun yerine, aktarım altyapısı Net.TCP bağlantı noktası paylaşma hizmeti hizmetin taban adresi Tekdüzen Kaynak Tanımlayıcısı (URI) kaydeder ve onun adına iletileri dinlemek için hizmet bağlantı noktası bekler.  Hizmet bağlantı noktası geldikçe uygulama hizmetine gönderilen iletiler gönderir.  
   
 ## <a name="installing-port-sharing"></a>Bağlantı noktası paylaşımı yükleme  
- Net.TCP bağlantı noktası paylaşma hizmeti destekleyen tüm işletim sistemlerinde kullanılabilir [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], ancak hizmet varsayılan olarak etkin değildir. Bir güvenlik önlemi olarak yönetici Net.TCP bağlantı noktası paylaşma hizmeti ilk kullanım önce el ile etkinleştirmeniz gerekir. Net.TCP bağlantı noktası paylaşma hizmeti bağlantı noktası paylaşma hizmeti tarafından sahip olunan ağ yuvaları çeşitli özelliklerini değiştirmenize izin veren bir yapılandırma seçenekleri sunar. Daha fazla bilgi için [nasıl yapılır: Net.TCP bağlantı noktası hizmetini etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
+ Net.TCP bağlantı noktası paylaşma hizmeti WinFX destekleyen tüm işletim sistemlerinde kullanılabilir, ancak hizmet varsayılan olarak etkin değildir. Bir güvenlik önlemi olarak yönetici Net.TCP bağlantı noktası paylaşma hizmeti ilk kullanım önce el ile etkinleştirmeniz gerekir. Net.TCP bağlantı noktası paylaşma hizmeti bağlantı noktası paylaşma hizmeti tarafından sahip olunan ağ yuvaları çeşitli özelliklerini değiştirmenize izin veren bir yapılandırma seçenekleri sunar. Daha fazla bilgi için [nasıl yapılır: Net.TCP bağlantı noktası hizmetini etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>NET.TCP bir uygulamaya bağlantı noktası kullanma  
  Kullanarak bir hizmeti kullanıma sunmak için WCF uygulamanızı net.tcp:// bağlantı noktası kullanmak için en kolay yolu olan <xref:System.ServiceModel.NetTcpBinding> Net.TCP bağlantı noktası paylaşım hizmetini kullanarak etkinleştirmek için sonra da <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> özelliği.  

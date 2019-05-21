@@ -2,12 +2,12 @@
 title: wsatConfig.exe Tarafından Döndürülen Hata Kodlarını Yorumlama
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 47db39f2b350c2fa8c655a041ec0239e5d297644
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26e7c40cb105ad10dac3b13b73cb33bc4fa57d69
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928823"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959849"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>wsatConfig.exe Tarafından Döndürülen Hata Kodlarını Yorumlama
 Bu konuda, tüm hata kodlarını WS-AtomicTransaction yapılandırma hizmet programı (wsatConfig.exe) oluşturulan ve önerilen gerçekleştirilecek eylemler listeler.  
@@ -35,9 +35,9 @@ Bu konuda, tüm hata kodlarını WS-AtomicTransaction yapılandırma hizmet prog
 |17|Http.sys yapılandırması başarısız oldu. Önceki bağlantı noktasından SSL sertifikası bağlamayı Kaldır olamaz.|Hata iletisinde döndürülen hata kodu için uygun sistem hatası eşlemek için kullanın. Gerekirse, httpcfg.exe veya netsh.exe hatalı bağlantı noktası ayırmaları kaldırmak için kullanın.|  
 |18|Http.sys yapılandırması başarısız oldu. Belirtilen sertifika noktasına bağlanamaz, çünkü önceki bir SSL bağlaması zaten mevcut.|Zaten başka bir uygulama belirli bir bağlantı noktasını sahipliğini duruma getirdi. Farklı bir bağlantı noktasına değiştirin veya kaldırın ya da geçerli uygulamanın yeniden yapılandırın.|  
 |19|MSDTC yeniden başlatılamadı|Gerekirse MSDTC el ile yeniden başlatın. Sorun devam ederse, Microsoft ile iletişime geçin.|  
-|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] uzak makinede yüklü değil veya doğru şekilde yüklenmedi.|Yükleme [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] makine üzerinde.|  
+|20|WinFX uzak makinede yüklü değil veya doğru şekilde yüklenmedi.|WinFX makineye yükleyin.|  
 |21|Uzaktan yapılandırma işlemi zaman aşımına nedeniyle başarısız oldu.|Uzak makinede WS-AT yapılandırmak için çağrı 90 saniyeden daha uzun sürer.|  
-|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] uzak makinede yüklü değil veya doğru şekilde yüklenmedi.|Yükleme [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] makine üzerinde.|  
+|22|WinFX uzak makinede yüklü değil veya doğru şekilde yüklenmedi.|WinFX makineye yükleyin.|  
 |23|Uzak yapılandırması, uzak makinedeki bir özel durum nedeniyle başarısız oldu.|Eyleme dönüştürülebilir öğeleri için hata iletisine bakın|  
 |26|WsatConfig.exe için geçersiz bağımsız değişken geçirildi.|Komut satırı hataları denetleyin.|  
 |27|`-accounts` Komut satırı seçeneği geçersiz.|Düzeltme`accounts` doğru bir kullanıcı hesabı belirtmek için komut satırı seçeneği.|  
@@ -52,10 +52,10 @@ Bu konuda, tüm hata kodlarını WS-AtomicTransaction yapılandırma hizmet prog
 |38|İşlemin veya kullanıcı güvenlik duvarı yapılandırmasını değiştirmek için yeterli izinlere sahip değil.|WsatConfig.exe yönetici kullanıcı hesabı altında çalıştırın.|  
 |39|WsatConfig.exe, güvenlik duvarı yapılandırması güncelleştirilirken bir hatayla karşılaştı.|Eyleme dönüştürülebilir öğeleri için hata iletisine bakın.|  
 |40|WsatConfig.exe MSDTC okuma erişimi vermek için sertifikanın özel anahtar dosyası değil|WsatConfig.exe yönetici kullanıcı hesabı altında çalıştırın.|  
-|41|Ya da hiçbir yüklenmesini [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] bulunamadı veya bulunan sürüm aracı yapılandırma yeteneğine sahip nedir eşleşmiyor.|Olun [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] doğru şekilde yüklendiğini ve yalnızca kullanılır, bu sürümü ile birlikte gelen WsatConfig.exe aracı [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] WS-AT yapılandırmak için.|  
+|41|WinFX hiçbir yüklemesi bulunamadı veya bulunan sürüm aracı yapılandırma yeteneğine sahip nedir eşleşmiyor.|WinFX doğru şekilde yüklendiğinden emin olun ve yalnızca WinFX WS-AT yapılandırmak için bu sürümü ile birlikte gelen WsatConfig.exe aracını kullanın.|  
 |42|Bağımsız değişken, komut satırında birden çok kez belirtildi.|Yalnızca her bağımsız değişken bir kez WsatConfig.exe yürütülürken belirtin.|  
 |43|WS-AT etkin değilse WsatConfig.exe WS-AT ayarları güncelleştirilemiyor.|Belirtin `-network:enable` ek komut satırı bağımsız değişken olarak.|  
-|44|Gerekli düzeltme eksik ve düzeltmeyi yüklenene kadar WS-AT yapılandırılamaz.|Bkz: [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] gerekli düzeltmeyi yükleme yönergeleri için sürüm notları.|  
+|44|Gerekli düzeltme eksik ve düzeltmeyi yüklenene kadar WS-AT yapılandırılamaz.|WinFX gerekli düzeltmeyi yükleme yönergeleri için sürüm notlarına bakın.|  
 |45|`-virtualServer` Komut satırı seçeneği geçersiz.|Düzeltme `-virtualServer` yapılandırmak, küme kaynağının ağ adı belirterek komut satırı seçeneği.|  
 |46|ETW izleme oturumunu başlatılmaya çalışılırken beklenmeyen bir hata oluştu|İçin uygun sistem hatası eşlemek döndürülen hata kodu kullanın.|  
 |47|İşlemin veya kullanıcı ETW izleme oturumunu etkinleştirmek için yeterli izinlere sahip değil.|WsatConfig.exe yönetici kullanıcı hesabı altında çalıştırın.|  

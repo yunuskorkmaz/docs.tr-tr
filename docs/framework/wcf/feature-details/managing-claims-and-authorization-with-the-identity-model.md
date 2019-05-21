@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 9341ff8bfb2aec4eb7274d444fca4497fa66f210
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 74cf55ba617eee193bcf1d2454f7e26ce0ba78cb
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875576"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960121"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme
 Yetkilendirme hangi varlıkları değiştirmek, görüntülemek veya aksi halde bir bilgisayar kaynağına erişmek için izne sahip belirleme işlemidir. Örneğin, bir iş ortamında, yalnızca Yöneticiler çalışanlarına dosyalara erişmek için izin. Windows Communication Foundation (WCF), Yetkilendirme işlemi gerçekleştirmek için iki mekanizmayı destekler. İlk mekanizması, var olan ortak dil çalışma zamanı (CLR) yapıları kullanarak Yetkilendirme denetlemenize olanak tanıyor. İkinci olarak bilinen bir beyana dayalı modelidir *kimlik modeli*. WCF gelen istenmeyen iletilere talep oluşturmak için kimlik modeli kullanır; Kimlik modeli sınıfları için özel yetkilendirme düzenleri yeni talep türlerini destekleyecek şekilde genişletilebilir. Bu konuda özelliğini kullanan en önemli sınıflar listesini yanı sıra, başlıca programlama kavramları kimlik modeli özelliğinin genel bir bakış sunulmaktadır.  
@@ -93,7 +93,6 @@ Yetkilendirme hangi varlıkları değiştirmek, görüntülemek veya aksi halde 
  ![Hiyerarşi içinde talep kümesi.](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
  Aynı talep kümesine, aşağıdaki resimde gösterildiği gibi veren birden çok talep kümesi içerebilir:
- 
   
  ![Birden fazla aynı verme ile talep kümesini talep.](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   

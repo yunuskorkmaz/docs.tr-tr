@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 735fedc5869ab82d49ef4d9068c67302bf825e2e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac4de843b3a134b840fc37e3c1d8327fe0010d79
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634675"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960326"
 ---
 # <a name="character-encoding-in-net"></a>.NET içinde Karakter Kodlaması
 Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bir karakter kodlaması, desteklenen bir karakter kümesindeki her karakteri, o karakteri temsil eden değerle eşleştiren bir sistemdir. Örneğin; Morse kodu, Roma alfabesindeki her karakteri telgraf hattı üzerinden iletilmeye uygun olan bir nokta ve çizgi deseniyle eşleştiren bir karakter kodlamasıdır. Bilgisayarlar için bir karakter kodlaması, desteklenen bir karakter kümesindeki her karakteri, o karakteri temsil eden sayısal bir değerle eşleştirir. Bir karakter kodlaması iki farklı bileşene sahiptir:  
@@ -78,8 +78,8 @@ Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bi
   
  Bu kodlamalar, hem Unicode karakterleriyle hem de eski uygulamalarda yaygın olarak kullanılan kodlamalarla birlikte çalışmanıza olanak sağlar. Ek olarak, <xref:System.Text.Encoding> sınıfından türetilen bir sınıf tanımlayarak ve üyelerini geçersiz kılarak özel bir kodlama oluşturabilirsiniz.  
   
-### <a name="platform-notes-includenetcoreincludesnet-core-mdmd"></a>Platform notları: [!INCLUDE[net_core](../../../includes/net-core-md.md)]  
- Varsayılan olarak, [!INCLUDE[net_core](../../../includes/net-core-md.md)] 28591 kod sayfası dışındaki herhangi bir kod sayfası kodlamaları ve UTF-8 ve UTF-16 gibi Unicode kodlamaları kullanılabilir yapmaz. Ancak, standart Windows uygulamaları hedefleyen .NET uygulamanız için bulunan kod sayfası kodlamaları ekleyebilirsiniz. Tam bilgi için bkz. <xref:System.Text.CodePagesEncodingProvider> konu.  
+### <a name="platform-notes-net-core"></a>Platformu notları: .NET Core  
+ Varsayılan olarak, .NET Core kod sayfası 28591 dışındaki herhangi bir kod sayfası kodlamaları ve UTF-8 ve UTF-16 gibi Unicode kodlamaları kullanılabilir hale getirmez. Ancak, standart Windows uygulamaları hedefleyen .NET uygulamanız için bulunan kod sayfası kodlamaları ekleyebilirsiniz. Tam bilgi için bkz. <xref:System.Text.CodePagesEncodingProvider> konu.  
   
 <a name="Selecting"></a>   
 ## <a name="selecting-an-encoding-class"></a>Bir Kodlama Sınıfı Seçme  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: fd3be8a60048b10bbd94ac5b3bfadaee954943ef
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9a58f375821109c0ec5f2230ae330dc6a2caa102
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583590"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959496"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Veri Hizmeti sürümü oluşturma (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Veri Hizmetleri oluşturun, böylece istemciler URI'lerini kullanarak kaynakları, bir veri modelini temel olarak veri erişim sağlar. OData hizmet işlemleri tanımı da destekler. İlk dağıtım ve potansiyel olarak kendi ömürlerine sırasında birkaç kez sonra çeşitli iş gereksinimlerini, bilgi teknolojisi gereksinimlerini değiştirme gibi nedenlerle, değiştirilecek veya diğer sorunları gidermek için şu veri hizmetlerini gerekebilir. Mevcut bir veri hizmetine değişiklik yaptığınızda olup verilerinizi yeni bir sürümü tanımlamak dikkate almanız gereken hizmet ve istemci uygulamalarınız üzerindeki etkiyi en aza indirmek en iyi nasıl. Bu konu, ne zaman ve nasıl bir veri hizmeti, yeni bir sürümünü oluşturmak yönergeler sağlar. WCF Veri Hizmetleri bir exchange istemcileri ve farklı sürümlerini OData protokolünü destekleyen veri hizmetleri arasında nasıl işlediğini açıklar.
@@ -60,12 +60,12 @@ ms.locfileid: "65583590"
 
  Bir uygulama bir veri hizmetine erişmek için WCF Veri Hizmetleri istemci kitaplıkları kullandığında, kitaplıkları otomatik olarak bu üstbilgileri OData ve uygulamanızda kullanılan özelliklere sürümüne bağlı olarak doğru değerleri ayarlayın. Varsayılan olarak, WCF Veri Hizmetleri istenen işlem destekleyen en düşük protokol sürümü kullanır.
 
- .NET Framework sürümleri aşağıdaki tabloda Ayrıntılar ve [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] WCF Veri Hizmetleri OData protokolünü belirli sürümlerini desteği içerir.
+ Aşağıdaki tabloda Ayrıntılar OData protokolünü belirli sürümleri için WCF Veri Hizmetleri dahil .NET Framework ve Silverlight sürümlerini destekler.
 
 |OData protokolü sürümü|Sunulan destek...|
 |-----------------------------------------------------------------------------------|----------------------------|
-|Sürüm 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Hizmet Paketi 1 (SP1)<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] sürüm 3|
-|Sürüm 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-Bir güncelleştirme [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] SP1. Güncelleştirmeyi yükleyip [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=158125).<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] sürüm 4|
+|Sürüm 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Hizmet Paketi 1 (SP1)<br />-Silverlight sürüm 3|
+|Sürüm 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-Bir güncelleştirme [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] SP1. Güncelleştirmeyi yükleyip [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=158125).<br />-Silverlight sürüm 4|
 |sürüm 3|- İndirip destekleyen OData sürümü 3 yayın öncesi bir sürümü yükleyin [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=203885).|
 
 ### <a name="metadata-versions"></a>Meta veri sürümleri

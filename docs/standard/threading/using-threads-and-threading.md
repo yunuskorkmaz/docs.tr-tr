@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15f3aa8d2cd7c21fa2b77660cd668d211f8376a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d23a12ff92202ace69cb80ff59d6afcb5d8f8243
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672542"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960373"
 ---
 # <a name="using-threads-and-threading"></a>İş parçacıkları ve iş parçacığı oluşturmayı kullanma
 
@@ -32,7 +32,7 @@ Yeni bir örneğini oluşturarak yeni bir iş parçacığı oluşturma <xref:Sys
 
 Bir iş parçacığının yürütülmesini sonlandırmak için kullanmak <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> yöntemi. Bu yöntemi oluşturur bir <xref:System.Threading.ThreadAbortException> üzerinde çağrıldığında iş parçacığı üzerinde. Daha fazla bilgi için [iş parçacıklarını yok etme](destroying-threads.md).
 
-Kullanabileceğiniz .NET Framework 4 ile başlayarak, <xref:System.Threading.CancellationToken?displayProperty=nameWithType> bir iş parçacığı işbirliği içerisinde devamlılığı iptal etmek için. Daha fazla bilgi için [iş parçacıklarını işbirliği ile iptal etme](canceling-threads-cooperatively.md).
+Kullanabileceğiniz .NET Framework 4 ile başlayarak, <xref:System.Threading.CancellationToken?displayProperty=nameWithType> bir iş parçacığı işbirliği içerisinde devamlılığı iptal etmek için. Daha fazla bilgi için [yönetilen iş parçacıklarında iptal](cancellation-in-managed-threads.md).
 
 Kullanım <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> yöntemini çağıran iş parçacığını yöntemi çağrıldığında iş parçacığının sonlandırılması için bekleyin sağlamak için.
 

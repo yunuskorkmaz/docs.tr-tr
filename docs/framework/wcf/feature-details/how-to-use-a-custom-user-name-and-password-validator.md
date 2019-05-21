@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 49271e087ad63020e695f3bd46d7f8c47adf2130
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 593e3e97ad7e5ae65447d8618caacf22f762f9b4
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662498"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960066"
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Nasıl yapılır: Özel Bir Kullanıcı Adı ve Parola Doğrulayıcı Kullanma
 Varsayılan olarak, Windows Communication Foundation (WCF) Windows kullanıcı adı ve parola kullanılabilir olduğunda kimlik doğrulaması için kullanıcı adını ve parolasını doğrulamak için kullanır. Ancak, WCF özel kullanıcı adı ve parola kimlik doğrulaması düzeni için olarak da bilinen tanır *doğrulayıcıları*. Özel kullanıcı adı ve parola Doğrulayıcı eklemek için türetilen bir sınıf oluşturma <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> ve ardından yapılandırın.  
@@ -44,7 +44,7 @@ Varsayılan olarak, Windows Communication Foundation (WCF) Windows kullanıcı a
      HTTP (S) üzerinden aktarım düzeyi güvenlik kullanılırken ekleyin ya da [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) veya [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), [ \< netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) veya [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) HTTP (S) kullanan ve `Basic` kimlik doğrulama düzeni.  
   
     > [!NOTE]
-    >  Zaman [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] veya daha sonra kullanıldığında özel bir kullanıcı adı ve parola Doğrulayıcı ileti ve aktarım güvenliği ile kullanabilirsiniz. İle [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], özel bir kullanıcı adı ve parola Doğrulayıcı ile ileti güvenliği yalnızca kullanılabilir.  
+    >  Zaman [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] veya daha sonra kullanıldığında özel bir kullanıcı adı ve parola Doğrulayıcı ileti ve aktarım güvenliği ile kullanabilirsiniz. WinFX ile özel bir kullanıcı adı ve parola Doğrulayıcı yalnızca ile ileti güvenliği kullanılabilir.  
   
     > [!TIP]
     >  Kullanma hakkında daha fazla bilgi için \<netTcpBinding > Bu bağlam içinde görebilir [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  

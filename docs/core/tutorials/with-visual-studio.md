@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: df91d9da1f743e17072ad6106d0c4e06d751c2ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b92c3b293b37921e1a8b557a7842027ecce8851c
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647087"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959257"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Derleme bir C# Hello World uygulaması Visual Studio 2017'de .NET Core SDK'sı
 
@@ -61,7 +61,7 @@ Kullanıcıdan kendi ad ve tarih ve saat ile birlikte görüntülemek için uygu
 
    [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
-   Bu kodu varolan değiştirir <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, <xref:System.Console.Write%2A?displayProperty=nameWithType>, ve <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> deyimleri.
+   Bu kod içeriğini değiştirir `Main` yöntemi.
 
    ![Visual Studio Program c-sharp dosyası ile güncelleştirilmiş Main yöntemi](./media/with-visual-studio/visual-csharp-code-window.png)
 

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 20341a44eb8a43a9d130e0b76d23b513738c6782
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 539ac998a557615c097c33cdd4207e99f396e81d
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011910"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959617"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Yönetilen HTML Belgesi Nesne Modelinde Gösterilmeyen Öğelere Erişme
-Yönetilen HTML belgesi nesne modeli (DOM) adlı bir sınıf içerir <xref:System.Windows.Forms.HtmlElement> özellikleri, yöntemleri ve tüm HTML öğeleri ortak olan olayları gösterir. Bazı durumlarda, ancak yönetilen arabirimi doğrudan kullanıma üyelere erişim ihtiyacınız olacak. Bu konuda da dahil olmak üzere gösterilmeyen üyelere erişim için iki şekilde inceler [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] ve tanımlanmış bir Web sayfası VBScript işlevleri.  
+Yönetilen HTML belgesi nesne modeli (DOM) adlı bir sınıf içerir <xref:System.Windows.Forms.HtmlElement> özellikleri, yöntemleri ve tüm HTML öğeleri ortak olan olayları gösterir. Bazı durumlarda, ancak yönetilen arabirimi doğrudan kullanıma üyelere erişim ihtiyacınız olacak. Bu konuda, bir Web sayfası tanımlanmış JScript ve VBScript işlevleri dahil olmak üzere gösterilmeyen üyelere erişim için iki şekilde inceler.  
   
 ## <a name="accessing-unexposed-members-through-managed-interfaces"></a>Yönetilen arabirimleri aracılığıyla gösterilmeyen öğelere erişme  
  <xref:System.Windows.Forms.HtmlDocument> ve <xref:System.Windows.Forms.HtmlElement> gösterilmeyen erişiminizi etkinleştirecek olan dört yöntemleri sağlar. Aşağıdaki tabloda, türleri ve bunların karşılık gelen yöntemleri gösterilmektedir.  
@@ -67,7 +67,7 @@ Yönetilen HTML belgesi nesne modeli (DOM) adlı bir sınıf içerir <xref:Syste
  Bu desteklenmeyen olmasına rağmen COM arabirimleri kullanması için en kolay yolu (MSHTML.dll) yönetilmeyen HTML DOM kitaplığına bir başvuru, uygulamanızdan eklemektir. Daha fazla bilgi için [Bilgi Bankası makalesi 934368](https://support.microsoft.com/kb/934368).  
   
 ## <a name="accessing-script-functions"></a>Betik işlevleri erişme  
- Bir HTML sayfası gibi bir komut dosyası dili kullanarak bir veya daha fazla işlevleri tanımlayabilirsiniz [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] veya VBScript. Bu işlevlerin içine yerleştirilen bir `SCRIPT` sayfasında sayfasında ve isteğe bağlı veya bir olaya yanıt olarak yerli üzerinde çalıştırılabilir  
+ Bir HTML sayfası, bir veya daha fazla işlev JScript veya VBScript gibi bir betik dilini kullanarak tanımlayabilirsiniz. Bu işlevlerin içine yerleştirilen bir `SCRIPT` sayfasında sayfasında ve isteğe bağlı veya bir olaya yanıt olarak yerli üzerinde çalıştırılabilir  
   
  Tanımladığınız bir HTML sayfasını kullanarak içinde herhangi bir betik işlevleri çağırabilir <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> yöntemi. Komut dosyası yöntemi HTML öğesi döndürürse, bu dönüş sonuç dönüştürmek için bir yayın kullanabilirsiniz bir <xref:System.Windows.Forms.HtmlElement>. Ayrıntıları ve örnek kod için bkz: <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
   

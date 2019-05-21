@@ -2,12 +2,12 @@
 title: Desteklenmeyen Senaryolar
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 884349739730510c356e1efc1f866d146f6ed946
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878729"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959958"
 ---
 # <a name="unsupported-scenarios"></a>Desteklenmeyen Senaryolar
 Çeşitli nedenlerden dolayı Windows Communication Foundation (WCF) bazı belirli güvenlik senaryoları desteklemez. Örneğin, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition SSPI veya Kerberos kimlik doğrulama protokolleri uygulamaz ve bu nedenle WCF hizmet Windows kimlik doğrulaması ile bu platform üzerinde çalıştırılmasını desteklemez. Kullanıcı adı/parola ve HTTP/HTTPS tümleşik kimlik doğrulaması gibi diğer kimlik doğrulama mekanizmaları, WCF, Windows XP Home Edition altında çalışırken desteklenir.  
@@ -50,7 +50,7 @@ ms.locfileid: "65878729"
 ## <a name="cryptography"></a>Şifreleme  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>SHA-256 yalnızca simetrik anahtar kullanımları için desteklenir  
- WCF çeşitli şifreleme ve sistem tarafından sağlanan bağlamalar algoritma paketini kullanarak belirtebilirsiniz imza Özet oluşturma algoritmaları destekler. Gelişmiş güvenlik için imza Özet karmaları oluşturmak için güvenli karma algoritması (SHA) 2 algoritmalarını, özellikle SHA-256, WCF destekler. Bu sürüm yalnızca Kerberos anahtarları gibi simetrik anahtar kullanımları için SHA-256 destekler ve burada bir X.509 sertifikası iletiyi imzalamak üzere kullanılmaz. WCF RSA imzalar (X.509 sertifikaları kullanılır) desteklemediği için RSA-SHA256 SHA-256 karma destek geçerli olmaması nedeniyle kullanarak [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+ WCF çeşitli şifreleme ve sistem tarafından sağlanan bağlamalar algoritma paketini kullanarak belirtebilirsiniz imza Özet oluşturma algoritmaları destekler. Gelişmiş güvenlik için imza Özet karmaları oluşturmak için güvenli karma algoritması (SHA) 2 algoritmalarını, özellikle SHA-256, WCF destekler. Bu sürüm yalnızca Kerberos anahtarları gibi simetrik anahtar kullanımları için SHA-256 destekler ve burada bir X.509 sertifikası iletiyi imzalamak üzere kullanılmaz. WCF RSA imzalar (X.509 sertifikaları kullanılır) desteklemediği için RSA-SHA256 WinFX, SHA-256 karma destek geçerli olmaması nedeniyle kullanarak.  
   
 ### <a name="fips-compliant-sha-256-hashes-not-supported"></a>FIPS uyumlu SHA-256 karma desteklenmiyor  
  SHA-256 kullanan algoritması paketleri WCF tarafından FIPS uyumlu algoritmaları kullanımını gerekli olduğu sistemlerde desteklenmez bu nedenle, WCF SHA-256'yı FIPS uyumlu karmaları desteklemez.  

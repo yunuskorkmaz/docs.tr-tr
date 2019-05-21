@@ -3,12 +3,12 @@ title: ML API ML.NET kullanmayı otomatik
 description: ML API ML.NET otomatik oluşturma işlemi model otomatikleştirir ve dağıtım için hazır bir model oluşturur. Otomatik makine öğrenimi görevlerini yapılandırmak için kullanabileceğiniz seçenekleri öğrenin.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 21bf594ba70e8c466cba757ca4dcfe39ddfa4d1e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d624b999384dd92d41033e385d01fe556e10a065
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641232"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960418"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Machine learning API ML.NET kullanmayı otomatik
 
@@ -104,15 +104,15 @@ Bazı örnekler:
     ```
 
 ML görev başına desteklenen Eğitmenler listesini aşağıdaki karşılık gelen bağlantıda bulunabilir:
-* [İkili sınıflandırma algoritmaları desteklenir.](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.binaryclassificationtrainer?view=automl-dotnet)
-* [Sınıflı sınıflandırma algoritmaları desteklenir.](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.multiclassclassificationtrainer?view=automl-dotnet)
-* [Desteklenen regresyon algoritmaları](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.regressiontrainer?view=automl-dotnet)
+* [İkili sınıflandırma algoritmaları desteklenir.](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
+* [Sınıflı sınıflandırma algoritmaları desteklenir.](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
+* [Desteklenen regresyon algoritmaları](xref:Microsoft.ML.AutoML.RegressionTrainer)
 
 ## <a name="optimizing-metric"></a>Ölçüm en iyi duruma getirme
 
 Yukarıdaki örnekte gösterildiği gibi en iyi duruma getirme ölçüm modeli eğitimi sırasında en iyi duruma getirilmesi ölçüm belirler. Seçebileceğiniz en iyi duruma getirme ölçüm seçtiğiniz görev türüne göre belirlenir. Ölçümlerin bir listesi aşağıda verilmiştir.
 
-|[İkili sınıflandırma](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.binaryclassificationmetric?view=automl-dotnet) | [Sınıflı sınıflandırma](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.multiclassclassificationmetric?view=automl-dotnet) | [Regresyon](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.regressionmetric?view=automl-dotnet)
+|[İkili sınıflandırma](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Sınıflı sınıflandırma](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Regresyon](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
 |Doğruluğu| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
@@ -210,12 +210,9 @@ Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}
 ```
 
 ML görev başına kullanılabilen tüm ölçümler şunlardır:
-* [İkili sınıflandırma ölçümleri](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.binaryclassificationmetric?view=automl-dotnet
-)
-* [Sınıflı sınıflandırma ölçümleri](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.multiclassclassificationmetric?view=automl-dotnet
-)
-* [Regresyon ölçümleri](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.regressionmetric?view=automl-dotnet
-)
+* [İkili sınıflandırma ölçümleri](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
+* [Sınıflı sınıflandırma ölçümleri](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
+* [Regresyon ölçümleri](xref:Microsoft.ML.AutoML.RegressionMetric)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
