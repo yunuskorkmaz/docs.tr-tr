@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1905a61a1843427563ffcbad43ea6b2a4c161828
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 014adfbf6f9afab0eaacd574cfb181c0eec07b5b
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654964"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960318"
 ---
 # <a name="understanding-speedup-in-plinq"></a>PLINQ'te Hızlandırmayı Anlama
 PLINQ birincil amacı, çok çekirdekli bilgisayarlarda paralel sorgu temsilcileri yürüterek Plınq sorgularının LINQ yürütülmesini hızlandırmak sağlamaktır. Kaynak koleksiyondaki her öğe işlenmesini bağımsız olarak, paylaşılan durumu olmadan arasında bireysel temsilciler dahil olduğunda PLINQ en iyi şekilde çalışır. Bu işlemler LINQ nesneleri ve PLINQ için ortak olan ve genellikle denir "*delightfully paralel*" çünkü bunlar kendilerini kolayca birden çok iş parçacığında zamanlamaya uygun. Ancak, tüm sorguları tamamen delightfully paralel işlemleri oluşur; Çoğu durumda, bir sorgu, ya da paralelleştirildi olamaz veya paralel yürütme yavaş, bazı işleçler içerir. Ve tamamen delightfully paralel bile sorgular ile PLINQ gerekir yine de veri kaynağının bölüm ve iş parçacıkları üzerinde iş zamanlama ve sorgu tamamlandığında genellikle sonuçları birleştirin. Tüm bu işlemler, paralelleştirme hesaplama maliyetine ekleyin; Bu maliyetler paralelleştirme ekleme adlı *yükü*. PLINQ sorgusunda en iyi performansı elde etmek için delightfully paralel bölümleri en üst düzeye çıkarmak ve getirdiği ek yüke gerek bölümleri en aza indirmek için hedeftir. Bu makalede, mümkün olduğunca etkili doğru sonuçları hala sonuçlanmıyor sırasında PLINQ sorguları yazmanıza yardımcı olacak bilgiler sağlar.  
@@ -61,7 +61,7 @@ PLINQ birincil amacı, çok çekirdekli bilgisayarlarda paralel sorgu temsilcile
   
 5. Birleştirme seçeneklerini türü.  
   
-     PLINQ çıktısını arabelleğe ve bunlar üretilen gibi sonuç kümesinin tamamı, veya başka stream tek sonuçları üretilen sonra öbekleri veya tümünü tek seferde, üretmek için yapılandırılabilir. Önceki sonuç azalan toplam yürütme süresi ve ikinci sonucunu veriyor öğeler arasında düşük gecikme olur.  Birleştirme seçeneklerini her zaman önemli bir etkiye genel sorgu performansı üzerindeki değil olsa da, bunlar ne bir kullanıcı denetimi çünkü bunlar algılanan performansını etkileyebilir sonuçlarını görmek için beklemeniz gerekir. Daha fazla bilgi için [plınq'te Birleştirme Seçenekleri](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
+     PLINQ çıktısını arabelleğe ve bunlar üretilen gibi sonuç kümesinin tamamı, veya başka stream tek sonuçları üretilen sonra öbekleri veya tümünü tek seferde, üretmek için yapılandırılabilir. Önceki sonuçları azalan toplam yürütme süresi ve ikinci sonuçlarını vermedi öğeler arasında düşük gecikme.  Birleştirme seçeneklerini her zaman önemli bir etkiye genel sorgu performansı üzerindeki değil olsa da, bunlar ne bir kullanıcı denetimi çünkü bunlar algılanan performansını etkileyebilir sonuçlarını görmek için beklemeniz gerekir. Daha fazla bilgi için [plınq'te Birleştirme Seçenekleri](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
   
 6. Bölümleme türü.  
   
