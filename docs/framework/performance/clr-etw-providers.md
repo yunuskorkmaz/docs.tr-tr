@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34d134d0d7ba1d131ded8d8a6eee818b84c86508
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788004"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003738"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW Sağlayıcılar
 Ortak dil çalışma zamanı (CLR) iki sağlayıcıları vardır: çalışma zamanı sağlayıcısı ve Özet sağlayıcı.  
   
  Çalışma zamanı sağlayıcısı olayları, etkin anahtar sözcüklere (olayların kategorilerini) bağlı olarak başlatır. Örneğin, etkinleştirerek yükleyici olaylarını toplayan `LoaderKeyword` anahtar sözcüğü.  
   
- Olay izleme için Windows (ETW) olayları, daha sonra gerektiğinde virgülle ayrılmış değer (.csv) dosyalarında sonrası işlenebilecek bir .etl uzantılı bir dosyaya kaydedilir. .Etl dosyasını bir .csv dosyasına dönüştürme hakkında daha fazla bilgi için bkz: [denetleme .NET Framework günlük](../../../docs/framework/performance/controlling-logging.md).  
+ Olay izleme için Windows (ETW) olayları, daha sonra gerektiğinde virgülle ayrılmış değer (.csv) dosyalarında sonrası işlenebilecek bir .etl uzantılı bir dosyaya yazılır. .Etl dosyasını bir .csv dosyasına dönüştürme hakkında daha fazla bilgi için bkz: [denetleme .NET Framework günlük](../../../docs/framework/performance/controlling-logging.md).  
   
 ## <a name="the-runtime-provider"></a>Çalışma zamanı sağlayıcısı  
  Çalışma zamanı sağlayıcısı ana CLR ETW sağlayıcısıdır.  

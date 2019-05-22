@@ -3,12 +3,12 @@ title: .NET Core hakkında
 description: .NET Core hakkında bilgi edinin.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 87514b476124196c835e4b22154f9bbaca7482a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb6088bcadcdc9c28699446df035b899485c406d
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644373"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003753"
 ---
 # <a name="about-net-core"></a>.NET Core hakkında
 
@@ -17,7 +17,7 @@ ms.locfileid: "61644373"
 - **Platformlar arası:** Windows, macOS ve Linux'ta çalışan [işletim sistemleri](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md).
 - **Consistent mimariler arasında:** Kodunuz ile aynı davranışı x64, x86 ve ARM gibi birden fazla mimari üzerinde çalışır.
 - **Komut satırı araçları:**  Yerel geliştirme için ve sürekli tümleştirme senaryolarında kullanılabilecek kolay kullanımlı komut satırı araçlarını içerir.
-- **Esnek dağıtım:** Uygulamanıza dahil edilebilir ya da yan yana kullanıcı - veya makineye yüklü. Kullanılabilir [Docker kapsayıcıları](docker/index.md).
+- **Esnek dağıtım:** Uygulamanıza dahil edilebilir ya da yan yana (geniş kullanıcı veya sistem genelinde yüklemeleri) yüklü. Kullanılabilir [Docker kapsayıcıları](docker/index.md).
 - **Uyumlu:** .NET Core, .NET Framework, Xamarin ve Mono, uyumlu aracılığıyla [.NET Standard](../standard/net-standard.md).
 - **Açık kaynak:** MIT'den ve Apache 2 lisanslarını kullanarak, açık kaynak .NET Core platformudur. .NET Core bir [.NET Foundation](https://dotnetfoundation.org/) proje.
 - **Microsoft tarafından desteklenen:** .NET Core, her Microsoft tarafından desteklenir [.NET Core desteği](https://www.microsoft.com/net/core/support/).
@@ -73,7 +73,7 @@ Bu bileşenler, aşağıdaki yollarla dağıtılır:
 
 Kişiler, genellikle birden çok işletim sistemini desteklemek için .NET Core nasıl uygulandığını isteyin. Genellikle ayrı uygulamaları ise veya sorun [koşullu derleme](https://en.wikipedia.org/wiki/Conditional_compilation) kullanılır. Bu güçlü bir sapma koşullu derleme doğrultusunda ile hem de olur.
 
-Büyük çoğunluğu grafik aşağıda görebilirsiniz [Corefx'te](https://github.com/dotnet/corefx) tüm platformlar arasında paylaşılan platformdan bağımsız kodudur. Platformdan bağımsız kod, tüm platformlarda kullanılan tek bir taşınabilir derleme olarak uygulanabilir.
+Gördüğünüz aşağıdaki grafik, büyük çoğunluğu [Corefx'te](https://github.com/dotnet/corefx) tüm platformlar arasında paylaşılan platformdan bağımsız kodudur. Platformdan bağımsız kod, tüm platformlarda kullanılan tek bir taşınabilir derleme olarak uygulanabilir.
 
 ![Corefx'te: Platform başına kod satırları](../images/corefx-platforms-loc.png)
 
@@ -102,6 +102,8 @@ Belki de boyutu ve şekli .NET Core için var olan .NET uygulamalarını karşı
 - **Açık kaynak** --.NET Core, açık kaynak, ancak bir [salt okunur alt .NET Framework'ün](https://github.com/microsoft/referencesource) açık kaynaklıdır.
 
 .NET Core benzersizdir ve .NET Framework ve diğer .NET uygulamaları için önemli farkları vardır, ancak kaynak veya ikili paylaşma teknikleri kullanarak, bu uygulamalar arasında kod paylaşma basittir.
+
+.NET Core yan yana yüklemeyi destekler ve onun çalışma zamanı .NET Framework'ü tamamen bağımsız olduğundan, bu makinelerde .NET Framework'ün yüklü herhangi bir sorun olmadan yüklenebilir.
 
 ### <a name="comparison-with-mono"></a>Mono ile karşılaştırma
 

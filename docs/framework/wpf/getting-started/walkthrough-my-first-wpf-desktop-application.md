@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 9d0abd18b2242ab21e8a915caac1ff9e3216acd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c3440ddf6cdae6b24bcf1059ab2c76d8fb957263
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617267"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003859"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>İzlenecek yol: İlk WPF masaüstü uygulamam
 
@@ -45,9 +45,9 @@ Bu izlenecek yol aşağıdaki adımları içerir:
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Visual Studio 2017 veya üstü
+- (Bu makalede, Visual Studio 2019 kullanılmıştır) visual Studio 2017 veya üstü
 
-   Visual Studio'nun en son sürümü yükleme hakkında daha fazla bilgi için bkz. [Visual Studio'yu yükleyin](/visualstudio/install/install-visual-studio). Bu makalede, Visual Studio 2019 kullanır.
+   Visual Studio'nun en son sürümü yükleme hakkında daha fazla bilgi için bkz. [Visual Studio'yu yükleyin](/visualstudio/install/install-visual-studio).
 
 ## <a name="create-the-application-project"></a>Uygulama projesini oluşturun
 
@@ -55,23 +55,21 @@ Bu izlenecek yol aşağıdaki adımları içerir:
 
 1. Visual Basic veya Visual C# adlı yeni bir WPF uygulaması projesi oluşturma **`ExpenseIt`**:
 
-   1. Visual Studio açıp seçin **dosya** > **yeni** > **proje**.
+   1. Visual Studio açıp seçin **yeni bir proje oluşturma** altında **başlama** menüsü.
 
       **Yeni bir proje oluşturma** iletişim kutusu açılır.
 
-      ![Yeni Proje iletişim kutusu oluşturma](./media/gettingstartedfigure0a.png)
-
    2. İçinde **dil** açılır listesinde, şunlardan birini seçin **C#** veya **Visual Basic**.
-
+      
    3. Seçin **WPF uygulaması (.NET Framework)** şablonu ve ardından **sonraki**. 
+     
+      ![Yeni Proje iletişim kutusu oluşturma](./media/walkthrough-my-first-wpf-desktop-application/create-new-project-dialog.png)
     
-   4. Seçin **yeni bir proje oluşturma**.
+      **Yeni projenizi yapılandırın** iletişim kutusu açılır.
 
-      **Yeni bir proje yapılandırma** iletişim kutusu açılır.
+   4. Proje adını girin **`ExpenseIt`** seçip **Oluştur**.
 
-      ![Yeni Proje iletişim kutusu yapılandırın](./media/gettingstartedfigure0c.png)
-
-   5. Proje adını girin **`ExpenseIt`** seçip **Oluştur**.
+      ![Yeni Proje iletişim kutusu yapılandırın](./media/walkthrough-my-first-wpf-desktop-application/configure-new-project-dialog.png)
 
       Visual Studio projesi oluşturup adlı varsayılan uygulama penceresi için tasarımcı açılır **MainWindow.xaml**.
 
@@ -224,7 +222,7 @@ Bu bölümde, uygulamaya iki sayfaları ve görüntü ekleyeceksiniz.
 
     Uygulama ile aşağıdaki çizimde <xref:System.Windows.Navigation.NavigationWindow> düğmeleri:
 
-    ![ExpenseIt örnek ekran görüntüsü](./media/gettingstartedfigure1.png)
+    ![Uygulama sonra derleyin ve çalıştırın.](./media/walkthrough-my-first-wpf-desktop-application/build-run-application.png)
 
 2. Visual Studio'ya dönmek için uygulamayı kapatın.
 
@@ -290,9 +288,7 @@ Her denetim bir satırda yerleştirilir <xref:System.Windows.Controls.Grid> ayar
 
     Aşağıdaki çizim, oluşturduğunuz denetimleri gösterir:
 
-    ![ExpenseIt örnek ekran görüntüsü](./media/gettingstartedfigure2.png)
-
-3. Visual Studio'ya dönmek için uygulamayı kapatın.
+![ExpenseIt örnek adlarının bir listesini gösteren ekran görüntüsü](./media/walkthrough-my-first-wpf-desktop-application/add-application-controls.png)
 
 ## <a name="add-an-image-and-a-title"></a>Resim ve Başlık Ekle
 
@@ -326,7 +322,7 @@ Bu bölümde, giriş sayfası kullanıcı Arabirimi, görüntü ve sayfa başlı
 
 Hangi yeni eklediğiniz sonucu aşağıda gösterilmektedir:
 
-![ExpenseIt örnek ekran görüntüsü](./media/gettingstartedfigure3.png)
+![Yeni görüntü arka plan ve sayfa başlığını gösteren ExpenseIt örnek ekran görüntüsü](./media/walkthrough-my-first-wpf-desktop-application/add-application-image-title.png)
 
 ## <a name="add-code-to-handle-events"></a>Olayları işlemek için kod ekleyin
 
@@ -361,7 +357,7 @@ Hangi yeni eklediğiniz sonucu aşağıda gösterilmektedir:
 
 Eklenen kullanıcı Arabirimi öğeleri aşağıdaki çizimde *ExpenseReportPage.xaml*.
 
-![ExpenseIt örnek ekran görüntüsü](./media/gettingstartedfigure4.png)
+![ExpenseReportPage için oluşturduğunuz kullanıcı arabirimini gösteren ExpenseIt örnek ekran görüntüsü.](./media/walkthrough-my-first-wpf-desktop-application/create-application-ui.png)
 
 ## <a name="style-controls"></a>Stil denetimleri
 
@@ -405,7 +401,7 @@ Eklenen kullanıcı Arabirimi öğeleri aşağıdaki çizimde *ExpenseReportPage
 
 6. Derleme ve uygulamayı çalıştırın. Pencere görünümü önceden aynıdır.
 
-    ![ExpenseIt örnek ekran görüntüsü](./media/gettingstartedfigure4.png)
+    ![Son bölümde olduğu gibi aynı görünümle ExpenseIt örnek ekran görüntüsü.](./media/walkthrough-my-first-wpf-desktop-application/create-application-ui.png)
 
 7. Visual Studio'ya dönmek için uygulamayı kapatın.
 
@@ -473,7 +469,7 @@ Bu bölümde, veri şablonları kullanarak verilere bağlı listeler her öğe i
 
 Her iki sayfaları aşağıdaki resimde gösterilmektedir `ExpenseIt` uygulama denetimleri, düzeni, stiller, veri bağlama ve uygulanan veri şablonları:
 
-![ExpenseIt örnek ekran görüntüleri](./media/gettingstartedfigure5.png)
+![Her iki sayfa adları listesi ve bir harcama raporu gösteren uygulama.](./media/walkthrough-my-first-wpf-desktop-application/application-data-templates.png)
 
 > [!NOTE]
 > Bu örnek, belirli bir WPF özelliğini gösterir ve güvenlik, yerelleştirme ve erişilebilirlik gibi şeyler için tüm en iyi uygulamaları izleyin değil. WPF ve .NET uygulama geliştirme en iyi yöntemler ilişkin kapsamlı bilgi için aşağıdaki konulara bakın:

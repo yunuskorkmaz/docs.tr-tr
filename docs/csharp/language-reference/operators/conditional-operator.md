@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: a40dd4addfaf8a505cf334876192f0b2ccf66a09
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 58317c26f87034991c817d0d7221d810657ca332
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452402"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003721"
 ---
 # <a name="-operator-c-reference"></a>?: İşleci (C# Başvurusu)
 
@@ -43,13 +43,12 @@ olarak değerlendirilir
 a ? b : (c ? d : e)
 ```
 
-Bu işleç nasıl değerlendirir unutmayın için kullanabileceğiniz bir anımsatıcı cihaz isteyin olmaktır:
-
-```text
-is this condition true ? yes : no
-```
-
-ile? önceki deyim ve bu sorunun yanıtı mantıksal olarak davranan izleyen bir soru işareti olarak davranan işleci bir parçası.
+> [!TIP]
+> Koşullu işleç nasıl değerlendirilir hatırlamak şu anımsatıcı cihazı kullanabilirsiniz:
+>
+> ```text
+> is this condition true ? yes : no
+> ```
 
 Aşağıdaki örnek, koşullu işlecinin kullanımını gösterir:
 
