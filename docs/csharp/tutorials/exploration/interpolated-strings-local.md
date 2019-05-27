@@ -4,12 +4,12 @@ description: Bu öğreticide nasıl kullanılacağını gösterir C# biçimlendi
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: 97773659ea7dd00c291aa6a96401cac531adfdc8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1e6fed2293b7447384a657e720fb847f2fa041f
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675994"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195890"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Dize ilişkilendirme, biçimlendirilmiş dizeler oluşturmak için kullanın
 
@@ -34,19 +34,19 @@ var name = "<name>";
 Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 ```
 
-Bu kod yazarak deneme `dotnet run` konsol pencerenizde. Programı çalıştırdığınızda karşılamada adınızı içeren tek bir dize görüntüler. İçinde yer alan dize <xref:System.Console.WriteLine%2A> yöntem çağrısında bir *ilişkilendirilmiş bir dizedir*. Tek bir dize olanak sağlayan bir şablon türüdür (adlı *sonuç dizesi*), gömülü kod içeren bir dizeden. İlişkilendirilmiş dizeler özellikle bir dize veya dizeleri birleştirirken (bir araya getirme) değerlerini eklemek için yararlıdır.
+Bu kod yazarak deneme `dotnet run` konsol pencerenizde. Programı çalıştırdığınızda karşılamada adınızı içeren tek bir dize görüntüler. İçinde yer alan dize <xref:System.Console.WriteLine%2A> yöntem çağrısında bir *ilişkilendirilmiş dize ifadesi*. Tek bir dize olanak sağlayan bir şablon türüdür (adlı *sonuç dizesi*), gömülü kod içeren bir dizeden. İlişkilendirilmiş dizeler özellikle bir dize veya dizeleri birleştirirken (bir araya getirme) değerlerini eklemek için yararlıdır.
 
 Bu basit örnek her ilişkilendirilmiş dizenin sahip olması gereken iki öğeyi içerir:
 
 - İle başlayan bir dize sabit değeri `$` açma tırnak işareti karakterinden önce karakter karakter. Arasında boşluk olamaz `$` sembol ve tırnak işareti karakteri. (Görmek istiyorsanız, ne olacağını yaptığınızda, sonra boşluk Ekle `$` karakter, dosyayı kaydedin ve yazarak programı yeniden çalıştırın `dotnet run` konsol penceresinde. C# Derleyici bir hata iletisi görüntüler "hatası CS1056: Beklenmeyen karakter '$' ".)
 
-- Bir veya daha fazla *ilişkilendirilmiş ifade*. İlişkilendirilmiş ifade bir açma ve kapatma ayracı gösterilir (`{` ve `}`). Bir değer döndüren bir C# ifadesini ekleyebilirsiniz (dahil olmak üzere `null`) küme ayraçları içinde.
+- Bir veya daha fazla *ilişkilendirme ifadeleri*. Bir ilişkilendirme ifade bir açma ve kapatma ayracı gösterilir (`{` ve `}`). Bir değer döndüren bir C# ifadesini ekleyebilirsiniz (dahil olmak üzere `null`) küme ayraçları içinde.
 
 Diğer veri türlerinden bazılarıyla birkaç daha fazla dize ilişkilendirme örneği deneyelim.
 
 ## <a name="include-different-data-types"></a>Farklı veri türleri ekleme
 
-Önceki bölümde, bir dizenin içine eklemek için dize ilişkilendirme kullanılır. İlişkilendirilmiş ifade sonucu herhangi bir veri türünde ancak olabilir. Şimdi bir aradeğerlendirme dizesinde değerleri çeşitli veri türlerini içerir.
+Önceki bölümde, bir dizenin içine eklemek için dize ilişkilendirme kullanılır. Bir ilişkilendirme ifadenin sonucu herhangi bir veri türünde ancak olabilir. Şimdi bir aradeğerlendirme dizesinde değerleri çeşitli veri türlerini içerir.
 
 Aşağıdaki örnekte, ilk tanımlarız bir [sınıfı](../../programming-guide/classes-and-structs/classes.md) veri türü `Vegetable` olan bir `Name` [özelliği](../../properties.md) ve `ToString` [yöntemi](../../methods.md), hangi [geçersiz kılmalar](../../language-reference/keywords/override.md) davranışını <xref:System.Object.ToString?displayProperty=nameWithType> yöntemi. [ `public` Erişim değiştiricisi](../../language-reference/keywords/public.md) bu yöntem herhangi bir istemci kod, dize gösterimini almaya kullanılabilmesini bir `Vegetable` örneği. Örnekte `Vegetable.ToString` yöntemi değerini döndürür `Name` sırasında başlatılır özelliği `Vegetable` [Oluşturucusu](../../programming-guide/classes-and-structs/constructors.md):
 
@@ -89,15 +89,15 @@ public class Program
 }
 ```
 
-Unutmayın ilişkilendirilmiş ifade `item` aradeğerlendirme dizesinde çözümleniyor sonuç dizesindeki "eggplant" metni. Deyim sonucu türü dize olmadığı durumlarda, sonuç şu şekilde bir dizeye çözümlenir çünkü:
+Unutmayın ilişkilendirme ifade `item` aradeğerlendirme dizesinde çözümleniyor sonuç dizesindeki "eggplant" metni. Deyim sonucu türü dize olmadığı durumlarda, sonuç şu şekilde bir dizeye çözümlenir çünkü:
 
-- İlişkilendirilmiş ifade değerlendirilirse `null`, boş bir dize ("", veya <xref:System.String.Empty?displayProperty=nameWithType>) kullanılır.
+- İlişkilendirme ifade değerlendirilirse `null`, boş bir dize ("", veya <xref:System.String.Empty?displayProperty=nameWithType>) kullanılır.
 
-- İlişkilendirilmiş ifade değerlendirme değil, `null`, genellikle `ToString` sonuç türü yöntemi çağrılır. Bu uygulamasını güncelleştirerek test `Vegetable.ToString` yöntemi. Bile uygulanması gerekmeyebilir `ToString` her türü bu yöntemin bazı uygulama olduğundan yöntemi. Bunu test etmek için tanımı için açıklama `Vegetable.ToString` örnekte yöntemi (Bunu yapmak için bir açıklama simgesini yerleştirmek `//`, önündeki). Çıkışta "eggplant" dizesi, varsayılan davranış, tam olarak nitelenmiş tür adıyla ("Vegetable" Bu örnekte), değiştirilir, <xref:System.Object.ToString?displayProperty=nameWithType> yöntemi. Varsayılan davranışını `ToString` yöntemi için bir sabit listesi değeri, değerin dize gösterimi döndürmektir.
+- İlişkilendirme ifade değerlendirme değil, `null`, genellikle `ToString` sonuç türü yöntemi çağrılır. Bu uygulamasını güncelleştirerek test `Vegetable.ToString` yöntemi. Bile uygulanması gerekmeyebilir `ToString` her türü bu yöntemin bazı uygulama olduğundan yöntemi. Bunu test etmek için tanımı için açıklama `Vegetable.ToString` örnekte yöntemi (Bunu yapmak için bir açıklama simgesini yerleştirmek `//`, önündeki). Çıkışta "eggplant" dizesi, varsayılan davranış, tam olarak nitelenmiş tür adıyla ("Vegetable" Bu örnekte), değiştirilir, <xref:System.Object.ToString?displayProperty=nameWithType> yöntemi. Varsayılan davranışını `ToString` yöntemi için bir sabit listesi değeri, değerin dize gösterimi döndürmektir.
 
 Bu örnek çıktıda, (eggplant fiyatı, her saniye değişmez) kesin tarih ve Fiyat değerini para birimi göstermez. Sonraki bölümde, ifade sonuçları dize temsillerini biçimini denetleyerek bu sorunları gidermek nasıl öğreneceksiniz.
 
-## <a name="control-the-formatting-of-interpolated-expressions"></a>İlişkilendirilmiş ifadelerin biçimlendirmesini denetleme
+## <a name="control-the-formatting-of-interpolation-expressions"></a>İlişkilendirme ifadelerin biçimlendirmesini denetleme
 
 Önceki bölümde, sonuç dizesine yetersiz şekilde biçimlendirilmiş iki dize eklenmişti. Bir tarih yalnızca uygun bir tarih ve saat değeri oluştu. İkinci para biriminin göstermek istemediğiniz bir fiyattı. Her iki sorun da kolayca giderilebilir. Dize ilişkilendirme belirtmenize olanak tanır *biçim dizeleri* belirli türlerin biçimlendirmesini denetleyen. Çağrısını değiştirin `Console.WriteLine` aşağıdaki satırda gösterildiği gibi tarih ve fiyat ifadeler için biçim dizeleri dahil etmek için önceki örnekte:
 
@@ -105,7 +105,7 @@ Bu örnek çıktıda, (eggplant fiyatı, her saniye değişmez) kesin tarih ve F
 Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}.");
 ```
 
-İki nokta ile ilişkilendirilmiş ifade izleyerek bir biçim dizesi belirtin (":") ve biçim dizesi. "d" bir [standart tarih ve saat biçim dizesi](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) temsil eden kısa tarih biçimi. "C2" olan bir [standart sayısal biçim dizesi](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) , bir sayı olarak iki basamakla para birimi değeri ondalık ayırıcıdan sonra temsil eder.
+İki nokta ile ilişkilendirme ifade izleyerek bir biçim dizesi belirtin (":") ve biçim dizesi. "d" bir [standart tarih ve saat biçim dizesi](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) temsil eden kısa tarih biçimi. "C2" olan bir [standart sayısal biçim dizesi](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) , bir sayı olarak iki basamakla para birimi değeri ondalık ayırıcıdan sonra temsil eder.
 
 .NET kitaplıklarına türlerinde bir dizi önceden tanımlanmış bir dizi biçim dizesini destekler. Bunlar, tüm sayısal türlerin ve tarih ve saat türleri içerir. Biçim dizelerini destekleyen türler tam bir listesi için bkz. [biçim dizeleri ve .NET sınıfı kitaplık türleri](../../../standard/base-types/formatting-types.md#stringRef) içinde [NET'teki biçimlendirme türleri](../../../standard/base-types/formatting-types.md) makalesi.
 
@@ -113,9 +113,9 @@ Metin düzenleyici ve tarih ve saat ile sayısal biçimlendirme değişiklikleri
 
 Biçimlendirmenin yanı sıra alan genişliğini ve sonuç dizesine eklenir biçimlendirilmiş dizeler hizalamasını da denetleyebilirsiniz. Sonraki bölümde, bunun nasıl yapılacağını öğreneceksiniz.
 
-## <a name="control-the-field-width-and-alignment-of-interpolated-expressions"></a>Alan genişliğini ve hizalamasını ilişkilendirilmiş ifadeler denetim
+## <a name="control-the-field-width-and-alignment-of-interpolation-expressions"></a>Alan genişliğini ve hizalamasını ilişkilendirme ifadeleri denetleme
 
-İlişkilendirilmiş ifade sonucu dize olarak biçimlendirildiğinde normalde, bu dize bir sonuç dizesinde baştaki veya sondaki boşlukları dahil edilir. Özellikle bir veri kümesiyle bir alan genişliğini denetleyebilir çalışırken ve metin hizalamasını daha okunabilir bir çıktı oluşturmak için yardımcı olur. Ardından, metin düzenleyici tüm kodu aşağıdaki kodla değiştirin. Bu görmek için şunu yazın `dotnet run` programı çalıştırmak için:
+Bir ilişkilendirme ifadenin sonucu dize olarak biçimlendirildiğinde normalde, bu dize bir sonuç dizesinde baştaki veya sondaki boşluk olmadan dahil edilir. Özellikle bir veri kümesiyle bir alan genişliğini denetleyebilir çalışırken ve metin hizalamasını daha okunabilir bir çıktı oluşturmak için yardımcı olur. Ardından, metin düzenleyici tüm kodu aşağıdaki kodla değiştirin. Bu görmek için şunu yazın `dotnet run` programı çalıştırmak için:
 
 ```csharp
 using System;
@@ -141,7 +141,7 @@ public class Example
 }
 ```
 
-Yazarlar adları sola hizalanmış ve bunlar yazdı başlıkları sağa hizalanır. Virgül ekleyerek hizalamayı belirtin (",") ilişkilendirilmiş bir ifadenin sonra ve belirleme *minimum* alan genişliği. Belirtilen değer pozitif bir sayıysa alan sağa hizalanır. Negatif bir sayı ise, alan sola hizalanır.
+Yazarlar adları sola hizalanmış ve bunlar yazdı başlıkları sağa hizalanır. Virgül ekleyerek hizalamayı belirtin (",") sonra bir ilişkilendirme ifade ve belirleme *minimum* alan genişliği. Belirtilen değer pozitif bir sayıysa alan sağa hizalanır. Negatif bir sayı ise, alan sola hizalanır.
 
 Negatif işaretlerini kaldırmayı deneyip `{"Author",-25}` ve `{title.Key,-25}` kodu ve şu kod gibi örneği tekrar çalıştırın:
 
@@ -153,7 +153,7 @@ foreach (var title in titles)
 
 Bu kez, yazar bilgileri sağa hizalanır.
 
-Hizalama tanımlayıcısı ve bir biçim dizesi için tek bir ilişkilendirilmiş ifadede birleştirebilirsiniz. Bunu yapmak için ardından iki nokta işareti ve biçim dizesi hizalama ilk olarak belirtin. Tüm kod içinde değiştirmek `Main` ile biçimlendirilmiş üç dizeyi görüntüleyen yöntemini aşağıdaki kodla alan genişlikleri tanımlı. Ardından girerek programı çalıştırın `dotnet run` komutu.
+Hizalama tanımlayıcısı ve bir biçim dizesi tek ilişkilendirme ifadesi için birleştirebilirsiniz. Bunu yapmak için ardından iki nokta işareti ve biçim dizesi hizalama ilk olarak belirtin. Tüm kod içinde değiştirmek `Main` ile biçimlendirilmiş üç dizeyi görüntüleyen yöntemini aşağıdaki kodla alan genişlikleri tanımlı. Ardından girerek programı çalıştırın `dotnet run` komutu.
 
 ```csharp
 Console.WriteLine($"[{DateTime.Now,-20:d}] Hour [{DateTime.Now,-10:HH}] [{1063.342,15:N2}] feet");

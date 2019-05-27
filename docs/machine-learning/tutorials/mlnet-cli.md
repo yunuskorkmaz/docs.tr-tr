@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 2679df0317fede9fa5f3885831c65bd87a14981a
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 029685be9d44ad947d4291912d7da1d8ce73d52a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960405"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053641"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>CLI kullanarak bir ikili dosya sınıflandırıcı otomatik oluştur
 
@@ -242,7 +242,7 @@ Ancak, şey sizin için bu blog gönderisinde açıklandığı daha çok daha ko
 
 Daha da önemlisi, bu belirli senaryo (yaklaşım analizi modeli) için de kod ile oluşturulan eğitim kod aşağıdaki öğreticide açıklanan karşılaştırabilirsiniz:
 
-- Karşılaştırma: [Öğretici: ML.NET bir yaklaşım analizi ikili sınıflandırma senaryosunda kullanmak](https://docs.microsoft.com/en-us/dotnet/machine-learning/tutorials/sentiment-analysis).
+- Karşılaştırma: [Öğretici: ML.NET bir yaklaşım analizi ikili sınıflandırma senaryosunda kullanmak](sentiment-analysis.md).
 
 Bu öğreticide seçtiğiniz algoritması ve ardışık düzen yapılandırma CLI aracı tarafından oluşturulan kodu karşılaştırmak ilgi çekici olur. Yineleme ve arama için daha iyi modelleri harcadığınız ne kadar süre bağlı olarak seçilen algoritma ardışık düzen yapılandırması ve belirli hyper-parametreleriyle birlikte farklı olabilir.
 

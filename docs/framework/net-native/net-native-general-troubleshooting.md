@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6bc5697e20c21d988afe6017d05e0e4de53d40d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca0f093e85a5ac983266ba34f78021d6af6018c0
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614913"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052029"
 ---
 # <a name="net-native-general-troubleshooting"></a>.NET Yerel Genel Sorun Giderme
-Bu konu ile uygulamalar geliştirirken karşılaşabileceğiniz olası sorunların nasıl giderileceği açıklanmaktadır [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+Bu konuda, .NET Native ile Uygulama geliştirirken karşılaşabileceğiniz olası sorunların nasıl giderileceği açıklanmaktadır.  
   
 - **Sorun:** Yapı çıktı penceresini düzgün şekilde güncelleştirilmez.  
   
@@ -20,17 +20,17 @@ Bu konu ile uygulamalar geliştirirken karşılaşabileceğiniz olası sorunlar�
   
 - **Sorun:** ARM için uygulamanızın perakende derleme süresi arttı.  
   
-     **Çözüm:** ARM cihazınıza bir uygulamayı dağıttığınızda [!INCLUDE[net_native](../../../includes/net-native-md.md)] altyapı çağrılır. Bu derleme yansıma devam gibi çalışması, statik olmayan semantiğe sağlarken çok sayıda iyileştirmeleri gerçekleştirir. Ayrıca, uygulamanın kullandığı .NET Framework'ün bir bölümü, MFC'ye statik olarak en iyi performans için bağlı olan ve de yerel kod içine derlenmiş gerekir. Derleme daha uzun sürer nedeni budur.  
+     **Çözüm:** ARM cihazınıza bir uygulamayı dağıttığınızda, .NET Native altyapı çağrılır. Bu derleme yansıma devam gibi çalışması, statik olmayan semantiğe sağlarken çok sayıda iyileştirmeleri gerçekleştirir. Ayrıca, uygulamanın kullandığı .NET Framework'ün bir bölümü, MFC'ye statik olarak en iyi performans için bağlı olan ve de yerel kod içine derlenmiş gerekir. Derleme daha uzun sürer nedeni budur.  
   
      Ancak, yine de dakikadır standart geliştirme makinesindeki çoğu uygulama standart bir derleme içinde derleme sürelerini uygulanır.  Genellikle, yalnızca standart geliştirmenin bir makinede .NET Framework için yerel görüntüler oluşturuluyor, birkaç dakika sürer.  Oluşturulan kodun geliştirmek için bile tüm iyileştirmeler ve .NET Framework dahil olmak üzere ile uygulama derleme süreleri genellikle bir veya iki dakika olduğundan.  
   
      Çok iş parçacıklı derleme ve diğer iyileştirmeler incelenerek derleme performansı iyileştirme üzerinde çalışmaya devam ediyoruz.  
   
-- **Sorun:** Uygulamanızı kullanarak derlenen bilmiyorum [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+- **Sorun:** Uygulamanızı .NET Native kullanarak derlenen bilmiyorum.  
   
-     **Çözüm:** Varsa [!INCLUDE[net_native](../../../includes/net-native-md.md)] derleyici çağrılır, artık kez yapı fark edeceksiniz ve Görev Yöneticisi'ni çeşitli gösterir [!INCLUDE[net_native](../../../includes/net-native-md.md)] bileşenini işlemlerin ILC.exe ve nutc_driver.exe gibi.  
+     **Çözüm:** .NET yerel derleyici çağrılırsa, uzun derleme zamanlarını ve Görev Yöneticisi'ni ILC.exe ve nutc_driver.exe gibi çeşitli .NET Native bileşenini işlemlerin gösterecektir fark edeceksiniz.  
   
-     Başarıyla projenizi derledikten sonra [!INCLUDE[net_native](../../../includes/net-native-md.md)], çıkış obj altında bulabilirsiniz\\*config*\ *arch* \\  *ProjectName*. ilc\out.  Yerel son paket içeriğinin depo altında bulunabilir\\*arch*\\*config*\AppX. Son Yerel Paket içeriğini \bin altında olan\\*arch*\\*config*uygulama dağıttıysanız \AppX.  
+     Başarıyla .NET Native ile projenizi derledikten sonra çıkış obj altında bulabilirsiniz\\*config*\ *arch*\\*projectname*. ilc\out.  Yerel son paket içeriğinin depo altında bulunabilir\\*arch*\\*config*\AppX. Son Yerel Paket içeriğini \bin altında olan\\*arch*\\*config*uygulama dağıttıysanız \AppX.  
   
 - **Sorun:** .NET yerel olarak derlenmiş uygulamanızı, çalışma zamanı özel durumları atma (genellikle [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) veya [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) özel durumlar), ne zaman oluşturmadı emin olmadan derlenir. Yerel ağ.  
   

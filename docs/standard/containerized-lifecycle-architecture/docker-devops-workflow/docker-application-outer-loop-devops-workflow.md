@@ -2,12 +2,12 @@
 title: Bir Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
 description: "\"Dış döngü\" DevOps iş akışının adımları öğrenin"
 ms.date: 02/15/2019
-ms.openlocfilehash: 194786a90fc02801211c7614eb632392d67f0109
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e7a82d2e5a5d503e5efbe9ac8242b163baab1286
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641049"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195602"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Bir Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
 
@@ -152,7 +152,7 @@ Az karmaşık senaryo ilk bakalım: Basit Docker ana bilgisayarları (VM'ler vey
 
 **Şekil 5-6**. Basit Docker konağı ortamları kayıt defterine uygulama kapsayıcıları dağıtma
 
-Şekil 5-7, nasıl yapı CI QA ve test ortamları Azure DevOps hizmetleriyle Docker Compose Görev Ekle iletişim kutusuna tıklayarak bağlanabilirsiniz vurgular. Ancak, hazırlama veya üretim ortamlarına dağıtıldığında, genellikle birden çok ortama işleme Release Management özellikleri kullanmanız gerekir (ister QA, hazırlık ve üretim). Tek bir Docker ana bilgisayarlara dağıtıyorsanız, Azure DevOps hizmetleri kullanıyor "Docker Compose" Görev (hangi çağırma `docker-compose up` komutunu başlık altında). Azure Container Service'e dağıtıyorsanız, aşağıdaki bölümde açıklandığı gibi Docker dağıtım görevini kullanır.
+Şekil 5-7, nasıl yapı CI QA ve test ortamları Azure DevOps hizmetleriyle Docker Compose Görev Ekle iletişim kutusuna tıklayarak bağlanabilirsiniz vurgular. Ancak, hazırlama veya üretim ortamlarına dağıtıldığında, genellikle birden çok ortama işleme Release Management özellikleri kullanmanız gerekir (ister QA, hazırlık ve üretim). Tek bir Docker ana bilgisayarlara dağıtıyorsanız, Azure DevOps hizmetleri kullanıyor "Docker Compose" Görev (hangi çağırma `docker-compose up` komutunu başlık altında). Azure Kubernetes Service (AKS) dağıtıyorsanız, aşağıdaki bölümde açıklandığı gibi Docker dağıtım görevini kullanır.
 
 ![Docker Compose bir görev ekleyerek, tarayıcı görünümü.](./media/image7.png)
 
@@ -186,15 +186,15 @@ Kapsayıcıları el ile bu kümeye CLI aracını veya bir web kullanıcı Arabir
 
 Başlangıçta, belirli bir küme veya düzenleyicileri dağıtırken, geleneksel olarak belirli bir dağıtım betikleri ve her bir orchestrator (diğer bir deyişle, Kubernetes ve farklı dağıtım mekanizmalarına sahip Service Fabric) başına mekanizmaları yerine daha basit kullanmanız gerekir ve kullanımı kolay `docker-compose` tabanlı aracı `docker-compose.yml` tanım dosyası. Ancak, Şekil 5-10'da gösterilen Azure DevOps Hizmetleri Docker dağıtım görevi sayesinde artık ayrıca desteklenen düzenleyiciler için yalnızca, tanıdık kullanarak dağıtabilirsiniz `docker-compose.yml` aracı "çeviri" gerçekleştirdiğinden, dosya (sizin gelen`docker-compose.yml`orchestrator tarafından gerekli biçime dosyası).
 
-![Görev Kataloğu'nda Azure DevOps, Docker gösteren tarayıcı görünümünü görev dağıtın.](./media/image10.png)
+![Görev Kataloğu'nda Azure DevOps, Kubernetes görev Dağıt gösteren tarayıcı görünümü.](./media/add-deploy-to-kubernetes-task.png)
 
-**Şekil 5-10**. Docker dağıtma görevi için ortam RM ekleme
+**Şekil 5-10**. Kubernetes görev ortamına Dağıt ekleme
 
-Şekil 5-11 Docker dağıtma görevi düzenleyin ve hedef türünü (Azure Container Service DC/OS, bu durumda), Docker Compose dosyası ve Docker kayıt defteri bağlantıya (ör. Azure Container Registry veya Docker hub'ı) nasıl gösterir. Bu, kümedeki kapsayıcıları olarak dağıtılması için kullanıma hazır özel Docker görüntülerinizi alır görevdir.
+Şekil 5-11 için yapılandırma bölümleri ile Kubernetes görev Dağıt düzenleme nasıl gösterir. Bu, kümedeki kapsayıcıları olarak dağıtılması için kullanıma hazır özel Docker görüntülerinizi alır görevdir.
 
-![Azure DevOps, tarayıcı görünümünü orchestrator görev tanımına dağıtın.](./media/image11.png)
+![Azure DevOps, tarayıcı görünümünü Kubernetes görev tanımına dağıtın.](./media/edit-deploy-to-kubernetes-task.png)
 
-**Şekil 5-11**. Docker dağıtma görev tanımını Azure Container Service DC/OS için dağıtma
+**Şekil 5-11**. Docker dağıtma görev tanımını ACS DC/OS'ye dağıtma
 
 > [! Daha fazla bilgi] CD işlem hattının hakkında Azure DevOps Hizmetleri ve Docker'ı ziyaret edin <https://azure.microsoft.com/services/devops/pipelines>
 

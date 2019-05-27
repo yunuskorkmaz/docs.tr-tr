@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81995d8003a9bb78f6a97ca7eadca94a2136c8a7
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 898771c3de8b54c08decd91f1a631a6205292912
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960009"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053636"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework'teki yenilikler
 
@@ -1858,7 +1858,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
      Bu değişiklikler hakkında daha fazla bilgi için bkz. [taşınabilir sınıf kitaplığı](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
-- Artık .NET Framework içerik belgeleri içerir [!INCLUDE[net_native](../../../includes/net-native-md.md)], oluşturmak ve Windows uygulamalarını dağıtmak için bir ön derleme teknolojisi olduğu. [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulamalarınızı doğrudan yerel kod yerine Ara dil (IL) daha iyi performans için derler. Ayrıntılar için bkz [.NET Native ile uygulamalar derlemek](../net-native/index.md).
+- Artık .NET Framework içerik, oluşturmak ve Windows uygulamalarını dağıtmak için bir ön derleme teknolojisi olan .NET Native belgeleri içerir. .NET native uygulamalarınızın Ara dil (IL) yerine doğrudan yerel kod için daha iyi performans için derler. Ayrıntılar için bkz [.NET Native ile uygulamalar derlemek](../net-native/index.md).
 
 - [.NET Framework başvuru kaynağı](https://referencesource.microsoft.com/) yeni gözatma deneyimi ve geliştirilmiş işlevselliği sağlar. Artık .NET Framework kaynak kodu çevrimiçi olarak göz atabilirsiniz [başvuru indirme](https://referencesource.microsoft.com/download.html) çevrimdışı izleme ve hata ayıklama sırasında (düzeltme eklerini ve güncelleştirmeleri gibi) kaynakları adımlayın. Daha fazla bilgi için blog girişine bakın [.NET başvuru kaynağı için yeni bir görünüm](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/).
 

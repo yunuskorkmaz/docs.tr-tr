@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 6c979483497ff640be7d1126d63ce95130f6c02b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb1ef5f52b9ee0407cbd7a0634e8a7c58906d635
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770376"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195567"
 ---
 # <a name="best-practices-for-exceptions"></a>Özel durumlar için en iyi yöntemler
 
@@ -54,7 +54,9 @@ Bir sınıfı yöntemleri sağlayabilir veya bir özel durum çağrı yapmak ön
 [!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
 [!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]
 
-Özel durumlar önlemek için başka bir yolu geri döndürmektir `null` bir özel durum oluşturmaktansa çok yaygın hata durumları için. Çok yaygın olan bir hata durumu, denetiminin normal akışı olarak kabul edilebilir. Döndürerek `null` bu gibi durumlarda, uygulama performansı üzerindeki etkisini en aza.
+Özel durumlar önlemek için başka bir boş (veya varsayılan) bir özel durum oluşturmaktansa çok yaygın hata durumları döndürülecek yoludur. Çok yaygın olan bir hata durumu, denetiminin normal akışı olarak kabul edilebilir. Null (veya varsayılan) bu tür durumlarda döndürerek, uygulama performansı üzerindeki etkisini en aza indirin.
+
+Değer türleri için kullanılıp kullanılmayacağını Nullable<T> veya varsayılan olarak, bir hata göstergesi belirli uygulamanız için dikkate alınması gereken bir şey. Kullanarak `Nullable<Guid>`, `default` olur `null` yerine `Guid.Empty`. Bazı durumlarda ekleme `Nullable<T>` , NET bir değer varsa veya absent zorlaştırabilir. Bazen, ekleme `Nullable<T>` gerekli olmayan denetleyin ve hata olası kaynakları oluşturmak için hizmet yalnızca ek durumları oluşturabilirsiniz. 
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Bir hata kodunu döndürmek yerine özel durumlar
 

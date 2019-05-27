@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 14180f0326b38872f5d1b112c3d9a87022fb79e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0148f9fde9d69bb1605776f1ab617079be96b59e
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913230"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053462"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Nasıl yapılır: (Windows Forms) dizeye tırnak işaretleri koyma
 Bazen tırnak işareti yerleştirmek isteyebilirsiniz ("") içinde bir metin dizesi. Örneğin:  
@@ -26,7 +26,7 @@ Bazen tırnak işareti yerleştirmek isteyebilirsiniz ("") içinde bir metin diz
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>Kodunuzda bir dizedeki tırnak işareti yerleştirmek için  
   
-1. Visual Basic'te, iki tırnak bir satır içine katıştırılmış bir tırnak işareti ekleyin. Görselde C# ve [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], kaçış dizisi Ekle \\"olarak gömülü bir tırnak işareti. Örneğin, önceki dize oluşturmak için aşağıdaki kodu kullanın.  
+1. Visual Basic'te, iki tırnak bir satır içine katıştırılmış bir tırnak işareti ekleyin. Görselde C# ve görsel C++, kaçış dizisi Ekle \\"olarak gömülü bir tırnak işareti. Örneğin, önceki dize oluşturmak için aşağıdaki kodu kullanın.  
   
     ```vb  
     Private Sub InsertQuote()  

@@ -3,12 +3,12 @@ title: Null başvuru türleri için Tasarım
 description: Gelişmiş Bu öğretici, bir null başvuru türlerine giriş sağlar. Tasarımınız ne zaman başvuru değeri null ve boş olamaz yürüttüğünde derleyici sahip hedefi express öğreneceksiniz.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 97b41574b328c9f6bed60d4bf2943c7a726261d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd73a73554514c2b7c70c78ba24038ee8d543266
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706175"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195835"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Öğretici: Tasarım amacınızla daha net bir şekilde boş değer atanabilir ve NULL olmayan bir başvuru türleri için express
 
@@ -36,15 +36,18 @@ Bu amaç için bu örnek yazacaksınız kod ifade eder ve o hedefi derleyici zor
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>Uygulama oluşturma ve null başvuru türleri etkinleştirme
 
-Visual Studio veya komut satırı kullanarak yeni bir konsol uygulaması oluşturma `dotnet new console`. Uygulama adı `NullableIntroduction`. Uygulamayı oluşturduktan sonra etkinleştirmeniz gerekir C# 8 beta özellikleri. Açık `csproj` dosya ve ekleme bir `LangVersion` öğesine `PropertyGroup` öğesi. Katılmayı gerekir **null başvuru türleri** bile, özellik C# 8 projeleri. Bu özellik etkinleştirildikten sonra mevcut başvuru değişken bildirimlerini olur çünkü **atanamayan başvuru türleri**. Bu kararı uygun null denetimlerini varolan kodu nerede olmayabilir sorunları bulmanıza yardımcı olur, ancak özgün tasarım amacınızla doğru şekilde yansıtmaz. Özelliğini ayarlayarak açmak `NullableContextOptions` öğesine `enable`:
+Visual Studio veya komut satırı kullanarak yeni bir konsol uygulaması oluşturma `dotnet new console`. Uygulama adı `NullableIntroduction`. Uygulamayı oluşturduktan sonra etkinleştirmeniz gerekir C# 8 beta özellikleri. Açık `csproj` dosya ve ekleme bir `LangVersion` öğesine `PropertyGroup` öğesi. Katılmayı gerekir **null başvuru türleri** bile, özellik C# 8 projeleri. Bu özellik etkinleştirildikten sonra mevcut başvuru değişken bildirimlerini olur çünkü **atanamayan başvuru türleri**. Bu kararı uygun null denetimlerini varolan kodu nerede olmayabilir sorunları bulmanıza yardımcı olur, ancak özgün tasarım amacınızla doğru şekilde yansıtmaz. Özelliğini ayarlayarak açmak `Nullable` öğesine `enable`:
 
 ```xml
 <LangVersion>8.0</LangVersion>
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
 
+> [!IMPORTANT]
+> `Nullable` Öğe daha önce adlandırılmıştı `NullableContextOptions`. 16,2 p1, Visual Studio 2019 birlikte yeniden adlandırma verilir. .NET Core SDK'sı 3.0.100-preview5-011568 bu değişiklik yok. .NET Core CLI'yı kullanıyorsanız, kullanmanız gerekecektir `NullableContextOptions` kadar sonraki Önizleme kullanılabilir.
+
 > [!NOTE]
-> Zaman C# 8 (değil önizleme modunda), yayımlanan `NullableContextOptions` öğesi yeni proje şablonları tarafından eklenir. O zamana kadar el ile eklemeniz gerekir.
+> Zaman C# 8 (değil önizleme modunda), yayımlanan `Nullable` öğesi yeni proje şablonları tarafından eklenir. O zamana kadar el ile eklemeniz gerekir.
 
 ### <a name="design-the-types-for-the-application"></a>Uygulama türleri tasarımı
 

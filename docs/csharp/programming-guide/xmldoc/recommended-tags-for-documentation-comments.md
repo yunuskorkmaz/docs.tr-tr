@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: 963be5273389ebbdb3458d41b0658de0d94bb2cd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 07594d70b92e2075c3d5aba605eab23d766faed6
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634805"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052743"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>Belge Açıklamaları için Önerilen Etiketler (C# Programlama Kılavuzu)
 C# Derleyici, kodunuzda belge açıklamaları işler ve bunları adı belirttiğiniz bir dosyasında XML olarak biçimlendirir **/doc** komut satırı seçeneği. Son belgeleri derleyici tarafından üretilen dosyaya dayalı oluşturmak için özel bir araç oluşturabilir, veya gibi bir araç kullanın [DocFX](https://dotnet.github.io/docfx/) veya [Sandcastle](https://github.com/EWSoftware/SHFB).  
@@ -36,12 +36,13 @@ C# Derleyici, kodunuzda belge açıklamaları işler ve bunları adı belirttiğ
   
  (* derleyici sözdizimini doğrular gösterir.)  
   
- Açılı belgeleri açıklama metninde görünmesini istiyorsanız kullanın `<` ve `>`, aşağıdaki örnekte gösterildiği gibi.  
+ Açılı belgeleri açıklama metninde görünmesini istiyorsanız ait HTML kodlamasını kullanın `<` ve `>` olduğu `&lt;` ve `&gt;` sırasıyla. Bu kodlama, aşağıdaki örnekte gösterilmiştir:
   
 ```csharp  
-/// <summary cref="C < T >">  
-/// </summary>  
-```  
+/// <summary>
+/// This property always returns a value &lt; 1.
+/// </summary>
+```
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

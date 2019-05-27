@@ -1,17 +1,17 @@
 ---
-title: Düzenleme ve .NET Core komut satırı ile projeleri test etme
+title: .NET Core komut satırı ile projeleri düzenleme ve test etme
 description: Bu öğreticide, düzenlemek ve test komut satırından .NET Core projeleri açıklanmaktadır.
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: ffd15edc633142116089d206135eb16416eb14cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef7263985288445fca273f37389876aeac2f136b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664642"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051951"
 ---
-# <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Düzenleme ve .NET Core komut satırı ile projeleri test etme
+# <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>.NET Core komut satırı ile projeleri düzenleme ve test etme
 
 Bu öğreticide aşağıdaki [Windows/Linus/macos'ta komut satırını kullanarak .NET Core ile çalışmaya başlama](using-with-xplat-cli.md), Gelişmiş ve iyi düzenlenmiş uygulamalar geliştirmek için basit bir konsol uygulaması oluşturmayı sürüyor. Kodunuzu düzenlemek için klasörleri kullanmayı gösteren sonra Bu öğreticide, bir konsol uygulaması ile nasıl genişletileceğini gösterir [xUnit](https://xunit.github.io/) testi çerçevesi.
 
@@ -108,14 +108,14 @@ Geri gidin *src* klasör oluşturup bir *test* klasörüyle bir *NewTypesTests* 
 Test projesi türleri şu anda test edilemez `NewTypes` ve bir proje başvurusu gerektirir `NewTypes` proje. Bir proje başvurusu eklemek için [ `dotnet add reference` ](../tools/dotnet-add-reference.md) komutu:
 
 ```
-dotnet add reference ../../NewTypes/NewTypes.csproj
+dotnet add reference ../../src/NewTypes/NewTypes.csproj
 ```
 
 Veya el ile ekleyerek proje başvurusu ekleme seçeneğiniz de bir `<ItemGroup>` düğüme *NewTypesTests.csproj* dosyası:
 
 ```xml
 <ItemGroup>
-  <ProjectReference Include="../../NewTypes/NewTypes.csproj" />
+  <ProjectReference Include="../../src/NewTypes/NewTypes.csproj" />
 </ItemGroup>
 ```
 

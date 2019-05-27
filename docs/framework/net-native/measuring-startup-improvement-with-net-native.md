@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 014af254d299d357c22a898357a533d650715500
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ea993880d68ab13eab8dfb4cf5e1d172025c6186
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650521"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052582"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET Yerel ile Başlangıç İyileştirmesini Hesaplama
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulama başlatma süresini önemli ölçüde artırır. Bu geliştirme, taşınabilir, düşük güç tüketimli cihazlar ve karmaşık uygulamaları ile özellikle fark edilebilir. Bu konu, bu başlangıç geliştirme ölçmek için gereken temel araçları ile çalışmaya başlamanıza yardımcı olur.  
+.NET native önemli ölçüde uygulama başlatma süresini iyileştirir. Bu geliştirme, taşınabilir, düşük güç tüketimli cihazlar ve karmaşık uygulamaları ile özellikle fark edilebilir. Bu konu, bu başlangıç geliştirme ölçmek için gereken temel araçları ile çalışmaya başlamanıza yardımcı olur.  
   
  Performans araştırmalar kolaylaştırmak için .NET Framework ve Windows için olay izleme Windows (olaylar meydana geldiğinde tooling bildirmek uygulamanızı sağlayan ETW) adlı bir olay çerçevesi kullanın. Ardından, kolayca görüntüleyin ve ETW olayları analiz etmek için PerfView adında bir araç kullanabilirsiniz. Bu konu açıklar nasıl yapılır:  
   
@@ -95,7 +95,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  Tüm olaylar, sol bölmede listelenen seçin (Ctrl-A) ve **Enter** anahtarı. Artık, her olay zaman damgası görmeye olmalıdır. Bu zaman damgaları izleme başlangıcını göreli olduğundan başlangıcından bu yana geçen süreyi belirlemek için işlemin başlangıç zamanından itibaren her olayın zaman çıkarılacak sahip. İki zaman damgaları seçmek için CTRL tuşuna basıp tıklayarak kullanıyorsanız, bunları sayfanın alt kısmındaki durum çubuğunda görüntülenen arasındaki fark görürsünüz. Bu, herhangi iki olay görüntüdeki (işlem başlangıç dahil) arasında geçen süreyi görmek kolaylaştırır. Görünüm için kısayol menüsünü açın ve CSV dosyalarına dışarı aktarma veya kaydetmek veya verileri işlemek için Microsoft Excel'i açıp gibi kullanışlı seçenekler, bir dizi seçin.  
   
- Yordam hem özgün uygulamanızı hem de sürümü için yinelenen, kullanılarak oluşturulan [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri, performans farkı karşılaştırabilirsiniz.   [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulamalar genellikle başlangıç olmayan daha hızlı[!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulamalar. Daha ayrıntılı araştırmaya ilgileniyorsanız, PerfView ayrıca en çok zaman alan, kodunuzun parçalarını belirleyebilir. Daha fazla bilgi için izleme [PerfView öğreticiler](https://channel9.msdn.com/Series/PerfView-Tutorial) veya okuma [Vance Morrison'ın blog girişine](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
+ Özgün uygulamanız hem .NET Native araç zinciri kullanılarak oluşturulan sürüm yordamı tekrarlayarak performans farkı karşılaştırabilirsiniz.   .NET yerel uygulamalar genellikle .NET yerel uygulamaları daha hızlı başlayın. Daha ayrıntılı araştırmaya ilgileniyorsanız, PerfView ayrıca en çok zaman alan, kodunuzun parçalarını belirleyebilir. Daha fazla bilgi için izleme [PerfView öğreticiler](https://channel9.msdn.com/Series/PerfView-Tutorial) veya okuma [Vance Morrison'ın blog girişine](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

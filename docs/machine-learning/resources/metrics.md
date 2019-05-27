@@ -3,12 +3,12 @@ title: ML.NET ölçümleri
 description: ML.NET model performansını değerlendirmek için kullanılan ölçüleri anlama
 ms.date: 04/29/2019
 author: ''
-ms.openlocfilehash: d76cab0b56085ebf2ee69f4d9d12c9685c3cb021
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 802f0a8fd32c492c8d9f89933b183802cb178cb3
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452699"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053049"
 ---
 # <a name="model-evaluation-metrics-in-mlnet"></a>Modeli değerlendirme ML.NET ölçümlerde
 
@@ -24,17 +24,17 @@ ms.locfileid: "65452699"
 İkili sınıflandırma ilgili diğer ayrıntılar için aşağıdaki makalelere ölçümleri okuyun:
 
 - [Doğruluk, kesinlik, geri çağırma veya F1?](https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9)
-- [İkili sınıflandırma ölçümleri sınıfı](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.data.binaryclassificationmetrics?view=ml-dotnet)
+- [İkili sınıflandırma ölçümleri sınıfı](xref:Microsoft.ML.Data.BinaryClassificationMetrics)
 - [Duyarlık geri çekme ve ROC eğrileri arasındaki ilişki](http://pages.cs.wisc.edu/~jdavis/davisgoadrichcamera2.pdf)
 
 ## <a name="metrics-for-multi-class-classification"></a>Çok sınıflı sınıflandırma için ölçümleri
 
 | Ölçümler   |      Açıklama      |  Aramak |
 |-----------|-----------------------|-----------|
-| **Mikro doğruluğu** |  [Micro-ortalama kesinlik](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.data.multiclassclassificationmetrics.microaccuracy?view=ml-dotnet) ortalama ölçüsünü hesaplamak için tüm sınıflar Katkıların toplar. Doğru şekilde tahmin edilen örnekler bir bölümüdür. Micro-ortalama sınıfı üyelik dikkate almaz. Temel olarak, her örnek sınıfı çifti eşit doğruluğu ölçüme katkıda bulunur. | **1,00, daha iyi yakın**. Sınıf dengesizliği (yani olabilir şüpheleniyorsanız bir çok sınıflı sınıflandırma görevde micro doğruluğu makrosu doğruluğu tercih edilir "bir sınıfı diğer sınıfların çok daha fazla örnek olabilir).|
-| **Doğruluk makrosu** | [Makro ortalama kesinlik](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.data.multiclassclassificationmetrics.macroaccuracy?view=ml-dotnet) sınıf düzeyinde ortalama kesinlik olduğunu. Her sınıf için doğruluğu hesaplanır ve makrosu doğruluğu bu doğruluk ortalamasıdır. Temel olarak, her sınıf eşit doğruluğu ölçüme katkıda bulunur. Azınlık sınıfları daha büyük bir sınıf olarak eşit ağırlık verilir. Makro ortalama ölçüm ağırlık olanlardan kaç tane bağımsız olarak veri kümesi sınıfı içeriyor. her sınıf sağlar. |  **1,00, daha iyi yakın**.  Ölçüm bağımsız olarak her sınıf için hesaplar ve ardından (Bu nedenle tüm sınıflar eşit olarak değerlendirmek) ortalamasını alır. |
+| **Mikro doğruluğu** |  [Micro-ortalama kesinlik](xref:Microsoft.ML.Data.MulticlassClassificationMetrics.MicroAccuracy) ortalama ölçüsünü hesaplamak için tüm sınıflar Katkıların toplar. Doğru şekilde tahmin edilen örnekler bir bölümüdür. Micro-ortalama sınıfı üyelik dikkate almaz. Temel olarak, her örnek sınıfı çifti eşit doğruluğu ölçüme katkıda bulunur. | **1,00, daha iyi yakın**. Sınıf dengesizliği (yani olabilir şüpheleniyorsanız bir çok sınıflı sınıflandırma görevde micro doğruluğu makrosu doğruluğu tercih edilir "bir sınıfı diğer sınıfların çok daha fazla örnek olabilir).|
+| **Doğruluk makrosu** | [Makro ortalama kesinlik](xref:Microsoft.ML.Data.MulticlassClassificationMetrics.MacroAccuracy) sınıf düzeyinde ortalama kesinlik olduğunu. Her sınıf için doğruluğu hesaplanır ve makrosu doğruluğu bu doğruluk ortalamasıdır. Temel olarak, her sınıf eşit doğruluğu ölçüme katkıda bulunur. Azınlık sınıfları daha büyük bir sınıf olarak eşit ağırlık verilir. Makro ortalama ölçüm ağırlık olanlardan kaç tane bağımsız olarak veri kümesi sınıfı içeriyor. her sınıf sağlar. |  **1,00, daha iyi yakın**.  Ölçüm bağımsız olarak her sınıf için hesaplar ve ardından (Bu nedenle tüm sınıflar eşit olarak değerlendirmek) ortalamasını alır. |
 | **Günlük kaybı**| [Logaritmik kaybı](http://wiki.fast.ai/index.php/Log_Loss) tahmin giriş 0,00 1,00 arasındaki bir olasılık değeri olduğu bir sınıflandırma modeli performansını ölçer. Tahmin olasılık gerçek etiketten kareninkinden günlük kaybı artar. | **0,00, daha iyi yakın**. Mükemmel bir model 0,00 kaybı oturum açması gerekir. Bu değer en aza indirmek için makine öğrenimi modellerinin amacı olan.|
-| **Günlük kaybı azaltma** | [Logaritmik kaybı azaltma](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.data.multiclassclassificationmetrics.loglossreduction?view=ml-dotnet) rasgele tahmin sınıflandırıcı avantajı olarak yorumlanabilir.| **Aralıkları -INF ve burada 1,00 mükemmel Öngörüler ve 0,00 gösterir ortalama Öngörüler 1,00**. Değer 0,20 eşitse "doğru bir tahmin olasılığını %20 rasgele tahmin daha iyi olduğu gibi" Örneğin, bu yorumlanabilir|
+| **Günlük kaybı azaltma** | [Logaritmik kaybı azaltma](xref:Microsoft.ML.Data.MulticlassClassificationMetrics.LogLossReduction) rasgele tahmin sınıflandırıcı avantajı olarak yorumlanabilir.| **Aralıkları -INF ve burada 1,00 mükemmel Öngörüler ve 0,00 gösterir ortalama Öngörüler 1,00**. Değer 0,20 eşitse "doğru bir tahmin olasılığını %20 rasgele tahmin daha iyi olduğu gibi" Örneğin, bu yorumlanabilir|
 
 Mikro doğruluğu genellikle daha iyi iş gereksinimlerine göre ML Öngörüler hizalanır. Bir çok sınıflı sınıflandırma görevi kalitesini seçmeye yönelik tek bir ölçüm seçmek istiyorsanız, bu genellikle mikro doğruluğu olmalıdır.
 
@@ -56,7 +56,7 @@ Bu örnekte küçük ekipler makrosu doğruluğu overweights; yıl 10 k büyük 
 |-----------|-----------------------|-----------|
 | **R karesi alınmış** |  [R karesi alınmış (R2)](https://en.wikipedia.org/wiki/Coefficient_of_determination), veya *katsayısı* - INF ve 1,00 arasında bir değer olarak Tahmine dayalı model gücünü temsil eder. 1,00 mükemmel bir uyum yoktur ve puanları negatif olabilir. Bu nedenle uygun arbitrarly kötü olabilir anlamına gelir. 0,00 anlamına gelir. bir puan modeli etiket için beklenen değer tahmin etme. R2 ne kadar yakın gerçek test veri değerler için tahmin edilen değerler: ölçer. | **1,00, daha iyi kalite yakın**. Ancak, bazen düşük R karesi alınmış değerleri (örneğin, 0,50) tamamen normal veya senaryonuz için yeterince iyi olabilir ve yüksek R karesi alınmış değer her zaman iyi değildir ve şüpheli. |
 | **Mutlak kaybı** |  [Mutlak kaybı](https://en.wikipedia.org/wiki/Mean_absolute_error) veya *ortalama mutlak hata (MAE)* tahminler elde etmek için gerçek sonuçların ne kadar yakın olan ölçer. Bu model hataları model hatası tahmin edilen etiket değeri ile doğru etiket değeri arasındaki mutlak uzaklık olduğu ortalamasıdır. Bu tahmin hata, test veri kümesinin her bir kayıt için hesaplanır. Son olarak, ortalama değer için kaydedilen tüm mutlak hataların hesaplanır.| **0,00, daha iyi kalite yakın.** Ortalama mutlak hata ölçülen veri aynı ölçeğini kullandığına dikkat edin (belirli bir aralık için normale döndürülemez). Mutlak kaybı Squared kaybı ve RMS kaybı yalnızca aynı veri kümesi veya veri kümesiyle bir smilar etiket değeri dağıtım modelleri arasında karşılaştırma yapmak için kullanılabilir. |
-| **Kare kaybı** |  [Squared kaybı](https://en.wikipedia.org/wiki/Mean_squared_error) veya *ortalama karesi alınmış hata (MSE)* ayrıca adlı veya *Ortalama kare sapma (MSD'yi)* , regresyon satır test veri değerlerini bir dizi için ne kadar yakın olduğunu bildirir. Bunu noktaları uzaklıkta (Bu uzaklığa "hatalar" olan) regresyon satırına almak ve bunları karesini yapar. Daha fazla ağırlık karesini büyük farklılıklar sağlar. | Her zaman negatif olmayan, ve **0,00 yakın değerler daha iyidir**. Verilerinizi bağlı olarak, ortalama karesi alınmış hata için çok küçük bir değer almak mümkün olabilir.|
+| **Kare kaybı** |  [Squared kaybı](https://en.wikipedia.org/wiki/Mean_squared_error) veya *ortalama karesi alınmış hata (MSE)* ayrıca adlı *Ortalama kare sapma (MSD'yi)*, regresyon satır test veri değerlerini bir dizi için ne kadar yakın olduğunu bildirir. Bunu noktaları uzaklıkta (Bu uzaklığa E hatalardır) regresyon satırına almak ve bunları karesini yapar. Daha fazla ağırlık karesini büyük farklılıklar sağlar. | Her zaman negatif olmayan, ve **0,00 yakın değerler daha iyidir**. Verilerinizi bağlı olarak, ortalama karesi alınmış hata için çok küçük bir değer almak mümkün olabilir.|
 | **RMS kaybı** |  [RMS kaybı](https://en.wikipedia.org/wiki/Root-mean-square_deviation) veya *kök ortalama karesi alınmış hata (RMSE)* (olarak da adlandırılan *kök Ortalama kare sapma, RMSD*), bir model tarafından tahmin edilen değerler ve değerlerin birbirinden gerçekten ölçer Model alınmıştır ortamından gözlemledik. RMS kaybı Squared kaybı kare kökünü ve aynı birim etiketi için mutlak kaybı benzer olarak daha fazla ağırlık vermek daha büyük farklılıklar da vardır. Kök Ortalama kare hata, Deneysel sonuçları doğrulamak için climatology, tahmin ve gerileme analizini yaygın olarak kullanılır. | Her zaman negatif olmayan, ve **0,00 yakın değerler daha iyidir**. RMSD ölçek bağımlı olduğu gibi belirli bir veri kümesi ve veri kümeleri arasında değil, farklı modelleri, tahmin hataları Karşılaştırılacak doğruluk ölçüsüdür.|
 
 Regresyon ölçümleri hakkında daha ayrıntılı bilgi için bu makaleleri okuyun:

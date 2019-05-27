@@ -1,15 +1,15 @@
 ---
-title: Null başvuru türleri
+title: Boş değer atanabilir başvuru türleri
 description: Bu makalede eklenen boş değer atanabilir başvuru türleri, genel bir bakış sağlanmaktadır C# 8. Özellik null başvuru özel durumlar, yeni ve mevcut projeler için karşı güvenliği nasıl sağladığını öğreneceksiniz.
 ms.date: 02/19/2019
-ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac19cbba0e078af34801231145ee339d6e42a42b
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61684048"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195918"
 ---
-# <a name="nullable-reference-types"></a>Null başvuru türleri
+# <a name="nullable-reference-types"></a>Boş değer atanabilir başvuru türleri
 
 C#8.0 tanıtır **null başvuru türleri** ve **atanamayan başvuru türleri** önemli deyimleri hakkında başvuru türü değişkenler özelliklerini yapmanızı sağlayan:
 
@@ -58,7 +58,7 @@ Herhangi bir başvuru türü'nın dört birine sahip *nullabilities*, uyarılar 
 
 Boş değer atanabilir bağlamları derleyici başvuru türü değişkenler yorumlaması için ayrıntılı denetim olanağı. **Boş değer atanabilir bir ek açıklama bağlam** herhangi belirli kaynağını çizgidir `enabled` veya `disabled`. Öncesi düşünebilirsinizC# tüm kodunuzda derleme olarak 8 derleyici bir `disabled` boş değer atanabilir Bağlam: Herhangi bir başvuru türü null olabilir. **Boş değer atanabilir uyarı bağlamı** ayarlanabilir `enabled`, `disabled`, veya `safeonly`. Boş değer atanabilir uyarı bağlamı, akış Analizi ile derleyici tarafından oluşturulan uyarıların belirtir.
 
-Boş değer atanabilir ek bağlam ve boş değer atanabilir uyarı bağlamı için bir proje kullanarak ayarlanabilir `NullableContextOptions` öğesinde, `csproj` dosya. Bu öğe, derleyicinin tür öğesinin nasıl yorumlayacağını ve hangi uyarıların oluşturulan yapılandırır. Geçerli ayarlar şunlardır:
+Boş değer atanabilir ek bağlam ve boş değer atanabilir uyarı bağlamı için bir proje kullanarak ayarlanabilir `Nullable` öğesinde, `csproj` dosya. Bu öğe, derleyicinin tür öğesinin nasıl yorumlayacağını ve hangi uyarıların oluşturulan yapılandırır. Geçerli ayarlar şunlardır:
 
 - `enable`: Boş değer atanabilir bir ek açıklama bağlam **etkin**. Boş değer atanabilir uyarı bağlamı **etkin**.
   - Bir başvuru türü değişkenler `string` örneğin atanamayan yararlanabilirsiniz.  Tüm öğesinin uyarıları etkinleştirildi.
@@ -70,6 +70,9 @@ Boş değer atanabilir ek bağlam ve boş değer atanabilir uyarı bağlamı iç
   - Bir başvuru türü değişkenler oblivious. Tüm öğesinin uyarıları etkinleştirildi.
 - `safeonlywarnings`: Boş değer atanabilir bir ek açıklama bağlam **devre dışı**. Boş değer atanabilir uyarı bağlamı **safeonly**.
   - Bir başvuru türü değişkenler oblivious. Tüm güvenlik öğesinin uyarıları etkinleştirildi.
+
+> [!IMPORTANT]
+> `Nullable` Öğe daha önce adlandırılmıştı `NullableContextOptions`. 16,2 p1, Visual Studio 2019 birlikte yeniden adlandırma verilir. .NET Core SDK'sı 3.0.100-preview5-011568 bu değişiklik yok. .NET Core CLI'yı kullanıyorsanız, kullanmanız gerekecektir `NullableContextOptions` kadar sonraki Önizleme kullanılabilir.
 
 Bu aynı bağlamları projenizde her yerde ayarlamak için yönergeleri de kullanabilirsiniz:
 

@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2961a4c02d8ffe17055307094f56a03680d1a59a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 079718c96a4818285c0b469da9f23213a6915c19
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866983"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052516"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>MissingMetadataException Sınıfı (.NET Yerel)
 
-**Windows 10 için Windows uygulamaları için .NET [!INCLUDE[net_native](../../../includes/net-native-md.md)] yalnızca**
+**Windows 10, yalnızca .NET yerel Windows uygulamaları için .NET**
 
 Yansıma mevcut olmayan meta verilerini almak için kullanıldığında oluşan özel durum.
 
 **Namespace:** System.Reflection
 
 > [!IMPORTANT]
-> `MissingMetadataException` Sınıfı tarafından iç kullanım için yalnızca amaçlanmıştır [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri. Üçüncü taraf kodu kullanmak için hedeflenmemiş ya da uygulama kodunuzda bir özel durum işlemesi gerekir. Bunun yerine, girişlere ekleyerek özel durumu ortadan, [çalışma zamanı yönergeleri dosyası](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Daha fazla bilgi için Açıklamalar bölümüne bakın.
+> `MissingMetadataException` Sınıfı, .NET Native araç zinciri tarafından yalnızca iç kullanım için tasarlanmıştır. Üçüncü taraf kodu kullanmak için hedeflenmemiş ya da uygulama kodunuzda bir özel durum işlemesi gerekir. Bunun yerine, girişlere ekleyerek özel durumu ortadan, [çalışma zamanı yönergeleri dosyası](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Daha fazla bilgi için Açıklamalar bölümüne bakın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,8 +34,8 @@ Unutmayın `MissingMetadataException` sınıf türetilir <xref:System.TypeAccess
 
 |Oluşturucu|Açıklama|
 |-----------------|-----------------|
-|`public MissingMetadataException()`|Yeni bir örneğini başlatır `MissingMetadataException` hatayı açıklayan sistem tarafından sağlanmış bir iletiyi kullanarak sınıfı.<br /><br /> Bu oluşturucu iç kullanım içindir [!INCLUDE[net_native](../../../includes/net-native-md.md)] aracı yalnızca zinciri.|
-|`public MissingMetadataException(String message)`|Yeni bir örneğini başlatır `MissingMetadataException` belirtilen hata iletisiyle sınıfı.<br /><br /> Bu oluşturucu iç kullanım içindir [!INCLUDE[net_native](../../../includes/net-native-md.md)] aracı yalnızca zinciri.|
+|`public MissingMetadataException()`|Yeni bir örneğini başlatır `MissingMetadataException` hatayı açıklayan sistem tarafından sağlanmış bir iletiyi kullanarak sınıfı.<br /><br /> Bu oluşturucu yalnızca .NET yerel araç zinciri tarafından iç kullanım içindir.|
+|`public MissingMetadataException(String message)`|Yeni bir örneğini başlatır `MissingMetadataException` belirtilen hata iletisiyle sınıfı.<br /><br /> Bu oluşturucu yalnızca .NET yerel araç zinciri tarafından iç kullanım içindir.|
 
 ## <a name="properties"></a>Özellikler
 

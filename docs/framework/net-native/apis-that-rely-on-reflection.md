@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a32e12b593f273c8b812390306c81b311da7c2a4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b86775f78b02b09dd8fb7925a13625783520bce1
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624692"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052665"
 ---
 # <a name="apis-that-rely-on-reflection"></a>Yansıma kullanan API'ler
-Bazı durumlarda, kodda yansıma kullanımına açıktır, değildir ve bu nedenle [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri, çalışma zamanında gereken meta verileri korumak değil. Bu konu, bazı ortak API'ler veya, yansıma API'si bir parçası olarak kabul değildir ancak, başarılı bir şekilde yürütmek için yansıma kullanan ortak programlama modellerini kapsar. Kaynak kodunuzu kullanmak, bunlar hakkında bilgi için çalışma zamanı yönergeleri ekleyebilirsiniz (. rd.xml) bu API'lere giden çağrıların değil throw dosyasını bir [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) özel durum ya da diğer bazı özel çalışma zamanında.  
+Bazı durumlarda, kodda yansıma kullanımına açık değildir ve bu nedenle .NET Native araç zinciri çalışma zamanında gereken meta verilerini korumaz. Bu konu, bazı ortak API'ler veya, yansıma API'si bir parçası olarak kabul değildir ancak, başarılı bir şekilde yürütmek için yansıma kullanan ortak programlama modellerini kapsar. Kaynak kodunuzu kullanmak, bunlar hakkında bilgi için çalışma zamanı yönergeleri ekleyebilirsiniz (. rd.xml) bu API'lere giden çağrıların değil throw dosyasını bir [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) özel durum ya da diğer bazı özel çalışma zamanında.  
   
 ## <a name="typemakegenerictype-method"></a>Type.MakeGenericType yöntemi  
  Dinamik olarak bir genel tür örneği oluşturabilir `AppClass<T>` çağırarak <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> aşağıdakine benzer bir kod kullanarak yöntemi:  
@@ -55,7 +55,7 @@ App1.AppClass`1<System.Int32>.
   
 - `Browse` aramak istediğiniz yöntem için meta veriler.  Genel bir yöntem ise, genel ekleme `Browse` kapsayan türü için meta verileri yöntemi çok içerir.  
   
-- Dinamik meta veriler, istediğiniz çağırmak için böylece yansıma çağırma temsilcisi tarafından kaldırılmaz yöntemi [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri. Dinamik meta veriler için yöntem eksikse, şu özel durum oluşan <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> yöntemi çağrılır:  
+- Yansıma çağırma temsilcisi .NET Native araç zinciri tarafından kaldırılmaz, çağırmak istediğiniz yöntem için dinamik meta veriler. Dinamik meta veriler için yöntem eksikse, şu özel durum oluşan <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> yöntemi çağrılır:  
   
     ```  
     MakeGenericMethod() cannot create this generic method instantiation because the instantiation was not metadata-enabled: 'App1.Class1.GenMethod<Int32>(Int32)'.  

@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3c845cefad451c608f5c095e4941c3368dc9975
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28b09bf07d831747be0006ffe1f1d8c5ac5171ce
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650555"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052636"
 ---
 # <a name="compiling-apps-with-net-native"></a>.NET Yerel ile Uygulama Derleme
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] Visual Studio 2015 ve sonraki sürümlerine dahil olan oluşturmak ve Windows uygulamalarını dağıtmak için bir ön derleme teknolojisidir. Yönetilen kodda yazılmış uygulamalar yayım sürümünü otomatik olarak derler (C# veya Visual Basic) ve hedef .NET Framework ve Windows 10 için yerel kod.  
+.NET native, Visual Studio 2015 ve sonraki sürümlerine dahildir oluşturmak ve Windows uygulamalarını dağıtmak için bir ön derleme teknolojisidir. Yönetilen kodda yazılmış uygulamalar yayım sürümünü otomatik olarak derler (C# veya Visual Basic) ve hedef .NET Framework ve Windows 10 için yerel kod.  
   
- Genellikle, .NET Framework'ü hedefleyen uygulamaları Ara dil (IL) derlenir. Çalışma zamanında, just-ın-time (JIT) derleyici yerel kod için IL çevirir. Buna karşılık, [!INCLUDE[net_native](../../../includes/net-native-md.md)] Windows uygulamaları doğrudan yerel kod için derler. Geliştiriciler için bu anlamına gelir:  
+ Genellikle, .NET Framework'ü hedefleyen uygulamaları Ara dil (IL) derlenir. Çalışma zamanında, just-ın-time (JIT) derleyici yerel kod için IL çevirir. Buna karşılık, .NET yerel Windows uygulamaları doğrudan yerel kod için derler. Geliştiriciler için bu anlamına gelir:  
   
 - Uygulamalarınızı yerel kod performansını özellik. Genellikle, performans için IL önce derlenmiş ve sonra JIT derleyicisi tarafından yerel kod olarak derlenen kod için üstün olacaktır. 
   
@@ -28,7 +28,7 @@ ms.locfileid: "64650555"
   
 - Kendi sınıf kitaplığı, otomatik bellek yönetimi ve atık toplama ve özel durum işleme dahil olan .NET Framework tarafından sağlanan kaynaklar yararlanmak devam edebilirsiniz.  
   
- Kullanıcıların, uygulamalarınızın [!INCLUDE[net_native](../../../includes/net-native-md.md)] aşağıdaki avantajları sunar:  
+ Uygulamalarınızın kullanıcılar için .NET Native aşağıdaki avantajları sunar:  
   
 - Çoğu uygulama ve senaryoları için daha hızlı yürütme süreleri.
   
@@ -41,17 +41,17 @@ ms.locfileid: "64650555"
 > [!IMPORTANT]
 > Uygulamalar ve senaryoları büyük çoğunluğu için .NET Native önemli ölçüde daha hızlı başlangıç süreleri ve IL veya NGEN görüntü için derlenmiş uygulama karşılaştırıldığında daha üstün performans sunar. Ancak, sonuçlar farklılık gösterebilir. Uygulamanızı .NET Native'nın performans iyileştirmeleriyle benefited olmak için performansını, uygulamanızın .NET Native sürümü ile karşılaştırmanız gerekir. Daha fazla bilgi için [performans oturumuna genel bakış](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview).
  
-Ancak [!INCLUDE[net_native](../../../includes/net-native-md.md)] birden çok yerel kod için bir derleme içerir. Bu, .NET Framework uygulamaları yerleşik ve yürütülen şekilde dönüştürür. Özellikle:  
+Ancak, .NET yerel derleme yerel kod için birden fazla içerir. Bu, .NET Framework uygulamaları yerleşik ve yürütülen şekilde dönüştürür. Özellikle:  
   
 - Esnasında, gerekli bölümleri .NET Framework'ün uygulamanıza statik olarak bağlanır. Bu uygulamanın .NET Framework ve derleyici genel analiz gerçekleştirmek için performans WINS sunmak için uygulama yerel kitaplıkları ile çalışmasını sağlar. Sonuç olarak, uygulamaları bile .NET Framework güncelleştirmeleri sonrasında tutarlı bir şekilde daha hızlı başlatma.  
   
-- [!INCLUDE[net_native](../../../includes/net-native-md.md)] Çalışma zamanı statik ön derleme için en iyi duruma getirilmiş ve çalışmaları büyük çoğunluğu üstün performans sunar. Aynı anda geliştiricileri kadar üretken Bul temel yansıma özelliklerini korur.  
+- .NET yerel çalışma zamanı statik ön derleme için en iyi duruma getirilmiş ve çalışmaları büyük çoğunluğu üstün performans sunar. Aynı anda geliştiricileri kadar üretken Bul temel yansıma özelliklerini korur.  
   
-- [!INCLUDE[net_native](../../../includes/net-native-md.md)] Son olarak aynı geri kullanır C++ statik ön derleme senaryolar için en iyi duruma getirilmiş derleyici.  
+- .NET native kullandığı aynı arka uç olarak C++ statik ön derleme senaryolar için en iyi duruma getirilmiş derleyici.  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] Performans avantajlarının alamazsa C++ yönetilen kod geliştiricilerin olarak aynı veya benzer araçları kullandığından C++ bu tabloda gösterildiği gibi başlık altında.  
+ .NET native performans avantajlarını ürünümüze C++ yönetilen kod geliştiricilerin olarak aynı veya benzer araçları kullandığından C++ bu tabloda gösterildiği gibi başlık altında.  
   
-||[!INCLUDE[net_native](../../../includes/net-native-md.md)]|C++|  
+||.NET Yerel|C++|  
 |-|----------------------------------------------------------------|-----------|  
 |Kitaplıklar|.NET Framework ve Windows çalışma zamanı|Win32 + Windows çalışma zamanı|  
 |Derleyici|İyileştirici derleyiciyi UTC|İyileştirici derleyiciyi UTC|  

@@ -3,12 +3,12 @@ title: Windows üzerinde .NET Core önkoşulları
 description: Windows üzerinde gereken bağımlılıklar geliştirin ve .NET Core uygulamaları çalıştırmak için makine öğrenin.
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 8eb2913b0fa1fe037a460633064d6f179b64a248
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 423a333edf5b2946a28855352adf2915642b1eae
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634085"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051966"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows üzerinde .NET Core önkoşulları
 
@@ -57,11 +57,11 @@ Aşağıdaki makaleler sürüm başına .NET Core desteklenen işletim sistemler
 > [!NOTE]
 > **Windows 8.1 ve önceki sürümleri veya Windows Server 2012 R2 ve önceki sürümleri için:**
 >
-> Windows yüklemenizin güncel olduğundan ve içerir emin [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows), Windows güncelleştirmesi yüklenebilir. Bu yazılımın yüklü yoksa, .NET Core uygulamasını başlattığında aşağıdaki gibi bir hata görürsünüz: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> Windows yüklemenizin güncel olduğundan ve içerir emin [KB2999226](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows), Windows güncelleştirmesi yüklenebilir. Bu yazılımın yüklü yoksa, .NET Core uygulamasını başlattığında aşağıdaki gibi bir hata görürsünüz: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 >
 > **Windows 7 veya Windows Server 2008 R2 için:**
 >
-> KB2999226 yanı sıra, ayrıca olduğundan emin olun [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) yüklü. Bu yazılımın yüklü yoksa, .NET Core uygulamasını başlattığında aşağıdakine benzer bir hata görürsünüz: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
+> KB2999226 yanı sıra, ayrıca olduğundan emin olun [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) yüklü. Bu yazılımın yüklü yoksa, .NET Core uygulamasını başlattığında aşağıdakine benzer bir hata görürsünüz: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
 
 ## <a name="prerequisites-for-net-core-30-preview-3"></a>.NET Core 3.0 Preview 3 için Önkoşullar
 

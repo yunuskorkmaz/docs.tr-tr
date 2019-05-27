@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc7a0991ae308f1c61026e946021d22da9a4bc3b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 032958c24e03025fc3fc3eee2aae40bdd4491e7b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583546"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052728"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework Geliştirme Kılavuzu
 Bu bölümde, oluşturma, yapılandırma, hata ayıklama, güvenli ve .NET Framework uygulamalarınızı dağıtma açıklanmaktadır. Bölüm ayrıca dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek yönetimi ve iş parçacığı gibi teknoloji alanları hakkında bilgi sağlar.  
@@ -48,7 +48,7 @@ Bu bölümde, oluşturma, yapılandırma, hata ayıklama, güvenli ve .NET Frame
  .NET Framework uygulamalarınızı yeniden derlemenize gerek kalmadan ayarları değiştirmek için yapılandırma dosyalarını nasıl kullanabileceğiniz açıklanır.  
   
  [.NET Native ile Uygulama Derleme](../../docs/framework/net-native/index.md)  
- Nasıl kullanabileceğinizi açıklar [!INCLUDE[net_native](../../includes/net-native-md.md)] Windows Store uygulamaları oluşturmak ve dağıtmak için bir ön derleme teknolojisi. [!INCLUDE[net_native](../../includes/net-native-md.md)] Yönetilen kodda (C#) yazılır ve yerel kod için .NET Framework hedefleyen uygulamaları derler.  
+ Windows Store uygulamaları oluşturmak ve dağıtmak için .NET Native ön derleme teknolojisi nasıl kullanabileceğinizi açıklar. Yönetilen kodda yazılmış uygulamalar .NET yerel derleme (C#) ve yerel kod için .NET Framework hedef.  
   
  [Güvenlik](../../docs/standard/security/index.md)  
  Sınıfları ve güvenli uygulama geliştirmeyi kolaylaştıran .NET Framework hizmetleri hakkında bilgi sağlar.  

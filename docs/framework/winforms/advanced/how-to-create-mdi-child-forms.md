@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: fbc92c03da69dd452f35e5b4e00cd4a9ca17e252
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 8965231307da84fd555b181440978adbea7e7244
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211177"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052839"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Nasıl yapılır: MDI alt formları oluştur
 
@@ -34,7 +34,7 @@ Aşağıdaki yordamda görüntüleyen bir MDI alt formunu oluşturmak için Visu
 
 4. İçinde **Çözüm Gezgini**, projeye sağ tıklayın, fareyle **Ekle**ve ardından **Yeni Öğe Ekle**.
 
-5. İçinde **Yeni Öğe Ekle** iletişim kutusunda **Windows Form** (Visual Basic veya Visual C#) veya **Windows Forms uygulaması (.NET)** (içinde [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) gelen **Şablonları** bölmesi. İçinde **adı** kutusunda, formun adı **Form2**. Tıklayın **açık** projeye form ekleme düğmesi.
+5. İçinde **Yeni Öğe Ekle** iletişim kutusunda **Windows Form** (Visual Basic veya Visual C#) veya **Windows Forms uygulaması (.NET)** (görselde C++) öğesinden **Şablonları** bölmesi. İçinde **adı** kutusunda, formun adı **Form2**. Tıklayın **açık** projeye form ekleme düğmesi.
 
     > [!NOTE]
     > Bu adımda oluşturduğunuz MDI alt formu, bir standart Windows biçimidir. Bu nedenle, sahip bir <xref:System.Windows.Forms.Form.Opacity%2A> form saydamlığını denetlemenize olanak sağlayan özellik. Ancak, <xref:System.Windows.Forms.Form.Opacity%2A> özelliği, üst düzey pencerelere için tasarlanmıştır. Boyama sorunlar oluşabilir gibi MDI alt formlarını ile kullanmayın.

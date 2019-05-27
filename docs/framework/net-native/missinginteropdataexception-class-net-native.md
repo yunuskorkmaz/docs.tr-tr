@@ -7,22 +7,22 @@ dev_langs:
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31208a63caaf9158f12742f1547b0e1e2781de4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 803709c97309f9766b6a441f5521cdcd7504862f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866893"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052497"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>MissingInteropDataException Sınıfı (.NET Yerel)
-**Windows 10 için Windows uygulamaları için .NET [!INCLUDE[net_native](../../../includes/net-native-md.md)] yalnızca**  
+**Windows 10, yalnızca .NET yerel Windows uygulamaları için .NET**  
   
  Yöntem hazırlama el ile olarak adlandırılır, ancak bir türü için meta verileri statik analiz tarafından veya bir çalışma zamanı yönergeleri dosyası bulunamadıysa oluşturulan özel durum.  
   
  **Namespace:** System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
->  `MissingInteropDataException` Sınıfı tarafından iç kullanım için yalnızca amaçlanmıştır [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri. Üçüncü taraf kodu kullanmak için hedeflenmemiş ya da uygulama kodunuzda bir özel durum işlemesi gerekir. Bunun yerine, girişlere ekleyerek özel durumu ortadan, [çalışma zamanı yönergeleri dosyası](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Daha fazla bilgi için Açıklamalar bölümüne bakın.  
+>  `MissingInteropDataException` Sınıfı, .NET Native araç zinciri tarafından yalnızca iç kullanım için tasarlanmıştır. Üçüncü taraf kodu kullanmak için hedeflenmemiş ya da uygulama kodunuzda bir özel durum işlemesi gerekir. Bunun yerine, girişlere ekleyerek özel durumu ortadan, [çalışma zamanı yönergeleri dosyası](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Daha fazla bilgi için Açıklamalar bölümüne bakın.  
   
 ## <a name="syntax"></a>Sözdizimi  
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
@@ -34,7 +34,7 @@ ms.locfileid: "61866893"
   
 |Oluşturucu|Açıklama|  
 |-----------------|-----------------|  
-|`public MissingInteropDataException(String resourceId, Type pertinentType)`|Yeni bir örneğini başlatır `MissingInteropDataException` hataya ve verileri eksik tür açıklayan sistem tarafından sağlanmış bir iletinin Kimliğini kullanarak sınıfı. Bu oluşturucu iç kullanım içindir [!INCLUDE[net_native](../../../includes/net-native-md.md)] aracı yalnızca zinciri.|  
+|`public MissingInteropDataException(String resourceId, Type pertinentType)`|Yeni bir örneğini başlatır `MissingInteropDataException` hataya ve verileri eksik tür açıklayan sistem tarafından sağlanmış bir iletinin Kimliğini kullanarak sınıfı. Bu oluşturucu yalnızca .NET yerel araç zinciri tarafından iç kullanım içindir.|  
   
 ## <a name="properties"></a>Özellikler  
   

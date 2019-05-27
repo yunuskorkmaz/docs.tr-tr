@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af71c4916a2abdeb019e538a33ad05efa727e720
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e482303e684813574a092f0a2d5812445ed7fa6e
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868790"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052611"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Örnek: Dinamik Programlama Sorunlarını Giderme
 > [!NOTE]
 >  Bu konuda, .NET Native Geliştirici yayın öncesi bir yazılım olan Önizleme, ifade eder. Önizlemesi'nden indirebileceğiniz [Microsoft Connect Web sitesi](https://go.microsoft.com/fwlink/?LinkId=394611) (kayıt gerekir).  
   
- Tüm meta veri arama hataları kullanılarak geliştirilen uygulamalarda [!INCLUDE[net_native](../../../includes/net-native-md.md)] aracı bir özel durum zinciri sonuçlanır.  Bazı uygulama beklenmedik bir şekilde bildirilebilir.  Aşağıdaki örnek, bir null Nesne başvurarak neden bir erişim ihlali gösterir:  
+ Tüm meta veri arama hataları uygulamalarda, bir özel durum .NET Native araç zinciri sonucu kullanılarak geliştirilen.  Bazı uygulama beklenmedik bir şekilde bildirilebilir.  Aşağıdaki örnek, bir null Nesne başvurarak neden bir erişim ihlali gösterir:  
   
 ```  
 Access violation - code c0000005 (first chance)  
@@ -52,7 +52,7 @@ AppViewModel.Current.LayoutVM.PageMap
   
  Bu durumda, bir çalışma zamanı yönerge için ekleme `App.Core.ViewModels` sorun çözümlenir. Bir API çağrısı için kök nedeni <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> döndürülen yöntemi **null**, ve bir kilitlenme oluştu kadar uygulamayı sessiz bir şekilde sorun yoksayıldı.  
   
- Dinamik programlama, yansıma API'leri kullanırken iyi bir uygulama içinde altında [!INCLUDE[net_native](../../../includes/net-native-md.md)] kullanmaktır <xref:System.Type.GetType%2A?displayProperty=nameWithType> hatasında bir özel durum aşırı yüklemeleri.  
+ Dinamik programlama, API'leri altında .NET Native yansıtma kullanılırken iyi kullanmaktır <xref:System.Type.GetType%2A?displayProperty=nameWithType> hatasında bir özel durum aşırı yüklemeleri.  
   
 ## <a name="is-this-an-isolated-case"></a>Bu, yalıtılmış bir durum mu?  
  Diğer sorunları da kullanırken ortaya çıkabilir `App.Core.ViewModels`.  Tanımlama ve eksik her meta veri özel durum düzeltme veya zaman tasarrufu sağlamanıza ve ekleme yönergeleri daha büyük bir sınıf türü için değer olup olmadığını karar vermeniz gerekir.  Burada, ekleme `dynamic` meta verilerini `App.Core.ViewModels` en iyi yaklaşım, sonuçta elde edilen boyutunu artırma çıkış ikili bir sorun yoksa olabilir.  

@@ -2,12 +2,12 @@
 title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 description: Kubernetes uygulama yaşam döngüsü geliştirirken, mikro hizmetler ve çok kapsayıcılı uygulamalar için yüksek ölçeklenebilirlik ve kullanılabilirlik ve Azure Dev alanları olasılıklarını düzenlemek için seçenekleri keşfedin.
 ms.date: 09/20/2018
-ms.openlocfilehash: 3b7383f6153b787ce8bfad87e3902c34afba0fb2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 27155736c6b5308d4794b17e5f5bd0b93109b5c1
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644884"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196032"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 
@@ -101,7 +101,7 @@ Geliştirme ortamındaki [Temmuz 2018'de duyurulan Docker](https://blog.docker.c
 
 ## <a name="getting-started-with-azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS) ile çalışmaya başlama 
 
-AKS'ı kullanmaya başlamak için Azure portalından veya th CLI kullanarak bir AKS kümesi dağıtın. Bir Azure Container Service kümesi dağıtma hakkında daha fazla bilgi için bkz. [Azure Kubernetes Service (AKS) kümesini dağıtma](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
+AKS'ı kullanmaya başlamak için Azure portalından veya CLI kullanarak bir AKS kümesi dağıtın. Azure'da bir Kubernetes kümesi dağıtma hakkında daha fazla bilgi için bkz. [Azure Kubernetes Service (AKS) kümesini dağıtma](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
 
 Herhangi birini varsayılan olarak, AKS bir parçası olarak yüklenen yazılım için herhangi bir ücret yoktur. Tüm varsayılan seçenekleri ile açık kaynaklı yazılım uygulanır. AKS, azure'da birden çok sanal makine için kullanılabilir. Yalnızca seçtiğiniz işlem örnekleri yanı sıra, depolama ve ağ gibi kullanılan temel altyapı kaynakları için ücret ödersiniz. AKS kendisi için artımlı ücretlendirme yoktur.
 

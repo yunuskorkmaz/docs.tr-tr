@@ -5,12 +5,12 @@ description: Windows 8'de .NET Framework'ü yüklemek hakkında bilgi edinin
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 9f3d3aa35e69ab850ca6d6f564796fe43c65fbd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 27a5c46a711914b32f8c934a33f5897d8ad7a6b8
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643796"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052711"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Windows 8 ve Windows Server 2012’de .NET Framework Yükleme
 
@@ -18,7 +18,7 @@ ms.locfileid: "61643796"
 
 ![Bu uygulama başlatılamadı](./media/this-application-could-not-be-started.png)
 
-Bu yönergeler ihtiyacınız .NET Framework sürümlerini yüklemenize yardımcı olur. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) en son sürüm. Windows Server 2012'de desteklenir, ancak Windows 8'de desteklenmez. İle birlikte gelir [Windows 10 güncelleştirme 2019](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update)).
+Bu yönergeler ihtiyacınız .NET Framework sürümlerini yüklemenize yardımcı olur. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) en son sürüm. Windows Server 2012'de desteklenir, ancak Windows 8'de desteklenmez. İle birlikte gelir [Windows 10 güncelleştirme 2019](https://support.microsoft.com/help/4028685/windows-10-get-the-update)).
 
 ## <a name="net-framework-48"></a>.NET Framework 4.8
 
@@ -31,7 +31,7 @@ Bu yönergeler ihtiyacınız .NET Framework sürümlerini yüklemenize yardımc�
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 
-[.NET Framework 4.6](https://www.microsoft.com/en-us/download/details.aspx?id=48130) en son desteklenen .NET Framework sürümü Windows 8.
+[.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130) en son desteklenen .NET Framework sürümü Windows 8.
 
 .NET Framework 4.6 için .NET Framework 4.0 4.6 oluşturulan uygulamaları destekler.
 

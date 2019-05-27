@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | Azur
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 136ad9992ea94b027f095f47df0388408029f24e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a93009e66d63aa7d9c3b60951d43eafa3c351a63
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638911"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053273"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Azure barındırma önerileri için ASP.NET Core web uygulamaları
 
@@ -44,7 +44,7 @@ App Service Web Apps, web uygulamalarını barındırmak için en iyi duruma get
 
 - Visual Studio tümleştirmesi.
 
-- Linux ve Windows kapsayıcıları desteği [kapsayıcılar için Web App](https://azure.microsoft.com/en-us/services/app-service/containers/).
+- Linux ve Windows kapsayıcıları desteği [kapsayıcılar için Web App](https://azure.microsoft.com/services/app-service/containers/).
 
 Azure App Service, çoğu web uygulaması için en iyi seçenektir. Dağıtım ve yönetim süreçleri platform ile tümleştirilmiştir, siteler hızla yüksek trafik yüklerinin altından kalkacak şekilde ölçeklendirilebilir ve yerleşik Yük Dengeleme ve trafik Yöneticisi yüksek kullanılabilirlik sağlar. Bir çevrimiçi geçiş aracı ile kolayca Azure App Service için var olan siteler, Web uygulamaları Galerisi'nden açık kaynaklı uygulama kullanma veya çerçevesi ve tercih ettiğiniz araçları kullanarak yeni bir site oluşturmak taşıyabilirsiniz. WebJobs özelliği, App Service web uygulamanıza işleme arka plan işinin eklemenizi kolaylaştırır.
 
@@ -101,7 +101,7 @@ Uygulamanızın gereksinimlerini mimarisinin belirleyen unsurlar olmalıdır. Bi
   <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
 - Containers\ için Web App
-  <https://azure.microsoft.com/en-us/services/app-service/containers/>
+  <https://azure.microsoft.com/services/app-service/containers/>
 
 - Azure Kubernetes Service'i (AKS) giriş \
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>

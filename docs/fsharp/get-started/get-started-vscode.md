@@ -2,12 +2,12 @@
 title: Kullanmaya başlama F# Visual Studio Code
 description: Nasıl kullanacağınızı öğrenin F# Visual Studio Code ve Ionide eklenti paketi ile.
 ms.date: 12/23/2018
-ms.openlocfilehash: 7c2ecab14b3351d441249e7fc7cb3188a4ee7eba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9d5ed4008f657f956ee7a5611a2f5fdd8e5b44a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949558"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051869"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Kullanmaya başlama F# Visual Studio Code
 
@@ -16,7 +16,7 @@ Yazabileceğiniz F# içinde [Visual Studio Code](https://code.visualstudio.com) 
 Başlamak için sahip olduğunuzdan emin olun [ F# ve doğru şekilde yüklenip Ionide eklentisi](install-fsharp.md#install-f-with-visual-studio-code).
 
 > [!NOTE]
-> .NET Framework Ionide oluşturacağını F# projeleri, platformlar arası uyumluluk sorunları olabilir değil dotnet çekirdek. Çalıştırıyorsanız, **Linux** veya **OSX**, başlamak için daha basit bir yolu [komut satırı araçları](https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line).
+> .NET Framework Ionide oluşturacağını F# projeleri, platformlar arası uyumluluk sorunları olabilir değil dotnet çekirdek. Çalıştırıyorsanız, **Linux** veya **OSX**, başlamak için daha basit bir yolu [komut satırı araçları](get-started-command-line.md).
 
 ## <a name="creating-your-first-project-with-ionide"></a>İlk projenizi Ionide ile oluşturma
 

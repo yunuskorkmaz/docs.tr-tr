@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4244d47c099fe7a5b0093b94ef44b4354bae86f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ea167ae15e4d0035785d228f08779406e05e873
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867126"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052373"
 ---
 # <a name="typeinstantiation-element-net-native"></a>\<Typeınstantiation > öğesi (.NET yerel)
 Çalışma zamanı yansıma ilkesini oluşturulmuş bir genel türü için geçerlidir.  
@@ -47,9 +47,9 @@ ms.locfileid: "61867126"
 |`DataContractSerializer`|Serileştirme|İsteğe bağlı öznitelik. Denetimleri İlkesi kullanan Serileştirmenin <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> sınıfı.|  
 |`DataContractJsonSerializer`|Serileştirme|İsteğe bağlı öznitelik. İlke kullanan bir JSON serileştirme denetleyen <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> sınıfı.|  
 |`XmlSerializer`|Serileştirme|İsteğe bağlı öznitelik. İlke kullanan bir XML serileştirme denetleyen <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> sınıfı.|  
-|`MarshalObject`|Birlikte çalışma|İsteğe bağlı öznitelik. Windows çalışma zamanı ve COM başvuru türlerini hazırlama denetimleri İlkesi|  
-|`MarshalDelegate`|Birlikte çalışma|İsteğe bağlı öznitelik. Yerel kod için işlev işaretçileri olarak temsilci türleri hazırlama için ilke denetler.|  
-|`MarshalStructure`|Birlikte çalışma|İsteğe bağlı öznitelik. Yerel kod yapılarına hazırlama için ilke denetler.|  
+|`MarshalObject`|Interop|İsteğe bağlı öznitelik. Windows çalışma zamanı ve COM başvuru türlerini hazırlama denetimleri İlkesi|  
+|`MarshalDelegate`|Interop|İsteğe bağlı öznitelik. Yerel kod için işlev işaretçileri olarak temsilci türleri hazırlama için ilke denetler.|  
+|`MarshalStructure`|Interop|İsteğe bağlı öznitelik. Yerel kod yapılarına hazırlama için ilke denetler.|  
   
 ## <a name="name-attribute"></a>Ad özniteliği  
   
@@ -103,7 +103,7 @@ ms.locfileid: "61867126"
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- Derleme ile sonra [!INCLUDE[net_native](../../../includes/net-native-md.md)] örnek araç zinciri oluşturur bir [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) özel durumu çağıran satırında <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> yöntemi. Özel durum ortadan kaldırır ve aşağıdakileri ekleyerek gerekli meta verileri belirtin `<TypeInstantiation>` çalışma zamanı yönergeleri dosyasının öğe:  
+ Örnek .NET Native araç zinciri ile derleme sonra oluşturur bir [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) özel durumu çağıran satırında <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> yöntemi. Özel durum ortadan kaldırır ve aşağıdakileri ekleyerek gerekli meta verileri belirtin `<TypeInstantiation>` çalışma zamanı yönergeleri dosyasının öğe:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

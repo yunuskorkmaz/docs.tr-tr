@@ -13,12 +13,12 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: 1c28f8eaba5c35f762d6fc57ebbddbbb71769c81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a659de62965d17e965eee2f750337a08ae1801e0
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972321"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053716"
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Nasıl yapılır: Windows Forms StatusBar Denetiminde Hangi Panele Tıklandığını Belirleme
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "61972321"
   
 ### <a name="to-determine-which-panel-was-clicked"></a>Hangi panele tıklandığını belirleme  
   
-1. İçinde <xref:System.Windows.Forms.StatusBar.PanelClick> olay işleyicisi, kullanım bir `Select Case` (Visual Basic'te) veya `switch case` (görsel C# veya [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) deyimini olay bağımsız değişkenleri tıklandı panelinde dizinini inceleyerek hangi panele tıklandığını belirleme.  
+1. İçinde <xref:System.Windows.Forms.StatusBar.PanelClick> olay işleyicisi, kullanım bir `Select Case` (Visual Basic'te) veya `switch case` (Visual C# veya görsel C++) deyimini olay bağımsız değişkenleri tıklandı panelinde dizinini inceleyerek hangi panele tıklandığını belirleme.  
   
      Aşağıdaki kod örneği form üzerindeki varlığı gerektiren bir <xref:System.Windows.Forms.StatusBar> denetimi `StatusBar1`ve iki <xref:System.Windows.Forms.StatusBarPanel> nesneleri `StatusBarPanel1` ve `StatusBarPanel2`.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "61972321"
        }  
     ```  
   
-     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.  
+     (Visual C#, Visual C++) Aşağıdaki kod, olay işleyicisi kaydetmek için formun oluşturucuda yerleştirin.  
   
     ```csharp  
     this.statusBar1.PanelClick += new   

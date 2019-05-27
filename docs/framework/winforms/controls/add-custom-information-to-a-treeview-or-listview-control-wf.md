@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 9e2942e11ed10dffcfad8f0329295827b7f0d4d8
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 5f51744878da526147dd742e98117e8e87c94e20
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452750"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052234"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Nasıl yapılır: Bir TreeView veya ListView Denetimine Özel Bilgi Ekleme (Windows Forms)
 Windows Forms'ta türetilmiş bir düğüm oluşturabilirsiniz <xref:System.Windows.Forms.TreeView> denetimi veya türetilmiş bir öğede bir <xref:System.Windows.Forms.ListView> denetimi. Türetme yanı sıra özel yöntemleri ve bunları işlemek için oluşturucuları, gerekli tüm alanlar eklemenize olanak sağlar. Bu özellik bir kullanımı, her ağaç düğümü veya liste öğesi için bir müşteri nesnesi eklemektir. Buradaki örnekler için olan bir <xref:System.Windows.Forms.TreeView> için denetimi, ancak aynı yaklaşımı kullanılabilir bir <xref:System.Windows.Forms.ListView> denetimi.  
@@ -100,7 +100,7 @@ Windows Forms'ta türetilmiş bir düğüm oluşturabilirsiniz <xref:System.Wind
        "\\TextFile.txt")));  
     ```  
   
-2. Ağaç düğümünde geçirilir ve olarak belirlenmiş bir <xref:System.Windows.Forms.TreeNode> sınıfından türetilmiş sınıfınızın cast gerekecektir. Atama, nesnenin bir türden diğerine açık bir dönüştürme ' dir. Atama hakkında daha fazla bilgi için bkz. [örtük ve açık dönüştürmeler](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic) [atama ve tür dönüştürmeleri](~/docs/csharp/programming-guide/types/casting-and-type-conversions.md) (görsel C#), veya [atama işleci: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) .  
+2. Ağaç düğümünde geçirilir ve olarak belirlenmiş bir <xref:System.Windows.Forms.TreeNode> sınıfından türetilmiş sınıfınızın cast gerekecektir. Atama, nesnenin bir türden diğerine açık bir dönüştürme ' dir. Atama hakkında daha fazla bilgi için bkz. [örtük ve açık dönüştürmeler](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic) [atama ve tür dönüştürmeleri](~/docs/csharp/programming-guide/types/casting-and-type-conversions.md) (görsel C#), veya [atama işleci: ()](/cpp/cpp/cast-operator-parens) () Görsel C++).  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  

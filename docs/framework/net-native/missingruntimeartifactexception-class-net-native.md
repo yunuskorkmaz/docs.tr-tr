@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ba528f8545f0781f15e4479cbef0b80feeab46d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 246584a34d6a3a8aaf4cac9845e8bb77d1654fa1
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61870675"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052430"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>MissingRuntimeArtifactException Sınıfı (.NET Yerel)
-**Windows 10 için Windows uygulamaları için .NET [!INCLUDE[net_native](../../../includes/net-native-md.md)] yalnızca**  
+**Windows 10, yalnızca .NET yerel Windows uygulamaları için .NET**  
   
  Bir tür veya üye türü için meta veriler kullanılabilir olduğunda oluşturulan özel durum ancak uygulanması kaldırıldı.  
   
  **Namespace:** System.Reflection  
   
 > [!IMPORTANT]
->  `MissingRuntimeArtifactException` Sınıfı tarafından iç kullanım için yalnızca amaçlanmıştır [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri. Üçüncü taraf kodu kullanmak için hedeflenmemiş ya da uygulama kodunuzda bir özel durum işlemesi gerekir. Bunun yerine, girişlere ekleyerek özel durumu ortadan, [çalışma zamanı yönergeleri dosyası](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Daha fazla bilgi için Açıklamalar bölümüne bakın.  
+>  `MissingRuntimeArtifactException` Sınıfı, .NET Native araç zinciri tarafından yalnızca iç kullanım için tasarlanmıştır. Üçüncü taraf kodu kullanmak için hedeflenmemiş ya da uygulama kodunuzda bir özel durum işlemesi gerekir. Bunun yerine, girişlere ekleyerek özel durumu ortadan, [çalışma zamanı yönergeleri dosyası](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Daha fazla bilgi için Açıklamalar bölümüne bakın.  
   
 ## <a name="syntax"></a>Sözdizimi  
  [!code-csharp[ProjectN#22](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missingruntimeartifactexception_syntax1.cs#22)]  
@@ -32,8 +32,8 @@ ms.locfileid: "61870675"
   
 |Oluşturucu|Açıklama|  
 |-----------------|-----------------|  
-|`public MissingRuntimeArtifactException()`|Yeni bir örneğini başlatır `MissingRuntimeArtifactException` hatayı açıklayan sistem tarafından sağlanmış bir iletiyi kullanarak sınıfı.<br /><br /> Bu oluşturucu iç kullanım içindir [!INCLUDE[net_native](../../../includes/net-native-md.md)] aracı yalnızca zinciri.|  
-|`public MissingRuntimeArtifactException(String message)`|Yeni bir örneğini başlatır `MissingRuntimeArtifactException` belirtilen hata iletisiyle sınıfı.<br /><br /> Bu oluşturucu iç kullanım içindir [!INCLUDE[net_native](../../../includes/net-native-md.md)] aracı yalnızca zinciri.|  
+|`public MissingRuntimeArtifactException()`|Yeni bir örneğini başlatır `MissingRuntimeArtifactException` hatayı açıklayan sistem tarafından sağlanmış bir iletiyi kullanarak sınıfı.<br /><br /> Bu oluşturucu yalnızca .NET yerel araç zinciri tarafından iç kullanım içindir.|  
+|`public MissingRuntimeArtifactException(String message)`|Yeni bir örneğini başlatır `MissingRuntimeArtifactException` belirtilen hata iletisiyle sınıfı.<br /><br /> Bu oluşturucu yalnızca .NET yerel araç zinciri tarafından iç kullanım içindir.|  
   
 ## <a name="properties"></a>Özellikler  
   

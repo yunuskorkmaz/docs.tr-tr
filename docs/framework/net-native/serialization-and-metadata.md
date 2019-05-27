@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e7a8e6509cea5f9035e3b8544aa37aa99681822
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c1ee70c2701492acd331e5faed849ff0b2e8b559
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650323"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052387"
 ---
 # <a name="serialization-and-metadata"></a>Serileştirme ve Meta Veriler
 Uygulamanızı serileştirir ve nesneleri seri durumdan çıkarır, girişler için çalışma zamanı yönergeleri eklemeniz gerekebilir (. rd.xml) dosyasını gerekli meta verileri çalışma zamanında mevcut olduğundan emin olun. Seri hale getiricileri genişletme iki kategorisi vardır ve her çalışma zamanı yönergeleri dosyanızda farklı işleme gerektirir:  
@@ -39,10 +39,10 @@ Uygulamanızı serileştirir ve nesneleri seri durumdan çıkarır, girişler i�
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] Derleyici Bu kod otomatik olarak ele alacak.  
+ .NET yerel derleyici Bu kod otomatik olarak işler.  
   
 ### <a name="typeof-used-outside-the-constructor"></a>typeof Oluşturucu dışında kullanılan  
- Bu seri hale getirme sınıfların bir oluşturucuyu çağırmak ve kullanmak C# [typeof](~/docs/csharp/language-reference/keywords/typeof.md) anahtar sözcüğü oluşturucunun sağlanan ifade dışında <xref:System.Type> parametresi, aşağıdaki kod, olduğu gibi [!INCLUDE[net_native](../../../includes/net-native-md.md)] derleyici tür çözümlenemiyor:  
+ Bu seri hale getirme sınıfların bir oluşturucuyu çağırmak ve kullanmak C# [typeof](~/docs/csharp/language-reference/keywords/typeof.md) anahtar sözcüğü oluşturucunun sağlanan ifade dışında <xref:System.Type> .NET yerel derleyici aşağıdaki kod, olduğu gibi bir parametresi olamaz tür çözülemedi:  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -52,7 +52,7 @@ Uygulamanızı serileştirir ve nesneleri seri durumdan çıkarır, girişler i�
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- Benzer şekilde, bir oluşturucu gibi çağırırsanız <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> ve bir dizi ek <xref:System.Type> , aşağıdaki kod olduğu gibi seri hale getirmek için nesneleri [!INCLUDE[net_native](../../../includes/net-native-md.md)] derleyici bu tür çözümleyemiyor.  
+ Benzer şekilde, bir oluşturucu gibi çağırırsanız <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> ve bir dizi ek <xref:System.Type> nesneleri aşağıdaki kodda, .NET yerel derleyici bu tür çözümlenemiyor olarak seri hale.  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   

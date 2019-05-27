@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 0f7c390d2ad7233475786e795fef0290af545145
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 82fdcae2887cf5a3428a0c874b43d9770f35afcf
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634758"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052989"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>. NET'te dizeleri kullanmak için en iyi uygulamalar
 <a name="top"></a> .NET, yerelleştirilmiş ve genelleştirilmiş uygulamalar geliştirmek için kapsamlı destek sağlar ve sıralama ve dizeleri görüntüleme gibi yaygın işlemleri gerçekleştirirken geçerli kültürün veya belirli bir kültürün kurallarını uygulamak kolaylaştırır. Ancak dizeleri sıralamak veya karşılaştırmak her zaman kültüre duyarlı bir işlem değildir. Örneğin, bir uygulama tarafından dahili olarak kullanılan dizelerin genellikle tüm kültürlerde aynı şekilde işlenmeleri gerekir. XML etiketleri, HTML etiketleri, kullanıcı adları, dosya yolları ve sistem nesnelerinin adları gibi kültürden bağımsız dize verileri kültüre duyarlıymış gibi yorumlanırsa, uygulama kodu küçük hatalar, zayıf performans ve bazı durumlarda güvenlik sorunlarıyla karşılaşabilir.  
@@ -125,7 +125,7 @@ ms.locfileid: "64634758"
  Dize karşılaştırma, özellikle sıralama ve eşitlik testi gibi, dizeyle ilgili pek çok işlemin temelidir. Dizeleri sıralama belirlenmiş bir sırada: "My" dizeleri sıralanmış bir listede "dize" önce görünüyorsa, "my" "dize" küçüktür veya eşittir karşılaştırmanız gerekir. Ek olarak, karşılaştırma dolaylı olarak eşitliği tanımlar. Karşılaştırma işlemi, eşit olarak gördüğü dizeler için sıfır döndürür. İki dizenin de diğerinden daha az olmaması iyi bir yorumdur. Dizeleri içeren en anlamlı işlemler, şu yordamların birini veya her ikisini içerir: başka bir dize ile karşılaştırma ve iyi tanımlanmış bir sıralama işlemini yürütme.  
 
 > [!NOTE]
-> İndirebileceğiniz [sıralama ağırlık tabloları](https://www.microsoft.com/en-us/download/details.aspx?id=10921), sıralama ve karşılaştırma işlemlerinde Windows işletim sistemleri için kullanılan karakter ağırlıkları hakkında bilgi içeren metin dosyalarını bir dizi ve [varsayılan Unicode Harmanlama öğesi tablosu](https://www.unicode.org/Public/UCA/latest/allkeys.txt), Linux ve macOS için sıralama ağırlık tablonun en son sürümü. Linux ve Macos'ta sıralama ağırlık tablosu belirli bir sürümünü sürümüne bağlıdır [Unicode için Uluslararası bileşenleri](http://site.icu-project.org/) sistemde yüklü kitaplıkları. ICU ve uyguladıkları Unicode sürümleri hakkında daha fazla bilgi için bkz: [indirme ICU](http://site.icu-project.org/download).
+> İndirebileceğiniz [sıralama ağırlık tabloları](https://www.microsoft.com/download/details.aspx?id=10921), sıralama ve karşılaştırma işlemlerinde Windows işletim sistemleri için kullanılan karakter ağırlıkları hakkında bilgi içeren metin dosyalarını bir dizi ve [varsayılan Unicode Harmanlama öğesi tablosu](https://www.unicode.org/Public/UCA/latest/allkeys.txt), Linux ve macOS için sıralama ağırlık tablonun en son sürümü. Linux ve Macos'ta sıralama ağırlık tablosu belirli bir sürümünü sürümüne bağlıdır [Unicode için Uluslararası bileşenleri](http://site.icu-project.org/) sistemde yüklü kitaplıkları. ICU ve uyguladıkları Unicode sürümleri hakkında daha fazla bilgi için bkz: [indirme ICU](http://site.icu-project.org/download).
 
  Ancak, iki dizeyi eşitlik veya sıralama düzeni için değerlendirmek tek bir doğru sonuç vermez; sonuç, dizeleri karşılaştırmakta kullanılan ölçütlere bağlıdır. Özellikle, sıralı olan veya geçerli kültürün veya sabit kültürün (İngilizce dilini temel alan yerel ayardan bağımsız bir kültür) büyük/küçük harf ve sıralama kurallarını temel alan dize karşılaştırmaları farklı sonuçlar üretebilir.  
 

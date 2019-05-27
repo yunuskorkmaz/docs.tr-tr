@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 961b3c852f60a0917707bef07d4e26fc4215acca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dce6bf9cb9872183e60e6ccdf7eaf79b6630db51
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012561"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053689"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>PrintPreviewDialog denetimine genel bakış (Windows Forms)
 
@@ -23,7 +23,7 @@ Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> denetimidir görün
 
 Denetimin anahtar özelliği <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, belgenin önizlemesi için ayarlar. Belge olmalıdır bir <xref:System.Drawing.Printing.PrintDocument> nesne. İletişim kutusunu görüntülemek için çağırmalıdır kendi <xref:System.Windows.Forms.Form.ShowDialog%2A> yöntemi. Daha sorunsuz yükseltmelere görünen metin düzgünleştirme yapabilirsiniz, ancak daha yavaş görünen yapabilirsiniz; Bunu kullanmak için ayarlanmış <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> özelliğini `true`.
 
-Bazı özellikler aracılığıyla kullanılabilir <xref:System.Windows.Forms.PrintPreviewControl> , <xref:System.Windows.Forms.PrintPreviewDialog> içerir. (Bunu eklemek zorunda değilsiniz <xref:System.Windows.Forms.PrintPreviewControl> forma; bunu otomatik olarak içerdiği <xref:System.Windows.Forms.PrintPreviewDialog> formunuza iletişim kutusu eklediğinizde,.) Aracılığıyla kullanılabilen özellikleri örnekleri <xref:System.Windows.Forms.PrintPreviewControl> olan <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> ve <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> denetimde yatay ve dikey olarak görüntülenen sayfa sayısını belirleyen özellikleri. Erişebildiğiniz <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> özelliği olarak `PrintPreviewDialog1.PrintPreviewControl.Columns` Visual Basic'te `printPreviewDialog1.PrintPreviewControl.Columns` görselde C#, veya `printPreviewDialog1->PrintPreviewControl->Columns` içinde [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)].
+Bazı özellikler aracılığıyla kullanılabilir <xref:System.Windows.Forms.PrintPreviewControl> , <xref:System.Windows.Forms.PrintPreviewDialog> içerir. (Bunu eklemek zorunda değilsiniz <xref:System.Windows.Forms.PrintPreviewControl> forma; bunu otomatik olarak içerdiği <xref:System.Windows.Forms.PrintPreviewDialog> formunuza iletişim kutusu eklediğinizde,.) Aracılığıyla kullanılabilen özellikleri örnekleri <xref:System.Windows.Forms.PrintPreviewControl> olan <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> ve <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> denetimde yatay ve dikey olarak görüntülenen sayfa sayısını belirleyen özellikleri. Erişebildiğiniz <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> özelliği olarak `PrintPreviewDialog1.PrintPreviewControl.Columns` Visual Basic'te `printPreviewDialog1.PrintPreviewControl.Columns` görselde C#, veya `printPreviewDialog1->PrintPreviewControl->Columns` görselde C++.
 
 ## <a name="printpreviewdialog-performance"></a>PrintPreviewDialog performans
 

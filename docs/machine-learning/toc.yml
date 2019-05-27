@@ -14,7 +14,7 @@
     - name: Destek sorunlarını kategorilere ayırma (çok sınıflı sınıflandırma)
       href: tutorials/github-issue-classification.md
     - name: Fiyatları tahmin etme (regresyon)
-      href: tutorials/taxi-fare.md
+      href: tutorials/predict-prices.md
     - name: Süsen çiçeklerini kategorilere ayırma (k-ortalamalar kümesi)
       href: tutorials/iris-clustering.md
     - name: Film önerici (matrisi çarpanlarına ayırma)

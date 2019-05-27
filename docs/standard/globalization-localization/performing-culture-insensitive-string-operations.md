@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77269cd9cdb922c1f9576afa93d6599ec7a834e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6054df642176976db4feb2aba682a20ca6b3dda5
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026113"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053120"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>Kültüre duyarsız dize işlemlerini gerçekleştirme
 Varsayılan olarak kültüre duyarlı dize işlemleri çoğu .NET Framework yöntemlerini açıkça geçirerek kullanılacak kültürü belirtmenize olanak tanıyan bir yöntemi aşırı yüklemeler sağlar bir <xref:System.Globalization.CultureInfo> parametresi. Bu aşırı yüklemeler eşlemeleri ve sıralama kuralları ve kültüre duyarlı olmayan sonuçlar garanti durumunda kültürel farklılıklara ortadan kaldırmak sağlar.  
@@ -44,5 +44,5 @@ Varsayılan olarak kültüre duyarlı dize işlemleri çoğu .NET Framework yön
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sıralama ağırlık tablolar (için Windows sistemlerinde .NET)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [Sıralama ağırlık tablolar (için Windows sistemlerinde .NET)](https://www.microsoft.com/download/details.aspx?id=10921)
 - [Varsayılan Unicode Harmanlama öğesi tablosu (Linux ve Macos'ta .NET Core)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

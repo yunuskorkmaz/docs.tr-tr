@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: 9bd44a2d1f0db2652280e4875659c17916b033a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 21fa6798c431b71d36c1909937ddad6bf5030782
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612142"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053103"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>Nasıl yapılır: Windows Forms MonthCalendar Denetiminin Görünüşünü Değiştirme
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetimi birçok yönden Takvim görünümünü özelleştirmenize olanak sağlar. Örneğin, bir renk şeması ayarlayın ve hafta sayıları ve geçerli tarih görüntülemek veya gizlemek seçin.  
@@ -74,7 +74,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetimi birçok yönden
        }  
     ```  
   
-     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.  
+     (Visual C#, Visual C++) Aşağıdaki kod, olay işleyicisi kaydetmek için formun oluşturucuda yerleştirin.  
   
     ```csharp  
     this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);  

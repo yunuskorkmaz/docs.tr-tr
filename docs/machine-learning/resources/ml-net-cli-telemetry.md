@@ -4,12 +4,12 @@ description: Analiz için bilgileri, hangi verileri toplanır ve bunu devre dı�
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 36f4af48615e2e3247f8e21343d0a00519ba1c0a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 94c66267dfeec4b70ba4dd1fc47518eb0e01509a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645018"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053584"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI tarafından telemetri toplama
 
@@ -75,5 +75,5 @@ Microsoft Dağıtım ML.NET CLI ile lisanslı [Microsoft Yazılımı Lisans koş
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ML.NET CLI başvurusu](../reference/ml-net-cli-reference.md)
 - [Microsoft Yazılımı Lisans koşulları: Microsoft .NET kitaplığı](https://aka.ms/dotnet-core-eula)
-- [Microsoft gizlilik](https://www.microsoft.com/en-us/trustcenter/privacy/)
-- [Microsoft gizlilik bildirimi](https://privacy.microsoft.com/en-us/privacystatement)
+- [Microsoft gizlilik](https://www.microsoft.com/trustcenter/privacy/)
+- [Microsoft gizlilik bildirimi](https://privacy.microsoft.com/privacystatement)

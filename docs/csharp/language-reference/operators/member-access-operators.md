@@ -17,6 +17,7 @@ helpviewer_keywords:
 - indexer operator [C#]
 - '[] operator [C#]'
 - null-conditional operators [C#]
+- Elvis operator [C#]
 - ?. operator [C#]
 - ?[] operator [C#]
 - invocation operator [C#]
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: a76c2855196b229918ee0a6a7d2a4dc66d87d059
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: eec70f5446eec11fa4e241b86eed4ed8d6146f85
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881040"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195773"
 ---
 # <a name="member-access-operators-c-reference"></a>Üye erişim işleçleri (C# Başvurusu)
 
@@ -99,7 +100,7 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Null koşullu işleçleri? ve? []
 
-Kullanılabilir C# 6 ve üzeri, bir null koşullu işleci bir üye erişimi geçerlidir `?.`, ya da öğe erişimi, `?[]`, işlem için yalnızca işlenen null olmayan olarak değerlendirilirse, işleneni. İşlenen değerlendirilirse `null`, işlecin sonucu olan `null`.
+Kullanılabilir C# 6 ve üzeri, bir null koşullu işleci bir üye erişimi geçerlidir `?.`, ya da öğe erişimi, `?[]`, işlem için yalnızca işlenen null olmayan olarak değerlendirilirse, işleneni. İşlenen değerlendirilirse `null`, işlecin sonucu olan `null`. Null koşullu üye erişimi işleci `?.` olarak da bilinen Elvis işlecidir.
 
 Null koşullu işleçleri short-circuiting. Diğer bir deyişle, işlemler zinciri tek bir işlemde koşullu üyesi veya bir öğenin erişim verir `null`, rest zincirinin yürütülmez. Aşağıdaki örnekte, `B` uygulanamıyorsa değerlendirilmez `A` değerlendiren `null` ve `C` uygulanamıyorsa değerlendirilmez `A` veya `B` değerlendiren `null`:
 

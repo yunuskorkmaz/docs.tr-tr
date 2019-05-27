@@ -3044,26 +3044,26 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 6a339fc91ce5e1b4ff3c5cbaacdae72f02fdf733
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87d7ce07523af87ae4d2746201ed7af576b3e3a8
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61594782"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053315"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>Maalesef bu Visual Basic hatasıyla ilgili ayrıntı yok
 Özür dileriz, ancak Biz bu hata hakkındaki belirli bilgilere sahip değildir. Web'deki bilgileri bulmak hata sayısı ve ileti metni için arama yapabilirsiniz. Veya şu forumlardan birine kullanarak diğer geliştiriciler isteyebilirsiniz:  
   
- [Visual Basic dili](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
+ [Visual Basic dili](https://social.msdn.microsoft.com/Forums/home?forum=vblanguage)  
  Bir forum sorular için derleyici ve Visual Basic dili sözdizimi hakkında ve genel tartışmalar sağlar.  
   
- [Visual Basic birlikte çalışabilirlik ve yükseltme](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
+ [Visual Basic birlikte çalışabilirlik ve yükseltme](https://social.msdn.microsoft.com/Forums/home?forum=vbinterop)  
  Hakkında sorular için bir forum sağlar ve sorunlar Visual Basic yükseltme ve birlikte çalışabilirlik özelliklerle çalışma.  
   
- [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
+ [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/home?forum=vbide)  
  Visual Studio ortamında çalışma hakkında sorular için bir forum sağlar.  
   
- [Visual Basic genel](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
+ [Visual Basic genel](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)  
  Hakkında sorular için bir forum sağlar ve diğer forumlarda ele alınmamaktadır Visual Basic ile verir.  
   
  [StackOverflow](https://stackoverflow.com/questions/tagged/vb.net)  

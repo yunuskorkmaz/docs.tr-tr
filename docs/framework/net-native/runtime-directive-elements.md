@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bf692ff93a575858d1d1a89346611cb9c5957b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb3ad0d39d47297b7d26a5c28cfbbc269ce99e44
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867049"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052407"
 ---
 # <a name="runtime-directive-elements"></a>Çalışma Zamanı Yönerge Öğeleri
 Çalışma zamanı yönergeleri (rd.xml) dosya biçimi aşağıdaki çalışma zamanı yönerge öğeleri destekler. Bkz: [çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) hiyerarşik bir sunumunu için.  
@@ -24,7 +24,7 @@ ms.locfileid: "61867049"
  Kapsayıcı [ \<türü >](../../../docs/framework/net-native/type-element-net-native.md) yönergesi bir özniteliktir, çalışma zamanı İlkesi bu özniteliğin uygulandığı kod öğeleri için geçerlidir.  
   
  [\<Yönergeleri >](../../../docs/framework/net-native/directives-element-net-native.md)  
- Her çalışma zamanı yönergeleri dosyasının kök öğesini [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Alt öğeleri olan [ \<uygulama >](../../../docs/framework/net-native/application-element-net-native.md) ve [ \<kitaplığı >](../../../docs/framework/net-native/library-element-net-native.md).  
+ .NET Native her çalışma zamanı yönergeleri dosyasının kök öğesi. Alt öğeleri olan [ \<uygulama >](../../../docs/framework/net-native/application-element-net-native.md) ve [ \<kitaplığı >](../../../docs/framework/net-native/library-element-net-native.md).  
   
  [\<Olay >](../../../docs/framework/net-native/event-element-net-native.md)  
  Çalışma zamanı İlkesi, bir olay için geçerlidir. Bu bir alt öğesidir [ \<türü >](../../../docs/framework/net-native/type-element-net-native.md) ve [ \<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) öğeleri.  

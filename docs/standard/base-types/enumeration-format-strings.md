@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4f2a8fc10d2aad6b2d43bf128697e86aa73c411
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: be2e5dbe0d02bcec8974a1e52c0dce107d3bf46b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644688"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052847"
 ---
 # <a name="enumeration-format-strings"></a>Numaralandırma biçimi dizeleri
 
@@ -48,7 +48,7 @@ Sabit listesi Giriş bir tamsayı değeri mümkün olan en kısa gösteriminde o
 
 ## <a name="x-or-x"></a>X ya da x
 
-Sabit listesi girişi bir onaltılık değer görüntüler. Değer, değer en az sekiz basamak uzunluğunda olduğundan emin olmak için gerekirse sayının önüne gösterilir. Aşağıdaki örnek X biçim belirticisi gösterir.
+Sabit listesi girişi bir onaltılık değer görüntüler. Gerekirse, sonuç dizesi sabit listesi türünün her byte için iki karakter olduğundan emin olmak sayının önüne değerin temsil [sayısal tür temel](xref:System.Enum.GetUnderlyingType%2A). Aşağıdaki örnek X biçim belirticisi gösterir. Örnekte, her ikisi de temel alınan türü <xref:System.ConsoleColor> ve <xref:System.IO.FileAttributes> olduğu <xref:System.Int32>, veya 8 karakter sonuç dizesi oluşturur bir 32-bit (veya 4 baytlık) tamsayı.
 
 [!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]      
 [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]

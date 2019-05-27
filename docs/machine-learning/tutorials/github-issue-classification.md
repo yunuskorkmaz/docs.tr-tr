@@ -4,12 +4,12 @@ description: ML.NET bir çok sınıflı sınıflandırma senaryosunda GitHub sor
 ms.date: 05/16/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: d47522bef632de1aac890d4de384c1b2c16b7a50
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: da4f82c1b2c4ebdc8ccc8f307722c2719909cf56
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877338"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195581"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Öğretici: Destek sorunları çok sınıflı sınıflandırma kullanarak ML .NET ile kategorilere ayırma
 
@@ -242,7 +242,7 @@ Model sonunda dönüş `BuildAndTrainModel` yöntemi.
 Oluşturduğunuz ve eğitilen modele göre kalite güvencesi ve doğrulama için farklı bir veri kümesi değerlendirilecek gerekir. İçinde `Evaluate` yöntemi, oluşturduğunuz modeli `BuildAndTrainModel` değerlendirilecek geçirilir. Oluşturma `Evaluate` yöntemi hemen sonrasına `BuildAndTrainModel`, aşağıdaki kod gibi:
 
 ```csharp
-public static void Evaluate()
+public static void Evaluate(DataViewSchema trainingDataViewSchema)
 {
 
 }

@@ -15,15 +15,16 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 54d190bfa3f13ccfc78dd2501018442afb281d37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e577f376b347442f6693a7a5478757ce3b698752
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634702"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053011"
 ---
-# <a name="character-classes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Sınıfları
-<a name="Top"></a> Bir karakter sınıfı içeren bir eşleşmenin başarılı olması için giriş dizesinde bulunabilecek karakterleri kümesini tanımlar. .NET içinde normal ifade dili aşağıdaki karakter sınıflarını destekler:  
+# <a name="character-classes-in-regular-expressions"></a>Normal ifadelerdeki karakter sınıfları
+
+Bir karakter sınıfı, bir eşleşmenin başarılı olması için giriş dizesinde bulunabilecek karakterleri içeren bir karakter kümesi tanımlar. .NET içinde normal ifade dili aşağıdaki karakter sınıflarını destekler:  
   
 - Pozitif karakter grupları. Giriş dizesindeki bir karakter, belirli bir karakter kümesindekindeki karakterlerden biriyle eşleşmelidir. Daha fazla bilgi için [pozitif karakter grubu](#PositiveGroup).  
   
@@ -53,7 +54,7 @@ ms.locfileid: "64634702"
 >  Karakter karakter kategoriye göre gibi eşleşen sınıfları [\w](#WordCharacter) sözcük karakteri eşleştirmek için veya [\p{} ](#CategoryOrBlock) bir Unicode kategorisinin eşleştirilecek dayanan <xref:System.Globalization.CharUnicodeInfo> bilgi sağlamak için sınıfı karakter kategorileri hakkında.  İle başlayarak [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], karakter kategorileri temel [Unicode standardı, sürüm 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] aracılığıyla [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], temel aldıkları [Unicode standardı, sürüm 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
-## <a name="positive-character-group--"></a>Pozitif Karakter Grubu: [ ]  
+## <a name="positive-character-group--"></a>Pozitif karakter grubu:]  
  Bir pozitif karakter grubu, eşleşme olabilmesi için giriş dizesinde bulunabilecek karakterlerin listesini belirtir. Bu karakterler tek tek, bir aralık olarak veya her iki şekilde de belirtilebilir.  
   
  Karakterlerin tek tek bulunduğu bir listeyi belirtmek için kullanılan söz dizimi aşağıdaki gibidir:  
@@ -107,10 +108,8 @@ ms.locfileid: "64634702"
 |`\w*`|Sıfır veya daha fazla sözcük karakteriyle eşleş.|  
 |`\b`|Bir sözcük sınırıyla eşleş.|  
   
- [Başa dön](#Top)  
-  
 <a name="NegativeGroup"></a>   
-## <a name="negative-character-group-"></a>Negatif Karakter Grubu: [^]  
+## <a name="negative-character-group-"></a>Negatif karakter grubu: [^]  
  Bir negatif karakter grubu, eşleşmenin gerçekleşmesi için giriş dizesinde bulunmaması gereken karakterlerin listesini belirtir. Karakter listesi tek tek, bir aralık olarak veya her iki şekilde de belirtilebilir.  
   
  Karakterlerin tek tek bulunduğu bir listeyi belirtmek için kullanılan söz dizimi aşağıdaki gibidir:  
@@ -154,10 +153,8 @@ ms.locfileid: "64634702"
 |`\w+`|Bir veya daha fazla sözcük karakteri eşleştir.|  
 |`\b`|Bir sözcük sınırında bit.|  
   
- [Başa dön](#Top)  
-  
 <a name="AnyCharacter"></a>   
-## <a name="any-character-"></a>Herhangi Bir Karakter: .  
+## <a name="any-character-"></a>Herhangi bir karakter:.  
  Nokta karakterini (.) dışında herhangi bir karakterle eşleşir `\n` (yeni satır karakteri, \u000A) aşağıdaki iki duruma sahip:  
   
 - Bir normal ifade deseni tarafından değiştirilirse <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> seçeneği veya deseni kısmı, içerip içermediğini `.` karakter sınıfı tarafından değiştirildiğinde `s` seçeneği `.` herhangi bir karakterle eşleşir. Daha fazla bilgi için bkz. [Normal İfade Seçenekleri](../../../docs/standard/base-types/regular-expression-options.md).  
@@ -178,10 +175,8 @@ ms.locfileid: "64634702"
 > [!NOTE]
 >  Herhangi bir karakterle eşleştiği için `.` bir normal ifade deseni herhangi bir karakterle birden çok kez eşleşmeye çalışıyorsa dil öğesi bir yavaş belirleyici ile birlikte sık kullanılır. Daha fazla bilgi için bkz [Miktar Belirleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
- [Başa dön](#Top)  
-  
 <a name="CategoryOrBlock"></a>   
-## <a name="unicode-category-or-unicode-block-p"></a>Unicode Category or Unicode Block: \p{}  
+## <a name="unicode-category-or-unicode-block-p"></a>Unicode category or Unicode block: \p{}  
  Unicode standardı her karakteri genel bir kategoriye atar. Örneğin, belirli bir karakterin büyük harf olabilir (tarafından temsil edilen `Lu` kategorisi), bir ondalık basamak ( `Nd` kategorisi), bir matematik sembolü ( `Sm` kategorisi), veya bir paragraf ayracı ( `Zl` kategorisi). Unicode standardındaki belirli karakter kümeleri ayrıca birbirini izleyen kod noktalarının belirli bir aralığını veya bloğunu kaplar. Örneğin, temel Latin karakter kümesi \u0000 ile \u007F arasındayken, Arapça karakter kümesi \u0600 ile \u06FF arasındadır.  
   
  Normal ifade yapısı  
@@ -209,8 +204,6 @@ ms.locfileid: "64634702"
 |`(\s)?`|Sıfır veya bir beyaz boşluk karakterini eşleştirin.|  
 |`(\p{IsBasicLatin}+(\s)?)+`|Bir veya daha fazla kere, bir veya daha fazla temel Latin karakterinin ardından sıfır veya bir boşluk karakteri deseniyle eşleş.|  
   
- [Başa dön](#Top)  
-  
 <a name="NegativeCategoryOrBlock"></a>   
 ## <a name="negative-unicode-category-or-unicode-block-p"></a>Negatif Unicode kategorisi veya Unicode bloğu: \P{}  
  Unicode standardı her karakteri genel bir kategoriye atar. Örneğin, belirli bir karakterin büyük harf olabilir (tarafından temsil edilen `Lu` kategorisi), bir ondalık basamak ( `Nd` kategorisi), bir matematik sembolü ( `Sm` kategorisi), veya bir paragraf ayracı ( `Zl` kategorisi). Unicode standardındaki belirli karakter kümeleri ayrıca birbirini izleyen kod noktalarının belirli bir aralığını veya bloğunu kaplar. Örneğin, temel Latin karakter kümesi \u0000 ile \u007F arasındayken, Arapça karakter kümesi \u0600 ile \u06FF arasındadır.  
@@ -228,10 +221,8 @@ ms.locfileid: "64634702"
   
  Normal ifade deseni `(\P{Sc})+` eşleşen karakterleri bir veya daha fazla para birimi sembolleri olmayan; etkili bir şekilde sonuç dizesinden tüm para birimi simgesini kaldırır.  
   
- [Başa dön](#Top)  
-  
 <a name="WordCharacter"></a>   
-## <a name="word-character-w"></a>Sözcük Karakteri: \w  
+## <a name="word-character-w"></a>Sözcük karakteri: \w  
  `\w` herhangi bir sözcük karakteri ile eşleşir. Bir sözcük karakteri, aşağıdaki tabloda listelenen Unicode kategorilerinin herhangi birinin üyesidir.  
   
 |Kategori|Açıklama|  
@@ -260,10 +251,8 @@ ms.locfileid: "64634702"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/wordchar1.cs#8)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/wordchar1.vb#8)]  
   
- [Başa dön](#Top)  
-  
 <a name="NonWordCharacter"></a>   
-## <a name="non-word-character-w"></a>Sözcük Olmayan Karakter: \W  
+## <a name="non-word-character-w"></a>Sözcük olmayan karakter: \W  
  `\W` herhangi bir sözcük olmayan karakterle eşleşir. \W dil öğesi aşağıdaki karakter sınıfıyla eşdeğerdir:  
   
 ```  
@@ -301,10 +290,8 @@ ms.locfileid: "64634702"
   
  Çünkü <xref:System.Text.RegularExpressions.Group> nesne ikinci yakalama grubu için yalnızca tek bir yakalanan sözcük olmayan karakter içeriyor, örnek tüm yakalanan sözcük olmayan karakterleri alır <xref:System.Text.RegularExpressions.CaptureCollection> tarafından döndürülen nesne <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> özelliği.  
   
- [Başa dön](#Top)  
-  
 <a name="WhitespaceCharacter"></a>   
-## <a name="white-space-character-s"></a>Boşluk Karakteri: \s  
+## <a name="whitespace-character-s"></a>Boşluk karakteri: \s  
  `\s` herhangi bir boşluk karakteri ile eşleşir. Aşağıdaki tabloda listelenen kaçış dizileri ve Unicode kategorileriyle eşdeğerdir.  
   
 |Kategori|Açıklama|  
@@ -332,10 +319,8 @@ ms.locfileid: "64634702"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
   
- [Başa dön](#Top)  
-  
 <a name="NonWhitespaceCharacter"></a>   
-## <a name="non-white-space-character-s"></a>Boşluk Olmayan Karakter: \S  
+## <a name="non-whitespace-character-s"></a>Boşluk olmayan karakter: \S  
  `\S` herhangi bir boşluk olmayan karakterle eşleşir. Eşdeğerdir `[^\f\n\r\t\v\x85\p{Z}]` normal ifade deseni ya da eşdeğer olan normal ifade deseninin tersidir `\s`, boşluk karakteri ile eşleşir. Daha fazla bilgi için [boşluk karakteri: \s](#WhitespaceCharacter).  
   
  ECMAScript uyumlu davranış belirtilirse, `\S` eşdeğerdir `[^ \f\n\r\t\v]`. ECMAScript normal ifadeler hakkında daha fazla bilgi için "ECMAScript eşleşme davranışı" bölümüne bakın. [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).  
@@ -351,10 +336,8 @@ ms.locfileid: "64634702"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nonwhitespace1.cs#11)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nonwhitespace1.vb#11)]  
   
- [Başa dön](#Top)  
-  
 <a name="DigitCharacter"></a>   
-## <a name="decimal-digit-character-d"></a>Ondalık Basamak Karakteri: \d  
+## <a name="decimal-digit-character-d"></a>Ondalık basamak karakteri: \d  
  `\d` herhangi bir ondalık basamakla eşleşir. Eşdeğerdir `\p{Nd}` standart 0-9 ondalık basamakların yanı sıra diğer karakter kümesi sayısı, ondalık basamak içeren normal ifade deseni.  
   
  ECMAScript uyumlu davranış belirtilirse, `\d` eşdeğerdir `[0-9]`. ECMAScript normal ifadeler hakkında daha fazla bilgi için "ECMAScript eşleşme davranışı" bölümüne bakın. [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).  
@@ -375,10 +358,8 @@ ms.locfileid: "64634702"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/digit1.cs#12)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/digit1.vb#12)]  
   
- [Başa dön](#Top)  
-  
 <a name="NonDigitCharacter"></a>   
-## <a name="non-digit-character-d"></a>Rakam Olmayan Karakter: \D  
+## <a name="non-digit-character-d"></a>Rakam olmayan karakter: \D  
  `\D` herhangi bir basamak olmayan karakterle eşleşir. Eşdeğerdir `\P{Nd}` normal ifade deseni.  
   
  ECMAScript uyumlu davranış belirtilirse, `\D` eşdeğerdir `[^0-9]`. ECMAScript normal ifadeler hakkında daha fazla bilgi için "ECMAScript eşleşme davranışı" bölümüne bakın. [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).  
@@ -396,10 +377,8 @@ ms.locfileid: "64634702"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nondigit1.cs#13)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nondigit1.vb#13)]  
   
- [Başa dön](#Top)  
-  
 <a name="SupportedUnicodeGeneralCategories"></a>   
-## <a name="supported-unicode-general-categories"></a>Desteklenen Unicode Genel Kategorileri  
+## <a name="supported-unicode-general-categories"></a>Desteklenen Unicode genel kategorileri  
  Unicode aşağıdaki tabloda listelenen genel kategorileri tanımlar. Daha fazla bilgi için bkz: "UCD dosya biçimi" ve "Genel kategori değerleri" alt konularına [Unicode karakter veritabanı](https://www.unicode.org/reports/tr44/).  
   
 |Kategori|Açıklama|  
@@ -447,11 +426,10 @@ ms.locfileid: "64634702"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/getunicodecategory1.cs#14)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/getunicodecategory1.vb#14)]  
   
- [Başa dön](#Top)  
-  
 <a name="SupportedNamedBlocks"></a>   
-## <a name="supported-named-blocks"></a>Desteklenen Adlandırılmış Bloklar  
- .NET aşağıdaki tabloda listelenen adlandırılmış blokları sağlar. Desteklenen adlandırılmış bloklar kümesi Unicode 4.0 ve Perl 5.6'yı temel alır.  
+## <a name="supported-named-blocks"></a>Desteklenen adlandırılmış bloklar
+
+.NET aşağıdaki tabloda listelenen adlandırılmış blokları sağlar. Desteklenen adlandırılmış bloklar kümesi Unicode 4.0 ve Perl 5.6'yı temel alır. Adlandırılmış blokları kullanan normal bir ifade için bkz: [Unicode kategorisi veya Unicode engelle: \\p{} ](#unicode-category-or-unicode-block-p) bölümü.  
   
 |Kod noktası aralığı|Blok adı|  
 |----------------------|----------------|  
@@ -561,10 +539,8 @@ ms.locfileid: "64634702"
 |FF00 - FFEF|`IsHalfwidthandFullwidthForms`|  
 |FFF0 - FFFF|`IsSpecials`|  
   
- [Başa dön](#Top)  
-  
 <a name="CharacterClassSubtraction"></a>   
-## <a name="character-class-subtraction-basegroup---excludedgroup"></a>Karakter Sınıfı Çıkarma: [base_group - [excluded_group]]  
+## <a name="character-class-subtraction-basegroup---excludedgroup"></a>Karakter sınıfı çıkarma: [base_group - [excluded_group]]  
  Bir karakter sınıfı bir karakter kümesini tanımlar. Karakter sınıfı çıkarma, bir karakter sınıfındaki karakterlerin başka bir karakter sınıfından dışlanmasının sonucu olan bir karakter kümesi döndürür.  
   
  Bir karakter sınıfı çıkarma ifadesi aşağıdaki biçime sahiptir:  

@@ -3,12 +3,12 @@ title: Null başvuru türleri için Tasarım
 description: Gelişmiş Bu öğretici, bir null başvuru türlerine giriş sağlar. Tasarımınız ne zaman başvuru değeri null ve boş olamaz yürüttüğünde derleyici sahip hedefi express öğreneceksiniz.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 289b864aaa0380a31e93ef223fb5b5780e35892a
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706136"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195843"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Öğretici: Null başvuru türleri ile mevcut kodu geçirme
 
@@ -49,8 +49,11 @@ Dil sürümü yükseltme seçer C# 8.0, ancak boş değer atanabilir bir ek aç�
 Boş değer atanabilir bir ek açıklama bağlama ve kaç uyarıları üretilir görmek için iyi bir sonraki adım var. Doğrudan altında hem csproj dosyalarına çözümünde, şu öğeyi ekleyin `LangVersion` öğesi:
 
 ```xml
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
+
+> [!IMPORTANT]
+> `Nullable` Öğe daha önce adlandırılmıştı `NullableContextOptions`. 16,2 p1, Visual Studio 2019 birlikte yeniden adlandırma verilir. .NET Core SDK'sı 3.0.100-preview5-011568 bu değişiklik yok. .NET Core CLI'yı kullanıyorsanız, kullanmanız gerekecektir `NullableContextOptions` kadar sonraki Önizleme kullanılabilir.
 
 Bir test derlemesini ve uyarı listesini dikkat edin. Bu küçük uygulamadaki derleyici beş uyarılar oluşturur, büyük olasılıkla, bırakabilir, bu nedenle boş değer atanabilir bir ek açıklamanın bağlamı etkin ve tüm proje uyarıları düzeltme başlatın.
 
@@ -58,7 +61,7 @@ Bu strateji daha küçük projeler için çalışır. Tüm daha büyük projeler
 
 ## <a name="warnings-help-discover-original-design-intent"></a>Özgün tasarım amacı keşfedin uyarılar Yardımı
 
-Birden çok uyarı üreten iki sınıf vardır. İle başlayan `NewsStoryViewModel` sınıfı. Kaldırma `NullableContextOptions` öğesi hem csproj dosyalarının uyarıları ile çalışırken kod bölümlerini kapsamını sınırlayabilirsiniz. Açık *NewsStoryViewModel.cs* dosya ve ekleme için boş değer atanabilir bir ek açıklamanın bağlamı'nı etkinleştirmek için aşağıdaki yönergeleri `NewsStoryViewModel` ve o sınıf tanımına aşağıdaki geri yükleyin:
+Birden çok uyarı üreten iki sınıf vardır. İle başlayan `NewsStoryViewModel` sınıfı. Kaldırma `Nullable` öğesi hem csproj dosyalarının uyarıları ile çalışırken kod bölümlerini kapsamını sınırlayabilirsiniz. Açık *NewsStoryViewModel.cs* dosya ve ekleme için boş değer atanabilir bir ek açıklamanın bağlamı'nı etkinleştirmek için aşağıdaki yönergeleri `NewsStoryViewModel` ve o sınıf tanımına aşağıdaki geri yükleyin:
 
 ```csharp
 #nullable enable

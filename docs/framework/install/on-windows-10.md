@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: c9499e44a6074525c634959e385ee91c03cdf9d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69c647e57dead3b4f61bb45202c6b039099f0499
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643926"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052171"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Windows 10 ve Windows Server 2016 ve sonraki sürümleri .NET Framework yükleme
 
@@ -52,7 +52,7 @@ Windows 10 1507 veya 1511 kullanıyorsanız ve .NET Framework 4.8 yüklemek iste
 
 ## <a name="net-framework-462"></a>.NET Framework 4.6.2
 
-[.NET Framework 4.6.2](https://www.microsoft.com/en-us/download/details.aspx?id=53345) en son desteklenen .NET Framework Windows 10 1507 ve 1511 sürümüdür.
+[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345) en son desteklenen .NET Framework Windows 10 1507 ve 1511 sürümüdür.
 
 .NET Framework 4.6.2, .NET Framework 4.0 4.6.2 aracılığıyla oluşturulan uygulamaları destekler.
 

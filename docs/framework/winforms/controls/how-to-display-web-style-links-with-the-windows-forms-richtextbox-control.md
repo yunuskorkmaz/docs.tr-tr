@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: faaa48051c80b6dfd330f15f72a38297ff2d1b9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05d9ad4766584b59cca7c31f49b737d4696a9921
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941589"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053535"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox Denetimi ile Web Stili Bağlantılar Görüntüleme
 Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi, Web bağlantıları görüntüleyebilir, renkli ve altı çizili olarak. Bağlantıya tıklandığında bağlantı metni belirtilen Web sitesi gösteren bir tarayıcı penceresi açılır kod yazabilirsiniz.  
@@ -74,13 +74,13 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi, Web bağlantıla
        }  
     ```  
   
-     ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) İşlemi başlatmalısınız `p`, formunuzu oluşturucuda aşağıdaki deyim ekleyerek yapabilirsiniz:  
+     (Visual C++) İşlem başlatmalıdır `p`, formunuzu oluşturucuda aşağıdaki deyim ekleyerek yapabilirsiniz:  
   
     ```cpp  
     p = gcnew System::Diagnostics::Process();  
     ```  
   
-     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.  
+     (Visual C#, Visual C++) Aşağıdaki kod, olay işleyicisi kaydetmek için formun oluşturucuda yerleştirin.  
   
     ```csharp  
     this.richTextBox1.LinkClicked += new   

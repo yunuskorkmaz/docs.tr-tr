@@ -1,15 +1,15 @@
 ---
-title: F#kodlama kuralları
+title: F# kodlama kuralları
 description: Genel yönergeler ve deyimleri yazılırken öğrenin F# kod.
 ms.date: 05/14/2018
-ms.openlocfilehash: 1ef016184180eb8d233295e8985903e07693ad26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b292d0a844a4d9efc79aa865b054b4af2cb68c4
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902141"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052794"
 ---
-# <a name="f-coding-conventions"></a>F#kodlama kuralları
+# <a name="f-coding-conventions"></a>F# kodlama kuralları
 
 Aşağıdaki kurallar ile büyük çalışma deneyiminden şeklide F# çıkabilirsiniz. [Beş iyi prensipleri F# kod](index.md#five-principles-of-good-f-code) önerilerin temelidir. İlişkili oldukları [ F# bileşen tasarım yönergeleri](component-design-guidelines.md), ancak için geçerli olan F# kod, kütüphane gibi değil yalnızca bileşenleri.
 
@@ -611,7 +611,7 @@ Bir sınıf için gerek olmadığından Visual Studio kod API'SİYLE etkileşim 
 
 ## <a name="type-abbreviations"></a>Tür Kısaltmaları
 
-[Tür kısaltmaları](../language-reference/type-abbreviations.md) işlev imzası veya daha karmaşık bir tür gibi başka bir tür için bir etiket atamak için kullanışlı bir yoludur. Örneğin, şu diğer ne olan hesaplamayı tanımlamak gerekli bir etiketi atar [CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/), kapsamlı bir kitaplık öğrenme:
+[Tür kısaltmaları](../language-reference/type-abbreviations.md) işlev imzası veya daha karmaşık bir tür gibi başka bir tür için bir etiket atamak için kullanışlı bir yoludur. Örneğin, şu diğer ne olan hesaplamayı tanımlamak gerekli bir etiketi atar [CNTK](https://docs.microsoft.com/cognitive-toolkit/), kapsamlı bir kitaplık öğrenme:
 
 ```fsharp
 open CNTK

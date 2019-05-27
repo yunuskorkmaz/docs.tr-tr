@@ -2,12 +2,12 @@
 title: Polly üstel geri alma ile HTTP çağrı yeniden denemelerini uygulama
 description: Polly ile HttpClientFactory HTTP hatalarını işlemek nasıl öğrenin.
 ms.date: 01/07/2019
-ms.openlocfilehash: f9f7c60792527c6bdba9a63b31e3dcbec2963da9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9ffb0d918dc2efdc41d6c2db2e2141d14061b687
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644572"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053110"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory ve Polly üstel geri alma ile HTTP çağrı yeniden uygulayın
 
@@ -15,7 +15,7 @@ Açık kaynak gibi daha gelişmiş .NET kitaplıkları yararlanmak için üstel 
 
 Polly esnekliği ve geçici hata işleme özellikleri sağlayan bir .NET Kitaplığı ' dir. Bu özellikler, yeniden deneme, devre kesici, bölme perdesi yalıtım, zaman aşımı ve geri dönüş gibi Polly ilkeleri uygulayarak uygulayabilirsiniz. Polly hedefleyen .NET 4.x ve .NET Standard kitaplığı (.NET Core destekleyen) 1.0.
 
-Ancak, kendi özel kodunuzu içeren HttpClient Polly'nın kitaplığı kullanarak önemli ölçüde karmaşık olabilir. Hizmetine özgün sürümünde oluştu bir [ResilientHttpClient Yapı Taşı](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10) Polly üzerinde temel. Ancak sürümüyle [HttpClientFactory](https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests), Http iletişimi için dayanıklı haline gelmiştir uygulamak, çok daha kolaydır, böylece yapı taşı hizmetine kullanım dışı bırakıldı. 
+Ancak, kendi özel kodunuzu içeren HttpClient Polly'nın kitaplığı kullanarak önemli ölçüde karmaşık olabilir. Hizmetine özgün sürümünde oluştu bir [ResilientHttpClient Yapı Taşı](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10) Polly üzerinde temel. Ancak sürümüyle [HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md), HTTP iletişimi için dayanıklı haline gelmiştir uygulamak, çok daha kolaydır, böylece yapı taşı hizmetine kullanım dışı bırakıldı. 
 
 Aşağıdaki adımlar, Http nasıl kullanabileceğinizi gösterir önceki bölümde açıklanan HttpClientFactory, yeniden denemeler Polly ile tümleştirilir.
 

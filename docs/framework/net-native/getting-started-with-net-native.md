@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b466b27925b41823ce3f6537782f3bd6201d5af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39d0066185703ebac7609d506c834b7718693d33
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868544"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052635"
 ---
 # <a name="getting-started-with-net-native"></a>.NET Yerel'i Kullanmaya Başlama
 
-Windows 10 için yeni bir Windows uygulaması yazmak ister mevcut bir Windows Store app geçiriyorsanız, aynı kümesini yordamları izleyebilirsiniz. Oluşturmak için bir [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulama, şu adımları izleyin:
+Windows 10 için yeni bir Windows uygulaması yazmak ister mevcut bir Windows Store app geçiriyorsanız, aynı kümesini yordamları izleyebilirsiniz. .NET yerel bir uygulama oluşturmak için aşağıdaki adımları izleyin:
 
 1. [Windows 10 hedefleyen Evrensel Windows Platformu (UWP) uygulaması geliştirme](#Step1)ve hata ayıklama derlemeleri düzgün çalıştığından emin olmak için uygulamanızı test.
 
@@ -24,7 +24,7 @@ Windows 10 için yeni bir Windows uygulaması yazmak ister mevcut bir Windows St
 4. [Meta veriler eksik el ile çözümlemeniz](#Step4)ve yineleme [3. adım](#Step3) tüm sorunlar çözülene kadar.
 
 > [!NOTE]
-> Mevcut bir Windows Store uygulamaya taşıyorsanız [!INCLUDE[net_native](../../../includes/net-native-md.md)], gözden geçirdiğinizden emin olun [geçirme bilgisayarınızı Windows Store uygulaması için .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).
+> Mevcut bir Windows Store app .NET Native geçiriyorsanız gözden geçirdiğinizden emin olun [geçirme bilgisayarınızı Windows Store uygulaması için .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).
 
 <a name="Step1"></a>
 
@@ -36,12 +36,12 @@ Yeni bir uygulama geliştirirken veya var olan bir geçiş olsun, herhangi bir W
 
 2. Bulunduğuna bazı bilinen uyumluluk sorunlarına olmadan .NET Native araç zinciri ile UWP uygulaması projelerini derleme arasında dikkat edin. Başvurmak [Geçiş Kılavuzu](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) daha fazla bilgi için.
 
-Artık C# veya Visual Basic kodu karşı yazabilirsiniz [!INCLUDE[net_native](../../../includes/net-native-md.md)] yüzey yerel sistem (veya simülatör) çalıştıran alan.
+Artık yazabilirsiniz C# veya Visual Basic kodunu çalıştıran yerel sistemin (veya simülatör) .NET Native yüzey alanını karşı.
 
 > [!IMPORTANT]
 > Uygulamanızı geliştirirken, serileştirme veya yansıtma kodunuzdaki herhangi bir kullanımına dikkat edin.
 
-Varsayılan olarak, JIT olarak derlenmiş sürüm yapıları kullanarak derlenen sırada hızlı F5 dağıtımı etkinleştirmek için hata ayıklama yapıları [!INCLUDE[net_native](../../../includes/net-native-md.md)] önceden derleme teknolojisi. Bunlar genellikle .NET Native araç zinciri ile derleme öncesinde çalışmasını sağlamak için uygulamanızı derleme ve hata ayıklama test anlamına gelir oluşturur.
+Varsayılan olarak, JIT olarak derlenmiş sürüm yapıları .NET Native önceden derleme teknolojisi kullanılarak derlenen sırada hızlı F5 dağıtımı etkinleştirmek için hata ayıklama yapıları. Bunlar genellikle .NET Native araç zinciri ile derleme öncesinde çalışmasını sağlamak için uygulamanızı derleme ve hata ayıklama test anlamına gelir oluşturur.
 
 <a name="Step2"></a>
 
@@ -85,13 +85,13 @@ Daha fazla bilgi için [API'leri, Bel yansıma](../../../docs/framework/net-nati
 
 Uygulamanızın düzgün çalışmıyorsa (özellikle burada oluşturur durumlarda [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) veya [Missingınteropdataexception](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) çalışma zamanında özel durumlar), sonraki'ndaki yönergeleri izleyin bölümünde, [4. adım: Meta veriler eksik el ile çözümlemeniz](#Step4). İlk fırsat özel durum etkinleştirme bu hataları bulmanıza yardımcı olabilir.
 
-Ne zaman, test ettiniz ve hata ayıklama hataları ayıklanabilir uygulamanızı oluşturur ve size anlaşılmış olur başarılara [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) ve [Missingınteropdataexception](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) test özel durumlar Uygulamanızı bir en iyi duruma getirilmiş olarak [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulama. Bunu yapmak için etkin proje yapılandırmanızı değiştirme **hata ayıklama** için **yayın**.
+Ne zaman, test ettiniz ve hata ayıklama hataları ayıklanabilir uygulamanızı oluşturur ve size anlaşılmış olur başarılara [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) ve [Missingınteropdataexception](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) test özel durumlar Uygulamanızı en iyi duruma getirilmiş bir .NET yerel uygulama olarak. Bunu yapmak için etkin proje yapılandırmanızı değiştirme **hata ayıklama** için **yayın**.
 
 <a name="Step4"></a>
 
 ## <a name="step-4-manually-resolve-missing-metadata"></a>4. Adım: Meta veriler eksik el ile çözümleme
 
-İle karşılaşacağınız en yaygın hata [!INCLUDE[net_native](../../../includes/net-native-md.md)] masaüstünde karşılaştığınız olmayan bir çalışma zamanıdır [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [Missingınteropdataexception](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), veya [ MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) özel durum. Bazı durumlarda, meta veri olmaması kendisini öngörülemeyen davranışlara veya hatta uygulama hataları bildirilebilir. Bu bölümde, nasıl hata ayıklama ve çalışma zamanı yönergeleri dosyasına yönergeleri ekleyerek bu özel durumları çözmek açıklanmaktadır. Çalışma zamanı yönergeleri biçimi hakkında daha fazla bilgi için bkz. [çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Çalışma zamanı yönergeleri ekledikten sonra yapmanız gerekenler [dağıtın ve uygulamanızı test](#Step3) yeniden ve tüm yeni çözmek [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [Missingınteropdataexception](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), ve [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) daha fazla özel durum yok karşılaştığınız kadar özel durumlar.
+.NET Masaüstü karşılaştığınız yoksa yerel ile karşılaşacağınız en yaygın bir çalışma zamanı hatasıdır [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [Missingınteropdataexception](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), veya [ MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) özel durum. Bazı durumlarda, meta veri olmaması kendisini öngörülemeyen davranışlara veya hatta uygulama hataları bildirilebilir. Bu bölümde, nasıl hata ayıklama ve çalışma zamanı yönergeleri dosyasına yönergeleri ekleyerek bu özel durumları çözmek açıklanmaktadır. Çalışma zamanı yönergeleri biçimi hakkında daha fazla bilgi için bkz. [çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Çalışma zamanı yönergeleri ekledikten sonra yapmanız gerekenler [dağıtın ve uygulamanızı test](#Step3) yeniden ve tüm yeni çözmek [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [Missingınteropdataexception](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), ve [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) daha fazla özel durum yok karşılaştığınız kadar özel durumlar.
 
 > [!TIP]
 > Uygulamanız için kod değişiklikleri dayanıklı olacak şekilde etkinleştirmek için çalışma zamanı yönergeleri yüksek bir düzeyde belirtin.  Ad alanı ve türü düzeyleri üye düzeyi yerine çalışma zamanı yönergeleri eklemenizi öneririz. Dayanıklılık ve büyük ikili dosyalarla uzun derleme sürelerini arasında bir denge olabileceğini unutmayın.
@@ -113,7 +113,7 @@ Eksik bir meta veri özel durum adresleme bu sorunları dikkate alın:
   - Kod, bazı daha iyi bir alternatif kullanılabilir olduğunda, yansıma bağımlı bir yöntem çağrısı mu?
 
 > [!NOTE]
-> Yansıma ve masaüstü uygulamalarında meta veri kullanılabilirliğini farklılıklar gelen kökü sorunlarını hakkında ek bilgi ve [!INCLUDE[net_native](../../../includes/net-native-md.md)], bakın [API'leri kullanan yansıma üzerinde](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).
+> Yansıma ve Masaüstü uygulamaları ve .NET Native meta verilerinde kullanılabilirliğini farklılıklar gelen kökü sorunlarını hakkında ek bilgi için bkz: [API'leri kullanan yansıma üzerinde](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).
 
 Özel durum ve uygulamanızı test ederken ortaya çıkan diğer sorunları işleme bazı belirli örnekler için bkz:
 

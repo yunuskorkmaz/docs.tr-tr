@@ -2,12 +2,12 @@
 title: Mikro hizmet adreslenebilirliği ve hizmet kayıt defteri
 description: Mikro hizmet mimarisi kapsayıcı görüntüsünü kayıt defterleri rolünü anlayın.
 ms.date: 09/20/2018
-ms.openlocfilehash: 5b601f19b60a8e989977e7135138add7644bd7b6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 756be4d7102d2d8ef36ffbf172b70b08872c028c
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639965"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196012"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>Mikro hizmet adreslenebilirliği ve hizmet kayıt defteri
 
@@ -15,7 +15,7 @@ Her mikro hizmet konumu çözümlemek için kullanılan benzersiz bir adı (URL)
 
 [Hizmet kayıt defteri düzeni](https://microservices.io/patterns/service-registry.html) hizmet bulma işleminin önemli bir parçasıdır. Kayıt defteri hizmeti örnekleri ağ konumlarını içeren bir veritabanıdır. Bir hizmet kayıt defteri yüksek oranda kullanılabilir ve güncel olması gerekir. İstemcileri, hizmet kayıt defterinden alınan ağ konumlarını önbelleğe alınamadı. Ancak, bu bilgileri sonunda güncel gider ve istemciler artık hizmet örnekleri bulabilir. Sonuç olarak, bir hizmet kayıt defteri tutarlılık sağlamak için bir çoğaltma protokolünü kullanan sunucularının bir kümesini içerir.
 
-(Bir sonraki bölümde ele alınacak kümeleri denir) bazı mikro hizmet dağıtım ortamlarında, hizmet bulma yerleşik olarak sunulmaktadır. Örneğin, bir Azure Container Service (AKS) Kubernetes ortamı ile hizmeti örneğinin kaydını işlemek ve kayıt kaldırma. Ayrıca bir proxy sunucu tarafı bulma yönlendirici rol oynar her küme ana bilgisayarında çalıştırır. Ayrıca, kullanıma hazır adlandırma hizmeti aracılığıyla bir hizmet kayıt defteri sağlayan Azure Service Fabric, başka bir örnektir.
+(Bir sonraki bölümde ele alınacak kümeleri denir) bazı mikro hizmet dağıtım ortamlarında, hizmet bulma yerleşik olarak sunulmaktadır. Örneğin, Azure Kubernetes Service (AKS) ortamı hizmeti örneğinin kaydını işlemek ve kayıt kaldırma. Ayrıca bir proxy sunucu tarafı bulma yönlendirici rol oynar her küme ana bilgisayarında çalıştırır. Ayrıca, kullanıma hazır adlandırma hizmeti aracılığıyla bir hizmet kayıt defteri sağlayan Azure Service Fabric, başka bir örnektir.
 
 Hizmet kayıt defteri ve yardımcı olan de bu sorunu çözmek API ağ geçidi düzeni arasında belirli çakışma olduğuna dikkat edin. Örneğin, [Service Fabric Reverse Proxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) API yardımcı olan adres çözümlemesi için dahili Hizmet çözmek ve Service Fabric adlandırma ağ geçidi üzerinde temel ağ geçidi uygulaması türüdür.
 

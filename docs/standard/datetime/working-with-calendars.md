@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed276d8026201af94a0259c4258d5c50fa67c0f3
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026490"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053237"
 ---
 # <a name="working-with-calendars"></a>Takvimlerle çalışma
 
@@ -141,7 +141,7 @@ Takvimler genellikle tarihleri dönemlere ayırır. Ancak, <xref:System.Globaliz
 >  Reiwa dönemi, yeni bir dönemde <xref:System.Globalization.JapaneseCalendar> ve <xref:System.Globalization.JapaneseLunisolarCalendar>, 1 Mayıs 2019 üzerinde başlar. Bu değişiklik bu takvimler kullanan tüm uygulamaları etkiler. Daha fazla bilgi için aşağıdaki makalelere bakın:
 > - [. NET'te Japonca takvimde yeni bir dönemi işleme](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), hangi desteklemek için. NET'e eklenen özellikler belgeleri ile birden çok dönemi takvimler ve birden çok dönemi takvimler işlerken kullanılacak en iyi uygulamalar ele alınmaktadır.
 > - [Uygulamanız için Japonca era değişikliği hazırlama](/windows/uwp/design/globalizing/japanese-era-change), dönem değiştirmek için kendi hazırlık emin olmak için Windows üzerinde uygulamalarınızı test etme hakkında bilgi sağlar.
-> - [Yeni Japonca dönemi özeti için .NET Framework güncelleştirmeleri](https://support.microsoft.com/en-us/help/4477957/new-japanese-era-updates-for-net-framework), yeni Japonca takvimi dönemi ilgili ayrı Windows sürümleri için .NET Framework güncelleştirmeleri listeleyen birden çok dönemi desteği için .NET Framework yenilikleri notlar ve içerir uygulamalarınızı test etme aranacak şeyler.
+> - [Yeni Japonca dönemi özeti için .NET Framework güncelleştirmeleri](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework), yeni Japonca takvimi dönemi ilgili ayrı Windows sürümleri için .NET Framework güncelleştirmeleri listeleyen birden çok dönemi desteği için .NET Framework yenilikleri notlar ve içerir uygulamalarınızı test etme aranacak şeyler.
 
 Çoğu takvimler bir dönemde son derece uzun bir süre gösterir. Gregoryen takvimindeki, örneğin, birden fazla iki bin geçerli dönem yayılır. İçin <xref:System.Globalization.JapaneseCalendar> ve <xref:System.Globalization.JapaneseLunisolarCalendar>, birden çok dönemi destekleyen iki takvimler, bu durum geçerli değildir. Bir dönem için bir ın İmparatorluk dönemin karşılık gelir. Geçerli dönem sayısı üst sınırı bilinmeyen olduğunda özellikle birden çok dönemi için destek, özel zorlukları doğurur. 
 

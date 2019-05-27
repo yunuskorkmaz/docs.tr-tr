@@ -2,12 +2,12 @@
 title: İlişkisel veritabanlarınızı azure'a geçirin
 description: Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | İlişkisel veritabanlarınızı azure'a geçirin
 ms.date: 04/28/2018
-ms.openlocfilehash: 1c09172f0948551edfe059be6f43d7a02278203d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3d4f03e61144bb6a442a50916d7fd024d38ec611
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638888"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051931"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>İlişkisel veritabanlarınızı azure'a geçirin
 
@@ -81,7 +81,7 @@ Standart Azure SQL veritabanı PaaS için Azure SQL veritabanı yönetilen örne
 
 Geçiş seçeneklerinizi benzer sunucuya bir Azure sanal makinesinde çalıştırılan Oracle, IBM DB2, MySQL, PostgreSQL veya SQL Server dahil olmak üzere, özgün ilişkisel veritabanı yönetim sistemi (RDBMS) taşımak için biridir. Hiç olası en az değişiklikle veya hiç değişiklik ile buluta hızlı geçiş gerektiren uygulamalarınız varsa, doğrudan geçiş için Iaas bulutta adil bir seçenek olabilir. Bulutun tüm avantajlarından yararlanmak için en iyi yolu olmayabilir, ancak bu hızlı başlangıç yolu olabilir.
 
-Şu anda Microsoft Azure'ı kadar destekler [331 farklı veritabanı sunucuları](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all) Iaas Vm'leri olarak dağıtılabilir. Bunlar, SQL Server, Oracle, MySQL, PostgreSQL ve IBM DB2 gibi popüler RDBMS ve MongoDB, Cassandra, DataStax, MariaDB ve Cloudera gibi diğer birçok NoSQL veritabanlarını içerir.
+Şu anda Microsoft Azure'ı kadar destekler [331 farklı veritabanı sunucuları](https://azuremarketplace.microsoft.com/marketplace/apps/category/databases?page=1&subcategories=databases-all) Iaas Vm'leri olarak dağıtılabilir. Bunlar, SQL Server, Oracle, MySQL, PostgreSQL ve IBM DB2 gibi popüler RDBMS ve MongoDB, Cassandra, DataStax, MariaDB ve Cloudera gibi diğer birçok NoSQL veritabanlarını içerir.
 
 > [!NOTE]
 > Taşıma olsa da (Iaas olduğundan) verilerinizi buluta taşımak için en hızlı yolu, bir RDBMS'de Azure VM'ye olabilir, bu yaklaşım, BT ekiplerinin (Veritabanı yöneticileri ve BT uzmanları) önemli bir yatırım gerektirir. Kurumsal takımlar ayarlamak ve yüksek kullanılabilirlik, olağanüstü durum kurtarma ve SQL Server için düzeltme yönetmek gerekir. Bu bağlam, tam yönetici haklarına sahip özelleştirilmiş bir ortama da gerekir.

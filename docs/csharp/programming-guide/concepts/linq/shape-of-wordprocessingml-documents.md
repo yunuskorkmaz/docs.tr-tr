@@ -2,12 +2,12 @@
 title: (C#) WordprocessingML belgelerinin şekli
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: 4c034950006b7ce09ad03e4579cc298f0b2dd218
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f91e324e14e7cb3bb3912ebfab78daba71d5aae8
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61711547"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052223"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>(C#) WordprocessingML belgelerinin şekli
 Bu konu, WordprocessingML belgesinin XML şeklini tanıtır.  
@@ -92,7 +92,7 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
  [WordprocessingML genel bakış](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29)  
  [WordProcessingML dosya anatomisi](http://officeopenxml.com/anatomyofOOXML.php)  
  [WordprocessingML giriş](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)  
- [Office 2003: XML şemaları başvuru indirme sayfası](https://www.microsoft.com/en-us/download/details.aspx?id=101)  
+ [Office 2003: XML şemaları başvuru indirme sayfası](https://www.microsoft.com/download/details.aspx?id=101)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

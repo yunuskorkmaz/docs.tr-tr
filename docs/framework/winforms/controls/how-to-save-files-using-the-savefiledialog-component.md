@@ -11,12 +11,12 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 933e049f825bcc8f2afef914f810b52c1cf51245
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 18d9b93b78d3ed588eafa48831448983ccd61fe8
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638300"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053505"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>Nasıl yapılır: SaveFileDialog Bileşenini Kullanarak Dosyaları Kaydetme
 <xref:System.Windows.Forms.SaveFileDialog> Bileşen, dosya sistemi ve kaydedilecek dosyaları seçmek kullanıcıların sağlar. İletişim kutusu iletişim kutusunda kullanıcının seçtiği dosya adını ve yolunu döndürür. Ancak, gerçekte dosyaları diske yazmak için kod yazmanız gerekir.  
@@ -161,7 +161,7 @@ ms.locfileid: "64638300"
        }  
     ```  
   
-     (Visual C# ve [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.  
+     (Visual C# ve görsel C++) Aşağıdaki kod, olay işleyicisi kaydetmek için formun oluşturucuda yerleştirin.  
   
     ```csharp  
     this.button2.Click += new System.EventHandler(this.button2_Click);  

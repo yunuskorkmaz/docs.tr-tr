@@ -2,12 +2,12 @@
 title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 description: Gerçek üretimde uygulamaların dağıtılması ve sistem durumu, iş yükü ve tüm kapsayıcıların yaşam döngüsü işleyen düzenleyicilerle yönetilen gerekir.
 ms.date: 02/15/2019
-ms.openlocfilehash: 6cb41e632db7c7c6b9412bf54d2efeb44deee80f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: bde9a2815d0496608b3172582481c169cab37f04
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644721"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195647"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 
@@ -70,7 +70,7 @@ Geliştirme ortamında, [Temmuz 2018'de duyurulan Docker](https://blog.docker.co
 
 ## <a name="get-started-with-azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS) ile çalışmaya başlama
 
-AKS'ı kullanmaya başlamak için Azure portalından veya CLI kullanarak bir AKS kümesi dağıtın. Bir Azure Container Service kümesi dağıtma hakkında daha fazla bilgi için bkz. [Azure Kubernetes Service (AKS) kümesini dağıtma](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
+AKS'ı kullanmaya başlamak için Azure portalından veya CLI kullanarak bir AKS kümesi dağıtın. Azure'da bir Kubernetes kümesi dağıtma hakkında daha fazla bilgi için bkz. [Azure Kubernetes Service (AKS) kümesini dağıtma](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
 
 Herhangi birini varsayılan olarak, AKS bir parçası olarak yüklenen yazılım için herhangi bir ücret yoktur. Tüm varsayılan seçenekleri ile açık kaynaklı yazılım uygulanır. AKS, azure'da birden çok sanal makine için kullanılabilir. Yalnızca seçtiğiniz işlem örnekleri yanı sıra, depolama ve ağ gibi kullanılan temel altyapı kaynakları için ücret ödersiniz. AKS kendisi için artımlı ücretlendirme yoktur.
 

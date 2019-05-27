@@ -2,12 +2,12 @@
 title: Kapsayıcı uygulamaları için Microsoft platformu ve araçlarına giriş
 description: Docker uygulama yaşam döngüsü desteklemek için Microsoft'un teklifleri tanışın.
 ms.date: 02/15/2019
-ms.openlocfilehash: 9e7e821370b98fbda9af0ea69c13eaeab2f35acf
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6907528a5d7ff354a312e7575531b9c608cb479f
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644901"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195591"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Microsoft Platformu ve araçları kapsayıcılı uygulamalar için giriş
 
@@ -27,8 +27,8 @@ Tablo 3-1 kapsayıcılı Docker uygulamaları için Microsoft DevOps amacınıza
 
 | Ana bilgisayar | Microsoft teknolojileri | Üçüncü taraf: Azure eklenebilir |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
-| Docker uygulamaları için Platform   | • Microsoft Visual Studio ve Visual Studio Code<br /> • .NET<br /> • Microsoft Azure kapsayıcı hizmeti<br /> • Azure Service Fabric<br /> • Azure kapsayıcı kayıt defteri<br /> | • Herhangi bir kod Düzenleyicisi (örneğin, Sublime)<br /> • Herhangi bir dile (Node.js, Java, Go, vb.)<br /> • Herhangi bir orchestrator ve Zamanlayıcı<br /> • Any Docker registry<br /> |
-| Docker uygulamaları için DevOps     | • Azure DevOps Hizmetleri<br /> • Microsoft Team Foundation Server<br /> • Azure kapsayıcı hizmeti<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion, vs.<br /> • Jenkins, Chef, Puppet, hız, CircleCI, Travis CI, vs.<br /> • Şirket içi Docker Datacenter, Docker Swarm, Mesos DC/OS, Kubernetes, vs.<br /> |
+| Docker uygulamaları için Platform   | • Microsoft Visual Studio ve Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Kubernetes Service'i (AKS)<br /> • Azure Service Fabric<br /> • Azure kapsayıcı kayıt defteri<br /> | • Herhangi bir kod Düzenleyicisi (örneğin, Sublime)<br /> • Herhangi bir dile (Node.js, Java, Go, vb.)<br /> • Herhangi bir orchestrator ve Zamanlayıcı<br /> • Any Docker registry<br /> |
+| Docker uygulamaları için DevOps     | • Azure DevOps Hizmetleri<br /> • Microsoft Team Foundation Server<br /> • Azure Kubernetes Service'i (AKS)<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion, vs.<br /> • Jenkins, Chef, Puppet, hız, CircleCI, Travis CI, vs.<br /> • Şirket içi Docker Datacenter, Docker Swarm, Mesos DC/OS, Kubernetes, vs.<br /> |
 | Yönetim ve izleme  | • Azure izleme | • Marathon, Chronos, vb.<br />|
 
 Microsoft Platformu ve kapsayıcılı Docker uygulamaları için Araçlar Tablo 3-1'de tanımlandığı gibi aşağıdaki bileşenler oluşturan:
@@ -37,7 +37,7 @@ Microsoft Platformu ve kapsayıcılı Docker uygulamaları için Araçlar Tablo 
 
 - **Docker uygulamaları için DevOps** Docker uygulama oluşturan geliştiricilere kullanabileceğiniz [Azure DevOps Hizmetleri](https://azure.microsoft.com/services/devops/) ya da başka üçüncü taraf bir ürün, bir kapsamlı otomatik uygulama yaşam döngüsü oluşturmak için Jenkins gibi Yönetimi (ALM).
 
-  Azure DevOps hizmetleriyle kapsayıcı odaklı geliştiriciler oluşturabilir, kaynak kodu kapsayan hızlı, yinelemeli bir işlem için DevOps denetim her yerden (Azure DevOps Hizmetleri-Gıt, GitHub, herhangi bir uzak Git deposu veya Subversion) sürekli tümleştirme (CI) , iç birim testleri, arası container/hizmet tümleştirme testleri, sürekli teslim (CD) ve sürüm Yönetimi'ni (RM). Geliştiricilerin kendi Docker uygulama sürümlerin içindeki Azure Container Service, geliştirme, hazırlama ve üretim ortamları için de otomatik hale getirebilirsiniz.
+  Azure DevOps hizmetleriyle kapsayıcı odaklı geliştiriciler oluşturabilir, kaynak kodu kapsayan hızlı, yinelemeli bir işlem için DevOps denetim her yerden (Azure DevOps Hizmetleri-Gıt, GitHub, herhangi bir uzak Git deposu veya Subversion) sürekli tümleştirme (CI) , iç birim testleri, arası container/hizmet tümleştirme testleri, sürekli teslim (CD) ve sürüm Yönetimi'ni (RM). Geliştiriciler, geliştirme, hazırlama ve üretim ortamları için Azure Kubernetes Service (AKS) uygulamasına Docker uygulama sürümleri de otomatik hale getirebilirsiniz.
 
 - **Yönetim ve izleme** BT yönetebilir ve üretim uygulamalarınızda ve hizmetlerinizde birleştirilmiş bir deneyim hem açılardan tümleştirme çeşitli şekillerde izleyebilirsiniz.
 

@@ -2,12 +2,12 @@
 title: Basit bir veri temelli CRUD mikro hizmeti oluşturma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Basit bir CRUD (Veri odaklı) oluşturulmasını anlamak bir mikro Hizmetler uygulaması bağlamında mikro hizmet.
 ms.date: 01/07/2019
-ms.openlocfilehash: 5dd7154fc81c7d0c3fb78bce662ea822f2392a10
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 53aba727c8dae35df8b34bc1558c0cc390fe2014
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644419"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053563"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Basit bir veri temelli CRUD mikro hizmeti oluşturma
 
@@ -321,7 +321,7 @@ Apı'leriniz için Swagger meta verileri oluşturmak için temel neden aşağıd
 
 - [AutoRest](https://github.com/Azure/AutoRest). Swagger'ı çağırmak için .NET istemci sınıfları otomatik olarak oluşturabilirsiniz. Bu aracı CLI üzerinden kullanılabilir ve GUI aracılığıyla kolay kullanım için de Visual Studio ile tümleştirilir.
 
-- [Microsoft Flow](https://flow.microsoft.com/en-us/). Otomatik olarak [kullanın ve API'nizi tümleştirme](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) üst düzey bir Microsoft Flow iş akışınıza olmadan programlama becerileri gerekir.
+- [Microsoft Flow](https://flow.microsoft.com/). Otomatik olarak [kullanın ve API'nizi tümleştirme](https://flow.microsoft.com/blog/integrating-custom-api/) üst düzey bir Microsoft Flow iş akışınıza olmadan programlama becerileri gerekir.
 
 - [Microsoft PowerApps](https://powerapps.microsoft.com/). Otomatik olarak, API'SİNDEN tüketebileceği [PowerApps mobil uygulamalar](https://powerapps.microsoft.com/blog/register-and-use-custom-apis-in-powerapps/) ile oluşturulmuş [PowerApps Studio](https://powerapps.microsoft.com/build-powerapps/), gerekli herhangi bir programlama becerilerine sahip.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: cfe3b413506aa1383bbdaa9a89ffe42e3724a4a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 589bb205b10a5b7b0c4480393b8937e0df36022f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61679238"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052394"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Birlikte Çalışabilirliğe Genel Bakış (C# Programlama Kılavuzu)
 Konu C# yönetilen kod ve yönetimsiz kod arasındaki birlikte çalışabilirliği sağlamak için yöntemleri açıklar.  
@@ -28,7 +28,7 @@ Konu C# yönetilen kod ve yönetimsiz kod arasındaki birlikte çalışabilirli�
 >  [Ortak dil çalışma zamanı](../../../standard/clr.md) (CLR) sistem kaynaklarına erişimi yönetir. Dışında CLR yönetilmeyen kod çağırmak bu güvenlik mekanizmasını atlar ve bu nedenle güvenlik riski oluşturur. Örneğin, yönetilmeyen kod yönetilmeyen kodda doğrudan CLR güvenlik mekanizmaları atlayarak kaynakları çağırabilirsiniz. Daha fazla bilgi için [.NET içinde güvenlik](../../../standard/security/index.md).  
   
 ## <a name="c-interop"></a>C++ Birlikte Çalışma  
- C++ birlikte çalışması, olarak da bilinir, yalnızca çalışır (IJW), yerel bir C++ sınıfı C# veya başka bir .NET Framework dilde yazılan kod tarafından tüketilebilir böylece sarmalamak için kullanabilirsiniz. Bunu yapmak için yerel bir DLL veya COM bileşeni sarmalamak için C++ kod yazın. Diğer .NET Framework dillerinde aksine [!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] birlikte çalışabilirlik sağlar yönetilen ve yönetilmeyen kod aynı uygulama ve hatta aynı dosyanın bulunduğu desteği vardır. Ardından kullanarak C++ kodu derleme **/CLR** yönetilen bir bütünleştirilmiş kod üretmek için derleyici anahtarı. Son olarak, C# projenize derlemesine bir başvuru ekleyin ve diğer yönetilen sınıfları kullanırken Sarmalanan nesneleri kullanın.  
+ C++ birlikte çalışması, olarak da bilinir, yalnızca çalışır (IJW), yerel bir C++ sınıfı C# veya başka bir .NET Framework dilde yazılan kod tarafından tüketilebilir böylece sarmalamak için kullanabilirsiniz. Bunu yapmak için yerel bir DLL veya COM bileşeni sarmalamak için C++ kod yazın. Diğer .NET Framework dillerinde Visual aksine C++ birlikte çalışabilirlik sağlar yönetilen ve yönetilmeyen kod aynı uygulama ve hatta aynı dosyanın bulunduğu desteği vardır. Ardından kullanarak C++ kodu derleme **/CLR** yönetilen bir bütünleştirilmiş kod üretmek için derleyici anahtarı. Son olarak, C# projenize derlemesine bir başvuru ekleyin ve diğer yönetilen sınıfları kullanırken Sarmalanan nesneleri kullanın.  
   
 ## <a name="exposing-com-components-to-c"></a>C için COM bileşenlerini gösterme\#
  Bir C# projeden bir COM bileşeni kullanabilir. Genel adımlar aşağıdaki gibidir:  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d20ce0f09309c84dcbeb016e0f17c37fe338dd9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7726164e998ea917c8f539b5768aa7e3f1ae12c
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026152"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053206"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Kültüre Duyarsız Dize Karşılaştırmalarını Gerçekleştirme
 Varsayılan olarak, <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntemi kültüre duyarlı ve büyük küçük harfe duyarlı karşılaştırmalar yapar. Bu yöntem sağlayan çeşitli tekrar yüklemeler de içerir. bir `culture` kullanılacak kültürü belirtmenize olanak sağlar. parametre ve bir `comparisonType` parametre kullanılacak karşılaştırma kurallarını belirtmenizi sağlar. Varsayılan tekrar yükleme yerine bu yöntemleri çağırmak, belirli bir yöntem çağrısında kullanılan kurallarla ilgili tüm belirsizlikleri kaldırır ve belirli bir karşılaştırmanın kültüre duyarlı veya kültüre duyarsız olduğunu netleştirir.  
@@ -39,7 +39,7 @@ Varsayılan olarak, <xref:System.String.Compare%2A?displayProperty=nameWithType>
  [!code-csharp[Conceptual.Strings.CultureInsensitiveComparison#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.cultureinsensitivecomparison/cs/cultureinsensitive1.cs#1)]
  [!code-vb[Conceptual.Strings.CultureInsensitiveComparison#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.cultureinsensitivecomparison/vb/cultureinsensitive1.vb#1)]  
 
-İndirebileceğiniz [sıralama ağırlık tabloları](https://www.microsoft.com/en-us/download/details.aspx?id=10921), sıralama ve karşılaştırma işlemlerinde Windows işletim sistemleri için kullanılan karakter ağırlıkları hakkında bilgi içeren metin dosyalarını bir dizi ve [varsayılan Unicode Harmanlama öğesi tablosu](https://www.unicode.org/Public/UCA/latest/allkeys.txt), Linux ve macOS için sıralama ağırlık tablosu.
+İndirebileceğiniz [sıralama ağırlık tabloları](https://www.microsoft.com/download/details.aspx?id=10921), sıralama ve karşılaştırma işlemlerinde Windows işletim sistemleri için kullanılan karakter ağırlıkları hakkında bilgi içeren metin dosyalarını bir dizi ve [varsayılan Unicode Harmanlama öğesi tablosu](https://www.unicode.org/Public/UCA/latest/allkeys.txt), Linux ve macOS için sıralama ağırlık tablosu.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

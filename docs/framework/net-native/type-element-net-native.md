@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a92e6627ba937b10b183a833a005792f0a51f921
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d5541cc34f8967916e4896fd5f9be82edcb332f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033131"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051990"
 ---
 # <a name="type-element-net-native"></a>\<Türü > öğesi (.NET yerel)
 Çalışma zamanı İlkesi, bir sınıf veya yapı gibi belirli bir tür için geçerlidir.  
@@ -45,9 +45,9 @@ ms.locfileid: "62033131"
 |`DataContractSerializer`|Serileştirme|İsteğe bağlı öznitelik. Denetimleri İlkesi kullanan Serileştirmenin <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> sınıfı.|  
 |`DataContractJsonSerializer`|Serileştirme|İsteğe bağlı öznitelik. İlke kullanan bir JSON serileştirme denetleyen <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> sınıfı.|  
 |`XmlSerializer`|Serileştirme|İsteğe bağlı öznitelik. İlke kullanan bir XML serileştirme denetleyen <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> sınıfı.|  
-|`MarshalObject`|Birlikte çalışma|İsteğe bağlı öznitelik. Windows çalışma zamanı ve COM başvuru türlerini hazırlama denetimleri İlkesi|  
-|`MarshalDelegate`|Birlikte çalışma|İsteğe bağlı öznitelik. Yerel kod için işlev işaretçileri olarak temsilci türleri hazırlama için ilke denetler.|  
-|`MarshalStructure`|Birlikte çalışma|İsteğe bağlı öznitelik. Yerel kod için değer türlerini hazırlama için ilke denetler.|  
+|`MarshalObject`|Interop|İsteğe bağlı öznitelik. Windows çalışma zamanı ve COM başvuru türlerini hazırlama denetimleri İlkesi|  
+|`MarshalDelegate`|Interop|İsteğe bağlı öznitelik. Yerel kod için işlev işaretçileri olarak temsilci türleri hazırlama için ilke denetler.|  
+|`MarshalStructure`|Interop|İsteğe bağlı öznitelik. Yerel kod için değer türlerini hazırlama için ilke denetler.|  
   
 ## <a name="name-attribute"></a>Ad özniteliği  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62033131"
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
- Çünkü meta verilerini <xref:System.Collections.Generic.List%601> sınıfı değil otomatik olarak dahil [!INCLUDE[net_native](../../../includes/net-native-md.md)] örnek araç zinciri, başarısız çalışma zamanında istenen üye bilgilerini görüntülemek. Gerekli meta verilerini sağlamak için aşağıdaki ekleyin `<Type>` çalışma zamanı yönergeleri dosyasının öğesi. Bir üst sağladık, dikkat edin çünkü [< Namespace\> ](../../../docs/framework/net-native/namespace-element-net-native.md) öğesi, biz tam olarak nitelenmiş tür adları sağlamak zorunda değilsiniz `<Type>` öğesi.  
+ Çünkü meta verilerini <xref:System.Collections.Generic.List%601> sınıfı .NET Native araç zinciri tarafından otomatik olarak dahil değil, çalışma zamanında istenen üye bilgilerini görüntülemek örnek başarısız olur. Gerekli meta verilerini sağlamak için aşağıdaki ekleyin `<Type>` çalışma zamanı yönergeleri dosyasının öğesi. Bir üst sağladık, dikkat edin çünkü [< Namespace\> ](../../../docs/framework/net-native/namespace-element-net-native.md) öğesi, biz tam olarak nitelenmiş tür adları sağlamak zorunda değilsiniz `<Type>` öğesi.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -120,7 +120,7 @@ ms.locfileid: "62033131"
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   
- Çünkü meta verilerini <xref:System.String> nesne kullanılamaz çağrısı <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntem bir <xref:System.NullReferenceException> çalıştırmada özel durum ile derlendikleri zaman zaman [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri. Özel durum ortadan kaldırabilir ve gerekli meta verilerini sağlamak için aşağıdaki ekleyin `<Type>` çalışma zamanı yönergeleri dosyasının öğe:  
+ Çünkü meta verilerini <xref:System.String> nesne kullanılamaz çağrısı <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntem bir <xref:System.NullReferenceException> çalıştırmada özel durum .NET yerel araç zinciriyle derlendiğinde zaman. Özel durum ortadan kaldırabilir ve gerekli meta verilerini sağlamak için aşağıdaki ekleyin `<Type>` çalışma zamanı yönergeleri dosyasının öğe:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
