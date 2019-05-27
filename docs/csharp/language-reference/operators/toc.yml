@@ -18,7 +18,7 @@
       displayName: '>, <, >=, <=, greater, less'
     - name: Üye erişimi işleçleri
       href: member-access-operators.md
-      displayName: '., [], ?., ?[], (), indexer, null-conditional, invocation'
+      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
     - name: İşaretçi bağlantılı işleçler
       href: pointer-related-operators.md
       displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
