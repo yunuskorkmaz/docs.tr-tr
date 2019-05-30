@@ -29,15 +29,16 @@
     - name: + and += işleçleri
       href: addition-operator.md
       displayName: 'string concatenation, delegate combination, event subscription'
-    - name: '- operator'
+    - name: '- and -= işleçleri'
       href: subtraction-operator.md
+      displayName: 'delegate removal, event unsubscription'
     - name: = işleci
       href: assignment-operator.md
     - name: '?: işleci'
       href: conditional-operator.md
-    - name: '-= işleci'
-      href: subtraction-assignment-operator.md
     - name: '?? operator'
       href: null-coalescing-operator.md
     - name: => işleci
       href: lambda-operator.md
+    - name: true ve false işleçleri
+      href: true-false-operators.md
