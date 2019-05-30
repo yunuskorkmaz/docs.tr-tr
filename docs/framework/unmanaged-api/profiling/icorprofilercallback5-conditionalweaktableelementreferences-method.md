@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fd904ba03fd5c652b1e5e5c7f763dab2b80e517
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 08b35dd1744dbbb64d202718b61a9db5684d3bc3
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636653"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380357"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences Yöntemi
 
@@ -82,7 +82,7 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bir profil oluşturucu için [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] veya üzeri sürümleri uygular [Icorprofilercallback5](icorprofilercallback5-interface.md) arabirimi ve kayıtları tarafından belirtilen bağımlılıkları `ConditionalWeakTableElementReferences` yöntemi. `ICorProfilerCallback5` tarafından temsil edilen Canlı nesneler arasındaki bağımlılıklar kümesinin tamamını sunar `ConditionalWeakTable` girdileri. Bu bağımlılıklar ve üye başvuruları tarafından belirtilen alan [Icorprofilercallback::objectreferences](icorprofilercallback-objectreferences-method.md) yöntemi Canlı nesnelerin tam nesne grafiği oluşturmak yönetilen profil oluşturucu etkinleştirin.
+Bir profil oluşturucu .NET Framework 4.5 veya üzeri sürümleri uygular [Icorprofilercallback5](icorprofilercallback5-interface.md) arabirimi ve kayıtları tarafından belirtilen bağımlılıkları `ConditionalWeakTableElementReferences` yöntemi. `ICorProfilerCallback5` tarafından temsil edilen Canlı nesneler arasındaki bağımlılıklar kümesinin tamamını sunar `ConditionalWeakTable` girdileri. Bu bağımlılıklar ve üye başvuruları tarafından belirtilen alan [Icorprofilercallback::objectreferences](icorprofilercallback-objectreferences-method.md) yöntemi Canlı nesnelerin tam nesne grafiği oluşturmak yönetilen profil oluşturucu etkinleştirin.
 
 ## <a name="requirements"></a>Gereksinimler
 

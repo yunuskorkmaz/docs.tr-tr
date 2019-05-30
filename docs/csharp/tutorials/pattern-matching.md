@@ -3,12 +3,12 @@ title: Veri türlerini genişletmek için desen eşleştirme özelliklerini kull
 description: Gelişmiş Bu öğretici, verileri ve ayrı oluşturulur algoritmaları kullanarak işlevi oluşturmak için desen eşleştirme teknikleri kullanmayı gösterir.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 5fdd65fdb96cce05f15872969bbdd401095b59e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58e4a9175752c7845507f48a3684747092dc609a
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706227"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378076"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Öğretici: Veri türlerini genişletmek için özellikler desen kullanma
 
@@ -35,7 +35,7 @@ Uygulamanızdaki her veri türü bu birden çok veri kaynağından temsil eden t
 
 Bu öğreticide, oluşturun ve tek bir senaryo için çeşitli dış kaynaklardan gelen verileri alan bir uygulama keşfedin. Göreceğiniz nasıl **desen eşleştirme** kullanır ve bu verileri özgün sisteminin bir parçası olmayan bir şekilde işlemek için etkili bir yol sağlar.
 
-Trafiği yönetmek için ücretli geçişler ve en yüksek süre fiyatlandırma kullanarak büyük bir metro alan göz önünde bulundurun. Ücretli geçişler için bir araç kendi türüne göre hesaplayan bir uygulaması yazma. Sonraki geliştirmeleri occupants araç içinde sayısına bağlı fiyatlandırma dahil edilip derecelendirilir. Başka bir geliştirme, saat ve haftanın günü göre fiyatlandırma ekleyin.
+Trafiği yönetmek için ücretli geçişler ve en yüksek süre fiyatlandırma kullanarak büyük bir metropol alanı göz önünde bulundurun. Ücretli geçişler için bir araç kendi türüne göre hesaplayan bir uygulaması yazma. Sonraki geliştirmeleri occupants araç içinde sayısına bağlı fiyatlandırma dahil edilip derecelendirilir. Başka bir geliştirme, saat ve haftanın günü göre fiyatlandırma ekleyin.
 
 Bu kısa açıklamasından, hızlı bir şekilde bu sistem modeli için bir nesne hiyerarşisine ince ince. Bununla birlikte, verilerinizi diğer araç kayıt yönetim sistemleri gibi birden çok kaynaktan geliyor. Bu sistemler, veri modeli için farklı sınıfları sağlar ve bir tek nesne modeli kullandığınız yok. Bu öğreticide, bu dış sistemlerden vehicle veri modeli için aşağıdaki kodda gösterildiği gibi bu Basitleştirilmiş sınıfların kullanacaksınız:
 

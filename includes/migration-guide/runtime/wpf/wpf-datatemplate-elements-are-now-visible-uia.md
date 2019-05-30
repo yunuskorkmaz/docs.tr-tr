@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 51691ced3f05201f784ccdeffbc130e34748b7c1
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59981668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "66379652"
 ---
 ### <a name="wpf-datatemplate-elements-are-now-visible-to-uia"></a>WPF DataTemplate öğeleri için UIA görülebilir
 

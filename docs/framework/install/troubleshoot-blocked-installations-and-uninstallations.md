@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e12deefd4b20d2868ab86fdb4c81f6be3a63aa6d
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 0dff2bf22b701ee57818d04e01dbf643e04acb27
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052653"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379902"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme
 
@@ -38,7 +38,7 @@ Bu tabloda, 4.5. *x* .NET Framework 4.5 ve onun nokta sürümleri için 4.5.1 ve
 |.NET Framework 4.5 kaldıramazsınız *.x*/4.6 *.x*/4.7 *.x*  /4,8. Bilgisayarınızdaki diğer uygulamalar bu programa bağımlıdır.|Genel olarak, bir uygulama .NET Framework'ün belirli bir sürüme bağlı olabileceği için .NET Framework sürümlerinden hiçbirini bilgisayarınızdan kaldırmanız gerekir. Daha fazla bilgi için [kullanıcılar için .NET Framework](../../../docs/framework/get-started/index.md#ForUsers) içinde *Başlarken* Kılavuzu.|  
 |.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*  /4.8 yeniden dağıtılabilir, bu işletim sistemi için geçerli değildir. Lütfen .NET Framework 4.5 karşıdan *.x*/4.6 *.x*/4.7 *.x*/4.8 işletim sisteminizden Microsoft Download Center için.|Desteklenmeyen bir platformda .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 veya 4.8 yüklemeye çalıştığınız ya da tüm desteklenen işletim sistemleri için bileşenlerin bulunmadığı yükleme paketini seçtiniz. Çevrimdışı yükleyiciyi kullanarak yüklemeyi yeniden çalıştırın ([4.5.1 için](https://go.microsoft.com/fwlink/p/?LinkId=309493), [4.5.2 için](https://go.microsoft.com/fwlink/p/?LinkId=397706), [4.6 için](https://go.microsoft.com/fwlink/p/?LinkId=528233), [4.6.1 için](https://go.microsoft.com/fwlink/p/?LinkId=671744), için [ 4.6.2](https://go.microsoft.com/fwlink/p/?LinkId=780604), için [4.7](https://go.microsoft.com/fwlink/p/?LinkId=825306)), için [4.7.1](https://go.microsoft.com/fwlink/p/?LinkId=852090), için [4.7.2](https://go.microsoft.com/fwlink/p/?LinkId=863265), veya [4.8](https://go.microsoft.com/fwlink/?linkid=2088631). Daha fazla bilgi için [Yükleme Kılavuzu](../../../docs/framework/install/guide-for-developers.md) ve [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md) desteklenen işletim sistemleri için.|  
 |Güncelleştirme KB olarak karşılık gelen\<*numarası*> Bu ürünü yükleyebilmeniz için önce yüklü olması gerekir.|.NET Framework'ün yüklemesini bir KB güncelleştirmesi .NET Framework'ü yüklemeden önce yüklü olmasını gerektirir. Güncelleştirmeyi yükleyin ve sonra .NET Framework yüklemeyi yeniden başlatın.<br /><br /> Örneğin, yüklenmesini güncelleştirilmiş Windows 8.1, Windows RT 8.1, .NET Framework sürümleri ve Windows Server 2012 R2 gerektirir, karşılık gelen güncelleştirme [KB 2919355](https://support.microsoft.com/kb/2919355) yüklü olmalıdır.|  
-|Bilgisayarınızda şu anda Windows Server 2008 işletim sisteminin Sunucu Çekirdeği yüklemesi çalışıyor. .NET Framework 4.5. *x* işletim sisteminin daha yeni bir sürümünü gerektirir. Lütfen Windows Server 2008 R2 SP1 veya daha yüksek ve yeniden çalıştırma .NET Framework 4.5 yükleyin. *x* kurulumu.|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] Ve 4.5.2, Windows Server 2008 R2 SP1 veya daha sonra Sunucu Çekirdeği rolünde desteklenir. Bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md).|  
+|Bilgisayarınızda şu anda Windows Server 2008 işletim sisteminin Sunucu Çekirdeği yüklemesi çalışıyor. .NET Framework 4.5. *x* işletim sisteminin daha yeni bir sürümünü gerektirir. Lütfen Windows Server 2008 R2 SP1 veya daha yüksek ve yeniden çalıştırma .NET Framework 4.5 yükleyin. *x* kurulumu.|.NET Framework 4.5.1 ve 4.5.2'yi Windows Server 2008 R2 SP1 veya daha sonra Sunucu Çekirdeği rolünde desteklenir. Bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md).|  
 |Bu bilgisayar üzerinde tüm kullanıcılar için bu işlemi tamamlamak üzere yeterli yetkiniz yok. Yönetici olarak çalıştırıp yeniden oturum **Kurulum**.|.NET Framework yüklemek için bilgisayarda yönetici olmanız gerekir.|  
 |Önceki yükleme bilgisayarınızın yeniden başlatılmasını gerektirdiği için Kurulum devam edemiyor. Lütfen bilgisayarınızı yeniden başlatın ve Kurulumu yeniden çalıştırın.|Yeniden başlatma, tam olarak bir yüklemenin tamamlanabilmesi için bazen gereklidir. Bilgisayarınızı yeniden başlatın ve kurulumu yeniden çalıştırın için yönergeleri izleyin.<br /><br /> Nadiren de olsa, sisteminizi Windows eksik güncelleştirmelerin sayısı algıladı ve kuyrukta İleri güncelleştirmeyi yüklemek için yeniden başlatılıyor birden çok kez yeniden başlatmanız istenebilir.|  
 |.NET Framework Kurulumu Program Uyumluluk modunda çalıştırılamaz.|Bkz: [Program Uyumluluk sorunları](#compat) bu makalenin devamındaki bölümü.|  
@@ -71,7 +71,7 @@ Bu tabloda, 4.5. *x* .NET Framework 4.5 ve onun nokta sürümleri için 4.5.1 ve
 
    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers
 
-1. Ad sütununda aranacak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 veya 4.7.2 indirme adlarını, hangi sürümünde bağlı olarak, yüklemekte olduğunuz ve bu girişleri silin. İndirme adları için bkz. [geliştiriciler için .NET Framework yükleme](../../../docs/framework/install/guide-for-developers.md) makalesi.
+1. Ad sütununda, .NET Framework 4.5 için 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, konum veya 4.7.2 indirme adlarını girin bağlı olarak hangi sürümün yüklemekte olduğunuz ve bu girişleri silin. İndirme adları için bkz. [geliştiriciler için .NET Framework yükleme](../../../docs/framework/install/guide-for-developers.md) makalesi.
 
 1. Sürüm 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 veya 4.7.2 için .NET Framework yükleyiciyi yeniden çalıştırın.
 

@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb2b082393656e84cedb293c3f3857e6680ed2ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 45e28ebb9319447f2e1ae98f1de883f90840720f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664335"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378290"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] ile birlikte çok sayıda yazılım geliştirme senaryosunu destekler. Bu senaryolar üç kategoriye ayrılır:
+.NET Framework 4.5 ile yazılım geliştirme senaryosunu destekler [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Bu senaryolar üç kategoriye ayrılır:
 
 - Geliştirme [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] XAML denetimleriyle içinde anlatıldığı gibi uygulamalar [C# veya Visual Basic kullanarak yol haritası için Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10)), [nasıl tos (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10)), ve [.NET için Windows Store uygulamalarına genel bakış ](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
@@ -127,7 +127,7 @@ ms.locfileid: "64664335"
 - Bileşeninizdeki türler [!INCLUDE[wrt](../../../includes/wrt-md.md)] türlerinden türeyebilir. Denetimleri alanındaki ilkel denetim türlerinden türeyebilir <xref:Windows.UI.Xaml.Controls.Primitives> ad alanı veya denetimler gibi daha tamamlanmış <xref:Windows.UI.Xaml.Controls.Button>.
 
     > [!IMPORTANT]
-    >  [!INCLUDE[win8](../../../includes/win8-md.md)] ve [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ile başlayarak, yönetilen bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenindeki tüm ortak türlerin mühürlenmesi gerekir. Başka bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenindeki bir tür onlardan türeyemez. Eğer bileşeninizde polimorfik davranış sağlamak istiyorsanız, bir arabirim oluşturabilir ve bu arabirimi polimorfik türlere uygulayabilirsiniz.
+    >  İle başlayarak [!INCLUDE[win8](../../../includes/win8-md.md)] ve .NET Framework 4.5, yönetilen bir tüm ortak türlerin [!INCLUDE[wrt](../../../includes/wrt-md.md)] mühürlenmesi gerekir. Başka bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenindeki bir tür onlardan türeyemez. Eğer bileşeninizde polimorfik davranış sağlamak istiyorsanız, bir arabirim oluşturabilir ve bu arabirimi polimorfik türlere uygulayabilirsiniz.
 
 - Bileşeninizin genel türlerindeki tüm parametre ve dönüş türlerinin, [!INCLUDE[wrt](../../../includes/wrt-md.md)] türleri olması gerekir (bileşeninizin tanımladığı [!INCLUDE[wrt](../../../includes/wrt-md.md)] türleri dahil).
 

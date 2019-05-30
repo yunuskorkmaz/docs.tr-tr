@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d750087cc000ad31a24d91411c0885a75d59e74f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9264d8eb7923663061f9bccfffe5b8f5254549f0
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61871353"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379895"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Azaltma: İşaretçi tabanlı dokunmatik ve Kalem desteği
 
@@ -38,7 +38,7 @@ Geliştiriciler, işaretçi temelli dokunma/kalemi destek açıkça etkinleştir
 
   - Sürükle ve bırak, dokunma/ekran kalemi olayları artık başlatılabilir.
 
-      Fare girişi algılandığında kadar bu uygulama potansiyel olarak askıda kalabilir. Bunun yerine, geliştiriciler, sürükle başlatmak ve fare olayları bırakın.
+      Bu durum uygulama fare girişi algılandığında kadar yanıt veremez duruma gelmesine neden olabilir. Bunun yerine, geliştiriciler, sürükle başlatmak ve fare olayları bırakın.
 
 ## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a>Dokunma/kalemi WM_POINTER tabanlı desteklemek için seçim
 

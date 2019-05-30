@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4710f299c97a6ef8039314243ca481db51c2bb52
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 793012b21ae6a3a597efaea23a6d3b6d1db58562
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614081"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379953"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Yöneticiler için .NET Framework Dağıtım Kılavuzu
 
-Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve Microsoft System Center Configuration Manager'ı kullanarak bir ağ üzerindeki sistem gereksinimlerini. Bu makalede tüm istemci bilgisayarların .NET Framework için gerekli olan minimum sistem gereksinimlerini karşıladığı varsayılmıştır. Yüklemeye yönelik yazılım ve donanım gereksinimleri listesi için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md).
+Bu makalede nasıl sistem yöneticisinin .NET Framework 4.5 ve sistem bağımlılıklarını bir ağ üzerinden Microsoft System Center Configuration Manager'ı kullanarak dağıtabileceğini açıklar. Bu makalede tüm istemci bilgisayarların .NET Framework için gerekli olan minimum sistem gereksinimlerini karşıladığı varsayılmıştır. .NET Framework 4.5 yüklemeye yönelik yazılım ve donanım gereksinimleri listesi için bkz. [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md).
 
 > [!NOTE]
-> Ancak bunlarla sınırlı olmaksızın bu dokümanda bahsedilen yazılımlar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], System Center Configuration Manager ve Active Directory olduğunuz her lisans ve koşullarına tabidir. Bu yönergeler, bu tür lisans koşullarını ve koşulları gözden geçirilmiş yazılımların sahipleri tarafından kabul edildiği varsaymaktadır. Bu yönergeler, bu tür lisans anlaşmalarının koşullarından feragat etmiş sayılmaz.
+> Sınırlama, .NET Framework 4.5, System Center Configuration Manager ve Active Directory bu dokümanda bahsedilen yazılımlar olduğunuz her lisans ve koşullarına tabidir. Bu yönergeler, bu tür lisans koşullarını ve koşulları gözden geçirilmiş yazılımların sahipleri tarafından kabul edildiği varsaymaktadır. Bu yönergeler, bu tür lisans anlaşmalarının koşullarından feragat etmiş sayılmaz.
 >
 > .NET Framework desteği hakkında daha fazla bilgi için bkz: [Microsoft .NET Framework desteği yaşam döngüsü ilkesi](https://go.microsoft.com/fwlink/?LinkId=196607) Microsoft Support Web sitesi.
 
@@ -55,7 +55,7 @@ Yerinde destek altyapısı varsa, ağ üzerinden .NET Framework dağıtılabilir
 
 ## <a name="deploying-the-net-framework"></a>.NET Framework'ü dağıtma
 
-System Center 2012 Configuration Manager sessiz yüklemesini dağıtmak için kullanabileceğiniz [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], burada kullanıcılar yükleme işlemiyle etkileşimde bulunmazlar. Aşağıdaki adımları uygulayın:
+Burada kullanıcılar yükleme işlemiyle etkileşimde bulunmazlar .NET Framework 4.5, sessiz yüklemesini dağıtmak için System Center 2012 Configuration Manager'ı kullanabilirsiniz. Aşağıdaki adımları uygulayın:
 
 1. [Koleksiyon oluşturma](#creating_a_collection).
 
@@ -135,7 +135,7 @@ Aşağıdaki tablo, 7. adımda belirtilen komut satırı seçeneklerini açıkla
 |------------|-----------------|
 |**/q**|Sessiz modu ayarlar. Hiçbir kullanıcı girişine gerek yoktur ve hiçbir çıktı gösterilmez.|
 |**/ norestart**|Kurulum programının otomatik olarak yeniden başlatılmasını önler. Bu seçeneği kullanırsanız, Yapılandırma Yöneticisi'nin bilgisayarı yeniden başlatmayı üstlenmesi gerekir.|
-|**/chainingpackage** *PackageName*|Zincirlemeyi yapan paketin adını belirtir. Bu bilgiler kaydolup kişilerin diğer yükleme oturum bilgileriyle birlikte raporlanır [Microsoft Müşteri Deneyimini Geliştirme Programı (CEIP)](https://go.microsoft.com/fwlink/p/?LinkId=248244). Paket adı boşluk içeriyorsa, sınırlayıcı olarak çift tırnak işareti kullanın. Örneğin: **/chainingpackage "Chaining Product"**.|
+|**/chainingpackage** *PackageName*|Zincirlemeyi yapan paketin adını belirtir. Bu bilgiler kaydolup kişilerin diğer yükleme oturum bilgileriyle birlikte raporlanır [Microsoft Müşteri Deneyimini Geliştirme Programı (CEIP)](https://go.microsoft.com/fwlink/p/?LinkId=248244). Paket adı boşluk içeriyorsa, sınırlayıcı olarak çift tırnak işareti kullanın. Örneğin: **/chainingpackage "Chaining Product"** .|
 
 Bu adımlar, .NET Framework 4.5 adlı bir paket oluşturur. Program, .NET Framework 4.5'in sessiz bir kurulumunu dağıtır. Sessiz yüklemede, kullanıcılar yükleme işlemiyle etkileşimde bulunmazlar ve zincirleme uygulama döndürülen kodu yakalamak ve yeniden işlemek zorundadır; bkz: [yükleme paketinden ilerleme bilgisi alma](https://go.microsoft.com/fwlink/?LinkId=179606).
 
@@ -202,7 +202,7 @@ Paket şimdi, .NET Framework 4.5'i sessizce dağıtmak gereksinim duyduğunuz t�
 
 ## <a name="resources"></a>Kaynaklar
 
-Dağıtımı test etmek için altyapısı hakkında daha fazla bilgi için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeniden dağıtılabilir paket, aşağıdaki kaynaklara bakın.
+.NET Framework 4.5 yeniden dağıtılabilir paketinin dağıtımının test alt yapısı hakkında daha fazla bilgi için aşağıdaki kaynaklara bakın.
 
 **Active Directory, DNS, DHCP:**
 
@@ -249,7 +249,7 @@ Kullanabileceğiniz [günlük toplama aracı](https://www.microsoft.com/download
 
 ### <a name="return-codes"></a>Dönüş kodları
 
-Aşağıdaki tabloda en yaygın dönüş kodlarını listelemektedir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeniden dağıtılabilir yükleme programındaki. Dönüş kodları yükleyicinin tüm sürümleri için aynıdır.
+Aşağıdaki tablo, .NET Framework 4.5 yeniden dağıtılabilir yükleme programındaki en yaygın dönüş kodlarını listeler. Dönüş kodları yükleyicinin tüm sürümleri için aynıdır.
 
 Ayrıntılı bilgilerin bağlantılarını görmek için bir sonraki bölüm [indirme hatası kodları](#additional_error_codes).
 

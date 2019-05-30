@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 300d2263c076c9028340863e2f7a3fa27a36ef9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4bf3605331e6900fd890e49bb3f71f4ca4409c7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993739"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377590"
 ---
 # <a name="icordebugvalue3-interface"></a>ICorDebugValue3 Arabirimi
 2 GB'den daha büyük diziler için destek sağlamak için "ICorDebugValue" ve "ICorDebugValue2" arabirimlerini genişletir.  
@@ -33,7 +33,7 @@ ms.locfileid: "61993739"
 |[GetSize64 Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)|Bu bayt cinsinden boyutunu alır `ICorDebugValue3` nesne.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [Icordebugvalue::getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) yöntemi 2.147.483.647 bayt 0'dan aralıkları bir nesne boyutu döndürür. İçinde [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], dizi boyutu 2 GB aşabilir. `ICorDebugValue3` Arabirimi bu dizileri boyutunu belirlemek etkinleştirir.  
+ [Icordebugvalue::getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) yöntemi 2.147.483.647 bayt 0'dan aralıkları bir nesne boyutu döndürür. .NET Framework 4.5, dizi boyutu 2 GB aşabilir. `ICorDebugValue3` Arabirimi bu dizileri boyutunu belirlemek etkinleştirir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

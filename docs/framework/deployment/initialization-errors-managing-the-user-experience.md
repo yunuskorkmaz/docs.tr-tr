@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2abbe121879e5f47fbce9a82d2afbf52cbef4ba9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 28e9aab575876d425112c08b59b9cfc44a8c09a7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636639"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379943"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET framework başlatma hataları: Kullanıcı deneyimini yönetme
 
@@ -75,21 +75,21 @@ CLR çeşitli senaryoları için konak kümesini içerir ve bunlar gerekli çal�
 |--------------|-----------------|--------------------------|------------------------------------|
 |Yönetilen EXE konağı|Başlatılan exe yönetilen.|Eksik bir .NET Framework sürümünü durumunda gösterilir|Hayır|
 |Yönetilen COM konağı|Yükleri COM bileşenlerini bir işleme yönetilen.|Eksik bir .NET Framework sürümünü durumunda gösterilir|Evet, SEM_FAILCRITICALERRORS ayarlayarak bayrak|
-|ClickOnce konak|ClickOnce uygulamaları başlatır.|Eksik bir .NET Framework sürümü ile başlayarak, durumunda gösterilir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Hayır|
-|XBAP konak|WPF XBAP uygulamaları başlatır.|Eksik bir .NET Framework sürümü ile başlayarak, durumunda gösterilir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Hayır|
+|ClickOnce konak|ClickOnce uygulamaları başlatır.|Eksik bir .NET Framework sürümü .NET Framework 4.5 ile başlayarak, durumunda gösterilir|Hayır|
+|XBAP konak|WPF XBAP uygulamaları başlatır.|Eksik bir .NET Framework sürümü .NET Framework 4.5 ile başlayarak, durumunda gösterilir|Hayır|
 
 ## <a name="windows-8-behavior-and-ui"></a>Windows 8 davranışını ve kullanıcı Arabirimi
 
-CLR etkinleştirme sistemine üzerinde aynı davranışı ve kullanıcı Arabirimi sağlayan [!INCLUDE[win8](../../../includes/win8-md.md)] diğer Windows işletim sistemi sürümlerinde olduğu gibi CLR 2.0 yüklerken sorun bulduğu durumlar hariç. [!INCLUDE[win8](../../../includes/win8-md.md)] içerir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], CLR 4.5 kullanır. Ancak, [!INCLUDE[win8](../../../includes/win8-md.md)] .NET Framework 2.0, 3.0 veya 3.5 CLR 2.0 kullanan tüm hangi içermez. Sonuç olarak, CLR 2.0 bağlı uygulamalar çalıştırmayın [!INCLUDE[win8](../../../includes/win8-md.md)] varsayılan olarak. Bunun yerine, .NET Framework 3.5 yüklemek kullanıcıları etkinleştirmek için aşağıdaki iletişim kutusunu görüntüler. Kullanıcılar, Denetim Masası'nda .NET Framework 3.5 de etkinleştirebilirsiniz. İki seçenek de makalesinde açıklanan [Windows 10, Windows 8.1 ve Windows 8 üzerinde .NET Framework 3.5 yükleme](../../../docs/framework/install/dotnet-35-windows-10.md).
+CLR etkinleştirme sistemine üzerinde aynı davranışı ve kullanıcı Arabirimi sağlayan [!INCLUDE[win8](../../../includes/win8-md.md)] diğer Windows işletim sistemi sürümlerinde olduğu gibi CLR 2.0 yüklerken sorun bulduğu durumlar hariç. [!INCLUDE[win8](../../../includes/win8-md.md)] CLR 4.5 kullanan .NET Framework 4.5 içerir. Ancak, [!INCLUDE[win8](../../../includes/win8-md.md)] .NET Framework 2.0, 3.0 veya 3.5 CLR 2.0 kullanan tüm hangi içermez. Sonuç olarak, CLR 2.0 bağlı uygulamalar çalıştırmayın [!INCLUDE[win8](../../../includes/win8-md.md)] varsayılan olarak. Bunun yerine, .NET Framework 3.5 yüklemek kullanıcıları etkinleştirmek için aşağıdaki iletişim kutusunu görüntüler. Kullanıcılar, Denetim Masası'nda .NET Framework 3.5 de etkinleştirebilirsiniz. İki seçenek de makalesinde açıklanan [Windows 10, Windows 8.1 ve Windows 8 üzerinde .NET Framework 3.5 yükleme](../../../docs/framework/install/dotnet-35-windows-10.md).
 
 ![Windows 8 yükle 3.5 için iletişim kutusu](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "istek üzerine .NET Framework 3.5 yükleme istemi")
 
 > [!NOTE]
-> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Kullanıcının bilgisayarında .NET Framework 4 (CLR 4) değiştirir. Bu nedenle, .NET Framework 4 uygulamalarını sorunsuz bir şekilde, bu iletişim kutusunu görüntüleme olmadan çalıştırmak [!INCLUDE[win8](../../../includes/win8-md.md)].
+> .NET Framework 4.5, kullanıcının bilgisayarında .NET Framework 4 (CLR 4) değiştirir. Bu nedenle, .NET Framework 4 uygulamalarını sorunsuz bir şekilde, bu iletişim kutusunu görüntüleme olmadan çalıştırmak [!INCLUDE[win8](../../../includes/win8-md.md)].
 
 Kullanıcılar, .NET Framework 3.5 yüklendiğinde .NET Framework 2.0, 3.0 veya 3.5 kullanan uygulamalar çalıştırabilir, [!INCLUDE[win8](../../../includes/win8-md.md)] bilgisayarlar. Söz konusu uygulamaların açıkça yalnızca .NET Framework 1.0 veya 1.1 üzerinde çalıştırmak için yapılandırılmış olması koşuluyla, .NET Framework 1.0 ve 1.1 uygulamaları da çalıştırabilirsiniz. Bkz: [.NET Framework 1.1 geçiş](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md).
 
-İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], CLR etkinleştirme günlüğe kaydetme, ne zaman ve neden başlatma hata iletisi görüntülenir kayıt günlük girişlerini dahil etmek üzere geliştirilmiştir. Daha fazla bilgi için [nasıl yapılır: CLR etkinleştirme sorunlarında hata ayıklama](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).
+.NET Framework 4.5 ile başlayarak, CLR etkinleştirme günlük kaydı ne zaman ve neden başlatma hata iletisi görüntülenir günlük girişlerini dahil etmek için iyileştirilmiştir. Daha fazla bilgi için [nasıl yapılır: CLR etkinleştirme sorunlarında hata ayıklama](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

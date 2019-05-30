@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: b0e6d6f228647148083d3df64e65f817dc3455d5
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59981693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "66379538"
 ---
 ### <a name="exceptions-during-unobserved-processing-in-systemthreadingtaskstask-no-longer-propagate-on-finalizer-thread"></a>Artık System.Threading.Tasks.Task içinde gözetimsiz işleme sırasında özel durumları Sonlandırıcı iş parçacığında yayılmaz
 

@@ -2,20 +2,20 @@
 title: ADO.NET’teki Yenilikler
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 90ac3ffe9bae892bf20ad874e5634a3a045f776d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 77a7aa5721a83bf7bc8d3e3cbf57a77c56267062
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877427"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379980"
 ---
 # <a name="whats-new-in-adonet"></a>ADO.NET’teki Yenilikler
 
-Aşağıdaki özellikler ADO.NET içinde yeni [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+Aşağıdaki özellikler, ADO.NET, .NET Framework 4. 5'te yeni eklendi.
 
 ## <a name="sqlclient-data-provider"></a>SqlClient veri sağlayıcısı
 
-Yeni SQL Server için .NET Framework Veri Sağlayıcısı'nda aşağıdaki özellikler [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:
+Aşağıdaki özellikler, .NET Framework 4. 5'de SQL Server için .NET Framework Veri Sağlayıcısı'te yenidir:
 
 - ConnectRetryCount ve ConnectRetryInterval bağlantı dizesi anahtar sözcükleri (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) boşta kalan bağlantı dayanıklılığı özelliğini denetlemenize olanak tanır.
 
@@ -51,7 +51,7 @@ Yeni SQL Server için .NET Framework Veri Sağlayıcısı'nda aşağıdaki özel
 
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework
 
-[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] Entity Framework 5.0 ile çalışırken yeni senaryolar sağlayan API'leri ekler. Geliştirmeleri ve Entity Framework 5.0 eklenen özellikler hakkında daha fazla bilgi için aşağıdaki konulara bakın: [Yenilikler](https://go.microsoft.com/fwlink/?LinkID=251106) ve [Entity Framework sürümleri ve sürüm oluşturma](https://go.microsoft.com/fwlink/?LinkId=234899).
+.NET Framework 4.5 ile Entity Framework 5.0 çalışırken yeni senaryolar sağlayan API'leri ekler. Geliştirmeleri ve Entity Framework 5.0 eklenen özellikler hakkında daha fazla bilgi için aşağıdaki konulara bakın: [Yenilikler](https://go.microsoft.com/fwlink/?LinkID=251106) ve [Entity Framework sürümleri ve sürüm oluşturma](https://go.microsoft.com/fwlink/?LinkId=234899).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

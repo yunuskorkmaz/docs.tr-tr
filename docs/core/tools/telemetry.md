@@ -4,12 +4,12 @@ description: Analiz, hangi verileri toplanır ve nasıl devre dışı bırakmak 
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 82410863c81faa95edfb120c95ec6bc186ed1328
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85cceab08fc6e4108a5b951c8b67c1ad5a28f6bb
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751682"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377498"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET core SDK'sı telemetri
 
@@ -68,7 +68,7 @@ Bu özellik, kullanıcı adları veya e-posta adresleri gibi kişisel verileri t
 
 Yayımlanan veriler üç aylık olarak kullanılabilir ve listelenen [.NET Core SDK'sı kullanım verilerini](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md). Bir veri dosyasının sütunları şunlardır:
 
-- Zaman damgası
+- Timestamp
 - Örnekleri&#8224;
 - Komut
 - Coğrafi konum&#8225;
@@ -79,11 +79,11 @@ Yayımlanan veriler üç aylık olarak kullanılabilir ve listelenen [.NET Core 
 
 &#8224;*Oluşum* sütunu bu komutun kullanın, sıranın ölçümler için o gün toplam sayısını görüntüler.
 
-&#8225;Genellikle, *Coğrafya* sütun ülke adını görüntüler. Bazı durumlarda, bu sütunda, .NET Core Antarktika ya da yanlış konum verileri kullanarak Araştırmacıları nedeniyle Antarktika, kıta görünür.
+&#8225;Genellikle, *Coğrafya* sütun bir ülke/bölge adını görüntüler. Bazı durumlarda, bu sütunda, .NET Core Antarktika ya da yanlış konum verileri kullanarak Araştırmacıları nedeniyle Antarktika, kıta görünür.
 
 ### <a name="example"></a>Örnek
 
-| Zaman damgası      | Örnekleri | Komut | Geography | OSFamily | RuntimeID     | OSVersion | SDKVersion |
+| Timestamp      | Örnekleri | Komut | Geography | OSFamily | RuntimeID     | OSVersion | SDKVersion |
 | -------------- | ----------- | ------- | --------- | -------- | ------------- | --------- | ---------- |
 | 4/16/2017 0:00 | 8           | Çalıştırma     | Uganda    | Darwin   | osx.10.12 x64 | 10.12     | 1.0.1      |
 

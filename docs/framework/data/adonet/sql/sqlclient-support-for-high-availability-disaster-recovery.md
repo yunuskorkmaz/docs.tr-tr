@@ -2,15 +2,15 @@
 title: Yüksek Kullanılabilirlik, Olağanüstü Durum Kurtarma için SqlClient Desteği
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 9b928be56ac09ec707a45829c862e606b68b717c
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
-ms.translationtype: HT
+ms.openlocfilehash: b01db93c51c6d975c9cc951f08b64c5ffd6c1de4
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251165"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380003"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Yüksek Kullanılabilirlik, Olağanüstü Durum Kurtarma için SqlClient Desteği
-Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) yüksek kullanılabilirlik, olağanüstü durum kurtarma--AlwaysOn Kullanılabilirlik grupları için.  AlwaysOn Kullanılabilirlik grupları özelliği SQL Server 2012'ye eklendi. AlwaysOn Kullanılabilirlik grupları hakkında daha fazla bilgi için SQL Server Books Online'a bakın.  
+Bu konu, yüksek kullanılabilirlik, olağanüstü durum kurtarma--AlwaysOn Kullanılabilirlik grupları için SqlClient desteği (.NET Framework 4.5 eklenir) açıklar.  AlwaysOn Kullanılabilirlik grupları özelliği SQL Server 2012'ye eklendi. AlwaysOn Kullanılabilirlik grupları hakkında daha fazla bilgi için SQL Server Books Online'a bakın.  
   
  Şimdi, kullanılabilirlik grubu dinleyicisini belirtin bir (yüksek kullanılabilirlik, olağanüstü durum kurtarma) kullanılabilirlik grubu (ağ) veya SQL Server 2012 yük devretme kümesi örneği bağlantı özelliği. Devreder bir AlwaysOn veritabanı için SqlClient uygulama bağlıysa, özgün bağlantı bozuk ve uygulamanın yük devretme sonrasında çalışmaya devam etmek için yeni bir bağlantı açmanız gerekir.  
   
@@ -19,7 +19,7 @@ Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../.
 > [!NOTE]
 >  Bağlantı zaman aşımı süresini artırmak ve bağlantı yeniden deneme mantığını uygulayan bir uygulama bir kullanılabilirlik grubuna bağlanacak olasılığını artırır. Ayrıca, bir bağlantı nedeniyle bir yük devretme başarısız olabileceğinden, onu yeniden kadar başarısız bir bağlantıyı yeniden deneniyor. bağlantı yeniden deneme mantığı uygulamalıdır.  
   
- Aşağıdaki bağlantı özelliklerini SqlClient içinde eklenen [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]:  
+ Aşağıdaki bağlantı özelliklerini SqlClient .NET Framework 4.5 de eklenmiştir:  
   
 - `ApplicationIntent`  
   

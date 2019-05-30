@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9a9061503ae4bf68903f35eb7624deed2f34c9b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 519429da275c852ea193e95fe651cc73efc0736a
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616609"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378679"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW Anahtar Sözcükleri ve Düzeyler
 <a name="top"></a> Windows (ETW) olayları için olay izleme kategorisi ve düzeyi tarafından filtrelenebilir. Olay [CLR ETW anahtar sözcükleri](#keywords) olayları kategoriye göre filtreleme etkinleştirin; bunlar için çalışma zamanı ve Özet sağlayıcılarını bileşimlerde kullanılır. [Olay düzeyleri](#levels) bayrakları tarafından tanımlanır.  
@@ -52,7 +52,7 @@ ms.locfileid: "64616609"
 |`ContentionKeyword`|0x00004000|Topluluğunun [Çekişme olayları](../../../docs/framework/performance/contention-etw-events.md).|  
 |`ExceptionKeyword`|0x00008000|Topluluğunun [özel durum olaylarının](../../../docs/framework/performance/exception-thrown-v1-etw-event.md).|  
 |`ThreadingKeyword`|0x00010000|Topluluğunun [iş parçacığı havuzu olayları](../../../docs/framework/performance/thread-pool-etw-events.md).|  
-|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|(Kullanılabilir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve daha sonra.) Yüksek yükü bastırır `NGenKeyword` anahtar sözcüğü ve NGen modüller içinde yöntemleri için olayları oluşturulmasını engeller. İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], profil oluşturma araçları kullanması gereken `OverrideAndSuppressNGenEventsKeyword` ve `NGenKeyword` birlikte NGen modüllerdeki yöntemleri için olayları oluşturulmasını engellemek için. Bu, daha verimli NGen Pdb'lerin NGen modüllerde yöntemleri hakkında bilgi almak için profil oluşturma aracı sağlar. .NET Framework 4 ve önceki sürümlerinde CLR NGen Pdb'lerin oluşturulmasını desteklemiyor. Bu önceki sürümlerde, CLR algılamayacak `OverrideAndSuppressNGenEventsKeyword` ve işleyecek `NGenKeyword` NGen modüllerde olayları yöntemleri için oluşturulacak.|  
+|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|(Kullanılabilir .NET Framework 4.5 ve sonraki sürümler.) Yüksek yükü bastırır `NGenKeyword` anahtar sözcüğü ve NGen modüller içinde yöntemleri için olayları oluşturulmasını engeller. .NET Framework 4.5 ile başlayarak, profil oluşturma araçları kullanması gereken `OverrideAndSuppressNGenEventsKeyword` ve `NGenKeyword` birlikte NGen modüllerdeki yöntemleri için olayları oluşturulmasını engellemek için. Bu, daha verimli NGen Pdb'lerin NGen modüllerde yöntemleri hakkında bilgi almak için profil oluşturma aracı sağlar. .NET Framework 4 ve önceki sürümlerinde CLR NGen Pdb'lerin oluşturulmasını desteklemiyor. Bu önceki sürümlerde, CLR algılamayacak `OverrideAndSuppressNGenEventsKeyword` ve işleyecek `NGenKeyword` NGen modüllerde olayları yöntemleri için oluşturulacak.|  
 |`PerfTrackKeyWord`|0x2000000|Topluluğunun `ModuleLoad` ve `ModuleRange` olayları.|  
 |`StackKeyword`|0x40000000|CLR topluluğunun [yığın izleme olayları](../../../docs/framework/performance/stack-etw-event.md).|  
   
@@ -71,7 +71,7 @@ ms.locfileid: "64616609"
 |`EndRundownKeyword`|0x00000100|Sistem durumunun Özet sonu sırasında etkinleştirir.|  
 |`AppDomainResourceManagementRundownKeyword`|0x00000800|Kaynak konumunda izleme olaylarını topluluğunun bir <xref:System.AppDomain> düzeyi ile kullanıldığında `StartRundownKeyword` veya `EndRundownKeyword`.|  
 |`ThreadingKeyword`|0x00010000|İş parçacığı havuzu olayları toplanmasını etkinleştirir.|  
-|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|(Kullanılabilir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve daha sonra.) Yüksek yükü bastırır `NGenRundownKeyword` anahtar sözcüğü ve NGen modüller içinde yöntemleri için olayları oluşturulmasını engeller. İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], profil oluşturma araçları kullanması gereken `OverrideAndSuppressNGenEventsRundownKeyword` ve `NGenRundownKeyword` birlikte NGen modüllerdeki yöntemleri için olayları oluşturulmasını engellemek için. Bu, daha verimli NGen Pdb'lerin NGen modüllerde yöntemleri hakkında bilgi almak için profil oluşturma aracı sağlar. .NET Framework 4 ve önceki sürümlerinde CLR NGen Pdb'lerin oluşturulmasını desteklemiyor. Bu önceki sürümlerde, CLR algılamayacak `OverrideAndSuppressNGenEventsRundownKeyword` ve işleyecek `NGenRundownKeyword` NGen modüllerde olayları yöntemleri için oluşturulacak.|  
+|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|(Kullanılabilir .NET Framework 4.5 ve sonraki sürümler.) Yüksek yükü bastırır `NGenRundownKeyword` anahtar sözcüğü ve NGen modüller içinde yöntemleri için olayları oluşturulmasını engeller. .NET Framework 4.5 ile başlayarak, profil oluşturma araçları kullanması gereken `OverrideAndSuppressNGenEventsRundownKeyword` ve `NGenRundownKeyword` birlikte NGen modüllerdeki yöntemleri için olayları oluşturulmasını engellemek için. Bu, daha verimli NGen Pdb'lerin NGen modüllerde yöntemleri hakkında bilgi almak için profil oluşturma aracı sağlar. .NET Framework 4 ve önceki sürümlerinde CLR NGen Pdb'lerin oluşturulmasını desteklemiyor. Bu önceki sürümlerde, CLR algılamayacak `OverrideAndSuppressNGenEventsRundownKeyword` ve işleyecek `NGenRundownKeyword` NGen modüllerde olayları yöntemleri için oluşturulacak.|  
 |`PerfTrackKeyWord`|0x2000000|Topluluğunun `ModuleDCStart`, `ModuleDCEnd`, `ModuleRangeDCStart`, ve `ModuleRangeDCEnd` olayları.|  
   
  [Başa dön](#top)  

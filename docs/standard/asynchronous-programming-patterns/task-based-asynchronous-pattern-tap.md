@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96499d2a3d74deb7208fa49f9fc0927109d93a69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 052f6a61fb1b03b060e22bbff2d8124ac3a1c0c0
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623802"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377656"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Görev tabanlı zaman uyumsuz desen (TAP)
 Görev tabanlı zaman uyumsuz desen (TAP) dayanır <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> türlerini <xref:System.Threading.Tasks?displayProperty=nameWithType> zaman uyumsuz işlemleri temsil etmekte kullanılan ad alanı. TAP yeni geliştirme için önerilen zaman uyumsuz tasarım desenidir.  
@@ -95,7 +95,7 @@ TAP, bir zaman uyumsuz işlemin başlangıcını ve tamamlanmasını temsil etme
  Kabul eden aşırı yüklemeler TAP uygulamaları sağlamak, bir `progress` parametresi, bunlar izin vermelidir bağımsız değişken olarak `null`, bu durumda hiçbir ilerleme raporlanmaz. TAP uygulamaları ilerlemeyi raporlamalıdır <xref:System.Progress%601> zaman uyumlu olarak, zaman uyumsuz yöntemin ilerlemeyi çabuk sağlamasına sağlayan nesne ve ilerlemenin tüketicisinin bilgiyi işlemek nasıl ve nerede belirlemek izin verin. Örneğin, ilerleme örneği geri aramaları yönlendirmeyi ve yakalanan bir eşitleme bağlamında olay çağırmayı seçebilir.  
   
 ## <a name="iprogresst-implementations"></a>Iprogress\<T > uygulamaları  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Tek bir sağlar <xref:System.IProgress%601> uygulama: <xref:System.Progress%601>. <xref:System.Progress%601> Sınıfı gibi bildirilir:  
+ Tek bir .NET Framework 4.5 sağlar <xref:System.IProgress%601> uygulama: <xref:System.Progress%601>. <xref:System.Progress%601> Sınıfı gibi bildirilir:  
   
 ```csharp  
 public class Progress<T> : IProgress<T>  

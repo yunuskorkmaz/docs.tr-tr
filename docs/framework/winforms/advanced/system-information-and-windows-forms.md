@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user names [Windows Forms], retrieving
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
-ms.openlocfilehash: eeb469dbf4553634aa50d0a9ea17e9b2464defb4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2edc2e867259f8884467c3d5b0ae3d22ba391a77
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934699"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380112"
 ---
 # <a name="system-information-and-windows-forms"></a>Sistem Bilgileri ve Windows Forms
 Bazen kodunuzda kararlar için uygulamanızın çalıştığı bilgisayar hakkında bilgi toplamak gereklidir. Örneğin, yalnızca belirli bir ağ etki alanına bağlı olduğunda geçerli olan bir işleve sahip olabilir; Bu durumda, etki alanı belirlemek ve etki alanı mevcut değilse işlev devre dışı bırakmak için bir yol gerekir.  
@@ -34,8 +34,8 @@ MessageBox.Show("Good morning " & User & ". You are connected to " _
 string User = SystemInformation.UserName;  
 string Domain = SystemInformation.UserDomainName;  
   
-MessageBox.Show("Good morning " + User + ". You are connected to " _  
-+ Domain)  
+MessageBox.Show("Good morning " + User + ". You are connected to "
++ Domain);
 ```  
   
  Tüm üyeleri <xref:System.Windows.Forms.SystemInformation> sınıfı salt okunur; bir kullanıcının ayarlarına değişiklik yapamazsınız. Her şeyi döndüren bilgi bilgisayara bağlı monitör sayısı 100'den fazla üye sınıfı yok (<xref:System.Windows.Forms.SystemInformation.MonitorCount%2A>) için Windows Gezgini'nde simgeler aralığını (<xref:System.Windows.Forms.SystemInformation.IconHorizontalSpacing%2A> ve <xref:System.Windows.Forms.SystemInformation.IconVerticalSpacing%2A>).  

@@ -2,12 +2,12 @@
 title: -subsystemversion (C# Derleyici Seçenekleri)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: af753b25750c6ef98b4df12eec03c355501a278e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf1fb74f5d13817448bec2bcdc37510ff82f024d
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662497"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377902"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (C# Derleyici Seçenekleri)
 
@@ -56,7 +56,7 @@ Varsayılan değer olan **- subsystemversion** derleyici seçeneği, aşağıdak
 
   - [-platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)
 
-- MSBuild kullanıyorsanız, varsayılan değer 6.00:, hedeflediğiniz [!INCLUDE[net_v45](~/includes/net-v45-md.md)], ve bu listede daha önce belirtilmiş derleyici seçeneklerinden herhangi birini ayarlamasını yapmadığınızı.
+- Varsayılan 6.00 MSBuild kullanıyorsanız, .NET Framework 4.5, hedeflediğiniz ve bu listede daha önce belirtilmiş derleyici seçeneklerinden herhangi birini ayarlamasını yapmadığınızı değerdir.
 
 - Yukarıdaki koşulların hiçbiri doğru olması durumunda varsayılan 4.00 değerdir.
 

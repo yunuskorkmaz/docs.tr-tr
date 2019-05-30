@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42bef9ab728af251b043e29af4cee9e5cb3f405d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a11f19a9b5ebdf491b79c250da7fc5ac3d980b64
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636540"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377860"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put işlevi
 
@@ -72,7 +72,7 @@ Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Belirtmek için geçersiz bir girişimde bulunuldu oluştu **anahtar** niteleyici bir özellikte bir anahtar olamaz. Anahtarları belirtilen om c; bir nesne için sınıf tanımı ve örnek başına temelinde değiştirilemez. |
+| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Belirtmek için geçersiz bir girişimde bulunuldu oluştu **anahtar** niteleyici bir özellikte bir anahtar olamaz. Anahtarlar nesnenin sınıf tanımında belirtilir ve örnek başına temelinde değiştirilemez. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre geçerli değil. |
 | `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | `pVal` Parametresi geçerli bir niteleyici türü değil. |
 | `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Çağrı mümkün değil `QualifierSet_Put` edinilen nesneyi izin vermediğinden niteleyici yöntemini geçersiz kılar. |

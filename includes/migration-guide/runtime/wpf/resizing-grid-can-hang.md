@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 63101fb127c84de21d165994bba85a2753e97344
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5df5afec17d400ed14fe9b4c03c2f754895f0dd7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665187"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378761"
 ---
-### <a name="resizing-a-grid-can-hang"></a>Bir kılavuz yeniden boyutlandırma askıda kalabilir
+### <a name="resizing-a-grid-can-cause-an-application-to-become-unresponsive"></a>Bir kılavuz yeniden boyutlandırma, uygulamanın yanıt veremez duruma gelmesine neden olabilir
 
 |   |   |
 |---|---|

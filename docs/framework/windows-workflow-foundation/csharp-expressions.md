@@ -2,15 +2,15 @@
 title: C# İfadeleri
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: c50f6a2a8dfb69b914fb4fa84c028f9d65c00cfa
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7e29c4cacf97c729a07fa8d234e7c12006418027
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882102"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378409"
 ---
 # <a name="c-expressions"></a>C# İfadeleri
-İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C# ifadeleri, Windows Workflow Foundation (WF) desteklenir. Yeni C# iş akışı projeleri hedefleyen Visual Studio 2012'de oluşturulan [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] kullanmak C# ifadeleri ve Visual Basic iş akışı projeleri Visual Basic deyimleri kullanacak. Varolan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] iş akışı projeleri, Visual Basic deyimleri kullanacak şekilde geçirilebilir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] dil ve bu projeyi bağımsız olarak desteklenir. Bu konu, C# ifadeleri genel bakış sağlar. [!INCLUDE[wf1](../../../includes/wf1-md.md)].
+.NET Framework 4.5 ile başlayarak C# ifadeleri, Windows Workflow Foundation (WF) desteklenir. Yeni C# kullanım .NET Framework 4.5 hedefleyen iş akışı projeleri Visual Studio 2012'de oluşturulan C# ifadeler ve Visual Basic iş akışı projeleri Visual Basic deyimleri kullanacak. Varolan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] iş akışı projeleri, Visual Basic deyimleri kullanacak şekilde geçirilebilir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] dil ve bu projeyi bağımsız olarak desteklenir. Bu konu, C# ifadeleri genel bakış sağlar. [!INCLUDE[wf1](../../../includes/wf1-md.md)].
 
 ## <a name="using-c-expressions-in-workflows"></a>C# ifadeleri iş akışlarında kullanma
 
@@ -29,7 +29,7 @@ ms.locfileid: "65882102"
 - [C# ifadelerini kullanarak XAMLX iş akışı Hizmetleri](csharp-expressions.md#WFServices)
 
 ### <a name="WFDesigner"></a> C# ifadeleri iş akışı Tasarımcısı'nda kullanma
- İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C# ifadeleri, Windows Workflow Foundation (WF) desteklenir. C# iş akışı projeleri hedefleyen Visual Studio 2012'de oluşturulan [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Visual Basic iş akışı projeleri Visual Basic deyimleri kullanırken, C# ifadeleri kullanın. İstenen C# ifadesini belirtmek için etiketli kutuya yazın **bir C# ifadesi girin**. Bu etiketi, etkinlik Tasarımcısı'nda veya iş akışı tasarımcısında etkinlik seçili olduğunda Özellikler penceresinde görüntülenir. Aşağıdaki örnekte, iki `WriteLine` etkinlikleri içinde yer alır bir `Sequence` içinde bir `NoPersistScope`.
+ .NET Framework 4.5 ile başlayarak C# ifadeleri, Windows Workflow Foundation (WF) desteklenir. C#.NET Framework 4.5 kullanım hedefleyen iş akışı projeleri Visual Studio 2012'de oluşturulan C# Visual Basic iş akışı projeleri Visual Basic deyimleri kullanırken ifadeler. İstenen C# ifadesini belirtmek için etiketli kutuya yazın **bir C# ifadesi girin**. Bu etiketi, etkinlik Tasarımcısı'nda veya iş akışı tasarımcısında etkinlik seçili olduğunda Özellikler penceresinde görüntülenir. Aşağıdaki örnekte, iki `WriteLine` etkinlikleri içinde yer alır bir `Sequence` içinde bir `NoPersistScope`.
 
  ![Otomatik olarak oluşturulan sıralı etkinlik gösteren ekran görüntüsü.](./media/csharp-expressions/auto-surround-sequence-activity.png)
 

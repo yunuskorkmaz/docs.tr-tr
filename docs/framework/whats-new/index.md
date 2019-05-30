@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14ef6eec2503c0af1a7b1fd5ed2dd289978d6fcc
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
-ms.translationtype: HT
+ms.openlocfilehash: 8a9c9072c5565cf322bbf6a913255542fb46cb93
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301326"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378561"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework'teki yenilikler
 
@@ -1200,7 +1200,7 @@ WPF uygulamaları için yüksek DPI ve karma DPI ortamları son çoğalan destek
 
 **C# ifadeleri ve Re-hosted WF Tasarımcısı'nda IntelliSense desteği**
 
-İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], WF, hem bir Visual Studio Tasarımcısı'nda ve kod iş akışlarında C# ifadeleri destekler. Re-hosted iş akışı Tasarımcısı, WF iş akışı Tasarımcısı, Visual Studio'da (örneğin, WPF) dışında bir uygulamada olmasını sağlayan anahtar özelliğidir.  Windows Workflow Foundation, C# ifadeleri ve IntelliSense Re-hosted iş akışı Tasarımcısı'nda destekleme özelliği sağlar. Daha fazla bilgi için [Windows Workflow Foundation blog](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
+.NET Framework 4.5 ile WF destekler başlayarak C# ifadeleri hem bir Visual Studio Tasarımcısı'nda ve kod iş akışları. Re-hosted iş akışı Tasarımcısı, WF iş akışı Tasarımcısı, Visual Studio'da (örneğin, WPF) dışında bir uygulamada olmasını sağlayan anahtar özelliğidir.  Windows Workflow Foundation, C# ifadeleri ve IntelliSense Re-hosted iş akışı Tasarımcısı'nda destekleme özelliği sağlar. Daha fazla bilgi için [Windows Workflow Foundation blog](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
 
 `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` .NET Framework 4.6.2 önce .NET Framework sürümlerinde, bir müşteri Visual Studio'dan bir iş akışı projesi oluşturur, WF Tasarımcısı IntelliSense bozuk. Eksik iş akışı türlerini ıntellisense'ten uyarılarını görünür proje derlemesi başarılı olur ve iş akışı türlerini tasarımcıda bulunamadı ancak **hata listesi** penceresi. .NET Framework 4.6.2, bu sorunu giderir ve IntelliSense kullanılabilir hale getirir.
 
@@ -1417,7 +1417,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
     - **Model bağlama, görev döndürme yöntemlerini destekler**
 
-         İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], ASP.NET Web formları sayfaları ve kullanıcı denetimleri CRUD tabanlı veri işlemlerinde genişletilebilir, kod odaklı bir yaklaşım etkin Model bağlama özelliği eklendi. Model bağlama sistemi artık destekliyor <xref:System.Threading.Tasks.Task>-model bağlama yöntemleri döndürüyor. Bu özellik, Web Forms geliştiricilerin ORMs, Entity Framework dahil olmak üzere daha yeni sürümlerini kullanırken, veri bağlama sistem kolaylıkla zaman uyumsuz ölçeklenebilirlik avantajlarından yararlanın sağlar.
+         .NET Framework 4.5, ASP.NET Web formları sayfaları ve kullanıcı denetimleri CRUD tabanlı veri işlemlerinde genişletilebilir, kod odaklı bir yaklaşım etkin Model bağlama özelliği eklendi. Model bağlama sistemi artık destekliyor <xref:System.Threading.Tasks.Task>-model bağlama yöntemleri döndürüyor. Bu özellik, Web Forms geliştiricilerin ORMs, Entity Framework dahil olmak üzere daha yeni sürümlerini kullanırken, veri bağlama sistem kolaylıkla zaman uyumsuz ölçeklenebilirlik avantajlarından yararlanın sağlar.
 
          Zaman uyumsuz model bağlama tarafından denetlenir `aspnet:EnableAsyncModelBinding` yapılandırma ayarı.
 
@@ -1864,7 +1864,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
 Yeni özellikler ve temel sınıfları .NET Framework 4.5.1'deki geliştirmeler şunları içerir:
 
-- Derlemeler için otomatik bağlama yeniden yönlendirme. Visual Studio 2013 ile başlayarak, derleme yaptığınızda hedefleyen bir uygulama [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], bağlama yönlendirmeleri eklenebilir uygulama yapılandırma dosyasına uygulamanız veya bileşenleri aynı derlemenin birden çok sürümüne başvuruyorsa. Bu özellik .NET Framework'ün eski sürümlerini hedefleyen projeler için de etkinleştirebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Enable ve Disable otomatik bağlama yeniden yönlendirme](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+- Derlemeler için otomatik bağlama yeniden yönlendirme. Hedefler bağlama yönlendirmeleri .NET Framework 4.5.1, bir uygulama derlerken Visual Studio 2013 ile başlayarak, uygulamanız veya bileşenleri aynı derlemenin birden çok sürümünü başvuru değilse uygulama yapılandırma dosyasına eklendi. Bu özellik .NET Framework'ün eski sürümlerini hedefleyen projeler için de etkinleştirebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Enable ve Disable otomatik bağlama yeniden yönlendirme](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 - Geliştiricilerin sunucu ve bulut uygulamalarının performansını artırmak amacıyla tanılama bilgilerini toplama yeteneği. Daha fazla bilgi için <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> ve <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> yöntemleri <xref:System.Diagnostics.Tracing.EventSource> sınıfı.
 
@@ -1912,7 +1912,7 @@ ASP.NET 4.5.1'deki yeni özellikler için bkz: [için ASP.NET and Web Tools Visu
 
 - 64-bit platformlarda 2 gigabayt'tan (GB) büyük diziler için destek. Bu özellik, uygulama yapılandırma dosyasında etkinleştirilebilir. Bkz: [ \<gcAllowVeryLargeObjects > öğesi](../configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md), nesne boyutu ve dizi boyutu üzerindeki diğer kısıtlamaları da listelenir.
 
-- Arka plan çöp toplama sunucuları için daha iyi performans. Sunucu çöp toplama kullandığınızda [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], arka plan çöp toplama otomatik olarak etkinleştirilir. Arka plan sunucusu çöp toplama bölümüne bakın [çöp toplamanın Temelleri](../../standard/garbage-collection/fundamentals.md) konu.
+- Arka plan çöp toplama sunucuları için daha iyi performans. .NET Framework 4. 5 ' sunucu çöp toplama kullandığınızda, arka plan çöp toplama otomatik olarak etkinleştirilir. Arka plan sunucusu çöp toplama bölümüne bakın [çöp toplamanın Temelleri](../../standard/garbage-collection/fundamentals.md) konu.
 
 - Uygulama performansını artırmak için çok çekirdekli işlemcilerde isteğe bağlı olarak kullanılabilir arka plan just-in-time (JIT) derleme. Bkz. <xref:System.Runtime.ProfileOptimization>.
 
@@ -1940,7 +1940,7 @@ ASP.NET 4.5.1'deki yeni özellikler için bkz: [için ASP.NET and Web Tools Visu
 
 ### <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
-İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Yönetilen Genişletilebilirlik Çerçevesi (MEF) aşağıdaki yeni özellikleri sağlar:
+.NET Framework 4.5, Yönetilen Genişletilebilirlik Çerçevesi (MEF) aşağıdaki yeni özellikleri sağlar:
 
 - Genel türler için destek.
 
@@ -1954,13 +1954,13 @@ Daha fazla bilgi için [Yönetilen Genişletilebilirlik Çerçevesi (MEF)](../me
 
 ### <a name="asynchronous-file-operations"></a>Zaman uyumsuz dosya işlemleri
 
-İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C# ve Visual Basic diller için yeni zaman uyumsuz özellikler eklenmiştir. Bu özellikler, zaman uyumsuz işlemleri gerçekleştirmek için görev tabanlı bir model ekler. Bu yeni modeli kullanmak için g/ç sınıflarında zaman uyumsuz yöntemleri kullanın. Bkz: [zaman uyumsuz dosya g/ç](../../standard/io/asynchronous-file-i-o.md).
+Yeni zaman uyumsuz özellikler eklenmiştir .NET Framework 4.5, C# ve Visual Basic dillerini. Bu özellikler, zaman uyumsuz işlemleri gerçekleştirmek için görev tabanlı bir model ekler. Bu yeni modeli kullanmak için g/ç sınıflarında zaman uyumsuz yöntemleri kullanın. Bkz: [zaman uyumsuz dosya g/ç](../../standard/io/asynchronous-file-i-o.md).
 
 <a name="tools" />
 
 ### <a name="tools"></a>Araçlar
 
-İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], kaynak dosya oluşturucu (Resgen.exe) kullanmak üzere bir .resw dosyası oluşturmanıza imkan tanır [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları bir .resources dosyasından bir .NET Framework derlemesine katıştırılmış. Daha fazla bilgi için [Resgen.exe (kaynak dosya oluşturucu)](../tools/resgen-exe-resource-file-generator.md).
+.NET Framework 4.5, kaynak dosya oluşturucu (Resgen.exe) kullanmak üzere bir .resw dosyası oluşturmanıza olanak sağlayan [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları bir .resources dosyasından bir .NET Framework derlemesine katıştırılmış. Daha fazla bilgi için [Resgen.exe (kaynak dosya oluşturucu)](../tools/resgen-exe-resource-file-generator.md).
 
 Yönetilen profil temelli iyileştirme (Mpgo.exe), yerel görüntü derlemelerini en iyi duruma getirme tarafından uygulama başlangıç zamanı, bellek kullanımı (çalışma kümesi boyutu) ve aktarım hızı geliştirmenizi sağlar. Komut satırı aracı yerel görüntü uygulama derlemeleri için profil verileri oluşturur. Bkz: [Mpgo.exe (yönetilen profil temelli iyileştirme aracı)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Visual Studio 2013 ile başlayarak, en iyi duruma getirmek için Mpgo.exe'yi kullanabilirsiniz [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Masaüstü uygulamaların yanı sıra uygulamaları.
 
@@ -1968,7 +1968,7 @@ Yönetilen profil temelli iyileştirme (Mpgo.exe), yerel görüntü derlemelerin
 
 ### <a name="parallel-computing"></a>Paralel hesaplama
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Çeşitli yeni özellikler ve geliştirmeler, paralel bilgi işlem sağlar. Bunlar, Gelişmiş performans, artırılmış denetim, zaman uyumsuz programlama için gelişmiş destek, yeni bir veri akışı kitaplığı ve paralel hata ayıklama ve performans analizi için geliştirilmiş destek içerir. Girdisine bakın [.NET 4.5 paralellikteki yenilikler](https://go.microsoft.com/fwlink/?LinkId=235061) .NET Web günlüğü ile paralel programlama içindeki.
+.NET Framework 4.5, çeşitli yeni özellikler ve geliştirmeler, paralel bilgi işlem sağlar. Bunlar, Gelişmiş performans, artırılmış denetim, zaman uyumsuz programlama için gelişmiş destek, yeni bir veri akışı kitaplığı ve paralel hata ayıklama ve performans analizi için geliştirilmiş destek içerir. Girdisine bakın [.NET 4.5 paralellikteki yenilikler](https://go.microsoft.com/fwlink/?LinkId=235061) .NET Web günlüğü ile paralel programlama içindeki.
 
 <a name="web" />
 
@@ -1982,11 +1982,11 @@ ASP.NET 4.5 ve 4.5.1 Web formları, WebSocket desteği, zaman uyumsuz işleyicil
 
 ### <a name="networking-a-namenetworking-"></a>Ağ iletişimi <a name="networking" />
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] HTTP uygulamaları için yeni bir programlama arabirimi sağlar. Daha fazla bilgi için bkz. yeni <xref:System.Net.Http?displayProperty=nameWithType> ve <xref:System.Net.Http.Headers?displayProperty=nameWithType> ad alanları.
+.NET Framework 4.5, HTTP uygulamaları için yeni bir programlama arabirimi sağlar. Daha fazla bilgi için bkz. yeni <xref:System.Net.Http?displayProperty=nameWithType> ve <xref:System.Net.Http.Headers?displayProperty=nameWithType> ad alanları.
 
 Destek kabul eden ve mevcut kullanılarak bir WebSocket bağlantısı ile etkileşim için yeni bir programlama arabirimi için dahil edilen ayrıca <xref:System.Net.HttpListener> ve ilgili sınıflar. Daha fazla bilgi için bkz. yeni <xref:System.Net.WebSockets> ad alanı ve <xref:System.Net.HttpListener> sınıfı.
 
-Ayrıca, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] aşağıdaki ağ geliştirmeleri içerir:
+Ayrıca, .NET Framework 4.5 aşağıdaki ağ geliştirmeleri içerir:
 
 - RFC uyumlu URI desteği. Daha fazla bilgi için <xref:System.Uri> ve ilgili sınıflar.
 
@@ -2002,7 +2002,7 @@ Ayrıca, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] aşağıdaki ağ g
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
-İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Presentation Foundation (WPF), değişiklikler ve aşağıdaki alanlarda geliştirmeler içerir:
+.NET Framework 4.5, Windows Presentation Foundation (WPF), değişiklikler ve aşağıdaki alanlarda geliştirmeler içerir:
 
 - Yeni <xref:System.Windows.Controls.Ribbon.Ribbon> hızlı erişim araç çubuğu, uygulama menüsü ve sekmeler barındıran Şerit kullanıcı arabirimini uygulamanızı sağlayan bir denetimi.
 
@@ -2026,7 +2026,7 @@ Ayrıca, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] aşağıdaki ağ g
 
 ### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
 
-İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], yazma ve Windows Communication Foundation (WCF) uygulamalarını basitleştirmek için aşağıdaki özellikler eklenmiştir:
+.NET Framework 4.5, yazma ve Windows Communication Foundation (WCF) uygulamalarını basitleştirmek için aşağıdaki özellikler eklenmiştir:
 
 - Üretilen yapılandırma dosyalarını basitleştirme.
 
@@ -2068,9 +2068,9 @@ Daha fazla bilgi için [Windows Communication Foundation'da yenilikler](https://
 
 ### <a name="windows-workflow-foundation-wf"></a>Windows Workflow Foundation (WF)
 
-İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF) için birkaç yeni özellik eklenmiştir dahil olmak üzere:
+.NET Framework 4.5, Windows Workflow Foundation (WF) için çeşitli yeni özellikler eklendi dahil olmak üzere:
 
-- Durum ilk kez .NET Framework 4.0.1'in parçası olarak sunulan makine iş akışları ([.NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092)). Bu güncelleştirme birkaç yeni sınıfı ve geliştiricilerin durum makine iş akışları oluşturmak etkinlikler dahil. Bu sınıflar ve etkinlikler için güncelleştirilmiştir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eklemek için:
+- Durum ilk kez .NET Framework 4.0.1'in parçası olarak sunulan makine iş akışları ([.NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092)). Bu güncelleştirme birkaç yeni sınıfı ve geliştiricilerin durum makine iş akışları oluşturmak etkinlikler dahil. Bu sınıflar ve etkinlikler dahil etmek .NET Framework 4.5 için güncelleştirilmiştir:
 
     - Durumlar üzerinde kesme noktaları ayarlama yeteneği.
 
@@ -2122,7 +2122,7 @@ Daha fazla bilgi için [Windows Communication Foundation'da yenilikler](https://
 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
 
-[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları belirli biçim faktörleri için tasarlanmıştır ve Windows işletim sisteminin gücünden yararlanın. Bir alt kümesini [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] veya 4.5.1 için yapı kullanılabilir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] C# veya Visual Basic kullanarak Windows için uygulamalar. Bu alt küme olarak adlandırılan [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] ele alınır bir [genel bakış](https://go.microsoft.com/fwlink/?LinkId=228491) Windows geliştirme Merkezi'nde.
+[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları belirli biçim faktörleri için tasarlanmıştır ve Windows işletim sisteminin gücünden yararlanın. Bir alt kümesi .NET Framework 4.5 veya 4.5.1 için yapı kullanılabilir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] kullanarak Windows için uygulamalar C# veya Visual Basic. Bu alt küme olarak adlandırılan [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] ele alınır bir [genel bakış](https://go.microsoft.com/fwlink/?LinkId=228491) Windows geliştirme Merkezi'nde.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Taşınabilir sınıf kitaplıkları <a name="portable" />
 

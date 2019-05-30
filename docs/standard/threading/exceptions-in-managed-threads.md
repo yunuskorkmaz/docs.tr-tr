@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43037f897dfb591572a62a9bb3cccf9170d1f5fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca7f3a8d9ee840fc8c1c8a8efdadf8da033241f1
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645018"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377461"
 ---
 # <a name="exceptions-in-managed-threads"></a>Yönetilen İş Parçacıklarında Özel Durumlar
 .NET Framework sürüm 2.0 ile başlayarak, ortak dil çalışma zamanı doğal olarak devam etmek için iş parçacıklarının en işlenmeyen özel durumları tanır. Çoğu durumda bu işlenmeyen özel durumu uygulamanın sonlandırılmasına neden anlamına gelir.  
@@ -39,7 +39,7 @@ ms.locfileid: "64645018"
 >  Önce herhangi bir yönetilen kod bir özel durum işleyicisi yüklemek için bir fırsat işlenmeyen bir özel durum oluşturmak için çalışma zamanı için mümkündür. Yönetilen kod gibi bir özel durumu işlemek için hiçbir şansınız olsa da, özel durum doğal olarak devam etmesine izin verilir.  
   
 ## <a name="exposing-threading-problems-during-development"></a>Sorunları, geliştirme sırasında iş parçacığı gösterme  
- İş parçacıkları sessiz bir şekilde, uygulamayı sonlandırmadan başarısız olmasına izin verildiğinde programlama ciddi sorunlar algılanmayabilir. Bu, hizmetlerin ve uzun süre çalışan diğer uygulamaların belirli bir sorundur. Başarısız iş parçacıkları gibi program durumunu kademeli olarak bozulur. Uygulama performansı düşebilir veya uygulama askıda.  
+ İş parçacıkları sessiz bir şekilde, uygulamayı sonlandırmadan başarısız olmasına izin verildiğinde programlama ciddi sorunlar algılanmayabilir. Bu, hizmetlerin ve uzun süre çalışan diğer uygulamaların belirli bir sorundur. Başarısız iş parçacıkları gibi program durumunu kademeli olarak bozulur. Uygulama performansı düşebilir veya uygulamanın yanıt veremez duruma.  
   
  Doğal olarak, işletim sistemi program sonlanana kadar devam etmek için iş parçacığı işlenmeyen özel durumlara izin sorunları, geliştirme ve test sırasında sunar. Program sonlandırmalar hata ayıklama desteği üzerinde hata bildirir.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 16cf232ccbdcca496aaa18fc2cfac280072ca24f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a3a991a841182438dca4ef0a4067d333180f4f60
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655483"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380176"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF Genel Bakışında Çift Yönlü Özellikler
 Herhangi diğer geliştirme platformu, farklı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çift yönlü içeriği hızlı geliştirilmesini destekleyen birçok özellik vardır, örneğin, verileri karma soldan sağa ve için sağ aynı belgede sol. Aynı anda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Arapça ve kullanıcıların konuşma İbranice gibi çift yönlü özellikler ihtiyaç duyan kullanıcılar için mükemmel bir deneyim oluşturur.  
@@ -178,7 +178,7 @@ Herhangi diğer geliştirme platformu, farklı [!INCLUDE[TLA2#tla_winclient](../
   
  **Değiştirme**:  
   
- Bu özellik gerçekleştirmek için sayı değiştirme türünü belirtir. Aşağıdakilerden birini alır <xref:System.Windows.Media.NumberSubstitutionMethod> sabit listesi değerleri.  
+ Bu özellik gerçekleştirmek için sayı değiştirme türünü belirtir. Aşağıdakilerden birini alır <xref:System.Windows.Media.NumberSubstitutionMethod> sabit listesi değerleri:  
   
 - <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Değiştirme yöntemi sayı kültürün üzerinde belirlenir <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> özelliği. Bu varsayılandır.  
   

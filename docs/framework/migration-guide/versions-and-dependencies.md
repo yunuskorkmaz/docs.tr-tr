@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3d45ed4f9bfb2c59bf2c01b373e919255c17e41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ad78c37dda00e0b52ec8e84b8c996ee3dca09a5
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592878"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378675"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET framework sürümleri ve bağımlılıkları
 Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel sınıf kitaplıklarını ve diğer yönetilen kitaplıkları içerir. Bu konu, sürüme göre .NET Framework'ün temel özellikleri açıklar, temel CLR sürümleri ve ilişkili geliştirme ortamları hakkında bilgi sağlar ve Windows işletim sistemi tarafından yüklenen sürümleri tanımlar.  
@@ -56,7 +56,7 @@ Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel s�
 ## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>Hedefleme ve .NET Framework uygulamaları için sürüm 4.5 ve sonraki çalıştırma  
  .NET framework 4.5, bilgisayarınızda .NET Framework 4 yerini alan bir yerinde güncelleştirmedir ve benzer şekilde, .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 ve 4.8 olan aynı çalışma zamanı kullandıkları yani .NET Framework 4.5 için yerinde güncelleştirme Sürüm, ancak derleme sürümlerini güncelleştirilir ve yeni türleri ve üyeleri içerir. Bu güncelleştirmeler birini yükledikten sonra .NET Framework 4, .NET Framework 4.5, .NET Framework 4.6 veya .NET Framework 4.7 uygulamalarınızı yeniden derleme gerek kalmadan çalıştırmaya devam etmeli. Ancak tersi doğru değildir. .NET Framework'ün önceki bir sürümünde .NET Framework'ün sonraki bir sürümünü'ı hedefleyen uygulamaların çalıştırılmasını önermiyoruz. Örneğin, .NET Framework 4.5 üzerinde bir uygulama .NET Framework 4.6 hedefleri çalıştırın önermiyoruz. Aşağıdaki kurallar uygulanır:  
   
-- Visual Studio'da bir projenin hedef çerçevesi olarak .NET Framework 4.5 seçebilirsiniz (Bu ayarlar <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> özelliği) bir .NET Framework 4.5 derleme veya yürütülebilir öğe olarak Projeyi derlemek için. Bu derleme veya yürütülebilir öğe olan herhangi bir bilgisayarda sonra kullanılabilir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 veya 4.8 yüklü.  
+- Visual Studio'da bir projenin hedef çerçevesi olarak .NET Framework 4.5 seçebilirsiniz (Bu ayarlar <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> özelliği) bir .NET Framework 4.5 derleme veya yürütülebilir öğe olarak Projeyi derlemek için. Bu derleme veya yürütülebilir öğe daha sonra .NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2, sahip herhangi bir bilgisayarda kullanılabilir veya 4.8 yüklü.  
   
 - Visual Studio'da bir projenin hedef çerçevesi olarak .NET Framework 4.5.1 seçebilirsiniz (Bu ayarlar <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> özelliği) bir .NET Framework 4.5.1 derleme veya yürütülebilir öğe olarak Projeyi derlemek için. Bu derleme veya yürütülebilir öğe yalnızca .NET Framework 4.5.1 veya sonraki bir sürüm yüklü .NET Framework'ün yüklü bilgisayarlarda çalıştırılmalıdır. Yalnızca gibi yüklü .NET Framework 4.5, .NET Framework'ün önceki bir sürümü olan bir bilgisayarda çalışan .NET Framework 4.5.1'i hedefleyen engellenir ve kullanıcıdan, .NET Framework 4.5.1'i yüklemek için istenir çalıştırılabilir. Ayrıca, .NET Framework 4.5.1 derlemeleri gibi .NET Framework 4.5 .NET Framework'ün önceki bir sürümünü hedefleyen bir uygulamadan çağrılmamalıdır.  
   
@@ -74,9 +74,9 @@ Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel s�
   
 - .NET Framework konusunda yeniyseniz, bkz. [genel bakış](../../../docs/framework/get-started/overview.md) temel kavramlara ve özelliklere giriş için.  
   
-- İçerisindeki yeni özellikler ve geliştirmeler için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve nokta sürümlerini için bkz [.NET Framework'teki yenilikler](../../../docs/framework/whats-new/index.md).  
+- Yeni özellikler ve geliştirmeler .NET Framework 4.5 ve nokta sürümleri için bkz. [.NET Framework'teki yenilikler](../../../docs/framework/whats-new/index.md).  
   
-- Uygulamanızı .NET Framework 4'e geçiş hakkında bilgi için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve nokta sürümlerini için bkz [Geçiş Kılavuzu](index.md).  
+- Uygulamanızı .NET Framework 4.5 ve nokta sürümleri için .NET Framework 4'ten geçiş hakkında daha fazla bilgi için bkz: [Geçiş Kılavuzu](index.md).  
   
 - Bir bilgisayarda hangi sürümlerin veya güncelleştirmelerin yüklü olduğunu belirleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](how-to-determine-which-versions-are-installed.md) ve [nasıl yapılır: Hangi .NET Framework güncelleştirmelerinin yüklü olduğunu belirleme](how-to-determine-which-net-framework-updates-are-installed.md).  
   

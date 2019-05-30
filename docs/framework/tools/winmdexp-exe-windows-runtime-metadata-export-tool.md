@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5803ef1d174c3e3a5e8e18b130e6b7a0c65eac81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a00828eba91e4fea41e8b6a6da8953fc399387e3
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61919665"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378504"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)
-[!INCLUDE[wrt](../../../includes/wrt-md.md)] Meta verileri dışarı aktarma Aracı (Winmdexp.exe) bir .NET Framework modülünü içeren bir dosyaya dönüştürür [!INCLUDE[wrt](../../../includes/wrt-md.md)] meta verileri. Ancak .NET Framework derlemeleri ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] meta veri dosyaları aynı fiziksel biçim kullanın, .NET Framework derlemeleri otomatik olarak kullanılamaz, yani meta veri tablolarının içeriğinde farklar vardır [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenleri . Bir .NET Framework modülünü işleminin bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeni olarak adlandırılır *verme*. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], sonuçta elde edilen Windows meta veri (.winmd) dosyası hem meta veriler hem de uygulama bulunur.  
+[!INCLUDE[wrt](../../../includes/wrt-md.md)] Meta verileri dışarı aktarma Aracı (Winmdexp.exe) bir .NET Framework modülünü içeren bir dosyaya dönüştürür [!INCLUDE[wrt](../../../includes/wrt-md.md)] meta verileri. Ancak .NET Framework derlemeleri ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] meta veri dosyaları aynı fiziksel biçim kullanın, .NET Framework derlemeleri otomatik olarak kullanılamaz, yani meta veri tablolarının içeriğinde farklar vardır [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenleri . Bir .NET Framework modülünü işleminin bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeni olarak adlandırılır *verme*. .NET Framework 4.5 ve .NET Framework 4.5.1, sonuçta elde edilen Windows meta veri (.winmd) dosyası hem meta veriler hem de uygulama içerir.  
   
  Kullanırken  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşen** altında bulunan şablon **Windows Store** C# ve Visual Studio 2013 veya Visual Studio 2012'de Visual Basic için derleyici hedefi bir .winmdobj dosyası olduğunu ve sonraki Oluşturma adımı .winmdobj dosyasını bir .winmd dosyasına aktarmak için Winmdexp.exe'yi çağırır. Derleme için önerilen yöntem budur bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeni. Oluşturma süreci üzerinde, Visual Studio'nun sağladığından daha fazla kontrol sahibi olmak istediğinizde doğrudan Winmdexp.exe'yi kullanın.  
   
@@ -34,7 +34,7 @@ winmdexp [options] winmdmodule
 |Bağımsız değişken veya seçenek|Açıklama|  
 |------------------------|-----------------|  
 |`winmdmodule`|Dışarı aktarılacak modülü (.winmdobj) belirtir. Yalnızca tek bir modüle izin verilir. Bu modülü oluşturmak için kullanın `/target` derleyici seçeneğiyle `winmdobj` hedef. Bkz: [/target: winmdobj (C# Derleyici Seçenekleri)](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) veya [/target (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md).|  
-|`/docfile:``docfile`<br /><br /> `/d:``docfile`|Winmdexp.exe'nin üreteceği çıktı XML belgesi dosyasını belirtir. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], çıktı dosyası temelde girdi XML belgeleme dosyasıyla aynıdır.|  
+|`/docfile:``docfile`<br /><br /> `/d:``docfile`|Winmdexp.exe'nin üreteceği çıktı XML belgesi dosyasını belirtir. .NET Framework 4.5, çıktı dosyası temelde girdi XML belgeleme dosyasıyla aynıdır.|  
 |`/moduledoc:``docfile`<br /><br /> `/md:``docfile`|Derleyici ile ürettiği XML belgeleme dosyasının adını belirtir `winmdmodule`.|  
 |`/modulepdb:``symbolfile`<br /><br /> `/mp:``symbolfile`|İçin simgeler içeren program veritabanı (PDB) dosyasının adını belirtir `winmdmodule`.|  
 |`/nowarn:``warning`|Belirtilen uyarı sayısını gizler. İçin *uyarı*, başta sıfır bulunmadan tamsayıyı hata kodunun yalnızca sayısal bölümünü sağlayın.|  

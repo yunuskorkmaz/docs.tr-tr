@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 84f570cbbd97be79426e117d4c97ec182a397fd4
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59981656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "66379535"
 ---
 ### <a name="ipad-should-not-be-used-in-custom-capabilities-file-because-it-is-now-a-browser-capability"></a>Artık bir tarayıcı özelliği olduğundan IPad özel özellikleri dosyasında kullanılmamalıdır
 

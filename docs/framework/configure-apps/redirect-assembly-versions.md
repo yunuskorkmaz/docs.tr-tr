@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: 68169063c9cf152942ff8a7757a1b3d97886002a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa7c0c22d070ec12cb67252dee7dca02c5160b9e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034573"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380081"
 ---
 # <a name="redirecting-assembly-versions"></a>Derleme Sürümlerini Yönlendirme
 
@@ -23,7 +23,7 @@ Derleme zamanı başvuruları .NET Framework derlemelerini, üçüncü parti der
 ## <a name="assembly-unification-and-default-binding"></a>Derleme birleştirme ve varsayılan bağlama
  .NET Framework derlemeleri bağlamalar bazen adlı bir işlem yeniden yönlendirilen *derleme birleştirme*. .NET Framework ortak dil çalışma zamanı ve yaklaşık iki düzine tür kitaplığını oluşturan .NET Framework derlemeleri bir sürümünü içerir. Bu .NET Framework derlemeleri çalışma zamanı tarafından tek bir birim olarak kabul edilir. Uygulama başlatıldığında, varsayılan olarak, bir işlemde yüklü çalışma zamanı ile aynı sürüm numarasına sahip .NET Framework derlemeleri çalışma zamanı tarafından çalıştırılan kod türleri için tüm başvuruları yönlendirilir. Bu modelle ortaya çıkan yönlendirmeler çalışma zamanı için varsayılan davranışı ' dir.
 
- Örneğin, uygulamanızın başvuruyorsa System.XML ad alanındaki türleri ve kullanılarak oluşturulan [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], çalışma zamanı sürüm 4.5 ile birlikte gelen System.XML derlemesine statik başvuruları içerir. Bağlama başvurusunu .NET Framework 4 ile birlikte gelen System.XML derlemesine işaret edecek şekilde yönlendirmek isterseniz, uygulama yapılandırma dosyasına yönlendirme bilgilerini koyabilirsiniz. Birleştirilmiş bir .NET Framework derlemesi için bir yapılandırma dosyası bağlama yeniden yönlendirmesi bu derleme için birleştirmeyi iptal eder.
+ Örneğin, uygulama başvurularınızı System.XML ad alanındaki türleri ve .NET Framework 4.5 kullanılarak oluşturulduysa, çalışma zamanı sürüm 4.5 ile birlikte gelen System.XML derlemesine statik başvuruları içerir. Bağlama başvurusunu .NET Framework 4 ile birlikte gelen System.XML derlemesine işaret edecek şekilde yönlendirmek isterseniz, uygulama yapılandırma dosyasına yönlendirme bilgilerini koyabilirsiniz. Birleştirilmiş bir .NET Framework derlemesi için bir yapılandırma dosyası bağlama yeniden yönlendirmesi bu derleme için birleştirmeyi iptal eder.
 
  Ayrıca, varsa birden çok sürümü kullanılabilir üçüncü taraf derlemeler için derleme bağlamasını el ile yönlendirmek isteyebilirsiniz.
 
@@ -55,7 +55,7 @@ Derleme zamanı başvuruları .NET Framework derlemelerini, üçüncü parti der
 
 ### <a name="relying-on-automatic-binding-redirection"></a>Otomatik bağlama yeniden yönlendirmeye güvenmek
 
-Oluşturduğunuzda, bir masaüstü uygulaması Visual Studio'da hedefleyen [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] veya uygulamayı sonraki bir sürümünü otomatik bağlama yeniden yönlendirme kullanır. Başka bir deyişle, iki bileşen aynı kesin adlandırılmış derlemenin farklı sürümleri başvuruyorsa, çalışma zamanı bağlama yeniden yönlendirme otomatik olarak çıktı uygulama yapılandırma (app.config) dosyasında derlemenin daha yeni sürüme olarak ekler. Bu yeniden yönlendirme, aksi halde yer alabilen Birleştirici derlemesini geçersiz kılar. Kaynak app.config dosyası değiştirilmez. Örneğin, uygulamanızın doğrudan bant dışı bir .NET Framework bileşenini başvuruyor ancak aynı bileşenin eski bir sürümünü hedefleyen bir üçüncü taraf kitaplığı kullandığını varsayalım. Uygulamayı derlediğinizde, çıktı uygulama yapılandırma dosyasına bağlama yeniden yönlendirme bileşenin daha yeni sürümünü içerecek biçimde değiştirilir. Bir web uygulaması oluşturma, buna karşılık, kaynak web yapılandırma dosyasına gerekli bağlama yeniden yönlendirmesini ekleme seçeneği sunar bağlama çakışma ile ilgili bir yapı uyarısı alırsınız.
+Uygulama, .NET Framework 4.5.1'i hedefleyen veya sonraki bir sürümü Visual Studio'da bir masaüstü uygulaması oluşturduğunuzda, otomatik bağlama yeniden yönlendirme kullanır. Başka bir deyişle, iki bileşen aynı kesin adlandırılmış derlemenin farklı sürümleri başvuruyorsa, çalışma zamanı bağlama yeniden yönlendirme otomatik olarak çıktı uygulama yapılandırma (app.config) dosyasında derlemenin daha yeni sürüme olarak ekler. Bu yeniden yönlendirme, aksi halde yer alabilen Birleştirici derlemesini geçersiz kılar. Kaynak app.config dosyası değiştirilmez. Örneğin, uygulamanızın doğrudan bant dışı bir .NET Framework bileşenini başvuruyor ancak aynı bileşenin eski bir sürümünü hedefleyen bir üçüncü taraf kitaplığı kullandığını varsayalım. Uygulamayı derlediğinizde, çıktı uygulama yapılandırma dosyasına bağlama yeniden yönlendirme bileşenin daha yeni sürümünü içerecek biçimde değiştirilir. Bir web uygulaması oluşturma, buna karşılık, kaynak web yapılandırma dosyasına gerekli bağlama yeniden yönlendirmesini ekleme seçeneği sunar bağlama çakışma ile ilgili bir yapı uyarısı alırsınız.
 
 El ile bağlama yeniden yönlendirmeleri kaynak app.config dosyasına, derleme zamanında eklerseniz, Visual Studio, eklediğiniz bağlama yeniden yönlendirmelerini temel alarak derlemeleri birleştirmeyi dener. Örneğin, bir derleme için aşağıdaki bağlama yeniden yönlendirmesini ekleme varsayalım:
 

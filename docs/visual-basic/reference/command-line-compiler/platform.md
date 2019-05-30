@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 5c01136564d64d5b2f1f56d311a6b7eadf1742f0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eb5513c6d8e4085e1b3f69de1d36a007fa27271e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633077"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380308"
 ---
 # <a name="-platform-visual-basic"></a>-platform (Visual Basic)
 Çıkış dosyası hangi ortak dil çalışma zamanı (CLR) platform sürümünü çalıştırabilirsiniz belirtir.  
@@ -31,7 +31,7 @@ ms.locfileid: "64633077"
 |`Itanium`|Derlemenizi 64 bit CLR tarafından bir Itanium işlemci bir bilgisayarda çalıştırılması için derler.|  
 |`arm`|ARM (Gelişmiş RISC makinesi) işlemciye sahip bir bilgisayarda çalıştırmak için derlemenizi derler.|  
 |`anycpu`|Herhangi bir platform üzerinde çalıştırmasını derlemenizin derler. Uygulamayı Windows 32-bit sürümlerinde 32 bit uygulama olarak ve Windows 64 bit sürümlerinde 64 bit uygulama olarak çalışır. Bu bayrak varsayılan değerdir.|  
-|`anycpu32bitpreferred`|Herhangi bir platform üzerinde çalıştırmasını derlemenizin derler. Uygulama bir 32 bit uygulama olarak, hem 32-bit hem de 64 bit Windows sürümlerinde çalışır. Bu bayrak, yalnızca yürütülebilir dosyalar için geçerlidir (. EXE) ve gerektiren [!INCLUDE[net_v45](~/includes/net-v45-md.md)].|  
+|`anycpu32bitpreferred`|Herhangi bir platform üzerinde çalıştırmasını derlemenizin derler. Uygulama bir 32 bit uygulama olarak, hem 32-bit hem de 64 bit Windows sürümlerinde çalışır. Bu bayrak, yalnızca yürütülebilir dosyalar için geçerlidir (. EXE) ve .NET Framework 4.5 gerektirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Kullanım `-platform` çıktı dosyası tarafından hedeflenen işlemci türünü belirtmek için seçeneği.  

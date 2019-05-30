@@ -2,16 +2,16 @@
 title: SqlClient Akış Desteği
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 6fda1dd2d46bbe5ad6b23cab0cd817365c6104eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83a657d1156774ec5ea342d47dca0434fd9d506c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698453"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380001"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient Akış Desteği
 
-Akış desteği SQL Server ile bir uygulama arasındaki (yeni [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) yapılandırılmamış veriler (belgeler, görüntüler ve medya dosyaları) sunucuda destekler. İkili büyük nesne (BLOB) bir SQL Server veritabanı depolayabilir ancak BLOB'ları alma, çok miktarda bellek kullanabilirsiniz.
+Akış desteği (.NET Framework 4. 5 ' Yeni) bir uygulama ile SQL Server arasındaki yapılandırılmamış veriler (belgeler, görüntüler ve medya dosyaları) sunucuda destekler. İkili büyük nesne (BLOB) bir SQL Server veritabanı depolayabilir ancak BLOB'ları alma, çok miktarda bellek kullanabilirsiniz.
 
 Akış desteği için ve SQL Server'dan uygulama yazma, akış verileri tam olarak daha az bellek taşması özel durumları kaynaklanan belleğe veri yüklemek zorunda kalmadan basitleştirir.
 
@@ -101,9 +101,9 @@ GO
 
 - Büyük dosyaları almak için zaman uyumsuz bir yol sağlayarak kullanıcı arabirimi iş parçacığı engelleme kaçının.
 
-- SQL Server'da büyük metin dosya aktarımı [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- .NET Framework 4.5, SQL Server'dan büyük metin dosyasına aktarın.
 
-- SQL Server'da büyük bir XML dosya aktarımı [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- .NET Framework 4.5 SQL Server'da büyük bir XML dosyası aktarabilir.
 
 - SQL Server'dan veri alın.
 
@@ -323,9 +323,9 @@ GO
 
 Örnek, aşağıdakilerin nasıl yapılacağını gösterir:
 
-- SQL Server'da büyük BLOB aktarılıyor [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- .NET Framework 4.5 SQL Server'da büyük BLOB aktarılıyor.
 
-- SQL Server'da büyük metin dosyasına aktarılıyor [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- .NET Framework 4.5 SQL Server'da büyük metin dosyasına aktarılıyor.
 
 - Büyük BLOB aktarmak için yeni zaman uyumsuz özelliğini kullanarak.
 

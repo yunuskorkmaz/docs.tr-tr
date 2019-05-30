@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccea0aace05016f8e485de92d61f23622d7db797
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 80559118140b8bf9f5228c3db3811faecc0e8f73
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615150"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378239"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Çöp toplamanın temelleri
 <a name="top"></a> Ortak dil çalışma zamanı (CLR), çöp toplayıcı otomatik bellek yöneticisi görev yapar. Bunu, aşağıdaki avantajları sağlar:  
@@ -149,7 +149,7 @@ ms.locfileid: "64615150"
   
      2. nesil koleksiyonlar birden çok kesimi kaplayabileceğinden, 2. nesle yükseltilen nesneler daha eski bir kesime taşınabilir. Hem 1. nesil ve 2. nesil Dışarıda Kalanlar, 2. nesil için yükseltildiğinden farklı bir kesime taşınabilir.  
   
-     Büyük nesneleri kopyalama bir performans cezası uygular çünkü normalde, büyük nesne yığını sıkıştırılmamıştır. Ancak, başlayarak [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], kullanabileceğiniz <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> üzerine büyük nesne yığınını sıkıştırmak için özellik.  
+     Büyük nesneleri kopyalama bir performans cezası uygular çünkü normalde, büyük nesne yığını sıkıştırılmamıştır. Ancak, .NET Framework 4.5.1 ile başlayarak, kullanabileceğiniz <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> üzerine büyük nesne yığınını sıkıştırmak için özellik.  
   
  Çöp toplayıcı nesnelerin Canlı olup olmadığını belirlemek için aşağıdaki bilgileri kullanır:  
   

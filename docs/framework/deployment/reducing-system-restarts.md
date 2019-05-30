@@ -8,21 +8,21 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a236b3b4b5c4cde66bad2b460637bb533b764be
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a491b0efd38ed7ff37c8c704b6646dddede5efb3
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881613"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379914"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Yükleyicisi [yeniden başlatma Yöneticisi](https://go.microsoft.com/fwlink/?LinkId=231425) sistem önlemek için mümkün olduğunca yükleme sırasında yeniden başlatır. Uygulama kurulum programınıza .NET Framework yüklerse, yeniden başlatma bu özellikten yararlanmak için Yöneticisi ile arabirim oluşturmasını. Daha fazla bilgi için [nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme durumunu Al](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
+.NET Framework 4.5 yükleyicisi [yeniden başlatma Yöneticisi](https://go.microsoft.com/fwlink/?LinkId=231425) sistem önlemek için mümkün olduğunca yükleme sırasında yeniden başlatır. Uygulama kurulum programınıza .NET Framework yüklerse, yeniden başlatma bu özellikten yararlanmak için Yöneticisi ile arabirim oluşturmasını. Daha fazla bilgi için [nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme durumunu Al](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
   
 ## <a name="reasons-for-a-restart"></a>Yeniden başlatma nedeniyle  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Yükleme yüklenmesi sırasında bir .NET Framework 4 uygulama seçeneği kullanılıyorsa sistemin yeniden başlatılmasını gerektirir. Bunun nedeni, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] .NET Framework 4 dosyalarının yerini alır ve bu dosyalar yükleme sırasında kullanılabilir olmasını gerektirir. Çoğu durumda, yeniden başlatma, kullanımda olan sıd'lerde algılama ve closing.NET Framework 4 uygulamaları tarafından engellenebilir. Ancak, bazı sistem uygulamalar kapatılmalıdır değil. Bu durumlarda, yeniden başlatma kaçınılmaz.  
+ .NET Framework 4 uygulama yüklemesi sırasında kullanılmıyorsa, .NET Framework 4.5 sistemin yeniden başlatılmasını gerektirir. .NET Framework 4.5, .NET Framework 4 dosyalarının yerini alır ve bu dosyalar yükleme sırasında kullanılabilir olmasını gerektiren olmasıdır. Çoğu durumda, yeniden başlatma, kullanımda olan sıd'lerde algılama ve closing.NET Framework 4 uygulamaları tarafından engellenebilir. Ancak, bazı sistem uygulamalar kapatılmalıdır değil. Bu durumlarda, yeniden başlatma kaçınılmaz.  
   
 ## <a name="end-user-experience"></a>Son kullanıcı deneyimi  
- Tam yüklemesi yapan bir son kullanıcı, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yükleyici kullanımda .NET Framework 4 uygulamaları algılarsa sistemin yeniden başlatılmasını önlemek için fırsatı verilir. Bir ileti, tüm çalışan .NET Framework 4 uygulamalarını listeler ve yüklemeden önce bu uygulamaları kapatın seçeneği sunar. Kullanıcıyı onaylarsa, bu uygulamalar yükleyici tarafından kapatılır ve sistemin yeniden başlatılması önlenmiş olur. Kullanıcı iletiye bir belirli bir süre içinde yanıt vermezse, herhangi bir uygulamayı kapatmadan yüklemesi devam eder.  
+ .NET Framework 4.5 tam yüklemesi yapan bir son kullanıcı, yükleyici kullanımda .NET Framework 4 uygulamaları algılarsa sistemin yeniden başlatılmasını önlemek için fırsatı verilir. Bir ileti, tüm çalışan .NET Framework 4 uygulamalarını listeler ve yüklemeden önce bu uygulamaları kapatın seçeneği sunar. Kullanıcıyı onaylarsa, bu uygulamalar yükleyici tarafından kapatılır ve sistemin yeniden başlatılması önlenmiş olur. Kullanıcı iletiye bir belirli bir süre içinde yanıt vermezse, herhangi bir uygulamayı kapatmadan yüklemesi devam eder.  
   
  Yeniden başlatma Yöneticisi çalışan uygulamalar olsa bile bir sistem yeniden başlatma gerektiren bir durumu kapalı algılarsa, bu ileti görüntülenmez.  
   

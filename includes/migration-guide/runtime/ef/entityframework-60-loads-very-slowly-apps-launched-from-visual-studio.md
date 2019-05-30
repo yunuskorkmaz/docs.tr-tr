@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: f9fbda5cc4517db40c4b5b543eb7e8c6c71292d7
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59981680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "66379545"
 ---
 ### <a name="entityframework-60-loads-very-slowly-in-apps-launched-from-visual-studio"></a>EntityFramework 6.0 Visual Studio'dan başlatılan uygulamalarında çok yavaş yükleniyor.
 

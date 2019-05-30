@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b73a98542dfc6fa68e79655bc5538cf005e4636
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2fa95755142b5ea3999cca127c868bc878da516e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779925"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378576"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL Derleyici)
 
@@ -58,7 +58,7 @@ ilasm [options] filename [[options]filename...]
 |**/ include:** `includePath`|İle eklenen dosyaların aranacağı bir yol ayarlar `#include`.|
 |**/itanium**|Hedef işlemci olarak Intel Itanium belirtir.<br /><br /> Eğer görüntü bit genişliği belirtilmezse, varsayılan değer **/pe64**.|
 |**/Key:** `keyFile`|Derleme `filename` bulunan özel anahtarı kullanarak güçlü bir imzayla `keyFile`.|
-|**/Key:** @`keySource`|Derleme `filename` , özel anahtarı kullanarak güçlü bir imza ile üretilen `keySource`.|
+|**/Key:**  @`keySource`|Derleme `filename` , özel anahtarı kullanarak güçlü bir imza ile üretilen `keySource`.|
 |**/ listeleme**|Standart çıktıda bir listeleme dosyası oluşturur. Eğer bu seçeneği koymazsanız, listeleme dosyası oluşturulmaz.<br /><br /> Bu parametre .NET Framework 2.0 ve sonrasında desteklenmez.|
 |**/MDV:** `versionString`|Meta veri sürümü dizesini ayarlar.|
 |**/msv:** `major`.`minor`|Meta veri akış sürümünü ayarlar burada `major` ve `minor` tamsayılardır.|
@@ -108,7 +108,7 @@ IL grameri daha fazla bilgi için bkz: içindeki asmparse.grammar dosyasına [!I
 
 ## <a name="version-information"></a>Sürüm Bilgileri
 
-İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], aşağıdakine benzer kod kullanarak bir arabirim uygulamasına özel öznitelik ekleyebilirsiniz:
+.NET Framework 4.5 ile başlayarak, aşağıdakine benzer kod kullanarak bir arabirim uygulamasına özel öznitelik ekleyebilirsiniz:
 
 ```
 .class interface public abstract auto ansi IMyInterface
@@ -128,7 +128,7 @@ IL grameri daha fazla bilgi için bkz: içindeki asmparse.grammar dosyasına [!I
       …
 ```
 
-İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], bir rastgele sıralama BLOB'u (ikili büyük nesne) ham ikili temsilini kullanarak aşağıdaki kodda gösterildiği gibi belirtebilirsiniz:
+.NET Framework 4.5 ile başlayarak, bir rastgele sıralama BLOB'u (ikili büyük nesne) ham ikili temsilini kullanarak aşağıdaki kodda gösterildiği gibi belirtebilirsiniz:
 
 ```
 .method public hidebysig abstract virtual

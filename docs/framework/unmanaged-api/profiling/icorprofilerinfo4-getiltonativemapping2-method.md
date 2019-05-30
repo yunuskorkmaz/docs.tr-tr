@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b625b2962c829e7c0692a61d8f5561818f7ebf1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b59fe76bd6d8d5887ac825e844e89e85677e2d7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000525"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380343"
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a>ICorProfilerInfo4::GetILToNativeMapping2 Metodu
 Harita, Microsoft Ara dil (MSIL) için belirtilen işlev JIT yeniden derlenen sürümünde yer alan kodun yerel uzaklıklar uzaklıkları alır.  
@@ -44,7 +44,7 @@ HRESULT GetILToNativeMapping(
  [in] Kodu içeren işlev kimliği.  
   
  `pReJitId`  
- [in] JIT yeniden derlenen işlevi kimliği. Kimliğin sıfır olmalıdır [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+ [in] JIT yeniden derlenen işlevi kimliği. Kimlik, .NET Framework 4.5 sıfır olmalıdır.  
   
  `cMap`  
  [in] En büyük boyutunu `map` dizisi.  
@@ -59,7 +59,7 @@ HRESULT GetILToNativeMapping(
  `GetILToNativeMapping2` benzer [Icorprofilerınfo::getıltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) yöntemi znovu işlevi Kimliğini gelecekte belirtmek profil oluşturucu sağlayacak dışında serbest bırakır.  
   
 > [!NOTE]
->  [Icorprofilerfunctioncontrol::setılınstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) yöntemi içinde uygulanmamıştır [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]JIT yeniden derlenen işlevleri farklı bir IL yerel eşleme olamaz. Bu nedenle başlangıçta derlenmiş işlevi. Bu nedenle, `GetILToNativeMapping2` sıfır olmayan bir JIT yeniden derlenen kimliği ile çağrılamaz [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+>  [Icorprofilerfunctioncontrol::setılınstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) yöntemi uygulanmamıştır .NET Framework 4.5, JIT yeniden derlenen işlevleri farklı bir IL yerel eşleme olamaz. Bu nedenle başlangıçta derlenmiş işlevi. Bu nedenle, `GetILToNativeMapping2` .NET Framework 4.5 içinde bir sıfır olmayan JIT yeniden derlenen kimliği ile çağrılamaz.  
   
  `GetILToNativeMapping2` Yöntemi, bir dizi döndürür `COR_DEBUG_IL_TO_NATIVE_MAP` yapıları. Belirli aralıkları yerel yönergeleri için kod (örneğin, giriş) özel bölgeleri karşılık gelen iletmek için bir giriş dizisinde olabilir, `ilOffset` alan için bir değer kümesi [Cordebugıltonativemappingtypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) sabit listesi.  
   

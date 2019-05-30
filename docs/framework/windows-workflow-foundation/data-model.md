@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], data model
 ms.assetid: d5752e51-cfc9-4499-af71-53b6daae9879
-ms.openlocfilehash: 9b6a6b572bafc3a13c5c15e29527644b1c1a16ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c001d2a7a388b46e277b23a527c8792bcdcebfeb
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945866"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378135"
 ---
 # <a name="windows-workflow-foundation-data-model"></a>Windows Workflow Foundation Veri Modeli
 Windows Workflow Foundation veri modeli üç kavramlarını oluşur: değişken, bağımsız değişkenler ve ifadeler. Değişkenleri temsil eden veri depolama ve küme içi ve dışı bir etkinlik bağımsız değişkenleri veri akışını temsil eder. Bağımsız değişkenler (bir değer atanır) ilişkili değişkenler başvurabilir ifadeleri kullanarak.  
@@ -22,7 +22,7 @@ Windows Workflow Foundation veri modeli üç kavramlarını oluşur: değişken,
  İfadeler ve iş akışı geliştirilmesinde nasıl kullanılacağını açıklar.  
   
  [C# İfadeleri](csharp-expressions.md)  
- Açıklar C# ifadeleri iş akışlarında ile sunulan [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
+ Açıklar C# ifadeleri iş akışlarında, .NET Framework 4.5 ile sunulan.  
   
  [Özellikler ve Bağımsız Değişkenler](properties-vs-arguments.md)  
  Etkinlik girişi için kullanılacak türünü seçmek açıklar.  

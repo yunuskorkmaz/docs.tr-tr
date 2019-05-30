@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9cad5b24af86afdb1f3894dc124362fed732e93
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0e836329527740d490bc3ad96cd62d56bc0b7b3e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628895"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377744"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Desen Kullanma
 
 Zaman uyumsuz işlemler ile çalışmak için görev tabanlı zaman uyumsuz desen (TAP) kullandığınızda, geri çağırmaları engellemeden beklemeyi için kullanabilirsiniz.  Görevler için bu yöntemleri gibi gerçekleştirilir <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. İçinde normal denetim akışını beklenmesini zaman uyumsuz işlemleri sağlayarak geri çağırmaları dil tabanlı zaman uyumsuz destek gizler ve derleyicinin ürettiği kodun bu aynı API düzeyinde destek sağlar.
 
 ## <a name="suspending-execution-with-await"></a>Await ile yürütmeyi askıya alma
- İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], kullanabileceğiniz [await](~/docs/csharp/language-reference/keywords/await.md) C# anahtar sözcüğü ve [Await işleci](~/docs/visual-basic/language-reference/operators/await-operator.md) zaman uyumsuz olarak beklemek için Visual Basic'te <xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> nesneleri. Ne zaman bekleyen bir <xref:System.Threading.Tasks.Task>, `await` ifadesidir türünü `void`. Ne zaman bekleyen bir <xref:System.Threading.Tasks.Task%601>, `await` ifadesidir türünü `TResult`. Bir `await` ifadesi, zaman uyumsuz bir yöntem gövdesi içinde gerçekleşmelidir. C# ve Visual Basic dili hakkında daha fazla bilgi için destek [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C# ve Visual Basic dil özellikleri bakın.
+ Kullanabileceğiniz .NET Framework 4.5 ile başlayarak, [await](~/docs/csharp/language-reference/keywords/await.md) anahtar sözcüğünü C# ve [Await işleci](~/docs/visual-basic/language-reference/operators/await-operator.md) zaman uyumsuz olarak beklemek için Visual Basic'te <xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> nesneleri. Ne zaman bekleyen bir <xref:System.Threading.Tasks.Task>, `await` ifadesidir türünü `void`. Ne zaman bekleyen bir <xref:System.Threading.Tasks.Task%601>, `await` ifadesidir türünü `TResult`. Bir `await` ifadesi, zaman uyumsuz bir yöntem gövdesi içinde gerçekleşmelidir. Hakkında daha fazla bilgi için C# ve .NET Framework 4. 5'de Visual Basic dil desteği C# ve Visual Basic dil özellikleri.
 
  Perde await işlevi bir geri çağırma göreve bir devamlılık kullanarak yükler.  Bu geri çağırma zaman uyumsuz yöntem askıya alma noktasında sürdürür. Zaman uyumsuz yöntemin sürdürüldü, beklenen işlemi başarıyla tamamlandı ve bir <xref:System.Threading.Tasks.Task%601>, kendi `TResult` döndürülür.  Varsa <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> , bekleniyor, sona erdi <xref:System.Threading.Tasks.TaskStatus.Canceled> durumu, bir <xref:System.OperationCanceledException> özel durumu oluşturulur.  Varsa <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> , bekleniyor, sona erdi <xref:System.Threading.Tasks.TaskStatus.Faulted> durumunda hataya neden olan özel durum harekete geçirilir. A `Task` birden çok özel durum sonucu olarak hata olabilir, ancak bu özel durumların yalnızca biri yayılır. Ancak, <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> özelliği döndürür bir <xref:System.AggregateException> içeren tüm hataları özel durum.
 
@@ -833,7 +833,7 @@ private static void Produce(int data)
 ```
 
 > [!NOTE]
-> <xref:System.Threading.Tasks.Dataflow> Ad alanı kullanılabilir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] aracılığıyla **NuGet**. İçeren derlemeyi yüklemek için <xref:System.Threading.Tasks.Dataflow> ad alanı, projenizi Visual Studio'da açın, **NuGet paketlerini Yönet** proje menüsünden ve çevrimiçi Microsoft.Tpl.Dataflow paketini arayın.
+> <xref:System.Threading.Tasks.Dataflow> Ad alanı .NET Framework 4.5 kullanılabilir **NuGet**. İçeren derlemeyi yüklemek için <xref:System.Threading.Tasks.Dataflow> ad alanı, projenizi Visual Studio'da açın, **NuGet paketlerini Yönet** proje menüsünden ve çevrimiçi Microsoft.Tpl.Dataflow paketini arayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,15 +2,15 @@
 title: XML'den Veri Türü Sınıfları Oluşturma
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-ms.openlocfilehash: c1b5dfda8aa5370dbc202ab90c75ab5677970467
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b99bb40105398dbd91b910c4a19828d069c3d9e7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929577"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380215"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>XML'den Veri Türü Sınıfları Oluşturma
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] XML'den veri türü sınıfları oluşturmak için yeni bir özellik içerir. Bu konuda, veri türleri .NET blogu RSS akışı için otomatik olarak oluşturacak şekilde açıklar.  
+.NET framework 4.5, XML'den veri türü sınıfları oluşturmak için yeni bir özellik içerir. Bu konuda, veri türleri .NET blogu RSS akışı için otomatik olarak oluşturacak şekilde açıklar.  
   
 ### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a>XML alma .NET blogu RSS akışı  
   
@@ -22,7 +22,7 @@ ms.locfileid: "61929577"
   
 ### <a name="creating-the-data-types"></a>Veri türleri oluşturma  
   
-1. Kullanılacak proxy olduğu bir kod dosyası açın. Bu dosya parçası olması gereken bir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] proje.  
+1. Kullanılacak proxy olduğu bir kod dosyası açın. Bu dosya, .NET Framework 4.5 projesinin bir parçası olmalıdır.  
   
 2. Dosyanın mevcut tüm sınıflar dışında bir konumda imleci yerleştirin.  
   

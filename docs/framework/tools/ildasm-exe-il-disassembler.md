@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a785401f0477131e6ebf0e9c04ce6d0b0b4d4f5c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dfc55bcd97a6c1d68d4ce900b19ace7356d6ee92
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779970"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378563"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Ayrıştırıcı)
 
@@ -53,7 +53,7 @@ Aşağıdaki ek seçenekler kullanılabilir *.exe*, *.dll*, ve *.winmd* dosyalar
 |**/LineNum**|Özgün kaynak satırları için başvurular içerir.|
 |**/nobar**|Parçalara ayırma işleminin ilerleme durumu açılır penceresini gizler.|
 |**/noca**|Özel özniteliklerin çıkışını gizler.|
-|**/ Project**|Göründüğü şekilde yerine yönetilen kod için bu meta veriyi özgün görüntüler [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Varsa `PEfilename` Windows meta verileri değil (*.winmd*) dosyası, bu seçenek, hiçbir etkiye sahiptir. Bkz: [Windows Store uygulamaları ve Windows çalışma zamanı için .NET Framework desteği](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
+|**/ Project**|Göründüğü şekilde yerine yönetilen kod için bu meta veriyi özgün görüntüler [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Varsa `PEfilename` Windows meta verileri değil ( *.winmd*) dosyası, bu seçenek, hiçbir etkiye sahiptir. Bkz: [Windows Store uygulamaları ve Windows çalışma zamanı için .NET Framework desteği](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
 |**/pubonly**|Yalnızca genel türleri ve üyeleri ayrıştırır. Eşdeğer **/visibility:PUB**.|
 |**/quoteallnames**|Tüm adları tek tırnak işaretleri içine alır.|
 |**/raweh**|Özel durum işleme yan tümcelerini ham biçimde gösterir.|
@@ -69,7 +69,7 @@ Aşağıdaki seçenekler geçerlidir *.exe*, *.dll*, ve *.winmd* dosya ya da kon
 |**/classlist**|Modülde tanımlanmış sınıfların bir listesini içerir.|
 |**/ iletme**|İleriye dönük sınıf bildirimini kullanır.|
 |**OPTIONAL**|Çıktıya dosyanın başlık bilgilerini ekler.|
-|**/ item:** `class`[**::** `member`[`(sig`]]|Sağlanan bağımsız değişkene bağlı olarak aşağıdakileri ayrıştırır:<br /><br /> -Belirtilen ayrıştırır `class`.<br />-Belirtilen ayrıştırır `member` , `class`.<br />-Ayrıştırır `member` , `class` belirtilen imzayla `sig`. Biçimi `sig` olan:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Not** .NET Framework sürümleri 1.0 ve 1.1 `sig` bir kapanış parantezi gelmelidir: `(sig)`. Net Framework 2.0 ile kapanış parantezi eklenmemelidir: `(sig`.|
+|**/ item:** `class`[ **::** `member`[`(sig`]]|Sağlanan bağımsız değişkene bağlı olarak aşağıdakileri ayrıştırır:<br /><br /> -Belirtilen ayrıştırır `class`.<br />-Belirtilen ayrıştırır `member` , `class`.<br />-Ayrıştırır `member` , `class` belirtilen imzayla `sig`. Biçimi `sig` olan:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Not** .NET Framework sürümleri 1.0 ve 1.1 `sig` bir kapanış parantezi gelmelidir: `(sig)`. Net Framework 2.0 ile kapanış parantezi eklenmemelidir: `(sig`.|
 |**/noil**|IL derlemesi kod çıktısını engeller.|
 |**stats**|Görüntüye istatistikleri ekler.|
 |**/typelist**|Gidiş dönüş içinde tür sıralamasını korumak üzere türlerin tam listesini oluşturur.|
@@ -111,7 +111,7 @@ Sağlarsanız *Ildasm.exe* ile bir *PEfilename* katıştırılmış kaynakları 
 
 ## <a name="version-information"></a>Sürüm Bilgileri
 
-İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], *Ildasm.exe* ham ikili içeriği görüntüleyerek, tanınmayan bir sıralama BLOB'u (ikili büyük nesne) işler. Örneğin aşağıdaki kod, bir C# programı tarafından oluşturulmuş sıralama BLOB'unun nasıl görüntülendiğini gösterir:
+.NET Framework 4.5 ile başlayarak *Ildasm.exe* ham ikili içeriği görüntüleyerek, tanınmayan bir sıralama BLOB'u (ikili büyük nesne) işler. Örneğin aşağıdaki kod, bir C# programı tarafından oluşturulmuş sıralama BLOB'unun nasıl görüntülendiğini gösterir:
 
 ```csharp
 public void Test([MarshalAs((short)70)] int test) { }
@@ -122,7 +122,7 @@ public void Test([MarshalAs((short)70)] int test) { }
 .method public hidebysig instance void Test(int32  marshal({ 46 }) test) cil managed
 ```
 
-İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], *Ildasm.exe* alınan aşağıdaki alıntıda gösterildiği arabirim uygulamalarına uygulanan öznitelikleri görüntüler *Ildasm.exe* çıktı:
+.NET Framework 4.5 ile başlayarak *Ildasm.exe* alınan aşağıdaki alıntıda gösterildiği arabirim uygulamalarına uygulanan öznitelikleri görüntüler *Ildasm.exe* çıktı:
 
 ```
 .class public auto ansi beforefieldinit MyClass
@@ -155,7 +155,7 @@ Aşağıdaki komut dosyasını ayrıştırır `MyFile.exe` ve elde edilen IL der
 ildasm MyFile.exe /text
 ```
 
-Varsa dosyayı `MyApp.exe` katıştırılmış yönetilen ve yönetilmeyen kaynaklar içeren aşağıdaki komut dört dosya üretir: *Gt;MyApp.İl &*, *gt;MyApp.res*, *gt;Icons.Resources*, ve *Message.resources*:
+Varsa dosyayı `MyApp.exe` katıştırılmış yönetilen ve yönetilmeyen kaynaklar içeren aşağıdaki komut dört dosya üretir: *Gt;MyApp.İl &* , *gt;MyApp.res*, *gt;Icons.Resources*, ve *Message.resources*:
 
 ```console
 ildasm MyApp.exe /output:MyApp.il

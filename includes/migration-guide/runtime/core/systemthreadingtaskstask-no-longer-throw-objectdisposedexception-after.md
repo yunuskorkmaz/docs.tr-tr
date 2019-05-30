@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: ab2907b05bff409fed9a370d5cbebbf3d1575d2f
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59981669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "66379615"
 ---
 ### <a name="systemthreadingtaskstask-no-longer-throw-objectdisposedexception-after-object-is-disposed"></a>System.Threading.Tasks.Task nesne bırakıldıktan sonra ObjectDisposedException artık throw
 

@@ -2,15 +2,15 @@
 title: İlk İş Akışı Hizmet Geliştirme Anlaşmasını Yapma
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: 2fcc0054a3e4c9dd2152344617c8506c9ce6b0d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 244a6973dde9aba860b08177a42a2ecd64f3479c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587627"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380187"
 ---
 # <a name="contract-first-workflow-service-development"></a>İlk İş Akışı Hizmet Geliştirme Anlaşmasını Yapma
-İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF) özelliklerini daha iyi bir web hizmetleri ve iş akışları sözleşme öncelikli iş akışı geliştirme biçiminde arasında tümleştirme. Sözleşme öncelikli iş akışı geliştirme aracı, kod sözleşmede ilk tasarlamak sağlar. Araç ardından otomatik olarak bir etkinlik şablonu sözleşme işlemleri için araç kutusunda oluşturur. Bu konu nasıl etkinlikleri ve bir iş akışı hizmeti özelliklerinde harita hizmet sözleşme öznitelikleri için genel bir bakış sağlar. Bir sözleşme öncelikli iş akışı hizmeti oluşturma adım adım örnek için bkz. [nasıl yapılır: Mevcut bir hizmet anlaşmasını kullanan iş akışı hizmeti oluşturma](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+.NET Framework 4.5 ile başlayarak, Windows Workflow Foundation (WF) özellikleri, web hizmetleri ve iş akışları sözleşme öncelikli iş akışı geliştirme biçiminde arasındaki tümleştirme daha iyi. Sözleşme öncelikli iş akışı geliştirme aracı, kod sözleşmede ilk tasarlamak sağlar. Araç ardından otomatik olarak bir etkinlik şablonu sözleşme işlemleri için araç kutusunda oluşturur. Bu konu nasıl etkinlikleri ve bir iş akışı hizmeti özelliklerinde harita hizmet sözleşme öznitelikleri için genel bir bakış sağlar. Bir sözleşme öncelikli iş akışı hizmeti oluşturma adım adım örnek için bkz. [nasıl yapılır: Mevcut bir hizmet anlaşmasını kullanan iş akışı hizmeti oluşturma](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 ## <a name="in-this-topic"></a>Bu konuda  
   

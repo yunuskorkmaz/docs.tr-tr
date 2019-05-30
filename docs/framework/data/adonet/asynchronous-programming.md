@@ -2,20 +2,20 @@
 title: Zaman Uyumsuz Programlama
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: c41a231959536f4bd558fcd3e94d0d58c2375021
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2698ffabb1f4d7c25f8d889c549c27b668647d62
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584500"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380078"
 ---
 # <a name="asynchronous-programming"></a>Zaman Uyumsuz Programlama
 
-Bu konuda sunulan zaman uyumsuz programlama işlevselliği desteklemek için yapılan geliştirmeleri dahil olmak üzere zaman uyumsuz programlama için .NET Framework veri sağlayıcısı SQL Server (SqlClient) için destek açıklanır [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+Bu konuda, .NET Framework 4. 5 ' kullanılmaya başlanan zaman uyumsuz programlama işlevselliği desteklemek için yapılan geliştirmeleri dahil olmak üzere zaman uyumsuz programlama için .NET Framework Veri Sağlayıcısı'nda SQL Server (SqlClient) için destek açıklanır.
 
 ## <a name="legacy-asynchronous-programming"></a>Eski zaman uyumsuz programlama
 
-Öncesinde [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], SqlClient ile zaman uyumsuz programlama, aşağıdaki yöntemlerle yapıldı ve `Asynchronous Processing=true` bağlantı özelliği:
+.NET Framework 4.5 önce aşağıdaki yöntemlerle SqlClient ile zaman uyumsuz programlama yapıldığı ve `Asynchronous Processing=true` bağlantı özelliği:
 
 1. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>
 
@@ -23,16 +23,16 @@ Bu konuda sunulan zaman uyumsuz programlama işlevselliği desteklemek için yap
 
 3. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>
 
-Bu işlev SqlClient kalır [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+Bu işlevsellik, .NET Framework 4.5 SqlClient kalır.
 
 > [!TIP]
-> Başlayarak [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], eski bu yöntemler artık gereksinim `Asynchronous Processing=true` bağlantı dizesindeki.
+> .NET Framework 4. 5 ' başlayarak, eski bu yöntemler artık gereksinim `Asynchronous Processing=true` bağlantı dizesindeki.
 
-## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>Eklenen zaman uyumsuz programlama özellikleri [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]
+## <a name="asynchronous-programming-features-added-in-net-framework-45"></a>.NET Framework 4.5 eklenen zaman uyumsuz programlama özellikleri
 
 Yeni zaman uyumsuz programlama özelliği kod zaman uyumsuz hale getirmek için basit bir yöntem sağlar.
 
-Sunulan zaman uyumsuz programlama özelliği hakkında daha fazla bilgi için [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], bkz:
+.NET Framework 4. 5 ' kullanılmaya başlanan zaman uyumsuz programlama özelliği hakkında daha fazla bilgi için bkz:
 
 - [C# zaman uyumsuz programlama](../../../csharp/async.md)
 
@@ -53,7 +53,7 @@ Geri çağırmaları kullanarak kodunuzun birden çok yöntemlerde veya lambda i
 
 Çağırma bir `async` yöntemi herhangi bir ek iş parçacığı ayrılamadı. Bunu mevcut g/ç Tamamlama iş parçacığı kısa bir süre sonunda kullanabilirsiniz.
 
-Aşağıdaki yöntemlerden eklenmiştir [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] Zamanuyumsuz programlamayı desteklemek için:
+.NET Framework 4.5 içinde zaman uyumsuz programlamayı desteklemek için aşağıdaki yöntemlerden eklendi:
 
 - <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>
 

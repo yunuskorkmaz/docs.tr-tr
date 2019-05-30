@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a218633ed607222fec3e46629a9bcd614c3d0610
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 670cdb369920663ffa62e224bdd5aa495fc7e622
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031193"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377694"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Deseni Uygulama
 Görev tabanlı zaman uyumsuz desen (TAP) üç yolla gerçekleştirebilirsiniz: Visual Studio'da C# ve Visual Basic derleyicileri kullanarak, el ile veya derleyici ve el yönteminin bir birleşimi yoluyla. Aşağıdaki bölümlerde, her bir yöntemin ayrıntılı ele alınmıştır. DOKUNUN deseni hesaplama bağlantılı hem miyim/O-ilişkili zaman uyumsuz işlemleri uygulamak için kullanabilirsiniz. [İş yükleri](#workloads) bölümde her işlem türü açıklanmaktadır.
@@ -26,7 +26,7 @@ Görev tabanlı zaman uyumsuz desen (TAP) üç yolla gerçekleştirebilirsiniz: 
 ## <a name="generating-tap-methods"></a>DOKUNUN yöntemleri üretiliyor
 
 ### <a name="using-the-compilers"></a>Derleyiciler kullanma
-İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], ile öznitelendirilen herhangi bir yöntemi `async` anahtar sözcüğü (`Async` Visual Basic'te) zaman uyumsuz bir yöntem ve C# ve Visual Basic derleyicileri gerçekleştirme uygulamak için gerekli dönüştürmeleri olarak kabul edilir DOKUNUN kullanarak zaman uyumsuz yöntem. Zaman uyumsuz bir yöntem ya da döndürmelidir bir <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> veya <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> nesne. İkincisi, işlev gövdesini döndürmelidir bir `TResult`, ve bu sonucu elde edilen görev nesnesi sunulacağını derleyici sağlar. Benzer şekilde, Git Yöntemin gövdesi içinde işlenmeyen özel durumları için çıktı görevi sıralanmış ve bitecek şekilde elde edilen görevle neden <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> durumu. Özel durum olduğunda bir <xref:System.OperationCanceledException> (veya türetilmiş tür) gelecek işlenmemiş, elde edilen görev, bu durumda biten <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> durumu.
+İle öznitelendirilen herhangi bir yöntemi olan .NET Framework 4.5 ile başlayarak `async` anahtar sözcüğü (`Async` Visual Basic'te) zaman uyumsuz bir yöntem olarak kabul edilir ve C# ve Visual Basic derleyicileri gerçekleştirmek için gerekli dönüştürmeleri metodu zaman uyumsuz olarak DOKUNUN kullanarak uygulayın. Zaman uyumsuz bir yöntem ya da döndürmelidir bir <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> veya <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> nesne. İkincisi, işlev gövdesini döndürmelidir bir `TResult`, ve bu sonucu elde edilen görev nesnesi sunulacağını derleyici sağlar. Benzer şekilde, Git Yöntemin gövdesi içinde işlenmeyen özel durumları için çıktı görevi sıralanmış ve bitecek şekilde elde edilen görevle neden <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> durumu. Özel durum olduğunda bir <xref:System.OperationCanceledException> (veya türetilmiş tür) gelecek işlenmemiş, elde edilen görev, bu durumda biten <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> durumu.
 
 ### <a name="generating-tap-methods-manually"></a>DOKUNUN yöntemleri el ile oluşturma
 Uygulama üzerinde daha iyi denetim için el ile DOKUNUN deseni uygulayabilir. Öğesinden gösterilen ortak yüzey alanını derleyici dayanan <xref:System.Threading.Tasks?displayProperty=nameWithType> ad alanı ve türlerini destekleyen <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanı. DOKUNUN kendiniz uygulamak için oluşturduğunuz bir <xref:System.Threading.Tasks.TaskCompletionSource%601> nesnesi, zaman uyumsuz işlemi gerçekleştirebilir ve tamamlandığında, çağrı <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A>, veya <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> yöntemi veya `Try` aşağıdaki yöntemlerden birini sürümü. El ile bir TAP yöntemi uyguladığınızda, gösterilen zaman uyumsuz işlem tamamlandığında elde edilen görevi tamamlamanız gerekir. Örneğin:
@@ -52,7 +52,7 @@ TAP yöntemi hesaplama bağlantılı hem miyim/O-ilişkili zaman uyumsuz işleml
 
 - .NET Framework 4'te kullanmak <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> kabul eden bir temsilci yöntemi (genellikle bir <xref:System.Action%601> veya <xref:System.Func%601>) zaman uyumsuz olarak yürütülecek. Sağlarsanız bir <xref:System.Action%601> yöntemi döndürür, temsilci bir <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> zaman uyumsuz yürütme bu temsilcinin temsil eden nesne. Sağlarsanız bir <xref:System.Func%601> yöntemi döndürür, temsilci bir <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> nesne. Overloads biri <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> yöntemi, bir iptal belirteci kabul (<xref:System.Threading.CancellationToken>), görev oluşturma seçenekleri (<xref:System.Threading.Tasks.TaskCreationOptions>) ve bir Görev Zamanlayıcı'yı (<xref:System.Threading.Tasks.TaskScheduler>), her biri, zamanlama ve yürütme görevin üzerinde ayrıntılı denetim sağlar. Geçerli Görev Zamanlayıcı'yı hedefleyen bir Fabrika örnek statik bir özellik olarak kullanılabilir (<xref:System.Threading.Tasks.Task.Factory%2A>), <xref:System.Threading.Tasks.Task> sınıfı; örneğin: `Task.Factory.StartNew(…)`.
 
-- İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve sonraki sürümlerinde (.NET Core ve .NET Standard dahil), statik <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> yöntemi için bir kısayol olarak <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. Kullanmanızı <xref:System.Threading.Tasks.Task.Run%2A> kolayca iş parçacığı havuzunu hedefleyen bir hesaplama bağlantılı görevini başlatmak üzere. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve sonraki sürümlerinde, bu işlem bağlı görevi başlatmak için tercih edilen mekanizması. Kullanım `StartNew` doğrudan yalnızca görev üzerinde daha kapsamlı denetim istediğinizde.
+- .NET Framework 4.5 ve sonraki sürümlerinde (.NET Core ve .NET Standard dahil), statik kullanın <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> yöntemi için bir kısayol olarak <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. Kullanmanızı <xref:System.Threading.Tasks.Task.Run%2A> kolayca iş parçacığı havuzunu hedefleyen bir hesaplama bağlantılı görevini başlatmak üzere. .NET Framework 4.5 ve sonraki sürümlerinde bir hesaplama bağlantılı görevi başlatmak için tercih edilen mekanizması budur. Kullanım `StartNew` doğrudan yalnızca görev üzerinde daha kapsamlı denetim istediğinizde.
 
 - Oluşturucular Kullanma `Task` türü veya `Start` oluşturmak ve ayrı olarak görevi zamanlamak istiyorsanız yöntemi. Genel yöntemler yalnızca zaten başlatıldığından görev döndürmelidir.
 
@@ -83,7 +83,7 @@ Belirtilen bir süre sonra tamamlanacak bir görev oluşturmak istediğinizi var
 [!code-csharp[Conceptual.TAP_Patterns#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#4)]
 [!code-vb[Conceptual.TAP_Patterns#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#4)]
 
-İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> yöntemi, bu amaç için sağlanır ve bunu başka bir zaman uyumsuz yöntemde, örneğin, bir zaman uyumsuz Yoklama döngüsü uygulamak için kullanabilirsiniz:
+.NET Framework 4.5 ile başlayarak <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> yöntemi, bu amaç için sağlanır ve bunu başka bir zaman uyumsuz yöntemde, örneğin, bir zaman uyumsuz Yoklama döngüsü uygulamak için kullanabilirsiniz:
 
 [!code-csharp[Conceptual.TAP_Patterns#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#5)]
 [!code-vb[Conceptual.TAP_Patterns#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#5)]

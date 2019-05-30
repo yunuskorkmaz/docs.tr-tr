@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 479307a0bdee162103f798e5f852cd20f259811e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 629a59cd28e58e4b08805e3bb742d12e9cacbebd
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607677"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377876"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Tanımlayıcı adlı derlemeler oluşturma ve kullanma
 
@@ -71,7 +71,7 @@ Bu özellik tek tek uygulamalar için veya bir bilgisayar için devre dışı b�
 |-----------|-----------------|
 |[Nasıl yapılır: Genel-özel anahtar çifti oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Bir derlemeyi imzalamak için bir şifreleme anahtarı çiftiniz oluşturmayı açıklar.|
 |[Nasıl yapılır: Derlemeyi tanımlayıcı bir adla imzalama](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Tanımlayıcı adlı bir derlemenin nasıl oluşturulacağını açıklar.|
-|[Gelişmiş Kesin Adlandırma](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Güçlü-adlarında yapılan geliştirmeleri açıklar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|
+|[Gelişmiş Kesin Adlandırma](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Adlar güçlü .NET Framework 4.5 içinde yapılan geliştirmeleri açıklar.|
 |[Nasıl yapılır: Tanımlayıcı adlı bir derlemeye başvuru](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|Türler veya kaynaklar tanımlayıcı adlı bütünleştirilmiş kod derleme zamanında başvuru veya çalışma zamanı açıklar.|
 |[Nasıl yapılır: Tanımlayıcı adlı atlama özelliğini devre dışı bırakma](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Tanımlayıcı ad imzası doğrulama atlar özelliği devre dışı açıklar. Bu özellik tüm veya belirli uygulamalar için devre dışı bırakılabilir.|
 |[Bütünleştirilmiş Kodlar Oluşturma](../../../docs/framework/app-domains/create-assemblies.md)|Tek dosya ve çok dosyalı derlemeler genel bir bakış sağlar.|

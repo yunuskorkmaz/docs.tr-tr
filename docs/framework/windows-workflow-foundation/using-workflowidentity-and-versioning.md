@@ -2,12 +2,12 @@
 title: WorkflowIdentity Kullanma ve Sürüm Oluşturma
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 77f5663665d56209cbb1ebc5999d44d411189f04
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: acf2b2c9502487c8bc8960f2a5625db94c31945f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603291"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380127"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>WorkflowIdentity Kullanma ve Sürüm Oluşturma
 <xref:System.Activities.WorkflowIdentity> uygulama geliştiricilerinin'bir ad ilişkilendirmek için iş akışı için bir yol sağlar ve bir <xref:System.Version> bir iş akışı tanımıyla ve kalıcı iş akışı örneğiyle ilişkili olması bu bilgileri. Bu kimlik bilgileri birden çok iş akışı tanımı sürümünün yan yana yürütme gibi senaryoları etkinleştirmek için iş akışı uygulama geliştiricileri tarafından kullanılabilir ve dinamik güncelleştirme gibi diğer işlevleri için temel sağlar. Bu konuda kullanarak genel sağlanır <xref:System.Activities.WorkflowIdentity> ile <xref:System.Activities.WorkflowApplication> barındırma. Yan yana yürütme bir iş akışı hizmeti içinde iş akışı tanımları hakkında daha fazla bilgi için bkz: [WorkflowServiceHost yan yana sürüm oluşturma](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Dinamik güncelleştirme hakkında daha fazla bilgi için bkz: [dinamik güncelleştirme](dynamic-update.md).  
@@ -139,9 +139,9 @@ wfApp.Load(instance);
 ```  
   
 ## <a name="UpdatingWF4PersistenceDatabases"></a> İş akışı sürümü oluşturma desteği için .NET Framework 4 Kalıcılık veritabanlarını yükseltme  
- SqlWorkflowInstanceStoreSchemaUpgrade.sql veritabanı betiği kullanılarak oluşturulan Kalıcılık veritabanları yükseltmek için sağlanan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] veritabanı komut dosyaları. Bu betik güncelleştirmeleri de kullanıma sunulan yeni sürüm oluşturma özellikleri desteklemek için veritabanlarını [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Tüm kalıcı iş akışı örnekleri veritabanlarındaki varsayılan sürüm değerleri verilir ve yan yana yürütme ve dinamik güncelleştirme içinde yer alabilirler.  
+ SqlWorkflowInstanceStoreSchemaUpgrade.sql veritabanı betiği kullanılarak oluşturulan Kalıcılık veritabanları yükseltmek için sağlanan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] veritabanı komut dosyaları. Bu betik, veritabanları, .NET Framework 4. 5 ' kullanıma sunulan yeni sürüm oluşturma özellikleri destekleyecek şekilde güncelleştirir. Tüm kalıcı iş akışı örnekleri veritabanlarındaki varsayılan sürüm değerleri verilir ve yan yana yürütme ve dinamik güncelleştirme içinde yer alabilirler.  
   
- Varsa bir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] iş akışı uygulama sağlanan komut dosyasını kullanarak yükseltilmedi Kalıcılık veritabanı üzerinde yeni sürüm oluşturma özelliklerine herhangi bir Kalıcılık işlemleri çalışır bir <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> aşağıdakine benzer bir ileti ile oluşturulur İleti.  
+ .NET Framework 4.5 iş akışı uygulaması sağlanan komut dosyasını kullanarak yükseltilmedi Kalıcılık veritabanı üzerinde yeni sürüm oluşturma özelliklerine herhangi bir Kalıcılık işlemleri çalışırsa bir <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> benzer bir ileti ile oluşturulur Aşağıdaki ileti.  
   
  **SqlWorkflowInstanceStore '4.0.0.0' veritabanı sürümüne sahip. Bu veritabanı sürümü karşı InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' çalıştırılamaz.  Lütfen '4.5.0.0' veritabanına yükseltin.**  
 ### <a name="ToUpgrade"></a> Veritabanı şemasına yükseltmek için  

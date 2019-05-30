@@ -2,15 +2,15 @@
 title: Önce Anlaşma Aracı
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: 95aef67eb43176ab062b38979e714f232898f221
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ddc3b2c733c73808d17b6e0f45129cc19d7527c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652069"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380367"
 ---
 # <a name="contract-first-tool"></a>Önce Anlaşma Aracı
-Hizmet sözleşmeleri, genellikle var olan hizmetlerden oluşturulan gerekir. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], veri sözleşme sınıfları oluşturulabilir otomatik olarak önce anlaşma aracı kullanarak mevcut hizmetlerden. Önce anlaşma aracı kullanmak için XML şema tanımı dosyası (XSD) yerel olarak indirilmelidir; aracın HTTP üzerinden uzak veri sözleşmeleri içeri aktarılamıyor.
+Hizmet sözleşmeleri, genellikle var olan hizmetlerden oluşturulan gerekir. .NET Framework 4. 5 ', veri sözleşme sınıfları önce anlaşma aracı kullanarak mevcut Hizmetleri'nden otomatik olarak oluşturulabilir. Önce anlaşma aracı kullanmak için XML şema tanımı dosyası (XSD) yerel olarak indirilmelidir; aracın HTTP üzerinden uzak veri sözleşmeleri içeri aktarılamıyor.
 
  Önce anlaşma aracı, derleme görevi olarak Visual Studio 2012 ile tümleşiktir. Proje, kolayca değişiklikleri temel alınan hizmet sözleşmesindeki benimseyebilirsiniz derleme görevi tarafından oluşturulan kod dosyaları Proje oluşturulur, her zaman oluşturulur.
 

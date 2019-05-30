@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb2aabfd083a71d8d083d08e9bc7e2a7ad065e7f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c6b908cadc02e0d1739d8b36b6904bb47c5ea090
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623258"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378458"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Kaynak Dosya Oluşturucu)
 Kaynak Dosya Oluşturucu (Resgen.exe), metin (.txt veya .restext) dosyalarını ve XML tabanlı kaynak biçimi (.resx) dosyalarını, bir çalışma zamanı ikili çalıştırılabilir dosyasına katıştırılabilen veya uydu derlemesi haline getirilebilen ortak dil çalışma zamanı ikili (.resources) dosyalarına dönüştürür. (Bkz [kaynak dosyaları oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
@@ -73,7 +73,7 @@ resgen filename.extension [outputDirectory]
   
 |Parametre veya anahtar|Açıklama|  
 |-------------------------|-----------------|  
-|`/define:` *symbol1*[, *symbol2*,...]|İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], metin tabanlı (.txt veya .restext) kaynak dosyalarında koşullu derlemeyi destekler. Varsa *sembol* içinde giriş metin dosyasına eklenen bir simgeye karşılık gelen bir `#ifdef` yapısı, ilişkili dize kaynağı .resources dosyasına eklenir. Giriş metin dosyası içeriyorsa bir `#if !` ile tanımlanmamış bir sembol deyimiyle `/define` anahtarı, ilişkili dize kaynağı .Resources dosyasına eklenir.<br /><br /> `/define` metin olmayan dosyalarla kullanılırsa, göz ardı edilir. Simgeler büyük/küçük harfe duyarlıdır.<br /><br /> Bu seçenek hakkında daha fazla bilgi için bkz. [kaynakları koşullu olarak derleme](#Conditional) bu konuda.|  
+|`/define:` *symbol1*[, *symbol2*,...]|.NET Framework 4.5 ile başlayarak, metin tabanlı (.txt veya .restext) kaynak dosyalarında koşullu derlemeyi destekler. Varsa *sembol* içinde giriş metin dosyasına eklenen bir simgeye karşılık gelen bir `#ifdef` yapısı, ilişkili dize kaynağı .resources dosyasına eklenir. Giriş metin dosyası içeriyorsa bir `#if !` ile tanımlanmamış bir sembol deyimiyle `/define` anahtarı, ilişkili dize kaynağı .Resources dosyasına eklenir.<br /><br /> `/define` metin olmayan dosyalarla kullanılırsa, göz ardı edilir. Simgeler büyük/küçük harfe duyarlıdır.<br /><br /> Bu seçenek hakkında daha fazla bilgi için bkz. [kaynakları koşullu olarak derleme](#Conditional) bu konuda.|  
 |`useSourcePath`|Giriş dosyasının geçerli dizininin göreli dosya yollarını çözmek için kullanılacağını belirtir.|  
 |`/compile`|Tek bir toplu işlemde birden çok .resources dosyasına dönüştürmek için birden fazla .resx veya metin dosyası belirtmenize olanak sağlar. Bu seçeneği belirtmezseniz, yalnızca bir giriş dosyası bağımsız değişkeni belirtebilirsiniz. Çıkış dosyaları *filename*.resources.<br /><br /> Bu seçenek kullanılamaz `/str:` seçeneği.<br /><br /> Bu seçenek hakkında daha fazla bilgi için bkz. [derleme veya dönüştürme birden çok dosya](#Multiple) bu konuda.|  
 |`/r:``assembly`|Belirtilen derlemedeki meta verilere başvurur. .resx dosyaları dönüştürülürken kullanılır ve Resgen.exe'nin nesne kaynaklarını serileştirmesine veya serilerinin kaldırılmasına olanak sağlar. Benzer `/reference:` veya `/r:` C# ve Visual Basic derleyicileri için Seçenekler.|  
@@ -244,7 +244,7 @@ resgen MyApp.exe Win8Resources
   
 <a name="Conditional"></a>   
 ### <a name="conditionally-compiling-resources"></a>Kaynakları Koşullu Olarak Derleme  
- İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Resgen.exe, metin (.txt ve .restext) dosyalarında dize kaynaklarının koşullu derlenmesini destekler. Bu, birden çok oluşturma yapılandırmasında tek bir metin tabanlı dosya kullanmanıza olanak tanır.  
+ .NET Framework 4.5 ile başlayarak, Resgen.exe, metin (.txt ve .restext) dosyalarında dize kaynaklarının koşullu derlenmesini destekler. Bu, birden çok oluşturma yapılandırmasında tek bir metin tabanlı dosya kullanmanıza olanak tanır.  
   
  Bir .txt veya .restext dosyasında, kullandığınız `#ifdef`...`#endif` bir simge tanımlanmadıysa ve kullanırsanız, ikili .resources dosyasına bir kaynak eklemek için `#if !`... `#endif` bir simge tanımlanmazsa bir kaynak eklemek için. Derleme zamanında, ardından kullanarak simgeler tanımlarsınız `/define:` seçeneğinin ardından simgeler virgülle ayrılmış bir listesi. Karşılaştırma büyük/küçük harfleri duyarlıdır; tarafından tanımlanan simgelerin `/define` derlenecek metin dosyalarındaki simgelerin eşleşmelidir.  
   
