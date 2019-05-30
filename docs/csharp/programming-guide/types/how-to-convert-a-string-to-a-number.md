@@ -8,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 1ff8db25fd76be6eb77355322d497d61096400aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25f6fb5e8780611a6ca7396873d0a33684b65a48
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61709093"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301378"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Nasıl yapılır: Bir dizeyi sayıya dönüştürme (C# Programlama Kılavuzu)
 
@@ -21,7 +21,7 @@ Dönüştürebilir bir [dize](../../../csharp/language-reference/keywords/string
   
  Bir dize varsa, biraz daha verimli ve doğrudan çağırmak onu bir `TryParse` yöntemi (örneğin, [ `int.TryParse("11", out number)` ](xref:System.Int32.TryParse%2A)) veya `Parse` yöntemi (örneğin, [ `var number = int.Parse("11")` ](xref:System.Int32.Parse%2A)).  Kullanarak bir <xref:System.Convert> yöntemi uygulamak, genel nesneler için daha faydalı <xref:System.IConvertible>.  
   
- Kullanabileceğiniz `Parse` veya `TryParse` beklediğiniz gibi dize içeren sayısal türün yöntemleri <xref:System.Int32?displayProperty=nameWithType> türü.  <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> Yöntemi kullanan <xref:System.Int32.Parse%2A> dahili olarak.  `Parse` Yöntemi dönüştürülmüş sayıyı döndürür; `TryParse` yöntemi döndürür bir <xref:System.Boolean> dönüştürme başarılı oldu ve dönüştürülen numarasını getirir olup olmadığını gösteren değer bir [ `out` parametre](../../../csharp/language-reference/keywords/out.md). Dize geçerli bir biçimde değilse `Parse` bir özel durum oluşturur `TryParse` döndürür [false](../../../csharp/language-reference/keywords/false.md). Çağrılırken bir `Parse` yöntemi, her zaman kullanmanız gerektiğini özel durum işleme yakalamak için bir <xref:System.FormatException> ayrıştırma işleminin başarısız olması durumunda olmasıdır.  
+ Kullanabileceğiniz `Parse` veya `TryParse` beklediğiniz gibi dize içeren sayısal türün yöntemleri <xref:System.Int32?displayProperty=nameWithType> türü.  <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> Yöntemi kullanan <xref:System.Int32.Parse%2A> dahili olarak.  `Parse` Yöntemi dönüştürülmüş sayıyı döndürür; `TryParse` yöntemi döndürür bir <xref:System.Boolean> dönüştürme başarılı oldu ve dönüştürülen numarasını getirir olup olmadığını gösteren değer bir [ `out` parametre](../../../csharp/language-reference/keywords/out.md). Dize geçerli bir biçimde değilse `Parse` bir özel durum oluşturur `TryParse` döndürür [false](../../../csharp/language-reference/keywords/false-literal.md). Çağrılırken bir `Parse` yöntemi, her zaman kullanmanız gerektiğini özel durum işleme yakalamak için bir <xref:System.FormatException> ayrıştırma işleminin başarısız olması durumunda olmasıdır.  
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>Ayrıştırma ve TryParse metotları çağırma
 

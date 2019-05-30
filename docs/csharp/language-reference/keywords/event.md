@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: fcfaa05d4efec43a49e3f485b74cadadbabd9236
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9575d6e998ff709b06f1da21abd17a3629c17029
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661769"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251034"
 ---
 # <a name="event-c-reference"></a>event (C# Başvurusu)
 `event` Anahtar sözcüğü, bir yayımcı sınıf içinde bir olay bildirmek için kullanılır.  

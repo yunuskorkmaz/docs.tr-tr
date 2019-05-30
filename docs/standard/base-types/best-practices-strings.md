@@ -1,7 +1,7 @@
 ---
 title: . NET'te dizeleri kullanmak için en iyi uygulamalar
 description: Dizeleri .NET uygulamalarında etkili bir şekilde kullanmayı öğrenin.
-ms.date: 09/13/2018
+ms.date: 05/01/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 82fdcae2887cf5a3428a0c874b43d9770f35afcf
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 68bcc9321d5a97620d0e8d24befbd24f4f350f94
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052989"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250815"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>. NET'te dizeleri kullanmak için en iyi uygulamalar
 <a name="top"></a> .NET, yerelleştirilmiş ve genelleştirilmiş uygulamalar geliştirmek için kapsamlı destek sağlar ve sıralama ve dizeleri görüntüleme gibi yaygın işlemleri gerçekleştirirken geçerli kültürün veya belirli bir kültürün kurallarını uygulamak kolaylaştırır. Ancak dizeleri sıralamak veya karşılaştırmak her zaman kültüre duyarlı bir işlem değildir. Örneğin, bir uygulama tarafından dahili olarak kullanılan dizelerin genellikle tüm kültürlerde aynı şekilde işlenmeleri gerekir. XML etiketleri, HTML etiketleri, kullanıcı adları, dosya yolları ve sistem nesnelerinin adları gibi kültürden bağımsız dize verileri kültüre duyarlıymış gibi yorumlanırsa, uygulama kodu küçük hatalar, zayıf performans ve bazı durumlarda güvenlik sorunlarıyla karşılaşabilir.  
@@ -69,7 +69,7 @@ ms.locfileid: "66052989"
   
 - Eşit olup olmadıklarını kontrol etmek için değil, dizeleri sıralamak için <xref:System.String.Compare%2A?displayProperty=nameWithType> ve <xref:System.String.CompareTo%2A?displayProperty=nameWithType> yöntemlerini kullanın.  
   
-- Sayılar ve tarihler gibi dize olmayan verileri bir kullanıcı arabiriminde görüntülemek için kültüre duyarlı biçimlendirme kullanın. Dize olmayan veriyi dize biçiminde kalıcı hale getirmek için sabit kültürlü biçimlendirme kullanın.  
+- Sayılar ve tarihler gibi dize olmayan verileri bir kullanıcı arabiriminde görüntülemek için kültüre duyarlı biçimlendirme kullanın. Kullanım ile biçimlendirme [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture) dize olmayan veriyi dize biçiminde kalıcı hale getirmek için.  
   
  Dizeleri kullanırken aşağıdaki uygulamalardan kaçının:  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66052989"
 > [!NOTE]
 > İndirebileceğiniz [sıralama ağırlık tabloları](https://www.microsoft.com/download/details.aspx?id=10921), sıralama ve karşılaştırma işlemlerinde Windows işletim sistemleri için kullanılan karakter ağırlıkları hakkında bilgi içeren metin dosyalarını bir dizi ve [varsayılan Unicode Harmanlama öğesi tablosu](https://www.unicode.org/Public/UCA/latest/allkeys.txt), Linux ve macOS için sıralama ağırlık tablonun en son sürümü. Linux ve Macos'ta sıralama ağırlık tablosu belirli bir sürümünü sürümüne bağlıdır [Unicode için Uluslararası bileşenleri](http://site.icu-project.org/) sistemde yüklü kitaplıkları. ICU ve uyguladıkları Unicode sürümleri hakkında daha fazla bilgi için bkz: [indirme ICU](http://site.icu-project.org/download).
 
- Ancak, iki dizeyi eşitlik veya sıralama düzeni için değerlendirmek tek bir doğru sonuç vermez; sonuç, dizeleri karşılaştırmakta kullanılan ölçütlere bağlıdır. Özellikle, sıralı olan veya geçerli kültürün veya sabit kültürün (İngilizce dilini temel alan yerel ayardan bağımsız bir kültür) büyük/küçük harf ve sıralama kurallarını temel alan dize karşılaştırmaları farklı sonuçlar üretebilir.  
+ Ancak, iki dizeyi eşitlik veya sıralama düzeni için değerlendirmek tek bir doğru sonuç vermez; sonuç, dizeleri karşılaştırmakta kullanılan ölçütlere bağlıdır. Özellikle, sıralı olan veya büyük/küçük harf ve sıralama kurallarını geçerli kültürün dayalı dize veya [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture) (İngilizce dilini temel alan yerel ayardan bağımsız kültür) üretebilir farklı sonuçlar.  
 
 Ayrıca, farklı işletim sistemleri veya işletim sistemi sürümlerinde .NET kullanarak ya da .NET farklı sürümlerini kullanan dize karşılaştırmaları farklı sonuçlar döndürebilir. Daha fazla bilgi için [dizeleri ve Unicode standardı](xref:System.String#Unicode). 
 
@@ -348,10 +348,36 @@ Ayrıca, farklı işletim sistemleri veya işletim sistemi sürümlerinde .NET k
  [Başa dön](#top)  
   
 <a name="Formatted"></a>   
-## <a name="displaying-and-persisting-formatted-data"></a>Biçimlendirilmiş Veri Görüntüleme ve Kalıcı Yapma  
- Kullanıcılara sayılar ve tarih ve saatler gibi dize olmayan verileri görüntülerken bunları, kullanıcının kültürel ayarlarını kullanarak biçimlendirin. Varsayılan olarak, sayısal türlerin ve tarih ve saat türlerinin <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemi ve `ToString` yöntemleri, biçimlendirme işlemleri için geçerli iş parçacığı kültürünü kullanır. Biçimlendirme yönteminin geçerli kültürü kullanması gerektiğini açıkça belirtmek için, `provider` veya <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> gibi bir <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> parametresi olan bir biçimlendirme yönteminin bir aşırı yüklemesini çağırabilir ve <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özelliğini geçirebilirsiniz.  
-  
- Dize olmayan verileri iki veri veya biçimlendirilmiş veri olarak kalıcı hale getirebilirsiniz. Eğer biçimlendirilmiş veri olarak kaydetmeyi seçerseniz, bir `provider` parametresi içeren bir biçimlendirme yöntemi aşırı yüklemesi çağırmanız ve <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> özelliğini geçirmeniz gerekir. Sabit kültür, kültürden ve makineden bağımsız olan biçimlendirilmiş veriler için tutarlı bir biçim sağlar. Bunun aksine, sabit kültür dışındaki kültürler kullanılarak biçimlendirilen verileri kalıcı hale getirmenin birçok sınırlaması vardır:  
+## <a name="displaying-and-persisting-formatted-data"></a>Biçimlendirilmiş Veri Görüntüleme ve Kalıcı Yapma
+
+Kullanıcılara sayılar ve tarih ve saatler gibi dize olmayan verileri görüntülerken bunları, kullanıcının kültürel ayarlarını kullanarak biçimlendirin. Varsayılan olarak, aşağıdaki tüm biçimlendirme işlemleri, geçerli iş parçacığı kültürünü kullanır:
+
+- İlişkilendirilmiş dizeler tarafından desteklenen [ C# ](../../csharp/language-reference/tokens/interpolated.md) ve [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) derleyicileri.
+
+- Dize kullanan birleştirme işlemleri [ C# ](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) veya [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ) birleştirme işleçleri veya bu çağrı <xref:System.String.Concat%2A?displayProperty=nameWithType> doğrudan yöntemi.
+
+- <xref:System.String.Format%2A?displayProperty=nameWithType> Yöntemi.
+
+- `ToString` Sayısal türlerin ve tarih ve saat türlerinin yöntemleri.
+
+Bir dizeyi belirli bir kültürün kuralları kullanılarak biçimlendirilmelidir açıkça belirtmeniz veya [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture), aşağıdakileri yapabilirsiniz:
+
+- Kullanırken <xref:System.String.Format%2A?displayProperty=nameWithType> ve `ToString` yöntemleri çağırmak olan bir aşırı yüklenmiş bir `provider` parametresi gibi <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> veya <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>ve geçirin <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özelliği, bir <xref:System.Globalization.CultureInfo> istenen temsil eden örneği kültür veya <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType> özelliği.  
+
+- Dize birleştirme için derleyici örtük dönüştürmeleri gerçekleştirmek izin vermez. Bunun yerine, çağırarak açık bir dönüştürme gerçekleştirmek bir `ToString` olan aşırı yüklenmiş bir `provider` parametresi. Örneğin, derleyici örtük olarak geçerli kültürü dönüştürülürken kullanan bir <xref:System.Double> aşağıdaki bir dize değerine C# kod:
+
+  [!code-csharp[Implicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#1)]
+
+  Bunun yerine, açıkça kültürün biçimlendirme kuralları kullanılır ve dönüştürmeye çağırarak belirtebilirsiniz <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType> aşağıdaki gibi yöntemi C# kodu yapar:
+
+  [!code-csharp[Explicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#2)]
+
+- Bir araya alınmış dizeye atamak yerine dize ilişkilendirme için bir <xref:System.String> atadığınızda, örnek bir <xref:System.FormattableString>. Ardından çağırabilirsiniz kendi <xref:System.FormattableString.ToString?displayProperty=nameWithType> yöntemi, geçerli kültürün kuralları yansıtan bir sonuç dizesi oluşturmak ya da çağırabilirsiniz <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> belirtilen bir kültürün kurallarını yansıtan bir sonuç dizesi üretmek için yöntemi. Statik olarak de biçimlendirilebilir dize geçirebilirsiniz <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> sabit kültür kurallarını yansıtan bir sonuç dizesi üretmek için yöntemi. Aşağıdaki örnek bu yaklaşımı gösterir. (Örneğin çıktısında geçerli kültürü en-US yansıtır.)
+
+  [!code-csharp[String interpolation](~/samples/snippets/standard/base-types/string-practices/cs/formattable.cs)]
+  [!code-vb[String interpolation](~/samples/snippets/standard/base-types/string-practices/vb/formattable.vb)]
+
+Dize olmayan verileri iki veri veya biçimlendirilmiş veri olarak kalıcı hale getirebilirsiniz. Eğer biçimlendirilmiş veri olarak kaydetmeyi seçerseniz, bir `provider` parametresi içeren bir biçimlendirme yöntemi aşırı yüklemesi çağırmanız ve <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> özelliğini geçirmeniz gerekir. Sabit kültür, kültürden ve makineden bağımsız olan biçimlendirilmiş veriler için tutarlı bir biçim sağlar. Bunun aksine, sabit kültür dışındaki kültürler kullanılarak biçimlendirilen verileri kalıcı hale getirmenin birçok sınırlaması vardır:  
   
 - Veriler, farklı bir kültüre sahip sistemde alındığında veya geçerli sistemin kullanıcısı geçerli kültürü değiştirdiğinde ve verileri almaya çalıştığında bu verilerin kullanılamaz hale gelmesi muhtemeldir.  
   
@@ -366,7 +392,7 @@ Ayrıca, farklı işletim sistemleri veya işletim sistemi sürümlerinde .NET k
   
  Ancak, <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> ve <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> çağrılarındaki <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> özelliğini <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> ile değiştirirseniz, kalıcı hale getirilen tarih ve saat verileri aşağıdaki çıktıda gösterildiği şekilde başarıyla geri yüklenir.  
   
-```  
+```console  
 06.05.1758 21:26  
 05.05.1818 07:19  
 22.04.1870 23:54  

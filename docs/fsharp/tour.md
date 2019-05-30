@@ -2,12 +2,12 @@
 title: F# turu
 description: Bazı F# programlama dilinde kod örnekleriyle birlikte bu turda anahtar özelliklerini inceleyin.
 ms.date: 11/06/2018
-ms.openlocfilehash: 4b3ec7fd2c42712440ea7d7045c560ab20390b45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64394342777003b33dd77028739fb7209b9f3c86
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61901738"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301263"
 ---
 # <a name="tour-of-f"></a>F turu\#
 
@@ -17,7 +17,7 @@ F# hakkında bilgi edinmek için en iyi yolu, okuma ve F# kodu yazacak sağlamak
 
 ## <a name="executing-the-code-online"></a>Kodu çevrimiçi yürütülüyor
 
-Öğeniz yoksa F# makinenizde yüklü tüm örnekleri ile çevrimiçi yürütebilir [rüya REPL](https://fable.io/repl/). Rüya olan bir SQL diyalektiği F# doğrudan tarayıcınızda yürütür. REPL'de izleyin örnekleri görüntülemek için kullanıma **örnekleri > öğrenin > Turu F#**  rüya REPL. sol menü çubuğunda
+Öğeniz yoksa F# makinenizde yüklü tüm örnekleri ile tarayıcınızda yürütebilirsiniz [deneyin F# WebAssembly üzerinde](https://tryfsharp.fsbolero.io/). Rüya olan bir SQL diyalektiği F# doğrudan tarayıcınızda yürütür. REPL'de izleyin örnekleri görüntülemek için kullanıma **örnekleri > öğrenin > Turu F#**  rüya REPL. sol menü çubuğunda
 
 ## <a name="functions-and-modules"></a>İşlevler ve modüller
 

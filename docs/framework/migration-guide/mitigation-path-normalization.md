@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51291fbc9ad2927bc3b9649074a6dbf374aaf7f1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5b1c704113c8e05e493cdb3ef24f6376ab54b1cb
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648447"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251121"
 ---
 # <a name="mitigation-path-normalization"></a>Azaltma: Yol normalleştirme
-Hedef uygulama ile başlangıç [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], .NET Framework'teki yolu normalleştirme değişti.  
+Hedef .NET Framework 4.6.2 uygulamaları ile başlayarak, .NET Framework'teki yolu normalleştirme değişti.  
   
 ## <a name="what-is-path-normalization"></a>Yol normalleştirme nedir?  
  Bir yol normalleştirme, böylece geçerli bir yol hedef işletim sisteminde uyan bir yol veya dosya tanımlayan dize değiştirme içerir. Normalleştirme genellikle içerir:  
@@ -26,7 +26,7 @@ Hedef uygulama ile başlangıç [!INCLUDE[net_v462](../../../includes/net-v462-m
 - Karakterleri kırpma belirtilmiş.  
   
 ## <a name="the-changes"></a>Değişiklikleri  
- Hedefleyen uygulamalar ile başlayan [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], yol normalleştirme aşağıdaki yollarla değişmiştir:  
+ .NET Framework 4.6.2'yi hedefleyen uygulamalar ile başlayarak, aşağıdaki yollarla yolu normalleştirme değişmiştir:  
   
 - İşletim sistemi için çalışma zamanı erteler [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) yolları'leri normalleştirmek için işlevi.  
   
@@ -39,12 +39,13 @@ Hedef uygulama ile başlangıç [!INCLUDE[net_v462](../../../includes/net-v462-m
 - Alternatif veri akışları erişmek için cihaz sözdizimi desteklenmiyor.  
   
 ## <a name="impact"></a>Etki  
- Hedefleyen uygulamalar için [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] veya daha sonra bu değişiklikleri varsayılan olarak etkindir. Daha önce erişilemeyen yolları erişmek yöntemleri sağlarken performansı.  
+
+.NET Framework 4.6.2'yi hedefleyen uygulamalar için veya daha sonra bu değişiklikleri varsayılan olarak etkindir. Daha önce erişilemeyen yolları erişmek yöntemleri sağlarken performansı.  
   
- Hedefleyen uygulamaları [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] ve önceki sürümleri ancak bunlar çalışırken [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] veya daha sonra bu değişiklikten etkilenmez.  
+.NET Framework 4.6.1 ve önceki sürümleri hedefleyen, ancak .NET Framework 4.6.2 altında çalışan ya da üzeri olan uygulamalar, bu değişiklikten etkilenmez.  
   
 ## <a name="mitigation"></a>Azaltma  
- Hedefleyen uygulamaları [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] veya daha sonra dışında bu değişikliği kabul ve eski normalleştirme aşağıdakileri ekleyerek [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) uygulama yapılandırma dosyası bölümünü:  
+ Daha sonra bu dışında seçebilirsiniz veya .NET Framework 4.6.2'yi hedefleyen uygulamalar değiştirin ve aşağıdaki ekleyerek eski normalleştirme kullanın [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) uygulama yapılandırma dosyası bölümünü:  
   
 ```xml  
 <runtime>  
@@ -52,7 +53,7 @@ Hedef uygulama ile başlangıç [!INCLUDE[net_v462](../../../includes/net-v462-m
 </runtime>  
 ```  
   
- Hedefleyen uygulamaları [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] veya önceki ancak üzerinde çalışan [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] veya aşağıdaki satırı ekleyerek yolu normalleştirme değişiklikleri daha sonra etkinleştirebilirsiniz [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) uygulama bölümü. yapılandırma dosyası:  
+.NET Framework 4.6.1 veya önceki ancak hedefleyen uygulamaları .NET Framework 4.6.2 üzerinde çalışıyor veya aşağıdaki satırı ekleyerek yolu normalleştirme değişiklikleri daha sonra etkinleştirebilirsiniz [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) bölümü uygulama .configuration dosyası:  
   
 ```xml  
 <runtime>  

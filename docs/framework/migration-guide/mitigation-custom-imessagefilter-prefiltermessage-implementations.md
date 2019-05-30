@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4faf42d3be4f76e5908068b1c2f88d7803ae18df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3ac43b574c4382c4aec5070acde0fa77516727d
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61871559"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251143"
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Azaltma: Özel IMessageFilter.PreFilterMessage uygulamaları
 
-.NET Framework başlayarak sürümlerini hedefleyen Windows Forms uygulamalarında [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], özel bir <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> uygulama için güvenli bir şekilde filtre iletileri <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> yöntemi çağrıldığında, <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> uygulama:
+.NET Framework 4.6.1, özel bir başlangıç .NET Framework sürümleri hedefleyen Windows Forms uygulamalarında <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> uygulama için güvenli bir şekilde filtre iletileri <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> yöntemi çağrıldığında, <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> uygulama:
 
 - Birini veya her ikisini aşağıdakileri yapar:
 
@@ -25,13 +25,13 @@ ms.locfileid: "61871559"
 
 ## <a name="impact"></a>Etki
 
-Bu değişiklik, yalnızca .NET Framework başlayarak sürümlerini hedefleyen Windows Forms uygulamaları etkiler [!INCLUDE[net_v461](../../../includes/net-v461-md.md)].
+Bu değişiklik, yalnızca .NET Framework 4.6.1 ile başlayarak .NET Framework sürümleri hedefleyen Windows Forms uygulamaları etkiler.
 
 Bazı durumlarda bu tür uygulamaları .NET Framework'ün önceki sürümlerini hedefleyen Windows Forms uygulamaları için throw bir <xref:System.IndexOutOfRangeException> özel durum olduğunda <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> yöntemi çağrılır
 
 ## <a name="mitigation"></a>Azaltma
 
-Bu değişiklik, istenmeyen ise, uygulamalar hedef [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] veya sonraki bir sürümü için aşağıdaki yapılandırma ayarı ekleyerek dışında tercih edebilirsiniz [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) uygulamanın yapılandırma dosyası bölümünü:
+Bu değişiklik, istenmeyen ise, .NET Framework 4.6.1 veya sonraki bir sürümünü hedefleyen uygulamalar dışında aşağıdaki yapılandırma ayarı ekleyerek seçebilirsiniz [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) uygulamanın yapılandırma dosyası bölümünü:
 
 ```xml
 <runtime>
@@ -39,7 +39,7 @@ Bu değişiklik, istenmeyen ise, uygulamalar hedef [!INCLUDE[net_v461](../../../
 </runtime>
 ```
 
-Ayrıca, .NET Framework'ün önceki sürümlerini hedefleyen ancak altında çalışan uygulamalar [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] veya sonraki bir sürümünü, bu davranış için aşağıdaki yapılandırma ayarı ekleyerek seçebilirsiniz [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)uygulamanın yapılandırma dosyası bölümünü:
+Ayrıca, .NET Framework'ün önceki sürümlerini hedefleyen ancak .NET Framework 4.6.1 veya sonraki bir sürümünü altında çalışan uygulamalar, bu davranış için aşağıdaki yapılandırma ayarı ekleyerek seçebilirsiniz [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) uygulamanın yapılandırma dosyası bölümünü:
 
 ```xml
 <runtime>

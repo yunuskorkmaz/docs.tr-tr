@@ -13,16 +13,16 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 716f6ee2c9eb09abcbd4ada16954315ed4a56c02
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: bc27eedcf1957a109a9bcb80cf9a49e9606921fd
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210424"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250993"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - dize ilişkilendirme (C# Başvurusu)
 
-`$` Özel karakter tanımlayan bir dize sabit değeri olarak bir *ilişkilendirilmiş bir dizedir*. İçerebilir bir dize sabit değeri ilişkilendirilmiş bir dizedir *ilişkilendirilmiş ifade*. İlişkilendirilmiş dize bir sonuç dizesine çözüldüğünde, ilişkilendirilmiş ifadeler öğeleriyle ifade sonuçları dize temsillerini tarafından değiştirilir. Bu özellik, C# 6 ve sonraki sürümlerinde dil kullanılabilir.
+`$` Özel karakter tanımlayan bir dize sabit değeri olarak bir *ilişkilendirilmiş bir dizedir*. İçerebilir bir dize sabit değeri ilişkilendirilmiş bir dizedir *ilişkilendirme ifadeleri*. İlişkilendirilmiş dize bir sonuç dizesine çözüldüğünde öğelerini ilişkilendirme ifadelerle ifade sonuçları dize temsillerini tarafından değiştirilir. Bu özellik, C# 6 ve sonraki sürümlerinde dil kullanılabilir.
 
 Dize ilişkilendirme, biçimlendirilmiş dize değerinden oluşturmak için daha okunabilir ve kullanışlı bir söz dizimi sağlar bir [bileşik biçimlendirme dizesi](../../../standard/base-types/composite-formatting.md) özelliği. Aşağıdaki örnek, aynı çıktı oluşturmak için her iki özellik kullanır:
 
@@ -32,18 +32,18 @@ Dize ilişkilendirme, biçimlendirilmiş dize değerinden oluşturmak için daha
 
 Bir dize ilişkilendirilmiş dize sabit değeri belirlemek için onunla önüne ekleyin `$` simgesi. Arasında beyaz boşluk olamaz `$` ve `"` bir dize sabit değeri başlar. Bunun yapılması, bir derleme zamanı hatasına neden olur.
 
-Bir öğe ile ilişkilendirilmiş ifade yapısı aşağıdaki gibidir:
+Bir ilişkilendirme ifade sahip bir öğe yapısı aşağıdaki gibidir:
 
 ```
-{<interpolatedExpression>[,<alignment>][:<formatString>]}
+{<interpolationExpression>[,<alignment>][:<formatString>]}
 ```
 
 Köşeli parantezler içindeki öğeler isteğe bağlıdır. Aşağıdaki tablo her öğeyi açıklar:
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|`interpolatedExpression`|Biçimlendirilecek bir sonuç üretir ifade. Dize gösterimini `null` sonucudur <xref:System.String.Empty?displayProperty=nameWithType>.|
-|`alignment`|Sabit ifade değeri, ilişkilendirilmiş ifadenin sonucu dize gösterimi en az karakter sayısını tanımlar. Pozitif ise sağa hizalı dize gösterimi; negatif ise sola hizalıdır. Daha fazla bilgi için [hizalama bileşeni](../../../standard/base-types/composite-formatting.md#alignment-component).|
+|`interpolationExpression`|Biçimlendirilecek bir sonuç üretir ifade. Dize gösterimini `null` sonucudur <xref:System.String.Empty?displayProperty=nameWithType>.|
+|`alignment`|Sabit ifade değeri ilişkilendirme ifadenin sonucu dize gösterimi en az karakter sayısını tanımlar. Pozitif ise sağa hizalı dize gösterimi; negatif ise sola hizalıdır. Daha fazla bilgi için [hizalama bileşeni](../../../standard/base-types/composite-formatting.md#alignment-component).|
 |`formatString`|Deyim sonucu türü tarafından desteklenen bir biçim dizesi. Daha fazla bilgi için [biçim dizesi bileşeni](../../../standard/base-types/composite-formatting.md#format-string-component).|
 
 Aşağıdaki örnek, yukarıda açıklanan isteğe bağlı bir biçimlendirme bileşenleri kullanır:
@@ -54,9 +54,9 @@ Aşağıdaki örnek, yukarıda açıklanan isteğe bağlı bir biçimlendirme bi
 
 Bir küme ayracı, dahil etmek için "{" veya "}", bir aradeğerlendirme dizesinde tarafından üretilen metinde iki küme ayraçları kullanın "{{" veya "}}". Daha fazla bilgi için [kaçış küme ayraçları](../../../standard/base-types/composite-formatting.md#escaping-braces).
 
-İki nokta üst üste olarak (":") kullanmak için ilişkilendirilmiş ifade öğenin özel anlama sahip bir [koşullu işleç](../operators/conditional-operator.md) , parantez içindeki ifade bir ilişkilendirilmiş ifadede alın.
+İki nokta üst üste olarak (":") kullanmak için bir ilişkilendirme ifade öğesinde özel anlama sahip bir [koşullu işleç](../operators/conditional-operator.md) , parantez içindeki ifade bir ilişkilendirme ifadede alın.
 
-Aşağıdaki örnek, sonuç dizesinde ayraç ekleme ve bir ilişkilendirilmiş ifadede koşullu bir işleç kullanma işlemini gösterir:
+Aşağıdaki örnek bir sonuç dizesinde ayraç ekleme ve bir ilişkilendirme ifadede koşullu bir işleç kullanmayı gösterir:
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
@@ -69,7 +69,7 @@ Verbatim ilişkilendirilmiş bir dize ile başlayan `$` karakteri ve ardından `
 
 Bir aradeğerlendirme dizesinde üç örtük dönüştürmelerine vardır:
 
-1. Bir araya alınmış dizeye dönüştürme bir <xref:System.String> ilişkilendirilmiş ifade ile ilişkilendirilmiş dize çözümü sonucu olan örneği öğelerini sonuçları düzgün şekilde biçimlendirilmiş dize temsillerini ile değiştiriliyor. Bu dönüştürme, geçerli kültürü kullanır.
+1. Bir araya alınmış dizeye dönüştürme bir <xref:System.String> ilişkilendirme ifade ile ilişkilendirilmiş dize çözümü sonucu olan örneği öğelerini sonuçları düzgün şekilde biçimlendirilmiş dize temsillerini ile değiştiriliyor. Bu dönüştürme, geçerli kültürü kullanır.
 
 1. Bir araya alınmış dizeye dönüştürme bir <xref:System.FormattableString> Biçimlendirilecek ifade sonuçları ile birlikte bir bileşik biçimlendirme dizesi temsil eden örneği. Kültüre özgü ile birden çok sonuç dizeleri oluşturmak için tek bir içerik sağlayan <xref:System.FormattableString> örneği. Yapmak için aşağıdaki yöntemlerden birini arayın:
 

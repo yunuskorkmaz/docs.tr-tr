@@ -2,12 +2,12 @@
 title: Yüksek Kullanılabilirlik, Olağanüstü Durum Kurtarma için SqlClient Desteği
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: a2cc63cb0b9118da6eb3c381e853165f800fe61f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 9b928be56ac09ec707a45829c862e606b68b717c
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645915"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251165"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Yüksek Kullanılabilirlik, Olağanüstü Durum Kurtarma için SqlClient Desteği
 Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) yüksek kullanılabilirlik, olağanüstü durum kurtarma--AlwaysOn Kullanılabilirlik grupları için.  AlwaysOn Kullanılabilirlik grupları özelliği SQL Server 2012'ye eklendi. AlwaysOn Kullanılabilirlik grupları hakkında daha fazla bilgi için SQL Server Books Online'a bakın.  
@@ -32,7 +32,7 @@ Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../.
 2. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
->  Ayarı `MultiSubnetFailover` için `true` ile gerekli değildir [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)] veya sonraki sürümler.
+>  Ayarı `MultiSubnetFailover` için `true` .NET Framework 4.6.1 veya sonraki sürümleriyle gerekli değildir.
   
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover ile bağlanma  
  Her zaman belirtin `MultiSubnetFailover=True` bir kullanılabilirlik grubu dinleyicisi SQL Server 2012 veya SQL Server 2012 yük devretme kümesi örneği bağlanırken. `MultiSubnetFailover` Yük devretme kümesi örneği SQL Server 2012 ve edecek ve tüm kullanılabilirlik grupları tek ve birden çok alt ağ AlwaysOn topolojiler için yük devretme süreyi önemli ölçüde azaltmaya için daha hızlı yük devretmeyi etkinleştirir. Birden çok alt ağ bir yük devretme sırasında istemci bağlantıları paralel olarak çalışacaktır. Alt ağ bir yük devretme sırasında TCP bağlantısı agresif yeniden deneyecek.  

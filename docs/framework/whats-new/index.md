@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 898771c3de8b54c08decd91f1a631a6205292912
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
-ms.translationtype: MT
+ms.openlocfilehash: 14ef6eec2503c0af1a7b1fd5ed2dd289978d6fcc
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053636"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301326"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework'teki yenilikler
 
@@ -689,7 +689,7 @@ Yeni API'lerin bir listesi için .NET Framework 4.7 eklediğiniz için bkz: [.NE
 
 .NET framework 4.7 artırır seri hale getirme tarafından <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:
 
-**Gelişmiş işlevler Eliptik Eğri Şifrelemesi (ECC)***
+**Gelişmiş işlevler Eliptik Eğri Şifrelemesi (ECC)** *
 
 .NET Framework 4.7, `ImportParameters(ECParameters)` yöntemler eklendi <xref:System.Security.Cryptography.ECDsa> ve <xref:System.Security.Cryptography.ECDiffieHellman> zaten yerleşik bir anahtarını temsil eden bir nesne için izin vermek için sınıflar. Bir `ExportParameters(Boolean)` yöntemi, açık eğri parametreleri kullanarak anahtarı dışa aktarmak için de eklenmiştir.
 
@@ -782,7 +782,7 @@ WPF API'leri yazdırmak <xref:System.Printing.PrintQueue?displayProperty=nameWit
 
 ## <a name="whats-new-in-net-framework-462"></a>.NET Framework 4.6.2 yenilikler
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Aşağıdaki alanlarda yeni özellikler içerir:
+.NET Framework 4.6.2, aşağıdaki alanlarda yeni özellikler içerir:
 
 - [ASP.NET](#ASPNET462)
 
@@ -810,11 +810,11 @@ Yeni API'lerin bir listesi .NET Framework 4.6.2 eklediğiniz için bkz: [.NET Fr
 
 ### <a name="aspnet"></a>ASP.NET
 
-İçinde [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ASP.NET, aşağıdaki geliştirmeleri içerir:
+ASP.NET, .NET Framework 4.6.2, aşağıdaki geliştirmeleri içerir:
 
 **Veri ek açıklama doğrulayıcıları yerelleştirilmiş hata iletileri için gelişmiş destek**
 
-Veri ek açıklama doğrulayıcıları, bir sınıf özelliği için bir veya daha fazla öznitelik ekleyerek doğrulamayı gerçekleştirmek etkinleştirin. Özniteliğin <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> öğe doğrulama başarısız olursa hata iletisinin metni tanımlar. İle başlayarak [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ASP.NET hata iletilerini yerelleştirmeniz kolaylaştırır. Hata iletileri, yerelleştirilecek:
+Veri ek açıklama doğrulayıcıları, bir sınıf özelliği için bir veya daha fazla öznitelik ekleyerek doğrulamayı gerçekleştirmek etkinleştirin. Özniteliğin <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> öğe doğrulama başarısız olursa hata iletisinin metni tanımlar. .NET Framework 4.6.2 ile başlayarak, ASP.NET hata iletilerini yerelleştirmeniz kolaylaştırır. Hata iletileri, yerelleştirilecek:
 
 1. <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> Doğrulama özniteliği sağlanır.
 
@@ -873,7 +873,7 @@ End Interface
 
  **Çıktı önbellek sağlayıcıları için zaman uyumsuz desteği**
 
- İle başlayarak [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], görev döndüren-yöntemleri zaman uyumsuz ölçeklenebilirlik avantajlarını sağlayacak çıkış önbelleği sağlayıcıları ile kullanılabilir.  Bu yöntemleri uygulayan sağlayıcıları, bir web sunucusunda iş parçacığı engellemelerini azaltmak ve ASP.NET hizmeti olan ölçeklenebilirliği geliştirme.
+ .NET Framework 4.6.2 ile başlayarak, görev döndüren yöntemler çıkış önbelleği sağlayıcıları ile zaman uyumsuz ölçeklenebilirlik avantajlarını sağlamak için kullanılabilir.  Bu yöntemleri uygulayan sağlayıcıları, bir web sunucusunda iş parçacığı engellemelerini azaltmak ve ASP.NET hizmeti olan ölçeklenebilirliği geliştirme.
 
  Aşağıdaki API'lar, zaman uyumsuz çıktı önbellek sağlayıcıları desteklemek için eklenmiştir:
 
@@ -897,7 +897,7 @@ End Interface
 
 ### <a name="character-categories"></a>Karakter kategorileri
 
-Öğesindeki karakterler [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] göre sınıflandırılır [Unicode standardı, sürüm 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). İçinde [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ve [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], karakter sınıflandırılmış 6.3 Unicode karakter kategorilerine göre.
+.NET Framework 4.6.2 karakter göre sınıflandırılan [Unicode standardı, sürüm 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). .NET Framework 4.6 ve .NET Framework 4.6.1, karakter 6.3 Unicode karakter kategorilerine göre sınıflandırılmış.
 
 Unicode 8.0 için destek, karakter sınıflandırması sınırlı <xref:System.Globalization.CharUnicodeInfo> sınıf ve türleri ve yöntemleri için güvenin üzerinde. Bunlar <xref:System.Globalization.StringInfo> sınıfı, aşırı yüklenmiş <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> yöntemi ve [karakter sınıfları](../../standard/base-types/character-classes-in-regular-expressions.md) .NET Framework normal ifade motoru tarafından tanınır.  Karakter ve dize karşılaştırma ve sıralama bu değişiklikten etkilenmez ve temel alınan işletim sisteminde veya Windows 7 sistemlerinde, .NET Framework tarafından sağlanan karakter verileri yararlanmaya devam eder.
 
@@ -909,11 +909,11 @@ Unicode 6.0 karakter kategorilerden Unicode 7.0 değişiklikler için bkz: [Unic
 
 **X509 desteği içeren FIPS 186 3 DSA sertifikaları**
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] DSA (dijital imza algoritması) X509 anahtarları FIPS 186 2 1024 bit sınırı aşan sertifikalar için destek ekler.
+.NET Framework 4.6.2, DSA (dijital imza algoritması) X509 anahtarları FIPS 186 2 1024 bit sınırı aşan sertifikalar için destek ekler.
 
-FIPS 186-3, daha büyük anahtar boyutunu destekleme yanı sıra [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] imzaları SHA-2 karma algoritma ailesi, (SHA256, SHA384 ve SHA512) ile bilgi işlem sağlar. FIPS 186 3 desteği sağlanır yeni <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType> sınıfı.
+FIPS 186-3, daha büyük anahtar boyutunu hizmetinin yanı sıra, SHA-2 karma algoritma ailesi, (SHA256, SHA384 ve SHA512) imzalarla bilgi işlem, .NET Framework 4.6.2 sağlar. FIPS 186 3 desteği sağlanır yeni <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType> sınıfı.
 
-Yakın zamanda yapılan değişiklikler mantığıyla <xref:System.Security.Cryptography.RSA> sınıfı .NET Framework 4.6 ve <xref:System.Security.Cryptography.ECDsa> .NET Framework 4.6.1, sınıfta <xref:System.Security.Cryptography.DSA> soyut temel sınıf [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] bu işlevselliği kullanmak arayanlara izin vermek için ek yöntemler atama olmadan. Çağırabilirsiniz <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> aşağıdaki örnekte gösterildiği gibi verileri imzalamak için genişletme yöntemi.
+Yakın zamanda yapılan değişiklikler mantığıyla <xref:System.Security.Cryptography.RSA> sınıfı .NET Framework 4.6 ve <xref:System.Security.Cryptography.ECDsa> .NET Framework 4.6.1, sınıfta <xref:System.Security.Cryptography.DSA> .NET Framework 4.6.2 soyut temel sınıf olan bu işlevselliği kullanmak arayanlara izin vermek için ek yöntemleri atama olmadan. Çağırabilirsiniz <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> aşağıdaki örnekte gösterildiği gibi verileri imzalamak için genişletme yöntemi.
 
 ```csharp
 public static byte[] SignDataDsaSha384(byte[] data, X509Certificate2 cert)
@@ -957,7 +957,7 @@ End Function
 
 .NET framework 3.5 ile üç farklı anahtar türetme işlevi (KDF) yordamlarını Eliptik Eğri Diffie-Hellman anahtar anlaşması için destek eklendi. Özellikleri aracılığıyla girişleri yordamları ve yordamları kendileri için yapılandırılmış <xref:System.Security.Cryptography.ECDiffieHellmanCng> nesne. Ancak her yordam, her giriş özelliği okuma olduğundan, Karışıklığı önlemek için geçmişteki üzerinde geliştiricinin bol miktarda odası vardı.
 
-Bu adres için [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], aşağıdaki üç yöntemi eklenmiş <xref:System.Security.Cryptography.ECDiffieHellman> temel sınıfı daha net bir şekilde bu KDF yordamları ve bunların girişleri göstermek için:
+Bu .NET Framework 4.6.2 ele almak için aşağıdaki üç yöntemi eklenmiş <xref:System.Security.Cryptography.ECDiffieHellman> temel sınıfı daha net bir şekilde bu KDF yordamları ve bunların girişleri göstermek için:
 
 |ECDiffieHellman yöntemi|Açıklama|
 |----------------------------|-----------------|
@@ -967,7 +967,7 @@ Bu adres için [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], aşağıd
 
 **Kalıcı anahtar simetrik şifreleme desteği**
 
-Windows şifreleme kitaplığı (CNG) kalıcı simetrik anahtarları depolamak için destek eklendi ve donanım depolanan simetrik anahtarlar kullanarak ve [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] yapmak, geliştiriciler için olası yapılan bu özelliği kullanın.  Anahtar adları ve anahtar sağlayıcıları kavramı uygulamaya özel olduğundan, bu özelliği kullanmaktan yerine tercih edilen Fabrika yaklaşım somut uygulama türlerinin Oluşturucu kullanan gerektirir (arama gibi `Aes.Create`).
+Windows şifreleme kitaplığı (CNG) kalıcı simetrik anahtarları depolamak için destek eklendi ve donanım depolanan simetrik anahtarlar ve .NET Framework 4.6.2 kullanılarak yapılan bunu mümkün hale getirmek, geliştiriciler için bu özelliği kullanın.  Anahtar adları ve anahtar sağlayıcıları kavramı uygulamaya özel olduğundan, bu özelliği kullanmaktan yerine tercih edilen Fabrika yaklaşım somut uygulama türlerinin Oluşturucu kullanan gerektirir (arama gibi `Aes.Create`).
 
 Kalıcı anahtar simetrik şifreleme desteği için AES var (<xref:System.Security.Cryptography.AesCng>) ve 3DES (<xref:System.Security.Cryptography.TripleDESCng>) algoritmaları. Örneğin:
 
@@ -1010,7 +1010,7 @@ End Function
 
 **SHA-2 karma SignedXml desteği**
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] İçin destek ekler <xref:System.Security.Cryptography.Xml.SignedXml> Özet algoritmaları RSA SHA512 PKCS #1 RSA-SHA256 ve SHA384 RSA İmza yöntemleri ve SHA256, SHA384 ve SHA512 başvuru sınıfı.
+.NET Framework 4.6.2 için destek ekler <xref:System.Security.Cryptography.Xml.SignedXml> Özet algoritmaları RSA SHA512 PKCS #1 RSA-SHA256 ve SHA384 RSA İmza yöntemleri ve SHA256, SHA384 ve SHA512 başvuru sınıfı.
 
 URI sabitleri tüm üzerinde sunulan <xref:System.Security.Cryptography.Xml.SignedXml>:
 
@@ -1029,7 +1029,7 @@ URI sabitleri tüm üzerinde sunulan <xref:System.Security.Cryptography.Xml.Sign
 
 ### <a name="sqlclient"></a>SqlClient
 
-SQL Server için .NET framework veri sağlayıcısı (<xref:System.Data.SqlClient?displayProperty=nameWithType>) aşağıdaki yeni özellikleri içeren [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]:
+SQL Server için .NET framework veri sağlayıcısı (<xref:System.Data.SqlClient?displayProperty=nameWithType>) .NET Framework 4.6.2 aşağıdaki yeni özellikleri içerir:
 
 **Bağlantı havuzu ve Azure SQL veritabanları ile zaman aşımları**
 
@@ -1071,13 +1071,13 @@ SQLClient her zaman şifreli için iki geliştirmeleri sunar:
 
 ### <a name="windows-communication-foundation"></a>Windows Communication Foundation
 
-İçinde [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], Windows Communication Foundation aşağıdaki alanlarda geliştirilmiştir:
+.NET Framework 4.6.2, Windows Communication Foundation aşağıdaki alanlarda geliştirilmiştir:
 
 **CNG kullanarak depolanan sertifikaları için WCF aktarma güvenlik desteği**
 
-WCF aktarım güvenliği kullanarak Windows şifrelemesi kitaplığı (CNG) depolanan sertifikalarını destekler. İçinde [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], bir üs en fazla 32 bit uzunluğunda bir ortak anahtar sertifikaları kullanarak bu destek sınırlıdır. Bir uygulama hedefleri olduğunda [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], bu özellik varsayılan olarak açıktır.
+WCF aktarım güvenliği kullanarak Windows şifrelemesi kitaplığı (CNG) depolanan sertifikalarını destekler. .NET Framework 4.6.2, bir üs en fazla 32 bit uzunluğunda bir ortak anahtar sertifikaları kullanarak bu destek sınırlıdır. Bir uygulamayı .NET Framework 4.6.2 hedeflediğinde, bu özellik varsayılan olarak açıktır.
 
-Hedefleyen uygulamalar için [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] ve önceki ancak üzerinde çalışan [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], bu özellik, aşağıdaki satırı ekleyerek etkinleştirilebilir [ \<çalışma zamanı >](../configure-apps/file-schema/runtime/runtime-element.md) app.config veya web.config Bölümü dosya.
+.NET Framework 4.6.2 çalıştıran önceki ancak ve .NET Framework 4.6.1'i hedefleyen uygulamalar için bu özellik aşağıdaki satırı ekleyerek etkinleştirilebilir [ \<çalışma zamanı >](../configure-apps/file-schema/runtime/runtime-element.md) app.config bölümünü veya Web.config dosyası.
 
 ```xml
 <AppContextSwitchOverrides
@@ -1146,7 +1146,7 @@ SSL 3.0, artık NetTcp aktarım güvenliği ve sertifika kimlik bilgisi türü i
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
-İçinde [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], Windows Presentation Foundation aşağıdaki alanlarda geliştirilmiştir:
+.NET Framework 4.6.2, Windows Presentation Foundation aşağıdaki alanlarda geliştirilmiştir:
 
 **Grup sıralama**
 
@@ -1180,11 +1180,11 @@ Geçici klavye desteği tarafından otomatik olarak çağrılmasını ve Windows
 
 **İzleyici başına DPI**
 
-WPF içinde WPF uygulamaları için yüksek DPI ve karma DPI ortamları son çoğalan desteklemek için [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] İzleyici başına farkındalık sağlar. Bkz: [örnekleri ve Geliştirici Kılavuzu](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI) İzleyici başına DPI olacak WPF uygulamanızı etkinleştirme hakkında daha fazla bilgi için GitHub üzerindeki.
+WPF uygulamaları için yüksek DPI ve karma DPI ortamları son çoğalan desteklemek için .NET Framework 4.6.2 WPF İzleyici başına farkındalık sağlar. Bkz: [örnekleri ve Geliştirici Kılavuzu](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI) İzleyici başına DPI olacak WPF uygulamanızı etkinleştirme hakkında daha fazla bilgi için GitHub üzerindeki.
 
 Önceki .NET Framework sürümlerinde, WPF sistem DPI kullanan uygulamalardır. Diğer bir deyişle, uygulamanın kullanıcı Arabiriminde uygulama işlenen izleyicinin DPI bağlı olarak uygun şekilde işletim sistemine göre ölçeklendirilir. ,
 
-Altında çalışan uygulamalar için [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], bir yapılandırma deyimine ekleyerek WPF uygulamalarında İzleyici başına DPI değişiklikleri devre dışı bırakabilirsiniz [ \<çalışma zamanı >](../configure-apps/file-schema/runtime/runtime-element.md) gibi Uygulama Yapılandırması bölümünde dosya:
+.NET Framework 4.6.2 altında çalışan uygulamalar için İzleyici başına DPI değişiklikleri WPF uygulamaları için bir yapılandırma deyimi ekleyerek devre dışı bırakabilirsiniz [ \<çalışma zamanı >](../configure-apps/file-schema/runtime/runtime-element.md) gibi Uygulama Yapılandırması bölümünde dosya:
 
 ```xml
 <runtime>
@@ -1196,13 +1196,13 @@ Altında çalışan uygulamalar için [!INCLUDE[net_v462](../../../includes/net-
 
 ### <a name="windows-workflow-foundation-wf"></a>Windows Workflow Foundation (WF)
 
-İçinde [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], Windows Workflow Foundation aşağıdaki alanında geliştirilmiştir:
+.NET Framework 4.6.2, Windows Workflow Foundation aşağıdaki alanında geliştirilmiştir:
 
 **C# ifadeleri ve Re-hosted WF Tasarımcısı'nda IntelliSense desteği**
 
 İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], WF, hem bir Visual Studio Tasarımcısı'nda ve kod iş akışlarında C# ifadeleri destekler. Re-hosted iş akışı Tasarımcısı, WF iş akışı Tasarımcısı, Visual Studio'da (örneğin, WPF) dışında bir uygulamada olmasını sağlayan anahtar özelliğidir.  Windows Workflow Foundation, C# ifadeleri ve IntelliSense Re-hosted iş akışı Tasarımcısı'nda destekleme özelliği sağlar. Daha fazla bilgi için [Windows Workflow Foundation blog](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` Önceki .NET Framework sürümlerinde [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], WF Tasarımcısı IntelliSense olduğunda kopuk bir müşteri Visual Studio'dan bir iş akışı projesi oluşturur. Eksik iş akışı türlerini ıntellisense'ten uyarılarını görünür proje derlemesi başarılı olur ve iş akışı türlerini tasarımcıda bulunamadı ancak **hata listesi** penceresi. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Bu sorunu giderir ve IntelliSense kullanılabilir hale getirir.
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` .NET Framework 4.6.2 önce .NET Framework sürümlerinde, bir müşteri Visual Studio'dan bir iş akışı projesi oluşturur, WF Tasarımcısı IntelliSense bozuk. Eksik iş akışı türlerini ıntellisense'ten uyarılarını görünür proje derlemesi başarılı olur ve iş akışı türlerini tasarımcıda bulunamadı ancak **hata listesi** penceresi. .NET Framework 4.6.2, bu sorunu giderir ve IntelliSense kullanılabilir hale getirir.
 
 **Artık izleme iş akışını iş akışı V1 uygulamaları FIPS modunda çalıştırın.**
 
@@ -1216,7 +1216,7 @@ Bu senaryo etkin değilse, uygulamayı çalıştıran bir özel durum iletisi ol
 
 **Dinamik güncelleştirme ile Visual Studio iş akışı Tasarımcısı kullanarak iş akışı iyileştirmeleri**
 
-İş Akışı Tasarımcısı, akış çizelgesi etkinlik Tasarımcısı ve diğer iş akışı etkinlik tasarımcıları artık başarıyla yüklemek ve çağırdıktan sonra kaydedilmiş iş akışları görüntüleme <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> yöntemi. Önce .NET Framework sürümlerinde [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], çağırdıktan sonra kaydedilmiş bir iş akışı için Visual Studio'da bir XAML dosyası yüklenirken <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> aşağıdaki sorunları neden olabilir:
+İş Akışı Tasarımcısı, akış çizelgesi etkinlik Tasarımcısı ve diğer iş akışı etkinlik tasarımcıları artık başarıyla yüklemek ve çağırdıktan sonra kaydedilmiş iş akışları görüntüleme <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> yöntemi. .NET Framework 4.6.2 önce .NET Framework sürümlerinde, çağırdıktan sonra kaydedilmiş bir iş akışı için Visual Studio'da bir XAML dosyası yüklenirken <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> aşağıdaki sorunları neden olabilir:
 
 - İş Akışı Tasarımcısı XAML dosyası doğru şekilde yüklenemiyor (zaman <xref:System.Activities.Presentation.ViewState.ViewStateData.Id%2A?displayProperty=nameWithType> satırın sonunda olup).
 
@@ -1240,7 +1240,7 @@ Dönüştürülen Masaüstü uygulamaları, UWP API'lerine Canlı kutucukları v
 
 ### <a name="debugging-improvements"></a>Hata ayıklama iyileştirmeleri
 
-*Hata ayıklama API'si yönetilmeyen* içinde Gelişmiş [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ek analizler yapmak için bir <xref:System.NullReferenceException> hangi değişkendir kaynak kodu tek bir satırda belirlemek mümkün olması oluşturulur `null`.   Bu senaryoyu desteklemek için aşağıdaki API'leri için yönetilmeyen hata ayıklama API'si eklenmiştir.
+*Hata ayıklama API'si yönetilmeyen* ek analizler yapmak için .NET Framework içinde 4.6.2 geliştirilmiştir, bir <xref:System.NullReferenceException> hangi değişkendir kaynakkodutekbirsatırdabelirlemekmümkünolmasıdurum`null`.   Bu senaryoyu desteklemek için aşağıdaki API'leri için yönetilmeyen hata ayıklama API'si eklenmiştir.
 
 - [Icordebugcode4](../unmanaged-api/debugging/icordebugcode4-interface.md), [Icordebugvariablehome](../unmanaged-api/debugging/icordebugvariablehome-interface.md), ve [Icordebugvariablehomeenum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) yönetilen değişkenlerin yerel havaalanlarından gösterdiğiniz arabirimleri. Bu, bazı kod akış analizi yapmak hata ayıklayıcıları sağlar, bir <xref:System.NullReferenceException> gerçekleşir ve, yerel konumuna karşılık gelen yönetilen değişkeni belirlemek için geriye doğru çalışması için `null`.
 
@@ -1250,7 +1250,7 @@ Dönüştürülen Masaüstü uygulamaları, UWP API'lerine Canlı kutucukları v
 
 ## <a name="whats-new-in-net-framework-461"></a>.NET Framework 4.6.1 yenilikler
 
-[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] Aşağıdaki alanlarda yeni özellikler içerir:
+.NET Framework 4.6.1 aşağıdaki alanlarda yeni özellikler içerir:
 
 - [Şifreleme](#Crypto)
 
@@ -1264,7 +1264,7 @@ Dönüştürülen Masaüstü uygulamaları, UWP API'lerine Canlı kutucukları v
 
 - [NGen](#NGEN461)
 
-Daha fazla bilgi için [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], aşağıdaki konulara bakın:
+.NET Framework 4.6.1 hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
 - [.NET framework 4.6.1 değişikliklerin listesi](https://go.microsoft.com/fwlink/?LinkId=622964)
 
@@ -1276,11 +1276,11 @@ Daha fazla bilgi için [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], a
 
 ### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Şifreleme: X509 desteği içeren ECDSA sertifikaları
 
-.NET framework 4.6 X509 RSACng desteği eklendi sertifikaları. [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] ECDSA (Eliptik Eğri Dijital imza algoritması) X509 için destek ekler sertifikaları.
+.NET framework 4.6 X509 RSACng desteği eklendi sertifikaları. .NET Framework 4.6.1 ECDSA (Eliptik Eğri Dijital imza algoritması) X509 için destek ekler sertifikaları.
 
 ECDSA daha iyi performans sunar ve RSA, Aktarım Katmanı Güvenliği (TLS) performans ve ölçeklenebilirlik olduğu önemli bir mükemmel seçim sağlayarak daha daha güvenli bir şifreleme algoritması. .NET Framework uygulaması mevcut Windows işlevselliğine çağrılarını sarmalar.
 
-Aşağıdaki kod örneği, X 509 sertifikalarını dahil ECDSA için yeni destek kullanarak imza bayt akışı olarak oluşturmak için ne kadar kolay olduğunu gösteren [!INCLUDE[net_v461](../../../includes/net-v461-md.md)].
+Aşağıdaki kod örneği, X 509 sertifikalarını dahil .NET Framework 4.6.1 ECDSA için yeni destek kullanarak imza bayt akışı olarak oluşturmak için ne kadar kolay olduğunu gösterir.
 
 [!code-csharp[whatsnew.461.crypto#1](~/samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)]
 [!code-vb[whatsnew.461.crypto#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
@@ -1314,7 +1314,7 @@ Windows Presentation Foundation yenilikleri ve değişiklikleri içerir.
 
 **Geliştirilmiş performans**
 
-Dokunma olayları tetikleme gecikme de çözülmüştür [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]. Ayrıca, yazarak bir <xref:System.Windows.Controls.RichTextBox> denetimi artık Hızlı Giriş sırasında işleme iş parçacığını bağlar.
+Dokunma olayları tetikleme gecikme, .NET Framework 4.6.1 düzeltilmiştir. Ayrıca, yazarak bir <xref:System.Windows.Controls.RichTextBox> denetimi artık Hızlı Giriş sırasında işleme iş parçacığını bağlar.
 
 **Yazım denetimi iyileştirmeleri**
 
@@ -1332,7 +1332,7 @@ WPF dil desteği hakkında ek bilgi için bkz: [.NET Framework 4.6.1 özellikler
 
 **Ek kullanıcı başına özel sözlük desteği**
 
-İçinde [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], WPF, küresel olarak kayıtlı özel sözlükleri tanır. Bu özellik, Denetim başına kaydedilecek özelliğine ek olarak kullanılabilir.
+.NET Framework 4.6.1, küresel olarak kayıtlı özel sözlükleri WPF tanır. Bu özellik, Denetim başına kaydedilecek özelliğine ek olarak kullanılabilir.
 
 WPF önceki sürümleri, özel sözlükleri sözcükleri hariç tutulan ve Otomatik Düzeltme listeleri tanıyamadı. Bunlar Windows 8.1 ve Windows 10'da altında yerleştirilebileceği dosya kullanımı desteklenir `%AppData%\Microsoft\Spelling\<language tag>` dizin.  Bu dosyalar için aşağıdaki kurallar geçerlidir:
 
@@ -1399,7 +1399,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
 ## <a name="whats-new-in-net-2015"></a>.NET 2015'teki yenilikler
 
-.NET 2015 tanıtır [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ve .NET Core. Bazı yeni özellikler hem de uygulama ve diğer özelliklere özgü [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] veya .NET Core.
+.NET 2015, .NET Core ve .NET Framework 4.6 tanıtır. Diğer özellikler, .NET Framework 4.6 veya .NET Core için özeldir ve bazı yeni özellikler hem de geçerlidir.
 
 - **ASP.NET Core**
 
@@ -1427,7 +1427,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
         </appSettings>
         ```
 
-         Uygulamalarda hedef [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], varsayılan `true`. Üzerinde çalışan uygulamaları [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] .NET Framework'ün önceki bir sürümünü hedefleyen, `false` varsayılan olarak. Yapılandırma ayarı ayarlayarak etkinleştirilebilir `true`.
+         Uygulamaları .NET Framework 4.6 hedef varsayılan `true`. .NET Framework'ün önceki bir sürümünü hedefleyen .NET Framework 4.6 üzerinde çalıştırılmasını apps'de olduğu `false` varsayılan olarak. Yapılandırma ayarı ayarlayarak etkinleştirilebilir `true`.
 
     - **HTTP/2 desteği (Windows 10)**
 
@@ -1452,7 +1452,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
     - **Rastgele dize karma algoritmaları**
 
-         .NET framework 4.5 sunulan bir [rastgele dize karma algoritması](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md). Ancak, ASP.NET tarafından nedeniyle bazı ASP.NET desteklenmiyordu özellikleri bağımlı bir kararlı karma kodu. İçinde [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], rastgele dize karma algoritmaları artık desteklenmektedir. Bu özelliği etkinleştirmek için `aspnet:UseRandomizedStringHashAlgorithm` yapılandırma ayarı.
+         .NET framework 4.5 sunulan bir [rastgele dize karma algoritması](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md). Ancak, ASP.NET tarafından nedeniyle bazı ASP.NET desteklenmiyordu özellikleri bağımlı bir kararlı karma kodu. .NET Framework 4. 6 ', artık rastgele dize karma algoritmaları desteklenir. Bu özelliği etkinleştirmek için `aspnet:UseRandomizedStringHashAlgorithm` yapılandırma ayarı.
 
         ```xml
         <appSettings>
@@ -1476,7 +1476,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
 - **Temle sınıf kitaplık değişiklikleri**
 
-     Çok sayıda yeni API etrafında eklenmiş [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] senaryoları etkinleştirmek için. Bunlar arasında aşağıdaki değişikler ve eklemeler şunlardır:
+     Çok sayıda yeni API senaryoları etkinleştirmek için .NET Framework 4.6 için geçici olarak eklenmiştir. Bunlar arasında aşağıdaki değişikler ve eklemeler şunlardır:
 
     - **IReadOnlyCollection\<T > uygulamaları**
 
@@ -1592,7 +1592,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
     - **Görev tabanlı zaman uyumsuz desen (TAP) değişiklikleri**
 
-         Hedefleyen uygulamalar için [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], <xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> nesneleri, kültür ve çağıran iş parçacığı UI kültürünü devralır. .NET Framework'ün önceki sürümlerini hedefleyen ya da belirli bir .NET Framework sürümünü hedef değil uygulamalarının davranışını etkilenmez. Daha fazla bilgi için bkz: "Kültür ve görev tabanlı zaman uyumsuz işlemler" bölümündeki <xref:System.Globalization.CultureInfo> sınıf konusuna.
+         .NET Framework 4. 6'ü hedefleyen uygulamalar için <xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> nesneleri, kültür ve çağıran iş parçacığı UI kültürünü devralır. .NET Framework'ün önceki sürümlerini hedefleyen ya da belirli bir .NET Framework sürümünü hedef değil uygulamalarının davranışını etkilenmez. Daha fazla bilgi için bkz: "Kültür ve görev tabanlı zaman uyumsuz işlemler" bölümündeki <xref:System.Globalization.CultureInfo> sınıf konusuna.
 
          <xref:System.Threading.AsyncLocal%601?displayProperty=nameWithType> Sınıfı sağlar, olduğu gibi belirli bir zaman uyumsuz denetim akışı için yerel ortam verileri temsil etmek bir `async` yöntemi. İş parçacıkları arasında verileri kalıcı hale getirmek için kullanılabilir. Ayrıca, ortam veriler olduğundan ya da değiştiğinde bildirilir bir geri çağırma yöntemi tanımlayabilirsiniz <xref:System.Threading.AsyncLocal%601.Value%2A?displayProperty=nameWithType> açıkça özelliği değiştirildi, veya iş parçacığı bir bağlam geçişi ile karşılaştı.
 
@@ -1624,7 +1624,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
     - **HDPI geliştirmeleri**
 
-         HDPI Destek ' WPF'de içinde daha iyi, artık [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Kırpma kenarlıklı denetimlerinde örneklerini azaltmak için yuvarlama Düzen değişiklikler yapıldı. Varsayılan olarak, bu özellik yalnızca etkin, <xref:System.Runtime.Versioning.TargetFrameworkAttribute> .NET 4.6 için ayarlanır.  Framework'ün önceki sürümlerini hedefleyen ancak üzerinde çalışan uygulamalar [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] içinde yeni davranışı aşağıdaki satırı ekleyerek seçebilirsiniz [ \<çalışma zamanı >](../configure-apps/file-schema/runtime/runtime-element.md) app.config dosyasının:
+         HDPI Destek ' WPF'de artık .NET Framework 4. 6 ' daha iyidir. Kırpma kenarlıklı denetimlerinde örneklerini azaltmak için yuvarlama Düzen değişiklikler yapıldı. Varsayılan olarak, bu özellik yalnızca etkin, <xref:System.Runtime.Versioning.TargetFrameworkAttribute> .NET 4.6 için ayarlanır.  Framework'ün önceki sürümlerini hedefleyen ancak .NET Framework 4.6 üzerinde çalışan uygulamalar kabul etme yeni davranışı aşağıdaki satırı ekleyerek [ \<çalışma zamanı >](../configure-apps/file-schema/runtime/runtime-element.md) app.config dosyasının:
 
         ```xml
         <AppContextSwitchOverrides
@@ -1642,11 +1642,11 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
     - **Dokunma daha iyidir**
 
-         Müşteri rapor [Connect](https://connect.microsoft.com/VisualStudio/feedback/details/903760/) öngörülemeyen davranışlara ele içinde üretir touch [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Windows Store uygulamaları ve WPF uygulamaları için iki kez dokunun eşiği artık Windows 8.1 ve üzeri aynıdır.
+         Müşteri rapor [Connect](https://connect.microsoft.com/VisualStudio/feedback/details/903760/) öngörülemeyen davranışlara .NET Framework 4. 6 ' ele alınan üretir touch. Windows Store uygulamaları ve WPF uygulamaları için iki kez dokunun eşiği artık Windows 8.1 ve üzeri aynıdır.
 
     - **Saydam bir alt pencere desteği**
 
-         WPF içinde [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] saydam alt pencereler Windows 8.1 ve üzeri destekler. Bu, üst düzey windows olmayan ve saydam bir alt öğe pencerelerini oluşturmanıza olanak sağlar. Ayarlayarak bu özelliği etkinleştirebilirsiniz <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> özelliğini `true`.
+         .NET Framework 4.6 ' WPF'de saydam alt windows, Windows 8.1 ve üzerini destekler. Bu, üst düzey windows olmayan ve saydam bir alt öğe pencerelerini oluşturmanıza olanak sağlar. Ayarlayarak bu özelliği etkinleştirebilirsiniz <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> özelliğini `true`.
 
 - **Windows Communication Foundation (WCF)**
 
@@ -1719,7 +1719,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
          Windows 10 giden TCP bağlantıları için yerel bağlantı noktaları yeniden kullanarak makine kaynakları daha iyi kullanılmasını sağlayan yeni bir ağ yüksek ölçeklenebilirlik algoritma içerir. .NET framework 4.6, yeni algoritma, yeni davranış yararlanmak .NET uygulamaları etkinleştirme destekler. Önceki Windows sürümlerinde, bir hizmetin ölçeklenebilirlik, yük altında bağlantı noktası tükenmesi neden olarak kısıtlayacaktır bir yapay eş zamanlı bağlantı sınırı (genellikle 16,384, dinamik bağlantı noktası aralığı varsayılan boyutu), vardı.
 
-         İçinde [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], eş zamanlı bağlantı 64 K sınırı etkili bir şekilde kaldıran bağlantı noktası yeniden etkinleştirmek için iki yeni API'ler eklenmiştir:
+         .NET Framework 4.6, eş zamanlı bağlantı 64 K sınırı etkili bir şekilde kaldıran bağlantı noktası yeniden etkinleştirmek için iki yeni API'ler eklenmiştir:
 
         - <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> Numaralandırma değeri.
 
@@ -1735,7 +1735,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
 - **Windows Forms denetimlerinde yeniden boyutlandırma.**
 
-     Bu özellik, Genişletilmiş [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] içerecek şekilde <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> ve <xref:System.Windows.Forms.ToolStripSplitButton> türleri ve tarafından belirtilen dikdörtgen <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> çizerken kullanılan özellik bir <xref:System.Drawing.Design.UITypeEditor> .
+     Bu özellik .NET Framework 4.6 içerecek şekilde genişletildi <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> ve <xref:System.Windows.Forms.ToolStripSplitButton> türleri ve tarafından belirtilen dikdörtgen <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> çizerken kullanılan özellik bir <xref:System.Drawing.Design.UITypeEditor>.
 
      Bu bir katılım özelliğidir. Bunu etkinleştirmek için ayarlanmış `EnableWindowsFormsHighDpiAutoResizing` öğesine `true` uygulama yapılandırma (app.config) dosyasında:
 

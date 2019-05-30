@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ecc1090f2697eb0243a081cde70338c0e6fffec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad13a5771adbfbd389feeccd3e8c833c4c2f778a
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908602"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300629"
 ---
 # <a name="task-based-asynchronous-programming"></a>Görev tabanlı zaman uyumsuz programlama
 
@@ -113,21 +113,21 @@ Seçenekler bit düzeyinde kullanarak birleştirilebilir **veya** işlemi. Aşa�
 
 ## <a name="tasks-threads-and-culture"></a>Görevler, iş parçacıkları ve kültür
 
-Her iş parçacığı bir ilişkili kültür ve tanımlanan kullanıcı Arabirimi kültürünü sahip <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> ve <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> özellikleri, sırasıyla. Bir iş parçacığının kültürünün biçimlendirme, ayrıştırma, sıralama ve dize karşılaştırma olarak bu işlemler kullanılır. Kaynak arama bir iş parçacığı UI kültürü kullanılır. Normalde, tüm iş parçacıkları için bir varsayılan kültürü kullanarak bir uygulama etki alanında belirtmediğiniz sürece <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> ve <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> özellikleri, varsayılan kültür ve iş parçacığı UI kültürü sistem kültür tarafından tanımlanır. Yeni iş parçacığı, açıkça bir iş parçacığı kültürü ayarlamanıza ve yeni bir iş parçacığı başlatın, çağıran iş parçacığı kültürünü devralmıyor; Bunun yerine, kendi varsayılan sistem kültürü kültürdür. Önceki .NET Framework sürümlerini hedefleyen uygulamalar için görev-tabanlı programlama modeli [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] bu uygulama için bağlı.
+Her iş parçacığı bir ilişkili kültür ve tanımlanan kullanıcı Arabirimi kültürünü sahip <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> ve <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> özellikleri, sırasıyla. Bir iş parçacığının kültürünün biçimlendirme, ayrıştırma, sıralama ve dize karşılaştırma olarak bu işlemler kullanılır. Kaynak arama bir iş parçacığı UI kültürü kullanılır. Normalde, tüm iş parçacıkları için bir varsayılan kültürü kullanarak bir uygulama etki alanında belirtmediğiniz sürece <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> ve <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> özellikleri, varsayılan kültür ve iş parçacığı UI kültürü sistem kültür tarafından tanımlanır. Yeni iş parçacığı, açıkça bir iş parçacığı kültürü ayarlamanıza ve yeni bir iş parçacığı başlatın, çağıran iş parçacığı kültürünü devralmıyor; Bunun yerine, kendi varsayılan sistem kültürü kültürdür. .NET Framework 4.6 önce .NET Framework sürümlerini hedefleyen uygulamalar için görev-tabanlı programlama modeli için bu yöntem uyar.
 
 > [!IMPORTANT]
-> Görev bağlamı bir parçası olarak çağıran iş parçacığının kültürünün uygulamaları için geçerli bir Not, *hedef* [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], uygulamaları, *altında çalıştırılması* [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Bu sürümün en üstündeki aşağı açılan listeden seçerek projenizi Visual Studio'da oluşturduğunuzda belirli bir .NET Framework sürümünü hedefleyebilirsiniz **yeni proje** iletişim kutusu, kullandığınız Visual Studio dışındaki <xref:System.Runtime.Versioning.TargetFrameworkAttribute> özniteliği. Önceki .NET Framework sürümlerini hedefleyen uygulamalar için [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], veya değil hedef .NET Framework'ün belirli bir sürümünü, bir görevin kültür çalıştığı iş parçacığı kültürü tarafından belirlenmesi devam eder.
+> Görev bağlamı bir parçası olarak çağıran iş parçacığının kültürünün uygulamaları için geçerli bir Not, *hedef* uygulamaları .NET Framework 4.6, *altında çalıştırılması* .NET Framework 4.6. Bu sürümün en üstündeki aşağı açılan listeden seçerek projenizi Visual Studio'da oluşturduğunuzda belirli bir .NET Framework sürümünü hedefleyebilirsiniz **yeni proje** iletişim kutusu, kullandığınız Visual Studio dışındaki <xref:System.Runtime.Versioning.TargetFrameworkAttribute> özniteliği. Uygulamalar için .NET Framework 4.6 veya önce .NET Framework'ün sürümlerini hedefleyen .NET Framework'ün belirli bir sürümü hedeflemesini değil bir görevin kültür çalıştığı iş parçacığı kültürü tarafından belirlenecek devam eder.
 
-Hedefleyen uygulamalar ile başlayan [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], çağıran iş parçacığının kültürünün bile görev bir iş parçacığı havuzu iş parçacığında zaman uyumsuz olarak çalışır. her görev tarafından devralınır.
+Görev bir iş parçacığı havuzu iş parçacığında zaman uyumsuz olarak çalıştırıyor olsa bile uygulamalarla hedefleyen .NET Framework 4.6 başlayarak, her görev tarafından çağıran iş parçacığının kültürünün devralınır.
 
-Aşağıdaki örnek, basit bir gösterim sağlar. Kullandığı <xref:System.Runtime.Versioning.TargetFrameworkAttribute> hedef özniteliğe [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ve uygulamanın geçerli kültür ya da Fransızca (Fransa) değiştirir veya Fransızca (Fransa) geçerli kültürü İngilizce (Amerika Birleşik Devletleri) zaten varsa. Daha sonra adlandırılmış bir temsilci çağıran `formatDelegate` yeni kültüründeki para birimi değeri olarak biçimlendirilmiş bazı sayıları döndürür. Unutmayın olmadığını temsilci zaman uyumsuz görev tarafından çağıran iş parçacığı kültürünü devralındığından bir görev olarak zaman uyumlu veya zaman uyumsuz olarak beklenen sonucu döndürür.
+Aşağıdaki örnek, basit bir gösterim sağlar. Kullandığı <xref:System.Runtime.Versioning.TargetFrameworkAttribute> hedef .NET Framework 4.6 özniteliğini ve uygulamanın geçerli kültür ya da Fransızca (Fransa) değiştirir veya Fransızca (Fransa) geçerli kültürü İngilizce (Amerika Birleşik Devletleri) zaten varsa. Daha sonra adlandırılmış bir temsilci çağıran `formatDelegate` yeni kültüründeki para birimi değeri olarak biçimlendirilmiş bazı sayıları döndürür. Unutmayın olmadığını temsilci zaman uyumsuz görev tarafından çağıran iş parçacığı kültürünü devralındığından bir görev olarak zaman uyumlu veya zaman uyumsuz olarak beklenen sonucu döndürür.
 
 [!code-csharp[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/cs/asyncculture1.cs#5)]
 [!code-vb[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/vb/asyncculture1.vb#5)]
 
 Visual Studio kullanıyorsanız, atlayabilirsiniz <xref:System.Runtime.Versioning.TargetFrameworkAttribute> özniteliği ve bunun yerine .NET Framework 4.6 hedefi olarak seçin, projeyi oluşturduğunuzda **yeni proje** iletişim.
 
-Önceki .NET Framework'ün sürümlerini hedefleyen uygulamalar davranışını yansıtan çıktı [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], Kaldır <xref:System.Runtime.Versioning.TargetFrameworkAttribute> kaynak kodundan özniteliği. Çıkış, varsayılan sistem kültürü, çağıran iş parçacığı kültürü biçimlendirme kurallarını yansıtır.
+.NET Framework 4.6 önce .NET Framework'ün sürümlerini hedefleyen uygulamalar davranışını yansıtan çıktısını kaldırmak <xref:System.Runtime.Versioning.TargetFrameworkAttribute> kaynak kodundan özniteliği. Çıkış, varsayılan sistem kültürü, çağıran iş parçacığı kültürü biçimlendirme kurallarını yansıtır.
 
 Zaman uyumsuz görevler ve kültür hakkında daha fazla bilgi için bkz: "Kültür ve görev tabanlı zaman uyumsuz işlemler" bölümünde <xref:System.Globalization.CultureInfo> konu.
 

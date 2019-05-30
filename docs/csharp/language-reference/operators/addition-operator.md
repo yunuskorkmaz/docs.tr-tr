@@ -1,36 +1,31 @@
 ---
-title: + Operator - C# başvurusu
+title: + ve += operators - C# başvurusu
 ms.custom: seodec18
-ms.date: 10/22/2018
+ms.date: 05/24/2019
 f1_keywords:
 - +_CSharpKeyword
+- +=_CSharpKeyword
 helpviewer_keywords:
-- + operator [C#]
-- concatenation operator [C#]
 - addition operator [C#]
+- concatenation operator [C#]
+- delegate combination [C#]
+- + operator [C#]
+- addition assignment operator [C#]
+- event subscription [C#]
+- += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 0f04ba837f9c03107acd0b2174cbd07c14a8c213
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d03743bad47c60925462d027d18445047ebc0fc9
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660170"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300109"
 ---
-# <a name="-operator-c-reference"></a>+ İşleci (C# Başvurusu)
+# <a name="-and--operators-c-reference"></a>+ ve += işleçleri (C# Başvurusu)
 
-`+` İşleci iki biçimde desteklenir: bir birli artı işleci veya bir ikili Toplama işleci.
+`+` İşleci yerleşik sayısal türler tarafından desteklenen [dize](../keywords/string.md) türü ve [temsilci](../keywords/delegate.md) türleri.
 
-## <a name="unary-plus-operator"></a>Tekli artı işleci
-
-Birli `+` işleci, işlenenin değerini döndürür. Tüm sayısal türler tarafından desteklenir.
-
-## <a name="numeric-addition"></a>Sayısal toplama
-
-Sayısal türlerin `+` işleci işlenenleri toplamını hesaplar:
-
-[!code-csharp-interactive[numeric addition](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddNumerics)]
-
-Aritmetik işleçler hakkında daha fazla bilgi için bkz: [aritmetik işleçler](arithmetic-operators.md).
+Aritmetik hakkında bilgi için `+` işleci bkz [birli artı ve eksi işleçleri](arithmetic-operators.md#unary-plus-and-minus-operators) ve [Toplama işleci +](arithmetic-operators.md#addition-operator-) bölümlerini [aritmetik işleçler](arithmetic-operators.md)makalesi.
 
 ## <a name="string-concatenation"></a>Dize birleştirme
 
@@ -44,15 +39,37 @@ Bir veya iki işlenenin türünde olduğunda [dize](../keywords/string.md), `+` 
 
 ## <a name="delegate-combination"></a>Temsilci birleşimi
 
-İçin [temsilci](../keywords/delegate.md) türleri `+` işleci döndüren yeni bir temsilci örneği, çağrılır, birinci işlenenin çağırır ve ardından ikinci işlenenin çağırır. İşlenenden ise `null`, `+` işleci, başka bir işlenenin değerini döndürür (Ayrıca olabilen `null`). Aşağıdaki örnek, temsilciler ne birleştirilebilir gösterir `+` işleci:
+Aynı işlenenleri için [temsilci](../keywords/delegate.md) türü `+` işleci döndüren yeni bir temsilci örneği, çağrılır, birinci işlenenin çağırır ve ardından ikinci işlenenin çağırır. İşlenenden ise `null`, `+` işleci, başka bir işlenenin değerini döndürür (Ayrıca olabilen `null`). Aşağıdaki örnek, temsilciler ne birleştirilebilir gösterir `+` işleci:
 
 [!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
 
 Temsilci türleri hakkında daha fazla bilgi için bkz: [Temsilciler](../../programming-guide/delegates/index.md).
 
+## <a name="addition-assignment-operator-"></a>Toplama atama işleci +=
+
+Bir ifade kullanarak `+=` işleci gibi
+
+```csharp
+x += y
+```
+
+eşdeğerdir
+
+```csharp
+x = x + y
+```
+
+dışında `x` yalnızca bir kez değerlendirilir.
+  
+Aşağıdaki örnek, kullanımını gösterir. `+=` işleci:
+
+[!code-csharp-interactive[+= examples](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddAndAssign)]
+
+Ayrıca `+=` a abone olduğunuzda bir olay işleyicisi yöntemi belirtmek için işleci bir [olay](../keywords/event.md). Daha fazla bilgi için [nasıl yapılır: abone olma ve aboneliği olaylardan](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+
 ## <a name="operator-overloadability"></a>İşleç overloadability
 
-Kullanıcı tanımlı türler için [aşırı](../keywords/operator.md) tekli veya ikili `+` işleçleri. Bir ikili olduğunda `+` işleci aşırı yüklenmiş, [toplama atama işleci](addition-assignment-operator.md) `+=` aynı zamanda örtük olarak aşırı yüklenmiş olan.
+Kullanıcı tanımlı bir tür için [aşırı](../keywords/operator.md) `+` işleci. Bir ikili olduğunda `+` işleci aşırı yüklenmiş, `+=` işleci örtük olarak aşırı yüklenmiş, ayrıca. Kullanıcı tanımlı bir türe açıkça aşırı yüklenemez `+=` işleci.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -64,6 +81,9 @@ Daha fazla bilgi için [birli artı işleci](~/_csharplang/spec/expressions.md#u
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# İşleçleri](index.md)
 - [Dize ilişkilendirme](../tokens/interpolated.md)
-- [Nasıl yapılır: Birden çok dizeyi birleştirme](../../how-to/concatenate-multiple-strings.md)
+- [Nasıl yapılır: birden çok dizeyi birleştirme](../../how-to/concatenate-multiple-strings.md)
 - [Temsilciler](../../programming-guide/delegates/index.md)
+- [Olaylar](../../programming-guide/events/index.md)
 - [Checked ve unchecked](../keywords/checked-and-unchecked.md)
+- [Aritmetik işleçler](arithmetic-operators.md)
+- [- ve-= işleçleri](subtraction-operator.md)

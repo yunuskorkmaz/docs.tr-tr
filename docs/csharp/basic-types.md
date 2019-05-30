@@ -3,12 +3,12 @@ title: Temel türler - C# Kılavuzu
 description: Tüm C# programlarında temel türleri (sayısal türler, dizeler ve nesne) hakkında bilgi edinin
 ms.date: 10/10/2016
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: dc91452bb261b7c799cf3b69cab5b33175148b8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1b842747799fcc8fcb64ecf92d334342b963fa1
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646754"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300003"
 ---
 # <a name="types-variables-and-values"></a>Türler, değişkenler ve değerleri
 
@@ -47,7 +47,7 @@ Yöntem parametreleri ve dönüş değerlerinin türleri Yöntem imzasında beli
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-Bir değişken bildirildikten sonra yeni bir türle yeniden bildirilemez ve bildirilen türle uyumlu olmayan bir değer atanamaz. Örneğin, bildiremezsiniz bir [int](language-reference/keywords/int.md) Boolean değerini atayın [true](language-reference/keywords/true.md). Ancak, değerler örneğin yeni değişkenlere eklendiklerinde veya yöntem bağımsız değişkenleri olarak geçtiklerinde diğer türlere dönüştürülebilir. A *tür dönüştürme* , yoksa veri kaybına neden olmayan derleyici tarafından otomatik olarak gerçekleştirilir. Veri kaybına neden olabilecek bir dönüştürme gerektiren bir *atama* kaynak kodunda.
+Bir değişken bildirildikten sonra yeni bir türle yeniden bildirilemez ve bildirilen türle uyumlu olmayan bir değer atanamaz. Örneğin, bildiremezsiniz bir [int](language-reference/keywords/int.md) Boolean değerini atayın [true](language-reference/keywords/true-literal.md). Ancak, değerler örneğin yeni değişkenlere eklendiklerinde veya yöntem bağımsız değişkenleri olarak geçtiklerinde diğer türlere dönüştürülebilir. A *tür dönüştürme* , yoksa veri kaybına neden olmayan derleyici tarafından otomatik olarak gerçekleştirilir. Veri kaybına neden olabilecek bir dönüştürme gerektiren bir *atama* kaynak kodunda.
 
 Daha fazla bilgi için [atama ve tür dönüştürmeleri](programming-guide/types/casting-and-type-conversions.md).
 

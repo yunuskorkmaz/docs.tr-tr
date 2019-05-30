@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e577f376b347442f6693a7a5478757ce3b698752
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 556181d32f0539b4a9e24cb1a898b4ccc3788f4e
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053011"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250885"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Normal ifadelerdeki karakter sınıfları
 
@@ -51,16 +51,18 @@ Bir karakter sınıfı, bir eşleşmenin başarılı olması için giriş dizesi
  .NET karakter sınıfı çıkarma ifadelerini, bir karakter sınıfı, başka bir karakter sınıfını çıkararak sonucu olarak bir karakter kümesi tanımlamanıza olanak sağlayan destekler. Daha fazla bilgi için [karakter sınıfı çıkarma](#CharacterClassSubtraction).  
   
 > [!NOTE]
->  Karakter karakter kategoriye göre gibi eşleşen sınıfları [\w](#WordCharacter) sözcük karakteri eşleştirmek için veya [\p{} ](#CategoryOrBlock) bir Unicode kategorisinin eşleştirilecek dayanan <xref:System.Globalization.CharUnicodeInfo> bilgi sağlamak için sınıfı karakter kategorileri hakkında.  İle başlayarak [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], karakter kategorileri temel [Unicode standardı, sürüm 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] aracılığıyla [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], temel aldıkları [Unicode standardı, sürüm 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
+>  Karakter karakter kategoriye göre gibi eşleşen sınıfları [\w](#WordCharacter) sözcük karakteri eşleştirmek için veya [\p{} ](#CategoryOrBlock) bir Unicode kategorisinin eşleştirilecek dayanan <xref:System.Globalization.CharUnicodeInfo> bilgi sağlamak için sınıfı karakter kategorileri hakkında.  .NET Framework 4.6.2 ile başlayarak, karakter kategorileri temel alan [Unicode standardı, sürüm 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] .NET Framework 4.6.1 temel [Unicode standardı, sürüm 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Pozitif karakter grubu:]  
  Bir pozitif karakter grubu, eşleşme olabilmesi için giriş dizesinde bulunabilecek karakterlerin listesini belirtir. Bu karakterler tek tek, bir aralık olarak veya her iki şekilde de belirtilebilir.  
   
  Karakterlerin tek tek bulunduğu bir listeyi belirtmek için kullanılan söz dizimi aşağıdaki gibidir:  
-  
- [*character_group*]  
-  
+
+```  
+[*character_group*]  
+```
+
  Burada *character_group* eşleşmenin başarılı olması için giriş dizesinde görünebilen karakterlerin tek tek bir listesi verilmiştir. *character_group* bir veya daha fazla sabit karakter, herhangi bir birleşimini içerebilir [kaçış karakterleri](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md), ya da karakter sınıfları.  
   
  Bir karakter aralığı belirtmek için kullanılan söz dizimi aşağıdaki gibidir:  
@@ -69,9 +71,12 @@ Bir karakter sınıfı, bir eşleşmenin başarılı olması için giriş dizesi
 [firstCharacter-lastCharacter]  
 ```  
   
- Burada *firstCharacter* aralığı karakterdir ve *lastCharacter* aralığı bitiren karakterdir. Bir karakter aralığı serideki ilk karakter, tire işareti (-) ve ardından serideki son karakterle belirtilen bitişik karakter dizisidir. İki karakter, eğer bitişik Unicode kod noktaları var ise bitişiktir.  
-  
- Pozitif karakter sınıflarını içeren bazı sık kullanılan normal ifade desenleri aşağıdaki tabloda listelenmiştir.  
+ Burada *firstCharacter* aralığı karakterdir ve *lastCharacter* aralığı bitiren karakterdir. Bir karakter aralığı serideki ilk karakter, tire işareti (-) ve ardından serideki son karakterle belirtilen bitişik karakter dizisidir. İki karakter, eğer bitişik Unicode kod noktaları var ise bitişiktir. *firstCharacter* alt kod noktası ile karakter uzunluğunda olmalıdır ve *lastCharacter* daha yüksek kod noktası ile karakter uzunluğunda olmalıdır.
+
+> [!NOTE]
+> Pozitif karakter grubu hem bir dizi karakter ve bir karakter aralığı, kısa çizgi karakterini içerebilir, çünkü (`-`) ilk veya son karakter grubunun olmadığı sürece her zaman aralığı ayırıcı olarak yorumlanır.
+
+Pozitif karakter sınıflarını içeren bazı sık kullanılan normal ifade desenleri aşağıdaki tabloda listelenmiştir.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
@@ -112,17 +117,24 @@ Bir karakter sınıfı, bir eşleşmenin başarılı olması için giriş dizesi
 ## <a name="negative-character-group-"></a>Negatif karakter grubu: [^]  
  Bir negatif karakter grubu, eşleşmenin gerçekleşmesi için giriş dizesinde bulunmaması gereken karakterlerin listesini belirtir. Karakter listesi tek tek, bir aralık olarak veya her iki şekilde de belirtilebilir.  
   
- Karakterlerin tek tek bulunduğu bir listeyi belirtmek için kullanılan söz dizimi aşağıdaki gibidir:  
-  
- [*^character_group*]  
-  
+Karakterlerin tek tek bulunduğu bir listeyi belirtmek için kullanılan söz dizimi aşağıdaki gibidir:  
+
+```
+[*^character_group*]  
+```
+
  Burada *character_group* eşleşmenin başarılı olması için giriş dizesinde yer alamaz karakterlerin tek tek bir listesi verilmiştir. *character_group* bir veya daha fazla sabit karakter, herhangi bir birleşimini içerebilir [kaçış karakterleri](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md), ya da karakter sınıfları.  
   
  Bir karakter aralığı belirtmek için kullanılan söz dizimi aşağıdaki gibidir:  
-  
- [^*firstCharacter*-*lastCharacter*]  
-  
- Burada *firstCharacter* aralığı karakterdir ve *lastCharacter* aralığı bitiren karakterdir. Bir karakter aralığı serideki ilk karakter, tire işareti (-) ve ardından serideki son karakterle belirtilen bitişik karakter dizisidir. İki karakter, eğer bitişik Unicode kod noktaları var ise bitişiktir.  
+
+```
+[^*firstCharacter*-*lastCharacter*]  
+```
+
+Burada *firstCharacter* aralığı karakterdir ve *lastCharacter* aralığı bitiren karakterdir. Bir karakter aralığı serideki ilk karakter, tire işareti (-) ve ardından serideki son karakterle belirtilen bitişik karakter dizisidir. İki karakter, eğer bitişik Unicode kod noktaları var ise bitişiktir. *firstCharacter* alt kod noktası ile karakter uzunluğunda olmalıdır ve *lastCharacter* daha yüksek kod noktası ile karakter uzunluğunda olmalıdır.
+
+> [!NOTE]
+> Bir negatif karakter grubu hem bir dizi karakter ve bir karakter aralığı, kısa çizgi karakterini içerebilir, çünkü (`-`) ilk veya son karakter grubunun olmadığı sürece her zaman aralığı ayırıcı olarak yorumlanır.
   
  İki veya daha fazla karakter aralığı birleştirilebilir. Örneğin, "0" ila "9", "a" ile "f" arasındaki harfleri aralığını ondalık basamaklar aralığını ve "A" ile "F" büyük harfler aralığını belirtmek için kullanın `[0-9a-fA-F]`.  
   

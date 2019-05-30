@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 07ef96862c04b8245d8365c3d3b419d227e824c4
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c1f891314a2490d6dbf22977ea5a5f69533b330d
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876945"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300316"
 ---
 # <a name="c-operators"></a>C# işleçleri
 
@@ -95,9 +95,9 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 
 [* x](pointer-related-operators.md#pointer-indirection-operator-) – işaretçi yöneltmesi veya başvuru.
 
-[true işleci](../keywords/true-false-operators.md) -döndürür [bool](../keywords/bool.md) değer `true` işleneni kesinlikle doğru olduğunu belirtmek için.
+[true işleci](true-false-operators.md) -döndürür [bool](../keywords/bool.md) değer `true` işleneni kesinlikle doğru olduğunu belirtmek için.
 
-[false işleci](../keywords/true-false-operators.md) -döndürür [bool](../keywords/bool.md) değer `true` işleneni kesinlikle false olduğunu belirtmek için.
+[false işleci](true-false-operators.md) -döndürür [bool](../keywords/bool.md) değer `true` işleneni kesinlikle false olduğunu belirtmek için.
 
 ## <a name="multiplicative-operators"></a>Çarpma işleçleri
 
@@ -197,9 +197,9 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 
 [x = y](assignment-operator.md) – atama.
 
-[x += y](addition-assignment-operator.md) – artırma. Değerini ekleme `y` değerine `x`, sonuçta depolamak `x`ve yeni bir değer. Varsa `x` atayan bir `event`, ardından `y` C# bir olay işleyicisi ekler uygun bir işlev olmalıdır.
+[x += y](arithmetic-operators.md#compound-assignment) – artırma. Değerini ekleme `y` değerine `x`, sonuçta depolamak `x`ve yeni bir değer. Varsa `x` atayan bir [olay](../keywords/event.md), ardından `y` uygun bir yöntem olmalı, C# bir olay işleyicisi ekler.
 
-[x-= y](subtraction-assignment-operator.md) – azaltma. Değerini çıkarma `y` değerinden `x`, sonuçta depolamak `x`ve yeni bir değer. Varsa `x` atayan bir `event`, ardından `y` uygun bir işlev olmalıdır C# bir olay işleyicisi kaldırır.
+[x-= y](arithmetic-operators.md#compound-assignment) – azaltma. Değerini çıkarma `y` değerinden `x`, sonuçta depolamak `x`ve yeni bir değer. Varsa `x` atayan bir [olay](../keywords/event.md), ardından `y` uygun bir yöntem olmalı, C# bir olay işleyicisi kaldırır.
 
 [x * y =](arithmetic-operators.md#compound-assignment) – çarpma atama. Çarp değeri `y` değerine `x`, sonuçta depolamak `x`ve yeni bir değer.
 

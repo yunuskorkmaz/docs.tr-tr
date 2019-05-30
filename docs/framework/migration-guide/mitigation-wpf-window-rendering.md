@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: afad3c3bf6c950b4ffe4e8bed2ff86a416a31a87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ecf951ecb955a6597757387de1119267ebc58fdc
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875270"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301458"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>Azaltma: WPF penceresi işleme
 
-İçinde [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] tek görünen bir çoklu monitör senaryosunda dışında genişletir, Windows 8'de çalıştırma ve üzeri, pencerenin tamamını kırpma olmadan oluşturulur.
+Bir çoklu monitör senaryosunda tek ekran dışında genişletir, .NET Framework 4.6 çalışır Windows 8 ve üzeri, kırpma olmadan tüm pencere işlenir.
 
 ## <a name="impact"></a>Etki
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: 279f7932d38885331b69616afa719ad782d7244b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3630b9e2f50830faf50599388e4fbb7ec1630b73
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659911"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300744"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Özelleştirilebilir Görünümü olan Denetim Oluşturma
 <a name="introduction"></a>
@@ -78,7 +78,7 @@ Bir özel denetim şablonunu kullanan bir onay kutusu
   
  [!code-xaml[VSMCustomControl#VisualStructure](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]  
   
- Bir görsel davranışını `NumericUpDown` denetimidir negatif ise değer kırmızı bir yazı tipinde olduğunu.  Değiştirirseniz <xref:System.Windows.Controls.TextBlock.Foreground%2A> , <xref:System.Windows.Controls.TextBlock> içinde kod zaman `Value` negatif `NumericUpDown` kırmızı bir negatif değer her zaman gösterir. Denetimin görsel davranışını belirtin <xref:System.Windows.Controls.ControlTemplate> ekleyerek <xref:System.Windows.VisualState> nesneleri için <xref:System.Windows.Controls.ControlTemplate>.  Aşağıdaki örnekte gösterildiği <xref:System.Windows.VisualState> için nesneleri `Positive` ve `Negative` durumları.  `Positive` ve `Negative` (denetimidir her zaman tam olarak iki birinde) birbirini dışlayan olan, örnek koyar <xref:System.Windows.VisualState> nesnelerini tek <xref:System.Windows.VisualStateGroup>.  Denetimi geçildiğinde içine `Negative` durumu <xref:System.Windows.Controls.TextBlock.Foreground%2A> , <xref:System.Windows.Controls.TextBlock> kırmızıya döner.  Denetim olduğunda `Positive` durumu <xref:System.Windows.Controls.TextBlock.Foreground%2A> geri döndüğünde özgün değer.  Tanımlama <xref:System.Windows.VisualState> nesneler bir <xref:System.Windows.Controls.ControlTemplate> daha ayrıntılı olarak ele alınmıştır [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
+ Bir görsel davranışını `NumericUpDown` denetimidir negatif ise değer kırmızı bir yazı tipinde olduğunu.  Değiştirirseniz <xref:System.Windows.Controls.TextBlock.Foreground%2A> , <xref:System.Windows.Controls.TextBlock> içinde kod zaman `Value` negatif `NumericUpDown` kırmızı bir negatif değer her zaman gösterir. Denetimin görsel davranışını belirtin <xref:System.Windows.Controls.ControlTemplate> ekleyerek <xref:System.Windows.VisualState> nesneleri için <xref:System.Windows.Controls.ControlTemplate>.  Aşağıdaki örnekte gösterildiği <xref:System.Windows.VisualState> için nesneleri `Positive` ve `Negative` durumları.  `Positive` ve `Negative` (denetimidir her zaman tam olarak iki birinde) birbirini dışlayan olan, örnek koyar <xref:System.Windows.VisualState> nesnelerini tek <xref:System.Windows.VisualStateGroup>.  Denetimi geçildiğinde içine `Negative` durumu <xref:System.Windows.Controls.TextBlock.Foreground%2A> , <xref:System.Windows.Controls.TextBlock> kırmızıya döner.  Denetim olduğunda `Positive` durumu <xref:System.Windows.Controls.TextBlock.Foreground%2A> özgün değerine döndürür.  Tanımlama <xref:System.Windows.VisualState> nesneler bir <xref:System.Windows.Controls.ControlTemplate> daha ayrıntılı olarak ele alınmıştır [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
   
 > [!NOTE]
 >  Ayarladığınızdan emin olun <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> ekli özellik kök <xref:System.Windows.FrameworkElement> , <xref:System.Windows.Controls.ControlTemplate>.  

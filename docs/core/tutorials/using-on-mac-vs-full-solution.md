@@ -1,17 +1,17 @@
 ---
-title: Mac için Visual Studio kullanarak macos'ta eksiksiz bir .NET Core çözümü derleme
+title: Mac için Visual Studio kullanarak macOS’ta eksiksiz bir .NET Core çözümü derleme
 description: Bu konuda, bir yeniden kullanılabilir bir kitaplık ve birim testi içeren bir .NET Core çözümü derleme açıklanmaktadır.
-author: guardrex
+author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: be0aebb1ac700de07a52c4c50383f45d1191b7f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44ade71a257f5c4fdcb8da9b572adf7133448fb8
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61648506"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300152"
 ---
-# <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak macos'ta eksiksiz bir .NET Core çözümü derleme
+# <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak macOS’ta eksiksiz bir .NET Core çözümü derleme
 
 Mac için Visual Studio, .NET Core uygulamaları geliştirmek için bir tam özellikli tümleşik geliştirme ortamı (IDE) sağlar. Bu konuda, bir yeniden kullanılabilir bir kitaplık ve birim testi içeren bir .NET Core çözümü derleme açıklanmaktadır.
 

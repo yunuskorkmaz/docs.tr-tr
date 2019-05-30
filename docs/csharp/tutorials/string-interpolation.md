@@ -3,12 +3,12 @@ title: C# dize ilişkilendirme
 description: Dize ilişkilendirme ile C# dilinde bir sonuç dizesi olarak biçimlendirilmiş bir ifade sonuçları eklemeyi öğrenin.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 068a30bdcb96140787a38e9ae52f9c62d8a57c96
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2990298821fddc8a69430a4cf4bb5e3dd9df314d
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063238"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251025"
 ---
 # <a name="string-interpolation-in-c"></a>C'de dize ilişkilendirme\#
 
@@ -27,17 +27,17 @@ Bir dize ilişkilendirilmiş dize sabit değeri belirlemek için onunla önüne 
 Örnekte gösterildiği gibi bir ifade bir aradeğerlendirme dizesinde küme ayraçlarıyla kapsayan tarafından şunlardır:
 
 ```
-{<interpolatedExpression>}
+{<interpolationExpression>}
 ```
 
 İlişkilendirilmiş dizeler destekleyen tüm özelliklerine [bileşik biçimlendirme dizesi](../../standard/base-types/composite-formatting.md) özelliği. Getiren bunları kullanımını daha okunabilir bir alternatif <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemi.
 
-## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>İlişkilendirilmiş ifade için bir biçim dizesi belirtme
+## <a name="how-to-specify-a-format-string-for-an-interpolation-expression"></a>Bir biçim dizesi için bir ilişkilendirme ifade belirtme
 
-İki nokta ile ilişkilendirilmiş ifade izleyerek ifadenin sonuç türü tarafından desteklenen bir biçim dizesi belirtin (":") ve biçim dizesi:
+İki nokta ile ilişkilendirme ifade izleyerek ifadenin sonuç türü tarafından desteklenen bir biçim dizesi belirtin (":") ve biçim dizesi:
 
 ```
-{<interpolatedExpression>:<formatString>}
+{<interpolationExpression>:<formatString>}
 ```
 
 Aşağıdaki örnekte, tarih ve saat veya sayısal sonuçlar üreten ifadeler için standart ve özel biçim dizeleri belirtmek gösterilmektedir:
@@ -46,12 +46,12 @@ Aşağıdaki örnekte, tarih ve saat veya sayısal sonuçlar üreten ifadeler i�
 
 Daha fazla bilgi için [biçim dizesi bileşeni](../../standard/base-types/composite-formatting.md#format-string-component) bölümünü [bileşik biçimlendirme](../../standard/base-types/composite-formatting.md) konu. Bu bölüm .NET temel türleri tarafından desteklenen standart ve özel biçim dizeleri açıklayan konulara bağlantılar sağlar.
 
-## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a>Alan genişliğini ve hizalamasını biçimlendirilmiş ilişkilendirilmiş ifade denetleme
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolation-expression"></a>Alan genişliğini ve hizalamasını biçimlendirilmiş ilişkilendirme ifade denetleme
 
-İlişkilendirilmiş ifade bir virgül ile izleyerek en az bir alan genişliğini ve hizalamasını biçimlendirilmiş bir ifade sonucu belirtin (",") ve sabit ifade:
+En düşük alan genişliğini ve hizalamasını biçimlendirilmiş bir ifade sonucu ilişkilendirme ifade bir virgül ile izleyerek belirtin (",") ve sabit ifade:
 
 ```
-{<interpolatedExpression>,<alignment>}
+{<interpolationExpression>,<alignment>}
 ```
 
 Varsa *hizalama* değeri pozitif ise sağa hizalı biçimlendirilmiş bir ifade sonucu; negatif ise sola hizalanmış.
@@ -59,7 +59,7 @@ Varsa *hizalama* değeri pozitif ise sağa hizalı biçimlendirilmiş bir ifade 
 Hizalama hem bir biçim dizesi belirtmek gerekirse, hizalama bileşeni ile başlayın:
 
 ```
-{<interpolatedExpression>,<alignment>:<formatString>}
+{<interpolationExpression>,<alignment>:<formatString>}
 ```
 
 Aşağıdaki örnek hizalaması belirtmek nasıl gösterir ve kullandığı kanal karakter ("|") metin alanları sınırlandırmak için:
@@ -82,9 +82,9 @@ Aşağıdaki örnek, küme ayraçları bir sonuç dizesine eklemek ve bir harfi 
 
 [!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
 
-## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a>Üçlü koşullu bir işleç kullanmayı `?:` bir ilişkilendirilmiş ifadede
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolation-expression"></a>Üçlü koşullu bir işleç kullanmayı `?:` ilişkilendirme ifadede
 
-İki nokta üst üste olarak (":") kullanmak için bir öğesi ile ilişkilendirilmiş bir ifadenin özel anlama sahip bir [koşullu işleç](../language-reference/operators/conditional-operator.md) aşağıdaki örnekte gösterildiği gibi parantez içine bir ifadede:
+İki nokta üst üste olarak (":") kullanmak için bir ilişkilendirme ifadeyle bir öğedeki özel anlama sahip bir [koşullu işleç](../language-reference/operators/conditional-operator.md) aşağıdaki örnekte gösterildiği gibi parantez içine bir ifadede:
 
 [!code-csharp-interactive[conditional operator example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#5)]
 

@@ -1,17 +1,17 @@
 ---
-title: Yeni dotnet için özel bir şablon oluşturma
+title: Dotnet new için özel şablon oluşturma
 description: Bu eğlenceli dotnet yeni komutu için özel bir şablon oluşturmayı öğrenin öğretici.
-author: guardrex
+author: mairaw
 ms.date: 08/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3b45a24c8a249eeb99fb1a4b14918483b978980b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e47da048584ec31c275ff9c122d157f34556268a
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647416"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66299954"
 ---
-# <a name="create-a-custom-template-for-dotnet-new"></a>Yeni dotnet için özel bir şablon oluşturma
+# <a name="create-a-custom-template-for-dotnet-new"></a>Dotnet new için özel şablon oluşturma
 
 Bu öğretici, nasıl gösterir için:
 
@@ -35,7 +35,7 @@ Dosya sistemi dağıtımı ile indirilen örnek kullanmak istiyorsanız, aşağ�
 
 ## <a name="create-a-template-from-a-project"></a>Bir projeden bir şablon oluşturma
 
-Kullanımı, onayladıktan varolan bir projeyi derler ve çalıştırır veya sabit sürücünüzdeki bir klasöre yeni bir konsol uygulama projesi oluşturun. Bu öğreticide, proje klasörünün adı olduğunu varsayar *GarciaSoftware.ConsoleTemplate.CSharp* depolandığı *Documents\Templates* kullanıcının profilinde. Öğretici projesinin şablon adı şu biçimdedir  *\<şirket adı >.\< Şablon türü >. \<Programlama dili >*, ancak projenizi ve şablon istediğiniz herhangi bir şey adı boş.
+Kullanımı, onayladıktan varolan bir projeyi derler ve çalıştırır veya sabit sürücünüzdeki bir klasöre yeni bir konsol uygulama projesi oluşturun. Bu öğreticide, proje klasörünün adı olduğunu varsayar *GarciaSoftware.ConsoleTemplate.CSharp* depolandığı *Documents\Templates* kullanıcının profilinde. Öğretici projesinin şablon adı şu biçimdedir  *\<şirket adı >.\< Şablon türü >. \<Programlama dili >* , ancak projenizi ve şablon istediğiniz herhangi bir şey adı boş.
 
 1. Adlı proje kök dizinine bir klasör eklemek *. template.config*.
 1. İçinde *. template.config* klasör oluşturma bir *template.json* şablonunuzu yapılandırmak için bir dosya. Daha fazla bilgi ve üye tanımları için *template.json* bkz [yeni dotnet için özel şablonları](../tools/custom-templates.md#templatejson) konu ve [ *template.json* JSON şema Store şema](http://json.schemastore.org/template).
