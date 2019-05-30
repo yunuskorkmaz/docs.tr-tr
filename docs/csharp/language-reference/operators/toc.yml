@@ -1,4 +1,4 @@
-- name: 'C# İşleçleri'
+- name: 'C# işleçleri'
   href: index.md
   items:
     - name: Aritmetik İşleçler
@@ -22,23 +22,22 @@
     - name: İşaretçi bağlantılı işleçler
       href: pointer-related-operators.md
       displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
-    - name: () İşleci
+    - name: () işleci
       href: invocation-operator.md
-    - name: ':: İşleç'
+    - name: ':: işleci'
       href: namespace-alias-qualifer.md
-    - name: + İşleç
+    - name: + and += işleçleri
       href: addition-operator.md
-    - name: '- İşleç'
+      displayName: 'string concatenation, delegate combination, event subscription'
+    - name: '- operator'
       href: subtraction-operator.md
-    - name: = İşleci
+    - name: = işleci
       href: assignment-operator.md
-    - name: '?: İşleç'
+    - name: '?: işleci'
       href: conditional-operator.md
-    - name: += İşleci
-      href: addition-assignment-operator.md
-    - name: '-= İşleci'
+    - name: '-= işleci'
       href: subtraction-assignment-operator.md
-    - name: '?? İşleç'
+    - name: '?? operator'
       href: null-coalescing-operator.md
-    - name: => İşleci
+    - name: => işleci
       href: lambda-operator.md
