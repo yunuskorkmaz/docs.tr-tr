@@ -2,12 +2,12 @@
 title: Docker Tabanlı Uygulamalar için Geliştirme İşlemi
 description: Seçenekler Docker tabanlı uygulamalar geliştirmeye yönelik üst düzey bir bakış edinin. Windows için Visual Studio, Visual Studio seçtiğiniz Mac ya da Visual Studio Code için çok platformlu destek için (Windows, Mac ve Linux) kullanarak.
 ms.date: 09/27/2018
-ms.openlocfilehash: a871fcbfcf079c745759cb17960fa4eaa6ec6eec
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8807bc57365e70a0cbf265dc7bce28c93de16098
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640080"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300641"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker tabanlı uygulamalar için geliştirme işlemi
 
@@ -25,7 +25,7 @@ Tam ve güçlü bir IDE ya da basit ve Çevik bir düzenleyici tercih olsun, Mic
 
 **Visual Studio Code ve Docker CLI**. Herhangi bir geliştirme dilini destekleyen hafif ve platformlar arası bir düzenleyici tercih ederseniz, Microsoft Visual Studio Code (VS Code) ve Docker CLI'yı kullanabilirsiniz. Bu, Mac, Linux ve Windows için platformlar arası geliştirme yaklaşımdır. Ayrıca, Visual Studio Code için Docker düzenleyiciden Docker komutlarını çalıştırmak için dockerfile'ları ve kısayol görevler için IntelliSense gibi uzantıları destekler.
 
-Yükleyerek [Docker Community Edition'ı (CE)](https://www.docker.com/community-edition) araçları, Windows ve Linux için uygulamalar oluşturmak için tek bir Docker CLI'yı kullanabilirsiniz.
+Yükleyerek [Docker Masaüstü Community Edition'ı (CE)](https://hub.docker.com/search/?type=edition&offering=community), hem Windows hem de Linux için uygulamalar oluşturmak için tek bir Docker CLI'yı kullanabilirsiniz.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
@@ -35,8 +35,11 @@ Yükleyerek [Docker Community Edition'ı (CE)](https://www.docker.com/community-
 - **Visual Studio Code**. Resmi sitesi. \
   <https://code.visualstudio.com/download>
 
-- **Mac ve Windows için docker Community Edition (CE)** \
-  [https://www.docker.com/community-editions](https://www.docker.com/community-edition)
+- **Docker Masaüstü Windows Community Edition (CE)**  \
+  [https://hub.docker.com/editions/community/docker-ce-desktop-windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+  
+- **Docker Masaüstü Mac Community Edition (CE)**  \
+  [https://hub.docker.com/editions/community/docker-ce-desktop-mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>.NET dil ve çerçeveyi kullanabilmek için Docker kapsayıcıları
 

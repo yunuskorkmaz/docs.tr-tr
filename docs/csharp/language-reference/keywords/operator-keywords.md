@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
-ms.openlocfilehash: e03e1c930b452cf5e4f2c4bb1d06d5363f20c991
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: acc2edceee8799d32b6d7daf314293a2da218f09
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661054"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300375"
 ---
 # <a name="operator-keywords-c-reference"></a>İşleç Anahtar Sözcükleri (C# Başvurusu)
 
@@ -36,18 +36,6 @@ Bir tür boyutunu alma, bir nesnenin çalışma zamanı tür denetimi nesneleri 
 - [sizeof](sizeof.md) nespravovaným typem boyutunu alır.  
 
 - [typeof](typeof.md) elde ediyor <xref:System.Type?displayProperty=nameWithType> nesne türü.  
-
-- [true](true.md)  
-
-  - [true işleci](true-false-operators.md) döndürür [bool](bool.md) değer `true` işlenen kesinlikle doğru olduğunu belirtmek için.
-
-  - [TRUE değişmez değeri](true-literal.md) temsil [bool](bool.md) değer `true`.
-
-- [false](false.md)  
-
-  - [false işleci](true-false-operators.md) döndürür [bool](bool.md) değer `true` işlenen kesinlikle false olduğunu belirtmek için.
-
-  - [false değişmez değeri](false-literal.md) temsil [bool](bool.md) değer `false`.
 
 - [stackalloc](stackalloc.md) bir yığında bellek bloğu ayırır.  
 

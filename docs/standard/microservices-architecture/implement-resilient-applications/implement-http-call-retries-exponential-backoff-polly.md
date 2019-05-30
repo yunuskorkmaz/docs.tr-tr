@@ -2,12 +2,12 @@
 title: Polly üstel geri alma ile HTTP çağrı yeniden denemelerini uygulama
 description: Polly ile HttpClientFactory HTTP hatalarını işlemek nasıl öğrenin.
 ms.date: 01/07/2019
-ms.openlocfilehash: 9ffb0d918dc2efdc41d6c2db2e2141d14061b687
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: aa500b5525eff9f0bbf91bf98de8945f7c84704f
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053110"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301473"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory ve Polly üstel geri alma ile HTTP çağrı yeniden uygulayın
 
@@ -69,16 +69,16 @@ Policy
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Yeniden deneme düzeni**\
+- **Yeniden deneme düzeni**  
   [https://docs.microsoft.com/azure/architecture/patterns/retry](/azure/architecture/patterns/retry)
 
-- **Polly ve HttpClientFactory**\
+- **Polly ve HttpClientFactory**  
   <https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory>
 
-- **Polly (.NET esnekliği ve geçici hata işleme kitaplığı)**\
+- **Polly (.NET esnekliği ve geçici hata işleme kitaplığı)**  
   <https://github.com/App-vNext/Polly>
 
-- **Marc Brooker. Değişimi: Rastgele olma durumu ile depolanabileceğini şeyler**\
+- **Marc Brooker. Değişimi: Rastgele olma durumu ile depolanabileceğini şeyler**  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
 
 >[!div class="step-by-step"]

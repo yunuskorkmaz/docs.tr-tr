@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e75b838a2c6126fe82e97faac624a9ad6b7ea132
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f8811fd916afcb39c466b8c9a60f7c7ed2a62ea8
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626225"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301425"
 ---
 # <a name="mitigation-product-versioning"></a>Azaltma: Ürün sürümü oluşturma
-İçinde [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ve ürün sürümü oluşturma (.NET Framework 4, 4.5, 4.5.1 ve 4.5.2'yi) .NET Framework'ün önceki sürümlerinden daha sonra değişti.  
+.NET Framework 4.6 ve daha sonra ürün sürümü oluşturma (.NET Framework 4, 4.5, 4.5.1 ve 4.5.2'yi) .NET Framework'ün önceki sürümlerinden değişti.  
   
 ## <a name="product-versioning-changes"></a>Ürün sürümü oluşturma değişiklikleri  
  Ayrıntılı değişiklikler şunlardır:  
@@ -23,7 +23,7 @@ ms.locfileid: "64626225"
   
 - <xref:System.Reflection.AssemblyFileVersionAttribute> Ve <xref:System.Reflection.AssemblyInformationalVersionAttribute> Yönetilen derlemeler için öznitelikleri <xref:System.Version> ve formdaki değerler `4.6.X.0` .NET Framework 4.6 ve onun nokta sürümleri ve `4.7.X.0` için .NET Framework 4.7.  
   
-- İçinde [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2 ve 4.7, <xref:System.Environment.Version%2A?displayProperty=nameWithType> özellik sabit sürüm dizesi döndürür `4.0.30319.42000`. İsteğe bağlı olarak .NET Framework 4, 4.5, 4.5.1 ve 4.5.2'yi, sürüm dizeleri biçimde döndürür `4.0.30319.xxxxx` (örneğin, "4.0.30319.18010"). Uygulama kodu herhangi bir yeni bağımlılık almayı önermiyoruz Not <xref:System.Environment.Version%2A?displayProperty=nameWithType> özelliği.  
+- .NET Framework 4.6, 4.6.1, 4.6.2 ve 4.7, <xref:System.Environment.Version%2A?displayProperty=nameWithType> özellik sabit sürüm dizesi döndürür `4.0.30319.42000`. İsteğe bağlı olarak .NET Framework 4, 4.5, 4.5.1 ve 4.5.2'yi, sürüm dizeleri biçimde döndürür `4.0.30319.xxxxx` (örneğin, "4.0.30319.18010"). Uygulama kodu herhangi bir yeni bağımlılık almayı önermiyoruz Not <xref:System.Environment.Version%2A?displayProperty=nameWithType> özelliği.  
   
 ### <a name="handling-the-product-versioning-changes"></a>Ürün sürümü oluşturma değişiklikleri işleme  
  Genel olarak, uygulamaların çalışma zamanı sürümü, .NET Framework ve yükleme dizini gibi şeyler saptamak için önerilen teknikleri bağımlı:  
@@ -37,7 +37,7 @@ ms.locfileid: "64626225"
   
 - .NET Framework ortak dil çalışma zamanı dizin yolu belirlemek için çağrı <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetRuntimeDirectory%2A?displayProperty=nameWithType> yöntemi.  
   
-- CLR sürümünü almak için arama <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=nameWithType> yöntemi.   .NET Framework 4 ve onun nokta sürümleri (.NET Framework 4.5, 4.5.1, 4.5.2 ve [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2 ve 4.7), bir dize döndürür `v4.0.30319`.  
+- CLR sürümünü almak için arama <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=nameWithType> yöntemi.   .NET Framework 4 ve onun nokta sürümleri (.NET Framework 4.5, 4.5.1, 4.5.2 ve .NET Framework 4.6, 4.6.1, 4.6.2 ve 4.7), bir dize döndürür `v4.0.30319`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
