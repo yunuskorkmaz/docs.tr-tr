@@ -1,5 +1,4 @@
 - name: 'C# işleçleri'
-  href: index.md
   items:
     - name: Aritmetik İşleçler
       href: arithmetic-operators.md

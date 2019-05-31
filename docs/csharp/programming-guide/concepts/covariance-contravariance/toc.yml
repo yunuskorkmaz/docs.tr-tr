@@ -1,6 +1,7 @@
 - name: Kovaryans ve Kontravaryans
-  href: index.md
   items:
+    - name: Genel Bakış
+      href: index.md
     - name: Genel Arabirimlerde Varyans
       href: variance-in-generic-interfaces.md
       items:
