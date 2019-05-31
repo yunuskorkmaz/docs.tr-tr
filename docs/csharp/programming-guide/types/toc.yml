@@ -1,6 +1,7 @@
 - name: Türler
-  href: index.md
   items:
+    - name: Türleri tanımlama ve kullanma
+      href: index.md
     - name: Tür Değiştirme ve Tür Dönüştürmeler
       href: casting-and-type-conversions.md
     - name: Kutulama ve Kutudan Çıkarma

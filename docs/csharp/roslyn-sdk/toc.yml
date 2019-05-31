@@ -1,6 +1,8 @@
 - name: .NET Compiler Platform SDK’sı (Roslyn API’leri)
   href: index.md
   items:
+    - name: Genel bakış
+      href: index.md
     - name: Derleyici API modelini anlama
       href: compiler-api-model.md
     - name: Söz dizimi ile çalışma

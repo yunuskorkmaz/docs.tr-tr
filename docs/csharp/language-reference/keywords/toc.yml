@@ -2,11 +2,11 @@
   href: index.md
   items:
     - name: Türler
-      href: types.md
       items:
         - name: Değer Türleri
-          href: value-types.md
           items:
+            - name: Değer türlerinin özellikleri
+              href: value-types.md
             - name: bool
               href: bool.md
             - name: byte
@@ -29,7 +29,7 @@
               href: sbyte.md
             - name: short
               href: short.md
-            - name: 'struct '
+            - name: struct
               href: struct.md
             - name: uint
               href: uint.md
@@ -38,8 +38,9 @@
             - name: ushort
               href: ushort.md
         - name: Başvuru Türleri
-          href: reference-types.md
           items:
+            - name: Başvuru türlerinin özellikleri
+              href: reference-types.md
             - name: sınıf
               href: class.md
             - name: temsilci
@@ -57,7 +58,6 @@
         - name: var
           href: var.md
         - name: Türler için başvuru tabloları
-          href: reference-tables-for-types.md
           items:
             - name: Yerleşik türler tablosu
               href: built-in-types-table.md
@@ -76,11 +76,11 @@
             - name: Sayısal sonuçlar tablosunu biçimlendirme
               href: formatting-numeric-results-table.md
     - name: Değiştiriciler
-      href: modifiers.md
       items:
         - name: Erişim Değiştiricileri
-          href: access-modifiers.md
           items:
+            - name: Hızlı başvuru
+              href: access-modifiers.md
             - name: Erişilebilirlik Düzeyleri
               href: accessibility-levels.md
             - name: Erişilebilirlik Etki Alanı
@@ -128,17 +128,16 @@
         - name: volatile
           href: volatile.md
     - name: Deyim Anahtar Sözcükleri
-      href: statement-keywords.md
       items:
+        - name: Deyim kategorileri
+          href: statement-keywords.md
         - name: Seçim Deyimleri
-          href: selection-statements.md
           items:
             - name: if-else
               href: if-else.md
             - name: anahtarı
               href: switch.md
         - name: Yineleme Deyimleri
-          href: iteration-statements.md
           items:
             - name: do
               href: do.md
@@ -149,7 +148,6 @@
             - name: while
               href: while.md
         - name: Atlama Deyimleri
-          href: jump-statements.md
           items:
             - name: break
               href: break.md
@@ -160,7 +158,6 @@
             - name: return
               href: return.md
         - name: Özel Durum İşleme Deyimleri
-          href: exception-handling-statements.md
           items:
             - name: throw
               href: throw.md
@@ -171,8 +168,9 @@
             - name: try-catch-finally
               href: try-catch-finally.md
         - name: İşaretli ve İşaretsiz
-          href: checked-and-unchecked.md
           items:
+            - name: Genel Bakış
+              href: checked-and-unchecked.md
             - name: checked
               href: checked.md
             - name: unchecked
@@ -182,8 +180,9 @@
         - name: lock Deyimi
           href: lock-statement.md
     - name: Yöntem Parametreleri
-      href: method-parameters.md
       items:
+        - name: Parametreleri geçirme
+          href: method-parameters.md
         - name: params
           href: params.md
         - name: in (Parametre Değiştirici)
@@ -193,13 +192,13 @@
         - name: out (Parametre Değiştirici)
           href: out-parameter-modifier.md
     - name: Ad Alanı Anahtar Sözcükleri
-      href: namespace-keywords.md
       items:
         - name: ad alanı
           href: namespace.md
         - name: kullanma
-          href: using.md
           items:
+            - name: using bağlamları
+              href: using.md
             - name: using Yönergesi
               href: using-directive.md
             - name: using static Yönergesi
@@ -209,7 +208,6 @@
         - name: extern diğer adı
           href: extern-alias.md
     - name: İşleç Anahtar Sözcükleri
-      href: operator-keywords.md
       items:
         - name: as
           href: as.md
@@ -218,8 +216,9 @@
         - name: is
           href: is.md
         - name: new
-          href: new.md
           items:
+            - name: 'new işleci, değiştirici ve kısıtlama'
+              href: new.md
             - name: new İşleci
               href: new-operator.md
             - name: new Değiştiricisi
@@ -235,7 +234,6 @@
         - name: nameof
           href: nameof.md
     - name: Dönüşüm Anahtar Sözcükleri
-      href: conversion-keywords.md
       items:
         - name: explicit
           href: explicit.md
@@ -244,14 +242,12 @@
         - name: operator
           href: operator.md
     - name: Erişim Anahtar Sözcükleri
-      href: access-keywords.md
       items:
         - name: taban
           href: base.md
         - name: this
           href: this.md
     - name: Değişmez Değer Anahtar Sözcükleri
-      href: literal-keywords.md
       items:
         - name: 'null'
           href: null.md
@@ -262,8 +258,9 @@
         - name: default
           href: default.md
     - name: Bağlamsal Anahtar Sözcükler
-      href: contextual-keywords.md
       items:
+        - name: Hızlı başvuru
+          href: contextual-keywords.md
         - name: add
           href: add.md
         - name: get
@@ -287,8 +284,9 @@
         - name: yield
           href: yield.md
     - name: Sorgu Anahtar Sözcükleri
-      href: query-keywords.md
       items:
+        - name: Hızlı başvuru
+          href: query-keywords.md
         - name: from yan tümcesi
           href: from-clause.md
         - name: where tümcesi

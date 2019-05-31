@@ -1,13 +1,13 @@
-- name: Güvenli olmayan kod ve işaretçiler
-  href: index.md
-  items:
-    - name: Sabit Boyutlu Arabellekler
-      href: fixed-size-buffers.md
-    - name: İşaretçi türleri
-      items:
-        - name: Genel Bakış
-          href: pointer-types.md
-        - name: İşaretçi Dönüştürmeler
-          href: pointer-conversions.md
-        - name: 'Nasıl yapılır: Bayt Dizisine Kopyalamak için İşaretçiler Kullanma'
-          href: how-to-use-pointers-to-copy-an-array-of-bytes.md
+items:
+  - name: Genel bakış ve kısıtlamalar
+    href: index.md
+  - name: Sabit Boyutlu Arabellekler
+    href: fixed-size-buffers.md
+  - name: İşaretçi türleri
+    items:
+      - name: Genel Bakış
+        href: pointer-types.md
+      - name: İşaretçi Dönüştürmeler
+        href: pointer-conversions.md
+      - name: 'Nasıl yapılır: Bayt Dizisine Kopyalamak için İşaretçiler Kullanma'
+        href: how-to-use-pointers-to-copy-an-array-of-bytes.md
